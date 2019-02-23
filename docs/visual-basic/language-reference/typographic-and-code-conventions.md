@@ -18,7 +18,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54604120"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>表記規則とコード規則 (Visual Basic)
-Visual Basic のドキュメントでは、次の文字体裁とコード規則を使用します。  
+Visual Basic のドキュメントでは、次の表記規則とコード規則に従って記述されています。  
   
 ## <a name="typographic-conventions"></a>表記規則  
   
