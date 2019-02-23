@@ -32,7 +32,7 @@ AddHandler event, AddressOf eventhandler
 |||
   
 ## <a name="remarks"></a>Remarks  
- `AddHandler`と`RemoveHandler`ステートメントでは、開始およびプログラムの実行中にいつでもイベント処理を停止することができます。  
+ `AddHandler`ステートメントと`RemoveHandler`ステートメントを使うと、プログラムの実行中にいつでもイベント処理を開始および停止できます。  
   
  署名、`eventhandler`プロシージャは、イベントのシグネチャに一致する必要があります`event`します。  
   
