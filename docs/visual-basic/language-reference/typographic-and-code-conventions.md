@@ -24,7 +24,7 @@ Visual Basic のドキュメントでは、次の文字体裁とコード規則�
   
 |例|説明|  
 |-------------|-----------------|  
-|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|言語固有のキーワードとランタイムのメンバーは、先頭が大文字であるし、は、この例で示すように書式設定。|  
+|`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|Visual Basic 特有のキーワードやランタイム メンバは、太字で先頭を大文字にして表記します。|  
 |**SmallProject**, **ButtonCollection**|この例で示すように、単語や語句を入力するように指示されますが書式設定します。|  
 |[Module ステートメント](../../visual-basic/language-reference/statements/module-statement.md)|この例で示すように、リンクをクリックすると、別のヘルプ ページに移動できますが書式設定します。|  
 |*object*, *variableName*, `argumentList`|この例で示すように入力する情報のプレース ホルダーは書式設定されます。|  
