@@ -1,5 +1,5 @@
 ---
-title: 申し訳ありません、この c# エラーに関する詳細がありません。
+title: 申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,14 +882,14 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314071"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "56800322"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>申し訳ありません、この c# エラーに関する詳細がありません。
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
   
  [Visual C# 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
@@ -901,13 +901,14 @@ ms.locfileid: "33314071"
  [Visual C# 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Visual C# を使用したその他のフォーラムで取り上げていない質問や一般的な議論のためのフォーラムを提供します。  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
+ [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/c%23)  
  Visual C# に関する質問と問題についてのフォーラムを提供します。  
   
  関連項目:  
  [Visual C# プログラマのための追加リソース](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>関連項目  
- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)  
- [C# リファレンス](../../csharp/language-reference/index.md)  
- [ご意見](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>関連項目
+
+- [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
+- [C# リファレンス](../../csharp/language-reference/index.md)
+- [ご意見](/visualstudio/ide/talk-to-us)
