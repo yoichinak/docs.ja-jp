@@ -3,21 +3,15 @@ title: ファイルおよびストリーム入出力 - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- IO namespace
-- files, I/O
-- System.IO namespace
-- I/O [.NET Framework]
-- streams, I/O
-- data streams, I/O
+  - IO namespace
+  - 'files, I/O'
+  - System.IO namespace
+  - 'I/O [.NET Framework]'
+  - 'streams, I/O'
+  - 'data streams, I/O'
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07ea22fcd76a9f52fd9fd0b00c58d6d3b9b906d9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279475"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 
@@ -27,7 +21,8 @@ ms.locfileid: "55279475"
 
 ## <a name="files-and-directories"></a>ファイルとディレクトリ
 
-<xref:System.IO?displayProperty=nameWithType> 名前空間の型を使用して、ファイルとディレクトリを操作できます。 たとえば、ファイルとディレクトリに対するプロパティを取得および設定したり、検索条件に基づいて、ファイルとディレクトリのコレクションを取得したりできます。
+
+  <xref:System.IO?displayProperty=nameWithType> 名前空間の型を使用して、ファイルとディレクトリを操作できます。 たとえば、ファイルとディレクトリに対するプロパティを取得および設定したり、検索条件に基づいて、ファイルとディレクトリのコレクションを取得したりできます。
 
 .NET Core 1.1 以降および .NET Framework 4.6.2 でサポートされている DOS デバイスの構文を含む、パスの名前付け規則および Windows システムのファイル パスを表す方法の詳細については、「[Windows システムのファイル パスの形式](file-path-formats.md)」を参照してください。
 
@@ -47,11 +42,12 @@ ms.locfileid: "55279475"
 
 これらのクラスに加えて、Visual Basic のユーザーは、ファイル I/O 用の <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> クラスに用意されているメソッドとプロパティを使用できます。
 
-「[方法: ディレクトリをコピーする](how-to-copy-directories.md)、「[方法: ディレクトリ一覧を作成する](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)」、「[方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)。
+「[方法: ディレクトリをコピーする](how-to-copy-directories.md)、「[方法: ディレクトリ一覧を作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))」、「[方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)。
 
 ## <a name="streams"></a>ストリーム
 
-抽象基底クラス <xref:System.IO.Stream> は、バイトの読み取りと書き込みをサポートします。 ストリームを表すすべてのクラスは、<xref:System.IO.Stream> クラスから継承されます。 <xref:System.IO.Stream> クラスとその派生クラスは、データ ソースやリポジトリの共通ビューを提供し、プログラマがオペレーティング システムや基になるデバイスに固有の詳細事項を考慮する必要をなくします。
+抽象基底クラス <xref:System.IO.Stream> は、バイトの読み取りと書き込みをサポートします。 ストリームを表すすべてのクラスは、<xref:System.IO.Stream> クラスから継承されます。 
+  <xref:System.IO.Stream> クラスとその派生クラスは、データ ソースやリポジトリの共通ビューを提供し、プログラマがオペレーティング システムや基になるデバイスに固有の詳細事項を考慮する必要をなくします。
 
 ストリームには次の 3 つの基本的な操作が含まれます。
 
@@ -83,7 +79,8 @@ ms.locfileid: "55279475"
 
 ## <a name="readers-and-writers"></a>リーダーとライター
 
-<xref:System.IO?displayProperty=nameWithType> 名前空間には、ストリームからエンコードされた文字を読み取ったり、ストリームに書き込んだりするための型も用意されています。 通常、ストリームはバイトの入出力用に設計されています。 リーダー型とライター型は、ストリームが操作を完了できるように、バイトとの間でエンコードされた文字の変換を処理します。 各リーダー クラスとライター クラスは、クラスの `BaseStream` プロパティから取得できるストリームに関連付けられます。
+
+  <xref:System.IO?displayProperty=nameWithType> 名前空間には、ストリームからエンコードされた文字を読み取ったり、ストリームに書き込んだりするための型も用意されています。 通常、ストリームはバイトの入出力用に設計されています。 リーダー型とライター型は、ストリームが操作を完了できるように、バイトとの間でエンコードされた文字の変換を処理します。 各リーダー クラスとライター クラスは、クラスの `BaseStream` プロパティから取得できるストリームに関連付けられます。
 
 一般的なリーダー クラスとライター クラスを次に示します。
 
@@ -101,13 +98,15 @@ ms.locfileid: "55279475"
 
 大量のデータを読み取ったり書き込んだりすると、リソースが大量に消費されることがあります。 アプリケーションのユーザーに対する応答性を維持する必要がある場合は、これらのタスクを非同期的に実行する必要があります。 同期 I/O 操作の場合、大量のリソースを消費する操作が完了するまで UI スレッドがブロックされます。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを開発するときには非同期 I/O 操作を使用して、アプリが動作しなくなったと受け取られないようにします。
 
-`Async`、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、および <xref:System.IO.Stream.ReadAsync%2A> の各メソッドのように、非同期メンバーの名前には <xref:System.IO.Stream.WriteAsync%2A> が含まれています。 これらのメソッドは、`async` キーワードおよび `await` キーワードと共に使用します。
+
+  `Async`、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.FlushAsync%2A>、および <xref:System.IO.Stream.ReadAsync%2A> の各メソッドのように、非同期メンバーの名前には <xref:System.IO.Stream.WriteAsync%2A> が含まれています。 これらのメソッドは、`async` キーワードおよび `await` キーワードと共に使用します。
 
 詳細については、「[非同期ファイル I/O](asynchronous-file-i-o.md)」を参照してください。
 
 ## <a name="compression"></a>[圧縮]
 
-圧縮とは、保管するためにファイルのサイズを小さくするプロセスのことです。 圧縮解除は、圧縮ファイルの内容を抽出し、その内容を使用可能な形式にするプロセスです。 <xref:System.IO.Compression?displayProperty=nameWithType> 名前空間には、ファイルおよびストリームを圧縮および圧縮解除するための型が含まれています。
+圧縮とは、保管するためにファイルのサイズを小さくするプロセスのことです。 圧縮解除は、圧縮ファイルの内容を抽出し、その内容を使用可能な形式にするプロセスです。 
+  <xref:System.IO.Compression?displayProperty=nameWithType> 名前空間には、ファイルおよびストリームを圧縮および圧縮解除するための型が含まれています。
 
 次のクラスは、ファイルおよびストリームを圧縮および圧縮解除するときによく使用します。
 
@@ -147,7 +146,8 @@ ms.locfileid: "55279475"
 
 次に、I/O 操作を [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用する場合に注意する必要がある重要な違いを示します。
 
-- <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
+- 
+  <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
 
 - 分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 
@@ -161,7 +161,8 @@ ms.locfileid: "55279475"
 
 ## <a name="io-and-security"></a>I/O とセキュリティ
 
-<xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、「[方法 : アクセス制御リスト エントリを追加または削除する](how-to-add-or-remove-access-control-list-entries.md)」を参照してください。
+
+  <xref:System.IO?displayProperty=nameWithType> 名前空間のクラスを使用する場合、アクセス制御リスト (ACL: Access Control List) などのオペレーティング システムのセキュリティ要件に従い、ファイルとディレクトリへのアクセスを制御する必要があります。 この要件の他にも、<xref:System.Security.Permissions.FileIOPermission> で指定されている要件を満たす必要があります。 ACL はプログラムで管理できます。 詳細については、「[方法 : アクセス制御リスト エントリを追加または削除する](how-to-add-or-remove-access-control-list-entries.md)」を参照してください。
 
 既定のセキュリティ ポリシーでは、インターネットまたはイントラネットのアプリケーションはユーザーのコンピューターのファイルにアクセスできません。 したがって、インターネットまたはイントラネットを経由してダウンロードされるコードを記述する場合に、物理ファイル パスを必要とする I/O クラスを使用しないでください。 代わりに、従来の .NET Framework アプリケーション用の[分離ストレージ](isolated-storage.md)を使用するか、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリ用の[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 
