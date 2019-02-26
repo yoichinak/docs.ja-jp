@@ -17,7 +17,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54617327"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While ステートメント (Visual Basic)
-特定の条件はいる限り、一連のステートメントを実行`True`します。  
+指定された条件が真`True`である間、一連のステートメントを繰り返し実行します。  
   
 ## <a name="syntax"></a>構文  
   
