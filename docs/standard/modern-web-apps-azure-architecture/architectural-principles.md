@@ -3,13 +3,13 @@ title: アーキテクチャの原則
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | アーキテクチャの原則
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828099"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442985"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -99,21 +99,10 @@ ms.locfileid: "55828099"
 
 少なくとも、個々の Web アプリケーションでは、データベースを他のアプリケーションと共有するのでなく、ビジネス モデルに対して独自の永続化ストアを備えることで、独自の境界付けられたコンテキストになることを目指す必要があります。 境界付けられたコンテキスト間の通信は、共有データベースを介してではなくプログラム インターフェイスを介して行われます。これにより、発生した変更に応じてビジネス ロジックおよびイベントを実行することができます。 境界付けられたコンテキストはマイクロサービスに正確にマップされます。このマイクロサービスもまた、それぞれ独自の境界付けられたコンテキストとして実装されるのが理想的です。
 
-> ### <a name="references--modern-web-applications"></a>参照 – 最新の Web アプリケーション
-> - **懸念事項の分離**  
-> <https://deviq.com/separation-of-concerns/>
-> - **カプセル化**  
-> <https://deviq.com/encapsulation/>
-> - **依存関係逆転の原則**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **明示的な依存関係の原則**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **DRY 原則**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **永続性の無視**  
-> <https://deviq.com/persistence-ignorance/>
-> - **境界付けられたコンテキスト**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>その他の技術情報
+
+* [Java の設計パターン: 原則](https://java-design-patterns.com/principles/)
+* [境界付けられたコンテキスト](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[前へ](choose-between-traditional-web-and-single-page-apps.md)

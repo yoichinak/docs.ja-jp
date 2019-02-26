@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145255"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442231"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する 
 
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 .NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、<span class="underline">microsoft/dotnet</span> にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
 
-1.  **開発**: この場合、変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
+1.  **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
 
-2.  **ビルド**: アプリケーションのコンパイルが優先され、これにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
+2.  **ビルド:** アプリケーションのコンパイルが優先され、これにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
 
 3.  **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
@@ -458,7 +458,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 1.  **sdk**: 開発シナリオおよびビルド シナリオ向け。
 2.  **runtime**: 実稼働シナリオ向け。
-3.  **runtime-deps**: [自己完結型アプリケーション](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd)の実稼働シナリオ向け。
+3.  **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#self-contained-deployments-scd)の実稼働シナリオ向け。
 
 runtime イメージでも、ポート 80 への aspnetcore\_url の自動設定と、アセンブリの pre-ngend キャッシュの自動設定が提供されます。これらの設定は起動時間の短縮に役立ちます。
 
@@ -468,7 +468,7 @@ runtime イメージでも、ポート 80 への aspnetcore\_url の自動設定
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **.NET Core アプリケーションの Docker イメージのビルド** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[前へ](data-driven-crud-microservice.md)

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 6d855b56a7fd00b316dde599683900ad2db758d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152241"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584370"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 
@@ -30,13 +30,14 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Implementation using RabbitMQ API
     //...
+}
 ```
 
 サンプルの開発/テスト イベント バスの RabbitMQ 実装は定型的なコードです。 これは、RabbitMQ サーバーへの接続を処理し、メッセージ イベントをキューに発行するためのコードを提供します。 また、イベントの種類ごとに統合イベント ハンドラーのコレクションから成る辞書を実装する必要があります。このようなイベントの種類では、図 6-21 に示すように、受信側のマイクロサービスごとに、インスタンス化したものが異なり、さまざまなサブスクリプションが存在する場合があります。
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>RabbitMQ で単純な発行方法を実装する
 
-次のコードは RabbitMQ 用に簡略化されたイベント バスの実装の一部です。eShopOnContainers の[実際のコード](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs)では機能が強化されます。 通常、機能強化を行うのでなければ、このコードを変更する必要はありません。 このコードでは、RabbitMQ への接続とチャネルを取得し、メッセージを作成し、キューにメッセージを発行します。
+次のコードは、全体のシナリオを紹介する RabbitMQ のイベント バス実装の***簡略化された***バージョンです。 実際にこの方法で接続を処理することはありません。 完全な実装を確認するには、[dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) リポジトリで実際のコードを参照してください。 
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
