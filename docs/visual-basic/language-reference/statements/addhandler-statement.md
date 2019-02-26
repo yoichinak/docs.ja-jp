@@ -34,7 +34,7 @@ AddHandler event, AddressOf eventhandler
 ## <a name="remarks"></a>Remarks  
  `AddHandler`ステートメントと`RemoveHandler`ステートメントを使うと、プログラムの実行中にいつでもイベント処理を開始および停止できます。  
   
- 署名、`eventhandler`プロシージャは、イベントのシグネチャに一致する必要があります`event`します。  
+ `eventhandler`プロシージャのシグネチャは、`event`イベントのシグネチャと一致する必要があります。  
   
  `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。 `AddHandler` ステートメントは、実行時にプロシージャをイベントに接続します。 `Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。 詳細については、次を参照してください。[処理](../../../visual-basic/language-reference/statements/handles-clause.md)します。  
   
