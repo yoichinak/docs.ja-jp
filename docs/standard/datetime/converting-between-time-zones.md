@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701821"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835344"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
@@ -27,7 +27,7 @@ ms.locfileid: "54701821"
 
 ## <a name="converting-to-coordinated-universal-time"></a>世界協定時刻への変換
 
-世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (詳細および日付と時刻を使用して他のベスト プラクティスでは、次を参照してください[コーディングのベスト プラクティスが .NET Framework で DateTime を使用した](https://msdn.microsoft.com/library/ms973825.aspx)。)。個別のタイム ゾーンを UTC に変換すると、時間の比較が容易になります。
+世界協定時刻 (UTC) は、高精度の原子時標準です。 世界のタイム ゾーンは、UTC からの正または負のオフセットとして表現されます。 したがって、UTC はタイム ゾーンの影響を受けない、またはタイム ゾーンに依存しない種類の時刻を提供します。 コンピューター間の日時の移植性が重要となる場合には、UTC 時刻の使用が推奨されます。 (詳細および日付と時刻を使用して他のベスト プラクティスでは、次を参照してください[コーディングのベスト プラクティスが .NET Framework で DateTime を使用した](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10))。)。個別のタイム ゾーンを UTC に変換すると、時間の比較が容易になります。
 
 > [!NOTE]
 > シリアル化することも、<xref:System.DateTimeOffset>を明確に単一ポイントを表す構造体。 <xref:System.DateTimeOffset> UTC からのオフセットと共に日付と時刻の値を格納するオブジェクトを常に、特定の時点を表してリレーションシップで UTC にします。

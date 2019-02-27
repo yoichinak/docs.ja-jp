@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645965"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835370"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers メソッド
 指定した型のメンバーを表す MemberDef トークンを列挙します。  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|MemberDef トークンを列挙することはありません。 その場合は、`pcTokens`は 0 です。|  
   
 ## <a name="remarks"></a>Remarks  
- クラスのメンバーのコレクションを列挙する場合、`EnumMembers`クラスで直接定義されているメンバーのみを返します。 クラスは、継承されたメンバーの実装を提供する場合でも、クラスが継承する任意のメンバーは返されません。 継承されたメンバーを列挙するために、呼び出し元は明示的に継承チェーンを走査する必要があります。 継承チェーンの規則は、言語や、元のメタデータを生成するコンパイラによって異なる場合がありますに注意してください。  
+ クラスのメンバーのコレクションを列挙する場合、`EnumMembers`メンバーのみを返します (フィールドおよびメソッドが**いない**プロパティまたはイベント)、クラスで直接定義されています。 クラスは、継承されたメンバーの実装を提供する場合でも、クラスが継承する任意のメンバーは返されません。 継承されたメンバーを列挙するために、呼び出し元は明示的に継承チェーンを走査する必要があります。 継承チェーンの規則は、言語や、元のメタデータを生成するコンパイラによって異なる場合がありますに注意してください。
+ 
+ プロパティおよびイベントはによって列挙されない`EnumMembers`します。 使用して、それらを列挙する[EnumProperties](imetadataimport-enumproperties-method.md)または[EnumEvents](imetadataimport-enumevents-method.md)します。
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

@@ -3,15 +3,15 @@ title: Linux コンテナーと AKS/Kubernetes クラスターにデプロイさ
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221486"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835513"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>AKS/Kubernetes オーケストレーターに Linux コンテナーとして展開されている ASP.NET Core 2.1 アプリケーションを構築します。
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes オーケストレーターに Linux コンテナーとして展開されている ASP.NET Core 2.1 アプリケーションを構築します。
 
 Azure Kubernetes サービス (AKS) は、Azure の管理された Kubernetes オーケストレーション サービスをコンテナーのデプロイと管理を簡略化します。
 
@@ -35,11 +35,11 @@ ASP.NET Core は、Microsoft と GitHub の .NET コミュニティによって�
 
 **図 4 ~ 36**します。 ASP.NET Core アプリケーションを作成します。
 
-サンプル プロジェクトを作成するには、選択する必要が**ファイル** > **新規** > **プロジェクト**Visual Studio でします。 検索がある、いくつかの種類のプロジェクト、テンプレートの一覧が表示されます、 **Web** > **.NET Core**左側のパネルにします。 この例では次のように選択します。 **ASP.NET Core Web アプリケーション**します。
+Visual Studio でサンプル プロジェクトを作成するには、選択**ファイル** > **新規** > **プロジェクト**を選択、 **Web**プロジェクトの後に、左側のウィンドウで種類**ASP.NET Core Web アプリケーション**します。
 
-次のダイアログ ボックスでは、4-37 の図に示すように、上位 pulldowns でターゲット フレームワークとして .NET Core と ASP.NET Core 2.1 が選択されているし、ASP.NET Core Web API アプリケーションを作成する、API オプションを選択することを確認してください。
+Visual Studio には、web プロジェクト用のテンプレートが一覧表示します。 たとえば、次のように選択します。 **API** ASP.NET Web API アプリケーションを作成します。
 
-.NET Core 2.1 は、Visual Studio 2017 バージョン 15.7.0 に含まれる以上と、自動的にインストールされているし、選択すると、構成、 **.NET Core クロス プラットフォーム開発**ワークロードのインストール時にします。
+ASP.NET Core 2.1 をフレームワークとして選択したことを確認します。 .NET core 2.1 Visual Studio 2017 の最新バージョンに含まれるとは自動的にインストールして構成する Visual Studio 2017 をインストールするときにします。
 
 ![API オプションを選択して、ASP.NET Core Web アプリケーションの種類を選択するための visual Studio のダイアログ。](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ ASP.NET Core は、Microsoft と GitHub の .NET コミュニティによって�
 
 以前のバージョンの .NET Core を使っている場合は、ダウンロードしてからバージョン 2.1 のインストール<https://www.microsoft.com/net/download/core#/sdk>します。
 
-前の手順で、または後で、プロジェクトの開始後に生じた場合に、プロジェクトを作成する場合は、Docker サポートを追加できます。 プロジェクトの作成後に、Docker サポートを追加するでプロジェクト ファイルを右クリックし、**ソリューション エクスプ ローラー**選択**追加** > **Docker サポート**でコンテキスト メニュー。
+Docker サポートを追加するには、プロジェクトの作成時またはその後、ようにすることができます「docker 化」、プロジェクト、いつでもできます。 プロジェクトの作成後に、Docker サポートを追加するには、ソリューション エクスプ ローラーでプロジェクト ノードを右クリックして**追加** > **Docker サポート**コンテキスト メニュー。
 
 ![既存のプロジェクトに Docker サポートを追加するコンテキスト メニュー オプション:(プロジェクト) を右クリックして > 追加 > Docker のサポート。](media/add-docker-support-to-project.png)
 
 **図 4-38**します。 既存のプロジェクトに Docker サポートの追加
 
-Docker のサポートを追加を完了するには、するには、Windows または Linux の選択肢があります。 この場合は、選択**Linux**AKS は (2018 年末) としての Windows コンテナーをサポートしないためです。
+Docker のサポートを追加を完了するには、Windows または Linux を選択できます。 この場合は、選択**Linux**AKS は (2018 年末) としての Windows コンテナーをサポートしないためです。
 
 ![Dockerfile のターゲット OS を選択するオプションのダイアログ。](media/select-linux-docker-support.png)
 
 **図 4-39**します。 Linux コンテナーを選択します。
 
-簡単な手順では、ASP.NET Core 2.1 アプリケーションを Linux コンテナーで実行されているがあります。
+簡単な手順では、Linux コンテナーで実行されている ASP.NET Core 2.1 アプリケーションがあります。
 
 ご覧のように、Visual Studio 2017 と Docker の統合は完全に達成するため、開発者の生産性です。
 
-キーを押してこれ**F5**をビルドして、アプリケーションを実行します。
+使用してアプリケーションを実行するようになりました、 **F5**キーまたはを使用して、**再生**ボタンをクリックします。
 
-使用してイメージを一覧表示、プロジェクトを実行した後、`docker images`コマンド。 表示する必要があります、`mssampleapplication`プロジェクトを Visual Studio 2017 での自動デプロイで作成されたイメージ。
+使用してイメージを一覧表示、プロジェクトを実行した後、`docker images`コマンド。 表示する必要があります、`mssampleapplication`イメージは、プロジェクトを Visual Studio 2017 での自動配置によって作成します。
 
 ```console
 docker images
@@ -77,17 +77,17 @@ docker images
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>Azure Container registry のソリューションを登録します。
 
-このような任意の Docker レジストリにイメージをアップロード[Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/)または Docker Hub イメージは、そのレジストリから AKS クラスターにデプロイできるようにします。 ここでは、Azure Container Registry にイメージをアップロードしています。
+このような任意の Docker レジストリにイメージをアップロード[Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/)または Docker Hub、イメージは、そのレジストリから AKS クラスターにデプロイできるようにします。 ここでは、Azure Container Registry にイメージをアップロードしています。
 
 ### <a name="create-the-image-in-release-mode"></a>リリース モードでイメージを作成します。
 
-内のイメージを作成する**リリース**次に示すようにリリース モード (実稼働の準備) を変更して、アプリケーションを再実行して F5 キーを押します。
+今すぐにイメージを作成します**リリース**モード (実稼働の準備) を変更することで**リリース**図 4-41、およびアプリケーションを実行する前に行ったように示すようにします。
 
 ![VS でオプションをリリース モードでビルドするツールバーです。](media/select-release-mode.png)
 
 **図 4-41**します。 リリース モードを選択します。
 
-実行する場合、`docker image`コマンドを作成した両方のイメージが表示されます。 1 つずつ`debug`およびその他の`release`モード。
+実行する場合、`docker image`コマンドを作成するには、1 つの両方のイメージが表示されます`debug`およびその他の`release`モード。
 
 ### <a name="create-a-new-tag-for-the-image"></a>イメージの新しいタグを作成します。
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 どちらの場合は、名前を取得します。 この例では`mssampleacr.azurecr.io`します。
 
-ようになりました、イメージをタグを次のコマンドを使用して、最新のイメージ (イメージのリリース) を取得します。
+ようになりましたことができますタグを付けること、イメージを最新のイメージ (リリース イメージ) の場合は、コマンドを使用。
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-実行後、`docker tag`コマンドでのイメージを一覧表示、`docker images`コマンド。 新しいタグを持つイメージが表示されます。
+実行後、`docker tag`コマンドでのイメージを一覧表示、`docker images`コマンドを新しいタグを持つイメージが表示されます。
 
 ![Docker イメージのコマンドからの出力をコンソール。](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
 
 **図 4-46**します。 ノードのビュー
 
-次の手順では、AKS の Kubernetes クラスターにコンテナーをデプロイします。 そのためには、ファイルが必要です。 (**.yml ファイルをデプロイする**)、この場合、含まれています。
+次の手順では、AKS の Kubernetes クラスターにコンテナーをデプロイします。 そのためには、ファイルが必要です。 (**.yml ファイルをデプロイする**)、次を含みます。
 
 ```yml
 apiVersion: apps/v1beta1

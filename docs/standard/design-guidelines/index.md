@@ -45,5 +45,4 @@ author: KrzysztofCwalina
 ## <a name="see-also"></a>関連項目
 
 - [概要](../../../docs/framework/get-started/overview.md)
-- [.NET Framework のロードマップ](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [開発ガイド](../../../docs/framework/development-guide.md)
