@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 5018aebb0401ce5a1c46ecf04a7c65ca676271e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565905"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971638"
 ---
 # <a name="function-statement-visual-basic"></a>Function ステートメント (Visual Basic)
 宣言名、パラメーター、および定義するコードを`Function`プロシージャ。  
@@ -53,7 +53,7 @@ End Function
   
 -   `attributelist`  
   
-     任意。 参照してください[属性一覧](attribute-list.md)します。  
+     任意。 参照してください[属性リスト](attribute-list.md)します。  
   
 -   `accessmodifier`  
   
@@ -71,13 +71,13 @@ End Function
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)  
   
-     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+     「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `proceduremodifiers`  
   
      任意。 次のいずれかの値を指定します。  
   
-    -   [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)  
+    -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
     -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -129,18 +129,21 @@ End Function
   
 -   `implementslist`  
   
-     `Implements` を指定する場合は、必ず指定します。 実装される `Function` プロシージャのリストです。  
+     
+  `Implements` を指定する場合は、必ず指定します。 実装される `Function` プロシージャのリストです。  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
-     `implementedprocedure` の構文と指定項目は次のとおりです。  
+     
+  `implementedprocedure` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
     |パーツ|説明|  
     |---|---|  
     |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
-    |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|  
+    |`definedname`|必須。 
+  `interface` の中でプロシージャを定義するために使用する名前。|  
   
 -   `Handles`  
   
@@ -148,11 +151,13 @@ End Function
   
 -   `eventlist`  
   
-     `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
+     
+  `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
   
      `eventspecifier [ , eventspecifier ... ]`  
   
-     `eventspecifier` の構文と指定項目は次のとおりです。  
+     
+  `eventspecifier` の構文と指定項目は次のとおりです。  
   
      `eventvariable.event`  
   
@@ -193,11 +198,11 @@ End Function
   
  `Return`ステートメントは、同時に戻り値を割り当てるし、として次の例は、関数を終了します。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
  次の例では、関数名に、戻り値を割り当てて`myFunction`しを使用して、`Exit Function`ステートメントに戻ります。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
  `Exit Function`と`Return`ステートメントからすぐに終了が発生する、`Function`プロシージャ。 任意の数の`Exit Function`と`Return`ステートメントは、手順では、どこでも表示でき、組み合わせることができます`Exit Function`と`Return`ステートメント。  
   
@@ -240,19 +245,19 @@ End Function
 ## <a name="example"></a>例  
  次の例では、`Function`宣言名、パラメーター、およびコードの本体を形成するステートメントを`Function`プロシージャ。 `ParamArray`修飾子により、可変個の引数を受け入れるように機能します。  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>例  
  次の例では、前の例で宣言された関数を呼び出します。  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
 ## <a name="example"></a>例  
  次の例では、`DelayAsync`は、 `Async` `Function`の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 そのため、関数の宣言の`DelayAsync`の戻り値の型を指定する必要があります`Task(Of Integer)`します。 戻り値の型である`Task(Of Integer)`の評価、`Await`式`DoSomethingAsync`整数が生成されます。 これはこのステートメントで示されています:`Dim result As Integer = Await delayTask`します。  
   
  `startButton_Click`プロシージャの例に示します、`Async Sub`プロシージャ。 `DoSomethingAsync`は、`Async`関数では、タスクへの呼び出しを`DoSomethingAsync`、次のステートメントに示す待機する必要があります:`Await DoSomethingAsync()`します。 `startButton_Click` `Sub`でプロシージャを定義する必要があります、`Async`修飾子があるため、`Await`式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - [Sub ステートメント](sub-statement.md)

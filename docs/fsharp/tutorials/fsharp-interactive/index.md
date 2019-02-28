@@ -1,15 +1,9 @@
 ---
-title: F# Interactive (fsi.exe) のリファレンス
-description: 学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。
+title: 'F# Interactive (fsi.exe) のリファレンス'
+description: '学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611062"
 ---
-# <a name="interactive-programming-with-f"></a>F# による対話型プログラミング #
+# <a name="interactive-programming-with-f"></a>F# による対話型プログラミング\#
 
 > [!NOTE]
 > この記事では、現時点の Windows のエクスペリエンスについてのみ説明します。  書き換えられる予定です。
@@ -44,7 +38,7 @@ Visual Studio で実行する場合、F# Interactive はプロジェクトとは
 設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、**[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、32 ビットまたは 64 ビット プロセスとして実行するかどうかを決定するためにコンピューター アーキテクチャを使用する、fsi.exe または fsianycpu.exe の専用の 64 ビット バージョンを実行するかどうかが決定されます。
 
 
-## <a name="scripting-with-f"></a>F# によるスクリプト #
+## <a name="scripting-with-f"></a>F によるスクリプト\#
 スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルし、後でそのコンパイル済みのアセンブリを実行する代わりに、**fsi.exe** を実行し、F# ソース コードのスクリプトのファイル名を指定するだけで、F# Interactive によってコードを読み取り、リアルタイムで実行することができます。
 
 
@@ -97,7 +91,7 @@ test
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----|-----------|
 |[F# Interactive オプション](../../language-reference/fsharp-interactive-options.md)|コマンドライン構文について説明し、オプション、F#対話形式で、fsi.exe します。|
 |[F# Interactive ライブラリ リファレンス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F# Interactive でコードを実行するときに使用できるライブラリ機能について説明します。|

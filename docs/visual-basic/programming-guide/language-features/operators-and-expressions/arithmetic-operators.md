@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730738"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981271"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 算術演算子を使用して、多くのリテラル、変数、その他の式、関数とプロパティの呼び出し、および定数によって表される数値の計算に関連する一般的な算術演算を実行します。 算術演算子にも分類は、ビット シフト演算子のオペランドのビットごとのレベルで動作し、ビット パターンを左または右にシフトです。  
@@ -26,29 +26,29 @@ ms.locfileid: "54730738"
 ## <a name="arithmetic-operations"></a>算術演算  
  組み合わせて式の中で 2 つの値を追加することができます、 [+ 演算子](../../../../visual-basic/language-reference/operators/addition-operator.md)、一方から他方の減算または、 [-演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)例を次に示します。  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  否定を使用しても、 [-演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)が 1 つだけのオペランドで次の例を示します。  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  乗算と除算の使用、 [* 演算子](../../../../visual-basic/language-reference/operators/multiplication-operator.md)と[/演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)、それぞれに、次の例を示します。  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  指数演算を使用して、 [^ 演算子](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)例を次に示します。  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  整数の除算を使用して実施、 [\ 演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)します。 整数除算の商を返します、回数の合計を表す整数除数に分割ができます、残りの部分を考慮せず被除数。 除数と被除数の両方が整数型にする必要があります (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、および`ULong`) この演算子。 他のすべての種類は、最初の整数型に変換する必要があります。 次の例では、整数の除算を示します。  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  使用して、剰余演算が実行される、 [Mod 演算子](../../../../visual-basic/language-reference/operators/mod-operator.md)します。 この演算子は、整数回数、被除数を除数で割った剰余を返します。 除数と被除数の両方が整数型の場合、返される値は不可欠です。 除数と被除数が浮動小数点型の場合、返される値が浮動小数点もします。 次の例では、この動作を示します。  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>0 による除算  
  0 による除算では、関連するデータ型によって異なる結果があります。 整数の区分で (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`)、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]スロー、<xref:System.DivideByZeroException>例外。 除算操作で、`Decimal`または`Single`データ型、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]もスローされます、<xref:System.DivideByZeroException>例外。  
@@ -80,7 +80,7 @@ ms.locfileid: "54730738"
   
  次の例では、シフト、`Integer`左と右の両方の値します。  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  算術シフトでは、オーバーフロー例外が生成されません。  
   

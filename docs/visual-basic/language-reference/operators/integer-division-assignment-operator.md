@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 8985fb081443d931be3210c81099d510e2da057d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b24cfe3357bfe5be213464facd9f9db0a5e27e0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491897"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977985"
 ---
 # <a name="-operator"></a>\\= 演算子
 変数またはプロパティの値式の値で除算し、結果の整数値を変数またはプロパティに代入します。  
@@ -47,7 +47,7 @@ variableorproperty \= expression
 ## <a name="example"></a>例  
  次の例では、`\=`演算子を 1 つの分割`Integer`秒と、整数の結果が最初の変数に割り当てるのでは、変数。  
   
- [!code-vb[VbVbalrOperators#19](codesnippet/VisualBasic/integer-division-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>関連項目
 - [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)

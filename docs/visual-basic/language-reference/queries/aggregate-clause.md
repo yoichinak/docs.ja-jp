@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547093"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981960"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 句 (Visual Basic)
 1 つまたは複数の集計関数をコレクションに適用します。  
@@ -54,25 +54,25 @@ Aggregate element [As type] In collection _
 
 返します`true`返しますそれ以外の場合、コレクション内のすべての要素。 指定された条件を満たす場合`false`します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>どれでも可
 
 返します`true`返しますそれ以外の場合、コレクション内の任意の要素が; 指定された条件を満たす場合`false`します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>平均
 
 コレクション内のすべての要素の平均を計算するか、またはコレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>カウント
 
 コレクション内の要素の数をカウントします。 省略可能なを指定する`Boolean`式、条件を満たすコレクション内の要素の数のみをカウントします。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>グループ化
 
@@ -86,25 +86,25 @@ Aggregate element [As type] In collection _
 
 コレクションから最大値を計算またはコレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>最小
 
 コレクションから最小値を計算またはコレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Sum
 
 コレクション内のすべての要素の合計を計算するか、またはコレクション内のすべての要素に対して指定された式を計算します。 次に例を示します。
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>例  
 
 次の例は、使用する方法を示します、`Aggregate`句をクエリ結果に集計関数を適用します。  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>ユーザー定義集計関数を作成します。
 
@@ -112,11 +112,11 @@ Aggregate element [As type] In collection _
   
  たとえば、次の例は、数値のコレクションの中央値を計算するカスタムの集計関数を示します。 2 つのオーバー ロードがあります、`Median`拡張メソッド。 最初のオーバー ロードを受け入れると、入力として、型のコレクション`IEnumerable(Of Double)`します。 場合、`Median`型のクエリ フィールドの集計関数が呼び出されます`Double`、このメソッドが呼び出されます。 2 番目のオーバー ロード、`Median`任意のジェネリック型をメソッドに渡すことができます。 ジェネリック オーバー ロード、`Median`メソッドが参照する 2 番目のパラメーターを受け取り、`Func(Of T, Double)`型の対応する値として (コレクション) からの型の値を射影するラムダ式`Double`します。 その他のオーバー ロードに中央値の計算をデリゲートして、`Median`メソッド。 ラムダ式について詳しくは、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  次の例では、サンプル クエリを呼び出す、`Median`集計関数の型のコレクション`Integer`、型のコレクションと`Double`します。 呼び出すクエリ、`Median`集計関数の種類のコレクションで`Double`のオーバー ロードを呼び出し、`Median`型のコレクションを入力として受け取るメソッドを`Double`します。 呼び出すクエリ、`Median`集計関数の種類のコレクションで`Integer`のジェネリック オーバー ロードを呼び出し、`Median`メソッド。  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: a44aff8407a29ef7f3712e116301cfce0aa984ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700430"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975005"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 ステートメントのグループをコレクション内の各要素に対して繰り返されます。  
@@ -64,7 +64,7 @@ Next [ element ]
   
  次の例では、 `For Each`.`Next` ステートメントは、リスト コレクションのすべての要素を反復処理します。  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
  例については、次を参照してください。[コレクション](../../../standard/collections/index.md)と[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
@@ -73,7 +73,7 @@ Next [ element ]
   
  次の例で入れ子になった`For Each`.`Next` 構造体。  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#122)]  
   
  各ループが一意ありますループを入れ子にすると`element`変数。  
   
@@ -86,7 +86,7 @@ Next [ element ]
   
  次の例は、使用する方法を示します、`Continue For`と`Exit For`ステートメント。  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#123)]  
   
  任意の数を配置する`Exit For`内のステートメントを`For Each`ループします。 使用すると内で入れ子になった`For Each`ループ、`Exit For`実行を入れ子の上位のレベルへの最も内側のループと転送コントロールを終了します。  
   
@@ -105,7 +105,7 @@ Next [ element ]
   
  次の例では、反復子関数を使用します。 Iterator 関数が、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers`メソッドは、の各反復処理、`For Each`ステートメント本体は、次に進みますこの反復子関数の呼び出しを作成します。`Yield`ステートメント。  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
  詳細については、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)、 [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)、および[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
   
@@ -133,7 +133,7 @@ Next [ element ]
   
  割り当て、次の例で`m`の初期値として`n`ときにコンパイルされません`Option Strict`ためではへの変換、`Long`を`Integer`縮小変換です。 `For Each`ステートメントでは、コンパイラ エラーがないへの代入も報告`number`から同じ変換が必要`Long`に`Integer`します。 `For Each`数が多いを含むステートメントでは、実行時エラーが発生したときに<xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>膨大な数に適用されます。  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class3.vb#89)]  
   
 ### <a name="ienumerator-calls"></a>IEnumerator の呼び出し  
  ときの実行、 `For Each`.`Next`ループの開始、ことを確認します Visual Basic`group`は有効なコレクション オブジェクトを参照します。 それ以外の場合は、例外をスローします。 それ以外の場合、呼び出し、<xref:System.Collections.IEnumerator.MoveNext%2A>メソッドと<xref:System.Collections.IEnumerator.Current%2A>最初の要素を返す列挙子オブジェクトのプロパティ。 場合`MoveNext`がない、次の要素は、コレクションが空の場合を示します、`For Each`停止をループし、次のステートメントのパスを制御、`Next`ステートメント。 Visual Basic の場合は、設定`element`に最初の要素と、ステートメント ブロックを実行します。  
@@ -161,7 +161,7 @@ End Sub
 ## <a name="example"></a>例  
  次の例を使用して、C:\ ディレクトリ内のすべてのフォルダーを一覧表示、<xref:System.IO.DirectoryInfo>クラス。  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#124)]  
   
 ## <a name="example"></a>例  
  次の例では、コレクションを並べ替えるための手順を示しています。 例では、並べ替えのインスタンスを`Car`クラスに格納されている、<xref:System.Collections.Generic.List%601>します。 `Car` クラスは、<xref:System.IComparable%601> のメソッドの実装を必要とする <xref:System.IComparable%601.CompareTo%2A> インターフェイスを実装します。  
@@ -170,7 +170,7 @@ End Sub
   
  `ListCars` のメソッドでは、`cars.Sort()` ステートメントがリストを並べ替えます。 <xref:System.Collections.Generic.List%601.Sort%2A> の <xref:System.Collections.Generic.List%601> メソッドへの呼び出しによって、`CompareTo` メソッドは `Car` 内の `List` オブジェクトに自動的に呼び出されます。  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>関連項目
 - [コレクション](../../../standard/collections/index.md)

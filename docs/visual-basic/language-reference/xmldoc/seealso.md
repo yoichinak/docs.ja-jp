@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <seealso> XML tag
 - seealso XML tag
 ms.assetid: 36050c95-1af2-4284-b9b6-1a70691ed978
-ms.openlocfilehash: ca0b298c0c95e018febbcfac95de7db05bffedb8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9f857be6d0bd46233a49c7d2ff0931670baa95a6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287886"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965302"
 ---
 # <a name="seealso-visual-basic"></a>\<seealso > (Visual Basic)
 「参照」セクションに表示されるリンクを指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "55287886"
 ## <a name="example"></a>例  
  この例では、`<seealso>`にタグを付ける、`DoesRecordExist`解説セクションを参照する、`UpdateRecord`メソッド。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/seealso_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

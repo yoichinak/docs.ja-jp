@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587555"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980465"
 ---
 # <a name="new-operator-visual-basic"></a>New 演算子 (Visual Basic)
 導入されています、 `New` 、新しいオブジェクト インスタンスを作成する句が、型パラメーターにコンス トラクター制約を指定または識別、`Sub`クラスのコンス トラクターと手順。  
@@ -26,11 +26,11 @@ ms.locfileid: "54587555"
   
  使用することができます、`New`宣言ステートメントまたは代入ステートメントの句。 ステートメントを実行すると、指定した引数を渡さず、指定したクラスの適切なコンス トラクターを呼び出します。 次の例では、これを示しますのインスタンスを作成、`Customer`を 2 つのコンス トラクターを持つクラス、もう 1 つはパラメーターはとらず文字列パラメーターを受け取る。  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
  配列は、クラスであるため`New`次の例に示すように、配列の新しいインスタンスを作成することができます。  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
  共通言語ランタイム (CLR) がスローされます、<xref:System.OutOfMemoryException>エラーの新しいインスタンスを作成する十分なメモリがある場合。  
   

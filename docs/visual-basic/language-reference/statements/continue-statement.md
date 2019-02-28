@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 23bb57ec022e62cd586c533d4ed4c792789a0b38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7aa0bda9c87553a5c9dae38517b5d546f782bed0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627006"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974082"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)
 ループの次の反復処理に直ちに制御を転送します。  
@@ -37,7 +37,7 @@ Continue { Do | For | While }
 ## <a name="example"></a>例  
  次のコード例では、`Continue While`除数がゼロの場合は、配列の次の列をスキップするステートメント。 `Continue While`内では、`For`ループします。 転送先、`While col < lastcol`ステートメントでは、最も内側の次のイテレーションである`While`ループが含まれている`For`ループします。  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>関連項目
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)

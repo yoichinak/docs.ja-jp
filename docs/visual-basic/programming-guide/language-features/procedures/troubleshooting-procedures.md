@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648548"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972002"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>プロシージャのトラブルシューティング (Visual Basic)
 このページには、プロシージャを使用する場合に発生する可能性がある一般的な問題が一覧表示されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "54648548"
   
  **正しいアプローチは:** 返される配列の要素を変更できるようにするには、ローカル変数として、内部配列を定義します。 次の例では、コンパイル エラーが発生します。  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>引数は変更されていないプロシージャ コールによって  
  呼び出し元のコードで引数を基になるプログラミング要素を変更するプロシージャを許可する場合は、参照渡しで渡す必要があります。 値を値によって渡す場合でも、プロシージャが参照型の引数の要素をアクセスできます。  
@@ -52,13 +52,13 @@ ms.locfileid: "54648548"
   
  次の例では、その要素を値で配列変数を受け取り、操作される 2 つの手順を定義します。 プロシージャ`increase`単に各要素に 1 つ追加します。 プロシージャ`replace`パラメーターに新しい配列を割り当てます`a()`し、各要素に 1 つを追加します。 ただし、再割り当てには影響しません、呼び出し元のコードで、基になる配列変数のため`a()`が宣言されている`ByVal`します。  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  次の例での呼び出しを`increase`と`replace`します。  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  最初の`MsgBox`呼び出しが表示されます"increase(n) 後。11, 21, 31, 41". `n` 、参照型では、`increase`渡される場合でも、そのメンバーを変更することができます`ByVal`します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54648548"
   
  **正しいアプローチは:** 基になる変数要素自体を変更するには、参照によって渡します。 次の例では、変更を示しますの宣言で`replace`を呼び出し元のコードの別の 1 つの配列を置き換えるようになります。  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>オーバー ロードを定義することができません。  
  プロシージャのオーバー ロードされたバージョンを定義する場合は、異なるシグネチャが同じ名前を使用する必要があります。 コンパイラは、同じシグネチャを持つオーバー ロードから宣言を区別することはできません、エラーが生成されます。  
@@ -108,9 +108,9 @@ ms.locfileid: "54648548"
   
  次の例は、オーバー ロードの解決プロセスを示しています。  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  ため、最初の呼び出しで、コンパイラが最初のオーバー ロードを排除最初の引数の型 (`Short`) と対応するパラメーターの型へ縮小変換 (`Byte`)。 次に除去 3 番目のオーバー ロードは、2 番目のオーバー ロードに各引数を入力 (`Short`と`Single`) 3 番目のオーバー ロードでは、対応する型に拡大変換されます (`Integer`と`Single`)。 2 番目のオーバー ロードが必要な拡大が少ないので、コンパイラは、呼び出しの使用します。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "54648548"
   
  **正しいアプローチは:** あいまいさがないオーバー ロードされたプロシージャを呼び出すには、次のように使用します。 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)パラメーターの型に引数のデータ型と一致します。 次の例では、呼び出しを`z`を強制的に 2 つ目のオーバー ロードに解決します。  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>オーバー ロード解決でオプションおよび ParamArray 引数  
  最後のパラメーターを宣言する点を除いて、プロシージャの 2 つのオーバー ロードが同じシグネチャを持つ場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)で 1 つと[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)コンパイラがそのプロシージャの呼び出しを解決して、その他に従って、最も近い一致します。 詳細については、「 [Overload Resolution](./overload-resolution.md)」を参照してください。  

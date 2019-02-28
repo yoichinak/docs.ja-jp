@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738657"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973289"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>方法: 定義の演算子 (Visual Basic)
 標準の演算子の動作を定義するクラスまたは構造体を定義している場合 (など`*`、 `<>`、または`And`) 1 つまたは両方のオペランドがクラスまたは構造体の型であるとき。  
@@ -30,11 +30,11 @@ ms.locfileid: "55738657"
 ## <a name="example"></a>例  
  次の例では、定義、`+`構造体の演算子と呼ばれる`height`します。 構造体は、フィートやインチ単位の高さを使用します。 1 つ*インチ*2.54 センチメートル、もう 1 つは、 *foot* 12 インチです。 コンス トラクターを実行する正規化された値 (インチ < 12.0) を確認するには、*剰余*12 の演算です。 `+`演算子では、コンス トラクターを使用して、正規化された値を生成します。  
   
- [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
  構造体をテストする`height`を次のコード。  
   
- [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
   
   
 ## <a name="see-also"></a>関連項目

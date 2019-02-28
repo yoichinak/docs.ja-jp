@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 71769c023ba77d40099ba0ba29ef363091e96831
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01a505130d566ec88a6d87e5e9ad525e449d7298
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521557"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981245"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XCData>オブジェクト。  
@@ -54,7 +54,7 @@ ms.locfileid: "54521557"
 ## <a name="example"></a>例  
  次の例では、テキストを含む CDATA セクション"リテラルを含めることができます\<XML > タグ"。  
   
- [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Xml.Linq.XCData>

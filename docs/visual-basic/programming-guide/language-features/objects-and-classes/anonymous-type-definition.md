@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678402"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975616"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名型の定義 (Visual Basic)
 匿名型のインスタンスの宣言に応答してでは、コンパイラは、型の指定したプロパティを格納する新しいクラス定義を作成します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54678402"
 ## <a name="compiler-generated-code"></a>コンパイラによって生成されたコード  
  次の定義の`product`、コンパイラは、プロパティを格納する新しいクラス定義を作成します。 `Name`、 `Price`、と`OnHand`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]  
   
  クラス定義には、次のようなプロパティの定義が含まれています。 あることに注意してくださいありません`Set`メソッド主要なプロパティ。 キー プロパティの値とは、読み取り専用です。  
   
@@ -66,13 +66,13 @@ End Class
   
      たとえば、次の例についてで`Equals`返します`True`のみ`employee01`と`employee08`。 各行の新しいインスタンスが一致しない理由理由を指定する前にコメント`employee01`します。  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]  
   
 -   `GetHashcode` 適切に一意の GetHashCode アルゴリズムを提供します。 アルゴリズムでは、キー プロパティだけを使用して、ハッシュ コードを計算します。  
   
 -   `ToString` 次の例に示すように、連結されたプロパティの値の文字列を返します。 キーとキー以外のプロパティの両方が含まれます。  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]  
   
  生成されたこれらのメソッドと競合する、匿名型のプロパティを明示的に指定できません。 つまり、使用することはできません`.Equals`、 `.GetHashCode`、または`.ToString`にプロパティの名前します。  
   

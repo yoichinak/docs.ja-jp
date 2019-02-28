@@ -17,7 +17,7 @@ Visual Basic での計算を実行するときに、値を格納する多くの�
 ## <a name="assigning-values"></a>値の代入  
  次の例のように、計算を実行し、結果を変数に割り当てるために、代入ステートメントを使用できます。  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  この例の等号 (`=`) は、等値演算子ではなく代入演算子です。 この値は、変数 `applesSold` に割り当てられます。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 220d6e06ef692655bd6db000fa98b4eb2fc69ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1de1b3a816739fc5f8ba1d1251b673c0b708d106
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683847"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969493"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 使用されるように、変数が宣言されていない場合は、コンパイラ エラーを報告します。  
@@ -43,7 +43,7 @@ ms.locfileid: "54683847"
 ## <a name="example"></a>例  
  ときに、次のコードがコンパイル`-optionexplicit-`使用されます。  
   
- [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)

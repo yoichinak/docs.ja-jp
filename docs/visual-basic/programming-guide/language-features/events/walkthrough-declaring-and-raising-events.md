@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580496"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975395"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>チュートリアル: 宣言と発生イベント (Visual Basic)
 このチュートリアルを宣言してという名前のクラスのイベントを発生させる方法について説明`Widget`します。 手順を完了した後可能性がある、関連トピック[チュートリアル。イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)からのイベントを使用する方法を示す`Widget`アプリケーションで状態情報を提供するオブジェクト。  
@@ -46,7 +46,7 @@ ms.locfileid: "54580496"
   
 -   使用して、`Event`でイベントを宣言するキーワード、`Widget`クラス。 イベントことがあります`ByVal`と`ByRef`、引数として`Widget`の`PercentDone`イベントを示します。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  呼び出し元のオブジェクトを受信すると、 `PercentDone` 、イベント、`Percent`引数には、タスクが完了の割合が含まれています。 `Cancel`に引数を設定することができます`True`イベントを発生させたメソッドをキャンセルします。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "54580496"
   
 1.  アクセスを簡略化する、 `Timer` 、このクラスによって使用されるプロパティの追加、`Imports`クラスのモジュールの宣言セクションの先頭にステートメントの上、`Class Widget`ステートメント。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  `Widget` クラスに次のコードを追加します。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  アプリケーションを呼び出すと、`LongTask`メソッド、`Widget`クラスが生成、`PercentDone`イベントすべて`MinimumInterval`秒。 イベントが返されるときに`LongTask`かどうかをチェック、`Cancel`引数に設定された`True`します。  
   

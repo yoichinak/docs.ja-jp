@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: 8507d81d3060192640bf9a84e67ad39111c455b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8fb990533d9db90eacf76aff424ea3cf96b0875
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537570"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970520"
 ---
 # <a name="-operator-visual-basic"></a>/= 演算子 (Visual Basic)
 変数またはプロパティの値式の値で除算し、浮動小数点の結果を変数またはプロパティに代入します。  
@@ -46,7 +46,7 @@ variableorproperty /= expression
 ## <a name="example"></a>例  
  次の例では、`/=`演算子を 1 つの分割`Integer`秒と最初の変数に商の割り当てでは、変数。  
   
- [!code-vb[VbVbalrOperators#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
 - [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)

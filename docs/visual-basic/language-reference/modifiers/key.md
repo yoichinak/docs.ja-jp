@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 695f356f44bfd6ea5ad3c0a977ec31ddfbea2b05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668224"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967777"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`キーワードでは、匿名型のプロパティの動作を指定することができます。 匿名型のインスタンス、またはハッシュ コード値の計算の間での等価テストでキー プロパティとしてを指定したプロパティのみです。 キー プロパティの値を変更できません。  
   
  キー プロパティとして、キーワードを配置することで、匿名型のプロパティを指定する`Key`初期化リストでの宣言の前にします。 次の例では、`Airline`と`FlightNo`キーのプロパティが`Gate`はありません。  
   
- [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
  直接継承する新しい匿名型が作成されると、<xref:System.Object>します。 コンパイラは、次の 3 つの継承されたメンバーをオーバーライドします。 <xref:System.Object.Equals%2A>、 <xref:System.Object.GetHashCode%2A>、および<xref:System.Object.ToString%2A>します。 生成されたオーバーライド コードは、<xref:System.Object.Equals%2A>と<xref:System.Object.GetHashCode%2A>キー プロパティに基づきます。 種類でキー プロパティがない場合<xref:System.Object.GetHashCode%2A>と<xref:System.Object.Equals%2A>は上書きされません。  
   
 ## <a name="equality"></a>等価比較  
  匿名型の 2 つのインスタンスは、キー プロパティの値が等しい場合、同じ型のインスタンスと等しくなります。 次の例で`flight2`と等しい`flight1`から前の例では、同じ匿名のインスタンスであるための種類とそれらが一致する、キー プロパティの値。 ただし、`flight3`が等しくない`flight1`別のキーのプロパティの値があるため、`FlightNo`します。 インスタンス`flight4`と同じ型でない`flight1`キー プロパティとしてさまざまなプロパティを指定するためです。  
   
- [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
  プロパティを持つのみ非キーと同じ名前、種類、順序、および値である 2 つのインスタンスが宣言されている場合は 2 つのインスタンスが等しくないです。 キー プロパティを持たないインスタンスはのみにします。  
   
@@ -38,20 +38,20 @@ ms.locfileid: "54668224"
   
  すべてのキー プロパティの同じ値を持つ匿名型のインスタンスでは、キー以外のプロパティは一致する値を持っていない場合でも、同じハッシュ コード値があります。 次のステートメントから`True`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
  1 つまたは複数のキー プロパティの異なる値を持つ匿名型のインスタンスでは、別のハッシュ コード値があります。 次のステートメントから`False`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
  キー プロパティとしてさまざまなプロパティを指定する匿名型のインスタンスは、同じ型のインスタンスではありません。 名前とすべてのプロパティの値が同じ場合でも他のハッシュ コード値があります。 次のステートメントから`False`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
 ## <a name="read-only-values"></a>読み取り専用の値  
  キー プロパティの値を変更できません。 たとえば、`flight1`前の例で、`Airline`と`FlightNo`フィールドは読み取り専用が`Gate`変更できます。  
   
- [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
 - [匿名型の定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)

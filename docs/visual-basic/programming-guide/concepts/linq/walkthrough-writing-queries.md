@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666580"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971287"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>チュートリアル: Visual Basic におけるクエリの作成
 このチュートリアルでは、Visual Basic 言語の機能を使用して、記述する方法について説明[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ式。 このチュートリアルでは、学生オブジェクトの一覧にクエリを作成する方法、クエリを実行する方法、およびそれらを変更する方法を示します。 クエリでは、オブジェクト初期化子、ローカル型推論では、匿名型など、いくつかの機能を組み込みます。  
@@ -56,11 +56,11 @@ ms.locfileid: "54666580"
   
 1.  内の位置を検索、`Main`次のようにマークされているプロジェクトのメソッド。  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      次のコードをコピーして貼り付けます。  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  マウス ポインターを合わせる`studentQuery`コンパイラによって割り当てられた型があることを確認するコードで`IEnumerable(Of Student)`します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54666580"
   
 1.  次の追加`For Each`プロジェクト内のクエリの下のループします。  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  ループ コントロール変数の上にマウス ポインターを置く`studentRecord`にそのデータ型を参照してください。 型`studentRecord`推論されます`Student`ため、`studentQuery`のコレクションを返します`Student`インスタンス。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54666580"
   
 1.  クエリ式でのローカル識別子を導入するには、このセクションでは、コードを追加します。 ローカルの識別子では、中間結果を保持します。 次の例では、`name`受講者を連結したものを保持する識別子の最初と姓と名は、します。 便宜上、ローカル識別子を使用できますか、複数回を計算するそれ以外の場合は、式の結果を格納することでパフォーマンスの向上につながります。  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  構築し、CTRL + f5 キーを押してアプリケーションを実行します。 コンソール ウィンドウに結果を注意してください。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54666580"
   
 1.  クエリの追加と`For Each`ソース内の要素とは異なる要素のシーケンスを生成するクエリを作成するには、このセクションからループします。 次の例では、ソースが一連の`Student`オブジェクトではなく各オブジェクトの 1 メンバーのみが返されます。 姓が Garcia 学生の姓。 `currentStudent.First`によって返されるシーケンスのデータ型の文字列`studentQuery3`は`IEnumerable(Of String)`文字列のシーケンス。 前の例のように、データの割り当てを入力`studentQuery3`はローカル型推論を使用して確認するコンパイラの残しておきます。  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  マウス ポインターを合わせる`studentQuery3`割り当てられた型があることを確認するコードで`IEnumerable(Of String)`します。  
   
@@ -122,14 +122,14 @@ ms.locfileid: "54666580"
   
      次の例では、名前と成績順位の 1 ~ 10 の教育機関のランクの順序で、最上級生のランクを返すクエリを作成します。 この例では、型で`studentQuery4`ため、推論する必要があります、`Select`句は、匿名型のインスタンスを返し、匿名型に使用できる名前がありません。  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  構築し、CTRL + f5 キーを押してアプリケーションを実行します。 コンソール ウィンドウに結果を注意してください。  
   
 ## <a name="additional-examples"></a>その他の例  
  電源と柔軟性を説明するためにその他の例の一覧を次に、基本を理解したところで[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 それぞれの例には、機能の簡単な説明が付きます。 推論された型を表示するには、各クエリのクエリ結果の変数にマウス ポインターを置きます。 使用して、`For Each`ループを使用して、結果を生成します。  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>追加情報  
  特定の種類のドキュメントとサンプルを読み取る準備が完了したらクエリの基本的な概念を理解したら、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]興味のあるプロバイダー。  

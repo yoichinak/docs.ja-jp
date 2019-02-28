@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 4c92e7b3892fa35035935d5db317c72d74814ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b8bec965e5a149466863cde7a2646128469cbd0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512984"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972171"
 ---
 # <a name="property-statement"></a>Property Statement
 プロパティ、および格納し、プロパティの値を取得するために使用するプロパティ プロシージャの名前を宣言します。  
@@ -44,7 +44,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+     任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
 -   `Default`  
   
@@ -66,13 +66,13 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+     「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `propertymodifiers`  
   
      任意。 次のいずれかの値を指定します。  
   
-    -   [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)  
+    -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
     -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
@@ -124,11 +124,13 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `implementslist`  
   
-     `Implements` を指定する場合は、必ず指定します。 実装されているプロパティの一覧です。  
+     
+  `Implements` を指定する場合は、必ず指定します。 実装されているプロパティの一覧です。  
   
      `implementedproperty [ , implementedproperty ... ]`  
   
-     `implementedproperty` の構文と指定項目は次のとおりです。  
+     
+  `implementedproperty` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
@@ -190,22 +192,22 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   **値を返します。** 値を返す、`Get`プロシージャ、プロパティ名に値を割り当てるか、含めることで、`Return`ステートメント。 次の例では、プロパティ名に戻り値を割り当てて`quoteForTheDay`しを使用して、`Exit Property`ステートメントに戻ります。  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#28)]  
   
      使用する場合`Exit Property`値を割り当てることがなく`name`、`Get`プロパティのデータ型の既定値を返します。  
   
      `Return`ステートメントと同時に割り当てます、`Get`プロシージャを返す値し、手順を終了します。 次の例に示します。  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#27)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>例  
  次の例では、クラスのプロパティを宣言します。  
   
- [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>関連項目
 - [自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731523"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967530"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
 ほとんどの場合は、デザイン時に、オブジェクトのメソッドとプロパティを検出し、それらを処理するコードを記述できます。 ただし、場合によっては可能性がありますいないオブジェクトのプロパティとメソッドを事前にわかって、またはプロパティを指定するか、実行時にメソッドを実行するエンドユーザーの有効化の柔軟性をするだけです。  
@@ -35,11 +35,11 @@ ms.locfileid: "54731523"
   
  という名前のクラスを格納するアセンブリへの参照を追加するとします`MathClass`、という名前の新しい関数を持つ`SquareRoot`次のコードに示すように、します。  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  アプリケーションでは、どのメソッドが呼び出されるコントロールとその引数をテキスト ボックス コントロールを使用できます。 たとえば場合、`TextBox1`評価される式が含まれていますと`TextBox2`は関数の名前を入力するために使用、することができますを使用して、次のコードを呼び出す、`SquareRoot`関数内の式で`TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  「64」に入力した場合`TextBox1`で"SquareRoot"`TextBox2`を呼び出して、`CallMath`プロシージャ、内の数値の平方根`TextBox1`が評価されます。 例のコードを呼び出す、 `SquareRoot` (必須の引数として評価される式を含む文字列を扱う) に機能し、「8」を返します`TextBox1`(の平方根 64)。 もちろん、ユーザーが入力に無効な文字列`TextBox2`文字列には、メソッドではなくプロパティの名前が含まれている場合は、メソッドがあるその他の必要な引数は、実行時エラーが発生します。 使用する場合は、堅牢なエラー処理コードを追加する必要が`CallByName`これらやその他のエラーを予測します。  
   

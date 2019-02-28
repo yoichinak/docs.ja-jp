@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496310"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966724"
 ---
 # <a name="sub-expression-visual-basic"></a>部分式 (Visual Basic)
 パラメーターとサブルーチンのラムダ式を定義するコードを宣言します。  
@@ -55,7 +55,7 @@ End Sub
 ## <a name="example"></a>例  
  値をコンソールに出力するラムダ式の例を次に示します。 この例では、サブルーチンの両方の単一行および複数行のラムダ式構文を示します。 例については、次を参照してください。[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>関連項目
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)

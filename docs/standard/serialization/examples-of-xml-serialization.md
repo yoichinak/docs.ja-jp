@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204809"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974368"
 ---
 # <a name="examples-of-xml-serialization"></a>XML シリアル化の例
 XML シリアル化は、単純な形式から複雑な形式に至るまで、さまざまな形で実行できます。 たとえば、「[XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)」に示すように、パブリック フィールドとパブリック プロパティだけで構成されるクラスをシリアル化できます。 次の例では、XML シリアル化を使用して特定の XML スキーマ (XSD) ドキュメントに準拠する XML ストリームを生成する方法など、各種の高度なシナリオに対応するコード例を示します。  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>複雑なオブジェクトを返すフィールドを含むクラスのシリアル化  
- プロパティやフィールドが複雑なオブジェクト (配列やクラス インスタンスなど) を返す場合、[XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) は、そのオブジェクトをメイン XML ドキュメント内で入れ子になっている要素に変換します。 たとえば、次のコード例の最初のクラスは、2 番目のクラスのインスタンスを返します。  
+ プロパティやフィールドが複雑なオブジェクト (配列やクラス インスタンスなど) を返す場合、<xref:System.Xml.Serialization.XmlSerializer> は、そのオブジェクトを、メイン XML ドキュメント内で入れ子になっている要素に変換します。 たとえば、次のコード例の最初のクラスは、2 番目のクラスのインスタンスを返します。  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -363,7 +363,8 @@ public class Employee {
   
  `CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。 このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。 このコードは、シリアル化されるクラスの型をコンストラクターに渡します。 さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。  
   
- `ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。  
+ 
+  `ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。  
   
 ```vb  
 Imports System  
@@ -767,6 +768,6 @@ public class Test
 - [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [属性を使用した XML シリアル化の制御](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer クラス](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
 - [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [方法: オブジェクトを逆シリアル化します。](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

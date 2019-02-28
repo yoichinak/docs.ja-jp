@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee30e885a08d3e8302d7b6083c1c65e525006c5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617317"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973432"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim ステートメント (Visual Basic)
 配列変数の記憶域を再割り当てします。  
@@ -51,9 +51,12 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |`boundlist`|必須。 再定義された配列の各次元の境界を一覧表示します。|  
   
 ## <a name="remarks"></a>Remarks  
- `ReDim` ステートメントを使用し、既に宣言されている配列の 1 つまたは複数の次元のサイズを変更できます。 大きな配列があり、その要素の一部が必要ない場合、`ReDim` で配列のサイズを減らし、メモリを解放できます。 一方で、配列に要素を追加する必要がある場合、`ReDim` は要素を追加できます。  
+ 
+  `ReDim` ステートメントを使用し、既に宣言されている配列の 1 つまたは複数の次元のサイズを変更できます。 大きな配列があり、その要素の一部が必要ない場合、`ReDim` で配列のサイズを減らし、メモリを解放できます。 一方で、配列に要素を追加する必要がある場合、`ReDim` は要素を追加できます。  
   
- `ReDim` ステートメントは配列のみを対象としています。 スカラー (単一の値のみが含まれる変数)、コレクション、構造体では有効ではありません。 `Array` 型の変数を宣言する場合、`ReDim` ステートメントには新しい配列を作成するために十分な型情報が与えられません。  
+ 
+  `ReDim` ステートメントは配列のみを対象としています。 スカラー (単一の値のみが含まれる変数)、コレクション、構造体では有効ではありません。 
+  `Array` 型の変数を宣言する場合、`ReDim` ステートメントには新しい配列を作成するために十分な型情報が与えられません。  
   
  `ReDim` はプロシージャ レベルでのみ使用できます。 そのため、変数の宣言コンテキストはプロシージャにする必要があります。ソース ファイル、名前空間、インターフェイス、クラス、構造体、モジュール、ブロックにすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
@@ -63,7 +66,8 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **配列の境界。** `boundlist` の各エントリでその次元の上限と下限を指定できます。 下限は常に 0 (ゼロ) です。 上限は次元の長さ (上限に 1 を足したもの) ではなく、その次元で可能な最大インデックス値です。 各次元のインデックスは 0 ～ 上限値の範囲で変わります。  
   
-     `boundlist` の次元数は配列の次元の元の数 (r順位) に一致する必要があります。  
+     
+  `boundlist` の次元数は配列の次元の元の数 (r順位) に一致する必要があります。  
   
 -   **データ型。** `ReDim` ステートメントでは、配列変数またはその要素のデータ型を変更できません。  
   
@@ -88,9 +92,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## <a name="example"></a>例  
  次の例では、配列の既存データを失うことなく動的配列の最後の次元のサイズを増やし、その後、一部のデータを損失しサイズを減らします。 最後に、サイズを減らして元の値に戻し、すべての配列要素を再初期化します。  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- `Dim` ステートメントは次の 3 つの次元を持つ新しい配列を作成します。 各次元は 10 の境界で宣言されます。そのため、各次元の配列インデックスの範囲は 0 ～ 10 になります。 次の説明では、3 つの次元が「層」、「行」、「列」になります。  
+ 
+  `Dim` ステートメントは次の 3 つの次元を持つ新しい配列を作成します。 各次元は 10 の境界で宣言されます。そのため、各次元の配列インデックスの範囲は 0 ～ 10 になります。 次の説明では、3 つの次元が「層」、「行」、「列」になります。  
   
  最初の `ReDim` は、変数 `intArray` の既存の配列を置換する新しい配列を作成します。 `ReDim` は既存の配列から新しい配列にすべての要素をコピーします。 また、さらに 10 個の列を各層の各行の終わりに追加し、これらの列の要素を 0 (配列の要素型である `Integer` の初期値) に初期化します。  
   

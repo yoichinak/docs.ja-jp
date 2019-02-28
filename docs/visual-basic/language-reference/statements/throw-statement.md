@@ -14,12 +14,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 9af1436af950346eef572c34b9d42da3e8c8cf24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17adc6df0f8cf94f06547b48a32b2ffb8f303ca
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671162"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973484"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
 プロシージャ内で例外をスローします。  
@@ -44,7 +44,7 @@ Throw [ expression ]
 ## <a name="example"></a>例  
  次のコードでは、`Throw`例外をスローするステートメント。  
   
- [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

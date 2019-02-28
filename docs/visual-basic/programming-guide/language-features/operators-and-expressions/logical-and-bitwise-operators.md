@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640759"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976500"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic の論理演算子とビット処理演算子
 論理演算子は比較`Boolean`式と戻り値、`Boolean`結果。 `And`、 `Or`、 `AndAlso`、 `OrElse`、および`Xor`演算子は*バイナリ*中に 2 つのオペランドを考慮に入れるため、`Not`演算子は*単項* 1 つのオペランドがかかるためです。 整数値のビットごとの論理操作を実行中これらの演算子のこともできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "54640759"
 ## <a name="unary-logical-operator"></a>単項論理演算子  
  [Not 演算子](../../../../visual-basic/language-reference/operators/not-operator.md)論理実行*否定*上、`Boolean`式。 オペランドの論理上の逆になります。 式が評価された場合`True`、し`Not`返します`False`に式が評価された場合は`False`、し`Not`を返します`True`します。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>二項論理演算子  
  [And 演算子](../../../../visual-basic/language-reference/operators/and-operator.md)論理実行*組み合わせて*2 つ`Boolean`式。 両方の式が評価される場合`True`、し`And`返します`True`します。 少なくとも 1 つの式の評価された場合`False`、し`And`返します`False`します。  
@@ -45,7 +45,7 @@ ms.locfileid: "54640759"
   
  次の例を示しています、 `And`、 `Or`、および`Xor`演算子。  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>ショート サーキット論理操作  
  [AndAlso 演算子](../../../../visual-basic/language-reference/operators/andalso-operator.md)とよく似ていますが、`And`演算子、2 つの論理積を実行するに`Boolean`式。 2 つの主な違いは`AndAlso`展示*ショート サーキット*動作します。 場合、最初の式で、`AndAlso`式に評価されます`False`、最終結果を変更できないために、2 番目の式は評価されませんしと`AndAlso`を返します`False`。  
@@ -57,18 +57,18 @@ ms.locfileid: "54640759"
   
  次の例は、違いを示しています。 `And`、 `Or`、および対応するショート サーキットします。  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  前の例で重要なコード内`checkIfValid()`呼び出しがショート サーキット場合に実行されません。 最初の`If`ステートメント呼び出し`checkIfValid()`にもかかわらず`12 > 45`返します`False`ため、`And`ショート サーキットはありません。 2 番目`If`ステートメントは呼び出しません`checkIfValid()`ため、ときに`12 > 45`を返します`False`、`AndAlso`実行せずに 2 番目の式。 3 番目`If`ステートメント呼び出し`checkIfValid()`場合でも`12 < 45`返します`True`ため、`Or`ショート サーキットはありません。 4 番目`If`ステートメント呼び出されません`checkIfValid()`ため、ときに`12 < 45`返します`True`、 `OrElse` 2 番目の式を実行せずにします。  
   
 ## <a name="bitwise-operations"></a>ビットごとの演算  
  ビットごとの演算では、(基本 2) をバイナリ形式で 2 つの整数値を評価します。 対応する位置のビットを比較され、比較に基づいて値を割り当てます。 次の例を示しています、`And`演算子。  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  前の例の値を設定する`x`を 1 にします。 これは、次の理由で発生します。  
   

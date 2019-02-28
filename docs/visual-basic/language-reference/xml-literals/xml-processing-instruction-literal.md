@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: cb9ad1d687203dff497e4cd451933a8bbbdf4bf6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1906c9101f9a53bde13698d0ed17b7b8d0988c1d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491234"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981375"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XProcessingInstruction>オブジェクト。  
@@ -58,7 +58,7 @@ ms.locfileid: "54491234"
 ## <a name="example"></a>例  
  次の例では、XML ドキュメントのスタイル シートを識別する処理命令を作成します。  
   
- [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Xml.Linq.XProcessingInstruction>

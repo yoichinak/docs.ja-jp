@@ -38,9 +38,9 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|終了|解決方法については、|  
+|目的|解決方法|  
 |--------|---------|  
-|Visual Studio で新しい Windows フォーム アプリケーションを作成します。|[チュートリアル: 単純な Windows フォームを作成します。](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Visual Studio で新しい Windows フォーム アプリケーションを作成します。|[チュートリアル 1:ピクチャ ビューアーを作成します。](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |フォーム上のコントロールを使用します。|[方法: Windows フォームにコントロールを追加します。](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |使用したグラフィックを作成します。 <xref:System.Drawing>|[グラフィックス プログラミングについて](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |カスタム コントロールを作成します。|[方法: UserControl クラスを継承します。](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -48,7 +48,8 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 ## <a name="displaying-and-manipulating-data"></a>データの表示と操作  
  多くのアプリケーションは、データベース、XML ファイル、XML Web サービス、またはその他のデータ ソースからデータを表示する必要があります。 Windows フォームは、柔軟なコントロールと呼ばれる、<xref:System.Windows.Forms.DataGridView>のすべてのデータが独自のセルを占有するので、従来の行と列の形式で表形式のデータを表示するためのコントロール。 使用して<xref:System.Windows.Forms.DataGridView>個々 のセルの外観をカスタマイズ、任意の行と列のロックおよびその他の機能の 1 つのセル内で複雑なコントロールを表示することができます。  
   
- ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>コンポーネント、Visual Studio 2005 での Windows フォームを新規と[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]データ ソースへの接続を表し、前後のレコードに移動し、レコードの編集、保存、コントロールにデータ バインディングのメソッドを公開します変更を元に戻します。 <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。  
+ ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>コンポーネント、Visual Studio 2005 での Windows フォームを新規と[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]データ ソースへの接続を表し、前後のレコードに移動し、レコードの編集、保存、コントロールにデータ バインディングのメソッドを公開します変更を元に戻します。 
+  <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。  
   
 ### <a name="data-bound-controls"></a>データ バインド コントロール  
  プロジェクトのデータベース、Web サービス、およびオブジェクトなどのデータ ソースを表示するデータ ソース ウィンドウを使用して簡単にデータ バインド コントロールを作成することができます。 このウィンドウからプロジェクトのフォームに項目をドラッグして、データ バインド コントロールを作成できます。 また、[データ ソース] ウィンドウから既存のコントロールにオブジェクトをドラッグして、データに既存のコントロールをバインドすることもできます。  
@@ -58,7 +59,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|終了|解決方法については、|  
+|目的|解決方法|  
 |--------|---------|  
 |使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
@@ -73,7 +74,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] の概要については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|終了|解決方法については、|  
+|目的|解決方法|  
 |--------|---------|  
 |アプリケーションをデプロイします。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |更新プログラム、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]展開|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -84,7 +85,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|終了|解決方法については、|  
+|目的|解決方法|  
 |--------|---------|  
 |フォームのコンテンツを印刷します。|[方法: Windows フォームでグラフィックスを印刷します。](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法: Windows フォームで複数ページのテキスト ファイルを印刷します。](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](../../../framework/winforms/security-in-windows-forms-overview.md)|  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667389"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976045"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic における有効期間
 *有効期間*宣言された要素は、一定期間その中に、使用可能です。 変数は、有効期間を持つ要素ののみです。 このため、コンパイラは、プロシージャのパラメーターと変数の特殊なケースとして関数を返します。 変数の有効期間は、値を保持できる期間を表します。 その有効期間、その値を変更できますが、いくつかの値を常に保持します。  
@@ -58,7 +58,7 @@ ms.locfileid: "54667389"
  次の例で変数を宣言、[静的](../../../../visual-basic/language-reference/modifiers/static.md)キーワード。 (必要はありませんが、`Dim`キーワードと、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)などの修飾子を使用して`Static`)。  
   
 ### <a name="code"></a>コード  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>コメント  
  前の例では、変数`applesSold`手順の後に残ります`runningTotal`呼び出し元のコードを返します。 次回`runningTotal`が呼び出され、`applesSold`以前に計算された値を保持します。  
@@ -74,7 +74,7 @@ ms.locfileid: "54667389"
 ## <a name="see-also"></a>関連項目
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

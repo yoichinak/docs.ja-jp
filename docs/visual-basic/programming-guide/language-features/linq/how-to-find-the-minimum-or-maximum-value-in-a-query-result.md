@@ -14,12 +14,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: e4a7215afdfbfc7653247ad0286a36dd2ab50ba2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55dae51d485bfcd5c8e93910776f4c98c96ea2d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514271"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976032"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果内の最小値と最大値を検索します。
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "54514271"
   
      次のコードを追加、`Load`イベント。 このコードは、データ コンテキストのプロパティとして公開され、結果の最小値と最大値を決定するテーブルを照会します。 サンプルを使用しています`Aggregate`句を 1 つの結果を照会して、`Group By`の平均を表示する句の結果をグループ化します。  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form7.vb#14)]  
   
 4.  F5 キーを押してプロジェクトを実行し、結果を表示します。  
   

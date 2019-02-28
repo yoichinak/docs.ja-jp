@@ -14,17 +14,18 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690710"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975837"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 型宣言が、型の部分定義であることを示します。  
   
- `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
+ 
+  `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
 > [!NOTE]
 >  Visual Basic は*部分メソッド*、部分クラスに通常実装されています。 詳細については、次を参照してください。[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)と[Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)します。  
@@ -46,7 +47,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |用語|定義|  
 |---|---|  
 |`attrlist`|任意。 この型に適用される属性の一覧です。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ (`< >`)。|  
-|`accessmodifier`|任意。 どのようなコードから型にアクセスできるのかを指定します。 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`accessmodifier`|任意。 どのようなコードから型にアクセスできるのかを指定します。 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。|  
 |`MustInherit`|任意。 参照してください[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)します。|  
 |`NotInheritable`|任意。 参照してください[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)します。|  
@@ -54,9 +55,11 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`Of`|任意。 これがジェネリック型であることを指定します。 参照してください[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。|  
 |`typelist`|使用するかどうかは必ず[の](../../../visual-basic/language-reference/statements/of-clause.md)します。 参照してください[一覧を入力する](../../../visual-basic/language-reference/statements/type-list.md)します。|  
 |`Inherits`|任意。 参照してください[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)します。|  
-|`classname`|`Inherits` を使用する場合は必ず指定します。 このクラスの派生元のクラスまたはインターフェイスの名前です。|  
+|`classname`|
+  `Inherits` を使用する場合は必ず指定します。 このクラスの派生元のクラスまたはインターフェイスの名前です。|  
 |`Implements`|任意。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。|  
-|`interfacenames`|`Implements` を使用する場合は必ず指定します。 この型が実装するインターフェイスの名前を指定します。|  
+|`interfacenames`|
+  `Implements` を使用する場合は必ず指定します。 この型が実装するインターフェイスの名前を指定します。|  
 |`variabledeclarations`|任意。 この型の追加の変数やイベントを宣言するステートメントです。|  
 |`proceduredeclarations`|任意。 この型の追加のプロシージャを宣言および定義するステートメントです。|  
 |`End Class` または `End Structure`|この `Class` または `Structure` の部分定義を終了します。|  
@@ -89,7 +92,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 ## <a name="example"></a>例  
  次の例では、クラス `sampleClass` の定義を 2 つの宣言に分割し、それぞれ別の `Sub` プロシージャを定義します。  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
  この例にある 2 つの部分定義は、同じソース ファイル内にあっても、別々のソース ファイル内にあってもかまいません。  
   
