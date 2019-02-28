@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: f9201aa4b2aa9280b9b3a4e0a2badf25ea819088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02a7c5c9859352aa07bfaa741b80b7fd18d1da4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684750"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979906"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 演算子 (Visual Basic)
 取得、<xref:System.Xml.Linq.XNamespace>指定された XML 名前空間プレフィックスに対応するオブジェクト。  
@@ -39,7 +39,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## <a name="example"></a>例  
  次の例ではインポート`ns`XML 名前空間プレフィックスとして。 XML リテラルを作成し、修飾の名前を持つ最初の子ノードにアクセスする次の名前空間のプレフィックスを使用して`ns:phone`します。 これは、後、その子ノードを渡します、`ShowName`サブルーチンを使用して、修飾名を構築します、`GetXmlNamespace`演算子。 `ShowName`サブルーチンは、修飾名を渡します、<xref:System.Xml.Linq.XNode.Ancestors%2A>親を取得するメソッドを`ns:contact`ノード。  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
  呼び出すと`TestGetXmlNamespace.RunSample()`、次のテキストを含むメッセージ ボックスが表示されます。  
   

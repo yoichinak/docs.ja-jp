@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 82dc3e851f1f98ca689acc21f03cbbe68a4e974e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686674"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965907"
 ---
 # <a name="if-operator-visual-basic"></a>If 演算子 (Visual Basic)
 ショート サーキット評価の条件付きで 2 つの値のいずれかを返すを使用します。 `If`演算子は、3 つの引数と 2 つの引数に呼び出すことができます。  
@@ -40,11 +40,11 @@ If( [argument1,] argument2, argument3 )
   
  `If`のように 3 つの引数で呼び出される演算子の動作、`IIf`関数を使用するショート サーキット評価します。 `IIf`関数は、引数の 3 つすべてを常に評価は、`If`を 3 つの引数を持つ演算子が 2 つのみを評価します。 最初の`If`引数が評価され、結果としてキャスト、`Boolean`値、`True`または`False`します。 値が場合`True`、`argument2`が評価され、その値が返されますが、`argument3`は評価されません。 場合の値、`Boolean`式が`False`、`argument3`が評価され、その値が返されますが、`argument2`は評価されません。 次の例の使用方法を示します`If`3 つの引数を使用する場合。  
   
- [!code-vb[VbVbalrOperators#100](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#100](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#100)]  
   
  次の例では、値のショート サーキット評価します。 変数を分割しようと 2 つの例を示します`number`変数によって`divisor`する場合を除く`divisor`は 0 です。 その場合は、0 が返され、実行時エラーになるために、除算を実行する試行は行われません。 `If`ショート サーキット評価の式の使用、2 番目または 3 番目の引数の最初の引数の値に応じてのいずれかが評価されます。 最初の引数が true の場合除数 0 ではないと、2 番目の引数を評価し、除算を実行しても安全です。 最初の引数が false の場合は、3 番目の引数のみが評価され、0 が返されます。 そのため、除数が 0 の場合は行われません、除算およびエラー結果を実行します。 ただし、ため`IIf`は使いませんショート サーキット評価、最初の引数が false の場合も、2 番目の引数が評価されます。 これにより、実行時の 0 除算エラーです。  
   
- [!code-vb[VbVbalrOperators#101](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#101)]  
   
 ## <a name="if-operator-called-with-two-arguments"></a>演算子は、2 つの引数で呼び出された場合  
  最初の引数`If`を省略できます。 これにより、オペレーターにのみ 2 つの引数を使用して呼び出すことができます。 次の一覧に適用される場合にのみ、`If`演算子が 2 つの引数と呼ばれます。  
@@ -58,7 +58,7 @@ If( [argument1,] argument2, argument3 )
   
  ときに、`Boolean`引数を省略すると、最初の引数が参照または null 許容型にする必要があります。 最初の引数が評価された場合`Nothing`、2 番目の引数の値が返されます。 その他のすべてのケースでは、最初の引数の値が返されます。 次の例では、この評価のしくみを示しています。  
   
- [!code-vb[VbVbalrOperators#102](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/if-operator_3.vb)]  
+ [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>

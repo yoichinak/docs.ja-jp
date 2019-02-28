@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: e45ca7eeca9ce178abf3ab5cab6d791f799f1d09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678838"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964927"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数 (Visual Basic) の宣言します。
 使用する、`Const`定数を宣言し、その値を設定するステートメント。 定数を宣言すると、値に意味のある名前を割り当てます。 定数が宣言されると、変更または新しい値を代入することはできません。  
@@ -43,7 +43,7 @@ ms.locfileid: "54678838"
   
 -   アクセス指定子を含む宣言を記述、`Const`キーワード、および次の例のように、式。  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
+     [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
      ときに[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)は`Off`と[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)は`On`、データ型を指定することで、定数を明示的に宣言する必要があります (`Boolean`、 `Byte`、 `Char`、 `DateTime`、 `Decimal`、 `Double`、 `Integer`、 `Long`、 `Short`、 `Single`、または`String`)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54678838"
   
 -   含む宣言を記述、`As`次の例のように、キーワードと、明示的なデータを入力します。  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
+     [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
      コードは 1 行につき 1 つの定数のみを宣言する場合より読みやすい 1 つの行に複数の定数を宣言できます。 1 行に複数の定数を宣言する場合、すべて必要があります、同じアクセス レベル (`Public`、 `Private`、 `Friend`、 `Protected`、または`Protected Friend`)。  
   

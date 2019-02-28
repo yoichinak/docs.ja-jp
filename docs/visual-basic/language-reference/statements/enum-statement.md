@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: f1086fdc26f1909e751617b78e0cd31f2a8b1b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656662"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965697"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 列挙体を宣言し、そのメンバーの値を定義します。  
@@ -79,7 +79,8 @@ End Enum
   
 -   `End` `Enum`  
   
-     `Enum` ブロックを終了します。  
+     
+  `Enum` ブロックを終了します。  
   
 ## <a name="remarks"></a>Remarks  
  互いに論理的に関連する不変の値のセットがあれば、列挙体で一緒に定義できます。 これは、列挙型とそのメンバーでは、その値よりも覚えやすく、わかりやすい名前を提供します。 コードでさまざまな場所で列挙型メンバーを使用することができます。  
@@ -139,37 +140,37 @@ End Enum
 ## <a name="example"></a>例  
  `Enum` ステートメントを使用する方法の例を次に示します。 メンバーと呼びます注`EggSizeEnum.Medium`ではなく`Medium`します。  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
+ [!code-vb[VbEnumsTask#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>例  
  次の例では、メソッドが範囲外です、`Egg`クラス。 そのため、`EggSizeEnum`として完全に修飾されます`Egg.EggSizeEnum`します。  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
+ [!code-vb[VbEnumsTask#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>例  
  次の例では、`Enum`という名前の定数値を関連のセットを定義するステートメント。 ここでは、値は、色のデータベースのデータ入力フォームをデザインすることもできます。  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
+ [!code-vb[VbEnumsTask#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#30)]  
   
 ## <a name="example"></a>例  
  次の例では、正と負の両方の数値を含む値を示します。  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
+ [!code-vb[VbEnumsTask#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#31)]  
   
 ## <a name="example"></a>例  
  次の例では、`As`句を使用して、指定、`datatype`列挙体の。  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
+ [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="example"></a>例  
  次の例では、ビットごとの列挙型を使用する方法を示します。 複数の値は、ビットごとの列挙体のインスタンスに割り当てることができます。 `Enum`宣言が含まれる、<xref:System.FlagsAttribute>属性には、列挙型をフラグのセットとして処理できることを示します。  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
+ [!code-vb[VbEnumsTask#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#61)]  
   
 ## <a name="example"></a>例  
  次の例は、列挙型を反復処理します。 使用して、 <xref:System.Enum.GetNames%2A> 、列挙体のメンバー名の配列を取得するメソッドをおよび<xref:System.Enum.GetValues%2A>メンバーの値の配列を取得します。  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
+ [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Enum>

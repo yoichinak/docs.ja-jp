@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 19eba101e2a91d1b0549e9e3eb86d0af94f2d1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f16d7f52665182dd82966693baa50ac9551f87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619745"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972951"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
 2 つのコレクションを、単一の階層コレクションに結合します。 結合操作は、一致するキーに基づきます。  
@@ -53,7 +53,7 @@ Group Join element [As type] In collection _
 ## <a name="example"></a>例  
  次のコード例では、2 つのコレクションを結合を使用して、`Group Join`句。  
   
- [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

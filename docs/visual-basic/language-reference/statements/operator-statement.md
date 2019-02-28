@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658196"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981700"
 ---
 # <a name="operator-statement"></a>Operator Statement
 演算子記号、オペランド、およびクラスまたは構造体に演算子プロシージャを定義するコードを宣言します。  
@@ -41,7 +41,7 @@ End Operator
   
 ## <a name="parts"></a>指定項目  
  `attrlist`  
- 任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+ 任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
  `Public`  
  必須。 この演算子プロシージャがあることを示します[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。  
@@ -168,7 +168,7 @@ End Operator
 ## <a name="example"></a>例  
  次のコード例では、`Operator`演算子する手順について説明する構造体のアウトラインを定義するステートメント、 `And`、 `Or`、 `IsFalse`、および`IsTrue`演算子。 `And` `Or`型の 2 つのオペランドを受け取る各`abc`型を返すと`abc`します。 `IsFalse` `IsTrue`それぞれ型の 1 つのオペランドを受け取ります`abc`戻って`Boolean`します。 これらの定義を使用して、呼び出し元のコードを許可する`And`、 `AndAlso`、 `Or`、および`OrElse`型のオペランドで`abc`します。  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>関連項目
 - [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)

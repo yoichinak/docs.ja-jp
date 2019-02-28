@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 3d8134b43320003a6425cf284162d3d627b177c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623560"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979074"
 ---
 # <a name="const-statement-visual-basic"></a>Const ステートメント (Visual Basic)
 宣言し、1 つまたは複数の定数を定義します。  
@@ -38,7 +38,8 @@ Const constantlist
   
  `constant` `[ ,` `constant` `... ]`  
   
- `constant` の構文と指定項目は次のとおりです。  
+ 
+  `constant` の構文と指定項目は次のとおりです。  
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
@@ -90,12 +91,12 @@ Const constantlist
 ## <a name="example"></a>例  
  次の例では、`Const`リテラル値の代わりに使用するための定数を宣言するステートメント。  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#13)]  
   
 ## <a name="example"></a>例  
  データ型の定数を定義した場合`Object`、Visual Basic コンパイラは、の型を提供、`initializer`の代わりに`Object`します。 次の例では、定数`naturalLogBase`実行時の型を持つ`Decimal`します。  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#87)]  
   
  上記の例では、<xref:System.Type.ToString%2A>メソッドを<xref:System.Type>によって返されるオブジェクト、 [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)ため、<xref:System.Type>に変換できない`String`を使用して`CStr`します。  
   

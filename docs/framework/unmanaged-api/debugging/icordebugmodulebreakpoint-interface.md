@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint Interface1
+title: ICorDebugModuleBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5ead45c6747cd69a76585c81b1ff6a4801cbb34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3916bf8f7792e82ba905554bb32696f81634f819
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631994"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971521"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint Interface1
+# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint インターフェイス
+
 特定のモジュールへのアクセスを提供します。 このインターフェイスは、ICorDebugBreakpoint インターフェイスのサブクラスです。  
   
 ## <a name="methods"></a>メソッド  

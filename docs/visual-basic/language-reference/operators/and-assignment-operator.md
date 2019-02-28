@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: dee30096f244adc34b83fdfdc6af0baabd372b4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa009168be3781c727cd5a9cb6976b8c16fb2843
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672410"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967491"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 演算子 (Visual Basic)
 連結、`String`式を`String`変数またはプロパティし、結果を変数またはプロパティに代入します。  
@@ -42,7 +42,7 @@ variableorproperty &= expression
 ## <a name="example"></a>例  
  次の例では、`&=`を 2 つの連結演算子`String`変数と、その結果、最初の変数を割り当てます。  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
 - [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)

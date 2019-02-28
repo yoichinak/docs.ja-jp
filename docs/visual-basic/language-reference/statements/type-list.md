@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655076"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968271"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
 指定します、*パラメーター入力*の*ジェネリック*プログラミング要素です。 複数のパラメーターは、コンマで区切られます。 1 つの型パラメーターの構文を次に示します。  
@@ -63,7 +63,8 @@ ms.locfileid: "54655076"
   
     -   1 つのクラス。 指定された型は、そのクラスから継承する必要があります。  
   
-    -   `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンス トラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンス トラクターを公開し、コンス トラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
+    -   
+  `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンス トラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンス トラクターを公開し、コンス トラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
   
     -   いずれか、`Class`キーワードまたは`Structure`キーワード。 `Class`キーワードは、すべての型引数が渡された文字列、配列、またはデリゲートでは、たとえば、参照型であること、またはクラスからオブジェクトが作成されたことを必要とするジェネリック型パラメーターを制約します。 `Structure`キーワードで制約などの構造体、列挙型、または基本データ型をジェネリック型パラメーターに渡されるすべての型引数の値の型である必要があります。 両方を含めることはできません`Class`と`Structure`同じ`constraintlist`します。  
   
@@ -80,17 +81,17 @@ ms.locfileid: "54655076"
 ## <a name="example"></a>例  
  次の例では、ディクショナリに新しいエントリを追加する関数の骨組みをなど、汎用の dictionary クラスのスケルトン定義を示します。  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>例  
  `dictionary`は汎用的で、それを使用するコードから作成できますのさまざまなオブジェクト、同じ機能を持つが、別のデータ型で動作している各します。 次の例は、行のコードを作成する、`dictionary`オブジェクト`String`エントリと`Integer`キー。  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>例  
  次の例では、前の例によって生成された同等のスケルトン定義を示します。  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

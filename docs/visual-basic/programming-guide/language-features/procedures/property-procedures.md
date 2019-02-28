@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710483"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971534"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 プロパティ プロシージャは、一連のモジュール、クラスまたは構造体のカスタム プロパティを操作する Visual Basic ステートメントです。 プロパティ プロシージャとも呼ばれます*プロパティ アクセサー*します。  
@@ -99,11 +99,11 @@ End Property
 ### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
  次のプロパティは、2 つの構成名、名、および、最後の名前として、完全な名前を格納します。 呼び出し元のコードを読み取るとき`fullName`、`Get`プロシージャは、2 つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって、新しい完全な名前を割り当てられるとき、`Set`プロシージャは、それを 2 つの部分に分割しようと試みます。 場所が見つからない場合すべて最初の名前として格納します。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  次の例では、一般的なプロパティ プロシージャの呼び出し`fullName`します。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
 - [プロシージャ](./index.md)

@@ -2,12 +2,12 @@
 title: XML シリアライザー ジェネレーター ツール (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: aa8671146c241c2867c373aacf3cd12f12aaeb1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a0d69ce79a1dbe3e0bd56fd858013447f227fc9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743557"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972093"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML シリアライザー ジェネレーター ツール (Sgen.exe)
 XML シリアライザー ジェネレーターは、指定された型のオブジェクトをシリアル化または逆シリアル化するとき、<xref:System.Xml.Serialization.XmlSerializer> の起動パフォーマンスを向上させるために、指定されたアセンブリの型に対して XML シリアル化アセンブリを作成します。  
@@ -34,7 +34,8 @@ sgen [options]
 |**/r\[eference\]:**_assemblyfiles_|XML シリアル化が必要な型によって参照されるアセンブリを指定します。 コンマで区切られた複数のアセンブリ ファイルを受け入れます。|  
 |**/s\[ilent\]**|成功メッセージを表示しません。|  
 |**/t\[ype\]:**_type_|指定された型に対してのみ、シリアル化コードを生成します。|  
-|**/v\[erbose\]**|デバッグに関する詳細出力を表示します。 <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
+|**/v\[erbose\]**|デバッグに関する詳細出力を表示します。 
+  <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -58,5 +59,4 @@ sgen Data.dll
 ## <a name="see-also"></a>関連項目
 
 - [ツール](../../../docs/framework/tools/index.md)
-- [XML Web サービスの概要](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

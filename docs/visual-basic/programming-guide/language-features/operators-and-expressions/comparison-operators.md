@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: db9eef215b16c95a40dfc622bb29443dd1736943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552035"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969376"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic における比較演算子
 比較演算子は 2 つの式を比較し、`Boolean`これらの値のリレーションシップを表す値。 数値、文字列、比較演算子、およびオブジェクトの比較演算子を比較するための演算子があります。 すべての 3 種類の演算子はここで説明します。  
@@ -61,17 +61,17 @@ ms.locfileid: "54552035"
 ## <a name="comparing-objects"></a>オブジェクトの比較  
  Visual Basic での 2 つのオブジェクト参照変数を比較し、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)と[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)します。 2 つの参照変数が同じオブジェクト インスタンスを参照している場合を判断するには、これらの演算子のいずれかを使用します。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#65)]  
   
  前の例では、`x Is y`に評価される`True`、両方の変数が同じインスタンスを参照してください。 この結果を次の例と比較します。  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#66)]  
   
  前の例では、`x Is y`に評価される`False`、その型の異なるインスタンスに、同じ型のオブジェクトへの参照を変数が参照しているためです。  
   
  同じインスタンスを指していない 2 つのオブジェクトをテストする場合に、`IsNot`演算子の文法的に「不器用な組み合わせを回避しますできます。`Not`と`Is`します。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#67)]  
   
  前の例では、`If a IsNot b`と等価`If Not a Is b`します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54552035"
   
  ときに`typename`インターフェイス型を指定します、 `TypeOf`.`Is`式を返します`True`オブジェクトがインターフェイス型を実装している場合。 ときに`typename`式を返しますが、クラス型`True`場合は、オブジェクトは、指定したクラスのまたは指定したクラスから派生したクラスのインスタンス。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#68)]  
   
  前の例では、`TypeOf x Is Control`式に評価されます`True`ための種類`x`は`Button`から継承される`Control`します。  
   

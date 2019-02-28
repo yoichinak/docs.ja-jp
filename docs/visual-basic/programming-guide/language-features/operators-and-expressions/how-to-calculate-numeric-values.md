@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560744"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974303"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値 (Visual Basic) を計算します。
 数値式を使用して数値を計算することができます。 A*数値式*リテラル、定数、および数値の値を表す変数を含む式とそれらの値に対して作用する演算子です。  
@@ -43,7 +43,7 @@ ms.locfileid: "54560744"
   
 -   代入ステートメントを使用して、次の例に示すように、変数に数値式で表される値を割り当てることができます。  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      前の例では、等値演算子の右側にある式の値 (`=`) 変数に割り当てられている`j`、演算子の左側にあるため、 `j` 276 に評価されます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "54560744"
   
 -   かっこを使用して、先に実行する操作を囲みます。 次の例では、オペランドと演算子が同じで、2 つの異なる結果を示します。  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      前の例では、計算で`j`加算演算子を実行します (`+`) 最初ので、かっこで囲んで`(67 + i)`通常の優先順位とに割り当てられた値をオーバーライド`j`276 (4 回 69) は、します。 計算`k`、通常の優先順位の演算子を実行します (`*`する前に`+`) とに割り当てられた値`k`270 (268 および 2)。  
   

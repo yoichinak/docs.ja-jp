@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: 7d9fbc518d54ab83d517a5c305b171d4b77a664a
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d0beb45d94695d9eeed31a9a7852cf91b3db8a59
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305949"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970767"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル: Visual C# による Windows フォーム コントロールからの継承 #
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル: Visual C# による Windows フォーム コントロールからの継承\#
 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)] では、*継承*によって強力なカスタム コントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォームから機能を継承<xref:System.Windows.Forms.Button>、制御し、という名前のカスタム プロパティを公開`ButtonValue`します。  
   
 > [!NOTE]
@@ -142,5 +142,5 @@ ms.locfileid: "56305949"
      `label1` に数字の "5" が表示されます。これは、継承されたコントロールの `ButtonValue` プロパティが、`valueButton1_Click` メソッドによって `label1` に渡されたことを示しています。 このようにして、`ValueButton` コントロールは標準の Windows フォーム ボタンの機能をすべて継承しながら、追加のカスタム プロパティを公開します。  
   
 ## <a name="see-also"></a>関連項目
-- [内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [チュートリアル: ビジュアルを含む複合コントロールの作成C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)

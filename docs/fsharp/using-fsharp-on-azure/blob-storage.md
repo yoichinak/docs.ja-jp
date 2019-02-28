@@ -3,14 +3,14 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用してクラウドでは、非構造化データを格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664992"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981908"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>F# を使用した Azure Blob Storage の概要 #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob storage を概要します。\#
 
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 

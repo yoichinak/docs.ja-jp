@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 9916c7197b260436a447a84b22df9b76dc5af4cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654886"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976487"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error ステートメント (Visual Basic)
 エラー処理ルーチンを有効にして、プロシージャ内のルーチンの場所を指定しますエラー処理ルーチンを無効にも使用できます。  
@@ -76,7 +76,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="throw-statement"></a>Throw ステートメント  
  エラーが発生しますが、`Err.Raise`メソッドのセット、`Exception`プロパティの新しく作成されたインスタンスを<xref:System.Exception>クラス。 派生した例外の種類の例外の発生をサポートするために、`Throw`言語でステートメントがサポートされています。 これがスローされる例外のインスタンスでは 1 つのパラメーターを取ります。 次の例では、これらの機能を使用して、既存の例外処理のサポートを使用する方法を示しています。  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
   
  なお、`On Error GoTo`ステートメントは、例外クラスに関係なく、すべてのエラーをトラップします。  
   
@@ -94,7 +94,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  エラー処理コードが、エラーが発生していないときに実行しないように、配置、 `Exit Sub`、 `Exit Function`、または`Exit Property`次のフラグメントのように、エラー処理ルーチンの直前のステートメント。  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#18)]  
   
  エラー処理コードを次に示します、`Exit Sub`ステートメントの前と、`End Sub`ステートメント、プロシージャのフローから分離することです。 プロシージャでエラー処理コードをどこでも配置できます。  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  その他のオブジェクトにアクセスするオブジェクトを作成する場合戻す未処理のエラーを処理しようとする必要があります。 場合のエラー コードをマップすることはできません、`Err.Number`独自のエラーと、パスのいずれかには、オブジェクトの呼び出し元に戻します。 エラー コードを追加して、エラーを指定する必要があります、`VbObjectError`定数。 たとえば、エラー コードが 1052 の場合は、そのよう割り当てます。  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]  
   
 > [!CAUTION]
 >  Windows ダイナミック リンク ライブラリ (Dll) への呼び出し中にシステム エラーは、例外は発生せず、Visual Basic エラー トラッピングをトラップすることはできません。 各戻り値の成功または失敗 (に従って、API の仕様を確認する必要があります DLL 関数を呼び出すときに、障害が発生した場合値を確認し、`Err`オブジェクトの`LastDLLError`プロパティ。  

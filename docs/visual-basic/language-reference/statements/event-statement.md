@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 3a13b1a3d3e44f2c309e031e23972a5326ed3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653620"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966074"
 ---
 # <a name="event-statement"></a>Event ステートメント
 ユーザー定義イベントを宣言します。  
@@ -65,24 +65,37 @@ End Event
 |`eventname`|必須。 イベントの名前です。変数の標準的な名前付け規則に従って名前を付けます。|  
 |`parameterlist`|任意。 このイベントのパラメーターを表すローカル変数のリストです。 囲む必要があります、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)かっこ内に示します。|  
 |`Implements`|任意。 このイベントがインターフェイスのイベントを実装することを示します。|  
-|`implementslist`|`Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。 複数のプロシージャを指定するときは、コンマで区切ります。<br /><br /> *implementedprocedure* [ , *implementedprocedure* ... ]<br /><br /> `implementedprocedure` の構文と指定項目は次のとおりです。<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` 必須。 このプロシージャの包含クラスまたは包含構造体が実装しているインターフェイスの名前です。<br />-   `Definedname` 必須。 `interface` の中でプロシージャを定義するために使用する名前。 これは、`name` (定義されているプロシージャを実装するためにこのプロシージャが使用している名前) と同じである必要はありません。|  
-|`Custom`|必須。 `Custom` として宣言されたイベントでは、`AddHandler`、`RemoveHandler`、および `RaiseEvent` の各カスタム アクセサーを定義する必要があります。|  
+|`implementslist`|
+  `Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。 複数のプロシージャを指定するときは、コンマで区切ります。<br /><br /> *implementedprocedure* [ , *implementedprocedure* ... ]<br /><br /> 
+  `implementedprocedure` の構文と指定項目は次のとおりです。<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` 必須。 このプロシージャの包含クラスまたは包含構造体が実装しているインターフェイスの名前です。<br />-   `Definedname` 必須。 
+  `interface` の中でプロシージャを定義するために使用する名前。 これは、`name` (定義されているプロシージャを実装するためにこのプロシージャが使用している名前) と同じである必要はありません。|  
+|`Custom`|必須。 
+  `Custom` として宣言されたイベントでは、`AddHandler`、`RemoveHandler`、および `RaiseEvent` の各カスタム アクセサーを定義する必要があります。|  
 |`delegatename`|任意。 イベント ハンドラーの署名を指定するデリゲートの名前。|  
-|`AddHandler`|必須。 `AddHandler` アクセサーを宣言します。ここでは、イベント ハンドラーが追加されたとき実行するステートメントを、`AddHandler` ステートメントを使って明示的に指定するか、`Handles` 句を使って暗黙的に指定します。|  
-|`End AddHandler`|必須。 `AddHandler` ブロックを終了します。|  
+|`AddHandler`|必須。 
+  `AddHandler` アクセサーを宣言します。ここでは、イベント ハンドラーが追加されたとき実行するステートメントを、`AddHandler` ステートメントを使って明示的に指定するか、`Handles` 句を使って暗黙的に指定します。|  
+|`End AddHandler`|必須。 
+  `AddHandler` ブロックを終了します。|  
 |`value`|必須。 パラメーター名です。|  
-|`RemoveHandler`|必須。 `RemoveHandler` アクセサーを宣言します。ここでは、イベント ハンドラーが削除されたときに実行するステートメントを、`RemoveHandler` ステートメントを使って指定します。|  
-|`End RemoveHandler`|必須。 `RemoveHandler` ブロックを終了します。|  
-|`RaiseEvent`|必須。 `RaiseEvent` アクセサーを宣言します。ここでは、イベントが発生したときに実行するステートメントを、`RaiseEvent` ステートメントを使って指定します。 通常は、`AddHandler` アクセサーと `RemoveHandler` アクセサーによって管理されるデリゲートのリストが呼び出されます。|  
-|`End RaiseEvent`|必須。 `RaiseEvent` ブロックを終了します。|  
-|`delegatesignature`|必須。 `delegatename` デリゲートに必要なパラメーターと一致するパラメーターのリストです。 囲む必要があります、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)かっこ内に示します。|  
-|`statements`|任意。 `AddHandler`、`RemoveHandler`、および `RaiseEvent` の各メソッドの本体が含まれるステートメントです。|  
-|`End Event`|必須。 `Event` ブロックを終了します。|  
+|`RemoveHandler`|必須。 
+  `RemoveHandler` アクセサーを宣言します。ここでは、イベント ハンドラーが削除されたときに実行するステートメントを、`RemoveHandler` ステートメントを使って指定します。|  
+|`End RemoveHandler`|必須。 
+  `RemoveHandler` ブロックを終了します。|  
+|`RaiseEvent`|必須。 
+  `RaiseEvent` アクセサーを宣言します。ここでは、イベントが発生したときに実行するステートメントを、`RaiseEvent` ステートメントを使って指定します。 通常は、`AddHandler` アクセサーと `RemoveHandler` アクセサーによって管理されるデリゲートのリストが呼び出されます。|  
+|`End RaiseEvent`|必須。 
+  `RaiseEvent` ブロックを終了します。|  
+|`delegatesignature`|必須。 
+  `delegatename` デリゲートに必要なパラメーターと一致するパラメーターのリストです。 囲む必要があります、[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)かっこ内に示します。|  
+|`statements`|任意。 
+  `AddHandler`、`RemoveHandler`、および `RaiseEvent` の各メソッドの本体が含まれるステートメントです。|  
+|`End Event`|必須。 
+  `Event` ブロックを終了します。|  
   
 ## <a name="remarks"></a>Remarks  
  宣言したイベントは、`RaiseEvent` ステートメントを使って発生させます。 通常、イベントの宣言と発生は、次のように行われます。  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
+ [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
   
 > [!NOTE]
 >  イベントの引数は、プロシージャの引数と同様に宣言できます。ただし、イベントに対して名前付き引数、`ParamArray` 引数、または `Optional` 引数を指定することはできません。 イベントは値を返しません。  
@@ -94,28 +107,34 @@ End Event
  ほとんどの状況で、このトピックの「構文」のセクションにある最初の構文を使ってイベントを宣言できますが、 一部のシナリオでは、イベントの動作をより詳細に制御することが必要になります。 このトピックの「構文」セクションの最後には、`Custom` キーワードを使用した構文があります。これを使用すると、カスタム イベントを定義してイベントを詳細に制御できます。 カスタム イベントでは、コードでイベント ハンドラーを追加または削除するときに、つまりコードでイベントを生成するときに、何が起こるかを正確に指定します。 たとえば、「[方法:メモリを節約するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)と[方法。ブロックを回避するためにカスタム イベントを宣言](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 `RaiseEvent` ステートメントの使用例も含まれています。  
+ 次の例では、イベントを使用して 10 秒から 0 秒までカウント ダウンします。 このコードは、イベント関連のいくつかのメソッド、プロパティ、およびステートメントの例を示しています。 
+  `RaiseEvent` ステートメントの使用例も含まれています。  
   
  イベントを発生させるクラスをイベント ソース、イベントを処理するメソッドをイベント ハンドラーと呼びます。 イベント ソースでは、生成されるイベントに対して複数のイベント ハンドラーを設定できます。 クラスでイベントが発生すると、そのイベントは、オブジェクトのインスタンスに対するイベントを処理するために選択されたすべてのクラスで発生します。  
   
  また、この例では、ボタン (`Button1`) とテキスト ボックス (`TextBox1`) を含んだフォーム (`Form1`) も使用しています。 ボタンをクリックすると、1 つ目のテキスト ボックスに 10 秒から 0 秒までのカウントダウンが表示されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
- `Form1` のコードでは、フォームの初期状態と終了状態を指定しています。 イベント発生時に実行されるコードも含まれています。  
+ 
+  `Form1` のコードでは、フォームの初期状態と終了状態を指定しています。 イベント発生時に実行されるコードも含まれています。  
   
  この例を使用するには、新しい Windows フォーム プロジェクトを開きます。 次に、`Button1` という名前のボタンと `TextBox1` という名前のテキスト ボックスを、`Form1` という名前のメイン フォームに追加します。 次にフォームを右クリックし、をクリックして**コードの表示**コード エディターを開きます。  
   
- `Form1` クラスの宣言セクションに、`WithEvents` 変数を追加します。  
+ 
+  `Form1` クラスの宣言セクションに、`WithEvents` 変数を追加します。  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
+ [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
- `Form1` のコードに次のコードを追加します。 `Form_Load` や `Button_Click` など、重複して存在する可能性のあるプロシージャを置き換えます。  
+ 
+  `Form1` のコードに次のコードを追加します。 
+  `Form_Load` や `Button_Click` など、重複して存在する可能性のあるプロシージャを置き換えます。  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
+ [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
   
  前の例を実行し、ボタンをクリックします。 f5 キーを押して**開始**します。 最初のテキスト ボックスで、秒のカウント ダウンが開始されます。 カウントダウンが終わると (10 秒が経過すると)、1 つ目のテキスト ボックスに "Done" と表示されます。  
   
 > [!NOTE]
->  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
+>  
+  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
@@ -125,7 +144,7 @@ End Event
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [方法: メモリを節約するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [方法: カスタム イベントを宣言してメモリを節約する](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
 - [方法: ブロックを回避するためにカスタム イベントを宣言します。](../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)

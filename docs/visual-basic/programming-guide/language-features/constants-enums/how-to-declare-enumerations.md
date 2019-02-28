@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: d309e4fb09bc0b8af87422bc84427528deb29e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710314"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968765"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: (Visual Basic) 列挙型を宣言します。
 持つ列挙体を作成する、`Enum`クラスまたはモジュールの宣言セクション内のステートメント。 メソッド内で列挙型を宣言することはできません。 適切なアクセス レベルを指定するには、使用`Private`、 `Protected`、 `Friend`、または`Public`します。  
@@ -26,21 +26,21 @@ ms.locfileid: "54710314"
   
 1.  コードのアクセス レベルを含む宣言を記述、`Enum`キーワード、および有効な名前を次の例のようにそれぞれの宣言を異なる`Enum`します。  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
 2.  列挙体の定数を定義します。 既定では、最初の定数、列挙型でに初期化`0`、され、それに続く定数よりも前の定数のいずれかの値に初期化します。 たとえば、次の列挙`Days`、という名前の定数が含まれています`Sunday`値を持つ`0`、という名前の定数`Monday`値を持つ`1`、という名前の定数`Tuesday`の値を持つ`2`など。  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
 3.  代入ステートメントを使用して、列挙型の定数に値を明示的に割り当てることができます。 負の数値を含む、任意の整数値を割り当てることができます。 たとえば、エラー条件を表す 0 より小さい値を持つ定数たい場合があります。 次の列挙型定数`Invalid`値を明示的に割り当てられて`–1`と定数`Sunday`値が割り当てられている`0`します。 最初の定数、列挙型である`Saturday`値にも初期化`0`します。 値`Monday`は`1`(いずれかの値よりも詳細`Sunday`); の値`Tuesday`は`2`など。  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>明示的な型として列挙型を宣言するには  
   
 -   使用して、列挙型の種類を指定、`As`句では、次の例に示すようにします。  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

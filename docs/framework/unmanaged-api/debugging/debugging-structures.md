@@ -8,14 +8,15 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18bf03fee1a95c898e8273fa839e41a86b2d1c32
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828372"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965229"
 ---
 # <a name="debugging-structures"></a>デバッグ構造体
+
 このセクションでは、デバッグ API が使用するアンマネージ構造体について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
@@ -25,7 +26,7 @@ ms.locfileid: "55828372"
 
  [CLR_DEBUGGING_VERSION 構造体](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-version-structure.md)デバッグのための共通言語ランタイム (CLR) の製品バージョンを定義します。
 
- [CodeChunkInfo Structure1](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)メモリ内のコードの 1 つのチャンクを表します。
+ [CodeChunkInfo 構造体](../../../../docs/framework/unmanaged-api/debugging/codechunkinfo-structure.md)メモリ内のコードの 1 つのチャンクを表します。
 
  [COR_ACTIVE_FUNCTION](cor-active-function-structure.md)スレッドのフレームで現在アクティブな関数についての情報が含まれています。
 
@@ -71,9 +72,8 @@ ms.locfileid: "55828372"
 
  [StackTrace_SimpleContext 構造体](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)フルの代わりに使用できる単純なコンテキスト`CONTEXT`構造体。
 
-
-
 ## <a name="related-sections"></a>関連項目
+
  [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 
  [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

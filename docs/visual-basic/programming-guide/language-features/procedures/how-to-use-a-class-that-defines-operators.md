@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 372d3f663109597fc2d25c5d75a9efa6b3648682
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 358e81904f48ad844351a20a448b615a0fef8f89
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640681"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972517"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子 (Visual Basic) を定義するクラスを使用して、
 クラスまたは独自の演算子を定義する構造体を使用している場合は、これらの演算子を Visual Basic からアクセスできます。  
@@ -26,9 +26,9 @@ ms.locfileid: "54640681"
 ## <a name="example"></a>例  
  次の例では、SQL 構造<xref:System.Data.SqlTypes.SqlString>、変換演算子を定義する ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) SQL 文字列および Visual Basic の文字列間の双方向でします。 使用`CType(` *SQL 文字列式*、 `String)` SQL 文字列を Visual Basic の文字列に変換して`CType(` *Visual Basic の文字列式*、 <xref:System.Data.SqlTypes.SqlString> `)`に他の方向に変換します。  
   
- [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
- [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#31)]  
   
  <xref:System.Data.SqlTypes.SqlString>構造体には、変換演算子が定義されています ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) から`String`に<xref:System.Data.SqlTypes.SqlString>とから<xref:System.Data.SqlTypes.SqlString>に`String`します。 代入するステートメント`title`に`jobTitle`の最初の演算子を使用し、<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>関数呼び出し、2 つ目の使用します。  
   

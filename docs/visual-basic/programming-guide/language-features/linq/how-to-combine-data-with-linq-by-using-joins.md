@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: fd1025d056dfb11d2253a39defb384c1d05efa32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553699"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977984"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法: 結合 (Visual Basic) を使用してデータを LINQ を結合します。
 Visual Basic では、`Join`と`Group Join`コレクション間で共通の値に基づく複数のコレクションの内容を結合するための句をクエリします。 これらの値と呼ばれる*キー*値。 リレーショナル データベースの概念に慣れている開発者が認識、 `Join` INNER JOIN 句、`Group Join`として、実際には、左外部結合句。  
@@ -29,8 +29,8 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 2.  このトピックで使用中のサンプル、`Person`と`Pet`型と、次のコード例からのデータ。 既定値にこのコードをコピー `Module1` Visual Basic で作成されたモジュール。  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
+     [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
+    [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join 句を使用して内部結合を実行します。  
  INNER JOIN によって 2 つのコレクションからデータを結合します。 指定されたキー値に一致する対象のアイテムが含まれます。 その他のコレクションの一致する項目がありません。 いずれかのコレクションからすべての項目が除外されます。  
@@ -45,7 +45,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 1.  次のコードを追加、`Module1`両方暗黙的および明示的な内部結合の例を参照するプロジェクトのモジュール。  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
+     [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 句を使用して、左外部結合を実行します。  
  左外部結合には、結合および結合の右側にあるコレクションからの値が一致するのみの左側にあるコレクションからすべての項目が含まれています。 左側のコレクションに一致する項目がない結合の右側にあるコレクションからすべての項目は、クエリ結果から除外されます。  
@@ -58,7 +58,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 1.  次のコードを追加、`Module1`モジュールで、プロジェクトをグループ化された左外部結合とグループに属していないの左外部結合の両方の例を参照してください。  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
+     [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>複合キーを使用して、結合を実行します。  
  使用することができます、`And`キーワード、`Join`または`Group Join`句に一致するときに使用する複数のキー フィールドを識別するためには、結合するコレクションの値します。 `And`キーワードは、すべての指定に参加している項目のキー フィールドに一致する必要がありますを指定します。  
@@ -67,7 +67,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 1.  次のコードを追加、`Module1`複合キーを使用する結合の例を参照するプロジェクトのモジュール。  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
+     [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
 ## <a name="run-the-code"></a>コードを実行します  
   
@@ -75,7 +75,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 1.  置換、`Sub Main`で、`Module1`このトピックの例を実行する次のコードで、プロジェクトのモジュール。  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
+     [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
 2.  F5 キーを押して、例を実行します。  
   

@@ -1,19 +1,19 @@
 ---
-title: F# とは
+title: 新機能F#
 description: どのような F# プログラミング言語とはなどの F# プログラミングについて説明します。 豊富なデータ型、関数、およびそれらをまとめる方法について説明します。
 ms.date: 08/03/2018
-ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863297"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966961"
 ---
-# <a name="what-is-f"></a>F# とは #
+# <a name="what-is-f"></a>F とは\#
 
-F# は関数型プログラミング言語を適切な保守しやすいコードを記述するが容易にします。
+F#関数型プログラミング言語を適切な保守しやすいコードを記述するが容易にするにです。
 
-F# プログラミングでは、主に、型と型推論され、自動的に汎用化されている関数を定義する必要があります。 これにより、問題のドメインとプログラミングの詳細ではなく、そのデータの操作上に残すに専念できます。
+F#主にプログラミングするには、型と型推論され、自動的に汎用化されている関数を定義する必要があります。 これにより、問題のドメインとプログラミングの詳細ではなく、そのデータの操作上に残すに専念できます。
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,7 +35,7 @@ let main args =
     0
 ```
 
-F# など、多数の機能があります。
+F#など、多数の機能があります。
 
 * 軽量構文
 * 既定では変更できません。
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F# のレコード、判別共用体は、null 以外、変更できない、および簡単に使用できるように、既定では同等です。
+F#レコード、判別共用体は、null 以外、変更できない、および簡単に使用できるように、既定では同等です。
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>関数およびパターン マッチングで正確性を強制
 
-F# の関数を宣言する簡単で実際には強力です。 組み合わせると[パターン マッチング](language-reference/pattern-matching.md)コンパイラが正確性が適用される動作を定義することができます。
+F#関数は、宣言する簡単で実際には強力です。 組み合わせると[パターン マッチング](language-reference/pattern-matching.md)コンパイラが正確性が適用される動作を定義することができます。
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F# の関数もファースト クラス、つまりパラメーターとして渡され、その他の関数から返されることができます。
+F#関数は、ファースト クラス、つまりパラメーターとして渡され、その他の関数から返されることができますも。
 
 ## <a name="functions-to-define-operations-on-objects"></a>オブジェクトに対する操作を定義する関数
 
-F# が有用なデータ型は、blend のデータと機能する必要がある場合、オブジェクトの完全なサポート。 F# の関数は、オブジェクトを操作に使用されます。
+F#有用なデータ型は、blend のデータと機能する必要がある場合、オブジェクトの完全サポートしています。 F#オブジェクトを操作する関数が使用されます。
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -119,7 +119,7 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-F# でのオブジェクト指向コードを記述するのではなく多くの場合、コードを記述するオブジェクトを操作する関数として別のデータ型を扱います。 などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な F# プログラムでは一般的です。
+内のオブジェクト指向コードを記述するのではなくF#、オブジェクトを操作する関数として別のデータ型を処理するコードを記述する多くの場合。 などの機能[ジェネリック インターフェイス](language-reference/interfaces.md)、[オブジェクト式](language-reference/object-expressions.md)とを賢く利用[メンバー](language-reference/members/index.md)は大規模な F# プログラムでは一般的です。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739567"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974927"
 ---
 # <a name="operator-procedures-visual-basic"></a>演算子プロシージャ (Visual Basic)
 演算子プロシージャは、一連の標準の演算子の動作を定義する Visual Basic ステートメント (など`*`、 `<>`、または`And`) クラスまたは定義した構造にします。 これもと呼ばれる*演算子のオーバー ロード*します。  
@@ -73,11 +73,11 @@ ms.locfileid: "55739567"
 ### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
  次の構造は、構成の上位と下位の要素として 128 ビットの符号付き整数値を格納します。 定義、`+`演算子を 2 つ`veryLong`値し、その結果を生成`veryLong`値。  
   
- [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#23)]  
   
  次の例では、一般的な呼び出しを`+`で定義されたオペレーター`veryLong`します。  
   
- [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
   
   
 ## <a name="see-also"></a>関連項目

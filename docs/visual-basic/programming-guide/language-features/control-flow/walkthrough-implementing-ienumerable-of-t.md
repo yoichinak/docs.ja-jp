@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499755"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970078"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic で IEnumerable(Of T) を実装します。
 <xref:System.Collections.Generic.IEnumerable%601>インターフェイスは、一度に 1 つの項目の値のシーケンスを返すことができるクラスによって実装されます。 一度に 1 つの項目がメモリに読み込むデータの完全なセットを扱うことがないことをデータを返すことの利点です。 のみ、データから 1 つの項目を読み込むに十分なメモリを使用する必要があるとします。 実装するクラス、`IEnumerable(T)`インターフェイスで使用できる`For Each`ループまたは LINQ クエリ。  
@@ -45,17 +45,17 @@ ms.locfileid: "54499755"
 
 2. 後の行に`Public Class StreamReaderEnumerable`次を入力し、ENTER キーを押します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#1](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_1.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
    Visual Basic では必要なメンバーを持つクラスを自動的に設定する、`IEnumerable(Of String)`インターフェイス。
   
 3. この列挙可能なクラスに、一度に 1 行ずつテキスト ファイルから行を読み取ります。 入力パラメーターとしてファイル パスを受け取るパブリック コンス トラクターを公開するクラスには、次のコードを追加します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#2](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_2.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
 4. 実装、<xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A>のメソッド、`IEnumerable(Of String)`インターフェイスはの新しいインスタンスを返します、`StreamReaderEnumerator`クラス。 実装、`GetEnumerator`のメソッド、`IEnumerable`インターフェイスにできる`Private`のメンバーのみを公開する必要があるため、`IEnumerable(Of String)`インターフェイス。 Visual Basic 用に生成するコードに置き換えます、`GetEnumerator`メソッドを次のコード。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#3](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_3.vb)]  
+     [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
 **IEnumerator を実装するコードを追加します。**
 
@@ -63,35 +63,35 @@ ms.locfileid: "54499755"
 
 2. 後の行に`Public Class StreamReaderEnumerator`次を入力し、ENTER キーを押します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#4](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_4.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
    Visual Basic では必要なメンバーを持つクラスを自動的に設定する、`IEnumerator(Of String)`インターフェイス。
 
 3. 列挙子クラスは、テキスト ファイルを開き、ファイルをファイルから行を読み取る I/O を実行します。 クラス ファイルのパスを入力パラメーターとして受け取るパブリック コンス トラクターを公開し、テキスト ファイルを読み取り用に次のコードを追加します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#5](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_5.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
 4. `Current`両方のプロパティ、`IEnumerator(Of String)`と`IEnumerator`インターフェイスとしてテキスト ファイルから現在の項目を返す、`String`します。 実装、`Current`のプロパティ、`IEnumerator`インターフェイスにできる`Private`のメンバーのみを公開する必要があるため、`IEnumerator(Of String)`インターフェイス。 Visual Basic 用に生成するコードに置き換えます、`Current`プロパティを次のコード。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#6](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_6.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
 5. `MoveNext`のメソッド、`IEnumerator`インターフェイスが、テキスト ファイルに次の項目に移動し、によって返される値を更新して、`Current`プロパティ。 読み取るには、これ以上項目がある場合、`MoveNext`メソッドを返します。 `False`。 そうしないと、`MoveNext`メソッドを返します。`True`します。 `MoveNext` メソッドに次のコードを追加します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#7](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_7.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
 6. `Reset`のメソッド、`IEnumerator`インターフェイスは、テキスト ファイルの先頭を指す反復子に指示し、現在の項目の値を消去します。 `Reset` メソッドに次のコードを追加します。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#8](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_8.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
 7. `Dispose`のメソッド、`IEnumerator`インターフェイス、反復子が破棄される前にすべてのアンマネージ リソースが解放されることを保証します。 によって使用されるファイル ハンドル、`StreamReader`オブジェクトは、アンマネージ リソースし、反復子インスタンスが破棄される前に閉じる必要があります。 Visual Basic 用に生成するコードに置き換えます、`Dispose`メソッドを次のコード。
 
-   [!code-vb[VbVbalrIteratorWalkthrough#9](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_9.vb)] 
+     [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
 ## <a name="using-the-sample-iterator"></a>サンプルの反復子を使用
 
  制御構造を実装するオブジェクトを必要とすると、コード内の列挙可能なクラスを使用できます`IEnumerable`などを`For Next`ループまたは LINQ クエリ。 次の例は、 `StreamReaderEnumerable` LINQ クエリでします。  
   
- [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
+ [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

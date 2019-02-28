@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582527"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968934"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  
@@ -60,7 +60,7 @@ Try 構造内の有効および無効な分岐
 ## <a name="example"></a>例  
  次の例では、`GoTo`ステートメントをプロシージャ内の行ラベルに分岐します。  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>関連項目
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)

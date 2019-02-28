@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065870"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973731"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
@@ -38,7 +38,7 @@ ms.locfileid: "55065870"
   
 -   カテゴリは、プロパティの型を決定します。  
   
-|カテゴリ|プロパティのデータ型|  
+|Category|プロパティのデータ型|  
 |---|---|  
 |**文字列**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**イメージ**|<xref:System.Drawing.Bitmap>|  
@@ -53,29 +53,29 @@ ms.locfileid: "55065870"
 ## <a name="example"></a>例  
  この例では、指定された文字列リソースをフォームのタイトルを設定`Form1Title`アプリケーション リソース ファイルにします。 例を動作させるには、アプリケーションがという名前の文字列をいる必要があります`Form1Title`リソース ファイル。  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
+ [!code-vb[VbVbalrMyResources#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#1)]  
   
 ## <a name="example"></a>例  
  この例では、フォームのアイコンを設定するという名前のアイコン`Form1Icon`アプリケーションのリソース ファイルに格納されています。 例を動作させるには、アプリケーションがという名前のアイコンをいる必要があります`Form1Icon`リソース ファイル。  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
+ [!code-vb[VbVbalrMyResources#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#2)]  
   
 ## <a name="example"></a>例  
  この例では、フォームの背景イメージを設定という名前のイメージ リソースを`Form1Background`、アプリケーション リソース ファイルであります。 この例を動作させるには、アプリケーションがという名前のイメージ リソースを必要`Form1Background`リソース ファイル。  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
+ [!code-vb[VbVbalrMyResources#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>例  
  この例は、オーディオという名前のリソースとして格納されているサウンドを再生`Form1Greeting`でアプリケーションのリソース ファイル。 例を動作させるには、アプリケーションにオーディオという名前のリソースが必要`Form1Greeting`リソース ファイル。 `My.Computer.Audio.Play`メソッドは Windows フォーム アプリケーションでのみ使用できます。  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
+ [!code-vb[VbVbalrMyResources#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#4)]  
   
 ## <a name="example"></a>例  
  この例では、アプリケーションの文字列リソースのフランス語のカルチャのバージョンを取得します。 リソースが名前付き`Message`します。 カルチャを変更するが、`My.Resources`オブジェクトを使用して、この例では<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>します。  
   
  この例を動作させるには、アプリケーションがという名前の文字列をいる必要があります`Message`でのリソース ファイル、およびアプリケーションが必要にリソース ファイルで、Resources.fr-fr.resx のフランス語のカルチャのバージョン。 アプリケーションには、リソース ファイルのフランス語のカルチャのバージョンがない場合、`My.Resource`オブジェクトは、既定のカルチャのリソース ファイルからリソースを取得します。  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
+ [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
 - [アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)

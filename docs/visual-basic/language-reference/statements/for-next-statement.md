@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746274"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968726"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
 ステートメントのグループを指定した回数だけ繰り返されます。  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  次の例では、`index`変数の値が 1 で開始し、終了の値の後に、ループの反復ごとにインクリメントされます`index`5 に到達します。  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  次の例では、`number`変数が 2 から開始し、終了の値の後に、ループの各反復処理で 0.25 を消費`number`が 0 になります。 `Step`の引数`-.25`ループの各反復処理で 0.25 で値を減らします。  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  A[中.While ステートメント終了](../../../visual-basic/language-reference/statements/while-end-while-statement.md)または[の操作を行います.Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)ときがわからない事前に、ループ内でステートメントを実行する回数をうまく機能します。 ただし、特定回数、ループを実行しようとする`For`.`Next`ループが適しています。 ループを最初に入力したときに、イテレーションの数を決定します。  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>ループの入れ子  
  入れ子にすることができます`For`内に別の 1 つのループを配置することでループします。 次の例で入れ子になった`For`.`Next`異なるステップ値を持つ構造体。 外側のループは、ループのイテレーションごとに文字列を作成します。 内側のループのイテレーションごとのループ カウンター変数をデクリメントをループします。  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  ループを入れ子にする場合は、各ループが一意必要があります`counter`変数。  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>例  
  次の例では、ジェネリック リストからすべての要素を削除します。 代わりに、[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)、例を示します、 `For`.`Next`降順に反復処理するステートメント。 例では、ため、この手法を使用して、`removeAt`メソッドが低いインデックス値が削除された要素の後に要素をによりします。  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>例  
  次の例を使用して宣言されている列挙型を反復処理、 [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)します。  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>例  
  次の例では、ステートメントのパラメーターが演算子のオーバー ロードを持つクラスを使用して、 `+`、 `-`、 `>=`、および`<=`演算子。  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Collections.Generic.List%601>

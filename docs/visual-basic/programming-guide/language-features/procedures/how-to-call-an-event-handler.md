@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717975"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973523"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>方法: Visual Basic でイベント ハンドラーを呼び出す
 *イベント*操作または発生は、-クリックやクレジットの上限を超えたマウスなど、応答するコードを記述でき、いくつかのプログラム コンポーネントによってを認識するは。 *イベント ハンドラー*イベントに応答を記述するコードに示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "54717975"
   
      次の例では、イベントを定義して、`WithEvents`イベントを発生させるクラスを参照する変数。 イベント処理`Sub`プロシージャは、`Handles`クラスとイベントの処理を指定する句。  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler を使用して、イベント ハンドラーを呼び出す  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54717975"
   
      次の例では、定義、`Sub`を処理する手順、<xref:System.Windows.Forms.Form.Closing>フォームのイベント。 次を使用して、 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)に関連付ける、`catchClose`のイベント ハンドラーとプロシージャ<xref:System.Windows.Forms.Form.Closing>します。  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      実行することによって、イベントからイベント ハンドラーの関連付けを解除することができます、 [RemoveHandler ステートメント](../../../../visual-basic/language-reference/statements/removehandler-statement.md)します。  
   

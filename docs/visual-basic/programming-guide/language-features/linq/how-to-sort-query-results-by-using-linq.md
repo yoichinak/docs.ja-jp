@@ -11,12 +11,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672774"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967790"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果の並べ替え
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
@@ -69,7 +69,7 @@ ms.locfileid: "54672774"
   
      次のコードを追加、`Load`イベントには、データ コンテキストのプロパティとして公開され、結果の並べ替えテーブルを照会します。 クエリでは、降順で、顧客の注文の数によって、結果を並べ替えます。 同じ注文の数を持つ顧客は、会社名で昇順に並べ替えます (既定値) で並べ替えられます。  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  F5 キーを押してプロジェクトを実行し、結果を表示します。  
   

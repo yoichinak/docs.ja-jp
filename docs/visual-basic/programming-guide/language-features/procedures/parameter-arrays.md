@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: eac637c0fcaaded25a54332b2f1188876ef5f29a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e059f471f78262320f1968c12192de710876aef4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711883"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966581"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
 通常、プロシージャ宣言の指定よりも多くの引数を持つプロシージャを呼び出すことはできません。 宣言することができます、不特定多数の引数を必要がある場合、*パラメーター配列*、プロシージャ パラメーターの値の配列をそのまま使用することができます。 プロシージャを定義するときに、パラメーター配列内の要素の数を把握する必要はありません。 配列のサイズは、各プロシージャの呼び出しによって個別に決まります。  
@@ -48,13 +48,13 @@ ms.locfileid: "54711883"
 ## <a name="example"></a>例  
  次の例を定義し、関数を呼び出す`calcSum`します。 `ParamArray`パラメーター修飾子`args`により、関数を可変個の引数を受け入れるようにできます。  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
  次の例は、パラメーター配列を持つプロシージャを定義し、パラメーター配列に渡されるすべての配列要素の値を出力します。  
   
- [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   
- [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>

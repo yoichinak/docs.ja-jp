@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 2cdc272c07f3b30f61716f0c5ae72f0655c3f46b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 090ae67c1e5f04c5d9c4f6aed7f8131d8f830166
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597321"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968856"
 ---
 # <a name="and-operator-visual-basic"></a>And 演算子 (Visual Basic)
 2 つの論理積を求めます`Boolean`式、または 2 つの数値式のビットごとの積。  
@@ -75,14 +75,14 @@ result = expression1 And expression2
 ## <a name="example"></a>例  
  次の例では、`And`演算子を 2 つの式に対して論理積を実行します。 結果は、`Boolean`が両方の式かどうかを表す値`True`します。  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
   
  前の例の結果を生成する`True`と`False`、それぞれします。  
   
 ## <a name="example"></a>例  
  次の例では、`And`オペレーターが 2 つの数値式のビットごとの論理積を実行します。 オペランドの対応するビットが 1 に設定する両方の場合、結果パターンのビットが設定されます。  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
   
  前の例では、それぞれ 8、2、および 0 の場合の結果を生成します。  
   

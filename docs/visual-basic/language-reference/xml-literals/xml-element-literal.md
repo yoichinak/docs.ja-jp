@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595917"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979926"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 要素リテラル (Visual Basic)
 
@@ -119,7 +119,7 @@ ms.locfileid: "54595917"
 ## <a name="example"></a>例  
  次の例では、2 つの入れ子になった空の要素を含む単純な XML 要素を作成する方法を示します。  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  例では、次のテキストが表示されます。 リテラルが空の要素の構造を維持することに注意してください。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "54595917"
 ## <a name="example"></a>例  
  次の例は、組み込み式を使用して、要素の名前を指定し、属性を作成する方法を示しています。  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54595917"
 ## <a name="example"></a>例  
  次の例では、`ns` を名前空間プレフィックスとして宣言します。 XML リテラルを作成する名前空間のプレフィックスを使用し、要素の最終的なフォームを表示します。  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   

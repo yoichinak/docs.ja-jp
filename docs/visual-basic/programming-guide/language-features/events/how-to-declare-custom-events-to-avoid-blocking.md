@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: e1fed68f4abffb0e20230f55b0ddeffc63f7c78d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe8775a15ce5149cf307879ab31e2ec0a8ba8f47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691543"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965177"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>方法: (Visual Basic) がブロックされないようにするカスタム イベントを宣言します。
 その 1 つのイベント ハンドラーが後続のイベント ハンドラーをブロックしない必要がある場合は、いくつかの状況にがあります。 カスタム イベントは、そのイベント ハンドラーを非同期的に呼び出すイベントを許可します。  
@@ -25,10 +25,10 @@ ms.locfileid: "54691543"
   
  コードが発生の場合、`Click`イベント、`RaiseEvent`アクセサーが非同期的を使用してすべてのイベント ハンドラー デリゲートを呼び出す、<xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>メソッド。 そのメソッドでは、ワーカー スレッドで各ハンドラーが呼び出され、ハンドラーは、互いをブロックできませんので、すぐに返します。  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
+ [!code-vb[VbVbalrEvents#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
 - [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [方法: メモリを節約するためにカスタム イベントを宣言します。](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [方法: カスタム イベントを宣言してメモリを節約する](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

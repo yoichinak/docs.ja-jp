@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734040"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970962"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) を作成します。
 プロパティの定義との間を囲む、`Property`ステートメントおよび`End Property`ステートメント。 この定義内で定義、 `Get` 、プロシージャ、`Set`プロシージャ、またはその両方です。 プロパティのすべてのコードが、これらのプロシージャ内に存在します。  
@@ -54,11 +54,11 @@ ms.locfileid: "54734040"
 ## <a name="example"></a>例  
  次の例では、2 つの構成名、名、および、最後の名前と完全な名前を格納する読み取り/書き込みプロパティを作成します。 呼び出し元のコードを読み取るとき`fullName`、`Get`プロシージャは、2 つの構成名を結合し、完全な名前を返します。 呼び出し元のコードによって、新しい完全な名前を割り当てられるとき、`Set`プロシージャは、それを 2 つの部分に分割しようと試みます。 場所が見つからない場合すべて最初の名前として格納します。  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  次の例では、一般的なプロパティ プロシージャの呼び出し`fullName`します。 最初の呼び出しは、プロパティの値を設定し、2 番目の呼び出しでは、それを取得します。  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
 - [プロシージャ](./index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 8c9787d52667dc026d3fe62ac7f4b3de7e838a93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519789"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977527"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte データ型 (Visual Basic)
 0 から 255 までの範囲の符号なし 8 ビット (1 バイト) 整数を保持します。
@@ -62,7 +62,7 @@ Dim number As Byte = &H_6A
 
  次の例では、`b`は、`Byte`変数。 ステートメントは、変数の範囲とビット シフト演算子のアプリケーションを示します。
 
-[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
 ## <a name="see-also"></a>関連項目
 

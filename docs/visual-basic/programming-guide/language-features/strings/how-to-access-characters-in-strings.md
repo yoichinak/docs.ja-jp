@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 9833b562fc0b4115448ebefb8631f0d73eb15f6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618923"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967556"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>方法: Visual Basic における文字列の文字をアクセス
 この例では、使用、<xref:System.String.Chars%2A>文字列で指定した場所にある文字にアクセスするプロパティ。  
@@ -18,7 +18,7 @@ ms.locfileid: "54618923"
 ## <a name="example"></a>例  
  場合によっては文字、文字列と、文字列内の文字の位置に関するデータを使用すると便利です。 文字の配列としての文字列を考えることができます (`Char`インスタンス); を通じてその文字のインデックスを参照することで特定の文字を取得することができます、<xref:System.String.Chars%2A>プロパティ。  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
  `index`のパラメーター、<xref:System.String.Chars%2A>プロパティは 0 から始まります。  
   

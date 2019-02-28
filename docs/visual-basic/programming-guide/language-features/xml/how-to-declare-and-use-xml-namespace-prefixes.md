@@ -5,23 +5,24 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 83137211c319bc879b5bd887aefb1691a2f4cd80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 699bb05fd0c1c38cc0919fbf881e6bd628f01393
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718001"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965736"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>方法: 宣言および XML Namespace プレフィックス (Visual Basic) を使用します。
 この例は、XML 名前空間プレフィックスをインポートする方法を示しています。`ns`を XML リテラルおよび XML 軸のプロパティで使用します。  
   
 ## <a name="example"></a>例  
- [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-declare-and-use-xml-namespace-prefixes_1.vb)]  
+ [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System.Xml.Linq> 名前空間への参照  
+-   
+  <xref:System.Xml.Linq> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - AndAlso operator [Visual Basic]
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
-ms.openlocfilehash: ec8d7bcd2f4ca3fb1c74f4edcf6ec8af78fd144d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85fd6b9264fa80c3636f2cb839c8fc5ed855ddc8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740423"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965658"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse 演算子 (Visual Basic)
 式は、かどうかを判断します`False`します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54740423"
 ## <a name="example"></a>例  
  次のコード例の定義を含む構造体のアウトラインを定義する、`IsFalse`と`IsTrue`演算子。  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
 - [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)

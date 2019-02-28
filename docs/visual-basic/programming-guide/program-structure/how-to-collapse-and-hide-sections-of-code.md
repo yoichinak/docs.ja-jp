@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 1282269f06f89645c213f3daaa1bd29e95a44d35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668718"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980127"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: 折りたたみし、コード (Visual Basic) のセクションを非表示
 `#Region`ディレクティブでは、折りたたんでのコード Visual Basic ファイルのセクションを非表示にすることができます。 `#Region`ディレクティブでは、Visual Studio コード エディターを使用する場合は、拡張可能なコードまたは折りたたみのブロックを指定することができます。 選択的にコードを非表示にする機能は、ファイルをより管理しやすく、読みやすくになります。 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。  
@@ -22,7 +22,7 @@ ms.locfileid: "54668718"
   
 -   間のコード セクションの配置、`#Region`と`#End Region`ステートメントは、次の例のように。  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   
      `#Region`ブロックは、コード ファイルで複数回使用できますが。 そのため、ユーザーがプロシージャおよび折りたたむことができ、さらに、クラスの独自のブロックを定義できます。 `#Region` 内でその他のブロックをネストすることも`#Region`ブロックします。  
   

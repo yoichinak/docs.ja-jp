@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973276"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 XML リテラルおよび XML 軸のプロパティで使用するための XML 名前空間プレフィックスをインポートします。  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例では、既定の XML 名前空間とプレフィックスで識別される XML 名前空間のインポート`ns`します。 両方の名前空間を使用して、XML リテラルが作成されます。  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例は、XML 名前空間プレフィックスをインポート`ns`します。 名前空間プレフィックスを使用し、要素の最終的なフォームを表示する XML リテラルが作成されます。  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   
@@ -82,7 +82,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>例  
  次の例は、XML 名前空間プレフィックスをインポート`ns`します。 その後、この名前空間のプレフィックスを使用して XML リテラルを作成し、修飾名 `ns:name` を持つ最初の子ノードにアクセスします。  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  このコードを実行すると、次のテキストが表示されます。  
   

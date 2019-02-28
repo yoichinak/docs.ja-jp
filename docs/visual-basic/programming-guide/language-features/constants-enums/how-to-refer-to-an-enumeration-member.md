@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: efaaecb231b340798012206a0f23fde0ad4cdbeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4f7ede26329ed97c65be8218be78aa40b1294e9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602001"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976266"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>方法: 列挙体のメンバー (Visual Basic) を参照してください。
 列挙体は、関連する定数を使用して、名前の定数値を関連付ける便利な方法を提供します。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  
@@ -23,7 +23,7 @@ ms.locfileid: "54602001"
   
 -   列挙体のメンバー名を修飾します。 たとえば、次の例が割り当てられます、`Saturday`のメンバー、`FirstDayOfWeek`列挙体を変数に`DayValue`します。  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
+     [!code-vb[VbEnumsTask#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#19)]  
   
 ## <a name="see-also"></a>関連項目
 - [方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)

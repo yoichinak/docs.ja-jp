@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721990"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969194"
 ---
 # <a name="type-promotion-visual-basic"></a>型の上位変換 (Visual Basic)
 モジュール内のプログラミング要素を宣言するときに、Visual Basic は、モジュールを含む名前空間には、そのスコープを昇格します。 これと呼ばれます*の上位変換*します。  
   
  次の例では、モジュールのスケルトン定義し、そのモジュールの 2 つのメンバーを示します。  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  内で`projModule`プログラミング、モジュール レベルで宣言された要素に昇格`projNamespace`します。 前の例では、`basicEnum`と`innerClass`昇格されますが、`numberSub`モジュール レベルで宣言されていないためは。  
   
 ## <a name="effect-of-type-promotion"></a>型の上位変換の効果  
  型の上位変換の効果は、修飾文字列が、モジュール名を含める必要がないことです。 次の例では、前の例では、プロシージャに 2 つの呼び出しをでいます。  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  前の例では、最初の呼び出しは、完全修飾文字列を使用します。 ただし、これは必要ありません型の上位変換のためです。 2 番目の呼び出しもアクセス モジュールのメンバーを含めずに`projModule`修飾文字列にします。  
   
 ## <a name="defeat-of-type-promotion"></a>型の上位変換の無効化  
  名前空間には、既にモジュール メンバーと同じ名前のメンバーが、型の上位変換は、モジュール メンバーの無効化します。 次の例では、列挙体と同じ名前空間内のモジュールのスケルトン定義を示します。  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  Visual Basic では、前の例では、クラスに昇格できません`abc`に`thisNameSpace`名前空間レベルで同じ名前の列挙型が既に存在します。 アクセスする`abcSub`、完全修飾文字列を使用する必要があります`thisNamespace.thisModule.abc.abcSub`します。 ただし、クラス`xyz`はまだ昇格し、アクセスできる`xyzSub`短い修飾文字列`thisNamespace.xyz.xyzSub`します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54721990"
   
  **結果。** 部分定義の型の上位変換の無効化には、予期しない結果とコンパイラ エラーも可能性があります。 次の例では、モジュール内では、クラスのスケルトンの部分的な定義を示します。  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  前の例では、開発者は、コンパイラの 2 つの部分定義をマージする`sampleClass`します。 ただし、コンパイラが部分定義内での昇格を考慮しない`sampleModule`します。 2 つの個別のクラスをコンパイルしようという名前をその結果、`sampleClass`がさまざまな認定パス。  
   

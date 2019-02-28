@@ -10,12 +10,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: cfe987929099fc73ba3af9fe92b5871275c5396e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fdf5cd422cf2a4081372bc14e74ed7463393520
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617552"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979854"
 ---
 # <a name="-operator-visual-basic"></a>+= 演算子 (Visual Basic)
 数値型の変数またはプロパティの値に数値式の値を追加し、結果を変数またはプロパティに代入します。 連結するためにも使用する、`String`に式を`String`変数やプロパティと、割り当て、その結果を変数またはプロパティ。  
@@ -51,9 +51,9 @@ variableorproperty += expression
 ## <a name="example"></a>例  
  次の例では、`+=`と他の 1 つの変数の値を結合する演算子。 最初の部分を使用して`+=`別に 1 つの値を追加する数値変数を使用します。 2 番目の部分を使用して`+=`で`String`と他の 1 つの値を連結する変数。 どちらの場合は、結果は最初の変数に割り当てられます。  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#7)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#8)]  
   
  値`num1`13、およびの値が、 `str1` 「103」ようになります。  
   

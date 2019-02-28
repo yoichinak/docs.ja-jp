@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496950"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981427"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 任意のデータ型の既定値を表します。 参照型の場合、既定値は、`null`参照。 値の型の場合、既定値は、値の型が null 許容かどうかに依存します。  
@@ -30,11 +30,11 @@ ms.locfileid: "54496950"
   
  変数が null 許容型でない値型の場合は、割り当てる`Nothing`に設定が既定値にその宣言された型。 その型に変数のメンバーが含まれている場合はすべて既定値に設定します。 次の例は、スカラー型の場合、これを示しています。  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  変数が参照型の場合は、割り当てる`Nothing`変数設定、`null`変数の型の参照。 設定されている変数、`null`参照は任意のオブジェクトに関連付けられていません。 次に例を示します。  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  変数は参照 (または null 許容値の型) かどうかをチェックするときに`null`、使用しない`= Nothing`または`<> Nothing`します。 常に使用する`Is Nothing`または`IsNot Nothing`します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54496950"
   
  次の例を使用する比較を示しています、`Is`と`IsNot`演算子。  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  使用せずに変数を宣言する場合、`As`句に設定し、 `Nothing`、変数の型を持つ`Object`します。 この例は`Dim something = Nothing`します。 ここでは、コンパイル時エラーにとき`Option Strict`上と`Option Infer`はオフです。  
   

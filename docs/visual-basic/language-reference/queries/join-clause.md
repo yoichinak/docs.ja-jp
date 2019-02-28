@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 2017e8edbb4d1bd25a3669b92553f2905b567594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514687"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971300"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 2 つのコレクションを単一のコレクションに結合します。 結合操作は、一致するキーに基づいて、使用して、`Equals`演算子。  
@@ -59,12 +59,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>例  
  次のコード例では、自分の注文と顧客のリストを結合する暗黙の結合を実行します。  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#13)]  
   
 ## <a name="example"></a>例  
  次のコード例では、2 つのコレクションを結合を使用して、`Join`句。  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples2.vb#12)]  
   
  この例には、次のような出力が生成されます。  
   
@@ -77,7 +77,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## <a name="example"></a>例  
  次のコード例では、2 つのコレクションを結合を使用して、 `Join` 2 つのキー列と句。  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples3.vb#17)]  
   
  例では、次のような出力が生成されます。  
   

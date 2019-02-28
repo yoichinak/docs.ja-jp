@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: f85c7a7edf4d05dc50166ad4f30080c2e595cf65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 899c33e6615e2979ba7abe0f537dbe05fd104beb
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590644"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965567"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: (Visual Basic) の値を返さないプロシージャを呼び出す
 A`Sub`プロシージャが呼び出し元のコードに値を返しません。 明示的に呼び出す、スタンドアロンの呼び出し元ステートメントを使用します。 単に式の中で名前を使用して呼び出すことはできません。  
@@ -26,7 +26,7 @@ A`Sub`プロシージャが呼び出し元のコードに値を返しません�
   
      次の例では、Visual Basic<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>アプリケーション ウィンドウをアクティブ化する関数。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> ウィンドウのタイトルを単一の引数として受け取る。 呼び出し元のコードに値を返すことはできません。 例がスローされます、メモ帳プロセスが実行されていない場合、<xref:System.ArgumentException>します。 `Shell`プロシージャでは、アプリケーションは、指定されたパスに前提としています。  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>

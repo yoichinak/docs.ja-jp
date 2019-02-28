@@ -2,20 +2,14 @@
 title: Visual Basic の演算子および式
 ms.date: 07/20/2015
 helpviewer_keywords:
-- operators [Visual Basic], operands
-- operators [Visual Basic]
-- operands [Visual Basic], definition
-- Visual Basic code, operators
-- Visual Basic code, expressions
-- operands
-- expressions [Visual Basic]
+  - 'operators [Visual Basic], operands'
+  - 'operators [Visual Basic]'
+  - 'operands [Visual Basic], definition'
+  - 'Visual Basic code, operators'
+  - 'Visual Basic code, expressions'
+  - operands
+  - 'expressions [Visual Basic]'
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 9d63a458ed747db0a63d2c648460a1a21f7cfbc8
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738995"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic の演算子および式
 *演算子*は、値が格納されている 1 つ以上のコード要素に対して演算を実行するコード要素です。 値要素は、変数、定数、リテラル、プロパティ、`Function` プロシージャおよび `Operator` プロシージャからの戻り値、式などです。  
@@ -58,7 +52,7 @@ ms.locfileid: "55738995"
   
  次の例のように、1 つの式またはステートメントで複数の演算子を使うこともできます。  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  上記の例では、Visual Basic は、代入演算子の右側にある式の操作を実行します (`=`)、結果の値を変数に代入`x`左側です。 1 つの式で使用できる演算子の数には、事実上制限はありません。ただし、正しい結果を得るには、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を理解する必要があります。  
   

@@ -2,14 +2,14 @@
 title: 非同期プログラミング
 description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
 ms.date: 06/20/2016
-ms.openlocfilehash: e18697708741eef066a76bbffe35882f3639bb68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614481"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980088"
 ---
-# <a name="async-programming-in-f"></a>非同期のプログラミングF# #
+# <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 
 > [!NOTE]
 > この記事では、いくつか誤りが検出されました。  書き換えられます。  参照してください[問題 #666](https://github.com/dotnet/docs/issues/666)への変更について説明します。
@@ -53,7 +53,7 @@ printfn "%s" html
 
 さらに、通常`let`、 `use`、および`do`キーワードは、通常の関数内にある場合と同様、非同期バージョンと共に使用できます。
 
-## <a name="how-to-start-async-code-in-f"></a>非同期コードを起動する方法F# #
+## <a name="how-to-start-async-code-in-f"></a>F での非同期コードを起動する方法\#
 
 前述のように、非同期コードを明示的に開始する必要がある別のコンテキストで実行する作業の仕様です。 これを実現する 2 つの主な方法を次に示します。
 
@@ -152,7 +152,7 @@ for html in htmlList do
 
  F#コンパイラは非常に厳格な"async"コードを同期的に実行を行うような問題とされることはほぼ不可能です。 警告に遭遇した場合はどのように考えるかをコードが実行されません記号です。 コンパイラを満足することができますと、ほとんどの場合に、コードは、想定どおりに実行されます。
 
-## <a name="for-the-cvb-programmer-looking-into-f"></a>C#または VB プログラマが調査中F# #
+## <a name="for-the-cvb-programmer-looking-into-f"></a>C#または VB プログラマが F を見る\#
 
 このセクションでは、非同期モデルに使い慣れている前提としていますC#/VB。 そうでない場合[での非同期プログラミングC#](../../../csharp/async.md)は開始点です。
 

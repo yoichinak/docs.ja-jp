@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977982"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -511,7 +511,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>F#クエリ式 (大文字と小文字)</th>
   </tr>
 <tr><td>
-テーブルからすべてのフィールドを選択します。</br>
+テーブルからすべてのフィールドを選択します。<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>

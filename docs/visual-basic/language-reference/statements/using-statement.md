@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: fd553430e56bbc5c21c9bdb25fc6b67eea530739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1cf0772bf4e9a77474849c59454617261475fa76
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595397"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966087"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 宣言の先頭を`Using`をブロックし、必要に応じて、ブロックを制御するシステム リソースを取得します。  
@@ -107,7 +107,7 @@ End Try
   
  <xref:System.IO.TextWriter>と<xref:System.IO.TextReader>クラスの実装、<xref:System.IDisposable>インターフェイス、コードで使用できる`Using`ステートメントをファイルが正しく、書き込み後に終了し、読み取り操作ことを確認します。  
   
- [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.IDisposable>

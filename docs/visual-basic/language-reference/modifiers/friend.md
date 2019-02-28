@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 9be3200300de308a70559536905d1e118a4a5fe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52fdbfa3b0cd79cc9714a13a75716829163e45f6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616200"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967374"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 1 つまたは複数の宣言されたプログラミング要素にその宣言を含むアセンブリ内からのみアクセスできることを指定します。  
@@ -40,7 +40,7 @@ ms.locfileid: "54616200"
 ## <a name="example"></a>例  
  次のクラスは、`Friend`修飾子を特定のメンバーへのアクセスに同じアセンブリ内の他のプログラミング要素を許可します。  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>使用法  
  使用することができます、`Friend`これらのコンテキストでの修飾子。  

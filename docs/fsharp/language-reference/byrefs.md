@@ -2,12 +2,12 @@
 title: Byref
 description: Byref と F# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611582"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976552"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 目的は、`outref<'T>`をからポインターを読み取るだけことを示すことです。 予期せず、`outref<'T>`名前とは異なり値の読み取り、基になることができます。 これは、互換性のため。 意味としては、`outref<'T>`は変わりません`byref<'T>`します。
 
-### <a name="interop-with-c"></a>C# との相互運用 #
+### <a name="interop-with-c"></a>C との相互運用\#
 
 C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を返します。 次の表は、F# を解釈する方法と c# は出力を示しています。
 
