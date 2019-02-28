@@ -65,7 +65,7 @@ ms.locfileid: "55083939"
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-アプリの対象が .NET Framework の旧バージョンの場合は、自動バインド リダイレクトを有効にできます。 任意のアセンブリの app.config ファイルにバインド リダイレクト情報を提供することで、またはバインド リダイレクト機能を無効にすることで、この既定の動作をオーバーライドできます。 この機能を有効または無効にする方法については、[自動バインディング リダイレクトを有効/無効にする方法](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)」を参照してください。
+アプリの対象が .NET Framework の旧バージョンの場合は、自動バインド リダイレクトを有効にできます 任意のアセンブリの app.config ファイルにバインド リダイレクト情報を提供することで、またはバインド リダイレクト機能を無効にすることで、この既定の動作をオーバーライドできます この機能を有効または無効にする方法については[、[自動バインディング リダイレクトを有効/無効にする方法](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)」を参照してください自動バインディング リダイレクトを有効/無効にする](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)」をご覧ください。
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>発行者ポリシーの省略

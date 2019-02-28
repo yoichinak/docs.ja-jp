@@ -3,16 +3,10 @@ title: .NET での並列プログラミング
 ms.date: 09/12/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- parallel programming
+  - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112725"
 ---
 # <a name="parallel-programming-in-net"></a>.NET での並列プログラミング
 
@@ -33,7 +27,7 @@ ms.locfileid: "47112725"
 |[並列プログラミングのデータ構造](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|スレッド セーフなコレクション クラス、軽量な同期型、および限定的な初期化の種類に関するドキュメントへのリンクを示します。|
 |[並列診断ツール](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|タスクと並列スタック向けの Visual Studio デバッガー ウィンドウ、および[コンカレンシー ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)に関するドキュメントへのリンクを示します。|
 |[PLINQ および TPL 用のカスタム パーティショナー](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|パーティションのしくみと、既定のパーティションの設定方法または新しいパーティションの作成方法について説明します。|
-|[タスク スケジューラ](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|スケジューラのしくみと既定のスケジューラの構成方法について説明します。|
+|[タスク スケジューラ](xref:System.Threading.Tasks.TaskScheduler)|スケジューラのしくみと既定のスケジューラの構成方法について説明します。|
 |[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# および Visual Basic のラムダ式について簡単に説明し、PLINQ およびタスク並列ライブラリでラムダ式を使用する方法を示します。|
 |[関連項目](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET での並列プログラミングに関する追加の情報とサンプル リソースへのリンクを示します。|
 

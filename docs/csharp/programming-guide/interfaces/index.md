@@ -15,7 +15,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 [interface](../../language-reference/keywords/interface.md) キーワードを使用してインターフェイスを定義します。 次の例のようにします。  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 構造体の名前を、有効な C# の[識別子名](../inside-a-program/identifier-names.md)にする必要があります。 慣例により、インターフェイス名は大文字の `I` で始めます。
 
@@ -31,7 +31,8 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
   
 クラスまたは構造体でインターフェイスを実装するときは、インターフェイスで定義されているすべてのメンバーの実装を提供する必要があります。 インターフェイス自体は、基本クラスの機能を継承できるようにクラスまたは構造体が継承できる機能を提供しません。 ただし、基本クラスでインターフェイスが実装される場合、その基本クラスから派生するすべてのクラスはその実装を継承します。  
   
-<xref:System.IEquatable%601> インターフェイスを実装する例を次に示します。 実装するクラスの `Car` は、<xref:System.IEquatable%601.Equals%2A> メソッドの実装を提供する必要があります。  
+
+  <xref:System.IEquatable%601> インターフェイスを実装する例を次に示します。 実装するクラスの `Car` は、<xref:System.IEquatable%601.Equals%2A> メソッドの実装を提供する必要があります。  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
