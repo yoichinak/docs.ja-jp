@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: fafeb6cd47ebab5dd8f197b27d1aee9d7573e6ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717734"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975382"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic における My 名前空間の拡張
 `My`プロパティとメソッドを .NET Framework の能力を簡単に利用できるようにする Visual Basic における名前空間を公開します。 `My`名前空間には一般的なプログラミングの問題を 1 行のコードに多くの場合、困難な作業を減らすことが簡略化します。 さらに、`My`の動作をカスタマイズできるように、名前空間が完全に拡張可能`My`特定のアプリケーションのニーズに対応するには、その階層に新しいサービスを追加します。 このトピックでは両方の既存のメンバーをカスタマイズする方法、`My`名前空間と、独自のカスタム クラスを追加する方法、`My`名前空間。  
@@ -41,7 +41,7 @@ ms.locfileid: "54717734"
   
  たとえば、頻繁に使用する、`My.User`アプリケーションを実行しているユーザーの現在のセキュリティ コンテキストにアクセスするオブジェクト。 ただし、会社がカスタムのユーザー オブジェクトを使用して、追加情報と、会社内のユーザーの機能を公開します。 このシナリオでの既定値を置き換えることができます、`My.User.CurrentPrincipal`プロパティに次の例で示すように、独自カスタム プリンシパル オブジェクトのインスタンスを使用します。  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]  
   
  設定、`CurrentPrincipal`プロパティを`My.User`オブジェクトが、アプリケーションを実行する id を変更します。 `My.User`オブジェクトは、さらに、新しく指定したユーザーに関する情報を返します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54717734"
   
  たとえば、次の例はという名前のプロパティを追加します。`DnsServerIPAddresses`を、`My.Computer`オブジェクト。  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
 ##  <a name="addingcustom"></a> カスタム オブジェクトを追加、My Namespace  
  ですが、`My`名前空間では、多くの一般的なプログラミング タスクのソリューション、タスクが発生する可能性があります`My`名前空間が対応していません。 たとえば、アプリケーションが、ユーザー データのカスタム ディレクトリ サービスにアクセスまたはアプリケーションは、Visual Basic では既定でインストールされていないアセンブリを使用可能性があります。 拡張することができます、`My`環境に固有の一般的なタスクへのカスタム ソリューションを含める名前空間。 `My`名前空間は、増え続けるアプリケーションのニーズを満たすために新しいメンバーを追加する簡単に拡張できます。 さらに、展開、`My`名前空間の拡張機能を Visual Basic テンプレートとして他の開発者。  
@@ -58,20 +58,20 @@ ms.locfileid: "54717734"
 ###  <a name="addingtonamespace"></a> メンバーを追加、My Namespace  
  `My`名前空間には、他の名前空間のようなプロパティを追加できます最上位レベルにモジュールを追加して、指定するだけで、`Namespace`の`My`します。 使用して、モジュールの注釈を付け、`HideModuleName`属性の次の例に示すようにします。 `HideModuleName`属性により、IntelliSense が表示されないよう、モジュール名のメンバーを表示するとき、`My`名前空間。  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
   
  メンバーを追加する、`My`名前空間、モジュールに必要なプロパティを追加します。 追加の各プロパティの`My`名前空間、型のプライベート フィールドを追加する`ThreadSafeObjectProvider(Of T)`型は、カスタム プロパティによって返される型です。 このフィールドは呼び出すことによって、プロパティによって返されるスレッド セーフなオブジェクト インスタンスの作成に使用、`GetInstance`メソッド。 その結果、拡張プロパティにアクセスする各スレッドは、戻り値の型のインスタンスを受け取ります。 次の例は、という名前のプロパティを追加します。`SampleExtension`型のある`SampleExtension`を、`My`名前空間。  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
 ##  <a name="addingevents"></a> カスタム My オブジェクトへのイベントの追加  
  使用することができます、`My.Application`オブジェクトのカスタム イベントを公開する`My`オブジェクトを拡張することによって、`MyApplication`部分クラスに、`My`名前空間。 Windows ベースのプロジェクトでは、ダブルクリックすることができます、 **My Project**にプロジェクトのノード**ソリューション エクスプ ローラー**します。 Visual Basic で**プロジェクト デザイナー**、クリックして、 `Application`  タブをクリックして、`View Application Events`ボタンをクリックします。 ApplicationEvents.vb という新しいファイルが作成されます。 拡張するための次のコードが含まれている、`MyApplication`クラス。  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
   
  イベント ハンドラーを追加するには、カスタム`My`オブジェクトにカスタム イベント ハンドラーを追加することで、`MyApplication`クラス。 カスタム イベントでは、イベント ハンドラーを追加すると、削除、またはイベントが発生したときに実行されるコードを追加することができます。 なお、`AddHandler`コードのカスタム イベントがイベントを処理するユーザー コードを追加した場合にのみを実行します。 などを検討してください、`SampleExtension`オブジェクト、前のセクションからには、`Load`のカスタム イベント ハンドラーを追加するイベントです。 次のコード例は、という名前のカスタム イベント ハンドラーを示しています。`SampleExtensionLoad`はされると呼び出されます、`My.SampleExtension.Load`イベントが発生します。 新しいを処理するコードを追加するときに`My.SampleExtensionLoad`、イベント、`AddHandler`このカスタム イベント コードの一部を実行します。 `MyApplication_SampleExtensionLoad`メソッドが処理するイベント ハンドラーの例を示すコード例に含まれる、`My.SampleExtensionLoad`イベント。 なお、`SampleExtensionLoad`を選択すると、イベントが表示されます、**マイ アプリケーション イベント**左側のドロップダウン リストの上、コード エディター、ApplicationEvents.vb ファイルを編集するときのオプション。  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
 ##  <a name="design"></a> デザイン ガイドライン  
  拡張機能を開発する際に、`My`名前空間の拡張機能コンポーネントのメンテナンス コストを最小限に抑えるため、次のガイドラインを使用します。  

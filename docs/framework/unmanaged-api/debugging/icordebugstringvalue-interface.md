@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStringValue Interface1
+title: ICorDebugStringValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff85a77b113440c2274910cae8ef93419d1bc1b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596840"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965359"
 ---
-# <a name="icordebugstringvalue-interface1"></a>ICorDebugStringValue Interface1
+# <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue インターフェイス
 文字列値に適用される ICorDebugHeapValue のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  

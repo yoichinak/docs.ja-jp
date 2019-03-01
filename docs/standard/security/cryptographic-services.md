@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592432"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980244"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 <a name="top"></a> インターネットなどの公衆ネットワークには、エンティティ間の通信を保護する手段が用意されていません。 公衆ネットワークを経由した通信は、不当な第三者によって読み取られたり、さらには変更されたりするおそれがあります。 暗号化を使用すると、データが表示されないように保護し、データが変更されたかどうかを検出する方法を提供し、通常は安全でないチャネル上に安全な通信手段を確立できます。 たとえば、暗号化アルゴリズムを使用してデータを暗号化し、暗号化された状態で送信できます。送信先の相手は、後でこのデータを復号化できます。 暗号化されたデータを第三者が傍受したとしても、復号化するのは困難です。  
   
- .NET Framework では、<xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスが暗号化のさまざまな詳細事項を自動的に管理します。 アンマネージ Microsoft Cryptography API (CryptoAPI) 用のラッパーもあれば、純粋なマネージ実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。  
+ .NET Framework では、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスが暗号化のさまざまな詳細事項を自動的に管理します。 アンマネージド Microsoft Cryptography API (CryptoAPI) 用のラッパーもあれば、純粋なマネージド実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。  
   
  ここでは、ClickOnce マニフェスト、Suite B、 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]で提供される CNG (Cryptography Next Generation) サポートなど、.NET Framework でサポートされる暗号化の機能および方法の概要について説明します。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "33592432"
   
  暗号化は、次の目標を達成するために使用されます。  
   
--   機密性。ユーザーの ID またはデータが読み取られないように保護するために役立ちます。  
+-   機密性:ユーザーの id やデータが読み取られないように保護するには。  
   
--   データの整合性。データが変更されないように保護するために役立ちます。  
+-   データの整合性 : データを保護するために次のように変更します。  
   
--   信憑性。データが特定の人から送信されることを保証します。  
+-   認証:そのデータを確認するには、特定のパーティから発生します。  
   
--   否認不可。特定の人がメッセージを送信したことを拒否することを防止します。  
+-   否認不可:特定のパーティがメッセージを送信したことを拒否するを防ぐ。  
   
  これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33592432"
   
  共有キー暗号方式の弱点は、両者のキーと IV を一致させ、それぞれの値を転送しておく必要がある点です。 IV は秘密情報とは見なされないため、平文のメッセージで転送できます。 しかし、キーは承認されていないユーザーから保護する必要があります。 このような問題のため、共有キー暗号方式は公開キー暗号方式と併用されることがよくあります。公開キー暗号方式は、キーと IV の値を秘密に通信するために使用されます。  
   
- 安全でないチャネルを経由して Alice と Bob が通信しようとしている場合は、次のように共有キー暗号方式を使用することが考えられます。Alice と Bob は、特定の 1 つのアルゴリズム (たとえば AES) と、特定のキーおよび IV を使用することに合意します。 Alice はメッセージを作成し、メッセージを送信するためのネットワーク ストリーム (おそらく、名前付きパイプやネットワーク電子メール) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 通信が傍受されたとしても、傍受した人にはキーがわからないため、元のメッセージが復元されることはありません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。  
+ Alice と Bob は、安全でないチャネル経由で通信を希望する 2 つのパーティには、仮定ように秘密キーの暗号化を使用する場合があります。Alice と Bob は、1 つの特定のアルゴリズム (たとえば AES) を使用して、特定のキーと IV を使用することに同意します。 Alice は、メッセージを作成し、メッセージを送信するためのネットワーク ストリーム (おそらく、名前付きパイプやネットワーク電子メール) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 通信が傍受されたとしても、傍受した人にはキーがわからないため、元のメッセージが復元されることはありません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、共有キー暗号化アルゴリズムを実装する次のクラスが用意されています。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "33592432"
   
 -   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>。  
   
--   <xref:System.Security.Cryptography.RijndaelManaged>。  
+-   <xref:System.Security.Cryptography.RijndaelManaged>.  
   
 -   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33592432"
 ## <a name="public-key-encryption"></a>公開キー暗号方式  
  公開キー暗号方式では、承認されていないユーザーから保護する必要のある秘密キーと、だれに公開してもかまわない公開キーが使用されます。 公開キーと秘密キーは正確にリンクされ、公開キーで暗号化されたデータは、対応する秘密キーでしか復号化できません。また、秘密キーで署名されたデータは、対応する公開キーでしか検査できません。 公開キーはだれに公開してもかまいません。公開キーは、秘密キーの所有者に送信するデータを暗号化するために使用されます。 公開キー暗号化アルゴリズムは、非対称アルゴリズムとしても知られています。これは、データの暗号化に 1 つのキーが使用され、データの復号化に別のキーが使用されるためです。 基本的な暗号化規則でキーの再使用を禁止し、いずれのキーも通信セッションごとに一意にする必要があります。 ただし、実際には、非対称キーの寿命は長いことが一般的です。  
   
- 二者 (ここでは Alice と Bob) は、次のように公開キーの暗号化を使用できます。まず、Alice が公開キー/秘密キーのペアを生成します。 暗号メッセージを Alice に送信するとき、Bob は Alice に公開キーを送信するように依頼します。 Alice は安全でないネットワークを通して Bob に公開キーを送信し、Bob はこのキーを使用してメッセージを暗号化します。 Bob は暗号メッセージを Alice に送信し、Alice は自分の秘密キーを使用してメッセージを復号化します。 公衆ネットワークなどの安全でないチャネル経由で Alice のキーを受信した場合、Bob は man-in-the-middle 攻撃に対して無防備になります。 したがって、Bob は所有している Alice の公開キーの正しいコピーを使用して、Alice であることを検証する必要があります。  
+ 2 つのパーティ (Alice と Bob) よう公開キーの暗号化に使用可能性があります。最初に、Alice は、公開/秘密キー ペアを生成します。 暗号メッセージを Alice に送信するとき、Bob は Alice に公開キーを送信するように依頼します。 Alice は安全でないネットワークを通して Bob に公開キーを送信し、Bob はこのキーを使用してメッセージを暗号化します。 Bob は暗号メッセージを Alice に送信し、Alice は自分の秘密キーを使用してメッセージを復号化します。 公衆ネットワークなどの安全でないチャネル経由で Alice のキーを受信した場合、Bob は man-in-the-middle 攻撃に対して無防備になります。 したがって、Bob は所有している Alice の公開キーの正しいコピーを使用して、Alice であることを検証する必要があります。  
   
  Alice の公開キーの転送中に、承認されていないエージェントによってキーが傍受される可能性があります。 さらに、同じエージェントが Bob からの暗号メッセージを傍受する可能性もあります。 しかし、公開キーを使用してもメッセージを復号化することはできません。 メッセージを復号化できるのは Alice の秘密キーだけですが、これは送信されていません。 Alice は Bob への返信メッセージを暗号化するときに自分の秘密キーを使用しません。公開キーを持つ人は、だれでもそのメッセージを復号化できるためです。 Alice から Bob にメッセージを返信するときには、Alice が Bob の公開キーをたずね、その公開キーを使用してメッセージを暗号化します。 その後、Bob は自分の秘密キーを使用してメッセージを復号化します。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "33592432"
   
 -   Alice はプレーンテキスト メッセージとハッシュしたメッセージ (デジタル署名) を Bob に送信します。 Bob はメッセージを受信してハッシュ値を計算し、算出したハッシュ値を Alice から受け取ったハッシュ値と比較します。 ハッシュ値が同一の場合、メッセージは変更されていません。 ハッシュ値が同一でない場合は、Alice がメッセージを作成した後でその内容が変更されています。  
   
-     残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 参照してください[NIB: セキュリティで保護された通信の例の Cryptography Next Generation (CNG)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e)詳細についてはします。  
+     残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、次を参照してください。 [Cryptography Next Generation (CNG) セキュリティで保護された通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))します。  
   
 -   Alice はセキュリティで保護されていないパブリック チャネルを使用して、Bob にプレーンテキスト メッセージを送信します。 そして、セキュリティで保護されたプライベート チャネルを使用して、Bob にハッシュしたメッセージを送信します。 Bob はプレーンテキスト メッセージを受信し、ハッシュを計算して、プライベートに交換したハッシュと比較します。 ハッシュが一致すると、Bob は次の 2 つのことを判断できます。  
   
@@ -216,23 +216,23 @@ ms.locfileid: "33592432"
   
 -   <xref:System.Security.Cryptography.HMACSHA1>。  
   
--   <xref:System.Security.Cryptography.MACTripleDES>。  
+-   <xref:System.Security.Cryptography.MACTripleDES>.  
   
--   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>。  
+-   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.RIPEMD160>。  
+-   <xref:System.Security.Cryptography.RIPEMD160>.  
   
--   <xref:System.Security.Cryptography.SHA1Managed>。  
+-   <xref:System.Security.Cryptography.SHA1Managed>.  
   
--   <xref:System.Security.Cryptography.SHA256Managed>。  
+-   <xref:System.Security.Cryptography.SHA256Managed>.  
   
--   <xref:System.Security.Cryptography.SHA384Managed>。  
+-   <xref:System.Security.Cryptography.SHA384Managed>.  
   
 -   <xref:System.Security.Cryptography.SHA512Managed>。  
   
 -   SHA (Secure Hash Algorithm)、MD5 (Message Digest 5)、および RIPEMD-160 の各アルゴリズムすべての HMAC バリアント。  
   
--   すべての SHA アルゴリズムの CryptoServiceProvider 実装 (マネージ コード ラッパー)。  
+-   すべての SHA アルゴリズムの CryptoServiceProvider 実装 (マネージド コード ラッパー)。  
   
 -   すべての MD5 アルゴリズムおよび SHA アルゴリズムの CNG (Cryptography Next Generation) 実装。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "33592432"
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B のサポート  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] は、米国国家安全保障局 (NSA: National Security Agency) によって公開された暗号化アルゴリズム Suite B セットをサポートしています。 Suite B の詳細については、次を参照してください。、 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)です。  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] は、米国国家安全保障局 (NSA: National Security Agency) によって公開された暗号化アルゴリズム Suite B セットをサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。  
   
  次のアルゴリズムが含まれています。  
   
@@ -285,13 +285,13 @@ ms.locfileid: "33592432"
   
 -   256 ビット、384 ビット、および 521 ビットの素数の曲線を使用した ECDH (Elliptic Curve Diffie-Hellman) アルゴリズム。キーの交換と秘密協定に使用されます。 このアルゴリズムは、 <xref:System.Security.Cryptography.ECDiffieHellmanCng> クラスによって提供されます。  
   
- 新たに追加された <xref:System.Security.Cryptography.AesCryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> の各クラスでは、連邦情報処理規格 (FIPS: Federal Information Processing Standard) によって認定された AES、SHA-256、SHA-384、および SHA-512 実装のマネージ コード ラッパーを使用できます。  
+ 新たに追加された <xref:System.Security.Cryptography.AesCryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>、 <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> の各クラスでは、連邦情報処理規格 (FIPS: Federal Information Processing Standard) によって認定された AES、SHA-256、SHA-384、および SHA-512 実装のマネージド コード ラッパーを使用できます。  
   
  [ページのトップへ](#top)  
   
 <a name="cng"></a>   
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG (Cryptography Next Generation) クラス  
- CNG のクラスには、ネイティブ CNG 関数を扱うマネージ ラッパーが用意されています  (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部に "Cng" が使用されています。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。  
+ CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラッパーが用意されています (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部に "Cng" が使用されています。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。  
   
  <xref:System.Security.Cryptography.CngKey> クラスは、キーを開く、作成する、削除する、エクスポートするなど、さまざまな補足的な操作に使用されます。 また、ネイティブ関数を直接呼び出すときに使用する、基になるキー ハンドルへのアクセスも提供します。  
   

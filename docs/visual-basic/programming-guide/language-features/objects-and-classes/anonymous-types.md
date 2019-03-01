@@ -8,29 +8,29 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: d6aa3685fc4aa6b51dc45b82f315f13a23b1c332
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562532"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968019"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
 Visual Basic では、データ型のクラス定義を記述せずにオブジェクトを作成することを有効にする匿名型をサポートしています。 クラスは、コンパイラによって生成されます。 クラスは、使用可能な名前を持たないから直接継承<xref:System.Object>オブジェクトの宣言で指定したプロパティが含まれます。 として参照にはデータ型の名前が指定されていないため、*匿名型*します。  
   
  次の例では、宣言し、変数を作成します。`product`を 2 つのプロパティを持つ匿名型のインスタンスとして`Name`と`Price`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]  
   
  A*クエリ式*匿名型を使用して、クエリによって選択されたデータの列を結合します。 特定のクエリで選択される列を予測できないため、事前に結果の型を定義することはできません。 匿名型では、任意の順序で列の任意の数を選択するクエリを記述できます。 コンパイラは、指定したプロパティと、指定した順序と一致するデータ型を作成します。  
   
  次の例で`products`多くのプロパティを持つ製品のオブジェクトの一覧を示します。 変数`namePriceQuery`、実行時は、2 つのプロパティを持つ匿名型のインスタンスのコレクションを返すクエリの定義を保持`Name`と`Price`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#2](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#2)]  
   
  変数`nameQuantityQuery`、実行時は、2 つのプロパティを持つ匿名型のインスタンスのコレクションを返すクエリの定義を保持`Name`と`OnHand`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#3](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
  匿名型のためにコンパイラによって作成されたコードの詳細については、次を参照してください。[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)します。  
   
@@ -40,13 +40,13 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
 ## <a name="declaring-an-anonymous-type"></a>匿名型の宣言  
  匿名型のインスタンスの宣言では、型のプロパティを指定するのに初期化子リストを使用します。 匿名型、メソッドやイベントなどの他のクラス要素いないを宣言するときに、プロパティのみを指定できます。 次の例では、`product1`を 2 つのプロパティを持つ匿名型のインスタンスです。`Name`と`Price`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#4](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
   
  キー プロパティとしてプロパティを指定する場合は、2 つの匿名型のインスタンスの等価性を比較に使用できます。 ただし、キー プロパティの値を変更できません。 詳細については、このトピックの後半では、キーのプロパティを参照してください。  
   
  オブジェクト初期化子を使用して名前付きの型のインスタンスを宣言するようが匿名型のインスタンスを宣言することに注意してください。  
   
- [!code-vb[VbVbalrAnonymousTypes#5](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#5)]  
   
  匿名型のプロパティを指定する他の方法の詳細については、次を参照してください。[方法。匿名型の宣言におけるプロパティ名と型を推論](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)します。  
   
@@ -72,11 +72,11 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
   
  キー プロパティを持たない匿名の型のインスタンスはのみにします。  
   
- [!code-vb[VbVbalrAnonymousTypes#6](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#6)]  
   
  そのキー プロパティの値が等しい場合、同じ匿名型の 2 つのインスタンスは等しいです。 次の例では、等しいかどうかをテストする方法を示します。  
   
- [!code-vb[VbVbalrAnonymousTypes#7](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_7.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>読み取り専用の値  
  キー プロパティの値を変更できません。 たとえば、`prod8`前の例で、`Name`と`Price`フィールドは`read-only`が`OnHand`変更できます。  
@@ -88,19 +88,19 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
   
 -   `custs1` に、文字列のコレクションを格納`cust.Name`は文字列です。  
   
-     [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
 -   `custs2` コレクションを格納`Customer`ため、オブジェクトの各要素`customers`は、`Customer`オブジェクト、および全体の要素は、クエリで選択されます。  
   
-     [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
  ただし、適切な名前付きの型は、利用できません。 顧客の名前と目的の 1 つ、顧客 ID 番号、別の場所のアドレスと顧客の名前、アドレス、および 3 番目の注文履歴を選択する場合があります。 匿名型では、任意の順序で結果を保持する新しい名前付きの型を宣言する前に、プロパティの任意の組み合わせを選択できます。 代わりに、コンパイラは、プロパティのコンパイルごとの匿名型を作成します。 次のクエリは、それぞれからのみ、顧客の名前と ID 番号を選択します。`Customer`オブジェクト`customers`します。 そのため、コンパイラは、これら 2 つのプロパティのみを含む匿名型を作成します。  
   
- [!code-vb[VbVbalrAnonymousTYpes#32](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_11.vb)]  
+ [!code-vb[VbVbalrAnonymousTYpes#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#32)]  
   
  名前と匿名型のプロパティのデータ型の両方が引数から取得されます`Select`、`cust.Name`と`cust.ID`します。 クエリによって作成される匿名型のプロパティは、常に、キーのプロパティです。 ときに`custs3`が、次に実行される`For Each`ループ、結果は、2 つのキー プロパティを持つ匿名型のインスタンスのコレクション`Name`と`ID`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#33](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_12.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#33)]  
   
  によって表されるコレクション内の要素`custs3`厳密に型指定し、使用可能なプロパティをナビゲートし、その型を確認するのには、IntelliSense を使用することができます。  
   
@@ -109,11 +109,11 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
 ## <a name="deciding-whether-to-use-anonymous-types"></a>匿名型を使用するかどうかを決定します。  
  匿名クラスのインスタンスとしてオブジェクトを作成する前に、最適なオプションがあるかどうかを検討してください。 たとえば場合は、関連するデータを格納する一時オブジェクトを作成して、その他のフィールドやメソッドが含まれる完全なクラスの必要はありません、匿名型は優れたソリューションです。 匿名型は、宣言ごとに異なるプロパティを選択する場合、またはプロパティの順序を変更する場合にも便利です。 ただし、プロジェクトには、一定の順序で、同じプロパティがありますをいくつかのオブジェクトが含まれている場合ことでも宣言できますより簡単にクラス コンス トラクターを持つ名前付きの型を使用しています。 たとえば、適切なコンス トラクターではの複数のインスタンスを宣言しやすく、`Product`クラス、匿名型のいくつかのインスタンスを宣言するよりもします。  
   
- [!code-vb[VbVbalrAnonymousTypes#9](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_13.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
   
  名前付きの型のもう 1 つの利点は、コンパイラがプロパティ名のタイプミスをキャッチできることです。 前の例で`firstProd2`、 `secondProd2`、および`thirdProd2`同じ匿名型のインスタンスにする対象としています。 ただし、誤ってにした場合宣言`thirdProd2`、次の方法の 1 つは、その型は異なることには`firstProd2`と`secondProd2`します。  
   
- [!code-vb[VbVbalrAnonymousTypes#10](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_14.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#10)]  
   
  さらに、名前付きの型のインスタンスに適用されない匿名型の使用に関する制限事項があります。 `firstProd2`、 `secondProd2`、および`thirdProd2`は、同じ匿名型のインスタンスです。 ただし、共有の匿名型の名前は、ご利用いただけません、コードで型名が必要な場合は使用できません。 たとえば、匿名型を使用して、別の変数またはフィールド、または任意の型の宣言で宣言、メソッド シグネチャを定義することはできません。 その結果、メソッド間で情報を共有するときに匿名型は適していません。  
   

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugChain Interface1
+title: ICorDebugChain インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugChain
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0bb716f1ad4087642a76dc84266ec6d3f46c1ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb21712066e7b351e974a66f61ec0326a110aed6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571205"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982038"
 ---
-# <a name="icordebugchain-interface1"></a>ICorDebugChain Interface1
+# <a name="icordebugchain-interface"></a>ICorDebugChain インターフェイス
+
 物理呼び出し履歴または論理呼び出し履歴のセグメントを表します。  
   
 ## <a name="methods"></a>メソッド  

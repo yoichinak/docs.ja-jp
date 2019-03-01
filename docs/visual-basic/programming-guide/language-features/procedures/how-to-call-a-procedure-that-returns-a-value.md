@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525457"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974459"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値 (Visual Basic) を返すプロシージャを呼び出す
 A`Function`プロシージャが呼び出し元のコードに値を返します。 呼び出すことが、名前と引数を含めることによって、式または代入ステートメントの右側にあるいずれか。  
@@ -42,7 +42,7 @@ A`Function`プロシージャが呼び出し元のコードに値を返します
 ## <a name="example"></a>例  
  次の例では、Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>オペレーティング システム環境変数の値を取得します。 最初の行呼び出し`Environ`代入ステートメントでその行によって式と、2 つ目の呼び出し。 `Environ` その単一の引数として変数名を受け取ります。 呼び出し元のコードに変数の値を返します。  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>関連項目
 - [Function プロシージャ](./function-procedures.md)

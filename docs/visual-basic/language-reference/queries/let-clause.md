@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: de7ef8aa456235b4fd3003230645db4f5a813a9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 545eefc67d52428470c19b62085fd87927505c7e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634065"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972704"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
 値を計算し、クエリ内で新しい変数に代入します。  
@@ -39,7 +39,7 @@ Let variable = expression [, ...]
 ## <a name="example"></a>例  
  次のコード例では、`Let`製品の 10% の割引を計算する句。  
   
- [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

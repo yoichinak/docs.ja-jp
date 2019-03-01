@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic]
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
-ms.openlocfilehash: 7a01fdc9d0541b5d277c2f283e25e9a1cef3b862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e11c1ed4cfe4edc1c88dbbff2e9f555b1a028c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636340"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974719"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>方法: XML リテラル (Visual Basic) の変更します。
 Visual Basic では、XML リテラルを変更する便利な手段を提供します。 追加したり、要素と属性を削除し、新しい XML 要素を持つ既存の要素を置換することもできます。 このトピックでは、既存の XML リテラルを変更する方法のいくつかの例を示します。  
@@ -22,7 +22,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
   
      次のコード例は、すべての値を更新、\<価格 > XML ドキュメント内の要素。  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
+     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]  
   
      次は、サンプルのソース XML に示し、このコード例から XML に変更されました。  
   
@@ -65,7 +65,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
   
 1.  XML リテラルには、属性を追加するには、リテラルの XML への参照をまず取得します。 新しい XML 属性軸プロパティを追加することで、属性を追加できます。 追加することも、新しい<xref:System.Xml.Linq.XAttribute>オブジェクトを XML リテラルを使用して、<xref:System.Xml.Linq.XContainer.Add%2A>メソッド。 次の例では、両方のオプションを示します。  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
+     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]  
   
      次は、サンプルのソース XML に示し、このコード例から XML に変更されました。  
   
@@ -111,7 +111,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
   
      次の例では、これらの各手法の例を示します。  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
+     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]  
   
      次は、サンプルのソース XML に示し、このコード例から XML に変更されました。  
   
@@ -155,7 +155,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
   
 1.  XML リテラルから要素または属性を削除するには、要素または属性と呼び出しへの参照を取得、`Remove`メソッドを次の例に示すようにします。  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
+     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]  
   
      次は、サンプルのソース XML に示し、このコード例から XML に変更されました。  
   
@@ -203,7 +203,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
   
      次のコード例は、すべてが置き換わります\<説明 > を持つ要素を\<抽象 > 要素。 コンテンツ、\<説明 > 要素は、新しい保持\<抽象 > 要素を使用して、<xref:System.Xml.Linq.XContainer.Nodes%2A>のプロパティ、\<説明 ><xref:System.Xml.Linq.XElement>オブジェクト。  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
+     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]  
   
      次は、サンプルのソース XML に示し、このコード例から XML に変更されました。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845981"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979815"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
 ブロックを実行する前にステートメント ブロックの排他ロックを取得します。  
@@ -81,13 +81,13 @@ End SyncLock
  場合、`simpleMessageList`クラスは、そのすべてのインスタンス、変数間のメッセージの 1 つのリストを共有`messagesList`と`messagesLast`宣言`Shared`します。 この場合は、変数`messagesLock`必要もあります`Shared`、すべてのインスタンスによって使用される 1 つのロック オブジェクトがあるようにします。  
   
 ### <a name="code"></a>コード  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>説明  
  次のコードの例では、スレッドと`SyncLock`します。 限り、`SyncLock`ステートメントが存在する、ステートメント ブロックがクリティカル セクションと`balance`決して、負の数。 コメント アウトすることができます、`SyncLock`と`End SyncLock`隠れますの効果を確認するステートメント、`SyncLock`キーワード。  
   
 ### <a name="code"></a>コード  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>コメント  
   

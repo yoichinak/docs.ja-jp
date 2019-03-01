@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 7125f6079811421bc5a7abdce2e13d591a299630
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90f358aad8e3219b2e3cb3e9b996a24b3138828b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269329"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970832"
 ---
 # <a name="remarks-visual-basic"></a>\<remarks > (Visual Basic)
 メンバーの「解説」セクションをを指定します。  
@@ -35,7 +35,7 @@ ms.locfileid: "55269329"
 ## <a name="example"></a>例  
  この例では、`<remarks>`何かを説明するタグ、`UpdateRecord`メソッドします。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule2 Interface1
+title: ICorDebugModule2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c65d2da485664691ff71044eb4e44f12108ce5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 192f2476aff91d3a8302d070852ab2a3722d137c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707597"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970130"
 ---
-# <a name="icordebugmodule2-interface1"></a>ICorDebugModule2 Interface1
+# <a name="icordebugmodule2-interface"></a>ICorDebugModule2 インターフェイス
+
 ICorDebugModule インターフェイスを論理的に拡張として機能します。  
   
 ## <a name="methods"></a>メソッド  

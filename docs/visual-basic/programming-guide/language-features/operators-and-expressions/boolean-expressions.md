@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965541"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
 *ブール式*の値に評価される式を指定、[ブールのデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`または`False`です。 `Boolean` 式には、いくつかの形式を取ります。 単純な形式の値を直接比較、`Boolean`変数を`Boolean`リテラルは、次の例に示すようにします。  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>2 つの意味、= 演算子  
  注意して代入ステートメント`newCustomer = True`前の例では、式と同じに見えますが、別の関数を実行して異なる方法で使用されます。 前の例では、式で`newCustomer = True`ブール値を表す、`=`記号は、比較演算子と解釈されます。 スタンドアロンのステートメントで、`=`記号は、代入演算子と解釈され、左側の変数を右側にある値を割り当てます。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  詳細については、次を参照してください。[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)と[ステートメント](../../../../visual-basic/language-reference/statements/index.md)します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54562753"
 ## <a name="short-circuiting-operators"></a>ショート サーキット演算子  
  論理演算子`AndAlso`と`OrElse`と呼ばれる現象が発生する*ショート サーキット*します。 ショート サーキット演算子は、まず、左側のオペランドを評価します。 左側のオペランドでは、式全体の値を決定、右の式を評価することがなくプログラムの実行が処理されます。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  前の例では、演算子は、左の式を評価`45 < 12`します。 左の式が評価されるため`False`、論理式全体に評価される必要があります`False`します。 プログラムの実行はそのためのコードの実行をスキップ、`If`右の式を評価することがなくブロック`testFunction(3)`します。 この例は呼び出しません`testFunction()`左の式が式全体を falsifies ためです。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54562753"
 ### <a name="comparison-with-non-short-circuiting-operators"></a>非ショート サーキット演算子との比較  
  これに対し、論理演算子の両辺が評価されるときに、論理演算子`And`と`Or`使用されます。 次に例を示します。  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  上記の例では、 `testFunction()` 、左の式を評価する場合でも`False`します。  
   

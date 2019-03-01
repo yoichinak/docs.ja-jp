@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e7015474a0617b76ca537d2e84e8d7bfc72b6e12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737664"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965957"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 宣言名、パラメーター、および定義するコードを`Sub`プロシージャ。  
@@ -54,7 +54,7 @@ End Sub
   
 -   `attributelist`  
   
-     任意。 参照してください[属性一覧](attribute-list.md)します。  
+     任意。 参照してください[属性リスト](attribute-list.md)します。  
   
 -   `Partial`  
   
@@ -76,13 +76,13 @@ End Sub
 
     - [Private Protected](../../language-reference/modifiers/private-protected.md)
   
-     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+     「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `proceduremodifiers`  
   
      任意。 次のいずれかの値を指定します。  
   
-    -   [オーバーロード](../modifiers/overloads.md)  
+    -   [Overloads](../modifiers/overloads.md)  
   
     -   [Overrides](../modifiers/overrides.md)  
   
@@ -126,18 +126,21 @@ End Sub
   
 -   `implementslist`  
   
-     `Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。  
+     
+  `Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
-     `implementedprocedure` の構文と指定項目は次のとおりです。  
+     
+  `implementedprocedure` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
     |パーツ|説明|  
     |---|---|  
     |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
-    |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|  
+    |`definedname`|必須。 
+  `interface` の中でプロシージャを定義するために使用する名前。|  
   
 -   `Handles`  
   
@@ -145,11 +148,13 @@ End Sub
   
 -   `eventlist`  
   
-     `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
+     
+  `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
   
      `eventspecifier [ , eventspecifier ... ]`  
   
-     `eventspecifier` の構文と指定項目は次のとおりです。  
+     
+  `eventspecifier` の構文と指定項目は次のとおりです。  
   
      `eventvariable.event`  
   
@@ -217,14 +222,14 @@ End Sub
 ## <a name="example"></a>例  
  次の例では、`Sub`名、パラメーター、およびの本体を形成するコードを定義するステートメントを`Sub`プロシージャ。  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#58)]  
   
 ## <a name="example"></a>例  
  次の例では、`DelayAsync`は、 `Async` `Function`の戻り値の型を持つ<xref:System.Threading.Tasks.Task%601>します。 `DelayAsync` には、整数を返す `Return` ステートメントがあります。 したがって、関数宣言の`DelayAsync`の戻り値の型があります。`Task(Of Integer)`します。 戻り値の型である`Task(Of Integer)`の評価、`Await`式`DoSomethingAsync`として次のステートメントに示す、整数が生成されます:`Dim result As Integer = Await delayTask`します。  
   
  `startButton_Click`プロシージャの例に示します、`Async Sub`プロシージャ。 `DoSomethingAsync`は、`Async`関数では、タスクへの呼び出しを`DoSomethingAsync`として次のステートメントの表示を待機する必要があります:`Await DoSomethingAsync()`します。 `startButton_Click` `Sub`でプロシージャを定義する必要があります、`Async`修飾子があるため、`Await`式。  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
+ [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - [Implements ステートメント](implements-statement.md)

@@ -1,15 +1,9 @@
 ---
-title: を概要します。F#
-description: 使用する方法については、F#プログラミング言語。
+title: 'を概要します。F#'
+description: '使用する方法については、F#プログラミング言語。'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170822"
 ---
-# <a name="get-started-with-f"></a>を概要します。F# #
+# <a name="get-started-with-f"></a>F を概要します。\#
 
 開始できますF#コンピューターまたはオンライン。
 

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction Interface1
+title: ICorDebugFunction インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b810ce8634781438faccac25f96442624a78ea0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c2a4dc823768b722e9069c411be787a66989b2a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676771"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977111"
 ---
-# <a name="icordebugfunction-interface1"></a>ICorDebugFunction Interface1
+# <a name="icordebugfunction-interface"></a>ICorDebugFunction インターフェイス
+
 マネージド関数またはマネージド メソッドを表します。  
   
 ## <a name="methods"></a>メソッド  

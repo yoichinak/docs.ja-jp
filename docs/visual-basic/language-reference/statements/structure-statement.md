@@ -12,12 +12,12 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 64ded285c74d61206618695c1d0bb6f158ce860d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d312bc14cf4df3825586de0eba5cba64856268
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704905"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977514"
 ---
 # <a name="structure-statement"></a>Structure ステートメント
 構造体の名前を宣言し、構造体を構成する変数、プロパティ、イベント、およびプロシージャの定義を提供します。  
@@ -37,25 +37,29 @@ End Structure
   
 |用語|定義|  
 |---|---|  
-|`attributelist`|任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。|  
-|`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [パブリック](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [保護されています。](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [プライベート](../../../visual-basic/language-reference/modifiers/private.md)<br />- [保護されたフレンド](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md) <br /><br /> 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
+|`attributelist`|任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。|  
+|`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md) <br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。|  
 |`Partial`|任意。 構造体の部分定義を示します。 参照してください[部分](../../../visual-basic/language-reference/modifiers/partial.md)します。|  
 |`name`|必須。 この構造体の名前です。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`Of`|任意。 これがジェネリックな構造体であることを指定します。|  
 |`typelist`|使用するかどうかは必ず、[の](../../../visual-basic/language-reference/statements/of-clause.md)キーワード。 この構造体の型パラメーター リストを指定します。 参照してください[一覧を入力する](../../../visual-basic/language-reference/statements/type-list.md)します。|  
 |`Implements`|任意。 この構造体が、複数のインターフェイスのメンバーを実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。|  
-|`interfacenames`|`Implements` ステートメントを使用する場合は必ず指定します。 この構造体が実装するインターフェイスの名前を指定します。|  
+|`interfacenames`|
+  `Implements` ステートメントを使用する場合は必ず指定します。 この構造体が実装するインターフェイスの名前を指定します。|  
 |`datamemberdeclarations`|必須。 0 個以上`Const`、 `Dim`、 `Enum`、または`Event`宣言ステートメント*データ メンバー*構造体の。|  
 |`methodmemberdeclarations`|任意。 0 個以上の宣言の`Function`、 `Operator`、 `Property`、または`Sub`として機能する手順、*メソッド メンバー*構造体の。|  
-|`End Structure`|必須。 `Structure` の定義を終了します。|  
+|`End Structure`|必須。 
+  `Structure` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- `Structure` ステートメントは、カスタマイズできる複合値型を定義します。 A*構造*以前のバージョンの Visual Basic のユーザー定義型 (UDT) を拡張します。 詳細については、次を参照してください。[構造](../../../visual-basic/programming-guide/language-features/data-types/structures.md)します。  
+ 
+  `Structure` ステートメントは、カスタマイズできる複合値型を定義します。 A*構造*以前のバージョンの Visual Basic のユーザー定義型 (UDT) を拡張します。 詳細については、次を参照してください。[構造](../../../visual-basic/programming-guide/language-features/data-types/structures.md)します。  
   
  構造体は、クラスと同じ機能の多くをサポートします。 たとえば、構造体は、プロパティやプロシージャを持つことができ、インターフェイスを実装でき、パラメーター化されたコンストラクターを持つことができます。 ただし、継承、宣言、および使用方法に関しては、構造体とクラスの間には大きな違いがあります。 また、クラスは参照型ですが、構造体は値型です。 詳細については、次を参照してください。[構造体とクラス](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)します。  
   
- `Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*構造体は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ 
+  `Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*構造体は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
  既定で構造[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
@@ -102,7 +106,7 @@ End Structure
 ## <a name="example"></a>例  
  次の例では、`Structure` ステートメントを使って、従業員に関連のある複数のデータを定義しています。 データ項目の機密性に応じて `Public`、`Friend`、`Private` の各メンバーを使用する方法が示されています。 プロシージャ、プロパティ、およびイベント メンバーも示されています。  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>関連項目
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)

@@ -3,17 +3,17 @@ title: コンテナー化されたアプリケーションのサービスを監�
 description: 監視コンテナー アーキテクチャの重要な側面について説明します
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 925db543617deb28590cf6631ebbda3ee96836c4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221187"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975746"
 ---
 # <a name="monitor-containerized-application-services"></a>コンテナー化されたアプリケーションのサービスを監視します。
 
-アプリケーションが複数のコンテナーとマイクロ サービスに分割に監視し、アプリケーションの動作を分析する方法を実装するが重要です。
+アプリケーションが複数のコンテナーとマイクロ サービスに分割に監視し、アプリケーション全体の動作を分析する方法を実装するが重要です。
 
 ## <a name="microsoft-application-insights"></a>Microsoft Application Insights
 
@@ -25,76 +25,56 @@ Docker に関連して、ライフ サイクル イベントと Application Insi
 
 ![例](./media/image1.png)
 
-図 6-1:Application Insights の Docker ホストとコンテナーの監視
+**図 6-1**。 Application Insights の Docker ホストとコンテナーの監視
 
 実行すると、 [Application Insights の Docker イメージ](https://hub.docker.com/r/microsoft/applicationinsights/)次のメリットの Docker ホストで。
 
--   ライフ サイクル ホストで実行されているすべてのコンテナーに関する製品利用統計情報: 開始、停止、および具合です。
+- ライフ サイクル ホストで実行されているすべてのコンテナーに関する製品利用統計情報: 開始、停止、および具合です。
 
--   すべてのコンテナーのパフォーマンス カウンター:CPU、メモリ、ネットワークの使用状況、および詳細。
+- すべてのコンテナーのパフォーマンス カウンター:CPU、メモリ、ネットワークの使用状況、および詳細。
 
--   インストールされている場合[Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)コンテナーで実行されているアプリでこれらのアプリのすべてのテレメトリがコンテナーとホスト マシンを識別する追加のプロパティが。 そのため、たとえば、1 つ以上のホストで実行されているアプリのインスタンスがあれば、簡単にことができますをホストして、アプリのテレメトリをフィルター処理します。
+- インストールされている場合[Application Insights SDK](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)コンテナーで実行されているアプリでこれらのアプリのすべてのテレメトリがコンテナーとホスト マシンを識別する追加のプロパティが。 そのため、たとえば、1 つ以上のホストで実行されているアプリのインスタンスがあれば、簡単にことができますをホストして、アプリのテレメトリをフィルター処理します。
 
 ### <a name="setting-up-application-insights-to-monitor-docker-applications-and-docker-hosts"></a>アプリケーションの Docker および Docker ホストを監視するための Application Insights の設定
 
-Application Insights リソースを作成するには、次の一覧に記事の指示に従います。 Azure Portal を必要なスクリプトを作成します。
+Application Insights リソースを作成するには、次の一覧に記事の指示に従います。 Azure ポータルを必要なスクリプトを作成します。
 
--   **Application Insights で Docker アプリケーションを監視します。**  [https://docs.microsoft.com/azure/application-insights/app-insights-docker](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
+- **Application Insights で Docker アプリケーションを監視します。** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-docker>
 
--   **Docker Hub や Github にある application Insights の Docker イメージ:**  
-[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) そして <https://github.com/Microsoft/ApplicationInsights-Docker>
+- **Docker Hub や GitHub にある application Insights の Docker イメージ:** \
+  <https://hub.docker.com/r/microsoft/applicationinsights/> および \
+  <https://github.com/Microsoft/ApplicationInsights-Docker>
 
--   **ASP.NET 用の Application Insights を設定します。**  
-[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+- **ASP.NET web アプリおよび ASP.NET Core 用の Application Insights を設定します。** \
+  <https://docs.microsoft.com/azure/application-insights/app-insights-asp-net>
 
--   **Web ページ用の application Insights:**  
-<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
+- **Web ページ用の application Insights:**  
+  <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
-## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
+## <a name="security-backup-and-monitoring-services"></a>セキュリティ、バックアップ、およびサービスの監視
 
-[Operations Management Suite](https://microsoft.com/oms)は log analytics、automation、backup、およびサイトの回復を提供する簡素化された IT 管理ソリューションです。 基づく[クエリ](https://blogs.technet.microsoft.com/msoms/2016/01/21/easy-microsoft-operations-management-suite-search-queries/)Operations Management suite で上げることができます[アラート](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-monitoring-alerts)経由で修復の設定と[Azure Automation](https://docs.microsoft.com/azure/automation/)します。 1 つのウィンドウでガラスのビューを提供する、既存の管理ソリューションともシームレスに統合します。 Operations Management Suite では、オンプレミスの保護やクラウドのインフラストラクチャを管理することができます。
+大量の処理、アプリケーションおよびインフラストラクチャがビジネス上のニーズをサポートするために一流の条件を確認する必要のある詳細情報を多くのサポートのような作業があるし、する方法を作成する必要があります、状況が、マイクロ サービス領域で複雑になったアクションを実行する必要があるときに概要と詳細ビューがあります。
 
-### <a name="operations-management-suitehttpsmicrosoftcomoms-container-solution-for-docker"></a>[Operations Management Suite](https://microsoft.com/oms) Docker のコンテナー ソリューション
+Azure では、管理し、クラウドとオンプレミスの両方のリソースの 4 つの重要な側面の統一されたビューを提供するツールがあります。
 
-Operations Management Suite のコンテナー ソリューションで管理し、場所、コンテナーとコンテナー ホストである、に関する情報を表示することによって Docker ホストとコンテナーを監視するだけでなく、独自の有益なサービスを提供すること、コンテナーを実行しています。失敗した場合、または、Docker デーモンとコンテナーでのログに送信される*stdout*と*stderr*。 また、CPU、メモリ、ネットワーク、コンテナーとホストのストレージなどのパフォーマンス メトリックを表示し、トラブルシューティングやノイズの多い近隣のコンテナーの検出に役立てることもできます。
+- **セキュリティ**します。 [Azure Security Center](https://azure.microsoft.com/services/security-center/)します。
+  - 完全な可視化と仮想マシン、アプリ、ワークロードのセキュリティ制御を取得します。
+  - セキュリティ ポリシーの管理を一元化し、既存のプロセスやツールを統合します。
+  - 高度な分析の真の脅威を検出します。
 
-![](./media/image2.png)
+- **バックアップ**します。 [Azure Backup](https://azure.microsoft.com/services/backup/)します。
+  - コストのかかるビジネス中断を避けるため、コンプライアンス目標を満たすおよびランサムウェアやヒューマン エラーからデータを保護します。
+  - 転送中に暗号化、バックアップ データを保持します。
+  - 承認されていない使用を防ぐための多要素認証に基づいてアクセスを確認します。
 
-図 6-2:Operations Management Suite で示すように Docker コンテナーについての情報
+- **監視**します。 [Azure monitoring](https://azure.microsoft.com/solutions/monitoring/)、 [Log Analytics](https://azure.microsoft.com/services/log-analytics/)、および[Application Insights](https://azure.microsoft.com/services/application-insights/)します。
+  - 正常性と、Azure のワークロード、アプリケーション、およびインフラストラクチャのパフォーマンスには、完全な可視性を取得します。
+  - 任意のソースからデータを収集し、仮想マシン、コンテナー、およびアプリケーションに豊富な分析情報を取得します。
+  - 対話型クエリとフルテキスト検索を使用して必要な情報を検索します。 
+  - 根本原因の分析と機械学習アルゴリズムなどの高度な分析を実行します。
 
-アクティビティの監視に重点を application Insights と Operations Management Suiteただし、Application Insights は、アプリ内で実行されているその SDK に協力してくれた、アプリ自体の監視についてより説明します。 ただし、Operations Management Suite について重点的により、ホストのインフラストラクチャ、さらにデータ ドリブンの非常に柔軟性の検索/クエリ システムを提供しながらログの詳細に分析を提供しています。
-
-Operations Management Suite はクラウド ベース サービスとして実装されている、ためにことができますが稼働してすばやくインフラストラクチャ サービスに最小限の投資で。 新機能では、保存する継続的なメンテナンスに、自動的に配信され、アップグレードのコスト。
-
-Operations Management Suite のコンテナー ソリューションでは、次の操作を行うことができます。
-
--   集中管理し、何百万もの規模での Docker コンテナーからログを関連付ける
-
--   1 つの場所ですべてのコンテナー ホストに関する情報を参照してください。
-
--   どのコンテナーが実行されている、および実行しているどのようなイメージを実行します。
-
--   コンテナー ホスト上の問題を引き起こす可能性のある「迷惑な隣人」コンテナーをすばやく診断します。
-
--   コンテナーの操作の監査証跡を参照してください。
-
--   表示および Docker ホストへのリモート処理せず、一元化されたログを検索してトラブルシューティングを行う
-
--   「うるさい隣人」と、ホスト上の余分なリソースを消費する可能性がありますコンテナーを検索します。
-
--   一元的な CPU、メモリ、ストレージ、およびコンテナーのネットワークの使用状況とパフォーマンス情報を表示します。
-
--   生成テスト Azure Automation での Docker コンテナー
-
-型のようなクエリを実行しているパフォーマンス情報を表示する図 6-3 に示すように、パフォーマンスを = です。
-
-![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
-
-図 6-3:Operations Management Suite で示すように Docker ホストのパフォーマンス メトリック
-
-Operations Management Suite での標準的な機能もとに役立つクエリを保存する際に役立つし、システム内の傾向を検出するクエリを保持します。
-
-**詳細については** でコンテナー ソリューションをインストールして、Docker の構成に関する情報を検索する[Operations Management Suite](https://microsoft.com/oms)に移動して、<https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>します。
+- **オンプレミス リソースに**します。 [真に一貫性のあるハイブリッド クラウド](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/)します。
 
 >[!div class="step-by-step"]
 >[前へ](manage-production-docker-environments.md)

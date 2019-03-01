@@ -1,15 +1,15 @@
 ---
-title: F# のインストールします。
+title: インストールします。F#
 description: お客様の環境に基づいて、F# をインストールする方法について説明します。
 ms.date: 08/28/2018
-ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 873d3021ba884ec81992469e5d0f3b7c18b1e0f4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50193904"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975252"
 ---
-# <a name="install-f"></a>F# のインストールします。 #
+# <a name="install-f"></a>F# をインストールします。\#
 
 複数の方法で F# をインストールと、環境に応じてことができます。
 
@@ -21,7 +21,7 @@ ms.locfileid: "50193904"
 
 次に、クリックして**変更**下部右側にあります。  これは、選択したすべてのものにインストールされます。 クリックして、F# 言語サポートと Visual Studio 2017 を開くことができますし、**起動**します。
 
-## <a name="install-f-with-visual-studio-for-mac"></a>F# で Visual Studio for Mac をインストールします。
+## <a name="install-f-with-visual-studio-for-mac"></a>インストールF#Visual studio for Mac
 
 既定で F# がインストールされている[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)、選択した構成に関係なく。
 

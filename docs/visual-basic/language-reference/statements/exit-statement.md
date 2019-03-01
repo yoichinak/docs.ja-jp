@@ -12,12 +12,12 @@ helpviewer_keywords:
 - program termination
 - execution [Visual Basic], stopping
 ms.assetid: 760bfb32-5c3f-4bdb-a432-9a6001c92db7
-ms.openlocfilehash: 63bcc5d5205681917ba30bdb73bc496307a6322a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08d436686876a0a3d63f15167d35383e32221e7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672514"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967803"
 ---
 # <a name="exit-statement-visual-basic"></a>Exit ステートメント (Visual Basic)
 プロシージャまたはブロックを終了し、プロシージャの呼び出しまたはブロックの定義を次のステートメントに直ちに制御を転送します。  
@@ -67,17 +67,17 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
 ## <a name="example"></a>例  
  次の例では、ループの条件がループを終了時に、`index`変数が 100 より大きい。 `If`ループでは、ステートメントがただし、により、`Exit Do`インデックス変数が 10 より大きい場合は、ループを停止するステートメント。  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>例  
  次の例では、関数名に、戻り値を割り当てて`myFunction`、しを使用して`Exit Function`関数から返される。  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]  
   
 ## <a name="example"></a>例  
  次の例では、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)戻り値を代入し、関数を終了します。  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>関連項目
 - [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)

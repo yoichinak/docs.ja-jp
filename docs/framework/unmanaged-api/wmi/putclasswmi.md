@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 995c697497876969edc1021350b7bfe28e4018bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc2b90ebf73e23aeee6407eb6cb3551b9672d29
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614511"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972808"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 関数
 新しいクラスが作成されるか、既存のクラスが更新されます。  
@@ -49,7 +49,7 @@ HRESULT PutClassWmi (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 場合設定、WMI では、修正済みのフレーバーで、修飾子は保存されません。 </br> このオブジェクトがローカライズされていないことと、すべての修飾子は storedwith こと前提は、セットされていない場合はこのインスタンス。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 場合設定、WMI では、修正済みのフレーバーで、修飾子は保存されません。 <br> このオブジェクトがローカライズされていないことと、すべての修飾子は storedwith こと前提は、セットされていない場合はこのインスタンス。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 存在したり、既に存在する場合は、上書きしない場合は、クラスを作成します。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | クラスを更新します。 クラスは、呼び出しの成功に存在する必要があります。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | クラスを作成します。 クラスが既に存在する場合、呼び出しが失敗します。 |

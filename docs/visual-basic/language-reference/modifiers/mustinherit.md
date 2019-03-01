@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 7a246e2565ec6d96e828654fef74500c4cf896b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124262695f9333ce31c4097662688e0fe30f300d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627669"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969532"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 クラスを基底クラスとしてのみ使用できることと、オブジェクトを直接作成できないことを指定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "54627669"
 ## <a name="example"></a>例  
  次の例は、強制的な継承と強制的なオーバーライドを示しています。 基本クラス`shape`変数を定義します`acrossLine`します。 クラスは、`circle`と`square`から派生`shape`します。 定義を継承`acrossLine`、関数を定義する必要がありますが、`area`計算は図形の種類ごとに異なるためです。  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#2)]  
   
  宣言できます`shape1`と`shape2`型`shape`します。 オブジェクトを作成することはできませんただし、`shape`関数の機能がないため`area`がマークされていると`MustInherit`します。  
   

@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 16228321cc788b381603513213130415eb73a95c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128857"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971833"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が回復力のあるサービスをビルドするには。クラウドでの一時的な障害を受け入れる
 
@@ -35,7 +35,7 @@ ms.locfileid: "53128857"
 
 HTTP リソースとデータベース リソースの両方に、これらの手法を使用できます。 図 4-9 では、アプリケーションはこれらの手法は、サービス レベル (HTTP) とデータ層 (TCP) を作成する必要があるため、3 層アーキテクチャに基づきます。 (その他のサービスまたはマイクロ サービス) のデータベースだけでなく、1 つのアプリ レベルのみを使用してモノリシック アプリケーションをデータベースの接続レベルで一時的な障害を処理する可能性があります十分。 このシナリオでは、特定のデータベース接続の構成だけが必要です。
 
-回復力のある通信を使用している .NET のバージョンに応じて、データベースへのアクセスを実装するときに簡単なできます (たとえば、 [Entity Framework 6 以降](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)を構成するだけで済みますが、データベース接続の場合)。 またはなどの他のライブラリを使用する必要があります、 [Transient Fault Handling Application Block](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx) (以前のバージョンの .NET)、独自のライブラリを実装します。
+回復力のある通信を使用している .NET のバージョンに応じて、データベースへのアクセスを実装するときに簡単なできます (たとえば、 [Entity Framework 6 以降](/ef/ef6/fundamentals/connection-resiliency/retry-logic)します。 データベース接続を構成するだけで済みます)。 またはなどの他のライブラリを使用する必要があります、 [Transient Fault Handling Application Block](https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)) (以前のバージョンの .NET)、独自のライブラリを実装します。
 
 使用する .NET の推奨事項は、HTTP の再試行、サーキット ブレーカーを実装する場合、 [Polly](https://github.com/App-vNext/Polly)ライブラリで、.NET Framework 4.0、.NET Framework 4.5、および .NET Core のサポートを含む .NET Standard 1.1 を対象とします。
 
@@ -49,11 +49,11 @@ HTTP リソースとデータベース リソースの両方に、これらの�
 
 -   **Entity Framework 接続の回復性と再試行ロジック (バージョン 6 以降)**
 
-    [https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx](https://msdn.microsoft.com/library/dn456835(v=vs.113).aspx)
+    [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
 -   **Transient Fault Handling Application Block**
 
--   [https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx](https://msdn.microsoft.com/library/hh680934(v=pandp.50).aspx)
+-   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
 -   **回復力のある HTTP 通信 Polly ライブラリ**
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 3aa1d563b9657d4e80425b8c2d29e069ca2ef06a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d672ac147a4d7b2c21f4fcb7ee6cdf91b8b4924b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601884"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965333"
 ---
 # <a name="-operator-visual-basic"></a>*= 演算子 (Visual Basic)
 式の値で変数またはプロパティの値を乗算し、結果を変数またはプロパティに代入します。  
@@ -44,7 +44,7 @@ variableorproperty *= expression
 ## <a name="example"></a>例  
  次の例では、`*=`演算子を 1 つ`Integer`秒と、その結果、最初の変数を割り当てるのでは、変数。  
   
- [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
 - [* 演算子](../../../visual-basic/language-reference/operators/multiplication-operator.md)

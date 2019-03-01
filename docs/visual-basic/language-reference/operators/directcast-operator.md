@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 4b8ffbe018872c3ae467fb9bf15e3b03595fd640
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659775"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979828"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 演算子 (Visual Basic)
 継承または実装に基づいて、型変換操作をについて説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "54659775"
 ## <a name="example"></a>例  
  次の例では、2 つの用途の`DirectCast`、いずれかのいずれかの実行時に失敗するが成功するとします。  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#1)]  
   
  前の例では、実行時の入力の`q`は`Double`します。 `CType` 成功`Double`に変換できる`Integer`します。 ただし、最初の`DirectCast`実行時の型であるために、実行時に失敗`Double`継承関係を持たない`Integer`変換が存在する場合でも、します。 2 番目の`DirectCast`型からに変換されるためが成功すると<xref:System.Windows.Forms.Form>を入力する<xref:System.Windows.Forms.Control>、元の<xref:System.Windows.Forms.Form>継承します。  
   

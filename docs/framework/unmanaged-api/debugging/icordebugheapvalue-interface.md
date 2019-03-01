@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue Interface1
+title: ICorDebugHeapValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5263474b7b5001d561652291c23220da0a942bd1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622859"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980569"
 ---
-# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue Interface1
+# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue インターフェイス
+
 共通言語ランタイム (CLR) のガベージ コレクターによって収集されたオブジェクトを表す"ICorDebugValue"のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  

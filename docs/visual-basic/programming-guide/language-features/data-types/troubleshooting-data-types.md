@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e7190f3ba63b6af9f7f402fbc23b4268c329856
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728071"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974745"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "54728071"
   
  次の例では、2 つの正しくないと、適切な比較`Double`値。  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#10)]  
   
  前の例では、<xref:System.Double.ToString%2A>のメソッド、<xref:System.Double>より精度を指定できるように構造体、`CStr`キーワードを使用します。 既定値は 15 桁の数字が、"G17"書式が 17 桁に拡張します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54728071"
   
  次の例では、浮動小数点のオペランドの誤差の可能性を示します。  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#11)]  
   
  前の例では、<xref:System.Double.ToString%2A>のメソッド、<xref:System.Double>より精度を指定できるように構造体、`CStr`キーワードを使用します。 既定値は 15 桁の数字が、"G17"書式が 17 桁に拡張します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54728071"
   
  次の例は、リテラルを成功、失敗の割り当て、`Char`変数。  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#12)]  
   
  常にリスクが縮小の変換を使用して実行時にそれらが失敗する可能性です。 変換など、`String`に`Char`が失敗する場合、`String`値には、1 つ以上の文字が含まれています。 そのため、それを使用するプログラミングがより、`C`文字を入力します。  
   

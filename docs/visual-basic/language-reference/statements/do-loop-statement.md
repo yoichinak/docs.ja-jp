@@ -20,12 +20,12 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: 8c965dc89794654127e4b872c6aebf55c8902468
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7c7987508260a0181904feacf3782f66066309f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525150"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968206"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop ステートメント (Visual Basic)
 中にステートメント ブロックを繰り返します、`Boolean`条件が`True`まで、このような条件または`True`します。  
@@ -55,8 +55,10 @@ Loop { While | Until } condition
 |用語|定義|  
 |---|---|  
 |`Do`|必須。 定義を開始、`Do`ループします。|  
-|`While`|`Until` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`False`します。|  
-|`Until`|`While` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`True`します。|  
+|`While`|
+  `Until` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`False`します。|  
+|`Until`|
+  `While` を使用しない場合に、必ず指定します。 までループを繰り返す`condition`は`True`します。|  
 |`condition`|任意。 `Boolean` 式。 場合`condition`は`Nothing`、Visual Basic として扱います`False`します。|  
 |`statements`|任意。 1 つまたは複数のステートメント、まで、または while、繰り返される`condition`は`True`します。|  
 |`Continue Do`|任意。 次のイテレーションに制御を転送、`Do`ループします。|  
@@ -89,22 +91,22 @@ Loop { While | Until } condition
 ## <a name="example"></a>例  
  次の例では、ループ内のステートメントの続行までを実行する、`index`変数が 10 より大きい。 `Until`句は、ループの最後に、します。  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>例  
  次の例では、`While`句の代わりに、`Until`句と`condition`は最後の代わりに、ループの先頭にテストします。  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>例  
  次の例では、`condition`ループを停止するときに、`index`変数が 100 より大きい。 `If`ループでは、ステートメントがただし、により、`Exit Do`インデックス変数が 10 より大きい場合は、ループを停止するステートメント。  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>例  
  次の例では、テキスト ファイルのすべての行を読み取ります。 <xref:System.IO.File.OpenText%2A>メソッドは、ファイルを開くし、取得、<xref:System.IO.StreamReader>文字を読み取る。 `Do...Loop`条件、<xref:System.IO.StreamReader.Peek%2A>のメソッド、`StreamReader`追加の文字があるかどうかを決定します。  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   
 ## <a name="see-also"></a>関連項目
 - [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

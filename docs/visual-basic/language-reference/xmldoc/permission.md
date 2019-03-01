@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: a8914e6d8fbce3e99ff92d9e4968e85a0f0ad7d5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c684a674e8d6e3bf218e0131e5fac2821855456
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263642"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966368"
 ---
 # <a name="permission-visual-basic"></a>\<アクセス許可 > (Visual Basic)
 メンバーの必要なアクセス許可を指定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "55263642"
 ## <a name="example"></a>例  
  この例では、`<permission>`を記述するタグ、<xref:System.Security.Permissions.FileIOPermission>に必要な`ReadFile`メソッド。  
   
- [!code-vb[VbVbcnXmlDocComments#7](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/permission_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>関連項目
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

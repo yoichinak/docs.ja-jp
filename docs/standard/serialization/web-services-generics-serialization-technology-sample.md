@@ -2,12 +2,12 @@
 title: Web サービス ジェネリック シリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 27e0a7621bc77b62e36a0bbbdfa25f0ec3778798
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59224df97d54ac089293068bbb5dfa3fe26a8d8c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636587"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971872"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web サービス ジェネリック シリアル化の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -32,7 +32,8 @@ ms.locfileid: "54636587"
 > [!NOTE]
 >  サンプルをビルドするには、次の手順が必要です。  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、\CS サブディレクトリに移動します。  
+1.  
+  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、\CS サブディレクトリに移動します。  
   
 2.  GenericsService サブディレクトリのアイコンを右クリックし、**[共有とセキュリティ]** をクリックします。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "54636587"
 2.  型`http://localhost/[virtual directory]/Service.asmx`ここで、`[virtual directory]`サンプルのビルド時に作成した仮想ディレクトリを表します。  
   
 ## <a name="remarks"></a>Remarks  
- サンプルでは、Web サービスの定義へのリンクを含む既定の ASP.NET ページが表示されます。 Web サービスのソース コードの変更に加えて、表示のカスタマイズも可能です。 詳細については、「[XML Web サービス クライアントの作成](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)」を参照してください。  
+ サンプルでは、Web サービスの定義へのリンクを含む既定の ASP.NET ページが表示されます。 Web サービスのソース コードの変更に加えて、表示のカスタマイズも可能です。 詳細については、「[XML Web サービス クライアントの作成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w3h45ebk(v=vs.100))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -69,4 +70,4 @@ ms.locfileid: "54636587"
 - <xref:System.Web.Services>
 - <xref:System.Xml.Serialization>
 - [シリアル化](../../../docs/standard/serialization/index.md)
-- [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+- [ASP.NET と XML Web サービス クライアントを使用して作成した XML Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

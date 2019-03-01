@@ -1,16 +1,16 @@
 ---
-title: プログラミングの概念 (Visual Basic)
-ms.date: 07/20/2015
+title: Visual Basic のプログラミング概念
+ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ---
 # <a name="programming-concepts-visual-basic"></a>プログラミングの概念 (Visual Basic)
+
 このセクションでは、Visual Basic 言語でのプログラミングの概念について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|Title|説明|  
+|タイトル|説明|  
 |-----------|-----------------|  
-|[.Net アセンブリ](../../../standard/assembly/index.md)|アセンブリを作成および使用する方法について説明します。|  
 |[Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await](../../../visual-basic/language-reference/operators/await-operator.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|  
 |[属性の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|属性を使用して、型、フィールド、メソッド、プロパティなどのプログラミング要素に関する追加情報を指定する方法について説明します。|  
 |[呼び出し元情報 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|メソッドの呼び出し元に関する情報を取得する方法について説明します。 この情報には、ソース コードのファイル パスと行番号および呼び出し元のメンバー名が含まれます。|  
@@ -27,4 +27,5 @@ ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
   
 |||  
 |---|---|  
+|[.NET のアセンブリ](../../../standard/assembly/index.md)|アセンブリを作成および使用する方法について説明します。|  
 |[パフォーマンスに関するヒント](../../../framework/performance/performance-tips.md) | アプリケーションのパフォーマンスの向上に役立つ基本的な規則について説明します。|

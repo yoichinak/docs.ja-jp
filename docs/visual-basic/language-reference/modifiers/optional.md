@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 7db5f8afdfe61709aba9569bcee8c0d3aa6ee44f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55252e774e744b7318f480b264aa3f7fae9abfc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527043"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969644"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 プロシージャが呼び出されたときにプロシージャの引数を省略できますを指定します。  
@@ -64,7 +64,7 @@ End Function
 ## <a name="example"></a>例  
  次の例では、位置によって渡される引数と名前によって渡される引数は、プロシージャを呼び出す方法を示します。 プロシージャが、2 つの省略可能なパラメーター。  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
   
 ## <a name="see-also"></a>関連項目
 - [パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)

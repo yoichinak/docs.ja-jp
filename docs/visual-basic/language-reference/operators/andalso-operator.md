@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: c9f4d9c880e189eb0ad4834736bdc664eb5b4376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ba8be5051d0723fd2654b9733933cd434ac3ac5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703563"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965190"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 演算子 (Visual Basic)
 ショート サーキットの 2 つの式の論理積を実行します。  
@@ -55,14 +55,14 @@ result = expression1 AndAlso expression2
 ## <a name="example"></a>例  
  次の例では、`AndAlso`演算子を 2 つの式に対して論理積を実行します。 結果は、`Boolean`全体が式を連結するかどうかを表す値は true。 最初の式が場合`False`、2 つ目は評価されません。  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
   
  前の例の結果を生成する`True`、 `False`、および`False`、それぞれします。 計算に`secondCheck`、1 つは、既にあるために、2 番目の式は評価されません`False`します。 計算に 2 番目の式を評価するただし、`thirdCheck`します。  
   
 ## <a name="example"></a>例  
  次の例は、`Function`プロシージャの配列の要素間で指定された値を検索します。 配列が空の場合、または配列の長さを超過した場合、`While`ステートメントでは、検索する値に対して配列の要素はテストしません。  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  
   
 ## <a name="see-also"></a>関連項目
 - [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)

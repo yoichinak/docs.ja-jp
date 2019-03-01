@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 356230a0b5a2c575ee554ce7f2cdb4a2f741ecac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543371"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964774"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) から値を取得します。
 プロパティの値を取得するには、式の中で、プロパティ名を含めます。  
@@ -30,7 +30,7 @@ ms.locfileid: "54543371"
   
      次の例は、Visual Basic の値を読み取ります`Now`プロパティ、暗黙的に呼び出して、`Get`プロシージャ。  
   
-     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDateProperties/VB/Module1.vb#4)]  
   
 2.  プロパティが引数を受け取る場合は、次の引数リストを囲むためにかっこによるプロパティ名。 引数がない場合、かっこを省略することができます。  
   

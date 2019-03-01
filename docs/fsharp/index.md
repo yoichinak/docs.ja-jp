@@ -1,24 +1,18 @@
 ---
-title: F# のガイド
-description: このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。
+title: 'F# のガイド'
+description: 'このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50188366"
 ---
 # <a name="f-guide"></a>F# のガイド
 
 F# のガイドでは、F# 言語を習得する多くのリソースを提供します。
 
-## <a name="learning-f"></a>F# を学ぶ #
+## <a name="learning-f"></a>Learning F\#
 
 [F# は](what-is-fsharp.md)F# 言語とがどのようなプログラミングが含まれるショート コード サンプルを使ってなどがについて説明します。 これは、F# に慣れていない場合に推奨されます。
 
-[F# のツアー](tour.md)多くのコード サンプルの主要な言語機能の概要を説明します。 これは、F# のコア機能を実際に関心がある場合に推奨されます。
+[ツアー F# ](tour.md)多くのコード サンプルの主要な言語機能の概要を説明します。 これは、F# のコア機能を実際に関心がある場合に推奨されます。
 
 [Visual Studio での F# の概要](get-started/get-started-visual-studio.md)Windows にいるし、Visual Studio IDE (統合開発環境) の完全なエクスペリエンスをするかどうか。
 
@@ -32,7 +26,7 @@ F# のガイドでは、F# 言語を習得する多くのリソースを提供�
 
 [Azure Notebooks の F#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)は無料でホストされている Jupyter Notebook での F# 学習するためのチュートリアルです。
 
-## <a name="references"></a>参照
+## <a name="references"></a>関連項目
 
 [F# 言語リファレンス](language-reference/index.md)F# 言語のすべての機能の公式、包括的なリファレンスです。 各記事では、構文について説明し、コード サンプルを示します。 目次の内容でフィルター バーを使用すると、特定の記事を検索します。
 
@@ -42,15 +36,15 @@ F# のガイドでは、F# 言語を習得する多くのリソースを提供�
 
 [『 F# for 趣味と実益](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)は F# 学習するための包括的で非常に詳細な関連書籍です。 その内容と作成者は、F# コミュニティ大好きです。 オブジェクト指向プログラミングの経験で主に開発者を対象ユーザーとします。
 
-[F# プログラミング Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)は F# の学習についての wikibook します。 F# コミュニティの製品もです。 対象者は、新しい F# では、少しオブジェクト指向プログラミングの経験をしている人たちです。
+[F# プログラミング Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)は F# の学習についての wikibook します。 製品ではまた、F#コミュニティ。 対象者は、新しい F# では、少しオブジェクト指向プログラミングの経験をしている人たちです。
 
 ## <a name="learn-f-through-videos"></a>ビデオを F# について学ぶ
 
 [YouTube の F# チュートリアル](https://www.youtube.com/watch?v=c7eNDJN758U)は F# Visual Studio を使用して、1.5 時間のコースで多数の優れた例を示す導入として優れています。 対象者は、初心者に F# は Visual Studio 開発者です。
 
-[F# を使用したプログラミングの概要](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)はメインのエディターとして Visual Studio Code を使用する優れたビデオ シリーズです。 ビデオ シリーズでは、ゼロから開始し、テキスト ベースの RPG ビデオ ゲームの構築を終了します。 Visual Studio Code (や軽量 IDE) を選択し、F# を初めて使用する開発者を対象ユーザーとします。
+[使用したプログラミングの概要F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)はメインのエディターとして Visual Studio Code を使用する優れたビデオ シリーズです。 ビデオ シリーズでは、ゼロから開始し、テキスト ベースの RPG ビデオ ゲームの構築を終了します。 Visual Studio Code (や軽量 IDE) を選択し、F# を初めて使用する開発者を対象ユーザーとします。
 
-[F# の開発者向けの Visual Studio 2017 の新](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)ビデオ コースを F# では、Visual Studio 2017 での新しい機能の一部を示しています。 対象者は、初心者に F# は Visual Studio 開発者です。
+[Visual Studio 2017 for で新F#開発者向け](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)の新しい機能の一部を表示するためのビデオ コースは、 F# Visual Studio 2017 で。 対象者は、初心者に F# は Visual Studio 開発者です。
 
 ## <a name="other-useful-resources"></a>その他の便利なリソース
 

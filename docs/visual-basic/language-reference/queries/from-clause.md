@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678786"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978164"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
 1 つまたは複数の範囲変数とクエリのコレクションを指定します。  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  複数を指定する`From`参加する複数のコレクションを識別するために、クエリ内の句。 複数のコレクションを指定すると、これらは別々 に反復処理、または関連している場合に参加することができます。 使用してコレクションに暗黙的に参加することができます、`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。 代わりに、指定できます複数の範囲変数およびコレクション 1 つの`From`句は、各関連の範囲変数と、他のユーザーから、コンマで区切られたコレクションを使用します。 次のコード例は、両方の構文のオプションを示しています、`From`句。  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  `From`句のスコープに似ていますが、クエリのスコープを定義する、`For`ループします。 そのため、各`element`のクエリ スコープの範囲変数は、一意の名前をいる必要があります。 複数を指定するため、 `From` 、クエリは、後続の句`From`句で範囲変数を参照できます、`From`句、または、以前の範囲変数に参照できます`From`句。 たとえば、次の例では、表示、入れ子になった`From`2 つ目の句では、コレクションは、最初の句の範囲変数のプロパティをに基づいて句。  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  各`From`句の後に、クエリを絞り込むの追加のクエリ句の任意の組み合わせをできます。 次の方法でクエリを絞り込むことができます。  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>例  
  次のクエリ式は、`From`範囲変数を宣言する句`cust`各`Customer`オブジェクト、`customers`コレクション。 `Where`句では、範囲変数を使用して、指定されたリージョンからお客様に、出力を制限します。 `For Each`ループは、クエリ結果の各顧客の会社名を表示します。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)

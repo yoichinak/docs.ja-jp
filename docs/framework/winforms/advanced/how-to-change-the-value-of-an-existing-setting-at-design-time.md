@@ -5,17 +5,17 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: 0ec90e326a3ac615ee140ebb61081bdd5c5c0a8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f40b6b6e38785b1e8dcc9061f8cf0b459f4ed8b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541106"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965281"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>方法: デザイン時に既存の設定の値を変更します。
 Visual Studio を使用して、プロジェクト内の既存の設定値を編集することができます。  
   
-### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>デザイン時に既存の設定の値を変更するにはC#  
+### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>C でのデザイン時に既存の設定の値を変更するには\#
   
 1.  **ソリューション エクスプ ローラー**、展開、**プロパティ**プロジェクトのノード。  
   

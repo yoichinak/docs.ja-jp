@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe593e9c132f4fc151983d6c4dc04bd13627120
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690892"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978411"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  
@@ -69,8 +69,9 @@ ms.locfileid: "54690892"
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性は最もよく使用されるコールバック属性です。 ファミリの他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
-    <xref:System.Runtime.Serialization.OnSerializingAttribute> および <xref:System.Runtime.Serialization.OnSerializedAttribute> これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。  
+     
+      <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性は最もよく使用されるコールバック属性です。 ファミリの他の属性には、<xref:System.Runtime.Serialization.OnDeserializingAttribute>、    
+<xref:System.Runtime.Serialization.OnSerializingAttribute> および <xref:System.Runtime.Serialization.OnSerializedAttribute> これらを使用して、逆シリアル化前、シリアル化前、およびシリアル化後に実行されるコールバックをマークすることができます。  
   
 4.  複雑なオブジェクト グラフを逆シリアル化する場合は、使用する具象型を示す <xref:System.Runtime.Serialization.KnownTypeAttribute> を使用することを検討してください。  
   
@@ -87,7 +88,8 @@ ms.locfileid: "54690892"
   
 6.  異なるバージョンの型の間でラウンドトリッピングができるように、<xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装することを検討してください。  
   
-     インターフェイスを使用すると、ラウンドトリッピングの間にデータが失われないようにシリアライザーで確認することができます。 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> プロパティにより、現在のバージョンでは未知の、将来使用される型の任意のデータが格納されます。 現在のバージョンを後で将来のバージョンにシリアル化または逆シリアル化するときに、**ExtensionData** プロパティ値を通じて、シリアル化されたストリーム内で追加データを使用できます。  
+     インターフェイスを使用すると、ラウンドトリッピングの間にデータが失われないようにシリアライザーで確認することができます。 
+  <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> プロパティにより、現在のバージョンでは未知の、将来使用される型の任意のデータが格納されます。 現在のバージョンを後で将来のバージョンにシリアル化または逆シリアル化するときに、**ExtensionData** プロパティ値を通じて、シリアル化されたストリーム内で追加データを使用できます。  
   
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
@@ -144,6 +146,6 @@ ms.locfileid: "54690892"
 - [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
 - [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [バイナリ シリアル化](binary-serialization.md)
-- [リモート オブジェクト](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
 - [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)

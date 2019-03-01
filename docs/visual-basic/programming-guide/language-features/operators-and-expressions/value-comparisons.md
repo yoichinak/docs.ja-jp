@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 23733741a79506730187d5735a20f3848e43da1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724815"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965908"
 ---
 # <a name="value-comparisons-visual-basic"></a>値の比較 (Visual Basic)
 比較演算子は、数値変数の値を比較する式を作成できます。 これらの式を返す、`Boolean`比較が true かどうかに基づいて、値または false。 このような式の例は次のとおりです。  
@@ -34,15 +34,15 @@ ms.locfileid: "54724815"
   
  値を比較する式で最もよく使用される`If...Then`構造は、次の例に示すようにします。  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#84)]  
   
  `=`符号は、比較演算子と代入演算子。 比較演算子として使用する場合は、次の例に示すように、左側の値が、右側の値と等しいかどうかを評価します。  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#85)]  
   
  任意の場所、比較式を使用することもできます。、`Boolean`の値が必要なようにこのような、 `If`、 `While`、 `Loop`、または`ElseIf`ステートメント、またはへの割り当てに値を渡しているか、`Boolean`変数。 次の例では、比較式によって返される値が割り当てられている、`Boolean`変数。  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>関連項目
 - [ブール式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)

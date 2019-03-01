@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519009"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979607"
 ---
 # <a name="select-clause-visual-basic"></a>Select 句 (Visual Basic)
 クエリの結果を定義します。  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  `Select`句は、現在のスコープ内の変数を参照できます。 識別される範囲変数が含まれます、`From`句 (または`From`句)。 エイリアスによって作成された新しい変数も含まれています、 `Aggregate`、 `Let`、 `Group By`、または`Group Join`句、または以前から変数`Select`クエリ式の句。 `Select`句は、静的な値を含めることもできます。 次のコード例は、クエリ式を示しますなど、`Select`句は、4 つのメンバーを持つ新しい匿名型として、クエリの結果を定義します: `ProductName`、 `Price`、 `Discount`、および`DiscountedPrice`します。 `ProductName`と`Price`メンバー値で定義されている製品の範囲変数から取得されます、`From`句。 `DiscountedPrice`でメンバーの値が計算されます、`Let`句。 `Discount`メンバーが静的な値。  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  `Select`句には、以降のクエリ句の範囲変数の新しいセットが導入されて、前の範囲変数は、不要になったスコープとします。 最後の`Select`句はクエリ式では、クエリの戻り値を決定します。 たとえば、次のクエリは、名前と注文合計が 500 を超えるすべての顧客注文 ID、会社返します。 最初の`Select`句の範囲変数を識別する、`Where`句と、2 つ目`Select`句。 2 番目の`Select`句は、新しい匿名型として、クエリによって返される値を識別します。  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  場合、`Select`句を返す 1 つの項目を識別する、クエリ式は、その 1 つの項目の種類のコレクションを返します。 場合、`Select`句を返す複数の項目を識別する、クエリ式は、選択したアイテムに基づいて、新しい匿名型のコレクションを返します。 たとえば、次の 2 つのクエリがに基づいて 2 つの異なる型のコレクションを返す、`Select`句。 最初のクエリでは、会社名の文字列としてのコレクションを返します。 2 番目のクエリのコレクションを返します`Customer`会社名とアドレス情報を含むオブジェクト。  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>例  
  次のクエリ式は、`From`範囲変数を宣言する句`cust`の`customers`コレクション。 `Select`句は、顧客名と ID 値を選択し、設定します、`CompanyName`と`CustomerID`新しい範囲変数の列。 `For Each`ステートメント返された各オブジェクトに対してループ処理し、表示、`CompanyName`と`CustomerID`各レコードの列。  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

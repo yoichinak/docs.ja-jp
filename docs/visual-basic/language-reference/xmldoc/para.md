@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: de0387298f6ff505b286db35047065ef88541a62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 96ef62d53fd1cc806c0dc72d2d0781b1c6297dc6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280450"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970871"
 ---
 # <a name="para-visual-basic"></a>\<para > (Visual Basic)
 コンテンツが文章としてフォーマットされているを指定します。  
@@ -33,7 +33,7 @@ ms.locfileid: "55280450"
 ## <a name="example"></a>例  
  この例では、`<para>`の「解説」セクションに分割するタグ、`UpdateRecord`メソッドが 2 つの段落にします。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

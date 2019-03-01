@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: d77c7d3f2e70edcc1028c207150944c5394afbe0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6bb924a3c41e1c586f66c9473a94d1971ee262f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685374"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973770"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
 宣言を`Set`プロパティ プロシージャのプロパティに値を代入するために使用します。  
@@ -30,7 +30,7 @@ End Set
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+ 任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
  `accessmodifier`  
  1 つだけでは省略可能、`Get`と`Set`このプロパティ内のステートメント。 次のいずれかの値を指定します。  
@@ -43,7 +43,7 @@ End Set
   
 -   `Protected Friend`  
   
- 「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `value`  
  必須。 プロパティの新しい値を含むパラメーターです。  
@@ -85,7 +85,7 @@ End Set
 ## <a name="example"></a>例  
  次の例では、`Set`プロパティの値を設定するステートメント。  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>関連項目
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)

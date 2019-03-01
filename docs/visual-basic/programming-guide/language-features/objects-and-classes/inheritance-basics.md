@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551788"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970299"
 ---
 # <a name="inheritance-basics-visual-basic"></a>継承の基本 (Visual Basic)
 `Inherits`ステートメントを使用して、という新しいクラスを宣言、*クラスを派生*と呼ばれる、既存のクラスに基づいて、*基本クラス*します。 派生クラスでは、継承、およびプロパティ、メソッド、イベント、フィールド、および基底クラスで定義された定数は、拡張できます。 次のセクションでは、いくつかの継承のルールについて説明し、方法クラスを変更する際、修飾子を継承または継承されます。  
@@ -62,14 +62,14 @@ ms.locfileid: "54551788"
   
  次の例は、基底クラスを定義`Payroll,`と派生クラスでは、 `BonusPayroll`、継承されたメソッドをオーバーライドする`PayEmployee`します。 プロシージャ、`RunPayroll`を作成し、渡します、`Payroll`オブジェクトと`BonusPayroll`関数にオブジェクト`Pay`、実行する、`PayEmployee`両方のオブジェクトのメソッド。  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>MyBase キーワード  
  `MyBase`キーワードはクラスの現在のインスタンスの基底クラスを参照するオブジェクト変数のように動作します。 `MyBase` オーバーライドまたは派生クラスでシャドウされている基本クラスのメンバーへのアクセスによく使用されます。 具体的には、`MyBase.New`派生クラスのコンス トラクターから基本クラスのコンス トラクターを明示的に呼び出しに使用されます。  
   
  たとえば、基本クラスから継承されたメソッドをオーバーライドする派生クラスを設計するとします。 オーバーライドされたメソッドは、基本クラスのメソッドを呼び出すし、次のコード フラグメントで示すように、戻り値を変更します。  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  次の一覧の使用に関する制限事項を示します`MyBase`:  
   

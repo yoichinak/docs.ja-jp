@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], loading
 - LINQ to XML [Visual Basic], loading XML from files
 ms.assetid: 2b02dcec-4cca-4575-b4ad-89ceb87b984c
-ms.openlocfilehash: b660900c1ac29e40eeed36b1e07326dfbcf69ec8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36a7f23eed7f47e8c33958f96e8e3694fb958d11
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492742"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977696"
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>方法: ファイル、文字列、または Stream (Visual Basic) から XML を読み込む
 作成することができます[XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)しをいくつかのメソッドを使用して、ファイル、文字列またはストリームなどの外部ソースからコンテンツを設定します。 次の例では、これらのメソッドが表示されます。  
@@ -23,7 +23,7 @@ ms.locfileid: "54492742"
   
      次のコード例の使用を示しています、<xref:System.Xml.Linq.XDocument.Load%28System.String%29>メソッドを<xref:System.Xml.Linq.XDocument>テキスト ファイルから XML を持つオブジェクト。  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
+     [!code-vb[VbXMLSamples#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#43)]  
   
 ### <a name="to-load-xml-from-a-string"></a>文字列から XML を読み込めません  
   
@@ -31,7 +31,7 @@ ms.locfileid: "54492742"
   
      次のコード例の使用を示しています、<xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=nameWithType>メソッドを<xref:System.Xml.Linq.XDocument>xml 文字列からのオブジェクト。  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
+     [!code-vb[VbXMLSamples#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#47)]  
   
 ### <a name="to-load-xml-from-a-stream"></a>ストリームから XML を読み込めません  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54492742"
   
  次のコード例の使用を示しています、<xref:System.Xml.Linq.XNode.ReadFrom%2A>メソッドを<xref:System.Xml.Linq.XDocument>XML ストリームから XML を持つオブジェクト。  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
+ [!code-vb[VbXMLSamples#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples15.vb#46)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>

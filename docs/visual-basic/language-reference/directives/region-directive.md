@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: db8063cf06ad0735bb4d9290c60548f7ff9af217
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0abbdb9cb96ad9977a9af542f90eaad8a7e160e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611944"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969714"
 ---
 # <a name="region-directive"></a>#Region ディレクティブ
 Visual Basic ファイルのコードのセクションを折りたたんで非表示にします。  
@@ -32,15 +32,17 @@ Visual Basic ファイルのコードのセクションを折りたたんで非�
 |用語|定義|  
 |---|---|  
 |`identifier_string`|必須。 領域が折りたたまれたときにその領域のタイトルとして機能する文字列です。 既定では、領域は折りたたまれています。|  
-|`#End Region`|`#Region` ブロックを終了します。|  
+|`#End Region`|
+  `#Region` ブロックを終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- Visual Studio コード エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 に配置するまたは*入れ子*、類似した領域をグループ化するには、他のリージョン内のリージョン。  
+ Visual Studio Code エディターのアウトライン機能を使うときに展開または折りたたみの対象となるコード ブロックを指定するには、`#Region` ディレクティブを使用します。 に配置するまたは*入れ子*、類似した領域をグループ化するには、他のリージョン内のリージョン。  
   
 ## <a name="example"></a>例  
- `#Region` ディレクティブの使用例を次に示します。  
+ 
+  `#Region` ディレクティブの使用例を次に示します。  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
 ## <a name="see-also"></a>関連項目
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

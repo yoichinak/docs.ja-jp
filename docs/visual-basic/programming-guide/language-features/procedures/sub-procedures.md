@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638120"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977579"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub プロシージャ (Visual Basic)
 A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた、`Sub`と`End Sub`ステートメント。 `Sub`呼び出しコードに値を返すことはできませんが、プロシージャは、タスクを実行し、呼び出し元のコードにコントロールを返します。  
@@ -66,11 +66,11 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
 ### <a name="illustration-of-declaration-and-call"></a>宣言と呼び出しの図  
  次`Sub`の手順では、コンピューターの演算子、アプリケーションを実行する作業はどれもタイムスタンプを表示します。 アプリケーションのすべてのタスクの開始時に、このコードではなく、呼び出しだけ`tellOperator`さまざまな場所からします。 各呼び出しには文字列で、`task`開始されているタスクを識別する引数。  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  次の例では、一般的な呼び出しを`tellOperator`します。  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
 - [プロシージャ](./index.md)

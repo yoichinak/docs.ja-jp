@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: d066b282604a53e2cf973ce0425af729fba6a118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ca92324dec1d4fa8885a610a6e246640f4a5752
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585618"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973029"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
 このトピックで説明を簡単に紹介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]Visual Basic、およびいくつかのクエリを実行する操作の一般的な種類の式。 詳細については、次のトピックを参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "54585618"
 ## <a name="specifying-the-data-source-from"></a>(From) データ ソースを指定します。  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]のクエリでは、まず、クエリを実行するデータ ソースを指定します。 そのため、`From`クエリ句は常に最初は。 クエリ演算子は、選択し、図形のソースの種類に基づく結果。  
   
- [!code-vb[VbLINQBasicOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_1.vb)]  
+ [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
  `From`句は、データ ソースを指定`customers`、および*範囲変数*、`cust`します。 範囲変数は、クエリ式では、実際の反復は発生しませんが、ループの反復変数のようなは。 クエリが実行されると、多くの場合を使用して、`For Each`ループ、連続する各要素への参照として範囲変数`customers`します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 明示的な型指定なしで記述されたクエリの例については、次を参照してください。[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54585618"
 ## <a name="filtering-data-where"></a>データのフィルター処理 (場所)  
  おそらく、最も一般的なクエリ操作では、ブール式の形式でフィルターを適用するは。 クエリは、式が true の要素のみを返します。 A`Where`句を使用して、フィルター処理を実行します。 フィルターは、結果のシーケンスに含めるデータ ソース内のどの要素を指定します。 次の例では、住所がロンドンを持つお客様のみが含まれます。  
   
- [!code-vb[VbLINQBasicOps#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_2.vb)]  
+ [!code-vb[VbLINQBasicOps#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#2)]  
   
  などの論理演算子を使用することができます`And`と`Or`のフィルター式を結合する、`Where`句。 たとえば、ロンドンし、名前を持つ、デボン顧客のみを返すには、次のコードを使用します。  
   
@@ -62,7 +62,7 @@ Where cust.City = "London" Or cust.City = "Paris"
 ## <a name="ordering-data-order-by"></a>データ (Order By) の並べ替え  
  多くの場合は、特定の順序に返されるデータを並べ替えると便利です。 `Order By`句には、指定されたフィールドで並べ替えるに返されたシーケンスで要素が発生します。 たとえば、次のクエリがに基づいて結果を並べ替えます、`Name`プロパティ。 `Name`文字列では、a ~ Z、返されるデータは、アルファベット順に並べ替えられます。  
   
- [!code-vb[VbLINQBasicOps#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_3.vb)]  
+ [!code-vb[VbLINQBasicOps#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#3)]  
   
  結果を逆の順序 (Z から A) で並び替えるには、`Order By...Descending` 句を使用します。 既定値は`Ascending`がいずれも`Ascending`も`Descending`を指定します。  
   
@@ -73,11 +73,11 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  完全なから成るコレクションを取得する`Customer`オブジェクト、範囲変数自体を選択します。  
   
- [!code-vb[VbLINQBasicOps#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_4.vb)]  
+ [!code-vb[VbLINQBasicOps#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#4)]  
   
  場合、`Customer`インスタンスは、ラージ オブジェクトを持つ多くのフィールドと名前を取得することだけですを選択できます`cust.Name`次の例のようにします。 ローカル型推論のコレクションから結果の型が変更される`Customer`オブジェクトを文字列のコレクション。  
   
- [!code-vb[VbLINQBasicOps#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_5.vb)]  
+ [!code-vb[VbLINQBasicOps#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#5)]  
   
  データ ソースから複数のフィールドを選択するには、2 つの選択肢があります。  
   
@@ -91,30 +91,30 @@ Where cust.City = "London" Or cust.City = "Paris"
   
 -   結果に含まれるを作成し、型のインスタンスを初期化する特定のフィールドを含む名前付きの型を定義、`Select`句。 これらは、返される、コレクションの外部の個別の結果を使用する必要がある場合にのみ、またはメソッドの呼び出しでパラメーターとして渡すことがある場合は、このオプションを使用します。 型`londonCusts5`次の例では、IEnumerable (Of NamePhone)。  
   
-     [!code-vb[VbLINQBasicOps#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_7.vb)]  
+     [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   
-     [!code-vb[VbLINQBasicOps#8](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_8.vb)]  
+     [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
  使用する方法についての詳細、 `Select` Visual basic での句を参照してください[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)します。  
   
 ## <a name="joining-data-join-and-group-join"></a>結合のデータ (結合やグループ結合)  
  複数のデータ ソースを組み合わせることができます、`From`いくつかの方法で句。 たとえば、次のコードでは、2 つのデータ ソースを使用して、暗黙的に結果にこれらの両方からのプロパティを結合します。 クエリでは、母音で始まる最後名前受講者を選択します。  
   
- [!code-vb[VbLINQBasicOps#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_9.vb)]  
+ [!code-vb[VbLINQBasicOps#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#9)]  
   
 > [!NOTE]
 >  作成した受講者の一覧で、このコードを実行することができます[方法。項目の一覧を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)です。  
   
  `Join`キーワードは、 `INNER JOIN` sql です。 これは、2 つのコレクション内の要素間の一致するキー値に基づいて 2 つのコレクションを結合します。 クエリでは、キーの値が一致するコレクションの要素のすべてまたは一部を返します。 たとえば、次のコードでは、前の暗黙の結合のアクションが重複しています。  
   
- [!code-vb[VbLINQBasicOps#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_10.vb)]  
+ [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
  `Group Join` 同じようにコレクションを 1 つの階層コレクションを組み合わせて、 `LEFT JOIN` sql です。 詳細については、次を参照してください。 [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)と[Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)します。  
   
 ## <a name="grouping-data-group-by"></a>データのグループ化 (Group By)  
  追加することができます、`Group By`要素の 1 つまたは複数のフィールドに従ってのクエリ結果内の要素をグループ化する句。 たとえば、次のコードでは、クラス年ごと学生をグループ化します。  
   
- [!code-vb[VbLINQBasicOps#11](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_11.vb)]  
+ [!code-vb[VbLINQBasicOps#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#11)]  
   
  作成した受講者のリストを使用してこのコードを実行するかどうかは[方法。リストの項目を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)からの出力、`For Each`ステートメントは。  
   
@@ -148,7 +148,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  次のコードに示すように、バリエーションの 1 つは、並べ替え、クラスの年を姓で各年度、受講者を並べ替えます。  
   
- [!code-vb[VbLINQBasicOps#12](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/basic-query-operations_12.vb)]  
+ [!code-vb[VbLINQBasicOps#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#12)]  
   
  詳細については`Group By`を参照してください[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。  
   

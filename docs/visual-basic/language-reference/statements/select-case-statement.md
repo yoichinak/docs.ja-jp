@@ -21,12 +21,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: bc0b5037dc4e728a45dfdeb97c1b6aff449fcf2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9770574a1b25f37dcc91c1d0374340f762700be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551021"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968349"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
 式の値に応じて、ステートメントのグループをいくつかのいずれかを実行します。  
@@ -80,7 +80,7 @@ End Select
 ## <a name="example"></a>例  
  次の例では、`Select Case`構造を使用して、変数の値に対応する行も記述`number`します。 2 番目の`Case`ステートメントには、現在の値に一致する値が含まれています。 `number`"6 から 8 の包括的な"ステートメントを書き込むため、実行します。  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>

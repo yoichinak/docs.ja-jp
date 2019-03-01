@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 487e2ff55f256bc06a463043dd2849a404eb82cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e2370c1b17bfdf103072ff33bf42c4c77706550
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567738"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975200"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim ステートメント (Visual Basic)
 宣言し、1 つまたは複数の変数の記憶域を割り当てます。  
@@ -50,7 +50,7 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     任意。 参照してください[属性一覧](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+     任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
 -   `accessmodifier`  
   
@@ -68,7 +68,7 @@ Dim [ WithEvents ] variablelist
     
     - [Private Protected](../../language-reference/modifiers/private-protected.md)
 
-     「 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+     「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 -   `Shared`  
   
@@ -96,7 +96,8 @@ Dim [ WithEvents ] variablelist
   
      `variable [ , variable ... ]`  
   
-     `variable` の構文と指定項目は次のとおりです。  
+     
+  `variable` の構文と指定項目は次のとおりです。  
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
@@ -196,7 +197,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 ```  
   
 ## <a name="arrays"></a>配列  
- 保持する変数を宣言することができます、*配列*、複数の値を保持することができます。 次の変数は配列を保持することを指定するその`variablename`かっこですぐにします。 配列の詳細については、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ 保持する変数を宣言することができます、*配列*、複数の値を保持することができます。 次の変数は配列を保持することを指定するその`variablename`かっこですぐにします。 配列の詳細については、「[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)」を参照してください。  
   
  配列の各次元の上限と下限を指定することができます。 これを行うには、`boundslist`かっこで囲んでいます。 各ディメンションに対して、`boundslist`上限と下限の境界、必要に応じてを指定します。 下限の境界は常に、0、ですか、指定するかどうか。 各インデックスは 0 ~ 上限値によって異なります。  
   
@@ -251,8 +252,10 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
 |データ型が指定されているか|初期化子が指定されているか|例|結果|  
 |---|---|---|---|  
-|Ｘ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|Ｘ|[はい]|`Dim qty = 5`|場合[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) (既定値) では、変数は、データが初期化子の型します。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|Ｘ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> 
+  `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|Ｘ|[はい]|`Dim qty = 5`|場合[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) (既定値) では、変数は、データが初期化子の型します。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> 
+  `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションの後半の表を参照してください。|  
 |[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
@@ -299,19 +302,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>例  
  次の例では、変数を宣言を使用して、`Dim`さまざまなオプションを使用してステートメントです。  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]  
   
 ## <a name="example"></a>例  
  次の例は、1 ~ 30 の素数を一覧表示します。 コードのコメントは、ローカル変数のスコープを説明します。  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]  
   
 ## <a name="example"></a>例  
  次の例では、`speedValue`クラス レベルの変数を宣言します。 `Private`キーワードの使用を変数を宣言します。 変数の任意のプロシージャからアクセスできる、`Car`クラス。  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#144)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>関連項目
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)

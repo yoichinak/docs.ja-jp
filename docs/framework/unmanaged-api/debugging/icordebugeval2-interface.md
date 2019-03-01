@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEval2 Interface1
+title: ICorDebugEval2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval2
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c50dc8e40b6565ae1bf3a5d83f4deb80d2bf0a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4315c9f5296e8c3ffc9d8241b929c71c2448db6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712984"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965866"
 ---
-# <a name="icordebugeval2-interface1"></a>ICorDebugEval2 Interface1
+# <a name="icordebugeval2-interface"></a>ICorDebugEval2 インターフェイス
+
 「できるように」のジェネリック型のサポートを提供します。  
   
 ## <a name="methods"></a>メソッド  

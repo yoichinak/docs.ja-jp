@@ -2,14 +2,14 @@
 title: ツアーF#
 description: 主な機能のいくつかを確認、F#プログラミング言語でこのツアーではコード サンプルを使用します。
 ms.date: 11/06/2018
-ms.openlocfilehash: 72ecb9e71e5d039f5a62f74ad594fac82269f304
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145524"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968297"
 ---
-# <a name="tour-of-f"></a>ツアーF# #
+# <a name="tour-of-f"></a>F# のツアー\#
 
 F# について学習する最善の方法では、F# コードを読み書きします。 この記事では、F# 言語の主な機能のいくつかツアーとして機能し、コンピューターに実行できる一部のコード スニペットが表示。 開発環境を設定する方法については、チェック アウト[Getting Started](tutorials/getting-started/index.md)します。
 

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719977"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977857"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 関数
 既存のクラスのインスタンスが作成または更新されます。 インスタンスは、WMI リポジトリに書き込まれます。 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | かどうか設定、WMI は保存されませんで任意の修飾子、 **Amended**フレーバー。 </br> このオブジェクトがローカライズされていないことと、すべての修飾子は storedwith こと前提は、セットされていない場合はこのインスタンス。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | かどうか設定、WMI は保存されませんで任意の修飾子、 **Amended**フレーバー。 <br> このオブジェクトがローカライズされていないことと、すべての修飾子は storedwith こと前提は、セットされていない場合はこのインスタンス。 |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 存在したり、既に存在する場合は、上書きしない場合は、インスタンスを作成します。 |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | インスタンスを更新します。 呼び出しが成功するは、インスタンスが存在する必要があります。 |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | インスタンスを作成します。 インスタンスが既に存在する場合、呼び出しが失敗します。 |

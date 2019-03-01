@@ -2,12 +2,12 @@
 title: スライス (F#)
 description: 既存のスライスを使用する方法について説明しますF#データ型と他のデータ型のスライスを定義する方法。
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746709"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970111"
 ---
 # <a name="slices"></a>スライス
 
@@ -95,7 +95,7 @@ F#コア ライブラリを一切定義しません`GetSlice`3D の配列。 定
 
 F#コア ライブラリが限定的なセットの種類のスライスを定義します。 多くのデータ型のスライスを定義する場合は、これを行う型定義自体または型の拡張機能。
 
-たとえば、ここではのスライスを定義する方法、<xref:System.ArraySegment`1>便利なデータ操作に許可するクラス。
+たとえば、ここではのスライスを定義する方法、<xref:System.ArraySegment%601>便利なデータ操作に許可するクラス。
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>必要がある場合は、ボックス化を回避するためにインライン化の使用
 
-実際には構造体である型のスライスを定義している場合ことをお勧めする`inline`、`GetSlice`メンバー。 F#コンパイラによる最適化のスライスの結果としてヒープ割り当てを回避する、省略可能な引数。 これは非常に重要ですなどの構造をスライス<xref:System.Span`1>することはできませんがヒープに割り当てられます、します。
+実際には構造体である型のスライスを定義している場合ことをお勧めする`inline`、`GetSlice`メンバー。 F#コンパイラによる最適化のスライスの結果としてヒープ割り当てを回避する、省略可能な引数。 これは非常に重要ですなどの構造をスライス<xref:System.Span%601>をヒープに割り当てることができません。
 
 ```fsharp
 open System

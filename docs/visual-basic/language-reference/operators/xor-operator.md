@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: af6589206232f01b572cd2b965ba1a0f36d462e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527121"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980439"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 演算子 (Visual Basic)
 2 つの排他的論理和`Boolean`式、または 2 つの数値式の和を求めます。  
@@ -78,14 +78,14 @@ result = expression1 Xor expression2
 ## <a name="example"></a>例  
  次の例では、 `Xor` 2 つの式に対して論理和 (排他的論理和) を実行する演算子。 結果は、`Boolean`が式の 1 つだけかどうかを表す値`True`します。  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
  前の例の結果を生成する`False`、 `True`、および`False`、それぞれします。  
   
 ## <a name="example"></a>例  
  次の例では、`Xor`オペレーターが 2 つの数値式のビットごとの排他的論理和 (排他的論理和) を実行します。 オペランドの対応するビットを 1 つを 1 に設定されている場合、結果のパターンのビットが設定されます。  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
  前の例では、それぞれ 2、12、14 の結果を生成します。  
   

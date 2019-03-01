@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543449"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980946"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "54543449"
   
  日付をカルチャの文字列に変換するには、渡す、<xref:System.Globalization.CultureInfo>日オブジェクトのオブジェクト<xref:System.DateTime.ToString%28System.IFormatProvider%29>メソッド。 たとえば、次のコードが表示されます"07/04/2005 00時 00分: 00"アプリケーションのカルチャ設定に関係なく、します。  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  日付リテラルは常に英語のカルチャに従って解釈されます。  
@@ -60,11 +60,11 @@ ms.locfileid: "54543449"
   
  `StrComp`関数は、並べ替え順序に基づいて 2 つの比較対象の文字列間のリレーションシップを示す整数を返します。 結果の正の値は、最初の文字列が 2 番目の文字列より大きいことを示します。 負の結果は、最初の文字列が小さく、および 0 は、文字列の間に等しいかどうかを示しますを示します。  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  使用することも、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]のパートナー、`StrComp`関数の場合、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド。 これは、文字列の基本クラスの静的、オーバー ロードされたメソッドです。 次の例では、このメソッドを使用する方法を示しています。  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  その他のオーバー ロードを使用する比較を実行する方法をより細かく制御するには<xref:System.String.Compare%2A>メソッド。 <xref:System.String.Compare%2A?displayProperty=nameWithType>メソッドが使用できる、`comparisonType`引数を使用する比較の種類を指定します。  
   

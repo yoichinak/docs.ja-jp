@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueBreakpoint Interface1
+title: ICorDebugValueBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58e6807b0546eadc4baacc276fa1ba7bda4e3aba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4c291c12de9cb95416e12e1a5fca273c542df36
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557761"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966364"
 ---
-# <a name="icordebugvaluebreakpoint-interface1"></a>ICorDebugValueBreakpoint Interface1
+# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint インターフェイス
 特定の値へのアクセスを提供する ICorDebugBreakpoint インターフェイスを拡張します。  
   
 ## <a name="methods"></a>メソッド  

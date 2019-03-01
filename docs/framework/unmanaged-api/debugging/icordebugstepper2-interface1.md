@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper2 Interface1
+title: ICorDebugStepper2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69adabbe5bb607e00d383c8bd80d9e150608890e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712877"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970411"
 ---
-# <a name="icordebugstepper2-interface1"></a>ICorDebugStepper2 Interface1
+# <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 インターフェイス
 だけマイ コード (のみ JMC) デバッグのサポートを提供します。  
   
 ## <a name="methods"></a>メソッド  

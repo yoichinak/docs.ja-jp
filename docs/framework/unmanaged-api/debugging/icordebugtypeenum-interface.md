@@ -1,5 +1,5 @@
 ---
-title: ICorDebugTypeEnum Interface1
+title: ICorDebugTypeEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugTypeEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8196267d1b7bd6ac2fb66fe8e099330e531b722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9fd108e488cc83dfb55e48fa14df30e085ec1d9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513188"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978949"
 ---
-# <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum Interface1
+# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum インターフェイス
 "ICorDebugEnum"メソッドを実装し、"ICorDebugType"配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  

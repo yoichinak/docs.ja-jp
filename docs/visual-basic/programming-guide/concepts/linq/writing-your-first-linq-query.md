@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: b49475bf7aea8d28ce057c7d4376cf7ad8285a0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506252"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975148"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表現されます。 時間の経過と共にさまざまな言語用に開発したさまざまな種類のデータ ソース、たとえば、SQL のリレーショナル データベースや XML 用の XQuery です。 これにより、必要なアプリケーション開発者はデータ ソースまたはサポートされているデータ形式の種類ごとに新しいクエリ言語について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "54506252"
 > [!NOTE]
 >  [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)、いることを確認**Option infer**に設定されている**で**します。  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  Output:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54506252"
   
  ソース データが既に実装しない場合<xref:System.Collections.Generic.IEnumerable%601>、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]の機能を実装するプロバイダーが必要な*標準クエリ演算子*そのデータ ソース。 たとえば、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]に、クエリ可能な XML ドキュメントの読み込みの処理<xref:System.Xml.Linq.XElement>の次の例に示すように入力します。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)します。  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、オブジェクト リレーショナル マッピング、デザイン時に手動でまたはを使用して、作成する、 [LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)Visual Studio でします。 オブジェクトに対するクエリを記述すると、実行時には、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] によってデータベースとの通信が処理されます。 次の例では、 `customers` 、データベース内の特定のテーブルを表すと<xref:System.Data.Linq.Table%601>サポート ジェネリック<xref:System.Linq.IQueryable%601>します。  
   
@@ -67,7 +67,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  次の例のクエリが、整数の配列からすべての偶数を返しますが、実行時`numbers`します。  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
  クエリ式には、3 つの句が含まれています: `From`、 `Where`、および`Select`します。 特定の関数と各クエリ式の句の目的は、後ほど[基本的なクエリ操作 (Visual Basic)](basic-query-operations.md)します。 詳細については、次を参照してください。[クエリ](../../../../visual-basic/language-reference/queries/index.md)します。 なお[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、クエリ定義多くの場合は変数に格納し、後で実行します。 クエリ変数など、`evensQuery`前の例では、クエリ可能な型でなければなりません。 型`evensQuery`は`IEnumerable(Of Integer)`、ローカル型推論を使用して、コンパイラによって割り当てられています。  
   
@@ -79,13 +79,13 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ### <a name="deferred-execution"></a>遅延実行  
  一般的な[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリに似ていますが、これで、前の例で`evensQuery`が定義されています。 クエリを作成しますが、そのすぐには実行されません。 クエリの定義をクエリ変数に格納する代わりに、`evensQuery`します。 クエリを実行した後で、通常を使用して、`For Each`またはなど、標準クエリ演算子を適用することで、値のシーケンスを返すには、ループ`Count`または`Max`します。 このプロセスと呼ばれます*遅延実行*します。  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
  値のシーケンスの反復変数を使用して取得したデータにアクセスする、`For Each`ループ (`number`前の例)。 クエリ変数`evensQuery`クエリの結果ではなく、クエリの定義を保持して、クエリ変数を 1 つ以上の時間を使用すると、多くの場合、クエリを実行することができます。 たとえば、データベースを別のアプリケーションによって継続的に更新されているアプリケーションでがあります。 使用することがそのデータベースからデータを取得するクエリを作成した後、`For Each`たびに、最新のデータを取得するクエリを繰り返し実行するループします。  
   
  次の例では、遅延実行の動作します。 後`evensQuery2`が定義され、実行すると、`For Each`前の例のように、データ ソースの一部の要素をループ`numbers`変更されます。 2 つ目にし、`For Each`ループを実行`evensQuery2`もう一度です。 結果が異なる 2 つ目の時間のため、`For Each`ループ、クエリが再実行で新しい値を使用して`numbers`します。  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
  Output:  
   
@@ -102,15 +102,15 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  次のクエリでは、整数の配列に偶数の数を返します。 クエリの定義は保存されず、および`numEvens`は、単純な`Integer`します。  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#4)]  
   
  使用して同じ結果を得ることができます、`Aggregate`メソッド。  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#5)]  
   
  呼び出すことによって、クエリの実行を強制することもできます、`ToList`または`ToArray`(即時) クエリまたは次のコードに示すように、(遅延)、クエリ変数のメソッド。  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#6)]  
   
  前の例で`evensQuery3`クエリ変数しますですが、`evensList`一覧と`evensArray`は配列です。  
   

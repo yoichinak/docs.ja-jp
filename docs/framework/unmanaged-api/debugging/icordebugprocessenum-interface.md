@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcessEnum Interface1
+title: ICorDebugProcessEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcessEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e963c853a93c99c7dc48e8dddc4534f11f28f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e190c045a70daa04e58604b25ac398fb5a1648d0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657039"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979568"
 ---
-# <a name="icordebugprocessenum-interface1"></a>ICorDebugProcessEnum Interface1
+# <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum インターフェイス
 ICorDebugEnum メソッドを実装し、ICorDebugProcess 配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  

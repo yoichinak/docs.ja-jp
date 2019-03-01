@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass Interface1
+title: ICorDebugClass インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710216"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972054"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass Interface1
+# <a name="icordebugclass-interface"></a>ICorDebugClass インターフェイス
+
 基本型または複合型 (つまり、ユーザー定義) のいずれかの型を表します。 型がジェネリックの場合、`ICorDebugClass` はインスタンス化されないジェネリック型を表します。  
   
 ## <a name="methods"></a>メソッド  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 86dc813c264f45e4f9c2cdf8d2dc7e7e6603c4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725364"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978476"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>引数の値渡しと参照渡し (Visual Basic)
 Visual basic では、プロシージャに引数を渡すことができます*値によって*または*参照によって*します。 呼ばれます、*渡し*、し、プロシージャが呼び出し元のコードで引数を基になるプログラミングの要素を変更できるかどうかを決定します。 プロシージャ宣言では、各パラメーターの引き渡し方法を決定を指定して、 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)キーワード。  
@@ -66,7 +66,7 @@ Visual basic では、プロシージャに引数を渡すことができます*
  次の例は、引数を値渡しする場合と参照渡しする場合を示しています。 プロシージャ`Calculate`両方を持つ、`ByVal`と`ByRef`パラメーター。 利率を指定された`rate`との合計金額、`debt`の新しい値を計算するが、プロシージャのタスク`debt`の元の値を利率を適用した結果である`debt`します。 `debt`は、`ByRef`パラメーターに対応する呼び出し元のコードで引数の値に、新しい合計が反映されます`debt`します。 パラメーター`rate`は、`ByVal`パラメーターのため`Calculate`その値を変更しないでください。  
   
 ### <a name="code"></a>コード  
- [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>関連項目
 - [プロシージャ](./index.md)
