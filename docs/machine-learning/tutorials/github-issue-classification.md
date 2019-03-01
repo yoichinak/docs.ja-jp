@@ -1,15 +1,15 @@
 ---
 title: ML.NET を GitHub の問題の多クラス分類シナリオで使用する
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 02/14/2019
+ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 80f4e322ee94e9c3a41bd1c3945383f89f4347d0
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333522"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56584292"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
 
@@ -114,7 +114,7 @@ GitHub の問題は、次の例のようないくつかの領域 (**区分**) �
 
 ### <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「SentimentAnalysis」と入力し、**[OK]** を選択します。
+1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「GitHubIssueClassification」と入力し、**[OK]** を選択します。
 
 2. プロジェクトに *Data* という名前のディレクトリを作成して、データ セット ファイルを保存します。
 
@@ -255,6 +255,9 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
  次に、DataView をキャッシュするために <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> を追加します。つまり、次のコードでキャッシュを使用してデータが複数回反復されると、パフォーマンスが向上する場合があります。
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
+
+> [!WARNING]
+> 小/中規模のデータセットの場合は、AppendCacheCheckpoint を使用して、トレーニング時間を短くします。 非常に大きいデータセットを処理するときは、使用しないでください (.AppendCacheCheckpoint() を削除します)。
 
 `ProcessData` メソッドの最後で、パイプラインが返されます。
 

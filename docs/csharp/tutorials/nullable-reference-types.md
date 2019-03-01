@@ -1,14 +1,14 @@
 ---
 title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
-ms.date: 12/03/2018
+ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092203"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442101"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
@@ -24,7 +24,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラーも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) または [.NET Core 3.0 Preview 1](https://dotnet.microsoft.com/download/dotnet-core/3.0) で利用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) または [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) で利用できます。
 
 このチュートリアルでは、.NET と、C# と Visual Studio または .NET Core CLI のいずれかに精通していることを前提としています。
 
@@ -36,27 +36,16 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>アプリケーションを作成し、null 許容参照型を有効にする
 
-新しいコンソール アプリケーションを作成します。Visual Studio を使用するか、コマンド ラインで `dotnet new console` を使用します。 アプリケーションに `NullableIntroduction` という名前を付けます。 アプリケーションを作成したら、C# 8 ベータ機能を有効にする必要があります。 `csproj` ファイルを開き、`LangVersion` 要素を `PropertyGroup` 要素に追加します。
+新しいコンソール アプリケーションを作成します。Visual Studio を使用するか、コマンド ラインで `dotnet new console` を使用します。 アプリケーションに `NullableIntroduction` という名前を付けます。 アプリケーションを作成したら、C# 8 ベータ機能を有効にする必要があります。 `csproj` ファイルを開き、`LangVersion` 要素を `PropertyGroup` 要素に追加します。 C# 8 プロジェクトであっても、**null 許容参照型**機能を選択する必要があります。 これは、機能をオンにすると、既存の参照変数宣言が **null 非許容参照型**になるためです。 その決定は既存のコードで適切な null チェックが行われていない場合に問題を発見するのに役立ちますが、元の設計意図が正確に反映されない可能性があります。 `NullableContextOptions` 要素を `enable` に設定することによって、機能を有効にします。
 
 ```xml
 <LangVersion>8.0</LangVersion>
-```
-
-または、Visual Studio プロジェクトのプロパティを使用して C# 8 を有効にできます。 ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、**[プロパティ]** を選択します。 次に、**[ビルド]** タブを選択し、**[詳細設定]** をクリックします。言語バージョンのドロップダウンで、**[C# 8.0 (ベータ)]** を選択します。
-
-C# 8 プロジェクトであっても、**null 許容参照型**機能を選択する必要があります。 これは、機能をオンにすると、既存の参照変数宣言が **null 非許容参照型**になるためです。 その決定は既存のコードで適切な null チェックが行われていない場合に問題を発見するのに役立ちますが、元の設計意図が正確に反映されない可能性があります。 この機能は、新しいプラグマを使用して有効にします。
-
-```csharp
-#nullable enable
-```
-
-ソース ファイルの任意の場所に上記のプラグマを追加でき、null 許容参照型機能はその時点からオンになります。 このプラグマでは、機能をオフにする `disable` 引数もサポートされています。
-
-次の要素をご自分の .csproj ファイルに追加することで、プロジェクト全体で **null 許容参照型**を有効にすることもできます。たとえば、C# 8.0 を有効にした `LangVersion` 要素の直後に追加します。
-
-```xml
 <NullableContextOptions>enable</NullableContextOptions>
 ```
+
+> [!NOTE]
+> C# 8 が (プレビュー モードではなく) リリースされると、`NullableContextOptions` 要素は新しいプロジェクト テンプレートによって追加されるようになります。 それまでは、手動で追加する必要があります。
+
 
 ### <a name="design-the-types-for-the-application"></a>アプリケーション用の型を設計する
 
@@ -88,10 +77,9 @@ C# 8 プロジェクトであっても、**null 許容参照型**機能を選択
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>null 許容型と null 非許容型を含むアンケートを作成する
 
-最初に記述するコードによって、アンケートが作成されます。 アンケートの質問とアンケートの実行をモデル化するクラスを記述します。 アンケートには、回答の形式によって区別される 3 種類の質問があります:はい/いいえで回答するもの、番号で回答するもの、およびテキストで回答するもの。 `public` `SurveyQuestion`クラスを作成します。 `using` ステートメントの直後に `#nullable enable` プラグマを含めます。
+最初に記述するコードによって、アンケートが作成されます。 アンケートの質問とアンケートの実行をモデル化するクラスを記述します。 アンケートには、回答の形式によって区別される 3 種類の質問があります:はい/いいえで回答するもの、番号で回答するもの、およびテキストで回答するもの。 `public` `SurveyQuestion` クラスを作成します。
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyQuestion
@@ -100,10 +88,9 @@ namespace NullableIntroduction
 }
 ```
 
-`#nullable enable` プラグマの追加は、インタープリターではすべての参照型変数の宣言が**非許容**参照型として解釈されることを意味します。 次のコードに示すように、質問のテキストと質問の種類のプロパティを追加することで、最初の警告を確認できます。
+コンパイラでは、null 許容型が有効なコンテキスト内のコードについては、すべての参照型変数の宣言が **null 非許容**参照型として解釈されます。 次のコードに示すように、質問のテキストと質問の種類のプロパティを追加することで、最初の警告を確認できます。
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public enum QuestionType
@@ -127,12 +114,11 @@ namespace NullableIntroduction
 
 コンストラクターを追加すると、警告が解除されます。 コンストラクターの引数も、null 非許容参照型であるため、コンパイラによる警告は発行されません。
 
-次に、`SurveyRun` という名前の `public` クラスを作成します。 `using` ステートメントの次に `#nullable enable` プラグマを含めます。 次のコードに示すように、このクラスには、アンケートに質問を追加する `SurveyQuestion` オブジェクトとメソッドの一覧が含まれます。
+次に、`SurveyRun` という名前の `public` クラスを作成します。 次のコードに示すように、このクラスには、アンケートに質問を追加する `SurveyQuestion` オブジェクトとメソッドの一覧が含まれます。
 
 ```csharp
 using System.Collections.Generic;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun
@@ -152,7 +138,7 @@ namespace NullableIntroduction
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-ファイルの先頭に `#nullable enable` プラグマがないため、`AddQuestion` 引数のテキストとして `null` を渡しても、コンパイラによる警告は発行されません。 `using` ステートメントの次に `#nullable enable` を追加することで、これを修正します。 次の行を `Main` に追加して試してください。
+プロジェクト全体が null 許容型の有効なコンテキスト内にあるので、null 非許容参照型が必要なメソッドに `null` を渡すと、警告が発生します。 次の行を `Main` に追加して試してください。
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -160,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>回答者を作成し、アンケートに対する回答を取得する
 
-次に、アンケートに対する回答を生成するコードを記述します。 これには、いくつかの小さいタスクが含まれます。
+次に、アンケートに対する回答を生成するコードを記述します。 このプロセスには、いくつかの小さいタスクが含まれます。
 
 1. 回答者オブジェクトを生成するメソッドを作成します。 これらは、アンケートへの入力を求められる人物を表します。
 1. 回答者にアンケートを依頼し、回答を収集するか、回答者が回答しなかったことを示すデータを収集することをシミュレートするロジックを構築します。
@@ -169,7 +155,6 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 アンケートの回答を表すクラスが必要なので、ここでそれを追加します。 null 許容のサポートを有効にします。 次のコードに示すように、`Id` プロパティとそれを初期化するコンストラクターを追加します。
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyResponse
@@ -195,6 +180,8 @@ namespace NullableIntroduction
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 アンケートの回答用のストレージは `Dictionary<int, string>?` であり、null が可能であることを示しています。 新しい言語機能を使用して、コンパイラーと後日コードを読む人の両方に対して、設計意図が宣言されています。 先に null 値のチェックを行わずに `surveyResponses` を逆参照した場合は、コンパイラの警告が表示されます。 `AnswerSurvey` メソッドで警告が表示されないのは、上記で `surveyResponses` 変数が null 以外の値に設定されたことをコンパイラが判断できるためです。
+
+欠落している回答に対して `null` を使用すると、null 許容参照型を処理するための重要なポイントが強調表示されます。目標は、プログラムからすべての `null` 値を削除することではありません。 本当の目標は、記述しているコードで設計の意図が確実に表されるようにすることです。 欠落値は、コードでの表現に必要な概念です。 `null` 値は、これらの欠落値を表現する明確な方法です。 すべての `null` を削除しようとしても、`null` を使わずにそれらの欠落値を表すための他の何らかの方法を定義することになるだけです。
 
 次に、`SurveyRun` クラス内に `PerformSurvey` メソッドを記述する必要があります。 `SurveyRun` クラスに次のコードを追加します。
 
@@ -234,6 +221,6 @@ null 許容参照型と null 非許容参照型の間で型宣言を変更する
 
 ## <a name="next-steps"></a>次の手順
 
-null 許容参照型の概要を参照して理解を深めます。
+既存のアプリケーションを null 許容参照型を使用するように移行することについてさらに詳しく学習します。
 > [!div class="nextstepaction"]
-> [null 許容参照の概要](../nullable-references.md)
+> [Null 許容参照型を使用するようにアプリケーションをアップグレードする](upgrade-to-nullable-references.md)

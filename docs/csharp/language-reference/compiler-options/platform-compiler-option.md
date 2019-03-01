@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635665"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663900"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# コンパイラ オプション)
 アセンブリを実行できる共通言語ランタイム (CLR) のバージョンを指定します。  
@@ -28,7 +28,7 @@ ms.locfileid: "54635665"
  `string`  
  anycpu (既定値)、anycpu32bitpreferred、ARM、x64、x86、または Itanium。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 -   **anycpu** (既定) は、任意のプラットフォーム上で実行できるように、アセンブリをコンパイルします。 可能な場合は、アプリケーションを 64 ビット プロセスとして実行し、32 ビット モードしか使用できない場合は、32 ビットにフォールバックします。  
   
@@ -36,6 +36,8 @@ ms.locfileid: "54635665"
   
 -   **ARM** は、Advanced RISC Machine (ARM) プロセッサ搭載のコンピューター上で実行されるように、アセンブリをコンパイルします。  
   
+-   **ARM64** では、A64 命令セットをサポートする Advanced RISC Machine (ARM) プロセッサが搭載されたコンピューター上で 64 ビット CLR によって実行されるように、アセンブリがコンパイルされます。  
+
 -   **x64** は AMD64 または EM64T 命令セットをサポートするコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。  
   
 -   **x86** は 32 ビット x86 互換 CLR で実行されるように、アセンブリをコンパイルします。  

@@ -4,12 +4,12 @@ description: 「project.json 要素と csproj 要素の間のマッピング」�
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682853"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747412"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -39,7 +39,7 @@ ms.locfileid: "54682853"
 }
 ```
 
-サポート対象から除外されました。 csproj では、これは、ディレクトリ名により定義される、プロジェクト ファイル名により決定されます。 たとえば、`MyProjectName.csproj` のようにします。
+サポート対象から除外されました。 csproj では、これはプロジェクト ファイル名により決定され、通常はディレクトリ名と一致します。 たとえば、`MyProjectName.csproj` のようにします。
 
 既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。
 

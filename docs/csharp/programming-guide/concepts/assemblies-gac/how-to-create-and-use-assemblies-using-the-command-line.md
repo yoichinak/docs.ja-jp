@@ -2,12 +2,12 @@
 title: '方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 3b582f3959ed4c703123fab99e98bedda0a0a3a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623843"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746890"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
@@ -125,5 +125,5 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
-- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [DLL 関数を保持するクラスの作成](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

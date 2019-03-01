@@ -3,15 +3,15 @@ title: クラスタリング ラーナーを使用して アヤメの花をク�
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093607"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664472"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング ラーナーを使用してアヤメの花をクラスター化する
 
@@ -84,7 +84,7 @@ ms.locfileid: "56093607"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` は入力データ クラスであり、データ セットの各特徴の定義が含まれます。 [Column](xref:Microsoft.ML.Data.ColumnAttribute) 属性を使用して、データ セット ファイル内のソース列のインデックスを指定します。
+`IrisData` は入力データ クラスであり、データ セットの各特徴の定義が含まれます。 データ セット ファイル内のソース列のインデックスを指定するには、[LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute) 属性を使用します。
 
 `ClusterPrediction` クラスは、`IrisData` インスタンスに適用されたクラスタリング モデルの出力を表します。 [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性を使って、`PredictedClusterId` フィールドを **PredictedLabel** 列に、`Distances` フィールドを **Score** 列に、それぞれバインドします。 クラスタリング タスクの場合、これらの列には次の意味があります。
 
@@ -127,7 +127,7 @@ ms.locfileid: "56093607"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-列名とインデックスは、`IrisData` クラスで定義されたスキーマに一致していること注意してください。 <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> 値は `float` 型を指定します。
+`IrisData` クラス定義からデータセットのスキーマを推論するには、[generic `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean)) メソッドを使用します。
 
 インスタンス化された <xref:Microsoft.ML.Data.TextLoader> インスタンスを使用して、<xref:Microsoft.Data.DataView.IDataView> インスタンスを作成します。これはトレーニング データ セットのデータ ソースを表します。
 

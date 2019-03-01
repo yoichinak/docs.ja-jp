@@ -2,23 +2,17 @@
 title: .NET Apps でのリソース
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221044"
 ---
 # <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  
@@ -27,10 +21,11 @@ ms.locfileid: "56221044"
   
  ASP.NET のリソースについては、「[ASP.NET Web ページのリソースの概要](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。  
   
- ## <a name="creating-and-localizing-resources"></a>リソースの作成とローカライズ  
- ローカライズされていないアプリでは、リソース ファイルをアプリ データ、特にソース コード内の複数の場所にハードコーディングされる可能性がある文字列のリポジトリとして使用できます。 ほとんどの場合、リソースはテキスト (.txt) ファイルまたは XML (.resx) ファイルとして作成し、[Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して .resources バイナリ ファイルにコンパイルします。 これらのファイルは、言語コンパイラでアプリの実行可能ファイルに埋め込むことができます。 リソースの作成の詳細については、[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)に関する記事を参照してください。  
-  
- アプリのリソースを特定のカルチャに合わせてローカライズすることもできます。 これにより、アプリのローカライズ (翻訳) バージョンを構築できます。 ローカライズされたリソースを使用するアプリを開発する場合、ニュートラル カルチャまたはフォールバック カルチャとして使用するカルチャを指定します。適切なリソースがない場合はそのカルチャのリソースが使用されます。 一般に、ニュートラル カルチャのリソースはアプリの実行可能ファイルに格納されます。 個々のローカライズされたカルチャのその他のリソースはスタンドアロンのサテライト アセンブリに格納されます。 詳細については、[サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)に関する記事を参照してください。  
+## <a name="creating-and-localizing-resources"></a>リソースの作成とローカライズ  
+
+ローカライズされていないアプリでは、リソース ファイルをアプリ データ、特にソース コード内の複数の場所にハードコーディングされる可能性がある文字列のリポジトリとして使用できます。 ほとんどの場合、リソースはテキスト (.txt) ファイルまたは XML (.resx) ファイルとして作成し、[Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して .resources バイナリ ファイルにコンパイルします。 これらのファイルは、言語コンパイラでアプリの実行可能ファイルに埋め込むことができます。 リソースの作成の詳細については、[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)に関する記事を参照してください。  
+
+アプリのリソースを特定のカルチャに合わせてローカライズすることもできます。 これにより、アプリのローカライズ (翻訳) バージョンを構築できます。 ローカライズされたリソースを使用するアプリを開発する場合、ニュートラル カルチャまたはフォールバック カルチャとして使用するカルチャを指定します。適切なリソースがない場合はそのカルチャのリソースが使用されます。 一般に、ニュートラル カルチャのリソースはアプリの実行可能ファイルに格納されます。 個々のローカライズされたカルチャのその他のリソースはスタンドアロンのサテライト アセンブリに格納されます。 詳細については、[サテライト アセンブリの作成](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)に関する記事を参照してください。  
   
 ## <a name="packaging-and-deploying-resources"></a>リソースのパッケージ化と配置  
  ローカライズされたアプリ リソースは[サテライト アセンブリ](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)に配置します。 サテライト アセンブリには 1 つのカルチャのリソースが含まれます。アプリケーション コードは含まれません。 サテライト アセンブリの配置モデルでは、1 つの既定アセンブリ (一般的にはメイン アセンブリ) と、アプリがサポートするカルチャごとに 1 つのサテライト アセンブリを使用するアプリを作成します。 サテライト アセンブリはメイン アセンブリには含まれないため、アプリのメイン アセンブリを交換しなくても、特定のカルチャに対応するリソースのみを簡単に交換または更新できます。  

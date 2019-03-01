@@ -3,12 +3,12 @@ title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222065"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748011"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -97,26 +97,26 @@ ms.locfileid: "54222065"
 .NET Core ツールを使用し、コードをビルドするには、`Sdk` 属性を `<Project>` 要素の ID のいずれかに設定する必要があります。 
 
 ### <a name="packagereference"></a>PackageReference
-プロジェクトの NuGet の依存関係を指定する `<PackageReference>` 項目要素。 `Include` 属性は、パッケージ ID を指定します。 
+`<PackageReference>` 項目要素では、[プロジェクトでの NuGet の依存関係](/nuget/consume-packages/package-references-in-project-files)を指定します。 `Include` 属性は、パッケージ ID を指定します。 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Version
-`Version` は、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/create-packages/dependency-versions#version-ranges)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
+必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/reference/package-versioning#version-ranges-and-wildcards)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets、PrivateAssets
-`IncludeAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットのうち、使う必要があるものを指定します。 
+`IncludeAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットのうち、使う必要があるものを指定します。 既定では、パッケージのすべてのアセットが含まれます。
 
 `ExcludeAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットのうち、使う必要がないものを指定します。
 
-`PrivateAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットで、使う必要はあるが、次のプロジェクトに渡してはならないものを指定します。 
+`PrivateAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットで、使う必要はあるが、次のプロジェクトに渡してはならないものを指定します。 この属性が存在しない場合、`Analyzers`、`Build`、`ContentFiles` アセットは既定でプライベートになります。
 
 > [!NOTE]
 > `PrivateAssets` は *project.json*/*xproj* `SuppressParent` 要素と同等です。
 
-これらの属性には、次の項目を 1 つまたは複数含めることができます。
+これらの属性には以下の項目を 1 つ以上含めることができ、複数ある場合はセミコロン `;` 文字で区切ります。
 
 * `Compile` - コンパイルで使用できる lib フォルダーの内容です。
 * `Runtime` - 配布する runtime フォルダーの内容です。
@@ -206,12 +206,64 @@ UI 画面用のパッケージの長い説明。
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 クライアントがユーザーに対して、パッケージのインストール前にパッケージ ライセンスに同意することを必須にするかどうかを示すブール値。 既定値は、`false` です。
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+パッケージ内のライセンス ファイルに対する SPDX ライセンス式またはパスであり、UI 表示や nuget.org でよく示されます。
+
+[SPDX ライセンス識別子](https://spdx.org/licenses/)の完全な一覧はこちらをご覧ください。 ライセンス タイプ式を使用する場合、NuGet.org では OSI または FSF で承認されたライセンスのみが受け付けられます。
+
+ライセンス式の正確な構文については、[ABNF](https://tools.ietf.org/html/rfc5234) をご覧ください。
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> 一度に指定できるのは、`PackageLicenseExpression`、`PackageLicenseFile`、`PackageLicenseUrl` のどれか 1 つだけです。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+SPDX 識別子が割り当てられていないライセンス、またはカスタム ライセンスを使用している場合、パッケージ内のライセンス ファイルへのパス (それ以外の場合は、`PackageLicenseExpression` が優先されます)
+
+> [!NOTE]
+> 一度に指定できるのは、`PackageLicenseExpression`、`PackageLicenseFile`、`PackageLicenseUrl` のどれか 1 つだけです。
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-パッケージに適用されるライセンスの URL。
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-パッケージのホーム ページの URL。多くの場合、UI 画面と nuget.org に表示されます。
+パッケージに適用されるライセンスの URL。 ("_Visual Studio 15.9.4、.NET SDK 2.1.502 および 2.2.101 以降では非推奨_")
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+[SPDX ライセンス識別子](https://spdx.org/licenses/)または式 (つまり`Apache-2.0`)。
+
+`PackageLicenseUrl` を置き換えるもので、`PackageLicenseFile` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+プロジェクト ファイルを基準とするディスク上のライセンス ファイルへのパス (つまり `LICENSE.txt`)。
+
+`PackageLicenseUrl` を置き換えるもので、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
+
+プロジェクトに明示的に追加することによって、ライセンス ファイルをパックする必要があります。使用例を次に示します。
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 UI 画面のパッケージのアイコンとして使用する背景が透明な 64x64 の画像の URL。
 

@@ -4,12 +4,12 @@ description: バイナリ分類のシナリオで ML.NET を使用する方法�
 ms.date: 02/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d6d5cae107e25000add5c8430a35131a79696bc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9afdf1d8369e71f9614ebc2bf327e98d31b988ff
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092762"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748389"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -204,6 +204,9 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 次に、`mlContext.Transforms.Text.FeaturizeText` を呼び出します。これによってテキスト列 (`SentimentText`) が特徴付けされ、機械学習アルゴリズムで使用される `Features` という数値ベクトルになります。 これは、実質的にパイプラインになる <xref:Microsoft.ML.Data.EstimatorChain%601> を返すラッパー呼び出しです。 後でトレーナーを `EstimatorChain` に付加するときに、この `pipeline` を指定します。 次のコード行を追加します。
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
+
+>[!WARNING]
+> ML.NET バージョン 0.10 では、変換パラメーターの順序が変更されました。 アプリケーションを実行してモデルを構築するまで、これによるエラーは出力されません。 変換パラメーターの名前を上記のコード スニペットに示すように使用してください。
 
 これが前処理/特徴付けのステップです。 ML.NET に用意されているその他のコンポーネントを使用すると、モデルでより良い結果が得られます。
 

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123671"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665031"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリケーションを作成する
+# <a name="walkthrough-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
 この記事では、イベント ログにメッセージを書き込む単純な Windows サービス アプリを Visual Studio で作成する方法を示します。
 
@@ -86,7 +86,7 @@ ms.locfileid: "49123671"
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-サービス アプリケーションは長期間実行するように設計されているため、通常は、システム内の何かをポーリングまたは監視しています。 この監視は、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで設定します。 ただし、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> は実際には監視を行いません。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。 永久的に続くループやブロックは実行できません。 単純なポーリング機構を設定するには、 <xref:System.Timers.Timer?displayProperty=nameWithType> コンポーネントを次のように使用します。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで、コンポーネントのパラメーターを設定してから、 <xref:System.Timers.Timer.Enabled%2A> プロパティを `true`。 このタイマーによって、コード内で定期的にイベントが発生します。サービスは、イベントが発生するごとに監視を実行できます。 このためには、次のコードを使用できます。
+サービス アプリケーションは長期間実行するように設計されているため、通常は、システム内の何かをポーリングまたは監視しています。 この監視は、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで設定します。 ただし、 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> は実際には監視を行いません。 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。 永久的に続くループやブロックは実行できません。 簡単なポーリング メカニズムをセットアップするには、次のように <xref:System.Timers.Timer?displayProperty=nameWithType> コンポーネントを使用できます。<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドで、コンポーネントにパラメーターを設定してから、<xref:System.Timers.Timer.Enabled%2A> プロパティを `true` に設定します。 このタイマーによって、コード内で定期的にイベントが発生します。サービスは、イベントが発生するごとに監視を実行できます。 このためには、次のコードを使用できます。
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -296,7 +296,7 @@ Windows サービスを実行するには、まず、サービスをインスト
     > [!IMPORTANT]
     > <xref:System.ServiceProcess.ServiceAccount.LocalSystem> アカウントには、イベント ログへの書き込みを含む、幅広いアクセス許可が設定されています。 このアカウントは悪意のあるソフトウェアから攻撃されるリスクが高いため、使用する場合は注意が必要です。 その他のタスクについては、ローカル コンピューターで非特権ユーザーとして機能し、リモート サーバーには匿名の資格情報を渡す <xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントの使用を検討してください。 この例は、 <xref:System.ServiceProcess.ServiceAccount.LocalService> アカウントを使用しようとすると失敗します。これは、イベント ログに書き込むアクセス許可が必要になるためです。
 
-インストーラーについて詳しくは、「[How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」(方法: サービス アプリケーションにインストーラーを追加する) をご覧ください。
+インストーラーについて詳しくは、「[方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。
 
 ## <a name="optional-set-startup-parameters"></a>(省略可能) スタートアップ パラメーターを設定する
 
@@ -431,7 +431,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 
     **installutil.exe** プロセスでエラーが報告された場合は、インストール ログを調べて理由を確認します。 既定で、ログはサービスの実行可能ファイルと同じフォルダーにあります。 <xref:System.ComponentModel.RunInstallerAttribute> クラスが `ProjectInstaller` クラスにない場合、属性が **true** に設定されていない場合、または `ProjectInstaller` クラスが **public** とマークされていない場合は、インストールが失敗する可能性があります。
 
-詳細については、「 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。
+詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。
 
 ## <a name="start-and-run-the-service"></a>サービスを開始して実行する
 
@@ -452,7 +452,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 1. Windows タスクバーの検索ボックスに**イベント ビューア―** というテキストの入力を開始し、検索結果から **[イベント ビューア―]** を選択することで、**イベント ビューアー**を開きます。
 
    > [!TIP]
-   > Visual Studio で、**サーバー エクスプローラー**を開き (キーボード: **Ctrl**+**Alt**+**S**)、ローカル コンピューターの **[イベント ログ]** ノードを展開することで、イベント ログにアクセスできます。
+   > Visual Studio でイベント ログにアクセスするには、**サーバー エクスプローラー**を開き (キーボード: **Ctrl** + **Alt** + **S**)、ローカル コンピューターの **[イベント ログ]** ノードを展開します。
 
 2. **[イベント ビューアー]** で、**[アプリケーションとサービス ログ]** を展開します。
 
@@ -472,11 +472,11 @@ Windows サービスを構築済みであるため、サービスをインスト
     installutil.exe /u MyNewService.exe
     ```
 
-   サービスが正常にアンインストールされると、サービスが正常に削除されたことが **installutil.exe** によって報告されます。 詳細については、「 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。
+   サービスが正常にアンインストールされると、サービスが正常に削除されたことが **installutil.exe** によって報告されます。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-これでサービスの作成は終わりましたが、作成した Windows サービスを他のユーザーがインストールするために使用できるスタンドアロン セットアップ プログラムを作成できます。 ClickOnce ではWindows サービスはサポートされませんが、[WiX Toolset](http://wixtoolset.org/) を使用して Windows サービス用のインストーラーを作成できます。 その他のアイデアについては、[インストーラー パッケージの作成](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)に関する記事を参照してください。
+これでサービスの作成は終わりましたが、作成した Windows サービスを他のユーザーがインストールするために使用できるスタンドアロン セットアップ プログラムを作成できます。 ClickOnce ではWindows サービスはサポートされませんが、[WiX Toolset](http://wixtoolset.org/) を使用して Windows サービス用のインストーラーを作成できます。 その他のアイデアについては、[インストーラー パッケージの作成](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)に関する記事を参照してください。
 
 インストールしたサービスにコマンドを送信できる <xref:System.ServiceProcess.ServiceController> コンポーネントの使用法を調べることもできます。
 
@@ -486,5 +486,5 @@ Windows サービスを構築済みであるため、サービスをインスト
 
 - [Windows サービス アプリケーション](../../../docs/framework/windows-services/index.md)
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [方法 : Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [サービス (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [方法: Windows サービス アプリケーションをデバッグする](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [サービス (Windows)](/windows/desktop/Services/services)

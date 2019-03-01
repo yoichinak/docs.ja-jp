@@ -2,12 +2,12 @@
 title: フレンド アセンブリ (C#)
 ms.date: 07/20/2015
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
-ms.openlocfilehash: e464162f12fe386c37262753331635ea82b128b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de27643be8f5ddbf533ebb75b66666fc6bc148b
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576981"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748194"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C#)
 "*フレンド アセンブリ*" とは、別のアセンブリに [internal](../../../../csharp/language-reference/keywords/internal.md) として宣言されている型やメンバーにアクセスできるアセンブリです。 フレンド アセンブリとして指定した場合、public として宣言されていないその型とメンバーに、他のアセンブリからアクセスできるようになります。 この方法は、特に次の状況で利便性を発揮します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54576981"
   
 -   クラス ライブラリの開発中、そのライブラリへの追加機能が別のアセンブリにある状況で、既存アセンブリ内の `internal` メンバーにアクセスしなければならないとき。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を利用し、特定のアセンブリの 1 つまたは複数のフレンド アセンブリを特定できます。 次の例では、アセンブリ A で <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を利用し、アセンブリ `AssemblyB` をフレンド アセンブリとして指定しています。 これでアセンブリ `AssemblyB` は、アセンブリ A の中で `internal` として宣言されているすべての型とメンバーにアクセスすることができます。  
   
 > [!NOTE]
@@ -76,5 +76,5 @@ public class ClassWithFriendMethod
 - <xref:System.Security.Permissions.StrongNameIdentityPermission>
 - [方法: 署名のないフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
-- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

@@ -34,7 +34,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
 
   <xref:System.IEquatable%601> インターフェイスを実装する例を次に示します。 実装するクラスの `Car` は、<xref:System.IEquatable%601.Equals%2A> メソッドの実装を提供する必要があります。  
   
-[!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
 クラスのプロパティとインデクサーでは、インターフェイスに定義されているプロパティまたはインデクサーの追加のアクセサーを定義できます。 たとえば、インターフェイスで [get](../../language-reference/keywords/get.md) アクセサーを持つプロパティを宣言するとします。 このインターフェイスを実装するクラスでは、`get` アクセサーと [set](../../language-reference/keywords/set.md) アクセサーの両方を持つ同じプロパティを宣言できます。 ただし、プロパティまたはインデクサーで明示的な実装を使用する場合は、これらのアクセサーが一致する必要があります。 明示的な実装の詳細については、「[明示的なインターフェイス実装](explicit-interface-implementation.md)」および「[インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)」を参照してください。  
 

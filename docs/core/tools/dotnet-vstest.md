@@ -3,12 +3,12 @@ title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169028"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747730"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>説明
 
-`dotnet-vstest` コマンドでは、`VSTest.Console` コマンド ライン アプリケーションを実行し、自動化された単体とコード化された UI アプリケーション テストを実行します。
+`dotnet-vstest` コマンドでは、`VSTest.Console` コマンド ライン アプリケーションが実行されて、自動単体テストが実行されます。
 
 ## <a name="arguments"></a>引数
 
@@ -73,11 +73,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされるその他の値は、`Framework35`、`Framework40`、`Framework45`、`FrameworkCore10`、`FrameworkUap10` です。
+テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされるその他の値は、`Framework40`、`Framework45`、`FrameworkCore10`、および `FrameworkUap10` です。
 
 `--Parallel|/Parallel`
 
-テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 設定ファイルを使用して、明示的なコア数を設定します。
+テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 runsettings ファイルの RunConfiguration ノードで MaxCpuCount プロパティを設定することにより、コア数を明示的に指定します。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされるその他の値は、`Framework35`、`Framework40`、`Framework45`、および `FrameworkCore10` です。
+テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされる値としては、他に `Framework40`、`Framework45`、`FrameworkCore10` があります。
 
 `--Parallel|/Parallel`
 
-テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 設定ファイルを使用して、明示的なコア数を設定します。
+テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 runsettings ファイルの RunConfiguration ノードで MaxCpuCount プロパティを設定することにより、コア数を明示的に指定します。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされるその他の値は、`Framework35`、`Framework40`、`Framework45`、および `FrameworkCore10` です。
+テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされる値としては、他に `Framework40`、`Framework45`、`FrameworkCore10` があります。
 
 `--Parallel|/Parallel`
 
-テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 設定ファイルを使用して、明示的なコア数を設定します。
+テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 runsettings ファイルの RunConfiguration ノードで MaxCpuCount プロパティを設定することにより、コア数を明示的に指定します。
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

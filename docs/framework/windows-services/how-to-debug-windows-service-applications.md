@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720367"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441880"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>方法: Windows サービス アプリケーションをデバッグする
 サービスは、Visual Studio 内からではなく、サービス コントロール マネージャーのコンテキスト内から実行する必要があります。 そのため、サービスのデバッグは、その他の種類の Visual Studio アプリケーションをデバッグするように単純ではありません。 サービスのデバッグを行うには、サービスを起動してから、サービスを実行しているプロセスにデバッガーをアタッチします。 これにより、Visual Studio のすべての標準デバッグ機能を使用して、アプリケーションをデバッグできるようになります。  
@@ -32,7 +32,7 @@ ms.locfileid: "54720367"
 >  サービス コントロール マネージャーではすべてのサービスの開始試行に対して 30 秒の制限が適用されるため、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドのデバッグが困難になる場合があります。 詳細については、[トラブルシューティング:Windows サービスのデバッグ](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md)に関するページをご覧ください。  
   
 > [!WARNING]
->  デバッグに有用な情報を取得するためには、Visual Studio デバッガーは、デバッグ対象のバイナリのシンボル ファイルを検索する必要があります。 Visual Studio に組み込まれているサービスをデバッグしている場合は、シンボル ファイル (.pdb ファイル) は実行可能ファイルまたはライブラリと同じフォルダーにあり、デバッガーはそれらを自動的に読み込みます。 構築していないサービスをデバッグしている場合は、最初にサービスのシンボルを検索し、デバッガーでこれらを検出できるようにする必要があります。 [シンボル (.pdb) ファイルとソース ファイルの指定](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b)に関する記事をご覧ください。 システム プロセスをデバッグしているか、サービスにシステム呼び出しのシンボルを含めたい場合は、Microsoft シンボル サーバーを追加する必要があります。 [シンボルによるデバッグ](/windows/desktop/DxTechArts/debugging-with-symbols)に関する記事をご覧ください。  
+>  デバッグに有用な情報を取得するためには、Visual Studio デバッガーは、デバッグ対象のバイナリのシンボル ファイルを検索する必要があります。 Visual Studio に組み込まれているサービスをデバッグしている場合は、シンボル ファイル (.pdb ファイル) は実行可能ファイルまたはライブラリと同じフォルダーにあり、デバッガーはそれらを自動的に読み込みます。 構築していないサービスをデバッグしている場合は、最初にサービスのシンボルを検索し、デバッガーでこれらを検出できるようにする必要があります。 「[Specify Symbol (.pdb) and Source Files in the Visual Studio Debugger (Visual Studio デバッガーでシンボル ファイル (.pdb) とソース ファイルを指定する)](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)」をご覧ください。 システム プロセスをデバッグしているか、サービスにシステム呼び出しのシンボルを含めたい場合は、Microsoft シンボル サーバーを追加する必要があります。 [シンボルによるデバッグ](/windows/desktop/DxTechArts/debugging-with-symbols)に関する記事をご覧ください。  
   
 ### <a name="to-debug-a-service"></a>サービスをデバッグするには  
   
@@ -71,13 +71,15 @@ ms.locfileid: "54720367"
 ## <a name="debugging-tips-for-windows-services"></a>Windows サービスのデバッグのヒント  
  サービスのプロセスにアタッチすると、そのサービスのコードのほとんど (すべてではない) をデバッグすることができます。 たとえば、サービスが既に開始されているため、そのサービスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッド内のコード、またはサービスをこの方法で読み込むために使用されている `Main` メソッド内のコードは、デバッグすることができません。 この制限に対処する方法の 1 つは、デバッグ専用の一時的な "ダミー" サービスを作成し、サービス アプリケーションに追加することです。 サービスを両方ともインストールし、ダミー サービスを開始してサービス プロセスを読み込むことができます。 "ダミー" サービスがプロセスを起動した後は、Visual Studio の **[デバッグ]** メニューで、サービス プロセスへのアタッチを行うことができます。  
   
- <xref:System.Threading.Thread.Sleep%2A> メソッドに呼び出しを追加して、プロセスにアタッチできるようになるまで動作を遅延します。  
+ 
+  <xref:System.Threading.Thread.Sleep%2A> メソッドに呼び出しを追加して、プロセスにアタッチできるようになるまで動作を遅延します。  
   
  プログラムを通常のコンソール アプリケーションに変更します。 このためには、起動方法に応じて Windows サービスとコンソール アプリケーションの両方として実行することができるように、`Main` メソッドを次のように書き換えます。  
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>方法: Windows サービスをコンソール アプリケーションとして実行する  
   
-1.  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
+1.  
+  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +90,8 @@ ms.locfileid: "54720367"
     }  
     ```  
   
-2.  `Main` メソッドを次のように書き換えます。  
+2.  
+  `Main` メソッドを次のように書き換えます。  
   
     ```csharp  
     static void Main(string[] args)  
@@ -111,7 +114,7 @@ ms.locfileid: "54720367"
   
 5.  プログラムを再度 Windows サービスとして実行するには、プログラムをインストールして、Windows サービスとして通常どおり起動します。 これらの変更を反対にする必要はありません。  
   
- システムの起動時にのみ発生する問題をデバッグするときなどのいくつかのケースでは、Windows デバッガーを使用する必要があります。 [Windows 用デバッグ ツール](https://msdn.microsoft.com/windows/hardware/hh852365)をインストールし、「[Windows サービスをデバッグする方法](https://support.microsoft.com/kb/824344)」をご覧ください。  
+ システムの起動時にのみ発生する問題をデバッグするときなどのいくつかのケースでは、Windows デバッガーを使用する必要があります。 [Windows Driver Kit (WDK) をダウンロード](/windows-hardware/drivers/download-the-wdk)し、「[Windows サービスをデバッグする方法](https://support.microsoft.com/kb/824344)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

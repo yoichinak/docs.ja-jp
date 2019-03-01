@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 7da5f50a9d0fa867244a569e03685cc637bf3ce6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380372d6aaf8df3050e0ba8606b74eb3834dec67
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692520"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972600"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素をバイパスし、残りの要素を返します。  
@@ -40,7 +40,7 @@ Skip While expression
 ## <a name="example"></a>例  
  次のコード例では、`Skip While`米国から最初の顧客が見つかるまで、結果をバイパスする句。  
   
- [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

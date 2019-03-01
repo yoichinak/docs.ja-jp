@@ -2,12 +2,12 @@
 title: '方法: アセンブリを読み込み、アンロードする (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: eadab1d0e5ddd22fb5c0e92f45162548c9bfd76c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff3c494b40650da1e30e111b2e7f916e249d78a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509351"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748753"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>方法: アセンブリを読み込み、アンロードする (C#)
 プログラムから参照されるアセンブリは、ビルド時に自動的に読み込まれますが、実行時に特定のアセンブリを現在のアプリケーション ドメインに読み込むこともできます。 詳細については、「[方法 :アプリケーション ドメインにアセンブリを読み込む](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)」をご覧ください。  
@@ -27,5 +27,5 @@ ms.locfileid: "54509351"
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
-- [アセンブリとグローバル アセンブリ キャッシュ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [方法: アプリケーション ドメインにアセンブリを読み込む](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
