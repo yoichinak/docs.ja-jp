@@ -16,7 +16,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ## <a name="declaring-and-initializing-strings"></a>文字列の宣言と初期化  
  次の例に示すように、文字列はさまざまな方法で宣言および初期化できます。  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  文字列を文字の配列で初期化する場合を除き、文字列オブジェクトの作成に [new](../../../csharp/language-reference/keywords/new-operator.md) 演算子を使用しないでください。  
   
@@ -84,16 +84,16 @@ C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/t
 ## <a name="substrings"></a>部分文字列  
  部分文字列は、1 つの文字列に含まれる一連の文字です。 元の文字列の一部から新しい文字列を作成するには、<xref:System.String.Substring%2A> メソッドを使用します。 <xref:System.String.IndexOf%2A> メソッドを使用して、1 つまたは複数の部分文字列を検索できます。 指定されたすべての部分文字列を新しい文字列に置換するには、<xref:System.String.Replace%2A> メソッドを使用します。 <xref:System.String.Substring%2A> メソッドと同様に、<xref:System.String.Replace%2A> は実際に新しい文字列を返し、元の文字列は変更しません。 詳細については、「[How to: search strings](../../how-to/search-strings.md)」(方法: 文字列を検索する) および「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>各文字へのアクセス  
  次の例に示すように、配列表記とインデックス値を使用すると、それぞれの文字への読み取り専用アクセスが可能になります。  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  <xref:System.String> メソッドが、文字列内の個別の文字を変更する必要がある機能を提供していない場合は、<xref:System.Text.StringBuilder> オブジェクトを使用して個別の文字の "埋め込み先" を変更し、<xref:System.Text.StringBuilder> メソッドを使用することで、結果を格納する新しい文字列を作成できます。 次の例では、特定の方法で元の文字列を変更し、将来使用するためにその結果を保存する必要があるとします。  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>null 文字列と空の文字列  
  空の文字列はゼロ文字を含む <xref:System.String?displayProperty=nameWithType> オブジェクトのインスタンスです。 空の文字列は、空のテキスト フィールドを表すため、さまざまなプログラミング シナリオでよく使用されます。 有効な <xref:System.String?displayProperty=nameWithType> オブジェクトであるため、空の文字列でメソッドを呼び出すことができます。 空の文字列は、次のように初期化されます。  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  これに対し、null 文字列は <xref:System.String?displayProperty=nameWithType> オブジェクトのインスタンスを参照しないので、null 文字列でメソッドを呼び出そうとすると <xref:System.NullReferenceException> が発生します。 しかし、null 文字列を他の文字列に連結したり、他の文字列と比較することは可能です。 次に、null 文字列の参照によって例外がスローされる場合とされない場合の例を示します。  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>文字列を迅速に作成するための StringBuilder の使用  
  .NET での文字列操作は高度に最適化されており、ほとんどの場合パフォーマンスに大きく影響することはありません。 ただし、短いループが数百回または数千回実行されている場合など、シナリオによっては文字列操作がパフォーマンスに影響する可能性があります。 <xref:System.Text.StringBuilder> クラスが作成する文字列バッファーにより、プログラムで大量の文字列操作を実行する場合のパフォーマンスが向上します。 <xref:System.Text.StringBuilder> 文字列を使用すると、組み込み文字列データ型ではサポートされていない個別の文字を再割り当てできます。 たとえば、このコードでは、新しい文字列を作成せずに、文字列の内容を変更します。  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  この例では、<xref:System.Text.StringBuilder> オブジェクトを使用して、複数の数値型から 1 つの文字列を作成します。  
   
