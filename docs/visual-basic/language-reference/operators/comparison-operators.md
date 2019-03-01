@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: bf7ff1870a523903babd7140e0d8271f9946064b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628059"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200989"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較演算子 (Visual Basic)
 Visual Basic で定義されている比較演算子を次に示します。  
@@ -134,7 +134,8 @@ result = string Like pattern
 |両方とも `String`|並べ替え文字列の並べ替えの特性に基づいて比較をします。|  
 |両方の数値|オブジェクトに変換`Double`、数値比較します。|  
 |1 つの数値型と 1 つ `String`|`String`に変換されます、`Double`数値比較を実行します。 場合、`String`に変換できない`Double`、<xref:System.InvalidCastException>がスローされます。|  
-|どちらかまたは両方が以外の参照型です。 `String`|<xref:System.InvalidCastException> がスローされます。|  
+|どちらかまたは両方が以外の参照型です。 `String`|
+  <xref:System.InvalidCastException> がスローされます。|  
   
  数値の比較処理`Nothing`0 として。 文字列比較を扱う`Nothing`として`""`(空の文字列)。  
   
@@ -146,7 +147,7 @@ result = string Like pattern
 ## <a name="example"></a>例  
  次の例では、式の比較に使用する関係比較演算子は、のさまざまな使用を示します。 関係比較演算子を返す、`Boolean`結果を指定した式が評価されるかどうかを表す`True`します。 適用すると、`>`と`<`文字列演算子、比較を行う、文字列の通常のアルファベット順の並べ替え順序を使用しています。 この順序は、ロケール設定に依存することはできます。 並べ替えが大文字かどうかによって異なります、 [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)設定します。  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#1)]  
   
  前の例では、最初に比較を返します`False`、残りの比較が戻って`True`します。  
   

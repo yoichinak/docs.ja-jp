@@ -1,61 +1,86 @@
 ---
 title: '方法: MMC スナップインで証明書の表示'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521583"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200287"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>方法: MMC スナップインで証明書の表示
-X.509 証明書は、広く使用されている資格情報です。 セキュリティで保護されたサービスやクライアントを作成する場合、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> メソッドなどのメソッドを使用して、クライアントやサービスの資格情報として使用する証明書を指定できます。 このメソッドでは、証明書を格納するストアや証明書を検索するときに使用する値など、さまざまなパラメーターが必要になります。 次の手順では、コンピューター上のストアを調べて適切な証明書を検索する方法を示します。  証明書の拇印を検索の例は、次を参照してください。[方法。証明書のサムプリントを取得](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
+使用することができますをセキュリティで保護されたクライアントまたはサービスを作成するときに、[証明書](working-with-certificates.md)資格情報として。 たとえば、資格情報の一般的な種類は、X.509 証明書を作成する、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>メソッド。 
+
+Windows システムで Microsoft 管理コンソール (MMC) とを確認する証明書ストアの 3 つの異なる種類があります。
+
+- ローカル コンピューターの場合:ストアは、デバイスのローカルと、デバイス上のすべてのユーザーにグローバルです。
+
+- 現在のユーザー:ストアでは、デバイス上の現在のユーザー アカウントにローカルです。
+
+- サービス アカウント:ストアでは、デバイスの特定のサービスにローカルです。
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>MMC スナップインで証明書を参照するには  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>MMC スナップインで証明書の表示 
+
+次の手順では、適切な証明書を検索するローカル デバイス上のストアを確認する方法を示しています。 
   
-1.  コマンド プロンプト ウィンドウを開きます。  
+1. 選択**実行**から、**開始**] メニューの [し、入力*mmc*します。 
+
+    MMC が表示されます。 
   
-2.  `mmc` と入力して、ENTER キーを押します。 ローカル コンピューターのストアにある証明書を表示するには、管理者のロールが必要です。  
+2. **ファイル**メニューの **スナップインの追加/削除**します。 
+    
+    **スナップインを追加または**ウィンドウが表示されます。
   
-3.  **ファイル** メニューから **スナップインの追加/削除** をクリックします。  
+3. **利用できるスナップイン**一覧で、選択**証明書**を選択し、**追加**します。  
+
+    ![証明書スナップインの追加します。](./media/mmc-add-certificate-snap-in.png)
   
-4.  **[追加]** をクリックします。  
+4. **証明書スナップイン**ウィンドウで、**コンピューター アカウント**、し、**次**します。 
   
-5.  **スタンドアロン スナップインの追加**ダイアログ ボックスで **証明書**を選択します。  
+    必要に応じて、選択**ユーザー アカウント**、現在のユーザーまたは**サービス アカウント**特定のサービスです。 
+
+    > [!NOTE]
+    > ない場合、管理者のデバイス、ユーザー アカウントに対してのみ証明書を管理できます。
   
-6.  **[追加]** をクリックします。  
+5. **コンピューターの選択**] ウィンドウのままに**ローカル コンピューター**を選択し、[**完了**します。  
   
-7.  **証明書スナップイン**ダイアログ ボックスで **コンピューター アカウント** を選択し **次** をクリックします。 必要に応じて、**ユーザー アカウント** または　**サービス アカウント** を選択できます。 そのコンピューターの管理者でない場合は、自分のユーザー アカウントの証明書のみを管理できます。  
+6. **スナップインの追加または削除**ウィンドウで、 **OK**します。  
   
-8.  **コンピューターの選択** ダイアログ ボックスで **完了** をクリックします。  
+    ![証明書スナップインの追加します。](./media/mmc-certificate-snap-in-selected.png)
+
+7. 省略可能:**ファイル**メニューの **保存**または**名前を付けて保存**後で使用できる MMC コンソール ファイルを保存します。  
+
+8. MMC スナップインで証明書を表示する選択**コンソール ルート**左側のウィンドウでを展開し、**証明書 (ローカル コンピューター)** します。
+
+    証明書の種類ごとのディレクトリの一覧が表示されます。 各証明書のディレクトリからすることができますを表示、エクスポート、インポート、およびその証明書を削除します。
   
-9. **スタンドアロン スナップインの追加** ダイアログ ボックスで **閉じる** をクリックします。  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>証明書マネージャー ツールを使用して証明書の表示
+
+ことができますも表示、エクスポート、インポート、および証明書マネージャー ツールを使用して証明書を削除します。
+
+### <a name="to-view-certificates-for-the-local-device"></a>ローカルのデバイス用の証明書を表示するには
+
+1. 選択**実行**から、**開始**] メニューの [し、入力*certlm.msc*します。 
+
+    ローカルのデバイスの証明書マネージャー ツールが表示されます。 
   
-10. **スナップインの追加と削除** ダイアログ ボックスで **OK** をクリックします。  
+2. 下に、証明書を表示する**証明書 - ローカル コンピューター**左側のウィンドウで表示する証明書の種類のディレクトリを展開します。
+
+### <a name="to-view-certificates-for-the-current-user"></a>現在のユーザーの証明書を表示するには
+
+1. 選択**実行**から、**開始**] メニューの [し、入力*certmgr.msc*します。 
+
+    現在のユーザーの証明書マネージャー ツールが表示されます。 
   
-11. **コンソール ルート** ウィンドウで **証明書 (ローカル コンピューター)** をクリックして、コンピューターの証明書ストアを表示します。  
-  
-12. 任意。 必要に応じて、自分のアカウントの証明書を表示する場合は、手順 3. ～ 6. を繰り返します。 手順 7. では **コンピューター アカウント** を選択する代わりに **ユーザー アカウント** をクリックして、手順 8. ~ 10. を繰り返します。  
-  
-13. 任意。 **ファイル** メニューのをクリックして**保存**または**付けて**します。 再利用できるようにコンソール ファイルを保存します。  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>Internet Explorer を使用した証明書の表示  
- Internet Explorer を使用して、証明書を表示、エクスポート、インポート、または削除することもできます。  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>Internet Explorer で証明書を表示するには  
-  
-1.  Internet Explorer で、次のようにクリックします。**ツール**、 をクリックし、**インターネット オプション**を表示する、**インターネット オプション** ダイアログ ボックス。  
-  
-2.  をクリックして、**コンテンツ**タブ。  
-  
-3.  [**証明書**、] をクリックして**証明書**します。  
-  
-4.  任意の証明書の詳細を表示し、証明書を選択し、クリックして**ビュー**します。  
+2. 下に、証明書を表示する**証明書 - 現在のユーザー**左側のウィンドウで表示する証明書の種類のディレクトリを展開します。
+
   
 ## <a name="see-also"></a>関連項目
-- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [方法: 開発中に使用するための一時的な証明書を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [方法: 証明書のサムプリントを取得します。](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [証明書の使用](working-with-certificates.md)
+- [方法: 開発中に使用するための一時的な証明書を作成します。](how-to-create-temporary-certificates-for-use-during-development.md)
+- [方法: 証明書のサムプリントを取得します。](how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704655"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203627"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic でのアクセス レベル
 *アクセス レベル*程度にアクセスできるは、宣言された要素のどのようなコードは、読み取りし、書き込みをするアクセス許可。 これは、アクセス レベルは、要素自体を宣言する方法だけでなく、要素のコンテナーのアクセス レベルによっても決定されます。 として宣言も含めに含まれる要素のいずれかが含まれている要素にアクセスできないコードにアクセスできない、`Public`します。 など、`Public`で変数を`Private`構造体からは、構造体を含むクラスの内部からアクセスできるそのクラスの外部。  
@@ -101,8 +101,9 @@ Private Protected internalValue As Integer
 
 詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
 
- ## <a name="access-modifiers"></a>アクセス修飾子  
- アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 次の表は、アクセス修飾子を比較します。  
+## <a name="access-modifiers"></a>アクセス修飾子  
+
+アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 次の表は、アクセス修飾子を比較します。  
   
 |アクセス修飾子|付与されるアクセス レベル|要素がこのアクセス レベルを宣言することができます。|宣言のコンテキストをこの修飾子を使用することができます。|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
@@ -116,7 +117,7 @@ Private Protected internalValue As Integer
 ## <a name="see-also"></a>関連項目
 - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

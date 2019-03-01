@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 2036ec8009cfc72a20bcd828d7bc0b252e620cab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610826"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202458"
 ---
 # <a name="-operator-visual-basic"></a>/ 演算子 (Visual Basic)
 2 つの数値を除算し、浮動小数点の結果を返します。  
@@ -76,7 +76,7 @@ expression1 / expression2
 ## <a name="example"></a>例  
  この例では、`/`浮動小数点除算を実行する演算子。 結果は、2 つのオペランドの商。  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  
   
  前の例の式では、2.5 と 3.333333 の値を返します。 結果が浮動小数点では常にことに注意してください (`Double`) 場合でも、両方のオペランドが整数の定数、します。  
   

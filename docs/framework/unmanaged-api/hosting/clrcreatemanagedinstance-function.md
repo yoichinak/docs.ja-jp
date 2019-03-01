@@ -8,6 +8,7 @@ api_location:
 - clr.dll
 - mscorwks.dll
 - mscoreei.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -19,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40a278945dc1a6c84a72221fd55e32f44a146662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5103490da7f3056cf95f7986b46837e059f8212f
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564397"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211833"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 関数
 指定したマネージド型のインスタンスを作成します。  

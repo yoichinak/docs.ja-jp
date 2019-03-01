@@ -2,12 +2,12 @@
 title: Word 文書 (Visual Basic) でのテキストの検索
 ms.date: 07/20/2015
 ms.assetid: eea9819b-a78a-4552-bf13-8837fc0e7a37
-ms.openlocfilehash: 5ab6d337fdf20684027cef3a41fe367bbedd4ee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee052f140f7db5c3c53e116d8b295b120436f6f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720864"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200976"
 ---
 # <a name="finding-text-in-word-documents-visual-basic"></a>Word 文書 (Visual Basic) でのテキストの検索
 このトピックでは、以前のクエリを拡張して、ドキュメント内で特定の文字列の出現箇所をすべて検索します。  

@@ -2,12 +2,12 @@
 title: セット操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741877"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200756"
 ---
 # <a name="set-operations-visual-basic"></a>セット操作 (Visual Basic)
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。  
@@ -48,7 +48,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
  次の例では、`Distinct`を整数のリストから一意の番号を返す LINQ クエリ内の句。  
   
- [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Linq>

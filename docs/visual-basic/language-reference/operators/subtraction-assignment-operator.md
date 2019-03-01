@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: 29a178ece41763dfdf9fe1ff042f419bc879dcd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3495c4e45fe5e1d497578ee3ee6afe874e90eed
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675055"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203046"
 ---
 # <a name="--operator-visual-basic"></a>-= 演算子 (Visual Basic)
 変数またはプロパティの値から式の値を減算し、結果を変数またはプロパティに代入します。  
@@ -44,7 +44,7 @@ variableorproperty -= expression
 ## <a name="example"></a>例  
  次の例では、 `-=` 1 を減算する演算子を`Integer`から別の変数と、その結果、後者の変数を割り当てる。  
   
- [!code-vb[VbVbalrOperators#11](codesnippet/VisualBasic/subtraction-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
 - [-演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)

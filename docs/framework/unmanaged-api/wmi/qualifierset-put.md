@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694140"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201184"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 関数
 名前付き修飾子と値が書き込まれます。 新しい修飾子は、同じ名前の前の値を上書きします。 修飾子が存在しない場合は作成されます。 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | 修飾子は、派生クラスまたはインスタンスでオーバーライドできます。 **これは、既定値です。** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | この修飾子は、インスタンスに反映されます。 |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | 修飾子は、派生クラスに反映します。 |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | この修飾子は、派生クラスまたはインスタンスではオーバーライドできません。 |
-| ' WBEM_FLAVOR_AMENDED | 0x80 | 修飾子がローカライズされます。 |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | この修飾子は、派生クラスまたはインスタンスではオーバーライドできません。 |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | 修飾子がローカライズされます。 |
 
 ## <a name="return-value"></a>戻り値
 

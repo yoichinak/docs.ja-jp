@@ -5,6 +5,7 @@ api_name:
 - CoUninitializeCor
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -16,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349f6922c18a7745c8eff05b1786dc649f8bb70a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520985"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212080"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 関数
 `CoUninitializeCor` は互換性のために残されています。  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976487"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203744"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error ステートメント (Visual Basic)
 エラー処理ルーチンを有効にして、プロシージャ内のルーチンの場所を指定しますエラー処理ルーチンを無効にも使用できます。  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>例  
  この例を使用して、`On Error GoTo`ステートメント、プロシージャ内のエラー処理ルーチンの場所を指定します。 例では、0 で除算しようとするは、エラー数 6 を生成します。 エラーは、エラー処理ルーチンで処理され、コントロールは、エラーの原因となったステートメントに返されます。 `On Error GoTo 0`ステートメントがエラー トラッピングをオフにします。 次に、`On Error Resume Next`ステートメントを使用して、次のステートメントによって生成されたエラーのコンテキストが特定の認識されるようにエラーをトラップするを延期します。 なお`Err.Clear`をオフにするために使用、`Err`エラーを処理した後、オブジェクトのプロパティ。  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

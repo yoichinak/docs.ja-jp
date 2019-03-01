@@ -5,6 +5,7 @@ api_name:
 - CoUninitializeEE
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -16,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef5faff6682ed6c043e81212f2cb27d4cfbd813d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4e22c2e80af37177294d86c2e5775a5c296fe7
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601858"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211859"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE 関数
 `CoUninitializeEE` 廃止され、機能はありません。  
