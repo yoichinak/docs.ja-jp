@@ -1,13 +1,7 @@
 ---
-title: Async および Await を使用した非同期プログラミング (C#)
+title: 'Async および Await を使用した非同期プログラミング (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759510"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Async および Await を使用した非同期プログラミング (C#)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  
@@ -230,7 +224,7 @@ Windows ランタイム プログラミングの非同期 API には、タスク
    
   
 ##  <a name="BKMK_NamingConvention"></a>名前付け規則  
- 慣例により、`async` 修飾子を持つメソッドの名前には、"Async" を追加します。  
+慣例により、一般的に待機可能な型 (たとえば `Task`、`Task<T>`、`ValueTask`、`ValueTask<T>`) を返すメソッドについては、その名前の末尾に "Async" を付けます。 非同期操作を開始するメソッドであっても、そのメソッドが待機可能な型を返さない場合は、メソッド名の末尾に "Async" を付けてはなりませんが、このメソッドが操作の結果を返したりスローしたりしないことを示す "Begin" や "Start" などの動詞を先頭に付けることはかまいません。
   
  イベント、基底クラス、またはインターフェイスのコントラクトが別の名前を表示している場合は、この慣例を無視できます。 たとえば、`Button1_Click` などの共通のイベント ハンドラーの名前は、変更しないことをお勧めします。  
   

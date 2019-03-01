@@ -27,12 +27,12 @@
 ### [基本データ型](standard/base-types/)
 ## [.NET クラス ライブラリ](standard/class-libraries.md)
 ## [アナライザー](standard/analyzers/index.md)
-### [API アナライザー](standard/analyzers/api-analyzer.md) 
+### [API アナライザー](standard/analyzers/api-analyzer.md)
 ### [移植性アナライザー](standard/analyzers/portability-analyzer.md)
 ### [フレームワーク アナライザー](standard/analyzers/framework-analyzer.md)
 ## [例外の処理とスロー](standard/exceptions/)
 ## [.NET のアセンブリ](standard/assembly/index.md)
-### [.NET アセンブリ ファイルの形式](standard/assembly/file-format.md) 
+### [.NET アセンブリ ファイルの形式](standard/assembly/file-format.md)
 ## [ガベージ コレクション](standard/garbage-collection/)
 ## [ジェネリック型](standard/generics.md)
 ## [デリゲートとラムダ](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [.NET Core 2.1 の新機能](core/whats-new/dotnet-core-2-1.md)
 ### [.NET Core 2.0 の新機能](core/whats-new/dotnet-core-2-0.md)
 ## [チュートリアル](core/tutorials/index.md)
-### [Visual Studio 2017 を使用した Windows での完全な .NET Core ソリューションの構築](core/tutorials/using-on-windows-full-solution.md)
 ### [macOS での .NET Core の概要](core/tutorials/using-on-macos.md)
 ### [Visual Studio for Mac を使用した macOS での .NET Core の概要](core/tutorials/using-on-mac-vs.md)
 ### [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [.NET Core コマンド ラインを使用したプロジェクトの整理およびテスト](core/tutorials/testing-with-cli.md)
 ### [クロス プラットフォーム ツールによるライブラリの開発](core/tutorials/libraries.md)
 ### [ASP.NET Core アプリケーションの開発](core/tutorials/aspnet-core.md)
-### [.NET Core 1.0 のパッケージ依存関係バージョンを管理する方法](core/tutorials/managing-package-dependency-versions.md)
 ### [ネイティブ コードからの .NET Core のホスト](core/tutorials/netcore-hosting.md)
 ### [dotnet new のカスタム テンプレートを作成する](core/tutorials/create-custom-template.md)
 ## [パッケージ、メタパッケージ、フレームワーク](core/packages.md)
@@ -270,7 +268,9 @@
 ## [C# のツアー](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## C# の新機能
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -522,9 +522,11 @@
 #### [My で利用可能なオブジェクトのカスタマイズ](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [プログラミングの概念](visual-basic/programming-guide/concepts/index.md)
-### [.NET のアセンブリ](standard/assembly/index.md)
 ### [Async および Await を使用した非同期プログラミング](visual-basic/programming-guide/concepts/async/index.md)
 ### [属性](visual-basic/programming-guide/concepts/attributes/index.md)
+### [呼び出し元情報](visual-basic/programming-guide/concepts/caller-information.md)
+### [コレクション](visual-basic/programming-guide/concepts/collections.md)
+### [共変性と反変性](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [式ツリー](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [反復子](visual-basic/programming-guide/concepts/iterators.md)
 ### [統合言語クエリ (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1211,12 +1213,12 @@
 #### [パイプラインの中間データ値を検査する](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [回帰モデルをトレーニングする](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [PFI を使ってモデルの特徴の重要度を判断する](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### トレーニング済みモデルの使用  
+### トレーニング済みモデルの使用
 #### [PredictionEngine を使った一度に 1 つの予測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [トレーニング済みのモデルを運用化する](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
 #### [Infer.NET を使用した確率的プログラミング](machine-learning/how-to-guides/matchup-app-infer-net.md)
-## 参照
+## 関連項目
 ### [API リファレンス](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)
 ## [リソース](machine-learning/resources/index.md)
 ### [Machine Learning 用語集](machine-learning/resources/glossary.md)

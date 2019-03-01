@@ -1,17 +1,11 @@
 ---
-title: 文字列 - C# プログラミング ガイド
+title: '文字列 - C# プログラミング ガイド'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, strings
-- strings [C#]
+  - 'C# language, strings'
+  - 'strings [C#]'
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236363"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -31,22 +25,22 @@ ms.locfileid: "53236363"
 ## <a name="immutability-of-string-objects"></a>文字列オブジェクトの不変性  
  文字列オブジェクトは*変更不可*です。つまり、作成した文字列オブジェクトは変更できません。 文字列を変更するように見える <xref:System.String> メソッドと C# 演算子はすべて、実際には新しい文字列オブジェクトで結果を返します。 次の例では、`s1` と `s2` の内容を連結して 1 つの文字列を形成するときに、2 つの元の文字列は変更されません。 `+=` 演算子で、連結した内容を含む新しい文字列が作成されます。 新しいオブジェクトは変数 `s1` に代入され、`s1` に代入された元のオブジェクトはガベージ コレクションに対して解放されます。これは、他の変数がこのオブジェクトへの参照を保持していないためです。  
   
- [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
  文字列の "変更" では、実際には文字列が新しく作成されるため、文字列への参照を作成するときには注意が必要です。 文字列の参照を作成し、元の文字列を "変更" する場合、参照は文字列が変更されたときに作成された新しいオブジェクトではなく、元のオブジェクトを指したままになります。 この動作を表すコードの例を次に示します。  
   
- [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
  元の文字列での検索操作や置換操作などの変更に基づく新しい文字列を作成する方法の詳細については、「[方法: 文字列の内容を変更する](../../how-to/modify-string-contents.md)」を参照してください。  
   
 ## <a name="regular-and-verbatim-string-literals"></a>標準リテラル文字列と逐語的リテラル文字列  
  次の例に示すように、C# で提供されるエスケープ文字を埋め込む必要がある場合は、標準リテラル文字列を使用します。  
   
- [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
  文字列テキストに円記号が含まれる場合 (ファイル パスなど) は、使いやすさと読みやすさを考慮して、逐語的文字列を使用します。 逐語的文字列は、文字列テキストの一部として改行文字を保持するため、複数行文字列の初期化に使用できます。 引用符を逐語的文字列に埋め込むには、二重引用符を使用します。 逐語的文字列の一般的な使用方法の例を次に示します。  
   
- [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
 ## <a name="string-escape-sequences"></a>文字列のエスケープ シーケンス  
   

@@ -1,16 +1,10 @@
 ---
-title: C# の概要 - 対話型チュートリアル
-description: お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します
+title: 'C# の概要 - 対話型チュートリアル'
+description: 'お使いのブラウザーで C# を学習し、独自の開発環境で使用を開始します'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186170"
 ---
-# <a name="introduction-to-c"></a>C# の概要 #
+# <a name="introduction-to-c"></a>C\# の概要
 
 C# の概要に関するチュートリアルへようこそ。 まずは、お使いのブラウザーで実行できる、対話形式のレッスンを開始します。
 
@@ -24,27 +18,27 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[C# における数値](numbers-in-csharp.yml)
 
-「[C# における数値](numbers-in-csharp.yml)」チュートリアルでは、コンピューターが数値を格納する方法と、異なる数値型で計算を実行する方法について説明します。 丸め処理の基礎と、C# で算術演算を実行する方法を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](numbers-in-csharp-local.md)使用できます。
+[C# における数値](numbers-in-csharp.yml)チュートリアルでは、コンピューターに数値が格納されるしくみとさまざまな数値型で計算するしくみが紹介されます。 丸め処理の基礎と、C# で算術演算を実行する方法を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](numbers-in-csharp-local.md)使用できます。
 
-このチュートリアルでは、「[Hello World](hello-world.yml)」レッスンが終了していることを前提としています。
+このチュートリアルでは、[Hello world](hello-world.yml) レッスンを修了していることが前提条件となります。
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[分岐とループ](branches-and-loops.yml)
 
-「[分岐とループ](branches-and-loops.yml)」のチュートリアルでは、変数に格納された値に基づいて、さまざまなパスでコードを実行するための基礎について説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](branches-and-loops-local.md)使用できます。
+[分岐とループ](branches-and-loops.yml) チュートリアルでは、変数に格納されている値に基づき、コード実行のさまざまなパスを選択することの基本を説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](branches-and-loops-local.md)使用できます。
 
-このチュートリアルでは、「[Hello World](hello-world.yml)」レッスンと「[C# における数値](numbers-in-csharp.yml)」レッスンを終了していることを前提としています。
+このチュートリアルでは、[Hello world](hello-world.yml) レッスンと [C# における数値](numbers-in-csharp.yml)レッスンを修了していることが前提条件となります。
 
 ## <a name="string-interpolationinterpolated-stringsyml"></a>[文字列補間](interpolated-strings.yml)
 
-[文字列補間](interpolated-strings.yml)のチュートリアルでは、値を文字列に挿入する方法を示します。 C# の埋め込み式を使用して挿入文字列を作成する方法と、出力文字列の書式設定を制御する方法について学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](interpolated-strings-local.md)使用できます。
+[文字列補間](interpolated-strings.yml)チュートリアルでは、文字列に値を挿入する方法について説明します。 C# の埋め込み式を使用して挿入文字列を作成する方法と、出力文字列の書式設定を制御する方法について学習します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](interpolated-strings-local.md)使用できます。
 
-このチュートリアルでは、「[Hello World](hello-world.yml)」、「[C# における数値](numbers-in-csharp.yml)」、および「[分岐とループ](branches-and-loops.yml)」の各レッスンが終了していることを前提としています。
+このチュートリアルでは、「[Hello World](hello-world.yml)」、「[C# における数値](numbers-in-csharp.yml)」、「[分岐とループ](branches-and-loops.yml)」の各レッスンを完了していることを前提としています。
 
 ## <a name="list-collectionlist-collectionyml"></a>[リスト コレクション](list-collection.yml)
 
 「[リスト コレクション](list-collection.yml)」レッスンでは、データのシーケンスを格納するリスト コレクション型について説明します。 項目の追加方法や削除方法、項目の検索方法、リストを並べ替える方法を学習します。 さまざまな種類のリストを紹介します。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](arrays-and-collections.md)使用できます。
 
-このチュートリアルでは、上に挙げたレッスンを終了していることを前提としています。
+このチュートリアルでは、上に挙げたレッスンを修了していることを前提としています。
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[クラスの概要](introduction-to-classes.md)
 
