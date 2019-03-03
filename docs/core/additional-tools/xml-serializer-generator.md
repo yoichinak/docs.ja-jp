@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 9070c42a7cef389a2a13f6be6f26f7dafd7f25e2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e5b41b6e5d747cd99a80930bb64e36839af4ab66
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244779"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211898"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -34,8 +34,8 @@ ms.locfileid: "53244779"
 
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) をお試しください。
-  
-## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>.NET Core コンソール アプリケーションで Microsoft XML Serializer Generator を使用する 
+
+## <a name="use-microsoft-xml-serializer-generator-in-a-net-core-console-application"></a>.NET Core コンソール アプリケーションで Microsoft XML Serializer Generator を使用する
 
 次の手順では、.NET Core コンソール アプリケーションで XML Serializer Generator を使用する方法について説明します。
 
@@ -49,7 +49,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>MyApp プロジェクトで Microsoft.XmlSerializer.Generator パッケージへの参照を追加する
 
-[`dotnet add package`](../tools//dotnet-add-package.md) コマンドを使用して、プロジェクトで参照を追加します。 
+[`dotnet add package`](../tools//dotnet-add-package.md) コマンドを使用して、プロジェクトで参照を追加します。
 
 型:
 
@@ -107,7 +107,7 @@ var serializer = new System.Xml.Serialization.XmlSerializer(typeof(MyClass));
 コンソール ウィンドウに次のコマンドを入力します。
 
 ```console
-$ dotnet run
+dotnet run
 ```
 
 > [!NOTE]
@@ -116,7 +116,7 @@ $ dotnet run
 > [!IMPORTANT]
 > このチュートリアルで紹介した、アプリケーションを実行するコマンドと手順は、開発時にのみ利用されます。 アプリの展開に進むときは、.NET Core アプリの別の[展開方法](../deploying/index.md)や [`dotnet publish`](../tools/dotnet-publish.md) コマンドを利用した方が効果的な場合もあります。
 
-すべて正常に終了すると、*MyApp.XmlSerializers.dll* というアセンブリが生成されます。 
+すべて正常に終了すると、*MyApp.XmlSerializers.dll* というアセンブリが生成されます。
 
 おめでとうございます!  今回の成果:
 > [!div class="checklist"]

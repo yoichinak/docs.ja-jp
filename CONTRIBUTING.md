@@ -107,7 +107,7 @@ Microsoft では、リポジトリ内に存在するコードを次のように�
 
 詳細については、[サンプルの Readme](https://github.com/dotnet/samples/blob/master/README.md) を参照してください。
 
-## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス #
+## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス
 
 C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます  (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。 
 
