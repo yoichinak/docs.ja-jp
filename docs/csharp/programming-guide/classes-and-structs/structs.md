@@ -6,18 +6,18 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 609169d4624802f679f9661b7aa0596403cc48e7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6c260408b7cdbb7bd55477a57ca879d89c3c0144
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261621"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977033"
 ---
 # <a name="structs-c-programming-guide"></a>構造体 (C# プログラミング ガイド)
 
 構造体は [struct](../../language-reference/keywords/struct.md) キーワードを使って定義します。次はその例です。  
   
-[!code-csharp[csProgGuideObjects#39](./codesnippet/CSharp/structs_1.cs)]  
+ [!code-csharp[csProgGuideObjects#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#39)]  
   
 構造体の構文はクラスとほとんど同じです。 構造体の名前を、有効な C# の[識別子名](../inside-a-program/identifier-names.md)にする必要があります。 構造体は次の点でクラスよりも制限されています。  
   

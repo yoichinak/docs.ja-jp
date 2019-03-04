@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605134"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201665"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーを利用できる XML ドキュメント、SQL データベース、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
@@ -28,7 +28,7 @@ ms.locfileid: "54605134"
   
  クエリ操作の 3 つの手順がソース コードでどのように表されるかを次の例に示します。 この例では、わかりやすくするために整数の配列をデータ ソースとして使用していますが、他のデータ ソースを使用する場合にも同じ概念が当てはまります。 このコードは、このトピックの残りの部分全体を通して参照されます。  
   
- [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
  次の図は、クエリ操作全体を表しています。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、クエリの実行はクエリ自体とは別個のものです。つまり、クエリ変数を作成するだけでは、データは取得されません。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54605134"
   
  クエリ可能型は、変更や特別な処理を行わなくても、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] データ ソースとして使用できます。 ソース データがメモリ内にクエリ可能型として存在していない場合、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーは、そのような型としてソース データを表す必要があります。 たとえば、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、クエリ可能な <xref:System.Xml.Linq.XElement> 型に XML ドキュメントが読み込まれます。  
   
- [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] では、まず、デザイン時に手動で、または Visual Studio で [LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を使用して、オブジェクト リレーショナル マッピングを作成します。 オブジェクトに対するクエリを記述すると、実行時には、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] によってデータベースとの通信が処理されます。 次の例では、`Customers` がデータベース内の特定のテーブルを表し、クエリ結果の型 <xref:System.Linq.IQueryable%601> が <xref:System.Collections.Generic.IEnumerable%601> から派生しています。  
   
@@ -71,7 +71,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>遅延実行  
  先に説明したように、クエリ変数自体が行うのはクエリ コマンドの格納のみです。 実際のクエリの実行は、`foreach` ステートメントでクエリ変数が反復処理されるまで延期されます。 この概念を "*遅延実行*" と呼びます。遅延実行の例を次に示します。  
   
- [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#4)]  
   
  `foreach` ステートメントでは、クエリ結果の取得も行われます。 たとえば、前のクエリでは、返されるシーケンスの各値が反復変数 `num` に (一度に 1 つずつ) 格納されます。  
   
@@ -80,11 +80,11 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>即時実行の強制  
  一連のソース要素に対して集計関数を実行するクエリでは、最初にそれらの要素を反復処理する必要があります。 このようなクエリには、`Count`、`Max`、`Average`、`First` などがあります。 これらのクエリでは、明示的に `foreach` ステートメントを使用しなくても同等の処理が実行されます。これは、結果を返すためにクエリ自体が `foreach` を使用する必要があるからです。 これらの種類のクエリでは、`IEnumerable` コレクションではなく、単一の値が返されることにも注意してください。 次のクエリは、ソース配列に含まれている偶数の数を返します。  
   
- [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#5)]  
   
  クエリの即時実行を強制し、その結果をキャッシュするには、<xref:System.Linq.Enumerable.ToList%2A> メソッドまたは <xref:System.Linq.Enumerable.ToArray%2A> メソッドを呼び出します。  
   
- [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#6)]  
   
  クエリ式の直後に `foreach` ループを配置することでも実行を強制できます。 ただし、`ToList` または `ToArray` を呼び出した場合は、単一のコレクション オブジェクトにすべてのデータをキャッシュする処理も行われます。  
   

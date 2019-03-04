@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620176"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972925"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>等価比較 (C# プログラミング ガイド)
 2 つの値が等しいかどうかを比較することが必要な場合があります。 そのような場合、*値が等価であること* (*等価性*と呼ばれる) をテストすることになります。等価性とは 2 つの変数に含まれる値が等しいことを意味します。 また、2 つの変数がメモリ内の同一の基になるオブジェクトを参照しているかどうかを確認する必要がある場合もあります。 このタイプの等価は、*参照の等価性*または*同一性*と呼ばれます。 ここでは、2 種類の等価について説明します。また、詳細について他のトピックへのリンクを示します。  
@@ -18,7 +18,7 @@ ms.locfileid: "54620176"
 ## <a name="reference-equality"></a>参照の等価性  
  参照の等価とは、2 つのオブジェクト参照が同一の基になるオブジェクトを参照していることを意味します。 次の例に示すように、これは簡単な代入によって生じます。  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  このコードでは、2 つのオブジェクトが作成されますが、代入ステートメント以降は、両方の参照が同一のオブジェクトを参照しています。 したがって、参照の等価性があります。 2 つの参照が同じオブジェクトを参照しているかどうかを判断するには、<xref:System.Object.ReferenceEquals%2A> メソッドを使用します。  
   

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694972"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202601"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
-制約では、型引数に必要な機能をコンパイラに通知します。 制約のない型引数は、任意の型にすることができます。 コンパイラは、.NET 型の最終的な基底クラスになる、<xref:System.Object?displayPropety=nameWithType> のメンバーを見なすことができるだけです。 詳細については、「[制約を使用する理由](#why-use-constraints)」を参照してください。 クライアント コードで、この制限で許可されていない型を使用してクラスをインスタンス化しようとすると、コンパイル時エラーが発生します。 制約を指定するには、`where` コンテキスト キーワードを使用します。 次の表では、7 種類の制約を一覧しています。
+制約では、型引数に必要な機能をコンパイラに通知します。 制約のない型引数は、任意の型にすることができます。 コンパイラは、.NET 型の最終的な基底クラスになる、<xref:System.Object?displayProperty=nameWithType> のメンバーを見なすことができるだけです。 詳細については、「[制約を使用する理由](#why-use-constraints)」を参照してください。 クライアント コードで、この制限で許可されていない型を使用してクラスをインスタンス化しようとすると、コンパイル時エラーが発生します。 制約を指定するには、`where` コンテキスト キーワードを使用します。 次の表では、7 種類の制約を一覧しています。
 
 |制約|説明|
 |----------------|-----------------|

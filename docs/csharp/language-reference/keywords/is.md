@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710353"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977054"
 ---
-# <a name="is-c-reference"></a>is (C# リファレンス) #
+# <a name="is-c-reference"></a>is (C# リファレンス)
 
 オブジェクトに指定された型との互換性があるかどうかを確認するか、(C# 7.0 以降では) パターンとの比較によって式をテストします。
 
-## <a name="testing-for-type-compatibility"></a>型の互換性に関するテスト ##
+## <a name="testing-for-type-compatibility"></a>型の互換性に関するテスト
 
 `is` キーワードを使用すると、実行時に型の互換性が評価されます。 これにより、オブジェクト インスタンスや式の結果を指定された型に変換できるかどうかが判定されます。 構文は次のとおりです
 
@@ -56,7 +56,7 @@ ms.locfileid: "54710353"
 
 C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。
 
-## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング ##
+## <a name="pattern-matching-with-is"></a>`is` を使用したパターン マッチング
 
 C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントでパターン マッチングがサポートされています。 `is` キーワードでは、以下のパターンがサポートされています。
 
@@ -104,7 +104,7 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />定数パターン ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />定数パターン
 
 定数パターンを使用してパターン マッチングを実行すると、式が指定された定数と等しいかどうかが `is` によってテストされます。 C# 6 以前のバージョンでの定数パターンは [switch](switch.md) ステートメントでサポートされています。 C# 7.0 以降では、`is` ステートメントでもサポートされています。 構文は次のとおりです。
 

@@ -5,14 +5,14 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 74ad1c5ddae69864b85099535e8b83a4504275a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 642422a4cc077ffebb5ee6db9d7ffb937fc1e173
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183131"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212353"
 ---
-# <a name="lambda-expressions"></a>ラムダ式 #
+# <a name="lambda-expressions"></a>ラムダ式
 
 "*ラムダ式*" は、オブジェクトとして扱われるコード ブロック (式またはステートメント ブロック) です。 これは、引数としてメソッドに渡すことができるほか、メソッドの呼び出しによって返すこともできます。 ラムダ式は、次の処理によく使用されます。
 
@@ -32,7 +32,7 @@ ms.locfileid: "50183131"
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/lambda2.cs#2)]
 
-## <a name="expression-lambdas"></a>式形式のラムダ ##
+## <a name="expression-lambdas"></a>式形式のラムダ
 
  => 演算子の右辺に式があるラムダ式を "*式形式のラムダ*" と呼びます。 式形式のラムダは、[式ツリー](expression-trees.md)の構築に幅広く使用されます。 式形式のラムダは式の結果を返します。基本的な形式は次のとおりです。
 
@@ -54,7 +54,7 @@ ms.locfileid: "50183131"
 
 この例では、式形式のラムダの本体をメソッド呼び出しで構成できることに注目してください。 ただし、SQL Server や Entity Framework (EF) など、.NET Framework の外部で評価される式ツリーを作成する場合は、ラムダ式内でメソッド呼び出しを使用することを控える必要があります。これは、.NET 実装のコンテキストの外部では、これらのメソッドが通用しない可能性があるためです。 この状況でメソッド呼び出しを使用する場合は、メソッド呼び出しを正常に解決できるように必ず徹底的にテストしてください。
 
-## <a name="statement-lambdas"></a>ステートメント形式のラムダ ##
+## <a name="statement-lambdas"></a>ステートメント形式のラムダ
 
 ステートメント形式のラムダは式形式のラムダに似ていますが、ステートメントが中かっこで囲まれる点が異なります。
 
@@ -68,7 +68,7 @@ ms.locfileid: "50183131"
 
 匿名メソッドと同様、ステートメント形式のラムダを使用して式ツリーを作成することはできません。
 
-## <a name="async-lambdas"></a>非同期ラムダ ##
+## <a name="async-lambdas"></a>非同期ラムダ
 
 [async](language-reference/keywords/async.md) キーワードと [await](language-reference/keywords/await.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、この例では、非同期に実行される `ShowSquares` メソッドを呼び出します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "50183131"
 
 非同期メソッドの作成および使用方法の詳細については、「[Async および Await を使用した非同期プログラミング](programming-guide/concepts/async/index.md)」を参照してください。
 
-## <a name="lambda-expressions-and-tuples"></a>ラムダ式とタプル ##
+## <a name="lambda-expressions-and-tuples"></a>ラムダ式とタプル
 
 C# 7.0 以降、C# 言語はタプルの組み込みサポートを提供します。 タプルは、ラムダ式への引数として指定できるほか、ラムダ式で返すこともできます。 場合によっては、C# コンパイラは、型の推定を使用して、タプル コンポーネントの型を判定することもあります。
 
@@ -90,7 +90,7 @@ C# 7.0 以降、C# 言語はタプルの組み込みサポートを提供しま�
 
 C# におけるタプルのサポートの詳細については、「[C# Tuple types (C# のタプル型)](tuples.md)」を参照してください。
 
-## <a name="lambdas-with-the-standard-query-operators"></a>標準クエリ演算子を使用したラムダ ##
+## <a name="lambdas-with-the-standard-query-operators"></a>標準クエリ演算子を使用したラムダ
 
 いくつかある実装の中で特に、LINQ to Objects は、汎用デリゲートの <xref:System.Func%601> ファミリに属する型の入力パラメーターを持ちます。 これらのデリゲートは、型パラメーターを使用して、入力パラメーターの数と型に加え、デリゲートの戻り値の型を定義します。 `Func` デリゲートは、ソース データのセット内の各要素に適用されるユーザー定義の式をカプセル化する場合に非常に便利です。 たとえば、<xref:System.Func%601> デリゲートを考えてみます。この構文は次のとおりです。
 
@@ -118,7 +118,7 @@ C# におけるタプルのサポートの詳細については、「[C# Tuple t
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#6)]
 
-## <a name="type-inference-in-lambda-expressions"></a>ラムダ式の型の推定 ##
+## <a name="type-inference-in-lambda-expressions"></a>ラムダ式の型の推定
 
 ラムダを記述する際、多くの場合は入力パラメーターの型を指定する必要はありません。これは、ラムダ本体やパラメーターの型など C# 言語仕様に記述されている要素に基づいて、コンパイラが型を推定できるためです。 ほとんどの標準クエリ演算子では、最初の入力がソース シーケンス内の要素の型です。 `IEnumerable<Customer>` を問い合わせると、入力変数は `Customer` オブジェクトであると推論されます。これは、そのメソッドとプロパティにアクセスできることを意味します。
 
@@ -134,7 +134,7 @@ C# におけるタプルのサポートの詳細については、「[C# Tuple t
 
 共通型システムには "ラムダ式" の概念が組み込まれていないため、ラムダ式自体は型を持ちません。 しかし、変則的ではあってもラムダ式の "型" を表現できると都合が良い場合もあります。 このような場合の型は、ラムダ式の変換後のデリゲート型または <xref:System.Linq.Expressions.Expression> 型を指します。
 
-## <a name="variable-scope-in-lambda-expressions"></a>ラムダ式における変数のスコープ ##
+## <a name="variable-scope-in-lambda-expressions"></a>ラムダ式における変数のスコープ
 
 ラムダは、"*外部変数*" を参照できます (「[匿名メソッド](programming-guide/statements-expressions-operators/anonymous-methods.md)」を参照)。外部変数とは、ラムダ関数を定義するメソッド内のスコープ、またはラムダ式を含む型のスコープに存在する変数のことです。 こうして取り込まれた変数は、ラムダ式で使用するために格納されます。これは、変数がスコープ外に出てガベージ コレクトされる場合でも変わりません。 外部変数は、ラムダ式で使用される前に明示的に代入する必要があります。 次の例は、こうした規則を示しています。
 
@@ -152,7 +152,7 @@ C# におけるタプルのサポートの詳細については、「[C# Tuple t
 
 - ラムダ式には、 `goto` ステートメント、 `break` ステートメント、およびジャンプ ステートメントのジャンプ先がブロック外である場合はラムダ式の内部にある `continue` ステートメントを含めることはできません。 また、ジャンプ先がブロックの内部にある場合は、ラムダ式の外部でジャンプ ステートメントを使用するとエラーになります。
 
-## <a name="see-also"></a>関連項目 ##
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ)](../standard/using-linq.md)
 - [匿名メソッド](programming-guide/statements-expressions-operators/anonymous-methods.md)

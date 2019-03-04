@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 4725e82c6b085e220f63346a8c6838ecc288efa1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 475e9ab5c59260544b0e413e165953c0b84449b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263655"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973900"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -32,13 +32,13 @@ ms.locfileid: "55263655"
  `description`  
  メンバーへのアクセスの説明です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  \<permission> タグを使用すると、メンバーのアクセスを文書化できます。 <xref:System.Security.PermissionSet> クラスを使用すると、メンバーへのアクセスを指定できます。  
   
  コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- [!code-csharp[csProgGuideDocComments#8](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/permission_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  
   
 ## <a name="see-also"></a>関連項目
 

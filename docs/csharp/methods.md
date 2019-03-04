@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617201"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202679"
 ---
-# <a name="methods"></a>メソッド #
+# <a name="methods"></a>メソッド
 
 メソッドは、一連のステートメントが含まれているコード ブロックです。 必要なメソッド引数を指定してプログラムからメソッドを呼び出すと、メソッド内のステートメントが実行されます。 C# では、実行されるすべての命令がメソッドのコンテキストで実行されます。 `Main` メソッドは、すべての C# アプリケーションのエントリ ポイントです。プログラムが開始されると、このメソッドが共通言語ランタイム (CLR) によって呼び出されます。
 
@@ -36,7 +36,8 @@ ms.locfileid: "54617201"
 - [反復子](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>メソッド シグネチャ ##
+
+## <a name="method-signatures"></a>メソッド シグネチャ
 
 メソッドは次の項目を指定することで `class` または `struct` で宣言されます。
 
@@ -58,7 +59,8 @@ ms.locfileid: "54617201"
 `Motorcycle` クラスにオーバーロードされたクラス `Drive` が含まれていることに注意してください。 2 つのメソッドの名前が同じであり、パラメーターの種類で識別する必要があります。
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>メソッドの呼び出し ##
+
+## <a name="method-invocation"></a>メソッドの呼び出し
 
 メソッドは*インスタンス*または*静的*になります。 インスタンス メソッドを呼び出すには、オブジェクトをインスタンス化し、そのオブジェクトでメソッドを呼び出す必要があります。インスタンス メソッドはこのインスタンスとそのデータを操作します。 メソッドが属する型の名前を参照して静的メソッドを呼び出します。静的メソッドはインスタンス データを操作しません。 オブジェクト インスタンス経由で静的メソッドを呼び出そうとすると、コンパイラ エラーが発生します。
 
@@ -80,8 +82,9 @@ ms.locfileid: "54617201"
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>継承されたメソッドとオーバーライドされたメソッド ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>継承されたメソッドとオーバーライドされたメソッド
 
 型に明示的に定義されるメンバーに加え、型は、その基底クラスに定義されているメンバーを継承します。 マネージド型という系統のすべての型は <xref:System.Object> クラスから直接的または間接的に継承するため、すべての型が、<xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType>、<xref:System.Object.ToString> など、そのメンバーを継承します。 次の例では、`Person` クラスを定義し、2 つの `Person` オブジェクトをインスタンス化し、`Person.Equals` メソッドを呼び出して 2 つのオブジェクトが等しいかどうかを判断します。 ただし、`Equals` メソッドは `Person` クラスに定義されていません。<xref:System.Object> から継承されたものです。
 
@@ -92,12 +95,14 @@ ms.locfileid: "54617201"
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>パラメーターを渡す ##
+
+## <a name="passing-parameters"></a>パラメーターを渡す
 
 C# の型は、*値型*と*参照型*のどちらかに区別されます。 組み込みの値型の一覧については、「[型と変数](./tour-of-csharp/types-and-variables.md)」を参照してください。 既定では、値型と参照型の両方が値によりメソッドに渡されます。
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>パラメーターを値で渡す ###
+
+### <a name="passing-parameters-by-value"></a>パラメーターを値で渡す
 
 値型が値でメソッドに渡されるとき、オブジェクト自体の代わりにオブジェクトのコピーがメソッドに渡されます。 そのため、呼び出されたメソッドでオブジェクトに加えた変更は、コントロールが呼び出し元に戻ったとき、元のオブジェクトで反映されません。
 
@@ -112,7 +117,8 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>パラメーターの参照渡し ###
+
+### <a name="passing-parameters-by-reference"></a>パラメーターの参照渡し
 
 メソッドの引数の値を変更し、コントロールが呼び出し元に戻ったときにその変更を反映させるには、参照でパラメーターを渡します。 パラメーターを参照で渡すには、[`ref`](language-reference/keywords/ref.md) または [`out`](language-reference/keywords/out-parameter-modifier.md) キーワードを使用します。 値を参照で渡すことで、コピーを回避することもできますが、[`in`](language-reference/keywords/in-parameter-modifier.md) キーワードを使用して変更を防ぐこともできます。
 
@@ -127,7 +133,8 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 参照型パラメーターを渡すことで、個々の要素またはフィールドの値ではなく、参照自体の値を変更できます。
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>パラメーター配列 ###
+
+### <a name="parameter-arrays"></a>パラメーター配列
 
 メソッドに厳密な数の引数を指定する要件が限定的になることがあります。 `params` キーワードを利用し、パラメーターがパラメーター配列であることを示すことで、可変数の引数でメソッドを呼び出すことができます。 `params` キーワードでタグが付けられたパラメーターは配列型にする必要があり、メソッドのパラメーター リストの最後のパラメーターにする必要があります。
 
@@ -142,7 +149,8 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>省略可能なパラメーターと引数 ##
+
+## <a name="optional-parameters-and-arguments"></a>省略可能なパラメーターと引数
 
 メソッド定義では、そのパラメーターが必須であるか、任意であるかを指定できます。 既定では、パラメーターは必須です。 省略可能なパラメーターを指定するには、メソッド定義にパラメーターの既定値を追加します。 メソッドが呼び出されるとき、省略可能なパラメーターに引数が指定されていなければ、既定値が代わりに使用されます。
 
@@ -172,8 +180,9 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 - 複数の候補が見つかった場合、明示的に指定される引数には、優先変換に関するオーバーロード解決の規則が適用されます。 任意のパラメーターの省略された引数は無視されます。
 - 2 つの候補が等しく良好であると判断された場合、呼び出しで引数が省略された任意のパラメーターのない候補が優先されます。 これはパラメーターの少ない候補に関するオーバーロード解決の一般優先設定の結果です。
 
- <a name="return"></a>
- ## <a name="return-values"></a>戻り値 ##
+<a name="return"></a>
+
+## <a name="return-values"></a>戻り値
 
 メソッドは、呼び出し元に値を返すことができます。 戻り値の型 (メソッド名の前に記述されている型) が `void`でない場合、メソッドは、`return` キーワードを使用して値を返すことができます。 `return` キーワードに続いて変数、定数、または戻り値の型に一致する値が記述されたステートメントは、その値をメソッドの呼び出し元に返します。 戻り値の型が void 以外のメソッドで値を返すには、 `return` キーワードを使用する必要があります。 また、 `return` キーワードは、メソッドの実行を中止します。
 
@@ -229,8 +238,9 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>拡張メソッド ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>拡張メソッド
 
 通常、既存の型にメソッドを追加する方法が 2 つあります。
 
@@ -242,7 +252,8 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 詳細については、「[拡張メソッド](programming-guide/classes-and-structs/extension-methods.md)」を参照してください。
 
 <a name="async"></a>
-## <a name="async-methods"></a>非同期メソッド ##
+
+## <a name="async-methods"></a>非同期メソッド
 
 非同期機能を使用することによって、明示的なコールバックを使用せずに、または複数のメソッドやラムダ式にわたって手動でコードを分割することなく、非同期メソッドを呼び出すことができます。
 
@@ -262,7 +273,8 @@ Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
  非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング](async.md)」、「[非同期プログラムにおける制御フロー](programming-guide/concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](programming-guide/concepts/async/async-return-types.md)」を参照してください。
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>式形式のメンバー ##
+
+## <a name="expression-bodied-members"></a>式形式のメンバー
 
 メソッドの定義としては、式の結果を即座に返すか、またはメソッドの本文として 1 つのステートメントを含むものが一般的です。  `=>`を使用してこのようなメソッドを定義するための構文ショートカットがあります。
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 メソッドが `void` を返すか、非同期メソッドである場合は、メソッドの本文を (ラムダの場合と同様に) ステートメント式にする必要があります。  プロパティとインデクサーは読み取り専用にする必要があるため、`get` アクセサー キーワードは使用しないでください。
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iterators ##
+
+## <a name="iterators"></a>Iterators
 
 反復子は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子は、[yield return](language-reference/keywords/yield.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `yield return` ステートメントに到達すると、現在の場所が記録されます。呼び出し元は、シーケンス内の次の要素を要求できます。
 
@@ -286,7 +299,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 詳細については、「 [反復子](programming-guide/concepts/iterators.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目 ##
+## <a name="see-also"></a>関連項目
 
 - [アクセス修飾子](language-reference/keywords/access-modifiers.md)
 - [静的クラスと静的クラス メンバー](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: fe304b9c6631591cf7a3d62fcecd2ed3ca05db9c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b316927c5dfd5eda05bea653f9a601cca9865af3
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257292"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982064"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -32,7 +32,7 @@ ms.locfileid: "55257292"
  `description`  
  例外の説明。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  \<exception> タグを使用すると、スローできる例外を指定できます。 このタブは、メソッド、プロパティ、イベント、インデクサーの定義に適用できます。  
   
  コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定してドキュメント コメントをファイルに出力します。  
@@ -40,7 +40,7 @@ ms.locfileid: "55257292"
  例外処理の詳細については、「[例外と例外処理](../../../csharp/programming-guide/exceptions/index.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  
   
 ## <a name="see-also"></a>関連項目
 

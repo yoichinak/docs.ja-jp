@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 456555a34347771c9918341d7d1a797e611f5577
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589318"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203111"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>方法: 型の値の等価性を定義する (C# プログラミング ガイド)
 クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。 ただし、いずれの場合も、クラスおよび構造体の両方について、等価性を保証する 5 つの条件に従って実装する必要があります。  
@@ -48,7 +48,7 @@ ms.locfileid: "54589318"
 ## <a name="example"></a>例  
  次の例は、クラス (参照型) で値の等価性を実装する方法を示しています。  
   
- [!code-csharp[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
+ [!code-csharp[csProgGuideStatements#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#19)]  
   
  クラス (参照型) の場合、両方の <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの既定の実装で、参照の等価性の比較は実行されますが、値の等価性のチェックは実行されません。 実装が仮想メソッドをオーバーライドする場合、その目的は、仮想メソッドに値の等価性のセマンティクスを提供することです。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54589318"
 ## <a name="example"></a>例  
  次の例は、構造体 (値型) で値の等価性を実装する方法を示しています。  
   
- [!code-csharp[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
+ [!code-csharp[csProgGuideStatements#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#20)]  
   
  構造体の場合、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (<xref:System.ValueType?displayProperty=nameWithType> でオーバーライドされるバージョン) の既定の実装で、リフレクションを使用して値の等価性のチェックが実行され、型のすべてのフィールドの値が比較されます。 実装が構造体の仮想 `Equals` メソッドをオーバーライドする場合、その目的は、値の等価性のチェックをより効率的に実行することと、オプションで、構造体のフィールドまたはプロパティの一部のサブセットに基づいて比較を行うことです。  
   

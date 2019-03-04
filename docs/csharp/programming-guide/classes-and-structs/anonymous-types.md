@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729760"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971170"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名型 (C# プログラミング ガイド)
 匿名型を使用すると、あらかじめ明示的に型を定義することなく、一連の読み取り専用プロパティを単一のオブジェクトにカプセル化できるので便利です。 型の名前はコンパイラにより生成され、ソース コード レベルでは使用できません。 各プロパティの型はコンパイラにより推測されます。  
@@ -36,7 +36,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  匿名型のメンバー名を指定しない場合、コンパイラは初期化に使用されるプロパティと同じ名前を匿名型メンバーに付けます。 前の例で示されているように、式を使用して初期化されるプロパティの名前を指定する必要があります。 次の例では、`Color` と `Price` が匿名型のプロパティの名前になっています。  
   
- [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
  通常、変数の初期化に匿名型を使用する場合は、[var](../../../csharp/language-reference/keywords/var.md) を使用することにより、変数を暗黙的に型指定したローカル変数として宣言します。 コンパイラだけが匿名型の基になる名前にアクセスできるため、変数宣言では型の名前を指定できません。 `var` の詳細については、「[暗黙的に型指定されたローカル変数](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
@@ -46,7 +46,7 @@ Console.WriteLine(v.Amount + v.Message);
 var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", diam = 1 }};  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  匿名型は [object](../../../csharp/language-reference/keywords/object.md) から直接派生した [class](../../../csharp/language-reference/keywords/class.md) 型であり、[object](../../../csharp/language-reference/keywords/object.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
   
  アセンブリ内の複数の匿名オブジェクト初期化子が、同じ順序で同じ名前や型を持つプロパティのシーケンスを指定する場合、コンパイラはそれらのオブジェクトを同じ型のインスタンスとして処理します。 これらのオブジェクトは、コンパイラで生成された同一の型情報を共有します。  

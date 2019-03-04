@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607018"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202354"
 ---
 # <a name="inheritance-c-programming-guide"></a>継承 (C# プログラミング ガイド)
 
@@ -35,7 +35,7 @@ ms.locfileid: "54607018"
   
  次の例は、前の図に示したクラスの関係が C# でどのように表現されるかを示しています。 また、`WorkItem` が仮想メソッド <xref:System.Object.ToString%2A?displayProperty=nameWithType> をオーバーライドする方法と、`ChangeRequest` クラスが `WorkItem` によるメソッドの実装を継承する方法も示しています。  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>抽象メソッドと仮想メソッド  
  基底クラスでメソッドを [virtual](../../../csharp/language-reference/keywords/virtual.md) として宣言する場合、派生クラスはそのメソッドを独自の実装で[オーバーライド](../../../csharp/language-reference/keywords/override.md)することができます。 基底クラスでメンバーを [abstract](../../../csharp/language-reference/keywords/abstract.md) として宣言する場合、そのクラスから直接継承される非抽象クラスで、そのメソッドをオーバーライドする必要があります。 派生クラス自体が抽象クラスである場合は、抽象メンバーを実装することなく継承します。 抽象メンバーと仮想メンバーは、オブジェクト指向プログラミングの重要な特性の 2 つ目であるポリモーフィズムの基礎です。 詳細については、「[ポリモーフィズム](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)」を参照してください。  

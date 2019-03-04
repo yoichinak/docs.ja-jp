@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564319"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978652"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ でのクエリ構文とメソッド構文 (C#)
 統合言語クエリ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) の入門的なドキュメントでは、ほとんどのクエリが、LINQ の宣言型クエリ構文を使用して記述されています。 ただし、クエリ構文は、コードのコンパイル時に、.NET 共通言語ランタイム (CLR) 用のメソッド呼び出しに変換する必要があります。 これらのメソッド呼び出しが、標準クエリ演算子 (`Where`、`Select`、`GroupBy`、`Join`、`Max`、`Average` など) を呼び出します。 これらは、クエリ構文ではなくメソッド構文を使用して直接呼び出すことができます。  
@@ -20,7 +20,7 @@ ms.locfileid: "54564319"
 ## <a name="standard-query-operator-extension-methods"></a>標準クエリ演算子の拡張メソッド  
  次の例は、シンプルな*クエリ式*と、*メソッド ベースのクエリ*として記述された、意味的に同等のクエリを示したものです。  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  2 つの例からの出力は同じです。 クエリ変数の型は、どちらの形式でも同じです: <xref:System.Collections.Generic.IEnumerable%601>。  
   

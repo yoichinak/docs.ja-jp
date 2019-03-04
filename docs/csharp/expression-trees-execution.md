@@ -3,12 +3,12 @@ title: 式ツリーの実行
 description: 式ツリーの実行について説明します。式ツリーを実行可能な中間言語 (IL) 命令に変換します。
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207392"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201847"
 ---
 # <a name="executing-expression-trees"></a>式ツリーの実行
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 このメソッドから返されたデリゲートは、`constant` オブジェクトを捕捉しますが、このオブジェクトはすでに破棄されています。 (オブジェクトは `using` ステートメントで宣言されたため、破棄されています。) 
 
-このため、このメソッドから返されたデリゲートを実行すると、実行時に `ObjecctDisposedException` がスローされます。
+このため、このメソッドから返されたデリゲートを実行すると、実行時に `ObjectDisposedException` がスローされます。
 
 コンパイル時の構成要素を表す実行時エラーが発生するのは変だと思うかもしれませんが、式ツリーを扱う場合はそういうものです。
 
