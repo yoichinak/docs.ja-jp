@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 829b515a6f99799e26da40aa8ee4ed41130dbc20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ce3bffc151f149773c5279e1da08f74319b00f7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660061"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968700"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>方法: StreamReader を使用してファイルからテキストを読み取る (Visual Basic)
 `My.Computer.FileSystem` オブジェクトには、<xref:System.IO.TextReader> および <xref:System.IO.TextWriter> を開くためのメソッドがあります。 これらのメソッド (`OpenTextFileWriter` メソッドと `OpenTextFileReader` メソッド) は、高度なメソッドで、**[すべて]** タブを選択しないと IntelliSense で表示されません。  
@@ -21,7 +21,7 @@ ms.locfileid: "54660061"
   
 -   `OpenTextFileReader` メソッドにファイルを指定して <xref:System.IO.TextReader> を開きます。 この例では、`testfile.txt` という名前のファイルを開き、1 行を読み取って、その行をメッセージ ボックスに表示します。  
   
-     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
+     [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  読み取るファイルは、テキスト ファイルである必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "54660061"
  アプリケーションでデータを使用する前に、入力をすべて検証してください。 ファイルの内容が予想どおりでないことがあり、ファイルの内容を読み取るメソッドが失敗する可能性があります。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- ファイルを読み取るには、アセンブリに対して <xref:System.Security.Permissions.FileIOPermission> クラスで特権レベルが許可されている必要があります。 部分的に信頼されたコンテキストで実行している場合、コードは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。 また、ユーザーはファイルへのアクセス許可も必要です。 詳しくは、「[アクセス制御リスト (ACL: Access Control List) 技術の概要](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045)」をご覧ください。  
+ ファイルを読み取るには、アセンブリに対して <xref:System.Security.Permissions.FileIOPermission> クラスで特権レベルが許可されている必要があります。 部分的に信頼されたコンテキストで実行している場合、コードは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。 また、ユーザーはファイルへのアクセス許可も必要です。 詳しくは、「[アクセス制御リスト (ACL: Access Control List) 技術の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 6888531918dd932ba5acb3ec967303568606d5df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721986"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976877"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>方法: ファイルを移動する (Visual Basic)
 `My.Computer.FileSystem.MoveFile` メソッドは、ファイルを別のフォルダーに移動するために使用できます。 ターゲットの構造が存在しない場合は作成されます。  
@@ -18,13 +18,13 @@ ms.locfileid: "54721986"
   
 -   `MoveFile` メソッドを使用し、ソース ファイルおよびターゲット ファイル両方のファイル名と場所を指定して、ファイルを移動します。 この例では、 `test.txt` という名前のファイルを `TestDir1` から `TestDir2`に移動します。 ソース ファイル名と同じでも、ターゲット ファイル名を指定することにご注意ください。  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#24)]  
   
 ### <a name="to-move-a-file-and-rename-it"></a>ファイルを移動し、その名前を変更するには  
   
 -   `MoveFile` メソッドを使用してファイルを移動します。その際、ソース ファイルのファイル名と場所、ターゲットの場所、ターゲットの場所での新しい名前を指定します。 この例では、 `test.txt` という名前のファイルを `TestDir1` から `TestDir2` に移動し、 `nexttest.txt`という名前に変更します。  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

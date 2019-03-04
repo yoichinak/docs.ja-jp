@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messags
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
-ms.openlocfilehash: 4b4210983aa5bd57f1b0a89f2f06f089e98670f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c12d0cde7d8128400769cd2e93361bb10e08f59b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594952"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967018"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>方法: ログ メッセージを書き込む (Visual Basic)
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーションに関する情報をログに記録できます。 この例では、 `My.Application.Log.WriteEntry` メソッドを使用してトレース情報をログに記録する方法を示します。  
@@ -19,7 +19,7 @@ ms.locfileid: "54594952"
 ## <a name="example"></a>例  
  この例では、 `My.Application.Log.WriteEntry` メソッドを使用してトレース情報を書き込みます。  
   
- [!code-vb[VbVbalrMyApplicationLog#11](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-write-log-messages_1.vb)]  
+ [!code-vb[VbVbalrMyApplicationLog#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#11)]  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ログに書き込むデータに、ユーザーのパスワードなどの機密情報が含まれないように注意してください。 詳しくは、「[アプリケーション ログの使用](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)」をご覧ください。  

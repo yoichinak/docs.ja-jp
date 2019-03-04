@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 3b1e85cc9e0b0768f7065ff690f6dc969ee040b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966980"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>方法: Visual Basic でファイルの名前を変更する
 `My.Computer.FileSystem` オブジェクトの `RenameFile` メソッドは、現在の場所、ファイル名、および新しいファイル名を指定して、ファイルの名前を変更するために使用します。 このメソッドは、ファイルを移動する目的には使用できません。ファイルを移動して名前を変更するには、`MoveFile` メソッドを使用してください。  
@@ -19,7 +19,7 @@ ms.locfileid: "54676368"
   
 -   `My.Computer.FileSystem.RenameFile` メソッドを使用して、ファイルの名前を変更します。 この例では、 `Test.txt` というファイル名を `SecondTest.txt` に変更しています。  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#9)]  
   
  このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、スニペットは **[ファイル システム - ドライブ、フォルダー、およびファイルの処理]** にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   

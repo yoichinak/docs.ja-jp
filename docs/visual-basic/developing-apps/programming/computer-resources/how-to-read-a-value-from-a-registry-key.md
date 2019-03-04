@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35fa839f80f422f334e96d7c5bf0bbd5f12484ad
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748091"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966932"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>方法: Visual Basic で、レジストリ キーから値を読み取る
 `My.Computer.Registry` オブジェクトの `GetValue` メソッドは、Windows レジストリ内の値を読み込むために使用できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "54748091"
   
 -   `GetValue` メソッドを使用してパスと名前を指定し、レジストリ キーから値を読み取ります。 次の例は、`HKEY_CURRENT_USER\Software\MyApp` から値 `Name` を読み取り、その値をメッセージ ボックスに表示します。  
   
-     [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
+     [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   
  このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[Windows オペレーティング システム] > [レジストリ]** に配置されます。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54748091"
   
 -   `GetValue` メソッドを使用して値を取得します。 次のコードは、値が存在するかどうかを確認し、存在しない場合にはメッセージを返します。  
   
-     [!code-vb[VbResourceTasks#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_2.vb)]  
+     [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  レジストリは、データの格納に使用される最上位レベル (またはルート) のキーを保持します。 たとえば、HKEY_LOCAL_MACHINE ルート キーは、すべてのユーザーによって使用される、マシン レベルの設定を格納するため使用されます。これに対し HKEY_CURRENT_USER は、個々のユーザーに固有のデータを格納するために使用されます。  

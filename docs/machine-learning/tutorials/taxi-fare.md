@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092541"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251093"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
 
@@ -307,11 +307,11 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#21 "Load the model")]
 
-`model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `Predict` メソッドの 1 行目として作成しましょう。
+`model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `TestSinglePrediction` メソッドの次の行として作成しましょう。
 
 [!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-このチュートリアルでは、このクラス内の 1 つのテスト用の旅行を使用します。 モデルを試行するために後で他のシナリオを追加できます。 `TaxiTrip` のインスタンスを作成して、`Predict` メソッドでコストのトレーニング済みモデルの予測をテストするために、旅行を追加します。
+このチュートリアルでは、このクラス内の 1 つのテスト用の旅行を使用します。 モデルを試行するために後で他のシナリオを追加できます。 `TaxiTrip` のインスタンスを作成して、`TestSinglePrediction` メソッドでコストのトレーニング済みモデルの予測をテストするために、旅行を追加します。
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
@@ -319,7 +319,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
-指定された旅行の予測運賃を表示するために、次のコードを `Main` メソッドに追加します。
+指定された旅行の予測運賃を表示するために、次のコードを `TestSinglePrediction` メソッドに追加します。
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#25 "Display the prediction.")]
 

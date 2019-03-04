@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cb23eb652cd769a0f3387833a9ece507479c464
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218971"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835162"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 
@@ -30,7 +30,7 @@ ms.locfileid: "56218971"
 
  この 2 つの手法の違いの詳細については、「[Using COM Types in Managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))」(マネージド コードでの COM 型の使用) を参照してください。
 
- Visual Studio での相互運用機能型の埋め込みについては、「[チュートリアル: Microsoft Office アセンブリからの型情報の埋め込み (C# および Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee317478(v=vs.100))」、「[チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」、および「[チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)」を参照してください。
+ Visual Studio での相互運用機能型の埋め込みについては、「[チュートリアル:Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」、および「[チュートリアル:Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)」を参照してください。
 
  コマンド ライン コンパイラを使用して相互運用機能アセンブリを参照し、実行可能ファイルに型情報を埋め込むには、[/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md) または [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) コンパイラ スイッチを使用して、相互運用機能アセンブリの名前を指定します。
 
@@ -44,8 +44,6 @@ ms.locfileid: "56218971"
 - [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
 - [言語への非依存性、および言語非依存コンポーネント](../../standard/language-independence-and-language-independent-components.md)
 - [マネージド コードでの COM 型の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) 
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)

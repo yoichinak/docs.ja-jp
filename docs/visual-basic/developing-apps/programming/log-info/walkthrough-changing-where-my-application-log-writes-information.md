@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: b0d9e40f3f41eac5b16037a89a3cac45cbfc8c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c86d175ca7a592b4ae329cf9a9eedb8a649712f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574446"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980426"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の変更 (Visual Basic)
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。 このチュートリアルでは、既定の設定をオーバーライドして、 `Log` オブジェクトによる書き込み先を他のログ リスナーに変更する方法を示します。  
@@ -175,7 +175,7 @@ ms.locfileid: "54574446"
   
 2.  次のコード例は、完全修飾された型の厳密な名前を確認する方法を示します。この例では "System.Diagnostics.FileLogTraceListener" です。  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
+     [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   
      次に示すのが出力です。これを使用して、前述の「リスナーを追加するには」の手順で示した方法で、厳密な名前を指定された型を一意に参照できます。  
   

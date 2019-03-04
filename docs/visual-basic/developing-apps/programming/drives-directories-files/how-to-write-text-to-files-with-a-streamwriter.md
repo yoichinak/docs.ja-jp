@@ -6,18 +6,18 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: 39c6ad59ad965f566c77f72dd4a97335494d6382
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ee4e7ba2953d15c63739f0e9c2c46e6be17133c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678526"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965015"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>方法: StreamWriter を使用してファイルにテキストを書き込む (Visual Basic)
 この例では、`My.Computer.FileSystem.OpenTextFileWriter` メソッドで <xref:System.IO.StreamWriter> オブジェクトを開き、そのオブジェクトを使用し、<xref:System.IO.StreamWriter> クラスの <xref:System.IO.TextWriter.WriteLine%2A> メソッドでテキスト ファイルに文字列を書き込みます。  
   
 ## <a name="example"></a>例  
- [!code-vb[VbFileIOWrite#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-with-a-streamwriter_1.vb)]  
+ [!code-vb[VbFileIOWrite#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#5)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

@@ -4,12 +4,12 @@ description: マイクロサービスの高可用性を実現するには、一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c5bd272380f25f801c7b75c8b8e73a080ac89eef
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362237"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970793"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -71,7 +71,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
 - **意味を表すログ:セマンティック ログ アプリケーション ブロックを使用する** \
-  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 公式サイト。 \
   [*https://www.splunk.com/*](https://www.splunk.com/)

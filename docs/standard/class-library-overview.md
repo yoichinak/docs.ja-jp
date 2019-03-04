@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970572"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -96,8 +96,8 @@ ms.locfileid: "54555181"
 ||<xref:System.UInt16>|16 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> - または -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**</br> または</br>**single**|  
-||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**</br> または </br> **double**|  
+|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**<br> または<br>**single**|  
+||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**<br> または <br> **double**|  
 |論理|<xref:System.Boolean>|ブール値 (true または false)|**Boolean**|**bool**|**bool**|**bool**|  
 |その他|<xref:System.Char>|Unicode (16 ビット) 文字|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|十進数 (128 ビット) の値です。|**Decimal**|**decimal**|**Decimal**|**decimal**|  
@@ -106,7 +106,8 @@ ms.locfileid: "54555181"
 ||<xref:System.Object>|オブジェクト階層構造のルート|**オブジェクト**|**object**|**Object^**|**obj**|  
 ||<xref:System.String>|Unicode 文字の不変固定長文字列|**String**|**string**|**String^**|**string**|  
   
- 基本データ型に加えて、<xref:System> 名前空間には、例外を処理するクラスから、核となるランタイム概念 (アプリケーション ドメインやガベージ コレクターなど) を扱うクラスまで、100 以上のクラスが含まれます。 <xref:System> 名前空間には、2 次レベルの名前空間も数多く含まれています。  
+ 基本データ型に加えて、<xref:System> 名前空間には、例外を処理するクラスから、核となるランタイム概念 (アプリケーション ドメインやガベージ コレクターなど) を扱うクラスまで、100 以上のクラスが含まれます。 
+  <xref:System> 名前空間には、2 次レベルの名前空間も数多く含まれています。  
   
  名前空間の詳細については、「[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api)」を使用して .NET クラス ライブラリを参照してください。 API リファレンス ドキュメントでは、各名前空間、その種類、および各メンバーに関するドキュメントが提供されます。  
   

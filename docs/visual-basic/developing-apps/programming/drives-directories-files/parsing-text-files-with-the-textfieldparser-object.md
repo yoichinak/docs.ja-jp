@@ -6,12 +6,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], parsing files
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
-ms.openlocfilehash: 09821e9b1985913b7433b070ae19c4818265926e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1368e3bcf91026abf4928ab554ff970331f86ec
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585397"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969740"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>TextFieldParser オブジェクトによるテキスト ファイルの解析 (Visual Basic)
 `TextFieldParser` オブジェクトを使用すると、ログ ファイルやレガシ データベース情報など、区切り文字や幅に応じて複数列に区切られたテキストとして構造化されている巨大なファイルを解析および処理できます。 テキスト ファイルを `TextFieldParser` で解析するのは、テキスト ファイルを反復処理するのと同様です。解析メソッドでテキストのフィールドを抽出するのは、区切り文字の付いた文字列を文字列操作メソッドでトークン化するのと同様です。  
@@ -19,11 +19,11 @@ ms.locfileid: "54585397"
 ## <a name="parsing-different-types-of-text-files"></a>さまざまな種類のテキスト ファイルの解析  
  テキスト ファイルは、コンマやタブ空白などの文字で可変幅のフィールドに区切られている場合があります。 次の例のように、`TextFieldType` および区切り記号を定義します。この例では、`SetDelimiters` メソッドを使用して、タブ区切りのテキスト ファイルを定義しています。  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#21)]  
   
  また、テキスト ファイルによっては、固定幅のフィールドを持つ場合もあります。 その場合には、次の例のように、`TextFieldType` を `FixedWidth` と定義して、各フィールドの幅を定義する必要があります。 この例では、`SetFieldWidths` メソッドを使用して、テキストの列を定義しています。最初の列は幅が 5 文字、2 番目の列は 10 文字、3 番目の列は 11 文字、4 番目の列は可変幅です。  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTextFieldParser/VB/Class1.vb#22)]  
   
  書式を定義したら、`ReadFields` メソッドを使用して各行を順番に処理して、ファイルに対するループ処理を実行します。  
   

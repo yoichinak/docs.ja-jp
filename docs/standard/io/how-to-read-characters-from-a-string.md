@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01d5fb2e4f785a4a510715b58e95d310a6ffa4e2
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675349"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835201"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>方法: 文字列からの文字の読み取り
 次のコード例は、文字列から同期的または非同期的に文字を読み取る方法を示しています。  
@@ -42,7 +42,7 @@ ms.locfileid: "55675349"
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [方法: ディレクトリ一覧を作成する](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
+- [方法: ディレクトリ一覧を作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [方法: ログ ファイルを開いて情報を追加する](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
 - [方法: ファイルからテキストを読み取る](../../../docs/standard/io/how-to-read-text-from-a-file.md)  

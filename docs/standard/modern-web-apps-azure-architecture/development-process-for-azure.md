@@ -4,19 +4,19 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 72e6f468cc55ea344d53b4342fb7d9c776a1a16c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b7a6ae343feae7c28fb7debdc8a6b617872d262f
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827475"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202107"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
 > _"クラウドを使用すれば、個人や小企業は指をパチンと鳴らすだけでエンタープライズ クラスのサービスをすぐにセットアップできます。"_  
 > _- Roy Stephan_
 
- ## <a name="vision"></a>ビジョン
+## <a name="vision"></a>ビジョン
 
 > *Visual Studio または dotnet CLI および Visual Studio Code または任意のエディターを使用して、好きな方法で適切に設計された ASP .NET Core アプリケーションを開発します。*
 

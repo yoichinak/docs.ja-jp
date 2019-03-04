@@ -5,12 +5,12 @@ helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 2b31dedbdd33ddfb3c15863a45b93148fd722faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971989"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>方法: Visual Basic でファイル パスを解析する
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> オブジェクトには、ファイル パスを解析するときに役立つメソッドがいくつか用意されています。  
@@ -27,13 +27,13 @@ ms.locfileid: "54707753"
   
 -   <xref:System.IO.FileInfo.DirectoryName%2A> オブジェクトの <xref:System.IO.FileInfo.Name%2A> および <xref:System.IO.FileInfo> プロパティを使用して、ファイルの名前とパスを確認します。 この例は、名前とパスを確認し、それらを表示します。  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
 ### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>ファイルの名前とディレクトリを結合して完全パスを作成するには  
   
 -   `CombinePath` メソッドを使用し、ディレクトリと名前を指定します。 この例では、前の例で作成した文字列 `folderPath` と `fileName` を受け取って、両者を結合し、結果を表示します。  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

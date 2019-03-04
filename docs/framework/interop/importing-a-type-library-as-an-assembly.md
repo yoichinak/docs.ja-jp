@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 043fe74f66635c30f12555efb9ccc9415e200ec3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218908"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835240"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>タイプ ライブラリのアセンブリとしてのインポート
 通常、COM 型の定義は、タイプ ライブラリに存在します。 これに対し、CLS 準拠のコンパイラはアセンブリ内に型のメタデータを生成します。 型情報の 2 つのソースは大きく異なります。 このトピックでは、タイプ ライブラリからメタデータを生成する方法について説明します。 結果のアセンブリは相互運用機能アセンブリと呼ばれ、含まれる型情報により、.NET Framework アプリケーションで COM 型を使用できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "56218908"
   
 -   Visual Studio  
   
-     Visual Studio は、タイプ ライブラリ内の COM 型をアセンブリ内のメタデータに自動的に変換します。 手順については、「[方法:タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)」、「[チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)」、および「[チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)」を参照してください。  
+     Visual Studio は、タイプ ライブラリ内の COM 型をアセンブリ内のメタデータに自動的に変換します。 手順については、「[方法:タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)」にあります。  
   
 -   [タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -81,5 +81,3 @@ ms.locfileid: "56218908"
 - [相互運用アプリケーションの配置](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [方法: タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [方法: 相互運用機能アセンブリをタイプ ライブラリから生成する](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71c2a6b183890aa9625dcffbef59d14c27ebe754
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c12096739e66a47fadd89eb27e30ba3de43c7da3
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219401"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836436"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>方法: タイプ ライブラリへの参照を追加する
 Visual Studio は、タイプ ライブラリに参照を追加する際に、メタデータを含む相互運用機能アセンブリを生成します。 プライマリ相互運用機能アセンブリが使用可能な場合、Visual Studio では、新しい相互運用機能アセンブリを生成する前に既存のアセンブリが使用されます。  
@@ -47,8 +47,6 @@ Visual Studio は、タイプ ライブラリに参照を追加する際に、�
 ## <a name="see-also"></a>関連項目
 - [タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)
 - [.NET Framework への COM コンポーネントの公開](exposing-com-components.md)
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
-- [チュートリアル: Visual Studio で Microsoft Office アセンブリからの型情報を埋め込む (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
 - [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
 - [チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (C# コンパイラ オプション)](../../csharp/language-reference/compiler-options/link-compiler-option.md)

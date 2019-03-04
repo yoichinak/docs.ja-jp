@@ -7,12 +7,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 0ff220bd8a790d9f5480581b847527fb5fbae449
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7862e9b471808c2d01771acacefef15bdb31dda5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634390"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975070"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>方法: テキストのファイルへの書き込み (Visual Basic)
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを利用し、テキストをファイルに書き込みます。 指定したファイルが存在しない場合は、作成されます。  
@@ -23,7 +23,7 @@ ms.locfileid: "54634390"
   
 -   ファイルにテキストを書き込むには `WriteAllText` メソッドを使い、ファイルと書き込むテキストを指定します。 この例では、`test.txt` という名前のファイルに既に存在するテキストの最後に、`"This is new text."` という行を書き込んで追加します。  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   
 #### <a name="to-write-a-series-of-strings-to-a-file"></a>一連の文字列をファイルに書き込むには  
   
@@ -31,7 +31,7 @@ ms.locfileid: "54634390"
   
      この例では、`Documents and Settings` ディレクトリにあるファイルの名前を `FileList.txt` に書き込み、読みやすくするために各ファイル名の間に改行を挿入します。  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#4)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

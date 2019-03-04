@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 873defb025ff02e6af2572d8d2587f86e5228ca0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594747"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968791"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>方法: Visual Basic でディレクトリを別のディレクトリにコピーする
 ディレクトリを別のディレクトリにコピーするには、<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> メソッドを使用します。 このメソッドでは、ディレクトリ自体とその内容がコピーされます。 コピー先のディレクトリが存在しない場合は作成されます。 コピー先の場所に同じ名前のディレクトリが存在し、`overwrite` が `False` に設定されている場合は、2 つのディレクトリの内容がマージされます。 操作中に、ディレクトリに新しい名前を指定できます。  
@@ -23,7 +23,7 @@ ms.locfileid: "54594747"
   
 -   `CopyDirectory` メソッドを使用し、コピー元とコピー先のディレクトリ名を指定します。 次の例では、`TestDirectory1` という名前のディレクトリを `TestDirectory2` にコピーし、既存のファイルは上書きします。  
   
-     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
      このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、コード例は **[ファイル システム - ドライブ、フォルダー、およびファイルの処理]** にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   

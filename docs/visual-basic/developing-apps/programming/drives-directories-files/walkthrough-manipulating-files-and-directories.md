@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709730"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202445"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>チュートリアル: Visual Basic によるファイルとディレクトリの操作
 このチュートリアルでは、Visual Basic でのファイル I/O の基礎について概説します。 具体的には、ディレクトリ内のテキスト ファイルをリストして調査する小さなアプリケーションを作成する方法について説明します。 このアプリケーションは、選択された各テキスト ファイルについて、ファイルの属性とコンテンツの最初の行を取得します。 ログ ファイルに情報を書き込むオプションもあります。  
@@ -57,13 +57,13 @@ ms.locfileid: "54709730"
   
 2.  `Click` イベント ハンドラーに次のコードを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` 呼び出しにより、**[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する `ListFiles` メソッドに <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> プロパティが引数として渡されます。  
   
 3.  次の `ListFiles` メソッドを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      このコードでは、まず最初に **ListBox** をクリアします。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54709730"
   
 2.  `Click` イベント ハンドラーに次のコードを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      このコードは、`ListBox` で選択された項目を検証します。 その後、`ListBox` からファイル パスのエントリを取得します。 <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> メソッドを使用して、ファイルがまだ存在するかどうかを確認します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54709730"
   
 3.  次の `GetTextForOutput` メソッドを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      このコードでは、<xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> メソッドを使用してファイル パラメーターを取得します。 ファイル パラメーターは、<xref:System.Text.StringBuilder> に追加されます。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54709730"
   
 1.  `examineButton_Click` イベント ハンドラーの末尾に、次のコードを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      このコードは、ログ ファイルのパスを設定して、選択したファイルと同じディレクトリにログ ファイルを配置します。 ログ エントリのテキストは現在の日付と時刻に設定され、その後にファイル情報が記録されます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "54709730"
   
 2.  イベント ハンドラーに次のコードを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      このコードは、フォルダー ブラウザーの既定のディレクトリを現在のディレクトリに設定します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "54709730"
   
 1.  次の `SetEnabled` メソッドを追加します。  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` メソッドは、`ListBox` で項目が選択されているかどうかに応じて、コントロールを有効または無効にします。  
   
@@ -152,12 +152,12 @@ ms.locfileid: "54709730"
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem を使用した完全な例  
  完全な例を次に示します。  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>System.IO を使用した完全な例  
  次に示す同等の例では、`My.Computer.FileSystem` オブジェクトではなく、<xref:System.IO> 名前空間のクラスを使用しています。  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.IO>

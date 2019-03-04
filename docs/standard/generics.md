@@ -4,12 +4,12 @@ description: 実際のデータ型をいじらずにタイプ セーフなデー
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121182"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835292"
 ---
 # <a name="generic-types-overview"></a>ジェネリック型の概要
 
@@ -68,5 +68,4 @@ Non-Generic Sort: System.Collections.ArrayList
 
 ## <a name="see-also"></a>関連項目
 
-- [C# のジェネリックの概要](https://msdn.microsoft.com/library/ms379564.aspx)
 - [ジェネリック (C# プログラミング ガイド)](../../docs/csharp/programming-guide/generics/index.md)

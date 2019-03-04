@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-ms.openlocfilehash: f14658cedd18aa22f354c0b7d9cca08960cd7690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9177d321eaabf396ca847dc20a494df88a2e081c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722124"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968843"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>方法: Visual Basic でファイルのコピーを別のディレクトリに作成する
 `My.Computer.FileSystem.CopyFile` メソッドでは、ファイルをコピーできます。 このパラメーターでは、既存のファイルの上書き、ファイルの名前変更、操作の進行状況の表示、ユーザーによる操作のキャンセルが可能になります。  
@@ -21,7 +21,7 @@ ms.locfileid: "54722124"
   
 -   `CopyFile` メソッドを使用し、ソース ファイルとターゲット ディレクトリを指定してファイルをコピーします。 `overwrite` パラメーターでは、既存のファイルを上書きするかどうかを指定できます。 次のコード例では、`CopyFile` の使用方法を示します。  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#24)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外がスローされる可能性があります。  

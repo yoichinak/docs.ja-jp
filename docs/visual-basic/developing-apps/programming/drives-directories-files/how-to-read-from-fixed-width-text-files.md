@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text files [Visual Basic], tasks
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
-ms.openlocfilehash: b1581800c4e16e3bbbf43685508cee781efa6901
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fce16d9d48a53af65941e7b945447a5940e553de
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634572"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966997"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>方法: Visual Basic で固定幅のテキスト ファイルを読み取る
 `TextFieldParser` オブジェクトには、構造化されたテキスト ファイル (ログなど) を簡単にかつ効率的に解析する方法が備わっています。  
@@ -24,24 +24,24 @@ ms.locfileid: "54634572"
   
 1.  新しい `TextFieldParser` を作成します。 次のコードは、`Reader` という名前の `TextFieldParser` を作成し、`test.log` ファイルを開きます。  
   
-     [!code-vb[VbFileIORead#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_1.vb)]  
+     [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
 2.  `TextFieldType` プロパティを `FixedWidth` として定義し、幅と形式を定義します。 次のコードでは、テキストの列を定義しています。先頭列の幅が 5 文字、2 列目が 10 文字、3 列目が 11 文字、そして 4 列目が可変幅です。  
   
-     [!code-vb[VbFileIORead#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_2.vb)]  
+     [!code-vb[VbFileIORead#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#10)]  
   
 3.  ファイル内のフィールドをループします。 破損している行が見つかった場合は、エラーを報告して解析を続行します。  
   
-     [!code-vb[VbFileIORead#11](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_3.vb)]  
+     [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
 4.  `While` ブロックと `Using` ブロックをそれぞれ `End While` と `End Using` で閉じます。  
   
-     [!code-vb[VbFileIORead#12](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_4.vb)]  
+     [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>例  
  次のコードは、`test.log` ファイルから読み取りを行う例です。  
   
- [!code-vb[VbFileIORead#13](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_5.vb)]  
+ [!code-vb[VbFileIORead#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#13)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

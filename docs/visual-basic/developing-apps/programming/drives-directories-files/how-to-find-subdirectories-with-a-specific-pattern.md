@@ -5,12 +5,12 @@ helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
-ms.openlocfilehash: 32b0f5c1052d45e9c068d291f8e6efaf6dfbf906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df5376155d20ec4809962a26c92167eee6568dc1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677694"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972847"
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>方法: 特定のパターンに一致するサブディレクトリを検索する (Visual Basic)
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> メソッドは、ディレクトリのサブディレクトリのパス名を表す文字列の読み取り専用のコレクションを返します。 `wildCards` パラメーターを使用して、特定のパターンを指定できます。 サブディレクトリの内容を検索対象に含めるには、`searchType` パラメーターを `SearchOption.SearchAllSubDirectories` に設定します。  
@@ -21,7 +21,7 @@ ms.locfileid: "54677694"
   
 -   検索するディレクトリの名前およびパスを指定して、`GetDirectories` メソッドを使用します。 次の例では、ディレクトリ構造内で名前に "Logs" という単語を含むすべてのディレクトリが返され、`ListBox1` に追加されます。  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

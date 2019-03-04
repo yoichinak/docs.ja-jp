@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696218"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836319"
 ---
 # <a name="writing-custom-attributes"></a>カスタム属性の記述
 独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、 <xref:System.Attribute?displayProperty=nameWithType>から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
@@ -118,7 +118,7 @@ ms.locfileid: "54696218"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- さまざまな値の組み合わせに対応するように、コンストラクターをオーバーロードできます。 カスタム属性クラスの[プロパティ](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)も定義する場合、属性を初期化する際に、名前付きパラメーターと位置指定パラメーターの組み合わせを使うことができます。 通常、必須パラメーターすべてを位置指定パラメーター、省略可能なパラメーターすべてを名前付きパラメーターとして定義します。 この場合、属性は必須パラメーターがないと初期化できません。 その他のすべてのパラメーターは省略できます。 Visual Basic では、属性クラスのコンストラクターで ParamArray 引数を使うべきではないことに注意してください。  
+ さまざまな値の組み合わせに対応するように、コンストラクターをオーバーロードできます。 カスタム属性クラスの[プロパティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))も定義する場合、属性を初期化する際に、名前付きパラメーターと位置指定パラメーターの組み合わせを使うことができます。 通常、必須パラメーターすべてを位置指定パラメーター、省略可能なパラメーターすべてを名前付きパラメーターとして定義します。 この場合、属性は必須パラメーターがないと初期化できません。 その他のすべてのパラメーターは省略できます。 Visual Basic では、属性クラスのコンストラクターで ParamArray 引数を使うべきではないことに注意してください。  
   
  次のコード例は、省略可能なパラメーターと必須パラメーターを使って、前のコンストラクターを使う属性を適用できることを示しています。 ここでは、属性には、必須のブール値 1 つと省略可能な文字列のプロパティ 1 つが含まれていることを前提としています。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54696218"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>プロパティを宣言する  
- 名前付きパラメーターを定義するか、属性によって格納される値を簡単に返すことができるようにする場合、[プロパティ](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)を宣言します。 属性プロパティは、返されるデータ型の記述を添えて、パブリック エンティティとして宣言する必要があります。 プロパティの値を保持する変数を定義して、その変数を **get** メソッドと **set** メソッドに関連付けます。 次のコード例は、属性に単純なプロパティを実装する方法を示しています。  
+ 名前付きパラメーターを定義するか、属性によって格納される値を簡単に返すことができるようにする場合、[プロパティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))を宣言します。 属性プロパティは、返されるデータ型の記述を添えて、パブリック エンティティとして宣言する必要があります。 プロパティの値を保持する変数を定義して、その変数を **get** メソッドと **set** メソッドに関連付けます。 次のコード例は、属性に単純なプロパティを実装する方法を示しています。  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
