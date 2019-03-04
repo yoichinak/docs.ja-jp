@@ -1043,8 +1043,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - フローチャート アクティビティ デザイナーまたは他のワークフロー アクティビティ デザイナーで、アタッチされるプロパティの値ではなく既定の場所にすべてのオブジェクトが表示される場合がある。
 
+<a name="clickonce-1" />
 
-### <a name="clickonce"></a>ClickOnce
+### <a name="clickonce"></a>Clickonce
 
 ClickOnce が更新され、既にサポートされている 1.0 プロトコルに加え、TLS 1.1 と TLS 1.2 がサポートがサポートされるようになりました。 ClickOnce が必要なプロトコルを自動的に検出するため、TLS 1.1 と 1.2 のサポートを有効にするために、ClickOnce アプリケーション内での追加の手順は不要です。
 

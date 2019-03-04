@@ -33,6 +33,7 @@
 ## [例外の処理とスロー](standard/exceptions/)
 ## [.NET のアセンブリ](standard/assembly/index.md)
 ### [.NET アセンブリ ファイルの形式](standard/assembly/file-format.md)
+### [方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする](standard/assembly/unloadability-howto.md)
 ## [ガベージ コレクション](standard/garbage-collection/)
 ## [ジェネリック型](standard/generics.md)
 ## [デリゲートとラムダ](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [C# のツアー](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## C# の新機能
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0 - Preview 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)

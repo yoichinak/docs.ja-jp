@@ -2,21 +2,13 @@
 title: .NET の機械学習に関するハウツー ガイド - ML.NET
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの Machine Learning 統合を支援するための、特定のタスクを実行する方法について説明します。
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235190"
+ms.date: 03/01/2019
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET の機械学習に関するハウツー ガイド - ML.NET
 
 ML.NET ガイドの方法に関するセクションには、よく寄せられる質問に対する簡単な回答が記載されています。 場合によっては、見つけやすいように、記事が複数のセクションで表示されることもあります。
 
-## <a name="prepare-data"></a>データの準備
-
-### <a name="load-data"></a>データの読み込み
+## <a name="load-the-data"></a>データを読み込む
 
 * [機械学習の処理のために多数の列を含むデータを CSV ファイルから読み込みます。](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +16,11 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [機械学習の処理のためにテキスト ファイルからデータを読み込みます。](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>データを準備する
+
 * [データ処理で使うためにノーマライザーでトレーニング データを前処理します。](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>モデルをトレーニングする
+## <a name="train-the-model"></a>モデルをトレーニングする
 
 * [テキスト ファイルではないデータを使って機械学習モデルをトレーニングします。](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +28,7 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [ML.NET を使って値を予測する回帰モデルをトレーニングします。](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>モデルの品質を評価する
+### <a name="evaluate-the-model-quality"></a>モデルの品質を評価する
 
 * [メトリックを計算してモデルの品質を評価します。](verify-model-quality-ml-net.md)
 
