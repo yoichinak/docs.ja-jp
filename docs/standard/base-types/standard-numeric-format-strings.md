@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506720"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979959"
 ---
 # <a name="standard-numeric-format-strings"></a>標準の数値書式指定文字列
 
@@ -62,7 +62,7 @@ ms.locfileid: "54506720"
 |"G" または "g"|全般|結果: 固定小数点表記または指数表記のいずれかのより簡潔な形式。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:有効桁数。<br /><br /> 既定の精度指定子:数値型によって異なります。<br /><br /> 詳細情報:[一般 ("G") 書式指定子](#GFormatString)。|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |"N" または "n"|数値|結果: 必要に応じて負の符号が付く整数と小数、桁区切り記号、および小数点記号。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[数値 ("N") 書式指定子](#NFormatString)。|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
 |"P" または "p"|パーセント|結果: 数値に 100 を掛けて、パーセント記号を付けて表示します。<br /><br /> サポート:すべての数値型。<br /><br /> 精度指定子:小数部の桁数。<br /><br /> 既定の精度指定子:<xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> によって定義されます。<br /><br /> 詳細情報:[パーセント ("P") 書式指定子](#PFormatString)。|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> メモ:<xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 </br> 精度指定子:無視されます。<br /><br /> 詳細情報:[ラウンドトリップ ("R") 書式指定子](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"R" または "r"|ラウンドトリップ|結果: 同じ数値にラウンドトリップできる文字列。<br /><br /> サポート: <xref:System.Single>、<xref:System.Double>、および <xref:System.Numerics.BigInteger>。<br /><br /> メモ:<xref:System.Numerics.BigInteger> 型にのみお勧めします。 <xref:System.Double> 型の場合は "G17"、<xref:System.Single> 型の場合は "G9" を使用します。 <br> 精度指定子:無視されます。<br /><br /> 詳細情報:[ラウンドトリップ ("R") 書式指定子](#RFormatString)。|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
 |"X" または "x"|16 進数|結果: 16 進数文字列。<br /><br /> サポート:整数型のみ。<br /><br /> 精度指定子:結果文字列の桁数。<br /><br /> 詳細情報:[16 進数 ("X") 書式指定子](#XFormatString)。|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |その他の 1 文字|未定義の指定子|結果: 実行時に <xref:System.FormatException> をスローします。||  
   
@@ -307,7 +307,8 @@ ms.locfileid: "54506720"
 > [!IMPORTANT]
 >  場合によっては、`/platform:x64` スイッチまたは `/platform:anycpu` スイッチを使用してコンパイルして 64 ビット システムで実行すると、"R" 標準の数値書式指定文字列で書式設定される <xref:System.Double> 値のラウンドトリップに失敗することがあります。 詳細については、次の段落を参照してください。  
   
- `/platform:x64` スイッチまたは `/platform:anycpu` スイッチを使用してコンパイルして 64 ビット システムで実行すると、「R」標準の数値書式指定文字列を使用して書式設定される <xref:System.Double> 値のラウンドトリップが失敗するという問題を回避するために、<xref:System.Double> 値を「G17」標準の数値書式指定文字列を使用して書式設定することができます。 次の例では、ラウンドトリップに失敗する <xref:System.Double> 値を持つ "R" 書式指定文字列を使用しています。元の値のラウンドトリップに成功する "G17" 書式指定文字列も使用しています。  
+ 
+  `/platform:x64` スイッチまたは `/platform:anycpu` スイッチを使用してコンパイルして 64 ビット システムで実行すると、「R」標準の数値書式指定文字列を使用して書式設定される <xref:System.Double> 値のラウンドトリップが失敗するという問題を回避するために、<xref:System.Double> 値を「G17」標準の数値書式指定文字列を使用して書式設定することができます。 次の例では、ラウンドトリップに失敗する <xref:System.Double> 値を持つ "R" 書式指定文字列を使用しています。元の値のラウンドトリップに成功する "G17" 書式指定文字列も使用しています。  
   
  [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
@@ -348,7 +349,8 @@ ms.locfileid: "54506720"
  標準の数値書式指定子の記述で、整数数値型または浮動小数点数値型が参照されている場合があります。 整数数値型には、<xref:System.Byte>、<xref:System.SByte>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>、および <xref:System.Numerics.BigInteger> があります。 浮動小数点数値型には、<xref:System.Decimal>、<xref:System.Single>、および <xref:System.Double> があります。  
   
 ### <a name="floating-point-infinities-and-nan"></a>浮動小数点の無限大値と NaN (非数) 値  
- <xref:System.Single> の浮動小数点型または <xref:System.Double> の浮動小数点型が正の無限大、負の無限大、または NaN (非数) である場合は、書式指定文字列とは関係なく、現在適用可能な <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> オブジェクトによって指定される <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A>、または <xref:System.Globalization.NumberFormatInfo> の各プロパティの値は、書式設定された文字列となります。  
+ 
+  <xref:System.Single> の浮動小数点型または <xref:System.Double> の浮動小数点型が正の無限大、負の無限大、または NaN (非数) である場合は、書式指定文字列とは関係なく、現在適用可能な <xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A> オブジェクトによって指定される <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A>、<xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A>、または <xref:System.Globalization.NumberFormatInfo> の各プロパティの値は、書式設定された文字列となります。  
   
 ## <a name="example"></a>例  
  

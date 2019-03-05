@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188184"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203653"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -21,7 +21,7 @@ ms.locfileid: "50188184"
 > [!NOTE]
 > この記事の最初の部分では、言語に依存しないコンポーネント、つまり、どの言語で記述されたアプリからでも使用できるコンポーネントの作成について説明します。 また、複数の言語で記述されたソース コードから 1 つのコンポーネントまたはアプリを作成することもできます。この記事の 2 番目のパートにある「[言語間の相互運用性](#cross-language-interoperability)」を参照してください。 
 
-任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[Standard ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。 
+任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。 
 
 コンポーネントが共通言語仕様に準拠している場合は、CLS に準拠することが保証され、CLS をサポートするすべてのプログラミング言語で記述されたアセンブリのコードからアクセスできます。 コンパイル時にコンポーネントが共通言語仕様に準拠しているかどうかを確認するには、[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 属性をソース コードに適用します。 詳細については、「[CLSCompliantAttribute 属性](#the-clscompliantattribute-attribute)」を参照してください。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50188184"
     
     * [イベント](#events)
     
-    * [オーバーロード](#overloads)
+    * [Overloads](#overloads)
     
     * [例外](#exceptions)
     
@@ -65,7 +65,7 @@ ms.locfileid: "50188184"
 
 ## <a name="cls-compliance-rules"></a>CLS 準拠の規則
 
-ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則の一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
+ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則規則の完全な一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。
 
 > [!NOTE]
 > 共通言語仕様では、コンシューマー (プログラムによって CLS 準拠のコンポーネントにアクセスする開発者)、フレームワーク (言語コンパイラを使用して CLS 準拠のライブラリを作成する開発者)、およびエクステンダー (CLS 準拠のコンポーネントを作成する言語コンパイラ、コード パーサーなどのツールを作成する開発者) に適用する、CLS 準拠の各規則について説明します。 ここでは、フレームワークに適用するときの規則に焦点を当てます。 エクステンダーに適用する一部の規則は、[Reflection.Emit](xref:System.Reflection.Emit) を使用して作成されたアセンブリに適用されることもあります。 
@@ -150,7 +150,7 @@ End Class
 
 * パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。 
 
-CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。 
+CLS 準拠の規則を次の表に示します。 これらの規則のテキストは、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。 
 
 カテゴリ | 解決方法については、 | ルール | 規則番号
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335
 ユーザー補助 | [メンバーのアクセシビリティ](#member-accessibility) | 型およびメンバーの可視性およびアクセシビリティについて、メンバーのシグネチャに指定されている型は、そのメンバーが可視でアクセス可能な場合、必ず可視でアクセス可能でなければいけない。 たとえば、アセンブリ外部から参照できるパブリックなメソッドには、アセンブリ内部でだけ可視である型が引数として含まれていてはいけない。 メンバーのシグネチャに使用されているジェネリック型のインスタンスを構成する型の可視性およびアクセシビリティは、メンバーが可視でアクセス可能の場合、必ず可視でアクセス可能でなければいけない。 たとえば、アセンブリ外部から参照できるメンバーのシグネチャに指定されているジェネリック型のインスタンスに、アセンブリ内部でだけ可視である型の汎用引数が含まれていてはいけない。 | 12
 配列 | [配列](#arrays) | 配列は、要素が CLS 準拠型で、すべての次元でインデックス番号が 0 から始まらなければならない。 項目が配列の場合、オーバーロードどうしを区別するには配列要素の型を必要とする。 オーバーロードが 2 つ以上の配列型に基づく場合、要素型は名前付きの型でなければいけない。 | 16
 属性 | [属性](#attributes) | 属性は型 [System.Attribute](xref:System.Attribute) であるか、それから継承する型である必要がある。 | 41
-属性 | [属性](#attributes) | CLS ではカスタム属性のエンコーディングのサブセットのみ使用できる。 これらのエンコーディングに表示される型 (第 4 部を参照) は、[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64), [System.Single](xref:System.Single)、[System.Double](xref:System.Double)、および CLS 準拠の基底の整数型に基づく列挙型のみである。 | 34
+属性 | [属性](#attributes) | CLS ではカスタム属性のエンコーディングのサブセットのみ使用できる。 これらのエンコーディングに表示される型 (第 4 部を参照) は、[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double)、および CLS 準拠の基底の整数型に基づく任意の列挙型のみである。 | 34
 属性 | [属性](#attributes) | CLS では、公開参照される必須の修飾子 (`modreq`、第 2 部を参照) は使用できない。ただし、認識しないオプションの修飾子 (`modopt`、第 2 部を参照) は使用できる。 | 35
 コンストラクター | [コンストラクター](#constructors) | オブジェクト コンストラクターでは、継承しているインスタンス データへのアクセスが発生する前に、基底クラスのインスタンス コンストラクターを呼び出さなければいけない (コンストラクターが不要である値型は除く)。  | 21
 コンストラクター | [コンストラクター](#constructors) | オブジェクト コンストラクターがオブジェクトの作成時以外で呼び出されてはならず、またオブジェクトが 2 度初期化されてもいけない。 | 22
@@ -187,8 +187,8 @@ CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335
 名前付け規則 | [名前付け規則](#naming-conventions) | アセンブリは、識別子の頭文字および構成文字として使用できる文字セットを規定する Unicode Standard 3.0 の『Technical Report 15』の「Annex 7」に従う必要がある。詳細については、「[Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html)」(Unicode 正規化形式) を参照。 識別子は、Unicode 正規形 C に定義されている標準形式で記述する必要がある。CLS で 2 つの識別子が同じと見なされるのは、小文字マッピング (Unicode のロケール非依存で 1 対 1 の小文字による対応付け) が同じ場合である。 つまり、CLS で 2 つの識別子が異なる場合、大文字小文字の違いだけではない。 ただし、継承された定義をオーバーライドする場合、CLI では元の宣言と厳密に同じエンコーディングの使用が求められる。 | 4
 オーバーロード | [名前付け規則](#naming-conventions) | CLS 準拠のスコープに導入されるすべての名前は、完全に独立した種類である必要があります。ただし、名前が同じでオーバーロードによって解決できる場合を除きます。 CTS では 1 つの型でメソッドとフィールドに同じ名前を使用できるが、CLS では使用できない。 | 5
 オーバーロード | [名前付け規則](#naming-conventions) | フィールドおよび入れ子になった型について、CTS ではシグネチャでの区別が可能だが、CLS では識別子の比較だけで区別できる必要がある。 CLS 規則 39 の指定を除き、識別子の比較により名前が同じであるメソッド、プロパティ、およびイベントでは、相違点は戻り値の型だけに限定されない。 | 6
-オーバーロード | [オーバーロード](#overloads) | プロパティおよびメソッドのみオーバーロードできる。 | 37
-オーバーロード | [オーバーロード](#overloads) |プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。 | 38
+オーバーロード | [Overloads](#overloads) | プロパティおよびメソッドのみオーバーロードできる。 | 37
+オーバーロード | [Overloads](#overloads) |プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。 | 38
 オーバーロード | -- | 型で宣言された複数の CLS 準拠のメソッドに同じ名前が指定されている場合、特定の一連の型のインスタンス化において、これらのメソッドのパラメーターと戻り値の型は同じである。また、これらの型のインスタンス化で、すべてのメソッドをセマンティクス レベルで等価にする必要がある。 | 48
 プロパティ | [プロパティ](#properties) | プロパティの getter メソッドおよび setter メソッドを実装するメソッドは、メタデータで `SpecialName` とマークする。 | 24
 プロパティ | [プロパティ](#properties) | プロパティ アクセサーはすべて静的、すべて仮想、またはすべてインスタンスになる。 | 26
@@ -2058,7 +2058,7 @@ CLS 準拠のクラスと構造体のコンストラクターは、次の規則�
 
 CLS 準拠型のプロパティは、次の規則に従う必要があります。
 
-* プロパティには setter、getter、またはこの両方が必ず必要です。 アセンブリでは、これらは特殊なメソッドとして実装されます。つまり、アセンブリのメタデータで "SpecialName" とマークされた個別のメソッドとして (getter は `get`\_*propertyname*、setter は `set*\_*propertyname*) marked as ` という名前で) 表示されます。 C# コンパイラでは、この規則が自動的に適用されます。[CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 属性を適用する必要はありません。 
+* プロパティには setter、getter、またはこの両方が必ず必要です。 アセンブリでは、これらは特殊なメソッドとして実装されます。つまり、アセンブリのメタデータで `SpecialName` とマークされた個別のメソッドとして (getter は `get`\_*propertyname*、setter は `set`\_*propertyname* という名前で) 表示されます。 C# コンパイラでは、<xref:System.CLSCompliantAttribute> 属性を適用しなくても、この規則が自動的に適用されます。 
 
 * プロパティの型は、プロパティ get アクセス操作子、および set アクセス操作子の最後の引数の戻り値の型です。 これらの型は CLS に準拠している必要があり、引数を参照によってプロパティに割り当てることはできません (つまり、マネージド ポインターにできません)。 
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5613128950d53946d55050ba3fd77cf1f0bb048a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513426"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971950"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -52,10 +52,10 @@ ms.locfileid: "54513426"
 >  これは、クエリに <xref:System.Console.WriteLine%2A> の呼び出しをいくつか挿入することで自分でテストできます。 このメソッドは、ドキュメントの例でデモのために使用されていますが、必要がない限り並列ループでは使用しないでください。  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>スレッド アフィニティの問題に注意する  
- シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[方法 :ユーザー インターフェイス (UI) スレッドで作業をスケジュールする](https://msdn.microsoft.com/library/32a846a5-d628-4933-907b-4888ff72c663)」をご覧ください。  
+ シングル スレッド アパートメント (STA) コンポーネント向けの COM 相互運用性、Windows フォーム、Windows Presentation Foundation (WPF) などの一部のテクノロジでは、特定のスレッド上で実行するコードを必要とするスレッド アフィニティが制限される場合があります。 たとえば、Windows フォームと WPF では、コントロールへのアクセスは、そのコントロールが作成されたスレッド上でしか行うことができません。 つまり、たとえば、UI スレッドのみで処理をスケジュールするようにスレッド スケジューラを構成していない限り、並列ループからはリスト コントロールを更新できません。 詳細については、「[同期コンテキストの指定](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context)」を参照してください。  
   
 ## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel.Invoke によって呼び出されるデリゲートで待機する場合は注意する  
- 状況によっては、タスク並列ライブラリでタスクをインライン展開します。これは、現在実行中のスレッドでタスクが実行されることを意味します  (詳細については、[タスク スケジューラ](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)に関するページを参照してください)。場合によっては、このパフォーマンスの最適化によって、デッドロックが発生する可能性があります。 たとえば、2 つのタスクで同じデリゲート コードを実行していて、そのデリゲート コードは、イベントの発生時に通知し、もう 1 つのタスクが通知するまで待機するとします。 この場合、2 番目のタスクが 1 番目のタスクと同じスレッド情にインライン展開され、1 番目のタスクが待機状態になると、2 番目のタスクではそのイベントを通知できなくなります。 このような状況を回避するために、待機操作のタイムアウトを指定するか、明示的なスレッド コンストラクターを使用して、1 つのタスクがもう 1 つのタスクをブロックしないようにすることができます。  
+ 状況によっては、タスク並列ライブラリでタスクをインライン展開します。これは、現在実行中のスレッドでタスクが実行されることを意味します  (詳細については、[タスク スケジューラ](xref:System.Threading.Tasks.TaskScheduler)に関するページを参照してください)。場合によっては、このパフォーマンスの最適化によって、デッドロックが発生する可能性があります。 たとえば、2 つのタスクで同じデリゲート コードを実行していて、そのデリゲート コードは、イベントの発生時に通知し、もう 1 つのタスクが通知するまで待機するとします。 この場合、2 番目のタスクが 1 番目のタスクと同じスレッド情にインライン展開され、1 番目のタスクが待機状態になると、2 番目のタスクではそのイベントを通知できなくなります。 このような状況を回避するために、待機操作のタイムアウトを指定するか、明示的なスレッド コンストラクターを使用して、1 つのタスクがもう 1 つのタスクをブロックしないようにすることができます。  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach、For および ForAll のイテレーションが必ず並列実行されているとは限らない  
  <xref:System.Threading.Tasks.Parallel.For%2A>、<xref:System.Threading.Tasks.Parallel.ForEach%2A>、または <xref:System.Linq.ParallelEnumerable.ForAll%2A> の各ループにおける個々の反復処理が必ずしも並列実行されるとは限らないことに注意してください。 そのため、イテレーションの並列実行の正確性、または特定の順序でのイテレーションの実行の正確性に依存するコードを記述しないでください。 たとえば、次のコードはデッドロックが起こる可能性があります。  

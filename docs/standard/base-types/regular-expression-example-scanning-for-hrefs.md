@@ -1,5 +1,5 @@
 ---
-title: '正規表現の例: HREFS のスキャン'
+title: '正規表現の例: HREF のスキャン'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582841"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975967"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>正規表現の例: HREFS のスキャン
+# <a name="regular-expression-example-scanning-for-hrefs"></a>正規表現の例: HREF のスキャン
 次の例では、入力文字列を検索して、文字列中のすべての href="…" 値とその場所を表示します。  
   
 ## <a name="the-regex-object"></a>Regex オブジェクト  
@@ -44,7 +44,7 @@ ms.locfileid: "48582841"
 |`\s*`|0 個以上の空白文字と一致します。|  
 |`=`|等号と一致します。|  
 |`\s*`|0 個以上の空白文字と一致します。|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|次のいずれかと一致し、キャプチャ グループに結果を代入しません。<br /> <ul><li><p>- 引用符またはアポストロフィ、引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返し、引用符またはアポストロフィの順に続く文字列。 このパターンには `1` という名前のグループが含まれています。</p></li><li><p>- 1 個以上の空白以外の文字。 このパターンには `1` という名前のグループが含まれています。</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|次のいずれかと一致し、キャプチャ グループに結果を代入しません。<br /> <ul><li><p>- 引用符またはアポストロフィ、引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返し、引用符またはアポストロフィの順に続く文字列。 このパターンには `1` という名前のグループが含まれています。</p></li><li><p>- 1 個以上の空白以外の文字。 このパターンには `1` という名前のグループが含まれています。</p></li></ul>|  
 |`(?<1>[^"']*)`|引用符またはアポストロフィ以外の任意の文字の 0 回以上の繰り返しを `1` という名前のキャプチャ グループに代入します。|  
 |`(?<1>\S+)`|1 個以上の空白以外の文字を `1` という名前のキャプチャ グループに代入します。|  
   

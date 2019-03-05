@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7a9c6c64f5aa482b6d21aab0c88fc204c6427a41
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066286"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974784"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 
@@ -163,7 +163,7 @@ Microsoft の優先度が根本的に Azure Cosmos DB でも動作する NoSQL �
 
 ### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>コード:.NET Core アプリケーションで MongoDB API を使用する
 
-.NET の MongoDB API は、次の画像で示されている Locations.API プロジェクトのような、プロジェクトに追加する必要がある NuGet パッケージに基づいています。
+.NET 用の MongoDB API は、次の図に示されている Locations.API プロジェクトのような、プロジェクトに追加する必要のある NuGet パッケージに基づいています。
 
 ![ソリューション エクスプローラー ビュー。MongoDB NuGet パッケージの依存関係を確認できます。](./media/image21-bis.png)
 

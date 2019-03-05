@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827879"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978333"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -172,7 +172,7 @@ ASP.NET Core UI プロジェクトは、UI レベルの処理を行いますが�
 
 ### <a name="feature-organization"></a>機能の編成
 
-既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは[機能スライス](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx)と呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
+既定では、ASP.NET Core アプリケーションは、コントローラーとビューさらに多くの場合は ViewModels を含むように、フォルダー構造を編成します。 通常、これらのサーバー側構造をサポートするためのクライアント側のコードは、wwwroot フォルダーに個別に格納されます。 ただし、大規模なアプリケーションでは、特定の機能を使用するためにこれらのフォルダー間を移動する必要があるため、このような編成では問題が発生する可能性があります。 各フォルダー内のファイルとサブフォルダーの数が増えるとますます困難になり、ソリューション エクスプローラーのスクロール量が膨大になります。 この問題の 1 つの解決策は、アプリケーションのコードをファイルの種類別ではなく "_機能_" 別に整理することです。 この編成スタイルは、通常、機能フォルダーまたは[機能スライス](https://msdn.microsoft.com/magazine/mt763233.aspx)と呼ばれます ([垂直スライス](https://deviq.com/vertical-slices/)も参照してください)。
 
 ASP.NET Core MVC では、この目的のために区分 (Area) がサポートされています。 区分を使うと、各区分フォルダー内にコントローラー フォルダーとビュー フォルダー (および関連するすべてのモデル) のセットを個別に作成できます。 図 7-1 は、区分を使用したフォルダー構造の例です。
 
@@ -311,7 +311,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-フィルターの実装について詳しくは、MSDN の記事「[実際の ASP.NET Core MVC フィルター](https://msdn.microsoft.com/magazine/mt767699.aspx)」をご覧ください。動作するサンプルをダウンロードすることもできます。
+フィルターの実装の詳細については、MSDN の記事「[実際の ASP.NET Core MVC フィルター](https://msdn.microsoft.com/magazine/mt767699.aspx)」を参照してください。また、実際に動作するサンプルをダウンロードすることもできます。
 
 > ### <a name="references--structuring-applications"></a>参照 – アプリケーションの構成
 >

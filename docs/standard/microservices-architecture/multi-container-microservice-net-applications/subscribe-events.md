@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128956"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971781"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -93,17 +93,17 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>イベント バスに発行するときの原子性と回復性の設計
 
-イベント バスのような分散メッセージング システムを通じて統合イベントを発行するときは、元のデータベースの更新とイベントの発行のアトミックな実行という問題が生じます (つまり、両方の操作が完了するか、いずれも完了しない)。 たとえば、先ほどの単純化された例では、コードは商品価格が変更されたときにデータベースにデータをコミットし、その後に ProductPriceChangedIntegrationEvent メッセージを発行します。 一見すると、これらの 2 つの操作がアトミックに実行されることは不可欠のように思われます。 しかし、[Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) などの以前のシステムを使用している場合と同じく、データベースとメッセージ ブローカーが関与する分散トランザクションを使用している場合には、これは [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)で説明されている理由によって推奨されません。
+イベント バスのような分散メッセージング システムを通じて統合イベントを発行するときは、元のデータベースの更新とイベントの発行のアトミックな実行という問題が生じます (つまり、両方の操作が完了するか、いずれも完了しない)。 たとえば、先ほどの単純化された例では、コードは商品価格が変更されたときにデータベースにデータをコミットし、その後に ProductPriceChangedIntegrationEvent メッセージを発行します。 一見すると、これらの 2 つの操作がアトミックに実行されることは不可欠のように思われます。 しかし、[Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) などの以前のシステムを使用している場合と同じく、データベースとメッセージ ブローカーが関与する分散トランザクションを使用している場合には、これは [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)で説明されている理由によって推奨されません。
 
 基本的に、マイクロサービスは、スケーラブルで可用性の高いシステムを構築するために使用します。 簡単に言えば、CAP 定理は、継続的な可用性、強い一貫性、*かつ*分断への耐性を備えた (分散) データベース (またはそのモデルを持つマイクロサービス) を構築することは不可能であると述べています。 これらの 3 つの特性のうち、2 つを選択しなければなりません。
 
-マイクロサービス ベースのアーキテクチャでは、可用性と耐性を選択して、厳密な一貫性は重視しないようにする必要があります。 したがって、最近のほとんどのマイクロサービス ベースのアプリケーションでは、[MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) を使用して Windows の分散トランザクション コーディネーター (DTC) に基づく[分散トランザクション](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx)を実装する場合と同じく、メッセージングに分散トランザクションを使用しないのが普通です。
+マイクロサービス ベースのアーキテクチャでは、可用性と耐性を選択して、厳密な一貫性は重視しないようにする必要があります。 したがって、最近のほとんどのマイクロサービス ベースのアプリケーションでは、[MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) を使用して Windows の分散トランザクション コーディネーター (DTC) に基づく[分散トランザクション](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))を実装する場合と同じく、メッセージングに分散トランザクションを使用しないのが普通です。
 
 最初の問題とその例に話を戻しましょう。 データベースが更新された後 (このケースでは、\_context.SaveChangesAsync() を含むコード行の直後) で、統合イベントが発行される前にサービスがクラッシュした場合、システム全体の一貫性が失われる可能性があります。 これは、処理しているビジネス操作によっては、ビジネスに重大な問題を生じさせるおそれがあります。
 
 前のアーキテクチャのセクションで説明したように、この問題に対処するためのアプローチはいくつかあります。
 
--   完全な[イベント ソーシング パターン](https://msdn.microsoft.com/library/dn589792.aspx)を使用する。
+-   完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用する。
 
 -   [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用する。
 
@@ -149,7 +149,7 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 2 番目のアプローチでは、EventLog テーブルをキューとして使用し、常に常にワーカー マイクロサービスを使用してメッセージを発行します。 その場合、プロセスは図 6-23 のようになります。 これには追加のマイクロサービスが表示されており、テーブルはイベントを発行する際の単一のソースです。
 
-![原子性を処理するもう 1 つのアプローチ: イベントログ テーブルに発行し、別のマイクロサービス (バックグラウンド ワーカー) にイベントを発行させます。](./media/image24.png)
+![原子性を処理するためのもう 1 つのアプローチ: イベント ログ テーブルに発行し、別のマイクロサービス (バックグラウンド ワーカー) からイベントを発行するようにします。](./media/image24.png)
 
 **図 6-23**。 ワーカー マイクロサービスを使用してイベント バスにイベントを発行するときの原子性
 
@@ -304,7 +304,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>その他の技術情報
 
 -   **メッセージのべき等性に従う** <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>統合イベント メッセージの重複除去
 
@@ -337,7 +337,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **境界コンテキスト間の通信** <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **最終的な整合性** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -352,7 +352,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **イベント ソーシングの概要** <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **イベント ストア データベース**。 公式サイト。 <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,12 +367,12 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **データ整合性の概要** <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling。キャップ定理: クラウドとインターネットでは "すべての事が異なる" 理由** <br/>
+-   **Rick Saling。CAP 定理: クラウドとインターネットでは "すべてが異なる" 理由** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer。CAP の 12 年後: "規則" はどのように変わったのか** <br/>
+-   **Eric Brewer。12 年後の CAP: "規則" はどのように変わったか** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
 -   **Azure Service Bus。ブローカー メッセージング: 重複データ検出**  <br/>
@@ -380,9 +380,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 -   **信頼性ガイド** (RabbitMQ ドキュメント)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
-
--   **外部 (DTC) トランザクションへの参加** (MSMQ) <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure Service Bus。ブローカー メッセージング: 重複データ検出** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

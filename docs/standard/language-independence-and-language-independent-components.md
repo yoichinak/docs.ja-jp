@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842828"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836553"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 .NET Framework は言語に依存しません。 つまり、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。  
@@ -28,7 +28,7 @@ ms.locfileid: "48842828"
 > [!NOTE]
 >  この記事の最初の部分では、言語に依存しないコンポーネント、つまり、どの言語で記述されたアプリからでも使用できるコンポーネントの作成について説明します。 また、複数の言語で記述されたソース コードから 1 つのコンポーネントまたはアプリを作成することもできます。この記事の 2 番目のパートにある「[言語間の相互運用性](#CrossLang)」を参照してください。  
   
- 任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[Standard ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。  
+ 任意の言語で記述された他のオブジェクトと完全に対話するには、すべての言語に共通の機能だけを呼び出し側に公開するようにオブジェクトを実装する必要があります。 この共通の機能セットは、生成されたアセンブリに適用される規則のセットである、共通言語仕様 (CLS: Common Language Specification) によって定義されます。 共通言語仕様は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 7 ～ 11 項で定義されています。  
   
  コンポーネントが共通言語仕様に準拠している場合は、CLS に準拠することが保証され、CLS をサポートするすべてのプログラミング言語で記述されたアセンブリのコードからアクセスできます。 コンパイル時にコンポーネントが共通言語仕様に準拠しているかどうかを確認するには、<xref:System.CLSCompliantAttribute> 属性をソース コードに適用します。 詳細については、「[CLSCompliantAttribute 属性](#CLSAttribute)」を参照してください。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48842828"
   
     -   [イベント](#events)  
   
-    -   [オーバーロード](#overloads)  
+    -   [Overloads](#overloads)  
   
     -   [例外](#exceptions)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48842828"
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 準拠の規則  
- ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則の一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。  
+ ここでは、CLS に準拠したコンポーネントを作成するための規則について説明します。 規則規則の完全な一覧については、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) の第 1 部の第 11 項を参照してください。  
   
 > [!NOTE]
 >  共通言語仕様では、コンシューマー (プログラムによって CLS 準拠のコンポーネントにアクセスする開発者)、フレームワーク (言語コンパイラを使用して CLS 準拠のライブラリを作成する開発者)、およびエクステンダー (CLS 準拠のコンポーネントを作成する言語コンパイラ、コード パーサーなどのツールを作成する開発者) に適用する、CLS 準拠の各規則について説明します。 ここでは、フレームワークに適用するときの規則に焦点を当てます。 エクステンダーに適用する一部の規則は、Reflection.Emit を使用して作成されたアセンブリに適用されることもあります。  
@@ -87,7 +87,8 @@ ms.locfileid: "48842828"
  [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
  [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
- `Person` クラスを CLS 準拠にするには、`Age` プロパティの型を <xref:System.UInt16> から、CLS 準拠の 16 ビット符号付き整数である <xref:System.Int16> に変更します。 プライベート `personAge` フィールドの型を変更する必要はありません。  
+ 
+  `Person` クラスを CLS 準拠にするには、`Age` プロパティの型を <xref:System.UInt16> から、CLS 準拠の 16 ビット符号付き整数である <xref:System.Int16> に変更します。 プライベート `personAge` フィールドの型を変更する必要はありません。  
   
  [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
  [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
@@ -100,7 +101,7 @@ ms.locfileid: "48842828"
   
 -   パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。  
   
- CLS 準拠の規則を次の表に示します。 この規則は、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。  
+ CLS 準拠の規則を次の表に示します。 これらの規則のテキストは、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。  
   
 |カテゴリ|解決方法については、|ルール|規則番号|  
 |--------------|---------|----------|-----------------|  
@@ -118,7 +119,8 @@ ms.locfileid: "48842828"
 |イベント|[イベント](#events)|イベントを実装するメソッドは、メタデータ内で `SpecialName` のマークが付けられる。|29|  
 |イベント|[イベント](#events)|イベントとイベントのアクセサーのアクセシビリティは同一である。|30|  
 |イベント|[イベント](#events)|イベントの `add` メソッドおよび `remove` メソッドは、どちらもあってもなくてもよい。|31|  
-|イベント|[イベント](#events)|`add` メソッドおよび `remove` メソッドは、それぞれパラメーターを 1 つ使用する。このパラメーターの型がイベントの型を規定する。また、パラメーターの型は <xref:System.Delegate?displayProperty=nameWithType> の派生でなければいけない。|32|  
+|イベント|[イベント](#events)|
+  `add` メソッドおよび `remove` メソッドは、それぞれパラメーターを 1 つ使用する。このパラメーターの型がイベントの型を規定する。また、パラメーターの型は <xref:System.Delegate?displayProperty=nameWithType> の派生でなければいけない。|32|  
 |イベント|[イベント](#events)|イベントは、特定の名前付けパターンに従わなくてはいけない。 CLS 規則 29 で触れられている `SpecialName` 属性は、適切な名前比較で無視され、識別子規則に従わなければいけない。|33|  
 |例外|[例外](#exceptions)|スローできるオブジェクト型は、<xref:System.Exception?displayProperty=nameWithType>、またはそれを継承する型である。 ただし、CLS 準拠のメソッドで他の型の例外のスローをブロックする必要はない。|40|  
 |全般|[CLS 準拠: 規則](#Rules)|CLS 規則は、型の構成部分のうち、その型を定義しているアセンブリの外部からアクセスまたは参照できる部分にのみ適用される。|1|  
@@ -137,8 +139,8 @@ ms.locfileid: "48842828"
 |名前付け規則|[名前付け規則](#naming)|アセンブリは、識別子の頭文字および構成文字として使用できる文字セットを規定する Unicode Standard 3.0 の『Technical Report 15』の「Annex 7」に従う必要がある。詳細については、「<https://www.unicode.org/unicode/reports/tr15/tr15-18.html>」を参照。 識別子は、Unicode 正規形 C に定義されている標準形式で記述する必要がある。CLS で 2 つの識別子が同じと見なされるのは、小文字マッピング (Unicode のロケール非依存で 1 対 1 の小文字による対応付け) が同じ場合である。 つまり、CLS で 2 つの識別子が異なる場合、大文字小文字の違いだけではない。 ただし、継承された定義をオーバーライドする場合、CLI では元の宣言と厳密に同じエンコーディングの使用が求められる。|4|  
 |オーバーロード|[名前付け規則](#naming)|CLS 準拠のスコープに導入されるすべての名前は、完全に独立した種類である必要があります。ただし、名前が同じでオーバーロードによって解決できる場合を除きます。 CTS では 1 つの型でメソッドとフィールドとに同じ名前を使用できるが、CLS では使用できない。|5|  
 |オーバーロード|[名前付け規則](#naming)|フィールドおよび入れ子になった型について、CTS ではシグネチャでの区別が可能だが、CLS では識別子の比較だけで区別できる必要がある。 CLS 規則 39 の指定を除き、識別子の比較により名前が同じであるメソッド、プロパティ、およびイベントでは、相違点は戻り値の型だけに限定されない。|6|  
-|オーバーロード|[オーバーロード](#overloads)|プロパティおよびメソッドのみオーバーロードできる。|37|  
-|オーバーロード|[オーバーロード](#overloads)|プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。|38|  
+|オーバーロード|[Overloads](#overloads)|プロパティおよびメソッドのみオーバーロードできる。|37|  
+|オーバーロード|[Overloads](#overloads)|プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。|38|  
 |オーバーロード|--|型で宣言された複数の CLS 準拠のメソッドに同じ名前が指定されている場合、特定の一連の型のインスタンス化において、これらのメソッドのパラメーターと戻り値の型は同じである。また、これらの型のインスタンス化で、すべてのメソッドをセマンティクス レベルで等価にする必要がある。|48|  
 |種類|[型および型メンバーのシグネチャ](#Types)|<xref:System.Object?displayProperty=nameWithType> は CLS 準拠である。 これ以外のあらゆる CLS 準拠クラスは CLS 準拠クラスの継承でなければならない。|23|  
 |プロパティ|[プロパティ](#properties)|プロパティの getter メソッドおよび setter メソッドを実装するメソッドは、メタデータで `SpecialName` とマークする。|24|  
@@ -154,7 +156,8 @@ ms.locfileid: "48842828"
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>型および型メンバーのシグネチャ  
- <xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します。また、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承します。そして、このクラスは <xref:System.Exception> クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。  
+ 
+  <xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します。また、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承します。そして、このクラスは <xref:System.Exception> クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。  
   
  次の例は、基本型が CLS に準拠していない派生型を示しています。 これは、符号なし 32 ビット整数をカウンターとして使用する `Counter` 基底クラスを定義します。 クラスには、符号なし整数をラップすることでカウンター機能が用意されます。このため、クラスは CLS 非準拠としてマークされます。 結果として、派生クラス `NonZeroCounter` も CLS に準拠しなくなります。  
   
@@ -275,7 +278,8 @@ ms.locfileid: "48842828"
 ### <a name="arrays"></a>配列  
  CLS 準拠の配列は、次の規則に従います。  
   
--   配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
+-   配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 
+  <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
@@ -305,7 +309,7 @@ ms.locfileid: "48842828"
   
      この規則のため、CLS に準拠している型は、CLS に準拠していないメンバーを実装する必要はありません。 CLS 準拠のフレームワークによって、CLS に非準拠のインターフェイスを実装するクラスが公開されている場合、そのフレームワークには、CLS 非準拠のすべてのメンバーの具象実装も用意する必要があります。  
   
- CLS 準拠の言語コンパイラでは、クラスによって、複数のインターフェイスにある同じ名前およびシグネチャを持つメンバーを個別に実装できるようにすることも必要です。  C# と Visual Basic の両方が[明示的なインターフェイス実装](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md)をサポートしており、同じ名前を持つメソッドを別々に実装できます。 Visual Basic では `Implements` キーワードもサポートされているので、特定のメンバーが実装するインターフェイスおよびメンバーを明示的に指定できます。 次の例は、明示的なインターフェイス実装として `Temperature` インターフェイスおよび `ICelsius` インターフェイスを実装する `IFahrenheit` クラスを定義することで、このシナリオを示しています。  
+ CLS 準拠の言語コンパイラでは、クラスによって、複数のインターフェイスにある同じ名前およびシグネチャを持つメンバーを個別に実装できるようにすることも必要です。  C# と Visual Basic の両方が[明示的なインターフェイス実装](../csharp/programming-guide/interfaces/explicit-interface-implementation.md)をサポートしており、同じ名前を持つメソッドを別々に実装できます。 Visual Basic では `Implements` キーワードもサポートされているので、特定のメンバーが実装するインターフェイスおよびメンバーを明示的に指定できます。 次の例は、明示的なインターフェイス実装として `Temperature` インターフェイスおよび `ICelsius` インターフェイスを実装する `IFahrenheit` クラスを定義することで、このシナリオを示しています。  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -494,7 +498,9 @@ ms.locfileid: "48842828"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 属性  
- <xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。  
+ 
+  <xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 
+  <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。  
   
  コンパイル時に、CLS 準拠が前提とされる非準拠要素が検出され、警告が出力されます。 非準拠として明示的に宣言された型またはメンバーに対しては、警告は出力されません。  
   
@@ -507,7 +513,8 @@ ms.locfileid: "48842828"
 > [!WARNING]
 >  言語コンパイラでは、<xref:System.CLSCompliantAttribute> 属性が使用されているかどうかに関係なく、CLS 準拠の規則が適用される場合があります。 たとえば、インターフェイスの静的メンバーを定義すると CLS の規則に違反します。 この点に関して、インターフェイスで `static` メンバー (C# の場合) または `Shared` メンバー (Visual Basic の場合) を定義すると、C# と Visual Basic の両方のコンパイラでエラー メッセージが表示され、アプリはコンパイルされません。  
   
- <xref:System.CLSCompliantAttribute> 属性は、値 <xref:System.AttributeUsageAttribute> が指定された <xref:System.AttributeTargets.All?displayProperty=nameWithType> 属性でマークされます。 この値を使用すると、<xref:System.CLSCompliantAttribute> 属性を、アセンブリ、モジュール、型 (クラス、構造体、列挙体、インターフェイス、およびデリゲート)、型パラメーター (コンストラクター、メソッド、プロパティ、フィールド、およびイベント)、パラメーター、ジェネリック パラメーター、戻り値など、すべてのプログラム要素に適用できます。 ただし、実際は、アセンブリ、型、および型メンバーだけに属性を適用することをお勧めします。 そうしないと、属性は、コンパイラによってライブラリのパブリック インターフェイスで非準拠パラメーター、ジェネリック パラメーター、または戻り値が検出されたときに必ず無視され、コンパイラ警告が引き続き生成されます。  
+ 
+  <xref:System.CLSCompliantAttribute> 属性は、値 <xref:System.AttributeUsageAttribute> が指定された <xref:System.AttributeTargets.All?displayProperty=nameWithType> 属性でマークされます。 この値を使用すると、<xref:System.CLSCompliantAttribute> 属性を、アセンブリ、モジュール、型 (クラス、構造体、列挙体、インターフェイス、およびデリゲート)、型パラメーター (コンストラクター、メソッド、プロパティ、フィールド、およびイベント)、パラメーター、ジェネリック パラメーター、戻り値など、すべてのプログラム要素に適用できます。 ただし、実際は、アセンブリ、型、および型メンバーだけに属性を適用することをお勧めします。 そうしないと、属性は、コンパイラによってライブラリのパブリック インターフェイスで非準拠パラメーター、ジェネリック パラメーター、または戻り値が検出されたときに必ず無視され、コンパイラ警告が引き続き生成されます。  
   
  <xref:System.CLSCompliantAttribute> 属性の値は、内包型プログラム要素によって継承されます。 たとえば、アセンブリが CLS 準拠としてマークされている場合は、その型も CLS に準拠します。 型が CLS 準拠としてマークされている場合は、その入れ子になった型とメンバーも CLS に準拠します。  
   
@@ -548,23 +555,23 @@ ms.locfileid: "48842828"
   
  単一のアセンブリに 2 つのクラスをパッケージ化するには、モジュールにコンパイルする必要があります。 Visual Basic のソース コード ファイルをモジュールにコンパイルするには、次のコマンドを使用します。  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Visual Basic コンパイラのコマンド ライン構文の詳細については、「[コマンド ラインからのビルド](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。  
+ Visual Basic コンパイラのコマンド ライン構文の詳細については、「[コマンド ラインからのビルド](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。  
   
  C# のソース コード ファイルをモジュールにコンパイルするには、次のコマンドを使用します。  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- C# コンパイラのコマンド ライン構文の詳細については、「[csc.exe を使用したコマンド ラインからのビルド](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」を参照してください。  
+ C# コンパイラのコマンド ライン構文の詳細については、「[csc.exe を使用したコマンド ラインからのビルド](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」を参照してください。  
   
- 次に、[リンク ツール (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129) を使用して 2 つのモジュールをアセンブリにコンパイルします。  
+ 次に、[リンカー オプション](/cpp/build/reference/linker-options)を使用して 2 つのモジュールをアセンブリにコンパイルします。  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +582,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Visual Basic コードをコンパイルするには、次のコマンドを使用します。  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  C# でコンパイルするには、コンパイラの名前を **vbc** から **csc** に変更し、ファイル拡張子を .vb から .cs に変更します。  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   

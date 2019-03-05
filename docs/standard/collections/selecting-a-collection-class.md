@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd40e35c001318f7e5e685a68fd591b253cbf051
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620085"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836371"
 ---
 # <a name="selecting-a-collection-class"></a>コレクション クラスの選択
 コレクション クラスは慎重に選択してください。 間違った型を使用すると、コレクションの使用が制限されることがあります。 一般に、.NET Framework バージョン 1.1 を特に対象としている場合を除いて、<xref:System.Collections> 名前空間にある型は使用しないでください。 タイプ セーフの強化や他の改善があるため、コレクションの汎用および同時実行バージョンをお勧めします。  
@@ -60,7 +60,8 @@ ms.locfileid: "54620085"
   
     -   <xref:System.Collections.Hashtable> クラスは、ハッシュ コードによってその要素を並べ替えます。  
   
-    -   <xref:System.Collections.SortedList> クラスおよび <xref:System.Collections.Generic.SortedDictionary%602> と <xref:System.Collections.Generic.SortedList%602> ジェネリック クラスは、<xref:System.Collections.IComparer> インターフェイスおよび <xref:System.Collections.Generic.IComparer%601> ジェネリック インターフェイスの実装に基づいて、キーによってその要素を並べ替えます。  
+    -   
+  <xref:System.Collections.SortedList> クラスおよび <xref:System.Collections.Generic.SortedDictionary%602> と <xref:System.Collections.Generic.SortedList%602> ジェネリック クラスは、<xref:System.Collections.IComparer> インターフェイスおよび <xref:System.Collections.Generic.IComparer%601> ジェネリック インターフェイスの実装に基づいて、キーによってその要素を並べ替えます。  
   
     -   <xref:System.Collections.ArrayList> は、<xref:System.Collections.IComparer> 実装をパラメーターとして受け取る、<xref:System.Collections.ArrayList.Sort%2A> メソッドを提供します。 それに対応するジェネリックである <xref:System.Collections.Generic.List%601> ジェネリック クラスは、<xref:System.Collections.Generic.IComparer%601> ジェネリック インターフェイスの実装をパラメーターとして受け取る、<xref:System.Collections.Generic.List%601.Sort%2A> メソッドを提供します。  
   
@@ -75,7 +76,7 @@ ms.locfileid: "54620085"
     -   さらに、ジェネリック型の引数として <xref:System.String> クラスを指定することにより、<xref:System.Collections.Generic> 名前空間にある任意のジェネリック コレクション クラスを厳密に型指定された文字列コレクションとして使用できます。  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects および PLINQ  
- LINQ to Objects により、開発者は、オブジェクト型で <xref:System.Collections.IEnumerable> または <xref:System.Collections.Generic.IEnumerable%601> を実装している限り、LINQ クエリを使用してインメモリ オブジェクトにアクセスできます。 LINQ クエリはデータ アクセス用の一般的なパターンです。通常、これは標準の `foreach` ループよりも簡潔で読みやすく、フィルター処理、並べ替え、およびグループ化機能を備えています。 詳細については、「[LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)」を参照してください。  
+ LINQ to Objects により、開発者は、オブジェクト型で <xref:System.Collections.IEnumerable> または <xref:System.Collections.Generic.IEnumerable%601> を実装している限り、LINQ クエリを使用してインメモリ オブジェクトにアクセスできます。 LINQ クエリはデータ アクセス用の一般的なパターンです。通常、これは標準の `foreach` ループよりも簡潔で読みやすく、フィルター処理、並べ替え、およびグループ化機能を備えています。 詳細については、「[LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)」および「[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)」を参照してください。  
   
  PLINQ は、マルチコア コンピューターをより効率的に使用することにより、多くのシナリオでより高速にクエリを実行できる LINQ to Objects の並列実装を提供します。 詳細については、「[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)」を参照してください。  
   

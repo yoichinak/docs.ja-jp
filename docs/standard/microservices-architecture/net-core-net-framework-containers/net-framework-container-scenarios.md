@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a4da138540d8a2b8c1ac322c00904cff2b329aea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
+ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479907"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57251015"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Framework を選択するタイミング
 
@@ -23,7 +23,7 @@ ms.locfileid: "55479907"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>NET Core で使用できないサードパーティ製の .NET ライブラリや NuGet パッケージを使用する
 
-サードパーティ ライブラリでは [.NET Standard](../../net-standard.md) の採用が迅速に進められています。これにより、.NET Core を含むすべての種類の .NET でコードを共有できるようになります。 .NET Standard Library 2.0 以上では、異なるフレームワーク間での API サーフェスの互換性はかなり高くなっています。また、.NET Core 2.x では、アプリケーションは既存の .NET Framework ライブラリを直接参照することもできます (「[compat shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20)」を参照)。
+サードパーティ ライブラリでは [.NET Standard](../../net-standard.md) の採用が迅速に進められています。これにより、.NET Core を含むすべての種類の .NET でコードを共有できるようになります。 .NET Standard Library 2.0 以上では、異なるフレームワーク間での API サーフェスの互換性はかなり高くなっています。また、.NET Core 2.x では、アプリケーションは既存の .NET Framework ライブラリを直接参照することもできます ([.NET Standard 2.0 をサポートする .NET Framework 4.6.1](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20) に関するページを参照)。
 
 さらに、[Windows 互換機能パック](../../../core/porting/windows-compat-pack.md)は 2017 年 11 月にリリースされ、Windows の .NET Standard 2.0 で利用可能な API サーフェスを拡張しました。 このパックでは、最小限の変更か、または変更を伴わずに、.NET Standard 2.x のほとんどの既存コードを再コンパイルして、Windows 上で実行できます。
 

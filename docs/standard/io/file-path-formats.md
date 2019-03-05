@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144859"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835825"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
-<xref:System.IO> 名前空間の型の多くのメンバーには `path` パラメーターが含まれています。このパラメーターによって、ファイル システム リソースの絶対パスまたは相対パスを指定できます。 このパスはその後、[Windows ファイル システム API](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx) に渡されます。 このトピックでは、Windows システムで利用できるファイル パスの形式について説明します。
+<xref:System.IO> 名前空間の型の多くのメンバーには `path` パラメーターが含まれています。このパラメーターによって、ファイル システム リソースの絶対パスまたは相対パスを指定できます。 このパスはその後、[Windows ファイル システム API](/windows/desktop/fileio/file-systems) に渡されます。 このトピックでは、Windows システムで利用できるファイル パスの形式について説明します。
 
 ## <a name="traditional-dos-paths"></a>従来の DOS パス
 
@@ -99,7 +99,7 @@ DOS デバイス パスは次の要素から構成されます。
 
 DOS デバイス パスは定義によって完全修飾されます。 相対ディレクトリ セグメント (`.` や `..`) は許可されません。 現在のディレクトリが使用されることはありません。
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>例: 同じファイルを参照する方法
+## <a name="example-ways-to-refer-to-the-same-file"></a>例:同じファイルを参照する方法
 
 次の例では、<xref:System.IO> 名前空間で API を使用するとき、あるファイルを参照する方法をいくつか示しています。 この例では <xref:System.IO.FileInfo> オブジェクトをインスタンス化し、その <xref:System.IO.FileInfo.Name> プロパティと <xref:System.IO.FileInfo.Length> プロパティを使用してファイルの名前と長さを表示します。
 

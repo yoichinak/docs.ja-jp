@@ -5,22 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc45d2c6587f5ff94c5cfbe0251d4b0ebca4231
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702900"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835500"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath 名前空間のナビゲーション
 XML ドキュメントで XPath クエリを使用するには、XML 名前空間およびそれらの名前空間に含まれる要素を、正しくアドレス指定する必要があります。 名前空間は、名前が複数のコンテキストで使用される場合に生じる可能性がある、あいまいさを防ぎます。たとえば、`ID` という名前は、XML ドキュメントの複数の異なる要素に関連付けられた複数の ID を参照する場合があります。 名前空間の構文では、XML ドキュメントの各要素を識別する、URI、名前、およびプレフィックスを指定します。  
   
- このトピックの例では、<xref:System.Xml.XPath.XPathNavigator> で XML ドキュメントをナビゲーションする際のプレフィックスの使用方法を示します。 名前空間と構文の詳細については、「[XML 名前空間入門](https://msdn.microsoft.com/library/aa468565.aspx)」を参照してください。  
+ このトピックの例では、<xref:System.Xml.XPath.XPathNavigator> で XML ドキュメントをナビゲーションする際のプレフィックスの使用方法を示します。 名前空間と構文の詳細については、「[XML ファイル: XML 名前空間入門](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10))」を参照してください。  
   
 ## <a name="namespace-declarations"></a>名前空間の宣言  
  名前空間の宣言によって、<xref:System.Xml.XPath.XPathNavigator> のインスタンスを使用する際に、XML ドキュメントの各要素の識別とアドレス指定が可能になります。 名前空間のプレフィックスでは、アドレス名前空間用の短い構文が指定されます。  
   
- プレフィックスは、`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` という形式で定義されます。この構文では、プレフィックス "`e`" が、名前空間の正式な URI の省略形になります。 `Body` という構文を使用して、`Envelope` 要素を `e:Body` 名前空間のメンバーとして識別できます。  
+ プレフィックスは、`<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` という形式で定義されます。この構文では、プレフィックス "`e`" が、名前空間の正式な URI の省略形になります。 
+  `Body` という構文を使用して、`Envelope` 要素を `e:Body` 名前空間のメンバーとして識別できます。  
   
  次の XML ドキュメントは、次のセクションで示すナビゲーション例で `response.xml` として参照されます。  
   
@@ -38,7 +39,8 @@ XML ドキュメントで XPath クエリを使用するには、XML 名前空�
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>名前空間プレフィックスによるナビゲーション  
- このセクションで示すコードでは、<xref:System.Xml.XPath.XPathNavigator> オブジェクトと <xref:System.Xml.XmlNamespaceManager> オブジェクトを使用して、前のセクションで示した XML ドキュメントの `Search` 要素を選択します。 `xpath` クエリには、パス内の各要素の名前空間プレフィックスが含まれています。 各要素が含まれている名前空間の正確な ID を指定することによって、`Search` メソッドで <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 要素に正しく移動できます。  
+ このセクションで示すコードでは、<xref:System.Xml.XPath.XPathNavigator> オブジェクトと <xref:System.Xml.XmlNamespaceManager> オブジェクトを使用して、前のセクションで示した XML ドキュメントの `Search` 要素を選択します。 
+  `xpath` クエリには、パス内の各要素の名前空間プレフィックスが含まれています。 各要素が含まれている名前空間の正確な ID を指定することによって、`Search` メソッドで <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 要素に正しく移動できます。  
   
 ```  
 using (XmlReader reader = XmlReader.Create("response.xml"))  

@@ -1,15 +1,15 @@
 ---
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
-description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。'
+description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442231"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973510"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する 
 
@@ -468,7 +468,7 @@ runtime イメージでも、ポート 80 への aspnetcore\_url の自動設定
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **.NET Core アプリケーションの Docker イメージのビルド** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[前へ](data-driven-crud-microservice.md)

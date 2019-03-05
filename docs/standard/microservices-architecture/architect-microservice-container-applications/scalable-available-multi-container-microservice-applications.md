@@ -4,12 +4,12 @@ description: Kubernetes アプリケーション ライフサイクルを開発�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307436"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980231"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -137,9 +137,11 @@ Azure Dev Spaces では、Visual Studio 2017 または Visual Studio Code を使
 
 基本的には Azure 内に共有開発スペースを設定することができます。 各開発者はアプリケーションの自分の担当部分にのみに集中できます。自分のシナリオが依存する他のすべてのサービスとクラウド リソースが既に含まれている開発スペースで事前コミット コードを繰り返し開発できます。 依存関係は常に最新の状態になります。開発者は運用環境を反映した方法で作業します。
 
-Azure Dev Spaces では、スペースという概念を導入しています。このスペースにより、チーム メンバーの邪魔をすることを心配せずに、隔離された状態で作業を行うことができます。 この機能は URL の国際アクセス番号に基づいているため、すべてのコンテナーの要求に対して URL 内の開発スペースの国際アクセス番号を使用する場合、この機能ではそのスペースにデプロイされたコンテナーの特別なバージョンが実行されます (存在する場合)。 それ以外の場合は、グローバル/統合されたバージョンが実行されます。
+Azure Dev Spaces ではスペースの概念が提供されます。これにより、チームの作業の中断を心配することなく、相対的な分離された環境で作業できます。 各開発スペースは階層構造の一部です。この構造を使用すると、"最上位の" マスター開発スペースから、1 つ (または多数) のマイクロサービスを独自の進行中のマイクロサービスでオーバーライドできます。
 
-実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS)を参照してください。
+この機能は URL プレフィックスに基づいているため、URL で何らかの開発スペース プレフィックスを使用しているとき、要求は、ターゲット マイクロサービスが開発スペース内に存在する場合はそのマイクロサービスから処理されます。そうでない場合、要求は階層内で見つかったターゲット マイクロサービスの最初のインスタンスに、最終的には最上位のマスター開発スペースに転送されます。
+
+実際のビューの具体的な例を確認するには、[Azure Dev Spaces に関する eShopOnContainers wiki ページ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)を参照してください。
 
 詳細については、「[Azure Dev Spaces を使用したチーム開発](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)」を参照してください。
 

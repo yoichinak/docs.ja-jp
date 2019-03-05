@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35cac6c93594847f5118849a14c4c5f991601367
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221317"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203640"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 
@@ -60,7 +60,7 @@ ms.locfileid: "56221317"
 | **ページの解析** | ASP.NET Web ページ (.aspx ファイル) とユーザー コントロール (.ascx ファイル) のページ パーサーは、旧バージョンの ASP.NET よりも ASP.NET 4 の方が厳密であり、無効とみなされて警告が出力されるマークアップの数が、旧バージョンに比べて多くなります。 | ページの実行時に出力されたエラー メッセージを調べて、無効なマークアップが原因で発生したエラーを修正します。 |
 | **Passport 型** | Passport (現在の Live ID SDK) の変更により、ASP.NET 2.0 に組み込まれた Passport のサポートは廃止され、サポートされなくなりました。 その結果、<xref:System.Web.Security> の Passport に関連する型は、`ObsoleteAttribute` 属性としてマークされるようになりました。 | <xref:System.Web.Security> 名前空間の Passport 型 (たとえば、<xref:System.Web.Security.PassportIdentity>) を使用するコードは、[SDK](https://go.microsoft.com/fwlink/?LinkId=106346) を使用するように変更してください。 |
 | **FilePath プロパティの PathInfo 情報** | ASP.NET 4 では、<xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>、<xref:System.Web.HttpRequest.CurrentExecutionFilePath> などのプロパティからの戻り値に `PathInfo` 値が含まれなくなりました。 代わりに、<xref:System.Web.HttpRequest.PathInfo> 内の `PathInfo` 情報が使用できます。 たとえば、次のような URL フラグメントがあるとします。<br><br>`/testapp/Action.mvc/SomeAction`<br><br>旧バージョンの ASP.NET では、<xref:System.Web.HttpRequest> プロパティは次の値を持ちます。<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (空)<br><br>ASP.NET 4 では、<xref:System.Web.HttpRequest> プロパティは代わりに次の値を持ちます。<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | <xref:System.Web.HttpRequest> クラスのプロパティに依存してパス情報を返しているコード内の箇所を調べます。コードを変更して、パス情報の返し方に関する変更を反映させてください。 |
-| **要求の検証** | 要求の検証を改善するために、ASP.NET 要求の検証は、要求ライフ サイクルの初期に呼び出されます。 その結果、要求の検証は、Web サービスの呼び出しやカスタム ハンドラーに対する要求など、.aspx ファイルが対象ではない要求に対して実行されます。 要求の検証は、カスタム HTTP モジュールが要求処理パイプラインで実行されている場合にもアクティブになります。<br><br>この変更の結果、.aspx ファイル以外のリソースに対する要求では、要求検証エラーがスローされることがあります。 要求パイプラインで実行されるカスタム コード (たとえば、カスタム HTTP モジュール) も、要求検証エラーをスローすることがあります。 | 必要に応じて、Web 構成ファイルで次の設定を使用することにより、.aspx ページでのみ要求検証を起動する古い動作に戻すことができます。<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告 :古い動作に戻す場合は、既存のハンドラー、モジュール、その他のカスタム コード内のすべてのコードで、安全でない (XSS 攻撃ベクターである) 可能性のある HTTP 入力がチェックされることを確認します。 |
+| **要求の検証** | 要求の検証を改善するために、ASP.NET 要求の検証は、要求ライフ サイクルの初期に呼び出されます。 その結果、要求の検証は、Web サービスの呼び出しやカスタム ハンドラーに対する要求など、.aspx ファイルが対象ではない要求に対して実行されます。 要求の検証は、カスタム HTTP モジュールが要求処理パイプラインで実行されている場合にもアクティブになります。<br><br>この変更の結果、.aspx ファイル以外のリソースに対する要求では、要求検証エラーがスローされることがあります。 要求パイプラインで実行されるカスタム コード (たとえば、カスタム HTTP モジュール) も、要求検証エラーをスローすることがあります。 | 必要に応じて、Web 構成ファイルで次の設定を使用することにより、.aspx ページでのみ要求検証を起動する古い動作に戻すことができます。<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告 :古い動作に戻す場合は、既存のハンドラー、モジュール、その他のカスタム コード内のすべてのコードで、XSS 攻撃ベクトルである可能性がある潜在的に安全でない HTTP 入力のチェックが実行されることを確認してください。 |
 | **ルーティング** | Visual Studio 2010 でファイル システム Web サイトを作成するときに、その Web サイトがフォルダー名にドット (.) を含むフォルダー内にある場合、URL ルーティングは正常に動作しません。 一部の仮想パスから、HTTP 404 エラーが返されます。 これが発生するのは、Visual Studio 2010 がルート仮想ディレクトリに正しくないパスを使用して Visual Studio 開発サーバーを起動するためです。 | * ファイル ベースの Web サイトの **[プロパティ]** ページで、**仮想パス**属性を "/" に変更します。<br><br>- または -<br><br>* Web サイト プロジェクトの代わりに、Web アプリケーション プロジェクトを作成します。 Web アプリケーション プロジェクトではこの問題は発生しません。プロジェクト フォルダーの名前にドットが含まれている場合でも、URL ルーティングは動作します。<br><br>- または -<br><br>* IIS でホストされる HTTP ベースの Web サイトを作成します。 IIS でホストされる Web サイトでは、プロジェクト ファイル フォルダーと同様に、仮想パスでもドットを使用できます。 |
 | **SharePoint サイト** | `WSS_Minimal` という名前のカスタムの部分信頼レベルを含む SharePoint Web サイトの子として配置された ASP.NET 4 Web サイトを実行しようとすると、次のエラーが表示されます。<br><br>`Could not find permission set named 'ASP.Net'.` | 現時点では、ASP.NET と互換性がある SharePoint のバージョンはありません。 このため、ASP.NET 4 Web サイトを、SharePoint Web サイトの子として実行しないでください。 |
 | **XHTML 1.1 標準** | 新しい Web サイトの XHTML 1.1 への準拠を有効にするために、.NET Framework 4 の ASP.NET コントロールでは、XHTML 1.1 準拠の HTML が生成されます。 この表示は、Web.config ファイルの `<system.Web>` 要素内で次のオプションを使用することで有効にできます。<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>このオプションは、既定で 4.0 に設定されます。 Visual Studio 2008 からアップグレードされた Web プロジェクトでは、互換性のために 3.5 の設定が有効になります。 | なし。 |
@@ -317,7 +317,7 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ## <a name="see-also"></a>関連項目
 
-### <a name="reference"></a>参照
+### <a name="reference"></a>関連項目
 
 - [.NET Framework 4 における新しい型とメンバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9375386360c94f959f638e1227cb847b783b994
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b0ace73d81783852242a52bec006b0ad2edaadd
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676173"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836137"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML ドキュメントでの名前空間の管理
 XML 名前空間は、XML ドキュメントの要素名と属性名をカスタムの定義済み URI に関連付けます。 この関係を作成するには、名前空間 URI のプレフィックスを定義し、そのプレフィックスを使用して XML データ内の要素名と属性名を修飾します。 名前空間は要素名や属性名の競合を防ぎ、同じ名前の要素や属性を個別に処理および評価できるようにします。  
@@ -58,14 +58,16 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
 ```  
   
 ## <a name="managing-namespaces"></a>名前空間の管理  
- <xref:System.Xml.XmlNamespaceManager> クラスには、名前空間 URI とそのプレフィックスのコレクションが格納されます。このクラスを使用すると、コレクションで名前空間を検索、追加、および削除できます。 このクラスは、特定のコンテキストで、XML の処理のパフォーマンスを向上させるために必要です。 たとえば、XPath をサポートするには、<xref:System.Xml.Xsl.XsltContext> クラスで <xref:System.Xml.XmlNamespaceManager> を使用します。  
+ 
+  <xref:System.Xml.XmlNamespaceManager> クラスには、名前空間 URI とそのプレフィックスのコレクションが格納されます。このクラスを使用すると、コレクションで名前空間を検索、追加、および削除できます。 このクラスは、特定のコンテキストで、XML の処理のパフォーマンスを向上させるために必要です。 たとえば、XPath をサポートするには、<xref:System.Xml.Xsl.XsltContext> クラスで <xref:System.Xml.XmlNamespaceManager> を使用します。  
   
  名前空間マネージャーでは名前空間の検証は一切実行されません。このマネージャーでは、プレフィックスと名前空間が既に確認され、[W3C 名前空間](https://www.w3.org/TR/REC-xml-names/)仕様に準拠していることが前提となっています。  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) では、名前空間の管理に <xref:System.Xml.XmlNamespaceManager> が使用されません。 LINQ to XML を使用する場合の名前空間の管理については、LINQ ドキュメントの「[XML 名前空間の使用](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)」を参照してください。  
+> [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) は、名前空間を管理するために <xref:System.Xml.XmlNamespaceManager> を使用しません。 LINQ to XML を使用している場合の名前空間の管理については、LINQ のドキュメントにある「[XML 名前空間の使用 (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」および [XML 名前空間の使用 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) に関するページを参照してください。  
   
- <xref:System.Xml.XmlNamespaceManager> クラスを使用して実行できる管理タスクと検索タスクをいくつか次に示します。 使用例を含む詳細については、各メソッドまたはプロパティのリファレンス ページへのリンクをクリックしてください。  
+ 
+  <xref:System.Xml.XmlNamespaceManager> クラスを使用して実行できる管理タスクと検索タスクをいくつか次に示します。 使用例を含む詳細については、各メソッドまたはプロパティのリファレンス ページへのリンクをクリックしてください。  
   
 |終了|使用|  
 |--------|---------|  
