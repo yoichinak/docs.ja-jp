@@ -27,7 +27,7 @@ ms.locfileid: "55283453"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   `New`句で、デリゲート クラスの引数リストに単一の AddressOf 式を使用します。  
+-   `New`句で、デリゲート クラスの引数リストに単一の`AddressOf`式を使用します。  
   
 ## <a name="see-also"></a>関連項目
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
