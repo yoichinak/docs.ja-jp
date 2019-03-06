@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 531ed9a6d8805e22408f112c9e617705057468ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebf2fea9f987818c93a1e865f2ed2ce33142050c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624216"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468664"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion メソッド
 メソッドのトークンと編集、コピーのバージョン番号を指定のシンボル リーダー メソッドを取得します。 バージョン番号は、1 から開始し、メソッドは、編集、コピー操作の結果として変更されるたびにインクリメントします。  
@@ -36,7 +36,7 @@ HRESULT GetMethodByVersion (
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `token`  
  [in]メソッド トークンです。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddae8f64eca348afa337b986ac81d59c37e51701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf83c7755bc099275c02ff0049f663573c582faf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469562"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount メソッド
 現在のスピン カウントを設定[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)インスタンス。  
@@ -35,7 +35,7 @@ HRESULT SetSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwSpinCount`  
  [in]現在の新しいスピン カウント`IHostCrst`インスタンス。  
   

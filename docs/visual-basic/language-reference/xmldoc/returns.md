@@ -5,12 +5,12 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 96b9754332b7b9c6c7823aecab6a93b0aa7ffd21
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 670064084d3297a54b2860da3fe3acab00fa3ed8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975460"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469184"
 ---
 # <a name="returns-visual-basic"></a>\<返します > (Visual Basic)
 プロパティまたは関数の戻り値を指定します。  
@@ -21,7 +21,7 @@ ms.locfileid: "56975460"
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  戻り値の説明。  
   

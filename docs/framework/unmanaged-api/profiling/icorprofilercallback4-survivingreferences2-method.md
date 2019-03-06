@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af8f1c9f5d5500dad675edf14ff2e89506530631
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cda3230c652efeffa4a599849ba13dca1e5039b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621238"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472292"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 メソッド
 非圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトのレイアウトを報告します。 このメソッドは、プロファイラーが実装されている場合に呼び出されますが、 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)インターフェイス。 このコールバックが置き換えられます、 [icorprofilercallback 2::survivingreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)メソッド、ULONG で表現できる内容を超える長さのオブジェクトの大きい範囲を報告できるためです。  
@@ -38,7 +38,7 @@ HRESULT SurvivingReferences2(
                 cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cSurvivingObjectIDRanges`  
  [in] 非圧縮ガベージ コレクションを実行した後に存続する、隣接したオブジェクトのブロック数。 つまり、`cSurvivingObjectIDRanges` の値は、`objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列のサイズを表します。これらの配列にはそれぞれ、オブジェクトの各ブロックの `ObjectID` と長さが格納されます。  
   
@@ -53,7 +53,9 @@ HRESULT SurvivingReferences2(
  サイズは、`objectIDRangeStart` 配列内の参照される各ブロックに対して指定します。  
   
 ## <a name="remarks"></a>Remarks  
- `objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列の要素は、次のように解釈されて、ガベージ コレクションでオブジェクトが存続したかどうかを判断する必要があります。 `ObjectID` 値 (`ObjectID`) が次の範囲内にあるとします。  
+ 
+  `objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列の要素は、次のように解釈されて、ガベージ コレクションでオブジェクトが存続したかどうかを判断する必要があります。 
+  `ObjectID` 値 (`ObjectID`) が次の範囲内にあるとします。  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   

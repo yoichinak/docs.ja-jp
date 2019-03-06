@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d163de5f2407d5b541573afe070db812d5980229
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607174"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474359"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit メソッド
 仮想メモリの制限を変更するホストを要求します。  
@@ -36,7 +36,7 @@ HRESULT RequestVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `sztMaxVirtualMemMB`  
  [in]メモリ割り当ての要求されたサイズ。  
   

@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df50a4f5b0bdd0c1e70d7c47fe115f4a28b9bbc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526445"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492856"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset メソッド
 指定した IL オフセットについて、デバッガーが関数からの戻り値を取得できるように、ブレークポイントを配置する必要があるネイティブなオフセットを取得します。  
@@ -40,12 +40,13 @@ HRESULT GetReturnValueLiveOffset(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ILoffset`  
  オフセット IL。 関数呼び出しサイトであることが必要です。そうでない場合、関数呼び出しは失敗します。  
   
  `bufferSize`  
- `pOffsets` を格納できるバイト数。  
+ 
+  `pOffsets` を格納できるバイト数。  
   
  `pFetched`  
  実際に返されたオフセットの数へのポインター。 通常、この値は 1 ですが、単一の IL 命令が複数の `CALL` アセンブリ命令にマップする場合があります。  
@@ -67,7 +68,8 @@ HRESULT GetReturnValueLiveOffset(
 |`CORDBG_E_INVALID_OPCODE`|指定した IL オフセット サイトが呼び出し命令ではないか、関数が `void` を返しています。|  
 |`CORDBG_E_UNSUPPORTED`|指定した IL オフセットは適切な呼び出しですが、取得する戻り値の型がサポートされていません。|  
   
- `ICorDebugCode3::GetReturnValueLiveOffset` メソッドは、x86 ベースおよび AMD64 システムでのみ使用できます。  
+ 
+  `ICorDebugCode3::GetReturnValueLiveOffset` メソッドは、x86 ベースおよび AMD64 システムでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

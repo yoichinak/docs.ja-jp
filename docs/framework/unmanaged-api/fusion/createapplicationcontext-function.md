@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 709769c336d875ee5ddd00b4e1cf919c61e2c394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6b5aa78efcc19f1fc50c8e9bfc5105f9afd7d50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746623"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495209"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 関数
 この関数は、.NET Framework インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -35,7 +35,7 @@ HRESULT CreateApplicationContext (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pName`  
  [in]フレンドリ名へのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b712b7e88e6cb5693c0823799e0980d90e34ff0a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492609"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect メソッド
 対応する Win32 関数の論理ラッパーとして機能します。 Win32 実装`VirtualProtect`呼び出し元のプロセス仮想アドレス空間内のコミットされたページの領域で、保護を変更します。  
@@ -38,7 +38,7 @@ HRESULT VirtualProtect (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpAddress`  
  [in]変更する保護属性を持つは、仮想メモリのベース アドレスへのポインター。  
   

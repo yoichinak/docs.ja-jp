@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8e12c6bd67ea5d22bb891057cae37e3c41ca233
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c34acd93deefa5ac9fff8726b4dc3862f46c6fcb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716857"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470942"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent メソッド
 手動リセット イベント オブジェクトを作成します。  
@@ -36,7 +36,7 @@ HRESULT CreateManualEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bInitialState`  
  [in]`true`オブジェクトがシグナル状態。 それ以外の場合、`false`します。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 276a45c9f7b66fecdc4df07da94f813fe025fcb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48d07c7bcf21dafbf3cacb0b37d232c4433109bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592511"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474554"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification メソッド
 カスタムのデバッガー通知が発生したことを示します。  
@@ -34,7 +34,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
                            ICorDebugAppDomain * pAppDomain);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pThread`  
  [in]通知が発生したスレッドへのポインター。  
   

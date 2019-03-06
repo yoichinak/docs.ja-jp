@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 451a5b163499b265396ae2e8f623b448e07ea807
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c4dd73efbad5ffac47c8585facd1717d77147fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501586"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount メソッド
 同期のためのスピン カウントとクリティカル セクション オブジェクトを作成します。  
@@ -36,7 +36,7 @@ HRESULT CreateCrstWithSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwSpinCount`  
  [in]クリティカル セクション オブジェクトのスピン カウントを指定します。  
   

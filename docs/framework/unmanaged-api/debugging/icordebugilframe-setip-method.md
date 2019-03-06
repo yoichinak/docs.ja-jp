@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed7de70c8ea26f46f44abb3e063c6e4c4b115666
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471395"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP メソッド
-Microsoft intermediate language (MSIL) コード内の指定したオフセット位置に、命令ポインターを設定します。  
+命令ポインターを Microsoft intermediate language (MSIL) コードで指定されたオフセット位置に設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,22 +35,22 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `nOffset`  
- MSIL コード内のオフセットの位置。  
+ MSIL コード内のオフセット位置。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  呼び出す`SetIP`すぐにすべてのフレームと現在のスレッドのチェーンが無効にします。 デバッガーには、呼び出しの後にフレーム情報が必要がある場合`SetIP`、新しいスタック トレースを実行する必要があります。  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)に有効な状態でスタック フレームを維持しようとします。 ただし、場合でも、有効な状態では、フレームは、まだある可能性があります初期化されていないローカル変数などの問題です。 呼び出し元は、実行中のプログラムの一貫性を保証します。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)有効な状態でスタック フレームを保持します。 ただし、場合でも、フレームは、有効な状態では、まだある可能性があります初期化されていないローカル変数などの問題。 呼び出し元は、実行中のプログラムの一貫性を保証します。  
   
- 64 ビット プラットフォームでは、上の命令ポインターを移動できません、`catch`または`finally`ブロックします。 場合`SetIP`が呼び出された 64 ビット プラットフォームで、このような移動をするためには、エラーを示す HRESULT を返します。  
+ 64 ビットのプラットフォームでのうち、命令ポインターを移動できません、`catch`または`finally`ブロックします。 場合`SetIP`というはエラーを示す HRESULT を返す、64 ビット プラットフォームで、このような移動するために、します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

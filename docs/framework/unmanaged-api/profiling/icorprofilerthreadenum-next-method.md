@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25a6baea0cdd92d6d214ab8a697b0c00c44c42bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a014a4e06464f461af25103037b349b2f18a2a5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664578"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488709"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next メソッド
-スレッドのシーケンシャル コレクションから、シーケンスにおいて列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。  
+スレッドのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in] 取得するスレッドの数。  
   
@@ -53,7 +53,8 @@ HRESULT Next (    [in]  ULONG      celt,
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`celt` 要素が返されました。|  
-|S_FALSE|`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
+|S_FALSE|
+  `celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

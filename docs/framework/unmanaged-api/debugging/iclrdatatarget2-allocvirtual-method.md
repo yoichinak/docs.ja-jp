@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9fc894cdd12e58689fb6b010820bb24d14a9541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1e63b6a015bd1ffa86d8fd04b0154dbade85a35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543748"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465921"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual メソッド
 このターゲット プロセスのアドレス空間でメモリの割り当てに共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
@@ -39,7 +39,7 @@ HRESULT AllocVirtual(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `addr`  
  [in]A`CLRDATA_ADDRESS`割り当てられるメモリの要求の開始アドレスを指定する値。  
   

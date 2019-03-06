@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421364"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475737"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange メソッド
-Icordebugstepper をシングル ステップ実行し、指定された範囲の最後以外のコードに達したときに返されるその格納スレッドを表示します。  
+Icordebugstepper シングル ステップ実行し、その格納のスレッドでは、指定した範囲の最後のタスクを超えるコードに達した場合に返されるを表示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +37,28 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bStepIn`  
  [in]設定`true`スレッド内で呼び出される関数にステップ インします。 設定`false`をステップ オーバー関数。  
   
  `ranges`  
- [in]COR_DEBUG_STEP_RANGE 構造体の配列、それぞれの範囲を指定します。  
+ [in]COR_DEBUG_STEP_RANGE 構造体の範囲を指定の配列。  
   
  `cRangeCount`  
  [in] `ranges` 配列のサイズ。  
   
-## <a name="remarks"></a>コメント  
- `StepRange`のような方法は、機能、 [icordebugstepper::step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)メソッド、特定の範囲外のコードまでに完了しないする点を除いてに達した。  
+## <a name="remarks"></a>Remarks  
+ `StepRange`のような方法は、機能、 [icordebugstepper::step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)メソッドが特定の範囲外のコードまでに完了しないこと以外に到達します。  
   
  これは、一度に 1 つの命令をステップ実行するよりも効率的で指定できます。 範囲は、ステッパのフレームの先頭からのオフセットのペアのリストとして指定します。  
   
- 範囲は、メソッドの Microsoft intermediate language (MSIL) コードです。 呼び出す[icordebugstepper::setrangeil](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)で`false`メソッドのネイティブ コードの基準とした範囲にします。  
+ 範囲では、メソッドの Microsoft intermediate language (MSIL) コードに対して相対的です。 呼び出す[icordebugstepper::setrangeil](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)で`false`メソッドのネイティブ コードの基準とした範囲にします。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

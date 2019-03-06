@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab00a93b0bedb8f7ea1425c65c4940b57f11219
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591590"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469666"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup メソッド
 インターフェイス ポインターの型を IAppDomainSetup の取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 `IAppDomainSetup` 作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。  
@@ -35,7 +35,7 @@ HRESULT CreateDomainSetup (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomainSetup`  
  [out]インターフェイス ポインターを<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 このパラメーターとして型指定された`IUnknown`呼び出し元は一般に呼び出す必要がありますので、`QueryInterface`型のインターフェイス ポインターを取得するには、このポインターを`IAppDomainSetup`します。  
   

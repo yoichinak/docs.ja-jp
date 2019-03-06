@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5f88656-433d-447c-b21c-2a12bed2e72a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cacf9333379566f80d270b172a1f3411bdc81cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82101da6c4e47f0e981bb358b79ae2c6670af2c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509767"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471304"
 ---
 # <a name="isymunmanagedasyncmethodgetcatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset メソッド
 参照してください[DefineCatchHandlerILOffset メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)します。  
@@ -20,7 +20,7 @@ ms.locfileid: "54509767"
 HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  

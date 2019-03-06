@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86736f885e40e553195cf2a5f84575a5384e6b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4ab6dac8302d4e03f5d8adad1267f209f131c00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564709"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476485"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity メソッド
 コードの実行が編集された関数の以前のバージョンでシーケンス ポイントに達したことをデバッガーに通知します。  
@@ -39,7 +39,7 @@ HRESULT FunctionRemapOpportunity (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
  [in]編集された関数を格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   

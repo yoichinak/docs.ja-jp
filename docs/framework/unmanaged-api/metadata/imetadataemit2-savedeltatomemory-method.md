@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84972388f90ea23032ed0524723d59077c732e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8cc9544279c6be3efe278c3effda00bc2d387ec
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498896"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495365"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory メソッド
 エディット コンティニュの現在のセッションからの変更をメモリに保存します。  
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbData`  
  [out]メタデータのデルタの書き込みを開始する位置のアドレス。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ca11853100228287c4148a2330cbc5a4609550f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586528"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472509"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread メソッド
 スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。  
@@ -36,7 +36,7 @@ HRESULT CreateThread (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
  [in]スレッドがあるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   

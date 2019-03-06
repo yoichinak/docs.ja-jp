@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405289"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493114"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next メソッド
-コレクションの現在のカーソル位置からのアセンブリの指定した数を取得します。  
+現在のカーソル位置から、コレクションから指定した数のアセンブリを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in]取得するアセンブリの数。  
   
  `values`  
- [out]アセンブリを表す ICorDebugAssembly オブジェクトを指し示すそれぞれが、ポインターの配列。  
+ [out]アセンブリを表す ICorDebugAssembly オブジェクトを指す各ポインターの配列。  
   
  `pceltFetched`  
- [out]実際に返されるアセンブリの数へのポインター。 この値を null にすることがある場合`celt`は 1 つです。  
+ [out]実際に返されるアセンブリの数へのポインター。 この値は null になる場合`celt`は 1 つです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

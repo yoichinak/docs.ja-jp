@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c2e1dc374a5205c774e4470363b38c604fa0862
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604445"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500500"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext メソッド
 ターゲット プロセスの特定のスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイム データ アクセス サービスによって呼び出されます。  
@@ -39,7 +39,7 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
  [in]ターゲット プロセス内のスレッドのオペレーティング システムの識別子です。  
   

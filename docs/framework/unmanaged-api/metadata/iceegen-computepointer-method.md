@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465531"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer メソッド
 指定したコードのセクションのバッファーを決定します。  
@@ -39,7 +39,7 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `section`  
  [in]バッファーを返す対象のコード セクション。  
   

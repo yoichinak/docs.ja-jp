@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a285543571c843a982b6615fdc4b5f1325ed066
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656259"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466961"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs メソッド
 現在のスコープ内のすべての型を表す TypeDef トークンを列挙します。  
@@ -38,7 +38,7 @@ HRESULT EnumTypeDefs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [out]新しい列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   

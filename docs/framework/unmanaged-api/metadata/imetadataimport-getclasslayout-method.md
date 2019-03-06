@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67447e90198ded258645ad7d9173eed37bb60915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479416"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout メソッド
 指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。  
@@ -40,7 +40,7 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
  [in]返されるレイアウトを使用して、クラスの TypeDef トークンです。  
   

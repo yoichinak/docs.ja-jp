@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec16776550765924e17de35674c5774212427e1a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967881"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498459"
 ---
 # <a name="addfile-method"></a>AddFile メソッド
 アセンブリには、ファイルを追加します。 非バインド モジュールの作成にも使用できます。  
@@ -39,7 +39,7 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  追加する対象のアセンブリの一意の ID。  
   

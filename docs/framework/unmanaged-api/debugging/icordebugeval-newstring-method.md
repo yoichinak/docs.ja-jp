@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5eb86bb80aea5fc65a7362467b78b16a59794d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412231"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480183"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString メソッド
-指定した内容を持つ新しい文字列インスタンスを割り当てます。  
+指定した内容を含む新しい文字列インスタンスを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,18 @@ HRESULT NewString (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `string`  
  [in]文字列の内容へのポインター。  
   
-## <a name="remarks"></a>コメント  
- 文字列は常に、現在のスレッドが実行しているアプリケーション ドメインで作成されます。  
+## <a name="remarks"></a>Remarks  
+ 文字列が現在のスレッドが実行されているアプリケーション ドメインで常に作成されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

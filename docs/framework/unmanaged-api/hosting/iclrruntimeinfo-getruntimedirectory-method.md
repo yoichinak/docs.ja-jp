@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26bee605724fd69d972a7e07c6fe6be2fbcabfa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563861"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466975"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory メソッド
 このインターフェイスに関連付けられている共通言語ランタイム (CLR) のインストール ディレクトリを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetRuntimeDirectory(
 [in, out]  DWORD *pcchBuffer);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzBuffer`  
  [out]CLR のインストール ディレクトリを返します。 インストール パスは、完全修飾;たとえば、"c:\windows\microsoft.net\framework\v1.0.3705\\"。  
   
@@ -50,7 +50,7 @@ HRESULT GetRuntimeDirectory(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pwzBuffer` または `pchBuffer` が null です。|  
+|E_POINTER|`pwzBuffer` または`pchBuffer`が null です。|  
   
 ## <a name="remarks"></a>Remarks  
   

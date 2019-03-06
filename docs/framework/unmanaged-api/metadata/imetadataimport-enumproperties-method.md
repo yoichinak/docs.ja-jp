@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b42c558009c25adfd7d282da905e7182dfd3342
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568804"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467022"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties メソッド
 指定した TypeDef トークンによって参照される型のプロパティを表す PropertyDef トークンを列挙します。  
@@ -39,7 +39,7 @@ HRESULT EnumProperties (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   

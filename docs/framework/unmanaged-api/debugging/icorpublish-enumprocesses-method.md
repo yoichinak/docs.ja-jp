@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3af824a23d683f4d450ef6f60fd407928c41d51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77bae0de732fc8847650b9ce03f8228111a76334
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536959"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466519"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses メソッド
 このコンピューターで実行されている管理対象プロセスの列挙子を取得します。  
@@ -36,7 +36,7 @@ HRESULT EnumProcesses (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Type`  
  値、 [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md)列挙型を取得するプロセスの種類を指定します。 現在のバージョンでのみ COR_PUB_MANAGEDONLY は有効です。  
   

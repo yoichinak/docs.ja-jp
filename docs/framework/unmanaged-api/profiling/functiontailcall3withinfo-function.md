@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f80ac10507a0c1022652bddb8bc5b2828490427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c3487f39d4f4c667ec9eb4705e17ccf29d9a4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546626"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490386"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしているプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctiontailcall3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)を取得しますスタック フレーム。  
@@ -34,7 +34,7 @@ void __stdcall FunctionTailcall3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionIDOrClientID`  
  [in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。  
   

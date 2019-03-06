@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fda1964ab29287b2a3a108a15f42d1ea28a4feb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667012"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486917"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW 関数
 指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 アセンブリ ファイルへのパスは、Unicode 文字列として指定する必要があります。  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
  [in]ハッシュされるファイルへのパス。 このパラメーターは、Unicode 文字列である必要があります。  
   

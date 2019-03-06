@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04bdd41e884caa5ed39dff4f4f1e027cde1fec53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5543313a8d7a5589e115d609923aa0e75d3e275
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568011"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484967"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum メソッド
 指定した列挙子を指定した位置にリセットします。  
@@ -36,7 +36,7 @@ HRESULT ResetEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hEnum`  
  [in]リセットする列挙子。  
   

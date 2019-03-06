@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f049a7cadf1857495e49b9bdc2fecd1b49103af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68098895b2ad7f5c08d30f222777e52d4ee3f063
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415484"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476660"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next メソッド
-ICorDebugFrame インスタンスの現在位置から指定した数を取得します。  
+ICorDebugFrame インスタンスの現在位置から指定の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,21 +38,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugFrame`を取得するインスタンス。  
+ [in]数`ICorDebugFrame`インスタンスを取得します。  
   
  `frames`  
  [out]それぞれが指すポインターの配列、`ICorDebugFrame`オブジェクト。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugFrame`実際に返されるインスタンス。 この値を null にすることがある場合`celt`は 1 つです。  
+ [out]数へのポインター`ICorDebugFrame`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc62c5084d91e99193e9ddc5bfbb400fd8d87772
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1deff93744d1dec0ff7d6cab5bb6580f3a8fbad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531068"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490048"
 ---
 # <a name="ihostsyncmanagercreaterwlockwriterevent-method"></a>IHostSyncManager::CreateRWLockWriterEvent メソッド
 ライター ロックの実装の自動リセット イベント オブジェクトを作成します。  
@@ -36,7 +36,7 @@ HRESULT CreateRWLockWriterEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cookie`  
  [in]自動リセット イベントに関連付けるクッキー。  
   

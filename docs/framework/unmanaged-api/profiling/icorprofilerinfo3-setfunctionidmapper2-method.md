@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c3046b78aeaee2d9a6264cc68fc61d1fe02cbb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee520ba95a8eefcc3322af0d0dd6e03c70d35cd4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468703"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 メソッド
-`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドによって拡張、 [icorprofilerinfo::setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)ランタイム間であいまいさを解消するプロファイラーを使用する、追加のデータのパラメーターを持つメソッド。  
+
+  `FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドによって拡張、 [icorprofilerinfo::setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)ランタイム間であいまいさを解消するプロファイラーを使用する、追加のデータのパラメーターを持つメソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +36,7 @@ HRESULT SetFunctionIDMapper2(
        [in] void *clientData);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pFunc`  
  [in]ポインターを[FunctionIDMapper2](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)実装にマップするときに呼び出される、`FunctionID`値の代替値にします。  
   

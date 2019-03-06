@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45795d4f3c0d043a46a750312484b93407ae8434
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607476"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471551"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData メソッド
 指定したモジュールにマップされるメタデータ インターフェイス インスタンスを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetModuleMetaData(
     [out] IUnknown **ppOut);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `moduleId`  
  [in]インターフェイス インスタンスのマップされたモジュールの ID。  
   

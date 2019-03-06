@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403395"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471382"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus メソッド
-クラスの各メソッドのメソッドがユーザー定義のコードであるかどうかを示す値を設定します。  
+クラスの各メソッドでは、メソッドは、ユーザー定義のコードかどうかを示す値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +35,20 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bIsJustMyCode`  
- [in]設定`true`メソッドがユーザー定義であることを示すコードです。 それ以外の場合、`false`です。  
+ [in]設定`true`メソッドがユーザー定義であることを示すコードは、それ以外の場合、`false`します。  
   
-## <a name="remarks"></a>コメント  
- マイ コード (のみ JMC) ステッパは非ユーザー定義コードをスキップします。 ユーザー定義のコードは、デバッグ可能なコードのサブセットである必要があります。  
+## <a name="remarks"></a>Remarks  
+ マイ コード (のみ JMC) のステッパでは、非ユーザー定義のコードをスキップします。 ユーザー定義のコードは、デバッグできるコードのサブセットである必要があります。  
   
- `SetJMCStatus` その他のすべてのメソッドの値が正常に設定する場合でも、任意のメソッドの値を設定が失敗した場合は、S_FALSE の HRESULT 値を返します。  
+ `SetJMCStatus` 場合でも、その他のすべてのメソッドの値を正常に設定、任意のメソッドの値の設定に失敗した場合は、S_FALSE の HRESULT 値を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

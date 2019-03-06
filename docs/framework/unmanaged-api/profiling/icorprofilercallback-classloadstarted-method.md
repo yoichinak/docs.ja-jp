@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a10ea7b257059d2b3177698e8d663a0c28e262b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19814b0c663310e977ef148ad37eb74129fd4d2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737073"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466502"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted メソッド
 クラスが読み込まれていることをプロファイラーに通知します。  
@@ -34,7 +34,7 @@ HRESULT ClassLoadStarted(
     [in] ClassID classId);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `classId`  
  [in]読み込まれているクラスを識別します。  
   

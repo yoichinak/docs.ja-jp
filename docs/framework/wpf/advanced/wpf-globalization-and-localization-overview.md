@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: e31bea225a699f19e57e5a94f84c1a9f1727a3b6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364420"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492670"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -74,7 +74,7 @@ ms.locfileid: "57364420"
   
 -   ビルドした後はローカライズできます。  
   
--   同時に開発するローカライズできるようにの XAML の BAML 形式は、以前のバージョンから、XAMLwith ローカライズの BAML 形式は、の新しいバージョンに更新できます。  
+-   同時に開発するローカライズできるようにの XAML の BAML 形式は、以前のバージョンから、ローカライズ版では、XAML の BAML 形式の新しいバージョンに更新できます。  
   
 -   検証する元のソース要素とセマンティクス コンパイル時に XAML の BAML 形式は、コンパイル済みの形式のため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
   

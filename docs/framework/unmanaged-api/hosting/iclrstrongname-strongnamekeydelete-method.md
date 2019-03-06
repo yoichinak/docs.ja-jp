@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55a94cc5a877efa0ddc8e2a5e554f5d5791e53f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7636391e97d79befba3b80a9c4a952e5f64840c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467040"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>ICLRStrongName::StrongNameKeyDelete メソッド
 指定したキー コンテナーが削除されます。  
@@ -35,7 +35,7 @@ HRESULT StrongNameKeyDelete (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszKeyContainer`  
  [in]削除するキー コンテナーの名前。  
   

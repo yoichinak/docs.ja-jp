@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 458f6ab4a6848ce6921542ca62fe6d5c7cf4719f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55b379f0b2e47acbec03eebf92e1e107a52f918
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704642"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502949"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a>ISymUnmanagedMethod::GetRootScope メソッド
 このメソッド内でルート構文スコープを取得します。 このスコープはメソッド全体を囲みます。  
@@ -34,7 +34,7 @@ HRESULT GetRootScope(
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]設定されているポインターに返された[ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)インターフェイス。  
   

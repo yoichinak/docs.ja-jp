@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543212"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474282"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset メソッド
 この変数の親内の開始オフセットを取得します。 スコープ内のローカル変数の場合は、開始オフセットは、スコープに対して定義されたオフセット内で分類されます。  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]ポインターを`ULONG32`開始オフセットを受け取る。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cd5a7696e7630b21c8bdfa7e4d2f902d6f36995
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544537"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490256"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject メソッド
 共通言語ランタイム (CLR) スレッドにインターフェイス ポインターを取得します。  
@@ -35,7 +35,7 @@ HRESULT GetObject (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppObject`  
  [out]CLR スレッドを表す ICorDebugValue インターフェイス オブジェクトのアドレスへのポインター。  
   

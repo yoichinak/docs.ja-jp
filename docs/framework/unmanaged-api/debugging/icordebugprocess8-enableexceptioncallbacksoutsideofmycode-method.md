@@ -6,12 +6,12 @@ dev_langs:
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b834c2625bfd72db5c03cd9a89fa79af53975943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fc7f34059660c273055c3ee24fb6722fda1ef3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669329"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466558"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode メソッド
 [[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 以降のバージョンでサポート]  
@@ -26,12 +26,13 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `enableExceptionsOutsideOfJMC`  
  [入力]  
   
 ## <a name="remarks"></a>Remarks  
- `enableExceptionsOutsideOfJMC` の値が `false` の場合:  
+ 
+  `enableExceptionsOutsideOfJMC` の値が `false` の場合:  
   
 -   DEBUG_EXCEPTION_FIRST_CHANCE 例外のコールバックでは、デバッガーにされません。  
   

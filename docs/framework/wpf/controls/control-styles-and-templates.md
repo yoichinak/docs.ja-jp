@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373202"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488839"
 ---
 # <a name="control-styles-and-templates"></a>コントロールのスタイルとテンプレート
 Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。 構造とコントロールの外観を変更するには変更することによって、<xref:System.Windows.Controls.ControlTemplate>を制御するのです。 コントロールのビジュアル ツリーの一部だけを置換する方法はありません。設定する必要があります、コントロールのビジュアル ツリーを変更する、<xref:System.Windows.Controls.Control.Template%2A>その新しいと完全にコントロールのプロパティ<xref:System.Windows.Controls.ControlTemplate>します。  
@@ -50,18 +50,18 @@ Windows Presentation Foundation (WPF) コントロールが、<xref:System.Windo
  [ListView のスタイルとテンプレート](listview-styles-and-templates.md)  
  [メニューのスタイルとテンプレート](menu-styles-and-templates.md)  
  [NavigationWindow のスタイルとテンプレート](navigationwindow-styles-and-templates.md)  
- [PasswordBox のスタイルとテンプレート](passwordbox-syles-and-templates.md)  
+ [PasswordBox のスタイルとテンプレート](passwordbox-styles-and-templates.md)  
  [ProgressBar のスタイルとテンプレート](progressbar-styles-and-templates.md)  
  [RadioButton のスタイルとテンプレート](radiobutton-styles-and-templates.md)  
- [RepeatButton のスタイルとテンプレート](repeatbutton-syles-and-templates.md)  
+ [RepeatButton のスタイルとテンプレート](repeatbutton-styles-and-templates.md)  
  [ScrollBar のスタイルとテンプレート](scrollbar-styles-and-templates.md)  
  [ScrollViewer のスタイルとテンプレート](scrollviewer-styles-and-templates.md)  
  [スライダーのスタイルとテンプレート](slider-styles-and-templates.md)  
  [StatusBar のスタイルとテンプレート](statusbar-styles-and-templates.md)  
  [TabControl のスタイルとテンプレート](tabcontrol-styles-and-templates.md)  
  [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)  
- [つまみのスタイルとテンプレート](thumb-syles-and-templates.md)  
- [ToggleButton のスタイルとテンプレート](togglebutton-syles-and-templates.md)  
+ [つまみのスタイルとテンプレート](thumb-styles-and-templates.md)  
+ [ToggleButton のスタイルとテンプレート](togglebutton-styles-and-templates.md)  
  [ToolBar のスタイルとテンプレート](toolbar-styles-and-templates.md)  
  [ToolTip のスタイルとテンプレート](tooltip-styles-and-templates.md)  
  [TreeView のスタイルとテンプレート](treeview-styles-and-templates.md)  

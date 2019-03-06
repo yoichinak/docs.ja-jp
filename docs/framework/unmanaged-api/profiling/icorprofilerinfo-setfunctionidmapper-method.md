@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aee9454024401513d381c50faf815b37371fbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52e8bc29ce03c54fd81ddc0d041cff6b9c35bb2d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514375"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475607"
 ---
 # <a name="icorprofilerinfosetfunctionidmapper-method"></a>ICorProfilerInfo::SetFunctionIDMapper メソッド
-`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。  
+
+  `FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +35,7 @@ HRESULT SetFunctionIDMapper (
     [in] FunctionIDMapper *pFunc);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pFunc`  
  [in]ポインター、 [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)実装にマップするときに呼び出される、`FunctionID`値の代替値にします。  
   

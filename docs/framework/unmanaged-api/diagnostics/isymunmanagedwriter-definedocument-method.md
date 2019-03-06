@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41b27c8d545cce7051ca1507a6bd98b87a32468b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499564"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument メソッド
 ソース ドキュメントを定義します。 既知の言語、ベンダー、およびドキュメントの種類の Guid が提供されます。  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `url`  
  [in]ポインター、`WCHAR`ドキュメントを識別する uniform resource locator (URL) を定義します。  
   

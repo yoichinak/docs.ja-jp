@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d725110dd6bae2047ff680b4caa02f5583903ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2204ee8adaf433152b203cbe93f8db9bb45de53c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591407"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498030"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとすることをプロファイラーに通知します。  
@@ -32,7 +32,7 @@ ms.locfileid: "54591407"
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionOrRemappedID`  
  [in]Tail の呼び出しを行うには、現在実行中の関数の識別子です。  
   

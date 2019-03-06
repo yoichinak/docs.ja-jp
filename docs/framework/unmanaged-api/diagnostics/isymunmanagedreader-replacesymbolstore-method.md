@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f06c416d3443b350a172fab1a93a5d72bf40c197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b863816bfb7ed1a5db1fa2234db224b01cb6c9e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740360"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481548"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore メソッド
 既存のシンボル ストアをデルタ シンボル ストアで置き換えます。 このメソッドは、 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)メソッドが、指定のデルタは、更新プログラムではなく、完全な置き換えとして機能します。  
@@ -38,7 +38,7 @@ HRESULT ReplaceSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `filename`  
  [in]シンボル ストアを含むファイルの名前。  
   

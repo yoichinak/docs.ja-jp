@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9e5a2f7baa1c15ac54950bf1bfc0d448d08f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e887fb5f4f9667bed7eef4a84899f82cada0fcd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567792"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489580"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken メソッド
 指定したトークンが、コード オブジェクトへの有効な参照を保持しているかどうかを示す値を取得します。  
@@ -35,7 +35,7 @@ BOOL IsValidToken (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tk`  
  [in]参照の有効性を確認するトークン。  
   

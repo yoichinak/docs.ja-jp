@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733923"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480326"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 関数
 指定したアセンブリが管理されているかどうかを示す値を取得します。  
@@ -37,7 +37,7 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAssemblyReference`  
  [in]チェック対象のアセンブリの名前。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ccaa1b03ae1afc87eb7b0a66dd517bba8fcf8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648764"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497471"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer メソッド
 指定の相対仮想アドレスにあるメソッドの適切なサイズのバッファーを取得します。  
@@ -38,7 +38,7 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `RVA`  
  [in]バッファーを返す対象のメソッドの相対仮想アドレス。  
   

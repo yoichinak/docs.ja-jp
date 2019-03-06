@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d5a6a992dedacf19c5c06b603c700f9f3c4ec199
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3104fd032f1a5de04f85a895c77cdf777df0a367
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630997"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489944"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc メソッド
 ホストが、ヒープから指定されたメモリ量を割り当てることを要求します。  
@@ -37,7 +37,7 @@ HRESULT Alloc (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbSize`  
  [in]現在のメモリ割り当て要求のバイト単位のサイズ。  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489892"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState メソッド
-ICorDebugThread オブジェクトの現在のデバッグ状態を取得します。  
+この ICorDebugThread オブジェクトの現在のデバッグ状態を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,18 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pState`  
  [out]このスレッドの現在のデバッグ状態を説明する CorDebugThreadState 列挙値のビットごとの組み合わせへのポインター。  
   
-## <a name="remarks"></a>コメント  
- プロセスが現在停止している場合`pState`プロセス続行するか、このスレッドの実際の現在状態にない場合は、このスレッドに対して存在デバッグ状態を表します。  
+## <a name="remarks"></a>Remarks  
+ プロセスが現在停止している場合`pState`プロセスに続く、このスレッドの実際の現在状態にない場合は、このスレッドの存在のデバッグ状態を表します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

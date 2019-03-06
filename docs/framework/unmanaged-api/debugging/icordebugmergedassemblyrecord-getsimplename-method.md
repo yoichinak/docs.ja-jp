@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0919f0cfd0ae1617d140eadd12aa8874c73d8bb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0914c09fbbef5efb64fb253a4ea36d5b6c97ba97
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491651"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479104"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName メソッド
 アセンブリの簡易名を取得します。  
@@ -24,7 +24,7 @@ HRESULT GetSimpleName(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchName`  
  [in] `szName` バッファー内の文字数。  
   
@@ -35,7 +35,7 @@ HRESULT GetSimpleName(
  文字配列へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドは、アセンブリの簡易名 ("System.Collections" など) を取得します。簡易名には、ファイル拡張子、バージョン、カルチャ、公開キー トークンが含まれていません。 これはマネージド コード内の <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> プロパティに対応します。  
+ このメソッドは、アセンブリの簡易名 ("System.Collections" など) を取得します。簡易名には、ファイル拡張子、バージョン、カルチャ、公開キー トークンが含まれていません。 これはマネージ コード内の <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> プロパティに対応します。  
   
 > [!NOTE]
 >  このメソッドは .NET ネイティブでのみ使用できます。  

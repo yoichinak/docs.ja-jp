@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70784106798748eeaabd8e6b6c3787e27b0ece74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489437"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual メソッド
 指定したかどうかを判断します[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクトがこれと等しい`IAssemblyName`を基に、指定した比較フラグ。  
@@ -36,7 +36,7 @@ HRESULT IsEqual (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pName`  
  [in]`IAssemblyName`これと比較するオブジェクト`IAssemblyName`します。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf29b906d524138fdd78b7a4f0286d1c59adc8eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e06a76b4d51245388bf36b8127a470f55ca645fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622127"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494702"
 ---
 # <a name="ihostsecuritymanagersetthreadtoken-method"></a>IHostSecurityManager::SetThreadToken メソッド
 現在実行中のスレッドのハンドルを設定します。  
@@ -35,7 +35,7 @@ HRESULT SetThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hToken`  
  [in]現在実行中のスレッドを設定するトークンへのハンドル。  
   

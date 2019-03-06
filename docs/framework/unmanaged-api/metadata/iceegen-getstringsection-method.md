@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4ccbff4a4967e7525ee4e51650a4f53e5458666
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e306ccc824910226e522bc664f8f87f828a0d52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605519"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477050"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection メソッド
 指定したハンドルによって参照されるコードのセクションの文字列表現を取得します。  
@@ -37,7 +37,7 @@ HRESULT GetStringSection (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `section`  
  [入力、出力]コード セクションへのハンドル。  
   

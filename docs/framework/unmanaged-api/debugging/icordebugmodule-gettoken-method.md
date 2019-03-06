@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f87724bda78c1948ae7e1ddfa3d586fe5b7e14e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfeb9bf282f8b6fc076cf3a5ae71b2375b8a90d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487210"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken メソッド
 このモジュールのテーブルのエントリのトークンを取得します。  
@@ -35,7 +35,7 @@ HRESULT GetToken(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pToken`  
  [out]ポインター、`mdModule`モジュールのメタデータを参照するトークン。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ecc3ca203167e4201dd1fa4af66b94c45d47509
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63300f65a811b80132e6569a599044ff2d480acd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567205"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471578"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached メソッド
 .NET Framework クラス ライブラリの <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> メソッドが `true` を返すように、デバッグ対象の内部状態を変更します。  
@@ -22,7 +22,7 @@ HRESULT MarkDebuggerAttached(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fIsAttached`  
  `true` メソッドが、デバッガーが接続されていることを示す必要がある場合は、<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>。それ以外の場合は、`false`。  
   

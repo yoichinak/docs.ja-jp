@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 932d4ecbf34a636d37a60af0ba11f3fc149ffcea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12ba95eca2a103cffa07247a6ce474263e42e5ad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487526"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>ICorDebugObjectValue::IsValueClass メソッド
 このオブジェクトの値が値型かどうかを示す値を取得します。  
@@ -35,7 +35,7 @@ HRESULT IsValueClass (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbIsValueClass`  
  [out]ブール値へのポインター`true`この"ICorDebugObjectValue"で表される、オブジェクトの値が参照型ではなく、値型の場合、それ以外の場合`pbIsValueClass`は`false`します。  
   

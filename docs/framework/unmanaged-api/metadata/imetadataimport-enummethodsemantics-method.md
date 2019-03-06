@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c20e2787eb8071b10e06b980572c347959fe3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6021cd0126f4dd85b796a3110cd95a83c0f77ff4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619449"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466792"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics メソッド
 指定したメソッドが関連付けられているプロパティおよびプロパティ変更イベントを列挙します。  
@@ -39,7 +39,7 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   

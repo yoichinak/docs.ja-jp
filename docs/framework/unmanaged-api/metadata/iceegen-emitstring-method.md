@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63ddd3b5cc79cedba6d6acc6a9b6b70c00d917fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586424"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476231"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString メソッド
 コード ベースに、指定した文字列を出力します。  
@@ -38,7 +38,7 @@ HRESULT EmitString (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpString`  
  [in]出力する文字列。  
   

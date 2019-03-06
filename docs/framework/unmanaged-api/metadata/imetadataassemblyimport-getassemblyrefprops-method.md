@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d21f51312eb812d253ba218eeeb99e5df1ff8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 471f4837ff8aee725020f52c09a57d8f3652013c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730231"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489866"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps メソッド
 指定したメタデータ シグネチャを持つアセンブリ参照のプロパティのセットを取得します。  
@@ -44,7 +44,7 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdar`  
  [in]`mdAssemblyRef`プロパティを取得する対象のアセンブリ参照を表すメタデータ トークン。  
   

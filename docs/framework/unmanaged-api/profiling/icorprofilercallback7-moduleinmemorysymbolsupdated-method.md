@@ -11,12 +11,12 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae6183f33b784a0ff79d11310b952949cf13bf58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f33eef5c405b98b9dbf88973a8b7cafad06308b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466454"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -31,7 +31,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  [入力] `moduleId`  
  シンボルのストリームが更新されたメモリ内モジュールの識別子。  
   

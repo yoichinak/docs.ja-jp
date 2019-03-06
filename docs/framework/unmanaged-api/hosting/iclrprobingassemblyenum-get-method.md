@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54d0f4582805b140aafd5825e34c429992e9bbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 909e18fe9086fa954ffc389ffe1c6fe49217d2f5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492453"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get メソッド
 指定したインデックス位置には、アセンブリの id を取得します。  
@@ -37,7 +37,7 @@ HRESULT Get (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwIndex`  
  [in]アセンブリ id を返すの 0 から始まるインデックス。  
   

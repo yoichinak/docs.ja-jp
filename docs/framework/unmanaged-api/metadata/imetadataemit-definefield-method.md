@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfe888f74face85179306c982f7b5a888752987e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8553665ba64a1c8e1cb6398d94cd1f772a566ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742800"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466662"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
 指定したメタデータ シグネチャを持つフィールドの定義を作成し、そのフィールド定義トークンを取得します。  
@@ -43,7 +43,7 @@ HRESULT DefineField (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
  [in]`mdTypeDef`外側のクラスまたはインターフェイスのトークン。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdee4df6964097f1c333a8fe96756a8898f7c1cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 806f1ebcacb9e7ad27b7370f9976b3341bf64f8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466935"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps メソッド
 関連付けられているメタデータを取得、<xref:System.Security.PermissionSet?displayProperty=nameWithType>指定した権限のトークンによって表されます。  
@@ -38,7 +38,7 @@ HRESULT GetPermissionSetProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pm`  
  [in]アクセス許可セットのメタデータ プロパティの取得を表すアクセス許可のメタデータ トークンです。  
   

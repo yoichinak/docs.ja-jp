@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c610445d5467a49b8a50b279d8f7fe706e21f73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3c95bbf946cd208a1cc01463aaae76e3842c8fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555662"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471265"
 ---
 # <a name="icorprofilercallback2garbagecollectionstarted-method"></a>ICorProfilerCallback2::GarbageCollectionStarted メソッド
 ガベージ コレクションが開始されたことをコード プロファイラーに通知します。  
@@ -36,7 +36,7 @@ HRESULT GarbageCollectionStarted(
     [in] COR_PRF_GC_REASON reason);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cGenerations`  
  [in]内のエントリの合計数、`generationCollected`配列。  
   

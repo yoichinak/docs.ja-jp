@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 992626fb3fa085c85d61b9bdd25c985436e96aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f9cc44db9c93a8b018d0586bc1faeda7cfbc9bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498433"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay メソッド
 現在のバインディングの表示情報を返します。  
@@ -35,7 +35,7 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `display`  
  [out, retval]バインドの表示情報を含む safearray へのポインター。  
   

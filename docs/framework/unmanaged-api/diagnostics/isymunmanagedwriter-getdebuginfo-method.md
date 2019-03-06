@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87dd256bfe8a067ad798bff77a172b936f2d6aab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce74b043db67fa1086724dd76001935f9c1c0498
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649935"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470949"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo メソッド
 コンパイラがポータブル実行可能 (PE) ファイル ヘッダーのデバッグ ディレクトリのエントリを書き込むために必要な情報を返します。 シンボル ライターを除くのすべてのフィールドは`TimeDateStamp`と`PointerToRawData`します。 (コンパイラは、これら 2 つのフィールドを適切に設定を行います)。  
@@ -40,7 +40,7 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pIDD`  
  [入力、出力]シンボルのライターが入力する、IMAGE_DEBUG_DIRECTORY へのポインター。  
   

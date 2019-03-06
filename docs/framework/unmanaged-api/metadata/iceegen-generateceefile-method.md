@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78cbede0522ce7b78f0a6518ba506b69b4b0515e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb6a9721549087900083b0d5455054abf07362df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712967"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476276"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile メソッド
 これに現在読み込まれてコード ベースを含むコード ベースのファイルが生成されます[ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)インターフェイス。  
@@ -35,7 +35,7 @@ ms.locfileid: "54712967"
 HRESULT GenerateCeeFile ();  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `GenerateCeeFile` パラメーターはありません。  
   
 ## <a name="requirements"></a>必要条件  

@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359550"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482692"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>テキストに関する品質とパフォーマンスの向上  
@@ -36,13 +34,11 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
  Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] フォントには、標準グリフ セットにスタイル代替グリフを提供する追加グリフが含まれています。 次のテキストでは、スタイル代替グリフが表示されています。  
   
- ![OpenType のスタイル代替グリフを使用してテキストを](./media/opentypefont02.gif "opentypefont02")  
-OpenType のスタイル代替グリフを使用するテキスト  
+ ![OpenType のスタイル代替グリフを使用してテキストを](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "OpenType のスタイル代替グリフを使用するテキスト")  
   
  スワッシュは装飾的なグリフで、カリグラフィを連想させることがよくある、手の込んだ装飾が使用されます。 次のテキストには、Pescadero フォントの標準と飾り付きグリフが表示されます。  
   
- ![OpenType の標準と飾り付きグリフを使用してテキストを](./media/opentypefont08.gif "opentypefont08")  
-OpenType の標準グリフと飾り付きグリフを使用するテキスト  
+ ![OpenType の標準と飾り付きグリフを使用してテキストを](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "OpenType の標準と飾り付きグリフを使用するテキスト")  
   
  [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] の機能の詳細については、「[OpenType フォントの機能](opentype-font-features.md)」をご覧ください。  
   
@@ -175,4 +171,4 @@ FormattedText オブジェクトを使用して表示されるテキスト
 - [書式設定されたテキストの描画](drawing-formatted-text.md)
 - [テキストの高度な書式設定](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Microsoft の文字体裁](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft の文字体裁](https://docs.microsoft.com/typography/)

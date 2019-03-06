@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d02a68e80e34be906e9fe09f3457a0f2214c6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405068"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498355"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason メソッド
-この呼び出しチェーンの生成の理由を取得します。  
+この呼び出しチェーンの起源の理由を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT GetReason (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pReason`  
- [out]この呼び出しチェーンの生成の原因を示す CorDebugChainReason 列挙型の値 (ビットごとの組み合わせ) へのポインター。  
+ [out]この呼び出しチェーンの起源の理由を示す CorDebugChainReason 列挙型の値 (ビットごとの組み合わせ) へのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

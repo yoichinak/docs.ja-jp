@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512373"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500383"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain 関数
 共通言語ランタイム (CLR) を初期化します、DLL アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索し、実行を開始します。  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hInst`  
  [in]読み込まれたモジュールのインスタンス ハンドル。  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  オペレーティング システム ローダーでは、DLL のファイルで指定されたエントリ ポイントに関係なく、このメソッドを呼び出します。  
   
- Windows 98、Windows ME、Windows NT、および Windows 2000 で、`_CorDllMain`関数は、間接的に呼び出される、fixupin を介してオペレーティング システム ローダー。 他のすべてのバージョンの Windows では、オペレーティング システム ローダーによって直接呼び出されます。  
+`_CorDllMain`オペレーティング システム ローダーによって直接呼び出されます。
   
  詳細については、「解説」セクションを参照してください。、 [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)トピック。  
   

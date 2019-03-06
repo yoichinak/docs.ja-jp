@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a0fd1981e7da5af19cf3a422c6008d373e9ac92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b436fa14322d444a6c8b515ba8e50698eecb95ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487019"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference メソッド
 参照されているオブジェクトを取得します。  
@@ -35,18 +35,18 @@ HRESULT Dereference (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppValue`  
- [out]この ICorDebugReferenceValue オブジェクトが指すオブジェクトを表す ICorDebugValue のアドレスへのポインター。  
+ [out]この ICorDebugReferenceValue オブジェクトが指し示すオブジェクトを表すアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugValue`オブジェクトが有効では、参照がまだ無効になっている間だけです。  
+## <a name="remarks"></a>Remarks  
+ `ICorDebugValue`オブジェクトが、その参照がまだ無効になっていない場合にのみ有効です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

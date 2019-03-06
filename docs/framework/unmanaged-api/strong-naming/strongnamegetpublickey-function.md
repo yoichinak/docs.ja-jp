@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38879fbb296fa2ce0058e137499e25cd78cdb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89aaf70b6809ca00b1c8df8b99a4e08e7d86a3a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492349"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 関数
 秘密/公開キーの組から公開キーが取得されます。 暗号化サービス プロバイダー (CSP) 内のキー コンテナー名、またはバイトの生のコレクションとして、キーのペアを指定できます。  
@@ -41,7 +41,7 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szKeyContainer`  
  [in]公開/秘密キー ペアを格納するキー コンテナーの名前。 場合`pbKeyBlob`が null、 `szKeyContainer` CSP 内の有効なコンテナーを指定する必要があります。 この場合、`StrongNameGetPublicKey`コンテナーに格納されているキーのペアから公開キーを抽出します。  
   

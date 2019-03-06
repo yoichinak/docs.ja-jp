@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72624eb1d1d43eecb5052ebceec38b1bc32750ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474346"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize メソッド
 バイナリ ラージ オブジェクト (BLOB) ヒープのバイト単位のサイズを取得します。  
@@ -35,7 +35,7 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pcbBlobs`  
  [out]BLOB ヒープのバイト単位のサイズへのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 887197af49a402df73005906e539791f6d7f7be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8758bd416b721a95f48b8c8edb933cf617e13455
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623860"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466495"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads メソッド
 スレッド プールに同時にホストで管理されるスレッドの最大数を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pdwMaxWorkerThreads`  
  [out]スレッド プールでホストを保持するスレッドの最大数へのポインター。  
   

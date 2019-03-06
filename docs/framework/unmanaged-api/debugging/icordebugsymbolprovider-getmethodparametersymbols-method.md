@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be103b8f9d6f94d5b7a265ec2ef01c551622c9e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5866947160be6ceac36e0642a48b41e3df754fc8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714296"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492791"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols メソッド
-メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのパラメーター シンボルを取得します。  
+メソッドの指定の相対仮想アドレス (RVA: relative virtual address ) で、そのメソッドのパラメーター シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,7 +25,7 @@ HRESULT GetMethodParameterSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `nativeRVA`  
  [in] メソッドのネイティブ相対仮想アドレス。  
   

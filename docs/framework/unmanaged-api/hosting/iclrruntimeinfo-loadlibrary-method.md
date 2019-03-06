@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbcbf1b66793a67c815b420e6d5fe221febe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878d68dd690a8764ef26f5f180fabd6c22841a25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466837"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary メソッド
 によって表される共通言語ランタイム (CLR) から .NET Framework ライブラリを読み込み、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。  
@@ -37,7 +37,7 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzDllName`  
  [in]読み込まれるアセンブリの名前。  
   
@@ -50,7 +50,7 @@ HRESULT LoadLibrary(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pwzDllName` または `phndModule` が null です。|  
+|E_POINTER|`pwzDllName` または`phndModule`が null です。|  
 |E_OUTOFMEMORY|メモリが不足は、要求を処理するために使用できます。|  
   
 ## <a name="remarks"></a>Remarks  

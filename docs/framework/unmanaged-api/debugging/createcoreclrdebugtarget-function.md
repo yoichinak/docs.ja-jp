@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a957eb6907b55fe948d696a6a25076c3950f7381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402976"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470066"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 関数
-リモート コンピューターで実行しているデバッガー プロキシへの接続を作成、 [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)クエリ実行中のプロセスとリモート コンピューターに読み込まれたランタイムを使用できるオブジェクト。  
+リモート コンピューターで実行されてを返すデバッガー プロキシへの接続を作成し、 [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)クエリ実行中のプロセスと読み込まれたランタイムに対するリモート コンピューター上に使用できるオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +37,7 @@ HRESULT CreateCoreClrDebugTarget (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwAddress`  
  [in] リモート対象コンピューターの IPv4 アドレス。  
   
@@ -54,8 +54,8 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

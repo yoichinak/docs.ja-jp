@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8559c4c0a1f301c72b48350eff5037faefde5704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b282ca35135fd16dceb92e6a0eeab15837d9b10d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491452"
 ---
 # <a name="ihostautoeventwait-method"></a>IHostAutoEvent::Wait メソッド
 現在[IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)所有者になるまで待機するインスタンスまたは一定の時間が経過するとします。  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwMilliseconds`  
  [in]ミリ秒数、現在`IHostAutoEvent`場合のスレッドがありませんが、インスタンスを戻る前に待機またはファイバーが所有権を取得します。  
   

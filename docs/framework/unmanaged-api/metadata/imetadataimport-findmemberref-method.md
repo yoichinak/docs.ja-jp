@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 057dd7c25821aedddeee57a31200cf35c6df1273
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a58cba0ce4672a479cf5af9467d024a1b1562fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498516"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474290"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef メソッド
 メンバーの MemberRef トークンへのポインターの参照を取得しますが、指定したで囲まれた<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
@@ -39,7 +39,7 @@ HRESULT FindMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
  [in]クラスまたはインターフェイスを検索するメンバーの参照を囲むの TypeRef トークンです。 この値が場合`mdTokenNil`、グローバル変数またはグローバル関数の参照、検索を実行します。  
   

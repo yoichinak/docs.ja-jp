@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 467be5a02b2e202b2e0e4f6a36b748ab6e0e8dbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c68668c1d591a8fb53d04d632027b0d8effb0c42
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731219"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474809"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::GetEventMask2 メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -35,7 +35,7 @@ HRESULT GetEventMask2(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pdwEventsLow`  
  [out] イベントのカテゴリを指定する 4 バイト値へのポインター。 各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットが記載されて、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙体。  
   
@@ -43,7 +43,8 @@ HRESULT GetEventMask2(
  [out] イベントのカテゴリを指定する 4 バイト値へのポインター。  各ビットは、異なる性能、動作、またはイベントの型を制御します。 ビットが記載されて、 [COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)列挙体。  
   
 ## <a name="remarks"></a>Remarks  
- `GetEventMask2` メソッドは、プロファイラーがサブスクライブしたコールバックを判断するのに使用します。 論理 OR を実行する、通常、`pdwEventsLow`と`pdwEventsHigh`値と新しいビットを設定し、呼び出すたい、 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッド。  
+ 
+  `GetEventMask2` メソッドは、プロファイラーがサブスクライブしたコールバックを判断するのに使用します。 論理 OR を実行する、通常、`pdwEventsLow`と`pdwEventsHigh`値と新しいビットを設定し、呼び出すたい、 [SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)メソッド。  
   
  このメソッドは、推奨される代替、 [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)メソッド。  
   

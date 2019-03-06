@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbd7cd2d5ec515c529905ad524cedf257155b7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88516a5ab7fa6ce3cd27422b32cb467a94f50f92
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492778"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 関数
 調べることで指定したタイプ ライブラリに関する情報を返します、 [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)構造体。  
@@ -39,7 +39,7 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szFile`  
  [in]タイプ ライブラリのファイル名。  
   
@@ -61,7 +61,7 @@ HRESULT GetTypeLibInfo(
 ## <a name="remarks"></a>Remarks  
  `GetTypeLibInfo`関数を呼び出して、 [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)します。 このツールは、共通言語ランタイム (CLR) アセンブリで型を記述するタイプ ライブラリを生成します。  
   
- 任意のパラメーターが null 関数を返します、`HRESULT`の`E_POINTER`します。 返しますそれ以外の場合、`S_OK`します。  
+ 任意のパラメーターが null 関数を返します、`HRESULT`の`E_POINTER`します。 それ以外の場合は、 `S_OK`を返します。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

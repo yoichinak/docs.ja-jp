@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18cf59553468e2408f3898d8233bd05d453db17b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639563"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471967"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields メソッド
 指定した TypeDef トークンによって参照される型の FieldDef トークンを列挙します。  
@@ -39,7 +39,7 @@ HRESULT EnumFields (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。  
   

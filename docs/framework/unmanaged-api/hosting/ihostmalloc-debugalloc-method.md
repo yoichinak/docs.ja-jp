@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481639"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc メソッド
 ホストは、ヒープから指定されたメモリ量を割り当てるし、さらに、メモリが割り当てられた場所の追跡を要求します。  
@@ -39,7 +39,7 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbSize`  
  [in]現在のメモリ割り当て要求のバイト単位のサイズ。  
   

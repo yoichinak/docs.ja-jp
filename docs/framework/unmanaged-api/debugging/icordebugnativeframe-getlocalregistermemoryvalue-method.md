@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa9e168b36c8408583ca23dee070fc36b2cb076c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572995"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495235"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue メソッド
 引数またはうち下位ワードと上位ワード メモリ位置に格納され、このネイティブ フレームにそれぞれ、レジスタを指定のローカル変数の値を取得します。  
@@ -39,7 +39,7 @@ HRESULT GetLocalRegisterMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `highWordReg`  
  [in]値の上位ワードを含むレジスタを指定する"CorDebugRegister"列挙型の値。  
   

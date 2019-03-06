@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dc1664551683066a33fb52e16e4909506601f2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b629f5fd461da23aa1d55519d371a70f9f1128ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588692"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471853"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
 前回の呼び出しで定義されているクラスのフィールドのレイアウトが完了すると[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)します。  
@@ -38,7 +38,7 @@ HRESULT SetClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
  [in]`mdTypeDef`クラスに配置されることを示すトークン。  
   
