@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e54b4c4b1b3184b6aa0d50f82a501312db6a8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6462496a8804d9aa5304107a6c01122b745038fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655661"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500253"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps メソッド
 親の TypeDef トークンを取得<xref:System.Type>入れ子にされた型を指定します。  
@@ -36,7 +36,7 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tdNestedClass`  
  [in]TypeDef トークンを表す、<xref:System.Type>親クラスを返すためにトークン。  
   

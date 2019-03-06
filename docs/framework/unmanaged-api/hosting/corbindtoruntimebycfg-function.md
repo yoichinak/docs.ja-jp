@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d59506b522e1c225912da4bc3bd62ca19d32eb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556081"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474783"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 関数
 XML ファイルから読み取られるバージョン情報を使用して、共通言語ランタイム (CLR) をプロセスに読み込みます。  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCfgStream`  
  [in]ポインター、`IStream`を XML ファイルを読み込むオブジェクト。  
   

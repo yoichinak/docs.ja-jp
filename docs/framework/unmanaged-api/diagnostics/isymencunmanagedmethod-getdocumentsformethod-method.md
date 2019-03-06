@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42c677ae5aeb1e1b70ab68be8920fc71215cfe63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471995"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod メソッド
 このメソッドの行が含まれるドキュメントを取得します。  
@@ -36,7 +36,7 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cDocs`  
  [in]バッファーの長さが指す`pcDocs`します。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab729bafdd8987a7c5a03145e02f5c8e5d441a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480716"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress メソッド
 内部フレームのスタック アドレスを返します。  
@@ -33,7 +33,7 @@ ms.locfileid: "54711617"
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAddress`  
  [out]ポインター、`CORDB_ADDRESS`内部フレーム。  
   

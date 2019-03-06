@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20e718d425d0300aed8cc7ccf064126ee8384704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df27d2ab609551bb7a7f6f4b0ff8c7118c9f93f8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478675"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint メソッド
 指定したオフセットには、このコード セグメントでは、ブレークポイントを作成します。  
@@ -36,7 +36,7 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `offset`  
  [in]ブレークポイントを作成するオフセットです。  
   

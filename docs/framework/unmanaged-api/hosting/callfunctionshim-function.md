@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478987"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim 関数
 指定したライブラリ内の関数を、名前とパラメーターを指定して呼び出します。  
@@ -41,7 +41,7 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szDllName`  
  [in]関数を含むライブラリの名前。  
   

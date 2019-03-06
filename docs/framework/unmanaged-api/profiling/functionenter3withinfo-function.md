@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b77e282fd23ee01ea5e7d65bec64f8fb2ecc31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9e94c1904d8675af59e6ed5b49c2229e1214e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533102"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469223"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 関数
 コントロールが、関数に渡されることをプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctionenter3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)スタック フレームと関数の引数を取得します。  
@@ -34,7 +34,7 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionIDOrClientID`  
  [in]コントロールが渡される関数の識別子。  
   

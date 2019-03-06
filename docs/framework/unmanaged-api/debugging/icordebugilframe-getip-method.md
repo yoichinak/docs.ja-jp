@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd421d705a96778159cb80ad92d9ac654e88985f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414067"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479767"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP メソッド
-命令ポインターの値および命令ポインターの値の取得方法を説明するビットごとの組み合わせの値を取得します。  
+命令ポインターの値と命令ポインターの値の取得方法を示すビットごとの組み合わせ値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,23 +36,23 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pnOffset`  
  [out]命令ポインターの値。  
   
  `pMappingResult`  
- [out]命令ポインターの値が得られた方法を説明する CorDebugMappingResult 列挙値のビットごとの組み合わせへのポインター。  
+ [out]命令ポインターの値の取得方法を説明する CorDebugMappingResult 列挙値のビットごとの組み合わせへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 命令ポインターの値は、関数の Microsoft intermediate language (MSIL) コードに、スタック フレームのオフセットです。 スタック フレームがアクティブな場合は、このアドレスは次の命令を実行するには。 スタック フレームがアクティブでない場合、このアドレスは、スタック フレームが再アクティブ化したときに実行する次の命令をします。  
+## <a name="remarks"></a>Remarks  
+ 命令ポインターの値は、関数の Microsoft intermediate language (MSIL) コードにスタック フレームのオフセットです。 スタック フレームがアクティブな場合は、このアドレスは次の命令を実行するには。 スタック フレームがアクティブでない場合、このアドレスは、スタック フレームが再アクティブ化したときに実行するには、次の命令は。  
   
- このフレームが・ イン タイム (JIT) コンパイルされたフレームの場合は、命令ポインターの値が値が概数のみであるために、実際のネイティブ命令ポインターから逆方向にマップすることによって決定されます。  
+ このフレームが・ イン タイム (JIT) コンパイルされたフレームの場合は、命令ポインターの値は値が概数のみであるため、実際のネイティブ命令ポインターから旧バージョンとのマッピングで決定します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

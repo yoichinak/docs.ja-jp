@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3f781e23d0787d01a1ef04b41b2c38eaaa9e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716818"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479338"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString メソッド
 指定された相対仮想アドレスに格納されている文字列を取得します。  
@@ -38,7 +38,7 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `RVA`  
  [in]返される文字列の相対仮想アドレス。  
   

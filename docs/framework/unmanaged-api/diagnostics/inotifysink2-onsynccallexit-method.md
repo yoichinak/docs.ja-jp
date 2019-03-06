@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff5d2dd2cf13e8626d1cca7f66c976dad6d90f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8124af428d68606382e4449db3f68b0b61eb432c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500266"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit メソッド
 呼び出しが終了するときに呼び出されます。  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallExit
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `in_CallID`  
  [in]終了する呼び出しの ID。 参照してください[CALL_ID 構造体](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)します。  
   
