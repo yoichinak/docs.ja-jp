@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 186ea5fd46ca5c6205ff1f98d8964e656655a2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fe5686f516f967ffd182788add643387cb8af9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473969"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage メソッド
 このドキュメントの言語識別子を取得します。  
@@ -34,7 +34,7 @@ HRESULT GetLanguage(
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]言語識別子を受け取る変数へのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737258"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469002"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler メソッド
 指定されたプロファイラーを、指定されたプロセスにアタッチします。  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwProfileeProcessID`  
  [in] プロファイラーをアタッチする必要があるプロセスのプロセス ID。 64 ビット コンピューターでは、プロファイル対象のプロセスのビット数は `AttachProfiler` を呼び出しているトリガー プロセスのビット数に一致する必要があります。 `AttachProfiler` が呼び出されるユーザー アカウントに管理特権がある場合は、システム上のどのプロセスもターゲット プロセスにすることができます。 それ以外の場合は、同じユーザー アカウントがターゲット プロセスを所有している必要があります。  
   
@@ -50,10 +50,12 @@ HRESULT AttachProfiler(
  [in] 読み込まれるプロファイラーの CLSID へのポインター。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。  
   
  `wszProfilerPath`  
- [in] 読み込まれるプロファイラーの DLL ファイルへの完全パス。 この文字列に含める文字数は、null 終端文字も含めて 260 文字以内にする必要があります。 `wszProfilerPath` が null または空の文字列である場合、共通言語ランタイム (CLR: Common Language Runtime) は、`pClsidProfiler` が示す CLSID のレジストリ内を探してプロファイラーの DLL ファイルの場所を見つけることを試みます。  
+ [in] 読み込まれるプロファイラーの DLL ファイルへの完全パス。 この文字列に含める文字数は、null 終端文字も含めて 260 文字以内にする必要があります。 
+  `wszProfilerPath` が null または空の文字列である場合、共通言語ランタイム (CLR: Common Language Runtime) は、`pClsidProfiler` が示す CLSID のレジストリ内を探してプロファイラーの DLL ファイルの場所を見つけることを試みます。  
   
  `pvClientData`  
- [in]によってプロファイラーに渡されるデータへのポインター、 [icorprofilercallback 3::initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)メソッド。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。  
+ [in]によってプロファイラーに渡されるデータへのポインター、 [icorprofilercallback 3::initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)メソッド。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 
+  `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。  
   
  `cbClientData`  
  [in] `pvClientData` がポイントするデータのサイズ (バイト単位)。  

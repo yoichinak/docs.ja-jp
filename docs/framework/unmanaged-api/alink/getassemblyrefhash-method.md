@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2597cf14f4f1fc9a99740b4a07502246f80087d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466597"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash メソッド
 指定されたアセンブリ ハッシュ blob を取得します。  
@@ -36,7 +36,7 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `FileToken`  
  ハッシュが参照するアセンブリの ID。  
   

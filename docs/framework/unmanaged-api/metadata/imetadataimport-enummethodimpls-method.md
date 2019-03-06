@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de333ea1ff376918df8069438ce275fde392ae0b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574769"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503113"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls メソッド
 指定した型のメソッドを表す MethodBody トークンと MethodDeclaration トークンを列挙します。  
@@ -40,7 +40,7 @@ HRESULT EnumMethodImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   

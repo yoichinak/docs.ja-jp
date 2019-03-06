@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bce823bd6a9ad26a705649a666aeb97dcfa0cdbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 239a73bac205f111f7ba299af7613c0fd78ab060
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466907"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask メソッド
 関連付けます、`ICLRTask`を現在[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス。  
@@ -35,7 +35,7 @@ HRESULT SetCLRTask (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCLRTask`  
  [in]インターフェイス ポインター、`ICLRTask`インスタンスに現在関連付けられる`IHostTask`インスタンス。  
   
