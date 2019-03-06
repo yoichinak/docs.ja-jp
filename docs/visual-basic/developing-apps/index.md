@@ -2,15 +2,9 @@
 title: Visual Basic でのアプリケーションの開発
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic, developing applications
-- applications [Visual Basic]
+  - 'Visual Basic, developing applications'
+  - 'applications [Visual Basic]'
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625621"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic でのアプリケーションの開発
 このセクションでは、Visual Basic 言語の概念に関するドキュメントについて説明します。  
@@ -27,9 +21,6 @@ ms.locfileid: "45625621"
   
  [Visual Basic でのコンポーネントの作成および使用](../../visual-basic/developing-apps/creating-and-using-components.md)  
  用語*コンポーネント*を定義し、コンポーネントを作成する方法とタイミングについて定義します。  
-  
- [印刷とレポート](../../visual-basic/developing-apps/printing/index.md)  
- 印刷とレポートに関連するドキュメントへの概要とリンクを提供します。  
   
  [Windows フォーム アプリケーションの基礎](../../visual-basic/developing-apps/windows-forms/index.md)  
  Visual Studio を使用した Windows フォームのアプリケーションの作成についての情報を提供します。  
