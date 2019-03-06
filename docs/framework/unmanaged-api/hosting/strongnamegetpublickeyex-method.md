@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b6640e42328fdf840fb0f6d0672b1fdc2c0bc12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5651415b9565f71e7c899996708c0b263bf0154a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694504"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487994"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx メソッド
 公開/秘密キーのペアから公開キーを取得し、ハッシュ アルゴリズムおよび署名アルゴリズムを指定します。  
@@ -41,7 +41,7 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzKeyContainer`  
  [in]公開/秘密キー ペアを格納するキー コンテナーの名前。 場合`pbKeyBlob`が null、`szKeyContainer`暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 ここで、`StrongNameGetPublicKeyEx`メソッドは、コンテナーに格納されているキーのペアから公開キーを抽出します。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87d466e463cad2d9cd57c341812a0b57e025256
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513182"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479429"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody メソッド
 メソッドの中間共通言語 (CIL) 本体を置換します。  
@@ -35,7 +35,7 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbNewILMethodHeader`  
  [入力] ヘッダー、および本体の後に続く構造を含む、新しい CIL の合計サイズ。  
   

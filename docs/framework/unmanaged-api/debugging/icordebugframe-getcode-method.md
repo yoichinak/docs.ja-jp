@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a4e8c6fa91ee43c33fe0f99d50bd4b1af4a0fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411919"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481197"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode メソッド
-このスタック フレームに関連付けられているコードへのポインターを取得します。  
+このスタック フレームに関連付けられているコードにポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppCode`  
  [out]このフレームに関連付けられているコードを表す ICorDebugCode オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

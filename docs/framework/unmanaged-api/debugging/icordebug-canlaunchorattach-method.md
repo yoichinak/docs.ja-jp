@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c29859a54b89956e017f06b8eeb97a6171eabbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569730"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476218"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach メソッド
 現在コンピューターとランタイムの構成のコンテキスト内で、新しいプロセスの起動または指定した既存のプロセスにアタッチを実行するかどうかを示す HRESULT を返します。  
@@ -36,7 +36,7 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwProcessId`  
  [in]既存のプロセスの ID。  
   
