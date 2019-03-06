@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: 00afc5c12ea9b83759361e9a3f175e91b4cbb10d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375156"
 ---
 # <a name="how-to-use-systemparameters"></a>方法: SystemParameters を使用する
 この例のプロパティを使用してアクセスする方法を示しています。<xref:System.Windows.SystemParameters>のスタイル設定やボタンをカスタマイズするためにします。  
@@ -24,16 +24,16 @@ ms.locfileid: "54541665"
   
  次の例は、アクセスしての静的な値を使用する方法を示しています。<xref:System.Windows.SystemParameters>のスタイル設定やボタンをカスタマイズします。 このマークアップの例ボタンのサイズを適用することで<xref:System.Windows.SystemParameters>をボタンの値。  
   
- [!code-xaml[SystemRes_snip#ParameterStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
+ [!code-xaml[SystemRes_snip#ParameterStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#parameterstaticresources)]  
   
  値を使用する<xref:System.Windows.SystemParameters>コードでは、静的参照または動的リソース参照を使用する必要はありません。 値の代わりに、使用、<xref:System.Windows.SystemParameters>クラス。 キー以外のプロパティは、実行時の動作に、静的プロパティとして定義[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]システムでホストされたはリアルタイムでプロパティが再評価されが正しく - ユーザー駆動型のシステム値に対する変更を反映します。 次の例を使用して、ボタンの高さと幅を設定する方法を示しています。<xref:System.Windows.SystemParameters>値。  
   
- [!code-csharp[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
- [!code-vb[SystemRes_snip#ParameterResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
+ [!code-csharp[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#parameterresourcescode)]
+ [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.SystemParameters>
-- [システム ブラシで領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemFonts を使用する](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [システム パラメーター キーを使用する](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)
-- [方法トピック](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [システム ブラシで領域を塗りつぶす](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts を使用する](how-to-use-systemfonts.md)
+- [システム パラメーター キーを使用する](how-to-use-system-parameters-keys.md)
+- [方法トピック](resources-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: 動的な更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 63d780852f7deea8263f3c232ec9cc43b48a0526
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353700"
 ---
 # <a name="dynamic-update"></a>動的な更新
 動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された動的更新機能の概要について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "49323124"
   
  このトピックでは、コンパイルされた XAML ワークフローの永続インスタンスに新しいアクティビティを追加するという動的更新プロセスの概要について説明します。  
   
-###  <a name="Prepare"></a> 動的更新用のワークフロー定義を準備します。  
+### <a name="Prepare"></a> 動的更新用のワークフロー定義を準備します。  
  動的更新プロセスでは、最初に、更新に必要なワークフロー定義を準備します。 これを行うには、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> メソッドを呼び出し、変更するワークフロー定義を渡します。 このメソッドは、ワークフロー ツリーを検証して、変更後のワークフロー定義と後で比較できるようにタグ付けを必要とする、パブリック アクティビティやパブリック変数などのすべてのオブジェクトを特定します。 この処理が完了すると、ワークフロー ツリーは複製され、元のワークフロー定義にアタッチされます。 更新マップを作成すると、ワークフロー定義の更新後のバージョンが元のワークフロー定義と比較され、その相違点に基づいて更新マップが生成されます。  
   
  動的更新用に XAML ワークフローを準備するために、XAML ワークフローが <xref:System.Activities.ActivityBuilder> に読み込まれた後、<xref:System.Activities.ActivityBuilder> が <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> に渡される場合があります。  
@@ -59,7 +59,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  このトピックに付属するサンプル コードをダウンロードするには、次を参照してください。[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)します。  
   
-###  <a name="Update"></a> 必要な変更を反映するようにワークフロー定義を更新します。  
+### <a name="Update"></a> 必要な変更を反映するようにワークフロー定義を更新します。  
  ワークフロー定義を更新するための準備が完了したら、必要な変更を加えることができます。 アクティビティの追加または削除、パブリック変数の追加、移動、または削除、引数の追加または削除、およびアクティビティ デリゲートのシグネチャの変更を実行できます。 実行中のアクティビティを削除したり、実行中のデリゲートのシグネチャを変更したりすることはできません。 これらの変更は、コードを使用して行うか、再ホストされたワークフロー デザイナーで行うことができます。 次の例では、カスタムの `VerifyAppraisal` アクティビティが、前の例の `MortgageWorkflow` の本体を構成する Sequence に追加されます。  
   
 ```csharp  
@@ -77,7 +77,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> 更新マップを作成します。  
+### <a name="Create"></a> 更新マップを作成します。  
  更新用に準備されたワークフロー定義を変更すると、更新マップを作成できます。 動的更新マップを作成するには、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> メソッドを呼び出します。 これにより、永続化されたワークフロー インスタンスを新しいワークフロー定義で読み込んで再開できるように変更するためにランタイムに必要な情報を含む <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> が返されます。 次の例では、前の例で変更した `MortgageWorkflow` 定義に対して動的マップが作成されます。  
   
 ```csharp  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> 目的の永続化されたワークフロー インスタンスに更新マップを適用します。  
+### <a name="Apply"></a> 目的の永続化されたワークフロー インスタンスに更新マップを適用します。  
  更新マップは作成後にいつでも適用できます。 これは、<xref:System.Activities.DynamicUpdate.DynamicUpdateMap> によって返された <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> インスタンスを使用してすぐに実行することも、更新マップの保存したコピーを使用して後で実行することもできます。 ワークフロー インスタンスを更新するには、<xref:System.Activities.WorkflowApplicationInstance> を使用して、そのワークフロー インスタンスを <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType> に読み込みます。 次に、更新されたワークフロー定義と必要な <xref:System.Activities.WorkflowApplication> を使用して、<xref:System.Activities.WorkflowIdentity> を作成します。 この <xref:System.Activities.WorkflowIdentity> は、元のワークフローの永続化に使用されたものとは異なる場合があるため、通常は、永続化されたインスタンスが変更されていることを示すために使用されます。 <xref:System.Activities.WorkflowApplication> は、作成されると、<xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> を取得する <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> のオーバーロードを使用して読み込まれ、<xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> の呼び出しを使用してアンロードされます。 これにより、動的更新が適用され、更新されたワークフロー インスタンスが永続化されます。  
   
 ```csharp  

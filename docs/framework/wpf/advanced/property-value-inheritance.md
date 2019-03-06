@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520584"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359882"
 ---
 # <a name="property-value-inheritance"></a>プロパティ値の継承
 プロパティ値の継承は、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの機能です。 プロパティ値の継承により、要素のツリー内の子要素は、親要素から特定のプロパティの値を取得できます。これは、最も近い親要素のいずれかに設定されているとおりにその値を継承することで行われます。 親要素もプロパティ値の継承を通じてその値を取得している場合があるため、システムはページ ルートまで再帰している可能性があります。 プロパティ値の継承は、プロパティ システムの既定の動作ではありません。あるプロパティに子要素でのプロパティ値の継承を実行させるには、そのプロパティに特定のメタデータを設定する必要があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "54520584"
 ## <a name="making-a-custom-property-inheritable"></a>カスタム プロパティを継承可能にする  
  カスタム プロパティのメタデータを変更することで、独自のカスタム プロパティを継承可能にすることもできます。 ただし、プロパティを継承可能にする場合は、パフォーマンスについて考慮する必要があります。 ローカル値や、スタイル、テンプレート、またはデータ バインディングから取得した値がそのプロパティに設定されていない場合、継承可能なプロパティは、それ自身に割り当てられた値を論理ツリー内のすべての子要素に提供します。  
   
- プロパティを値の継承に参加させるには、「[添付プロパティを登録する](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)」の説明に従ってカスタム添付プロパティを作成します。 プロパティ メタデータを登録 (<xref:System.Windows.FrameworkPropertyMetadata>) し、そのメタデータ内のオプション設定で「継承」オプションを指定します。 また、値が継承されるようになったため、プロパティに既定値が設定されていることも確認します。 プロパティを添付プロパティとして登録しましたが、"非添付" の依存関係プロパティの場合と同様に、所有者型で get アクセスおよび set アクセスのプロパティ "ラッパー" を作成することもできます。 その後、継承可能なプロパティが設定することも、所有者型または派生型は、ダイレクトのプロパティのラッパーを使用して、またはいずれかで、添付プロパティの構文を使用して設定できます<xref:System.Windows.DependencyObject>します。  
+ プロパティを値の継承に参加させるには、「[添付プロパティを登録する](how-to-register-an-attached-property.md)」の説明に従ってカスタム添付プロパティを作成します。 プロパティ メタデータを登録 (<xref:System.Windows.FrameworkPropertyMetadata>) し、そのメタデータ内のオプション設定で「継承」オプションを指定します。 また、値が継承されるようになったため、プロパティに既定値が設定されていることも確認します。 プロパティを添付プロパティとして登録しましたが、"非添付" の依存関係プロパティの場合と同様に、所有者型で get アクセスおよび set アクセスのプロパティ "ラッパー" を作成することもできます。 その後、継承可能なプロパティが設定することも、所有者型または派生型は、ダイレクトのプロパティのラッパーを使用して、またはいずれかで、添付プロパティの構文を使用して設定できます<xref:System.Windows.DependencyObject>します。  
   
  添付プロパティのグローバル プロパティのような概念的にはいずれかの値をチェックすることができます<xref:System.Windows.DependencyObject>し、有効な結果を取得します。 添付プロパティの一般的なシナリオは、子要素のプロパティ値を設定するのには、このシナリオは、該当するプロパティが添付プロパティは常に各要素に対して添付プロパティとして暗黙的に存在する場合より効果的な (<xref:System.Windows.DependencyObject>) ツリーでします。  
   
@@ -42,6 +42,6 @@ ms.locfileid: "54520584"
  プロパティの継承は、要素のツリーを走査して行われます。 多くの場合、このツリーは論理ツリーに対応します。 ただしなど、要素ツリーを定義するマークアップに WPF コア レベルのオブジェクトを含めるたびに、 <xref:System.Windows.Media.Brush>、不連続の論理ツリーを作成しました。 を通じて概念的に拡張されていない場合は true。 論理ツリー、<xref:System.Windows.Media.Brush>論理ツリーは WPF フレームワーク レベルの概念であるためです。 これのメソッドを使用する場合、結果に反映を確認できます<xref:System.Windows.LogicalTreeHelper>します。 ただし、プロパティ値の継承の論理ツリー内のこのギャップを埋めることができ、継承可能なプロパティが添付プロパティとありません意図的な継承ブロッキング境界として登録されている限り、継承された値を受け渡すことができます (など、 <xref:System.Windows.Controls.Frame>) が発生しました。  
   
 ## <a name="see-also"></a>関連項目
-- [依存関係プロパティのメタデータ](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [依存関係プロパティ値の優先順位](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [依存関係プロパティのメタデータ](dependency-property-metadata.md)
+- [添付プロパティの概要](attached-properties-overview.md)
+- [依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: aa8d1a33fb415b986bc5e058f5d198c221f9f489
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493171"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352769"
 ---
 # <a name="multimedia-overview"></a>マルチメディアの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のマルチメディア機能を使用してアプリケーションにオーディオとビデオを統合することで、ユーザー エクスペリエンスを向上させることできます。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のマルチメディア機能の概要を説明します。  
@@ -21,9 +21,9 @@ ms.locfileid: "54493171"
 ## <a name="media-api"></a>メディア API  
  <xref:System.Windows.Controls.MediaElement>と<xref:System.Windows.Media.MediaPlayer>クラスを使用すると、オーディオまたはビデオのコンテンツを表示します。 これらのクラスは、対話式またはクロックで制御できます。 これらのクラスは、メディアを再生するために [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 のコントロールで使用できます。 どちらのクラスを使用するかは、シナリオによって決まります。  
   
- <xref:System.Windows.Controls.MediaElement> <xref:System.Windows.UIElement>でサポートされている、[レイアウト](../../../../docs/framework/wpf/advanced/layout.md)と多くのコントロールのコンテンツとして使用できます。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] でコードとして使用することもできます。 <xref:System.Windows.Media.MediaPlayer>での設計は、その一方で、<xref:System.Windows.Media.Drawing>オブジェクトし、レイアウトはサポートされていません。 使用して読み込まれたメディア、<xref:System.Windows.Media.MediaPlayer>使用して表示することができますのみ、<xref:System.Windows.Media.VideoDrawing>または直接やり取りすることによって、<xref:System.Windows.Media.DrawingContext>します。 <xref:System.Windows.Media.MediaPlayer> XAML では使用できません。  
+ <xref:System.Windows.Controls.MediaElement> <xref:System.Windows.UIElement>でサポートされている、[レイアウト](../advanced/layout.md)と多くのコントロールのコンテンツとして使用できます。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] でコードとして使用することもできます。 <xref:System.Windows.Media.MediaPlayer>での設計は、その一方で、<xref:System.Windows.Media.Drawing>オブジェクトし、レイアウトはサポートされていません。 使用して読み込まれたメディア、<xref:System.Windows.Media.MediaPlayer>使用して表示することができますのみ、<xref:System.Windows.Media.VideoDrawing>または直接やり取りすることによって、<xref:System.Windows.Media.DrawingContext>します。 <xref:System.Windows.Media.MediaPlayer> XAML では使用できません。  
   
- 描画オブジェクトと描画コンテキストの詳細については、「[描画オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)」を参照してください。  
+ 描画オブジェクトと描画コンテキストの詳細については、「[描画オブジェクトの概要](drawing-objects-overview.md)」を参照してください。  
   
 > [!NOTE]
 >  アプリケーションでメディアを配布するときに、プロジェクト リソースとしてメディア ファイルを使うことはできません。 プロジェクト ファイルで、メディアの種類を `Content` に設定し、`CopyToOutputDirectory` を `PreserveNewest` または `Always` に設定する必要があります。  
@@ -49,7 +49,7 @@ ms.locfileid: "54493171"
   
  Independent モードでメディアの再生を制御するには、メディア オブジェクトの制御メソッドを使用できます。 使用できる制御メソッドは<xref:System.Windows.Controls.MediaElement.Play%2A>、 <xref:System.Windows.Controls.MediaElement.Pause%2A>、 <xref:System.Windows.Controls.MediaElement.Close%2A>、および<xref:System.Windows.Controls.MediaElement.Stop%2A>します。 <xref:System.Windows.Controls.MediaElement>、ときにこれらのメソッドを使用して対話型のコントロールが使用可能なだけ、<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>に設定されている<xref:System.Windows.Controls.MediaState.Manual>します。 メディア オブジェクトが Clock モードの場合、これらのメソッドは使用できません。  
   
- Independent モードの例については、「[MediaElement (再生、一時停止、停止、ボリューム、および速度) を制御する](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)」を参照してください。  
+ Independent モードの例については、「[MediaElement (再生、一時停止、停止、ボリューム、および速度) を制御する](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)」を参照してください。  
   
 ### <a name="clock-mode"></a>Clock モード  
  Clock モードで、<xref:System.Windows.Media.MediaTimeline>ドライブ メディアを再生します。 Clock モードには次の特徴があります。  
@@ -62,15 +62,15 @@ ms.locfileid: "54493171"
   
  Clock モードでメディアの再生を制御する、<xref:System.Windows.Media.Animation.ClockController>制御メソッドを使用する必要があります。 A<xref:System.Windows.Media.Animation.ClockController>から取得したが、<xref:System.Windows.Media.Animation.ClockController>のプロパティ、<xref:System.Windows.Media.MediaClock>します。 いずれかの制御方法を使用しようとした場合、<xref:System.Windows.Controls.MediaElement>または<xref:System.Windows.Media.MediaPlayer>clock モード中にオブジェクトを<xref:System.InvalidOperationException>がスローされます。  
   
- クロックとタイムラインの詳細については、「[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」を参照してください。  
+ クロックとタイムラインの詳細については、「[アニメーションの概要](animation-overview.md)」を参照してください。  
   
- Clock モードの例については、「[ストーリーボードを使用して MediaElement を制御する](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)」を参照してください。  
+ Clock モードの例については、「[ストーリーボードを使用して MediaElement を制御する](how-to-control-a-mediaelement-by-using-a-storyboard.md)」を参照してください。  
   
 <a name="mediaelement"></a>   
 ## <a name="mediaelement-class"></a>MediaElement クラス  
  追加するだけでは、メディアをアプリケーションに追加する、<xref:System.Windows.Controls.MediaElement>コントロールを[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]アプリケーションの提供して、<xref:System.Uri>を含めたいメディアに。 [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 でサポートされているすべてのメディアが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でもサポートされます。 次の例は、単純な使用量を<xref:System.Windows.Controls.MediaElement>で[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
   
- [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
+ [!code-xaml[MediaElement_snip#SimpleMediaElementUsageWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaElement_snip/CSharp/SimpleUsage.xaml#simplemediaelementusagewholepage)]  
   
  このサンプルでは、メディアは、読み込まれるとすぐに自動的に再生されます。 メディアの再生が終了すると、メディアが閉じられ、すべてのメディア リソースが解放されます (ビデオ メモリを含みます)。 これは、既定の動作、<xref:System.Windows.Controls.MediaElement>オブジェクトし、によって制御されます、<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>と<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>プロパティ。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "54493171"
 ### <a name="displaying-a-mediaplayer"></a>MediaPlayer の表示  
  技術的には、<xref:System.Windows.Media.MediaPlayer>物理的に表したものがあるないために、表示されることはできません。 ただしでメディアを存在させる使用できますが、<xref:System.Windows.Media.Drawing>を使用して、<xref:System.Windows.Media.VideoDrawing>クラス。 次の例では、使用、<xref:System.Windows.Media.VideoDrawing>メディアを表示します。  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
- 参照してください、 [Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)の詳細については<xref:System.Windows.Media.Drawing>オブジェクト。  
+ 参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)の詳細については<xref:System.Windows.Media.Drawing>オブジェクト。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.DrawingGroup>
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+- [レイアウト](../advanced/layout.md)
+- [方法トピック](audio-and-video-how-to-topics.md)

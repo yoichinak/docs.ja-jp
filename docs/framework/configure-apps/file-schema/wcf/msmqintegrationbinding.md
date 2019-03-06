@@ -5,11 +5,11 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355036"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 MSMQ を介してメッセージをルーティングすることでキューのサポートを提供するバインディングを定義します。  

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538875"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355602"
 ---
 # <a name="digital-ink-how-to-topics"></a>デジタル インクに関する「方法」トピック
 ## <a name="in-this-section"></a>このセクションの内容  
- [カスタム コントロールからインクを選択する](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [インク データにカスタム データを追加する](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [カスタム コントロールでインクを消去する](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [アプリケーション ジェスチャを認識する](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [インクをドラッグ アンド ドロップする](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [InkCanvas にデータをバインドする](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [分析のヒントに従ってインクを分析する](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [インクの回転](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [WPF アプリケーションの RealTimeStylus を無効にする](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [カスタム コントロールからインクを選択する](how-to-select-ink-from-a-custom-control.md)  
+  [インク データにカスタム データを追加する](how-to-add-custom-data-to-ink-data.md)  
+  [カスタム コントロールでインクを消去する](how-to-erase-ink-on-a-custom-control.md)  
+  [アプリケーション ジェスチャを認識する](how-to-recognize-application-gestures.md)  
+  [インクをドラッグ アンド ドロップする](how-to-drag-and-drop-ink.md)  
+  [InkCanvas にデータをバインドする](how-to-data-bind-to-an-inkcanvas.md)  
+  [分析のヒントに従ってインクを分析する](how-to-analyze-ink-with-analysis-hints.md)  
+  [インクの回転](how-to-rotate-ink.md)  
+  [WPF アプリケーションの RealTimeStylus を無効にする](disable-the-realtimestylus-for-wpf-applications.md)

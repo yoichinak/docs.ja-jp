@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366388"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54510808"
   
 -   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
   
--   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
+-   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
  WPF の UI は、アドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
@@ -37,13 +37,13 @@ ms.locfileid: "54510808"
 ## <a name="implementing-the-contract-pipeline-segment"></a>コントラクト パイプライン セグメントの実装  
  アドインの UI である、ときに、アドインのコントラクトを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。 例では、`IWPFAddInContract`実装<xref:System.AddIn.Contract.INativeHandleContract>、次のコードに示すようにします。  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>アドイン ビュー パイプライン セグメントの実装  
  アドインはのサブクラスとして実装されるため、<xref:System.Windows.FrameworkElement>アドイン ビューの種類はサブクラス化も必要<xref:System.Windows.FrameworkElement>します。 次のコードとして実装されるコントラクトのアドイン ビューを示しています、`WPFAddInView`クラス。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  ここでは、アドイン ビューがから派生した<xref:System.Windows.Controls.UserControl>します。 その結果、アドインの UI から派生する必要がありますも<xref:System.Windows.Controls.UserControl>します。  
   
@@ -51,12 +51,12 @@ ms.locfileid: "54510808"
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>アドイン側アダプター パイプライン セグメントの実装  
  コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、アドインでは、 <xref:System.Windows.FrameworkElement> (アドイン ビュー パイプライン セグメントによって、指定した)。 そのため、<xref:System.Windows.FrameworkElement>に変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。 呼び出して追加アドイン側アダプターによってこの作業が実行される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>、次のコードに示すようにします。  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- アドインの UI を返すアドイン モデルで (を参照してください[UI を作成するアドインを返すこと](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))、アドイン アダプタの変換、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必要があります呼び出すことも、このモデルでが、これを呼び出すコードを記述するメソッドを実装する必要があります。 オーバーライドすることで、これを行う<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>を呼び出すコードを実装して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>場合を呼び出しているコード<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>が必要ですが、<xref:System.AddIn.Contract.INativeHandleContract>します。 この場合、呼び出し元はホスト側のアダプターであり、これについては、後で説明します。  
+ アドインの UI を返すアドイン モデルで (を参照してください[UI を作成するアドインを返すこと](how-to-create-an-add-in-that-returns-a-ui.md))、アドイン アダプタの変換、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必要があります呼び出すことも、このモデルでが、これを呼び出すコードを記述するメソッドを実装する必要があります。 オーバーライドすることで、これを行う<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>を呼び出すコードを実装して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>場合を呼び出しているコード<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>が必要ですが、<xref:System.AddIn.Contract.INativeHandleContract>します。 この場合、呼び出し元はホスト側のアダプターであり、これについては、後で説明します。  
   
 > [!NOTE]
->  オーバーライドする必要がありますも<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>ホスト アプリケーションの UI 間のタブ移動を有効にして、アドインの UI には、このモデルでします。 詳細については、「WPF アドインの制限」を参照してください[WPF アドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
+>  オーバーライドする必要がありますも<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>ホスト アプリケーションの UI 間のタブ移動を有効にして、アドインの UI には、このモデルでします。 詳細については、「WPF アドインの制限」を参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
  追加アドイン側アダプターから派生するインターフェイスを実装するため、<xref:System.AddIn.Contract.INativeHandleContract>も実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>これは無視されますが、ときに<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>オーバーライドされます。  
   
@@ -106,4 +106,4 @@ ms.locfileid: "54510808"
   
 ## <a name="see-also"></a>関連項目
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [WPF のアドインの概要](wpf-add-ins-overview.md)

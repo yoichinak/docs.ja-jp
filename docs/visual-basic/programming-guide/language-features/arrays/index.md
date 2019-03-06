@@ -2,18 +2,13 @@
 title: Visual Basic における配列
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149901"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Visual Basic における配列
 
 配列と呼ばれるものの値のセットは、*要素*、互いに論理的に関連します。 たとえば、配列が学校; の各学年の生徒の数の構成可能性があります。配列の各要素は、1 つ学年の生徒の数です。 同様に、配列が、クラスの学生の成績のあります。配列の各要素は、1 つのレベルです。
@@ -87,7 +82,7 @@ Dim sales()() As Double = New Double(11)() {}
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-使用してサイズを再定義できますを既存の配列がある場合、 [ `Redim` ](../../../language-reference/statements/redim-statement.md)ステートメント。 指定することができます、`Redim`ステートメントが、配列内にある値を保持または空の配列を作成することを指定することができます。 次に、 `Redim` ステートメントを使用して既存の配列のサイズを変更する例をいくつか示します。
+使用してサイズを再定義できますを既存の配列がある場合、 [ `ReDim` ](../../../language-reference/statements/redim-statement.md)ステートメント。 指定することができます、`ReDim`ステートメントが、配列内にある値を保持または空の配列を作成することを指定することができます。 次に、 `ReDim` ステートメントを使用して既存の配列のサイズを変更する例をいくつか示します。
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-前の例では、要素ごとの単位でのジャグ配列に値を割り当ててを使用して、`For...Next`ループします。 入れ子になった配列リテラルを使用してジャグ配列の要素に値を割り当てることもできます。 ただし、使用しようとすると、入れ子になった配列リテラル (たとえば、 ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) コンパイラ エラーが発生[BC30568](../../../,,/../misc/bc30568.md)します。 エラーを修正するには、内側の配列リテラルをかっこで囲みます。 かっこは、強制的に配列のリテラル式を評価して、次の例では、外側の配列リテラルには、結果として得られる値が使用されます。
+前の例では、要素ごとの単位でのジャグ配列に値を割り当ててを使用して、`For...Next`ループします。 入れ子になった配列リテラルを使用してジャグ配列の要素に値を割り当てることもできます。 ただし、使用しようとすると、入れ子になった配列リテラル (たとえば、 `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) コンパイラ エラーが発生[BC30568](../../../,,/../misc/bc30568.md)します。 エラーを修正するには、内側の配列リテラルをかっこで囲みます。 かっこは、強制的に配列のリテラル式を評価して、次の例では、外側の配列リテラルには、結果として得られる値が使用されます。
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Dim arrZ(-1) As String
 > [!NOTE]
 > このセクションでは、1 つの文字列に文字列の配列を結合するには説明しません。 文字列の配列を結合する方法については、次を参照してください。、<xref:System.String.Join%2A?displayProperty=nameWithType>メソッド。
 
-新しい配列に各配列の要素をコピーする前に、まず accompodate 新しい配列に十分な大きさあるように、配列を初期化することを確認する必要があります。 2 つの方法のいずれかでこれを行うことができます。
+新しい配列に各配列の要素をコピーする前に、まず新しい配列を十分に格納されるよう、配列を初期化することを確認する必要があります。 2 つの方法のいずれかでこれを行うことができます。
 
 - 使用して、 [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md)ステートメントを動的に新しい要素を追加する前に、配列を展開します。 これは、最も簡単な方法では、大きな配列をコピーするときにパフォーマンスの低下と過剰なメモリ消費量で発生する可能性が。
 - 新しいの大きな配列の必要な要素の合計数を計算し、各ソース配列の要素を追加します。
@@ -299,9 +294,9 @@ Dim arrZ(-1) As String
 |用語|定義|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|配列のランクと次元について説明します。|
-|[操作方法：Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
-|[操作方法：Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
-|[操作方法：1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
+|[方法: Visual Basic で配列変数を初期化します。](../../language-features/arrays/how-to-initialize-an-array-variable.md)|配列に初期値を設定する方法について説明します。|
+|[方法: Visual Basic で配列を並べ替える](../../language-features/arrays/how-to-sort-an-array.md)|配列の要素をアルファベット順に並べ替える方法について説明します。|
+|[方法: 1 つの配列を別の配列に代入します。](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|配列を別の配列変数に代入するときの手順と規則を説明します。|
 |[配列のトラブルシューティング](../../language-features/arrays/troubleshooting-arrays.md)|配列を使用しているときに発生する一般的な問題について説明します。|
 
 ## <a name="see-also"></a>関連項目

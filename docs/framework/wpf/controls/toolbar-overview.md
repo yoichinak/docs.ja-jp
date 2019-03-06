@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 913c7a9f1b5cf891f3e19c4f3126596bad49f79d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695855"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379641"
 ---
 # <a name="toolbar-overview"></a>ToolBar の概要
 <xref:System.Windows.Controls.ToolBar> コントロールは、コマンドまたはコントロールの機能に関連する通常のグループのコンテナーです。 A<xref:System.Windows.Controls.ToolBar>通常のコマンドを呼び出すボタンが含まれています。  
@@ -24,25 +24,25 @@ ms.locfileid: "54695855"
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>ToolBarTray でツールバーの位置を指定する  
  使用して、<xref:System.Windows.Controls.ToolBar.Band%2A>と<xref:System.Windows.Controls.ToolBar.BandIndex%2A>プロパティを<xref:System.Windows.Controls.ToolBar>で、<xref:System.Windows.Controls.ToolBarTray>します。 <xref:System.Windows.Controls.ToolBar.Band%2A> 位置を示す、<xref:System.Windows.Controls.ToolBar>はその親内に配置<xref:System.Windows.Controls.ToolBarTray>します。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 順序を示す、<xref:System.Windows.Controls.ToolBar>そのバンド内に配置されます。 次の例は、配置するこのプロパティを使用する方法<xref:System.Windows.Controls.ToolBar>内部コントロール、<xref:System.Windows.Controls.ToolBarTray>します。  
   
- [!code-xaml[ToolBarExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
+ [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>オーバーフロー項目を含むツールバー  
  多くの場合、<xref:System.Windows.Controls.ToolBar>コントロールは、ツールバーのサイズに収まるよりもさらに項目を含めることができます。 この場合、<xref:System.Windows.Controls.ToolBar>オーバーフロー ボタンが表示されます。 ユーザーをオーバーフロー項目を表示するには、オーバーフロー ボタンをクリックして、項目は、次のポップアップ ウィンドウに表示されます、<xref:System.Windows.Controls.ToolBar>します。 次の図は、<xref:System.Windows.Controls.ToolBar>オーバーフロー項目を含むです。  
   
- ![オーバーフローを含むツールバー](../../../../docs/framework/wpf/controls/media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
+ ![オーバーフローを含むツールバー](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
 オーバーフローを含むツール バー  
   
  設定してツールバーにあるアイテムがオーバーフロー パネルに配置すると指定することができます、<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>添付プロパティを<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>、 <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>、または<xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>します。 次の例では、ツールバーの最後の 4 つのボタンを常にオーバーフロー パネルに配置します。  
   
- [!code-xaml[ToolBarExample#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
+ [!code-xaml[ToolBarExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
  <xref:System.Windows.Controls.ToolBar>を使用して、<xref:System.Windows.Controls.Primitives.ToolBarPanel>と<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>でその<xref:System.Windows.Controls.ControlTemplate>します。  <xref:System.Windows.Controls.Primitives.ToolBarPanel>ツールバーの項目のレイアウトを担当します。  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>に収まらない項目のレイアウトを行いますが、<xref:System.Windows.Controls.ToolBar>します。 例については、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ToolBar>を参照してください  
   
- [ツール バーのスタイルとテンプレート](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
+ [ツール バーのスタイルとテンプレート](toolbar-styles-and-templates.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
-- [ToolBar のコントロールのスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)
+- [ToolBar のコントロールのスタイルを設定する](how-to-style-controls-on-a-toolbar.md)
 - [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)

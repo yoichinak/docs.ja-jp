@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: bce4f059e76b0ebea29b023eba2e9e2f59813035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360228"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>方法: TreeView での TreeViewItem の検索
 <xref:System.Windows.Controls.TreeView>コントロールには、階層データを表示する便利な方法が用意されています。 場合、 <xref:System.Windows.Controls.TreeView> 、データ ソースにバインドされて、<xref:System.Windows.Controls.TreeView.SelectedItem%2A>プロパティは、選択したデータ オブジェクトを迅速に取得するための便利な方法を提供します。 通常、基になるデータ オブジェクトを使用することをお勧めがデータを格納しているプログラムで操作する必要がありますも<xref:System.Windows.Controls.TreeViewItem>します。 など、プログラムで展開する必要があります、<xref:System.Windows.Controls.TreeViewItem>でさまざまな項目を選択します。 または、<xref:System.Windows.Controls.TreeView>します。  
@@ -29,17 +29,17 @@ ms.locfileid: "54636028"
 >  次の例のいずれかの動作<xref:System.Windows.Controls.TreeView>、基になるデータ モデルと検索に関係なくすべて<xref:System.Windows.Controls.TreeViewItem>オブジェクトが見つかるまでです。 パフォーマンスが向上するもう 1 つの手法では、指定したオブジェクトのデータ モデルを検索のデータの階層内の場所を追跡し、対応する、検索を<xref:System.Windows.Controls.TreeViewItem>で、<xref:System.Windows.Controls.TreeView>します。 パフォーマンスが向上する手法がデータ モデルの知識が必要ですし、特定の一般化することはできませんただし、<xref:System.Windows.Controls.TreeView>します。  
   
 ## <a name="code"></a>コード  
- [!code-csharp[TreeViewFindTVI#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
- [!code-vb[TreeViewFindTVI#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
+ [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
+ [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
  前のコードが依存するカスタム<xref:System.Windows.Controls.VirtualizingStackPanel>という名前のメソッドを公開する`BringIntoView`します。 次のコード定義のカスタム<xref:System.Windows.Controls.VirtualizingStackPanel>します。  
   
- [!code-csharp[TreeViewFindTVI#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
- [!code-vb[TreeViewFindTVI#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
+ [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
+ [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
  次の XAML を作成する方法を示しています、<xref:System.Windows.Controls.TreeView>カスタムを使用する<xref:System.Windows.Controls.VirtualizingStackPanel>します。  
   
- [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
+ [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>関連項目
-- [TreeView のパフォーマンスを改善する](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+- [TreeView のパフォーマンスを改善する](how-to-improve-the-performance-of-a-treeview.md)

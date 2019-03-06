@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 047ccd4ea4ba83c8d7427559f3ee76cc3547a430
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747532"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377405"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF の Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- このトピックでは、WPF と Win32 の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../../../../docs/framework/wpf/getting-started/index.md)します。 Win32 のプログラミングの概要についてを参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
+ このトピックでは、WPF と Win32 の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Win32 のプログラミングの概要についてを参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
   
  このトピックに付属するサンプルがで実装されているためC#、Win32 API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
   
@@ -64,19 +64,19 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  このレイアウトを実装するコードは簡単です。 ルート要素は、<xref:System.Windows.Controls.DockPanel>を持つ 2 つの子要素。 1 つは、 <xref:System.Windows.Controls.Border> ListBox コントロールをホストする要素。 200 x 200 正方形インチのページの右上隅を占有します。 2 つ目は、<xref:System.Windows.Controls.StackPanel>相互運用性のプロパティを公開する一連の情報を表示し、設定して、ListBox コントロールを操作する WPF コントロールを含む要素。 各要素の子である、<xref:System.Windows.Controls.StackPanel>の詳細については、これらの要素とは何かがどのように使用するさまざまな要素のリファレンスを参照してください、、これらは次のサンプル コードに表示がされません (基本的な以下の説明。相互運用のモデルは、これらのいずれかにも必要ありません、提供されるサンプルをいくつかの対話機能を追加する)。  
   
- [!code-xaml[WPFHostingWin32Control#WPFUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
+ [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
 ## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Microsoft Win32 コントロールをホストするクラスを実装します。  
  このサンプルのコアは、実際には、コントロール、ControlHost.cs をホストするクラスです。 継承<xref:System.Windows.Interop.HwndHost>します。 コンス トラクターは 2 つのパラメーター、高さと幅、高さと幅に対応する、 <xref:System.Windows.Controls.Border> ListBox コントロールをホストする要素。 コントロールの一致項目のサイズを確実にこれらの値は後で使用されて、<xref:System.Windows.Controls.Border>要素。  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
- [!code-vb[WPFHostingWin32Control#ControlHostClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
+ [!code-vb[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
  定数のセットもします。 これらの定数は大きく Winuser.h からのものし、Win32 関数を呼び出すときに、従来の名前を使用すること。  
   
- [!code-csharp[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
- [!code-vb[WPFHostingWin32Control#ControlHostConstants](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
+ [!code-csharp[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
+ [!code-vb[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
 ### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Microsoft Win32 ウィンドウを作成する BuildWindowCore をオーバーライドします。  
@@ -90,26 +90,26 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  コントロールの HWND は、ホスト ページを使用すると、コントロールにメッセージを送信使用できるように、読み取り専用プロパティを通じて公開されます。  
   
- [!code-csharp[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
- [!code-vb[WPFHostingWin32Control#IntPtrProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
+ [!code-csharp[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
+ [!code-vb[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
  ListBox コントロールは、ホスト ウィンドウの子として作成されます。 両方のウィンドウの幅と高さは、前に説明した、コンス トラクターに渡される値に設定されます。 これにより、ホスト ウィンドウとコントロールのサイズは、ページ上の予約済み領域と同じです。  サンプルを返します、windows が作成された後、<xref:System.Runtime.InteropServices.HandleRef>ホスト ウィンドウの HWND を含むオブジェクト。  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCore](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
   
- [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
- [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
+ [!code-csharp[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcorehelper)]
+ [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
 ### <a name="implement-destroywindow-and-wndproc"></a>実装 DestroyWindow と WndProc  
  ほかに<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>、オーバーライドすることも必要があります、<xref:System.Windows.Interop.HwndHost.WndProc%2A>と<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>のメソッド、<xref:System.Windows.Interop.HwndHost>します。 によって、この例では、コントロールのメッセージの処理、<xref:System.Windows.Interop.HwndHost.MessageHook>ハンドラーの実装ではそのため<xref:System.Windows.Interop.HwndHost.WndProc%2A>と<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>は最小限です。 場合に<xref:System.Windows.Interop.HwndHost.WndProc%2A>設定`handled`に`false`をメッセージが処理されないことを示す 0 を返します。 <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>、単にウィンドウを破棄します。  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroy](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
   
- [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
- [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
+ [!code-csharp[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroyhelper)]
+ [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
 ## <a name="host-the-control-on-the-page"></a>ページ上のコントロールをホストします。  
@@ -120,11 +120,11 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
 > [!NOTE]
 >  SendMessage の 2 つの PInvoke 宣言があることに注意してください。 これは、1 つを使用しているため、`wParam`文字列と、その他に渡すパラメーターは整数を渡す使用します。 データが正しくマーシャ リングすることを確認するには、各署名の別の宣言する必要があります。  
   
- [!code-csharp[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
- [!code-vb[WPFHostingWin32Control#HostWindowClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
+ [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
+ [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
   
- [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
- [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
+ [!code-csharp[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#controlmsgfiltersendmessage)]
+ [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>コントロールと、ページ間の通信を実装します。  
@@ -142,18 +142,18 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  項目を追加するリスト ボックスの送信、 [ `LB_ADDSTRING`メッセージ](/windows/desktop/Controls/lb-addstring)します。 項目を削除する送信[ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel)現在の選択範囲のインデックスを取得し、 [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring)アイテムを削除します。 また、サンプルが送信され[ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)、返される値を使用して、項目の数を示す表示を更新するとします。 これら両方のインスタンスの[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)前のセクションで説明されている PInvoke 宣言のいずれかを使用します。  
   
- [!code-csharp[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
- [!code-vb[WPFHostingWin32Control#AppendDeleteText](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
+ [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
+ [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
  ユーザーは、項目を選択するか、その選択を変更、コントロールはホスト ウィンドウを送信することで通知を[`WM_COMMAND`メッセージ](/windows/desktop/menurc/wm-command)を発生させる、<xref:System.Windows.Interop.HwndHost.MessageHook>ページのイベント。 ハンドラーは、ホスト ウィンドウのメイン ウィンドウ プロシージャと同じ情報を受け取ります。 また、ブール値への参照を渡します`handled`します。 設定する`handled`に`true`をメッセージを処理して、それ以上の処理が必要なことを示します。  
   
  [`WM_COMMAND`](/windows/desktop/menurc/wm-command) イベントを処理するかどうかを判断する通知 ID を調べる必要がありますので、さまざまな理由から、送信されます。 上位ワードに ID が含まれている、`wParam`パラメーター。 このサンプルでは、ビットごとの演算子を使用して ID を抽出 ユーザーが行われたまたは、自分の選択を変更する場合、ID になります[ `LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange)します。  
   
- ときに[ `LBN_SELCHANGE` ](https://msdn.microsoft.com/library/windows/desktop/bb775161(v=vs.85).aspx)が受信されると、サンプル インデックスを取得、選択した項目のコントロールを送信することによって、 [ `LB_GETCURSEL`メッセージ](/windows/desktop/Controls/lb-getcursel)します。 作成する最初のテキストを取得する、<xref:System.Text.StringBuilder>します。 コントロールを送信、 [ `LB_GETTEXT`メッセージ](/windows/desktop/Controls/lb-gettext)します。 空の渡す<xref:System.Text.StringBuilder>オブジェクトとして、`wParam`パラメーター。 ときに[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)から制御が戻る、<xref:System.Text.StringBuilder>選択された項目のテキストが含まれます。 このように使用[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)もう 1 つの PInvoke 宣言が必要です。  
+ ときに[ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange)が受信されると、サンプル インデックスを取得、選択した項目のコントロールを送信することによって、 [ `LB_GETCURSEL`メッセージ](/windows/desktop/Controls/lb-getcursel)します。 作成する最初のテキストを取得する、<xref:System.Text.StringBuilder>します。 コントロールを送信、 [ `LB_GETTEXT`メッセージ](/windows/desktop/Controls/lb-gettext)します。 空の渡す<xref:System.Text.StringBuilder>オブジェクトとして、`wParam`パラメーター。 ときに[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)から制御が戻る、<xref:System.Text.StringBuilder>選択された項目のテキストが含まれます。 このように使用[ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage)もう 1 つの PInvoke 宣言が必要です。  
   
  最後に、設定`handled`に`true`をメッセージが処理されたことを示します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Interop.HwndHost>
-- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
+- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

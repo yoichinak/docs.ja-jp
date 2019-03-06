@@ -2,12 +2,12 @@
 title: パラメーターと引数
 description: パラメーターを定義して、関数、メソッド、およびプロパティに引数を渡すのための F# 言語サポートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 65e3b4f8ffb03e81104c963c5e2da7aba2e2b220
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583499"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352284"
 ---
 # <a name="parameters-and-arguments"></a>パラメーターと引数
 
@@ -135,17 +135,17 @@ Baud Rate: 4800 Duplex: Half Parity: false
 ```fsharp
 open System
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
         printfn "%s" message
 ```
 
-パラメーターの既定値として、新しいオブジェクトを指定することもできます。 たとえば、`Foo`メンバーが省略可能なことが`CanceallationToken`代わりに入力として。
+パラメーターの既定値として、新しいオブジェクトを指定することもできます。 たとえば、`Foo`メンバーが省略可能なことが`CancellationToken`代わりに入力として。
 
 ```fsharp
 open System.Threading
 open System.Runtime.InteropServices
-type C = 
+type C =
     static member Foo([<Optional; DefaultParameterValue(CancellationToken())>] ct: CancellationToken) =
         printfn "%A" ct
 ```

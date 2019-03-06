@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367571"
 ---
 # <a name="tooltip"></a>ヒント
-ツールヒントは、ユーザーなどを超えると、要素の上にマウス ポインターを置いたときに表示される小さいポップアップ ウィンドウ、<xref:System.Windows.Controls.Button>です。  
+ツールヒントは、ユーザーが経由の要素の上にマウス ポインターを置いたときに表示される小さいポップアップ ウィンドウ、<xref:System.Windows.Controls.Button>します。  
   
- 次の図に、マウス ポインターが指す、**閉じる**<xref:System.Windows.Controls.Button>、そのを識別する、次の表示<xref:System.Windows.Controls.ToolTip>です。  
+ 次の図は、マウスのポインターを指す、**閉じる**<xref:System.Windows.Controls.Button>、しを表示、識別<xref:System.Windows.Controls.ToolTip>します。  
   
- ツールヒントが表示された [閉じる] ボタン  
+ ツールヒントが表示された閉じるボタン  
   
- ![ツールヒント スクリーン ショット](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![ツールヒント スクリーン ショット](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolTip の概要](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [方法トピック](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [ToolTip の概要](tooltip-overview.md)  
+  [方法トピック](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ ms.locfileid: "33556979"
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>関連項目  
- [ポップアップの概要](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [方法トピック](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [ポップアップの概要](popup-overview.md)  
+  [方法トピック](popup-how-to-topics.md)

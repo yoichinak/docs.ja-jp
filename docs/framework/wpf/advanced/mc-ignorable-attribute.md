@@ -9,12 +9,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: 25f5fb254ec6f952d7cafa2cb893e35daa0e9029
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432df80fca58311d1c0931d9ba3b224fc9e271ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573937"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375390"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable 属性
 指定します[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップ ファイルで発生した名前空間プレフィックスを無視できます、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサ。 `mc:Ignorable`属性は、カスタムの名前空間のマッピングとのマークアップの互換性をサポートしている[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]バージョン管理します。  
@@ -59,7 +59,7 @@ ms.locfileid: "54573937"
   
  実装する場合、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサ、プロセッサの実装する必要がありますいないを発生させる解析や処理の任意の要素または属性として識別されるプレフィックスで修飾されている型の解決でエラー`mc:Ignorable`します。 プロセッサの実装セカンダリ要素の前に示した例では、1 つの子要素など、処理をロードまたは失敗の結果である例外が発生することができます。  
   
- 既定で、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサは、無視された要素内のコンテンツを無視します。 ただし、追加の属性を指定できます[mc:ProcessContent 属性](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)、[次へ] の使用可能な親要素によって無視された要素内のコンテンツの継続処理を要求します。  
+ 既定で、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサは、無視された要素内のコンテンツを無視します。 ただし、追加の属性を指定できます[mc:ProcessContent 属性](mc-processcontent-attribute.md)、[次へ] の使用可能な親要素によって無視された要素内のコンテンツの継続処理を要求します。  
   
  たとえば、区切り記号として 1 つ以上の空白文字を使用して、属性で複数のプレフィックスを指定できます:`mc:Ignorable="ignore1 ignore2"`します。  
 
@@ -67,6 +67,6 @@ ms.locfileid: "54573937"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze 属性](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
-- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [PresentationOptions:Freeze 属性](presentationoptions-freeze-attribute.md)
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [WPF のドキュメント](documents-in-wpf.md)

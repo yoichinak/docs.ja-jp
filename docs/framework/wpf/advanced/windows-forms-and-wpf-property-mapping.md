@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358562"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows フォームと WPF プロパティの割り当て
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジに 2 つのプロパティが似ていますが、異なるモデルがあります。 *プロパティ マッピング*2 つのアーキテクチャ間の相互運用をサポートし、次の機能を提供します。  
@@ -49,7 +49,7 @@ ms.locfileid: "54493704"
   
  コンテナー要素で添付プロパティは完全にサポートによって、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。  
   
- 詳細については、「[チュートリアル:WindowsFormsHost 要素を使用してプロパティをマッピング](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)します。  
+ 詳細については、「[チュートリアル:WindowsFormsHost 要素を使用してプロパティをマッピング](walkthrough-mapping-properties-using-the-windowsformshost-element.md)します。  
   
 ## <a name="updates-to-parent-properties"></a>親のプロパティの更新  
  ほとんどの親プロパティへの変更は、ホストされた子コントロールへの通知が。 次の一覧には、その値を変更するときに通知を発生させないプロパティについて説明します。  
@@ -95,13 +95,13 @@ ms.locfileid: "54493704"
   
 -   場所  
   
--   Margin  
+-   余白  
   
 -   [間隔]  
   
 -   親  
   
--   地域  
+-   Region  
   
 -   RightToLeft  
   
@@ -113,11 +113,11 @@ ms.locfileid: "54493704"
   
 -   テキスト  
   
--   Visible  
+-   可視  
   
  <xref:System.Windows.Forms.Integration.ElementHost>コントロールが既定値を変換します[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]次の変換テーブルを使用して対応します。  
   
- 詳細については、「[チュートリアル:ElementHost コントロールを使用してプロパティをマッピング](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)します。  
+ 詳細については、「[チュートリアル:ElementHost コントロールを使用してプロパティをマッピング](walkthrough-mapping-properties-using-the-elementhost-control.md)します。  
   
 |Windows フォームのホスト|Windows Presentation Foundation|相互運用の動作|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -127,8 +127,12 @@ ms.locfileid: "54493704"
 |<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> (<xref:System.Windows.Forms.Cursor?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> (<xref:System.Windows.Input.Cursor?displayProperty=nameWithType>)|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]標準カーソルは、対応する翻訳[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]標準カーソル。 場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]が標準的なカーソルの場合は、既定値が割り当てられます。|  
 |<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|ときに<xref:System.Windows.Forms.Control.Enabled%2A>が設定されている、<xref:System.Windows.Forms.Integration.ElementHost>コントロール セット、<xref:System.Windows.UIElement.IsEnabled%2A>ホスト型の要素のプロパティ。|  
 |<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A>対応する一連の値に変換される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フォントのプロパティ。|  
-|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A> ホストされている要素|<xref:System.Drawing.Font.Bold%2A> が `true` の場合、<xref:System.Windows.Controls.Control.FontWeight%2A> が <xref:System.Windows.FontWeights.Bold%2A> に設定されます。<br /><br /> <xref:System.Drawing.Font.Bold%2A> が `false` の場合、<xref:System.Windows.Controls.Control.FontWeight%2A> が <xref:System.Windows.FontWeights.Normal%2A> に設定されます。|  
-|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> ホストされている要素|<xref:System.Drawing.Font.Italic%2A> が `true` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Italic%2A> に設定されます。<br /><br /> <xref:System.Drawing.Font.Italic%2A> が `false` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Normal%2A> に設定されます。|  
+|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A> ホストされている要素|
+  <xref:System.Drawing.Font.Bold%2A> が `true` の場合、<xref:System.Windows.Controls.Control.FontWeight%2A> が <xref:System.Windows.FontWeights.Bold%2A> に設定されます。<br /><br /> 
+  <xref:System.Drawing.Font.Bold%2A> が `false` の場合、<xref:System.Windows.Controls.Control.FontWeight%2A> が <xref:System.Windows.FontWeights.Normal%2A> に設定されます。|  
+|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> ホストされている要素|
+  <xref:System.Drawing.Font.Italic%2A> が `true` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Italic%2A> に設定されます。<br /><br /> 
+  <xref:System.Drawing.Font.Italic%2A> が `false` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Normal%2A> に設定されます。|  
 |<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations> ホストされている要素|ホストしている場合にのみ適用されます、<xref:System.Windows.Controls.TextBlock>コントロール。|  
 |<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations> ホストされている要素|ホストしている場合にのみ適用されます、<xref:System.Windows.Controls.TextBlock>コントロール。|  
 |<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> は <xref:System.Windows.FlowDirection.LeftToRight> にマップされます。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> は <xref:System.Windows.FlowDirection.RightToLeft> にマップされます。|  
@@ -137,7 +141,7 @@ ms.locfileid: "54493704"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [WPF と Windows フォームの相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [チュートリアル: ElementHost コントロールを使用してプロパティのマッピング](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
+- [WPF と Windows フォームの相互運用性](wpf-and-windows-forms-interoperation.md)
+- [チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [チュートリアル: ElementHost コントロールを使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-elementhost-control.md)

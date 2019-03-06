@@ -2,12 +2,12 @@
 title: ストア拡張
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375429"
 ---
 # <a name="store-extensibility"></a>ストア拡張
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用して、永続性データベースのインスタンスをクエリする場合に使用できるカスタムのアプリケーション固有のプロパティを昇格できます。 プロパティを昇格することで、データベース内の特殊なビュー内で値が使用できるようになります。 これらの昇格したプロパティ (ユーザー クエリで使用できるプロパティ) は、単純型 (Int64、Guid、String、DateTime など) またはシリアル化されたバイナリ型 (byte[]) になる場合があります。  
@@ -35,9 +35,9 @@ ms.locfileid: "33517921"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     カスタムの永続参加要素を追加する方法の詳細については、次を参照してください。、[永続参加要素](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)サンプルです。  
+     カスタム永続参加要素を追加する方法の詳細については、次を参照してください。、[永続参加要素](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)サンプル。  
   
-3.  DP アプリケーションでカスタム アクティビティのさまざまな状態フィールドの設定、 **Execute**メソッドです。  
+3.  DP アプリケーションでカスタム アクティビティのさまざまな状態フィールドの設定、 **Execute**メソッド。  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -51,7 +51,7 @@ ms.locfileid: "33517921"
     }  
     ```  
   
-4.  ワークフロー インスタンスが永続性ポイントに達すると、 **CollectValues**のメソッド、 **DocumentStatusExtension**永続参加要素は、これらのプロパティを永続性データに保存されますコレクションです。  
+4.  ワークフロー インスタンスが永続性ポイントに達すると、 **CollectValues**のメソッド、 **DocumentStatusExtension**永続参加要素は、永続性データにこれらのプロパティを保存しますコレクションです。  
   
     ```  
     class DocumentStatusExtension : PersistenceParticipant  
@@ -75,7 +75,7 @@ ms.locfileid: "33517921"
     > [!NOTE]
     >  これらすべてのプロパティに渡される**SqlWorkflowInstanceStore**を介して、永続化フレームワークによって、 **SaveWorkflowCommand.InstanceData**コレクション。  
   
-5.  DP アプリケーションは、SQL Workflow Instance Store を初期化し、呼び出します、**昇格**このデータを昇格する方法です。  
+5.  DP アプリケーションは、SQL Workflow Instance Store を初期化しを呼び出す、**昇格**メソッドをこのデータを昇格します。  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -108,7 +108,7 @@ ms.locfileid: "33517921"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] ビュー  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |列名|列の型|説明|  
 |-----------------|-----------------|-----------------|  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: d2d56851de2444ce246750688df67ed5ba9adb9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13ed32195621350284530da78544e026ed341658
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687480"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360382"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>方法: Canvas を作成および使用する
 この例は、作成しのインスタンスを使用する方法を示しています。<xref:System.Windows.Controls.Canvas>します。  
@@ -25,8 +25,8 @@ ms.locfileid: "54687480"
 > [!NOTE]
 >  使用すると[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]位置に<xref:System.Windows.Controls.TextBlock>、要素を使用して、<xref:System.Windows.Controls.Canvas.Top%2A>と<xref:System.Windows.Controls.Canvas.Left%2A>プロパティ。  
   
- [!code-csharp[CanvasCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
- [!code-vb[CanvasCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
+ [!code-csharp[CanvasCode#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
+ [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Canvas>
@@ -35,5 +35,5 @@ ms.locfileid: "54687480"
 - <xref:System.Windows.Controls.Canvas.SetLeft%2A>
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+- [パネルの概要](panels-overview.md)
+- [方法トピック](canvas-how-to-topics.md)

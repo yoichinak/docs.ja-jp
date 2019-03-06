@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576461"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363931"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依存関係プロパティのコールバックと検証
 このトピックでは、検証による判定、プロパティの有効値が変更されたときに呼び出されるコールバック、値の決定への外部的影響のオーバーライドなど、プロパティ関連機能の代替カスタム実装を使用して依存関係プロパティを作成する方法について説明します。 また、これらの手法を用いてプロパティ システムの既定の動作を拡張することが適切であるシナリオについても説明します。  
@@ -25,14 +25,14 @@ ms.locfileid: "54576461"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックでは、依存関係プロパティの実装の基本シナリオとカスタム依存関係プロパティへのメタデータの適用方法を理解していることを前提とします。 詳細については、「[カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)」および「[依存関係プロパティのメタデータ](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)」を参照してください。  
+ このトピックでは、依存関係プロパティの実装の基本シナリオとカスタム依存関係プロパティへのメタデータの適用方法を理解していることを前提とします。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」および「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」を参照してください。  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>検証コールバック  
  検証コールバックは、最初の登録時に依存関係プロパティに割り当てることができます。 検証コールバックは、プロパティのメタデータの一部ではありません。直接の入力は、<xref:System.Windows.DependencyProperty.Register%2A>メソッド。 したがって、依存関係プロパティの検証コールバックを作成した後で、その検証コールバックを新しい実装でオーバーライドすることはできません。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  検証コールバックは、オブジェクト値を受け取るように実装されます。 指定された値がプロパティに対して有効である場合は `true` を、有効でない場合は `false`を返します。 プロパティの型はプロパティ システムに登録済みの適切な型であると想定されます。したがって、通常の場合、コールバック内での型チェックは行われません。 検証コールバックは、プロパティ システムが実行するさまざまな操作で使用されます。 呼び出すことによって、既定値で初期の型の初期化、プログラムによる変更が含まれます<xref:System.Windows.DependencyObject.SetValue%2A>で提供される既定値は新しいメタデータをオーバーライドしようとするか。 これらの操作で呼び出された検証コールバックが `false` を返す場合、例外が発生します。 アプリケーションの作成者はこれらの例外を処理する必要があります。 検証コールバックは、列挙値の検証や、プロパティの測定値がゼロ以上に設定されている場合に integer 型または double 型の値を制限するときによく使用されます。  
   
@@ -40,8 +40,8 @@ ms.locfileid: "54576461"
   
  非常に単純な検証コールバック シナリオのコード例を次に示します: ことを検証として型指定されたプロパティ、<xref:System.Double>プリミティブは<xref:System.Double.PositiveInfinity>または<xref:System.Double.NegativeInfinity>します。  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>強制値コールバックとプロパティ変更イベント  
@@ -51,18 +51,18 @@ ms.locfileid: "54576461"
   
  次の、3 つの依存関係プロパティの 1 つを示す非常に簡単なコード例は、こうした関係を表しています。 この例は、関連する *Reading プロパティ (Min、Max、Current) のうちの 1 つである `CurrentReading` プロパティの登録方法を示しています。 ここでは、前のセクションで説明した検証を使用しています。  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Current のプロパティ変更コールバックを使用して、他の依存関係プロパティに対して登録されている強制値コールバックを明示的に呼び出すことにより、変更を他のプロパティに伝播します。  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  強制値コールバックは、Current プロパティが依存している可能性があるプロパティの値を検証し、必要に応じて現在の値を強制的に指定します。  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  プロパティの既定値は強制的に指定されません。 既定値に相当するプロパティ値が発生するのプロパティ値がまだ初期既定、または他の値を消去<xref:System.Windows.DependencyObject.ClearValue%2A>します。  
@@ -81,6 +81,6 @@ ms.locfileid: "54576461"
  プロパティ システムには、いずれかの処理は<xref:System.Windows.CoerceValueCallback>値を返す<xref:System.Windows.DependencyProperty.UnsetValue>特殊なケースとして。 この特殊なケースを意味するプロパティの変更を発生させた、<xref:System.Windows.CoerceValueCallback>プロパティ システムによって拒否される必要がありますが呼び出されると、プロパティ システムは、プロパティの直前の値をレポートする代わりにします。 このメカニズムは、非同期に開始されたプロパティの変更が現在のオブジェクトの状態に対して依然として有効であるかどうかをチェックし、有効でない場合はその変更を抑制する場合に役立ちます。 考えられるもう 1 つのシナリオとして、プロパティ値の決定におけるどの構成要素が報告されるプロパティ値を決定するかに応じて値を選択的に抑制することもできます。 これを行うには、使用することができます、<xref:System.Windows.DependencyProperty>コールバックとプロパティ識別子の入力として渡さ<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>、し、処理、<xref:System.Windows.ValueSource>します。  
   
 ## <a name="see-also"></a>関連項目
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [依存関係プロパティのメタデータ](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [依存関係プロパティのメタデータ](dependency-property-metadata.md)
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)

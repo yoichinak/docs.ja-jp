@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: a484ba1e5d0c7a51e7e4c3edbf341bf40345fd2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366609"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 さらに、このトピックでは、プレゼンスと WPF XAML ファイルのルート タグによく見られる 2 つの XAML 名前空間マッピングの目的について説明します。 また、独自のコードで、または個別のアセンブリ内に定義されている要素を使用するためのようなマッピングを生成する方法も説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "54633916"
   
  これらの宣言の間のリレーションシップは、`x:`プレフィックスのマッピングは、組み込み XAML 言語の定義の一部であるをサポートしていると[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]言語として XAML を使用しのボキャブラリの定義を 1 つの実装は、そのXAML のオブジェクト。 WPF の語彙の使用は XAML の組み込みの使用よりもはるかに一般的になる、ために、WPF ボキャブラリは、既定値としてマップされます。  
   
- `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、次を参照してください。 [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)または[XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)します。  
+ `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、次を参照してください。 [XAML の概要 (WPF)](xaml-overview-wpf.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)します。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタム クラスとアセンブリへのマッピング  
@@ -115,7 +115,7 @@ End Namespace
   
  [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 通常、プレフィックスにマップされるデザイナー名前空間を使用して`d:`します。 WPF の最近のプロジェクト テンプレートは、XAML との間の交換をサポートするためにこの XAML 名前空間をマップ事前可能性があります[!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)]や他のデザイン環境。 このデザインの XAML 名前空間は、デザイナーで XAML ベースの UI をラウンドト リップのときにデザイン状態を永続化に使用されます。 などの機能を使用するがも、`d:IsDataSource`デザイナーでの実行時データ ソースを有効にします。  
   
- マップされている別のプレフィックス「可能性がありますが`mc:`します。 `mc:` マークアップの互換性、必ずしも XAML に固有でないマークアップ互換性パターンを活用することです。 ある程度はマークアップの互換性機能は、フレームワーク間または他の境界のバッキング実装の間で XAML を交換するために使用できます XAML スキーマ コンテキスト間での作業、デザイナーでは、制限付きのモードの互換性を提供および具合です。 マークアップの互換性の概念とどのように関連する WPF の詳細については、次を参照してください[マークアップの互換性 (mc:)。言語機能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)します。  
+ マップされている別のプレフィックス「可能性がありますが`mc:`します。 `mc:` マークアップの互換性、必ずしも XAML に固有でないマークアップ互換性パターンを活用することです。 ある程度はマークアップの互換性機能は、フレームワーク間または他の境界のバッキング実装の間で XAML を交換するために使用できます XAML スキーマ コンテキスト間での作業、デザイナーでは、制限付きのモードの互換性を提供および具合です。 マークアップの互換性の概念とどのように関連する WPF の詳細については、次を参照してください[マークアップの互換性 (mc:)。言語機能](markup-compatibility-mc-language-features.md)します。  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF およびアセンブリの読み込み  
  WPF の XAML スキーマ コンテキストと統合の CLR で定義された概念を使用して、WPF アプリケーション モデル、<xref:System.AppDomain>します。 次の順序は、XAML スキーマ コンテキストでアセンブリを読み込むかの WPF の使用状況に基づいて実行時またはデザイン時に、型を検索する方法を解釈する方法について説明します<xref:System.AppDomain>およびその他の要因です。  
@@ -138,4 +138,4 @@ End Namespace
   
 ## <a name="see-also"></a>関連項目
 - [XML 名前空間を理解します。](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)

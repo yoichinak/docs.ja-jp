@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: c235381af36fd6c99d10f27a8a543f836d7af108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551968"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371945"
 ---
 # <a name="expander"></a>Expander
-<xref:System.Windows.Controls.Expander>により、ユーザーは、ヘッダーを表示し、詳細については、さらに参照してください。 または、まで、ヘッダー セクションを折りたたむには、そのヘッダーを展開します。  
+<xref:System.Windows.Controls.Expander>ヘッダーを表示し、詳細は、さらに参照してください。 または、ヘッダーまでのセクションを折りたたむには、そのヘッダーを展開できます。  
   
  次の図は、展開された位置では、このコントロールの例を示します。  
   
- ![Expander の例](../../../../docs/framework/wpf/controls/media/expanderexample.JPG "ExpanderExample")  
+ ![Expander の例](./media/expanderexample.JPG "ExpanderExample")  
 Expander コントロール  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [エキスパンダーの概要](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)  
+ [エキスパンダーの概要](expander-overview.md)  
+ [方法トピック](expander-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Expander>  

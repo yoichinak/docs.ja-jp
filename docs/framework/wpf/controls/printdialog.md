@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8638b56e8a6430b1a7cec371f133063a0c57692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689304"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368978"
 ---
 # <a name="printdialog"></a>PrintDialog
 <xref:System.Windows.Controls.PrintDialog>コントロールを使用すると、自動的に構成する標準の印刷 ダイアログ ボックスをインスタンス化、<xref:System.Printing.PrintTicket>と<xref:System.Printing.PrintQueue>ユーザー入力に従ってします。  
@@ -26,5 +26,5 @@ ms.locfileid: "54689304"
  <xref:System.Printing.PrintQueue>  
   
 ## <a name="see-also"></a>関連項目
-- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [印刷の概要](../advanced/printing-overview.md)
+- [WPF のドキュメント](../advanced/documents-in-wpf.md)

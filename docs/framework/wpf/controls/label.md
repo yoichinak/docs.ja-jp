@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 0ff63027777cd0637238512f01663fe0d81d47ed
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746903"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376166"
 ---
 # <a name="label"></a>group1
 <xref:System.Windows.Controls.Label> コントロールが通常の情報を提供、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。  従来を<xref:System.Windows.Controls.Label>のみのテキストが格納されているが、<xref:System.Windows.Controls.Label>付属している[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、 <xref:System.Windows.Controls.ContentControl>、いずれかのテキストを含めることができますまたは<xref:System.Windows.UIElement>。  
@@ -21,7 +21,7 @@ ms.locfileid: "56746903"
   
  次の図は、 <xref:System.Windows.Controls.Label> 「テーマ」を対象とする、<xref:System.Windows.Controls.ComboBox>します。  ユーザーがキーを押したときに、<xref:System.Windows.Controls.ComboBox>がフォーカスを受け取る。  詳細については、「[方法 :ラベルのターゲット プロパティを設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))します。  
   
- ![表示プロパティを示しますを使用してラベルの付いた](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
+ ![表示プロパティを示しますを使用してラベルの付いた](./media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成します。](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  

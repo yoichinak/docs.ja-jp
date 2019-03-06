@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364438"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>方法: コマンドをサポートするコントロールにコマンドをフックする
 次の例では、コマンドのサポートが組み込まれている <xref:System.Windows.Controls.Control> に <xref:System.Windows.Input.RoutedCommand> をフックする方法を示します。  コマンドを複数のソースに関連付けるサンプル全体については、「[カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)」を参照してください。  
@@ -31,11 +31,11 @@ ms.locfileid: "54663207"
   
  <xref:System.Windows.Controls.MenuItem> が作成され、その <xref:System.Windows.Controls.MenuItem.Command%2A> プロパティは <xref:System.Windows.Input.ApplicationCommands.Paste%2A> コマンドに設定されています。  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> は、<xref:System.Windows.Controls.TextBox> オブジェクトに明示的に設定されていません。  <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> が設定されていない場合、コマンドのターゲットは、キーボード フォーカスを持つ要素となります。  キーボード フォーカスを持つ要素が <xref:System.Windows.Input.ApplicationCommands.Paste%2A> コマンドをサポートしていないか、貼り付けコマンドを現在実行できない場合 (クリップボードが空の場合など)、<xref:System.Windows.Controls.MenuItem> は灰色で表示されます。  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>関連項目
-- [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [コマンドをサポートしないコントロールにコマンドをフックする](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [コマンド実行の概要](commanding-overview.md)
+- [コマンドをサポートしないコントロールにコマンドをフックする](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

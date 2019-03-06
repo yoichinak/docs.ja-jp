@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
-ms.openlocfilehash: ff2cdbebe13f6224209ef8da62600c99348c911b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 796c16e912283d86496a4ccbd3b675ac1433f02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356404"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>フレンド アセンブリ参照\<参照 > が無効です
 フレンド アセンブリ参照\<参照 > が無効です。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  
@@ -27,6 +27,6 @@ ms.locfileid: "55286820"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Reflection.AssemblyName>
-- [フレンド アセンブリ](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)
 
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361188"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>WPF のブラウザーのホスト処理をサポートするネイティブ API
 ホストの[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]WPF ホストから登録されているアクティブなドキュメント サーバー (DocObject とも呼ばれます) での Web ブラウザーでアプリケーションが容易になります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] 直接アクティブ化でき、アクティブなドキュメントと統合できます。 Xbap の Mozilla ブラウザーの場合は、loose XAML ドキュメントをホストするため[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]のようなホスティング環境を提供する、NPAPI プラグインを提供します、 [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active ドキュメント サーバーとして[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]は。 ただし、Xbap と XAML をホストする最も簡単な実用的な方法が他のブラウザーで文書化し、スタンドアロン アプリケーションは、Internet Explorer Web ブラウザー コントロールを使用します。 Web ブラウザー コントロールは、複雑な Active ドキュメント サーバー ホスティング環境を提供していない独自のホストをカスタマイズし、その環境を拡張し、現在のアクティブなドキュメントと直接通信することができます。  
@@ -32,5 +32,5 @@ enum PresentationHostCommands {
  PHCMDID_TABINTO では、Shift キーの状態によって、そのコンテンツの最初と最後のフォーカスを設定できる要素にフォーカスを切り替える PresentationHost を指示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+ [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
+ [IWpfHostSupport](iwpfhostsupport.md)

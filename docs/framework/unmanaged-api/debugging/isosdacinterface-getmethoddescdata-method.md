@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825954"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352595"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData メソッド
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`methodDesc` [in]MethodDesc アドレス。
+`methodDesc`\
+[in]MethodDesc アドレス。
 
-`ip` [in]メソッドの IP アドレス。
+`ip`\
+[in]メソッドの IP アドレス。
 
-`data` [out]関連付けられている、MethodDesc 内部 Api から返されるデータ。
+`data`\
+[out]関連付けられている、MethodDesc 内部 Api から返されるデータ。
 
-`cRevertedRejitVersions` [out]元に戻された rejit バージョンの数。
+`cRevertedRejitVersions`\
+[out]元に戻された rejit バージョンの数。
 
-`rgRevertedRejitData` [out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。
+`rgRevertedRejitData`\
+[out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。
 
-`pcNeededRevertedRejitData` [out]元に戻された ReJit バージョンに関連付けられたデータを格納するために必要なバイト数。
+`pcNeededRevertedRejitData`\
+[out]元に戻された ReJit バージョンに関連付けられたデータを格納するために必要なバイト数。
 
 ## <a name="remarks"></a>Remarks
 
@@ -68,5 +74,5 @@ HRESULT GetMethodDescData(
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface インターフェイス](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [デバッグ](index.md)
+- [ISOSDacInterface インターフェイス](isosdacinterface-interface.md)

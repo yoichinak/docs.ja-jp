@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372205"
 ---
 # <a name="resources-wpf"></a>リソース (WPF)
-リソースは、アプリケーションで別の場所で再利用可能なオブジェクトです。 WPF には、異なる種類のリソースがサポートしています。 これらのリソースは、主に 2 つの種類のリソース: XAML リソースとリソース データ ファイル。 XAML リソースには、ブラシ、スタイルなどがあります。 リソース データ ファイルは、アプリケーションに必要なデータの非実行可能ファイルです。  
+リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 WPF では、さまざまな種類のリソースをサポートします。 これらのリソースは、主に 2 種類のリソースです。XAML のリソースとリソース データ ファイル。 XAML リソースの例には、ブラシ、スタイルが含まれます。 リソース データ ファイルは、アプリケーションに必要なデータの非実行可能ファイルです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [XAML リソース](xaml-resources.md)  
+ [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource のマークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)  
   
- [DynamicResource マークアップ拡張](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)  
   
- [x:Key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key ディレクティブ](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF の XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [WPF の XAML](xaml-in-wpf.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553369"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372075"
 ---
 # <a name="styles-and-templates"></a>スタイルおよびテンプレート
-Windows Presentation Foundation (WPF) スタイルとテンプレートは、アプリケーション、ドキュメント、またはユーザー インターフェイス (UI) のデザイナーを視覚的に説得力のあるアプリケーションを作成する機能 (スタイル、テンプレート、トリガー、およびストーリー ボード) のスイートを参照してください。製品の特定の外観を標準化します。  
+Windows Presentation Foundation (WPF) のスタイルとテンプレートは、アプリケーション、ドキュメント、またはユーザー インターフェイス (UI) デザイナー視覚的に説得力のあるアプリケーションを作成する機能 (スタイル、テンプレート、トリガー、およびストーリー ボード) のスイートを参照してください。それらの製品の特定の外観を標準化します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [方法: ControlTemplate によって生成された要素を検索する](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [スタイルとテンプレート](styling-and-templating.md)  
+  [方法: ControlTemplate によって生成された要素を検索します。](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Windows Presentation Foundation (WPF) スタイルとテンプレートは、ア
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>関連項目  
- [詳細設定](../../../../docs/framework/wpf/advanced/index.md)  
-  [コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [詳細設定](../advanced/index.md)  
+  [コントロールのカスタマイズ](control-customization.md)  
+  [グラフィックスとマルチメディア](../graphics-multimedia/index.md)

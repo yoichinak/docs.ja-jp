@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 5273850c9fec731c5f11e101d218532d06632263
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379082"
 ---
 # <a name="commanding-overview"></a>コマンド実行の概要
 <a name="introduction"></a> コマンド実行は [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の入力メカニズムであり、デバイス入力よりいっそうセマンティックなレベルでの入力処理を提供します。 コマンドの例は、多くのアプリケーションで見られる**コピー**、**切り取り**、**貼り付け**などの操作です。  
@@ -51,10 +51,10 @@ ms.locfileid: "56748428"
   
  次に示すのは、<xref:System.Windows.Controls.TextBox> にキーボード フォーカスがある場合に、クリックされたときに <xref:System.Windows.Controls.TextBox> で <xref:System.Windows.Input.ApplicationCommands.Paste%2A> コマンドを呼び出すように <xref:System.Windows.Controls.MenuItem> を設定する方法の例です。  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewSimpleCommand](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewsimplecommand)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Four_main_Concepts"></a>   
 ## <a name="four-main-concepts-in-wpf-commanding"></a>WPF のコマンド実行における 4 つの主要な概念  
@@ -74,7 +74,7 @@ ms.locfileid: "56748428"
 ### <a name="commands"></a>コマンド  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコマンドは、<xref:System.Windows.Input.ICommand> インターフェイスを実装することで作成されます。  <xref:System.Windows.Input.ICommand> では、2 つのメソッド (<xref:System.Windows.Input.ICommand.Execute%2A> と <xref:System.Windows.Input.ICommand.CanExecute%2A>)、およびイベント (<xref:System.Windows.Input.ICommand.CanExecuteChanged>) を公開します。 <xref:System.Windows.Input.ICommand.Execute%2A> では、コマンドに関連付けられているアクションを実行します。 <xref:System.Windows.Input.ICommand.CanExecute%2A> では、現在のコマンド ターゲットでコマンドを実行できるかどうかを判断します。 コマンド実行操作を集中管理するコマンド マネージャーが、既に発生しているがコマンド バインドによってまだ実行されていないコマンドを無効にする可能性のある変更をコマンド ソースで検出した場合、<xref:System.Windows.Input.ICommand.CanExecuteChanged> が発生します。  <xref:System.Windows.Input.ICommand> での [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の実装は <xref:System.Windows.Input.RoutedCommand> クラスであり、この概要の焦点になります。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での主な入力ソースは、マウス、キーボード、インク、およびルーティング コマンドです。  デバイス指向性の高い入力では、<xref:System.Windows.RoutedEvent> を使って、入力イベントが発生したことをアプリケーション ページのオブジェクトに通知します。  <xref:System.Windows.Input.RoutedCommand> も同様です。  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.Execute%2A> メソッドと <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドにはコマンドのアプリケーション ロジックは含まれませんが、これらのメソッドが発生させたルーティング イベントは、<xref:System.Windows.Input.CommandBinding> を含むオブジェクトに遭遇するまで、要素ツリー内をトンネリングおよびバブリングします。  <xref:System.Windows.Input.CommandBinding> にはこれらのイベント用のハンドラーが含まれ、そのハンドラーがコマンドを実行します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのルーティング イベントについて詳しくは、「[ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)」をご覧ください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での主な入力ソースは、マウス、キーボード、インク、およびルーティング コマンドです。  デバイス指向性の高い入力では、<xref:System.Windows.RoutedEvent> を使って、入力イベントが発生したことをアプリケーション ページのオブジェクトに通知します。  <xref:System.Windows.Input.RoutedCommand> も同様です。  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.Execute%2A> メソッドと <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドにはコマンドのアプリケーション ロジックは含まれませんが、これらのメソッドが発生させたルーティング イベントは、<xref:System.Windows.Input.CommandBinding> を含むオブジェクトに遭遇するまで、要素ツリー内をトンネリングおよびバブリングします。  <xref:System.Windows.Input.CommandBinding> にはこれらのイベント用のハンドラーが含まれ、そのハンドラーがコマンドを実行します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのルーティング イベントについて詳しくは、「[ルーティング イベントの概要](routed-events-overview.md)」をご覧ください。  
   
  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.Execute%2A> メソッドは、コマンド ターゲットで <xref:System.Windows.Input.CommandManager.PreviewExecuted> イベントと <xref:System.Windows.Input.CommandManager.Executed> イベントを発生させます。  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドは、コマンド ターゲットで <xref:System.Windows.Input.CommandManager.CanExecute> イベントと <xref:System.Windows.Input.CommandManager.PreviewCanExecute> イベントを発生させます。  これらのイベントは、その特定のコマンドの <xref:System.Windows.Input.CommandBinding> を持つオブジェクトに遭遇するまで、要素ツリー内をトンネリングおよびバブリングします。  
   
@@ -98,10 +98,10 @@ ms.locfileid: "56748428"
   
  次の例では、<xref:System.Windows.Input.ApplicationCommands.Properties%2A> コマンドのコマンド ソースとして、<xref:System.Windows.Controls.ContextMenu> で <xref:System.Windows.Controls.MenuItem> を使用する方法を示します。  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewCmdSourceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewcmdsourcexaml)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcmdsource)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCmdSource](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcmdsource)]  
   
  通常、コマンド ソースは <xref:System.Windows.Input.RoutedCommand.CanExecuteChanged> イベントをリッスンします。  このイベントは、現在のコマンド ターゲットでのコマンド実行機能が変化した可能性があることを、コマンド ソースに通知します。  コマンド ソースは、<xref:System.Windows.Input.RoutedCommand> の現在の状態を、<xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドを使って照会できます。  コマンドを実行できない場合、コマンド ソースはそれ自体を無効にできます。  たとえば、コマンドを実行できない場合、<xref:System.Windows.Controls.MenuItem> はそれ自体を灰色で表示します。  
   
@@ -111,17 +111,17 @@ ms.locfileid: "56748428"
   
  <xref:System.Windows.Input.KeyGesture> と <xref:System.Windows.Input.RoutedCommand> の間に <xref:System.Windows.Input.KeyBinding> を作成する方法の例を以下に示します。  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlkeybinding)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeybinding)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeybinding)]  
   
  <xref:System.Windows.Input.InputGesture> を <xref:System.Windows.Input.RoutedCommand> に関連付けるもう 1 つの方法は、<xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.InputGestureCollection> に <xref:System.Windows.Input.InputGesture> を追加するというものです。  
   
  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.InputGestureCollection> に <xref:System.Windows.Input.KeyGesture> を追加する方法を次の例に示します。  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewkeygestureoncmd)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewKeyGestureOnCmd](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewkeygestureoncmd)]  
   
 <a name="Command_Binding"></a>   
 ### <a name="commandbinding"></a>CommandBinding  
@@ -133,18 +133,18 @@ ms.locfileid: "56748428"
   
  アプリケーションのルート <xref:System.Windows.Window> で <xref:System.Windows.Input.CommandBinding> を作成する方法の例を以下に示します。  <xref:System.Windows.Input.CommandBinding> は、<xref:System.Windows.Input.ApplicationCommands.Open%2A> コマンドと、<xref:System.Windows.Input.CommandManager.Executed> および <xref:System.Windows.Input.CommandBinding.CanExecute> ハンドラーを関連付けます。  
   
- [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandwithhandler#CommandHandlerCommandBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
- [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
- [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
+ [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
+ [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
  次に、<xref:System.Windows.Input.ExecutedRoutedEventHandler> と <xref:System.Windows.Input.CanExecuteRoutedEventHandler> が作成されます。  <xref:System.Windows.Input.ExecutedRoutedEventHandler> は、コマンドが実行されたことを知らせる文字列を表示する <xref:System.Windows.MessageBox> を開きます。  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> は、<xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> プロパティを `true` に設定します。  
   
- [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
- [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerexecutedhandler)]
+ [!code-vb[commandwithhandler#CommandHandlerExecutedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerexecutedhandler)]  
   
- [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
- [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
+ [!code-csharp[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlercanexecutehandler)]
+ [!code-vb[commandwithhandler#CommandHandlerCanExecuteHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlercanexecutehandler)]  
   
  <xref:System.Windows.Input.CommandBinding> は、アプリケーションやコントロールのルート <xref:System.Windows.Window> など、特定のオブジェクトに関連付けられます。  <xref:System.Windows.Input.CommandBinding> が関連付けられるオブジェクトにより、バインドのスコープが定義されます。  たとえば、<xref:System.Windows.Input.CommandBinding.Executed> イベントは、コマンド ターゲットの先祖に関連付けられた <xref:System.Windows.Input.CommandBinding> には到達できますが、コマンド ターゲットの子孫に関連付けられた <xref:System.Windows.Input.CommandBinding> には到達できません。  これは、イベントを発生させたオブジェクトからの <xref:System.Windows.RoutedEvent> のトンネリングとバブリングの方法の直接的な結果です。  
   
@@ -158,10 +158,10 @@ ms.locfileid: "56748428"
   
  次の例では、マークアップおよび分離コードでコマンド ターゲットを明示的に設定する方法を示します。  
   
- [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
+ [!code-xaml[CommandingOverviewSnippets#CommandingOverviewXAMLCommandTarget](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml#commandingoverviewxamlcommandtarget)]  
   
- [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
- [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
+ [!code-csharp[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#commandingoverviewcommandtargetcodebehind)]
+ [!code-vb[CommandingOverviewSnippets#CommandingOverviewCommandTargetCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#commandingoverviewcommandtargetcodebehind)]  
   
 <a name="Command_Manager"></a>   
 ### <a name="the-commandmanager"></a>CommandManager  
@@ -188,8 +188,8 @@ ms.locfileid: "56748428"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
-- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [ICommandSource を実装する](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [入力の概要](input-overview.md)
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [ICommandSource を実装する](how-to-implement-icommandsource.md)
 - [方法: コマンド メニュー アイテムを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

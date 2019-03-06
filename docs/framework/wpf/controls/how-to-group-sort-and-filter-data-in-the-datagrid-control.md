@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-ms.openlocfilehash: f0f80afd982092248bc52590e072c92784dbcbce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650458"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365049"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>方法: グループ、並べ替え、およびデータ グリッド コントロールでデータのフィルター選択
 
@@ -24,7 +24,7 @@ ms.locfileid: "54650458"
 
 この例では、コレクションで`Task`にオブジェクトがバインドされている、<xref:System.Windows.Data.CollectionViewSource>します。 <xref:System.Windows.Data.CollectionViewSource>として提供される、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>の<xref:System.Windows.Controls.DataGrid>します。 グループ化、並べ替え、およびフィルター処理を実行、<xref:System.Windows.Data.CollectionViewSource>に表示されると、 <xref:System.Windows.Controls.DataGrid> UI。
 
-![データ グリッド内のデータをグループ化](./media/wpf-datagridgroups.png "WPF_DataGridGroups")データ グリッド内のデータをグループ化
+![データ グリッド内のデータをグループ化](././media/wpf-datagridgroups.png "WPF_DataGridGroups")データ グリッド内のデータをグループ化
 
 ## <a name="using-a-collectionviewsource-as-an-itemssource"></a>ItemsSource として、CollectionViewSource を使用します。
 
@@ -42,9 +42,9 @@ ms.locfileid: "54650458"
     [!code-csharp[DataGrid_GroupSortFilter#101](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#101)]
     [!code-vb[DataGrid_GroupSortFilter#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#101)]
 
-2. XAML コレクション クラスのインスタンスを作成し、設定、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)します。
+2. XAML コレクション クラスのインスタンスを作成し、設定、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)します。
 
-3. XAML でのインスタンスを作成、<xref:System.Windows.Data.CollectionViewSource>クラス、設定、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)、として、コレクション クラスのインスタンスを設定し、 <xref:System.Windows.Data.CollectionViewSource.Source%2A>。
+3. XAML でのインスタンスを作成、<xref:System.Windows.Data.CollectionViewSource>クラス、設定、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)、として、コレクション クラスのインスタンスを設定し、 <xref:System.Windows.Data.CollectionViewSource.Source%2A>。
 
     [!code-xaml[DataGrid_GroupSortFilter#201](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/WindowSnips1.xaml#201)]
 

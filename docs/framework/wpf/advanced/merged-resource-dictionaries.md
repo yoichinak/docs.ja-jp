@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: f8549dedc9c6f37fb8a06a376351ed96b808bfd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377048"
 ---
 # <a name="merged-resource-dictionaries"></a>マージされたリソース ディクショナリ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] リソースでは、マージされたリソース ディクショナリ機能がサポートされます。 この機能を使用すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションのリソース部分を、コンパイル済み [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーションの外部で定義できます。 その後、リソースをアプリケーション間で共有できます。また、ローカライズ用に簡単に切り分けることができます。  
@@ -18,9 +18,9 @@ ms.locfileid: "54572922"
 ## <a name="introducing-a-merged-resource-dictionary"></a>マージされたリソース ディクショナリの導入  
  マークアップでは、マージされたリソース ディクショナリをページに導入するために次の構文を使います。  
   
- [!code-xaml[ResourceMergeDictionary#MergedXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
+ [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- なお、<xref:System.Windows.ResourceDictionary>要素がありません、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)、一般に、リソース コレクション内のすべての項目に必要な。 もう 1 つ<xref:System.Windows.ResourceDictionary>内で参照、<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>コレクションは、特別な場合は、このマージされたリソース ディクショナリのシナリオ用に予約されています。 <xref:System.Windows.ResourceDictionary>導入をマージするリソース ディクショナリを持つことはできません、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)します。 通常、各<xref:System.Windows.ResourceDictionary>内、<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>コレクションを指定します、<xref:System.Windows.ResourceDictionary.Source%2A>属性。 値<xref:System.Windows.ResourceDictionary.Source%2A>する必要があります、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]マージするリソース ファイルの場所に解決されます。 その宛先[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]別である必要があります[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルで<xref:System.Windows.ResourceDictionary>のルート要素として。  
+ なお、<xref:System.Windows.ResourceDictionary>要素がありません、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)、一般に、リソース コレクション内のすべての項目に必要な。 もう 1 つ<xref:System.Windows.ResourceDictionary>内で参照、<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>コレクションは、特別な場合は、このマージされたリソース ディクショナリのシナリオ用に予約されています。 <xref:System.Windows.ResourceDictionary>導入をマージするリソース ディクショナリを持つことはできません、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)します。 通常、各<xref:System.Windows.ResourceDictionary>内、<xref:System.Windows.ResourceDictionary.MergedDictionaries%2A>コレクションを指定します、<xref:System.Windows.ResourceDictionary.Source%2A>属性。 値<xref:System.Windows.ResourceDictionary.Source%2A>する必要があります、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]マージするリソース ファイルの場所に解決されます。 その宛先[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]別である必要があります[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ファイルで<xref:System.Windows.ResourceDictionary>のルート要素として。  
   
 > [!NOTE]
 >  内のリソースを定義することは、<xref:System.Windows.ResourceDictionary>として指定する代わりに、マージされたディクショナリとして指定されている<xref:System.Windows.ResourceDictionary.Source%2A>、またはこれに加えて、指定したソースからすべてのリソースが含まれています。 ただし、これは一般的なシナリオではありません。マージされたディクショナリの主要なシナリオは、外部ファイルの場所からリソースをマージすることです。 ページのマークアップ内のリソースを指定する場合が通常定義するこれらのメイン<xref:System.Windows.ResourceDictionary>マージされたディクショナリではなく、します。  
@@ -39,7 +39,7 @@ ms.locfileid: "54572922"
 > [!NOTE]
 >  埋め込みリソースのビルド アクションは使用しないでください。 ビルド アクション自体がサポートされている[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、アプリケーションがの解像度<xref:System.Windows.ResourceDictionary.Source%2A>組み込まれない<xref:System.Resources.ResourceManager>、したがって、ストリームから個々 のリソースを分離することはできません。 その他のためにも使用するように、埋め込みリソースを使用することもでした<xref:System.Resources.ResourceManager>リソースにアクセスします。  
   
- これと関連して、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに対するパック URI を使い、その URI をソースとして参照する手法もあります。 パック URI を使用すると、参照したアセンブリのコンポーネントを参照したり、その他の手法を利用したりできます。 パック URI の詳細については、「[WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)」を参照してください。  
+ これと関連して、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに対するパック URI を使い、その URI をソースとして参照する手法もあります。 パック URI を使用すると、参照したアセンブリのコンポーネントを参照したり、その他の手法を利用したりできます。 パック URI の詳細については、「[WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)」を参照してください。  
   
  プロジェクトの一部としてコンパイルされないリソースでは、URI が実行時に評価されます。 リソース ファイルを参照するために、file: や http: などの一般的な URI トランスポートを使うことができます。 コンパイルされないリソースの手法を使うことの欠点は、file: アクセスには追加の配置手順が必要になることと、http: アクセスはインターネット セキュリティ ゾーンを意味することです。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "54572922"
  マージされたディクショナリ/アプリケーションの配置で考えられる別のシナリオは、マージされたディクショナリをローカル アプリケーション ファイルとして、またはローカルの共有記憶域に書き出すことです。  
   
 ### <a name="localization"></a>ローカリゼーション  
- ローカライズする必要のあるリソースが、プライマリ ディクショナリにマージされたディクショナリに分離されて、Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルとして保持されている場合、これらのファイルを別個にローカライズすることができます。 これは、サテライト リソース アセンブリをローカライズするよりも簡易な手法です。 詳細については、「[WPF のグローバリゼーションおよびローカリゼーションの概要](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)」を参照してください。  
+ ローカライズする必要のあるリソースが、プライマリ ディクショナリにマージされたディクショナリに分離されて、Loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルとして保持されている場合、これらのファイルを別個にローカライズすることができます。 これは、サテライト リソース アセンブリをローカライズするよりも簡易な手法です。 詳細については、「[WPF のグローバリゼーションおよびローカリゼーションの概要](wpf-globalization-and-localization-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.ResourceDictionary>
-- [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [XAML リソース](xaml-resources.md)
+- [リソースとコード](resources-and-code.md)
+- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)

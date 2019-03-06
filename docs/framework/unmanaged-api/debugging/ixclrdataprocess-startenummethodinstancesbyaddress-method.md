@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662622"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374571"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress メソッド
 
@@ -40,11 +40,14 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ### <a name="parameters"></a>パラメーター
 
-`address` [in]メソッドの最初のインスタンスのアドレス。
+`address`\
+[in]メソッドの最初のインスタンスのアドレス。
 
-`appDomain` [in]メソッド インスタンスのアプリケーション ドメイン。
+`appDomain`\
+[in]メソッド インスタンスのアプリケーション ドメイン。
 
-`handle` [out]メソッド インスタンスを列挙するためのハンドル。
+`handle`\
+[out]メソッド インスタンスを列挙するためのハンドル。
 
 ## <a name="remarks"></a>Remarks
 
@@ -59,6 +62,6 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ## <a name="see-also"></a>関連項目
 
-- [CLRDataSourceType 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
+- [デバッグ](index.md)
+- [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)

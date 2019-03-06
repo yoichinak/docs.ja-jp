@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364009"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF の 3D パフォーマンスの最大化
 使用すると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を 3D コントロールをビルドし、アプリケーションで 3D シーンを含めることがパフォーマンスの最適化を考慮すべき重要です。 このトピックでは、3 D クラスとそれらを使用するときにパフォーマンスを最適化するための推奨事項と共に、アプリケーションのパフォーマンスに影響を与えるプロパティの一覧を示します。  
   
- このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、次を参照してください。[グラフィックスの描画層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)します。  
+ このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、次を参照してください。[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)します。  
   
 ## <a name="performance-impact-high"></a>パフォーマンスに影響します。High  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54508656"
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|メッシュが共有の頂点を三角形として定義されているし、これらの頂点が同じ位置、標準、およびテクスチャの座標にある、共有される各頂点を 1 回だけ定義し、でのインデックスを使用して、三角形を定義<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>します。|  
 |<xref:System.Windows.Media.ImageBrush>|サイズを明示的に制御がある場合は、テクスチャのサイズを最小限に抑えてください (使用している場合、<xref:System.Windows.Media.Imaging.RenderTargetBitmap>や、 <xref:System.Windows.Media.ImageBrush>)。  下部のテクスチャの解像度が画質の低下、品質とパフォーマンスのバランスを探してみましょうできますに注意してください。|  
-|不透明度|半透明の 3D の反射) などのコンテンツを描画、ときに、不透明度プロパティを使用して、ブラシまたはマテリアル (を使用して<xref:System.Windows.Media.Brush.Opacity%2A>または<xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) 半透明別に作成するのではなく<xref:System.Windows.Controls.Viewport3D>を設定して`Viewport3D.Opacity`1 未満の値にします。|  
+|Opacity|半透明の 3D の反射) などのコンテンツを描画、ときに、不透明度プロパティを使用して、ブラシまたはマテリアル (を使用して<xref:System.Windows.Media.Brush.Opacity%2A>または<xref:System.Windows.Media.Media3D.DiffuseMaterial.Color%2A>) 半透明別に作成するのではなく<xref:System.Windows.Controls.Viewport3D>を設定して`Viewport3D.Opacity`1 未満の値にします。|  
 |<xref:System.Windows.Controls.Viewport3D>|数を最小限に抑える<xref:System.Windows.Controls.Viewport3D>シーンでを使用しているオブジェクトします。  モデルごとに個別の Viewport3D インスタンスを作成するのではなく、同じ Viewport3D で多くの 3D モデルを配置します。|  
 |<xref:System.Windows.Freezable>|通常は再利用すると解消<xref:System.Windows.Media.Media3D.MeshGeometry3D>、<xref:System.Windows.Media.Media3D.GeometryModel3D>ブラシ、および資料。  派生しているために、すべてのどれ`Freezable`します。|  
 |<xref:System.Windows.Freezable>|呼び出す、<xref:System.Windows.Freezable.Freeze%2A>アプリケーションでそのプロパティが残っているとフリーズ可能オブジェクトのメソッドは変更されません。  固定は、ワーキング セットの低下し、速度を上げることができます。|  
@@ -60,4 +60,4 @@ ms.locfileid: "54508656"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|大規模なコレクションの構築時を最小限に抑える[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、MeshGeometry3D のなど<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>、 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>、 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>、および<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>値の母集団の前に、コレクションのサイズを事前。 可能であれば、配列やリストなど、コレクションのコンス トラクター事前設定されたデータの構造体を渡します。|  
   
 ## <a name="see-also"></a>関連項目
-- [3-D グラフィックスの概要](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [3-D グラフィックスの概要](3-d-graphics-overview.md)

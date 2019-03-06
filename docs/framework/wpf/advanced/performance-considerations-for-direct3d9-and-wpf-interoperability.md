@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608863"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356729"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項
 Direct3D9 コンテンツをホストするにを使用して、<xref:System.Windows.Interop.D3DImage>クラス。 Direct3D9 コンテンツをホストするいると、アプリケーションのパフォーマンスに影響を与えることができます。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツをホストする場合は、パフォーマンスを最適化するベスト プラクティスについて説明します。 これらのベスト プラクティスを使用する方法は、<xref:System.Windows.Interop.D3DImage>とベスト プラクティスを Windows Vista、Windows XP を使用するいるし、マルチ モニターを表示します。  
   
 > [!NOTE]
->  これらのベスト プラクティスを示すコード例では、次を参照してください。 [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)します。  
+>  これらのベスト プラクティスを示すコード例では、次を参照してください。 [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)します。  
   
 ## <a name="use-d3dimage-sparingly"></a>D3DImage を多用しません。  
  Direct3D9 コンテンツがホストされている、<xref:System.Windows.Interop.D3DImage>インスタンスが純粋な Direct3D アプリケーションのように高速としてレンダリングされません。 サーフェイスのコピーとコマンド バッファーをフラッシュするには、コストのかかる操作を指定できます。 数値として<xref:System.Windows.Interop.D3DImage>インスタンスが増えると、詳細のフラッシュが発生して、パフォーマンスが低下します。 したがって、使用する必要があります<xref:System.Windows.Interop.D3DImage>限定的に使用します。  
@@ -47,7 +47,7 @@ Direct3D9 コンテンツをホストするにを使用して、<xref:System.Win
 ## <a name="best-practices-for-multi-monitor-displays"></a>マルチ モニター表示のためのベスト プラクティス  
  複数のモニターがあるコンピューターを使用している場合は、前述のベスト プラクティスに従う必要があります。 マルチ モニターの構成のいくつか追加のパフォーマンスの考慮事項もあります。  
   
- バック バッファーを作成するときに、特定のデバイスと、アダプター上に作成されますが、WPF はアダプタでフロント バッファーを表示することがあります。 フロント バッファーを更新するアダプター間でコピーと、非常に高価なことができます。 複数のビデオ カードとは、WDDM を使用するように構成された Windows Vista で、`IDirect3DDevice9Ex`デバイス フロント バッファーが別のアダプターでも同じビデオ カードにある場合は、パフォーマンスの低下はありません。 ただし、Windows XP と複数のビデオ カードで XDDM では、大幅なパフォーマンスの低下フロント バッファーが表示されたら、バック バッファーとは異なるアダプター。 詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)します。  
+ バック バッファーを作成するときに、特定のデバイスと、アダプター上に作成されますが、WPF はアダプタでフロント バッファーを表示することがあります。 フロント バッファーを更新するアダプター間でコピーと、非常に高価なことができます。 複数のビデオ カードとは、WDDM を使用するように構成された Windows Vista で、`IDirect3DDevice9Ex`デバイス フロント バッファーが別のアダプターでも同じビデオ カードにある場合は、パフォーマンスの低下はありません。 ただし、Windows XP と複数のビデオ カードで XDDM では、大幅なパフォーマンスの低下フロント バッファーが表示されたら、バック バッファーとは異なるアダプター。 詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)します。  
   
 ## <a name="performance-summary"></a>パフォーマンスの概要  
  次の表では、オペレーティング システム、ピクセル形式、およびサーフェイスのロック可能性の関数としてフロント バッファーの更新プログラムのパフォーマンスを表示します。 フロント バッファーとバック バッファーは、同じアダプター上にあると見なされます。 アダプターの構成に応じてハードウェアの更新プログラムは通常、ソフトウェア更新プログラムよりもはるかに高速です。  
@@ -61,6 +61,6 @@ Direct3D9 コンテンツをホストするにを使用して、<xref:System.Win
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF と Direct3D9 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [チュートリアル: WPF での Direct3D9 コンテンツをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)
+- [チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [チュートリアル: WPF での Direct3D9 コンテンツをホストしています。](walkthrough-hosting-direct3d9-content-in-wpf.md)

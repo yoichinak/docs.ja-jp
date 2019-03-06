@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557265"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366726"
 ---
 # <a name="brushes"></a>ブラシ
-以下のトピックを使用する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]「描画」コンテンツを画面にブラシ  
+次のトピックを使用する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]「描画」画面にコンテンツをブラシ  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF のブラシの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [ブラシの変換の概要](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [不透明度マスクの概要](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [純色およびグラデーションによる塗りつぶしの概要](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [イメージ、描画、およびビジュアルによる塗りつぶし](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush の概要](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [WPF のブラシの概要](wpf-brushes-overview.md)  
+ [ブラシの変換の概要](brush-transformation-overview.md)  
+ [不透明度マスクの概要](opacity-masks-overview.md)  
+ [純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)  
+ [イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)  
+ [TileBrush の概要](tilebrush-overview.md)  
+ [方法トピック](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ ms.locfileid: "33557265"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>関連項目  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [グラフィックスとマルチメディア](index.md)  
   
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

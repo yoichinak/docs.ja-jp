@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590904"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366648"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>GridView の列ヘッダー スタイルおよびテンプレートの概要
 この概要の説明内の列ヘッダーをカスタマイズするために使用するプロパティの優先順位の順序、<xref:System.Windows.Controls.GridView>の表示モード、<xref:System.Windows.Controls.ListView>コントロール。  
@@ -36,6 +36,6 @@ ms.locfileid: "54590904"
  <sup>1</sup>の**ヘッダー テンプレート プロパティ**両方テンプレートとテンプレート セレクターのプロパティは、テンプレートのプロパティが優先されますを設定します。 たとえば、両方を設定する場合、<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>と<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>プロパティ、<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>プロパティが優先されます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法トピック](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [GridView の概要](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [方法トピック](listview-how-to-topics.md)
+- [ListView の概要](listview-overview.md)
+- [GridView の概要](gridview-overview.md)

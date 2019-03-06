@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358523"
 ---
 # <a name="custom-animations-overview"></a>カスタム アニメーションの概要
 このトピックでは、カスタム キー フレームやアニメーション クラスを作成して、またはフレームごとのコールバックを使ってバイパスすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション システムを拡張する方法と、それが必要な状況について説明します。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] によって提供されるさまざまな種類のアニメーションに精通している必要があります。 詳しくは、「From/To/By アニメーションの概要」、「[キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)」、および「[パス アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)」をご覧ください。  
+ このトピックを理解するには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] によって提供されるさまざまな種類のアニメーションに精通している必要があります。 詳しくは、「From/To/By アニメーションの概要」、「[キー フレーム アニメーションの概要](key-frame-animations-overview.md)」、および「[パス アニメーションの概要](path-animations-overview.md)」をご覧ください。  
   
- アニメーション クラスが継承するので、<xref:System.Windows.Freezable>クラス、知っておくべきで<xref:System.Windows.Freezable>から継承する方法とオブジェクト<xref:System.Windows.Freezable>します。 詳しくは、「[Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)」をご覧ください。  
+ アニメーション クラスが継承するので、<xref:System.Windows.Freezable>クラス、知っておくべきで<xref:System.Windows.Freezable>から継承する方法とオブジェクト<xref:System.Windows.Freezable>します。 詳しくは、「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」をご覧ください。  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>アニメーション システムの拡張  
@@ -45,7 +45,7 @@ ms.locfileid: "54527641"
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>カスタム キー フレームを作成する  
- カスタム キー フレーム クラスの作成は、アニメーション システムを拡張する最も簡単な方法です。 キー フレーム アニメーションに対して異なる補間方法が必要なときは、このアプローチを使います。  「[キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)」で説明されているように、キー フレーム アニメーションはキー フレーム オブジェクトを使って出力値を生成します。 各キー フレーム オブジェクトは 3 つの機能を実行します。  
+ カスタム キー フレーム クラスの作成は、アニメーション システムを拡張する最も簡単な方法です。 キー フレーム アニメーションに対して異なる補間方法が必要なときは、このアプローチを使います。  「[キー フレーム アニメーションの概要](key-frame-animations-overview.md)」で説明されているように、キー フレーム アニメーションはキー フレーム オブジェクトを使って出力値を生成します。 各キー フレーム オブジェクトは 3 つの機能を実行します。  
   
 -   使用してターゲット値を指定します。 その<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティ。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54527641"
   
  *\<Type>* KeyFrame 抽象クラスから派生して、InterpolateValueCore メソッドを実装します。 InterpolateValueCore メソッドは、キー フレームの現在の値を返します。 2 つのパラメーターとして、前のキー フレームの値と、0 から 1 の範囲の進行状況の値を受け取ります。 0 の進行状況は、キー フレームが開始され、値 1 には、キー フレームが完了したと、によって指定された値を返す必要がありますを示すことを示します。 その<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティ。  
   
- *\<型 >* キーフレーム クラスから継承、<xref:System.Windows.Freezable>クラスもオーバーライドする必要あります<xref:System.Windows.Freezable.CreateInstanceCore%2A>core クラスの新しいインスタンスを返します。 クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)」をご覧ください。  
+ *\<型 >* キーフレーム クラスから継承、<xref:System.Windows.Freezable>クラスもオーバーライドする必要あります<xref:System.Windows.Freezable.CreateInstanceCore%2A>core クラスの新しいインスタンスを返します。 クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」をご覧ください。  
   
  カスタム *\<Type>* KeyFrame アニメーションを作成した後は、その型の *\<Type>* AnimationUsingKeyFrames でそれを使うことができます。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54527641"
   
  *\<Type>* Animation から派生して、GetCurrentValueCore メソッドを実装します。 GetCurrentValueCore メソッドは、アニメーションの現在の値を返します。 次の 3 つのパラメーターを受け取ります: 推奨される開始値、推奨される終了値、および<xref:System.Windows.Media.Animation.AnimationClock>アニメーションの進行状況を判断するために使用します。  
   
- *\<型 >* AnimationBase クラスから継承、<xref:System.Windows.Freezable>クラスもオーバーライドする必要あります<xref:System.Windows.Freezable.CreateInstanceCore%2A>core クラスの新しいインスタンスを返します。 クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)」をご覧ください。  
+ *\<型 >* AnimationBase クラスから継承、<xref:System.Windows.Freezable>クラスもオーバーライドする必要あります<xref:System.Windows.Freezable.CreateInstanceCore%2A>core クラスの新しいインスタンスを返します。 クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」をご覧ください。  
   
  詳しくは、アニメーション化する型の *\<Type>* AnimationBase クラスの GetCurrentValueCore メソッドのドキュメントをご覧ください。 例については、「[Custom Animation Sample](https://go.microsoft.com/fwlink/?LinkID=159981)」(カスタム アニメーションのサンプル) をご覧ください。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54527641"
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – かを示すには、このプロパティのオーバーライド、<xref:System.Type>出力のアニメーションが生成されます。  
   
- クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)」をご覧ください。  
+ クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」をご覧ください。  
   
  推奨される ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションによって使われる) パラダイムは、2 つの継承レベルを使うことです。  
   
@@ -126,10 +126,10 @@ ms.locfileid: "54527641"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [プロパティ アニメーションの手法の概要](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [キー フレーム アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [パス アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)
+- [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)
+- [キー フレーム アニメーションの概要](key-frame-animations-overview.md)
+- [パス アニメーションの概要](path-animations-overview.md)
+- [アニメーションの概要](animation-overview.md)
+- [アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)
 - [カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188821"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358549"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR プロファイラと Windows ストア アプリ
 
@@ -27,7 +27,7 @@ ms.locfileid: "50188821"
 
 ## <a name="introduction"></a>はじめに
 
-過去の導入の段落で作成した場合、CLR のプロファイル API を使い慣れています。 管理対象のデスクトップ アプリケーションに対して適切に動作する診断ツールを既に作成しました。 これで、興味がある、ツールは、管理対象の Windows ストア アプリで動作するように対処します。 おそらく、この作業を行うし、簡単な作業ではないことが検出するこれ既に行ったします。 実際には、すべてのツール開発者にとって明らかなことができない可能性がある注意事項があります。 例えば:
+過去の導入の段落で作成した場合、CLR のプロファイル API を使い慣れています。 管理対象のデスクトップ アプリケーションに対して適切に動作する診断ツールを既に作成しました。 これで、興味がある、ツールは、管理対象の Windows ストア アプリで動作するように対処します。 おそらく、この作業を行うし、簡単な作業ではないことが検出するこれ既に行ったします。 実際には、すべてのツール開発者にとって明らかなことができない可能性がある注意事項があります。 例:
 
 - Windows ストア アプリは、権限が制限された重大なコンテキストで実行します。
 
@@ -126,7 +126,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 使用することができます、<xref:Windows.Management.Deployment.PackageManager>クラスをこの一覧を生成します。 `PackageManager` デスクトップ アプリは、使用可能な Windows ランタイム クラスは、実際には*のみ*デスクトップ アプリを利用できます。
 
-C# yses でデスクトップ アプリとして記述された仮定 Profiler UI から次のコード例、 `PackageManager` Windows アプリの一覧を生成します。
+次のコード例でデスクトップ アプリとして記述された仮定 Profiler UI からC#を使用して、 `PackageManager` Windows アプリの一覧を生成します。
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -304,7 +304,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 Profiler の UI と Profiler の DLL の間の単純なシグナリング セマンティクスを実行する場合に、Windows ストア アプリとデスクトップ アプリ内でイベントを使用することができます。
 
-Profiler DLL を呼び出すだけでできます、 [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)任意の名前と名前付きイベントを作成する関数。 例えば:
+Profiler DLL を呼び出すだけでできます、 [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)任意の名前と名前付きイベントを作成する関数。 例:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -384,7 +384,7 @@ Profiler DLL が別のスレッドを呼び出す通常作成メモリのプロ�
 
 関連するポイントは、プロファイラーによって作成されたスレッドで行われた呼び出しは常と見なされること、同期呼び出しが Profiler DLL のいずれかの実装の外部から行われた場合でも[ICorProfilerCallback](icorprofilercallback-interface.md)メソッド。 場合に、少なくともを使用します。 これで、CLR がプロファイラーのスレッドのマネージ スレッドに呼び出しが原因になって[ForceGC メソッド](icorprofilerinfo-forcegc-method.md)スレッドは、プロファイラーのスレッドと見なされなくこと。 そのため、CLR によって適用されると、そのスレッドの同期対象のより厳格な定義-namely からの呼び出しが発生する必要がある Profiler DLL のいずれかの内部[ICorProfilerCallback](icorprofilercallback-interface.md)修飾として同期する方法。
 
-実際にはというは何ですか ほとんど[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは安全に同期的に呼び出され、すぐに失敗するそれ以外の場合は。 Profiler DLL を再利用する場合、 [ForceGC メソッド](icorprofilerinfo-forcegc-method.md)通常プロファイラーで作成されたスレッドで行われたその他の呼び出しのスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md))、問題があるしようとしています。 など、非同期の安全な関数も[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)マネージ スレッドから呼び出されたときに、特別な規則があります。 (ブログの投稿を参照してください[Profiler のスタック ウォーク: 基本またはそれ以降の](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)詳細についてはします。)。
+実際にはというは何ですか ほとんど[ICorProfilerInfo](icorprofilerinfo-interface.md)メソッドは安全に同期的に呼び出され、すぐに失敗するそれ以外の場合は。 Profiler DLL を再利用する場合、 [ForceGC メソッド](icorprofilerinfo-forcegc-method.md)通常プロファイラーで作成されたスレッドで行われたその他の呼び出しのスレッド (たとえば、 [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)、または[RequestRevert](icorprofilerinfo4-requestrevert-method.md))、問題があるしようとしています。 など、非同期の安全な関数も[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)マネージ スレッドから呼び出されたときに、特別な規則があります。 (ブログの投稿を参照してください。 [Profiler のスタック ウォーク。基本またはそれ以降の](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)詳細についてはします)。
 
 そのため、ことをお勧め、Profiler の DLL の作成を呼び出す任意のスレッド[ForceGC メソッド](icorprofilerinfo-forcegc-method.md)使用する必要があります*のみ*Gc をトリガーし、GC のコールバックに応答するためにします。 Stack サンプリングまたはデタッチのようなその他のタスクを実行するプロファイリング API を呼び出さないでください。
 

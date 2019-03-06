@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [WPF], restoring
 - application-scope properties [WPF], restoring
 ms.assetid: 55d5904a-f444-4eb5-abd3-6bc74dd14226
-ms.openlocfilehash: c64b13717a427bf7ad8f9cab0a450162ad0c6cde
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 2ba3a31d1fe8efde436fd76f88ccfab2853df5ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377138"
 ---
 # <a name="how-to-persist-and-restore-application-scope-properties-across-application-sessions"></a>方法: アプリケーション セッション全体でアプリケーション スコープのプロパティを永続化および復元する
 この例では、アプリケーションがシャット ダウンするタイミングとアプリケーション スコープのプロパティ、アプリケーションが [次へ] の起動を復元する方法は、アプリケーション スコープのプロパティを永続化する方法を示します。  
@@ -26,8 +26,8 @@ ms.locfileid: "55204704"
  アプリケーションでは、アプリケーション スコープのプロパティを永続化し、分離ストレージからそれを復元します。 分離ストレージは、アプリケーション ファイルへのアクセス許可なしで安全に使用できる保護されたストレージ領域です。  *App.xaml*ファイルで定義、`App_Startup`メソッドのハンドラーとして、<xref:System.Windows.Application.Startup?displayProperty=nameWithType>イベント、および`App_Exit`メソッドのハンドラーとして、<xref:System.Windows.Application.Exit?displayProperty=nameWithType>イベントを強調表示されている行の最初の例で示すようにします。 2 番目の例の一部を示しています、 *App.xaml.cs*と*App.xaml.vb*ファイルのコードを強調表示する、`App_Startup`メソッドで、アプリケーション スコープのプロパティ、および、復元`App_Exit`メソッドで、アプリケーション スコープのプロパティを保存します。
  
   
- [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
+ [!code-xaml[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]
   
- [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
- [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
+ [!code-csharp[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=17-55)]
+ [!code-vb[HOWTOApplicationModelSnippets#PersistRestoreAppScopePropertiesCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb#persistrestoreappscopepropertiescodebehind1)]
  

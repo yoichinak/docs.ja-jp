@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544233"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350749"
 ---
 # <a name="input-wpf"></a>入力 (WPF)
-Windows Presentation Foundation (WPF) には、いくつかの種類の入力のサポートが含まれています。 この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグ アンド ドロップ、およびデジタル インクが含まれています。 このセクションでは、WPF では入力に関連するトピックについて説明します。  
+Windows Presentation Foundation (WPF) には、いくつかの種類の入力のサポートが含まれています。 この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグ アンド ドロップ、およびデジタル インクが含まれています。 このセクションでは、WPF の入力に関連するトピックについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [フォーカスの概要](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [コントロールのフォーカスのスタイルと FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [チュートリアル: 初めてのタッチ アプリケーションの作成](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [デジタル インク](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [入力の概要](input-overview.md)  
+ [コマンド実行の概要](commanding-overview.md)  
+ [フォーカスの概要](focus-overview.md)  
+ [コントロールのフォーカスのスタイルと FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [チュートリアル: 初めてのタッチ アプリケーションの作成](walkthrough-creating-your-first-touch-application.md)  
+ [方法トピック](input-and-commands-how-to-topics.md)  
+ [デジタル インク](digital-ink.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) には、いくつかの種類の入力の
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>関連項目  
- [コントロール](../../../../docs/framework/wpf/controls/index.md)  
-  [イベント](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [コントロール](../controls/index.md)  
+  [イベント](events-wpf.md)

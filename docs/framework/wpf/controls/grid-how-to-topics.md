@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550366"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377678"
 ---
 # <a name="grid-how-to-topics"></a>グリッドに関する「方法」トピック
-このセクションのトピックを使用して要素を配置する方法について説明、<xref:System.Windows.Controls.Grid>要素。  
+このセクションのトピックを使用して要素を配置する方法を説明する、<xref:System.Windows.Controls.Grid>要素。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [グリッドを使用して標準 UI ダイアログ ボックスをビルドする](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [複雑なグリッドを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [グリッド要素を作成する](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [GridLengthConverter オブジェクトを作成および使用する](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [グリッドの子要素を配置する](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [グリッド間でサイズ設定プロパティを共有する](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [グリッドを使用して標準 UI ダイアログ ボックスをビルドする](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [複雑なグリッドを作成する](how-to-create-a-complex-grid.md)  
+ [グリッド要素を作成する](how-to-create-a-grid-element.md)  
+ [GridLengthConverter オブジェクトを作成および使用する](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [グリッドの子要素を配置する](how-to-position-the-child-elements-of-a-grid.md)  
+ [グリッド間でサイズ設定プロパティを共有する](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ ms.locfileid: "33550366"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

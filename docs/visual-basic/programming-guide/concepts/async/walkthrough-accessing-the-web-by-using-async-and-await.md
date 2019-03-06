@@ -2,12 +2,12 @@
 title: 'チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709495"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379121"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)
 async/await 機能を使用することで、非同期プログラムをより簡単かつ直感的に記述できます。 同期コードに似た非同期コードを記述し、通常の非同期コードが必要とする難しいコールバック関数や継続の処理をコンパイラに任せます。  
@@ -47,7 +47,7 @@ async/await 機能を使用することで、非同期プログラムをより�
 ## <a name="prerequisites"></a>必須コンポーネント  
  お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 詳しくは、[Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=235233)をご覧ください。  
   
-###  <a name="CreateWPFApp"></a> WPF アプリケーションを作成するには  
+### <a name="CreateWPFApp"></a> WPF アプリケーションを作成するには  
   
 1.  Visual Studio を起動します。  
   
@@ -61,8 +61,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> 単純な WPF MainWindow をデザインするには  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> 単純な WPF MainWindow をデザインするには  
   
 1.  Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
   
@@ -90,8 +90,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      WPF XAML デザイナーについて詳しくは、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」をご覧ください。  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> 参照を追加するには  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> 参照を追加するには  
   
 1.  **ソリューション エクスプローラー**で、プロジェクトの名前を強調表示します。  
   
@@ -107,8 +107,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 6.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> 必要な Imports ステートメントを追加するには  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> 必要な Imports ステートメントを追加するには  
   
 1.  **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   
@@ -120,8 +120,8 @@ async/await 機能を使用することで、非同期プログラムをより�
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> 同期アプリケーションを作成するには  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> 同期アプリケーションを作成するには  
   
 1.  デザイン ウィンドウの MainWindow.xaml をダブルクリックして、**開始**を作成するボタン、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
@@ -221,8 +221,8 @@ async/await 機能を使用することで、非同期プログラムをより�
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> 同期ソリューションをテストするには  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> 同期ソリューションをテストするには  
   
 1.  F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。  
   
@@ -247,8 +247,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      カウントの表示には数秒かかる点に注意してください。 その間、要求されたリソースのダウンロードが完了するまで UI スレッドがブロックされます。 このため、**[Start]** ボタンのクリック後は、表示ウィンドウの移動、最大化、最小化のほか、閉じることさえできなくなります。 バイト カウントの表示が開始するまでは、これらの操作を実行しても失敗します。 Web サイトが応答していない場合、どのサイトに問題があるのかを示す情報は表示されません。 待つのをやめて、プログラムを閉じることさえ難しい状態になります。  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> GetURLContents を非同期メソッドに変換するには  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> GetURLContents を非同期メソッドに変換するには  
   
 1.  同期ソリューションを非同期ソリューションに変換する際に、最初に取りかかるのに最適な場所は、`GetURLContents` 内です。その理由は、<xref:System.Net.HttpWebRequest> の <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドおよび <xref:System.IO.Stream> の <xref:System.IO.Stream.CopyTo%2A> メソッドへの呼び出しで、アプリケーションが Web にアクセスするためです。 .NET Framework には両方のメソッドの非同期バージョンが用意されているため、変換は簡単です。  
   
@@ -329,8 +329,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      このいくつかの変更によって、`GetURLContents` の非同期メソッドへの変換が完了しました。  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> SumPageSizes を非同期メソッドに変換するには  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> SumPageSizes を非同期メソッドに変換するには  
   
 1.  `SumPageSizes` に対して、前述した手順を繰り返します。 まずは、`GetURLContents` への呼び出しを非同期呼び出しに変更します。  
   
@@ -369,8 +369,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      `SumPageSizes` から `SumPageSizesAsync` への変換が完了しました。  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> startButton_Click を非同期メソッドに変換するには  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> startButton_Click を非同期メソッドに変換するには  
   
 1.  イベント ハンドラーで、呼び出されるメソッドの名前を `SumPageSizes` から `SumPageSizesAsync` に変更します (まだ変更していない場合)。  
   
@@ -415,8 +415,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      同期処理から非同期処理へのプロジェクトの変換が完了しました。  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> 非同期ソリューションをテストするには  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> 非同期ソリューションをテストするには  
   
 1.  F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。  
   
@@ -426,8 +426,8 @@ async/await 機能を使用することで、非同期プログラムをより�
   
     -   最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> GetURLContentsAsync メソッドを .NET Framework メソッドに置き換えるには  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> GetURLContentsAsync メソッドを .NET Framework メソッドに置き換えるには  
   
 1.  .NET Framework 4.5 では、使用できる非同期メソッドが数多く用意されています。 その 1 つである、<xref:System.Net.Http.HttpClient> の <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> メソッドは、このチュートリアルに必要な処理だけを実行します。 これを、前述の手順で作成した `GetURLContentsAsync` メソッドの代わりに使用できます。  
   
@@ -452,7 +452,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      このバージョンのプロジェクトの動作は、「非同期ソリューションをテストするには」の手順で説明している動作と同じですが、さらに少ない手間で作成できます。  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> 「例」  
+## <a name="BKMK_CompleteCodeExamples"></a> 「例」  
  次のコードには、記述した非同期 `GetURLContentsAsync` メソッドを使用する、同期ソリューションから非同期ソリューションへの変換例のすべてが含まれています。 この例は、元の同期ソリューションと非常によく似ています。  
   
 ```vb  

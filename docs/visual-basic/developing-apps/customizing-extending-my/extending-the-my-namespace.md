@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: de3403be4a23283d27887c149ed62df37e13c334
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975382"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361201"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic における My 名前空間の拡張
 `My`プロパティとメソッドを .NET Framework の能力を簡単に利用できるようにする Visual Basic における名前空間を公開します。 `My`名前空間には一般的なプログラミングの問題を 1 行のコードに多くの場合、困難な作業を減らすことが簡略化します。 さらに、`My`の動作をカスタマイズできるように、名前空間が完全に拡張可能`My`特定のアプリケーションのニーズに対応するには、その階層に新しいサービスを追加します。 このトピックでは両方の既存のメンバーをカスタマイズする方法、`My`名前空間と、独自のカスタム クラスを追加する方法、`My`名前空間。  
@@ -36,7 +36,7 @@ ms.locfileid: "56975382"
   
 -   [パッケージ化と拡張機能の配置](#packaging)  
   
-##  <a name="customizing"></a> 既存の Namespace メンバーは自分のカスタマイズ  
+## <a name="customizing"></a> 既存の Namespace メンバーは自分のカスタマイズ  
  `My` Visual Basic の公開で名前空間は、アプリケーションや、コンピューターに関する情報を頻繁に使用します。 内のオブジェクトの完全な一覧については、`My`名前空間を参照してください[My の参照を](../../../visual-basic/language-reference/keywords/my-reference.md)します。 既存のメンバーをカスタマイズする必要があります、`My`名前空間にするようは、アプリケーションのニーズを満たします。 内のオブジェクトの任意のプロパティ、`My`読み取り専用でない名前空間は、カスタム値に設定することができます。  
   
  たとえば、頻繁に使用する、`My.User`アプリケーションを実行しているユーザーの現在のセキュリティ コンテキストにアクセスするオブジェクト。 ただし、会社がカスタムのユーザー オブジェクトを使用して、追加情報と、会社内のユーザーの機能を公開します。 このシナリオでの既定値を置き換えることができます、`My.User.CurrentPrincipal`プロパティに次の例で示すように、独自カスタム プリンシパル オブジェクトのインスタンスを使用します。  
@@ -45,17 +45,17 @@ ms.locfileid: "56975382"
   
  設定、`CurrentPrincipal`プロパティを`My.User`オブジェクトが、アプリケーションを実行する id を変更します。 `My.User`オブジェクトは、さらに、新しく指定したユーザーに関する情報を返します。  
   
-##  <a name="addingtoobjects"></a> オブジェクトにメンバーを追加します。  
+## <a name="addingtoobjects"></a> オブジェクトにメンバーを追加します。  
  返される型`My.Application`と`My.Computer`として定義されます`Partial`クラス。 そのため、拡張することができます、`My.Application`と`My.Computer`オブジェクトを作成して、`Partial`という名前のクラス`MyApplication`または`MyComputer`します。 クラスにすることはできません、`Private`クラス。 一部として、クラスを指定する場合、`My`名前空間には、プロパティとに含まれるメソッドを追加できる、`My.Application`または`My.Computer`オブジェクト。  
   
  たとえば、次の例はという名前のプロパティを追加します。`DnsServerIPAddresses`を、`My.Computer`オブジェクト。  
   
  [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
   
-##  <a name="addingcustom"></a> カスタム オブジェクトを追加、My Namespace  
+## <a name="addingcustom"></a> カスタム オブジェクトを追加、My Namespace  
  ですが、`My`名前空間では、多くの一般的なプログラミング タスクのソリューション、タスクが発生する可能性があります`My`名前空間が対応していません。 たとえば、アプリケーションが、ユーザー データのカスタム ディレクトリ サービスにアクセスまたはアプリケーションは、Visual Basic では既定でインストールされていないアセンブリを使用可能性があります。 拡張することができます、`My`環境に固有の一般的なタスクへのカスタム ソリューションを含める名前空間。 `My`名前空間は、増え続けるアプリケーションのニーズを満たすために新しいメンバーを追加する簡単に拡張できます。 さらに、展開、`My`名前空間の拡張機能を Visual Basic テンプレートとして他の開発者。  
   
-###  <a name="addingtonamespace"></a> メンバーを追加、My Namespace  
+### <a name="addingtonamespace"></a> メンバーを追加、My Namespace  
  `My`名前空間には、他の名前空間のようなプロパティを追加できます最上位レベルにモジュールを追加して、指定するだけで、`Namespace`の`My`します。 使用して、モジュールの注釈を付け、`HideModuleName`属性の次の例に示すようにします。 `HideModuleName`属性により、IntelliSense が表示されないよう、モジュール名のメンバーを表示するとき、`My`名前空間。  
   
  [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
@@ -64,7 +64,7 @@ ms.locfileid: "56975382"
   
  [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
   
-##  <a name="addingevents"></a> カスタム My オブジェクトへのイベントの追加  
+## <a name="addingevents"></a> カスタム My オブジェクトへのイベントの追加  
  使用することができます、`My.Application`オブジェクトのカスタム イベントを公開する`My`オブジェクトを拡張することによって、`MyApplication`部分クラスに、`My`名前空間。 Windows ベースのプロジェクトでは、ダブルクリックすることができます、 **My Project**にプロジェクトのノード**ソリューション エクスプ ローラー**します。 Visual Basic で**プロジェクト デザイナー**、クリックして、 `Application`  タブをクリックして、`View Application Events`ボタンをクリックします。 ApplicationEvents.vb という新しいファイルが作成されます。 拡張するための次のコードが含まれている、`MyApplication`クラス。  
   
  [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
@@ -73,7 +73,7 @@ ms.locfileid: "56975382"
   
  [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
   
-##  <a name="design"></a> デザイン ガイドライン  
+## <a name="design"></a> デザイン ガイドライン  
  拡張機能を開発する際に、`My`名前空間の拡張機能コンポーネントのメンテナンス コストを最小限に抑えるため、次のガイドラインを使用します。  
   
 -   **拡張機能のロジックのみが含まれます。** 含まれるロジック、`My`名前空間の拡張機能に必要な機能を公開するために必要なコードのみを含める必要があります、`My`名前空間。 拡張機能は、ソース コードとしてユーザーのプロジェクトに存在するため拡張コンポーネントを更新高メンテナンス費用が発生し、可能であれば避ける必要があります。  
@@ -82,7 +82,7 @@ ms.locfileid: "56975382"
   
 -   **拡張機能のコードを分離します。** 1 つのファイル、コードを配置すると、拡張機能が Visual Studio 項目テンプレートとして簡単にデプロイ可能にします。 詳細については、このトピックの「「パッケージ化と拡張機能の配置」を参照してください。 すべてを配置すること、`My`名前空間の拡張機能コードを 1 つのファイルまたはプロジェクト内の別のフォルダーはユーザーの検索をヘルプも、`My`名前空間の拡張機能。  
   
-##  <a name="designing"></a> 用のクラス ライブラリのデザイン、  
+## <a name="designing"></a> 用のクラス ライブラリのデザイン、  
  ほとんどのオブジェクト モデルを使用した場合と同様に、いくつかの設計パターンが正常に動作、`My`名前空間とその他のユーザーはありません。 拡張機能を設計するときに、`My`名前空間には、次の原則を検討してください。  
   
 -   **ステートレスな方法があります。** 内のメソッド、`My`名前空間は、特定のタスクに完全なソリューションを提供する必要があります。 メソッドに渡されるパラメーター値が特定のタスクを完了するために必要なすべての入力を提供することを確認します。 リソースへの開いている接続など、前の状態に依存するメソッドを作成しないでください。  
@@ -95,7 +95,7 @@ ms.locfileid: "56975382"
   
  次のガイドラインは、クラス ライブラリの一般的な設計原則を妨害しません。 代わりに、Visual Basic を使用している開発者向けに最適化されている推奨事項は、`My`名前空間。 クラス ライブラリを作成するための一般的な設計原則を参照してください。 [Framework デザイン ガイドライン](../../../standard/design-guidelines/index.md)します。  
   
-##  <a name="packaging"></a> パッケージ化と拡張機能の配置  
+## <a name="packaging"></a> パッケージ化と拡張機能の配置  
  含めることができます`My`、Visual Studio プロジェクト テンプレートの名前空間の拡張機能は、拡張機能をパッケージ化し、それを Visual Studio 項目テンプレートとしてデプロイします。 パッケージ化するときに、`My`として、Visual Studio 項目テンプレートの名前空間の拡張機能、Visual Basic で提供される追加機能を活用を実行できます。 これらの機能をプロジェクトは、特定のアセンブリを参照するときに、拡張機能を含めることを有効にまたは明示的に追加するユーザーを有効にする、`My`名前空間の拡張機能を使用して、**マイ拡張**Visual Basic のページプロジェクト デザイナー。  
   
  デプロイする方法の詳細について`My`名前空間の拡張機能を参照してください[パッケージ化と展開のカスタム マイ拡張](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)します。  

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
-ms.openlocfilehash: f1913832bf95d0ea7188637f5456e4ff8f24695e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c815b3acd857b193aa02d632a33c96e324885
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360980"
 ---
 # <a name="fonts-wpf"></a>フォント (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用してテキストのリッチ プレゼンテーションのサポートが含まれています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォント。 サンプル パック[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォントが含まれています、[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [アプリケーションでのフォントのパッケージング](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [OpenType フォント パックのサンプル](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [OpenType フォントの機能](opentype-font-features.md)  
+ [アプリケーションでのフォントのパッケージング](packaging-fonts-with-applications.md)  
+ [OpenType フォント パックのサンプル](sample-opentype-font-pack.md)  
+ [方法トピック](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [WPF のドキュメント](documents-in-wpf.md)
+- [WPF のタイポグラフィ](typography-in-wpf.md)

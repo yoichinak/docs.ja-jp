@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 52fc542996f2fe691b62aeff5296e045643fcc7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498347"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366752"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名前スコープ
 XAML 名前スコープは、XAML で定義されているオブジェクトを識別する概念です。 XAML 名前スコープ内の名前は、オブジェクト ツリーで XAML 定義のオブジェクトの名前と、対応するインスタンス間の関係を確立するために使用できます。 通常、XAML 名前スコープ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML アプリケーションのルート個々 の XAML ページの読み込みとマネージ コードが作成されます。 プログラミング オブジェクトとしての XAML 名前スコープが定義されている、<xref:System.Windows.Markup.INameScope>インターフェイスし、実際のクラスによって実装も<xref:System.Windows.NameScope>します。  
@@ -36,7 +36,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
 ### <a name="adding-objects-to-runtime-object-trees"></a>オブジェクトをランタイム オブジェクト ツリーに追加します。  
  XAML が解析される時点では、WPF XAML 名前スコープを作成および定義の時点を表します。 オブジェクト ツリーの時点にそのツリーを生成した XAML が解析された後でオブジェクトを追加した場合、`Name`または`x:Name`新しいオブジェクトの値が XAML 名前スコープ内の情報を自動的に更新されません。 XAML が読み込まれた後に、WPF XAML 名前スコープにオブジェクトの名前を追加するには、適切な実装を呼び出す必要があります<xref:System.Windows.Markup.INameScope.RegisterName%2A>通常を XAML 名前スコープを定義するオブジェクト、XAML ページのルート。 名前が登録されていない場合追加されたオブジェクト名を使って参照できませんメソッドなど<xref:System.Windows.FrameworkElement.FindName%2A>、およびアニメーションのターゲットの名前を使用することはできません。  
   
- アプリケーション開発者向けの最も一般的なシナリオが使用する<xref:System.Windows.FrameworkElement.RegisterName%2A>ページの現在のルートの XAML 名前スコープに名前を登録します。 <xref:System.Windows.FrameworkElement.RegisterName%2A> ストーリー ボードの重要なシナリオの一部のアニメーションには、そのターゲット オブジェクト。 詳細については、次を参照してください。[ストーリー ボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)します。  
+ アプリケーション開発者向けの最も一般的なシナリオが使用する<xref:System.Windows.FrameworkElement.RegisterName%2A>ページの現在のルートの XAML 名前スコープに名前を登録します。 <xref:System.Windows.FrameworkElement.RegisterName%2A> ストーリー ボードの重要なシナリオの一部のアニメーションには、そのターゲット オブジェクト。 詳細については、次を参照してください。[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
   
  呼び出す場合<xref:System.Windows.FrameworkElement.RegisterName%2A>XAML 名前スコープを定義するオブジェクト以外のオブジェクトの名前が登録されたまま、呼び出し元のオブジェクトが保持されている XAML 名前スコープにするを呼び出した場合と<xref:System.Windows.FrameworkElement.RegisterName%2A>でオブジェクトを定義する XAML 名前スコープ。  
   
@@ -49,7 +49,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
  として、オブジェクトが指定されている場合`dependencyObject`の<xref:System.Windows.NameScope.SetNameScope%2A>でない、<xref:System.Windows.Markup.INameScope>実装、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>を呼び出すと、<xref:System.Windows.FrameworkElement.RegisterName%2A>ですべての子要素は影響しません。 新しい XAML 名前スコープを明示的に作成に失敗した場合に呼び出して<xref:System.Windows.FrameworkElement.RegisterName%2A>で例外が発生します。  
   
- コードでの XAML 名前スコープの Api を使用しての例は、次を参照してください。[名前スコープを定義する](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)します。  
+ コードでの XAML 名前スコープの Api を使用しての例は、次を参照してください。[名前スコープを定義する](../graphics-multimedia/how-to-define-a-name-scope.md)します。  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>スタイルとテンプレートで XAML 名前スコープ  
@@ -57,7 +57,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
  次に例を示します。  
   
- [!code-xaml[XamlOvwSupport#NameScopeTemplates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
+ [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
  ここでは、同じテンプレートでは、2 つの異なるボタンに適用されます。 テンプレートは個別の XAML 名前スコープを持っていなかった場合、 `TheBorder` XAML 名前スコープ内名前の競合が発生すると、テンプレートで使用される名前。 テンプレートには、各インスタンスでは、独自の XAML 名前スコープを持つため、この例の場合、各インスタンス化されたテンプレートの XAML 名前スコープに、名前が 1 つだけ含まれます。  
   
@@ -97,5 +97,5 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>関連項目
-- [XAML 名前空間および WPF XAML の名前空間の割り当て](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name ディレクティブ](../../../../docs/framework/xaml-services/x-name-directive.md)
+- [XAML 名前空間および WPF XAML の名前空間の割り当て](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
+- [x:Name ディレクティブ](../../xaml-services/x-name-directive.md)

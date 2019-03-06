@@ -7,21 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375195"
 ---
 # <a name="data-binding-wpf"></a>データ バインド (WPF)
-Windows Presentation Foundation (WPF) のデータ バインディングは、アプリケーションが存在し、データと対話するためのシンプルかつ一貫した方法を提供します。 要素は、さまざまな共通言語ランタイム (CLR) オブジェクトと XML の形式でデータ ソースからデータにバインドできます。  
+Windows Presentation Foundation (WPF) データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、さまざまな共通言語ランタイム (CLR) オブジェクトと XML の形式でデータ ソースからデータにバインドできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [バインディング宣言の概要](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [データ バインディングの概要](data-binding-overview.md)  
+ [バインディング ソースの概要](binding-sources-overview.md)  
+ [データ テンプレートの概要](data-templating-overview.md)  
+ [バインディング宣言の概要](binding-declarations-overview.md)  
+ [方法トピック](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Data>  
@@ -33,8 +34,8 @@ Windows Presentation Foundation (WPF) のデータ バインディングは、�
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>関連項目  
- [ドラッグ アンド ドロップ](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [ドラッグ アンド ドロップ](../advanced/drag-and-drop.md)  
   
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [データ バインディング](../advanced/optimizing-performance-data-binding.md)  
   
- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

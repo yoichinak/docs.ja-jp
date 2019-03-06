@@ -2,12 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 8c1d5fb24d0032e88b951eefa1bd7a3a8c6ccb88
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5e475f3a0fdc9350e43b89db16724ef0f544071
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369566"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -86,7 +86,7 @@ ms.locfileid: "56748129"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [.Net アセンブリ](../../../../standard/assembly/index.md)
-- [フレンド アセンブリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
+- [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
 - [方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [プログラミング ガイドの概念](../../../../visual-basic/programming-guide/concepts/index.md)

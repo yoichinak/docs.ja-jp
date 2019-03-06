@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379212"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのルーティング イベントの概念について説明します。 ここでは、ルーティング イベントの用語を定義し、要素ツリーを通じたルーティング イベントのルーティング方法、ルーティング イベントの処理方法、カスタム ルーティング イベントの作成方法について説明します。
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- ここでの説明は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、オブジェクト指向プログラミング、ツリー形式として概念化できる [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素間のリレーションシップに関する基礎知識を前提にしています。 このトピックの例に従うには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] について理解し、ごく基本的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションまたはページを作成できる必要があります。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)と[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。  
+ ここでの説明は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、オブジェクト指向プログラミング、ツリー形式として概念化できる [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素間のリレーションシップに関する基礎知識を前提にしています。 このトピックの例に従うには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] について理解し、ごく基本的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションまたはページを作成できる必要があります。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)と[XAML の概要 (WPF)](xaml-overview-wpf.md)します。  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>ルーティング イベントとは  
@@ -41,11 +41,11 @@ ms.locfileid: "54535817"
   
  たとえば、次のような単純な要素ツリーがあるとします。  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  この要素ツリーでは、次のようなものが生成されます。  
   
- ![[Yes]、[No]、[Cancel] ボタン](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![[Yes]、[No]、[Cancel] ボタン](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  この簡略化された要素のツリーのソースで、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントは、<xref:System.Windows.Controls.Button>要素、およびどちら<xref:System.Windows.Controls.Button>がクリックされたイベントを処理する機会を持つ最初の要素です。 ハンドラーがアタッチされていない場合は、 <xref:System.Windows.Controls.Button> 、イベントは、イベントのバブルが上方にし、 <xref:System.Windows.Controls.Button> 、要素ツリーの親、<xref:System.Windows.Controls.StackPanel>します。 イベント バブル可能性のある、 <xref:System.Windows.Controls.Border>、し (表示されない) 要素ツリーのページ ルートを越えてとします。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "54535817"
   
  **単一のハンドラー アタッチ ポイント:**[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、複数の要素から発生することがあるイベントを処理する同じハンドラーを複数回アタッチする必要があります。 ルーティング イベントを使用すると、前の例に示したとおり、ハンドラーを一度だけアタッチし、必要に応じてハンドラーのロジックを使用してイベントの発生元を特定することができます。 たとえば、前に示した [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では次のようなハンドラーを使用します。  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **クラスの処理:** イベント許可クラスによって定義されている静的なハンドラーにルーティングされます。 このクラス ハンドラーでは、アタッチされたどのインスタンス ハンドラーよりも先にイベントを処理できます。  
   
@@ -72,15 +72,15 @@ ms.locfileid: "54535817"
   
  次の例では、カスタムの宣言`Tap`など、登録と露出のルーティング イベント、<xref:System.Windows.RoutedEvent>識別子フィールドと`add`と`remove`の実装、 `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベント。  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>ルーティング イベント ハンドラーと XAML  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してイベントのハンドラーを追加するには、イベント リスナーである要素の属性としてイベント名を宣言します。 属性の値は、実装したハンドラー メソッドの名前です。このメソッドは、分離コード ファイルの部分クラス内に存在する必要があります。  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- 標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベント ハンドラーを追加する [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 構文は、ルーティング イベント ハンドラーを追加する構文と同じです。これは、実際にはハンドラーを [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベント ラッパーに追加しているためです。このラッパーの内部にルーティング イベント実装が存在します。 イベント ハンドラーを[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で追加する方法の詳細については、「[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)」を参照してください。  
+ 標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベント ハンドラーを追加する [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 構文は、ルーティング イベント ハンドラーを追加する構文と同じです。これは、実際にはハンドラーを [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベント ラッパーに追加しているためです。このラッパーの内部にルーティング イベント実装が存在します。 イベント ハンドラーを[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で追加する方法の詳細については、「[XAML の概要 (WPF)](xaml-overview-wpf.md)」を参照してください。  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>ルーティング方法  
@@ -114,30 +114,30 @@ ms.locfileid: "54535817"
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>ルーティング イベントのイベント ハンドラーの追加と実装  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でイベント ハンドラーを追加するには、次の例に示すように、単にイベント名を要素に属性として追加し、属性の値として、適切なデリゲートを実装するイベント ハンドラーの名前を設定します。  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` 処理するコードが含まれる実装済みハンドラーの名前を指定します、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。 `b1SetColor` 同じシグネチャが必要、<xref:System.Windows.RoutedEventHandler>イベント ハンドラーのデリゲートであるデリゲートを<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。 すべてのルーティング イベント ハンドラー デリゲートの 1 番目のパラメーターでは、イベント ハンドラーの追加先の要素を指定し、2 番目のパラメーターでは、イベントのデータを指定します。  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> 基本的なルーティング イベント ハンドラー デリゲートです。 特定のコントロールやシナリオに特化したルーティング イベントの場合、ルーティング イベント ハンドラーに使用するデリゲートも、より特化したものとなることがあるため、特別なイベント データを転送できます。 たとえば、一般的な入力のシナリオで処理を<xref:System.Windows.UIElement.DragEnter>ルーティング イベント。 ハンドラーを実装する必要があります、<xref:System.Windows.DragEventHandler>を委任します。 最も固有のデリゲートを使用すると、処理することができます、<xref:System.Windows.DragEventArgs>ハンドラーと読み取り、<xref:System.Windows.DragEventArgs.Data%2A>プロパティで、ドラッグ操作のクリップボード ペイロードが含まれています。  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してイベント ハンドラーを要素に追加する方法の詳細な例については、「[ルーティング イベントを処理する](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用してイベント ハンドラーを要素に追加する方法の詳細な例については、「[ルーティング イベントを処理する](how-to-handle-a-routed-event.md)」を参照してください。  
   
  コードで作成されたアプリケーションでルーティング イベントのハンドラーを追加するのは簡単です。 ルーティング イベント ハンドラーは、ヘルパー メソッドを通じて常に追加する<xref:System.Windows.UIElement.AddHandler%2A>(同じメソッドを呼び出す既存のバックアップである`add`)。ただし、一般に既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ルーティング イベントは `add` と `remove` のロジックのサポート実装を持つため、言語固有のイベント構文でルーティング イベントにハンドラーを追加できます。ヘルパー メソッドを使用するよりも、この構文の方がわかりやすく処理できます。 ヘルパー メソッドの使用例を次に示します。  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  例を次に示します、C#演算子 (Visual Basic の逆参照を処理するための若干異なる演算子構文がある)。  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- コードでイベント ハンドラーを追加する方法の例については、「[コードを使用してイベント ハンドラーを追加する](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)」を参照してください。  
+ コードでイベント ハンドラーを追加する方法の例については、「[コードを使用してイベント ハンドラーを追加する](how-to-add-an-event-handler-using-code.md)」を参照してください。  
   
- Visual Basic を使用している場合は、使用することも、`Handles`ハンドラーの宣言の一部としてハンドラーを追加するキーワード。 詳細については、「[Visual Basic と WPF のイベント処理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)」を参照してください。  
+ Visual Basic を使用している場合は、使用することも、`Handles`ハンドラーの宣言の一部としてハンドラーを追加するキーワード。 詳細については、「[Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)」を参照してください。  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>処理済みの概念  
@@ -165,7 +165,7 @@ ms.locfileid: "54535817"
   
  この概念設計は前に説明したルーティング動作により補強: 経路上の以前のハンドラーが既にを設定した場合でも呼び出されるルーティングイベントのハンドラーをアタッチするより難しくなります(ただしコードやスタイルでは可能)は<xref:System.Windows.RoutedEventArgs.Handled%2A>に`true`します。  
   
- 詳細については<xref:System.Windows.RoutedEventArgs.Handled%2A>、クラス処理のルーティング イベントとルーティング イベントとしてマークする場合に関する推奨事項が適切な<xref:System.Windows.RoutedEventArgs.Handled%2A>を参照してください[ルーティング イベントの処理済み、およびクラス処理としてのマーキング](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)します。  
+ 詳細については<xref:System.Windows.RoutedEventArgs.Handled%2A>、クラス処理のルーティング イベントとルーティング イベントとしてマークする場合に関する推奨事項が適切な<xref:System.Windows.RoutedEventArgs.Handled%2A>を参照してください[ルーティング イベントの処理済み、およびクラス処理としてのマーキング](marking-routed-events-as-handled-and-class-handling.md)します。  
   
  アプリケーションでは、バブル ルーティング イベントを発生元のオブジェクトで処理するのが一般的であり、イベントのルーティング特性についてはまったく考慮されません。 ただし、その場合でも、イベント データでルーティング イベントを処理済みとしてマークすることをお勧めします。そうすれば、要素ツリーの後方にある要素でそれと同じルーティング イベントにハンドラーがアタッチされている場合に起こりうる、予期しない副作用を回避できます。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "54535817"
 ## <a name="class-handlers"></a>クラス ハンドラー  
  いくつかの方法で派生するクラスを定義するかどうか<xref:System.Windows.DependencyObject>も定義し、クラスの宣言または継承されたイベント メンバーであるルーティング イベントのクラス ハンドラーをアタッチできます。 ルーティング イベントが経路上の要素インスタンスに到達すると、クラスのインスタンスにアタッチされたどのインスタンス リスナー ハンドラーよりも先に、クラス ハンドラーが呼び出されます。  
   
- 一部の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールには、特定のルーティング イベントに対する固有のクラス処理が存在します。 このため、ルーティング イベントが発生していないように見えても、実際にはクラス処理されている場合があります。また、特定の手法を使用した場合、インスタンス ハンドラーでも処理される可能性があります。 また、多くの基底クラスとコントロールからは、クラス処理の動作をオーバーライドするために使用できる仮想メソッドが提供されています。 望ましくないクラス処理の回避方法とカスタム クラスを使った独自のクラス処理定義方法の詳細については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
+ 一部の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールには、特定のルーティング イベントに対する固有のクラス処理が存在します。 このため、ルーティング イベントが発生していないように見えても、実際にはクラス処理されている場合があります。また、特定の手法を使用した場合、インスタンス ハンドラーでも処理される可能性があります。 また、多くの基底クラスとコントロールからは、クラス処理の動作をオーバーライドするために使用できる仮想メソッドが提供されています。 望ましくないクラス処理の回避方法とカスタム クラスを使った独自のクラス処理定義方法の詳細については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>WPF の添付イベント  
@@ -181,15 +181,15 @@ ms.locfileid: "54535817"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 入力システムでは、添付イベントを多用します。 ただし、ほとんどすべての添付イベントは基本要素間で転送されます。 入力イベントは、基本要素クラスのメンバーである、非添付のルーティング イベントに等しいものとして表されます。 たとえば、基になる添付イベント<xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType>より簡単に処理できる、特定の<xref:System.Windows.UIElement>を使用して<xref:System.Windows.UIElement.MouseDown>を<xref:System.Windows.UIElement>か、添付イベント構文を処理するのではなくで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]またはコード。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の添付イベントの詳細については、「[添付イベントの概要](../../../../docs/framework/wpf/advanced/attached-events-overview.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の添付イベントの詳細については、「[添付イベントの概要](attached-events-overview.md)」を参照してください。  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>XAML の修飾イベント名  
  *typename*.*eventname* 添付イベント構文に似ているが厳密に言えば添付イベントの使用方法ではない、もう 1 つの構文使用方法では、子要素で発生したルーティング イベントのハンドラーをアタッチします。 対応するルーティング イベントが共通の親要素にメンバーとして含まれない場合でも、共通の親要素にハンドラーをアタッチしてイベントのルーティングを利用します。 次の例をもう一度検討します。  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- ここで、親要素のリスナーがハンドラーを追加する位置は、<xref:System.Windows.Controls.StackPanel>します。 ただし、宣言されたから発生するルーティング イベントのハンドラーを追加するには、<xref:System.Windows.Controls.Button>クラス (<xref:System.Windows.Controls.Primitives.ButtonBase>を使用できますが、実際には、<xref:System.Windows.Controls.Button>継承により)。 <xref:System.Windows.Controls.Button> イベントがいずれかに接続するルーティング イベントのルーティング イベント システムによりハンドラーを「所有」<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>のリスナーをアタッチでした。 それ以外の場合インスタンス リスナー、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]イベント。 これらの修飾イベント属性名の既定の xmlns 名前空間は、通常、既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 名前空間ですが、カスタム ルーティング イベント用のプレフィックスを持つ名前空間を指定することもできます。 xmlns の詳細については、「[XAML 名前空間および WPF XAML の名前空間の割り当て](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください。  
+ ここで、親要素のリスナーがハンドラーを追加する位置は、<xref:System.Windows.Controls.StackPanel>します。 ただし、宣言されたから発生するルーティング イベントのハンドラーを追加するには、<xref:System.Windows.Controls.Button>クラス (<xref:System.Windows.Controls.Primitives.ButtonBase>を使用できますが、実際には、<xref:System.Windows.Controls.Button>継承により)。 <xref:System.Windows.Controls.Button> イベントがいずれかに接続するルーティング イベントのルーティング イベント システムによりハンドラーを「所有」<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>のリスナーをアタッチでした。 それ以外の場合インスタンス リスナー、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]イベント。 これらの修飾イベント属性名の既定の xmlns 名前空間は、通常、既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 名前空間ですが、カスタム ルーティング イベント用のプレフィックスを持つ名前空間を指定することもできます。 xmlns の詳細については、「[XAML 名前空間および WPF XAML の名前空間の割り当て](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)」を参照してください。  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>WPF の入力イベント  
@@ -199,7 +199,7 @@ ms.locfileid: "54535817"
   
  入力イベント処理のしくみを説明するため、次の入力イベント例について考えます。 次のツリー図の `leaf element #2` は、`PreviewMouseDown` と `MouseDown` の両方のイベントの発生元です。  
   
- ![イベント ルーティング ダイアグラム](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
+ ![イベント ルーティング ダイアグラム](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
 入力イベントのバブルとトンネル  
   
  次の順序でイベントが処理されます。  
@@ -222,35 +222,35 @@ ms.locfileid: "54535817"
   
  通常、入力イベントがマークされると<xref:System.Windows.RoutedEventArgs.Handled%2A>、さらに、ハンドラーは呼び出されません。 一般に、入力イベントが意味することをアプリケーション固有の方法で論理処理するハンドラーが呼び出されたら、直ちに入力イベントを処理済みとしてマークする必要があります。  
   
- 例外に関する一般的なこのステートメントを<xref:System.Windows.RoutedEventArgs.Handled%2A>状態が意図的に無視する登録されているイベント ハンドラーの入力を<xref:System.Windows.RoutedEventArgs.Handled%2A>イベント データの状態は、どちらの経路上でも呼び出されます。 詳細については、「[プレビュー イベント](../../../../docs/framework/wpf/advanced/preview-events.md)」または「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
+ 例外に関する一般的なこのステートメントを<xref:System.Windows.RoutedEventArgs.Handled%2A>状態が意図的に無視する登録されているイベント ハンドラーの入力を<xref:System.Windows.RoutedEventArgs.Handled%2A>イベント データの状態は、どちらの経路上でも呼び出されます。 詳細については、「[プレビュー イベント](preview-events.md)」または「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
   
  トンネル イベントとバブル イベント間の共有イベント データ モデルの概念も、トンネル イベントとバブル イベントの順次発生の概念も、すべてのルーティング イベントに当てはまるとは限りません。 そうした動作は、ペアになった入力イベントを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 入力デバイスがどのように発生させ接続するよう選択するかによって、個別に実装されます。 独自の入力イベントの実装は高度なシナリオですが、独自の入力イベントでそうしたモデルを採用することもできます。  
   
- 一部のクラスでは、特定の入力イベントをクラス処理します。通常、その目的は、ユーザーによる特定の入力イベントの意味をそのコントロール内で再定義して、新しいイベントを発生させることです。 詳細については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
+ 一部のクラスでは、特定の入力イベントをクラス処理します。通常、その目的は、ユーザーによる特定の入力イベントの意味をそのコントロール内で再定義して、新しいイベントを発生させることです。 詳細については、「[ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)」を参照してください。  
   
- 入力と一般的なアプリケーション シナリオにおける入力とイベントの対話方法の詳細については、「[入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)」を参照してください。  
+ 入力と一般的なアプリケーション シナリオにおける入力とイベントの対話方法の詳細については、「[入力の概要](input-overview.md)」を参照してください。  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetter と EventTrigger  
  スタイルで、いくつかの事前宣言を含めることができます[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]イベント処理を使用して、マークアップでの構文、<xref:System.Windows.EventSetter>します。 そのスタイルを適用すると、参照されているハンドラーが、スタイルが適用されるインスタンスに追加されます。 宣言することができます、<xref:System.Windows.EventSetter>ルーティング イベントに対してのみです。 次に例を示します。 ここで参照されている `b1SetColor` メソッドは、分離コード ファイル内にあります。  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  ここでの利点は、スタイルが多くのアプリケーションでは、いずれかのボタンに適用されるその他の情報が含まれる可能性があることと、<xref:System.Windows.EventSetter>そのスタイルの一部であるマークアップ レベルでもコードを再利用を促進します。 また、<xref:System.Windows.EventSetter>ハンドラー一歩一般的なアプリケーションとページのマークアップのメソッド名を抽象化します。  
   
- ルーティング イベントとアニメーション機能を結合する別の特殊な構文[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、<xref:System.Windows.EventTrigger>します。 同様<xref:System.Windows.EventSetter>、ルーティング イベントだけを使用できます、<xref:System.Windows.EventTrigger>します。 通常、 <xref:System.Windows.EventTrigger> 、スタイルの一部として宣言されていますが、<xref:System.Windows.EventTrigger>の一部としてページ レベルの要素でも宣言する、<xref:System.Windows.FrameworkElement.Triggers%2A>コレクション、または、 <xref:System.Windows.Controls.ControlTemplate>。 <xref:System.Windows.EventTrigger>を指定することができます、<xref:System.Windows.Media.Animation.Storyboard>ルーティング イベントに達するたびにそのルート上で要素を実行が宣言、<xref:System.Windows.EventTrigger>そのイベント。 利点、<xref:System.Windows.EventTrigger>だけイベントを処理およびに開始する原因となる既存のストーリー ボードを<xref:System.Windows.EventTrigger>ストーリー ボードと、実行時の動作の制御が向上します。 詳細については、「[開始後のストーリーボードをイベント トリガーを使用して制御する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)」を参照してください。  
+ ルーティング イベントとアニメーション機能を結合する別の特殊な構文[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、<xref:System.Windows.EventTrigger>します。 同様<xref:System.Windows.EventSetter>、ルーティング イベントだけを使用できます、<xref:System.Windows.EventTrigger>します。 通常、 <xref:System.Windows.EventTrigger> 、スタイルの一部として宣言されていますが、<xref:System.Windows.EventTrigger>の一部としてページ レベルの要素でも宣言する、<xref:System.Windows.FrameworkElement.Triggers%2A>コレクション、または、 <xref:System.Windows.Controls.ControlTemplate>。 <xref:System.Windows.EventTrigger>を指定することができます、<xref:System.Windows.Media.Animation.Storyboard>ルーティング イベントに達するたびにそのルート上で要素を実行が宣言、<xref:System.Windows.EventTrigger>そのイベント。 利点、<xref:System.Windows.EventTrigger>だけイベントを処理およびに開始する原因となる既存のストーリー ボードを<xref:System.Windows.EventTrigger>ストーリー ボードと、実行時の動作の制御が向上します。 詳細については、「[開始後のストーリーボードをイベント トリガーを使用して制御する](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)」を参照してください。  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>ルーティング イベントの詳細  
- このトピックの主な目的は、ルーティング イベントの基本概念を説明し、さまざまな基本要素や基本コントロール内の既存のルーティング イベントに応答する方法とタイミングについて解説することです。 しかし、独自のルーティング イベントを、特殊なイベント データ クラスやデリゲートなど、必要な支援機能すべてと共に、カスタム クラスに作成することもできます。 ルーティング イベントの所有者が任意のクラスを指定できますが、ルーティング イベントの発生しによって処理される必要があります<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>便利にするためには、クラスを派生します。 カスタム イベントの詳細については、「[カスタム ルーティング イベントを作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)」を参照してください。  
+ このトピックの主な目的は、ルーティング イベントの基本概念を説明し、さまざまな基本要素や基本コントロール内の既存のルーティング イベントに応答する方法とタイミングについて解説することです。 しかし、独自のルーティング イベントを、特殊なイベント データ クラスやデリゲートなど、必要な支援機能すべてと共に、カスタム クラスに作成することもできます。 ルーティング イベントの所有者が任意のクラスを指定できますが、ルーティング イベントの発生しによって処理される必要があります<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>便利にするためには、クラスを派生します。 カスタム イベントの詳細については、「[カスタム ルーティング イベントを作成する](how-to-create-a-custom-routed-event.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [弱いイベント パターン](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)
+- [入力の概要](input-overview.md)
+- [コマンド実行の概要](commanding-overview.md)
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)
+- [WPF のツリー](trees-in-wpf.md)
+- [弱いイベント パターン](weak-event-patterns.md)

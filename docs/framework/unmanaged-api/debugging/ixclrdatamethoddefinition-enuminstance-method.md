@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0fbb246f8c4bf791dd705aedf8eab6ef8bfeae56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dacf76582916ad50f51ae7c8818b496f31f9553e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353115"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance メソッド
 
@@ -37,11 +37,13 @@ HRESULT EnumInstance(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`handle` [入力、出力]インスタンスを列挙するためのハンドル。
+`handle`\
+[入力、出力]インスタンスを列挙するためのハンドル。
 
-`instance` [out]列挙型のインスタンス。
+`instance`\
+[out]列挙型のインスタンス。
 
 ## <a name="remarks"></a>Remarks
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561336"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368195"
 ---
 # <a name="how-to-handle-a-routed-event"></a>方法: ルーティング イベントを処理する
 バブル イベントの動作と、ルーティング イベント データを処理できるハンドラーを作成する方法を次の例に示します。  
@@ -27,16 +27,16 @@ ms.locfileid: "54561336"
   
  親に注意して<xref:System.Windows.Controls.StackPanel>要素、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>属性が名前を付けて部分的に修飾されたとして指定したイベントの名前、<xref:System.Windows.Controls.Button>クラス。 <xref:System.Windows.Controls.Button>クラスは、<xref:System.Windows.Controls.Primitives.ButtonBase>派生クラスを持つ、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>そのメンバーの一覧でイベント。 イベント ハンドラーをアタッチするためのこの部分修飾手法が必要になるのは、ルーティング イベント ハンドラーがアタッチされる要素のメンバー一覧に、処理されているイベントが存在しない場合です。  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  次の例のハンドル、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  この例では、イベントを処理する要素とイベントを発生させる要素を報告します。 ユーザーがいずれかのボタンをクリックすると、イベント ハンドラーが実行されます。  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.RoutedEvent>
-- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [入力の概要](input-overview.md)
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [方法トピック](events-how-to-topics.md)
+- [XAML 構文の詳細](xaml-syntax-in-detail.md)

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592686"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371984"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
-<a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
+<a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)します。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ブラウザーでホストされるアプリケーションがによってホストされる[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]Firefox、またはいずれかを指定できます[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]または loose[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]詳細については、ドキュメントを参照してください[WPF XAML ブラウザー アプリケーションの概要](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ブラウザーでホストされるアプリケーションがによってホストされる[!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]Firefox、またはいずれかを指定できます[!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]または loose[!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)]詳細については、ドキュメントを参照してください[WPF XAML ブラウザー アプリケーションの概要](./app-development/wpf-xaml-browser-applications-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ブラウザーでホストされるアプリケーションが既定では、既定値に制限されていますが、部分信頼セキュリティ サンド ボックス内で実行[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**インターネット**ゾーン アクセス許可セット。 これを効果的に分離[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]分離する一般的な Web アプリケーションが予想と同様に、クライアント コンピューターからブラウザーでホストされるアプリケーション。 XBAP は、デプロイメント URL およびクライアントのセキュリティ構成のセキュリティ ゾーンに基づいて、完全な信頼まで特権を昇格することができます。 詳細については、次を参照してください。 [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ブラウザーでホストされるアプリケーションが既定では、既定値に制限されていますが、部分信頼セキュリティ サンド ボックス内で実行[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**インターネット**ゾーン アクセス許可セット。 これを効果的に分離[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]分離する一般的な Web アプリケーションが予想と同様に、クライアント コンピューターからブラウザーでホストされるアプリケーション。 XBAP は、デプロイメント URL およびクライアントのセキュリティ構成のセキュリティ ゾーンに基づいて、完全な信頼まで特権を昇格することができます。 詳細については、次を参照してください。 [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)します。  
   
  このトピックでは、Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションのセキュリティ モデルについて説明します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54592686"
   
  *アプリケーション ナビゲーション*は、ブラウザーによってホストされるアプリケーション内のコンテンツ項目間のナビゲーションです。 *ブラウザー ナビゲーション*は、ブラウザー自体のコンテンツとロケーション URL を変更するナビゲーションです。 アプリケーション ナビゲーション (通常は XAML) とブラウザー ナビゲーション (通常は HTML) 間のリレーションシップは、次の図に示します。
   
- ![Navigation diagram](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![Navigation diagram](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
   
  安全と見なされるコンテンツの種類、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]に移動するが主に続くアプリケーションまたはブラウザーのナビゲーションを使用するかどうか。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54592686"
 |アプリケーション コード|コンパイルされたコード分離を含む XAML リソース。<br /><br /> - または -<br /><br /> ビルドの種類のプロジェクトに追加される XAML ファイル**ページ**します。|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  アプリケーション データ ファイルとパックの詳細については[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]を参照してください[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)します。  
+>  アプリケーション データ ファイルとパックの詳細については[!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]を参照してください[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](./app-development/wpf-application-resource-content-and-data-files.md)します。  
   
  これらのコンテンツ タイプのファイルは、ユーザーまたはプログラムを使用して移動できます。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54592686"
   
      **セキュリティ設定** ダイアログ ボックスが表示され、選択したゾーンのセキュリティ設定を構成することができます。  
   
-     ![[セキュリティ設定] ダイアログ ボックス](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![[セキュリティ設定] ダイアログ ボックス](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
   
 > [!NOTE]
 >  [インターネット オプション] ダイアログ ボックスは、Internet Explorer から開くこともできます。 クリックして**ツール** をクリックし、**インターネット オプション**します。  
@@ -153,7 +153,7 @@ ms.locfileid: "54592686"
 > [!NOTE]
 >  このセクションにも当てはまります、<xref:System.Windows.Controls.Frame>を使用するための制御、 <xref:System.Windows.Controls.WebBrowser> HTML コンテンツに移動します。  
   
- 場合、WPF<xref:System.Windows.Controls.WebBrowser>信頼されていない Web コンテンツをホストするコントロールを使用すると、アプリケーションは部分的に信頼を使用する必要があります<xref:System.AppDomain>悪意のある HTML スクリプト コードからアプリケーション コードを分離します。 これを使用して、アプリケーションがホストされているスクリプトと対話する場合に特に、<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>メソッドと<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>プロパティ。 詳細については、次を参照してください。 [WPF アドインの概要](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)します。  
+ 場合、WPF<xref:System.Windows.Controls.WebBrowser>信頼されていない Web コンテンツをホストするコントロールを使用すると、アプリケーションは部分的に信頼を使用する必要があります<xref:System.AppDomain>悪意のある HTML スクリプト コードからアプリケーション コードを分離します。 これを使用して、アプリケーションがホストされているスクリプトと対話する場合に特に、<xref:System.Windows.Controls.WebBrowser.InvokeScript%2A>メソッドと<xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>プロパティ。 詳細については、次を参照してください。 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)します。  
   
  アプリケーションは、WPF を使用する場合<xref:System.Windows.Controls.WebBrowser>コントロール、セキュリティを強化し、攻撃を軽減する別の方法は、Internet Explorer 機能コントロールを有効にします。 機能コントロールは、Internet Explorer と WebBrowser ActiveX コントロールをホストしているアプリケーションの機能を構成するには、管理者および開発者を許可する Internet Explorer に追加される、WPF<xref:System.Windows.Controls.WebBrowser>ラップを制御します。 機能コントロールを使用して構成できる、 [CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394)関数またはレジストリの値を変更します。 機能コントロールの詳細については、次を参照してください。[機能コントロールの概要](https://go.microsoft.com/fwlink/?LinkId=179390)と[インターネット機能コントロール](https://go.microsoft.com/fwlink/?LinkId=179392)します。  
   
@@ -251,9 +251,9 @@ ms.locfileid: "54592686"
   
  どちらの場合も、loose[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]にナビゲートするファイルは、ホスト アプリケーションのアクセス許可を継承します。 ただし、この動作できない可能性があります、緩やかな場合は特に、セキュリティの観点から望ましく[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]ファイルは、信頼されていないか、不明なエンティティが作成されました。 この種類のコンテンツと呼ばれる*外部コンテンツ*、両方と<xref:System.Windows.Controls.Frame>と<xref:System.Windows.Navigation.NavigationWindow>に移動したときに分離することができます。 設定して隔離、 **SandboxExternalContent**プロパティを true に次の例で示すように<xref:System.Windows.Controls.Frame>と<xref:System.Windows.Navigation.NavigationWindow>:  
   
- [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
  このように設定すると、外部コンテンツは、アプリケーションをホストするプロセスとは異なるプロセスに読み込まれます。 このプロセスは既定のインターネット ゾーン アクセス許可セットに限定されており、ホスト アプリケーションとクライアント コンピューターから外部コンテンツを効果的に分離します。  
   
@@ -267,15 +267,15 @@ ms.locfileid: "54592686"
 |区分|リソース|  
 |----------|--------------|  
 |マネージド コード|[patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[コード アクセス セキュリティ](../misc/code-access-security.md)|  
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>関連項目
-- [WPF 部分信頼セキュリティ](../../../docs/framework/wpf/wpf-partial-trust-security.md)
-- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)
+- [WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md)
+- [WPF のセキュリティ方針 - セキュリティ エンジニアリング](wpf-security-strategy-security-engineering.md)
 - [patterns & practices アプリケーション セキュリティ ガイダンス インデックス](https://go.microsoft.com/fwlink/?LinkId=117426)
-- [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)
+- [コード アクセス セキュリティ](../misc/code-access-security.md)
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
-- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md)

@@ -7,34 +7,34 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353557"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>3-D グラフィックスに関する「方法」トピック
-このセクションのトピックでは、使用する方法をデモンストレーション[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]でグラフィックス[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションです。  
+このセクションのトピックでは、使用する方法を示します[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]でグラフィックス[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [3-D シーンを作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [3-D モデルに描画を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [3-D オブジェクトの前面および背面に素材を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [3-D モデルに放射性素材を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [3-D モデルのスケールを変換する](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [複数の変換を 3-D モデルに適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [3-D 変換をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [ストーリーボードを使用して 3-D 回転をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Rotation3DAnimation を使用して 3-D 回転をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [四元数を使用して 3-D 回転をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [3D シーンでカメラの位置および方向をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [キー フレームを使用してカメラの位置および方向をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [3-D シーンで素材プロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Viewport3D でヒット テストを実行する](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Point4D 構造体が等価かどうかをテストする](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [3-D シーンを作成する](how-to-create-a-3-d-scene.md)  
+ [3-D モデルに描画を適用する](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [3-D オブジェクトの前面および背面に素材を適用する](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [3-D モデルに放射性素材を適用する](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [3-D モデルのスケールを変換する](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [複数の変換を 3-D モデルに適用する](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [3-D 変換をアニメーション化する](how-to-animate-3-d-translations.md)  
+ [ストーリーボードを使用して 3-D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Rotation3DAnimation を使用して 3-D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [四元数を使用して 3-D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [3D シーンでカメラの位置および方向をアニメーション化する](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [キー フレームを使用してカメラの位置および方向をアニメーション化する](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [3-D シーンで素材プロパティをアニメーション化する](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Viewport3D でヒット テストを実行する](how-to-hit-test-in-a-viewport3d.md)  
+ [Point4D 構造体が等価かどうかをテストする](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -46,4 +46,4 @@ ms.locfileid: "33554853"
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>関連項目  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [グラフィックスとマルチメディア](index.md)

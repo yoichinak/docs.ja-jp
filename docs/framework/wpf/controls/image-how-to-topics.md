@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: a4fe896214a4513bf5c7e38fcc1fcbd001933481
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530789"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376274"
 ---
 # <a name="image-how-to-topics"></a>イメージに関する「方法」トピック
 このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Image>要素。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [イメージ要素を使用する](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [イメージをグレースケールに変換する](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [イメージをトリミングする](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [イメージを回転させる](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+ [イメージ要素を使用する](how-to-use-the-image-element.md)  
+  [イメージをグレースケールに変換する](how-to-convert-an-image-to-greyscale.md)  
+  [イメージをトリミングする](how-to-crop-an-image.md)  
+  [イメージを回転させる](how-to-rotate-an-image.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,5 @@ ms.locfileid: "54530789"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>関連項目
-- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [イメージングの概要](../graphics-multimedia/imaging-overview.md)
+- [方法トピック](../graphics-multimedia/imaging-how-to-topics.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362014"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "54634585"
   
  主要コンポーネント[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]は次の図のようになります。 (PresentationFramework、PresentationCore、および milcore) の図の赤のセクションではの大規模なコード部分[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 これらのうち、1 つだけは、アンマネージ コンポーネント – milcore です。 緊密な統合を有効にするには Milcore がアンマネージ コードで記述された[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]します。 すべて表示[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を行う、[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]エンジン、効率的なハードウェアとソフトウェア レンダリングすることができます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] メモリと実行を細かく制御も必要です。 Milcore 合成エンジンは、非常に機密性の高い、やの多くの利点をあきらめる必要なパフォーマンス、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]パフォーマンスを向上させます。  
   
- ![WPF、.NET Framework 内の位置。](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![WPF、.NET Framework 内の位置。](./media/wpf-architect1.PNG "wpf_architect1")  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]のマネージ コードとアンマネージの部分の間の通信はこのトピックの後半で説明します。 マネージ プログラミング モデルの残りの部分を以下に示します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54634585"
   
  プログラミング[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、作成する<xref:System.Windows.Media.Visual>要素、および派生型は、このメッセージング プロトコルを使って構成ツリーに内部的に通信します。 各<xref:System.Windows.Media.Visual>で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]1 つのフィルターまたはいくつかの構成ノードを作成することがあります。  
   
- ![Windows Presentation Foundation のビジュアル ツリー。](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Windows Presentation Foundation のビジュアル ツリー。](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  ここでのビジュアル ツリー全体を通知する非常に重要なアーキテクチャの詳細は、描画命令はキャッシュします。 グラフィックスの用語で[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]保持モードのレンダリング システムを使用します。 これにより、高いリフレッシュ レートを合成システムによってユーザー コードにコールバックをブロックせずに再描画するシステムです。 これは、応答しないアプリケーションの外観を回避できます。  
   
@@ -149,6 +149,6 @@ ms.locfileid: "54634585"
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [レイアウト](layout.md)
+- [アニメーションの概要](../graphics-multimedia/animation-overview.md)

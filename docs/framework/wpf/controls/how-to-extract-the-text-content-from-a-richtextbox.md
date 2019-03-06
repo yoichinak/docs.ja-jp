@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content [WPF], extracting
 - extracting text content [WPF]
 ms.assetid: f13c093f-1a05-45b3-ac8f-c9ea5e4a11c5
-ms.openlocfilehash: 2c4500f4e5dad56b246148577abeef97f1912205
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c7fd54931fad060a5d78e4c47c2cfce2767025a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666664"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355247"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>方法: RichTextBox からテキスト コンテンツを抽出する
 この例の内容を抽出する方法を示しています、<xref:System.Windows.Controls.RichTextBox>プレーン テキストとして。  
@@ -23,16 +23,16 @@ ms.locfileid: "54666664"
 ## <a name="example"></a>例  
  次[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]コードを説明する名前付き<xref:System.Windows.Controls.RichTextBox>単純コンテンツを持つコントロール。  
   
- [!code-xaml[RichTextBoxSnippets#_RTB_XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml#_rtb_xaml)]  
+ [!code-xaml[RichTextBoxSnippets#_RTB_XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml#_rtb_xaml)]  
   
 ## <a name="example"></a>例  
  次のコードを受け取るメソッドを実装する、<xref:System.Windows.Controls.RichTextBox>を引数としてのプレーン テキストの内容を表す文字列を返します、<xref:System.Windows.Controls.RichTextBox>します。  
   
  新しいメソッドを作成<xref:System.Windows.Documents.TextRange>の内容から、<xref:System.Windows.Controls.RichTextBox>を使用して、<xref:System.Windows.Documents.FlowDocument.ContentStart%2A>と<xref:System.Windows.Documents.FlowDocument.ContentEnd%2A>を抽出する内容の範囲を示すためにします。  <xref:System.Windows.Documents.FlowDocument.ContentStart%2A> <xref:System.Windows.Documents.FlowDocument.ContentEnd%2A>各プロパティを返す、<xref:System.Windows.Documents.TextPointer>の内容を表す基になる FlowDocument でアクセスできるは、<xref:System.Windows.Controls.RichTextBox>します。  <xref:System.Windows.Documents.TextRange> プレーン テキストの部分を返すテキスト プロパティを取得するには、提供、<xref:System.Windows.Documents.TextRange>を文字列として。  
   
- [!code-csharp[RichTextBoxSnippets#_RTB_StringFrom](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_rtb_stringfrom)]
- [!code-vb[RichTextBoxSnippets#_RTB_StringFrom](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_rtb_stringfrom)]  
+ [!code-csharp[RichTextBoxSnippets#_RTB_StringFrom](~/samples/snippets/csharp/VS_Snippets_Wpf/RichTextBoxSnippets/CSharp/Window1.xaml.cs#_rtb_stringfrom)]
+ [!code-vb[RichTextBoxSnippets#_RTB_StringFrom](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_rtb_stringfrom)]  
   
 ## <a name="see-also"></a>関連項目
-- [RichTextBox の概要](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
-- [TextBox の概要](../../../../docs/framework/wpf/controls/textbox-overview.md)
+- [RichTextBox の概要](richtextbox-overview.md)
+- [TextBox の概要](textbox-overview.md)

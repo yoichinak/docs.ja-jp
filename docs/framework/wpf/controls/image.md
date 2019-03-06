@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357561"
 ---
 # <a name="image"></a>イメージ
 <xref:System.Windows.Controls.Image>ビットマップ画像を表示する要素が使用される[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [方法トピック](image-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Image>  
@@ -28,5 +28,5 @@ ms.locfileid: "54695800"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>関連項目
-- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [イメージングの概要](../graphics-multimedia/imaging-overview.md)
+- [方法トピック](../graphics-multimedia/imaging-how-to-topics.md)

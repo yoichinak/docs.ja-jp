@@ -2,26 +2,27 @@
 title: <message> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 060c7dc07e53d0114241ac7528a24363e78715c6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257182"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360668"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<メッセージ > の\<netMsmqBinding >
-この `netMsmqBinding` バインディングでの SOAP メッセージ セキュリティ設定を定義します。  
-  
- \<system.ServiceModel >  
-\<bindings>  
-\<netMsmqBinding>  
-\<binding>  
-\<セキュリティ >  
-\<message>  
-  
-## <a name="syntax"></a>構文  
-  
-```xml  
+
+この `netMsmqBinding` バインディングでの SOAP メッセージ セキュリティ設定を定義します。
+
+\<system.ServiceModel>\
+\<bindings>\
+\<netMsmqBinding>\
+\<バインド > \
+\<security>\
+\<message>
+
+## <a name="syntax"></a>構文
+
+```xml
 <netMsmqBinding>
   <binding>
     <security>
@@ -30,28 +31,32 @@ ms.locfileid: "55257182"
     </security>
   </binding>
 </netMsmqBinding>
-```  
-  
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
-  
-### <a name="attributes"></a>属性  
-  
-|属性|説明|  
-|---------------|-----------------|  
-|algorithmSuite|MSMQ トランスポートを介して送信されるメッセージにメッセージ ベースのセキュリティを実現するために使用されるメッセージの暗号化およびキー ラップ アルゴリズムを設定します。<br /><br /> 既定値は `Aes256` です。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。|  
-|clientCredentialType|MSMQ トランスポートで送信されるメッセージに対してクライアント認証を実行するときに使用される資格情報の種類を指定します。 以下の値が有効です。<br /><br /> -None。サービスが匿名クライアントと対話できるようになります。 サービスとクライアントはいずれも資格情報を要求しません。<br />-Windows:これにより、SOAP 交換を Windows 資格情報の認証済みコンテキストの下にあることができます。 これは、常に Kerberos ベースの認証を実行します。<br />-ユーザー名:これにより、サービスを必要とする UserName 資格情報を使用してクライアントを認証します。 この場合、資格情報を使用して指定する必要があります、`clientCredentials`動作**注意が必要です。** Windows Communication Foundation (WCF) は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF は、UserName 資格情報を使用する場合、exchange がセキュリティで保護を適用します。 このモードは、サービス証明書が、`clientCredential` 動作および `serviceCertificate` を使用してクライアント側で指定されることを要求します。 <br /><br /> -証明書:これにより、必要とするサービス証明書を使用してクライアントを認証します。 この場合のクライアント資格情報は、`clientCredentials` 動作を使用して指定する必要があります。 この場合のサービス資格情報は、`clientCredentials` を指定して `serviceCertificate` 動作を使用することで、指定する必要があります。<br />-CardSpace:これにより、サービスが要求、CardSpace を使用してクライアントを認証します。 `serviceCertiifcate` は、`clientCredential` 動作で提供される必要があります。<br /><br /> 既定値は `Windows` です。 この属性は <xref:System.ServiceModel.MessageCredentialType> 型です。|  
-  
-### <a name="child-elements"></a>子要素  
- なし  
-  
-### <a name="parent-elements"></a>親要素  
-  
-|要素|説明|  
-|-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|バインディングのセキュリティ設定を定義します。|  
-  
+```
+
+## <a name="attributes-and-elements"></a>属性および要素
+
+以降のセクションでは、属性、子要素、および親要素について説明します。
+
+### <a name="attributes"></a>属性
+
+|属性|説明|
+|---------------|-----------------|
+|algorithmSuite|MSMQ トランスポートを介して送信されるメッセージにメッセージ ベースのセキュリティを実現するために使用されるメッセージの暗号化およびキー ラップ アルゴリズムを設定します。<br /><br /> 既定値は `Aes256` です。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。|
+|clientCredentialType|MSMQ トランスポートで送信されるメッセージに対してクライアント認証を実行するときに使用される資格情報の種類を指定します。 以下の値が有効です。<br /><br /> -None。サービスが匿名クライアントと対話できるようになります。 サービスとクライアントはいずれも資格情報を要求しません。<br />-Windows:これにより、SOAP 交換を Windows 資格情報の認証済みコンテキストの下にあることができます。 これは、常に Kerberos ベースの認証を実行します。<br />-ユーザー名:これにより、サービスを必要とする UserName 資格情報を使用してクライアントを認証します。 この場合、資格情報を使用して指定する必要があります、`clientCredentials`動作**注意が必要です。** Windows Communication Foundation (WCF) は、パスワード ダイジェストの送信、またはパスワードを使用して、このようなキーを使用して、メッセージ セキュリティのためのキーの派生をサポートしていません。 そのため、WCF は、UserName 資格情報を使用する場合、exchange がセキュリティで保護を適用します。 このモードは、サービス証明書が、`clientCredential` 動作および `serviceCertificate` を使用してクライアント側で指定されることを要求します。 <br /><br /> -証明書:これにより、必要とするサービス証明書を使用してクライアントを認証します。 この場合のクライアント資格情報は、`clientCredentials` 動作を使用して指定する必要があります。 この場合のサービス資格情報は、`clientCredentials` を指定して `serviceCertificate` 動作を使用することで、指定する必要があります。<br />-CardSpace:これにより、サービスが要求、CardSpace を使用してクライアントを認証します。 
+  `serviceCertificate` は、`clientCredential` 動作で提供される必要があります。<br /><br /> 既定値は `Windows` です。 この属性は <xref:System.ServiceModel.MessageCredentialType> 型です。|
+
+### <a name="child-elements"></a>子要素
+
+なし
+
+### <a name="parent-elements"></a>親要素
+
+|要素|説明|
+|-------------|-----------------|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|バインディングのセキュリティ設定を定義します。|
+
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.MessageSecurityOverMsmqElement>
 - <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>

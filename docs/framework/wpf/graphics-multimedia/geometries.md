@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363658"
 ---
 # <a name="geometries"></a>ジオメトリ
 <xref:System.Windows.Media.Geometry> 表示するために使用される、汎用的なクラスは、[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]グラフィックス、ヒット テスト オブジェクト、およびクリッピング領域を定義  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [パス マークアップ構文](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [ジオメトリの概要](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [パス マークアップ構文](path-markup-syntax.md)  
+ [ジオメトリの概要](geometry-overview.md)  
+ [方法トピック](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
+- [グラフィックスとマルチメディア](index.md)

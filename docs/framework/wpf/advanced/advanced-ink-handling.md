@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539030"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367876"
 ---
 # <a name="advanced-ink-handling"></a>高度なインク処理
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が付属しています、 <xref:System.Windows.Controls.InkCanvas>、収集して表示するインクをすぐに開始するアプリケーションに配置できる要素であるとします。 ただし場合、<xref:System.Windows.Controls.InkCanvas>コントロールが、正常なレベルの制御を提供していない、独自のインクの収集とを使用してインクのレンダリング クラスをカスタマイズすることにより、高いレベルで制御を維持できます<xref:System.Windows.Input.StylusPlugIns>です。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]が付属しています、 <xref:System.Windows.Controls.InkCanvas>、あり、要素を収集し、インクの表示をすぐに開始、アプリケーションで配置することができます。 ただし場合、<xref:System.Windows.Controls.InkCanvas>コントロールがコントロールを十分に適切なレベルを提供していないより高いレベルで制御を維持するには、独自のインクの収集とを使用してインク レンダリング クラスをカスタマイズすることで<xref:System.Windows.Input.StylusPlugIns>します。  
   
- <xref:System.Windows.Input.StylusPlugIns>クラス経由での低レベルの制御を実装するためのメカニズムを提供する<xref:System.Windows.Input.Stylus>入力とインクを動的にレンダリングします。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラスには、カスタム動作を実装し、最適なパフォーマンスのスタイラス デバイスからのデータのストリームに適用するメカニズムが用意されています。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>、特殊な<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>、つまりを使用すると、動的にリアルタイムでインク データの描画をカスタマイズする、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>デジタル インクを描画としてすぐに<xref:System.Windows.Input.StylusPoint>データが生成されるので、「フロー」スタイラスのように表示されますデバイス。  
+ <xref:System.Windows.Input.StylusPlugIns>クラス経由での低レベルの制御を実装するためのメカニズムを提供する<xref:System.Windows.Input.Stylus>入力とインクを動的にレンダリングします。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラスがカスタム動作を実装し、最適なパフォーマンスのスタイラス デバイスからのデータのストリームに適用するためのメカニズムを提供します。 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>、特殊な<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>、つまりレンダリング インク データをリアルタイムでの動的にカスタマイズすることができます、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>デジタル インクを描画しますとしてすぐに<xref:System.Windows.Input.StylusPoint>スタイラスを"flow"に表示されるため、データの生成デバイスです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [カスタム レンダリング インク](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [スタイラスからの入力のインターセプト](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [インク入力コントロールの作成](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [インク スレッド モデル](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [カスタム レンダリング インク](custom-rendering-ink.md)  
+  [スタイラスからの入力のインターセプト](intercepting-input-from-the-stylus.md)  
+  [インク入力コントロールの作成](creating-an-ink-input-control.md)  
+  [インク スレッド モデル](the-ink-threading-model.md)

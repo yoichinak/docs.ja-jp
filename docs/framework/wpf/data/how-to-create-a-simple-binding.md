@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 3e38fa5fd1c7d0a635efd93de6ebe551f1eb1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594838"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373583"
 ---
 # <a name="how-to-create-a-simple-binding"></a>方法: 簡単なバインディングを作成する
 この例、単純なを作成する方法を示します<xref:System.Windows.Data.Binding>します。  
@@ -21,10 +21,10 @@ ms.locfileid: "54594838"
   
  強調表示された行を含む、`<src>`次の例では、内の要素をインスタンス化、`Person`オブジェクトを`PersonName`プロパティの値`Joe`します。 これを行う、`Resources`セクションし、割り当てられている、`x:Key`します。  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
  強調表示された行を含む、`<TextBlock>`要素にバインドし、<xref:System.Windows.Controls.TextBlock>への制御、`PersonName`プロパティ。 結果として、 <xref:System.Windows.Controls.TextBlock> "Joe"の値が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [データ バインディングの概要](data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)

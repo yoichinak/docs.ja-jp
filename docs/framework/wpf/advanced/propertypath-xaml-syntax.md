@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648757"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363515"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 <xref:System.Windows.PropertyPath>オブジェクトがサポートする、複雑なインライン[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文を使用するさまざまなプロパティを設定するため、<xref:System.Windows.PropertyPath>型を値として。 このトピックの「ドキュメント、<xref:System.Windows.PropertyPath>バインディングとアニメーション構文に適用される構文です。  
@@ -28,7 +28,7 @@ ms.locfileid: "54648757"
 ## <a name="propertypath-for-objects-in-data-binding"></a>データ バインディングにおけるオブジェクトの PropertyPath  
  データ バインディングは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能であり、依存関係プロパティのターゲット値にバインドできます。 ただし、このようなデータ バインディングのソースが依存関係プロパティである必要はなく、適切なデータ プロバイダーで認識される任意のプロパティ型でかまいません。 プロパティのパスは特にため、 <xref:System.Windows.Data.ObjectDataProvider>、バインディング ソースからの取得に使用される[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]オブジェクトとそのプロパティです。  
   
- そのデータ バインディングに注意してください[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]は使いません<xref:System.Windows.PropertyPath>は使用されないため、<xref:System.Windows.Data.Binding.Path%2A>で、<xref:System.Windows.Data.Binding>します。 使用する代わりに、<xref:System.Windows.Data.Binding.XPath%2A>に有効な XPath 構文を指定し、[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]データ。 <xref:System.Windows.Data.Binding.XPath%2A> 文字列としても指定されますが、ここでは文書化されていません。参照してください[XMLDataProvider と XPath クエリを使用して XML データにバインド](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)します。  
+ そのデータ バインディングに注意してください[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]は使いません<xref:System.Windows.PropertyPath>は使用されないため、<xref:System.Windows.Data.Binding.Path%2A>で、<xref:System.Windows.Data.Binding>します。 使用する代わりに、<xref:System.Windows.Data.Binding.XPath%2A>に有効な XPath 構文を指定し、[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]データ。 <xref:System.Windows.Data.Binding.XPath%2A> 文字列としても指定されますが、ここでは文書化されていません。参照してください[XMLDataProvider と XPath クエリを使用して XML データにバインド](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)します。  
   
  データ バインディングにおけるプロパティ パスを理解するうえで鍵となるのは、個々のプロパティ値をバインドの対象にすることも、リストまたはコレクションを使用するターゲット プロパティにバインドすることもできるということです。 バインド インスタンスのコレクションをバインドする場合、<xref:System.Windows.Controls.ListBox>が、コレクション内にデータ項目の数によって拡張される、プロパティのパスは、個々 のコレクション アイテムのコレクション オブジェクトを参照する必要があります。 データ バインディング エンジンは、データ ソースのバインディング ターゲットの型に自動的に、設定などの動作として使用されるコレクションに一致する<xref:System.Windows.Controls.ListBox>項目配列。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648757"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- この構文で、/ は階層的なデータ ソース オブジェクト内を移動するために使用されます。また、/ 文字を連続で使用することによる階層内での複数ステップの移動がサポートされています。 ソースの走査は現在のレコード ポインター位置に対応しており、これはデータをビューの UI と同期することによって決定されます。 階層的なデータ ソース オブジェクトのバインドおよびデータ バインディングにおける現在のレコード ポインターの概念の詳細については、「[階層データでマスター詳細パターンを使用する](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」または「[データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」を参照してください。  
+ この構文で、/ は階層的なデータ ソース オブジェクト内を移動するために使用されます。また、/ 文字を連続で使用することによる階層内での複数ステップの移動がサポートされています。 ソースの走査は現在のレコード ポインター位置に対応しており、これはデータをビューの UI と同期することによって決定されます。 階層的なデータ ソース オブジェクトのバインドおよびデータ バインディングにおける現在のレコード ポインターの概念の詳細については、「[階層データでマスター詳細パターンを使用する](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」または「[データ バインディングの概要](../data/data-binding-overview.md)」を参照してください。  
   
 > [!NOTE]
 >  この構文は、一見すると [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] に似ています。 真の[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]にバインドするための式、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]としてデータ ソースが使用されていない、<xref:System.Windows.Data.Binding.Path%2A>値し、相互に排他的に使用する代わりに<xref:System.Windows.Data.Binding.XPath%2A>プロパティ。  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>アニメーションに関するオブジェクトとプロパティの一般的な注意事項  
- 一般的なアニメーションの概念の詳細については、「[ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)」および「[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」を参照してください。  
+ 一般的なアニメーションの概念の詳細については、「[ストーリーボードの概要](../graphics-multimedia/storyboards-overview.md)」および「[アニメーションの概要](../graphics-multimedia/animation-overview.md)」を参照してください。  
   
  値型またはアニメーション化されているプロパティはいずれかである必要があります、<xref:System.Windows.Freezable>型またはプリミティブです。 パスを開始するプロパティは、指定した上に存在する依存関係プロパティの名前に解決する必要があります<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型。  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` は、`propertyName` の値であるオブジェクトに存在する依存関係プロパティの名前である必要があります。 つまり、`propertyName2`である型の依存関係プロパティとして存在する必要があります、 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>します。  
   
- 適用されるスタイルとテンプレートにより、アニメーションの間接的なターゲット設定が必要です。 必要があるアニメーションを対象にするため、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>によって、ターゲット オブジェクトに名前が確立されている[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)または<xref:System.Windows.FrameworkElement.Name%2A>します。 テンプレートとスタイルの要素が名前を設定するが、また、その名前は、スタイルとテンプレートの名前スコープ内で有効なだけです。 (テンプレートとスタイルは、アプリケーション マークアップと名前スコープを共有するが場合、名一意ではありません。 スタイルとテンプレートのインスタンス間で共有される文字どおりと重複する名前が永続化します。)このため、アニメーション化する要素の個々のプロパティがスタイルやテンプレートに基づく場合は、スタイル テンプレートに基づかない、名前付きの要素インスタンスで操作を開始し、スタイルまたはテンプレートのビジュアル ツリーに対象を移動し、アニメーション化する目的のプロパティにアクセスします。  
+ 適用されるスタイルとテンプレートにより、アニメーションの間接的なターゲット設定が必要です。 必要があるアニメーションを対象にするため、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>によって、ターゲット オブジェクトに名前が確立されている[X:name](../../xaml-services/x-name-directive.md)または<xref:System.Windows.FrameworkElement.Name%2A>します。 テンプレートとスタイルの要素が名前を設定するが、また、その名前は、スタイルとテンプレートの名前スコープ内で有効なだけです。 (テンプレートとスタイルは、アプリケーション マークアップと名前スコープを共有するが場合、名一意ではありません。 スタイルとテンプレートのインスタンス間で共有される文字どおりと重複する名前が永続化します。)このため、アニメーション化する要素の個々のプロパティがスタイルやテンプレートに基づく場合は、スタイル テンプレートに基づかない、名前付きの要素インスタンスで操作を開始し、スタイルまたはテンプレートのビジュアル ツリーに対象を移動し、アニメーション化する目的のプロパティにアクセスします。  
   
  たとえば、<xref:System.Windows.Controls.Panel.Background%2A>のプロパティを<xref:System.Windows.Controls.Panel>がすべてでは<xref:System.Windows.Media.Brush>(実際には、 <xref:System.Windows.Media.SolidColorBrush>)、テーマ テンプレートから付属しています。 アニメーション化する、<xref:System.Windows.Media.Brush>完全には必要があります、BrushAnimation (おそらく 1 つのすべて<xref:System.Windows.Media.Brush>型)、そのような型はありません。 特定のプロパティのアニメーション代わりに、ブラシをアニメーション化する<xref:System.Windows.Media.Brush>型。 取得する必要がある<xref:System.Windows.Media.SolidColorBrush>にその<xref:System.Windows.Media.SolidColorBrush.Color%2A>を適用する、<xref:System.Windows.Media.Animation.ColorAnimation>があります。 この例のプロパティ パスは `Background.Color` です。  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.PropertyPath>
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [ストーリーボードの概要](../graphics-multimedia/storyboards-overview.md)
