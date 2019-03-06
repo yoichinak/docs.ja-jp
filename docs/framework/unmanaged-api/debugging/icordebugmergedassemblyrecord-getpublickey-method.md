@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2b7c2f70b4776c5448d23f37c520bb5b07c051e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb14cd3812a632970acec353e05cbd190cb40081
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497055"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKey メソッド
 アセンブリの公開キーを取得します。  
@@ -23,7 +23,7 @@ HRESULT GetPublicKey(
    [out, size_is(cbPublicKey), length_is(*pcbPublicKey)] BYTE pbPublicKey[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbPublicKey`  
  [in] `pbPublicKey` 配列の最大バイト数。  
   

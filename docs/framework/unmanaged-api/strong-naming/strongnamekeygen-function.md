@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cb64653df7b59703ef87610bcc686a66205e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542497"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485232"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 関数
 厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszKeyContainer`  
  [in]要求されたキー コンテナーの名前。 `wszKeyContainer` 空でない文字列であるか、一時テーブル名を生成する場合は null が必要です。  
   

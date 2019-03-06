@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9074d7c46e53ff46e34973cd8143abc9e621fb1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1dfc9ead6256ae700d5e619da4fae5745bdd759
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485157"
 ---
 # <a name="isymunmanagedscope2getconstantcount-method"></a>ISymUnmanagedScope2::GetConstantCount メソッド
 このスコープ内で定義されている定数の数を取得します。  
@@ -34,7 +34,7 @@ HRESULT GetConstantCount(
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]ポインター、`ULONG32`文字定数の格納に必要なバッファーのサイズを受け取る。  
   

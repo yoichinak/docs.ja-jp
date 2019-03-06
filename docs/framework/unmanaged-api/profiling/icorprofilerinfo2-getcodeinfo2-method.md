@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22463a56911354c9706bbfbc7d1824aee5d3c74d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0beb952cf658c19b596263e7f8b7721394efae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482380"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 メソッド
 指定した `FunctionID` に関連付けられているネイティブ コードの範囲を取得します。  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionID`  
  [in] ネイティブ コードが関連付けられている関数の ID。  
   
@@ -49,7 +49,7 @@ HRESULT GetCodeInfo2(
  [out]合計数へのポインター [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md)構造体を使用できます。  
   
  `codeInfos`  
- [out] 呼び出し元が提供したバッファー。 メソッドから制御が戻ると、それぞれがネイティブ コードのブロックを記述する `COR_PRF_CODE_INFO` 構造体の配列が含まれます。  
+ [out] 呼び出し元が提供したバッファー。 メソッドから制御が戻った後で、それぞれがネイティブ コードのブロックを記述する `COR_PRF_CODE_INFO` の構造体の配列が含まれます。  
   
 ## <a name="remarks"></a>Remarks  
  エクステンとは Microsoft Intermediate Language (MSIL) オフセットの昇順に並べ替えられます。  

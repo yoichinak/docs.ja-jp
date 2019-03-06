@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5690856b526bf0f7bc4527d04ae8044cda1f6e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 417f99c2b9fa7e77f8696c27cb3929c92956c08c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494650"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID メソッド
-このスレッドで実行中のタスクの識別子を取得します。  
+このスレッドで実行されているタスクの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,18 +35,18 @@ HRESULT GetTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pTaskId`  
- [out]この ICorDebugThread2 オブジェクトによって表される、スレッドで実行中のタスクの識別子へのポインター。  
+ [out]この ICorDebugThread2 オブジェクトによって表されるスレッドで実行中のタスクの識別子へのポインター。  
   
-## <a name="remarks"></a>コメント  
- タスクは、スレッドが接続に関連付けられている場合のスレッドでは実行のみです。 `GetTaskID` 0 が返されます`pTaskId`スレッドは、接続に関連付けられていない場合。  
+## <a name="remarks"></a>Remarks  
+ スレッドが、接続に関連付けられた場合、タスクはのみ、スレッドで実行できます。 `GetTaskID` 0 が返されます`pTaskId`スレッドは、接続に関連付けられていない場合。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

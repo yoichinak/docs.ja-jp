@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e5ce46e1cf034e6b86d738d8ec69332df1ff9fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588263"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486261"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc メソッド
 対応する Win32 関数の論理ラッパーとして機能します。 Win32 実装`VirtualAlloc`予約または呼び出し元のプロセス仮想アドレス空間内のページの領域をコミットします。  
@@ -40,7 +40,7 @@ HRESULT VirtualAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAddress`  
  [in]割り当てる領域の開始アドレスへのポインター。  
   

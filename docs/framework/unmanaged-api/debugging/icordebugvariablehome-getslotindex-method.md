@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 186f4a939cb3e01a527cf6ef06029232e7f5c22a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553193"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489364"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex メソッド
 ローカル変数のマネージ スロット インデックスを取得します。  
@@ -35,7 +35,7 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pSlotIndex`  
  [out]ローカル変数のスロット インデックスへのポインター。  
   

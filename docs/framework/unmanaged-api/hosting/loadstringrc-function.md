@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3e6230d245ad36b8d5346aa3b6f8911ef008b61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e020b65966dc03bf326220ab0bab26bc61155c0c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485487"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 関数
 現在のスレッドの既定のカルチャを使用して、HRESULT 値をエラー メッセージに変換します。  
@@ -39,7 +39,7 @@ HRESULT LoadStringRC (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `iResourceID`  
  [in]HRESULT。  
   

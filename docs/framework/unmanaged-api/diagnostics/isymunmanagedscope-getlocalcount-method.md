@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 809b9033c784954374065a901f34f7542f41e7ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eae5b0bc6ba9f891527282a0a8c209dd3698c4df
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549942"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488449"
 ---
 # <a name="isymunmanagedscopegetlocalcount-method"></a>ISymUnmanagedScope::GetLocalCount メソッド
 このスコープ内で定義されているローカル変数の数を取得します。  
@@ -34,7 +34,7 @@ HRESULT GetLocalCount(
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]ポインター、`ULONG32`ローカル変数の数を受け取る。  
   

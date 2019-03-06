@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b84b4b7ba96d39693abe238427983da086e62b1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1414f01c942a02fe984bc39475bd1451171d79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634845"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480690"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 関数が呼び出し元に戻ることをプロファイラーに通知します。  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `funcID`  
  [in]返す関数の識別子。  
   

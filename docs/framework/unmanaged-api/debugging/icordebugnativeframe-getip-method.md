@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a27a50e6fb120e537d28759a79a2b90c6d437e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cac53ba77f04141d8d36b270226e97c292399eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482731"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP メソッド
 ネイティブ コードのオフセット命令ポインターが現在設定されている場所を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pnOffset`  
  [out]ネイティブ コード内のオフセット位置へのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da19a77637e64fec676fdaac7ba56d47b5b07769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcdda6f8cdd0fc0b333b81d58a8bff7c21aa1fef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486408"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource メソッド
 セットには、書き込まれるドキュメントのソースが埋め込まれます。  
@@ -35,7 +35,7 @@ HRESULT SetSource(
     [in, size_is(sourceSize)] BYTE  source[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `sourceSize`  
  [in]A`ULONG32`のサイズを格納している、`source`バッファー。  
   

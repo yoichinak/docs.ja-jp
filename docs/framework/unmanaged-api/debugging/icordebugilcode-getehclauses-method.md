@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 455b8f5434974f2bb424faf23bb2a49e91214e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731089"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488137"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -35,9 +35,9 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cClauses`  
- [in] `clauses` アレイの記憶容量。 詳細については、次の「解説」を参照してください。  
+ [入力] `clauses` 配列の記憶容量。 詳細については、次の「解説」を参照してください。  
   
  `pcClauses`  
  [out] 情報が `clauses` アレイに書き込まれる場合に、対象となる句の数。  
@@ -46,7 +46,8 @@ HRESULT GetEHClauses(
  [out]配列の[CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)例外処理句をこの IL に対して定義されている情報を含むオブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- 場合`cClauses`は 0 と`pcClauses`以外**null**、`pcClauses`使用可能な例外処理句の数に設定されています。 `cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。 メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。  
+ 場合`cClauses`は 0 と`pcClauses`以外**null**、`pcClauses`使用可能な例外処理句の数に設定されています。 
+  `cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。 メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

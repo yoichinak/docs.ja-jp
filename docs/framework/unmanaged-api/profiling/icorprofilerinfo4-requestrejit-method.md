@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d7d5b4e7ed4fdf6ae20da654913cbf3e004eb09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20312b80a4882acdaf53d9bcbf95ae2babe0fdca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506746"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476721"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT メソッド
 指定された関数のすべてのインスタンスの JIT 再コンパイルを要求します。  
@@ -36,7 +36,7 @@ HRESULT RequestReJIT (
    [in, size_is(cFunctions)]  mdMethodDef methodIds[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cFunctions`  
  [in] 再コンパイルする関数の数。  
   

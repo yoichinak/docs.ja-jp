@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608322"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496692"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop メソッド
 プロセスでマネージ コードを実行しているすべてのスレッドを協調停止を実行します。  
@@ -35,7 +35,7 @@ HRESULT Stop (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwTimeoutIgnored`  
  使用しません。  
   

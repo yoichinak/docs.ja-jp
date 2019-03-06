@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e367ab3c966cea2d875b1de5b4244db5c4b813e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6931b03e087e963172cb72462327de185041563e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702224"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499070"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen 関数
 作成、 [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)オブジェクト。  
@@ -38,7 +38,7 @@ HRESULT CreateICeeFileGen (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ceeFileGen`  
  [out]新しいアドレスへのポインター`ICeeFileGen`オブジェクト。  
   

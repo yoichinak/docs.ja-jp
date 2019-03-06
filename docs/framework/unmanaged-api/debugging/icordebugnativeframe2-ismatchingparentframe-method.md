@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d2c28529d3f3ee87fe3fdedd91634133ebf864
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492206"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame メソッド
 指定したフレームの現在のフレームの親であるかどうかを判断します。  
@@ -35,7 +35,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
                               [out] BOOL *pIsParent);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pPotentialParentFrame`  
  [in]親のステータスを評価するフレーム オブジェクトへのポインター。  
   
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|親のステータスは正常に返されました。|  
 |E_FAIL|親のステータスが返されませんでした。|  
-|E_INVALIDARG|`pPotentialParentFrame` または `pIsParent` が null です。|  
+|E_INVALIDARG|`pPotentialParentFrame` または`pIsParent`が null です。|  
   
 ## <a name="exceptions"></a>例外  
   

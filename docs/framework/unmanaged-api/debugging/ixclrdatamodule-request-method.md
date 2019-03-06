@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ab7bf207cc1474090bab19818ca17fc068d3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374870"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479221"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request メソッド
 
@@ -37,7 +37,7 @@ HRESULT Request([in] ULONG32 reqCode,
     [out, size_is(outBufferSize)] BYTE* outBuffer);
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 `reqCode`\
 [in]要求の種類を送信します。

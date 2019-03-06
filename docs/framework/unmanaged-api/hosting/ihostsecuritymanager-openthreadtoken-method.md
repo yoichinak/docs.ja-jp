@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727600"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484499"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken メソッド
 現在実行中のスレッドに関連付けられた随意アクセス トークンを開きます。  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwDesiredAccess`  
  [in]スレッド トークンへのアクセスの要求の種類を指定するアクセスの値のマスク。 これらの値は、Win32 で定義されている`OpenThreadToken`関数。 要求されたアクセス タイプは、トークンの随意アクセス制御リスト (DACL) へのアクセスを許可または拒否の種類を決定するに対して調整します。  
   

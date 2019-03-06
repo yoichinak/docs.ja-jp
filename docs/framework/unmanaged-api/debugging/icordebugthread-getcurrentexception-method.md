@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487344"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException メソッド
 マネージ コードによってスローされる例外を表す ICorDebugValue オブジェクトへのインターフェイス ポインターを取得します。  
@@ -35,22 +35,22 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppExceptionObject`  
- [out]アドレスへのポインター、`ICorDebugValue`マネージ コードをによってスローされる例外を表すオブジェクト。  
+ [out]アドレスへのポインター、`ICorDebugValue`によってスローされる例外を表すオブジェクトをマネージ コード。  
   
-## <a name="remarks"></a>コメント  
- 例外オブジェクトが終了するまで、例外がスローされたときから存在、`catch`ブロックします。 ICorDebugEval メソッドによって実行される、関数の評価はセットアップの例外オブジェクトをクリアし、完了時に復元します。  
+## <a name="remarks"></a>Remarks  
+ 例外オブジェクトが存在してが終わるまで、例外がスローされたときから、`catch`ブロックします。 ICorDebugEval メソッドによって実行される関数の評価は、セットアップの例外オブジェクトをクリアし、完了時に復元します。  
   
- 例外は、(たとえば、フィルターまたは関数の評価で、例外がスローされた) 場合、入れ子にでき、シングル スレッド内で複数の未処理の例外が発生する可能性があります。 `GetCurrentException` 最新の例外を返します。  
+ 例外は、(たとえば、フィルターまたは関数の評価で例外がスローされた) 場合、入れ子になんだことができます、単一のスレッドで複数の未処理の例外が発生する可能性があります。 `GetCurrentException` 最新の例外を返します。  
   
- 例外オブジェクトと型については、例外の有効期間全体で変更できます。 たとえば、x の種類の例外がスローされた後に、共通言語ランタイム (CLR) 可能性がありますメモリが不足し、メモリ不足の例外に昇格させることです。  
+ 例外オブジェクトと型は、例外の有効期間にわたって変更可能性があります。 たとえば、x の型の例外がスローされた後共通言語ランタイム (CLR) 可能性がありますメモリが不足し、メモリ不足の例外に昇格させることです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

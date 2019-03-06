@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a37edd38cd8dc6971ee9185f73d6c6d8ab5332b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f025bf8f6e71192ca128f8c9908780a159700757
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657132"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482198"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent メソッド
 確立する前回の呼び出しで定義されている、指定されたメンバー [imetadataemit::definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)、前回の呼び出しで定義されている、指定した型のメンバーである[imetadataemit::definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)します。  
@@ -36,7 +36,7 @@ HRESULT SetParent (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mr`  
  [in]`mdMemberRef`新しい親を受信するトークン。  
   

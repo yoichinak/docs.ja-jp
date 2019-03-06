@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bdd5e92ce7423fbbe0708f8a35368b871508a70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5fff28e1c2c0d31285c9621c184a44355813a03
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493431"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479689"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps メソッド
 指定された `ExportedType` メタデータ構造体を変更します。  
@@ -38,7 +38,7 @@ HRESULT SetExportedTypeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ct`  
  [in]メタデータ トークンを指定する、`ExportedType`メタデータ構造を変更します。  
   

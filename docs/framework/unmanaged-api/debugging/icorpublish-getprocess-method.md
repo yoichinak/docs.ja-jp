@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c625aec5b4937ec232318e62a95a612b0e8a6cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc13ec58e1830e6fb5aab5ae50dfc7a983ffc9f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624406"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499681"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess メソッド
 取得、 [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)指定の識別子を持つプロセスを表すインスタンス。  
@@ -36,7 +36,7 @@ HRESULT GetProcess(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pid`  
  [in]プロセスの識別子です。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 020df45f7f18a029f8c098fcc4dea1c131da017c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55a91d8ea0679a2ee82af48ffa276e35fe329725
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706918"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501943"
 ---
 # <a name="icordebugvalueenumnext-method"></a>ICorDebugValueEnum::Next メソッド
 列挙体の現在位置から指定された"ICorDebugValue"インスタンス数を取得します。  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in]数`ICorDebugValue`インスタンスを取得します。  
   

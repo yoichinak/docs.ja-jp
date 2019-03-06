@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fd0cf4f47781afb397c1fdd4b42715c710982e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83461f89be9a16305da2732536dcc6847b45027d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580760"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482562"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager メソッド
 アプリケーション ドメインが作成されたことをホストに通知します。  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManager (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwAppDomainID`  
  [in]選択した数値識別子<xref:System.AppDomain>します。  
   

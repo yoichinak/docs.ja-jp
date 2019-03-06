@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8d230d5396c5a088fa76a7ca145b4a22d1e1d07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfe06c1300a22757b363236454f4f494dab1978a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486798"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope メソッド
 指定された型のスコープを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  アセンブリの ID。  
   

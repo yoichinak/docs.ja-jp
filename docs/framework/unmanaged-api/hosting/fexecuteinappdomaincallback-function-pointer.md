@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16608980505ffc03ef8ecc19cacddabaefaba6ca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649545"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471746"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 関数ポインター
 マネージ コードを実行する共通言語ランタイム (CLR) によって呼び出される関数を指します。  
@@ -36,7 +36,7 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cookie`  
  [in]実行されるマネージ コードを含む非透過の呼び出し元が割り当てたメモリへのポインター。  
   

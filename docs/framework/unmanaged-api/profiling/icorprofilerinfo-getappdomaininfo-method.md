@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf52a352000150766cd9a8277278491ad7d5152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fe1fa99cb7376aae6dffb2a0973955f417b0b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616733"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494346"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo メソッド
 アプリケーション ドメイン ID を受け入れます。 アプリケーション ドメインの名前と、そのアプリケーション ドメインを含むプロセスの ID を返します。  
@@ -39,7 +39,7 @@ HRESULT GetAppDomainInfo(
     [out] ProcessID   *pProcessId);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `appDomainId`  
  [in] アプリケーション ドメインの ID。  
   

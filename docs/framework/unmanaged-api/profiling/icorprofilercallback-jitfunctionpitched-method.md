@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91bc626e2c75cd7eb2eafad0fc26d343e5b278e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b35605b4208953ae71d7eb4ba6b6384930952b2b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485097"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>ICorProfilerCallback::JITFunctionPitched メソッド
 プロファイラーに通知を・ イン タイム (JIT) されている関数のコンパイル メモリから削除されました。  
@@ -34,7 +34,7 @@ HRESULT JITFunctionPitched(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionId`  
  [in]削除された関数の ID。  
   

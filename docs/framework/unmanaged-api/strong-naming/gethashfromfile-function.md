@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e81ed965fcd5c293378bcffd943eecff35257013
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d27db0d49e7e1c8c1becaf5bc32b22adf480e573
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478567"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 関数
 指定したファイルの内容に対してハッシュが生成されます。  
@@ -40,7 +40,7 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szFilePath`  
  [in]ハッシュするファイルの名前。  
   

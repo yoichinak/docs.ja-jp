@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57604d80d40130ca147c026852b7bcd23f8f90bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740009"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496457"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps メソッド
 指定した MethodDef トークンによって参照されるメソッドに関連付けられているメタデータを取得します。  
@@ -44,7 +44,7 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mb`  
  [in]メタデータを返すメソッドを表す MethodDef トークンです。  
   

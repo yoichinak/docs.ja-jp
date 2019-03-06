@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 931395a1bb5f516000097f964ce0372a69420d85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27747b02237672ec302a545e2e0c73ace0cae1fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487461"
 ---
 # <a name="iclrtasklocksheld-method"></a>ICLRTask::LocksHeld メソッド
 タスクで現在保持されているロックの数を取得します。  
@@ -35,7 +35,7 @@ HRESULT LocksHeld (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pLockCount`  
  [out]メソッドの呼び出し時に、タスクで保持されているロックの数。  
   

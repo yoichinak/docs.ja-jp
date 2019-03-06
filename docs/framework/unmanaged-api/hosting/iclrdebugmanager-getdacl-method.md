@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a97b277930d3d916df8c8ca292c9c4a0162b5ce9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b9a47bce48a3b692e6f4cc6355fd7aa42e2e908
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502489"
 ---
 # <a name="iclrdebugmanagergetdacl-method"></a>ICLRDebugManager::GetDacl メソッド
 このメソッドは実装されていません。  
@@ -35,7 +35,7 @@ HRESULT GetDacl (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppacl`  
  [out]インターフェイス ポインターへのアクセス制御リスト (ACL) にします。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9827d1c3f6e50172ad4f07137e9de0ff16564aab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661101"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477961"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID メソッド
 ICorDebugType 値を型識別子に変換します。  
@@ -36,7 +36,7 @@ HRESULT GetTypeForTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `id`  
  [in]型識別子。  
   

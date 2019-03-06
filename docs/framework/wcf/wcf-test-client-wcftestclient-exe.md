@@ -2,12 +2,12 @@
 title: WCF のテスト用クライアント (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904000"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499291"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF のテスト用クライアント (WcfTestClient.exe)
 Windows Communication Foundation (WCF) のテスト クライアント (WcfTestClient.exe) は、テスト パラメーターを入力し、そのサービスに入力するユーザーを有効にし、サービスが返送する応答を表示する GUI ツールです。 テストを行う WCF サービス ホストと組み合わせたときに、シームレスにサービスを提供します。  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) のテスト クライアント (WcfTestC
  プロキシの生成中、バイナリのコンパイル中、またはサービスの呼び出し中は、サービスの更新をサポートするメニュー項目が無効になります。 また、サービスの呼び出しも無効になります。  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>テスト クライアントが生成するファイルの場所  
- 既定では、WCF テスト クライアントのストアは、"%appdata%\Local\temp\Test Client Projects"フォルダー内のクライアント コードと構成ファイルを生成します。 このフォルダーは、WCF テスト クライアントが終了した後に削除されます。 WCF テスト クライアントで構成ファイルが変更されたかどうか、**常に再生成の構成サービスの起動時**オプションが無効になっている、変更したファイルは、"マイ Documents\Test Client Projects"の下の"キャッシュ Config"フォルダーにコピーされますインデックスとしてマッピング (メタデータのアドレス-ファイルの名前) XML ファイル。  
+ 既定では、WCF テスト クライアントのストアは、"%appdata%\Local\temp\Test Client Projects"フォルダー内のクライアント コードと構成ファイルを生成します。 このフォルダーは、WCF テスト クライアントが終了した後に削除されます。 WCF テスト クライアントで構成ファイルが変更されたかどうか、**常に再生成の構成サービスの起動時**オプションが無効になっている、変更したファイルは"My Documents\Test Client Projects"の下の"CachedConfig"フォルダーにコピーされますインデックスとしてマッピング (メタデータのアドレス-ファイルの名前) XML ファイル。  
   
  コマンドラインを使用して、WCF テスト クライアントを起動することも、`/ProjectPath`生成されたファイルを格納する新しい目的のパスを指定するスイッチまたはを使用して、`/RestoreProjectPath`スイッチが既定の場所を復元します。 構文は次のとおりです。  
   

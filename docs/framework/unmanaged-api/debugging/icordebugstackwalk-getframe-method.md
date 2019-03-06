@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89515ab0ff08eadfb1eafdf70ead0bc1e0a17628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666244"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487730"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame メソッド
 内の現在のフレームを取得、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)オブジェクト。  
@@ -33,7 +33,7 @@ ms.locfileid: "54666244"
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pFrame`  
  [in]現在のスタック フレームを表すフレームを作成したオブジェクトのアドレスへのポインター。  
   

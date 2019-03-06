@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e34c14ce9f063653c9d0018733f93e398641355
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642d807fe7cb0cadb4d6fc5d8c390bf83f65d165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569850"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496301"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories メソッド
 部分的に信頼されたコードで実行されているを禁止するマネージ型とメンバーのカテゴリを指定します。  
@@ -35,7 +35,7 @@ HRESULT SetProtectedCategories (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `categories`  
  [in]組み合わせた[EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md)部分的に信頼されたコードで実行されているを禁止するマネージ型とメンバーのカテゴリを示す値。  
   

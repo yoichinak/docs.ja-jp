@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cee275dab33b847bb3a6e9839164615bdaa4a14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710548"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502580"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes メソッド
 アセンブリに追加された型を出力します。 既知の内部型が追加された後は、このメソッドを呼び出します。  
@@ -35,7 +35,7 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  アセンブリの ID。  
   
