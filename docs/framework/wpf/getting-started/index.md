@@ -14,13 +14,13 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
   
 |||  
 |-|-|  
-|すぐに使用を開始したい|[チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|  
+|すぐに使用を開始したい|[チュートリアル: 初めての WPF デスクトップ アプリケーション](walkthrough-my-first-wpf-desktop-application.md)|  
 |アプリケーションの UI のデザイン方法|[Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|.NET の初心者向け|[.NET Framework の概要](../../get-started/overview.md)<br /><br /> [.NET Framework アプリケーションの基本事項](../../../../docs/standard/application-essentials.md)<br /><br /> [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|WPF の詳細な説明...|[Visual Studio での WPF の概要](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [コントロール](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
-|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF と Windows フォームの相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
+|.NET の初心者向け|[.NET Framework の概要](../../get-started/overview.md)<br /><br /> [.NET Framework アプリケーションの基本事項](../../../standard/application-essentials.md)<br /><br /> [Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|WPF の詳細な説明...|[Visual Studio での WPF の概要](introduction-to-wpf-in-vs.md)<br /><br /> [XAML の概要 (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [コントロール](../controls/index.md)<br /><br /> [データ バインディングの概要](../data/data-binding-overview.md)|  
+|Windows フォームの開発者向け|[Windows フォーム コントロールおよび同等の WPF コントロール](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [WPF と Windows フォームの相互運用性](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>関連項目
-- [クラス ライブラリ](../../../../docs/framework/wpf/class-library-wpf.md)
-- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)
+- [クラス ライブラリ](../class-library-wpf.md)
+- [アプリケーションの開発](../app-development/index.md)
 - [.NET Framework デベロッパー センター](https://www.microsoft.com/net)

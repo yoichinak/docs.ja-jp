@@ -16,51 +16,51 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369196"
 ---
 # <a name="put-function"></a>Put 関数
+
 名前付きプロパティが新しい値に設定されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT Put (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [in] VARIANT*          pVal,
    [in] CIMTYPE           vtType
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
+`vFunc`\
 [in]このパラメーターは使用されません。
 
-`ptr`  
+`ptr`\
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
-`wszName`  
+`wszName`\
 [in]プロパティの名前。 このパラメーターを `null` とすることはできません。
 
-`lFlags`  
+`lFlags`\
 [in] 予約されています。 このパラメーターは、0 を指定する必要があります。
 
-`pVal`   
-[in]有効なへのポインター`VARIANT`新しいプロパティ値になります。 場合`pVal`は`null`を指す、または、`VARIANT`型の`VT_NULL`に設定されて`null`します。 
+`pVal`\
+[in]有効なへのポインター`VARIANT`新しいプロパティ値になります。 場合`pVal`は`null`を指す、または、`VARIANT`型の`VT_NULL`に設定されて`null`します。
 
-`vtType`  
+`vtType`\
 [in]型`VARIANT`によって示される`pVal`します。 参照してください、[解説](#remarks)詳細についてはします。
- 
 
 ## <a name="return-value"></a>戻り値
 
@@ -74,7 +74,7 @@ HRESULT Put (
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
 | `WBEM_E_TYPE_MISMATCH` | 0x80041005 | インスタンス。示します`pVal`を指す、`VARIANT`プロパティの型が正しくないのです。 <br/> クラス定義。親クラスのプロパティが既に存在し、新しい COM 型が古い COM 型と異なる。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。 |
-  
+
 ## <a name="remarks"></a>Remarks
 
 この関数の呼び出しをラップする、 [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)メソッド。
@@ -85,20 +85,22 @@ HRESULT Put (
 
 ユーザーは、アンダー スコア (_) で開始または終了する名前を持つプロパティを作成することはできません。 これはシステム クラスとプロパティの予約されています。
 
-プロパティで設定した場合、`Put`親クラスの関数が存在する、プロパティの既定値が変わらない限り、プロパティの型が、親クラスの型と一致しません。 プロパティが存在しない型の不一致がない場合は、プロパティは、ceated です。
+プロパティで設定した場合、`Put`親クラスの関数が存在する、プロパティの既定値が変わらない限り、プロパティの型が、親クラスの型と一致しません。 プロパティが存在しない型の不一致がない場合は、プロパティが作成されます。
 
-使用して、 `vtType` CIM クラスの定義で新しいプロパティを作成する場合にのみ、パラメーターと`pVal`は`null`を指す、または、`VARIANT`型の`VT_NULL`します。 ここで、`vType`パラメーター プロパティの CIM 型を指定します。 その他のすべてのケースで`vtType`0 にする必要があります。 `vtType` 基になるオブジェクトがインスタンスの場合も、0 をある必要があります (場合でも`Val`は`null`) ため、プロパティの型は固定され変更できません。   
+使用して、 `vtType` CIM クラスの定義で新しいプロパティを作成する場合にのみ、パラメーターと`pVal`は`null`を指す、または、`VARIANT`型の`VT_NULL`します。 ここで、`vType`パラメーター プロパティの CIM 型を指定します。 その他のすべてのケースで`vtType`0 にする必要があります。 `vtType` 基になるオブジェクトがインスタンスの場合も、0 をある必要があります (場合でも`Val`は`null`) ため、プロパティの型は固定され変更できません。
 
 ## <a name="example"></a>例
 
 例については、次を参照してください。、 [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)メソッド。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** WMINet_Utils.idl
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>関連項目
+
 - [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

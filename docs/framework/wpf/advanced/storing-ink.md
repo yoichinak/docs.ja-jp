@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: c115e31b73afc1532973be3db8e3e184e9a4253b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492889"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353960"
 ---
 # <a name="storing-ink"></a>インクの格納
 <xref:System.Windows.Ink.StrokeCollection.Save%2A>メソッドは、インクとして形式 ISF (Ink Serialized) を格納するためのサポートを提供します。 コンス トラクター、<xref:System.Windows.Ink.StrokeCollection>クラスは、インク データを読み取るためのサポートを提供します。  
@@ -26,14 +26,14 @@ ms.locfileid: "54492889"
   
  次の例では、ファイルの保存のダイアログ ボックスをユーザーに提示しからインクを保存するボタンのクリック イベント ハンドラーの実装、<xref:System.Windows.Controls.InkCanvas>ファイルに出力します。  
   
- [!code-csharp[DigitalInkTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
- [!code-vb[DigitalInkTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
+ [!code-csharp[DigitalInkTopics#12](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#12)]
+ [!code-vb[DigitalInkTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#12)]  
   
  次の例では、ファイルを開く ダイアログ ボックスをユーザーに提示し、ファイルからインクを読み取る ボタンのクリック イベント ハンドラーの実装、<xref:System.Windows.Controls.InkCanvas>要素。  
   
- [!code-csharp[DigitalInkTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
- [!code-vb[DigitalInkTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
+ [!code-csharp[DigitalInkTopics#13](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#13)]
+ [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.InkCanvas>
-- [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)
+- [Windows Presentation Foundation](../index.md)

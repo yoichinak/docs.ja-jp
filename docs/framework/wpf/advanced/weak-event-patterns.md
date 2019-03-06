@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: ad0b30c9f628148f77761ff3af810b484c5ae583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367610"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベント ソースに接続されているハンドラーがハンドラーをソースに接続されているリスナーのオブジェクトと連携して破棄されないです。 このような状況は、メモリ リークにつながります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 特定のイベントの専任マネージャー クラスを提供することでそのイベントのリスナー インターフェイスを実装してこの問題に対処するために使用する設計パターンについて説明します。 この設計パターンと呼ばれる、*弱いイベント パターン*します。  
@@ -96,7 +96,7 @@ ms.locfileid: "54632921"
   
      このクラスから継承、<xref:System.Windows.WeakEventManager>クラス。  
   
-     [!code-csharp[WeakEvents#WeakEventManagerTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
+     [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
 2.  置換、`SomeEventWeakEventManager`名に置き換えて名前。  
   
@@ -133,5 +133,5 @@ ms.locfileid: "54632921"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)

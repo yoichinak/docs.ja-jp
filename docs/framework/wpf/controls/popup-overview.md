@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 693c4d0cf0847b90379d409427b173b2c4740311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616804"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358471"
 ---
 # <a name="popup-overview"></a>ポップアップの概要
 <xref:System.Windows.Controls.Primitives.Popup>コントロールには、指定された要素や画面座標を基準と現在のアプリケーション ウィンドウから浮遊した別のウィンドウの内容を表示する方法が用意されています。 このトピックでは、<xref:System.Windows.Controls.Primitives.Popup>を制御し、その使用方法についての情報を提供します。  
@@ -22,27 +22,27 @@ ms.locfileid: "54616804"
  A<xref:System.Windows.Controls.Primitives.Popup>要素または画面上のポイントを基準とした別のウィンドウでコントロールがコンテンツを表示します。 ときに、<xref:System.Windows.Controls.Primitives.Popup>が表示されて、<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>プロパティに設定されて`true`します。  
   
 > [!NOTE]
->  A<xref:System.Windows.Controls.Primitives.Popup>その親オブジェクトの上にマウス ポインターが移動したときに自動的に開くはありません。 場合は、<xref:System.Windows.Controls.Primitives.Popup>自動的に開くを使用して、<xref:System.Windows.Controls.ToolTip>または<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](../../../../docs/framework/wpf/controls/tooltip-overview.md)を参照してください。  
+>  A<xref:System.Windows.Controls.Primitives.Popup>その親オブジェクトの上にマウス ポインターが移動したときに自動的に開くはありません。 場合は、<xref:System.Windows.Controls.Primitives.Popup>自動的に開くを使用して、<xref:System.Windows.Controls.ToolTip>または<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
   
 <a name="APopupExample"></a>   
 ## <a name="creating-a-popup"></a>ポップアップの作成  
  次の例は、定義する方法を示します、<xref:System.Windows.Controls.Primitives.Popup>の子要素であるコントロール、<xref:System.Windows.Controls.Button>コントロール。 <xref:System.Windows.Controls.Button>子要素の 1 つだけ持つことができます、この例のテキストの配置、<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.Primitives.Popup>でコントロールを<xref:System.Windows.Controls.StackPanel>します。 コンテンツ、<xref:System.Windows.Controls.Primitives.Popup>に表示されます、<xref:System.Windows.Controls.TextBlock>近く、関連のアプリケーション ウィンドウから浮遊した別のウィンドウでそのテキストを表示するコントロール<xref:System.Windows.Controls.Button>コントロール。  
   
- [!code-xaml[PopupSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
+ [!code-xaml[PopupSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#1)]  
   
- [!code-xaml[PopupSimple#CreatePopupCodeXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
+ [!code-xaml[PopupSimple#CreatePopupCodeXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupSimple/CSharp/Window1.xaml#createpopupcodexaml)]  
   
 <a name="PopupUses"></a>   
 ## <a name="controls-that-implement-a-popup"></a>ポップアップを実装するコントロール  
  ビルドすることができます<xref:System.Windows.Controls.Primitives.Popup>他のコントロールにコントロール。 次のコントロールの実装、<xref:System.Windows.Controls.Primitives.Popup>特定の使用目的。  
   
--   <xref:System.Windows.Controls.ToolTip>。 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](../../../../docs/framework/wpf/controls/tooltip-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ToolTip>。 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
   
--   <xref:System.Windows.Controls.ContextMenu>。 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](../../../../docs/framework/wpf/controls/contextmenu-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ContextMenu>。 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](contextmenu-overview.md)を参照してください。  
   
 -   <xref:System.Windows.Controls.ComboBox>。 または、非表示に使用できるドロップダウン リスト ボックスのある選択コントロールを作成する場合、<xref:System.Windows.Controls.ComboBox>コントロール。  
   
--   <xref:System.Windows.Controls.Expander>。 コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](../../../../docs/framework/wpf/controls/expander-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.Expander>。 コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](expander-overview.md)を参照してください。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>ポップアップの動作と外観  
@@ -74,13 +74,13 @@ ms.locfileid: "54616804"
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>ポップアップ位置の定義  
- ポップアップを配置するには、設定、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>プロパティ。 詳細については、「[Popup Placement Behavior](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)」を参照してください。 ときに<xref:System.Windows.Controls.Primitives.Popup>表示される画面で、これが再配置されない場合、その親の位置します。  
+ ポップアップを配置するには、設定、 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>、 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>、 <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>、および<xref:System.Windows.Controls.Primitives.Popup.VerticalOffsetProperty>プロパティ。 詳細については、「[Popup Placement Behavior](popup-placement-behavior.md)」を参照してください。 ときに<xref:System.Windows.Controls.Primitives.Popup>表示される画面で、これが再配置されない場合、その親の位置します。  
   
 <a name="CustomizingPopupPlacement"></a>   
 ### <a name="customizing-popup-placement"></a>ポップアップの配置のカスタマイズ  
  配置をカスタマイズすることができます、<xref:System.Windows.Controls.Primitives.Popup>コントロールに対する相対座標のセットを指定することによって、<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>先、<xref:System.Windows.Controls.Primitives.Popup>を表示します。  
   
- 配置をカスタマイズする設定、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティを<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>します。 定義し、<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>の一連の可能な配置ポイントとプライマリ軸を (優先順) を返すデリゲート、<xref:System.Windows.Controls.Primitives.Popup>します。 ポイントの最大部分を示している<xref:System.Windows.Controls.Primitives.Popup>が自動的に選択します。 例については、「[方法 : ポップアップのカスタム位置を指定する](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)」をご覧ください。  
+ 配置をカスタマイズする設定、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティを<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>します。 定義し、<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>の一連の可能な配置ポイントとプライマリ軸を (優先順) を返すデリゲート、<xref:System.Windows.Controls.Primitives.Popup>します。 ポイントの最大部分を示している<xref:System.Windows.Controls.Primitives.Popup>が自動的に選択します。 例については、「[方法 : ポップアップのカスタム位置を指定する](how-to-specify-a-custom-popup-position.md)」をご覧ください。  
   
 <a name="PopupandtheVisualTree"></a>   
 ## <a name="popup-and-the-visual-tree"></a>ポップアップとビジュアル ツリー  
@@ -96,5 +96,5 @@ ms.locfileid: "54616804"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [方法トピック](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
-- [方法トピック](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [方法トピック](popup-how-to-topics.md)
+- [方法トピック](tooltip-how-to-topics.md)

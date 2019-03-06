@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706233"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370125"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 
@@ -20,7 +20,7 @@ ms.locfileid: "54706233"
 
 ## 前提条件 <a name="prerequisites"></a>
 
-このトピックでは、ユーザーが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティの使用という観点から依存関係プロパティを理解し、「[依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)」トピックを通読していることを前提としています。 このトピックの例を実行するにも XAML を理解して、WPF アプリケーションを作成する方法を理解する必要があります。
+このトピックでは、ユーザーが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティの使用という観点から依存関係プロパティを理解し、「[依存関係プロパティの概要](dependency-properties-overview.md)」トピックを通読していることを前提としています。 このトピックの例を実行するにも XAML を理解して、WPF アプリケーションを作成する方法を理解する必要があります。
 
 ## 添付プロパティを使用する理由 <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ XAML では、構文 *AttachedPropertyProvider*.*PropertyName* を使用して�
 
 設定する方法の例を次に<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>XAML で。
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 使用状況は、静的プロパティに少し似ています常に、型を参照する<xref:System.Windows.Controls.DockPanel>が所有し、添付プロパティを登録する名前で指定したインスタンスを参照するのではなく。
 
-さらに、XAML の添付プロパティはマークアップに設定する属性であるため、設定操作にのみ関連性があります。 XAML でプロパティを直接取得することはできませんが、スタイルのトリガー (詳細については、「[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)」を参照) などの値を比較するための間接的な機構があります。
+さらに、XAML の添付プロパティはマークアップに設定する属性であるため、設定操作にのみ関連性があります。 XAML でプロパティを直接取得することはできませんが、スタイルのトリガー (詳細については、「[スタイルとテンプレート](../controls/styling-and-templating.md)」を参照) などの値を比較するための間接的な機構があります。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF での添付プロパティの実装
 
@@ -64,8 +64,8 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 次の例は、コードに添付プロパティを設定する方法を示しています。 この例で`myCheckBox`のインスタンスである、<xref:System.Windows.Controls.CheckBox>クラス。
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 同様に、XAML の場合する場合、`myCheckBox`としての子要素が既に追加されていなかった`myDockPanel`コードの 3 番目の行でコードの 4 行目は例外を発生させないがないプロパティの値とのやり取りを<xref:System.Windows.Controls.DockPanel>親と、それに伴って何も実行します。 のみ、<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>値の存在し、子要素のセットを<xref:System.Windows.Controls.DockPanel>親要素によってレンダリングされたアプリケーションで有効な動作が発生します。 (この場合、添付プロパティを設定してからツリーに接続するか、 ツリーに接続してから添付プロパティを設定することができます。 どちらの操作でも、結果は同じです。)
 
@@ -73,7 +73,7 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 プロパティを登録するときに<xref:System.Windows.FrameworkPropertyMetadata>プロパティがレンダリング、測定、そして具合にどのように影響するかどうかなど、プロパティの特性を指定に設定されます。 添付プロパティのメタデータは、一般的に依存関係プロパティとの違いがありません。 オーバーライドの既定値を添付プロパティのメタデータに指定すると、その値がオーバーライドするクラスのインスタンスの暗黙的な添付プロパティの既定値になります。 具体的には、一部のプロセスが添付プロパティの `Get` メソッド アクセサーを使用してそのプロパティの値のクエリを行った場合に、メタデータを指定したクラスのインスタンスが指定されており、その添付プロパティの値が設定されていないと、既定値がレポートされます。
 
-プロパティでプロパティ値の継承を有効にする場合は、未接続の依存関係プロパティではなく添付プロパティを使用する必要があります。 詳細については、「[プロパティ値の継承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)」を参照してください。
+プロパティでプロパティ値の継承を有効にする場合は、未接続の依存関係プロパティではなく添付プロパティを使用する必要があります。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
 
 ## カスタム添付プロパティ <a name="custom"></a>
 
@@ -83,7 +83,7 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 クラスがサービスを表しており、クラスでサービスをより透過的に統合できるようにしたい場合にも、添付プロパティを使用します。
 
-別のシナリオがなど、Visual Studio の WPF デザイナーのサポートを受けるにはまだ**プロパティ**ウィンドウを編集します。 詳しくは、「[コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)」を参照してください。
+別のシナリオがなど、Visual Studio の WPF デザイナーのサポートを受けるにはまだ**プロパティ**ウィンドウを編集します。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。
 
 前述のように、プロパティ値の継承を使用する場合には、添付プロパティを登録する必要があります。
 
@@ -118,8 +118,8 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 次の例では、依存関係プロパティの登録 (を使用して、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド)、だけでなく**Get_PropertyName_** と**Set_PropertyName_** アクセサー。 この例では、添付プロパティ名は `IsBubbleSource` です。 したがって、アクセサーの名前は `GetIsBubbleSource` および `SetIsBubbleSource` である必要があります。
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>添付プロパティの属性
 
@@ -135,16 +135,16 @@ WPF では、いくつかを定義します[!INCLUDE[TLA2#tla_netframewkattr#plu
 
 ## 添付プロパティの詳細情報 <a name="more"></a>
 
--   添付プロパティの作成の詳細については、「[方法: 添付プロパティを登録する](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)」を参照してください。
+-   添付プロパティの作成の詳細については、「[方法: 添付プロパティを登録する](how-to-register-an-attached-property.md)」を参照してください。
 
--   依存関係プロパティおよび添付プロパティの高度な使用シナリオについては、「[カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)」を参照してください。
+-   依存関係プロパティおよび添付プロパティの高度な使用シナリオについては、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。
 
 -   プロパティは添付プロパティとしても依存関係プロパティとしても登録できますが、"ラッパー" 実装は公開したままにすることができます。 この場合、プロパティをその要素に設定することも、XAML の添付プロパティの構文を使用して任意の要素に設定することもできます。 標準と接続の両方の使用状況を適切なシナリオでのプロパティの例は、<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.DependencyProperty>
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [方法: 添付プロパティを登録する](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [方法: 添付プロパティを登録する](how-to-register-an-attached-property.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: def502855168b8e10f57e1426191f4e0c26e9f67
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: fbf40aa8dded4e676828c600ecb634732803dbdb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377055"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox に関する「方法」トピック
 このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.RichTextBox>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [RichTextBox からテキスト コンテンツを抽出する](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [プログラムによる RichTextBox での選択の変更](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [RichTextBox コンテンツの保存、読み込み、および印刷](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [カスタム コンテキスト メニューを RichTextBox に配置する](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+ [RichTextBox からテキスト コンテンツを抽出する](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [プログラムによる RichTextBox での選択の変更](change-selection-in-a-richtextbox-programmatically.md)  
+ [RichTextBox コンテンツの保存、読み込み、および印刷](how-to-save-load-and-print-richtextbox-content.md)  
+ [カスタム コンテキスト メニューを RichTextBox に配置する](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.TextBox>
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [フロー ドキュメントの概要](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [WPF のドキュメント](../advanced/documents-in-wpf.md)
+- [フロー ドキュメントの概要](../advanced/flow-document-overview.md)

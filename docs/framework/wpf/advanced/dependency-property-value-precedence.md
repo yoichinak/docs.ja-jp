@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711276"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367938"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 <a name="introduction"></a>このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの動作が依存関係プロパティの値に与える影響と、システムのさまざまな部分がプロパティの有効な値に適用する優先順位について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "54711276"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)」を読んでいることを前提としています。 このトピックの例について理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法について知っておく必要もあります。  
+ このトピックは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](dependency-properties-overview.md)」を読んでいることを前提としています。 このトピックの例について理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法について知っておく必要もあります。  
   
 <a name="intro"></a>   
 ## <a name="the-wpf-property-system"></a>WPF プロパティ システム  
@@ -30,7 +30,7 @@ ms.locfileid: "54711276"
 ## <a name="dependency-properties-might-be-set-in-multiple-places"></a>依存関係プロパティは複数の場所で "設定" される可能性がある  
  次の例は[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]で同じプロパティ (<xref:System.Windows.Controls.Control.Background%2A>) が 3 つの異なる「設定」操作の値に影響を与える可能性があります。  
   
- [!code-xaml[PropertiesOvwSupport#DPPrecedence](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#dpprecedence)]  
+ [!code-xaml[PropertiesOvwSupport#DPPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#dpprecedence)]  
   
  さて、赤、緑、青のどの色になるでしょうか。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54711276"
   
 <a name="listing"></a>   
 ## <a name="dependency-property-setting-precedence-list"></a>依存関係プロパティの設定の優先順位一覧  
- 次に示すのは、依存関係プロパティの実行時の値を割り当てるときにプロパティ システムが使う明確な順序です。 優先順位が高いものから順に示されています。 この一覧では、「[依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)」で一般化されていたものを拡張してあります。  
+ 次に示すのは、依存関係プロパティの実行時の値を割り当てるときにプロパティ システムが使う明確な順序です。 優先順位が高いものから順に示されています。 この一覧では、「[依存関係プロパティの概要](dependency-properties-overview.md)」で一般化されていたものを拡張してあります。  
   
 1.  **プロパティ システムの強制型変換。** 強制型変換について詳しくは、後の「[強制型変換、アニメーション、基本値](#animations)」をご覧ください。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "54711276"
   
     2.  テーマ スタイル内のセッター。  
   
-10. **継承。** いくつかの依存関係プロパティは親要素から子要素に値を継承するので、アプリケーション全体で各要素に値を明示的に設定する必要はありません。 詳しくは、「[プロパティ値の継承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)」をご覧ください。  
+10. **継承。** いくつかの依存関係プロパティは親要素から子要素に値を継承するので、アプリケーション全体で各要素に値を明示的に設定する必要はありません。 詳しくは、「[プロパティ値の継承](property-value-inheritance.md)」をご覧ください。  
   
-11. **依存関係プロパティのメタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
+11. **依存関係プロパティのメタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -92,15 +92,15 @@ ms.locfileid: "54711276"
   
  コントロールは、コントロール テンプレートのセッターとしてテーマ スタイル内に存在するために、既定のスタイル内で検出された最も重要な情報、<xref:System.Windows.Controls.Control.Template%2A>プロパティ。 既定のスタイルにテンプレートがない場合、カスタム スタイルの一部としてカスタム テンプレートがないコントロールは、まったく表示されません。 既定のスタイルのテンプレートは、各コントロールの外観に基本的な構造を提供し、テンプレートのビジュアル ツリーで定義されているプロパティと、対応するコントロール クラスの間の接続を定義します。 各コントロールでは、テンプレートを完全に置き換えることなくコントロールの外観に影響を与えることができる、一連のプロパティが公開されています。 たとえば、既定の外観を<xref:System.Windows.Controls.Primitives.Thumb>コンポーネントであるコントロールの<xref:System.Windows.Controls.Primitives.ScrollBar>します。  
   
- A<xref:System.Windows.Controls.Primitives.Thumb>は特定のカスタマイズ可能なプロパティがあります。 既定のテンプレート、<xref:System.Windows.Controls.Primitives.Thumb>基本的な構造を作成します。 いくつかのビジュアル ツリーの入れ子になった/<xref:System.Windows.Controls.Border>傾斜の外観を作成するコンポーネント。 テンプレートの一部であるプロパティによるカスタマイズの公開する場合は、<xref:System.Windows.Controls.Primitives.Thumb>クラスでそのプロパティを公開する必要があり、 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)テンプレート内で。 場合に<xref:System.Windows.Controls.Primitives.Thumb>、これらの境界のさまざまなプロパティの共有プロパティにテンプレート バインド<xref:System.Windows.Controls.Border.Background%2A>または<xref:System.Windows.Controls.Border.BorderThickness%2A>します。 しかし、他の特定のプロパティや視覚的な配置は、コントロール テンプレートにハードコードされているか、またはテーマから直接取得される値にバインドされており、テンプレート全体を置き換えない限り変更できません。 一般に、プロパティがテンプレート化された親から取得され、テンプレートのバインドによって公開されない場合は、それをターゲットにする簡単な方法がないため、そのプロパティをスタイルによって調整することはできません。 ただし、適用されるテンプレートのプロパティ値継承または既定値によって、そのプロパティに影響を与えることはできます。  
+ A<xref:System.Windows.Controls.Primitives.Thumb>は特定のカスタマイズ可能なプロパティがあります。 既定のテンプレート、<xref:System.Windows.Controls.Primitives.Thumb>基本的な構造を作成します。 いくつかのビジュアル ツリーの入れ子になった/<xref:System.Windows.Controls.Border>傾斜の外観を作成するコンポーネント。 テンプレートの一部であるプロパティによるカスタマイズの公開する場合は、<xref:System.Windows.Controls.Primitives.Thumb>クラスでそのプロパティを公開する必要があり、 [TemplateBinding](templatebinding-markup-extension.md)テンプレート内で。 場合に<xref:System.Windows.Controls.Primitives.Thumb>、これらの境界のさまざまなプロパティの共有プロパティにテンプレート バインド<xref:System.Windows.Controls.Border.Background%2A>または<xref:System.Windows.Controls.Border.BorderThickness%2A>します。 しかし、他の特定のプロパティや視覚的な配置は、コントロール テンプレートにハードコードされているか、またはテーマから直接取得される値にバインドされており、テンプレート全体を置き換えない限り変更できません。 一般に、プロパティがテンプレート化された親から取得され、テンプレートのバインドによって公開されない場合は、それをターゲットにする簡単な方法がないため、そのプロパティをスタイルによって調整することはできません。 ただし、適用されるテンプレートのプロパティ値継承または既定値によって、そのプロパティに影響を与えることはできます。  
   
- テーマのスタイルでは、定義のキーとして型を使います。 ただし、特定の要素インスタンスにテーマが適用されると、この型のテーマ参照が実行をチェックして、<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>コントロールのプロパティ。 これは、暗黙的スタイルで行われるリテラル型の使用とは対照的です。 値<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>場合でも、実装者が変更しなかった (のプロパティを変更する方法として意図されていないオーバーライドすることですが、プロパティ レベルでは代わりにプロパティのメタデータでの既定値の変更) は、派生クラスに継承します。 この間接参照により、基底クラスは、他の方法ではスタイルを持たない派生要素に対してテーマのスタイルを定義できます (または、さらに重要なのは、スタイル内にテンプレートを持たず、既定の外観がないということです)。 したがって、派生`MyButton`から<xref:System.Windows.Controls.Button>とが表示されます、<xref:System.Windows.Controls.Button>既定のテンプレート。 コントロールを作成した場合`MyButton`とは異なる動作を必要に応じての依存関係プロパティ メタデータをオーバーライドできます<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>で`MyButton`別のキーを返すし、テンプレートを含む関連するテーマのスタイルを定義するには`MyButton`をパッケージ化する必要があります`MyButton`コントロール。 テーマ、スタイル、コントロールの作成について詳しくは、「[コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)」をご覧ください。  
+ テーマのスタイルでは、定義のキーとして型を使います。 ただし、特定の要素インスタンスにテーマが適用されると、この型のテーマ参照が実行をチェックして、<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>コントロールのプロパティ。 これは、暗黙的スタイルで行われるリテラル型の使用とは対照的です。 値<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>場合でも、実装者が変更しなかった (のプロパティを変更する方法として意図されていないオーバーライドすることですが、プロパティ レベルでは代わりにプロパティのメタデータでの既定値の変更) は、派生クラスに継承します。 この間接参照により、基底クラスは、他の方法ではスタイルを持たない派生要素に対してテーマのスタイルを定義できます (または、さらに重要なのは、スタイル内にテンプレートを持たず、既定の外観がないということです)。 したがって、派生`MyButton`から<xref:System.Windows.Controls.Button>とが表示されます、<xref:System.Windows.Controls.Button>既定のテンプレート。 コントロールを作成した場合`MyButton`とは異なる動作を必要に応じての依存関係プロパティ メタデータをオーバーライドできます<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>で`MyButton`別のキーを返すし、テンプレートを含む関連するテーマのスタイルを定義するには`MyButton`をパッケージ化する必要があります`MyButton`コントロール。 テーマ、スタイル、コントロールの作成について詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」をご覧ください。  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>動的リソース参照とバインド  
  動的リソース参照とバインド操作には、それらが設定される場所での優先順位が適用されます。 たとえば、ローカル値に適用される動的リソースは優先順位の項目 3 に準拠し、テーマ スタイル内のプロパティ セッターに対するバインドには優先順位の項目 9 が適用されます。 動的リソース参照とバインドはどちらもアプリケーションの実行時状態から値を取得できる必要があるので、特定のプロパティに対するプロパティ値の優先順位を決定する実際のプロセスは、実行時まで拡張されます。  
   
- 厳密に言うと、動的リソース参照はプロパティ システムの一部ではありませんが、上で示したシーケンスに対応する独自の参照順序を持ちます。 その優先順位について詳しくは、「[XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)」をご覧ください。 基本的な優先順位をまとめると、ページ ルートの要素、アプリケーション、テーマ、システムになります。  
+ 厳密に言うと、動的リソース参照はプロパティ システムの一部ではありませんが、上で示したシーケンスに対応する独自の参照順序を持ちます。 その優先順位について詳しくは、「[XAML リソース](xaml-resources.md)」をご覧ください。 基本的な優先順位をまとめると、ページ ルートの要素、アプリケーション、テーマ、システムになります。  
   
  動的リソースとバインドには設定された場所での優先順位がありますが、値は遅延されます。 その 1 つの帰結として、ローカル値に動的リソースまたはバインドを設定した場合、ローカル値を変更すると動的リソースまたはバインドが完全に置き換えられます。 呼び出す場合でも、<xref:System.Windows.DependencyObject.ClearValue%2A>ローカルに設定をクリアするメソッドの値では、動的リソースまたはバインドは復元されません。 実際には、呼び出した場合<xref:System.Windows.DependencyObject.ClearValue%2A>によってクリアされます (リテラル ローカル値はありません) を動的リソースまたはバインドのあるプロパティを<xref:System.Windows.DependencyObject.ClearValue%2A>すぎる呼び出し。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "54711276"
   
  アニメーションの場合、アニメーションで特定の動作に対して "From" と "To" の両方が指定されていない場合、またはアニメーションが完了すると基本値に意図的に戻る場合は、基本値を使ってアニメーション化される値に影響を及ぼすことができます。 実際にどうなるのかを見るには、「[From, To, and By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)」(アニメーション ターゲット値 From、To、By のサンプル) をご覧ください。 この例で、四角形の高さのローカル値を、初期ローカル値がアニメーションの "From" と異なるように設定してみます。 アニメーションが "From" の値を使ってすぐに開始し、開始すると基本値を置き換えることがわかります。 Stop を指定することによってこれが完了すると、アニメーション前に見つかった値に戻るにアニメーションを指定<xref:System.Windows.Media.Animation.FillBehavior>します。 その後は、通常の優先順位が基本値の決定に使用されます。  
   
- 1 つのプロパティに複数のアニメーションが適用され、各アニメーションが値の優先順位の異なるポイントから定義されている場合があります。 ただし、これらのアニメーションは、優先順位の高いアニメーションから単純に適用されるのではなく、値が合成される可能性があります。 これは、アニメーションの定義方法と、アニメーション化される値の型に依存します。 プロパティのアニメーション化について詳しくは、「[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」をご覧ください。  
+ 1 つのプロパティに複数のアニメーションが適用され、各アニメーションが値の優先順位の異なるポイントから定義されている場合があります。 ただし、これらのアニメーションは、優先順位の高いアニメーションから単純に適用されるのではなく、値が合成される可能性があります。 これは、アニメーションの定義方法と、アニメーション化される値の型に依存します。 プロパティのアニメーション化について詳しくは、「[アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
- 強制型変換は、すべての最高レベルで適用されます。 既に実行されているアニメーションであっても値の強制型変換が適用されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の特定の既存の依存関係プロパティには、組み込みの強制型変換があります。 カスタム依存関係プロパティを記述してカスタム依存関係プロパティの強制型変換動作を定義する、<xref:System.Windows.CoerceValueCallback>プロパティを作成するときに、メタデータの一部としてコールバックを渡します。 派生クラスでプロパティのメタデータをオーバーライドすることにより、既存のプロパティの強制型変換の動作をオーバーライドすることもできます。 強制型変換と基本値の相互作用は、その時点で強制型変換に対する制約が存在するものとして適用されるように行われますが、基本値はそれでも保持されます。 したがって、強制型変換の制約が後で無効になった場合、強制型変換はその基本値に可能な最も近い値を返し、プロパティに対する強制型変換の影響はすべての制約が無効になるとすぐに終了する可能性があります。 強制型変換の動作について詳しくは、「[依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)」をご覧ください。  
+ 強制型変換は、すべての最高レベルで適用されます。 既に実行されているアニメーションであっても値の強制型変換が適用されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の特定の既存の依存関係プロパティには、組み込みの強制型変換があります。 カスタム依存関係プロパティを記述してカスタム依存関係プロパティの強制型変換動作を定義する、<xref:System.Windows.CoerceValueCallback>プロパティを作成するときに、メタデータの一部としてコールバックを渡します。 派生クラスでプロパティのメタデータをオーバーライドすることにより、既存のプロパティの強制型変換の動作をオーバーライドすることもできます。 強制型変換と基本値の相互作用は、その時点で強制型変換に対する制約が存在するものとして適用されるように行われますが、基本値はそれでも保持されます。 したがって、強制型変換の制約が後で無効になった場合、強制型変換はその基本値に可能な最も近い値を返し、プロパティに対する強制型変換の影響はすべての制約が無効になるとすぐに終了する可能性があります。 強制型変換の動作について詳しくは、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」をご覧ください。  
   
 <a name="triggers"></a>   
 ## <a name="trigger-behaviors"></a>トリガー動作  
@@ -129,6 +129,6 @@ ms.locfileid: "54711276"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)
+- [依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)

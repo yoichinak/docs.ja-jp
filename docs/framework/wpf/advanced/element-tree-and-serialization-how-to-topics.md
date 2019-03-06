@@ -7,19 +7,19 @@ helpviewer_keywords:
 - element tree [WPF]
 - serialization [WPF]
 ms.assetid: 2d8ef436-d559-4c3e-86de-5a160d5f87d2
-ms.openlocfilehash: df643dbbf1c873841f035dcfd2c0cf11878e2e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7227e61dd8140ec9b1560fbc12e4ba4dd3e0d843
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543375"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372439"
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>要素のツリーおよびシリアル化に関する「方法」トピック
-このセクションのトピックでは、WPF 要素ツリーを使用する方法について説明します。  
+このセクションのトピックでは、WPF の要素ツリーを使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [要素を名前で検索する](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [論理ツリーをオーバーライドする](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+ [要素を名前で検索する](how-to-find-an-element-by-its-name.md)  
+ [論理ツリーをオーバーライドする](how-to-override-the-logical-tree.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.LogicalTreeHelper>  

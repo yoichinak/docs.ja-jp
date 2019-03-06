@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: f0fad58d269c89079237969fc03cf5edb6cf0358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368273"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../../../../docs/framework/wpf/controls/control-customization.md)します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../controls/control-customization.md)します。  
   
- このチュートリアル手順について説明するアプリケーションをホストする、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロールを Windows フォーム アプリケーションでデータ入力を実行します。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル。WPF で複合コントロールをフォーム、Windows をホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
+ このチュートリアル手順について説明するアプリケーションをホストする、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロールを Windows フォーム アプリケーションでデータ入力を実行します。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル。WPF で複合コントロールをフォーム、Windows をホストしている](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
   
  このチュートリアルは、2 つのセクションに分かれています。 最初のセクションでは、実装について簡単に説明します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロール。 2 番目のセクションは、Windows フォーム アプリケーションで複合コントロールをホスト、コントロールからイベントを受信して、コントロールのプロパティの一部にアクセスする方法の詳細について説明します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54569665"
 ## <a name="implementing-the-wpf-composite-control"></a>WPF 複合コントロールの実装  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]この例で使用される複合コントロールは、ユーザーの名前とアドレスを受け取る単純なデータ入力フォームです。 ユーザーが 2 つのボタンのいずれかをクリックして入力操作が終了したことを示すと、コントロールはカスタム イベントを発生させて入力情報をホストに返します。 次の図はレンダリングされたコントロールを示しています。  
   
- ![単純な WPF コントロール](../../../../docs/framework/wpf/advanced/media/avaloncontrol.png "AvalonControl")  
+ ![単純な WPF コントロール](./media/avaloncontrol.png "AvalonControl")  
 WPF 複合コントロール  
   
 ### <a name="creating-the-project"></a>プロジェクトの作成  
@@ -71,35 +71,35 @@ WPF 複合コントロール
   
  MyControl1.xaml で、で、既存の XAML を次の XAML で置き換えます。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
-[!code-xaml[WindowsFormsHostingWpfControl#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#101)]  
+[!code-xaml[WindowsFormsHostingWpfControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
 #### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a>TextBlock および TextBox 要素のグリッドへの追加  
- 配置する、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の要素の設定グリッド内の要素<xref:System.Windows.Controls.Grid.RowProperty>と<xref:System.Windows.Controls.Grid.ColumnProperty>属性を適切な行と列の数。 行と列の番号付けは 0 から始まることに注意してください。 要素を設定して複数の列にまたがって表示することがその<xref:System.Windows.Controls.Grid.ColumnSpanProperty>属性。 詳細については<xref:System.Windows.Controls.Grid>、要素を参照してください[グリッド要素を作成](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)です。  
+ 配置する、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の要素の設定グリッド内の要素<xref:System.Windows.Controls.Grid.RowProperty>と<xref:System.Windows.Controls.Grid.ColumnProperty>属性を適切な行と列の数。 行と列の番号付けは 0 から始まることに注意してください。 要素を設定して複数の列にまたがって表示することがその<xref:System.Windows.Controls.Grid.ColumnSpanProperty>属性。 詳細については<xref:System.Windows.Controls.Grid>、要素を参照してください[グリッド要素を作成](../controls/how-to-create-a-grid-element.md)です。  
   
  次の XAML は、複合コントロールを示しています<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.TextBlock>を持つ要素が<xref:System.Windows.Controls.Grid.RowProperty>と<xref:System.Windows.Controls.Grid.ColumnProperty>属性で、グリッドに要素を正しく配置に設定されます。  
   
  MyControl1.xaml で内で次の XAML を追加、<xref:System.Windows.Controls.Grid>要素。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
 #### <a name="styling-the-ui-elements"></a>UI 要素のスタイル設定  
  データ入力フォームの多くの要素は外観が似ていますが、それは、そのいくつかのプロパティの設定が同一であることを意味しています。 前の XAML を使用して各要素の属性を個別に設定するのではなく<xref:System.Windows.Style>要素のクラスの標準プロパティ設定を定義する要素。 この方法だと、コントロールの複雑さが軽減され、1 つのスタイル属性を使用して複数要素の外観を変更することができます。  
   
- <xref:System.Windows.Style>要素が含まれている、<xref:System.Windows.Controls.Grid>要素の<xref:System.Windows.FrameworkElement.Resources%2A>プロパティ、コントロール内のすべての要素が使用できるようにします。 スタイルがという名前の場合に適用する要素を追加して、<xref:System.Windows.Style>要素スタイルの名前に設定します。 名前が付いていないスタイルは、その要素の既定のスタイルになります。 詳細については[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]スタイルを参照してください[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)します。  
+ <xref:System.Windows.Style>要素が含まれている、<xref:System.Windows.Controls.Grid>要素の<xref:System.Windows.FrameworkElement.Resources%2A>プロパティ、コントロール内のすべての要素が使用できるようにします。 スタイルがという名前の場合に適用する要素を追加して、<xref:System.Windows.Style>要素スタイルの名前に設定します。 名前が付いていないスタイルは、その要素の既定のスタイルになります。 詳細については[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]スタイルを参照してください[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
   
  次の XAML に示す、<xref:System.Windows.Style>複合コントロールの要素。 スタイルがどのように要素に適用されるかについては、前の XAML を参照してください。 最後の例では、<xref:System.Windows.Controls.TextBlock>要素には、`inlineText`スタイル、および最後<xref:System.Windows.Controls.TextBox>要素は、既定のスタイルを使用します。  
   
  MyControl1.xaml で、次の XAML を追加した後、<xref:System.Windows.Controls.Grid>開始要素。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
 #### <a name="adding-the-ok-and-cancel-buttons"></a>[OK] ボタンと [キャンセル] ボタンの追加  
  複合コントロールの最後の要素が、 **OK**と**キャンセル**<xref:System.Windows.Controls.Button>の最後の行の最初の 2 つの列を占有の要素、 <xref:System.Windows.Controls.Grid>。 これらの要素が共通のイベント ハンドラーを使用して`ButtonClicked`と既定の<xref:System.Windows.Controls.Button>前の XAML で定義されたスタイル。  
   
  MyControl1.xaml で、最後の後に次の XAML を追加<xref:System.Windows.Controls.TextBox>要素。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]複合コントロールの一部が完成しました。  
   
- [!code-xaml[WindowsFormsHostingWpfControl#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
+ [!code-xaml[WindowsFormsHostingWpfControl#105](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
 ### <a name="implementing-the-code-behind-file"></a>分離コード ファイルの実装  
  分離コード ファイル MyControl1.xaml.cs は、次の 3 つの基本的なタスクを実装します。
@@ -110,7 +110,7 @@ WPF 複合コントロール
   
 3.  カスタムを発生させます。`OnButtonClick`と、ユーザーが完成したデータをホストに渡すことをホストに通知するイベントです。  
   
- コントロールは、外観を変更するための色とフォントの多くのプロパティも公開します。 異なり、<xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス、Windows フォーム コントロールをホストするために使用、<xref:System.Windows.Forms.Integration.ElementHost>クラスは、コントロールの公開<xref:System.Windows.Controls.Panel.Background%2A>プロパティのみです。 このコード例で説明した例の間の類似性を維持するために[チュートリアル。WPF で Windows フォーム複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)コントロールが、残りのプロパティを直接公開します。  
+ コントロールは、外観を変更するための色とフォントの多くのプロパティも公開します。 異なり、<xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス、Windows フォーム コントロールをホストするために使用、<xref:System.Windows.Forms.Integration.ElementHost>クラスは、コントロールの公開<xref:System.Windows.Controls.Panel.Background%2A>プロパティのみです。 このコード例で説明した例の間の類似性を維持するために[チュートリアル。WPF で Windows フォーム複合コントロールをホストしている](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)コントロールが、残りのプロパティを直接公開します。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>分離コード ファイルの基本構造  
  分離コード ファイルには、単一の名前空間の`MyControls`、2 つのクラスを含む`MyControl1`と`MyControlEventArgs`します。  
@@ -133,7 +133,7 @@ namespace MyControls
   
  MyControl1.xaml.cs を開きます。 既存のクラス宣言を変更してから継承し、次の名前を持つように<xref:System.Windows.Controls.Grid>します。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#21](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
 #### <a name="initializing-the-control"></a>コントロールの初期化  
  このコードでは、次の基本タスクを実装します。  
@@ -146,7 +146,7 @@ namespace MyControls
   
  既存のコンス トラクターを削除し、次のコードを追加、`MyControl1`クラス。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
 #### <a name="handling-the-buttons-click-events"></a>ボタンのクリック イベントの処理  
  ユーザーは、いずれかをクリックして、データ入力タスクが完了したことを示します、 **OK**ボタンまたは**キャンセル**ボタン。 両方のボタンを使用して同じ<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラー、`ButtonClicked`します。 両方のボタンの名前を付ける`btnOK`または`btnCancel`の値を調べることでクリックしてされたボタンを判断するハンドラーをできるようにする、`sender`引数。 ハンドラーは次の処理を行います。  
@@ -159,21 +159,21 @@ namespace MyControls
   
  次のコードを追加、`MyControl1`した後、クラス、`Init`メソッド。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
 #### <a name="creating-properties"></a>プロパティの作成  
  クラスの残りの部分では単に、前に説明したグローバル変数に対応するプロパティを公開します。 プロパティが変更されると、set アクセサーは、対応する要素のプロパティを変更し、基になるグローバル変数を更新することによって、コントロールの外観を変更します。  
   
  次のコードを追加、`MyControl1`クラス。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
 #### <a name="sending-the-data-back-to-the-host"></a>ホストへのデータの返送  
  ファイルの最後のコンポーネントは、`MyControlEventArgs`クラスは、ホストに、収集したデータを送信するために使用します。  
   
  次のコードを追加、`MyControls`名前空間。 この実装は簡単なので、これ以上の説明はしません。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
  ソリューションをビルドします。 ビルドでは、MyControls.dll という名前の DLL が生成されます。  
   
@@ -181,7 +181,7 @@ namespace MyControls
 ## <a name="implementing-the-windows-forms-host-application"></a>Windows フォーム ホスト アプリケーションの実装  
  Windows フォーム ホスト アプリケーションで使用する、<xref:System.Windows.Forms.Integration.ElementHost>ホストへのオブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロール。 アプリケーションのハンドル、`OnButtonClick`複合コントロールからデータを受信するイベントです。 アプリケーションにはオプションのボタンのセットもあり、それを使用してコントロールの外観を変更することができます。 次の図は、アプリケーションを示しています。  
   
- ![Avalon コントロールをホストする Windows フォーム](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
+ ![Avalon コントロールをホストする Windows フォーム](./media/wfhost.png "WFHost")  
 Windows フォーム アプリケーションでホストされる WPF 複合コントロール  
   
 ### <a name="creating-the-project"></a>プロジェクトの作成  
@@ -274,11 +274,11 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
  Windows フォーム デザイナーで、作成するフォームをダブルクリックして、<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。 Form1.cs の上部にある次のコードを追加`using`ステートメント。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
  既存の内容を置き換える`Form1`クラスを次のコード。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
  `Form1_Load`上記のコードでメソッドをホストするための一般的な手順を示しています、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
   
@@ -307,7 +307,7 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
  次のボタンを追加するイベント ハンドラー コードをクリックして、`Form1`クラス。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
  アプリケーションをビルドして実行します。 WPF 複合コントロールでテキストを追加し、クリックして**OK**します。 そのテキストがラベルに表示されます。 この時点で、オプション ボタンを処理するコードは追加されていません。  
   
@@ -316,7 +316,7 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
   
  それぞれダブルクリック<xref:System.Windows.Forms.RadioButton>を作成するフォーム上のコントロール<xref:System.Windows.Forms.RadioButton.CheckedChanged>イベント ハンドラー。 置換、<xref:System.Windows.Forms.RadioButton.CheckedChanged>イベント ハンドラーを次のコード。  
   
- [!code-csharp[WindowsFormsHostingWpfControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
+ [!code-csharp[WindowsFormsHostingWpfControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
  アプリケーションをビルドして実行します。 別のオプション ボタンをクリックして、WPF 複合コントロール上の影響を確認します。  
   
@@ -324,5 +324,5 @@ Windows フォーム アプリケーションでホストされる WPF 複合コ
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの 3d WPF 複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの 3d WPF 複合コントロールのホスト](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

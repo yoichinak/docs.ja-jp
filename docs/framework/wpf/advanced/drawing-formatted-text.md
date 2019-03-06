@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748467"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372179"
 ---
 # <a name="drawing-formatted-text"></a>書式設定されたテキストの描画
 このトピックでの機能の概要、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのテキストの描画に対する低レベルの制御を提供します。  
@@ -24,14 +24,14 @@ ms.locfileid: "56748467"
 ## <a name="technology-overview"></a>テクノロジの概要  
  <xref:System.Windows.Media.FormattedText>オブジェクトを使用すると、これで、テキスト内の各文字に個別に書式設定できます、複数行のテキストを描画します。 複数の書式が適用されたテキストを次の例に示します。  
   
- ![FormattedText オブジェクトを使用して表示されるテキスト](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")  
+ ![FormattedText オブジェクトを使用して表示されるテキスト](./media/formattedtext01.jpg "FormattedText01")  
 FormattedText オブジェクトを使用して表示されるテキスト  
   
 > [!NOTE]
 >  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API から移行する開発者のために、「[Win32 の移行](#win32_migration)」の表に [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText フラグと [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] におけるほぼ同等のものを示します。  
   
 ### <a name="reasons-for-using-formatted-text"></a>書式設定されたテキストを使用する理由  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、<xref:System.Windows.Controls.TextBlock>要素は、制限付きのテキストのサポートがで短い文など、必要な場合に、使用する必要があります、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 <xref:System.Windows.Controls.Label> 最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、<xref:System.Windows.Controls.TextBlock>要素は、制限付きのテキストのサポートがで短い文など、必要な場合に、使用する必要があります、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 <xref:System.Windows.Controls.Label> 最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
   
  <xref:System.Windows.Media.FormattedText>オブジェクトは、書式設定機能よりも大きい値のテキストを提供します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]テキスト コントロール、およびテキスト装飾的な要素として使用する場合に便利です。 詳細については、後の「[書式設定されたテキストのジオメトリへの変換](#converting_formatted_text)」を参照してください。  
   
@@ -42,54 +42,54 @@ FormattedText オブジェクトを使用して表示されるテキスト
   
  使用して、<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>テキストの幅を制限するプロパティ。 テキストは、指定された幅を超えないように自動的に折り返されます。 使用して、<xref:System.Windows.Media.FormattedText.MaxTextHeight%2A>高さを指定するテキストを制限するプロパティ。 テキストは、指定された高さを超えた部分に省略記号 "…" を表示します。  
   
- ![FormattedText オブジェクトを使用して表示されるテキスト](../../../../docs/framework/wpf/advanced/media/formattedtext02.png "FormattedText02")  
+ ![FormattedText オブジェクトを使用して表示されるテキスト](./media/formattedtext02.png "FormattedText02")  
 折り返しと省略記号を示す表示テキスト  
   
  複数の書式スタイルを 1 つ以上の文字に適用できます。 たとえば、両方を呼び出すことが、<xref:System.Windows.Media.FormattedText.SetFontSize%2A>と<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>テキストの最初の 5 文字の書式を変更する方法。  
   
  次のコード例を作成、<xref:System.Windows.Media.FormattedText>オブジェクトし、テキストにいくつかの書式スタイルを適用します。  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 ### <a name="font-size-unit-of-measure"></a>フォント サイズの単位  
  場合は、他のテキスト オブジェクトと同様[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、アプリケーション、<xref:System.Windows.Media.FormattedText>オブジェクトは、メジャーの単位としてデバイス非依存ピクセルを使用します。 ただし、ほとんどの [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] アプリケーションでは、単位としてポイントが使用されます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでポイント単位の表示テキストを使用する場合は、[!INCLUDE[TLA#tla_dipixel#plural](../../../../includes/tlasharptla-dipixelsharpplural-md.md)] をポイントに変換する必要があります。 この変換を実行する方法を次のコード例に示します。  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
   
 <a name="converting_formatted_text"></a>   
 ### <a name="converting-formatted-text-to-a-geometry"></a>書式設定されたテキストのジオメトリへの変換  
  書式設定されたテキストに変換できます<xref:System.Windows.Media.Geometry>オブジェクト、テキストを視覚的に興味深いは、他の種類を作成することができます。 たとえば、作成する、<xref:System.Windows.Media.Geometry>のテキスト文字列のアウトラインに基づいてオブジェクト。  
   
- ![線形グラデーション ブラシを使用するテキスト アウトライン](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+ ![線形グラデーション ブラシを使用するテキスト アウトライン](./media/outlinedtext02.jpg "OutlinedText02")  
 線形グラデーション ブラシを使用するテキスト アウトライン  
   
  変換されたテキストのストローク、塗りつぶし、強調表示を変更して、人の目をひく視覚効果を作成するいくつかの方法を次の例に示します。  
   
- ![塗りつぶしとストロークに別の色とテキスト](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
+ ![塗りつぶしとストロークに別の色とテキスト](./media/outlinedtext03.jpg "OutlinedText03")  
 ストロークと塗りつぶしを別々の色に設定した例  
   
- ![ストロークに適用されるイメージ ブラシを含むテキスト](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+ ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/outlinedtext04.jpg "OutlinedText04")  
 ストロークに適用したイメージ ブラシの例  
   
- ![ストロークに適用されるイメージ ブラシを含むテキスト](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+ ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/outlinedtext05.jpg "OutlinedText05")  
 ストロークと強調表示に適用したイメージ ブラシの例  
   
- テキストを変換するときに、<xref:System.Windows.Media.Geometry>文字のコレクションでは不要になったオブジェクト-テキスト文字列内の文字を変更することはできません。 ただし、変換されたテキストのストロークおよび塗りつぶしのプロパティを変更することで、テキストの外観を変えることができます。 ストロークは、変換したテキストのアウトラインを参照します。塗りつぶしは、変換したテキストのアウトラインの内側の領域を参照します。 詳細については、「[方法: 中抜きの文字列を作成する](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)」を参照してください。  
+ テキストを変換するときに、<xref:System.Windows.Media.Geometry>文字のコレクションでは不要になったオブジェクト-テキスト文字列内の文字を変更することはできません。 ただし、変換されたテキストのストロークおよび塗りつぶしのプロパティを変更することで、テキストの外観を変えることができます。 ストロークは、変換したテキストのアウトラインを参照します。塗りつぶしは、変換したテキストのアウトラインの内側の領域を参照します。 詳細については、「[方法: 中抜きの文字列を作成する](how-to-create-outlined-text.md)」を参照してください。  
   
  書式設定されたテキストに変換することもできます、<xref:System.Windows.Media.PathGeometry>オブジェクトし、テキストの強調表示のオブジェクトを使用します。 アニメーションを適用するなど、<xref:System.Windows.Media.PathGeometry>アニメーション続く書式設定されたテキストのアウトラインのオブジェクトします。  
   
  次の例では、書式設定されたテキストに変換されている、<xref:System.Windows.Media.PathGeometry>オブジェクト。 アニメーション化された楕円は、レンダリングされたテキストのストロークのパスに従います。  
   
- ![テキストのパス ジオメトリに続く球](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![テキストのパス ジオメトリに続く球](./media/textpathgeometry01.gif "TextPathGeometry01")  
 テキストのパス ジオメトリに続く球  
   
  詳細については、「[方法 :テキストの PathGeometry アニメーションを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))します。  
   
  その他の興味深い使用の書式設定されたテキストを作成するに変換された後、<xref:System.Windows.Media.PathGeometry>オブジェクト。 たとえば、ビデオをクリップしてテキスト内に表示することができます。  
   
- ![テキストのパス ジオメトリに表示されるビデオ](../../../../docs/framework/wpf/advanced/media/videotextdemo01.png "VideoTextDemo01")  
+ ![テキストのパス ジオメトリに表示されるビデオ](./media/videotextdemo01.png "VideoTextDemo01")  
 テキストのパス ジオメトリに表示されるビデオ  
   
 <a name="win32_migration"></a>   
@@ -125,7 +125,7 @@ FormattedText オブジェクトを使用して表示されるテキスト
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.FormattedText>
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [中抜きの文字列を作成する](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [WPF のドキュメント](documents-in-wpf.md)
+- [WPF のタイポグラフィ](typography-in-wpf.md)
+- [中抜きの文字列を作成する](how-to-create-outlined-text.md)
 - [方法: テキストの PathGeometry アニメーションを作成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 495ce5f6-bb4d-4b30-807a-c3c35f1ca95c
-ms.openlocfilehash: 73480f7cd8be7bcb5296782a8503eb689442a14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3997415c19483a69e66d8fe68c6ec9241f7ad0d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356221"
 ---
 # <a name="processunhandledexception-function-wpf-unmanaged-api-reference"></a>ProcessUnhandledException 関数 (WPF のアンマネージ API リファレンス)
 この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。  
@@ -33,7 +33,7 @@ void __stdcall ProcessUnhandledException(
  エラー メッセージ。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** 参照してください[.NET Framework システム要件](../../../../docs/framework/get-started/system-requirements.md)します。  
+ **プラットフォーム:** 参照してください[.NET Framework システム要件](../../get-started/system-requirements.md)します。  
   
  **DLL:**  
   
@@ -44,4 +44,4 @@ void __stdcall ProcessUnhandledException(
  **.NET framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WPF のアンマネージ API リファレンス](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)
+- [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)

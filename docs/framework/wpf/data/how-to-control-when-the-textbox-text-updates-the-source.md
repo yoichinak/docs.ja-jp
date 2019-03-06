@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: e43f5c84a4e93e35f0d8350442870239408fdc7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690372"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362137"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>方法: TextBox テキストでソースを更新するタイミングを制御する
 このトピックでは、使用する方法を説明します、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ バインディングのソースの更新のタイミングを制御するためです。 トピックを使用して、<xref:System.Windows.Controls.TextBox>などのコントロール。  
@@ -24,26 +24,26 @@ ms.locfileid: "54690372"
   
  ソースの入力を更新する場合は、設定、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>へのバインドの<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>します。 次の例で強調表示された行のコードを表示する、`Text`両方のプロパティ、 <xref:System.Windows.Controls.TextBox> 、<xref:System.Windows.Controls.TextBlock>同じソース プロパティにバインドされます。 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>のプロパティ、<xref:System.Windows.Controls.TextBox>にバインディングが設定されている<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>します。  
   
- [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
+ [!code-xaml[SimpleBinding#USTHowTo](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
  結果として、<xref:System.Windows.Controls.TextBlock>にテキストを入力すると、(変更) ため、同じテキストを表示、<xref:System.Windows.Controls.TextBox>サンプルの次のスクリーン ショットに示しますように。  
   
- ![単純なデータ バインディングのサンプルのスクリーンショット](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![単純なデータ バインディングのサンプルのスクリーンショット](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
   
  ダイアログまたはユーザーが編集できるフォームがあると、ユーザーがフィールドの編集が完了し、[OK] をクリックするまで、ソースの更新プログラムを延期する場合、設定することができる場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>に、バインディングの<xref:System.Windows.Data.UpdateSourceTrigger.Explicit>、次の例。  
   
- [!code-xaml[UpdateSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
+ [!code-xaml[UpdateSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
   
  設定すると、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値を<xref:System.Windows.Data.UpdateSourceTrigger.Explicit>、アプリケーションを呼び出すときにのみソース値が変更、<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>メソッド。 次の例は、呼び出す方法を示しています<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>の`itemNameTextBox`:。  
   
- [!code-csharp[UpdateSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
- [!code-vb[UpdateSource#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[UpdateSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[UpdateSource#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
   
 > [!NOTE]
 >  他のコントロールのプロパティの同じ手法を使用できますが、既定値をその他のほとんどのプロパティがあることに注意してください<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>@property<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>します。 詳細については、次を参照してください。、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ ページ。  
   
 > [!NOTE]
->  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ ソースの更新処理であるため、関連するのみ<xref:System.Windows.Data.BindingMode.TwoWay>または<xref:System.Windows.Data.BindingMode.OneWayToSource>バインドします。 <xref:System.Windows.Data.BindingMode.TwoWay>と<xref:System.Windows.Data.BindingMode.OneWayToSource>するには、プロパティ変更通知を提供するソース オブジェクトのニーズへのバインド。 詳しくは、このトピック内にあるサンプルをご覧ください。 また、「[方法 : プロパティの変更通知を実装する](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)」もご覧ください。  
+>  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ ソースの更新処理であるため、関連するのみ<xref:System.Windows.Data.BindingMode.TwoWay>または<xref:System.Windows.Data.BindingMode.OneWayToSource>バインドします。 <xref:System.Windows.Data.BindingMode.TwoWay>と<xref:System.Windows.Data.BindingMode.OneWayToSource>するには、プロパティ変更通知を提供するソース オブジェクトのニーズへのバインド。 詳しくは、このトピック内にあるサンプルをご覧ください。 また、「[方法 : プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」もご覧ください。  
   
 ## <a name="see-also"></a>関連項目
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

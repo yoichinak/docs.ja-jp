@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660425"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362436"
 ---
 # <a name="animation-tips-and-tricks"></a>アニメーションのヒントとテクニック
 アニメーションを扱うときに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ヒントがいくつか、およびアニメーションを実行できるテクニックはパフォーマンスを向上させ、不満を解消します。  
@@ -28,13 +28,13 @@ ms.locfileid: "54660425"
 ## <a name="general-issues"></a>一般的な問題  
   
 ### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>スクロール バーまたはスライダーの位置をアニメーション化するとフリーズする  
- スクロール バーまたはスライダーを持つアニメーションを使用しての位置をアニメーション化する場合、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>(既定値) の場合は、ユーザーしなくなるスクロール バーまたはスライダーを移動できません。 原因は、アニメーションが終了しても、ターゲット プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
+ スクロール バーまたはスライダーを持つアニメーションを使用しての位置をアニメーション化する場合、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>(既定値) の場合は、ユーザーしなくなるスクロール バーまたはスライダーを移動できません。 原因は、アニメーションが終了しても、ターゲット プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
   
 ### <a name="animating-the-output-of-an-animation-has-no-effect"></a>アニメーションの出力のアニメーション化の効果がない  
  別のアニメーションの出力であるオブジェクトをアニメーション化することはできません。 使用する場合など、<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>をアニメーション化する、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Rectangle>から、<xref:System.Windows.Media.RadialGradientBrush>を<xref:System.Windows.Media.SolidColorBrush>の任意のプロパティをアニメーション化することはできません、<xref:System.Windows.Media.RadialGradientBrush>または<xref:System.Windows.Media.SolidColorBrush>します。  
   
 ### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>プロパティをアニメーション化した後にその値を変更できない  
- 場合によっては、アニメーションが完了した後でも、アニメーション化の後にプロパティの値を変更できないように見えることがあります。 原因は、アニメーションが終了しても、プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
+ 場合によっては、アニメーションが完了した後でも、アニメーション化の後にプロパティの値を変更できないように見えることがあります。 原因は、アニメーションが終了しても、プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
   
 ### <a name="changing-a-timeline-has-no-effect"></a>タイムラインを変更しても効果がない  
  ただしほとんど<xref:System.Windows.Media.Animation.Timeline>プロパティはアニメーション化できる、データ バインドできるは、アクティブなプロパティ値を変更する<xref:System.Windows.Media.Animation.Timeline>効果がないようです。 です、<xref:System.Windows.Media.Animation.Timeline>はタイミング システムの開始のコピーを作成、<xref:System.Windows.Media.Animation.Timeline>を使用して作成し、<xref:System.Windows.Media.Animation.Clock>オブジェクト。 元を変更しても、システムのコピーには影響しません。  
@@ -47,14 +47,14 @@ ms.locfileid: "54660425"
   
 -   クロック レベルで直接操作している場合は、新しいクロック セットを作成して適用し、それらを使って、生成されたクロックの以前のセットを置換します。  
   
- 詳細については、タイムラインとクロックは、次を参照してください。[アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)します。  
+ 詳細については、タイムラインとクロックは、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
   
 ### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop が期待どおりに動作しない  
  あります設定するときに、<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.FillBehavior.Stop>場合などの効果がないように見えるアニメーションを 1 つに「ハンドオフ」間があるため、<xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>の設定<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>。  
   
  次の例では、作成、 <xref:System.Windows.Controls.Canvas>、<xref:System.Windows.Shapes.Rectangle>と<xref:System.Windows.Media.TranslateTransform>します。 <xref:System.Windows.Media.TranslateTransform>を移動するアニメーションは、<xref:System.Windows.Shapes.Rectangle>の周囲、<xref:System.Windows.Controls.Canvas>します。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
   
  このセクションの例をいくつかのケースを示すために、前のオブジェクトを使用して、場所、<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティが予想どおりに動作しません。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "54660425"
   
  最初の<xref:System.Windows.Media.Animation.Storyboard>、 `B1`、アニメーション、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、 <xref:System.Windows.Media.TranslateTransform> 350 0、右側に四角形 350 ピクセルに移動します。 アニメーションがその継続時間の終わりに達したし、再生が停止するときに、<xref:System.Windows.Media.TranslateTransform.X%2A>プロパティは、元の値を 0 に戻ります。 その結果、四角形は右に 350 ピクセル移動し、元の位置に移動します。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
   
  2 番目の<xref:System.Windows.Media.Animation.Storyboard>、 `B2`、アニメーション化も、<xref:System.Windows.Media.TranslateTransform.X%2A>の同じプロパティ<xref:System.Windows.Media.TranslateTransform>します。 ため、のみ、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>このアニメーションのプロパティ<xref:System.Windows.Media.Animation.Storyboard>がアニメーションでは、アニメーション化するプロパティの現在の値を使用して、その開始値として設定します。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
   
  最初の 2 番目のボタンをクリックすると<xref:System.Windows.Media.Animation.Storyboard>が再生するには、次の動作を期待可能性があります。  
   
@@ -80,16 +80,16 @@ ms.locfileid: "54660425"
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior と完了イベント  
  次の例では、別のシナリオの場合、 <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>効果がないようです。 例では、ストーリーを使用して、もう一度、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、 <xref:System.Windows.Media.TranslateTransform> 350 に 0 からです。 ただし、この時間を登録します、<xref:System.Windows.Media.Animation.Timeline.Completed>イベント。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
  <xref:System.Windows.Media.Animation.Timeline.Completed>イベント ハンドラーを起動別<xref:System.Windows.Media.Animation.Storyboard>を現在の値からの同じプロパティを 500 にアニメーション化します。  
   
- [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
- [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
+ [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
+ [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
   
  次に、2 つ目を定義するマークアップ<xref:System.Windows.Media.Animation.Storyboard>リソースとして。  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
   
  実行すると、 <xref:System.Windows.Media.Animation.Storyboard>、想像、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、 <xref:System.Windows.Media.TranslateTransform> 、アニメーション化する 0 から 350 にし、元に戻すを 0 に完了した後 (があるため、<xref:System.Windows.Media.Animation.FillBehavior>の設定<xref:System.Windows.Media.Animation.FillBehavior.Stop>)、および 0 から 500 にアニメーション化します。 代わりに、 <xref:System.Windows.Media.TranslateTransform> 0 から 350、その後 500 にアニメーション化します。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "54660425"
   
 -   特定のプロパティからアニメーションを削除するには、使用、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>メソッド。 最初のパラメーターとしてアニメーション化されているプロパティを指定し、 `null` 2 つ目として。 これにより、すべてのアニメーション クロックがプロパティから削除されます。  
   
- プロパティをアニメーション化するさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)します。  
+ プロパティをアニメーション化するさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>HandoffBehavior を使うとシステム リソースが消費される  
  適用すると、 <xref:System.Windows.Media.Animation.Storyboard>、 <xref:System.Windows.Media.Animation.AnimationTimeline>、または<xref:System.Windows.Media.Animation.AnimationClock>を使用してプロパティを<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>、any<xref:System.Windows.Media.Animation.Clock>以前そのプロパティに関連付けられているオブジェクトは引き続きシステム リソースを消費しますタイミング システムはありません。これらのクロックを自動的に削除します。  
@@ -126,7 +126,7 @@ ms.locfileid: "54660425"
   
  これは主に、有効期間が長いオブジェクトでのアニメーションの問題です。  オブジェクトがガベージ コレクションされる場合は、そのクロックも切断されて、ガベージ コレクションされます。  
   
- クロック オブジェクトの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)します。  
+ クロック オブジェクトの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [アニメーションの概要](animation-overview.md)

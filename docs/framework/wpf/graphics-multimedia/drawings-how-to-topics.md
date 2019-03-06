@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670317"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352335"
 ---
 # <a name="drawings-how-to-topics"></a>描画に関する「方法」トピック
 このセクションのトピックを使用する方法を説明<xref:System.Windows.Media.Drawing>図形、画像、またはテキストを描画するオブジェクト。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [描画に GuidelineSet を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [複合描画を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [GeometryDrawing を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [ImageDrawing を使用してイメージを描画する](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [VideoDrawing を使用してメディアを再生する](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [描画をイメージ ソースとして使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [描画に GuidelineSet を適用する](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [複合描画を作成する](how-to-create-a-composite-drawing.md)  
+  [GeometryDrawing を作成する](how-to-create-a-geometrydrawing.md)  
+  [ImageDrawing を使用してイメージを描画する](how-to-draw-an-image-using-imagedrawing.md)  
+  [VideoDrawing を使用してメディアを再生する](how-to-play-media-using-a-videodrawing.md)  
+  [描画をイメージ ソースとして使用する](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Drawing>
-- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [WPF での図形と基本描画の概要](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)
+- [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
+- [グラフィックスとマルチメディア](index.md)

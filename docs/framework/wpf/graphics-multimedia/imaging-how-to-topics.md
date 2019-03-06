@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 872eb510e3e85046818987fc6aaf761fca21b320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493613"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359537"
 ---
 # <a name="imaging-how-to-topics"></a>イメージングに関する「方法」トピック
 このセクションのトピックでは、使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を表示またはビットマップ イメージを変更するためにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [XAML で BitmapImage を使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [サムネイルとしてイメージを読み込む](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [BitmapImage に変換を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [ビジュアルからビットマップを作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [ビジュアルをイメージ ファイルにエンコードする](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [新しい BitmapSource を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [BitmapSource オブジェクトをチェーンする](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [BitmapSource を別の PixelFormat に変換する](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [BitmapSource をインデックス付きピクセル形式に変換する](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [JPEG イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [BMP イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [PNG イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [WDP イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [GIF イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [TIFF イメージのエンコードおよびデコード](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [ビットマップにメタデータを書き込む](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [ビットマップからメタデータを読み取る](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [XAML で BitmapImage を使用する](how-to-use-a-bitmapimage.md)  
+ [サムネイルとしてイメージを読み込む](how-to-load-an-image-as-a-thumbnail.md)  
+ [BitmapImage に変換を適用する](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [ビジュアルからビットマップを作成する](how-to-create-a-bitmap-from-a-visual.md)  
+ [ビジュアルをイメージ ファイルにエンコードする](how-to-encode-a-visual-to-an-image-file.md)  
+ [新しい BitmapSource を作成する](how-to-create-a-new-bitmapsource.md)  
+ [BitmapSource オブジェクトをチェーンする](how-to-chain-bitmapsource-objects-together.md)  
+ [BitmapSource を別の PixelFormat に変換する](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [BitmapSource をインデックス付きピクセル形式に変換する](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [JPEG イメージのエンコードおよびデコード](how-to-encode-and-decode-a-jpeg-image.md)  
+ [BMP イメージのエンコードおよびデコード](how-to-encode-and-decode-a-bmp-image.md)  
+ [PNG イメージのエンコードおよびデコード](how-to-encode-and-decode-a-png-image.md)  
+ [WDP イメージのエンコードおよびデコード](how-to-encode-and-decode-a-wdp-image.md)  
+ [GIF イメージのエンコードおよびデコード](how-to-encode-and-decode-a-gif-image.md)  
+ [TIFF イメージのエンコードおよびデコード](how-to-encode-and-decode-a-tiff-image.md)  
+ [ビットマップにメタデータを書き込む](how-to-write-metadata-to-a-bitmap.md)  
+ [ビットマップからメタデータを読み取る](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Image>  
@@ -44,4 +44,4 @@ ms.locfileid: "54493613"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>関連項目
-- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [イメージングの概要](imaging-overview.md)

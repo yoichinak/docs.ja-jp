@@ -3,11 +3,11 @@ title: <activityStateQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
 ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254796"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372049"
 ---
 # <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > の WCF
 
@@ -55,7 +55,8 @@ ms.locfileid: "55254796"
   
 |属性|説明|  
 |---------------|-----------------|  
-|activityName|<xref:System.Activities.Tracking.ActivityStateRecord> インスタンスをフィルターするために、アクティビティの名前を指定する文字列。|  
+|activityName|
+  <xref:System.Activities.Tracking.ActivityStateRecord> インスタンスをフィルターするために、アクティビティの名前を指定する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
   

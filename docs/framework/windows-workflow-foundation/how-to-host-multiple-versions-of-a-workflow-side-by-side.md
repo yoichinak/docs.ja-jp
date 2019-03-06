@@ -1,18 +1,18 @@
 ---
-title: ワークフローの複数のバージョンを同時にホストする方法
+title: '方法: 複数のバージョンをワークフロー サイド バイ サイドのホストします。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366707"
 ---
-# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>ワークフローの複数のバージョンを同時にホストする方法
+# <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>方法: 複数のバージョンをワークフロー サイド バイ サイドのホストします。
 `WorkflowIdentity` を使用すると、ワークフロー アプリケーションの開発者は、名前とバージョンをワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 チュートリアルのこの手順では、`WorkflowIdentity` を使用してワークフローの複数のバージョンを同時にホストする方法について説明します。
 
 > [!NOTE]
@@ -36,12 +36,12 @@ ms.locfileid: "50181620"
 -   [ビルドして、アプリケーションの実行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  このトピックの手順を実行する前に、アプリケーションを実行し、各種類のワークフローをいくつか開始して、ワークフローごとに 1 つまたは 2 つの推定値を作成します。 これらの永続化されたワークフローがこの手順と次の手順で使用される[方法: 実行しているワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
+>  このトピックの手順を実行する前に、アプリケーションを実行し、各種類のワークフローをいくつか開始して、ワークフローごとに 1 つまたは 2 つの推定値を作成します。 これらの永続化されたワークフローがこの手順と次の手順で使用される[方法。実行中のワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
 > [!NOTE]
 >  チュートリアル入門の各手順は、その前の手順に応じて異なります。 前の手順を完了しなかった場合は、」からチュートリアルの完成版をダウンロードできます[Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
   
-###  <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities プロジェクトのコピーを作成するには  
+### <a name="BKMK_BackupCopy"></a> NumberGuessWorkflowActivities プロジェクトのコピーを作成するには  
   
 1.  開く、 **WF45GettingStartedTutorial**が開いていない場合、Visual Studio 2012 でのソリューションです。  
   
@@ -60,20 +60,21 @@ ms.locfileid: "50181620"
     > [!NOTE]
     >  このトピックの手順では、ワークフローの複数のバージョンを格納するためのアセンブリを管理する 1 つの方法を示します。 アセンブリに厳密な名前を付けてグローバル アセンブリ キャッシュに登録するなど、他の方法も使用できます。
 
-8.  という名前の新しいフォルダーを作成する**NumberGuessWorkflowActivities_du**と同じフォルダーに**NumberGuessWorkflowHost**、 **NumberGuessWorkflowActivities**、し、新しく追加**PreviousVersions**フォルダーでは、すべてのファイルとサブフォルダーをコピーし、 **NumberGuessWorkflowActivities**を新しいフォルダー **NumberGuessWorkflowActivities_du**フォルダー。 アクティビティの最初のバージョンのプロジェクトのこのバックアップ コピーが使用される[方法: 実行しているワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
+8.  という名前の新しいフォルダーを作成する**NumberGuessWorkflowActivities_du**と同じフォルダーに**NumberGuessWorkflowHost**、 **NumberGuessWorkflowActivities**、し、新しく追加**PreviousVersions**フォルダーでは、すべてのファイルとサブフォルダーをコピーし、 **NumberGuessWorkflowActivities**を新しいフォルダー **NumberGuessWorkflowActivities_du**フォルダー。 アクティビティの最初のバージョンのプロジェクトのこのバックアップ コピーが使用される[方法。実行中のワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
 9. 開き直す、 **WF45GettingStartedTutorial** Visual Studio 2012 でのソリューションです。
 
-###  <a name="BKMK_UpdateWorkflows"></a> ワークフローを更新するには
+### <a name="BKMK_UpdateWorkflows"></a> ワークフローを更新するには
  ここでは、ワークフロー定義が更新されます。 ユーザーの推定値についてフィードバックを返す 2 つの `WriteLine` アクティビティが更新され、新しい `WriteLine` アクティビティが追加されます。新しいアクティビティは、数値が推定されるとゲームに関する追加情報を提供します。
 
-####  <a name="BKMK_UpdateStateMachine"></a> ステート マシン ワークフローを更新するには
+#### <a name="BKMK_UpdateStateMachine"></a> ステート マシン ワークフローを更新するには
 
 1.  **ソリューション エクスプ ローラー**下で、 **NumberGuessWorkflowActivities**プロジェクトで、ダブルクリックして**StateMachineNumberGuessWorkflow.xaml**します。
 
 2.  ダブルクリックして、 **Guess Incorrect**ステート マシンを移行します。
 
-3.  `Text` アクティビティで、左端の `WriteLine` の `If` を更新します。
+3.  
+  `Text` アクティビティで、左端の `WriteLine` の `If` を更新します。
 
     ```vb
     Guess & " is too low."
@@ -83,7 +84,8 @@ ms.locfileid: "50181620"
     Guess + " is too low."
     ```
 
-4.  `Text` アクティビティで、右端の `WriteLine` の `If` を更新します。
+4.  
+  `Text` アクティビティで、右端の `WriteLine` の `If` を更新します。
 
     ```vb
     Guess & " is too high."
@@ -99,7 +101,8 @@ ms.locfileid: "50181620"
 
 7.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**上にドロップし、**ここにアクティビティを Drop Action**のラベル、遷移します。
 
-8.  `Text` プロパティ ボックスに、次の式を入力します。
+8.  
+  `Text` プロパティ ボックスに、次の式を入力します。
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -109,7 +112,7 @@ ms.locfileid: "50181620"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateFlowchart"></a> フローチャート ワークフローを更新するには
+#### <a name="BKMK_UpdateFlowchart"></a> フローチャート ワークフローを更新するには
 
 1.  **ソリューション エクスプ ローラー**下で、 **NumberGuessWorkflowActivities**プロジェクトで、ダブルクリックして**FlowchartNumberGuessWorkflow.xaml**します。
 
@@ -133,9 +136,11 @@ ms.locfileid: "50181620"
     Guess + " is too high."
     ```
 
-4.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**のドロップ ポイント上にドロップし、`True`の最上位にあるアクション`FlowDecision`. `WriteLine` アクティビティがフローチャートに追加され、`True` の `FlowDecision` アクションにリンクされます。
+4.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**のドロップ ポイント上にドロップし、`True`の最上位にあるアクション`FlowDecision`. 
+  `WriteLine` アクティビティがフローチャートに追加され、`True` の `FlowDecision` アクションにリンクされます。
 
-5.  `Text` プロパティ ボックスに、次の式を入力します。
+5.  
+  `Text` プロパティ ボックスに、次の式を入力します。
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -145,11 +150,12 @@ ms.locfileid: "50181620"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-####  <a name="BKMK_UpdateSequential"></a> シーケンシャル ワークフローを更新するには
+#### <a name="BKMK_UpdateSequential"></a> シーケンシャル ワークフローを更新するには
 
 1.  **ソリューション エクスプ ローラー**下で、 **NumberGuessWorkflowActivities**プロジェクトで、ダブルクリックして**SequentialNumberGuessWorkflow.xaml**します。
 
-2.  `Text` アクティビティで、左端の `WriteLine` の `If` を更新します。
+2.  
+  `Text` アクティビティで、左端の `WriteLine` の `If` を更新します。
 
     ```vb
     Guess & " is too low."
@@ -159,7 +165,8 @@ ms.locfileid: "50181620"
     Guess + " is too low."
     ```
 
-3.  `Text` アクティビティで、右端の `WriteLine` アクティビティの `If` を更新します。
+3.  
+  `Text` アクティビティで、右端の `WriteLine` アクティビティの `If` を更新します。
 
     ```vb
     Guess & " is too high."
@@ -171,7 +178,8 @@ ms.locfileid: "50181620"
 
 4.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**後ろにドロップし、 **DoWhile**アクティビティように、 **WriteLine**ルート内の最後の活動は、`Sequence`アクティビティ。
 
-5.  `Text` プロパティ ボックスに、次の式を入力します。
+5.  
+  `Text` プロパティ ボックスに、次の式を入力します。
 
     ```vb
     Guess & " is correct. You guessed it in " & Turns & " turns."
@@ -181,7 +189,7 @@ ms.locfileid: "50181620"
     Guess + " is correct. You guessed it in " + Turns + " turns."
     ```
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。
 
 1.  ダブルクリック**WorkflowVersionMap.cs** (または**WorkflowVersionMap.vb**) の下、 **NumberGuessWorkflowHost**プロジェクトを開きます。
 
@@ -549,11 +557,12 @@ ms.locfileid: "50181620"
     }
     ```
 
-###  <a name="BKMK_BuildAndRun"></a> アプリケーションをビルドして実行するには
+### <a name="BKMK_BuildAndRun"></a> アプリケーションをビルドして実行するには
 
 1.  Ctrl キーと Shift キーを押しながら B キーを押してアプリケーションをビルドし、Ctrl キーを押しながら F5 キーを押して起動します。
 
-2.  クリックして新しいワークフローを開始**新しいゲーム**します。 ワークフローのバージョンは、ステータス ウィンドウの下に表示され、関連付けられた `WorkflowIdentity` から更新後のバージョンを反映します。 完了時にワークフローの追跡ファイルを確認できるように `InstanceId` を書き留めておき、ゲームが完了するまで推定値を入力します。 `WriteLine` アクティビティに対する更新に基づき、ステータス ウィンドウに示される情報に、ユーザーの推定値がどのように表示されるかを確認します。
+2.  クリックして新しいワークフローを開始**新しいゲーム**します。 ワークフローのバージョンは、ステータス ウィンドウの下に表示され、関連付けられた `WorkflowIdentity` から更新後のバージョンを反映します。 完了時にワークフローの追跡ファイルを確認できるように `InstanceId` を書き留めておき、ゲームが完了するまで推定値を入力します。 
+  `WriteLine` アクティビティに対する更新に基づき、ステータス ウィンドウに示される情報に、ユーザーの推定値がどのように表示されるかを確認します。
 
  **1 から 10 までの数値を入力してください。**  
 **5 が多すぎます。**  
@@ -565,7 +574,8 @@ ms.locfileid: "50181620"
 **これで、4 つの交替で数を推測します。**  
 
     > [!NOTE]
-    >  `WriteLine` アクティビティから更新されたテキストは表示されますが、このトピックで追加された最後の `WriteLine` アクティビティの出力は表示されません。 これは、ステータス ウィンドウが `PersistableIdle` ハンドラーによって更新されるためです。 ワークフローは完了し、最後のアクティビティの後にアイドル状態にならないため、`PersistableIdle` ハンドラーは呼び出されません。 ただし、`Completed` ハンドラーによって同様のメッセージがステータス ウィンドウに表示されます。 必要に応じて、コードを `Completed` ハンドラーに追加し、`StringWriter` からテキストを抽出してステータス ウィンドウに表示できます。
+    >  
+  `WriteLine` アクティビティから更新されたテキストは表示されますが、このトピックで追加された最後の `WriteLine` アクティビティの出力は表示されません。 これは、ステータス ウィンドウが `PersistableIdle` ハンドラーによって更新されるためです。 ワークフローは完了し、最後のアクティビティの後にアイドル状態にならないため、`PersistableIdle` ハンドラーは呼び出されません。 ただし、`Completed` ハンドラーによって同様のメッセージがステータス ウィンドウに表示されます。 必要に応じて、コードを `Completed` ハンドラーに追加し、`StringWriter` からテキストを抽出してステータス ウィンドウに表示できます。
 
 3.  Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって) と、対応するメモ帳を使用して追跡ファイルを開く完了したワークフロー。 メモして行っていない場合、`InstanceId`を使用して正しい追跡ファイルを識別する、**に変更された日付**Windows エクスプ ローラーの情報。
 
@@ -580,4 +590,4 @@ ms.locfileid: "50181620"
 
 4.  数値推測アプリケーションに戻り、更新が行われる前に開始したワークフローのうち 1 つを選択します。 現在選択されているワークフローのバージョンを特定するには、ステータス ウィンドウの下に表示されるバージョン情報を確認します。 いくつかの推定値を入力し、ステータスの更新が前のバージョンからの `WriteLine` アクティビティの出力と一致しており、ユーザーの推定値が含まれていないことを確認してください。 これらのワークフローでは、`WriteLine` の更新を含まない以前のワークフロー定義を使用しているためです。
 
-     次の手順で[方法: 実行しているワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)、実行`v1`ワークフロー インスタンスが更新されるは、新しい機能が含まれているため、`v2`インスタンス。
+     次の手順で[方法。実行しているワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)、実行`v1`ワークフロー インスタンスが更新されるは、新しい機能が含まれているため、`v2`インスタンス。

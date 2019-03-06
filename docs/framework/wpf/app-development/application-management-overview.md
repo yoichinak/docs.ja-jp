@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 83291e82b15f4006ada95d00f6f4981fb7d6b552
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748103"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356508"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
@@ -40,19 +40,19 @@ ms.locfileid: "56748103"
 |タスク|方法|  
 |----------|--------------|  
 |現在のアプリケーションを表すオブジェクトを取得する|<xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> プロパティを使用します。|  
-|起動画面をアプリケーションに追加する|参照してください[スプラッシュ スクリーンを WPF アプリケーションに追加](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)します。|  
+|起動画面をアプリケーションに追加する|参照してください[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。|  
 |アプリケーションを起動する|<xref:System.Windows.Application.Run%2A?displayProperty=nameWithType> メソッドを使用します。|  
 |アプリケーションを停止する|使用して、<xref:System.Windows.Application.Shutdown%2A>のメソッド、<xref:System.Windows.Application.Current%2A?displayProperty=nameWithType>オブジェクト。|  
 |コマンド ラインから引数を取得する|処理、<xref:System.Windows.Application.Startup?displayProperty=nameWithType>イベントと使用、<xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType>プロパティ。 例については、次を参照してください。、<xref:System.Windows.Application.Startup?displayProperty=nameWithType>イベント。|  
 |アプリケーションの終了コードを取得し、設定する|設定、<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType>プロパティ、<xref:System.Windows.Application.Exit?displayProperty=nameWithType>イベント ハンドラーまたは呼び出し、<xref:System.Windows.Application.Shutdown%2A>メソッドと整数を渡します。|  
 |未処理の例外を検出し、応答する|処理、<xref:System.Windows.Application.DispatcherUnhandledException>イベント。|  
 |アプリケーション スコープのリソースを取得し、設定する|<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> プロパティを使用します。|  
-|アプリケーション スコープのリソース ディクショナリを使用する|参照してください[アプリケーション スコープのリソース ディクショナリを使用する](../../../../docs/framework/wpf/app-development/how-to-use-an-application-scope-resource-dictionary.md)します。|  
+|アプリケーション スコープのリソース ディクショナリを使用する|参照してください[アプリケーション スコープのリソース ディクショナリを使用する](how-to-use-an-application-scope-resource-dictionary.md)します。|  
 |アプリケーション スコープのプロパティを取得し、設定する|<xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType> プロパティを使用します。|  
-|アプリケーションの状態を取得し、保存する|参照してください[永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)します。|  
-|リソース ファイル、コンテンツ ファイル、起点ファイルなど、コード以外のデータ ファイルを管理する。|参照してください[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)します。|  
-|スタンドアロン アプリケーションのウィンドウを管理する|「[WPF ウィンドウの概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)」を参照してください。|  
-|ナビゲーションを追跡し、管理する|参照してください[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)します。|  
+|アプリケーションの状態を取得し、保存する|参照してください[永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)します。|  
+|リソース ファイル、コンテンツ ファイル、起点ファイルなど、コード以外のデータ ファイルを管理する。|参照してください[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)します。|  
+|スタンドアロン アプリケーションのウィンドウを管理する|「[WPF ウィンドウの概要](wpf-windows-overview.md)」を参照してください。|  
+|ナビゲーションを追跡し、管理する|参照してください[ナビゲーションの概要](navigation-overview.md)します。|  
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>アプリケーション定義  
@@ -63,16 +63,16 @@ ms.locfileid: "56748103"
   
  次の例では、マークアップと分離コードの両方を使用してアプリケーション定義を実装する方法を示します。  
   
- [!code-xaml[ApplicationSnippets#ApplicationXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
+ [!code-xaml[ApplicationSnippets#ApplicationXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml#applicationxaml)]  
   
- [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
- [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
+ [!code-csharp[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSnippets/CSharp/App.xaml.cs#applicationcodebehind)]
+ [!code-vb[ApplicationSnippets#ApplicationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSnippets/visualbasic/application.xaml.vb#applicationcodebehind)]  
   
  マークアップ ファイルと分離コード ファイルを連携させるには、次のようにする必要があります。  
   
 - マークアップでは、`Application`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`を作成するために MSBuild を原因と、マークアップ ファイルを`partial`クラスから派生した<xref:System.Windows.Application>によって指定された名前を持つ、`x:Class`属性。 XAML スキーマの XML 名前空間宣言を追加する必要があります (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)。
   
--   分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`マークアップ属性およびから派生する必要があります<xref:System.Windows.Application>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
+-   分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`マークアップ属性およびから派生する必要があります<xref:System.Windows.Application>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
 >  新しい WPF アプリケーション プロジェクトまたは Visual Studio を使用して WPF ブラウザー アプリケーション プロジェクトを作成するときに、アプリケーション定義は既定で含まれているし、マークアップと分離コードの両方を使用して定義されます。  
@@ -110,13 +110,13 @@ ms.locfileid: "56748103"
   
  次のコードへの参照を取得する方法を示しています、 <xref:System.Windows.Application> 、現在のオブジェクト<xref:System.AppDomain>します。  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
  <xref:System.Windows.Application.Current%2A> インスタンスへの参照を返します、<xref:System.Windows.Application>クラス。 参照の場合、<xref:System.Windows.Application>派生クラスの値をキャストする必要があります、<xref:System.Windows.Application.Current%2A>プロパティは、次の例に示すようにします。  
   
- [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
- [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
+ [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
+ [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
  値を検査する<xref:System.Windows.Application.Current%2A>の有効期間のどの時点でも、<xref:System.Windows.Application>オブジェクト。 ただし、注意が必要です。 後に、<xref:System.Windows.Application>クラスがインスタンス化は、この期間の状態、<xref:System.Windows.Application>オブジェクトに整合性がありません。 この期間中、<xref:System.Windows.Application>アプリケーション インフラストラクチャを確立、プロパティの設定、およびイベントの登録など、コードを実行するために必要なさまざまな初期化タスクを実行するがします。 使用しようとする場合、 <xref:System.Windows.Application> 、コードがあります。 この期間中、オブジェクトの予期しない結果をさまざまな依存している場合に特に<xref:System.Windows.Application>プロパティを設定します。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56748103"
   
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>スプラッシュ スクリーン  
- 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
+ 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>アプリケーションの起動  
@@ -144,35 +144,35 @@ ms.locfileid: "56748103"
 ### <a name="showing-a-user-interface"></a>ユーザー インターフェイスの表示  
  ほとんどのスタンドアロンの Windows アプリケーションを開く、<xref:System.Windows.Window>開始時期を実行します。 <xref:System.Windows.Application.Startup>次のコードに示すように、イベント ハンドラーが 1 つの場所がこれを行うことができます。  
   
- [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
+ [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
- [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
- [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
+ [!code-csharp[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml.cs#startupeventcodebehind)]
+ [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
 >  最初の<xref:System.Windows.Window>スタンドアロンのインスタンス化される、既定で、アプリケーションでアプリケーションのメイン ウィンドウになります。 これは、<xref:System.Windows.Window>によってオブジェクトが参照される、<xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType>プロパティ。 値、<xref:System.Windows.Application.MainWindow%2A>場合最初よりも、別のウィンドウにプロパティをプログラムで変更することができますをインスタンス化<xref:System.Windows.Window>メイン ウィンドウにする必要があります。  
   
  移動が多くの場合、XBAP を最初に起動するとき、<xref:System.Windows.Controls.Page>します。 これを次のコードに示します。  
   
- [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
+ [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
- [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
- [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
+ [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
+ [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
  処理する場合<xref:System.Windows.Application.Startup>のみ開く、<xref:System.Windows.Window>かに移動して、<xref:System.Windows.Controls.Page>を設定することができます、`StartupUri`マークアップ属性の代わりにします。  
   
  次の例は、使用する方法を示します、<xref:System.Windows.Application.StartupUri%2A>開くためのスタンドアロン アプリケーションから、<xref:System.Windows.Window>します。  
   
- [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
+ [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
  次の例は、使用する方法を示します<xref:System.Windows.Application.StartupUri%2A>XBAP に移動しますから、<xref:System.Windows.Controls.Page>します。  
   
- [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
+ [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  このマークアップは、ウィンドウを開くことについて、前のコードと同じ効果があります。  
   
 > [!NOTE]
->  ナビゲーションの詳細については、次を参照してください。[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)します。  
+>  ナビゲーションの詳細については、次を参照してください。[ナビゲーションの概要](navigation-overview.md)します。  
   
  処理する必要がある、<xref:System.Windows.Application.Startup>を開くイベント、<xref:System.Windows.Window>既定以外のコンス トラクターを使用してインスタンス化する必要があるまたはそのプロパティを設定または表示するには、前に、そのイベントをサブスクライブする必要があるコマンドライン引数を処理する必要がある場合ですアプリケーションを起動したときに指定されました。  
   
@@ -184,14 +184,14 @@ ms.locfileid: "56748103"
   
  WPF、アプリケーションの初期化中に、オペレーティング システムからコマンドライン引数を取得およびコマンドを渡し、<xref:System.Windows.Application.Startup>イベント ハンドラーを使用して、<xref:System.Windows.StartupEventArgs.Args%2A>のプロパティ、<xref:System.Windows.StartupEventArgs>パラメーター。 次のようなコードを使用して、コマンド ライン引数を取得し、格納することができます。  
   
- [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
+ [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
- [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
- [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
+ [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
+ [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
  コード ハンドル<xref:System.Windows.Application.Startup>を確認するかどうか、 **/StartMinimized**コマンドライン引数が指定されました。 メイン ウィンドウに開いた場合は、を<xref:System.Windows.WindowState>の<xref:System.Windows.WindowState.Minimized>します。 ため、<xref:System.Windows.Window.WindowState%2A>プロパティ プログラムでは、メイン<xref:System.Windows.Window>コードで明示的に開く必要があります。  
   
- Xbap は取得できず、ClickOnce 配置を使用して起動するためにコマンドライン引数を処理 (を参照してください[WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md))。 ただし、起動に使用される URL のクエリ文字列パラメーターを取得して処理することはできます。  
+ Xbap は取得できず、ClickOnce 配置を使用して起動するためにコマンドライン引数を処理 (を参照してください[WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md))。 ただし、起動に使用される URL のクエリ文字列パラメーターを取得して処理することはできます。  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>アプリケーションのアクティブ化と非アクティブ化  
@@ -213,10 +213,10 @@ ms.locfileid: "56748103"
   
  次のコードを処理する方法を示しています、<xref:System.Windows.Application.Activated>と<xref:System.Windows.Application.Deactivated>アプリケーションがアクティブかどうかを確認するイベントです。  
   
- [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
+ [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
- [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
- [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
+ [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
+ [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
  A<xref:System.Windows.Window>アクティブおよび非アクティブ化できるはもします。 詳細については、「<xref:System.Windows.Window.Activated?displayProperty=nameWithType>」および「<xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>」を参照してください。  
   
@@ -251,12 +251,12 @@ ms.locfileid: "56748103"
   
  既定値<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnLastWindowClose>アプリケーションに自動的にシャット ダウン、ユーザーがアプリケーションの最後のウィンドウを閉じたときのことを意味します。 ただし場合は、アプリケーションはメイン ウィンドウが閉じられたときに、シャット ダウンする必要があります、WPF が自動的を設定した場合<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。 これを次の例に示します。  
   
- [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
+ [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
  設定するときに、アプリケーション固有のシャット ダウン条件がある場合は、<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnExplicitShutdown>します。 明示的に呼び出すことによって、アプリケーションをシャット ダウンする必要がここで、<xref:System.Windows.Application.Shutdown%2A>メソッドです。 それ以外の場合、アプリケーションが引き続きすべてのウィンドウを閉じた場合でも実行します。 なお<xref:System.Windows.Application.Shutdown%2A>暗黙的にすると呼び出されます、<xref:System.Windows.Application.ShutdownMode%2A>か<xref:System.Windows.ShutdownMode.OnLastWindowClose>または<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> XBAP から設定できますが、無視されます。ブラウザーまたは XBAP をホストするブラウザーが閉じられたときから移動、ときに、常に、XBAP はシャット ダウンです。 詳細については、「[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)」を参照してください。  
+>  <xref:System.Windows.Application.ShutdownMode%2A> XBAP から設定できますが、無視されます。ブラウザーまたは XBAP をホストするブラウザーが閉じられたときから移動、ときに、常に、XBAP はシャット ダウンです。 詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
   
 #### <a name="session-ending"></a>セッションの終了  
  によって記述されるシャット ダウン条件、<xref:System.Windows.Application.ShutdownMode%2A>プロパティは、アプリケーションに固有です。 ただし、場合によっては、アプリケーションは、外部条件の結果としてシャットダウンすることもあります。 最も一般的な外部条件は、ユーザーは、次の操作を Windows セッションを終了したときに発生します。  
@@ -271,10 +271,10 @@ ms.locfileid: "56748103"
   
  Windows セッションが終了を検出するには、処理、<xref:System.Windows.Application.SessionEnding>イベントは、次の例に示すようにします。  
   
- [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
+ [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
- [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
- [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
+ [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
+ [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
  この例で、コードの検査、 <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> Windows セッションが終了する方法を決定するプロパティ。 この値を使用して、ユーザーに確認メッセージを表示します。 ユーザーがセッションの終了をしない場合、コードが設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>に`true`Windows セッションを終了に防ぐためにします。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "56748103"
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- 完全な例では、次を参照してください。[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](../../../../docs/framework/wpf/app-development/persist-and-restore-application-scope-properties.md)します。  
+ 完全な例では、次を参照してください。[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)します。  
   
  <xref:System.Windows.Application.Exit> スタンドアロン アプリケーションと Xbap の両方で処理できます。 Xbap の<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
   
@@ -311,8 +311,8 @@ ms.locfileid: "56748103"
   
  終了コードを変更するを呼び出すことができます、<xref:System.Windows.Application.Shutdown%28System.Int32%29>整数の引数の終了コードを受け取る、オーバー ロードします。  
   
- [!code-csharp[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
- [!code-vb[ApplicationExitSnippets#AppExitCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
+ [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
+ [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
  終了コードの値を検出して処理することにより、変更、<xref:System.Windows.Application.Exit>イベント。 <xref:System.Windows.Application.Exit>イベント ハンドラーに渡される、<xref:System.Windows.ExitEventArgs>の終了コードへのアクセスを提供する、<xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A>プロパティ。 詳細については、「 <xref:System.Windows.Application.Exit> 」を参照してください。  
   
@@ -323,7 +323,7 @@ ms.locfileid: "56748103"
 ### <a name="unhandled-exceptions"></a>未処理の例外  
  ときには、アプリケーションは、予期しない例外がスローされたときなど、異常な条件下でシャットダウンすることがあります。 この場合、アプリケーションには、例外を検出して処理するためのコードがありません。 この種類の例外は、未処理の例外と呼ばれます。アプリケーションが閉じられる前に、次の図に示されているような通知が表示されます。  
   
- ![Unhandled exception notification](../../../../docs/framework/wpf/app-development/media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Unhandled exception notification](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
   
  ユーザー エクスペリエンスの観点から、アプリケーションは、次のいずれか、またはすべてを行うことによって、この既定の動作を回避することをお勧めします。  
   
@@ -337,8 +337,8 @@ ms.locfileid: "56748103"
   
 [!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
-[!code-csharp[code-to-detect-unhandled-exceptions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
-[!code-vb[code-to-detect-unhandled-exceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
+[!code-csharp[code-to-detect-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
+[!code-vb[code-to-detect-unhandled-exceptions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
  <xref:System.Windows.Application.DispatcherUnhandledException>イベント ハンドラーに渡される、<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs>例外自体を含め、未処理の例外に関するコンテキスト情報を含むパラメーター (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>)。 この情報を使用して、例外の処理方法を決定できます。  
   
@@ -350,17 +350,17 @@ ms.locfileid: "56748103"
 ### <a name="application-lifetime-events"></a>アプリケーションの有効期間イベント  
  Xbap のスタンドアロン アプリケーションとまったく同じ有効期間はありません。 次の図は、スタンドアロン アプリケーションの有効期間中の主なイベントと発生順を示しています。  
   
- ![スタンドアロン アプリケーション - アプリケーション オブジェクト イベント](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
+ ![スタンドアロン アプリケーション - アプリケーション オブジェクト イベント](./media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
  同様に、次の図は、XBAP の有効期間における主なイベントを示していて、発生するシーケンスを示しています。  
   
- ![XBAP - アプリケーション オブジェクト イベント](../../../../docs/framework/wpf/app-development/media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
+ ![XBAP - アプリケーション オブジェクト イベント](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Application>
-- [WPF ウィンドウの概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)
-- [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)
-- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
-- [WPF におけるパッケージの URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+- [WPF ウィンドウの概要](wpf-windows-overview.md)
+- [ナビゲーションの概要](navigation-overview.md)
+- [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)
+- [WPF におけるパッケージの URI](pack-uris-in-wpf.md)
 - [アプリケーション モデル:操作方法に関するトピック](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [アプリケーションの開発](../../../../docs/framework/wpf/app-development/index.md)
+- [アプリケーションの開発](index.md)

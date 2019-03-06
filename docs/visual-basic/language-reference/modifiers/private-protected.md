@@ -4,16 +4,16 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 70f725712d52ad055ff69046096da10b8edfb67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701145"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376391"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
-キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 A`Private Protected`メンバーがアクセスできるは、外側のクラスから派生した型と、含まれるクラスのすべてのメンバーによっては、含んでいるアセンブリが見つかった場合にのみです。 
+キーワード組み合わせ `Private Protected` はメンバー アクセス修飾子です。 A`Private Protected`メンバーがアクセスできるは、外側のクラスから派生した型と、含まれるクラスのすべてのメンバーによっては、含んでいるアセンブリが見つかった場合にのみです。
 
 指定できます`Private Protected`クラスのメンバーにのみ適用することはできません`Private Protected`構造体のメンバーに構造体は継承できないためです。
 
@@ -39,33 +39,33 @@ ms.locfileid: "54701145"
 - **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 基本クラスから派生し、同じアセンブリに含まれているすべてのクラスでコードがすべてにアクセスできる、`Private Protected`基底クラスの要素。 基本クラスを基底クラスから派生し、別のアセンブリに含まれているすべてのクラスでのコードでアクセスできませんただし、`Private Protected`要素。
 
 - **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。
-  
- `Private Protected` 修飾子は、次のコンテキストで使用できます。  
-  
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)の入れ子になったクラス  
-  
- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)デリゲートのクラスで入れ子になった  
-  
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)eumeration のクラスで入れ子になった 
-  
- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)インターフェイスのクラスで入れ子になった 
-  
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md)クラスで入れ子になった構造体 
-  
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+`Private Protected` 修飾子は、次のコンテキストで使用できます。
+
+- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)の入れ子になったクラス
+
+- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)デリゲートのクラスで入れ子になった
+
+- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)列挙型のクラスで入れ子になった
+
+- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)インターフェイスのクラスで入れ子になった
+
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md)クラスで入れ子になった構造体
+
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>関連項目
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

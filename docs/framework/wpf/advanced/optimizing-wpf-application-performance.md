@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 45618e6180cbe0206eb120fc71726d0b8de5f06d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1dd2587fb3642fb930fb7d5d6855a6e48c2ad2b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511589"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356391"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF アプリケーションのパフォーマンスの最適化
 このセクションへの参照[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション開発者がアプリケーションのパフォーマンスを向上させる方法を探しています。 Microsoft .NET Framework で新しく導入した開発者のかどうかと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、両方のプラットフォームで自分で最初理解する必要があります。 ここでは、両方の実用的な知識を前提としていて、既に起動して実行して、アプリケーションを十分に把握するプログラマが書き込まれます。  
@@ -21,44 +21,44 @@ ms.locfileid: "54511589"
 >  このセクションで提供されるパフォーマンス データがに基づいて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]RAM と、ATI Radeon 9700 を 512 2.8 GHz の PC で実行されているアプリケーションのグラフィックス カード。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
+ [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)  
   
- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)  
   
- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [レイアウトとデザイン](optimizing-performance-layout-and-design.md)  
   
- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)  
   
- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [オブジェクトの動作](optimizing-performance-object-behavior.md)  
   
- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [アプリケーション リソース](optimizing-performance-application-resources.md)  
   
- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [データ バインディング](optimizing-performance-data-binding.md)  
   
- [コントロール](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)  
+ [コントロール](optimizing-performance-controls.md)  
   
- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)  
+ [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)  
   
- [アプリケーションの起動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
+ [アプリケーションの起動時間](application-startup-time.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
-- [グラフィックスの描画層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
-- [WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
-- [DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [書式設定されたテキストの描画](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
-- [WPF のタイポグラフィ](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)
-- [アニメーションのヒントとテクニック](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
-- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [グラフィックスの描画層](graphics-rendering-tiers.md)
+- [WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [レイアウト](layout.md)
+- [WPF のツリー](trees-in-wpf.md)
+- [Drawing オブジェクトの概要](../graphics-multimedia/drawing-objects-overview.md)
+- [DrawingVisual オブジェクトの使用](../graphics-multimedia/using-drawingvisual-objects.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [Freezable オブジェクトの概要](freezable-objects-overview.md)
+- [XAML リソース](xaml-resources.md)
+- [WPF のドキュメント](documents-in-wpf.md)
+- [書式設定されたテキストの描画](drawing-formatted-text.md)
+- [WPF のタイポグラフィ](typography-in-wpf.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [ナビゲーションの概要](../app-development/navigation-overview.md)
+- [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)
+- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)

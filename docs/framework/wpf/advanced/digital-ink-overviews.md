@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
-ms.openlocfilehash: 0793e1b500449b2da0442e306aba9deb8e719a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536107"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355754"
 ---
 # <a name="digital-ink-overviews"></a>デジタル インクの概要
 ## <a name="in-this-section"></a>このセクションの内容  
- [インクの概要](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [インクの収集](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [手書き認識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [インクの格納](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [インク オブジェクト モデル: Windows フォームおよび COM と WPF の比較](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [高度なインク処理](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [インクの概要](getting-started-with-ink.md)  
+  [インクの収集](collecting-ink.md)  
+  [手書き認識](handwriting-recognition.md)  
+  [インクの格納](storing-ink.md)  
+  [インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [高度なインク処理](advanced-ink-handling.md)

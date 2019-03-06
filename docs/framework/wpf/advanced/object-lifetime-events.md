@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555363"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371490"
 ---
 # <a name="object-lifetime-events"></a>オブジェクトの有効期間イベント
 このトピックでは、オブジェクトの有効期間における作成、使用、破棄のステージを示す特定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントについて説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "54555363"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)」というトピックを読んでいることを前提としています。 このトピックの例を理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] について理解し (「[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)」を参照)、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法を理解していることも必要です。  
+ このトピックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](dependency-properties-overview.md)」というトピックを読んでいることを前提としています。 このトピックの例を理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] について理解し (「[XAML の概要 (WPF)](xaml-overview-wpf.md)」を参照)、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法を理解していることも必要です。  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>オブジェクトの有効期間イベント  
@@ -68,12 +68,12 @@ ms.locfileid: "54555363"
 ## <a name="lifetime-events-application-model-elements"></a>有効期間イベント アプリケーション モデルの要素  
  要素は、次のアプリケーション モデル要素の一般的な有効期間イベントの構築: <xref:System.Windows.Application>、 <xref:System.Windows.Window>、 <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Navigation.NavigationWindow>、および<xref:System.Windows.Controls.Frame>します。 これらの要素は、共通の有効期間イベントを拡張して、特定の目的に関連するイベントを追加します。 これらの詳細については、次のトピックで説明しています。  
   
--   <xref:System.Windows.Application>:[アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)します。  
+-   <xref:System.Windows.Application>:[アプリケーション管理の概要](../app-development/application-management-overview.md)します。  
   
--   <xref:System.Windows.Window>:[WPF Windows 概要](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)します。  
+-   <xref:System.Windows.Window>:[WPF Windows 概要](../app-development/wpf-windows-overview.md)します。  
   
--   <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Navigation.NavigationWindow>、および<xref:System.Windows.Controls.Frame>:[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)します。  
+-   <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Navigation.NavigationWindow>、および<xref:System.Windows.Controls.Frame>:[ナビゲーションの概要](../app-development/navigation-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [依存関係プロパティ値の優先順位](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)
+- [ルーティング イベントの概要](routed-events-overview.md)

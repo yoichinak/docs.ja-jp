@@ -6,20 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359615"
 ---
 # <a name="base-elements"></a>基本要素
-4 つの主要クラス--<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>--WPF プログラミングで使用できる共通の要素の機能の大きな割合を実装します。 これら 4 つのクラスをいいますこの SDK で要素の基本クラスです。  
+4 つの主要クラス--<xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>--WPF プログラミングで使用可能な要素の共通の機能の大きな割合を実装します。 これら 4 つクラスは、基本要素クラスとしてに、この SDK で呼ばれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [基本要素の概要](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [基本要素の概要](base-elements-overview.md)  
+ [Freezable オブジェクトの概要](freezable-objects-overview.md)  
+ [配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)  
+ [方法トピック](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.UIElement>  
@@ -31,12 +32,12 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF の XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [プロパティ](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [イベント](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [入力](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [リソース](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF アーキテクチャ](wpf-architecture.md)  
+  [WPF の XAML](xaml-in-wpf.md)  
+  [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+  [Properties](properties-wpf.md)  
+  [イベント](events-wpf.md)  
+  [入力](input-wpf.md)  
+  [リソース](resources-wpf.md)  
+  [スタイルとテンプレート](../controls/styling-and-templating.md)  
+  [スレッド モデル](threading-model.md)

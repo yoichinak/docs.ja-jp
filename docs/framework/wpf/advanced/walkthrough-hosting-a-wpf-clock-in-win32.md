@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 5cccc89c8346358bc4f719e1b089a181dd81f970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58d7e5848ccd62b889b8a7645c08a35822b3352
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579772"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352725"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>チュートリアル: Win32 での WPF クロックのホスト
 配置する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーションに、<xref:System.Windows.Interop.HwndSource>を含む HWND を提供する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 最初に作成、 <xref:System.Windows.Interop.HwndSource>CreateWindow のようなパラメーターを指定します。  わかり、<xref:System.Windows.Interop.HwndSource>について、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内するコンテンツ。  最後に、out の HWND を取得する、<xref:System.Windows.Interop.HwndSource>します。 このチュートリアルは、混合を作成する方法を示しています。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]オペレーティング システムを reimplements アプリケーション**日付と時刻のプロパティ**ダイアログ。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
- 参照してください[WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)します。  
+ 参照してください[WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)します。  
   
 ## <a name="how-to-use-this-tutorial"></a>このチュートリアルを使用する方法  
  このチュートリアルは相互運用アプリケーションの作成の重要な手順に重点を置いて説明します。 このチュートリアルはサンプルについては、によって支えられて[Win32 クロックの相互運用性サンプル](https://go.microsoft.com/fwlink/?LinkID=160051)が、そのサンプルは、最終的な製品の反射します。 既存の開始された場合、このチュートリアル手順について説明[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]独自のプロジェクトや既存のプロジェクトなどをホストされた追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションにします。 最終的な製品を比較する[Win32 クロックの相互運用性サンプル](https://go.microsoft.com/fwlink/?LinkID=160051)します。  
@@ -25,11 +25,11 @@ ms.locfileid: "54579772"
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 内部の Windows Presentation Framework のチュートリアル (HwndSource)  
  次の図は、このチュートリアルの目的の最終製品を示します。  
   
- ![日付と時刻のプロパティ ダイアログ ボックス](../../../../docs/framework/wpf/advanced/media/interoparch06.PNG "InteropArch06")  
+ ![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch06.PNG "InteropArch06")  
   
  C++ を作成してこのダイアログ ボックスを再作成できます[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プロジェクト[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、ダイアログ エディターを使用して、次を作成するとします。  
   
- ![日付と時刻のプロパティ ダイアログ ボックス](../../../../docs/framework/wpf/advanced/media/interoparch07.PNG "InteropArch07")  
+ ![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch07.PNG "InteropArch07")  
   
  (を使用する必要はありません[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]を使用する<xref:System.Windows.Interop.HwndSource>、C++ を使用して記述する必要はありません[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]、これを行う非常に典型的な方法であり、プログラムが、このステップ チュートリアルについてにも適しています)。  
   
@@ -213,19 +213,19 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  マークアップを次に示します。  
   
- [!code-xaml[Win32Clock#AllClockXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
+ [!code-xaml[Win32Clock#AllClockXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml#allclockxaml)]  
   
  付随する分離コードを次に示します。  
   
- [!code-csharp[Win32Clock#AllClockCS](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
+ [!code-csharp[Win32Clock#AllClockCS](~/samples/snippets/csharp/VS_Snippets_Wpf/Win32Clock/CS/Clock.xaml.cs#allclockcs)]  
   
  最終的な結果は、ようになります。  
   
- ![日付と時刻のプロパティ ダイアログ ボックス](../../../../docs/framework/wpf/advanced/media/interoparch08.PNG "InteropArch08")  
+ ![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch08.PNG "InteropArch08")  
   
  このスクリーン ショットを生成するコードに、最終結果を比較するを参照してください。 [Win32 クロックの相互運用性サンプル](https://go.microsoft.com/fwlink/?LinkID=160051)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
 - [Win32 相互運用のクロックのサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)

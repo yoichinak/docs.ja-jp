@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 619f10b36aa55813824483c386b59778fd756118
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551238"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376222"
 ---
 # <a name="listview"></a>ListView
-<xref:System.Windows.Controls.ListView>コントロールには、さまざまなレイアウトまたはビューにデータ項目のセットを表示するためのインフラストラクチャが用意されています。  
+<xref:System.Windows.Controls.ListView>コントロールには、さまざまなレイアウトやビューにデータ項目のセットを表示するインフラストラクチャが用意されています。  
   
- 次の図は、<xref:System.Windows.Controls.ListView>です。  
+ 次の図は、<xref:System.Windows.Controls.ListView>します。  
   
- ![GridView 出力を含む ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![GridView 出力を含む ListView](./media/listviewgridview.JPG "ListViewGridView")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [概要](../../../../docs/framework/wpf/controls/listview-overviews.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [概要](listview-overviews.md)  
+ [方法トピック](listview-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ListView>  
@@ -31,5 +31,5 @@ ms.locfileid: "33551238"
   <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>関連項目  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [データ バインディングの概要](../data/data-binding-overview.md)  
+  [データ テンプレートの概要](../data/data-templating-overview.md)

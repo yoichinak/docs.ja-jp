@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710769"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362904"
 ---
 # <a name="xaml-in-wpf"></a>WPF の XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 宣言型のアプリケーション用のマークアップ言語のプログラミングです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML プロセッサの実装を実装し、XAML 言語のサポートを提供します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]バッキング XAML 表現を必要な型を提供する型が実装されます。 一般の大部分を作成することができます、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML マークアップでアプリケーションの UI。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [WPF における分離コードと XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [WPF における XAML とカスタム クラス](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XAML 名前空間および WPF XAML の名前空間の割り当て](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [WPF XAML 名前スコープ](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [インライン スタイルおよびテンプレート](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [空白 XAML での処理](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverters および XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XML 文字エンティティと XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XAML 名前空間 (x:) 言語機能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 拡張機能](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [マークアップの互換性 (mc:) 言語機能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [XAML の概要 (WPF)](xaml-overview-wpf.md)  
+ [XAML 構文の詳細](xaml-syntax-in-detail.md)  
+ [WPF における分離コードと XAML](code-behind-and-xaml-in-wpf.md)  
+ [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)  
+ [マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)  
+ [XAML 名前空間および WPF XAML の名前空間の割り当て](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [WPF XAML 名前スコープ](wpf-xaml-namescopes.md)  
+ [インライン スタイルおよびテンプレート](inline-styles-and-templates.md)  
+ [空白 XAML での処理](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverters および XAML](typeconverters-and-xaml.md)  
+ [XML 文字エンティティと XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML 拡張機能](wpf-xaml-extensions.md)  
+ [マークアップの互換性 (mc:)言語機能](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [基本要素](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [プロパティ](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [イベント](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [入力](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [リソース](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF アーキテクチャ](wpf-architecture.md)  
+  [基本要素](base-elements.md)  
+  [要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+  [Properties](properties-wpf.md)  
+  [イベント](events-wpf.md)  
+  [入力](input-wpf.md)  
+  [リソース](resources-wpf.md)  
+  [スタイルとテンプレート](../controls/styling-and-templating.md)  
+  [スレッド モデル](threading-model.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 73d854d601de05c2cb7dd6063e4a5f2907b09f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578667"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372829"
 ---
 # <a name="base-elements-overview"></a>基本要素の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のクラスの大部分は、[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] のドキュメントで一般に基本要素クラスと呼ばれている 4 つのクラスから派生しています。 これらのクラスは<xref:System.Windows.UIElement>、 <xref:System.Windows.FrameworkElement>、 <xref:System.Windows.ContentElement>、および<xref:System.Windows.FrameworkContentElement>します。 <xref:System.Windows.DependencyObject>クラスも関連が、両方の共通基本クラスであるため<xref:System.Windows.UIElement>と <xref:System.Windows.ContentElement>  
@@ -26,7 +26,7 @@ ms.locfileid: "54578667"
 ## <a name="choosing-which-element-to-derive-from"></a>派生元の要素を選択する  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を拡張したカスタム クラスを作成するための最も実際的な方法は、既存のクラス階層から必要な機能を可能な限り得ることのできる、いずれかの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスから派生させることです。 このセクションでは、継承元とするクラスの選択に役立つように、最も重要な要素クラスのうちの 3 つのクラスが提供する機能を示します。  
   
- コントロールを実装する場合はから派生させるための一般的な理由の 1 つは実際に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]クラス、おそらくするまたはで実用的なコントロール、コントロール ファミリ基底クラスであるクラスから派生から少なくとも、<xref:System.Windows.Controls.Control>基本クラス。 いくつかのガイドラインと実際の例については、「[コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)」を参照してください。  
+ コントロールを実装する場合はから派生させるための一般的な理由の 1 つは実際に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]クラス、おそらくするまたはで実用的なコントロール、コントロール ファミリ基底クラスであるクラスから派生から少なくとも、<xref:System.Windows.Controls.Control>基本クラス。 いくつかのガイドラインと実際の例については、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
  コントロールを作成しているのではなく、階層の上位にあるクラスから派生する必要がある場合は、各基本要素クラスに定義された特性に関するガイドを意図した、以下のセクションを参照してください。  
   
@@ -38,57 +38,57 @@ ms.locfileid: "54578667"
   
  派生したクラスを作成する場合<xref:System.Windows.UIElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.DependencyObject>:  
   
--   アニメーション化されたプロパティ値の基本的なサポート。 詳しくは、「 [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」をご覧ください。  
+-   アニメーション化されたプロパティ値の基本的なサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
--   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)」および「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。  
+-   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
   
 -   レイアウト システムに情報を提供するためにオーバーライドできる仮想メソッド。  
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.UIElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)します。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
   
--   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」をご覧ください。  
+-   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
--   動的リソース参照のサポート。 詳細については、「[XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)」を参照してください。  
+-   動的リソース参照のサポート。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。  
   
--   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)」を参照してください。  
+-   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
   
--   論理ツリーの概念。 詳細については、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」を参照してください。  
+-   論理ツリーの概念。 詳細については、「[WPF のツリー](trees-in-wpf.md)」を参照してください。  
   
 -   レイアウト システムの実際的な WPF フレームワーク レベルの実装のサポートなど、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>を検出する上書きのプロパティにその影響を与えるレイアウト変更します。  
   
  派生したクラスを作成する場合<xref:System.Windows.ContentElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.DependencyObject>:  
   
--   アニメーションのサポート。 詳しくは、「 [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」をご覧ください。  
+-   アニメーションのサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
--   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)」および「[コマンド実行の概要](../../../../docs/framework/wpf/advanced/commanding-overview.md)」を参照してください。  
+-   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkContentElement>、それに加えてによって提供される次の機能を取得する<xref:System.Windows.ContentElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)します。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
   
--   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」をご覧ください。  
+-   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
--   動的リソース参照のサポート。 詳しくは、「[XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)」を参照してください。  
+-   動的リソース参照のサポート。 詳しくは、「[XAML リソース](xaml-resources.md)」を参照してください。  
   
--   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)」を参照してください。  
+-   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
   
 -   レイアウト システムの変更へのアクセスは継承しません (など<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 使用可能なレイアウト システムの実装は<xref:System.Windows.FrameworkElement>します。 ただし、継承、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>レイアウトに影響を与えるし、コンテンツ ホストに報告されるプロパティの変更を検出できるオーバーライドします。  
   
- さまざまなクラスに関してコンテンツ モデルがドキュメント化されています。 派生元として適切なクラスを見つける必要がある場合、クラスのコンテンツ モデルは、考慮する必要がある項目の候補の 1 つです。 詳細については、「[WPF のコンテンツ モデル](../../../../docs/framework/wpf/controls/wpf-content-model.md)」を参照してください。  
+ さまざまなクラスに関してコンテンツ モデルがドキュメント化されています。 派生元として適切なクラスを見つける必要がある場合、クラスのコンテンツ モデルは、考慮する必要がある項目の候補の 1 つです。 詳細については、「[WPF のコンテンツ モデル](../controls/wpf-content-model.md)」を参照してください。  
   
 <a name="other_base_classes"></a>   
 ## <a name="other-base-classes"></a>他の基本クラス  
   
 ### <a name="dispatcherobject"></a>DispatcherObject  
- <xref:System.Windows.Threading.DispatcherObject> サポートを提供します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]スレッド モデルとのすべてのオブジェクトが作成できるように[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションに関連付けられる、<xref:System.Windows.Threading.Dispatcher>します。 派生していない場合でも<xref:System.Windows.UIElement>、 <xref:System.Windows.DependencyObject>、または<xref:System.Windows.Media.Visual>から派生することを検討する必要があります<xref:System.Windows.Threading.DispatcherObject>このスレッド処理モデルのサポートを取得するためにします。 詳細については、「[スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)」を参照してください。  
+ <xref:System.Windows.Threading.DispatcherObject> サポートを提供します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]スレッド モデルとのすべてのオブジェクトが作成できるように[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションに関連付けられる、<xref:System.Windows.Threading.Dispatcher>します。 派生していない場合でも<xref:System.Windows.UIElement>、 <xref:System.Windows.DependencyObject>、または<xref:System.Windows.Media.Visual>から派生することを検討する必要があります<xref:System.Windows.Threading.DispatcherObject>このスレッド処理モデルのサポートを取得するためにします。 詳細については、「[スレッド モデル](threading-model.md)」を参照してください。  
   
 ### <a name="visual"></a>ビジュアル  
- <xref:System.Windows.Media.Visual> 四角形のビジュアル プレゼンテーションを必要とする 2D オブジェクトの概念を実装します。 実際のレンダリングを<xref:System.Windows.Media.Visual>(自己完結型はありません) 他のクラスで行われますが、<xref:System.Windows.Media.Visual>クラスには、レンダリング プロセスのさまざまなレベルで使用される既知の型が用意されています。 <xref:System.Windows.Media.Visual> ヒット テストの実装が、ヒット テストの結果を報告するイベントは公開されません (これらはで<xref:System.Windows.UIElement>)。 詳細については、「[ビジュアル層のプログラミング](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming.md)」を参照してください。  
+ <xref:System.Windows.Media.Visual> 四角形のビジュアル プレゼンテーションを必要とする 2D オブジェクトの概念を実装します。 実際のレンダリングを<xref:System.Windows.Media.Visual>(自己完結型はありません) 他のクラスで行われますが、<xref:System.Windows.Media.Visual>クラスには、レンダリング プロセスのさまざまなレベルで使用される既知の型が用意されています。 <xref:System.Windows.Media.Visual> ヒット テストの実装が、ヒット テストの結果を報告するイベントは公開されません (これらはで<xref:System.Windows.UIElement>)。 詳細については、「[ビジュアル層のプログラミング](../graphics-multimedia/visual-layer-programming.md)」を参照してください。  
   
 ### <a name="freezable"></a>Freezable  
- <xref:System.Windows.Freezable> 変更できないオブジェクトが必要なまたはパフォーマンスのために必要なときに、オブジェクトのコピーを生成するための手段を提供することで、変更可能なオブジェクトの不変性をシミュレートします。 <xref:System.Windows.Freezable>型は、共通の基盤特定のジオメトリとブラシ、アニメーションなどのグラフィックス要素。 特に、<xref:System.Windows.Freezable>でない、 <xref:System.Windows.Media.Visual>; サブプロパティになるプロパティを保持できるときに、 <xref:System.Windows.Freezable> fill、別のオブジェクトのプロパティの値に適用され、これらのサブプロパティのレンダリングに影響する可能性があります。 詳細については、「[Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)」を参照してください。  
+ <xref:System.Windows.Freezable> 変更できないオブジェクトが必要なまたはパフォーマンスのために必要なときに、オブジェクトのコピーを生成するための手段を提供することで、変更可能なオブジェクトの不変性をシミュレートします。 <xref:System.Windows.Freezable>型は、共通の基盤特定のジオメトリとブラシ、アニメーションなどのグラフィックス要素。 特に、<xref:System.Windows.Freezable>でない、 <xref:System.Windows.Media.Visual>; サブプロパティになるプロパティを保持できるときに、 <xref:System.Windows.Freezable> fill、別のオブジェクトのプロパティの値に適用され、これらのサブプロパティのレンダリングに影響する可能性があります。 詳細については、「[Freezable オブジェクトの概要](freezable-objects-overview.md)」を参照してください。  
   
  <xref:System.Windows.Media.Animation.Animatable>  
   
@@ -99,6 +99,6 @@ ms.locfileid: "54578667"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Control>
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
-- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)
+- [コントロールの作成の概要](../controls/control-authoring-overview.md)
+- [WPF アーキテクチャ](wpf-architecture.md)
