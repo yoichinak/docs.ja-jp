@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490412"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField メソッド
 囲まれたフィールドの FieldDef にポインターをトークン取得を指定した<xref:System.Type>指定した名前とメタデータ シグネチャを持つとします。  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
  [in]クラスまたはインターフェイスを検索するフィールドを囲む TypeDef トークンです。 この値が場合`mdTokenNil`、グローバル変数の検索を実行します。  
   

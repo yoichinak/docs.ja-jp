@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bf3e5d427698673576f71e290fde54275b75317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f74d7fe7555f71db0bd77e68f657dfc80b179
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683457"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478961"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo メソッド
 名、行のサイズ、行の数、列の数と、指定したテーブルのキー列のインデックスを取得します。  
@@ -40,7 +40,7 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ixTbl`  
  [in]テーブルの識別子を返すプロパティを持つ。  
   

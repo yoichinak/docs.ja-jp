@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ffbd2bc3042f7e37e90dceeb28ec50b3c73cef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491972"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope メソッド
 既存のディスク上ファイルを開き、そのメタデータをメモリにマップされます。  
@@ -38,7 +38,7 @@ HRESULT OpenScope (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szScope`  
  [in]開かれるファイルの名前。 ファイルには、共通言語ランタイム (CLR) メタデータを含める必要があります。  
   

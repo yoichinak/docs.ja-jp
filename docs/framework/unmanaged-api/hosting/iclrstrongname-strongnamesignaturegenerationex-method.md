@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f677fb738e66bcce4cabb66524e6083164ea3ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8567e9a570a5c38edd8ffc77778f994667758cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602742"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482588"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx メソッド
 指定したフラグに基づいて、指定されたアセンブリの厳密な名前の署名を生成します。  
@@ -41,7 +41,7 @@ HRESULT StrongNameSignatureGenerationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
  [in]厳密な名前の署名を生成するアセンブリのマニフェストを含むファイルへのパス。  
   

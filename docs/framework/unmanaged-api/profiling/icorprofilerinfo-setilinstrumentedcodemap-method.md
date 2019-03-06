@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc13dc1348a6d397c86b03976c86c3595f749cf6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480066"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap メソッド
 指定された Microsoft intermediate language (MSIL) のマップ エントリを使用して、指定された関数のコード マップを設定します。  
@@ -40,7 +40,7 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `functionId`  
  [in]コード マップを設定する対象の関数の ID。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8d931b2f96045c53b895d7de5204e2d971b1c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561037"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479403"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib メソッド
 インターフェイス ポインターを取得、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)インスタンスの指定によって表されるタイプ ライブラリのメタデータ署名を表す`ITypeLib`インスタンス。  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pITL`  
  [in]ポインター、`ITypeLib`タイプ ライブラリを表すオブジェクト。  
   

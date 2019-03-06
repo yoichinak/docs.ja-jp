@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 770901d5461d2092ce5f2862624a038caf03e1f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81f27489d554b59101f1eb181ea64f6b68da979c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678663"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491907"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
 現在のプロセスに CLR をロードし、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)します。  
@@ -38,7 +38,7 @@ HRESULT GetInterface(
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `rclsid`  
  [in]コクラスの CLSID のインターフェイスです。  
   

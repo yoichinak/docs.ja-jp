@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e21273506e91c5ab69b1b0b4a52d6c0f72692dab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ca23cd58e36b62e471cc7b0b2d0aa743265c2f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712773"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482354"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps メソッド
-Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数など、型のプロパティに関する情報を返します。  
+Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数などの型のプロパティに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -25,7 +25,7 @@ HRESULT GetTypeProps(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tableRva`  
  [in] vtable の相対仮想アドレス (RVA)。  
   

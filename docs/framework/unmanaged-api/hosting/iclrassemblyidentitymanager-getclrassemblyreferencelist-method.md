@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595761"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479312"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList メソッド
 インターフェイス ポインターを取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)部分的なアセンブリ id の指定されたリストからのインスタンス。  
@@ -37,9 +37,9 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppwzAssemblyReferences`  
- [in]フォームでの null で終わる文字列の配列"プロパティの名前 = value…"部分的なアセンブリ id の一覧を指定します。  
+ [in]フォームでの null で終わる文字列の配列"プロパティの名前 = value…"部分的なアセンブリ id の一覧を指定するとします。  
   
  `dwNumOfReferences`  
  [in]内の項目数`ppwzAssemblyReferences`します。  

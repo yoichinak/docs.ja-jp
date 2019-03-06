@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262895d64b80ca5f382aad66d6cc6a4ca95b53c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519256"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499226"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread メソッド
 現在のスレッドを保持するロックの数を取得します。  
@@ -37,7 +37,7 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCount`  
  [out]現在のスレッドを保持するロックの数へのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 453a30680b7fe938e975778a43282e6a29b86c7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 498dd5f8242b4db29d2bb292e01001f9240e6fc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716298"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481002"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage メソッド
 指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。  
@@ -38,7 +38,7 @@ HRESULT StrongNameGetBlobFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbBase`  
  [in]マップされているアセンブリ マニフェストのメモリ アドレス。  
   

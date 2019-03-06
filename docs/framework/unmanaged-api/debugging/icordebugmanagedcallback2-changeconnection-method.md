@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a37d70b0e8675ad4edaf304e08e069073f76af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ff47576fb6a9d1f681aba1157efd63190b8dc23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499055"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491387"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection メソッド
 指定された接続に関連付けられているタスクのセットが変更されたことをデバッガーに通知します。  
@@ -36,7 +36,7 @@ HRESULT ChangeConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pProcess`  
  [in]変更された接続を含むプロセスを表す"ICorDebugProcess"オブジェクトへのポインター。  
   

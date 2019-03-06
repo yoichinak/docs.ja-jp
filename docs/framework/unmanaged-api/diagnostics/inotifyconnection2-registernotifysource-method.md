@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c08cac6fd6b467fe365989cb4d6780325bdaa90
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501618"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource メソッド
 指定された通知のソースをインストールします。  
@@ -37,7 +37,7 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `in_pNotifySource`  
  [in]通知のソースとして使用するオブジェクトを指定します。  
   

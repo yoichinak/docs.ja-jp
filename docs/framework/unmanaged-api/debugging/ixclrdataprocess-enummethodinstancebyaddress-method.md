@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d19a4b8116573f2ff6469fe612e7b7736651ff03
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 23b567e4119578fba2f8cd4ba47f66dcf56a3878
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354532"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496847"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress メソッド
 
@@ -37,7 +37,7 @@ HRESULT EnumMethodInstanceByAddress(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 `handle`\
 [in]メソッド インスタンスを列挙するためのハンドル。

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bd2f3b0c1d58528624ac730756fb3bcdf4ba47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1c8f5ea20d00d692e0eea0cba93ec4e73038e8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497445"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile メソッド
 指定されたファイル パスから、アセンブリの元の .NET Framework コンパイル バージョン (メタデータに格納されている) を取得します。 このメソッドは、 [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)関数。  
@@ -37,7 +37,7 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzFilePath`  
  [in]アセンブリの完全ファイル パス。  
   
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pwzbuffer` または `pcchBuffer` が null です。|  
+|E_POINTER|`pwzbuffer` または`pcchBuffer`が null です。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|バッファーが小さすぎます。|  
   
 ## <a name="requirements"></a>必要条件  

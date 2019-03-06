@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2ca00b660a9cbb408fd1175e94a4242dae5f1a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3cc2bb7cc18979f58a407e5e68e6f00e3439c14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523962"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481665"
 ---
 # <a name="iclrstrongnamegethashfromfilew-method"></a>ICLRStrongName::GetHashFromFileW メソッド
 Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。  
@@ -39,7 +39,7 @@ HRESULT GetHashFromFileW (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
  [in]ハッシュするファイルの Unicode の名前。  
   

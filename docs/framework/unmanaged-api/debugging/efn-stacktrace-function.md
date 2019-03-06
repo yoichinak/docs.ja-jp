@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3187809fadb275ed54a450f456d98d140d1100c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485888"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 関数
 マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
@@ -40,7 +40,7 @@ HRESULT CALLBACK _EFN_StackTrace(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Client`  
  [in]デバッグ中のクライアント。  
   

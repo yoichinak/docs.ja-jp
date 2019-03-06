@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5512c503d8b4048c613ab88c2b4d9d19cdbb9dca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580227"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479028"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
 現在のメタデータ スコープの指定したオプションの値を取得します。 オプションは、現在のメタデータ スコープへの呼び出しを処理する方法を制御します。  
@@ -36,7 +36,7 @@ HRESULT GetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `optionId`  
  [in]取得するオプションを指定する GUID へのポインター。 サポートされている Guid の一覧については、「解説」を参照してください。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f956ed33e0a168dca0c0e5de92d38ba32db3fb05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703459"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498953"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress メソッド
 このインターフェイスに関連付けられている共通言語ランタイム (CLR) からエクスポートされた、指定された関数のアドレスを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pszProcName`  
  [in]エクスポートされた関数の名前。  
   
@@ -50,7 +50,7 @@ HRESULT GetProcAddress(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pszProcName` または `ppProc` が null です。|  
+|E_POINTER|`pszProcName` または`ppProc`が null です。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|指定された関数は、エクスポートされた関数ではありません。|  
   
 ## <a name="remarks"></a>Remarks  

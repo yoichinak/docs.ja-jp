@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f05c6df415a92151783d805799da5bf7dfb6c7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ace278e0031d3e673418f50356f173c473a4832d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556104"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494325"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps メソッド
 設定または指定したフィールドのトークンによって参照されるフィールドの既定値を更新します。  
@@ -39,7 +39,7 @@ HRESULT SetFieldProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fd`  
  [in]対象フィールドのトークンです。  
   

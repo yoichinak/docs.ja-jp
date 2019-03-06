@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5ef73be22ea79d15ec53e8ab33c34441002acce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31b398080c1355441a35871d0685283783efcd52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732428"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501228"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress メソッド
 読み込まれたモジュールのベース アドレスを取得します。  
@@ -22,7 +22,7 @@ HRESULT GetBaseAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAddress`  
  [out] 読み込まれたモジュールのベース アドレスへのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ccc36231a2a554e523dbbef67996b7ad220cf2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5995eac780241b5d0a01b99b23ec91c2f325e2a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478805"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout メソッド
 指定したクラスで定義されるフィールドのメモリ内レイアウトに関する情報を取得します。 つまり、このメソッドはクラスのフィールドのオフセットを取得します。  
@@ -38,7 +38,7 @@ HRESULT GetClassLayout(
     [out] ULONG *pulClassSize);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `classID`  
  [in] レイアウトを取得するクラスの ID。  
   
@@ -49,15 +49,18 @@ HRESULT GetClassLayout(
  [in] `rFieldOffset` 配列のサイズ。  
   
  `pcFieldOffset`  
- [out] 使用できる要素の総数へのポインター。 `cFieldOffset` が 0 である場合、この値は必要な要素の数を示します。  
+ [out] 使用できる要素の総数へのポインター。 
+  `cFieldOffset` が 0 である場合、この値は必要な要素の数を示します。  
   
  `pulClassSize`  
  [out] クラスのサイズ (バイト単位) を含む位置へのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `GetClassLayout` メソッドは、クラス自体によって定義されているフィールドのみを返します。 クラスの親クラスもフィールドを定義している場合、プロファイラーは親クラスで `GetClassLayout` を呼び出してそのフィールドを取得する必要があります。  
+ 
+  `GetClassLayout` メソッドは、クラス自体によって定義されているフィールドのみを返します。 クラスの親クラスもフィールドを定義している場合、プロファイラーは親クラスで `GetClassLayout` を呼び出してそのフィールドを取得する必要があります。  
   
- `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 使用[icorprofilerinfo 2::getstringlayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)文字列のレイアウトに関する情報を取得します。 `GetClassLayout` は、配列クラスを使用して呼び出される場合も失敗します。  
+ 
+  `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 使用[icorprofilerinfo 2::getstringlayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)文字列のレイアウトに関する情報を取得します。 `GetClassLayout` は、配列クラスを使用して呼び出される場合も失敗します。  
   
  `GetClassLayout` から制御が戻ったら、`rFieldOffset` バッファーのサイズが十分で、すべての使用可能な `COR_FIELD_OFFSET` 構造体を格納できたかどうかを確認する必要があります。 これを行うには、`pcFieldOffset` が指している値と、`rFieldOffset` のサイズを `COR_FIELD_OFFSET` 構造体のサイズで割った値を比較します。 `rFieldOffset` の大きさが十分でない場合は、`rFieldOffset` バッファーの割り当てを増やし、`cFieldOffset` を新しい大きいサイズに更新して、`GetClassLayout` を再度呼び出します。  
   

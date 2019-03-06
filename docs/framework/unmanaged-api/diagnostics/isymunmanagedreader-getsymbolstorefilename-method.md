@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6199a0d0444f07c57e88d0369f192684755d301c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00eda9ddad65d6618f097a6ca48b5c7c0eba334
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705272"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481115"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName メソッド
 シンボル ストアのディスク上のファイル名を提供します。  
@@ -37,7 +37,7 @@ HRESULT GetSymbolStoreFileName (
         length_is (*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchName`  
  [in]サイズ、`szName`バッファー。  
   

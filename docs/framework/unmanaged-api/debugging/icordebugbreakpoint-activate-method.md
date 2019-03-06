@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82dad6af545464baade2b82d65e7ad4dba19fe3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491361"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate メソッド
-これのアクティブな状態を設定`ICorDebugBreakpoint`です。  
+このアクティブな状態を設定`ICorDebugBreakpoint`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ HRESULT Activate (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bActive`  
- [in]この値を設定`true`としてアクティブになった状態を指定するそれ以外の場合、この値を設定`false`です。  
+ [in]この値に設定`true`; アクティブな状態を指定する場合は、この値に設定`false`。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

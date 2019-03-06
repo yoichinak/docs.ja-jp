@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9987640f988f2239a01d2dfdbcd6b1684579d8bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7b336d1372bdbe0d6dbdcf79d94e14c30ad2ebe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601508"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497341"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 関数
 Authenticode XrML ライセンスにタイム スタンプを付けます。  
@@ -30,7 +30,7 @@ HRESULT CertTimestampAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pSignedLicenseBlob`  
  [in] タイム スタンプが付けられる、署名付きの Authenticode XrML ライセンス。 参照してください、 [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob)構造体。  
   

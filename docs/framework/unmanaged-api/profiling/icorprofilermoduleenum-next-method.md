@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc33936735c40e2f30189066d80444b9fcb075ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b16a351897b06db74602f1d5b097acd7e03425e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671890"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494247"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next メソッド
 モジュールのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。  
@@ -36,7 +36,7 @@ HRESULT Next([in]  ULONG      celt,
              [out] ULONG *   pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in] 取得するモジュールの数。  
   
@@ -52,7 +52,8 @@ HRESULT Next([in]  ULONG      celt,
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`celt` 要素が返されました。|  
-|S_FALSE|`celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
+|S_FALSE|
+  `celt` よりも少ない数の要素が返されました。これは、列挙が完了したことを示します。|  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c92bd83c9a2bd03e9e2187cd8d9ff87af87678
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d3712b9a2100d4efcefe691d68989a1971b045d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521323"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488419"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager メソッド
 ホストは、共通言語ランタイム (CLR) の構成に使用できる、マネージャーの種類のいずれかのインスタンスへのインターフェイス ポインターを取得します。  
@@ -36,7 +36,7 @@ HRESULT GetCLRManager (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `riid`  
  [in]`IID`のマネージャーの種類を返します。 次`IID`値がサポートされています。  
   

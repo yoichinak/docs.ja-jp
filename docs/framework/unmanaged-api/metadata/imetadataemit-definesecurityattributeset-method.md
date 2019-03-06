@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43009a81298fa5414df94e0664306859f0c9b851
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478741"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet メソッド
 指定したトークンによって参照されるオブジェクトにアタッチするセキュリティ権限のセットを作成します。  
@@ -38,7 +38,7 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tkObj`  
  [in]セキュリティ情報が接続されているトークンです。  
   

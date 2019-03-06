@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3080196076aefbee6bb484063994abe54eb3f53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0387b84f8d32831b79dd6c361bcdbb78f8bbba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499491"
 ---
 # <a name="icordebugvariablehomegetlocationtype-method"></a>ICorDebugVariableHome::GetLocationType メソッド
 変数のネイティブの場所の種類を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetLocationType(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pLocationType`  
  [out]変数のネイティブの場所の種類へのポインター。  参照してください、 [VariableLocationType](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)詳細情報を列挙します。  
   

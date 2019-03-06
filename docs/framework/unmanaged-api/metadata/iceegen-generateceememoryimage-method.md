@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44862b96d882686bef0cc37e37252d0b7b1551e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b70bc4bd570829e3490f2171edd064437c263eb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737820"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496899"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage メソッド
 コード ベースのメモリ内には、イメージを生成します。  
@@ -37,7 +37,7 @@ HRESULT GenerateCeeMemoryImage (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppImage`  
  [out]生成されたイメージへのポインター。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea977b1ccecf9de5a04e1f1127658ca6c15043a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d54becc2d7cd4359c78415f25f579b968cb3f4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482341"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext メソッド
 このプロセスで特定のスレッドのコンテキストを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
  [in]コンテキストを取得する対象のスレッドの ID。  
   
@@ -45,20 +45,20 @@ HRESULT GetThreadContext(
  [in] `context` 配列のサイズ。  
   
  `context`  
- [入力、出力].スレッドのコンテキストを表すバイト配列。  
+ [入力、出力]スレッドのコンテキストを表すバイトの配列。  
   
- コンテキストでは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
+ コンテキストには、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
   
-## <a name="remarks"></a>コメント  
- デバッガーは、Win32 ではなく、このメソッドを呼び出す必要があります`GetThreadContext`メソッドをそのコンテキストが一時的に変更されて、「乗っ取ら」の状態になる実際には、スレッドのためです。 ネイティブ コードでスレッドがある場合にのみ、このメソッドを使用する必要があります。 使用して[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)マネージ コード内のスレッドにします。  
+## <a name="remarks"></a>Remarks  
+ デバッガーは、Win32 ではなく、このメソッドを呼び出す必要があります`GetThreadContext`メソッド、スレッドは、「ハイジャック」をそのコンテキストが一時的に変更された状態で実際にできるためです。 ネイティブ コードでスレッドがある場合にのみ、このメソッドを使用する必要があります。 使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)マネージ コード内のスレッドにします。  
   
  返されるデータは、現在のプラットフォームのコンテキスト構造です。 Win32 と同様に、`GetThreadContext`メソッドを呼び出し元を初期化する必要があります、`context`このメソッドを呼び出す前にパラメーター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

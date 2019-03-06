@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22eae4d59cbd6eba14e5784526c33774300a8367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bbd215b2fefc662da4867a0a8700ca130c4e14c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470193"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext メソッド
 セット、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)オブジェクトの現在のスレッドの有効なコンテキストのコンテキスト。  
@@ -35,7 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
                    [in, size_is(contextSize)] BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `flag`  
  [in]A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)かどうか、コンテキストは、スタックのアクティブなフレームから、またはスタックのアンワインドで取得したコンテキストを示すフラグです。  
   

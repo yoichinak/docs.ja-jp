@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99011fd097169ea9d1c7a49fb0934bb189292f00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23e70a94c65e37782b5107b688b67ed790fb8d74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708221"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478948"
 ---
 # <a name="icorprofilerinfo4enumjitedfunctions2-method"></a>ICorProfilerInfo4::EnumJITedFunctions2 メソッド
 以前に JIT コンパイル、JIT 再コンパイルしていたすべての関数の列挙子を返します。 このメソッドは、置換、 [icorprofilerinfo 3::enumjitedfunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)メソッドを JIT 再コンパイルの Id を列挙できません。  
@@ -33,7 +33,7 @@ ms.locfileid: "54708221"
 HRESULT EnumJITedFunctions([out] ICorProfilerFunctionEnum** ppEnum);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppEnum`  
  [out]ポインター、 [ICorProfilerFunctionEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)列挙子。  
   

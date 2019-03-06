@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b5e021116b29045837a5afae14aa560690cc944
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595371"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499109"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach メソッド
 プロファイラーをデタッチするようにランタイムに指示します。  
@@ -34,7 +34,7 @@ HRESULT RequestProfilerDetach(
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwExpectedCompletionMilliseconds`  
  [in] プロファイラーをアンロードするのが安全かどうかを確認するチェックを行うまでに共通言語ランタイム (CLR) が待機する時間 (ミリ秒)。  
   
@@ -47,7 +47,7 @@ HRESULT RequestProfilerDetach(
 |E_ CORPROF_E_CALLBACK3_REQUIRED|プロファイラーが失敗しました、 [iunknown::queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)の試行、 [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)インターフェイスで、デタッチ操作をサポートするために実装する必要がある必要があります。 デタッチは試行されませんでした。|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|プロファイラーが起動時に変更できないフラグを設定しているため、デタッチできません。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|デタッチは、プロファイラーの使用が Microsoft intermediate language (MSIL) コードでは、インストルメント化されているため、または挿入`enter` / `leave`フックします。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。<br /><br /> **注**インストルメント化した MSIL は、コードを使用してプロファイラーによって提供されるコードでは、 [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)メソッド。|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|マネージド アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムは完全には読み込まれていません。)このエラー コードは、プロファイラー コールバックの内部でデタッチが要求されたときに返される可能性があります[icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)メソッド。|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|マネージ アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムは完全には読み込まれていません。)このエラー コードは、プロファイラー コールバックの内部でデタッチが要求されたときに返される可能性があります[icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)メソッド。|  
 |CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 これは、内からされませんが、マネージ スレッドでメソッドが呼び出された場合に発生します、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内から、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)ガベージ コレクションが許されないメソッド。 詳細については、次を参照してください。 [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)します。|  
   
 ## <a name="remarks"></a>Remarks  

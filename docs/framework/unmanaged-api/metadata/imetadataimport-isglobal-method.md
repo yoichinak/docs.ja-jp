@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7032e55d52804d559d1faed810ca7cccd6a9e628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475642"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal メソッド
 指定したメタデータ トークンによって表されるフィールド、メソッド、または型がグローバル スコープを保持しているかどうかを示す値を取得します。  
@@ -36,7 +36,7 @@ HRESULT IsGlobal (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pd`  
  [in]型、フィールド、またはメソッドを表すメタデータ トークン。  
   

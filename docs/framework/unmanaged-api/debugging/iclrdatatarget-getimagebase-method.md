@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91d893c0df13fbcb44c66df7f268cffdffb5fff6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633844"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488424"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase メソッド
 指定したイメージのメモリのベース アドレスを取得します。  
@@ -36,7 +36,7 @@ HRESULT GetImageBase (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `imagePath`  
  [in]そのパスを含む、イメージのファイル名。  
   

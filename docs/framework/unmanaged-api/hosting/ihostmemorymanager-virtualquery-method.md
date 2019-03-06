@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 885871f3e6b3f10bfb7d660e2d6889e243ef751b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e18c035060b8d5b38649011597d35d75fa2d8ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734365"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497185"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery メソッド
 対応する Win32 関数の論理ラッパーとして機能します。 Win32 実装`VirtualQuery`呼び出し元のプロセス仮想アドレス空間内のページの範囲に関する情報を取得します。  
@@ -38,7 +38,7 @@ HRESULT VirtualQuery (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpAddress`  
  [in]クエリを実行する仮想メモリ アドレスへのポインター。  
   

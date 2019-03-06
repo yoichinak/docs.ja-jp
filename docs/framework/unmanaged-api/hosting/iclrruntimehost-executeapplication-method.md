@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c2a56d153fcd7238f58c9650b8db08b3f39edaa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496275"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication メソッド
 マニフェスト ベースの ClickOnce 配置のシナリオで使用すると、新しいドメインでアクティブ化するアプリケーションを指定します。 これらのシナリオの詳細については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。  
@@ -40,7 +40,7 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAppFullName`  
  [in]に対して定義されている、アプリケーションの完全名<xref:System.ApplicationIdentity>します。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555051"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499833"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList メソッド
 一覧でアセンブリを参照して、指定されたポインターかどうかを示す値を取得します。  
@@ -35,7 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pName`  
  [in]検索対象のアセンブリへのインターフェイス ポインター。 有効な値の種類は`IAssemblyName`または`IReferenceIdentity`します。  
   

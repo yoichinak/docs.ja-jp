@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 257c6856b54d77c4df0012880c9eac59884b52d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd4b538bc7090f07511273808afa039be0ef558e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571001"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497120"
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore メソッド
 インターフェイス ポインターを取得、 [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)ホストによって読み込まれたアセンブリの一覧を表します。  
@@ -35,7 +35,7 @@ HRESULT GetAssemblyStore (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppAssemblyStore`  
  [out]関数へのポインター、`IHostAssemblyStore`インスタンス、またはホストが実装していない場合は、null`IHostAssemblyStore`します。  
   

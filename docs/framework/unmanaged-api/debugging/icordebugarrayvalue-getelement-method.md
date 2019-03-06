@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403345"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485305"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement メソッド
-指定された配列の要素の値を取得します。  
+指定した配列の要素の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +38,25 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cdim`  
  [in]これの次元数`ICorDebugArrayValue`オブジェクト。  
   
  この値のサイズでも、`indices`配列のサイズがの次元数と等しいので、`ICorDebugArrayValue`オブジェクト。  
   
  `indices`  
- [in]ディメンション内の位置を指定する各インデックスの値の配列、`ICorDebugArrayValue`オブジェクト。  
+ [in]ディメンション内の位置を指定のインデックス値の配列、`ICorDebugArrayValue`オブジェクト。  
   
  この値は null にできません。  
   
  `ppValue`  
  [out]指定した要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

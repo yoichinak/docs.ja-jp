@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad95f8ee5188c38bb19882d3c7fa6bf98fcc9d2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 100bb73356379d2f251513bbbed0cf1e90752ff5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625251"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494374"
 ---
 # <a name="ihosttaskmanagergetstackguarantee-method"></a>IHostTaskManager::GetStackGuarantee メソッド
 プロセスの終了前に、スタック操作の完了後に、使用することが保証されるスタック領域の量を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetStackGuarantee(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pGuarantee`  
  [out]使用できるバイト数へのポインター。  
   

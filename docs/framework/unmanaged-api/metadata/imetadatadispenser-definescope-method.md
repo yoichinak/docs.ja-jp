@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f9cac2b59f783a81663af0c5eb148367d54e8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df46a3c6beed26e885e7dc13f97a7c68d2abcdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487981"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
 メモリの新しいメタデータを作成するには、新しい領域を作成します。  
@@ -38,7 +38,7 @@ HRESULT DefineScope (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `rclsid`  
  [in]作成するメタデータ構造体のバージョンの CLSID。 この値は、.NET Framework version 2.0 の CLSID_CorMetaDataRuntime を指定する必要があります。  
   

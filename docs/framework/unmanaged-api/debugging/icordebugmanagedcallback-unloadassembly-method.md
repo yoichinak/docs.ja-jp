@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93d44006dd6652a8d34c23209eb957b23064f976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef4d7993269aa606aa6b22a1544bc2d04d9e6e93
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476530"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly メソッド
 共通言語ランタイム アセンブリがアンロードされたことをデバッガーに通知します。  
@@ -36,7 +36,7 @@ HRESULT UnloadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
  [in]アセンブリに含まれるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   

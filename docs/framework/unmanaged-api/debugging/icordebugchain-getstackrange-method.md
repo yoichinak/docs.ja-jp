@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402471"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481561"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange メソッド
-このチェーンのスタック セグメントのアドレス範囲を取得します。  
+このチェーンの履歴のセグメントのアドレス範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pStart`  
- [out]ポインター、`CORDB_ADDRESS`は履歴のセグメントの開始アドレスを示す値。  
+ [out]ポインターを`CORDB_ADDRESS`値が履歴のセグメントの開始アドレスです。  
   
  `pEnd`  
- [out]ポインター、`CORDB_ADDRESS`は履歴のセグメントの終了アドレスを示す値。  
+ [out]ポインターを`CORDB_ADDRESS`スタック セグメントの終了アドレスである値。  
   
-## <a name="remarks"></a>コメント  
- 数値の範囲は、スタック フレームの場所の比較に対してのみ有効です。 実際には、スタックに格納されているデータに関するどのような想定をすることはできません。  
+## <a name="remarks"></a>Remarks  
+ 数値の範囲は、スタック フレームの場所の比較についてのみ有効です。 実際にスタックに格納されているものを想定することはできません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a523a58a137f8276df854da956b3ab0b75cbcec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0088ed696b2018054dc34a0b363def97c5753fe0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571627"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494091"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 関数
 2 つのアセンブリ id と同じかどうかを比較します。  
@@ -40,7 +40,7 @@ STDAPI CompareAssemblyIdentity (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAssemblyIdentity1`  
  [in]比較では、最初のアセンブリのテキスト形式の id。  
   
