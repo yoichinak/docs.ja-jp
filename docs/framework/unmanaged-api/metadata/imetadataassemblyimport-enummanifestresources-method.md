@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a13e750029fed2f2261064dd69d6c1d800d59989
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473904"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources メソッド
 現在のアセンブリ マニフェストで参照されるリソースの列挙子へのポインターを取得します。  
@@ -38,7 +38,7 @@ HRESULT EnumManifestResources (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。 これを null には値と、`EnumManifestResources`メソッドは、最初に呼び出されます。  
   

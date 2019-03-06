@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b832ad489c051c3422dc881c5dff31e1726ce9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45597f6bb5e050f4afc00bd8f2db8116b29b8d4b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531279"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482224"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority メソッド
 現在のタスクのスレッド優先度レベルを取得[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス。  
@@ -35,7 +35,7 @@ HRESULT GetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pPriority`  
  [out]現在のタスクのスレッドの優先順位を示す整数を指すポインター`IHostTask`インスタンス。  
   

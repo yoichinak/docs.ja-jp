@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5103490da7f3056cf95f7986b46837e059f8212f
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: c1c576bd4a7bc29be2647a858a680b91e602d2c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211833"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488878"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 関数
 指定したマネージド型のインスタンスを作成します。  
@@ -42,7 +42,7 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pTypeName`  
  [in]要求されているインスタンス型の名前へのポインター。  
   

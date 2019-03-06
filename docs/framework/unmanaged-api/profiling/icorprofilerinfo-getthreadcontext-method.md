@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb686be625d0d38bcf0de496c192276ebaa3410d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b13402b6bccd825629b0110c948ed920c1fdf8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487968"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext メソッド
 指定したスレッドに関連付けられているコンテキスト id を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetThreadContext(
     [out] ContextID *pContextId);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadId`  
  [in]スレッドの ID。  
   

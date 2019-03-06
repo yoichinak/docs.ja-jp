@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d37de6dee14ad2c24c21a2d1a97d112fd0b9f3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 796a71ac941497801c749295fb2f6bb201547bd7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706405"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478311"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a>ISymUnmanagedVariable::GetAddressField1 メソッド
 この変数の最初のアドレス フィールドを取得します。 その意味は、アドレスの種類によって異なります。  
@@ -34,7 +34,7 @@ HRESULT GetAddressField1(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pRetVal`  
  [out]ポインターを`ULONG32`を受け取る最初のアドレス フィールド。  
   

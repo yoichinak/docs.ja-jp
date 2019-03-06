@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bba34b7f0956e602de690b8aa30d955acc526e8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e351c61f7e8bfc254a6fc8ea12c8a94fc393e3fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529490"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478155"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes メソッド
 アセンブリ レベルのカスタム属性を取得します。  
@@ -39,7 +39,7 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hEnum`  
  列挙子のハンドル。  
   
