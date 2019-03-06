@@ -14,8 +14,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55283453"
 ---
-# <a name="typename-is-a-delegate-type"></a>'\<typename >' はデリゲート型です。
-'\<typename >' はデリゲート型です。 デリゲート構築では、引数リストとして 1 つの AddressOf 式のみを許可します。 多くの場合、デリゲート構築ではなく、AddressOf 式を使用できます。  
+# <a name="typename-is-a-delegate-type"></a>'\<typename>' はデリゲート型です。
+'\<typename>' はデリゲート型です。 デリゲート構築では、引数リストとして 1 つの AddressOf 式のみを許可します。 多くの場合、デリゲート構築ではなく、AddressOf 式を使用できます。  
   
  A`New`デリゲート クラスのインスタンスを作成する句は、デリゲート コンス トラクターに無効な引数リストを提供します。  
   
