@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd544619f9e5fb85a0b08b91ead8231ea25743cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d8168649f6a0c75844da0ee68bf3782efc9024
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651230"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483865"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction メソッド
 この"ICorDebugCode"に関連付けられている"ICorDebugFunction"を取得します。  
@@ -35,7 +35,7 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppFunction`  
  [out]関数のアドレスへのポインター。  
   

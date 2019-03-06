@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a24f51884b5dc55e45d22f33735fe07db770d06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612217"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466917"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived メソッド
 最後の完全なブロッキング ガベージ コレクション後に残っていると、現在のアプリケーション ドメインによって参照されるバイト数を取得します。  
@@ -36,7 +36,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwAppDomainId`  
  [in]要求されたアプリケーション ドメインの ID。  
   

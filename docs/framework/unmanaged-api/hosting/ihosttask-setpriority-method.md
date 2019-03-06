@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9335cb182355931b31040f164c9e51a67598f7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73982cb4cb7b6e80579714b32cf7aba620272af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748039"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467104"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority メソッド
 現在によって表されるタスクのスレッドの優先順位を変更するホストの要求レベル[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス。  
@@ -35,7 +35,7 @@ HRESULT SetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `newPriority`  
  [in]現在のタスクの要求されたスレッドの優先度の値を表す整数を`IHostTask`インスタンス。  
   

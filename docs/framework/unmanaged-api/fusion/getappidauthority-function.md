@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c45da047d384e56440ca5f883a4cfd755a7d0299
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466077"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 関数
 ポインターを取得、 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)アプリケーション id と参照のキーを管理するインスタンス。  
@@ -35,7 +35,7 @@ HRESULT GetAppIdAuthority (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppIAppIdAuthority`  
  [out]返された`IAppIdAuthority`ポインター。  
   

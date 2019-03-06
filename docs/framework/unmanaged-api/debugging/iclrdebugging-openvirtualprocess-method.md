@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cae30dbd1ae9081334e2ff890e1e4cd167a66e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ed9526dc38d72b01798215bc602fb8298c2bc3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586330"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478025"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess メソッド
 ICorDebugProcess インターフェイスに対応するプロセスに読み込まれている共通言語ランタイム (CLR) モジュールを取得します。  
@@ -41,7 +41,7 @@ HRESULT OpenVirtualProcess(
     [out] CLR_DEBUGGING_PROCESS_FLAGS * pdwFlags);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `moduleBaseAddress`  
  [in]ターゲット プロセスのモジュールのベース アドレス。 COR_E_NOT_CLR が、指定したモジュールが CLR モジュールではない場合に返されます。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59dad67db9f9f9184a139f848020cf866a3a6771
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f42928e21ef04a7a0f030b1b9eee159ec6b0af4f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473956"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
 指定したメタデータ シグネチャを持つファイルのプロパティを取得します。  
@@ -41,7 +41,7 @@ HRESULT GetFileProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdf`  
  [in]`mdFile`プロパティを取得する対象のファイルを表すメタデータ トークン。  
   

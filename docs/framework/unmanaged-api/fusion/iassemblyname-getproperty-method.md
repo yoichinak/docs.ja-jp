@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d131e9d8c7a1a2b4e4def75ecfb65bb8235a65e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93a85f2fd0f2095ce22bd69a3251d7950fcdb529
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464595"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty メソッド
 指定したプロパティの識別子によって参照されるプロパティにポインターを取得します。  
@@ -37,7 +37,7 @@ HRESULT GetProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `PropertyId`  
  [in]要求されたプロパティの一意の識別子。  
   

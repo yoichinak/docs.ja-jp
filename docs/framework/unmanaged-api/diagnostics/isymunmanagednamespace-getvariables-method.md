@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11a5eb01a3e354b4360bea59af1e63ffeb0576aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02fd9fd3a580946cda09f0c129f02cd1218a0c9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730114"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471434"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables メソッド
 この名前空間内のグローバル スコープで定義されたすべての変数を返します。  
@@ -37,7 +37,7 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cVars`  
  [in]A`ULONG32`のサイズを示す、`pVars`配列。  
   

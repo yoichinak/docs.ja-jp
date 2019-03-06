@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b448892a58dd120fd0f30f2b61be59e579b629a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2da0b3b7a8a7ae46050345aaf5fcfa65fa349ae5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477986"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect メソッド
 指定したジェネレーションのガベージ コレクションを強制します。  
@@ -35,7 +35,7 @@ HRESULT Collect (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Generation`  
  [in]収集を生成します。 -1 の値を強制的にすべてのジェネレーションのコレクション。  
   

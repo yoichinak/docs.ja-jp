@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e84581a0642fe5bee3b88b6774ab2155fd2736a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15606b8db740e79ad2bc0deb33afcb63ad839905
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490785"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466090"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs メソッド
 インポートされたモジュールを表す ModuleRef トークンを列挙します。  
@@ -38,7 +38,7 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
  [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
   

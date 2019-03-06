@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e23f39f8e7a1812366e15ffec9589f756c73f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630802"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481691"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging メソッド
 初期化します、インプロセス デバッグのサポート。 このメソッドは、.NET Framework version 2.0 で廃止されています。  
@@ -35,7 +35,7 @@ HRESULT BeginInprocDebugging(
     [out] DWORD *pdwProfilerContext);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fThisThreadOnly`  
  [in]この値に設定`true`現在スレッドのみのデバッグのサポートを初期化するために設定`false`のすべてのスレッドのデバッグのサポートを初期化します。  
   
