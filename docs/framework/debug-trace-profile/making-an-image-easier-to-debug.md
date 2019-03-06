@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f25eaaa17d4c4bd2e9522591bb0fd66445cdb6f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362015"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>イメージを .NET でデバッグしやすきます。
 
@@ -34,7 +34,7 @@ ms.locfileid: "48036027"
 
 たとえば、アセンブリをデバッグする場合が呼び出されます*MyApp.exe*、という名前のテキスト ファイルを作成し、 *MyApp.ini*と同じフォルダーに*MyApp.exe*が含まれています次の 3 行:
 
-```txt
+```ini
 [.NET Framework Debugging Control]
 GenerateTrackingInfo=1
 AllowOptimize=0
@@ -51,7 +51,7 @@ AllowOptimize=0
 **DebuggableAttribute** は、アセンブリに含まれる個々のモジュールではなく、アセンブリ全体に適用されます。 そのため開発ツールでは、アセンブリが既に作成されている場合は、カスタム属性をアセンブリのメタデータ トークン、または **System.Runtime.CompilerServices.AssemblyAttributesGoHere** というクラスに追加できる必要があります。 これらは、ALink ツールが、昇格**DebuggableAttribute**各モジュールからアセンブリへの属性の一部になります。 競合がある場合、ALink の操作が失敗します。
 
 > [!NOTE]
-> .NET Framework Version 1.0 では、**/clr** および **/Zi** コンパイラ オプションを指定すると、Microsoft Visual C++ コンパイラによって **DebuggableAttribute** が追加されます。 .NET Framework Version 1.1 では、**DebuggableAttribute** をコードに手動で追加するか、**/ASSEMBLYDEBUG** リンカー オプションを使用する必要があります。
+> .NET Framework Version 1.0 では、**/clr** および **/Zi** コンパイラ オプションを指定すると、Microsoft Visual C++ コンパイラによって **DebuggableAttribute** が追加されます。 .NET Framework version 1.1 で追加する、 **DebuggableAttribute**に手動でコードの使用、 **/ASSEMBLYDEBUG**リンカー オプション。
 
 ## <a name="see-also"></a>関連項目
 

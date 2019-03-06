@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351997"
 ---
 # <a name="property-change-events"></a>プロパティ変更イベント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、プロパティ値の変更に応答して発生するさまざまなイベントが定義されています。 通常、プロパティは依存関係プロパティです。 イベント自体は、ルーティング イベントのこともあれば、標準の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] イベントのこともあります。 要素ツリーを通じて適切にルーティングされるプロパティ変更もあれば、プロパティが変更されたオブジェクトにのみ関係するプロパティ変更もあるため、イベントの定義はシナリオによって異なります。  
@@ -33,7 +33,7 @@ ms.locfileid: "54524001"
   
  古い値と新しい値があるため、このイベント ハンドラーがプロパティ値の検証コントロールとして使用される可能性があります。 しかし、プロパティ変更イベントの多くは、このような目的で設計されているわけではありません。 通常、値の提供は、他のロジック領域のコードでその値を処理するために行われますが、イベント ハンドラー内から値を実際に変更することはお勧めできません。また、ハンドラーの実装方法によっては、意図しない再帰が生じることもあります。  
   
- プロパティがカスタム依存関係プロパティの場合、またはインスタンス化コードが定義されている派生クラスの場合に組み込まれているプロパティの変更を追跡する優れたメカニズムがある場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プロパティ システム:プロパティ システム コールバック<xref:System.Windows.CoerceValueCallback>と<xref:System.Windows.PropertyChangedCallback>します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムを使用して検証および強制型変換を行う方法の詳細については、「[依存関係プロパティのコールバックと検証](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)」および「[カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)」を参照してください。  
+ プロパティがカスタム依存関係プロパティの場合、またはインスタンス化コードが定義されている派生クラスの場合に組み込まれているプロパティの変更を追跡する優れたメカニズムがある場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プロパティ システム:プロパティ システム コールバック<xref:System.Windows.CoerceValueCallback>と<xref:System.Windows.PropertyChangedCallback>します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムを使用して検証および強制型変換を行う方法の詳細については、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」および「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged イベント  
  プロパティ変更イベントのシナリオの一部である型の別のペアが<xref:System.Windows.DependencyPropertyChangedEventArgs>と<xref:System.Windows.DependencyPropertyChangedEventHandler>します。 これらのプロパティ変更のイベントはルーティングされません。これらは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントです。 <xref:System.Windows.DependencyPropertyChangedEventArgs> レポートの種類から派生しないため、特殊なイベント データは、 <xref:System.EventArgs>;<xref:System.Windows.DependencyPropertyChangedEventArgs>は構造体、クラスではなくです。  
@@ -59,8 +59,8 @@ ms.locfileid: "54524001"
   
  プロパティ トリガーは、通常、1 つ以上の外観プロパティが、同じ要素の別のプロパティの状態に基づいて変更されるシナリオに適しています。  
   
- プロパティ トリガーの詳細については、「[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)」を参照してください。  
+ プロパティ トリガーの詳細については、「[スタイルとテンプレート](../controls/styling-and-templating.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [依存関係プロパティの概要](dependency-properties-overview.md)

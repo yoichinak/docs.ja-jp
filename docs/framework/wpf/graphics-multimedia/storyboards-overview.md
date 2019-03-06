@@ -9,19 +9,19 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: 1174e9ab7988f674d709b00ec73b48041398a1be
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 53d31d00729485e99b76305c45eeeb3659a41b7e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748259"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362943"
 ---
 # <a name="storyboards-overview"></a>ストーリーボードの概要
 このトピックでは、使用する方法を示します<xref:System.Windows.Media.Animation.Storyboard>オブジェクトを編成およびアニメーションを適用します。 対話的に操作する方法を説明<xref:System.Windows.Media.Animation.Storyboard>オブジェクトおよび構文を対象とする間接的なプロパティについて説明します。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、さまざまな種類のアニメーションとその基本的な機能に精通している必要があります。 アニメーションの概要については、「[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」を参照してください。 また、添付プロパティの使用方法についても理解しておく必要があります。 添付プロパティの詳細については、「[添付プロパティの概要](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)」を参照してください。  
+ このトピックを理解するには、さまざまな種類のアニメーションとその基本的な機能に精通している必要があります。 アニメーションの概要については、「[アニメーションの概要](animation-overview.md)」を参照してください。 また、添付プロパティの使用方法についても理解しておく必要があります。 添付プロパティの詳細については、「[添付プロパティの概要](../advanced/attached-properties-overview.md)」を参照してください。  
   
 <a name="whatisatimeline"></a>   
 ## <a name="what-is-a-storyboard"></a>ストーリーボードとは何か  
@@ -39,7 +39,7 @@ ms.locfileid: "56748259"
   
 <a name="wherecanyouuseastoryboard"></a>   
 ## <a name="where-can-you-use-a-storyboard"></a>ストーリーボードはどこで使用できるか  
- A<xref:System.Windows.Media.Animation.Storyboard>アニメーション クラスの依存関係プロパティをアニメーション化に使用できます (アニメーション化できるクラスは、詳細については、次を参照してください。、[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md))。 ただし、ストーリーボーディング フレームワーク レベルの機能があるため、オブジェクトに属する必要があります、<xref:System.Windows.NameScope>の<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>します。  
+ A<xref:System.Windows.Media.Animation.Storyboard>アニメーション クラスの依存関係プロパティをアニメーション化に使用できます (アニメーション化できるクラスは、詳細については、次を参照してください。、[アニメーションの概要](animation-overview.md))。 ただし、ストーリーボーディング フレームワーク レベルの機能があるため、オブジェクトに属する必要があります、<xref:System.Windows.NameScope>の<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>します。  
   
  たとえば、使用する、<xref:System.Windows.Media.Animation.Storyboard>以下を実行します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "56748259"
   
 <a name="applyanimationswithastoryboard"></a>   
 ## <a name="how-to-apply-animations-with-a-storyboard"></a>ストーリーボードを使用してアニメーションを適用する方法  
- 使用する、<xref:System.Windows.Media.Animation.Storyboard>アニメーションを編成および適用の子タイムラインとしてアニメーションを追加する、<xref:System.Windows.Media.Animation.Storyboard>します。 <xref:System.Windows.Media.Animation.Storyboard>クラスには、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>と<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType>添付プロパティ。 これらのプロパティをアニメーションで設定して、アニメーションのターゲット オブジェクトとターゲット プロパティを指定します。  
+ 使用する、<xref:System.Windows.Media.Animation.Storyboard>アニメーションを編成および適用の子タイムラインとしてアニメーションを追加する、<xref:System.Windows.Media.Animation.Storyboard>します。 <xref:System.Windows.Media.Animation.Storyboard>クラスには、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>と<xref:System.Windows.Media.Animation.Storyboard.TargetProperty?displayProperty=nameWithType>添付プロパティ。 これらのプロパティをアニメーションで設定して、アニメーションのターゲット オブジェクトとターゲット プロパティを指定します。  
   
  開始する、ターゲットにアニメーションを適用する、<xref:System.Windows.Media.Animation.Storyboard>トリガー アクションまたはメソッドを使用します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、<xref:System.Windows.Media.Animation.BeginStoryboard>オブジェクトを<xref:System.Windows.EventTrigger>、 <xref:System.Windows.Trigger>、または<xref:System.Windows.DataTrigger>します。 コードでは、使用することも、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド。  
   
@@ -61,22 +61,22 @@ ms.locfileid: "56748259"
   
 |ストーリーボードが開始される場所|インスタンス単位|スタイル|コントロール テンプレート|データ テンプレート|例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|はい|はい|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|[はい]|[プロパティ値が変化したときにアニメーションをトリガーする](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|はい|はい|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|[はい]|[プロパティ値が変化したときにアニメーションをトリガーする](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|はい|[はい]|[方法: データが変更されたときにアニメーションをトリガーします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|[はい]|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|[はい]|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  次の例では、<xref:System.Windows.Media.Animation.Storyboard>をアニメーション化する、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>要素と<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を描画するために使用<xref:System.Windows.Shapes.Rectangle>します。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#1)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#1](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#1)]  
   
- [!code-csharp[storyboards_ovw_snip#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#100)]  
+ [!code-csharp[storyboards_ovw_snip#100](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#100)]  
   
- 次のセクションで説明します、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>と<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>添付プロパティについて詳しく説明します。  
+ 次のセクションで説明します、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>と<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>添付プロパティについて詳しく説明します。  
   
 <a name="targetingelementsandfreezables"></a>   
 ## <a name="targeting-framework-elements-framework-content-elements-and-freezables"></a>フレームワーク要素、フレームワーク コンテンツ要素、およびフリーズ可能オブジェクトの対象化  
- アニメーションでは、そのターゲットを見つけるために、ターゲットの名前とアニメーション化するプロパティを認識する必要があることについては前のセクションで説明しました。 アニメーション化するプロパティを指定するは簡単: 設定するだけです<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A?displayProperty=nameWithType>アニメーション化するプロパティの名前に置き換えます。  プロパティを設定してアニメーション化するオブジェクトの名前を指定する、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>アニメーションのプロパティ。  
+ アニメーションでは、そのターゲットを見つけるために、ターゲットの名前とアニメーション化するプロパティを認識する必要があることについては前のセクションで説明しました。 アニメーション化するプロパティを指定するは簡単: 設定するだけです<xref:System.Windows.Media.Animation.Storyboard.TargetProperty?displayProperty=nameWithType>アニメーション化するプロパティの名前に置き換えます。  プロパティを設定してアニメーション化するオブジェクトの名前を指定する、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>アニメーションのプロパティ。  
   
  <xref:System.Windows.Setter.TargetName%2A>するのには、プロパティ、ターゲット オブジェクトには名前が必要です。 に対して名前が割り当て、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]する名前の割り当てとは異なります、<xref:System.Windows.Freezable>オブジェクト。  
   
@@ -86,45 +86,45 @@ ms.locfileid: "56748259"
   
  前の例から次の例では、名前を割り当てます`MyRectangle`、 <xref:System.Windows.Shapes.Rectangle>、一種の<xref:System.Windows.FrameworkElement>します。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#2)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#2](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#2)]  
   
- [!code-csharp[storyboards_ovw_snip#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#102)]  
+ [!code-csharp[storyboards_ovw_snip#102](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#102)]  
   
  名前が割り当てられると、その要素のプロパティはアニメーション化できます。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#5)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#5](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#5)]  
   
- [!code-csharp[storyboards_ovw_snip#105](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
+ [!code-csharp[storyboards_ovw_snip#105](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#105)]  
   
  <xref:System.Windows.Freezable> 種類は、これらのクラスを継承するクラス、<xref:System.Windows.Freezable>クラス。 例については<xref:System.Windows.Freezable>含める<xref:System.Windows.Media.SolidColorBrush>、 <xref:System.Windows.Media.RotateTransform>、および<xref:System.Windows.Media.GradientStop>します。  
   
- ターゲットを有効にする、<xref:System.Windows.Freezable>をアニメーションで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../../../docs/framework/xaml-services/x-name-directive.md)名前を指定します。 コードで使用する、<xref:System.Windows.NameScope.RegisterName%2A>メソッドを作成した要素に名前を登録、<xref:System.Windows.NameScope>します。  
+ ターゲットを有効にする、<xref:System.Windows.Freezable>をアニメーションで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../xaml-services/x-name-directive.md)名前を指定します。 コードで使用する、<xref:System.Windows.NameScope.RegisterName%2A>メソッドを作成した要素に名前を登録、<xref:System.Windows.NameScope>します。  
   
  次の例は、名前を割り当てて、<xref:System.Windows.Freezable>オブジェクト。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#3)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#3](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#3)]  
   
- [!code-csharp[storyboards_ovw_snip#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#103)]  
+ [!code-csharp[storyboards_ovw_snip#103](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#103)]  
   
  これで、オブジェクトをアニメーションのターゲットにすることができます。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#7)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#7](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/StoryboardsExample.xaml#7)]  
   
- [!code-csharp[storyboards_ovw_snip#107](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
+ [!code-csharp[storyboards_ovw_snip#107](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/StoryboardsExample.cs#107)]  
   
- <xref:System.Windows.Media.Animation.Storyboard> オブジェクトでは、名前スコープを使用して、解決するには、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティ。 WPF 名前スコープの詳細については、「[WPF XAML 名前スコープ](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)」を参照してください。 場合、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティが省略された場合、または、要素の定義は、スタイル、スタイル設定された要素の場合、アニメーションのターゲットします。  
+ <xref:System.Windows.Media.Animation.Storyboard> オブジェクトでは、名前スコープを使用して、解決するには、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティ。 WPF 名前スコープの詳細については、「[WPF XAML 名前スコープ](../advanced/wpf-xaml-namescopes.md)」を参照してください。 場合、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティが省略された場合、または、要素の定義は、スタイル、スタイル設定された要素の場合、アニメーションのターゲットします。  
   
  名前を割り当てることはできないことがあります、<xref:System.Windows.Freezable>オブジェクト。 たとえば場合、<xref:System.Windows.Freezable>リソースとして宣言またはスタイルのプロパティ値を設定するために使用されている名前を指定することはできません。 名前が割り当てられていないため、それを直接ターゲットにすることができません。ただし、間接的にターゲットにすることはできます。 以下のセクションでは、間接的な対象化の使用方法について説明します。  
   
 <a name="pathsyntaxforchangeable"></a>   
 ## <a name="indirect-targeting"></a>間接的な対象化  
- あります、<xref:System.Windows.Freezable>場合など、アニメーションで直接対象とすることはできません、<xref:System.Windows.Freezable>がリソースとして宣言されているか、スタイルのプロパティ値を設定するために使用します。 このような場合は、直接ターゲットにできない場合でも引き続きをアニメーション化できます、<xref:System.Windows.Freezable>オブジェクト。 設定ではなく、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティの名前を持つ、 <xref:System.Windows.Freezable>、する要素の名前が、付与、 <xref:System.Windows.Freezable> 「属しています」。 たとえば、<xref:System.Windows.Media.SolidColorBrush>を設定するため、<xref:System.Windows.Shapes.Shape.Fill%2A>その四角形に四角形の要素が属しています。 ブラシをアニメーション化するにはアニメーションの設定は<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>フレームワーク要素またはフレームワーク コンテンツ要素のプロパティで始まるプロパティのチェーンを持つ、<xref:System.Windows.Freezable>で終わります設定に使用された、<xref:System.Windows.Freezable>プロパティをアニメーション化します。  
+ あります、<xref:System.Windows.Freezable>場合など、アニメーションで直接対象とすることはできません、<xref:System.Windows.Freezable>がリソースとして宣言されているか、スタイルのプロパティ値を設定するために使用します。 このような場合は、直接ターゲットにできない場合でも引き続きをアニメーション化できます、<xref:System.Windows.Freezable>オブジェクト。 設定ではなく、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>プロパティの名前を持つ、 <xref:System.Windows.Freezable>、する要素の名前が、付与、 <xref:System.Windows.Freezable> 「属しています」。 たとえば、<xref:System.Windows.Media.SolidColorBrush>を設定するため、<xref:System.Windows.Shapes.Shape.Fill%2A>その四角形に四角形の要素が属しています。 ブラシをアニメーション化するにはアニメーションの設定は<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>フレームワーク要素またはフレームワーク コンテンツ要素のプロパティで始まるプロパティのチェーンを持つ、<xref:System.Windows.Freezable>で終わります設定に使用された、<xref:System.Windows.Freezable>プロパティをアニメーション化します。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#33](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#33)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#33](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#33)]  
   
- [!code-csharp[storyboards_ovw_snip#134](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
+ [!code-csharp[storyboards_ovw_snip#134](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
   
- 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、次を参照してください。、 [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)します。  
+ 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、次を参照してください。、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
  また、間接的なプロパティの対象化を使用するとき、存在しないオブジェクトを対象化する可能性があることに注意してください。 などのように見えますが、<xref:System.Windows.Controls.Control.Background%2A>の特定のボタンで設定した、<xref:System.Windows.Media.SolidColorBrush>実際にその色をアニメーション化しようと、<xref:System.Windows.Media.LinearGradientBrush>ボタンの背景を設定するために使用されました。 このような場合は、例外はスローされません。効果は表示であるため、アニメーションが失敗した<xref:System.Windows.Media.LinearGradientBrush>への変更に反応しません、<xref:System.Windows.Media.SolidColorBrush.Color%2A>プロパティ。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "56748259"
   
  <xref:System.Windows.Shapes.Shape.Fill%2A> 四角形要素。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#32](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#32)]  
   
  コレクションまたは配列に含まれるフリーズ可能オブジェクトをターゲットにしなければならない場合があります。  
   
@@ -162,11 +162,11 @@ ms.locfileid: "56748259"
   
  たとえば、四角形が含まれていること、<xref:System.Windows.Media.TransformGroup>リソースに適用されるその<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ、およびするが、その変換のいずれかをアニメーション化します。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#34)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#34](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#34)]  
   
  次のコードは、アニメーション化する方法を示しています、<xref:System.Windows.Media.RotateTransform.Angle%2A>のプロパティ、<xref:System.Windows.Media.RotateTransform>前の例に示すようにします。  
   
- [!code-xaml[storyboards_ovw_snip_XAML#35](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#35)]  
+ [!code-xaml[storyboards_ovw_snip_XAML#35](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip_XAML/CS/IndirectTargetingExample.xaml#35)]  
   
 <a name="targetingpropertyofchangeableincode"></a>   
 ### <a name="indirectly-targeting-a-property-of-a-freezable-in-code"></a>コードでフリーズ可能オブジェクトのプロパティを間接的に対象化する  
@@ -176,7 +176,7 @@ ms.locfileid: "56748259"
   
  対象とする依存関係プロパティのチェーンの例を次に、<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を設定するため、<xref:System.Windows.Shapes.Shape.Fill%2A>の四角形要素。  
   
- [!code-csharp[storyboards_ovw_snip#135](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#135)]  
+ [!code-csharp[storyboards_ovw_snip#135](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#135)]  
   
  指定する必要があります、<xref:System.Windows.PropertyPath.Path%2A>します。 A<xref:System.Windows.PropertyPath.Path%2A>は、<xref:System.String>を示す、<xref:System.Windows.PropertyPath.Path%2A>を解釈する方法、<xref:System.Windows.PropertyPath.PathParameters%2A>します。 次の構文が使用されます。  
   
@@ -192,15 +192,15 @@ ms.locfileid: "56748259"
   
  次の例は、<xref:System.Windows.PropertyPath.Path%2A>に付属する、<xref:System.Windows.PropertyPath.PathParameters%2A>前の例で定義されています。
   
- [!code-csharp[storyboards_ovw_snip#PropertyChainAndPath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#propertychainandpath)]  
+ [!code-csharp[storyboards_ovw_snip#PropertyChainAndPath](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#propertychainandpath)]  
   
  次の例は、アニメーション化する前の例のコードを組み合わせて、<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を設定するため、<xref:System.Windows.Shapes.Shape.Fill%2A>の四角形要素。  
   
- [!code-csharp[storyboards_ovw_snip#137](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#137)]  
+ [!code-csharp[storyboards_ovw_snip#137](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#137)]  
   
  コレクションまたは配列に含まれるフリーズ可能オブジェクトをターゲットにしなければならない場合があります。 たとえば、四角形が含まれていること、<xref:System.Windows.Media.TransformGroup>リソースに適用されるその<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ、およびするが、その変換のいずれかをアニメーション化します。  
   
- [!code-xaml[storyboards_ovw_snip#142](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
+ [!code-xaml[storyboards_ovw_snip#142](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml#142)]  
   
  ターゲットに、<xref:System.Windows.Freezable>コレクション内に含まれている、次のパス構文を使用します。  
   
@@ -212,18 +212,18 @@ ms.locfileid: "56748259"
   
  ターゲットに、<xref:System.Windows.Media.RotateTransform.Angle%2A>のプロパティ、 <xref:System.Windows.Media.RotateTransform>、2 つ目の変換、 <xref:System.Windows.Media.TransformGroup>、以下を使用すると<xref:System.Windows.PropertyPath.Path%2A>と<xref:System.Windows.PropertyPath.PathParameters%2A>します。  
   
- [!code-csharp[storyboards_ovw_snip#139](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#139)]  
+ [!code-csharp[storyboards_ovw_snip#139](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#139)]  
   
  次の例では、アニメーション化するための完全なコード、<xref:System.Windows.Media.RotateTransform.Angle%2A>の<xref:System.Windows.Media.RotateTransform>内に含まれる、<xref:System.Windows.Media.TransformGroup>します。  
   
- [!code-csharp[storyboards_ovw_snip#138](../../../../samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#138)]  
+ [!code-csharp[storyboards_ovw_snip#138](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#138)]  
   
 ### <a name="indirectly-targeting-with-a-freezable-as-the-starting-point"></a>開始点として Freezable を使用して間接的に対象化する  
  前のセクションでは、間接的にターゲットする方法を説明した、<xref:System.Windows.Freezable>を始めることで、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>プロパティ チェーンを作成して、<xref:System.Windows.Freezable>サブプロパティ。 使用することも、<xref:System.Windows.Freezable>開始ポイントし、間接的にターゲットのいずれかの<xref:System.Windows.Freezable>サブプロパティ。 使用する場合、その他の制限が適用されます、<xref:System.Windows.Freezable>間接的な対象化の開始点として: 開始<xref:System.Windows.Freezable>、毎回<xref:System.Windows.Freezable>と間接的にターゲットのサブプロパティの必要がありますは固定されません。  
   
 <a name="controllable_storyboards"></a>   
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML での対話形式でのストーリーボードの制御  
- ストーリー ボードを起動する[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]を使用する、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションをトリガーします。 <xref:System.Windows.Media.Animation.BeginStoryboard> オブジェクトとプロパティをアニメーション化する、ストーリー ボードを開始するアニメーションを配布します。 (詳細については、このプロセスは、次を参照してください、[アニメーションとタイミング システムの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)。)。提供する場合、<xref:System.Windows.Media.Animation.BeginStoryboard>名前を指定してその<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>プロパティをできるようにする制御可能なストーリー ボード。 ストーリーボードが開始すると対話的に制御できます。 制御可能なストーリーボード アクションの一覧を次に示します。これらをイベント トリガーで使用して、ストーリーボードを制御します。  
+ ストーリー ボードを起動する[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]を使用する、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションをトリガーします。 <xref:System.Windows.Media.Animation.BeginStoryboard> オブジェクトとプロパティをアニメーション化する、ストーリー ボードを開始するアニメーションを配布します。 (詳細については、このプロセスは、次を参照してください、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)。)。提供する場合、<xref:System.Windows.Media.Animation.BeginStoryboard>名前を指定してその<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>プロパティをできるようにする制御可能なストーリー ボード。 ストーリーボードが開始すると対話的に制御できます。 制御可能なストーリーボード アクションの一覧を次に示します。これらをイベント トリガーで使用して、ストーリーボードを制御します。  
   
 -   <xref:System.Windows.Media.Animation.PauseStoryboard>:ストーリー ボードを一時停止します。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "56748259"
   
  次の例では、制御可能なストーリーボード アクションを使用して、ストーリーボードを対話的に制御しています。  
   
- [!code-xaml[animation_ovws_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
+ [!code-xaml[animation_ovws_snip#ControllableStoryboardExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snip/CS/ControllableStoryboardExample.xaml#controllablestoryboardexamplewholepage)]  
   
 <a name="controllable_storyboards_procedural"></a>   
 ## <a name="interactively-controlling-a-storyboard-by-using-code"></a>コードを使用した対話形式でのストーリーボードの制御  
@@ -265,8 +265,8 @@ ms.locfileid: "56748259"
   
  次の例では、適用およびの対話型のメソッドを使用してアニメーションを制御する方法を示しています、<xref:System.Windows.Media.Animation.Storyboard>クラス。  
   
- [!code-csharp[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/ControllableStoryboardExample.cs#controllablestoryboardexamplewholepage)]
- [!code-vb[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/controllablestoryboardexample.vb#controllablestoryboardexamplewholepage)]  
+ [!code-csharp[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/ControllableStoryboardExample.cs#controllablestoryboardexamplewholepage)]
+ [!code-vb[animation_ovws_procedural_snip#ControllableStoryboardExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/controllablestoryboardexample.vb#controllablestoryboardexamplewholepage)]  
   
 <a name="usingstoryboardsinstyles"></a>   
 ## <a name="animate-in-a-style"></a>スタイル内でアニメーション化を行う  
@@ -276,11 +276,11 @@ ms.locfileid: "56748259"
   
 -   指定することはできません、<xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>します。  
   
--   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Style>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)します。  
+-   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Style>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
 -   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
   
- スタイル内でストーリー ボードを定義する方法を示す例は、次を参照してください。、[スタイル内でアニメーション化](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)例。  
+ スタイル内でストーリー ボードを定義する方法を示す例は、次を参照してください。、[スタイル内でアニメーション化](how-to-animate-in-a-style.md)例。  
   
 <a name="defineAStoryboardInAControlTemplateSection"></a>   
 ## <a name="animate-in-a-controltemplate"></a>ControlTemplate 内でアニメーション化を行う  
@@ -290,19 +290,19 @@ ms.locfileid: "56748259"
   
 -   <xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>の子オブジェクトしか参照、<xref:System.Windows.Controls.ControlTemplate>します。  
   
--   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Controls.ControlTemplate>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)します。  
+-   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Controls.ControlTemplate>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
 -   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
   
- ストーリー ボードを定義する方法を示す例については、<xref:System.Windows.Controls.ControlTemplate>を参照してください、 [ControlTemplate 内でアニメーション化](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)例。  
+ ストーリー ボードを定義する方法を示す例については、<xref:System.Windows.Controls.ControlTemplate>を参照してください、 [ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)例。  
   
 <a name="animateWhenAPropertyValueChanges"></a>   
 ## <a name="animate-when-a-property-value-changes"></a>プロパティ値が変化したときにアニメーション化を行う  
- スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、次を参照してください。 [、アニメーションとプロパティ値が変化をトリガー](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)します。  
+ スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、次を参照してください。 [、アニメーションとプロパティ値が変化をトリガー](how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)します。  
   
  プロパティによって適用されるアニメーション<xref:System.Windows.Trigger>オブジェクトよりもさらに複雑な方法で動作しますが<xref:System.Windows.EventTrigger>アニメーションまたはアニメーションの開始を使用して<xref:System.Windows.Media.Animation.Storyboard>メソッド。  「ハンドオフ」アニメーションによって他の定義、<xref:System.Windows.Trigger>オブジェクトで、compose を<xref:System.Windows.EventTrigger>メソッドによってトリガーされるアニメーションです。  
   
 ## <a name="see-also"></a>関連項目
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [プロパティ アニメーションの手法の概要](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [アニメーションの概要](animation-overview.md)
+- [プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)
+- [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)

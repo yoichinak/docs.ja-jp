@@ -7,41 +7,41 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: 04d1a72d70d6fd0753677f2e9635a05a60d33fec
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364750"
 ---
 # <a name="xaml-resources"></a>XAML リソース
-リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)します。  
+リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](resources-and-code.md)します。  
   
 > [!NOTE]
->  このトピックで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーション リソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
+>  このトピックで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーション リソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>XAML でリソースの使用  
  次の例では、定義、<xref:System.Windows.Media.SolidColorBrush>リソース ページのルート要素として。 例では、リソースを参照しなどのいくつかの子要素のプロパティを設定するため、 <xref:System.Windows.Shapes.Ellipse>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.Button>します。  
   
- [!code-xaml[FEResourceSH_snip#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
+ [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
  フレームワーク レベルのすべての要素 (<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>) が、<xref:System.Windows.FrameworkElement.Resources%2A>リソースを含むプロパティであるプロパティ (として、 <xref:System.Windows.ResourceDictionary>) リソースを定義します。 任意の要素には、リソースを定義できます。 ただし、リソースが、これはルート要素で定義された最も多くの場合、<xref:System.Windows.Controls.Page>の例です。  
   
- リソース ディクショナリ内の各リソースは、一意キーを持つ必要があります。 使って一意のキーを割り当てるマークアップでリソースを定義するときに、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)します。 通常、キーは、文字列。ただし、設定することできますも、その他のオブジェクトの種類に適切なマークアップ拡張機能を使用しています。 リソースの文字列以外のキーで特定の機能領域で使用されます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特にのスタイル、コンポーネントのリソース、およびデータのスタイル設定します。  
+ リソース ディクショナリ内の各リソースは、一意キーを持つ必要があります。 使って一意のキーを割り当てるマークアップでリソースを定義するときに、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)します。 通常、キーは、文字列。ただし、設定することできますも、その他のオブジェクトの種類に適切なマークアップ拡張機能を使用しています。 リソースの文字列以外のキーで特定の機能領域で使用されます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特にのスタイル、コンポーネントのリソース、およびデータのスタイル設定します。  
   
  リソースを定義した後は、キーの名前を示すリソース マークアップ拡張構文を使用してプロパティ値を使用するリソースを参照できます。  
   
- [!code-xaml[FEResourceSH_snip#KeyNameUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
+ [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
  前の例では、ときに、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダーは、値を処理`{StaticResource MyBrush}`の<xref:System.Windows.Controls.Control.Background%2A>プロパティ<xref:System.Windows.Controls.Button>、リソースの検索ロジックは最初のリソース ディクショナリにチェック、<xref:System.Windows.Controls.Button>要素。 場合<xref:System.Windows.Controls.Button>のリソース キーの定義がない`MyBrush`(そうでない、そのリソースのコレクションが空)、参照は、次の親要素をチェック<xref:System.Windows.Controls.Button>、これは<xref:System.Windows.Controls.Page>します。 したがってでリソースを定義する場合、<xref:System.Windows.Controls.Page>ルート要素では、論理ツリー内のすべての要素、<xref:System.Windows.Controls.Page>がアクセスできるし、任意のプロパティの値の設定の同じリソースを再利用することができます、<xref:System.Type>をリソース表します。 前の例で、同じ`MyBrush`リソースは、2 つの異なるプロパティを設定:<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>、および<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Rectangle>します。  
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>静的および動的なリソース  
- リソースは、静的リソースまたは動的リソースのいずれかとして参照できます。 いずれかを使用して、これは、 [StaticResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)または[DynamicResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)します。 マークアップ拡張機能の機能である[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクト参照を指定するには、マークアップ拡張機能属性文字列を処理し、オブジェクトを返すことによって起こります、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダー。 マークアップ拡張機能の動作の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)します。  
+ リソースは、静的リソースまたは動的リソースのいずれかとして参照できます。 いずれかを使用して、これは、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)または[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)します。 マークアップ拡張機能の機能である[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクト参照を指定するには、マークアップ拡張機能属性文字列を処理し、オブジェクトを返すことによって起こります、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダー。 マークアップ拡張機能の動作の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
- マークアップ拡張機能を使用する場合は、その特定のマークアップ拡張機能によって処理される文字列形式の 1 つまたは複数のパラメーターではなく設定されるプロパティのコンテキストで評価される通常提供します。 [StaticResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)すべての利用可能なリソース ディクショナリ内でそのキーの値を参照して、キーを処理します。 これは、読み込みプロセスを静的リソース参照を受け取るプロパティの値を割り当てる必要がある場合に、ポイントの読み込み中に発生します。 [DynamicResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)代わりにプロセス式、およびその式を作成して、キー残り評価されていないアプリケーションが実際に実行されるまで、どの時点で、式が評価され、値を指定します。  
+ マークアップ拡張機能を使用する場合は、その特定のマークアップ拡張機能によって処理される文字列形式の 1 つまたは複数のパラメーターではなく設定されるプロパティのコンテキストで評価される通常提供します。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)すべての利用可能なリソース ディクショナリ内でそのキーの値を参照して、キーを処理します。 これは、読み込みプロセスを静的リソース参照を受け取るプロパティの値を割り当てる必要がある場合に、ポイントの読み込み中に発生します。 [DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)代わりにプロセス式、およびその式を作成して、キー残り評価されていないアプリケーションが実際に実行されるまで、どの時点で、式が評価され、値を指定します。  
   
  リソースを参照すると次の考慮事項は静的リソース参照または動的リソース参照を使用するかどうかを与えることができます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56748272"
   
 -   多数の依存関係プロパティを設定するのには、リソースを使用しています。 依存関係プロパティでは、有効な値がプロパティ システムによって有効になっているため、読み込み時に評価される依存関係プロパティの値を指定する場合、依存関係プロパティ reevaluated 式を確認する必要はありませんおよび返すことができますをキャッシュします最後の有効な値。 この方法は、パフォーマンスが向上します。  
   
--   すべてのコンシューマーの基になるリソースを変更するかを使用して、各コンシューマーの書き込み可能な個別のインスタンスを保持したい、 [x: 共有属性](../../../../docs/framework/xaml-services/x-shared-attribute.md)します。  
+-   すべてのコンシューマーの基になるリソースを変更するかを使用して、各コンシューマーの書き込み可能な個別のインスタンスを保持したい、 [x: 共有属性](../../xaml-services/x-shared-attribute.md)します。  
   
 #### <a name="static-resource-lookup-behavior"></a>静的リソース参照動作  
   
@@ -133,32 +133,32 @@ ms.locfileid: "56748272"
   
 -   設定されているプロパティのプロパティである必要があります、<xref:System.Windows.Freezable>いずれかの値として提供されている、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>プロパティ、または<xref:System.Windows.Setter>値。  
   
- プロパティが設定されている必要があるので、<xref:System.Windows.DependencyProperty>または<xref:System.Windows.Freezable>プロパティ、プロパティ変更のほとんどに伝達できます UI プロパティの変更 (動的なリソースが変更された値) の受信がプロパティ システムによって確認するためです。 ほとんどのコントロールが場合は、コントロールの別のレイアウトを強制的にロジックを含む、<xref:System.Windows.DependencyProperty>変更とプロパティがレイアウトに影響を与えます。 ただし、すべてのプロパティがある、 [DynamicResource マークアップ拡張機能](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)それらの値として、UI にリアルタイムで更新するように値を提供する保証されます。 その機能は、によって、プロパティと、プロパティ、またはアプリケーションの論理構造を所有する型によって使用異なる場合がありますもします。  
+ プロパティが設定されている必要があるので、<xref:System.Windows.DependencyProperty>または<xref:System.Windows.Freezable>プロパティ、プロパティ変更のほとんどに伝達できます UI プロパティの変更 (動的なリソースが変更された値) の受信がプロパティ システムによって確認するためです。 ほとんどのコントロールが場合は、コントロールの別のレイアウトを強制的にロジックを含む、<xref:System.Windows.DependencyProperty>変更とプロパティがレイアウトに影響を与えます。 ただし、すべてのプロパティがある、 [DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)それらの値として、UI にリアルタイムで更新するように値を提供する保証されます。 その機能は、によって、プロパティと、プロパティ、またはアプリケーションの論理構造を所有する型によって使用異なる場合がありますもします。  
   
 <a name="stylesimplicitkeys"></a>   
 ## <a name="styles-datatemplates-and-implicit-keys"></a>スタイル、Datatemplate、および暗黙的なキー  
  以前では、示されていました内の項目をすべて、<xref:System.Windows.ResourceDictionary>キーを持っている必要があります。 ただし、いないわけでは、明示的なすべてのリソースである必要があります`x:Key`します。 いくつかのオブジェクト型では、別のプロパティの値に関連付けられた、キー値をリソースとして定義されている場合に暗黙のキーをサポートします。 一方、暗黙のキーと呼ばれます、`x:Key`属性は、明示的なキー。 明示的なキーを指定することによって、暗黙のキーを上書きできます。  
   
- リソースの 1 つの非常に重要なシナリオは、定義する場合、<xref:System.Windows.Style>します。 実際を<xref:System.Windows.Style>スタイルは本質的に再利用するためのものであるため、リソース ディクショナリのエントリとしてはほぼ常に定義します。 スタイルの詳細については、次を参照してください。[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)します。  
+ リソースの 1 つの非常に重要なシナリオは、定義する場合、<xref:System.Windows.Style>します。 実際を<xref:System.Windows.Style>スタイルは本質的に再利用するためのものであるため、リソース ディクショナリのエントリとしてはほぼ常に定義します。 スタイルの詳細については、次を参照してください。[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
   
- コントロールのスタイルで作成およびできる暗黙のキーを参照します。 コントロールの既定の外観を定義するテーマ スタイルは、この暗黙のキーに依存します。 要求の観点からは、暗黙のキーは、<xref:System.Type>コントロール自体の。 リソースの定義の観点からは、暗黙のキーは、<xref:System.Windows.Style.TargetType%2A>のスタイル。 そのため、カスタム コントロールのテーマを作成する場合、既存のテーマ スタイルを使用して対話するスタイルを作成する必要はありませんを指定する、 [X:key ディレクティブ](../../../../docs/framework/xaml-services/x-key-directive.md)を<xref:System.Windows.Style>します。 テーマ スタイルを使用する場合はまったく任意のスタイルを指定する必要はありません。 たとえば、次のスタイル定義の動作、場合でも、<xref:System.Windows.Style>キーにするリソースは表示されません。  
+ コントロールのスタイルで作成およびできる暗黙のキーを参照します。 コントロールの既定の外観を定義するテーマ スタイルは、この暗黙のキーに依存します。 要求の観点からは、暗黙のキーは、<xref:System.Type>コントロール自体の。 リソースの定義の観点からは、暗黙のキーは、<xref:System.Windows.Style.TargetType%2A>のスタイル。 そのため、カスタム コントロールのテーマを作成する場合、既存のテーマ スタイルを使用して対話するスタイルを作成する必要はありませんを指定する、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)を<xref:System.Windows.Style>します。 テーマ スタイルを使用する場合はまったく任意のスタイルを指定する必要はありません。 たとえば、次のスタイル定義の動作、場合でも、<xref:System.Windows.Style>キーにするリソースは表示されません。  
   
- [!code-xaml[FEResourceSH_snip#ImplicitStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
+ [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- あるスタイル実際には、キーが: 暗黙のキー `typeof(` <xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
+ あるスタイル実際には、キーが: 暗黙のキー `typeof(` <xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
   
  使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されているスタイルはテーマ ディクショナリのスタイルと同じキーを使用して、テーマ ディクショナリ スタイルより参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
   
- 場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、次を参照してください。[スタイルのコントロールを設計するためのガイドライン](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)します。  
+ 場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、次を参照してください。[スタイルのコントロールを設計するためのガイドライン](../controls/guidelines-for-designing-stylable-controls.md)します。  
   
- <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 詳細については、次を参照してください。[データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)します。  
+ <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../xaml-services/x-type-markup-extension.md). 詳細については、次を参照してください。[データ テンプレートの概要](../data/data-templating-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.ResourceDictionary>
-- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [リソースとコード](../../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [リソースを定義および参照する](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
-- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)
-- [x:Type マークアップ拡張機能](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [StaticResource のマークアップ拡張機能](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
-- [DynamicResource マークアップ拡張](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [アプリケーション リソース](optimizing-performance-application-resources.md)
+- [リソースとコード](resources-and-code.md)
+- [リソースを定義および参照する](how-to-define-and-reference-a-resource.md)
+- [アプリケーション管理の概要](../app-development/application-management-overview.md)
+- [x:Type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)
+- [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)

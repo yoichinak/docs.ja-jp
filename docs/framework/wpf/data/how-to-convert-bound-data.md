@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 5069b6d6b7ded52011ec4c65ca2c47e41bba2ece
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c98f8e4e5c837e6fbbe836a9eb2f228d2d689542
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352297"
 ---
 # <a name="how-to-convert-bound-data"></a>方法: バインドされたデータを変換する
 この例では、バインドで使用されるデータへの変換を適用する方法を示します。  
@@ -24,20 +24,20 @@ ms.locfileid: "54705722"
 ## <a name="example"></a>例  
  次の例では、年、月、および日のみが表示されるように渡される日付値に変換する日付コンバーターの実装を示します。 実装する場合、<xref:System.Windows.Data.IValueConverter>装飾を使用して実装することをお勧めは、インターフェイス、<xref:System.Windows.Data.ValueConversionAttribute>開発を指定する属性を次の例のように、変換に関連するデータ型のツールします。  
   
- [!code-csharp[DataBindingLab#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
- [!code-vb[DataBindingLab#18](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
+ [!code-csharp[DataBindingLab#18](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
+ [!code-vb[DataBindingLab#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
  コンバーターを作成した後にリソースとして追加できます、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 次の例では、 *src*を名前空間にマップ*DateConverter*が定義されています。  
   
- [!code-xaml[DataBindingLab#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
+ [!code-xaml[DataBindingLab#15](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
  最後に、次の構文を使用して、バインディングでコンバーターを使用できます。 次の例では、テキストの内容、<xref:System.Windows.Controls.TextBlock>にバインドされた*StartDate*、外部データ ソースのプロパティであります。  
   
- [!code-xaml[DataBindingLab#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
+ [!code-xaml[DataBindingLab#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
  上記の例で参照されるスタイルのリソースは、このトピックで示されていませんリソース セクションで定義されます。  
   
 ## <a name="see-also"></a>関連項目
-- [バインディングの検証の実装](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [バインディングの検証の実装](how-to-implement-binding-validation.md)
+- [データ バインディングの概要](data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)

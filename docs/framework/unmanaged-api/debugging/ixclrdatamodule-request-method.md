@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746662"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374870"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request メソッド
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>パラメーター
 
-`reqCode` [in]要求の種類を送信します。
+`reqCode`\
+[in]要求の種類を送信します。
 
-`inBufferSize` [in] で渡される入力バッファーのサイズ。
+`inBufferSize`\
+[in] で渡される入力バッファーのサイズ。
 
-`inBuffer` [in、size_is(inBufferSize)]要求で送信される生データのバッファー ポインター。
+`inBuffer`\
+[in、size_is(inBufferSize)]要求で送信される生データのバッファー ポインター。
 
-`outBufferSize` [in]出力バッファーのサイズ。
+`outBufferSize`\
+[in]出力バッファーのサイズ。
 
-`outBuffer` [out, size_is(outBufferSize)]要求の応答を格納するために使用するバッファーのポインター。
+`outBuffer`\
+[out, size_is(outBufferSize)]要求の応答を格納するために使用するバッファーのポインター。
 
 ## <a name="remarks"></a>Remarks
 
@@ -61,5 +66,5 @@ HRESULT Request([in] ULONG32 reqCode,
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [デバッグ](index.md)
+- [IXCLRDataModule インターフェイス](ixclrdatamodule-interface.md)

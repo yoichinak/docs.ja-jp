@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748078"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352712"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能として、文字列からの型変換の目的について説明します。 .NET Framework で、<xref:System.ComponentModel.TypeConverter>クラスは、特定の目的を XAML 属性の使用法のプロパティの値として使用できる管理対象のカスタム クラスの実装の一部として機能します。 カスタム クラスを作成する XAML 設定可能な属性の値として使用するのには、クラスのインスタンスが必要な場合は、可能性があります、適用する必要があります、<xref:System.ComponentModel.TypeConverterAttribute>カスタムを作成し、クラスに<xref:System.ComponentModel.TypeConverter>クラス、またはその両方です。  
@@ -24,27 +24,22 @@ ms.locfileid: "54748078"
  XAML プロセッサには、属性値を処理するために 2 つの情報が必要があります。 第 1 の情報は、設定しようとしているプロパティの値の型です。 属性値を定義するすべての文字列は、XAML で処理され、最終的にはその型の値に変換 (解決) される必要があります。 値が、XAML パーサーで認識できるプリミティブ (数値など) である場合は、文字列の直接的な変換が試みられます。 値が列挙体の場合は、文字列を使用して、その列挙体の名前付き定数に一致する名前を確認してください。 値がどちらもパーサーで認識されるプリミティブも列挙体は、その問題の型の場合は、型、または変換後の文字列に基づいて、値のインスタンスを提供できる必要があります。 これは、型コンバーターのクラスを示すことにより行います。 型コンバーターは、事実上、コードが .NET コードの呼び出しに対する XAML シナリオとも可能性がある別のクラスの値を提供するためのヘルパー クラスです。  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>XAML で既存の型変換動作を使用します。  
- 基になる XAML の概念に関する知識、に応じてする可能性があります既に型変換動作アプリケーションで使用する基本的な XAML 気付かないうちに。 たとえば、WPF は型の値を使用するプロパティの百を定義します。<xref:System.Windows.Point>します。 A <xref:System.Windows.Point> 2 次元の座標空間内の座標を記述する値は、2 つの重要なプロパティが実際には:<xref:System.Windows.Point.X%2A>と<xref:System.Windows.Point.Y%2A>します。 XAML の時点を指定するときに指定する区切り記号 (コンマ) を使って文字列としての間、<xref:System.Windows.Point.X%2A>と<xref:System.Windows.Point.Y%2A>指定する値。 たとえば、`<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">` のように指定します。  
+ 基になる XAML の概念に関する知識、に応じてする可能性があります既に型変換動作アプリケーションで使用する基本的な XAML 気付かないうちに。 たとえば、WPF は型の値を使用するプロパティの百を定義します。<xref:System.Windows.Point>します。 A <xref:System.Windows.Point> 2 次元の座標空間内の座標を記述する値は、2 つの重要なプロパティが実際には:<xref:System.Windows.Point.X%2A>と<xref:System.Windows.Point.Y%2A>します。 XAML の時点を指定するときに指定する区切り記号 (コンマ) を使って文字列としての間、<xref:System.Windows.Point.X%2A>と<xref:System.Windows.Point.Y%2A>指定する値。 たとえば、`<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>` のように指定します。  
   
  この単純な種類のでも<xref:System.Windows.Point>XAML における単純な使用法が型コンバーターが含まれるとします。 この場合、クラスは<xref:System.Windows.PointConverter>します。  
   
  型コンバーター<xref:System.Windows.Point>マークアップの使用方法を使用するすべてのプロパティのクラス レベルの効率で定義されている<xref:System.Windows.Point>します。 せず、型コンバーターは、ここでは次のとおり、前述の同じ例のマークアップをかなり詳細。  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  文字列型の変換または同等のより詳細な構文を使用するかどうかは、一般に、コーディング スタイル選択です。 XAML ツールのワークフローが値の設定方法に影響を与える可能性があります。 一部の XAML ツールは、デザイナーのビューや、独自のシリアル化メカニズムへのラウンドト リップする使いやすいために、最も詳細な形式のマークアップを出力する傾向があります。  
   
@@ -53,7 +48,7 @@ ms.locfileid: "54748078"
 ### <a name="type-converters-and-markup-extensions"></a>型コンバーターとマークアップ拡張機能  
  マークアップ拡張機能よぶ型コンバーターは、XAML プロセッサの動作とに適用するシナリオの観点から両方の役割を入力します。 マークアップ拡張機能の使用時にはコンテキストを利用できますが、マークアップ拡張機能が値を提供するプロパティの型変換動作は一般にマークアップ拡張機能の実装ではチェックされません。 つまり、マークアップ拡張機能としてテキスト文字列を返した場合であってもその`ProvideValue`出力するには、特定のプロパティまたはプロパティ値の型に適用されると、その文字列に対する型変換動作は呼び出されません、一般に、マークアップ拡張機能の目的は、プロセスには、文字列と関連する型コンバーターを呼び出さず、オブジェクトを返します。  
   
- マークアップ拡張機能が型コンバーターではなく必要な場合、1 つの一般的な状況は既に存在するオブジェクトへの参照です。 せいぜい、ステートレスな型コンバーターは、望ましいことができない可能性がありますの新しいインスタンスを生成のみでした。 マークアップ拡張機能の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)します。  
+ マークアップ拡張機能が型コンバーターではなく必要な場合、1 つの一般的な状況は既に存在するオブジェクトへの参照です。 せいぜい、ステートレスな型コンバーターは、望ましいことができない可能性がありますの新しいインスタンスを生成のみでした。 マークアップ拡張機能の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
 ### <a name="native-type-converters"></a>ネイティブな型コンバーター  
  XAML パーサーの WPF と .NET Framework の実装では、ネイティブ型の変換処理、まだがプリミティブとして考えるが従来どおり型ではない特定の種類があります。 このような型の例として、 <xref:System.DateTime>が挙げられます。 この理由は、.NET Framework のアーキテクチャの動作方法に基づきは: 種類<xref:System.DateTime>mscorlib、.NET で最も基本的なライブラリで定義されます。 <xref:System.DateTime> 属性、依存関係を導入する別のアセンブリから来る属性を設定するのには許可されていません (<xref:System.ComponentModel.TypeConverterAttribute>は System から) ため、属性によって、通常の型コンバーターの検出メカニズムがサポートされることはできません。 代わりに、XAML パーサーでは、このようなネイティブの処理が必要な型のリストがあるし、通常のプリミティブの処理方法と同様にこれらを処理します。 (の場合に<xref:System.DateTime>への呼び出しは、 <xref:System.DateTime.Parse%2A>)。  
@@ -116,6 +111,6 @@ ms.locfileid: "54748078"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ComponentModel.TypeConverter>
-- [XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [XAML の概要 (WPF)](xaml-overview-wpf.md)
+- [マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [XAML 構文の詳細](xaml-syntax-in-detail.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355156"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] テクノロジの概要について説明します。  
@@ -28,12 +28,12 @@ ms.locfileid: "54719223"
   
  次の 2 つの例は、サブピクセル ポジショニングを使用した場合にサブピクセル境界でグリフを開始できることを示しています。 左側の例は、サブピクセル ポジショニングが採用されていない、以前のバージョンの [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダラーを使用してレンダリングしたものです。 右側の例は、新しいバージョンの [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダラーで、サブピクセル ポジショニングを使用してレンダリングしたものです。 右側のイメージの **e** と **l** が、それぞれ異なるサブピクセルから開始しているために若干異なってレンダリングされていることに注意してください。 グリフ イメージはハイ コントラストであるため、テキストを標準サイズで画面に表示したときは、この違いはわかりません。 これは、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] に組み込まれている高度なカラー フィルター処理によってのみ実現します。  
   
- ![ClearType の 2 つのバージョンで表示されるテキスト](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![ClearType の 2 つのバージョンで表示されるテキスト](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 ClearType の以前のバージョンと新しいバージョンを使用して表示されるテキスト  
   
  次の 2 つの例では、以前のバージョンの [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダラーでの出力と新バージョンの [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダラーの出力を比較しています。 右側に示したサブピクセル ポジショニングでは、画面上の文字の間隔が大きく改善されています。特に、サブピクセル 1 個とピクセル 1 個の差がグリフの幅に占める割合の大きい、小さなサイズの場合によくわかります。 2 番目のイメージの方が、文字の間隔が均等に近くなっています。 サブピクセル ポジショニングによるさまざまなメリットがテキスト画面全体の外観に及ぼす効果は大幅に増加しましたが、これは [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] テクノロジが大きく進歩したことを表しています。  
   
- ![ClearType の以前のバージョンで表示されるテキスト](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![ClearType の以前のバージョンで表示されるテキスト](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 ClearType の以前のバージョンと新しいバージョンを使用したテキスト  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ ClearType の以前のバージョンと新しいバージョンを使用した�
   
  次の例では、y 方向のアンチエイリアシングを使用しない場合の効果を示します。 この場合、文字の上下で境界がギザギザになっていることがよくわかります。  
   
- ![緩やかな曲線上のギザギザした境界が付いたテキスト](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![緩やかな曲線上のギザギザした境界が付いたテキスト](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 緩やかな曲線上にギザギザした境界が付いたテキスト  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] には、ギザギザした境界を滑らかにする y 方向レベルのアンチエイリアシング機能があります。 これは、東アジア言語を読みやすくするために特に重要です。これらの言語の表意文字では、緩やかな曲線の量が水平方向と垂直方向でほぼ同じであるからです。  
   
  次の例では、y 方向のアンチエイリアシングの効果を示します。 この場合、文字の上下の曲線が滑らかに表示されています。  
   
- ![テキストを ClearType y&#45;方向&#45;エイリアス](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![テキストを ClearType y&#45;方向&#45;エイリアス](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>関連項目
-- [ClearType レジストリの設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [ClearType レジストリの設定](cleartype-registry-settings.md)

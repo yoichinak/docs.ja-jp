@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545031"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352985"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>スタイルの設定が可能なコントロールを設計するためのガイドライン
 このドキュメントは、スタイルの設定とテンプレートの作成を簡単に行うためのコントロールを設計する際に考慮すべき一連のベスト プラクティスをまとめたものです。 組み込みの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロール セットのテーマのコントロールのスタイルの操作で試行錯誤を繰り返した結果、この一連のベスト プラクティスにたどり着きました。 スタイリングの成功の鍵は、スタイルそのものであると同様に、適切に設計されたオブジェクト モデルの機能であることが分かりました。 このドキュメントの対象読者は、スタイルの作成者ではなく、コントロールの作成者です。  
@@ -27,7 +27,7 @@ ms.locfileid: "54545031"
   
 -   データ テンプレート  
   
- スタイルとテンプレートの概要については、「[スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)」を参照してください。  
+ スタイルとテンプレートの概要については、「[スタイルとテンプレート](styling-and-templating.md)」を参照してください。  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>開始する前に。コントロールの理解  
@@ -119,5 +119,5 @@ ms.locfileid: "54545031"
 -   **テーマ スタイルは、すべてのテーマで一貫性のある「レイアウト」セマンティクスを持つ必要はありません**。 たとえば、既定のスタイルは、コントロールがすべてのテーマで同じ量のサイズを占有することを保証する必要はなく、また、コントロールがすべてのテーマで同じコンテンツの余白/パディングを持つことを保証する必要もありません。  
   
 ## <a name="see-also"></a>関連項目
-- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [スタイルとテンプレート](styling-and-templating.md)
+- [コントロールの作成の概要](control-authoring-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b2f771f124cee6ad52ea841006a6749408540048
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 116a847d4f7b0591e823416cf5744e68d689c6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746073"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378081"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>チュートリアル: ハイブリッド アプリケーションのローカライズ
 
@@ -48,7 +48,7 @@ ms.locfileid: "56746073"
 
 2.  追加、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>と呼ばれる要素`SimpleControl`をプロジェクトにします。
 
-3.  使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロールを配置する、`SimpleControl`フォームの要素。 詳細については、「[チュートリアル:Windows フォームでの 3d WPF 複合コントロールをホストしている](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)します。
+3.  使用して、<xref:System.Windows.Forms.Integration.ElementHost>コントロールを配置する、`SimpleControl`フォームの要素。 詳細については、「[チュートリアル:Windows フォームでの 3d WPF 複合コントロールをホストしている](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)します。
 
 ## <a name="adding-localizable-content"></a>ローカライズ可能なコンテンツを追加します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "56746073"
 
 2.  コンテンツを設定、<xref:System.Windows.Controls.Button>次のコードを使用して制御します。
 
-     [!code-xaml[LocalizingWpfInWf#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
+     [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3.  **ソリューション エクスプ ローラー**、ダブルクリックして**Form1** Windows フォーム デザイナーで開きます。
 
@@ -93,7 +93,7 @@ Windows フォーム デザイナーでは、サテライト アセンブリで�
 
 7.  次のコードをコピー、`Form1`への呼び出しの前のコンス トラクター`InitializeComponent`します。
 
-     [!code-csharp[LocalizingWpfInWf#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
+     [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
 8.  **ソリューション エクスプ ローラー**を右クリックして**LocalizingWpfInWf**クリック**プロジェクトのアンロード**します。
 
@@ -129,7 +129,7 @@ Windows フォーム デザイナーでは、サテライト アセンブリで�
 
 3.  **ソリューション エクスプ ローラー**、ダブルクリックして**SimpleControl.xaml**コード エディターで開きます。 わかりますが、`msbuild`コマンドが追加、`Uid`属性をすべての要素。 これには、リソース識別子の割り当てを通じてローカライズが容易になります。
 
-     [!code-xaml[LocalizingWpfInWf#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
+     [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
 4.  キーを押して**F6**ソリューションをビルドします。
 
@@ -139,7 +139,7 @@ Windows フォーム デザイナーでは、サテライト アセンブリで�
 
 ### <a name="to-produce-a-satellite-assembly"></a>サテライト アセンブリを生成するには
 
-1.  LocBaml.exe をプロジェクトの \debug フォルダーにコピーします。 詳細については、次を参照してください。[アプリケーションをローカライズする](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)します。
+1.  LocBaml.exe をプロジェクトの \debug フォルダーにコピーします。 詳細については、次を参照してください。[アプリケーションをローカライズする](how-to-localize-an-application.md)します。
 
 2.  コマンド プロンプト ウィンドウで、次のコマンドを使用して、一時ファイルにリソース文字列を抽出します。
 
@@ -177,6 +177,6 @@ Windows フォーム デザイナーでは、サテライト アセンブリで�
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [アプリケーションをローカライズする](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)
+- [アプリケーションをローカライズする](how-to-localize-an-application.md)
 - [チュートリアル: Windows フォームのローカリゼーション](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

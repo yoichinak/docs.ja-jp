@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547142"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368052"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF アプリケーションのビルドと配置
-ビルドおよび配置モデルには、次のようをビルドし、ローカルおよびリモートで、アプリケーションの展開機能が提供します。  
+ビルドおよび展開モデルは、次のようをビルドし、ローカルとリモートのアプリケーションの展開機能を提供します。  
   
--   MSBuild: .NET は、Microsoft.Build.Tasks.Windows 名前空間に存在しているシステムを構築します。  
+-   MSBuild: .NET では、Microsoft.Build.Tasks.Windows 名前空間にあるシステムを構築します。  
   
--   UI リソース: リソースを操作します。  
+-   リソース: UI リソースを使用します。  
   
--   ClickOnce の配置: .NET 発行および配置システムです。  
+-   ClickOnce 配置: .NET 発行および配置システム。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [WPF アプリケーションの配置](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [方法トピック](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)  
+ [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)  
+ [方法トピック](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  MSBuild  
   
 ## <a name="related-sections"></a>関連項目  
- [アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [WPF のウィンドウ](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [WPF XAML ブラウザー アプリケーションの概要](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [ホスティング](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [アプリケーション管理の概要](application-management-overview.md)  
+  [WPF のウィンドウ](windows-in-wpf-applications.md)  
+  [ナビゲーションの概要](navigation-overview.md)  
+  [WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)  
+  [ホスティング](hosting-wpf-applications.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547294"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375104"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>視覚的な構造とコントロールの視覚的な動作を指定します。 コントロールの外観をカスタマイズするには、新しい it 提供することにより<xref:System.Windows.Controls.ControlTemplate>します。 作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、その機能を変更することがなく、既存のコントロールの外観を置き換えます。 たとえば、行うことができます、ボタン、アプリケーションで、既定の四角形から丸い形が、ボタンが引き続き発生、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
@@ -26,16 +26,16 @@ ms.locfileid: "54547294"
   
  次の図に示す、<xref:System.Windows.Controls.Button>を使用して、<xref:System.Windows.Controls.ControlTemplate>このトピックで作成されます。  
   
- ![カスタム コントロール テンプレート付きのボタンをクリックします。](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![カスタム コントロール テンプレート付きのボタンをクリックします。](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 カスタム コントロール テンプレートを使用しているボタン  
   
- ![赤い境界線付きのボタンをクリックします。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![赤い境界線付きのボタンをクリックします。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 カスタム コントロール テンプレートを使用したボタンにマウス ポインターを置いた状態  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックは、「[コントロール](../../../../docs/framework/wpf/controls/index.md)」で説明したコントロールとスタイルの作成方法および使用方法を理解していることを前提としています。 継承する要素にこのトピックで説明する概念を適用、<xref:System.Windows.Controls.Control>クラスを除く、 <xref:System.Windows.Controls.UserControl>。 適用することはできません、<xref:System.Windows.Controls.ControlTemplate>を<xref:System.Windows.Controls.UserControl>します。  
+ このトピックは、「[コントロール](index.md)」で説明したコントロールとスタイルの作成方法および使用方法を理解していることを前提としています。 継承する要素にこのトピックで説明する概念を適用、<xref:System.Windows.Controls.Control>クラスを除く、 <xref:System.Windows.Controls.UserControl>。 適用することはできません、<xref:System.Windows.Controls.ControlTemplate>を<xref:System.Windows.Controls.UserControl>します。  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>ControlTemplate の作成が必要な場合  
@@ -47,12 +47,12 @@ ms.locfileid: "54547294"
   
  次の図は、 <xref:System.Windows.Controls.CheckBox> 、既定値を使用する<xref:System.Windows.Controls.ControlTemplate>します。  
   
- ![既定のコントロール テンプレートのチェック ボックスをオンします。](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![既定のコントロール テンプレートのチェック ボックスをオンします。](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 既定のコントロール テンプレートを使用する CheckBox  
   
  次の図は、<xref:System.Windows.Controls.CheckBox>カスタムを使用する<xref:System.Windows.Controls.ControlTemplate>のコンテンツを配置する、<xref:System.Windows.Controls.CheckBox>選択インジケーター上に X が表示されますと、<xref:System.Windows.Controls.CheckBox>が選択されています。  
   
- ![カスタム コントロール テンプレートを使用してチェック ボックスをオンします。](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![カスタム コントロール テンプレートを使用してチェック ボックスをオンします。](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 カスタム コントロール テンプレートを使用する CheckBox  
   
  <xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.CheckBox>このサンプルでは、比較的複雑なため、このトピックで作成する簡単な例を使用して、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Button>します。  
@@ -71,14 +71,14 @@ ms.locfileid: "54547294"
   
 -   A<xref:System.Windows.Controls.ContentPresenter>ボタンのコンテンツを表示します。 <xref:System.Windows.Controls.ContentPresenter>により、任意の種類のオブジェクトを表示できます。  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>TemplateBinding を使用してコントロールのプロパティの機能を維持する方法  
- 新規に作成するときに<xref:System.Windows.Controls.ControlTemplate>、まだするパブリック プロパティを使用して、コントロールの外観を変更する可能性があります。 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)マークアップ拡張機能内にある要素のプロパティのバインド、<xref:System.Windows.Controls.ControlTemplate>コントロールによって定義されているパブリック プロパティにします。 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) を使用すると、コントロールのプロパティをテンプレートのパラメーターとして機能させることができます。 つまり、コントロールのプロパティを設定すると、その値は [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) が機能している要素に渡されます。  
+ 新規に作成するときに<xref:System.Windows.Controls.ControlTemplate>、まだするパブリック プロパティを使用して、コントロールの外観を変更する可能性があります。 [TemplateBinding](../advanced/templatebinding-markup-extension.md)マークアップ拡張機能内にある要素のプロパティのバインド、<xref:System.Windows.Controls.ControlTemplate>コントロールによって定義されているパブリック プロパティにします。 [TemplateBinding](../advanced/templatebinding-markup-extension.md) を使用すると、コントロールのプロパティをテンプレートのパラメーターとして機能させることができます。 つまり、コントロールのプロパティを設定すると、その値は [TemplateBinding](../advanced/templatebinding-markup-extension.md) が機能している要素に渡されます。  
   
- 次の例を使用する前の例の一部を繰り返す、 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)に含まれている要素のプロパティをバインドするマークアップ拡張機能、<xref:System.Windows.Controls.ControlTemplate>ボタンによって定義されているパブリック プロパティにします。  
+ 次の例を使用する前の例の一部を繰り返す、 [TemplateBinding](../advanced/templatebinding-markup-extension.md)に含まれている要素のプロパティをバインドするマークアップ拡張機能、<xref:System.Windows.Controls.ControlTemplate>ボタンによって定義されているパブリック プロパティにします。  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  この例で、<xref:System.Windows.Controls.Grid>がその<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>プロパティ テンプレートにバインド<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>します。 <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>がテンプレート バインディングされて、同じを使用する複数のボタンを作成する<xref:System.Windows.Controls.ControlTemplate>設定と、<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>に異なる値の各ボタン。 場合<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>が内の要素のプロパティにバインドされたテンプレートは、<xref:System.Windows.Controls.ControlTemplate>で、設定、<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>ボタンがない影響ボタンの外観にします。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "54547294"
   
  次の例を使用する 2 つのボタンの作成、<xref:System.Windows.Controls.ControlTemplate>前の例で定義されています。 例のセット、 <xref:System.Windows.Controls.Control.Background%2A>、 <xref:System.Windows.Controls.Control.Foreground%2A>、および<xref:System.Windows.Controls.Control.FontSize%2A>各ボタンのプロパティ。 設定、<xref:System.Windows.Controls.Control.Background%2A>プロパティは、これはテンプレートにバインドされているため、有効、<xref:System.Windows.Controls.ControlTemplate>します。 場合でも、<xref:System.Windows.Controls.Control.Foreground%2A>と<xref:System.Windows.Controls.Control.FontSize%2A>プロパティがテンプレート バインディングされて、その値が継承されるため、それらの設定には効果があります。  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  前の例では、次の図のような出力を生成します。  
   
- ![2 つのボタンの 1 つの blue と紫色です。](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![2 つのボタンの 1 つの blue と紫色です。](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 背景色が異なる 2 つのボタン  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ ms.locfileid: "54547294"
   
  次の例は、<xref:System.Windows.VisualState>の外観を変更する、<xref:System.Windows.Controls.Button>上にマウス ポインターの場合します。 <xref:System.Windows.Media.Animation.Storyboard>の色を変更することで、ボタンの境界線の色を変更、`BorderBrush`します。 参照する場合、<xref:System.Windows.Controls.ControlTemplate>例をこのトピックの先頭には、前述のとおりです`BorderBrush`の名前を指定します、<xref:System.Windows.Media.SolidColorBrush>に割り当てられた、<xref:System.Windows.Controls.Border.Background%2A>の<xref:System.Windows.Controls.Border>します。  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  このコントロールは、コントロール コントラクトの一部として状態を定義する役割を果たします。詳細については、このトピックの「[コントロール コントラクトについて理解しその他のコントロールをカスタマイズする方法](#customizing_other_controls_by_understanding_the_control_contract)」で後述します。 次の表は、指定されている状態を一覧表示、<xref:System.Windows.Controls.Button>します。  
   
@@ -147,20 +147,20 @@ ms.locfileid: "54547294"
 > [!NOTE]
 >  設定してください、<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>添付プロパティをルート<xref:System.Windows.FrameworkElement>の<xref:System.Windows.Controls.ControlTemplate>します。  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  前の例では、次の図のような出力を生成します。  
   
- ![カスタム コントロール テンプレート付きのボタンをクリックします。](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![カスタム コントロール テンプレート付きのボタンをクリックします。](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 通常状態のカスタム コントロール テンプレートを使用しているボタン  
   
- ![赤い境界線付きのボタンをクリックします。](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![赤い境界線付きのボタンをクリックします。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 マウス オーバー状態のカスタム コントロール テンプレートを使用しているボタン  
   
- ![罫線は、押されたボタンに透過的です。](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![罫線は、押されたボタンに透過的です。](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 押された状態のカスタム コントロール テンプレートを使用しているボタン  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属するコントロールの視覚的な状態については、「[コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属するコントロールの視覚的な状態については、「[コントロールのスタイルとテンプレート](control-styles-and-templates.md)」を参照してください。  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>状態間を遷移するときのコントロールの動作の指定  
@@ -177,12 +177,12 @@ ms.locfileid: "54547294"
 ### <a name="specifying-the-duration-of-a-transition"></a>遷移の継続時間の指定  
  設定の移行にかかる時間を指定することができます、<xref:System.Windows.VisualTransition.GeneratedDuration%2A>プロパティ。 上記の例では、<xref:System.Windows.VisualState>ボタンが押されたが、アニメーションがかかりすぎる場合、ボタンがすぐに押したときし、離したときに、ボタンの境界線が透明にことを指定します。 使用することができます、<xref:System.Windows.VisualTransition>押された状態に遷移するコントロールでは、時間数を指定します。 次の例では、コントロールが押された状態になるのに要する時間を 1/100 秒に指定しています。  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>遷移時にコントロールの外観の変更を指定する方法  
  <xref:System.Windows.VisualTransition>が含まれています、<xref:System.Windows.Media.Animation.Storyboard>コントロールの状態が遷移するときに開始します。 たとえば、コントロールが `MouseOver` 状態から `Normal` 状態に遷移する場合に、特定のアニメーションが実行されるように指定できます。 次の例では、作成、<xref:System.Windows.VisualTransition>こと、ユーザーがボタンからマウス ポインターを移動するとボタンの境界線の変更が青、し、黄、黒に 1.5 秒でを指定します。  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>VisualTransition を適用するタイミングの指定  
  A <xref:System.Windows.VisualTransition> 、特定の状態のみに適用する制限できるまたは適用することができますのどの時点の状態間の遷移を制御します。 上記の例では、<xref:System.Windows.VisualTransition>からコントロールになったときに適用、`MouseOver`状態、`Normal`状態を前に、の例で、<xref:System.Windows.VisualTransition>コントロールに入るときに適用されます、`Pressed`状態。 時間を制限する、<xref:System.Windows.VisualTransition>設定が適用される、<xref:System.Windows.VisualTransition.To%2A>と<xref:System.Windows.VisualTransition.From%2A>プロパティ。 次の表では、制限が最も厳しいレベルから最も緩いレベルまでを一覧にして示しています。  
@@ -196,7 +196,7 @@ ms.locfileid: "54547294"
   
  複数<xref:System.Windows.VisualTransition>内のオブジェクトを<xref:System.Windows.VisualStateGroup>を参照するのには同じ状態には、前の表に示す順序で使用されます。 次の例では、2 つ<xref:System.Windows.VisualTransition>オブジェクト。 コントロールが遷移するときに、`Pressed`状態、 `MouseOver` 、状態、<xref:System.Windows.VisualTransition>両方を持つ<xref:System.Windows.VisualTransition.From%2A>と<xref:System.Windows.VisualTransition.To%2A>セットが使用されます。 コントロールが `Pressed` ではない状態から `MouseOver` 状態に遷移するときには、別の状態を使用します。  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  <xref:System.Windows.VisualStateGroup>が、<xref:System.Windows.VisualStateGroup.Transitions%2A>プロパティを含む、<xref:System.Windows.VisualTransition>オブジェクトに適用される、<xref:System.Windows.VisualState>内のオブジェクト、<xref:System.Windows.VisualStateGroup>します。 として、<xref:System.Windows.Controls.ControlTemplate>をいずれかを含めることが、作成者、<xref:System.Windows.VisualTransition>します。 ただし場合、<xref:System.Windows.VisualTransition.To%2A>と<xref:System.Windows.VisualTransition.From%2A>プロパティに追加されていない状態の名前に設定されて、 <xref:System.Windows.VisualStateGroup>、<xref:System.Windows.VisualTransition>は無視されます。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "54547294"
   
 -   `MouseOver` 状態から `Normal` 状態への遷移。  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>コントロール コントラクトについて理解しその他のコントロールをカスタマイズする方法  
@@ -229,25 +229,25 @@ ms.locfileid: "54547294"
   
  次の例は、<xref:System.Windows.TemplatePartAttribute>オブジェクトで指定されている、<xref:System.Windows.Controls.ComboBox>クラス。 ロジック<xref:System.Windows.Controls.ComboBox>が期待する、<xref:System.Windows.Controls.TextBox>という名前の`PART_EditableTextBox`と<xref:System.Windows.Controls.Primitives.Popup>という名前`PART_Popup`でその<xref:System.Windows.Controls.ControlTemplate>します。  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  次の例は、簡略化された<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.ComboBox>で指定されている要素を含む、<xref:System.Windows.TemplatePartAttribute>でオブジェクトを<xref:System.Windows.Controls.ComboBox>クラス。  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>コントロール コントラクトの状態  
  コントロールの状態もコントロール コントラクトの一部です。 作成する例を<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Button>の外観を指定する方法を示しています、<xref:System.Windows.Controls.Button>状態に応じて。 作成する、<xref:System.Windows.VisualState>各状態を指定し、すべての<xref:System.Windows.VisualState>オブジェクトをその共有を<xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A>で、 <xref:System.Windows.VisualStateGroup>」の説明に従って、[状態に応じたコントロールの外観を変更する](#changing_the_appearance_of_a_control_depending_on_its_state)この以前トピックです。 サードパーティ製のコントロールを使用して状態を指定する必要があります、 <xref:System.Windows.TemplateVisualStateAttribute>、コントロール テンプレートを作成するためのコントロールの状態を公開する、Expression Blend などのデザイナー ツールを有効にします。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属するコントロールのコントロール コントラクトについては、「[コントロールのスタイルとテンプレート](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属するコントロールのコントロール コントラクトについては、「[コントロールのスタイルとテンプレート](control-styles-and-templates.md)」を参照してください。  
   
 ### <a name="properties-in-the-control-contract"></a>コントロール コントラクトのプロパティ  
- コントロールに視覚的な影響を与えるパブリック プロパティも、コントロール コントラクトに含まれています。 新しいを作成することがなく、コントロールの外観を変更するこれらのプロパティを設定する<xref:System.Windows.Controls.ControlTemplate>します。 使用することも、 [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)に含まれている要素のプロパティをバインドするマークアップ拡張機能、<xref:System.Windows.Controls.ControlTemplate>で定義されているパブリック プロパティに、<xref:System.Windows.Controls.Button>します。  
+ コントロールに視覚的な影響を与えるパブリック プロパティも、コントロール コントラクトに含まれています。 新しいを作成することがなく、コントロールの外観を変更するこれらのプロパティを設定する<xref:System.Windows.Controls.ControlTemplate>します。 使用することも、 [TemplateBinding](../advanced/templatebinding-markup-extension.md)に含まれている要素のプロパティをバインドするマークアップ拡張機能、<xref:System.Windows.Controls.ControlTemplate>で定義されているパブリック プロパティに、<xref:System.Windows.Controls.Button>します。  
   
  次の例では、ボタンのコントロール コントラクトを示します。  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、既存の開始する最も簡単なことがよくあります<xref:System.Windows.Controls.ControlTemplate>に変更を加えるとします。 既存を変更するには、次のいずれかを行うことができます<xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ ms.locfileid: "54547294"
 ## <a name="complete-example"></a>コード例全体  
  次の例は、完全な<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate>このトピックで説明しました。  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>関連項目
-- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [スタイルとテンプレート](styling-and-templating.md)

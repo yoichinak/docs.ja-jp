@@ -1,5 +1,5 @@
 ---
-title: '方法: ナビゲーション履歴を後方に移動'
+title: '方法: ナビゲーション履歴を後方に移動します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c489a1593b3d1f22fe1ad6e648d3f8a3f7a6cd44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377769"
 ---
-# <a name="how-to-navigate-back-through-navigation-history"></a>方法: ナビゲーション履歴を後方に移動
+# <a name="how-to-navigate-back-through-navigation-history"></a>方法: ナビゲーション履歴を後方に移動します。
 この例では、ナビゲーション履歴を戻るエントリに移動する方法を示します。  
   
 ## <a name="example"></a>例  
@@ -23,8 +23,8 @@ ms.locfileid: "47199321"
   
  1 エントリは、最初にチェックを調べることによってナビゲーションの履歴にエントリが表示ことが必要です、 **CanGoBack**プロパティ、1 つのエントリを呼び出すことによってバックアップを移動する前に、 **GoBack**メソッド。 これは、次の例に示します。  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
  **CanGoBack**と**GoBack**によって実装される<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>します。  
   

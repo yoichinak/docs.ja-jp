@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557538"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373258"
 ---
 # <a name="brushes-how-to-topics"></a>ブラシに関する「方法」トピック
-次のトピックを使用する方法をデモンストレーションする[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ブラシを画面のコンテンツを描画するためにします。  
+次のトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画面にコンテンツを描画するブラシ。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SolidColorBrush の色または不透明度をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [グラデーション ストップの位置または色をアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [反射を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [TileBrush を使用してさまざまなタイル パターンを作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [ペンを定義する](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [描画を使用して領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [イメージで領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [線形グラデーションを使用して領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [放射状グラデーションを使用して領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [純色で領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [システム ブラシで領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [ビデオを使用して領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [ビジュアルで領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [背景として使用するイメージの縦横比を保持する](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [TileBrush の水平方向および垂直方向の配置を設定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [TileBrush のタイル サイズを設定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [ブラシを変換する](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [グラデーションでシステム カラーを使用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [SolidColorBrush の色または不透明度をアニメーション化する](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [グラデーション ストップの位置または色をアニメーション化する](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [反射を作成する](how-to-create-a-reflection.md)  
+ [TileBrush を使用してさまざまなタイル パターンを作成する](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [ペンを定義する](how-to-define-a-pen.md)  
+ [描画を使用して領域を塗りつぶす](how-to-paint-an-area-with-a-drawing.md)  
+ [イメージで領域を塗りつぶす](how-to-paint-an-area-with-an-image.md)  
+ [線形グラデーションを使用して領域を塗りつぶす](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [放射状グラデーションを使用して領域を塗りつぶす](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [純色で領域を塗りつぶす](how-to-paint-an-area-with-a-solid-color.md)  
+ [システム ブラシで領域を塗りつぶす](how-to-paint-an-area-with-a-system-brush.md)  
+ [ビデオを使用して領域を塗りつぶす](how-to-paint-an-area-with-a-video.md)  
+ [ビジュアルで領域を塗りつぶす](how-to-paint-an-area-with-a-visual.md)  
+ [背景として使用するイメージの縦横比を保持する](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [TileBrush の水平方向および垂直方向の配置を設定する](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [TileBrush のタイル サイズを設定する](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [ブラシを変換する](how-to-transform-a-brush.md)  
+ [グラデーションでシステム カラーを使用する](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ ms.locfileid: "33557538"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>関連項目  
- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [グラフィックスとマルチメディア](index.md)  
   
- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

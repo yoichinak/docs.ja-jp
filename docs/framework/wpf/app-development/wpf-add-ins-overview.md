@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746563"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365842"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "56746563"
   
 -   **通信**:アドインを許可して、メソッドを呼び出すと、データを渡すことによって分離境界を越えて互いと通信するアプリケーションをホストします。  
   
--   **有効期間管理**:読み込みとクリーニング、予測可能な方法でアプリケーション ドメインとプロセスをアンロード (を参照してください[アプリケーション ドメイン](../../../../docs/framework/app-domains/application-domains.md))。  
+-   **有効期間管理**:読み込みとクリーニング、予測可能な方法でアプリケーション ドメインとプロセスをアンロード (を参照してください[アプリケーション ドメイン](../../app-domains/application-domains.md))。  
   
 -   **バージョン管理**:アプリケーションをホストとアドイン通信できることも新しいバージョンのいずれかが作成されたときにすることです。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "56746563"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI を返すアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインを返す](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)します。  
+ UI を返すアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)します。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>ユーザー インターフェイスであるアドイン  
@@ -149,7 +149,7 @@ ms.locfileid: "56746563"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI であるアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインは](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)します。  
+ UI であるアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)します。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>複数の UI を返すアドイン  
@@ -220,7 +220,7 @@ ms.locfileid: "56746563"
   
 -   WPF には、ホスト アプリケーション側で、<xref:System.Windows.Interop.HwndSource>内部の WPF クラスから派生したとして<xref:System.Windows.Interop.HwndHost>消費<xref:System.AddIn.Contract.INativeHandleContract>します。 このクラスのインスタンスがによって返される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>ホスト アプリケーションにします。  
   
- <xref:System.Windows.Interop.HwndHost> 存在すると、WPF ユーザー インターフェイスから、ウィンドウ ハンドルによって識別される、ユーザー インターフェイスを表示します。 詳細については、「[WPF と Win32 の相互運用性](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)」を参照してください。  
+ <xref:System.Windows.Interop.HwndHost> 存在すると、WPF ユーザー インターフェイスから、ウィンドウ ハンドルによって識別される、ユーザー インターフェイスを表示します。 詳細については、「[WPF と Win32 の相互運用性](../advanced/wpf-and-win32-interoperation.md)」を参照してください。  
   
  要約すると、 <xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>に渡されるアドインからホスト アプリケーションによってカプセル化は、WPF UI のウィンドウ ハンドルを許可する存在、<xref:System.Windows.Interop.HwndHost>ホスト アプリケーションの UI を表示します。  
   
@@ -253,11 +253,11 @@ ms.locfileid: "56746563"
   
 -   ホスト アプリケーションから表示されるアドインのユーザー インターフェイスでは、ホスト アプリケーションのクリッピング動作が反映されません。  
   
--   相互運用性シナリオの*空域*の概念もアドインに適用されます (「[技術領域の概要](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)」を参照)。  
+-   相互運用性シナリオの*空域*の概念もアドインに適用されます (「[技術領域の概要](../advanced/technology-regions-overview.md)」を参照)。  
   
 -   リソースの継承、データ バインディング、およびコマンドを実行するは自動的に追加で使用できるなど、ホスト アプリケーションの UI のサービスのユーザー インターフェイス。 これらのサービスをアドインに提供するには、パイプラインを更新する必要があります。  
   
--   アドインの UI ことはできません回転、拡大縮小、傾斜、またはそれ以外の場合、変換によって影響を受ける (を参照してください[変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md))。  
+-   アドインの UI ことはできません回転、拡大縮小、傾斜、またはそれ以外の場合、変換によって影響を受ける (を参照してください[変換の概要](../graphics-multimedia/transforms-overview.md))。  
   
 -   描画からの操作によって表示されるアドインのユーザー インターフェイス内のコンテンツ、<xref:System.Drawing>アルファ ブレンド名前空間を含めることができます。 ただし、アドインの UI とホスト アプリケーションが含まれる UI 不透明になります。 100% でなければなりませんつまり、`Opacity`両方のプロパティを 1 に設定する必要があります。  
   
@@ -281,12 +281,12 @@ ms.locfileid: "56746563"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>パフォーマンスの最適化  
- 既定では、複数のアプリケーション ドメインを使用している場合の各アプリケーションに必要なさまざまな .NET Framework アセンブリがすべて読み込まれますそのアプリケーションのドメインにします。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、.NET Framework は、既に読み込まれている場合は、アプリケーション ドメイン間でアセンブリを共有するアプリケーションに指示して開始時間を短縮するための手段を提供します。 使用してこれを行う、<xref:System.LoaderOptimizationAttribute>属性には、エントリ ポイント メソッドに適用する必要があります (`Main`)。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](../../../../docs/framework/wpf/app-development/application-management-overview.md)」を参照)。  
+ 既定では、複数のアプリケーション ドメインを使用している場合の各アプリケーションに必要なさまざまな .NET Framework アセンブリがすべて読み込まれますそのアプリケーションのドメインにします。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、.NET Framework は、既に読み込まれている場合は、アプリケーション ドメイン間でアセンブリを共有するアプリケーションに指示して開始時間を短縮するための手段を提供します。 使用してこれを行う、<xref:System.LoaderOptimizationAttribute>属性には、エントリ ポイント メソッドに適用する必要があります (`Main`)。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](application-management-overview.md)」を参照)。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.LoaderOptimizationAttribute>
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [アプリケーション ドメイン](../../../../docs/framework/app-domains/application-domains.md)
+- [アプリケーション ドメイン](../../app-domains/application-domains.md)
 - [.NET framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [オブジェクトをリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [方法トピック](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [方法トピック](how-to-topics.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981544"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355130"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 暗黙的なデータ型変換を拡大変換のみに制限、遅延バインディングが禁止および禁止になる暗黙的な型指定、`Object`型。  
@@ -115,7 +115,7 @@ Option Strict { On | Off }
   
 2.  **コンパイル** タブの値を設定、 **Option Strict**ボックス。  
   
-###  <a name="conditions"></a> IDE で警告の構成を設定するには  
+### <a name="conditions"></a> IDE で警告の構成を設定するには  
  使用すると、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の代わりに、`Option Strict`ステートメントでは、エラーを生成する条件をさらに制御があります。 **警告の構成**のセクション、**コンパイル ページ**がコンパイル時エラーが発生する 3 つの条件に対応する設定と`Option Strict`にします。 これらの設定を次に示します。  
   
 -   **暗黙的な変換**  

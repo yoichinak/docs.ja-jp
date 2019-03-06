@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 6d49e9dec1cdbd2942fb9d1b94be32e44ca4311a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354649"
 ---
 # <a name="trees-in-wpf"></a>WPF のツリー
 多くのテクノロジ要素とコンポーネントは、開発者は直接レンダリングや、アプリケーションの動作に影響を与える、ツリー内のオブジェクト ノード、操作をツリー構造で編成されています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] またプログラム要素間のリレーションシップを定義するのにいくつかのツリー構造のメタファを使用します。 WPF 開発者の大部分できますコードでアプリケーションを作成または XAML で概念的には、オブジェクト ツリーの比喩を考えながら、アプリケーションの部分的な定義が、特定の API を呼び出すかをいくつかの一般的なのではなく、その特定のマークアップを使用する方法XML DOM で使用するなどのオブジェクトのツリー操作 API WPF のツリーの比喩ビューを提供する 2 つのヘルパー クラスが公開<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>します。 用語のビジュアル ツリーと論理ツリーも使用されます、WPF ドキュメントのため、同じようなツリーは特定のキーの WPF 機能の動作を理解するのに役立ちます。 このトピックでは、ビジュアル ツリーと論理ツリーが表す内容を定義し、このようなツリーが、全体的なオブジェクトのツリーの概念に関連する方法について説明しますが導入されています<xref:System.Windows.LogicalTreeHelper>と<xref:System.Windows.Media.VisualTreeHelper>秒。  
@@ -33,19 +33,19 @@ ms.locfileid: "56748061"
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]でリスト項目を配置するとき、 <xref:System.Windows.Controls.ListBox> 、コントロール、または他の UI 要素で、 <xref:System.Windows.Controls.DockPanel>、使用することも、<xref:System.Windows.Controls.ItemsControl.Items%2A>と<xref:System.Windows.Controls.Panel.Children%2A>プロパティ、明示的または暗黙的に、次の例のようにします。  
   
- [!code-xaml[TreeOvwsSupport#AllCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeOvwsSupport/CS/page1.xaml#allcode)]  
+ [!code-xaml[TreeOvwsSupport#AllCode](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeOvwsSupport/CS/page1.xaml#allcode)]  
   
  かどうかとして XML ドキュメント オブジェクト モデルでは、この XAML を処理したコメント タグが含まれていたかどうか、out 暗黙的な (これは有効でした)、結果の XML DOM ツリーに要素が含まれますが、`<ListBox.Items>`とその他の暗黙的な項目です。 マークアップを読み取るオブジェクトを記述すると XAML がその方法を処理しませんは、生成されたオブジェクト グラフには文字どおりは含まれません`ListBox.Items`します。 ただしが、<xref:System.Windows.Controls.ListBox>という名前のプロパティ`Items`を格納している、 <xref:System.Windows.Controls.ItemCollection>、および<xref:System.Windows.Controls.ItemCollection>は初期化されますが、空にする、 <xref:System.Windows.Controls.ListBox> XAML が処理されます。 次に、各子オブジェクト要素のコンテンツとして存在する、<xref:System.Windows.Controls.ListBox>に追加されます、<xref:System.Windows.Controls.ItemCollection>パーサーを呼び出して`ItemCollection.Add`します。 この例のオブジェクト ツリーに XAML の処理はこれまでに一見例作成されたオブジェクト ツリーが論理ツリーでは基本的に。  
   
  ただし、論理ツリーは、XAML の暗黙的な構文項目を使用しても、実行時に UI が除外されているアプリケーションに対して存在する全体オブジェクト グラフではありません。この主な理由は、ビジュアルとテンプレートです。 たとえば、<xref:System.Windows.Controls.Button>します。 論理ツリー レポート、<xref:System.Windows.Controls.Button>オブジェクトともその文字列`Content`します。 実行時のオブジェクト ツリーで、このボタンにはたくさんあります。 具体的には、ボタンのみ画面に表示されるためはその方法は、特定の<xref:System.Windows.Controls.Button>コントロール テンプレートが適用されました。 ビジュアル、適用されたテンプレートから取得した (テンプレートで定義されたなど<xref:System.Windows.Controls.Border>visual ボタンの周囲の濃い灰色の) 実行時に、論理ツリーが表示されている場合でも、論理ツリーでは報告されません (からの入力イベントの処理など、表示される UI とし、論理ツリーを読み取る)。 テンプレートのビジュアルを検索するには、ビジュアル ツリーを調べるには代わりに必要です。  
   
- 詳細について[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文は、作成されたオブジェクトのグラフと、XAML で暗黙の型の構文を参照してください[XAML 構文の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)または[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)します。  
+ 詳細について[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文は、作成されたオブジェクトのグラフと、XAML で暗黙の型の構文を参照してください[XAML 構文の詳細](xaml-syntax-in-detail.md)または[XAML の概要 (WPF)](xaml-overview-wpf.md)します。  
   
 <a name="tree_property_inheritance_event_routing"></a>   
 ### <a name="the-purpose-of-the-logical-tree"></a>論理ツリーの目的は、  
  論理ツリーには、コンテンツ モデルは、使用可能な子オブジェクトを簡単に反復処理できるように、およびコンテンツ モデルの拡張が存在します。 また、論理ツリー フレームワークを提供、特定の論理ツリー内のすべてのオブジェクトが読み込まれるタイミングなどの通知。 基本的には、論理ツリーは、ビジュアルは含まれませんが、独自の実行時のアプリケーションの構成に対して多くのクエリ操作のための適切なフレームワーク レベルで実行時のオブジェクト グラフの概数です。  
   
- 上の論理ツリーを検索して両方の静的および動的なリソースの参照を解決するさらに、<xref:System.Windows.FrameworkElement.Resources%2A>上、最初の要求オブジェクトと論理ツリーを続行し、各コレクション<xref:System.Windows.FrameworkElement>(または<xref:System.Windows.FrameworkContentElement>)別の`Resources`値を含む、 <xref:System.Windows.ResourceDictionary>、そのキーを格納している可能性があります。 論理ツリーは、論理ツリーとビジュアル ツリーの両方が存在する場合、リソースの検索の使用されます。 リソース ディクショナリ、およびルックアップの詳細については、次を参照してください。 [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)します。  
+ 上の論理ツリーを検索して両方の静的および動的なリソースの参照を解決するさらに、<xref:System.Windows.FrameworkElement.Resources%2A>上、最初の要求オブジェクトと論理ツリーを続行し、各コレクション<xref:System.Windows.FrameworkElement>(または<xref:System.Windows.FrameworkContentElement>)別の`Resources`値を含む、 <xref:System.Windows.ResourceDictionary>、そのキーを格納している可能性があります。 論理ツリーは、論理ツリーとビジュアル ツリーの両方が存在する場合、リソースの検索の使用されます。 リソース ディクショナリ、およびルックアップの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>論理ツリーのコンポジション  
@@ -53,11 +53,11 @@ ms.locfileid: "56748061"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>論理ツリーをオーバーライドします。  
- 高度なコントロールの作成者は、いくつかの操作をオーバーライドすることで、論理ツリーをオーバーライドできます[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義します。 論理ツリーをオーバーライドする方法の例は、次を参照してください。[論理ツリーをオーバーライド](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)します。  
+ 高度なコントロールの作成者は、いくつかの操作をオーバーライドすることで、論理ツリーをオーバーライドできます[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義します。 論理ツリーをオーバーライドする方法の例は、次を参照してください。[論理ツリーをオーバーライド](how-to-override-the-logical-tree.md)します。  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>プロパティ値の継承  
- プロパティ値の継承は、ハイブリッド ツリーを通じて動作します。 実際のメタデータを含む、<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>プロパティの継承を有効にするプロパティは、WPF フレームワーク レベル<xref:System.Windows.FrameworkPropertyMetadata>クラス。 そのため、元の値を保持する親とその値を継承する子オブジェクトの両方もなりません<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>、必要がありますどちらもいくつかの論理ツリーの一部であるとします。 ただし、プロパティの継承をサポートする既存の WPF プロパティ、プロパティ値の継承は、論理ツリーに含まれていない間にあるオブジェクトを永続化することです。 これは主には、継承されたプロパティの値は、テンプレート化されたインスタンスのいずれかの設定を使用して、テンプレート要素を含むもののまたはページ レベルの構成のも高いレベルでは関連があり、論理ツリー内の上位。 プロパティ値の継承、このような境界を越えて一貫して動作するためには、継承プロパティは、添付プロパティとして登録する必要があり。、カスタム依存関係プロパティとプロパティを定義する場合、このパターンに従う必要があります。継承の動作です。 プロパティの継承に使用される正確なツリーは、実行時にもヘルパー クラスのユーティリティ メソッドがまったく予期することはできません。 詳細については、「[プロパティ値の継承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)」を参照してください。  
+ プロパティ値の継承は、ハイブリッド ツリーを通じて動作します。 実際のメタデータを含む、<xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>プロパティの継承を有効にするプロパティは、WPF フレームワーク レベル<xref:System.Windows.FrameworkPropertyMetadata>クラス。 そのため、元の値を保持する親とその値を継承する子オブジェクトの両方もなりません<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>、必要がありますどちらもいくつかの論理ツリーの一部であるとします。 ただし、プロパティの継承をサポートする既存の WPF プロパティ、プロパティ値の継承は、論理ツリーに含まれていない間にあるオブジェクトを永続化することです。 これは主には、継承されたプロパティの値は、テンプレート化されたインスタンスのいずれかの設定を使用して、テンプレート要素を含むもののまたはページ レベルの構成のも高いレベルでは関連があり、論理ツリー内の上位。 プロパティ値の継承、このような境界を越えて一貫して動作するためには、継承プロパティは、添付プロパティとして登録する必要があり。、カスタム依存関係プロパティとプロパティを定義する場合、このパターンに従う必要があります。継承の動作です。 プロパティの継承に使用される正確なツリーは、実行時にもヘルパー クラスのユーティリティ メソッドがまったく予期することはできません。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。  
   
 <a name="two_trees"></a>   
 ## <a name="the-visual-tree"></a>ビジュアル ツリー  
@@ -71,7 +71,7 @@ ms.locfileid: "56748061"
 ## <a name="tree-traversal"></a>ツリーの走査  
  <xref:System.Windows.LogicalTreeHelper>クラスには、 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>、 <xref:System.Windows.LogicalTreeHelper.GetParent%2A>、および<xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A>論理ツリーの走査のためのメソッド。 ほとんどの場合必要はありません、既存のコントロールの論理ツリーを走査するため、これらのコントロールはなどコレクションへのアクセスをサポートする専用のコレクション プロパティとして、論理上の子要素を公開するほとんどの場合に`Add`インデクサー、などなど。 ツリーの走査は主にシナリオなど、目的のコントロール パターンから派生しないように選択コントロールの作成者によって使用される<xref:System.Windows.Controls.ItemsControl>または<xref:System.Windows.Controls.Panel>コレクションのプロパティが既に定義されていると、独自のコレクションを使用するユーザープロパティのサポート。  
   
- ビジュアル ツリーの走査のビジュアル ツリーがヘルパー クラスにもサポートしています<xref:System.Windows.Media.VisualTreeHelper>します。 コントロール固有のプロパティで、ビジュアル ツリーとして簡単に公開されないため、<xref:System.Windows.Media.VisualTreeHelper>クラスは、プログラミングのシナリオのために必要な場合に、ビジュアル ツリーを走査するをお勧めします。 詳しくは、「[WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)」をご覧ください。  
+ ビジュアル ツリーの走査のビジュアル ツリーがヘルパー クラスにもサポートしています<xref:System.Windows.Media.VisualTreeHelper>します。 コントロール固有のプロパティで、ビジュアル ツリーとして簡単に公開されないため、<xref:System.Windows.Media.VisualTreeHelper>クラスは、プログラミングのシナリオのために必要な場合に、ビジュアル ツリーを走査するをお勧めします。 詳しくは、「[WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)」をご覧ください。  
   
 > [!NOTE]
 >  適用されたテンプレートのビジュアル ツリーを調べる必要があります。 この手法を使用する場合は注意する必要があります。 コントロールのビジュアル ツリーを走査し、テンプレートを定義するが、場合でも、コントロールのコンシューマー常に、テンプレート設定を変更できます、<xref:System.Windows.Controls.Control.Template%2A>インスタンス、およびエンド ユーザーでもプロパティが変更することでテンプレートを適用したを与えることができます、システムのテーマ。  
@@ -84,11 +84,11 @@ ms.locfileid: "56748061"
 ## <a name="resource-dictionaries-and-trees"></a>リソース ディクショナリとツリー  
  すべてのリソース ディクショナリのルックアップ`Resources`定義ページに基本的に、論理はツリーを走査します。 論理ツリーに含まれていないオブジェクトがキーを持つリソースを参照できますが、論理ツリーにそのオブジェクトが接続されているポイントではリソース参照シーケンスが開始されます。 WPF では、論理ツリーのノードのみを持つことができます、`Resources`プロパティを含む、 <xref:System.Windows.ResourceDictionary>、したがってからキーを持つリソースを探して、ビジュアル ツリーの走査の利点はありません、<xref:System.Windows.ResourceDictionary>します。  
   
- ただし、リソースの検索も、直接の論理ツリーを超えて拡張できます。 アプリケーション マークアップでは、アプリケーション レベルのリソース ディクショナリ、静的プロパティまたはキーとして参照されているテーマのサポート、およびシステム値へとリソース検索が続きます。 テーマ自体は、動的リソース参照である場合、テーマの論理ツリーの外部システムの値を参照できます。 リソース ディクショナリとルックアップ ロジックの詳細については、次を参照してください。 [XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)します。  
+ ただし、リソースの検索も、直接の論理ツリーを超えて拡張できます。 アプリケーション マークアップでは、アプリケーション レベルのリソース ディクショナリ、静的プロパティまたはキーとして参照されているテーマのサポート、およびシステム値へとリソース検索が続きます。 テーマ自体は、動的リソース参照である場合、テーマの論理ツリーの外部システムの値を参照できます。 リソース ディクショナリとルックアップ ロジックの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [オブジェクト ツリーに存在しないオブジェクト要素の初期化](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
-- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [入力の概要](input-overview.md)
+- [WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [オブジェクト ツリーに存在しないオブジェクト要素の初期化](initialization-for-object-elements-not-in-an-object-tree.md)
+- [WPF アーキテクチャ](wpf-architecture.md)

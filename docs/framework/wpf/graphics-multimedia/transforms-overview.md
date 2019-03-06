@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503120"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355650"
 ---
 # <a name="transforms-overview"></a>変換の概要
 このトピックでは、使用する方法を説明します、 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  
@@ -50,17 +50,17 @@ ms.locfileid: "54503120"
   
 |クラス|説明|例|図|  
 |-----------|-----------------|-------------|------------------|  
-|<xref:System.Windows.Media.RotateTransform>|指定した要素を回転させます<xref:System.Windows.Media.RotateTransform.Angle%2A>します。|[オブジェクトを回転させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![回転の図](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|指定した要素を拡大または縮小<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>と<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>金額。|[要素を拡大縮小する](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![拡大縮小の図](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
-|<xref:System.Windows.Media.SkewTransform>|指定した要素を傾斜<xref:System.Windows.Media.SkewTransform.AngleX%2A>と<xref:System.Windows.Media.SkewTransform.AngleY%2A>金額。|[要素を傾斜させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![傾斜の図](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|移動 (平行移動)、指定した要素<xref:System.Windows.Media.TranslateTransform.X%2A>と<xref:System.Windows.Media.TranslateTransform.Y%2A>金額。|[要素を平行移動する](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![平行移動の図](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.RotateTransform>|指定した要素を回転させます<xref:System.Windows.Media.RotateTransform.Angle%2A>します。|[オブジェクトを回転させる](how-to-rotate-an-object.md)|![回転の図](./media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
+|<xref:System.Windows.Media.ScaleTransform>|指定した要素を拡大または縮小<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>と<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>金額。|[要素を拡大縮小する](how-to-scale-an-element.md)|![拡大縮小の図](./media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.SkewTransform>|指定した要素を傾斜<xref:System.Windows.Media.SkewTransform.AngleX%2A>と<xref:System.Windows.Media.SkewTransform.AngleY%2A>金額。|[要素を傾斜させる](how-to-skew-an-element.md)|![傾斜の図](./media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
+|<xref:System.Windows.Media.TranslateTransform>|移動 (平行移動)、指定した要素<xref:System.Windows.Media.TranslateTransform.X%2A>と<xref:System.Windows.Media.TranslateTransform.Y%2A>金額。|[要素を平行移動する](how-to-translate-an-element.md)|![平行移動の図](./media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  複雑な変換を作成するには、に対しては、Windows Presentation Foundation (WPF) は、次の 2 つのクラスを提供します。  
   
 |クラス|説明|例|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|複数のグループ<xref:System.Windows.Media.TransformGroup>オブジェクト、1 つに<xref:System.Windows.Media.Transform>し変換プロパティに適用することができます。|[オブジェクトに複数の変換を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|その他は提供されないカスタム変換を作成します。<xref:System.Windows.Media.Transform>クラス。 使用すると、<xref:System.Windows.Media.MatrixTransform>マトリックスを直接操作することです。|[MatrixTransform を使用してカスタム変換を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|複数のグループ<xref:System.Windows.Media.TransformGroup>オブジェクト、1 つに<xref:System.Windows.Media.Transform>し変換プロパティに適用することができます。|[オブジェクトに複数の変換を適用する](how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|その他は提供されないカスタム変換を作成します。<xref:System.Windows.Media.Transform>クラス。 使用すると、<xref:System.Windows.Media.MatrixTransform>マトリックスを直接操作することです。|[MatrixTransform を使用してカスタム変換を作成する](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF) も用意されています。[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]変換します。 詳細については、<xref:System.Windows.Media.Media3D.Transform3D> クラスを参照してください。  
   
@@ -84,19 +84,19 @@ ms.locfileid: "54503120"
   
  次の例では、<xref:System.Windows.Media.RotateTransform>を回転する、<xref:System.Windows.Shapes.Rectangle>要素、型の<xref:System.Windows.FrameworkElement>、45 度、既定の中心 (0, 0)。 次の図は、回転の結果を示したものです。  
   
- ![FrameworkElement は 45 度を回転&#40;0, 0&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
+ ![FrameworkElement は 45 度を回転&#40;0, 0&#41;](./media/graphicsmm-fe-rotated-about-upperleft-corner.png "graphicsmm_FE_rotated_about_upperleft_corner")  
 ポイント (0, 0) を軸に 45 度回転した四角形要素  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutTopLeft](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedabouttopleft)]  
   
  既定では、要素は左上隅 (0, 0) を軸に回転します。 <xref:System.Windows.Media.RotateTransform>、 <xref:System.Windows.Media.ScaleTransform>、および<xref:System.Windows.Media.SkewTransform>クラスは、変換を適用するポイントを指定するための CenterX および CenterY プロパティを提供します。  
   
  また次の例では、<xref:System.Windows.Media.RotateTransform>を回転する、<xref:System.Windows.Shapes.Rectangle>要素を 45 度; ただし、この時間、<xref:System.Windows.Media.RotateTransform.CenterX%2A>と<xref:System.Windows.Media.RotateTransform.CenterY%2A>プロパティが設定ように、<xref:System.Windows.Media.RotateTransform>の中心が (25, 25)。 次の図は、回転の結果を示したものです。  
   
- ![回転した Geometry 45 度&#40;25, 25&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
+ ![回転した Geometry 45 度&#40;25, 25&#41;](./media/graphicsmm-fe-rotated-about-center.png "graphicsmm_FE_rotated_about_center")  
 ポイント (25, 25) を軸に 45 度回転した四角形要素  
   
- [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
+ [!code-xaml[Transforms_snip#TransformsFERotatedAboutCenter](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/CoordinateSystemExample.xaml#transformsferotatedaboutcenter)]  
   
 <a name="layoutTransformsAndRenderTransformsSection"></a>   
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement の変換  
@@ -108,7 +108,7 @@ ms.locfileid: "54503120"
   
  どちらのプロパティを使用すればよいのでしょうか。 により、パフォーマンス上の利点が提供する、使用、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティを使用する場合は特に、可能なアニメーションを実行するたびに<xref:System.Windows.Media.Transform>オブジェクト。 使用して、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>拡大縮小、回転、または傾斜するプロパティとは、要素の親要素の変換後のサイズに合わせて調整する必要があります。 併用すると、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティ、<xref:System.Windows.Media.TranslateTransform>要素に効果がないオブジェクトが表示されます。 これは、レイアウト システムがその処理の一環として、変換後の要素を元の位置に返すためです。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのレイアウトに関する追加情報については、[レイアウト](../../../../docs/framework/wpf/advanced/layout.md)の概要をご覧ください。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのレイアウトに関する追加情報については、[レイアウト](../advanced/layout.md)の概要をご覧ください。  
   
 <a name="exampleRotateAnElement45degSection"></a>   
 ## <a name="example-rotate-a-frameworkelement-45-degrees"></a>例:FrameworkElement の回転 45 度  
@@ -116,24 +116,24 @@ ms.locfileid: "54503120"
   
  既定で、<xref:System.Windows.Media.RotateTransform>点 (0, 0) の周りを回転します。 この例では中心の値を指定していないので、ボタンは左上隅のポイント (0, 0) を軸に回転します。 <xref:System.Windows.Media.RotateTransform>に適用される、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ。 次の図は、変換の結果を示したものです。  
   
- ![RenderTransform を使用して変換されたボタン](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
+ ![RenderTransform を使用して変換されたボタン](./media/graphicsmm-rendertransformwithdefaultcenter.png "graphicsmm_RenderTransformWithDefaultCenter")  
 左上隅を軸とした、時計回り 45 度の回転  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample1)]  
   
  次の例を使用しても、<xref:System.Windows.Media.RotateTransform>もがボタンを時計回りに 45 度の回転を設定、<xref:System.Windows.UIElement.RenderTransformOrigin%2A>するボタンの (0.5, 0.5)。 値、<xref:System.Windows.UIElement.RenderTransformOrigin%2A>プロパティは、ボタンのサイズを基準とします。 その結果、回転は左上隅ではなく、ボタンの中心に適用されています。 次の図は、変換の結果を示したものです。  
   
- ![中心の周りに変換されたボタン](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
+ ![中心の周りに変換されたボタン](./media/graphicsmm-rendertransformrelativecenter.png "graphicsmm_RenderTransformRelativeCenter")  
 中心を軸とした、時計回り 45 度の回転  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample2](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample2)]  
   
  次の例では、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティの代わりに、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティをボタンを回転します。  そのため、変換がボタンのレイアウトに影響し、レイアウト システムによるフル パスがトリガーされています。 その結果、ボタンが回転された後、位置が変更されています。これは、サイズが変更されたためです。 次の図は、変換の結果を示したものです。  
   
- ![LayoutTransform を使用して変換されたボタン](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
+ ![LayoutTransform を使用して変換されたボタン](./media/graphicsmm-layouttransform.png "graphicsmm_LayoutTransform")  
 LayoutTransform を使用したボタンの回転  
   
- [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
+ [!code-xaml[Transforms_snip#GraphicsMMRotateButtonExample3](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonRotateTransformExample.xaml#graphicsmmrotatebuttonexample3)]  
   
 <a name="animate_transforms"></a>   
 ## <a name="animating-transformations"></a>変換のアニメーション化  
@@ -141,16 +141,16 @@ LayoutTransform を使用したボタンの回転
   
  次の例では、<xref:System.Windows.Media.Animation.Storyboard>と<xref:System.Windows.Media.Animation.DoubleAnimation>で、<xref:System.Windows.Media.RotateTransform>させる、<xref:System.Windows.Controls.Button>スピンがクリックされたときに有効です。  
   
- [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
+ [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- 完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。 アニメーション化について詳しくは、「[アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)」をご覧ください。  
+ 完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。 アニメーション化について詳しくは、「[アニメーションの概要](animation-overview.md)」をご覧ください。  
   
 <a name="freezable_features"></a>   
 ## <a name="freezable-features"></a>Freezable 機能  
- 継承するため、<xref:System.Windows.Freezable>クラス、<xref:System.Windows.Media.Transform>クラスがいくつかの特別な機能を提供:<xref:System.Windows.Media.Transform>オブジェクトとして宣言できます[リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)、向上させるために読み取り専用の複数のオブジェクト間で共有パフォーマンス、複製され、スレッド セーフです。 によって提供されるさまざまな機能の詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)します。  
+ 継承するため、<xref:System.Windows.Freezable>クラス、<xref:System.Windows.Media.Transform>クラスがいくつかの特別な機能を提供:<xref:System.Windows.Media.Transform>オブジェクトとして宣言できます[リソース](../advanced/xaml-resources.md)、向上させるために読み取り専用の複数のオブジェクト間で共有パフォーマンス、複製され、スレッド セーフです。 によって提供されるさまざまな機能の詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [方法トピック](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [方法トピック](transformations-how-to-topics.md)
 - [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)

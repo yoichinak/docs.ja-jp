@@ -13,8 +13,8 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データ バインディング](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [ドラッグ アンド ドロップ](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [データ バインディング](data-binding-wpf.md)  
+ [ドラッグ アンド ドロップ](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Data>  
@@ -26,12 +26,12 @@ ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>関連項目  
- [コントロール](../../../../docs/framework/wpf/controls/index.md)  
+ [コントロール](../controls/index.md)  
   
- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [スタイルとテンプレート](../controls/styling-and-templating.md)  
   
- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [データ バインディング](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

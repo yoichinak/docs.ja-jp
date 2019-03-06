@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d6326ae34b53ca4f68bc58b85e395c10726a377d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738827"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369852"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
@@ -41,22 +41,22 @@ ms.locfileid: "54738827"
   
  次の図は、シンプルなレイアウトを示しています。  
   
- ![一般的なグリッド、重ね合わせる境界ボックスなし。](../../../../docs/framework/wpf/advanced/media/boundingbox1.png "boundingbox1")  
+ ![一般的なグリッド、重ね合わせる境界ボックスなし。](./media/boundingbox1.png "boundingbox1")  
   
  このレイアウトは、次の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用して実現できます。  
   
- [!code-xaml[LayoutInformation#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
+ [!code-xaml[LayoutInformation#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml#1)]  
   
  1 つ<xref:System.Windows.Controls.TextBlock>要素内でホストされている、<xref:System.Windows.Controls.Grid>します。 最初の列に割り当てられた領域の左上隅だけに、テキストが入力中に、<xref:System.Windows.Controls.TextBlock>が実際に大きくします。 いずれかの境界ボックス<xref:System.Windows.FrameworkElement>を使用して取得できます、<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>メソッド。 次の図は、境界ボックス、<xref:System.Windows.Controls.TextBlock>要素。  
   
- ![TextBlock の境界ボックスが表示されます。](../../../../docs/framework/wpf/advanced/media/boundingbox2.png "boundingbox2")  
+ ![TextBlock の境界ボックスが表示されます。](./media/boundingbox2.png "boundingbox2")  
   
  黄色の四角形に割り当てられた領域に示すように、<xref:System.Windows.Controls.TextBlock>要素は、その外観よりもはるかに大きい。 追加の要素が追加される、 <xref:System.Windows.Controls.Grid>、この割り当てを縮小または展開の種類と追加される要素のサイズに応じて、可能性があります。  
   
  レイアウト スロット、<xref:System.Windows.Controls.TextBlock>に変換されますが、<xref:System.Windows.Shapes.Path>を使用して、<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>メソッド。 この方法は、要素の境界ボックスの表示に役立ちます。  
   
- [!code-csharp[LayoutInformation#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
- [!code-vb[LayoutInformation#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[LayoutInformation#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LayoutInformation/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[LayoutInformation#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LayoutInformation/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="LayoutSystem_Overview"></a>   
 ## <a name="the-layout-system"></a>レイアウト システム  
@@ -122,7 +122,7 @@ ms.locfileid: "54738827"
   
 -   どのプロパティ値の変更がレイアウト システムによる再帰的な更新を強制するかに注意してください。  
   
-     レイアウト システムを初期化できる値が設定されている依存関係プロパティは、パブリック フラグでマークされます。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>便利な手がかりがどのプロパティ値の変更が、再帰を強制は、レイアウト システムによる更新を提供します。 一般に、要素の境界ボックスのサイズに影響を与えるすべてのプロパティがあります、<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>フラグを true に設定します。 依存関係プロパティの詳細については、「[依存関係プロパティの概要](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)」を参照してください。  
+     レイアウト システムを初期化できる値が設定されている依存関係プロパティは、パブリック フラグでマークされます。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>便利な手がかりがどのプロパティ値の変更が、再帰を強制は、レイアウト システムによる更新を提供します。 一般に、要素の境界ボックスのサイズに影響を与えるすべてのプロパティがあります、<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>フラグを true に設定します。 依存関係プロパティの詳細については、「[依存関係プロパティの概要](dependency-properties-overview.md)」を参照してください。  
   
 -   可能であればを使用して、<xref:System.Windows.UIElement.RenderTransform%2A>の代わりに、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>します。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "54738827"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>次の内容  
- 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 詳細については、使用可能な<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)します。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)」を参照してください。 カスタムの例については<xref:System.Windows.Controls.Panel>要素を参照してください[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)します。 軽量のアプリケーションにまとめて配置する準備ができたらを参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
+ 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 詳細については、使用可能な<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 カスタムの例については<xref:System.Windows.Controls.Panel>要素を参照してください[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)します。 軽量のアプリケーションにまとめて配置する準備ができたらを参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
-- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
+- [パネルの概要](../controls/panels-overview.md)
+- [配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)
+- [レイアウトとデザイン](optimizing-performance-layout-and-design.md)

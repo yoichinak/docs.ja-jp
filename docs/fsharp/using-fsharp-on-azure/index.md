@@ -4,6 +4,7 @@ description: 'ガイドと、Azure サービスを使用するにはF#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Azure での F# の使用
 
 F# は卓越したクラウド プログラミング言語であり、Web アプリケーション、クラウド サービス、クラウドでホストされるマイクロ サービスの作成、および拡張性の高いデータの処理に頻繁に使用されます。
@@ -87,7 +88,7 @@ Azure Notification Hubs は、2 つの方法で F# で使用できます。
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Azure と F での Webhook の実装\#
 
-[Webhook](https://en.wikipedia.org/wiki/Webhook)は、Web 要求によってトリガーされるコールバックです。 Webhook は、GitHub などのサイトでイベントを通知するために使用されます。 
+[Webhook](https://en.wikipedia.org/wiki/Webhook)は、Web 要求によってトリガーされるコールバックです。 Webhook は、GitHub などのサイトでイベントを通知するために使用されます。
 
 [Azure Function F# と Webhook バインド](/azure/azure-functions/functions-bindings-http-webhook)を使用して、Webhook を F# で実装し、Azure でホストすることができます。します。
 
@@ -109,7 +110,7 @@ Azure VM はプログラムで展開し、Microsoft.Azure.Management パッケ�
 
 同様に、他の Azure リソースも同じコンポーネントを使用して、F# スクリプトから展開および管理できます。 たとえば、ストレージ アカウントを作成、Azure Cloud Services のデプロイ Azure Cosmos DB インスタンスを作成し、F# スクリプトから、Azure Notifcation Hubs をプログラムで管理します。
 
-F# スクリプトを使用したリソースの展開および管理は、通常必要はありません。 たとえば、Azure リソースは JSON テンプレートの説明から直接展開することもでき、これをパラメーター化できます。 [Azure クイック スタート テンプレート](https://azure.microsoft.com/resources/templates/)などの例を含む[Azure Resource Manager テンプレート](/azure/azure-resource-manager/resource-manager-template-best-practices)を参照してください。
+F# スクリプトを使用したリソースの展開および管理は、通常必要はありません。 たとえば、Azure リソースは、パラメーター化できる JSON テンプレートの説明から直接もデプロイできます。 [Azure クイック スタート テンプレート](https://azure.microsoft.com/resources/templates/)などの例を含む[Azure Resource Manager テンプレート](/azure/azure-resource-manager/resource-manager-template-best-practices)を参照してください。
 
 ## <a name="other-resources"></a>その他のリソース
 

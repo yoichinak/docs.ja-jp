@@ -9,29 +9,29 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697037"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361357"
 ---
 # <a name="transformations-how-to-topics"></a>変換に関する方法のトピック
 このセクションのトピックでは、オブジェクトを別の変換を適用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [イベントの発生時に要素に変換を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [オブジェクトに複数の変換を適用する](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)  
- [要素のスピンを設定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-make-an-element-spin-in-place.md)  
- [オブジェクトを回転させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)  
- [要素を拡大縮小する](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)  
- [要素を傾斜させる](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)  
- [変換の原点を相対値で指定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
- [要素を平行移動する](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
- [MatrixTransform を使用してカスタム変換を作成する](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [イベントの発生時に要素に変換を適用する](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [オブジェクトに複数の変換を適用する](how-to-apply-multiple-transforms-to-an-object.md)  
+ [要素のスピンを設定する](how-to-make-an-element-spin-in-place.md)  
+ [オブジェクトを回転させる](how-to-rotate-an-object.md)  
+ [要素を拡大縮小する](how-to-scale-an-element.md)  
+ [要素を傾斜させる](how-to-skew-an-element.md)  
+ [変換の原点を相対値で指定する](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
+ [要素を平行移動する](how-to-translate-an-element.md)  
+ [MatrixTransform を使用してカスタム変換を作成する](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Transform>
-- [グラフィックスとマルチメディア](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF グラフィックス レンダリングの概要](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+- [グラフィックスとマルチメディア](index.md)
+- [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)
+- [レイアウト](../advanced/layout.md)

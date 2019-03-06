@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 75b8f72647b1597396fde5d21f8378d3ce586a25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ff606e495eb37e0e74150bb5ad20f11744b74ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354909"
 ---
 # <a name="how-to-translate-an-element"></a>方法: 要素を変換する
 この例では変換 (移動) に要素を使用して、<xref:System.Windows.Media.TranslateTransform>します。  
@@ -21,9 +21,9 @@ ms.locfileid: "54672874"
  次の例では、<xref:System.Windows.Media.TranslateTransform>下に移動する要素を 50 ピクセル右方向と 50 ピクセルにします。  
   
 ## <a name="example"></a>例  
- [!code-xaml[transformsSample#53](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
+ [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
  完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
-- [変換の概要](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [変換の概要](transforms-overview.md)

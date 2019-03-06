@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
 ms.openlocfilehash: e487e54ac5c70351d00df4275302bc9f4e92292c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270603"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366531"
 ---
 # <a name="variable"></a>\<変数 >
 このアクティビティ クエリに関連付けられている変数のコレクションを表します。  

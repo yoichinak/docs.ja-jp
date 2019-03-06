@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GridSplitter control [WPF], how-to topics
 - controls [WPF], GridSplitter
 ms.assetid: db0da67a-954f-42e6-bbf7-4e16b8cbb210
-ms.openlocfilehash: 5f9616f92d6b2dcaf2d8681572c45e379069a26c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800898a4b6fc655785c7db0d9463c34e5eeaa0b7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354415"
 ---
 # <a name="gridsplitter-how-to-topics"></a>GridSplitter に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.GridSplitter>コントロール。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.GridSplitter>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [GridSplitter を使用して行のサイズを変更する](../../../../docs/framework/wpf/controls/how-to-resize-rows-with-a-gridsplitter.md)  
- [GridSplitter を使用して列のサイズを変更する](../../../../docs/framework/wpf/controls/how-to-resize-columns-with-a-gridsplitter.md)  
- [GridSplitter を表示されるようにする](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md)  
+ [GridSplitter を使用して行のサイズを変更する](how-to-resize-rows-with-a-gridsplitter.md)  
+ [GridSplitter を使用して列のサイズを変更する](how-to-resize-columns-with-a-gridsplitter.md)  
+ [GridSplitter を表示されるようにする](how-to-make-sure-that-a-gridsplitter-is-visible.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.GridSplitter>  

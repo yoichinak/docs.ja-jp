@@ -16,40 +16,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594643"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360440"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions 列挙型
-スレッド セーフのオプションを選択するためのフラグを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-typedef enum CorThreadSafetyOptions {  
-    MDThreadSafetyDefault       = 0x00000000,  
-    MDThreadSafetyOff           = 0x00000000,  
-    MDThreadSafetyOn            = 0x00000001,  
-} CorThreadSafetyOptions;  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-|メンバー|説明|  
-|------------|-----------------|  
-|`MDThreadSatetyDefault`|既定値です。 `MDThreadSatetyOff` と同じ。|  
-|`MDThreadSatetyOff`|読み取り/書き込みロックを設定できないことを示します。|  
-|`MDThreadSatetyOn`|読み取り/書き込みロックを設定できることを示します。|  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorHdr.h  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+スレッド セーフのオプションを選択するためのフラグを指定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+typedef enum CorThreadSafetyOptions {
+    MDThreadSafetyDefault       = 0x00000000,
+    MDThreadSafetyOff           = 0x00000000,
+    MDThreadSafetyOn            = 0x00000001,
+} CorThreadSafetyOptions;
+```
+
+## <a name="members"></a>メンバー
+
+|メンバー|説明|
+|------------|-----------------|
+|`MDThreadSafetyDefault`|既定値です。 `MDThreadSafetyOff` と同じ。|
+|`MDThreadSafetyOff`|読み取り/書き込みロックを設定できないことを示します。|
+|`MDThreadSafetyOn`|読み取り/書き込みロックを設定できることを示します。|
+
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** CorHdr.h
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: d138f7ebc6fe62f03cd80189185c8ba73d3a2006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371399"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>パフォーマンスの最適化:2D グラフィックスとイメージング
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、アプリケーションの要件に合わせて最適化できる広範な 2D グラフィックス機能とイメージング機能が用意されています。 このトピックでは、この領域でのパフォーマンスの最適化に関する情報を提供します。  
@@ -49,7 +49,7 @@ ms.locfileid: "54630815"
   
  <xref:System.Windows.Shapes.Shape>オブジェクトから取得、<xref:System.Windows.FrameworkElement>それらを使用して、クラスは、アプリケーションで非常に多くのメモリ消費量を追加できます。 本当に必要としない場合、 <xref:System.Windows.FrameworkElement> 、グラフィカル コンテンツのための機能は、軽量の使用を検討<xref:System.Windows.Media.Drawing>オブジェクト。  
   
- 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[Drawing オブジェクトの概要](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)します。  
+ 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[Drawing オブジェクトの概要](../graphics-multimedia/drawing-objects-overview.md)します。  
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry オブジェクト  
@@ -57,13 +57,13 @@ ms.locfileid: "54630815"
   
  次の例では、属性構文を使用して、三角形を作成する<xref:System.Windows.Media.StreamGeometry>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
   
- [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
+ [!code-xaml[GeometriesMiscSnippets_snip#StreamGeometryTriangleExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/StreamGeometryExample.xaml#streamgeometrytriangleexamplewholepage)]  
   
- 詳細については<xref:System.Windows.Media.StreamGeometry>、オブジェクトを参照してください[方法: StreamGeometry を使用して図形を作成](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)です。  
+ 詳細については<xref:System.Windows.Media.StreamGeometry>、オブジェクトを参照してください[方法: StreamGeometry を使用して図形を作成](../graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)です。  
   
 <a name="DrawingVisual_Objects"></a>   
 ## <a name="drawingvisual-objects"></a>DrawingVisual オブジェクト  
- <xref:System.Windows.Media.DrawingVisual>オブジェクトは、軽量の描画図形、画像、またはテキストを表示するために使用されるクラス。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないことで、パフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 詳しくは、「[DrawingVisual オブジェクトの使用](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)」を参照してください。  
+ <xref:System.Windows.Media.DrawingVisual>オブジェクトは、軽量の描画図形、画像、またはテキストを表示するために使用されるクラス。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないことで、パフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 詳しくは、「[DrawingVisual オブジェクトの使用](../graphics-multimedia/using-drawingvisual-objects.md)」を参照してください。  
   
 <a name="Images"></a>   
 ## <a name="images"></a>イメージ  
@@ -77,15 +77,15 @@ ms.locfileid: "54630815"
   
 -   可能であれば、複数のイメージを 1 つに結合します (複数のイメージから成るフィルム ストリップなど)。  
   
--   詳しくは、「 [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)」をご覧ください。  
+-   詳しくは、「 [イメージングの概要](../graphics-multimedia/imaging-overview.md)」をご覧ください。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  ビットマップのスケーリングをアニメーション化する場合、既定の高品質イメージの再サンプリング アルゴリズムは、フレーム レートを低下させるほどシステム リソースを消費する場合があり、実際にはアニメーションの動きが滑らかでなくなることがあります。 設定して、<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>のプロパティ、<xref:System.Windows.Media.RenderOptions>オブジェクトを<xref:System.Windows.Media.BitmapScalingMode.LowQuality>ビットマップをスケーリングするときより滑らかなアニメーションを作成することができます。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> モードでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イメージを処理するときに、品質に最適化されたアルゴリズムから速度に最適化されたアルゴリズムに切り替えるにレンダリング エンジン。  
   
  次の例は、設定する方法を示します、<xref:System.Windows.Media.BitmapScalingMode>イメージ オブジェクト。  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
- [!code-vb[RenderOptions#RenderOptionsSnippet2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet2)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
  既定では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の描画された内容をキャッシュしません<xref:System.Windows.Media.TileBrush>などのオブジェクト<xref:System.Windows.Media.DrawingBrush>と<xref:System.Windows.Media.VisualBrush>します。 静的なシナリオで、内容もの使用、<xref:System.Windows.Media.TileBrush>でシーンを変更する、理にかなっていますビデオ メモリが節約されるためです。 ようにずっとときに検出を行いません、<xref:System.Windows.Media.TileBrush>静的コンテンツとは静的でない方法で使用 — たとえば、静的<xref:System.Windows.Media.DrawingBrush>または<xref:System.Windows.Media.VisualBrush>回転する 3D オブジェクトの表面にマップされます。 既定の動作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のコンテンツ全体が再表示するためには、<xref:System.Windows.Media.DrawingBrush>または<xref:System.Windows.Media.VisualBrush>、フレームごとの場合でも、コンテンツが変化しません。  
@@ -96,17 +96,17 @@ ms.locfileid: "54630815"
   
  次の例では、キャッシュ ヒント オプションを使用する方法を示しています、<xref:System.Windows.Media.DrawingBrush>します。  
   
- [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
- [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
+ [!code-csharp[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
+ [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>関連項目
-- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [アニメーションのヒントとテクニック](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
+- [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
+- [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
+- [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
+- [オブジェクトの動作](optimizing-performance-object-behavior.md)
+- [アプリケーション リソース](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [データ バインディング](optimizing-performance-data-binding.md)
+- [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)
+- [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)

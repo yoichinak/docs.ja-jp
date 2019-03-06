@@ -9,17 +9,17 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507552"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352400"
 ---
 # <a name="optimizing-performance-application-resources"></a>パフォーマンスの最適化:アプリケーション リソース
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同様に型指定された要素の間で一貫性のある外観や動作をサポートできるように、アプリケーションのリソースを共有することができます。 このトピックでは、この領域に役立ついくつかの推奨事項が、アプリケーションのパフォーマンスを向上します。  
   
- リソースについて詳しくは、「[XAML リソース](../../../../docs/framework/wpf/advanced/xaml-resources.md)」をご覧ください。  
+ リソースについて詳しくは、「[XAML リソース](xaml-resources.md)」をご覧ください。  
   
 ## <a name="sharing-resources"></a>リソースの共有  
  アプリケーションがカスタム コントロールを使用して、内のリソースを定義するかどうか、 <xref:System.Windows.ResourceDictionary> (または XAML リソース ノード)、いずれかを定義することでリソースをお勧め、<xref:System.Windows.Application>または<xref:System.Windows.Window>オブジェクト レベル、またはの既定のテーマで定義しますカスタム コントロール。 カスタム コントロールのリソースを定義する<xref:System.Windows.ResourceDictionary>でそのコントロールのすべてのインスタンスのパフォーマンスに影響が課せられます。 たとえば、カスタム コントロールのリソース定義の一部と、カスタム コントロールの多くのインスタンスとして定義されているブラシの負荷の高い操作では、場合によっては、アプリケーションのワーキング セットは大幅に長くなります。  
@@ -31,7 +31,7 @@ ms.locfileid: "54507552"
   
  次のマークアップ例では、この点を示します。  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
 ## <a name="use-static-resources-when-possible"></a>使用可能な場合は、静的なリソース  
  静的リソースは、定義済みのリソースへの参照を検索することで、任意の XAML プロパティ属性の値を提供します。 そのリソースの検索の動作は、コンパイル時参照に似ています。  
@@ -40,15 +40,15 @@ ms.locfileid: "54507552"
   
  次のマークアップ例では、両方の種類のリソースの使用を示します。  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>関連項目
-- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
+- [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
+- [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
+- [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
+- [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
+- [オブジェクトの動作](optimizing-performance-object-behavior.md)
+- [Text](optimizing-performance-text.md)
+- [データ バインディング](optimizing-performance-data-binding.md)
+- [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

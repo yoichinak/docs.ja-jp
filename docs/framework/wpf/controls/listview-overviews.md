@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370333"
 ---
 # <a name="listview-overviews"></a>ListView の概要
-このセクションのトピックでは、使用する方法を表示、<xref:System.Windows.Controls.ListView>コントロール。  
+このセクションのトピックでは、使用する方法を説明する<xref:System.Windows.Controls.ListView>コントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView の概要](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [GridView の列ヘッダー スタイルおよびテンプレートの概要](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [ListView の概要](listview-overview.md)  
+ [GridView の概要](gridview-overview.md)  
+ [GridView の列ヘッダー スタイルおよびテンプレートの概要](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ ms.locfileid: "33551061"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>関連項目  
- [方法トピック](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [方法トピック](listview-how-to-topics.md)

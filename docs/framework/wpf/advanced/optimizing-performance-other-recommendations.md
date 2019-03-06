@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: fecb16592f3b3af78e329e095684b9c726f056f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703680"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358939"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>パフォーマンスの最適化:他の推奨事項
-<a name="introduction"></a> このトピックでは、「[WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)」セクションのトピックで説明されている推奨事項を補足するパフォーマンスに関する推奨事項について取り上げます。  
+<a name="introduction"></a> このトピックでは、「[WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)」セクションのトピックで説明されている推奨事項を補足するパフォーマンスに関する推奨事項について取り上げます。  
   
  このトピックは、次のセクションで構成されています。  
   
@@ -43,8 +43,8 @@ ms.locfileid: "54703680"
 ## <a name="navigation-to-object"></a>オブジェクトへの移動  
  <xref:System.Windows.Navigation.NavigationWindow>から派生したオブジェクト<xref:System.Windows.Window>し集約することによって主に、コンテンツ ナビゲーションのサポートを拡張する、<xref:System.Windows.Navigation.NavigationService>と履歴。 クライアント領域を更新する<xref:System.Windows.Navigation.NavigationWindow>いずれかを指定することによって、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]またはオブジェクト。 この両方の方法を次のサンプルに示します。  
   
- [!code-csharp[Performance#PerformanceSnippet14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
- [!code-vb[Performance#PerformanceSnippet14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
+ [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
+ [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
  各<xref:System.Windows.Navigation.NavigationWindow>オブジェクトがそのウィンドウで、ユーザーのナビゲーション履歴を記録する履歴。 履歴の目的の 1 つは、ユーザーが自分の来た道を戻れるようにすることです。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54703680"
   
  オブジェクトを使用して移動した場合は、オブジェクトのビジュアル ツリー全体が履歴に格納されます。 したがって、ページに戻るたびにページを再構築する必要はなく、ページがすぐに描画されます。 この場合、履歴の格納の負荷は高くなりますが、ページの再構築にかかる時間は短くて済みます。  
   
- 使用すると、<xref:System.Windows.Navigation.NavigationWindow>オブジェクト、ジャーナリングのサポートが、アプリケーションのパフォーマンスに与える影響に注意してくださいする必要があります。 詳細については、「[ナビゲーションの概要](../../../../docs/framework/wpf/app-development/navigation-overview.md)」を参照してください。  
+ 使用すると、<xref:System.Windows.Navigation.NavigationWindow>オブジェクト、ジャーナリングのサポートが、アプリケーションのパフォーマンスに与える影響に注意してくださいする必要があります。 詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。  
   
 <a name="Hit_Testing"></a>   
 ## <a name="hit-testing-on-large-3d-surfaces"></a>大きな 3D サーフェイスのヒット テスト  
@@ -73,12 +73,12 @@ ms.locfileid: "54703680"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Font Cache サービスは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーション間でフォント データを共有します。 このサービスがまだ実行されていない場合は、実行する最初の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションによって開始されます。 使用する場合[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]、[自動 (遅延開始)] の初期スタートアップ時間を短縮する"Manual"(既定値) から"Windows Presentation Foundation (WPF) Font Cache 3.0.0.0"サービスを設定できます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。  
   
 ## <a name="see-also"></a>関連項目
-- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [レイアウトとデザイン](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [アニメーションのヒントとテクニック](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
+- [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
+- [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
+- [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
+- [オブジェクトの動作](optimizing-performance-object-behavior.md)
+- [アプリケーション リソース](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [データ バインディング](optimizing-performance-data-binding.md)
+- [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)

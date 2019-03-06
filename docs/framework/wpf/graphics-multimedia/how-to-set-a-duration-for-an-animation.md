@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 7a2edbd953f648d5555e5dc50469211a6da066de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497932"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351627"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>方法: アニメーションの継続時間を設定する
 A<xref:System.Windows.Media.Animation.Timeline>表す時間のセグメントとそのセグメントの長さはタイムラインのによって決まります<xref:System.Windows.Duration>します。 ときに、<xref:System.Windows.Media.Animation.Timeline>が最後に達すると、その継続時間の再生を停止します。 場合、<xref:System.Windows.Media.Animation.Timeline>が子タイムラインも再生を停止します。 アニメーションの場合は、<xref:System.Windows.Duration>アニメーションにかかる時間の遷移の終了値をその開始値から指定します。  
@@ -21,8 +21,8 @@ A<xref:System.Windows.Media.Animation.Timeline>表す時間のセグメントと
  次の例、幅、高さ、および塗りつぶしの色で、<xref:System.Windows.Shapes.Rectangle>がアニメーション化されます。 期間は、結果として認識されるアニメーションの速度を制御して、コンテナー タイムラインの存続期間を持つ子タイムラインの期間のオーバーライドを含むアニメーション効果アニメーションとコンテナーのタイムラインに設定されます。  
   
 ## <a name="example"></a>例  
- [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
+ [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Duration>
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [アニメーションの概要](animation-overview.md)

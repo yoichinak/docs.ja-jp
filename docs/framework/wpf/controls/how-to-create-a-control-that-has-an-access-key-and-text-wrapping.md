@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bb8379776066802277886b54c60c502ad58768e0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748168"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361903"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>方法: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する
 この例では、アクセス キーがありテキスト折り返しをサポートするコントロールを作成する方法を説明します。 この例では、<xref:System.Windows.Controls.Label>これらの概念を説明するコントロール。  
@@ -24,7 +24,7 @@ ms.locfileid: "56748168"
   
  <xref:System.Windows.Controls.Label>コントロールはテキスト折り返し機能をサポートしていません。 複数の行を折り返せるラベルが必要な場合には、テキスト折り返し機能をサポートしている別の要素を入れ子にすることができます。 次の例は、使用する方法を示します、<xref:System.Windows.Controls.TextBlock>複数行のテキストをラップするラベルを作成します。  
   
- [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
+ [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **アクセス キーおよびテキスト折り返し機能をラベルに追加する**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "56748168"
   
  次の例を作成する方法を示しています、<xref:System.Windows.Controls.Label>をアクセス キーし、テキストの折り返しをサポートしています。 テキストの折り返しを例のセットを有効にする、<xref:System.Windows.Controls.AccessText.TextWrapping%2A>プロパティでは下線がアクセス キーを指定する文字します。 (下線文字の直後の文字はアクセス キーになります。)  
   
- [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>関連項目
 - [方法: ラベルのターゲット プロパティを設定します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

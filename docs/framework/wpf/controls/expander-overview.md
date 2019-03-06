@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693757"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369930"
 ---
 # <a name="expander-overview"></a>エキスパンダーの概要
 <xref:System.Windows.Controls.Expander>コントロール ウィンドウに似ていますし、ヘッダーを含む展開可能な領域内のコンテンツを提供する方法を提供します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54693757"
 ## <a name="creating-a-simple-expander"></a>単純なエキスパンダーの作成  
  次の例は、単純なを作成する方法を示します<xref:System.Windows.Controls.Expander>コントロール。 この例で作成、<xref:System.Windows.Controls.Expander>前の図のようになります。  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  <xref:System.Windows.Controls.ContentControl.Content%2A>と<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>の<xref:System.Windows.Controls.Expander>も含めることができます、複雑な内容など<xref:System.Windows.Controls.RadioButton>と<xref:System.Windows.Controls.Image>オブジェクト。  
   
@@ -45,15 +45,15 @@ ms.locfileid: "54693757"
   
  **ScrollViewer 内のエキスパンダー**  
   
- ![ScrollBar を持つ Expander](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![ScrollBar を持つ Expander](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  配置するとき、<xref:System.Windows.Controls.Expander>を制御、 <xref:System.Windows.Controls.ScrollViewer>、設定、<xref:System.Windows.Controls.ScrollViewer>ディメンションの方向に対応するプロパティ、<xref:System.Windows.Controls.Expander>コンテンツのサイズが表示されます、<xref:System.Windows.Controls.Expander>コンテンツ エリア。 設定する場合など、<xref:System.Windows.Controls.Expander.ExpandDirection%2A>プロパティを<xref:System.Windows.Controls.Expander>に<xref:System.Windows.Controls.ExpandDirection.Down>(コンテンツ領域は、ダウンが開いたら、) 設定、<xref:System.Windows.FrameworkElement.Height%2A>プロパティを<xref:System.Windows.Controls.ScrollViewer>必要なコンテンツ エリアの高さを制御します。 代わりに自体には、コンテンツの高さを設定した場合<xref:System.Windows.Controls.ScrollViewer>この設定は認識されず、そのため、スクロール可能なコンテンツは提供されません。  
   
  次の例を作成する方法を示しています、<xref:System.Windows.Controls.Expander>を持つ複合型のコンテンツを含むコントロールを<xref:System.Windows.Controls.ScrollViewer>コントロール。 この例で作成、<xref:System.Windows.Controls.Expander>このセクションの先頭には図のようです。  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>配置プロパティの使用  
@@ -62,4 +62,4 @@ ms.locfileid: "54693757"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [方法トピック](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [方法トピック](expander-how-to-topics.md)

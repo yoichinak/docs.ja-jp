@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364815"
 ---
 # <a name="dependency-property-security"></a>依存関係プロパティのセキュリティ
 依存関係プロパティは、一般に、パブリック プロパティと考える必要があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムの性質のため、依存関係プロパティの値に関してセキュリティを保証することはできません。  
@@ -27,7 +27,7 @@ ms.locfileid: "54532150"
   
  独自の依存関係プロパティを記述する場合は、ラッパーを宣言する必要があります、<xref:System.Windows.DependencyProperty>識別子は、呼び出し元誤解しないプロパティの真のアクセス レベルに関する情報 (そのストアの中のためにできるように、パブリック メンバーとしてフィールド実装されている依存関係プロパティとして)。  
   
- カスタム依存関係プロパティの場合、読み取り専用の依存関係プロパティとして、プロパティを登録することができ、これは、有効な手段への参照を保持していないすべてのユーザーが設定されるプロパティの防止、<xref:System.Windows.DependencyPropertyKey>プロパティ。 詳細については、「[読み取り専用の依存関係プロパティ](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)」を参照してください。  
+ カスタム依存関係プロパティの場合、読み取り専用の依存関係プロパティとして、プロパティを登録することができ、これは、有効な手段への参照を保持していないすべてのユーザーが設定されるプロパティの防止、<xref:System.Windows.DependencyPropertyKey>プロパティ。 詳細については、「[読み取り専用の依存関係プロパティ](read-only-dependency-properties.md)」を参照してください。  
   
 > [!NOTE]
 >  宣言を<xref:System.Windows.DependencyProperty>識別子フィールドをプライベートは禁止されておらず、およびカスタム クラスをすぐに公開されている名前空間を減らすためにも使用できますが、このようなプロパティと見なすことと同じ意味で"private"、 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語定義では、次のセクションで説明した理由からそのアクセス レベルを定義します。  
@@ -40,4 +40,4 @@ ms.locfileid: "54532150"
  要求を適用する<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>および、適切なセキュリティ メカニズムでないプロパティが設定されていることを防ぐために、必要に応じて失敗時に検証エラーを指定してください。 値の設定の無効化によって強制的に適用<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>呼び出しは、アプリケーション ドメイン内で動作している場合も、悪意のある呼び出し元に抑制でした。  
   
 ## <a name="see-also"></a>関連項目
-- [カスタム依存関係プロパティ](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [カスタム依存関係プロパティ](custom-dependency-properties.md)

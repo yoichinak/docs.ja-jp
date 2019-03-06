@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: f31a13096d8bd3a788e530b480fece448bfe1e6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363415"
 ---
 # <a name="binding-declarations-overview"></a>バインディング宣言の概要
 このトピックでは、バインディングを宣言するさまざまな方法について説明します。  
@@ -26,9 +26,9 @@ ms.locfileid: "54704018"
   
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを読む前に、マークアップ拡張機能の概念と使用方法について理解している必要があります。 マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。  
+ このトピックを読む前に、マークアップ拡張機能の概念と使用方法について理解している必要があります。 マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)」を参照してください。  
   
- このトピックでは、データ バインディングの概念については説明しません。 データ バインディングの概念の詳細については、「[Data Binding Overview](../../../../docs/framework/wpf/data/data-binding-overview.md)」を参照してください。  
+ このトピックでは、データ バインディングの概念については説明しません。 データ バインディングの概念の詳細については、「[Data Binding Overview](data-binding-overview.md)」を参照してください。  
   
 <a name="BindinginXAML"></a>   
 ## <a name="declaring-a-binding-in-xaml"></a>XAML でのバインディングの宣言  
@@ -40,9 +40,9 @@ ms.locfileid: "54704018"
   
  マークアップでバインディング宣言文字列を作成する場合、この文字列はターゲット オブジェクトの特定の依存関係プロパティにアタッチする必要があります。 次の例では、バインドする方法を示しています、<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>バインド拡張機能を使用して、指定するプロパティ、<xref:System.Windows.Data.Binding.Source%2A>と<xref:System.Windows.Data.Binding.Path%2A>プロパティ。  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
+ [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
- ほとんどのプロパティを指定することができます、<xref:System.Windows.Data.Binding>クラスのこのようにします。 バインディング拡張は、の一覧の場合と同様の詳細については<xref:System.Windows.Data.Binding>バインド拡張機能を使用して設定できないプロパティを参照してください、[バインディング マークアップ拡張](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)の概要。  
+ ほとんどのプロパティを指定することができます、<xref:System.Windows.Data.Binding>クラスのこのようにします。 バインディング拡張は、の一覧の場合と同様の詳細については<xref:System.Windows.Data.Binding>バインド拡張機能を使用して設定できないプロパティを参照してください、[バインディング マークアップ拡張](../advanced/binding-markup-extension.md)の概要。  
   
 <a name="ObjectElementSyntax"></a>   
 ### <a name="object-element-syntax"></a>オブジェクト要素構文  
@@ -50,11 +50,11 @@ ms.locfileid: "54704018"
   
  オブジェクト要素構文とマークアップ拡張機能の使用の両方の例を次に示します。  
   
- [!code-xaml[BindConversionMarkup#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
+ [!code-xaml[BindConversionMarkup#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversionMarkup/CSharp/Page1.xaml#1)]  
   
  例では、バインド、<xref:System.Windows.Controls.TextBlock.Foreground%2A>拡張構文を使用してバインディングを宣言することでプロパティ。 バインディング宣言、<xref:System.Windows.Controls.TextBlock.Text%2A>プロパティは、オブジェクト要素構文を使用します。  
   
- 別の用語の詳細については、「[XAML Syntax の詳細](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)」を参照してください。  
+ 別の用語の詳細については、「[XAML Syntax の詳細](../advanced/xaml-syntax-in-detail.md)」を参照してください。  
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding と PriorityBinding  
@@ -64,10 +64,10 @@ ms.locfileid: "54704018"
 ## <a name="creating-a-binding-in-code"></a>コードでバインディングを作成する方法  
  バインディングを指定する別の方法がプロパティを直接設定するには、<xref:System.Windows.Data.Binding>コード内のオブジェクト。 次の例を作成する方法を示しています、<xref:System.Windows.Data.Binding>オブジェクトし、コードでプロパティを指定します。  この例で`TheConverter`を実装するオブジェクトには、<xref:System.Windows.Data.IValueConverter>インターフェイス。  
   
- [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
- [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
+ [!code-csharp[BindConversion#1](~/samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[BindConversion#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
   
- バインドするオブジェクトがある場合、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>呼び出すことができます、`SetBinding`メソッドをオブジェクトを使用してではなく、直接<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>します。 例については、「[Create a Binding in Code](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)」を参照してください。  
+ バインドするオブジェクトがある場合、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>呼び出すことができます、`SetBinding`メソッドをオブジェクトを使用してではなく、直接<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>します。 例については、「[Create a Binding in Code](how-to-create-a-binding-in-code.md)」を参照してください。  
   
 <a name="Path_Syntax"></a>   
 ## <a name="binding-path-syntax"></a>バインディング パス構文  
@@ -119,14 +119,14 @@ ms.locfileid: "54704018"
   
 -   設定しない場合<xref:System.Windows.Data.Binding.ConverterCulture%2A>、バインディング エンジンは、`Language`バインディング ターゲット オブジェクトのプロパティ。 XAML では、既定で "en-US" になるか、または明示的に設定されている場合にはページのルート要素 (または任意の要素) から値を継承します。  
   
--   バインディングと同じくらいは既にデータ コンテキスト (たとえば、継承されたデータ コンテキストの親要素から)、およびどのような項目またはそのコンテキストによって返されるコレクションは、バインディングの適切なパスの変更を必要とせず、バインディング宣言を持たない句で。`{Binding}` これは、多くの場合、データのスタイル設定、バインディングがコレクションには機能のバインドが指定する方法です。 詳細については、「[バインディング ソースの概要](../../../../docs/framework/wpf/data/binding-sources-overview.md)」の「バインディング ソースとして使用する全体オブジェクト」セクションを参照してください。  
+-   バインディングと同じくらいは既にデータ コンテキスト (たとえば、継承されたデータ コンテキストの親要素から)、およびどのような項目またはそのコンテキストによって返されるコレクションは、バインディングの適切なパスの変更を必要とせず、バインディング宣言を持たない句で。`{Binding}` これは、多くの場合、データのスタイル設定、バインディングがコレクションには機能のバインドが指定する方法です。 詳細については、「[バインディング ソースの概要](binding-sources-overview.md)」の「バインディング ソースとして使用する全体オブジェクト」セクションを参照してください。  
   
 -   既定の<xref:System.Windows.Data.Binding.Mode%2A>一方向と双方向で異なりますバインドされている依存関係プロパティによって異なります。 常にバインディング モードを明示的に宣言し、バインディングに目的の動作があることを確認できます。 一般的に、ユーザーが編集可能なコントロールのプロパティでなど<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>と<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A?displayProperty=nameWithType>、既定の他のほとんどのプロパティは既定で一方向のバインドは双方向のバインディング。  
   
 -   既定の<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値によって異なります<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>と<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>も、バインドされた依存関係プロパティによって異なります。 ほとんどの依存関係プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> です。ただし、<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> プロパティの既定値は <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> です。  
   
 ## <a name="see-also"></a>関連項目
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [PropertyPath の XAML 構文](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)
+- [データ バインディングの概要](data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)
+- [データ バインディング](../advanced/optimizing-performance-data-binding.md)
+- [PropertyPath の XAML 構文](../advanced/propertypath-xaml-syntax.md)

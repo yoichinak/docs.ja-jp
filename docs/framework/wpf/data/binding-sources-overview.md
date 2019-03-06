@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: c5c89f388d90fbcbd02342514def52a8960b99fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857175c65c62d8abad07a93baf72aa3709e5cb6b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375637"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
@@ -27,15 +27,15 @@ ms.locfileid: "54694374"
 |[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクト|任意の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトのパブリック プロパティ、サブプロパティ、およびインデクサーにバインドできます。 バインディング エンジンは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] リフレクションを使用してプロパティの値を取得します。 または、オブジェクトを実装する<xref:System.ComponentModel.ICustomTypeDescriptor>かが登録済み<xref:System.ComponentModel.TypeDescriptionProvider>もバインディング エンジンを使用します。<br /><br /> バインディング ソースとして使用できるクラスを実装する方法の詳細については、このトピックで後述する「[バインディング ソースのクラスの実装](#classes)」を参照してください。|  
 |動的オブジェクト|実装するオブジェクトの使用可能なプロパティとインデクサーにバインドすることができます、<xref:System.Dynamic.IDynamicMetaObjectProvider>インターフェイス。 コード内のメンバーにアクセスできる場合、これにバインドできます。 たとえば、動的オブジェクトを使用して `someObjet.AProperty` を介してコード内のメンバーにアクセスできる場合、バインディング パスを `AProperty` に設定してこのメンバーにバインドできます。|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] オブジェクト|バインドできます[!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)]などのオブジェクト<xref:System.Data.DataTable>します。 [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView>実装、<xref:System.ComponentModel.IBindingList>インターフェイスでは、バインディング エンジンが察知する変更通知を提供します。|  
-|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] オブジェクト|バインドして実行`XPath`でクエリが実行を<xref:System.Xml.XmlNode>、 <xref:System.Xml.XmlDocument>、または<xref:System.Xml.XmlElement>します。 アクセスする便利な手段[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップでバインディング ソースであるデータは、使用する、<xref:System.Windows.Data.XmlDataProvider>オブジェクト。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> バインドすることも、<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XDocument>、または LINQ to XML を使用してこれらの型のオブジェクトで実行するクエリの結果にバインドします。 LINQ to XML を使用して、マークアップでバインディング ソースである XML データにアクセスする便利な方法は使用する、<xref:System.Windows.Data.ObjectDataProvider>オブジェクト。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|  
-|<xref:System.Windows.DependencyObject> オブジェクト|いずれかの依存関係プロパティにバインドできます<xref:System.Windows.DependencyObject>します。 例については、「[2 つのコントロールのプロパティをバインドする](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)」を参照してください。|  
+|[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] オブジェクト|バインドして実行`XPath`でクエリが実行を<xref:System.Xml.XmlNode>、 <xref:System.Xml.XmlDocument>、または<xref:System.Xml.XmlElement>します。 アクセスする便利な手段[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]マークアップでバインディング ソースであるデータは、使用する、<xref:System.Windows.Data.XmlDataProvider>オブジェクト。 詳細については、「[XMLDataProvider と XPath クエリを使用して XML データにバインドする](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)」を参照してください。<br /><br /> バインドすることも、<xref:System.Xml.Linq.XElement>または<xref:System.Xml.Linq.XDocument>、または LINQ to XML を使用してこれらの型のオブジェクトで実行するクエリの結果にバインドします。 LINQ to XML を使用して、マークアップでバインディング ソースである XML データにアクセスする便利な方法は使用する、<xref:System.Windows.Data.ObjectDataProvider>オブジェクト。 詳細については、「[XDocument、XElement、または LINQ for XML クエリの結果にバインドする](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)」を参照してください。|  
+|<xref:System.Windows.DependencyObject> オブジェクト|いずれかの依存関係プロパティにバインドできます<xref:System.Windows.DependencyObject>します。 例については、「[2 つのコントロールのプロパティをバインドする](how-to-bind-the-properties-of-two-controls.md)」を参照してください。|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>バインディング ソースのクラスの実装  
  独自のバインディング ソースを作成できます。 このセクションでは、バインディング ソースとして機能するクラスを実装する場合に認識している必要のある事項について説明します。  
   
 ### <a name="providing-change-notifications"></a>変更通知の提供  
- いずれかを使用している場合<xref:System.Windows.Data.BindingMode.OneWay>または<xref:System.Windows.Data.BindingMode.TwoWay>バインド (必要があるため、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]バインディング ソースのプロパティを動的に変更するときに更新する)、適切なプロパティ変更通知メカニズムを実装する必要があります。 推奨されるメカニズムは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]または動的なクラスを実装する、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 詳細については、「[プロパティの変更通知を実装する](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)」を参照してください。  
+ いずれかを使用している場合<xref:System.Windows.Data.BindingMode.OneWay>または<xref:System.Windows.Data.BindingMode.TwoWay>バインド (必要があるため、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]バインディング ソースのプロパティを動的に変更するときに更新する)、適切なプロパティ変更通知メカニズムを実装する必要があります。 推奨されるメカニズムは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]または動的なクラスを実装する、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 詳細については、「[プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」を参照してください。  
   
  作成する場合、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]を実装しないオブジェクト<xref:System.ComponentModel.INotifyPropertyChanged>、そのバインディングで使用するデータが現在のままになることを確認する通知システムに配置する必要があります。 変更通知対象にする各プロパティの `PropertyChanged` パターンをサポートすることによって、変更通知を提供できます。 このパターンをサポートするには、プロパティごとに *PropertyName*Changed イベントを定義します。*PropertyName* はプロパティの名前です。 プロパティが変更されるたびにイベントが発生します。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "54694374"
   
 <a name="objects"></a>   
 ## <a name="using-entire-objects-as-a-binding-source"></a>バインディング ソースとしてオブジェクト全体を使用する  
- バインディング ソースとしてオブジェクト全体を使用できます。 使用してバインディング ソースを指定することができます、<xref:System.Windows.Data.Binding.Source%2A>または<xref:System.Windows.FrameworkElement.DataContext%2A>プロパティ、空白のバインディング宣言を指定:`{Binding}`します。 これが便利なシナリオには、文字列型のオブジェクトへのバインディング、対象とするプロパティが複数あるオブジェクトへのバインディング、またはコレクション オブジェクトへのバインディングなどがあります。 コレクション オブジェクト全体へのバインディングの例は、「[階層データでマスター詳細パターンを使用する](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」を参照してください。  
+ バインディング ソースとしてオブジェクト全体を使用できます。 使用してバインディング ソースを指定することができます、<xref:System.Windows.Data.Binding.Source%2A>または<xref:System.Windows.FrameworkElement.DataContext%2A>プロパティ、空白のバインディング宣言を指定:`{Binding}`します。 これが便利なシナリオには、文字列型のオブジェクトへのバインディング、対象とするプロパティが複数あるオブジェクトへのバインディング、またはコレクション オブジェクトへのバインディングなどがあります。 コレクション オブジェクト全体へのバインディングの例は、「[階層データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)」を参照してください。  
   
- データがバインドされているターゲット プロパティにとって意味のあるものになるように、カスタム ロジックの適用が必要になる場合があることに注意してください。 カスタム ロジックがカスタムのコンバーターの形式にすることがあります (既定の型変換が存在しない) 場合、または<xref:System.Windows.DataTemplate>します。 コンバーターの詳細については、「[データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」の「データ変換」セクションを参照してください。 データ テンプレートの詳細については「 [データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)」を参照してください。  
+ データがバインドされているターゲット プロパティにとって意味のあるものになるように、カスタム ロジックの適用が必要になる場合があることに注意してください。 カスタム ロジックがカスタムのコンバーターの形式にすることがあります (既定の型変換が存在しない) 場合、または<xref:System.Windows.DataTemplate>します。 コンバーターの詳細については、「[データ バインディングの概要](data-binding-overview.md)」の「データ変換」セクションを参照してください。 データ テンプレートの詳細については「 [データ テンプレートの概要](data-templating-overview.md)」を参照してください。  
   
 <a name="collections"></a>   
 ## <a name="using-collection-objects-as-a-binding-source"></a>バインディング ソースとしてコレクション オブジェクトを使用する  
@@ -64,9 +64,9 @@ ms.locfileid: "54694374"
   
  実装するコレクションを列挙することができます、<xref:System.Collections.IEnumerable>インターフェイス。 ただし、コレクションの挿入や削除が更新されるように、動的バインドを設定する、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コレクションが自動的に実装する必要があります、<xref:System.Collections.Specialized.INotifyCollectionChanged>インターフェイス。 このインターフェイスは、基盤のコレクションが変更されたときに必ず発生する必要があるイベントを公開します。  
   
- <xref:System.Collections.ObjectModel.ObservableCollection%601>クラスが公開するデータ コレクションの組み込みの実装、<xref:System.Collections.Specialized.INotifyCollectionChanged>インターフェイス。 コレクション内の個々のデータ オブジェクトは、前の各セクションで説明されている要件を満たす必要があります。 例については、「[ObservableCollection を作成およびバインドする](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)」を参照してください。 独自のコレクションを実装する前に、使用を検討して<xref:System.Collections.ObjectModel.ObservableCollection%601>またはなどの既存のコレクションの 1 つのクラス<xref:System.Collections.Generic.List%601>、 <xref:System.Collections.ObjectModel.Collection%601>、および<xref:System.ComponentModel.BindingList%601>、多数あります。  
+ <xref:System.Collections.ObjectModel.ObservableCollection%601>クラスが公開するデータ コレクションの組み込みの実装、<xref:System.Collections.Specialized.INotifyCollectionChanged>インターフェイス。 コレクション内の個々のデータ オブジェクトは、前の各セクションで説明されている要件を満たす必要があります。 例については、「[ObservableCollection を作成およびバインドする](how-to-create-and-bind-to-an-observablecollection.md)」を参照してください。 独自のコレクションを実装する前に、使用を検討して<xref:System.Collections.ObjectModel.ObservableCollection%601>またはなどの既存のコレクションの 1 つのクラス<xref:System.Collections.Generic.List%601>、 <xref:System.Collections.ObjectModel.Collection%601>、および<xref:System.ComponentModel.BindingList%601>、多数あります。  
   
- WPF はコレクションに直接バインドすることはありません。 バインディング ソースとしてコレクションを指定すると、WPF は実際にはコレクションの既定のビューにバインドします。 既定のビューの詳細については、「[データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)」を参照してください。  
+ WPF はコレクションに直接バインドすることはありません。 バインディング ソースとしてコレクションを指定すると、WPF は実際にはコレクションの既定のビューにバインドします。 既定のビューの詳細については、「[データ バインディングの概要](data-binding-overview.md)」を参照してください。  
   
  高度なシナリオがあり、独自のコレクションを実装する場合は、使用を検討して、<xref:System.Collections.IList>インターフェイス。 <xref:System.Collections.IList> パフォーマンスを向上させることができます、インデックスによって個別にアクセスできるオブジェクトの非ジェネリック コレクションを提供します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "54694374"
 |プロパティの型<br /><br /> (すべてのアクセス修飾子)|動的オブジェクトのプロパティ|動的オブジェクトのプロパティ|CLR プロパティ|CLR プロパティ|依存関係プロパティ|依存関係プロパティ|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**信頼レベル**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|  
-|パブリック クラス|[はい]|[はい]|[はい]|[はい]|[はい]|[はい]|  
+|パブリック クラス|[はい]|はい|はい|はい|はい|[はい]|  
 |非パブリック クラス|[はい]|×|はい|×|[はい]|[はい]|  
   
  この表では、データ バインディングのアクセス許可要件について次の重要事項を説明します。  
@@ -92,13 +92,13 @@ ms.locfileid: "54694374"
   
  匿名型のオブジェクトは内部です。 完全信頼で実行されている場合にのみ、匿名型のプロパティにバインドできます。 匿名型の詳細については、「[Anonymous Types (C# Programming Guide)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md)」または「[Anonymous Types (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
- 部分信頼セキュリティの詳細については、「[WPF 部分信頼セキュリティ](../../../../docs/framework/wpf/wpf-partial-trust-security.md)」を参照してください。  
+ 部分信頼セキュリティの詳細については、「[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
-- [バインディング ソースを指定する](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [バインディング ソースを指定する](how-to-specify-the-binding-source.md)
+- [データ バインディングの概要](data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)
 - [LINQ to XML による WPF のデータ バインディングの概要](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [データ バインディング](../advanced/optimizing-performance-data-binding.md)

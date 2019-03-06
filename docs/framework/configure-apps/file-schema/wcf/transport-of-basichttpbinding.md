@@ -3,11 +3,11 @@ title: <transport> の <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
 ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360011"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<トランスポート > の\<basicHttpBinding >
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  

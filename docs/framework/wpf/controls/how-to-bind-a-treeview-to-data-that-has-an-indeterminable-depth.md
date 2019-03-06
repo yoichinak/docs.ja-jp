@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 702a86f049635423a31e554d205dcc3cf4aa799d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377237"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>方法: 深度がわからないデータに TreeView をバインドする
 バインドに必要な場合がある可能性があります、<xref:System.Windows.Controls.TreeView>深さがわからない場合は、データ ソースにします。  これは、データが再帰的な場所のフォルダーは、フォルダーを含めることができます、ファイル システム、または企業の組織の構造など、本質的に直属の部下として他の従業員の従業員がある場合に発生します。  
@@ -23,8 +23,8 @@ ms.locfileid: "54605368"
 ## <a name="example"></a>例  
  次の例では、バインドする方法、<xref:System.Windows.Controls.TreeView>階層データを使用して、<xref:System.Windows.HierarchicalDataTemplate>を指定する、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>各<xref:System.Windows.Controls.TreeViewItem>します。  <xref:System.Windows.Controls.TreeView>社内の従業員を表す XML データをバインドします。  各`Employee`要素はその他を含めることができます`Employee`をユーザーに報告を示す要素。 データは再帰的であるため、<xref:System.Windows.HierarchicalDataTemplate>各レベルに適用できます。  
   
- [!code-xaml[TreeViewWithUnknownDepth#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>関連項目
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [データ テンプレートの概要](../data/data-templating-overview.md)

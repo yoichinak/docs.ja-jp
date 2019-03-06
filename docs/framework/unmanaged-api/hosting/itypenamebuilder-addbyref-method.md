@@ -17,30 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a4335bf477f0eeb8c48a50b9f11fb1f32d21448
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93b3ae8c83973c4d981fc42d4a8f616c62b1b28a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690060"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371100"
 ---
 # <a name="itypenamebuilderaddbyref-method"></a>ITypeNameBuilder::AddByRef メソッド
-このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT AddByRef ( );  
-```  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** WindoSee[システム要件](../../../../docs/framework/get-started/system-requirements.md)します。  
-  
- **ヘッダー:** MSCorEE.h  
-  
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT AddByRef ( );
+```
+
+## <a name="requirements"></a>必要条件
+
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+
+**ヘッダー:** MSCorEE.h
+
+**ライブラリ:** MSCorEE.dll でリソースとして含まれます
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

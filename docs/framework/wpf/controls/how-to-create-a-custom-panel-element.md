@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 93d9ebacda8c753ab5a4446999e1aa86828a2b9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e778adfb79a64c8f248992aee92de9471906129
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621933"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368702"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>方法: カスタム パネル要素を作成する
 ## <a name="example"></a>例  
@@ -24,11 +24,11 @@ ms.locfileid: "54621933"
   
  ユーザー設定を実装する<xref:System.Windows.Controls.Panel>動作、例では、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。 各メソッドを返します、<xref:System.Windows.Size>データを配置および子要素をレンダリングする必要があります。  
   
- [!code-cpp[PlotPanel#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
- [!code-csharp[PlotPanel#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
- [!code-vb[PlotPanel#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
+ [!code-cpp[PlotPanel#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PlotPanel/CPP/PlotPanel.cpp#1)]
+ [!code-csharp[PlotPanel#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PlotPanel/CSharp/PlotPanel.cs#1)]
+ [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Panel>
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [パネルの概要](panels-overview.md)
 - [カスタム コンテンツ折り返しパネルのサンプルを作成します。](https://go.microsoft.com/fwlink/?LinkID=159979)

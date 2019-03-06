@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361929"
 ---
 # <a name="toolbar"></a>ToolBar
-<xref:System.Windows.Controls.ToolBar>コントロールは、コマンドまたは通常、その機能に関連するコントロールのグループのコンテナーです。  
+<xref:System.Windows.Controls.ToolBar>コントロールは、コマンドまたは一般にそれぞれの機能に関連するコントロールのグループのコンテナー。  
   
  水平および垂直方向に次の図が示して<xref:System.Windows.Controls.ToolBar>コントロール。  
   
- ![水平ツールバー](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![水平ツールバー](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 水平ツールバー  
   
- ![垂直ツールバー](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![垂直ツールバー](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 垂直ツールバー  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolBar の概要](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [ToolBar のコントロールのスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [ToolBar の概要](toolbar-overview.md)  
+  [ToolBar のコントロールのスタイルを設定する](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ToolBar>  

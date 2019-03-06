@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: efe3d06c533d4d2be7364da66ccd3f101c8869d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fbbd400ae842ae24bae0307c362642d8fe1d5bea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188158"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364061"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 その他の開発プラットフォームとは異なり[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向コンテンツの迅速な開発をサポートする多くの機能、たとえば、データを同じドキュメント内まま混合の左から右、および右にします。 同時に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向機能のアラビア語やヘブライ語を話すユーザーなどを必要とするユーザー用の優れたエクスペリエンスを作成します。  
@@ -27,23 +27,23 @@ ms.locfileid: "50188158"
   
  **左から右へ記述するフロー方向**  
   
- [!code-xaml[LTRRTL#LTR](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
+ [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
  **右から左へ記述するフロー方向**  
   
- [!code-xaml[LTRRTL#RTL](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
+ [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
  次の図は、前のコードがどのように表示されるのかを示します。  
   
  **FlowDirection を示す図**  
   
- ![TextBlock 配置](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
+ ![TextBlock 配置](./media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
   
  内の要素を[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]ツリーは、継承、<xref:System.Windows.FrameworkElement.FlowDirection%2A>コンテナーから。 次の例では、<xref:System.Windows.Controls.TextBlock>内では、<xref:System.Windows.Controls.Grid>に存在する、<xref:System.Windows.Window>します。 設定、<xref:System.Windows.FrameworkElement.FlowDirection%2A>の<xref:System.Windows.Window>設定することの意味、<xref:System.Windows.Controls.Grid>と<xref:System.Windows.Controls.TextBlock>もします。  
   
  次の例では、設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>します。  
   
- [!code-xaml[FlowDirection#FlowDirection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
+ [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
  最上位レベル<xref:System.Windows.Window>が、 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>でそれに含まれるすべての要素と同じ継承もあるため、<xref:System.Windows.FrameworkElement.FlowDirection%2A>します。 指定されたをオーバーライドする要素の<xref:System.Windows.FrameworkElement.FlowDirection%2A>など、2 つ目の明示的な方向変更を追加する必要があります<xref:System.Windows.Controls.TextBlock>を変更する前の例で<xref:System.Windows.FlowDirection.LeftToRight>します。 ない場合<xref:System.Windows.FrameworkElement.FlowDirection%2A>が定義されている既定の<xref:System.Windows.FlowDirection.LeftToRight>適用されます。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50188158"
   
  **明示的に割り当てられた FlowDirection を示す図**  
   
- ![フロー方向の図](../../../../docs/framework/wpf/advanced/media/flowdir.PNG "FlowDir")  
+ ![フロー方向の図](./media/flowdir.PNG "FlowDir")  
   
 <a name="FlowDocument"></a>   
 ## <a name="flowdocument"></a>FlowDocument  
@@ -65,7 +65,7 @@ ms.locfileid: "50188158"
   
  **Span 要素の使用を示す図**  
   
- ![右から左に読むドキュメント](../../../../docs/framework/wpf/advanced/media/flowdocument.PNG "FlowDocument")  
+ ![右から左に読むドキュメント](./media/flowdocument.PNG "FlowDocument")  
   
  テキストなので<xref:System.Windows.FlowDirection.RightToLeft>、すべての特殊ななど、文字、"\\"、右から左へテキストを区切ります。 そのため、問題を解決するテキストに埋め込む必要がある個別に保持するためには、正しい順序で表示されていないリンクで、結果を<xref:System.Windows.Documents.Run>フロー<xref:System.Windows.FlowDirection.LeftToRight>します。 個別のではなく<xref:System.Windows.Documents.Run>問題を解決する方法の向上がより大きいアラビア語に使用頻度の低い英語のテキストを埋め込むためには、各言語の<xref:System.Windows.Documents.Span>します。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "50188158"
   
  **Span 要素に埋め込んだ実行要素の使用を示す図**  
   
- ![XamlPad スクリーン ショット](../../../../docs/framework/wpf/advanced/media/runspan.PNG "RunSpan")  
+ ![XamlPad スクリーン ショット](./media/runspan.PNG "RunSpan")  
   
  次の例を使用して<xref:System.Windows.Documents.Run>と<xref:System.Windows.Documents.Span>ドキュメント内の要素。  
   
- [!code-xaml[RunSpan#RunSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
+ [!code-xaml[RunSpan#RunSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
   
 <a name="SpanElements"></a>   
 ## <a name="span-elements"></a>Span 要素  
@@ -87,11 +87,11 @@ ms.locfileid: "50188158"
   
  **複数の TextBlock 要素での FlowDirection を示す図**  
   
- ![フロー方向が異なるテキスト ブロック](../../../../docs/framework/wpf/advanced/media/span.PNG "Span")  
+ ![フロー方向が異なるテキスト ブロック](./media/span.PNG "Span")  
   
  次の例は、使用する方法を示します、<xref:System.Windows.Documents.Span>と<xref:System.Windows.Documents.Run>前の図に示すように結果を生成する要素。  
   
- [!code-xaml[Span#Span](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
+ [!code-xaml[Span#Span](~/samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
   
  <xref:System.Windows.Controls.TextBlock>サンプルでは、要素、<xref:System.Windows.Documents.Span>要素のレイアウトに従って、<xref:System.Windows.FlowDirection>親が各内のテキストの<xref:System.Windows.Documents.Span>に従って独自の要素のフロー<xref:System.Windows.FlowDirection>します。 これは、ラテン語やアラビア語だけでなく、他のどの言語にも当てはまります。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "50188158"
   
  **FlowDirection のみを使用して数値を表示する図**  
   
- ![右から左に読む数字](../../../../docs/framework/wpf/advanced/media/langattribute.PNG "LangAttribute")  
+ ![右から左に読む数字](./media/langattribute.PNG "LangAttribute")  
   
  このアプリケーションのユーザーは残念ながら、出力が場合でも、<xref:System.Windows.FlowDirection>が正しい番号がないの形状にアラビア数字の形状になる必要があります。  
   
@@ -110,11 +110,11 @@ ms.locfileid: "50188158"
   
  **xml:lang 属性の使用を示す図**  
   
- ![右から左に読むアラビア数字](../../../../docs/framework/wpf/advanced/media/langattribute2.PNG "LangAttribute2")  
+ ![右から左に読むアラビア数字](./media/langattribute2.PNG "LangAttribute2")  
   
  次の例では、追加`xml:lang`アプリケーションにします。  
   
- [!code-xaml[LangAttribute#LangAttribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
+ [!code-xaml[LangAttribute#LangAttribute](~/samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
   
  多くの言語が異なることに注意してください`xml:lang`対象となる地域に応じて値`"ar-SA"`と`"ar-EG"`アラビア語の 2 つのバリエーションを表します。 両方を定義する必要がある、前の例を示しています、`xml:lang`と<xref:System.Windows.FlowDirection>値。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "50188158"
   
  **左から右へのグラデーションを付けたツール バーを示す図**  
   
- ![グラデーションのスクリーン ショット](../../../../docs/framework/wpf/advanced/media/gradient.PNG "Gradient")  
+ ![グラデーションのスクリーン ショット](./media/gradient.PNG "Gradient")  
   
  設定した後、<xref:System.Windows.FlowDirection>に<xref:System.Windows.FlowDirection.RightToLeft>だけでなく、<xref:System.Windows.Controls.ToolBar>ボタンが右から左があっても、配置された<xref:System.Windows.Media.LinearGradientBrush>によりそのオフセットが右から左にフローします。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "50188158"
   
  **右から左へのグラデーションを付けたツール バーを示す図**  
   
- ![右から左に読むグラデーション](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.PNG "Gradient2_WPF")  
+ ![右から左に読むグラデーション](./media/gradient2-wpf.PNG "Gradient2_WPF")  
   
  次の例では、描画、 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>します。 (描画左右から、削除、<xref:System.Windows.FlowDirection>属性を<xref:System.Windows.Controls.ToolBar>します。  
   
- [!code-xaml[Gradient#Gradient](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
+ [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
 <a name="FlowDirectionExceptions"></a>   
 ### <a name="flowdirection-exceptions"></a>FlowDirection の例外  
@@ -152,11 +152,11 @@ ms.locfileid: "50188158"
   
  **反転されたイメージを示す図**  
   
- ![XamlPad スクリーン ショット](../../../../docs/framework/wpf/advanced/media/image.PNG "Image")  
+ ![XamlPad スクリーン ショット](./media/image.PNG "Image")  
   
- 次の例を示しますが、<xref:System.Windows.Controls.Image>継承に失敗する、<xref:System.Windows.FlowDirection>から、<xref:System.Windows.Controls.StackPanel>含まれています。 **注**という名前のファイルがある必要があります**ms_logo.jpg**の C:\ ドライブに、この例を実行します。  
+ 次の例を示しますが、<xref:System.Windows.Controls.Image>継承に失敗する、<xref:System.Windows.FlowDirection>から、<xref:System.Windows.Controls.StackPanel>含まれています。 **注**という名前のファイルがある必要があります**ms_logo.jpg** c:\この例を実行するドライブ。  
   
- [!code-xaml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
+ [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
   
  **注**ダウンロード ファイルに含まれているは、 **ms_logo.jpg**ファイル。 コードは、この .jpg ファイルがプロジェクト内ではなく、C:\ ドライブ上にあることを前提としています。 プロジェクト内のファイルを検索するためには、プロジェクト ファイルから C:\ドライブに .jpg をコピーするかコードを変更する必要があります。 この変更を行う`Source="file://c:/ms_logo.jpg"`に`Source="ms_logo.jpg"`します。  
   
@@ -166,13 +166,13 @@ ms.locfileid: "50188158"
   
  次の例では、3 本の線を使用して単純な矢印を描画します。 最初の矢印は、<xref:System.Windows.FlowDirection.RightToLeft>フローの方向から、<xref:System.Windows.Controls.StackPanel>その始点と終点が右側を起点として計測されるようにします。 2 番目の矢印は、明示的な<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>も右側にある開始します。 ただし、3 番目の矢印の起点は左側です。 参照の描画の詳細については<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.GeometryGroup>します。  
   
- [!code-xaml[Paths#Paths](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
+ [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
  前の例の出力を次の図に示します。  
   
  **Path 要素を使用して描画した矢印の図**  
   
- ![パス](../../../../docs/framework/wpf/advanced/media/paths.PNG "Paths")  
+ ![パス](./media/paths.PNG "Paths")  
   
  <xref:System.Windows.Controls.Image>と<xref:System.Windows.Shapes.Path>方法の 2 つの例は[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用<xref:System.Windows.FlowDirection>します。 レイアウトの横にある[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、コンテナー内の特定の方向に要素<xref:System.Windows.FlowDirection>などの要素で使用できる<xref:System.Windows.Controls.InkPresenter>、表面にインクをレンダリングする<xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush>します。 右左の動作からを左右の動作からを模倣したコンテンツの必要がある場合またはその逆[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]その機能を提供します。  
   
@@ -190,11 +190,11 @@ ms.locfileid: "50188158"
   
  このプロパティは、数字のカルチャを決定する方法を指定します。 3 つの時間を要する<xref:System.Windows.Media.NumberCultureSource>列挙値。  
   
--   Override: 数字カルチャは、の<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>プロパティ。  
+-   オーバーライドします。数字カルチャの<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>プロパティ。  
   
--   Text: 数字カルチャは、テキスト ランのカルチャです。 マークアップで`xml:lang`、またはそのエイリアス`Language`プロパティ (<xref:System.Windows.FrameworkElement.Language%2A>または<xref:System.Windows.FrameworkContentElement.Language%2A>)。 派生したクラスの既定値はまた、<xref:System.Windows.FrameworkContentElement>します。 このようなクラスを含める<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>、<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>など。  
+-   テキスト:数字カルチャは、テキスト ランのカルチャです。 マークアップで`xml:lang`、またはそのエイリアス`Language`プロパティ (<xref:System.Windows.FrameworkElement.Language%2A>または<xref:System.Windows.FrameworkContentElement.Language%2A>)。 派生したクラスの既定値はまた、<xref:System.Windows.FrameworkContentElement>します。 このようなクラスを含める<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>、<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>など。  
   
--   User: 数字カルチャは、現在のスレッドのカルチャです。 このプロパティのすべてのサブクラスの既定値は、<xref:System.Windows.FrameworkElement>など<xref:System.Windows.Controls.Page>、<xref:System.Windows.Window>と<xref:System.Windows.Controls.TextBlock>します。  
+-   ユーザー:数字カルチャは、現在のスレッドのカルチャです。 このプロパティのすべてのサブクラスの既定値は、<xref:System.Windows.FrameworkElement>など<xref:System.Windows.Controls.Page>、<xref:System.Windows.Window>と<xref:System.Windows.Controls.TextBlock>します。  
   
  **CultureOverride**:  
   
@@ -204,25 +204,25 @@ ms.locfileid: "50188158"
   
  このプロパティは、実行する数字の置換の種類を指定します。 次のいずれかになります<xref:System.Windows.Media.NumberSubstitutionMethod>列挙値。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>数字カルチャのに基づいて置換方法を決定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティ。 既定値です。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>:数字カルチャのに基づいて置換方法を決定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティ。 既定値です。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 数字カルチャがアラビアまたはペルシャのカルチャの場合、数字がコンテキストに依存することを指定します。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>:数字カルチャがアラビアまたはペルシャのカルチャの場合は、数字がコンテキストに依存するを指定します。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>: 数値は常に、ヨーロッパ数字としてレンダリングされます。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.European>:数値は常に、ヨーロッパ数字としてレンダリングされます。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>: 数字を表示する国の数字を使用して、カルチャの規定に従い、数字カルチャの<xref:System.Globalization.CultureInfo.NumberFormat%2A>します。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>:数字を表示する国の数字を使用して、カルチャの規定に従い、数字カルチャの<xref:System.Globalization.CultureInfo.NumberFormat%2A>します。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: 数字を表示するには、数字カルチャの通常の数字を使用します。 ほとんどのカルチャでは、これと同じ<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>します。 ただし、<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>この値が結果のすべてのアラビア カルチャでアラビア数字が一部のアラビア カルチャでラテンの数字になります。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>:数字を表示するには、数字カルチャの通常の数字を使用します。 ほとんどのカルチャでは、これと同じ<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>します。 ただし、<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>この値が結果のすべてのアラビア カルチャでアラビア数字が一部のアラビア カルチャでラテンの数字になります。  
   
  これらの値は双方向コンテンツ開発者にとってどういった意味があるのでしょうか。 ほとんどの場合、開発者が定義にのみ必要があります<xref:System.Windows.FlowDirection>と各テキストの言語[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素、たとえば`Language="ar-SA"`と<xref:System.Windows.Media.NumberSubstitution>ロジックに従って、正しい番号を表示する処理[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 次の例で、アラビア語および英語の番号を使用して、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]のアラビア語版で実行されるアプリケーション[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]します。  
   
- [!code-xaml[Numbers#Numbers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
+ [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   
  アラビア語版で実行している場合、次の図は、前の例の出力を示します[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]します。  
   
  **表示されたアラビア数字と英語数字を示す図**  
   
- ![数字を含む XamlPad のスクリーン ショット](../../../../docs/framework/wpf/advanced/media/numbers.PNG "Numbers")  
+ ![数字を含む XamlPad のスクリーン ショット](./media/numbers.PNG "Numbers")  
   
  <xref:System.Windows.FlowDirection>設定はここでは重要な<xref:System.Windows.FlowDirection>に<xref:System.Windows.FlowDirection.LeftToRight>代わりに、ヨーロッパ数字が生成されます。 以下のセクションでは、ドキュメント全体で数字の表示を統一する方法について説明します。 この例では、アラビア語版 Windows で実行されていなければ、すべての数字がヨーロッパ数字として表示されます。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "50188158"
   
  まず、設定して、アプリケーション コンポーネントの`NumberSubstitution.CultureSource="Text"`します。 設定がから提供されないことを確認は、この設定を使用して、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]のテキスト要素など、既定値として"User"が含まれない<xref:System.Windows.Controls.TextBlock>します。  
   
-例えば:  
+例:  
 
 ```xaml  
 <TextBlock
@@ -259,17 +259,17 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  最終的な[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]例を次の例のようになります。  
   
- [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
+ [!code-xaml[Numbers2#Numbers2](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
  最終的なC#例は、次のようになります。  
   
- [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
+ [!code-csharp[NumbersCSharp#NumbersCSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   
  次の図は、いずれかのプログラミング言語に対するウィンドウの外観を示します。  
   
  **アラビア数字を表示した図**  
   
- ![アラビア数字](../../../../docs/framework/wpf/advanced/media/numbers2.PNG "Numbers2")  
+ ![アラビア数字](./media/numbers2.PNG "Numbers2")  
   
  **Substitution プロパティの使用**  
   
@@ -279,4 +279,4 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  次の例では、最初の<xref:System.Windows.Controls.TextBlock>はありません、<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>プロパティの設定、期待どおりに、アルゴリズムにアラビア数字が表示されます。 ただし、2 番目の<xref:System.Windows.Controls.TextBlock>置換がヨーロッパに設定されてアラビア数字は、既定値の置換をオーバーライドして、ヨーロッパ数字が表示されます。  
   
- [!code-xaml[Numbers3#Numbers3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]
+ [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354636"
 ---
 # <a name="contextmenu"></a>ContextMenu
 <xref:System.Windows.Controls.ContextMenu>コントロールが表示できるように、<xref:System.Windows.Controls.Menu>コントロールのコンテキストに固有です。 通常、<xref:System.Windows.Controls.ContextMenu>で公開されている、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]マウスの右ボタンまたはキーボードのメニュー ボタンを使用します。  
   
- 次の図は、<xref:System.Windows.Controls.ContextMenu>の 2 つの異なる状態: 既定の状態と開いている状態です。 既定の状態では、コントロールが折りたたまれています。 メニューの親の上でマウスの右ボタンが押されると、コントロールを展開し、メニュー項目を表示します。  
+ 次の図を示しています、<xref:System.Windows.Controls.ContextMenu>の 2 つの異なる状態: 既定の状態とオープンの状態。 既定の状態では、コントロールが折りたたまれます。 メニューの親の上でマウスの右ボタンが押された、ときに、コントロールが展開し、メニュー項目が表示されます。  
   
- ![ContextMenu 状態](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![コンテキスト メニューの状態](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 さまざまな状態でコンテキスト メニュー  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ContextMenu の概要](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu の概要](contextmenu-overview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ContextMenu>  

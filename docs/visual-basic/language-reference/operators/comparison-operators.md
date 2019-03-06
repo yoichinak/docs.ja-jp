@@ -28,14 +28,14 @@ helpviewer_keywords:
 - <= operator [Visual Basic]
 - operators [Visual Basic], comparison
 - Is operator [Visual Basic]
-- comparison operators [Visual Basic], Visual Basicl
+- comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: a816b1097c0a9628bb2889d39be5c029beaa3c63
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c8835d1c42a02fa65e9acc9bd1c1f06fcfd4af02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359823"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較演算子 (Visual Basic)
 Visual Basic で定義されている比較演算子を次に示します。  

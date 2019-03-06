@@ -5,12 +5,12 @@ helpviewer_keywords:
 - FontSizeConverter objects [WPF]
 - typography [WPF], FontSizeConverter objects
 ms.assetid: 3b0592bd-7223-4860-a108-a5d72f3a9178
-ms.openlocfilehash: 7cb76ad4ffe4b4574a48212240b852e1f2253088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21050ae69ad834b56c70f40d85138714af334dab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741900"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364100"
 ---
 # <a name="how-to-use-the-fontsizeconverter-class"></a>方法: FontSizeConverter クラスを使用する
 ## <a name="example"></a>例  
@@ -22,7 +22,7 @@ ms.locfileid: "54741900"
   
  この例は実行できません。  
   
- [!code-csharp[FontSizeConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
+ [!code-csharp[FontSizeConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/FontSizeConverter/CSharp/Window1.xaml.cs#1)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.FontSizeConverter>

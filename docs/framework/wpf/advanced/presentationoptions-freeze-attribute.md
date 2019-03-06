@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 9909a4170bdb217f91a1fc5713e89bb3a979a999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512178"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378862"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 属性
 セット、<xref:System.Windows.Freezable.IsFrozen%2A>状態`true`で格納している<xref:System.Windows.Freezable>要素。 既定の動作を<xref:System.Windows.Freezable>せず、`PresentationOptions:Freeze`属性が指定される<xref:System.Windows.Freezable.IsFrozen%2A>は`false`の読み込み時間、および [全般] に依存<xref:System.Windows.Freezable>時の動作。  
@@ -35,7 +35,7 @@ ms.locfileid: "54512178"
 |`freezableElement`|いずれかをインスタンス化する要素のクラスを派生する<xref:System.Windows.Freezable>します。|  
   
 ## <a name="remarks"></a>Remarks  
- `Freeze`属性は、唯一の属性またはその他のプログラミング要素で定義されて、 `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML 名前空間。 `Freeze` Ignorable としてを使用して、指定することができますように具体的には、この特別な名前空間の属性が存在する[mc: Ignorable 属性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)ルート要素の宣言の一部として。 理由を`Freeze`が無視できる必要がありますでないため、すべて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装に固定することは、<xref:System.Windows.Freezable>ロード時にこの機能はありませんの一部、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]仕様。  
+ `Freeze`属性は、唯一の属性またはその他のプログラミング要素で定義されて、 `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` XML 名前空間。 `Freeze` Ignorable としてを使用して、指定することができますように具体的には、この特別な名前空間の属性が存在する[mc: Ignorable 属性](mc-ignorable-attribute.md)ルート要素の宣言の一部として。 理由を`Freeze`が無視できる必要がありますでないため、すべて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装に固定することは、<xref:System.Windows.Freezable>ロード時にこの機能はありませんの一部、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]仕様。  
   
  処理する機能、`Freeze`属性は、具体的に組み込まれている、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]処理プロセッサ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]用にコンパイルされたアプリケーション。 属性は、任意のクラスでサポートされていないと、属性構文が拡張または変更します。 独自に実装している場合[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの固定動作することもできます、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの処理時に、`Freeze`属性<xref:System.Windows.Freezable>の読み込み時に要素。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "54512178"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Freezable>
-- [Freezable オブジェクトの概要](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [mc:Ignorable 属性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)
+- [Freezable オブジェクトの概要](freezable-objects-overview.md)
+- [mc:Ignorable 属性](mc-ignorable-attribute.md)

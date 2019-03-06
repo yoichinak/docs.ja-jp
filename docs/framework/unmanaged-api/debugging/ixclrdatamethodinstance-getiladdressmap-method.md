@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567192"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373492"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap メソッド
 
@@ -40,11 +40,14 @@ HRESULT GetILAddressMap(
 
 ### <a name="parameters"></a>パラメーター
 
-`mapLen` [in]マップの指定された配列の長さ。
+`mapLen`\
+[in]マップの指定された配列の長さ。
 
-`mapNeeded` [out]メソッドが必要なマップ エントリの数。
+`mapNeeded`\
+[out]メソッドが必要なマップ エントリの数。
 
-`maps` [out, size_is(mapLen)]マップ エントリを格納する配列。
+`maps`\
+[out, size_is(mapLen)]マップ エントリを格納する配列。
 
 ## <a name="remarks"></a>Remarks
 
@@ -59,5 +62,5 @@ HRESULT GetILAddressMap(
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [デバッグ](index.md)
+- [IXCLRDataMethodInstance インターフェイス](ixclrdatamethodinstance-interface.md)

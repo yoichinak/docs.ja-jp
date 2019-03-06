@@ -2,15 +2,9 @@
 title: リファレンス (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- language reference
-- Visual Basic code, language reference
+  - language reference
+  - 'Visual Basic code, language reference'
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083909"
 ---
 # <a name="reference-visual-basic"></a>リファレンス (Visual Basic)
 このセクションでは、Visual Basic プログラミングのさまざまな側面に関するリファレンス情報へのリンクを提供します。  
@@ -27,13 +21,6 @@ ms.locfileid: "44083909"
   
  [Visual Basic 言語仕様](../../visual-basic/reference/language-specification/index.md)  
  言語のあらゆる側面に詳細な情報を含む完全な Visual Basic 言語仕様へのリンクを提供します。  
-  
-## <a name="reference"></a>参照  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- この名前空間には、Visual Basic Power Packs コントロールのクラスが含まれています。 Visual Basic Power Packs コントロールは、追加の Windows フォーム コントロールです。  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- この名前空間は、画面に表示されているとおりにフォームの複製を印刷できるようにするコンポーネントを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [一般的なユーザー インターフェイス要素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
