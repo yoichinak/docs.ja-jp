@@ -63,7 +63,7 @@ ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
  [方法: 2 つのインターフェイスのメンバーを明示的に実装する](how-to-explicitly-implement-members-of-two-interfaces.md)  
  継承を持つインターフェイスのメンバーを明示的に実装する方法の例を示します。  
   
-##  <a name="BKMK_RelatedSections"></a>関連項目
+## <a name="BKMK_RelatedSections"></a>関連項目
 
 - [インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)  
 - [インターフェイスのインデクサー](../indexers/indexers-in-interfaces.md)  

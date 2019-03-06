@@ -113,7 +113,7 @@ string s = String.Empty;
   
  この例では、<xref:System.Text.StringBuilder> オブジェクトを使用して、複数の数値型から 1 つの文字列を作成します。  
   
- [!code-csharp[csProgGuideStrings#15](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_12.cs)]  
+ [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>文字列、拡張メソッド、LINQ  
  <xref:System.String> 型は、<xref:System.Collections.Generic.IEnumerable%601> を実装するので、文字列には <xref:System.Linq.Enumerable> クラスで定義した拡張メソッドを使用できます。 見やすさを考慮して、これらのメソッドは <xref:System.String> 型の IntelliSense からは除外されていますが、使用できます。 文字列で [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ式を使用することもできます。 詳細については、「[LINQ と文字列](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)」を参照してください。  

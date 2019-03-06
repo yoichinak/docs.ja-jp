@@ -7,14 +7,14 @@ helpviewer_keywords:
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-ms.openlocfilehash: 843126d86df36b2aeaa8f57248afb930b92a9ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339320"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970702"
 ---
-# <a name="getting-started-with-linq-in-c"></a>C# の LINQ の概要
+# <a name="getting-started-with-linq-in-c"></a>C\# の LINQ の概要
 このセクションには、LINQ に関する他のドキュメントとサンプルを理解するのに役立つ基本的な背景情報が含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

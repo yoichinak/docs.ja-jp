@@ -50,8 +50,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 
  - [.NET アセンブリ ファイルの形式](file-format.md)
  - [共通言語ランタイムのアセンブリ](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [フレンド アセンブリ (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [フレンド アセンブリ (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [フレンド アセンブリ](friend-assemblies.md)  
  - [方法: アセンブリを読み込み、アンロードする (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [方法: アセンブリを読み込み、アンロードする (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする](unloadability-howto.md)

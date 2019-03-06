@@ -1,5 +1,5 @@
 ---
-title: '方法: ポインター変数の値を取得する - C# プログラミング ガイド'
+title: '方法 : ポインター変数の値を取得する - C# プログラミング ガイド'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,35 +8,37 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 288d8cb2d286f55cc9a162614d45ef7b298f79f1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577153"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974485"
 ---
-# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>方法: ポインター変数の値を取得する (C# プログラミング ガイド)
+# <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>方法 : ポインター変数の値を取得する (C# プログラミング ガイド)
+
 ポインターが指す位置にある変数を取得するには、ポインター間接演算子を使用します。 この式は次の形式になります。`p` はポインター型です。  
-  
-```  
+
+```csharp
 *p;  
-```  
+```
+
+ポインター型以外の型の式では、単項間接演算子を使用することはできません。 また、[void](../../../csharp/language-reference/keywords/void.md) ポインターに適用することもできません。  
+
+間接演算子を [null](../../../csharp/language-reference/keywords/null.md) ポインターに適用すると、結果は実装によって異なります。  
+
+## <a name="example"></a>例
+
+次の例では、`char` 型の変数に、さまざまな型のポインターを使用してアクセスします。 変数に割り当てられる物理アドレスが変更できるため、`theChar` のアドレスが実行ごとに異なることに注意してください。  
+
+ [!code-csharp[csProgGuidePointers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#5)]  
+
+ [!code-csharp[csProgGuidePointers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#6)]  
   
- ポインター型以外の型の式では、単項間接演算子を使用することはできません。 また、[void](../../../csharp/language-reference/keywords/void.md) ポインターに適用することもできません。  
-  
- 間接演算子を [null](../../../csharp/language-reference/keywords/null.md) ポインターに適用すると、結果は実装によって異なります。  
-  
-## <a name="example"></a>例  
- 次の例では、`char` 型の変数に、さまざまな型のポインターを使用してアクセスします。 変数に割り当てられる物理アドレスが変更できるため、`theChar` のアドレスが実行ごとに異なることに注意してください。  
-  
- [!code-csharp[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
-  
- [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
-  
-**theChar の値 = Z**
-**theChar のアドレス = 12F718**
-**pChar の値 = Z**
-**pInt の値 = 90**
+**theChar の値 = Z**  
+**theChar のアドレス = 12F718**  
+**pChar の値 = Z**  
+**pInt の値 = 90**  
 
 ## <a name="see-also"></a>関連項目
 

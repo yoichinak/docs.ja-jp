@@ -1,43 +1,47 @@
 ---
 title: '* 演算子 - C# リファレンス'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333734"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977345"
 ---
 # <a name="-operator-c-reference"></a>* 演算子 (C# リファレンス)
 
-乗算演算子 (`*`) は、そのオペランドの積を計算します。 すべての数値型には定義済みの乗算演算子があります。
+`*` 演算子は 2 つの形式でサポートされています。単項ポインター間接参照演算子、または二項乗算演算子です。
 
-また、`*` はポインターへの読み書きを可能にする逆参照演算子としても機能します。
+## <a name="pointer-indirection-operator"></a>ポインター間接参照演算子
 
-## <a name="remarks"></a>コメント
+単項 `*` 演算子を使って、ポインター型のオペランドが指す変数を取得します。 詳細については、[ポインター変数の値を取得する方法](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)に関する記事をご覧ください。
 
-`*` 演算子は、ポインターの種類の宣言、およびポインターの逆参照にも使用されます。 この演算子は、[unsafe](../keywords/unsafe.md) キーワードの使用によって示され、[/unsafe](../compiler-options/unsafe-compiler-option.md) コンパイラ オプションを必要とする、unsafe コンテキストでのみ使用できます。  逆参照演算子は、間接演算子とも呼ばれます。
+ポインター間接参照演算子 `*` には [unsafe](../keywords/unsafe.md) コンテキストが必要です。
 
-ユーザー定義型は二項 `*` 演算子をオーバーロードできます (「[演算子](../keywords/operator.md)」を参照)。 二項演算子をオーバーロードすると、対応する代入演算子がある場合、これも暗黙的にオーバーロードされます。
+## <a name="multiplication-operator"></a>乗算演算子
 
-## <a name="example"></a>例
+数値型の場合、`*` 演算子によってそのオペランドの積が計算されます。
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>例
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+ユーザー定義型は二項 `*` 演算子を[オーバーロード](../keywords/operator.md)できます。 二項 `*` 演算子をオーバーロードすると、[乗算代入演算子](multiplication-assignment-operator.md) `*=` も暗黙的にオーバーロードされます。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、[C# 言語仕様](../language-specification/index.md)の「[Pointer indirection (ポインターの間接参照)](~/_csharplang/spec/unsafe-code.md#pointer-indirection)」と「[Multiplication operator (乗算演算子)](~/_csharplang/spec/expressions.md#multiplication-operator)」セクションをご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [アンセーフ コードとポインター](../../programming-guide/unsafe-code-pointers/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
+- [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)

@@ -3,14 +3,14 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186229"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981934"
 ---
-# <a name="the-history-of-c"></a>C# の歴史 #
+# <a name="the-history-of-c"></a>C\# の歴史
 
 この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
 
@@ -123,7 +123,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 - [非同期メンバー](../async.md)
 - [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>「
+### <a name="see-also"></a>参照
 
 * [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

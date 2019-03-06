@@ -48,7 +48,7 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 -   インデクサーには、2 次元配列にアクセスする場合など、複数の仮パラメーターを指定できます。  
   
-##  <a name="BKMK_RelatedSections"></a> 関連セクション  
+## <a name="BKMK_RelatedSections"></a> 関連セクション  
   
 -   [インデクサーの使用](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

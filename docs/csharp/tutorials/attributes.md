@@ -4,14 +4,14 @@ description: C# での属性の機能について説明します。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826825"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975603"
 ---
-# <a name="using-attributes-in-c"></a>C# での属性の使用 #
+# <a name="using-attributes-in-c"></a>C\# での属性の使用
 
 属性は、情報をコードに宣言的に関連付けるための手段を提供します。 また、さまざまなターゲットに適用できる再利用可能な要素も提供します。
 

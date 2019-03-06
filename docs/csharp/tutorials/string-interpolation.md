@@ -3,14 +3,14 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727860"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976058"
 ---
-# <a name="string-interpolation-in-c"></a>C# における文字列補間 #
+# <a name="string-interpolation-in-c"></a>C\# における文字列補間
 
 このチュートリアルは、[文字列補間](../language-reference/tokens/interpolated.md)を使用して結果文字列に式の結果を書式設定したものを含める方法を示しています。 例では、基本的な C# の概念と .NET の型の書式設定について理解していることを前提としています。 文字列補間や .NET の型の書式設定の経験がない場合は、最初に[対話型の文字列補間に関するチュートリアル](../tutorials/intro-to-csharp/interpolated-strings.yml)を参照してください。 .NET の型の書式設定の詳細については、「[.NET での型の書式設定](../../standard/base-types/formatting-types.md)」のトピックを参照してください。
 

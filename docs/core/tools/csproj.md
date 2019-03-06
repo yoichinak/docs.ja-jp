@@ -3,12 +3,12 @@ title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 792ec6e5570afd5ecfad483d2a0551df10c61a95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748011"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981531"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -45,11 +45,14 @@ ms.locfileid: "56748011"
 
 次の表は、SDK に含まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧です。 
 
-| 要素           | 含まれる glob                              | 除外される glob                                                  | glob の削除                |
+| 要素           | 含まれる glob                                | 除外される glob                                                    | glob の削除                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (または他の言語拡張機能) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
-| なし              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| なし              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+
+> [!NOTE]
+> **除外される glob** では、`./bin` と `./obj` フォルダーが常に除外されます。これらはそれぞれ MSBuild プロパティ `$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` で表されます。 全体として、すべての除外は `$(DefaultItemExcludes)` で表されます。
 
 プロジェクトに glob があり、最新の SDK を使用してビルドしようとすると、次のエラーが発生します。
 
@@ -208,7 +211,7 @@ UI 画面用のパッケージの長い説明。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
-パッケージ内のライセンス ファイルに対する SPDX ライセンス式またはパスであり、UI 表示や nuget.org でよく示されます。
+[SPDX ライセンス識別子](https://spdx.org/licenses/)、または式です。 たとえば、`Apache-2.0` のようにします。
 
 [SPDX ライセンス識別子](https://spdx.org/licenses/)の完全な一覧はこちらをご覧ください。 ライセンス タイプ式を使用する場合、NuGet.org では OSI または FSF で承認されたライセンスのみが受け付けられます。
 
@@ -236,23 +239,6 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX 識別子が割り当てられていないライセンス、またはカスタム ライセンスを使用している場合、パッケージ内のライセンス ファイルへのパス (それ以外の場合は、`PackageLicenseExpression` が優先されます)
 
-> [!NOTE]
-> 一度に指定できるのは、`PackageLicenseExpression`、`PackageLicenseFile`、`PackageLicenseUrl` のどれか 1 つだけです。
-
-### <a name="packagelicenseurl"></a>PackageLicenseUrl
-
-パッケージに適用されるライセンスの URL。 ("_Visual Studio 15.9.4、.NET SDK 2.1.502 および 2.2.101 以降では非推奨_")
-
-### <a name="packagelicenseexpression"></a>PackageLicenseExpression
-
-[SPDX ライセンス識別子](https://spdx.org/licenses/)または式 (つまり`Apache-2.0`)。
-
-`PackageLicenseUrl` を置き換えるもので、`PackageLicenseFile` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
-
-### <a name="packagelicensefile"></a>PackageLicenseFile
-
-プロジェクト ファイルを基準とするディスク上のライセンス ファイルへのパス (つまり `LICENSE.txt`)。
-
 `PackageLicenseUrl` を置き換えるもので、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
 
 プロジェクトに明示的に追加することによって、ライセンス ファイルをパックする必要があります。使用例を次に示します。
@@ -264,6 +250,12 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
   <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
 </ItemGroup>
 ```
+
+### <a name="packagelicenseurl"></a>PackageLicenseUrl
+
+パッケージに適用されるライセンスの URL。 ("_Visual Studio 15.9.4、.NET SDK 2.1.502 および 2.2.101 以降では非推奨_")
+
+
 ### <a name="packageiconurl"></a>PackageIconUrl
 UI 画面のパッケージのアイコンとして使用する背景が透明な 64x64 の画像の URL。
 

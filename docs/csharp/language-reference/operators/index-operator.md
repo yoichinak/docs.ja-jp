@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 9088393f61d300ee76e56e320bec17b4a79bfebb
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333396"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835591"
 ---
 # <a name="-operator-c-reference"></a>[] 演算子 (C# リファレンス)
 
@@ -69,3 +69,4 @@ void TraceMethod() {}
 - [インデクサー](../../programming-guide/indexers/index.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [属性](../../programming-guide/concepts/attributes/index.md)
+- [?. および ?[] 演算子](null-conditional-operators.md)

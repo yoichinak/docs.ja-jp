@@ -3,12 +3,12 @@ title: 式の解釈
 description: 式ツリーの構造を調べるためのコードの記述方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 95fbb021aeeb9f2f4eb36f664f9fe904d1d52453
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506420"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201977"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -353,7 +353,7 @@ Expression<Func<int, int>> factorial = (n) =>
     Enumerable.Range(1, n).Aggregate((product, factor) => product * factor);
 ```
 
-このコードは、数学の*階乗*関数に対して考えられる実装の 1 つです。 このコードの記述方法によって、ラムダ式を式に代入して式ツリーを作成する上で生じる 2 つの制限が明らかになりました。 第 1 に、ステートメント形式のラムダは使用できません。 つまり、C# で一般的なループ、ブロック、if / else ステートメント、その他の制御構造を使用できないということです。 式の使用だけに制限されます。 第 2 に、同じ式を再帰的に呼び出すことができません。
+このコードは、数学の*階乗*関数に対して考えられる実装の 1 つです。 このコードの記述方法によって、式にラムダ式を代入して式ツリーを構築する場合の 2 つの制限事項が強調されています。 第 1 に、ステートメント形式のラムダは使用できません。 つまり、C# で一般的なループ、ブロック、if / else ステートメント、その他の制御構造を使用できないということです。 式の使用だけに制限されます。 第 2 に、同じ式を再帰的に呼び出すことができません。
 式が既にデリゲートになっている場合は呼び出せますが、式ツリー形式で呼び出すことはできません。 これらの制限を克服する手法については、「[式ツリーの構築](expression-trees-building.md)」セクションを参照してください。
 
 

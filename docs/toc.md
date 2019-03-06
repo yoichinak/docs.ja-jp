@@ -505,15 +505,6 @@
 ### [データへのアクセス](visual-basic/developing-apps/accessing-data.md)
 ### [コンポーネントの作成および使用](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [印刷とレポート](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm コンポーネント](visual-basic/developing-apps/printing/printform-component.md)
-#### [方法: スクロール可能フォームを印刷する](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [方法: フォームのクライアント領域と非クライアント領域を印刷する](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [方法: フォームのクライアント領域を印刷する](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [方法: PrintForm コンポーネントを使用してフォームを印刷する](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [PrintForm コンポーネントを参照するアプリケーションの配置](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Visual Studio アプリケーションへの印刷可能なレポートの追加](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Windows フォーム アプリケーションの基礎](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [Visual Basic でのプロジェクトのカスタマイズと My の拡張](visual-basic/developing-apps/customizing-extending-my/index.md)
