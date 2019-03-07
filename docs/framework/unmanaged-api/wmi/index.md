@@ -5,12 +5,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ---
+
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) およびパフォーマンス カウンター (アンマネージ API リファレンス)
 
 .NET Framework WMI およびパフォーマンス カウンターのアンマネージド API は、[ネイティブの Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi) の呼び出しをラップする一連の関数によって構成されています。 これを使用することで、リモート コンピューター システムの管理および監視を行うツールおよびライブラリを開発することができます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
+
 API には次の関数が含まれています。
 
 | 関数 | 説明 |
@@ -27,27 +28,27 @@ API には次の関数が含まれています。
 | [CreateInstanceEnumWmi 関数](createinstanceenumwmi.md) | 指定したクラスのインスタンスの中から指定した選択条件を満たすものを返す列挙子が返されます。 |
 | [Delete 関数](delete.md) | クラスの定義とそのすべての修飾子から、指定したプロパティが削除されます。 |
 | [DeleteMethod 関数](deletemethod.md) | CIM クラスの定義から、指定したメソッドが削除されます。 |
-| [EndEnumeration 関数](endenumeration.md) | 列挙型シーケンスが終了されます。 | 
+| [EndEnumeration 関数](endenumeration.md) | 列挙型シーケンスが終了されます。 |
 | [EndMethodEnumeration 関数](endmethodenumeration.md) | [BeginMethodEnumeration 関数](beginmethodenumeration.md)を呼び出して開始された列挙型シーケンスが終了されます。 |
 | [ExecNotificationQueryWmi 関数](execnotificationquerywmi.md) | イベントを受信するクエリが実行されます。 |
 | [ExecQueryWmi 関数](execquerywmi.md) | オブジェクトを取得するクエリが実行されます。 |
-| [FormatFromRawValue 関数](formatfromrawvalue.md) | 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。 | 
+| [FormatFromRawValue 関数](formatfromrawvalue.md) | 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。 |
 | [Get 関数](get.md) | 指定したプロパティ値が存在する場合、その値が取得されます。 |
 | [GetCurrentApartmentType 関数](getcurrentapartmenttype.md) | 呼び出し元が実行されているアパートメントの種類が取得されます。 |
 | [GetDemultiplexedStub 関数](getdemultiplexedstub.md) | Windows 管理から非同期呼び出しを受信する際にクライアントを支援するオブジェクト転送シンクが作成されます。 |
-| [GetErrorInfo 関数](geterrorinfo.md) | 前の関数呼び出しからエラー情報が取得されます。 | 
-| [GetMethod 関数](getmethod.md) | 指定したメソッドに関する情報が取得されます。 | 
+| [GetErrorInfo 関数](geterrorinfo.md) | 前の関数呼び出しからエラー情報が取得されます。 |
+| [GetMethod 関数](getmethod.md) | 指定したメソッドに関する情報が取得されます。 |
 | [GetMethodOrigin 関数](getmethodorigin.md) | メソッドを宣言しているクラスが特定されます。 |
 | [GetMethodQualifierSet 関数](getmethodqualifierset.md) | 特定のメソッドで設定された修飾子が取得されます。 |
 | [GetNames 関数](getnames.md) | オブジェクトのプロパティの名前の一部またはすべてが取得されます。 |
-| [GetObjectText 関数](getobjecttext.md) | MOF 構文内のオブジェクトのテキストのレンダリングが返されます。 | 
+| [GetObjectText 関数](getobjecttext.md) | MOF 構文内のオブジェクトのテキストのレンダリングが返されます。 |
 | [GetPropertyHandle 関数](getpropertyhandle.md) | プロパティを識別する一意のハンドルが返されます。 |
 | [GetPropertyOrigin 関数](getpropertyorigin.md) | プロパティを宣言しているクラスが特定されます。 |
 | [GetPropertyQualifierSet 関数](getpropertyqualifierset.md) | 特定のプロパティで設定された修飾子が取得されます。  |
 | [GetQualifierSet 関数](getqualifierset.md) | クラス インスタンスまたはクラス定義で設定された修飾子が取得されます。 |
 | [InheritsFrom 関数](inheritsfrom.md) | 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。 |
 | [Initialize 関数](initialize.md) | WMI の初期化が実行されます。 |
-| [Next 関数](next.md) | 列挙型内の次のプロパティが取得されます。 | 
+| [Next 関数](next.md) | 列挙型内の次のプロパティが取得されます。 |
 | [NextMethod 関数](nextmethod.md) | 列挙型内の次のメソッドが取得されます。 |
 | [Put 関数](put.md) | 名前付きプロパティが新しい値に設定されます。 |
 | [PutClassWmi function](putclasswmi.md) | 新しいクラスが作成されるか、既存のクラスが更新されます。 |
@@ -62,11 +63,11 @@ API には次の関数が含まれています。
 | [QualifierSet_Put 関数](qualifierset-put.md) | 名前付き修飾子と値が書き込まれます。 |
 | [ResetSecurity 関数](resetsecurity.md) | 指定した偽装トークンが現在のスレッドに割り当てられます。 |
 | [SetSecurity 関数](setsecurity.md) | 現在のスレッドに関連付けられている偽装トークンが取得されます。 |
-| [SpawnDerivedClass 関数](spawnderivedclass.md) | 指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。 | 
-| [SpawnInstance 関数](spawninstance.md) | クラスの新しいインスタンスが作成されます。 |   
+| [SpawnDerivedClass 関数](spawnderivedclass.md) | 指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。 |
+| [SpawnInstance 関数](spawninstance.md) | クラスの新しいインスタンスが作成されます。 |
 | [VerifyClient 関数](verifyclientkey.md) | クライアント キーに適切なセキュリティが確実に含められます。 |
 | [WritePropertyValue 関数](writepropertyvalue.md) | 指定したバイト数が、プロパティ ハンドルによって識別されるプロパティに書き込まれます。 |
 
 ## <a name="see-also"></a>関連項目
 
-[アンマネージド API リファレンス](../index.md) 
+- [アンマネージド API リファレンス](../index.md)
