@@ -14,7 +14,7 @@ ms.locfileid: "56219556"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in パラメーター修飾子 (C# リファレンス)
 
-`in` キーワードによって、参照により引数が渡されます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
+`in` キーワードによって、参照により引数が渡されます。 これは、[ref](ref.md) または [out](out-parameter-modifier.md) キーワードと似ています。ただし、呼び出されたメソッドで `in` 引数を変更することはできません。 `ref` 引数には変更が許される一方で、`out` 引数の場合、呼び出されたメソッドによって変更される必要があります。そのような変更は、呼び出し元のコンテキストで観察できます。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
