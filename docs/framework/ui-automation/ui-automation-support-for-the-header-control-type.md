@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 8ded3804950867288408fa77d0ff6dede9ee006e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7876bf593ba76fc0173734f8dc31b5ee43bfc23
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718833"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674359"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>UI オートメーションによる Header コントロール型のサポート
 > [!NOTE]

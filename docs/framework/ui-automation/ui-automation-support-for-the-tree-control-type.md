@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Tree control type
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: c0d41c49fe99b7df327e84fb9dec522eac0dafa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dfa0362119730183752e679efb4c59db78a31b2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665787"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674758"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>UI オートメーションによる Tree コントロール型のサポート
 > [!NOTE]

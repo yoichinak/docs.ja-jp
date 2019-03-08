@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Radio Button control type
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 6f9df16a26de37df1f61d8de115a2e9da04a9b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70e1f3a7a738358af938f64116a4bc0d4600711
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512828"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675213"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>UI オートメーションによる RadioButton コントロール型のサポート
 > [!NOTE]

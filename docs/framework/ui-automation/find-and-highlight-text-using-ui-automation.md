@@ -12,14 +12,12 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 5b27f2be3f516c55a0f7267fdf605ede9494f8e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0df93b153f16dd09dfcc6da5d690dc69141435a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553114"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673705"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI オートメーションを使用した、テキストの検索と強調表示
 > [!NOTE]

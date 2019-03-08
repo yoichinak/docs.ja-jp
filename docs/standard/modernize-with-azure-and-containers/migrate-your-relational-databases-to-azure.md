@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153762"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677553"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースを azure に移行します。
 
@@ -49,7 +49,7 @@ Azure SQL database マネージ インスタンスには、次の特徴があり
 
   - ネイティブのバックアップと復元、およびログ配布
 
-これらの機能を備えた Azure SQL database では、既存のアプリケーション データベースを移行するときに、マネージ インスタンス モデルでは、Paas の利点のほぼ 100% for SQL Server。 マネージ インスタンスは、インスタンス レベルの機能を使用して、アプリケーションの設計を変更することがなく引き続き SQL Server 環境です。
+これらの機能を備えた Azure SQL database では、既存のアプリケーション データベースを移行するときに、マネージ インスタンス モデルでは、PaaS の利点のほぼ 100% for SQL Server。 マネージ インスタンスは、インスタンス レベルの機能を使用して、アプリケーションの設計を変更することがなく引き続き SQL Server 環境です。
 
 マネージ インスタンスは、現在使用している SQL Server、およびクラウドでのネットワーク セキュリティの柔軟性を必要とする企業に最適では可能性があります。 SQL database 向けのプライベート仮想ネットワークをできるようになります。
 
@@ -114,7 +114,7 @@ Azure Database Migration Service を使用してデータベースを移行す�
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **SQL Server データベースのクラウドで SQL Database への移行**
+- **SQL Server データベースのクラウド内の SQL Database への移行**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Azure Database Migration Service を使用してデータベースを移行す�
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[前へ](lift-and-shift-existing-apps-azure-iaas.md)
->[次へ](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [前へ](lift-and-shift-existing-apps-azure-iaas.md)
+> [次へ](modernize-existing-apps-to-cloud-optimized/index.md)

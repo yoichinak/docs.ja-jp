@@ -6,14 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4c1b52622ccd70a591af3134642d4e0528bd32fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32f1940db7e2e77b2d878a71c9e1aa4e394b349f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681691"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677202"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]

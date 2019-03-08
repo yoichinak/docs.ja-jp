@@ -9,12 +9,12 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 1d87f6f4d94763dc8f6ac7e929c22b17940097ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735426"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679129"
 ---
 # <a name="reliable-sessions"></a>信頼できるセッション
 
@@ -26,20 +26,15 @@ ms.locfileid: "54735426"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[信頼できるセッションの概要](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
-信頼できるセッションの概要、信頼できるセッションを使用する状況、信頼できるセッションをサポートする各種のバインディング、および動作のしくみについて説明します。
+[信頼できるセッションの概要](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)信頼できるセッションの説明に、信頼できるセッションをサポートする各種のバインディングを使用する場合とそのしくみ。
 
-[方法: 信頼できるセッション内でメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)   
-構成で指定したカスタム バインドを使用して、HTTP 上で信頼できるセッションを作成する方法を説明します。
+[方法: Exchange のメッセージ内で、信頼できるセッション](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)構成に指定されたカスタム バインディングを使用して HTTP 経由で信頼できるセッションを作成する方法について説明します。
 
-[方法: 信頼できるセッション内でメッセージをセキュリティ保護します。](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md)   
-信頼できるセッションを保護する方法について説明します。
+[方法: 信頼できるセッション内のメッセージをセキュリティで保護された](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md)信頼できるセッションをセキュリティで保護する方法について説明します。
 
-[方法: HTTPS で信頼できるセッションをカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)   
-HTTPS 上で信頼できるセッションを作成する方法について説明します。
+[方法: HTTPS でカスタム信頼できるセッション バインドを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)HTTPS 経由で信頼できるセッションを作成する方法について説明します。
 
-[信頼できるセッションのベスト プラクティス](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)   
-信頼できるセッションの使用に関するベスト プラクティスについて説明します。
+[信頼できるセッションのベスト プラクティス](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)の信頼できるセッションの使用に関連するベスト プラクティスについて説明します。
 
 ## <a name="reference"></a>参照
 

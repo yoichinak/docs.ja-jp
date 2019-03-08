@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Group control type
 - control types, Group
 ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 7ff0a037b6a37d2cd19ed065d047d64df80cbcc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c81df5de1895dd3fa7b2e28a5d2eebcc141d5615
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536257"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673510"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>UI オートメーションによる Group コントロール型のサポート
 > [!NOTE]

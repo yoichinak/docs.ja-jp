@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b738de06b04e48324436c9a454e5b5fdb52741d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebc5f9a5b50766b9a49a9772469f8ae731f3aa4c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726716"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679399"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>UI オートメーションによる DataItem コントロール型のサポート
 > [!NOTE]

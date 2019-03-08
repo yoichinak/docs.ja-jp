@@ -6,14 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 884bf82c81f30c51dec8a70131e7bfb0a392e809
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352826"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674004"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI オートメーション TextPattern の概要
 

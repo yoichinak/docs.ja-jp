@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9ff9e1b842caeb81cd2c0f26ea9f733cf2fa9a78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01131da94c7484cd2bd0141fdafc67c21cd55f39
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662349"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675754"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>UI オートメーションを使用して混合テキスト属性の詳細を取得する
 > [!NOTE]

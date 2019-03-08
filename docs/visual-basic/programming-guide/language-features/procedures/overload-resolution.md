@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: c55b1c001ae1c74b0c34d716b9fa3f90dade3e28
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966230"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678825"
 ---
 # <a name="overload-resolution-visual-basic"></a>オーバーロードの解決法 (Visual Basic)
 Visual Basic コンパイラには、いくつかのオーバー ロードされたバージョンで定義されているプロシージャへの呼び出しが検出されると、コンパイラは、オーバー ロードを呼び出すを決める必要があります。 これは、次の手順を実行しています。  
@@ -36,8 +36,7 @@ Visual Basic コンパイラには、いくつかのオーバー ロードされ
   
  次の図は、一連の呼び出しのオーバー ロードされたバージョンを決定するプロセスを示します。  
   
- ![オーバー ロードの解決プロセスのフロー ダイアグラム](./media/overloadres.gif "OverloadRes")  
-オーバー ロードされたバージョンを解決します。  
+ ![オーバー ロードの解決プロセスのフロー ダイアグラム](./media/overload-resolution/determine-overloaded-version.gif "オーバー ロードされたバージョンを解決します。")    
   
  次の例では、このオーバー ロード解決プロセスを示します。  
   

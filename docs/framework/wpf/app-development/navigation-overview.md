@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377185"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679971"
 ---
 # <a name="navigation-overview"></a>ナビゲーションの概要
 Windows Presentation Foundation (WPF) は、2 種類のアプリケーションで使用できるブラウザー スタイルのナビゲーションをサポートしています: スタンドアロン アプリケーションと[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]します。 ナビゲーションのためのパッケージ コンテンツに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供、<xref:System.Windows.Controls.Page>クラス。 1 つから移動することができます<xref:System.Windows.Controls.Page>別に宣言を使用して、 <xref:System.Windows.Documents.Hyperlink>、またはを使用してプログラムで、<xref:System.Windows.Navigation.NavigationService>します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、ナビゲート元のページを記憶し、それらのページに戻るために、履歴を使用します。  
@@ -136,7 +136,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  この例で、`StartupUri`属性が設定され、相対パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]HomePage.xaml を識別します。 ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]が起動すると、HomePage.xaml が自動的に移動し、表示します。 次の図は、これを示します、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サーバーからを起動されました。  
   
- ![XBAP ページ](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![XBAP ページ](./media/navigation-overview/xbap-launched-from-a-web-server.png "Web サーバーから起動した XBAP が表示されます。")  
   
 > [!NOTE]
 >  開発と展開に関する詳細については[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]を参照してください[WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)と[WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)します。  
@@ -151,7 +151,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  結果を次の例に示します。  
   
- ![ウィンドウのタイトル、高さ、幅](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![ウィンドウのタイトル、高さ、幅](./media/navigation-overview/window-title-width-height.png "表示ウィンドウのタイトル、高さ、および幅を構成することができます。")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>ハイパーリンクのナビゲーション  
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  次に示します、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]で、<xref:System.Windows.Controls.Page>を持つ、<xref:System.Windows.Documents.Hyperlink>します。  
   
- ![ハイパーリンクを含むページ](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![ハイパーリンクを含むページ](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "XBAP ハイパーリンクが設定されたページが表示されます。")  
   
  次のものを予想どおりをクリックすると、<xref:System.Windows.Documents.Hyperlink>により、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]に移動する、<xref:System.Windows.Controls.Page>によって識別される、`NavigateUri`属性。 さらに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]前のエントリを追加します。<xref:System.Windows.Controls.Page>で最近表示したページの一覧に[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]します。 これを次の図に示します。  
   
- ![[戻る] ボタンと [進む] ボタン](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![戻るボタンと進むボタン](./media/navigation-overview/back-and-forward-navigation.png "戻る ボタンと進むボタンに移動します。")  
   
  1 つからナビゲーションをサポートすることに加えて<xref:System.Windows.Controls.Page>、<xref:System.Windows.Documents.Hyperlink>フラグメントのナビゲーションもサポートしています。  
   
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  ナビゲーション イベントは、次の図に示されている順序で発生します。  
   
- ![ページ ナビゲーションのフロー チャート](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![ページ ナビゲーションのフロー チャート](./media/navigation-overview/order-of-navigation-events.png "ページ ナビゲーション イベントのフロー チャート")  
   
  一般に、<xref:System.Windows.Controls.Page>これらのイベントについて心配はありません。 アプリケーションはそれらに関係し、そのため、これらのイベントはによってこと可能性が高く、<xref:System.Windows.Application>クラス。  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Internet Explorer からの履歴のナビゲート  
  概念的には、履歴は、同じ方法、**戻る**と**フォワード**ボタン[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]の操作を行います。 これを次の図に示します。  
   
- ![[戻る] ボタンと [進む] ボタン](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![戻るボタンと進むボタン](./media/navigation-overview/back-and-forward-navigation.png "戻る ボタンと進むボタンに移動します。")  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]によってホストされる[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ナビゲーション履歴に統合[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]します。 内のページを移動することができます、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を使用して、**戻る**、**フォワード**と**最近表示したページ**ボタン[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]します。 ジャーナルは統合されません[!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)]は同じ方法で[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]または Internet Explorer 8。 代わりに、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]レンダリング、代替ナビゲーション[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。  
   
@@ -402,7 +402,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  このため、履歴の既定の動作は、格納する<xref:System.Windows.Controls.Page>への参照ではなく、各履歴エントリ内のメタデータを<xref:System.Windows.Controls.Page>オブジェクト。 履歴エントリに移動したとき、<xref:System.Windows.Controls.Page>メタデータは、指定の新しいインスタンスを作成するために使用<xref:System.Windows.Controls.Page>します。 その結果、各<xref:System.Windows.Controls.Page>ナビゲートする有効期間は、次の図で示されています。  
   
- ![ページの有効期間](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![ページの有効期間](./media/navigation-overview/navigated-page-lifetime.png "ページを移動するときに有効期間が表示されます。")  
   
  既定の履歴の動作を使用してメモリの消費量に保存してできます、ページごとのレンダリングのパフォーマンスが低下する可能性があります。<xref:System.Windows.Controls.Page>時間のかかる、大量のコンテンツがある場合に特にをすることができます。 保持する必要がある場合、<xref:System.Windows.Controls.Page>インスタンス、journal では、これを行うための 2 つの手法に描画できます。 最初に、プログラムでに移動すること、<xref:System.Windows.Controls.Page>オブジェクトを呼び出すことによって、<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>メソッド。  
   
@@ -412,7 +412,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  有効期間、<xref:System.Windows.Controls.Page>は微妙に異なるされていないからでは有効のまま保持します。 初めて、<xref:System.Windows.Controls.Page>されるアライブが移動先と同じようにインスタンス化される、<xref:System.Windows.Controls.Page>がキープ ア ライブされません。 ただし、ためのインスタンス、<xref:System.Windows.Controls.Page>は保持されます、journal では、そのインスタンスを作成しませんもう一度の仕訳帳に残っている限りです。 そのため場合、<xref:System.Windows.Controls.Page>たびに呼び出される必要がある初期化ロジックを持つ、<xref:System.Windows.Controls.Page>ナビゲートする必要がありますから移動コンス トラクターにハンドラーを<xref:System.Windows.FrameworkElement.Loaded>イベント。 次の図に示すように、<xref:System.Windows.FrameworkElement.Loaded>と<xref:System.Windows.FrameworkElement.Unloaded>イベントは発生するたびに、<xref:System.Windows.Controls.Page>がナビゲート先およびからは、それぞれします。  
   
- ![Loaded イベントと Unloaded イベントが発生した場合](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![Loaded および Unloaded イベントが発生した場合](./media/navigation-overview/loaded-and-unloaded-events.png "ページとの間の移動が Loaded および unloaded イベントが発生します。")  
   
  ときに、<xref:System.Windows.Controls.Page>がキープ アライブされず、実行しないで、次のいずれか。  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  場合、<xref:System.Windows.Controls.Page>制御これらは、これらに入力されたデータをまたいで記憶されます<xref:System.Windows.Controls.Page>ナビゲーションに示すように、**好きな色**<xref:System.Windows.Controls.ListBox>次の図。  
   
- ![状態を記憶するコントロールを含むページ](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![状態を記憶するコントロールを含むページ](./media/navigation-overview/data-remembered-across-page-navigations.png "入力されたデータは、ページ ナビゲーション間をまたいで記憶されます。")  
   
  ときに、<xref:System.Windows.Controls.Page>上記の一覧にないコントロールを持っているか、カスタム オブジェクトの状態が保存されると、履歴に間で状態を記憶するコードを記述する必要があります。<xref:System.Windows.Controls.Page>ナビゲーション。  
   
@@ -549,7 +549,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  次に示します、<xref:System.Windows.Navigation.NavigationWindow>スタンドアロン アプリケーションのメイン ウィンドウとして。  
   
- ![メイン ウィンドウ](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![メイン ウィンドウ](./media/navigation-overview/navigation-window-as-main-window.png "のメイン ウィンドウとナビゲーション ウィンドウ")  
   
  図からを確認できます、<xref:System.Windows.Navigation.NavigationWindow>では設定されなかった場合でも、タイトルが付いて、<xref:System.Windows.Navigation.NavigationWindow>前の例のコードを実装します。 タイトルを設定を使用して、代わりに、<xref:System.Windows.Controls.Page.WindowTitle%2A>プロパティで、次のコードに示します。  
   
@@ -569,11 +569,11 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  次の図に、結果を示します。  
   
- ![ダイアログ ボックス](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![ダイアログ ボックス](./media/navigation-overview/navigation-window-as-dialog-box.png " ダイアログ ボックスのナビゲーション ウィンドウ")  
   
  ご覧のとおり、<xref:System.Windows.Navigation.NavigationWindow>が表示されます[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-スタイル**戻る**と**フォワード**履歴をナビゲートできるようにボタン。 これらのボタンは、次の図に示されているように、同じユーザー エクスペリエンスを提供します。  
   
- ![NavigationWindow の [戻る] ボタンと [進む] ボタン](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![Navigationwindow の前後](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "前後のナビゲーション ウィンドウのボタン")  
   
  非表示にする場合は、ページは、独自の履歴ナビゲーション サポートと UI を提供する、**戻る**と**フォワード**で表示されるボタン<xref:System.Windows.Navigation.NavigationWindow>の値を設定して、 <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> プロパティ`false`.  
   
@@ -591,13 +591,13 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  このマークアップは、`Source`の属性、`Frame`パックを持つ要素[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の<xref:System.Windows.Controls.Page>を<xref:System.Windows.Controls.Frame>最初にナビゲートする必要があります。 次に示します、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]で、<xref:System.Windows.Controls.Page>を持つ、<xref:System.Windows.Controls.Frame>いくつかのページ間を移動します。  
   
- ![複数のページ間でナビゲートされるフレーム](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![複数のページ間を移動したフレーム](./media/navigation-overview/frame-navigation-between-multiple-pages.png "複数のページ間のフレームのナビゲーションが表示されます。")  
   
  のみでは、使用する必要はありません<xref:System.Windows.Controls.Frame>コンテンツの内部に、<xref:System.Windows.Controls.Page>します。 共通するホストも、<xref:System.Windows.Controls.Frame>コンテンツの内部に、<xref:System.Windows.Window>します。  
   
  既定では、<xref:System.Windows.Controls.Frame>のみ別の履歴がない場合は、独自の履歴を使用します。 場合、<xref:System.Windows.Controls.Frame>内でホストされているコンテンツの一部である、<xref:System.Windows.Navigation.NavigationWindow>または[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]、<xref:System.Windows.Controls.Frame>が属している、ジャーナルを使用して、<xref:System.Windows.Navigation.NavigationWindow>または[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。 場合によっては、ただし、<xref:System.Windows.Controls.Frame>独自の履歴を担当する必要があります。 これを行う理由の 1 つがによってホストされているページ内で履歴ナビゲーションを許可するには、<xref:System.Windows.Controls.Frame>します。 これを次の図に示します。  
   
- ![フレームとページのダイアグラム](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![フレームとページのダイアグラム](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "フレームでホストされているページ内で履歴ナビゲーションが表示されます。")  
   
  この場合、構成することができます、<xref:System.Windows.Controls.Frame>設定して、独自の履歴を使用する、<xref:System.Windows.Controls.Frame.JournalOwnership%2A>のプロパティ、<xref:System.Windows.Controls.Frame>に<xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>します。 これを次のマークアップに示します。  
   
@@ -607,7 +607,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  次の図は内での移動の効果を示しています、<xref:System.Windows.Controls.Frame>独自の履歴を使用します。  
   
- ![独自の履歴を使用するフレーム](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![独自の履歴を使用するフレーム](./media/navigation-overview/frame-uses-its-own-journal.png "これは、独自の履歴を使用するフレーム内での移動の効果を示しています。")  
   
  通知の履歴エントリはナビゲーションによって示されている[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]で、<xref:System.Windows.Controls.Frame>ではなく[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]します。  
   
@@ -624,19 +624,19 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
 ## <a name="navigation-hosts"></a>ナビゲーション ホスト  
  <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow>ナビゲーション ホストと呼ばれるクラスします。 A*ナビゲーション ホスト*に移動して、コンテンツを表示できるクラスです。 これを実現する各ナビゲーション ホストは、独自<xref:System.Windows.Navigation.NavigationService>ジャーナルとします。 ナビゲーション ホストの基本的な構造を次の図に示します。  
   
- ![ナビゲーターのダイアグラム](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![ナビゲーターのダイアグラム](./media/navigation-overview/navigation-host-construction.png "ナビゲーション ホストの基本的な構造")  
   
  これにより、基本的に、<xref:System.Windows.Navigation.NavigationWindow>と<xref:System.Windows.Controls.Frame>同等ナビゲーションをサポートする、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]ブラウザーでホストされている場合に提供します。  
   
  使用しただけでなく<xref:System.Windows.Navigation.NavigationService>と、journal では、ナビゲーション ホストは、同じメンバーを実装する<xref:System.Windows.Navigation.NavigationService>を実装します。 これを次の図に示します。  
   
- ![フレームと NavigationWindow の履歴](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![フレームおよび NavigationWindow 内のジャーナル](./media/navigation-overview/navigation-window-and-frame.png "ナビゲーション ウィンドウとフレーム")  
   
  これにより、これらのメンバーに対して直接、ナビゲーション サポートをプログラミングできます。 カスタム ナビゲーションを提供する必要がある場合は、これを検討できます[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の<xref:System.Windows.Controls.Frame>でホストされる、<xref:System.Windows.Window>します。 さらに、両方の種類の実装を含む、追加のナビゲーション関連のメンバー `BackStack` (<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>、 <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) と`ForwardStack`(<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>、 <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>)、バックアップの履歴エントリを列挙できますスタックが作成され、それぞれ、スタックを転送します。  
   
  前に述べたように、アプリケーション内に複数の履歴が存在することがあります。 次の図は、この例を示しています。  
   
- ![1 つのアプリケーション内の複数の履歴](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![1 つのアプリケーション内の複数の履歴](./media/navigation-overview/multiple-journals-in-one-application.png "これは、アプリケーションでは、複数の journal の例です。")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>XAML ページ以外のコンテンツへのナビゲート  
@@ -660,7 +660,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  ファイルをダブルクリックすると、ブラウザーが開き、コンテンツにナビゲートして、コンテンツを表示します。 これを次の図に示します。  
   
- ![Person.XAML ファイルのコンテンツの表示](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![Person.XAML ファイルのコンテンツの表示](./media/navigation-overview/contents-of-person-xaml-file.png "Person.XAML ファイルの内容を示しています。")  
   
  Loose を表示する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、次からのファイル。  
   
@@ -711,7 +711,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  次の図に、結果を示します。  
   
- ![クラスにナビゲートするページ](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![クラスに移動するページ](./media/navigation-overview/page-navigates-to-an-object.png "オブジェクトに移動するページの例になります。")  
   
  この図には、役立つものが何も表示されていません。 表示される値の戻り値は、実際には、`ToString`のメソッド、 **Person**オブジェクト。 既定では、これは、唯一の値[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]オブジェクトの表示に使用できます。 オーバーライドして、`ToString`に意味のある情報を返すことが、それでもメソッドは文字列値のみができます。 1 つの手法が使用することができますのプレゼンテーション機能を活用した[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]データ テンプレートを使用することです。 データ テンプレートを実装することができますを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]特定の種類のオブジェクトと関連付けることができます。 次のコードはデータ テンプレートを`Person`オブジェクト。  
   
@@ -719,7 +719,7 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  ここでは、データ テンプレートに関連付けられている、`Person`型を使用して、`x:Type`のマークアップ拡張機能、`DataType`属性。 データ テンプレートにバインドし、`TextBlock`要素 (を参照してください<xref:System.Windows.Controls.TextBlock>) のプロパティに、`Person`クラス。 次の図は、の更新された外観を示しています。、`Person`オブジェクト。  
   
- ![データ テンプレートを持つクラスへのナビゲート](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![データ テンプレートを持つクラスへの移動](./media/navigation-overview/navigating-to-a-class.png "データ テンプレートを持つクラスに移動します。")  
   
  この方法の利点は、データ テンプレートを再利用して、アプリケーションの任意の場所で オブジェクトを一貫して表示できることによって得られる一貫性です。  
   

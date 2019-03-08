@@ -9,14 +9,12 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: f6c4fd2e3d89645a7fff8c70f373e7ad7d70ad39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ffb00f6327c95fe9e10dc39db72da1c29382201
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543735"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674589"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
 > [!NOTE]

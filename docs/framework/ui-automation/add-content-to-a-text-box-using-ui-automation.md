@@ -9,14 +9,12 @@ helpviewer_keywords:
 - text boxes, adding content
 - UI Automation, adding content to text boxes
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 432e39efd77a0cf153e3d0287f061702dd3c5c1e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: af9450685452bb25d54a5cd28295092addf6bb20
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221005"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680240"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加
 > [!NOTE]

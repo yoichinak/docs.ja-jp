@@ -9,14 +9,12 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e63a63181070a30ee7c21410c70cd76253e75f83
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: fa3d3751411b74a3ce14e3bd40fee1b82e3f03cd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305962"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677657"
 ---
 # <a name="move-a-ui-automation-element"></a>UI オートメーション要素の移動
 > [!NOTE]

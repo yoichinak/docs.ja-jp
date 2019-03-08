@@ -4,12 +4,12 @@ description: Docker 開発のライフ サイクルをサポートする最も�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836176"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677241"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 
@@ -37,7 +37,7 @@ Visual Studio 2017 (またはそれ以降) を使用することをお勧めし�
 
 ## <a name="language-and-framework-choices"></a>言語とフレームワークの選択
 
-ほとんどの最新の言語でマイクロソフトのツールを使用する Docker アプリケーションを開発することができます。 次に、最初のリストが、これに限定されません。
+ほとんどの最新の言語でマイクロソフトのツールを使用する Docker アプリケーションを開発することができます。 最初のリストを次に示しますが、それに制限されておらず。
 
 - .NET Core および ASP.NET Core
 - Node.js

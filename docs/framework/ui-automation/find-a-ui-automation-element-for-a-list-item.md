@@ -9,14 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: a958e136d61a596640f1435b48701c4054105698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cc4c976f8e9eb7f1779139f8266e22477d269e4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654790"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673770"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>リスト項目の UI オートメーション要素の検索
 > [!NOTE]

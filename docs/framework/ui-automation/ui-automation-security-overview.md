@@ -5,14 +5,12 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: d86293e2d8fedab1d9ed8a5dc0ad59bd1f386d93
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 926fed8b2f03e90fd3ccf85564a20ff7b2a7d687
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303869"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674381"
 ---
 # <a name="ui-automation-security-overview"></a>UI オートメーションのセキュリティの概要
 > [!NOTE]

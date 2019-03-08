@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 23e8631fb19d3fd8fafe0ba2523e7c2dbc971ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55e75e5835aa60a51b9186f31913347ad04dccdd
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592261"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674953"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI オートメーション Invoke コントロール パターンの実装
 > [!NOTE]

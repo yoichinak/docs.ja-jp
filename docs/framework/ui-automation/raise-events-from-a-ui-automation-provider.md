@@ -5,14 +5,12 @@ helpviewer_keywords:
 - UI Automation, raising events
 - raising UI Automation events
 ms.assetid: 9fe2f01b-f7d8-49a8-a185-d4472b9976c0
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 328adccc2224d27230a06e8d98a691d12c5be218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac351678607be824558506f7d65a5a8f6bda5a12
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539052"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674740"
 ---
 # <a name="raise-events-from-a-ui-automation-provider"></a>UI オートメーション プロバイダーからのイベントの発生
 > [!NOTE]

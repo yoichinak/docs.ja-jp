@@ -2,18 +2,18 @@
 title: 'チュートリアル: 型プロバイダーを作成します。'
 description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の F# 型プロバイダーを作成する方法について説明します。
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371563"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678424"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成します。
 
 型プロバイダー メカニズムF#はインフォメーション リッチ プログラミングのサポートの重要な一部です。 このチュートリアルでは、基本的な概念を示すために単純な型プロバイダーをいくつか作成する過程を通して、独自の型プロバイダーを作成する方法を説明します。 型プロバイダー メカニズムの詳細についてはF#を参照してください[型プロバイダー](index.md)します。
 
-F#エコシステムには、一般的に使用されるインターネットやエンタープライズ データ サービスの型プロバイダーの範囲が含まれています。 例:
+F#エコシステムには、一般的に使用されるインターネットやエンタープライズ データ サービスの型プロバイダーの範囲が含まれています。 例えば:
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) JSON、XML、CSV、および HTML ドキュメントの形式の型プロバイダーが含まれています。
 
@@ -475,7 +475,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 各名前付きグループは指定されたプロパティになり、プロパティにアクセスすると、パターン一致の `Groups` コレクションでインデクサーが使用されます。
 
-次のコードはこのようなプロバイダーの実装におけるコア ロジックです。この例では指定された型へのすべてのメンバーの追加は省略されています。 それぞれの追加されたメンバーについては、このトピックの後半の該当するセクションを参照してください。 完全なコードからサンプルをダウンロード、 [F# 3.0 サンプル パック](https://fsharp3sample.codeplex.com)Codeplex web サイト。
+次のコードはこのようなプロバイダーの実装におけるコア ロジックです。この例では指定された型へのすべてのメンバーの追加は省略されています。 それぞれの追加されたメンバーについては、このトピックの後半の該当するセクションを参照してください。 完全なコードからサンプルをダウンロード、 [ F# 3.0 サンプル パック](https://archive.codeplex.com/?p=fsharp3sample)、CodePlex web サイト。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

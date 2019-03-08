@@ -5,14 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b4ab95470a1b377d1768cf30b32f170b544d225e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: b384e3dde3f2f6ba75feef7954dc9872bd3e3cd5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305793"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676383"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
 > [!NOTE]

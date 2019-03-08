@@ -4,12 +4,12 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967166"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676656"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>AKS/Kubernetes オーケストレーターに Linux コンテナーとして展開されている ASP.NET Core 2.1 アプリケーションを構築します。
 
@@ -27,7 +27,7 @@ AKS の主な機能は次のとおりです。
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Visual Studio 2017 を使用して ASP.NET Core 2.1 のプロジェクトの作成
 
-ASP.NET Core は、Microsoft と GitHub の .NET コミュニティによって管理される汎用的な開発プラットフォームです。 クロスプラットフォームであり、Windows、macOS、Linux をサポートし、デバイス、クラウド、および埋め込み/IoT シナリオで使用できます。
+ASP.NET Core は、Microsoft と GitHub の .NET コミュニティによって管理される汎用的な開発プラットフォームです。 クロスプラット フォーム、Windows、macOS および Linux をサポートしていると、デバイス、クラウド、および埋め込み/iot のシナリオで使用できます。
 
 この例では、サンプルを作成する追加に関する知識は不要であるため、Visual Studio の Web API テンプレートに基づいている単純なプロジェクトを使用します。 のみ、ASP.NET Core 2.1 のテクノロジを使用して、REST API を使用した小規模なプロジェクトを実行するすべての要素を含む標準のテンプレートを使用してプロジェクトを作成する必要があるとします。
 

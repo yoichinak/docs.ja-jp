@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4422f325566724e3ea65d47d97c42e57e3fe621
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835604"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680361"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows 上の Visual Studio 2017 での Docker ツールの使用
 
@@ -85,9 +85,9 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 
 > [!情報] での Visual Studio Tools for Docker の使用、サービスの実装の詳細については、次の記事を参照します。
 >
->ローカル Docker コンテナーでアプリをデバッグするには。 [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+>ローカル Docker コンテナーでアプリをデバッグするには。 <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->Visual Studio を使用してコンテナー レジストリに ASP.NET コンテナーをデプロイします。 [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+>Visual Studio を使用してコンテナー レジストリに ASP.NET コンテナーをデプロイします。 <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
 >[前へ](docker-apps-inner-loop-workflow.md)

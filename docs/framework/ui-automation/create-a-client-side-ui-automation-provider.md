@@ -8,14 +8,12 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 32550e88f3ba271d4f7f81afbad3b09d7c50ee98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df6de47f3ed7373f9065ff7035df90ff09d150c9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498792"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678294"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>クライアント側 UI オートメーション プロバイダーの作成
 > [!NOTE]

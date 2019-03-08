@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Tab Item
 - UI Automation, Tab Item control type
 ms.assetid: 9b21160d-e1c2-468b-9275-26e4369ae40d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: da030330f0f7ec285084e4a11f113a5fa44b6e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9802237c9c73fa88c60dd10c011c3189752a3cd2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512958"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677462"
 ---
 # <a name="ui-automation-support-for-the-tabitem-control-type"></a>UI オートメーションでの TabItem コントロール型のサポート
 > [!NOTE]

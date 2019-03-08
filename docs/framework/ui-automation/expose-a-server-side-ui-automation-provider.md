@@ -9,14 +9,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider, exposing
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 675d9c02503cd69c425a95cffabde053dd5cca59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2964e8cee509062353e0eb7aed998c49dd86dbe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568817"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673302"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>サーバー側 UI オートメーション プロバイダーの公開
 > [!NOTE]

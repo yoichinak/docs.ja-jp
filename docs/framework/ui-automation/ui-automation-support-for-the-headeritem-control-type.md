@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Header Item control type
 - control types, Header Item
 ms.assetid: 09ce1310-ee31-493c-a71e-010bafc42fcf
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 93c44848fe5febf2845e4a7c64bbb916bd3b200f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 978b40fdf38bd44cd44f430799d3d2a39b050ce5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600441"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673731"
 ---
 # <a name="ui-automation-support-for-the-headeritem-control-type"></a>UI オートメーションによる HeaderItem コントロール型のサポート
 > [!NOTE]

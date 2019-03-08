@@ -9,14 +9,12 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b4e2613ab7b9028deadaffcc746ece30b9139d0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11f1b189d16d572ac1661e2b175f15ecae2f039f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647336"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678203"
 ---
 # <a name="traverse-text-using-ui-automation"></a>UI オートメーションを使用したテキストのスキャン
 > [!NOTE]

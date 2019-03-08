@@ -1,19 +1,19 @@
 ---
 title: コンテナーに基づいて最新のアプリケーションへの道
-description: Docker、コンテナーとマイクロ サービス アーキテクチャがないこと画一的なソリューションを理解します。 ここで決定に役立ついくつかの参照が表示されます。
+description: Docker、コンテナーとマイクロ サービス アーキテクチャがないこと画一的なソリューションを理解します。 ここで決定に役立ついくつかの参照があります。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442426"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674433"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>コンテナーに基づいて最新のアプリケーションへの道
 
-この本を読んでいるは、新しいアプリケーションの開発を計画しているか、Docker、コンテナー、および社内のマイクロ サービスのような新しいアプローチの使用による影響を評価するためです可能性があります。
+新しいアプリケーションの開発を計画しているか、Docker、コンテナー、および社内のマイクロ サービスのような新しいアプローチの使用による影響を評価するために、この書籍を表示している可能性があります。
 
 新しい開発パラダイムの導入は、開発チーム、予算、またはお客様のインフラストラクチャに影響を評価するプロジェクトを開始する前に注意して実行する必要があります。
 

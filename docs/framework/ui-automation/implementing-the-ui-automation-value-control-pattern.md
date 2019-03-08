@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9fa27026bb9028a2cd0a8465da6a1d3daf0bceb8
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305585"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678076"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
 > [!NOTE]

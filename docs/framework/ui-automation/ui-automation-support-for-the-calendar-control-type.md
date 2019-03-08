@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Calendar control type
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 6235d4eb0d5996666097b486efe0ff0b75b68af4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9359fb8c154b39c6396cc9f012173a952a4d385e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498321"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674498"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>UI オートメーションによる Calendar コントロール型のサポート
 > [!NOTE]

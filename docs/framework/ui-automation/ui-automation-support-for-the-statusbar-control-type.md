@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 1e67499bb33d68375522d9e6e51a69049fcbbf2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8628b81ba3a3cb6ff623ee899c7f244d6913e7b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647752"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674927"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>UI オートメーションによる StatusBar コントロール型のサポート
 > [!NOTE]

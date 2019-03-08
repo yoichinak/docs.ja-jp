@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 883b7cd9f5c7dc958af17b57d909f77f1da91dfe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 236f4ff5bfd709426975c7a8c1d828eb8b3fe89b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366462"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680179"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>UI オートメーションによる MenuItem コントロール型のサポート
 

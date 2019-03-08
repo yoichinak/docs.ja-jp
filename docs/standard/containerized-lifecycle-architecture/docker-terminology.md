@@ -4,12 +4,12 @@ description: Docker を使用する場合は、毎日が使用したいくつか
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584201"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677179"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -23,7 +23,7 @@ ms.locfileid: "56584201"
 
 **コンテナー**:Docker イメージのインスタンスです。 コンテナーは、単一のアプリケーション、プロセス、またはサービスの実行を表します。 Docker イメージのコンテンツ、実行環境、および標準的な命令セットで構成されます。 サービスを拡大縮小する場合は、同じイメージからコンテナーの複数のインスタンスを作成します。 または、バッチ ジョブで同じイメージから複数のコンテナーを作成し、各インスタンスにそれぞれ異なるパラメーターを渡します。
 
-**ボリューム**:コンテナーが使用できる書き込み可能なファイル システムを提供します。 イメージは読み取り専用ですが、ほとんどのプログラムはファイルシステムに書き込む必要があるため、プログラムから書き込み可能なファイルシステムにアクセスできるように、ボリュームでは書き込み可能なレイヤーをコンテナー イメージの上に追加します。 プログラムは、階層化されたファイルシステムにアクセスしていることを認識しません。通常どおりの単なるファイルシステムです。 ボリュームはホスト システムに存在し、Docker によって管理されます。
+**ボリューム**:コンテナーが使用できる書き込み可能なファイル システムを提供します。 イメージは読み取り専用ですが、ほとんどのプログラムはファイルシステムに書き込む必要があるため、プログラムから書き込み可能なファイルシステムにアクセスできるように、ボリュームでは書き込み可能なレイヤーをコンテナー イメージの上に追加します。 プログラムは、階層型ファイル システムにアクセスするには、通常どおり、ファイル システムがわかりません。 ボリュームはホスト システムに存在し、Docker によって管理されます。
 
 **タグ**:各種イメージまたは同じイメージの各種バージョン (バージョン番号または対象となる環境に応じて異なる) を識別できるように、イメージに適用できるマークまたはラベルです。
 
@@ -37,15 +37,15 @@ ms.locfileid: "56584201"
 
 **Docker Hub**:イメージをアップロードし、それらを操作するパブリック レジストリです。 Docker Hub は、Docker イメージ ホスティング、パブリックまたはプライベート レジストリ、ビルド トリガーおよび Web フック、さらに GitHub および Bitbucket との統合を提供します。
 
-**Azure コンテナー レジストリ**:Azure 内で Docker イメージとそのコンポーネントを操作するためのパブリック リソースです。 これは、Azure で利用しているデプロイに近く、アクセスに対する制御権を付与するレジストリです。これにより、Azure Active Directory のグループとアクセス許可が使用できるようになります。
+**Azure コンテナー レジストリ**:Azure 内で Docker イメージとそのコンポーネントを操作するためのパブリック リソースです。 これにより、レジストリにできるように、アクセスに対する制御を用意されており、Azure のデプロイの近くにある、Azure Active Directory グループとアクセス許可を使用します。
 
-**Docker Trusted Registry (DTR)**:組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 企業内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
+**Docker Trusted Registry (DTR)**:組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 エンタープライズ内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
 
 **Docker Community Edition (CE)**:コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (Mac OS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
 
 **Docker Enterprise Edition (EE)**:Linux および Windows 開発用の Docker ツールのエンタープライズ規模のバージョンです。
 
-**Compose**:複数コンテナーのアプリケーションを定義および実行するためのメタデータを持つコマンドライン ツールと YAML ファイル形式です。 複数のイメージに基づく単一のアプリケーションを定義するには、環境に応じて値をオーバーライドできる 1 つまたは複数の .yml ファイルを使用します。 定義を作成したら、Docker ホスト上でイメージごとにコンテナーを作成する単一コマンド (docker-compose up) を使用して複数コンテナーのアプリケーション全体を展開することができます。
+**Compose**:複数コンテナーのアプリケーションを定義および実行するためのメタデータを持つコマンドライン ツールと YAML ファイル形式です。 複数のイメージに基づく単一のアプリケーションを定義するには、環境に応じて値をオーバーライドできる 1 つまたは複数の .yml ファイルを使用します。 定義を作成したら、1 つのコマンドを使用して全体の複数コンテナー アプリケーションを展開することができます (docker-compose を)、Docker ホストでイメージごとにコンテナーを作成します。
 
 **クラスター**:クラスター内の複数のホストに分散されたサービスの複数のインスタンスに対応できるように、単一の仮想 Docker ホストであるかのように公開された Docker ホストのコレクションです。 Docker クラスターは、Kubernetes、Azure Service Fabric、Docker Swarm、Mesosphere DC/OS を使用して作成できます。
 

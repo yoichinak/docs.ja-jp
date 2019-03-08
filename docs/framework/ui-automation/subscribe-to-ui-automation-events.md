@@ -10,14 +10,12 @@ helpviewer_keywords:
 - events, subscribing to
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 576c883a0600c84a45503c013f0d60152628f52e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba1cfeb24db1a9dde27faf3e08ef908d87eeaaa4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688118"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679237"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>UI オートメーション イベントのサブスクライブ
 > [!NOTE]

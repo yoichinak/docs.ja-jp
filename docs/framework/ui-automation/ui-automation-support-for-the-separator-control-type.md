@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: a51ed653146421b22d6db4f7b9b2fd2faca1b0b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415acb678dd8eb15d6001c5cefa75335cb8d2c16
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597984"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680374"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>UI オートメーションによる Separator コントロール型のサポート
 > [!NOTE]

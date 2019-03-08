@@ -4,16 +4,16 @@ description: Docker アプリケーションの開発の「内部ループ」ワ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835682"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676669"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
-サイクル全体の DevOps のまたがりメモリ割り当て、外側のループのワークフローをトリガーする前に、各開発者のコンピューターで、アプリ自体のコーディングや、好みの言語またはプラットフォームを使用してローカルでテストして (図 4-21) すべてが開始されます。 どのケースでも、する必要がある重要なポイントに共通どのような言語、フレームワーク、またはプラットフォームを選んでも。 この特定のワークフローで常に開発およびがローカルで Docker コンテナーをテストします。
+サイクル全体の DevOps のまたがりメモリ割り当て、外側のループのワークフローをトリガーする前に、各開発者のコンピューターで、アプリ自体のコーディングや、好みの言語またはプラットフォームを使用してローカルでテストして (図 4-21) すべてが開始されます。 どのケースでも、必要があります、重要なポイントに共通言語、フレームワーク、またはプラットフォームを選んでもします。 この特定のワークフローで常に開発してがローカルで Docker コンテナーをテストします。
 
 ![手順 1 - コード/実行/デバッグ](./media/image18.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "56835682"
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>手順 1: Visual Studio Code でコーディングを開始し、アプリやサービスの初期ベースラインを作成します。
 
-アプリケーションを開発する方法は、Docker を使用しないことを行う方法に似ています。 違いは、開発中に、展開しているアプリケーションまたは (Windows や Linux VM) など、ローカル環境で配置された Docker コンテナー内で実行されているサービスをテストします。
+アプリケーションを開発する方法は、Docker を使用しないことを行う方法に似ています。 違いは、開発中に、しているデプロイをテスト、アプリケーションまたは (Windows や Linux VM) など、ローカル環境で配置された Docker コンテナー内で実行されているサービスです。
 
 **ローカル環境の設定**
 
@@ -91,13 +91,13 @@ Docker 拡張機能のインストールに Ctrl + Shift + P キーを押して`
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS または .NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成します。
 
-必要があります、`DockerFile`カスタム イメージを構築およびデプロイするコンテナーごと。 1 つのカスタム サービスのアプリが構成されている場合、1 つ必要がありますが`DockerFile`します。 場合、アプリが (マイクロ サービス アーキテクチャ) のように複数のサービスで構成される必要がありますいずれかが`Dockerfile`サービスあたり。
+必要があります、`DockerFile`カスタム イメージを構築およびデプロイするコンテナーごと。 1 つのカスタム サービスのアプリが構成されている場合は、1 つ必要があります`DockerFile`します。 場合、アプリが (マイクロ サービス アーキテクチャ) のように複数のサービスで構成される必要がありますいずれかが`Dockerfile`サービスあたり。
 
-`DockerFile`よくアプリまたはサービスのルート フォルダーに配置され、Docker を設定して、そのアプリやサービスを実行する方法を認識できるように、必要なコマンドが含まれています。 作成することができます、`DockerFile`コードと共にプロジェクトに追加し、(node.js、.NET Core など)、または、環境に慣れていない場合、次のヒントを参照してください。
+`DockerFile`よくアプリまたはサービスのルート フォルダーに配置され、Docker を設定して、そのアプリやサービスを実行する方法を認識できるように、必要なコマンドが含まれています。 作成することができます、`DockerFile`コードと共にプロジェクトに追加し、(node.js、.NET Core など)、または、環境に新しい場合は、次のヒントを参照してください。
 
 > [!TIP]
 >
-> 使用しているときに、Docker 拡張機能を使用することができます、`Dockerfile`と`docker-compose.yml`ファイルは、Docker コンテナーに関連します。 最終的には、このツールがなければファイルのこれらの種類を記述する可能性がありますが、学習曲線を加速する適切な開始点は、Docker 拡張機能を使用します。
+> 使用しているときに、Docker 拡張機能を使用することができます、`Dockerfile`と`docker-compose.yml`ファイルは、Docker コンテナーに関連します。 最終的には、この種のこのツールは、せずにファイルを作成する可能性がありますが、学習曲線を加速する適切な開始点は、Docker 拡張機能を使用します。
 
 図 4-24 に、docker の方法を確認できます-compose ファイルは、VS Code 用 Docker 拡張機能を使用して追加されます。
 
@@ -105,7 +105,7 @@ Docker 拡張機能のインストールに Ctrl + Shift + P キーを押して`
 
 **図 4-24** 使用して追加された docker ファイル、**ワークスペース コマンドに追加の Docker ファイル**
 
-使用する基本の Docker イメージを指定する DockerFile を追加する場合 (などを使用して`FROM microsoft/aspnetcore`)。 任意の公式リポジトリから取得した基本イメージ上にカスタム イメージをビルドすることは、通常は、 [Docker Hub レジストリ](https://hub.docker.com/)(など、 [.NET Core のイメージ](https://hub.docker.com/r/microsoft/dotnet/)または[for Node.js](https://hub.docker.com/_/node/)).
+使用する基本の Docker イメージを指定する DockerFile を追加する場合 (などを使用して`FROM microsoft/aspnetcore`)。 通常は、公式のリポジトリでから取得した基本イメージ上にカスタム イメージを構築します、 [Docker Hub レジストリ](https://hub.docker.com/)(など、 [.NET Core のイメージ](https://hub.docker.com/r/microsoft/dotnet/)または[for Node.js](https://hub.docker.com/_/node/)).
 
 ***既存の公式 Docker イメージを使用して、***
 
@@ -149,7 +149,7 @@ DockerFile では、(ポート 80) などの実行時に使用する TCP ポー�
 
 ***最初から基本イメージを作成します。***
 
-これで説明したように、最初から、独自の Docker 基本イメージを作成することができます[記事](https://docs.docker.com/engine/userguide/eng-image/baseimages/)Docker から。 このシナリオは、docker を使い始めたばかりが基本イメージの特定のビットを設定する場合は、行うことができます、最適ではない可能性があります。
+これで説明したように、最初から、独自の Docker 基本イメージを作成することができます[記事](https://docs.docker.com/engine/userguide/eng-image/baseimages/)Docker から。 このシナリオは、docker、始めようとしているが、基本イメージの特定のビットを設定する場合は、行うことができます、最適ではない可能性があります。
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>手順 3: これで、サービスを埋め込み、カスタム Docker イメージを作成します。
 

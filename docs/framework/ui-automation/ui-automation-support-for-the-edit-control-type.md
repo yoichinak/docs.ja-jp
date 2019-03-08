@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 12aefcacef8dbdb3ca6b89f18b536cb0f604f961
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fd33fcc4193dd399c5139b009aaf0825d4ae50e7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356079"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677033"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>UI オートメーションによる Edit コントロール型のサポート
 

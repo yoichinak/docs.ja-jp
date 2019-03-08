@@ -5,14 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066244"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673679"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]

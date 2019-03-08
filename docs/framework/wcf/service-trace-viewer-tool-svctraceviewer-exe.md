@@ -2,12 +2,12 @@
 title: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442894"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680387"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、WCF によって生成される診断トレースを分析できます。 サービス トレース ビューアーは、簡単にマージし、表示、および、診断、修復、および WCF サービスの問題を確認できるように、ログにトレース メッセージのフィルターを適用する方法を提供します。  
@@ -52,7 +52,13 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
  
   `add` を使用して、使用するトレース リスナーの名前と種類を指定できます。 この例の構成では、リスナーに `sdt` という名前を付け、使用する種類として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 
   `initializeData` を使用して、そのリスナーのログ ファイルの名前を設定します。 さらに、単純なファイル名の代わりに完全修飾パスを使用できます。  
-  
+
+.NET Framework 4.8 以降、一部のハイ コントラスト テーマでのコンボ ボックス コントロールは正しい色で表示されます。 次の設定を削除することでこの変更を無効にすることができます、 *svcTraceViewer.exe.config*ファイル。
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>サービス トレース ビューアー ツールの使用  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>WCF トレース ファイルを開いて表示する  

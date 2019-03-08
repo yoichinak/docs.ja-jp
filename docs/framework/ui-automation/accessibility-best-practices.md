@@ -5,14 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b71434fdc1b3b0b1f15928fe45edc02ee03da1ba
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221213"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676136"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
