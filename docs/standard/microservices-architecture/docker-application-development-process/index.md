@@ -4,12 +4,6 @@ description: Docker ベースのアプリケーションの開発のオプショ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: eb87f9a214dbffe71dae1e1739f2563c08fac280
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084928"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker ベースのアプリケーションの開発プロセス
 
@@ -42,7 +36,7 @@ ms.locfileid: "54084928"
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET 言語および Docker コンテナーのフレームワーク
 
-このガイドの前のセクションで触れたように、Docker コンテナー化された NET アプリケーションを開発する際に、.NET Framework、.NET Core、またはオープン ソースの Mono プロジェクトを使用できます。 Linux または Windows コンテナーをターゲットにする場合、使用している .NET Framework に応じて、C\#、F\#、または Visual Basic で開発できます。 .NET 言語の詳細については、ブログ投稿「[The .NET Language Strategy](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/)」 (.NET 言語戦略) を参照してください。
+このガイドの前のセクションで触れたように、Docker コンテナー化された NET アプリケーションを開発する際に、.NET Framework、.NET Core、またはオープン ソースの Mono プロジェクトを使用できます。 Linux または Windows コンテナーをターゲットにする場合、使用している .NET Framework に応じて、C\#、F\#、または Visual Basic で開発できます。 .NET 言語の詳細については、ブログ投稿「[The .NET Language Strategy](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/)」 (.NET 言語戦略) を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](../architect-microservice-container-applications/using-azure-service-fabric.md)

@@ -3,34 +3,29 @@ title: メモリとスパン
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- Memory<T>
-- Span<T>
-- buffers"
-- pipeline processing
+  - Memory<T>
+  - Span<T>
+  - buffers"
+  - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116c08872385406224972e34feaddfe44122355e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130904"
 ---
+
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 
 .NET Core 2.1 以降、.NET には、任意のメモリの厳密に型指定された連続する領域を表す、相互に関連する型が多数含まれています。 次の設定があります。
 
 - <xref:System.Span%601?displayProperty=nameWithType>: メモリの連続した領域にアクセスするために使う型です。 <xref:System.Span%601> インスタンスは、`T` 型の配列、<xref:System.String>、[stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) を使って割り当てたバッファー、またはアンマネージ メモリへのポインターによってバックアップできます。 これはスタック上に割り当てる必要があるため、いくつかの制限があります。 たとえば、クラス内のフィールドを <xref:System.Span%601> 型にすることはできませんし、非同期操作でスパンを使うこともできません。
 
-- <xref:System.ReadOnlySpan%601?displayProperty=nameWithtype>: <xref:System.Span%601> 構造体の変更できないバージョンです。
+- <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>: <xref:System.Span%601> 構造体の変更できないバージョンです。
 
 - <xref:System.Memory%601?displayProperty=nameWithType>: スタックではなくマネージド ヒープ上に割り当てられるメモリの連続する領域です。 <xref:System.Memory%601> インスタンスは、`T` 型の配列か <xref:System.String> によってバックアップできます。 これはマネージド ヒープに格納できるため、<xref:System.Memory%601> には <xref:System.Span%601> の制限事項はありません。
 
-- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithtype>: <xref:System.Memory%601> 構造体の変更できないバージョンです。
+- <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>: <xref:System.Memory%601> 構造体の変更できないバージョンです。
 
 - <xref:System.Buffers.MemoryPool%601?displayProperty=nameWithType>: メモリ プールの厳密に型指定されたメモリ ブロックを、所有者に割り当てます。 <xref:System.Buffers.IMemoryOwner%601> インスタンスは、<xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType> を呼び出すことでプールから借りてくることができ、<xref:System.Buffers.MemoryPool%601.Dispose?displayProperty=nameWithType> を呼び出すことでプールにリリースします。
 
-- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>: メモリ ブロックの所有者を表し、その有効期間の管理をコントロールします。 
+- <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithType>: メモリ ブロックの所有者を表し、その有効期間の管理をコントロールします。
 
 - <xref:System.Buffers.MemoryManager%601>: <xref:System.Memory%601> をセーフ ハンドルなどのその他の型でバックアップできるようにするために、<xref:System.Memory%601> の実装を置き換えるために使用できる抽象基本クラスです。 <xref:System.Buffers.MemoryManager%601> は高度なシナリオ向けです。
 

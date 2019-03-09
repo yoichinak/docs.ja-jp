@@ -2,12 +2,12 @@
 title: null 許容参照型
 description: この記事では、C# 8 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411547"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725026"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -41,7 +41,7 @@ string? name;
 name!.Length;
 ```
 
-この演算子について詳しくは、GitHub で [null 許容参照型のドラフト](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)仕様の提案をご覧ください。
+この演算子について詳しくは、GitHub で [null 許容参照型のドラフト](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator)仕様の提案をご覧ください。
 
 ## <a name="nullability-of-types"></a>型の null 値の許容
 
