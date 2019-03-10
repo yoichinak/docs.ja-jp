@@ -11,34 +11,34 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: bef7b0ab-ce57-475a-a2d6-fb8a702a9417
-ms.openlocfilehash: 38505876e2f944139622a0d7cf7aaab9c510ef89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0baf54d27cf33eef7e4df7019ee98b42eba40205
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525753"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710668"
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker コンポーネント
 `BackgroundWorker`コンポーネントにより、フォームまたはコントロールを非同期的に操作を実行します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [BackgroundWorker コンポーネントの概要](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)  
  について説明します、`BackgroundWorker`コンポーネントで、アプリケーションのメイン UI スレッドから別のスレッドで非同期的に ("バック グラウンドで")、時間のかかる操作を実行する機能を提供します。  
   
- [チュートリアル: 操作をバックグラウンドで実行する](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- 使用する方法を示します、`BackgroundWorker`コンポーネント デザイナーで、別のスレッドで時間のかかる操作を実行します。  
+ [チュートリアル: バック グラウンドで操作を実行します。](walkthrough-running-an-operation-in-the-background.md)  
+ 使用する方法を示します、`BackgroundWorker`別のスレッドで時間のかかる操作を実行するデザイナーでコンポーネント。  
   
- [方法: バックグラウンドで操作を実行する](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [方法: バックグラウンドで操作を実行する](how-to-run-an-operation-in-the-background.md)  
  使用する方法を示します、`BackgroundWorker`コンポーネントを別のスレッドで時間のかかる操作を実行します。  
   
- [チュートリアル: バックグラウンド操作を使用するフォームの実装](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
- 算術計算を非同期には、デザイナーを使用してアプリケーションを作成します。  
+ [チュートリアル: バック グラウンド操作を使用するフォームの実装](walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
+ 数学的計算を非同期にはデザイナーを使用してアプリケーションを作成します。  
   
- [方法: バックグラウンド操作を使用するフォームを実装する](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- 算術計算を非同期的に実行するアプリケーションを作成します。  
+ [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)  
+ 数学的計算を非同期的に実行するアプリケーションを作成します。  
   
- [方法: バックグラウンドでファイルをダウンロードする](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
- 使用する方法を示します、`BackgroundWorker`を別のスレッド上のファイルをダウンロードするコンポーネントです。  
+ [方法: バック グラウンドでファイルをダウンロードします。](how-to-download-a-file-in-the-background.md)  
+ 使用する方法を示します、`BackgroundWorker`別のスレッドでファイルをダウンロードするコンポーネント。  
   
 ## <a name="reference"></a>参照  
  <xref:System.ComponentModel.BackgroundWorker>  
@@ -51,5 +51,5 @@ ms.locfileid: "33525753"
  データを保持する型を記述、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント。  
   
 ## <a name="related-sections"></a>関連項目  
- [イベントベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- 方法の非同期パターンによって利用可能な利点を活用マルチ スレッド アプリケーションの多くのマルチ スレッド デザイン固有の複雑な問題について説明します。
+ [イベントベースの非同期パターンの概要](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ どの非同期パターンを使用可能マルチ スレッド アプリケーションの利点、マルチ スレッド デザイン固有の複雑な問題の多くについて説明します。

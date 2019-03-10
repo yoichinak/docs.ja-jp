@@ -12,12 +12,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: eb3c59a29c9539bcba8827e1a1e9ea807ed44826
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640742"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707947"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>方法: Windows フォーム tabcontrol のタブ追加および削除
 既定で、<xref:System.Windows.Forms.TabControl>コントロールでは、2 つ含まれている<xref:System.Windows.Forms.TabPage>コントロール。 を通じてこれらのタブにアクセスすることができます、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
@@ -75,7 +75,7 @@ ms.locfileid: "54640742"
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [TabControl コントロールの概要](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [方法: タブ ページを無効にします。](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [方法: Windows フォーム TabControl の外観を変更します。](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
+- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

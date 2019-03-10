@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441464"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707912"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームで新しい WPF コンテンツを作成します。
 
@@ -104,16 +104,16 @@ ms.locfileid: "56441464"
 
 Windows フォームと WPF は異なるテクノロジですが、密接に相互運用するよう設計されています。 高度な外観とをアプリケーションでの動作を提供するには、次を試してください。
 
-- WPF ページで Windows フォーム コントロールをホストします。 詳細については、「[チュートリアル:WPF でのフォーム コントロールのホストを Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。
+- WPF ページで Windows フォーム コントロールをホストします。 詳細については、「[チュートリアル:WPF でのフォーム コントロールのホストを Windows](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。
 
-- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、「[方法 :ハイブリッド アプリケーションで視覚スタイルを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。
+- WPF コンテンツに Windows フォームの視覚スタイルを適用します。 詳細については、「[方法 :ハイブリッド アプリケーションで視覚スタイルを有効にする](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)します。
 
-- WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル:WPF コンテンツのスタイル設定](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)します。
+- WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル:WPF コンテンツのスタイル設定](walkthrough-styling-wpf-content.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [移行と相互運用性](../../wpf/advanced/migration-and-interoperability.md)
+- [WPF コントロールの使用](using-wpf-controls.md)
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

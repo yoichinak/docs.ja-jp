@@ -2,15 +2,15 @@
 title: WF 内のエラー処理アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 24b68bd3-cef5-4413-ab82-2e2625f209aa
-ms.openlocfilehash: 51431e367f0ec8874588a52cb4dbd76d714768fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 410c481745cc62a55a2b6e840d82b01fcc7f5766
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512386"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707678"
 ---
 # <a name="error-handling-activities-in-wf"></a>WF 内のエラー処理アクティビティ
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、エラーの処理および回復を実装するためのシステム標準のアクティビティが用意されています。 詳細については、次を参照してください。[例外](../../../docs/framework/windows-workflow-foundation/exceptions.md)です。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、エラーの処理および回復を実装するためのシステム標準のアクティビティが用意されています。 詳細については、「 [例外](exceptions.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。  
   
 ## <a name="error-handling-activities"></a>エラー処理アクティビティ  
   

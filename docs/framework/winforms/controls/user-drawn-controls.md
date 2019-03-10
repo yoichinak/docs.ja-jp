@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509962"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709676"
 ---
 # <a name="user-drawn-controls"></a>ユーザー描画コントロール
 .NET Framework では、独自のコントロールを簡単に開発する機能を提供します。 コードによって結合されて標準のコントロールのセットである、ユーザー コントロールを作成することもをゼロから独自のコントロールをデザインすることができます。 既存のコントロールから継承するコントロールを作成し、本来の機能を追加する継承を使用することもできます。 どのようなアプローチを使用すると、.NET Framework は、任意のコントロールを作成するためのカスタムのグラフィカル インターフェイスを描画するために機能を提供します。  
@@ -25,7 +25,7 @@ ms.locfileid: "54509962"
   
 -   <xref:System.Drawing.Graphics> オブジェクト - いくつかのグラフィック指向オブジェクトとコントロールを描画するために必要な機能を提供するメソッドをカプセル化します。  
   
- 詳細については、<xref:System.Drawing.Graphics>オブジェクトとそれを使用して、参照してください方法[方法。描画の Graphics オブジェクトを作成](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)です。  
+ 詳細については、<xref:System.Drawing.Graphics>オブジェクトとそれを使用して、参照してください方法[方法。描画の Graphics オブジェクトを作成](../advanced/how-to-create-graphics-objects-for-drawing.md)です。  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>コントロールの描画または画面で、更新されるたびにイベントが発生し、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>オブジェクトが描画を実行、四角形を表します。 コントロール全体を更新する必要がある場合、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>コントロール全体のサイズを表します。 コントロールの一部がただし、更新、する必要があるあれば、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>オブジェクトが再描画する必要があるリージョンのみを表します。 このようなケースの例は、別のコントロールまたはユーザー インターフェイスでのフォーム コントロールの一部が見えない場合になります。  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [方法: 描画の Graphics オブジェクトを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [内在コントロール](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [方法: 描画の Graphics オブジェクトを作成します。](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [内在コントロール](constituent-controls.md)
+- [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

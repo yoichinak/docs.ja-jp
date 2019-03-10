@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607882"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705559"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装
 仮想モードを実装する理由の 1 つ、<xref:System.Windows.Forms.DataGridView>コントロールは、必要な場合にのみデータを取得します。 これは呼び出されます*ジャストイン タイムのデータの読み込み*します。  
@@ -26,7 +26,7 @@ ms.locfileid: "54607882"
   
  次のセクションでは、使用方法を説明します、<xref:System.Windows.Forms.DataGridView>ジャストイン タイムのキャッシュを制御します。  
   
- このトピックの「単一のリストとしてコードをコピーするに、を参照してください。[方法。フォームの DataGridView コントロールの Windows でジャストイン タイムのデータ読み込みによる仮想モードの実装](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)します。  
+ このトピックのコードを単一のリストとしてコピーするには、「[方法:フォームの DataGridView コントロールの Windows でジャストイン タイムのデータ読み込みによる仮想モードの実装](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)します。  
   
 ## <a name="the-form"></a>フォーム  
  次のコード例は、読み取り専用を含むフォームを定義します。<xref:System.Windows.Forms.DataGridView>とやり取りするコントロールを`Cache`オブジェクト、<xref:System.Windows.Forms.DataGridView.CellValueNeeded>イベント ハンドラー。 `Cache`オブジェクトがローカルに保存された値を管理しを使用して、 `DataRetriever` Northwind サンプル データベースの Orders テーブルから値を取得するオブジェクト。 `DataRetriever`実装しているオブジェクト、`IDataPageRetriever`で必要なインターフェイス、`Cache`クラスは、初期化するためにも使用、<xref:System.Windows.Forms.DataGridView>行および列を制御します。  
@@ -34,24 +34,24 @@ ms.locfileid: "54607882"
  `IDataPageRetriever`、 `DataRetriever`、および`Cache`型はこのトピックの後半で説明します。  
   
 > [!NOTE]
->  接続文字列内に機密情報 (パスワードなど) を格納すると、アプリケーションのセキュリティに影響を及ぼすことがあります。 データベースへのアクセスを制御する方法としては、Windows 認証 (統合セキュリティとも呼ばれます) を使用する方が安全です。 詳細については、「[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)」を参照してください。  
+>  接続文字列内に機密情報 (パスワードなど) を格納すると、アプリケーションのセキュリティに影響を及ぼすことがあります。 データベースへのアクセスを制御する方法としては、Windows 認証 (統合セキュリティとも呼ばれます) を使用する方が安全です。 詳細については、「[接続情報の保護](../../data/adonet/protecting-connection-information.md)」を参照してください。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>示しますインターフェイス  
  次のコード例を定義、`IDataPageRetriever`インターフェイスによって実装される、`DataRetriever`クラス。 このインターフェイスで宣言されている唯一の方法が、`SupplyPageOfData`メソッドは、最初の行インデックスおよびデータの 1 つのページ内の行の数が必要です。 これらの値は、データ ソースからデータのサブセットを取得する、実装者が使用されます。  
   
  A`Cache`オブジェクトは、データの最初の 2 つのページの読み込みに構築時にこのインターフェイスの実装を使用します。 キャッシュがこれらのページのいずれかを破棄しから値を含む新しいページを要求にキャッシュされていない値が必要に応じていつでも、`IDataPageRetriever`します。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>DataRetriever クラス  
  次のコード例を定義、`DataRetriever`クラスを実装、`IDataPageRetriever`サーバーからのデータ ページを取得するインターフェイス。 `DataRetriever`クラスも用意されています。`Columns`と`RowCount`プロパティを、<xref:System.Windows.Forms.DataGridView>ために必要な列を作成すると、適切な数の空の行を追加するコントロールを使用して、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション。 空の行を追加すると、テーブル内のすべてのデータが含まれている場合と同様に、コントロールできるように必要があります。 これは、スクロール バーのスクロール ボックスは、適切なサイズになり、ユーザーは、テーブルの任意の行にアクセスできることを意味します。 によって、行がいっぱいになる、<xref:System.Windows.Forms.DataGridView.CellValueNeeded>ビューにスクロールする場合にのみ、イベント ハンドラー。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>キャッシュ クラス  
  次のコード例を定義、`Cache`クラスを介して作成されるデータの 2 つのページ、`IDataPageRetriever`実装します。 `Cache`クラス定義内部`DataPage`を含む構造を<xref:System.Data.DataTable>値を 1 つのキャッシュに格納するページと行のインデックスを作成する計算を表すページの上限と下限の境界。  
@@ -60,8 +60,8 @@ ms.locfileid: "54607882"
   
  データ ページ内の行の数は、画面に一度に表示できる行の数と同じが、このモデルは効率的に、最も最近表示したページに戻るには、テーブルのページング ユーザーをできます。  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
 ## <a name="additional-considerations"></a>その他の考慮事項  
  前のコード例は、ジャストイン タイム データの読み込みの例として提供されます。 効率を最大化を実現するために、独自のニーズのコードを変更する必要があります。 少なくともは、キャッシュ内のデータの 1 ページあたりの行の数の適切な値を選択する必要があります。 この値に渡される、`Cache`コンス トラクター。 1 ページあたりの行の数が同時に表示できる行の数以上する必要があります、<xref:System.Windows.Forms.DataGridView>コントロール。  
@@ -73,8 +73,8 @@ ms.locfileid: "54607882"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールでの仮想モード](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールでジャストイン タイムのデータ読み込みによる仮想モードの実装](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](implementing-virtual-mode-wf-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロールでジャストイン タイムのデータ読み込みによる仮想モードの実装](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

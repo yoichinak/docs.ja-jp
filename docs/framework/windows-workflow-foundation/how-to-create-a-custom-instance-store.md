@@ -2,16 +2,16 @@
 title: '方法: カスタム インスタンス ストアを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503191"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707769"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>方法: カスタム インスタンス ストアを作成します。
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> という、SQL Server を使用してワークフロー データの永続化を行うインスタンス ストアが含まれています。 ワークフロー データの永続化を別のメディアで行う、つまり、別のデータベースやファイル システムなどを使用して行う必要があるアプリケーションの場合は、カスタム インスタンス ストアを実装できます。 カスタム インスタンス ストアを作成するには、抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> クラスを拡張し、その実装に必要なメソッドを実装します。 カスタム インスタンス ストアの完全な実装を参照してください、[企業の購買プロセス](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)サンプル。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> という、SQL Server を使用してワークフロー データの永続化を行うインスタンス ストアが含まれています。 ワークフロー データの永続化を別のメディアで行う、つまり、別のデータベースやファイル システムなどを使用して行う必要があるアプリケーションの場合は、カスタム インスタンス ストアを実装できます。 カスタム インスタンス ストアを作成するには、抽象 <xref:System.Runtime.DurableInstancing.InstanceStore> クラスを拡張し、その実装に必要なメソッドを実装します。 カスタム インスタンス ストアの完全な実装を参照してください、[企業の購買プロセス](./samples/corporate-purchase-process.md)サンプル。
 
 ## <a name="implementing-the-begintrycommand-method"></a>BeginTryCommand メソッドの実装
 
@@ -228,11 +228,11 @@ ms.locfileid: "57503191"
 
 ## <a name="using-a-custom-instance-store"></a>カスタム インスタンス ストアの使用
 
-カスタム インスタンス ストアを実装するには、インスタンス ストアのインスタンスを <xref:System.Activities.WorkflowApplication.InstanceStore%2A> に割り当て、<xref:System.Activities.WorkflowApplication.PersistableIdle%2A> メソッドを実装します。 参照してください、[方法。作成および実行 a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)の仕様についてのチュートリアル。
+カスタム インスタンス ストアを実装するには、インスタンス ストアのインスタンスを <xref:System.Activities.WorkflowApplication.InstanceStore%2A> に割り当て、<xref:System.Activities.WorkflowApplication.PersistableIdle%2A> メソッドを実装します。 参照してください、[方法。作成および実行 a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)の仕様についてのチュートリアル。
 
 ## <a name="a-sample-instance-store"></a>サンプル インスタンス ストア
 
-次のコード サンプルから取得した、完成したインスタンス ストア実装は、[企業の購買プロセス](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)サンプル。 このインスタンス ストアは、XML を使用してファイルにワークフロー データを永続化します。
+次のコード サンプルから取得した、完成したインスタンス ストア実装は、[企業の購買プロセス](./samples/corporate-purchase-process.md)サンプル。 このインスタンス ストアは、XML を使用してファイルにワークフロー データを永続化します。
 
 ```csharp
 using System;

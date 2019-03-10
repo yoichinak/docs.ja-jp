@@ -16,15 +16,16 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 6df1f2bf3190fb1453930c0553266cc27234f46d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701431"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705754"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>方法: ToolStrip コントロールをカスタム描画します。
-<xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
+
+  <xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> は、オペレーティング システムの外観とスタイルを提供します。  
   
@@ -51,7 +52,8 @@ ms.locfileid: "54701431"
   
 ### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable を変更するには  
   
--   <xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。  
+-   
+  <xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -137,6 +139,6 @@ ms.locfileid: "54701431"
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [組み込みのオーナー描画サポートを備えたコントロール](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [ToolStrip コントロールの概要](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)
+- [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

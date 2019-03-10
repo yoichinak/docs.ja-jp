@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 583596ec44dd5318c199d6cfc33901dbd952b115
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3e46c9d4cf118bb846e5d9efefeb0d57fea567
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522610"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703194"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter コントロールの概要 (Windows フォーム)
 > [!IMPORTANT]
@@ -24,5 +24,5 @@ ms.locfileid: "54522610"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.SplitContainer>
-- [方法: Windows フォーム上のコントロールをドッキングします。](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [方法: Windows フォーム上のコントロールをドッキングします。](how-to-dock-controls-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

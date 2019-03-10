@@ -12,17 +12,17 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: 599ae9fbaed3240efa05dc04f5b6dc4180e55cfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d592aea972a95a582cc35ecb14227edec5860ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707236"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>方法: WebBrowser コントロールで URL に移動します
 次のコード例は、移動する方法を示します、<xref:System.Windows.Forms.WebBrowser>コントロールを特定の URL。  
   
- 調べるには、新しいドキュメントが完全に読み込まれるときに、処理、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>イベント。 このイベントのデモについては、次を参照してください。[方法。WebBrowser コントロールで印刷](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)します。  
+ 調べるには、新しいドキュメントが完全に読み込まれるときに、処理、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>イベント。 このイベントのデモについては、次を参照してください。[方法。WebBrowser コントロールで印刷](how-to-print-with-a-webbrowser-control.md)します。  
   
 ## <a name="example"></a>例  
   
@@ -39,12 +39,13 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
   
 -   `webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。  
   
--   `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
+-   
+  `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.DocumentCompleted?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
-- [WebBrowser コントロール](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
-- [方法: WebBrowser コントロールを使用して印刷します。](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
+- [WebBrowser コントロール](webbrowser-control-windows-forms.md)
+- [方法: WebBrowser コントロールを使用して印刷します。](how-to-print-with-a-webbrowser-control.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710873"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706418"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールを拡張するための推奨される手順
 <xref:System.Windows.Forms.DataGridView>最大限のスケーラビリティを提供するコントロールは設計されています。 大量のデータを表示する場合は、大量のメモリを消費したり、ユーザー インターフェイス (UI) の応答性を低下させることを回避するには、このトピックで説明されているガイドラインに従ってください。 このトピックでは、次の問題について説明します。  
@@ -31,16 +31,16 @@ ms.locfileid: "54710873"
   
 -   行が非共有になることを防ぐ  
   
- 特別なパフォーマンスのニーズがあれば、仮想モードを実装し、独自のデータ管理操作を提供できます。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでのデータ表示モード](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)します。  
+ 特別なパフォーマンスのニーズがあれば、仮想モードを実装し、独自のデータ管理操作を提供できます。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでのデータ表示モード](data-display-modes-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="using-cell-styles-efficiently"></a>セルのスタイルを効率的に使用します。  
  各セル、行、および列には、独自のスタイル情報を持つことができます。 スタイル情報が格納されている<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクト。 多くの個々 のセルのスタイル オブジェクトを作成する<xref:System.Windows.Forms.DataGridView>大量のデータを使用する場合に特にに要素が、効率的にすることができます。 パフォーマンスに影響を回避するには、次のガイドラインを使用します。  
   
 -   個々 のセル スタイル プロパティを設定しないでください<xref:System.Windows.Forms.DataGridViewCell>または<xref:System.Windows.Forms.DataGridViewRow>オブジェクト。 指定された行のオブジェクトが含まれます、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 新しい行のテンプレートから複製された各行は、テンプレートのセル スタイル オブジェクトのコピーを受け取ります。 スケーラビリティを最大にするでのセル スタイル プロパティを設定、<xref:System.Windows.Forms.DataGridView>レベル。 たとえば、設定、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>プロパティではなく、<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>プロパティ。  
   
--   一部のセルは、既定の書式設定よりもその他の書式設定を必要とする場合と同じ使用<xref:System.Windows.Forms.DataGridViewCellStyle>セル、行、または列のグループ間でのインスタンス。 型のプロパティを直接設定しないでください<xref:System.Windows.Forms.DataGridViewCellStyle>個々 のセル、行、および列にします。 セル スタイルの共有の例は、次を参照してください。[方法。Windows フォーム DataGridView コントロールの既定のセル スタイルを設定](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)します。 処理することによって個別のセルのスタイルを設定するときにも、パフォーマンス低下を避けることができます、<xref:System.Windows.Forms.DataGridView.CellFormatting>イベント ハンドラー。 例については、「[方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズ](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)します。  
+-   一部のセルは、既定の書式設定よりもその他の書式設定を必要とする場合と同じ使用<xref:System.Windows.Forms.DataGridViewCellStyle>セル、行、または列のグループ間でのインスタンス。 型のプロパティを直接設定しないでください<xref:System.Windows.Forms.DataGridViewCellStyle>個々 のセル、行、および列にします。 セル スタイルの共有の例は、次を参照してください。[方法。Windows フォーム DataGridView コントロールの既定のセル スタイルを設定](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)します。 処理することによって個別のセルのスタイルを設定するときにも、パフォーマンス低下を避けることができます、<xref:System.Windows.Forms.DataGridView.CellFormatting>イベント ハンドラー。 例については、「[方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)します。  
   
--   セルのスタイルを決定するときに使用して、<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>プロパティではなく、<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>プロパティ。 アクセス、<xref:System.Windows.Forms.DataGridViewCell.Style%2A>プロパティの新しいインスタンスを作成し、<xref:System.Windows.Forms.DataGridViewCellStyle>クラスのプロパティは既に使用されていない場合。 さらに、このオブジェクトの一部のスタイルは、行、列、またはコントロールから継承された場合、セルのスタイル情報を含まない場合があります。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+-   セルのスタイルを決定するときに使用して、<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>プロパティではなく、<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>プロパティ。 アクセス、<xref:System.Windows.Forms.DataGridViewCell.Style%2A>プロパティの新しいインスタンスを作成し、<xref:System.Windows.Forms.DataGridViewCellStyle>クラスのプロパティは既に使用されていない場合。 さらに、このオブジェクトの一部のスタイルは、行、列、またはコントロールから継承された場合、セルのスタイル情報を含まない場合があります。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="using-shortcut-menus-efficiently"></a>ショートカット メニューを効率的に使用します。  
  各セル、行、および列には、ショートカット メニューを持つことができます。 ショートカット メニューに、<xref:System.Windows.Forms.DataGridView>コントロールがによって表される<xref:System.Windows.Forms.ContextMenuStrip>コントロール。 セル スタイルのオブジェクトと同様に、多くの個々 のショートカット メニューを作成します。<xref:System.Windows.Forms.DataGridView>要素には、パフォーマンスが低下します。 この低下を回避するには、次のガイドラインを使用します。  
@@ -60,7 +60,7 @@ ms.locfileid: "54710873"
   
 -   最大限のスケーラビリティ、自動サイズ調整をオフにし、プログラムによるサイズ変更を使用します。  
   
- 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのサイズ変更オプション](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)します。  
+ 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>選択したセル、行、および列のコレクションの効率的な使用  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>大規模な選択範囲をコレクションが効率的に実行されません。 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>と<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>コレクション解除することも、効率的なほどには一般的なセルよりも多くの少ない行があるため、<xref:System.Windows.Forms.DataGridView>制御、および行よりも多くの少ない列です。 パフォーマンスの低下を避けるためには、これらのコレクションを使用する場合は、次のガイドラインを使用します。  
@@ -137,9 +137,9 @@ ms.locfileid: "54710873"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールでの仮想モード](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールでのデータ表示モード](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールでのセルのスタイル](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールの既定のセル スタイルを設定します。](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールのサイズ変更オプション](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでのデータ表示モード](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロールの既定のセル スタイルを設定します。](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)

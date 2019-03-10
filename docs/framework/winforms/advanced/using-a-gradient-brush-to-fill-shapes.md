@@ -6,30 +6,30 @@ helpviewer_keywords:
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525035"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704389"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>グラデーション ブラシを使用した図形の塗りつぶし
-グラデーション ブラシを使用して、図形を塗りつぶす色が徐々 に変化させることができます。 たとえば、色、形状の左端から右端に移動する段階的に変化するように図形を塗りつぶすに水平方向のグラデーションを使用できます。 黒を左の端で四角形を想像してください (0, 0, 0 は、赤、緑、および青のコンポーネントによって表されます)、右端が赤 (255, 0, 0) とします。 四角形が 256 ピクセルである場合は、いずれかの左側にあるピクセルの赤の要素より大きい値を特定のピクセルの赤の要素になります。 行の左端のピクセルの色要素 (0, 0, 0)、2 番目のピクセルが (1, 0, 0)、3 番目のピクセルが (2, 0, 0)、し、右端のピクセルの色要素 (255, 0, 0) に達するまでします。 これらの色の補間値は、色のグラデーションを構成します。  
+グラデーション ブラシを使用して、徐々 に変化する色で図形を塗りつぶすことができます。 たとえば、図形を塗りつぶす色、形状の左端から右端に移動する段階的に変化するように、水平方向のグラデーションを使用できます。 左端で黒の四角形を想像してみてください (0, 0, 0 は、赤、緑、および青のコンポーネントによって表される) と、右端が red (255, 0, 0 で表されます)。 四角形が 256 ピクセルである場合は、1 つの左側にピクセルの赤の要素より大きいを特定のピクセルの赤の要素になります。 行の左端のピクセルが (0, 0, 0) の色要素、2 番目のピクセルが (1, 0, 0)、3 番目のピクセルは、(2, 0, 0) というように、(255, 0, 0) の色要素の右端のピクセルが表示されるまでです。 これらの色の補間値は、色のグラデーションを構成します。  
   
- 線形グラデーションは、水平、垂直方向に移動または並列斜めの指定した行に色を変更します。 パス グラデーションは、内側およびパスの境界を移動すると、色を変更します。 さまざまな効果を実現するためにパス グラデーションをカスタマイズすることができます。  
+ 線形グラデーションは、水平、垂直方向に移動するか、指定した斜線を並列に色を変更します。 パス グラデーションは、内部およびパスの境界を移動するように色を変更します。 さまざまな効果を実現するためにパス グラデーションをカスタマイズすることができます。  
   
- 次の図は、四角形が線形グラデーション ブラシで塗りつぶされパス グラデーション ブラシで塗りつぶした楕円を示します。  
+ 次の図は、線状グラデーション ブラシで塗りつぶした四角形とパスのグラデーション ブラシで塗りつぶした楕円を示します。  
   
- ![グラデーション](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
+ ![Gradient](./media/gradient2.png "gradient2")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: 線形グラデーションを作成する](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
- 線形グラデーションを使用して、作成する方法を示しています、<xref:System.Drawing.Drawing2D.LinearGradientBrush>クラスです。  
+ [方法: 線形グラデーションを作成します。](how-to-create-a-linear-gradient.md)  
+ 線形グラデーションを使用して、作成する方法を示しています、<xref:System.Drawing.Drawing2D.LinearGradientBrush>クラス。  
   
- [方法: パス グラデーションを作成する](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
- パス グラデーションを使用して、作成する方法について説明します、<xref:System.Drawing.Drawing2D.PathGradientBrush>クラスです。  
+ [方法: パス グラデーションを作成します。](how-to-create-a-path-gradient.md)  
+ パス グラデーションを使用して、作成する方法について説明します、<xref:System.Drawing.Drawing2D.PathGradientBrush>クラス。  
   
- [方法: グラデーションに対してガンマ補正を適用する](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ [方法: グラデーションに対してガンマ補正を適用します。](how-to-apply-gamma-correction-to-a-gradient.md)  
  グラデーション ブラシでガンマ補正を使用する方法について説明します。  
   
 ## <a name="reference"></a>参照  

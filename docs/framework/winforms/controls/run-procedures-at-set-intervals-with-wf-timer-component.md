@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 6a5a30b77e19e316bdf08234767cab2c9b72b296
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663991"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705572"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行します。
 ループが完了するまで特定の間隔で実行するプロシージャや、設定した間隔が経過した時点で実行するプロシージャを作成することがあるかもしれません。 <xref:System.Windows.Forms.Timer> コンポーネントにより、このようなプロシージャが可能になります。  
@@ -27,7 +27,7 @@ ms.locfileid: "56663991"
   
 > [!NOTE]
 >  
-  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)します。  
+  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](limitations-of-the-timer-component-interval-property.md)します。  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer コンポーネントで設定された間隔でプロシージャを実行するには  
   
@@ -245,5 +245,5 @@ private:
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Timer>
-- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Timer コンポーネント](timer-component-windows-forms.md)
+- [Timer コンポーネントの概要](timer-component-overview-windows-forms.md)

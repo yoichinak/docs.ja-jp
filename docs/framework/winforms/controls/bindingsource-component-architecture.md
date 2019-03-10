@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9fb343cd7ca3f17509353ddd088ab6d945118903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514180"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707821"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource コンポーネント アーキテクチャ
 <xref:System.Windows.Forms.BindingSource>コンポーネント、ユニバーサル データ ソースにすべての Windows フォーム コントロールをバインドできます。  
@@ -62,16 +62,16 @@ ms.locfileid: "54514180"
   
 -   統合<xref:System.Windows.Forms.BindingNavigator>します。  
   
-### <a name="indirection"></a>間接参照  
+### <a name="indirection"></a>間接  
  <xref:System.Windows.Forms.BindingSource>コンポーネントは、コントロールとデータ ソース間の間接参照のレベルを提供します。 コントロールをバインドするデータ ソースへの直接のコントロールをバインドするのではなく、<xref:System.Windows.Forms.BindingSource>とにデータ ソースのアタッチ、<xref:System.Windows.Forms.BindingSource>コンポーネントの<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティ。  
   
  このレベルの間接参照では、コントロールのバインドをリセットせず、データ ソースを変更できます。 これにより、次の機能。  
   
 -   アタッチすることができます、<xref:System.Windows.Forms.BindingSource>さまざまなデータ ソース コントロールの現在のバインドを維持したままにします。  
   
--   データ ソース内の項目を変更し、バインドされたコントロールに通知できます。 詳細については、「[方法 :BindingSource で Windows フォーム コントロール内のデータ ソースの更新を反映](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)します。  
+-   データ ソース内の項目を変更し、バインドされたコントロールに通知できます。 詳細については、「[方法 :BindingSource で Windows フォーム コントロール内のデータ ソースの更新を反映](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)します。  
   
--   バインドすることができます、<xref:System.Type>メモリ内のオブジェクトの代わりにします。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)します。 実行時にオブジェクトにバインドできます。  
+-   バインドすることができます、<xref:System.Type>メモリ内のオブジェクトの代わりにします。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](how-to-bind-a-windows-forms-control-to-a-type.md)します。 実行時にオブジェクトにバインドできます。  
   
 ### <a name="currency-management"></a>通貨の管理  
  <xref:System.Windows.Forms.BindingSource>コンポーネントを実装して、<xref:System.Windows.Forms.ICurrencyManagerProvider>通貨管理を処理するインターフェイス。 <xref:System.Windows.Forms.ICurrencyManagerProvider>インターフェイス、アクセスすることも、通貨用のマネージャーに、 <xref:System.Windows.Forms.BindingSource>、別の通貨マネージャーだけでなく<xref:System.Windows.Forms.BindingSource>に同じバインド<xref:System.Windows.Forms.BindingSource.DataMember%2A>します。  
@@ -123,7 +123,7 @@ ms.locfileid: "54514180"
 |<xref:System.Windows.Forms.BindingSource.AddNew%2A> メソッド|基になるリストに新しい項目を追加します。 実装するデータ ソースに適用されます、<xref:System.ComponentModel.IBindingList>インターフェイスし、項目の追加を許可する (つまり、<xref:System.Windows.Forms.BindingSource.AllowNew%2A>プロパティに設定されて`true`)。|  
   
 ### <a name="custom-item-creation"></a>カスタムの項目の作成  
- 処理することができます、<xref:System.Windows.Forms.BindingSource.AddingNew>独自のアイテム作成ロジックを提供するイベントです。 <xref:System.Windows.Forms.BindingSource.AddingNew>に新しいオブジェクトを追加する前に、イベントが発生した、<xref:System.Windows.Forms.BindingSource>します。 このイベントが発生した後、<xref:System.Windows.Forms.BindingSource.AddNew%2A>メソッドが呼び出されると、基底のリストに新しい項目を追加する前にします。 このイベントを処理することから派生することがなくカスタム項目の作成の動作を行うことができます、<xref:System.Windows.Forms.BindingSource>クラス。 詳細については、「[方法 :項目の追加、Windows フォーム BindingSource をカスタマイズする](../../../../docs/framework/winforms/controls/how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)します。  
+ 処理することができます、<xref:System.Windows.Forms.BindingSource.AddingNew>独自のアイテム作成ロジックを提供するイベントです。 <xref:System.Windows.Forms.BindingSource.AddingNew>に新しいオブジェクトを追加する前に、イベントが発生した、<xref:System.Windows.Forms.BindingSource>します。 このイベントが発生した後、<xref:System.Windows.Forms.BindingSource.AddNew%2A>メソッドが呼び出されると、基底のリストに新しい項目を追加する前にします。 このイベントを処理することから派生することがなくカスタム項目の作成の動作を行うことができます、<xref:System.Windows.Forms.BindingSource>クラス。 詳細については、「[方法 :項目の追加、Windows フォーム BindingSource をカスタマイズする](how-to-customize-item-addition-with-the-windows-forms-bindingsource.md)します。  
   
 ### <a name="transactional-item-creation"></a>トランザクションのアイテムの作成  
  <xref:System.Windows.Forms.BindingSource>コンポーネントを実装して、<xref:System.ComponentModel.ICancelAddNew>インターフェイスで、トランザクションの項目を作成できるようにします。 新しい項目は仮の呼び出しを使用して作成した後<xref:System.Windows.Forms.BindingSource.AddNew%2A>追加のコミットまたはロールバックし、次の方法で可能性があります。  
@@ -142,7 +142,7 @@ ms.locfileid: "54514180"
 ### <a name="design-time-support"></a>デザイン時サポート  
  オブジェクトの種類によっては、ファクトリ クラスから作成されたオブジェクトまたは Web サービスによって返されるオブジェクトなどのデザイン時に作成できません。 コントロールをバインドできるメモリ内オブジェクトが存在しない場合でも、デザイン時にこれらの型にコントロールをバインドする必要がある場合があります。 列ヘッダー ラベル付けする必要があります、たとえば、<xref:System.Windows.Forms.DataGridView>カスタム型のパブリック プロパティの名前を持つコントロール。  
   
- このシナリオをサポートするために、<xref:System.Windows.Forms.BindingSource>コンポーネントへのバインドをサポートする、<xref:System.Type>します。 割り当てると、<xref:System.Type>を<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティ、<xref:System.Windows.Forms.BindingSource>コンポーネントは、空を作成します<xref:System.ComponentModel.BindingList%601>の<xref:System.Type>項目。 すべてのコントロールにバインドする、その後、<xref:System.Windows.Forms.BindingSource>コンポーネントは、デザイン時または実行時にプロパティまたは型のスキーマが存在する警告されます。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)します。  
+ このシナリオをサポートするために、<xref:System.Windows.Forms.BindingSource>コンポーネントへのバインドをサポートする、<xref:System.Type>します。 割り当てると、<xref:System.Type>を<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティ、<xref:System.Windows.Forms.BindingSource>コンポーネントは、空を作成します<xref:System.ComponentModel.BindingList%601>の<xref:System.Type>項目。 すべてのコントロールにバインドする、その後、<xref:System.Windows.Forms.BindingSource>コンポーネントは、デザイン時または実行時にプロパティまたは型のスキーマが存在する警告されます。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](how-to-bind-a-windows-forms-control-to-a-type.md)します。  
   
 ### <a name="static-listbindinghelper-methods"></a>静的 ListBindingHelper メソッド  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>、 <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>、および<xref:System.Windows.Forms.BindingSource>からリストを生成するすべての共有の共通ロジックの種類、 `DataSource` / `DataMember`ペア。 さらに、この共通のロジックがパブリックに公開用にコントロールを作成して、次に他のサード パーティ`static`メソッド。  
@@ -166,14 +166,14 @@ ms.locfileid: "54514180"
 |<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。<br /><br /> - または -<br /><br /> データ ソースがある場合、<xref:System.ComponentModel.IBindingListView>し並べ替え、高度なサポートは、並べ替えと並べ替え順序を使用する複数の列名を取得します。|  
   
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator の統合  
- 使用することができます、<xref:System.Windows.Forms.BindingSource>任意の Windows フォーム コントロールをデータ ソースにバインドするコンポーネントが、<xref:System.Windows.Forms.BindingNavigator>コントロールが操作専用にデザインされた、<xref:System.Windows.Forms.BindingSource>コンポーネント。 <xref:System.Windows.Forms.BindingNavigator>コントロールを制御するためのユーザー インターフェイスを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネントの現在の項目。 既定で、<xref:System.Windows.Forms.BindingNavigator>コントロールのナビゲーション メソッドに対応するボタンを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネント。 詳細については、「[方法 :Windows フォーム BindingNavigator コントロールでデータ間を移動](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)します。  
+ 使用することができます、<xref:System.Windows.Forms.BindingSource>任意の Windows フォーム コントロールをデータ ソースにバインドするコンポーネントが、<xref:System.Windows.Forms.BindingNavigator>コントロールが操作専用にデザインされた、<xref:System.Windows.Forms.BindingSource>コンポーネント。 <xref:System.Windows.Forms.BindingNavigator>コントロールを制御するためのユーザー インターフェイスを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネントの現在の項目。 既定で、<xref:System.Windows.Forms.BindingNavigator>コントロールのナビゲーション メソッドに対応するボタンを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネント。 詳細については、「[方法 :Windows フォーム BindingNavigator コントロールでデータ間を移動](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingSource コンポーネントの概要](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [方法: Windows フォーム コントロールを型にバインドします。](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
-- [方法: BindingSource で Windows フォーム コントロール内のデータ ソースの更新が反映されます。](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [BindingSource コンポーネントの概要](bindingsource-component-overview.md)
+- [BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
+- [方法: Windows フォーム コントロールを型にバインドします。](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [方法: BindingSource で Windows フォーム コントロール内のデータ ソースの更新が反映されます。](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

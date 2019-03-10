@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835487"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708406"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
 
@@ -41,7 +41,7 @@ ms.locfileid: "56835487"
 
     -   オペレーティング システムの API をラップするだけの機能も削除されます。これは、[!INCLUDE[wrt](../../../includes/wrt-md.md)] をマネージド コードから簡単に呼び出すことができるためです。
 
-     詳細について、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]を参照してください、 [.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))します。 API 選択プロセスについては、次を参照してください。、 [Metro スタイル アプリ用 .NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET ブログのエントリ。
+     詳細について、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]を参照してください、 [.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))します。 API 選択プロセスについては、次を参照してください。、 [Metro スタイル アプリ用 .NET](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .NET ブログのエントリ。
 
 -   [Windows ランタイム](/uwp/api/)構築するためのユーザー インターフェイス要素を提供します[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ、およびオペレーティング システムの機能へのアクセスを提供します。 .NET Framework と同様、[!INCLUDE[wrt](../../../includes/wrt-md.md)]には、C# や Visual Basic のコンパイラが .NET Framework クラス ライブラリを使用するのと同じ方法で [!INCLUDE[wrt](../../../includes/wrt-md.md)]を使用するためのメタデータが含まれています。 .NET Framework では、一部の相違点を非表示にすることで [!INCLUDE[wrt](../../../includes/wrt-md.md)]が使いやすくなっています。
 

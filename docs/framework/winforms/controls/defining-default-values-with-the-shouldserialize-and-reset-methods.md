@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497434"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704457"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize メソッドと Reset メソッドによる既定値の定義
 `ShouldSerialize` `Reset`プロパティで指定できる省略可能なメソッドをプロパティでない場合は、単純な既定値を設定します。 プロパティは、単純な既定値を持つ場合は適用して、<xref:System.ComponentModel.DefaultValueAttribute>代わりに、属性クラスのコンス トラクターを既定値を指定します。 これらのメカニズムのいずれかには、デザイナーで、次の機能が有効にします。  
@@ -44,7 +44,7 @@ public void ResetMyFont() {
 > [!NOTE]
 >  プロパティがない場合、`Reset`メソッドが設定されていない、<xref:System.ComponentModel.DefaultValueAttribute>に、その宣言で指定された既定値がないと、`Reset`オプションのショートカット メニューでそのプロパティが無効になっている、 **プロパティ** Visual Studio での Windows フォーム デザイナーのウィンドウ。  
   
- Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティを場合にのみフォームにコードを記述するメソッドが変更されたためより効率的なコードのことができます生成します。 例:  
+ Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティを場合にのみフォームにコードを記述するメソッドが変更されたためより効率的なコードのことができます生成します。 例えば:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  
@@ -144,6 +144,6 @@ public class MyControl : Control {
  この場合、プライベート変数の値にアクセスしている場合でも、`MyFont`プロパティは`null`、プロパティ ブラウザーが表示されない`null`代わりに、が表示されます、<xref:System.Windows.Forms.Control.Font%2A>でない場合は、親のプロパティ`null`、。既定値または<xref:System.Windows.Forms.Control.Font%2A>で定義されている値<xref:System.Windows.Forms.Control>します。 既定値ため`MyFont`、単に設定することはできません、<xref:System.ComponentModel.DefaultValueAttribute>このプロパティには適用できません。 代わりに、`ShouldSerialize`と`Reset`のメソッドを実装する必要があります、`MyFont`プロパティ。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム コントロールのプロパティ](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [プロパティの定義](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
-- [プロパティ変更イベント](../../../../docs/framework/winforms/controls/property-changed-events.md)
+- [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
+- [プロパティの定義](defining-a-property-in-windows-forms-controls.md)
+- [プロパティ変更イベント](property-changed-events.md)

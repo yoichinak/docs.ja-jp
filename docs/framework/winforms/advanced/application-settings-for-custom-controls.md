@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714347"
 ---
 # <a name="application-settings-for-custom-controls"></a>カスタム コントロールのアプリケーション設定
 コントロールがサード パーティ製のアプリケーションでホストされている場合は、アプリケーションの設定を保存する機能、カスタム コントロールを提供する特定のタスクを完了する必要があります。  
@@ -26,7 +26,7 @@ ms.locfileid: "54526744"
   
 2.  コントロールを作成し、フォームのように、フォームに配置した後、このカスタム設定クラスを作成<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。  
   
- カスタム設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)します。  
+ カスタム設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
 ## <a name="settings-keys-and-shared-settings"></a>設定キーと共有設定  
  一部のコントロールを同じフォーム内で複数回使用できます。 ほとんどの場合、これらのコントロールを各自の設定を保持します。 <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>プロパティ<xref:System.Configuration.IPersistComponentSettings>フォーム上のコントロールの複数のバージョンを解消するために機能する一意の文字列を指定することができます。  
@@ -48,4 +48,4 @@ ms.locfileid: "54526744"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [アプリケーション設定アーキテクチャ](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [アプリケーション設定アーキテクチャ](application-settings-architecture.md)

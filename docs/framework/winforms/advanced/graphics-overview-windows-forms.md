@@ -8,25 +8,25 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521758"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714329"
 ---
 # <a name="graphics-overview-windows-forms"></a>グラフィックスの概要 (Windows フォーム)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラフィックス デバイス インターフェイスにより、プログラマがデバイスに依存しないアプリケーションを作成するためです。 サービス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]一連のマネージ クラスを介して公開されます。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラフィックス デバイス インターフェイスにより、デバイスに依存しないアプリケーションを記述するプログラマです。 サービス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]一連のマネージ クラスを通じて公開されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [グラフィックスについて](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
- 概要については、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックスについて](overview-of-graphics.md)  
+ 一般的な概要については、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。  
   
- [グラフィックス サービスの 3 つのカテゴリ](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- 使用したプログラミングを構成する 3 つのカテゴリについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックス サービスの 3 つのカテゴリ](three-categories-of-graphics-services.md)  
+ 使用したプログラミングを構成する 3 つのカテゴリについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。  
   
- [グラフィックス インターフェイスの構造体](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- マネージ クラスのインターフェイスについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックス インターフェイスの構造体](structure-of-the-graphics-interface.md)  
+ マネージ クラスのインターフェイスについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Drawing>  

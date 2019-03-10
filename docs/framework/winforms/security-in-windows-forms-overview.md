@@ -8,22 +8,22 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a9e90ebc941d07c24f7b14ecf72e5a764bf48d77
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664979"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708210"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のリリース以前、ユーザーのコンピューターで実行されているすべてのコードは、リソースにアクセスするために、そのコンピューターのユーザーが持っていたのと同じ権限またはアクセス許可を持っていました。 たとえば、ユーザーにファイル システムへのアクセスが許可されている場合は、コードにファイル システムへのアクセスが許可され、ユーザーにデータベースへのアクセスが許可されている場合は、コードにデータベースへのアクセスが許可されていました。 これらの権限やアクセス許可は、ユーザーがローカル コンピューターに明示的にインストールした実行可能ファイルのコードに対しては受け入れることができますが、インターネットやローカル イントラネットからの悪意のある可能性があるコードに対しては受け入れることができません。 このコードは、アクセス許可がないユーザーのコンピューター リソースにアクセスすべきではありません。  
   
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、アクセス許可または権限について、コードが持つものとユーザーが持つものを区別できる、コード アクセス セキュリティと呼ばれるインフラストラクチャを導入しています。 既定では、インターネットとイントラネットからのコードは、部分信頼と呼ばれるものでのみ実行できます。 部分信頼では、アプリケーションに一連の制限が適用されます。特に、アプリケーションはローカルのハード ディスクへのアクセスが制限され、アンマネージ コードを実行することができません。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、送信元、[厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)があるかどうか、証明書で署名されているかどうかなど、そのコードの ID に基づいて、コードにアクセスを許可するリソースを制御します。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、アクセス許可または権限について、コードが持つものとユーザーが持つものを区別できる、コード アクセス セキュリティと呼ばれるインフラストラクチャを導入しています。 既定では、インターネットとイントラネットからのコードは、部分信頼と呼ばれるものでのみ実行できます。 部分信頼では、アプリケーションに一連の制限が適用されます。特に、アプリケーションはローカルのハード ディスクへのアクセスが制限され、アンマネージ コードを実行することができません。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、送信元、[厳密な名前付きアセンブリ](../app-domains/strong-named-assemblies.md)があるかどうか、証明書で署名されているかどうかなど、そのコードの ID に基づいて、コードにアクセスを許可するリソースを制御します。  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] テクノロジは、Windows フォーム アプリケーションの配置に使用しますが、部分信頼で実行するアプリケーションを、完全信頼や、昇格されたアクセス許可を持つ部分信頼で簡単に開発できるようにします。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、アクセス許可の昇格や、信頼されたアプリケーション配置などの機能を提供し、アプリケーションが完全信頼やアクセス許可の昇格をローカル ユーザーから実行可能な方法で要求できます。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework のセキュリティについて  
- コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 共通言語ランタイムがセキュリティ ポリシーを決定するために使用する証拠の詳細については、「[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))」を参照してください。 悪意のあるコードからコンピューター システムを保護できるだけでなく、セキュリティの意図的または偶然の侵害から信頼されているコードを保護できます。 また、コード アクセス セキュリティは、アプリケーションが実行できるアクションに対して詳細に制御できます。これは、アプリケーションが持っている必要があるアクセス許可のみを指定できるためです。 コード アクセス セキュリティは、コードが単一のコード アクセス セキュリティのアクセス許可のチェックをしない場合でも、共通言語ランタイムを対象とするすべてのマネージド コードに影響を与えます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティの詳細については、「[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)」および「[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)」を参照してください。  
+ コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 共通言語ランタイムがセキュリティ ポリシーを決定するために使用する証拠の詳細については、「[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))」を参照してください。 悪意のあるコードからコンピューター システムを保護できるだけでなく、セキュリティの意図的または偶然の侵害から信頼されているコードを保護できます。 また、コード アクセス セキュリティは、アプリケーションが実行できるアクションに対して詳細に制御できます。これは、アプリケーションが持っている必要があるアクセス許可のみを指定できるためです。 コード アクセス セキュリティは、コードが単一のコード アクセス セキュリティのアクセス許可のチェックをしない場合でも、共通言語ランタイムを対象とするすべてのマネージド コードに影響を与えます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティの詳細については、「[セキュリティの基本概念](../../standard/security/key-security-concepts.md)」および「[コード アクセス セキュリティの基礎](../misc/code-access-security-basics.md)」を参照してください。  
   
  ユーザーが Windows フォームの実行可能ファイルを Web サーバーまたはファイル共有から直接実行する場合、アプリケーションに付与される信頼の度合いは、コードが存在する場所や開始方法によって異なります。 アプリケーションを実行すると、自動的に評価され、共通言語ランタイムから、名前付き権限セットを受け取ります。 既定では、ローカル コンピューターからのコードに完全信頼のアクセス許可セットが付与され、ローカル ネットワークからのコードには、ローカル イントラネットのアクセス許可セットが付与され、インターネットからのコードには、インターネットのアクセス許可セットが付与されます。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "56664979"
  アプリケーションに付与される実際のアクセス許可は、セキュリティ ポリシーが変更される可能性があるため、既定値とは異なる可能性があります。つまり、アプリケーションが、あるコンピューターではアクセス許可を持ち、別のコンピューターでは持たない可能性があることを意味します。  
   
 ## <a name="developing-a-more-secure-windows-forms-application"></a>より安全な Windows フォーム アプリケーションの開発  
- セキュリティは、アプリケーション開発のすべての手順で重要です。 まず、「[安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)」を確認し、このガイドラインに従います。  
+ セキュリティは、アプリケーション開発のすべての手順で重要です。 まず、「[安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)」を確認し、このガイドラインに従います。  
   
  次に、アプリケーションを完全信頼で実行する必要があるのか、または部分信頼で実行する必要があるのかを決定します。 完全信頼でアプリケーションを実行することで、ローカル コンピューター上のリソースへのアクセスが簡単になりますが、「安全なコーディングのガイドライン」のトピックに厳密に従ってアプリケーションを設計および開発しない場合、ユーザーとアプリケーションを高いセキュリティ リスクに晒すことになります。 部分信頼でアプリケーションを実行すると、より安全なアプリケーションをより簡単に開発でき、リスクを大幅に軽減しますが、特定の機能の実装方法について、より詳細な計画が必要になります。  
   
- 部分信頼 (つまり、インターネットまたはローカル イントラネットのアクセス許可セットのいずれか) を選択する場合は、アプリケーションがこの環境で動作する方法を決定します。 Windows フォームでは、信頼度の低い環境で、より安全に機能を実装する代わりの方法を提供します。 データ アクセスなど、アプリケーションの特定の部分が、部分信頼および完全信頼の両方の環境で異なる設計と作成がなされる場合があります。 アプリケーション設定など、一部の Windows フォームの機能は、部分信頼で動作するよう設計されています。 詳細については、「[アプリケーション設定の概要](../../../docs/framework/winforms/advanced/application-settings-overview.md)」を参照してください。  
+ 部分信頼 (つまり、インターネットまたはローカル イントラネットのアクセス許可セットのいずれか) を選択する場合は、アプリケーションがこの環境で動作する方法を決定します。 Windows フォームでは、信頼度の低い環境で、より安全に機能を実装する代わりの方法を提供します。 データ アクセスなど、アプリケーションの特定の部分が、部分信頼および完全信頼の両方の環境で異なる設計と作成がなされる場合があります。 アプリケーション設定など、一部の Windows フォームの機能は、部分信頼で動作するよう設計されています。 詳細については、「[アプリケーション設定の概要](./advanced/application-settings-overview.md)」を参照してください。  
   
  アプリケーションが部分信頼で許可するより多くのアクセス許可を必要とするが、完全信頼モードで実行したくない場合は、部分信頼で実行しながら、必要な追加のアクセス許可のみをアサートすることができます。 たとえば、部分信頼で実行するが、ユーザーのファイル システム上のディレクトリに、アプリケーションの読み取り専用のアクセス許可を付与する必要がある場合、そのディレクトリのみに対して <xref:System.Security.Permissions.FileIOPermission> を要求することができます。 適切に使用すると、このアプローチによってアプリケーションの機能が増加し、ユーザーのセキュリティ上のリスクを最小限に抑えることができます。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "56664979"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|-   [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)|部分信頼環境でファイルとデータにアクセスする方法について説明します。|  
-|-   [Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)|部分信頼環境で印刷機能にアクセスする方法について説明します。|  
-|-   [Windows フォームのセキュリティに関するその他の考慮事項](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)|部分信頼環境でのウィンドウ操作の実行、クリップボードの使用、およびアンマネージ コードへの呼び出しについて説明します。|  
+|-   [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)|部分信頼環境でファイルとデータにアクセスする方法について説明します。|  
+|-   [Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)|部分信頼環境で印刷機能にアクセスする方法について説明します。|  
+|-   [Windows フォームのセキュリティに関するその他の考慮事項](additional-security-considerations-in-windows-forms.md)|部分信頼環境でのウィンドウ操作の実行、クリップボードの使用、およびアンマネージ コードへの呼び出しについて説明します。|  
   
 -  
   
@@ -83,9 +83,9 @@ ms.locfileid: "56664979"
  Visual Studio を使用して、Windows フォーム アプリケーションをデプロイする場合は、部分信頼または制限されたアクセス許可のセット、開発環境からでのデバッグを有効にできます。  参照してください[方法。アクセス許可が制限された ClickOnce アプリケーションをデバッグする](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)
-- [コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)
+- [Windows フォームのセキュリティ](windows-forms-security.md)
+- [コード アクセス セキュリティの基礎](../misc/code-access-security-basics.md)
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
 - [信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)
-- [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (マニフェストの生成および編集ツール)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

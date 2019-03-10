@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 428f558c125bb11e5cbd4f794713440c22c89d7e
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333366"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718507"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>方法: データ デザイナーを使用して Windows フォーム DataGridView コントロールをバインドします。
 デザイナーを使用して、接続、<xref:System.Windows.Forms.DataGridView>データベース、ビジネス オブジェクト、Web サービスなど、いくつかの異なる種類のデータ ソースへのコントロール。 デザイナーを使用してデータ ソースにコントロールをバインドすると、コントロールに自動的にバインドを<xref:System.Windows.Forms.BindingSource>コンポーネントをデータ ソースを表します。 さらに、データ ソースによって提供されるスキーマ情報に対応するように、このコントロールの列が自動的に生成されます。  
@@ -20,14 +20,14 @@ ms.locfileid: "56333366"
   
  複数をバインドすることもできます。<xref:System.Windows.Forms.DataGridView>関連テーブルのマスター/詳細リレーションシップを作成するコントロール。 この構成では、1 つのコントロールに親テーブルが表示され、別のコントロールには親テーブルの現在の行に関連する子テーブルの行のみが表示されます。 詳細については、「[方法 :表示では、データ フォーム アプリケーションを Windows に関連する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))します。  
   
- 次の手順が必要です、 **Windows アプリケーション**を含むフォームを使用してプロジェクトを<xref:System.Windows.Forms.DataGridView>コントロールまたはマスター/詳細リレーションシップの 2 つのコントロール。 このようなプロジェクトの開始方法の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
+ 次の手順が必要です、 **Windows アプリケーション**を含むフォームを使用してプロジェクトを<xref:System.Windows.Forms.DataGridView>コントロールまたはマスター/詳細リレーションシップの 2 つのコントロール。 このようなプロジェクトの開始方法の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>コントロールをデータ ソースにバインドするには  
   
-1.  スマート タグ グリフをクリックします (![スマート タグ グリフ](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、<xref:System.Windows.Forms.DataGridView>コントロール。  
+1.  スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、<xref:System.Windows.Forms.DataGridView>コントロール。  
   
 2.  **[データ ソースの選択]** オプションのドロップダウン矢印をクリックします。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "56333366"
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [方法: データをデータベースに接続するには](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [方法: 追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の順序を変更します。](../../../../docs/framework/winforms/controls/change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView 列の型を変更します。](../../../../docs/framework/winforms/controls/change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで列を固定します。](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列を非表示にします。](../../../../docs/framework/winforms/controls/hide-columns-in-the-datagrid-using-the-designer.md)
-- [方法: 読み取り専用デザイナーを使用して Windows フォーム DataGridView コントロールで列を作成します。](../../../../docs/framework/winforms/controls/make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [方法: 追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の順序を変更します。](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView 列の型を変更します。](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで列を固定します。](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列を非表示にします。](hide-columns-in-the-datagrid-using-the-designer.md)
+- [方法: 読み取り専用デザイナーを使用して Windows フォーム DataGridView コントロールで列を作成します。](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
 - [データ ソース ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [方法: Windows フォーム アプリケーションで関連データを表示します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

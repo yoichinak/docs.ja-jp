@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645484"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718026"
 ---
 # <a name="how-keyboard-input-works"></a>キーボード入力のしくみ
-Windows フォームは、Windows メッセージに応答してキーボード イベントを発生させることにより、キーボード入力を処理します。 多くの Windows フォーム アプリケーションは、キーボード イベントを処理することによってキーボード入力を排他的に処理します。 しかし、高度なキーボード入力のシナリオ (キーがコントロールに到達する前にインターセプトするなど) を実装するためには、キーボード メッセージのしくみについて理解することが必要です。 このトピックでは、Windows フォームが認識するキー データの種類について説明し、キーボード メッセージをルーティングする方法について概要を説明します。 キーボード イベントの詳細については、「[キーボード イベントの使用](../../../docs/framework/winforms/using-keyboard-events.md)」を参照してください。  
+Windows フォームは、Windows メッセージに応答してキーボード イベントを発生させることにより、キーボード入力を処理します。 多くの Windows フォーム アプリケーションは、キーボード イベントを処理することによってキーボード入力を排他的に処理します。 しかし、高度なキーボード入力のシナリオ (キーがコントロールに到達する前にインターセプトするなど) を実装するためには、キーボード メッセージのしくみについて理解することが必要です。 このトピックでは、Windows フォームが認識するキー データの種類について説明し、キーボード メッセージをルーティングする方法について概要を説明します。 キーボード イベントの詳細については、「[キーボード イベントの使用](using-keyboard-events.md)」を参照してください。  
   
 ## <a name="types-of-keys"></a>キーの種類  
  Windows フォームでは、キーボード入力を識別、ビット単位で表される仮想キー コードとして<xref:System.Windows.Forms.Keys>列挙体。 <xref:System.Windows.Forms.Keys>列挙型で、一連の押されたキーを 1 つの値を組み合わせることができます。 これらの値は、WM_KEYDOWN および WM_SYSKEYDOWN の Windows メッセージに付随する値になります。 大半の物理キーの押下を検出するには処理することによって、<xref:System.Windows.Forms.Control.KeyDown>または<xref:System.Windows.Forms.Control.KeyUp>イベント。 文字のキーのサブセットである、<xref:System.Windows.Forms.Keys>列挙し、WM_CHAR および WM_SYSCHAR の Windows メッセージに付随する値に対応します。 押されたキーの組み合わせ文字の場合、処理することにより、文字を検出できます、<xref:System.Windows.Forms.Control.KeyPress>イベント。 また、使用することができます<xref:Microsoft.VisualBasic.Devices.Keyboard>、どのキーが押されたを探索し、キーを送信し、Visual Basic プログラミング インターフェイスによって公開されています。 詳細については、「[Accessing the Keyboard (キーボードへのアクセス)](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)」を参照してください。  
@@ -63,9 +63,11 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 |タスク|メソッド|  
 |----------|------------|  
 |ナビゲーション キーをインターセプトし、発生させる、<xref:System.Windows.Forms.Control.KeyDown>イベント。 たとえば、テキスト ボックス内で Tab や Return を処理するなど。|<xref:System.Windows.Forms.Control.IsInputKey%2A> をオーバーライドします。 **注:** また、処理することができます、<xref:System.Windows.Forms.Control.PreviewKeyDown>イベントとセット<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>の<xref:System.Windows.Forms.PreviewKeyDownEventArgs>に`true`キーまたはキーの <xref:system.windows.forms.previewkeydowneventargs> の。|  
-|コントロールで特別な入力処理や移動処理を実行する。 たとえば、リスト コントロールで方向キーを使用して選択項目を変更するなど。|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A> をオーバーライドします。|  
+|コントロールで特別な入力処理や移動処理を実行する。 たとえば、リスト コントロールで方向キーを使用して選択項目を変更するなど。|
+  <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> をオーバーライドします。|  
 |ナビゲーション キーをインターセプトし、発生させる、<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、スピン ボックス コントロールで方向キーを複数回押して、項目の移動を加速するなど。|<xref:System.Windows.Forms.Control.IsInputChar%2A> をオーバーライドします。|  
-|実行中に入力またはナビゲーションの特別な処理を<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、リスト コントロール内で "r" キーを押し続けると、r の文字で始まる項目にスキップするなど。|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A> をオーバーライドします。|  
+|実行中に入力またはナビゲーションの特別な処理を<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、リスト コントロール内で "r" キーを押し続けると、r の文字で始まる項目にスキップするなど。|
+  <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> をオーバーライドします。|  
 |カスタムなニーモニックの処理を実行する。たとえば、ツール バーに配置されたオーナー描画ボタンのニーモニックを処理するなど。|<xref:System.Windows.Forms.Control.ProcessMnemonic%2A> をオーバーライドします。|  
   
 ## <a name="see-also"></a>関連項目
@@ -74,4 +76,4 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard オブジェクト](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [キーボードへのアクセス](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [キーボード イベントの使用](../../../docs/framework/winforms/using-keyboard-events.md)
+- [キーボード イベントの使用](using-keyboard-events.md)

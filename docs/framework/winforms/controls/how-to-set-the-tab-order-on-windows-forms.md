@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675213"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705880"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>方法: Windows フォーム上のタブ オーダーを設定します。
 タブ オーダーは、ユーザーが TAB キーを押して 1 つのコントロールからでフォーカスを移動する順序です。 各フォームには、独自のタブ オーダーがあります。 既定では、タブ オーダーは、コントロールを作成した順序と同じです。 タブ オーダーの番号は 0 から始まります。  
@@ -32,7 +32,7 @@ ms.locfileid: "54675213"
 2.  タブの順序を確立するために順番にコントロールをクリックします。  
   
     > [!NOTE]
-    >  タブ オーダーのコントロールの位置は 0 以上、任意の値に設定できます。 重複が発生して、2 つのコントロールの z オーダーが評価され、上位のコントロールが最初にタブ付き。 (Z オーダーは、フォームの z 軸 [奥行] に沿ってフォーム上のコントロールのビジュアル レイヤー。 Z オーダーを決定するコントロールは、他のコントロールの前にします。)Z オーダーの詳細については、次を参照してください。 [Windows フォーム上のオブジェクトの階層構造](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)します。  
+    >  タブ オーダーのコントロールの位置は 0 以上、任意の値に設定できます。 重複が発生して、2 つのコントロールの z オーダーが評価され、上位のコントロールが最初にタブ付き。 (Z オーダーは、フォームの z 軸 [奥行] に沿ってフォーム上のコントロールのビジュアル レイヤー。 Z オーダーを決定するコントロールは、他のコントロールの前にします。)Z オーダーの詳細については、次を参照してください。 [Windows フォーム上のオブジェクトの階層構造](how-to-layer-objects-on-windows-forms.md)します。  
   
 3.  完了したら、クリックして**タブ オーダー**上、**ビュー**タブ オーダー モードを終了するには、もう一度メニュー。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "54675213"
      いる A コントロール<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定された`false`コントロールをスキップして、TAB キーでコントロールを循環する場合でも、タブ オーダー内の位置を維持します。  
   
     > [!NOTE]
-    >  ラジオ ボタン グループには、実行時に停止する 1 つのタブがあります。 選択したボタン (ボタンは、その<xref:System.Windows.Forms.RadioButton.Checked%2A>プロパティに設定`true`) がその<xref:System.Windows.Forms.Control.TabStop%2A>プロパティが自動的に設定`true`他のボタンがありますが、その<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定`false`します。 グループ化の詳細については<xref:System.Windows.Forms.RadioButton>コントロールを参照してください[セットとして機能する Windows フォーム RadioButton コントロールをグループ化](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)します。  
+    >  ラジオ ボタン グループには、実行時に停止する 1 つのタブがあります。 選択したボタン (ボタンは、その<xref:System.Windows.Forms.RadioButton.Checked%2A>プロパティに設定`true`) がその<xref:System.Windows.Forms.Control.TabStop%2A>プロパティが自動的に設定`true`他のボタンがありますが、その<xref:System.Windows.Forms.Control.TabStop%2A>プロパティに設定`false`します。 グループ化の詳細については<xref:System.Windows.Forms.RadioButton>コントロールを参照してください[セットとして機能する Windows フォーム RadioButton コントロールをグループ化](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
-- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows フォーム コントロール](index.md)
+- [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
+- [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)

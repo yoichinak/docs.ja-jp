@@ -1,18 +1,18 @@
 ---
-title: アクティビティを作成する方法
+title: '方法: アクティビティを作成します。'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872958"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709017"
 ---
-# <a name="how-to-create-an-activity"></a>アクティビティを作成する方法
+# <a name="how-to-create-an-activity"></a>方法: アクティビティを作成します。
 
 アクティビティは [!INCLUDE[wf1](../../../includes/wf1-md.md)] の動作の中心的な単位です。 アクティビティの実行ロジックはマネージ コードで実装できます。または他のアクティビティを使用して実装できます。 このトピックでは、2 つのアクティビティを作成する方法について説明します。 最初のアクティビティは、コードを使用してその実行ロジックを実装する単純なアクティビティです。 2 番目のアクティビティの実装は他のアクティビティを使用して定義されています。 これらのアクティビティは、チュートリアルの次の手順で使用します。
 
@@ -42,8 +42,8 @@ ms.locfileid: "48872958"
 
 4.  既存の `ReadInt` 定義を次の定義に置き換えます。
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > `ReadInt` アクティビティは、コード アクティビティ テンプレートの既定値である <xref:System.Activities.NativeActivity%601> ではなく <xref:System.Activities.CodeActivity> から派生します。 <xref:System.Activities.CodeActivity%601> は、<xref:System.Activities.Activity%601.Result%2A> 引数を介して公開される 1 つの結果がアクティビティによって提供される場合に使用できますが、<xref:System.Activities.CodeActivity%601> ではブックマークの使用がサポートされていないため、<xref:System.Activities.NativeActivity%601> が使用されます。
@@ -74,7 +74,7 @@ ms.locfileid: "48872958"
 
 12. 型`Text`に、**名前**ボックスで、**で**から、**方向**ドロップダウン リストで、**文字列**から**引数の型**ドロップダウン リスト、およびキーを押します**Enter**引数を保存します。
 
-     これら 3 つの引数は、次の手順で、`Prompt` アクティビティに追加される <xref:System.Activities.Statements.WriteLine> アクティビティと `ReadInt` アクティビティの対応する引数にバインドされます。
+     これら 3 つの引数は、次の手順で、<xref:System.Activities.Statements.WriteLine> アクティビティに追加される `ReadInt` アクティビティと `Prompt` アクティビティの対応する引数にバインドされます。
 
 13. クリックして**引数**を閉じるアクティビティ デザイナーの左下で、**引数**ウィンドウ。
 
@@ -100,13 +100,13 @@ ms.locfileid: "48872958"
 
 ## <a name="next-steps"></a>次の手順
 
-これらのアクティビティを使用してワークフローを作成する方法については、チュートリアルでは、次の手順を参照してください[方法: ワークフローを作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)です。
+これらのアクティビティを使用してワークフローを作成する方法については、チュートリアルでは、次の手順を参照してください[方法。ワークフロー作成](how-to-create-a-workflow.md)です。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [カスタム アクティビティの設計と実装](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [ワークフローを作成する方法](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [カスタム アクティビティ デザイナーでの ExpressionTextBox の使用](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [カスタム アクティビティの設計と実装](designing-and-implementing-custom-activities.md)
+- [チュートリアル入門](getting-started-tutorial.md)
+- [方法: ワークフローを作成します。](how-to-create-a-workflow.md)
+- [カスタム アクティビティ デザイナーでの ExpressionTextBox の使用](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

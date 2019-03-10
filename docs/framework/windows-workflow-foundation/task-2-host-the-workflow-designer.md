@@ -2,12 +2,12 @@
 title: タスク 2:ワークフロー デザイナーをホスティングします。
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572774"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708640"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>タスク 2:ワークフロー デザイナーをホスティングします。
 このトピックでは、のインスタンスをホストするための手順を説明します、 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) アプリケーションでします。  
@@ -16,9 +16,10 @@ ms.locfileid: "54572774"
   
 ### <a name="to-host-the-workflow-designer"></a>ワークフロー デザイナーをホストするには  
   
-1.  HostingApplication プロジェクトを開きますで作成した[タスク 1。新しい Windows Presentation Foundation アプリケーションを作成する](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)します。  
+1.  HostingApplication プロジェクトを開きますで作成した[タスク 1。新しい Windows Presentation Foundation アプリケーションを作成する](task-1-create-a-new-wpf-app.md)します。  
   
-2.  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] が見やすくなるように、ウィンドウのサイズを調整します。 これを行うには、次のように選択します**MainWindow**デザイナーで表示 f4 キーを押して、**プロパティ**ウィンドウで、し、、**レイアウト**ありますセクションで、設定、**幅。** 600 の値に、**高さ**350 の値にします。  
+2.  
+  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] が見やすくなるように、ウィンドウのサイズを調整します。 これを行うには、次のように選択します**MainWindow**デザイナーで表示 f4 キーを押して、**プロパティ**ウィンドウで、し、、**レイアウト**ありますセクションで、設定、**幅。** 600 の値に、**高さ**350 の値にします。  
   
 3.  選択して、グリッド名を設定、**グリッド**デザイナー内のパネル (内のボックスをクリックして、 **MainWindow**) と設定、**名前**の上部にあるプロパティ、 **プロパティ**ウィンドウを「grid1」.  
   
@@ -97,9 +98,10 @@ ms.locfileid: "54572774"
         }  
         ```  
   
-         アクティビティ デザイナーの登録の詳細については、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)です。  
+         アクティビティ デザイナーの登録の詳細については、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)です。  
   
-    5.  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
+    5.  
+  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
   
         ```csharp  
         public MainWindow()  
@@ -119,9 +121,9 @@ ms.locfileid: "54572774"
   
 9. F5 キーを押して、ソリューションをビルドおよび実行します。  
   
-10. 参照してください[タスク 3。ツールボックス ペインと PropertyGrid ペインの作成](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)を追加する方法について**ツールボックス**と**PropertyGrid**を再ホストされたワークフロー デザイナーをサポートします。  
+10. 参照してください[タスク 3。ツールボックス ペインと PropertyGrid ペインの作成](task-3-create-the-toolbox-and-propertygrid-panes.md)を追加する方法について**ツールボックス**と**PropertyGrid**を再ホストされたワークフロー デザイナーをサポートします。  
   
 ## <a name="see-also"></a>関連項目
-- [ワークフロー デザイナーのホスト変更](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
+- [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](task-1-create-a-new-wpf-app.md)
+- [タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。](task-3-create-the-toolbox-and-propertygrid-panes.md)

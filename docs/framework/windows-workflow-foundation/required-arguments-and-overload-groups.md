@@ -2,12 +2,12 @@
 title: 必須の引数とオーバーロード グループ
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452902"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707873"
 ---
 # <a name="required-arguments-and-overload-groups"></a>必須の引数とオーバーロード グループ
 アクティビティは、アクティビティの実行を有効にするためには特定の引数をバインドする必要があるように構成できます。 `RequiredArgument` 属性は、アクティビティの特定の引数が必須であることを示す場合に使用します。また、`OverloadGroup` 属性は、必須の引数のカテゴリをグループ化する場合に使用します。 これらの属性を使用することで、アクティビティ作成者は、単純なアクティビティ検証の構成も複雑な構成も適用できます。  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **必要なアクティビティ引数 'Operand1' の値が指定されませんでした。**  
 > [!NOTE]
-> 詳細を確認して検証エラーおよび警告の処理については、次を参照してください。[アクティビティの検証を呼び出す](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)します。  
+> 詳細を確認して検証エラーおよび警告の処理については、次を参照してください。[アクティビティの検証を呼び出す](invoking-activity-validation.md)します。  
   
 ## <a name="using-overload-groups"></a>オーバーロード グループの使用
 
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  このアクティビティの目的は、米国内の場所を指定することです。 これを行うために、アクティビティのユーザーは、3 つある引数グループの 1 つを使用して場所を指定できます。 有効な組み合わせで引数を指定するために、3 種類のオーバーロード グループを定義しています。 `G1` には `Latitude` および `Longitude` の引数が含まれます。 `G2` には `Street`、`City`、および `State` が含まれます。 `G3` には `Street` および `Zip` が含まれます。 `Name` も必要な引数ですが、オーバーロード グループの一部ではありません。 このアクティビティが有効であるためには、`Name` が、1 つのオーバーロード グループのみに含まれるすべての引数とバインドされている必要があります。  
   
- 取得した次の例では、[データベース アクセス アクティビティ](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)サンプルでは、2 つのオーバー ロード グループがある:`ConnectionString`と`ConfigFileSectionName`します。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
+ 取得した次の例では、[データベース アクセス アクティビティ](./samples/database-access-activities.md)サンプルでは、2 つのオーバー ロード グループがある:`ConnectionString`と`ConfigFileSectionName`します。 このアクティビティが有効であるためには、引数 `ProviderName` および `ConnectionString` がバインドされているか、または引数 `ConfigName` がバインドされている必要があります。両方がバインドされている場合は無効です。  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

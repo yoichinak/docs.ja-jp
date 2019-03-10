@@ -17,12 +17,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: a1317f34b39c5689e285f8822fff9bfcc42db1d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680323"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708302"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>方法: Windows フォームの Label コントロールでのアクセス キーを作成します。
 Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールのアクセス キーを定義するコントロールを使用できます。 ラベル コントロールにアクセス キーを定義するときに、ユーザーは、ALT キーとそれに続くタブ オーダー内でコントロールにフォーカスを移動する指定した文字に押すことができます。 ラベルは、フォーカスを受け取ることはできません、ために、タブ オーダー内で次のコントロールに自動的にフォーカスが移動します。 この手法を使用して、テキスト ボックス、コンボ ボックス、リスト ボックス、およびデータ グリッドをアクセス キーを割り当てます。  
@@ -37,7 +37,7 @@ Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールの
   
 2.  ラベルの設定<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`します。  
   
-3.  アンパサンド (&) は、ラベルの<xref:System.Windows.Forms.Label.Text%2A>ラベルのアクセス キーを割り当てるプロパティを。 詳細については、次を参照してください。 [Windows のフォーム コントロールのアクセス キーを作成する](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)します。  
+3.  アンパサンド (&) は、ラベルの<xref:System.Windows.Forms.Label.Text%2A>ラベルのアクセス キーを割り当てるプロパティを。 詳細については、次を参照してください。 [Windows のフォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)します。  
   
     > [!NOTE]
     >  アクセス キーの作成に使用するのではなく、ラベル コントロールにアンパサンドを表示することがあります。 これは、アンパサンドがデータに含まれるレコード セット内のフィールドにラベル コントロールをバインドする場合に発生する可能性があります。 ラベル コントロールでは、アンパサンドを表示するには、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`false`します。 アンパサンドを表示しても、アクセス キーがある場合は、設定、<xref:System.Windows.Forms.Label.UseMnemonic%2A>プロパティを`true`とアクセス キーは 1 つのアンパサンド (&)、アンパサンドを 2 つのアンパサンドを表示します。  
@@ -64,6 +64,6 @@ Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールの
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Label コントロールの概要](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)
-- [Label コントロール](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Label コントロールの概要](label-control-overview-windows-forms.md)
+- [Label コントロール](label-control-windows-forms.md)
