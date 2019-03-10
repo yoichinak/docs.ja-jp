@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 475e57e8bfdd5f3296c6af0fb20a472c729ea75c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1626cea581e5c180665d0ce805dea3e67f27a05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540716"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714360"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>方法: アプリケーション セッション間での設定の値を変更します。
 アプリケーションをコンパイルおよび展開後に、アプリケーション セッション間での設定の値を変更する可能性があります。 たとえば、適切なデータベースの場所を指す接続文字列を変更する可能性があります。 アプリケーションをコンパイルおよび展開した後は、デザイン時ツールを使用できない、ために、ファイルに手動で設定値を変更する必要があります。  
@@ -30,5 +30,5 @@ ms.locfileid: "54540716"
 3.  設定の新しい値を入力し、ファイルを保存します。  
   
 ## <a name="see-also"></a>関連項目
-- [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
+- [アプリケーション設定の概要](application-settings-overview.md)

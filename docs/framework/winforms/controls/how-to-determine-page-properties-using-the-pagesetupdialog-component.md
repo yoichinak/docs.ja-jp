@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713539"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713203"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>方法: PageSetupDialog コンポーネントを使用してページのプロパティを決定します。
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) コンポーネントは、レイアウト、用紙サイズ、およびその他のページ レイアウトの選択肢をドキュメントのユーザーに示します。  
+[PageSetupDialog](pagesetupdialog-component-windows-forms.md) コンポーネントは、レイアウト、用紙サイズ、およびその他のページ レイアウトの選択肢をドキュメントのユーザーに示します。  
   
  <xref:System.Drawing.Printing.PrintDocument> クラスのインスタンスを指定する必要があります。これは、印刷するドキュメントです。 さらに、ユーザーはコンピューターにローカル プリンターまたはネットワーク プリンターをインストールしておく必要があります。これを基にして、 <xref:System.Windows.Forms.PageSetupDialog> コンポーネントはユーザーに示すページ書式設定選択肢の一部を決定します。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713539"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [方法: 標準の Windows フォーム印刷ジョブを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog コンポーネント](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [方法: 標準の Windows フォーム印刷ジョブを作成します。](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog コンポーネント](pagesetupdialog-component-windows-forms.md)

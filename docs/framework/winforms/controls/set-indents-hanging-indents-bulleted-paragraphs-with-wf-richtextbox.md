@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492424"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713032"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>方法: インデント、ぶら下げインデント、および箇条書き段落を Windows フォームの RichTextBox コントロールでを設定します。
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。 設定して箇条書きとして選択した段落を書式設定することができます、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。 使用することも、 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、 <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>、および<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>左側と、コントロールの右端と左端の他の行のテキストの段落のインデントを設定するプロパティ。  
@@ -70,5 +70,5 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

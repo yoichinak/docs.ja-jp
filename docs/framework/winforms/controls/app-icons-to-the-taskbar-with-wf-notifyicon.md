@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 925134e4a0317322d7a4f4cfdc9ac8e3780cf9e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650694"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714256"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。
 Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネントは、タスク バーの状態通知領域に 1 つのアイコンを表示します。 を、ステータス領域に複数のアイコンを表示するには、複数がする必要があります<xref:System.Windows.Forms.NotifyIcon>フォーム上のコンポーネント。 コントロールに表示されるアイコンを設定するには、使用、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 コードを記述することも、<xref:System.Windows.Forms.NotifyIcon.DoubleClick>ユーザー アイコンをダブルクリックしたときの動作のためのイベント ハンドラー。 たとえば、アイコンで表される、バック グラウンド プロセスを構成するユーザーの表示 ダイアログ ボックスを行うことができます。  
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
   
 ### <a name="to-set-the-icon"></a>アイコンを設定するには  
   
-1.  値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、 **プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
+1.  値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、 **プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
   
 2.  <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true`に設定します。  
   
@@ -74,6 +74,6 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
-- [NotifyIcon コンポーネント](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [NotifyIcon コンポーネントの概要](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
+- [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)

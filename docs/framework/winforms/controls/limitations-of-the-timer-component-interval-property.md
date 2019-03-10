@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: d280d14b116a356e1d9da94ef61d00ccae734b94
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f564a4ce7fa2d9b8ea5446f2cf6bd016db054dd9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664121"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724389"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows フォームの Timer コンポーネントの Interval プロパティの制限
 Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには、<xref:System.Windows.Forms.Timer.Interval%2A>と次の 1 つのタイマー イベントの間の経過時間をミリ秒数を指定するプロパティ。 タイマーは引き続き受信コンポーネントが無効にしない限り、<xref:System.Windows.Forms.Timer.Tick>ほぼ一定の時間間隔でイベント。  
@@ -30,5 +30,5 @@ Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Timer>
-- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Timer コンポーネント](timer-component-windows-forms.md)
+- [Timer コンポーネントの概要](timer-component-overview-windows-forms.md)

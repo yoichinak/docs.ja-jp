@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: cc3ec2dd0bdd7f83b2cd6b8cfaf0cad37238707b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e44b2944a24ea4201fda2f0891d74c672a64a4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514817"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718939"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>方法: Windows フォームで ToolStrip コントロールの AutoComplete を有効にします。
 次の手順を組み合わせて、<xref:System.Windows.Forms.ToolStripLabel>で、<xref:System.Windows.Forms.ToolStripComboBox>を削除できる最近など、アイテムの一覧を表示する Web サイトにアクセスします。 リスト内の項目のいずれかの最初の文字に一致する文字を入力すると、項目がすぐに表示されます。  
@@ -95,6 +95,6 @@ ms.locfileid: "54514817"
 - <xref:System.Windows.Forms.ToolStripComboBox>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteMode%2A>
 - <xref:System.Windows.Forms.ToolStripComboBox.AutoCompleteSource%2A>
-- [ToolStrip コントロールの概要](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip コントロールのアーキテクチャ](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip テクノロジの概要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
+- [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

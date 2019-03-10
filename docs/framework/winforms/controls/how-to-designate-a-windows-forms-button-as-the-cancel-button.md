@@ -9,12 +9,12 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
-ms.openlocfilehash: 74d025677682735fc7f1c68116b2364887f0519c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8eacea0d21159d30d48e48be3093ddf8ca3d7d7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701470"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722384"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>方法: Windows フォームの Button をキャンセル ボタンとして指定します。
 任意の Windows フォームで指定することができます、<xref:System.Windows.Forms.Button>コントロールをキャンセル ボタン。 ユーザーがフォーム上の他のコントロールにフォーカスがあるか、ESC キーを押すと [キャンセル] ボタンをクリックします。 このようなボタンは通常、ユーザーは、すばやく操作をコミットせずに操作を終了できるようにする設定します。  
@@ -46,8 +46,8 @@ ms.locfileid: "54701470"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
-- [Button コントロールの概要](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Windows フォームの Button コントロールを選択する方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [方法: Windows フォームのボタン クリックに応答するには](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [方法: Windows フォームの Button を承認ボタンとして指定します。](../../../../docs/framework/winforms/controls/how-to-designate-a-windows-forms-button-as-the-accept-button.md)
-- [Button コントロール](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button コントロールの概要](button-control-overview-windows-forms.md)
+- [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
+- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォームの Button を承認ボタンとして指定します。](how-to-designate-a-windows-forms-button-as-the-accept-button.md)
+- [Button コントロール](button-control-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 2e00b0b9b22bc8dcdd1c63494f1bc5854bc4f033
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632011"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714126"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>方法: アルファ ブレンドを制御する複合モードを使用して、
 次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。  
@@ -34,28 +34,28 @@ ms.locfileid: "54632011"
   
  次の図は、コード例の出力を示します。 省略記号がバック グラウンドとブレンドされたが、相互ブレンドしないことに注意してください。  
   
- ![コピーをソース](../../../../docs/framework/winforms/advanced/media/sourcecopy.png "sourcecopy")  
+ ![コピーをソース](./media/sourcecopy.png "sourcecopy")  
   
  コード例には、このステートメントが含まれています。  
   
- [!code-csharp[System.Drawing.AlphaBlending#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.AlphaBlending#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.AlphaBlending#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.AlphaBlending#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#41)]  
   
  およびバック グラウンドでブレンドする省略記号を設定する場合は、そのステートメントを次のように変更します。  
   
- [!code-csharp[System.Drawing.AlphaBlending#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.AlphaBlending#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.AlphaBlending#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.AlphaBlending#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#42)]  
   
  次の図は、変更後のコードの出力を示します。  
   
- ![ソース経由で](../../../../docs/framework/winforms/advanced/media/sourceover.png "sourceover")  
+ ![ソース経由で](./media/sourceover.png "sourceover")  
   
- [!code-csharp[System.Drawing.AlphaBlending#43](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
- [!code-vb[System.Drawing.AlphaBlending#43](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
+ [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
+ [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Color.FromArgb%2A>
-- [アルファ ブレンドの直線と塗りつぶし](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)

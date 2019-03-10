@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643573"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708341"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成します。
 *単純バインディング*コントロールでデータセット テーブルの列の値などの 1 つのデータ要素を表示することができます。 できます単純にバインドするコントロールの任意のプロパティのデータ値にします。  
@@ -20,7 +20,7 @@ ms.locfileid: "54643573"
   
 ### <a name="to-simple-bind-a-control"></a>単純なコントロールをバインドする  
   
-1.  データ ソースに接続します。 詳細については、次を参照してください。[データ ソースに接続する](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)します。  
+1.  データ ソースに接続します。 詳細については、次を参照してください。[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)します。  
   
 2.  フォームのコントロールを選択し、表示、**プロパティ**ウィンドウ。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54643573"
   
      最も頻繁にバインドされるプロパティは、下に表示されます、 **(DataBindings)** プロパティ。 たとえば、ほとんどのコントロールで、**テキスト**プロパティが最も頻繁にバインドされています。  
   
-4.  たいプロパティのバインドが一般にバインドされるプロパティのいずれかをクリックして、**省略記号**ボタン (![VisualStudioEllipsesButton スクリーン ショット](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) で、 **(詳細)** ボックスを表示する、**フォーマットと詳細バインド**そのコントロールのプロパティの完全な一覧がダイアログ ボックス。  
+4.  たいプロパティのバインドが一般にバインドされるプロパティのいずれかをクリックして、**省略記号**ボタン (![VisualStudioEllipsesButton スクリーン ショット](./media/vbellipsesbutton.png "vbEllipsesButton")) で、 **(詳細)** ボックスを表示する、**フォーマットと詳細バインド**そのコントロールのプロパティの完全な一覧がダイアログ ボックス。  
   
 5.  バインドし、下のドロップダウン矢印をクリックします。 プロパティを選択**バインド**します。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "54643573"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Binding>
-- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547788"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718975"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>方法: 特定の日で、Windows で太字で表示フォームの MonthCalendar コントロール
 Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールは、単数形の日付または繰り返しごとに、太字での日を表示できます。 休日や週末などの特別な日に注目させるためにこれを行う場合があります。  
@@ -128,7 +128,7 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [MonthCalendar コントロール](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
-- [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択します。](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [方法: Windows フォーム MonthCalendar コントロールの外観を変更します。](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
-- [方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示します。](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)
+- [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択します。](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [方法: Windows フォーム MonthCalendar コントロールの外観を変更します。](how-to-change-monthcalendar-control-appearance.md)
+- [方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示します。](display-more-than-one-month-wf-monthcalendar-control.md)

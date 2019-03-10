@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717909"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールのサイズ変更オプション
 <xref:System.Windows.Forms.DataGridView> 行、列、およびヘッダーは、多くの異なるオカレンスの結果としてのサイズを変更できます。 次の表では、これらの出現回数を示します。  
@@ -61,7 +61,7 @@ ms.locfileid: "54536309"
 ## <a name="automatic-sizing"></a>自動サイズ変更  
  自動サイズ変更の 2 種類があります、<xref:System.Windows.Forms.DataGridView>コントロール: 列フィル モードとコンテンツ ベースの自動サイズ変更します。  
   
- 列フィル モードでは、コントロールの表示領域の幅に合わせてコントロールで、表示する列が発生します。 このモードの詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールで列の塗りつぶしモード](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)します。  
+ 列フィル モードでは、コントロールの表示領域の幅に合わせてコントロールで、表示する列が発生します。 このモードの詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールで列の塗りつぶしモード](column-fill-mode-in-the-windows-forms-datagridview-control.md)します。  
   
  行、列、およびヘッダーのサイズに合わせてセルの内容を自動的に調整を構成することもできます。 この場合、サイズ調整は、セルの内容が変更されるたびに発生します。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536309"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Windows フォーム DataGridView コントロール内の列と行のサイズ変更](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールの列フィル モード](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロール内の列と行のサイズ変更](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールの列フィル モード](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールのサイズ変更モードを設定します。](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

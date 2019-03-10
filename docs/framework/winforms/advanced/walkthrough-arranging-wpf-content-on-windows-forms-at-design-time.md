@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 543546de4f9b93deb5fa70c98608246e9c06e4f7
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304558"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712462"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時に Windows フォームでの WPF コンテンツの配置
 このチュートリアルでは、固定やスナップ線などの Windows フォームのレイアウト機能を使用して、Windows Presentation Foundation (WPF) コントロールを配置する方法を説明します。
@@ -54,7 +54,7 @@ ms.locfileid: "56304558"
   
 #### <a name="to-create-wpf-controls"></a>WPF コントロールを作成するには  
   
-1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時に Windows フォームで新しい WPF コンテンツを作成する](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
+1.  新しい WPF <xref:System.Windows.Controls.UserControl> をプロジェクトに追加します。 コントロール型の既定の名前である `UserControl1.xaml` を使用します。 詳細については、「[チュートリアル:デザイン時に Windows フォームで新しい WPF コンテンツを作成する](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)します。  
   
 2.  デザイン ビューで `UserControl1` が選択されていることを確認します。 詳細については、「[方法 :選択し、デザイン サーフェイス上の要素の移動](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))します。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56304558"
      両方の <xref:System.Windows.Forms.Integration.ElementHost> コントロールが、新しいレイアウトに収まるようにサイズ変更されました。  
   
 ## <a name="using-snaplines-to-align-wpf-controls"></a>WPF コントロールを配置するスナップ線を使用する  
- スナップ線により、フォームのコントロールの配置を簡単に調整できます。 スナップ線を使用して、WPF コントロールも配置することができます。 詳細については、「[チュートリアル:フォームのスナップ線を使用して Windows 上のコントロール](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
+ スナップ線により、フォームのコントロールの配置を簡単に調整できます。 スナップ線を使用して、WPF コントロールも配置することができます。 詳細については、「[チュートリアル:フォームのスナップ線を使用して Windows 上のコントロール](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>WPF コントロールを配置するスナップ線を使用するには  
   
@@ -150,14 +150,14 @@ ms.locfileid: "56304558"
   
      3 つすべての <xref:System.Windows.Forms.Integration.ElementHost> コントロールのサイズを適切に変更します。  
   
-     詳細については、「[方法 :固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)します。  
+     詳細については、「[方法 :固定およびドッキング TableLayoutPanel コントロールで子コントロール](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [デザイン時にコントロールをフォームの端を揃える](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [WPF コントロールの使用](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: デザイン時にコントロールをフォームの端を揃える](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [移行と相互運用性](../../wpf/advanced/migration-and-interoperability.md)
+- [WPF コントロールの使用](using-wpf-controls.md)
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

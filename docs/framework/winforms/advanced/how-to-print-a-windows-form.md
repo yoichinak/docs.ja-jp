@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 5e672f40797a90111daefed0be74c941d4cc37b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628137"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714152"
 ---
 # <a name="how-to-print-a-windows-form"></a>方法: Windows フォームを印刷します。
 開発プロセスの一環として、通常は印刷する、Windows フォームのコピー。 次のコード例を使用して、現在のフォームのコピーを印刷する方法を示しています、<xref:System.Drawing.Graphics.CopyFromScreen%2A>メソッド。  
   
 ## <a name="example"></a>例  
- [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
- [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
+ [!code-csharp[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/CS/Form1.cs#1)]
+ [!code-vb[System.Drawing.Graphics.CopyFromScreen#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Graphics.CopyFromScreen/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  これは、完全なコード例を含む、`Main`メソッド。  
@@ -39,5 +39,5 @@ ms.locfileid: "54628137"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Printing.PrintDocument>
-- [方法: GDI + を使用したイメージをレンダリングします。](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
-- [方法: Windows フォームでグラフィックスを印刷します。](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)
+- [方法: Windows フォームでグラフィックスを印刷します。](how-to-print-graphics-in-windows-forms.md)

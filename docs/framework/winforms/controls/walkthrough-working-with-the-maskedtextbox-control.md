@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: a81a715578e3cbbe576f1513770ff86f08807fdf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9633f2f871d08b70d6286f510a9ba5cac78ae529
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615086"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703081"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>チュートリアル: MaskedTextBox コントロールの操作
 このチュートリアルでは、以下のタスクを行います。  
@@ -126,4 +126,4 @@ ms.locfileid: "54615086"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [MaskedTextBox コントロール](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox コントロール](maskedtextbox-control-windows-forms.md)

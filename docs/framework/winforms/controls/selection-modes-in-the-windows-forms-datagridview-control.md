@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: c512a296f618ab32781dd8718a47c4b20fd7f54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745910"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717298"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの選択モード
 アプリケーション内のユーザー選択に基づいてアクションを実行したい場合があります、<xref:System.Windows.Forms.DataGridView>コントロール。 によって、アクション可能な選択の種類を制限します。 たとえば、アプリケーションは、現在選択されているレコードのレポートを印刷できます。 ここでは、構成にする可能性があります、<xref:System.Windows.Forms.DataGridView>コントロールに常に、行内でクリックしてできるようには、全体の行を選択し、一度に 1 つだけその行を選択できるようにします。  
@@ -49,5 +49,5 @@ ms.locfileid: "54745910"
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

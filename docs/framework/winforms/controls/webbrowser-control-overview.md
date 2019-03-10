@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610982"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710096"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser コントロールの概要
 <xref:System.Windows.Forms.WebBrowser>コントロールでは、WebBrowser ActiveX コントロールのマネージ ラッパーが用意されています。 マネージ ラッパーを使用して、Windows フォーム クライアント アプリケーションに Web ページを表示できます。 使用することができます、<xref:System.Windows.Forms.WebBrowser>アプリケーションか、Internet Explorer の Web 閲覧機能を複製するコントロールが既定の Internet Explorer の機能を無効にしてとして単純な HTML ドキュメント ビューアー コントロールを使用します。 DHTML ベースのユーザー インターフェイス要素をフォームに追加しにホストされているという事実を非表示にするコントロールを使用することもできます、<xref:System.Windows.Forms.WebBrowser>コントロール。 この方法では、Web コントロールと 1 つのアプリケーションでの Windows フォーム コントロールをシームレスに結合できます。  
@@ -52,9 +52,9 @@ ms.locfileid: "54610982"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [方法: WebBrowser コントロールで URL に移動します](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [方法: WebBrowser コントロールを使用して印刷します。](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [方法: DHTML コードとクライアント アプリケーション コード間の双方向通信を実装します。](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [WebBrowser セキュリティ](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [方法: WebBrowser コントロールを使用して印刷します。](how-to-print-with-a-webbrowser-control.md)
+- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [方法: DHTML コードとクライアント アプリケーション コード間の双方向通信を実装します。](implement-two-way-com-between-dhtml-and-client.md)
+- [WebBrowser セキュリティ](webbrowser-security.md)

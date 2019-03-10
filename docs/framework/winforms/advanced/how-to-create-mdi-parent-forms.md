@@ -5,16 +5,17 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 1cc3d813b77ddf8220242f4a1dfc7fe39f9cb520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722985"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>方法: MDI 親フォームを作成します。
 > [!IMPORTANT]
->  このトピックでは、既に <xref:System.Windows.Forms.MainMenu> コントロールで置き換えられている <xref:System.Windows.Forms.MenuStrip> コントロールを使用します。 <xref:System.Windows.Forms.MainMenu> コントロールは、下位互換性と将来の使用 (必要に応じて) の両方のために保持されています。  使用して親フォームの MDI の作成については、<xref:System.Windows.Forms.MenuStrip>を参照してください[方法。MenuStrip を MDI ウィンドウのリストを作成する](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)します。  
+>  このトピックでは、既に <xref:System.Windows.Forms.MainMenu> コントロールで置き換えられている <xref:System.Windows.Forms.MenuStrip> コントロールを使用します。 
+  <xref:System.Windows.Forms.MainMenu> コントロールは、下位互換性と将来の使用 (必要に応じて) の両方のために保持されています。  使用して親フォームの MDI の作成については、<xref:System.Windows.Forms.MenuStrip>を参照してください[方法。MenuStrip を MDI ウィンドウのリストを作成する](../controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)します。  
   
  マルチドキュメント インターフェイス (MDI) アプリケーションの基盤となるのは、MDI 親フォームです。 これは、サブウィンドウである MDI 子ウィンドウを含むフォームで、ユーザーは MDI 子ウィンドウで MDI アプリケーションと対話します。 MDI 親フォームの作成は簡単で、Windows フォーム デザイナーまたはプログラムで作成できます。  
   
@@ -33,11 +34,11 @@ ms.locfileid: "54512568"
   
      最初のメニューでは、実行時にメニュー項目を作成したり非表示にしたりします。2 つ目のメニューでは、開いている MDI 子ウィンドウを追跡します。 これで、MDI 親ウィンドウの作成が完了しました。  
   
-4.  **F5** キーを押してアプリケーションを実行します。 MDI 親フォーム内で動作する windows MDI 子フォームを作成する方法の詳細については、次を参照してください。[方法。MDI 子フォームを作成](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)です。  
+4.  **F5** キーを押してアプリケーションを実行します。 MDI 親フォーム内で動作する windows MDI 子フォームを作成する方法の詳細については、次を参照してください。[方法。MDI 子フォームを作成](how-to-create-mdi-child-forms.md)です。  
   
 ## <a name="see-also"></a>関連項目
-- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [方法: MDI 子フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子を決定します。](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
+- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
+- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)

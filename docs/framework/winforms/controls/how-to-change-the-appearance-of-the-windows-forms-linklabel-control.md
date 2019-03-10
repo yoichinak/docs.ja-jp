@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 2e36bdc051ec83985bd508499640c9f97bdefc91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632128"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717727"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールの外観を変更します。
 によって表示されるテキストを変更することができます、<xref:System.Windows.Forms.LinkLabel>さまざまな目的に合わせてコントロール。 たとえば、下線付きで特定の色で表示するテキストを設定してテキストをクリックすることをユーザーに示すために一般的なプラクティスを勧めします。 ユーザーは、テキストをクリックすると、異なる色に色を変更します。 この動作を制御するには、5 つの異なるプロパティを設定することができます。 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>、 <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>、 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>、および<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティ。  
@@ -126,6 +126,6 @@ ms.locfileid: "54632128"
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [LinkLabel コントロールの概要](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール](../../../../docs/framework/winforms/controls/link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [LinkLabel コントロール](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
+- [方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [LinkLabel コントロール](linklabel-control-windows-forms.md)

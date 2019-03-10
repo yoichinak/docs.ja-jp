@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512555"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714328"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>方法: アクティブな MDI 子を決定します。
 場合によっては、現在アクティブな子フォームでフォーカスのあるコントロールを操作するコマンドを指定するします。 たとえば、子フォームのテキスト ボックスから選択したテキストをクリップボードにコピーするとします。 クリップボードを使用して、選択したテキストをコピーするプロシージャを作成すると、<xref:System.Windows.Forms.Control.Click>の編集 メニューの標準的なコピー メニュー項目のイベント。  
@@ -30,7 +30,7 @@ ms.locfileid: "54512555"
 1.  メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)します。  
+    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ ms.locfileid: "54512555"
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
+- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
-ms.openlocfilehash: 46df8ad1047d34c79348e1db7177d3211b181677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 046713745e7de18cefe5b4883af73034af2cfb31
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717052"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712014"
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView コントロールの概要 (Windows フォーム)
 
@@ -19,14 +19,15 @@ Windows フォームの <xref:System.Windows.Forms.TreeView> コントロール�
 
 ## <a name="key-properties"></a>主要プロパティ
 
-<xref:System.Windows.Forms.TreeView> コントロールの主要プロパティは、<xref:System.Windows.Forms.TreeView.Nodes%2A> および <xref:System.Windows.Forms.TreeView.SelectedNode%2A> です。 <xref:System.Windows.Forms.TreeView.Nodes%2A> プロパティには、ツリー ビューの最上位のノードの一覧が含まれています。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> プロパティは、現在選択されているノードを設定します。 ノードの横にあるアイコンを表示することができます。 コントロールはツリー ビューの <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティで <xref:System.Windows.Forms.ImageList> という名前のイメージを使用します。 <xref:System.Windows.Forms.TreeView.ImageIndex%2A> プロパティは、ツリー ビューでノードの既定のイメージを設定します。 イメージを表示する方法の詳細については、次を参照してください。[方法。Windows フォーム TreeView コントロール アイコンを設定](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)します。 使用できる標準のイメージの大規模なライブラリにアクセス権がある Visual Studio 2005 を使用している場合、<xref:System.Windows.Forms.TreeView>コントロール。
+<xref:System.Windows.Forms.TreeView> コントロールの主要プロパティは、<xref:System.Windows.Forms.TreeView.Nodes%2A> および <xref:System.Windows.Forms.TreeView.SelectedNode%2A> です。 <xref:System.Windows.Forms.TreeView.Nodes%2A> プロパティには、ツリー ビューの最上位のノードの一覧が含まれています。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> プロパティは、現在選択されているノードを設定します。 ノードの横にあるアイコンを表示することができます。 コントロールはツリー ビューの <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティで <xref:System.Windows.Forms.ImageList> という名前のイメージを使用します。 
+  <xref:System.Windows.Forms.TreeView.ImageIndex%2A> プロパティは、ツリー ビューでノードの既定のイメージを設定します。 イメージを表示する方法の詳細については、次を参照してください。[方法。Windows フォーム TreeView コントロール アイコンを設定](how-to-set-icons-for-the-windows-forms-treeview-control.md)します。 使用できる標準のイメージの大規模なライブラリにアクセス権がある Visual Studio 2005 を使用している場合、<xref:System.Windows.Forms.TreeView>コントロール。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.TreeView>
-- [TreeView コントロール](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [方法: Windows フォーム TreeView コントロールのアイコンを設定します。](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [方法: 追加して、Windows フォーム TreeView コントロールでノードを削除](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [方法: クリックしてされた TreeView ノードを決定します。](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [TreeView コントロール](treeview-control-windows-forms.md)
+- [方法: Windows フォーム TreeView コントロールのアイコンを設定します。](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [方法: 追加して、Windows フォーム TreeView コントロールでノードを削除](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [方法: クリックしてされた TreeView ノードを決定します。](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。](add-custom-information-to-a-treeview-or-listview-control-wf.md)

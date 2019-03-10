@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 854f54454c0c88f965d9ac8240c11f6821f0c64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594565"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725039"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog コンポーネントの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.FontDialog>コンポーネントは構成済みのダイアログ ボックス、標準の Windows である**フォント** ダイアログ ボックスが、システムに現在インストールされているフォントを公開するために使用します。 フォントの選択ダイアログ ボックスを構成する代わりに、シンプルなソリューションとして、Windows ベースのアプリケーション内で使用します。  
@@ -25,4 +25,4 @@ Windows フォーム<xref:System.Windows.Forms.FontDialog>コンポーネント�
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.FontDialog>
-- [FontDialog コンポーネント](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [FontDialog コンポーネント](fontdialog-component-windows-forms.md)

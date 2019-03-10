@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 3f789a0e00b1d235fe61b93190ae167250113846
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500221"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710447"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: 追加および削除項目、Windows からフォーム ComboBox、ListBox、または CheckedListBox コントロール
 項目は、Windows フォームのコンボ ボックス、リスト ボックスに追加できるまたはこれらのコントロールは、さまざまなデータ ソースにバインドできるため、さまざまな方法でリスト ボックスをオンにします。 ただし、このトピックでは、最も簡単な方法について説明し、データ バインドは必要ありません。 表示される項目が文字列では、通常、ただし、すべてのオブジェクトを使用できます。 コントロールに表示されるテキストは、オブジェクトのによって返される値`ToString`メソッド。  
@@ -140,6 +140,6 @@ ms.locfileid: "54500221"
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [方法: Windows の内容を並べ替えるフォーム ComboBox、ListBox、または CheckedListBox コントロール](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [ListBox の代わりに Windows フォーム ComboBox を使用する場合](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [オプションのリストを表示するための Windows フォーム コントロール](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [方法: Windows の内容を並べ替えるフォーム ComboBox、ListBox、または CheckedListBox コントロール](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [ListBox の代わりに Windows フォーム ComboBox を使用する場合](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

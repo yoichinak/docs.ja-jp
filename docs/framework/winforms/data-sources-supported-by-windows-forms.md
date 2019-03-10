@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664745"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711304"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
   
 ## <a name="structures-to-bind-to"></a>連結するには構造体  
- 単純なから Windows フォームで、構造体のさまざまなにバインドできます ADO.NET データ テーブル (複合バインディング) などの複雑な一覧にオブジェクト (単純バインディング)。 単純なバインディングで Windows フォームでは単純なオブジェクトのパブリック プロパティにバインドをサポートします。 一般に Windows フォームのリストに基づくバインディングではオブジェクトをサポートしている必要があります、<xref:System.Collections.IList>インターフェイスまたは<xref:System.ComponentModel.IListSource>インターフェイス。 さらからにバインドしている場合、<xref:System.Windows.Forms.BindingSource>コンポーネントをサポートするオブジェクトにバインドすることができます、<xref:System.Collections.IEnumerable>インターフェイス。 データ バインディングに関連するインターフェイスの詳細については、次を参照してください。[データ バインディングに関連するインターフェイス](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)します。  
+ 単純なから Windows フォームで、構造体のさまざまなにバインドできます ADO.NET データ テーブル (複合バインディング) などの複雑な一覧にオブジェクト (単純バインディング)。 単純なバインディングで Windows フォームでは単純なオブジェクトのパブリック プロパティにバインドをサポートします。 一般に Windows フォームのリストに基づくバインディングではオブジェクトをサポートしている必要があります、<xref:System.Collections.IList>インターフェイスまたは<xref:System.ComponentModel.IListSource>インターフェイス。 さらからにバインドしている場合、<xref:System.Windows.Forms.BindingSource>コンポーネントをサポートするオブジェクトにバインドすることができます、<xref:System.Collections.IEnumerable>インターフェイス。 データ バインディングに関連するインターフェイスの詳細については、次を参照してください。[データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)します。  
   
  Windows フォームにバインドすることができます、構造体を次に示します。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "56664745"
 -   <xref:System.Data.DataViewManager>。 A<xref:System.Data.DataViewManager>全体のカスタマイズされたビューは、<xref:System.Data.DataSet>に似ています、<xref:System.Data.DataView>が含まれている関係を使用します。 <xref:System.Data.DataViewManager.DataViewSettings%2A>コレクション、および設定できます既定のフィルターされたビューの並べ替えオプションを<xref:System.Data.DataViewManager>が、特定のテーブル。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム データ バインドの変更通知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](data-binding-and-windows-forms.md)
+- [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

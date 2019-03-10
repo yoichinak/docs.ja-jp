@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: b8de9852a29c9cc20e2c607506ae3d804e6d406e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4a4714c1d93280cb86e2887505fc2b0b79484d7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569980"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718352"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成します。
-ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
+ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
   
 > [!NOTE]
->  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)です。  
+>  チュートリアル入門の各トピックは、前のトピックに応じて異なります。 このトピックを完了する必要がありますを完了して[方法。アクティビティ作成](how-to-create-an-activity.md)です。  
   
 > [!NOTE]
 >  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
@@ -142,19 +142,19 @@ ms.locfileid: "54569980"
   
      次の例は完成したワークフローを示しています。  
   
-     ![Windows Workflow Foundation の完了](../../../docs/framework/windows-workflow-foundation/media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
+     ![Windows Workflow Foundation の完了](./media/gettingstartedtutorialcompletedflowchart.PNG "GettingStartedTutorialCompletedFlowchart")  
   
 ### <a name="to-build-the-workflow"></a>ワークフローをビルドするには  
   
 1.  Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-     ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)します。  
+     ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミング](../../../docs/framework/windows-workflow-foundation/programming.md)
-- [ワークフローの設計](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)
-- [チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [方法: アクティビティを作成します。](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)
-- [方法: ワークフローを実行します。](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+- [Windows Workflow Foundation プログラミング](programming.md)
+- [ワークフローの設計](designing-workflows.md)
+- [チュートリアル入門](getting-started-tutorial.md)
+- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)

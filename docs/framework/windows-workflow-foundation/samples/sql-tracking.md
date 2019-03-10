@@ -2,15 +2,15 @@
 title: SQL 追跡
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 240e6ab750b4ef82d2afcf1c2ab26c08369926d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690606"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710018"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
-このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)します。
+このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../workflow-tracking-and-tracing.md)します。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
@@ -35,7 +35,8 @@ ms.locfileid: "54690606"
   
      ローカル サービスの WSDL アドレスの例は`http://localhost:65193/StockPriceService.xamlx?wsdl`します。  
   
-8.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
+8.  
+  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
   
 9. WCF テスト クライアントでのクリックして、**ファイル**メニュー選択し、**サービスの追加**します。 テキスト ボックスにローカル サービスのアドレスを貼り付けます。 クリックして**OK**ダイアログ ボックスを閉じます。  
   

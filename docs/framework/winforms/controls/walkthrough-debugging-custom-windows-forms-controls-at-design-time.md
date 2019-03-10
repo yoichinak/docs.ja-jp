@@ -15,15 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 0a251aabe7acdc8e59b31d9534e27f0afeab3633
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664225"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717831"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ
-カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)です。  
+カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
   
  その他の .NET Framework のクラスをデバッグする場合と同様に、Visual Studio を使用して、カスタム コントロールをデバッグできます。 違いは、カスタム コントロールのコードを実行している Visual Studio の別のインスタンスをデバッグすることです。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "56664225"
   
 2.  **DebugControlLibrary**プロパティ シート、**デバッグ**タブ。  
   
-     **開始動作**セクションで、**外部プログラムの開始**します。 されますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton"))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は**devenv.exe**、され、パスは %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe で既定の場所にインストールした場合。  
+     **開始動作**セクションで、**外部プログラムの開始**します。 されますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton"))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は**devenv.exe**、され、パスは %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe で既定の場所にインストールした場合。  
   
 3.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
@@ -170,9 +170,9 @@ ms.locfileid: "56664225"
   
 -   いくつかの属性があるデザイナーを使用したカスタム コントロールの相互作用を操作するコントロールのプロパティに適用することができます。 これらの属性を見つけることができます、<xref:System.ComponentModel?displayProperty=nameWithType>名前空間。  
   
--   カスタム コントロールのカスタム デザイナーを記述できます。 これにより、Visual Studio によって公開される拡張可能なデザイナー インフラストラクチャを使用して、デザイン エクスペリエンスを完全に制御できるようにします。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)です。  
+-   カスタム コントロールのカスタム デザイナーを記述できます。 これにより、Visual Studio によって公開される拡張可能なデザイナー インフラストラクチャを使用して、デザイン エクスペリエンスを完全に制御できるようにします。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)
+- [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)
 - [方法: デザイン時サービスにアクセス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [方法: Windows フォームでデザイン時サポートのアクセス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

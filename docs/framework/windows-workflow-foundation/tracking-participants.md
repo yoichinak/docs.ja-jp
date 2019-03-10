@@ -2,12 +2,12 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613537"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711968"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
 追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
@@ -60,10 +60,10 @@ ms.locfileid: "54613537"
   
  次の図は、ETW 追跡参加要素を使用した追跡データ フローを示しています。 追跡データは、ETW セッションに到達すると、さまざまな方法でアクセスできます。 これらのイベントにアクセスする最も便利な方法の 1 つはイベント ビューアーを使用することです。イベント ビューアーは、アプリケーションやサービスのログを表示して追跡する Windows の一般的なツールです。  
   
- ![フローの追跡と ETW 追跡プロバイダーの](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![フローの追跡と ETW 追跡プロバイダーの](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>追跡参加要素のイベント データ  
- 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡イベントの定義については、追跡参加要素によって出力されたレコードを参照してください、[追跡イベントのリファレンス](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md)トピック。  
+ 追跡参加要素は、追跡レコードごとに 1 つのイベントという形式で、ETW セッションに追跡イベント データをシリアル化します。  イベントは、100 ～ 199 までの範囲内の ID を使用して識別されます。 追跡イベントの定義については、追跡参加要素によって出力されたレコードを参照してください、[追跡イベントのリファレンス](tracking-events-reference.md)トピック。  
   
  ETW イベントのサイズは、ETW バッファーのサイズまたは ETW イベントの最大ペイロードのいずれか小さいほうの値に制限されます。 イベントのサイズが ETW のどちらかの制限を超えると、イベントが切り捨てられ、任意の方法でその内容が削除されます。 変数、引数、注釈、およびカスタム データは選択的に削除されません。 切り捨てが発生する場合は、イベント サイズが ETW の制限を超える原因となった値にかかわらず、これらのすべてが切り捨てられます。  削除されたデータは、`<item>..<item>` で置き換えられます。  
   
@@ -114,7 +114,8 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- 次の例では、<xref:System.Activities.Statements.Sequence> アクティビティを含む <xref:System.Activities.Statements.WriteLine> アクティビティから成るワークフローを作成します。 `ConsoleTrackingParticipant` が拡張機能に追加され、ワークフローが呼び出されます。  
+ 次の例では、<xref:System.Activities.Statements.Sequence> アクティビティを含む <xref:System.Activities.Statements.WriteLine> アクティビティから成るワークフローを作成します。 
+  `ConsoleTrackingParticipant` が拡張機能に追加され、ワークフローが呼び出されます。  
   
 ```csharp  
 Activity activity= new Sequence()  

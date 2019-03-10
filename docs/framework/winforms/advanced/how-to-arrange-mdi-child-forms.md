@@ -8,17 +8,18 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 6e1e4f22aa70d8ee4d4122f9e77427c101b6713f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540742"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711899"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>方法: MDI 子フォームを配置します。
 多くの場合、アプリケーションには、並べて表示、重ねて表示、整列など、開いている MDI 子フォームのレイアウトを制御するメニュー コマンドがあります。 <xref:System.Windows.Forms.Form.LayoutMdi%2A> メソッドと <xref:System.Windows.Forms.MdiLayout> 列挙値のいずれかを使用して、MDI 親フォーム内の子フォームを再配置することができます。  
   
- <xref:System.Windows.Forms.MdiLayout> 列挙値は、子フォームを重ねて表示したり、水平方向または垂直方向に並べて表示したり、または MDI フォームの下部に沿って整列された子フォーム アイコンとして表示します。 これらの値が、Windows のコマンドと同じ効果がある**重ねて**、 **windows を並べて表示**、**表示**、および**デスクトップを表示します。**、それぞれします。  
+ 
+  <xref:System.Windows.Forms.MdiLayout> 列挙値は、子フォームを重ねて表示したり、水平方向または垂直方向に並べて表示したり、または MDI フォームの下部に沿って整列された子フォーム アイコンとして表示します。 これらの値が、Windows のコマンドと同じ効果がある**重ねて**、 **windows を並べて表示**、**表示**、および**デスクトップを表示します。**、それぞれします。  
   
  多くの場合、これらのメソッドは、メニュー項目の <xref:System.Windows.Forms.Control.Click> イベントで呼び出されるイベント ハンドラーとして使用されます。 このようにして、テキスト "重ねて表示" を指定したメニュー項目に、MDI 子ウィンドウに対する目的の効果を持たせることができます。  
   
@@ -48,8 +49,8 @@ ms.locfileid: "54540742"
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子を決定します。](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
-- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+- [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
+- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
+- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)

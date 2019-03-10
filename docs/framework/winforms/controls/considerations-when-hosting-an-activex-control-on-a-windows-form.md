@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: d1b015fbd35c07611816195c4498a74fb232383f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441984"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705208"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows フォームで ActiveX コントロールをホストする場合の考慮事項
 Windows フォームは、Windows フォーム コントロールをホストするために最適化されていますが、ActiveX コントロールを使うこともできます。 ActiveX コントロールを使うアプリケーションを計画するときは、次の考慮事項に留意してください。  
@@ -29,8 +29,8 @@ Windows フォームは、Windows フォーム コントロールをホストす
     >  ActiveX コントロールのメンバーの名前で定義された名前に一致する場合、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、ActiveX コントロール インポーターは、メンバー名をプレフィックスとし、 **Ctl**作成時、<xref:System.Windows.Forms.AxHost>クラスを派生します。 たとえば、ActiveX コントロールに **Layout** という名前のメンバーがある場合、**Layout** イベントが [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 内で定義されているため、AxHost 派生クラスでは **CtlLayout** という名前に変更されます。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームに ActiveX コントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [コード アクセス セキュリティ](../../../../docs/framework/misc/code-access-security.md)
+- [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)
+- [コード アクセス セキュリティ](../../misc/code-access-security.md)
 - [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Windows フォームへのコントロールの追加](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
+- [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)
+- [Windows フォーム コントロール](index.md)

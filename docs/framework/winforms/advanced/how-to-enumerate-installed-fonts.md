@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: 0124d2bdd8b9c60dc2bf2508348044d76a2c7eb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34234ee0400e1d2ca36f2f559b63d282f590ca0d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602235"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709885"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>方法: インストールされているフォントを列挙します。
 <xref:System.Drawing.Text.InstalledFontCollection>クラスから継承、<xref:System.Drawing.Text.FontCollection>抽象基本クラス。 使用することができます、<xref:System.Drawing.Text.InstalledFontCollection>コンピューターにインストールされているフォントを列挙するオブジェクト。 <xref:System.Drawing.Text.FontCollection.Families%2A>のプロパティ、<xref:System.Drawing.Text.InstalledFontCollection>オブジェクトの配列は、<xref:System.Drawing.FontFamily>オブジェクト。  
@@ -23,13 +23,13 @@ ms.locfileid: "54602235"
   
  コード例を実行する場合、出力に次の図に示すようなになります。  
   
- ![フォントがインストールされている](../../../../docs/framework/winforms/advanced/media/csfontstext6.png "csfontstext6")  
+ ![フォントがインストールされている](./media/csfontstext6.png "csfontstext6")  
   
- [!code-csharp[System.Drawing.FontsAndText#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.FontsAndText#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.FontsAndText#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.FontsAndText#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventHandler> のパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 さらに、インポートする必要があります、<xref:System.Drawing.Text>名前空間。  
   
 ## <a name="see-also"></a>関連項目
-- [フォントとテキストの使用](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [フォントとテキストの使用](using-fonts-and-text.md)

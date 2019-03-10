@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2911542f93bf6afaf1560d0f627af3de1b2871ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509186"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719105"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>方法: Windows フォーム上のオブジェクトをレイヤー
 複雑なユーザー インターフェイスを作成またはマルチ ドキュメント インターフェイス (MDI) フォームを使用するときにコントロールと複雑なユーザー インターフェイス (UI) を作成する子フォームをレイヤーには多くの場合、します。 コントロールと windows グループのコンテキスト内での追跡に移動するには、z オーダーを操作します。 *Z オーダー* (深度) のフォームの z 軸に沿ってフォーム上のコントロールのビジュアル レイヤーが。 Z オーダーの上部にあるウィンドウには、その他のすべてのウィンドウが重複しています。 その他のすべての windows では、z オーダーの一番下にあるウィンドウが重複します。  
@@ -53,8 +53,8 @@ ms.locfileid: "54509186"
 >  Windows フォームのサポート*コントロール コンテインメント*します。 コントロール コンテインメントの数などのコンテナー コントロール内のコントロールが配置<xref:System.Windows.Forms.RadioButton>内で制御する<xref:System.Windows.Forms.GroupBox>コントロール。 格納しているコントロール内のコントロールを重ねることができます。 グループ ボックスを移動すると、その内部に含まれているために同様に、コントロールが移動します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
-- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows フォーム コントロール](index.md)
+- [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
+- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
+- [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)

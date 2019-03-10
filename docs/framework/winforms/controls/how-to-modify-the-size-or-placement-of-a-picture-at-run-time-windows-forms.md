@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: fa8bdf17f7dc7f6d09059e54b208acaec6207e48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604783"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709802"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>方法: 実行時 (Windows フォーム) にサイズまたは画像の配置を変更します。
 Windows フォームを使用する場合<xref:System.Windows.Forms.PictureBox>コントロール、フォームで設定することができます、<xref:System.Windows.Forms.PictureBox.SizeMode%2A>をプロパティ。  
@@ -84,7 +84,7 @@ Windows フォームを使用する場合<xref:System.Windows.Forms.PictureBox>�
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.PictureBox>
-- [方法: デザイナーを使用してピクチャを読み込む.](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [方法: 実行時にピクチャを設定します。](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [方法: デザイナーを使用してピクチャを読み込む.](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
+- [方法: 実行時にピクチャを設定します。](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox コントロール](picturebox-control-windows-forms.md)

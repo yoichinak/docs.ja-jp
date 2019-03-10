@@ -9,17 +9,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f7504d645ea1fca6f45b17f79eb576919b782263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572826"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711734"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>方法: 完全な Windows フォームの印刷ジョブ
 多くの場合、ワード プロセッサや他の印刷に関連するアプリケーションは、印刷ジョブが完了したユーザーにメッセージを表示するオプションを提供します。 処理することにより、Windows フォーム内でこの機能を行うことができます、<xref:System.Drawing.Printing.PrintDocument.EndPrint>のイベント、<xref:System.Drawing.Printing.PrintDocument>コンポーネント。  
   
- 次の手順で Windows ベースのアプリケーションを作成することが必要です、<xref:System.Drawing.Printing.PrintDocument>コンポーネントをこれは、Windows ベースのアプリケーションから印刷を有効にする標準的な方法です。 使用して Windows フォームからの印刷の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。標準の Windows フォーム印刷ジョブを作成](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)です。  
+ 次の手順で Windows ベースのアプリケーションを作成することが必要です、<xref:System.Drawing.Printing.PrintDocument>コンポーネントをこれは、Windows ベースのアプリケーションから印刷を有効にする標準的な方法です。 使用して Windows フォームからの印刷の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。標準の Windows フォーム印刷ジョブを作成](how-to-create-standard-windows-forms-print-jobs.md)です。  
   
 ### <a name="to-complete-a-print-job"></a>印刷ジョブを完了するには  
   
@@ -82,4 +82,4 @@ ms.locfileid: "54572826"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows フォームにおける印刷のサポート](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

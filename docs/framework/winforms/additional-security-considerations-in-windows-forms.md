@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 56bc14f176f239a0272038494015cea4553e3e6f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442530"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718910"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows フォームのセキュリティに関するその他の考慮事項
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定により、セキュリティ システムが検証できない Microsoft Win32 API やその他の API を呼び出す機能が影響を受けます。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)」を参照してください。  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定により、セキュリティ システムが検証できない Microsoft Win32 API やその他の API を呼び出す機能が影響を受けます。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)」を参照してください。  
   
  以下のセクションでは、クリップボードの使用、ウィンドウ操作の実行、および部分信頼環境で動作しているアプリケーションからの Win32 API の呼び出しについて説明しています。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "56442530"
   
  アプリケーションを要求する必要があるかどうか、アプリケーションにはアンマネージ コードを呼び出すアクセス許可はありません、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限、または別の機能を実装する方法を検討する必要があります。 多くの場合、Windows フォームが Win32 API を管理対象の代替手段を提供します。関数。 代わりの手段がなく、アプリケーションがアンマネージ コードにアクセスする必要がある場合は、アプリケーションに対するアクセス許可を昇格する必要があります。  
   
- アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
+ アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
-- [Windows フォームでのより安全な印刷](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)
-- [Windows フォームのセキュリティの概要](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows フォームのセキュリティ](../../../docs/framework/winforms/windows-forms-security.md)
+- [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)
+- [Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)
+- [Windows フォームのセキュリティの概要](security-in-windows-forms-overview.md)
+- [Windows フォームのセキュリティ](windows-forms-security.md)
 - [ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)

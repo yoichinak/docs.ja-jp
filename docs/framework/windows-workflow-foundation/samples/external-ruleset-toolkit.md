@@ -2,12 +2,12 @@
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 7a331f139fd7d3127892e6a103b370ec50dc9c99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482367"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710044"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 
@@ -30,7 +30,7 @@ Visual Studio には、Windows Workflow Foundation (WF) の一部として RuleS
 
 これらのコンポーネントの相互関係を図 1 に示します。 図の後で各コンポーネントについて説明します。
 
-![概念的概要については external RuleSet サンプル](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
+![概念的概要については external RuleSet サンプル](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
 
 図 1: サンプルの概要
 
@@ -47,7 +47,7 @@ Visual Studio には、Windows Workflow Foundation (WF) の一部として RuleS
 
 RuleSet ツールのスクリーンショットを図 2 に示します。 **ルール ストア**] メニューの [使用可能な Ruleset をデータベースから読み込み、変更済みの Ruleset をストアに保存することができます。 RuleSet データベースのデータベース接続文字列は、アプリケーション構成ファイルで指定されます。 ツールを起動すると、構成済みのデータベースから自動的に RuleSet が読み込まれます。
 
-![External RuleSet Toolkit のサンプル出力](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetbrowser.gif "RuleSetBrowser")
+![External RuleSet Toolkit のサンプル出力](./media/rulesetbrowser.gif "RuleSetBrowser")
 
 図 2: RuleSet ブラウザー
 
@@ -55,13 +55,13 @@ RuleSet ツールでは、RuleSet にメジャー バージョン番号とマイ
 
 クリックすると**規則の編集**図 3 に示すように、RuleSet editor を起動します。
 
-![External RuleSet Toolkit サンプル出力](../../../../docs/framework/windows-workflow-foundation/samples/media/ruleseteditor.gif "RuleSetEditor")
+![External RuleSet Toolkit サンプル出力](./media/ruleseteditor.gif "RuleSetEditor")
 
 図 3:RuleSet エディター
 
 これは、Windows Workflow Foundation の Visual Studio アドインの一部であるエディタ ダイアログのホストを変更します。 そのため、Intellisense サポートを含めて、同等の機能が用意されています。 ツール内で RuleSet に関連付けられている (ワークフロー) などの対象の型に対して作成されるため、ルールクリックすると**参照**ツールのメイン ダイアログ ボックスで、**ワークフロー/型セレクター**図 4 に示すダイアログが表示されます。
 
-![ワークフロー&#47;選択範囲を入力](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
+![ワークフロー&#47;選択範囲を入力](./media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")
 
 図 4: ワークフロー/型セレクター
 
@@ -71,7 +71,7 @@ RuleSet ツールでは、RuleSet にメジャー バージョン番号とマイ
 
 クリックすると**OK**で、**ワークフロー/型セレクター**ダイアログ ボックスで、対象の型が、ルールによって参照されるすべてのメンバーであることを確認する RuleSet に照らして、選択した型を検証します。 エラーに表示されます、**検証エラー**ダイアログ (図 5 を参照してください)。 エラーに関係なく変更を続行するかをクリックすることもできます**キャンセル**します。 **ツール**ツールのメイン ダイアログで、メニューをクリックできます**検証**対象アクティビティに対して RuleSet のバージョンを再検証します。
 
-![External RuleSet サンプルの検証エラー](../../../../docs/framework/windows-workflow-foundation/samples/media/validationerrorsruleset.png "ValidationErrorsRuleSet")
+![External RuleSet サンプルの検証エラー](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
 
 図 5:検証エラー
 
@@ -81,7 +81,7 @@ RuleSet ツールでは、RuleSet にメジャー バージョン番号とマイ
 
 ツールでは、インポートする RuleSet ごとに、RuleSet で使用されるメンバに基づいて、.rules ファイルの場所の下に bin\Debug フォルダー (存在する場合) から関連付けられている型が検索されます。 一致する型が複数見つかった場合は、.rules ファイル名と型名の対応関係に基づいて型が選択されます (たとえば、`Workflow1` 型は Workflow1.rules に対応します)。 対応関係が複数存在する場合は、型を選択するように求められます。 この自動識別機構が一致するアセンブリまたは型の検索に失敗したかどうかは、クリックすることができますをインポートした後**参照**ツールのメイン ダイアログに関連付けられている型に移動します。
 
-![ルールセット セレクター](../../../../docs/framework/windows-workflow-foundation/samples/media/rulesetselector.gif "RuleSetSelector")
+![ルールセット セレクター](./media/rulesetselector.gif "RuleSetSelector")
 
 図 6:ルールセット セレクター
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 1eccfb40cd256cb3ebea6f0dcf38d73d5d53e8bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735079"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717467"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>方法: MaskedTextBox コントロールにデータをバインドします。
 データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。 ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。 次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。  
@@ -233,9 +233,9 @@ ms.locfileid: "54735079"
 ## <a name="example"></a>例  
  次のコード例は、コード全体を前の手順を完了には、その結果の一覧です。  
   
- [!code-cpp[MaskedTextBoxData#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
- [!code-csharp[MaskedTextBoxData#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
- [!code-vb[MaskedTextBoxData#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
+ [!code-cpp[MaskedTextBoxData#1](~/samples/snippets/cpp/VS_Snippets_Winforms/MaskedTextBoxData/cpp/form1.cpp#1)]
+ [!code-csharp[MaskedTextBoxData#1](~/samples/snippets/csharp/VS_Snippets_Winforms/MaskedTextBoxData/CS/form1.cs#1)]
+ [!code-vb[MaskedTextBoxData#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/MaskedTextBoxData/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
@@ -250,4 +250,4 @@ ms.locfileid: "54735079"
 -   アプリケーションをコンパイルします。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: MaskedTextBox コントロールの操作](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)

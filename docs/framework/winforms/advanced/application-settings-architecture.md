@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710681"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -34,12 +34,12 @@ ms.locfileid: "54687246"
   
 -   設定の変更前または保存前の検証  
   
- 設定の説明は、さまざまな内で定義されている属性を使用して、<xref:System.Configuration>名前空間は、後述[アプリケーション設定の属性](../../../../docs/framework/winforms/advanced/application-settings-attributes.md)します。 設定を定義するときに、いずれかで適用する必要があります<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>、アプリケーション全体または現在のユーザーにのみ、設定が適用されるかどうかについて説明します。  
+ 設定の説明は、さまざまな内で定義されている属性を使用して、<xref:System.Configuration>名前空間は、後述[アプリケーション設定の属性](application-settings-attributes.md)します。 設定を定義するときに、いずれかで適用する必要があります<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>、アプリケーション全体または現在のユーザーにのみ、設定が適用されるかどうかについて説明します。  
   
  次のコード例では、`BackgroundColor` という 1 つの設定を指定してカスタム設定クラスを定義しています。  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>設定の永続化  
  <xref:System.Configuration.ApplicationSettingsBase>クラス自体を永続化またはしていない設定を読み込めません。 このジョブが設定プロバイダーから派生したクラスには<xref:System.Configuration.SettingsProvider>します。 場合の派生クラス<xref:System.Configuration.ApplicationSettingsBase>を通じて設定プロバイダーを指定しない、 <xref:System.Configuration.SettingsProviderAttribute>、し、既定のプロバイダー <xref:System.Configuration.LocalFileSettingsProvider>、使用されます。  
@@ -88,7 +88,7 @@ ms.locfileid: "54687246"
 </configuration>  
 ```  
   
- 構成ファイルのアプリケーション設定セクション内の要素の定義については、「[アプリケーション設定のスキーマ](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)」を参照してください。  
+ 構成ファイルのアプリケーション設定セクション内の要素の定義については、「[アプリケーション設定のスキーマ](../../configure-apps/file-schema/application-settings-schema.md)」を参照してください。  
   
 ### <a name="settings-bindings"></a>設定のバインド  
  アプリケーション設定では、Windows フォーム データ バインド アーキテクチャを使用して、設定オブジェクトとコンポーネント間で設定の更新の双方向通信を行います。 Visual Studio を使用してアプリケーション設定を作成し、設定をコンポーネントのプロパティに割り当てると、これらのバインドが自動的に生成されます。  
@@ -106,7 +106,7 @@ ms.locfileid: "54687246"
   
 3.  設定の属性に基づいて、どの設定がどのファイルに指定されているかを判断します。  
   
- 使用することができます独自設定クラスを実装する場合、<xref:System.Configuration.SettingsSerializeAsAttribute>バイナリまたはカスタムのシリアル化を使用するかの設定をマークする、<xref:System.Configuration.SettingsSerializeAs>列挙体。 コードで設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)します。  
+ 使用することができます独自設定クラスを実装する場合、<xref:System.Configuration.SettingsSerializeAsAttribute>バイナリまたはカスタムのシリアル化を使用するかの設定をマークする、<xref:System.Configuration.SettingsSerializeAs>列挙体。 コードで設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
 ### <a name="settings-file-locations"></a>設定ファイルの場所  
  `app`.exe.config ファイルと *user*.config ファイルの場所は、アプリケーションのインストール方法によって異なります。 ローカルのコンピューターにコピーする Windows フォーム ベースのアプリケーションの`app`. exe.config はアプリケーションのメイン実行可能ファイルのベース ディレクトリと同じディレクトリに存在し、*ユーザー*.config に存在、指定された場所、<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>プロパティ。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用してインストールされたアプリケーションの場合、どちらのファイルも %InstallRoot%\Documents and Settings\\*username*\Local Settings の下の [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] データ ディレクトリに配置されます。  
@@ -127,8 +127,8 @@ ms.locfileid: "54687246"
   
  カスタム プロバイダーでは、1 つのプロパティと 1 つのメソッドを実装する必要がありますが、この実装はわかりにくいことがあります。 <xref:System.Configuration.SettingsProvider.ApplicationName%2A>プロパティの抽象プロパティは、 <xref:System.Configuration.SettingsProvider>; を返す、次をプログラムする必要があります。  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  派生クラスでは、引数を受け取らず値を返さない `Initialize` メソッドも実装する必要があります。 このメソッドは、によって定義されていない<xref:System.Configuration.SettingsProvider>します。  
   
@@ -136,8 +136,8 @@ ms.locfileid: "54687246"
   
  カスタム プロバイダーを実装してコンパイルしたら、既定のプロバイダーではなく、このプロバイダーを使用するよう設定クラスに指示する必要があります。 これを実現する、<xref:System.Configuration.SettingsProviderAttribute>します。 クラスが定義される各設定に、プロバイダーを使用する設定クラス全体に適用する場合アプリケーション設定アーキテクチャがのみ、これらの設定をそのプロバイダーを使用しを使用して個々 の設定に適用される場合<xref:System.Configuration.LocalFileSettingsProvider>残りの部分。 次のコード例は、カスタム プロバイダーを使用するよう設定クラスに指示する方法を示しています。  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  プロバイダーを複数のスレッドから同時に呼び出すことができますが、プロバイダーは常に同じ格納場所に書き込みを行います。したがって、アプリケーション設定アーキテクチャによってインスタンス化されるカスタム プロバイダー クラスのインスタンスは 1 つに限られます。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54687246"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [アプリケーション設定の概要](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)
-- [アプリケーション設定のスキーマ](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [アプリケーション設定のスキーマ](../../configure-apps/file-schema/application-settings-schema.md)

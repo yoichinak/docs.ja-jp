@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543069"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717922"
 ---
 # <a name="windows-forms-controls-by-function"></a>Windows フォーム コントロールの機能別一覧
 Windows フォームでは、多数の関数を実行するコントロールとコンポーネントを提供します。 次の表は、Windows フォーム コントロールおよび一般的な関数に応じたコンポーネントを示します。 さらに、複数のコントロールが存在する同じ機能を提供、推奨されるコントロールは、置き換えられるコントロールについての注釈を表示されています。 別の後続のテーブルに置き換えられるコントロールは、その推奨される代替と共に一覧表示されます。  
   
 > [!NOTE]
->  すべてのコントロールや Windows フォームで使用できるコンポーネントを加えない、次の表詳細な一覧を参照してください[Windows フォームで使用するコントロール。](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  すべてのコントロールや Windows フォームで使用できるコンポーネントを加えない、次の表詳細な一覧を参照してください[Windows フォームで使用するコントロール。](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>推奨されるコントロールとコンポーネント別関数  
   
 |関数|コントロール|説明|  
 |--------------|-------------|-----------------|  
-|データの表示|<xref:System.Windows.Forms.DataGridView> コントロール|<xref:System.Windows.Forms.DataGridView>コントロールでは、データを表示するカスタマイズ可能なテーブルが用意されています。 <xref:System.Windows.Forms.DataGridView>クラスは、セル、行、列、および罫線のカスタマイズを使用できます。 **注:**<xref:System.Windows.Forms.DataGridView>コントロールで不足している多数の基本と高度な機能を提供する、<xref:System.Windows.Forms.DataGrid>コントロール。 詳細については、次を参照してください[の相違点の間、Windows フォームの DataGridView コントロールと DataGrid コントロール。](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|データの表示|<xref:System.Windows.Forms.DataGridView> コントロール|<xref:System.Windows.Forms.DataGridView>コントロールでは、データを表示するカスタマイズ可能なテーブルが用意されています。 <xref:System.Windows.Forms.DataGridView>クラスは、セル、行、列、および罫線のカスタマイズを使用できます。 **注:**<xref:System.Windows.Forms.DataGridView>コントロールで不足している多数の基本と高度な機能を提供する、<xref:System.Windows.Forms.DataGrid>コントロール。 詳細については、次を参照してください[の相違点の間、Windows フォームの DataGridView コントロールと DataGrid コントロール。](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |データのバインドとナビゲーション|<xref:System.Windows.Forms.BindingSource> コンポーネント|通貨管理、変更通知、およびその他のサービスを提供することで、データをフォームにコントロールのバインドを簡略化します。|  
 ||<xref:System.Windows.Forms.BindingNavigator> コントロール|フォーム上のデータを移動および操作ツールバー型インターフェイスを提供します。|  
 |テキストの編集|<xref:System.Windows.Forms.TextBox> コントロール|実行時に、ユーザーが編集またはプログラムで変更できるデザイン時に入力したテキストが表示されます。|  
@@ -85,5 +85,5 @@ Windows フォームでは、多数の関数を実行するコントロールと
 |フォームのレイアウト|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)

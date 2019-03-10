@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674769"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713216"
 ---
 # <a name="types-of-bitmaps"></a>ビットマップの種類
 ビットマップは、ピクセルの四角形の配列の各ピクセルの色を指定するビットの配列です。 個々 のピクセル ビット数は、そのピクセルに割り当てることができる色の数を決定します。 たとえば、各ピクセルは 4 ビットで表される場合、し、特定のピクセル割り当てることができます 16 色のいずれか (2 ^4 = 16)。 次の表では、指定したビット数で表されるピクセルに割り当てることができる色の数のいくつかの例を示します。  
@@ -41,7 +41,7 @@ ms.locfileid: "54674769"
   
  通常、ビットマップを格納するディスク ファイルには、配列にピクセル、行ごとのピクセル数および行数あたりのビット数などの情報を格納する 1 つまたは複数の情報ブロックが含まれます。 このようなファイルは、(カラー パレットとも呼ばれます) のカラー テーブルを含めることも可能性があります。 カラー テーブルは、ビットマップ内の数値を特定の色にマップします。 次の図は、そのビットマップとカラー テーブルと共に拡大したイメージを示します。 各ピクセルが 4 ビットの数値で表されるため、2 ^4 = 16 色のカラー テーブルにします。 テーブルの各色は、24 ビット数で表されます。赤の 8 ビット、8 ビット、緑、および青の 8 ビット。 16 進数 (基数 16) 形式で数値が表示されます。A = 10、B = 11、C = 12、D = 13、E 14、F = 15 を = です。  
   
- ![ビットマップ サンプル](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![ビットマップ サンプル](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  行 3、イメージの列 5 のピクセルを見てください。 ビットマップ内の対応する数には 1 です。 カラー テーブルによると、ピクセルは赤い 1 が赤のカラーを表すことにします。 ビットマップの一番上の行のすべてのエントリは、3 です。 カラー テーブルによると 3 がイメージの一番上の行のすべてのピクセルは青色、青を表すことにします。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54674769"
   
  カラー テーブルにインデックスを格納するビットマップのパレット インデックス付きのビットマップが呼び出されます。 あるカラー テーブルの場合、ビットマップがありません。 たとえば、ビットマップ ピクセルあたり 24 ビットを使用する場合そのビットマップ格納できますインデックスではなく、カラー自体カラー テーブルにします。 次の図は、カラー テーブルを使用するのではなく、直接色 (1 ピクセルあたり 24 ビット) を格納するビットマップを示します。 図には、対応するイメージの拡大表示も示します。 ビットマップで ffffff は白、ff0000 は赤、00ff00 は緑、および 0000ff は青です。  
   
- ![ビットマップ サンプル](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![ビットマップ サンプル](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>グラフィックス ファイルの形式  
  ディスク ファイルでビットマップを保存するための多くの標準形式があります。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラフィックス ファイルの次の段落で説明されている形式をサポートします。  
@@ -66,11 +66,11 @@ ms.locfileid: "54674769"
   
  JPEG イメージの圧縮のレベルは構成可能ですが、詳細情報が失われると、圧縮レベルを高く (より小さいファイル)。 20:1 の圧縮比率は、多くの場合、人間の目が元から区別するために困難が検索するイメージを生成します。 次の図は、BMP イメージとその BMP イメージから圧縮された 2 つの JPEG イメージを示します。 最初の JPEG が圧縮比 4:1 と 2 つ目の JPEG が約 8:1 の圧縮比率。  
   
- ![ファイルの種類サンプル](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![ファイルの種類サンプル](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG 圧縮の直線の描画、純色のブロックに適してし、境界をシャープなはありません。 次の図は、2 つの Jpeg や gif 形式と共に、BMP を示します。 Jpeg、GIF、BMP から圧縮されました。 圧縮比率が 4:1、GIF、4:1 の小さい jpeg、大きい JPEG の 8:3。 境界をぼかす傾向があります、Jpeg、GIF の行に沿って鮮明な境界を維持すること注意してください。  
   
- ![ファイルの種類](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![ファイルの種類](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG は、圧縮スキーム、ファイル形式ではありません。 JPEG ファイル インターチェンジの形式 (JFIF) は、一般的に使用を格納して、JPEG スキームに従ってが圧縮されたイメージを転送するファイル形式です。 Web ブラウザーで表示される JFIF ファイルは、.jpg 拡張機能を使用します。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54674769"
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [イメージ、ビットマップ、メタファイル](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [イメージ、ビットマップ、アイコン、およびメタファイルの操作](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4f4bcd06067775c6f43063ebe5682730deba1d4f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498888"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710279"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>方法: SQL 永続性ワークフローとワークフロー サービスを有効にします。
 
@@ -31,7 +31,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
 >
 > System.Data.SqlClient.SqlException:ストアド プロシージャ 'system.activities.durableinstancing.createlockowner'' が見つかりませんでした。
 
-以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、次を参照してください。 [SQL Workflow Instance Store のプロパティ](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)します。
+以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、次を参照してください。 [SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)します。
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication を使用する自己ホスト型ワークフローの永続化の有効化
 
@@ -72,7 +72,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
    ```
 
 > [!NOTE]
-> 参照してください、[方法。作成および実行 a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)の手順、[チュートリアル入門](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)ステップ バイ ステップの指示します。
+> 参照してください、[方法。作成および実行 a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)の手順、[チュートリアル入門](getting-started-tutorial.md)ステップ バイ ステップの指示します。
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost を使用する自己ホスト型ワークフロー サービスの永続化の有効化
 
@@ -129,7 +129,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 構成ファイルを使用することで、自己ホスト型または Windows プロセス アクティブ化サービス (WAS) でホストされるワークフロー サービスの永続化を有効にできます。 WAS でホストされるワークフロー サービスは、自己ホスト型ワークフローのように WorkflowServiceHost を使用します。
 
-`SqlWorkflowInstanceStoreBehavior`、簡単に変更できるようにするサービス動作、 [SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md) XML 構成のプロパティ。 WAS でホストされるワークフロー サービスの場合は、Web.config ファイルを使用します。 次の構成例では、構成ファイルで `sqlWorkflowInstanceStore` という動作要素を使用して SQL Workflow Instance Store を構成する方法について説明します。
+`SqlWorkflowInstanceStoreBehavior`、簡単に変更できるようにするサービス動作、 [SQL Workflow Instance Store](sql-workflow-instance-store.md) XML 構成のプロパティ。 WAS でホストされるワークフロー サービスの場合は、Web.config ファイルを使用します。 次の構成例では、構成ファイルで `sqlWorkflowInstanceStore` という動作要素を使用して SQL Workflow Instance Store を構成する方法について説明します。
 
 ```xml
 <serviceBehaviors>

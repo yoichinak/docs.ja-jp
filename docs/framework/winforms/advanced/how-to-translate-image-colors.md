@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 7a3ed1f3f6b3e89c8df160b7e753839e20acd877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549760"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703024"
 ---
 # <a name="how-to-translate-image-colors"></a>方法: イメージの色を変換します。
 翻訳は、4 つの色コンポーネントの 1 つ以上の値を追加します。 翻訳を表すカラー マトリックス エントリは、次の表に付与されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "54549760"
   
  次の図は、右側の左側に、元のイメージと変換後のイメージを示します。  
   
- ![色を変換](../../../../docs/framework/winforms/advanced/media/colortrans2.png "colortrans2")  
+ ![色を変換](./media/colortrans2.png "colortrans2")  
   
  次の表は、赤の平行移動の前後に 4 つのバーの色のベクターを示します。 色コンポーネントの最大値が 1 であるため、2 行目に赤のコンポーネントが変更されないことに注意してください。 (同様に、色コンポーネントの最小値は 0 です。)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "54549760"
 |緑 (0, 1、0, 1)|(0.75, 1, 0, 1)|  
 |青 (0, 0、1, 1)|(0.75, 0, 1, 1)|  
   
- [!code-csharp[System.Drawing.RecoloringImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.RecoloringImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.RecoloringImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。 置換`ColorBars.bmp`イメージ ファイル名と、システムで有効なパス。  
@@ -51,5 +51,5 @@ ms.locfileid: "54549760"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [イメージの色の変更](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
+- [イメージの色の変更](recoloring-images.md)
