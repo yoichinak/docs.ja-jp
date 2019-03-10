@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547132"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703532"
 ---
 # <a name="interfaces-related-to-data-binding"></a>データ連結に関連するインターフェイス
 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] では、アプリケーションのバインドのニーズや使用するデータに合わせてさまざまなデータ構造を作成できます。 Windows フォームでデータを提供または使用するための独自のクラスを作成することもできます。 これらのオブジェクトは、基本的なデータ バインディングから、デザイン時サポートの提供、エラー チェック、変更通知、データ自体に加えられた変更の構造化されたロールバックのサポートに至るまで、さまざまなレベルの機能を提供することができ、複雑さに対応できます。  
@@ -150,6 +150,6 @@ ms.locfileid: "54547132"
     >  継承するクラスを<xref:System.Windows.Forms.Control>管理バインドを使用して自動的にその<xref:System.Windows.Forms.Control.BindingContext%2A>プロパティを実装する必要があるため場合、<xref:System.Windows.Forms.ICurrencyManagerProvider>非常にまれです。  
   
 ## <a name="see-also"></a>関連項目
-- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [方法: Windows フォームに単純バインド コントロールを作成します。](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](data-binding-and-windows-forms.md)
+- [方法: Windows フォームに単純バインド コントロールを作成します。](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

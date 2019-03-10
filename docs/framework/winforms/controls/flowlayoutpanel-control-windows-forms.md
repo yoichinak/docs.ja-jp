@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: c6d2156b23965175bafe8f32ccf2fa325ff7e3d3
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed32d88894b2f0c4be8f1adeca8e891f3ac13810
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441399"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716154"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>FlowLayoutPanel コントロール (Windows フォーム)
 
@@ -20,11 +20,11 @@ ms.locfileid: "56441399"
  このセクションのトピックでは、`FlowLayoutPanel` の機能をアプリケーションに組み込むときに使用できる概念および手法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [FlowLayoutPanel コントロールの概要](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-overview.md)  
+ [FlowLayoutPanel コントロールの概要](flowlayoutpanel-control-overview.md)  
  
   `FlowLayoutPanel` コントロールの全般的な概念を説明します。このコントロールを使用すると、水平方向または垂直方向にフローするレイアウトを構築できます。  
   
- [固定およびドッキング FlowLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  
   <xref:System.Windows.Forms.Control.Anchor%2A> プロパティと <xref:System.Windows.Forms.Control.Dock%2A> プロパティを使用して、<xref:System.Windows.Forms.FlowLayoutPanel> コントロールに子コントロールを固定およびドッキングする方法について説明します。  
   

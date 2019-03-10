@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672020"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709485"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでの仮想モード
 仮想モードの間の相互作用を管理することができます、<xref:System.Windows.Forms.DataGridView>コントロールとカスタム データ キャッシュします。 仮想モードを実装するには、設定、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティを`true`し、このトピックで説明されているイベントの 1 つ以上を処理します。 通常は、少なくとも`CellValueNeeded`イベントで、データ キャッシュ内の値をコントロールの外観を有効します。  
@@ -27,14 +27,14 @@ ms.locfileid: "54672020"
 ## <a name="replacing-bound-mode"></a>バインド モードの置換  
  バインド モードが、パフォーマンスのニーズを満たしていない場合は、仮想モードのイベント ハンドラーを使用して、カスタム キャッシュ内のすべてのデータを管理できます。 ジャストイン タイム データのみを取得するメカニズムの読み込みを実装するために仮想モードを使用するなど、ネットワーク上のデータベースからデータが最適なパフォーマンスが必要です。 このシナリオは、低速ネットワーク接続経由でデータ量が多いと RAM または記憶域スペースの制限があるクライアント コンピューターを操作する場合に特に役立ちます。  
   
- ジャストイン タイムのシナリオで仮想モードの使用に関する詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールで Just-In-Time データ読み込みで仮想モードの実装](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)します。  
+ ジャストイン タイムのシナリオで仮想モードの使用に関する詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールで Just-In-Time データ読み込みで仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)します。  
   
 ## <a name="virtual-mode-events"></a>仮想モードのイベント  
  データが読み取り専用である場合、`CellValueNeeded`イベントが唯一のイベントを処理する必要があります。 仮想モードの追加のイベントでは、ユーザーを編集する、行の追加と削除、および行レベルのトランザクションなど特定の機能を有効にできます。  
   
  標準的な<xref:System.Windows.Forms.DataGridView>イベント (など、ユーザー追加の行を削除またはセルの値が場合に発生するイベントは、編集、解析、検証、または書式設定されます) の指定は、仮想モードに役立ちます。 通常はセルのツールヒント テキスト、セルと行のエラー テキスト、セルと行のショートカット メニューのデータ、および行の高さデータなど、バインドされたデータ ソースに格納された値を保持できるようにするイベントを処理することもできます。  
   
- 行レベルのコミットのスコープを持つ読み取り/書き込みデータを管理する仮想モードの実装の詳細については、次を参照してください。[チュートリアル。仮想モードの実装で、Windows フォーム DataGridView コントロール](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)します。  
+ 行レベルのコミットのスコープを持つ読み取り/書き込みデータを管理する仮想モードの実装の詳細については、次を参照してください。[チュートリアル。仮想モードの実装で、Windows フォーム DataGridView コントロール](implementing-virtual-mode-wf-datagridview-control.md)します。  
   
  セル レベルのコミットのスコープを使用して仮想モードを実装する例を参照してください、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティの参照トピック。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "54672020"
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|データ キャッシュ内の行の高さ情報を格納または取得するコントロールで使用します。 呼び出す、<xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A>メソッド以外のキャッシュされた行の高さ情報を変更するときに、<xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>イベント ハンドラーを現在の値がコントロールの表示で使用されるようにします。|  
   
 ## <a name="best-practices-in-virtual-mode"></a>仮想モードでのベスト プラクティス  
- 大量のデータを効率的に使用するには仮想モードを実装する場合、使用効率的にしていることを確認するはも、<xref:System.Windows.Forms.DataGridView>コントロール自体。 セルのスタイル、自動サイズ変更、選択内容、および行の共有の効率的な使用の詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
+ 大量のデータを効率的に使用するには仮想モードを実装する場合、使用効率的にしていることを確認するはも、<xref:System.Windows.Forms.DataGridView>コントロール自体。 セルのスタイル、自動サイズ変更、選択内容、および行の共有の効率的な使用の詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](implementing-virtual-mode-wf-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

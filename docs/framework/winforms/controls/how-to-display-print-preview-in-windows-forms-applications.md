@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526731"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715361"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>方法: フォーム アプリケーションの Windows で印刷プレビューを表示
 使用することができます、<xref:System.Windows.Forms.PrintPreviewDialog>印刷する前に多くの場合、ドキュメントを表示するユーザーを有効にするコントロール。  
   
- これを行うには、インスタンスを指定する必要があります、<xref:System.Drawing.Printing.PrintDocument>クラスです。 これは、印刷するドキュメント。 印刷プレビューでの使用の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。印刷プレビューを使用して Windows フォームにおける印刷](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)します。  
+ これを行うには、インスタンスを指定する必要があります、<xref:System.Drawing.Printing.PrintDocument>クラスです。 これは、印刷するドキュメント。 印刷プレビューでの使用の詳細については、<xref:System.Drawing.Printing.PrintDocument>コンポーネントを参照してください[方法。印刷プレビューを使用して Windows フォームにおける印刷](../advanced/how-to-print-in-windows-forms-using-print-preview.md)します。  
   
 > [!NOTE]
 >  使用する、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール、実行時にユーザーが必要ローカルまたはネットワークを介してコンピューターにインストールされているプリンターは部分的方法、<xref:System.Windows.Forms.PrintPreviewDialog>コンポーネントは、印刷時にドキュメントがどのように表示されるかを決定します。  
@@ -82,7 +82,7 @@ ms.locfileid: "54526731"
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [PrintDocument コンポーネント](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog コントロール](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Windows フォームにおける印刷のサポート](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows フォーム](../../../../docs/framework/winforms/index.md)
+- [PrintDocument コンポーネント](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)
+- [Windows フォームにおける印刷のサポート](../advanced/windows-forms-print-support.md)
+- [Windows フォーム](../index.md)

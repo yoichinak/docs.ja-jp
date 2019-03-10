@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TAB key [Windows Forms], enabling
 - ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
-ms.openlocfilehash: a98c8a54389daa898c877a08f8cc2cae46a11da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d7917d7e12ba286e7ddf4e95a68769852a17f7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663073"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704337"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>方法: TAB キーで ToolStrip コントロールから移動を有効にします。
 タブ キーを押してから移動するユーザーを有効にする、次の手順を使用して、<xref:System.Windows.Forms.ToolStrip>タブ オーダー内で次のコントロールにします。  
@@ -25,4 +25,4 @@ ms.locfileid: "54663073"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.TabStop%2A>
-- [ToolStrip コントロールの概要](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

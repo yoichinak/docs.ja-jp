@@ -2,24 +2,25 @@
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850238"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706373"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
-このサンプルでは、ExternalizedPolicy4 アクティビティを使用して既存の実行方法について[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]ルール エンジンを使用して直接 Windows Workflow Foundation (WF 4.5)WF 3.5 に付属しています。 このアクティビティを使用すると、既存の WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> を開いて実行できます。 Windows Workflow Foundation の一部として含まれている WF 3.5 ルール エンジンの詳細については、「 [Windows Workflow Foundation ルール エンジンの概要](https://go.microsoft.com/fwlink/?LinkId=166079)します。 移行の詳細については規則を[!INCLUDE[wf1](../../../../includes/wf1-md.md)]で[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]、移行のガイダンスをお読みください[移行ガイダンス](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)します。
+このサンプルでは、ExternalizedPolicy4 アクティビティを使用して既存の実行方法について[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>オブジェクト[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]ルール エンジンを使用して直接 Windows Workflow Foundation (WF 4.5)WF 3.5 に付属しています。 このアクティビティを使用すると、既存の WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> を開いて実行できます。 Windows Workflow Foundation の一部として含まれている WF 3.5 ルール エンジンの詳細については、「 [Windows Workflow Foundation ルール エンジンの概要](https://go.microsoft.com/fwlink/?LinkId=166079)します。 移行の詳細については規則を[!INCLUDE[wf1](../../../../includes/wf1-md.md)]で[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]、移行のガイダンスをお読みください[移行ガイダンス](../migration-guidance.md)します。
 
 ## <a name="projects-in-this-sample"></a>このサンプルのプロジェクト
 
 |プロジェクト名|説明|メイン ファイル|
 |-|-|-|
-|ExternalizedPolicy4|ExternalizedPolicy4 アクティビティとその WF 4.5 デザイナーが含まれます。|**ExternalizedPolicy4.cs**: アクティビティ定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 アクティビティのカスタム デザイナー。 WF 3.5 ルール エンジンからルール エディター (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) を使用します。|
-|ImperativeCodeClientSample|命令型 C# コードで、ExternalizedPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです (デザイナーは不使用)。|**ApplyDiscount.rules**: ファイルと[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ルール定義。<br /><br /> **Order.cs**: 顧客の注文を表す型。 ルールはこの型のオブジェクトに適用されます。<br /><br /> **Program.cs**: 構成および Order オブジェクトのインスタンスに ApplyDiscount.rules で定義されたルールを適用する Policy4 アクティビティを含むワークフローを実行します。<br /><br /> App.config: ルール ファイルのパスが記述された構成ファイルです。|
-|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1.xaml**: Policy4 アクティビティを使用してルール評価を実行するシーケンシャル ワークフロー。<br /><br /> **Program.cs**: Sequence1.xaml で定義されたワークフローのインスタンスを実行します。|
+|ExternalizedPolicy4|ExternalizedPolicy4 アクティビティとその WF 4.5 デザイナーが含まれます。|**ExternalizedPolicy4.cs**: アクティビティ定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**:ExternalizedPolicy4 アクティビティのカスタム デザイナー。 WF 3.5 ルール エンジンからルール エディター (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) を使用します。|
+|ImperativeCodeClientSample|命令型 C# コードで、ExternalizedPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです (デザイナーは不使用)。|**ApplyDiscount.rules**:ファイルと[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ルール定義。<br /><br /> **Order.cs**:顧客の注文を表す型です。 ルールはこの型のオブジェクトに適用されます。<br /><br /> **Program.cs**:構成および Order オブジェクトのインスタンスに ApplyDiscount.rules で定義されたルールを適用する Policy4 アクティビティを含むワークフローを実行します。<br /><br /> App.config:ルール ファイルのパスを持つ構成ファイル。|
+|DesignerClientSample|
+  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1.xaml**:Policy4 アクティビティを使用してルール評価を実行するシーケンシャル ワークフローです。<br /><br /> **Program.cs**:Sequence1.xaml で定義されているワークフローのインスタンスを実行します。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 アクティビティ
 
@@ -56,13 +57,14 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 と ExternalPolicy4
 
-ポリシー アクティビティを作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行できます。 <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
+ポリシー アクティビティを作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行できます。 
+  <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
 
 ## <a name="use-this-sample"></a>このサンプルを使用します。
 
 このサンプルを実行するのに特別な設定は必要ありません。 Visual Studio でソリューションを開き、キーを押します**F5**アプリケーションを実行します。
 
-このサンプルには、ImperativeCodeClientSample と DesignerClientSample の 2 つのクライアント アプリケーションがあります。 ImperativeCodeClientSample クライアントは、C# 命令型コードを使用して ExternalizedPolicy4 アクティビティを構成および実行する方法を示します。 DesignerClientSample は、デザイナーを使用して ExternalizedPolicy4 アクティビティを構成および実行する方法を示します。
+このサンプルには、2 つのクライアント アプリケーションが含まれています。ImperativeCodeClientSample と DesignerClientSample します。 ImperativeCodeClientSample クライアントは、C# 命令型コードを使用して ExternalizedPolicy4 アクティビティを構成および実行する方法を示します。 DesignerClientSample は、デザイナーを使用して ExternalizedPolicy4 アクティビティを構成および実行する方法を示します。
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample アプリケーションを実行します。
 

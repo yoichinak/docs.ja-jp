@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - buffering [Windows Forms], double buffering
 ms.assetid: dc484e33-7101-4e4b-ada5-d3c96155fbcd
-ms.openlocfilehash: 9b09210eba0ac3a141219a7cdbff15f22c6ed003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac6c9b7f2cc1fea86a75eaaf4a2dde1ea60e4f40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716282"
 ---
 # <a name="using-double-buffering"></a>ダブル バッファリングの使用
-ダブル バッファリングされたグラフィックスを使用して、複雑な描画操作を必要とするアプリケーションでちらつきを軽減することができます。 .NET Framework には、ダブル バッファリングの組み込みサポートが含まれています。 または、管理し、手動でグラフィックスをレンダリングできます。  
+ダブル バッファリングされたグラフィックスを使用して、複雑な描画操作が含まれているアプリケーションでちらつきを軽減することができます。 .NET Framework には、ダブル バッファリングの組み込みサポートが含まれています。 または、管理し、手動でグラフィックスをレンダリングできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ダブル バッファリングされたグラフィックス](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  
- ダブル バッファリングの概念とアウトライン .NET Framework のサポートが導入されています。  
+ [ダブル バッファリングされたグラフィックス](double-buffered-graphics.md)  
+ 二重のバッファリングの概念や概要の .NET Framework サポートをについて説明します。  
   
- [方法: フォームとコントロールのダブル バッファリングを行うことによってグラフィックスのちらつきを軽減する](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- ダブル バッファリングを .NET Framework のサポート、既定値を使用する方法を示します。  
+ [方法: フォームとコントロールのダブル バッファリングによってグラフィックスのちらつきを軽減します。](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ 既定のダブル バッファリングを .NET Framework のサポートを使用する方法を示します。  
   
- [方法: バッファリングされたグラフィックスを手動で管理する](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- アプリケーションのダブル バッファリングを管理する方法を示します。  
+ [方法: バッファリングされたグラフィックスを手動で管理します。](how-to-manually-manage-buffered-graphics.md)  
+ アプリケーションでダブル バッファリングを管理する方法を示します。  
   
- [方法: バッファリングされたグラフィックスを手動で描画する](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [方法: バッファリングされたグラフィックスを手動で描画します。](how-to-manually-render-buffered-graphics.md)  
  ダブル バッファリングされたグラフィックスをレンダリングする方法を示します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.Control.SetStyle%2A> ,  
- ダブル バッファリングできるようにするメソッドを制御します。  
+ ダブル バッファリングをできる制御メソッド。  
   
  <xref:System.Drawing.BufferedGraphicsContext> ,  
  グラフィックス バッファーを作成するためのメソッドを提供します。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496284"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705832"
 ---
 # <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証します。
 このトピックでは、アプリケーション設定を永続化する前に検証する方法について説明します。  
@@ -40,9 +40,9 @@ ms.locfileid: "54496284"
   
 -   などの関連付けられたアクションの前に発生したイベントの<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>と<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>を使用して、<xref:System.ComponentModel.CancelEventArgs>操作をキャンセルする引数。  
   
- イベント処理の詳細については、「[イベント ハンドラーの概要](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)」を参照してください。  
+ イベント処理の詳細については、「[イベント ハンドラーの概要](../event-handlers-overview-windows-forms.md)」を参照してください。  
   
- 次の手順は、いずれかを使用して有効な生年月日をテストする方法を示して、<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>または<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>イベント。 これらの手順は、アプリケーション設定を既に作成していることを前提としています。この例では、`DateOfBirth` という名前の設定の範囲チェックを実行します。 設定の作成の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)します。  
+ 次の手順は、いずれかを使用して有効な生年月日をテストする方法を示して、<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>または<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>イベント。 これらの手順は、アプリケーション設定を既に作成していることを前提としています。この例では、`DateOfBirth` という名前の設定の範囲チェックを実行します。 設定の作成の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
 ### <a name="to-obtain-the-application-settings-object"></a>アプリケーション設定オブジェクトを取得するには  
   
@@ -161,5 +161,5 @@ ms.locfileid: "54496284"
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム内でのイベント ハンドラーの作成](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [方法: アプリケーション設定を作成します。](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Windows フォーム内でのイベント ハンドラーの作成](../creating-event-handlers-in-windows-forms.md)
+- [方法: アプリケーション設定を作成します。](how-to-create-application-settings.md)

@@ -8,16 +8,17 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: d1be2bb2c909b8074f1092d4ce138feff5c9607f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496037"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715894"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  
+  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]内で指定された値を表示するいくつかの方法を提供する、<xref:System.Windows.Forms.ProgressBar>コントロール。 どのアプローチを選択するは、手元のタスクまたは当面の問題によって異なります。 選択することができます、方法を次の表に示します。  
   
@@ -227,5 +228,5 @@ ms.locfileid: "54496037"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [ProgressBar コントロールの概要](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)
-- [ProgressBar コントロール](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+- [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)
+- [ProgressBar コントロール](progressbar-control-windows-forms.md)

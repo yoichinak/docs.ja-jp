@@ -15,15 +15,15 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628449"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705191"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール
-Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールをフォーム上で Web スタイルのリンクを作成できます。 リンクがクリックされたときに、リンクにアクセスしたかを示す色を変更できます。 色の変更の詳細については、次を参照してください。[方法。Windows フォーム LinkLabel コントロールの外観を変更する](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)します。  
+Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールをフォーム上で Web スタイルのリンクを作成できます。 リンクがクリックされたときに、リンクにアクセスしたかを示す色を変更できます。 色の変更の詳細については、次を参照してください。[方法。Windows フォーム LinkLabel コントロールの外観を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)します。  
   
 ## <a name="linking-to-another-form"></a>別のフォームへのリンク  
   
@@ -180,6 +180,6 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [LinkLabel コントロールの概要](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [方法: Windows フォーム LinkLabel コントロールの外観を変更します。](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
-- [LinkLabel コントロール](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
+- [方法: Windows フォーム LinkLabel コントロールの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [LinkLabel コントロール](linklabel-control-windows-forms.md)

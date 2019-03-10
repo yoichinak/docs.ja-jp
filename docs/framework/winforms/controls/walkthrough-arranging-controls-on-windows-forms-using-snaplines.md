@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748035"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703596"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォーム デザイナーでは、これを実現するさまざまなレイアウト ツールを提供します。 最も重要なの 1 つは、<xref:System.Windows.Forms.Design.Behavior.SnapLine>機能します。  
@@ -92,7 +92,7 @@ ms.locfileid: "56748035"
 > [!NOTE]
 >  場合、フォームの<xref:System.Windows.Forms.Control.Padding%2A>0,0,0,0 に設定されて、Windows フォーム デザイナーで、フォームは、シャドウ<xref:System.Windows.Forms.Control.Padding%2A>9,9,9,9 の値。 この動作をオーバーライドするには、0,0,0,0 以外の値を割り当てます。  
   
-1.  値を変更、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティを展開して、<xref:System.Windows.Forms.Control.Margin%2A>内のエントリ、**プロパティ**ウィンドウと設定、<xref:System.Windows.Forms.Padding.All%2A>プロパティを 0 にします。 詳細については、次を参照してください。[チュートリアル。Padding、Margin、および AutoSize プロパティを持つコントロールをフォーム レイアウト Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)します。  
+1.  値を変更、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティを展開して、<xref:System.Windows.Forms.Control.Margin%2A>内のエントリ、**プロパティ**ウィンドウと設定、<xref:System.Windows.Forms.Padding.All%2A>プロパティを 0 にします。 詳細については、次を参照してください。[チュートリアル。Padding、Margin、および AutoSize プロパティを持つコントロールをフォーム レイアウト Windows](windows-forms-controls-padding-autosize.md)します。  
   
 2.  移動、<xref:System.Windows.Forms.Button>スナップ線が表示されるまで、フォームの右側の境界線の近くに制御します。 この距離は、フォームの値によって指定された<xref:System.Windows.Forms.Control.Padding%2A>プロパティ。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56748035"
   
 1.  <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールをフォームにドラッグします。  
   
-2.  サイズ変更、<xref:System.Windows.Forms.Button>角をドラッグしてサイズ変更ハンドルの 1 つをグラブを行ったによって制御します。 詳細については、「[方法: Windows フォーム上のコントロールのサイズを変更](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)します。  
+2.  サイズ変更、<xref:System.Windows.Forms.Button>角をドラッグしてサイズ変更ハンドルの 1 つをグラブを行ったによって制御します。 詳細については、「[方法: Windows フォーム上のコントロールのサイズを変更](how-to-resize-controls-on-windows-forms.md)します。  
   
 3.  までのいずれかのサイズ変更ハンドルをドラッグして、<xref:System.Windows.Forms.Button>コントロールの枠線が別のコントロールに揃えられます。 スナップ線が表示されるに注意してください。 また、サイズ変更ハンドルをスナップ線によって示される位置にスナップすることに注意してください。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "56748035"
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>コントロールのテキストにラベルを配置するには  
   
-1.  <xref:System.Windows.Forms.TextBox> ツールボックス **から** コントロールをフォームにドラッグします。 ドロップすると、<xref:System.Windows.Forms.TextBox>をフォームにコントロール、スマート タグ グリフをクリックし、選択、 **textBox1 にテキストを設定**オプション。 詳細については、次を参照してください。[チュートリアル。フォーム コントロールのスマート タグを使用した Windows での一般的なタスクを実行する](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)します。  
+1.  <xref:System.Windows.Forms.TextBox> ツールボックス **から** コントロールをフォームにドラッグします。 ドロップすると、<xref:System.Windows.Forms.TextBox>をフォームにコントロール、スマート タグ グリフをクリックし、選択、 **textBox1 にテキストを設定**オプション。 詳細については、次を参照してください。[チュートリアル。フォーム コントロールのスマート タグを使用した Windows での一般的なタスクを実行する](performing-common-tasks-using-smart-tags-on-wf-controls.md)します。  
   
 2.  <xref:System.Windows.Forms.Label> ツールボックス **から** コントロールをフォームにドラッグします。  
   
@@ -241,7 +241,7 @@ ms.locfileid: "56748035"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト](windows-forms-controls-padding-autosize.md)
+- [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)

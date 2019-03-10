@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: fdaa34ace1f5322c9296d2520d275fdf3f176048
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46061108226feb83e821edb21dfce2a57bdd3ac7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515733"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708069"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールにおける AutoSize 動作
 ## <a name="distinct-autosize-behaviors"></a>個別の AutoSize 動作  
@@ -36,4 +36,4 @@ ms.locfileid: "54515733"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [TableLayoutPanel コントロールの概要](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+- [TableLayoutPanel コントロールの概要](tablelayoutpanel-control-overview.md)

@@ -2,12 +2,12 @@
 title: インスタンスのアクティブ化処理
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366046"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703401"
 ---
 # <a name="instance-activation"></a>インスタンスのアクティブ化処理
 SQL Workflow Instance Store が実行する内部タスクは、定期的にアクティブになり、実行可能またはアクティブ化可能なワークフロー インスタンスを永続性データベースで検出します。 このタスクは、実行可能なワークフロー インスタンスを検出すると、このインスタンスをアクティブ化することができるワークフロー ホストに通知します。 Instance Store がアクティブ化可能なワークフロー インスタンスを検出した場合、ワークフロー ホストをアクティブ化する汎用ホストに Instance Store が通知を行い、ワークフロー ホストがワークフロー インスタンスを実行します。 このトピックの以降のセクションでは、インスタンスのアクティブ化処理を詳細に説明します。  
@@ -41,4 +41,4 @@ SQL Workflow Instance Store が実行する内部タスクは、定期的にア�
  WAS アクティブ化の場合、汎用ホストは、新しいホストをアクティブ化できるエンドポイント アドレスを派生する一連のアクティブ化パラメーターを要求します。 WAS アクティブ化のアクティブ化パラメーターは、サイトの名前、サイトを基準としたアプリケーションの相対パス、アプリケーションを基準としたサービスの相対パスです。 SQL Workflow Instance Store は、<xref:System.Activities.DurableInstancing.SaveWorkflowCommand> の実行中にこれらのアクティブ化パラメーターを格納します。  
   
 ## <a name="runnable-instances-detection-period"></a>実行可能インスタンス検出期間  
- **実行可能インスタンス検出期間**SQL Workflow Instance Store のプロパティは、SQL Workflow Instance Store が実行可能またはアクティブ化可能なワークフローを検出するために検出タスクを実行するまでの期間を指定します前の検出サイクルの後に、永続性データベースのインスタンス。 参照してください[実行可能インスタンス検出期間](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)このプロパティの詳細についてはします。
+ **実行可能インスタンス検出期間**SQL Workflow Instance Store のプロパティは、SQL Workflow Instance Store が実行可能またはアクティブ化可能なワークフローを検出するために検出タスクを実行するまでの期間を指定します前の検出サイクルの後に、永続性データベースのインスタンス。 参照してください[実行可能インスタンス検出期間](runnable-instances-detection-period.md)このプロパティの詳細についてはします。

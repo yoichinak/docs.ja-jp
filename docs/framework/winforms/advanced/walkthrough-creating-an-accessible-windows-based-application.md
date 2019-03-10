@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル : ユーザー補助対応の Windows ベースのアプリケーションの作成'
+title: 'チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションを作成します。'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529624"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708276"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル : ユーザー補助対応の Windows ベースのアプリケーションの作成
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションを作成します。
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  
   
  このチュートリアルにより、Certified for Windows ロゴの 5 つのユーザー補助機能の要件に対応します。 これらの要件によると、ユーザー補助機能を持つアプリケーションとは、次のようなアプリケーションです。  
@@ -30,7 +30,7 @@ ms.locfileid: "33529624"
   
  詳細については、「[ユーザー補助アプリケーションのデザイン リソース](/visualstudio/ide/reference/resources-for-designing-accessible-applications)」を参照してください。  
   
- さまざまなキーボード レイアウトをサポートする方法については、「[推奨される国際対応アプリケーション開発手順](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)」を参照してください。  
+ さまざまなキーボード レイアウトをサポートする方法については、「[推奨される国際対応アプリケーション開発手順](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)」を参照してください。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  このチュートリアルでは、ピザの注文を受け取るためのアプリケーションのユーザー インターフェイスを作成します。 顧客の名前のための <xref:System.Windows.Forms.TextBox>、ピザのサイズを選択する <xref:System.Windows.Forms.RadioButton> グループ、トッピングを選択するための <xref:System.Windows.Forms.CheckedListBox>、[注文] と [キャンセル] のラベルの付いた 2 つのボタン コントロール、および [終了] コマンドのあるメニューで構成されます。  
@@ -41,12 +41,12 @@ ms.locfileid: "33529624"
   
 #### <a name="to-begin-making-the-application"></a>アプリケーションの作成を開始するには  
   
--   Visual Basic または Visual c# では、新しい Windows アプリケーションを作成します。 プロジェクトに **PizzaOrder** という名前を付けます。 (詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照。)  
+-   Visual Basic または Visual で新しい Windows アプリケーションを作成C#します。 プロジェクトに **PizzaOrder** という名前を付けます。 (詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照。)  
   
 ## <a name="adding-the-controls-to-the-form"></a>フォームへのコントロールの追加  
  フォームにコントロールを追加するときは、ユーザー補助に対応したアプリケーション作成のガイドラインに従うよう注意してください。  
   
--   <xref:System.Windows.Forms.Control.AccessibleDescription%2A> プロパティと <xref:System.Windows.Forms.Control.AccessibleName%2A> プロパティを設定します。 この例では、<xref:System.Windows.Forms.Control.AccessibleRole%2A> の既定の設定で十分です。 アクセシビリティのプロパティの詳細については「[Windows フォーム上のコントロールのユーザー補助情報の提供](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)」を参照してください。  
+-   <xref:System.Windows.Forms.Control.AccessibleDescription%2A> プロパティと <xref:System.Windows.Forms.Control.AccessibleName%2A> プロパティを設定します。 この例では、<xref:System.Windows.Forms.Control.AccessibleRole%2A> の既定の設定で十分です。 アクセシビリティのプロパティの詳細については「[Windows フォーム上のコントロールのユーザー補助情報の提供](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)」を参照してください。  
   
 -   フォント サイズを 10 ポイント以上に設定します。  
   
@@ -137,11 +137,11 @@ ms.locfileid: "33529624"
     |MenuItem|名前|exitApp|  
     ||テキスト|終了(&X)|  
   
-     ![ピザ オーダー フォーム](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![ピザ オーダー フォーム](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 フォームは次のようになります。  
   
 ## <a name="supporting-high-contrast-mode"></a>ハイ コントラスト モードのサポート  
- ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを提供します。  
+ ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを指定します。  
   
  SystemInformation.HighContrast が `true` の場合、アプリケーションは次のようになります  
   
@@ -151,9 +151,10 @@ ms.locfileid: "33529624"
   
 -   テキストの背後にあるイメージやパターンを省略します。  
   
- アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。  
+ アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 
+  <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。  
   
- この例のアプリケーションでは、色のシステム設定を使用していない唯一の要素は `lblCompanyName` です。 <xref:System.Drawing.SystemColors>クラスを使用してラベルの色の設定をユーザーが選択したシステム カラーに変更します。  
+ この例のアプリケーションでは、色のシステム設定を使用していない唯一の要素は `lblCompanyName` です。 <xref:System.Drawing.SystemColors>クラス ラベルの色の設定をユーザーが選択したシステム カラーに変更に使用されます。  
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>効果的な方法でハイ コントラスト モードを有効にするには  
   
@@ -287,7 +288,7 @@ ms.locfileid: "33529624"
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>サウンド以外の方法で情報を提供するには  
   
-1.  Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例は、「[チュートリアル: Windows API の呼び出し](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)」を参照してください。  
+1.  Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例は、次を参照してください。[チュートリアル。Windows API の呼び出し](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
     > [!NOTE]
     >  ユーザーが Windows SoundSentry サービスを有効にして、コンピューターの内蔵スピーカーを通じてシステム サウンドが再生されるときにウィンドウをフラッシュさせていることがあります。  
@@ -296,7 +297,7 @@ ms.locfileid: "33529624"
   
 3.  キーボード フォーカスを取得するメッセージ ボックスを表示します。 ユーザーが入力しているときは、このメソッドは回避します。  
   
-4.  タスクバーの状態通知領域に状態インジケーターを表示します。 詳細については、「[Windows フォームの NotifyIcon コンポーネントによるタスクバーへのアプリケーション アイコンの追加](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)」を参照してください。  
+4.  タスクバーの状態通知領域に状態インジケーターを表示します。 詳細については、「[Windows フォームの NotifyIcon コンポーネントによるタスクバーへのアプリケーション アイコンの追加](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)」を参照してください。  
   
 ## <a name="testing-the-application"></a>アプリケーションのテスト  
  アプリケーションを配置する前に、実装したユーザー補助機能をテストする必要があります。  

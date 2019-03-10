@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362566"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714009"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う
 
-マルチ スレッドは、Windows フォームのアプリのパフォーマンスを向上させることができますが、Windows フォーム コントロールへのアクセスがスレッド セーフでは本質的にはありません。 マルチ スレッドは、非常に深刻かつ複雑なバグ、コードを公開できます。 2 つまたは複数のスレッドが、コントロールの操作では、コントロールが不整合な状態に強制的に移動でき、競合状態、デッドロック、およびがフリーズやハングすることができます。 実装する場合は、マルチ スレッド アプリケーションでは、スレッド セーフな方法で、スレッド間のコントロールを呼び出すことを確認します。 詳細については、次を参照してください。[マネージ スレッド処理のベスト プラクティス](../../../../docs/standard/threading/managed-threading-best-practices.md)します。 
+マルチ スレッドは、Windows フォームのアプリのパフォーマンスを向上させることができますが、Windows フォーム コントロールへのアクセスがスレッド セーフでは本質的にはありません。 マルチ スレッドは、非常に深刻かつ複雑なバグ、コードを公開できます。 2 つまたは複数のスレッドが、コントロールの操作では、コントロールが不整合な状態に強制的に移動でき、競合状態、デッドロック、およびがフリーズやハングすることができます。 実装する場合は、マルチ スレッド アプリケーションでは、スレッド セーフな方法で、スレッド間のコントロールを呼び出すことを確認します。 詳細については、次を参照してください。[マネージ スレッド処理のベスト プラクティス](../../../standard/threading/managed-threading-best-practices.md)します。 
 
 Windows フォーム コントロールをそのコントロールを作成していないスレッドから安全に呼び出すに 2 つの方法はあります。 使用することができます、<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>コントロールを呼び出し、メイン スレッドで作成したデリゲートを呼び出すメソッド。 または、実装することができます、<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>結果のレポートから、バック グラウンド スレッドで実行される作業を分離するにはイベント ドリブン モデルを使用します。 
 
@@ -75,8 +75,8 @@ Visual Studio デバッガーは、発生させることによってこれらの
 
 `SafeCallDelegate`設定を有効に、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.TextBox.Text%2A>プロパティ。 `WriteTextSafe`メソッド クエリ<xref:System.Windows.Forms.Control.InvokeRequired%2A>します。 場合<xref:System.Windows.Forms.Control.InvokeRequired%2A>返します`true`、`WriteTextSafe`渡します、`SafeCallDelegate`を<xref:System.Windows.Forms.Control.Invoke%2A>をコントロールには、実際の呼び出しを行うメソッドです。 場合<xref:System.Windows.Forms.Control.InvokeRequired%2A>返します`false`、`WriteTextSafe`設定、<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接します。 `Button1_Click`イベント ハンドラーが新しいスレッドを作成および実行される、`WriteTextSafe`メソッド。 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>例:BackgroundWorker のイベント ハンドラーを使用します。
 
@@ -86,12 +86,12 @@ Visual Studio デバッガーは、発生させることによってこれらの
 
 この例では、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベント ハンドラーを設定する、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.TextBox.Text%2A>プロパティ。 使用例について、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントを参照してください<xref:System.ComponentModel.BackgroundWorker>します。 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [方法: バック グラウンドで操作を実行します。](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [方法: バック グラウンド操作を使用してフォームを実装します。](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [.NET Framework でのカスタムの Windows フォーム コントロールを開発します。](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [方法: バック グラウンドで操作を実行します。](how-to-run-an-operation-in-the-background.md)
+- [方法: バック グラウンド操作を使用してフォームを実装します。](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [.NET Framework でのカスタムの Windows フォーム コントロールを開発します。](developing-custom-windows-forms-controls.md)

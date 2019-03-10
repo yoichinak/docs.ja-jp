@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: a21e049cb91ec29bcd46eb04efd78487da9a6317
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497033"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709052"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画の Graphics オブジェクトを作成します。
 直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
@@ -163,15 +163,15 @@ ms.locfileid: "54497033"
   
      詳細については、次のトピックを参照してください。  
   
-    |表示するには|解決方法については、|  
+    |表示するには|解決方法|  
     |---------------|---------|  
-    |線|[方法: Windows フォームに直線を描画します。](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
-    |図形|[方法: 形状のアウトラインを描画します。](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
-    |テキスト|[方法: Windows フォーム上のテキストの描画](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)|  
-    |イメージ|[方法: GDI + を使用したイメージをレンダリングします。](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)|  
+    |線|[方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)|  
+    |図形|[方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)|  
+    |テキスト|[方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)|  
+    |イメージ|[方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>関連項目
-- [グラフィックス プログラミングについて](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [直線、曲線、および図形](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [方法: GDI + を使用したイメージをレンダリングします。](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)
+- [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
+- [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
+- [直線、曲線、および図形](lines-curves-and-shapes.md)
+- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)

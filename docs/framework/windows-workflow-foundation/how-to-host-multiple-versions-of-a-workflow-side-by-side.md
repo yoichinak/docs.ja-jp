@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366707"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705988"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>方法: 複数のバージョンをワークフロー サイド バイ サイドのホストします。
 `WorkflowIdentity` を使用すると、ワークフロー アプリケーションの開発者は、名前とバージョンをワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 チュートリアルのこの手順では、`WorkflowIdentity` を使用してワークフローの複数のバージョンを同時にホストする方法について説明します。
@@ -21,22 +21,22 @@ ms.locfileid: "57366707"
 ## <a name="in-this-topic"></a>このトピックの内容  
  チュートリアルのこの手順では、追加情報を提供するようにワークフローの `WriteLine` アクティビティが変更され、新しい `WriteLine` アクティビティが追加されます。 元のワークフロー アセンブリのコピーが格納され、ホスト アプリケーションは、元のワークフローと更新されたワークフローの両方を同時に実行できるように更新されます。  
   
--   [NumberGuessWorkflowActivities プロジェクトのコピーを作成するには](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [NumberGuessWorkflowActivities プロジェクトのコピーを作成するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [ワークフローを更新するには](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [ステート マシン ワークフローを更新するには](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [ステート マシン ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [フローチャート ワークフローを更新するには](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [フローチャート ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [シーケンシャル ワークフローを更新するには](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [シーケンシャル ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [ビルドして、アプリケーションの実行](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [ビルドして、アプリケーションの実行](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  このトピックの手順を実行する前に、アプリケーションを実行し、各種類のワークフローをいくつか開始して、ワークフローごとに 1 つまたは 2 つの推定値を作成します。 これらの永続化されたワークフローがこの手順と次の手順で使用される[方法。実行中のワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
+>  このトピックの手順を実行する前に、アプリケーションを実行し、各種類のワークフローをいくつか開始して、ワークフローごとに 1 つまたは 2 つの推定値を作成します。 これらの永続化されたワークフローがこの手順と次の手順で使用される[方法。実行中のワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
 > [!NOTE]
 >  チュートリアル入門の各手順は、その前の手順に応じて異なります。 前の手順を完了しなかった場合は、」からチュートリアルの完成版をダウンロードできます[Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
@@ -60,7 +60,7 @@ ms.locfileid: "57366707"
     > [!NOTE]
     >  このトピックの手順では、ワークフローの複数のバージョンを格納するためのアセンブリを管理する 1 つの方法を示します。 アセンブリに厳密な名前を付けてグローバル アセンブリ キャッシュに登録するなど、他の方法も使用できます。
 
-8.  という名前の新しいフォルダーを作成する**NumberGuessWorkflowActivities_du**と同じフォルダーに**NumberGuessWorkflowHost**、 **NumberGuessWorkflowActivities**、し、新しく追加**PreviousVersions**フォルダーでは、すべてのファイルとサブフォルダーをコピーし、 **NumberGuessWorkflowActivities**を新しいフォルダー **NumberGuessWorkflowActivities_du**フォルダー。 アクティビティの最初のバージョンのプロジェクトのこのバックアップ コピーが使用される[方法。実行中のワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)します。
+8.  という名前の新しいフォルダーを作成する**NumberGuessWorkflowActivities_du**と同じフォルダーに**NumberGuessWorkflowHost**、 **NumberGuessWorkflowActivities**、し、新しく追加**PreviousVersions**フォルダーでは、すべてのファイルとサブフォルダーをコピーし、 **NumberGuessWorkflowActivities**を新しいフォルダー **NumberGuessWorkflowActivities_du**フォルダー。 アクティビティの最初のバージョンのプロジェクトのこのバックアップ コピーが使用される[方法。実行中のワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
 9. 開き直す、 **WF45GettingStartedTutorial** Visual Studio 2012 でのソリューションです。
 
@@ -590,4 +590,4 @@ ms.locfileid: "57366707"
 
 4.  数値推測アプリケーションに戻り、更新が行われる前に開始したワークフローのうち 1 つを選択します。 現在選択されているワークフローのバージョンを特定するには、ステータス ウィンドウの下に表示されるバージョン情報を確認します。 いくつかの推定値を入力し、ステータスの更新が前のバージョンからの `WriteLine` アクティビティの出力と一致しており、ユーザーの推定値が含まれていないことを確認してください。 これらのワークフローでは、`WriteLine` の更新を含まない以前のワークフロー定義を使用しているためです。
 
-     次の手順で[方法。実行しているワークフロー インスタンスの定義を更新](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)、実行`v1`ワークフロー インスタンスが更新されるは、新しい機能が含まれているため、`v2`インスタンス。
+     次の手順で[方法。実行しているワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)、実行`v1`ワークフロー インスタンスが更新されるは、新しい機能が含まれているため、`v2`インスタンス。

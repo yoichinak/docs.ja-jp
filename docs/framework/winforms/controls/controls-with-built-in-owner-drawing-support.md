@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707357"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>組み込みのオーナー描画サポートを備えたコントロール
 Windows フォームのオーナー描画 (カスタム描画とも呼ばれます) は、特定のコントロールの外観を変更するための手法です。  
@@ -86,7 +86,7 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem コンポーネント  
  <xref:System.Windows.Forms.MenuItem>コンポーネント内の 1 つのメニュー項目を表す、<xref:System.Windows.Forms.MainMenu>または<xref:System.Windows.Forms.ContextMenu>コンポーネント。  
@@ -172,9 +172,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [方法: Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズします。](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [方法: Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズします。](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [方法: Windows フォームの DataGridView コントロール内の行の外観をカスタマイズします。](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [方法: Windows フォームの DataGridView コントロール内の行の外観をカスタマイズします。](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip コントロール  
  <xref:System.Windows.Forms.ToolStrip> および派生コントロールでは、のどの側面の外観をカスタマイズできます。  
@@ -185,9 +185,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [方法: ToolStrip コントロールをカスタム描画します。](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [方法: ToolStrip コントロールをカスタム描画します。](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

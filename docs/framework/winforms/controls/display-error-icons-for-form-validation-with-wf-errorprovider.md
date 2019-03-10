@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: fa230e326a91853d6b23d5901317a86f628f6c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679111"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707639"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証のエラー アイコンを表示します。
 Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無効なデータが入力されたときにエラー アイコンを表示するコンポーネント。 それらの間のタブし、検証コードを呼び出すためにフォーム上の少なくとも 2 つのコントロールが必要です。  
@@ -27,7 +27,7 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無�
   
 2.  追加、<xref:System.Windows.Forms.ErrorProvider>コンポーネントをフォームにします。  
   
-3.  最初のコントロールを選択し、コードを追加してその<xref:System.Windows.Forms.Control.Validating>イベント ハンドラー。 このコードを正常に実行するためには、プロシージャは、イベントに接続する必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
+3.  最初のコントロールを選択し、コードを追加してその<xref:System.Windows.Forms.Control.Validating>イベント ハンドラー。 このコードを正常に実行するためには、プロシージャは、イベントに接続する必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
   
      次のコードは、ユーザーが入力したデータの有効性をテストします。データが有効でない場合、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドが呼び出されます。 最初の引数、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドでは、横にアイコンを表示するコントロールを指定します。 2 番目の引数は、表示するエラー テキストです。  
   
@@ -94,5 +94,5 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無�
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [ErrorProvider コンポーネントの概要](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内のエラーの表示](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)
+- [方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内のエラーの表示](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

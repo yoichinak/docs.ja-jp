@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: 489a31474b8ae3e56ba69e59f6d613ecf892a93c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c201455acaa9bde521afd623424d0cfc403b1bff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531292"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705875"
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>方法: Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示します。
 Windows フォーム<xref:System.Windows.Forms.DateTimePicker>柔軟にコントロールで日付と時刻の表示の書式設定を制御します。 <xref:System.Windows.Forms.DateTimePicker.Format%2A>プロパティに表示される定義済みの形式から選択することができます、<xref:System.Windows.Forms.DateTimePickerFormat>します。 形式指定文字を使用して、独自の書式スタイルを作成するには、目的のための適切な場合、これらのいずれも<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>します。  
@@ -64,5 +64,5 @@ Windows フォーム<xref:System.Windows.Forms.DateTimePicker>柔軟にコント
      カルチャの設定に応じて単一引用符で囲まれていない文字は変更される可能性があります。 たとえば、上記の書式指定文字列には、形式の現在の日付が表示されます。"今日は。05時 30分: 31 金曜日 March 02、2012"英語 (米国) カルチャ。 "Hh:mm:ss"であるため、区切り記号をするものではありませんので、最初のコロンが単一引用符で囲まれていることに注意してください。 別のカルチャでは、形式がありますとして表示されます"今日は。05.30.31 金曜日 March 02、2012"。  
   
 ## <a name="see-also"></a>関連項目
-- [DateTimePicker コントロール](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [方法: Windows フォームの DateTimePicker コントロールを設定し、戻り値の日付](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [DateTimePicker コントロール](datetimepicker-control-windows-forms.md)
+- [方法: Windows フォームの DateTimePicker コントロールを設定し、戻り値の日付](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: dea9b1f870230daff92ac86d00dfda5774309a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3b5b2420a1121be81bc299dea645051f941cd8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727782"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707977"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法: 継承可能な既存の Windows フォーム コントロール
 既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 継承するコントロールを作成する場合など<xref:System.Windows.Forms.Button>は、新しいコントロールになります、act とまったく同じ標準<xref:System.Windows.Forms.Button>コントロール。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールで変更することできますも継承されたコントロールの外観をオーバーライドしてその<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。  
@@ -59,7 +59,7 @@ ms.locfileid: "54727782"
 10. コントロールの外観を変更する場合は、オーバーライド、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。  
   
     > [!NOTE]
-    >  オーバーライドする<xref:System.Windows.Forms.Control.OnPaint%2A>すべてのコントロールの外観を変更することはできません。 これらのコントロールを持つすべての描画が Windows によって行われます (たとえば、 <xref:System.Windows.Forms.TextBox>) 呼び出すことはありません、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド、なり、決して使用して、カスタム コード。 かどうかを変更する特定のコントロールのヘルプ ドキュメントを参照してください、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを使用できます。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがない場合<xref:System.Windows.Forms.Control.OnPaint%2A>メンバー メソッドとして一覧に表示できない外観を変更するこのメソッドをオーバーライドすることで。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)」を参照してください。  
+    >  オーバーライドする<xref:System.Windows.Forms.Control.OnPaint%2A>すべてのコントロールの外観を変更することはできません。 これらのコントロールを持つすべての描画が Windows によって行われます (たとえば、 <xref:System.Windows.Forms.TextBox>) 呼び出すことはありません、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド、なり、決して使用して、カスタム コード。 かどうかを変更する特定のコントロールのヘルプ ドキュメントを参照してください、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドを使用できます。 すべての Windows フォーム コントロールの一覧については、「[Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)」を参照してください。 コントロールがない場合<xref:System.Windows.Forms.Control.OnPaint%2A>メンバー メソッドとして一覧に表示できない外観を変更するこのメソッドをオーバーライドすることで。 カスタム描画の詳細については、「[コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)」を参照してください。  
   
     ```vb  
     Protected Overrides Sub OnPaint(ByVal e As _  
@@ -84,10 +84,10 @@ ms.locfileid: "54727782"
 11. コントロールを保存して、動作確認を行います。  
   
 ## <a name="see-also"></a>関連項目
-- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
-- [方法: コントロール クラスから継承します。](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
-- [方法: UserControl クラスを継承します。](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
-- [方法: Windows フォームのコントロールの作成](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
+- [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
+- [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)
+- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

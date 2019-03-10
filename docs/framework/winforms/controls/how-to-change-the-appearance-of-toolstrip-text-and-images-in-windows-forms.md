@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: 05e44da390f3fe668890d8c093729cb0ebfd1642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631075"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705403"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>方法: Windows フォームにおける ToolStrip テキストとイメージの外観を変更します。
 テキストとイメージを表示するかどうかを制御できます、<xref:System.Windows.Forms.ToolStripItem>と相対的な配置と<xref:System.Windows.Forms.ToolStrip>します。  
@@ -77,6 +77,6 @@ ms.locfileid: "54631075"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ToolStrip>
-- [ToolStrip コントロールの概要](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip コントロールのアーキテクチャ](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip テクノロジの概要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
+- [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

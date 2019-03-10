@@ -2,12 +2,12 @@
 title: '方法: カスタム アクティビティ テンプレートを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-ms.openlocfilehash: c90721676fc5b77704ee86bcd5e98c99e3af6683
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9594f799e1b6a176e7bbf28cdea77c9cdfb70ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703466"
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>方法: カスタム アクティビティ テンプレートを作成します。
 
@@ -127,4 +127,4 @@ namespace DelayActivityTemplate
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Activities.Presentation.IActivityTemplateFactory>
-- [ワークフロー デザイン操作のカスタマイズ](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [ワークフロー デザイン操作のカスタマイズ](customizing-the-workflow-design-experience.md)

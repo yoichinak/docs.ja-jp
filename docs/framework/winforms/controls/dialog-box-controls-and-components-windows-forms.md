@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 8a2dcde82c4bdded05fe1d69578b6becb5c1175e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441997"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705793"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>ダイアログ ボックス コントロールおよびコンポーネント (Windows フォーム)
 次の Windows フォーム コントロールおよびコンポーネントは、標準のダイアログ ボックスを表示します。 各ダイアログ ボックスで使用できる機能に関する詳細については、リンクに従ってください。  
@@ -47,31 +47,31 @@ ms.locfileid: "56441997"
   <xref:System.Windows.Forms.SaveFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームのダイアログ ボックス](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  Windows フォームのダイアログ ボックスを作成する方法について説明します。  
   
- [ColorDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)  
  ユーザーが構成済みのダイアログ ボックスでパレットから色を選択して、そのパレットにカスタムの色を追加できるようにします。  
   
- [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](folderbrowserdialog-component-overview-windows-forms.md)  
  ユーザーがフォルダーを参照して選択できるようにします。  
   
- [FontDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ [FontDialog コンポーネントの概要](fontdialog-component-overview-windows-forms.md)  
  現在システムにインストールされているフォントを公開します。  
   
- [OpenFileDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ [OpenFileDialog コンポーネントの概要](openfiledialog-component-overview-windows-forms.md)  
  ユーザーが構成済みのダイアログ ボックスを使用してファイルを開くことができるようにします。  
   
- [PageSetupDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog コンポーネントの概要](pagesetupdialog-component-overview-windows-forms.md)  
  構成済みのダイアログ ボックスを使用して印刷するページの詳細を設定します。  
   
- [PrintDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ [PrintDialog コンポーネントの概要](printdialog-component-overview-windows-forms.md)  
  プリンターを選択して、ページを印刷し、その他の印刷関連の設定を決定します。  
   
- [PrintPreviewDialog コントロールの概要](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [PrintPreviewDialog コントロールの概要](printpreviewdialog-control-overview-windows-forms.md)  
  印刷時に表示されるドキュメントを表示します。  
   
- [SaveFileDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)  
  保存するファイルとそれらの保存先を選択します。  
   
  「[Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)」もご覧ください。

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 1ed062b3991d7738269d30a6ff13cda3c80927c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630321"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702413"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl の外観を変更します。
 プロパティを使用して Windows フォームのタブの外観を変更することができます、<xref:System.Windows.Forms.TabControl>と<xref:System.Windows.Forms.TabPage>コントロールの個々 のタブを構成するオブジェクト。 これらのプロパティを設定することができますタブ上のイメージを表示、水平方向にではなく縦方向にタブが表示されます、タブなどの複数の行を表示し有効または無効にタブ プログラムでします。  
@@ -27,7 +27,7 @@ ms.locfileid: "54630321"
   
 2.  イメージをイメージ リストに追加します。  
   
-     イメージ リストの詳細については、次を参照してください。 [ImageList コンポーネント](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)と[方法。追加または削除のイメージで、Windows フォームの ImageList コンポーネント](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)します。  
+     イメージ リストの詳細については、次を参照してください。 [ImageList コンポーネント](imagelist-component-windows-forms.md)と[方法。追加または削除のイメージで、Windows フォームの ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)します。  
   
 3.  設定、<xref:System.Windows.Forms.TabControl.ImageList%2A>のプロパティ、<xref:System.Windows.Forms.TabControl>を<xref:System.Windows.Forms.ImageList>コントロール。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54630321"
 -   設定、<xref:System.Windows.Forms.TabControl.Appearance%2A>のプロパティ、<xref:System.Windows.Forms.TabControl>に<xref:System.Windows.Forms.TabAppearance.Buttons>または<xref:System.Windows.Forms.TabAppearance.FlatButtons>します。  
   
 ## <a name="see-also"></a>関連項目
-- [TabControl コントロール](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [TabControl コントロールの概要](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [方法: タブ ページを無効にします。](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [方法: Windows フォーム tabcontrol のタブ追加および削除](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [TabControl コントロール](tabcontrol-control-windows-forms.md)
+- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
+- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

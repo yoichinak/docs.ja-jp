@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 11047b9308905b153662c5449abeeae8c23af26c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565632"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716011"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>方法: Windows フォームの TextBox コントロールで複数の行を表示します。
 既定では、Windows フォームで<xref:System.Windows.Forms.TextBox>コントロールが 1 行のテキストを表示し、スクロール バーは表示されません。 テキストが使用可能な領域よりも長い場合は、テキストの一部のみが表示されます。 この既定の動作を設定して変更することができます、 <xref:System.Windows.Forms.TextBox.Multiline%2A>、 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>、および<xref:System.Windows.Forms.TextBox.ScrollBars%2A>プロパティを適切な値にします。  
@@ -31,7 +31,8 @@ ms.locfileid: "54565632"
   
 1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true`に設定します。 場合<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>は`true`(既定)、コントロール内のテキストは、1 つまたは複数の段落を感じるかもしれません。 それ以外の場合、一部の行が、コントロールの端にあるクリップが一覧として表示されます。  
   
-2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
+2.  
+  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -39,7 +40,8 @@ ms.locfileid: "54565632"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|幅を超える可能性がありますうちいくつかの行の一覧を表示する場合、この値を使用して、<xref:System.Windows.Forms.TextBox>コントロール。|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|一覧は、コントロールの高さを超える可能性がある場合は、この値を使用します。|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
+3.  
+  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -48,10 +50,10 @@ ms.locfileid: "54565632"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox コントロールの概要](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: 文字列に引用符を挿入します。](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [TextBox コントロール](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: 文字列に引用符を挿入します。](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [TextBox コントロール](textbox-control-windows-forms.md)

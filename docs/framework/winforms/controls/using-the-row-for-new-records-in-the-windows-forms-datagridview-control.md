@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 86e61afd0882fea9015cdfe3b40e6d3cd329391b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734959"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703921"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールにおける新規レコード行の使用
 使用すると、<xref:System.Windows.Forms.DataGridView>アプリケーションでデータを編集するには、多くの場合することをデータ ストアに新しいデータ行を追加する機能をユーザーに提供します。 <xref:System.Windows.Forms.DataGridView>コントロールは、最後の行として常に表示されている、新しいレコードの行を指定してこの機能をサポートしています。 これは、行のヘッダーにアスタリスク (*) 記号でマークされます。 次のセクションでは、新しいレコードの行でプログラムが有効にした場合の考慮事項について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "54734959"
 ## <a name="populating-the-row-for-new-records-with-default-data"></a>既定のデータを新しいレコードの行を設定  
  ユーザーが現在の行と新しいレコードの行を選択するとき、<xref:System.Windows.Forms.DataGridView>制御発生させ、<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>イベント。  
   
- このイベントは、新しいへのアクセスを提供します。<xref:System.Windows.Forms.DataGridViewRow>既定のデータを新しい行に設定することができます。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内の新しい行の既定値を指定します。](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ このイベントは、新しいへのアクセスを提供します。<xref:System.Windows.Forms.DataGridViewRow>既定のデータを新しい行に設定することができます。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内の新しい行の既定値を指定します。](specify-default-values-for-new-rows-in-the-datagrid.md)  
   
 ## <a name="the-rows-collection"></a>行のコレクション  
  新しいレコードの行が含まれている、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクションが、2 つの点では動作が異なります。  
@@ -34,7 +34,7 @@ ms.locfileid: "54734959"
 -   新しいレコードの行の後に行を追加されません。 <xref:System.InvalidOperationException>が、これを試行した場合に発生します。 その結果、新しいレコードの行は常に最後の行で、<xref:System.Windows.Forms.DataGridView>コントロール。 メソッドを<xref:System.Windows.Forms.DataGridViewRowCollection>行を追加する-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— すべてメソッドを呼び出す挿入内部的に新しいレコードの行が存在する場合。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新しいレコードの行のビジュアルのカスタマイズ  
- 指定した行に基づいて新しいレコードの行が作成されたときに、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 この行に指定されていないセルのスタイルは、その他のプロパティから継承されます。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+ 指定した行に基づいて新しいレコードの行が作成されたときに、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 この行に指定されていないセルのスタイルは、その他のプロパティから継承されます。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
   
  各セルから新しいレコードを取得、行内のセルで表示される初期値<xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>プロパティ。 型のセルの<xref:System.Windows.Forms.DataGridViewImageCell>、このプロパティは、プレース ホルダー イメージを返します。 このプロパティを返しますそれ以外の場合、`null`します。 カスタム値を返すには、このプロパティをオーバーライドすることができます。 ただし、によってこれらの初期値を置き換えることができます、<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>新しいレコードの行にフォーカスが移ったときにイベント ハンドラー。  
   
@@ -55,10 +55,10 @@ ms.locfileid: "54734959"
  新しいレコードの行が選択されていない状態で常に作成されます。  
   
 ## <a name="virtual-mode"></a>仮想モード  
- 仮想モードを実装する場合は、新しいレコードの行がデータ モデルと、行の追加をロールバックするために必要な場合に追跡する必要があります。 この機能の正確な実装に依存データ モデルとそのトランザクションのセマンティクスの実装など、コミットのスコープがセルまたは行レベルであるかどうか。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでの仮想モード](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)します。  
+ 仮想モードを実装する場合は、新しいレコードの行がデータ モデルと、行の追加をロールバックするために必要な場合に追跡する必要があります。 この機能の正確な実装に依存データ モデルとそのトランザクションのセマンティクスの実装など、コミットのスコープがセルまたは行レベルであるかどうか。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows フォーム DataGridView コントロールでのデータ入力](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロール内の新しい行の既定値を指定します。](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Windows フォーム DataGridView コントロールでのデータ入力](data-entry-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロール内の新しい行の既定値を指定します。](specify-default-values-for-new-rows-in-the-datagrid.md)

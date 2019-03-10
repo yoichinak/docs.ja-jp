@@ -10,12 +10,12 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: 0e62bee55938e79d1555c463ac770f7b35be20f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e102f51d00953d05ed1d217a345e32178676ffe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578807"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716336"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>方法: カラー行列を使用して、イメージのアルファ値を設定するには
 <xref:System.Drawing.Bitmap>クラス (から継承する、<xref:System.Drawing.Image>クラス) と<xref:System.Drawing.Imaging.ImageAttributes>クラスが取得およびピクセル値を設定するための機能を提供します。 使用することができます、<xref:System.Drawing.Imaging.ImageAttributes>アルファを変更するクラスは、イメージ全体の値または呼び出すことができます、<xref:System.Drawing.Bitmap.SetPixel%2A>のメソッド、<xref:System.Drawing.Bitmap>個々 のピクセル値を変更するクラス。  
@@ -25,16 +25,16 @@ ms.locfileid: "54578807"
   
  レンダリング中には、ビットマップのアルファ値は、元の 80% に変換されます。 これは、結果、画像の背景とブレンドされます。 ビットマップ イメージが透明は次の図では、黒い実線を確認できます。  
   
- ![行列を使用してアルファ ブレンド](../../../../docs/framework/winforms/advanced/media/image2.png "イメージ 2")  
+ ![行列を使用してアルファ ブレンド](./media/image2.png "イメージ 2")  
   
  イメージは、バック グラウンドの白い部分には、イメージを白にブレンドされています。 イメージは、イメージが黒の線と交差する位置黒い色とブレンドされます。  
   
- [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [アルファ ブレンドの直線と塗りつぶし](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
+- [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)

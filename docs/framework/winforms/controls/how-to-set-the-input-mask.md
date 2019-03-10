@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658914"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702361"
 ---
 # <a name="how-to-set-the-input-mask"></a>方法: 入力マスクを設定します。
 マスクされたテキスト ボックス コントロールは、許可または拒否のユーザー入力の宣言の構文をサポートする強化されたテキスト ボックス コントロールです。 Mask プロパティを設定して、アプリケーションで任意のカスタム検証ロジックを記述することがなく、使用可能なユーザー入力を指定できます。 詳細については、の「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox>クラス。  
@@ -64,4 +64,4 @@ ms.locfileid: "54658914"
      マスクを入力、**マスク**プロパティ、**プロパティ**ウィンドウ。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: MaskedTextBox コントロールの操作](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)

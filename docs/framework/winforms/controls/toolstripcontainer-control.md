@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: 569fccfffe1d117d7ab404f72d0275e7391926da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d0b8d812fd13be090f42bf4fb3ea84cedd1c07a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746799"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716852"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer コントロール
 <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolStripContainer> の使用による、ビルトイン ラフティング (ドッキングされているときに、ツールの領域内の水平または垂直のスペースを共有) を備えています。  
@@ -19,14 +19,14 @@ ms.locfileid: "56746799"
  このセクションのトピックでは、<xref:System.Windows.Forms.ToolStripContainer> の機能をアプリケーションに組み込むときに使用できる概念および手法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolStripContainer コントロールの概要](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
+ [ToolStripContainer コントロールの概要](toolstripcontainer-control-overview.md)  
  Windows フォームの <xref:System.Windows.Forms.ToolStripContainer> コントロールの目的および中心となる概念を説明するトピックを示します。  
   
- [方法: フォームに ToolStripContainer を追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [方法: フォームに ToolStripContainer を追加します。](how-to-add-a-toolstripcontainer-to-a-form.md)  
  
   <xref:System.Windows.Forms.ToolStripContainer> のアプリケーションへの追加と、<xref:System.Windows.Forms.ToolStripContainer> の特定のパネルへのコントロールの追加を示します。  
   
- [方法: ToolStripContentPanel にコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [方法: ToolStripContentPanel にコントロールを追加します。](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  
   <xref:System.Windows.Forms.ToolStripContentPanel> へのコントロールの追加を示します。  
   
@@ -47,4 +47,4 @@ ms.locfileid: "56746799"
   <xref:System.Windows.Forms.ToolStripPanel> コントロールのリファレンス ドキュメントを提供します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

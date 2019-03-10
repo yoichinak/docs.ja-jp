@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 73a6c20f1790ca4ad1dbe331d693af2331da1ea1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682269"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715972"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>方法: Windows フォーム アプリケーションでフォント パターンの変更に応答します。
 Windows オペレーティング システムでは、ユーザーが表示される既定のフォントのサイズを変更するシステム全体のフォント設定を変更できます。 これらのフォント設定を変更することは、視覚障害のある、各自の画面にテキストを読み取るより大きい型を必要とするユーザーにとって重要です。 フォントの設定を変更するたびに、フォームと含まれているすべてのテキストのサイズを増減してこれらの変更に対応するため、Windows フォーム アプリケーションを調整することができます。 フォント サイズの変更を動的に対応するために、フォームを設定する場合は、フォームにコードを追加できます。  
@@ -21,30 +21,30 @@ Windows オペレーティング システムでは、ユーザーが表示さ�
   
 ### <a name="to-use-the-desktop-font-and-respond-to-font-scheme-changes"></a>デスクトップのフォントを使用して、フォント パターンの変更に応答するには  
   
-1.  フォームを作成し、目的のコントロールを追加します。 詳細については、「[方法 :コマンドラインから Windows フォーム アプリケーションを作成](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)と[Windows フォームで使用するコントロール](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)します。  
+1.  フォームを作成し、目的のコントロールを追加します。 詳細については、「[方法 :コマンドラインから Windows フォーム アプリケーションを作成](how-to-create-a-windows-forms-application-from-the-command-line.md)と[Windows フォームで使用するコントロール](./controls/controls-to-use-on-windows-forms.md)します。  
   
 2.  参照を追加、<xref:Microsoft.Win32>をコードに名前空間。  
   
-     [!code-csharp[WinFormsAutoScaling#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
-     [!code-vb[WinFormsAutoScaling#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
+     [!code-csharp[WinFormsAutoScaling#2](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#2)]
+     [!code-vb[WinFormsAutoScaling#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#2)]  
   
 3.  必要なイベントのハンドラーをフックし、フォームの使用中の既定のフォントを変更するのには、フォームのコンス トラクターに次のコードを追加します。  
   
-     [!code-csharp[WinFormsAutoScaling#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
-     [!code-vb[WinFormsAutoScaling#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
+     [!code-csharp[WinFormsAutoScaling#3](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#3)]
+     [!code-vb[WinFormsAutoScaling#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#3)]  
   
 4.  ハンドラーを実装、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>イベントは、フォームを自動的にスケーリングするときに、<xref:Microsoft.Win32.UserPreferenceCategory.Window>カテゴリの変更。  
   
-     [!code-csharp[WinFormsAutoScaling#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
-     [!code-vb[WinFormsAutoScaling#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
+     [!code-csharp[WinFormsAutoScaling#4](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#4)]
+     [!code-vb[WinFormsAutoScaling#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#4)]  
   
 5.  最後のハンドラーを実装、<xref:System.Windows.Forms.Form.FormClosing>デタッチ イベント、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>イベント ハンドラー。  
   
      > [!IMPORTANT]
      > このコードを含めないと、アプリケーションでメモリ リークが発生します。  
   
-     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
-     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
 6.  コードをコンパイルして実行します。  
   
@@ -59,11 +59,11 @@ Windows オペレーティング システムでは、ユーザーが表示さ�
      フォームがデスクトップ フォント パターンの実行時の変更に反応ようになりましたことがわかります。 間、ユーザーが変更されたとき**標準**、**大きいフォント**、および**特大フォント**フォームのフォントを変更し、スケールが適切です。  
   
 ## <a name="example"></a>例  
- [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
- [!code-vb[WinFormsAutoScaling#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
+ [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
+ [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
  このコード例では constructer にはへの呼び出しが含まれています`InitializeComponent`、これは Visual Studio で新しい Windows フォーム プロジェクトを作成するときに定義されています。 コマンドラインでアプリケーションを構築している場合は、次のコード行を削除します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Windows フォームにおける自動スケーリング](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+- [Windows フォームにおける自動スケーリング](automatic-scaling-in-windows-forms.md)

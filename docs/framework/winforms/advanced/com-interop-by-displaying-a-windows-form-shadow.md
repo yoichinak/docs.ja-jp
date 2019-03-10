@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 4ae48a824f69c417daa38fb4b5f88fc5d980c47b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724383"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715439"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メッセージ ループで Windows フォームを表示して、コンポーネント オブジェクト モデル (COM) 相互運用性の問題を解決できます。これは、 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> メソッドを使用して作成されます。  
@@ -22,7 +22,7 @@ ms.locfileid: "54724383"
   
 -   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して、Windows フォームを表示します。  
   
--   各 Windows フォームを別のスレッドで表示します。 詳細については、「[方法 :独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポート](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)します。  
+-   各 Windows フォームを別のスレッドで表示します。 詳細については、「[方法 :独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポート](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)します。  
   
 ## <a name="procedure"></a>プロシージャ  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メッセージ ループにフォームを表示する方法としては、すべての方法の中で実装する必要があるコードが最も少ない [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メソッドを使用する方法が最も簡単です。  
@@ -38,6 +38,6 @@ ms.locfileid: "54724383"
 -   <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> コンポーネントで、 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドのすべての呼び出しを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メソッドの呼び出しに置き換えます。  
   
 ## <a name="see-also"></a>関連項目
-- [COM への .NET Framework コンポーネントの公開](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)
+- [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
+- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
