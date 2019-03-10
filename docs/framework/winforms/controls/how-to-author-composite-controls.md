@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: b2ccbfaf8305270116e3a85578e3e560ed0b4836
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cd82200706c98df18b1b9f464ebd62d797eea960
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584214"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724455"
 ---
 # <a name="how-to-author-composite-controls"></a>方法: 複合コントロールを作成
 複合コントロールはさまざまな方法で使用できます。 Windows デスクトップ アプリケーション プロジェクトの一部として複合コントロールを作成し、プロジェクト内のフォーム上でのみ使用することができます。 または、Windows コントロール ライブラリ プロジェクトで複合コントロールを作成し、プロジェクトをアセンブリにコンパイルして、他のプロジェクトで使用することもできます。 そのコントロールから継承することや、ビジュアル継承を使用して特殊な用途のために簡単にカスタマイズすることまでできます。  
@@ -79,10 +79,10 @@ ms.locfileid: "56584214"
      DLL の複合コントロールから継承された内在コントロールを表示し、**Modifiers** プロパティが **Public** であるコントロールのプロパティを変更することができます。 **Modifiers** プロパティが **Private** であるコントロールのプロパティを変更することはできません。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [コントロールの種類に関するアドバイス](../../../../docs/framework/winforms/controls/control-type-recommendations.md)
-- [方法: Windows フォームのコントロールの作成](../../../../docs/framework/winforms/controls/how-to-author-controls-for-windows-forms.md)
-- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [コントロールの種類に関するアドバイス](control-type-recommendations.md)
+- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
+- [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

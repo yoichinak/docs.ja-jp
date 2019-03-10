@@ -2,12 +2,6 @@
 title: Windows Workflow (WF) のサンプル ドキュメント
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201336"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) のサンプル
 
@@ -20,8 +14,8 @@ ms.locfileid: "50201336"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[アプリケーション](../../../../docs/framework/windows-workflow-foundation/samples/application.md)-ワークフロー アプリケーションに関連するサンプルを提供します。
+[アプリケーション](application.md)-ワークフロー アプリケーションに関連するサンプルを提供します。
 
-[基本的な](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)-基本的な Windows Workflow Foundation (WF) 機能を示すサンプルを提供します。
+[基本的な](basic.md)-基本的な Windows Workflow Foundation (WF) 機能を示すサンプルを提供します。
 
-[シナリオ](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)-Windows Workflow Foundation (WF) のシナリオの例を示します。
+[シナリオ](scenario.md)-Windows Workflow Foundation (WF) のシナリオの例を示します。

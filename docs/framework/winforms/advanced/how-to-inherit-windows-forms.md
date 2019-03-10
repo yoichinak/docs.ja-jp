@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558983"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720866"
 ---
 # <a name="how-to-inherit-windows-forms"></a>方法: Windows フォームを継承します。
 新規の Windows フォームは、基本フォームから継承して簡単に複製できます。フォームが必要になるたびに、最初から作成し直す必要はありません。  
   
- 使用してデザイン時にフォームの継承の詳細については、**継承ピッカー**継承されるコントロールのダイアログ ボックスとのセキュリティ レベルを視覚的に区別する方法は、「[方法。継承ピッカー ダイアログ ボックスを使用してフォームを継承する](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)します。  
+ 使用してデザイン時にフォームの継承の詳細については、**継承ピッカー**継承されるコントロールのダイアログ ボックスとのセキュリティ レベルを視覚的に区別する方法は、「[方法。継承ピッカー ダイアログ ボックスを使用してフォームを継承する](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)します。  
   
  **メモ** フォームを継承するには、そのフォームを含むファイルまたは名前空間が実行可能ファイルまたは DLL に組み込まれている必要があります。 プロジェクトをビルドするには、**[ビルド]** メニューの **[ビルド]** を選択します。 また、フォームの継承先となるクラスに、名前空間への参照を追加する必要があります。 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
@@ -44,5 +44,5 @@ ms.locfileid: "54558983"
 - [Inherits ステートメント](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports ステートメント (.NET 名前空間および型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)
+- [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)

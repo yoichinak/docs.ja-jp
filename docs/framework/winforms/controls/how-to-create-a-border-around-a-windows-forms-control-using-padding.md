@@ -14,20 +14,20 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-ms.openlocfilehash: 26d5dd086828df94c1ea0808d2f72723344b0702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66748eef299c9175814fb130a7eda359c5de0546
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614655"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720307"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>方法: Windows フォームの周りに罫線を作成するパディングを使用して制御
 次のコード例に境界線を作成またはに関する概要を説明する方法を示します、<xref:System.Windows.Forms.RichTextBox>コントロール。 例では、設定の値を<xref:System.Windows.Forms.Panel>コントロールの<xref:System.Windows.Forms.Padding>プロパティを 5 に設定、<xref:System.Windows.Forms.Control.Dock%2A>子のプロパティ<xref:System.Windows.Forms.RichTextBox>に制御を<xref:System.Windows.Forms.DockStyle.Fill>します。 <xref:System.Windows.Forms.Control.BackColor%2A>の<xref:System.Windows.Forms.Panel>に設定されているコントロール<xref:System.Drawing.Color.Blue%2A>、青い境界線を作成する<xref:System.Windows.Forms.RichTextBox>コントロール。  
   
 ## <a name="example"></a>例  
- [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Padding>
-- [Windows フォーム コントロールでのマージンと埋め込み](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)
+- [Windows フォーム コントロールでのマージンと埋め込み](margin-and-padding-in-windows-forms-controls.md)

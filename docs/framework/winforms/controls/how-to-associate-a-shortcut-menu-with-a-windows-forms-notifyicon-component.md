@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573687"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720385"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "54573687"
   
 1.  追加、<xref:System.Windows.Forms.NotifyIcon>をフォームにコンポーネントなど、重要なプロパティを設定し、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>と<xref:System.Windows.Forms.NotifyIcon.Visible%2A>プロパティ。  
   
-     詳細については、「[方法 :アプリケーション アイコンをタスク バーで、Windows フォームの NotifyIcon コンポーネントの追加](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)します。  
+     詳細については、「[方法 :アプリケーション アイコンをタスク バーで、Windows フォームの NotifyIcon コンポーネントの追加](app-icons-to-the-taskbar-with-wf-notifyicon.md)します。  
   
 2.  追加、<xref:System.Windows.Forms.ContextMenu>を Windows フォーム コンポーネント。  
   
@@ -129,6 +129,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [NotifyIcon コンポーネント](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [NotifyIcon コンポーネントの概要](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
+- [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)

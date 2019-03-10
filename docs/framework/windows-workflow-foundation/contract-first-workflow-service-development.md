@@ -2,48 +2,48 @@
 title: コントラクト優先ワークフロー サービスの開発
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373063"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721789"
 ---
 # <a name="contract-first-workflow-service-development"></a>コントラクト優先ワークフロー サービスの開発
-以降で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、Windows Workflow Foundation (WF) の機能は、コントラクト優先ワークフローの開発の形式で web サービスとワークフロー間の統合を改善します。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。 このトピックでは、ワークフロー サービスのアクティビティおよびプロパティをサービス コントラクトの属性にマップする方法の概要について説明します。 コントラクト優先ワークフロー サービスの作成例については、次を参照してください。[方法。既存のサービス コントラクトを使用するワークフロー サービスを作成する](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)します。  
+以降で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、Windows Workflow Foundation (WF) の機能は、コントラクト優先ワークフローの開発の形式で web サービスとワークフロー間の統合を改善します。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。 このトピックでは、ワークフロー サービスのアクティビティおよびプロパティをサービス コントラクトの属性にマップする方法の概要について説明します。 コントラクト優先ワークフロー サービスの作成例については、次を参照してください。[方法。既存のサービス コントラクトを使用するワークフロー サービスを作成する](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
--   [ワークフロー属性へのサービス コントラクト属性のマッピング](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [ワークフロー属性へのサービス コントラクト属性のマッピング](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [サービス コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [サービス コントラクト属性](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [操作コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [操作コントラクト属性](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [メッセージ コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [メッセージ コントラクト属性](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [データ コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [データ コントラクト属性](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [エラー コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [エラー コントラクト属性](contract-first-workflow-service-development.md#FaultContract)  
   
--   [その他のサポートと実装に関する情報](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [その他のサポートと実装に関する情報](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [サポートされていないサービス コントラクトの機能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [サポートされていないサービス コントラクトの機能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [構成済みのメッセージング アクティビティの生成](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [構成済みのメッセージング アクティビティの生成](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> ワークフロー属性へのサービス コントラクト属性のマッピング  
  次のセクションにある表では、さまざまな WCF 属性およびプロパティを示し、それらをコントラクト優先ワークフローのメッセージング アクティビティおよびプロパティにマップする方法について説明します。  
   
--   [サービス コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [サービス コントラクト属性](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [操作コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [操作コントラクト属性](contract-first-workflow-service-development.md#OperationContract)  
   
--   [メッセージ コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [メッセージ コントラクト属性](contract-first-workflow-service-development.md#MessageContract)  
   
--   [データ コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [データ コントラクト属性](contract-first-workflow-service-development.md#DataContract)  
   
--   [エラー コントラクト属性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [エラー コントラクト属性](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> サービス コントラクト属性  
   
@@ -109,9 +109,9 @@ ms.locfileid: "57373063"
   
 ## <a name="AdditionalSupport"></a> その他のサポートと実装に関する情報  
   
--   [サポートされていないサービス コントラクトの機能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [サポートされていないサービス コントラクトの機能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [構成済みのメッセージング アクティビティの生成](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [構成済みのメッセージング アクティビティの生成](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> サポートされていないサービス コントラクトの機能  
   

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496008"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725327"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows フォームにおけるマウス入力のしくみ
-マウス入力の処理を受け取って、すべての Windows アプリケーションの重要な部分です。 アプリケーションでは、操作を実行するマウス イベントを処理したり、ヒット テストを実行するマウスの位置情報やその他のアクションを使用できます。 さらに、アプリケーションでは、コントロールがマウス入力を処理する方法を変更することができます。 このトピックでは、これらのマウス イベントの詳細と、取得して、マウスのシステム設定を変更する方法について説明します。 イベントと、マウスのクリック イベントを注文の発生をマウスで提供されるデータの詳細についてを参照してください[Windows フォームにおけるマウス イベント](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)します。  
+マウス入力の処理を受け取って、すべての Windows アプリケーションの重要な部分です。 アプリケーションでは、操作を実行するマウス イベントを処理したり、ヒット テストを実行するマウスの位置情報やその他のアクションを使用できます。 さらに、アプリケーションでは、コントロールがマウス入力を処理する方法を変更することができます。 このトピックでは、これらのマウス イベントの詳細と、取得して、マウスのシステム設定を変更する方法について説明します。 イベントと、マウスのクリック イベントを注文の発生をマウスで提供されるデータの詳細についてを参照してください[Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。  
   
 ## <a name="mouse-location-and-hit-testing"></a>マウスの位置とヒット テスト  
  マウスを移動すると、オペレーティング システムは、マウス ポインターを移動します。 マウス ポインターには、オペレーティング システムを追跡し、ポインターの位置として認識する、ホット スポットと呼ばれる、1 つのピクセルが含まれています。 ユーザーがマウスを移動または、マウス ボタンを押したとき、<xref:System.Windows.Forms.Control>を格納している、<xref:System.Windows.Forms.Cursor.HotSpot%2A>適切なマウス イベントを発生させます。 現在のマウスの位置を取得することができます、<xref:System.Windows.Forms.MouseEventArgs.Location%2A>のプロパティ、<xref:System.Windows.Forms.MouseEventArgs>マウス イベントを処理するときに、またはを使用して、<xref:System.Windows.Forms.Cursor.Position%2A>のプロパティ、<xref:System.Windows.Forms.Cursor>クラス。 その後マウスの位置情報を使用して、ヒット テストを実行しのマウスの位置に基づいてアクションを実行できます。 ヒット テストの機能に組み込まれている Windows フォームでのいくつかのコントロールなど、 <xref:System.Windows.Forms.ListView>、 <xref:System.Windows.Forms.TreeView>、<xref:System.Windows.Forms.MonthCalendar>と<xref:System.Windows.Forms.DataGridView>コントロール。 適切なマウス イベントと併用<xref:System.Windows.Forms.Control.MouseHover>など、ヒット テストは、アプリケーションが特定のアクションを実行する場合を決定するのに便利です。  
@@ -53,6 +53,6 @@ ms.locfileid: "54496008"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|マウス ホイールを回転したときにスクロールする行数を取得します。|  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows フォームにおけるマウスのキャプチャ](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Windows フォームにおけるマウス ポインター](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)
+- [Windows フォームにおけるマウスのキャプチャ](mouse-capture-in-windows-forms.md)
+- [Windows フォームにおけるマウス ポインター](mouse-pointers-in-windows-forms.md)

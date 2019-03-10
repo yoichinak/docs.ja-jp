@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720294"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows フォームのイベントの順序
-Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 特定の詳細については、マウス入力イベントの順序では、次を参照してください。 [Windows フォームにおけるマウス イベント](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)します。 Windows フォームのイベントの概要については、次を参照してください。[イベントの概要](../../../docs/framework/winforms/events-overview-windows-forms.md)します。 イベント ハンドラーの構成の詳細については、次を参照してください。[イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)します。  
+Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 特定の詳細については、マウス入力イベントの順序では、次を参照してください。 [Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。 Windows フォームのイベントの概要については、次を参照してください。[イベントの概要](events-overview-windows-forms.md)します。 イベント ハンドラーの構成の詳細については、次を参照してください。[イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)します。  
   
 ## <a name="application-startup-and-shutdown-events"></a>アプリケーションのスタートアップ イベントとシャットダウン イベント。  
  <xref:System.Windows.Forms.Form> クラスおよび <xref:System.Windows.Forms.Control> クラスは、アプリケーションのスタートアップおよびシャットダウンに関連する一連のイベントを公開しています。 Windows フォーム アプリケーションが起動すると、メイン フォームのスタートアップ イベントが次の順序で発生します。  
@@ -46,7 +46,8 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 -   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application> クラスの <xref:System.Windows.Forms.Application.ApplicationExit> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
+ 
+  <xref:System.Windows.Forms.Application> クラスの <xref:System.Windows.Forms.Application.ApplicationExit> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
   
 > [!NOTE]
 >  Visual Basic 2005 には、追加のアプリケーション イベント (<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> や <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType> など) があります。  
@@ -81,4 +82,4 @@ Windows フォーム アプリケーションでイベントが発生する順�
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)

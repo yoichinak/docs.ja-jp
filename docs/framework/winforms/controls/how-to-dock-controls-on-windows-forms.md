@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: f4a9d3bcf7f9db1634da2b2f06177c05061af28e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4acda9149dd147a823eb42d3962a22b75df93802
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733546"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720269"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールをドッキングします。
 コントロールをフォームの端にドッキングまたはコントロールのコンテナー (フォームまたはコンテナー コントロールのいずれか) を入力することがあることができます。 たとえば、Windows エクスプ ローラーをドッキングその<xref:System.Windows.Forms.TreeView>、ウィンドウの左側にあるコントロールとその<xref:System.Windows.Forms.ListView>ウィンドウの右側にあるコントロール。 使用して、<xref:System.Windows.Forms.Control.Dock%2A>ドッキングのモードを定義する表示されているすべての Windows フォーム コントロールのプロパティ。  
@@ -19,7 +19,7 @@ ms.locfileid: "54733546"
 > [!NOTE]
 >  逆の z オーダーでコントロールがドッキングされます。  
   
- <xref:System.Windows.Forms.Control.Dock%2A>プロパティの対話、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティ。 詳細については、次を参照してください。 [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)します。  
+ <xref:System.Windows.Forms.Control.Dock%2A>プロパティの対話、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティ。 詳細については、次を参照してください。 [AutoSize プロパティの概要](autosize-property-overview.md)します。  
   
 ### <a name="to-dock-a-control"></a>コントロールをドッキングするには  
   
@@ -37,12 +37,12 @@ ms.locfileid: "54733546"
     >  継承されたコントロールである必要があります`Protected`ドッキングできるようにします。 コントロールのアクセス レベルを変更するには、次のように設定します。 その**修飾子**プロパティ ウィンドウでプロパティ。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム コントロール](../../../../docs/framework/winforms/controls/index.md)
-- [Windows フォームでのコントロールの配置](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows フォーム コントロールの機能別一覧](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
-- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [AutoSize プロパティの概要](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [方法: Windows フォームにコントロールを固定](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
+- [Windows フォーム コントロール](index.md)
+- [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
+- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
+- [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)
+- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [AutoSize プロパティの概要](autosize-property-overview.md)
+- [方法: Windows フォームにコントロールを固定](how-to-anchor-controls-on-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: e698e93f96e0b19d45fb40408249aedcb0edeec7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505836"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723778"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>方法: プライベート フォント コレクションを作成します。
 <xref:System.Drawing.Text.PrivateFontCollection>クラスから継承、<xref:System.Drawing.Text.FontCollection>抽象基本クラス。 使用することができます、<xref:System.Drawing.Text.PrivateFontCollection>具体的には、アプリケーションのフォントのセットを保持するオブジェクト。 プライベート フォント コレクションには、インストールされているシステム フォントだけでなく、コンピューターにインストールされていないフォントを含めることができます。 プライベート フォント コレクションには、フォント ファイルを追加するには、呼び出し、<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>のメソッドを<xref:System.Drawing.Text.PrivateFontCollection>オブジェクト。  
@@ -39,18 +39,18 @@ ms.locfileid: "54505836"
   
  次のコードの出力は、次の図に示すように出力に似ています。  
   
- ![フォント テキスト](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
+ ![フォント テキスト](./media/csfontstext7.png "csfontstext7")  
   
  次のコード例では、プライベート フォント コレクションに追加された) Arial.tff は、Arial 標準スタイルのフォント ファイルです。 ただし、プログラムの出力が Arial フォント ファミリの標準以外の複数の使用可能なスタイルを表示することに注意してください。 だ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]標準スタイルから太字、斜体、および太字斜体スタイルをシミュレートすることができます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 下線や標準のスタイルから取り消し線の生成もできます。  
   
  同様に、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]太字または斜体のスタイルのいずれかから太字斜体のスタイルをシミュレートすることができます。 プログラムの出力が TimesBd.tff (Times New Roman、太字) が唯一にもかかわらず太字斜体スタイルが回ファミリに使用できることを示しています、コレクション内の回ファイル。  
   
- [!code-csharp[System.Drawing.FontsAndText#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.FontsAndText#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventHandler> のパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Text.PrivateFontCollection>
-- [フォントとテキストの使用](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [フォントとテキストの使用](using-fonts-and-text.md)

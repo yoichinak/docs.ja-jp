@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441360"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721243"
 ---
 # <a name="how-to-create-application-settings"></a>方法: アプリケーション設定を作成します。
 マネージド コードを使用することにより、新しいアプリケーション設定を作成し、フォームまたはフォームのコントロールのプロパティにバインドして、これらの設定が実行時に自動的に読み込まれて保存されるようにすることができます。  
@@ -26,20 +26,20 @@ ms.locfileid: "56441360"
   
 1.  プロジェクトに新しいクラスを追加して、名前を変更します。 この手順では、このクラスを呼び出し、`MyUserSettings`します。 クラスの派生元が <xref:System.Configuration.ApplicationSettingsBase> になるようクラス定義を変更します。  
   
-2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、次を参照してください。[アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)します。 ここまでで、コードは次のようになります。  
+2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、次を参照してください。[アプリケーション設定の概要](application-settings-overview.md)します。 ここまでで、コードは次のようになります。  
   
-     [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
-     [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+     [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+     [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 3.  アプリケーションでこのラッパー クラスのインスタンスを作成します。 これは、一般的にはメイン フォームのプライベート メンバーです。 クラスを定義したので、それをプロパティにバインドする必要があります。この場合は、フォームの <xref:System.Windows.Forms.Form.BackColor%2A> プロパティです。 これを実現するにはフォームの`Load`イベント ハンドラー。  
   
-     [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
-     [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
+     [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
+     [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
 4.  実行時に設定を変更する方法を提供する場合は、フォームを閉じるときにユーザーの現在の設定をディスクに保存する必要があります。そうしないと、これらの変更が失われます。  
   
-     [!code-csharp[ApplicationSettings.Create#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
-     [!code-vb[ApplicationSettings.Create#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
+     [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
+     [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  
   
      これで、新しいアプリケーション設定を正常に作成し、指定されたプロパティにバインドしました。  
   
@@ -49,5 +49,5 @@ ms.locfileid: "56441360"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [アプリケーション設定を検証します。](../../../../docs/framework/winforms/advanced/how-to-validate-application-settings.md)
+- [アプリケーション設定の概要](application-settings-overview.md)
+- [方法: アプリケーション設定を検証します。](how-to-validate-application-settings.md)

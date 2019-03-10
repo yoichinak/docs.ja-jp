@@ -2,12 +2,12 @@
 title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482302"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721373"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -345,7 +345,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > ワークフロー サービス ホストを使用する WF の場合、追跡プロファイルは構成ファイルを使用して作成されることがほとんどです。 また、追跡プロファイルや追跡クエリ API を使用するコードで追跡プロファイルを作成することも可能です。
 
-XML 構成ファイルとして構成されるプロファイルは、動作拡張を使用して追跡参加要素に適用されます。 以降のセクションで説明した WorkflowServiceHost に追加されますこの[ワークフローの追跡を構成する](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。
+XML 構成ファイルとして構成されるプロファイルは、動作拡張を使用して追跡参加要素に適用されます。 以降のセクションで説明した WorkflowServiceHost に追加されますこの[ワークフローの追跡を構成する](configuring-tracking-for-a-workflow.md)します。
 
 ホストが生成する追跡レコードの詳細度は、追跡プロファイルの構成の設定によって決まります。 追跡参加要素は、クエリを追跡プロファイルに追加して追跡レコードを定期受信します。 追跡プロファイルをサブスクライブするすべての追跡レコードを使用してすべての追跡クエリを指定する必要があります"\*"の各クエリ内の名前フィールドにします。
 
@@ -388,6 +388,6 @@ XML 構成ファイルとして構成されるプロファイルは、動作拡�
 
 ## <a name="see-also"></a>関連項目
 
-- [SQL 追跡](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL 追跡](./samples/sql-tracking.md)
 - [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

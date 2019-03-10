@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation の機能仕様
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492593"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721854"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation の機能仕様
 
@@ -45,9 +45,9 @@ A`BestPriceFinder`サービスは、複数の航空会社サービスを特定�
 - 
   <xref:System.ServiceModel.WorkflowServiceHost> のサンプルは次のセクションにあります。
 
-    - [実行](samples/execution.md)
+    - [実行](./samples/execution.md)
 
-    - アプリケーションの場合:[中断されたインスタンスの管理](samples/suspended-instance-management.md)
+    - アプリケーションの場合:[中断されたインスタンスの管理](./samples/suspended-instance-management.md)
 
 - [ワークフロー サービスのホストの概要](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -124,7 +124,7 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - ユーザーは、ネットワーク上のシリアル化インスタンスのサイズを小さくするなど、ネットワーク上に出現する xsi:type を指定できませんでした。
 
-[DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) .NET 4.5 でこれらの問題を解決します。
+[DataContractResolver](../wcf/samples/datacontractresolver.md) .NET 4.5 でこれらの問題を解決します。
 
 ### <a name="getting-started"></a>作業の開始
 
@@ -134,9 +134,9 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - サンプル:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>データ コントラクト リゾルバーのシナリオ
 
@@ -166,9 +166,9 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - サンプル:
 
-    - [TryCatch を使用した Flowchart アクティビティでのエラー処理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [TryCatch を使用した Flowchart アクティビティでのエラー処理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [雇用プロセス](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [雇用プロセス](./samples/hiring-process.md)
 
 - デザイナー ドキュメント:
 
@@ -200,9 +200,9 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - サンプル:
 
-    - [雇用プロセス](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [雇用プロセス](./samples/hiring-process.md)
 
-    - [企業の購買プロセス](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [企業の購買プロセス](./samples/corporate-purchase-process.md)
 
 - デザイナー ドキュメント:
 
@@ -240,7 +240,7 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.TryCatch> アクティビティを追加します。
 
-- サンプル:[TryCatch を使用した Flowchart アクティビティでのエラー処理](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- サンプル:[TryCatch を使用した Flowchart アクティビティでのエラー処理](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - デザイナー ドキュメント:[エラー処理アクティビティ デザイナー](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -256,7 +256,7 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 - Visual Studio 2012 では、ワークフロー コンソール アプリケーションを作成します。 ワークフロー デザイナーで <xref:System.Activities.Statements.Pick> アクティビティを追加します。
 
-- サンプル:[Pick アクティビティの使用](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- サンプル:[Pick アクティビティの使用](./samples/using-the-pick-activity.md)
 
 - デザイナー ドキュメント:[Pick アクティビティ デザイナー](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -286,9 +286,9 @@ WCF 構成スキーマは複雑であり、機能を検索するハードの多�
 
 ### <a name="getting-started"></a>作業の開始
 
-1. ドキュメント:[ルーティング](../../../docs/framework/wcf/feature-details/routing.md)
+1. ドキュメント:[ルーティング](../wcf/feature-details/routing.md)
 
-2. サンプル:[ルーティング サービス&#91;WCF サンプル&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. サンプル:[ルーティング サービス&#91;WCF サンプル&#93;](../wcf/samples/routing-services.md)
 
 3. ブログ:[ルーティング規則。](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -320,9 +320,9 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 
 ### <a name="getting-started"></a>作業の開始
 
-- ドキュメント:[WCF Discovery](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- ドキュメント:[WCF Discovery](../wcf/feature-details/wcf-discovery.md)
 
-- サンプル:[探索 (サンプル)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- サンプル:[探索 (サンプル)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>探索のシナリオ
 
@@ -346,9 +346,9 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 
     4. イベント ビューアーでワークフロー追跡イベントを確認します。
 
-3. サンプル:[追跡](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. サンプル:[追跡](./samples/tracking.md)
 
-4. 概念説明のドキュメント:[ワークフローの追跡とトレース](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. 概念説明のドキュメント:[ワークフローの追跡とトレース](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL Workflow Instance Store
 
@@ -359,6 +359,6 @@ WCF Discovery に、アプリケーションのインフラストラクチャに
 1. Visual Studio 2012 で、暗黙的または明示的なを含むワークフロー作成<xref:System.Activities.Statements.Persist>アクティビティ。 
   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 動作をワークフロー サービス ホストに追加します。 これはコードまたはアプリケーション構成ファイルで行うことができます。
 
-2. サンプル:[永続性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. サンプル:[永続性](./samples/persistence.md)
 
-3. 概念説明のドキュメント:[SQL Workflow Instance Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)します。
+3. 概念説明のドキュメント:[SQL Workflow Instance Store](sql-workflow-instance-store.md)します。

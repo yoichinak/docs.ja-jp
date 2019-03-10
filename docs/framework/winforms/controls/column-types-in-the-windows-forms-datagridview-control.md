@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591589"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724571"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの列型
 <xref:System.Windows.Forms.DataGridView>コントロールがその情報を表示したり変更したり、情報を追加するユーザーを有効にするためにいくつかの列の型を使用します。  
@@ -30,7 +30,7 @@ ms.locfileid: "54591589"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|セルにボタンを表示するために使用します。 バインドするときに自動的に生成されます。 通常、バインドされていない列として使用します。|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|セルのドロップダウン リストを表示するために使用します。 バインドするときに自動的に生成されます。 通常、データ バインド手動でします。|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|セル内のリンクを表示するために使用します。 バインドするときに自動的に生成されます。 通常、データ バインド手動でします。|  
-|カスタム列の型|列の独自のクラスを作成するには継承することによって、<xref:System.Windows.Forms.DataGridViewColumn>クラスまたはカスタムの外観、動作、またはホストされるコントロールを提供する派生クラスのいずれか。 詳細については、「[方法 :それぞれの動作と外観を拡張することによって、セルと、Windows フォーム DataGridView コントロール内の列をカスタマイズします。](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|カスタム列の型|列の独自のクラスを作成するには継承することによって、<xref:System.Windows.Forms.DataGridViewColumn>クラスまたはカスタムの外観、動作、またはホストされるコントロールを提供する派生クラスのいずれか。 詳細については、「[方法 :それぞれの動作と外観を拡張することによって、セルと、Windows フォーム DataGridView コントロール内の列をカスタマイズします。](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  これらの列型は、次のセクションで詳しく説明します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54591589"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn>、ドロップダウン リスト ボックスが含まれているセルの列を表示することができます。 これは、Northwind サンプル データベースの Products テーブルのカテゴリ列などの特定の値を含めることができますのみフィールドでのデータ入力に役立ちます。  
   
- すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、次を参照してください。 [ComboBox コントロール](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)します。  
+ すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、次を参照してください。 [ComboBox コントロール](combobox-control-windows-forms.md)します。  
   
  によって使用されるデータ ソースに実際のセル値をバインドすることができます、<xref:System.Windows.Forms.DataGridView>コントロールを設定して、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591589"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView コントロール](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールでイメージの列の使用します。](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールのカスタマイズ](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView コントロール](datagridview-control-windows-forms.md)
+- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールでイメージの列の使用します。](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)

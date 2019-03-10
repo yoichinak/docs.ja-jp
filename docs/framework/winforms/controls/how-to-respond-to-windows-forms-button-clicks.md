@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539552"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724987"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>方法: Windows フォームのボタン クリックに応答するには
 Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button>コントロールのボタンがクリックされたときに、いくつかのコードを実行します。  
@@ -31,7 +31,7 @@ Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button
   
 ### <a name="to-respond-to-a-button-click"></a>ボタンのクリックに応答するには  
   
--   ボタンの`Click`<xref:System.EventHandler>を実行するコードを記述します。 `Button1_Click` コントロールにバインドする必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
+-   ボタンの`Click`<xref:System.EventHandler>を実行するコードを記述します。 `Button1_Click` コントロールにバインドする必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [Button コントロールの概要](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [Windows フォームの Button コントロールを選択する方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Button コントロール](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button コントロールの概要](button-control-overview-windows-forms.md)
+- [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
+- [Button コントロール](button-control-windows-forms.md)

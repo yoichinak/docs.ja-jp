@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967868"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722659"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>方法: Windows フォームで 1 つのイベント ハンドラーに複数のイベントを接続します。
 アプリケーションの設計でする必要がありますを 1 つのイベント ハンドラーを使用して、複数のイベントまたは複数のイベントが、同じ手順を実行します。 たとえば、フォーム上のボタンの場合は、同じ機能を公開するように、同じイベントを発生させるメニュー コマンドを使用して強力な時間を節約では多くの場合です。 [プロパティ] ウィンドウのイベント ビューを使用してこれを行うC#またはを使用して、`Handles`キーワードと**クラス名**と**メソッド名**ドロップダウン ボックスでは、Visual Basic コード エディター。  
@@ -50,7 +50,7 @@ ms.locfileid: "56967868"
   
 1.  イベント ハンドラーを接続するコントロールを選択します。  
   
-2.  [プロパティ] ウィンドウ、**イベント**ボタン (![イベント ボタン](../../../docs/framework/winforms/media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow"))。  
+2.  [プロパティ] ウィンドウ、**イベント**ボタン (![イベント ボタン](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow"))。  
   
 3.  処理するイベントの名前をクリックします。  
   
@@ -61,5 +61,5 @@ ms.locfileid: "56967868"
      コードは、既存のイベント ハンドラーにイベントをバインドするフォームに追加されます。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム内でのイベント ハンドラーの作成](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [イベント ハンドラーの概要](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)
