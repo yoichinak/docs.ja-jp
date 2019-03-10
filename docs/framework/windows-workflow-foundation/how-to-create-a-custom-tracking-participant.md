@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150636"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720957"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>方法: カスタム追跡参加要素を作成します。
 ワークフロー追跡により、ワークフロー実行の状態が視覚的に示されます。 ワークフロー ランタイムによって、ワークフローのライフサイクル イベント、アクティビティのライフサイクル イベント、ブックマークの再開、およびエラーについて説明する追跡レコードが出力されます。 これらの追跡レコードは、追跡参加要素によって使用されます。 Windows Workflow Foundation (WF) には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。 チュートリアルのこの手順では、`WriteLine` アクティビティの出力をキャプチャするカスタム追跡参加要素と追跡プロファイルを作成して、ユーザーに表示できるようにする方法について説明します。  
@@ -219,7 +219,8 @@ ms.locfileid: "54150636"
   
 1.  右クリックして**WorkflowHostForm**で**ソリューション エクスプ ローラー**選択**コードの表示**します。  
   
-2.  `InstanceId_SelectedIndexChanged` ハンドラーで、ステータス ウィンドウをクリアするコードの直後に次のコードを追加します。  
+2.  
+  `InstanceId_SelectedIndexChanged` ハンドラーで、ステータス ウィンドウをクリアするコードの直後に次のコードを追加します。  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -328,7 +329,7 @@ ms.locfileid: "54150636"
     ```
     
     > [!NOTE]
-    > この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順では[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+    > この情報は、乱数の範囲を決定する場合に役立ちますが、これまでに作成された推定値に関する情報を含んでいません。 この情報は、次の手順では[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
     ワークフロー インスタンス ID を書き留め、ゲームを最後まで実行します。
   
@@ -342,4 +343,4 @@ ms.locfileid: "54150636"
     Please enter a number between 1 and 10
     ```
 
-    この追跡データには、ユーザーの推定値だけでなく、ワークフローの最後の推定値に関する情報も含まれていません。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルの次の手順で[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティは、ユーザーの推定値と追加を表示する変更`WriteLine`最終的な結果を表示するアクティビティを追加します。 これらの変更が統合されると、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)と同時に複数のバージョンのワークフローをホストする方法を示します。
+    この追跡データには、ユーザーの推定値だけでなく、ワークフローの最後の推定値に関する情報も含まれていません。 これは、追跡情報がワークフローからの `WriteLine` 出力のみで構成されており、表示される最後のメッセージがワークフロー完了後に `Completed` ハンドラーから表示されるためです。 チュートリアルの次の手順で[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)、既存の`WriteLine`アクティビティは、ユーザーの推定値と追加を表示する変更`WriteLine`最終的な結果を表示するアクティビティを追加します。 これらの変更が統合されると、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)と同時に複数のバージョンのワークフローをホストする方法を示します。

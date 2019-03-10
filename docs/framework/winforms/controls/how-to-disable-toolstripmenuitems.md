@@ -13,12 +13,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 2516080708bba207c3a1d028f2e5a2411974ae5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c18935239a4355d5416a0a79d0fa9f5c504cc7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705337"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720213"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>方法: ToolStripMenuItems を無効にします。
 制限またはユーザーが実行を有効にして、ユーザーのアクティビティへの応答でのメニュー項目を無効にすると、コマンドの範囲を広げることができます。 これらが作成されますが、これで調整時にメニュー項目が既定で有効に、<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>プロパティ。 デザイン時にこのプロパティを操作することができます、**プロパティ**ウィンドウまたはプログラムによってコードで設定します。  
@@ -45,5 +45,5 @@ ms.locfileid: "54705337"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [方法: ToolStripMenuItems を非表示にします。](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
-- [MenuStrip コントロールの概要](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [方法: ToolStripMenuItems を非表示にします。](how-to-hide-toolstripmenuitems.md)
+- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)

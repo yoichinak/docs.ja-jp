@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ccf98ee1afe82b2e76679406a08e98e6f4e6fb15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637467"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711006"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールでドラッグ アンド ドロップ操作を有効にします。
 Windows フォームでのドラッグ アンド ドロップ操作の <xref:System.Windows.Forms.RichTextBox> コントロールは、 <xref:System.Windows.Forms.RichTextBox.DragEnter> および <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントを処理すると実行されます。 そのため、ドラッグ アンド ドロップの操作は <xref:System.Windows.Forms.RichTextBox> コントロールを使用すると非常にシンプルです。  
@@ -166,6 +166,6 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.RichTextBox>
-- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
-- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

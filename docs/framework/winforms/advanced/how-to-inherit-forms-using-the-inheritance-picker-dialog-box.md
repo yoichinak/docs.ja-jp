@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601832"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719359"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法: 継承ピッカー ダイアログ ボックスを使用してフォームを継承します。
 フォームまたは他のオブジェクトを継承する最も簡単な方法は、**[継承ピッカー]** ダイアログ ボックスを使用することです。 これを使用して、その他のソリューションで作成済みのコードまたはユーザー インターフェイス (UI) を利用できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "54601832"
   
 6.  コンポーネントを選択します。  
   
-     **ソリューション エクスプローラー**で、コンポーネントがプロジェクトに追加されます。 UI がある場合は、継承されたフォームに含まれるコントロールがグリフ (![VisualBasicInheritanceSymbol screenshot](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) でマークされます。コントロールを選択すると、スーパークラスのフォーム上でそのコントロールに適用されるセキュリティのレベルを示す罫線が表示されます。 様々なセキュリティ レベルに対応する動作を、次の表に示します。  
+     **ソリューション エクスプローラー**で、コンポーネントがプロジェクトに追加されます。 UI がある場合は、継承されたフォームに含まれるコントロールがグリフ (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) でマークされます。コントロールを選択すると、スーパークラスのフォーム上でそのコントロールに適用されるセキュリティのレベルを示す罫線が表示されます。 様々なセキュリティ レベルに対応する動作を、次の表に示します。  
   
     |コントロールのセキュリティ レベル|継承したフォームを使用したデザイナーとコード エディターの間で使用できる相互作用|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "54601832"
     |内部 (Visual Basic のフレンド)|**[プロパティ]** ウィンドウに表示されるプロパティで、フォームに表示される、サイズ変更ハンドルのない標準の罫線。 ただし、コントロールのすべての側面が読み取り専用と見なされます。 コントロールを移動またはサイズ変更したり、プロパティを変更したりできません。 グループ ボックスと同様に、コントロールがその他のコントロールのコンテナーである場合は、これらのコントロールがパブリックでも、新しいコントロールを追加することはできず、既存のコントロールを削除することもできません。 コントロールは、それを含むアセンブリの他のメンバーによってのみアクセスできます。|  
     |Private|**[プロパティ]** ウィンドウに表示されるプロパティで、フォームに表示される、サイズ変更ハンドルのない標準の罫線。 ただし、コントロールのすべての側面が読み取り専用と見なされます。 コントロールを移動またはサイズ変更したり、プロパティを変更したりできません。 グループ ボックスと同様に、コントロールがその他のコントロールのコンテナーである場合は、これらのコントロールがパブリックでも、新しいコントロールを追加することはできず、既存のコントロールを削除することもできません。 コントロールは、宣言したクラスによってのみアクセスできます。|  
   
-     基本フォームの外観を変更する方法については、「[基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)」を参照してください。  
+     基本フォームの外観を変更する方法については、「[基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)」を参照してください。  
   
     > [!NOTE]
-    >  継承されたコントロールとコンポーネントを、Windows フォーム上の標準的なコントロールとコンポーネントに結合する場合、z オーダーとの競合が発生する可能性があります。 これを修正するには、**[書式]** メニュー内でクリックして、**[順序]** をポイントし、**[最前面へ移動]** または **[最背面へ移動]** をクリックして z オーダーを変更します。 コントロールの z オーダーの詳細については、次を参照してください。[方法。Windows フォーム上のオブジェクトをレイヤー](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)します。  
+    >  継承されたコントロールとコンポーネントを、Windows フォーム上の標準的なコントロールとコンポーネントに結合する場合、z オーダーとの競合が発生する可能性があります。 これを修正するには、**[書式]** メニュー内でクリックして、**[順序]** をポイントし、**[最前面へ移動]** または **[最背面へ移動]** をクリックして z オーダーを変更します。 コントロールの z オーダーの詳細については、次を参照してください。[方法。Windows フォーム上のオブジェクトをレイヤー](../controls/how-to-layer-objects-on-windows-forms.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - [Inherits ステートメント](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [基本フォームの外観を変更した場合の影響](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)
+- [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)

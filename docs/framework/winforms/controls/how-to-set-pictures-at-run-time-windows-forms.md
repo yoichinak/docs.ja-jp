@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694075"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711228"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>方法: (Windows フォーム) の実行時にピクチャを設定します。
 Windows フォームが表示されるイメージをプログラムで設定できる<xref:System.Windows.Forms.PictureBox>コントロール。  
@@ -93,14 +93,14 @@ Windows フォームが表示されるイメージをプログラムで設定で
     ```  
   
     > [!NOTE]
-    >  使用する必要があります理由の詳細については、<xref:System.Drawing.Image.Dispose%2A>この方法でメソッドを参照してください[アンマネージ リソースのクリーンアップ](../../../../docs/standard/garbage-collection/unmanaged.md)します。  
+    >  使用する必要があります理由の詳細については、<xref:System.Drawing.Image.Dispose%2A>この方法でメソッドを参照してください[アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)します。  
   
      グラフィックは、デザイン時に、コントロールに読み込まれた場合でも、このコードは、イメージにクリアされます。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [方法: デザイナーを使用してピクチャを読み込む.](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [方法: 実行時にサイズまたは画像の配置を変更します。](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
+- [方法: デザイナーを使用してピクチャを読み込む.](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [方法: 実行時にサイズまたは画像の配置を変更します。](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox コントロール](picturebox-control-windows-forms.md)

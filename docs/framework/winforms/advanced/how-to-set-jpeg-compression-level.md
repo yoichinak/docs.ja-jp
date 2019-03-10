@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628114"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722291"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定します。
 イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。 圧縮レベルを修正して、JPEG イメージの品質を調整することができます。 JPEG イメージを保存するときに、圧縮レベルを指定するに作成する必要があります、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトに渡すと、<xref:System.Drawing.Image.Save%2A>のメソッド、<xref:System.Drawing.Image>クラス。 初期化、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトのいずれかで構成される配列を持つこと、<xref:System.Drawing.Imaging.EncoderParameter>します。 作成するときに、 <xref:System.Drawing.Imaging.EncoderParameter>、指定、<xref:System.Drawing.Imaging.Encoder.Quality>エンコーダー、および、必要な圧縮レベル。  
@@ -130,6 +130,6 @@ End Function
 -   `TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: エンコーダーがサポートするパラメーターを確認します。](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [ビットマップの種類](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
-- [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+- [方法: エンコーダーがサポートするパラメーターを確認します。](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [ビットマップの種類](types-of-bitmaps.md)
+- [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](using-image-encoders-and-decoders-in-managed-gdi.md)

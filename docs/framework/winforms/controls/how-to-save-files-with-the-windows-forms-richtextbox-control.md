@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539780"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723030"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールでのファイルを保存します。
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールがいくつかの形式のいずれかで表示される情報を書き込むことができます。  
@@ -41,7 +41,7 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 1.  保存するファイルのパスを決定します。  
   
-     実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)します。  
+     実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)します。  
   
 2.  呼び出す、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>のメソッド、<xref:System.Windows.Forms.RichTextBox>コントロール、ファイルを保存して、必要に応じてファイルの種類を指定します。 唯一の引数としてファイル名を持つメソッドを呼び出す場合、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。  
   
@@ -90,5 +90,5 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

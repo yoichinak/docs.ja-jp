@@ -8,20 +8,20 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 172472cf9a2e1bc7bb81448dc8793a4eaeb12da4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77d2096239ec70f98ebfc299f1eda75ad4490be9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546557"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712423"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows フォームでの電源管理
 Windows フォーム アプリケーションによっては、Windows オペレーティング システムの電源管理機能を活用がかかります。 アプリケーションでは、コンピューターの電源の状態を監視でき、状態の変更が発生したときにアクションを実行することができます。 など、アプリケーションがポータブル コンピューターで実行している場合、コンピューターのバッテリ残量が一定のレベルを下回ったときに、アプリケーションで特定の機能を無効にします。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供、 <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> AC 電源の状態またはバッテリの状態が変更されたときや、ユーザーが中断またはオペレーティング システムが再開されるなどの電源ステータスの変更があるたびに発生するイベントです。 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>のプロパティ、<xref:System.Windows.Forms.SystemInformation>クラスにすることが次のコード例に示すように現在の状態では、クエリに使用されます。  
   
- [!code-csharp[PowerMode#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
- [!code-vb[PowerMode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
+ [!code-csharp[PowerMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
+ [!code-vb[PowerMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  
   
  それに、<xref:System.Windows.Forms.BatteryChargeStatus>列挙型、<xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>プロパティには、バッテリ容量を決定するための列挙体も含まれています (<xref:System.Windows.Forms.PowerStatus.BatteryFullLifetime%2A>) とバッテリの充電の割合 (<xref:System.Windows.Forms.PowerStatus.BatteryLifePercent%2A>、 <xref:System.Windows.Forms.PowerStatus.BatteryLifeRemaining%2A>)。  
   
@@ -29,8 +29,8 @@ Windows フォーム アプリケーションによっては、Windows オペレ
   
  次のコード例では、コンピュータを休止状態にする方法を示します。  
   
- [!code-csharp[PowerMode#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
- [!code-vb[PowerMode#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
+ [!code-csharp[PowerMode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
+ [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>

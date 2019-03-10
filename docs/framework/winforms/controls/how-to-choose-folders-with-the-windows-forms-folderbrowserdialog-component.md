@@ -12,12 +12,12 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 7055875f25aa0f39feb2d944f4b6684c6ae5d9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614694"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724558"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>方法: Windows フォーム FolderBrowserDialog コンポーネントを含むフォルダーを選択します。
 多くの場合、作成した Windows アプリケーション内で、フォルダーを選択するようにユーザーに促す必要があります。とりわけ、一連のファイルを保存するように求める場合が多いです。 Windows フォーム<xref:System.Windows.Forms.FolderBrowserDialog>コンポーネントでは、このタスクを簡単に実行できます。  
@@ -62,11 +62,11 @@ ms.locfileid: "54614694"
     ```  
   
     > [!IMPORTANT]
-    >  このクラスを使用するアセンブリに必要です特権レベルを付与して、<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>一部であるプロパティの<xref:System.Security.Permissions.FileIOPermissionAccess>列挙体。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないため例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
+    >  このクラスを使用するアセンブリに必要です特権レベルを付与して、<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>一部であるプロパティの<xref:System.Security.Permissions.FileIOPermissionAccess>列挙体。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないため例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。  
   
- ファイルを保存する方法については、次を参照してください。[方法。SaveFileDialog コンポーネントを使用してファイルを保存](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)します。  
+ ファイルを保存する方法については、次を参照してください。[方法。SaveFileDialog コンポーネントを使用してファイルを保存](how-to-save-files-using-the-savefiledialog-component.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)
-- [FolderBrowserDialog コンポーネント](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+- [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](folderbrowserdialog-component-overview-windows-forms.md)
+- [FolderBrowserDialog コンポーネント](folderbrowserdialog-component-windows-forms.md)

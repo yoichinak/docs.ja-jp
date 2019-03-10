@@ -2,12 +2,12 @@
 title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491257"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719404"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 また、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー サービスの場合、コードを介して <xref:System.Activities.Tracking.EtwTrackingParticipant> 動作拡張を追加できます。 カスタムの追跡参加要素を追加するには、次のコード例のように、新しい動作拡張を作成し、それを <xref:System.ServiceModel.ServiceHost> に追加します。
 
 > [!NOTE]
-> カスタム追跡参加要素を追加するカスタム動作要素を作成する方法を示すサンプル コードを表示する場合を参照してください。、[追跡](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)サンプル。
+> カスタム追跡参加要素を追加するカスタム動作要素を作成する方法を示すサンプル コードを表示する場合を参照してください。、[追跡](./samples/tracking.md)サンプル。
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -142,7 +142,7 @@ if (null != workflowServiceHost)
 ### <a name="configuring-tracking-using-workflowinvoker"></a>WorkflowInvoker を使用した追跡の構成
 
 
-  <xref:System.Activities.WorkflowInvoker> を使用して実行するワークフローの追跡を構成するには、追跡プロバイダーを拡張として <xref:System.Activities.WorkflowInvoker> インスタンスに追加します。 次のコード例は、[カスタム追跡](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)サンプル。
+  <xref:System.Activities.WorkflowInvoker> を使用して実行するワークフローの追跡を構成するには、追跡プロバイダーを拡張として <xref:System.Activities.WorkflowInvoker> インスタンスに追加します。 次のコード例は、[カスタム追跡](./samples/custom-tracking.md)サンプル。
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -186,7 +186,7 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
 
 イベント ビューアーの追跡イベントを次の図に示します。
 
-![イベント ビューアーが表示された追跡レコード](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![イベント ビューアーが表示された追跡レコード](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>アプリケーション固有のプロバイダー ID の登録
 

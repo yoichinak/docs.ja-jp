@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 5f1a2b220c3fb5d348f8aa45fbf07140844c9adf
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441623"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724612"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成します。
 Windows フォーム上ではわかりやすい形式でデータを表示し、一方プログラムにはより意味のある形式でデータを格納すると便利な場合があります。 たとえば、食品の注文書の場合、リスト ボックスにメニュー項目が名前で表示されます。 一方、注文を記録するデータ テーブルには、食品を表す一意の ID 番号が含まれることになります。 次の表は、食品の注文書データを格納および表示する方法の例を示しています。  
@@ -71,8 +71,8 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [データ連結と Windows フォーム](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [ListBox コントロールの概要](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)
-- [ComboBox コントロールの概要](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
-- [CheckedListBox コントロールの概要](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
-- [オプションのリストを表示するための Windows フォーム コントロール](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [データ連結と Windows フォーム](../data-binding-and-windows-forms.md)
+- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
+- [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)
+- [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)
+- [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

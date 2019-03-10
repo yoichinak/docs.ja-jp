@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: f40b6b6e38785b1e8dcc9061f8cf0b459f4ed8b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f9a7f5aefc07bb9700e0b0b59684e5882d7109b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965281"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722699"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>方法: デザイン時に既存の設定の値を変更します。
 Visual Studio を使用して、プロジェクト内の既存の設定値を編集することができます。  
@@ -32,6 +32,6 @@ Visual Studio を使用して、プロジェクト内の既存の設定値を編
 3.  設定デザイナーでは、値を変更し、[値] 列に新しい値を入力する設定を紹介します。  
   
 ## <a name="see-also"></a>関連項目
-- [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [方法: デザイン時に新しい設定を作成します。](../../../../docs/framework/winforms/advanced/how-to-create-a-new-setting-at-design-time.md)
-- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
+- [方法: デザイン時に新しい設定を作成します。](how-to-create-a-new-setting-at-design-time.md)
+- [アプリケーション設定の概要](application-settings-overview.md)

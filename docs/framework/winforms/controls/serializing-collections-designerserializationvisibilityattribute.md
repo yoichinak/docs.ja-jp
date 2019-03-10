@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747665"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712189"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
 カスタム コントロールでは、プロパティとしてコレクションを公開が場合があります。 このチュートリアルを使用する方法について説明、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>デザイン時にコレクションをシリアル化する方法を制御するクラス。 適用、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値をコレクション プロパティにより、プロパティをシリアル化されます。  
@@ -56,22 +56,22 @@ ms.locfileid: "56747665"
   
 6.  **コード エディター**、という名前の文字列配列フィールドを宣言`stringsValue`で`SerializationDemoControl`します。  
   
-     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
-     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
-     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
+     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
+     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
+     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
 7.  定義、`Strings`プロパティを`SerializationDemoControl`します。  
   
 > [!NOTE]
 >  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値を使用して、コレクションのシリアル化を有効にします。  
   
- [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
- [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
+ [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
+ [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
+ [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
 1.  F5 キーを押してプロジェクトをビルドし、**UserControl Test Container** でコントロールを実行します。  
   
-2.  検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.  
+2.  検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.  
   
 3.  内のいくつかの文字列を入力、**文字列コレクション エディター**します。 各文字列の最後に ENTER キーを押すで区切ります。 クリックして**OK**文字列の入力が完了したら。  
   
@@ -85,11 +85,11 @@ ms.locfileid: "56747665"
   
 1.  Windows アプリケーション プロジェクトをソリューションに追加します。 プロジェクトに `SerializationDemoControlTest` という名前を付けます。  
   
-2.  **ツールボックス**、という名前のタブを見つける**SerializationDemoControlLib コンポーネント**します。 このタブでは紹介、`SerializationDemoControl`します。 詳細については、「[チュートリアル:カスタム コンポーネントでツールボックスが自動的に入力](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)します。  
+2.  **ツールボックス**、という名前のタブを見つける**SerializationDemoControlLib コンポーネント**します。 このタブでは紹介、`SerializationDemoControl`します。 詳細については、「[チュートリアル:カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)します。  
   
 3.  場所、`SerializationDemoControl`フォームにします。  
   
-4.  検索、`Strings`プロパティ、**プロパティ**ウィンドウ。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.  
+4.  検索、`Strings`プロパティ、**プロパティ**ウィンドウ。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.  
   
 5.  内のいくつかの文字列を入力、**文字列コレクション エディター**します。 各文字列の最後に ENTER キーを押すで区切ります。 クリックして**OK**文字列の入力が完了したら。  
   
@@ -132,14 +132,14 @@ ms.locfileid: "56747665"
   
 -   [デザイン時アーキテクチャ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
--   [Windows フォーム コントロールの属性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)  
   
 -   [デザイナーのシリアル化の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
--   [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
 - [デザイナーのシリアル化の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 - [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

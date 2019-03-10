@@ -5,23 +5,24 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: cf79fb5594410fc479b0e2dd6f1663715e09af86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509533"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711773"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows フォームの DataGrid コントロール内の移動に使用できるキーボード ショートカット
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  次の表に、Windows フォーム内のナビゲーションに使用できるキーボード ショートカット<xref:System.Windows.Forms.DataGrid>コントロール。  
   
 |アクション|ショートカット|  
 |------------|--------------|  
 |セルの入力を完了し、次のセルに下に移動します。<br /><br /> 子テーブルのリンクにフォーカスがある場合は、そのテーブルに移動します。|Enter|  
-|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーの選択の場合は、行の編集をキャンセルします。|Esc|  
+|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーの選択の場合は、行の編集をキャンセルします。|ESC|  
 |セルを編集するときに、挿入ポイントの前に文字を削除します。|BACKSPACE キー|  
 |セルを編集するときに、カーソル位置の後の文字を削除します。|Del|  
 |現在の行の最初のセルに移動します。|ホーム|  
@@ -51,5 +52,5 @@ ms.locfileid: "54509533"
 |入力、<xref:System.DBNull.Value?displayProperty=nameWithType>編集モードでのセルに値。|Ctrl + 0|  
   
 ## <a name="see-also"></a>関連項目
-- [DataGrid コントロールの概要](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)
-- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
+- [DataGrid コントロール](datagrid-control-windows-forms.md)

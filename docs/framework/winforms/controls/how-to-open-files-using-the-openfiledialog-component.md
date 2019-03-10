@@ -9,18 +9,18 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: f297b557e86c13c00a57a2033ba4cd61753b3d0b
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5781543a61d77ef8f0658e95759c57fdb77cfc4f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202653"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723089"
 ---
 # <a name="how-to-open-files-with-the-openfiledialog"></a>方法: それは、OpenFileDialog を開いているファイル 
 
 <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType>コンポーネントは、参照やファイルを選択する [Windows] ダイアログ ボックスを開きます。 開き、選択したファイルを読み取り、使用することができます、<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType>メソッド、またはのインスタンスを作成、<xref:System.IO.StreamReader?displayProperty=nameWithType>クラス。 次の例では、両方の方法を示します。 
 
-.NET framework で取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティには特権レベルが付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 例では、実行、<xref:System.Security.Permissions.FileIOPermission>アクセス許可を確認して、部分的に信頼されたコンテキストで実行する場合は、特権がないため例外をスローできます。 詳細については、次を参照してください。[コード アクセス セキュリティの基礎](../../../../docs/framework/misc/code-access-security-basics.md)します。
+.NET framework で取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティには特権レベルが付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 例では、実行、<xref:System.Security.Permissions.FileIOPermission>アクセス許可を確認して、部分的に信頼されたコンテキストで実行する場合は、特権がないため例外をスローできます。 詳細については、次を参照してください。[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)します。
 
 ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、次を参照してください。 [csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。 
 
@@ -30,16 +30,16 @@ ms.locfileid: "57202653"
   
 次のコードの例では、Windows フォーム<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>を開くイベント ハンドラー、<xref:System.Windows.Forms.OpenFileDialog>で、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。 ユーザーがファイルを選択し、選択した後**OK**のインスタンス、<xref:System.IO.StreamReader>クラス ファイルを読み取り、フォームのテキスト ボックスにその内容を表示します。 ファイル ストリームからの読み取りの詳細については、次を参照してください。<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>と<xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>します。  
 
- [!code-csharp[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
- [!code-vb[OpenFileDialog#1](../../../../samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
+ [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
 
 ## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>例:選択されている OpenFile フィルター選択された項目からファイルを開く 
 
 次の例では、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>を開くイベント ハンドラー、<xref:System.Windows.Forms.OpenFileDialog>はテキスト ファイルのみを表示するフィルター。 ユーザーがテキスト ファイルを選択し、選択した後**OK**、<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A>メソッドを使用して、メモ帳でファイルを開きます。
 
- [!code-csharp[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
- [!code-vb[OpenFileDialog#2](../../../../samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
+ [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [OpenFileDialog コンポーネント](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [OpenFileDialog コンポーネント](openfiledialog-component-windows-forms.md)

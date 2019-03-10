@@ -9,12 +9,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: 865f569da561ec5883b0a0f08fcedb34fc84820c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c2c83ddfba67aaff775065cc2aa4515978bf81
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722712"
 ---
 # <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>方法: プログラムで Windows フォーム DomainUpDown コントロールに項目を追加します。
 Windows フォームに項目を追加する<xref:System.Windows.Forms.DomainUpDown>コード内でコントロールできます。 呼び出す、<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>または<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>のメソッド、<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>をコントロールの項目を追加するクラス<xref:System.Windows.Forms.DomainUpDown.Items%2A>プロパティ。 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>メソッドは、コレクションの末尾に項目を追加中に、<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>メソッドは、指定した位置にある項目を追加します。  
@@ -58,5 +58,5 @@ Windows フォームに項目を追加する<xref:System.Windows.Forms.DomainUpD
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>
-- [DomainUpDown コントロール](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
-- [DomainUpDown コントロールの概要](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)
+- [DomainUpDown コントロール](domainupdown-control-windows-forms.md)
+- [DomainUpDown コントロールの概要](domainupdown-control-overview-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649415"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722290"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>方法: Windows フォームの TextBox コントロールでテキストを選択します。
 Windows フォームでテキストをプログラムで選択できる<xref:System.Windows.Forms.TextBox>コントロール。 たとえば、特定の文字列のテキストを検索する関数を作成する場合は、検索した文字列の位置のリーダーを視覚的にアラートを生成するテキストを選択できます。  
@@ -32,7 +32,7 @@ Windows フォームでテキストをプログラムで選択できる<xref:Sys
   
 3.  (省略可能)アクセスを選択したテキスト、<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>プロパティ。  
   
-     選択次のコード テキストの内容ときにボックス コントロールの<xref:System.Windows.Forms.Control.Enter>イベントが発生します。 この例では、テキスト ボックスに値を持つかどうか、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティが`null`または空の文字列。 テキスト ボックスにフォーカスが移動すると、テキスト ボックスの現在のテキストが選択されます。 `TextBox1_Enter`イベント ハンドラーの詳細については、コントロールにバインドする必要がありますを参照してください[方法。Windows フォームの実行時にイベント ハンドラーを作成](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
+     選択次のコード テキストの内容ときにボックス コントロールの<xref:System.Windows.Forms.Control.Enter>イベントが発生します。 この例では、テキスト ボックスに値を持つかどうか、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティが`null`または空の文字列。 テキスト ボックスにフォーカスが移動すると、テキスト ボックスの現在のテキストが選択されます。 `TextBox1_Enter`イベント ハンドラーの詳細については、コントロールにバインドする必要がありますを参照してください[方法。Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
   
      この例をテストするには、テキスト ボックスがあるフォーカスされるまで Tab キーを押してください。 テキスト ボックスをクリックし場合、テキストは選択できません。  
   
@@ -69,10 +69,10 @@ Windows フォームでテキストをプログラムで選択できる<xref:Sys
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox コントロールの概要](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: 文字列に引用符を挿入します。](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox コントロール](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: 文字列に引用符を挿入します。](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox コントロール](textbox-control-windows-forms.md)

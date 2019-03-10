@@ -12,17 +12,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 1f7ba0ab7f0701fe39c3cefb979b9226eeeddffe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531409"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721971"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
   
- コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)します。  
+ コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](how-to-dock-controls-on-windows-forms.md)します。  
   
  配置でこの手順に重点を置いています、<xref:System.Windows.Forms.SplitContainer>とその他のコントロール、フォームではなく、アプリケーションを Microsoft Outlook を模倣する機能を追加します。  
   
@@ -178,5 +178,5 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
-- [方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)
+- [方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](create-a-multipane-user-interface-with-wf-using-the-designer.md)

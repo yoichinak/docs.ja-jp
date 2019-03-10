@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584058"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725104"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールにデータをバインドします。
 
-<xref:System.Windows.Forms.DataGridView>コントロールは、さまざまなデータ ソースにバインドできるように、標準 Windows フォーム データ バインディング モデルをサポートしています。 バインドする、通常、<xref:System.Windows.Forms.BindingSource>データ ソースとの相互作用を管理します。 <xref:System.Windows.Forms.BindingSource>を選択するか、データの場所を変更するときに、優れた柔軟性を提供する Windows フォームのデータ ソースを指定できます。 データ ソースの詳細については、<xref:System.Windows.Forms.DataGridView>サポートを制御しを参照してください、 [DataGridView コントロールの概要](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)します。  
+<xref:System.Windows.Forms.DataGridView>コントロールは、さまざまなデータ ソースにバインドできるように、標準 Windows フォーム データ バインディング モデルをサポートしています。 バインドする、通常、<xref:System.Windows.Forms.BindingSource>データ ソースとの相互作用を管理します。 <xref:System.Windows.Forms.BindingSource>を選択するか、データの場所を変更するときに、優れた柔軟性を提供する Windows フォームのデータ ソースを指定できます。 データ ソースの詳細については、<xref:System.Windows.Forms.DataGridView>サポートを制御しを参照してください、 [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)します。  
 
 Visual Studio は広範なデータ バインド DataGridView コントロールをサポートしています。 詳細については、「[方法 :データ デザイナーを使用して Windows フォームの DataGridView コントロールをバインド](bind-data-to-the-datagrid-using-the-designer.md)します。  
 
@@ -44,8 +44,8 @@ DataGridView コントロールをデータに接続します。
   
 設定、`connectionString`例では、SQL Server の Northwind サンプル データベース接続の値を持つ変数です。 Windows 認証、統合のセキュリティとも呼ばれます。 は、接続文字列にパスワードを格納するよりもデータベースに接続するより安全な方法です。 接続セキュリティの詳細については、次を参照してください。[接続情報を保護する](../../data/adonet/protecting-connection-information.md)します。  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

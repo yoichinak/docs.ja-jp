@@ -11,18 +11,18 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720333"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールで入力を検証します。
 
 > [!NOTE]
 > 
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。
 
 Windows フォームの使用可能な 2 種類の入力の検証は<xref:System.Windows.Forms.DataGrid>コントロール。 ユーザーがセル、整数、文字列などの許容できないデータ型の値を入力する場合は、古い値を持つ新しい無効な値が置き換えられます。 この種類の入力の検証は、自動的には行われ、カスタマイズすることはできません。
 
@@ -90,4 +90,4 @@ Windows フォームの使用可能な 2 種類の入力の検証は<xref:System
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid コントロール](datagrid-control-windows-forms.md)

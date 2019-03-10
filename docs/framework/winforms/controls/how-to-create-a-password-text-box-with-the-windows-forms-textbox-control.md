@@ -12,12 +12,12 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93be2378e812ce909adaf9b640b37f8056fc09c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523988"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710811"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。
 パスワード ボックスは、ユーザーが入力文字列中に、プレース ホルダー文字を表示する Windows フォーム テキスト ボックスです。  
@@ -73,10 +73,10 @@ ms.locfileid: "54523988"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox コントロールの概要](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: 文字列に引用符を挿入します。](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox コントロール](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: 文字列に引用符を挿入します。](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox コントロール](textbox-control-windows-forms.md)

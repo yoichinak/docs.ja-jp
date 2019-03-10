@@ -2,12 +2,12 @@
 title: 移行のガイドライン
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441217"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719677"
 ---
 # <a name="migration-guidance"></a>移行のガイドライン
 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は、[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (これに含まれていた System.Workflow.* 名前空間の型は現在 WF3 と呼ばれています) でリリースされ、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] で強化されました。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
@@ -36,7 +36,7 @@ ms.locfileid: "56441217"
  [WF のガイダンス:ステート マシン](https://go.microsoft.com/fwlink/?LinkId=153855)  
  ステート マシンのアクティビティがない場合の WF4 の制御フロー モデリングについて説明します。  
   
- このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、次を参照してください。 [Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)します。  
+ このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、次を参照してください。 [Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](state-machine-workflows.md)します。  
   
  [WF 移行のクックブック:カスタム アクティビティ](https://go.microsoft.com/fwlink/?LinkId=153856)  
  WF3 のカスタム アクティビティを WF4 で再設計する場合のサンプルと手順について説明します。  

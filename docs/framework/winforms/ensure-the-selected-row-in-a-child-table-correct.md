@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 2ecac036bf081959b8ce2ba0afe8fdeed9ed9099
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664238"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713463"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法: 子テーブルの選択行が正しい位置に保持することを確認します。
 多くの場合、Windows フォームでデータ バインディングを処理するときは、いわゆる親/子ビューまたはマスター/詳細ビューにデータを表示します。 これは、同一ソースのデータが、2 つのコントロールに表示されるデータ バインディング シナリオを示します。 片方のコントロールで選択を変更すると、他方のコントロールに表示されるデータが変化します。 たとえば、第 1 のコントロールに顧客リストが含まれ、第 2 のコントロールに、第 1 のコントロールで選択された顧客に関連する注文リストが含まれます。  
@@ -32,21 +32,21 @@ ms.locfileid: "56664238"
   
 1.  子リストの位置を格納する整数変数と、子の位置をキャッシュするかどうかを示すブール変数を宣言します。  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
 2.  バインディングの <xref:System.Windows.Forms.CurrencyManager> の <xref:System.Windows.Forms.CurrencyManager.ListChanged> イベントを処理し、<xref:System.ComponentModel.ListChangedType.Reset> の <xref:System.ComponentModel.ListChangedType> をチェックします。  
   
 3.  <xref:System.Windows.Forms.CurrencyManager> の現在位置をチェックします。 それがリストの最初のエントリ (通常は 0) よりも大きい場合は、変数に保存します。  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
 4.  親リストの親現在位置マネージャーの <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> イベントを処理します。 ハンドラーで、キャッシュ シナリオではないことを示すブール値を設定します。 
   <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> が発生した場合、親の変更はリストの位置の変更であり、項目値の変更ではありません。  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>子の位置をリセットするには  
   
@@ -54,14 +54,14 @@ ms.locfileid: "56664238"
   
 2.  子テーブルの位置を、前の手順で保存したキャッシュ位置にリセットします。  
   
-     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
   
 ## <a name="example"></a>例  
  子テーブルの <xref:System.Windows.Forms.CurrencyManager> の現在位置を保存し、親テーブルの編集が完了した後でその位置をリセットする方法を次の例に示します。 この例には、<xref:System.Windows.Forms.BindingSource> コンポーネントを使用して <xref:System.Data.DataSet> 内の 2 つのテーブルにバインドされた 2 つの <xref:System.Windows.Forms.DataGridView> コントロールが含まれます。 この 2 つのテーブルの間にリレーションシップが確立され、そのリレーションシップが <xref:System.Data.DataSet> に追加されます。 子テーブル内の位置は、デモを目的として、3 行目に初期設定されています。  
   
- [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.CurrencyManagerReset#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.CurrencyManagerReset#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#1)]  
   
  このコード例をテストするには、次の手順を実行します。  
   
@@ -85,6 +85,6 @@ ms.locfileid: "56664238"
  Visual Basic または Visual c# のコマンドラインからこの例を構築する方法については、次を参照してください。 [、コマンドラインからビルドする](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)
-- [BindingSource コンポーネント](../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [データ連結と Windows フォーム](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource コンポーネント](./controls/bindingsource-component.md)
+- [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

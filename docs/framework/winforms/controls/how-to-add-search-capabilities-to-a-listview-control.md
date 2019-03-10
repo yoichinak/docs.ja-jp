@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: 0f8b9535539f7f9cd8d0c8ba3a362e9ab7bef03a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716792"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722367"
 ---
 # <a name="how-to-add-search-capabilities-to-a-listview-control"></a>方法: ListView コントロールに検索機能を追加します。
 内の項目の大規模な一覧を使用する場合に多くの場合、<xref:System.Windows.Forms.ListView>をユーザーに検索機能を提供するコントロール。 <xref:System.Windows.Forms.ListView>コントロールは、2 つの方法でこの機能を提供しています。 テキストに一致すると、場所を検索します。  
@@ -31,9 +31,9 @@ ms.locfileid: "54716792"
   
 3.  次のコード例は、基本的なを作成する方法を示します<xref:System.Windows.Forms.ListView>項目では、設定、および、ユーザーからのテキスト入力リストの項目の検索を使用しています。  
   
- [!code-cpp[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
- [!code-csharp[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
- [!code-vb[System.Windows.Forms.ListViewFindItems#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#1)]  
+ [!code-cpp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.ListViewFindItems#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#1)]  
   
 ### <a name="to-find-an-item-using-x--and-y-coordinates"></a>X 座標と y 座標を使用して項目を検索するには  
   
@@ -43,14 +43,14 @@ ms.locfileid: "54716792"
   
 3.  次のコード例は、基本的なアイコンを作成する方法を示します<xref:System.Windows.Forms.ListView>、アイテム、およびキャプチャを設定、<xref:System.Windows.Forms.Control.MouseDown>上向きの方向に最も近い項目を検索するイベントです。  
   
- [!code-cpp[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
- [!code-csharp[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]
- [!code-vb[System.Windows.Forms.ListViewFindItems#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
+ [!code-cpp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/cpp/form1.cpp#2)]
+ [!code-csharp[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/CS/form1.cs#2)]
+ [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
-- [ListView コントロール](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [ListView コントロールの概要](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [方法: Windows フォーム ListView コントロールで項目追加および削除](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [ListView コントロール](listview-control-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
+- [方法: Windows フォーム ListView コントロールで項目追加および削除](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

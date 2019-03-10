@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 24d7ea17384a912fda454bfb1136696ab18d9843
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8822c9a26db445080668b1b493803369ccbae4d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651644"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714815"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法: (Windows フォーム) 文字列に引用符を挿入します。
 テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例:  
@@ -91,10 +91,10 @@ ms.locfileid: "54651644"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
-- [TextBox コントロールの概要](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox コントロール](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox コントロール](textbox-control-windows-forms.md)

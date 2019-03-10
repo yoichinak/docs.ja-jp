@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 890290d75c6690f467e565a3d75a4b75102d7875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558386"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710798"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>方法: Modifiers プロパティおよび GenerateMember プロパティを使用して、
 2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。 `GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。 `Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。 場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。  
@@ -50,17 +50,17 @@ ms.locfileid: "54558386"
   
 7.  3 つのボタンの宣言を探します。 次のコード例で指定された相違点を示しています、`GenerateMember`と`Modifiers`プロパティ。  
   
-     [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
   
-     [!code-csharp[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.GenerateMember#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.GenerateMember#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
 >  既定では、Windows フォーム デザイナーによって、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>します。 場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>がコンテナー コントロールでは、継承されたコントロールとフォーム内の新しい子を受け付けることができません。 ソリューションは、基本のコンテナー コントロールの修飾子を変更する`protected`または`public`します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Button>
-- [Windows フォームのビジュアルの継承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
-- [チュートリアル: ビジュアル継承のデモンストレーション](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)
-- [方法: Windows フォームを継承します。](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
+- [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
+- [チュートリアル: ビジュアル継承のデモンストレーション](walkthrough-demonstrating-visual-inheritance.md)
+- [方法: Windows フォームを継承します。](how-to-inherit-windows-forms.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: b365ada2d38f8fca97b66bb3d46b2c8e93d7cb1d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676240"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720096"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。
 並べて表示ビュー機能、<xref:System.Windows.Forms.ListView>コントロールでは、グラフィカルとテキストの情報をバランスを提供することができます。 並べて表示ビューの項目で表示されるテキスト情報は、詳細ビュー用に定義されている列情報と同じ情報です。 グループ化またはカーソルのいずれかと組み合わせて、並べて表示ビューはマークの機能、<xref:System.Windows.Forms.ListView>コントロール。  
@@ -22,7 +22,7 @@ ms.locfileid: "57676240"
   
  並べて表示ビューのプロパティとメソッドを使用すると、各項目を表示して、まとめてサイズとタイル ビュー ウィンドウ内のすべての項目の外観を制御する列フィールドを指定します。 わかりやすくするために、タイル内のテキストの最初の行は常に、項目の名前です。変更することはできません。  
   
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ListView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ListView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
   
 > [!NOTE]
 >  並べて表示ビューを [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] で使用できるのは、アプリケーションから <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> メソッドを呼び出した場合だけです。 旧バージョンのオペレーティング システムでは、並べて表示ビューに関するコードがすべて無効になり、<xref:System.Windows.Forms.ListView> コントロールは大きなアイコンのビューで表示されます。 詳細については、「 <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> 」を参照してください。  
@@ -37,4 +37,4 @@ ms.locfileid: "57676240"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView コントロールの概要](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)

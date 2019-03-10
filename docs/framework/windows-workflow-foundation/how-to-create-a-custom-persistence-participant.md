@@ -1,18 +1,19 @@
 ---
-title: カスタム永続参加要素を作成する方法
+title: '方法: カスタム永続参加要素を作成します。'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855843"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725078"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>カスタム永続参加要素を作成する方法
-次の手順では、永続参加要素を作成します。 参照してください、[永続化に参加している](https://go.microsoft.com/fwlink/?LinkID=177735)サンプルと[ストア拡張](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)永続参加要素の実装例に関するトピック。  
+# <a name="how-to-create-a-custom-persistence-participant"></a>方法: カスタム永続参加要素を作成します。
+次の手順では、永続参加要素を作成します。 参照してください、[永続化に参加している](https://go.microsoft.com/fwlink/?LinkID=177735)サンプルと[ストア拡張](store-extensibility.md)永続参加要素の実装例に関するトピック。  
   
-1.  <xref:System.Activities.Persistence.PersistenceParticipant> または <xref:System.Activities.Persistence.PersistenceIOParticipant> クラスから派生するクラスを作成します。 PersistenceIOParticipant クラスは、I/O 操作に参加できることに加え、PersistenceParticipant クラスと同じ拡張ポイントを提供します。 次のうち、必要な手順を行います。  
+1.  
+  <xref:System.Activities.Persistence.PersistenceParticipant> または <xref:System.Activities.Persistence.PersistenceIOParticipant> クラスから派生するクラスを作成します。 PersistenceIOParticipant クラスは、I/O 操作に参加できることに加え、PersistenceParticipant クラスと同じ拡張ポイントを提供します。 次のうち、必要な手順を行います。  
   
 2.  <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> メソッドを実装します。 **CollectValues**メソッドには、2 つのディクショナリ パラメーター、もう 1 つ (後でクエリで使用)、書き込み専用の値を格納するためおよび読み取り/書き込み値を格納する 1 つ。 このメソッドでは、永続参加要素に固有のデータをこれらのディクショナリに設定する必要があります。 各ディクショナリには、値の名前がキーとして格納されているほか、値そのものが <xref:System.Runtime.DurableInstancing.InstanceValue> オブジェクトとして格納されています。  
   
@@ -28,7 +29,8 @@ ms.locfileid: "43855843"
     protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> メソッドは <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> が提供しない機能を提供し、<xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> が処理しなかった別の永続参加により提供される、別の値への依存関係が許可されます。  
+     
+  <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> メソッドは <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> が提供しない機能を提供し、<xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> が処理しなかった別の永続参加により提供される、別の値への依存関係が許可されます。  
   
 4.  実装、 **PublishValues**メソッド。 **PublishValues**メソッドは、永続化ストアから読み込まれたすべての値を含む辞書を受け取ります。  
   

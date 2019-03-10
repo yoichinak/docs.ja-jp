@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: c57f7d22219c0cda91dad174be4e225808a9949d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d215eeaa367156c6228615a8f6e0a7f889efdf60
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494926"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713814"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView コントロールのアーキテクチャ (Windows フォーム)
 <xref:System.Windows.Forms.DataGridView>コントロールとその関連クラスが表示および表形式のデータを編集するための柔軟で拡張性の高いシステムで設計されています。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms?displayProperty=nameWithType>名前空間、およびそれらのすべてが"DataGridView"プレフィックスを持つという名前です。  
@@ -17,7 +17,7 @@ ms.locfileid: "54494926"
 ## <a name="architecture-elements"></a>アーキテクチャの要素  
  プライマリ<xref:System.Windows.Forms.DataGridView>コンパニオン クラスから派生<xref:System.Windows.Forms.DataGridViewElement>します。 次のオブジェクト モデルを示しています、<xref:System.Windows.Forms.DataGridViewElement>継承階層。  
   
- ![DataGridViewElement オブジェクト モデル](../../../../docs/framework/winforms/controls/media/datagridviewelement.gif "DataGridViewElement")  
+ ![DataGridViewElement オブジェクト モデル](./media/datagridviewelement.gif "DataGridViewElement")  
 DataGridViewElement オブジェクト モデル  
   
  <xref:System.Windows.Forms.DataGridViewElement>クラスは、親への参照を提供<xref:System.Windows.Forms.DataGridView>コントロールであり、<xref:System.Windows.Forms.DataGridViewElement.State%2A>プロパティの値の組み合わせを表す値を保持する、<xref:System.Windows.Forms.DataGridViewElementStates>列挙体。  
@@ -51,7 +51,7 @@ DataGridViewElement オブジェクト モデル
 ### <a name="datagridviewcell"></a>DataGridViewCell  
  セルがの相互作用の基本的な単位、<xref:System.Windows.Forms.DataGridView>します。 表示が、セルの中央に配置し、多くの場合、データ エントリはセルを実行します。 使用してセルにアクセスすることができます、<xref:System.Windows.Forms.DataGridViewRow.Cells%2A>のコレクション、<xref:System.Windows.Forms.DataGridViewRow>を使用して、選択したセルにアクセスできるクラスとする、<xref:System.Windows.Forms.DataGridView.SelectedCells%2A>のコレクション、<xref:System.Windows.Forms.DataGridView>コントロール。 この使用方法とを示しています、次のオブジェクト モデル、<xref:System.Windows.Forms.DataGridViewCell>継承階層。  
   
- ![DataGridViewCell オブジェクト モデル](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
+ ![DataGridViewCell オブジェクト モデル](./media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell オブジェクト モデル  
   
  <xref:System.Windows.Forms.DataGridViewCell>型はすべてのセルの型の派生元となる抽象基本クラス。 <xref:System.Windows.Forms.DataGridViewCell> その派生型は、Windows フォーム コントロールが一部のホスト Windows フォーム コントロール。 セルの数式でサポートされている編集機能は通常、ホストされるコントロールによって処理されます。  
@@ -85,7 +85,7 @@ DataGridViewCell オブジェクト モデル
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  スキーマ、<xref:System.Windows.Forms.DataGridView>でコントロールの接続されたデータ ストアが表される、<xref:System.Windows.Forms.DataGridView>コントロールの列。 アクセスできる、<xref:System.Windows.Forms.DataGridView>コントロールの列を使用して、<xref:System.Windows.Forms.DataGridView.Columns%2A>コレクション。 選択した列を使用してアクセスすることができます、<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>コレクション。 この使用方法とを示しています、次のオブジェクト モデル、<xref:System.Windows.Forms.DataGridViewColumn>継承階層。  
   
- ![DataGridViewColumn オブジェクト モデル](../../../../docs/framework/winforms/controls/media/datagridviewcolumn.gif "DataGridViewColumn")  
+ ![DataGridViewColumn オブジェクト モデル](./media/datagridviewcolumn.gif "DataGridViewColumn")  
 DataGridViewColumn オブジェクト モデル  
   
  一部のキーのセルの種類はある対応する列の種類です。 これらから派生、<xref:System.Windows.Forms.DataGridViewColumn>基本クラス。  
@@ -109,7 +109,7 @@ DataGridViewColumn オブジェクト モデル
 ### <a name="datagridview-editing-controls"></a>DataGridView 編集コントロール  
  通常は高度な編集機能をサポートしているセルは、Windows フォーム コントロールから派生したホストされるコントロールを使用します。 これらのコントロールの実装も、<xref:System.Windows.Forms.IDataGridViewEditingControl>インターフェイス。 次のオブジェクト モデルでは、これらのコントロールの使用方法を示します。  
   
- ![DataGridView コントロールのオブジェクト モデルを編集](../../../../docs/framework/winforms/controls/media/datagridviewediting.gif "DataGridViewEditing")  
+ ![DataGridView コントロールのオブジェクト モデルを編集](./media/datagridviewediting.gif "DataGridViewEditing")  
 DataGridView 編集コントロール オブジェクト モデル  
   
  次の編集コントロールが付属、<xref:System.Windows.Forms.DataGridView>コントロール。  
@@ -118,7 +118,7 @@ DataGridView 編集コントロール オブジェクト モデル
   
 -   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
- 独自の編集コントロールを作成する方法の詳細については、次を参照してください。[方法。Windows フォーム DataGridView Cells コントロールをホスト](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)します。  
+ 独自の編集コントロールを作成する方法の詳細については、次を参照してください。[方法。Windows フォーム DataGridView Cells コントロールをホスト](how-to-host-controls-in-windows-forms-datagridview-cells.md)します。  
   
  次の表は、セルの種類を列の種類、および編集コントロール間の関係を示しています。  
   
@@ -134,14 +134,14 @@ DataGridView 編集コントロール オブジェクト モデル
 ### <a name="datagridviewrow"></a>DataGridViewRow  
  <xref:System.Windows.Forms.DataGridViewRow>をクラスの表示、レコードのデータ フィールドのデータを格納、<xref:System.Windows.Forms.DataGridView>コントロールをアタッチします。 アクセスできる、<xref:System.Windows.Forms.DataGridView>コントロールの行を使用して、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション。 選択した行を使用してアクセスすることができます、<xref:System.Windows.Forms.DataGridView.SelectedRows%2A>コレクション。 この使用方法とを示しています、次のオブジェクト モデル、<xref:System.Windows.Forms.DataGridViewRow>継承階層。  
   
- ![DataGridViewRow オブジェクト モデル](../../../../docs/framework/winforms/controls/media/datagridviewrow.gif "DataGridViewRow")  
+ ![DataGridViewRow オブジェクト モデル](./media/datagridviewrow.gif "DataGridViewRow")  
 DataGridViewRow オブジェクト モデル  
   
  独自の型を派生させることができます、<xref:System.Windows.Forms.DataGridViewRow>クラスが、これは通常不要になります。 <xref:System.Windows.Forms.DataGridView>コントロールがいくつかの行に関連するイベントおよびプロパティの動作をカスタマイズするため、<xref:System.Windows.Forms.DataGridViewRow>オブジェクト。  
   
- 有効にした場合、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>プロパティ、新しい行を追加するための特別な行は、最後の行として表示されます。 この行の一部である、<xref:System.Windows.Forms.DataGridView.Rows%2A>が、コレクションが特別な機能に対処することがあります。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールにおける新規レコードの行を使用して](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)します。  
+ 有効にした場合、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>プロパティ、新しい行を追加するための特別な行は、最後の行として表示されます。 この行の一部である、<xref:System.Windows.Forms.DataGridView.Rows%2A>が、コレクションが特別な機能に対処することがあります。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールにおける新規レコードの行を使用して](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [DataGridView コントロールの概要](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [Windows フォーム DataGridView コントロールのカスタマイズ](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
-- [Windows フォーム DataGridView コントロールにおける新規レコード行の使用](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
+- [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールにおける新規レコード行の使用](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

@@ -2,21 +2,21 @@
 title: タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558424"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721224"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。
 このタスクでは、作成、**ツールボックス**と**PropertyGrid**ペインがありますし、再ホストされたに追加[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]します。  
   
- リファレンスについては、3 つの完了後に MainWindow.xaml.cs ファイルに登録するコードのタスクで、[ワークフロー デザイナーのホスト変更](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)一連のトピックは、このトピックの最後で提供されます。  
+ リファレンスについては、3 つの完了後に MainWindow.xaml.cs ファイルに登録するコードのタスクで、[ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)一連のトピックは、このトピックの最後で提供されます。  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>ツールボックスを作成し、グリッドに追加するには  
   
-1.  説明されている手順を実行して取得した HostingApplication プロジェクトを開く[タスク 2。ワークフロー デザイナーのホスティング](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)します。  
+1.  説明されている手順を実行して取得した HostingApplication プロジェクトを開く[タスク 2。ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)します。  
   
 2.  **ソリューション エクスプ ローラー**ウィンドウで、MainWindow.xaml ファイルを右クリックし、選択**コードの表示**します。  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ワークフロー デザイナーのホスト変更](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [タスク 2:ワークフロー デザイナーをホスティングします。](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
+- [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](task-1-create-a-new-wpf-app.md)
+- [タスク 2:ワークフロー デザイナーをホスティングします。](task-2-host-the-workflow-designer.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615963"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719430"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>方法: SaveFileDialog コンポーネントを使用してファイルを保存します。
 <xref:System.Windows.Forms.SaveFileDialog>コンポーネントにより、ユーザーがファイル システムを参照して保存するファイルを選択します。 このダイアログ ボックスは、ユーザーがダイアログ ボックス内で選択したファイルのパスと名前を返します。 ただし、ファイルを実際にディスクに書き込むためのコードを記述する必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "54615963"
      次の例では、<xref:System.Windows.Forms.Button>コントロールにイメージが割り当てられます。 ボタンをクリックすると、<xref:System.Windows.Forms.SaveFileDialog>コンポーネントがファイルの種類として .gif、.jpeg、および .bmp を許可するフィルターをインスタンス化します。 [ファイルの保存] ダイアログ ボックスでこれらの種類のファイルが選択されると、ボタンのイメージが保存されます。  
   
     > [!IMPORTANT]
-    >  取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティ、アセンブリに必要です特権レベルを付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../docs/framework/misc/code-access-security-basics.md)」をご覧ください。  
+    >  取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティ、アセンブリに必要です特権レベルを付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。  
   
      この例では、フォームに、<xref:System.Windows.Forms.Button>コントロールをその<xref:System.Windows.Forms.ButtonBase.Image%2A>プロパティの種類として .gif、.jpeg、または .bmp ファイルに設定します。  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615963"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog コンポーネント](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog コンポーネント](savefiledialog-component-windows-forms.md)

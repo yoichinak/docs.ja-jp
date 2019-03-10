@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636080"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722686"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>方法: Windows フォーム パネルの背景を設定します。
 Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背景色と背景イメージの両方を表示できます。 <xref:System.Windows.Forms.Control.BackColor%2A>プロパティは、ラベルやラジオ ボタンなど、含まれるコントロールの背景色を設定します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されていない、<xref:System.Windows.Forms.Control.BackColor%2A>選択がパネル全体を入力します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されて、イメージが格納されているコントロールの背後に表示されます。  
@@ -70,5 +70,5 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Panel コントロール](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Panel コントロールの概要](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [Panel コントロール](panel-control-windows-forms.md)
+- [Panel コントロールの概要](panel-control-overview-windows-forms.md)

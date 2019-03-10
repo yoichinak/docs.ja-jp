@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674920"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711794"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows フォームで高 DPI のサポート
 
@@ -49,7 +49,7 @@ ms.locfileid: "55674920"
 
 - モニターごとの DPI 認識を有効にする、 *app.config*ファイル。
 
-  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降では追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。   
+  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降では追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ ms.locfileid: "55674920"
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
+個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
 
 ## <a name="new-dpi-change-events"></a>新しい DPI 変更イベント
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>関連項目
 
-- [Windows フォームの構成要素を追加します。](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Windows フォームのサイズとスケールを調整する](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows フォームの構成要素を追加します。](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows フォームのサイズとスケールを調整する](adjusting-the-size-and-scale-of-windows-forms.md)

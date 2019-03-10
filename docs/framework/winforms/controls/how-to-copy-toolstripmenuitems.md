@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: d3b1103cda6d4f61b55f6856cd426779a4f39f2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639446"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713879"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>方法: ToolStripMenuItems をコピーします。
 デザイン時に、トップレベル メニュー全体とそのサブメニュー項目を、 <xref:System.Windows.Forms.MenuStrip>の別の場所にコピーできます。 トップレベル メニュー間で個々のメニュー項目のコピーをすることも、またはメニュー内のメニュー項目の位置を変更することもできます。  
@@ -45,4 +45,4 @@ ms.locfileid: "54639446"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip コントロールの概要](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)

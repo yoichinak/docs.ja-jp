@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: 3fb5b443aac710a5490a238e2a571ed899dec463
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885f0d22e83767bda3ef76c54f0857dd2a148344
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512395"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719716"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>方法: ハッチ パターンで図形を塗りつぶす
 2 つの色からハッチ パターンが行われます。 バック グラウンドとバック グラウンドでパターンを形成する行のいずれかのいずれか。 ハッチ パターンでは、閉じた図形を塗りつぶすを使用して、<xref:System.Drawing.Drawing2D.HatchBrush>オブジェクト。 次の例では、ハッチ パターンで楕円の塗りつぶし方法を示します。  
@@ -36,13 +36,13 @@ ms.locfileid: "54512395"
   
  次の図は、塗りつぶされた楕円を示します。  
   
- ![ハッチ パターン](../../../../docs/framework/winforms/advanced/media/hatch1.png "hatch1")  
+ ![ハッチ パターン](./media/hatch1.png "hatch1")  
   
- [!code-csharp[System.Drawing.UsingABrush#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.UsingABrush#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.UsingABrush#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
-- [ブラシを使用した図形の塗りつぶし](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [ブラシを使用した図形の塗りつぶし](using-a-brush-to-fill-shapes.md)

@@ -6,39 +6,39 @@ helpviewer_keywords:
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: ca4e4beed068d47bef7a5cd4f7b05bde0a19de23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6607ec9754f708d2c1e5abfd61cd77013efec4e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510795"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720996"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser コントロール (Windows フォーム)
 Windows フォーム`WebBrowser`コントロールが Web ページをホストし、Web ブラウザー、アプリケーションに機能を提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WebBrowser コントロールの概要](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- このコントロールの用途、主な機能、およびプロパティについて説明します。  
+ [WebBrowser コントロールの概要](webbrowser-control-overview.md)  
+ このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [WebBrowser セキュリティ](../../../../docs/framework/winforms/controls/webbrowser-security.md)  
+ [WebBrowser セキュリティ](webbrowser-security.md)  
  コントロールに関連するセキュリティ問題をについて説明します。  
   
- [方法: WebBrowser コントロールで URL に移動します](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
  特定の URL に移動するコントロールを使用する方法を示します。  
   
- [方法: WebBrowser コントロールを使用して印刷します。](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [方法: WebBrowser コントロールを使用して印刷します。](how-to-print-with-a-webbrowser-control.md)  
  Web ページを表示せずに印刷する方法を示します。  
   
- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
  Web ブラウザーとして使用するためのコントロールを初期化する方法について説明します。  
   
- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
  HTML ビューアーとして使用するためのコントロールを初期化する方法について説明します。  
   
- [方法: DHTML コードとクライアント アプリケーション コード間の双方向通信を実装します。](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [方法: DHTML コードとクライアント アプリケーション コード間の双方向通信を実装します。](implement-two-way-com-between-dhtml-and-client.md)  
  コントロールによってホストされる Web ページで、アプリケーション コードと DHTML の間で双方向通信をセットアップする方法について説明します。  
   
- [マネージド HTML DOM (Document Object Model) の使用](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)  
+ [マネージド HTML DOM (Document Object Model) の使用](using-the-managed-html-document-object-model.md)  
  操作またはによってホストされている HTML ページを作成する方法について説明するトピックを示します、<xref:System.Windows.Forms.WebBrowser>コントロール。  
   
 ## <a name="reference"></a>参照  
@@ -79,4 +79,4 @@ Windows フォーム`WebBrowser`コントロールが Web ページをホスト�
  この列挙体とそのすべての値について説明します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

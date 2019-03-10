@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: d9ceb10eb5990742271c8d952d9293807c21677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696296"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725247"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>方法: 線形グラデーションを作成します。
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 水平方向、垂直方向、および対角線方向の線形グラデーションを提供します。 既定では、線形グラデーションの色を均一に変更します。 ただし、色が一様でない方法で変更されるように、線形グラデーションをカスタマイズできます。  
@@ -28,14 +28,14 @@ ms.locfileid: "54696296"
   
  次の図は、線、楕円、四角形を示します。 色のグラデーション繰り返される自体の水平方向座標が 200 を超えるとに注意してください。  
   
- ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient1.png "cslineargradient1")  
+ ![線形グラデーション](./media/cslineargradient1.png "cslineargradient1")  
   
 ### <a name="to-use-horizontal-linear-gradients"></a>水平方向の線形グラデーションを使用するには  
   
 -   3 番目と 4 番目の引数として、それぞれ不透明な赤と不透明青を渡します。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#21)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#21)]  
   
  色要素は前の例では 0 の水平座標から 200 の水平座標に移動すると直線的に変更します。 たとえば、最初の座標が 0 と 200 の中間点は、0 から 255 までの中間に位置が青要素があります。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "54696296"
   
  次の図は、結果として得られる楕円と四角形を示します。  
   
- ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient2.png "cslineargradient2")  
+ ![線形グラデーション](./media/cslineargradient2.png "cslineargradient2")  
   
 ### <a name="to-customize-linear-gradients"></a>線形グラデーションをカスタマイズするには  
   
 -   3 番目と 4 番目の引数として、それぞれ不透明な黒と不透明な赤を渡します。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#22)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#22)]  
   
  上記の例のグラデーションを水平にされています。つまり、色は、水平線のいずれかに移動すると、段階的に変更します。 垂直方向のグラデーションと対角線方向のグラデーションを定義することもできます。  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54696296"
   
  次の図は、線、楕円を示します。 楕円内色徐々 にに沿って移動すると行のメモが並列に渡される行には (0, 0) と (200, 100)。  
   
- ![線形グラデーション](../../../../docs/framework/winforms/advanced/media/cslineargradient3.png "cslineargradient3")  
+ ![線形グラデーション](./media/cslineargradient3.png "cslineargradient3")  
   
 ### <a name="to-create-diagonal-linear-gradients"></a>対角線方向の線形グラデーションを作成するには  
   
 -   3 番目と 4 番目の引数として、それぞれ不透明青と不透明な緑を渡します。  
   
-     [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
-     [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
+     [!code-csharp[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
+     [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
-- [グラデーション ブラシを使用した図形の塗りつぶし](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)
-- [Windows フォームにおけるグラフィックスと描画](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [グラデーション ブラシを使用した図形の塗りつぶし](using-a-gradient-brush-to-fill-shapes.md)
+- [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

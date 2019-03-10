@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 6076ebf6cb75aa4fdb5cf5798b642597d8f84c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44047b5a35c2ca87f3136d082331d2f31a1abbec
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559048"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721152"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>方法: 不透明な直線および半透明な直線を描画します。
 線を描画するときは、<xref:System.Drawing.Pen> オブジェクトを <xref:System.Drawing.Graphics> クラスの <xref:System.Drawing.Graphics.DrawLine%2A> メソッドに渡す必要があります。 <xref:System.Drawing.Pen.%23ctor%2A> コンストラクターのパラメーターの 1 つは、<xref:System.Drawing.Color> オブジェクトです。 不透明な直線を描画するには、色のアルファ コンポーネントを 255 に設定します。 半透明な直線を描画するには、アルファ コンポーネントを 1 ～ 254 の値に設定します。  
@@ -27,15 +27,15 @@ ms.locfileid: "54559048"
   
  以下のコードの出力を次の図に示します。  
   
- ![不透明な直線および半透明な](../../../../docs/framework/winforms/advanced/media/compqualline.png "compqualline")  
+ ![不透明な直線および半透明な](./media/compqualline.png "compqualline")  
   
- [!code-csharp[System.Drawing.AlphaBlending#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.AlphaBlending#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.AlphaBlending#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.AlphaBlending#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
-- [アルファ ブレンドの直線と塗りつぶし](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
-- [方法: コントロールに透明な背景を提供します。](../../../../docs/framework/winforms/controls/how-to-give-your-control-a-transparent-background.md)
-- [方法: 不透明な直線および半透明ブラシを使用して描画します。](../../../../docs/framework/winforms/advanced/how-to-draw-with-opaque-and-semitransparent-brushes.md)
+- [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)
+- [方法: コントロールに透明な背景を提供します。](../controls/how-to-give-your-control-a-transparent-background.md)
+- [方法: 不透明な直線および半透明ブラシを使用して描画します。](how-to-draw-with-opaque-and-semitransparent-brushes.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664186"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712306"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
-マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、次を参照してください。 [Windows フォームにおけるマウス入力動作方法](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
+マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、次を参照してください。 [Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
   
 ## <a name="mouse-information"></a>マウスの情報  
  <xref:System.Windows.Forms.MouseEventArgs> は、マウス ボタンのクリック、およびマウスの動きの追跡に関連するマウス イベントのハンドラーに送信します。 <xref:System.Windows.Forms.MouseEventArgs> は、マウスのボタンが押された、およびマウスのホイールがスクロールされたといった、クライアント座標のマウス ポインターの場所を含む、マウスの現在の状態に関する情報を提供します。 マウス ポインターがコントロールの境界内に入った、または境界から出たときの通知など、いくつかのマウスイベントは、それ以上の情報はなしで <xref:System.EventArgs> をイベント ハンドラーに送信します。  
@@ -62,7 +62,7 @@ ms.locfileid: "56664186"
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> イベント。  
   
- イベントをクリックして、マウスの順序を示すコード例を参照してください[方法。イベントを Windows フォーム コントロール ユーザー入力処理](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md)します。  
+ イベントをクリックして、マウスの順序を示すコード例を参照してください[方法。イベントを Windows フォーム コントロール ユーザー入力処理](how-to-handle-user-input-events-in-windows-forms-controls.md)します。  
   
 ### <a name="individual-controls"></a>個別のコントロール  
  次のコントロールは、標準のマウス クリック イベントの動作に準拠していません。  
@@ -143,4 +143,4 @@ ms.locfileid: "56664186"
   <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)

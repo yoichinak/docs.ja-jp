@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723343"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705223"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>方法: 標準の Windows フォーム印刷ジョブを作成します。
 Windows フォームにおける印刷の基盤は、<xref:System.Drawing.Printing.PrintDocument>コンポーネント、具体的には、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント。 処理するコードを記述することで、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント、印刷と印刷方法を指定できます。  
@@ -72,10 +72,10 @@ Windows フォームにおける印刷の基盤は、<xref:System.Drawing.Printi
      コードを記述することも、<xref:System.Drawing.Printing.PrintDocument.BeginPrint>と<xref:System.Drawing.Printing.PrintDocument.EndPrint>などページの総数を表す印刷を整数デクリメントされる各ページの印刷イベント。  
   
     > [!NOTE]
-    >  追加することができます、<xref:System.Windows.Forms.PrintDialog>コンポーネントをフォームをユーザーに、クリーンで効率的なユーザー インターフェイス (UI) を提供します。 設定、<xref:System.Windows.Forms.PrintDialog.Document%2A>のプロパティ、<xref:System.Windows.Forms.PrintDialog>コンポーネント有効にするドキュメントの印刷に関連するプロパティを設定することがフォーム上で使用します。 詳細については、<xref:System.Windows.Forms.PrintDialog>コンポーネントを参照してください[PrintDialog コンポーネント](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)します。  
+    >  追加することができます、<xref:System.Windows.Forms.PrintDialog>コンポーネントをフォームをユーザーに、クリーンで効率的なユーザー インターフェイス (UI) を提供します。 設定、<xref:System.Windows.Forms.PrintDialog.Document%2A>のプロパティ、<xref:System.Windows.Forms.PrintDialog>コンポーネント有効にするドキュメントの印刷に関連するプロパティを設定することがフォーム上で使用します。 詳細については、<xref:System.Windows.Forms.PrintDialog>コンポーネントを参照してください[PrintDialog コンポーネント](../controls/printdialog-component-windows-forms.md)します。  
   
      Windows フォームの詳細詳細については、プログラムで印刷ジョブを作成する方法など、印刷ジョブを参照してください<xref:System.Drawing.Printing.PrintPageEventArgs>します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows フォームにおける印刷のサポート](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

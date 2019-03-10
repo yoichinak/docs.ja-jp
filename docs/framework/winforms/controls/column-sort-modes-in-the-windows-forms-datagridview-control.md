@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615052"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717857"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列の並べ替えモード
 <xref:System.Windows.Forms.DataGridView> 列では、次の 3 つの並べ替えモードがあります。 使用して各列の並べ替えモードを指定、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティは、次のいずれかに設定することができる列の<xref:System.Windows.Forms.DataGridViewColumnSortMode>列挙値。  
@@ -31,7 +31,7 @@ ms.locfileid: "54615052"
   
  ときに、<xref:System.Windows.Forms.DataGridView>は、並べ替えを指定できます、並べ替え列と並べ替え順序の両方の値をチェックして、<xref:System.Windows.Forms.DataGridView.SortedColumn%2A>と<xref:System.Windows.Forms.DataGridView.SortOrder%2A>プロパティ。 カスタムの並べ替え操作の後にこれらの値を意味することができません。 カスタムの並べ替えの詳細については、このトピックの「カスタムの並べ替え」を参照してください。  
   
- ときに、<xref:System.Windows.Forms.DataGridView>バインドとバインドされていない列を含むコントロールが並べ替えられ、非バインド列の値を自動的に維持することはできません。 これらの値を維持するために設定して仮想モードを実装する必要があります、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティを`true`と処理、<xref:System.Windows.Forms.DataGridView.CellValueNeeded>と<xref:System.Windows.Forms.DataGridView.CellValuePushed>イベント。 詳細については、「[方法 :仮想モードを実装で、Windows フォーム DataGridView コントロール](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)します。 バインド モードでバインドされていない列による並べ替えはサポートされていません。  
+ ときに、<xref:System.Windows.Forms.DataGridView>バインドとバインドされていない列を含むコントロールが並べ替えられ、非バインド列の値を自動的に維持することはできません。 これらの値を維持するために設定して仮想モードを実装する必要があります、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティを`true`と処理、<xref:System.Windows.Forms.DataGridView.CellValueNeeded>と<xref:System.Windows.Forms.DataGridView.CellValuePushed>イベント。 詳細については、「[方法 :仮想モードを実装で、Windows フォーム DataGridView コントロール](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)します。 バインド モードでバインドされていない列による並べ替えはサポートされていません。  
   
 ## <a name="programmatic-sorting"></a>プログラムによる並べ替え  
  並べ替えることができます、<xref:System.Windows.Forms.DataGridView>プログラムで呼び出してその<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッド。  
@@ -65,6 +65,6 @@ ms.locfileid: "54615052"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Windows フォームの DataGridView コントロールでのデータの並べ替え](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロール内の列の並べ替えモードを設定します。](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Windows フォームの DataGridView コントロールでのデータの並べ替え](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロール内の列の並べ替えモードを設定します。](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

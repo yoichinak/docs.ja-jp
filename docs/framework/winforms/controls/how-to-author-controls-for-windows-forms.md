@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: dbb14e30e3ed2bebdabcf9163291c647e05b1cc5
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584383"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713415"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームのコントロールの作成
 コントロールは、ユーザーとプログラムの間のグラフィカルなリンクを表します。 コントロールは、データの提供または処理、ユーザー入力の受け付け、イベントへの応答、ユーザーとアプリケーションを接続する他の任意の数の関数の実行を行うことができます。 コントロールは、基本的にグラフィカル インターフェイスを持つコンポーネントであるため、ユーザーとの対話だけでなく、コンポーネントが実行するあらゆる機能を果たします。 コントロールは特定の目的に使用するために作成します。コントロールの作成は、まったく別のプログラミング タスクです。 このことを念頭に、次の手順では、コントロールの作成手順の概要を示します。 個々の手順のリンクで追加情報を提供します。  
@@ -35,15 +35,15 @@ ms.locfileid: "56584383"
   
 2.  コントロール用にオブジェクト モデルが必要な場合は、オブジェクト モデル全体に機能を配布する方法を決定し、コントロールと下位オブジェクトの間で機能を分割します。 複合コントロールを計画している場合や、複数の機能を組み込む場合は、オブジェクト モデルが役立つ可能性があります。  
   
-3.  必要なコントロールの種類 (ユーザー コントロール、カスタム コントロール、継承された Windows フォーム コントロールなど) を特定します。 詳細については、「[コントロールの種類に関するアドバイス](../../../../docs/framework/winforms/controls/control-type-recommendations.md)」と「[さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)」を参照してください。  
+3.  必要なコントロールの種類 (ユーザー コントロール、カスタム コントロール、継承された Windows フォーム コントロールなど) を特定します。 詳細については、「[コントロールの種類に関するアドバイス](control-type-recommendations.md)」と「[さまざまなカスタム コントロール](varieties-of-custom-controls.md)」を参照してください。  
   
 4.  機能をプロパティ、メソッド、およびコントロールとその下位オブジェクトまたは従属構造体のイベントとして表現し、適切なアクセス レベル (たとえば、public、protected など) を割り当てます。  
   
-5.  コントロールのカスタム描画が必要な場合は、そのコードを追加します。 詳細については、「[コントロールのカスタム描画およびレンダリング](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)」を参照してください。  
+5.  コントロールのカスタム描画が必要な場合は、そのコードを追加します。 詳細については、「[コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)」を参照してください。  
   
-6.  継承したコントロールの場合<xref:System.Windows.Forms.UserControl>、実行時の動作をテストするにはコントロール プロジェクトをビルドし実行すると、 **UserControl Test Container**します。 詳細については、「[方法 :UserControl の実行時の動作をテスト](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)します。  
+6.  継承したコントロールの場合<xref:System.Windows.Forms.UserControl>、実行時の動作をテストするにはコントロール プロジェクトをビルドし実行すると、 **UserControl Test Container**します。 詳細については、「[方法 :UserControl の実行時の動作をテスト](how-to-test-the-run-time-behavior-of-a-usercontrol.md)します。  
   
-7.  Windows アプリケーションなどの新しいプロジェクトを作成してコンテナーに配置することで、コントロールをテストしてデバッグすることができます。 このプロセスの一部として示されています。[チュートリアル。Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)です。  
+7.  Windows アプリケーションなどの新しいプロジェクトを作成してコンテナーに配置することで、コントロールをテストしてデバッグすることができます。 このプロセスの一部として示されています。[チュートリアル。Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)です。  
   
 8.  各機能を追加するときは、テスト プロジェクトに機能を追加して新しい機能を実行します。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "56584383"
 10. コントロールをパッケージ化してデプロイします。 詳細については、次を参照してください。[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)します。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: Visual Basic による複合コントロールの作成](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [方法: UserControl クラスを継承します。](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)
-- [方法: コントロール クラスから継承します。](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)
-- [方法: 継承可能な既存の Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)
-- [方法: UserControl の実行時の動作をテストします。](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [さまざまなカスタム コントロール](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)
+- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)
+- [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

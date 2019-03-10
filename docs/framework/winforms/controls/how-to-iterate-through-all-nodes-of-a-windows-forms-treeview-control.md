@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: c6345ab5e5d4f4e480bb2724e7a1d795de2bef5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651852"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715396"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理します。
 Windows フォーム内の各ノードをチェックすると役立つ場合があります<xref:System.Windows.Forms.TreeView>ノード値にいくつかの計算を実行するために制御します。 この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。  
@@ -124,5 +124,5 @@ Windows フォーム内の各ノードをチェックすると役立つ場合が
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [TreeView コントロール](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [TreeView コントロール](treeview-control-windows-forms.md)
 - [再帰プロシージャ](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

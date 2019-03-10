@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498909"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711318"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows フォームでのユーザー入力の検証
 ユーザーがアプリケーションにデータを入力すると、アプリケーションが使用する前に、データが有効であることを確認したい場合があります。 特定のテキスト フィールドである長さがゼロで電話番号または正しい形式のデータの他の種類として、フィールドの形式、または文字列にデータベースのセキュリティを侵害される可能性があります安全でない文字が含まれていない場合があります。 Windows フォームでは、アプリケーションでの入力を検証するためのいくつかの方法を提供します。  
@@ -22,14 +22,14 @@ ms.locfileid: "54498909"
   
  によって使用されるマスク言語<xref:System.Windows.Forms.MaskedTextBox>は非常に柔軟です。 必要な文字、省略可能な文字、ハイフン、かっこなどのリテラル文字、通貨記号、および日付の区切り記号を指定することができます。 コントロールも、データ ソースにバインドした場合でも機能します。 <xref:System.Windows.Forms.Binding.Format>データ バインディングでのイベントを使用して、マスクに準拠する受信データを再フォーマットと<xref:System.Windows.Forms.Binding.Parse>イベントを使用して、データ フィールドの仕様に準拠する送信データを再フォーマットします。  
   
- 詳細については、次を参照してください。 [MaskedTextBox コントロール](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)します。  
+ 詳細については、次を参照してください。 [MaskedTextBox コントロール](./controls/maskedtextbox-control-windows-forms.md)します。  
   
 ## <a name="event-driven-validation"></a>イベント ドリブンの検証  
  検証をプログラムにより完全に制御するか、または複雑な検証チェックを実行する必要がある場合は、ほとんどの Windows フォーム コントロールに組み込まれている検証イベントを使用する必要があります。 自由形式のユーザー入力を受け付ける各コントロールには、<xref:System.Windows.Forms.Control.Validating>コントロール データの検証に必要なときに発生するイベントです。 <xref:System.Windows.Forms.Control.Validating>イベント処理メソッドをいくつかの方法で入力するユーザーを検証することができます。 たとえば、郵便番号コードを含める必要があるテキスト ボックスがある場合は、次の方法で検証を実行できます。  
   
 -   郵便番号は、郵便番号の特定のグループに属している必要がある場合、ユーザーが入力したデータを検証する入力文字列の比較を実行できます。 たとえば、郵便番号は、{10001、10002、10003} のセットである必要がある場合は、データを検証する文字列比較を使用できます。  
   
--   特定の形式である必要があります、郵便場合は、ユーザーが入力データを検証する正規表現を使用できます。 たとえば、フォームを検証する`#####`または`#####-####`、正規表現を使用する`^(\d{5})(-\d{4})?$`します。 フォームを検証する`A#A #A#`、正規表現を使用する`[A-Z]\d[A-Z] \d[A-Z]\d`します。 正規表現の詳細については、次を参照してください。 [.NET Framework の正規表現](../../../docs/standard/base-types/regular-expressions.md)と[正規表現の例](../../../docs/standard/base-types/regular-expression-examples.md)します。  
+-   特定の形式である必要があります、郵便場合は、ユーザーが入力データを検証する正規表現を使用できます。 たとえば、フォームを検証する`#####`または`#####-####`、正規表現を使用する`^(\d{5})(-\d{4})?$`します。 フォームを検証する`A#A #A#`、正規表現を使用する`[A-Z]\d[A-Z] \d[A-Z]\d`します。 正規表現の詳細については、次を参照してください。 [.NET Framework の正規表現](../../standard/base-types/regular-expressions.md)と[正規表現の例](../../standard/base-types/regular-expression-examples.md)します。  
   
 -   郵便番号は有効な米国郵便である必要があります、ユーザーが入力データを検証する郵便番号/zip code Web サービスを呼び出すことでした。  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54498909"
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox コントロール](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [正規表現の例](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox コントロール](./controls/maskedtextbox-control-windows-forms.md)
+- [正規表現の例](../../standard/base-types/regular-expression-examples.md)

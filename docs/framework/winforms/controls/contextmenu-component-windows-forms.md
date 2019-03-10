@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552815"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724528"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu コンポーネント (Windows フォーム)
 > [!NOTE]
@@ -24,18 +24,19 @@ ms.locfileid: "54552815"
  Windows フォーム`ContextMenu`コンポーネントを使用して、選択したオブジェクトに関連付けられているコマンドを頻繁に使用されるを簡単にアクセスできるショートカット メニューをユーザーに提供します。 ショートカット メニュー内の項目は、多くの場合、アプリケーションで別の場所に表示されるメインのメニューから項目のサブセットです。 ショートカット メニューは、マウスを右クリックして、通常は使用できます。 Windows フォームで他のコントロールと関連付けられています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ContextMenu コンポーネントの概要](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)  
  一般的な概念が導入されています、`ContextMenu`コンポーネントで、選択したオブジェクトに関連付けられた、頻繁に使用されるコマンドのメニューを作成することができます。  
   
- [方法: 追加し、Windows フォーム ContextMenu コンポーネントのメニュー項目の削除](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [方法: 追加し、Windows フォーム ContextMenu コンポーネントのメニュー項目の削除](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  追加し、Windows フォームのショートカット メニュー項目を削除する方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ContextMenu>  
- <xref:System.Windows.Forms.ContextMenu> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ 
+  <xref:System.Windows.Forms.ContextMenu> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
 ## <a name="see-also"></a>関連項目

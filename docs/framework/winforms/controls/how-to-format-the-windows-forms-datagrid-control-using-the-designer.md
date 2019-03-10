@@ -9,18 +9,18 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 1a35aa630bd939c72aeaf59b86ff0b7cff48141b
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305396"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725364"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGrid コントロールを書式設定します。
 
 > [!NOTE]
 >  
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  さまざまな部分に別の色を適用する、<xref:System.Windows.Forms.DataGrid>コントロールのことで情報を読みやすくするヘルプことができます。 色は、行と列に適用できます。 行と列も非表示にしたりユーザーの判断で示すようにします。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "56305396"
   
  データ グリッドの書式設定に最初のステップとしてのプロパティを設定することができます、<xref:System.Windows.Forms.DataGrid>自体。 これらの色と書式の選択を加えることができますし、データ テーブルと表示される列によって、ベースを形成します。  
   
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。 Visual Studio 2005 で、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 詳細については、「[方法 :項目をツールボックスに追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))します。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。 Visual Studio 2005 で、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 詳細については、「[方法 :項目をツールボックスに追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -75,13 +75,13 @@ ms.locfileid: "56305396"
     > [!NOTE]
     >  コントロールの色をカスタマイズする場合は、コントロールのため、不適切な色選択 (たとえば、赤と緑) にアクセスできないようにすることです。 使用できる色を使用して、**システム カラー**パレットに、この問題を回避します。
 
-     次の手順が必要です、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。
+     次の手順が必要です、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>デザイン時にデータ テーブルのテーブルと列のスタイルを設定するには
 
 1.  選択、<xref:System.Windows.Forms.DataGrid>フォーム上のコントロール。
 
-2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックします。
+2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックします。
 
 3.  **DataGridTableStyle コレクション エディター**ダイアログ ボックスで、をクリックして**追加**テーブル スタイルをコレクションに追加します。
 
@@ -91,19 +91,19 @@ ms.locfileid: "56305396"
 
      マッピングの名前は、どのテーブルで使用するテーブル スタイルを指定に使用されます。
 
-5.  **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティの省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).
+5.  **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティの省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")).
 
 6.  **DataGridColumnStyle コレクション エディター**  ダイアログ ボックスで、列のスタイルを作成したテーブルのスタイルを追加します。
 
      **DataGridColumnStyle コレクション エディター**列のデータの文字列の書式設定、および追加し、列のスタイルを削除、表示とレイアウトのプロパティを設定およびマッピングの名前を設定します。
 
     > [!NOTE]
-    >  文字列の書式設定に関する詳細については、次を参照してください。[型の書式設定](../../../../docs/standard/base-types/formatting-types.md)します。
+    >  文字列の書式設定に関する詳細については、次を参照してください。[型の書式設定](../../../standard/base-types/formatting-types.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [DataGrid コントロール](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid コントロール](datagrid-control-windows-forms.md)

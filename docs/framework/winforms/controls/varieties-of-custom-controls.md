@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 907355ca78b299b34b231b8b8d88353b0dde19c0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 140b9284d9361aa149b4f739908376d1cbe6902c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746605"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713022"
 ---
 # <a name="varieties-of-custom-controls"></a>さまざまなカスタム コントロール
 .NET Framework を使用して、新しいコントロールを開発し、実装できます。 継承によって、使い慣れたユーザー コントロールや既存のコントロールの機能を拡張できます。 また、独自の描画を実行するカスタム コントロールを作成することもできます。  
@@ -53,9 +53,9 @@ ms.locfileid: "56746605"
   
  複合コントロールは、含まれている各 Windows フォーム コントロールに関連する固有の機能をすべて保持し、それらのプロパティを選択的に公開してバインドできます。 また、開発者側での追加作業を必要としない多数の既定のキーボード処理機能も提供します。  
   
- たとえば、データベースの顧客の住所データを表示する複合コントロールを作成できます。 このコントロールを含めることができます、<xref:System.Windows.Forms.DataGridView>データベース フィールドを表示するコントロールを<xref:System.Windows.Forms.BindingSource>データ ソースへのバインドを処理するために、<xref:System.Windows.Forms.BindingNavigator>レコード間を移動するコントロール。 データ バインディング プロパティを選択的に公開したり、コントロール全体をパッケージ化してアプリケーション間で再利用したりできます。 この種の複合コントロールの例は、次を参照してください。[方法。Windows フォーム コントロールに属性を適用](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)します。  
+ たとえば、データベースの顧客の住所データを表示する複合コントロールを作成できます。 このコントロールを含めることができます、<xref:System.Windows.Forms.DataGridView>データベース フィールドを表示するコントロールを<xref:System.Windows.Forms.BindingSource>データ ソースへのバインドを処理するために、<xref:System.Windows.Forms.BindingNavigator>レコード間を移動するコントロール。 データ バインディング プロパティを選択的に公開したり、コントロール全体をパッケージ化してアプリケーション間で再利用したりできます。 この種の複合コントロールの例は、次を参照してください。[方法。Windows フォーム コントロールに属性を適用](how-to-apply-attributes-in-windows-forms-controls.md)します。  
   
- 派生する複合コントロールを作成する、<xref:System.Windows.Forms.UserControl>クラス。 <xref:System.Windows.Forms.UserControl>基底クラスが子コントロールを子コントロールをグループとして機能できるようにキーボード ルーティングを提供します。 詳細については、「[複合 Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)」を参照してください。  
+ 派生する複合コントロールを作成する、<xref:System.Windows.Forms.UserControl>クラス。 <xref:System.Windows.Forms.UserControl>基底クラスが子コントロールを子コントロールをグループとして機能できるようにキーボード ルーティングを提供します。 詳細については、「[複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)」を参照してください。  
   
  **推奨事項**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56746605"
   
  カスタム コントロールを実装するにはコードを記述する必要があります、<xref:System.Windows.Forms.Control.OnPaint%2A>必要がありますすべての機能に固有のコードと同様に、コントロールのイベント。 オーバーライドすることも、<xref:System.Windows.Forms.Control.WndProc%2A>直接メソッドとハンドルの windows メッセージ。 これはコントロールを作成する最も強力な方法ですが、この手法を効果的に使用するには、Microsoft Win32® API を十分に理解している必要があります。  
   
- カスタム コントロールの例として、アナログ時計の外観と動作を複製した時計コントロールがあります。 応答を移動する時計の針がカスタム描画が呼び出される<xref:System.Windows.Forms.Timer.Tick>内部からのイベント<xref:System.Windows.Forms.Timer>コンポーネント。 詳細については、「[方法 :単純な Windows フォーム コントロールを開発](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)します。  
+ カスタム コントロールの例として、アナログ時計の外観と動作を複製した時計コントロールがあります。 応答を移動する時計の針がカスタム描画が呼び出される<xref:System.Windows.Forms.Timer.Tick>内部からのイベント<xref:System.Windows.Forms.Timer>コンポーネント。 詳細については、「[方法 :単純な Windows フォーム コントロールを開発](how-to-develop-a-simple-windows-forms-control.md)します。  
   
  **推奨事項**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56746605"
 -   標準コントロールでは使用できないカスタムの機能を実装する必要があります。  
   
 ### <a name="activex-controls"></a>ActiveX コントロール  
- Windows フォーム インストラクチャは、Windows フォーム コントロールをホストするために最適化されていますが、ActiveX コントロールを使用することもできます。 Visual Studio では、このタスクに対するサポートが用意されています。 詳細については、「[方法 :Windows フォームに ActiveX コントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)します。  
+ Windows フォーム インストラクチャは、Windows フォーム コントロールをホストするために最適化されていますが、ActiveX コントロールを使用することもできます。 Visual Studio では、このタスクに対するサポートが用意されています。 詳細については、「[方法 :Windows フォームに ActiveX コントロールを追加](how-to-add-activex-controls-to-windows-forms.md)します。  
   
 ### <a name="windowless-controls"></a>ウィンドウなしのコントロール  
  Microsoft Visual Basic® 6.0 と ActiveX テクノロジは、"*ウィンドウなし*" のコントロールをサポートします。 ウィンドウなしのコントロールは、Windows フォームではサポートされていません。  
@@ -107,8 +107,8 @@ ms.locfileid: "56746605"
  使用して、<xref:System.ComponentModel.DesignerAttribute>にコントロールをデザイナーに関連付けます。 詳細については、次を参照してください。[デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))と[方法。デザイン時機能を活用した Windows フォーム コントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))です。  
   
 ## <a name="see-also"></a>関連項目
-- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [方法: 単純な Windows フォーム コントロールを開発します。](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
-- [複合 Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-a-composite-windows-forms-control.md)
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
+- [方法: 単純な Windows フォーム コントロールを開発します。](how-to-develop-a-simple-windows-forms-control.md)
+- [複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)
 - [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [方法: デザイン時機能を活用した Windows フォーム コントロールを作成します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

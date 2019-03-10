@@ -9,32 +9,33 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: dd7dca483b05e52ea3932bc59e3c5b98de1a0667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f3eee6f4690e9bd9141f2eeb6de330bac87550
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659437"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715374"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用
 `DataGridView`コントロールでは、さまざまなユーザーがセル、行、および列を選択する方法を構成するためのオプションが用意されています。 たとえば、有効にできます 1 つまたは複数選択、行全体またはユーザーがセルをクリックすると、列の選択または選択範囲全体の行または列のユーザー ヘッダーをクリックする場合にのみがセルの選択もできます。 選択範囲の独自のユーザー インターフェイスを提供する場合は、通常の選択を無効にし、すべての選択をプログラムで処理できます。 さらに、選択された値をクリップボードにコピーするユーザーを有効にすることができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォーム DataGridView コントロールの選択モード](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)  
+ [Windows フォーム DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)  
  ユーザーと、コントロールのプログラムの選択項目のオプションについて説明します。  
   
- [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  ユーザーがセルをクリックすると、単一行の選択のコントロールを構成する方法について説明します。  
   
- [方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
+ [方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。](selected-cells-rows-and-columns-datagridview.md)  
  選択したセル、行、および列のコレクションを操作する方法について説明します。  
   
- [方法: Windows フォームの DataGridView コントロールから複数のセルをクリップボードにコピーするユーザーを有効にします。](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [方法: Windows フォームの DataGridView コントロールから複数のセルをクリップボードにコピーするユーザーを有効にします。](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  コントロールでのクリップボードのサポートを有効にする方法について説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
+ 
+  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>  
  リファレンス ドキュメントを提供、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>プロパティ。  
@@ -52,5 +53,5 @@ ms.locfileid: "54659437"
  リファレンス ドキュメントを提供、<xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>クラス。  
   
 ## <a name="see-also"></a>関連項目
-- [DataGridView コントロール](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Windows フォーム DataGridView コントロールの既定のキーボード処理とマウス処理](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [DataGridView コントロール](datagridview-control-windows-forms.md)
+- [Windows フォーム DataGridView コントロールの既定のキーボード処理とマウス処理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

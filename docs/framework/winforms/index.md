@@ -11,20 +11,20 @@ ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
 フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio を使用する、豊富なコントロール セットで書き込まれたと同様に、統合開発環境 (IDE)、コードの記述を支援するために、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォームについて](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [Windows フォームについて](getting-started-with-windows-forms.md)  
  データの表示、ユーザー入力の処理、アプリケーションの簡単で堅牢なセキュリティを使用した配置のために、Windows フォームの機能を利用する方法に関するトピックへのリンクを提供します。  
   
- [Windows フォーム アプリケーションの拡張](../../../docs/framework/winforms/advanced/index.md)  
+ [Windows フォーム アプリケーションの拡張](./advanced/index.md)  
  Windows フォームでのさまざまな機能を拡張する方法に関するトピックへのリンクを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォーム コントロール](../../../docs/framework/winforms/controls/index.md)  
+ [Windows フォーム コントロール](./controls/index.md)  
  Windows フォーム コントロールの説明および、その実装方法について説明するトピックへのリンクが含まれます。  
   
- [Windows フォームでのデータ バインディング](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)  
  Windows フォームのデータ バインディング アーキテクチャについて説明するトピックへのリンクが含まれます。  
   
- [グラフィックスの概要](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [グラフィックスの概要](./advanced/graphics-overview-windows-forms.md)  
  Windows のグラフィック デザイン インターフェイスの高度な実装を使用して、オブジェクトとして、グラフィックスを作成、テキストを描画、および、画像を操作する方法について説明します。  
   
  [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)  
@@ -42,6 +42,6 @@ ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
  [最初に、Visual Studio でのデプロイについてください。](/visualstudio/deployment/deploying-applications-services-and-components)  
  完成したアプリケーションやコンポーネントを他のコンピューターにインストールできるように配布するためのプロセスについて説明します。  
   
- [コンソール アプリケーションの構築](../../../docs/standard/building-console-apps.md)  
+ [コンソール アプリケーションの構築](../../standard/building-console-apps.md)  
  
   <xref:System.Console> クラスを使用したコンソール アプリケーションの作成の基本について説明します。

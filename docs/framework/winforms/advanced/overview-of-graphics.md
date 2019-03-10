@@ -5,12 +5,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: c569eb249a583ca9f71381210eeb11a8d10b04e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8e1ab286d4e5723f5ca6bca0b6eeff53ac1d43
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590202"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711344"
 ---
 # <a name="overview-of-graphics"></a>グラフィックスについて
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Microsoft Windows オペレーティング システムのサブシステムを形成するアプリケーション プログラミング インターフェイス (API) です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 情報を表示する画面およびプリンターを担当します。 その名前からわかるように、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] の後継であり、以前のバージョンの Windows に含まれているグラフィックス デバイス インターフェイスです。  
@@ -31,4 +31,4 @@ ms.locfileid: "54590202"
  グラフィックス デバイス インターフェイスを備えたなど[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、画面またはプリンターの情報を表示するには、特定のディスプレイ デバイスの詳細について心配する必要はありません。 プログラマは [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] クラスによって提供されるさまざまなメソッドを呼び出します。 次に、これらのメソッドで、特定のデバイス ドライバーへの適切な呼び出しを実行します。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、グラフィックス ハードウェアからアプリケーションを分離します。 この分離により、プログラマはデバイスに依存しないアプリケーションを作成することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
-- [グラフィックスの概要](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
+- [グラフィックスの概要](graphics-overview-windows-forms.md)

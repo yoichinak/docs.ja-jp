@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671110"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722439"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法: 保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール
 <xref:System.Windows.Forms.BindingNavigator>コントロールが特別な用途<xref:System.Windows.Forms.ToolStrip>移動し、フォーム上のデータにバインドされているコントロールを操作することが想定されているコントロール。  
@@ -32,9 +32,10 @@ ms.locfileid: "54671110"
   
 4.  設定、<xref:System.Windows.Forms.BindingNavigator>コントロールの<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>プロパティを<xref:System.Windows.Forms.BindingSource>コントロールにバインドされている形式にします。  
   
-5.  <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。  
+5.  
+  <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。  
   
-6.  スマート タグ グリフをクリックします (![スマート タグ グリフ](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
+6.  スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
   
      **Items コレクション エディター**が表示されます。  
   
@@ -113,5 +114,5 @@ ms.locfileid: "54671110"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator コントロール](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [BindingSource コンポーネントの概要](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)
+- [BindingSource コンポーネントの概要](bindingsource-component-overview.md)

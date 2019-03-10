@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: abd25c21cf98bb0ec426ef772f8cd26baa4e8e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467143"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722907"
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>方法: 実行中のワークフロー インスタンスの定義を更新します。
 
-動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このチュートリアルでは、この手順は、の永続化されたインスタンスを変更する動的更新を使用する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このチュートリアルでは、この手順は、の永続化されたインスタンスを変更する動的更新を使用する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
 > [!NOTE]
 > 完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。
 
 ## <a name="in-this-topic"></a>このトピックの内容
 
-- [CreateUpdateMaps プロジェクトを作成するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+- [CreateUpdateMaps プロジェクトを作成するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
 
-- [StateMachineNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+- [StateMachineNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
 
-- [FlowchartNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+- [FlowchartNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
 
-- [SequentialNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+- [SequentialNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
 
-- [ビルドおよび CreateUpdateMaps アプリケーションを実行するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+- [ビルドおよび CreateUpdateMaps アプリケーションを実行するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
 
-- [更新されたワークフロー アセンブリをビルドするには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+- [更新されたワークフロー アセンブリをビルドするには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
 
-- [新しいバージョンで WorkflowVersionMap を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+- [新しいバージョンで WorkflowVersionMap を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
 
-- [動的更新を適用するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+- [動的更新を適用するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
 
-- [更新されたワークフローでアプリケーションを実行するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+- [更新されたワークフローでアプリケーションを実行するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
 
-- [以前のバージョンのワークフローを開始できるようにするには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+- [以前のバージョンのワークフローを開始できるようにするには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
 
 ### <a name="BKMK_CreateProject"></a> CreateUpdateMaps プロジェクトを作成するには
 
@@ -259,7 +259,7 @@ ms.locfileid: "57467143"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3. 2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+3. 2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -657,13 +657,13 @@ ms.locfileid: "57467143"
 
 2. 選択**オープン**、**プロジェクト/ソリューション**から、**ファイル**メニュー。
 
-3. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリック**オープン**します。
+3. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリック**オープン**します。
 
 4. **ソリューション エクスプ ローラー**を右クリックして**SequentialNumberGuessWorkflow.xaml**選択**プロジェクトから除外**します。 同じ操作を行う**FlowchartNumberGuessWorkflow.xaml**と**StateMachineNumberGuessWorkflow.xaml**します。 この手順により、以前のバージョンのワークフロー定義がプロジェクトから削除されます。
 
 5. 選択**既存項目の追加**から、**プロジェクト**メニュー。
 
-6. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+6. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
 7. 選択**XAML ファイル (\*.xaml;\*します。xoml)** から、**ファイルの種類**ドロップダウン リスト。
 
@@ -680,7 +680,7 @@ ms.locfileid: "57467143"
 
 11. Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowactivities_du \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。
 
-12. 名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+12. 名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
 ### <a name="BKMK_UpdateWorkflowVersionMap"></a> 新しいバージョンで WorkflowVersionMap を更新するには
 
@@ -1453,7 +1453,7 @@ ms.locfileid: "57467143"
 
 3. クリックして**新しいゲーム**を新しいワークフローを開始し、ワークフローを示すステータス ウィンドウが次のバージョン情報に注意してください、`v2`ワークフロー。
 
-4. いずれかの選択、`v1`の先頭で開始されたワークフロー、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。 ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。 前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。
+4. いずれかの選択、`v1`の先頭で開始されたワークフロー、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。 ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。 前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。
 
     **1 から 10 までの数値を入力してください。**\
     **推定値が小さすぎます。**

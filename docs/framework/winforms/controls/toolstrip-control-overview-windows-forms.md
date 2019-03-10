@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558749"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719379"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールとその関連クラスは、ツールバー、ステータス バー、およびメニューにユーザー インターフェイス要素を結合するため、共通のフレームワークを提供します。 <xref:System.Windows.Forms.ToolStrip> コントロールでは、水平または垂直スペースを共有するツールバーの機能は、インプレース アクティブ化と編集、カスタム レイアウト、およびラフティング、豊富なデザイン時エクスペリエンスを提供します。  
@@ -49,11 +49,12 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 |名前|説明|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|取得または設定の親コンテナーの端を<xref:System.Windows.Forms.ToolStrip>にドッキングされます。|  
-|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> クラスがドラッグ アンド ドロップおよび項目の並べ替えをプライベートで処理するかどうかを示す値を取得または設定します。|  
+|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|
+  <xref:System.Windows.Forms.ToolStrip> クラスがドラッグ アンド ドロップおよび項目の並べ替えをプライベートで処理するかどうかを示す値を取得または設定します。|  
 |<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|取得または設定を示す値が、どのように<xref:System.Windows.Forms.ToolStrip>その項目のレイアウトします。|  
 |<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|取得または設定するかどうかを<xref:System.Windows.Forms.ToolStripItem>にアタッチされて、<xref:System.Windows.Forms.ToolStrip>または<xref:System.Windows.Forms.ToolStripOverflowButton>2 つの間で変動するか。|  
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|示す値を取得するかどうか、<xref:System.Windows.Forms.ToolStripItem>ドロップダウンからその他の項目を表示するときに、<xref:System.Windows.Forms.ToolStripItem>がクリックされました。|  
-|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|オーバーフローが有効な <xref:System.Windows.Forms.ToolStrip> のオーバーフロー ボタンである <xref:System.Windows.Forms.ToolStripItem> を取得します。|  
+|<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|オーバーフローが有効な <xref:System.Windows.Forms.ToolStripItem> のオーバーフロー ボタンである <xref:System.Windows.Forms.ToolStrip> を取得します。|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|取得または設定します、<xref:System.Windows.Forms.ToolStripRenderer>の動作 (ルック アンド フィール) と外観をカスタマイズするために使用する<xref:System.Windows.Forms.ToolStrip>します。|  
 |<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|取得または設定に適用される描画スタイル、<xref:System.Windows.Forms.ToolStrip>します。|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|<xref:System.Windows.Forms.ToolStrip.Renderer%2A> プロパティが変更されたときに発生します。|  
@@ -77,7 +78,7 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 |<xref:System.Windows.Forms.ToolStripControlHost>|具体的にはないその他のコントロールをホスト<xref:System.Windows.Forms.ToolStrip>コントロールを決定するが、<xref:System.Windows.Forms.ToolStrip>機能します。|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|指定するかどうかを<xref:System.Windows.Forms.ToolStripItem>、メイン レイアウトするのには、 <xref:System.Windows.Forms.ToolStrip>、オーバーフローに<xref:System.Windows.Forms.ToolStrip>、またはどちらもします。|  
   
- 詳細については、次を参照してください。 [ToolStrip テクノロジの概要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)します。  
+ 詳細については、次を参照してください。 [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ToolStrip>

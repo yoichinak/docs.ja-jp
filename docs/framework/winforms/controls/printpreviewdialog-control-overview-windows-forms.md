@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667558"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711279"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog コントロールの概要 (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロールは、構成済みのダイアログ ボックスを表示するために使用する方法、 [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)印刷されたときに表示されます。 ダイアログ ボックスを構成する代わりに単純なソリューションとして、Windows ベースのアプリケーションの中で使用します。 このコントロールには、印刷を開始するボタン、ズーム イン用のボタン、1 ページまたは複数ページを表示するボタン、およびダイアログ ボックスを閉じるためのボタンが含まれています。  
+Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロールは、構成済みのダイアログ ボックスを表示するために使用する方法、 [PrintDocument](printdocument-component-windows-forms.md)印刷されたときに表示されます。 ダイアログ ボックスを構成する代わりに単純なソリューションとして、Windows ベースのアプリケーションの中で使用します。 このコントロールには、印刷を開始するボタン、ズーム イン用のボタン、1 ページまたは複数ページを表示するボタン、およびダイアログ ボックスを閉じるためのボタンが含まれています。  
   
 ## <a name="key-properties-and-methods"></a>キー プロパティとメソッド  
  コントロールのキー プロパティは、<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>をプレビューするドキュメントを設定します。 ドキュメントがある必要があります、<xref:System.Drawing.Printing.PrintDocument>オブジェクト。 ダイアログ ボックスを表示するために呼び出す必要があるその<xref:System.Windows.Forms.Form.ShowDialog%2A>メソッド。 アンチエイリアシングが滑らかにテキストを行うことができますが、低速です。 表示することもできますが、これを使用する設定、<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>プロパティを`true`します。  
@@ -53,6 +53,6 @@ Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロ�
 
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl コントロールの概要](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog コントロール](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [ダイアログ ボックス コントロールおよびコンポーネント](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)
+- [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)

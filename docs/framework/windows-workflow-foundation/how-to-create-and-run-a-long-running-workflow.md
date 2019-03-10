@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 4ca19b8f9c0fad17c012bffbdd95917a4d4e47bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cbb00797944f63ab695c7af87ac02b49e0ad15fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356865"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721165"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>方法: 作成して実行する時間の長いワークフローの実行
-Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは、永続化およびデータベースへのアイドル状態のワークフローをアンロードするランタイムの機能です。 手順では、[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)コンソール アプリケーションを使用したワークフロー ホスティングの基本を説明します。 ワークフローの開始、ワークフロー ライフサイクル ハンドラー、およびブックマークの再開の例を紹介しました。 ワークフローの永続化を効果的に説明するためには、複数のワークフロー インスタンスの開始と再開をサポートするより複雑なワークフロー ホストが必要です。 チュートリアルのこの手順では、複数のワークフロー インスタンスの開始と再開およびワークフローの永続化をサポートする Windows フォーム ホスト アプリケーションを作成する方法について説明します。また、この手順は、以降の手順で説明する追跡やバージョン管理などの高度な機能の基礎となります。  
+Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは、永続化およびデータベースへのアイドル状態のワークフローをアンロードするランタイムの機能です。 手順では、[方法。ワークフローを実行する](how-to-run-a-workflow.md)コンソール アプリケーションを使用したワークフロー ホスティングの基本を説明します。 ワークフローの開始、ワークフロー ライフサイクル ハンドラー、およびブックマークの再開の例を紹介しました。 ワークフローの永続化を効果的に説明するためには、複数のワークフロー インスタンスの開始と再開をサポートするより複雑なワークフロー ホストが必要です。 チュートリアルのこの手順では、複数のワークフロー インスタンスの開始と再開およびワークフローの永続化をサポートする Windows フォーム ホスト アプリケーションを作成する方法について説明します。また、この手順は、以降の手順で説明する追跡やバージョン管理などの高度な機能の基礎となります。  
   
 > [!NOTE]
->  このチュートリアルの手順と後続のステップから次の 3 つすべてのワークフロー型を使用して、[方法。ワークフロー作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)です。 3 種類すべてを完了していない場合から、手順の完成版をダウンロードできます[Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
+>  このチュートリアルの手順と後続のステップから次の 3 つすべてのワークフロー型を使用して、[方法。ワークフロー作成](how-to-create-a-workflow.md)です。 3 種類すべてを完了していない場合から、手順の完成版をダウンロードできます[Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
   
 > [!NOTE]
 >  完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
--   [永続性データベースを作成するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [永続性データベースを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [DurableInstancing アセンブリへの参照を追加するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [DurableInstancing アセンブリへの参照を追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [ワークフロー ホスト フォームを作成するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [ワークフロー ホスト フォームを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [フォームのヘルパー メソッドとプロパティを追加するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [フォームのヘルパー メソッドとプロパティを追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [インスタンス ストア、ワークフロー ライフ サイクル ハンドラー、および拡張機能を構成するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [インスタンス ストア、ワークフロー ライフ サイクル ハンドラー、および拡張機能を構成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [開始と再開の複数のワークフローの種類を有効にするには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [開始と再開の複数のワークフローの種類を有効にするには](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [新しいワークフローを開始するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [新しいワークフローを開始するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [ワークフローを再開するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [ワークフローを再開するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [ワークフローを終了するには](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [ワークフローを終了するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [ビルドして、アプリケーションの実行](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [ビルドして、アプリケーションの実行](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 永続性データベースを作成するには  
   
@@ -76,7 +76,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
 ### <a name="BKMK_CreateForm"></a> ワークフロー ホスト フォームを作成するには  
   
 > [!NOTE]
->  この手順では、フォームを手動で追加して構成する方法について説明します。 必要に応じて、チュートリアルのソリューション ファイルをダウンロードし、完成したフォームをプロジェクトに追加できます。 チュートリアル ファイルをダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。 右クリックし、ファイルがダウンロードされると、 **NumberGuessWorkflowHost**選択**参照の追加**します。 参照を追加**System.Windows.Forms**と**System.Drawing**します。 新しいフォームを追加する場合、これらの参照が自動的に追加されます、**追加**、**新しい項目の** メニューがフォームをインポートするときに手動で追加する必要があります。 右クリックし、参照が追加されると、 **NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**既存項目の**します。 参照、`Form`選択、プロジェクト ファイル内のフォルダー **WorkflowHostForm.cs** (または**WorkflowHostForm.vb**)、をクリック**追加**します。 フォームをインポートするかどうかは、次のセクションまでスキップできます[フォームのヘルパー メソッドとプロパティを追加する](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)します。  
+>  この手順では、フォームを手動で追加して構成する方法について説明します。 必要に応じて、チュートリアルのソリューション ファイルをダウンロードし、完成したフォームをプロジェクトに追加できます。 チュートリアル ファイルをダウンロードするを参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。 右クリックし、ファイルがダウンロードされると、 **NumberGuessWorkflowHost**選択**参照の追加**します。 参照を追加**System.Windows.Forms**と**System.Drawing**します。 新しいフォームを追加する場合、これらの参照が自動的に追加されます、**追加**、**新しい項目の** メニューがフォームをインポートするときに手動で追加する必要があります。 右クリックし、参照が追加されると、 **NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**既存項目の**します。 参照、`Form`選択、プロジェクト ファイル内のフォルダー **WorkflowHostForm.cs** (または**WorkflowHostForm.vb**)、をクリック**追加**します。 フォームをインポートするかどうかは、次のセクションまでスキップできます[フォームのヘルパー メソッドとプロパティを追加する](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)します。  
   
 1.  右クリック**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の**します。  
   
@@ -119,7 +119,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
  次の例は完成したフォームを示しています。  
   
- ![WF45 チュートリアル ワークフロー ホスト フォームを概要](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![WF45 チュートリアル ワークフロー ホスト フォームを概要](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
 ### <a name="BKMK_AddHelperMethods"></a> フォームのヘルパー メソッドとプロパティを追加するには  
  このセクションの手順では、フォーム クラスに、数値推測ワークフローの実行と再開をサポートするようフォームの UI を構成するプロパティとヘルパー メソッドを追加します。  
@@ -696,7 +696,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 開始と再開の複数のワークフローの種類を有効にするには  
- ワークフロー インスタンスを再開するには、ホストはワークフロー定義を指定する必要があります。 このチュートリアルには 3 種類のワークフローがあり、以降の手順では、これらの種類の複数のバージョンを指定します。 `WorkflowIdentity` を使用すると、ホスト アプリケーションは、識別情報を永続化されたワークフロー インスタンスに関連付けることができます。 このセクションの手順では、永続化されたワークフロー インスタンスから対応するワークフロー定義へのワークフロー ID のマッピングに役立つユーティリティ クラスの作成方法を示します。 詳細については`WorkflowIdentity`とバージョン管理を参照してください[を使用して WorkflowIdentity と Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)します。  
+ ワークフロー インスタンスを再開するには、ホストはワークフロー定義を指定する必要があります。 このチュートリアルには 3 種類のワークフローがあり、以降の手順では、これらの種類の複数のバージョンを指定します。 `WorkflowIdentity` を使用すると、ホスト アプリケーションは、識別情報を永続化されたワークフロー インスタンスに関連付けることができます。 このセクションの手順では、永続化されたワークフロー インスタンスから対応するワークフロー定義へのワークフロー ID のマッピングに役立つユーティリティ クラスの作成方法を示します。 詳細については`WorkflowIdentity`とバージョン管理を参照してください[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)します。  
   
 1.  右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**します。 型`WorkflowVersionMap`に、**名前**ボックスし、をクリックして**追加**します。  
   
@@ -1316,7 +1316,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     using System.Windows.Forms;  
     ```  
   
-3.  削除するか、既存のワークフロー ホスティング コードをコメント[方法。ワークフローを実行する](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)、し、次のコードに置き換えます。  
+3.  削除するか、既存のワークフロー ホスティング コードをコメント[方法。ワークフローを実行する](how-to-run-a-workflow.md)、し、次のコードに置き換えます。  
   
     ```vb  
     Sub Main()  
@@ -1344,4 +1344,4 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 8.  ワークフローの種類と数値の範囲を使用して複数のワークフローを開始、いくつかの推定値を入力およびからを選択して、ワークフロー間の切り替え、**ワークフロー インスタンス Id**一覧。  
   
-     新しいワークフローに切り替えると、前の推定値とワークフローの進行状況はステータス ウィンドウに表示されません。 ステータスが利用できない理由は、ステータスがキャプチャされず、どこにも保存されないためです。 チュートリアルの次の手順で[方法。カスタム追跡参加要素を作成](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)、この情報を保存するカスタム追跡参加要素を作成します。
+     新しいワークフローに切り替えると、前の推定値とワークフローの進行状況はステータス ウィンドウに表示されません。 ステータスが利用できない理由は、ステータスがキャプチャされず、どこにも保存されないためです。 チュートリアルの次の手順で[方法。カスタム追跡参加要素を作成](how-to-create-a-custom-tracking-participant.md)、この情報を保存するカスタム追跡参加要素を作成します。

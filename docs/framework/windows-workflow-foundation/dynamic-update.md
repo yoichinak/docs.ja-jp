@@ -2,12 +2,12 @@
 title: 動的な更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496743"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724476"
 ---
 # <a name="dynamic-update"></a>動的な更新
 
@@ -17,13 +17,13 @@ ms.locfileid: "57496743"
 
 永続化されたワークフロー インスタンスに動的更新を適用するには、必要な変更を反映するよう永続化されたワークフロー インスタンスを変更する方法を説明した指示をランタイム用に含む <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> を作成します。 更新マップが作成されると、対象の永続化されたワークフロー インスタンスに適用されます。 動的更新が適用されると、更新された新しいワークフロー定義を使用して、ワークフロー インスタンスが再開される場合があります。 更新マップを作成して適用する際に必要な手順は 4 つあります。
 
-1. [動的更新用のワークフロー定義を準備します。](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [動的更新用のワークフロー定義を準備します。](dynamic-update.md#Prepare)
 
-2. [必要な変更を反映するようにワークフロー定義を更新します。](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [必要な変更を反映するようにワークフロー定義を更新します。](dynamic-update.md#Update)
 
-3. [更新マップを作成します。](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [更新マップを作成します。](dynamic-update.md#Create)
 
-4. [目的の永続化されたワークフロー インスタンスに更新マップを適用します。](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [目的の永続化されたワークフロー インスタンスに更新マップを適用します。](dynamic-update.md#Apply)
 
 > [!NOTE]
 > 更新マップの作成に対応する手順 1. ～ 3. は、更新の適用とは関係なく実行できます。 マップをオフラインで、ワークフロー開発者が、更新プログラムを作成する一般的なシナリオと、管理者が後で更新プログラムを適用します。
@@ -37,7 +37,7 @@ ms.locfileid: "57496743"
 動的更新用に XAML ワークフローを準備するために、XAML ワークフローが <xref:System.Activities.ActivityBuilder> に読み込まれた後、<xref:System.Activities.ActivityBuilder> が <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> に渡される場合があります。
 
 > [!NOTE]
-> シリアル化されたワークフローの操作の詳細については、<xref:System.Activities.ActivityBuilder>を参照してください[ワークフローのシリアル化と XAML との間のアクティビティ](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)します。
+> シリアル化されたワークフローの操作の詳細については、<xref:System.Activities.ActivityBuilder>を参照してください[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)します。
 
 次の例では、(複数の子アクティビティを持つ `MortgageWorkflow` で構成される) <xref:System.Activities.Statements.Sequence> の定義が <xref:System.Activities.ActivityBuilder> に読み込まれ、動的更新用に準備されます。 メソッドから制御が戻ると、<xref:System.Activities.ActivityBuilder> には元のワークフロー定義とコピーが格納されます。
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 動的更新が適用されると、ワークフロー インスタンスが再開される場合があります。 更新された新しい定義と <xref:System.Activities.WorkflowIdentity> を使用する必要があります。
 
 > [!NOTE]
-> 操作の詳細については<xref:System.Activities.WorkflowApplication>と<xref:System.Activities.WorkflowIdentity>を参照してください[を使用して WorkflowIdentity と Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)します。
+> 操作の詳細については<xref:System.Activities.WorkflowApplication>と<xref:System.Activities.WorkflowIdentity>を参照してください[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)します。
 
 次の例では、前の例の `MortgageWorkflow_v1.1.xaml` ワークフローがコンパイルされ、更新されたワークフロー定義を使用して読み込まれ、再開されます。
 

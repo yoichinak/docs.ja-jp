@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 3793c33d378ee242656889434c7b29c415e9ec9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496206"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714685"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールのフォント属性を設定します。
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。 行うことができます、選択した文字太字、下線、または斜体などを使用して、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティ。 また、このプロパティを使用して、選択した文字のサイズと書体を変更することもできます。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティでは、選択した文字の色を変更することができます。  
@@ -28,11 +28,11 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 1.  設定、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティを適切なフォント。  
   
-     ユーザーをアプリケーションでフォント ファミリ、サイズ、および書体を設定できるように、通常使用する、<xref:System.Windows.Forms.FontDialog>コンポーネント。 概要については、「[FontDialog Component Overview](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)」 (FontDialog コンポーネントの概要) を参照してください。  
+     ユーザーをアプリケーションでフォント ファミリ、サイズ、および書体を設定できるように、通常使用する、<xref:System.Windows.Forms.FontDialog>コンポーネント。 概要については、「[FontDialog Component Overview](fontdialog-component-overview-windows-forms.md)」 (FontDialog コンポーネントの概要) を参照してください。  
   
 2.  設定、<xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティを適切な色にします。  
   
-     アプリケーションで色を設定するユーザーを有効にするには通常使用、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 概要については、「[ColorDialog Component Overview](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)」 (ColorDialog コンポーネントの概要) を参照してください。  
+     アプリケーションで色を設定するユーザーを有効にするには通常使用、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 概要については、「[ColorDialog Component Overview](colordialog-component-overview-windows-forms.md)」 (ColorDialog コンポーネントの概要) を参照してください。  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -55,5 +55,5 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

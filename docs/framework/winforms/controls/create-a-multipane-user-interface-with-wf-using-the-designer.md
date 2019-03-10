@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664227"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713775"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成します。
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
   
- コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)します。  
+ コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](how-to-dock-controls-on-windows-forms.md)します。  
   
  配置でこの手順に重点を置いています、<xref:System.Windows.Forms.SplitContainer>とその他のコントロール、フォームではなく、アプリケーションを Microsoft Outlook を模倣する機能を追加します。  
   
@@ -44,8 +44,8 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
     > [!NOTE]
     >  内でスプリッターのいずれかにマウス ポインターを配置すると、<xref:System.Windows.Forms.SplitContainer>コントロール内部のディメンションのサイズを変更することができます。  
   
-     この時点でアプリケーションの開発では、高度なユーザー インターフェイスを作成します。 接続することで、次の手順は、アプリケーション自体のプログラミングを進める、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>いくつかの種類のデータ ソースへのコントロール。 コントロールをデータに接続する方法の詳細については、次を参照してください。[データ連結と Windows フォーム](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)します。  
+     この時点でアプリケーションの開発では、高度なユーザー インターフェイスを作成します。 接続することで、次の手順は、アプリケーション自体のプログラミングを進める、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>いくつかの種類のデータ ソースへのコントロール。 コントロールをデータに接続する方法の詳細については、次を参照してください。[データ連結と Windows フォーム](../data-binding-and-windows-forms.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

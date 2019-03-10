@@ -12,12 +12,12 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: cf9a7c51c0054c34dbce40f3a2dfa68c62f3a4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724506"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>方法: Windows フォーム CheckBox のクリックに応答します。
 ユーザーが Windows フォームをクリックするたびに<xref:System.Windows.Forms.CheckBox>コントロール、<xref:System.Windows.Forms.Control.Click>イベントが発生します。 チェック ボックスの状態に応じていくつかの操作を実行するアプリケーションをプログラミングできます。  
@@ -137,6 +137,6 @@ ms.locfileid: "54726326"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox コントロールの概要](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [方法: Windows フォームの CheckBox コントロールでオプションを設定します。](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [CheckBox コントロール](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
+- [方法: Windows フォームの CheckBox コントロールでオプションを設定します。](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [CheckBox コントロール](checkbox-control-windows-forms.md)

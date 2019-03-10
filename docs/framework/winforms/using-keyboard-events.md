@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665252"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719339"
 ---
 # <a name="using-keyboard-events"></a>キーボード イベントの使用
 多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
@@ -28,7 +28,7 @@ ms.locfileid: "56665252"
   
 -   <xref:System.Windows.Forms.Control.KeyUp> イベント。ユーザーがキーを離したときに 1 回発生します。  
   
- ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字と物理キーの詳細については、次を参照してください。[キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)します。  
+ ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字と物理キーの詳細については、次を参照してください。[キーボード入力のしくみ](how-keyboard-input-works.md)します。  
   
  上の 3 つのキーボード イベントに関する説明を次の表に示します。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "56665252"
   <xref:System.Globalization.SortKey.KeyData%2A> プロパティ (キー コードと修飾子を組み合わせます)。</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>関連項目
-- [Windows フォーム アプリケーションにおけるキーボード入力](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [キーボード入力のしくみ](../../../docs/framework/winforms/how-keyboard-input-works.md)
-- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Windows フォーム アプリケーションにおけるキーボード入力](keyboard-input-in-a-windows-forms-application.md)
+- [キーボード入力のしくみ](how-keyboard-input-works.md)
+- [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)
