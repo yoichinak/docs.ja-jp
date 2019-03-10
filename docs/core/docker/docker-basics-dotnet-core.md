@@ -4,12 +4,12 @@ description: このチュートリアルでは、基本的な .NET Core アプ�
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169587"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372920"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>.NET Core アプリケーションをコンテナー化する方法
 
@@ -159,7 +159,7 @@ WORKDIR /app
 COPY *.csproj ./
 ```
 
-[**RUN**](https://docs.docker.com/engine/reference/builder/#run) 命令は現在のイメージに加えて新しい層でコマンドを実行し、結果をコミットします。 結果のコミットされたイメージは、Dockerfile の次の手順に使用されます。 **dotnet restore** を実行し、C# プロジェクト ファイルの必要な依存関係を取得します。 
+[**RUN**](https://docs.docker.com/engine/reference/builder/#run) 命令は現在のイメージに加えて新しい層でコマンドを実行し、結果をコミットします。 結果のコミットされたイメージは、Dockerfile の次の手順に使用されます。 **dotnet restore** を実行し、C# プロジェクト ファイルの必要な依存関係を取得します。
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Hello World!
 * [Docker for Azure クイックスタート](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Docker for Azure でアプリをデプロイする](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Azure サブスクリプションをお持ちでない場合は、[今すぐサインアップ](https://azure.microsoft.com/free/?b=16.48)して 30 日間の無料アカウントと 200 ドル分の Azure クレジットを取得し、お好きな Azure サービスの組み合わせを試しましょう。
 
 ## <a name="docker-images-used-in-this-sample"></a>このサンプルで使用されている Docker イメージ

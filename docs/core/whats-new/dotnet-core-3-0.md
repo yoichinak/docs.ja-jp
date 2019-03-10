@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443076"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679737"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) の新機能
 
@@ -24,16 +24,16 @@ ms.locfileid: "56443076"
 
 各バージョンでリリースされた内容の詳細については、次の発表を参照してください。
 
-- [.NET Core 3.0 Preview 1 の発表](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [.NET Core 3.0 Preview 2 の発表](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 Preview 1 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8
 
 .NET Core 3.0 では C# 8 をサポートしており、.NET Core 3.0 Preview 2 からは、次の新機能がサポートされます。 C# 8.0 機能の詳細については、次のブログ記事を参照してください。
 
-- [C# 8.0 でのパターンの有効活用](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
-- [C# 8.0 を使ってみる](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
-- [C# 8.0 のビルド](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+- [C# 8.0 でのパターンの有効活用](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [C# 8.0 を使ってみる](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [C# 8.0 のビルド](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 
 ### <a name="ranges-and-indices"></a>範囲とインデックス
@@ -108,7 +108,7 @@ static string Display(object o) => o switch
 
 *switch 式*よりも *switch ステートメント*の方が適しているケースは今後もあり、パターンはどちらの構文スタイルでも使用できます。
 
-詳細については、「[Do more with patterns in C# 8.0](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)」 (C# 8.0 でのパターンの有効活用) を参照してください。
+詳細については、「[Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)」 (C# 8.0 でのパターンの有効活用) を参照してください。
 
 ## <a name="ieee-floating-point-improvements"></a>IEEE 浮動小数点の改良
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Visual Studio 2019 Preview 2 では、.NET Core 3.0 Windows フォームと WPF 用に、**新しいプロジェクト** テンプレートが追加されました。 デザイナーは、まだサポートされていません。 また、これらのプロジェクトは、Visual Studio 2019 で開いたり、起動したり、デバッグしたりすることができます。
 
-Visual Studio 2017 15.9 では、[.NET Core のプレビューを有効にする](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/)機能が追加されていますが、この機能をオンにする必要があり、これはサポートされているシナリオではありません。
+Visual Studio 2017 15.9 では、[.NET Core のプレビューを有効にする](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)機能が追加されていますが、この機能をオンにする必要があり、これはサポートされているシナリオではありません。
 
 新しいプロジェクトは既存の .NET Core プロジェクトと同じですが、いくつかの追加もあります。 基本的な .NET Core コンソール プロジェクトと基本的な Windows フォームおよび WPF プロジェクトとの比較を次に示します。
 
@@ -730,9 +730,9 @@ PFX/PKCS#12 ファイルは、それぞれ `System.Security.Cryptography.Pkcs.Pk
 
 ## <a name="tiered-compilation"></a>階層型コンパイル
 
-.NET Core 3.0 では、[階層型コンパイル](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/)が既定で有効になりました。 起動時とスループットの最大化の両方でパフォーマンスを向上するために、状況に応じてランタイムが Just-In-Time (JIT) コンパイラを使用できるようにする機能です。
+.NET Core 3.0 では、[階層型コンパイル](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)が既定で有効になりました。 起動時とスループットの最大化の両方でパフォーマンスを向上するために、状況に応じてランタイムが Just-In-Time (JIT) コンパイラを使用できるようにする機能です。
 
-この機能は、[.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) のオプトイン機能として追加され、[.NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/) で既定で有効になっています。 その後、.NET Core 2.2 リリースではオプトイン機能に戻りました。
+この機能は、[.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) のオプトイン機能として追加され、[.NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) で既定で有効になっています。 その後、.NET Core 2.2 リリースではオプトイン機能に戻りました。
 
 ## <a name="arm64-linux-support"></a>ARM64 Linux のサポート
 

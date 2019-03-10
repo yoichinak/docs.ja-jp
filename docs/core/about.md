@@ -3,12 +3,12 @@ title: .NET Core について
 description: .NET Core について説明します。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058556"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675967"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -34,7 +34,7 @@ ms.locfileid: "54058556"
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> や <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> などのコレクション。
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> や <xref:System.IO.FileStream?displayProperty=nameWithType> などのユーティリティ型。
 - <xref:System.Data.DataSet?displayProperty=nameWithType> や [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) などのデータ型。
-- <xref:System.Numerics.Vector?displayProperty=nameWithType> や [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/) などの高パフォーマンス型。
+- <xref:System.Numerics.Vector?displayProperty=nameWithType> や [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/) などの高パフォーマンス型。
 
 .NET core では [.NET Standard](../standard/net-standard.md) 仕様を実装することで .NET Framework や Mono の API との互換性を提供します。
 
@@ -95,7 +95,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 
 .NET Core と .NET Framework の主な違いは、次のとおりです。
 
-- **アプリ モデル** -- .NET Core は一部の .NET Framework アプリ モデルをサポートしていません。 具体的には、ASP.NET Web フォームと ASP.NET MVC はサポートしませんが、ASP.NET Core MVC をサポートしています。 [.NET Core 3 が WPF と Windows フォームをサポートする](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)ことが発表されています。
+- **アプリ モデル** -- .NET Core は一部の .NET Framework アプリ モデルをサポートしていません。 具体的には、ASP.NET Web フォームと ASP.NET MVC はサポートしませんが、ASP.NET Core MVC をサポートしています。 [.NET Core 3 が WPF と Windows フォームをサポートする](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)ことが発表されています。
 - **API** -- .NET Core には、ファクタリングが異なる (アセンブリ名が異なる、型に対して公開されているメンバーが主要なケースで異なる) .NET Framework 基本クラス ライブラリの大規模なサブセットが含まれています。 この相違によって、ポートの発信元を .NET Core に変更しなければならない場合があります ([microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport) を参照)。 .NET Core は [.NET Standard](../standard/net-standard.md) API 仕様を実装します。
 - **サブシステム** -- .NET Core は、より単純な実装とプログラミング モデルを目的として、.NET Framework 内のサブシステムのサブセットを実装します。 たとえば、コード アクセス セキュリティ (CAS) はサポートされていませんが、リフレクションはサポートされています。
 - **プラットフォーム** -- .NET Framework は Windows と Windows Server をサポートしており、.NET Core は macOS と Linux もサポートしています。

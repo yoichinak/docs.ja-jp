@@ -4,16 +4,16 @@ description: project.json ベースのライブラリ作成時にパッケージ
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168282"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674966"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json によるパッケージ依存関係の縮小
 
-この記事では、`project.json` ライブラリの作成時にパッケージ依存関係を減らすために知っておくべきことについて紹介します。 この記事を最後までお読みいただくと、必要な依存関係だけが使用されるようにライブラリを構築する方法を理解できます。 
+この記事では、`project.json` ライブラリの作成時にパッケージ依存関係を減らすために知っておくべきことについて紹介します。 この記事を最後までお読みいただくと、必要な依存関係だけが使用されるようにライブラリを構築する方法を理解できます。
 
 ## <a name="why-its-important"></a>これが重要な理由
 
@@ -27,18 +27,17 @@ ms.locfileid: "53168282"
 
 1. お使いの `project.json` の `dependencies` セクションにある `NETStandard.Library` バージョン `1.6.0` を参照します。
 2. コマンド ラインから `dotnet restore` でパッケージを復元します ([注記参照](#dotnet-restore-note))。
-3. `project.lock.json` ファイルを調べ、`NETSTandard.Library` というセクションを探します。  ファイルの始まりの近くにあります。
+3. `project.lock.json` ファイルを調べ、`NETStandard.Library` というセクションを探します。  ファイルの始まりの近くにあります。
 4. `dependencies` の下にあるパッケージをすべてコピーします。
 5. `.NETStandard.Library` 参照を削除し、コピーしたパッケージで置き換えます。
 6. 不要なパッケージ参照を削除します。
-
 
 不要なパッケージは次の方法で確認できます。
 
 1. 試用とエラー。  パッケージを削除したり、復元したり、ライブラリがまだコンパイルするか確認したり、このプロセスを繰り返したりなどの操作が含まれます。
 2. [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) や [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) などのツールを利用し、コードで実際に利用されている参照を確認します。  その後、利用している種類に該当しないパッケージを削除できます。
 
-## <a name="example"></a>例 
+## <a name="example"></a>例
 
 追加機能を汎用コレクション タイプに提供するライブラリを記述したとします。  そのようなライブラリは `System.Collections` のようなパッケージに依存しなければなりませんが、`System.Net.Http` のようなパッケージにはまったく依存しないことがあります。  そのため、このライブラリが必要とするものだけにパッケージ依存関係を減らすと効果的です。
 
@@ -56,7 +55,7 @@ ms.locfileid: "53168282"
 }
 ```
 
-次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETSTandard.Library` に対して復元されたすべてのパッケージを探します。
+次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETStandard.Library` に対して復元されたすべてのパッケージを探します。
 
 `netstandard1.0` をターゲットにするとき、`project.lock.json` ファイルの関連セクションは次のようになります。
 

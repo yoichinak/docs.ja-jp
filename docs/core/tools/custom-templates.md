@@ -3,12 +3,12 @@ title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503927"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679061"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -16,7 +16,7 @@ ms.locfileid: "54503927"
 
 カスタム テンプレートは、あらゆる NuGet フィードで NuGet パッケージからインストールできます。NuGet *nupkg* ファイルを直接参照するか、テンプレートが含まれるファイル システム ディレクトリを指定します。 テンプレート エンジンの機能を利用すると、値を置換したり、ファイルやファイルの領域を追加したり、除外したり、テンプレートの利用時に独自の処理操作を実行したりできます。
 
-テンプレート エンジンはオープン ソースです。オンライン コード リポジトリは GitHub の [dotnet/templating](https://github.com/dotnet/templating/) にあります。 テンプレートのサンプルが必要であれば、[dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) リポジトリをご覧ください。 GitHub の「[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)」 (dotnet new で利用できるテンプレート) には、サードパーティのテンプレートなど、テンプレートが他にもあります。 カスタム テンプレートの作成と利用の詳細については、「[dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)」と「[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)」を参照してください。
+テンプレート エンジンはオープン ソースです。オンライン コード リポジトリは GitHub の [dotnet/templating](https://github.com/dotnet/templating/) にあります。 テンプレートのサンプルが必要であれば、[dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) リポジトリをご覧ください。 GitHub の「[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)」 (dotnet new で利用できるテンプレート) には、サードパーティのテンプレートなど、テンプレートが他にもあります。 カスタム テンプレートの作成と利用の詳細については、「[dotnet new の独自のテンプレートを作成する方法](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)」と「[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)」を参照してください。
 
 チュートリアルでテンプレートを作成するには、「[dotnet new のカスタム テンプレートを作成する](~/docs/core/tutorials/create-custom-template.md)」チュートリアルをご利用ください。
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/create-custom-template.md)
 - [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples GitHub リポジトリ](https://github.com/dotnet/dotnet-template-samples)
-- [dotnet new の独自のテンプレートを作成する方法](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [dotnet new の独自のテンプレートを作成する方法](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [JSON Schema Store の *template.json* スキーマ](http://json.schemastore.org/template)

@@ -4,16 +4,16 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168846"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718039"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
-[.NET Core SDK](index.md) には、利用情報を収集する[製品利用統計情報機能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)があります。 このツールがどのように利用されているかを .NET Team が理解することが重要です。それにより、ツールを改善できます。 詳細については、「[What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)」 (.NET Core SDK 製品利用統計情報からわかったこと) を参照してください。
+[.NET Core SDK](index.md) には、利用情報を収集する[製品利用統計情報機能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)があります。 このツールがどのように利用されているかを .NET Team が理解することが重要です。それにより、ツールを改善できます。 詳細については、「[What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)」 (.NET Core SDK 製品利用統計情報からわかったこと) を参照してください。
 
 収集されたデータは匿名で、[Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/) の下で、Microsoft とコミュニティの両者が利用するために集計された形で公開されます。
 
@@ -68,7 +68,7 @@ ms.locfileid: "53168846"
 
 公開データは四半期ごとに利用可能で、「[.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)」 (.NET core SDK の使用状況データ) に一覧表示されます。 データ ファイルの列は次のとおりです。
 
-- タイムスタンプ
+- Timestamp
 - Occurrences&#8224;
 - コマンド
 - Geography&#8225;
@@ -83,7 +83,7 @@ ms.locfileid: "53168846"
 
 ### <a name="example"></a>例
 
-| タイムスタンプ      | Occurrences | コマンド | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
+| Timestamp      | Occurrences | コマンド | Geography | OSFamily | RuntimeID     | OSVersion | SDKVersion |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
 | 4/16/2017 0:00 | 8           | 実行     | Uganda    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core SDK 製品利用統計情報からわかったこと](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)
+- [.NET Core SDK 製品利用統計情報からわかったこと](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
 - [製品利用統計情報の参照のソース (dotnet/cli リポジトリ)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
 - [.NET core SDK の使用状況データ](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

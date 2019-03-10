@@ -4,12 +4,12 @@ description: Windows 互換機能パックとそれを使用して既存の .NET
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903768"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717896"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 互換機能パックを使用してコードを .NET Core に移植する
 
@@ -53,7 +53,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 
 3. Windows に留まる場合、すでに用意はできています。
 
-4. .NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。
+4. .NET Core アプリケーションまたは .NET Standard ライブラリを Linux または macOS で実行する場合、[API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) を使用し、プラットフォーム非依存で機能しない API の使用を見つけます。
 
 5. そのような API の使用を取り除くか、プラットフォーム非依存の代替で置換するか、プラットフォーム チェックで保護します (以下参照)。
 
