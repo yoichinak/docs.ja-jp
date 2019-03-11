@@ -1,17 +1,15 @@
 ---
 title: マネージド コードとは
 description: ランタイムによって管理されるコードであるマネージド コードが共通言語ランタイム (CLR) によってどのように管理されるかを説明します。
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836280"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678759"
 ---
 # <a name="what-is-managed-code"></a>"マネージド コード" とは
 

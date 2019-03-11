@@ -1,16 +1,14 @@
 ---
 title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
-author: tdykstra
-ms.author: tdykstra
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857974"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674511"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -117,7 +115,7 @@ Just-In-Time コンパイラ。
 
 .NET の実装には次のものが含まれます。
 
-- 1 つまたは複数のランタイム。 次に例を示します。CLR、CoreCLR、CoreRT。
+- 1 つまたは複数のランタイム。 次に例を示します。 CLR、CoreCLR、CoreRT。
 - .NET Standard の 1 つのバージョンを実装し、他の API を含むことができるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
 - 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。

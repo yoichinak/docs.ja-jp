@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcf1afdadf9294981674d7e007a6bbda2268969d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496821"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -41,7 +41,7 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  Mpgo.exe では、どの引数も大文字と小文字が区別されません。 コマンドには、ダッシュがプレフィックスとして付けられます。  
   
 > [!NOTE]
@@ -65,7 +65,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-LeaveNativeImages`|インストルメント化されたネイティブ イメージはシナリオの実行後に削除されないことを指定します。 このオプションは、主に、実行中のシナリオ用に指定したアプリケーションを取得するときに使用されます。 これにより、Mpgo.exe のその後の実行に対してネイティブ イメージを再生成できなくなります。 このオプションを指定した場合、アプリケーションの実行の完了後に、キャッシュ内に孤立したネイティブ イメージが存在する可能性があります。 この場合、同じシナリオおよびアセンブリ リストと共に Mpgo.exe を実行し、`–RemoveNativeImages` パラメーターを使用することによって、こうしたネイティブ イメージを削除します。|
 |`-RemoveNativeImages`|`–LeaveNativeImages` が指定された実行からクリーンアップします。 `-RemoveNativeImages` を指定すると、Mpgo.exe は `-64bit` と `–AssemblyList` を除く引数を無視して、すべてのインストルメントされたネイティブ イメージを削除すると終了します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
  `–AssemblyList` と `- AssemblyListFile` の両方をコマンド行で複数回、使用できます。
 
  アセンブリを指定する際に完全パス名を指定しないと、Mpgo.exe は現在のディレクトリ内を調べます。 正しくないパスを指定した場合、Mpgo.exe がエラー メッセージを表示しますが、他のアセンブリに対するデータの生成は続行されます。 トレーニング シナリオの実行中に読み込まれていないアセンブリを指定すると、トレーニングのデータがそのアセンブリに対して生成されません。

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 88aacd77742baea5ebf04ddca311100bd44edb3e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665148"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716466"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>チュートリアル: 実行時にステータス バー情報の更新
 > [!IMPORTANT]
@@ -30,9 +30,9 @@ ms.locfileid: "56665148"
   
 1.  新しい Windows フォームを作成します。  
   
-2.  フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、「[方法: Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
+2.  フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
   
-3.  ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、「[方法: StatusBar コントロールにパネルを追加](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)します。  
+3.  ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、「[方法: StatusBar コントロールにパネルを追加](how-to-add-panels-to-a-statusbar-control.md)します。  
   
 4.  <xref:System.Windows.Forms.StatusBar>をフォームに追加されたコントロールの設定、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`true`します。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "56665148"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [方法: StatusBar コントロールにパネルを追加します。](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
-- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar コントロールの概要](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [方法: StatusBar コントロールにパネルを追加します。](how-to-add-panels-to-a-statusbar-control.md)
+- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

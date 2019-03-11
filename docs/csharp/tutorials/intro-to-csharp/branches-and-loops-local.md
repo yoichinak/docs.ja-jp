@@ -3,12 +3,12 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153775"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677787"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
@@ -20,7 +20,7 @@ ms.locfileid: "53153775"
 
 「**branches-tutorial**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n BranchesAndLoops -o .` を実行します。 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
 
-お好みのエディターで **Program.cs** を開き、`Console.Writeline("Hello World!");` の行を次のコードで置き換えます。
+お好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 "答えは 10 を超えています" というメッセージが コンソールに出力されるはずです。
 
-合計が 10 未満になるように `b` の宣言を変更します。 
+合計が 10 未満になるように `b` の宣言を変更します。
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ else
 
 > [!IMPORTANT]
 > `if` と `else` のステートメント内にあるインデントは、人が読みやすいようにするためのものです。
-> C# 言語はインデントや空白文字を重要なものとして扱いません。 `if` や `else` のキーワードに続くステートメントは、条件に基づいて実行されます。 このチュートリアルのすべてのサンプルでは、一般的な記述方法に従い、ステートメントの制御フローに基づいて行にインデントを挿入しています。
+> C# 言語はインデントや空白文字を重要なものとして扱いません。
+> `if` や `else` のキーワードに続くステートメントは、条件に基づいて実行されます。 このチュートリアルのすべてのサンプルでは、一般的な記述方法に従い、ステートメントの制御フローに基づいて行にインデントを挿入しています。
 
 インデントは重要ではないため、条件に基づいて実行するブロック内に 1 つ以上のステートメントがある場合には、`{` と `}` を使用して示します。 通常、C# プログラマーは `if` と `else` の句にはこの中かっこを使用します。 次の例は、さきほど作成したものと同じ内容です。 上のコードを、次のコードに一致するように変更します。
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ C# では **for** ループがよく使用されます。 Main() メソッドで
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 このループは、既に使用した `while` ループや `do` ループと同じ機能を持っています。 `for` ステートメントは 3 つの部分に分かれてその機能を制御します。
@@ -252,7 +253,7 @@ C# 言語における `if` ステートメントとループ構造を見てき�
 
 次のトピックでこれらの概念の詳細を学習できます。
 
-[if と else ステートメント](../../language-reference/keywords/if-else.md)  
-[while ステートメント](../../language-reference/keywords/while.md)  
-[do ステートメント](../../language-reference/keywords/do.md)  
-[for ステートメント](../../language-reference/keywords/for.md)  
+- [if と else ステートメント](../../language-reference/keywords/if-else.md)
+- [while ステートメント](../../language-reference/keywords/while.md)
+- [do ステートメント](../../language-reference/keywords/do.md)
+- [for ステートメント](../../language-reference/keywords/for.md)

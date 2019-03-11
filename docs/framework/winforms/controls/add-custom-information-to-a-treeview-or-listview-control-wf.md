@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 8120f35f866c353ae1493515bed3d216776ede23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694595"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709672"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。
 Windows フォームで派生ノードを作成することができます<xref:System.Windows.Forms.TreeView>コントロールまたはで派生項目を<xref:System.Windows.Forms.ListView>コントロール。 派生により、必要なフィールドだけではなく、それらを処理するためのカスタム メソッドやコンストラクターも追加できます。 この機能を使用して、顧客オブジェクトを各ツリー ノードや各リスト項目にアタッチすることもできます。 例では、<xref:System.Windows.Forms.TreeView>のコントロールが同じアプローチを使用できます、<xref:System.Windows.Forms.ListView>コントロール。  
@@ -131,5 +131,5 @@ Windows フォームで派生ノードを作成することができます<xref:
     ```  
   
 ## <a name="see-also"></a>関連項目
-- [TreeView コントロール](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
-- [ListView コントロール](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+- [TreeView コントロール](treeview-control-windows-forms.md)
+- [ListView コントロール](listview-control-windows-forms.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 7c664ee7d6e0e083eba958e6ee36a63009e13956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0145df533572ff9d5004a653bb232a7ff60af5f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606609"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495105"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (C# リファレンス)
 `#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。  
@@ -24,7 +24,7 @@ ms.locfileid: "54606609"
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `warning-list`  
  警告番号のコンマ区切りのリスト。 "CS" というプレフィックスは省略可能です。  
   

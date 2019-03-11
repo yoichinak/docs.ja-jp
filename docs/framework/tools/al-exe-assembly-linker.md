@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492258"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54223196"
 al sources options
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 次の `sources` を 1 つ以上組み合わせて指定できます。
 
@@ -79,7 +79,7 @@ al sources options
 |`@filename`|*Al.exe* コマンドが格納されている応答ファイルを指定します。<br /><br /> 応答ファイルでは、コマンドは各行に 1 つずつ指定されるか、複数のコマンドが 1 行に空白で区切られて指定されます。|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべての Visual Studio コンパイラは、アセンブリを生成します。 ただし、モジュール (マニフェストを含まないメタデータ) が 1 つ以上ある場合は、*Al.exe* を使用して、マニフェストを別個のファイルに含むアセンブリを作成できます。
 

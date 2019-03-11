@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 2202641d56a151de2eebe08d4c100c37fb399e5d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 7984d684987ef8acb172e8339f120c410f4885f3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362085"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーを利用できる XML ドキュメント、SQL データベース、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
@@ -58,7 +58,7 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 >  非ジェネリック <xref:System.Collections.ArrayList> インターフェイスをサポートする <xref:System.Collections.IEnumerable> などの型も、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] データ ソースとして使用できます。 詳細については、「[方法 :LINQ を使用して ArrayList を照会する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
   
-##  <a name="query"></a> クエリ  
+## <a name="query"></a> クエリ  
  クエリでは、データ ソースからどのような情報を取得するかを指定します。 オプションとして、情報が返される前に、その情報を並べ替え、グループ化し、構造化する方法を指定することもできます。 クエリはクエリ変数に格納され、クエリ式で初期化されます。 クエリを簡単に記述できるようにするために、C# に新しいクエリ構文が導入されています。  
   
  前の例のクエリでは、整数の配列からすべての偶数が返されます。 クエリ式には、`from`、`where`、および `select` の 3 つの句が含まれています  (SQL に詳しい方は、句の順番が SQL での順番とは逆になっていることに気付かれると思います)。`from` 句はデータ ソースを指定し、`where` 句はフィルターを適用し、`select` 句は返される要素の種類を指定します。 これらのクエリ句およびその他のクエリ句の詳細については、「[LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)」セクションで説明しています。 今の段階で重要な点は、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] では、クエリ変数自体は何も処理を行わず、データを返さないという点です。 この時点では、後でクエリが実行されるときに結果の生成に必要となる情報が格納されるだけです。 背後でどのようにクエリが構築されるかについては、「[標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)」をご覧ください。  

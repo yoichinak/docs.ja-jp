@@ -2,12 +2,12 @@
 title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7bf9a8bd18a1b98ae5e128ca67ca185baa7d599d
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745264"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365062"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
@@ -94,6 +94,6 @@ ms.locfileid: "56745264"
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
-- [フレンド アセンブリ (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
 - [方法: 署名されたフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

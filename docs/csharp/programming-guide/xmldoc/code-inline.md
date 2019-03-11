@@ -11,12 +11,12 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: e56df10eabc6a2d38bd049951b01c16808222255
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f97e8a8f07b13e509516d13cb5181109f2340e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474190"
 ---
 # <a name="c-c-programming-guide"></a>\<c> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -25,7 +25,7 @@ ms.locfileid: "57202302"
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `text`  
  コードとして指定するテキストです。  
   

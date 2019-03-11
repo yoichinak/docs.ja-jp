@@ -9,12 +9,12 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 3e6625c55a6f5c29fb55bff2eb87959f3237652e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b2e91b868c35773033418c796b7c43b08e87a28b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480378"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +23,7 @@ ms.locfileid: "56975851"
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Description`  
  メンバーの説明。  
   

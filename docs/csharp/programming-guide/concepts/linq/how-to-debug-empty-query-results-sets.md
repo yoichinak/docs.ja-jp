@@ -2,12 +2,12 @@
 title: '方法: 空のクエリ結果セットをデバッグする (C#)'
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723184"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357912"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>方法: 空のクエリ結果セットをデバッグする (C#)
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -50,7 +50,7 @@ End of result set
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。  
   
- 解決方法は、<xref:System.Xml.Linq.XNamespace> オブジェクトを宣言して初期化し、そのオブジェクトを <xref:System.Xml.Linq.XName> オブジェクトの指定時に使用することです。 この場合、<xref:System.Xml.Linq.XElement.Elements%2A> メソッドの引数は <xref:System.Xml.Linq.XName> オブジェクトです。  
+ 解決方法は、<xref:System.Xml.Linq.XNamespace> オブジェクトを宣言して初期化し、そのオブジェクトを <xref:System.Xml.Linq.XName> オブジェクトの指定時に使用することです。 この場合、<xref:System.Xml.Linq.XContainer.Elements%2A> メソッドの引数は <xref:System.Xml.Linq.XName> オブジェクトです。  
   
 ```csharp  
 XElement root = XElement.Parse(  

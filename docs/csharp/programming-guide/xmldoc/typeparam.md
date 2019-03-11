@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 9150ab3e29eaa6b692e2ab2be90bb0e87ba54941
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fc2c0ec29dd2652d48a6f941bec939bbd9aac8e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471642"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -22,7 +22,7 @@ ms.locfileid: "56978653"
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `name`  
  型パラメーターの名前。 名前は二重引用符 (" ") で囲みます。  
   

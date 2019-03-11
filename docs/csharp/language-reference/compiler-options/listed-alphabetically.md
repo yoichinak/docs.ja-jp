@@ -2,17 +2,17 @@
 title: アルファベット順の C# コンパイラ オプションの一覧
 ms.date: 05/15/2018
 helpviewer_keywords:
-- compiler options [C#], listed alpabetically
+- compiler options [C#], listed alphabetically
 - C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 6c7f845027f1b3d0b23403ea45f9e6d96b2a806d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203562"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677732"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 

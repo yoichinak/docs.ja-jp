@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373440"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 多くのアプリケーションで、関連するオブジェクトのグループの作成および管理が必要になります。 オブジェクトをグループ化するには、オブジェクトの配列を作成する方法と、オブジェクトのコレクションを作成する方法があります。  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  *反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子は、[yield return](../../../csharp/language-reference/keywords/yield.md) ステートメントを使用して、コレクションの各要素を 1 回に 1 つ返します。  
   
  [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ステートメントを使用して、反復子を呼び出します。 `foreach` ループの各イテレーションは、反復子を呼び出します。 `yield return` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。  

@@ -2,12 +2,12 @@
 title: -subsystemversion (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cafa10447e08758499f5d5dc66ab61c5bbd1d54a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738080"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474879"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# コンパイラ オプション)
 生成された実行可能ファイルが動作できるサブシステムの最小バージョンを指定します。これにより、実行可能ファイルが動作できる Windows のバージョンが決まります。 通常、このオプションを指定することで、実行可能ファイルが、Windows の以前のバージョンでは使用できない特定のセキュリティ機能を利用できるようになります。  
@@ -21,13 +21,13 @@ ms.locfileid: "54738080"
 -subsystemversion:major.minor  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `major.minor`  
  サブシステムに必要な最小バージョン。メジャー バージョンおよびマイナー バージョンのドット表記で表されます。 たとえば、このオプションの値を 6.01 に設定すると、Windows 7 より古いオペレーティング システムではアプリケーションを実行できないように指定できます (このトピックの以下の表を参照)。 `major` と `minor` の値を整数で指定する必要があります。  
   
  `minor` バージョンでは、前に配置されるゼロによってバージョンが変更されることはありませんが、後ろにゼロが付くとバージョンが変わります。 たとえば、6.1 と 6.01 は同じバージョンを示しますが、6.10 は異なるバージョンを示します。 混乱を避けるため、マイナー バージョンには 2 桁の数値を使用することをお勧めします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  次の表は、Windows の一般的なサブシステムのバージョンを示しています。  
   
 |Windows のバージョン|サブシステムのバージョン|  

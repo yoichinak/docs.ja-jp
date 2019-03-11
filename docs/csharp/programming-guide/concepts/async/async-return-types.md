@@ -2,12 +2,12 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548250"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368182"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
@@ -24,7 +24,7 @@ ms.locfileid: "54548250"
   
 それぞれの戻り値の型は、次のセクションの 1 つで確認でき、トピックの最後で 3 種類のすべてを使用する例を参照できます。  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> の戻り値の型  
+## <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> の戻り値の型  
 `TResult` 型のオペランドを持つ [return](../../../../csharp/language-reference/keywords/return.md) (C#) ステートメントを含む非同期メソッドには、<xref:System.Threading.Tasks.Task%601> 戻り値の型が使用されます。  
   
 次の例では、`GetLeisureHours` 非同期メソッドには整数を返す `return` ステートメントが含まれます。 そのため、メソッド宣言では、戻り値の型を `Task<int>` と指定する必要があります。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同期メソッドは、文字列を返す操作を表すプレースホルダーです。
@@ -33,14 +33,16 @@ ms.locfileid: "54548250"
 
 `GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../../csharp/language-reference/keywords/await.md)」を参照してください。  
   
-次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
+次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 
+  `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
   
 > [!IMPORTANT]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
+>  
+  <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a>Task 型  
+## <a name="BKMK_TaskReturnType"></a>Task 型  
 `return` ステートメントを含まない非同期メソッド、またはオペランドを返さない `return` ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> の戻り値の型を指定します。 こうしたメソッドは、同期的に実行するように作成されている場合に `void` を返します。 非同期メソッドに戻り値の型 <xref:System.Threading.Tasks.Task> を使用した場合、呼び出し元のメソッドは `await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。  
   
 次の例では、`WaitAndApologize` 非同期メソッドには `return` ステートメントが含まれていないため、メソッドは <xref:System.Threading.Tasks.Task> オブジェクトを返します。 これにより、`WaitAndApologize` を待機できます。 <xref:System.Threading.Tasks.Task> 型には戻り値がないため、`Result` プロパティを含みません。  
@@ -55,7 +57,7 @@ ms.locfileid: "54548250"
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void 戻り値の型
+## <a name="BKMK_VoidReturnType"></a> Void 戻り値の型
 
 `void` 戻り値の型は、`void` 戻り値の型が必要な非同期イベント ハンドラーで使用します。 値を返さないイベント ハンドラー以外のメソッドについては、<xref:System.Threading.Tasks.Task> を返す必要があります。これは、`void` を返す非同期メソッドを待機できないためです。 このようなメソッドの呼び出し元は、呼び出した非同期メソッドが完了するのを待たずに、完了まで継続できる必要があります。また呼び出し元は、非同期メソッドが生成する値または例外とは無関係である必要があります。  
   

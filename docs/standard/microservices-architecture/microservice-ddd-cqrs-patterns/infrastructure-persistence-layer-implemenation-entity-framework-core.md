@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146135"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676344"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を利用して読み取り専用アクセスのみが可能となることに注意してください。 この型は読み取り専用であり、定期的な外部更新から守られます。 
+`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を利用して読み取り専用アクセスのみが可能となることに注意してください。 この型は読み取り専用であり、定期的な外部更新から守られます。
 
 EF Core では、ドメイン モデルを "汚染する" ことなく物理データベースにマッピングできます。 マッピング アクションは永続レイヤーで行われるため、純粋な .NET POCO コードになります。 そのマッピング アクションでは、フィールドとデータベースのマッピングを構成する必要があります。 `OrderingContext` からの `OnModelCreating` メソッドと `OrderEntityTypeConfiguration` クラスが出てくる次の例では、`SetPropertyAccessMode` を呼び出すことで、そのフィールドを介して `OrderItems` プロパティにアクセスするように EF Core に伝えます。
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -353,11 +353,11 @@ EF Core のシャドウ プロパティは、エンティティ クラス モデ
 
 クエリ仕様パターンによって、オブジェクトのクエリが定義されます。 たとえば、製品を検索するページ クエリをカプセル化するために、必要な入力パラメーター (pageNumber、pageSize、filter など) を受け取る PagedProduct 仕様を作成できます。 その後、Repository の任意のメソッド (通常は List() オーバーロード) 内で、IQuerySpecification を受け取り、その仕様に基づいて予想されるクエリを実行します。
 
-一般的な仕様インターフェイスの例として、[eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb) から抜粋した次のコードをご覧ください。
+一般的な Specification (仕様) インターフェイスの例として、[eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) から抜粋した次のコードをご覧ください。
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ public interface ISpecification<T>
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 この仕様はフィルタリング ロジックをカプセル化するだけでなく、データを入力するプロパティなど、返すデータのシェイプも指定できます。
 
 リポジトリから IQueryable を返すことはお勧めできませんが、リポジトリ内で使用し、結果の集まりを作ることには何の問題もありません。 上の List メソッドでこの手法を確認できます。中間の IQueryable 式を利用してクエリのインクルード リストを作成し、それから最後の行にある仕様の基準に合わせてクエリを実行しています。
@@ -468,6 +469,6 @@ public IEnumerable<T> List(ISpecification<T> spec)
 - **仕様パターン** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[前へ](infrastructure-persistence-layer-design.md)
->[次へ](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [前へ](infrastructure-persistence-layer-design.md)
+> [次へ](nosql-database-persistence-infrastructure.md)

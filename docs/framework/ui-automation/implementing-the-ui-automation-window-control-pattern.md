@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e436a9505ea9ae770a748da244dd21ce63ad3464
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736982"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677723"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI オートメーション Window コントロール パターンの実装
 > [!NOTE]

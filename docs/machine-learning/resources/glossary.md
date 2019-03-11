@@ -2,17 +2,20 @@
 title: 機械学習の用語集 - ML.NET
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 03/05/2019
+ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092437"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498901"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
 ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語を次に示します。
+
+> [!NOTE]
+> このドキュメントでは ML.NET が参照されていますが、これは現在プレビュー段階にあります。 内容は変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
 ## <a name="accuracy"></a>正確度
 

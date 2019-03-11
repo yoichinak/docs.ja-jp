@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 216adebae8a498ef2f4263f46f8ccd7a20d9202f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622378"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471011"
 ---
 # <a name="pragma-c-reference"></a>#pragma (C# リファレンス)
 `#pragma` は、ファイル内に指定され、そのファイルのコンパイルについての特別な命令をコンパイラに指示します。 命令はコンパイラによってサポートされている必要があります。 つまり、`#pragma` を使用してカスタムの前処理命令を作成することはできません。 Microsoft C# コンパイラは、次の 2 つの `#pragma` 命令をサポートしています。  
@@ -27,7 +27,7 @@ ms.locfileid: "54622378"
 #pragma pragma-name pragma-arguments  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pragma-name`  
  認識されているプラグマの名前。  
   

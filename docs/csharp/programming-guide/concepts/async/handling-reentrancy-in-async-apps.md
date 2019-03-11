@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9c00a857fd75a44a00781e43b94623f101c7d352
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f5435dd482a20e1aa5a6e0b93d6222025b05518
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620433"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359264"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>非同期アプリにおける再入の処理 (C#)
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "54620433"
 > [!NOTE]
 >  この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。  
   
-##  <a name="BKMK_RecognizingReentrancy"></a>再入を認識する  
+## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する  
  このトピックの例では、ユーザーが **[Start]** をクリックして非同期アプリを開始します。このアプリは、一連の Web サイトをダウンロードし、ダウンロードされた合計バイト数を計算します。 同期バージョンの例では、ユーザーが何回ボタンをクリックしても同じように応答します。2 回目以降はアプリが実行を完了するまで、UI スレッドはこれらのイベントを無視するからです。 ただし、非同期アプリでは、UI スレッドは応答し続けるので、完了前に非同期操作を再入力することがあります。  
   
  次の例は、ユーザーが 1 度だけ **[Start]** をクリックした場合の出力を示しています。 ダウンロードされた Web サイトの一覧には、各サイトのサイズがバイト単位で表示されます。 合計バイト数は最後に表示されます。  
@@ -86,7 +86,7 @@ TOTAL bytes returned:  890591
   
  このトピックの最後にスクロールすると、この出力を生成するコードをレビューできます。 コードを試してみるには、ソリューションをローカル コンピューターにダウンロードしてから WebsiteDownload プロジェクトを実行するか、このトピックの最後にあるコードを使用して独自のプロジェクトを作成します。 詳細と手順については、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」を参照してください。  
   
-##  <a name="BKMK_HandlingReentrancy"></a>再入を処理する  
+## <a name="BKMK_HandlingReentrancy"></a>再入を処理する  
  再入の処理は、アプリで何を行うかに応じてさまざまな方法で実行できます。 このトピックでは、次の例を紹介します。  
   
 -   [[Start] ボタンを無効にする](#BKMK_DisableTheStartButton)  
@@ -101,7 +101,7 @@ TOTAL bytes returned:  890591
   
      要求されたすべての処理を非同期的に実行できるようにします。ただし、各処理の結果が順番にまとめて表示されるように出力を調整します。  
   
-###  <a name="BKMK_DisableTheStartButton"></a>[Start] ボタンを無効にする  
+### <a name="BKMK_DisableTheStartButton"></a>[Start] ボタンを無効にする  
  処理の実行中に **[Start]** ボタンを利用できないようにするには、`StartButton_Click` イベント ハンドラーの上部にあるボタンを無効にします。 処理が完了しユーザーが再度アプリを実行できるようになったら、`finally` ブロック内からこのボタンを再度有効にできます。  
   
  このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードすることもできます。 プロジェクトの名前は DisableStartButton です。  
@@ -133,7 +133,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
   
  変更の結果、`AccessTheWebAsync` が Web サイトをダウンロードしている間は、ボタンが応答しないので、プロセスを再入力できません。  
   
-###  <a name="BKMK_CancelAndRestart"></a>操作を取り消して再開する  
+### <a name="BKMK_CancelAndRestart"></a>操作を取り消して再開する  
  **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。  
   
  取り消しの詳細については、「[Fine Tuning Your Async Application (C#) (非同期アプリケーションの微調整 (C#))](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)」を参照してください。  
@@ -293,7 +293,7 @@ TOTAL bytes returned:  890591
   
  部分的なリストを削除するには、`StartButton_Click` コードの先頭行のコメントを解除して、ユーザーが操作を再開するたびに、テキスト ボックスをクリアします。  
   
-###  <a name="BKMK_RunMultipleOperations"></a>複数の操作を実行して出力をキューに登録する  
+### <a name="BKMK_RunMultipleOperations"></a>複数の操作を実行して出力をキューに登録する  
  この 3 番目の例は、ユーザーが **[Start]** ボタンをクリックするたびに非同期操作が開始され、すべての操作が完了まで実行されるという点で最も複雑です。 要求されたすべての操作によって Web サイトがリストから非同期的にダウンロードされますが、操作からの出力は順次表示されます。 つまり、「[再入を認識する](#BKMK_RecognizingReentrancy)」の出力に示されているように、実際のダウンロード アクティビティはインターリーブされますが、各グループの結果のリストは個別に表示されます。  
   
  操作は、表示プロセスのゲートキーパーとして機能するグローバル <xref:System.Threading.Tasks.Task>、`pendingWork` を共有します。  
@@ -534,13 +534,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
      グループが `StartButton_Click` に移行したら、`FinishOneGroupAsync` に移行するまでは、await 式は完了しません。 したがって、コード セグメントの途中で、他の操作がコントロールを得ることはありません。  
   
-##  <a name="BKMD_SettingUpTheExample"></a>例のアプリをレビューして実行する  
+## <a name="BKMD_SettingUpTheExample"></a>例のアプリをレビューして実行する  
  サンプル アプリをさらに詳しく理解するには、そのアプリをダウンロードし、ご自身でビルドしてみてください。また、このトピックの最後にあるコードをレビューすることもできます。アプリを実装する必要はありません。  
   
 > [!NOTE]
 >  Windows Presentation Foundation (WPF) デスクトップ アプリとして例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
   
-###  <a name="BKMK_DownloadingTheApp"></a>アプリをダウンロードする  
+### <a name="BKMK_DownloadingTheApp"></a>アプリをダウンロードする  
   
 1.  圧縮ファイルを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。  
   
@@ -554,7 +554,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
   
 6.  Ctrl キーを押しながら F5 キーを押してプロジェクトをビルドし、実行します。  
   
-###  <a name="BKMK_BuildingTheApp"></a>アプリケーションをビルドする  
+### <a name="BKMK_BuildingTheApp"></a>アプリケーションをビルドする  
  次のセクションでは、WPF アプリとして例をビルドするコードを示します。  
   
 ##### <a name="to-build-a-wpf-app"></a>WPF アプリをビルドするには  

@@ -3,12 +3,12 @@ title: C# における数値 - C# の概要に関するチュートリアル
 description: 数値型とそのプロパティ、およびメソッドを詳しく見ていくことで C# について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978619"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673861"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>C\# で整数と浮動小数点数を操作する
 
@@ -20,7 +20,7 @@ ms.locfileid: "56978619"
 
 「**numbers-quickstart**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n NumbersInCSharp -o .` を実行します。
 
-好みのエディターで **Program.cs** を開き、`Console.Writeline("Hello World!");` の行を次のコードで置き換えます。
+好みのエディターで **Program.cs** を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-コマンド ウィンドウで「`dotnet run`」を入力し、このコードを実行します。 
+コマンド ウィンドウで「`dotnet run`」を入力し、このコードを実行します。
 
 整数を使用した基本的な算術演算の 1 つを確認しました。 `int` 型は、**整数**を表します (正の整数、または負の整数)。 加算には `+` 記号を使用します。 他の一般的な整数の算術演算には次のものがあります。
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-コマンド ウィンドウで「`dotnet run`」を入力し、このコードを実行します。 
-    
+コマンド ウィンドウで「`dotnet run`」を入力し、このコードを実行します。
+
 好みで、同じ行で複数の算術演算を実行することもできます。 例として `c = a + b - 12 * 17;` を試してみてください。 変数と定数を混在させることができます。
 
 > [!TIP]
 > C# (または何らかのプログラミング言語) について詳しく学習するに従い、コードを記述する際にミスをすることもあるでしょう。 **コンパイラ**は、そうしたエラーを発見して報告します。 エラー メッセージが出力された場合は、例のコードをよく確認して、ウィンドウで修正すべきコードを見つけます。
-> こうした実習が C# コードの構造を理解するのに役立ちます。     
+> こうした実習が C# コードの構造を理解するのに役立ちます。
 
 最初の手順が完了しました。 次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `WorkingWithIntegers` に変更し、`WorkingWithIntegers` を呼び出す新しい `Main` メソッドを記述します。 完成したコードは次のようになります。
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>整数の有効桁数と制限の確認
+
 この最後のサンプルでは、整数の除算における結果の切り捨てについて確認します。
 **modulo** 演算子 (`%` 文字) を使用して、**剰余**を得ることができます。 `Main` メソッドで次のコードを試してみてください。
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 C# の整数型は算術における整数ともう 1 つ異なる点があります。それは `int` 型には最小値と最大値の制限があるということです。 `Main` メソッドに次のコードを追加して、この制限を確認します。
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Console.WriteLine($"The range of integers is {min} to {max}");
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-計算の結果が最小値の (負の) 整数に極めて近いことに注目してください。 これは `min + 2` と同じです。 加算演算が許容された整数値を**オーバーフロー**しました。
+
+計算の結果が最小値の (負の) 整数に極めて近いことに注目してください。 これは `min + 2` と同じです。
+加算演算が許容された整数値を**オーバーフロー**しました。
 整数がオーバーフローして最大値から最小値に ”折り返され” たため、計算結果が非常に大きな負の値になっています。
 
 他にもさまざまな制限や有効桁数を持つ数値型があり、`int` 型がご自分のニーズと合わない場合は、そちらも使用できます。 次はその別の数値型を見ていきます。
 
-もう一度、このセクションで記述したコードを別のメソッドに移します。 これに `TestLimits` という名前を付けます。 
+もう一度、このセクションで記述したコードを別のメソッドに移します。 これに `TestLimits` という名前を付けます。
 
 ## <a name="work-with-the-double-type"></a>double 型の処理
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-これらの値は指数表記で出力されます。 `E` の左側は有効数字です。 右側の数値は指数であり、10 の累乗です。 
+これらの値は指数表記で出力されます。 `E` の左側は有効数字です。 右側の数値は指数であり、10 の累乗です。
 
 算術における 10 進数と同じように、C# における double には丸め誤差が発生することがあります。 次のコードを試してみましょう。
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 数値の末尾の `M` は、定数では `decimal` 型を使用する必要があることを示しています。
 
-decimal 型を使用した演算では、小数点の右側の桁数がより多いことに注目してください。 
+decimal 型を使用した演算では、小数点の右側の桁数がより多いことに注目してください。
 
 ***課題***
 
-さまざまな数値型を確認したので、次は半径が 2.50 センチメートルの円の面積を計算するコードを記述してみます。 円の面積は、半径の 2 乗 x 円周率です。 ヒント: .NET には <xref:System.Math.PI?displayProperty=nameWithType> という円周率の定数があり、その値を使用できます。 
+さまざまな数値型を確認したので、次は半径が 2.50 センチメートルの円の面積を計算するコードを記述してみます。 円の面積は、半径の 2 乗 x 円周率です。 ヒント: .NET には <xref:System.Math.PI?displayProperty=nameWithType> という円周率の定数があり、その値を使用できます。
 
 答えは 19 と 20 の間になるはずです。
 [GitHub にある完成版のサンプル コード](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)で答えを確認できます。
 
-お好みで他の数式を試してみてください。 
+お好みで他の数式を試してみてください。
 
 これで "C# の数値" に関するクイックスタートは終了です。 続けて独自の開発環境で[分岐とループ](branches-and-loops-local.md)のクイックスタートに進むことができます。
 
 C# の数値の詳細については、次のトピックで学習できます。
 
-[整数型の一覧表](../../language-reference/keywords/integral-types-table.md)   
-[浮動小数点型の一覧表](../../language-reference/keywords/floating-point-types-table.md)   
-[組み込み型の一覧表](../../language-reference/keywords/built-in-types-table.md)   
-[暗黙的な数値変換の一覧表](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [整数型の一覧表](../../language-reference/keywords/integral-types-table.md)
+- [浮動小数点型の一覧表](../../language-reference/keywords/floating-point-types-table.md)
+- [組み込み型の一覧表](../../language-reference/keywords/built-in-types-table.md)
+- [暗黙的な数値変換の一覧表](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [明示的な数値変換の一覧表](../../language-reference/keywords/explicit-numeric-conversions-table.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1816aeb0ddf783c8ad0baa7f5d460f0fc60747e1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 90fd73346d255d195fa7384ebc2f60ebc4f32fba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974823"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480677"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -25,7 +25,7 @@ ms.locfileid: "56974823"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  cref = "`member`"  
  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。 *メンバー*は二重引用符 (" ") で囲む必要があります。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 475e9ab5c59260544b0e413e165953c0b84449b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ea0b8c37f6ef803fd36592376a7a8c0c334f719c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973900"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489398"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +23,7 @@ ms.locfileid: "56973900"
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  cref = "`member`"  
  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。 *member* は、二重引用符 (" ") で囲む必要があります。  
   

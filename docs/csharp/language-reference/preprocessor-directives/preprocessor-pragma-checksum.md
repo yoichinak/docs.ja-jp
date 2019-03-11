@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: c52e93bcf5771fe556730a1d7cf45b8f1c9432b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec215517cd667a6333137d0c7e51fe2ac58f5bcf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513023"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499829"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (C# リファレンス)
 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのデバッグに使用するソース ファイルのチェックサムを生成します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54513023"
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `"filename"`  
  変更または更新を監視する必要があるファイルの名前。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54513023"
  `"checksum_bytes"`  
  チェックサムのバイト数を表す 16 進数の文字列。 偶数の 16 進数である必要があります。 奇数の数値を指定すると、コンパイル時に警告が出力され、ディレクティブが無視されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Visual Studio デバッガーは、常に正しいソースを検出するために、チェックサムを使用します。 コンパイラはソース ファイルのチェックサムを計算し、プログラム データベース (PDB) ファイルに結果を出力します。 デバッガーは、その PDB ファイルを使用して、ソース ファイルについて計算したチェックサムと比較します。  
   
  このソリューションは [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] プロジェクトには使用できません。それは計算されたチェックサムは、.aspx ファイルではなく、生成されたソース ファイルを対象としているためです。 この問題に対応するため、`#pragma checksum` によって [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] ページのチェックサムがサポートされています。  

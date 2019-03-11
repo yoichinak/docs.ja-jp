@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362847"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362709"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers の DDD マイクロサービスに CQRS および CQS のアプローチを適用する
 
@@ -41,7 +41,7 @@ CQRS とほとんどの DDD のパターン (DDD レイヤー、集約を伴う�
 
 存在するアプリケーション アーキテクチャは 1 つだけです。つまり、自分が設計しているシステムまたはエンドツーエンド アプリケーションのアーキテクチャです (たとえば、マイクロサービス アーキテクチャ)。 しかし、そのアプリケーション内の境界付けられているコンテキストまたはマイクロサービスのそれぞれの設計には、アーキテクチャ パターン レベルの独自のトレードオフや内部設計の決定が反映されます。 CQRS または DDD など同じアーキテクチャ パターンを所かまわず適用しないようにしてください。
 
-####  <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他の技術情報
 
 - **Martin Fowler。CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 2c999e76a9238e6401e89af0faa81967b13a3995
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 40dc844f2a4b6411ea82aa2f029b36d7dd8f6e5a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244389"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716319"
 ---
 # <a name="-operator-c-reference"></a>= 演算子 (C# リファレンス)
 
@@ -42,7 +42,7 @@ C# 7.3 以降では、ref 代入演算子 `= ref` を使用して、[ref ロー�
 
 ref 代入演算子の場合、左辺オペランドの型と右辺オペランドの型が同じであることが必要です。
 
-詳しくは、[機能提案メモ](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.3/ref-local-reassignment.md)をご覧ください。
+詳しくは、[機能提案メモ](../../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)をご覧ください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 

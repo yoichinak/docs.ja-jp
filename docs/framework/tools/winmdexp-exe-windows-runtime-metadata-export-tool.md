@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496834"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
@@ -29,7 +29,7 @@ ms.locfileid: "56220641"
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数またはオプション|説明|  
 |------------------------|-----------------|  

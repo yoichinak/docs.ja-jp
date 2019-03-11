@@ -13,18 +13,18 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 2907b6344cd4fcc7c7d84c110dbc638cdc86f23c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708325"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712722"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
   
- プログラムを[StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)コントロールをユーザーのクリックに応答する、内の case ステートメントを使用して、<xref:System.Windows.Forms.StatusBar.PanelClick>イベント。 イベント、クリックされたへの参照を含む引数 (パネル引数) に含まれる<xref:System.Windows.Forms.StatusBarPanel>します。 この参照を使用して、クリックされたパネルのインデックスを確認し、それに応じたプログラミングできます。  
+ プログラムを[StatusBar コントロール](statusbar-control-windows-forms.md)コントロールをユーザーのクリックに応答する、内の case ステートメントを使用して、<xref:System.Windows.Forms.StatusBar.PanelClick>イベント。 イベント、クリックされたへの参照を含む引数 (パネル引数) に含まれる<xref:System.Windows.Forms.StatusBarPanel>します。 この参照を使用して、クリックされたパネルのインデックスを確認し、それに応じたプログラミングできます。  
   
 > [!NOTE]
 >  いることを確認、<xref:System.Windows.Forms.StatusBar>コントロールの<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティに設定されて`true`します。  
@@ -96,6 +96,6 @@ ms.locfileid: "54708325"
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [方法: ステータス バー パネルのサイズを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [チュートリアル: 実行時にステータス バー情報の更新](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [StatusBar コントロールの概要](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [方法: ステータス バー パネルのサイズを設定します。](how-to-set-the-size-of-status-bar-panels.md)
+- [チュートリアル: 実行時にステータス バー情報の更新](walkthrough-updating-status-bar-information-at-run-time.md)
+- [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

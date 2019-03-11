@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2284baf7057ec8c0c947325b1efeced7fdd4acbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eceff4380fa5965ef38fb98f4ead81b052da3460
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745923"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496925"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
@@ -44,7 +44,7 @@ ms.locfileid: "54745923"
 [/s[/r registryLocation]] [destinationStorename]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "54745923"
 |**/del**|証明書、CTL、および CRL を証明書ストアから削除します。|  
 |**/e** *encodingType*|証明書のエンコード タイプを指定します。 既定値は、`X509_ASN_ENCODING` です。|  
 |**/f** *dwFlags*|ストア オープン フラグを指定します。 これは **CertOpenStore** に渡される *dwFlags* パラメーターです。 既定値は CERT_SYSTEM_STORE_CURRENT_USER です。 このオプションは **/y** オプションを使用した場合にだけ有効です。|  
-|**/h** [**elp**]|このツールのコマンド構文とオプションを表示します。|  
+|**/h** **[elp]**|このツールのコマンド構文とオプションを表示します。|  
 |**/n** *nam*|追加、削除、または保存する証明書の共通名を指定します。 このオプションは証明書についてだけ使用できます。CTL または CRL については使用できません。|  
 |**/put**|証明書ストアに含まれている X.509 証明書、CTL、または CRL をファイルに保存します。 ファイルは X.509 形式で保存されます。 **/7** オプションを **/put** オプションと一緒に使用すると、ファイルを PKCS #7 形式で保存できます。 **/put** オプションの後ろには、**/c**、**/CTL**、**/CRL** のいずれかのオプションを指定する必要があります。 **/all** オプションは、**/put** オプションと共に指定できません。|  
 |**/r** *location*|システム ストアのレジストリの位置を指定します。 このオプションは、**/s** オプションを指定した場合にだけ有効です。 *location* には、次のいずれかを指定する必要があります。<br /><br /> -   証明書ストアが HKEY_CURRENT_USER キーに含まれる場合は `currentUser` を指定します。 既定値です。<br />-   証明書ストアが HKEY_LOCAL_MACHINE キーに含まれる場合は `localMachine` を指定します。|  
@@ -72,7 +72,7 @@ ms.locfileid: "54745923"
 |**/7**|出力証明書ストアを PKCS #7 オブジェクトとして保存します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Certmgr.exe は次の基本的な機能を実行します。  
   
 -   証明書、CTL、および CRL をコンソールに表示します。  

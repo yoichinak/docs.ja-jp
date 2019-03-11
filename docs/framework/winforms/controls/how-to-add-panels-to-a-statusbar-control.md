@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441737"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713289"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>方法: StatusBar コントロールにパネルを追加します。
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
+>  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
   
- 内のプログラミング可能な領域を[StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)コントロールのインスタンスから成る、<xref:System.Windows.Forms.StatusBarPanel>クラス。 追加機能を追加するには、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>クラス。  
+ 内のプログラミング可能な領域を[StatusBar コントロール](statusbar-control-windows-forms.md)コントロールのインスタンスから成る、<xref:System.Windows.Forms.StatusBarPanel>クラス。 追加機能を追加するには、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>クラス。  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>ステータス バー パネルを追加するには  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56441737"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [コレクション エディター ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [ステータス バー パネルのサイズを設定します。](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [チュートリアル: 実行時にステータス バー情報の更新](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [Windows フォームの StatusBar コントロール パネルのクリックを確認します。](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar コントロールの概要](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [方法: ステータス バー パネルのサイズを設定します。](how-to-set-the-size-of-status-bar-panels.md)
+- [チュートリアル: 実行時にステータス バー情報の更新](walkthrough-updating-status-bar-information-at-run-time.md)
+- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

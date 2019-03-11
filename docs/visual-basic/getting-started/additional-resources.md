@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636236"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675603"
 ---
 # <a name="additional-resources"></a>その他の技術情報
 
@@ -26,7 +26,7 @@ ms.locfileid: "54636236"
 |用語|定義|
 |----------|----------------|
 |[Visual Basic .NET 言語設計](https://github.com/dotnet/vblang)|Visual Basic .NET 言語設計に関する GitHub の公式リポジトリ。|
-|[Microsoft Visual Basic チーム ブログ](https://blogs.msdn.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
+|[Microsoft Visual Basic チーム ブログ](https://devblogs.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
 
 ### <a name="code-samples"></a>コード サンプル
 

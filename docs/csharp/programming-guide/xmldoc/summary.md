@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <summary> C# XML tag
 - summary C# XML tag
 ms.assetid: b4c43d92-2067-4eac-a59a-d32f5248c08b
-ms.openlocfilehash: 12898d5cd10d9ecca4ec0fd1f7d06be0761b57b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0e6408f1f45bb5f1406b4b1a7f6fe2cf543109e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493571"
 ---
 # <a name="summary-c-programming-guide"></a>\<summary> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -23,7 +23,7 @@ ms.locfileid: "56978554"
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  オブジェクトの概要。  
   

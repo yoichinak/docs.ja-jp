@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 3495a6c88d340342362d84d6ea3f12048d42b21f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7f82008d000bf0316b505bfc5d40e9e64b2685a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982155"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465194"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (C# プログラミング ガイド)
 ## <a name="syntax"></a>構文  
@@ -22,7 +22,7 @@ ms.locfileid: "56982155"
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `property-description`  
  プロパティの説明。  
   

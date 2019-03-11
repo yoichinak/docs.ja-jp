@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30b13c75907ad0bc4d6dbce6a3ecd07f1fbede11
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 99e1b2cb67bb434cc3c3770900c6189a4ab22242
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264435"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492440"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (アセンブリ登録ツール)
 
@@ -30,7 +30,7 @@ ms.locfileid: "48264435"
 regasm assemblyFile [options]
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 |パラメーター|説明|
 |---------------|-----------------|
@@ -52,7 +52,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Regasm.exe のコマンド行オプションでは大文字と小文字が区別されません。 オプションの一部を指定するだけで一意に識別できます。 たとえば、**/n** は **/nologo** と等価であり、**/t:** *outfile.tlb* は **/tlb:** *outfile.tlb* と等価です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **/regfile** オプションを使用すると、直接にレジストリを変更しなくても、レジストリ エントリを含む .reg ファイルを生成できます。 コンピューターのレジストリを更新するには、レジストリ エディター ツール (Regedit.exe) を使用して .reg ファイルをインポートします。 .reg ファイルには、ユーザー定義の登録機能で行われるレジストリの更新についての情報は含まれません。  **/regfile** オプションは、マネージド クラスのレジストリ エントリだけを生成します。  このオプションは、`TypeLibID` と `InterfaceID` のエントリは生成しません。
 

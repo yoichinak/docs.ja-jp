@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093945"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715686"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -228,7 +228,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework 4 から [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] またはそのポイント リリースのいずれかへのアプリの移行については、「[移行ガイド](~/docs/framework/migration-guide/index.md)」を参照してください。
 
-- .NET Framework のソース コードをオンラインで参照するには、「[.NET Framework Reference Source](https://referencesource.microsoft.com/)」をご覧ください。 この参照ソースは、[GitHub](https://github.com/Microsoft/referencesource) から入手することもできます。 [リファレンス ソースをダウンロード](https://referencesource.microsoft.com/download.html)してオフラインで表示したり、デバッグ中にソース (パッチや更新を含む) をステップ実行したりできます。 詳細については、ブログ記事「[A new look for .NET Reference Source (.NET Reference Source の新しい外観)](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)」を参照してください。
+- .NET Framework のソース コードをオンラインで参照するには、「[.NET Framework Reference Source](https://referencesource.microsoft.com/)」をご覧ください。 この参照ソースは、[GitHub](https://github.com/Microsoft/referencesource) から入手することもできます。 [リファレンス ソースをダウンロード](https://referencesource.microsoft.com/download.html)してオフラインで表示したり、デバッグ中にソース (パッチや更新を含む) をステップ実行したりできます。 詳細については、ブログ記事「[A new look for .NET Reference Source (.NET Reference Source の新しい外観)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

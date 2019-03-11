@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7822b9afa4b568563222d6096ea1b1ecc5d5ee0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702484"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377925"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 C# は、カプセル化、継承、ポリモーフィズムなど、オブジェクト指向プログラミングを完全にサポートします。  
@@ -54,7 +54,7 @@ C# は、カプセル化、継承、ポリモーフィズムなど、オブジ�
   
 -   [デリゲート](#Delegates)  
   
-##  <a name="Classes"></a> クラスとオブジェクト  
+## <a name="Classes"></a> クラスとオブジェクト  
  "*クラス*" という用語と "*オブジェクト*" という用語は同じ意味で使われる場合がありますが、実際には、クラスはオブジェクトの "*型*" を表すのに対し、オブジェクトはクラスの使用可能な "*インスタンス*" です。 そのため、オブジェクトを作成する操作は "*インスタンス化*" と呼ばれます。 設計図との対比を使って説明すると、クラスは設計図であり、オブジェクトはその設計図を基にした建築物です。  
   
  クラスを定義するコード例を次に示します。  
@@ -81,10 +81,10 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> クラス メンバー  
+### <a name="Members"></a> クラス メンバー  
  各クラスには、さまざまな "*クラス メンバー*" を含めることができます。クラス メンバーには、クラスのデータを記述するプロパティ、クラスの動作を定義するメソッド、異なるクラスやオブジェクト間で通信するためのイベントが含まれます。  
   
-####  <a name="Properties"></a> プロパティとフィールド  
+#### <a name="Properties"></a> プロパティとフィールド  
  フィールドとプロパティは、オブジェクトに格納されている情報を表します。 フィールドは、直接読み取ったり設定したりできるので変数と似ています。  
   
  フィールドを定義するコード例を次に示します。  
@@ -133,7 +133,7 @@ class SampleClass
   
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> メソッド  
+#### <a name="Methods"></a> メソッド  
  "*メソッド*" は、オブジェクトが実行できる処理です。  
   
  クラスのメソッドを定義するコード例を次に示します。  
@@ -165,7 +165,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [拡張メソッド](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> コンストラクター  
+#### <a name="Constructors"></a> コンストラクター  
  コンストラクターは、特定の型のオブジェクトを作成するときに自動的に実行されるクラス メソッドです。 コンストラクターは、通常、新しいオブジェクトのデータ メンバーを初期化します。 コンストラクターは、クラスの作成時に 1 回だけ実行できます。 また、コンストラクター内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 他のメソッドと同じように、コンストラクターにも複数のオーバーロードを作成できます。  
   
  クラスのコンストラクターを定義するコード例を次に示します。  
@@ -184,12 +184,12 @@ public class SampleClass
   
  「[コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)」。  
   
-####  <a name="Finalizers"></a> ファイナライザー  
+#### <a name="Finalizers"></a> ファイナライザー  
  ファイナライザーは、クラスのインスタンスを破棄するために使います。 .NET Framework では、アプリケーション内のマネージド オブジェクトのメモリの割り当てと解放は、ガベージ コレクターによって自動的に管理されます。 ただし、アプリケーションで作成されるアンマネージ リソースを適切にクリーンアップするために、ファイナライザーも必要になることがあります。 1 つのクラスに定義できるファイナライザーは 1 つだけです。  
   
  .NET Framework のファイナライザーおよびガベージ コレクションについて詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
   
-####  <a name="Events"></a> イベント  
+#### <a name="Events"></a> イベント  
  クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。  
   
 -   クラスでイベントを宣言するには、[event](../../../csharp/language-reference/keywords/event.md) キーワードを使います。  
@@ -198,7 +198,7 @@ public class SampleClass
   
 -   イベントをサブスクライブするには、`+=` 演算子を使用します。イベント サブスクリプションを解除するには、`-=` 演算子を使用します。  
   
-####  <a name="NestedClasses"></a> 入れ子になったクラス  
+#### <a name="NestedClasses"></a> 入れ子になったクラス  
  別のクラス内で定義されているクラスを "*入れ子になったクラス*" と呼びます。 既定では、入れ子になったクラスはプライベートです。  
   
 ```csharp  
@@ -217,7 +217,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> アクセス修飾子とアクセス レベル  
+### <a name="AccessModifiers"></a> アクセス修飾子とアクセス レベル  
  すべてのクラスおよびクラス メンバーでは、"*アクセス修飾子*" を使って、他のクラスに提供するアクセス レベルを指定できます。  
   
  次のアクセス修飾子を使用できます。  
@@ -233,7 +233,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
   
-###  <a name="InstantiatingClasses"></a> クラスのインスタンス化  
+### <a name="InstantiatingClasses"></a> クラスのインスタンス化  
  オブジェクトを作成するには、クラスをインスタンス化する (クラスのインスタンスを作成する) 必要があります。  
   
 ```csharp  
@@ -263,7 +263,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> 静的クラスとメンバー  
+### <a name="Static"></a> 静的クラスとメンバー  
  クラスの静的メンバーは、クラスのすべてのインスタンスで共有されるプロパティ、プロシージャ、またはフィールドです。  
   
  静的メンバーを定義するコード例を次に示します。  
@@ -285,7 +285,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  詳しくは、「[static](../../../csharp/language-reference/keywords/static.md)」をご覧ください。  
   
-###  <a name="AnonymousTypes"></a> 匿名型  
+### <a name="AnonymousTypes"></a> 匿名型  
  匿名型を使用すると、データ型のクラス定義を記述せずにオブジェクトを作成できます。 クラスは、コンパイラによって生成されます。 このクラスには使用可能な名前がなく、オブジェクトの宣言時に指定したプロパティが格納されます。  
   
  匿名型のインスタンスを作成するコード例を次に示します。  
@@ -298,7 +298,7 @@ var sampleObject =
   
  詳細については次を参照してください:[匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
-##  <a name="Inheritance"></a> 継承  
+## <a name="Inheritance"></a> 継承  
  継承を使用すると、他のクラスで定義されている動作を再利用、拡張、および変更する新しいクラスを作成できます。 メンバーが継承される側のクラスを "*基底クラス*" と呼び、メンバーを継承する側のクラスを "*派生クラス*" と呼びます。 ただし、C# のすべてのクラスは、.NET のクラス階層構造をサポートしてすべてのクラスに下位レベルのサービスを提供する <xref:System.Object> クラスを暗黙的に継承します。  
   
 > [!NOTE]
@@ -330,7 +330,7 @@ public abstract class B { }
   
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> メンバーのオーバーライド  
+### <a name="Overriding"></a> メンバーのオーバーライド  
  既定では、派生クラスは基底クラスのすべてのメンバーを継承します。 継承したメンバーの動作を変更する場合は、そのメンバーをオーバーライドする必要があります。 つまり、派生クラスに、メソッド、プロパティ、またはイベントの新しい実装を定義できます。  
   
  プロパティやメソッドのオーバーライド方法を制御するには、次の修飾子を使用します。  
@@ -342,7 +342,7 @@ public abstract class B { }
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|  
 |[new 修飾子](../../../csharp/language-reference/keywords/new-modifier.md)|基底クラスから継承されたメンバーを隠ぺいします。|  
   
-##  <a name="Interfaces"></a> インターフェイス  
+## <a name="Interfaces"></a> インターフェイス  
  インターフェイスは、クラスと同様にプロパティ、メソッド、およびイベントのセットを定義します。 ただし、クラスとは異なり、インターフェイスは実装を提供しません。 インターフェイスはクラスによって実装され、クラスとは別のエンティティとして定義されます。 インターフェイスを実装するクラスは、そのインターフェイスのあらゆる機能を定義に従って厳密に実装する必要があります。この点で、インターフェイスはコントラクトを表しています。  
   
  インターフェイスを定義するコード例を次に示します。  
@@ -372,7 +372,7 @@ class SampleClass : ISampleInterface
   
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> ジェネリック  
+## <a name="Generics"></a> ジェネリック  
  .NET Framework のクラス、構造体、インターフェイス、およびメソッドは、格納または使用できるオブジェクトの型を定義する "*型パラメーター*" を含むことができます。 ジェネリックの最も一般的な例として、コレクションがあります。コレクションには、その中に格納されるオブジェクトの型を指定できます。  
   
  ジェネリック クラスを定義するコード例を次に示します。  
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string";
   
 -   [ジェネリック](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> デリゲート  
+## <a name="Delegates"></a> デリゲート  
  "*デリゲート*" は、メソッド シグネチャを定義する型であり、互換性のあるシグネチャを持つ任意のメソッドへの参照を提供できます。 メソッドは、デリゲートを使用して起動する (呼び出す) ことができます。 デリゲートは、他のメソッドへの引数としてメソッドを渡すために使用されます。  
   
 > [!NOTE]

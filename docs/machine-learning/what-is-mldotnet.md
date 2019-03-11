@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250963"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466948"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET と Machine Learning の基本を理解する方法について
 
 ML.NET は無料、オープンソース、クロスプラットフォームの機械学習フレームワークです。機械学習のカスタム ソリューションを構築し、これを .NET アプリケーションに統合できるようになります。 ML.NET API では、既に備えている .NET スキルを使用して、.NET を離れることなく AI をアプリに組み込むことができます。
+
+> [!NOTE]
+> このドキュメントでは ML.NET が参照されていますが、これは現在プレビュー段階にあります。 内容は変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
 ## <a name="what-is-machine-learning"></a>機械学習とは
 

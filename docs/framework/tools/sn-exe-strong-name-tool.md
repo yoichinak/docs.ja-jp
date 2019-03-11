@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066390"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492635"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
@@ -40,7 +40,7 @@ ms.locfileid: "55066390"
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |オプション|説明|  
 |------------|-----------------|  

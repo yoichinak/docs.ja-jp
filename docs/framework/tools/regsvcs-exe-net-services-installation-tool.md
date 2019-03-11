@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc349e13aba84de8c266442e9be8130e5f8604c2
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466750"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET サービス インストール ツール)
 .NET サービス インストール ツールは、次のアクションを実行します。  
@@ -39,7 +39,7 @@ ms.locfileid: "56219777"
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  

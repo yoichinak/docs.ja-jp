@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 727e1deb859cf0f719f47b71129407b683978681
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201899"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677178"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -199,7 +199,7 @@ Console.WriteLine(x);
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-次に、最後の行を変更してコード修正を登録します。 この修正で、既存の宣言に `const` 修飾子を追加した結果の新しいドキュメントが作成されます。  
+次に、最後の行を変更してコード修正を登録します。 この修正で、既存の宣言に `const` 修飾子を追加した結果の新しいドキュメントが作成されます。
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -275,7 +275,7 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-診断で警告がトリガーされないようにするコード フラグメントすることで、このテスト用に新しいデータ行を作成することができます。 ソース コード フラグメントに対してトリガーされる診断がない場合、`VerifyCSharpDiagnostic` のこのオーバーロードは成功します。  
+診断で警告がトリガーされないようにするコード フラグメントすることで、このテスト用に新しいデータ行を作成することができます。 ソース コード フラグメントに対してトリガーされる診断がない場合、`VerifyCSharpDiagnostic` のこのオーバーロードは成功します。
 
 次に、`TestMethod2` をこのテストに置き換えて、診断を呼び出し、ソース コード フラグメントに対してコード修正を適用するようにします。
 
@@ -426,7 +426,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-また、参照型が正しく処理されません。 参照型に使用できる唯一の定数値は、文字列リテラルを許可する <xref:System.String?displayPropert=nameWIthType> の場合を除き、`null` です。 つまり、`const string s = "abc"` は有効ですが、`const object s = "abc"` は有効ではありません。 このコード スニペットで、次の条件を検証します。
+また、参照型が正しく処理されません。 参照型に使用できる唯一の定数値は、文字列リテラルを許可する <xref:System.String?displayProperty=nameWIthType> の場合を除き、`null` です。 つまり、`const string s = "abc"` は有効ですが、`const object s = "abc"` は有効ではありません。 このコード スニペットで、次の条件を検証します。
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +444,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 幸いにも、上記のすべてのバグは、ここで学んだテクニックを使って解決できます。
 
-最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの_直前_に `context.SemanicModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
+最初のバグを修正するには、まず **DiagnosticAnalyzer.cs** を開き、各ローカル宣言の初期化子が検査される foreach ループを見つけて、それらに定数値が割り当てられていることを確認します。 最初の foreach ループの_直前_に `context.SemanticModel.GetTypeInfo()` を呼び出し、宣言されたローカル宣言の型に関する詳細情報を取得します。
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
