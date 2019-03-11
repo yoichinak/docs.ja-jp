@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536331"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723167"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>方法: ファイルを検索するバック グラウンド スレッドを使用して、
-<xref:System.ComponentModel.BackgroundWorker>コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間です。 ただし、、<xref:System.Threading>を選択した場合、下位互換性と将来の使用の両方の名前空間は保持されます。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)します。  
+<xref:System.ComponentModel.BackgroundWorker>コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間です。 ただし、、<xref:System.Threading>を選択した場合、下位互換性と将来の使用の両方の名前空間は保持されます。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)します。  
   
- Windows フォームは、Windows フォームのネイティブな Win32 ウィンドウは本質的に、アパートメント スレッドが基づいているために、シングル スレッド アパートメント (STA) モデルを使用します。 STA モデルことを示します、任意のスレッドでウィンドウを作成できますが、作成すると、スレッドを切り替えることはできません、作成スレッドですべての関数呼び出しを行う必要があります。 Windows フォーム、外は、.NET Framework のクラスは、フリー スレッド モデルを使用します。 .NET Framework でのスレッドについては、次を参照してください。[スレッド処理](../../../../docs/standard/threading/index.md)します。  
+ Windows フォームは、Windows フォームのネイティブな Win32 ウィンドウは本質的に、アパートメント スレッドが基づいているために、シングル スレッド アパートメント (STA) モデルを使用します。 STA モデルことを示します、任意のスレッドでウィンドウを作成できますが、作成すると、スレッドを切り替えることはできません、作成スレッドですべての関数呼び出しを行う必要があります。 Windows フォーム、外は、.NET Framework のクラスは、フリー スレッド モデルを使用します。 .NET Framework でのスレッドについては、次を参照してください。[スレッド処理](../../../standard/threading/index.md)します。  
   
  STA モデルは、コントロールの作成のスレッドの外部から呼び出される必要があるコントロール上の任意のメソッドする必要がありますにマーシャ リングする (上で実行) が必要です、コントロールの作成のスレッド。 基本クラス<xref:System.Windows.Forms.Control>いくつかのメソッドを提供します (<xref:System.Windows.Forms.Control.Invoke%2A>、 <xref:System.Windows.Forms.Control.BeginInvoke%2A>、および<xref:System.Windows.Forms.Control.EndInvoke%2A>) この目的のためです。 <xref:System.Windows.Forms.Control.Invoke%2A> 同期メソッドの呼び出しです。<xref:System.Windows.Forms.Control.BeginInvoke%2A>は非同期メソッドの呼び出しを行います。  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ComponentModel.BackgroundWorker>
-- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [イベントベースの非同期パターンの概要](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
+- [イベントベースの非同期パターンの概要](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

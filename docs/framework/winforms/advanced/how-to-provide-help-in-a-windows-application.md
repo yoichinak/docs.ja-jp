@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738603"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724935"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>方法: Windows アプリケーションにヘルプを提供します。
 使用することができます、<xref:System.Windows.Forms.HelpProvider>ヘルプ ファイル内のヘルプ トピックを特定の Windows フォーム コントロールにアタッチするコンポーネント。 ヘルプ ファイルの形式には、HTML または HTMLHelp 1.x 以上を指定できます。  
@@ -53,10 +53,10 @@ ms.locfileid: "54738603"
 > [!IMPORTANT]
 >  クライアントから送信された情報は、アプリケーションで使用する前に必ずチェックしてください。 悪意のあるユーザーが、実行可能スクリプトや SQL ステートメントなどのコードの送信 (挿入) を試みる場合があります。 ユーザーからの入力を表示したり、データベースに格納したり、操作したりする前に、安全でない可能性のある情報が含まれていないかどうかを確認してください。 一般的な確認方法としては、ユーザーから入力を受け取ったときに、正規表現を使用して、"SCRIPT" などのキーワードを検索します。  
   
- 使用することも、 <xref:System.Windows.Forms.HelpProvider> Windows フォーム上のコントロールのヘルプ ファイルを表示する構成している場合でも、ポップアップのヘルプを表示するコンポーネント。 詳細については、「[方法 :ポップアップ ヘルプを表示](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)します。  
+ 使用することも、 <xref:System.Windows.Forms.HelpProvider> Windows フォーム上のコントロールのヘルプ ファイルを表示する構成している場合でも、ポップアップのヘルプを表示するコンポーネント。 詳細については、「[方法 :ポップアップ ヘルプを表示](how-to-display-pop-up-help.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ポップアップ ヘルプを表示します。](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [ツールヒントを使用したコントロールのヘルプ](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [Windows フォームでのヘルプの統合](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows フォーム](../../../../docs/framework/winforms/index.md)
+- [方法: ポップアップ ヘルプを表示します。](how-to-display-pop-up-help.md)
+- [ツールヒントを使用したコントロールのヘルプ](control-help-using-tooltips.md)
+- [Windows フォームでのヘルプの統合](integrating-user-help-in-windows-forms.md)
+- [Windows フォーム](../index.md)

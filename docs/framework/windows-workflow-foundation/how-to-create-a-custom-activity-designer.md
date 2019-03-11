@@ -2,12 +2,12 @@
 title: '方法: カスタム アクティビティ デザイナーを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466883"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716830"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>方法: カスタム アクティビティ デザイナーを作成します。
 
@@ -21,9 +21,9 @@ ms.locfileid: "57466883"
 
 ここでは、次の 2 つの手順の概要を説明します。
 
-1. 1 つ目の手順では、他のアクティビティを受け取るドロップ ゾーンを提供する <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成する方法を説明します。 この手順がに基づいて、[カスタム複合デザイナー - Workflow 項目 Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)サンプル。
+1. 1 つ目の手順では、他のアクティビティを受け取るドロップ ゾーンを提供する <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成する方法を説明します。 この手順がに基づいて、[カスタム複合デザイナー - Workflow 項目 Presenter](./samples/custom-composite-designers-workflow-item-presenter.md)サンプル。
 
-2. 2 つ目の手順では、含まれている要素のコレクションを編集するために必要な機能を提供する <xref:System.Activities.Presentation.WorkflowItemsPresenter> を使用してカスタム アクティビティ デザイナーを作成する方法を説明します。 この手順がに基づいて、[カスタム複合デザイナー - Workflow Items Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)サンプル。
+2. 2 つ目の手順では、含まれている要素のコレクションを編集するために必要な機能を提供する <xref:System.Activities.Presentation.WorkflowItemsPresenter> を使用してカスタム アクティビティ デザイナーを作成する方法を説明します。 この手順がに基づいて、[カスタム複合デザイナー - Workflow Items Presenter](./samples/custom-composite-designers-workflow-items-presenter.md)サンプル。
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>WorkflowItemPresenter を使用してドロップ ゾーンを含むカスタム アクティビティ デザイナーを作成するには
 
@@ -351,4 +351,4 @@ ms.locfileid: "57466883"
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [ワークフロー デザイン操作のカスタマイズ](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [ワークフロー デザイン操作のカスタマイズ](customizing-the-workflow-design-experience.md)
