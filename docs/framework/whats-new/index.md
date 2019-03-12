@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# .NET Framework の新機能 <a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
 この記事は、.NET Framework の次のバージョンにおける主な新機能と機能強化の概要を示します。
 
@@ -1572,8 +1572,6 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
      .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープン ソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub で CoreFx](https://github.com/dotnet/corefx) を参照してください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../../../docs/framework/get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
 
-[ページのトップへ](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 の新機能
@@ -1645,8 +1643,6 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
      このメソッドは、以前に <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> メソッドへの応答として <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> によって作成された参加リストで使用できます。 これは、`System.Transactions` に対して、トランザクションを MSDTC トランザクションに昇格させ、昇格可能参加リストを永続参加リストに "変換" するように要求します。 このメソッドが正常に完了すると、<xref:System.Transactions.IPromotableSinglePhaseNotification> インターフェイスが `System.Transactions` から参照されなくなり、その後の通知は指定された <xref:System.Transactions.ISinglePhaseNotification> インターフェイスに到着します。 問題の参加リストは、永続参加リストとして機能し、トランザクションのログ記録と復旧をサポートする必要があります。 詳細については、<xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType> を参照してください。 さらに、この参加リストは <xref:System.Transactions.ISinglePhaseNotification> もサポートする必要があります。  このメソッドは、<xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> の呼び出しの処理中に*のみ*呼び出すことができます。 そうでない場合は、<xref:System.Transactions.TransactionException> 例外がスローされます。
 
-[ページのトップへ](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 の新機能
@@ -1708,8 +1704,6 @@ Visual Studio 2013 で .NET Framework アプリをデバッグするときの改
 Visual Studio 2013 以降では、[Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) を使って、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリとデスクトップ アプリを最適化することができます。
 
 ASP.NET 4.5.1 の新機能については、「[ASP.NET and Web Tools for Visual Studio 2013 のリリース ノート](/aspnet/visual-studio/overview/2013/release-notes)」を参照してください。
-
-[ページのトップへ](#introduction)
 
 <a name="v45" />
 
