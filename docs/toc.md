@@ -197,6 +197,7 @@
 ### [.NET Core のプロジェクトの整理](core/porting/project-structure.md)
 ### [.NET Core への移植で役立つツール](core/porting/tools.md)
 ### [Windows 互換機能パックの使用](core/porting/windows-compat-pack.md)
+### [Windows フォーム プロジェクトを移植する](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [ソースから .NET Core をビルドする](core/build/index.md)
 ### [.NET Core の配布パッケージ](core/build/distribution-packaging.md)

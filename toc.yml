@@ -501,6 +501,21 @@ items:
         - name: C# 6.0 のドラフト仕様
           tocHref: /dotnet/csharp/language-reference/language-specification/
           topicHref: /dotnet/csharp/language-reference/language-specification/index
+        - name: C# 7.0 の言語提案
+          tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
+          topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
+        - name: C# 7.1 の言語提案
+          tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
+          topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
+        - name: C# 7.2 の言語提案
+          tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
+          topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
+        - name: C# 7.3 の言語提案
+          tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
+          topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
+        - name: C# 8.0 の言語提案
+          tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
+          topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
     - name: F# のガイド
       tocHref: /dotnet/fsharp/
       topicHref: /dotnet/fsharp/index
@@ -616,9 +631,9 @@ items:
       - name: チュートリアル
         tocHref: /dotnet/machine-learning/tutorials/
         topicHref: /dotnet/machine-learning/tutorials/index
-ms.openlocfilehash: ad992762872d2e2ef7454aba6c45f262aff33246
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e0bf4ffc8d6c451ab7ff97f3943d45facf94ae4a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857980"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715270"

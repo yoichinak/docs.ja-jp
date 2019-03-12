@@ -1,15 +1,8 @@
 ---
 title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
-author: blackdwarf
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170692"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
@@ -60,7 +53,7 @@ project.json および csproj 形式の比較については、「[project.json 
 
 ### <a name="common-issues"></a>一般的な問題
 
-- "No executable found matching command dotnet-migrate" (コマンド dotnet-migrate と一致する実行ファイルが見つかりません) というエラーが発生する場合:
+- 次のエラーが発生する場合:"No executable found matching command dotnet-migrate" (コマンド dotnet-migrate と一致する実行ファイルが見つかりません):
 
 `dotnet --version` を実行して使用しているバージョンを確認します。 [`dotnet migrate`](../tools/dotnet-migrate.md) には、.NET Core CLI RC3 以降が必要です。
 カレント ディレクトリまたは親ディレクトリに *global.json* ファイルがあり、`sdk` バージョンが古いバージョンに設定されている場合にこのエラーが発生します。
@@ -89,7 +82,7 @@ project.json および csproj 形式の比較については、「[project.json 
 
 これらの手順を実行すると、RTM .NET Core csproj 形式と完全に互換性のあるプロジェクトになります。
 
-古い csproj 形式から新しい形式に移行する前と後の例については、.NET ブログの記事「[Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/)」 (Visual Studio 2017 RC の更新 - .NET Core ツールの改善) を参照してください。
+古い csproj 形式から新しい形式に移行する前と後の例については、.NET ブログの記事「[Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/)」 (Visual Studio 2017 RC の更新 - .NET Core ツールの改善) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

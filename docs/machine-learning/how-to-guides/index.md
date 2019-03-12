@@ -4,6 +4,7 @@ description: カスタム AI ソリューションの作成と、.NET アプリ�
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET の機械学習に関するハウツー ガイド - ML.NET
 
 ML.NET ガイドの方法に関するセクションには、よく寄せられる質問に対する簡単な回答が記載されています。 場合によっては、見つけやすいように、記事が複数のセクションで表示されることもあります。
@@ -44,7 +45,7 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [ML.NET を使ってテキスト データに対するモデル トレーニングに特徴エンジニアリングを適用します。](train-model-textual-ml-net.md)
 
-## <a name="run"></a>実行 
+## <a name="run"></a>実行
 
 * [ML.NET パイプライン処理中の中間データ値を検査します。](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [PredictionFunction を使って一度に 1 つの予測を行います。](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>確率論的 (Infer.NET)
+## <a name="probabilistic-infernet"></a>確率論的 (Infer.NET)
 
 * [Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成します。](matchup-app-infer-net.md)
-
