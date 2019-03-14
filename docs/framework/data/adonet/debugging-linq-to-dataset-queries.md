@@ -23,9 +23,9 @@ Visual Studio のデバッグをサポートしている[!INCLUDE[linq_dataset](
   
  さらに、編集し、続行が型やで使用されている変数の値の変更をサポートしていません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメント。 この場合も、変更を元に戻すか、デバッグ セッションを中止して新たなセッションを開始するかを選択できます。  
   
- Visual c# で Visual Studio で、使うことはできませんエディット コンティニュを含むメソッドのコードに対して、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ Visual C# で Visual Studio で、使うことはできませんエディット コンティニュを含むメソッドのコードに対して、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
   
- Visual Studio で Visual basic で使えるエディット コンティニュで[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]を含むメソッドであっても、コード、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加または前にコードを削除することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントでは、行番号が変わる場合でも、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 デバッグのエクスペリエンス、Visual Basic 以外[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]前と同じコードまま[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]が導入されました。 変更、追加、または削除することはできません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]変更を適用するデバッグを停止する場合を除き、ただし、クエリします。  
+ Visual Studio で Visual Basic で使えるエディット コンティニュで[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]を含むメソッドであっても、コード、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加または前にコードを削除することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントでは、行番号が変わる場合でも、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 デバッグのエクスペリエンス、Visual Basic 以外[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]前と同じコードまま[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]が導入されました。 変更、追加、または削除することはできません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]変更を適用するデバッグを停止する場合を除き、ただし、クエリします。  
   
 ## <a name="see-also"></a>関連項目
 - [マネージド コードをデバッグする](/visualstudio/debugger/debugging-managed-code)
