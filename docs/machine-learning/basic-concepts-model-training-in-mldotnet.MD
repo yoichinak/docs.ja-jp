@@ -1,19 +1,21 @@
 ---
 title: ML.NET でのモデル トレーニングに関する基本的な概念
 description: この記事では、ML.NET での "*モデル トレーニング*" シナリオに関する基本概念について説明します。 よりシンプルなシナリオである "*既存モデルでの予測*" と関係のない概念も含まれます。
-ms.date: 02/13/2019
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303661"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675564"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET でのモデル トレーニングに関する基本的な概念
 
 この記事では、ML.NET での "*モデル トレーニング*" シナリオに関する基本概念について説明します。 よりシンプルなシナリオである "*既存モデルでの予測*" と関係のない概念も含まれます。
+
+この記事と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 ## <a name="model-training-concepts"></a>モデルのトレーニングの概念
 

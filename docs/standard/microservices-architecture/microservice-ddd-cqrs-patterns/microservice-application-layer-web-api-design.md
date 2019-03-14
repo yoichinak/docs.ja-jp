@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147497"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678658"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>マイクロサービス アプリケーション レイヤーと Web API を設計する
 
@@ -46,6 +46,6 @@ SOLID の詳細を取り上げた別のガイドがあります。 そのため�
 - **Steve Smith。new は接着剤である** \
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
->[!div class="step-by-step"]
->[前へ](nosql-database-persistence-infrastructure.md)
->[次へ](microservice-application-layer-implementation-web-api.md)
+> [!div class="step-by-step"]
+> [前へ](nosql-database-persistence-infrastructure.md)
+> [次へ](microservice-application-layer-implementation-web-api.md)

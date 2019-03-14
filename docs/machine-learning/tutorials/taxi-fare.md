@@ -3,22 +3,24 @@ title: 回帰ラーナーと ML.NET を使用して料金を予測する
 description: 回帰ラーナーと ML.NET を使用して料金を予測します。
 author: aditidugar
 ms.author: johalex
-ms.date: 02/08/2019
+ms.date: 03/05/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251093"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678396"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
+
+このチュートリアルでは、ML.NET を使用して、料金 (具体的にはニューヨーク市のタクシー運賃) を予測する[回帰モデル](../resources/glossary.md#regression)を構築する方法を示します。
 
 > [!NOTE]
 > このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
-このチュートリアルでは、ML.NET を使用して、料金 (具体的にはニューヨーク市のタクシー運賃) を予測する[回帰モデル](../resources/glossary.md#regression)を構築する方法を示します。
+このチュートリアルと関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]

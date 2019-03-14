@@ -1,17 +1,15 @@
 ---
 title: .NET Portability Analyzer - .NET
 description: .NET Portability Analyzer ツールを使って、さまざまな .NET の実装 (.NET Core、.NET Standard、UWP、Xamarin など) の間でのコードの移植性を評価する方法について説明します。
-author: blackdwarf
-ms.author: mairaw
 ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 515dd7a393d87811377aa5d9fb02de35943b6966
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205758"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717649"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -21,9 +19,9 @@ ms.locfileid: "44205758"
 
 * [.NET Core](../../core/index.md): モジュール型の設計で、side-by-side を採用しており、クロスプラットフォームのシナリオを対象としています。 side-by-side 機能により、他のアプリに影響を与えることなく新しい .NET Core バージョンを導入することができます。
 * [ASP.NET Core](/aspnet/core): .NET Core 上に構築された最新の Web フレームワークであり、開発者に .NET Core と同じメリットを提供します。
-* [ユニバーサル Windows プラットフォーム](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): .NET Native の静的コンパイルを使用することで、x64 および ARM マシンで動作する Windows ストア アプリのパフォーマンスが向上します。 
-* .NET Core + プラットフォーム拡張機能: .NET Core API と、WCF、ASP.NET Core、FSharp、Azure などの .NET エコシステム内のその他の API が含まれます。
-* .NET Standard + プラットフォーム拡張機能: .NET Standard API と、WCF、ASP.NET Core、FSharp、および Azure などの .NET エコシステム内のその他の API が含まれます。
+* [ユニバーサル Windows プラットフォーム](https://devblogs.microsoft.com/dotnet/net-native-performance/): .NET Native の静的コンパイルを使用することで、x64 および ARM マシンで動作する Windows ストア アプリのパフォーマンスが向上します。 
+* .NET Core とプラットフォーム拡張機能: .NET Core API と、WCF、ASP.NET Core、FSharp、Azure などの .NET エコシステム内のその他の API が含まれます。
+* .NET Standard とプラットフォーム拡張機能: .NET Standard API と、WCF、ASP.NET Core、FSharp、Azure などの .NET エコシステム内のその他の API が含まれます。
 
 ## <a name="how-to-use-portability-analyzer"></a>Portability Analyzer の使用方法
 

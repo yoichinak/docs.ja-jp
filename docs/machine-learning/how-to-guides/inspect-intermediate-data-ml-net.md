@@ -1,16 +1,21 @@
 ---
 title: ML.NET パイプライン処理中の中間データ値を検査する
 description: ML.NET 機械学習パイプラインの処理中に実際の中間データ値を検査する方法について説明します。
-ms.date: 01/30/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b3a554bf7cd88219a66f91a18b9d983bb91c0f0e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675011"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678645"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>ML.NET パイプライン処理中の中間データ値を検査する
+
+> [!NOTE]
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 実験中に、特定の時点のデータ処理結果を観察し、検証することが必要になる場合があります。 これは簡単ではありません。なぜなら、ML.NET の操作は、データの 'promise' であるオブジェクトの遅延構築だからです。
 

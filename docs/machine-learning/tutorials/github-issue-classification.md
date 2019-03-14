@@ -4,12 +4,12 @@ description: GitHub の問題を分類し、それを特定の領域に割り当
 ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471480"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
 
@@ -28,6 +28,8 @@ ms.locfileid: "56584292"
 
 > [!NOTE]
 > このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+このチュートリアルと、関連するサンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 ## <a name="github-issue-sample-overview"></a>GitHub の問題のサンプルの概要
 

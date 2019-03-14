@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220812"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675161"
 ---
 # <a name="deploying-an-interop-application"></a>相互運用アプリケーションの配置
 通常、相互運用アプリケーションには、.NET クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。 Visual Studio および [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] には、タイプ ライブラリを相互運用機能アセンブリにインポートして変換するためのツールが用意されています。詳細については、「[タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)」を参照してください。 相互運用アプリケーションを配置する方法には、次の 2 つがあります。  
@@ -38,8 +38,7 @@ ms.locfileid: "56220812"
 ### <a name="private-assemblies"></a>プライベート アセンブリ  
  プライベートに使用するアセンブリをインストールするには、アプリケーションの実行可能ファイルと、インポートされた COM 型を含む相互運用機能アセンブリの両方を同じディレクトリ構造にインストールする必要があります。 別個のアプリケーション ディレクトリに配置された Client1.exe と Client2.exe によってプライベートに使用される、署名のない相互運用機能アセンブリを次の図に示します。 この例の LOANLib.dll という相互運用機能アセンブリは、2 回インストールされています。  
   
- ![ディレクトリ構造と Windows レジストリ](media/comdeployprivate.gif "comdeployprivate")  
-プライベートに配置する場合のディレクトリ構造とレジストリ エントリ  
+ ![ディレクトリ構造と Windows レジストリ](./media/deploying-an-interop-application/com-private-deployment.gif "プライベート配置でのディレクトリ構造とレジストリ エントリ")  
   
  アプリケーションに関連付けられているすべての COM コンポーネントを、Windows レジストリにインストールする必要があります。 この図の Client1.exe と Client2.exe が別のコンピューターにインストールされている場合は、両方のコンピューターで COM コンポーネントを登録する必要があります。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221252"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677215"
 ---
 # <a name="interop-marshaling"></a>相互運用マーシャリング
 <a name="top"></a> 相互運用マーシャリングは、メソッド引数と戻り値によって、呼び出し中にマネージド メモリとアンマネージド メモリの間でデータを渡す方法を制御します。 相互運用マーシャリングは、共通言語ランタイムのマーシャリング サービスによって実行される、ランタイム アクティビティです。  
@@ -44,8 +44,7 @@ ms.locfileid: "56221252"
   
  プラットフォーム呼び出しと COM 相互運用はどちらも、必要な場合に、相互運用マーシャリングを使用して呼び出し元と呼び出し先との間でメソッド引数を正確に移動します。 次の図が示すように、プラットフォーム呼び出しメソッドの呼び出しはマネージド コードからアンマネージド コードにフローして、[コールバック関数](callback-functions.md)が関係していない限りその逆の方向にはフローしません。 プラットフォーム呼び出しの呼び出しはマネージド コードからアンマネージド コードにのみフローしますが、データは入出力パラメーターとして双方向にフローできます。 COM 相互運用のメソッド呼び出しは、どちらの方向にもフローできます。  
   
- ![プラットフォーム呼び出し](./media/interopmarshaling.png "interopmarshaling")  
-プラットフォーム呼び出しと COM 相互運用の呼び出しフロー  
+ ![プラットフォーム呼び出し](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "プラットフォーム呼び出しと COM 相互運用の呼び出しフロー")  
   
  最下位のレベルでは、どちらのメカニズムも同じ相互運用マーシャリング サービスを使用します。ただし、特定のデータ型は、COM 相互運用またはプラットフォーム呼び出しでのみサポートされます。 詳しくは、「[既定のマーシャリング動作](default-marshaling-behavior.md)」を参照してください。  
   
@@ -67,8 +66,7 @@ ms.locfileid: "56221252"
   
  クライアントとサーバーが同じアパートメント内にあるため、相互運用マーシャリング サービスはすべてのデータのマーシャリングを自動的に処理します。 次の図は、同じ COM スタイル アパートメント内のマネージド ヒープとアンマネージド ヒープの間で機能している、相互運用マーシャリング サービスを示しています。  
   
- ![相互運用マーシャリング](./media/interopheap.gif "interopheap")  
-同じアパートメントでのマーシャリングのプロセス  
+ ![マネージド ヒープとアンマネージド ヒープ間の相互運用マーシャリング](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "同じアパートメントのマーシャリング プロセス")  
   
  マネージド サーバーをエクスポートする予定の場合は、サーバーのアパートメントが COM クライアントによって決定されることに注意してください。 MTA 内で初期化された COM クライアントから呼び出されるマネージド サーバーは、スレッド セーフを確保する必要があります。  
   
@@ -85,8 +83,7 @@ ms.locfileid: "56221252"
   
  マネージド クライアントとアンマネージド サーバーが同じアパートメント内にあるとき、相互運用マーシャリング サービスはすべてのデータのマーシャリングを処理します。 ただし、クライアントとサーバーが異なるアパートメント内で初期化される場合は、COM マーシャリングも必要となります。 次の図は、アパートメント間の呼び出しの要素を示しています。  
   
- ![COM マーシャリング](./media/singleprocessmultapt.gif "singleprocessmultapt")  
-.NET クライアントと COM オブジェクト間でのアパートメント間の呼び出し  
+ ![COM マーシャリング](./media/interop-marshaling/single-process-across-multi-apartment.gif ".NET クライアントと COM オブジェクト間でのアパートメント間呼び出し")  
   
  アパートメント間のマーシャリングでは、次の操作を実行できます。  
   
@@ -111,14 +108,12 @@ ms.locfileid: "56221252"
   
  次の図は、相互運用マーシャリングと COM マーシャリングが、プロセスとホストの境界を越えて通信チャネルを提供する方法を示しています。  
   
- ![COM マーシャリング](./media/interophost.gif "interophost")  
-プロセス間のマーシャリング  
+ ![COM マーシャリング](./media/interop-marshaling/interop-and-com-marshaling.gif "プロセス間マーシャリング")  
   
 ### <a name="preserving-identity"></a>ID の保持  
  共通言語ランタイムは、マネージド参照とアンマネージド参照の ID を保持します。 次の図は、プロセスとホストの境界を越えている、直接アンマネージド参照 (上の行) と直接マネージド参照 (下の行) のフローを示しています。  
   
- ![COM 呼び出し可能ラッパーとランタイム呼び出し可能ラッパー](./media/interopdirectref.gif "interopdirectref")  
-プロセスとホストの境界を越えて渡される参照  
+ ![COM 呼び出し可能ラッパーとランタイム呼び出し可能ラッパー](./media/interop-marshaling/interop-direct-ref-across-process.gif "プロセスとホスト間で渡される参照")  
   
  この図では:  
   
@@ -134,7 +129,7 @@ ms.locfileid: "56221252"
 ### <a name="managed-remoting"></a>マネージド リモート処理  
  ランタイムは、プロセスとホストの境界を越えてマネージド オブジェクト間に通信チャネルを確立するために使用できる、マネージド リモート処理も提供します。 次の図に示すように、マネージド リモート処理は、通信コンポーネントの間のファイアウォールに対応できます。  
   
- ![SOAP または TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP または TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "SOAP または TcpChannel クラスを使用したファイアウォールを越えるリモート呼び出し")  
 SOAP または TcpChannel クラスを使用するファイアウォールを越えたリモート呼び出し  
   
  サービス コンポーネントと COM の間の呼び出しなど、一部のアンマネージド呼び出しは SOAP を介して伝達できます。  
@@ -159,7 +154,7 @@ SOAP または TcpChannel クラスを使用するファイアウォールを越
  [ページのトップへ](#top)  
   
 <a name="reference"></a>   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [ページのトップへ](#top)

@@ -4,28 +4,28 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971781"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675031"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
 イベント バスを使用するための最初のステップは、受信したいイベントにマイクロサービスをサブスクライブすることです。 これは、受信側マイクロサービスで行う必要があります。
 
-次の単純なコードは、各受信側マイクロサービスが (`Startup` クラスで) サービスを起動して必要なイベントにサブスクライブするために実装する必要があるコードを示しています。 このケースでは、`basket.api` マイクロサービスが `ProductPriceChangedIntegrationEvent` メッセージと `OrderStartedIntegrationEvent` メッセージにサブスクライブする必要があります。 
+次の単純なコードは、各受信側マイクロサービスが (`Startup` クラスで) サービスを起動して必要なイベントにサブスクライブするために実装する必要があるコードを示しています。 このケースでは、`basket.api` マイクロサービスが `ProductPriceChangedIntegrationEvent` メッセージと `OrderStartedIntegrationEvent` メッセージにサブスクライブする必要があります。
 
 たとえば、`ProductPriceChangedIntegrationEvent` イベントにサブスクライブした場合、買い物かごマイクロサービスは商品価格に加えられた変更を認識し、その商品がユーザーの買い物かごに入っている場合は変更に関する警告をユーザーに表示できるようになります。
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-このケースでは、送信元マイクロサービスが単純な CRUD マイクロサービスであるため、そのコードを Web API コントローラー内に直接配置しています。 
- 
-CQRS アプローチを使用する場合など、より高度なマイクロサービスでは、`CommandHandler` クラスの `Handle()` メソッド内に実装することもできます。 
+このケースでは、送信元マイクロサービスが単純な CRUD マイクロサービスであるため、そのコードを Web API コントローラー内に直接配置しています。
+
+CQRS アプローチを使用する場合など、より高度なマイクロサービスでは、`CommandHandler` クラスの `Handle()` メソッド内に実装することもできます。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>イベント バスに発行するときの原子性と回復性の設計
 
@@ -103,11 +103,11 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 前のアーキテクチャのセクションで説明したように、この問題に対処するためのアプローチはいくつかあります。
 
--   完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用する。
+- 完全な[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を使用する。
 
--   [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用する。
+- [トランザクション ログ マイニング](https://www.scoop.it/t/sql-server-transaction-log-mining)を使用する。
 
--   [送信トレイ パターン](http://gistlabs.com/2014/05/the-outbox/)を使用する。 これは、(ローカル トランザクションを拡張して) 統合イベントを格納するトランザクション テーブルです。
+- [送信トレイ パターン](http://gistlabs.com/2014/05/the-outbox/)を使用する。 これは、(ローカル トランザクションを拡張して) 統合イベントを格納するトランザクション テーブルです。
 
 このシナリオでは、完全なイベント ソーシング (ES) パターンを使用することが、*最良*とは言わないまでも適切なアプローチの 1 つです。 ただし、多くのアプリケーション シナリオでは、完全な ES システムを実装できない場合があります。 ES とは、現在の状態データを格納するのではなく、ドメイン イベントのみをトランザクション データベースに格納することを意味します。 ドメイン イベントのみを格納する方法には、システムの履歴を保持できる、過去の任意の時点におけるシステムの状態を確認できるなどの大きなメリットがあります。 しかし、完全な ES システムを実装するにはシステムの大部分を再構築する必要があり、それ以外にも多くの複雑さと要件が生じます。 たとえば、イベント ソーシング用に特別に作成されたデータベース ([イベント ストア](https://eventstore.org/)など) や、Azure Cosmos DB、MongoDB、Cassandra、CouchDB、RavenDB といったドキュメント指向のデータベースの使用が必要になる場合があります。 ES はこの問題に対する優れたアプローチですが、イベント ソーシングに精通している人以外には最も簡単なソリューションではありません。
 
@@ -125,19 +125,19 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 
 次のように、このプロセスは段階的に進みます。
 
-1.  アプリケーションによってローカル データベース トランザクションが開始されます。
+1. アプリケーションによってローカル データベース トランザクションが開始されます。
 
-2.  次に、ドメイン エンティティの状態を更新し、統合イベント テーブルにイベントを挿入します。
+2. 次に、ドメイン エンティティの状態を更新し、統合イベント テーブルにイベントを挿入します。
 
-3.  最後に、トランザクションがコミットされます。これで目的の原子性が与えられます。次に、
+3. 最後に、トランザクションがコミットされます。これで目的の原子性が与えられます。次に、
 
-4.  何らかの方法でイベントを発行します (次へ)。
+4. 何らかの方法でイベントを発行します (次へ)。
 
 イベント発行のステップを実装するときは、次の選択肢があります。
 
--   トランザクションをコミットした直後に統合イベントを発行し、別のローカル トランザクションを使用して、テーブル内のイベントを発行中とマークする。 その後、リモート マイクロサービスで問題が発生した場合は、テーブルを単なるアーティファクトとして使用して統合イベントを追跡し、格納された統合イベントに基づいて補正アクションを実行する。
+- トランザクションをコミットした直後に統合イベントを発行し、別のローカル トランザクションを使用して、テーブル内のイベントを発行中とマークする。 その後、リモート マイクロサービスで問題が発生した場合は、テーブルを単なるアーティファクトとして使用して統合イベントを追跡し、格納された統合イベントに基づいて補正アクションを実行する。
 
--   テーブルを一種のキューとして使用する。 独立したアプリケーション スレッドまたはプロセスが統合イベント テーブルのクエリを実行し、イベント バスにイベントを発行した後、ローカル トランザクションを使用してイベントを発行済みとマークする。
+- テーブルを一種のキューとして使用する。 独立したアプリケーション スレッドまたはプロセスが統合イベント テーブルのクエリを実行し、イベント バスにイベントを発行した後、ローカル トランザクションを使用してイベントを発行済みとマークする。
 
 図 6-22 は、1 番目のアプローチのアーキテクチャを示しています。
 
@@ -166,55 +166,55 @@ CQRS アプローチを使用する場合など、より高度なマイクロサ
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -303,7 +303,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **メッセージのべき等性に従う** <br/>
+- **メッセージのべき等性に従う** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>統合イベント メッセージの重複除去
@@ -324,69 +324,69 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **NServiceBus を使用するフォークされた eShopOnContainers (Particular Software)** <br/>
+- **NServiceBus を使用するフォークされた eShopOnContainers (Particular Software)** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **イベント駆動型メッセージング** <br/>
+- **イベント駆動型メッセージング** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard。復元性を目指したリファクタリング: 結合の評価** <br/>
+- **Jimmy Bogard。復元性を目指したリファクタリング: 結合の評価** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **発行-サブスクライブ チャンネル** <br/>
+- **発行-サブスクライブ チャンネル** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **境界コンテキスト間の通信** <br/>
+- **境界コンテキスト間の通信** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **最終的な整合性** <br/>
+- **最終的な整合性** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown。境界コンテキストを統合するための戦略** <br/>
+- **Philip Brown。境界コンテキストを統合するための戦略** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson。集約、イベント ソース、CQRS を使用したトランザクション マイクロサービスの開発 - パート 2** <br/>
+- **Chris Richardson。集約、イベント ソース、CQRS を使用したトランザクション マイクロサービスの開発 - パート 2** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson。イベント ソーシング パターン** <br/>
+- **Chris Richardson。イベント ソーシング パターン** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **イベント ソーシングの概要** <br/>
+- **イベント ソーシングの概要** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **イベント ストア データベース**。 公式サイト。 <br/>
+- **イベント ストア データベース**。 公式サイト。 <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen。マイクロサービス用のイベント ドリブン データ管理** <br/>
+- **Patrick Nommensen。マイクロサービス用のイベント ドリブン データ管理** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP 定理** <br/>
+- **CAP 定理** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **CAP 定理とは?** <br/>
+- **CAP 定理とは?** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **データ整合性の概要** <br/>
+- **データ整合性の概要** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling。CAP 定理: クラウドとインターネットでは "すべてが異なる" 理由** <br/>
+- **Rick Saling。CAP 定理: クラウドとインターネットでは "すべてが異なる" 理由** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer。12 年後の CAP: "規則" はどのように変わったか** <br/>
+- **Eric Brewer。12 年後の CAP: "規則" はどのように変わったか** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure Service Bus。ブローカー メッセージング: 重複データ検出**  <br/>
+- **Azure Service Bus。ブローカー メッセージング: 重複データ検出**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **信頼性ガイド** (RabbitMQ ドキュメント)* <br/>
+- **信頼性ガイド** (RabbitMQ ドキュメント)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure Service Bus。ブローカー メッセージング: 重複データ検出** <br/>
+- **Azure Service Bus。ブローカー メッセージング: 重複データ検出** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **信頼性ガイド** (RabbitMQ ドキュメント) <br/>
+- **信頼性ガイド** (RabbitMQ ドキュメント) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[前へ](rabbitmq-event-bus-development-test-environment.md)
->[次へ](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [前へ](rabbitmq-event-bus-development-test-environment.md)
+> [次へ](test-aspnet-core-services-web-apps.md)

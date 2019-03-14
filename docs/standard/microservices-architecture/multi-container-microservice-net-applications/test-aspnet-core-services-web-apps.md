@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 8461cd77661c96e59342fa5721c93f16ce515533
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5af1fa6163858ed80fe92118e85d149081aa6f53
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976188"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677748"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -17,13 +17,13 @@ ms.locfileid: "56976188"
 
 有効または無効な入力に基づくコントローラーの動作、および実行するビジネス操作の結果に基づくコントローラーの応答をテストする必要があります。 ただし、マイクロサービスに対してこれらの種類のテストを実行すべきです。
 
--   単体テスト。 これは、アプリケーションの個々のコンポーネントが期待どおりに動作することを確認します。 アサーションは、コンポーネント API をテストします。
+- 単体テスト。 これは、アプリケーションの個々のコンポーネントが期待どおりに動作することを確認します。 アサーションは、コンポーネント API をテストします。
 
--   統合テスト。 これは、コンポーネント間の相互作用が、データベースなどの外部成果物に対して期待どおりに動作することを確認します。 アサーションは、コンポーネント API や UI をテストしたり、データベース I/O やログ記録などの操作の副作用をテストしたりできます。
+- 統合テスト。 これは、コンポーネント間の相互作用が、データベースなどの外部成果物に対して期待どおりに動作することを確認します。 アサーションは、コンポーネント API や UI をテストしたり、データベース I/O やログ記録などの操作の副作用をテストしたりできます。
 
--   各マイクロサービスの機能テスト。 これは、ユーザーの観点から、アプリケーションが期待どおりに動作することを確認します。
+- 各マイクロサービスの機能テスト。 これは、ユーザーの観点から、アプリケーションが期待どおりに動作することを確認します。
 
--   サービス テスト。 これは、複数のサービスを同時にテストするなど、エンド ツー エンドのサービスのユース ケースがテストされることを確認します。 この種類のテストでは、まず環境を準備する必要があります。 この場合、サービスを開始することを意味します (たとえば、docker-compose up を使用します)。
+- サービス テスト。 これは、複数のサービスを同時にテストするなど、エンド ツー エンドのサービスのユース ケースがテストされることを確認します。 この種類のテストでは、まず環境を準備する必要があります。 この場合、サービスを開始することを意味します (たとえば、docker-compose up を使用します)。
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>ASP.NET Core Web API の単体テストの実装
 
@@ -42,18 +42,18 @@ public async Task Get_order_detail_success()
     //Arrange
     var fakeOrderId = "12";
     var fakeOrder = GetFakeOrder();
- 
+
     //...
 
     //Act
     var orderController = new OrderController(
-        _orderServiceMock.Object, 
-        _basketServiceMock.Object, 
+        _orderServiceMock.Object,
+        _basketServiceMock.Object,
         _identityParserMock.Object);
 
     orderController.ControllerContext.HttpContext = _contextMock.Object;
     var actionResult = await orderController.Detail(fakeOrderId);
- 
+
     //Assert
     var viewResult = Assert.IsType<ViewResult>(actionResult);
     Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
@@ -103,28 +103,28 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Steve Smith。コントローラーのテスト** (ASP.NET Core) <br/>
+- **Steve Smith。コントローラーのテスト** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Steve Smith。統合テスト** (ASP.NET Core) <br/>
+- **Steve Smith。統合テスト** (ASP.NET Core) <br/>
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **dotnet テストを使用した .NET Core での単体テスト** <br/>
+- **dotnet テストを使用した .NET Core での単体テスト** <br/>
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
--   **xUnit.net**。 公式サイト。 <br/>
+- **xUnit.net**。 公式サイト。 <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **単体テストの基本。** <br/>
+- **単体テストの基本。** <br/>
     [*https://docs.microsoft.com/visualstudio/test/unit-test-basics*](/visualstudio/test/unit-test-basics)
 
--   **Moq**。 GitHub リポジトリ。 <br/>
+- **Moq**。 GitHub リポジトリ。 <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**。 公式サイト。 <br/>
+- **NUnit**。 公式サイト。 <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
-### <a name="implementing-service-tests-on-a-multi-container-application"></a>マルチコンテナー アプリケーションでのサービス テストの実装 
+### <a name="implementing-service-tests-on-a-multi-container-application"></a>マルチコンテナー アプリケーションでのサービス テストの実装
 
 前述のとおり、マルチコンテナー アプリケーションをテストする際、すべてのマイクロサービスを Docker ホスト内やコンテナー クラスター内で実行している必要があります。 いくつかのマイクロサービスが関係する複数の操作を含むエンド ツー エンドのサービス テストでは、docker-compose up (または、オーケストレーターを使用している場合は相当するメカニズム) を実行して、Docker ホストでアプリケーション全体を展開して起動する必要があります。 アプリケーション全体とそのすべてのサービスが実行されると、エンド ツー エンドの統合テストと機能のテストを実行できます。
 
@@ -136,13 +136,13 @@ Compose アプリケーションが起動し実行されると、Visual Studio �
 
 参照アプリケーション (eShopOnContainers) のテストが再構築され、次の 4 つのカテゴリができました。
 
-1.  **単体**テスト。**{MicroserviceName}.UnitTests** プロジェクトに含まれている、従来の単純で定期的な単体テスト
+1. **単体**テスト。**{MicroserviceName}.UnitTests** プロジェクトに含まれている、従来の単純で定期的な単体テスト
 
-2.  **マイクロサービスの機能/統合テスト**。各マイクロサービスのインフラストラクチャに関するテスト ケースを含みます。他からは分離されていて、**{MicroserviceName}.FunctionalTests** プロジェクトに含まれています。
+2. **マイクロサービスの機能/統合テスト**。各マイクロサービスのインフラストラクチャに関するテスト ケースを含みます。他からは分離されていて、**{MicroserviceName}.FunctionalTests** プロジェクトに含まれています。
 
-3.  **アプリケーションの機能/統合テスト**。マイクロサービスの統合に集中します。複数のマイクロサービスを実行するテスト ケースが含まれています。 これらのテストはプロジェクト **Application.FunctionalTests** にあります。
+3. **アプリケーションの機能/統合テスト**。マイクロサービスの統合に集中します。複数のマイクロサービスを実行するテスト ケースが含まれています。 これらのテストはプロジェクト **Application.FunctionalTests** にあります。
 
-4.  **ロード テスト**。各マイクロサービスの応答時間に集中します。 これらのテストはプロジェクト **LoadTest** にあり、Visual Studio 2017 Enterprise Edition を必要とします。
+4. **ロード テスト**。各マイクロサービスの応答時間に集中します。 これらのテストはプロジェクト **LoadTest** にあり、Visual Studio 2017 Enterprise Edition を必要とします。
 
 図 6-25 に示すように、マイクロサービスごとの単体および統合テストは各マイクロサービスの test フォルダーに含まれており、アプリケーションのロード テストはソリューション フォルダーの test フォルダーの下に含まれています。
 
@@ -180,7 +180,7 @@ services:
   rabbitmq:
     ports:
       - "15672:15672"
-      - "5672:5672" 
+      - "5672:5672"
   sql.data:
     environment:
       - SA_PASSWORD=Pass@word
@@ -198,16 +198,16 @@ services:
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-ご覧のように、この docker-compose ファイルでは Redis、RabitMQ、SQL Server、および MongoDB のマイクロサービスのみが開始します。
+ご覧のように、これらの docker-compose ファイルでは Redis、RabbitMQ、SQL Server、および MongoDB のマイクロサービスのみが開始されます。
 
-### <a name="additionl-resources"></a>その他のリソース
+### <a name="additional-resources"></a>その他の技術情報
 
--   **テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
+- **テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
 
--   **ロード テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
+- **ロード テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) <br/>
     [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
 
->[!div class="step-by-step"]
->[前へ](subscribe-events.md)
->[次へ](background-tasks-with-ihostedservice.md)
+> [!div class="step-by-step"]
+> [前へ](subscribe-events.md)
+> [次へ](background-tasks-with-ihostedservice.md)

@@ -1,16 +1,21 @@
 ---
 title: ML.NET を使って値を予測する回帰モデルをトレーニングする
 description: ML.NET を使って値を予測する機械学習回帰モデルをトレーニングする方法を説明します。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092905"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673146"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>ML.NET を使って値を予測する回帰モデルをトレーニングする
+
+> [!NOTE]
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 通常、ML.NET でのモデルのトレーニングには 3 つの手順があります。
 

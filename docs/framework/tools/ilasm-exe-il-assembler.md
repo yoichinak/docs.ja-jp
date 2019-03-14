@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549211"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492584"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
@@ -34,7 +34,7 @@ IL アセンブラーは、ポータブル実行可能 (PE) ファイルを IL (
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
 | 引数 | 説明 |
 | -------- | ----------- |
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > *Ilasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、**/lis** は **/listing** と等価であり、**/res:** myresfile.res は **/resource:** myresfile.res と等価です。引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、**/output**:*file.ext* は **/output**=*file.ext* と等価です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 IL アセンブラーは、IL ジェネレーターを設計および実装するツールの販売元を支援します。 ツールとコンパイラの開発者は、*Ilasm.exe* を使用することで、PE ファイル形式での IL の出力にかかわることなく、IL とメタデータの生成に集中できます。
 

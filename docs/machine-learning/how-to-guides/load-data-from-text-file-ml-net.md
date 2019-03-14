@@ -1,16 +1,21 @@
 ---
 title: 機械学習の処理のためにテキスト ファイルからデータを読み込む - ML.NET
 description: ML.NET で機械学習モデルの構築、トレーニング、スコア付けに使用するデータを、テキスト ファイルから読み込む方法について説明します
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091709"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676292"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>機械学習の処理のためにテキスト ファイルからデータを読み込む - ML.NET
+
+> [!NOTE]
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 `TextLoader` を使用して、テキスト ファイルからデータを読み込みます。 データの列、型、およびテキスト ファイル内での位置を指定する必要があります。
 

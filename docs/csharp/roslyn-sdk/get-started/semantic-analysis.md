@@ -3,12 +3,12 @@ title: セマンティック解析の概要
 description: このチュートリアルでは、.NET コンパイラ SDK を使用したセマンティック解析の概要を説明します。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 669f11377edfa707133f7ad8df72117942d504fa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202575"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359628"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 

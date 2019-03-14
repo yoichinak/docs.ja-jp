@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836254"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360252"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 

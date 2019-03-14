@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371373"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788480"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows フォームの構成要素を追加します。
 
@@ -41,14 +41,14 @@ ms.locfileid: "57371373"
 
 | `key` 名 | 値 | 説明 |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 単一のパスで固定されたコントロールをスケーリングするかどうかを示します。 スケーリング、1 つを無効にするには"true"を渡すそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#Remarks)詳細についてはします。 |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 単一のパスで固定されたコントロールをスケーリングするかどうかを示します。 スケーリング、1 つを無効にするには"true"を渡すそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#remarks)詳細についてはします。 |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | アプリケーションが DPI 対応かどうかを示します。 Dpi 対応; をサポートするには、"PerMonitorV2"にキーを設定します。それ以外の場合、"false"に設定します。 DPI 対応は、オプトイン機能です。Windows フォームの高 DPI のサポートを利用するには、"PerMonitorV2"には、その値を設定する必要があります。 参照してください、[解説](#remarks)詳細についてはします。 |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.CheckedListBox>コントロールは、.NET Framework 4.7 で導入されたスケーリングとレイアウトの機能強化を活用します。 caling とレイアウトの改善をオプトアウトするには"true"それ以外の場合、"false"です。 |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、 <xref:System.Windows.Forms.DataGridView> .NET Framework 4.7 で導入された機能強化が拡大縮小とレイアウトを制御します。 DPI 対応; をオプトアウトするには"true""false"それ以外の場合。 |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | DPI スケール変更に関連するメッセージの受信をオプトアウトするには"true""false"それ以外の場合。 参照してください、[解説](#remarks)詳細についてはします。 |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Windows フォーム アプリケーションの DPI スケールが変更されたのため自動的にサイズを変更するかどうかを示します。 自動サイズ変更を有効にするのには"true"それ以外の場合、false です。 |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.Form>は単一のパスでスケーリングされます。 スケーリング、"true"を無効にする単一のパスそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#Remarks)詳細についてはします。 |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.MonthCalendar>コントロールが単一のパスでスケーリングします。 スケーリング、"true"を無効にする単一のパスそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#Remarks)詳細についてはします。 |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.Form>は単一のパスでスケーリングされます。 スケーリング、"true"を無効にする単一のパスそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#remarks)詳細についてはします。 |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.MonthCalendar>コントロールが単一のパスでスケーリングします。 スケーリング、"true"を無効にする単一のパスそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#remarks)詳細についてはします。 |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.ToolStrip>コントロールは、.NET Framework 4.7 で導入されたスケーリングとレイアウトの機能強化を活用します。 DPI 対応; をオプトアウトするには"true""false"それ以外の場合。 |
 
 ### <a name="child-elements"></a>子要素
@@ -61,7 +61,7 @@ ms.locfileid: "57371373"
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | 新しい Windows フォーム アプリケーションの機能のサポートを構成します。 |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> 「解説」
+## <a name="remarks"></a>Remarks
 
 .NET Framework 4.7 を使用すれば、.NET Framework の最近のリリースで追加された機能が利用できる Windows フォームのアプリケーションを、`<System.Windows.Forms.ApplicationConfigurationSection>` 要素で構成できます。
 
@@ -96,6 +96,7 @@ Windows フォームの高 DPI サポートの概要については、次を参�
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 通常、オプトアウトする特定の機能をプログラムで処理することを選択したためです。
 
 Windows フォーム アプリケーションの高 DPI サポートの利用の詳細については、次を参照してください。 [Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)します。

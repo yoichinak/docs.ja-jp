@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 2a8e0ad97f2ad6b4645fb493b5148667a2830ec8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28f5a5148b39b60d69fecc8bf1273445ebad4953
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145268"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675018"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -92,8 +92,8 @@ public abstract class ValueObject
         return GetAtomicValues()
          .Select(x => x != null ? x.GetHashCode() : 0)
          .Aggregate((x, y) => x ^ y);
-    }        
-    // Other utilility methods
+    }
+    // Other utility methods
 }
 ```
 
@@ -133,7 +133,7 @@ public class Address : ValueObject
 
 ご覧のように、Address のこの値オブジェクト実装では ID が与えられません。そのため、Address クラスでも、ValueObject クラスでも ID フィールドがありません。
 
-Entity Framework で使用するクラスに ID フィールドを置かないことは、EF Core 2.0 までは不可能でした。ID のない値オブジェクトの実装が大幅に改善されます。 これについては次のセクションで説明します。 
+Entity Framework で使用するクラスに ID フィールドを置かないことは、EF Core 2.0 までは不可能でした。ID のない値オブジェクトの実装が大幅に改善されます。 これについては次のセクションで説明します。
 
 不変である値オブジェクトは読み取り専用 (get-only プロパティなど) にすべきであるという意見が出るかもしれませんが、そのとおりです。 しかしながら、値オブジェクトは通常、シリアル化/逆シリアル化されてメッセージ キューを通過します。読み取り専用であれば、デシリアライザーによる値の割り当てが停止します。そのため、十分に実用的な範囲で読み取り専用になるプライベート セットとして残します。
 
@@ -150,9 +150,9 @@ eShopOnContainers の初期バージョン (.NET Core 1.1) では、EF Core イ�
 ```csharp
 // Old approach with EF Core 1.1
 // Fluent API within the OrderingContext:DbContext in the Infrastructure project
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration) 
+void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA); 
+    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
 
     addressConfiguration.Property<int>("Id")  // Id is a shadow property
         .IsRequired();
@@ -192,7 +192,7 @@ eShopOnContainers では、OnModelCreating() メソッド内の OrderingContext.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
-// 
+//
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
     modelBuilder.ApplyConfiguration(new ClientRequestEntityTypeConfiguration());
@@ -206,8 +206,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 次のコードでは、Order エンティティについて永続化インフラストラクチャが定義されています。
 
 ```csharp
-// Part of the OrderEntityTypeConfiguration.cs class 
-// 
+// Part of the OrderEntityTypeConfiguration.cs class
+//
 public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 {
     orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
@@ -220,7 +220,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
     orderConfiguration.OwnsOne(o => o.Address);
 
     orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    
+
     //...Additional validations, constraints and code...
     //...
 }
@@ -312,7 +312,7 @@ public class Address
 - **Martin Fowler。ValueObject パターン** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Eric Evans。Domain-Driven Design: Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) \
+- **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) \
   [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 - **Vaughn Vernon。ドメイン駆動型設計の実装** (書籍、値オブジェクトについての記載あり) \
@@ -330,6 +330,6 @@ public class Address
 - **Address クラス。** eShopOnContainers の値オブジェクト クラスのサンプル。 \
   [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
 
->[!div class="step-by-step"]
->[前へ](seedwork-domain-model-base-classes-interfaces.md)
->[次へ](enumeration-classes-over-enum-types.md)
+> [!div class="step-by-step"]
+> [前へ](seedwork-domain-model-base-classes-interfaces.md)
+> [次へ](enumeration-classes-over-enum-types.md)

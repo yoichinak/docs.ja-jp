@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828515"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678801"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -52,7 +52,7 @@ ms.locfileid: "55828515"
 
 通常、コンテナーは、マイクロサービス アーキテクチャと組み合わせて使用されます。 コンテナーは、任意のアーキテクチャ パターンに従う Web アプリやサービスをコンテナー化するためにも使用できます。 Windows コンテナーで .NET Framework を使用できますが、モジュール方式で軽量である .NET Core はコンテナーに適しています。 コンテナーを作成して展開する場合、そのイメージのサイズは .NET Framework より .NET Core の方がはるかに小さくなります。 また、クロスプラットフォームであるため、Linux Docker コンテナーなどにサーバー アプリを展開することができます。
 
-Docker コンテナーは、オンプレミスの Linux または Windows インフラストラクチャ、または [Azure Container Service](https://azure.microsoft.com/services/container-service/) などのクラウド サービスでホストできます。 Azure Container Service は、コンテナーベースのアプリケーションの管理、調整、およびスケールをクラウドで行うことができます。
+Docker コンテナーは、オンプレミスの Linux または Windows インフラストラクチャ、または [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) などのクラウド サービスでホストできます。 Azure Kubernetes Service は、コンテナーベースのアプリケーションの管理、調整、およびスケールをクラウドで行うことができます。
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>高パフォーマンスでスケーラブルなシステムの必要性
 
@@ -77,7 +77,7 @@ Docker コンテナーは、オンプレミスの Linux または Windows イン
 ライブラリは、短期間で .NET Standard を採用しています。 .NET Standard を使用すると、.NET Core を含め、すべての .NET 実装全体でコードを共有できます。 .NET Standard 2.0 を使用すれば、さらに簡単です。
 
 - API サーフェスがはるかに大きくなりました。 
-- .NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard/.NET Core プロジェクトは .NET Framework ライブラリを参照できます。 互換モードの詳細については、「[Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)」(.NET Standard 2.0 のお知らせ) を参照してください。
+- .NET Framework 互換モードが導入されました。 この互換モードにより、.NET Standard/.NET Core プロジェクトは .NET Framework ライブラリを参照できます。 互換モードの詳細については、「[Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/)」(.NET Standard 2.0 のお知らせ) を参照してください。
 
 そのため、ライブラリまたは NuGet パッケージが、.NET Standard/.NET Core で使用できないテクノロジを使用している場合にのみ、.NET Framework を使用する必要があります。
 

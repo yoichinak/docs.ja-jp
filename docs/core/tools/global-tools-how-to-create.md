@@ -4,12 +4,12 @@ description: グローバル ツールを作成する方法について説明し
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826422"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677865"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ dotnet run -- hello from the bot
 
 アプリケーションをパッケージ化してグローバル ツールとして配布する前に、プロジェクト ファイルを変更する必要があります。 `botsay.csproj` ファイルを開き、3 つの新しい XML ノードを `<Project><PropertyGroup>` ノードに追加します。
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [必須] アプリケーションがグローバル ツールとしてインストールされるようにパッケージ化されることを示します。
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [省略可能] ツールの代替名。指定しない場合、プロジェクト ファイル名に従ってツールのコマンド名が付けられます。 1 つのパッケージに複数のツールを含めることができます。一意のわかりやすい名前を選択すると、同じパッケージ内の他のツールと区別しやすくなります。
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [省略可能] NuGet パッケージが生成される場所。 NuGet パッケージは、.NET Core CLI グローバル ツールがツールのインストールに使用するパッケージです。
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 `botsay.1.0.0.nupkg` ファイルは、`botsay.csproj` ファイルの `<PackageOutputPath>` XML 値で識別されるフォルダー (この例では `./nupkg` フォルダー) に作成されます。 これにより、インストールとテストが簡単になります。 ツールを公開する場合は、[https://www.nuget.org](https://www.nuget.org) にアップロードしてください。NuGet でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドの `--global` オプションを使用してツールのユーザー全体のインストールを実行できます。
 
-パッケージを用意できたので、そのパッケージからツールをインストールします。 
+パッケージを用意できたので、そのパッケージからツールをインストールします。
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay

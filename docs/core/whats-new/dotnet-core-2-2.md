@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679778"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677267"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 の新機能
 
@@ -28,9 +28,9 @@ ms.locfileid: "54679778"
 
 **ランタイム サービスでのイベントの処理**
 
-GC、JIT、ThreadPool などのランタイム サービスがどのようにアプリケーションで使われているのか監視して、それがアプリケーションに与えている影響を把握したい場合がよくあります。 Windows システムでは、これは通常、現在のプロセスの ETW イベントを監視することによって行われます。 これは引き続き正常に動作しますが、権限の低い環境内、または Linux や macOS 上で実行している場合は、常に ETW を使えるとは限りません。  
+GC、JIT、ThreadPool などのランタイム サービスがどのようにアプリケーションで使われているのか監視して、それがアプリケーションに与えている影響を把握したい場合がよくあります。 Windows システムでは、これは通常、現在のプロセスの ETW イベントを監視することによって行われます。 これは引き続き正常に動作しますが、権限の低い環境内、または Linux や macOS 上で実行している場合は、常に ETW を使えるとは限りません。 
 
-.NET Core 2.2 以降では、<xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> クラスを使って CoreCLR イベントを使えるようになりました。 これらのイベントでは、GC、JIT、ThreadPool、および相互運用などのランタイム サービスの動作が説明されます。 これらは、CoreCLR ETW プロバイダーの一部と同じイベントです。  このため、アプリケーションでは、これらのイベントを使うかトランスポート機構を使って、それらをテレメトリ集計サービスに送信できます。 次のコード サンプルでイベントをサブスクライブする方法を確認できます。
+.NET Core 2.2 以降では、<xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> クラスを使って CoreCLR イベントを使えるようになりました。 これらのイベントでは、GC、JIT、ThreadPool、および相互運用などのランタイム サービスの動作が説明されます。 これらは、CoreCLR ETW プロバイダーの一部として公開されるものと同じイベントです。  このため、アプリケーションでは、これらのイベントを使うかトランスポート機構を使って、それらをテレメトリ集計サービスに送信できます。 次のコード サンプルでイベントをサブスクライブする方法を確認できます。
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - **第 2 階層**: 頻繁に実行されるメソッドに対して、最適化されたコードを生成します。 コンパイルの第 2 階層は、パフォーマンスの向上と並行して実行されます。
 
-階層型コンパイルによって得られるパフォーマンスの向上について詳しくは、「[Announcing .NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/)」(.NET Core 2.2 Preview 2 の発表) をご覧ください。 
+階層型コンパイルによって得られるパフォーマンスの向上について詳しくは、「[Announcing .NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)」(.NET Core 2.2 Preview 2 の発表) をご覧ください。
 
 .NET Core 2.2 Preview 2 では、階層型コンパイルが既定で有効になっていました。 しかし、階層型コンパイルを既定で有効にする準備はまだ整っていないと判断されました。 このため .NET Core 2.2 では、階層型コンパイルはオプトイン機能のままとなります。 階層型コンパイルに対するオプトインについて詳しくは、「[.NET Core 2.1 の新機能](dotnet-core-2-1.md)」の「[JIT コンパイラの機能強化](dotnet-core-2-1.md#jit-compiler-improvements)」をご覧ください。
 

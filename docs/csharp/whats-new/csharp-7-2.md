@@ -2,17 +2,17 @@
 title: C# 7.2 の新機能
 description: C# 7.2 の新機能の概要。
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148176"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673224"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 の新機能
 
 C# 7.2 は、便利な機能が多数追加された、もう 1 つのポイント リリースです。
-このリリースのテーマの 1 つは、不要なコピーや割り当てを回避して、さまざまな値の型の操作をより効率的に行うことです。 
+このリリースのテーマの 1 つは、不要なコピーや割り当てを回避して、さまざまな値の型の操作をより効率的に行うことです。
 
 他の機能も、小さくても、あると助かる機能です。
 
@@ -48,7 +48,7 @@ C# 7.2 では[言語バージョンの選択](../language-reference/configure-la
 
 ## <a name="leading-underscores-in-numeric-literals"></a>数値リテラルでの先頭のアンダースコア (_)
 
-C# 7.0 の桁区切り記号のサポートの実装では、`_` をリテラル値の最初の文字にすることができませんでした。 16 進とバイナリの数値リテラルの先頭に `_` を使用できるようになりました。 
+C# 7.0 の桁区切り記号のサポートの実装では、`_` をリテラル値の最初の文字にすることができませんでした。 16 進とバイナリの数値リテラルの先頭に `_` を使用できるようになりました。
 
 次に例を示します。
 

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5d338834724c3c5733f2a8a3de1b236e270d28d2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480089"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677436"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>単純なデータ ドリブン CRUD マイクロサービスの作成
 
@@ -33,7 +33,7 @@ ms.locfileid: "55480089"
 
 クラウドまたはオンプレミスでデータベースをプロビジョニングしなくてもすべての依存関係を稼働させることができるので、Docker コンテナー内の SQL Server のようなデータベース サーバーの実行は開発環境に適しています。 これは、統合テストの実行時にとても便利です。 ただし運用環境では、コンテナーでデータベース サーバーを実行すると、通常は高可用性が実現されないため、このアプローチはお勧めしません。 Azure の運用環境では、Azure SQL DB、または高可用性と高スケーラビリティを提供できるその他のデータベース テクノロジを使用することをお勧めします。 たとえば、NoSQL アプローチでは、CosmosDB を選択できます。
 
-最後に、Dockerfile と docker-compose.yml メタデータ ファイルを編集して、このコンテナーのイメージの作成方法 (使用される基本イメージに加えて、内部および外部の名前と TCP ポートなどの設計設定) を構成できます。 
+最後に、Dockerfile と docker-compose.yml メタデータ ファイルを編集して、このコンテナーのイメージの作成方法 (使用される基本イメージに加えて、内部および外部の名前と TCP ポートなどの設計設定) を構成できます。
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>ASP.NET Core での単純な CRUD マイクロサービスの実装
 
@@ -100,9 +100,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-追加の `DbContext` 実装も使用できます。 たとえば、サンプルの Catalog.API マイクロサービスには `CatalogContextSeed` という名前の 2 番目の `DbContext` があり、データベースに初めてアクセスしようとしたときにサンプル データが自動的に設定されます。 このメソッドは、デモ データと自動テストのシナリオにも役立ちます。 
+追加の `DbContext` 実装も使用できます。 たとえば、サンプルの Catalog.API マイクロサービスには `CatalogContextSeed` という名前の 2 番目の `DbContext` があり、データベースに初めてアクセスしようとしたときにサンプル データが自動的に設定されます。 このメソッドは、デモ データと自動テストのシナリオにも役立ちます。
 
-`DbContext` 内で、`OnModelCreating` メソッドを使用し、オブジェクト/データベース エンティティのマッピングとその他の [EF 機能拡張ポイント](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)をカスタマイズします。
+`DbContext` 内で、`OnModelCreating` メソッドを使用し、オブジェクト/データベース エンティティのマッピングとその他の [EF 機能拡張ポイント](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)をカスタマイズします。
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Web API コントローラーからのデータのクエリ
 
@@ -116,7 +116,7 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context, 
+    public CatalogController(CatalogContext context,
                              IOptionsSnapshot<CatalogSettings> settings,
                              ICatalogIntegrationEventService catalogIntegrationEventService)
     {
@@ -131,7 +131,7 @@ public class CatalogController : ControllerBase
     [HttpGet]
     [Route("[action]")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
                                            [FromQuery]int pageIndex = 0)
 
     {
@@ -150,7 +150,7 @@ public class CatalogController : ControllerBase
             pageIndex, pageSize, totalItems, itemsOnPage);
 
         return Ok(model);
-    } 
+    }
     //...
 }
 ```
@@ -253,19 +253,19 @@ catalog.api:
     - "5101:80"
 ```
 
-ソリューション レベルでの docker-compose.yml ファイルは、プロジェクトまたはマイクロサービス レベルの構成ファイルよりも柔軟性が高いだけでなく、docker-compose ファイルで宣言されている環境変数を Azure DevOps Services Docker デプロイ タスクからの値のようなデプロイ ツールで設定された値でオーバーライドするとセキュリティが向上します。 
+ソリューション レベルでの docker-compose.yml ファイルは、プロジェクトまたはマイクロサービス レベルの構成ファイルよりも柔軟性が高いだけでなく、docker-compose ファイルで宣言されている環境変数を Azure DevOps Services Docker デプロイ タスクからの値のようなデプロイ ツールで設定された値でオーバーライドするとセキュリティが向上します。
 
 最後に、前のコード例の ConfigureServices メソッドで示されているように、構成 \["ConnectionString"\] を使用してコードから値を取得できます。
 
 ただし、運用環境では、接続文字列などのシークレットを格納する方法について、追加の方法を調べることが必要な場合があります。 アプリケーション シークレットを管理する優れた方法は [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) を使用することです。
 
-Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり<span class="underline">します</span>。
+Azure Key Vault は、暗号化キーと、クラウド アプリケーションやサービスで使用されるシークレットを保管したり、保護したりするのに役立ちます。 API キー、接続文字列、パスワードなど、厳重に管理するあらゆるものがシークレットです。厳重な管理としては、使用を記録したり、有効期限を設定したり、アクセスを管理したり*します*。
 
 Azure Key Vault を利用することで、誰にも知らせる必要なく、アプリケーション シークレットの使用を非常に細かく制御できます。 シークレットは一定の周期で再利用し、開発や運用を妨げることなくセキュリティを強化できます。
 
 アプリケーションで Azure Key Vault を使用するには、組織の Active Directory に登録する必要があります。
 
-詳細については、<span class="underline">Azure Key Vault の概念に関するドキュメント</span>をご覧いただけます。
+詳細については、*Azure Key Vault の概念に関するドキュメント*をご覧いただけます。
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>ASP.NET Web API でのバージョン管理の実装
 
@@ -305,7 +305,7 @@ public class CatalogController : ControllerBase
 - **Roy Fielding。バージョン管理、ハイパーメディア、REST** \
   [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API からの Swagger 記述メタデータの生成 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>ASP.NET Core Web API からの Swagger 記述メタデータの生成
 
 [Swagger](https://swagger.io/) は一般に使用されるオープン ソース フレームワークであり、RESTful API の設計、構築、文書化、使用に役立つツールの大規模なエコシステムによってサポートされています。 API 記述メタデータ ドメインの標準になりつつあります。 Swagger 記述メタデータを任意の種類のマイクロサービス (次のセクションで説明するデータ ドリブン マイクロサービスまたはより高度なドメイン ドリブン マイクロサービス) と共に含める必要があります。
 
@@ -333,9 +333,9 @@ API 用の Swagger メタデータを生成する主な理由は次のとおり�
 
 Swagger のメタデータは、Microsoft Flow、PowerApps、Azure Logic Apps が API の使用方法と API への接続方法を理解するために使用するものです。
 
-機能 API のヘルプ ページのフォームでは、ASP.NET Core REST API アプリケーションの Swagger メタデータ生成はいくつかの方法で自動化でき、<span class="underline">swagger-ui</span> によって異なります。
+機能 API のヘルプ ページのフォームでは、ASP.NET Core REST API アプリケーションの Swagger メタデータ生成はいくつかの方法で自動化でき、*swagger-ui* によって異なります。
 
-最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnCntainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドで取り上げますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
+最もよく知られている方法はおそらく、[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) です。これは現在、[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) で使用されています。これについてはこのガイドで取り上げますが、[NSwag](https://github.com/RSuter/NSwag) を使用するという選択肢もあります。その場合、Swagger または OpenAPI の仕様から、さらには [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) を使用し、コントローラーを含む .dll をスキャンするという方法によって、Typescript、C\# API クライアント、C\# コントローラーを生成できます。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Swashbuckle NuGet パッケージで API Swagger メタデータの生成を自動化する方法
 
@@ -402,17 +402,17 @@ public class Startup
 
 ```url
   http://<your-root-url>/swagger/v1/swagger.json
-  
+
   http://<your-root-url>/swagger/
 ```
 
-http://\<your-root-url\>/swagger のような URL に対して Swashbuckle で作成された生成済みの UI を前に参照しました。 図 6-9 では、API メソッドをテストする方法も確認できます。
+`http://<your-root-url>/swagger` のような URL に対して Swashbuckle で作成された生成済みの UI を前に参照しました。 図 6-9 では、API メソッドをテストする方法も確認できます。
 
 ![Swagger UI の API 詳細画面に応答のサンプルが表示されています。実際の API を実行する際に利用でき、開発者にとって検出に役立ちます。](./media/image10.png)
 
 **図 6-9**。 カタログ/アイテム API メソッドをテストする Swashbuckle UI
 
-図 6-10 は、[Postman](https://www.getpostman.com/) を使用して \<your-root-url\>/swagger/v1/swagger.json を要求したときに eShopOnContainers マイクロサービス (これは、ツールが下で使用するものです) から生成された Swagger JSON メタデータを示しています。
+図 6-10 は、[Postman](https://www.getpostman.com/) を使用して `http://<your-root-url>/swagger/v1/swagger.json` を要求したときに eShopOnContainers マイクロサービス (これは、ツールが表面下で使用するものです) から生成された Swagger JSON メタデータを示しています。
 
 ![Swagger JSON メタデータを示す Postman UI のサンプル](./media/image11.png)
 
@@ -431,6 +431,6 @@ http://\<your-root-url\>/swagger のような URL に対して Swashbuckle で�
 - **NSwag と ASP.NET Core の概要** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
->[!div class="step-by-step"]
->[前へ](microservice-application-design.md)
->[次へ](multi-container-applications-docker-compose.md)
+> [!div class="step-by-step"]
+> [前へ](microservice-application-design.md)
+> [次へ](multi-container-applications-docker-compose.md)

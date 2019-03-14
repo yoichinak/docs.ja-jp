@@ -1209,6 +1209,7 @@
 ### トレーニング済みモデルの使用
 #### [PredictionEngine を使った一度に 1 つの予測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [トレーニング済みのモデルを運用化する](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [モデル Azure Functions のサービスを提供する](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Infer.NET を使用した確率的プログラミング](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 関連項目

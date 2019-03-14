@@ -4,12 +4,12 @@ description: ML.NET でサポートされている機能エンジニアリング
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355411"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機械学習データ変換 - ML.NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "54415352"
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 連続するグループ ID に基づいて、スカラー列の値をベクターにグループ化します。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | ベクター列をグループ解除して行のシーケンスにします。グループ化変換の逆です。 |
 
-## <a name="conversions"></a>変換 
+## <a name="conversions"></a>変換
 
 | 変換 | 定義 |
 | --- | --- |
@@ -36,7 +36,6 @@ ms.locfileid: "54415352"
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | キーをベクター列に変換します。 |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 型を指定した基になる列の型の変更は、変換できます。 |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 入力値 (単語、数字など) をディクショナリ内のインデックスに変換します。 |
-
 
 ## <a name="deep-learning"></a>ディープ ラーニング
 
@@ -49,17 +48,17 @@ ms.locfileid: "54415352"
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワードの指定されたリストを削除します。| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 個々のトークンをストップワードと比較 (大文字と小文字を区別しない比較) することで、ストップワードの指定されたリストを削除します。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 1 つまたは複数の ImageType 列を取得して、それらを同じイメージのグレースケール表現に変換します。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 1 つまたは複数の ReadOnlyMemory 列を取得し、それらを ImageType として読み込みます。 |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 1 つまたは複数の ImageType 列を取得して、それらをベクター表現に変換します。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 1 つまたは複数の ImageType 列を取得して、それらを指定した高さと幅にサイズ変更します。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | LightLDA (Latent Dirichlet Allocation の最新の実装) を実装します。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 指定したモデル ファイルから特定の変換を読み込みます。 シリアル化されたチェーンからの 'チェリー ピック' 変換を可能にしたり、事前トレーニング済みの変換を異なる (ただし互換性がある) データ ビューに適用することができます。 |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | キーの指定のベクターで、n-gram のカウントのバッグ (長さ 1-n の連続する値のシーケンス) が生成されます。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクション、またはキーのベクターを数値特徴ベクトルに変換します。 特徴ベクトルは n-gram のカウント (長さ 1-n の連続するトークン (単語またはキー) のシーケンス) です。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | ハッシュを使用して、トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクションを数値特徴ベクトルに変換します。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (長さ 1-n の連続する単語のシーケンス) を生成します。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | キーの指定のベクターで、n-gram のカウントのバッグ (長さ 1-n の連続する値のシーケンス) が生成されます。 n-gram のディクショナリをビルドし、ディクショナリの ID をバッグのインデックスとして使用することでこれを行います。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクション、またはキーのベクターを数値特徴ベクトルに変換します。 特徴ベクトルは n-gram のカウント (長さ 1-n の連続するトークン (単語またはキー) のシーケンス) です。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | ハッシュを使用して、トークン化されたテキスト (ReadOnlyMemory のベクター) のコレクションを数値特徴ベクトルに変換します。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 指定したテキストで、n-gram のカウントのバッグ (長さ 1-n の連続する単語のシーケンス) を生成します。 |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | データに基づいてカテゴリのディクショナリをビルドし、ディクショナリ内の ID を配列内のインデックスとして使用することで、カテゴリ値をインジケーター配列に変換します。 |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 特徴ベクトルの低ランク サブ空間へのプロジェクションを計算します。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 事前にトレーニングされたセンチメント モデルを使用して、入力文字列をスコア付けします。 |
@@ -73,7 +72,7 @@ ms.locfileid: "54415352"
 
 | 変換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | これは、事前トレーニング済みの [AlexNet](https://en.wikipedia.org/wiki/AlexNet) モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | これは、事前トレーニング済みの [AlexNet](https://en.wikipedia.org/wiki/AlexNet) モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | これは、事前トレーニング済みの ResNet18 モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | これは、事前トレーニング済みの ResNet50model モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | これは、事前トレーニング済みの ResNet101 モデルを使用するために <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> で使用される拡張メソッドです。 この拡張を含む NuGet もバイナリ モデル ファイルが含まれることが保証されます。 |

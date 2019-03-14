@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479608"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674654"
 ---
 # <a name="official-net-docker-images"></a>公式の .NET Docker イメージ
 
@@ -23,9 +23,9 @@ ms.locfileid: "55479608"
 
 Microsoft では開発者向けの Docker イメージをビルドするにあたり、次の主な 2 つのシナリオに重点を置きました。
 
--   .NET Core アプリの*開発*およびビルドに使用されるイメージ。
+- .NET Core アプリの*開発*およびビルドに使用されるイメージ。
 
--   .NET Core アプリの実行に "*使用*" されるイメージ。
+- .NET Core アプリの実行に "*使用*" されるイメージ。
 
 なぜ複数のイメージですか。 コンテナー化されたアプリケーションを開発、ビルド、実行する場合、通常は優先順位がそれぞれ異なります。 このような個々のタスク向けにさまざまなイメージを提供することによって、Microsoft は、アプリを開発、ビルド、および展開する個々のプロセスの最適化を支援しています。
 
@@ -50,6 +50,6 @@ Docker Hub の .NET イメージ リポジトリを探索すると、タグで�
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core、ランタイムのみ、ASP.NET Core の最適化、Linux および Windows (マルチアーキテクチャ) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core、SDK 含む、Linux および Windows (マルチアーキテクチャ)                                  |
 
->[!div class="step-by-step"]
->[前へ](net-container-os-targets.md)
->[次へ](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [前へ](net-container-os-targets.md)
+> [次へ](../architect-microservice-container-applications/index.md)

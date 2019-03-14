@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02fa197b12e6a5bfb37cd0f275bc615dc179291b
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222520"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679373"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
 
@@ -41,7 +41,7 @@ CLR アクティベーションの API は、ホストにアクティベーシ�
 
 CLR アクティベーション システムがアプリケーションで必要なランタイムの正しいバージョンを読み込むことができない場合、ユーザーには、コンピューターがアプリケーションを実行するように正しく構成されていないことを示すエラー メッセージが表示され、この状況を解決できるようになります。 この状況では、通常、次のエラー メッセージが表示されます。 ユーザーは **[はい]** を選択すると、アプリケーションに適切な .NET Framework のバージョンをダウンロードできる Microsoft Web サイトに移動します。
 
-![[.NET Framework 初期化エラー] ダイアログ ボックス](../../../docs/framework/deployment/media/initerrordialog.png "InitErrorDialog") 初期化エラーの一般的なエラー メッセージ
+![[.NET Framework 初期化エラー] ダイアログ ボックス](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初期化エラーの一般的なエラー メッセージ")
 
 ## <a name="resolving-the-initialization-error"></a>初期化エラーの解決
 
@@ -76,13 +76,13 @@ CLR にはさまざまなシナリオ向けの一連のホストが含まれて�
 |マネージド EXE ホスト|マネージド EXE を起動します。|.NET Framework のバージョンが見つからない場合に表示される|×|
 |マネージド COM ホスト|マネージド COM コンポーネントをプロセスに読み込みます。|.NET Framework のバージョンが見つからない場合に表示される|はい (SEM_FAILCRITICALERRORS フラグを設定すると可能)|
 |ClickOnce ホスト|ClickOnce アプリケーションを起動します。|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で、.NET Framework のバージョンが見つからない場合に表示される|×|
-|XBAP ホスト|WPF XBAP アプリケーションを起動します。|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で、.NET Framework のバージョンが見つからない場合に表示される|×|
+|XBAP ホスト|WPF XBAP アプリケーションを起動します。|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で、.NET Framework のバージョンが見つからない場合に表示される|いいえ|
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 の動作と UI
 
 CLR アクティベーション システムでは、他のバージョンの Windows オペレーティング システムで提供しているのと同じ動作と UI を [!INCLUDE[win8](../../../includes/win8-md.md)] でも提供しています。ただし、CLR 2.0 を読み込む際に問題が発生する場合は除きます。 [!INCLUDE[win8](../../../includes/win8-md.md)] には、CLR 4.5 を使用する [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] が含まれています。 ただし、[!INCLUDE[win8](../../../includes/win8-md.md)] には CLR 2.0 を使用する .NET Framework 2.0、3.0、3.5 のいずれも含まれていません。 その結果、既定では、CLR 2.0 に依存するアプリケーションが [!INCLUDE[win8](../../../includes/win8-md.md)] で実行されません。 代わりに、ユーザーが .NET Framework 3.5 をインストールできるように、次のダイアログ ボックスが表示されます。 ユーザーは、コントロール パネルで .NET Framework 3.5 を有効にすることもできます。 両方のオプションの説明については、「[Windows 10、Windows 8.1、および Windows 8 への .NET Framework 3.5 のインストール](../../../docs/framework/install/dotnet-35-windows-10.md)」を参照してください。
 
-![Windows 8 に 3.5 をインストールするためのダイアログ ボックス](../../../docs/framework/deployment/media/installdialog.png "installdialog") 必要に応じた .NET Framework 3.5 のインストール時のプロンプト
+![Windows 8 に 3.5 をインストールするためのダイアログ ボックス](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "必要に応じた .NET Framework 3.5 のインストール時のプロンプト")
 
 > [!NOTE]
 > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は、ユーザーのコンピューターの .NET Framework 4 (CLR 4) を置き換えます。 したがって、[!INCLUDE[win8](../../../includes/win8-md.md)] では、.NET Framework 4 アプリケーションはこのダイアログ ボックスを表示せずにシームレスに実行されます。

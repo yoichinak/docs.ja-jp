@@ -23,7 +23,7 @@ ms.custom: seodec18
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code でのアプリケーションのビルド
 
-- [C# および Visual Studio Code の概要](with-visual-studio-code.md)
+- [C# および Visual Studio Code の使用を開始する](with-visual-studio-code.md)
 - [macOS での .NET Core の概要](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Visual Studio for Mac でのアプリケーションのビルド

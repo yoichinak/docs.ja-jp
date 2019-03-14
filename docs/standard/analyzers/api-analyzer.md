@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759133"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680270"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -44,7 +44,7 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
 
 **[エラー一覧]** ウィンドウには、非推奨の API ごとに一意の ID を含む警告が表示されます。次に示すのは `DE004` の例です。 
 
-!["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings.jpg)
+!["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings-id-and-descriptions.jpg "警告が含まれている [エラー一覧] ウィンドウ。")
 
 ID をクリックすると、API が非推奨になった理由に関する詳細情報と、使用できる代替 API に関する提案が表示される Web ページに移動します。
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>関連項目
 
-- 「[Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)」(API アナライザーの概要) のブログ投稿。
+- 「[Introducing API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)」(API アナライザーの概要) のブログ投稿。
 - YouTube の「[API Analyzer](https://youtu.be/eeBEahYXGd0)」(API アナライザー) デモ ビデオ。

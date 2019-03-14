@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533209"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788428"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -43,7 +43,7 @@ ServiceModel メタデータ ユーティリティ ツールを具体的には�
 
 ツールは、メタデータを取得するときに、5 分のタイムアウトが。 このタイムアウトは、ネットワーク経由でメタデータを取得する場合にのみ適用されます。 タイムアウトは、そのメタデータの処理には適用されません。
 
-### <a name="multi-targetting"></a>複数バージョン対応
+### <a name="multi-targeting"></a>マルチターゲット
 
 このツールは複数バージョン対応機能をサポートしていません。 .NET 4 成果物を生成する*svcutil.exe*を使用して、 *svcutil.exe* .NET 4 SDK から。 .NET 3.5 成果物を生成するには、.NET 3.5 SDK から実行可能ファイルを実行します。
 
@@ -71,7 +71,7 @@ Svcutil.exe は、メタデータ ドキュメントからサービス コント
 
 使用することができます、 *SvcUtil.exe*定義済みの WSDL ドキュメントに基づいてサービスとデータ コントラクトを生成するツール。 /serviceContract スイッチを使用し、WSDL ドキュメントをダウンロードできるか見つけることができる URL またはファイルの場所を指定します。 これには、準拠サービスを実装するために使用する WSDL ドキュメントで定義されているサービスとデータ コントラクトが生成されます。 詳細については、「[方法 :メタデータの取得および準拠サービスの実装](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)します。
 
-BasicHttpContextbinding エンドポイントとサービスの*Svcutil.exe*との BasicHttpBinding を生成、`allowCookies`属性に設定`true`代わりにします。 クッキーはサーバー側でのコンテキスト用に使用されます。 サービスでクッキーを使用するときにクライアント側でコンテキストを管理する場合は、コンテキスト バインディングを使用するように構成を手動で変更できます。
+BasicHttpContextBinding エンドポイントとサービスの*Svcutil.exe*との BasicHttpBinding を生成、`allowCookies`属性に設定`true`代わりにします。 クッキーはサーバー側でのコンテキスト用に使用されます。 サービスでクッキーを使用するときにクライアント側でコンテキストを管理する場合は、コンテキスト バインディングを使用するように構成を手動で変更できます。
 
 > [!CAUTION]
 > Svcutil.exe は、WSDL またはサービスから受け取るポリシー ファイルに基づいてクライアントを生成します。 ユーザー プリンシパル名 (UPN) が、ユーザー名を連結して生成された"\@"と完全修飾ドメイン名 (FQDN)。 ただし、Active Directory に登録されているユーザーの場合、この形式は無効であり、ツールが生成する UPN を使用すると、Kerberos 認証でエラーが発生し、エラー メッセージ "ログインに失敗しました" が表示されます。 この問題を解決するには、このツールが生成するクライアント ファイルを手動で修正する必要があります。
@@ -101,13 +101,15 @@ BasicHttpContextbinding エンドポイントとサービスの*Svcutil.exe*と�
 |/noConfig|構成ファイルを生成しません。|
 |/noStdLib|標準ライブラリを参照しません。<br /><br /> 既定:Mscorlib.dll と System.servicemodel.dll が参照されます。|
 |/out:\<file>|生成されるコードのファイル名を指定します。<br /><br /> 既定:WSDL は、WSDL 定義名から派生した、サービス名またはスキーマのいずれかのターゲット名前空間。<br /><br /> 短縮形 : `/o`|
-|/reference:\<ファイルのパス >|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> このスイッチを使用して、メッセージ コントラクト型と <xref:System.Xml.Serialization.XmlSerializer> 型は指定できません。<br /><br /> <xref:System.DateTimeOffset> が参照されている場合、新しい型を生成する代わりにこの型が使用されます。 アプリケーションが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して記述されている場合、SvcUtil.exe は、自動的に <xref:System.DateTimeOffset> を参照します。<br /><br /> 短縮形: `/r`|
+|/reference:\<ファイルのパス >|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> このスイッチを使用して、メッセージ コントラクト型と <xref:System.Xml.Serialization.XmlSerializer> 型は指定できません。<br /><br /> 
+  <xref:System.DateTimeOffset> が参照されている場合、新しい型を生成する代わりにこの型が使用されます。 アプリケーションが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して記述されている場合、SvcUtil.exe は、自動的に <xref:System.DateTimeOffset> を参照します。<br /><br /> 短縮形: `/r`|
 |/serializable|シリアル化可能属性でマークされたクラスを生成します。<br /><br /> 短縮形: `/s`|
 |/serviceContract|サービス コントラクトのコードのみを生成します。 クライアント クラスと構成は生成されません。<br /><br /> 短縮形: `/sc`|
 |/serializer:Auto|シリアライザーが自動的に選択します。 これは、データ コントラクト シリアライザーを使用しようとしが失敗した場合に、XmlSerializer を使用します。<br /><br /> 短縮形: `/ser`|
 |/serializer:DataContractSerializer|シリアル化と逆シリアル化にデータ コントラクト シリアライザーを使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|シリアル化と逆シリアル化に <xref:System.Xml.Serialization.XmlSerializer> を使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:XmlSerializer`|
-|/targetClientVersion|アプリケーションが対象としている [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
+|/targetClientVersion|アプリケーションが対象としている [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 
+  `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
 |/wrapped|ラップされたパラメーターを含んでいるドキュメント リテラル スタイルのドキュメントに特別な大文字と小文字の規則が使用されるかどうかを制御します。 使用して、**ラップ/** スイッチと、[サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)通常大文字小文字の区別を指定するためのツール。|
 
 > [!NOTE]
@@ -132,7 +134,8 @@ Svcutil.exe は、コンパイル済みアセンブリのサービス、コン�
 
 ### <a name="service-validation"></a>サービスの検証
 
-検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
+検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 
+  `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 
@@ -142,7 +145,8 @@ Svcutil.exe は、コンパイル済みアセンブリのサービス、コン�
 
 |オプション|説明|
 |------------|-----------------|
-|/validate|`/serviceName` オプションによって指定されたサービス実装を検証します。 このオプションを使用した場合、関連構成ファイルが存在する実行可能アセンブリを入力として渡す必要があります。<br /><br /> 短縮形: `/v`|
+|/validate|
+  `/serviceName` オプションによって指定されたサービス実装を検証します。 このオプションを使用した場合、関連構成ファイルが存在する実行可能アセンブリを入力として渡す必要があります。<br /><br /> 短縮形: `/v`|
 |/serviceName:\<serviceConfigName>|検証するサービスの構成名を指定します。 Svcutil.exe は、すべての入力アセンブリのすべての関連構成ファイルからサービス構成を検索します。 構成ファイルが拡張型を含む場合、これらの型を含むアセンブリは GAC に存在するか、`/reference` オプションを使用して明示的に指定される必要があります。|
 |/reference:\<ファイルのパス >|指定したアセンブリを、型参照の解決に使用するアセンブリの集合に追加します。 サービスのエクスポートまたは検証に、構成に登録されているサードパーティ製拡張機能 (Behaviors、Bindings、および BindingElements) を使用している場合は、このオプションを使用して GAC に含まれていない拡張機能アセンブリを指定します。<br /><br /> 短縮形: `/r`|
 |/dataContractOnly|データ コントラクト型に対してのみ機能します。 サービス コントラクトは処理されません。<br /><br /> このオプションにはローカル メタデータ ファイルだけを指定する必要があります。<br /><br /> 短縮形: `/dconly`|
@@ -171,7 +175,8 @@ Svcutil は、メタデータを取得するために次のメタデータ要求
 
 ### <a name="xmlserializer-type-generation"></a>XmlSerializer 型の生成
 
-<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。
+
+  <xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。
 
 > [!NOTE]
 > 事前生成済みシリアル化コードはクライアント アプリケーションでのみ使用できます。サービスでは使用できません。

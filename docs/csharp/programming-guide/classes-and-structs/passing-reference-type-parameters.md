@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: a65d09c6449a14dbb74d80247afa18a6f3a601d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 34e3370b0f6d28160be3ad9d918c110fc93f51fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969948"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674082"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>参照型パラメーターの引き渡し (C# プログラミング ガイド)
-[型参照](../../../csharp/language-reference/keywords/reference-types.md)の変数には、そのデータは直接含まれず、そのデータへの参照が含まれます。 値で参照型パラメーターを渡す場合、クラス メンバーの値など、参照先オブジェクトに属するデータを変更することができます。 ただし、参照自体の値を変更することはできません。たとえば、同じ参照を使用して、新しいクラスのメモリを割り当て、ブロックの外側で永続化させることはできません。 これを行うには、[ref](../../../csharp/language-reference/keywords/ref.md) または [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) キーワードを使用してパラメーターを渡します。 わかりやすくするために、次の例では `ref` を使用しています。  
+[型参照](../../../csharp/language-reference/keywords/reference-types.md)の変数には、そのデータは直接含まれず、そのデータへの参照が含まれます。 値で参照型パラメーターを渡す場合、クラス メンバーの値など、参照先オブジェクトに属するデータを変更することができます。 ただし、参照自体の値を変更することはできません。たとえば、同じ参照を使用して、新しいオブジェクトのメモリを割り当て、ブロックの外側で永続化させることはできません。 これを行うには、[ref](../../../csharp/language-reference/keywords/ref.md) または [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) キーワードを使用してパラメーターを渡します。 わかりやすくするために、次の例では `ref` を使用しています。  
   
 ## <a name="passing-reference-types-by-value"></a>値渡しによる参照型の引き渡し  
  次の例では、参照型のパラメーター `arr` を値渡しで `Change` メソッドに渡す方法について説明します。 このパラメーターは `arr` への参照であるため、配列要素の値を変更できます。 ただし、別のメモリ位置へのパラメーターの再割り当ては、メソッドの内部でのみ機能し、元の変数 `arr` には影響しません。  

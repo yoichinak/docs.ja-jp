@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285026"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677527"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -142,7 +142,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ### <a name="why-does-async-help-here"></a>async が役に立つ理由
 
-`async`と `await` は、応答性を必要とする場合に CPU バインドの作業を管理する際のベスト プラクティスです。 CPU バインドの作業で async を使用するには、複数のパターンがあります。 async を使用すると小さいながらも負荷がかかるため、厳密なループ処理にはお勧めしません。  この新しい機能を利用してコードを記述するかどうかは、ユーザーの判断に任されます。
+`async` と `await` は、応答性を必要とする場合に CPU バインドの作業を管理する際のベスト プラクティスです。 CPU バインドの作業で async を使用するには、複数のパターンがあります。 async を使用すると小さいながらも負荷がかかるため、厳密なループ処理にはお勧めしません。  この新しい機能を利用してコードを記述するかどうかは、ユーザーの判断に任されます。
 
 ## <a name="see-also"></a>関連項目
 

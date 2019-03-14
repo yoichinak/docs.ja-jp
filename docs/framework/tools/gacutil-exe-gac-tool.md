@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541223"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492492"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 グローバル アセンブリ キャッシュ ツールを使用すると、グローバル アセンブリ キャッシュとダウンロード キャッシュの内容を表示および操作できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "54541223"
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |引数|説明|  
 |--------------|-----------------|  
@@ -69,7 +69,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|指定したアセンブリへの参照をグローバル アセンブリ キャッシュからアンインストールします。 アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、**/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、**/u** オプションと **/r** オプションを一緒に指定するのと同じです。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 >  Gacutil.exe を使用するには管理者権限が必要です。  

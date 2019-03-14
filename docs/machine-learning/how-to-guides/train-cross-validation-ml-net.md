@@ -1,16 +1,21 @@
 ---
 title: クロス検証を使用して機械学習モデルをトレーニングする - ML.NET
 description: ML.NET によるクロス検証を使用して機械学習モデルをトレーニングして、モデルの予測精度を高める方法について説明します。
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092281"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676539"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>クロス検証を使用して機械学習モデルをトレーニングする - ML.NET
+
+> [!NOTE]
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 [クロス検証](https://en.wikipedia.org/wiki/Cross-validation_(statistics))は、ML アプリケーションに便利な手法です。 ある実行から別の実行までのモデル品質の分散を推定する場合に役立ちます。また、評価のために別のテスト セットを抽出する必要もなくなります。
 

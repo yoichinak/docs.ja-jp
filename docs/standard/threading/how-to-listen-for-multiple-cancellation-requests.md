@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178568"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680234"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>方法: 複数のキャンセル要求を待機する
 この例では、2 つのキャンセル トークンを同時にリッスンして、いずれかのトークンからキャンセルが要求された場合に操作を取り消す方法を示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "44178568"
   
  リンクされたトークンから <xref:System.OperationCanceledException> がスローされる場合、例外に渡されるトークンは先行トークンではなくリンクされたトークンです。 取り消されたトークンを特定するには、先行トークンの状態を直接確認します。  
   
- この例で <xref:System.AggregateException> がスローされることはまずありませんが、実際のシナリオでは、タスクのデリゲートからスローされた <xref:System.OperationCanceledException> 以外の例外はすべて <xref:System.OperationCanceledException> にラップされるので、ここでキャッチされます。  
+ この例で <xref:System.AggregateException> がスローされることはまずありませんが、実際のシナリオでは、タスクのデリゲートからスローされた <xref:System.OperationCanceledException> 以外の例外はすべて <xref:System.AggregateException> にラップされるので、ここでキャッチされます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,16 +1,21 @@
 ---
 title: 機械学習の処理のために多数の列を含むデータを CSV ファイルから読み込む - ML.NET
 description: ML.NET で機械学習モデルの構築、トレーニング、スコア付けに使用するために、CSV ファイルから多数の列を含むデータを読み込む方法について説明します
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091969"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675954"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>機械学習の処理のために多数の列を含むデータを CSV ファイルから読み込む - ML.NET
+
+> [!NOTE]
+> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
+
+ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 `TextLoader` を使用して、テキスト ファイルからデータを読み込みます。 データの列、型、およびテキスト ファイル内での位置を指定する必要があります。
 

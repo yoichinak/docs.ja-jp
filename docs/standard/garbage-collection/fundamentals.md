@@ -1,6 +1,7 @@
 ---
 title: ガベージ コレクションの基礎
-ms.date: 03/30/2017
+description: ガベージ コレクターのしくみと、パフォーマンスを最適化するための構成方法について説明します。
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066324"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712475"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -30,28 +31,8 @@ ms.locfileid: "55066324"
   
 -   オブジェクトで別のオブジェクトの内容を使用できなくすることで、メモリの安全が確保されます。  
   
- このトピックでは、ガベージ コレクションの主要な概念について説明します。 このチュートリアルは、次のセクションで構成されています。  
-  
--   [メモリの基礎](#fundamentals_of_memory)  
-  
--   [ガベージ コレクションの条件](#conditions_for_a_garbage_collection)  
-  
--   [マネージド ヒープ](#the_managed_heap)  
-  
--   [ジェネレーション](#generations)  
-  
--   [ガベージ コレクションの実行時の動作](#what_happens_during_a_garbage_collection)  
-  
--   [アンマネージ リソースの操作](#manipulating_unmanaged_resources)  
-  
--   [ワークステーションとサーバーのガベージ コレクション](#workstation_and_server_garbage_collection)  
-  
--   [同時実行ガベージ コレクション](#concurrent_garbage_collection)  
-  
--   [バックグラウンド ワークステーション ガベージ コレクション](#background_garbage_collection)  
-  
--   [バックグラウンド サーバー ガベージ コレクション](#background_server_garbage_collection)  
-  
+ このトピックでは、ガベージ コレクションの主要な概念について説明します。 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>メモリの基礎  
  CLR のメモリに関する重要な概念の概要を以下に示します。  
@@ -109,9 +90,9 @@ ms.locfileid: "55066324"
   
  ガベージ コレクションの割り込みの動作 (頻度と期間) は、割り当てのボリュームとマネージド ヒープ上の残ったメモリの量によって決まります。  
   
- ヒープは、大きなオブジェクト ヒープと小さなオブジェクト ヒープの 2 つを累積したものと見なすことができます。  
+ ヒープは、[大きなオブジェクト ヒープ](large-object-heap.md)と小さなオブジェクト ヒープの 2 つを累積したものと見なすことができます。  
   
- 大きなオブジェクト ヒープには、85,000 バイトを超える非常に大きなオブジェクトが格納されます。 大きなオブジェクト ヒープの中のオブジェクトは、通常は配列になります。 インスタンス オブジェクトが極端に大きくなることはほとんどありません。  
+ [大きなオブジェクト ヒープ](large-object-heap.md)には、85,000 バイトを超える非常に大きなオブジェクトが格納されます。 大きなオブジェクト ヒープの中のオブジェクトは、通常は配列になります。 インスタンス オブジェクトが極端に大きくなることはほとんどありません。  
   
  [ページのトップへ](#top)  
   

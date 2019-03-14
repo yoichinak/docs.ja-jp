@@ -4,14 +4,14 @@ description: docker-compose.yml を使用して複数コンテナーのアプリ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 908837c470e97e66a6f6b06ef89e87fca80982f2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973510"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712358"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
 このガイドでは、[docker-compose.yml](https://docs.docker.com/compose/compose-file/) ファイルは、「[手順 4 複数のコンテナー Docker アプリケーションを構築するときに docker compose.yml で、サービスを定義します](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)」セクションで導入されました。 しかし、docker-compose ファイルには他の使い方もあり、さらに詳しく検討する価値があります。
 
@@ -117,21 +117,21 @@ services:
 
 このコンテナー化されたサービスには、次の基本的な構成があります。
 
--   カスタムの eshop/catalog.api イメージに基づいています。 わかりやすくするために、ファイル内にビルドやキーの設定はありません。 つまりイメージが、(docker build を使用して) 既にビルドされているか、(docker pull コマンドを使用して) 任意の Docker レジストリからダウンロードされている必要があります。
+- カスタムの eshop/catalog.api イメージに基づいています。 わかりやすくするために、ファイル内にビルドやキーの設定はありません。 つまりイメージが、(docker build を使用して) 既にビルドされているか、(docker pull コマンドを使用して) 任意の Docker レジストリからダウンロードされている必要があります。
 
--   接続文字列を使用して ConnectionString という名前の環境変数を定義します。この変数は、カタログ データ モデルを含む SQL Server インスタンスにアクセスするために Entity Framework によって使用されます。 この例では、同じ SQL Server コンテナーに複数のデータベースが保持されています。 そのため、Docker 用に開発用コンピューターで必要なメモリ量が減ります。 ただし、マイクロサービス データベースごとに 1 つの SQL Server のコンテナーを展開することもできます。
+- 接続文字列を使用して ConnectionString という名前の環境変数を定義します。この変数は、カタログ データ モデルを含む SQL Server インスタンスにアクセスするために Entity Framework によって使用されます。 この例では、同じ SQL Server コンテナーに複数のデータベースが保持されています。 そのため、Docker 用に開発用コンピューターで必要なメモリ量が減ります。 ただし、マイクロサービス データベースごとに 1 つの SQL Server のコンテナーを展開することもできます。
 
--   SQL Server 名は sql.data で、Linux の SQL Server インスタンスが実行されているコンテナーで使用されているのと同じ名前です。 これは便利な方法です。この名前解決 (内部から Docker ホストへ) を使用できることで、ネットワーク アドレスが解決されるため、他のコンテナーからアクセスするコンテナーの内部 IP アドレスを知る必要はありません。
+- SQL Server 名は sql.data で、Linux の SQL Server インスタンスが実行されているコンテナーで使用されているのと同じ名前です。 これは便利な方法です。この名前解決 (内部から Docker ホストへ) を使用できることで、ネットワーク アドレスが解決されるため、他のコンテナーからアクセスするコンテナーの内部 IP アドレスを知る必要はありません。
 
 接続文字列は環境変数によって定義されるため、異なる時点で別のメカニズムを使用して、その変数を設定することができます。 たとえば、最後のホストで運用に展開するときに、または Azure DevOps Services の CI/CD パイプラインから、または優先する DevOps システムから、別の接続文字列を設定できます。
 
--   Docker ホスト内で catalog.api サービスへの内部アクセス用に、ポート 80 を公開します。 ホストは、Linux の Docker イメージに基づいているため、現在は Linux VM ですが、代わりに Windows イメージ上で実行するようにコンテナーを構成することもできます。
+- Docker ホスト内で catalog.api サービスへの内部アクセス用に、ポート 80 を公開します。 ホストは、Linux の Docker イメージに基づいているため、現在は Linux VM ですが、代わりに Windows イメージ上で実行するようにコンテナーを構成することもできます。
 
--   コンテナー上で公開されているポート 80 を、Docker ホスト コンピューター (Linux VM) 上のポート 5101 に転送します。
+- コンテナー上で公開されているポート 80 を、Docker ホスト コンピューター (Linux VM) 上のポート 5101 に転送します。
 
--   Web サービスを sql.data サービス (コンテナーで実行されている Linux データベースの SQL Server インスタンス) にリンクします。 この依存関係を指定すると、catalog.api コンテナーは、sql.data コンテナーが起動するまで起動しなくなります。これが重要なのは、catalog.api には、SQL Server データベースが先に起動していて、実行されている必要があるからです。 ただし、このようなコンテナーの依存関係は、Docker がコンテナー レベルでしかチェックしないため、多くの場合、不十分です。 サービス (この場合は SQL Server) がまだ準備できていない場合もあるため、クライアント マイクロサービスで指数バックオフによる再試行ロジックを実装することをお勧めします。 そうすることで、依存関係のコンテナーが少しの間、準備できない場合でも、アプリケーションが回復力を保つことができます。
+- Web サービスを sql.data サービス (コンテナーで実行されている Linux データベースの SQL Server インスタンス) にリンクします。 この依存関係を指定すると、catalog.api コンテナーは、sql.data コンテナーが起動するまで起動しなくなります。これが重要なのは、catalog.api には、SQL Server データベースが先に起動していて、実行されている必要があるからです。 ただし、このようなコンテナーの依存関係は、Docker がコンテナー レベルでしかチェックしないため、多くの場合、不十分です。 サービス (この場合は SQL Server) がまだ準備できていない場合もあるため、クライアント マイクロサービスで指数バックオフによる再試行ロジックを実装することをお勧めします。 そうすることで、依存関係のコンテナーが少しの間、準備できない場合でも、アプリケーションが回復力を保つことができます。
 
--   外部サーバーへのアクセスを許可するように構成されます: extra\_hosts 設定により、開発 PC 上のローカル SQL Server インスタンスなど、外部サーバーまたは Docker ホストの外部のマシン (つまり、開発 Docker ホストである既定の Linux VM の外側) にアクセスすることができます。
+- 外部サーバーへのアクセスを許可するように構成されます: extra\_hosts 設定により、開発 PC 上のローカル SQL Server インスタンスなど、外部サーバーまたは Docker ホストの外部のマシン (つまり、開発 Docker ホストである既定の Linux VM の外側) にアクセスすることができます。
 
 より高度な他の docker-compose.yml 設定もあります。これについては以降のセクションで説明します。
 
@@ -155,7 +155,7 @@ docker-compose.yml ファイルは、Docker エンジンによって解釈され
 
 Docker Compose を使用すると、コマンド プロンプトまたはスクリプトから、次のようないくつかのコマンドでその分離環境を非常に簡単に作成および破棄することができます。
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
 docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
@@ -207,7 +207,7 @@ services:
     image: eshop/basket.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile
     depends_on:
       - basket.data
       - identity.api
@@ -217,7 +217,7 @@ services:
     image: eshop/catalog.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile
     depends_on:
       - sql.data
       - rabbitmq
@@ -226,7 +226,7 @@ services:
     image: eshop/marketing.api:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile
     depends_on:
       - sql.data
       - nosql.data
@@ -237,7 +237,7 @@ services:
     image: eshop/webmvc:${TAG:-latest}
     build:
       context: .
-      dockerfile: src/Web/WebMVC/Dockerfile    
+      dockerfile: src/Web/WebMVC/Dockerfile
     depends_on:
       - catalog.api
       - ordering.api
@@ -253,7 +253,7 @@ services:
 
   basket.data:
     image: redis
-      
+
   rabbitmq:
     image: rabbitmq:3-management
 
@@ -263,13 +263,13 @@ services:
 
 たとえば、webmvc サービス定義に注目すると、ターゲットとする環境が何であれ、その情報がほとんど同じであることがわかります。 次の情報があります。
 
--   サービス名: webmvc
+- サービス名: webmvc
 
--   コンテナーのカスタム イメージ: eshop/webmvc
+- コンテナーのカスタム イメージ: eshop/webmvc
 
--   使用する Dockerfile を示す、カスタム Docker イメージをビルドするコマンド
+- 使用する Dockerfile を示す、カスタム Docker イメージをビルドするコマンド
 
--   他の依存関係コンテナーが起動されるまで、このコンテナーを起動しないようする、他のサービスへの依存関係
+- 他の依存関係コンテナーが起動されるまで、このコンテナーを起動しないようする、他のサービスへの依存関係
 
 追加の構成を持つことはできますが、重要な点は、基本の docker-compose.yml ファイルでは、環境間で共通する情報だけを設定することです。 その後、docker-compose.override.yml または運用またはステージングの同様のファイルで、各環境に固有の構成を配置する必要があります。
 
@@ -279,19 +279,19 @@ services:
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
 version: '3.4'
 
-services: 
-# Simplified number of services here: 
-      
+services:
+# Simplified number of services here:
+
   basket.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
-      - identityUrl=http://identity.api              
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureServiceBusEnabled=False
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -305,10 +305,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
       - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_CATALOG_NAME}
       - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_CATALOG_KEY}
       - UseCustomizationData=True
@@ -328,8 +328,8 @@ services:
       - MongoDatabase=MarketingDb
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
-      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
-      - identityUrl=http://identity.api              
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}
+      - identityUrl=http://identity.api
       - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
       - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
       - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
@@ -374,7 +374,7 @@ services:
       - "27017:27017"
   basket.data:
     ports:
-      - "6379:6379"      
+      - "6379:6379"
   rabbitmq:
     ports:
       - "15672:15672"
@@ -386,13 +386,13 @@ services:
 
 `docker-compose up` を実行 (または Visual Studio から起動) すると、コマンドは両方のオーバーライドを、2 つのファイルがマージされているかのように、自動的に読み取ります。
 
-運用環境用に、異なる構成値、ポート、または接続文字列を持つ別の Compose ファイルが必要だとします。 異なる設定と環境変数を使用して、`docker-compose.prod.yml` という名前の別の override ファイルを作成できます。  そのファイルは、別の Git リポジトリに格納したり、別のチームによって管理および保護することができます。
+運用環境用に、異なる構成値、ポート、または接続文字列を持つ別の Compose ファイルが必要だとします。 異なる設定と環境変数を使用して、`docker-compose.prod.yml` という名前の別の override ファイルを作成できます。 そのファイルは、別の Git リポジトリに格納したり、別のチームによって管理および保護することができます。
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>特定の override ファイルによる展開方法
 
 複数の override ファイルを使用する、または異なる名前の override ファイルを使用するには、docker-compose コマンドで -f オプションを使用してファイルを指定することができます。 Compose によって、コマンドラインで指定された順序でファイルがマージされます。 次の例は、override ファイルを使用した展開方法を示しています。
 
-```
+```console
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
@@ -422,17 +422,17 @@ Docker-compose は、.env ファイル内の各行が \<変数\>=\<値\> の形�
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **Docker Compose の概要** <br/>
+- **Docker Compose の概要** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **複数の Compose ファイル** <br/>
+- **複数の Compose ファイル** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>最適化された ASP.NET Core Docker イメージをビルドする
 
 インターネット上のソースで Docker や .NET Core を検索すると、ソースをコンテナーにコピーして Docker イメージを簡単にビルドする方法を示す Dockerfile が見つかります。 これらの例では、単純な構成を使用することで、ご利用のアプリケーションにパッケージ化された環境で Docker イメージを持つことができます。 次の例は、このような単純な Dockerfile を示しています。
 
-```
+```Dockerfile
 FROM microsoft/dotnet
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
@@ -446,30 +446,30 @@ ENTRYPOINT ["dotnet", "run"]
 
 コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) では、イメージの新しいインスタンスが作成されるだけです。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET Core と Docker に関する多くのブログ記事で見られるような、dotnet CLI から `dotnet restore` コマンドおよび `dotnet build` コマンドを使用した、実行時の復元およびコンパイルは行わないでください。
 
-.NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、<span class="underline">microsoft/dotnet</span> にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
+.NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、*microsoft/dotnet* にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
 
-1.  **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
+1. **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
 
-2.  **ビルド:** アプリケーションのコンパイルが優先され、これにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
+2. **ビルド:** アプリケーションのコンパイルが優先され、これにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
 
-3.  **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
+3. **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
 これを実現するために、.NET チームは、次の 3 つの基本的なバリエーションを [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (Docker Hub) に用意しています。
 
-1.  **sdk**: 開発シナリオおよびビルド シナリオ向け。
-2.  **runtime**: 実稼働シナリオ向け。
-3.  **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#self-contained-deployments-scd)の実稼働シナリオ向け。
+1. **sdk**: 開発シナリオおよびビルド シナリオ向け。
+2. **runtime**: 実稼働シナリオ向け。
+3. **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#self-contained-deployments-scd)の実稼働シナリオ向け。
 
-runtime イメージでも、ポート 80 への aspnetcore\_url の自動設定と、アセンブリの pre-ngend キャッシュの自動設定が提供されます。これらの設定は起動時間の短縮に役立ちます。
+迅速に起動するために、ランタイム イメージでも aspnetcore\_urls にポート 80 が自動的に設定され、Ngen を使用してアセンブリのネイティブ イメージ キャッシュが作成されます。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
--   **ASP.NET Core を使用して最適化された Docker イメージをビルドする** <br/>
+- **ASP.NET Core を使用して最適化された Docker イメージをビルドする** <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
--   **.NET Core アプリケーションの Docker イメージのビルド** <br/>
+- **.NET Core アプリケーションの Docker イメージのビルド** <br/>
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
->[!div class="step-by-step"]
->[前へ](data-driven-crud-microservice.md)
->[次へ](database-server-container.md)
+> [!div class="step-by-step"]
+> [前へ](data-driven-crud-microservice.md)
+> [次へ](database-server-container.md)
