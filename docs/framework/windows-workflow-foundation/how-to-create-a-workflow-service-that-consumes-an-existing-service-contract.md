@@ -2,12 +2,12 @@
 title: '方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成します。'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06d4d4f6687979f4fd54e919ca6f236a5b5402e8
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705065"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843009"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成します。
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ワークフローの開発という形で、Web サービスとワークフローの統合が向上しています。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。  
@@ -57,7 +57,7 @@ ms.locfileid: "57705065"
   
 4.  **ソリューション エクスプ ローラー**Service1.xamlx を開きます。 ワークフロー サービスがデザイナーに表示されます。  
   
-5.  選択、**シーケンス**アクティビティ。 [プロパティ] ウィンドウ、 **.** ボタン、 **ImplementedContract**プロパティ。 **型コレクション エディター**ウィンドウが表示されたら、クリックして、**型**ドロップダウンを選択し、 **型の参照.** エントリ。 **型の参照と選択を .Net**ダイアログで、 **\<現在のプロジェクト >** すべてのサブノードを開き、選択**IBookService**。 **[OK]** をクリックします。 **型コレクション エディター**ダイアログ ボックスで、をクリックして**OK**します。  
+5.  選択、**シーケンス**アクティビティ。 [プロパティ] ウィンドウ、 **.** ボタン、 **ImplementedContract**プロパティ。 **型コレクション エディター**ウィンドウが表示されたら、クリックして、**型**ドロップダウンを選択し、 **型の参照.** エントリ。 **を参照して .NET 型を選択**ダイアログで、 **\<現在のプロジェクト >** すべてのサブノードを開き、選択**IBookService**します。 **[OK]** をクリックします。 **型コレクション エディター**ダイアログ ボックスで、をクリックして**OK**します。  
   
 6.  選択し、削除、 **ReceiveRequest**と**SendResponse**アクティビティ。  
   

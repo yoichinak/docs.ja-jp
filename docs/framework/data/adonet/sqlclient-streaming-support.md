@@ -2,12 +2,12 @@
 title: SqlClient ストリーミング サポート
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 67704f1f81eb7b5ff5cd3b3676455cee8563a1af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366440"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844237"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient ストリーミング サポート
 
@@ -395,7 +395,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large BLOB to SQL Server in .Net 4.5
+      // Application transferring a large BLOB to SQL Server in .NET 4.5
       private static async Task StreamBLOBToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -413,7 +413,7 @@ namespace StreamingToServer {
          }
       }
 
-      // Application transferring a large Text File to SQL Server in .Net 4.5
+      // Application transferring a large Text File to SQL Server in .NET 4.5
       private static async Task StreamTextToServer() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();

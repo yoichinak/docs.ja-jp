@@ -2,12 +2,12 @@
 title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857906"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845295"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 
@@ -50,7 +50,7 @@ ms.locfileid: "54857906"
 |`inline`|[関数](functions/index.md)<br /><br />[インライン関数](functions/inline-functions.md)|呼び出し元のコードに直接統合される関数を示すために使用します。|
 |`interface`|[インターフェイス](interfaces.md)|宣言し、インターフェイスを実装するために使用します。|
 |`internal`|[アクセス制御](access-control.md)|メンバーが表示されていることを指定するために使用ではなく外では、アセンブリ内部。|
-|`lazy`|[遅延計算](lazy-computations.md)|結果が必要な場合にのみ実行する計算を指定するために使用します。|
+|`lazy`|[遅延式](lazy-expressions.md)|結果が必要な場合にのみ実行される式を指定するために使用します。|
 |`let`|[`let` バインド](functions/let-bindings.md)|関連付けるには、またはバインドして、値または関数の名前に使用します。|
 |`let!`|[非同期ワークフロー](asynchronous-workflows.md)<br /><br />[コンピュテーション式](computation-expressions.md)|非同期計算の結果に名前をバインドする非同期のワークフローまたは計算型の結果に名前をバインドするために使用、その他のコンピュテーション式を使用します。|
 |`match`|[match 式](match-expressions.md)|値をパターンと比較して分岐を使用します。|

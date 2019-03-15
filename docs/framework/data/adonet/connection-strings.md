@@ -2,12 +2,12 @@
 title: ADO.NET での接続文字列
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627565"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844873"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 
@@ -16,9 +16,9 @@ ms.locfileid: "54627565"
 ## <a name="connection-string-syntax"></a>接続文字列の構文
 
 接続文字列は、パラメーターのキー/値ペアのセミコロンで区切られた一覧を示します。
-  
+
     keyword1=value; keyword2=value;
-  
+
 キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)します。 先頭および末尾の空白文字がキーワードで無視され、引用符の値。
 
 値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白文字、単一引用符または二重引用符で囲む必要がありますか。 例:
@@ -44,19 +44,23 @@ ms.locfileid: "54627565"
 
 未検証のユーザー入力からの実行時に手動で構築された接続文字列は、文字列のインジェクション攻撃に対して脆弱なし、データ ソースでセキュリティを損ないます。 これらの問題に対処する*ADO.NET* 2.0 で[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)各 *.NET Framework*データ プロバイダー。 これらの接続文字列ビルダーは、厳密に型指定されたプロパティとしてパラメーターを公開し、データ ソースに送信される前に、接続文字列を検証すること。
 
-## <a name="in-this-section"></a>このセクションの内容  
- [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
-  
- [接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- 構成ファイルを使用した接続文字列の格納と取得の方法について説明します。
-  
- [接続文字列の構文](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
-  
- [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- データ ソースへの接続に使用する情報を保護する方法を示します。
-  
+## <a name="in-this-section"></a>このセクションの内容
+
+[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+
+  `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
+
+[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+構成ファイルを使用した接続文字列の格納と取得の方法について説明します。
+
+[接続文字列の構文](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+
+  `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
+
+[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+データ ソースへの接続に使用する情報を保護する方法を示します。
+
 ## <a name="see-also"></a>関連項目
+
 - [データ ソースへの接続](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

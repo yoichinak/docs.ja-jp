@@ -4,12 +4,12 @@ description: モノリシック アプリケーションをコンテナー化の
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676838"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843546"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 
@@ -63,7 +63,7 @@ Docker ホストとして複数の Vm をデプロイして、任意の数の VM
 
 モノリシック アプリケーションは Docker の恩恵がメリットのヒントのみ面しています。 コンテナーの管理の大きな利点は、さまざまなインスタンスと各コンテナー インスタンスのライフ サイクルを管理するコンテナー オーケストレーターに展開するから取得されます。 モノリシック アプリケーションを、スケーリング、開発、および展開を個別に実行できるサブシステムに分割することが、マイクロサービスの領域への入り口になります。
 
-コンテナーでモノリシック アプリケーションを「リフト アンド シフト」し、アプリケーションを最新化する方法する方法の詳細については、この追加の Microsoft のガイドを参照して[Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/)から PDF としてダウンロードすることもできます。 を<https://aka.ms/LiftAndShiftWithContainersEbook>します。
+コンテナーでモノリシック アプリケーションを「リフト アンド シフト」し、アプリケーションを最新化する方法する方法の詳細については、この追加の Microsoft のガイドを参照して[Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化](../../modernize-with-azure-and-containers/index.md)から PDF としてダウンロードすることもできます。 を<https://aka.ms/LiftAndShiftWithContainersEbook>します。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Azure App Service への 1 つの Docker コンテナー アプリを発行します。
 

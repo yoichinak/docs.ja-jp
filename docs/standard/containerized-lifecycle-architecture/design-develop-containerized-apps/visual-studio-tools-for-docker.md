@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680361"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844250"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows 上の Visual Studio 2017 での Docker ツールの使用
 
@@ -20,7 +20,8 @@ Visual Studio 2017 バージョン 15.7 以降に含まれる Docker ツール�
 
 Docker for Windows の最新バージョンでは、これまでにアプリケーションを開発 Docker、次の参照で説明したように、セットアップは簡単なためより簡単になります。
 
-> [!Docker for Windows をインストールする方法についてに移動する情報] (<https://docs.docker.com/docker-for-windows/>)。
+> [!TIP]
+> Docker for Windows をインストールする方法の詳細については、するには (<https://docs.docker.com/docker-for-windows/>)。
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017 での docker サポート
 
@@ -83,7 +84,8 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 > [!WARNING]
 > Localhost SSL 証明書は信頼されず、プロンプトを抑制するボックスをチェックする場合は、アプリまたはサービスの実行時に HTTPS web 要求が失敗します。 その場合は、オフにして、**を求めない** チェック ボックスは、プロジェクトを実行し、プロンプトでの信頼関係を示します。
 
-> [!情報] での Visual Studio Tools for Docker の使用、サービスの実装の詳細については、次の記事を参照します。
+> [!TIP]
+> サービスの実装と Visual Studio tools for Docker の使用の詳細については、次の記事を参照してください。
 >
 >ローカル Docker コンテナーでアプリをデバッグするには。 <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

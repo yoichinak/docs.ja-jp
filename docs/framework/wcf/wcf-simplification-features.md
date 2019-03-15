@@ -2,12 +2,12 @@
 title: WCF の単純化機能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467182"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845277"
 ---
 # <a name="wcf-simplification-features"></a>WCF の単純化機能
 
@@ -96,7 +96,7 @@ WCF には ASP.NET 互換性モードが用意されています。これによ�
 
 |プロパティ|オン|新しい既定値|説明|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|このプロパティは、.Net Framing プロトコルを使用して TCP 接続がそれ自体の認証にかかる時間を決定します。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 このタイムアウトは意図的に ReceiveTimeout (10 分) よりも小さい値に設定されます。これにより、悪意のある認証されていないクライアントは、長時間にわたってサーバーへの接続を保持できません。 既定値は 30 秒です。 詳細については <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|このプロパティは、どのくらいの時間の TCP 接続は .NET Framing プロトコルを使用して自身を認証する実行することができますを決定します。 クライアントは、サーバーが認証を実行するための十分な情報を得る前に初期データを送信する必要があります。 このタイムアウトは意図的に ReceiveTimeout (10 分) よりも小さい値に設定されます。これにより、悪意のある認証されていないクライアントは、長時間にわたってサーバーへの接続を保持できません。 既定値は 30 秒です。 詳細については <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * プロセッサの数|このソケット レベルのプロパティは、キューに入れられる "受入保留中の" 要求の数を示します。 リッスン バックログ キューがいっぱいになると、新しいソケット要求は拒否されます。 詳細については <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * トランスポート用のプロセッサの数<br /><br /> 4 \* SMSvcHost.exe のプロセッサの数|このプロパティは、サーバーがリスナーで待機できるチャネルの数を制限します。 MaxPendingAccepts が小さすぎると、待機しているすべてのチャネルが接続のサービスを開始する間隔が小さくなりますが、新しいチャネルがリッスンを開始できなくなります。 接続がこの間に到着した場合、サーバー上でこの接続を待機しているものがないため、接続は失敗します。 このプロパティは、<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> プロパティを大きな値に設定することで構成できます。 詳細については、次を参照してください<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>と[Net.TCP ポート共有サービスを構成する。](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * プロセッサの数|このプロパティは、トランスポートが受け入れたにもかかわらず ServiceModel ディスパッチャーによって取得されていない接続の数を制御します。 この値を設定するには、バインドの `MaxConnections` を使用するか、またはバインド要素の `maxOutboundConnectionsPerEndpoint` を使用してください。 詳細については <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

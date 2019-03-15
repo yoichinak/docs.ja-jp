@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843610"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows フォームで高 DPI のサポート
 
-以降、.NET Framework 4.7 では、Windows フォームには、共通の高 DPI および動的 DPI シナリオの機能強化が含まれています。 不足している機能には次が含まれます。 
+以降、.NET Framework 4.7 では、Windows フォームには、共通の高 DPI および動的 DPI シナリオの機能強化が含まれています。 不足している機能には次が含まれます。
 
-- スケーリングとさまざまな Windows フォームのレイアウトの機能強化を制御するなど、<xref:System.Windows.Forms.MonthCalendar>コントロールと<xref:System.Windows.Forms.CheckedListBox>コントロール。 
+- スケーリングとさまざまな Windows フォームのレイアウトの機能強化を制御するなど、<xref:System.Windows.Forms.MonthCalendar>コントロールと<xref:System.Windows.Forms.CheckedListBox>コントロール。
 
 - 単一パスをスケーリングします。  .NET Framework 4.6 以前のバージョンで、スケーリングが必要以上にスケールする一部のコントロールの原因とする複数のパスから実行されました。
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711794"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI のサポートを Windows フォーム アプリの構成
 
-高 DPI 対応をサポートする Windows フォームの新しい機能は、.NET Framework 4.7 を対象し、Windows 10 Creators Update 以降の Windows オペレーティング システムで実行しているアプリケーションでのみ使用できます。 
+高 DPI 対応をサポートする Windows フォームの新しい機能は、.NET Framework 4.7 を対象し、Windows 10 Creators Update 以降の Windows オペレーティング システムで実行しているアプリケーションでのみ使用できます。
 
 さらに、Windows フォーム アプリケーションで高 DPI のサポートを構成するにする必要があります、次のように行います。
 
@@ -49,27 +49,27 @@ ms.locfileid: "57711794"
 
 - モニターごとの DPI 認識を有効にする、 *app.config*ファイル。
 
-  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降では追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。   
+  Windows フォームが導入されていますが、新しい[ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)の新機能と .NET Framework 4.7 以降では追加のカスタマイズをサポートする要素。 高 DPI をサポートする新しい機能を利用するには、アプリケーション構成ファイルに、次を追加します。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > .NET Framework の以前のバージョンでは、マニフェストを使用して、高 DPI のサポートを追加します。 このアプローチは推奨されなく app.config ファイルで定義された設定をオーバーライドするためです。
-   
+
 - 呼び出す静的<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。
-   
-  これは、アプリケーションのエントリ ポイントでは、最初のメソッド呼び出しでなければなりません。 例:
-   
+
+  これは、アプリケーションのエントリ ポイントでは、最初のメソッド呼び出しでなければなりません。 例えば:
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ ms.locfileid: "57711794"
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
