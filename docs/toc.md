@@ -449,7 +449,7 @@
 ### [シグネチャ ファイル](fsharp/language-reference/signature-files.md)
 ### [測定単位](fsharp/language-reference/units-of-measure.md)
 ### [XML に関するドキュメント](fsharp/language-reference/xml-documentation.md)
-### [遅延計算](fsharp/language-reference/lazy-computations.md)
+### [遅延式](fsharp/language-reference/lazy-expressions.md)
 ### [コンピュテーション式](fsharp/language-reference/computation-expressions.md)
 ### [非同期ワークフロー](fsharp/language-reference/asynchronous-workflows.md)
 ### [クエリ式](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [PredictionEngine を使った一度に 1 つの予測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [トレーニング済みのモデルを運用化する](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [モデル Azure Functions のサービスを提供する](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [Web API でのサービス提供モデル](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [Infer.NET を使用した確率的プログラミング](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 関連項目
