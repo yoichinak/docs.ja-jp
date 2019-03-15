@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542258"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039406"
 ---
 # <a name="xshared-attribute"></a>x:Shared 属性
 設定すると`false`、属性付きのリソースの要求は、すべての要求の同じインスタンスを共有することがなく、各要求の新しいインスタンスを作成するために、WPF リソース検索の動作を変更します。  
@@ -33,7 +33,7 @@ ms.locfileid: "54542258"
   
  など、API のリソースから返されるオブジェクトを変更する<xref:System.Windows.FrameworkElement.FindResource%2A>、または内で直接オブジェクトを変更する、 <xref:System.Windows.ResourceDictionary>、元のリソースを変更します。 そのリソースへの参照は、動的リソース参照が、そのリソースのコンシューマーは変更されたリソースを取得します。  
   
- 場合、リソースへの参照は静的リソース参照、変更後にリソース[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]処理時間は関係ありません。 静的および動的リソース参照の詳細については、次を参照してください。 [XAML リソース](../../../docs/framework/wpf/advanced/xaml-resources.md)します。  
+ 場合、リソースへの参照は静的リソース参照、変更後にリソース[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]処理時間は関係ありません。 静的および動的リソース参照の詳細については、次を参照してください。 [XAML リソース](../wpf/advanced/xaml-resources.md)します。  
   
  明示的に指定する`x:Shared="true"`はあまり一般的には、既定ではないためです。 同等の直接コードがない`x:Shared`WPF では、オブジェクト モデルは、処理する必要がある既定の WPF の動作をするか、読み込みパスで、中間の XAML ノード ストリームで .NET Framework XAML Se を使用して処理する場合、XAML の使用状況でのみ指定できますターゲットおよびその XAML リーダー。  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54542258"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.ResourceDictionary>
-- [XAML リソース](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [基本要素](../../../docs/framework/wpf/advanced/base-elements.md)
+- [XAML リソース](../wpf/advanced/xaml-resources.md)
+- [基本要素](../wpf/advanced/base-elements.md)
