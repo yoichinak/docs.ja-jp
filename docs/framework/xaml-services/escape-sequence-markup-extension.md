@@ -11,12 +11,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521271"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018556"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} エスケープ シーケンス/マークアップ拡張機能
 属性値を XAML のエスケープ シーケンスを提供します。 エスケープ シーケンスは、リテラルとして解釈される属性で、後続の値を許可します。  
@@ -56,8 +56,8 @@ ms.locfileid: "54521271"
   
  エスケープ シーケンス ({}) は、XAML マークアップ拡張機能が表示される場所の場所に名前空間の修飾子を含める必要のある XML 型を指定するときに頻繁に必要です。 これには、等号 (=) の直後に、マークアップ拡張機能で、XAML 属性の値の開始が含まれます。 次の例では、XAML 属性値の先頭に表示される XML 名前空間のエスケープ シーケンスを示します。  
   
- [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>関連項目
-- [XAML の型コンバーターおよびマークアップ拡張機能](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XML 文字エンティティと XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XAML の型コンバーターおよびマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)
+- [XML 文字エンティティと XAML](xml-character-entities-and-xaml.md)

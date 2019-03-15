@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID455
 ms.assetid: 67a269bf-f436-4913-bc3c-af7f68116b7d
-ms.openlocfilehash: c24f412b9e904d10d69d2a8e07db2bc5b4bdf00e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32fd18d84e3f402dbd27bdfd3370327a456eaa43
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521141"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041410"
 ---
 # <a name="code-resource-lock-error"></a>コード リソースのロック エラーです。
 コード リソース内のプロシージャが呼び出されました。 コード リソースが見つかりましたが、使用中の可能性があるリソースをロックしようとしたときに、エラーが発生しました。  
@@ -19,5 +19,5 @@ ms.locfileid: "54521141"
 -   リソースを確認して、エラーが発生した理由を判断します。  
   
 ## <a name="see-also"></a>関連項目
-- [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)
 
+- [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)
