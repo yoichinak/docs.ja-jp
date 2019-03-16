@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728362"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048034"
 ---
 # <a name="white-space-processing-in-xaml"></a>空白 XAML での処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  
@@ -35,7 +35,7 @@ XAML の言語規則の状態によってその有意の空白を処理する必
   
 5.  終了タグの直前にあるスペースは削除されます。  
   
- "既定" とは、 [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 属性の既定値で表される状態に対応します。  
+ "既定" とは、 [xml:space](xml-space-handling-in-xaml.md) 属性の既定値で表される状態に対応します。  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>内部のテキスト、および文字列プリミティブ内の空白  
@@ -75,6 +75,6 @@ XAML の言語規則の状態によってその有意の空白を処理する必
  また、フロー ドキュメント モデルで改行を意味する特定のインライン要素では、空白が有意なコレクションであっても、余分なスペースが生じるは意図的にする必要があります。 など、<xref:System.Windows.Documents.LineBreak>要素と同じ目的には、 \<BR/> にタグを付ける[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]、マークアップでは、読みやすくするため、通常、<xref:System.Windows.Documents.LineBreak>は改行を入れてで後続のテキストから区切られます。 その改行は、正規化されて後続の行の先頭のスペースになってはなりません。 クラス定義は、その動作を有効にする、<xref:System.Windows.Documents.LineBreak>要素が適用される、 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>、によって解釈されるし、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]空白文字を囲むことを意味するプロセッサ<xref:System.Windows.Documents.LineBreak>は常に切り捨てられます。  
   
 ## <a name="see-also"></a>関連項目
-- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [XML 文字エンティティと XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [xml:space の XAML での処理](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XML 文字エンティティと XAML](xml-character-entities-and-xaml.md)
+- [xml:space の XAML での処理](xml-space-handling-in-xaml.md)

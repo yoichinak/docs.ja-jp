@@ -2,12 +2,12 @@
 title: 別のイベント ログが、既にこの名前のソースを登録しています
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: fa4e8a022db1bbc19bff38fd529066b0619add68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646110"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58032149"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>別のイベント ログが、既にこの名前のソースを登録しています
 イベント ログにエントリを書き込もうとしましたが、指定のソースは別のイベント ログに登録されています。  
@@ -21,5 +21,5 @@ ms.locfileid: "54646110"
 2.  ソースを新しいログに登録します。  
   
 ## <a name="see-also"></a>関連項目
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
 
+- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

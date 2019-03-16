@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365725"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034752"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
@@ -232,7 +232,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter の動作とノードの順序
 
-`StartObject` に対する <xref:System.Xaml.XamlObjectWriter> は、すぐにオブジェクト インスタンスを作成するための XAML オブジェクト ライターへのシグナルであるとは限りません。 XAML には、追加の入力を持つオブジェクトを初期化できるようにするとともに、最初のオブジェクトを生成する既定のコンストラクターを呼び出すことに全体的に依存せず、プロパティの設定のみを行えるようにする、いくつかの言語機能が含まれています。 これらの機能には、 <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初期化のテキスト、 [x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md)、マークアップ拡張機能の位置指定パラメーター、工場出荷時のメソッド、および関連する [x:Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) ノード (XAML 2009) などがあります。 これらの各ケースは、実際のオブジェクトの構築を遅らせます。ノード ストリームの順序が変更されるため、XAML オブジェクト ライターは、具体的にはそのオブジェクトの種類の構築ディレクティブではない開始メンバーが検出されるたびに、実際にインスタンスを構築する動作に依存します。
+`StartObject` に対する <xref:System.Xaml.XamlObjectWriter> は、すぐにオブジェクト インスタンスを作成するための XAML オブジェクト ライターへのシグナルであるとは限りません。 XAML には、追加の入力を持つオブジェクトを初期化できるようにするとともに、最初のオブジェクトを生成する既定のコンストラクターを呼び出すことに全体的に依存せず、プロパティの設定のみを行えるようにする、いくつかの言語機能が含まれています。 これらの機能には、 <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初期化のテキスト、 [x:TypeArguments](x-typearguments-directive.md)、マークアップ拡張機能の位置指定パラメーター、工場出荷時のメソッド、および関連する [x:Arguments](x-arguments-directive.md) ノード (XAML 2009) などがあります。 これらの各ケースは、実際のオブジェクトの構築を遅らせます。ノード ストリームの順序が変更されるため、XAML オブジェクト ライターは、具体的にはそのオブジェクトの種類の構築ディレクティブではない開始メンバーが検出されるたびに、実際にインスタンスを構築する動作に依存します。
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ public class GameBoard {
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xaml.XamlObjectReader>
-- [XAML サービス](../../../docs/framework/xaml-services/index.md)
-- [XAML 名前空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [XAML サービス](index.md)
+- [XAML 名前空間](xaml-namespaces-for-net-framework-xaml-services.md)
