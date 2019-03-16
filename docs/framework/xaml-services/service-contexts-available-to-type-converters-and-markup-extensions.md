@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629297"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049462"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト
 型コンバーターとマークアップ拡張機能の使用をサポートする型の作成者には、マークアップまたは周辺のオブジェクト グラフ構造体のどこで使用されているかを示す文脈情報が必要です。 情報は、指定されるオブジェクトを正しくインスタンス化するため、またオブジェクト グラフ内の既存オブジェクトへのオブジェクト参照を行うために必要です。 .NET Framework XAML サービスを使用している場合、必要となる可能性のあるコンテキストは一連のサービス インターフェイスとして公開されます。 型コンバーターまたはマークアップ拡張のサポート コードでは、 <xref:System.Xaml.XamlObjectWriter> または関連する型から渡される使用可能なサービス プロバイダー コンテキストを使用して、サービスを照会できます。 XAML スキーマ コンテキストは、このようなサービスを通じて直接使用できます。 このトピックでは、値コンバーター実装からサービス コンテキストにアクセスする方法を説明し、通常使用できるサービスとその役割の一覧を示します。  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **サービス API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML Services](../../../docs/framework/xaml-services/index.md)」を参照してください。  
+ 遅延コンテンツを統合するには、同じスキーマ コンテキストを遅延領域に対しても適用する必要があるので、遅延読み込み操作には XAML スキーマ コンテキストが必要です。 XAML スキーマ コンテキストの役割の詳細については、「 [XAML Services](index.md)」を参照してください。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **リファレンス ドキュメント**: <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML のマークアップ拡張機能の概要](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [XAML の型コンバーターの概要](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)
+- [XAML の型コンバーターの概要](type-converters-for-xaml-overview.md)

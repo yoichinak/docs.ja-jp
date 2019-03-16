@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: c250f4f1b30150fe6eb0a8d7e6a13f56e371e77c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 41ae73037891ffd66bae69eb0f22ffa1b0ce4fb5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264519"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049972"
 ---
 # <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>引数を変換できません '\<argumentname >' 型の'\<type1 >' 型に '\<type2 >'
 変換操作は、引数を互換性のない型に変換しようとしています。  
@@ -19,4 +19,5 @@ ms.locfileid: "55264519"
 1.  引数の変換を試みている型が有効であることを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における型変換](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

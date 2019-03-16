@@ -2,12 +2,12 @@
 title: <transport> の <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: c266d751ff3e89f653763ed83c78041d89e22517
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 53b434002d81e4735688ae3821db356c4e6e0fb1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290148"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58040281"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<トランスポート > の\<msmqIntegrationBinding >
 メッセージ キュー統合トランスポートのセキュリティ設定を定義します。  
@@ -40,7 +40,7 @@ msmqIntegrationBinding
 |`msmqAuthenticationMode`|MSMQ トランスポートによるメッセージの認証方法を指定します。 これが `None` に設定されている場合、`msmqProtectionLevel` 属性の値も `None` に設定する必要があります。<br /><br /> 以下の値が有効です。<br /><br /> -None。認証はありません。<br />-   WindowsDomain:認証メカニズムでは、Active Directory を使用して、メッセージに関連付けられている SID の X.509 証明書を取得します。 次に、これを使用してキューの ACL がチェックされ、ユーザーがキューに書き込む権限を持っていることが確認されます。<br />-証明書:チャネルは、証明書ストアから証明書を取得します。<br /><br /> 既定値は WindowsDomain です。 この属性は <xref:System.ServiceModel.MsmqAuthenticationMode> 型です。|  
 |`msmqEncryptionAlgorithm`|メッセージ キュー マネージャー間でメッセージを転送するときに、ネットワーク上でメッセージの暗号化に使用されるアルゴリズムを指定します。 以下の値が有効です。<br /><br /> -[Rc4stream]<br />-AES<br /><br /> 既定値は RC4Stream です。 この属性は <xref:System.ServiceModel.MsmqEncryptionAlgorithm> 型です。|  
 |`msmqProtectionLevel`|MSMQ トランスポートのレベルでメッセージをセキュリティで保護する方法を指定します。 暗号化を行うとメッセージの整合性が確保されますが、EncryptAndSign を使用するとメッセージの整合性と否認防止の両方が確保されます。つまり、メッセージは本当にその送信者から送信されていることになり、記載されている送信者が実際の送信者になります。<br /><br /> -有効な値を以下に示します。<br />-None。保護されません。<br />署名:メッセージは署名されます。<br />-EncryptAndSign:メッセージは暗号化および署名されます。<br /><br /> 既定値は Sign です。 この属性は、ProtectionLevel 型です。|  
-|`msmqSecureHashAlgorithm`|-署名の一部としてダイジェストを計算で使用するアルゴリズムを指定します。 以下の値が有効です。<br />-   MD5<br />-SHA1<br />-   SHA256<br />-SHA512<br /><br /> 既定値は SHA1 です。 この属性は <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 型です。|  
+|`msmqSecureHashAlgorithm`|-署名の一部としてダイジェストを計算で使用するアルゴリズムを指定します。 以下の値が有効です。<br />-   MD5<br />-SHA1<br />-   SHA256<br />-SHA512<br /><br /> 既定値は SHA1 です。 この属性は <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 型です。<br>MD5 と SHA1 に衝突の問題、SHA256 以上をお勧めします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

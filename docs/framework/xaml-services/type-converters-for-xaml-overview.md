@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659151"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049491"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML の型コンバーターの概要
 型コンバーターは、XAML マークアップの文字列をオブジェクト グラフの特定のオブジェクトに変換するオブジェクト ライターのロジックを提供します。 .NET Framework XAML サービスでは、型コンバーターは <xref:System.ComponentModel.TypeConverter>から派生したクラスである必要があります。 一部のコンバーターは XAML 保存パスもサポートしており、オブジェクトをシリアル化マークアップの文字列形式にシリアル化するために使用されます。 このトピックでは、XAML の型コンバーターがいつ、どのように起動されるかについて説明し、 <xref:System.ComponentModel.TypeConverter>のメソッドのオーバーライドの実装についてアドバイスします。  
@@ -29,7 +29,7 @@ ms.locfileid: "54659151"
 >  XAML 言語ディレクティブでは、型コンバーターは使用されません。  
   
 ### <a name="type-converters-and-markup-extensions"></a>型コンバーターとマークアップ拡張機能  
- マークアップ拡張機能の使用は、プロパティの型やその他の考慮事項を確認する前に、XAML プロセッサで処理される必要があります。 たとえば、属性として設定されるプロパティが、通常は型変換を行うものの、特定のケースではマークアップ拡張機能を使用して設定するという場合は、マークアップ拡張機能の動作が最初に処理されます。 マークアップ拡張機能が必要になる 1 つの一般的な状況は、既に存在するオブジェクトを参照する場合です。 このシナリオでは、ステートレスな型コンバーターは新しいインスタンスを生成することしかできないため、望ましくありません。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)」をご覧ください。  
+ マークアップ拡張機能の使用は、プロパティの型やその他の考慮事項を確認する前に、XAML プロセッサで処理される必要があります。 たとえば、属性として設定されるプロパティが、通常は型変換を行うものの、特定のケースではマークアップ拡張機能を使用して設定するという場合は、マークアップ拡張機能の動作が最初に処理されます。 マークアップ拡張機能が必要になる 1 つの一般的な状況は、既に存在するオブジェクトを参照する場合です。 このシナリオでは、ステートレスな型コンバーターは新しいインスタンスを生成することしかできないため、望ましくありません。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
 ### <a name="native-type-converters"></a>ネイティブな型コンバーター  
  WPF と .NET XAML サービスの実装では、ネイティブ型の変換処理がある特定の CLR 型は、ただし、これらの CLR 型がない従来どおりとして考えることプリミティブ。 このような型の例として、 <xref:System.DateTime>が挙げられます。 この理由の 1 つは、.NET Framework のアーキテクチャがどのように機能するかにあります。 <xref:System.DateTime> 型は、.NET の最も基本的なライブラリである mscorlib で定義されています。 <xref:System.DateTime> の属性を設定する時は、別のアセンブリから来る属性を使用して従属関係を持ち込むことができません (<xref:System.ComponentModel.TypeConverterAttribute> は System から)。したがって、属性による通常の型コンバーターの検出機構はサポートできません。 代わりに、XAML パーサーは、ネイティブな処理が必要な型の一覧を保持し、それらの型を通常のプリミティブの処理と類似した方法で処理します。 <xref:System.DateTime>の場合、その処理には <xref:System.DateTime.Parse%2A>の呼び出しが含まれます。  
@@ -60,7 +60,7 @@ ms.locfileid: "54659151"
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> と <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> は、サービスが <xref:System.ComponentModel.TypeConverter> の実装の機能を照会する時に使用されるサポート メソッドです。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>カルチャ情報と XAML の型コンバーター  
- 各 <xref:System.ComponentModel.TypeConverter> 実装では、変換に対して有効な文字列を独自に解釈できます。また、パラメーターとして渡される型の説明を使用することも無視することもできます。 カルチャと XAML の型変換については、重要な考慮事項があります。ローカライズ可能な文字列を属性値として使用することは XAML でサポートされていますが、それらのローカライズ可能な文字列を、特定のカルチャ要件を指定して型コンバーターの入力として使用することはできません。 この制限の理由は、XAML 属性値の型コンバーターには、特定の言語に固定して ( `en-US` カルチャを使用して) 実行しなければならない XAML 処理の動作がどうしても含まれるためです。 この制限の設計上の理由の詳細については、XAML 言語仕様を参照してください ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) または[WPF のグローバリゼーションおよびローカリゼーションの概要](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ 各 <xref:System.ComponentModel.TypeConverter> 実装では、変換に対して有効な文字列を独自に解釈できます。また、パラメーターとして渡される型の説明を使用することも無視することもできます。 カルチャと XAML の型変換については、重要な考慮事項があります。ローカライズ可能な文字列を属性値として使用することは XAML でサポートされていますが、それらのローカライズ可能な文字列を、特定のカルチャ要件を指定して型コンバーターの入力として使用することはできません。 この制限の理由は、XAML 属性値の型コンバーターには、特定の言語に固定して ( `en-US` カルチャを使用して) 実行しなければならない XAML 処理の動作がどうしても含まれるためです。 この制限の設計上の理由の詳細については、XAML 言語仕様を参照してください ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) または[WPF のグローバリゼーションおよびローカリゼーションの概要](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  カルチャが問題となる例として、一部のカルチャで文字列形式の数値の小数点記号にピリオドではなくコンマが使用されることが挙げられます。 そのように使用した場合、区切り記号としてコンマを使用する多くの既存の型コンバーターで、動作が競合します。 周囲の XAML で `xml:lang` を使用してカルチャを指定しても、この問題は解決しません。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54659151"
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>マークアップ拡張機能の実装からサービス プロバイダーのコンテキストにアクセスする  
- 使用可能なサービスは、すべての値コンバーターの場合と同じです。 ただし、それぞれの値コンバーターがサービス コンテキストを受け取る方法が違います。 サービスへのアクセスと、使用できるサービスについては、「 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)」のトピックをご覧ください。  
+ 使用可能なサービスは、すべての値コンバーターの場合と同じです。 ただし、それぞれの値コンバーターがサービス コンテキストを受け取る方法が違います。 サービスへのアクセスと、使用できるサービスについては、「 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)」のトピックをご覧ください。  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>XAML ノード ストリームでの型コンバーター  
@@ -109,5 +109,5 @@ ms.locfileid: "54659151"
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [XAML の型コンバーターおよびマークアップ拡張機能](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML の型コンバーターおよびマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)
+- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

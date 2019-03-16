@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641110"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050605"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 組み込み XAML 型 
 XAML の運用環境でコードを配置をできます。 XAML、またはランタイムによって解釈など、後から使用の XAML の運用環境で左側をコンパイルする任意の XAML プロセッサ実装によってこのようなコードをコンパイルすることができますか。  
@@ -40,7 +40,7 @@ XAML の運用環境でコードを配置をできます。 XAML、またはラ�
   
 -   `x:Code`ディレクティブ要素は XAML の運用環境のルート要素の直接の子要素である必要があります。  
   
--   [X:class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)親ルート要素に提供する必要があります。  
+-   [X:class ディレクティブ](x-class-directive.md)親ルート要素に提供する必要があります。  
   
 -   コード内に配置`x:Code`は、その XAML ページを既に作成されている部分クラスのスコープ内にあるコンパイルで扱われます。 したがってすべてのコードを定義するには、その部分クラスのメンバーまたは変数があります。  
   
@@ -49,6 +49,6 @@ XAML の運用環境でコードを配置をできます。 XAML、またはラ�
 -   部分クラスの CLR 名前空間の外部のコード エンティティを参照する必要がありますすべて完全修飾します。 部分クラスのオーバーライド可能なメンバーをオーバーライド メンバーが宣言されている場合は、これを言語固有の override キーワードを指定する必要があります。 メンバーが宣言されている場合`x:Code`XAML から作成された部分クラスのメンバーと競合するスコープ、このような方法で、コンパイラが、競合を報告する XAML ファイルことはできませんコンパイルまたは読み込みます。  
   
 ## <a name="see-also"></a>関連項目
-- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)
-- [WPF における分離コードと XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class ディレクティブ](x-class-directive.md)
+- [WPF における分離コードと XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

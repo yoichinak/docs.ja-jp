@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084837a87d878982ad4138ab508d24100e183b64
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679347"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58024568"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -65,10 +65,10 @@ ms.locfileid: "57679347"
 |スイッチ名|説明|導入されました|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation がコントロールのレイアウトのレガシ、アルゴリズムを使用するかどうかを制御します。 詳細については、「[軽減策:WPF レイアウト](../../../migration-guide/mitigation-wpf-layout.md)します。|.NET Framework 4.6|  
-|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager によってパッケージのパーツに署名するために使用される既定のアルゴリズムが SHA1 または SHA256 がかどうかを制御します。|.NET Framework 4.7.1|
+|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager によってパッケージのパーツに署名するために使用される既定のアルゴリズムが SHA1 または SHA256 がかどうかを制御します。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|設定すると`false`FIPS が有効にすると、Visual Studio を使用した XAML ベースのワークフロー プロジェクトをデバッグできます。 これがない、 <xref:System.NullReferenceException> System.Activities アセンブリ内のメソッドの呼び出しでがスローされます。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|デバッガーでのワークフロー インスタンスのチェックサムが MD5 または SHA1 を使用するかどうかを制御します。 | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|ワークフロー チェックサムのハッシュ .NET Framework 4.7 では既定値として導入された SHA1 アルゴリズムを使用しているかどうかを制御する (`true`)、またはかどうかを使用して、.NET Framework 4.8 で既定値として導入された既定の SHA256 アルゴリズム (`false`)。|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|ワークフロー チェックサムのハッシュ .NET Framework 4.7 では既定値として導入された SHA1 アルゴリズムを使用しているかどうかを制御する (`true`)、またはかどうかを使用して、.NET Framework 4.8 で既定値として導入された既定の SHA256 アルゴリズム (`false`)。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|ソース ファイルと行情報を含めることができますポータブル Pdb の使用時にスタック トレースを取得するかどうかを制御します。 `false` ソース ファイルと行情報を含めるそれ以外の場合、`true`します。|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|コントロールかどうか、<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>メソッドが例外をスロー時に、<xref:System.Drawing.Icon>オブジェクトに PNG フレーム。 詳細については、「[軽減策:Icon オブジェクトの PNG フレーム](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)します。|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|決定かどうか<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>オブジェクトが適切に破棄して、コレクションに追加されたときに、<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType>メソッド。 `true` 従来の動作を維持するには`false`プライベート フォントのすべてのオブジェクトを破棄します。 |.NET Framework 4.7.2|
@@ -96,8 +96,8 @@ ms.locfileid: "57679347"
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|コントロールかどうか、<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>コンス トラクターの設定、新しいオブジェクトの<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>既存のオブジェクト参照を持つプロパティです。 詳細については、「[軽減策:ClaimsIdentity コンス トラクター](../../../migration-guide/mitigation-claimsidentity-constructor.md)します。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|コントロールかどうかを再利用しようとすると、<xref:System.Security.Cryptography.AesCryptoServiceProvider>復号化がスローされます、<xref:System.Security.Cryptography.CryptographicException>します。 詳細については、次を参照してください。 [AesCryptoServiceProvider の復号化は、再利用可能な変換を提供します。](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)します。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|コントロールかどうかの値、 [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)プロパティは、 [IntPtr](xref:System.IntPtr)こと表しますウィンドウのメモリ位置を処理するかどうか、ウィンドウ ハンドル (HWND)。 詳細については、「[軽減策:CspParameters.ParentWindowHandle で HWND を](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)します。 |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。 |.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。 |.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定かどうか、`TransportWithMessageCredential`セキュリティ モードで、符号なしのメッセージは、"to"ヘッダー。 これは、オプトイン スイッチです。 詳細については、次を参照してください。 [、.NET Framework 4.6.1 におけるランタイムの変更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)します。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|コントロールかどうか、<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>コンス トラクターがスローされます、<xref:System.ArgumentException>場合は、要素の 1 つ`null`します。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG キー ストレージ プロバイダーが例外をスローします X509 を使用しようとすると、証明書を使用するかどうかを判断します。 詳細については、次を参照してください。 [WCF トランスポート セキュリティは、CNG を使用して格納される証明書をサポートしている](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)します。|.NET Framework 4.6.1|
@@ -105,8 +105,8 @@ ms.locfileid: "57679347"
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|再入可能サービスのインスタンスを一度に実行の 1 つのスレッドに制限することに起因するデッドロックを処理します。|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|と共に`Switch.System.Net.DontEnableSchUseStrongCrypto`、WCF メッセージ セキュリティには、TLS 1.1 および TLS 1.2 が使用しているかどうかを決定します。|.NET Framework 4.7 |    
 |`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|値`false`プロトコルの選択をオペレーティング システムを許可する既定の構成を設定します。 値`true`使用可能な最も高いプロトコルを既定値に設定します。 (サービスの以前の framework バージョンのブランチにも使用可能)|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|既定のメッセージ署名の WCF で MSMQ のメッセージのアルゴリズムが SHA1 または SHA256 かどうかを判断します。|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF が、SHA1 または SHA256 ハッシュを使用して名前付きパイプのランダムな名前を生成するかどうかを制御します。|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|既定のメッセージ署名の WCF で MSMQ のメッセージのアルゴリズムが SHA1 または SHA256 かどうかを判断します。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF が、SHA1 または SHA256 ハッシュを使用して名前付きパイプのランダムな名前を生成するかどうかを制御します。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|スローするかどうかを制御する[NullReferenceException](xref:System.NullReferenceException)例外メッセージが null の場合。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|呼び出し元に、サービスの起動時にスローされた例外が反映されるかどうかを制御、<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>メソッド。|.NET Framework 4.7.1|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|場合によってはデコードされた特定のパーセントでエンコードされた文字を常に保たれるエンコードされたようになりましたかどうかを判断します。 場合`true`、デコードされた。 それ以外は`false`します。|.NET Framework 4.7.2|
@@ -122,11 +122,11 @@ ms.locfileid: "57679347"
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|決定かどうか、<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>プロパティは、ユーザーが、入れ子になったから、メニューを開いたときにソース コントロールを返します<xref:System.Windows.Forms.ToolStripMenuItem>コントロール。 `true` 返す`null`、従来の動作です。`false`をソース コントロールを返します。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|ツールヒントの呼び出しのサポートが無効になっているかどうかを制御する (`true`) または有効になっている (`false`)。 によって定義されている以前のアクセシビリティ機能も必要になりますツールヒント呼び出しのサポートを有効にする`Switch.UseLegacyAccessibilityFeatures`、`Switch.UseLegacyAccessibilityFeatures.2`と`Switch.UseLegacyAccessibilityFeatures.3`すべて無効にする (設定`false`)。|.NET Framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|省略可能なのかどうかを判断します`WM_POINTER`-ベースのタッチ/スタイラス スタックが WPF アプリケーションで有効にします。 詳細については、「[軽減策:ポインター ベースのタッチおよびスタイラスのサポート](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
-|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|チェックサムで使用される既定のハッシュ アルゴリズムが SHA256 であるかどうかを判断します (`false`) または SHA1 (`true`)。|.NET Framework 4.7.2|
+|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|チェックサムで使用される既定のハッシュ アルゴリズムが SHA256 であるかどうかを判断します (`false`) または SHA1 (`true`)。<br>(SHA1) は、競合の問題のためには SHA256 を推奨します。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|レガシかどうかを制御[NullReferenceException](xref:System.NullReferenceException)より具体的には、例外の原因を示す例外がスローされます (など、 [DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException)または、 [FileNotFoundException](xref:System.IO.FileNotFoundException)します。 処理に依存するコードで使用するためには、 [NullReferenceException](xref:System.NullReferenceException)します。 | .NET Framework 4.7 |
-|`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|コントロールのワークフロー プロジェクトで使う、XOML ファイル チェックサムのハッシュを作成するかどうかは、MD5 アルゴリズムを使用して (`true`)、または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているか。|.NET Framework 4.8|
-|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|チェックサムのハッシュ、SqlTrackingService を MD5 アルゴリズムを使用しているかどうかを制御する (`true`) 文字列のキャッシュされた場合または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているかどうか。|.NET Framework 4.8|
-|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForWorkflowDefinitionDispenserCacheKey`|ワークフロー ランタイムによってチェックサムのハッシュ MD5 アルゴリズムを使用しているかどうかを制御する (`true`) のキャッシュされたワークフロー定義、または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているかどうか。|.NET Framework 4.8|
+|`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|コントロールのワークフロー プロジェクトで使う、XOML ファイル チェックサムのハッシュを作成するかどうかは、MD5 アルゴリズムを使用して (`true`)、または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているか。<br>MD5 に衝突の問題を Microsoft には SHA256 がお勧めします。|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|チェックサムのハッシュ、SqlTrackingService を MD5 アルゴリズムを使用しているかどうかを制御する (`true`) 文字列のキャッシュされた場合または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているかどうか。<br>MD5 に衝突の問題を Microsoft には SHA256 がお勧めします。|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForWorkflowDefinitionDispenserCacheKey`|ワークフロー ランタイムによってチェックサムのハッシュ MD5 アルゴリズムを使用しているかどうかを制御する (`true`) のキャッシュされたワークフロー定義、または .NET Framework 4.8 で既定値として導入された SHA256 アルゴリズムを使用しているかどうか。<br>MD5 に衝突の問題を Microsoft には SHA256 がお勧めします。|.NET Framework 4.8|
 |`Switch.UseLegacyAccessibilityFeatures`|コントロールのアクセシビリティ機能と .NET Framework 4.7.1 以降で利用可能かどうかが有効または無効にします。 | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|ユーザー補助機能を .NET Framework 4.7.2 で使用できるかどうかが有効になっているコントロール (`false`) か無効 (`true`)。 場合`true`、`Switch.UseLegacyAccessibilityFeatures`必要もあります`true`.NET Framework 4.7.1 のアクセシビリティ機能を有効にします。|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|ユーザー補助機能が .NET Framework 4.8 で導入されたかどうかが有効になっているコントロール (`false`) か無効 (`true`)。 場合`true`、`Switch.UseLegacyAccessibilityFeatures`と`Switch.UseLegacyAccessibilityFeatures.2`必要もあります`true`します。|.NET Framework 4.8|
