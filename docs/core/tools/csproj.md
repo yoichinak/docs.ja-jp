@@ -2,18 +2,19 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 09/22/2017
-ms.openlocfilehash: f2b028624f2a09e43aa94d8044568a8aafd07df6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c6127d20e71328733eb1fe8a21a7fa7a9735d5a2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678997"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845483"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
-ここでは、*project.json* から *csproj* および [MSBuild](https://github.com/Microsoft/MSBuild) への移行に伴ってプロジェクト ファイルに追加された変更について説明します。 一般的なプロジェクト ファイルの構文とリファレンスの詳細については、[MSBuild プロジェクト ファイル](/visualstudio/msbuild/msbuild-project-file-schema-reference)のドキュメントを参照してください。  
+ここでは、*project.json* から *csproj* および [MSBuild](https://github.com/Microsoft/MSBuild) への移行に伴ってプロジェクト ファイルに追加された変更について説明します。 一般的なプロジェクト ファイルの構文とリファレンスの詳細については、[MSBuild プロジェクト ファイル](/visualstudio/msbuild/msbuild-project-file-schema-reference)のドキュメントを参照してください。
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
+
 メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。
 
 ```xml
@@ -21,7 +22,7 @@ ms.locfileid: "57678997"
    <TargetFramework>netcoreapp2.1</TargetFramework>
  </PropertyGroup>
  ```
- 
+
  ```xml
  <PropertyGroup>
    <TargetFrameworks>netcoreapp2.1;net462</TargetFrameworks>
@@ -29,6 +30,7 @@ ms.locfileid: "57678997"
  ```
 
 ### <a name="recommendations"></a>推奨事項
+
 `Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージは暗黙的に参照されるので、ベスト プラクティスとして以下が推奨されます。
 
 * .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージを明示的に参照しないようにします。
@@ -38,16 +40,16 @@ ms.locfileid: "57678997"
 * .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NetStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core プロジェクトの既定のコンパイルの include
-最新バージョンの SDK の *csproj* 形式に移行すると共に、コンパイル項目と、SDK プロパティ ファイルに埋め込みリソースの既定の include と exclude を SDK プロパティ ファイルに移行しました。 つまり、これらの項目をプロジェクト ファイルに指定する必要はなくなりました。 
+最新バージョンの SDK の *csproj* 形式に移行すると共に、コンパイル項目と、SDK プロパティ ファイルに埋め込みリソースの既定の include と exclude を SDK プロパティ ファイルに移行しました。 つまり、これらの項目をプロジェクト ファイルに指定する必要はなくなりました。
 
-これを行う主な理由は、プロジェクト ファイルを見やすくするためです。 SDK の既定値は、最も一般的な使用例に対応しているので、作成するプロジェクトごとに繰り返す必要はありません。 その結果、プロジェクト ファイルが小さくなり、わかりやすく、編集が必要な場合に編集しやすくなります。 
+これを行う主な理由は、プロジェクト ファイルを見やすくするためです。 SDK の既定値は、最も一般的な使用例に対応しているので、作成するプロジェクトごとに繰り返す必要はありません。 その結果、プロジェクト ファイルが小さくなり、わかりやすく、編集が必要な場合に編集しやすくなります。
 
-次の表は、SDK に含まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧です。 
+次の表は、SDK に含まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧です。
 
-| 要素           | 含まれる glob                                | 除外される glob                                                    | glob の削除                |
+| 要素           | 含まれる glob                              | 除外される glob                                                  | glob の削除              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compile           | \*\*/\*.cs (または他の言語拡張機能) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                        |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                        |
+| Compile           | \*\*/\*.cs (または他の言語拡張機能) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/A                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
 | なし              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
@@ -55,7 +57,7 @@ ms.locfileid: "57678997"
 
 プロジェクトに glob があり、最新の SDK を使用してビルドしようとすると、次のエラーが発生します。
 
-> 重複するコンパイル項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリのコンパイル項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。 
+> 重複するコンパイル項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリのコンパイル項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。
 
 このエラーを回避するには、前の表にあるものと一致する明示的な `Compile` 項目を削除するか、次のように `<EnableDefaultCompileItems>` プロパティを `false` に設定します。
 
@@ -64,6 +66,7 @@ ms.locfileid: "57678997"
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 </PropertyGroup>
 ```
+
 このプロパティを `false` に設定すると、暗黙的に含める動作が無効になり、以前の SDK の動作に戻り、プロジェクトに既定の glob が指定されます。
 
 この変更で、他の include の主なしくみは変わりません。 ただし、たとえばアプリで発行する一部のファイルを指定する場合は、*csproj* で既知のしくみ (たとえば `<Content>` 要素) を使用することができます。
@@ -71,6 +74,7 @@ ms.locfileid: "57678997"
 `<EnableDefaultCompileItems>` は `Compile` glob のみを無効にし、\*.cs 項目にも適用される暗黙的 `None` glob など、他の Glob には影響しません。 そのため、**ソリューション エクスプローラー**は \*.cs 項目を `None` 項目として含まれた、プロジェクトの一部として引き続き表示します。 同様に、`<EnableDefaultNoneItems>` を利用して暗黙的 `None` glob を無効にできます。
 
 **暗黙的 glob をすべて**無効にするには、`<EnableDefaultItems>` プロパティを `false` に設定します。次の例をご覧ください。
+
 ```xml
 <PropertyGroup>
     <EnableDefaultItems>false</EnableDefaultItems>
@@ -89,26 +93,29 @@ ms.locfileid: "57678997"
 
 ## <a name="additions"></a>追加
 
-### <a name="sdk-attribute"></a>SDK 属性 
+### <a name="sdk-attribute"></a>SDK 属性
 *.csproj* ファイルのルート `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core ツールには主に 3 つの SDK が付属しています。
 
 1. ID が `Microsoft.NET.Sdk` の .NET Core SDK
 2. ID が `Microsoft.NET.Sdk.Web` の .NET Core Web SDK
 3. ID が `Microsoft.NET.Sdk.Razor` の .NET Core Razor クラス ライブラリ SDK
 
-.NET Core ツールを使用し、コードをビルドするには、`Sdk` 属性を `<Project>` 要素の ID のいずれかに設定する必要があります。 
+.NET Core ツールを使用し、コードをビルドするには、`Sdk` 属性を `<Project>` 要素の ID のいずれかに設定する必要があります。
 
 ### <a name="packagereference"></a>PackageReference
-`<PackageReference>` 項目要素では、[プロジェクトでの NuGet の依存関係](/nuget/consume-packages/package-references-in-project-files)を指定します。 `Include` 属性は、パッケージ ID を指定します。 
+
+`<PackageReference>` 項目要素では、[プロジェクトでの NuGet の依存関係](/nuget/consume-packages/package-references-in-project-files)を指定します。 `Include` 属性は、パッケージ ID を指定します。
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Version
+
 必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/reference/package-versioning#version-ranges-and-wildcards)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets、PrivateAssets
+
 `IncludeAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットのうち、使う必要があるものを指定します。 既定では、パッケージのすべてのアセットが含まれます。
 
 `ExcludeAssets` 属性は、`<PackageReference>` で指定されているパッケージに属するアセットのうち、使う必要がないものを指定します。
@@ -133,23 +140,27 @@ ms.locfileid: "57678997"
 * `All` - すべてのアセットが使用されます。
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
-`<DotNetCliToolReference>` 項目要素は、プロジェクトのコンテキストでユーザーが復元を望む CLI ツールを指定します。 *project.json* の `tools` ノードに代わるものです。 
+`<DotNetCliToolReference>` 項目要素は、プロジェクトのコンテキストでユーザーが復元を望む CLI ツールを指定します。 *project.json* の `tools` ノードに代わるものです。
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Version
+
 `Version` は、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/create-packages/dependency-versions#version-ranges)スキームの規則に従います。 既定の動作では、バージョンを正確に一致させます。 たとえば、`Version="1.2.3"` を指定すると、パッケージのバージョンが正確に 1.2.3 であることを表す NuGet 表記の `[1.2.3]` と同じになります。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
-`<RuntimeIdentifiers>` プロパティ要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) のセミコロン区切りリストを指定できます。 RID により、自己完結型の展開を発行できます。 
+
+`<RuntimeIdentifiers>` プロパティ要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) のセミコロン区切りリストを指定できます。
+RID により、自己完結型の展開を発行できます。
 
 ```xml
 <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 ```
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
+
 `<RuntimeIdentifier>` プロパティ要素では、プロジェクトの[ランタイム識別子 (RID)](../rid-catalog.md) を 1 つだけ指定できます。 RID により、自己完結型の展開を発行できます。
 
 ```xml
@@ -158,10 +169,11 @@ ms.locfileid: "57678997"
 
 複数のランタイムに対して発行する必要がある場合、代わりに `<RuntimeIdentifiers>` (複数) を使用します。 `<RuntimeIdentifier>` では、必要なランタイムが 1 つだけのとき、ビルドが速くなります。
 
-### <a name="packagetargetfallback"></a>PackageTargetFallback 
-`<PackageTargetFallback>` プロパティ要素では、パッケージの復元時に使用する、互換性のある一連のターゲットを指定できます。 dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) を使用するパッケージに、dotnet TxM を宣言しないパッケージで動作することを許可するように設計されています。 プロジェクトで dotnet TxM を使用せず、依存するすべてのパッケージに dotnet TxM を与える必要がある場合、非 dotnet プラットフォームを dotnet 対応にするためにプロジェクトに `<PackageTargetFallback>` を追加します。 
+### <a name="packagetargetfallback"></a>PackageTargetFallback
 
-次の例では、プロジェクトのすべてのターゲットにフォールバックを提供しています。 
+`<PackageTargetFallback>` プロパティ要素では、パッケージの復元時に使用する、互換性のある一連のターゲットを指定できます。 dotnet [TxM (Target x Moniker)](/nuget/schema/target-frameworks) を使用するパッケージに、dotnet TxM を宣言しないパッケージで動作することを許可するように設計されています。 プロジェクトで dotnet TxM を使用せず、依存するすべてのパッケージに dotnet TxM を与える必要がある場合、非 dotnet プラットフォームを dotnet 対応にするためにプロジェクトに `<PackageTargetFallback>` を追加します。
+
+次の例では、プロジェクトのすべてのターゲットにフォールバックを提供しています。
 
 ```xml
 <PackageTargetFallback>
@@ -178,21 +190,27 @@ ms.locfileid: "57678997"
 ```
 
 ## <a name="nuget-metadata-properties"></a>NuGet メタデータ プロパティ
-MSBuild への移行に伴い、*project.json* ファイルから *csproj* ファイルに NuGet パッケージをパックするときに使用される入力メタデータを移動しました。 入力は MSBuild プロパティなので、`<PropertyGroup>` グループ内で行う必要があります。 次に示すのは、`dotnet pack` コマンドまたは SDK の一部である `Pack` MSBuild ターゲットを使用するときに、パッキング プロセスへの入力として使用されるプロパティの一覧です。 
+
+MSBuild への移行に伴い、*project.json* ファイルから *csproj* ファイルに NuGet パッケージをパックするときに使用される入力メタデータを移動しました。 入力は MSBuild プロパティなので、`<PropertyGroup>` グループ内で行う必要があります。 次に示すのは、`dotnet pack` コマンドまたは SDK の一部である `Pack` MSBuild ターゲットを使用するときに、パッキング プロセスへの入力として使用されるプロパティの一覧です。
 
 ### <a name="ispackable"></a>IsPackable
-プロジェクトをパックできるかどうかを示すブール値。 既定値は `true` です。 
+
+プロジェクトをパックできるかどうかを示すブール値。 既定値は `true` です。
 
 ### <a name="packageversion"></a>PackageVersion
-結果のパッケージのバージョンを指定します。 すべてのフォームの NuGet バージョン文字列を受け入れます。 既定値は `$(Version)` です。つまり、プロジェクトのプロパティ `Version` の値です。 
+
+結果のパッケージのバージョンを指定します。 すべてのフォームの NuGet バージョン文字列を受け入れます。 既定値は `$(Version)` です。つまり、プロジェクトのプロパティ `Version` の値です。
 
 ### <a name="packageid"></a>PackageId
-結果のパッケージの名前を指定します。 指定しない場合、`pack` 操作の既定では、`AssemblyName` またはディレクトリ名をパッケージ名として使用します。 
+
+結果のパッケージの名前を指定します。 指定しない場合、`pack` 操作の既定では、`AssemblyName` またはディレクトリ名をパッケージ名として使用します。
 
 ### <a name="title"></a>Title
+
 人が読みやすいパッケージのタイトル。通常、nuget.org と、Visual Studio のパッケージ マネージャーの UI 画面で使用されます。 指定しない場合、パッケージ ID が代わりに使用されます。
 
 ### <a name="authors"></a>Authors
+
 nuget.org のプロファイル名と一致するパッケージ作成者をセミコロンで区切った一覧。これらは nuget.org の NuGet ギャラリーに表示され、同じ作成者によるパッケージの相互参照に使用されます。
 
 ### <a name="packagedescription"></a>PackageDescription
@@ -200,12 +218,15 @@ nuget.org のプロファイル名と一致するパッケージ作成者をセ�
 UI 画面用のパッケージの長い説明。
 
 ### <a name="description"></a>説明
+
 アセンブリの長い説明。 `PackageDescription` が指定されていない場合、このプロパティはパッケージの説明としても使用されます。
 
 ### <a name="copyright"></a>Copyright
+
 パッケージの著作権の詳細。
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
+
 クライアントがユーザーに対して、パッケージのインストール前にパッケージ ライセンスに同意することを必須にするかどうかを示すブール値。 既定値は、`false` です。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
@@ -215,6 +236,7 @@ UI 画面用のパッケージの長い説明。
 [SPDX ライセンス識別子](https://spdx.org/licenses/)の完全な一覧はこちらをご覧ください。 ライセンス タイプ式を使用する場合、NuGet.org では OSI または FSF で承認されたライセンスのみが受け付けられます。
 
 ライセンス式の正確な構文については、[ABNF](https://tools.ietf.org/html/rfc5234) をご覧ください。
+
 ```cli
 license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
 
@@ -225,7 +247,7 @@ simple-expression = license-id / license-id”+”
 compound-expression =  1*1(simple-expression /
                 simple-expression "WITH" license-exception-id /
                 compound-expression "AND" compound-expression /
-                compound-expression "OR" compound-expression ) /                
+                compound-expression "OR" compound-expression ) /
                 "(" compound-expression ")" )
 
 license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
@@ -241,6 +263,7 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 `PackageLicenseUrl` を置き換えるもので、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
 
 プロジェクトに明示的に追加することによって、ライセンス ファイルをパックする必要があります。使用例を次に示します。
+
 ```xml
 <PropertyGroup>
   <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -256,63 +279,82 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 
 
 ### <a name="packageiconurl"></a>PackageIconUrl
+
 UI 画面のパッケージのアイコンとして使用する背景が透明な 64x64 の画像の URL。
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
+
 パッケージのリリース ノート。
 
 ### <a name="packagetags"></a>PackageTags
+
 パッケージを指定するタグのセミコロン区切りの一覧。
 
 ### <a name="packageoutputpath"></a>PackageOutputPath
-パックされたパッケージをドロップする出力パスを指定します。 既定値は `$(OutputPath)` です。 
+
+パックされたパッケージをドロップする出力パスを指定します。 既定値は `$(OutputPath)` です。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 このパッケージの拡張子は *.symbols.nupkg* になります。DLL や他の出力ファイルと共に PDF ファイルがコピーされます。
 
 ### <a name="includesource"></a>IncludeSource
-このブール値は、パック プロセスでソース パッケージを作成するかどうかを示します。 ソース パッケージには、ライブラリのソース コードと PDB ファイルが含まれます。 ソース ファイルは、結果のパッケージ ファイルの `src/ProjectName` ディレクトリに置かれます。 
+
+このブール値は、パック プロセスでソース パッケージを作成するかどうかを示します。 ソース パッケージには、ライブラリのソース コードと PDB ファイルが含まれます。 ソース ファイルは、結果のパッケージ ファイルの `src/ProjectName` ディレクトリに置かれます。
 
 ### <a name="istool"></a>IsTool
+
 すべての出力ファイルを *lib* フォルダーではなく *tools* フォルダーにコピーするかどうかを指定します。 *.csproj* ファイルに `PackageType` を設定することで指定される `DotNetCliTool` とは異なります。
 
 ### <a name="repositoryurl"></a>RepositoryUrl
-パッケージのソース コードがある、またはビルド元のリポジトリの URL を指定します。 
+
+パッケージのソース コードがある、またはビルド元のリポジトリの URL を指定します。
 
 ### <a name="repositorytype"></a>RepositoryType
-リポジトリの種類を指定します。 既定値は "git" です。 
+
+リポジトリの種類を指定します。 既定値は "git" です。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
+
 パッケージのビルド後に、パックでパッケージの分析を実行しないことを指定します。
 
 ### <a name="minclientversion"></a>MinClientVersion
+
 nuget.exe および Visual Studio パッケージ マネージャーで強制する、このパッケージをインストールできる NuGet クライアントの最小バージョンを指定します。
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
+
 このブール値は、ビルド出力アセンブリを *.nupkg* ファイルにパックするかどうかを指定します。
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
-このブール値は、種類が `Content` の項目を結果のパッケージに自動的に含めるかどうかを指定します。 既定値は、`true` です。 
+
+このブール値は、種類が `Content` の項目を結果のパッケージに自動的に含めるかどうかを指定します。 既定値は、`true` です。
 
 ### <a name="buildoutputtargetfolder"></a>BuildOutputTargetFolder
+
 出力アセンブリを配置するフォルダーを指定します。 出力アセンブリ (および他の出力ファイル) は、各フレームワーク フォルダーにコピーされます。
 
 ### <a name="contenttargetfolders"></a>ContentTargetFolders
+
 このプロパティには、`PackagePath` が指定されていない場合に、すべてのコンテンツ ファイルを配置する既定の場所を指定します。 既定値は "content;contentFiles" です。
 
 ### <a name="nuspecfile"></a>NuspecFile
-パックに使用する *.nuspec* ファイルの相対パスまたは絶対パス。 
+
+パックに使用する *.nuspec* ファイルの相対パスまたは絶対パス。
 
 > [!NOTE]
-> *.nuspec* ファイルを指定すると、情報のパッケージに**のみ**使用され、プロジェクト内の情報は使用されません。 
+> *.nuspec* ファイルを指定すると、情報のパッケージに**のみ**使用され、プロジェクト内の情報は使用されません。
 
 ### <a name="nuspecbasepath"></a>NuspecBasePath
+
 *.nuspec* ファイルのベース パス。
 
 ### <a name="nuspecproperties"></a>NuspecProperties
+
 キー=値ペアのセミコロン区切りの一覧。
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo プロパティ
+
 通常、*AssemblyInfo* ファイル内に存在していた[アセンブリ属性](../../framework/app-domains/set-assembly-attributes.md)は、プロパティから自動的に生成されるようになりました。
 
 ### <a name="properties-per-attribute"></a>属性ごとのプロパティ
@@ -340,8 +382,10 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 * NuGet メタデータには、`Copyright` および `Description` プロパティも使用されます。
 * `Configuration` はすべてのビルド プロセスで共有され、設定には `dotnet` コマンドの`--configuration` パラメーターを使用します。
 
-### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
-すべての AssemblyInfo 生成を有効または無効にするブール値。 既定値は `true` です。 
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 
-### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
+すべての AssemblyInfo 生成を有効または無効にするブール値。 既定値は `true` です。
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
+
 生成されたアセンブリ情報ファイルのパス。 既定値は `$(IntermediateOutputPath)` (obj) ディレクトリ内のファイルです。
