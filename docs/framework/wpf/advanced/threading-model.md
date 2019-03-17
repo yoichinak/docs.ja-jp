@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353037"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125682"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スレッド処理の難しさから開発者を保存する設計されています。 その結果、ほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを記述する必要はありません。 マルチ スレッド プログラムは複雑になり、デバッグが困難であるため、シングル スレッドのソリューションが存在する場合、回避する必要があります。  
@@ -64,7 +64,7 @@ ms.locfileid: "57353037"
   
  次に例を示します。  
   
- ![素数のスクリーン ショット](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![素数のスレッドを示すスクリーン ショット。](./media/threading-model/threading-prime-numbers.png)  
   
  この単純なアプリケーションは、素数を検索して 3 から上方向にカウントされます。 ユーザーがクリックすると、**開始**ボタン、検索を開始します。 プログラムでは、素数を検出すると、その探索でユーザー インターフェイスを更新します。 任意の時点では、ユーザーは、検索を停止できます。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "57353037"
   
  計算とイベント処理の間の処理時間を分割する最善の方法がから計算を管理するには、<xref:System.Windows.Threading.Dispatcher>します。 使用して、<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>メソッド内の素数のチェックをスケジュール同じキューを[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]からイベントが描画されます。 この例では、一度に 1 つの素数のチェックのみをスケジュールします。 素数のチェックが完了したら、すぐに [次へ] のチェックをスケジュールします。 このチェックが保留中にした場合のみ続行[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]イベントが処理されました。  
   
- ![ディスパッチャー キューの図](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![ディスパッチャー キューを示すスクリーン ショット。](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] スペル チェック、このメカニズムを使用して実現されます。 スペル チェックのアイドル時間を使用してバック グラウンドで行われますが、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 コードを見ていきましょう。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "57353037"
   
  この例では、天気予報を取得するリモート プロシージャ コールを模倣します。 この呼び出しを実行する別のワーカー スレッドを使用し、update メソッドのスケジュールを設定、<xref:System.Windows.Threading.Dispatcher>の[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドが完了します。  
   
- ![UI のスクリーン ショットの天気](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![UI の天気を示すスクリーン ショット。](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -191,7 +191,7 @@ ms.locfileid: "57353037"
 ### <a name="nested-pumping"></a>ポンプを入れ子になった  
  ない完全にロック可能な場合があります、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 について考えてみましょう、<xref:System.Windows.MessageBox.Show%2A>のメソッド、<xref:System.Windows.MessageBox>クラス。 <xref:System.Windows.MessageBox.Show%2A> [ok] ボタンをクリックするまでを返しません。 対話型にするには、メッセージ ループが必要なウィンドウは、作成ただし。 ユーザーが [ok] をクリックする、待っている間に、元のアプリケーション ウィンドウはユーザー入力に応答しません。 ペイント メッセージを処理するには、ただし、引き続き。 元のウィンドウでは、含まれており、明らかになるときに再描画します。  
   
- !["OK"ボタンを含む MessageBox](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![[Ok] のボタンでメッセージ ボックスのスクリーン ショット](./media/threading-model/threading-message-loop.png)  
   
  一部のスレッドは、メッセージ ボックス ウィンドウを担当する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] だけ、メッセージ ボックス ウィンドウに新しいスレッドを作成できますが、このスレッドは元のウィンドウで無効になっている要素を描画することはできません (前の章の相互排除を思い出してください)。 代わりに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]入れ子になったメッセージ処理システムを使用します。 <xref:System.Windows.Threading.Dispatcher>クラスにはと呼ばれる特殊なメソッドが含まれています<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>、新しいメッセージ ループを開始し、アプリケーションの現在の実行ポイントを格納します。 元の後に実行が再開される入れ子になったメッセージ ループが完了したら、<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>呼び出します。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "57353037"
   
  開発者の作業を前提としているために、ほとんどのインターフェイスはスレッド セーフに注意してくださいでビルドされませんが、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]は複数のスレッドからはアクセスできません。 この場合は、1 つのスレッドが、予期しないときに環境変更を行うことがあることで、不正の原因の効果、<xref:System.Windows.Threading.DispatcherObject>相互排他のメカニズムを解決することは想定されています。 次の疑似コードを検討してください。  
   
- ![スレッドの再入のダイアグラム](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![され、スレッドの再入をダイアグラムします。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  ほとんどの場合、正しいことですが、時間がある[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]このような予期しない再入本当に問題が発生します。 特定の時間で、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呼び出し<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>、使用するには、そのスレッドのロックの命令を変更する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく、通常の再入のないロック[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]ロックします。  
   

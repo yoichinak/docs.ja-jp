@@ -6,12 +6,12 @@ helpviewer_keywords:
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-ms.openlocfilehash: 4d200aa980e8f2e6d22291669dfb07db54a5f0c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370678"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125786"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>方法: 影付きテキストを作成する
 このセクションの例で、表示されるテキストに影を付ける方法を紹介します。  
@@ -19,8 +19,7 @@ ms.locfileid: "57370678"
 ## <a name="example"></a>例  
  <xref:System.Windows.Media.Effects.DropShadowEffect>オブジェクトでは、さまざまなドロップ シャドウ効果を作成できます。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]オブジェクト。 テキストにドロップ シャドウ効果を適用した例を次に示します。 この場合、影はソフト シャドウです。つまり、影の色がぼやけています。  
   
- ![テキストの影のぼかしを&#61;0.25](./media/shadowtext01.jpg "ShadowText01")  
-ソフト シャドウが付いたテキストの例  
+ ![テキストの影のぼかしを&#61;0.25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
   
  設定して影の幅を制御することができます、<xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A>プロパティ。 値`4.0`4 ピクセルの影の幅を示します。 ぼかしを制御する、または変更することで、シャドウのぼかし、<xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>プロパティ。 値`0.0`ぼかしはありません。 ソフト シャドウを付ける方法を次のコード例に示します。  
   
@@ -31,13 +30,11 @@ ms.locfileid: "57370678"
   
  テキストにハード シャドウ効果を適用した例を次に示します。 この場合、影はぼかされません。  
   
- ![テキストの影のぼかしを&#61;0](./media/shadowtext02.jpg "ShadowText02")  
-ハード シャドウが付いたテキストの例  
+ ![テキストの影のぼかしを&#61;0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
   
  ハード シャドウを作成するには設定して、<xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>プロパティを`0.0`、ぼかし効果が使用されていないことを示します。 影の方向を制御するには変更することによって、<xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>プロパティ。 このプロパティの方向性のある値を設定間の角度に`0`と`360`します。 次の図の方向値、<xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>プロパティの設定。  
   
- ![シャドウの DropShadow 度の設定](./media/shadowtext08.png "ShadowText08")  
-DropShadow 方向の図  
+ ![シャドウの DropShadow 度の設定](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
   
  ハード シャドウを付ける方法を次のコード例に示します。  
   
@@ -48,8 +45,7 @@ DropShadow 方向の図
   
  テキストにぼかし効果が適用されている例を次に示します。  
   
- ![BlurBitmapEffect を使用するテキスト シャドウ](./media/shadowtext06.jpg "ShadowText06")  
-ぼかし効果が適用されたテキストの例  
+ ![BlurBitmapEffect を使用するテキスト シャドウ](./media/how-to-create-text-with-a-shadow/text-shadow-blur-effect.jpg)  
   
  ぼかし効果を付ける方法を次のコード例に示します。  
   
@@ -60,8 +56,7 @@ DropShadow 方向の図
   
  次のコード例では、<xref:System.Windows.Media.TranslateTransform>テキストのオフセット。 この例では、メインのテキストの下にわずかに中心をずらしたコピーが付き、影のような効果を作っています。  
   
- ![TranslateTransform を使用するテキスト シャドウ](./media/shadowtext07.jpg "ShadowText07")  
-TranslateTransform を使用して影のような効果を付けたテキストの例  
+ ![TranslateTransform を使用するテキスト シャドウ](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
   
  TranslateTransform を利用して影のような効果を付ける方法を次のコード例に示します。  
   

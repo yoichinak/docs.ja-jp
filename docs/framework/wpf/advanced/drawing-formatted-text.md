@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372179"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125435"
 ---
 # <a name="drawing-formatted-text"></a>書式設定されたテキストの描画
 このトピックでの機能の概要、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのテキストの描画に対する低レベルの制御を提供します。  
@@ -24,8 +24,7 @@ ms.locfileid: "57372179"
 ## <a name="technology-overview"></a>テクノロジの概要  
  <xref:System.Windows.Media.FormattedText>オブジェクトを使用すると、これで、テキスト内の各文字に個別に書式設定できます、複数行のテキストを描画します。 複数の書式が適用されたテキストを次の例に示します。  
   
- ![FormattedText オブジェクトを使用して表示されるテキスト](./media/formattedtext01.jpg "FormattedText01")  
-FormattedText オブジェクトを使用して表示されるテキスト  
+ ![FormattedText オブジェクトを使用して表示されるテキスト](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API から移行する開発者のために、「[Win32 の移行](#win32_migration)」の表に [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText フラグと [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] におけるほぼ同等のものを示します。  
@@ -42,8 +41,7 @@ FormattedText オブジェクトを使用して表示されるテキスト
   
  使用して、<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>テキストの幅を制限するプロパティ。 テキストは、指定された幅を超えないように自動的に折り返されます。 使用して、<xref:System.Windows.Media.FormattedText.MaxTextHeight%2A>高さを指定するテキストを制限するプロパティ。 テキストは、指定された高さを超えた部分に省略記号 "…" を表示します。  
   
- ![FormattedText オブジェクトを使用して表示されるテキスト](./media/formattedtext02.png "FormattedText02")  
-折り返しと省略記号を示す表示テキスト  
+ ![Wordwrap と省略記号で表示されるテキスト。](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  複数の書式スタイルを 1 つ以上の文字に適用できます。 たとえば、両方を呼び出すことが、<xref:System.Windows.Media.FormattedText.SetFontSize%2A>と<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>テキストの最初の 5 文字の書式を変更する方法。  
   
@@ -62,19 +60,15 @@ FormattedText オブジェクトを使用して表示されるテキスト
 ### <a name="converting-formatted-text-to-a-geometry"></a>書式設定されたテキストのジオメトリへの変換  
  書式設定されたテキストに変換できます<xref:System.Windows.Media.Geometry>オブジェクト、テキストを視覚的に興味深いは、他の種類を作成することができます。 たとえば、作成する、<xref:System.Windows.Media.Geometry>のテキスト文字列のアウトラインに基づいてオブジェクト。  
   
- ![線形グラデーション ブラシを使用するテキスト アウトライン](./media/outlinedtext02.jpg "OutlinedText02")  
-線形グラデーション ブラシを使用するテキスト アウトライン  
+ ![線形グラデーション ブラシを使用するテキスト アウトライン](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  変換されたテキストのストローク、塗りつぶし、強調表示を変更して、人の目をひく視覚効果を作成するいくつかの方法を次の例に示します。  
   
- ![塗りつぶしとストロークに別の色とテキスト](./media/outlinedtext03.jpg "OutlinedText03")  
-ストロークと塗りつぶしを別々の色に設定した例  
+ ![塗りつぶしとストロークに別の色を使用するテキスト](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/outlinedtext04.jpg "OutlinedText04")  
-ストロークに適用したイメージ ブラシの例  
+ ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![ストロークに適用されるイメージ ブラシを含むテキスト](./media/outlinedtext05.jpg "OutlinedText05")  
-ストロークと強調表示に適用したイメージ ブラシの例  
+ ![ストロークし、強調表示に適用されるイメージ ブラシを含むテキスト](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  テキストを変換するときに、<xref:System.Windows.Media.Geometry>文字のコレクションでは不要になったオブジェクト-テキスト文字列内の文字を変更することはできません。 ただし、変換されたテキストのストロークおよび塗りつぶしのプロパティを変更することで、テキストの外観を変えることができます。 ストロークは、変換したテキストのアウトラインを参照します。塗りつぶしは、変換したテキストのアウトラインの内側の領域を参照します。 詳細については、「[方法: 中抜きの文字列を作成する](how-to-create-outlined-text.md)」を参照してください。  
   
@@ -82,15 +76,14 @@ FormattedText オブジェクトを使用して表示されるテキスト
   
  次の例では、書式設定されたテキストに変換されている、<xref:System.Windows.Media.PathGeometry>オブジェクト。 アニメーション化された楕円は、レンダリングされたテキストのストロークのパスに従います。  
   
- ![テキストのパス ジオメトリに続く球](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![テキストのパス ジオメトリに続く球](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 テキストのパス ジオメトリに続く球  
   
  詳細については、「[方法 :テキストの PathGeometry アニメーションを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))します。  
   
  その他の興味深い使用の書式設定されたテキストを作成するに変換された後、<xref:System.Windows.Media.PathGeometry>オブジェクト。 たとえば、ビデオをクリップしてテキスト内に表示することができます。  
   
- ![テキストのパス ジオメトリに表示されるビデオ](./media/videotextdemo01.png "VideoTextDemo01")  
-テキストのパス ジオメトリに表示されるビデオ  
+ ![テキストのパス ジオメトリに表示されるビデオ](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Win32 の移行  

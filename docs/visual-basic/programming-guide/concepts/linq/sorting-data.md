@@ -2,19 +2,19 @@
 title: データの並べ替え (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520127"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126254"
 ---
 # <a name="sorting-data-visual-basic"></a>データの並べ替え (Visual Basic)
 並べ替え操作では、1 つ以上の属性に基づいてシーケンスの要素を並べ替えます。 並べ替えの第 1 条件で、要素に対して一回目の並べ替えが実行されます。 第 2 条件を指定すると、第 1 条件で並べ替えられた各グループ内の要素を並べ替えることができます。  
   
  次の図は、文字のシーケンスに対してアルファベット順の並べ替え操作を実行した結果を示しています。  
   
- ![LINQ 並べ替え操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![アルファベット順の並べ替え操作を示しています。 グラフィック。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  次のセクションでは、データの並べ替えを実行する標準クエリ演算子のメソッドの一覧を示します。  
   

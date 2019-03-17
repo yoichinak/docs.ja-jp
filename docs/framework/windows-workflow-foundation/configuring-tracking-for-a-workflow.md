@@ -2,12 +2,12 @@
 title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719404"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126202"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
@@ -184,9 +184,9 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
 
 6. 右クリックし、**分析**ノード**を更新します。** 追跡レコードが中央ペインに表示されます。
 
-イベント ビューアーの追跡イベントを次の図に示します。
+次の図は、イベント ビューアーの追跡イベントを示しています。
 
-![イベント ビューアーが表示された追跡レコード](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![追跡レコード イベント ビューアーの表示のスクリーン ショット。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>アプリケーション固有のプロバイダー ID の登録
 

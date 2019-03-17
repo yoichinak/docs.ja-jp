@@ -2,12 +2,12 @@
 title: ツアーF#
 description: 主な機能のいくつかを確認、F#プログラミング言語でこのツアーではコード サンプルを使用します。
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968297"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125578"
 ---
 # <a name="tour-of-f"></a>F# のツアー\#
 
@@ -136,10 +136,6 @@ Du するデータ型にツリーを再帰的な構造を表すため、この�
 [パターン照合](language-reference/pattern-matching.md)により、F# の型に対する操作のための正確性が F# 言語機能です。  上記のサンプルのことに気付いたのかなり`match x with ...`構文。  このコンス トラクターにより、コンパイラを強制すると、パターンの完全一致として呼ばれるものを通じて、データ型を使用する場合は、すべての可能なケースのアカウントに、データ型の「形状」を理解することができます。  これは正しいかどうか、非常に強力な巧妙にどのようなコンパイル時にランタイムの問題は、通常「リフト」使用できます。
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-短縮形を使用することもできます`function`のため、関数を使用して作成する場合に有用なパターンに一致させるためのコンストラクト[部分適用](language-reference/functions/index.md#partial-application-of-arguments):。
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 使用は、何かお気付き、`_`パターン。  これと呼ばれますが、[ワイルドカード パターン](language-reference/pattern-matching.md#wildcard-pattern)、「気にしません何かが」と答えるのですが。  、便利ですが誤ってバイパス徹底的なパターンに一致して不要になったコンパイル時の実施メリットを使用して注意が必要ない場合は`_`します。  分解された型の特定の情報が必要ない場合に最適な使用パターン マッチ式内のすべての意味のあるケースを列挙するときと一致する、または最後の句のパターンします。
 

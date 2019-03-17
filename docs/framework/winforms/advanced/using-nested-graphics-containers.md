@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714178"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125864"
 ---
 # <a name="using-nested-graphics-containers"></a>入れ子になっているグラフィックス コンテナーの使用
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 置換またはで状態の一部を強化を一時的に使用できるコンテナーを提供します、<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことでコンテナーを作成する、<xref:System.Drawing.Graphics.BeginContainer%2A>のメソッドを<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことができます<xref:System.Drawing.Graphics.BeginContainer%2A>繰り返しを入れ子になったコンテナーを形成します。 呼び出しごとに<xref:System.Drawing.Graphics.BeginContainer%2A>への呼び出しと組み合わせて使用する必要があります<xref:System.Drawing.Graphics.EndContainer%2A>します。  
@@ -25,9 +25,9 @@ ms.locfileid: "57714178"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- 上記のコードでは、コンテナー内から描画する四角形が変換されるまずコンテナー (回転) のワールド変換をしのワールド変換して、<xref:System.Drawing.Graphics>オブジェクト (変換)。 ワールド変換によってのみ、コンテナーの外部から描画する四角形が変換される、<xref:System.Drawing.Graphics>オブジェクト (変換)。 次の図は、2 つの四角形を示します。  
+ 上記のコードでは、コンテナー内から描画する四角形が変換されるまずコンテナー (回転) のワールド変換をしのワールド変換して、<xref:System.Drawing.Graphics>オブジェクト (変換)。 ワールド変換によってのみ、コンテナーの外部から描画する四角形が変換される、<xref:System.Drawing.Graphics>オブジェクト (変換)。 次の図は、2 つの四角形を示します。 
   
- ![コンテナーを入れ子になった](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![入れ子になったコンテナーを示す図。](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>入れ子になったコンテナーのクリッピング  
  次の例では、入れ子になったコンテナーのクリッピング領域を処理します。 このコードを作成、<xref:System.Drawing.Graphics>オブジェクトおよびコンテナー内で<xref:System.Drawing.Graphics>オブジェクト。 クリッピング領域、<xref:System.Drawing.Graphics>オブジェクトは、四角形であり、コンテナーのクリッピング領域は楕円。 コードは、2 つの呼び出し、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド。 最初の呼び出し<xref:System.Drawing.Graphics.DrawLine%2A>、コンテナーと、2 番目の呼び出しの内部<xref:System.Drawing.Graphics.DrawLine%2A>がコンテナーの範囲外です (呼び出しの後<xref:System.Drawing.Graphics.EndContainer%2A>)。 最初の行が 2 つのクリッピング領域の交差部分によって切り取られます。 クリッピング四角形領域によってのみ、2 行目のクリップ、<xref:System.Drawing.Graphics>オブジェクト。  
@@ -35,9 +35,9 @@ ms.locfileid: "57714178"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- 次の図は、2 つのクリップされた行を示します。  
+ 次の図は、2 つのクリップされた行を示しています。
   
- ![コンテナーを入れ子になった](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![クリップされた行を含む入れ子になったコンテナーを示す図。](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  2 つの例に示すとおり、変換、およびクリッピング領域は入れ子になったコンテナーで累積されます。 コンテナーのワールド変換を設定した場合、<xref:System.Drawing.Graphics>オブジェクト、両方の変換は、コンテナー内から描画された項目に適用されます。 コンテナーの変換が適用されている最初との変換になります、<xref:System.Drawing.Graphics>オブジェクトが適用されます。 コンテナーのクリッピング領域を設定した場合、<xref:System.Drawing.Graphics>オブジェクト、コンテナーの内部から描画された項目は、重なる部分の 2 つのクリッピング領域のクリップされます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714178"
   
  次の図は、3 つの文字列を示します。 描画および内部のコンテナーから、文字列、<xref:System.Drawing.Graphics>によってオブジェクトが滑らかにします。 外側のコンテナーから抽出された文字列が滑らかになってアンチ エイリアスによって、<xref:System.Drawing.Graphics.TextRenderingHint%2A>プロパティに設定されて<xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>します。  
   
- ![コンテナーを入れ子になった](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![入れ子になったコンテナーから抽出された文字列を示す図。](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Drawing.Graphics>
