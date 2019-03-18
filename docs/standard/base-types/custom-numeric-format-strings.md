@@ -19,11 +19,11 @@ ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631673"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58133338"
 ---
 # <a name="custom-numeric-format-strings"></a>カスタム数値書式指定文字列
 
