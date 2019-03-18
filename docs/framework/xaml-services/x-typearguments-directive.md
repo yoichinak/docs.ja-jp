@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: ef08a550ebd1784514bc47ae02089847c6f1b578
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520179"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58043265"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments ディレクティブ
 パスの制約は、ジェネリック型のコンス トラクターに汎用の引数を入力します。  
@@ -73,7 +73,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 または XAML 2006 なし、WPF 3.0 または 3.5 の WPF 依存関係  
  XAML 2006 または XAML 2009 のいずれかの .NET Framework XAML サービスでは、WPF に関連する XAML のジェネリックの使用法の制限が緩和されます。 バッキング型システムとオブジェクト モデルをサポートする XAML のマークアップ内の任意の位置にある汎用オブジェクトの要素をインスタンス化することができます。  
   
- XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[共通の XAML 言語プリミティブの組み込み型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)内の情報項目として、`typeString`します。 たとえば、次を宣言できます (表示されませんが、プレフィックスのマッピングが、x は XAML 2009 の XAML 言語の XAML 名前空間)。  
+ XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)内の情報項目として、`typeString`します。 たとえば、次を宣言できます (表示されませんが、プレフィックスのマッピングが、x は XAML 2009 の XAML 言語の XAML 名前空間)。  
   
 ```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
@@ -82,7 +82,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  対象とする場合と WPF で[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、と共に XAML 2009 の機能を使用する`x:TypeArguments`loose XAML (XAML マークアップ コンパイルされていない) に対してのみです。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。 必要なマークアップをコンパイルする場合、XAML は、「XAML 2006 および WPF 汎用 XAML 使用法」セクションに記載されている制限で動作する必要があります。  
   
 ## <a name="see-also"></a>関連項目
-- [x:Class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)
-- [x:Type マークアップ拡張機能](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [共通の XAML 言語プリミティブの組み込み型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
-- [XAML のジェネリック](../../../docs/framework/xaml-services/generics-in-xaml.md)
+- [x:Class ディレクティブ](x-class-directive.md)
+- [x:Type マークアップ拡張機能](x-type-markup-extension.md)
+- [共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)
+- [XAML のジェネリック](generics-in-xaml.md)

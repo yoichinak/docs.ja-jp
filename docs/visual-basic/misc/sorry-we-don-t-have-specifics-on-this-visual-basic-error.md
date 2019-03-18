@@ -3044,12 +3044,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a339fc91ce5e1b4ff3c5cbaacdae72f02fdf733
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667662"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58022965"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。  
@@ -3073,5 +3073,6 @@ ms.locfileid: "54667662"
  [Visual Basic プログラマのための追加リソース](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic プログラミング ガイド](../../visual-basic/programming-guide/index.md)
 - [Visual Basic リファレンス](../../visual-basic/reference/index.md)

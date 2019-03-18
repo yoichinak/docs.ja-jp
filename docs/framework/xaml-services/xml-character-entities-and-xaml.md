@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661350"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048050"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 文字エンティティと XAML
 XAML は、特殊文字に、XML で定義される文字エンティティを使用します。 ここでは、いくつかの特定の文字エンティティ、および XAML における他の XML の概念に関する一般的な考慮事項について説明します。  
@@ -34,7 +34,7 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>XAML に固有の文字のエンティティとエスケープの問題  
  XAML マークアップでは、一般に、XML で定義されているものと同じ文字エンティティおよびエスケープ シーケンスを使用します。  
   
- 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)」をご覧ください。  
+ 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
  ただし、XML ではなく XAML に固有のエスケープ シーケンスを使用すると、中かっこをリテラル文字として表示できます。 詳細については、次を参照してください。 [ {}エスケープ シーケンス/マークアップ拡張](escape-sequence-markup-extension.md)します。  
   
@@ -47,12 +47,12 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 |文字|エンティティ|メモ|  
 |---------------|------------|-----------|  
 |& (アンパサンド)|\&amp;|属性値および要素の内容の両方に対して使用する必要があります。|  
-|> (大なり記号)|\&gt;|属性値に対しては使用する必要があります。要素の内容に対しては、前に < がない限りは、> を使用できます。|  
-|< (小なり記号)|\&lt;|属性値に対して使用する必要がありますが、\<が同じくらい要素のコンテンツとして許容される > それに従っていません。|  
+|> (大きい-より文字)|\&gt;|属性値に対して使用する必要がありますが、> が同じくらい要素のコンテンツとして許容される < 前しません。|  
+|< (以下の文字よりも)|\&lt;|属性値に対して使用する必要がありますが、\<が同じくらい要素のコンテンツとして許容される > それに従っていません。|  
 |" (二重引用符)|\&quot;|属性値に対しては使用する必要があります。要素の内容としては、二重引用符 (") も受け入れられます、 属性値は、単一引用符 (') と二重引用符 (") のどちらかで囲むことができます。最初に使用したほうの引用符が、属性値を囲む文字になり、もう一方の引用符は値の中でリテラルとして使用できます。|  
 |' (単一引用符)|\&apos;|属性値に対しては使用する必要があります。要素の内容としては、単一引用符 (') も受け入れられます、 属性値は、単一引用符 (') と二重引用符 (") のどちらかで囲むことができます。最初に使用したほうの引用符が、属性値を囲む文字になり、もう一方の引用符は値の中でリテラルとして使用できます。|  
 |(数値と文字の対応付け)|&#*[整数]*; または &#x *[進数]*;|XAML では、アクティブなエンコーディングに応じた数値と文字の対応付けがサポートされています。|  
-|(改行しないスペース)|&\#160;(utf-8 エンコードを想定)|フロー ドキュメントの要素、または WPF の <xref:System.Windows.Controls.TextBox> などのテキストを受け取る要素では、マークアップからの改行しないスペースの正規化は行われません。これには、`xml:space="default"` の場合も含まれます。 (詳細については、次を参照してください[空白 XAML 処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)。|  
+|(改行しないスペース)|&\#160;(utf-8 エンコードを想定)|フロー ドキュメントの要素、または WPF の <xref:System.Windows.Controls.TextBox> などのテキストを受け取る要素では、マークアップからの改行しないスペースの正規化は行われません。これには、`xml:space="default"` の場合も含まれます。 (詳細については、次を参照してください[空白 XAML 処理](whitespace-processing-in-xaml.md)。)。|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>XML のコメントの書式  
@@ -63,7 +63,7 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
  XAML では、XML 仕様に従って XML 処理命令が処理されます。つまり、命令は必ず素通しされます。 .NET Framework XAML サービスで処理する XAML では、ある処理命令は使用しません。 XAML を使用する他の既存のフレームワークでも、XAML の処理命令は使用されません。  
   
 ## <a name="see-also"></a>関連項目
-- [XAML の概要 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [マークアップ拡張機能と WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName の文法](../../../docs/framework/xaml-services/xamlname-grammar.md)
-- [空白 XAML での処理](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName の文法](xamlname-grammar.md)
+- [空白 XAML での処理](whitespace-processing-in-xaml.md)

@@ -2,12 +2,12 @@
 title: 既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492196"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018527"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 XAML スキーマ コンテキストとは、特定の XAML ボキャブラリを使用する XAML の運用環境とやり取りする方法などの型のマッピングが解決する方法、アセンブリが読み込まれる方法、特定のリーダーとライターの動作を記述するオブジェクトを修飾するエンティティの概念設定が解釈されます。 このトピックでは、.NET Framework XAML サービスと CLR 型システムに基づく関連付けられた既定の XAML スキーマ コンテキストの機能について説明します。 このトピックでは、WPF に使用される XAML スキーマ コンテキストにも説明します。  
@@ -89,4 +89,4 @@ XAML スキーマ コンテキストとは、特定の XAML ボキャブラリ�
     -   短い名前と公開キー トークンを使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
   
 ## <a name="see-also"></a>関連項目
-- [XAML ノード ストリームの構造と概念について](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [XAML ノード ストリームの構造と概念について](understanding-xaml-node-stream-structures-and-concepts.md)

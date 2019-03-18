@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0ce219ca5477c5714225cfc86fe29334bea30a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611203"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042452"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier ディレクティブ
 名前付きオブジェクトの参照フィールドが定義されているように、XAML のコンパイルの動作を変更します<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>へのアクセスの代わりに、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>既定の動作。  
@@ -29,7 +29,7 @@ ms.locfileid: "54611203"
 |*Public*|正確な文字列の指定に渡す<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は使用する分離コードのプログラミング言語によって異なります。 「解説」を参照してください。|  
   
 ## <a name="dependencies"></a>依存関係  
- XAML の運用環境で使用する場合`x:FieldModifier`どこでも、その XAML 運用環境のルート要素を宣言する必要があります、 [X:class ディレクティブ](../../../docs/framework/xaml-services/x-class-directive.md)します。  
+ XAML の運用環境で使用する場合`x:FieldModifier`どこでも、その XAML 運用環境のルート要素を宣言する必要があります、 [X:class ディレクティブ](x-class-directive.md)します。  
   
 ## <a name="remarks"></a>Remarks  
  `x:FieldModifier` クラスまたはそのメンバーの一般的なアクセス レベルを宣言するのには関係ありません。 XAML の運用環境の一部である、特定の XAML オブジェクトが処理され、アプリケーションのオブジェクト グラフにアクセス可能であるオブジェクトになりますが XAML 処理の動作にのみ関連します。 既定では、このようなオブジェクトのフィールド参照は厳重に保管され、コントロールのコンシューマーは、オブジェクト グラフを直接変更できなきます。 代わりに、コントロールのコンシューマーは、レイアウトのルートの子要素のコレクション、専用のパブリック プロパティを取得することによってなどのプログラミング モデル、によって実現される標準のパターンを使用して、オブジェクト グラフを変更する必要があり、具合です。  
@@ -46,13 +46,13 @@ ms.locfileid: "54611203"
   
  <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> XAML が作成した要素へのアクセスを XAML がコンパイルされるアセンブリの外側のコードが必要があることを頻繁にではないために、既定の動作です。 具体的に設定していない場合は、XAML のコンパイル動作と WPF のセキュリティ アーキテクチャに、public 要素のインスタンスを格納するフィールドは宣言しません、`x:FieldModifier`パブリック アクセスを許可します。  
   
- `x:FieldModifier` のみを持つ要素の関係、 [X:name ディレクティブ](../../../docs/framework/xaml-services/x-name-directive.md)その名前がパブリックになった後にフィールドを参照に使用されるためです。  
+ `x:FieldModifier` のみを持つ要素の関係、 [X:name ディレクティブ](x-name-directive.md)その名前がパブリックになった後にフィールドを参照に使用されるためです。  
   
- 既定では、ルート要素の部分クラスはパブリックです。ただし、行うことができます、非公開を使用して、 [X:classmodifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)します。 [X:classmodifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)ルート要素クラスのインスタンスのアクセス レベルにも影響します。 両方を配置できる`x:Name`と`x:FieldModifier`ルートに要素が、これだけパブリック フィールドのコピーを作成真のルート要素クラスのアクセス レベルも、ルート要素によって制御される[X:classmodifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)。  
+ 既定では、ルート要素の部分クラスはパブリックです。ただし、行うことができます、非公開を使用して、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)ルート要素クラスのインスタンスのアクセス レベルにも影響します。 両方を配置できる`x:Name`と`x:FieldModifier`ルートに要素が、これだけパブリック フィールドのコピーを作成真のルート要素クラスのアクセス レベルも、ルート要素によって制御される[X:classmodifier ディレクティブ](x-classmodifier-directive.md)。  
   
 ## <a name="see-also"></a>関連項目
-- [WPF における XAML とカスタム クラス](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [WPF における分離コードと XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:Name ディレクティブ](../../../docs/framework/xaml-services/x-name-directive.md)
-- [WPF アプリケーション (WPF) のビルド](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [x:ClassModifier ディレクティブ](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [WPF における XAML とカスタム クラス](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [WPF における分離コードと XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:Name ディレクティブ](x-name-directive.md)
+- [WPF アプリケーション (WPF) のビルド](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [x:ClassModifier ディレクティブ](x-classmodifier-directive.md)
