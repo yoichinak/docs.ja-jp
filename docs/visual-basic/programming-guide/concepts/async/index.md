@@ -98,7 +98,7 @@ Dim urlContents As String = Await client.GetStringAsync()
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>非同期メソッドでの動作  
  非同期プログラミングでは理解が必要な最も重要なことは、コントロール フローがどのようにメソッドからのメソッドに移動するかということです。 次の図は、このプロセスについて説明します。  
   
- ![非同期プログラムのトレース](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![非同期プログラムのトレースを示す図。](./media/index/navigation-trace-async-program.png)  
   
  図内の数字は、次の手順の番号に対応しています。  
   
@@ -228,7 +228,7 @@ Await Task_MethodAsync()
   
 ## <a name="BKMK_RelatedTopics"></a>関連トピックとサンプル (Visual Studio)  
   
-|タイトル|説明|サンプル|  
+|Title|説明|サンプル|  
 |-----------|-----------------|------------|  
 |[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|同期 WPF のソリューションを非同期 WPF のソリューションに変換する方法を示します。 アプリケーションは、一連の Web サイトをダウンロードします。|[Async Sample:Accessing the Web Walkthrough (非同期のサンプル: Web サイトへのアクセスのチュートリアル)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
 |[方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|前のチュートリアルに <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> を追加します。 `WhenAll` を使用すると、すべてのダウンロードが同時に開始します。||  

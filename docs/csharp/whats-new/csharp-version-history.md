@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981934"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126150"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -84,7 +84,7 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 - [自動実装プロパティ](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [クエリ式](../linq/query-expression-basics.md)
-- [ラムダ式](../lambda-expressions.md)
+- [ラムダ式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [式ツリー](../expression-trees.md)
 - [拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)
 - [暗黙的に型指定されるローカル変数](../language-reference/keywords/var.md)
@@ -123,7 +123,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 - [非同期メンバー](../async.md)
 - [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 * [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 

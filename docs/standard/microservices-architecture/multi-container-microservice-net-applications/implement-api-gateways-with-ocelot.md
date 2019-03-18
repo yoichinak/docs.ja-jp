@@ -4,12 +4,12 @@ description: Ocelot を使用して API ゲートウェイを実装する方法�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679490"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846104"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ API ゲートウェイは、サービスのみに接するフロント エンド
 
 次の図に示すように、Web アプリケーションの前の Kubernetes にイングレス Nginx 層と、複数の Ocelot API ゲートウェイ/BFF を配置するのが理想的なアーキテクチャです。
 
- ![Kubernetes イングレスは、Web アプリケーションなど、通常は API ゲートウェイの範囲外となるアプリに宛てられるすべてのトラフィックのリバース プロキシとして機能します。](./media/image41.png)
+![Kubernetes イングレスは、Web アプリケーションなど、通常は API ゲートウェイの範囲外となるアプリに宛てられるすべてのトラフィックのリバース プロキシとして機能します。](./media/image41.png)
 
 **図 6-41**。 Kubernetes に配置するときの eShopOnContainers のイングレス層
 
 Kubernetes に eShopOnContainers を配置すると、少数のサービスまたはエンドポイントだけが_イングレス_経由で公開されます。基本的に、URL の接尾辞は次のとおりです。
 
--   `/`: クライアント SPA Web アプリケーション用
--   `/webmvc`: クライアント MVC Web アプリケーション用
--   `/webstatus`: 状態/正常性チェックを示すクライアント Web アプリ用
--   `/webshoppingapigw`: Web BFF とショッピング ビジネス プロセス用
--   `/webmarketingapigw`: Web BFF とマーケティング ビジネス プロセス用
--   `/mobileshoppingapigw`: モバイル BFF とショッピング ビジネス プロセス用
--   `/mobilemarketingapigw`: モバイル BFF とマーケティング ビジネス プロセス用
+- `/`: クライアント SPA Web アプリケーション用
+- `/webmvc`: クライアント MVC Web アプリケーション用
+- `/webstatus`: 状態/正常性チェックを示すクライアント Web アプリ用
+- `/webshoppingapigw`: Web BFF とショッピング ビジネス プロセス用
+- `/webmarketingapigw`: Web BFF とマーケティング ビジネス プロセス用
+- `/mobileshoppingapigw`: モバイル BFF とショッピング ビジネス プロセス用
+- `/mobilemarketingapigw`: モバイル BFF とマーケティング ビジネス プロセス用
 
 Kubernetes に配置するときに、各 Ocelot API ゲートウェイは、API ゲートウェイを実行している_ポッド_ごとに異なる "configuration.json" ファイルを使用します。 これらの "configuration.json" ファイルは、‘ocelot’ という名前の Kubernetes _構成マップ_に基づいて作成されたボリュームを (もともとは deploy.ps1 スクリプトを使用して) マウントすることによって提供されます。 各コンテナーにより、関連する構成ファイルが `/app/configuration` という名前のコンテナーのフォルダーにマウントされます。
 

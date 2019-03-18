@@ -3,12 +3,12 @@ title: C# の列挙型 - C# 言語のツアー
 description: C# における列挙型、離散した名前付き定数について
 ms.date: 08/10/2016
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.openlocfilehash: d55462f0360b6896c398d581918a9c17a87583be
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c1c29c3c06829da81a9c9be8bb5bd99f1c9e395
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126655"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843125"
 ---
 # <a name="enums"></a>列挙体
 
@@ -34,6 +34,6 @@ ms.locfileid: "53126655"
 
 [!code-csharp[EnumZero](../../../samples/snippets/csharp/tour/enums/Program.cs#L58-L58)]
 
->[!div class="step-by-step"]
->[前へ](interfaces.md)
->[次へ](delegates.md)
+> [!div class="step-by-step"]
+> [前へ](interfaces.md)
+> [次へ](delegates.md)

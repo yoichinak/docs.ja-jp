@@ -3,16 +3,16 @@ title: ローカル関数とラムダ式の比較
 description: ローカル関数がラムダ式よりも適した選択肢となり得る理由について。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740433"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125773"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
-一見したところ、[ローカル関数](programming-guide/classes-and-structs/local-functions.md)と[ラムダ式](lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
+一見したところ、[ローカル関数](programming-guide/classes-and-structs/local-functions.md)と[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)は、非常に似ています。 多くの場合、ラムダ式とローカル関数の使用のどちらを選択するかは、スタイルと個人的な好みの問題です。 ただし、どちらか一方を使用できる場合、認識しておくべき実質的な違いがあります。
 
 階乗アルゴリズムのローカル関数とラムダ式の実装の違いについて見てみましょう。 まずは、ローカル関数を使用するバージョンです。
 

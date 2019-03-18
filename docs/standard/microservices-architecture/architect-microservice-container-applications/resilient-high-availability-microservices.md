@@ -4,12 +4,12 @@ description: マイクロサービスの高可用性を実現するには、一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c5bd272380f25f801c7b75c8b8e73a080ac89eef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970793"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846624"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -77,7 +77,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
   [*https://www.splunk.com/*](https://www.splunk.com/)
 
 - Windows イベント トレーシング (ETW) の **EventSource クラス** API \
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[前へ](microservice-based-composite-ui-shape-layout.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836553"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846468"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 .NET Framework は言語に依存しません。 つまり、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。  
@@ -347,7 +347,7 @@ ms.locfileid: "56836553"
 ### <a name="member-accessibility"></a>メンバーのアクセシビリティ  
  継承されたメンバーをオーバーライドしても、そのメンバーのアクセシビリティは変更できません。 たとえば、基底クラスのパブリック メソッドは、派生クラスのプライベート メソッドではオーバーライドできません。 ただし例外が 1 つあります。あるアセンブリ内にある、別のアセンブリの型でオーバーライドされた `protected internal` メンバー (C# の場合) または `Protected Friend` メンバー (Visual Basic の場合) です。 この場合、オーバーライドのアクセシビリティは `Protected` です。  
   
- 次の例は、<xref:System.CLSCompliantAttribute> 属性が `true` で、`Person` の派生クラス `Animal` が、`Species` プロパティのアクセシビリティをパブリックからプライベートに変更しようとするときに発生するエラーを示しています。 アクセシビリティがパブリックに変更されると、コンパイルが正常に行われます。  
+ 次の例は、<xref:System.CLSCompliantAttribute> 属性が `true` で、`Human` の派生クラス `Animal` が、`Species` プロパティのアクセシビリティをパブリックからプライベートに変更しようとするときに発生するエラーを示しています。 アクセシビリティがパブリックに変更されると、コンパイルが正常に行われます。  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

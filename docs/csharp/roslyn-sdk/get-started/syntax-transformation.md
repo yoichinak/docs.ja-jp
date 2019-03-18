@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122585"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788441"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -51,11 +51,13 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 上のコードでは、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> オブジェクトを作成して変数 `name` に割り当てます。 Roslyn API の多くは、関連の型を使用しやすくするために基底クラスを返します。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax> である変数 `name` は、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> をビルドするときに再利用できます。 サンプルをビルドするときに、型の推定を使用しないでください。 このプロジェクトではそのステップを自動化します。
 
-これで名前が作成されました。 次に、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> をビルドして、ツリー内にさらに多くのノードをビルドします。 新しいツリーでは、`name` を名前の左側として使用し、`Collections` 名前空間の新しい <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> の右側として使用します。 `program.cs` に次のコードを追加します。
+これで名前が作成されました。 次に、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> をビルドして、ツリー内にさらに多くのノードをビルドします。 新しいツリーでは、`name` を名前の左側として使用し、`Collections` 名前空間の新しい <xref:Microsoft.CodeAnalysis.CSharp.Syntax.IdentifierNameSyntax> を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> の右側として使用します。 
+  `program.cs` に次のコードを追加します。
 
 [!code-csharp[create the collections identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateQualifiedIdentifierName "Build the System.Collections identifier")]
 
-コードを再度実行し、結果を確認します。 コードを表すノードのツリーをビルドします。 このパターンを繰り返して、名前空間 `System.Collections.Generic` の <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> をビルドします。 `Program.cs` に次のコードを追加します。
+コードを再度実行し、結果を確認します。 コードを表すノードのツリーをビルドします。 このパターンを繰り返して、名前空間 `System.Collections.Generic` の <xref:Microsoft.CodeAnalysis.CSharp.Syntax.QualifiedNameSyntax> をビルドします。 
+  `Program.cs` に次のコードを追加します。
 
 [!code-csharp[create the full identifier](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
@@ -152,7 +154,7 @@ Type variable;
 
 最後に、次の `if` ステートメントを追加して、初期化子式の型が指定の型と一致した場合に既存の型名を `var` キーワードで置き換えるようにします。
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 宣言では初期化子式が基底クラスまたはインターフェイスにキャストされる場合があるので、この条件が必要です。 必要な場合は、割り当ての左側の型と右側の型が一致しません。 このようなケースで明示的な型を削除すると、プログラムのセマンティクスが変わってしまいます。 `var` はコンテキスト キーワードであるため、`var` はキーワードではなく識別子として指定されます。 垂直方向の空白とインデントを維持するために、先頭および末尾のトリビア (空白) が古い型名から `var` キーワードへと転送されています。 型名は実際には宣言ステートメントの孫であるため、`With*` よりも `ReplaceNode` を使用して <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> を変換するほうが簡単です。
 
@@ -174,7 +176,8 @@ Type variable;
 
 `File.WriteAllText` コードの下に波線が表示されるはずです。 電球を選択し、必要な `using System.IO;` ステートメントを追加します。
 
-完了までもう少しです。 最後の 1 ステップは、<xref:Microsoft.CodeAnalysis.Compilation> の作成です。 このクイック スタートでは型の推定を一度も使用していないので、テスト ケースとするには完璧です。 残念ながら、C# プロジェクト ファイルからコンパイルを作成する方法については、このチュートリアルの対象外です。 しかし幸いなことに、これまでの手順に慎重に従ってきたならば希望が持てます。 `CreateTestCompilation` メソッドの内容を次のコードに置き換えます。 このクイック スタートで説明したプロジェクトに偶然にも一致するテスト用コンパイルが作成されます。
+完了までもう少しです。 最後の 1 ステップは、<xref:Microsoft.CodeAnalysis.Compilation> の作成です。 このクイック スタートでは型の推定を一度も使用していないので、テスト ケースとするには完璧です。 残念ながら、C# プロジェクト ファイルからコンパイルを作成する方法については、このチュートリアルの対象外です。 しかし幸いなことに、これまでの手順に慎重に従ってきたならば希望が持てます。 
+  `CreateTestCompilation` メソッドの内容を次のコードに置き換えます。 このクイック スタートで説明したプロジェクトに偶然にも一致するテスト用コンパイルが作成されます。
 
 [!code-csharp[CreateTestCompilation](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
