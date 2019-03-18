@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287821"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58018748"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。  
@@ -68,9 +68,9 @@ ms.locfileid: "55287821"
 |1|v1.0.3705|  
   
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>.NET Framework 4.5 以降のバージョンの互換性のために残されている古い機能の一覧  
- [互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)  
+ [互換性のために残されている型](obsolete-types.md)  
   
- [互換性のために残されているメンバー](../../../docs/framework/whats-new/obsolete-members.md)  
+ [互換性のために残されているメンバー](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>以前のバージョンの互換性のために残されている機能の一覧  
  [.NET Framework 4 で互換性のために残されている型](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,4 @@ ms.locfileid: "55287821"
  [.NET Framework 2.0 Obsolete List (.NET Framework 2.0 の互換性のために残されている機能の一覧)](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>関連項目
-- [\<<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)
