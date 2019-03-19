@@ -43,7 +43,11 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="explore-new-features-in-c"></a>C\# の新機能を詳しく学習する
 
-こちらの[対話型の探索](exploration/csharp-6.yml)で [C# 6](../whats-new/csharp-6.md) の新機能をお試しください。
+* [C# 6 の新機能を対話形式で試す](exploration/csharp-6.yml):[C# 6](../whats-new/csharp-6.md) に追加された機能を、ご自身のブラウザーで対話的に調べます。
+* [文字列補間](string-interpolation.md): 文字列補間を使用して C# で書式設定された文字列を作成する方法について説明します。
+* [Null 許容参照型](nullable-reference-types.md): Null 許容参照型を使って null 参照の意図を表現する方法について説明します。
+* [Null 許容参照型を利用するようプロジェクトを更新する](upgrade-to-nullable-references.md): null 許容参照型を利用するよう既存のプロジェクトをアップグレードする手法について説明します。
+* [パターン マッチングを使ってデータの機能を拡張する](pattern-matching.md): パターン マッチングを使って、型をそのコア機能を超えて拡張する方法を示します。
 
 ## <a name="general-tutorials"></a>全般的なチュートリアル
 
@@ -53,6 +57,4 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 * [REST クライアント](console-webapiclient.md): Web 通信、JSON シリアル化、および C# 言語でのオブジェクト指向の機能について説明します。
 * [C# と .NET での継承](inheritance.md): C# における継承について説明します。基本クラス、抽象基本クラス、および派生クラスを定義するための継承の使用が含まれます。
 * [LINQ の操作](working-with-linq.md): LINQ の多くの機能と、それをサポートする言語要素について説明します。
-* [文字列補間](string-interpolation.md): 文字列補間を使用して C# で書式設定された文字列を作成する方法について説明します。
 * [属性の使用](attributes.md): C# における属性の作成方法と使用方法について説明します。
-* [Null 許容参照型](nullable-reference-types.md): Null 許容参照型を使って null 参照の意図を表現する方法について説明します。
