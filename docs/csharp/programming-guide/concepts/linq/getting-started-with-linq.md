@@ -56,4 +56,4 @@ ms.locfileid: "56970702"
  LINQ で使われる標準的な方法を紹介します。  
   
  [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- Visual basic での LINQ の使用に関するトピックへのリンクを提供します。
+ Visual Basic での LINQ の使用に関するトピックへのリンクを提供します。
