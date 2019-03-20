@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635976"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038178"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
-この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)に関するページをご覧ください。  
+この記事の表には、.NET Framework 4.5 以降のバージョンで互換性のために残されている型メンバーがアセンブリ別にまとめられています。 各アセンブリで互換性のために残されているメンバーと推奨される代替メンバーの一覧を表示するには、以下のリンクを使用してください。 このトピックでは、廃止された型のメンバーの一覧は表示されていません。 廃止された型の一覧については、[互換性のために残されている型](obsolete-types.md)に関するページをご覧ください。  
   
 -   [互換性のために残されているシステム アセンブリのメンバー](#SystemMembers)  
   
@@ -731,7 +731,7 @@ ms.locfileid: "54635976"
  次の表に、互換性のために残されている Microsoft アセンブリのメンバーを示します。 これらのアセンブリは特殊な目的のアセンブリであり、個別の言語 (Microsoft.VisualBasic.dll など) やビルド システム (Microsoft.Build.Engine.dll など) を対象としたアセンブリが含まれています。  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll および IEExec.exe  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>アセンブリ:IEHost.dll and IEExec.exe  
  IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除されています。 そのすべての型およびメンバーは廃止され、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ではサポートされていません。 これらのアセンブリは Internet Explorer で Windows フォーム コントロールをホストし、実行可能ファイルを実行するために使用されていました。 代替手段としては、ClickOnce、XAML ブラウザー アプリケーション (XBAP)、および Microsoft Silverlight をお勧めします。  
   
 <a name="isymwrapper"></a>   
@@ -799,5 +799,5 @@ ms.locfileid: "54635976"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` レジストリ キーは Win9x でのみ機能し、このバージョンの .NET Framework ではサポートされていません。 代わりに、`PerformanceData` レジストリ キーを使用してください。 このプロパティは、.NET Framework の将来のバージョンでは削除されます。|  
   
 ## <a name="see-also"></a>関連項目
-- [クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)
-- [互換性のために残されている型](../../../docs/framework/whats-new/obsolete-types.md)
+- [クラス ライブラリの互換性のために残されている機能](whats-obsolete.md)
+- [互換性のために残されている型](obsolete-types.md)

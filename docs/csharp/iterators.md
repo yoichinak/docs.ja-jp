@@ -3,12 +3,12 @@ title: Iterators
 description: 組み込み C# の反復子を使用して、独自のカスタム反復子メソッドを作成する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218346"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126046"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -27,7 +27,7 @@ C# 言語には、上記の両方のシナリオに対応するための機能�
 
 ## <a name="iterating-with-foreach"></a>foreach を使用した反復処理
 
-コレクションの列挙方法は単純です。`foreach` キーワードによってコレクション内の要素ごとに埋め込みステートメントを 1 回実行し、コレクションを列挙します。
+コレクションの列挙処理は単純です。`foreach` キーワードによってコレクション内の要素ごとに埋め込みステートメントを 1 回実行し、コレクションを列挙します。
  
 ```csharp
 foreach (var item in collection)
@@ -191,7 +191,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-この点が変更された理由は、以前の動作に、ラムダ式に関連する微妙なバグや診断の難しいバグを発生させる可能性があったためです。 詳細については、「[ラムダ式](lambda-expressions.md)」のセクションを参照してください。 
+この点が変更された理由は、以前の動作に、ラムダ式に関連する微妙なバグや診断の難しいバグを発生させる可能性があったためです。 ラムダ式について詳しくは、「[ラムダ式](./programming-guide/statements-expressions-operators/lambda-expressions.md)」をご覧ください。
 
 コンパイラによって実際に生成されるコードはもう少し複雑であり、`GetEnumerator()` から返されるオブジェクトで `IDisposable` インターフェイスを実装する場合の処理も含まれています。 全展開によって生成されるコードは、次のようになります。
 

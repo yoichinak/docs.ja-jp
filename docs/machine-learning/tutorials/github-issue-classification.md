@@ -1,15 +1,15 @@
 ---
 title: ML.NET を GitHub の問題の多クラス分類シナリオで使用する
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 02/20/2019
+ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1031ac8a592c968e22745de4be966392733597dd
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471480"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846312"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
 
@@ -29,7 +29,7 @@ ms.locfileid: "57471480"
 > [!NOTE]
 > このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
 
-このチュートリアルと、関連するサンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
+このチュートリアルと関連サンプルでは、現時点では **ML.NET バージョン 0.11** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 ## <a name="github-issue-sample-overview"></a>GitHub の問題のサンプルの概要
 
@@ -197,7 +197,7 @@ ML.NET ではデータは `SQL view` に似ています。 つまり、遅延評
 
 以前に作成した `GitHubIssue` データ モデルの種類がデータセット スキーマと一致するため、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。
 
-行の最初の部分 (`CreateTextLoader<GitHubIssue>(hasHeader: true)`) では、`GitHubIssue` データ モデル型からデータセット スキーマを推論し、データセットのヘッダーを使用し、<xref:Microsoft.ML.Data.TextLoader> を作成します。
+[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、データを読み込みます。 `GitHubIssue` データ モデルの種類からデータセット スキーマを推論し、データセット ヘッダーを使用する <xref:Microsoft.Data.DataView.IDataView> が返されます。 
 
 データ スキーマは、`GitHubIssue` クラスを作成したときに既に定義しています。 スキーマでは次のとおりです。
 
@@ -206,12 +206,9 @@ ML.NET ではデータは `SQL view` に似ています。 つまり、遅延評
 * 3 番目の列 `Title` (GitHub の問題のタイトル) は、`Area` の予測に使用される最初の[特徴](../resources/glossary.md##feature)です
 * 第 4 列 `Description` は、`Area` の予測に使用される 2 番目の特徴です
 
-行の 2 番目の部分 (`.Read(_trainDataPath)`) では <xref:Microsoft.ML.Data.TextLoader.Read%2A> メソッドを使用して、`IDataView` (`_trainingDataView`) グローバル変数に `_trainDataPath` を使用してトレーニング用のテキスト ファイルを読み込みます。  
-
 パイプラインで利用するために `_trainingDataView` グローバル変数を初期化して読み込むには、`mlContext` 初期化の後に次のコードを追加します。
 
 [!code-csharp[LoadTrainData](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#LoadTrainData)]
-
 
 `Main` メソッドに次のコード行を追加します。
 
@@ -225,7 +222,7 @@ ML.NET ではデータは `SQL view` に似ています。 つまり、遅延評
 `Main` メソッドの直後に、次のコードを使用して `ProcessData` メソッドを作成します。
 
 ```csharp
-public static EstimatorChain<ITransformer> ProcessData()
+public static IEstimator<ITransformer> ProcessData()
 {
 
 }
@@ -254,7 +251,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 [!code-csharp[Concatenate](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
- 次に、DataView をキャッシュするために <xref:Microsoft.ML.Data.EstimatorChain`1.AppendCacheCheckpoint%2A> を追加します。つまり、次のコードでキャッシュを使用してデータが複数回反復されると、パフォーマンスが向上する場合があります。
+ 次に、DataView をキャッシュするために <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> を追加します。つまり、次のコードでキャッシュを使用してデータが複数回反復されると、パフォーマンスが向上する場合があります。
 
 [!code-csharp[AppendCache](../../../samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AppendCache)]
 
@@ -284,7 +281,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 `Main` メソッドの直後に、次のコードを使用して `BuildAndTrainModel` メソッドを作成します。
 
 ```csharp
-public static EstimatorChain<KeyToValueMappingTransformer> BuildAndTrainModel(IDataView trainingDataView, EstimatorChain<ITransformer> pipeline)
+public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
 {
 
 }

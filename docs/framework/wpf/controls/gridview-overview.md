@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360200"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185442"
 ---
 # <a name="gridview-overview"></a>GridView の概要
 <xref:System.Windows.Controls.GridView> 表示モードはビュー モードのいずれかを<xref:System.Windows.Controls.ListView>コントロール。 <xref:System.Windows.Controls.GridView>クラスおよびそのサポート クラス有効にして、ユーザーが対話型の列ヘッダーとして通常のボタンを使用するテーブルの項目のコレクションを表示します。 このトピックでは、<xref:System.Windows.Controls.GridView>クラスし、その用途について説明します。  
@@ -26,10 +26,8 @@ ms.locfileid: "57360200"
 >  ボタン コントロールが<xref:System.Windows.Controls.GridView>から派生した列ヘッダーの使用方法は<xref:System.Windows.Controls.Primitives.ButtonBase>します。  
   
  次の図は、<xref:System.Windows.Controls.GridView>の表示<xref:System.Windows.Controls.ListView>コンテンツ。  
-  
- **ListView コンテンツの GridView ビュー**  
-  
- ![スタイル化 ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![ListView コンテンツの GridView ビューを表示するスクリーン ショット。](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> 列がによって表される<xref:System.Windows.Controls.GridViewColumn>オブジェクトで、そのコンテンツを自動的にサイズ調整できます。 必要に応じて、明示的に設定できます、<xref:System.Windows.Controls.GridViewColumn>の幅。 列のサイズは、列ヘッダー間のグリッパーをドラッグすることで変更できます。 ことができますも動的に追加、削除、置換、および列の順序を変更してこの機能が組み込まれているため<xref:System.Windows.Controls.GridView>します。 ただし、<xref:System.Windows.Controls.GridView>表示されるデータを直接更新することはできません。  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360200"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- 次の図は、前の例により作成されるテーブルを示しています。  
-  
- **GridView、ItemsSource からデータを表示します。**  
-  
- ![GridView 出力を含む ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ 次の図は、前の例により作成されるテーブルを示しています。 GridView コントロールには、ItemsSource オブジェクトからのデータが表示されます。
+    
+ ![GridView 出力を含むの ListView を示すスクリーン ショット。](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView のレイアウトとスタイル  

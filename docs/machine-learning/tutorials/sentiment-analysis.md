@@ -4,12 +4,12 @@ description: バイナリ分類のシナリオで ML.NET を使用する方法�
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723323"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845792"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>データを読み込む
 
-前に作成した `SentimentData` データ モデルの種類がデータセット スキーマと一致するため、<xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29> の `MLContext.Data.ReadFromTextFile` ラッパーを使用して、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 
+前に作成した `SentimentData` データ モデルの種類がデータセット スキーマと一致するため、[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 
 
  `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
@@ -215,7 +215,7 @@ ML.NET ではデータは SQL ビューに似ています。 つまり、遅延�
 * テスト データに基づいてセンチメントを予測する。
 * モデルを返します。
 
-`Main` メソッドの直後に、次のコードを使用して `Train` メソッドを作成します。
+`Main` メソッドの直後に、次のコードを使用して `BuildAndTrainModel` メソッドを作成します。
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

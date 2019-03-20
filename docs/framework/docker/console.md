@@ -4,12 +4,12 @@ description: 既存の .NET Framework コンソール アプリケーション�
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145281"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126085"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows コンテナーでのコンソール アプリケーションの実行
 
@@ -50,7 +50,7 @@ Windows コンテナーは、[Windows 10 Anniversary Update](https://www.microso
 
 Windows コンテナーをサポートするには、Docker for Windows バージョン 1.12 Beta 26 以降が必要になります。 既定では、Docker は Linux ベースのコンテナーを有効にします。Windows コンテナーに切り替えるには、システム トレイで Docker アイコンを右クリックし、**[Switch to Windows containers]** (Windows コンテナーに切り替え) を選択します。 Docker は変更プロセスを実行します。この際、再起動が必要になる場合があります。
 
-![Windows コンテナー](./media/console/SwitchContainer.png)
+![Windows コンテナーのメニュー オプションのスクリーンショット。](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>アプリケーションのビルド
 通常、コンソール アプリケーションは、インストーラー、FTP、またはファイル共有の展開を通して配布されます。 コンテナーへの展開時には、資産をコンパイルし、Docker イメージを作成するときに使用できる場所にステージングする必要があります。

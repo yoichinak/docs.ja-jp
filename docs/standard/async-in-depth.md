@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677527"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844737"
 ---
 # <a name="async-in-depth"></a>非同期の詳細
 
@@ -21,12 +21,12 @@ I/O および CPU バインドの非同期コードは、.NET のタスクベー
 
 Task は、[Promise Model of Concurrency](https://en.wikipedia.org/wiki/Futures_and_promises) (並行性の Promise 型モデル) として知られるモデルを実装するために使用される構成体です。  つまり、今後のある時点で作業が完了することを "約束" し、クリーン API を使用した約束の調整を可能にします。
 
-*   `Task` は、値を返さない 1 回の操作を表します。
-*   `Task<T>` は、`T` 型の値を返す 1 回の操作を表します。
+* `Task` は、値を返さない 1 回の操作を表します。
+* `Task<T>` は、`T` 型の値を返す 1 回の操作を表します。
 
 作業の抽象化は非同期に発生し、スレッド処理の抽象化では*ない*ため、タスクについて判断することが重要です。 既定では、タスクは現在のスレッドで実行され、必要に応じてオペレーティング システムに作業を委任します。 必要に応じて、`Task.Run` API を使用して、タスクを別のスレッドで実行することを明示的に要求できます。
 
-タスクは、タスクの監視、待機、結果値へのアクセス (`Task<T>` の場合) のための API プロトコルを公開しています。 `await` キーワードによる言語統合は、タスクを使用するための高度なレベルの抽象化を提供します。 
+タスクは、タスクの監視、待機、結果値へのアクセス (`Task<T>` の場合) のための API プロトコルを公開しています。 `await` キーワードによる言語統合は、タスクを使用するための高度なレベルの抽象化を提供します。
 
 `await` を使用すると、アプリケーションまたはサービスで、タスク完了まで呼び出し元に制御を渡すことによって、タスクの実行中に有用な作業を実行できます。 コードは、タスク完了後に実行を続けるために、コールバックまたはイベントに依存する必要はありません。 言語とタスクの API 統合によって処理されます。 `Task<T>` を使用する場合、`await` キーワードはさらに、タスク完了時に返された値を "ラップ解除" します。  この動作の詳細について次に詳しく説明します。
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-`GetStringAsync()` を呼び出すと、ネイティブ ネットワーク ライブラリへの P/Invoke interop 呼び出しに到達するまで、下位レベルの .NET ライブラリ (おそらく他の非同期メソッドを呼び出す) を介して呼び出しが行われます。 ネイティブ ライブラリはその後、システム API 呼び出し (Linux のソケットへの `write()` など) を実行することがあります。 ネイティブまたはマネージ境界にタスク オブジェクトが作成されます。作成には [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)) が使用される可能性があります。 タスク オブジェクトは上位レイヤーに渡され、操作が実行される場合もあれば直接返される場合もありますが、最終的に最初の呼び出し元に戻されます。 
+`GetStringAsync()` を呼び出すと、ネイティブ ネットワーク ライブラリへの P/Invoke interop 呼び出しに到達するまで、下位レベルの .NET ライブラリ (おそらく他の非同期メソッドを呼び出す) を介して呼び出しが行われます。 ネイティブ ライブラリはその後、システム API 呼び出し (Linux のソケットへの `write()` など) を実行することがあります。 ネイティブまたはマネージ境界にタスク オブジェクトが作成されます。作成には [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)) が使用される可能性があります。 タスク オブジェクトは上位レイヤーに渡され、操作が実行される場合もあれば直接返される場合もありますが、最終的に最初の呼び出し元に戻されます。
 
 上記の 2 番目の例で、`Task<T>` オブジェクトが `GetStringAsync` から返されます。 `await` キーワードを使用すると、メソッドは新しく作成したタスク オブジェクトを返します。 `GetFirstCharactersCountAsync` メソッドのこの場所から呼び出し元に制御が戻ります。 [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) オブジェクトのメソッドとプロパティを使用すると、呼び出し元はタスクの進行状況を監視できます。タスクは、GetFirstCharactersCountAsync の残りのコードが実行されれば完了します。
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-*   `0` の時点から `1` の時点までは、非同期メソッドが呼び出し元に制御を渡すまでにかかった時間です。
-*   `1` の時点から `2` の時点までは、CPU に負荷をかけずに I/O に費やされた時間です。
-*   最後に、`2` の時点から `3` の時点までは、非同期メソッドに制御 (および場合によっては値) を戻すまでの時間です。この時点でそのメソッドは再度実行されます。
+* `0` の時点から `1` の時点までは、非同期メソッドが呼び出し元に制御を渡すまでにかかった時間です。
+* `1` の時点から `2` の時点までは、CPU に負荷をかけずに I/O に費やされた時間です。
+* 最後に、`2` の時点から `3` の時点までは、非同期メソッドに制御 (および場合によっては値) を戻すまでの時間です。この時点でそのメソッドは再度実行されます。
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>サーバー側のシナリオ
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

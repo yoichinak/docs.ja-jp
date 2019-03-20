@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125497"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186105"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 
@@ -17,12 +17,12 @@ ms.locfileid: "53125497"
 
 として、*既定*、推奨事項を次にこのガイドで推奨されている主要な基準。
 
-  - **1 つのモノリシック アプリ:** Azure App Service を選択します。
-  - **N 層アプリ:** 1 つまたはいくつかのバックエンド サービスがある場合は、Azure Kubernetes Service (AKS)、Service Fabric (SF) または App Service などのオーケストレーターを選択します。
-  - **Linux のマイクロ サービス:** AKS と Kubernetes を選択します。
-  - **Windows のマイクロ サービス:** Service Fabric を選択します。
-  - **サーバーレス関数 (&) のイベント ハンドラー:** Azure Functions を選択します。
-  - **大規模なバッチの場合:** Azure Batch を選択します。
+- **1 つのモノリシック アプリ:** Azure App Service を選択します。
+- **N 層アプリ:** 1 つまたはいくつかのバックエンド サービスがある場合は、Azure Kubernetes Service (AKS)、Service Fabric (SF) または App Service などのオーケストレーターを選択します。
+- **Linux のマイクロ サービス:** AKS と Kubernetes を選択します。
+- **Windows のマイクロ サービス:** Service Fabric を選択します。
+- **サーバーレス関数 (&) のイベント ハンドラー:** Azure Functions を選択します。
+- **大規模なバッチの場合:** Azure Batch を選択します。
 
 製品の選択は、特定のアプリケーションのニーズと特性に依存するようにこの推奨事項にわずかな salt、従う必要があります。 すべてのアプリケーションは、最初に類似した種類を検索する場合でも同じです。
 
@@ -36,6 +36,6 @@ ms.locfileid: "53125497"
 
 ただし、OS の成熟度でそれらの相違点は今後のフェードインし複数のプラットフォームは比較可能な OS の成熟度られ、意思決定をアプリケーションが必要になるか、各プラットフォームのエコシステムに基づく特定の機能に基づく基本設定の詳細に配置されます。理由があります。
 
->[!div class="step-by-step"]
->[前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[次へ](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [前へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [次へ](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
