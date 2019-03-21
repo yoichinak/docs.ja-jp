@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369337"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262467"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 関数
 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。 
@@ -85,7 +85,7 @@ int FormatFromRawValue (
 
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)関数。
+この関数の呼び出しをラップする、 [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85))関数。
 
 ## <a name="requirements"></a>必要条件
 

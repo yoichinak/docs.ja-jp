@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719638"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262574"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>方法: シーケンシャル ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Sequence>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -21,7 +21,7 @@ ms.locfileid: "57719638"
 > [!NOTE]
 >  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
-### <a name="to-create-the-workflow"></a>ワークフローを作成するには  
+## <a name="to-create-the-workflow"></a>ワークフローを作成するには  
   
 1.  右クリック**NumberGuessWorkflowActivities**で**ソリューション エクスプ ローラー**選択**追加**、**新しい項目の**します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719638"
   
 4.  ドラッグ、**シーケンス**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**にドロップし、**ここにアクティビティをドロップ**のラベルをワークフロー デザイン サーフェイス。  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>ワークフロー変数および引数を作成するには  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>ワークフロー変数および引数を作成するには  
   
 1.  ダブルクリック**SequentialNumberGuessWorkflow.xaml**で**ソリューション エクスプ ローラー**まだ表示されていない場合に、デザイナーでワークフローを表示します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719638"
   
 13. クリックして**変数**を閉じるアクティビティ デザイナーの左下で、**変数**ウィンドウ。  
   
-### <a name="to-add-the-workflow-activities"></a>ワークフロー アクティビティを追加するには  
+## <a name="to-add-the-workflow-activities"></a>ワークフロー アクティビティを追加するには  
   
 1.  ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティ。 型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "57719638"
   
 13. をクリックして、 **WriteLine**内のアクティビティ、**し**セクションを選択しとには、次の式を入力、**テキスト**プロパティ値ボックス。  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. をクリックして、 **WriteLine**内のアクティビティ、 **Else**セクションを選択しとには、次の式を入力、**テキスト**プロパティ値ボックス。  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "57719638"
   
      ![完成したシーケンシャル ワークフロー](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>ワークフローをビルドするには  
+## <a name="to-build-the-workflow"></a>ワークフローをビルドするには  
   
 1.  Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
