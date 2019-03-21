@@ -18,9 +18,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57713892"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: コントロールをフォームの端を揃える
-
-  <xref:System.Windows.Forms.Control.Dock%2A> プロパティを設定することにより、フォームの端に合わせてコントロールを配置することができます。 このプロパティは、フォーム内のコントロールの場所を指定します。 
-  <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
+<xref:System.Windows.Forms.Control.Dock%2A> プロパティを設定することにより、フォームの端に合わせてコントロールを配置することができます。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
   
 |設定|コントロールへの影響|  
 |-------------|----------------------------|  
