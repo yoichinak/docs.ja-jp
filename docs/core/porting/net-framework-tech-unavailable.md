@@ -3,13 +3,13 @@ title: .NET Core で使用できない .NET Framework テクノロジ
 description: .NET Core で使用できない .NET Framework テクノロジの詳細情報
 author: cartermp
 ms.author: mairaw
-ms.date: 12/7/2018
-ms.openlocfilehash: 9d7860184806288dd0d5eb3b0447839d5e47c27f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.date: 12/07/2018
+ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58125474"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185806"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
 

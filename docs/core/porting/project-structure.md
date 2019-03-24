@@ -4,12 +4,12 @@ description: プロジェクト所有者が横並びの .NET Framework と .NET 
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904022"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186066"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
 
@@ -36,7 +36,7 @@ ms.locfileid: "55904022"
 
 次のリポジトリを考慮してください。
 
-![既存のプロジェクト](media/project-structure/project.png)
+![既存のプロジェクト](./media/project-structure/existing-project-structure.png)
 
 [**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ ms.locfileid: "55904022"
 
 リポジトリを再整理できます。既存の *\*.csproj* ファイルが削除され、複数のフレームワークをターゲットにするシングル *\*.csproj* ファイルが作成されます。 異なるフレームワークに対してシングル プロジェクトでコンパイルできるので、この方法が推奨されます。 さまざまなコンパイル オプション、ターゲットにするフレームワークごとの依存関係などを処理することもできます。
 
-![複数のフレームワークをターゲットにする csproj の作成](media/project-structure/project.csproj.png)
+![複数のフレームワークをターゲットにする csproj の作成](./media/project-structure/multi-targeted-project.png)
 
 [**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ ms.locfileid: "55904022"
 
 古いフレームワークをターゲットにする既存のプロジェクトがあるとき、そのようなプロジェクトをそのまま残し、.NET Core プロジェクトを利用して今後のフレームワークをターゲットにすると効率的な場合があります。
 
-![別のフォルダーに既存のプロジェクトがある .NET Core プロジェクト](media/project-structure/project.csproj.different.png)
+![別のフォルダーに既存のプロジェクトがある .NET Core プロジェクト](./media/project-structure/separate-projects-same-source.png)
 
 [**ソース コード**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
