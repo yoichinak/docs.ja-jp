@@ -3,12 +3,12 @@ title: コンソール アプリケーション
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dfd8124eb79690286e5cd876de57394a4d741328
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 3ac4312ba5d6088826fdf151609f6693a265e5a3
+ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058400"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58348831"
 ---
 # <a name="console-application"></a>コンソール アプリケーション
 
@@ -230,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -258,8 +254,6 @@ namespace TeleprompterConsole
 ```csharp
 using static System.Math;
 ```
-
-もう 1 つの新しい言語機能は [`lock`](../language-reference/keywords/lock-statement.md) ステートメントです。 このステートメントは、特定の時点で単一のスレッドのみがそのコードに含まれることを保証します。 1 つのスレッドがロックされているセクションにある場合は、その他のスレッドは、最初のスレッドがそのセクションを終了するのを待つ必要があります。 `lock` ステートメントは、ロック セクションを保護するオブジェクトを使用します。 このクラスは、標準的な表現形式に従ってクラスのプライベート オブジェクトをロックします。
 
 次に、`ShowTeleprompter` メソッドと `GetInput` メソッドを更新して、新しい `config` オブジェクトを使用する必要があります。 最後の `Task` を返す `async` メソッドを書いて、両方のタスクを開始し、最初のタスクが終了するときに終了させます。
 

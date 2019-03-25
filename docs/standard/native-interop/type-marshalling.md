@@ -4,12 +4,12 @@ description: .NET が型をネイティブ表現にマーシャリングする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411429"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185416"
 ---
 # <a name="type-marshalling"></a>型のマーシャリング
 
@@ -38,8 +38,8 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | P/Invoke または構造体の `CharSet` に応じて、`char` または `char16_t` のいずれか。 [文字セットのドキュメント](/.charset.md)を参照してください。 |
-| `string`  | P/Invoke または構造体の `CharSet` に応じて、`char*` または `char16_t*` のいずれか。 [文字セットのドキュメント](/.charset.md)を参照してください。 |
+| `char`    | P/Invoke または構造体の `CharSet` に応じて、`char` または `char16_t` のいずれか。 [文字セットのドキュメント](charset.md)を参照してください。 |
+| `string`  | P/Invoke または構造体の `CharSet` に応じて、`char*` または `char16_t*` のいずれか。 [文字セットのドキュメント](charset.md)を参照してください。 |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET ポインター型 (例: `void*`)  | `void*` |
@@ -73,7 +73,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 | .NET 型 | ネイティブ型 (パラメーターのみ) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | P/Invoke の `CharSet` に応じて、`char*` または `char16_t*` のいずれか。  [文字セットのドキュメント](/.charset.md)を参照してください。 |
+| `System.Text.StringBuilder` | P/Invoke の `CharSet` に応じて、`char*` または `char16_t*` のいずれか。  [文字セットのドキュメント](charset.md)を参照してください。 |
 | `System.ArgIterator` | `va_list` (Windows x86/x64/arm64 のみ) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
