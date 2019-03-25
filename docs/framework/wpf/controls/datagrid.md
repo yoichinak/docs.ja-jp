@@ -36,8 +36,7 @@ ms.locfileid: "57368139"
 |シナリオ|方法|  
 |--------------|--------------|  
 |代替背景色|設定、 <xref:System.Windows.Controls.ItemsControl.AlternationIndex%2A> 2 以上のプロパティを割り当てます、<xref:System.Windows.Media.Brush>を<xref:System.Windows.Controls.DataGrid.RowBackground%2A>と<xref:System.Windows.Controls.DataGrid.AlternatingRowBackground%2A>プロパティ。|  
-|セルと行の選択の動作を定義します。|
-  <xref:System.Windows.Controls.DataGrid.SelectionMode%2A> プロパティと <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> プロパティを設定します。|  
+|セルと行の選択の動作を定義します。|<xref:System.Windows.Controls.DataGrid.SelectionMode%2A> プロパティと <xref:System.Windows.Controls.DataGrid.SelectionUnit%2A> プロパティを設定します。|  
 |ヘッダーとセル、および行の外観をカスタマイズします。|新しい適用<xref:System.Windows.Style>を<xref:System.Windows.Controls.DataGrid.ColumnHeaderStyle%2A>、 <xref:System.Windows.Controls.DataGrid.RowHeaderStyle%2A>、 <xref:System.Windows.Controls.DataGrid.CellStyle%2A>、または<xref:System.Windows.Controls.DataGrid.RowStyle%2A>プロパティ。|  
 |サイズ変更オプションを設定します。|設定、 <xref:System.Windows.FrameworkElement.Height%2A>、 <xref:System.Windows.FrameworkElement.MaxHeight%2A>、 <xref:System.Windows.FrameworkElement.MinHeight%2A>、 <xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.MaxWidth%2A>、または<xref:System.Windows.FrameworkElement.MinWidth%2A>プロパティ。 詳細については、次を参照してください。 [DataGrid コントロールのサイズ変更オプション](sizing-options-in-the-datagrid-control.md)します。|  
 |項目にアクセスする選択|チェック、 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 、選択したセルを取得するプロパティと<xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems%2A>プロパティを選択した行を取得します。 詳細については、「 <xref:System.Windows.Controls.DataGrid.SelectedCells%2A> 」を参照してください。|  

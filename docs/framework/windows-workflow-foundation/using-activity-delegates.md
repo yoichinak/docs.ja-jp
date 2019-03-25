@@ -33,8 +33,7 @@ ms.locfileid: "57707535"
   
  [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
   
- 
-  <xref:System.Activities.ActivityAction%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Statements.InvokeAction%601> を使用して <xref:System.Activities.ActivityAction%601> の呼び出しをモデル化します。 次の例では、カスタムの `WriteLineWithNotification` アクティビティを定義します。 このアクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティが含まれ、その後に 1 つの文字列引数を取る <xref:System.Activities.Statements.WriteLine> を呼び出す <xref:System.Activities.Statements.InvokeAction%601> が続く <xref:System.Activities.ActivityAction%601> で構成されます。  
+ <xref:System.Activities.ActivityAction%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Statements.InvokeAction%601> を使用して <xref:System.Activities.ActivityAction%601> の呼び出しをモデル化します。 次の例では、カスタムの `WriteLineWithNotification` アクティビティを定義します。 このアクティビティは、<xref:System.Activities.Statements.Sequence> アクティビティが含まれ、その後に 1 つの文字列引数を取る <xref:System.Activities.Statements.WriteLine> を呼び出す <xref:System.Activities.Statements.InvokeAction%601> が続く <xref:System.Activities.ActivityAction%601> で構成されます。  
   
  [!code-csharp[CFX_ActivityExample#1](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#1)]  
   
@@ -45,8 +44,7 @@ ms.locfileid: "57707535"
  1 つ以上の引数を渡すために <xref:System.Activities.Statements.InvokeAction%601> および <xref:System.Activities.ActivityAction%601> のジェネリック バージョンが複数用意されています。  
   
 ## <a name="using-activityfunc"></a>ActivityFunc の使用  
- <xref:System.Activities.ActivityAction%601> はアクティビティから結果値が返されない場合に役立ち、<xref:System.Activities.ActivityFunc%601> は結果値が返される場合に使用されます。 
-  <xref:System.Activities.ActivityFunc%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Expressions.InvokeFunc%601> を使用して <xref:System.Activities.ActivityFunc%601> の呼び出しをモデル化します。 次の例では、 `WriteFillerText` アクティビティを定義します。 充てんテキストを提供するために、整数の引数を取って文字列の結果を持つ <xref:System.Activities.Expressions.InvokeFunc%601> を指定します。 充てんテキストが取得されると、<xref:System.Activities.Statements.WriteLine> アクティビティを使用してコンソールに表示されます。  
+ <xref:System.Activities.ActivityAction%601> はアクティビティから結果値が返されない場合に役立ち、<xref:System.Activities.ActivityFunc%601> は結果値が返される場合に使用されます。 <xref:System.Activities.ActivityFunc%601> を定義するカスタム アクティビティを作成する場合は、<xref:System.Activities.Expressions.InvokeFunc%601> を使用して <xref:System.Activities.ActivityFunc%601> の呼び出しをモデル化します。 次の例では、 `WriteFillerText` アクティビティを定義します。 充てんテキストを提供するために、整数の引数を取って文字列の結果を持つ <xref:System.Activities.Expressions.InvokeFunc%601> を指定します。 充てんテキストが取得されると、<xref:System.Activities.Statements.WriteLine> アクティビティを使用してコンソールに表示されます。  
   
  [!code-csharp[CFX_ActivityExample#3](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

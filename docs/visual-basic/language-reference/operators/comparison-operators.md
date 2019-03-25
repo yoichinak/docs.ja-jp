@@ -134,8 +134,7 @@ result = string Like pattern
 |両方とも `String`|並べ替え文字列の並べ替えの特性に基づいて比較をします。|  
 |両方の数値|オブジェクトに変換`Double`、数値比較します。|  
 |1 つの数値型と 1 つ `String`|`String`に変換されます、`Double`数値比較を実行します。 場合、`String`に変換できない`Double`、<xref:System.InvalidCastException>がスローされます。|  
-|どちらかまたは両方が以外の参照型です。 `String`|
-  <xref:System.InvalidCastException> がスローされます。|  
+|どちらかまたは両方が以外の参照型です。 `String`|<xref:System.InvalidCastException> がスローされます。|  
   
  数値の比較処理`Nothing`0 として。 文字列比較を扱う`Nothing`として`""`(空の文字列)。  
   

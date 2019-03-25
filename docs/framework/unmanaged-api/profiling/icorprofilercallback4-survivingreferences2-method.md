@@ -53,9 +53,7 @@ HRESULT SurvivingReferences2(
  サイズは、`objectIDRangeStart` 配列内の参照される各ブロックに対して指定します。  
   
 ## <a name="remarks"></a>Remarks  
- 
-  `objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列の要素は、次のように解釈されて、ガベージ コレクションでオブジェクトが存続したかどうかを判断する必要があります。 
-  `ObjectID` 値 (`ObjectID`) が次の範囲内にあるとします。  
+ `objectIDRangeStart` 配列と `cObjectIDRangeLength` 配列の要素は、次のように解釈されて、ガベージ コレクションでオブジェクトが存続したかどうかを判断する必要があります。 `ObjectID` 値 (`ObjectID`) が次の範囲内にあるとします。  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   

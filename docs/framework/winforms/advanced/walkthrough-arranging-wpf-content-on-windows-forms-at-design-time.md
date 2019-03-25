@@ -60,8 +60,7 @@ ms.locfileid: "57712462"
   
 3.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>プロパティ`200`します。  
   
-4.  
-  <xref:System.Windows.Controls.Control.Background%2A> プロパティの値を `Blue` に設定します。  
+4.  <xref:System.Windows.Controls.Control.Background%2A> プロパティの値を `Blue` に設定します。  
   
 5.  プロジェクトをビルドします。  
   
@@ -80,8 +79,7 @@ ms.locfileid: "57712462"
   
 5.  **ツールボックス**、ダブルクリックして`UserControl1`のインスタンスを作成する`UserControl1`の最初のセルで、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
-     
-  `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。  
+     `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。  
   
 6.  **ツールボックス**、ダブルクリックして`UserControl1`の 2 番目のセルで別のインスタンスを作成する、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
@@ -98,8 +96,7 @@ ms.locfileid: "57712462"
   
 1.  **ツールボックス**のインスタンスをドラッグ`UserControl1`をフォームに下の領域に配置し、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
-     
-  `UserControl1` のインスタンスは、`elementHost3` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。  
+     `UserControl1` のインスタンスは、`elementHost3` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。  
   
 2.  スナップ線を使用して、`elementHost3` の左端を <xref:System.Windows.Forms.TableLayoutPanel> コントロールの左端に揃えます。  
   
@@ -124,8 +121,7 @@ ms.locfileid: "57712462"
   
 2.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティを**Top、Bottom、Left、Right**します。  
   
-3.  
-  <xref:System.Windows.Forms.TableLayoutPanel> コントロールを大きなサイズに変更します。  
+3.  <xref:System.Windows.Forms.TableLayoutPanel> コントロールを大きなサイズに変更します。  
   
      `elementHost1` コントロールがセルを満たすようサイズ変更されます。  
   
@@ -133,8 +129,7 @@ ms.locfileid: "57712462"
   
 5.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Forms.Control.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>します。  
   
-     
-  `elementHost2` コントロールがセルを満たすようサイズ変更されます。  
+     `elementHost2` コントロールがセルを満たすようサイズ変更されます。  
   
 6.  <xref:System.Windows.Forms.TableLayoutPanel> コントロールを選択します。  
   

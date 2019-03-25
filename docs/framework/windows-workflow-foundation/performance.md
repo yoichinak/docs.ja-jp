@@ -16,8 +16,7 @@ ms.locfileid: "57845736"
  WF3 と WF4 を比較すると、個々のワークフロー コンポーネントのパフォーマンスが桁違いに向上しています。  Windows Communication Foundation (WCF) サービスを手動でコーディングと非常に小さくする WCF ワークフロー サービスの間にギャップが残ります。  WF4 でワークフローの待機時間は大幅に短縮されました。  永続化のパフォーマンスは 2.5 ～ 3.0 倍向上しています。  ワークフロー追跡による状態監視のオーバーヘッドも格段に短縮されました。  これらの要因はアプリケーション内で WF4 に移行する、または WF4 を導入する理由として説得力があります。
 
 ## <a name="terminology"></a>用語
- 
-  [!INCLUDE[wf1](../../../includes/wf1-md.md)] で導入された [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のバージョンは、このトピックではこれから WF4 と呼びます。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 で導入されたにあり、いくつかの小さな変更を[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]SP1。 また、以後 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] バージョンの Workflow Foundation を WF3 と呼びます。 WF3 は WF4 と共に [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] に付属しています。 WF4 に移行する WF3 の成果物の詳細については、次を参照してください。[Windows Workflow Foundation 4 移行ガイド](https://go.microsoft.com/fwlink/?LinkID=153313)
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)] で導入された [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のバージョンは、このトピックではこれから WF4 と呼びます。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 で導入されたにあり、いくつかの小さな変更を[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]SP1。 また、以後 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] バージョンの Workflow Foundation を WF3 と呼びます。 WF3 は WF4 と共に [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] に付属しています。 WF4 に移行する WF3 の成果物の詳細については、次を参照してください。[Windows Workflow Foundation 4 移行ガイド](https://go.microsoft.com/fwlink/?LinkID=153313)
 
  Windows Communication Foundation (WCF) は、Microsoft の統一プログラミング モデルをサービス指向アプリケーションを構築するためです。 WF3 と共に .NET 3.0 の一部として初めて導入されたの主要なコンポーネントの 1 つは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。
 

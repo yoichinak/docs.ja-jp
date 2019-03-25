@@ -96,8 +96,7 @@ ms.locfileid: "57352894"
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|この要素には、標準バインディングおよびカスタム バインドのコレクションが保持されます。|  
   
 ## <a name="remarks"></a>Remarks  
- 
-  `WSHttpBinding` は `BasicHttpBinding` に似ていますが、より多くの Web サービス機能を提供します。 BasicHttpBinding と同じように HTTP トランスポートを使用し、メッセージ セキュリティを提供します。さらに、トランザクション、信頼できるメッセージング、および WS-Addressing も提供します。これらは、既定で有効化になっているか、または単一の制御設定で使用できるようになります。  
+ `WSHttpBinding` は `BasicHttpBinding` に似ていますが、より多くの Web サービス機能を提供します。 BasicHttpBinding と同じように HTTP トランスポートを使用し、メッセージ セキュリティを提供します。さらに、トランザクション、信頼できるメッセージング、および WS-Addressing も提供します。これらは、既定で有効化になっているか、または単一の制御設定で使用できるようになります。  
   
 ## <a name="example"></a>例  
   

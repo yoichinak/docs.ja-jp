@@ -47,15 +47,13 @@ ms.locfileid: "57844873"
 ## <a name="in-this-section"></a>このセクションの内容
 
 [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)\
-
-  `ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
+`ConnectionStringBuilder` クラスを使用して、有効な接続文字列を実行時に作成する方法について説明します。
 
 [接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
 構成ファイルを使用した接続文字列の格納と取得の方法について説明します。
 
 [接続文字列の構文](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
-
-  `SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
+`SqlClient`、`OracleClient`、`OleDb`、`Odbc` の各プロバイダーに固有の接続文字列を構成する方法について説明します。
 
 [接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
 データ ソースへの接続に使用する情報を保護する方法を示します。

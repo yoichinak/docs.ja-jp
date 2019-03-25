@@ -69,8 +69,7 @@ HRESULT MovedReferences(
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
- 
-  `i` の値が次の範囲内にあるとします。  
+ `i` の値が次の範囲内にあるとします。  
   
  0 <= `i` < `cMovedObjectIDRanges`  
   

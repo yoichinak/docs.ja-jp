@@ -19,8 +19,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57708406"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は [!INCLUDE[wrt](../../../includes/wrt-md.md)]のさまざまなソフトウェア開発シナリオをサポートします。 これらのシナリオは次の 3 つのカテゴリに分類されます。
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は [!INCLUDE[wrt](../../../includes/wrt-md.md)]のさまざまなソフトウェア開発シナリオをサポートします。 これらのシナリオは次の 3 つのカテゴリに分類されます。
 
 -   開発[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]」の説明に従って、XAML コントロールを使用したアプリ[ロードマップの Windows ストア アプリを c# または Visual Basic を使用して](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))、[方法操作方法 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))、および[.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -59,8 +58,7 @@ ms.locfileid: "57708406"
 
 -   <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)>ドキュメントは、密接に関連する問題を示しています。さまざまな言語別に、パラメーターの型が表示されます。 C# と Visual Basic の場合、パラメーターの型は <xref:System.String?displayProperty=nameWithType> と <xref:System.Uri?displayProperty=nameWithType> です。 これもやはり、.NET Framework で独自の `String` 型と `Uri` 型が使われるためであり、このようなよく使用される型について、.NET Framework ユーザーが処理を実行する別の方法を学習しても意味はありません。 IDE では、これに対応する [!INCLUDE[wrt](../../../includes/wrt-md.md)]の型が .NET Framework によって非表示にされます。
 
--   いくつかの場合など、<xref:Windows.UI.Xaml.GridLength>構造体には、.NET Framework には、同じ名前が、多くの機能を持つ型。 たとえば、一連のコンストラクターとプロパティのトピックは `GridLength` に関連付けられますが、メンバーがマネージド コードでのみ使用可能であるために、Visual Basic と C# に関してのみ構文ブロックの機能を備えています。 
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、構造体にフィールドがあるだけです。 [!INCLUDE[wrt](../../../includes/wrt-md.md)]構造はヘルパー クラスを必要と<xref:Windows.UI.Xaml.GridLengthHelper>、同等の機能を提供します。 このヘルパー クラスは、マネージド コードを記述している間は IDE に表示されません。
+-   いくつかの場合など、<xref:Windows.UI.Xaml.GridLength>構造体には、.NET Framework には、同じ名前が、多くの機能を持つ型。 たとえば、一連のコンストラクターとプロパティのトピックは `GridLength` に関連付けられますが、メンバーがマネージド コードでのみ使用可能であるために、Visual Basic と C# に関してのみ構文ブロックの機能を備えています。 [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、構造体にフィールドがあるだけです。 [!INCLUDE[wrt](../../../includes/wrt-md.md)]構造はヘルパー クラスを必要と<xref:Windows.UI.Xaml.GridLengthHelper>、同等の機能を提供します。 このヘルパー クラスは、マネージド コードを記述している間は IDE に表示されません。
 
 -   IDE では、[!INCLUDE[wrt](../../../includes/wrt-md.md)]の型は <xref:System.Object?displayProperty=nameWithType> から派生するように表示されます。 この型のメンバーは、<xref:System.Object> などの <xref:System.Object.ToString%2A?displayProperty=nameWithType> から継承されるように表示されます。 これらのメンバーは、型が実際に <xref:System.Object> から継承され、[!INCLUDE[wrt](../../../includes/wrt-md.md)]の型が <xref:System.Object> にキャストできる場合と同様に動作します。 この機能は、.NET Framework が [!INCLUDE[wrt](../../../includes/wrt-md.md)]用に用意しているサポートの一部です。 ただし、[!INCLUDE[wrt](../../../includes/wrt-md.md)]のリファレンス ドキュメントで型を表示しても、このようなメンバーは表示されません。 これらの見かけ上の継承されたメンバーに関するドキュメントは、<xref:System.Object?displayProperty=nameWithType> のリファレンス ドキュメントに含まれています。
 
@@ -85,28 +83,22 @@ ms.locfileid: "57708406"
  
   [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、`IMap<K, V>` と `IMapView<K, V>` は `IKeyValuePair` を使用して反復されます。 これらをマネージド コードに渡すと、`IDictionary<TKey, TValue>` および `IReadOnlyDictionary<TKey, TValue>` として表示されるため、これを列挙するには必然的に `System.Collections.Generic.KeyValuePair<TKey, TValue>` を使用します。
 
- インターフェイスがマネージド コード内に表示される方法によって、これらのインターフェイスを実装する型の表示方法が決まります。 たとえば、`PropertySet` クラスは `IMap<K, V>` を実装しますが、これはマネージド コードでは `IDictionary<TKey, TValue>` として表示されます。 `PropertySet` は、`IDictionary<TKey, TValue>` ではなく `IMap<K, V>` を実装したかのように表示されます。したがってマネージ コードでは、`Add` メソッド (その動作は .NET Framework ディクショナリの `Add` メソッドと同様) が含まれているように表示されます。 
-  `Insert` メソッドがないように見えます。
+ インターフェイスがマネージド コード内に表示される方法によって、これらのインターフェイスを実装する型の表示方法が決まります。 たとえば、`PropertySet` クラスは `IMap<K, V>` を実装しますが、これはマネージド コードでは `IDictionary<TKey, TValue>` として表示されます。 `PropertySet` は、`IDictionary<TKey, TValue>` ではなく `IMap<K, V>` を実装したかのように表示されます。したがってマネージ コードでは、`Add` メソッド (その動作は .NET Framework ディクショナリの `Add` メソッドと同様) が含まれているように表示されます。 `Insert` メソッドがないように見えます。
 
  詳細については、.NET Framework を使用して作成する方法、[!INCLUDE[wrt](../../../includes/wrt-md.md)]コンポーネント、および JavaScript で、このようなコンポーネントを使用する方法を示すチュートリアルを参照してください。 [c# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)です。
 
 ### <a name="primitive-types"></a>プリミティブ型
  マネージド コードで [!INCLUDE[wrt](../../../includes/wrt-md.md)]のナチュラルな使用を有効にすると、[!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ型ではなく .NET Framework のプリミティブ型がコードに表示されます。 .NET Framework では、`Int32` 構造体などのプリミティブ型には、`Int32.TryParse` メソッドなどの便利なプロパティとメソッドが多くあります。 一方、[!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ型と構造体にはフィールドしかありません。 マネージド コードでプリミティブを使用すると、.NET Framework の型のように表示され、通常どおりに .NET Framework 型のプロパティとメソッドを使用できます。 要約すると、次のようになります。
 
--   
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` (Unicode 文字の変更できないコレクション)、`Enum`、`UInt32`、`UInt64`、および `Guid` では、`System` 名前空間内の同じ名前の型を使用します。
+-   [!INCLUDE[wrt](../../../includes/wrt-md.md)]のプリミティブ `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` (Unicode 文字の変更できないコレクション)、`Enum`、`UInt32`、`UInt64`、および `Guid` では、`System` 名前空間内の同じ名前の型を使用します。
 
--   
-  `UInt8` では、`System.Byte` を使用します。
+-   `UInt8` では、`System.Byte` を使用します。
 
--   
-  `Char16` では、`System.Char` を使用します。
+-   `Char16` では、`System.Char` を使用します。
 
--   
-  `IInspectable` インターフェイスでは、`System.Object` を使用します。
+-   `IInspectable` インターフェイスでは、`System.Object` を使用します。
 
--   
-  `HRESULT` では、`System.Int32` のメンバーを 1 つ含む構造体を使用します。
+-   `HRESULT` では、`System.Int32` のメンバーを 1 つ含む構造体を使用します。
 
  インターフェイス型の場合と同様、この表示の証拠が表示されるのは、.NET Framework プロジェクトが、JavaScript を使用してビルドされた [!INCLUDE[wrt](../../../includes/wrt-md.md)] アプリで使用される [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] コンポーネントである場合に限られます。
 
@@ -117,8 +109,7 @@ ms.locfileid: "57708406"
 
 <a name="WindowsRuntimeComponents"></a>
 ## <a name="scenarios-for-developing-windows-runtime-components"></a>Windows ランタイム コンポーネントの開発シナリオ
- 
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]のマネージド コンポーネントでサポートされるシナリオは、次の原則に依存します。
+ [!INCLUDE[wrt](../../../includes/wrt-md.md)]のマネージド コンポーネントでサポートされるシナリオは、次の原則に依存します。
 
 -   .NET Framework を使用してビルドされる [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとその他の [!INCLUDE[wrt](../../../includes/wrt-md.md)] ライブラリの間に、明確な違いはありません。 たとえば、マネージド コードを使用して [!INCLUDE[wrt](../../../includes/wrt-md.md)]のネイティブ コンポーネントを再実装する場合、この 2 つのコンポーネントは外部から見て区別が付きません。 コンポーネントがマネージド コードで記述されているという事実は、そのコード自体がマネージド コードであったとしても、そのコンポーネントを使用するコードには表示されません。 ただし内部的には、そのコンポーネントは真のマネージド コードであり、共通言語ランタイム (CLR) 上で実行されます。
 
@@ -137,8 +128,7 @@ ms.locfileid: "57708406"
 -   コンポーネントの型は [!INCLUDE[wrt](../../../includes/wrt-md.md)]の型から派生できます。 コントロールが内のプリミティブ コントロール型から派生できます、<xref:Windows.UI.Xaml.Controls.Primitives>名前空間または終了コントロールなどの詳細はから<xref:Windows.UI.Xaml.Controls.Button>します。
 
     > [!IMPORTANT]
-    >  
-  [!INCLUDE[win8](../../../includes/win8-md.md)] および [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、[!INCLUDE[wrt](../../../includes/wrt-md.md)] マネージド コンポーネントのすべてのパブリック型をシールする必要があります。 別の [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント内の型はそこから派生できません。 コンポーネントでポリモーフィックな動作を提供するには、インターフェイスを作成し、そのインターフェイスをポリモーフィックな型に実装します。
+    >  [!INCLUDE[win8](../../../includes/win8-md.md)] および [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、[!INCLUDE[wrt](../../../includes/wrt-md.md)] マネージド コンポーネントのすべてのパブリック型をシールする必要があります。 別の [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント内の型はそこから派生できません。 コンポーネントでポリモーフィックな動作を提供するには、インターフェイスを作成し、そのインターフェイスをポリモーフィックな型に実装します。
 
 -   コンポーネント内のパブリック型で指定されるすべてのパラメーターと戻り値の型は、[!INCLUDE[wrt](../../../includes/wrt-md.md)]の型 (コンポーネントで定義する [!INCLUDE[wrt](../../../includes/wrt-md.md)]の型を含む) である必要があります。
 
@@ -157,11 +147,9 @@ ms.locfileid: "57708406"
 
 |タイトル|説明|
 |-----------|-----------------|
-|[Windows ストア アプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|
-  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントの作成に使用できる .NET Framework の型およびメンバーについて説明します  (Windows デベロッパー センター内)。|
+|[Windows ストア アプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントの作成に使用できる .NET Framework の型およびメンバーについて説明します  (Windows デベロッパー センター内)。|
 |[C# または Visual Basic を使った Windows ストア アプリのロードマップ](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|C# または Visual Basic を使用して [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの開発を開始するときに役立つ主要リソース (各種のクイック スタート トピック、ガイドライン、ベスト プラクティスなど) が用意されています  (Windows デベロッパー センター内)。|
 |[どのように操作方法 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|C# または Visual Basic を使用して [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの開発を開始するときに役立つ主要リソース (各種のクイック スタート トピック、ガイドライン、ベスト プラクティスなど) が用意されています  (Windows デベロッパー センター内)。|
 |[C# および Visual Basic での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework を使用して [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントを作成する方法、JavaScript を使用して Windows 用にビルドされた [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリの一部としてそのコンポーネントを使用する方法、Visual Studio との組み合わせをデバッグする方法について説明します  (Windows デベロッパー センター内)。|
-|[Windows ランタイム リファレンス](/uwp/api/)|
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]のリファレンス ドキュメント  (Windows デベロッパー センター内)。|
+|[Windows ランタイム リファレンス](/uwp/api/)|[!INCLUDE[wrt](../../../includes/wrt-md.md)]のリファレンス ドキュメント  (Windows デベロッパー センター内)。|
 |[Windows ランタイムへの URI の引き渡し](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|マネージド コードから [!INCLUDE[wrt](../../../includes/wrt-md.md)]に URI を渡すときに発生する可能性がある問題と、その回避方法について説明します。|

@@ -31,8 +31,7 @@ ms.locfileid: "57716011"
   
 1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true`に設定します。 場合<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>は`true`(既定)、コントロール内のテキストは、1 つまたは複数の段落を感じるかもしれません。 それ以外の場合、一部の行が、コントロールの端にあるクリップが一覧として表示されます。  
   
-2.  
-  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
+2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -40,8 +39,7 @@ ms.locfileid: "57716011"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|幅を超える可能性がありますうちいくつかの行の一覧を表示する場合、この値を使用して、<xref:System.Windows.Forms.TextBox>コントロール。|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|一覧は、コントロールの高さを超える可能性がある場合は、この値を使用します。|  
   
-3.  
-  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
+3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  
