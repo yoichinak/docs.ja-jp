@@ -58,8 +58,7 @@ EdmGen.exe ツールを使用する場合、次のいずれかのモードを指
 |`/outobjectlayer:`\<file>|.csdl ファイルから生成されたオブジェクトを含むソース コード ファイルの名前を指定します。|
 |`/outviews:`\<file>|生成されたビューを含むソース コード ファイルの名前を指定します。|
 |`/language:`[VB&#124;CSharp]|生成されるソース コード ファイルの言語を指定します。 既定の言語は C# です。|
-|`/namespace:`\<string>|使用するモデル名前空間を指定します。 名前空間は、`/mode:FullGeneration` または `/mode:FromSSDLGeneration` の実行時に .csdl ファイルに設定されます。 
-  `/mode:EntityClassGeneration` の実行時には名前空間は使用されません。|
+|`/namespace:`\<string>|使用するモデル名前空間を指定します。 名前空間は、`/mode:FullGeneration` または `/mode:FromSSDLGeneration` の実行時に .csdl ファイルに設定されます。 `/mode:EntityClassGeneration` の実行時には名前空間は使用されません。|
 |`/entitycontainer:`\<string>|生成されたモデル ファイルとマッピング ファイルの `<EntityContainer>` 要素に適用する名前を指定します。|
 |`/pl[uralize]`|単数形と複数形の英語のルールを、概念モデルの `Entity`、`EntitySet`、および `NavigationProperty` の各名前に適用します。 このオプションでは、以下の処理が実行されます。<br /><br /> -すべてのこと`EntityType`単数形の名前。<br />-すべてのこと`EntitySet`複数形の名前。<br />-それぞれの`NavigationProperty`多くて 1 つのエンティティを返す場合、名前の単数形。<br />-それぞれの`NavigationProperty`が返すエンティティが 1 つ以上の場合、名前の複数形。|
 |`/SuppressForeignKeyProperties or /nofk`|外部キー列が概念モデルのエンティティ型のスカラー プロパティとして公開されないようにします。|

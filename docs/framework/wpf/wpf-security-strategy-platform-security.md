@@ -35,8 +35,7 @@ ms.locfileid: "57353063"
   
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>オペレーティング システムのセキュリティ  
- 
-  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が必要とするオペレーティング システムの最小レベルは [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] です。 中核となる[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]でビルドされたものも含めて、すべての Windows アプリケーションのセキュリティ基盤を形成する複数のセキュリティ機能を提供します。[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]します。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] には、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] のセキュリティ機能が搭載され、それをさらに拡張しています。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] にとって重要なセキュリティ機能の一式、および [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] がそれらを統合してさらに多重防御を行う方法について説明します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が必要とするオペレーティング システムの最小レベルは [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] です。 中核となる[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]でビルドされたものも含めて、すべての Windows アプリケーションのセキュリティ基盤を形成する複数のセキュリティ機能を提供します。[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]します。 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] には、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] のセキュリティ機能が搭載され、それをさらに拡張しています。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] にとって重要なセキュリティ機能の一式、および [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] がそれらを統合してさらに多重防御を行う方法について説明します。  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -115,8 +114,7 @@ ms.locfileid: "57353063"
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>コード アクセス セキュリティ  
- クライアント コンピューターは、ファイル システム、レジストリ、印刷サービス、ユーザー インターフェイス、リフレクション、および環境変数など、マネージド アプリケーションがアクセスできる多種多様なリソースを公開します。 マネージ アプリケーションは、クライアント コンピューター上のリソースのいずれかにアクセスする前に、そのためには、.NET Framework のアクセス許可が必要です。 
-  [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] のアクセス許可は、<xref:System.Security.CodeAccessPermission> のサブクラスです。[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は、マネージド アプリケーションがアクセスできるリソースごとに 1 つのサブクラスを実装します。  
+ クライアント コンピューターは、ファイル システム、レジストリ、印刷サービス、ユーザー インターフェイス、リフレクション、および環境変数など、マネージド アプリケーションがアクセスできる多種多様なリソースを公開します。 マネージ アプリケーションは、クライアント コンピューター上のリソースのいずれかにアクセスする前に、そのためには、.NET Framework のアクセス許可が必要です。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] のアクセス許可は、<xref:System.Security.CodeAccessPermission> のサブクラスです。[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は、マネージド アプリケーションがアクセスできるリソースごとに 1 つのサブクラスを実装します。  
   
  マネージ アプリケーションが実行を開始する際に [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] によって付与される一連のアクセス許可は、アクセス許可セットとして知られ、アプリケーションが提供する証拠によって決定されます。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、提供される証拠は、アプリケーションが起動される場所またはゾーンです。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は次のゾーンを識別します。  
   
@@ -182,8 +180,7 @@ ms.locfileid: "57353063"
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>セキュリティ クリティカルな方法  
- 
-  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでインターネット ゾーンのサンド ボックスを有効にするアクセス許可を使用する [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] コードは、セキュリティ監査および制御の程度を可能な限り高く保持する必要があります。 この要件を容易には、.NET Framework は、特権を昇格させるコードを管理するための新しいサポートを提供します。 具体的には、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]特権を昇格させるコードを特定し、使用してマークすることができます、 <xref:System.Security.SecurityCriticalAttribute>; 任意のコードでマークされていない<xref:System.Security.SecurityCriticalAttribute>なります*透明*この手法を使用して。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでインターネット ゾーンのサンド ボックスを有効にするアクセス許可を使用する [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] コードは、セキュリティ監査および制御の程度を可能な限り高く保持する必要があります。 この要件を容易には、.NET Framework は、特権を昇格させるコードを管理するための新しいサポートを提供します。 具体的には、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]特権を昇格させるコードを特定し、使用してマークすることができます、 <xref:System.Security.SecurityCriticalAttribute>; 任意のコードでマークされていない<xref:System.Security.SecurityCriticalAttribute>なります*透明*この手法を使用して。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
   
  セキュリティ クリティカルな方法により、組織の[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]に特権を昇格させるコード*セキュリティ クリティカルなカーネル*、透過残りの部分とします。 セキュリティ クリティカルなコードを分離できるように、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]標準的なセキュリティ プラクティスを上回る、セキュリティ クリティカルなカーネルに追加のセキュリティ分析およびソース コントロールにフォーカス エンジニア リング チーム (を参照してください[WPF のセキュリティ方針-セキュリティ エンジニア リング](wpf-security-strategy-security-engineering.md))。  
   

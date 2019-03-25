@@ -55,8 +55,7 @@ ms.locfileid: "57372049"
   
 |属性|説明|  
 |---------------|-----------------|  
-|activityName|
-  <xref:System.Activities.Tracking.ActivityStateRecord> インスタンスをフィルターするために、アクティビティの名前を指定する文字列。|  
+|activityName|<xref:System.Activities.Tracking.ActivityStateRecord> インスタンスをフィルターするために、アクティビティの名前を指定する文字列。|  
   
 ### <a name="child-elements"></a>子要素  
   

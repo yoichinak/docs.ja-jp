@@ -19,8 +19,7 @@ ms.locfileid: "57706373"
 |-|-|-|
 |ExternalizedPolicy4|ExternalizedPolicy4 アクティビティとその WF 4.5 デザイナーが含まれます。|**ExternalizedPolicy4.cs**: アクティビティ定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**:ExternalizedPolicy4 アクティビティのカスタム デザイナー。 WF 3.5 ルール エンジンからルール エディター (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) を使用します。|
 |ImperativeCodeClientSample|命令型 C# コードで、ExternalizedPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです (デザイナーは不使用)。|**ApplyDiscount.rules**:ファイルと[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ルール定義。<br /><br /> **Order.cs**:顧客の注文を表す型です。 ルールはこの型のオブジェクトに適用されます。<br /><br /> **Program.cs**:構成および Order オブジェクトのインスタンスに ApplyDiscount.rules で定義されたルールを適用する Policy4 アクティビティを含むワークフローを実行します。<br /><br /> App.config:ルール ファイルのパスを持つ構成ファイル。|
-|DesignerClientSample|
-  [!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1.xaml**:Policy4 アクティビティを使用してルール評価を実行するシーケンシャル ワークフローです。<br /><br /> **Program.cs**:Sequence1.xaml で定義されているワークフローのインスタンスを実行します。|
+|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] デザイナーで、ExternalPolicy4 アプリケーションを使用してワークフローを構成および実行するサンプル クライアント アプリケーションです。|**Sequence1.xaml**:Policy4 アクティビティを使用してルール評価を実行するシーケンシャル ワークフローです。<br /><br /> **Program.cs**:Sequence1.xaml で定義されているワークフローのインスタンスを実行します。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 アクティビティ
 

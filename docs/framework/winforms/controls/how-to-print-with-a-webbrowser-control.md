@@ -30,8 +30,7 @@ ms.locfileid: "57702452"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
+-   `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.WebBrowser>

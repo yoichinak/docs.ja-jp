@@ -56,8 +56,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 
-  `lFlags` パラメーターが正しくありません。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` パラメーターが正しくありません。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 2 番目の呼び出し`QualifierSet_BeginEnumeration`せずに、中間の呼び出しが行われた[ `QualifierSet_EndEnumeration`](qualifierset-endenumeration.md)します。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 新しい列挙を開始するのに十分なメモリがあります。 |
 |`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |

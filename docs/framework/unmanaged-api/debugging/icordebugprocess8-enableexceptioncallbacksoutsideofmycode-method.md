@@ -31,8 +31,7 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
  [入力]  
   
 ## <a name="remarks"></a>Remarks  
- 
-  `enableExceptionsOutsideOfJMC` の値が `false` の場合:  
+ `enableExceptionsOutsideOfJMC` の値が `false` の場合:  
   
 -   DEBUG_EXCEPTION_FIRST_CHANCE 例外のコールバックでは、デバッガーにされません。  
   

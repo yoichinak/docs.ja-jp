@@ -34,8 +34,7 @@ ms.locfileid: "57509551"
 
 インライン エディターのサンプルで示す内容は次のとおりです。
 
-- 
-  <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> から派生する型を作成します。
+- <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor> から派生する型を作成します。
 
 - コンス トラクターで、 <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> Windows Presentation Foundation (WPF) データ テンプレートを使用して値を設定します。 これは XAML テンプレートにバインドできますが、このサンプルではコードを使用してデータ バインディングを初期化します。
 

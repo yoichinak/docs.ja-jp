@@ -33,8 +33,7 @@ Windows アプリケーションでは、データ ソース内のレコード�
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>末尾または先頭が渡されるかどうかを確認するには  
   
-1.  
-  <xref:System.Windows.Forms.BindingSource.PositionChanged> イベントのイベント ハンドラーを作成します。 ハンドラーでは、提案された位置の値が実際のデータ要素の数を超えたかどうかをテストできます。  
+1.  <xref:System.Windows.Forms.BindingSource.PositionChanged> イベントのイベント ハンドラーを作成します。 ハンドラーでは、提案された位置の値が実際のデータ要素の数を超えたかどうかをテストできます。  
   
      次の例では、データの最後の要素に到達したかどうかをテストする方法を示します。 最後の要素でない場合は、例では、**次**フォーム上のボタンが無効になっています。  
   

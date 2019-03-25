@@ -22,8 +22,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57717140"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>チュートリアル: メニューのマージと ToolStrip コントロールを MDI フォームを作成します。
-
-  <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、マルチ ドキュメント インターフェイス (MDI) アプリケーションをサポートし、<xref:System.Windows.Forms.MenuStrip> コントロールはメニューの結合をサポートします。 MDI フォームは、<xref:System.Windows.Forms.ToolStrip> コントロールもサポートします。  
+<xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、マルチ ドキュメント インターフェイス (MDI) アプリケーションをサポートし、<xref:System.Windows.Forms.MenuStrip> コントロールはメニューの結合をサポートします。 MDI フォームは、<xref:System.Windows.Forms.ToolStrip> コントロールもサポートします。  
   
  このチュートリアルを使用する方法について説明<xref:System.Windows.Forms.ToolStripPanel>を MDI フォームでコントロールできます。 フォームは、子メニューをマージするメニューもサポートしています。 このチュートリアルで、次のタスクを示します。  
   
@@ -69,8 +68,7 @@ ms.locfileid: "57717140"
   
 2.  追加、<xref:System.Windows.Forms.ToolStripMenuItem>を<xref:System.Windows.Forms.MenuStrip>を制御し、名前を**ウィンドウ**します。  
   
-3.  
-  <xref:System.Windows.Forms.MenuStrip> コントロールを選択します。  
+3.  <xref:System.Windows.Forms.MenuStrip> コントロールを選択します。  
   
 4.  [プロパティ] ウィンドウでの値を設定、<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>プロパティを`ToolStripMenuItem1`します。  
   
@@ -148,8 +146,7 @@ ms.locfileid: "57717140"
   
      A<xref:System.Windows.Forms.ToolStrip>でコントロールを作成、<xref:System.Windows.Forms.ToolStripPanel>コントロール。  
   
-3.  
-  <xref:System.Windows.Forms.ToolStripPanel> コントロールを選択します。  
+3.  <xref:System.Windows.Forms.ToolStripPanel> コントロールを選択します。  
   
 4.  [プロパティ] ウィンドウでのコントロールの値を変更<xref:System.Windows.Forms.Control.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Left>します。  
   

@@ -14,8 +14,7 @@ ms.locfileid: "57356881"
 ---
 # <a name="merging-dataset-contents"></a>DataSet の内容のマージ
 
-
-  <xref:System.Data.DataSet.Merge%2A> メソッドを使用して、<xref:System.Data.DataSet>、<xref:System.Data.DataTable>、または <xref:System.Data.DataRow> の配列の内容を既存の `DataSet` にマージできます。 いくつかの要因とオプションが、新しいデータを既存の `DataSet` にマージする方法に影響します。
+<xref:System.Data.DataSet.Merge%2A> メソッドを使用して、<xref:System.Data.DataSet>、<xref:System.Data.DataTable>、または <xref:System.Data.DataRow> の配列の内容を既存の `DataSet` にマージできます。 いくつかの要因とオプションが、新しいデータを既存の `DataSet` にマージする方法に影響します。
 
 ## <a name="primary-keys"></a>主キー
 
@@ -36,11 +35,9 @@ ms.locfileid: "57356881"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-`DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 
-  `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。
+`DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。
 
-
-  `PreserveChanges` を `true` に設定すると、既存の行のデータは <xref:System.Data.DataRowVersion.Current> 行バージョンで保存されますが、既存の行の <xref:System.Data.DataRowVersion.Original> 行バージョンのデータは受信した行の `Original` 行バージョンのデータで上書きされます。 既存の行の <xref:System.Data.DataRow.RowState%2A> は、<xref:System.Data.DataRowState.Modified> に設定されます。 適用される例外を次に示します。
+`PreserveChanges` を `true` に設定すると、既存の行のデータは <xref:System.Data.DataRowVersion.Current> 行バージョンで保存されますが、既存の行の <xref:System.Data.DataRowVersion.Original> 行バージョンのデータは受信した行の `Original` 行バージョンのデータで上書きされます。 既存の行の <xref:System.Data.DataRow.RowState%2A> は、<xref:System.Data.DataRowState.Modified> に設定されます。 適用される例外を次に示します。
 
 - 既存の行の `RowState` が `Deleted` の場合、この `RowState` は `Deleted` のままであり、`Modified` には設定されません。 この場合、受信した行のデータは既存の行の `Original` 行バージョンとして保存され、既存の行の `Original` 行バージョンのデータが上書きされます (受信する行の `RowState` が `Added` でない場合)。
 

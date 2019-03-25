@@ -41,15 +41,13 @@ LINQ シナリオの場合、Entity Framework に対するクエリでは、正�
 |System.String メソッド (インスタンス)|正規関数|メモ|
 |---------------------------------------|------------------------|-----------|
 |Boolean Contains(String `value`)|`this` LIKE '%`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) > 0 にマップされます。|
-|Boolean EndsWith(String `value`)|`this` ような`'` % `value`'|
-  `value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|
+|Boolean EndsWith(String `value`)|`this` ような`'` % `value`'|`value` が定数ではない場合、Right(`this`, length(`value`)) = `value` にマップされます。|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|`value` が定数ではない場合、IndexOf(`this`, `value`) = 1 にマップされます。|
 |長さ|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))|
-  `startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat(Substring(`this`, 1, `startIndex`) , Substring(`this`, `startIndex` + `count` +1, Length(`this`) - (`startIndex` + `count`)))|`startIndex` が 0 以上の整数である場合、サポートされるのは Remove(`count`, `count`) だけです。|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
 |System.String Substring(Int32 `startIndex`, Int32 `length`)|部分文字列 (`this`、 `startIndex` +1、 `length`)||
