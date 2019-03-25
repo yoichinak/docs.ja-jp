@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826267"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411565"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
   
- これに対し、.NET Framework で実行されるマネージ コードには、コードそのものに適用されるコード アクセス セキュリティが存在します。 コードの実行が許可されるかどうかは、プリンシパルの ID だけでなく、コードの作成元など、コードの ID を表す情報に依存します。 これにより、マネージド コードが誤用される可能性が低くなります。  
+ これに対し、.NET Framework で実行されるマネージド コードには、コードそのものに適用されるコード アクセス セキュリティが存在します。 コードの実行が許可されるかどうかは、プリンシパルの ID だけでなく、コードの作成元など、コードの ID を表す情報に依存します。 これにより、マネージド コードが誤用される可能性が低くなります。  
   
-## <a name="code-access-permissions"></a>コード アクセス許可  
+## <a name="code-access-permissions"></a>Code Access Permissions  
  コードは、実行されるときに、CLR のセキュリティ システムで評価される証拠を提示します。 通常、この証拠は、URL、サイト、ゾーン、アセンブリの ID を保証するデジタル署名などのコードの作成元に関する情報で構成されます。  
   
  CLR は、そのコードに許されている操作の範囲内で実行を許可します。 コードは権限を要求できますが、その要求は管理者が設定したセキュリティ ポリシーに基づいて受理されます。  
@@ -31,7 +31,8 @@ ms.locfileid: "55826267"
   
 -   `Identity permissions`。アセンブリを識別する特性を表します。 アセンブリには証拠に基づいて権限が付与されます。証拠には、デジタル署名やコードの作成元などの情報が含まれます。 ID 権限も <xref:System.Security.CodeAccessPermission> 基本クラスから派生します。  
   
--   `Role-based security permissions`。プリンシパルが、指定された ID を持っているか、または、指定されたロールに属しているかどうかに基づきます。 <xref:System.Security.Permissions.PrincipalPermission> クラスにより、アクティブなプリンシパルに対する宣言型および命令型の権限チェックが可能となります。  
+-   `Role-based security permissions`。プリンシパルが、指定された ID を持っているか、または、指定されたロールに属しているかどうかに基づきます。 
+  <xref:System.Security.Permissions.PrincipalPermission> クラスにより、アクティブなプリンシパルに対する宣言型および命令型の権限チェックが可能となります。  
   
  ランタイムのセキュリティ システムは、特定のリソースへのアクセスまたは特定の操作の実行がコードに許されているかどうかを判断するため、呼び出し履歴をたどりながら、各呼び出し元に付与されている権限と、要求されている権限とを比較します。 呼び出し履歴に、要求された権限を持たない呼び出し元が 1 つでも見つかった場合、<xref:System.Security.SecurityException> がスローされてアクセスが拒否されます。  
   
@@ -115,7 +116,8 @@ ms.locfileid: "55826267"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-allowonly-syntax"></a>KeyRestrictionBehavior を AllowOnly に設定する場合の構文  
- `Initial Catalog`、`Connection Timeout`、`Encrypt`、および `Packet Size` パラメーターも含まれる 2 つの接続文字列の使用を許可する例を次に示します。 その他の接続文字列パラメーターは、すべて制限されます。  
+ 
+  `Initial Catalog`、`Connection Timeout`、`Encrypt`、および `Packet Size` パラメーターも含まれる 2 つの接続文字列の使用を許可する例を次に示します。 その他の接続文字列パラメーターは、すべて制限されます。  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +138,8 @@ ms.locfileid: "55826267"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>カスタム アクセス許可セットを使用した Partial Trust の有効化  
- 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 などの<xref:System.Data.SqlClient>がコードのアクセス許可を<xref:System.Security.Policy.Zone>の`LocalIntranet`、システム管理者は、アクセス許可の設定をコピーでした`LocalIntranet`、名前を"CustomLocalIntranet"に変更、追加、 <xref:System.Data.SqlClient> 、アクセス許可のインポート設定を使用して CustomLocalIntranet アクセス許可、 [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)、セットのアクセス許可セットと`LocalIntranet_Zone`を CustomLocalIntranet します。  
+ 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 
+  `LocalIntranet` などの既定のアクセス許可セットは変更できません。 などの<xref:System.Data.SqlClient>がコードのアクセス許可を<xref:System.Security.Policy.Zone>の`LocalIntranet`、システム管理者は、アクセス許可の設定をコピーでした`LocalIntranet`、名前を"CustomLocalIntranet"に変更、追加、 <xref:System.Data.SqlClient> 、アクセス許可のインポート設定を使用して CustomLocalIntranet アクセス許可、 [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)、セットのアクセス許可セットと`LocalIntranet_Zone`を CustomLocalIntranet します。  
   
 ### <a name="sample-permission-set"></a>サンプル アクセス許可セット  
  部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタム アクセス許可セットを作成する方法の詳細については、次を参照してください。[を構成するためのアクセス許可設定を使用して Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))します。  
@@ -168,7 +171,9 @@ AllowBlankPassword="False">
 > [!IMPORTANT]
 >  ADO.NET の CAS 権限を定義する場合、最も制限の厳しいケース (権限なし) から開始し、その後で、コードが実行する特定のタスクに必要な特定の権限を追加するというのが、適切なパターンです。 逆に、すべての権限を与えてから特定の権限を拒否してゆく方法は、安全ではありません。同じ接続文字列を表現する方法が多数あるためです。 たとえば、すべての権限を与えた後で接続文字列 "server=someserver" の使用を拒否しても、"server=someserver.mycompany.com" という接続文字列は使用可能です。 常に権限をまったく与えない状態から開始することで、権限セットのセキュリティ ホールを減らすことができます。  
   
- `SqlClient` でセキュリティ確認要求を実行する方法を、次のコードに示します。CAS の権限が適切に設定されていない場合、<xref:System.Security.SecurityException> がスローされます。 <xref:System.Security.SecurityException> の出力は、コンソール ウィンドウに表示されます。  
+ 
+  `SqlClient` でセキュリティ確認要求を実行する方法を、次のコードに示します。CAS の権限が適切に設定されていない場合、<xref:System.Security.SecurityException> がスローされます。 
+  <xref:System.Security.SecurityException> の出力は、コンソール ウィンドウに表示されます。  
   
  [!code-csharp[DataWorks SqlClient.CAS#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.CAS#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/VB/source.vb#1)]  
@@ -190,7 +195,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>アンマネージ コードとの相互運用性  
- CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 アンマネージ コードの例としては、COM コンポーネント、ActiveX インターフェイス、Win32 API 関数があります。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)」を参照してください。  
+ CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 COM コンポーネント、ActiveX インターフェイス、および Windows API 関数は、アンマネージ コードの例を示します。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)」を参照してください。  
   
  .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、次を参照してください。[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375533"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409654"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF グラフィックス レンダリングの概要
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル層の概要について説明します。 ロールに焦点を当てます、<xref:System.Windows.Media.Visual>でのサポートを表示するためのクラス、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]モデル。  
@@ -49,8 +49,7 @@ ms.locfileid: "57375533"
   
  <xref:System.Windows.Media.Visual> 元の子クラスを派生する必要があります、パブリックの抽象クラスとして公開されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で公開されるビジュアル オブジェクトの階層構造を次の図に示します。  
   
- ![Visual オブジェクトから派生したクラスのダイアグラム](./media/visualclass01.png "VisualClass01")  
-Visual クラスの階層構造  
+ ![Visual オブジェクトから派生したクラスのダイアグラム](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual クラス  
  <xref:System.Windows.Media.DrawingVisual>は軽量の描画図形、画像、またはテキストを表示するために使用されるクラス。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないため、実行時のパフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 <xref:System.Windows.Media.DrawingVisual>カスタム ビジュアル オブジェクトを作成するために使用できます。 詳しくは、「[DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)」をご覧ください。  
@@ -110,8 +109,7 @@ DrawingGroup の操作の順序
   
  既定値を構成するビジュアル オブジェクトを列挙したかどうか<xref:System.Windows.Controls.Button>コントロールでは、次の図に、ビジュアル オブジェクトの階層に見つかります。  
   
- ![ビジュアル ツリー階層のダイアグラム](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-ビジュアル ツリー階層のダイアグラム  
+ ![ビジュアル ツリー階層のダイアグラム](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  <xref:System.Windows.Controls.Button>コントロールが含まれています、<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>要素が含まれます<xref:System.Windows.Controls.ContentPresenter>要素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>境界線と背景を描画するため、要素は、<xref:System.Windows.Controls.Button>します。 <xref:System.Windows.Controls.ContentPresenter>の内容を表示するため、要素は、<xref:System.Windows.Controls.Button>します。 テキストを表示するためここでは、<xref:System.Windows.Controls.ContentPresenter>要素が含まれています、<xref:System.Windows.Controls.TextBlock>要素。 という事実を<xref:System.Windows.Controls.Button>コントロール、<xref:System.Windows.Controls.ContentPresenter>など他の要素によって、コンテンツを表すことができることを意味、 <xref:System.Windows.Controls.Image> 、geometry など、<xref:System.Windows.Media.EllipseGeometry>します。  
   
@@ -124,8 +122,7 @@ DrawingGroup の操作の順序
   
  ビジュアル オブジェクトを列挙して、ベクター グラフィックス命令リストを構成するした場合、<xref:System.Windows.Controls.Button>コントロールでは、次の図にオブジェクトの階層に見つかります。  
   
- ![ビジュアル ツリーおよびレンダリング データのダイアグラム](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-ビジュアル ツリーおよび描画データのダイアグラム  
+ ![ビジュアル ツリーおよび描画データのダイアグラム](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  <xref:System.Windows.Controls.Button>コントロールが含まれています、<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>要素が含まれます<xref:System.Windows.Controls.ContentPresenter>要素。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>要素は、ボタンの背景、境界線を構成する、独立したすべてのグラフィック要素を描画します。 <xref:System.Windows.Controls.ContentPresenter>の内容を表示するため、要素は、<xref:System.Windows.Controls.Button>します。 イメージを表示するためここで、<xref:System.Windows.Controls.ContentPresenter>要素が含まれています、<xref:System.Windows.Controls.Image>要素。  
   
@@ -149,14 +146,12 @@ DrawingGroup の操作の順序
   
  含んだビジュアル オブジェクトを列挙したかどうか、<xref:System.Windows.Controls.StackPanel>要素のマークアップ例では、次の図に、ビジュアル オブジェクトの階層に見つかります。  
   
- ![ビジュアル ツリー階層のダイアグラム](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-ビジュアル ツリー階層のダイアグラム  
+ ![ビジュアル ツリー階層のダイアグラム](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>レンダリング順序  
  ビジュアル ツリーは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル オブジェクトと描画オブジェクトの表示順序を決定します。 走査の順序は、ビジュアル ツリーの最上位ノードであるルート ビジュアルから始まります。 次に、ルート ビジュアルの子が左から右に走査されます。 ビジュアルの子が存在する場合、子はビジュアルの兄弟よりも先に走査されます。 つまり、子ビジュアルの内容は、そのビジュアル自体の内容よりも前面に表示されます。  
   
- ![ビジュアル ツリー レンダリング順序のダイアグラム](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-ビジュアル ツリー描画順序のダイアグラム  
+ ![ビジュアル ツリー レンダリング順序のダイアグラム](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>ルート ビジュアル  
  **ルート ビジュアル**は、ビジュアル ツリー階層内の最上位の要素です。 ルート ビジュアルの基底クラスでは、ほとんどのアプリケーションではいずれかの<xref:System.Windows.Window>または<xref:System.Windows.Navigation.NavigationWindow>します。 ただし、ビジュアル オブジェクトを Win32 アプリケーションでホストする場合は、Win32 ウィンドウにホストする最上位のビジュアルがルート ビジュアルになります。 詳しくは、「[チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトをホストしている](tutorial-hosting-visual-objects-in-a-win32-application.md)します。  
@@ -178,9 +173,8 @@ DrawingGroup の操作の順序
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>XamlPad を使用したビジュアル ツリーの表示  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ツールである XamlPad は、現在定義されている [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] コンテンツに対応するビジュアル ツリーを表示、探索するために使用できます。 ビジュアル ツリーを表示するには、メニュー バーの **[Show Visual Tree]** (ビジュアル ツリーを表示) ボタンをクリックします。 次の図は、XamlPad の **[Visual Tree Explorer]** (ビジュアル ツリー エクスプローラー) パネルに表示されたビジュアル ツリー ノードで、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] コンテンツを展開した様子を示したものです。  
   
- ![XamlPad のビジュアル ツリー エクスプ ローラー パネル](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-XamlPad のビジュアル ツリー エクスプローラー パネル  
-  
+ ![XamlPad のビジュアル ツリー エクスプローラー パネル](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  通知方法、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.TextBox>、および<xref:System.Windows.Controls.Button>の各コントロールは別々 のビジュアル オブジェクトの階層を表示、**ビジュアル ツリー エクスプ ローラー** XamlPad のパネル。 これは、ため[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが、<xref:System.Windows.Controls.ControlTemplate>そのコントロールのビジュアル ツリーを格納しています。 コントロールを明示的に参照すると、コントロールのビジュアル階層が暗黙的に参照されます。  
   
 ### <a name="profiling-visual-performance"></a>ビジュアル パフォーマンスのプロファイリング  
@@ -196,14 +190,12 @@ Visual Profiler 表示出力
 ### <a name="retained-mode-graphics"></a>保持モード グラフィックス  
  ビジュアル オブジェクトの役割を理解するためには、**イミディエイト モード**のグラフィックス システムと**保持モード**のグラフィックス システムの違いについて理解することが重要です。 GDI または GDI+ に基づく標準的な Win32 アプリケーションでは、イミディエイト モードのグラフィックス システムが使用されます。 これは、ウィンドウのサイズ変更やオブジェクトの外観変更などといったアクションによって無効化されたクライアント領域の部分を、アプリケーションが再描画するということを意味します。  
   
- ![Win32 レンダリング シーケンスのダイアグラム](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Win32 レンダリング シーケンスのダイアグラム  
+ ![Win32 レンダリング シーケンスのダイアグラム](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  これに対し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、保持モード システムが使用されます。 これは、外観を持つアプリケーション オブジェクト側で、シリアル化された一連の描画データが定義されるということを意味します。 描画データが定義された後は、アプリケーション オブジェクトをレンダリングするためのすべての再描画要求に、システム側が対応します。 実行時であっても、アプリケーション オブジェクトを変更したり作成した場合の描画要求への対応は、システムに任せることができます。 保持モードのグラフィックス システムでは、描画情報が常にシリアル化された状態でアプリケーションに保持されますが、レンダリングはシステムによって実行されます。これが、保持モードのグラフィックス システムの長所です。 次の図は、アプリケーションでの描画要求が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] によって処理される様子を示したものです。  
   
- ![WPF レンダリング シーケンスのダイアグラム](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-WPF レンダリング シーケンスのダイアグラム  
-  
+ ![WPF レンダリング シーケンスのダイアグラム](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>インテリジェントな再描画  
  保持モード グラフィックスを使用することの最も大きな利点の 1 つは、アプリケーション内のどの項目を再描画するのかを、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が効率的に最適化できることです。 さまざまな不透明度が適用された複雑なシーンがある場合でも、通常、再描画を最適化するために特殊な目的のコードを記述する必要はありません。 これに対し、Win32 プログラミングでは、更新領域内の再描画量を最小化してアプリケーションを最適化するために、多大な労力が費やされることもあります。 Win32 アプリケーションで再描画を最適化するための複雑な作業の例については、「[Redrawing in the Update Region](/windows/desktop/gdi/redrawing-in-the-update-region)」(更新領域での再描画) をご覧ください。  
   
@@ -214,8 +206,7 @@ WPF レンダリング シーケンスのダイアグラム
   
  次の図は、ソース イメージが 300% に拡大された場合の例です。 ソース イメージをビットマップ グラフィックス イメージとして拡大したイメージには、ゆがみが生じています。ベクター グラフィックス イメージとして拡大縮小した場合、こうしたゆがみは生じません。  
   
- ![ラスター グラフィックスとベクター グラフィックスの違い](./media/vectorgraphics01.png "VectorGraphics01")  
-ラスター グラフィックスとベクター グラフィックスの違い  
+ ![ラスター グラフィックスとベクター グラフィックスの違い](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  次のマークアップに 2 つ示します<xref:System.Windows.Shapes.Path>要素を定義します。 2 番目の要素を使用して、 <xref:System.Windows.Media.ScaleTransform> 300% で最初の要素の描画命令のサイズを変更します。 注意の描画命令、<xref:System.Windows.Shapes.Path>要素は変更されません。  
   

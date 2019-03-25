@@ -30,8 +30,7 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 -   子アクティビティ、場所、ブックマーク、ホストの拡張機能、またはスコープを多数使用する場合、またはペイロードが非常に大きいブックマークを使用する場合、メモリが不足したり、永続化の実行中に必要以上のディスク容量が割り当てられる可能性があります。 オブジェクト レベルおよびデータベース レベルのセキュリティを使用すると、このような状態を緩和できます。
 
--   
-  <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用する場合、インスタンス ストアをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [SQL Server のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=164972)します。
+-   <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を使用する場合、インスタンス ストアをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [SQL Server のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=164972)します。
 
 -   インスタンス ストアの機密情報は暗号化する必要があります。 詳細については、次を参照してください。 [SQL セキュリティ暗号化](https://go.microsoft.com/fwlink/?LinkId=164976)します。
 
@@ -41,8 +40,7 @@ Windows Workflow Foundation (WF) は、Microsoft SQL Server や Windows Communic
 
 -   ワークフローで使用される Windows Communication Foundation (WCF) エンドポイントをセキュリティで保護する必要があります。 詳細については、次を参照してください。 [WCF セキュリティの概要](https://go.microsoft.com/fwlink/?LinkID=164975)します。
 
--   
-  <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[方法。サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。
+-   <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、ホスト レベルの認証を実装できます。 参照してください[方法。サービスのカスタム承認マネージャーを作成する](https://go.microsoft.com/fwlink/?LinkId=192228)詳細についてはします。
 
 -   受信メッセージの ServiceSecurityContext は、OperationContext へのアクセスによって、ワーク フロー内からも使用できます。
 

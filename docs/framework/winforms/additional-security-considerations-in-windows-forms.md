@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718910"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409394"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows フォームのセキュリティに関するその他の考慮事項
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定により、セキュリティ システムが検証できない Microsoft Win32 API やその他の API を呼び出す機能が影響を受けます。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)」を参照してください。  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定では、Microsoft Windows API またはその他のセキュリティ システムで検証できない Api を呼び出す機能に影響します。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)」を参照してください。  
   
- 以下のセクションでは、クリップボードの使用、ウィンドウ操作の実行、および部分信頼環境で動作しているアプリケーションからの Win32 API の呼び出しについて説明しています。  
+ 次のセクションでは、クリップボードの使用、ウィンドウ操作の実行、および部分信頼環境で実行されているアプリケーションから Windows API を呼び出す方法について説明します。  
   
 ## <a name="clipboard-access"></a>クリップボードへのアクセス  
  <xref:System.Security.Permissions.UIPermission>クラスは、クリップボードと関連付けられているへのアクセスを制御<xref:System.Security.Permissions.UIPermissionClipboard>列挙値は、アクセスのレベルを示します。 使用されるアクセス許可レベルを次の表に示します。  
@@ -69,8 +69,8 @@ ms.locfileid: "57718910"
   
  このような考えられるリスクを制限するために、信頼できる販売元のサードパーティ コントロールのみを使用します。 確認できないソースからサードパーティ コントロールをダウンロードした場合、攻略行為が実行されないかソース コードを確認することをお勧めします。 ソースに悪意がないことを検証してから、アセンブリを自分でコンパイルし、ソースがアセンブリと一致することを確認します。  
   
-## <a name="win32-api-calls"></a>Win32 API 呼び出し  
- アプリケーションのデザインで Win32 API から関数を呼び出す必要がある場合は、アンマネージ コードにアクセスします。 この場合、Win32 API の呼び出しまたは値を使用するときに、ウィンドウまたはオペレーティング システムに対するコードの動作が決定できません。 <xref:System.Security.Permissions.SecurityPermission>クラスおよび<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>の値、<xref:System.Security.Permissions.SecurityPermissionFlag>列挙体は、アンマネージ コードへのアクセスを制御します。 アプリケーションは、与えられている場合にのみアンマネージ コードにアクセスできる、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限。 既定では、ローカルで実行されているアプリケーションだけがアンマネージ コードを呼び出すことができます。  
+## <a name="windows-api-calls"></a>Windows API の呼び出し  
+ アプリケーションの設計では、Windows API から関数を呼び出す必要がある場合、アンマネージ コードにアクセスしています。 この場合、Windows API の呼び出しまたは値を使用しているときに、ウィンドウまたはオペレーティング システムに、コードの動作が決定ことはできません。 <xref:System.Security.Permissions.SecurityPermission>クラスおよび<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>の値、<xref:System.Security.Permissions.SecurityPermissionFlag>列挙体は、アンマネージ コードへのアクセスを制御します。 アプリケーションは、与えられている場合にのみアンマネージ コードにアクセスできる、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限。 既定では、ローカルで実行されているアプリケーションだけがアンマネージ コードを呼び出すことができます。  
   
  Windows フォームの一部のメンバーを必要とするアンマネージ アクセスを提供する、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限。 次の表に、内のメンバー、<xref:System.Windows.Forms>名前空間アクセス許可が必要です。 メンバーに対して必要なアクセス許可の詳細については、.NET Framework クラス ライブラリのドキュメントを参照してください。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "57718910"
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> メソッド|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> メソッド<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> メソッド|  
   
- アプリケーションを要求する必要があるかどうか、アプリケーションにはアンマネージ コードを呼び出すアクセス許可はありません、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限、または別の機能を実装する方法を検討する必要があります。 多くの場合、Windows フォームが Win32 API を管理対象の代替手段を提供します。関数。 代わりの手段がなく、アプリケーションがアンマネージ コードにアクセスする必要がある場合は、アプリケーションに対するアクセス許可を昇格する必要があります。  
+ アプリケーションを要求する必要があるかどうか、アプリケーションにはアンマネージ コードを呼び出すアクセス許可はありません、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>権限、または別の機能を実装する方法を検討する必要があります。 多くの場合、Windows フォームが Windows を管理対象の代替手段を提供します。API 関数。 代わりの手段がなく、アプリケーションがアンマネージ コードにアクセスする必要がある場合は、アプリケーションに対するアクセス許可を昇格する必要があります。  
   
  アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
   

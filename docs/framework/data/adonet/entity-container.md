@@ -2,12 +2,12 @@
 title: エンティティ コンテナー
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 8ebb60a79fab9f60d4008e533f08ade7b3ff6e98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2ad565ce73b2de4b10d2f15406b283a13bbef6e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641188"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409888"
 ---
 # <a name="entity-container"></a>エンティティ コンテナー
 *エンティティ コンテナー*の論理的なグループは、[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)、[アソシエーション セット](../../../../docs/framework/data/adonet/association-set.md)、および[関数インポート](../../../../docs/framework/data/adonet/model-declared-function.md)します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54641188"
 ## <a name="example"></a>例  
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  詳細については、次の例を参照してください。  
   
- ![モデルの例](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![次の 3 つのエンティティの種類とモデルの例](./media/entity-container/example-model-three-entity-types.gif)  
   
  ダイアグラムにはエンティティ コンテナー情報が示されていませんが、概念モデルにはエンティティ コンテナーを定義する必要があります。 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれる DSL を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、上のダイアグラムに示された概念モデルのエンティティ コンテナーを定義しています。 エンティティ コンテナー名は XML 属性に定義されています。  
   

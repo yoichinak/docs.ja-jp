@@ -9,7 +9,7 @@ ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
 ## <a name="how-serialization-works"></a>シリアル化のしくみ  
  この図は、シリアル化の全体的なプロセスを示しています。  
   
- ![シリアル化グラフィック](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "シリアル化")  
+![シリアル化グラフィック](./media/index/serialization-process.gif)
   
  オブジェクトは、データだけでなく、バージョン、カルチャ、アセンブリ名などのオブジェクトの型に関する情報も伝達するストリームにシリアル化されます。 そのストリームから、オブジェクトをデータベース、ファイル、またはメモリに格納できます。  
   

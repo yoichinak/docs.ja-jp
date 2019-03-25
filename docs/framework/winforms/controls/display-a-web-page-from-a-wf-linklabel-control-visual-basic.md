@@ -42,8 +42,7 @@ End Sub
   
 -   という名前の Windows フォーム`Form1`します。  
   
--   
-  `LinkLabel1` という名前の <xref:System.Windows.Forms.LinkLabel> コントロール。  
+-   `LinkLabel1` という名前の <xref:System.Windows.Forms.LinkLabel> コントロール。  
   
 -   インターネットに接続します。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492670"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412033"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -144,9 +144,9 @@ ms.locfileid: "57492670"
   
  メモの共有のサイズ変更機能を使用する例では、<xref:System.Windows.Controls.Grid>します。 最後の 3 つの列が同じ自体を配置することでこの方法の利点を実行<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>します。 プロパティの名前の 1 つと同様に、これにより、同じサイズを共有する列。 これより長い文字列「Durchsuchen…」に「参照…」ローカライズされたとき、すべてのボタンは、小さい"OK"ボタンと過度に大規模な「Durchsuchen...」ボタンではなく幅拡張します。  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  通知、 [xml:lang XAML 処理](../../xaml-services/xml-lang-handling-in-xaml.md)のルート要素に配置、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 このプロパティには、指定された要素とその子のカルチャがについて説明します。 この値は、いくつかの機能によって使用されます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ローカライズ中に適切に変更する必要があります。 この値は、どのような言語の辞書が使用して単語を区切るし、スペル チェックを変更します。 また、数字、およびフォント フォールバック システムが使用するフォントを選択する方法の表示も影響します。 最後に、方法の数字を表示するプロパティの影響と複雑なスクリプトで記述された、方法テキストを整形します。 既定値は、"EN-US"です。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "57492670"
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|テキスト|プログラム、フォルダー、ドキュメント、またはインターネット リソースの名前を入力して、Windows がそれを開きます。|  
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|テキスト|開いています。|  
-|Window_1:System.Windows.Window.Title|タイトル|実行|  
+|Window_1:System.Windows.Window.Title|Title|実行|  
   
  ドイツ語にアプリケーションをローカライズするにを実行すると次の変換が必要です。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "57492670"
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||  
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|テキスト|Geben Sie den Namen eines Programms Ordners、Dokuments 並べ替えた einer Internetresource、します。|  
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|テキスト|Öffnen:|  
-|Window_1:System.Windows.Window.Title|タイトル|実行|  
+|Window_1:System.Windows.Window.Title|Title|実行|  
   
  **生成します。**  
   

@@ -2,12 +2,12 @@
 title: < net.pipe >
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: ddd25d3d25f4c4be1a9e26d444fa799a55c9cccc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283284"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412111"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
@@ -52,7 +52,7 @@ ms.locfileid: "55283284"
 |---------------|-----------------|  
 |`maxPendingAccepts`|整数は、共有サービスの待機エンドポイントで同時に受け入れる未処理のスレッドの最大数を示しています。 既定値は 2 です。|  
 |`maxPendingConnections`|ディスパッチを待機できる最大接続数を指定する整数。 既定値は 100 です。|  
-|`receiveTimeout`|フレーム データを読み取り、基礎となる接続から接続ディスパッチを実行するタイムアウトを指定する `TimeSpan` です。 既定値は "00:00:10" です。|  
+|`receiveTimeout`|フレーム データを読み取り、基礎となる接続から接続ディスパッチを実行するタイムアウトを指定する <xref:System.TimeSpan> です。 既定値は "00:00:10" です。|  
   
 ### <a name="child-elements"></a>子要素  
   

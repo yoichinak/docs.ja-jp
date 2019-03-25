@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973172"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411539"
 ---
 # <a name="declare-statement"></a>Declare ステートメント
 外部のファイルに実装されているプロシージャへの参照を宣言します。  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
 > [!IMPORTANT]
->  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、Win32 API 関数または COM メソッドの場合は、たとえばを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  
+>  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、たとえば Windows API 関数、または、COM メソッドを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  
   
 ## <a name="example"></a>例  
  次の例への外部参照の宣言を`Function`を現在のユーザー名を返すプロシージャです。 外部プロシージャを呼び出して`GetUserNameA`の一部として、`getUser`プロシージャ。  

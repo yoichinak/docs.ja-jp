@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580864"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411006"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
 2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 このような場合は、シャドウされた要素は参照できません。代わりに、コードでは、要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。  
@@ -41,8 +41,7 @@ ms.locfileid: "54580864"
   
  次の図は、2 つの変数、という名前の両方に`temp`します。 ローカル変数`temp`メンバー変数のシャドウ`temp`独自のプロシージャ内からアクセスするときに`p`します。 ただし、`MyClass`キーワードは、シャドウをバイパスし、メンバー変数にアクセスします。  
   
- ![スコープによるシャドウのグラフィック ダイアグラム](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-スコープによるシャドウ  
+ ![スコープによるシャドウを示しています。 グラフィック。](./media/shadowing/shadow-scope-diagram.gif)
   
  スコープによるシャドウの例は、次を参照してください。[方法。変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)します。  
   
@@ -51,8 +50,7 @@ ms.locfileid: "54580864"
   
  次の図は、基本クラス`b`と派生クラス`d`から継承する`b`します。 基本クラスという名前のプロシージャを定義する`proc`と派生クラスは、同じ名前の別のプロシージャでシャドウします。 最初の`Call`シャドウ ステートメントにアクセスする`proc`派生クラスでします。 ただし、`MyBase`キーワードは、シャドウをバイパスし、基本クラスのシャドウされたプロシージャにアクセスします。  
   
- ![継承によるシャドウのグラフィック ダイアグラム](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-継承によるシャドウ  
+ ![継承によるシャドウのグラフィック ダイアグラム](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  継承によるシャドウの例は、次を参照してください。[方法。変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)と[方法。継承された変数を非表示に](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)します。  
   

@@ -2,12 +2,12 @@
 title: エンティティ キー
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664020"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408965"
 ---
 # <a name="entity-key"></a>エンティティ キー
 *エンティティ キー*は、[プロパティ](../../../../docs/framework/data/adonet/property.md)または一連のプロパティの[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)id を確認に使用します。 エンティティ キーを構成するプロパティは、デザイン時に選択されます。 エンティティ キー プロパティの値は、内のエンティティ型インスタンスを一意に識別する必要があります、[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)実行時にします。 エンティティ キーを構成するプロパティには、エンティティ セット内のインスタンスの一意性を保証するものを選択する必要があります。  
@@ -23,9 +23,10 @@ ms.locfileid: "54664020"
 -   エンティティが継承階層に含まれる場合、ルート エンティティには、エンティティ キーを構成するすべてのプロパティを含める必要があり、そのエンティティ キーをルート エンティティ型に定義する必要があります。 詳細については、次を参照してください[Entity Data Model:。継承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)します。  
   
 ## <a name="example"></a>例  
- 下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 各エンティティ型のエンティティ キーを構成するプロパティには、"(キー)" と示されています。 `Author` エンティティ型には、`Name` と `Address` の 2 つのプロパティで構成されるエンティティ キーが含まれます。  
+ 下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 各エンティティ型のエンティティ キーを構成するプロパティには、"(キー)" と示されています。 
+  `Author` エンティティ型には、`Name` と `Address` の 2 つのプロパティで構成されるエンティティ キーが含まれます。  
   
- ![モデルの例](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![次の 3 つのエンティティの種類とモデルの例](./media/entity-key/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、上のダイアグラムに示された `Book` エンティティ型を定義します。 エンティティ キーは、エンティティ型の `ISBN` プロパティを参照して定義されています。  
   

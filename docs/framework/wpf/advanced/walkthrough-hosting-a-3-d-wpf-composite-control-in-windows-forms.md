@@ -63,8 +63,7 @@ ms.locfileid: "57367442"
 
     -   WindowsBase
 
-4.  
-  `HostingWpfUserControlInWf` への参照をプロジェクトに追加します。
+4.  `HostingWpfUserControlInWf` への参照をプロジェクトに追加します。
 
 5.  ソリューション エクスプローラで、設定、`WpfUserControlHost`プロジェクトをスタートアップ プロジェクトです。
 

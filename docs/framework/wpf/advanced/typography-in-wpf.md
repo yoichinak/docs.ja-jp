@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125630"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412137"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -121,7 +121,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
  詳細については、「[WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
   
 ### <a name="lightweight-text-drawing"></a>軽量テキスト描画  
- テキストに直接描画できる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]オブジェクトを使用して、<xref:System.Windows.Media.DrawingContext.DrawText%2A>のメソッド、<xref:System.Windows.Media.DrawingContext>オブジェクト。 このメソッドを使用して、作成、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトを使用すると、複数行のテキストを描画できます。このテキストでは、テキスト内の各文字を個々に書式設定できます。 機能、<xref:System.Windows.Media.FormattedText>オブジェクトには、Win32 API の DrawText フラグの機能の多くが含まれます。 さらに、<xref:System.Windows.Media.FormattedText>オブジェクトにテキストがその境界を超えると、省略記号を表示する、省略記号のサポートなどの機能が含まれています。 いくつかの書式を適用したテキストを次の例に示します。たとえば、2 番目と 3 番目の単語には線状グラデーションが適用されています。  
+ テキストに直接描画できる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]オブジェクトを使用して、<xref:System.Windows.Media.DrawingContext.DrawText%2A>のメソッド、<xref:System.Windows.Media.DrawingContext>オブジェクト。 このメソッドを使用して、作成、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトを使用すると、複数行のテキストを描画できます。このテキストでは、テキスト内の各文字を個々に書式設定できます。 機能、<xref:System.Windows.Media.FormattedText>オブジェクトには、Windows API の DrawText フラグの機能の多くが含まれます。 さらに、<xref:System.Windows.Media.FormattedText>オブジェクトにテキストがその境界を超えると、省略記号を表示する、省略記号のサポートなどの機能が含まれています。 いくつかの書式を適用したテキストを次の例に示します。たとえば、2 番目と 3 番目の単語には線状グラデーションが適用されています。  
   
  ![FormattedText オブジェクトを使用して表示されるテキスト](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

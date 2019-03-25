@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353076"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409875"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
 
@@ -241,7 +241,7 @@ SQL Server の場合、同期またはスレッド化を導入するために使
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>アンマネージ コードで無期限にブロックしない
 
-マネージド コード内ではなくアンマネージド コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Win32 同期プリミティブを使ったブロックは、許容できないものの明白な例です。  ソケットでの `ReadFile` の呼び出しでブロックすることは、可能であれば避ける必要があります。できれば、Win32 API で、これがタイムアウトするような操作のメカニズムを提供する必要があります。
+マネージド コード内ではなくアンマネージド コード内でブロックすると、CLR がスレッドを中止できないため、サービス拒否攻撃を受ける可能性があります。  ブロックされたスレッドは、少なくとも一部の非常に安全でない操作を実行せずに、CLR が <xref:System.AppDomain> をアンロードするのを妨げます。  Windows を使用したブロックの同期プリミティブでは、許容できないものの明白な例です。  呼び出しでブロック`ReadFile`ソケットで避ける必要があります可能であれば、理想的には、Windows API はこのような操作がタイムアウトする機構を提供します。
 
 ネイティブを呼び出すメソッドでは、合理的な有限のタイムアウトで Win32 呼び出しを使うのが理想的です。  ユーザーがタイムアウトを指定できる場合は、何らかの特定のセキュリティ アクセス許可なしでは、ユーザーが無限のタイムアウトを指定できないようにする必要があります。  ガイドラインとしては、メソッドが 10 秒以上ブロックする場合は、タイムアウトをサポートするバージョンを使うか、CLR のサポートを追加する必要があります。
 

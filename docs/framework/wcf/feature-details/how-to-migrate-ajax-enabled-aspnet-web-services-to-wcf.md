@@ -2,12 +2,12 @@
 title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638289"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410941"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応の Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 同等の WCF が ASP.NET AJAX サービスのバージョンを作成する方法を示します。 並行して 2 つのサービスは使用して、または WCF サービスが ASP.NET AJAX サービスを置き換えることができます。
@@ -113,7 +113,7 @@ ms.locfileid: "54638289"
 ## <a name="example"></a>例
  このトピックで説明した手順によって作成されるコードを次の例に示します。
 
-```
+```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
 
 using System;
@@ -175,7 +175,9 @@ namespace ASPHello
 }
 ```
 
- <xref:System.Xml.XmlDocument> 型は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> によってシリアル化できないため、<xref:System.Xml.Serialization.XmlSerializer> ではサポートされていません。 <xref:System.Xml.Linq.XDocument> 型を使用するか、<xref:System.Xml.XmlDocument.DocumentElement%2A> をシリアル化します。
+ 
+  <xref:System.Xml.XmlDocument> 型は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> によってシリアル化できないため、<xref:System.Xml.Serialization.XmlSerializer> ではサポートされていません。 
+  <xref:System.Xml.Linq.XDocument> 型を使用するか、<xref:System.Xml.XmlDocument.DocumentElement%2A> をシリアル化します。
 
  ASMX Web サービスは、アップグレードして、WCF サービスへのサイド バイ サイドでの移行された場合、は、クライアントで同じ名前に 2 つの型のマッピングを回避します。 同じ名前が割り当てられていると、<xref:System.Web.Services.WebMethodAttribute> と <xref:System.ServiceModel.ServiceContractAttribute> で同じ型が使用されている場合に、シリアライザーで次のような例外が発生します。
 
@@ -183,7 +185,8 @@ namespace ASPHello
 
 -   WCF サービスのメソッドを呼び出す場合は、ASMX Web サービスを最初に追加するで例外が発生<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>のため、プロキシでの順序の Web サービス スタイル定義が優先されます。
 
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> と ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> の動作には大きな違いがあります。 たとえば、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> はディクショナリをキーと値のペアの配列として表しますが、ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> はディクショナリを実際の JSON オブジェクトとして表します。 したがって、ASP.NET AJAX では、ディクショナリが次のように表されます。
+ 
+  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> と ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> の動作には大きな違いがあります。 たとえば、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> はディクショナリをキーと値のペアの配列として表しますが、ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> はディクショナリを実際の JSON オブジェクトとして表します。 したがって、ASP.NET AJAX では、ディクショナリが次のように表されます。
 
 ```
 Dictionary<string, int> d = new Dictionary<string, int>();
@@ -193,20 +196,24 @@ d.Add("two", 2);
 
  このディクショナリは、JSON オブジェクトでは次のように表されます。
 
--   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
+-   
+  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
 
 -   {"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
+ 
+  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
 
  これらのシリアライザーの主な違いを次の表に示します。
 
 |相違点のカテゴリ|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |空きバッファー (新しい byte[0]) の <xref:System.Object> (または <xref:System.Uri>、あるいは他の一部のクラス) への逆シリアル化|SerializationException|null|
-|<xref:System.DBNull.Value> のシリアル化|{} (または {"_ _type":"#System"})|Null|
-|[Serializable] 型のプライベート メンバーのシリアル化|シリアル化できます|シリアル化できません|
-|<xref:System.Runtime.Serialization.ISerializable> 型のパブリック プロパティのシリアル化|シリアル化できません|シリアル化できます|
+|
+  <xref:System.DBNull.Value> のシリアル化|{} (または {"_ _type":"#System"})|Null|
+|[Serializable] 型のプライベート メンバーのシリアル化|できるか|シリアル化できません|
+|
+  <xref:System.Runtime.Serialization.ISerializable> 型のパブリック プロパティのシリアル化|シリアル化できません|できるか|
 |JSON の「拡張機能」|オブジェクト メンバー名で引用符を必要とする ({"a":"hello"}) JSON 仕様に準拠しています。|引用符のないオブジェクト メンバー名 ({a:"hello"}) をサポートします。|
 |<xref:System.DateTime> 協定世界時刻 (UTC)|形式をサポートしていません"\\/Date(123456789U)\\/"または"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)".|形式をサポート"\\/Date(123456789U)\\/"と"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\ \\/)"は、DateTime 値として。|
 |ディクショナリの表現|KeyValuePair の配列\<K, V >、文字列以外の種類のキーを処理します。|実際の JSON オブジェクトですが、文字列の種類のキーのみ処理します。|

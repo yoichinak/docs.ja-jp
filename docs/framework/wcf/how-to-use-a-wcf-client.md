@@ -1,34 +1,38 @@
 ---
-title: '方法: Windows Communication Foundation のクライアントを使用してください。'
-ms.date: 09/14/2018
+title: 'チュートリアル: Windows Communication Foundation クライアントを使用します。'
+ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
 dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 780a51e3e0f61f292c997202614e43a85dd90820
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250924"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411721"
 ---
-# <a name="how-to-use-a-windows-communication-foundation-client"></a>方法: Windows Communication Foundation のクライアントを使用してください。
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを使用します。
 
-これは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 6 つのタスクの最後のタスクです。 6 つのすべてのタスクの概要については、「[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)」を参照してください。
+このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクの最後のタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
 
-Windows Communication Foundation (WCF) プロキシを作成および構成するとクライアント インスタンスを作成して、クライアント アプリケーションをコンパイルし、WCF サービスと通信するために使用します。 このトピックでは、インスタンス化し、WCF クライアントを使用して手順を説明します。 この手順は、次の 3 つの手順で構成されます。
+作成、Windows Communication Foundation (WCF) プロキシを構成したら後、は、クライアント インスタンスを作成し、クライアント アプリケーションをコンパイルします。 使用する WCF サービスと通信します。 
 
-1.  WCF クライアントをインスタンス化します。
+このチュートリアルでは、次の作業を行う方法について説明します。
+> [!div class="checklist"]
+> - WCF クライアントを使用するコードを追加します。
+> - WCF クライアントをテストします。
 
-2.  生成されたプロキシからサービス操作を呼び出します。
+## <a name="add-code-to-use-the-wcf-client"></a>WCF クライアントを使用するコードを追加します。
 
-3.  操作の呼び出しが完了したらクライアントを閉じます。
+クライアント コードは、次の手順を行います。
+- WCF クライアントをインスタンス化します。
+- 生成されたプロキシからサービス操作を呼び出します。
+- 操作の呼び出しが完了した後は、クライアントを閉じます。
 
-## <a name="use-a-windows-communication-foundation-client"></a>Windows Communication Foundation クライアントを使用します。
-
-GettingStartedClient プロジェクトの Program.cs ファイルまたは Program.vb ファイルを開き、既存のコードを次のコードで置き換えます。
+開く、 **Program.cs**または**Module1.vb**ファイルから、 **GettingStartedClient**プロジェクトし、そのコードを次のコードに置き換えます。
 
 ```csharp
 using System;
@@ -71,7 +75,9 @@ namespace GettingStartedClient
             result = client.Divide(value1, value2);
             Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result);
 
-            //Step 3: Closing the client gracefully closes the connection and cleans up resources.
+            // Step 3: Close the client to gracefully close the connection and clean up resources.
+            Console.WriteLine("\nPress <Enter> to terminate the client.");
+            Console.ReadLine();
             client.Close();
         }
     }
@@ -83,89 +89,108 @@ Imports System
 Imports System.Collections.Generic
 Imports System.Text
 Imports System.ServiceModel
-Imports GettingStartedClientVB2.ServiceReference1
+Imports GettingStartedClient.ServiceReference1
 
 Module Module1
 
     Sub Main()
-        ' Step 1: Create an instance of the WCF proxy
+        ' Step 1: Create an instance of the WCF proxy.
         Dim Client As New CalculatorClient()
 
-        'Step 2: Call the service operations.
-        'Call the Add service operation.
+        ' Step 2: Call the service operations.
+        ' Call the Add service operation.
         Dim value1 As Double = 100D
         Dim value2 As Double = 15.99D
         Dim result As Double = Client.Add(value1, value2)
         Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Subtract service operation.
+        ' Call the Subtract service operation.
         value1 = 145D
         value2 = 76.54D
         result = Client.Subtract(value1, value2)
         Console.WriteLine("Subtract({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Multiply service operation.
+        ' Call the Multiply service operation.
         value1 = 9D
         value2 = 81.25D
         result = Client.Multiply(value1, value2)
         Console.WriteLine("Multiply({0},{1}) = {2}", value1, value2, result)
 
-        'Call the Divide service operation.
+        ' Call the Divide service operation.
         value1 = 22D
         value2 = 7D
         result = Client.Divide(value1, value2)
         Console.WriteLine("Divide({0},{1}) = {2}", value1, value2, result)
 
-        ' Step 3: Closing the client gracefully closes the connection and cleans up resources.
-        Client.Close()
-
+        ' Step 3: Close the client to gracefully close the connection and clean up resources.
         Console.WriteLine()
-        Console.WriteLine("Press <ENTER> to terminate client.")
+        Console.WriteLine("Press <Enter> to terminate the client.")
         Console.ReadLine()
+        Client.Close()
 
     End Sub
 
 End Module
 ```
 
-通知、`using`または`Imports`をインポートするステートメント、`GettingStartedClient.ServiceReference1`します。 これにより、インポートによって生成されたコード**サービス参照の追加**Visual Studio でします。 コードは、WCF プロキシをインスタンス化し、電卓サービスによって公開されるサービス操作の各呼び出しが、プロキシを閉じるし、終了します。
+通知、 `using` (ビジュアルのC#) または`Imports`(Visual Basic) のインポート ステートメント`GettingStartedClient.ServiceReference1`します。 このステートメントで Visual Studio が生成されたコードをインポートする、**サービス参照の追加**関数。 コードでは、WCF プロキシをインスタンス化し、電卓サービスを公開するサービス操作の各を呼び出します。 プロキシを終了し、プログラムが終了します。
 
-これで、チュートリアルは終了です。 サービス コントラクトの定義、サービス コントラクトの実装、WCF プロキシの生成、WCF クライアント アプリケーションの構成、そしてプロキシの使用によるサービス操作の呼び出しを行いました。 アプリケーションをテストするには、まず、サービスを開始し、GettingStartedClient を実行し、GettingStartedHost を実行します。
+## <a name="test-the-wcf-client"></a>WCF クライアントをテストします。
 
-GettingStartedHost からの出力は、次のようになります。
+### <a name="test-the-application-from-visual-studio"></a>Visual Studio からアプリケーションをテストします。
 
-```text
-The service is ready.
-Press <ENTER> to terminate service.
+1. 保存し、ソリューションをビルドします。
 
-Received Add(100,15.99)
-Return: 115.99
-Received Subtract(145,76.54)
-Return: 68.46
-Received Multiply(9,81.25)
-Return: 731.25
-Received Divide(22,7)
-Return: 3.14285714285714
-```
+2. 選択、 **GettingStartedLib**フォルダー、および選択**スタートアップ プロジェクトとして設定**ショートカット メニューから。
 
-GettingStartedClient からの出力は、次のようになります。
+3. **スタートアップ プロジェクト**を選択します**GettingStartedLib**ドロップダウン リストからを選択し、**実行**またはキーを押します**F5**します。
 
-```text
-Add(100,15.99) = 115.99
-Subtract(145,76.54) = 68.46
-Multiply(9,81.25) = 731.25
-Divide(22,7) = 3.14285714285714
+### <a name="test-the-application-from-a-command-prompt"></a>コマンド プロンプトからアプリケーションをテストします。
 
-Press <ENTER> to terminate client.
-```
+1. 管理者は、コマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動します。 
 
-## <a name="see-also"></a>関連項目
+2. サービスを開始します。入力*GettingStartedHost\bin\Debug\GettingStartedHost.exe*します。
 
-- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
-- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [方法: 双方向コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [方法: Access Services と双方向コントラクト](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [はじめに](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [自己ホスト](../../../docs/framework/wcf/samples/self-host.md)
+3. クライアントを起動します。別のコマンド プロンプトを開きし、Visual Studio のソリューション ディレクトリに移動して、入力*GettingStartedClient\bin\Debug\GettingStartedClient.exe*します。
+
+   *GettingStartedHost.exe*次の出力が生成されます。
+
+   ```text
+   The service is ready.
+   Press <Enter> to terminate the service.
+
+   Received Add(100,15.99)
+   Return: 115.99
+   Received Subtract(145,76.54)
+   Return: 68.46
+   Received Multiply(9,81.25)
+   Return: 731.25
+   Received Divide(22,7)
+   Return: 3.14285714285714
+   ```
+
+   *GettingStartedClient.exe*次の出力が生成されます。
+
+   ```text
+   Add(100,15.99) = 115.99
+   Subtract(145,76.54) = 68.46
+   Multiply(9,81.25) = 731.25
+   Divide(22,7) = 3.14285714285714
+
+   Press <Enter> to terminate the client.
+   ```
+
+## <a name="next-steps"></a>次の手順
+
+WCF 入門チュートリアルで、すべてのタスクを完了します。 このチュートリアルでは、次の作業を行う方法を学びました。
+
+このチュートリアルでは、次の作業を行う方法について説明します。
+> [!div class="checklist"]
+> - WCF クライアントを使用するコードを追加します。
+> - WCF クライアントをテストします。
+
+手順のいずれかである場合の問題やエラーは場合は、それを修正するトラブルシューティング記事の手順に従います。
+
+> [!div class="nextstepaction"]
+> [Get のトラブルシューティングでは、WCF のチュートリアルを開始](troubleshooting-the-getting-started-tutorial.md)
+

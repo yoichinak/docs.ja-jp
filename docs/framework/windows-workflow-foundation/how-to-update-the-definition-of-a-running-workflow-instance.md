@@ -227,8 +227,7 @@ ms.locfileid: "57722907"
 
 ### <a name="BKMK_StateMachine"></a> StateMachineNumberGuessWorkflow を更新するには
 
-1. 
-  `CreateStateMachineUpdateMap` クラス (または `Program`) に `Module1` を追加します。
+1. `CreateStateMachineUpdateMap` クラス (または `Program`) に `Module1` を追加します。
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -242,8 +241,7 @@ ms.locfileid: "57722907"
     }
     ```
 
-2. 
-  `StartUpdate` を呼び出し、ワークフローのルート `StateMachine` アクティビティへの参照を取得します。
+2. `StartUpdate` を呼び出し、ワークフローのルート `StateMachine` アクティビティへの参照を取得します。
 
     ```vb
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")
@@ -422,8 +420,7 @@ ms.locfileid: "57722907"
 
 ### <a name="BKMK_Flowchart"></a> FlowchartNumberGuessWorkflow を更新するには
 
-1. 
-  `CreateFlowchartUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは `CreateStateMachineUpdateMap` に似ています。 最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
+1. `CreateFlowchartUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは `CreateStateMachineUpdateMap` に似ています。 最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
 
     ```vb
     Private Sub CreateFlowchartUpdateMap()
@@ -537,8 +534,7 @@ ms.locfileid: "57722907"
 
 ### <a name="BKMK_Sequential"></a> SequentialNumberGuessWorkflow を更新するには
 
-1. 
-  `CreateSequentialUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは、他の 2 つのメソッドに似ています。 最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
+1. `CreateSequentialUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは、他の 2 つのメソッドに似ています。 最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
 
     ```vb
     Private Sub CreateSequentialUpdateMap()
@@ -618,8 +614,7 @@ ms.locfileid: "57722907"
 
 ### <a name="BKMK_CreateUpdateMaps"></a> ビルドおよび CreateUpdateMaps アプリケーションを実行するには
 
-1. 
-  `Main` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。 これらのメソッドは次のセクションで追加されます。 各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。
+1. `Main` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。 これらのメソッドは次のセクションで追加されます。 各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。
 
     ```vb
     Sub Main()
@@ -1096,8 +1091,7 @@ ms.locfileid: "57722907"
 
 10. 右クリックして**ApplyDynamicUpdate**ソリューション エクスプ ローラーで選択**追加**、**クラス**します。 型`DynamicUpdateInfo`に、**名前**ボックスし、をクリックして**追加**します。
 
-11. 
-  `DynamicUpdateInfo` クラスに次の 2 つのメンバーを追加します。 完成した `DynamicUpdateInfo` クラスは次のようになります。 このクラスには、ワークフロー インスタンスの更新時に使用された更新マップと新しいワークフロー ID に関する情報が格納されています。
+11. `DynamicUpdateInfo` クラスに次の 2 つのメンバーを追加します。 完成した `DynamicUpdateInfo` クラスは次のようになります。 このクラスには、ワークフロー インスタンスの更新時に使用された更新マップと新しいワークフロー ID に関する情報が格納されています。
 
     ```vb
     Public Class DynamicUpdateInfo
@@ -1458,8 +1452,7 @@ ms.locfileid: "57722907"
     **1 から 10 までの数値を入力してください。**\
     **推定値が小さすぎます。**
 
-5. 
-  `InstanceId` を書き留めておき、ワークフローが完了するまで推定値を入力します。 ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。
+5. `InstanceId` を書き留めておき、ワークフローが完了するまで推定値を入力します。 ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。
 
     **1 から 10 までの数値を入力してください。**\
     **推定値が小さすぎます。**\

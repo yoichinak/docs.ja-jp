@@ -2,12 +2,12 @@
 title: アソシエーション型
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 65fb5c8e37c8edf7f36cc08258874eeaf234c402
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185598"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411448"
 ---
 # <a name="association-type"></a>アソシエーション型
 *アソシエーション型*(アソシエーションとも呼ばれます) は、Entity Data Model (EDM) でのリレーションシップを記述するための基本的なビルド ブロックです。 概念モデルでは、アソシエーションは 2 つの間のリレーションシップを表します。[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)(など`Customer`と`Order`)。 アプリケーションでは、アソシエーションのインスタンスが特定のアソシエーション (`Customer` のインスタンスと `Order` のインスタンスの間のアソシエーションなど) を表します。 アソシエーション インスタンスはで論理的にグループ化、[アソシエーション セット](../../../../docs/framework/data/adonet/association-set.md)します。  
@@ -29,7 +29,7 @@ ms.locfileid: "58185598"
  下のダイアグラムは、`PublishedBy` および `WrittenBy` という 2 つのアソシエーションの概念モデルを示しています。 
   `PublishedBy` アソシエーションのアソシエーション End は `Book` および `Publisher` のエンティティ型です。 多重度、 `Publisher` end が 1 つ (1) との多重度、 `Book` end が多く (\*)、出版社が多くの書籍、書籍は 1 つのパブリッシャーによって公開されたことを示します。  
   
- ![モデルの例](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![次の 3 つのエンティティの種類とモデルの例](./media/association-type/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、上のダイアグラムに示された `PublishedBy` アソシエーションを定義しています。  
   

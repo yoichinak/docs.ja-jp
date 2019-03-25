@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185728"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409797"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
 たとえば他のコントロール ステートメント内のコントロール ステートメントを配置することができます、`If...Then...Else`ブロック内で、`For...Next`ループします。 別のコントロール ステートメントの内側に配置する制御ステートメントはモード*入れ子になった*します。  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>重複する制御構造  
  制御構造を重ねることはできません。 つまり、入れ子になった構造を完全に次の最も内側の構造内で含める必要があります。 たとえば、次の配置が無効ですので、`For`内部の前にループが終了した`With`ブロックを終了します。  
   
- ![無効な入れ子のグラフィック ダイアグラム](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-構造体を使用して無効な入れ子  
+ ![無効な入れ子の例を示す図。](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  Visual Basic コンパイラでは、このような重複する制御構造を検出し、コンパイル時エラーを通知します。  
   

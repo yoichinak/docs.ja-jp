@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738353"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409472"
 ---
 # <a name="best-practices-data-contract-versioning"></a>ベスト プラクティス:データ コントラクトのバージョン管理
 このトピックでは、長期的に容易に拡張させることのできるデータ コントラクトを作成するためのベスト プラクティスをいくつか紹介します。 データ コントラクトの詳細については、トピックを参照してください。 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
@@ -29,7 +29,8 @@ ms.locfileid: "54738353"
 ## <a name="versioning-when-schema-validation-is-required"></a>スキーマ検証が必要な場合のバージョン管理  
  新から旧、旧から新の両方向で厳密なスキーマ検証が必要な場合、データ コントラクトは変更不可であると考えなければなりません。 バージョン管理が必要であれば、別の名前または名前空間で新しいデータ コントラクトを作成したうえで、そのデータ型が使用されているサービス コントラクトにバージョンを付ける必要があります。  
   
- たとえば、`PoProcessing` という発注書処理サービス コントラクトに対して、`PostPurchaseOrder` データ コントラクトに適合したパラメーターを受け取る `PurchaseOrder` という操作が定義されているとします。 `PurchaseOrder` コントラクトの内容を変更したい場合は、新しく `PurchaseOrder2` というデータ コントラクトを作成し、こちらに変更内容を含める必要があります。 そのうえで、サービス コントラクト レベルでバージョン管理を行う必要があります。 たとえば、`PostPurchaseOrder2` パラメーターを受け取る `PurchaseOrder2` 操作を別に作成するか、`PoProcessing2` サービス コントラクトを別途作成して `PostPurchaseOrder` 操作が `PurchaseOrder2` データ コントラクトを受け取るようにします。  
+ たとえば、`PoProcessing` という発注書処理サービス コントラクトに対して、`PostPurchaseOrder` データ コントラクトに適合したパラメーターを受け取る `PurchaseOrder` という操作が定義されているとします。 
+  `PurchaseOrder` コントラクトの内容を変更したい場合は、新しく `PurchaseOrder2` というデータ コントラクトを作成し、こちらに変更内容を含める必要があります。 そのうえで、サービス コントラクト レベルでバージョン管理を行う必要があります。 たとえば、`PostPurchaseOrder2` パラメーターを受け取る `PurchaseOrder2` 操作を別に作成するか、`PoProcessing2` サービス コントラクトを別途作成して `PostPurchaseOrder` 操作が `PurchaseOrder2` データ コントラクトを受け取るようにします。  
   
  なお、他のデータ コントラクトから参照されるデータ コントラクトに変更を施すと、サービス モデル レイヤーも拡張されます。 たとえば、先ほどの例で、`PurchaseOrder` データ コントラクトは変更の必要がないとします。 ただし、そのデータ メンバーである `Customer` データ コントラクトに、さらに `Address` データ コントラクトが含まれており、これを変更しなければならないとします。 この場合は、まず `Address2` というデータ コントラクトを別に作成して必要な変更を行います。次に `Customer2` というデータ コントラクトを作成し、`Address2` をそのデータ メンバーとして定義します。さらに、`PurchaseOrder2` というデータ コントラクトを作成して、`Customer2` をデータ メンバーとして定義します。 先ほどの例と同様、サービス コントラクトに対してもバージョン管理を行う必要があります。  
   
@@ -66,11 +67,12 @@ ms.locfileid: "54738353"
   
 8.  新しいバージョンで、新しいデータ メンバーを追加することは可能ですが、 以下の規則に従う必要があります。  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
+    1.  
+  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
   
     2.  メンバーの既定値として `null` または 0 を許容できない場合は、<xref:System.Runtime.Serialization.OnDeserializingAttribute> を使用してコールバック メソッドを指定する必要があります。該当するメンバーが受信ストリーム内に含まれていない場合は、このコールバック メソッドで妥当な既定値を設定します。 コールバックの詳細については、次を参照してください。[バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)します。  
   
-    3.  `Order` の `DataMemberAttribute` プロパティを使用して、新しく追加されたデータ メンバーがすべて、既存のデータ メンバーの後に配置されるようにします。 これを行うことをお勧めの方法は次のとおりです。データ コントラクトの最初のバージョンのデータ メンバーのいずれもする必要がありますが、`Order`プロパティ セット。 バージョン 2 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 2 に設定します。 バージョン 3 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 3 に設定します。以降のバージョンも同様にしていきます。 複数のデータ メンバーに同じ `Order` 番号を設定してかまいません。  
+    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>既存のデータ メンバーの後にすべての新しく追加されたデータ メンバーが表示されることを確認するプロパティを使用する必要があります。 これを行うことをお勧めの方法は次のとおりです。データ コントラクトの最初のバージョンのデータ メンバーのいずれもする必要がありますが、`Order`プロパティ セット。 バージョン 2 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 2 に設定します。 バージョン 3 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 3 に設定します。以降のバージョンも同様にしていきます。 複数のデータ メンバーに同じ `Order` 番号を設定してかまいません。  
   
 9. 新しいバージョンで、データ メンバーを削除しないでください。旧バージョンで、<xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値が `false` (既定値) であった場合も同様です。  
   

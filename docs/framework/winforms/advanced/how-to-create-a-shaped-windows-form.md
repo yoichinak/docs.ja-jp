@@ -36,8 +36,7 @@ ms.locfileid: "57710070"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  <xref:System.Windows.Forms> 名前空間と <xref:System.Drawing> 名前空間への参照。  
+-   <xref:System.Windows.Forms> 名前空間と <xref:System.Drawing> 名前空間への参照。  
   
  この例は、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドは、フォームの形状を変更します。 このコードを使用するには、メソッドの宣言とメソッドの内部の描画コードをコピーします。  
   

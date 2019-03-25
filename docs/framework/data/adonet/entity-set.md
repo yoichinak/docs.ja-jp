@@ -2,12 +2,12 @@
 title: エンティティ セット
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 3cd212c0bf5eefb73a87aa01c9403d6f2304d506
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557121"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412189"
 ---
 # <a name="entity-set"></a>エンティティ セット
 *エンティティ セット*の論理コンテナーのインスタンス、[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)とそのエンティティ型から派生する型のインスタンス。 (派生型については、次を参照してください[Entity Data Model:。継承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md))。エンティティ型とエンティティ セット間のリレーションシップは、行とリレーショナル データベース内のテーブル間の関係に似ています。行のようには、エンティティ型がデータ構造体について説明し、エンティティ セットにはテーブルのようには、特定の構造体のインスタンスが含まれています。 エンティティ セットは、データ モデリング構造ではなく、データ構造を表しません。 エンティティ セットは、エンティティ型のインスタンスをグループ化してデータ ストアにマップするための、ホスト環境またはストレージ環境 (共通言語ランタイムや SQL Server データベースなど) の構造を提供します。  
@@ -30,11 +30,11 @@ ms.locfileid: "54557121"
 ## <a name="example"></a>例  
  下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。  
   
- ![モデルの例](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![次の 3 つのエンティティの種類とモデルの例](./media/entity-set/example-model-three-entity-types.gif)  
   
  次のダイアグラムには、上の概念モデルに基づく 2 つのエンティティ セット (`Books` および `Publishers`) と、アソシエーション セット(`PublishedBy`) を示しています。 Bi、`Books`エンティティ セットのインスタンスを表し、`Book`実行時にエンティティ型。 同様に、Pj を表す、`Publisher`インスタンス、`Publishers`エンティティ セット。 BiPj がのインスタンスを表し、`PublishedBy`のアソシエーション、`PublishedBy`アソシエーション セット。  
   
- ![設定例](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![例の設定を示すスクリーン ショット。](./media/entity-set/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)概念スキーマ定義言語と呼ばれるドメイン固有言語 (DSL) を使用して ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 次の CSDL は、上の概念モデルに示された各エンティティ型に対して 1 つのエンティティ セットを持つエンティティ コンテナーを定義しています。 各エンティティ セットの名前とエンティティ型は、XML 属性で定義されています。  
   

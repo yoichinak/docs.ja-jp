@@ -30,8 +30,7 @@ ms.locfileid: "57705845"
 
  Windows フォームには、テキスト ボックス、ボタン、ドロップダウン ボックス、ラジオ ボタン、Web ページなどを表示するコントロールなど、フォームに追加できるさまざまなコントロールが含まれています。 フォーム上で使用できるすべてのコントロールの一覧については、「[Windows フォームで使用するコントロール](./controls/controls-to-use-on-windows-forms.md)」を参照してください。 既存のコントロールがニーズを満たしていない場合に、Windows フォームは <xref:System.Windows.Forms.UserControl> クラスを使用した独自のカスタム コントロールの作成もサポートしています。
 
- Windows フォームには、Microsoft Office のようなハイエンド アプリケーションの機能をエミュレートする豊富な UI コントロールが用意されています。 
-  <xref:System.Windows.Forms.ToolStrip> コントロールと <xref:System.Windows.Forms.MenuStrip> コントロールを使用する場合、テキストとイメージを含むツールバーとメニューを作成したり、サブメニューを表示したり、テキスト ボックスやコンボ ボックスなど、その他のコントロールをホストしたりできます。
+ Windows フォームには、Microsoft Office のようなハイエンド アプリケーションの機能をエミュレートする豊富な UI コントロールが用意されています。 <xref:System.Windows.Forms.ToolStrip> コントロールと <xref:System.Windows.Forms.MenuStrip> コントロールを使用する場合、テキストとイメージを含むツールバーとメニューを作成したり、サブメニューを表示したり、テキスト ボックスやコンボ ボックスなど、その他のコントロールをホストしたりできます。
 
  Visual Studio ドラッグ アンド ドロップ**Windows フォーム デザイナー**、Windows フォーム アプリケーションを簡単に作成することができます。 コントロールをカーソルで選択して、フォームの任意の場所に追加するだけです。 デザイナーがグリッド線やスナップ線などのツールを提供するので、コントロールの調整が楽になります。 Visual Studio を使用するか、またはコマンドラインでコンパイルするかどうかを使用できます、 <xref:System.Windows.Forms.FlowLayoutPanel>、<xref:System.Windows.Forms.TableLayoutPanel>と<xref:System.Windows.Forms.SplitContainer>短時間で高度なを作成するコントロールのフォーム レイアウト。
 
@@ -47,17 +46,14 @@ ms.locfileid: "57705845"
 |説明|ヘルプ トピック|
 |-----------------|----------------|
 |フォーム上のコントロールを使用する|[方法: Windows フォームにコントロールを追加します。](./controls/how-to-add-controls-to-windows-forms.md)|
-|
-  <xref:System.Windows.Forms.ToolStrip> コントロールを使用する|[方法: デザイナーを使用して標準アイテムで基本的な ToolStrip を作成します。](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|
-  <xref:System.Drawing> を使用してグラフィックスを作成する|[グラフィックス プログラミングについて](./advanced/getting-started-with-graphics-programming.md)|
+|<xref:System.Windows.Forms.ToolStrip> コントロールを使用する|[方法: デザイナーを使用して標準アイテムで基本的な ToolStrip を作成します。](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|<xref:System.Drawing> を使用してグラフィックスを作成する|[グラフィックス プログラミングについて](./advanced/getting-started-with-graphics-programming.md)|
 |カスタム コントロールの作成|[方法: UserControl クラスを継承します。](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>表示および操作データ
  多くのアプリケーションは、データベース、XML ファイル、XML Web サービス、またはその他のデータ ソースからデータを表示する必要があります。 Windows フォームは、従来の行と列の形式である、表形式のデータを表示するために、<xref:System.Windows.Forms.DataGridView> コントロールという名前の柔軟なコントロールを提供しているため、すべてのデータが独自のセルを占有します。 <xref:System.Windows.Forms.DataGridView> を使用すると、個別のセルの外観のカスタマイズ、任意の列と行のその場でのロック、セルの内部の複雑なコントロールの表示や、その他の機能が可能になります。
 
- ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>コンポーネントが、データ ソースへの接続を表し、メソッド前または次のレコードに移動し、レコードの編集、変更を保存するときに、コントロールにバインド データを公開しますが、元のソースをバックアップします。 
-  <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。
+ ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>コンポーネントが、データ ソースへの接続を表し、メソッド前または次のレコードに移動し、レコードの編集、変更を保存するときに、コントロールにバインド データを公開しますが、元のソースをバックアップします。 <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。
 
  [データ ソース] ウィンドウを使用すると、データ バインド コントロールを簡単に作成できます。 ウィンドウには、プロジェクト内のデータベース、Web サービス、オブジェクトなどのデータ ソースが表示されます。 このウィンドウからプロジェクトのフォームに項目をドラッグして、データ バインド コントロールを作成できます。 また、[データ ソース] ウィンドウから既存のコントロールにオブジェクトをドラッグして、データに既存のコントロールをバインドすることもできます。
 
@@ -69,8 +65,7 @@ ms.locfileid: "57705845"
 
 |説明|ヘルプ トピック|
 |-----------------|----------------|
-|
-  <xref:System.Windows.Forms.BindingSource> コンポーネントを使用する|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|<xref:System.Windows.Forms.BindingSource> コンポーネントを使用する|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ ソースを操作する|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |[データ ソース] ウィンドウを使用する|[Visual Studio でのデータへの Windows フォーム コントロールのバインド](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |アプリケーション設定を使用する|[方法: アプリケーション設定を作成します。](./advanced/how-to-create-application-settings.md)|

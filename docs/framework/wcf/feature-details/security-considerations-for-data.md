@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363086"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411435"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 
@@ -276,7 +276,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 - <xref:System.SerializableAttribute> 属性でマークされた従来の型を使用する場合は十分に注意します。 このような型のほとんどは、信頼されたデータのみで使用するために、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で操作することを目的に設計されています。 この属性でマークされた既存の型は、状態の安全性を考えて設計されていない可能性があります。
 
-- 状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の `DataMemberAttribute` プロパティに依存することはできません。 データは常に `null`、 `zero`、または `invalid`になります。
+- 状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティに依存することはできません。 データは常に `null`、 `zero`、または `invalid`になります。
 
 - 信頼できないデータ ソースから逆シリアル化されたオブジェクト グラフは、検証せずに信頼してはいけません。 各オブジェクトが整合状態にあっても、オブジェクト グラフ全体としては整合状態にない場合があります。 さらに、オブジェクト グラフの保存モードが無効になっている場合でも、逆シリアル化されたグラフに、同じオブジェクトへの複数の参照または循環参照が存在することがあります。 詳細については、次を参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。
 
@@ -312,33 +312,33 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 - 部分信頼コードへのアクセスを許可する場合、<xref:System.Runtime.Serialization.DataContractSerializer>インスタンスまたはそれ以外の場合、制御、[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)たくさんのシリアル化/逆シリアル化のプロセスが細かくコントロールを練習可能性があります。 たとえば、コードによって任意の型が挿入されたり、情報漏えいにつながったりする場合があります。また、生成されたオブジェクト グラフやシリアル化されたデータが改ざんされたり、生成されたシリアル化ストリームをオーバーフローさせたりする場合もあります。 <xref:System.Runtime.Serialization.NetDataContractSerializer> に関する同等の脅威については、「NetDataContractSerializer の安全な使用」で説明しています。
 
-- <xref:System.Runtime.Serialization.DataContractAttribute> 属性が型 (または `[Serializable]` ではなく `ISerializable`とマークされた型) に適用されている場合、すべてのコンストラクターが非パブリックであるか、または要求で保護されている場合でも、デシリアライザーはこのような型のインスタンスを作成できます。
+- <xref:System.Runtime.Serialization.DataContractAttribute> 属性が型 (または <xref:System.SerializableAttribute> ではなく <xref:System.Runtime.Serialization.ISerializable>とマークされた型) に適用されている場合、すべてのコンストラクターが非パブリックであるか、または要求で保護されている場合でも、デシリアライザーはこのような型のインスタンスを作成できます。
 
 - 逆シリアル化されるデータが信頼できるものであり、すべての既知の型が信頼した型であることが確実である場合を除き、逆シリアル化の結果を信頼しないでください。 部分信頼で実行されている場合、既知の型はアプリケーション構成ファイルから読み込まれません (ただし、コンピューター構成ファイルからは読み込まれます)。
 
-- 部分信頼コードに追加されたサロゲートと共に `DataContractSerializer` インスタンスを渡すと、コードによってそのサロゲートの変更可能な設定が変更される可能性があります。
+- 部分信頼コードに追加されたサロゲートと共に <xref:System.Runtime.Serialization.DataContractSerializer> インスタンスを渡すと、コードによってそのサロゲートの変更可能な設定が変更される可能性があります。
 
 - 逆シリアル化されたオブジェクトでは、XML リーダー (またはそれに含まれるデータ) が部分信頼コードからのものである場合、結果の逆シリアル化されたオブジェクトを信頼できないデータとして扱ってください。
 
 - <xref:System.Runtime.Serialization.ExtensionDataObject> 型がパブリック メンバーを含んでいなくても、それに含まれるデータが安全であるとは限りません。 たとえば、特権が付与されたデータ ソースから、いくつかのデータを含むオブジェクトに逆シリアル化し、そのオブジェクトを部分信頼コードに渡した場合、部分信頼コードは、オブジェクトをシリアル化して `ExtensionDataObject` のデータを読み取ることができます。 特権が付与されたデータ ソースから、後で部分信頼コードに渡されるオブジェクトに逆シリアル化する場合は、 <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> を `true` に設定するよう考慮してください。
 
-- 完全信頼では、<xref:System.Runtime.Serialization.DataContractSerializer> および <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> support the serialization of private, protected, internal, および public members in full trust. 一方、部分信頼ではパブリック メンバーのシリアル化のみが可能です。 アプリケーションがパブリック メンバー以外のメンバーのシリアル化を試みると、 `SecurityException` がスローされます。
+- 完全信頼では、<xref:System.Runtime.Serialization.DataContractSerializer> および <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> support the serialization of private, protected, internal, および public members in full trust. 一方、部分信頼ではパブリック メンバーのシリアル化のみが可能です。 アプリケーションがパブリック メンバー以外のメンバーのシリアル化を試みると、 <xref:System.Security.SecurityException> がスローされます。
 
-    部分信頼で内部メンバーまたはプロテクト内部メンバーをシリアル化するには、 `System.Runtime.CompilerServices.InternalsVisibleTo` アセンブリ属性を使用します。 この属性を使用すると、アセンブリは内部メンバーが他のアセンブリから参照できることを宣言できます。 この場合、内部メンバーのシリアル化が必要なアセンブリは、その内部メンバーが System.Runtime.Serialization.dll から参照できることを宣言します。
+    部分信頼で内部メンバーまたはプロテクト内部メンバーをシリアル化するには、 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> アセンブリ属性を使用します。 この属性を使用すると、アセンブリは内部メンバーが他のアセンブリから参照できることを宣言できます。 この場合、内部メンバーのシリアル化が必要なアセンブリは、その内部メンバーが System.Runtime.Serialization.dll から参照できることを宣言します。
 
     この方法の利点は、昇格されたコード生成パスが不要なことです。
 
     ただし、2 つの大きな欠点もあります。
 
-    1 つ目の欠点は、 `InternalsVisibleTo` 属性のオプトイン プロパティがアセンブリ全体に適用されることです。 つまり、特定のクラスに対してのみ内部メンバーのシリアル化を可能にするような指定はできません。 もちろん、 `DataMember` 属性をメンバーに追加しないことで、特定の内部メンバーをシリアル化しないことは可能です。 同様に、メンバーをプライベート メンバーまたはプロテクト メンバーではなく内部メンバーにすることもできますが、参照可能範囲の問題が残ります。
+    1 つ目の欠点は、 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性のオプトイン プロパティがアセンブリ全体に適用されることです。 つまり、特定のクラスに対してのみ内部メンバーのシリアル化を可能にするような指定はできません。 もちろん、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性をメンバーに追加しないことで、特定の内部メンバーをシリアル化しないことは可能です。 同様に、メンバーをプライベート メンバーまたはプロテクト メンバーではなく内部メンバーにすることもできますが、参照可能範囲の問題が残ります。
 
     2 つ目の欠点は、プライベート メンバーやプロテクト メンバーがサポートされないことです。
 
-    部分信頼での `InternalsVisibleTo` 属性の使用を理解するために、次のプログラムについて考えてみましょう。
+    部分信頼での <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性の使用を理解するために、次のプログラムについて考えてみましょう。
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    上の例で、 `PermissionsHelper.InternetZone` は部分信頼の `PermissionSet` に対応します。 ここで、 `InternalsVisibleToAttribute`を指定しなければ、パブリック メンバー以外のメンバーは部分信頼でシリアル化できないことを示す `SecurityException` がスローされてアプリケーションは失敗します。
+    上の例で、 `PermissionsHelper.InternetZone` は部分信頼の <xref:System.Security.PermissionSet> に対応します。 せずに、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>属性に、アプリケーションは失敗、スロー、<xref:System.Security.SecurityException>部分信頼で非パブリック メンバーをシリアル化できないことを示します。
 
     ただし、ソース ファイルに次の行を追加すると、プログラムは正常に実行されます。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377405"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412319"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF の Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
@@ -23,9 +23,9 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- このトピックでは、WPF と Win32 の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Win32 のプログラミングの概要についてを参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
+ このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
   
- このトピックに付属するサンプルがで実装されているためC#、Win32 API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
+ このトピックに付属するサンプルがで実装されているためC#、Windows API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
   
 > [!NOTE]
 >  このトピックには、関連するサンプルからのコード例の数が含まれます。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 取得するか、完全なコードを閲覧[WPF のサンプルでの Win32 ListBox コントロールをホストしている](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)します。  

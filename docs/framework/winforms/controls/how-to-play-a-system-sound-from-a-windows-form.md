@@ -41,8 +41,7 @@ public void playExclamation()
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  <xref:System.Media?displayProperty=nameWithType> 名前空間への参照  
+-   <xref:System.Media?displayProperty=nameWithType> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Media.SoundPlayer>

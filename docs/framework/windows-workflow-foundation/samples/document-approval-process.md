@@ -2,12 +2,12 @@
 title: ドキュメント承認プロセス
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4451719bfb1d46a4e0e4dcde19666d1f8b2de427
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717710"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409550"
 ---
 # <a name="document-approval-process"></a>ドキュメント承認プロセス
 このサンプルでは、多くの Windows Workflow Foundation (WF) や Windows Communication Foundation (WCF) 機能の使用をまとめて示します。 ドキュメント承認プロセスのシナリオを実装する方法を示します。 クライアント アプリケーションでは、承認の必要なドキュメントを送信したり、ドキュメントを承認したりすることができます。 クライアント間の通信を促進したり承認プロセスのルールを適用したりするための承認マネージャー アプリケーションも用意されています。 この承認プロセスは、複数の種類の承認を実行できるワークフローで、 単一承認、定足数承認 (承認者全体のパーセンテージ)、および複合承認 (定足数承認と単一承認のシーケンスから成る承認) を得るためのアクティビティが用意されています。
@@ -22,9 +22,9 @@ ms.locfileid: "57717710"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>サンプルの詳細  
- 次の図は、ドキュメント承認プロセスのワークフローを表しています。  
+ 次の図では、ドキュメント承認プロセスのワークフローを示しています。  
   
- ![ドキュメント承認プロセス ワークフロー](./media/approvalprocess.jpg "ApprovalProcess")  
+ ![ドキュメント承認プロセスのワークフロー](./media/document-approval-process/document-approval-process.jpg)  
   
  クライアントから見た場合、承認プロセスは次のように機能します。  
   
@@ -148,7 +148,9 @@ ms.locfileid: "57717710"
   
      ドキュメントは、最初の `UserType2` クライアントの定足数によって承認されると `UserType3` クライアントに渡されます。  
   
-8.  `UserType3` クライアントでドキュメントを承認または却下します。 `UserType1` クライアントに結果が表示されます。  
+8.  
+  `UserType3` クライアントでドキュメントを承認または却下します。 
+  `UserType1` クライアントに結果が表示されます。  
   
 ##### <a name="to-clean-up"></a>クリーンアップするには  
   

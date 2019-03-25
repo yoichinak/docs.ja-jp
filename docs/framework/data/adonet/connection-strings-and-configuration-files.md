@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828346"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409953"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  
@@ -67,12 +67,13 @@ ms.locfileid: "55828346"
 >  **connectionStrings** セクションは、**machine.config** ファイルにも存在します。このセクションには、Visual Studio によって使用される接続文字列が格納されます。 Windows アプリケーションの **app.config** ファイルからプロバイダー名で接続文字列を取得した場合、まず **machine.config** 内の接続文字列が読み込まれ、その後、**app.config** のエントリが読み込まれます。**connectionStrings** 要素の直後に **clear** を追加すると、継承されたすべての参照がメモリ内のデータ構造から削除され、ローカルの **app.config** ファイルに定義されている接続文字列だけが考慮されます。  
   
 ### <a name="working-with-the-configuration-classes"></a>構成クラスの使用  
- .NET Framework 2.0 以降では、ローカル コンピューター上の構成ファイルで作業するときに、廃止された <xref:System.Configuration.ConfigurationManager> に代わって <xref:System.Configuration.ConfigurationSettings> を使用します。 ASP.NET 構成ファイルでの作業では、<xref:System.Web.Configuration.WebConfigurationManager> を使用します。 Web サーバー上の構成ファイルを扱うことを目的に設計され、**system.web** など、構成ファイルのセクションにプログラムからアクセスできます。  
+ .NET Framework 2.0 以降では、ローカル コンピューター上の構成ファイルで作業するときに、非推奨とされた <xref:System.Configuration.ConfigurationManager> に代わって <xref:System.Configuration.ConfigurationSettings> を使用します。 ASP.NET 構成ファイルでの作業では、<xref:System.Web.Configuration.WebConfigurationManager> を使用します。 Web サーバー上の構成ファイルを扱うことを目的に設計され、**system.web** など、構成ファイルのセクションにプログラムからアクセスできます。  
   
 > [!NOTE]
 >  実行時に構成ファイルにアクセスするには、呼び出し元に権限を付与する必要があります。必要な権限は、アプリケーションの種類、構成ファイル、格納場所などによって異なります。 詳細については、「[構成クラスの使用](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))」、および ASP.NET アプリケーションには、「<xref:System.Web.Configuration.WebConfigurationManager>」および Windows アプリケーションには、「<xref:System.Configuration.ConfigurationManager>」を参照してください。  
   
- <xref:System.Configuration.ConnectionStringSettingsCollection> を使用すると、アプリケーション構成ファイルから接続文字列を取得できます。 このコレクションには、それぞれが **connectionStrings** セクションの単一のエントリを表す一連の <xref:System.Configuration.ConnectionStringSettings> オブジェクトが格納されます。 個々のプロパティは接続文字列の属性にマップされており、名前またはプロバイダー名を指定することによって接続文字列を取得できます。  
+ 
+  <xref:System.Configuration.ConnectionStringSettingsCollection> を使用すると、アプリケーション構成ファイルから接続文字列を取得できます。 このコレクションには、それぞれが **connectionStrings** セクションの単一のエントリを表す一連の <xref:System.Configuration.ConnectionStringSettings> オブジェクトが格納されます。 個々のプロパティは接続文字列の属性にマップされており、名前またはプロバイダー名を指定することによって接続文字列を取得できます。  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -81,7 +82,7 @@ ms.locfileid: "55828346"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|接続文字列。 **connectionString** 属性にマップされています。|  
   
 ### <a name="example-listing-all-connection-strings"></a>例:すべての接続文字列を一覧表示  
- この例では、`ConnectionStringSettings` コレクションを反復処理しながら、<xref:System.Configuration.ConnectionStringSettings.Name%2A>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>、<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> の各プロパティをコンソール ウィンドウに表示します。  
+ この例で反復処理、<xref:System.Configuration.ConnectionStringSettingsCollection>し、表示、 <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>、 <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>、および<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>コンソール ウィンドウでプロパティ。  
   
 > [!NOTE]
 >  プロジェクトの種類によっては System.Configuration.dll がインクルードされていない場合があります。構成クラスを使用する場合は、必要に応じて参照設定するようにしてください。 特定のアプリケーションの構成ファイルの名前と場所は、アプリケーションの種類やホストしているプロセスによって異なります。  
@@ -139,13 +140,16 @@ ms.locfileid: "55828346"
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|データの暗号化と復号化には、RSA 暗号化アルゴリズムが使用されます。 RSA アルゴリズムは、公開キー暗号化だけでなく、デジタル署名にも使用されます。 "公開キー" として知られているほか、2 つの異なるキーが使用されることから非対称暗号化と呼ばれる場合もあります。 [ASP.NET IIS 登録ツール (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) を使用すると、Web.config ファイルのセクションを暗号化したり、暗号化キーを管理したりすることができます。 構成ファイルは、その処理時に ASP.NET によって復号化されます。 ASP.NET アプリケーションの ID には、セクションの暗号化と復号化に使用される暗号化キーへの読み取りアクセスが必要です。|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|構成セクションの暗号化に Windows Data Protection API (DPAPI) が使用されます。 この API には、Windows の組み込み暗号化サービスが使用され、コンピューター単位またはユーザー アカウント単位の保護を構成できます。 コンピューター単位の保護は、同じサーバー上の複数のアプリケーションで情報を共有する必要がある場合に使用します。 共有ホスティング環境など、特定のユーザー ID で実行されるサービスには、ユーザー アカウント単位の保護を使用できます。 各アプリケーションは、ファイルやデータベースなど、各種リソースへのアクセスが制限された別々の ID で実行されます。|  
   
- どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、`RsaProtectedConfigurationProvider` だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))」を参照してください。  
+ どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、<xref:System.Configuration.RsaProtectedConfigurationProvider> だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))」を参照してください。  
   
 ### <a name="using-the-configuration-classes"></a>構成クラスの使用  
- <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NET アプリケーションを作成している場合は、同じ機能を持った <xref:System.Web.Configuration.WebConfigurationManager> クラスを使用します。他にも **\<system.web>** の設定など、ASP.NET アプリケーション固有の設定にもアクセスできます。  
+ 
+  <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 
+  <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NET アプリケーションを作成している場合は、同じ機能を持った <xref:System.Web.Configuration.WebConfigurationManager> クラスを使用します。他にも **\<system.web>** の設定など、ASP.NET アプリケーション固有の設定にもアクセスできます。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))」をご覧ください。  
+>  
+  <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))」をご覧ください。  
   
 ### <a name="appconfig-example"></a>App.config の例  
  ここでは、Windows アプリケーションの **app.config** ファイルにある **connectionStrings** セクションを条件に応じて暗号化したり復号化したりする方法を紹介します。 この例に示したプロシージャは、MyApplication.exe など、アプリケーションの名前を引数として受け取ります。 その後、**app.config** ファイルを暗号化して、その実行可能ファイルと同じフォルダーに MyApplication.exe.config という名前でコピーします。  

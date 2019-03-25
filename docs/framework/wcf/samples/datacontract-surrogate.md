@@ -2,12 +2,12 @@
 title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645419"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409836"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
 このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオは、データをシリアル化し、Windows Communication Foundation (WCF) クライアントとサービス間で送信する場所でサロゲートを使用する方法を示します。  
@@ -30,7 +30,8 @@ public interface IPersonnelDataService
 }  
 ```  
   
- `AddEmployee` 操作は、ユーザーが新しい従業員に関するデータを追加できるようにし、`GetEmployee` 操作は名前に基づく従業員の検索をサポートします。  
+ 
+  `AddEmployee` 操作は、ユーザーが新しい従業員に関するデータを追加できるようにし、`GetEmployee` 操作は名前に基づく従業員の検索をサポートします。  
   
  これらの操作では、次のデータ型を使用します。  
   
@@ -49,7 +50,8 @@ class Employee
 }  
 ```  
   
- `Employee` 型では、`Person` クラス (次のサンプル コードを参照) は有効なデータ コントラクト クラスではないので、<xref:System.Runtime.Serialization.DataContractSerializer> によってシリアル化できません。  
+ 
+  `Employee` 型では、`Person` クラス (次のサンプル コードを参照) は有効なデータ コントラクト クラスではないので、<xref:System.Runtime.Serialization.DataContractSerializer> によってシリアル化できません。  
   
 ```  
 public class Person  
@@ -64,9 +66,10 @@ public class Person
 }  
 ```  
   
- `DataContract` 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
+ 
+  <xref:System.Runtime.Serialization.DataContractAttribute> 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
   
- このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを `DataContractAttribute` でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
+ このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを <xref:System.Runtime.Serialization.DataContractAttribute> でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
   
  このサンプルでは、 `Person` クラスを `PersonSurrogated` という別のクラスに論理的に置き換えます。  
   
@@ -100,7 +103,8 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> メソッドは、シリアル化中に `Person` インスタンスを `PersonSurrogated` インスタンスにマップします。次のサンプル コードを参照してください。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> メソッドは、シリアル化中に `Person` インスタンスを `PersonSurrogated` インスタンスにマップします。次のサンプル コードを参照してください。  
   
 ```  
 public object GetObjectToSerialize(object obj, Type targetType)  
@@ -118,7 +122,8 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> メソッドは、逆シリアル化のための逆マップを実現します。次のサンプル コードを参照してください。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> メソッドは、逆シリアル化のための逆マップを実現します。次のサンプル コードを参照してください。  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -156,7 +161,8 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate> インターフェイスの実装を完了するサンプル コードを次に示します。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate> インターフェイスの実装を完了するサンプル コードを次に示します。  
   
 ```  
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
@@ -188,7 +194,8 @@ public void GetKnownCustomDataTypes(
   
  この場合、この属性は必要ありません。このサンプルでのデモンストレーション用にのみ使用されます。 これ以外の方法として、コードまたは構成を使用して同様の `IContractBehavior`、`IEndpointBehavior`、または `IOperationBehavior` を手動で追加することにより、サロゲートを有効にすることもできます。  
   
- `IContractBehavior` の実装は、操作に `DataContractSerializerOperationBehavior` が登録されているかどうかをチェックすることにより、DataContract を使用する操作を検索します。 登録されている場合は、その動作に `DataContractSurrogate` プロパティが設定されます。 この処理を行うサンプル コードを次に示します。 この操作にサロゲートが設定されると、シリアル化および逆シリアル化のために動作でサロゲートが有効化されます。  
+ 
+  `IContractBehavior` の実装は、操作に `DataContractSerializerOperationBehavior` が登録されているかどうかをチェックすることにより、DataContract を使用する操作を検索します。 登録されている場合は、その動作に `DataContractSurrogate` プロパティが設定されます。 この処理を行うサンプル コードを次に示します。 この操作にサロゲートが設定されると、シリアル化および逆シリアル化のために動作でサロゲートが有効化されます。  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -220,7 +227,8 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  メタデータの生成中にサロゲートをプラグインとして使用するには、追加手順が必要です。 これを行うための機構として、このサンプルで示す `IWsdlExportExtension` が用意されています。 さらに、`WsdlExporter` を直接変更するという方法もあります。  
   
- `AllowNonSerializableTypesAttribute`実装属性`IWsdlExportExtension`と`IContractBehavior`します。 拡張機能には、いずれかを指定できる、`IContractBehavior`または`IEndpointBehavior`ここでします。 `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
+ `AllowNonSerializableTypesAttribute`実装属性`IWsdlExportExtension`と`IContractBehavior`します。 拡張機能には、いずれかを指定できる、`IContractBehavior`または`IEndpointBehavior`ここでします。 
+  `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

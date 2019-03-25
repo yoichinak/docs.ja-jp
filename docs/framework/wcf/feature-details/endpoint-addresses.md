@@ -52,8 +52,7 @@ ms.locfileid: "56261103"
   
  IIS ではサイトごとに複数の IIS バインディングを指定でき、これによりスキームごとに複数のベース アドレスをサポートできます。 前のバージョン[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]、WCF はスキーマの複数のアドレスをサポートされていませんでしたし、指定された場合にスロー、<xref:System.ArgumentException>アクティブ化時にします。  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] により、インターネット サービス プロバイダーは同じサイト上の同じスキームに対して別のベース アドレスを使用して複数のアプリケーションをホストできます。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] により、インターネット サービス プロバイダーは同じサイト上の同じスキームに対して別のベース アドレスを使用して複数のアプリケーションをホストできます。  
   
  たとえば、サイトで次のベース アドレスを使用できます。  
   
@@ -61,8 +60,7 @@ ms.locfileid: "56261103"
   
 - `http://shipping.myorg.com/Service.svc`
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] では、構成ファイルの AppDomain レベルでプレフィックス フィルターを指定できます。 これには、 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)要素で、プレフィックスの一覧が含まれています。 IIS によって指定される受信ベース アドレスは、オプションのプレフィックス一覧に基づいてフィルター処理されます。 既定では、プレフィックスを指定しない場合、すべてのアドレスが渡されます。 プレフィックスを指定すると、そのスキームに一致するベース アドレスだけが渡されます。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] では、構成ファイルの AppDomain レベルでプレフィックス フィルターを指定できます。 これには、 [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)要素で、プレフィックスの一覧が含まれています。 IIS によって指定される受信ベース アドレスは、オプションのプレフィックス一覧に基づいてフィルター処理されます。 既定では、プレフィックスを指定しない場合、すべてのアドレスが渡されます。 プレフィックスを指定すると、そのスキームに一致するベース アドレスだけが渡されます。  
   
  プレフィックス フィルターを使用する構成コード例を次に示します。  
   
@@ -79,8 +77,7 @@ ms.locfileid: "56261103"
   
  前の例では、`net.tcp://payroll.myorg.com:8000`と`http://shipping.myorg.com:8000`経由で渡される、それぞれのスキーム、唯一のベース アドレスします。  
   
- 
-  `baseAddressPrefixFilter` では、ワイルカードはサポートされません。  
+ `baseAddressPrefixFilter` では、ワイルカードはサポートされません。  
   
  IIS が提供するベース アドレスには、`baseAddressPrefixFilters` 一覧に存在しない他のスキームにバインドされたアドレスが指定される場合があります。 これらのアドレスはフィルターで除外されません。  
   
@@ -113,8 +110,7 @@ ms.locfileid: "56261103"
   
 -   エンドポイントがリッスンするアドレスはプライベート URI であり、`listenURI` プロパティとは異なる値が設定されます。  
   
- 
-  `via` が指定するトランスポート アドレスはメッセージが最初に送信される場所で、この後にメッセージは、`to` パラメーターによって指定された、サービスが存在する別のリモート アドレスに送信されます。 インターネットの場合、`via` URI は、サービスの最終的な <xref:System.ServiceModel.EndpointAddress.Uri%2A> アドレスの `to` プロパティと同じになります。 この 2 つのアドレスを区別するのは、手動ルーティングを行う必要がある場合のみです。  
+ `via` が指定するトランスポート アドレスはメッセージが最初に送信される場所で、この後にメッセージは、`to` パラメーターによって指定された、サービスが存在する別のリモート アドレスに送信されます。 インターネットの場合、`via` URI は、サービスの最終的な <xref:System.ServiceModel.EndpointAddress.Uri%2A> アドレスの `to` プロパティと同じになります。 この 2 つのアドレスを区別するのは、手動ルーティングを行う必要がある場合のみです。  
   
 ### <a name="addressing-headers"></a>ヘッダーのアドレス指定  
  エンドポイントは、基本となる URI だけでなく、1 つ以上の SOAP ヘッダーによってアドレス指定することもできます。 これが役に立つのは、エンドポイントのクライアントに中継局を指す SOAP ヘッダーを含める必要がある、SOAP 中継局のシナリオの場合です。  

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: a36af4730a494448387ad059ff75199a19a1a359
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370658"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410109"
 ---
 # <a name="popup"></a>ポップアップ
 <xref:System.Windows.Controls.Primitives.Popup>コントロールは、現在のアプリケーション ウィンドウから浮遊した別のウィンドウにコンテンツを表示します。  
   
- 次の図は、<xref:System.Windows.Controls.Primitives.Popup>コントロールを配置した、<xref:System.Windows.Controls.Button>つまり親。  
+ 次の図は、<xref:System.Windows.Controls.Primitives.Popup>コントロールを配置した、<xref:System.Windows.Controls.Button>その親は。  
   
- ![ポップアップの図](./media/popuppicture.JPG "PopupPicture")  
+ ![ポップアップの図](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ポップアップの概要](popup-overview.md)  

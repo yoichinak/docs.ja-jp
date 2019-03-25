@@ -36,8 +36,7 @@ Windows フォームでのデータ バインディングを使用する場合�
   
 -   このコード例が必要です。  
   
--   
-  <xref:System>、<xref:System.Windows.Forms>、および <xref:System.Drawing> の各アセンブリへの参照。  
+-   <xref:System>、<xref:System.Windows.Forms>、および <xref:System.Drawing> の各アセンブリへの参照。  
   
 -   使用して、フォーム、<xref:System.Windows.Forms.Form.Load>イベントを処理済みとへの呼び出し、`InitializeControlsAndDataSource`メソッドから、フォームの例では<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。  
   

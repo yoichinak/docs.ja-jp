@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662583"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411799"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
@@ -476,54 +476,54 @@ public class Employee : Person
 |XSD 型|.NET 型|  
 |--------------|---------------|  
 |`anyType`|<xref:System.Object>。|  
-|`anySimpleType`|<xref:System.String>。|  
-|`duration`|<xref:System.TimeSpan>。|  
+|`anySimpleType`|<xref:System.String>.|  
+|`duration`|<xref:System.TimeSpan>.|  
 |`dateTime`|<xref:System.DateTime>。|  
 |`dateTimeOffset`|オフセットの<xref:System.DateTime> および <xref:System.TimeSpan> 。 後の「DateTimeOffset のシリアル化」を参照してください。|  
-|`time`|<xref:System.String>。|  
-|`date`|<xref:System.String>。|  
-|`gYearMonth`|<xref:System.String>。|  
-|`gYear`|<xref:System.String>。|  
-|`gMonthDay`|<xref:System.String>。|  
-|`gDay`|<xref:System.String>。|  
+|`time`|<xref:System.String>.|  
+|`date`|<xref:System.String>.|  
+|`gYearMonth`|<xref:System.String>.|  
+|`gYear`|<xref:System.String>.|  
+|`gMonthDay`|<xref:System.String>.|  
+|`gDay`|<xref:System.String>.|  
 |`gMonth`|<xref:System.String>。|  
 |`boolean`|<xref:System.Boolean>|  
 |`base64Binary`|<xref:System.Byte> 配列|  
-|`hexBinary`|<xref:System.String>。|  
-|`float`|<xref:System.Single>。|  
-|`double`|<xref:System.Double>。|  
-|`anyURI`|<xref:System.Uri>。|  
-|`QName`|<xref:System.Xml.XmlQualifiedName>。|  
-|`string`|<xref:System.String>。|  
-|`normalizedString`|<xref:System.String>。|  
-|`token`|<xref:System.String>。|  
-|`language`|<xref:System.String>。|  
-|`Name`|<xref:System.String>。|  
-|`NCName`|<xref:System.String>。|  
-|`ID`|<xref:System.String>。|  
-|`IDREF`|<xref:System.String>。|  
-|`IDREFS`|<xref:System.String>。|  
-|`ENTITY`|<xref:System.String>。|  
-|`ENTITIES`|<xref:System.String>。|  
-|`NMTOKEN`|<xref:System.String>。|  
-|`NMTOKENS`|<xref:System.String>。|  
-|`decimal`|<xref:System.Decimal>。|  
-|`integer`|<xref:System.Int64>。|  
-|`nonPositiveInteger`|<xref:System.Int64>。|  
-|`negativeInteger`|<xref:System.Int64>。|  
-|`long`|<xref:System.Int64>。|  
-|`int`|<xref:System.Int32>。|  
-|`short`|<xref:System.Int16>。|  
-|`Byte`|<xref:System.SByte>。|  
-|`nonNegativeInteger`|<xref:System.Int64>。|  
-|`unsignedLong`|<xref:System.UInt64>。|  
-|`unsignedInt`|<xref:System.UInt32>。|  
-|`unsignedShort`|<xref:System.UInt16>。|  
-|`unsignedByte`|<xref:System.Byte>。|  
-|`positiveInteger`|<xref:System.Int64>。|  
+|`hexBinary`|<xref:System.String>.|  
+|`float`|<xref:System.Single>.|  
+|`double`|<xref:System.Double>.|  
+|`anyURI`|<xref:System.Uri>.|  
+|`QName`|<xref:System.Xml.XmlQualifiedName>.|  
+|`string`|<xref:System.String>.|  
+|`normalizedString`|<xref:System.String>.|  
+|`token`|<xref:System.String>.|  
+|`language`|<xref:System.String>.|  
+|`Name`|<xref:System.String>.|  
+|`NCName`|<xref:System.String>.|  
+|`ID`|<xref:System.String>.|  
+|`IDREF`|<xref:System.String>.|  
+|`IDREFS`|<xref:System.String>.|  
+|`ENTITY`|<xref:System.String>.|  
+|`ENTITIES`|<xref:System.String>.|  
+|`NMTOKEN`|<xref:System.String>.|  
+|`NMTOKENS`|<xref:System.String>.|  
+|`decimal`|<xref:System.Decimal>.|  
+|`integer`|<xref:System.Int64>.|  
+|`nonPositiveInteger`|<xref:System.Int64>.|  
+|`negativeInteger`|<xref:System.Int64>.|  
+|`long`|<xref:System.Int64>.|  
+|`int`|<xref:System.Int32>.|  
+|`short`|<xref:System.Int16>.|  
+|`Byte`|<xref:System.SByte>.|  
+|`nonNegativeInteger`|<xref:System.Int64>.|  
+|`unsignedLong`|<xref:System.UInt64>.|  
+|`unsignedInt`|<xref:System.UInt32>.|  
+|`unsignedShort`|<xref:System.UInt16>.|  
+|`unsignedByte`|<xref:System.Byte>.|  
+|`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型のマッピング  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として `ISerializable` が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 `DataContractSerializer` は、当然ながら `ISerializable` クラスをサポートします。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を `http://schemas.datacontract.org/2004/07/System` 名前空間。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として <xref:System.Runtime.Serialization.ISerializable> が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 <xref:System.Runtime.Serialization.DataContractSerializer> は、当然ながら `ISerializable` クラスをサポートします。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を `http://schemas.datacontract.org/2004/07/System` 名前空間。  
   
 ```xml  
 <xs:complexType name="Exception">  

@@ -1,63 +1,100 @@
 ---
-title: チュートリアル入門のトラブルシューティング
-ms.date: 03/30/2017
+title: Get のトラブルシューティングでは、Windows Communication Foundation のチュートリアルを開始
+ms.date: 01/25/2019
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 5b8cd04ef4d98e522e255e1b7529e848351b2e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8089e0fee262d07be591069982b1aacfbeae2521
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695661"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410499"
 ---
-# <a name="troubleshooting-the-getting-started-tutorial"></a>チュートリアル入門のトラブルシューティング
-このトピックでは、チュートリアル入門の作業中に遭遇する最も一般的な問題とその解決方法の一覧を示します。  
+# <a name="troubleshoot-the-get-started-with-windows-communication-foundation-tutorials"></a>Get のトラブルシューティングでは、Windows Communication Foundation のチュートリアルを開始
+
+この記事では、最も一般的な問題とエラーで手順を実行した場合に発生する可能性がありますソリューションを提供します、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。 
   
-**ハード ドライブ上のプロジェクト ファイルを検索できません。**
+## <a name="common-problems"></a>一般的な問題
 
- Visual Studio では、プロジェクト ファイルを保存 c:\users\\<user name>\Documents\\< Visual Studio バージョン\>\Projects です。  
+**ハード ドライブ上のプロジェクト ファイルが見つからない**
+
+ Visual Studio でプロジェクト ファイルを保存する*C:\Users\\&lt;ユーザー名&gt;\source\repos*します。  
+
+**見つからない、 *App.config*によって生成されたファイル*Svcutil.exe*します。**
+
+ Visual Studio で、**既存項目の追加**ウィンドウでは、既定では、次の拡張子を持つファイルのみが表示されます。 
+- *.cs* 
+- *.resx* 
+- *.settings*
+- *.xsd* 
+- *.wsdl*
+
+すべてのファイルの種類を表示するには、次のように選択します**すべてのファイル (\*。\*)。** の右上隅にあるドロップダウン リストで、**既存項目の追加**ウィンドウ。  
   
-**サービス アプリケーションを実行しようとしています。HTTP は URL を登録できませんでした`http://+:8000/ServiceModelSamples/Service/`.**
-**プロセスには、この名前空間へのアクセス権はありません。** 
+## <a name="common-errors"></a>一般的なエラー
 
- WCF サービスをホストするプロセスは、管理者特権で実行する必要があります。 サービスを実行している場合から、Visual Studio 内でする必要があります Visual Studio 管理者として実行します。 行うためには**開始**、右クリック**Visual Studio \<*バージョン*>** 選択**管理者として実行**. コンソール ウィンドウでコマンド ライン プロンプトから、サービスを実行する場合は、同様の方法でを管理者として、コンソール ウィンドウを起動する必要があります。 をクリックして**開始**を右クリックして**コマンド プロンプト**選択**管理者として実行**。  
+### <a name="compile-the-service-application"></a>サービス アプリケーションをコンパイルします。 
+
+**エラー BC30420 'GettingStartedHost.Module1' で ' Sub Main' が見つかりませんでした。**
+
+Visual Basic アプリケーションのエントリ ポイントが正しくないです。 次の変更を行います。
+
+   1. **ソリューション エクスプ ローラー**ウィンドウで、 **GettingStartedHost**フォルダー、および選択**プロパティ**ショートカット メニューから。
+    a.  **GettingStartedHost**  ウィンドウの**スタートアップ オブジェクト**を選択します**Service.Program** (または、特定のアプリケーションのエントリ ポイント) の一覧から。 
+    b.  メイン メニューで、次のように選択します。**ファイル** > **すべて保存**します。
+
+### <a name="run-the-service-application"></a>サービス アプリケーションを実行します。 
+
+**HTTP は URL を登録できませんでした ' http:\//+: 8000/GettingStarted/CalculatorService '。プロセスにこの名前空間へのアクセス権がありません。** 
+
+ 適切なアクセスの場合に、管理者特権で Windows Communication Foundation (WCF) サービスをホストしているプロセスを開始します。
+- For Visual Studio:Visual Studio のプログラムを選択して、**開始**] メニューの [クリックして**詳細** > **管理者として実行**ショートカット メニューから。
+- コンソール ウィンドウ。選択**コマンド プロンプト**で、**開始**] メニューの [クリックして**詳細** > **管理者として実行**ショートカットからメニュー。
+- Windows explorer:実行可能ファイルを選択し、選択**管理者として実行**ショートカット メニューから。
+
+### <a name="compile-the-client-application"></a>クライアント アプリケーションをコンパイルします。
+
+**'CalculatorClient' の定義を含まない '\<メソッド名 >' 拡張メソッド'\<メソッド名 >' 型 'CalculatorClient' が見つかりませんでしたの最初の引数を受け付ける (が存在することを使用して、ディレクティブ、またはアセンブリ参照。)**  
+
+マークする方法だけ、`ServiceOperationAttribute`属性が一般公開されています。 省略した場合、`ServiceOperationAttribute`のメソッドからの属性、`ICalculator`インターフェイス、コンパイル時にこのエラー メッセージが表示されます。  
+
+**型または名前空間名 'CalculatorClient' が見つかりませんでした (が存在することを使用して、ディレクティブまたはアセンブリ参照)。**
+
+ 追加しない場合にこのエラーが発生する、 *generatedProxy.cs* (または*generatedProxy.vb*) ファイルをクライアント プロジェクトでそれらを生成したときに、 *Svcutil.exe*ツール.  
+
+### <a name="run-the-client-application"></a>クライアント アプリケーションを実行します。
+
+**未処理の例外:System.servicemodel.endpointnotfoundexception::接続できませんでした ' http:\//localhost:8000 GettingStarted/CalculatorService '。TCP エラー コード 10061:接続は行われません、ターゲット コンピューターによって拒否されたためです。**
+
+このエラーは、最初にサービスを開始せず、クライアント アプリケーションを実行する場合に発生します。 最初に、サービスを開始するホスト アプリケーションを実行し、クライアント アプリケーションを実行します。
+
+### <a name="use-the-svcutilexe-tool"></a>Svcutil.exe ツールを使用します。
+   
+**'Svcutil' は内部または外部コマンド、operable program,、またはバッチ ファイルとして認識されていません。**
+
+ *Svcutil.exe*システム パスである必要があります。 最も簡単なソリューションでは、Visual Studio コマンド プロンプトを使用します。 **開始**メニューの 、 **Visual Studio\<バージョン >** ディレクトリを選択して**開発者コマンド プロンプト for VS\<バージョン >**. このコマンド プロンプトでは、Visual Studio の一部として出荷されるすべてのツールの正しい場所をシステム パスを設定します。  
   
-**Svcutil.exe ツールを使用しようとしています: 'svcutil' は内部または外部コマンド、操作可能なプログラムまたはバッチ ファイルとして認識されません。**
+### <a name="run-the-service-and-client-applications"></a>サービスとクライアント アプリケーションを実行します。
 
- Svcutil.exe がシステム パスに存在する必要があります。 最も簡単な解決方法は、コマンド プロンプトを使用する方法です。 をクリックして**開始**、**すべてのプログラム**、 **Visual Studio \<*バージョン*>**、 **Visual Studio Tools**、および**Visual Studio 用開発者コマンド プロンプト**します。 このコマンド プロンプトでは、Visual Studio の一部として出荷されるすべてのツールの正しい場所をシステム パスを設定します。  
+**System.ServiceModel.Security.SecurityNegotiationException:SOAP セキュリティ ネゴシエーション 'http:\//localhost:8000 GettingStarted/CalculatorService' ターゲット 'http:\//localhost:8000 GettingStarted/CalculatorService' に失敗しました**  
 
-**Svcutil.exe によって生成された App.config ファイルが見つかりません。**
+ネットワーク接続がないドメインに参加しているコンピューターでこのエラーが発生します。 コンピューターをネットワークに接続します。 または、サービスとクライアントの両方のセキュリティをオフにします。 
 
- **既存項目の追加**ダイアログでは、既定では次の拡張子を持つファイルのみが表示されます: .cs、.resx、.settings、.xsd、.wsdl ファイル。 選択してすべてのファイルの種類を表示することを指定する**すべてのファイル (\*.\*)** の右下隅のドロップダウン リスト ボックスで、**既存項目の追加** ダイアログ ボックス。  
+セキュリティを無効にします。
 
-
-**クライアント アプリケーションをコンパイルするには。'CalculatorClient' の定義を含まない '\<メソッド名 >' 拡張メソッド'\<メソッド名 >' 型 'CalculatorClient' が見つかりませんでしたの最初の引数を受け付ける (が存在することを使用して、ディレクティブ、またはアセンブリ参照。)**  
-
-外部に公開されるのは、`ServiceOperationAttribute` でマークされたメソッドのみです。 省略すると、`ServiceOperationAttribute`属性内のメソッドのいずれかから、`ICalculator`インターフェイス、このエラー メッセージを取得するには、属性が不足している操作を呼び出すクライアント アプリケーションをコンパイルするときにします。  
-
-**クライアント アプリケーションをコンパイルするには。型または名前空間名 'CalculatorClient' が見つかりませんでした (が存在することを使用して、ディレクティブまたはアセンブリ参照)。**
-
- Proxy.cs または Proxy.vb ファイルをクライアント プロジェクトに追加しなかった場合にこのエラーが発生します。  
-
-**クライアントを実行するには。未処理の例外:System.servicemodel.endpointnotfoundexception::接続できませんでした`http://localhost:8000/ServiceModelSamples/Service/CalculatorService`します。TCP エラー コード 10061:接続は行われません、ターゲット コンピューターによって拒否されたためです。**
-
-サービスを実行せずにクライアント アプリケーションを実行した場合にこのエラーが発生します。  
+- サービスの交換を作成するコード、`WSHttpBinding`を次のコード。  
   
-**未処理の例外:System.servicemodel.security.securitynegotiationexception:SOAP セキュリティ ネゴシエーション`http://localhost:8000/ServiceModelSamples/Service/CalculatorService`ターゲット`http://localhost:8000/ServiceModelSamples/Service/CalculatorService`できませんでした**  
+    ```csharp
+    // Step 3: Add a service endpoint.
+    selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
+    ```
 
-ドメインに参加しているコンピューターにネットワーク接続がない場合にこのエラーが発生します。 コンピューターをネットワークに接続するか、クライアントとサービスの両方のセキュリティをオフにします。 サービスの場合は、WSHttpBinding を作成するコードを次のように変更します。  
+- 構成ファイルで、クライアントは、更新、 **\<セキュリティ >** の下の要素、 **\<バインド >** 要素として次のとおりです。  
   
-```csharp
-// Step 3 of the hosting procedure: Add a service endpoint  
-selfhost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(SecurityMode.None), "CalculatorService");  
-```
+    ```xml
+    <binding name="WSHttpBinding_ICalculator" security mode="None" />
+    ```  
 
-クライアントは、変更、 **\<セキュリティ >** の下の要素、 **\<バインド >** 次の要素。  
-  
-```xml
-<security mode="Node" />  
-```  
-
-## <a name="see-also"></a>関連項目
-- [チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [WCF トラブルシューティング クイックスタート](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)
-- [セットアップ問題のトラブルシューティング](../../../docs/framework/wcf/troubleshooting-setup-issues.md)
+## <a name="see-also"></a>関連項目  
+ [WCF アプリケーションを概要します。](getting-started-tutorial.md)  
+ [WCF トラブルシューティング クイック スタート](wcf-troubleshooting-quickstart.md)  
+ [セットアップ問題のトラブルシューティング](troubleshooting-setup-issues.md)

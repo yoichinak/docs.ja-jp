@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369930"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409459"
 ---
 # <a name="expander-overview"></a>エキスパンダーの概要
 <xref:System.Windows.Controls.Expander>コントロール ウィンドウに似ていますし、ヘッダーを含む展開可能な領域内のコンテンツを提供する方法を提供します。  
@@ -45,7 +45,7 @@ ms.locfileid: "57369930"
   
  **ScrollViewer 内のエキスパンダー**  
   
- ![ScrollBar を持つ Expander](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![ScrollBar を持つエキスパンダーを示すスクリーン ショット。](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  配置するとき、<xref:System.Windows.Controls.Expander>を制御、 <xref:System.Windows.Controls.ScrollViewer>、設定、<xref:System.Windows.Controls.ScrollViewer>ディメンションの方向に対応するプロパティ、<xref:System.Windows.Controls.Expander>コンテンツのサイズが表示されます、<xref:System.Windows.Controls.Expander>コンテンツ エリア。 設定する場合など、<xref:System.Windows.Controls.Expander.ExpandDirection%2A>プロパティを<xref:System.Windows.Controls.Expander>に<xref:System.Windows.Controls.ExpandDirection.Down>(コンテンツ領域は、ダウンが開いたら、) 設定、<xref:System.Windows.FrameworkElement.Height%2A>プロパティを<xref:System.Windows.Controls.ScrollViewer>必要なコンテンツ エリアの高さを制御します。 代わりに自体には、コンテンツの高さを設定した場合<xref:System.Windows.Controls.ScrollViewer>この設定は認識されず、そのため、スクロール可能なコンテンツは提供されません。  
   

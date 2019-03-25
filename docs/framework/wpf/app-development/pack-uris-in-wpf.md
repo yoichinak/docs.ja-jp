@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377317"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411279"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF におけるパッケージの URI
 Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]を識別し、次を含む、さまざまな方法でファイルを読み込むために使用します。  
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ## <a name="the-pack-uri-scheme"></a>パック URI スキーム  
  パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]スキームを使って、 [Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC) 仕様は、整理、およびコンテンツを識別するためのモデルについて説明します。 このモデルの主要な要素には、パッケージとパーツ、場所、*パッケージ*論理的なコンテナーは、1 つまたは複数の論理*パーツ*します。 この概念を次の図に示します。  
   
- ![パッケージとパーツのダイアグラム](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![パッケージとパーツのダイアグラム](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  パーツを識別するために、OPC 仕様は RFC 2396 の拡張性を利用 (Uniform Resource Identifier (URI)。ジェネリックの構文)、パックを定義する[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]スキーム。  
   
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
   
  この概念を次の図に示します。  
   
- ![パッケージ、オーソリティ、およびパスの関係](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![パッケージ、権限、およびパスの間のリレーションシップ](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  パッケージとパーツは、アプリケーションとファイルに似ています。つまり、アプリケーション (パッケージ) は、次のような 1 つ以上のファイル (パーツ) を含むことができます。  
   
@@ -72,7 +72,7 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
   
  これらの種類のファイルにアクセスする[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]2 つのオーソリティをサポートしています: application:///と siteoforigin:///。 application:/// オーソリティは、リソース ファイルやコンテンツ ファイルなど、コンパイル時に既知のアプリケーション データ ファイルを識別します。 siteoforigin:/// オーソリティは、起点サイト ファイルを識別します。 各オーソリティのスコープを次の図に示します。  
   
- ![パック URI のダイアグラム](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![Pack URI のダイアグラム](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  パックの権限を持つコンポーネント[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]が埋め込まれた[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]パッケージを指すこと、および RFC 2396 に準拠する必要があります。 さらに、"/" 文字は "," 文字に置き換える必要があり、"%" や "?" などの予約文字はエスケープする必要があります。 詳細については、OPC を参照してください。  

@@ -26,14 +26,11 @@ SOAP メッセージとしてオブジェクトの XML シリアル化をオー�
 
 4. 手順 3 で作成した属性に、`SoapAttributes` の適切なプロパティを設定します。
 
-5. 
-  `SoapAttributes` に `SoapAttributeOverrides` を追加します。
+5. `SoapAttributes` に `SoapAttributeOverrides` を追加します。
 
-6. 
-  `XmlTypeMapping` を使用して `SoapAttributeOverrides` を作成します。 `SoapReflectionImporter.ImportTypeMapping` メソッドを使用します。
+6. `XmlTypeMapping` を使用して `SoapAttributeOverrides` を作成します。 `SoapReflectionImporter.ImportTypeMapping` メソッドを使用します。
 
-7. 
-  `XmlSerializer` を使用して `XmlTypeMapping` を作成します。
+7. `XmlSerializer` を使用して `XmlTypeMapping` を作成します。
 
 8. オブジェクトをシリアル化または逆シリアル化します。
 

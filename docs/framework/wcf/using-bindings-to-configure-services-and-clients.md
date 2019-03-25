@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8aed2b2efa0408371a8da47fef64340fd30fffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577101"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410421"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>サービスとクライアントを構成するためのバインディングの使用
 バインディングとは、エンドポイントへの接続に必要な通信の詳細設定を指定するオブジェクトです。 具体的には、バインディングには構成情報が含まれており、この情報を使用してそれぞれのエンドポイントまたはクライアント チャネルで使用されるトランスポート仕様、ワイヤ形式 (メッセージ エンコード) 仕様、プロトコル仕様が定義され、クライアントまたはサービスのランタイムが作成されます。 機能している Windows Communication Foundation (WCF) サービスを作成するには、サービス内の各エンドポイントにバインディングが必要です。 ここでは、エンドポイントにおけるバインディングの概要と定義方法、特定のバインディングの指定方法を説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54577101"
  Transport  
  使用する基本のトランスポート プロトコル (TCP や HTTP など) を決定します。  
   
- エンコーディング  
+ エンコード  
  メッセージ エンコード (Text/XML、バイナリ、MTOM (Message Transmission Optimization Mechanism) など) を決定します。これは、メッセージをネットワーク上のバイト ストリームとしてどのように表現するかを決定します。  
   
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
@@ -45,7 +45,7 @@ ms.locfileid: "54577101"
 ## <a name="using-bindings"></a>バインディングの使用  
  バインディングを使用する際には、次の 2 つの基本手順があります。  
   
-1.  バインディングを選択、または定義します。 最も簡単な方法は、システム指定のバインディングを 1 つ選択し、それを既定の設定で使用することです。 また、システム指定のバインディングを選択し、そのプロパティを要件に適した値に再設定することもできます。 さらに、カスタム バインディングを作成し、すべてのプロパティを必要に応じて設定することもできます。  
+1.  バインディングを選択、または定義します。 最も簡単な方法は、システム指定のバインディングを 1 つ選択し、それを既定の設定で使用することです。 また、システム指定のバインディングを選択し、そのプロパティを要件に適した値に再設定することもできます。 さらに、カスタム バインドを作成し、すべてのプロパティを必要に応じて設定することもできます。  
   
 2.  このバインディングを使用するエンドポイントを作成します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54577101"
   
 -   [方法: マネージ アプリケーションで WCF サービスをホスト](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)コードでバインディングの作成の例を示します。  
   
--   [方法: クライアントを構成する](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
+-   [チュートリアル: Windows Communication Foundation クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
   
 ## <a name="see-also"></a>関連項目
 - [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)
