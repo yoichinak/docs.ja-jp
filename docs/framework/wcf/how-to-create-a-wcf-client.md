@@ -14,7 +14,7 @@ ms.locfileid: "58411858"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを作成します。
 
-このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
+このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
 
 WCF アプリケーションを作成するための次のタスクでは、WCF サービスからメタデータを取得することによって、クライアントを作成します。 Visual Studio を使用して、サービスの MEX エンドポイントからメタデータを取得します。 サービス参照を追加します。 Visual Studio は、選択した言語でクライアント プロキシのマネージ ソース コード ファイルを生成します。 クライアント構成ファイルが作成されます (*App.config*)。 このファイルは、エンドポイントのサービスに接続するクライアント アプリケーションを使用します。 
 

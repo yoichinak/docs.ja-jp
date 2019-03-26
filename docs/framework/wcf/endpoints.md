@@ -14,7 +14,7 @@ ms.locfileid: "33803395"
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation エンドポイント
 使用して、Windows Communication Foundation (WCF) サービスとすべての通信が行われる、*エンドポイント*サービス。 エンドポイントは、WCF サービスを提供する機能へのアクセスをクライアントに提供します。  
   
- エンドポイントを作成する方法の詳細については、次を参照してください。[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)です。 エンドポイントは次の要素から成ります。  
+ エンドポイントを作成する方法の詳細については、[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)を参照してください。 エンドポイントは次の要素から成ります。  
   
 -   そのエンドポイントの場所を示すアドレス。  
   
