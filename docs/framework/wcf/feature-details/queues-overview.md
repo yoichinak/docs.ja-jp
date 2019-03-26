@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333028"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466167"
 ---
 # <a name="queues-overview"></a>キューの概要
 ここでは、キューを使った通信の概要とその基本概念を解説します。 以降のセクションでは、ここで説明したキューの概念で Windows Communication Foundation (WCF) が活かされている方法の詳細に移動します。  
@@ -74,7 +74,6 @@ ms.locfileid: "56333028"
  メッセージがターゲット キューに到達しても、サービス側で繰り返し処理に失敗する場合があります。 原因としては、アプリケーションがトランザクション内でキューからメッセージを読み込み、データベースを更新しようとしたところ、データベースの接続が一時的に切断されていた、というような状況が考えられます。 この場合は、トランザクションのロールバック、新たなトランザクションの作成、メッセージの再読み込みが行われます。 ただし、2 回目の試行で成功するかどうかはわかりません。 エラーの原因によっては、メッセージをアプリケーションに配信する処理が繰り返し失敗することがあります。 このようなメッセージは "有害" であると見なされ、 有害メッセージ キューに移されます。このキューの内容は、有害メッセージを処理するアプリケーションに渡すことができます。  
   
 ## <a name="see-also"></a>関連項目
-- [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [セッションとキュー](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [配信不能キュー](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379641"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464958"
 ---
 # <a name="toolbar-overview"></a>ToolBar の概要
 <xref:System.Windows.Controls.ToolBar> コントロールは、コマンドまたはコントロールの機能に関連する通常のグループのコンテナーです。 A<xref:System.Windows.Controls.ToolBar>通常のコマンドを呼び出すボタンが含まれています。  
@@ -28,10 +28,9 @@ ms.locfileid: "57379641"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>オーバーフロー項目を含むツールバー  
- 多くの場合、<xref:System.Windows.Controls.ToolBar>コントロールは、ツールバーのサイズに収まるよりもさらに項目を含めることができます。 この場合、<xref:System.Windows.Controls.ToolBar>オーバーフロー ボタンが表示されます。 ユーザーをオーバーフロー項目を表示するには、オーバーフロー ボタンをクリックして、項目は、次のポップアップ ウィンドウに表示されます、<xref:System.Windows.Controls.ToolBar>します。 次の図は、<xref:System.Windows.Controls.ToolBar>オーバーフロー項目を含むです。  
+ 多くの場合、<xref:System.Windows.Controls.ToolBar>コントロールは、ツールバーのサイズに収まるよりもさらに項目を含めることができます。 この場合、<xref:System.Windows.Controls.ToolBar>オーバーフロー ボタンが表示されます。 ユーザーをオーバーフロー項目を表示するには、オーバーフロー ボタンをクリックして、項目は、次のポップアップ ウィンドウに表示されます、<xref:System.Windows.Controls.ToolBar>します。 次の図は、<xref:System.Windows.Controls.ToolBar>オーバーフロー項目を含む。  
   
- ![オーバーフローを含むツールバー](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-オーバーフローを含むツール バー  
+ ![オーバーフロー項目を含むツールバーを示すスクリーン ショット。](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  設定してツールバーにあるアイテムがオーバーフロー パネルに配置すると指定することができます、<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>添付プロパティを<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>、 <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>、または<xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>します。 次の例では、ツールバーの最後の 4 つのボタンを常にオーバーフロー パネルに配置します。  
   

@@ -4,12 +4,6 @@ description: リフト アンド シフトし、Azure クラウドとこの電�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200086"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 
@@ -36,12 +30,12 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 Microsoft およびに記載されている商標 <https://www.microsoft.com> 「商標」web ページには、Microsoft グループ企業各社の商標です。 その他のすべてのマークは、該当する各社が所有しています。
 
 作成者:
-> **Cesar de la Torre**、Microsoft corp.、.NET 製品チーム、シニア PM
+> **Cesar de la Torre**、シニア PM、.NET 製品チーム、Microsoft Corp.
 
 参加者とレビュー担当者:
 > **Scott Hunter**、Microsoft、.NET チーム、パートナー ディレクター PM  
 > **Paul Yuknewicz**、Microsoft、Visual Studio Tools チーム、主任 PM マネージャー  
-> **Lisa Guthrie**、シニア Microsoft、Visual Studio Tools チーム、PM  
+> **Lisa Guthrie**、シニア PM、Visual Studio Tools チーム、Microsoft  
 > **Ankit Asthana**、Microsoft、.NET チーム、主任 PM マネージャー  
 > **Unai Zorrilla**、開発者リーダー、Plain Concepts  
 > **Javier Valero**、Grupo Solutio の最高執行責任者  
@@ -80,14 +74,14 @@ Web アプリケーションやサービスを最新化し、クラウドに移�
 
 アプリケーションの成熟度レベルごとの簡単な説明の定義と、次に示します。
 
-**レベル 1: クラウド インフラストラクチャの準備完了**アプリケーション: この移行アプローチでは、単に移行するか、サービスとしてのインフラストラクチャを現在のオンプレミス アプリケーションのリホスト ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) プラットフォーム。 アプリの構成は前とほとんど変わりませんが、クラウド内の VM に展開します。
+**レベル 1:クラウド インフラストラクチャ準備完了**アプリケーション。この移行アプローチでは、単に移行するか、サービスとしてのインフラストラクチャを現在のオンプレミス アプリケーションのリホスト ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)) プラットフォーム。 アプリの構成は前とほとんど変わりませんが、クラウド内の VM に展開します。
 この単純な種類の移行は通常「リフトし、シフト」として業界で呼ばれます。
 
-**レベル 2: クラウド最適化**アプリケーション: このレベルで、再設計または大幅なコードを変更することもせずからアプリを追加し、コンテナーなどの最新のテクノロジを使用してクラウドで実行されているその他のメリットを得ることができますクラウドで管理されたサービス。 エンタープライズ開発操作 (DevOps) プロセスが調整され、すばやく出荷するためのアプリケーションの機敏性が向上します。 これを実現するには、Docker エンジンに基づく Windows コンテナーなどのテクノロジを使用しています。 コンテナーは、複数のステージでデプロイする場合は、アプリケーションの依存関係によって引き起こされる摩擦を削除します。 この成熟度モデルでは IaaS でのコンテナーをデプロイすることができます。 または追加の使用中に PaaS としてサービス、監視、および継続的インテグレーション/継続的デプロイ (CI/CD) パイプラインとのキャッシュのクラウドで管理されたサービスは、データベースに関連します。
+**レベル 2:クラウドの最適化された**アプリケーション。このレベルで、再設計または大幅なコードを変更することもせず、コンテナーとその他のクラウドで管理されたサービスなどの最新のテクノロジを使用してクラウドでアプリの実行によるその他のメリットが得られます。 エンタープライズ開発操作 (DevOps) プロセスが調整され、すばやく出荷するためのアプリケーションの機敏性が向上します。 これを実現するには、Docker エンジンに基づく Windows コンテナーなどのテクノロジを使用しています。 コンテナーは、複数のステージでデプロイする場合は、アプリケーションの依存関係によって引き起こされる摩擦を削除します。 この成熟度モデルでは IaaS でのコンテナーをデプロイすることができます。 または追加の使用中に PaaS としてサービス、監視、および継続的インテグレーション/継続的デプロイ (CI/CD) パイプラインとのキャッシュのクラウドで管理されたサービスは、データベースに関連します。
 
 3 番目の成熟度レベルは、クラウドの最終的な目標ですが、多くのアプリでは省略可能であり、このガイドの主な焦点ではありません。
 
-**レベル 3: クラウド ネイティブ**アプリケーション: 通常この移行アプローチが、ミッション クリティカルなアプリケーションの刷新を目標とビジネス ニーズによって駆動されます。 このレベルでは、PaaS サービスを使用してアプリを PaaS コンピューティング インフラストラクチャに移行します。 [クラウド ネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) アプリケーションおよびマイクロサービス アーキテクチャを実装して長期的な機敏性を持つようにアプリケーションを発展させ、新しい制限にスケールを設定します。 このタイプの最新化は、通常、クラウド用の特別な構築が必要です。 多くの場合、新しいコードを書き込まれなければなりません、特にクラウド ネイティブ アプリケーションとマイクロ サービスに基づくモデルに移動する場合に必要です。 このアプローチは、モノリシックなオンプレミス アプリケーション環境では実現することが困難なメリットを得ることができます。
+**レベル 3:クラウド ネイティブ**アプリケーション。通常、この移行アプローチは、ミッション クリティカルなアプリケーションの刷新を目標とビジネス ニーズによって左右されます。 このレベルでは、PaaS サービスを使用してアプリを PaaS コンピューティング インフラストラクチャに移行します。 [クラウド ネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) アプリケーションおよびマイクロサービス アーキテクチャを実装して長期的な機敏性を持つようにアプリケーションを発展させ、新しい制限にスケールを設定します。 このタイプの最新化は、通常、クラウド用の特別な構築が必要です。 多くの場合、新しいコードを書き込まれなければなりません、特にクラウド ネイティブ アプリケーションとマイクロ サービスに基づくモデルに移動する場合に必要です。 このアプローチは、モノリシックなオンプレミス アプリケーション環境では実現することが困難なメリットを得ることができます。
 
 表 1-1 は、各移行または最新化アプローチを選択する理由との主な利点を説明しています。
 
@@ -98,9 +92,9 @@ Web アプリケーションやサービスを最新化し、クラウドに移�
 | **データの対象** |
 | SQL または VM 上の任意のリレーショナル データベース | Azure SQL Database マネージ インスタンスまたは別のマネージ クラウド データベースです。 | Azure SQL Database、Azure Cosmos DB、またはクラウドで別の管理されたデータベースに基づいて、マイクロ サービスごとの罰金粒子データベース |
 | **長所**|
-| <li>再設計、新しいコードはありません。 <li> 最小限の労力による迅速な移行 <li> Azure でサポートされる最小公倍数 <li> 基本的な可用性の保証 <li> クラウドへの移行後にする方が簡単な最新化 | <li> 再設計なし <li> 最小限のコード/構成の変更 <li> コンテナーに展開とリリースのための DevOps の機敏性の改善 <li> 密度の増大と展開コストの削減 <li> アプリとの依存関係の移植性 <li> ホストのターゲットの柔軟性: PaaS アプローチまたは IaaS | <li> アーキテクト、クラウドのクラウドから最適なメリットを享受するが、新しいコードが必要です <li> マイクロサービス クラウドネイティブ アプローチ <li> 最新のミッション クリティカルなアプリケーション、クラウド回復性のある非常にスケーラブルな <li> フル マネージド サービス <li> スケールに最適化 <li> サブシステムによる自律的な機敏性に最適化 <li> 展開と DevOps 上の構築 |
+| <li>再設計、新しいコードはありません。 <li> 最小限の労力による迅速な移行 <li> Azure でサポートされる最小公倍数 <li> 基本的な可用性の保証 <li> クラウドへの移行後にする方が簡単な最新化 | <li> 再設計なし <li> 最小限のコード/構成の変更 <li> コンテナーに展開とリリースのための DevOps の機敏性の改善 <li> 密度の増大と展開コストの削減 <li> アプリとの依存関係の移植性 <li> ホストのターゲットの柔軟性:PaaS のアプローチまたは IaaS | <li> アーキテクト、クラウドのクラウドから最適なメリットを享受するが、新しいコードが必要です <li> マイクロサービス クラウドネイティブ アプローチ <li> 最新のミッション クリティカルなアプリケーション、クラウド回復性のある非常にスケーラブルな <li> フル マネージド サービス <li> スケールに最適化 <li> サブシステムによる自律的な機敏性に最適化 <li> 展開と DevOps 上の構築 |
 | **課題** |
-| <li> 運用費のシフトまたはデータセンターの閉鎖以外の小さなクラウドの価値 <li> ほとんどが管理: しない OS またはミドルウェア修正プログラムの適用。Terraform、Spinnaker、puppet などのインフラストラクチャ ソリューションの使用可能性があります。 | <li> 追加の手順では、開発者と IT 運用の学習曲線は、コンテナー化 <li> DevOps および CI/CD パイプラインは、通常、'は' このアプローチです。 現在のカルチャ、組織の存在、ことが考えられますさらなる課題がない場合| <li> クラウド ネイティブ アプリとマイクロ サービス アーキテクチャの見直しが必要です。 し、通常、大幅なコード リファクタリングまたは書き換え最新化するときに (大きくなり、時間と予算) が必要です。 <li> DevOps および CI/CD パイプラインは、通常、'は' このアプローチです。 現在のカルチャ、組織の存在、ことが考えられますさらなる課題がない場合|
+| <li> 運用費のシフトまたはデータセンターの閉鎖以外の小さなクラウドの価値 <li> ほとんどを管理できます。OS またはミドルウェア修正プログラムの適用はありません。Terraform、Spinnaker、puppet などのインフラストラクチャ ソリューションの使用可能性があります。 | <li> 追加の手順では、開発者と IT 運用の学習曲線は、コンテナー化 <li> DevOps および CI/CD パイプラインは、通常、'は' このアプローチです。 現在のカルチャ、組織の存在、ことが考えられますさらなる課題がない場合| <li> クラウド ネイティブ アプリとマイクロ サービス アーキテクチャの見直しが必要です。 し、通常、大幅なコード リファクタリングまたは書き換え最新化するときに (大きくなり、時間と予算) が必要です。 <li> DevOps および CI/CD パイプラインは、通常、'は' このアプローチです。 現在のカルチャ、組織の存在、ことが考えられますさらなる課題がない場合|
 > **表 1-1** 既存の .NET アプリケーションとサービスの最新化パスのメリットと課題
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>成熟度レベル別の主要なテクノロジおよびアーキテクチャ
@@ -119,11 +113,11 @@ Web アプリケーションやサービスを最新化し、クラウドに移�
 
 最新化プロセス内の各成熟度レベルは、次の主要なテクノロジおよびアプローチに関連付けられています。
 
-- **クラウド インフラストラクチャ準備完了**(再ホストまたは basic リフトアンド シフト): 最初の手順として、多くの組織がクラウド移行戦略を迅速に実行する場合だけ必要です。 この場合、アプリケーションが再ホストされます。 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)、[Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) などのクラウドツールを基にした Azure への移行を支援するために必要なガイダンス、洞察、メカニズムを提供するサービスである [Azure Migrate](https://aka.ms/azuremigrate) を使用することで、ほとんどの再ホストは自動化することができます。 レガシ アプリケーションをクラウドに移動するときに、資産についてインフラストラクチャの詳細を確認することができるように、再ホストを手動で変更を設定することもできます。 ほとんどで、Azure Vm にアプリケーションを移行するなど、少しの構成変更だけで変更でしょう。 特に Azure で仮想ネットワークを作成する場合、このケースでのネットワークは、オンプレミス環境に似ています。
+- **クラウド インフラストラクチャ準備完了**(再ホストまたは basic リフトアンド シフト)。最初の手順としては、多くの組織は、クラウド移行戦略を迅速に実行する場合だけします。 この場合、アプリケーションが再ホストされます。 [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)、[Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) などのクラウドツールを基にした Azure への移行を支援するために必要なガイダンス、洞察、メカニズムを提供するサービスである [Azure Migrate](https://aka.ms/azuremigrate) を使用することで、ほとんどの再ホストは自動化することができます。 レガシ アプリケーションをクラウドに移動するときに、資産についてインフラストラクチャの詳細を確認することができるように、再ホストを手動で変更を設定することもできます。 ほとんどで、Azure Vm にアプリケーションを移行するなど、少しの構成変更だけで変更でしょう。 特に Azure で仮想ネットワークを作成する場合、このケースでのネットワークは、オンプレミス環境に似ています。
 
-- **クラウドに最適化された**(管理されたサービスと Windows コンテナー): このモデルは、アプリケーションの主要なアーキテクチャを変更することがなく、クラウドからのいくつかの大きなメリットを得る最適化のいくつかの重要な展開を作成する方法についてはします。 ここでの基本的な手順は、[Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/) サポートを既存の .NET Framework アプリケーションに追加することです。 この重要な手順 (コンテナー) では、全体的なリフト アンド シフトの作業が薄いのため、コードを操作を必要としません。 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) や Visual Studio などのツールと、[Docker](https://www.docker.com/) 用のツールを使用できます。 Visual Studio は、ASP.NET アプリケーションおよび Windows コンテナー イメージ用のスマート有効な既定値を自動的に選択します。 これらのツールは、迅速な内側のループと Azure へのコンテナーを取得する高速なパスの両方を提供します。 複数の環境に展開するときの機敏性が向上します。 次に、運用環境に移行すると、デプロイできますを使って Windows コンテナーに[Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)、[Azure Container Instances (ACI) と Windows Server 2016 とコンテナーの場合は、IaaS アプローチを使用した Azure Vm です。 少し複雑な複数コンテナー アプリケーションの場合などのオーケストレーターに[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)または[Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/)します。 この初期最新化中に追加することも資産などのツールによる監視など、クラウドから[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview);アプリ ライフ サイクルと CI/CD パイプライン[Azure DevOps サービス](https://visualstudio.microsoft.com/team-services/); と Azure で利用できる多くの複数のデータ リソース サービス。 たとえば、従来の [ASP.NET Web Forms](https://www.asp.net/web-forms) や [ASP.NET MVC](https://www.asp.net/mvc) を使用して最初に開発され、しかし現在は Windows コンテナーを使用して展開されるモノリシック Web アプリを変更することができます。 Windows コンテナーを使用するときには、データも [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/) のデータベースに移行する必要があります。アプリケーションの主要なアーキテクチャを変更せずにすべてを移行できます。
+- **クラウドに最適化された**(管理されたサービスと Windows コンテナー)。このモデルは、アプリケーションの主要なアーキテクチャを変更することがなく、クラウドからのいくつかの大きなメリットを得る最適化のいくつかの重要な展開を作成する方法については。 ここでの基本的な手順は、[Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/) サポートを既存の .NET Framework アプリケーションに追加することです。 この重要な手順 (コンテナー) では、全体的なリフト アンド シフトの作業が薄いのため、コードを操作を必要としません。 [Image2Docker](https://github.com/docker/communitytools-image2docker-win) や Visual Studio などのツールと、[Docker](https://www.docker.com/) 用のツールを使用できます。 Visual Studio は、ASP.NET アプリケーションおよび Windows コンテナー イメージ用のスマート有効な既定値を自動的に選択します。 これらのツールは、迅速な内側のループと Azure へのコンテナーを取得する高速なパスの両方を提供します。 複数の環境に展開するときの機敏性が向上します。 次に、運用環境に移行すると、デプロイできますを使って Windows コンテナーに[Azure Web App for Containers](https://azure.microsoft.com/services/app-service/containers/)、[Azure Container Instances (ACI) と Windows Server 2016 とコンテナーの場合は、IaaS アプローチを使用した Azure Vm です。 少し複雑な複数コンテナー アプリケーションの場合などのオーケストレーターに[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)または[Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/)します。 この初期最新化中に追加することも資産などのツールによる監視など、クラウドから[Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview);アプリ ライフ サイクルと CI/CD パイプライン[Azure DevOps サービス](https://visualstudio.microsoft.com/team-services/); と Azure で利用できる多くの複数のデータ リソース サービス。 たとえば、従来の [ASP.NET Web Forms](https://www.asp.net/web-forms) や [ASP.NET MVC](https://www.asp.net/mvc) を使用して最初に開発され、しかし現在は Windows コンテナーを使用して展開されるモノリシック Web アプリを変更することができます。 Windows コンテナーを使用するときには、データも [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/) のデータベースに移行する必要があります。アプリケーションの主要なアーキテクチャを変更せずにすべてを移行できます。
 
-- **クラウド ネイティブ**: 導入された設計について考える必要があります[クラウド ネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)で作業して、複数の独立した開発チームに大規模で複雑なアプリケーションを対象としているときに、アプリケーション開発および自律的に展開できるさまざまなマイクロ サービス。 また、マイクロ サービスごとの granularized と独立したスケーラビリティ原因です。 これらのアーキテクチャの手法は非常に重要な課題と複雑さに直面しますが、クラウド PaaS を使用して大幅に簡略化およびなどのオーケストレーター [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (マネージ Kubernetes)、[Azure サービスファブリックと[Azure Functions](https://azure.microsoft.com/services/functions/)サーバーレス アプローチします。 (マイクロ サービスやサーバーレス) などのすべての方法を通常必要とすると、クラウドの設計し、新しいコードを記述、特定の PaaS プラットフォームに適用されるコードまたはマイクロ サービスなど、特定のアーキテクチャに合致したコード。
+- **クラウド ネイティブ**:で導入された設計について考える必要があります[クラウド ネイティブ](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)ことができる別のマイクロ サービスで作業して複数の独立した開発チームに大規模で複雑なアプリケーションを対象としているときに、アプリケーション開発および自律的に展開します。 また、マイクロ サービスごとの granularized と独立したスケーラビリティ原因です。 これらのアーキテクチャの手法は非常に重要な課題と複雑さに直面しますが、クラウド PaaS を使用して大幅に簡略化およびなどのオーケストレーター [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (マネージ Kubernetes)、[Azure サービスファブリックと[Azure Functions](https://azure.microsoft.com/services/functions/)サーバーレス アプローチします。 (マイクロ サービスやサーバーレス) などのすべての方法を通常必要とすると、クラウドの設計し、新しいコードを記述、特定の PaaS プラットフォームに適用されるコードまたはマイクロ サービスなど、特定のアーキテクチャに合致したコード。
 
 図 1-3 は、成熟度レベルごとに使用できる内部のテクノロジを示しています。
 
@@ -166,15 +160,18 @@ Web アプリケーションやサービスを最新化し、クラウドに移�
 
 このガイドの目的は固有です。 せず、再設計とコードの変更をリフト アンド シフトの既存の .NET アプリケーションを実現するためのパスを示します。 最終的には、方法を示します、アプリケーションをクラウドに最適化されました。
 
-このガイドでは、マイクロ サービス アーキテクチャに発展させる方法などのクラウド ネイティブ アプリケーションを作成する方法を説明します。 アプリケーションを再設計またはマイクロ サービスに基づくまったく新しいアプリケーションを作成するには、電子書籍を参照してください。 [.NET マイクロ サービス: コンテナー化された .NET アプリケーション アーキテクチャ](https://aka.ms/microservicesebook)します。
+このガイドでは、マイクロ サービス アーキテクチャに発展させる方法などのクラウド ネイティブ アプリケーションを作成する方法を説明します。 アプリケーションを再設計またはマイクロ サービスに基づくまったく新しいアプリケーションを作成するには、電子書籍を参照してください。 [.NET マイクロ サービス。コンテナー化された .NET アプリケーション アーキテクチャ](https://aka.ms/microservicesebook)します。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **Microsoft プラットフォームとツールでの Docker アプリケーションのライフ サイクルをコンテナー化された**(ダウンロード可能な e-book)。 [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Microsoft プラットフォームとツールでの Docker アプリケーションのライフ サイクルをコンテナー化された**(ダウンロード可能な e-book) \
+  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
-- **.NET マイクロ サービス: コンテナー化された .NET アプリケーションのアーキテクチャ**(ダウンロード可能な e-book)。 [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET マイクロサービス: コンテナー化された .NET アプリケーション アーキテクチャ**(ダウンロード可能な e-book) \
+  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
 
-- **ASP.NET Core と Azure での最新の web アプリケーションの設計**(ダウンロード可能な e-book)。 [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **ASP.NET Core と Azure での最新の web アプリケーションの設計**(ダウンロード可能な e-book) \
+  [https://aka.ms/webappebook](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
@@ -199,4 +196,4 @@ GitHub の [EShopModernizing](https://github.com/dotnet-architecture/eShopModern
 このガイドが向上し、既存の .NET web アプリケーションを最新化するためのオプションを理解するために書き込まれました。 ガイドと関連するサンプル アプリケーションは進化しています。 フィードバックを歓迎します。 このガイドを改善する方法についてご意見があれば、[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book) に送信してください。
 
 >[!div class="step-by-step"]
-[次へ](lift-and-shift-existing-apps-azure-iaas.md)
+>[次へ](lift-and-shift-existing-apps-azure-iaas.md)

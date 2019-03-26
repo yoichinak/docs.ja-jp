@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369852"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464568"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
@@ -41,7 +41,7 @@ ms.locfileid: "57369852"
   
  次の図は、シンプルなレイアウトを示しています。  
   
- ![一般的なグリッド、重ね合わせる境界ボックスなし。](./media/boundingbox1.png "boundingbox1")  
+ ![一般的なグリッド、境界ボックスなしを示すスクリーン ショット。](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  このレイアウトは、次の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使用して実現できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57369852"
   
  1 つ<xref:System.Windows.Controls.TextBlock>要素内でホストされている、<xref:System.Windows.Controls.Grid>します。 最初の列に割り当てられた領域の左上隅だけに、テキストが入力中に、<xref:System.Windows.Controls.TextBlock>が実際に大きくします。 いずれかの境界ボックス<xref:System.Windows.FrameworkElement>を使用して取得できます、<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>メソッド。 次の図は、境界ボックス、<xref:System.Windows.Controls.TextBlock>要素。  
   
- ![TextBlock の境界ボックスが表示されます。](./media/boundingbox2.png "boundingbox2")  
+ ![TextBlock の境界ボックスが表示されていることを示すスクリーン ショット。](./media/layout/visible-textblock-bounding-box.png)  
   
  黄色の四角形に割り当てられた領域に示すように、<xref:System.Windows.Controls.TextBlock>要素は、その外観よりもはるかに大きい。 追加の要素が追加される、 <xref:System.Windows.Controls.Grid>、この割り当てを縮小または展開の種類と追加される要素のサイズに応じて、可能性があります。  
   

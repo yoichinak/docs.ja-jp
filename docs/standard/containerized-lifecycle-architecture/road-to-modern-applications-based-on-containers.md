@@ -4,12 +4,12 @@ description: Docker、コンテナーとマイクロ サービス アーキテ�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674433"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462683"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>コンテナーに基づいて最新のアプリケーションへの道
 
@@ -24,10 +24,10 @@ Microsoft は、豊富なガイダンス、サンプル アプリケーション
 その他 Microsoft の電子書籍に関連する以下の一覧内の Docker コンテナーを確認できます。
 
 - **.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
+  [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
 - **Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化します。** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
+  [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[前へ](docker-containers-images-and-registries.md)

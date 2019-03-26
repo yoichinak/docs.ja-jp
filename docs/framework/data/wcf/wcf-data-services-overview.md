@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094023"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465842"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services の概要
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、Web またはイントラネット用のデータ サービスの作成と使用を有効、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Uri によってアドレス可能なリソースとしてデータを公開できます。 したがって、Representational State Transfer (REST) のセマンティクス (標準的な HTTP 動詞 GET、PUT、POST、DELETE) を使用してデータにアクセスし、そのデータを変更できます。 このトピックでは、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で定義されるパターンとプラクティスの両方の概要について説明します。また、.NET Framework ベースのアプリケーションで [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] を利用するために [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] で提供される機能についても説明します。  
@@ -18,16 +18,14 @@ ms.locfileid: "56094023"
 ## <a name="address-data-as-resources"></a>リソースとしてのデータのアドレス指定  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は、URI でアドレス指定できるリソースとしてデータを公開します。 リソース パスは、Entity Data Model のエンティティとリレーションシップの規則に基づいて構築されます。 このモデルでは、エンティティは、顧客、注文、項目、および製品など、アプリケーション ドメイン内のデータの操作単位を表します。 詳細については、次を参照してください。 [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)します。  
   
- 
-  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、URI`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`からの注文のすべてを返します、`Northwind`で顧客に関連するデータ サービス、`CustomerID`の値 `ALFKI.`  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、URI`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`からの注文のすべてを返します、`Northwind`で顧客に関連するデータ サービス、`CustomerID`の値 `ALFKI.`  
   
  クエリ式を使用して、リソースに対して従来のクエリ操作 (フィルターの適用、並べ替え、ページングなど) を実行できます。 たとえば、`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` という URI は、リソースをフィルターして、$50 以上の運賃の注文だけを返します。 詳細については、次を参照してください。[にアクセスするデータ サービス リソース](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)します。  
   
 ## <a name="interoperable-data-access"></a>相互運用可能なデータ アクセス  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework を使用しないアプリケーションと相互運用可能なデータ サービスを作成する標準のインターネット プロトコルに基づいています。 データのアドレスの標準的な Uri を使用するため、アプリケーションがアクセスできると representational state transfer (REST) の具体的には標準的な HTTP 動詞のセマンティクスを使用して変更データの GET、PUT、POST、および削除します。 そのため、標準的な HTTP プロトコルを介して転送されるデータの解析、およびこれらのデータへのアクセスを行うことができる任意のクライアントからこれらのサービスにアクセスできます。  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は Atom 公開プロトコル (AtomPub) に対する一連の拡張を定義しています。 さまざまなクライアント アプリケーションおよびプラットフォームに対応するために、複数のデータ形式による HTTP 要求と応答をサポートしています。 
-  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードは、Atom、JavaScript Object Notation (JSON)、および通常の XML でデータを表現できます。 Atom が既定の形式ですが、フィードの形式は HTTP 要求のヘッダーで指定されます。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)と[OData:JSON 形式](https://go.microsoft.com/fwlink/?LinkID=185795)します。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は Atom 公開プロトコル (AtomPub) に対する一連の拡張を定義しています。 さまざまなクライアント アプリケーションおよびプラットフォームに対応するために、複数のデータ形式による HTTP 要求と応答をサポートしています。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードは、Atom、JavaScript Object Notation (JSON)、および通常の XML でデータを表現できます。 Atom が既定の形式ですが、フィードの形式は HTTP 要求のヘッダーで指定されます。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)と[OData:JSON 形式](https://go.microsoft.com/fwlink/?LinkID=185795)します。  
   
  としてデータを発行するときに、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィード、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]キャッシュや認証などの操作の他の既存のインターネット機能に依存しています。 これを実現する[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]既存のホスト アプリケーションおよび ASP.NET、Windows Communication Foundation (WCF) およびインターネット インフォメーション サービス (IIS) などのサービスと統合します。  
   
@@ -36,8 +34,7 @@ ms.locfileid: "56094023"
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] と ADO.NET Entity Framework の組み合わせにより、リレーショナル データを公開するデータ サービスを作成できます。 Entity Data Model ツールを使用して、エンティティとしてアドレス指定可能なリソースを含むデータ モデルを作成すると同時に、このモデルと基になるデータベースのテーブルの間のマッピングを定義できます。 詳細については、次を参照してください。 [Entity Framework プロバイダー](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)します。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 実装を返すデータ構造を公開するデータ サービスを作成することもできます、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、.NET Framework 型からデータを公開するデータ サービスを作成できます。 
-  <xref:System.Data.Services.IUpdatable> インターフェイスも実装すると、作成、更新、および削除操作がサポートされます。 詳細については、次を参照してください。[リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 実装を返すデータ構造を公開するデータ サービスを作成することもできます、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、.NET Framework 型からデータを公開するデータ サービスを作成できます。 <xref:System.Data.Services.IUpdatable> インターフェイスも実装すると、作成、更新、および削除操作がサポートされます。 詳細については、次を参照してください。[リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)します。  
   
  方法の図解は[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]統合、これらのデータ プロバイダーでは、このトピックの「アーキテクチャ図を参照してください。  
   
@@ -56,7 +53,7 @@ ms.locfileid: "56094023"
 ## <a name="architecture-overview"></a>アーキテクチャの概要  
  次の図は、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を公開するためのアーキテクチャ[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードとでこれらのフィードを使用して[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-クライアント ライブラリを有効にします。  
   
- ![WCF Data Services のアーキテクチャ図](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+ ![WCF Data Services のアーキテクチャの図に示すスクリーン ショット。](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>関連項目
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)

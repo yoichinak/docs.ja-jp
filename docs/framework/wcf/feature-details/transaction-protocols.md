@@ -2,17 +2,17 @@
 title: トランザクション プロトコル
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 60b9da567e8c82edf505a974c9884f6f1738747b
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 26dd82936e7131dd41dd1b2ab1cf830c6fe7d591
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066237"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463944"
 ---
 # <a name="transaction-protocols"></a>トランザクション プロトコル
 Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-coordination プロトコルを実装します。  
   
-|仕様/ドキュメント|Version|リンク|  
+|仕様/ドキュメント|Version|Link|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96104](https://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
 |WS-AtomicTransaction|1<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-
   
  ここでは、WS-AtomicTransaction (WS-AT) 仕様のセキュリティに関する構成と、トランザクション マネージャー間の通信に使用されるセキュリティで保護されたバインディングについて説明します。 このドキュメントで説明されているアプローチは、IBM、IONA、Sun Microsystems などを含む WS-AT および WS-Coordination の各種の実装でテスト済みのものです。  
   
- 次の図は、2 つのトランザクション マネージャー (Transaction Manager 1 と Transaction Manager 2)、および 2 つのアプリケーション (Application 1 と Application 2) 間の相互運用性を示しています。  
+ 次の図は、Transaction Manager 1 と Transaction Manager 2 では、2 つのトランザクション マネージャーとアプリケーションの 1 とアプリケーション 2 の 2 つのアプリケーション間の相互運用性を示しています。  
   
- ![トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "トランザクション マネージャー")  
+ ![マネージャーのトランザクション間の相互作用を示すスクリーン ショット。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  1 つのイニシエーター (I) と 1 つの参加要素 (P) を持つ、一般的な WS-Coordination/WS-AtomicTransaction のシナリオを考えます。 イニシエーターと参加要素の両方にトランザクション マネージャー (それぞれ ITM および PTM と呼びます) があります。 2 フェーズ コミットは、このトピックでは 2PC と呼びます。  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-
   
 -   アプリケーション メッセージ  
   
- 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインディング構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 このセクションでは、WCF によって使用されるこれらのクラスの各プロトコル バインディングについて説明します。  
+ 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 このセクションでは、WCF によって使用されるこれらのクラスの各プロトコル バインディングについて説明します。  
   
  このドキュメントでは、次の XML 名前空間と関連付けられたプレフィックスが使用されます。  
   
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-
 #### <a name="activation-and-registration-binding-configuration"></a>アクティベーションと登録のバインド構成  
  WCF では、HTTPS 経由での相関関係で要求/応答の二重バインディングが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
   
-#### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインド構成  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
  WCF では、HTTPS 経由で一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
  B1131:実装をサポートする必要があります`wsa:ReferenceParameters`Ws-addressing WCF の 2 pc メッセージの関連付けを実現するために記載されています。  
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-
   
  新しい`t:IssuedTokens`への送信のヘッダーを生成する`wscoor:CreateCoordinationContextResponse`メッセージ。  
   
-#### <a name="registration-message-binding-configuration"></a>登録メッセージのバインド構成  
+#### <a name="registration-message-binding-configuration"></a>登録メッセージのバインディング構成  
  B1231:WCF が双方向の HTTPS バインドを使用して (で説明されている[メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 要求/応答メッセージは、WS-AT 1.0 の WS-Addressing 2004/08 と WS-AT 1.1 の WS-Addressing 2005/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
@@ -120,7 +120,7 @@ Windows Communication Foundation (WCF) は、Ws-atomic Transaction および Ws-
   
  `wsse:Timestamp`要素を使用して署名する必要があります、`SecurityContextToken STx`発行します。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
   
-#### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインド構成  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
  WCF では、HTTPS 経由で一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
  B1241:実装をサポートする必要があります`wsa:ReferenceParameters`Ws-addressing WCF の 2 pc メッセージの関連付けを実現するために記載されています。  

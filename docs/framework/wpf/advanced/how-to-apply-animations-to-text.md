@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356963"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463125"
 ---
 # <a name="how-to-apply-animations-to-text"></a>方法: アニメーションをテキストに適用する
 アニメーションを利用すると、アプリケーションのテキストの表示方法や見た目を変えることができます。 次の例のテキストの表示に影響を与えるさまざまな種類のアニメーションを使用して、<xref:System.Windows.Controls.TextBlock>コントロール。  
@@ -26,9 +26,8 @@ ms.locfileid: "57356963"
   
  次の図の効果を示しています、<xref:System.Windows.Controls.TextBlock>コントロールからの不透明度を変更する`1.00`に`0.00`によって定義された 5 秒間隔中に、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。  
   
- ![テキストの不透明度を 1.00 から 0.00 に変更する](./media/fadedtext01.png "FadedText01")  
-テキストの不透明度が 1.00 から 0.00 に変化します  
-  
+ ![不透明度を 1.00 から 0.00 に変更するテキスト。](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  次の例では、<xref:System.Windows.Media.Animation.ColorAnimation>テキスト ブロックの前景色をアニメーション化します。 前景色の値が 5 秒間、ある色から別の色に変化し、その後、色の値を戻します。  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  

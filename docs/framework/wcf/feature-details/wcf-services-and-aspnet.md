@@ -2,12 +2,12 @@
 title: WCF サービスと ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282608"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463476"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "55282608"
 
 インターネット インフォメーション サービス (IIS) でホストされる WCF サービスは、同じコンピューターでことができます。ASPX ページと 1 つの一般的なアプリケーション ドメイン内の ASMX Web サービス。 ASP.NET では、AppDomain の管理と WCF と ASP.NET HTTP ランタイムの両方の動的なコンパイルなどの一般的なインフラストラクチャ サービスを提供します。 WCF の既定の構成は、サイド バイ サイドで ASP.NET を使用しました。
 
-![WCF サービスおよび ASP .NET: 状態の共有](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![WCF サービスおよび ASP .NET を示すスクリーン ショット: 状態を共有します。](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 ASP.NET HTTP ランタイムは、ASP.NET 要求の処理が場合でも、同じ AppDomain でこれらのサービスがホストされているは、ASP.NET がコンテンツに WCF サービス宛ての要求の処理に関与しません。 代わりに、WCF サービス モデルは WCF サービス宛てのメッセージをインターセプトし、それを WCF トランスポート/チャネル スタックを介してルーティングします。
 
