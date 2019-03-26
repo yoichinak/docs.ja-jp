@@ -61,7 +61,7 @@ ms.locfileid: "54586857"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>メッセージ部分の保護  
- メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージ コントラクトの詳細については、次を参照してください。 [Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)します。  
+ メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージ コントラクトの詳細については、[Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)を参照してください。  
   
 #### <a name="to-protect-a-message-body"></a>メッセージ本文を保護するには  
   

@@ -17,7 +17,7 @@ ms.locfileid: "54617188"
   
 ### <a name="to-determine-the-client-credential-type"></a>クライアント資格情報の種類を特定するには  
   
-1.  サービスのメタデータ エンドポイントからメタデータを取得します。 一般的に、メタデータは、選択したプログラミング言語 (既定は Visual C#) のクライアント コードおよび XML 構成ファイルという 2 つのファイルで構成されています。 メタデータは、クライアント コードおよびクライアント構成を返す Svcutil.exe ツールを使用して取得できます。 詳細については、次を参照してください。[メタデータを取得する](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)と[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
+1.  サービスのメタデータ エンドポイントからメタデータを取得します。 一般的に、メタデータは、選択したプログラミング言語 (既定は Visual C#) のクライアント コードおよび XML 構成ファイルという 2 つのファイルで構成されています。 メタデータは、クライアント コードおよびクライアント構成を返す Svcutil.exe ツールを使用して取得できます。 詳細については、[メタデータを取得する](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)と[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を参照してください。  
   
 2.  XML 構成ファイルを開きます。 Svcutil.exe ツールを使用する場合、ファイルの既定の名前は、Output.config です。  
   

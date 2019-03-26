@@ -49,12 +49,12 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  クライアント アプリケーションやクライアント アプリケーションは WCF クライアント オブジェクトを作成し、使用できる別のアセンブリに、このコントラクト コードをコンパイルできます。 構成ファイルを使用してサービスに正しく接続するクライアント オブジェクトを構成できます。  
   
- このプロセスの例は、次を参照してください。[方法。クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。 コントラクトの詳細については、次を参照してください。[コントラクト](../../../docs/framework/wcf/feature-details/contracts.md)します。  
+ このプロセスの例は、[方法。クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)を参照してください。 コントラクトの詳細については、[コントラクト](../../../docs/framework/wcf/feature-details/contracts.md)を参照してください。  
   
 ## <a name="create-a-wcf-client-object"></a>WCF クライアント オブジェクトを作成する  
  WCF クライアントは、クライアントがリモート サービスとの通信に使用できる形式で WCF サービスを表すローカル オブジェクトです。 WCF クライアントの種類、対象サービスを実装するコントラクト、サービス操作を呼び出すには、直接クライアント オブジェクトを使用できますし、1 つ作成し、構成したときにします。 WCF ランタイム メソッドの呼び出しをメッセージに変換、サービスに送信、応答をリッスンおよび戻り値として、WCF クライアント オブジェクトにこれらの値を返しますまたは`out`または`ref`パラメーター。  
   
- 接続してサービスを使用して WCF クライアント チャネル オブジェクトを使用することもできます。 詳細については、次を参照してください。 [WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)します。  
+ 接続してサービスを使用して WCF クライアント チャネル オブジェクトを使用することもできます。 詳細については、[WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)を参照してください。  
   
 #### <a name="creating-a-new-wcf-object"></a>新しい WCF オブジェクトの作成  
  サービスアプリケーションから次の簡単なサービス コントラクトが生成されていることを前提に、<xref:System.ServiceModel.ClientBase%601> クラスの使用方法を説明します。  
@@ -127,19 +127,19 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- WCF クライアント オブジェクトを作成する操作を呼び出すことができ、次のコード例として、そのメソッドを呼び出すことを示します。 開始タグを呼び出しと WCF クライアント オブジェクトの終了が 1 つの try/catch ブロック内で発生することに注意してください。 詳細については、次を参照してください。[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)と[使用終了、中止 WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)します。  
+ WCF クライアント オブジェクトを作成する操作を呼び出すことができ、次のコード例として、そのメソッドを呼び出すことを示します。 開始タグを呼び出しと WCF クライアント オブジェクトの終了が 1 つの try/catch ブロック内で発生することに注意してください。 詳細については、[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)と[使用終了、中止 WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)を参照してください。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>エラー処理  
- 基になるクライアント チャネルを開いたとき (明示的に開いた場合、または操作を呼び出すことによって自動的に開いた場合)、クライアントまたはチャネル オブジェクトを使用して操作を呼び出したとき、基になるクライアント チャネルを閉じたときときに、クライアント アプリケーションで例外が発生する可能性があります。 少なくともアプリケーションでは、操作から返される SOAP エラーの結果としてスローされる <xref:System.TimeoutException?displayProperty=nameWithType> オブジェクトに加え、可能性のある <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 例外と <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外を処理することをお勧めします。 操作コントラクトで指定されている SOAP エラーは、<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> としてクライアント アプリケーションに送信されます。ここで、型パラメーターは SOAP エラーの詳細な型です。 クライアント アプリケーションでエラー状態の処理の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。 詳細な例に示すクライアントでのエラーを処理する方法を参照してください。[予想例外](../../../docs/framework/wcf/samples/expected-exceptions.md)します。  
+ 基になるクライアント チャネルを開いたとき (明示的に開いた場合、または操作を呼び出すことによって自動的に開いた場合)、クライアントまたはチャネル オブジェクトを使用して操作を呼び出したとき、基になるクライアント チャネルを閉じたときときに、クライアント アプリケーションで例外が発生する可能性があります。 少なくともアプリケーションでは、操作から返される SOAP エラーの結果としてスローされる <xref:System.TimeoutException?displayProperty=nameWithType> オブジェクトに加え、可能性のある <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 例外と <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外を処理することをお勧めします。 操作コントラクトで指定されている SOAP エラーは、<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> としてクライアント アプリケーションに送信されます。ここで、型パラメーターは SOAP エラーの詳細な型です。 クライアント アプリケーションでエラー状態の処理の詳細については、[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。 詳細な例に示すクライアントでのエラーを処理する方法を参照してください。[予想例外](../../../docs/framework/wcf/samples/expected-exceptions.md)します。  
   
 ## <a name="configuring-and-securing-clients"></a>クライアントの構成とセキュリティ保護  
  クライアントを構成するには、まず、そのクライアントまたはチャネル オブジェクトに必要なターゲット エンドポイント情報を読み込みます。通常は構成ファイルから読み込みますが、クライアント コンストラクターとプロパティを使用してプログラムで読み込むこともできます。 ただし、特定のクライアントの動作を有効にし、多くのセキュリティ シナリオに対応するには、追加の構成手順が必要です。  
   
- たとえば、サービス コントラクトのセキュリティ要件はサービス コントラクト インターフェイスに宣言します。Svcutil.exe で構成ファイルを作成した場合、通常そのファイルにはサービスのセキュリティ要件に対応できるバインディングが含まれています。 ただし、クライアント資格情報の構成など、さらに多くのセキュリティ構成が必要な場合もあります。 WCF クライアントのセキュリティの構成については、次を参照してください。[クライアントのセキュリティで保護する](../../../docs/framework/wcf/securing-clients.md)します。  
+ たとえば、サービス コントラクトのセキュリティ要件はサービス コントラクト インターフェイスに宣言します。Svcutil.exe で構成ファイルを作成した場合、通常そのファイルにはサービスのセキュリティ要件に対応できるバインディングが含まれています。 ただし、クライアント資格情報の構成など、さらに多くのセキュリティ構成が必要な場合もあります。 WCF クライアントのセキュリティの構成については、[クライアントのセキュリティで保護する](../../../docs/framework/wcf/securing-clients.md)を参照してください。  
   
- また、カスタム ランタイム動作など、クライアント アプリケーションでいくつかのカスタム変更を有効にすることもできます。 カスタム クライアント動作を構成する方法の詳細については、次を参照してください。[クライアントの動作を構成する](../../../docs/framework/wcf/configuring-client-behaviors.md)します。  
+ また、カスタム ランタイム動作など、クライアント アプリケーションでいくつかのカスタム変更を有効にすることもできます。 カスタム クライアント動作を構成する方法の詳細については、[クライアントの動作を構成する](../../../docs/framework/wcf/configuring-client-behaviors.md)を参照してください。  
   
 ## <a name="creating-callback-objects-for-duplex-services"></a>双方向サービスのコールバック オブジェクトの作成  
  双方向サービスには、コントラクトの要件に従って呼び出すサービスのコールバック オブジェクトを提供するために、クライアント アプリケーションが実装する必要のあるコールバック コントラクトを指定します。 コールバック オブジェクトは完全なサービスではありません (たとえば、コールバック オブジェクトを使用してチャネルを初期化できません) が、実装と構成という目的においては、一種のサービスとして考えることができます。  
@@ -154,7 +154,7 @@ End Interface
   
  双方向の WCF クライアント オブジェクトの関数などの対応する双方向コールバック サービスの構成など、コールバックをサポートするために必要な機能を公開する例外を使用します。  
   
- たとえば、コールバック クラスの <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 属性のプロパティを使用して、コールバック オブジェクトの実行時の動作のさまざまな局面を制御できます。 また、別の例として、<xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> クラスを使用して、例外情報をコールバック オブジェクトを呼び出したサービスに返すこともできます。 詳細については、次を参照してください。[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)します。 完全なサンプルを参照してください。[双方向](../../../docs/framework/wcf/samples/duplex.md)します。  
+ たとえば、コールバック クラスの <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 属性のプロパティを使用して、コールバック オブジェクトの実行時の動作のさまざまな局面を制御できます。 また、別の例として、<xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> クラスを使用して、例外情報をコールバック オブジェクトを呼び出したサービスに返すこともできます。 詳細については、[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)を参照してください。 完全なサンプルを参照してください。[双方向](../../../docs/framework/wcf/samples/duplex.md)します。  
   
  インターネット インフォメーション サービス (IIS) 5.1 を実行する Windows XP コンピューターの場合、双方向クライアントでは <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> クラスを使用してクライアントのベース アドレスを指定する必要があります。そうしない場合は例外がスローされます。 次のコード例は、コードでこれを指定する方法を示します。  
   
@@ -169,7 +169,7 @@ End Interface
  操作の呼び出し方法は、クライアント開発者に完全に依存します。 これは、操作を構成するメッセージは、マネージ コードで表現するときに同期メソッドまたは非同期メソッドのどちらかにマップできるためです。 したがって、操作を非同期に呼び出すクライアントを作成する場合、Svcutil.exe の `/async` オプションを使用して非同期クライアント コードを生成できます。 詳細については、「[方法 :サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>WCF クライアント チャネルを使用したサービスの呼び出し  
- WCF クライアントの型を拡張<xref:System.ServiceModel.ClientBase%601>から派生した<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>基になるチャネル システムを公開するインターフェイス。 ターゲットのサービス コントラクトと <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> クラスを使用して、サービスを呼び出すことができます。 詳細については、次を参照してください。 [WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)します。  
+ WCF クライアントの型を拡張<xref:System.ServiceModel.ClientBase%601>から派生した<xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>基になるチャネル システムを公開するインターフェイス。 ターゲットのサービス コントラクトと <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> クラスを使用して、サービスを呼び出すことができます。 詳細については、[WCF クライアント アーキテクチャ](../../../docs/framework/wcf/feature-details/client-architecture.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>

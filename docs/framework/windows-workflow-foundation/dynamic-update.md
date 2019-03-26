@@ -60,7 +60,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```
 
 > [!NOTE]
-> このトピックに付属するサンプル コードをダウンロードするには、次を参照してください。[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)します。
+> このトピックに付属するサンプル コードをダウンロードするには、[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)を参照してください。
 
 ### <a name="Update"></a> 必要な変更を反映するようにワークフロー定義を更新します。
 
@@ -198,4 +198,4 @@ wfApp.Load(InstanceId);
 ```
 
 > [!NOTE]
-> このトピックに付属するサンプル コードをダウンロードするには、次を参照してください。[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)します。
+> このトピックに付属するサンプル コードをダウンロードするには、[動的更新のサンプル コード](https://go.microsoft.com/fwlink/?LinkId=227905)を参照してください。

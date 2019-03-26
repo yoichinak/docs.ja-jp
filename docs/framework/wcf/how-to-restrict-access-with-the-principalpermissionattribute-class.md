@@ -17,7 +17,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54590569"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>方法: PrincipalPermissionAttribute クラスでアクセスを制限します。
-Windows ドメイン コンピューターのリソースへのアクセスを制御することは、基本的なセキュリティ タスクです。 たとえば、給与情報のような機密データは、特定のユーザーだけが表示できるようにする必要があります。 ここでは、ユーザーが定義済みグループに属していることを要求することによって、メソッドへのアクセスを制限する方法について説明します。 実際のサンプルでは、次を参照してください。[サービス操作へのアクセスの承認](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)します。  
+Windows ドメイン コンピューターのリソースへのアクセスを制御することは、基本的なセキュリティ タスクです。 たとえば、給与情報のような機密データは、特定のユーザーだけが表示できるようにする必要があります。 ここでは、ユーザーが定義済みグループに属していることを要求することによって、メソッドへのアクセスを制限する方法について説明します。 実際のサンプルでは、[サービス操作へのアクセスの承認](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)を参照してください。  
   
  タスクは、2 つの別個の手順で構成されます。 最初の手順では、グループを作成してユーザーを追加します。 2 番目の手順では、グループを指定するために <xref:System.Security.Permissions.PrincipalPermissionAttribute> クラスを適用します。  
   
@@ -39,7 +39,7 @@ Windows ドメイン コンピューターのリソースへのアクセスを�
   
 ### <a name="to-demand-user-membership"></a>ユーザー メンバーシップを要求するには  
   
-1.  実装されたサービス コントラクト コードを含む Windows Communication Foundation (WCF) のコード ファイルを開きます。 コントラクトの実装の詳細については、次を参照してください。 [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)します。  
+1.  実装されたサービス コントラクト コードを含む Windows Communication Foundation (WCF) のコード ファイルを開きます。 コントラクトの実装の詳細については、[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
   
 2.  特定のグループに制限される必要がある各メソッドに <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性を適用します。 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> プロパティを <xref:System.Security.Permissions.SecurityAction.Demand> に設定し、<xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> プロパティをグループの名前に設定します。 例:  
   
@@ -52,7 +52,7 @@ Windows ドメイン コンピューターのリソースへのアクセスを�
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>証明書を使用したメソッドへのアクセスの制御  
  クライアント資格情報の種類が "証明書" の場合は、`PrincipalPermissionAttribute` クラスを使用してメソッドへのアクセスを制御することもできます。 そのためには、証明書のサブジェクトと拇印が必要になります。  
   
- そのプロパティ用の証明書を検証するを参照してください。[方法。MMC スナップインで証明書を表示](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。 拇印の値を検索するには、次を参照してください。[方法。証明書のサムプリントを取得](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
+ そのプロパティ用の証明書を検証するを参照してください。[方法。MMC スナップインで証明書を表示](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。 拇印の値を検索するには、[方法。証明書のサムプリントを取得](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)を参照してください。  
   
 #### <a name="to-control-access-using-a-certificate"></a>証明書を使用してアクセスを制御するには  
   

@@ -31,7 +31,7 @@ SQL Workflow Instance Store は、一連の既知のプロパティをストア�
   
  ワークフロー ランタイムは、最初の 3 つのプロパティの値を指定します。 ワークフロー サービス ホストの値を提供する、**中断の理由**プロパティ。 SQL Workflow Instance Store 自体によって値が提供、**最後に更新されたコンピューター**プロパティ。  
   
- また、SQL Workflow Instance Store の機能により、永続性データベースで値を格納したり、クエリで使用したりするカスタム プロパティを指定することができます。 カスタムの昇格の詳細については、次を参照してください。[ストア拡張](store-extensibility.md)します。  
+ また、SQL Workflow Instance Store の機能により、永続性データベースで値を格納したり、クエリで使用したりするカスタム プロパティを指定することができます。 カスタムの昇格の詳細については、[ストア拡張](store-extensibility.md)を参照してください。  
   
 ## <a name="views"></a>Views  
  インスタンス ストアには、次のビューがあります。 参照してください[永続性データベース スキーマ](persistence-database-schema.md)の詳細。  

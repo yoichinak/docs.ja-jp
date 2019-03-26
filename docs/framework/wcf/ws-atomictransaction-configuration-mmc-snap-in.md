@@ -33,7 +33,7 @@ regasm.exe /codebase WsatUI.dll
   
  WS-AtomicTransaction サポートをローカル マシン上にのみ構成する必要がある場合は、このツールのコマンド ライン バージョンを使用できます。 コマンド ライン ツールの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)トピック。  
   
- MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、次を参照してください。 [Ws-atomic トランザクションのサポートを構成する](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)します。  
+ MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、[Ws-atomic トランザクションのサポートを構成する](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)を参照してください。  
   
 ### <a name="user-interface-description"></a>ユーザー インターフェイスの説明  
  **Ws-atomictransaction ネットワーク サポートを有効にする**:  
@@ -84,7 +84,7 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  別のトレース コンシューマーが WS-AT トレース プロバイダーを使用している場合は、トレース イベントの新しいログ セッションを作成できません。 このときにログ記録を構成しようとすると、エラー メッセージ "プロバイダーを有効にできませんでした。 エラー コード:1".  
   
- トレースとログ記録の詳細については、次を参照してください。[管理と診断](../../../docs/framework/wcf/diagnostics/index.md)します。  
+ トレースとログ記録の詳細については、[管理と診断](../../../docs/framework/wcf/diagnostics/index.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [WS-AtomicTransaction サポートの構成](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

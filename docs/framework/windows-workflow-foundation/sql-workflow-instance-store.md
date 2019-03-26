@@ -19,7 +19,7 @@ ms.locfileid: "57715673"
   
  このセクションのトピックでは、SQL Workflow Instance Store のプロパティと機能、およびストアの構成方法の詳細を説明します。  
   
- Windows Server App Fabric には、インスタンス ストアを簡単に構成および使用できる独自のインスタンス ストアとツールが用意されています。 詳細については、次を参照してください。 [Windows Server App Fabric のインスタンス ストア](https://go.microsoft.com/fwlink/?LinkId=201201)します。 App Fabric SQL Server 永続性データベース参照の詳細については[App Fabric SQL Server 永続性データベース](https://go.microsoft.com/fwlink/?LinkId=201202)  
+ Windows Server App Fabric には、インスタンス ストアを簡単に構成および使用できる独自のインスタンス ストアとツールが用意されています。 詳細については、[Windows Server App Fabric のインスタンス ストア](https://go.microsoft.com/fwlink/?LinkId=201201)を参照してください。 App Fabric SQL Server 永続性データベース参照の詳細については[App Fabric SQL Server 永続性データベース](https://go.microsoft.com/fwlink/?LinkId=201202)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

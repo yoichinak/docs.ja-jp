@@ -98,7 +98,7 @@ ms.locfileid: "57708640"
         }  
         ```  
   
-         アクティビティ デザイナーの登録の詳細については、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)です。  
+         アクティビティ デザイナーの登録の詳細については、[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)を参照してください。  
   
     5.  
   `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  

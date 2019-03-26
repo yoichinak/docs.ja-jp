@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **必要なアクティビティ引数 'Operand1' の値が指定されませんでした。**  
 > [!NOTE]
-> 詳細を確認して検証エラーおよび警告の処理については、次を参照してください。[アクティビティの検証を呼び出す](invoking-activity-validation.md)します。  
+> 詳細を確認して検証エラーおよび警告の処理については、[アクティビティの検証を呼び出す](invoking-activity-validation.md)を参照してください。  
   
 ## <a name="using-overload-groups"></a>オーバーロード グループの使用
 

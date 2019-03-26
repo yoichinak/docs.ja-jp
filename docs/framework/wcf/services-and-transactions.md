@@ -14,7 +14,7 @@ ms.locfileid: "54736404"
 # <a name="services-and-transactions"></a>サービスとトランザクション
 Windows Communication Foundation (WCF) アプリケーションでは、クライアントからトランザクションを開始でき、サービス操作内でトランザクションを調整することができます。 クライアントはトランザクションを開始し、複数のサービス操作を呼び出す可能性があります。サービス操作が、1 つの単位としてコミットまたはロールバックされます。  
   
- サービス コントラクトでトランザクション動作を有効にするには、<xref:System.ServiceModel.ServiceBehaviorAttribute> を指定し、クライアント トランザクションを必要とするサービス操作について <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> プロパティと <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティを設定します。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> パラメーターは、未処理の例外がスローされなかった場合に、メソッドが実行されているトランザクションが自動的に完了されるかどうかを指定します。 これらの属性の詳細については、次を参照してください。 [ServiceModel トランザクションの属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)します。  
+ サービス コントラクトでトランザクション動作を有効にするには、<xref:System.ServiceModel.ServiceBehaviorAttribute> を指定し、クライアント トランザクションを必要とするサービス操作について <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> プロパティと <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> プロパティを設定します。 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> パラメーターは、未処理の例外がスローされなかった場合に、メソッドが実行されているトランザクションが自動的に完了されるかどうかを指定します。 これらの属性の詳細については、[ServiceModel トランザクションの属性](../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)を参照してください。  
   
  データベース更新の記録など、サービス操作で実行され、リソース マネージャーで管理される作業は、クライアント トランザクションの一部です。  
   

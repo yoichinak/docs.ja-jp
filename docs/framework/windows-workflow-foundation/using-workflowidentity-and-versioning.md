@@ -10,7 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57708172"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity と Versioning の使用
-<xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー アプリケーションの開発者は、名前と <xref:System.Version> をワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。 動的更新については、次を参照してください。[動的更新](dynamic-update.md)します。  
+<xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー アプリケーションの開発者は、名前と <xref:System.Version> をワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、[WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)を参照してください。 動的更新については、[動的更新](dynamic-update.md)を参照してください。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
@@ -84,7 +84,7 @@ wfApp.Load(instanceId);
  永続化されたワークフロー インスタンスの <xref:System.Activities.WorkflowIdentity> を取得するには、<xref:System.Activities.WorkflowApplication.GetInstance%2A> メソッドを使用します。 <xref:System.Activities.WorkflowApplication.GetInstance%2A> メソッドは、永続化されたワークフロー インスタンスの <xref:System.Activities.WorkflowApplication.Id%2A>、および永続化されたインスタンスを格納する <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を取得して、<xref:System.Activities.WorkflowApplicationInstance> を返します。 <xref:System.Activities.WorkflowApplicationInstance> には、永続化されたワークフロー インスタンスに関する情報 (関連付けられた <xref:System.Activities.WorkflowIdentity> など) が格納されます。 この関連付けられた <xref:System.Activities.WorkflowIdentity> は、ワークフロー インスタンスを読み込んで再開するときに、適切なワークフロー定義を指定するためにホストで使用できます。  
   
 > [!NOTE]
->  null の <xref:System.Activities.WorkflowIdentity> は有効で、ホストで使用すると、関連付けられた <xref:System.Activities.WorkflowIdentity> がない、永続化されたインスタンスを適切なワークフロー定義にマップできます。 このシナリオは、ワークフロー アプリケーションがワークフローのバージョン管理で最初に記述されなかった場合、またはアプリケーションが [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] からアップグレードされた場合に発生する可能性があります。 詳細については、次を参照してください。[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)します。  
+>  null の <xref:System.Activities.WorkflowIdentity> は有効で、ホストで使用すると、関連付けられた <xref:System.Activities.WorkflowIdentity> がない、永続化されたインスタンスを適切なワークフロー定義にマップできます。 このシナリオは、ワークフロー アプリケーションがワークフローのバージョン管理で最初に記述されなかった場合、またはアプリケーションが [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] からアップグレードされた場合に発生する可能性があります。 詳細については、[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)を参照してください。  
   
  次の例では、`Dictionary<WorkflowIdentity, Activity>`関連付けるために使用<xref:System.Activities.WorkflowIdentity>を使用して、一致するワークフロー定義とワークフロー インスタンスを開始、`MortgageWorkflow`に関連付けられているワークフロー定義、 `identityV1` <xref:System.Activities.WorkflowIdentity>.  
   

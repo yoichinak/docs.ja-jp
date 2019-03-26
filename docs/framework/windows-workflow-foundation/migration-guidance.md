@@ -36,7 +36,7 @@ ms.locfileid: "57719677"
  [WF のガイダンス:ステート マシン](https://go.microsoft.com/fwlink/?LinkId=153855)  
  ステート マシンのアクティビティがない場合の WF4 の制御フロー モデリングについて説明します。  
   
- このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、次を参照してください。 [Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](state-machine-workflows.md)します。  
+ このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、[Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](state-machine-workflows.md)を参照してください。  
   
  [WF 移行のクックブック:カスタム アクティビティ](https://go.microsoft.com/fwlink/?LinkId=153856)  
  WF3 のカスタム アクティビティを WF4 で再設計する場合のサンプルと手順について説明します。  
