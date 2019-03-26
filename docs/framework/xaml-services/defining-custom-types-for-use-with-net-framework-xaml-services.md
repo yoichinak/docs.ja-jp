@@ -23,7 +23,7 @@ ms.locfileid: "58042629"
   
  オブジェクト要素として、オブジェクトをインスタンス化することができます、作成したオブジェクトを基になる型としてオブジェクトを使用する任意のプロパティのプロパティ要素の形式を入力します。  
   
- 値コンバーターを有効にした場合は、これらの条件を満たしていない型のオブジェクトの値を行うことができますも。 詳細については、次を参照してください。[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)します。  
+ 値コンバーターを有効にした場合は、これらの条件を満たしていない型のオブジェクトの値を行うことができますも。 詳細については、[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)を参照してください。  
   
 ### <a name="structures"></a>構造体  
  構造体は、XAML で CLR の定義によって構築することが常にします。 これは、CLR コンパイラは構造体の既定のコンス トラクターを暗黙的に作成されるためです。 このコンス トラクターでは、すべてのプロパティ値を既定値を初期化します。  
@@ -39,7 +39,7 @@ ms.locfileid: "58042629"
 ## <a name="enumerations"></a>列挙  
  列挙体では、XAML のネイティブな型変換動作があります。 XAML で指定された列挙定数の名前は、基になる列挙型に対して解決し、XAML オブジェクト ライターに列挙値を返します。  
   
- XAML は、ある列挙型のフラグ スタイルの使用状況をサポートしている<xref:System.FlagsAttribute>適用します。 詳細については、次を参照してください。 [XAML 構文の詳細](../wpf/advanced/xaml-syntax-in-detail.md)します。 ([XAML 構文の詳細](../wpf/advanced/xaml-syntax-in-detail.md)は WPF のユーザー向けに書き込まれますが、そのトピックの情報の大部分は実装する特定のフレームワークに固有ではない XAML に関連します)。  
+ XAML は、ある列挙型のフラグ スタイルの使用状況をサポートしている<xref:System.FlagsAttribute>適用します。 詳細については、[XAML 構文の詳細](../wpf/advanced/xaml-syntax-in-detail.md)を参照してください。 ([XAML 構文の詳細](../wpf/advanced/xaml-syntax-in-detail.md)は WPF のユーザー向けに書き込まれますが、そのトピックの情報の大部分は実装する特定のフレームワークに固有ではない XAML に関連します)。  
   
 ## <a name="member-definitions"></a>メンバーの定義  
  型は、XAML の使用状況のメンバーを定義できます。 その特定の種類が XAML で使用できない場合でも、XAML の使用可能なメンバーを定義する型のことができます。 これは、CLR の継承によって実現します。 限り、メンバーを継承する何らかの種類が XAML の使用法は、型をサポートし、基になる型の XAML の使用状況をサポートしているまたはネイティブの XAML 構文を使用可能なメンバー、そのメンバーが XAML で使用します。  
@@ -47,7 +47,7 @@ ms.locfileid: "58042629"
 ### <a name="properties"></a>プロパティ  
  一般的な CLR を使用して、パブリックの CLR プロパティとしてプロパティを定義するかどうかは`get`と`set`アクセサー パターンおよび言語に応じた keywording、XAML 型システムがのプロパティを適切な情報を持つメンバーとして提供されているを報告することができます<xref:System.Xaml.XamlMember>プロパティなど<xref:System.Xaml.XamlMember.IsReadPublic%2A>と<xref:System.Xaml.XamlMember.IsWritePublic%2A>します。  
   
- 特定のプロパティは、適用することで、テキスト構文を有効にできます<xref:System.ComponentModel.TypeConverterAttribute>します。 詳細については、次を参照してください。[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)します。  
+ 特定のプロパティは、適用することで、テキスト構文を有効にできます<xref:System.ComponentModel.TypeConverterAttribute>します。 詳細については、[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)を参照してください。  
   
  テキストの構文またはネイティブの XAML の変換がない場合、マークアップ拡張機能の使用、プロパティの型など、さらに間接的ながない場合は、(<xref:System.Xaml.XamlMember.TargetType%2A> XAML 入力システム) を t を扱うことにより、XAML オブジェクト ライターにインスタンスを返すことがありますarget 型を CLR 型。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "58042629"
 ## <a name="xaml-related-clr-attributes"></a>XAML 関連の CLR 属性  
  正しく、型、メンバー、およびアセンブリの属性を設定することは、レポートには、.NET Framework XAML サービスの XAML 型システムの情報で重要です。 これは、型に直接基づく .NET Framework XAML サービスの XAML リーダーと XAML ライターでは、XAML システムを使用する場合、または定義またはそれらの XAML リーダーと XAML ライターに基づいている XAML 利用するフレームワークを使用する場合です。  
   
- カスタム型の XAML のサポートに関連する各 XAML 関連の属性の一覧については、次を参照してください。[カスタム型およびライブラリの CLR 属性を XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md)します。  
+ カスタム型の XAML のサポートに関連する各 XAML 関連の属性の一覧については、[カスタム型およびライブラリの CLR 属性を XAML-Related](xaml-related-clr-attributes-for-custom-types-and-libraries.md)を参照してください。  
   
 ## <a name="usage"></a>使用法  
  カスタム型を使用するには、マークアップの作成者がカスタム型を含むアセンブリと CLR 名前空間のプレフィックスをマップする必要がありますが必要です。 この手順は、このトピックでは説明しません。  

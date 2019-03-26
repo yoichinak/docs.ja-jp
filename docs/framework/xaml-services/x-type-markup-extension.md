@@ -62,7 +62,7 @@ CLR の提供<xref:System.Type>指定の XAML 型の基になる型であるオ�
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>既定の XAML Namespace と型マッピング  
- WPF プログラミングの既定の XAML 名前空間には、XAML の一般的なシナリオに必要な XAML 型の大部分が含まれています。そのため、XAML 型の値を参照するときに、多くの場合、プレフィックスを回避することができます。 カスタム アセンブリから、または既定の XAML 名前空間にマップされませんでした、CLR 名前空間からは WPF アセンブリ内に存在する型の型を参照している場合、プレフィックスをマップする必要があります。 プレフィックス、XAML 名前空間と CLR 名前空間のマッピングの詳細については、次を参照してください。 [XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
+ WPF プログラミングの既定の XAML 名前空間には、XAML の一般的なシナリオに必要な XAML 型の大部分が含まれています。そのため、XAML 型の値を参照するときに、多くの場合、プレフィックスを回避することができます。 カスタム アセンブリから、または既定の XAML 名前空間にマップされませんでした、CLR 名前空間からは WPF アセンブリ内に存在する型の型を参照している場合、プレフィックスをマップする必要があります。 プレフィックス、XAML 名前空間と CLR 名前空間のマッピングの詳細については、[XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)を参照してください。  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>そのサポート Typename としての文字列のプロパティを入力します。  
  WPF でサポートされる型の一部のプロパティの値を指定できるようにする手法<xref:System.Type>を必要とせず、`x:Type`マークアップ拡張機能を使用します。 代わりに、型に名前を文字列として値を指定することができます。 この機能にはの例については<xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType>と<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>します。 この動作のサポートは、型コンバーターまたはマークアップ拡張機能は提供されません。 代わりに、これは、遅延の動作を使用して実装を<xref:System.Windows.FrameworkElementFactory>します。  

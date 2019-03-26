@@ -34,7 +34,7 @@ ms.locfileid: "53613090"
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 > [!NOTE]
-> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
+> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)を参照してください。
 
 ## <a name="using-function"></a>関数を使用してください。
 

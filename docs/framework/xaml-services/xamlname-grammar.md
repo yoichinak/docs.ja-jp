@@ -55,7 +55,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。 詳細については、次を参照してください。<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)します。  
+ XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。 詳細については、<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)を参照してください。  
   
  次の文法に従う必要があります DottedXamlName 型の値を文字列には。  
   
@@ -64,4 +64,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 完全な仕様では、次を参照してください。 [ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)します。
+ 完全な仕様では、[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。

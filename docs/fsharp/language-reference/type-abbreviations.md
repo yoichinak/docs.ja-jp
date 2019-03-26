@@ -35,7 +35,7 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 型の省略形は、.NET Framework の MSIL コードでは保持されません。 したがって、F# アセンブリ .NET Framework の別の言語からを使用する場合は、型の省略形の基になる種類の名前を使用する必要があります。
 
-型の省略形は、測定単位にも使用できます。 詳細については、次を参照してください。[単位](units-of-measure.md)します。
+型の省略形は、測定単位にも使用できます。 詳細については、[単位](units-of-measure.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

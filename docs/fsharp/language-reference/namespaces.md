@@ -50,7 +50,7 @@ Module1 10 20
 Module2 5 6
 ```
 
-詳細については、次を参照してください。[モジュール](modules.md)します。
+詳細については、[モジュール](modules.md)を参照してください。
 
 ## <a name="nested-namespaces"></a>入れ子になった名前空間
 

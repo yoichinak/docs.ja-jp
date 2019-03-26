@@ -14,4 +14,4 @@ ms.locfileid: "53148276"
 ---
 # <a name="wpf-samples"></a>WPF のサンプル
 
-Windows Presentation Foundation (WPF) を示すサンプルでは、次を参照してください。、 [Microsoft/WPF サンプル リポジトリ](https://github.com/Microsoft/WPF-Samples)GitHub でします。
+Windows Presentation Foundation (WPF) を示すサンプルでは、、 [Microsoft/WPF サンプル リポジトリ](https://github.com/Microsoft/WPF-Samples)GitHub でを参照してください。

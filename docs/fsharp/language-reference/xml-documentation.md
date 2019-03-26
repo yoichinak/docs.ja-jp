@@ -17,7 +17,7 @@ ms.locfileid: "55204679"
 
 サポートF#他の .NET Framework 言語ではコメントからドキュメントを生成すると同じです。 その他の .NET Framework 言語では、ように、 [-doc コンパイラ オプション](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)などのツールを使用して、ドキュメントに変換できる情報を含む XML ファイルを作成することができます[DocFX](https://dotnet.github.io/docfx/)または[Sandcastle](https://github.com/EWSoftware/SHFB)します。 一般に他の .NET Framework 言語で記述されているアセンブリで使用するために設計されたツールを使用して、生成されたドキュメントでは、F# の構成要素のコンパイル済みの形式に基づいている Api のビューを生成します。 ツール具体的には F# をサポートしない限り、これらのツールによって生成されたドキュメントは API の F# ビューと一致しません。
 
-XML ドキュメントを生成する方法の詳細については、次を参照してください。 [XML ドキュメント コメント&#40;C&#35;プログラミング ガイド&#41;](https://msdn.microsoft.com/library/b2s063f7)します。
+XML ドキュメントを生成する方法の詳細については、[XML ドキュメント コメント&#40;C&#35;プログラミング ガイド&#41;](https://msdn.microsoft.com/library/b2s063f7)を参照してください。
 
 ## <a name="recommended-tags"></a>推奨されるタグ
 

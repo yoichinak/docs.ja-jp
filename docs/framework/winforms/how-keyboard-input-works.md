@@ -58,7 +58,7 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 |<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|このメソッド、 <xref:System.Windows.Forms.Control.KeyDown>、 <xref:System.Windows.Forms.Control.KeyPress>、および<xref:System.Windows.Forms.Control.KeyUp>適切なイベント。|  
   
 ## <a name="overriding-keyboard-methods"></a>キーボード メソッドのオーバーライド  
- キーボード メッセージを処理するためにオーバーライドできるメソッドは多数ありますが、どのメソッドを選ぶかが非常に重要です。 次の表に、実行するタスクと、キーボード メソッドをオーバーライドする最善の方法を示します。 メソッドのオーバーライドの詳細については、次を参照してください。[のプロパティとメソッドをオーバーライドする派生クラス](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes)します。  
+ キーボード メッセージを処理するためにオーバーライドできるメソッドは多数ありますが、どのメソッドを選ぶかが非常に重要です。 次の表に、実行するタスクと、キーボード メソッドをオーバーライドする最善の方法を示します。 メソッドのオーバーライドの詳細については、[のプロパティとメソッドをオーバーライドする派生クラス](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes)を参照してください。  
   
 |タスク|メソッド|  
 |----------|------------|  

@@ -36,7 +36,7 @@ ms.locfileid: "58031221"
 |`classname`|必須。 指定します、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]読み込まれた XAML およびその XAML の分離コードで接続する部分クラスの名前。|  
   
 ## <a name="dependencies"></a>依存関係  
- `x:Class` XAML の運用環境のルート要素でのみ指定できます。 `x:Class` XAML の運用環境での親を持つ任意のオブジェクトでは無効です。 詳細については、次を参照してください。 [ \[MS XAML\]セクション 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
+ `x:Class` XAML の運用環境のルート要素でのみ指定できます。 `x:Class` XAML の運用環境での親を持つ任意のオブジェクトでは無効です。 詳細については、[ \[MS XAML\]セクション 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  `namespace`値は、.NET Framework プログラミングで一般的な手法は、名前の階層に関連する名前空間を整理する追加のドットを含めることができます。 文字列の最後のドットのみ`x:Class`を分離する値を解釈`namespace`と`classname.`クラスとして使用される`x:Class`入れ子になったクラスにすることはできません。 ドットの意味を判断するため、入れ子になったクラスは許可されません`x:Class`文字列が入れ子になったクラスが許可されている場合はあいまいです。  
@@ -45,7 +45,7 @@ ms.locfileid: "58031221"
   
  値、`x:Class`ディレクティブは、アセンブリ情報がない場合は、クラスの完全修飾名を指定する文字列である必要があります (に相当、 <xref:System.Type.FullName%2A?displayProperty=nameWithType>)。 単純なアプリケーションでは、分離コードがそのように (クラス レベルで コードの定義から開始) も構造化された場合、CLR 名前空間の情報を省略できます。  
   
- ページまたはアプリケーションの定義については、分離コード ファイルは、コンパイル済みのアプリケーションを作成し、マークアップ コンパイルは、プロジェクトの一部として含まれているコード ファイル内である必要があります。 CLR クラスの名前規則に従う必要があります。 詳細については、次を参照してください。 [Framework デザイン ガイドライン](../../standard/design-guidelines/index.md)します。 既定では、分離コード クラスがある必要があります`public`。 ただし、を使用して異なるアクセス レベルで定義できる、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。  
+ ページまたはアプリケーションの定義については、分離コード ファイルは、コンパイル済みのアプリケーションを作成し、マークアップ コンパイルは、プロジェクトの一部として含まれているコード ファイル内である必要があります。 CLR クラスの名前規則に従う必要があります。 詳細については、[Framework デザイン ガイドライン](../../standard/design-guidelines/index.md)を参照してください。 既定では、分離コード クラスがある必要があります`public`。 ただし、を使用して異なるアクセス レベルで定義できる、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。  
   
  この解釈、`x:Class`属性にのみ適用されます、CLR ベースの XAML 実装では、特に .NET Framework XAML サービスにします。 CLR には基づいていませんし、.NET Framework XAML サービスを使用しないその他の XAML 実装には、XAML マークアップを接続し、実行時のコードをバックアップするための別の解像度数式を使用可能性があります。 一般的な解釈の詳細については`x:Class`を参照してください[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   

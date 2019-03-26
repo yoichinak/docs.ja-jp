@@ -62,7 +62,7 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-複数のコンス トラクターの場合、次のコードを使用していることができます。 派生クラスのコンス トラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
+複数のコンス トラクターの場合、次のコードを使用していることができます。 派生クラスのコンス トラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)を参照してください。
 
 ```fsharp
 type BaseClass =
@@ -87,9 +87,9 @@ let obj2 = DerivedClass("A")
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2603.fs)]
 
-オブジェクトの式の詳細については、次を参照してください。[オブジェクト式](object-expressions.md)します。
+オブジェクトの式の詳細については、[オブジェクト式](object-expressions.md)を参照してください。
 
-オブジェクト階層を作成するときは、継承ではなくの判別共用体の使用を検討します。 判別共用体は、共通の全体的な型を共有する別のオブジェクトのさまざまなモデルの動作でこともできます。 1 つの判別共用体では、さまざまな派生クラスの他のわずかな違いをする必要がある多くの場合。 判別共用体の詳細については、次を参照してください。[判別共用体](discriminated-unions.md)します。
+オブジェクト階層を作成するときは、継承ではなくの判別共用体の使用を検討します。 判別共用体は、共通の全体的な型を共有する別のオブジェクトのさまざまなモデルの動作でこともできます。 1 つの判別共用体では、さまざまな派生クラスの他のわずかな違いをする必要がある多くの場合。 判別共用体の詳細については、[判別共用体](discriminated-unions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

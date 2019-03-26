@@ -60,11 +60,11 @@ printfn "%A" empty
 
 ## <a name="autoopen-attribute"></a>AutoOpen 属性
 
-適用することができます、`AutoOpen`アセンブリに属性をアセンブリが参照されている場合に、名前空間またはモジュールが自動的に開きたい場合。 適用することも、`AutoOpen`親モジュールまたは名前空間が開かれるときに、そのモジュールを自動的に開くモジュールに属性します。 詳細については、次を参照してください。 [Core.AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)します。
+適用することができます、`AutoOpen`アセンブリに属性をアセンブリが参照されている場合に、名前空間またはモジュールが自動的に開きたい場合。 適用することも、`AutoOpen`親モジュールまたは名前空間が開かれるときに、そのモジュールを自動的に開くモジュールに属性します。 詳細については、[Core.AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)を参照してください。
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 属性
 
-一部のモジュール、レコード、または共用体の型を指定できます、`RequireQualifiedAccess`属性。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 この属性を戦略的に使用する場合は、よくを定義する型名を使用する、役立つように名前の競合を回避し、コードより回復力のあるライブラリの変更に。 詳細については、次を参照してください。 [Core.RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)します。
+一部のモジュール、レコード、または共用体の型を指定できます、`RequireQualifiedAccess`属性。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 この属性を戦略的に使用する場合は、よくを定義する型名を使用する、役立つように名前の競合を回避し、コードより回復力のあるライブラリの変更に。 詳細については、[Core.RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

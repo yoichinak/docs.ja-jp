@@ -16,7 +16,7 @@ ms.locfileid: "43505767"
 
 自動スケーリングによって、特定のディスプレイの解像度またはシステムのフォントを持つマシンに合わせて設計されたフォームとコントロールを、ディスプレイの別の解像度やシステム フォントを持つ別のマシンで適切に表示することができます。 フォームとコントロールが、ユーザーとその他の開発者のマシンのネイティブ ウィンドウとその他のアプリケーションで、一貫性を持つよう適切にサイズ変更され、 自動スケーリングと視覚スタイルに対する [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のサポートにより、各ユーザーのマシンのネイティブの Windows アプリケーションと比較した場合、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションが一貫したルック アンド フィールを維持することができます。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 以降では、ほとんどの場合、自動スケーリングは正常に機能します。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、次を参照してください。[方法: Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)します。
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 以降では、ほとんどの場合、自動スケーリングは正常に機能します。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、[方法: Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)を参照してください。
 
 ## <a name="need-for-automatic-scaling"></a>自動スケーリングの必要性
 

@@ -161,7 +161,7 @@ ms.locfileid: "57371633"
   
  場合、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]完全な信頼が必要です。 要求されたアクセス許可を増やすと同じツールを使用することができます。 ただし、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]上にインストールされ、イントラネット、ローカル コンピューターとは、ブラウザーの信頼済みまたは許可されたサイトに記載されている URL から起動された場合のみ、完全な信頼が受信されます。 アプリケーションは、イントラネットまたは信頼済みサイトからインストールする場合、ユーザーには管理者特権でのアクセス許可のことを通知する標準の ClickOnce プロンプトが表示されます。 ユーザーは、インストールを続行するか取り消すかを選択できます。  
   
- また、任意のセキュリティ ゾーンから完全な信頼の展開用 ClickOnce 信頼済み配置モデルを使用できます。 詳細については、次を参照してください。 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)と[セキュリティ](security-wpf.md)します。  
+ また、任意のセキュリティ ゾーンから完全な信頼の展開用 ClickOnce 信頼済み配置モデルを使用できます。 詳細については、[Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)と[セキュリティ](security-wpf.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [セキュリティ](security-wpf.md)

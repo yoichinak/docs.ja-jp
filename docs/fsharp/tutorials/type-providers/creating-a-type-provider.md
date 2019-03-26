@@ -53,7 +53,7 @@ F#エコシステムには、一般的に使用されるインターネットや
 
 ## <a name="a-simple-type-provider"></a>単純な型プロバイダー
 
-このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、次を参照してください。[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述します。
+このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述を参照してください。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -164,7 +164,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 代わりに、Visual Studio を開き、[デバッグ] メニューを開き、 `Debug/Attach to process…`、別にアタッチ`devenv`スクリプトを編集しているプロセス。 この方法を使用すると、2 番目のインスタンス (IntelliSense およびその他の機能をすべて備えている) に式を対話形式で入力できるので、型プロバイダー内の特定のロジックを簡単に対象とすることができます。
 
-生成されたコード内のエラーを特定しやすくするために、マイ コードのみのデバッグを無効にできます。 有効またはこの機能を無効にする方法については、次を参照してください。[デバッガーでコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)します。 また、初回例外のキャッチを開いて設定も、`Debug`メニューを`Exceptions`またはキーを押し、Ctrl + Alt + E キーを開く、 `Exceptions`  ダイアログ ボックス。 そのダイアログ ボックスで `Common Language Runtime Exceptions`を選択、`Thrown`チェック ボックスをオンします。
+生成されたコード内のエラーを特定しやすくするために、マイ コードのみのデバッグを無効にできます。 有効またはこの機能を無効にする方法については、[デバッガーでコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)を参照してください。 また、初回例外のキャッチを開いて設定も、`Debug`メニューを`Exceptions`またはキーを押し、Ctrl + Alt + E キーを開く、 `Exceptions`  ダイアログ ボックス。 そのダイアログ ボックスで `Common Language Runtime Exceptions`を選択、`Thrown`チェック ボックスをオンします。
 
 ### <a name="implementation-of-the-type-provider"></a>型プロバイダーの実装
 
@@ -256,7 +256,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 クォートの詳細については、次を参照してください。[コード クォート (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)します。
+このプロパティを取得すると、常に文字列 "Hello!" に評価されます。 プロパティの `GetterCode` は F# クォートを使用しますが、これはホスト コンパイラがプロパティを取得するために生成するコードを表します。 クォートの詳細については、[コード クォート (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)を参照してください。
 
 XML ドキュメントをプロパティに追加します。
 
