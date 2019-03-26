@@ -28,7 +28,7 @@ ms.locfileid: "57365153"
 句を追加できます、プロジェクション クエリを使用するか、`$select`クエリ オプションを URI でまたはを使用して、[選択](~/docs/csharp/language-reference/keywords/select-clause.md)句 ([選択](~/docs/visual-basic/language-reference/queries/select-clause.md)Visual Basic で)、LINQ クエリで。 返されたエンティティ データは、クライアント上のエンティティ型またはエンティティ型以外に射影できます。 このトピックでは、LINQ クエリで `select` 句を使用する例を取り上げます。
 
 > [!IMPORTANT]
-> 射影された型に対して行った更新を保存すると、データ サービスでデータの損失が発生する場合があります。 詳細については、次を参照してください。[投影に関する考慮事項](#considerations)します。
+> 射影された型に対して行った更新を保存すると、データ サービスでデータの損失が発生する場合があります。 詳細については、[投影に関する考慮事項](#considerations)を参照してください。
 
 ## <a name="requirements-for-entity-and-non-entity-types"></a>エンティティ型およびエンティティ型以外の要件
 
@@ -104,7 +104,7 @@ ms.locfileid: "57365153"
 
 クエリ射影を定義する場合は、次の点にも注意してください。
 
-- Atom 形式のフィードを独自に定義する場合、カスタム マッピングが定義されているすべてのエンティティ プロパティが射影に含まれることを確認する必要があります。 マップされているエンティティ プロパティがこの射影に含まれていない場合、データの損失が発生することがあります。 詳細については、次を参照してください。[フィードのカスタマイズ](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)します。
+- Atom 形式のフィードを独自に定義する場合、カスタム マッピングが定義されているすべてのエンティティ プロパティが射影に含まれることを確認する必要があります。 マップされているエンティティ プロパティがこの射影に含まれていない場合、データの損失が発生することがあります。 詳細については、[フィードのカスタマイズ](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)を参照してください。
 
 - データ サービスのデータ モデルのエンティティのすべてのプロパティを含まない射影型に挿入を行った場合、クライアントで射影に含まれていないプロパティは既定値に設定されます。
 
@@ -115,7 +115,7 @@ ms.locfileid: "57365153"
 - 射影にナビゲーション プロパティが含まれる場合、<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> メソッドを呼び出す必要はなく、関連オブジェクトが暗黙的に読み込まれます。 射影されたクエリでの <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> メソッドの使用はサポートされません。
 
 - クライアント上のクエリ射影クエリは、要求 URI の `$select` クエリ オプションを使用するように変換されます。 
-  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クエリ オプションをサポートしない `$select` の以前のバージョンに対して、射影のあるクエリを実行すると、エラーが返されます。 これは、データ サービスの  <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> の <xref:System.Data.Services.DataServiceBehavior> が <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> という値に設定されている場合にも発生します。 詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。
+  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クエリ オプションをサポートしない `$select` の以前のバージョンに対して、射影のあるクエリを実行すると、エラーが返されます。 これは、データ サービスの  <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> の <xref:System.Data.Services.DataServiceBehavior> が <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1> という値に設定されている場合にも発生します。 詳細については、[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)を参照してください。
 
 詳細については、「[方法 :クエリ結果を射影](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)します。
 

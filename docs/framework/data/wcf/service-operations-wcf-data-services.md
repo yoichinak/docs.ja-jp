@@ -29,7 +29,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> を使用して、データ サービスが使用するデータ ソースに直接アクセスできます。 詳細については、「[方法 :サービス操作を定義](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)します。  
   
- .NET Framework クライアント アプリケーションからサービス操作を呼び出す方法については、次を参照してください。[サービス操作を呼び出す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)します。  
+ .NET Framework クライアント アプリケーションからサービス操作を呼び出す方法については、[サービス操作を呼び出す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)を参照してください。  
   
 ## <a name="service-operation-requirements"></a>サービス操作の要件  
  データ サービスでサービス操作を定義する場合、次の要件が適用されます。 これらの要件を満たしていないメソッドは、データ サービスのサービス操作として公開されません。  

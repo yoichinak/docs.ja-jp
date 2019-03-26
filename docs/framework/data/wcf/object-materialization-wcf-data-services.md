@@ -13,7 +13,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54665592"
 ---
 # <a name="object-materialization-wcf-data-services"></a>オブジェクトの具体化 (WCF Data Services)
-使用すると、**サービス参照の追加**ダイアログを使用する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]同等のデータ クラスは .NET Framework ベースのクライアント アプリケーションでのフィード、フィードによって公開されているデータ モデルのエンティティ型ごと生成されます。 詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 マージ オプションおよび追跡オブジェクトの id 解決については、次を参照してください。[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)します。  
+使用すると、**サービス参照の追加**ダイアログを使用する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]同等のデータ クラスは .NET Framework ベースのクライアント アプリケーションでのフィード、フィードによって公開されているデータ モデルのエンティティ型ごと生成されます。 詳細については、[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)を参照してください。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 マージ オプションおよび追跡オブジェクトの id 解決については、[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)を参照してください。  
   
  さらに [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、ツールによって生成されたデータ クラスを使用する代わりに、独自のクライアント データ サービス クラスを定義できます。 これにより、"plain-old CLR object" (POCO) データ クラスとして知られる独自のデータ クラスを使用できます。 これらの種類のカスタム データ クラスを使用する場合は、データ クラスを属性する必要があります<xref:System.Data.Services.Common.DataServiceKeyAttribute>または<xref:System.Data.Services.Common.DataServiceEntityAttribute>クライアント一致の型名、データ サービスのデータ モデル内での型の名前を確認してください。  
   
@@ -37,10 +37,10 @@ ms.locfileid: "54665592"
   
     -   複合プロパティは、新しい複合型インスタンスに設定されます。このインスタンスは、応答からの複合型のプロパティとともに設定されます。  
   
-    -   関連するエンティティのコレクションを返すナビゲーション プロパティは、<xref:System.Collections.Generic.ICollection%601> の新しいまたは既存のインスタンスに設定されます。ここで、`T` は関連エンティティの型です。 このコレクションは、関連オブジェクトが <xref:System.Data.Services.Client.DataServiceContext> に読み込まれていない限り空になります。 詳細については、次を参照してください。[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)します。  
+    -   関連するエンティティのコレクションを返すナビゲーション プロパティは、<xref:System.Collections.Generic.ICollection%601> の新しいまたは既存のインスタンスに設定されます。ここで、`T` は関連エンティティの型です。 このコレクションは、関連オブジェクトが <xref:System.Data.Services.Client.DataServiceContext> に読み込まれていない限り空になります。 詳細については、[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)を参照してください。  
   
         > [!NOTE]
-        >  生成されたクライアント データ クラスでデータ バインディングがサポートされる場合、ナビゲーション プロパティは代わりに <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスを返します。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。  
+        >  生成されたクライアント データ クラスでデータ バインディングがサポートされる場合、ナビゲーション プロパティは代わりに <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスを返します。 詳細については、[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)を参照してください。  
   
 4.  <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> イベントが発生します。  
   

@@ -17,7 +17,7 @@ ms.locfileid: "54608574"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>方法: SQL データ ソース (WCF Data Services) を LINQ を使用してデータ サービスを作成します。
 
-WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 リフレクション プロバイダーを使用すると、メンバーを公開するクラスに基づくデータ モデルの定義を返す、<xref:System.Linq.IQueryable%601>実装します。 データ ソース内のデータに更新を加えるには、これらのクラスも <xref:System.Data.Services.IUpdatable> インターフェイスを実装する必要があります。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。 このトピックでは、リフレクション プロバイダーを使用して Northwind サンプル データベースにアクセスする LINQ to SQL クラスを作成する方法と、これらのデータ クラスに基づくデータ サービスを作成する方法について説明します。
+WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 リフレクション プロバイダーを使用すると、メンバーを公開するクラスに基づくデータ モデルの定義を返す、<xref:System.Linq.IQueryable%601>実装します。 データ ソース内のデータに更新を加えるには、これらのクラスも <xref:System.Data.Services.IUpdatable> インターフェイスを実装する必要があります。 詳細については、[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)を参照してください。 このトピックでは、リフレクション プロバイダーを使用して Northwind サンプル データベースにアクセスする LINQ to SQL クラスを作成する方法と、これらのデータ クラスに基づくデータ サービスを作成する方法について説明します。
 
 ## <a name="to-add-linq-to-sql-classes-to-a-project"></a>LINQ to SQL クラスをプロジェクトに追加するには
 
