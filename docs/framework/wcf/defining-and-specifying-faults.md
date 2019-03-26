@@ -16,7 +16,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54590592"
 ---
 # <a name="defining-and-specifying-faults"></a>エラーの定義と指定
-SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
   
 ## <a name="overview"></a>概要  
  宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> を含む操作で発生します。 宣言されていない SOAP エラーとは、操作のコントラクトに指定されていないエラーです。 ここでは、各種のエラー状態を特定したうえで、サービスに関するエラー コントラクトを作成する方法について説明します。クライアントは、カスタムの SOAP エラーから通知を受けたときに、これらを使用することでエラーを適切に処理できます。 基本的な作業は、次の順序で行います。  

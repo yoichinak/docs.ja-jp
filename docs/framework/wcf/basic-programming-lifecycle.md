@@ -12,20 +12,20 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54499224"
 ---
 # <a name="basic-programming-lifecycle"></a>基本的なプログラミング ライフサイクル
-Windows Communication Foundation (WCF) は、アプリケーションまたは異なるアプリケーション プラットフォームで、インターネット経由で、同じコンピューターでがかどうかとの通信を使用できます。 このトピックでは、WCF アプリケーションを構築するために必要なタスクについて説明します。 実際のサンプル アプリケーションでは、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。  
+Windows Communication Foundation (WCF) は、アプリケーションまたは異なるアプリケーション プラットフォームで、インターネット経由で、同じコンピューターでがかどうかとの通信を使用できます。 このトピックでは、WCF アプリケーションを構築するために必要なタスクについて説明します。 実際のサンプル アプリケーションでは、[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。  
   
 ## <a name="the-basic-tasks"></a>基本的なタスク  
  基本的な作業は、次の順序で行います。  
   
-1.  サービス コントラクトを定義します。 サービス コントラクトでは、サービスの署名、交換するデータ、およびコントラクトに必要なその他のデータを指定します。 詳細については、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。  
+1.  サービス コントラクトを定義します。 サービス コントラクトでは、サービスの署名、交換するデータ、およびコントラクトに必要なその他のデータを指定します。 詳細については、[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。  
   
-2.  コントラクトを実装します。 サービス コントラクトを実装するには、そのコントラクトを実装するクラスを作成し、ランタイムに必要なカスタム動作を指定します。 詳細については、次を参照してください。 [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)します。  
+2.  コントラクトを実装します。 サービス コントラクトを実装するには、そのコントラクトを実装するクラスを作成し、ランタイムに必要なカスタム動作を指定します。 詳細については、[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
   
-3.  エンドポイントおよびその他の動作情報を指定して、サービスを構成します。 詳細については、次を参照してください。[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
+3.  エンドポイントおよびその他の動作情報を指定して、サービスを構成します。 詳細については、[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)を参照してください。  
   
-4.  サービスをホストします。 詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
+4.  サービスをホストします。 詳細については、[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)を参照してください。  
   
-5.  クライアント アプリケーションを構築します。 詳細については、次を参照してください。[クライアントを構築する](../../../docs/framework/wcf/building-clients.md)します。  
+5.  クライアント アプリケーションを構築します。 詳細については、[クライアントを構築する](../../../docs/framework/wcf/building-clients.md)を参照してください。  
   
  このセクションのトピックではこの順に従って説明しますが、手順を最初から実行しないシナリオもあります。 たとえば、既存のサービスを使用するクライアントを構築する場合は、手順 5. から開始します。 また、既存のクライアント アプリケーションが使用するサービスを構築する場合は、手順 5. を省略できます。  
   

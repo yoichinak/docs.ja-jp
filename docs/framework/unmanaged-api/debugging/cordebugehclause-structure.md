@@ -55,7 +55,7 @@ typedef struct _CorDebugEHClause {
 ## <a name="remarks"></a>Remarks  
  配列の`CoreDebugEHClause`によって値が返される、 [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)メソッド。  
   
- EH 句の情報は CLI 仕様によって定義されます。 詳細については、次を参照してください。[標準 ECMA 355。共通言語基盤 (CLI)、6 th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm)します。  
+ EH 句の情報は CLI 仕様によって定義されます。 詳細については、[標準 ECMA 355。共通言語基盤 (CLI)、6 th Edition](https://www.ecma-international.org/publications/standards/Ecma-335.htm)を参照してください。  
   
  `flags` フィールドには、次のフラグを含めることができます。 これらは、CorDebug.idl または CorDebug.h に定義されていないことに注意してください。  
   

@@ -53,7 +53,7 @@ typedef enum {
 |`FAIL_CodeContract`|コード コントラクトのエラーが発生しました。 参照してください[コード コントラクト](../../../../docs/framework/debug-trace-profile/code-contracts.md)します。|  
   
 ## <a name="remarks"></a>Remarks  
- 参照してください、 [iclrpolicymanager::setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)メソッドの一覧については[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値が、ホストを使用してエラー状態のポリシーのアクションを指定できます。 コードの重要および重大でないリージョンの詳細については、次を参照してください。 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)します。  
+ 参照してください、 [iclrpolicymanager::setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)メソッドの一覧については[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値が、ホストを使用してエラー状態のポリシーのアクションを指定できます。 コードの重要および重大でないリージョンの詳細については、[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
