@@ -12,12 +12,12 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57358172"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
-この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージ コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
+この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージド コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
   
  .NET Framework は、生産性の高いアプリ開発環境です。 強力で安全な言語と豊富なライブラリにより、アプリの開発生産性が高くなります。 ただし、高い生産性には責任が伴います。 .NET Framework のあらゆる機能を使用するするのであれば、必要に応じてコードのパフォーマンスを調整できるようにしておく必要があります。 
   
 ## <a name="why-the-new-compiler-performance-applies-to-your-app"></a>新しいコンパイラのパフォーマンスがアプリに適用される理由  
- .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージ コードで再作成しました。 コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。 C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。 
+ .NET コンパイラ プラットフォーム ("Roslyn") チームは、コードのモデリングと分析、ツールの開発、そして Visual Studio でのより充実したコード対応エクスペリエンスの実現のための新たな API を提供するため、C# および Visual Basic コンパイラをマネージド コードで再作成しました。 コンパイラの全体的な書き直しと、新しいコンパイラでの Visual Studio 機能の構築を通して、大規模 .NET Framework アプリや、大量データを処理するアプリに適用できる有用なパフォーマンス情報が明らかになりました。 C# コンパイラについてのこのような情報や例を活用するために、コンパイラについて理解しておく必要はありません。 
   
  Visual Studio ではコンパイラ API を使用して、ユーザーに人気のある IntelliSense 機能 (識別子とキーワードの色づけ、構文の入力候補一覧、エラーを示す波線、パラメーターのヒント、コードの問題、コードアクションなど) を作成します。 Visual Studio では、開発者がコードを入力するときや変更するときにこのヘルプが表示されます。コンパイラがコード開発者による編集内容をモデル化している間も、Visual Studio は応答性を維持する必要があります。 
   
@@ -130,8 +130,7 @@ public class BoxingExample
  パフォーマンスに関する 1 番目の事実 (不完全な最適化は行わない) に留意し、このような方法でコード全体を作成し直さないでください。 このようなボックス化にかかるコストに注意してください。また、コードの変更は、アプリのプロファイリングとホットスポットの検出の後に行ってください。 
   
 ### <a name="strings"></a>文字列  
- 文字列操作は、割り当てが発生する最も大きな原因の 1 つであり、PerfView で上位 5 件の割り当てに表示されることがよくあります。 プログラムはシリアル化、JSON、および REST API に文字列を使用します。 列挙型を使用できない場合は、システムとの相互運用のためにプログラム定数として文字列を使用できます。 文字列がパフォーマンスに大きく影響していることがプロファイリングによって明らかになる場合は、<xref:System.String> メソッド (<xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A>、<xref:System.String.Substring%2A> など) の呼び出しを探します。 
-  <xref:System.Text.StringBuilder> を使用すると、複数の要素から 1 つの文字列を作成するコストを回避できます。ただし <xref:System.Text.StringBuilder> オブジェクトの割り当てでさえも、管理する必要があるボトルネックとなることがあります。 
+ 文字列操作は、割り当てが発生する最も大きな原因の 1 つであり、PerfView で上位 5 件の割り当てに表示されることがよくあります。 プログラムはシリアル化、JSON、および REST API に文字列を使用します。 列挙型を使用できない場合は、システムとの相互運用のためにプログラム定数として文字列を使用できます。 文字列がパフォーマンスに大きく影響していることがプロファイリングによって明らかになる場合は、<xref:System.String> メソッド (<xref:System.String.Format%2A>、<xref:System.String.Concat%2A>、<xref:System.String.Split%2A>、<xref:System.String.Join%2A>、<xref:System.String.Substring%2A> など) の呼び出しを探します。 <xref:System.Text.StringBuilder> を使用すると、複数の要素から 1 つの文字列を作成するコストを回避できます。ただし <xref:System.Text.StringBuilder> オブジェクトの割り当てでさえも、管理する必要があるボトルネックとなることがあります。 
   
  **例 3: 文字列操作**  
   
@@ -196,8 +195,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc... 
 ```  
   
- 
-  `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
+ `WriteFormattedDocComment()` の最初のバージョンでは、配列、複数の部分文字列、トリミングされた部分文字列と空の `params` 配列が割り当てられました。 また、「//」にもチェックされます。 修正後のコードは、インデックス作成のみを使用し、割り当てを行いません。 文字列が「//」で始まるかどうか、空白でないし、文字の文字をチェックする最初の文字を検索します。 新しいコードを使用して`IndexOfFirstNonWhiteSpaceChar`の代わりに<xref:System.String.TrimStart%2A>を空白以外の文字が発生します (指定した開始インデックス) の後に最初のインデックスを返します。 この修正は完全ではありませんが、完全な解決策として類似の修正を適用する方法がわかります。 コード全体でこの方法を適用することで、`WriteFormattedDocComment()` 内のすべての割り当てを削除できます。 
   
  **例 4:StringBuilder**  
   
@@ -231,8 +229,7 @@ public class Example
   
  **例 4 の修正**  
   
- 
-  `StringBuilder` オブジェクトの割り当てを修正するには、このオブジェクトをキャッシュします。 破棄される可能性がある 1 つのインスタンスをキャッシュするだけでも、パフォーマンスが大幅に改善されることがあります。 これは関数の新しい実装であり、新しい最初の行と最後の行を除くすべてのコードを省略しています。  
+ `StringBuilder` オブジェクトの割り当てを修正するには、このオブジェクトをキャッシュします。 破棄される可能性がある 1 つのインスタンスをキャッシュするだけでも、パフォーマンスが大幅に改善されることがあります。 これは関数の新しい実装であり、新しい最初の行と最後の行を除くすべてのコードを省略しています。  
   
 ```csharp  
 // Constructs a name like "MyType<T1, T2, T3>"  
@@ -411,7 +408,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- キャッシュに関する新しいコードには `SyntaxTree` という名前の `cachedResult` フィールドがあります。 このフィールドが Null の場合、`GetSyntaxTreeAsync()` が処理を行い、キャッシュに結果が保存されます。 `GetSyntaxTreeAsync()` は `SyntaxTree` オブジェクトを返します。 ここで問題となるのは、`async` 型の `Task<SyntaxTree>` 関数があり、`SyntaxTree` 型の値を返す場合、コンパイラが、(`Task<SyntaxTree>.FromResult()` を使用して) 結果を保持するために Task を割り当てるコードを出力することです。 Task は完了済みとしてマークされ、結果が即時に利用可能になります。 新しいコンパイラのコードでは、既に完了している <xref:System.Threading.Tasks.Task> オブジェクトが頻繁に発生するため、このような割り当てを修正すると応答性が著しく向上することがよくありました。 
+ キャッシュに関する新しいコードには `SyntaxTree` という名前の `cachedResult` フィールドがあります。 このフィールドが Null の場合、`GetSyntaxTreeAsync()` が処理を行い、キャッシュに結果が保存されます。 `GetSyntaxTreeAsync()` 返します、`SyntaxTree`オブジェクト。 ここで問題となるのは、`async` 型の `Task<SyntaxTree>` 関数があり、`SyntaxTree` 型の値を返す場合、コンパイラが、(`Task<SyntaxTree>.FromResult()` を使用して) 結果を保持するために Task を割り当てるコードを出力することです。 Task は完了済みとしてマークされ、結果が即時に利用可能になります。 新しいコンパイラのコードでは、既に完了している <xref:System.Threading.Tasks.Task> オブジェクトが頻繁に発生するため、このような割り当てを修正すると応答性が著しく向上することがよくありました。 
   
  **例 6 の修正**  
   
@@ -437,8 +434,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- このコードは `cachedResult` の型を `Task<SyntaxTree>` に変更し、`async` からの元のコードを保持する `GetSyntaxTreeAsync()` ヘルパー関数を採用しています。 `GetSyntaxTreeAsync()` は [null 合体演算子](../../csharp/language-reference/operators/null-coalescing-operator.md)を使用して、`cachedResult` が null でない場合にそれを返します。 
-  `cachedResult` が null の場合、`GetSyntaxTreeAsync()` は `GetSyntaxTreeUncachedAsync()` を呼び出し、結果をキャッシュします。 `GetSyntaxTreeAsync()` は、通常のコードのようには、`GetSyntaxTreeUncachedAsync()` 呼び出しを待たないことに注意してください。 待機しないということは、`GetSyntaxTreeUncachedAsync()` がその <xref:System.Threading.Tasks.Task> オブジェクトを返す場合、`GetSyntaxTreeAsync()` が即時に<xref:System.Threading.Tasks.Task> を返すことになります。 この時点で、キャッシュされた結果は <xref:System.Threading.Tasks.Task> であるため、キャシュされた結果を返すための割り当ては行われません。 
+ このコードは `cachedResult` の型を `Task<SyntaxTree>` に変更し、`async` からの元のコードを保持する `GetSyntaxTreeAsync()` ヘルパー関数を採用しています。 `GetSyntaxTreeAsync()` は [null 合体演算子](../../csharp/language-reference/operators/null-coalescing-operator.md)を使用して、`cachedResult` が null でない場合にそれを返します。 `cachedResult` が null の場合、`GetSyntaxTreeAsync()` は `GetSyntaxTreeUncachedAsync()` を呼び出し、結果をキャッシュします。 `GetSyntaxTreeAsync()` は、通常のコードのようには、`GetSyntaxTreeUncachedAsync()` 呼び出しを待たないことに注意してください。 待機しないということは、`GetSyntaxTreeUncachedAsync()` がその <xref:System.Threading.Tasks.Task> オブジェクトを返す場合、`GetSyntaxTreeAsync()` が即時に<xref:System.Threading.Tasks.Task> を返すことになります。 この時点で、キャッシュされた結果は <xref:System.Threading.Tasks.Task> であるため、キャシュされた結果を返すための割り当ては行われません。 
   
 ### <a name="additional-considerations"></a>その他の考慮事項  
  大きなアプリまたは大量データを処理するアプリで発生する可能性がある問題に関するその他の点を次に説明します。 
@@ -453,7 +449,7 @@ class Compilation { /*...*/
   
  **キャッシュ**  
   
- 一般的なパフォーマンス向上のためのテクニックは、結果をキャッシュすることです。 ただし、サイズ制限や破棄ポリシーが設定されていないキャッシュはメモリ リークとなる可能性があります。 大量のデータを処理するときに、キャッシュに大量のメモリを維持すると、ガベージ コレクションによって、キャッシュしたルックアップによるメリットが無効になります。 
+ 一般的なパフォーマンス向上のためのテクニックは、結果をキャッシュすることです。 ただし、サイズ制限や破棄ポリシーが設定されていないキャッシュはメモリ リークとなる可能性があります。 大量のデータを処理するときに、キャッシュに大量のメモリを維持すると、ガベージ コレクションによって、キャッシュしたルックアップによるメリットがオーバーライドされます。 
   
  この記事では、特に大規模システムや大量のデータを処理するシステムにおいて、アプリの応答性に影響する可能性があるパフォーマンスのボトルネックの症状にどのように注意したらよいかを説明しました。 一般的な問題には、ボックス化、文字列操作、LINQ およびラムダ、非同期方式でのキャッシュ、サイズ制限または破棄ポリシーのないキャッシュ、不適切なディクショナリの使用、構造体の受け渡しなどがあります。 アプリの調整に関する 4 つの事実に注意してください。  
   

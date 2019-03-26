@@ -23,8 +23,7 @@ ms.locfileid: "57708172"
     -   [データベース スキーマをアップグレードするには](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> WorkflowIdentity の使用  
- 
-  <xref:System.Activities.WorkflowIdentity> を使用するには、インスタンスを作成および構成し、<xref:System.Activities.WorkflowApplication> インスタンスに関連付けます。 <xref:System.Activities.WorkflowIdentity> インスタンスには 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> と <xref:System.Activities.WorkflowIdentity.Version%2A> は必須で、名前と <xref:System.Version> を表します。また、<xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能で、アセンブリ名やその他の必要な情報などの情報を格納する追加文字列の指定に使用できます。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。  
+ <xref:System.Activities.WorkflowIdentity> を使用するには、インスタンスを作成および構成し、<xref:System.Activities.WorkflowApplication> インスタンスに関連付けます。 <xref:System.Activities.WorkflowIdentity> インスタンスには 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> と <xref:System.Activities.WorkflowIdentity.Version%2A> は必須で、名前と <xref:System.Version> を表します。また、<xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能で、アセンブリ名やその他の必要な情報などの情報を格納する追加文字列の指定に使用できます。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。  
   
 > [!IMPORTANT]
 >  <xref:System.Activities.WorkflowIdentity> には、個人を特定できる情報 (PII) を含めないでください。 インスタンスの作成に使用される <xref:System.Activities.WorkflowIdentity> に関する情報は、ランタイムによるアクティビティ ライフ サイクルのさまざまなポイントで構成されているすべての追跡サービスに出力されます。 WF の追跡には PII (機密ユーザー データ) を非表示にするメカニズムがありません。 そのため、<xref:System.Activities.WorkflowIdentity> インスタンスには PII データを含めないでください。PII データは、ランタイムによって追跡レコードに出力され、追跡レコードを表示するためのアクセス権を持つユーザーに表示できます。  
@@ -117,8 +116,7 @@ wfApp.Run();
  次の例では、前の例の永続化されたワークフロー インスタンスに関する情報を <xref:System.Activities.WorkflowApplication.GetInstance%2A> を呼び出すことによって取得し、永続化された <xref:System.Activities.WorkflowIdentity> の情報を使用して一致するワークフロー定義を取得します。 この情報を使用して <xref:System.Activities.WorkflowApplication> を構成すると、ワークフローが読み込まれます。 <xref:System.Activities.WorkflowApplication.Load%2A> を受け取る <xref:System.Activities.WorkflowApplicationInstance> オーバーロードが使用されるため、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> で構成された <xref:System.Activities.WorkflowApplicationInstance> が <xref:System.Activities.WorkflowApplication> によって使用され、その結果、その <xref:System.Activities.WorkflowApplication.InstanceStore%2A> プロパティを構成する必要はありません。  
   
 > [!NOTE]
->  
-  <xref:System.Activities.WorkflowApplication.InstanceStore%2A> プロパティを設定する場合は、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> によって使用されるのと同じ <xref:System.Activities.WorkflowApplicationInstance> インスタンスで設定する必要があります。そうしないと、<xref:System.ArgumentException> がスローされ、"`The instance is configured with a different InstanceStore than this WorkflowApplication.`" というメッセージが表示されます。  
+>  <xref:System.Activities.WorkflowApplication.InstanceStore%2A> プロパティを設定する場合は、<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> によって使用されるのと同じ <xref:System.Activities.WorkflowApplicationInstance> インスタンスで設定する必要があります。そうしないと、<xref:System.ArgumentException> がスローされ、"`The instance is configured with a different InstanceStore than this WorkflowApplication.`" というメッセージが表示されます。  
   
 ```csharp  
 // Get the WorkflowApplicationInstance of the desired workflow from the specified  
@@ -143,8 +141,7 @@ wfApp.Load(instance);
 ## <a name="UpdatingWF4PersistenceDatabases"></a> ワークフローのバージョン管理をサポートするために .NET Framework 4 永続性データベースのアップグレード  
  SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいバージョン管理機能をサポートするようにデータベースを更新します。 データベースで永続化されたすべてのワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。  
   
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ワークフロー アプリケーションが、提供されたスクリプトを使用してアップグレードされていない永続性データベースで新しいバージョン管理機能を使用する永続化操作を実行すると、<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> がスローされ、次のようなメッセージが表示されます。  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ワークフロー アプリケーションが、提供されたスクリプトを使用してアップグレードされていない永続性データベースで新しいバージョン管理機能を使用する永続化操作を実行すると、<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> がスローされ、次のようなメッセージが表示されます。  
   
  **SqlWorkflowInstanceStore が '4.0.0.0' のデータベースのバージョンです。このバージョンのデータベースに対して InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' を実行することはできません。データベースを '4.5.0.0' にアップグレードしてください。**  
 ### <a name="ToUpgrade"></a> データベース スキーマをアップグレードするには  
@@ -153,7 +150,7 @@ wfApp.Load(instance);
   
 2.  選択**オープン**、**ファイル**から、**ファイル**メニュー。 次のフォルダーに移動します: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`。  
   
-3.  選択**SqlWorkflowInstanceStoreSchemaUpgrade.sql**  をクリック**オープン**します。  
+3.  選択**SqlWorkflowInstanceStoreSchemaUpgrade.sql** をクリック**オープン**します。  
   
 4.  永続性データベースの名前を選択、**利用可能なデータベース**ドロップダウンします。  
   

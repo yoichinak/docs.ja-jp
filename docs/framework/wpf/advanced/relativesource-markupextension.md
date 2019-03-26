@@ -60,11 +60,8 @@ ms.locfileid: "57476335"
 |-|-|
 |`modeEnumValue`|次のいずれかになります。<br /><br /> -文字列トークン`Self`; に対応する、<xref:System.Windows.Data.RelativeSource>使用作成すると、<xref:System.Windows.Data.RelativeSource.Mode%2A>プロパティに設定<xref:System.Windows.Data.RelativeSourceMode.Self>します。<br />-文字列トークン`TemplatedParent`; に対応する、<xref:System.Windows.Data.RelativeSource>使用作成すると、<xref:System.Windows.Data.RelativeSource.Mode%2A>プロパティに設定<xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>します。<br />-文字列トークン`PreviousData`; に対応する、<xref:System.Windows.Data.RelativeSource>使用作成すると、<xref:System.Windows.Data.RelativeSource.Mode%2A>プロパティに設定<xref:System.Windows.Data.RelativeSourceMode.PreviousData>します。<br />-以下をご覧ください情報で`FindAncestor`モード。|
 |`FindAncestor`|文字列トークン `FindAncestor`。 このトークンを使用すると、`RelativeSource` によって先祖の型およびオプションで先祖レベルを指定するモードになります。 これは、<xref:System.Windows.Data.RelativeSource> プロパティが <xref:System.Windows.Data.RelativeSource.Mode%2A> に設定された状態で作成された <xref:System.Windows.Data.RelativeSourceMode.FindAncestor> に対応します。|
-|`typeName`|
-  `FindAncestor` モードで必要です。 
-  <xref:System.Windows.Data.RelativeSource.AncestorType%2A> プロパティに指定する型の名前。|
-|`intLevel`|
-  `FindAncestor` モードのオプションです。 論理ツリー内で親の方向に向けて数えた先祖レベル。|
+|`typeName`|`FindAncestor` モードで必要です。 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> プロパティに指定する型の名前。|
+|`intLevel`|`FindAncestor` モードのオプションです。 論理ツリー内で親の方向に向けて数えた先祖レベル。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -72,14 +69,11 @@ ms.locfileid: "57476335"
 
 `{RelativeSource FindAncestor}` コントロールが常に必要な場合に特定の先祖の型のビジュアル ツリー内のケースのコントロールのテンプレートまたは予測可能な自己完結型の UI コンポジションで主に使用します。 たとえば、項目コントロールの各項目は `FindAncestor` を使用して、その項目コントロールの親先祖のプロパティにバインドすることができます。 または、テンプレート内のコントロール合成に参加している要素は、同じ合成体系の親要素に対して `FindAncestor` バインディングを使用できます。
 
-XAML 構文のセクションに示した `FindAncestor` モードのオブジェクト要素構文では、2 番目のオブジェクト要素構文は `FindAncestor` モード向けに使用されます。 `FindAncestor` モードでは、<xref:System.Windows.Data.RelativeSource.AncestorType%2A> 値が必要です。 設定する必要があります<xref:System.Windows.Data.RelativeSource.AncestorType%2A>を使用して、属性として、 [X:type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)検索する先祖の型への参照。 
-  <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 値は、実行時にバインディング要求を処理する際に使用されます。
+XAML 構文のセクションに示した `FindAncestor` モードのオブジェクト要素構文では、2 番目のオブジェクト要素構文は `FindAncestor` モード向けに使用されます。 `FindAncestor` モードでは、<xref:System.Windows.Data.RelativeSource.AncestorType%2A> 値が必要です。 設定する必要があります<xref:System.Windows.Data.RelativeSource.AncestorType%2A>を使用して、属性として、 [X:type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)検索する先祖の型への参照。 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 値は、実行時にバインディング要求を処理する際に使用されます。
 
+`FindAncestor` モードでは、オプションの <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> プロパティは、要素ツリー内に型の先祖が複数存在する可能性がある場合に、先祖の検索のあいまいさを解消するのに役立ちます。
 
-  `FindAncestor` モードでは、オプションの <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> プロパティは、要素ツリー内に型の先祖が複数存在する可能性がある場合に、先祖の検索のあいまいさを解消するのに役立ちます。
-
-
-  `FindAncestor` モードの使用方法の詳細については、「<xref:System.Windows.Data.RelativeSource>」を参照してください。
+`FindAncestor` モードの使用方法の詳細については、「<xref:System.Windows.Data.RelativeSource>」を参照してください。
 
 `{RelativeSource Self}` シナリオに便利ですが、インスタンスの 1 つのプロパティが、同じインスタンスと通常の依存関係プロパティ リレーションシップはありません (強制型変換) などの別のプロパティの値に依存既に間それら 2 つのプロパティが存在します。 値はリテラルと同じです (とは、型指定と同じ) になるように、2 つのプロパティがオブジェクトに存在を適用することもまれですが、`Converter`パラメーターを持つバインドを`{RelativeSource Self}`ソース間で変換するコンバーターを使用して、対象の型。 別のシナリオの`{RelativeSource Self}`の一部として、<xref:System.Windows.MultiDataTrigger>します。
 
@@ -87,8 +81,7 @@ XAML 構文のセクションに示した `FindAncestor` モードのオブジ�
 
 `{RelativeSource PreviousData}` データ テンプレート、またはバインディングを使用しているコレクションをデータ ソースとしての場合に便利です。 使用することができます`{RelativeSource PreviousData}`をコレクション内の連続するデータ項目間のリレーションシップを強調表示します。 これと関連して、データ ソース内の現在の項目と直前の項目との間に <xref:System.Windows.Data.MultiBinding> を確立し、そのバインディング上のコンバーターを使用して、2 つの項目 (およびそれらのプロパティ) 間の相違を特定する手法もあります。
 
-次の例の項目テンプレートに出現する 1 つ目の <xref:System.Windows.Controls.TextBlock> は、現在の数値を表示します。 2 番目の<xref:System.Windows.Controls.TextBlock>バインディングが、<xref:System.Windows.Data.MultiBinding>名目上が 2 つ<xref:System.Windows.Data.Binding>利用者: 現在のレコードとを使用して、前のデータ レコードを意図的に使用するバインディングを`{RelativeSource PreviousData}`。 
-  <xref:System.Windows.Data.MultiBinding> 上のコンバーターが、両者の差を計算し、バインディングに返します。
+次の例の項目テンプレートに出現する 1 つ目の <xref:System.Windows.Controls.TextBlock> は、現在の数値を表示します。 2 番目の<xref:System.Windows.Controls.TextBlock>バインディングが、<xref:System.Windows.Data.MultiBinding>名目上が 2 つ<xref:System.Windows.Data.Binding>利用者: 現在のレコードとを使用して、前のデータ レコードを意図的に使用するバインディングを`{RelativeSource PreviousData}`。 <xref:System.Windows.Data.MultiBinding> 上のコンバーターが、両者の差を計算し、バインディングに返します。
 
 ```xml
 <ListBox Name="fibolist">

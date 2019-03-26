@@ -96,8 +96,7 @@ Dim [ WithEvents ] variablelist
   
      `variable [ , variable ... ]`  
   
-     
-  `variable` の構文と指定項目は次のとおりです。  
+     `variable` の構文と指定項目は次のとおりです。  
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
@@ -252,10 +251,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
 |データ型が指定されているか|初期化子が指定されているか|例|結果|  
 |---|---|---|---|  
-|Ｘ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> 
-  `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|Ｘ|[はい]|`Dim qty = 5`|場合[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) (既定値) では、変数は、データが初期化子の型します。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> 
-  `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|Ｘ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|Ｘ|[はい]|`Dim qty = 5`|場合[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) (既定値) では、変数は、データが初期化子の型します。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションの後半の表を参照してください。|  
 |[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   

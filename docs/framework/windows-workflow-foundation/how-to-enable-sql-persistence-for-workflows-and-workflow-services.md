@@ -160,8 +160,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Workflow Instance Store 機能に関連する Machine.config の要素
 
-
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] のインストールでは、SQL Workflow Instance Store 機能に関連する次の要素が Machine.config ファイルに追加されます。
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] のインストールでは、SQL Workflow Instance Store 機能に関連する次の要素が Machine.config ファイルに追加されます。
 
 - 使用できるように、Machine.config ファイルに次の動作拡張機能要素を追加、 \<sqlWorkflowInstanceStore > サービスの永続化を構成する構成ファイル内のサービス動作要素。
 

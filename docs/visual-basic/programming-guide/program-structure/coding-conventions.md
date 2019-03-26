@@ -28,8 +28,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 -   名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。  
   
--   "My" または "my" を変数名の一部として使用しないようにします。 
-  `My` オブジェクトとの混同を招くからです。  
+-   "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
 -   自動生成されたコードに含まれるオブジェクトの名前をこのガイドラインに合わせて変更する必要はありません。  
   
@@ -68,8 +67,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ## <a name="program-structure"></a>プログラムの構造  
   
--   
-  `Main` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My` を使用します。  
+-   `Main` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My` を使用します。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -77,7 +75,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="string-data-type"></a>文字列型 (String)  
   
--   文字列を連結するには、アンパサンド (&) を使用します。  
+-   文字列を連結するアンパサンド (&)。  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
@@ -151,8 +149,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   
-  `AddressOf` を使用し、デリゲートの明示的なインスタンス化は避けます。  
+-   `AddressOf` を使用し、デリゲートの明示的なインスタンス化は避けます。  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -163,8 +160,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
 -   `RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
   
 ### <a name="using-shared-members"></a>共有メンバーの使用  
- 
-  `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  
+ `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  
   
 ### <a name="use-xml-literals"></a>XML リテラルの使用  
  XML リテラルを使用すると、XML 操作時に行う最も一般的なタスク (読み込み、クエリ、変換など) を簡素化できます。 XML を使用して開発を行う場合は、次のガイドラインに従います。  
@@ -175,8 +171,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 -   XML 軸プロパティを使用して XML ドキュメント内の要素と属性にアクセスします。  
   
--   
-  `Add` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。  
+-   `Add` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -202,8 +197,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   
-  `Where` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。  
+-   `Where` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   

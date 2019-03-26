@@ -41,30 +41,27 @@ End Interface
 |`accessmodifier`|任意。 次のいずれかの値を指定します。<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-  [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Private Protected](../../language-reference/modifiers/private-protected.md)<br /><br /> 「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。|  
 |`Shadows`|任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。|  
 |`name`|必須。 このインターフェイスの名前です。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
-|`Of`|任意。 これはジェネリック インターフェイスであることを指定します。|  
+|`Of`|省略可能です。 これはジェネリック インターフェイスであることを指定します。|  
 |`typelist`|使用するかどうかは必ず、[の](../../../visual-basic/language-reference/statements/of-clause.md)キーワード。 このインターフェイスの型パラメーターの一覧。 必要に応じて、型パラメーターごとに宣言できますバリアントを使用して`In`と`Out`ジェネリック修飾子。 参照してください[一覧を入力する](../../../visual-basic/language-reference/statements/type-list.md)します。|  
-|`Inherits`|任意。 このインターフェイスが別のインターフェイスまたはインターフェイスのメンバーと属性を継承することを示します。 参照してください[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)します。|  
-|`interfacenames`|
-  `Inherits` ステートメントを使用する場合は必ず指定します。 このインターフェイスの派生元のインターフェイスの名前。|  
-|`modifiers`|任意。 定義するインターフェイス メンバーの適切な修飾子。|  
-|`Property`|任意。 インターフェイスのメンバーであるプロパティを定義します。|  
-|`Function`|任意。 定義、`Function`インターフェイスのメンバーであるプロシージャ。|  
-|`Sub`|任意。 定義、`Sub`インターフェイスのメンバーであるプロシージャ。|  
-|`Event`|任意。 インターフェイスのメンバーであるイベントを定義します。|  
-|`Interface`|任意。 このインターフェイス内で入れ子になったインターフェイスを定義します。 入れ子になったインターフェイスの定義が終了する必要があります、`End Interface`ステートメント。|  
-|`Class`|任意。 インターフェイスのメンバーであるクラスを定義します。 クラスの定義が終了する必要があります、`End Class`ステートメント。|  
-|`Structure`|任意。 インターフェイスのメンバーである構造を定義します。 構造体のメンバーの定義で終了する必要があります、`End Structure`ステートメント。|  
+|`Inherits`|省略可能です。 このインターフェイスが別のインターフェイスまたはインターフェイスのメンバーと属性を継承することを示します。 参照してください[Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)します。|  
+|`interfacenames`|`Inherits` ステートメントを使用する場合は必ず指定します。 このインターフェイスの派生元のインターフェイスの名前。|  
+|`modifiers`|省略可能です。 定義するインターフェイス メンバーの適切な修飾子。|  
+|`Property`|省略可能です。 インターフェイスのメンバーであるプロパティを定義します。|  
+|`Function`|省略可能です。 定義、`Function`インターフェイスのメンバーであるプロシージャ。|  
+|`Sub`|省略可能です。 定義、`Sub`インターフェイスのメンバーであるプロシージャ。|  
+|`Event`|省略可能です。 インターフェイスのメンバーであるイベントを定義します。|  
+|`Interface`|省略可能です。 このインターフェイス内で入れ子になったインターフェイスを定義します。 入れ子になったインターフェイスの定義が終了する必要があります、`End Interface`ステートメント。|  
+|`Class`|省略可能です。 インターフェイスのメンバーであるクラスを定義します。 クラスの定義が終了する必要があります、`End Class`ステートメント。|  
+|`Structure`|省略可能です。 インターフェイスのメンバーである構造を定義します。 構造体のメンバーの定義で終了する必要があります、`End Structure`ステートメント。|  
 |`membername`|必要な各プロパティ、プロシージャ、イベント、インターフェイス、クラスまたは構造体、インターフェイスのメンバーとして定義します。 メンバーの名前。|  
-|`End Interface`|
-  `Interface` の定義を終了します。|  
+|`End Interface`|`Interface` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
  *インターフェイス*プロパティとクラスし、構造体にするには、プロシージャが実装できるように、メンバーのセットを定義します。 インターフェイスのメンバーとその内部処理ではない署名だけを定義します。  
   
  クラスまたは構造体、インターフェイスで定義されたすべてのメンバーのコードを指定することで、インターフェイスを実装します。 最後に、アプリケーションは、そのクラスまたは構造体のインスタンスを作成するときに、オブジェクトが存在し、メモリ内で実行します。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)します。  
   
- 
-  `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*インターフェイスは、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
+ `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*インターフェイスは、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
  インターフェイスの既定値は[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)アクセスします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   

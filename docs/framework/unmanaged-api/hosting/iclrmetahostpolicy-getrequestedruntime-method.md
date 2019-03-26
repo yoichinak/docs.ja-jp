@@ -52,11 +52,9 @@ HRESULT GetRequestedRuntime(
 |`pwzBinary`|[in] オプション。 アセンブリのファイル パスを指定します。|
 |`pCfgStream`|[in] オプション。 構成ファイルを <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType> として指定します。|
 |`pwzVersion`|[in、out] 省略可能です。 読み込む適切な CLR のバージョンを指定するか返します。 |
-|`pcchVersion`|[in、out] 必須です。 バッファー オーバーランを回避するため、入力として必要なサイズの `pwzVersion` を指定します。 
-  `pwzVersion` が null の場合、`GetRequestedRuntime` が返されるときに、`pcchVersion` には必要なサイズの `pwzVersion` が含まれて、事前の割り当てが可能になります。それ以外の場合、`pcchVersion` には `pwzVersion` に書き込まれる文字数が含まれます。|
+|`pcchVersion`|[in、out] 必須です。 バッファー オーバーランを回避するため、入力として必要なサイズの `pwzVersion` を指定します。 `pwzVersion` が null の場合、`GetRequestedRuntime` が返されるときに、`pcchVersion` には必要なサイズの `pwzVersion` が含まれて、事前の割り当てが可能になります。それ以外の場合、`pcchVersion` には `pwzVersion` に書き込まれる文字数が含まれます。|
 |`pwzImageVersion`|[out] 省略可能です。 ときに`GetRequestedRuntime`を返しますに対応する CLR のバージョンが含まれています、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスが返されます。|
-|`pcchImageVersion`|[in、out] 省略可能です。 バッファー オーバーランを回避するため、入力として `pwzImageVersion` のサイズを指定します。 
-  `pwzImageVersion` が null の場合、`GetRequestedRuntime` が返されるとき、`pcchImageVersion` には必要なサイズの `pwzImageVersion` が含まれて、事前の割り当てが可能になります。|
+|`pcchImageVersion`|[in、out] 省略可能です。 バッファー オーバーランを回避するため、入力として `pwzImageVersion` のサイズを指定します。 `pwzImageVersion` が null の場合、`GetRequestedRuntime` が返されるとき、`pcchImageVersion` には必要なサイズの `pwzImageVersion` が含まれて、事前の割り当てが可能になります。|
 |`pdwConfigFlags`|[out] 省略可能です。 場合`GetRequestedRuntime`、戻ったときにバインド中に、構成ファイルを使用して`pdwConfigFlags`が含まれています、 [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)を示す値かどうか、 [\<スタートアップ >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)要素には、`useLegacyV2RuntimeActivationPolicy`属性のセット、および属性の値。 適用、 [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md)マスクを`pdwConfigFlags`に関連する値を取得する`useLegacyV2RuntimeActivationPolicy`します。|
 |`riid`|[in]要求されたインターフェイス識別子 IID_ICLRRuntimeInfo を指定します[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。|
 |`ppRuntime`|[out]ときに`GetRequestedRuntime`対応へのポインターを返す[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。|
@@ -82,9 +80,7 @@ HRESULT GetRequestedRuntime(
 |S_OK|メソッドは正常に完了しました。|
 |E_POINTER|`pwzVersion` は null 以外で、`pcchVersion` は null です。<br /><br /> - または -<br /><br /> `pwzImageVersion` は null 以外で、`pcchImageVersion` は null です。|
 |E_INVALIDARG|`dwPolicyFlags` は `METAHOST_POLICY_HIGHCOMPAT` を指定しません。|
-|ERROR_INSUFFICIENT_BUFFER|
-  `pwzVersion` に割り当てられたメモリが不十分です。<br /><br /> - または -<br /><br /> 
-  `pwzImageVersion` に割り当てられたメモリが不十分です。|
+|ERROR_INSUFFICIENT_BUFFER|`pwzVersion` に割り当てられたメモリが不十分です。<br /><br /> - または -<br /><br /> `pwzImageVersion` に割り当てられたメモリが不十分です。|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` には METAHOST_POLICY_APPLY_UPGRADE_POLICY が含まれ、`pwzVersion` と `pcchVersion` はいずれも null です。|
 
 ## <a name="requirements"></a>必要条件

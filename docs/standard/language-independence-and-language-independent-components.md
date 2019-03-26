@@ -87,8 +87,7 @@ ms.locfileid: "57846468"
  [!code-csharp[Conceptual.CLSCompliant#1](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public1.cs#1)]
  [!code-vb[Conceptual.CLSCompliant#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public1.vb#1)]  
   
- 
-  `Person` クラスを CLS 準拠にするには、`Age` プロパティの型を <xref:System.UInt16> から、CLS 準拠の 16 ビット符号付き整数である <xref:System.Int16> に変更します。 プライベート `personAge` フィールドの型を変更する必要はありません。  
+ `Person` クラスを CLS 準拠にするには、`Age` プロパティの型を <xref:System.UInt16> から、CLS 準拠の 16 ビット符号付き整数である <xref:System.Int16> に変更します。 プライベート `personAge` フィールドの型を変更する必要はありません。  
   
  [!code-csharp[Conceptual.CLSCompliant#2](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/public2.cs#2)]
  [!code-vb[Conceptual.CLSCompliant#2](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/public2.vb#2)]  
@@ -119,8 +118,7 @@ ms.locfileid: "57846468"
 |イベント|[イベント](#events)|イベントを実装するメソッドは、メタデータ内で `SpecialName` のマークが付けられる。|29|  
 |イベント|[イベント](#events)|イベントとイベントのアクセサーのアクセシビリティは同一である。|30|  
 |イベント|[イベント](#events)|イベントの `add` メソッドおよび `remove` メソッドは、どちらもあってもなくてもよい。|31|  
-|イベント|[イベント](#events)|
-  `add` メソッドおよび `remove` メソッドは、それぞれパラメーターを 1 つ使用する。このパラメーターの型がイベントの型を規定する。また、パラメーターの型は <xref:System.Delegate?displayProperty=nameWithType> の派生でなければいけない。|32|  
+|イベント|[イベント](#events)|`add` メソッドおよび `remove` メソッドは、それぞれパラメーターを 1 つ使用する。このパラメーターの型がイベントの型を規定する。また、パラメーターの型は <xref:System.Delegate?displayProperty=nameWithType> の派生でなければいけない。|32|  
 |イベント|[イベント](#events)|イベントは、特定の名前付けパターンに従わなくてはいけない。 CLS 規則 29 で触れられている `SpecialName` 属性は、適切な名前比較で無視され、識別子規則に従わなければいけない。|33|  
 |例外|[例外](#exceptions)|スローできるオブジェクト型は、<xref:System.Exception?displayProperty=nameWithType>、またはそれを継承する型である。 ただし、CLS 準拠のメソッドで他の型の例外のスローをブロックする必要はない。|40|  
 |全般|[CLS 準拠: 規則](#Rules)|CLS 規則は、型の構成部分のうち、その型を定義しているアセンブリの外部からアクセスまたは参照できる部分にのみ適用される。|1|  
@@ -156,8 +154,7 @@ ms.locfileid: "57846468"
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>型および型メンバーのシグネチャ  
- 
-  <xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します。また、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承します。そして、このクラスは <xref:System.Exception> クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。  
+ <xref:System.Object?displayProperty=nameWithType> 型は CLS に準拠しており、.NET Framework 型システムのすべてのオブジェクト型の基本型です。 .NET Framework の継承は暗黙的また明示的に行われます。たとえば、<xref:System.String> クラスは <xref:System.Object> クラスから暗黙的に継承します。また、<xref:System.Globalization.CultureNotFoundException> クラスは、<xref:System.ArgumentException> クラスから明示的に継承し、これは <xref:System.SystemException> クラスから明示的に継承します。そして、このクラスは <xref:System.Exception> クラスから明示的に継承します。 派生型を CLS 準拠にするには、その基本型も CLS に準拠している必要があります。  
   
  次の例は、基本型が CLS に準拠していない派生型を示しています。 これは、符号なし 32 ビット整数をカウンターとして使用する `Counter` 基底クラスを定義します。 クラスには、符号なし整数をラップすることでカウンター機能が用意されます。このため、クラスは CLS 非準拠としてマークされます。 結果として、派生クラス `NonZeroCounter` も CLS に準拠しなくなります。  
   
@@ -278,8 +275,7 @@ ms.locfileid: "57846468"
 ### <a name="arrays"></a>配列  
  CLS 準拠の配列は、次の規則に従います。  
   
--   配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 
-  <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
+-   配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
@@ -498,9 +494,7 @@ ms.locfileid: "57846468"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 属性  
- 
-  <xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 
-  <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。  
+ <xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。  
   
  コンパイル時に、CLS 準拠が前提とされる非準拠要素が検出され、警告が出力されます。 非準拠として明示的に宣言された型またはメンバーに対しては、警告は出力されません。  
   
@@ -513,8 +507,7 @@ ms.locfileid: "57846468"
 > [!WARNING]
 >  言語コンパイラでは、<xref:System.CLSCompliantAttribute> 属性が使用されているかどうかに関係なく、CLS 準拠の規則が適用される場合があります。 たとえば、インターフェイスの静的メンバーを定義すると CLS の規則に違反します。 この点に関して、インターフェイスで `static` メンバー (C# の場合) または `Shared` メンバー (Visual Basic の場合) を定義すると、C# と Visual Basic の両方のコンパイラでエラー メッセージが表示され、アプリはコンパイルされません。  
   
- 
-  <xref:System.CLSCompliantAttribute> 属性は、値 <xref:System.AttributeUsageAttribute> が指定された <xref:System.AttributeTargets.All?displayProperty=nameWithType> 属性でマークされます。 この値を使用すると、<xref:System.CLSCompliantAttribute> 属性を、アセンブリ、モジュール、型 (クラス、構造体、列挙体、インターフェイス、およびデリゲート)、型パラメーター (コンストラクター、メソッド、プロパティ、フィールド、およびイベント)、パラメーター、ジェネリック パラメーター、戻り値など、すべてのプログラム要素に適用できます。 ただし、実際は、アセンブリ、型、および型メンバーだけに属性を適用することをお勧めします。 そうしないと、属性は、コンパイラによってライブラリのパブリック インターフェイスで非準拠パラメーター、ジェネリック パラメーター、または戻り値が検出されたときに必ず無視され、コンパイラ警告が引き続き生成されます。  
+ <xref:System.CLSCompliantAttribute> 属性は、値 <xref:System.AttributeUsageAttribute> が指定された <xref:System.AttributeTargets.All?displayProperty=nameWithType> 属性でマークされます。 この値を使用すると、<xref:System.CLSCompliantAttribute> 属性を、アセンブリ、モジュール、型 (クラス、構造体、列挙体、インターフェイス、およびデリゲート)、型パラメーター (コンストラクター、メソッド、プロパティ、フィールド、およびイベント)、パラメーター、ジェネリック パラメーター、戻り値など、すべてのプログラム要素に適用できます。 ただし、実際は、アセンブリ、型、および型メンバーだけに属性を適用することをお勧めします。 そうしないと、属性は、コンパイラによってライブラリのパブリック インターフェイスで非準拠パラメーター、ジェネリック パラメーター、または戻り値が検出されたときに必ず無視され、コンパイラ警告が引き続き生成されます。  
   
  <xref:System.CLSCompliantAttribute> 属性の値は、内包型プログラム要素によって継承されます。 たとえば、アセンブリが CLS 準拠としてマークされている場合は、その型も CLS に準拠します。 型が CLS 準拠としてマークされている場合は、その入れ子になった型とメンバーも CLS に準拠します。  
   

@@ -14,11 +14,9 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57719300"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer クラス
-
-  `SoundPlayer` クラスを使用すると、アプリケーションにサウンドを簡単に組み込むことができます。  
+`SoundPlayer` クラスを使用すると、アプリケーションにサウンドを簡単に組み込むことができます。  
   
- 
-  <xref:System.Media.SystemSounds> クラスを使用して、ビープ音を含む、共通のシステム サウンドを再生することもできます。  
+ <xref:System.Media.SystemSounds> クラスを使用して、ビープ音を含む、共通のシステム サウンドを再生することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SoundPlayer クラスの概要](soundplayer-class-overview.md)  

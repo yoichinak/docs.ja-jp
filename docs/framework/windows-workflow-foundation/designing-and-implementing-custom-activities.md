@@ -10,16 +10,14 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57706404"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>カスタム アクティビティの設計と実装
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のカスタム アクティビティを作成するには、システム標準アクティビティを複合アクティビティにアセンブルするか、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、または <xref:System.Activities.NativeActivity> から派生する新しい型を作成します。 ここでは、いずれかのメソッドを使用してカスタム アクティビティを作成する方法について説明します。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のカスタム アクティビティを作成するには、システム標準アクティビティを複合アクティビティにアセンブルするか、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、または <xref:System.Activities.NativeActivity> から派生する新しい型を作成します。 ここでは、いずれかのメソッドを使用してカスタム アクティビティを作成する方法について説明します。  
   
 > [!IMPORTANT]
 >  既定では、カスタム アクティビティは、ワークフロー デザイナー内で、アクティビティ名を含む単純な四角形として表示されます。 ワーク フロー デザイナーでアクティビティのカスタム ビジュアル表現を指定するには、カスタム デザイナーを作成する必要があります。 詳細については、次を参照してください。[を使用してカスタム アクティビティ デザイナーおよびテンプレート](using-custom-activity-designers-and-templates.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アクティビティ作成オプション](activity-authoring-options-in-wf.md)  
- 
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] で使用できる作成スタイルについて説明します。  
+ [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] で使用できる作成スタイルについて説明します。  
   
  [カスタム アクティビティの使用](using-a-custom-activity.md)  
  ワークフロー プロジェクトにカスタム アクティビティを追加する方法について説明します。  
@@ -31,8 +29,7 @@ ms.locfileid: "57706404"
  アクティビティの検証を使用して、アクティビティを実行する前にその構成エラーを特定および報告する方法について説明します。  
   
  [実行時におけるアクティビティの作成](creating-an-activity-at-runtime-with-dynamicactivity.md)  
- 
-  <xref:System.Activities.DynamicActivity> を使用して実行時にアクティビティを作成する方法について説明します。  
+ <xref:System.Activities.DynamicActivity> を使用して実行時にアクティビティを作成する方法について説明します。  
   
  [ワークフロー実行プロパティ](workflow-execution-properties.md)  
  ワークフロー実行プロパティを使用して、アクティビティの環境にコンテキスト固有のプロパティを追加する方法について説明します。  

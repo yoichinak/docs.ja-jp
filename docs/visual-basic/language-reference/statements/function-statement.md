@@ -53,7 +53,7 @@ End Function
   
 -   `attributelist`  
   
-     任意。 参照してください[属性リスト](attribute-list.md)します。  
+     省略可能です。 参照してください[属性リスト](attribute-list.md)します。  
   
 -   `accessmodifier`  
   
@@ -75,7 +75,7 @@ End Function
   
 -   `proceduremodifiers`  
   
-     任意。 次のいずれかの値を指定します。  
+     省略可能です。 次のいずれかの値を指定します。  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,19 +93,19 @@ End Function
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
+     省略可能です。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+     省略可能です。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
 -   `Async`  
   
-     任意。 参照してください[Async](../../../visual-basic/language-reference/modifiers/async.md)します。  
+     省略可能です。 参照してください[Async](../../../visual-basic/language-reference/modifiers/async.md)します。  
   
 -   `Iterator`  
   
-     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
+     省略可能です。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
   
 -   `name`  
   
@@ -113,11 +113,11 @@ End Function
   
 -   `typeparamlist`  
   
-     任意。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。  
+     省略可能です。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。  
   
 -   `parameterlist`  
   
-     任意。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。  
+     省略可能です。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。  
   
 -   `returntype`  
   
@@ -125,39 +125,34 @@ End Function
   
 -   `Implements`  
   
-     任意。 この手順が 1 つまたは複数を実装することを示します`Function`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。  
+     省略可能です。 この手順が 1 つまたは複数を実装することを示します`Function`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。  
   
 -   `implementslist`  
   
-     
-  `Implements` を指定する場合は、必ず指定します。 実装される `Function` プロシージャのリストです。  
+     `Implements` を指定する場合は、必ず指定します。 実装される `Function` プロシージャのリストです。  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
-     
-  `implementedprocedure` の構文と指定項目は次のとおりです。  
+     `implementedprocedure` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
     |パーツ|説明|  
     |---|---|  
     |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
-    |`definedname`|必須。 
-  `interface` の中でプロシージャを定義するために使用する名前。|  
+    |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|  
   
 -   `Handles`  
   
-     任意。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。  
+     省略可能です。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。  
   
 -   `eventlist`  
   
-     
-  `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
+     `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
   
      `eventspecifier [ , eventspecifier ... ]`  
   
-     
-  `eventspecifier` の構文と指定項目は次のとおりです。  
+     `eventspecifier` の構文と指定項目は次のとおりです。  
   
      `eventvariable.event`  
   
@@ -168,7 +163,7 @@ End Function
   
 -   `statements`  
   
-     任意。 この手順内で実行されるステートメントのブロックです。  
+     省略可能です。 この手順内で実行されるステートメントのブロックです。  
   
 -   `End Function`  
   

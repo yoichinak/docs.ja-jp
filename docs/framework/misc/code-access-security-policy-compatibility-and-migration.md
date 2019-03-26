@@ -18,8 +18,7 @@ ms.locfileid: "57364776"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-
-  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、コード アクセス セキュリティ (CAS) のポリシー部分は廃止されました。 その結果、発生するコンパイルの警告とランタイム例外、廃止されたポリシーの種類とメンバーを呼び出す場合[明示的に](#explicit_use)または[暗黙的に](#implicit_use)(を通じて他の型とメンバーを使用して)。
+[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、コード アクセス セキュリティ (CAS) のポリシー部分は廃止されました。 その結果、発生するコンパイルの警告とランタイム例外、廃止されたポリシーの種類とメンバーを呼び出す場合[明示的に](#explicit_use)または[暗黙的に](#implicit_use)(を通じて他の型とメンバーを使用して)。
 
 以下のいずれかの方法で警告やエラーを回避できます。
 
@@ -115,8 +114,7 @@ ms.locfileid: "57364776"
 
 ### <a name="determining-an-assemblys-trust-level"></a>アセンブリの信頼レベルの判別
 
-CAS ポリシーは多くの場合、アセンブリ、アプリケーション ドメインのアクセス許可セット、または信頼レベルを判断するために使用されます。 
-  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] では、セキュリティ ポリシーを解決する必要のない次の便利なプロパティが公開されています。
+CAS ポリシーは多くの場合、アセンブリ、アプリケーション ドメインのアクセス許可セット、または信頼レベルを判断するために使用されます。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] では、セキュリティ ポリシーを解決する必要のない次の便利なプロパティが公開されています。
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 

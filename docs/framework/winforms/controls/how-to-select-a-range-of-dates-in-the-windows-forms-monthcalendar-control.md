@@ -40,8 +40,7 @@ Windows フォームの重要な特徴<xref:System.Windows.Forms.MonthCalendar>�
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  
-  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。  
+2.  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  
@@ -58,8 +57,7 @@ Windows フォームの重要な特徴<xref:System.Windows.Forms.MonthCalendar>�
   
      または  
   
-     
-  <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> プロパティと <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。  
+     <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> プロパティと <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  

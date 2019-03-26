@@ -16,47 +16,37 @@ ms.lasthandoff: 02/26/2019
 ms.locfileid: "56835253"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
-
-  <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
+<xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
- 
-  <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数がクラス定義でラップされることによって Microsoft Intermediate Language (MSIL) にコンパイルされるため、パフォーマンスが低下しません。  
+ <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数がクラス定義でラップされることによって Microsoft Intermediate Language (MSIL) にコンパイルされるため、パフォーマンスが低下しません。  
   
- 
-  `<msxsl:script>` 要素は、次のように定義されます。  
+ `<msxsl:script>` 要素は、次のように定義されます。  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
 ```  
   
- 
-  `msxsl` は、名前空間 `urn:schemas-microsoft-com:xslt` に関連付けられたプレフィックスです。  
+ `msxsl` は、名前空間 `urn:schemas-microsoft-com:xslt` に関連付けられたプレフィックスです。  
   
  `language` 属性は必須ではありませんが、指定する場合は、値をC#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 
-  language 属性を指定しない場合、既定の言語は JScript です。 
-  `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
+  language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
   
- 
-  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 この名前空間は、スタイル シート内の任意の場所で定義できます。  
+ `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 この名前空間は、スタイル シート内の任意の場所で定義できます。  
   
- 
-  `msxsl:script` 要素は名前空間 `urn:schemas-microsoft-com:xslt` に属しているため、スタイル シートには、名前空間宣言 `xmlns:msxsl=urn:schemas-microsoft-com:xslt` が含まれている必要があります。  
+ `msxsl:script` 要素は名前空間 `urn:schemas-microsoft-com:xslt` に属しているため、スタイル シートには、名前空間宣言 `xmlns:msxsl=urn:schemas-microsoft-com:xslt` が含まれている必要があります。  
   
  スクリプトの呼び出し元が <xref:System.Security.Permissions.SecurityPermissionFlag> へのアクセス許可を持っていない場合は、スタイル シート内のスクリプトがコンパイルされず、<xref:System.Xml.Xsl.XslTransform.Load%2A> への呼び出しが失敗します。  
   
  呼び出し元が `UnmanagedCode` へのアクセス許可を持っている場合、スクリプトはコンパイルされますが、許可される操作は、読み込み時に指定される証拠によって異なります。  
   
- 
-  <xref:System.Xml.XmlReader> または <xref:System.Xml.XPath.XPathNavigator> を受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドを使用してスタイル シートを読み込む場合は、<xref:System.Security.Policy.Evidence> パラメーターを引数として受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> オーバーロードを使用する必要があります。 証拠を指定する場合、呼び出し元は、スクリプト アセンブリの `Evidence` を渡すための <xref:System.Security.Permissions.SecurityPermissionFlag> へのアクセス許可を持っている必要があります。 呼び出し元がこのアクセス許可を持っていない場合は、`Evidence` パラメーターが `null` に設定されることがあります。 その場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> 関数がスクリプトを見つけると、処理が失敗します。 
-  `ControlEvidence` へのアクセス許可は、非常に強力なアクセス権であるため、信頼性の高いコード以外に与えてはいけません。  
+ <xref:System.Xml.XmlReader> または <xref:System.Xml.XPath.XPathNavigator> を受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドを使用してスタイル シートを読み込む場合は、<xref:System.Security.Policy.Evidence> パラメーターを引数として受け取る <xref:System.Xml.Xsl.XslTransform.Load%2A> オーバーロードを使用する必要があります。 証拠を指定する場合、呼び出し元は、スクリプト アセンブリの `Evidence` を渡すための <xref:System.Security.Permissions.SecurityPermissionFlag> へのアクセス許可を持っている必要があります。 呼び出し元がこのアクセス許可を持っていない場合は、`Evidence` パラメーターが `null` に設定されることがあります。 その場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> 関数がスクリプトを見つけると、処理が失敗します。 `ControlEvidence` へのアクセス許可は、非常に強力なアクセス権であるため、信頼性の高いコード以外に与えてはいけません。  
   
  アセンブリから証拠を取得するには、`this.GetType().Assembly.Evidence` を使用します。 URI (Uniform Resource Identifier) から証拠を取得するには、`Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)` を使用します。  
   
- 
-  <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」をご覧ください。  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」をご覧ください。  
   
  関数は、`msxsl:script` 要素内で宣言できます。 既定でサポートされる名前空間を次の表に示します。 表に示す名前空間の外側でもクラスを使用できます。 ただし、これらのクラスには、完全修飾名が指定されている必要があります。  
   

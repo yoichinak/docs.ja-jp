@@ -25,21 +25,20 @@ Const constantlist
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 任意。 すべての定数に適用される属性の一覧は、このステートメントで宣言します。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
+ 省略可能です。 すべての定数に適用される属性の一覧は、このステートメントで宣言します。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
   
  `accessmodifier`  
- 任意。 これを使用して、どのようなコードがアクセスできるは、これらの定数を指定します。 [パブリック](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)、または[Private Protected](../../language-reference/modifiers/private-protected.md)します。
+ 省略可能です。 これを使用して、どのようなコードがアクセスできるは、これらの定数を指定します。 [パブリック](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)、または[Private Protected](../../language-reference/modifiers/private-protected.md)します。
   
  `Shadows`  
- 任意。 再宣言して、基底クラスでのプログラミング要素を非表示にするには、これを使用します。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+ 省略可能です。 再宣言して、基底クラスでのプログラミング要素を非表示にするには、これを使用します。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
  `constantlist`  
  必須。 このステートメントで宣言されている定数の一覧です。  
   
  `constant` `[ ,` `constant` `... ]`  
   
- 
-  `constant` の構文と指定項目は次のとおりです。  
+ `constant` の構文と指定項目は次のとおりです。  
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   

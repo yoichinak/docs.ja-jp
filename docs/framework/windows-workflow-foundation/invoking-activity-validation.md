@@ -93,7 +93,7 @@ catch (Exception ex)
  **System.activities.invalidworkflowexception:**  
 **ワークフロー ツリーの処理中に、次のエラーが発生しました。**   
 **' Add'。必要なアクティビティ引数 'Operand2' の値が指定されませんでした。**   
-**' Add'。必要なアクティビティ引数 'Operand1' の値が指定されませんでした。**  このサンプル ワークフローを有効にするには、`Add` アクティビティの 2 つの必須引数をバインドする必要があります。 次の例では、2 つの必須変数と結果値がワークフロー変数にバインドされています。 この例では、2 つの必須変数に加え、<xref:System.Activities.Activity%601.Result%2A> 引数がバインドされています。 <xref:System.Activities.Activity%601.Result%2A> 引数はバインドする必要がなく、バインドされていなくても検証エラーは発生しません。 <xref:System.Activities.Activity%601.Result%2A> の値がワークフローの別の場所で使用される場合、この引数のバインドはワークフローの作成者が行う必要があります。  
+**' Add'。必要なアクティビティ引数 'Operand1' の値が指定されませんでした。**  このサンプル ワークフローを有効にするには、`Add` アクティビティの 2 つの必須引数をバインドする必要があります。 次の例では、2 つの必須引数と結果値がワークフロー変数にバインドされています。 この例では、2 つの必須変数に加え、<xref:System.Activities.Activity%601.Result%2A> 引数がバインドされています。 <xref:System.Activities.Activity%601.Result%2A> 引数はバインドする必要がなく、バインドされていなくても検証エラーは発生しません。 <xref:System.Activities.Activity%601.Result%2A> の値がワークフローの別の場所で使用される場合、この引数のバインドはワークフローの作成者が行う必要があります。  
   
 ```csharp  
 new Add  
@@ -158,8 +158,7 @@ catch (Exception ex)
   
 ### <a name="invoking-imperative-code-based-validation"></a>命令型コードに基づく検証の呼び出し
 
-命令型コードに基づく検証は、アクティビティでアクティビティ自身に関する検証を可能にする簡単な方法を提供し、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、および <xref:System.Activities.NativeActivity> から派生するアクティビティで使用できます。 検証のエラーまたは警告を判断する検証コードがアクティビティに追加されます。 検証がアクティビティで呼び出されると、これらの警告またはエラーは、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> への呼び出しで返されるコレクションに格納されます。 次の例では、 `CreateProduct` アクティビティを定義します。 
-  `Cost` が `Price` よりも高い場合、検証エラーが <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドのメタデータに追加されます。  
+命令型コードに基づく検証は、アクティビティでアクティビティ自身に関する検証を可能にする簡単な方法を提供し、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity>、および <xref:System.Activities.NativeActivity> から派生するアクティビティで使用できます。 検証のエラーまたは警告を判断する検証コードがアクティビティに追加されます。 検証がアクティビティで呼び出されると、これらの警告またはエラーは、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> への呼び出しで返されるコレクションに格納されます。 次の例では、 `CreateProduct` アクティビティを定義します。 `Cost` が `Price` よりも高い場合、検証エラーが <xref:System.Activities.CodeActivity.CacheMetadata%2A> オーバーライドのメタデータに追加されます。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -237,8 +236,7 @@ else
 ## <a name="using-validationsettings"></a>ValidationSettings の使用  
  既定では、アクティビティ ツリー内のすべてのアクティビティは、検証が <xref:System.Activities.Validation.ActivityValidationServices> に呼び出されたときに評価されます。 <xref:System.Activities.Validation.ValidationSettings> を使用すると、その 3 つのプロパティを構成することによって、さまざまな方法で検証をカスタマイズできます。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> は、バリデーターがアクティビティ ツリー全体を調べるか、指定したアクティビティにのみ検証ロジックを適用するかを指定します。 この値の既定値は、`false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> は、型から制約のリストへの追加の制約マッピングを指定します。 検証されているアクティビティ ツリーの各アクティビティの基本型について、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> への参照が行われます。 一致する制約リストが見つかると、アクティビティについて、リストのすべての制約が評価されます。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、バリデーターがすべての制約を評価するか、<xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> で指定された制約のみを評価するかを指定します。 既定値は `false` です。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> および <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> は、FxCop のようなツールのポリシーの制約など、ワークフローの検証をワークフロー ホストの作成者がさらに追加する場合に便利です。 制約の詳細については、次を参照してください。[宣言の制約](declarative-constraints.md)します。  
   
- 
-  <xref:System.Activities.Validation.ValidationSettings> を使用するには、必要なプロパティを構成し、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> の呼び出しで渡します。 この例では、カスタムの <xref:System.Activities.Statements.Sequence> アクティビティを持つ `Add` で構成されるワークフローが検証されます。 この `Add` アクティビティには必須引数が 2 つあります。  
+ <xref:System.Activities.Validation.ValidationSettings> を使用するには、必要なプロパティを構成し、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> の呼び出しで渡します。 この例では、カスタムの <xref:System.Activities.Statements.Sequence> アクティビティを持つ `Add` で構成されるワークフローが検証されます。 この `Add` アクティビティには必須引数が 2 つあります。  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  

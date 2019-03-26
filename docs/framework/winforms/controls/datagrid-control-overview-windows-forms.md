@@ -76,8 +76,7 @@ ms.locfileid: "57721997"
   
 -   <xref:System.ComponentModel.IListSource> インターフェイスを実装するコンポーネント。  
   
--   
-  <xref:System.ComponentModel.IBindingList> インターフェイスを実装するコンポーネント。  
+-   <xref:System.ComponentModel.IBindingList> インターフェイスを実装するコンポーネント。  
   
  使用できるデータ ソースの詳細については、「[Windows フォームがサポートするデータ ソース](../data-sources-supported-by-windows-forms.md)」を参照してください。  
   

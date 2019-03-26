@@ -19,8 +19,7 @@ ms.locfileid: "57722452"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロール内の列を操作します。
 
-
-  <xref:System.Windows.Forms.DataGridViewColumn> クラスのプロパティを使用して <xref:System.Windows.Forms.DataGridView> の列を操作するさまざまな方法を次のコード例に示します。
+<xref:System.Windows.Forms.DataGridViewColumn> クラスのプロパティを使用して <xref:System.Windows.Forms.DataGridView> の列を操作するさまざまな方法を次のコード例に示します。
 
 ## <a name="example"></a>例
 

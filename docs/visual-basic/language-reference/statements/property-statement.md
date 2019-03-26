@@ -44,11 +44,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+     省略可能です。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
 -   `Default`  
   
-     任意。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
+     省略可能です。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
   
 -   `accessmodifier`  
   
@@ -70,7 +70,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     任意。 次のいずれかの値を指定します。  
+     省略可能です。 次のいずれかの値を指定します。  
   
     -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -88,23 +88,23 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
+     省略可能です。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+     省略可能です。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
 -   `ReadOnly`  
   
-     任意。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+     省略可能です。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
   
 -   `WriteOnly`  
   
-     任意。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
+     省略可能です。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
   
 -   `Iterator`  
   
-     任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
+     省略可能です。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
   
 -   `name`  
   
@@ -112,7 +112,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `parameterlist`  
   
-     任意。 このプロパティのパラメーターとの可能な追加パラメーターを表すローカル変数名の一覧、`Set`プロシージャ。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。  
+     省略可能です。 このプロパティのパラメーターとの可能な追加パラメーターを表すローカル変数名の一覧、`Set`プロシージャ。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。  
   
 -   `returntype`  
   
@@ -120,17 +120,15 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     任意。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されているそれぞれの 1 つまたは複数のプロパティが実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。  
+     省略可能です。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されているそれぞれの 1 つまたは複数のプロパティが実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。  
   
 -   `implementslist`  
   
-     
-  `Implements` を指定する場合は、必ず指定します。 実装されているプロパティの一覧です。  
+     `Implements` を指定する場合は、必ず指定します。 実装されているプロパティの一覧です。  
   
      `implementedproperty [ , implementedproperty ... ]`  
   
-     
-  `implementedproperty` の構文と指定項目は次のとおりです。  
+     `implementedproperty` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
@@ -141,11 +139,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Get`  
   
-     任意。 プロパティがマークされているかどうかに必要な`WriteOnly`します。 開始、`Get`プロパティ プロシージャをプロパティの値を返すために使用します。  
+     省略可能です。 プロパティがマークされているかどうかに必要な`WriteOnly`します。 開始、`Get`プロパティ プロシージャをプロパティの値を返すために使用します。  
   
 -   `statements`  
   
-     任意。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。  
+     省略可能です。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。  
   
 -   `End Get`  
   
@@ -153,7 +151,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     任意。 プロパティがマークされているかどうかに必要な`ReadOnly`します。 開始、`Set`プロパティ プロシージャ、プロパティの値を格納するために使用します。  
+     省略可能です。 プロパティがマークされているかどうかに必要な`ReadOnly`します。 開始、`Set`プロパティ プロシージャ、プロパティの値を格納するために使用します。  
   
 -   `End Set`  
   

@@ -19,8 +19,7 @@ ms.locfileid: "57358432"
 アプリケーションから印刷する機能を提供することが単に作成して開くと、<xref:System.Windows.Controls.PrintDialog>オブジェクト。  
   
 ## <a name="example"></a>例  
- 
-  <xref:System.Windows.Controls.PrintDialog> コントロールには、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、構成、および [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ジョブの送信用の 1 つのエントリ ポイントが用意されています。 コントロールは使いやすいを使用してインスタンス化することができます[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]マークアップまたはコード。 次の例では、インスタンス化し、コードで、コントロールを開く方法およびそのプリンターから印刷する方法を示します。 ダイアログは、ユーザーを特定のページ範囲を設定するオプションを確認する方法も示します。 コード例では、FixedDocumentSequence.xps c: ドライブのルート内のファイルがあることを前提としています。  
+ <xref:System.Windows.Controls.PrintDialog> コントロールには、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]、構成、および [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ジョブの送信用の 1 つのエントリ ポイントが用意されています。 コントロールは使いやすいを使用してインスタンス化することができます[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]マークアップまたはコード。 次の例では、インスタンス化し、コードで、コントロールを開く方法およびそのプリンターから印刷する方法を示します。 ダイアログは、ユーザーを特定のページ範囲を設定するオプションを確認する方法も示します。 コード例では、FixedDocumentSequence.xps c: ドライブのルート内のファイルがあることを前提としています。  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  

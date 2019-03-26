@@ -29,8 +29,7 @@ ms.locfileid: "57707249"
 ## <a name="example"></a>例  
  次のコード例は、<xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスの簡単な実装を示します。 <xref:System.Windows.Forms.BindingSource> が <xref:System.ComponentModel.INotifyPropertyChanged> 型の一覧にバインドされるときに、<xref:System.Windows.Forms.BindingSource> がバインドされたコントロールにデータ ソースの変更を自動的に渡す方法も示します。  
   
- 
-  `CallerMemberName` 属性を使用する場合、`NotifyPropertyChanged` メソッドの呼び出しが、文字列引数としてプロパティ名を指定する必要はありません。 詳細については、次を参照してください。[呼び出し元情報 (C#)](../../../csharp/programming-guide/concepts/caller-information.md)または[呼び出し元情報 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)します。  
+ `CallerMemberName` 属性を使用する場合、`NotifyPropertyChanged` メソッドの呼び出しが、文字列引数としてプロパティ名を指定する必要はありません。 詳細については、次を参照してください。[呼び出し元情報 (C#)](../../../csharp/programming-guide/concepts/caller-information.md)または[呼び出し元情報 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)します。  
   
  [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
  [!code-vb[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  

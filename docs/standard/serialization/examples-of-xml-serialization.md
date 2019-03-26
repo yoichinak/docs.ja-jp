@@ -370,8 +370,7 @@ public class Employee {
 
 `CreatePO` メソッドは、`PurchaseOrder`、`Address`、`OrderedItem` の各クラス オブジェクトを作成し、それらのパブリック フィールドの値を設定します。 このメソッドは、<xref:System.Xml.Serialization.XmlSerializer> のシリアル化および逆シリアル化に使用される `PurchaseOrder` クラスのインスタンスも生成します。 このコードは、シリアル化されるクラスの型をコンストラクターに渡します。 さらに、XML ストリームを XML ドキュメントに書き込むために使用する `FileStream` も作成します。
 
-
-  `ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。
+`ReadPo` メソッドは、もう少し単純です。 このメソッドは、逆シリアル化する対象となるオブジェクトを作成し、その値を読み取るだけです。 同様、`CreatePo`メソッド、する必要があります最初に構築、 <xref:System.Xml.Serialization.XmlSerializer>、コンス トラクターに逆シリアル化するクラスの型を渡します。 また、XML ドキュメントを読み取るため、<xref:System.IO.FileStream> も必要です。 オブジェクトを逆シリアル化するには、この <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> を引数として <xref:System.IO.FileStream> メソッドを呼び出します。 逆シリアル化されたオブジェクトは、`PurchaseOrder` 型のオブジェクト変数にキャストする必要があります。 その後で、逆シリアル化された `PurchaseOrder` の値を読み取ります。 作成された PO.xml ファイルを読み取って、実際の XML 出力を確認することもできます。
 
 ```vb
 Imports System

@@ -29,8 +29,7 @@ class Person
 }
 ```
 
- 
-  `Person` 型のインスタンスを JSON にシリアル化するには、最初に <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を作成し、次に `WriteObject` メソッドを使用して JSON データをストリームに書き込みます。  
+ `Person` 型のインスタンスを JSON にシリアル化するには、最初に <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を作成し、次に `WriteObject` メソッドを使用して JSON データをストリームに書き込みます。  
 
 ```csharp
 Person p = new Person();
@@ -52,8 +51,7 @@ ser.WriteObject(stream1, p);
 Person p2 = (Person)ser.ReadObject(stream1);
 ```
 
- 
-  `p2` オブジェクトを調べることで、JSON データが正しく逆シリアル化されていることがわかります。  
+ `p2` オブジェクトを調べることで、JSON データが正しく逆シリアル化されていることがわかります。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
