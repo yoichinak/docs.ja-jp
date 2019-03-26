@@ -47,8 +47,7 @@ ms.locfileid: "56333418"
  これで、user2 は、(c:\tempForUser1 の下にある) /Application2 のコード生成フォルダーを変更できなくなります。  
   
 ## <a name="enabling-asynchronous-processing"></a>非同期処理の有効化  
- 既定では、IIS 6.0 であること、およびそれ以前にホストされる WCF サービスに送信されるメッセージは同期的に処理されます。 ASP.NET が、独自のスレッド (ASP.NET のワーカー スレッド) での WCF を呼び出すし、WCF では、別のスレッドを使用して、要求を処理します。 WCF は、その処理が完了するまで ASP.NET のワーカー スレッドに保持されます。 このため、要求は同期的に処理されます。 – WCF は保持されません ASP.NET のスレッド、要求の処理中に要求を処理するために必要なスレッドの数が減るためより高い拡張性を要求を非同期的に処理できます。 サーバーが受信要求を抑制する方法がないために、IIS 6.0 を実行しているマシンの非同期動作の使用は推奨されません*サービスの拒否*(DOS) 攻撃を受ける。 IIS 7.0 以降では、同時要求スロットルが導入されています`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`。 この新しいスロットルにより、非同期処理を安全に使用することができます。  IIS 7.0 の既定では、非同期のハンドラーとモジュールが登録されます。 この機能が無効になっている場合は、アプリケーションの Web.config ファイルで要求の非同期処理を手動で有効にすることができます。 使用する設定は、`aspNetCompatibilityEnabled` 設定によって異なります。 
-  `aspNetCompatibilityEnabled` を `false` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpModule` を構成します。  
+ 既定では、IIS 6.0 であること、およびそれ以前にホストされる WCF サービスに送信されるメッセージは同期的に処理されます。 ASP.NET が、独自のスレッド (ASP.NET のワーカー スレッド) での WCF を呼び出すし、WCF では、別のスレッドを使用して、要求を処理します。 WCF は、その処理が完了するまで ASP.NET のワーカー スレッドに保持されます。 このため、要求は同期的に処理されます。 – WCF は保持されません ASP.NET のスレッド、要求の処理中に要求を処理するために必要なスレッドの数が減るためより高い拡張性を要求を非同期的に処理できます。 サーバーが受信要求を抑制する方法がないために、IIS 6.0 を実行しているマシンの非同期動作の使用は推奨されません*サービスの拒否*(DOS) 攻撃を受ける。 IIS 7.0 以降では、同時要求スロットルが導入されています`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`。 この新しいスロットルにより、非同期処理を安全に使用することができます。  IIS 7.0 の既定では、非同期のハンドラーとモジュールが登録されます。 この機能が無効になっている場合は、アプリケーションの Web.config ファイルで要求の非同期処理を手動で有効にすることができます。 使用する設定は、`aspNetCompatibilityEnabled` 設定によって異なります。 `aspNetCompatibilityEnabled` を `false` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpModule` を構成します。  
   
 ```xml  
 <system.serviceModel>  
@@ -64,8 +63,7 @@ ms.locfileid: "56333418"
     </system.webServer>  
 ```  
   
- 
-  `aspNetCompatibilityEnabled` を `true` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpHandlerFactory` を構成します。  
+ `aspNetCompatibilityEnabled` を `true` に設定している場合は、次の構成スニペットに示すように、`System.ServiceModel.Activation.ServiceHttpHandlerFactory` を構成します。  
   
 ```xml  
 <system.serviceModel>  

@@ -38,7 +38,7 @@ Windows Workflow Foundation (WF) ワークフローのホスティングのい�
   
  [!code-csharp[CFX_WorkflowInvokerExample#20](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#20)]  
   
- ワークフローが <xref:System.Activities.ActivityWithResult> や `CodeActivity<TResult>` などの `Activity<TResult>` から派生し、適切に定義された <xref:System.Activities.Activity%601.Result%2A> 出力引数以外にも出力引数がある場合は、`Invoke` の非ジェネリック オーバーロードを使用して、追加の引数を取得する必要があります。 これを行うには、`Invoke` に渡されるワークフロー定義は <xref:System.Activities.Activity> 型である必要があります。 この例では、`Divide` アクティビティは `CodeActivity<int>` から派生していますが、<xref:System.Activities.Activity> として宣言されているため、1 つの戻り値ではなく引数の辞書を返す、`Invoke` の非ジェネリック オーバーロードが使用されます。  
+ ワークフローが `CodeActivity<TResult>` や `Activity<TResult>` などの <xref:System.Activities.ActivityWithResult> から派生し、適切に定義された <xref:System.Activities.Activity%601.Result%2A> 出力引数以外にも出力引数がある場合は、`Invoke` の非ジェネリック オーバーロードを使用して、追加の引数を取得する必要があります。 これを行うには、`Invoke` に渡されるワークフロー定義は <xref:System.Activities.Activity> 型である必要があります。 この例では、`Divide` アクティビティは `CodeActivity<int>` から派生していますが、<xref:System.Activities.Activity> として宣言されているため、1 つの戻り値ではなく引数の辞書を返す、`Invoke` の非ジェネリック オーバーロードが使用されます。  
   
  [!code-csharp[CFX_WorkflowInvokerExample#121](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowinvokerexample/cs/program.cs#121)]  
   
@@ -60,8 +60,7 @@ Windows Workflow Foundation (WF) ワークフローのホスティングのい�
  [!code-csharp[CFX_WorkflowApplicationExample#30](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#30)]  
   
 ### <a name="retrieving-output-arguments-of-a-workflow"></a>ワークフローの出力引数の取得  
- ワークフローが完了したら、<xref:System.Activities.WorkflowApplication.Completed%2A> 辞書にアクセスして、<xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> ハンドラーの出力引数を取得できます。 次の例では、<xref:System.Activities.WorkflowApplication> を使用してワークフローをホストしています。 A<xref:System.Activities.WorkflowApplication>インスタンスは、1 つから成るワークフロー定義を使用して構築された`DiceRoll`アクティビティ。 
-  `DiceRoll` アクティビティには、サイコロ振り操作の結果を表す 2 つの出力引数があります。 ワークフローが完了すると、この出力が <xref:System.Activities.WorkflowApplication.Completed%2A> ハンドラーで取得されます。  
+ ワークフローが完了したら、<xref:System.Activities.WorkflowApplicationCompletedEventArgs.Outputs%2A?displayProperty=nameWithType> 辞書にアクセスして、<xref:System.Activities.WorkflowApplication.Completed%2A> ハンドラーの出力引数を取得できます。 次の例では、<xref:System.Activities.WorkflowApplication> を使用してワークフローをホストしています。 A<xref:System.Activities.WorkflowApplication>インスタンスは、1 つから成るワークフロー定義を使用して構築された`DiceRoll`アクティビティ。 `DiceRoll` アクティビティには、サイコロ振り操作の結果を表す 2 つの出力引数があります。 ワークフローが完了すると、この出力が <xref:System.Activities.WorkflowApplication.Completed%2A> ハンドラーで取得されます。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#130](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#130)]  
   
@@ -92,8 +91,7 @@ Windows Workflow Foundation (WF) ワークフローのホスティングのい�
 
 [!code-csharp[CFX_WorkflowApplicationExample#14](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#14)]  
   
- 
-  <xref:System.Activities.WorkflowApplicationIdleEventArgs> インスタンスの <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーに渡される <xref:System.Activities.WorkflowApplication> を調べるコード サンプルを次に示します。 この例では、アイドル状態になるワークフローに、<xref:System.Activities.Bookmark> という名前で `EnterGuess` というアクティビティによって所有されている 1 つの `ReadInt` があります。 このコード例は、オフのベース[方法。ワークフローを実行する](how-to-run-a-workflow.md)の一部では、[チュートリアル入門](getting-started-tutorial.md)します。 この例のコードを含めるようにこの手順の <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーを変更すると、次の出力が表示されます。  
+ <xref:System.Activities.WorkflowApplicationIdleEventArgs> インスタンスの <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーに渡される <xref:System.Activities.WorkflowApplication> を調べるコード サンプルを次に示します。 この例では、アイドル状態になるワークフローに、<xref:System.Activities.Bookmark> という名前で `EnterGuess` というアクティビティによって所有されている 1 つの `ReadInt` があります。 このコード例は、オフのベース[方法。ワークフローを実行する](how-to-run-a-workflow.md)の一部では、[チュートリアル入門](getting-started-tutorial.md)します。 この例のコードを含めるようにこの手順の <xref:System.Activities.WorkflowApplication.Idle%2A> ハンドラーを変更すると、次の出力が表示されます。  
   
  **BookmarkName:EnterGuess - OwnerDisplayName:ReadInt**
  
