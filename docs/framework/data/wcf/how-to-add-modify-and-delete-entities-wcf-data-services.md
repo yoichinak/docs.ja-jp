@@ -15,7 +15,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54708884"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>方法: 追加、変更、およびエンティティ (WCF Data Services) の削除
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリ、することができますを作成、更新、およびオブジェクトで同等のアクションを実行してデータ サービスでエンティティ データを削除、<xref:System.Data.Services.Client.DataServiceContext>します。 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリ、することができますを作成、更新、およびオブジェクトで同等のアクションを実行してデータ サービスでエンティティ データを削除、<xref:System.Data.Services.Client.DataServiceContext>します。 詳細については、[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)を参照してください。  
   
  このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
   

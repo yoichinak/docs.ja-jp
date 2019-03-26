@@ -22,10 +22,10 @@ ms.locfileid: "54570591"
   
 -   個別のバイナリ リソース ストリームとして。 写真、ビデオ、またはその他の種類のバイナリ エンコード データを表すバイナリ ラージ オブジェクト (BLOB) データにアクセスしたり、変更したりする場合は、この方法が適しています。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]します。 バイナリ データはこのメカニズムでは別のメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 定義されている HTTP を使用してバイナリ データのストリーミングを実装、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]します。 バイナリ データはこのメカニズムでは別のメディア リソースとして扱われますが、メディア リンク エントリと呼ばれるエンティティに関連します。 詳細については、[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)を参照してください。  
   
 > [!TIP]
->  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2:クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、次を参照してください。、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
+>  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2:クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでを参照してください。  
   
 ## <a name="entity-metadata"></a>エンティティ メタデータ  
  メディア リソース ストリームが関連付けられているエンティティは、データ サービス メタデータで `HasStream` 属性によって示されます。この属性は、メディア リンク エントリであるエンティティ型に適用されます。 次の例では、`PhotoInfo`エンティティがメディア リンク エントリで示される、関連するメディア リソースがある、`HasStream`属性。  
@@ -38,7 +38,7 @@ ms.locfileid: "54570591"
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリには、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ベースのデータ サービスからのバイナリ リソース ストリームにアクセスするためのメソッドが用意されています。 メディア リソースをダウンロードするときには、メディア リソースの URI を使用することも、メディア リソース データ自体を含むバイナリ ストリームを取得することもできます。 メディア リソース データをバイナリ ストリームとしてアップロードすることもできます。  
   
 > [!TIP]
->  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2:クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、次を参照してください。、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでします。  
+>  バイナリ画像ファイルをダウンロードする Windows Presentation Foundation (WPF) クライアント アプリケーションを作成する方法の手順例については、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]写真を格納しているサービスの投稿をご覧ください[Data Services ストリーミング プロバイダー シリーズ-パート2:クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkId=201637)します。 ブログの投稿で取り上げられているストリーミング フォト データ サービスのサンプル コードをダウンロードするには、、[ストリーミング フォト データ サービスのサンプル](https://go.microsoft.com/fwlink/?LinkId=198988)MSDN コード ギャラリーでを参照してください。  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>バイナリ ストリームの URI の取得  
  画像やその他のメディア ファイルなど、取得するメディア リソースの種類によっては、アプリケーションでメディア リソースの URI を使用する方がバイナリ データ ストリーム自体を処理するよりも簡単です。 特定のメディア リンク エントリに関連付けられているリソース ストリームの URI を取得するには、そのエンティティを追跡している <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> インスタンスの <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出す必要があります。 次の例は、クライアントで新しい画像を作成するために使用するメディア リソース ストリームの URI を取得するために <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> メソッドを呼び出す方法を示しています。  

@@ -20,7 +20,7 @@ ms.locfileid: "56091943"
   <xref:System.Data.Services.EntitySetRights> 列挙体は <xref:System.FlagsAttribute> を使用して定義されているので、論理和演算子を使用して 1 つのエンティティ セットに複数のアクセス許可を指定できます。  
   
 > [!NOTE]
->  ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。 運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。 詳細については、次を参照してください。 [ASP.NET Web サイトをセキュリティで保護する](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))します。  
+>  ASP.NET アプリケーションにアクセスできるクライアントは、データ サービスによって公開されるリソースにもアクセスできます。 運用データ サービスで、リソースへの承認されていないアクセスを防止するために、アプリケーション自身もセキュリティで保護する必要があります。 詳細については、[ASP.NET Web サイトをセキュリティで保護する](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))を参照してください。  
   
 ### <a name="to-enable-access-to-the-data-service"></a>データ サービスへのアクセスを有効にするには  
   

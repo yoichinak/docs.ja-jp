@@ -15,7 +15,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54611905"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>方法: クエリ バッチ (WCF Data Services) で実行します。
-使用して、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリは、1 つのバッチでデータ サービスに対して 1 つ以上のクエリを実行することができます。 詳細については、次を参照してください。[操作のバッチ処理](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)します。  
+使用して、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリは、1 つのバッチでデータ サービスに対して 1 つ以上のクエリを実行することができます。 詳細については、[操作のバッチ処理](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)を参照してください。  
   
  このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
   
