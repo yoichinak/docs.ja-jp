@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 35e47d582a6b8534597945a626904d084fbeeade
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377002"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410642"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding >
 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession>、および <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> の各バインド要素の適切なバージョンをサポートする相互運用可能なバインディングを定義します。  
@@ -64,20 +64,21 @@ ms.locfileid: "57377002"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`allowCookies`|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定する値です。 既定値は、`false` です。<br /><br /> クッキーを使用する ASMX (ASP.NET Web サービス) と対話する場合に、このプロパティを使用できます。 これにより、サーバーから返されるクッキーが、このサービスに対するそれ以降のすべてのクライアント要求に自動的にコピーされます。|  
-|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示す値。 既定値は、`false` です。|  
+|`allowCookies`|クライアントがクッキーを受け入れて、それらを今後の要求に反映させるかどうかを指定する値です。 既定値は `false` です。<br /><br /> クッキーを使用する ASMX (ASP.NET Web サービス) と対話する場合に、このプロパティを使用できます。 これにより、サーバーから返されるクッキーが、このサービスに対するそれ以降のすべてのクライアント要求に自動的にコピーされます。|  
+|`bypassProxyOnLocal`|ローカル アドレスでプロキシ サーバーをバイパスするかどうかを示す値。 既定値は `false` です。|  
 |`closeTimeout`|クローズ操作が完了するまでの期間を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|`hostnameComparisonMode`|URI (Uniform Resource Identifier) の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
+|`hostNameComparisonMode`|URI (Uniform Resource Identifier) の解析に使用する HTTP ホスト名比較モードを指定します。 この属性は <xref:System.ServiceModel.HostNameComparisonMode> 型で、URI が一致したときにサービスへのアクセスにホスト名を使用するかどうかを指定します。 既定値は <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard> で、一致しているホスト名を無視します。|  
 |`maxBufferPoolSize`|このバインドに使用するバッファー プールの最大サイズ。 既定値は 524,288 バイト (512 × 1,024) です。 Windows Communication Foundation (WCF) では、多くの部分でバッファーを使用します。 使用するたびに毎回バッファーを作成および破棄すると負荷が高くなります。バッファーのガベージ コレクションも同様です。 バッファー プールを使用すると、バッファーをプールから取得して使用し、作業が終わったらプールに戻すことができます。 これで、バッファーの作成と破棄によるオーバーヘッドを回避できます。|  
-|`maxReceivedMessageSize`|このバインディングで構成されたチャネルで受信可能な、ヘッダーを含む最大メッセージ サイズ (バイト単位) です。 この制限を超える場合、メッセージの送信者は SOAP エラーを受け取ります。 メッセージは受信者によって破棄され、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
+|`maxReceivedMessageSize`|このバインディングで構成されたチャネルで受信可能な、ヘッダーを含む最大メッセージ サイズ (バイト単位) です。 この制限を超える場合、メッセージの送信者は SOAP エラーを受け取ります。 メッセージは受信者によってドロップされ、トレース ログにこのイベントのエントリが作成されます。 既定値は 65536 です。|  
 |`messageEncoding`|メッセージのエンコードに使用されるエンコーダーを定義します。 以下の値が有効です。<br /><br /> -   `Text`:テキスト メッセージ エンコーダーを使用します。<br />-   `Mtom`:Message Transmission 組織 Mechanism 1.0 (MTOM) エンコーダーを使用します。<br /><br /> 既定値は `Text` です。<br /><br /> この属性は <xref:System.ServiceModel.WSMessageEncoding> 型です。|  
 |`name`|バインドの構成名。 この値は、バインディングの ID として使用されるため、一意にする必要があります。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。|  
 |`openTimeout`|実行中の操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
-|`proxyAddress`|HTTP プロキシのアドレスを指定する URI。 `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は、`null` です。|  
+|`proxyAddress`|HTTP プロキシのアドレスを指定する URI。 
+  `useSystemWebProxy` が `true` の場合、この設定を `null` にする必要があります。 既定値は `null` です。|  
 |`receiveTimeout`|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`sendTimeout`|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|  
 |`textEncoding`|バインディングでメッセージの発行に使用する文字セット エンコーディングを指定します。 以下の値が有効です。<br /><br /> -   `UnicodeFffeTextEncoding`:Unicode ビッグ エンディアン エンコーディング。<br />-   `Utf16TextEncoding`:16 ビット エンコーディング。<br />-   `Utf8TextEncoding`:8 ビット エンコーディング。<br /><br /> 既定値は `Utf8TextEncoding` です。<br /><br /> この属性は <xref:System.Text.Encoding> 型です。|  
-|`transactionFlow`|バインドが WS-Transactions のフローをサポートするかどうかを指定する値。 既定値は、`false` です。|  
+|`transactionFlow`|バインドが WS-Transactions のフローをサポートするかどうかを指定する値。 既定値は `false` です。|  
 |`useDefaultWebProxy`|システムの自動設定 HTTP プロキシを使用するかどうかを示す値です。 既定値は `true` です。|  
   
 ### <a name="child-elements"></a>子要素  
