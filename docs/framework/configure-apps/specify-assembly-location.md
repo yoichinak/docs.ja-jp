@@ -23,7 +23,7 @@ ms.locfileid: "55825408"
  使用することも、 [.NET Framework 構成ツール (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))アセンブリの場所を指定したり、共通言語ランタイム アセンブリを探すために場所を指定します。  
   
 ## <a name="using-the-codebase-element"></a>使用して、 \<codeBase > 要素  
- 使用することができます、  **\<codeBase >** のみマシン構成またはパブリッシャー ポリシー ファイルでも、アセンブリのバージョンをリダイレクトする要素。 ランタイムを使用するアセンブリ バージョンの決定、バージョンを決定するファイルからコードの基本設定が適用されます。 コード ベースが示されていない場合、ランタイムは、通常の方法でアセンブリをプローブします。 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)します。  
+ 使用することができます、  **\<codeBase >** のみマシン構成またはパブリッシャー ポリシー ファイルでも、アセンブリのバージョンをリダイレクトする要素。 ランタイムを使用するアセンブリ バージョンの決定、バージョンを決定するファイルからコードの基本設定が適用されます。 コード ベースが示されていない場合、ランタイムは、通常の方法でアセンブリをプローブします。 詳細については、[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)を参照してください。  
   
  次の例では、アセンブリの場所を指定する方法を示します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "55825408"
 >  厳密な名前ではないアセンブリのコード ベースのヒントを指定する場合、ヒントは、アプリケーション ベースまたはアプリケーション ベース ディレクトリのサブディレクトリにポイントする必要があります。  
   
 ## <a name="using-the-probing-element"></a>使用して、 \<probing > 要素  
- ランタイムが調査して、コード ベースを持たないアセンブリを検索します。 プローブの詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)します。  
+ ランタイムが調査して、コード ベースを持たないアセンブリを検索します。 プローブの詳細については、[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)を参照してください。  
   
  使用することができます、 [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)ランタイムがアセンブリを検索するときに検索するサブディレクトリを指定するアプリケーション構成ファイル内の要素。 次の例では、ランタイムが検索するディレクトリを指定する方法を示します。  
   

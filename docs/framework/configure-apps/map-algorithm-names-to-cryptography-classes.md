@@ -65,7 +65,7 @@ ms.locfileid: "55083656"
 > [!NOTE]
 >  SHA1 アルゴリズムを呼び出すことによって取得できます、<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>または**Security.CryptoConfig.CreateFromName("SHA1")** メソッド。 各メソッドは、SHA1 アルゴリズムを実装するオブジェクトを返すことのみ保証されます。 構成ファイルで同じクラスに、アルゴリズムのそれぞれの表示名をマップする必要はありません。  
   
- 既定の名前とそれをマッピングするクラスの一覧は、次を参照してください。<xref:System.Security.Cryptography.CryptoConfig>します。  
+ 既定の名前とそれをマッピングするクラスの一覧は、<xref:System.Security.Cryptography.CryptoConfig>を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
