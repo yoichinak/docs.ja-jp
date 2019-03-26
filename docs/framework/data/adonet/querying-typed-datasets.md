@@ -14,11 +14,11 @@ ms.locfileid: "45963745"
 ---
 # <a name="query-typed-datasets"></a>型指定されたデータセットのクエリ
 
-場合のスキーマ、 <xref:System.Data.DataSet> 、型指定されたを使用することをお勧めします。 アプリケーションのデザイン時に認識が<xref:System.Data.DataSet>LINQ to DataSet を使用する場合。 型指定された<xref:System.Data.DataSet>から派生したクラスには、<xref:System.Data.DataSet>します。 したがって、型指定されたデータセットは <xref:System.Data.DataSet> のすべてのメソッド、イベント、およびプロパティを継承します。 さらに、型指定された<xref:System.Data.DataSet>厳密に型指定されたメソッド、イベント、およびプロパティを提供します。 つまり、コレクションベースのメソッドを使用せずに名前でテーブルおよび列にアクセスできます。 これによりクエリが簡素化され、読みやすくなります。 詳細については、次を参照してください。[型指定されたデータセット](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)します。
+場合のスキーマ、 <xref:System.Data.DataSet> 、型指定されたを使用することをお勧めします。 アプリケーションのデザイン時に認識が<xref:System.Data.DataSet>LINQ to DataSet を使用する場合。 型指定された<xref:System.Data.DataSet>から派生したクラスには、<xref:System.Data.DataSet>します。 したがって、型指定されたデータセットは <xref:System.Data.DataSet> のすべてのメソッド、イベント、およびプロパティを継承します。 さらに、型指定された<xref:System.Data.DataSet>厳密に型指定されたメソッド、イベント、およびプロパティを提供します。 つまり、コレクションベースのメソッドを使用せずに名前でテーブルおよび列にアクセスできます。 これによりクエリが簡素化され、読みやすくなります。 詳細については、[型指定されたデータセット](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)を参照してください。
 
 LINQ to DataSet がに対する型指定されたクエリの実行をサポートしても<xref:System.Data.DataSet>します。 型指定された<xref:System.Data.DataSet>、ジェネリックを使用する必要はありません<xref:System.Data.DataRowExtensions.Field%2A>メソッドまたは<xref:System.Data.DataRowExtensions.SetField%2A>列データにアクセスするメソッド。 型情報が含まれているために、プロパティ名はコンパイル時に使用可能な<xref:System.Data.DataSet>します。 LINQ to DataSet では、実行時の代わりに、コードがコンパイルされるときに、型の不一致エラーがキャッチされるように、適切な型として列の値へのアクセスを提供します。
 
-型指定されたクエリを開始する前に<xref:System.Data.DataSet>を使用して、クラスを生成する必要があります、**データセット デザイナー** Visual Studio でします。 詳細については、次を参照してください。[作成し、データセットを構成](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)します。
+型指定されたクエリを開始する前に<xref:System.Data.DataSet>を使用して、クラスを生成する必要があります、**データセット デザイナー** Visual Studio でします。 詳細については、[作成し、データセットを構成](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)を参照してください。
 
 ## <a name="example"></a>例
 

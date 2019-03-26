@@ -18,9 +18,9 @@ ms.locfileid: "54714150"
  スキーマ情報を追加、**データセット**主キー制約に含まれているデータで塗りつぶすことにより、前に、<xref:System.Data.DataTable>内のオブジェクト、**データセット**します。 その結果、追加時に入力への呼び出し、**データセット**が終わったら、プライマリ キー列の情報がそれぞれ現在の行のデータ ソースから新しい行を一致させる**DataTable**と現在のデータをテーブルは、データ ソースのデータで上書きされます。 スキーマ情報がないデータ ソースからの新しい行の追加、**データセット**、重複する行の結果として得られる。  
   
 > [!NOTE]
->  データ ソース内の列が自動インクリメントとして識別された場合、 **FillSchema**メソッド、または**入力**メソッドを**MissingSchemaAction**の**AddWithKey**、作成、 **DataColumn**で、 **AutoIncrement**プロパティに設定`true`します。 ただし、設定する必要がありますには、 **AutoIncrementStep**と**AutoIncrementSeed**値します。 自動インクリメント列の詳細については、次を参照してください。 [AutoIncrement 列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)です。  
+>  データ ソース内の列が自動インクリメントとして識別された場合、 **FillSchema**メソッド、または**入力**メソッドを**MissingSchemaAction**の**AddWithKey**、作成、 **DataColumn**で、 **AutoIncrement**プロパティに設定`true`します。 ただし、設定する必要がありますには、 **AutoIncrementStep**と**AutoIncrementSeed**値します。 自動インクリメント列の詳細については、[AutoIncrement 列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)を参照してください。  
   
- 使用して**FillSchema**またはの設定、 **MissingSchemaAction**に**AddWithKey**主キー列情報を確認するデータ ソースで余分な処理が必要です。 この追加の処理によりパフォーマンスが低下する場合があります。 デザイン時に主キー情報がわかっている場合は、最適のパフォーマンスを得るために主キー列 (複数の場合もある) を明示的に指定することをお勧めします。 テーブルの主キーの情報を明示的に設定する方法については、次を参照してください。[主キーを定義する](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)します。  
+ 使用して**FillSchema**またはの設定、 **MissingSchemaAction**に**AddWithKey**主キー列情報を確認するデータ ソースで余分な処理が必要です。 この追加の処理によりパフォーマンスが低下する場合があります。 デザイン時に主キー情報がわかっている場合は、最適のパフォーマンスを得るために主キー列 (複数の場合もある) を明示的に指定することをお勧めします。 テーブルの主キーの情報を明示的に設定する方法については、[主キーを定義する](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)を参照してください。  
   
  次のコード例は、スキーマ情報を追加する方法を示しています、**データセット**を使用して**FillSchema**します。  
   

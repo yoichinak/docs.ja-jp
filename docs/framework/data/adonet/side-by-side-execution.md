@@ -10,7 +10,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54538636"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)を参照してください。  
   
  あるバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を使用してコンパイルされたアプリケーションを、別のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で実行することもできます。 ただし、インストールされている [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のバージョンごとにアプリケーションをコンパイルして、各バージョンを別々に実行することをお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
   

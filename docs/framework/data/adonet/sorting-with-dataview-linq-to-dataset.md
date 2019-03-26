@@ -21,7 +21,7 @@ ms.locfileid: "56092268"
   
  式ベースの並べ替えは、文字列ベースの並べ替えよりもはるかに強力で複雑な並べ替え機能を提供します。 文字列ベースの並べ替え機能と式ベースの並べ替え機能は、相互に排他的です。 <xref:System.Data.DataView.Sort%2A> をクエリから作成した後に文字列ベースの <xref:System.Data.DataView> を設定した場合、クエリから推論される式ベースの並べ替えはクリアされます (再設定できません)。  
   
- <xref:System.Data.DataView> のインデックスは、<xref:System.Data.DataView> の作成時に構築されるほか、並べ替えまたはフィルター処理の情報が変更されたときにも構築されます。 最高のパフォーマンスを得るには、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成する <xref:System.Data.DataView> クエリに並べ替え条件を指定し、後で並べ替え情報を変更しないようにします。 詳細については、次を参照してください。 [DataView のパフォーマンス](../../../../docs/framework/data/adonet/dataview-performance.md)します。  
+ <xref:System.Data.DataView> のインデックスは、<xref:System.Data.DataView> の作成時に構築されるほか、並べ替えまたはフィルター処理の情報が変更されたときにも構築されます。 最高のパフォーマンスを得るには、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成する <xref:System.Data.DataView> クエリに並べ替え条件を指定し、後で並べ替え情報を変更しないようにします。 詳細については、[DataView のパフォーマンス](../../../../docs/framework/data/adonet/dataview-performance.md)を参照してください。  
   
 > [!NOTE]
 >  ほとんどの場合、並べ替えに使用する式は、副作用のない確定的な式である必要があります。 また、並べ替え処理は任意の回数実行されるため、特定の実行回数に依存するロジックが式に含まれないようにしてください。  

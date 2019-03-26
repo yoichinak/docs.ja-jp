@@ -37,7 +37,7 @@ ms.locfileid: "55903387"
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
 ### <a name="troubleshooting-commands"></a>コマンドのトラブルシューティング  
- .NET Framework Data Provider for SQL Server には、失敗したコマンド実行に関連して断続的に発生する問題を検出できるパフォーマンス カウンターが追加されています。 詳細については、次を参照してください。[パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)します。  
+ .NET Framework Data Provider for SQL Server には、失敗したコマンド実行に関連して断続的に発生する問題を検出できるパフォーマンス カウンターが追加されています。 詳細については、[パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)

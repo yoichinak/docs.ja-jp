@@ -70,9 +70,9 @@ using (SqlConnection connection = new SqlConnection(
 >  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了することを強くお勧めします。 これを行うかを使用して、`Close`または`Dispose`のメソッド、`Connection`オブジェクト、または内のすべての接続を開くことによって、 `using` 、c# のステートメントまたは`Using`Visual Basic でのステートメント。 明示的に終了されていない接続は、プールに追加したり返したりすることができないことがあります。 詳細については、次を参照してください。[ステートメントを使用して](~/docs/csharp/language-reference/keywords/using-statement.md)または[方法。システム リソースを破棄](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)Visual basic の場合。  
   
 > [!NOTE]
->  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
+>  クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)を参照してください。  
   
-接続の開閉に関連付けられているイベントに関する詳細については、次を参照してください。 [Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)と[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)、SQL Server のドキュメントにします。  
+接続の開閉に関連付けられているイベントに関する詳細については、[Audit Login イベント クラス](/sql/relational-databases/event-classes/audit-login-event-class)と[Audit Logout イベント クラス](/sql/relational-databases/event-classes/audit-logout-event-class)、SQL Server のドキュメントにを参照してください。  
   
 ## <a name="removing-connections"></a>接続の削除  
  接続プール機能は、アイドル状態の時間が約 4-8 分になったか、サーバーとの接続が切断されたことをプール機能が検出した場合に、プールからの接続を削除します。 サーバーとの通信を試みた後にのみ、切断されたサーバー接続が検出可能になることに注意してください。 接続がサーバーに接続していないことがわかると、その接続は無効としてマークされます。 無効な接続は、閉じられるか、または再利用された場合のみ、接続プールから削除されます。  
@@ -127,7 +127,7 @@ using (SqlConnection connection = new SqlConnection(
  `sp_setapprole` システム ストアド プロシージャの呼び出しにより SQL Server のアプリケーション ロールが起動された後は、その接続のセキュリティ コンテキストをリセットすることはできません。 ただし、プールを有効した場合は、プールに接続が返され、プール接続が再利用されると、エラーが発生します。 詳細については、サポート技術情報の記事を参照してください"[OLE DB リソース プールでは、SQL アプリケーション ロール エラー](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。"。  
   
 ### <a name="application-role-alternatives"></a>アプリケーション ロールに代わる方法  
- アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、次を参照してください。 [SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)です。  
+ アプリケーション ロールに代わるセキュリティ メカニズムの使用をお勧めします。 詳細については、[SQL Server でのアプリケーション ロールの作成](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)

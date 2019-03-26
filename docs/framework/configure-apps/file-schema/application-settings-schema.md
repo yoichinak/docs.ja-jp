@@ -18,7 +18,7 @@ ms.locfileid: "55083471"
 
 アプリケーションの設定は、格納およびアプリケーション スコープし、ユーザー スコープの設定を取得する Windows フォームや ASP.NET アプリケーションを許可します。 このコンテキストで、*設定*任意のアプリケーションに固有または現在のユーザーに特定できる情報は、-、ユーザーにデータベース接続文字列から何かの既定のウィンドウ サイズを優先します。
 
-既定では、Windows フォーム アプリケーションでアプリケーションの設定を使用して、<xref:System.Configuration.LocalFileSettingsProvider>クラスは、XML 構成ファイルで設定を格納する、.NET 構成システムを使用します。 アプリケーションの設定で使用されるファイルの詳細については、次を参照してください。[アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)します。
+既定では、Windows フォーム アプリケーションでアプリケーションの設定を使用して、<xref:System.Configuration.LocalFileSettingsProvider>クラスは、XML 構成ファイルで設定を格納する、.NET 構成システムを使用します。 アプリケーションの設定で使用されるファイルの詳細については、[アプリケーション設定アーキテクチャ](~/docs/framework/winforms/advanced/application-settings-architecture.md)を参照してください。
 
 アプリケーションの設定は、使用して、構成ファイルの一部として、次の要素を定義します。
 

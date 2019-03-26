@@ -171,7 +171,7 @@ ms.locfileid: "58409953"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NET アプリケーションを保護する方法の詳細については、次を参照してください。[セキュリティで保護する ASP.NET web サイト](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))します。  
+ ASP.NET アプリケーションを保護する方法の詳細については、[セキュリティで保護する ASP.NET web サイト](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)
