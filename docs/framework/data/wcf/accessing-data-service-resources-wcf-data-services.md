@@ -94,7 +94,7 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  詳細については、次を参照してください[OData:。エントリ間のリンクをアドレス指定](https://go.microsoft.com/fwlink/?LinkId=187351)します。  
   
 ## <a name="consuming-the-returned-feed"></a>返されたフィードの使用  
- URI、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]リソースをサービスによって公開されるエンティティ データのアドレスが有効です。 Web ブラウザーのアドレス フィールドに URI を入力すると、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]要求されたリソースのフィード表現が返されます。 詳細については、次を参照してください。、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。 Web ブラウザーは、データ サービス リソースが必要なデータを返します、アプリケーション コードによってアクセスできますも作成、更新、およびデータを削除する運用データ サービスのことをテストまたはスクリプト言語で Web ページは便利です。 詳細については、次を参照してください。[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)します。  
+ URI、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]リソースをサービスによって公開されるエンティティ データのアドレスが有効です。 Web ブラウザーのアドレス フィールドに URI を入力すると、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]要求されたリソースのフィード表現が返されます。 詳細については、、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)を参照してください。 Web ブラウザーは、データ サービス リソースが必要なデータを返します、アプリケーション コードによってアクセスできますも作成、更新、およびデータを削除する運用データ サービスのことをテストまたはスクリプト言語で Web ページは便利です。 詳細については、[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Open Data Protocol Web サイト](https://go.microsoft.com/fwlink/?LinkID=182204)

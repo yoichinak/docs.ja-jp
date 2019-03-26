@@ -13,9 +13,9 @@ ms.locfileid: "33365931"
 ここでは、<xref:System.Transactions> 名前空間により提供される機能を使用して、独自のトランザクション アプリケーションとリソース マネージャーを作成する方法について説明します。 特に、1 つまたは複数の参加要素を含むローカル トランザクションまたは分散トランザクションを作成し、参加する方法について説明します。  
   
 ## <a name="overview-of-systemtransactions"></a>System.Transactions の概要  
- <xref:System.Transactions> 名前空間内のクラスにより提供されるインフラストラクチャは、SQL Server、ADO.NET、メッセージ キュー (MSMQ)、および Microsoft 分散トランザクション コーディネーター (MSDTC) で開始されたトランザクションをサポートすることにより、トランザクション プログラミングを単純で効率的なものにします。 <xref:System.Transactions> 名前空間は、<xref:System.Transactions.Transaction> クラスに基づく明示的なプログラミング モデルだけでなく、インフラストラクチャがトランザクションを自動的に管理する、<xref:System.Transactions.TransactionScope> クラスを使用した暗黙的なプログラミング モデルも提供します。 これら 2 つのモデルを使用して、トランザクションのアプリケーションを作成する方法の詳細については、次を参照してください。[トランザクション アプリケーションの作成](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)です。  
+ <xref:System.Transactions> 名前空間内のクラスにより提供されるインフラストラクチャは、SQL Server、ADO.NET、メッセージ キュー (MSMQ)、および Microsoft 分散トランザクション コーディネーター (MSDTC) で開始されたトランザクションをサポートすることにより、トランザクション プログラミングを単純で効率的なものにします。 <xref:System.Transactions> 名前空間は、<xref:System.Transactions.Transaction> クラスに基づく明示的なプログラミング モデルだけでなく、インフラストラクチャがトランザクションを自動的に管理する、<xref:System.Transactions.TransactionScope> クラスを使用した暗黙的なプログラミング モデルも提供します。 これら 2 つのモデルを使用して、トランザクションのアプリケーションを作成する方法の詳細については、[トランザクション アプリケーションの作成](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)を参照してください。  
   
- <xref:System.Transactions> 名前空間には、リソース マネージャーを実装するための型も用意されています。 リソース マネージャーは、トランザクションで使用する永続性データまたは揮発性データを管理し、トランザクション マネージャーと連携してアプリケーションの原子性と分離を保証します。 <xref:System.Transactions> インフラストラクチャにより提供されるトランザクション マネージャーは、複数の揮発性リソースまたは単一の永続性リソースに関連するトランザクションをサポートします。 リソース マネージャーの実装の詳細については、次を参照してください。[リソース マネージャーの実装](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)です。  
+ <xref:System.Transactions> 名前空間には、リソース マネージャーを実装するための型も用意されています。 リソース マネージャーは、トランザクションで使用する永続性データまたは揮発性データを管理し、トランザクション マネージャーと連携してアプリケーションの原子性と分離を保証します。 <xref:System.Transactions> インフラストラクチャにより提供されるトランザクション マネージャーは、複数の揮発性リソースまたは単一の永続性リソースに関連するトランザクションをサポートします。 リソース マネージャーの実装の詳細については、[リソース マネージャーの実装](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)を参照してください。  
   
  また、トランザクション マネージャーは、他の永続的リソース マネージャーがそれ自体をトランザクションに参加させた場合に、DTC などのディスク ベースのトランザクション マネージャーと連携して、ローカル トランザクションを分散トランザクションへと透過的にエスカレートします。 <xref:System.Transactions> インフラストラクチャでは、主に 2 つの方法でパフォーマンスを向上させています。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33365931"
   
  [CommittableTransaction を使用して、明示的なトランザクションを実装する](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)について説明しますが、どのように<xref:System.Transactions>名前空間を使用して明示的なトランザクションの作成をサポートしている、<xref:System.Transactions.CommittableTransaction>クラスです。  
   
- トランザクション アプリケーションの作成をカバーするその他のトピックでは、次を参照してください。[トランザクション アプリケーションの作成](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)です。  
+ トランザクション アプリケーションの作成をカバーするその他のトピックでは、[トランザクション アプリケーションの作成](../../../../docs/framework/data/transactions/writing-a-transactional-application.md)を参照してください。  
   
 ### <a name="implementing-a-resource-manager"></a>リソース マネージャーの実装  
  トランザクションに参加できるリソース マネージャーを実装するを参照してください。[リソース マネージャーの実装](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md)です。 ここでは、リソースの参加、トランザクションのコミット、障害後の回復、および最適化のベスト プラクティスについて説明しています。
