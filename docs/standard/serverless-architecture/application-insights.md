@@ -55,7 +55,7 @@ telemetry.TrackDependency("AzureTableStorageInsert", "Insert", startTime, timer.
 
 Application Insights では、サーバーレス アプリケーションに関する詳細な製品利用統計情報を記録する強力な便利な手段を提供します。 トレースのレベルに対するフル コントロールがあり、ログが提供されます。 イベント、依存関係、およびページ ビューなどのカスタムの統計を追跡することができます。 最後に、強力な分析では、重要な質問したり、グラフと高度な洞察を生成するクエリの作成を有効にします。
 
-詳細については、次を参照してください。 [Azure Functions を監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)します。
+詳細については、[Azure Functions を監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](azure-functions.md)

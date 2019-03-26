@@ -191,7 +191,7 @@ ms.locfileid: "54514804"
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 定数と列挙型  
- `Microsoft.VisualBasic`名前空間が、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。 コードでは、これらの定数値を使用できます。 各列挙体は、特定のカテゴリの機能を表します。 詳細については、次を参照してください。[定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)します。  
+ `Microsoft.VisualBasic`名前空間が、Visual Basic ランタイム ライブラリの一部として定数と列挙型を提供します。 コードでは、これらの定数値を使用できます。 各列挙体は、特定のカテゴリの機能を表します。 詳細については、[定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [定数と列挙体](../../visual-basic/language-reference/constants-and-enumerations.md)

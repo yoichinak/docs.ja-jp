@@ -70,7 +70,7 @@ tdes.GenerateKey();
   
  どちらのメソッドにも、公開キー情報だけを返すのか、または公開キー情報と秘密キー情報の両方を返すのかを示すブール値を渡すことができます。 **メソッドを使用すると、** RSACryptoServiceProvider **クラスを初期化して** RSAParameters <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> 構造体の値を設定できます。  
   
- 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーに秘密キーを格納する方法の詳細について、次を参照してください。[方法。キー コンテナーに非対称キーを格納](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)します。  
+ 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーに秘密キーを格納する方法の詳細について、[方法。キー コンテナーに非対称キーを格納](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)を参照してください。  
   
  次のコード例では、 **RSACryptoServiceProvider** クラスの新しいインスタンスを作成し、公開キーと秘密キーのペアを作成して、公開キー情報を **RSAParameters** 構造体に保存します。  
   

@@ -43,7 +43,7 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 たとえば、オーランド ランドマーク、オーランド目などを使用してモデルをトレーニングできます。 Custom Vision オーランド目のイメージが認識され、関数はフォト mosaic Bing の画像検索結果で構成の作成「オーランド目です」
 
-詳細については、次を参照してください。 [Azure Functions フォト mosaic ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)します。
+詳細については、[Azure Functions フォト mosaic ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)を参照してください。
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>既存のアプリケーションをクラウドに移行します。
 
@@ -63,7 +63,7 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 ![ETL アーキテクチャ](./media/csvimport.png)
 
-ソース コードとハンズオン ラボでは、次を参照してください。 [CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)します。
+ソース コードとハンズオン ラボでは、[CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)を参照してください。
 
 ## <a name="shorten-links-and-track-metrics"></a>リンクを短縮し、メトリックの追跡
 
@@ -83,7 +83,7 @@ Azure Functions を使用して、シングル ページ アプリケーショ�
 
 Azure IoT Hub と Azure 関数のサンプルを構成します。 IoT Hub での新しいメッセージは、Azure 関数をトリガーします。 サーバーレス コードでは、元のメッセージ送信元デバイスにコンテンツと同じメッセージを送信します。 プロジェクトは、ソリューションに必要なすべてのコードと展開構成にします。
 
-詳細については、次を参照してください。 [Azure IoT Hub の ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)します。
+詳細については、[Azure IoT Hub の ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)を参照してください。
 
 ## <a name="recommended-resources"></a>推奨リソース
 

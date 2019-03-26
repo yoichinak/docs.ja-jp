@@ -24,7 +24,7 @@ ms.locfileid: "54686167"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>属性を使用した XML シリアル化の制御
 
-属性を使用すると、オブジェクトの XML シリアル化を制御したり、同じ一連のクラスから代替 XML ストリームを作成したりできます。 代替 XML ストリームを作成する方法の詳細については、次を参照してください。[方法。XML Stream の代替要素名を指定](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)します。
+属性を使用すると、オブジェクトの XML シリアル化を制御したり、同じ一連のクラスから代替 XML ストリームを作成したりできます。 代替 XML ストリームを作成する方法の詳細については、[方法。XML Stream の代替要素名を指定](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)を参照してください。
 
 > [!NOTE]
 > XML が生成される必要があります、World Wide Web Consortium (W3C) ドキュメントのセクション 5 に準拠しているかどうかは[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)に記載の属性を使用して[属性をコントロールでエンコードされた SOAPシリアル化](attributes-that-control-encoded-soap-serialization.md)します。

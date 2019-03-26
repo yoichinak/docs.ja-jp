@@ -82,7 +82,7 @@ Visual Studio で変更を加える前に、アセンブリの移植性を評価
 
 -   セットアップ プロジェクトの依存関係を作成する: で**ソリューション エクスプ ローラー**、セットアップ プロジェクトを選択します。 メニュー バーで、**プロジェクト** > **プロパティ** > **の前提条件**します。 必須コンポーネントとして、必要な .NET Framework のバージョンを選択します。
 
-.NET Framework アプリの展開についての詳細については、次を参照してください。[開発者向け配置ガイド](../../../docs/framework/deployment/deployment-guide-for-developers.md)します。
+.NET Framework アプリの展開についての詳細については、[開発者向け配置ガイド](../../../docs/framework/deployment/deployment-guide-for-developers.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

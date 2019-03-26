@@ -20,7 +20,7 @@ ms.locfileid: "54656805"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>方法: 埋め込みリソースからタイム ゾーンを復元します。
 
-このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 情報およびタイム ゾーンを保存する方法の手順では、次を参照してください。[方法。埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)します。
+このトピックでは、リソース ファイルに保存されているタイム ゾーンを復元する方法について説明します。 情報およびタイム ゾーンを保存する方法の手順では、[方法。埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)を参照してください。
 
 ### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>埋め込みリソースから TimeZoneInfo オブジェクトを逆シリアル化するには
 

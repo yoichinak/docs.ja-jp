@@ -25,7 +25,7 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |---|---|  
 |`CONFIG`|現在の設定に対応する文字列、**アクティブ ソリューション構成**ボックスに、 **Configuration Manager**します。|  
 |`DEBUG`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのデバッグ構成を定義します`DEBUG`します。 ときに`DEBUG`が定義されている<xref:System.Diagnostics.Debug>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Debug>クラスのメソッドはコンパイルされず、デバッグ出力は生成されません。|  
-|`TARGET`|出力の種類のプロジェクトまたはコマンドラインの設定を表す文字列 **/target**オプション。 可能な値`TARGET`は。<br /><br /> -Windows アプリケーションの"winexe"。<br />-"exe"コンソール アプリケーションです。<br />-クラス ライブラリの「ライブラリ」です。<br />-モジュールの「モジュール」。<br />- **/Target**オプションは、Visual Studio 統合開発環境で設定することがあります。 詳細については、次を参照してください。 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)します。|  
+|`TARGET`|出力の種類のプロジェクトまたはコマンドラインの設定を表す文字列 **/target**オプション。 可能な値`TARGET`は。<br /><br /> -Windows アプリケーションの"winexe"。<br />-"exe"コンソール アプリケーションです。<br />-クラス ライブラリの「ライブラリ」です。<br />-モジュールの「モジュール」。<br />- **/Target**オプションは、Visual Studio 統合開発環境で設定することがあります。 詳細については、[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)を参照してください。|  
 |`TRACE`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのすべての構成を定義`TRACE`します。 ときに`TRACE`が定義されている<xref:System.Diagnostics.Trace>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Trace>クラスのメソッドはコンパイルされず、いいえ`Trace`出力が生成されます。|  
 |`VBC_VER`|Visual Basic バージョンを表す数値*メジャー*.*マイナー*形式。 バージョン番号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]8.0 です。|  
   

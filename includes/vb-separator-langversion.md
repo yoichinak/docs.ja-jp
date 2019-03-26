@@ -7,4 +7,4 @@
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../docs/visual-basic/language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic の言語バージョンを設定](../docs/visual-basic/language-reference/configure-language-version.md)を参照してください。

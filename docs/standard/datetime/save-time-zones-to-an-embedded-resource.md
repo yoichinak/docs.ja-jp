@@ -37,7 +37,7 @@ ms.locfileid: "54592875"
 
 1. 既存のタイム ゾーンを取得するか、新しいタイム ゾーンを作成します。
 
-   既存のタイム ゾーンを取得するには、次を参照してください。[方法。定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法。TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)します。
+   既存のタイム ゾーンを取得するには、[方法。定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法。TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)を参照してください。
 
    新しいタイム ゾーンを作成するには、いずれかのオーバー ロードを呼び出す、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド。 詳細については、「[方法 :調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
 
