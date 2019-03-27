@@ -1,29 +1,23 @@
 ---
-title: C# 演算子
+title: 'C# 演算子'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333409"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -47,9 +41,9 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [a&#91;x&#93;](index-operator.md) – 集約オブジェクトのインデックス作成。
 
-[x++](increment-operator.md) – 後置インクリメント。 x の値を返した後、1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新します。
+[x++](arithmetic-operators.md#increment-operator-) – 後置インクリメント。 x の値を返した後、1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新します。
 
-[x--](decrement-operator.md) – 後置デクリメント。 x の値を返した後、1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新します。
+[x--](arithmetic-operators.md#decrement-operator---) – 後置デクリメント。 x の値を返した後、1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新します。
 
 [new](../keywords/new-operator.md) – 型のインスタンス化。
 
@@ -79,9 +73,9 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [~x](bitwise-complement-operator.md) – ビットごとの補数。
 
-[++x](increment-operator.md) – 前置インクリメント。 1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新した後に x の値を返します。
+[++x](arithmetic-operators.md#increment-operator-) – 前置インクリメント。 1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新した後に x の値を返します。
 
-[--x](decrement-operator.md) – 前置デクリメント。 1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新した後に x の値を返します。
+[--x](arithmetic-operators.md#decrement-operator---) – 前置デクリメント。 1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新した後に x の値を返します。
 
 [(T)x](invocation-operator.md) – 型キャスト。
 
@@ -95,19 +89,19 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x * y](multiplication-operator.md) – 乗算。
+[x * y](arithmetic-operators.md#multiplication-operator-) – 乗算。
 
-[x / y](division-operator.md) – 除算。 オペランドが整数の場合、結果は 0 に近い整数になるように切り捨てられます (例: `-7 / 2 is -3`)。
+[x / y](arithmetic-operators.md#division-operator-) – 除算。 オペランドが整数の場合、結果は 0 に近い整数になるように切り捨てられます (例: `-7 / 2 is -3`)。
 
-[x % y](remainder-operator.md) – 剰余。 オペランドが整数の場合、x を y で除算した剰余を返します。  `q = x / y` で `r = x % y` の場合、`x = q * y + r` になります。
+[x % y](arithmetic-operators.md#remainder-operator-) – 剰余。 オペランドが整数の場合、x を y で除算した剰余を返します。  `q = x / y` で `r = x % y` の場合、`x = q * y + r` になります。
 
 ## <a name="additive-operators"></a>加法演算子
 
 これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x + y](addition-operator.md) – 加算。
+[x + y](arithmetic-operators.md#addition-operator-) – 加算。
 
-[x – y](subtraction-operator.md) – 減算。
+[x – y](arithmetic-operators.md#subtraction-operator--) – 減算。
 
 ## <a name="shift-operators"></a>シフト演算子
 
@@ -195,9 +189,9 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [x *= y](multiplication-assignment-operator.md) – 乗算代入。 `y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。
 
-[x /= y](division-assignment-operator.md) – 除算代入。 `x` の値を `y` の値で除算した結果を `x` に格納し、新しい値を返します。
+[x /= y](arithmetic-operators.md#compound-assignment) – 除算代入。 `x` の値を `y` の値で除算した結果を `x` に格納し、新しい値を返します。
 
-[x %= y](remainder-assignment-operator.md) – 剰余代入。 `x` の値を `y` の値で除算した剰余を `x` に格納し、新しい値を返します。
+[x %= y](arithmetic-operators.md#compound-assignment) – 剰余代入。 `x` の値を `y` の値で除算した剰余を `x` に格納し、新しい値を返します。
 
 [x &= y](and-assignment-operator.md) – AND 代入。 `y` の値と `x` の値の AND 演算を行った結果を `x` に格納し、新しい値を返します。
 
@@ -210,20 +204,6 @@ C# には、多くの演算子が用意されています。演算子とは、�
 [x >>= y](right-shift-assignment-operator.md) – 右シフト代入。 `x` の値を `y` で指定した分だけ右へシフトした結果を `x` に格納し、新しい値を返します。
 
 [=>](lambda-operator.md) – ラムダ宣言。
-
-## <a name="arithmetic-overflow"></a>算術オーバーフロー
-
-算術演算子 ([+](addition-operator.md)、[-](subtraction-operator.md)、[*](multiplication-operator.md)、[/](division-operator.md)) を実行すると、結果が数値型の有効な値の範囲を超えることがあります。 詳細については、各演算子に関するセクションを参照してください。概要は、以下のとおりです。
-
-- 整数の算術オーバーフローでは、<xref:System.OverflowException> がスローされるか、または結果の最上位ビットが破棄されます。 0 による整数除算では、常に <xref:System.DivideByZeroException> がスローされます。
-
-   整数のオーバーフローが発生したときの対処方法は、実行コンテキスト ([checked または unchecked](../keywords/checked-and-unchecked.md)) によって異なります。 checked コンテキストの場合は、<xref:System.OverflowException> がスローされます。 unchecked コンテキストの場合は、結果の最上位ビットが破棄され、実行が続行されます。 このように、C# ではオーバーフローを処理するのか、それとも無視するのかをユーザーが選択できます。 既定では、算術演算は *unchecked* コンテキストで発生します。
-
-   算術演算の場合だけでなく、整数型から整数型へのキャスト ([long](../keywords/long.md) から [int](../keywords/int.md) へのキャストなど) でもオーバーフローは発生し、その場合も実行が checked または unchecked のいずれかによって対処が異なります。 ただし、ビット処理演算子とシフト演算子ではオーバーフローは発生しません。
-
-- 浮動小数点数の算術オーバーフローまたは 0 による浮動小数点除算では、例外はスローされません。これは、浮動小数点型が IEEE 754 に基づいており、無限大および NaN (Not a Number) を表現できるためです。
-
-- [小数](../keywords/decimal.md)の算術オーバーフローでは、常に <xref:System.OverflowException> がスローされます。 0 による小数除算では、常に <xref:System.DivideByZeroException> がスローされます。
 
 ## <a name="see-also"></a>関連項目
 
