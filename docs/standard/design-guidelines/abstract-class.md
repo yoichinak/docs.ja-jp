@@ -35,7 +35,7 @@ internal コンストラクターは、その具象実装をアセンブリ内�
 
 *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*
 
-*Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*
+Microsoft Windows の開発シリーズの一部として、Addison-wesley Professionalよ り 2008 年 10 月 22日を公開された Krzysztof Cwalina と Brad Abrams による [Framework デザイン ガイドライン: 規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) *Pearson Education, Inc. からのアクセス許可によって了承を得て転載*
 
 ## <a name="see-also"></a>関連項目
 
