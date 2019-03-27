@@ -25,8 +25,7 @@ ASP.NET で Web サービスを開発する場合、通常はまず、このサ�
 
 - <xref:System.Collections.IDictionary> インターフェイスを実装した、<xref:System.Collections.Hashtable> などのクラスを、XML 形式にシリアル化することはできません。
 
-- 
-  <xref:System.Xml.Serialization> 名前空間の属性型は、大部分が .NET Framework クラスやそのメンバーに追加可能であり、これにより、XML での当該クラスのインスタンスの表現方法を制御できます。
+- <xref:System.Xml.Serialization> 名前空間の属性型は、大部分が .NET Framework クラスやそのメンバーに追加可能であり、これにより、XML での当該クラスのインスタンスの表現方法を制御できます。
 
 通常、WCF アプリケーションの開発は複合型の定義を含むもが開始します。 WCF は、ASP.NET Web サービスと同じ .NET Framework 型を使用して作成できます。
 
@@ -146,9 +145,7 @@ public class LineItem
 }
 ```
 
-
-  <xref:System.Runtime.Serialization.DataContractAttribute> は、当該型の中にシリアル化可能なフィールドやプロパティがあることを示し、具体的にどのフィールドやプロパティをシリアル化できるかを <xref:System.Runtime.Serialization.DataMemberAttribute> で示します。 <xref:System.Runtime.Serialization.DataContractAttribute> はクラスにも構造体にも適用できます。 
-  <xref:System.Runtime.Serialization.DataMemberAttribute> はフィールドやプロパティに適用します。これはパブリックでもプライベートでもかまいません。 型のインスタンス、<xref:System.Runtime.Serialization.DataContractAttribute>に適用されるにと呼ばれる WCF でのデータ コントラクトします。 これを XML 形式にシリアル化するには <xref:System.Runtime.Serialization.DataContractSerializer> を使います。
+<xref:System.Runtime.Serialization.DataContractAttribute> は、当該型の中にシリアル化可能なフィールドやプロパティがあることを示し、具体的にどのフィールドやプロパティをシリアル化できるかを <xref:System.Runtime.Serialization.DataMemberAttribute> で示します。 <xref:System.Runtime.Serialization.DataContractAttribute> はクラスにも構造体にも適用できます。 <xref:System.Runtime.Serialization.DataMemberAttribute> はフィールドやプロパティに適用します。これはパブリックでもプライベートでもかまいません。 型のインスタンス、<xref:System.Runtime.Serialization.DataContractAttribute>に適用されるにと呼ばれる WCF でのデータ コントラクトします。 これを XML 形式にシリアル化するには <xref:System.Runtime.Serialization.DataContractSerializer> を使います。
 
 <xref:System.Runtime.Serialization.DataContractSerializer> を使う場合と、<xref:System.Xml.Serialization.XmlSerializer> および <xref:System.Xml.Serialization> 名前空間に定義された属性を使う場合の、主な違いを以下に示します。
 
@@ -179,11 +176,9 @@ public class LineItem
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> の場合、パブリックでないメンバーも XML に変換できるため、シリアル化できる .NET 型についての制約が少なくなります。 特に、<xref:System.Collections.Hashtable> など、<xref:System.Collections.IDictionary> インターフェイスを実装した型が変換可能です。 <xref:System.Runtime.Serialization.DataContractSerializer> はさらに、既存の .NET 型のインスタンスを XML にシリアル化する場合でも、型定義を変更したり、ラッパーを定義したりする必要がありません。
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer> はパブリックでないメンバーも変換できるため、完全に信頼できるコードからしか実行できないようになっています。<xref:System.Xml.Serialization.XmlSerializer> にはそのような制約がありません。 コードの完全な信頼アクセス許可は、コードが実行されている資格情報を使用してアクセスできるコンピューター上のすべてのリソースへの完全なアクセスを示します。 このオプションは、完全に信頼されたコード、コンピューター上のすべてのリソースにアクセスするように注意して使用する必要があります。
+- <xref:System.Runtime.Serialization.DataContractSerializer> はパブリックでないメンバーも変換できるため、完全に信頼できるコードからしか実行できないようになっています。<xref:System.Xml.Serialization.XmlSerializer> にはそのような制約がありません。 コードの完全な信頼アクセス許可は、コードが実行されている資格情報を使用してアクセスできるコンピューター上のすべてのリソースへの完全なアクセスを示します。 このオプションは、完全に信頼されたコード、コンピューター上のすべてのリソースにアクセスするように注意して使用する必要があります。
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer> にはバージョン管理の機能がいくつか組み込まれています。
+- <xref:System.Runtime.Serialization.DataContractSerializer> にはバージョン管理の機能がいくつか組み込まれています。
 
     - <xref:System.Runtime.Serialization.DataMemberAttribute> には <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティがあります。旧バージョンにはなかったメンバーを追加した場合に、そのプロパティを false とすれば、当該データ コントラクトの新バージョンを扱うアプリケーションが、旧バージョンのデータも扱えるようになります。
 
@@ -206,8 +201,7 @@ public class LineItem
 }
 ```
 
-Windows ソフトウェア開発キット (SDK) と呼ばれるコマンド ライン ツールが含まれています、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 などの xsd.exe ツールは、ASP.NET Web サービスで使用される、Svcutil.exe は、XML スキーマから .NET データ型の定義を生成できます。 
-  <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe を使用してデータ コントラクトから XML スキーマも生成できるその`dataContractOnly`スイッチします。
+Windows ソフトウェア開発キット (SDK) と呼ばれるコマンド ライン ツールが含まれています、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 などの xsd.exe ツールは、ASP.NET Web サービスで使用される、Svcutil.exe は、XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe を使用してデータ コントラクトから XML スキーマも生成できるその`dataContractOnly`スイッチします。
 
 > [!NOTE]
 > ASP.NET Web サービスの使用、 <xref:System.Xml.Serialization.XmlSerializer>、および WCF の ASP.NET 互換モードは、ASP.NET Web サービスの動作を模倣する WCF サービス、ASP.NET 互換性オプションも使用する 1 つは制限されません、<xref:System.Xml.Serialization.XmlSerializer>します。 必要であれば ASP.NET 互換モードでも <xref:System.Runtime.Serialization.DataContractSerializer> も使えるようになっています。
@@ -248,8 +242,7 @@ public class Service : IEcho
 }
 ```
 
-
-  <xref:System.Web.Services.WebService> 属性を持つインターフェイスは、サービスによって実行される操作のコントラクトを構成し、またそれをさまざまなクラスで再利用することによって、同じコントラクトをさまざまな方法で実装できるので、このオプションの使用をお勧めします。
+<xref:System.Web.Services.WebService> 属性を持つインターフェイスは、サービスによって実行される操作のコントラクトを構成し、またそれをさまざまなクラスで再利用することによって、同じコントラクトをさまざまな方法で実装できるので、このオプションの使用をお勧めします。
 
 WCF サービスは、1 つまたは複数の WCF エンドポイントの定義によって提供されます。 エンドポイントは、アドレス、バインディング、サービス コントラクトで定義します。 アドレスとは、サービスが配備された場所のことです。 バインディングはサービスとの通信方法を表します。 サービス コントラクトとは、サービスが実行できる操作の定義のことです。
 
@@ -431,15 +424,13 @@ WCF の ASP.NET 互換モード オプションを使用する IIS または WAS
 
 ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します.asmx ファイルの URL を入力として指定します。 WCF に用意された、対応するツールが[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 サービス コントラクトの定義と WCF クライアント クラスの定義を持つコード モジュールを生成します。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
 
-リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 によって生成されたコード、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)のいずれかのパターンを指定できます。 特に指定しなければ同期パターン用です。 
-  `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
+リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 によって生成されたコード、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)のいずれかのパターンを指定できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
 
 ASP によって生成された WCF クライアント クラスの名前を示す保証はありません。NET の WSDL.exe ツールでは、既定では、Svcutil.exe ツールによって生成された WCF クライアント クラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
 
 ## <a name="message-representation"></a>メッセージ表現
 
-ASP.NET Web サービスとやり取りする SOAP メッセージのヘッダーはカスタマイズ可能です。 
-  <xref:System.Web.Services.Protocols.SoapHeader> の派生クラスでヘッダーの構造を定義し、<xref:System.Web.Services.Protocols.SoapHeaderAttribute> でヘッダーが存在することを指定します。
+ASP.NET Web サービスとやり取りする SOAP メッセージのヘッダーはカスタマイズ可能です。 <xref:System.Web.Services.Protocols.SoapHeader> の派生クラスでヘッダーの構造を定義し、<xref:System.Web.Services.Protocols.SoapHeaderAttribute> でヘッダーが存在することを指定します。
 
 ```csharp
 public class SomeProtocol : SoapHeader
@@ -560,15 +551,13 @@ ASP.NET 2.0 では、サービスが Web Services-Interoperability Organization 
 public interface IEcho
 ```
 
-ASP.NET が WSDL で生成したサービス記述はカスタマイズ可能です。 
-  <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> の派生クラスを作成し、WSDL による記述に項目を追加する、という形でカスタマイズします。
+ASP.NET が WSDL で生成したサービス記述はカスタマイズ可能です。 <xref:System.Web.Services.Description.ServiceDescriptionFormatExtension> の派生クラスを作成し、WSDL による記述に項目を追加する、という形でカスタマイズします。
 
 WCF でサービスを記述する WSDL 応答は、IIS 51 内でホストされている HTTP エンドポイントを持つクエリは、WSDL、WCF サービスの .svc ファイルの HTTP GET 要求を発行する 6.0 または WAS から発生します。 httpGetEnabled が true に設定されている場合は、WSDL で記述したクエリを HTTP GET 要求として、.NET アプリケーション上でホストされているサービスの HTTP ベース アドレスに発行しても同じ効力があります。
 
 ただし、WCF は、サービスの記述を生成すると、WSDL での Ws-metadataexchange 要求にも応答します。 ASP.NET Web サービスには、WS-MetadataExchange 要求に応答する機能がありません。
 
-WCF によって生成される WSDL を広範囲にカスタマイズできます。 
-  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスには、WSDL による記述をカスタマイズするための機能がいくつか組み込まれています。 WSDL を生成しませんが、静的な WSDL ファイルを使用して、特定の url にではなく、WCF を構成することもできます。
+WCF によって生成される WSDL を広範囲にカスタマイズできます。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスには、WSDL による記述をカスタマイズするための機能がいくつか組み込まれています。 WSDL を生成しませんが、静的な WSDL ファイルを使用して、特定の url にではなく、WCF を構成することもできます。
 
 ```xml
 <behaviors>

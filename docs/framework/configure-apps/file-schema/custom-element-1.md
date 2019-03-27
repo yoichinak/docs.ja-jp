@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 232ad7527e65fd38fa471cccc917752aef766a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628839"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464438"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
-定義されているカスタム構成セクションの設定を定義します。 <section> 使用して要素、<xref:System.Configuration.SingleTagSectionHandler>クラス。
+定義されているカスタム構成セクションの設定を定義、\<セクション > 要素と、使用して、<xref:System.Configuration.SingleTagSectionHandler>クラス。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;*\<sectionName>*
