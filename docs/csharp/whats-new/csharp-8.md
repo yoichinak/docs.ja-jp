@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 2 での最新のものです。
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843941"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262583"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 前の switch での破棄パターンは、`x` または `y` のどちらか一方が 0 のときに一致しますが、両方とも 0 のときには一致しません。 switch 式は、値を生成するか、または例外をスローする必要があります。 どのケースとも一致しない場合、switch 式は例外をスローします。 可能性のあるすべてのケースが switch 式でカバーされていない場合、コンパイラで警告が生成されます。
+
+この[パターン マッチングの高度なチュートリアル](../tutorials/pattern-matching.md)で、パターン マッチング手法を確認できます。
 
 ## <a name="using-declarations"></a>using 宣言
 
