@@ -3,12 +3,12 @@ title: ASP.NET Core Web API で機械学習モデルを提供する
 description: ASP.NET Core Web API を使用して、インターネット経由で予測用の ML.NET 感情分析機械学習モデルを提供します
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856704"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307916"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>方法: ASP.NET Core Web API を通して機械学習モデルを提供する
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>予測サービスを作成する
+## <a name="register-predictionengine-for-use-in-application"></a>アプリケーションで使用するための PredictionEngine を登録する
 
-予測ロジックを整理し、アプリケーション全体で再利用するために、予測サービスを作成します。
-
-1. アプリケーションによって使用されるサービスを保持するために、*Services* という名前のディレクトリをプロジェクト内に作成します。
-
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、**[追加]、[新しいフォルダー]** の順に選択します。 「Services」と入力し、**Enter** キーを押します。
-
-1. ソリューション エクスプローラーで、*Services* ディレクトリを右クリックし、**[追加]、[新しいアイテム]** の順に選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを *PredictionService.cs* に変更します。 次に、**[追加]** を選択します。 コード エディターに *PredictionService.cs* ファイルが開きます。 *PredictionService.cs* の先頭に次の using ステートメントを追加します。
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-既存のクラス定義を削除し、次のコードを *PredictionService.cs* ファイルに追加します。
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>アプリケーションで使用するために予測サービスを登録する
-
-アプリケーションで予測サービスを使用するには、必要になるたびにそれを作成する必要があります。 この場合のベスト プラクティスは、ASP.NET Core の依存関係の挿入を考慮することです。
+1 つの予測をするためには、`PredictionEngine` を使用できます。 アプリケーションで `PredictionEngine` を使用するには、必要になるたびにそれを作成する必要があります。 この場合のベスト プラクティスは、ASP.NET Core の依存関係の挿入を考慮することです。
 
 依存関係の注入の詳細については、[こちらのリンク](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)を参照してください。
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. *ConfigureServices* メソッドに次のコード行を追加します。
+2. *ConfigureServices* メソッドに次のコード行を追加します。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` はスレッド セーフではありません。 そのサービスの有効期間を*スコープ化*することで、オブジェクト作成のコストを制限することができます。 "*スコープ*" オブジェクトは、要求内では同じですが、要求間では異なります。 [サービスの有効期間](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes)の詳細については、次のリンクを参照してください。
 
 大まかに言えば、このコードは、オブジェクトとサービスがアプリケーションによって要求されたときに、初期化を手動ではなく自動的に実行します。
 
@@ -202,9 +156,10 @@ public void ConfigureServices(IServiceCollection services)
 1. プロンプトで、**[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。 コード エディターに *PredictController.cs* ファイルが開きます。 *PredictController.cs* の先頭に次の using ステートメントを追加します。
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 既存のクラス定義を削除し、次のコードを *PredictController.cs* ファイルに追加します。
@@ -212,12 +167,12 @@ using SentimentAnalysisWebAPI.Services;
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-これは、依存関係の挿入を通して取得するコントローラーのコンストラクターに渡すことによる予測サービスの割り当てです。 これで、このコントローラーの POST メソッドの中で予測サービスを使用して予測が行われ、成功した場合はその結果がユーザーに返されます。
+これは、依存関係の挿入をとおして取得するコントローラーのコンストラクターに渡すことによる `PredictionEngine` の割り当てです。 これで、このコントローラーの POST メソッドの中で `PredictionEngine` を使用して予測が行われ、成功した場合はその結果がユーザーに返されます。
 
 ## <a name="test-web-api-locally"></a>Web API をローカルでテストする
 
@@ -252,7 +214,7 @@ Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{T
 Toxic
 ```
 
-おつかれさまでした。 ASP.NET Core API を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
+おめでとうございます!  ASP.NET Core API を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
 
 ## <a name="next-steps"></a>次の手順
 

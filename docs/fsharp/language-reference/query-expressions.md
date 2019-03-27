@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977982"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463229"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -1010,7 +1010,7 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1034,9 +1034,9 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          elif student.Age.HasValue && student.Age.Value = 0 then
-             (student.StudentID, System.Nullable<int>(1000), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(1000), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
