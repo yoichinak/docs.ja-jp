@@ -15,15 +15,12 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724467"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource コンポーネントの概要
-
-  <xref:System.Windows.Forms.BindingSource> コンポーネントは、基になるデータ ソースにコントロールをバインドするプロセスを簡略化するように設計されています。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、他のコントロールのバインド先となるパイプおよびデータ ソースの両方の働きをします。 このコンポーネントは、フォームのデータ接続を抽象化し、基になるデータ リストにコマンドを渡します。 また、コンポーネントに直接データを追加することにより、コンポーネント自体がデータ ソースとして機能するようにすることができます。  
+<xref:System.Windows.Forms.BindingSource> コンポーネントは、基になるデータ ソースにコントロールをバインドするプロセスを簡略化するように設計されています。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、他のコントロールのバインド先となるパイプおよびデータ ソースの両方の働きをします。 このコンポーネントは、フォームのデータ接続を抽象化し、基になるデータ リストにコマンドを渡します。 また、コンポーネントに直接データを追加することにより、コンポーネント自体がデータ ソースとして機能するようにすることができます。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>媒介手段としての BindingSource コンポーネント  
- 
-  <xref:System.Windows.Forms.BindingSource> コンポーネントは、フォーム上のコントロールの一部またはすべてのデータ ソースとして機能します。 Visual Studio で、<xref:System.Windows.Forms.BindingSource>によってコントロールにバインドすることができます、`DataBindings`からアクセス可能であるプロパティ、**プロパティ**ウィンドウ。 参照してください[方法。デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインド](bind-wf-controls-with-the-bindingsource.md)します。  
+ <xref:System.Windows.Forms.BindingSource> コンポーネントは、フォーム上のコントロールの一部またはすべてのデータ ソースとして機能します。 Visual Studio で、<xref:System.Windows.Forms.BindingSource>によってコントロールにバインドすることができます、`DataBindings`からアクセス可能であるプロパティ、**プロパティ**ウィンドウ。 参照してください[方法。デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインド](bind-wf-controls-with-the-bindingsource.md)します。  
   
- 
-  <xref:System.Windows.Forms.BindingSource> コンポーネントは、単純なデータ ソース (オブジェクトの 1 つのプロパティや、<xref:System.Collections.ArrayList> のような基本的なコレクションなど) と複雑なデータ ソース (データベース テーブルなど) の両方にバインドできます。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、バインディングおよび現在位置管理サービスを提供する媒介手段として機能します。 デザイン時や実行時には、<xref:System.Windows.Forms.BindingSource.DataSource%2A> プロパティと <xref:System.Windows.Forms.BindingSource.DataMember%2A> プロパティをそれぞれデータベースとテーブルに設定して <xref:System.Windows.Forms.BindingSource> コンポーネントを複雑なデータ ソースにバインドできます。 既存のデータ バインディング アーキテクチャにおける <xref:System.Windows.Forms.BindingSource> コンポーネントの位置づけを次の図に示します。  
+ <xref:System.Windows.Forms.BindingSource> コンポーネントは、単純なデータ ソース (オブジェクトの 1 つのプロパティや、<xref:System.Collections.ArrayList> のような基本的なコレクションなど) と複雑なデータ ソース (データベース テーブルなど) の両方にバインドできます。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、バインディングおよび現在位置管理サービスを提供する媒介手段として機能します。 デザイン時や実行時には、<xref:System.Windows.Forms.BindingSource.DataSource%2A> プロパティと <xref:System.Windows.Forms.BindingSource.DataMember%2A> プロパティをそれぞれデータベースとテーブルに設定して <xref:System.Windows.Forms.BindingSource> コンポーネントを複雑なデータ ソースにバインドできます。 既存のデータ バインディング アーキテクチャにおける <xref:System.Windows.Forms.BindingSource> コンポーネントの位置づけを次の図に示します。  
   
  ![バインディング ソースとデータ バインディング アーキテクチャ](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   

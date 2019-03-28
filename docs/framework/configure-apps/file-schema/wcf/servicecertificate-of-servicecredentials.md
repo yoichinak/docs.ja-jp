@@ -12,12 +12,12 @@ ms.locfileid: "57373804"
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > の\<serviceCredentials >
 メッセージ セキュリティ モードを使用しているクライアントへのサービスの認証に使用する X.509 証明書を指定します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
+ \<system.ServiceModel>  
+\<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
-\<serviceCertificate >  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>構文  
   

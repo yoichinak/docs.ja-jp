@@ -66,9 +66,7 @@ Windows Presentation Foundation でも同じようになります。
 
 ## <a name="binding-to-entitysets"></a>EntitySet へのバインディング
 
-
-  `EntitySet` へのバインディングは特別なケースです。`EntitySet` は既に、<xref:System.ComponentModel.IBindingList> を実装したコレクションであるためです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 並べ替えとキャンセルを追加します (<xref:System.ComponentModel.ICancelAddNew>) をサポートします。 
-  `EntitySet` クラスは内部リストを使用してエンティティを格納します。 このリストは、ジェネリック配列 (ジェネリック `ItemList` クラス) を基にした低水準のコレクションです。
+`EntitySet` へのバインディングは特別なケースです。`EntitySet` は既に、<xref:System.ComponentModel.IBindingList> を実装したコレクションであるためです。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 並べ替えとキャンセルを追加します (<xref:System.ComponentModel.ICancelAddNew>) をサポートします。 `EntitySet` クラスは内部リストを使用してエンティティを格納します。 このリストは、ジェネリック配列 (ジェネリック `ItemList` クラス) を基にした低水準のコレクションです。
 
 ### <a name="adding-a-sorting-feature"></a>並べ替え機能の追加
 

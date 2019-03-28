@@ -28,8 +28,7 @@ CType(expression, typename)
 
 ## <a name="parts"></a>指定項目
 
-`expression` 有効な式。 
-  `expression` の値が `typename` で許可されている範囲内でない場合、Visual Basic が例外をスローします。
+`expression` 有効な式。 `expression` の値が `typename` で許可されている範囲内でない場合、Visual Basic が例外をスローします。
 
 `typename` 任意の式内で有効である、`As`句、`Dim`ステートメントでは、データ型、オブジェクト、構造体、クラスまたはインターフェイスの名前。
 
@@ -43,18 +42,15 @@ CType(expression, typename)
 
 `CType` は、インラインでコンパイルされます。つまり、変換コードは、式を評価するコードに含まれます。 場合によっては、変換を実行するプロシージャが呼び出されないため、コードの実行速度が速くなります。
 
-
-  `expression` から `typename` など、`Integer` から `Date` への変換が定義されていない場合、Visual Basic はコンパイル時のエラー メッセージを表示します。
+`expression` から `typename` など、`Integer` から `Date` への変換が定義されていない場合、Visual Basic はコンパイル時のエラー メッセージを表示します。
 
 実行時に変換が失敗すると、適切な例外がスローされます。 縮小変換が失敗した場合、最もよくスローされるのは <xref:System.OverflowException> です。 変換が定義されていない場合、<xref:System.InvalidCastException> がスローされます。 たとえば、これは、`expression` が `Object` 型で、実行時の型が `typename` への変換を持たない場合に起こります。
 
-
-  `expression` または `typename` のデータ型が、定義したクラスまたは構造体の場合、そのクラスまたは構造体に `CType` を変換演算子として定義できます。 これにより、`CType`として機能する*オーバー ロードされた演算子*します。 この方法を利用する場合、定義したクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換の動作 (スローする例外など) を制御できます。
+`expression` または `typename` のデータ型が、定義したクラスまたは構造体の場合、そのクラスまたは構造体に `CType` を変換演算子として定義できます。 これにより、`CType`として機能する*オーバー ロードされた演算子*します。 この方法を利用する場合、定義したクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換の動作 (スローする例外など) を制御できます。
 
 ## <a name="overloading"></a>オーバーロード
 
-
-  `CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`CType` 演算子も、コードの外部で定義されたクラスまたは構造体でオーバーロードできます。 このようなクラスまたは構造体からの変換、またはこのクラスまたは構造体への変換を行う場合は、その `CType` 演算子の動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="converting-dynamic-objects"></a>動的オブジェクトの変換
 
@@ -62,8 +58,7 @@ CType(expression, typename)
 
 ## <a name="example"></a>例
 
-
-  `CType` 関数を使用して任意の式を `Single` データ型に変換する例を次に示します。
+`CType` 関数を使用して任意の式を `Single` データ型に変換する例を次に示します。
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 

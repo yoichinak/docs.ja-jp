@@ -222,8 +222,7 @@ ms.locfileid: "57352920"
 
      これは、<xref:System.Windows.UIElement.OnDragOver%2A>オーバーライドは、次のタスクを実行します。
 
-    -   
-  <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
+    -   <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
 
     -   実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>円ユーザー コントロールがドラッグしたデータを処理できるかどうかを判断するメソッド。
 
