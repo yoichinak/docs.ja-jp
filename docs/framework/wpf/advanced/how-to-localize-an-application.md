@@ -36,8 +36,7 @@ ms.locfileid: "57374116"
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>サンプルのアプリケーションの作成  
- このステップでは、ローカリゼーション用のアプリケーションを準備します。 
-  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、ダウンロード、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルから、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)します。  
+ このステップでは、ローカリゼーション用のアプリケーションを準備します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のサンプルでは、この説明のコード サンプルで使用される HelloApp のサンプルが提供されています。 このサンプルを使用する場合は、ダウンロード、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイルから、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)します。  
   
 1.  ローカリゼーションを開始するポイントまで、アプリケーションを開発します。  
   
@@ -45,8 +44,7 @@ ms.locfileid: "57374116"
   
      `<UICulture>en-US</UICulture>`  
   
-3.  
-  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに UID を追加します。 UID は、ファイルへの変更を追跡して、翻訳する必要がある項目を識別するために使用されます。 Uid をファイルに追加するには、実行**updateuid**プロジェクト ファイルで。  
+3.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルに UID を追加します。 UID は、ファイルへの変更を追跡して、翻訳する必要がある項目を識別するために使用されます。 Uid をファイルに追加するには、実行**updateuid**プロジェクト ファイルで。  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
@@ -151,11 +149,11 @@ ms.locfileid: "57374116"
   
    次の表は、.csv ファイルの区切り記号付きの値にこれらのフィールドをマップする方法を示しています。  
   
-   |BAML 名|リソース キー|カテゴリ|読みやすさ|変更可能性|コメント|値|  
+   |BAML 名|リソース キー|Category|読みやすさ|変更可能性|コメント|[値]|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Goodbye World|
   
    注意のすべての値、**コメント**フィールドに値が含まれていません。 フィールド値をがない場合は空です。 としてまたの最初の行の項目が読み取り可能でも変更できますでもないと、"Ignore"が含まれて、**カテゴリ**値がローカライズ可能ではないことを示しますの値。  
   

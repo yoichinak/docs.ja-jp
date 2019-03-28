@@ -21,8 +21,7 @@ ms.locfileid: "56965736"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  <xref:System.Xml.Linq> 名前空間への参照  
+-   <xref:System.Xml.Linq> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>

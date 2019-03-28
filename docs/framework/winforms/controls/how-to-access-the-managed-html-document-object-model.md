@@ -18,7 +18,7 @@ ms.locfileid: "57715946"
 # <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。
 マネージド HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
   
--   マネージ <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
+-   マネージド <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
   
 -   Internet Explorer 内でホストされた Windows フォーム <xref:System.Windows.Forms.UserControl>。 <xref:System.Windows.Forms.UserControl> をホストするページを表す HTML DOM にアクセスして、ドキュメントの構造体を変更したり、モーダル ダイアログ ボックスを開いたりするなど、さまざまな操作を行うことができます。  
   
@@ -26,25 +26,20 @@ ms.locfileid: "57715946"
   
 1.  Windows フォーム アプリケーション内で <xref:System.Windows.Forms.WebBrowser> コントロールをホストし、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> イベントを監視します。 コントロールのホストとイベントの監視の詳細については、「[イベント](../../../standard/events/index.md)」を参照してください。  
   
-2.  
-  <xref:System.Windows.Forms.HtmlDocument> コントロールの <xref:System.Windows.Forms.WebBrowser.Document%2A> プロパティにアクセスして、現在のページの <xref:System.Windows.Forms.WebBrowser> を取得します。  
+2.  <xref:System.Windows.Forms.HtmlDocument> コントロールの <xref:System.Windows.Forms.WebBrowser.Document%2A> プロパティにアクセスして、現在のページの <xref:System.Windows.Forms.WebBrowser> を取得します。  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Internet Explorer でホストされた UserControl から DOM にアクセスするには  
   
-1.  
-  <xref:System.Windows.Forms.UserControl> クラスのカスタム派生クラスを作成します。 詳細については、「[方法 :複合コントロールを作成](how-to-author-composite-controls.md)です。  
+1.  <xref:System.Windows.Forms.UserControl> クラスのカスタム派生クラスを作成します。 詳細については、「[方法 :複合コントロールを作成](how-to-author-composite-controls.md)です。  
   
-2.  
-  <xref:System.Windows.Forms.UserControl> の Load イベント ハンドラー内に次のコードを配置します。  
+2.  <xref:System.Windows.Forms.UserControl> の Load イベント ハンドラー内に次のコードを配置します。  
   
  [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
  [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
   
-1.  
-  <xref:System.Windows.Forms.WebBrowser> コントロールを通じて DOM を使用するときは、必ず <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> イベントが発生するまで待機してから <xref:System.Windows.Forms.WebBrowser.Document%2A> コントロールの <xref:System.Windows.Forms.WebBrowser> プロパティにアクセスするようにします。 
-  <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> イベントは、ドキュメント全体が読み込まれた後で発生します。それ以前に DOM を使用すると、アプリケーション内でランタイム例外が発生する恐れがあります。  
+1.  <xref:System.Windows.Forms.WebBrowser> コントロールを通じて DOM を使用するときは、必ず <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> イベントが発生するまで待機してから <xref:System.Windows.Forms.WebBrowser.Document%2A> コントロールの <xref:System.Windows.Forms.WebBrowser> プロパティにアクセスするようにします。 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> イベントは、ドキュメント全体が読み込まれた後で発生します。それ以前に DOM を使用すると、アプリケーション内でランタイム例外が発生する恐れがあります。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
   
