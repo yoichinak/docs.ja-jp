@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708533"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634168"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 A*ディメンション*は、方向が配列の要素の仕様を変更できます。 月の日付ごとの売上合計を保持する配列には、1 つのディメンション (月の日) があります。 1 か月の日付ごとに売上を部門別合計保持する配列には、2 つのディメンション (部門の番号と月の日) があります。 配列の次元数と呼ばれる、*ランク*します。  
@@ -27,14 +27,11 @@ A*ディメンション*は、方向が配列の要素の仕様を変更でき�
   
  次の図は、ランクが異なる配列の概念の構造を示しています。 図内の各要素は、これにアクセスするインデックス値を示します。 たとえば、インデックスを指定することで 2 次元配列の 2 つ目の行の最初の要素をアクセス`(1, 0)`します。  
   
- ![1 つのグラフィック ダイアグラム&#45;次元配列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-1 次元配列  
+ ![1 次元配列を示す図。](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![2 つのグラフィック ダイアグラム&#45;次元配列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-2 次元配列  
+ ![2 次元の配列を示す図。](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![3 つのグラフィック ダイアグラム&#45;次元配列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-3 次元の配列  
+ ![3 次元の配列を示す図。](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>1 つのディメンション  
  多くの配列では、各年齢の人の数などの 1 つだけディメンションを持ちます。 要素を指定する唯一の要件は、その要素数を保持する期間です。 そのため、このような配列は、1 つのみのインデックスを使用します。 次の例を保持する変数の宣言を*1 次元配列*年齢が 0 ~ 120 の有効期間の数します。  

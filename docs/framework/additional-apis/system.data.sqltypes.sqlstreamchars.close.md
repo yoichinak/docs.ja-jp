@@ -3,8 +3,7 @@ title: SqlStreamChars.Close メソッド (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 634b2262ce3262b2c5971fb995b7c988f50924ed
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d0c29bbc5c6bea98cf36e3c2b6bf7825d6843ccc
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826890"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634025"
 ---
 # <a name="sqlstreamcharsclose-method"></a>SqlStreamChars.Close メソッド
 

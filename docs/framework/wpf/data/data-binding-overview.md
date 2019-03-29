@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364828"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634558"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>などの <xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など <xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>を 1 つのデータ項目の柔軟なスタイルまたはデータ項目のコレクションを有効にする機能が組み込まれました。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "57364828"
   
  バインドする要素およびデータ ソースの性質に関係なく、各バインドは常に次の図で示したモデルに従います。  
   
- ![基本的なデータ バインディング ダイアグラム](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![基本的なデータ バインディング モデルを示す図。](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  上の図に示したように、データ バインディングは本質的に、バインディング ターゲットとバインディング ソース間の橋渡しです。 図には、次の基本的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングの概念が示されています。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364828"
   
  ただし、ソース値が更新されるのは、テキストの編集中またはテキストの編集後にマウス ポインターを TextBox から離した後でしょうか。 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>ソースの更新をトリガーとバインディングのプロパティを決定します。 次の図の右側の矢印のドットのロールを示しています、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ。  
   
- ![UpdateSourceTrigger ダイアグラム](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![UpdateSourceTrigger プロパティのロールを示す図。](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>の値が<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>の場合、指す値の右矢印<xref:System.Windows.Data.BindingMode.TwoWay>または<xref:System.Windows.Data.BindingMode.OneWayToSource>バインドはターゲット プロパティの変更と、すぐに更新を取得します。 ただし場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>値は<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>、その値のみを取得、新しい値で更新対象プロパティがフォーカスを失ったときに、します。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364828"
   
  この例を基本的な図に適用すると、結果として得られる図は、次のようになります。 これは、 <xref:System.Windows.Data.BindingMode.OneWay> Background プロパティをサポートするためのバインド<xref:System.Windows.Data.BindingMode.OneWay>デフォルトをバインドします。  
   
- ![データ バインディング ダイアグラム](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![データ バインディングの Background プロパティを示す図。](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  なぜこの動作も不思議に思う可能性があります、 *ColorName*中に文字列型のプロパティは、<xref:System.Windows.Controls.Control.Background%2A>プロパティの型は<xref:System.Windows.Media.Brush>します。 これは作業中の既定の型変換であり、「[データ変換](#data_conversion)」セクションで説明されています。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364828"
   
  この情報を「[バインディングの作成](#creating_a_binding)」セクションの図に追加すると、図は次のようになります。  
   
- ![データ バインディング ダイアグラム](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![データ バインディングの既定のプロパティを示す図。](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  ただし、場合ではなく、バインディング ソース オブジェクトが文字列の型のプロパティを*色*型のプロパティ<xref:System.Windows.Media.Color>でしょうか。 その場合は、バインディングが機能するためにする必要があります最初に、*色*に何かのプロパティの値を<xref:System.Windows.Controls.Control.Background%2A>プロパティでは。 実装してカスタムのコンバーターを作成する必要がありますが、<xref:System.Windows.Data.IValueConverter>次の例のように、インターフェイス。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364828"
   
  これで既定の変換の代わりにカスタムのコンバーターが使用されるようになったので、図はこのようになります。  
   
- ![データ バインディング ダイアグラム](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![データ バインディングのカスタム コンバーターを示す図。](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  繰り返しますが、バインドされている型に存在する型コンバーターにより、既定の変換が使用できます。 この動作は、ターゲットで利用可能な型コンバーターによって異なります。 独自のコンバーターを作成して、確認してみてください。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364828"
   
  幸い、基本的な図を引き続き使用できます。 バインドしている場合、<xref:System.Windows.Controls.ItemsControl>の図は、次のように、コレクション。  
   
- ![データ バインディング ItemsControl ダイアグラム](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![データ バインディング ItemsControl のオブジェクトを示す図。](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  バインドする、この図で示すように、<xref:System.Windows.Controls.ItemsControl>コレクション オブジェクトに<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>プロパティは、プロパティを使用します。 考えることができます<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>プロパティの内容として、<xref:System.Windows.Controls.ItemsControl>します。 バインディングは<xref:System.Windows.Data.BindingMode.OneWay>ため、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>プロパティは<xref:System.Windows.Data.BindingMode.OneWay>デフォルトをバインドします。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364828"
 ## <a name="data-templating"></a>データ テンプレート  
  データ テンプレートを使用しないと、「[データ バインディングとは](#what_is_data_binding)」セクションのアプリケーション [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] は、次のようになります。  
   
- ![データ テンプレートを使用しないデータ バインディング デモ](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![データ テンプレートのないデータ バインディング デモ](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  前のセクションの例で示すように両方の<xref:System.Windows.Controls.ListBox>コントロールと<xref:System.Windows.Controls.ContentControl>のコレクション オブジェクト全体 (またはより具体的には、コレクション オブジェクトのビュー) にバインドされて*AuctionItem*s。 データ コレクションを表示する方法の具体的な指示せず、<xref:System.Windows.Controls.ListBox>基になるコレクション内の各オブジェクトの文字列表現を表示して、<xref:System.Windows.Controls.ContentControl>にバインドされているオブジェクトの文字列表現を表示します。  
   

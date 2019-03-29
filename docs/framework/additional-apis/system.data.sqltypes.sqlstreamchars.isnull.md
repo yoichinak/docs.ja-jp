@@ -3,8 +3,7 @@ title: SqlStreamChars.IsNull プロパティ (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -14,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7d2a2cf66ce2a375b1e5989b2fb6ddc9e3d94411
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ec00b0afa1597c3ae6488c12fe5a0667dad70e2d
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825447"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634337"
 ---
 # <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars.IsNull プロパティ
 
