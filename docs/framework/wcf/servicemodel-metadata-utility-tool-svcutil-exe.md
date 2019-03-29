@@ -134,8 +134,7 @@ Svcutil.exe は、コンパイル済みアセンブリのサービス、コン�
 
 ### <a name="service-validation"></a>サービスの検証
 
-検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 
-  `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
+検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 
