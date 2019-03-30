@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523390"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654368"
 ---
 # <a name="loop-structures-visual-basic"></a>ループ構造 (Visual Basic)
 Visual Basic のループ構造を使用して、1 つまたは複数の行のコードを繰り返し実行できます。 条件になるまで、ループ構造でステートメントを繰り返すことができます`True`条件になるまで、`False`コレクションの回数、または 1 回の各要素の数を指定します。  
   
- 次の図は、条件が true になるまでは、一連のステートメントを実行するループ構造を示します。  
+ 次の図は、条件が true になるまでは、一連のステートメントを実行するループ構造を示しています。  
   
- ![Do のフロー チャート.Until ループ](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-条件が true になるまで、一連のステートメントを実行しています。  
+ ![フローを示すグラフが、操作を行います.Until ループします。](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>While ループ  
  `While`.`End While`構築で指定された条件と一連のステートメントが実行される、`While`ステートメントが`True`します。 詳細については、[While ... End While ステートメント](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)を参照してください。  

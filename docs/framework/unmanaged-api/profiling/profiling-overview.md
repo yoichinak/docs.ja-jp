@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862317"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654095"
 ---
 # <a name="profiling-overview"></a>プロファイリングの概要
 <a name="top"></a> プロファイラーは、別のアプリケーションの実行を監視するツールです。 共通言語ランタイム (CLR: Common Language Runtime) プロファイラーは、プロファイル API を使用して CLR とのメッセージの送受信を行う関数で構成されるダイナミック リンク ライブラリ (DLL: Dynamic Link Library) です。 プロファイラー DLL は、実行時に CLR によって読み込まれます。  
@@ -78,13 +78,12 @@ ms.locfileid: "43862317"
   
  次の図は、プロファイラー DLL がプロファイリング対象アプリケーションおよび CLR とやり取りする方法を示しています。  
   
- ![プロファイリング アーキテクチャ](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-プロファイリング アーキテクチャ  
+ ![プロファイリング アーキテクチャを示すスクリーン ショット。](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>通知インターフェイス  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)と[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)通知インターフェイスと見なすことができます。 これらのインターフェイスで構成されているメソッドのなど[ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)、 [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)、および[JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)します。 クラスのロードまたはアンロード、関数のコンパイルなどを行うたびに、プロファイラーの `ICorProfilerCallback` インターフェイスまたは `ICorProfilerCallback2` インターフェイスの対応するメソッドが呼び出されます。  
   
- たとえば、プロファイラーが 2 つの通知関数を使用してコードのパフォーマンスを測定でした: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)と[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)します。 この場合は、各通知のタイムスタンプを記録し、結果を累積して、アプリケーションの実行時に CPU またはウォール クロック時間を最も多く使用した関数を示す一覧を出力します。  
+ たとえば、プロファイラーでは、2 つの通知関数を使用してコードのパフォーマンスを測定でした。[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)と[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)します。 この場合は、各通知のタイムスタンプを記録し、結果を累積して、アプリケーションの実行時に CPU またはウォール クロック時間を最も多く使用した関数を示す一覧を出力します。  
   
 ### <a name="the-information-retrieval-interfaces"></a>情報取得インターフェイス  
  プロファイルに関連するその他のメイン インターフェイスは[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)と[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)します。 プロファイラーは、分析に役立つ追加情報を取得する必要がある場合に、これらのインターフェイスを呼び出します。 たとえば、CLR を呼び出すたびに、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)関数、関数の識別子が指定されます。 プロファイラーは呼び出すことでその関数の詳細についてを取得することができます、 [icorprofilerinfo 2::getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)関数の親クラス、その名前、および具合を探索する方法。  
@@ -117,7 +116,7 @@ ms.locfileid: "43862317"
   
 -   例外。  
   
--   マネージ コードとアンマネージ コードの実行の切り替え。  
+-   マネージド コードとアンマネージド コードの実行の切り替え。  
   
 -   異なるランタイム コンテキスト間の切り替え。  
   
@@ -138,7 +137,7 @@ ms.locfileid: "43862317"
   
 -   アスペクト指向プログラミングなどの目的で自身のコードを変更する自動変更アプリケーション。  
   
--   範囲チェック (プロファイル API がこの情報を提供しないため)。 CLR には、すべてのマネージ コードの範囲チェックのための組み込みサポートが用意されています。  
+-   範囲チェック (プロファイル API がこの情報を提供しないため)。 CLR には、すべてのマネージド コードの範囲チェックのための組み込みサポートが用意されています。  
   
 -   リモート プロファイル。次の理由によりサポートされません。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "43862317"
   
 <a name="security"></a>   
 ## <a name="security"></a>セキュリティ  
- プロファイラーの DLL は、共通言語ランタイムの実行エンジンの一部として動作するアンマネージ DLL です。 そのため、プロファイラー DLL のコードは、マネージ コード アクセス セキュリティの制限を受けません。 プロファイラー DLL に対する唯一の制限は、プロファイリング対象のアプリケーションを実行しているユーザーに適用されるオペレーティング システムの制限です。  
+ プロファイラーの DLL は、共通言語ランタイムの実行エンジンの一部として動作するアンマネージ DLL です。 そのため、プロファイラー DLL のコードは、マネージド コード アクセス セキュリティの制限を受けません。 プロファイラー DLL に対する唯一の制限は、プロファイリング対象のアプリケーションを実行しているユーザーに適用されるオペレーティング システムの制限です。  
   
  プロファイラーを作成するときは、セキュリティ関連の問題が発生しないように、適切な予防措置を講じる必要があります。 たとえば、インストール時には、プロファイラー DLL をアクセス制御リスト (ACL: Access Control List) に追加して、悪意のあるユーザーが DLL を変更できないようにします。  
   
@@ -170,7 +169,7 @@ ms.locfileid: "43862317"
 ## <a name="combining-managed-and-unmanaged-code-in-a-code-profiler"></a>コード プロファイラーでのマネージド コードとアンマネージド コードの結合  
  プロファイラーが正しく記述されていないと、循環参照が発生し、予期しない動作が引き起こされることがあります。  
   
- CLR プロファイル API を一見すると、マネージ コンポーネントとアンマネージ コンポーネントの両方を使用してプロファイラーを作成し、COM 相互運用機能や間接呼び出しを通して互いを呼び出すことができるような印象を受けるかもしれません。  
+ CLR プロファイル API をレビューすると、マネージド コンポーネントとアンマネージド コンポーネントの両方を使用してプロファイラーを作成し、COM 相互運用機能や間接呼び出しを通して互いを呼び出すことができるような印象を受けるかもしれません。  
   
  これは設計上は可能ですが、プロファイル API はマネージド コンポーネントをサポートしていません。 CLR プロファイラーは完全にアンマネージにする必要があります。 CLR プロファイラーでマネージド コードとアンマネージド コードを組み合わせようとすると、アクセス違反、プログラム エラー、またはデッドロックが発生する可能性があります。 プロファイラーのマネージド コンポーネントからアンマネージド コンポーネントに対してイベントが生成され、そのイベントでマネージド コンポーネントが再度呼び出されて、循環参照が発生することになります。  
   
@@ -178,7 +177,7 @@ ms.locfileid: "43862317"
   
  また、MSIL を変更するために古いインストルメンテーション メソッドを使用することもできます。 プロファイラーがメソッドと、JIT コンパイルの MSIL 本体にマネージ呼び出しを挿入できる関数の・ イン タイム (JIT) コンパイルが完了する前に (を参照してください、 [icorprofilerinfo::getilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md)メソッド)。 この方法で、マネージド コードの選択的インストルメンテーションや、JIT に関する統計およびパフォーマンス データの収集を行うことができます。  
   
- または、コード プロファイラーを使用して、アンマネージ コードを呼び出すすべてのマネージ関数の MSIL 本体にネイティブ フックを挿入することもできます。 この方法は、インストルメンテーションやカバレッジに使用できます。 たとえば、コード プロファイラーで各 MSIL ブロックの後ろにインストルメンテーション フックを挿入すると、そのブロックが実行されたことを確認できます。 メソッドの MSIL 本体の変更には細心の注意が要求され、多くの要素を検討する必要があります。  
+ または、コード プロファイラーを使用して、アンマネージド コードを呼び出すすべてのマネージド関数の MSIL 本体にネイティブ フックを挿入することもできます。 この方法は、インストルメンテーションやカバレッジに使用できます。 たとえば、コード プロファイラーで各 MSIL ブロックの後ろにインストルメンテーション フックを挿入すると、そのブロックが実行されたことを確認できます。 メソッドの MSIL 本体の変更には細心の注意が要求され、多くの要素を検討する必要があります。  
   
  [ページのトップへ](#top)  
   
@@ -186,7 +185,7 @@ ms.locfileid: "43862317"
 ## <a name="profiling-unmanaged-code"></a>アンマネージ コードのプロファイリング  
  共通言語ランタイム (CLR: Common Language Runtime) には、アンマネージ コードのプロファイリングについて最小限のサポートが用意されています。 次の機能があります。  
   
--   スタック チェーンの列挙。 この機能を使用すると、コード プロファイラーはマネージ コードとアンマネージ コードの境界を特定できます。  
+-   スタック チェーンの列挙。 この機能を使用すると、コード プロファイラーはマネージド コードとアンマネージド コードの境界を特定できます。  
   
 -   スタック チェーンがマネージド コードまたはネイティブ コードに対応するかどうかの判定。  
   

@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463229"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654823"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -60,7 +60,7 @@ query1
 
 このテーブルには、次の形式でデータベース前提としています。
 
-![サンプル データベースのダイアグラム](../media/StudentCourseDB.png)
+![サンプル データベースを示す図。](./media/query-expressions/student-course-database.png)
 
 続くテーブル内のコードでは、次のデータベース接続コードも前提としています。 プロジェクトには、System.Data、System.Data.Linq、FSharp.Data.TypeProviders アセンブリへの参照を追加する必要があります。 このデータベースを作成するコードは、このトピックの最後に含まれています。
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719387"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654771"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip コントロールのアーキテクチャ
 <xref:System.Windows.Forms.ToolStrip>と<xref:System.Windows.Forms.ToolStripItem>クラスは、ツールバー、ステータス、およびメニュー項目を表示するため、柔軟で拡張性の高いシステムを提供します。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms>名前空間と、通常、すべて"ToolStrip"プレフィックスを持つという名前 (など<xref:System.Windows.Forms.ToolStripOverflow>) または「ストリップ」サフィックスを持つ (など<xref:System.Windows.Forms.MenuStrip>)。  
@@ -19,8 +19,7 @@ ms.locfileid: "57719387"
   
  <xref:System.Windows.Forms.ToolStrip> 抽象基本クラスは、 <xref:System.Windows.Forms.MenuStrip>、 <xref:System.Windows.Forms.StatusStrip>、および<xref:System.Windows.Forms.ContextMenuStrip>します。 次のオブジェクト モデルの表示、<xref:System.Windows.Forms.ToolStrip>継承階層。  
   
- ![ToolStrip オブジェクト モデル](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-ToolStrip オブジェクト モデル  
+ ![ToolStrip オブジェクト モデルを示す図。](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  すべての項目にアクセスすることができます、<xref:System.Windows.Forms.ToolStrip>を通じて、<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクション。 すべての項目にアクセスすることができます、<xref:System.Windows.Forms.ToolStripDropDownItem>を通じて、<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A>コレクション。 派生したクラスで<xref:System.Windows.Forms.ToolStrip>、使用することも、<xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A>現在表示されている項目のみにアクセスするプロパティ。 これらは、オーバーフロー メニューに現在含まれていない項目です。  
   
@@ -223,8 +222,7 @@ ToolStrip オブジェクト モデル
   
 -   使用することができます、<xref:System.Windows.Forms.ToolStripItem.Dock%2A>と<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>行内でアイテムを揃えるためのコード内のプロパティ。  
   
--   
-  <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> プロパティは無視されます。  
+-   <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> プロパティは無視されます。  
   
 -   <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>イベントを調査できます、<xref:System.Windows.Forms.ToolStripItem.Placement%2A>項目をメインに配置されたかどうかを確認するに<xref:System.Windows.Forms.ToolStrip>当てはまりませんでしたか。  
   
@@ -239,8 +237,7 @@ ToolStrip オブジェクト モデル
   
 -   使用することができます、<xref:System.Windows.Forms.ToolStripItem.Dock%2A>と<xref:System.Windows.Forms.ToolStripItem.Anchor%2A>表のセル内のアイテムを揃えるためのコード内のプロパティ。  
   
--   
-  <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> プロパティは無視されます。  
+-   <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> プロパティは無視されます。  
   
 -   <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>イベントを調査できます、<xref:System.Windows.Forms.ToolStripItem.Placement%2A>項目をメインに配置されたかどうかを確認するに<xref:System.Windows.Forms.ToolStrip>当てはまりませんでしたか。  
   
@@ -253,8 +250,7 @@ ToolStrip オブジェクト モデル
   
  <xref:System.Windows.Forms.ToolStripItem> すべての項目の抽象基本クラスには、<xref:System.Windows.Forms.ToolStrip>します。 次のオブジェクト モデルの表示、<xref:System.Windows.Forms.ToolStripItem>継承階層。  
   
- ![ToolStripItem オブジェクト モデル](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-ToolStripItem オブジェクト モデル  
+ ![ToolStripItem オブジェクト モデルを示す図。](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> クラスから直接継承するか<xref:System.Windows.Forms.ToolStripItem>が間接的に継承または<xref:System.Windows.Forms.ToolStripItem>を通じて<xref:System.Windows.Forms.ToolStripControlHost>または<xref:System.Windows.Forms.ToolStripDropDownItem>します。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371984"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654316"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)します。  
@@ -49,7 +49,7 @@ ms.locfileid: "57371984"
   
  *アプリケーション ナビゲーション*は、ブラウザーによってホストされるアプリケーション内のコンテンツ項目間のナビゲーションです。 *ブラウザー ナビゲーション*は、ブラウザー自体のコンテンツとロケーション URL を変更するナビゲーションです。 アプリケーション ナビゲーション (通常は XAML) とブラウザー ナビゲーション (通常は HTML) 間のリレーションシップは、次の図に示します。
   
- ![Navigation diagram](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![アプリケーションのナビゲーションとブラウザー ナビゲーション間のリレーションシップ。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  安全と見なされるコンテンツの種類、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]に移動するが主に続くアプリケーションまたはブラウザーのナビゲーションを使用するかどうか。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "57371984"
   
      **セキュリティ設定** ダイアログ ボックスが表示され、選択したゾーンのセキュリティ設定を構成することができます。  
   
-     ![[セキュリティ設定] ダイアログ ボックス](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![セキュリティの設定 ダイアログ ボックスのスクリーン ショット。](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  [インターネット オプション] ダイアログ ボックスは、Internet Explorer から開くこともできます。 クリックして**ツール** をクリックし、**インターネット オプション**します。  

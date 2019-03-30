@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: 95343ad2c7bc6a83bc4d935f33712ab910d658ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705819"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654498"
 ---
 # <a name="how-to-crop-and-scale-images"></a>方法: トリミングおよびスケール イメージ
 <xref:System.Drawing.Graphics>クラスには、いくつか用意されて<xref:System.Drawing.Graphics.DrawImage%2A>イメージのトリミングおよびスケールに使用できる元とコピー先の四角形のパラメーターを持つうちいくつかの方法です。  
@@ -27,13 +27,13 @@ ms.locfileid: "57705819"
   
  次の図は apple をトリミングし、スケーリング、元の apple 示します。  
   
- ![トリミング & スケール](./media/cscropscale1.png "csCropScale1")  
+ ![元のイメージと同じ画像をトリミングのスクリーン ショット。](./media/how-to-crop-and-scale-images/original-image-cropped-image.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 置き換えてください`Apple.gif`イメージ ファイル名と、システムで有効なパス。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 置き換えてください`Apple.gif`イメージ ファイル名と、システムで有効なパス。  
   
 ## <a name="see-also"></a>関連項目
 - [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
