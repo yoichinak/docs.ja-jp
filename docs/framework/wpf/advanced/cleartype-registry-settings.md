@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369722"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675901"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
 このトピックの概要を示します、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]レジストリ設定で使用される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
@@ -57,7 +57,7 @@ ms.locfileid: "57369722"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `ClearTypeLevel` DWORD 値を定義します。 次のスクリーン ショットのレジストリ エディターの設定、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]レベル。  
   
- ![レジストリ エディターの ClearType 設定](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![レジストリ エディターの ClearType 設定します。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションで必要に応じて、いずれか 2 つのモードのいずれかのテキストのレンダリング[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]します。 テキストのレンダリングせず[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]、グレースケール レンダリングと呼びます。  
@@ -75,7 +75,7 @@ ms.locfileid: "57369722"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `GammaLevel` DWORD 値を定義します。 次のスクリーンショットは、ガンマ レベルのレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ガンマ レベルの設定、レジストリ エディター](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>ピクセル構造  
@@ -99,7 +99,7 @@ ms.locfileid: "57369722"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `PixelStructure` DWORD 値を定義します。 次のスクリーンショットは、ピクセル構造のレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType ガンマ レベルの設定、レジストリ エディター](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>テキストのコントラスト レベル  
@@ -112,7 +112,7 @@ ms.locfileid: "57369722"
   
  で、ユーザーのディスプレイ デバイス名ごと、 `TextContrastLevel` DWORD 値を定義します。 次のスクリーンショットは、テキストのコントラスト レベルのレジストリ エディターの設定を示しています。  
   
- ![レジストリ エディターの ClearType 設定](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![レジストリ エディターの ClearType 設定します。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>関連項目
 - [ClearType の概要](cleartype-overview.md)
