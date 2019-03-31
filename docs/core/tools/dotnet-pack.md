@@ -2,18 +2,18 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 12/04/2018
-ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58020923"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464477"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet pack` - NuGet パッケージにコードをパックします。
 

@@ -2,14 +2,15 @@
 title: Windows Forms アプリを .NET Core 3.0 に移植する
 description: .NET Framework Windows Forms アプリケーションを .NET Core 3.0 for Windows に移植する方法について説明します。
 author: Thraka
+ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: 89540ebbed834f41ce9d84c32e69e6f5e1ab0a21
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a50b5f085aee4afc2f388aeac8a4f68823b92c7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57681497"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675862"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>方法: Windows Forms デスクトップ アプリを .NET Core に移植する
 
@@ -24,7 +25,7 @@ ms.locfileid: "57681497"
 | **MyFormsCore.csproj** | 作成する新しい .NET Core プロジェクトの名前。 |
 | **MyAppCore.exe** | .NET Core Windows Forms アプリの実行可能ファイル。 |
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=winforms+core)。
 
@@ -40,7 +41,7 @@ ms.locfileid: "57681497"
 >[!NOTE]
 >**Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019 Preview/RC** では .NET Core 3.0 プロジェクトはサポートされていますが、.NET Core 3.0 Windows Forms プロジェクト用のビジュアル デザイナーはまだサポートされていません。 ビジュアル デザイナーを使用するには、.NET Core プロジェクトとフォーム ファイルを共有するソリューション内に .NET Windows Forms プロジェクトを配置する必要です。
 
-### <a name="consider"></a>考慮事項
+### <a name="consider"></a>次の例を考えてみましょう
 
 .NET Framework Windows Forms アプリケーションを移植するときは、いくつかの点を考慮する必要があります。
 
@@ -223,7 +224,7 @@ SolutionFolder
      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 -    <AssemblyName>MyCoreApp</AssemblyName>
 -    <RootNamespace>WindowsFormsApp1</RootNamespace>
-+    <AssemblyName>MyCoreControls</AssemblyName>
++    <AssemblyName>MyControlsCore</AssemblyName>
 +    <RootNamespace>WindowsFormsControlLibrary1</RootNamespace>
    </PropertyGroup>
 
@@ -265,14 +266,14 @@ SolutionFolder
 次に、メインの .NET Core **MyFormsCore.csproj** プロジェクトに、新しい .NET Core Windows Forms 制御ライブラリへの参照を追加します。 **SolutionFolder** ディレクトリから、Visual Studio または .NET Core CLI のいずれかを使用して、参照を追加します。
 
 ```cli
-dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCoreProject.csproj
+dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
 ```
 
 前のコマンドにより、以下が **MyFormsCore.csproj** プロジェクトに追加されます。
 
 ```xml
   <ItemGroup>
-    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCoreProject.csproj" />
+    <ProjectReference Include="..\MyFormsControlsCore\MyControlsCore.csproj" />
   </ItemGroup>
 ```
 
