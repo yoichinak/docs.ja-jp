@@ -83,17 +83,37 @@ items:
       href: datamemberfieldeditor-class.md
     - name: DataMemberListEditor クラス
       href: datamemberlisteditor-class.md
+  - name: adodb 名前空間
+    items:
+    - name: 接続のインターフェイス
+      href: adodb.connection.md
+    - name: EventReason 列挙型
+      href: adodb.eventreasonenum.md
+    - name: EventStatus 列挙型
+      href: adodb.eventstatusenum.md
   - name: stdole 名前空間
     items:
+    - name: DISPPARAMS 構造体
+      href: stdole.dispparams.md
+    - name: EXCEPINFO 構造体
+      href: stdole.excepinfo.md
     - name: IFont.Name プロパティ
       href: stdole.ifont.name.md
+    - name: IFontDisp インターフェイス
+      href: stdole.ifontdisp.md
     - name: IPicture.Handle プロパティ
       href: stdole.ipicture.handle.md
+    - name: IPictureDisp インターフェイス
+      href: stdole.ipicturedisp.md
     - name: IPictureDisp.Handle プロパティ
       href: stdole.ipicturedisp.handle.md
-ms.openlocfilehash: fc163ef7a254443ce25676eafd75f34b36e8f336
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+    - name: StdFont インターフェイス
+      href: stdole.stdfont.md
+    - name: StdPicture インターフェイス
+      href: stdole.stdpicture.md
+ms.openlocfilehash: b585db5164cd29fdb7f7e203ef56d6f39b1d0960
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471058"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634051"
