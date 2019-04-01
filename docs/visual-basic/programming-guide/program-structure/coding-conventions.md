@@ -63,7 +63,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   整形されたアスタリスク (*) のブロックでコメントを囲まないようにします。  
+-   整形されたアスタリスク のブロックでコメントを囲まないようにします。  
   
 ## <a name="program-structure"></a>プログラムの構造  
   
