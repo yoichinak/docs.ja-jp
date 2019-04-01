@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049726"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412345"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
 <a name="introduction"></a> この記事の表に、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で互換性のために残されている型をアセンブリ別に示します。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](obsolete-members.md)に関する記事をご覧ください。
@@ -205,7 +205,7 @@ ms.locfileid: "58049726"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|このインターフェイスの使用は非推奨とされました。 代わりに、<xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> をハンドル型 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> に追加します。|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|新しい設定モデルを操作するには、代わりに、<xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> を使用してください。|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|この属性は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> を使用してください。 たとえば、CodeDom のルート デザイナーを指定するには、`DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)` を使用します。|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|この属性は非推奨とされました。 代わりに、<xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType> を使用してください。|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> クラスからパフォーマンス カウンターを使用してください。|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 グローバルな既定のプロキシにアクセスして設定するには、代わりに、<xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> を使用してください。 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType> の代わりに、'null' を使用してください。|

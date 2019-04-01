@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268029"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409927"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -135,7 +135,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、"*継続元タスク*" が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
 
-次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` はその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
+次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` タスクはその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -236,7 +236,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="canceling-tasks"></a>タスクの取り消し
 
-`Task` クラスは他の処理と連携したキャンセル処理をサポートしており、.NET Framework 4 で導入された <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> クラスおよび <xref:System.Threading.CancellationToken?displayProperty=nameWithType> クラスと完全に統合されています。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスの多くのコンストラクターは、<xref:System.Threading.CancellationToken> オブジェクトを入力パラメーターとして受け取ります。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> および <xref:System.Threading.Tasks.Task.Run%2A> オーバーロードの多くも、<xref:System.Threading.CancellationToken> パラメーターを含みます。
+<xref:System.Threading.Tasks.Task> クラスは他の処理と連携したキャンセル処理をサポートしており、.NET Framework 4 で導入された <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> クラスおよび <xref:System.Threading.CancellationToken?displayProperty=nameWithType> クラスと完全に統合されています。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスの多くのコンストラクターは、<xref:System.Threading.CancellationToken> オブジェクトを入力パラメーターとして受け取ります。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> および <xref:System.Threading.Tasks.Task.Run%2A> オーバーロードの多くも、<xref:System.Threading.CancellationToken> パラメーターを含みます。
 
 <xref:System.Threading.CancellationTokenSource> クラスを使用すると、トークンを作成し、後でキャンセル要求を発行できます。 このトークンを <xref:System.Threading.Tasks.Task> に引数として渡し、同じトークンをキャンセル要求に応答するユーザー デリゲートで参照します。
 

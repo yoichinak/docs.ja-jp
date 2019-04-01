@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981583"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545469"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 
@@ -45,8 +45,8 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|メンバー アクセス。<br /><br /> 条件付きのメンバー アクセス。|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|メソッドおよびデリゲートの呼び出し。|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|配列アクセスおよびインデクサー アクセス。<br /><br /> 条件付きの配列アクセスおよびインデクサー アクセス。|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|後置インクリメント。|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|後置デクリメント。|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|後置インクリメント。|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|後置デクリメント。|  
 |[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|オブジェクトおよびデリゲートの作成。|  
 |`new` T(...){...}|初期化子を使用したオブジェクトの作成。 「[オブジェクト初期化子とコレクション初期化子](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」を参照してください。|  
 |`new` {...}|匿名オブジェクト初期化子。 「[匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。|  
@@ -65,17 +65,17 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定。|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|論理否定。|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|ビットごとの否定。|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|前置インクリメント。|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前置デクリメント。|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前置インクリメント。|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前置デクリメント。|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x を明示的に T 型に変換します。|  
   
  **乗算演算子**  
   
 |正規表現|説明|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乗算|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|除算記号|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|剰余。|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|乗算|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|除算記号|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|剰余。|  
   
  **加算演算子**  
   
@@ -106,8 +106,8 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
   
 |正規表現|説明|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等しい|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|等しくない|  
+|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等しい|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|等しくない|  
   
  **論理演算子、条件演算子、Null 演算子**  
   
@@ -126,7 +126,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |正規表現|説明|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|代入|  
-|x op= y|複合代入。 サポートされる演算子: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|複合代入。 サポートされる演算子: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名関数 (ラムダ式)|  
   
 ## <a name="associativity"></a>結合規則

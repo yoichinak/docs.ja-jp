@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186131"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634415"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング ラーナーを使用してアヤメの花をクラスター化する
 
@@ -136,7 +136,7 @@ ms.locfileid: "58186131"
 このチュートリアルでは、クラスタリング タスクの学習パイプラインは、次の 2 つの手順で構成されています。
 
 - 読み込まれた列を、クラスタリング トレーナーによって使用される 1 つの **Features** 列に連結します。
-- <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> トレーナーを使用して、K- 平均法++ クラスタリング アルゴリズムを使用するモデルをトレーニングします。
+- <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer> トレーナーを使用して、K- 平均法++ クラスタリング アルゴリズムを使用するモデルをトレーニングします。
 
 `Main` メソッドに次のコードを追加します。
 
