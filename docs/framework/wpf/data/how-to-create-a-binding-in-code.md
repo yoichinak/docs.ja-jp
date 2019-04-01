@@ -19,7 +19,7 @@ ms.locfileid: "57371187"
 この例は、コード中で<xref:System.Windows.Data.Binding>を作成し設定する方法を示します。
 
 ## <a name="example"></a>例
-<xref:System.Windows.FrameworkElement>クラスと<xref:System.Windows.FrameworkContentElement>クラスは、`SetBinding`メソッドを後悔しています。これらのクラスを継承する要素をバインドする場合、<xref:System.Windows.FrameworkElement.SetBinding%2A>メソッドを直接呼び出すことができます。
+<xref:System.Windows.FrameworkElement>クラスと<xref:System.Windows.FrameworkContentElement>クラスは、`SetBinding`メソッドを公開しています。これらのクラスを継承する要素をバインドする場合、<xref:System.Windows.FrameworkElement.SetBinding%2A>メソッドを直接呼び出すことができます。
 
 次の例は、`MyDataProperty`という名前のプロパティを持つ`MyData`という名前のクラスを作成しています。
 
