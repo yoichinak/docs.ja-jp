@@ -32,6 +32,7 @@ ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
  `My.Computer.FileSystem` オブジェクトを使用してファイル システムにアクセスする方法に関するドキュメントです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic 言語の機能](../../../visual-basic/programming-guide/language-features/index.md)
 - [プログラミングの概念](../../../visual-basic/programming-guide/concepts/index.md)
 - [コレクション](../../../visual-basic/programming-guide/concepts/collections.md)
