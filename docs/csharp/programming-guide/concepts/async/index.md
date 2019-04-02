@@ -1,9 +1,15 @@
 ---
-title: 'C# での非同期プログラミング'
-description: 'C# 言語での async、await、Task、Task<T> を使用した非同期プログラミングのサポートの概要です'
+title: C# での非同期プログラミング
+description: C# 言語での async、await、Task、Task<T> を使用した非同期プログラミングのサポートの概要です
 ms.date: 03/18/2019
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504367"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>C# でのタスク非同期プログラミング モデル #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>C\# でのタスク非同期プログラミング モデル
 
 タスク非同期プログラミング モデル (TAP) では、非同期コードに対する抽象化が提供されます。 コードは、通常と同じようにステートメントのシーケンスとして記述します。 次のステートメントが始まる前に、各ステートメントが完了するものとして、コードを読むことができます。 これらのステートメントの一部は処理を開始し、進行中の作業を表す <xref:System.Threading.Tasks.Task> を返す可能性があるので、コンパイラではいくつかの変換が実行されます。
 
