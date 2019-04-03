@@ -509,5 +509,5 @@ ms.locfileid: "57358189"
 
 - [パネルの概要](../controls/panels-overview.md)
 - [データ テンプレートの概要](../data/data-templating-overview.md)
-- [WPF アプリケーションを構築します。](../app-development/building-a-wpf-application-wpf.md)
+- [WPF アプリケーションのビルド](../app-development/building-a-wpf-application-wpf.md)
 - [スタイルとテンプレート](../controls/styles-and-templates.md)
