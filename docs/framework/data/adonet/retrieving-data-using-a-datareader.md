@@ -40,7 +40,7 @@ reader = command.ExecuteReader()
  中に、 **DataReader**が開いて、**接続**によって排他的に使用されて**DataReader**します。 任意のコマンドを実行することはできません、**接続**、もう 1 つ作成を含む**DataReader**、まで、元の**DataReader**が閉じられました。  
   
 > [!NOTE]
->  呼び出さないでください**閉じる**または**Dispose**上、**接続**、 **DataReader**、またはその他のマネージ オブジェクトで、 **Finalize**クラスのメソッド。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は含まれません、 **Finalize**メソッド、クラス定義にします。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
+>  呼び出さないでください**閉じる**または**Dispose**上、**接続**、 **DataReader**、またはその他のマネージ オブジェクトで、 **Finalize**クラスのメソッド。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は含まれません、 **Finalize**メソッド、クラス定義にします。 詳細については、[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)を参照してください。  
   
 ## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult による複数の結果を取得する設定します。  
  場合、 **DataReader**呼び出し、複数の結果セットを返す、 **NextResult**結果を反復処理するメソッドが順番に設定します。 
@@ -58,7 +58,7 @@ reader = command.ExecuteReader()
 ## <a name="working-with-ole-db-chapters"></a>OLE DB のチャプターの使用  
  階層的な行セット、つまりチャプター (OLE DB 型**DBTYPE_HCHAPTER**、ADO 型**adChapter**) を使用して取得できます、<xref:System.Data.OleDb.OleDbDataReader>します。 チャプターを含むクエリとして返される場合、 **DataReader**、章を内の列として返されます**DataReader**として公開されると、 **DataReader**オブジェクト。  
   
- ADO.NET**データセット**テーブル間の親子リレーションシップを使用して階層的な行セットを表すためも使用できます。 詳細については、次を参照してください。 [Dataset、Datatable、および Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)します。  
+ ADO.NET**データセット**テーブル間の親子リレーションシップを使用して階層的な行セットを表すためも使用できます。 詳細については、[Dataset、Datatable、および Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)を参照してください。  
   
  MSDataShape プロバイダーを使用して、顧客リストの顧客別オーダーのチャプター列を生成するコード サンプルを次に示します。  
   

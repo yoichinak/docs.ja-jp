@@ -1,0 +1,336 @@
+items:
+- name: C# のキーワード
+  href: index.md
+  items:
+  - name: 種類
+    href: types.md
+    items:
+    - name: 値型
+      href: value-types.md
+      items:
+      - name: bool
+        href: bool.md
+      - name: byte
+        href: byte.md
+      - name: char
+        href: char.md
+      - name: decimal
+        href: decimal.md
+      - name: double
+        href: double.md
+      - name: enum
+        href: enum.md
+      - name: float
+        href: float.md
+      - name: int
+        href: int.md
+      - name: long
+        href: long.md
+      - name: sbyte
+        href: sbyte.md
+      - name: short
+        href: short.md
+      - name: struct
+        href: struct.md
+      - name: uint
+        href: uint.md
+      - name: ulong
+        href: ulong.md
+      - name: ushort
+        href: ushort.md
+    - name: 参照型
+      href: reference-types.md
+      items:
+      - name: class
+        href: class.md
+      - name: delegate
+        href: delegate.md
+      - name: dynamic
+        href: dynamic.md
+      - name: interface
+        href: interface.md
+      - name: object
+        href: object.md
+      - name: string
+        href: string.md
+    - name: void
+      href: void.md
+    - name: var
+      href: var.md
+    - name: 型のリファレンス表
+      href: reference-tables-for-types.md
+      items:
+      - name: 組み込み型の一覧表
+        href: built-in-types-table.md
+      - name: 整数型の一覧表
+        href: integral-types-table.md
+      - name: 浮動小数点型の一覧表
+        href: floating-point-types-table.md
+      - name: 値型の一覧表
+        href: value-types-table.md
+      - name: 既定値の一覧表
+        href: default-values-table.md
+      - name: 暗黙的な数値変換の一覧表
+        href: implicit-numeric-conversions-table.md
+      - name: 明示的な数値変換の一覧表
+        href: explicit-numeric-conversions-table.md
+      - name: 数値結果テーブルの書式設定
+        href: formatting-numeric-results-table.md
+  - name: 修飾子
+    href: modifiers.md
+    items:
+    - name: アクセス修飾子
+      href: access-modifiers.md
+      items:
+      - name: アクセシビリティ レベル
+        href: accessibility-levels.md
+      - name: アクセシビリティ ドメイン
+        href: accessibility-domain.md
+      - name: アクセシビリティ レベルの使用に関する制限事項
+        href: restrictions-on-using-accessibility-levels.md
+      - name: internal
+        href: internal.md
+      - name: private
+        href: private.md
+      - name: protected
+        href: protected.md
+      - name: public
+        href: public.md
+      - name: protected internal
+        href: protected-internal.md
+      - name: private protected
+        href: private-protected.md
+    - name: abstract
+      href: abstract.md
+    - name: async
+      href: async.md
+    - name: const
+      href: const.md
+    - name: event
+      href: event.md
+    - name: extern
+      href: extern.md
+    - name: in (ジェネリック修飾子)
+      href: in-generic-modifier.md
+    - name: out (ジェネリック修飾子)
+      href: out-generic-modifier.md
+    - name: override
+      href: override.md
+    - name: readonly
+      href: readonly.md
+    - name: sealed
+      href: sealed.md
+    - name: 静的
+      href: static.md
+    - name: unsafe
+      href: unsafe.md
+    - name: virtual
+      href: virtual.md
+    - name: volatile
+      href: volatile.md
+  - name: ステートメントのキーワード
+    href: statement-keywords.md
+    items:
+    - name: 選択ステートメント
+      href: selection-statements.md
+      items:
+      - name: if-else
+        href: if-else.md
+      - name: switch
+        href: switch.md
+    - name: 繰り返しステートメント
+      href: iteration-statements.md
+      items:
+      - name: do
+        href: do.md
+      - name: for
+        href: for.md
+      - name: foreach、in
+        href: foreach-in.md
+      - name: while
+        href: while.md
+    - name: ジャンプ ステートメント
+      href: jump-statements.md
+      items:
+      - name: break
+        href: break.md
+      - name: continue
+        href: continue.md
+      - name: goto
+        href: goto.md
+      - name: return
+        href: return.md
+    - name: 例外処理ステートメント
+      href: exception-handling-statements.md
+      items:
+      - name: throw
+        href: throw.md
+      - name: try-catch
+        href: try-catch.md
+      - name: try-finally
+        href: try-finally.md
+      - name: try-catch-finally
+        href: try-catch-finally.md
+    - name: checked と unchecked
+      href: checked-and-unchecked.md
+      items:
+      - name: checked
+        href: checked.md
+      - name: unchecked
+        href: unchecked.md
+    - name: fixed ステートメント
+      href: fixed-statement.md
+    - name: lock ステートメント
+      href: lock-statement.md
+  - name: メソッド パラメーター
+    href: method-parameters.md
+    items:
+    - name: params
+      href: params.md
+    - name: in (パラメーター修飾子)
+      href: in-parameter-modifier.md
+    - name: ref
+      href: ref.md
+    - name: out (パラメーター修飾子)
+      href: out-parameter-modifier.md
+  - name: 名前空間キーワード
+    href: namespace-keywords.md
+    items:
+    - name: namespace
+      href: namespace.md
+    - name: 使用
+      href: using.md
+      items:
+      - name: using ディレクティブ
+        href: using-directive.md
+      - name: using static ディレクティブ
+        href: using-static.md
+      - name: using ステートメント
+        href: using-statement.md
+    - name: extern エイリアス
+      href: extern-alias.md
+  - name: 演算子のキーワード
+    href: operator-keywords.md
+    items:
+    - name: as
+      href: as.md
+    - name: await
+      href: await.md
+    - name: is
+      href: is.md
+    - name: new
+      href: new.md
+      items:
+      - name: new 演算子
+        href: new-operator.md
+      - name: new 修飾子
+        href: new-modifier.md
+      - name: new 制約
+        href: new-constraint.md
+    - name: sizeof
+      href: sizeof.md
+    - name: typeof
+      href: typeof.md
+    - name: "true"
+      href: true.md
+      items:
+      - name: true 演算子
+        href: true-false-operators.md
+      - name: true リテラル
+        href: true-literal.md
+    - name: "False"
+      href: false.md
+      items:
+      - name: false 演算子
+        href: true-false-operators.md
+      - name: false リテラル
+        href: false-literal.md
+    - name: stackalloc
+      href: stackalloc.md
+    - name: nameof
+      href: nameof.md
+  - name: 変換キーワード
+    href: conversion-keywords.md
+    items:
+    - name: explicit
+      href: explicit.md
+    - name: implicit
+      href: implicit.md
+    - name: operator
+      href: operator.md
+  - name: アクセス キーワード
+    href: access-keywords.md
+    items:
+    - name: base
+      href: base.md
+    - name: this
+      href: this.md
+  - name: リテラル キーワード
+    href: literal-keywords.md
+    items:
+    - name: "null"
+      href: null.md
+    - name: default
+      href: default.md
+  - name: コンテキスト キーワード
+    href: contextual-keywords.md
+    items:
+    - name: 追加
+      href: add.md
+    - name: get
+      href: get.md
+    - name: global
+      href: global.md
+    - name: partial (型)
+      href: partial-type.md
+    - name: partial (メソッド)
+      href: partial-method.md
+    - name: remove
+      href: remove.md
+    - name: 設定
+      href: set.md
+    - name: when (フィルター条件)
+      href: when.md
+    - name: where (ジェネリック型制約)
+      href: where-generic-type-constraint.md
+    - name: 値
+      href: value.md
+    - name: yield
+      href: yield.md
+  - name: クエリ キーワード
+    href: query-keywords.md
+    items:
+    - name: from 句
+      href: from-clause.md
+    - name: where 句
+      href: where-clause.md
+    - name: select 句
+      href: select-clause.md
+    - name: group 句
+      href: group-clause.md
+    - name: into
+      href: into.md
+    - name: orderby 句
+      href: orderby-clause.md
+    - name: join 句
+      href: join-clause.md
+    - name: let 句
+      href: let-clause.md
+    - name: ascending
+      href: ascending.md
+    - name: descending
+      href: descending.md
+    - name: on
+      href: on.md
+    - name: equals
+      href: equals.md
+    - name: by
+      href: by.md
+    - name: の
+      href: in.md
+ms.openlocfilehash: a87c28c8c586d1169a98f3f71361d34eb8680d99
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470283"

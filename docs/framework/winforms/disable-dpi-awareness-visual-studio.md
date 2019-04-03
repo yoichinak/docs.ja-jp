@@ -1,17 +1,17 @@
 ---
 title: Visual Studio では、DPI の認識を無効にします。
 description: HDPI モニターは、Windows フォーム デザイナーと DPI に対応していないプロセスとして Visual Studio を実行する方法の制限事項について説明します。
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710538"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633869"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
@@ -23,11 +23,14 @@ Visual Studio では、表示スケールを自動的に意味インチ (DPI) �
 
 ![HDPI のモニターでの Windows フォーム デザイナー](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-Visual Studio 2017 15.8 でフォームを開くと、以降のバージョンで、 **Windows フォーム デザイナー** HDPI モニターで、Visual Studio は、デザイナーの上部にある黄色のバーの情報を表示します。
+フォームを開くと、 **Windows フォーム デザイナー** HDPI モニターで Visual Studio で、Visual Studio は、デザイナーの上部にある黄色のバーの情報を表示します。
 
 ![DPI に対応していないモードで再起動する Visual Studio での情報バー](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 メッセージを読み取り**メイン ディスプレイのスケーリングを 200% (192 dpi) に設定します。デザイナー ウィンドウのレンダリングの問題があります。**
+
+> [!NOTE]
+> この情報バーは、Visual Studio 2017 バージョン 15.8 で導入されました。
 
 場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-problem)します。
 
@@ -51,10 +54,13 @@ Visual Studio を DPI に対応していないプロセスとして実行する�
 
 Visual Studio は、レジストリを変更して DPI 対応としてマークできます。 開いている**レジストリ エディター**にエントリを追加し、 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers**サブキー。
 
-**エントリ**:C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**エントリ**:かどうかを使用して Visual Studio 2017 または 2019 によってこれらの値のいずれかの手順に従います。
 
-   > [!NOTE]
-   > Visual Studio 2017 の Professional または Enterprise edition を使用している場合は置き換えます**コミュニティ**で**Professional**または**Enterprise**エントリにします。 また、必要に応じて、ドライブ文字を置き換えます。
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Visual Studio の Professional または Enterprise edition を使用している場合は置き換えます**コミュニティ**で**Professional**または**Enterprise**エントリにします。 また、必要に応じて、ドライブ文字を置き換えます。
 
 **型**:REG_SZ
 

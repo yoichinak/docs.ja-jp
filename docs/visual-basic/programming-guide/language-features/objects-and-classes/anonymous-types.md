@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829136"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
 Visual Basic では、データ型のクラス定義を記述せずにオブジェクトを作成することを有効にする匿名型をサポートしています。 クラスは、コンパイラによって生成されます。 クラスは、使用可能な名前を持たないから直接継承<xref:System.Object>オブジェクトの宣言で指定したプロパティが含まれます。 として参照にはデータ型の名前が指定されていないため、*匿名型*します。  
@@ -127,6 +127,7 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
  コンパイラとオーバーライドされたメソッドの機能によって作成されたコードの詳細については、次を参照してください。[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [オブジェクト初期化子:名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

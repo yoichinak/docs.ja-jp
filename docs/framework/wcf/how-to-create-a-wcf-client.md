@@ -1,20 +1,20 @@
 ---
 title: 'チュートリアル: Windows Communication Foundation クライアントを作成します。'
-ms.dat8: 03/19/2019
+ms.date: 03/19/2019
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 051275e56a8e63c6ab8136dbb9e24bdcf4c387df
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411858"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634064"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを作成します。
 
-このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
+このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
 
 WCF アプリケーションを作成するための次のタスクでは、WCF サービスからメタデータを取得することによって、クライアントを作成します。 Visual Studio を使用して、サービスの MEX エンドポイントからメタデータを取得します。 サービス参照を追加します。 Visual Studio は、選択した言語でクライアント プロキシのマネージ ソース コード ファイルを生成します。 クライアント構成ファイルが作成されます (*App.config*)。 このファイルは、エンドポイントのサービスに接続するクライアント アプリケーションを使用します。 
 

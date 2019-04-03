@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502229"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839697"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>方法: TileBrush のタイル サイズを設定する
 
@@ -20,19 +20,19 @@ ms.locfileid: "57502229"
 
 ## <a name="example"></a>例
 
-次の例では、 <xref:System.Windows.Media.ImageBrush>、一種の<xref:System.Windows.Media.TileBrush>タイルを含む四角形を描画します。 例では、各タイルを出力領域 (四角形) の 50% x 50% に設定します。 その結果、四角形は、イメージの 4 つの投影で塗りつぶされます。
+次の例では、 <xref:System.Windows.Media.ImageBrush>、一種の<xref:System.Windows.Media.TileBrush>タイルを含む四角形を描画します。 例では、各タイルを出力領域 (四角形) の 50% 50% に設定します。 その結果、四角形は、イメージの 4 つの投影で塗りつぶされます。
 
-次の図は、この例で生成される出力を示しています。
+次の図は、例では、生成する出力を示しています。
 
-![イメージ ブラシを並べて表示する例](./media/0.png "0")
+![イメージ ブラシを並べて表示を示す 4 つのスピードで四角形。](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 次の例では、作成、 <xref:System.Windows.Media.ImageBrush>、設定、<xref:System.Windows.Media.TileBrush.Viewport%2A>に`0,0,25,25`とその<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>に<xref:System.Windows.Media.BrushMappingMode.Absolute>、され別の四角形を描画するために使用します。 その結果、ブラシは、幅が 25 ピクセル、高さが 25 ピクセルのタイルを生成します。
 
-次の図は、この例で生成される出力を示しています。
+次の図は、例では、生成する出力を示しています。
 
-![0,0,0.25,0.25 の Viewport を使用したタイル表示の TileBrush](./media/25x25viewport.png "25x25viewport")
+![448 個結婚記念日おめでとうビューポート TileBrush を並べて表示を示す四角形。](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

@@ -20,7 +20,7 @@ ms.locfileid: "32743512"
 ---
 # <a name="configuration-sections-schema"></a>構成セクション スキーマ
 
-構成セクション スキーマには、構成ファイル内のカスタム設定を定義する要素が含まれています。 構成ファイルとスキーマの概要については、次を参照してください。 [、.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)です。
+構成セクション スキーマには、構成ファイル内のカスタム設定を定義する要素が含まれています。 構成ファイルとスキーマの概要については、[、.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)を参照してください。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 [**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   

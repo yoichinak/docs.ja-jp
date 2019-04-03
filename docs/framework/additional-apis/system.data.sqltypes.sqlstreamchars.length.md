@@ -3,8 +3,7 @@ title: SqlStreamChars.Length プロパティ (System.Data.SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -14,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 3b4e5828a90de7d2f874010b79a9ddbcb8e12341
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: c2ef66fa493512e1fa062e22858ea251ced39453
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827697"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634142"
 ---
 # <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length プロパティ
 

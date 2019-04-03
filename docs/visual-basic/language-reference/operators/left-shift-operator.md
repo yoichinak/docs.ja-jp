@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 329cdf1aea9ca97db000bb5ced8d9e8d6b7a4f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970559"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824287"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
 ビット パターン上で算術左シフトを実行します。  
@@ -42,7 +42,7 @@ result = pattern << amount
 |データ型 `pattern`|サイズのマスク (10 進数)|サイズのマスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|16|&AMP; H0000000F|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
 |`Integer`, `UInteger`|31|&AMP; H0000001F|  
 |`Long`, `ULong`|63|&AMP; H0000003F|  
   
@@ -73,6 +73,7 @@ result = pattern << amount
  シフト数`result4`17 として計算されますが 1 に等しいと 15 です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [<<= 演算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)

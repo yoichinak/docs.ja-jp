@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: b2ec1a20e815ad38c2fdd984b9f9c35247dae81a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971313"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829929"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 演算子 (Visual Basic)
 式は、かどうかを判断します`True`します。  
@@ -45,6 +45,7 @@ ms.locfileid: "56971313"
  [!code-vb[VbVbalrOperators#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [方法: 演算子を定義します。](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [OrElse 演算子](../../../visual-basic/language-reference/operators/orelse-operator.md)

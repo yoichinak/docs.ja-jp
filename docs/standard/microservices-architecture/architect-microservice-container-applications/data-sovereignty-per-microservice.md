@@ -4,12 +4,12 @@ description: マイクロサービスのキー ポイントの 1 つは、マイ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4900c294f94f4b4d604ba841595fc5c6d7952c10
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144903"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464036"
 ---
 # <a name="data-sovereignty-per-microservice"></a>マイクロサービス単位のデータ管理
 
@@ -50,16 +50,16 @@ DDD は、分散型マイクロサービスの形で実際の境界を獲得す�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Chris Richardson。パターン: サービスごとのデータベース** \
-  [*https://microservices.io/patterns/data/database-per-service.html*](https://microservices.io/patterns/data/database-per-service.html)
+  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
 
 - **Martin Fowler。BoundedContext** \
-  [*https://martinfowler.com/bliki/BoundedContext.html*](https://martinfowler.com/bliki/BoundedContext.html)
+  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
 
 - **Martin Fowler。PolyglotPersistence** \
-  [*https://martinfowler.com/bliki/PolyglotPersistence.html*](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
 
 - **Alberto Brandolini。コンテキスト マッピングを使用した戦略的ドメイン駆動設計** \
-  [*https://www.infoq.com/articles/ddd-contextmapping*](https://www.infoq.com/articles/ddd-contextmapping)
+  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
 
 >[!div class="step-by-step"]
 >[前へ](microservices-architecture.md)

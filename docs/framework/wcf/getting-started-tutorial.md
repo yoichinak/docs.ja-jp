@@ -19,9 +19,9 @@ ms.locfileid: "58408861"
 
 このチュートリアルでは、開発環境として Visual Studio を使用している前提としています。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。 
 
-サンプル WCF アプリケーションをダウンロードして実行できる、次を参照してください。 [Windows Communication Foundation サンプル](samples/index.md)します。 サンプルの概要については、次を参照してください。 [Getting started サンプル](samples/getting-started-sample.md)します。
+サンプル WCF アプリケーションをダウンロードして実行できる、[Windows Communication Foundation サンプル](samples/index.md)を参照してください。 サンプルの概要については、[Getting started サンプル](samples/getting-started-sample.md)を参照してください。
 
-サービスとクライアントの作成の詳細の詳細については、次を参照してください。[基本的な WCF プログラミング](basic-wcf-programming.md)します。
+サービスとクライアントの作成の詳細の詳細については、[基本的な WCF プログラミング](basic-wcf-programming.md)を参照してください。
 
 ## <a name="wcf-tutorials"></a>WCF のチュートリアル
 

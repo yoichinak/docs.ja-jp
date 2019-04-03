@@ -23,7 +23,7 @@ ms.locfileid: "57378250"
   
 -   接続エラーは、拡張イベント ログに記録されるようになりました。 詳細については、「[ADO.NET のデータ追跡](../../../../docs/framework/data/adonet/data-tracing.md)」を参照してください。  
   
--   SqlClient では、SQL Server の高可用性、ディザスター リカバリー機能は、AlwaysOn のサポートできるようになりました。 詳細については、次を参照してください。[高可用性、ディザスター リカバリーのための SqlClient サポート](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)します。  
+-   SqlClient では、SQL Server の高可用性、ディザスター リカバリー機能は、AlwaysOn のサポートできるようになりました。 詳細については、[高可用性、ディザスター リカバリーのための SqlClient サポート](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)を参照してください。  
   
 -   パスワードとして渡すことができます、 <xref:System.Security.SecureString> SQL Server 認証を使用する場合。 詳細については、「<xref:System.Data.SqlClient.SqlCredential>」を参照してください。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "57378250"
   
     -   接続文字列では完全修飾ドメイン名を使用します。  
   
--   SqlClient は拡張保護をサポートしています。 拡張保護の詳細については、次を参照してください。[エンジンを使用してデータベース拡張保護に接続する](https://go.microsoft.com/fwlink/?LinkId=219978)します。  
+-   SqlClient は拡張保護をサポートしています。 拡張保護の詳細については、[エンジンを使用してデータベース拡張保護に接続する](https://go.microsoft.com/fwlink/?LinkId=219978)を参照してください。  
   
--   SqlClient は LocalDB データベースへの接続をサポートします。 詳細については、次を参照してください。 [SqlClient による LocalDB のサポート](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)します。  
+-   SqlClient は LocalDB データベースへの接続をサポートします。 詳細については、[SqlClient による LocalDB のサポート](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)を参照してください。  
   
 -   `Type System Version=SQL Server 2012;` は、`Type System Version` 接続プロパティに渡す新しい値です。 `Type System Version=Latest;` 値は廃止されており、`Type System Version=SQL Server 2008;` と同等になっています。 詳細については、「<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。  
   
--   SqlClient は、スパース列に追加のサポートを提供します。このサポートは SQL Server 2008 で追加された機能です。 アプリケーションがスパース列を使用するテーブルのデータに既にアクセスしていると、パフォーマンスが向上します。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の IsColumnSet 列は、列が列セットのメンバーであるスパース列であるかどうかを示します。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 列がスパース列であることを示します (を参照してください[SQL Server スキーマ コレクション](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)詳細については)。 スパース列の詳細については、次を参照してください。[スパース列の使用](https://go.microsoft.com/fwlink/?LinkId=224244)します。  
+-   SqlClient は、スパース列に追加のサポートを提供します。このサポートは SQL Server 2008 で追加された機能です。 アプリケーションがスパース列を使用するテーブルのデータに既にアクセスしていると、パフォーマンスが向上します。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の IsColumnSet 列は、列が列セットのメンバーであるスパース列であるかどうかを示します。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 列がスパース列であることを示します (を参照してください[SQL Server スキーマ コレクション](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)詳細については)。 スパース列の詳細については、[スパース列の使用](https://go.microsoft.com/fwlink/?LinkId=224244)を参照してください。  
   
--   空間データ型を含むアセンブリ Microsoft.SqlServer.Types.dll は、Version 10.0 から Version 11.0 にアップグレードされました。 このアセンブリを参照するホスト アプリケーションでは、エラーが発生する可能性があります。 詳細については、次を参照してください。[データベース エンジン機能の重大な変更](https://go.microsoft.com/fwlink/?LinkId=224367)します。  
+-   空間データ型を含むアセンブリ Microsoft.SqlServer.Types.dll は、Version 10.0 から Version 11.0 にアップグレードされました。 このアセンブリを参照するホスト アプリケーションでは、エラーが発生する可能性があります。 詳細については、[データベース エンジン機能の重大な変更](https://go.microsoft.com/fwlink/?LinkId=224367)を参照してください。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] は、Entity Framework 5.0 を操作するときに、新しいシナリオを有効にする API を追加します。 および Entity Framework 5.0 に追加された機能強化に関する詳細については、次のトピックを参照してください。[新機能については](https://go.microsoft.com/fwlink/?LinkID=251106)と[Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。  

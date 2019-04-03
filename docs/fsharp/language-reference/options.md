@@ -2,12 +2,12 @@
 title: オプション
 description: 名前付きの値または変数の場合、実際の値の型が存在しない F# オプションを使用する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613506"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634103"
 ---
 # <a name="options"></a>オプション
 
@@ -40,6 +40,8 @@ ms.locfileid: "53613506"
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
 `openFile`前の例では関数型があります`string -> File option`返すため、`File`オブジェクト ファイルが正常に開くかどうかと`None`例外が発生した場合。 状況によっては、ある可能性がありますいないを適切な設計の選択を反映するのではなく、例外をキャッチします。
+
+渡すことができますがさらに、`null`または値を null である、`Some`オプションの大文字と小文字です。 回避するには、通常、これは、通常のルーチンではF#はプログラミングでは、.NET での参照型の性質により、考えられる。
 
 ## <a name="option-properties-and-methods"></a>オプションのプロパティとメソッド
 

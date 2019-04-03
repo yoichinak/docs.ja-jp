@@ -34,7 +34,7 @@ ms.locfileid: "57371204"
 > [!NOTE]
 > **TransactionCommitted** (エスカレートされたトランザクションで Commit が呼び出されたときに生成される) トレースには、DTC トランザクションのアクティビティ ID が含まれています。
 
-管理エスカレーションの詳細については、次を参照してください。 [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)します。
+管理エスカレーションの詳細については、[Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)を参照してください。
 
 ## <a name="transaction-management-escalation-scenario"></a>トランザクション管理エスカレーションのシナリオ
 

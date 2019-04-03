@@ -2,12 +2,12 @@
 title: XML ツリー (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: fa7afe913c0faffca23b457ce58755f1db55400c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819191"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>XML ツリー (Visual Basic) の作成
 最も一般的な XML タスクの 1 つは、XML ツリーの構築です。 ここでは、XML ツリーを作成するいくつかの方法について説明します。  
@@ -25,4 +25,5 @@ ms.locfileid: "54630945"
 |[XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

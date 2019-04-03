@@ -13,7 +13,7 @@ ms.locfileid: "44042531"
 このトピックでは、Windows Communication Foundation (WCF) サービス ライブラリ プロジェクトをデプロイする方法について説明します。  
   
 ## <a name="deploying-a-wcf-service-library"></a>WCF サービス ライブラリの配置  
- WCF サービス ライブラリは、ダイナミック リンク ライブラリ (DLL) です。 それ自体を単独で実行することはできません。 ホスティング環境に配置する必要があります。 このプロセスの詳細については、次を参照してください。 [WCF サービスの使用のホスティングと](https://go.microsoft.com/fwlink/?LinkId=99932)します。  
+ WCF サービス ライブラリは、ダイナミック リンク ライブラリ (DLL) です。 それ自体を単独で実行することはできません。 ホスティング環境に配置する必要があります。 このプロセスの詳細については、[WCF サービスの使用のホスティングと](https://go.microsoft.com/fwlink/?LinkId=99932)を参照してください。  
   
  WCF サービス ライブラリは、その他の WCF サービスと同様に展開できます。 ただし、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、DLL に対する構成がサポートされていないことに注意してください。 <xref:System.Configuration> では、アプリケーション ドメイン 1 つにつき、1 つの構成ファイルがサポートされています。 WCF サービス ライブラリ プロジェクトは、開発中に、ライブラリの App.config ファイルを提供することで、この制限を軽減します。 ただし、配置後、この App.config ファイルは認識されません。  
   

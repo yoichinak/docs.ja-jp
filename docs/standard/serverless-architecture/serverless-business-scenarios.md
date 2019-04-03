@@ -4,12 +4,12 @@ description: イメージ処理からモバイル バックエンドとの ETL �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153788"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653900"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -43,7 +43,7 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 たとえば、オーランド ランドマーク、オーランド目などを使用してモデルをトレーニングできます。 Custom Vision オーランド目のイメージが認識され、関数はフォト mosaic Bing の画像検索結果で構成の作成「オーランド目です」
 
-詳細については、次を参照してください。 [Azure Functions フォト mosaic ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)します。
+詳細については、[Azure Functions フォト mosaic ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)を参照してください。
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>既存のアプリケーションをクラウドに移行します。
 
@@ -61,9 +61,9 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 抽出、変換、および読み込み (ETL) は、さまざまなシステムを統合する共通のビジネス関数。 従来のアプローチは、多くの場合、専用の FTP サーバーをセットアップし、ファイルを解析し、業務用に変換するスケジュールされたジョブを展開する必要があります。 サーバーレス アーキテクチャ簡単ジョブ ファイルがアップロードされたときにトリガーを起動できるためです。 Azure Functions あたってタスクなどの特定の問題に焦点を少量のコードの最適な構成で ETL。
 
-![ETL アーキテクチャ](./media/csvimport.png)
+![Csv 解析プロセスを示すスクリーン ショット。](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
-ソース コードとハンズオン ラボでは、次を参照してください。 [CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)します。
+ソース コードとハンズオン ラボでは、[CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)を参照してください。
 
 ## <a name="shorten-links-and-track-metrics"></a>リンクを短縮し、メトリックの追跡
 
@@ -83,7 +83,7 @@ Azure Functions を使用して、シングル ページ アプリケーショ�
 
 Azure IoT Hub と Azure 関数のサンプルを構成します。 IoT Hub での新しいメッセージは、Azure 関数をトリガーします。 サーバーレス コードでは、元のメッセージ送信元デバイスにコンテンツと同じメッセージを送信します。 プロジェクトは、ソリューションに必要なすべてのコードと展開構成にします。
 
-詳細については、次を参照してください。 [Azure IoT Hub の ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)します。
+詳細については、[Azure IoT Hub の ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)を参照してください。
 
 ## <a name="recommended-resources"></a>推奨リソース
 

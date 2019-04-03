@@ -20,7 +20,7 @@ ms.locfileid: "57708341"
   
 ### <a name="to-simple-bind-a-control"></a>単純なコントロールをバインドする  
   
-1.  データ ソースに接続します。 詳細については、次を参照してください。[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)します。  
+1.  データ ソースに接続します。 詳細については、[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)を参照してください。  
   
 2.  フォームのコントロールを選択し、表示、**プロパティ**ウィンドウ。  
   

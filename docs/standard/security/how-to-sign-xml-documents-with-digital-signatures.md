@@ -28,7 +28,7 @@ ms.locfileid: "54622625"
   
  この手順のコード例は、XML ドキュメント全体にデジタル署名する方法、および <`Signature`> 要素内のドキュメントに署名を付す方法を示しています。  この例では、RSA 署名キーを作成し、キーをセキュリティで保護されたキー コンテナーに追加してから、キーを使用して XML ドキュメントにデジタル署名しています。  キーは、XML デジタル署名を確認するために取得したり、別の XML ドキュメントの署名に使用したりすることができます。  
   
- この手順を使用して作成された XML デジタル署名を確認する方法については、次を参照してください。[方法。XML ドキュメントのデジタル署名を検証](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)です。  
+ この手順を使用して作成された XML デジタル署名を確認する方法については、[方法。XML ドキュメントのデジタル署名を検証](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)を参照してください。  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>XML ドキュメントにデジタル署名するには  
   

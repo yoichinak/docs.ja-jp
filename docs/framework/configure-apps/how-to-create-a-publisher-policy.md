@@ -44,7 +44,7 @@ ms.locfileid: "55758990"
 </configuration>  
 ```  
   
- コード ベースを指定する方法については、次を参照してください。[アセンブリの場所を指定する](../../../docs/framework/configure-apps/specify-assembly-location.md)します。  
+ コード ベースを指定する方法については、[アセンブリの場所を指定する](../../../docs/framework/configure-apps/specify-assembly-location.md)を参照してください。  
   
 ## <a name="creating-the-publisher-policy-assembly"></a>発行者ポリシー アセンブリを作成します。  
  使用して、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)発行者ポリシー アセンブリを作成します。  

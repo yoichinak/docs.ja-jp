@@ -2,16 +2,15 @@
 title: コントラクト優先ツール
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846182"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819620"
 ---
 # <a name="contract-first-tool"></a>コントラクト優先ツール
-サービス コントラクトは、多くの場合、既存のサービスから作成する必要があります。 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ツールを使用して、データ コントラクト クラスを既存のサービスから自動的に作成できます。 コントラクト優先ツールを使用するには、XML スキーマ定義ファイル (XSD) をローカルにダウンロードする必要があります。ツールは、HTTP 経由でリモート データ コントラクトをインポートすることはできません。
+サービス コントラクトは、多くの場合、既存のサービスから作成する必要があります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ツールを使用して、データ コントラクト クラスを既存のサービスから自動的に作成できます。 コントラクト優先ツールを使用するには、XML スキーマ定義ファイル (XSD) をローカルにダウンロードする必要があります。ツールは、HTTP 経由でリモート データ コントラクトをインポートすることはできません。
 
  コントラクト優先ツールは、ビルド タスクとして Visual Studio 2012 に統合されています。 ビルド タスクによって生成されるコード ファイルは、基になるサービス コントラクトの変更をプロジェクトが簡単に取り込むことができるように、プロジェクトがビルドされるたびに作成されます。
 
@@ -62,11 +61,11 @@ ms.locfileid: "57846182"
 ## <a name="configuring-contract-first-options"></a>コントラクト優先のオプションの構成
  WCF プロジェクトのプロパティ メニューには、コントラクト優先のオプションを構成できます。 コントラクト優先の開発を有効にするのには、選択、**型定義言語として有効にする XSD**プロジェクトのプロパティ ウィンドウの WCF ページでチェック ボックス。
 
- ![WCF プロジェクト オプションが表示されたコントラクト&#45;最初](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![コントラクト優先の開発を有効になっていると、WCF オプションのスクリーン ショット。](./media/contract-first-tool/contract-first-options.png)
 
  高度なプロパティを構成するには、[詳細設定] をクリックします。
 
- ![コントラクトを高度な&#45;最初のプロパティを](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![高度なコントラクト コード生成の設定 ダイアログ ボックス。](./media/contract-first-tool/advanced-contract-settings.png)
 
  次の詳細設定は、コントラクトからコードを生成するために構成できます。 設定は、プロジェクト内のすべてのファイルに対してのみ構成できます。現時点では、ファイルごとの構成はできません。
 
@@ -119,9 +118,9 @@ ms.locfileid: "57846182"
 using MyProjectNamespace.ContractTypes;
 ```
 
- これで、サービス コントラクトで定義された型が、以下に示すように、プロジェクト内で解決可能になります。
+ 次に示すよう、サービス コントラクトで定義された型は、プロジェクト内で解決可能なります。
 
- ![サービス コントラクトから派生した型を使用して](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![SearchRequest クラスが最初の数文字を入力すると、IntelliSense で表示します。](./media/contract-first-tool/service-contract-types.png)
 
  ツールによって生成された型は、GeneratedXSDTypes.cs ファイル内に作成されます。 ファイルが作成、\<プロジェクト ディレクトリ >/obj/\<ビルド構成 >/xsdgeneratedcode/ディレクトリの既定値。 このトピックの冒頭のサンプル スキーマは、次のように変換されています。
 

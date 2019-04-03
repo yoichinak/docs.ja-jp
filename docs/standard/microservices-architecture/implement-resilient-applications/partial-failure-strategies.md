@@ -4,12 +4,12 @@ description: 部分的なエラーを適切に処理するための戦略をい�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981323"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464269"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>部分的なエラーを処理する戦略
 
@@ -30,19 +30,19 @@ ms.locfileid: "56981323"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **回復性パターン**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
+  [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
 - **回復性の追加とパフォーマンスの最適化**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead** (バルクヘッド)。 GitHub リポジトリ。 Polly ポリシーを使用した実装。\
-  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 - **Azure 用の回復性の高いアプリケーションの設計**\
-  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
+  [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
 - **一時的フォールト処理**\
-  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
+  [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[前へ](handle-partial-failure.md)

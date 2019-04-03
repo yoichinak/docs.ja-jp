@@ -59,7 +59,7 @@ ms.locfileid: "56664810"
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server のクラスにある、<xref:System.Data.SqlClient>名前空間。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server は、ローカルおよび分散トランザクションをサポートしています。 分散トランザクションの場合、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server、既定では自動的にトランザクションに参加し、Windows コンポーネント サービスからトランザクションの詳細を取得または<xref:System.Transactions>します。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server は、ローカルおよび分散トランザクションをサポートしています。 分散トランザクションの場合、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server、既定では自動的にトランザクションに参加し、Windows コンポーネント サービスからトランザクションの詳細を取得または<xref:System.Transactions>します。 詳細については、[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)を参照してください。  
   
  名前空間 `System.Data.SqlClient` をユーザーのアプリケーションにインクルードする方法を次のコード サンプルで示します。  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB (OleDb) は、COM 相互運用機能を介してネイティブ OLE DB を使用することで、データへのアクセスを可能にします。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB はローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB は自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB (OleDb) は、COM 相互運用機能を介してネイティブ OLE DB を使用することで、データへのアクセスを可能にします。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB はローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB は自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)を参照してください。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]とのテストが完了しているプロバイダーを次の表に示します。  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC (Odbc) は、ネイティブ ODBC ドライバー マネージャー (DM) を使用することで、データへのアクセスを可能にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC (Odbc) は、ネイティブ ODBC ドライバー マネージャー (DM) を使用することで、データへのアクセスを可能にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)を参照してください。  
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]とのテストが完了している ODBC ドライバーを次の表に示します。  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 >  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC を使用する場合、MDAC 2.6 以降が必要となります。MDAC 2.8 SP1 をお勧めします。 MDAC 2.8 SP1 は「 [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)」からダウンロードできます。  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>.NET Framework Oracle 用データ プロバイダー  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle (OracleClient) は、Oracle クライアント接続ソフトウェアを介して、Oracle データ ソースのデータへのアクセスを可能にします。 このデータ プロバイダーは Oracle クライアント ソフトウェア バージョン 8.1.7 以降をサポートしています。 データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle (OracleClient) は、Oracle クライアント接続ソフトウェアを介して、Oracle データ ソースのデータへのアクセスを可能にします。 このデータ プロバイダーは Oracle クライアント ソフトウェア バージョン 8.1.7 以降をサポートしています。 データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 詳細については、[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)を参照してください。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle を使用する場合、Oracle データ ソースに接続する前に、Oracle クライアント ソフトウェア (バージョン 8.1.7 以降) をシステムにインストールする必要があります。  
   
@@ -155,7 +155,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|中間層アプリケーションおよび単層アプリケーションで Oracle データ ソースを使用する場合に推奨します。|  
   
 ## <a name="entityclient-provider"></a>EntityClient プロバイダー  
- EntityClient プロバイダーは、エンティティ データ モデル (EDM) に基づくデータ アクセスで使用されます。 他の .NET Framework データ プロバイダーとは異なり、データ ソースと直接やり取りしません。 代わりに Entity SQL を使用して、基になるデータ プロバイダーと通信します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)します。  
+ EntityClient プロバイダーは、エンティティ データ モデル (EDM) に基づくデータ アクセスで使用されます。 他の .NET Framework データ プロバイダーとは異なり、データ ソースと直接やり取りしません。 代わりに Entity SQL を使用して、基になるデータ プロバイダーと通信します。 詳細については、[Entity Framework 用の EntityClient プロバイダー](./ef/entityclient-provider-for-the-entity-framework.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)

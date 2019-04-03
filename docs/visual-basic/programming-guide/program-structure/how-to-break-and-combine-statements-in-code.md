@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: a43d09be53eb5a04d154e482f9388e2ca480118a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967179"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837742"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: 分割および連結コード (Visual Basic) ステートメント
 コードを書くときにステートメントが長くなり、コード エディターでの水平方向スクロールが必要になるを作成する可能性があります。 方法は、これには影響しませんが、コードを実行、困難や他のユーザーをモニターに表示されるコードを読み取る。 このような場合は、1 つの長いステートメントを複数行に分割を検討してください。  
@@ -59,5 +59,6 @@ ms.locfileid: "56967179"
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)

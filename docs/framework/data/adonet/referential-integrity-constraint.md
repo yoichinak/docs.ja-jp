@@ -22,7 +22,7 @@ A*参照整合性制約*Entity Data Model (EDM) では、リレーショナル �
   
 -   依存 End の参照プロパティ。  
   
- EDM の参照整合性制約の目的は、常に有効なアソシエーションが存在することを確認するためです。 詳細については、次を参照してください。[外部キー プロパティ](../../../../docs/framework/data/adonet/foreign-key-property.md)します。  
+ EDM の参照整合性制約の目的は、常に有効なアソシエーションが存在することを確認するためです。 詳細については、[外部キー プロパティ](../../../../docs/framework/data/adonet/foreign-key-property.md)を参照してください。  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`WrittenBy` および `PublishedBy` という 2 つのアソシエーションの概念モデルを示しています。 

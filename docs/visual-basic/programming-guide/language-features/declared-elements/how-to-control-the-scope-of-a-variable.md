@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521414"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818724"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) のスコープを制御します。
 変数が、通常、*スコープ*、または宣言をリージョン全体での参照を表示します。 場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。  
@@ -87,6 +87,7 @@ Public strMsg As String
  変数のスコープが狭い悪意のあるコードが不正に、小さい方の可能性は、その使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

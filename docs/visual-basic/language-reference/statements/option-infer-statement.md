@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 38c60245ff2c0b08ee731da6c1f88c30e1af8e3f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823494"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 変数の宣言でローカル型推論を使用できるようにします。  
@@ -39,15 +39,17 @@ Option Infer { On | Off }
   
  `Option Infer` を `On` に設定すると、データ型を明示的に指定せずにローカル変数を宣言できます。 コンパイラは、初期化式の型から変数のデータ型を推測します。  
   
- 次の図では、`Option Infer` がオンになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって整数として宣言されています。  
+ 次の図では、`Option Infer` がオンになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって整数として宣言されています。
+
+ 次のスクリーン ショットは、Option Infer がオンの場合、IntelliSense を示しています。 
   
- ![宣言の IntelliSense ビュー。](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
-Option Infer がオンのときの IntelliSense  
+ ![Option Infer がオンの場合は、IntelliSense の表示を示すスクリーン ショット。](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
  次の図では、`Option Infer` がオフになっています。 宣言 `Dim someVar = 2` 内の変数は、型の推定によって `Object` として宣言されています。 この例で、 **Option Strict**設定に設定されて**オフ**上、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
   
- ![宣言の IntelliSense ビュー。](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-Option Infer がオフのときの IntelliSense  
+ 次のスクリーン ショットは、Option Infer がオフの場合、IntelliSense を示しています。
+ 
+ ![Option Infer がオフの場合は、IntelliSense の表示を示すスクリーン ショット。](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
 >  変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic と呼ばれる操作を実行する*ボックス化*と*ボックス化解除*間の変換を`Object`と実行速度が低下は、値の型。 ボックス化とボックス化解除については、次を参照してください。、 [Visual Basic 言語仕様](~/_vblang/spec/conversions.md#value-type-conversions)します。
@@ -78,12 +80,10 @@ Option Infer がオフのときの IntelliSense
   
 |データ型が指定されているか|初期化子が指定されているか|例|結果|  
 |---|---|---|---|  
-|Ｘ|Ｘ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|Ｘ|○|`Dim qty = 5`|
-  `Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> 
-  `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。|  
-|[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
+|いいえ|いいえ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|Ｘ|[はい]|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|[はい]|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。|  
+|[はい]|[はい]|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
 ## <a name="example"></a>例  
  次の例では、`Option Infer` ステートメントがローカル型推論をどのように有効にするかを示します。  
@@ -96,6 +96,7 @@ Option Infer がオフのときの IntelliSense
  [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)

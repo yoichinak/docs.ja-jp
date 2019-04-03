@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-ms.openlocfilehash: c8fb990533d9db90eacf76aff424ea3cf96b0875
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970520"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813991"
 ---
 # <a name="-operator-visual-basic"></a>/= 演算子 (Visual Basic)
 変数またはプロパティの値式の値で除算し、浮動小数点の結果を変数またはプロパティに代入します。  
@@ -49,6 +49,7 @@ variableorproperty /= expression
  [!code-vb[VbVbalrOperators#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)
 - [\\= 演算子](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 3be28ee718675b1f6bebfaff03baaf561a6fff43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 50a449ea8a5131c878cf703f44695cd2e2304444
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974069"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842578"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 句 (Visual Basic)
 プロシージャが指定されたイベントを処理することを宣言します。  
@@ -50,12 +50,12 @@ proceduredeclaration Handles eventlist
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>例  
- 次の例は、前の例と同じです。 
-  `Handles` 句の `eventlist` には 2 つのボタンのイベントが含まれています。  
+ 次の例は、前の例と同じです。 `Handles` 句の `eventlist` には 2 つのボタンのイベントが含まれています。  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)

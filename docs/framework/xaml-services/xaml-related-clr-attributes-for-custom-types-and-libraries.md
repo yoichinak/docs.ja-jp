@@ -81,7 +81,7 @@ ms.locfileid: "58039474"
   
  **引数:** A<xref:System.Type>として期待する最も正確な型を指定する、`ProvideValue`属性付きの結果<xref:System.Windows.Markup.MarkupExtension>します。  
   
- 詳細については、次を参照してください。 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)します。  
+ 詳細については、[Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)を参照してください。  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **リファレンス ドキュメント。**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -114,7 +114,7 @@ ms.locfileid: "58039474"
   
  **引数:** なし。  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 空白の重要なコンテンツ内の子要素として表示される特定の種類に適用されます (コンテンツが含まれるコレクションによって保持されている<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主に、保存に関連は、パスが利用できる、読み込みパスで XAML 型システムで調べることで<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>します。 詳細については、次を参照してください。[空白 XAML 処理](whitespace-processing-in-xaml.md)します。  
+ <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 空白の重要なコンテンツ内の子要素として表示される特定の種類に適用されます (コンテンツが含まれるコレクションによって保持されている<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>)。 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> 主に、保存に関連は、パスが利用できる、読み込みパスで XAML 型システムで調べることで<xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>します。 詳細については、[空白 XAML 処理](whitespace-processing-in-xaml.md)を参照してください。  
   
 ### <a name="typeconverterattribute"></a>TypeConverterAttribute  
  **リファレンス ドキュメント。**  <xref:System.ComponentModel.TypeConverterAttribute>  
@@ -127,7 +127,7 @@ ms.locfileid: "58039474"
   
  適用する、<xref:System.ComponentModel.TypeConverterAttribute>属性を型、型コンバーターの実装を参照します。 クラス、構造体、またはインターフェイスで、XAML の型コンバーターを定義できます。 変換がネイティブで有効である列挙体の場合、型変換を提供する必要はありません。  
   
- 型コンバーターを目的の型に属性またはマークアップでは、初期化テキストに使用される文字列に変換することがあります。 詳細については、次を参照してください。 [TypeConverters および XAML](../wpf/advanced/typeconverters-and-xaml.md)します。  
+ 型コンバーターを目的の型に属性またはマークアップでは、初期化テキストに使用される文字列に変換することがあります。 詳細については、[TypeConverters および XAML](../wpf/advanced/typeconverters-and-xaml.md)を参照してください。  
   
  型のすべての値に適用するではなくに、特定のプロパティに XAML の型コンバーターの動作を確立することもできます。 この場合は、適用<xref:System.ComponentModel.TypeConverterAttribute>プロパティ定義 (外側の定義、固有ではない`get`と`set`定義)。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "58039474"
   
  **引数:** なし。  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> コレクション内の XAML ノード ストリームの値ノードの構築に影響は、XAML プロセッサによって空白大きなとしてコレクション型を処理する必要があることを示します。 詳細については、次を参照してください。[空白 XAML 処理](whitespace-processing-in-xaml.md)します。  
+ <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> コレクション内の XAML ノード ストリームの値ノードの構築に影響は、XAML プロセッサによって空白大きなとしてコレクション型を処理する必要があることを示します。 詳細については、[空白 XAML 処理](whitespace-processing-in-xaml.md)を参照してください。  
   
 ### <a name="xamldeferloadattribute"></a>XamlDeferLoadAttribute  
  **リファレンス ドキュメント。**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  

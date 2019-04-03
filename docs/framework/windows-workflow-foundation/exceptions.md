@@ -50,7 +50,7 @@ ms.locfileid: "57717272"
 -   例外は高レベルの <xref:System.Activities.Statements.TryCatch> では扱われず、ワークフローのルートをエスケープし、ワーク フローが完了または中止ではなく取り消すように構成されます。 <xref:System.Activities.WorkflowApplication> を使用してホストされたワークフローは、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> を処理し <xref:System.Activities.UnhandledExceptionAction.Cancel> を返してこれを構成できます。 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> を処理する例は、このトピックで既に提供されています。 ワークフロー サービスは <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> を使用し <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> を指定してこれを構成できます。 構成の例については<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>を参照してください[ワークフロー サービス ホストの拡張機能](../wcf/feature-details/workflow-service-host-extensibility.md)します。  
   
 ## <a name="exception-handling-versus-compensation"></a>例外処理と補正の比較  
- 例外処理は、アクティビティの実行中に発生するという点で補正と異なります。 補正が発生するのは、アクティビティが正常に完了した後です。 例外処理では、アクティビティが例外を生成した後でクリーン アップを実行できます。また、補正処理では、前に完了したアクティビティの正常に完了した作業を元に戻すことが可能です。 詳細については、次を参照してください。[補正](compensation.md)します。  
+ 例外処理は、アクティビティの実行中に発生するという点で補正と異なります。 補正が発生するのは、アクティビティが正常に完了した後です。 例外処理では、アクティビティが例外を生成した後でクリーン アップを実行できます。また、補正処理では、前に完了したアクティビティの正常に完了した作業を元に戻すことが可能です。 詳細については、[補正](compensation.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Activities.Statements.TryCatch>

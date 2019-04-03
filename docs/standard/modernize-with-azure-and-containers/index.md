@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 
-![カバーの画像](./media/cover.png)
+![最新の .NET アプリケーションのガイドのイメージについて説明します。](./media/index/web-application-guide-cover-image.png)
 
 発行者  
 マイクロソフト プレスと Microsoft DevDiv  

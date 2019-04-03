@@ -4,12 +4,12 @@ description: Docker ベースのアプリケーションを開発するための
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 92dd63fa155ea6e49ddb1eee9c201d5d9dc0418e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679529"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464360"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -64,10 +64,10 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Windows 用の Docker CE の概要** \
-  [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
+  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [*https://visualstudio.microsoft.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![2 - Dockerfile を作成する](./media/image4.png)
 
@@ -119,16 +119,16 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **.NET Core アプリケーションの Docker イメージのビルド** \
-  [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Build your own image (独自のイメージのビルド)**。 Docker の公式なドキュメント内にあります。\
-  [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
+  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 - **.NET コンテナー イメージを最新の状態に保つ** \
-  *<https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>*
+  <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
 - **.NET と Docker を組み合わせて使用する - DockerCon 2018 の更新** \
-  *<https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>*
+  <https://devblogs.microsoft.com/dotnet/using-net-and-docker-together-dockercon-2018-update/>
 
 ### <a name="using-multi-arch-image-repositories"></a>マルチアーキテクチャ イメージ リポジトリの使用
 
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **マルチアーキテクチャの .NET Core イメージ**。\
-  [*https://github.com/dotnet/announcements/issues/14*](https://github.com/dotnet/announcements/issues/14)
+  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
 
 - **Create a base image** (基本イメージを作成する) Docker の公式なドキュメント。\
-  [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![3 - Dockerfile で定義されているイメージを作成する](./media/image7.png)
 
@@ -485,7 +485,7 @@ Visual Studio 2017 を使用したマルチコンテナー アプリケーショ
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **リモート Docker ホストに ASP.NET コンテナーを配置する** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker*](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
@@ -522,10 +522,10 @@ Visual Studio 2017 でコンテナーを実行またはデバッグする場合�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **ローカルの Docker コンテナーでのアプリのデバッグ** \
-  [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 - **作成者: Steve Lasker。Docker を使用した ASP.NET Core アプリのビルド、デバッグおよび展開。** ビデオ。 \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio でのコンテナー開発の簡略ワークフロー
 
@@ -540,7 +540,7 @@ Visual Studio を使用するワークフローは、エディター/CLI アプ�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **作成者: Steve Lasker。Visual Studio 2017 を使用した .NET Docker の開発** \
-  [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **aspnet-docker/Dockerfile.** Windows の機能を含めるために dockerfile から実行する PowerShell コマンドの例。\
-  [*https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 >[!div class="step-by-step"]
 >[前へ](index.md)

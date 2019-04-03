@@ -30,7 +30,7 @@ ms.locfileid: "54651202"
 ですが、<xref:System.DateTimeOffset>構造体は、タイム ゾーンの処理よりも高い、<xref:System.DateTime>構造、<xref:System.DateTime>パラメーターがメソッドの呼び出しでよく使用されます。 このため、変換する機能<xref:System.DateTimeOffset>値<xref:System.DateTime>値し、その逆の場合は特に重要です。 このトピックでは、できるだけ多くのタイム ゾーン情報を保持するようにこれらの変換を実行する方法を示します。
 
 > [!NOTE]
-> 両方の<xref:System.DateTime>と<xref:System.DateTimeOffset>型タイム ゾーンの時刻を表す場合に制限事項があります。 その<xref:System.DateTime.Kind%2A>プロパティ、<xref:System.DateTime>は世界協定時刻 (UTC) と、システムのローカル タイム ゾーンのみを反映するようにできます。 <xref:System.DateTimeOffset> UTC からの時刻のオフセットが、実際のタイム ゾーン オフセットが属するは反映されませんが反映されます。 詳細については、時刻の値とタイム ゾーンのサポートは、次を参照してください。[選択の間で DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)します。
+> 両方の<xref:System.DateTime>と<xref:System.DateTimeOffset>型タイム ゾーンの時刻を表す場合に制限事項があります。 その<xref:System.DateTime.Kind%2A>プロパティ、<xref:System.DateTime>は世界協定時刻 (UTC) と、システムのローカル タイム ゾーンのみを反映するようにできます。 <xref:System.DateTimeOffset> UTC からの時刻のオフセットが、実際のタイム ゾーン オフセットが属するは反映されませんが反映されます。 詳細については、時刻の値とタイム ゾーンのサポートは、[選択の間で DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)を参照してください。
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTime から DateTimeOffset への変換
 

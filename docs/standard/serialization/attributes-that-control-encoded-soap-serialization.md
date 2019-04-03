@@ -19,7 +19,7 @@ ms.locfileid: "54547199"
 
 という名前の World Wide Web Consortium (W3C) ドキュメント[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) SOAP パラメーターのエンコード方法について説明する省略可能なセクション (セクション 5) が含まれています。 このセクション 5 の仕様に準拠するには、<xref:System.Xml.Serialization> 名前空間で指定されている特殊な属性セットを使用する必要があります。 これらの属性をクラスやクラスのメンバーに適宜適用し、<xref:System.Xml.Serialization.XmlSerializer> を使用して、クラスのインスタンスをシリアル化します。
 
-これらの属性、およびその適用対象と機能を次の表に示します。 詳細については、XML シリアル化を制御するこれらの属性を使用して、次を参照してください。[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)と[方法。SOAP エンコード済み XML シリアル化をオーバーライド](how-to-override-encoded-soap-xml-serialization.md)します。
+これらの属性、およびその適用対象と機能を次の表に示します。 詳細については、XML シリアル化を制御するこれらの属性を使用して、[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)と[方法。SOAP エンコード済み XML シリアル化をオーバーライド](how-to-override-encoded-soap-xml-serialization.md)を参照してください。
 
 属性の詳細については、「[属性](../../../docs/standard/attributes/index.md)」を参照してください。
 

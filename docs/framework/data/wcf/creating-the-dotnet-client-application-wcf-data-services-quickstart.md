@@ -17,7 +17,7 @@ ms.locfileid: "54732649"
 これは、WCF Data Services クイック スタートの最後のタスクです。 このタスクでは、ソリューションにコンソール アプリケーションを追加への参照を追加、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]この新しいクライアント アプリケーションにフィードおよびフィードの生成されたクライアント データ サービス クラスおよびクライアント ライブラリを使用して、クライアント アプリケーションから OData へのアクセス.
 
 > [!NOTE]
-> データ フィードへのアクセスには .NET Framework ベースのクライアント アプリケーションは必要ありません。 データ サービスは、OData フィードを使用する任意のアプリケーション コンポーネントによってアクセスできます。 詳細については、次を参照してください。[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)します。
+> データ フィードへのアクセスには .NET Framework ベースのクライアント アプリケーションは必要ありません。 データ サービスは、OData フィードを使用する任意のアプリケーション コンポーネントによってアクセスできます。 詳細については、[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)を参照してください。
 
 ## <a name="to-create-the-client-application-by-using-visual-studio"></a>Visual Studio を使用してクライアント アプリケーションを作成するには
 

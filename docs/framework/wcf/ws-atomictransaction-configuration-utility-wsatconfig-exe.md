@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、更新プログラムをダウンロードしてから、WsatConfig.exe を実行する必要があります。 この更新プログラムの詳細については、次を参照してください。 [Commerce Server 2007 (KB912817) 用更新](https://go.microsoft.com/fwlink/?LinkId=95340)と[可用性の Windows XP COM + Hotfix Rollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341)します。  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、更新プログラムをダウンロードしてから、WsatConfig.exe を実行する必要があります。 この更新プログラムの詳細については、[Commerce Server 2007 (KB912817) 用更新](https://go.microsoft.com/fwlink/?LinkId=95340)と[可用性の Windows XP COM + Hotfix Rollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341)を参照してください。  
   
  次の表は、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) で使用できるオプションを示します。  
   

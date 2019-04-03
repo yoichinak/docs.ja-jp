@@ -16,7 +16,7 @@ ms.locfileid: "56093087"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開発し、WCF Data Services のデプロイ
 
-このトピックでは、開発と、WCF Data Services の展開について情報を提供します。 WCF Data Services の基本的な詳細については、次を参照してください。 [Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)と[概要](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)します。
+このトピックでは、開発と、WCF Data Services の展開について情報を提供します。 WCF Data Services の基本的な詳細については、[Getting Started](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)と[概要](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)を参照してください。
 
 ## <a name="develop-wcf-data-services"></a>WCF Data Services を開発します。
 
@@ -24,7 +24,7 @@ ms.locfileid: "56093087"
 
 1.  **データ モデルを定義する**
 
-     WCF Data Services には、さまざまなさまざまな遅延バインディング データ型へのリレーショナル データベースからのデータ ソースからデータに基づくデータ モデルを定義するためのデータ サービス プロバイダーがサポートしています。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。
+     WCF Data Services には、さまざまなさまざまな遅延バインディング データ型へのリレーショナル データベースからのデータ ソースからデータに基づくデータ モデルを定義するためのデータ サービス プロバイダーがサポートしています。 詳細については、[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)を参照してください。
 
 2.  **データ サービスを作成する**
 
@@ -32,9 +32,9 @@ ms.locfileid: "56093087"
 
 3.  **データ サービスを構成する**
 
-     既定では、WCF Data Services には、エンティティ コンテナーによって公開されているリソースへのアクセスが無効にします。 <xref:System.Data.Services.DataServiceConfiguration>インターフェイスでは、リソースへのアクセスを構成し、サービス操作、OData のサポートされているバージョンを指定して、バッチ動作や返されるエンティティの最大数など、他のサービス全体の動作を定義できます。1 つの応答フィード。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。
+     既定では、WCF Data Services には、エンティティ コンテナーによって公開されているリソースへのアクセスが無効にします。 <xref:System.Data.Services.DataServiceConfiguration>インターフェイスでは、リソースへのアクセスを構成し、サービス操作、OData のサポートされているバージョンを指定して、バッチ動作や返されるエンティティの最大数など、他のサービス全体の動作を定義できます。1 つの応答フィード。 詳細については、[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)を参照してください。
 
-このトピックでは、Visual Studio を使用して、主に開発およびデータ サービスの配置をについて説明します。 OData フィードとしてデータを公開するための WCF Data Services によって提供される柔軟性については、次を参照してください。 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)します。
+このトピックでは、Visual Studio を使用して、主に開発およびデータ サービスの配置をについて説明します。 OData フィードとしてデータを公開するための WCF Data Services によって提供される柔軟性については、[Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)を参照してください。
 
 ### <a name="choose-a-development-web-server"></a>開発 Web サーバーを選択します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "56093087"
 
     -   このサーバーには、認証など、IIS の必要以上の機能は含まれていません。
 
-    -   このサーバーは、チャンク HTTP ストリームを処理できない、データ サービスから大きなバイナリ データにアクセスするときに、WCF Data Services クライアントによって既定をする送信されます。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)します。
+    -   このサーバーは、チャンク HTTP ストリームを処理できない、データ サービスから大きなバイナリ データにアクセスするときに、WCF Data Services クライアントによって既定をする送信されます。 詳細については、[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)を参照してください。
 
     -   このサーバーには、期間の処理に関する問題 (`.`) この文字がキーの値で WCF Data Services でサポートされている場合でも、URL 内の文字します。
 
@@ -82,9 +82,9 @@ ms.locfileid: "56093087"
 
 -   データ サービスをデバッグするときに通常の操作中よりも、データ サービスからエラーの詳細についてを取得したい場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、投稿をご覧ください。 [WCF Data Services のデバッグ](https://go.microsoft.com/fwlink/?LinkId=201868)します。 また、HTTP メッセージング レイヤーで発生する例外を表示するのには WCF でのトレースを有効にできます。 詳細については、「 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
--   データ サービスとして開発は、通常、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション プロジェクトができますもサービスを作成するデータとして、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio で Web サイト プロジェクト。 2 つの種類のプロジェクト間の違いについては、次を参照してください。 [Web アプリケーション プロジェクトと Visual Studio での Web サイト プロジェクト](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))します。
+-   データ サービスとして開発は、通常、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション プロジェクトができますもサービスを作成するデータとして、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Visual Studio で Web サイト プロジェクト。 2 つの種類のプロジェクト間の違いについては、[Web アプリケーション プロジェクトと Visual Studio での Web サイト プロジェクト](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))を参照してください。
 
--   使用してデータ サービスを作成すると、**新しい項目の追加**Visual studio で、データ サービス ダイアログ ボックスがによってホストされている[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]IIS でします。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] と IIS がデータ サービスの既定のホストですが、その他のホスト オプションもサポートされています。 詳細については、次を参照してください。[データ サービスのホスティング](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)します。
+-   使用してデータ サービスを作成すると、**新しい項目の追加**Visual studio で、データ サービス ダイアログ ボックスがによってホストされている[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]IIS でします。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] と IIS がデータ サービスの既定のホストですが、その他のホスト オプションもサポートされています。 詳細については、[データ サービスのホスティング](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)を参照してください。
 
 ## <a name="deploy-wcf-data-services"></a>WCF Data Services をデプロイします。
 
@@ -121,7 +121,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 データ サービスを配置する際は、次の点を考慮してください。
 
--   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio が先のデータベースでこれを行うスクリプト (.sql ファイル) を自動的に作成し、これらのスクリプトは、の Web 配置パッケージに含めることができます、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 詳細については、「[方法 :データベース、Web アプリケーション プロジェクトを配置](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))します。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サイトでは、これを行うを使用して、 **Database Publishing Wizard** Visual Studio でします。 詳細については、次を参照してください。 [SQL データベースのパブリッシュ](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))します。
+-   [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ サービスの配置でのデータ構造、データ、またはその両方の反映も必要になることがあります。 Visual Studio が先のデータベースでこれを行うスクリプト (.sql ファイル) を自動的に作成し、これらのスクリプトは、の Web 配置パッケージに含めることができます、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 詳細については、「[方法 :データベース、Web アプリケーション プロジェクトを配置](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))します。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サイトでは、これを行うを使用して、 **Database Publishing Wizard** Visual Studio でします。 詳細については、[SQL データベースのパブリッシュ](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))を参照してください。
 
 -   WCF Data Services には、基本的な WCF 実装が含まれているために、Windows Server で実行されている IIS に配置されたデータ サービスを監視するのに Windows Server AppFabric を使用できます。 Windows Server AppFabric を使用してデータ サービスを監視する方法の詳細については、投稿をご覧ください。 [Windows Server AppFabric による WCF Data Services の追跡](https://go.microsoft.com/fwlink/?LinkID=202005)します。
 

@@ -10,7 +10,7 @@ ms.lasthandoff: 02/08/2019
 ms.locfileid: "55903928"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>メソッド ベースのクエリ例 (LINQ to DataSet)
-このセクションでは、データセットに LINQ をプログラミングの標準クエリ演算子を使用するメソッド ベースのクエリ構文例を提供します。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、次を参照してください。[標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+このセクションでは、データセットに LINQ をプログラミングの標準クエリ演算子を使用するメソッド ベースのクエリ構文例を提供します。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、[標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [射影](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  

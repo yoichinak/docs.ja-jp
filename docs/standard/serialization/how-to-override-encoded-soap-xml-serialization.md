@@ -14,7 +14,7 @@ ms.locfileid: "57677670"
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>方法: SOAP エンコード済み XML シリアル化をオーバーライドします。
 
-SOAP メッセージとしてオブジェクトの XML シリアル化をオーバーライドするプロセスは、標準の XML シリアル化をオーバーライドするプロセスに似ています。 標準の XML シリアル化をオーバーライドする方法の詳細については、次を参照してください。[方法。XML Stream の代替要素名を指定](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)します。
+SOAP メッセージとしてオブジェクトの XML シリアル化をオーバーライドするプロセスは、標準の XML シリアル化をオーバーライドするプロセスに似ています。 標準の XML シリアル化をオーバーライドする方法の詳細については、[方法。XML Stream の代替要素名を指定](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)を参照してください。
 
 ## <a name="to-override-serialization-of-objects-as-soap-messages"></a>SOAP メッセージとしてオブジェクトのシリアル化をオーバーライドするには
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 32f16d7f52665182dd82966693baa50ac9551f87
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821960"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
 2 つのコレクションを、単一の階層コレクションに結合します。 結合操作は、一致するキーに基づきます。  
@@ -34,7 +34,7 @@ Group Join element [As type] In collection _
 |用語|定義|  
 |---|---|  
 |`element`|必須。 結合するコレクションの制御変数。|  
-|`type`|任意。 `element` の型。 ない場合は`type`を指定の種類`element`から推論されます`collection`します。|  
+|`type`|省略可能です。 `element` の型。 ない場合は`type`を指定の種類`element`から推論されます`collection`します。|  
 |`collection`|必須。 左側にある上にあるコレクションと結合するコレクション、`Group Join`演算子。 A`Group Join`に句を入れ子にすることができます、`Join`句または別の`Group Join`句。|  
 |`key1` `Equals` `key2`|必須。 結合するコレクションのキーを識別します。 使用する必要があります、`Equals`結合されているコレクションからキーを比較する演算子。 使用して、結合条件を組み合わせることができます、`And`演算子を複数のキーを識別します。 `key1`の左側にあるコレクションからパラメーターがある必要があります、`Join`演算子。 `key2`の右側にあるコレクションからパラメーターがある必要があります、`Join`演算子。<br /><br /> 結合条件で使用されるキーは、コレクションの 1 つ以上の項目を含む式を指定できます。 ただし、それぞれのキー式では、該当するコレクションの項目のみを含めることができます。|  
 |`expressionList`|必須。 コレクションから要素のグループの集計方法を識別する 1 つまたは複数の式。 グループ化した結果のメンバー名を識別するために使用して、`Group`キーワード (`<alias> = Group`)。 グループに適用する集計関数を含めることもできます。|  
@@ -56,6 +56,7 @@ Group Join element [As type] In collection _
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)

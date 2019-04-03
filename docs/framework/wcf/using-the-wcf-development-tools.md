@@ -40,7 +40,7 @@ ms.locfileid: "54712091"
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  
 ```  
   
- Netsh.exe の詳細については、次を参照してください。 [Netsh.exe ツールとコマンド ライン スイッチを使用する方法](https://go.microsoft.com/fwlink/?LinkId=97877)します。  
+ Netsh.exe の詳細については、[Netsh.exe ツールとコマンド ライン スイッチを使用する方法](https://go.microsoft.com/fwlink/?LinkId=97877)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [WCF Visual Studio テンプレート](../../../docs/framework/wcf/wcf-vs-templates.md)

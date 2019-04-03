@@ -71,15 +71,13 @@ ms.locfileid: "56441880"
 ## <a name="debugging-tips-for-windows-services"></a>Windows サービスのデバッグのヒント  
  サービスのプロセスにアタッチすると、そのサービスのコードのほとんど (すべてではない) をデバッグすることができます。 たとえば、サービスが既に開始されているため、そのサービスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッド内のコード、またはサービスをこの方法で読み込むために使用されている `Main` メソッド内のコードは、デバッグすることができません。 この制限に対処する方法の 1 つは、デバッグ専用の一時的な "ダミー" サービスを作成し、サービス アプリケーションに追加することです。 サービスを両方ともインストールし、ダミー サービスを開始してサービス プロセスを読み込むことができます。 "ダミー" サービスがプロセスを起動した後は、Visual Studio の **[デバッグ]** メニューで、サービス プロセスへのアタッチを行うことができます。  
   
- 
-  <xref:System.Threading.Thread.Sleep%2A> メソッドに呼び出しを追加して、プロセスにアタッチできるようになるまで動作を遅延します。  
+ <xref:System.Threading.Thread.Sleep%2A> メソッドに呼び出しを追加して、プロセスにアタッチできるようになるまで動作を遅延します。  
   
  プログラムを通常のコンソール アプリケーションに変更します。 このためには、起動方法に応じて Windows サービスとコンソール アプリケーションの両方として実行することができるように、`Main` メソッドを次のように書き換えます。  
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>方法: Windows サービスをコンソール アプリケーションとして実行する  
   
-1.  
-  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
+1.  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -90,8 +88,7 @@ ms.locfileid: "56441880"
     }  
     ```  
   
-2.  
-  `Main` メソッドを次のように書き換えます。  
+2.  `Main` メソッドを次のように書き換えます。  
   
     ```csharp  
     static void Main(string[] args)  
@@ -108,7 +105,7 @@ ms.locfileid: "56441880"
     }
     ```  
   
-3.  プロジェクトのプロパティの **[アプリケーション]** タブで、**[出力の種類]** を **[コンソール アプリケーション]** に設定します。  
+3.  プロジェクトのプロパティの **[アプリケーション]** タブで、 **[出力の種類]** を **[コンソール アプリケーション]** に設定します。  
   
 4.  **[デバッグの開始]** を選択します (F5)。  
   

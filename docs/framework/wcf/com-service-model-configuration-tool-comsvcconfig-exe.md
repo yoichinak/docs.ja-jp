@@ -30,7 +30,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
- ComSvcConfig.exe の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
+ ComSvcConfig.exe の詳細については、[方法。COM + サービス モデル構成ツールを使用して](../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)を参照してください。  
   
  次の表は、ComSvcConfig.exe で使用できるモードを示します。  
   

@@ -2,12 +2,12 @@
 title: '方法: LINQ to XML XPath (Visual Basic) を使用してクエリ'
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: 754b3c4d1f14f2f78b5688f13ab679bc01798a6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff0b5f6e4bb3c64522dc13a44dd79d7c172c1b5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615991"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843078"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>方法: LINQ to XML XPath (Visual Basic) を使用してクエリ
 このトピックでは、XPath を使用して XML ツリーに対してクエリを実行できる拡張メソッドについて説明します。 これらの拡張メソッドの使用に関する詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。  
@@ -43,4 +43,5 @@ Next
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

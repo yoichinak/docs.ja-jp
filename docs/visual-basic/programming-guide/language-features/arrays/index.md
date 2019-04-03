@@ -56,7 +56,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 - 要素に含まれている値は、その学年の生徒の数を表します。
 
-![生徒数を示す配列の図](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") 「生徒」配列の要素
+![生徒数の配列を示す図](./media/index/students-array-elements.gif)
 
 次の例には、作成し、配列を使用して Visual Basic のコードが含まれています。
 

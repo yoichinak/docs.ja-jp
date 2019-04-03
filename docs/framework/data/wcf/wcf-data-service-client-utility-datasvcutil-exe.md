@@ -44,7 +44,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/nologo`|著作権メッセージが表示されないようにします。|
 |`/out:` *\<file>*|生成されたクライアント データ サービス クラスを含むソース コード ファイルの名前を指定します。|
 |`/uri:` *\<string>*|OData フィードの URI。|
-|`/version:`[1.0&#124;2.0]|OData の許容される最上位のバージョンを指定します。 バージョンはに基づいて決定されます、`DataServiceVersion`返されたデータ サービス メタデータの DataService 要素の属性。 詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。 指定した場合、`/dataservicecollection`パラメーターも指定`/version:2.0`データ バインディングを有効にします。|
+|`/version:`[1.0&#124;2.0]|OData の許容される最上位のバージョンを指定します。 バージョンはに基づいて決定されます、`DataServiceVersion`返されたデータ サービス メタデータの DataService 要素の属性。 詳細については、[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)を参照してください。 指定した場合、`/dataservicecollection`パラメーターも指定`/version:2.0`データ バインディングを有効にします。|
 
 ## <a name="see-also"></a>関連項目
 

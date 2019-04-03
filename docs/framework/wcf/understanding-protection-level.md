@@ -18,7 +18,7 @@ ms.locfileid: "54564632"
 # <a name="understanding-protection-level"></a>保護レベルの理解
 `ProtectionLevel` プロパティは、<xref:System.ServiceModel.ServiceContractAttribute> クラス、<xref:System.ServiceModel.OperationContractAttribute> クラスなど、多くのクラスで使用されています。 このプロパティは、メッセージの一部または全体を保護する方法を制御します。 このトピックでは、Windows Communication Foundation (WCF) 機能とそのしくみについて説明します。  
   
- 保護レベルを設定する手順については、次を参照してください。[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。  
+ 保護レベルを設定する手順については、[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)を参照してください。  
   
 > [!NOTE]
 >  保護レベルは構成ではなく、コードでのみ設定できます。  

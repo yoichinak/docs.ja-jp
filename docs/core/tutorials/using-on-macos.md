@@ -4,12 +4,12 @@ description: このドキュメントでは、Visual Studio Code を使用して
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788454"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409498"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>macOS での .NET Core の概要
 
@@ -215,7 +215,7 @@ dotnet run -p app/app.csproj
 
 Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]、[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> を使用して、デバッガー タブを開きます。
 
-![Visual Studio Code デバッガー](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code デバッガー](./media/using-on-macos/visual-studio-code-debugger.png)
 
 [再生] ボタンを押して、デバッガーでアプリケーションを開始します。 アプリは実行を開始し、ブレークポイントに達した時点で停止します。 `Get` メソッドにステップ インし、正しい引数を渡したことを確認します。 答えが 42 であることを確認してください。
 

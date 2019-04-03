@@ -153,7 +153,7 @@ F# コンパイラが演算子の式をコンパイルするときに、その�
 
 F# のスコープ規則では、新しく定義された演算子が組み込み演算子よりも優先されるため、このようにして、通常の算術演算子を再定義できます。
 
-キーワード `inline` は、グローバル演算子と共に使用されることがよくあります。グローバル演算子は、通常、呼び出し元のコードに適宜組み込まれる小規模関数にします。 演算子関数をインライン化することにより、その関数を静的に解決された型パラメーターと共に使用して、静的に解決されたジェネリック コードを作成することもできます。 詳細については、次を参照してください。[インライン関数](functions/inline-functions.md)と[Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md)します。
+キーワード `inline` は、グローバル演算子と共に使用されることがよくあります。グローバル演算子は、通常、呼び出し元のコードに適宜組み込まれる小規模関数にします。 演算子関数をインライン化することにより、その関数を静的に解決された型パラメーターと共に使用して、静的に解決されたジェネリック コードを作成することもできます。 詳細については、[インライン関数](functions/inline-functions.md)と[Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

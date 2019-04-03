@@ -21,12 +21,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: b9770574a1b25f37dcc91c1d0374340f762700be
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814615"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
 式の値に応じて、ステートメントのグループをいくつかのいずれかを実行します。  
@@ -48,8 +48,8 @@ End Select
 |---|---|  
 |`testexpression`|必須。 式。 基本データ型のいずれかを評価する必要があります (`Boolean`、 `Byte`、 `Char`、 `Date`、 `Double`、 `Decimal`、 `Integer`、 `Long`、 `Object`、 `SByte`、 `Short`、`Single`、 `String`、 `UInteger`、 `ULong`、および`UShort`)。|  
 |`expressionlist`|必要な`Case`ステートメント。 一致した値を表す式の句のリスト`testexpression`します。 複数の式の句は、コンマで区切られます。 各句には、次の形式のいずれかを実行できます。<br /><br /> -   *expression1* `To` *expression2*<br />-   [ `Is` ] *comparisonoperator* *expression*<br />-   *expression*<br /><br /> 使用して、`To`一致の範囲の境界を指定するキーワードの値を`testexpression`します。 値`expression1`の値未満でなければなりません`expression2`します。<br /><br /> 使用して、`Is`比較演算子でキーワード (`=`、 `<>`、 `<`、 `<=`、 `>`、または`>=`)、一致した値に制限を指定する`testexpression`します。 場合、`Is`キーワードが指定されていないが自動的にする前に挿入*comparisonoperator*します。<br /><br /> だけを指定してフォーム`expression`の特殊なケースとして扱われます、`Is`フォーム where *comparisonoperator*は等号 (=) (`=`)。 この形式は`testexpression`  = `expression`します。<br /><br /> 内の式`expressionlist`かの型に暗黙的に変換可能であれば、任意のデータ型のできる`testexpression`、適切な`comparisonoperator`はで使用されている 2 つの型に対して有効です。|  
-|`statements`|任意。 1 つまたは複数のステートメントの次`Case`実行されている場合`testexpression`で句と一致する`expressionlist`します。|  
-|`elsestatements`|任意。 1 つまたは複数のステートメントの次`Case Else`実行されている場合`testexpression`で句と一致しません、`expressionlist`のいずれかの`Case`ステートメント。|  
+|`statements`|省略可能です。 1 つまたは複数のステートメントの次`Case`実行されている場合`testexpression`で句と一致する`expressionlist`します。|  
+|`elsestatements`|省略可能です。 1 つまたは複数のステートメントの次`Case Else`実行されている場合`testexpression`で句と一致しません、`expressionlist`のいずれかの`Case`ステートメント。|  
 |`End Select`|定義を終了、 `Select`.`Case`構築します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -83,6 +83,7 @@ End Select
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - [End ステートメント](../../../visual-basic/language-reference/statements/end-statement.md)
 - [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

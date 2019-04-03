@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523221"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829916"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソース (Visual Basic) を破棄します。
 使用することができます、`Using`システムは、コード ブロックの終了時に、リソースの破棄を保証するためにブロックします。 これは、大量のメモリを使用すること、またはその他のコンポーネントが使用する必要も、システム リソースを使用している場合に便利です。  
@@ -45,6 +45,7 @@ ms.locfileid: "54523221"
      ファイル ハンドルまたは COM ラッパーなどのシステム リソースでは、この同じ手法を使用できます。 使用する、`Using`終了した後、その他のコンポーネントの使用可能なリソースのままにすることを確認するときにブロック、`Using`ブロックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)

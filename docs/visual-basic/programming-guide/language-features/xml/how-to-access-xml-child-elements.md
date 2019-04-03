@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 6689eb36-c471-469f-a82d-099ab8197b25
-ms.openlocfilehash: 874c7490e451d64bf50e25934ea43a9b928ddab9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cd1b0db5305c7879d89cfdfff6cd458d6dea14f4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980556"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836819"
 ---
 # <a name="how-to-access-xml-child-elements-visual-basic"></a>方法: アクセスの XML 子要素 (Visual Basic)
 この例では、軸のプロパティを XML 要素で指定した名前を持つすべての XML 子要素にアクセスする子を使用する方法を示します。 具体的を使用して、<xref:System.Xml.Linq.XElement.Value%2A>プロパティをコレクション内の最初の要素の値を取得、`name`子軸プロパティを返します。 `name`という名前のすべての子要素を取得する子軸プロパティ`phone`で、`contact`オブジェクト。 またこの例では、`phone`という名前のすべての子要素にアクセスする子軸プロパティ`phone`に格納されている、`contact`オブジェクト。  
@@ -23,10 +23,10 @@ ms.locfileid: "56980556"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  <xref:System.Xml.Linq> 名前空間への参照  
+-   <xref:System.Xml.Linq> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - [XML 子軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 - [XML Value プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

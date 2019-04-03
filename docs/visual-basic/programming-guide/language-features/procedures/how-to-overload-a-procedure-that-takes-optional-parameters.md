@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 52e31ba2f9d2f5cf87a5597a3c8d639816a75535
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070d641d5a8b683ddfe06039117cc4a8507102df
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972665"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827634"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>方法: 省略可能なパラメーター (Visual Basic) を受け取るプロシージャをオーバー ロードします。
 プロシージャが 1 つまたは複数場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターの暗黙のオーバー ロードのいずれかに一致するオーバー ロードされたバージョンを定義することはできません。 詳細については、"暗黙的なオーバー ロードの省略可能なパラメーター"を参照してください[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)します。  
@@ -62,6 +62,7 @@ ms.locfileid: "56972665"
 5.  各プロシージャの終了、`End Sub`または`End Function`に応じてステートメント。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [省略可能なパラメーター](./optional-parameters.md)

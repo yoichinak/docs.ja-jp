@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: 29986c703fd83919ffda9a39d6dbdbf28d778bd6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6db53241eb9a297d1418162f47be1be9107eda9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981895"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814433"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してデータベースを照会します。
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
@@ -77,6 +77,7 @@ ms.locfileid: "56981895"
     [!code-vb[VbLINQToSQLHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [クエリ](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

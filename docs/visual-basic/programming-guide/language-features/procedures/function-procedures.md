@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: f1e2c707b3caa8c7cc49a6f33840ebdfd0c89f4e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834245"
 ---
 # <a name="function-procedures-visual-basic"></a>Function プロシージャ (Visual Basic)
 A`Function`手順は、一連の Visual Basic のステートメントで囲まれた、`Function`と`End Function`ステートメント。 `Function`プロシージャは、タスクを実行し、呼び出し元のコードにコントロールを返します。 コントロールが返されたときにも、呼び出し元のコードに値を返します。  
@@ -99,6 +99,7 @@ End Function
  [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Property プロシージャ](./property-procedures.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 1906c9101f9a53bde13698d0ed17b7b8d0988c1d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981375"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820153"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XProcessingInstruction>オブジェクト。  
@@ -32,7 +32,7 @@ ms.locfileid: "56981375"
  必須。 アプリケーションを示す処理命令のターゲットを名前します。 "Xml"または"XML"で始めることはできません。  
   
  `piData`  
- 任意。 アプリケーションの対象を示す文字列`piName`XML ドキュメントを処理する必要があります。  
+ 省略可能です。 アプリケーションの対象を示す文字列`piName`XML ドキュメントを処理する必要があります。  
   
  `?>`  
  必須。 処理命令の終了を示します。  
@@ -61,6 +61,7 @@ ms.locfileid: "56981375"
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - [XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)

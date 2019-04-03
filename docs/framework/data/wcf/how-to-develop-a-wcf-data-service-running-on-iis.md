@@ -18,14 +18,14 @@ ms.locfileid: "47201072"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>方法: IIS で実行されている WCF データ サービスの開発
 
-このトピックでは、WCF Data Services を使用して、インターネット インフォメーション サービス (IIS) を実行している ASP.NET Web アプリケーションによってホストされる Northwind サンプル データベースに基づくデータ サービスを作成する方法を示します。 ASP.NET 開発サーバーで実行されている ASP.NET Web アプリケーションとして同じ Northwind データ サービスを作成する方法の例は、次を参照してください。、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。
+このトピックでは、WCF Data Services を使用して、インターネット インフォメーション サービス (IIS) を実行している ASP.NET Web アプリケーションによってホストされる Northwind サンプル データベースに基づくデータ サービスを作成する方法を示します。 ASP.NET 開発サーバーで実行されている ASP.NET Web アプリケーションとして同じ Northwind データ サービスを作成する方法の例は、、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)を参照してください。
 
 > [!NOTE]
 > Northwind データ サービスを作成するには、ローカル コンピューターに Northwind サンプル データベースをインストールしておく必要があります。 このサンプル データベースをダウンロード、ダウンロード ページを参照してください[SQL Server のサンプル データベース](https://go.microsoft.com/fwlink/?linkid=24758)します。
 
- このトピックでは、Entity Framework プロバイダーを使用してデータ サービスを作成する方法を示します。 その他のデータ サービス プロバイダーを利用することもできます。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。
+ このトピックでは、Entity Framework プロバイダーを使用してデータ サービスを作成する方法を示します。 その他のデータ サービス プロバイダーを利用することもできます。 詳細については、[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)を参照してください。
 
- サービスを作成した後に、データ サービス リソースへのアクセスを明示的に提供する必要があります。 詳細については、次を参照してください。[方法: データ サービスへのアクセスの有効化](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)します。
+ サービスを作成した後に、データ サービス リソースへのアクセスを明示的に提供する必要があります。 詳細については、[方法: データ サービスへのアクセスの有効化](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)を参照してください。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS で実行されている ASP.NET web アプリケーションを作成します。
 
@@ -132,7 +132,7 @@ ms.locfileid: "47201072"
 
 5. 次の手順のいずれかの手順を実行して、データ モデルをデータベースに接続し、**次**:
 
-    -   データベース接続が既に構成されていない場合は、クリックして**新しい接続**し、新しい接続を作成します。 詳細については、次を参照してください。[方法: SQL Server データベースへの接続を作成](https://go.microsoft.com/fwlink/?LinkId=123631)です。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    -   データベース接続が既に構成されていない場合は、クリックして**新しい接続**し、新しい接続を作成します。 詳細については、[方法: SQL Server データベースへの接続を作成](https://go.microsoft.com/fwlink/?LinkId=123631)を参照してください。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または -
 

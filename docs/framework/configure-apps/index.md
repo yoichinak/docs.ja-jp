@@ -76,7 +76,7 @@ ms.locfileid: "55826435"
   
 -   ASP.NET によってホストされるアプリケーション。  
   
-     ASP.NET 構成ファイルの詳細については、次を参照してください。 [ASP.NET 構成設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))します。
+     ASP.NET 構成ファイルの詳細については、[ASP.NET 構成設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))を参照してください。
   
 -   Internet Explorer によってホストされるアプリケーション。  
   

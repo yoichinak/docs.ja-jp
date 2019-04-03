@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: e840c83d7969eeb0322034f0f274fb19ca2b8e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622846"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832178"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>方法: 変数にアクセスする (Visual Basic)、派生クラスによって非表示
 派生クラスのコードは、変数にアクセスするときに、コンパイラ通常解決アクセス可能な最も近いバージョンは、アクセス可能なバージョンへの参照を最小限継承の手順との下位にアクセスするクラスからします。 場合は、変数は、派生クラスで定義されているが、コードは、通常の定義にアクセスします。  
@@ -50,6 +50,7 @@ ms.locfileid: "54622846"
  シャドウされた変数の意図しないバージョンを参照するリスクを削減するには、シャドウされた変数へのすべての参照を完全に修飾することができます。 シャドウ処理には、1 つ以上のバージョンの同じ名前の変数が導入されています。 コード ステートメントは、変数名が参照されているときに、コンパイラの参照が解決されるバージョンは、コード ステートメントの場所と該当する文字列の存在などの要因によって異なります。 これにより、変数の正しくないバージョンを参照するリスクが増加することができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

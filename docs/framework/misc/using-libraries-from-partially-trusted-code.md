@@ -22,7 +22,7 @@ ms.locfileid: "54585272"
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  このトピックでは、厳密な名前付きアセンブリの動作に対処しにのみ適用されます[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)アセンブリ。 [透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)内のアセンブリ、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]または後での影響を受けない厳密な名前。 セキュリティ システムへの変更の詳細については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。  
+>  このトピックでは、厳密な名前付きアセンブリの動作に対処しにのみ適用されます[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)アセンブリ。 [透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)内のアセンブリ、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]または後での影響を受けない厳密な名前。 セキュリティ システムへの変更の詳細については、[セキュリティ変更](../../../docs/framework/security/security-changes.md)を参照してください。  
   
  ホストまたはサンドボックスから不完全な信頼を受けているアプリケーションは、ライブラリの作成者が <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用して具体的に許可しない限り、共有マネージド ライブラリを呼び出せません。 そのため、アプリケーションの作成者は、ライブラリによっては部分的に信頼されたコンテキストから使用できないことを認識する必要があります。 既定では、すべてのコードで実行する部分的に信頼された[サンド ボックス](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)ではありません。 完全信頼アセンブリの一覧が部分的に信頼されているとします。 部分的に信頼されたコンテキストからコードを実行する、または部分的に信頼されたコードによってコードが呼び出されることはないと考えられる場合は、このセクションの情報を考慮する必要はありません。 ただし、部分的に信頼されたコードと対話する必要があるコード、または部分的に信頼されたコンテキストから操作するコードを記述する場合は、次の要因を考慮する必要があります。  
   

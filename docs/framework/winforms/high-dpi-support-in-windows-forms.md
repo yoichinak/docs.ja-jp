@@ -84,7 +84,7 @@ ms.locfileid: "57843610"
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
+個々 のキーおよび値の一覧は、[Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)を参照してください。
 
 ## <a name="new-dpi-change-events"></a>新しい DPI 変更イベント
 

@@ -54,7 +54,7 @@ SQL Server と .NET Framework は異なる型システムを使用していま�
   
 ## <a name="sql-server-documentation"></a>SQL Server のドキュメント
 
-SQL Server データ型の詳細については、次を参照してください。[データ型 (TRANSACT-SQL)](/sql/t-sql/data-types/data-types-transact-sql)します。
+SQL Server データ型の詳細については、[データ型 (TRANSACT-SQL)](/sql/t-sql/data-types/data-types-transact-sql)を参照してください。
   
 ## <a name="see-also"></a>関連項目
 - [SQL Server データ型と ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)

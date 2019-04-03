@@ -76,7 +76,7 @@ ms.locfileid: "54505940"
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md)ジャストイン タイム (JIT) コンパイル時に行われ、直前の呼び出し元のみを確認します。 このセキュリティ チェックでは、呼び出し元の呼び出し元はチェックされません。 このチェックに合格すると、呼び出し元が何度も呼び出す場合であってもさらにセキュリティ オーバーヘッドが生じることはありません。 ただし、おびき寄せによる攻撃からの保護機能はありません。 **LinkDemand**テストに合格して、コードを参照するすべてのコードを呼び出す権限のあるコードを使用して悪意のあるコードを許可することでセキュリティを中断できます可能性があります。 そのため、使用しないでください**LinkDemand**しない限り、すべての可能な弱点を完全に回避できます。  
   
     > [!NOTE]
-    >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、リンク確認要求に置換された、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、次を参照してください。[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)します。  
+    >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、リンク確認要求に置換された、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)を参照してください。  
   
  使用する場合に必要な特別な措置**LinkDemand**個別にプログラミングする必要があります。 を実施に役立てセキュリティ システムのことができます。 どのようなミスもセキュリティを脆弱化します。 作成したコードを使用する、承認されたすべてのコード側で、次の措置を行うことによって追加セキュリティを実装する責任があります。  
   

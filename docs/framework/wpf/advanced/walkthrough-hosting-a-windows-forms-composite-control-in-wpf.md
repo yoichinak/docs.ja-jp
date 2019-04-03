@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359719"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654225"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>チュートリアル: WPF で Windows フォーム複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コードをより効果的か以上で再利用するには、そのコードの一部、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションではなく最初から修正します。 最も一般的なシナリオでは、既存の Windows フォーム コントロールがある場合です。 場合によってもがありませんこれらのコントロールのソース コードにアクセスします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このようなコントロールをホストするため、簡単な手順を提供する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 たとえば、使用することができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特殊なをホストしているときに、プログラミングの大部分の<xref:System.Windows.Forms.DataGridView>コントロール。  
@@ -36,9 +36,10 @@ ms.locfileid: "57359719"
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Windows フォーム複合コントロールを実装します。  
  この例で使用される Windows フォーム複合コントロールは、単純なデータ入力フォームです。 このフォームは、ユーザーの名前とアドレスを受け取るし、カスタム イベントを使用してホストにその情報を返します。 次の図はレンダリングされたコントロールを示しています。  
-  
- ![単純な Windows フォーム コントロールの](./media/wfcontrol.gif "WFControl")  
-Windows フォーム複合コントロール  
+
+ 次の図は、Windows フォーム複合コントロールを示しています。  
+
+ ![シンプルな Windows フォーム コントロールを示すスクリーン ショット。](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>プロジェクトの作成  
  プロジェクトを開始するには  
@@ -111,8 +112,7 @@ Windows フォーム複合コントロール
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>アセンブリに厳密な名前を付けると、アセンブリのビルド
  このアセンブリによって参照されるの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、厳密な名前必要があります。 厳密な名前を作成するには、Sn.exe でキー ファイルを作成し、プロジェクトに追加します。
 
-1.  
-  [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] のコマンド プロンプトを開きます。 これを行うには、クリックして、**開始**] メニューの [クリックして**すべてのプログラムまたは Microsoft Visual Studio 2010 または Visual Studio ツール/visual Studio コマンド プロンプト**。 これは、カスタマイズされた環境変数のコンソール ウィンドウを起動します。
+1.  [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] のコマンド プロンプトを開きます。 これを行うには、クリックして、**開始**] メニューの [クリックして**すべてのプログラムまたは Microsoft Visual Studio 2010 または Visual Studio ツール/visual Studio コマンド プロンプト**。 これは、カスタマイズされた環境変数のコンソール ウィンドウを起動します。
 
 2.  コマンド プロンプトを使用して、`cd`コマンドをプロジェクト フォルダーに移動します。
 
@@ -129,7 +129,9 @@ Windows フォーム複合コントロール
 ## <a name="implementing-the-wpf-host-application"></a>WPF ホスト アプリケーションの実装
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホスト アプリケーションで使用する、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールをホストに`MyControl1`します。 アプリケーションのハンドル、`OnButtonClick`コントロールからデータを受信するイベントです。 コントロールのプロパティの一部を変更するためのオプション ボタンのコレクションがあります、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 次の図は、完成したアプリケーションを示します。
 
- ![WPF ページに埋め込まれたコントロール](./media/avalonhost.gif "AvalonHost") 、完全なアプリケーションは、WPF アプリケーションに埋め込まれたコントロールを表示
+次の図は、WPF アプリケーションに埋め込まれたコントロールを含む、完全なアプリケーションを示しています。
+
+ ![コントロールを示すスクリーン ショットは、WPF ページに埋め込まれます。](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>プロジェクトの作成
  プロジェクトを開始するには

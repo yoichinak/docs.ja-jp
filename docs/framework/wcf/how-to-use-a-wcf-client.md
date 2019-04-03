@@ -16,7 +16,7 @@ ms.locfileid: "58411721"
 ---
 # <a name="tutorial-use-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを使用します。
 
-このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクの最後のタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
+このチュートリアルでは、基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクの最後のタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
 
 作成、Windows Communication Foundation (WCF) プロキシを構成したら後、は、クライアント インスタンスを作成し、クライアント アプリケーションをコンパイルします。 使用する WCF サービスと通信します。 
 

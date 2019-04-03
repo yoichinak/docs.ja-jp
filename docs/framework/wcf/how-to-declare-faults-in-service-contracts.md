@@ -13,15 +13,15 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54727951"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>方法: サービス コントラクトでのエラーを宣言します。
-マネージド コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーション、ただし、サービス コントラクト指定サービス コントラクトの SOAP エラーを宣言することでどのようなエラー情報がクライアントに返されます。 例外とエラーの間のリレーションシップの概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+マネージド コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーション、ただし、サービス コントラクト指定サービス コントラクトの SOAP エラーを宣言することでどのようなエラー情報がクライアントに返されます。 例外とエラーの間のリレーションシップの概要については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>SOAP エラーを指定するサービス コントラクトを作成する  
   
 1.  サービス コントラクトを作成し、操作をいくつか定義します。 例については、「[方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)します。  
   
-2.  操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化するには、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+2.  操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化するには、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
   
-3.  選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 詳細については、作成して、シリアル化可能な型を使用して、次を参照してください。 [Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)します。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
+3.  選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 詳細については、作成して、シリアル化可能な型を使用して、[Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)を参照してください。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
   
      [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
      [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  

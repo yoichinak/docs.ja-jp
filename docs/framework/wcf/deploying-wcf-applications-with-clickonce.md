@@ -12,7 +12,7 @@ ms.locfileid: "54680976"
 # <a name="deploying-wcf-applications-with-clickonce"></a>ClickOnce を使用して WCF アプリケーションを展開する
 Windows Communication Foundation (WCF) を使用するクライアント アプリケーションは、ClickOnce テクノロジを使用してデプロイできます。 このテクノロジを使用すると、クライアント アプリケーションが、信頼できる証明書でデジタル署名されている場合、コード アクセス セキュリティによって提供されるランタイム セキュリティ保護を受けられます。 ClickOnce アプリケーションの署名に使用される証明書は、信頼された発行者のストアに存在する必要があり、またそのクライアント コンピューターのローカル セキュリティ ポリシーでは、発行者の証明書で署名されたアプリケーションに対して、完全信頼のアクセス許可が構成される必要があります。  
   
- ClickOnce アプリケーションと信頼された発行元を構成する方法の詳細については、次を参照してください。 [Configuring ClickOnce Trusted Publishers](https://go.microsoft.com/fwlink/?LinkId=94774)します。  
+ ClickOnce アプリケーションと信頼された発行元を構成する方法の詳細については、[Configuring ClickOnce Trusted Publishers](https://go.microsoft.com/fwlink/?LinkId=94774)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [信頼されたアプリケーションの配置の概要](https://go.microsoft.com/fwlink/?LinkId=94775)

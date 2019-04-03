@@ -27,7 +27,7 @@ ms.locfileid: "56219244"
  たとえば、短いループ内で多くの文字列変数を連結する場合は、C# の [+ 演算子](~/docs/csharp/language-reference/operators/addition-operator.md)または Visual Basic の[連結演算子](~/docs/visual-basic/language-reference/operators/concatenation-operators.md)ではなく、<xref:System.Text.StringBuilder?displayProperty=nameWithType> を使用します。 詳細については、「[方法 :複数の文字列連結](../../csharp/how-to/concatenate-multiple-strings.md)と[Visual Basic の連結演算子](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)します。  
   
 ## <a name="destructors"></a>デストラクター  
- 空のデストラクターは使用しないでください。 デストラクターがクラスに存在するときは、エントリが終了キューで作成されます。 デストラクターを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 デストラクターが空の場合は、これによってパフォーマンスが低下します。 詳細については、次を参照してください。[デストラクター](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)と[オブジェクトの有効期間。オブジェクトの作成し、破棄方法](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。  
+ 空のデストラクターは使用しないでください。 デストラクターがクラスに存在するときは、エントリが終了キューで作成されます。 デストラクターを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 デストラクターが空の場合は、これによってパフォーマンスが低下します。 詳細については、[デストラクター](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)と[オブジェクトの有効期間。オブジェクトの作成し、破棄方法](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)を参照してください。  
   
 ## <a name="other-resources"></a>その他の参照情報  
   

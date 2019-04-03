@@ -73,7 +73,7 @@ F#マップのメソッドを含め、ほとんどのコレクション型を提
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
-詳細については、次を参照してください。[一覧](../language-reference/lists.md)します。
+詳細については、[一覧](../language-reference/lists.md)を参照してください。
 
 ## <a name="return-the-value-from-a-function-call"></a>関数呼び出しの結果値を返す
 
@@ -176,7 +176,7 @@ F#マップのメソッドを含め、ほとんどのコレクション型を提
 - 関数を関数呼び出しの結果値として返すことができます。
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-F# の詳細については、次を参照してください。、 [F# 言語リファレンス](../language-reference/index.md)します。
+F# の詳細については、、 [F# 言語リファレンス](../language-reference/index.md)を参照してください。
 
 ## <a name="example"></a>例
 

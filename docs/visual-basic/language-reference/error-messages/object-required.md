@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 9a617c9f2982fe251ff95426938b9800b201df53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afbfd19e298b14ac53c134f989e2ee22769910f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718290"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837456"
 ---
 # <a name="object-required-visual-basic"></a>オブジェクトが必要です。(Visual Basic)
 プロパティおよびメソッドへの参照には、多くの場合、オブジェクトの明示的な修飾子が必要です。 これは、このような場合です。  
@@ -25,4 +25,5 @@ ms.locfileid: "54718290"
 4.  オブジェクトのドキュメントを確認し、アクションが有効かどうかを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)

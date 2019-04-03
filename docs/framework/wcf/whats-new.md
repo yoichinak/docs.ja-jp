@@ -18,7 +18,7 @@ ms.locfileid: "57492739"
 
 ## <a name="wcf-simplification-features"></a>WCF の単純化機能
 
-WCF 4.5 アプリケーションの開発および保守を容易にするために多大な労力が費やされてきました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。
+WCF 4.5 アプリケーションの開発および保守を容易にするために多大な労力が費やされてきました。 詳細については、[WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)を参照してください。
 
 ### <a name="task-based-async-support"></a>タスク ベースの非同期のサポート
 
@@ -36,19 +36,19 @@ WCF では、コントラクト優先の開発がサポートされるように�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>ポータブル サブセット プロジェクトからのサービス参照の追加
 
-ポータブル サブセット プロジェクトにより、.NET アセンブリ プログラマは 1 つのソース ツリーを保持しつつ、システムを構築できるようになります。また、ポータブル サブセット プロジェクトは、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしています。 ポータブル サブセット プロジェクトは、任意の .NET プラットフォームで使用できる .NET framework アセンブリである .NET ポータブル ライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、次を参照してください。[ポータブル サブセット プロジェクトでサービス参照の追加](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)します。
+ポータブル サブセット プロジェクトにより、.NET アセンブリ プログラマは 1 つのソース ツリーを保持しつつ、システムを構築できるようになります。また、ポータブル サブセット プロジェクトは、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしています。 ポータブル サブセット プロジェクトは、任意の .NET プラットフォームで使用できる .NET framework アセンブリである .NET ポータブル ライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、[ポータブル サブセット プロジェクトでサービス参照の追加](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md)を参照してください。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 互換性モードの既定値の変更
 
-WCF には ASP.NET 互換性モードが用意されています。これにより、開発者は WCF サービスを作成する際に ASP.NET HTTP パイプラインの機能へのフル アクセスが付与されます。 このモードを使用するに設定する必要があります、`aspNetCompatibilityEnabled`属性を true に、 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config のセクション。さらに、この appDomain 内のサービスでは、`RequirementsMode` の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> プロパティを <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定しておく必要があります。 既定で<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>に設定されているようになりました<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>します。 詳細については、次を参照してください。 [Windows Communication Foundation の新](../../../docs/framework/wcf/whats-new.md)と[WCF サービスと ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。
+WCF には ASP.NET 互換性モードが用意されています。これにより、開発者は WCF サービスを作成する際に ASP.NET HTTP パイプラインの機能へのフル アクセスが付与されます。 このモードを使用するに設定する必要があります、`aspNetCompatibilityEnabled`属性を true に、 [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) web.config のセクション。さらに、この appDomain 内のサービスでは、`RequirementsMode` の <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> プロパティを <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> または <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> に設定しておく必要があります。 既定で<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>に設定されているようになりました<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>します。 詳細については、[Windows Communication Foundation の新](../../../docs/framework/wcf/whats-new.md)と[WCF サービスと ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)を参照してください。
 
 ### <a name="new-transport-default-values"></a>トランスポートの新しい既定値
 
-構成を簡略化するため、多くのトランスポート プロパティの既定値が変更されました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。
+構成を簡略化するため、多くのトランスポート プロパティの既定値が変更されました。 詳細については、[WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)を参照してください。
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas> には、メッセージの作成中にエンコーダーで使用されるメモリの量を制限する XML ディクショナリ リーダーの構成可能なクォータ値が格納されます。 これらのクォータは構成可能ですが、開発者がこのクォータを明示的に設定する必要性を低くするために既定値が変更されました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。
+<xref:System.Xml.XmlDictionaryReaderQuotas> には、メッセージの作成中にエンコーダーで使用されるメモリの量を制限する XML ディクショナリ リーダーの構成可能なクォータ値が格納されます。 これらのクォータは構成可能ですが、開発者がこのクォータを明示的に設定する必要性を低くするために既定値が変更されました。 詳細については、[WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)を参照してください。
 
 ### <a name="wcf-configuration-validation"></a>WCF 構成検証
 
@@ -60,7 +60,7 @@ Visual Studio 内のビルド プロセスの一環として、プロジェク�
 
 ## <a name="streaming-improvements"></a>ストリーミングの強化
 
-非同期ストリーミングのサポートが追加されました。これにより、受信側が読み取らない場合または読み取り速度が遅い場合に送信側がスレッドをブロックすることはなくなったため、スケーラビリティが向上します。 IIS でホストされる WCF サービスにクライアントがストリーム メッセージを送信する際のメッセージ バッファーの制限を解除しました。 詳細については、次を参照してください。 [WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)します。
+非同期ストリーミングのサポートが追加されました。これにより、受信側が読み取らない場合または読み取り速度が遅い場合に送信側がスレッドをブロックすることはなくなったため、スケーラビリティが向上します。 IIS でホストされる WCF サービスにクライアントがストリーム メッセージを送信する際のメッセージ バッファーの制限を解除しました。 詳細については、[WCF の単純化機能](../../../docs/framework/wcf/wcf-simplification-features.md)を参照してください。
 
 ## <a name="simplifying-exposing-an-endpoint-over-https-with-iis"></a>IIS での HTTPS 上のエンドポイントの公開の簡略化
 
@@ -92,7 +92,7 @@ Websocket は、TCP と同様のパフォーマンス特性を持つポート 80
 
 ## <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成
 
-Windows Communication Foundation (WCF) では、構成ファイルまたはコードを使用してサービスを構成できます。 構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンのコードで WCF (4.0 およびそれ以前) 構成サービスが自己ホスト型のシナリオで簡単、<xref:System.ServiceModel.ServiceHost>クラスを使用すると、エンドポイント、ServiceHost.Open を呼び出す前に動作を構成します。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、両方を構成する簡単な方法は自己ホスト型し、web ホスト コードでサービスを提供します。 詳細については、次を参照してください。[コードで WCF サービスを構成する](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)します。
+Windows Communication Foundation (WCF) では、構成ファイルまたはコードを使用してサービスを構成できます。 構成ファイルは、サービスを配置した後に構成する必要がある場合に便利です。 構成ファイルを使用する場合、IT 専門家は構成ファイルを更新するだけで、再コンパイルの必要はありません。 ただし、構成ファイルの管理は複雑で難しくなる場合があります。 構成ファイルのデバッグはサポートされていません。また、構成要素は名前で参照されるため、構成ファイルの作成時にエラーが発生しやすく、構成ファイルの作成が困難になります。 WCF では、コードでサービスを構成することもできます。 以前のバージョンのコードで WCF (4.0 およびそれ以前) 構成サービスが自己ホスト型のシナリオで簡単、<xref:System.ServiceModel.ServiceHost>クラスを使用すると、エンドポイント、ServiceHost.Open を呼び出す前に動作を構成します。 ただし、Web ホストのシナリオでは、<xref:System.ServiceModel.ServiceHost> クラスにアクセスできません。 Web ホスト サービスを構成するには、`System.ServiceModel.ServiceHostFactory` を作成して必要な構成を実行する <xref:System.ServiceModel.Activation.ServiceHostFactory> を作成する必要がありました。 .NET 4.5 以降、WCF では、両方を構成する簡単な方法は自己ホスト型し、web ホスト コードでサービスを提供します。 詳細については、[コードで WCF サービスを構成する](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)を参照してください。
 
 ## <a name="channelfactory-caching"></a>ChannelFactory のキャッシュ
 
@@ -106,7 +106,7 @@ WCF クライアント アプリケーションでは、<xref:System.ServiceMode
 
 4. リソースの破棄
 
-このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、次を参照してください。[チャネル ファクトリとキャッシュ](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)します。
+このオーバーヘッドを最小限に抑えるために、WCF では、WCF クライアント プロキシの使用時にチャネル ファクトリをキャッシュできます。 詳細については、[チャネル ファクトリとキャッシュ](../../../docs/framework/wcf/feature-details/channel-factory-and-caching.md)を参照してください。
 
 ## <a name="compression-and-the-binary-encoder"></a>圧縮およびバイナリ エンコーダー
 
@@ -122,11 +122,11 @@ HTTP トランスポートとトランスポート セキュリティを使用�
 
 ## <a name="idn-support"></a>IDN サポート
 
-国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については、次を参照してください。 [WCF と国際化ドメイン名](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)します。
+国際化ドメイン名を持つ WCF サービスのためのサポートが追加されました。 詳細については、[WCF と国際化ドメイン名](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md)を参照してください。
 
 ## <a name="httpclient"></a>HttpClient
 
-HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、次を参照してください。[ソーシャルで HTTP サービスに接続されているアプリケーションを作成する](https://go.microsoft.com/fwlink/?LinkId=231886)と[HTTP クライアントのサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)します。
+HTTP 要求の処理が容易になるように <xref:System.Net.Http.HttpClient> という新しいクラスが追加されました。 詳細については、[ソーシャルで HTTP サービスに接続されているアプリケーションを作成する](https://go.microsoft.com/fwlink/?LinkId=231886)と[HTTP クライアントのサンプル](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)を参照してください。
 
 ## <a name="configuration-intellisense"></a>構成の Intellisense
 

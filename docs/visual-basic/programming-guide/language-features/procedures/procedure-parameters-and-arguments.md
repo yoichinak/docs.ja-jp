@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972550"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825457"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
 ほとんどの場合、プロシージャには、呼び出されたときの状況に関する情報が必要があります。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
@@ -36,8 +36,7 @@ ms.locfileid: "56972550"
   
  次の図は、プロシージャを呼び出すコード`safeSquareRoot`2 つの異なる場所からします。 最初の呼び出しは、変数の値を渡します`x`(4.0) パラメーターに`number`とで戻り値`root`(2.0)、変数に割り当てられている`y`します。 2 番目の呼び出しにリテラル値 9.0 を通過する`number`、戻り値 (3.0) を変数に代入と`z`します。  
   
- ![パラメーターに引数を渡すグラフィック ダイアグラム](./media/parametersargue.gif "ParametersArgue")  
-パラメーターに引数を渡す  
+ ![パラメーターに引数を渡すことを示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  詳細については、次を参照してください。[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)します。  
   
@@ -60,6 +59,7 @@ ms.locfileid: "56972550"
  A*ジェネリック プロシージャ*も 1 つまたは複数定義します*パラメーター入力*だけでなく、通常のパラメーター。 ジェネリック プロシージャでは、個々 の呼び出しの要件をデータ型を調整できるように、プロシージャを呼び出すたびに異なるデータ型を渡すコードの呼び出しを許可します。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)

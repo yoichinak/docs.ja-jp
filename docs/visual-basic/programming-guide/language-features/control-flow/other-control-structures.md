@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819321"
 ---
 # <a name="other-control-structures-visual-basic"></a>その他の制御構造 (Visual Basic)
 Visual Basic では、リソースを破棄またはオブジェクト参照を繰り返すことが必要とする回数を削減するのに役立つ制御構造を提供します。  
@@ -22,6 +22,7 @@ Visual Basic では、リソースを破棄またはオブジェクト参照を�
  `With...End With`構築では、オブジェクト参照を 1 回指定することができ、一連のメンバーにアクセスするステートメントを実行します。 これは、コードを簡略化、Visual Basic がそれにアクセスする各ステートメントの参照を再確立があるないために、パフォーマンスを向上させます。 詳細については、[With...End With ステートメント](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

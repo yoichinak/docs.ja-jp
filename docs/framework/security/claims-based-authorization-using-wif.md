@@ -42,7 +42,7 @@ ms.locfileid: "48872927"
   
 -   **トークン発行中**。 ユーザーが認証されるときに、Microsoft Azure のアクセス制御サービス (ACS) などのフェデレーション プロバイダーや ID プロバイダー STS によってロール クレームを発行できます。  
   
--   **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、次を参照してください。 [How To: 実装ロール ベース アクセス制御 (RBAC) では、クレーム対応 ASP.NET アプリケーションを使用して WIF および ACS](https://go.microsoft.com/fwlink/?LinkID=247445)します。  
+-   **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、[How To: 実装ロール ベース アクセス制御 (RBAC) では、クレーム対応 ASP.NET アプリケーションを使用して WIF および ACS](https://go.microsoft.com/fwlink/?LinkID=247445)を参照してください。  
   
 -   **samlSecurityTokenRequirement 構成セクションを使用して、任意のクレームをロールの種類に対応付ける**。宣言を使用したアプローチで、構成のみを使ってクレーム変換が行われます。その際、コーディングは必要ありません。  
   

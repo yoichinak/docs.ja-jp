@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: bd88c05f16a2027b0367effebef809cb5e5abfe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb5f021371291483b8eb2a13727a9fda94540638
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617436"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838850"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
 示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体の有効値の一部を保持することができない可能性がある型に変換します。  
@@ -32,6 +32,7 @@ ms.locfileid: "54617436"
  [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

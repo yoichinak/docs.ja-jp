@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821297"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 A*特性*とそのコードをやり取りする方法に影響を与える要素の特定の側面は、宣言された要素の。 宣言された各要素は、関連付けられている次の特性の 1 つ以上があります。  
@@ -36,15 +36,15 @@ A*特性*とそのコードをやり取りする方法に影響を与える要�
   
 |要素|データの種類|有効期間|スコープ<sup>1</sup>|アクセス レベル|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|変数|[はい]|[はい]|[はい]|[はい]|  
+|変数|[はい]|はい|はい|[はい]|  
 |定数|[はい]|×|[はい]|[はい]|  
 |列挙|[はい]|×|[はい]|[はい]|  
 |構造体|いいえ|×|[はい]|[はい]|  
-|プロパティ|[はい]|[はい]|[はい]|[はい]|  
-|メソッド|いいえ|[はい]|[はい]|[はい]|  
-|プロシージャ (`Sub`または`Function`)|いいえ|[はい]|[はい]|[はい]|  
-|プロシージャ パラメーター|[はい]|[はい]|[はい]|いいえ|  
-|関数の戻り値|[はい]|[はい]|[はい]|いいえ|  
+|プロパティ|[はい]|はい|はい|[はい]|  
+|メソッド|いいえ|[はい]|はい|[はい]|  
+|プロシージャ (`Sub`または`Function`)|いいえ|[はい]|はい|[はい]|  
+|プロシージャ パラメーター|[はい]|はい|はい|いいえ|  
+|関数の戻り値|[はい]|はい|はい|いいえ|  
 |演算子|[はい]|×|[はい]|[はい]|  
 |Interface|いいえ|×|[はい]|[はい]|  
 |クラス|いいえ|×|[はい]|[はい]|  
@@ -54,8 +54,9 @@ A*特性*とそのコードをやり取りする方法に影響を与える要�
  <sup>1</sup>スコープとして呼ば*可視性*します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [宣言された要素](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

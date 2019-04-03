@@ -38,7 +38,7 @@ ms.locfileid: "58037055"
   
  ほとんどの解釈、`xml:space`属性の効果と属性の値が子要素にスコープ設定されます。  
   
- 空白文字で XAML 処理の詳細については、次を参照してください。[空白 XAML 処理](whitespace-processing-in-xaml.md)します。  
+ 空白文字で XAML 処理の詳細については、[空白 XAML 処理](whitespace-processing-in-xaml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [空白 XAML での処理](whitespace-processing-in-xaml.md)

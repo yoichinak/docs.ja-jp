@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818539"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) との間のデータを移動します。
 変数にデータを格納するには、代入ステートメントの左側にある変数名を置きます。  
@@ -50,6 +50,7 @@ ms.locfileid: "54717946"
      変数の値は、定数とし、変数または代入ステートメントの左側にあるプロパティに格納されます、式に参加します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

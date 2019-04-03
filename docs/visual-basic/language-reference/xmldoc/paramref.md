@@ -5,12 +5,12 @@ helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 49ed974dabe747c383fa1ffa85371afecc4d2f5d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3e2bf7990343a325bbecc56f6d3754a77f1e08e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484279"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818672"
 ---
 # <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
 単語をパラメーターとして書式設定します。  
@@ -36,4 +36,5 @@ ms.locfileid: "57484279"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -13,7 +13,7 @@ ms.locfileid: "48838989"
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 の概要
 Windows Identity Foundation 4.5 は、アプリケーション内でクレーム ベース ID を実装するための一連の .NET Framework クラスです。 このクラスを使用することで、クレーム対応アプリケーションおよびサービスのメリットを簡単に得られるようになります。 WIF 4.5 は、.NET Framework Version 4.5 以降が使用されているすべての Web アプリケーションまたは Web サービスで使用できます。 WIF は、オープン スタンダードに基づく業界共通の構想を取り入れた Microsoft のフェデレーション ID ソフトウェア ファミリの 1 つにすぎません。 フェデレーション ID は、[Active Directory® フェデレーション サービス](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0、[Microsoft Azure のアクセス制御サービス](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS)、および WIF の 3 つのコンポーネントで構成されます。 この 3 つのコンポーネントが一体となって、Microsoft の新しいクレーム ベースのクラウド ID およびアクセス プラットフォームのコアを形成しています。  
   
- WIF の詳細については、次を参照してください。、 [Windows Identity Foundation の Web サイト](https://go.microsoft.com/fwlink/?LinkId=149009)msdn Security Developer Center にします。 WIF を使用してアプリケーションの作成の概要については、次を参照してください。 [Windows Identity Foundation のプログラミング](https://go.microsoft.com/fwlink/?LinkId=210158)Vittorio bertocci が (Microsoft Press 発行)。  
+ WIF の詳細については、、 [Windows Identity Foundation の Web サイト](https://go.microsoft.com/fwlink/?LinkId=149009)msdn Security Developer Center にを参照してください。 WIF を使用してアプリケーションの作成の概要については、次を参照してください。 [Windows Identity Foundation のプログラミング](https://go.microsoft.com/fwlink/?LinkId=210158)Vittorio bertocci が (Microsoft Press 発行)。  
   
 ## <a name="wif-45-features"></a>WIF 4.5 の機能  
  WIF 4.5 は、ID 対応アプリケーションをビルドするためのフレームワークです。 このフレームワークは、WS-Trust プロトコルと WS-Federation プロトコルを抽象化し、クレーム対応アプリケーションと、必要に応じてセキュリティ トークン サービス (STS) をビルドするための API を開発者に提供します。 アプリケーションでは、WIF を使用して、AD FS 2.0、ACS などの STS から発行されたトークンを処理し、Web アプリケーションまたは Web サービスで ID ベースの決定を下すことができます。  

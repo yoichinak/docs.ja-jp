@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978970"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837092"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャ (Visual Basic) を呼び出す
 演算子プロシージャを呼び出すには、式で演算子記号を使用します。 場合は、変換演算子を呼び出す、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)に値を別の 1 つのデータ型に変換します。  
@@ -54,6 +54,7 @@ ms.locfileid: "56978970"
  必ず、クラスまたは構造体を使用しているが、使用する演算子を定義します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [演算子プロシージャ](./operator-procedures.md)
 - [方法: 演算子を定義します。](./how-to-define-an-operator.md)
 - [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)

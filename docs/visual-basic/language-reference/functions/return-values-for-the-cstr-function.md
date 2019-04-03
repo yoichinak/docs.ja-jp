@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 22fa31d862259c6dc8607ee44561bc8c18662d88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642819"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819516"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 関数の戻り値 (Visual Basic)
 次の表は、戻り値の`CStr`のさまざまなデータ型の`expression`します。  
@@ -34,6 +34,7 @@ ms.locfileid: "54642819"
 >  `CStr`関数は、アプリケーションの現在のカルチャ設定に基づいて変換を実行します。 特定のカルチャの数値の文字列形式を取得するには、数値を使用`ToString(IFormatProvider)`メソッド。 たとえば、使用して<xref:System.Double.ToString%2A?displayProperty=nameWithType>型の値を変換するときに`Double`を`String`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)

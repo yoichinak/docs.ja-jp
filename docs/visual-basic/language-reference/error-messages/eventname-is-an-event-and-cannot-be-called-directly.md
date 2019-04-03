@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: 4e27d9ce788ae7b9741c0cb80da776959748b8b9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272722"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831445"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname >' は、イベントで、直接呼び出すことはできません
 ' <`eventname`>' は、イベントで、これは直接呼び出すことができません。 使用して、`RaiseEvent`イベントを発生させるステートメントです。  
@@ -26,4 +26,5 @@ ms.locfileid: "55272722"
 1.  使用して、`RaiseEvent`イベントを通知し、それを処理する手順を起動するステートメント。  
   
 ## <a name="see-also"></a>関連項目
+
 - [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

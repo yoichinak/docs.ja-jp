@@ -2,9 +2,15 @@
 title: クエリ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'queries [Visual Basic]'
-  - 'LINQ, queries'
+- queries [Visual Basic]
+- LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836897"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
 Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 、コード内の式。  
@@ -53,5 +59,6 @@ Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/v
  について説明します、`Where`句は、クエリのフィルター処理条件を指定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

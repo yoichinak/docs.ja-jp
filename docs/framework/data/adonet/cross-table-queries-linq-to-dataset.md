@@ -21,7 +21,7 @@ ms.locfileid: "55825941"
   
  <xref:System.Linq.Enumerable.GroupJoin%2A>内部結合と左外部結合のスーパー セットの実装は演算子リレーショナル データベース用語で直接相当するものがありません。 左外部結合は 2 番目のコレクションの要素と相関関係があるない場合でも、最初 (左側) のコレクションの各要素を返す結合です。  
   
- 結合の詳細については、次を参照してください。[の結合操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))します。  
+ 結合の詳細については、[の結合操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、AdventureWorks サンプル データベースの `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルを従来の方法で結合し、8 月以降のオンラインでの注文を取得します。  

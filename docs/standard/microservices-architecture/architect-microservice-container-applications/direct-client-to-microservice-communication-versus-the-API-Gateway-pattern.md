@@ -4,12 +4,12 @@ description: API ゲートウェイ パターンと、クライアントから�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675453"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462956"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -173,25 +173,25 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Charles Richardson。パターン: API ゲートウェイ/Backend for Front-End** \
-  [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
+  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
 
 - **API ゲートウェイ パターン** \
-  [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
 - **集約とコンポジションのパターン** \
-  [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
+  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** \
-  [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
+  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
 
 - **Udi Dahan。サービス指向のコンポジション** \
-  [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 - **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス (ビデオ)** \
-  [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 - **Nutshell の API ゲートウェイ** (ASP.net Core API ゲートウェイのチュートリアル シリーズ) \
-  [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
 >[前へ](identify-microservice-domain-model-boundaries.md)

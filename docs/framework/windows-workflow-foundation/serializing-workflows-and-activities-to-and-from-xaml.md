@@ -17,7 +17,7 @@ ms.locfileid: "57715842"
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- それぞれの <xref:System.Activities.DynamicActivityProperty> インスタンスでワークフローへの入力引数を 1 つずつ表し、<xref:System.Activities.ActivityBuilder.Implementation%2A> にワークフローのロジックを構成するアクティビティが格納されています。 この例では、右辺値の式が Visual Basic 式であることに注意してください。 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> を使用しないと、ラムダ式は XAML 形式にシリアル化できません。 シリアル化されたワーク フローをワークフロー デザイナーで開くか編集することを目的としている場合は、Visual Basic 式を使用する必要があります。 詳細については、次を参照してください。[オーサリング ワークフロー、アクティビティ、および命令型コードを使用して式](authoring-workflows-activities-and-expressions-using-imperative-code.md)します。  
+ それぞれの <xref:System.Activities.DynamicActivityProperty> インスタンスでワークフローへの入力引数を 1 つずつ表し、<xref:System.Activities.ActivityBuilder.Implementation%2A> にワークフローのロジックを構成するアクティビティが格納されています。 この例では、右辺値の式が Visual Basic 式であることに注意してください。 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> を使用しないと、ラムダ式は XAML 形式にシリアル化できません。 シリアル化されたワーク フローをワークフロー デザイナーで開くか編集することを目的としている場合は、Visual Basic 式を使用する必要があります。 詳細については、[オーサリング ワークフロー、アクティビティ、および命令型コードを使用して式](authoring-workflows-activities-and-expressions-using-imperative-code.md)を参照してください。  
   
  XAML への <xref:System.Activities.ActivityBuilder> インスタンスで表されるワークフロー定義を XAML 形式にシリアル化するには、<xref:System.Activities.XamlIntegration.ActivityXamlServices> を使用して <xref:System.Xaml.XamlWriter> を作成した後、その <xref:System.Xaml.XamlServices> を使用することで、<xref:System.Xaml.XamlWriter> を使用してワークフロー定義をシリアル化します。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> には、<xref:System.Activities.ActivityBuilder> インスタンスを XAML との間でマッピングしたり、XAML ワークフローを読み込んで、呼び出し可能な <xref:System.Activities.DynamicActivity> を返したりするメソッドがあります。 次の例では、前の例の <xref:System.Activities.ActivityBuilder> インスタンスを文字列にシリアル化し、さらにファイルに保存しています。  
   
@@ -73,7 +73,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  入力と出力引数を持つワークフローを呼び出す方法の詳細については、次を参照してください。[を使用して WorkflowInvoker と WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)と<xref:System.Activities.WorkflowInvoker.Invoke%2A>します。  
+>  入力と出力引数を持つワークフローを呼び出す方法の詳細については、[を使用して WorkflowInvoker と WorkflowApplication](using-workflowinvoker-and-workflowapplication.md)と<xref:System.Activities.WorkflowInvoker.Invoke%2A>を参照してください。  
   
  シリアル化されたワークフローが含まれている場合C#、式、<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings>インスタンスその<xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A>プロパティに設定`true`へのパラメーターとして渡す必要があります<xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>、それ以外の場合、<xref:System.NotSupportedException>ようなメッセージがスローされます次。`Expression Activity type 'CSharpValue`1' を実行するためにコンパイルが必要です。  ワークフローがコンパイルされていることを確認してください '。  
   
@@ -86,7 +86,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- 詳細については、次を参照してください。 [ C#式](csharp-expressions.md)します。  
+ 詳細については、[ C#式](csharp-expressions.md)を参照してください。  
   
  シリアル化されたワークフロー定義を読み込むことも、<xref:System.Activities.ActivityBuilder>インスタンスを使用して、 <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A>メソッド。 シリアル化されたワークフローを <xref:System.Activities.ActivityBuilder> インスタンスに読み込むと、検査や変更が可能になります。 これにより、デザイン プロセス中にワークフロー定義を保存したり再度読み込んだりするためのメカニズムが提供され、カスタム ワークフロー デザイナーを作成するときに役立ちます。 次の例では、前の例のシリアル化されたワークフロー定義を読み込み、そのプロパティを検査しています。  
   

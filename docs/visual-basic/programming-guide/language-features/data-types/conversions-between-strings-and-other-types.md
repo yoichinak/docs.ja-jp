@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719743"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821662"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>文字列とその他の型との変換 (Visual Basic)
 、数値を変換する`Boolean`、または日付/時刻値を、`String`します。 逆方向に変換することもできます。-数値、文字列値から`Boolean`、または`Date`: 文字列の内容は、先のデータ型の有効な値として解釈される場合。 できない場合、実行時エラーが発生します。  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Visual Basic では、文字列を数値に変換して、使用、**地域のオプション**、Windows で指定された設定**コントロール パネル**何千もの解釈の区切り記号、小数点区切り文字、および通貨記号。 つまり、設定も、別の 1 つ下への変換で成功するように可能性があります。 たとえば、`"$14.20"`が許容される、フランス語のロケールではなく英語 (米国) ロケールにします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

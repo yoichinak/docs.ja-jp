@@ -2,12 +2,12 @@
 title: 'チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作'
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556273"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834960"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作
 このチュートリアルでは、関数型変換の方法と LINQ to XML を適用して XML ドキュメントを操作する方法について説明します。 Visual Basic の例では、クエリを実行して、Microsoft Word で保存されている Office Open XML WordprocessingML ドキュメント内の情報を操作します。  
@@ -30,5 +30,6 @@ ms.locfileid: "54556273"
 |[詳細の Office Open XML WordprocessingML ドキュメント (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Office Open XML WordprocessingML ドキュメントの詳細について説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [(Visual Basic) の XML の純粋関数型変換](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

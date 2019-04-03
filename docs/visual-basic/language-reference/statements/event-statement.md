@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2f600f3ed37f38ddd7d86300231e0c447f458aa6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966074"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831892"
 ---
 # <a name="event-statement"></a>Event ステートメント
 ユーザー定義イベントを宣言します。  
@@ -118,6 +118,7 @@ End Event
 >  `My.Application.DoEvents` メソッドがイベントを処理する方法は、フォームと同じではありません。 フォームでイベントを直接処理するには、マルチスレッドを使用します。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
 - [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

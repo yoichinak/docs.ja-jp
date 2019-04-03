@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681812"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841616"
 ---
 # <a name="structures-and-classes-visual-basic"></a>構造体とクラス (Visual Basic)
 Visual Basic では、構造体と 2 つのエンティティに同じ機能のほとんどがサポートされる結果と共に、クラスの構文は統一します。 ただし、構造体とクラスの重要な違いもします。  
@@ -87,6 +87,7 @@ Visual Basic では、構造体と 2 つのエンティティに同じ機能の�
 -   **等しいかどうか。** 2 つの構造の等価テストは、要素ごとのテストを実行する必要があります。 使用して 2 つのオブジェクト変数を比較することができます、<xref:System.Object.Equals%2A>メソッド。 <xref:System.Object.Equals%2A> 2 つの変数を指す同じインスタンスかどうかを示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

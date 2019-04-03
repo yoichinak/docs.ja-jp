@@ -17,9 +17,9 @@ ms.locfileid: "56979321"
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>XML スキーマ定義ツールと XML シリアル化
 XML スキーマ定義ツール ([XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)) は、Windows® Software Development Kit (SDK) の一部として、.NET Framework ツールと共にインストールされます。 このツールは、主に次の 2 つの目的を実現するためにデザインされています。  
   
--   特定の XML スキーマ定義言語 (XSD) スキーマに準拠する C# クラス ファイルまたは Visual Basic クラス ファイルの生成。 このツールは、XML スキーマを引数として受け取り、<xref:System.Xml.Serialization.XmlSerializer> を使用したシリアル化時にそのスキーマに準拠している多数のクラスを含むファイルを出力します。 ツールを使用して、特定のスキーマに準拠するクラスを生成する方法については、次を参照してください。[方法。クラスと XML スキーマ ドキュメントを生成する XML スキーマ定義ツールを使用して](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)します。  
+-   特定の XML スキーマ定義言語 (XSD) スキーマに準拠する C# クラス ファイルまたは Visual Basic クラス ファイルの生成。 このツールは、XML スキーマを引数として受け取り、<xref:System.Xml.Serialization.XmlSerializer> を使用したシリアル化時にそのスキーマに準拠している多数のクラスを含むファイルを出力します。 ツールを使用して、特定のスキーマに準拠するクラスを生成する方法については、[方法。クラスと XML スキーマ ドキュメントを生成する XML スキーマ定義ツールを使用して](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)を参照してください。  
   
--   .dll ファイルまたは .exe ファイルからの XML スキーマ ドキュメントの生成。 作成済み、または属性を使用して変更済みの一連のファイルのスキーマを確認するには、このツールに DLL または EXE を引数として渡し、その XML スキーマを生成します。 一連のクラスから XML スキーマ ドキュメントを生成するツールを使用する方法については、次を参照してください。[方法。クラスと XML スキーマ ドキュメントを生成する XML スキーマ定義ツールを使用して](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)します。  
+-   .dll ファイルまたは .exe ファイルからの XML スキーマ ドキュメントの生成。 作成済み、または属性を使用して変更済みの一連のファイルのスキーマを確認するには、このツールに DLL または EXE を引数として渡し、その XML スキーマを生成します。 一連のクラスから XML スキーマ ドキュメントを生成するツールを使用する方法については、[方法。クラスと XML スキーマ ドキュメントを生成する XML スキーマ定義ツールを使用して](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)を参照してください。  
   
  このツールおよびその他のツールの詳細については、「[ツール](../../../docs/framework/tools/index.md)」を参照してください。 ツールのオプションの詳細については、「[XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)」を参照してください。  
   

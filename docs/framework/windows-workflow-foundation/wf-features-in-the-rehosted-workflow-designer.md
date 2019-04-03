@@ -13,10 +13,10 @@ ms.locfileid: "57714945"
 Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]ワークフロー デザイナー エクスペリエンスのいくつかの機能強化を含め、多くの新しい機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
 
 > [!NOTE]
->  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、次を参照してください。 [.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)します。
+>  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)を参照してください。
 
 ## <a name="activities"></a>アクティビティ
- 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、次を参照してください。、[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)します。
+ 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、、[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)を参照してください。
 
 ## <a name="c-expressions"></a>C# の式
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは、ワークフロー内のすべての式を Visual Basic のみで記述できました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、Visual Basic の式は Visual Basic で作成されたプロジェクトでのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成するには、フル機能の c# 式エディターに文法強調表示や intellisense などの機能が提供されます。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
@@ -28,7 +28,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="designer-search"></a>デザイナーでの検索
  [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)で導入された機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]再ホストされたデザイナーでサポートされていません。 
-  `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。
+  `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)を参照してください。
 
 > [!WARNING]
 >  [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでサポートされていません。
@@ -137,10 +137,10 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
   
  ![完成したステート マシン ワークフロー](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
- ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[ステート マシン ワークフロー](state-machine-workflows.md)します。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
+ ステート マシン ワークフローを作成する方法の詳細については、[ステート マシン ワークフロー](state-machine-workflows.md)を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
   
 ### <a name="contract-first-workflow-development"></a>コントラクト優先ワークフローの開発  
- コントラクト優先ワークフローの開発ツールでは、開発者が最初に、コード内のコントラクトを設計し、Visual Studio で、数回クリックで各操作を表すツールボックスに自動的にアクティビティ テンプレートを生成できるようにします。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフロー サービスの開発の詳細については、次を参照してください。[方法。既存のサービス コントラクトを使用するワークフロー サービスを作成する](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)します。  
+ コントラクト優先ワークフローの開発ツールでは、開発者が最初に、コード内のコントラクトを設計し、Visual Studio で、数回クリックで各操作を表すツールボックスに自動的にアクティビティ テンプレートを生成できるようにします。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフロー サービスの開発の詳細については、[方法。既存のサービス コントラクトを使用するワークフロー サービスを作成する](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)を参照してください。  
   
 > [!WARNING]
 >  コントラクト優先ワークフローの開発は、ワークフロー デザイナーではサポートされていません。

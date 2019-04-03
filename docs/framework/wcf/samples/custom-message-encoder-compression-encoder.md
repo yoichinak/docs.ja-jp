@@ -1,15 +1,15 @@
 ---
-title: カスタム メッセージ エンコーダー:圧縮エンコーダー
+title: カスタム メッセージ エンコーダー:Expression Encoder
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583625"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825293"
 ---
-# <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:圧縮エンコーダー
+# <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:Expression Encoder
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
   
 > [!IMPORTANT]
@@ -35,7 +35,7 @@ ms.locfileid: "54583625"
   
 -   カスタム バインド要素を統合するためのカスタム バインド構成の使用。  
   
--   カスタム バインディング要素のファイル構成を可能にするカスタム構成ハンドラーの開発。  
+-   カスタム バインド要素のファイル構成を可能にするカスタム構成ハンドラーの開発。  
   
  前に示したように、カスタム エンコーダにはいくつかのレイヤが実装されています。 こうした各レイヤ間の関係をわかりやすく説明するために、サービス起動のイベントの順序を簡略化した一覧を次に示します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54583625"
   
 4.  メッセージ エンコーダ ファクトリは、メッセージを読み込んで応答を出力するためのメッセージ エンコーダを返します。  
   
-5.  エンコーダ レイヤはクラス ファクトリとして実装されます。 カスタム エンコーダ用にパブリックに公開する必要があるのはエンコーダのクラス ファクトリだけです。 <xref:System.ServiceModel.ServiceHost> オブジェクトまたは <xref:System.ServiceModel.ChannelFactory%601> オブジェクトが作成されると、ファクトリ オブジェクトがバインディング要素によって返されます。 メッセージ エンコーダは、バッファ モードまたはストリーミング モードで動作できます。 このサンプルでは、バッファ モードとストリーミング モードの両方を示します。  
+5.  エンコーダ レイヤはクラス ファクトリとして実装されます。 カスタム エンコーダ用にパブリックに公開する必要があるのはエンコーダのクラス ファクトリだけです。 <xref:System.ServiceModel.ServiceHost> オブジェクトまたは <xref:System.ServiceModel.ChannelFactory%601> オブジェクトが作成されると、ファクトリ オブジェクトがバインド要素によって返されます。 メッセージ エンコーダは、バッファ モードまたはストリーミング モードで動作できます。 このサンプルでは、バッファ モードとストリーミング モードの両方を示します。  
   
  各モードの `ReadMessage` 抽象クラスには、関連する `WriteMessage` メソッドと `MessageEncoder` メソッドがあります。 エンコード処理の大部分はこれらのメソッドで行われます。 サンプルでは、既存のテキスト エンコーダとバイナリ メッセージ エンコーダをラップします。 これにより、内部のエンコーダがネットワーク上でのメッセージの表現の読み取りと書き込みを代行し、圧縮エンコーダがその結果を圧縮または解凍できます。 メッセージ エンコーディングのパイプラインがないため、これは、WCF で複数のエンコーダーを使用するための唯一のモデルです。 メッセージが解凍されると、結果として得られたメッセージは、処理対象のチャネル スタックの上にスタックとして渡されます。 圧縮中は、結果として得られる圧縮メッセージは指定されたストリームに直接書き込まれます。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "54583625"
   
  バッファ内の `ReadMessage` クラスと `WriteMessage` クラスは、`BufferManager` クラスを使用します。 エンコーダにはエンコーダ ファクトリを通じてのみアクセスできます。 `MessageEncoderFactory` 抽象クラスは、現在のエンコーダにアクセスするための `Encoder` という名前のプロパティと、セッションをサポートするエンコーダを作成するための `CreateSessionEncoder` という名前のメソッドを提供します。 チャネルがセッションをサポートし、順序付けされて信頼できるシナリオでは、このようなエンコーダを使用できます。 このシナリオでは、ネットワークに書き込まれるデータの各セッションを最適化できます。 これが必要でない場合は、基本メソッドをオーバーロードしないでください。 `Encoder` プロパティは、セッションのないエンコーダにアクセスする機構を備えており、`CreateSessionEncoder` メソッドの既定の実装では、このプロパティの値が返されます。 サンプルでは既存のエンコーダをラップして圧縮を行うので、`MessageEncoderFactory` の実装では、内部のエンコーダ ファクトリを表す `MessageEncoderFactory` が受け入れられます。  
   
- エンコーダーおよびエンコーダー ファクトリを定義すると、これでは、WCF クライアントおよびサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインディング要素を介してエンコーダ ファクトリを公開することもできます。  
+ エンコーダーおよびエンコーダー ファクトリを定義すると、これでは、WCF クライアントおよびサービスで使用できます。 ただし、これらのエンコーダをチャネル スタックに追加する必要があります。 <xref:System.ServiceModel.ServiceHost> クラスと <xref:System.ServiceModel.ChannelFactory%601> クラスの派生クラスを作成して `OnInitialize` メソッドをオーバーライドすると、このエンコーダ ファクトリを手動で追加することができます。 また、カスタム バインド要素を介してエンコーダ ファクトリを公開することもできます。  
   
- 新しいカスタム バインド要素を作成するには、<xref:System.ServiceModel.Channels.BindingElement> クラスの派生クラスを作成します。 ただし、バインド要素には複数の型があります。 カスタム バインド要素がメッセージ エンコード バインド要素として認識されるには、さらに <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> も実装する必要があります。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> は、新しいメッセージ エンコーダ ファクトリ (`CreateMessageEncoderFactory`) を作成するためのメソッドを公開します。このメソッドを実装すると、一致するメッセージ エンコーダ ファクトリのインスタンスが返されます。 また、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> にはアドレス バージョンを示すプロパティがあります。 このサンプルでは既存のエンコーダをラップするので、サンプルの実装では既存のエンコーダ バインディング要素もラップし、内部のエンコーダ バインディング要素をコンストラクタへのパラメータとして設定して、プロパティを介して公開します。 `GZipMessageEncodingBindingElement` クラスを実装する方法を次のサンプル コードに示します。  
+ 新しいカスタム バインド要素を作成するには、<xref:System.ServiceModel.Channels.BindingElement> クラスの派生クラスを作成します。 ただし、バインド要素には複数の型があります。 カスタム バインド要素がメッセージ エンコード バインド要素として認識されるには、さらに <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> も実装する必要があります。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> は、新しいメッセージ エンコーダ ファクトリ (`CreateMessageEncoderFactory`) を作成するためのメソッドを公開します。このメソッドを実装すると、一致するメッセージ エンコーダ ファクトリのインスタンスが返されます。 また、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> にはアドレス バージョンを示すプロパティがあります。 このサンプルでは既存のエンコーダをラップするので、サンプルの実装では既存のエンコーダ バインド要素もラップし、内部のエンコーダ バインド要素をコンストラクタへのパラメータとして設定して、プロパティを介して公開します。 `GZipMessageEncodingBindingElement` クラスを実装する方法を次のサンプル コードに示します。  
   
 ```  
 public sealed class GZipMessageEncodingBindingElement   
@@ -167,7 +167,7 @@ GZipMessageEncoderFactory(innerBindingElement.CreateMessageEncoderFactory());
 }  
 ```  
   
- `GZipMessageEncodingBindingElement` クラスは `IPolicyExportExtension` インターフェイスを実装しているので、次の例に示すように、このバインディング要素はメタデータ内のポリシーとしてエクスポートできます。  
+ `GZipMessageEncodingBindingElement` クラスは `IPolicyExportExtension` インターフェイスを実装しているので、次の例に示すように、このバインド要素はメタデータ内のポリシーとしてエクスポートできます。  
   
 ```xml  
 <wsp:Policy wsu:Id="BufferedHttpSampleServer_ISampleServer_policy">  
@@ -220,9 +220,9 @@ binding.Name = "SampleBinding";
 binding.Namespace = "http://tempuri.org/bindings";  
 ```  
   
- ほとんどのユーザー シナリオではこのコードで十分ですが、サービスが Web ホストの場合はファイル構成のサポートが重要になります。 Web ホストのシナリオをサポートするには、カスタム構成ハンドラを開発して、カスタム バインド要素をファイル内で構成できるようにする必要があります。  
+ ほとんどのユーザー シナリオではこのコードで十分ですが、サービスが Web ホストの場合はファイル構成のサポートが重要になります。 Web ホストのシナリオをサポートするには、カスタム構成ハンドラを開発して、カスタム バインディング要素をファイル内で構成できるようにする必要があります。  
   
- バインディング要素の構成ハンドラーを、[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] によって用意された構成システム上にビルドできます。 バインディング要素の構成ハンドラーは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生する必要があります。 `BindingElementType` プロパティを使用して、このセクション用に作成するバインド要素の型を構成システムに通知します。 設定可能な `BindingElement` のすべての側面を、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティとして公開する必要があります。 <xref:System.Configuration.ConfigurationPropertyAttribute> を使用して、構成要素の属性をプロパティにマップしたり、属性がない場合は既定値を設定する際に役立てます。 構成から値が読み込まれてプロパティに適用されると、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> メソッドが呼び出されます。このメソッドは、プロパティをバインディング要素の具体的なインスタンスに変換します。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> メソッドを使用して、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティを、新しく作成されたバインディング要素の設定対象の値に変換します。  
+ バインディング要素の構成ハンドラーを、[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] によって用意された構成システム上にビルドできます。 バインド要素の構成ハンドラーは、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> クラスから派生する必要があります。 `BindingElementType` プロパティを使用して、このセクション用に作成するバインド要素の型を構成システムに通知します。 設定可能な `BindingElement` のすべての側面を、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティとして公開する必要があります。 <xref:System.Configuration.ConfigurationPropertyAttribute> を使用して、構成要素の属性をプロパティにマップしたり、属性がない場合は既定値を設定する際に役立てます。 構成から値が読み込まれてプロパティに適用されると、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> メソッドが呼び出されます。このメソッドは、プロパティをバインディング要素の具体的なインスタンスに変換します。 <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> メソッドを使用して、<xref:System.ServiceModel.Configuration.BindingElementExtensionElement> 派生クラスのプロパティを、新しく作成されたバインディング要素の設定対象の値に変換します。  
   
  `GZipMessageEncodingElement` を実装するサンプル コードを次に示します。  
   
@@ -355,4 +355,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
-## <a name="see-also"></a>関連項目

@@ -15,7 +15,7 @@ ms.lasthandoff: 03/25/2019
 ms.locfileid: "58410928"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護します。
-このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、次を参照してください。[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)します。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
+このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)を参照してください。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
   
  このトピックでは、定義済みのコントラクト インターフェイスと実装が既に存在するものとして、それに機能を追加していきます。 既存のサービスとクライアントを変更することもできます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "58410928"
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>サービスでのバインディングの使用  
- この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティング サービスの詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
+ この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティング サービスの詳細については、[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)を参照してください。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>サービスでバインディングを使用するには  
   
@@ -106,7 +106,7 @@ ms.locfileid: "58410928"
 ## <a name="using-the-configuration-file"></a>構成ファイルの使用  
  手順コードを使用してバインディングを作成する代わりに、構成ファイルのバインディング セクションに次のコードを記述することもできます。  
   
- 定義されているサービスがいない場合は、次を参照してください。[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)、および[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
+ 定義されているサービスがいない場合は、[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)、および[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)を参照してください。  
   
  **注**この構成コードは、サービスとクライアントの構成ファイルで使用します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "58410928"
   
 4.  追加の <`message`> 要素、`clientCredentialType`属性を Windows にします。  
   
-5.  サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービスの構成ファイルがあるまだない場合は、次を参照してください。[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)します。  
+5.  サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービスの構成ファイルがあるまだない場合は、[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)を参照してください。  
   
     ```xml  
     <bindings>  

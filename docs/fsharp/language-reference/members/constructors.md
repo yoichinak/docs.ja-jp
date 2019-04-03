@@ -42,7 +42,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-詳細については、次を参照してください。[明示的なフィールド。`val`キーワード](explicit-fields-the-val-keyword.md)します。
+詳細については、[明示的なフィールド。`val`キーワード](explicit-fields-the-val-keyword.md)を参照してください。
 
 ## <a name="executing-side-effects-in-constructors"></a>コンス トラクター内で実行中の副作用
 
@@ -84,11 +84,11 @@ Created an invalid person object.
 
 ## <a name="constructors-in-inherited-class"></a>継承されたクラスのコンス トラクター
 
-コンス トラクターを持つ基本クラスを継承する場合は、継承句でその引数を指定する必要があります。 詳細については、次を参照してください。[コンス トラクターと継承](../inheritance.md#constructors-and-inheritance)します。
+コンス トラクターを持つ基本クラスを継承する場合は、継承句でその引数を指定する必要があります。 詳細については、[コンス トラクターと継承](../inheritance.md#constructors-and-inheritance)を参照してください。
 
 ## <a name="static-constructors-or-type-constructors"></a>静的コンス トラクターまたは型コンス トラクター
 
-静的オブジェクトを作成するためのコードを指定するだけでなく`let`と`do`型レベルでの初期化を実行する型が最初に使用される前に実行するクラス型でバインディングを作成できます。 詳細については、次を参照してください。 [ `let`クラス内のバインディング](let-bindings-in-classes.md)と[`do`クラス内のバインディング](do-bindings-in-classes.md)します。
+静的オブジェクトを作成するためのコードを指定するだけでなく`let`と`do`型レベルでの初期化を実行する型が最初に使用される前に実行するクラス型でバインディングを作成できます。 詳細については、[ `let`クラス内のバインディング](let-bindings-in-classes.md)と[`do`クラス内のバインディング](do-bindings-in-classes.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -105,7 +105,7 @@ let angle (Polar(_, theta)) = theta
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-詳細については、次を参照してください。[コンス トラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)します。
+詳細については、[コンス トラクター (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05)を参照してください。
 
 ## <a name="optional-parameters"></a>省略可能なパラメーター
 

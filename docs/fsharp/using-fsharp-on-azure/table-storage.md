@@ -26,7 +26,7 @@ Azure Cosmos DB では、Azure Table storage に書き込まれなどのプレ�
 
 Azure Table storage 用に記述されたアプリケーションでは、コードの変更を Table API を使用して、Azure Cosmos DB に移行でき、高度な機能を利用することができます。 Table API では、.NET、Java、Python、および Node.js の使用可能なクライアント Sdk があります。
 
-詳細については、次を参照してください。 [Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)します。
+詳細については、[Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)を参照してください。
 
 ## <a name="about-this-tutorial"></a>このチュートリアルについて
 
@@ -51,7 +51,7 @@ Azure Table storage 用に記述されたアプリケーションでは、コー
 
 ### <a name="get-your-azure-storage-connection-string"></a>Azure Storage 接続文字列を取得します。
 
-Azure Storage Table service に接続する場合は、このチュートリアルでは、接続文字列を必要があります。 Azure portal から接続文字列をコピーすることができます。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
+Azure Storage Table service に接続する場合は、このチュートリアルでは、接続文字列を必要があります。 Azure portal から接続文字列をコピーすることができます。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 接続文字列を取得します。
 

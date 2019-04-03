@@ -38,7 +38,7 @@ ms.locfileid: "33357596"
   
  回復を有効にするため、この種類のアプリケーションにはシステム リソースを永続的に消費する機能があります。 これは、トランザクションに参加しているすべての永続的リソース マネージャーが結果を受信したことを確認するまで、回復可能なトランザクション マネージャーはコミットしたトランザクションを記憶する必要があるためです。 したがって、この種類のアプリケーションには完全な信頼が必要です。完全な信頼レベルが付与されない限り、実行しないでください。  
   
- 永続参加リストと回復の詳細については、次を参照してください。、[リソースをトランザクションの参加者として参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)と[を実行する回復](../../../../docs/framework/data/transactions/performing-recovery.md)トピックです。  
+ 永続参加リストと回復の詳細については、、[リソースをトランザクションの参加者として参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)と[を実行する回復](../../../../docs/framework/data/transactions/performing-recovery.md)トピックを参照してください。  
   
  COM+ とのレガシ相互運用を実行するアプリケーションにも、完全な信頼が必要です。  
   

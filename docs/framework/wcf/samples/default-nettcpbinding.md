@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: a07a41fece076731ec8bf53b26bc6a2c935169d2
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: ad76a06815be61c883d083d1f794831725665c03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333353"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840966"
 ---
 # <a name="default-nettcpbinding"></a>既定の NetTcpBinding
 このサンプルは、<xref:System.ServiceModel.NetTcpBinding> バインディングの使用方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 このサンプルでは、サービスは自己ホスト型です。 クライアントとサービスは両方ともコンソール アプリケーションです。  
@@ -34,7 +34,7 @@ ms.locfileid: "56333353"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 前のサンプルでは、`netTcpBinding` バインディングを既定の設定で使用するようエンドポイントを構成する手順を示しました。 `netTcpBinding` バインディングを構成してその設定の一部を変更する場合は、バインディング構成を定義する必要があります。 エンドポイントは、バインディング構成を `bindingConfiguration` 属性を使用して名前で参照します。 このサンプルでは、バインディング構成の名前は `Binding1` です。これは次のサンプル構成のように定義されます。  
+ 前のサンプルでは、`netTcpBinding` バインディングを既定の設定で使用するようエンドポイントを構成する手順を示しました。 `netTcpBinding` バインディングを構成してその設定の一部を変更する場合は、バインド構成を定義する必要があります。 エンドポイントは、バインディング構成を `bindingConfiguration` 属性を使用して名前で参照します。 このサンプルでは、バインド構成の名前は `Binding1` です。これは次のサンプル構成のように定義されます。  
   
 ```xml  
 <services>  
@@ -122,4 +122,3 @@ Press ENTER to terminate client.
     </client>  
     ```  
   
-## <a name="see-also"></a>関連項目

@@ -166,7 +166,7 @@ using(TransactionScope scope1 = new TransactionScope())
  入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトを使用する場合、入れ子になったすべてのスコープがアンビエント トランザクションに参加するときには、必ず同じ分離レベルを使用するようにそれらのスコープを構成する必要があります。 入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトがアンビエント トランザクションに参加するときに、別の分離レベルが指定された場合は、<xref:System.ArgumentException> がスローされます。  
   
 ## <a name="interop-with-com"></a>COM+ との相互運用  
- 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳細については、これは、次を参照してください。 [Enterprise Services および COM + トランザクションとの相互運用性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)します。  
+ 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳細については、これは、[Enterprise Services および COM + トランザクションとの相互運用性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Transactions.Transaction.Clone%2A>

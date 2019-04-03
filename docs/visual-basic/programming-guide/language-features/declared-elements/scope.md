@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823546"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic におけるスコープ
 *スコープ*一連の名前を修飾したり、を通じて利用できるようにせずに参照できるすべてのコードは、宣言された要素の[Imports ステートメント (.NET Namespace よぶ型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)します。 要素は、次のレベルのいずれかのスコープを設定できます。  
@@ -135,6 +135,7 @@ Public strMsg As String
  一般に、任意の変数または定数を宣言するときをお勧めできるだけスコープを作成するプログラミング手法 (ブロック スコープでは、最も狭い)。 これにより、メモリを節約でき、不正な変数を誤って参照するコードの可能性を最小限に抑えられます。 同様に、ある変数を宣言する必要があります[静的](../../../../visual-basic/language-reference/modifiers/static.md)プロシージャ呼び出しの間には、その値を保持するために必要な場合のみです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [方法: コントロール変数のスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

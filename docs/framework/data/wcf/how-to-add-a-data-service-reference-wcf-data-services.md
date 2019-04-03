@@ -13,7 +13,7 @@ ms.locfileid: "44084638"
 ---
 # <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>方法: データ サービス参照 (WCF Data Services) の追加
 
-使用することができます、**サービス参照の追加**WCF Data Services への参照を追加する Visual Studio でダイアログ。 参照をデータ サービスに追加すると、Visual Studio で開発したクライアント アプリケーションのデータ サービスに容易にアクセスできます。 この手順を完了すると、データ サービスから取得されたメタデータに基づいてデータ クラスが生成されます。 詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。
+使用することができます、**サービス参照の追加**WCF Data Services への参照を追加する Visual Studio でダイアログ。 参照をデータ サービスに追加すると、Visual Studio で開発したクライアント アプリケーションのデータ サービスに容易にアクセスできます。 この手順を完了すると、データ サービスから取得されたメタデータに基づいてデータ クラスが生成されます。 詳細については、[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)を参照してください。
 
 ## <a name="add-a-data-service-reference"></a>データ サービス参照を追加します。
 

@@ -165,7 +165,7 @@ ms.locfileid: "57845987"
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
 
-また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、次を参照してください。[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)します。
+また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)を参照してください。
 
 ### <a name="instantiating-a-date-with-an-era"></a>日付、時代 (年号) のインスタンス化します。
 

@@ -45,7 +45,7 @@ F# PowerPack は、評価し、F# の式オブジェクトの実行をサポー�
 
 ## <a name="expr-type"></a>Expr 型
 
-インスタンス、`Expr`型が F# の式を表します。 ジェネリックと非ジェネリック`Expr`型が F# ライブラリのドキュメントに記載されています。 詳細については、次を参照してください。 [Microsoft.FSharp.Quotations Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d)と[Quotations.Expr クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d)します。
+インスタンス、`Expr`型が F# の式を表します。 ジェネリックと非ジェネリック`Expr`型が F# ライブラリのドキュメントに記載されています。 詳細については、[Microsoft.FSharp.Quotations Namespace](https://msdn.microsoft.com/visualfsharpdocs/conceptual/microsoft.fsharp.quotations-namespace-%5bfsharp%5d)と[Quotations.Expr クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/quotations.expr-class-%5bfsharp%5d)を参照してください。
 
 ## <a name="splicing-operators"></a>演算子のスプライス
 
@@ -83,7 +83,7 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ### <a name="description"></a>説明
 
-次の 3 つのアクティブなパターンを使用することもできます、 [ExprShape モジュール](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)少ないアクティブ パターン式ツリーを走査します。 これらのアクティブ パターンは、ツリーを走査したいが、ほとんどのノード内のすべての情報が不要な場合に役立ちます。 これらのパターンを使用する場合は次の 3 つのパターンのいずれかの任意の F# の式と一致する:`ShapeVar`式が、変数の場合`ShapeLambda`場合は、式はラムダ式、または`ShapeCombination`式が何である場合。 前のコード例のようにアクティブ パターンを使用して式ツリーを走査する場合はすべて可能な F# 式の型を処理するために多くのより多くのパターンを使用する必要が、コードが複雑になります。 詳細については、次を参照してください。 [ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination アクティブ パターン](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)します。
+次の 3 つのアクティブなパターンを使用することもできます、 [ExprShape モジュール](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)少ないアクティブ パターン式ツリーを走査します。 これらのアクティブ パターンは、ツリーを走査したいが、ほとんどのノード内のすべての情報が不要な場合に役立ちます。 これらのパターンを使用する場合は次の 3 つのパターンのいずれかの任意の F# の式と一致する:`ShapeVar`式が、変数の場合`ShapeLambda`場合は、式はラムダ式、または`ShapeCombination`式が何である場合。 前のコード例のようにアクティブ パターンを使用して式ツリーを走査する場合はすべて可能な F# 式の型を処理するために多くのより多くのパターンを使用する必要が、コードが複雑になります。 詳細については、[ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination アクティブ パターン](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)を参照してください。
 
 次のコード例より複雑なトラバーサルの基礎として使用できます。 このコードで式ツリーは、関数呼び出しを含む式の作成`add`です。 [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)アクティブ パターンを使用して、任意の呼び出しを検出`add`式ツリー。 このアクティブ パターンへの呼び出しの引数の代入、`exprList`値。 この場合が 2 つだけため、これらが引き出されていると、関数には、引数に再帰的には呼び出されます。 呼び出しを表すコード クォートに結果が挿入されます`mul`スプライス演算子を使用して (`%%`)。 `println`前の例の関数を使用して、結果を表示します。
 

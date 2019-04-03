@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965541"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825535"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
 *ブール式*の値に評価される式を指定、[ブールのデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`または`False`です。 `Boolean` 式には、いくつかの形式を取ります。 単純な形式の値を直接比較、`Boolean`変数を`Boolean`リテラルは、次の例に示すようにします。  
@@ -67,6 +67,7 @@ ms.locfileid: "56965541"
  ブール式の評価の順序を制御するのにかっこを使用することができます。 かっこで囲まれた式が最初に評価されます。 複数のレベルの入れ子では、優先順位が最も深く入れ子になった式に付与されます。 かっこ内では、評価は演算子の優先順位の規則に従って処理されます。 詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic での論理とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [ステートメント](../../../../visual-basic/programming-guide/language-features/statements.md)

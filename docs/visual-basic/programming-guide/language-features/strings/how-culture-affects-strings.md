@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980946"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834622"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
@@ -79,6 +79,7 @@ ms.locfileid: "56980946"
  アプリケーションがセキュリティ上の決定の比較またはケース変更操作の結果に基づくかどうかは、操作を使用する必要があります、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド、およびパス`Ordinal`または`OrdinalIgnoreCase`の`comparisonType`引数。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Globalization.CultureInfo>
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

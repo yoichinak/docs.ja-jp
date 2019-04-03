@@ -41,7 +41,7 @@ ms.locfileid: "57674849"
 > [!NOTE]
 >  <xref:System.Runtime.Caching.MemoryCache> クラスは、<xref:System.Web.Caching> 名前空間に定義されている ASP.NET キャッシュ オブジェクトに対してモデル化されています。 そのため、内部のキャッシュ ロジックは、旧バージョンの ASP.NET で提供されていたロジックと似ています。  
   
- WPF アプリケーションでキャッシュに使用する方法の例は、次を参照してください。[チュートリアル。WPF アプリケーションでアプリケーション データのキャッシュ](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)します。  
+ WPF アプリケーションでキャッシュに使用する方法の例は、[チュートリアル。WPF アプリケーションでアプリケーション データのキャッシュ](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)を参照してください。  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET アプリケーションでのキャッシュ  
  <xref:System.Runtime.Caching> 名前空間のキャッシュ クラスには、ASP.NET のデータをキャッシュするための機能があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "57674849"
 >  アプリケーションが [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 以前をターゲットとしている場合は、<xref:System.Web.Caching> 名前空間で定義されているキャッシュ クラスを使用する必要があります。 詳細については、「[ASP.NET のキャッシュの概要](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100))」を参照してください。  
   
 > [!NOTE]
->  新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例は、次を参照してください。[チュートリアル。ASP.NET でのアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))します。  
+>  新しいアプリケーションを開発する場合は、<xref:System.Runtime.Caching.MemoryCache> クラスを使用することをお勧めします。 <xref:System.Runtime.Caching> 名前空間に用意されている API は、<xref:System.Web.Caching.Cache> 名前空間に用意されている API と似ています。 そのため、旧バージョンの ASP.NET でキャッシュを使用していた場合は、なじみやすい API です。 ASP.NET アプリケーションでキャッシュを使用する方法の例は、[チュートリアル。ASP.NET でのアプリケーション データのキャッシュ](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))を参照してください。  
   
 ### <a name="output-caching"></a>出力キャッシュ  
  アプリケーション データを手動でキャッシュするには、ASP.NET で <xref:System.Runtime.Caching.MemoryCache> クラスを使用します。 ASP.NET は出力キャッシュもサポートしており、ページ、コントロール、および HTTP 応答の生成された出力をメモリに格納します。 出力キャッシュを構成するには、ASP.NET Web ページで宣言を使用するか、Web.config ファイルの設定を使用します。 詳細については、「[outputCache Element for caching (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100))」(caching の outputCache 要素 (ASP.NET 設定スキーマ)) を参照してください。  

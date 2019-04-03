@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: bcadcdfb2cb15bc6012ebe1964a4fc4379ba649d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826328"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
 ステートメントのグループを指定した回数だけ繰り返されます。  
@@ -50,13 +50,13 @@ Next [ counter ]
 |パーツ|説明|  
 |----------|-----------------|  
 |`counter`|必要な`For`ステートメント。 数値型の変数。 ループ コントロール変数。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
-|`datatype`|任意。 データ型`counter`します。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
+|`datatype`|省略可能です。 データ型`counter`します。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
 |`start`|必須。 数値式。 `counter` の初期値になります。|  
 |`end`|必須。 数値式。 最終値`counter`します。|  
-|`step`|任意。 数値式。 量`counter`ループのたびに増加します。|  
-|`statements`|任意。 1 つまたは複数のステートメント間`For`と`Next`指定された回数を実行します。|  
-|`Continue For`|任意。 次のループの反復処理の制御を転送します。|  
-|`Exit For`|任意。 うちに制御を転送、`For`ループします。|  
+|`step`|省略可能です。 数値式。 量`counter`ループのたびに増加します。|  
+|`statements`|省略可能です。 1 つまたは複数のステートメント間`For`と`Next`指定された回数を実行します。|  
+|`Continue For`|省略可能です。 次のループの反復処理の制御を転送します。|  
+|`Exit For`|省略可能です。 うちに制御を転送、`For`ループします。|  
 |`Next`|必須。 定義を終了、`For`ループします。|  
   
 > [!NOTE]
@@ -173,6 +173,7 @@ Next [ counter ]
  [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Collections.Generic.List%601>
 - [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

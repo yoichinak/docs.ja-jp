@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970533"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823533"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface ステートメント (Visual Basic)
 インターフェイスの名前を宣言し、インターフェイスに含まれるメンバーの定義を紹介します。  
@@ -113,6 +113,7 @@ End Interface
  なお、`Property`と`Function`ステートメントで終わるブロックを持ち込んでいない`End Property`と`End Function`インターフェイス内で。 このインターフェイスは、そのメンバーのシグネチャのみを定義します。 完全な`Property`と`Function`を実装するクラスで表示されるブロック`thisInterface`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)

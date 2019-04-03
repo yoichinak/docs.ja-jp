@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203111"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545443"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>方法: 型の値の等価性を定義する (C# プログラミング ガイド)
 クラスまたは構造体を定義する場合は、型に値の等価性 (同値) のカスタム定義を作成することが有用かどうかを判断します。 通常、値の等価性を実装するのは、その型のオブジェクトがある種のコレクションに追加されることが想定されている場合、または、そのオブジェクトの主な目的が一連のフィールドまたはプロパティを格納することである場合です。 値の等価性は、型のすべてのフィールドおよびプロパティの比較に基づいて定義できます。また、サブセットに基づいて定義することもできます。 ただし、いずれの場合も、クラスおよび構造体の両方について、等価性を保証する 5 つの条件に従って実装する必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "57203111"
   
 2.  型固有の `Equals` メソッドを指定して、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスを実装します。 ここで実際の等価性の比較を実行します。 たとえば、型のフィールドを 1 ～ 2 個だけ比較することで等価性を定義できます。 `Equals` から例外をスローしないでください。 クラスの場合のみ:このメソッドはクラスで宣言されているフィールドのみを調べます。 基底クラスに含まれるフィールドを調べるには、`base.Equals` を呼び出す必要があります  (<xref:System.Object> から型が直接継承された場合は、この呼び出しを行わないでください。<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> の <xref:System.Object> 実装では参照の等価性チェックが実行されるためです)。  
   
-3.  推奨、ただし省略可能: [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) および [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 演算子をオーバーロードします。  
+3.  推奨、ただし省略可能: [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) および [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 演算子をオーバーロードします。  
   
 4.  値の等価性を持つ 2 つのオブジェクトによって同じハッシュ コードが生成されるように、<xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> をオーバーライドします。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "57203111"
   
  構造体の場合、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (<xref:System.ValueType?displayProperty=nameWithType> でオーバーライドされるバージョン) の既定の実装で、リフレクションを使用して値の等価性のチェックが実行され、型のすべてのフィールドの値が比較されます。 実装が構造体の仮想 `Equals` メソッドをオーバーライドする場合、その目的は、値の等価性のチェックをより効率的に実行することと、オプションで、構造体のフィールドまたはプロパティの一部のサブセットに基づいて比較を行うことです。  
   
- [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 演算子および [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。  
+ [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 演算子は、構造体が明示的にその演算子をオーバーロードしない限り、その構造体を操作できません。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518619"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843579"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>ループ コントロール変数として宣言された配列を初期サイズで宣言することはできません
 A`For Each`ループとして配列を使用してその*要素*繰り返し変数は、その配列を初期化します。  
@@ -34,6 +34,7 @@ For Each listElement(1) As Integer In arrayList
 -   宣言から初期化を削除、*要素*繰り返し変数。  
   
 ## <a name="see-also"></a>関連項目
+
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [コレクション](../../../standard/collections/index.md)

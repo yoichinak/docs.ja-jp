@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
  ただし、これらのモードがすべての定義済みバインディングでサポートされるわけではありません。 ここでは、<xref:System.ServiceModel.WSHttpBinding> クラスと <xref:System.ServiceModel.NetTcpBinding> クラスでモードを設定し、プログラムと構成の両方を使用してモードを設定する方法を示します。  
   
- 詳細についてを参照してください、WCF のセキュリティを参照してください。[セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)、 [Securing Services](../../../docs/framework/wcf/securing-services.md)、と[Securing Services and Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。 トランスポート モードとメッセージの詳細については、次を参照してください。[トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)と[メッセージ セキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)します。  
+ 詳細についてを参照してください、WCF のセキュリティを参照してください。[セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)、 [Securing Services](../../../docs/framework/wcf/securing-services.md)、と[Securing Services and Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。 トランスポート モードとメッセージの詳細については、[トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)と[メッセージ セキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)を参照してください。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>コードでセキュリティ モードを設定するには  
   
-1.  使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
+1.  使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
   
 2.  `Mode` プロパティから返されるオブジェクトの `Security` プロパティを設定します。  
   

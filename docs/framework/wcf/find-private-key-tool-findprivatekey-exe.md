@@ -14,7 +14,7 @@ ms.locfileid: "33498515"
 このコマンド ライン ツールを使用して、証明書ストアから秘密キーを取得できます。 たとえば、 *FindPrivateKey.exe*証明書ストアで特定の X.509 証明書に関連付けられている秘密キー ファイルの名前と場所の検索に使用できます。
 
 > [!IMPORTANT]
-> FindPrivateKey ツールは、WCF のサンプルとして付属しています。 サンプルの検索場所とそれをビルドする方法の詳細については、次を参照してください。 [FindPrivateKey](./samples/findprivatekey.md)です。
+> FindPrivateKey ツールは、WCF のサンプルとして付属しています。 サンプルの検索場所とそれをビルドする方法の詳細については、[FindPrivateKey](./samples/findprivatekey.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

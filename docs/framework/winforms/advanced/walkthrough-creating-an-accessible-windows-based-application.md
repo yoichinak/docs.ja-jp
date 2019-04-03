@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションを作成します。'
+title: 'チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823468"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションを作成します。
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  
   
  このチュートリアルにより、Certified for Windows ロゴの 5 つのユーザー補助機能の要件に対応します。 これらの要件によると、ユーザー補助機能を持つアプリケーションとは、次のようなアプリケーションです。  
@@ -55,9 +55,9 @@ ms.locfileid: "57708276"
   
 -   TextBox コントロールを説明するラベル コントロールが、タブ オーダーで TextBox コントロールのすぐ前になるようにします。  
   
--   "&"の文字を使用して、ユーザーが移動する先のコントロールの <xref:System.Windows.Forms.Control.Text%2A> プロパティにアクセス キーを追加します。  
+-   "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーが に移動する先のコントロールのプロパティ。  
   
--   "&"の文字を使用して、ユーザーが移動する先のコントロールに先行するラベルの <xref:System.Windows.Forms.Control.Text%2A> プロパティにアクセス キーを追加します。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。  
+-   "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーに移動する必要があるコントロールの前にあるラベルのプロパティ。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。  
   
 -   アクセス キーをすべてのメニュー項目に追加します。  
   
@@ -65,17 +65,17 @@ ms.locfileid: "57708276"
   
 -   フォームにコントロールを追加し、以下に示すように、プロパティを設定します。 フォームにコントロールを配置する方法のモデルについては、表の最後の画像を参照してください。  
   
-    |オブジェクト|プロパティ|値|  
+    |Object|プロパティ|[値]|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|オーダー フォーム|  
     ||AccessibleName|オーダー フォーム|  
-    ||フォント サイズ|10|  
+    ||フォントサイズ|10|  
     ||テキスト|ピザ オーダー フォーム|  
     |PictureBox|名前|ロゴ|  
     ||AccessibleDescription|ピザのスライス|  
     ||AccessibleName|会社のロゴ|  
     ||イメージ|任意のアイコンまたはビットマップ|  
-    |ラベル|名前|companyLabel|  
+    |group1|名前|companyLabel|  
     ||テキスト|おいしいピザ|  
     ||TabIndex|1|  
     ||AccessibleDescription|会社名|  
@@ -83,7 +83,7 @@ ms.locfileid: "57708276"
     ||背景色|青|  
     ||前景色|黄|  
     ||Font Size|18|  
-    |ラベル|名前|customerLabel|  
+    |group1|名前|customerLabel|  
     ||テキスト|名前(&N)|  
     ||TabIndex|2|  
     ||AccessibleDescription|顧客名のラベル|  
@@ -110,7 +110,7 @@ ms.locfileid: "57708276"
     ||TabIndex|1|  
     ||AccessibleDescription|ラージ サイズのピザ|  
     ||AccessibleName|ラージ サイズのピザ|  
-    |ラベル|名前|toppingsLabel|  
+    |group1|名前|toppingsLabel|  
     ||テキスト|トッピング(&T) (1 つ $0.75)|  
     ||TabIndex|5|  
     ||AccessibleDescription|トッピング ラベル|  
@@ -128,17 +128,19 @@ ms.locfileid: "57708276"
     ||AccessibleName|注文の合計|  
     |ボタン|名前|cancel|  
     ||テキスト|キャンセル(&C)|  
-    ||TabIndex|9|  
+    ||TabIndex|8|  
     ||AccessibleDescription|注文のキャンセル|  
     ||AccessibleName|注文のキャンセル|  
     |MainMenu|名前|theMainMenu|  
     |MenuItem|名前|fileCommands|  
     ||テキスト|ファイル(&F)|  
     |MenuItem|名前|exitApp|  
-    ||テキスト|終了(&X)|  
-  
-     ![ピザ オーダー フォーム](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-フォームは次のようになります。  
+    ||テキスト|終了(&X)|
+    
+      フォームは、次の図のようになります。
+    
+      ![名前テキスト ボックスに、およびサイズとトッピングの選択のピザ オーダー フォーム。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>ハイ コントラスト モードのサポート  
  ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを指定します。  
@@ -151,8 +153,7 @@ ms.locfileid: "57708276"
   
 -   テキストの背後にあるイメージやパターンを省略します。  
   
- アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 
-  <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。  
+ アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。  
   
  この例のアプリケーションでは、色のシステム設定を使用していない唯一の要素は `lblCompanyName` です。 <xref:System.Drawing.SystemColors>クラス ラベルの色の設定をユーザーが選択したシステム カラーに変更に使用されます。  
   

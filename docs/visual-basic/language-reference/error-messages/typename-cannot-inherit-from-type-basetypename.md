@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269823"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838951"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' から継承できません\<型 >'\<basetypename >' ベースのアクセスを展開するので、\<型 >、アセンブリ外
 クラスまたはインターフェイスは、基本クラスから継承されているかインターフェイスより制限の少ないアクセス レベル。  
@@ -30,6 +30,7 @@ ms.locfileid: "55269823"
 -   制限の少ないアクセス レベルが必要な場合は、削除、`Inherits`ステートメント。 さらに制限された基底クラスまたはインターフェイスから継承することはできません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066117"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825098"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体 (Visual Basic) を宣言します。
 構造体の宣言を開始する、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)、それを終了して、`End Structure`ステートメント。 これら 2 つのステートメントの間で、少なくとも 1 つを宣言する必要があります*要素*します。 任意のデータ型の要素ができますが、非共有変数または非共有の非カスタム イベントのいずれかに少なくとも 1 つである必要があります。  
@@ -56,6 +56,7 @@ ms.locfileid: "55066117"
      変数に加えて`Sub`プロシージャ、およびイベント、定数を定義することもできます。`Function`プロシージャ、および構造のプロパティ。 として最大で 1 つのプロパティを指定することができます、*プロパティの既定*、少なくとも 1 つの引数を受け取る。 イベントを処理することができます、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`プロシージャ。 詳細については、「[方法 :宣言し、Visual Basic では、既定のプロパティを呼び出す](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

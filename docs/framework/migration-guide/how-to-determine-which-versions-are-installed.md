@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262438"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504432"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -44,14 +44,14 @@ ms.locfileid: "58262438"
      - [レジストリ エディターを使用し .NET Framework のバージョンを探す](#net_b)  
      - [コードを使用し .NET Framework のバージョンのレジストリを照会する](#net_d)  
      - [PowerShell を使用し .NET Framework のバージョンのレジストリを照会する](#ps_a)
- - .NET Framework の古いバージョンを探す (1 から 4):
+- .NET Framework の古いバージョンを探す (1 から 4):
      - [レジストリ エディターを使用し .NET Framework のバージョンを探す](#net_a)
      - [コードを使用し .NET Framework のバージョンのレジストリを照会する](#net_c)   
 
 コンピューターにインストールされている CLR のバージョンの一覧を取得するには、次のツールまたはコードを使用します。  
   
- - [Clrver ツールを使用する](#clr_a)  
- - [コードを使用して Environment クラスを照会する](#clr_b)  
+- [Clrver ツールを使用する](#clr_a)  
+- [コードを使用して Environment クラスを照会する](#clr_b)  
 
 .NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。 
   
@@ -133,7 +133,7 @@ Windows オペレーティング システムの特定のバージョンに対�
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 さまざまな必要最低限の .NET Framework バージョンを確認するには、これらの例の *394802* を [.NET Framework のバージョンの表](#version_table)の **Release** 値と置き換えます。

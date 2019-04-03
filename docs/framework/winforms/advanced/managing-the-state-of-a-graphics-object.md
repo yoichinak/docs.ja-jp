@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717623"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653783"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics オブジェクトの状態の管理
 <xref:System.Drawing.Graphics>クラスは、の中核[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。 取得するものを描画する、<xref:System.Drawing.Graphics>オブジェクトでそのプロパティを設定し、そのメソッドを呼び出す<xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawImage%2A>、<xref:System.Drawing.Graphics.DrawString%2A>など)。  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  次の図は、2 つの省略記号を示します。 30 度の回転は (クライアント領域の左上隅) 座標系の原点を基点、楕円の中心でないことに注意してください。 1 のペンの幅が 2 番目の楕円の 1 ピクセルの最初の楕円および 1 ミリメートルを意味することに注意してください。  
   
- ![楕円](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![2 つの楕円を図解: 回転とペンの幅。](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>クリッピング領域  
  A<xref:System.Drawing.Graphics>オブジェクトをで描画されるすべての項目に適用されるクリッピング領域を保持する<xref:System.Drawing.Graphics>オブジェクト。 クリッピング領域を設定するには、呼び出すことによって、<xref:System.Drawing.Graphics.SetClip%2A>メソッド。  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- 次の図は、クリップされた行を示します。  
+ 次の図は、クリップされた行を示しています。  
   
- ![クリップ領域を制限](./media/graphicsascon2.png "graphicsascon2")  
+ ![制限されたクリップ領域を示す図。](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

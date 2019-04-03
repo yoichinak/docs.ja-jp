@@ -16,7 +16,7 @@ SQL Workflow Instance Store は、次のデータベース セキュリティ �
   
 -   **System.Activities.DurableInstancing.InstanceStoreObservers**します。 このロールには、パブリック ビューへの読み取り専用アクセス権があります。  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**します。 このロールには、インスタンスのアクティベーション プロセスにかかわるストアド プロシージャへの実行権限があります。 インスタンスのアクティブ化の詳細については、次を参照してください。[インスタンスのアクティベーション](instance-activation.md)します。 汎用ホスト ([!INCLUDE[dublin](../../../includes/dublin-md.md)] のワークフロー管理サービスなど) を実行するユーザー アカウントは、このデータベース ロールに追加する必要があります。  
+-   **System.Activities.DurableInstancing.WorkflowActivationUsers**します。 このロールには、インスタンスのアクティベーション プロセスにかかわるストアド プロシージャへの実行権限があります。 インスタンスのアクティブ化の詳細については、[インスタンスのアクティベーション](instance-activation.md)を参照してください。 汎用ホスト ([!INCLUDE[dublin](../../../includes/dublin-md.md)] のワークフロー管理サービスなど) を実行するユーザー アカウントは、このデータベース ロールに追加する必要があります。  
   
  Windows Server App Fabric で永続化ストアのセキュリティの詳細については、次を参照してください[App Fabric の永続化ストアのセキュリティの構成。](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

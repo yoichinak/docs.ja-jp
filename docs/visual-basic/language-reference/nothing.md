@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981427"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826094"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 任意のデータ型の既定値を表します。 参照型の場合、既定値は、`null`参照。 値の型の場合、既定値は、値の型が null 許容かどうかに依存します。  
@@ -26,7 +26,7 @@ ms.locfileid: "56981427"
   
  変数を*値の型*直接その値が含まれています。 値の型は、すべての数値データ型を含める`Boolean`、 `Char`、 `Date`、すべての構造、およびすべての列挙体。 変数を*参照型*メモリ内オブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
- 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、次を参照してください。 [null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)します。  
+ 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、[null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)を参照してください。  
   
  変数が null 許容型でない値型の場合は、割り当てる`Nothing`に設定が既定値にその宣言された型。 その型に変数のメンバーが含まれている場合はすべて既定値に設定します。 次の例は、スカラー型の場合、これを示しています。  
   
@@ -51,6 +51,7 @@ ms.locfileid: "56981427"
  `Nothing` 異なります、<xref:System.DBNull>初期化されていないバリアントをまたはデータベースが存在しない列を表すオブジェクト。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../visual-basic/language-reference/statements/dim-statement.md)
 - [オブジェクトの有効期間:オブジェクトを作成および破棄する方法](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Visual Basic での有効期間](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822077"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 拡張メソッドには、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加する開発者が有効にします。 拡張メソッドを使用すれば、既存の型のインスタンス メソッドの場合と同様に呼び出すことができるメソッドを記述できます。  
@@ -25,16 +25,13 @@ ms.locfileid: "56970547"
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 
-  `Print` データ型の <xref:System.String> 拡張を定義する例を次に示します。 このメソッドでは、`Console.WriteLine` を使用して文字列を表示します。 
-  `Print` メソッドのパラメーター `aString` では、このメソッドによって <xref:System.String> クラスを拡張することを指定します。  
+ `Print` データ型の <xref:System.String> 拡張を定義する例を次に示します。 このメソッドでは、`Console.WriteLine` を使用して文字列を表示します。 `Print` メソッドのパラメーター `aString` では、このメソッドによって <xref:System.String> クラスを拡張することを指定します。  
   
  [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
  拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 拡張属性にアクセスするためには、<xref:System.Runtime.CompilerServices> をインポートする必要があります。  
   
- 拡張メソッドはモジュール内でのみ宣言できます。 通常、拡張メソッドを定義するモジュールと拡張メソッドを呼び出すモジュールは、別々になります。 必要に応じて、拡張メソッドが含まれているモジュールをインポートすることによって、そのモジュールをスコープの中に入れます。 
-  `Print` が含まれているモジュールをスコープの中に入れたら、引数を使用しない通常のインスタンス メソッド (`ToUpper` など) の場合と同じ要領でそのメソッドを呼び出すことができます。  
+ 拡張メソッドはモジュール内でのみ宣言できます。 通常、拡張メソッドを定義するモジュールと拡張メソッドを呼び出すモジュールは、別々になります。 必要に応じて、拡張メソッドが含まれているモジュールをインポートすることによって、そのモジュールをスコープの中に入れます。 `Print` が含まれているモジュールをスコープの中に入れたら、引数を使用しない通常のインスタンス メソッド (`ToUpper` など) の場合と同じ要領でそのメソッドを呼び出すことができます。  
   
  [!code-vb[VbVbalrExtensionMethods#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class1.vb#2)]  
   
@@ -44,8 +41,7 @@ ms.locfileid: "56970547"
   
  このメソッドを呼び出すときには、`punc` の引数として `example.PrintAndPunctuate(".")` を渡します。  
   
- 
-  `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 拡張属性にアクセスできるようにするために、<xref:System.Runtime.CompilerServices> が定義モジュールにインポートされます。  
+ `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 拡張属性にアクセスできるようにするために、<xref:System.Runtime.CompilerServices> が定義モジュールにインポートされます。  
   
 ### <a name="code"></a>コード  
   
@@ -92,8 +88,7 @@ End Module
   
  メソッドを呼び出すときに、最初のパラメーターの引数を渡していない点に注目してください。 前のメソッド定義のパラメーター `aString` が、メソッドを呼び出す `example` のインスタンスである `String` にバインディングされています。 コンパイラは、最初のパラメーターに渡す引数としてその `example` を使用します。  
   
- 
-  `Nothing` に設定されたオブジェクトに対して拡張メソッドが呼び出された場合、その拡張メソッドが実行されます。 これは、通常のインスタンス メソッドには適用されません。 拡張メソッドの `Nothing` は明示的にチェックできます。  
+ `Nothing` に設定されたオブジェクトに対して拡張メソッドが呼び出された場合、その拡張メソッドが実行されます。 これは、通常のインスタンス メソッドには適用されません。 拡張メソッドの `Nothing` は明示的にチェックできます。  
   
 ## <a name="types-that-can-be-extended"></a>拡張可能な型  
  拡張メソッドは、Visual Basic のパラメーター リストで記述できるほとんどの型で定義できます。以下に例を示します。  
@@ -138,8 +133,7 @@ End Module
   
  [!code-vb[VbVbalrExtensionMethods#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#4)]  
   
- 次のコードでは、`ExampleMethod` の最初の呼び出しで、拡張メソッドが呼び出されます。これは、`arg1` が `Long` であり、拡張メソッドの `Long` パラメーターとのみ互換性があるためです。 
-  `ExampleMethod` の 2 回目の呼び出しでは、`Integer` 引数 `arg2` があるため、インスタンス メソッドが呼び出されます。  
+ 次のコードでは、`ExampleMethod` の最初の呼び出しで、拡張メソッドが呼び出されます。これは、`arg1` が `Long` であり、拡張メソッドの `Long` パラメーターとのみ互換性があるためです。 `ExampleMethod` の 2 回目の呼び出しでは、`Integer` 引数 `arg2` があるため、インスタンス メソッドが呼び出されます。  
   
  [!code-vb[VbVbalrExtensionMethods#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class4.vb#5)]  
   
@@ -181,6 +175,7 @@ End Module
  優先順位を適用してもあいまいさが残る場合は、完全修飾名を使用して、呼び出すメソッドを指定できます。 先ほどの例の `Print` メソッドが `StringExtensions` という名前のモジュールで定義されていれば、完全修飾名は `StringExtensions.Print(example)` ではなく `example.Print()` になります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [拡張メソッド](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

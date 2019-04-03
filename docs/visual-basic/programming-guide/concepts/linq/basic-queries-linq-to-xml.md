@@ -2,12 +2,12 @@
 title: 基本的なクエリ (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: c0f1d34360b0336109cb2ba9471274e061deffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650812"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821401"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>基本的なクエリ (LINQ to XML) (Visual Basic)
 ここでは、基本的な [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリの例について説明します。  
@@ -31,4 +31,5 @@ ms.locfileid: "54650812"
 |[方法: 空のクエリ結果セット (Visual Basic) のデバッグします。](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|既定の名前空間の XML に対するクエリをデバッグする際の適切な修正方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML ツリー (Visual Basic) のクエリ](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

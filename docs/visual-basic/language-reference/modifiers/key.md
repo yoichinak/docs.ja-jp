@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967777"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842305"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`キーワードでは、匿名型のプロパティの動作を指定することができます。 匿名型のインスタンス、またはハッシュ コード値の計算の間での等価テストでキー プロパティとしてを指定したプロパティのみです。 キー プロパティの値を変更できません。  
@@ -54,6 +54,7 @@ ms.locfileid: "56967777"
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [匿名型の定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [方法: 匿名型の宣言におけるプロパティ名と型を推論します。](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

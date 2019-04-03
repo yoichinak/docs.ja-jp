@@ -34,12 +34,12 @@ Windows Communication Foundation (WCF) アプリケーションは、マネー�
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP エラーへの例外のマッピング  
  エラー状態の処理操作を作成するための最初の手順は、クライアント アプリケーションにエラーを通知する状態を決定することです。 一部の操作には、その機能に固有のエラー状態があります。 たとえば、`PurchaseOrder` 操作では、発注書の作成が禁止になっている顧客に特定の情報を返すことができます。 また、`Calculator` サービスなどでは、より一般的な `MathFault` SOAP エラーを使用してサービス全体のすべてのエラー状態を記述できます。 サービスのクライアントのエラー状態を特定したら、カスタム SOAP エラーを作成し、エラー状態が発生したときに SOAP エラーを返す操作として、対応する操作をマークします。  
   
- サービスまたはクライアントの開発のこの手順の詳細については、次を参照してください。[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)します。  
+ サービスまたはクライアントの開発のこの手順の詳細については、[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)を参照してください。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>クライアントとサービスによる例外としての SOAP エラーの処理  
  操作のエラー条件を識別する、カスタムの SOAP エラーを定義してエラーを返す操作にマークすることは、正常にエラーを WCF アプリケーションでの処理で最初の手順を示します。 次の手順では、このエラーの送受信を適切に実装します。 通常は、サービスがエラーを送信してクライアント アプリケーションにエラー状態を通知しますが、双方向クライアントが SOAP エラーをサービスに送信することもできます。  
   
- 詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  
+ 詳細については、[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>非宣言 SOAP エラーとデバッグ  
  宣言 SOAP エラーは、堅牢で相互運用可能な分散アプリケーションを構築するうえで便利です。 ただし、サービス (または双方向クライアント) が非宣言 SOAP エラーを送信することが役立つ場合があります。非宣言 SOAP エラーとは、その操作について Web サービス記述言語 (WSDL) で宣言されていないエラーです。 たとえば、サービスの開発時に予期しない状況が発生する可能性があります。この場合、デバッグのために情報をクライアントに送信することが役立ちます。 さらに、設定、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティまたは<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティを`true`内部サービス操作例外に関する情報を取得する WCF クライアントを許可するようにします。 個別のエラー送信とデバッグ動作プロパティの設定の両方がで説明されている[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  

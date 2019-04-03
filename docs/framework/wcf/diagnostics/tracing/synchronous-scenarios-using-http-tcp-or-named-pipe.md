@@ -2,15 +2,15 @@
 title: HTTP、TCP、または名前付きパイプを使用した同期シナリオ
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 28e612b190f4993e1ce7da0d1083c4e55f827d4a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810175"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654004"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP、TCP、または名前付きパイプを使用した同期シナリオ
-ここでは、シングル スレッド クライアントで HTTP、TCP、または名前付きパイプを使用したときの、さまざまな同期要求/応答シナリオでのアクティビティと転送について説明します。 参照してください[HTTP、TCP、または名前付きパイプを使用して非同期シナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)マルチ スレッドの要求についての詳細。  
+ここでは、シングル スレッド クライアントで HTTP、TCP、または名前付きパイプを使用したときの、さまざまな同期要求/応答シナリオでのアクティビティと転送について説明します。 参照してください[HTTP、TCP、または名前付きパイプを使用した非同期シナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)マルチ スレッド要求の詳細についてはします。  
   
 ## <a name="synchronous-requestreply-without-errors"></a>エラーを伴わない同期要求/応答  
  ここでは、シングル スレッド クライアントを使用したときの、有効な同期要求/応答シナリオでのアクティビティおよび転送について説明します。  
@@ -18,7 +18,7 @@ ms.locfileid: "33810175"
 ### <a name="client"></a>クライアント  
   
 #### <a name="establishing-communication-with-service-endpoint"></a>サービス エンドポイントとの通信の確立  
- クライアントを構築して開きます。 各手順は、アンビエント アクティビティ (A) が、「クライアントの構築」(B) と「クライアントを開く」アクティビティ (C) にそれぞれ転送されます。 転送されるアクティビティごとに、転送が返されるまで (つまり、ServiceModel コードが実行されるまで) アンビエント アクティビティは中断されます。  
+ クライアントを構築して開きます。 次の手順のそれぞれについて、アンビエント アクティビティは、「クライアントの構築」(B) と「クライアントを開く」アクティビティ (C) にそれぞれ転送 (A) されます。 転送されるアクティビティごとに、転送が返されるまで (つまり、ServiceModel コードが実行されるまで) アンビエント アクティビティは中断されます。  
   
 #### <a name="making-a-request-to-service-endpoint"></a>サービス エンドポイントへの要求  
  アンビエント アクティビティは、(D) アクションを「処理」アクティビティに転送されます。 このアクティビティでは、要求メッセージが送信され、応答メッセージが受信されます。 このアクティビティは、ユーザー コードに制御が戻ると終了します。 これは同期要求であるため、制御が戻るまでアンビエント アクティビティは中断されます。  
@@ -45,17 +45,17 @@ ms.locfileid: "33810175"
 #### <a name="closing-a-service-host"></a>サービス ホストの終了  
  ServiceHost の "閉じる" アクティビティ (Z) は、アンビエント アクティビティから作成されます。  
   
- ![HTTP を使用した同期シナリオ&#47;TCP&#47;名前付きパイプ](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "同期")  
+ ![同期のシナリオを示す図。HTTP、TCP、または名前付きパイプします。](./media/synchronous-scenarios-using-http-tcp-or-named-pipe/synchronous-scenario-http-tcp-named-pipes.gif)  
   
- \<A: name >、`A`はアクティビティとテーブル 3 に、前の説明を表すショートカット シンボルです。 `Name` は、アクティビティの短縮名です。  
+ \<A: name >、`A`アクティビティとテーブル 3 に、前の説明を表すショートカット シンボルです。 `Name` は、アクティビティの短縮名です。  
   
- 場合`propagateActivity` = `true`、プロセス アクション、クライアントとサービスの両方で同じアクティビティ ID を持ちます  
+ 場合`propagateActivity` =`true`クライアントとサービスの両方でプロセスのアクションがある同じアクティビティ id。  
   
 ## <a name="synchronous-requestreply-with-errors"></a>エラーを伴う同期要求/応答  
  前述のシナリオとの違いは、応答メッセージとして SOAP エラー メッセージが返されることだけです。 場合`propagateActivity` = `true`、要求メッセージのアクティビティ ID が SOAP エラー メッセージに追加します。  
   
 ## <a name="synchronous-one-way-without-errors"></a>エラーを伴わない同期一方向  
- 最初のシナリオとの違いは、メッセージがサーバーに返されないことだけです。 HTTP ベースのプロトコルの場合は、ステータス (有効またはエラー) がクライアントに返されます。 これは、HTTP が WCF プロトコル スタックの一部である要求-応答セマンティクスで唯一のプロトコルであるためです。 TCP 処理は、WCF の非表示であるために、クライアントに受信確認は送信されません。  
+ 最初のシナリオとの違いは、メッセージがサーバーに返されないことだけです。 HTTP ベースのプロトコルの場合は、ステータス (有効またはエラー) がクライアントに返されます。 これは、HTTP が WCF プロトコル スタックの一部である要求-応答のセマンティクスを持つ唯一のプロトコルであるためです。 TCP 処理は、WCF から非表示のため、クライアントに受信確認は送信されません。  
   
 ## <a name="synchronous-one-way-with-errors"></a>エラーを伴う同期一方向  
  メッセージの処理中 (Q 以降) にエラーが発生しても、クライアントには通知が返されません。 これは、「エラーを伴わない同期一方向要求/応答」のシナリオと同じです。 エラー メッセージを受信する必要がある場合は、一方向のシナリオを使用しないでください。  

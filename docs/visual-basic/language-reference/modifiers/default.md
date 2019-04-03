@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497842"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836728"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 クラス、構造体、またはインターフェイスの既定のプロパティとしてプロパティを識別します。  
@@ -36,5 +36,6 @@ ms.locfileid: "54497842"
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

@@ -31,7 +31,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
 >
 > System.Data.SqlClient.SqlException:ストアド プロシージャ 'system.activities.durableinstancing.createlockowner'' が見つかりませんでした。
 
-以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、次を参照してください。 [SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)します。
+以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、[SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)を参照してください。
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication を使用する自己ホスト型ワークフローの永続化の有効化
 

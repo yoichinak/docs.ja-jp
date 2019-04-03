@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758639"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545820"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
@@ -24,9 +24,9 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 #endif
 ```
 
-[==](../operators/equality-comparison-operator.md) (等しい) および [!=](../operators/not-equal-operator.md) (等しくない) の各演算子は、[true](../keywords/true.md) か [false](../keywords/false.md) のどちらであるかのテストにのみ使用できます。 true は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&&](../operators/conditional-and-operator.md) (かつ)、[&#124;&#124;](../operators/conditional-or-operator.md) (または)、および [!](../operators/logical-negation-operator.md) (not) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
+[==](../operators/equality-operators.md#equality-operator-) (等しい) および [!=](../operators/equality-operators.md#inequality-operator-) (等しくない) の各演算子は、[true](../keywords/true.md) か [false](../keywords/false.md) のどちらであるかのテストにのみ使用できます。 true は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&&](../operators/conditional-and-operator.md) (かつ)、[&#124;&#124;](../operators/conditional-or-operator.md) (または)、および [!](../operators/logical-negation-operator.md) (not) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `#if` と [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md)、[#undef](preprocessor-undef.md) の各ディレクティブを組み合わせると、1 つ以上のシンボルが存在するかどうかに応じてコードを含めたり除外したりできます。 これは、デバッグ ビルドのコードをコンパイルする場合や、特定の構成でコンパイルを行う場合に役立ちます。
 

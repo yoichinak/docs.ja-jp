@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969194"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838873"
 ---
 # <a name="type-promotion-visual-basic"></a>型の上位変換 (Visual Basic)
 モジュール内のプログラミング要素を宣言するときに、Visual Basic は、モジュールを含む名前空間には、そのスコープを昇格します。 これと呼ばれます*の上位変換*します。  
@@ -59,6 +59,7 @@ ms.locfileid: "56969194"
 -   **完全に修飾します。** モジュールと同じ名前空間の他の要素を使用して、最も安全なアプローチは常にすべてのプログラミング要素の完全修飾を使用するがします。 型の上位変換は、モジュール メンバーの無効化、そのメンバーを完全修飾しない場合は、誤って別のプログラミング要素にアクセスするでした。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Module ステートメント](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace ステートメント](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)

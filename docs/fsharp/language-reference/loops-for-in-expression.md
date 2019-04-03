@@ -131,7 +131,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note` 使用することができます`for...in`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`for...in`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
+`Note` 使用することができます`for...in`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`for...in`式を使用します。 詳細については、[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic]
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-ms.openlocfilehash: c128ab9982ae7ccd5fff34020f2750f703da16a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664604"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843839"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Visual Basic で宣言されている外部プロシージャの外部名に基づいて、.NET Framework の規則に従って文字列をマーシャ リングする必要がありますを指定します。  
@@ -34,6 +34,7 @@ Visual Basic で宣言されている外部プロシージャの外部名に基�
  このキーワードはサポートされていません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

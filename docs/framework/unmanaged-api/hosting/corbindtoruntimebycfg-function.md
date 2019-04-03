@@ -61,7 +61,7 @@ HRESULT CorBindToRuntimeByCfg (
  [out]返されるインターフェイスのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- XML ファイルの形式は、標準的なアプリケーションの構成ファイルの後にモデル化されます。 XML ファイルの詳細については、次を参照してください。[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)します。  
+ XML ファイルの形式は、標準的なアプリケーションの構成ファイルの後にモデル化されます。 XML ファイルの詳細については、[構成ファイル スキーマ](../../../../docs/framework/configure-apps/file-schema/index.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

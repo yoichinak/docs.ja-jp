@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965467"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824309"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) で、値を入力します。
 プロパティに値を格納するには、代入ステートメントの左側にあるプロパティ名を置きます。  
@@ -35,6 +35,7 @@ ms.locfileid: "56965467"
 4.  代入ステートメントの右側にある生成された値は、プロパティに格納されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

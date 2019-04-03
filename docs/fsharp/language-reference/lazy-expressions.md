@@ -31,7 +31,7 @@ let identifier = lazy ( expression )
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-遅延評価は、ではなく、`Lazy`入力、シーケンスにも使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)します。
+遅延評価は、ではなく、`Lazy`入力、シーケンスにも使用します。 詳細については、[シーケンス](sequences.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

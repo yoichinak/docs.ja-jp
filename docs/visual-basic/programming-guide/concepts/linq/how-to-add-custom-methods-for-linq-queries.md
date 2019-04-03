@@ -2,12 +2,12 @@
 title: '方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。'
 ms.date: 07/20/2015
 ms.assetid: 099b2e2a-83cd-45c6-aa4d-01b398b5faaf
-ms.openlocfilehash: e45dfc6b516f1e5f5e9f7f667bbbfd5768330ffa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a58ced83a01e41be707f2483cabe9c8e867e2c1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645588"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829175"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-visual-basic"></a>方法: LINQ クエリ (Visual Basic) のカスタム メソッドを追加します。
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスに拡張メソッドを追加することで、LINQ クエリに使用できるメソッド セットを拡張できます。 たとえば一連の値から単一の値を求めるために、平均値や最大値を求める標準的な演算に加えて、独自の集計メソッドを作成することができます。 また、一連の値を受け取って別の一連の値を返す特定のデータ変換やカスタム フィルターの働きを持ったメソッドを作成することもできます。 このようなメソッドには、<xref:System.Linq.Enumerable.Distinct%2A>、<xref:System.Linq.Enumerable.Skip%2A>、<xref:System.Linq.Enumerable.Reverse%2A> があります。  
@@ -198,5 +198,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

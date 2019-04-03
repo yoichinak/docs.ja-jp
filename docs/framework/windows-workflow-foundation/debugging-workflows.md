@@ -13,10 +13,10 @@ ms.locfileid: "43861384"
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、開発環境から実行中のワークフローをデバッグするオプションがいくつかあります。 ワークフローは、デザイナー、XAML、およびコードでデバッグできます。  
   
 ## <a name="debugging-in-the-workflow-designer"></a>ワークフロー デザイナーでのデバッグ  
- アクティビティを強調表示し、キーを押すか、ワークフロー デザイナーでアクティビティにブレークポイントを設定できます**F9**アクティビティのコンテキスト メニューを使用します。 ワークフロー ホストをデバッグ モードで実行すると、ワークフローの実行は一時停止します。 次のスクリーンショットでは、ワークフローの実行はブレークポイントで一時停止します。 詳細については、次を参照してください。[ワークフロー デザイナーでワークフローをデバッグ](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer)します。  
+ アクティビティを強調表示し、キーを押すか、ワークフロー デザイナーでアクティビティにブレークポイントを設定できます**F9**アクティビティのコンテキスト メニューを使用します。 ワークフロー ホストをデバッグ モードで実行すると、ワークフローの実行は一時停止します。 次のスクリーンショットでは、ワークフローの実行はブレークポイントで一時停止します。 詳細については、[ワークフロー デザイナーでワークフローをデバッグ](/visualstudio/workflow-designer/debugging-workflows-with-the-workflow-designer)を参照してください。  
   
 ## <a name="debugging-in-xaml"></a>XAML でのデバッグ  
- デザイナーでワークフローがブレークポイントで一時停止すると、XAML でもワークフローをデバッグできます。 XAML での実行ポイントを表示する選択**XAML ビュー**ワークフローの実行が一時停止すると、ワークフロー デザイナーでします。 デバッグをデザイナーに切り替えるには、ソリューション エクスプローラーからデザイナーでワークフローを開き直します。 詳細については、次を参照してください。[方法: ワークフロー デザイナーで XAML をデバッグ](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)します。  
+ デザイナーでワークフローがブレークポイントで一時停止すると、XAML でもワークフローをデバッグできます。 XAML での実行ポイントを表示する選択**XAML ビュー**ワークフローの実行が一時停止すると、ワークフロー デザイナーでします。 デバッグをデザイナーに切り替えるには、ソリューション エクスプローラーからデザイナーでワークフローを開き直します。 詳細については、[方法: ワークフロー デザイナーで XAML をデバッグ](/visualstudio/workflow-designer/how-to-debug-xaml-with-the-workflow-designer)を参照してください。  
   
 ## <a name="debugging-in-code"></a>コードでのデバッグ  
  コードのブレークポイントは、他の命令型アプリケーションで使用する方法と同様に [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で使用できます。 コードのブレークポイントを作成するコード ウィンドウの左端の余白をクリックします。 またはキーを押します**F9**カーソル位置にブレークポイントを配置します。  
@@ -25,7 +25,7 @@ ms.locfileid: "43861384"
  ワークフローのデバッグは、Visual Studio のインフラストラクチャを使用したプロセスへのアタッチもサポートしています。 そのため、ワークフロー作成者は、Internet Information Services (IIS) 7.0 など異なるホスト環境で実行されているワークフローをデバッグできます。  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- Windows Workflow Foundation (WF) のリモート デバッグは機能は他の Visual Studio コンポーネント用のリモート デバッグと同じです。 リモート デバッグの使用方法の詳細については、次を参照してください。[方法: リモート デバッグを有効にする](https://go.microsoft.com/fwlink/?LinkId=196257)します。  
+ Windows Workflow Foundation (WF) のリモート デバッグは機能は他の Visual Studio コンポーネント用のリモート デバッグと同じです。 リモート デバッグの使用方法の詳細については、[方法: リモート デバッグを有効にする](https://go.microsoft.com/fwlink/?LinkId=196257)を参照してください。  
   
 > [!NOTE]
 >  ワークフロー アプリケーションは、x86 を対象とする場合のアーキテクチャとし、リモート デバッグは機能しません、リモート コンピューターで Visual Studio がインストールされているか、ワークフロー アプリケーションのターゲットを変更しない限り、64 ビット オペレーティング システムを実行しているコンピューターでホストされます。**任意の CPU**します。  

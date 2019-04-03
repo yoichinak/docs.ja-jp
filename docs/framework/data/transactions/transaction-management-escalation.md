@@ -16,7 +16,7 @@ Windows は、トランザクション マネージャーを構成する一連�
   
  同じコンピューター上などプロセスやコンピューターの境界を越えて他のアプリケーション ドメイン内のオブジェクトへのトランザクションを提供する場合に、<xref:System.Transactions>インフラストラクチャは、Microsoft によって管理されるトランザクションを自動的にエスカレート分散トランザクション コーディネーター (MSDTC)。 エスカレーションは、別の永続的なリソース マネージャーに参加する際にも発生します。 エスカレートされると、トランザクションは完了するまで昇格した状態で管理され続けます。  
   
- <xref:System.Transactions> トランザクションと MSDTC トランザクションの間には、PSPE (Promotable Single Phase Enlistment) を介して利用できる中間タイプのトランザクションがあります。 PSPE は、<xref:System.Transactions> でパフォーマンスを最適化するための重要なメカニズムです。 PSPE を使用すると、異なるアプリケーション ドメイン、プロセス、コンピューターにあるリモート永続リソースが、MSDTC トランザクションにエスカレートされることなく、<xref:System.Transactions> トランザクションに参加できるようになります。 PSPE の詳細については、次を参照してください。[リソースをトランザクションの参加者として参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)です。  
+ <xref:System.Transactions> トランザクションと MSDTC トランザクションの間には、PSPE (Promotable Single Phase Enlistment) を介して利用できる中間タイプのトランザクションがあります。 PSPE は、<xref:System.Transactions> でパフォーマンスを最適化するための重要なメカニズムです。 PSPE を使用すると、異なるアプリケーション ドメイン、プロセス、コンピューターにあるリモート永続リソースが、MSDTC トランザクションにエスカレートされることなく、<xref:System.Transactions> トランザクションに参加できるようになります。 PSPE の詳細については、[リソースをトランザクションの参加者として参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)を参照してください。  
   
 ## <a name="how-escalation-is-initiated"></a>エスカレーションの開始方法  
  トランザクションのエスカレーションが行われると、パフォーマンスが低下します。MSDTC は別のプロセスにあるため、トランザクションを MSDTC にエスカレートすると、プロセス間でメッセージが送信されることになるからです。 パフォーマンスを向上させるには、遅延または MSDTC; へのエスカレーションを回避する必要があります。このため、エスカレーションが開始される方法とタイミングを把握する必要があります。  

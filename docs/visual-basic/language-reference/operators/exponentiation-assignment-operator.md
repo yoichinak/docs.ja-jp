@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: efea38d7da13b67490f498658e7739929517dba2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe5d7b3dcb55192167512e0934e09cff7dfddb6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819654"
 ---
 # <a name="-operator-visual-basic"></a>^= 演算子 (Visual Basic)
 変数または式のプロパティの値を生成し、結果を変数またはプロパティに代入します。  
@@ -50,6 +50,7 @@ variableorproperty ^= expression
  [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

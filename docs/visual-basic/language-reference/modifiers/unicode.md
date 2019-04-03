@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: 491bbb24be8e6a3044b0a433c5ad262596ae00d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3c9452f8d144fb18ea3efcb35b85caed80e8692
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655284"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819347"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 Visual Basic に宣言されている外部プロシージャの名前に関係なく Unicode 値にすべての文字列がマーシャ リングする必要がありますを指定します。  
@@ -34,6 +34,7 @@ Visual Basic に宣言されている外部プロシージャの名前に関係�
  このキーワードはサポートされていません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359134"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634454"
 ---
 # <a name="dialog-boxes-overview"></a>ダイアログ ボックスの概要
 スタンドアロン アプリケーションは、メインのデータをアプリケーションが動作し、使用してデータを処理する機能を公開しますが両方が表示されるメイン ウィンドウを通常がある[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]メニュー バー、ツールバー、およびステータス バーなどのメカニズムです。 重要なアプリケーションは、次のようなことをするための追加のウィンドウを表示することもあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "57359134"
   
 -   情報の表示と収集の両方を行う。  
   
- これらの種類のウィンドウと呼ばれる* ダイアログ ボックス*、し、2 種類があります: モーダルとモードレスです。  
+ これらの種類のウィンドウと呼ばれる *ダイアログ ボックス*、し、2 種類があります: モーダルとモードレスです。  
   
  A*モーダル*関数には、ユーザーに続行から追加のデータが必要がある場合、関数によってダイアログ ボックスが表示されます。 機能は、モーダル ダイアログ ボックスに依存してデータを収集するため、モーダル ダイアログ ボックスが開いている間、ユーザーはアプリケーション内の他のウィンドウをアクティブ化することはできません。 ほとんどの場合、モーダル ダイアログ ボックスにより、ユーザーを押すことによって、モーダル ダイアログ ボックスを終了するときに通知する、 **OK**または**キャンセル**ボタン。 キーを押して、 **OK**ボタンは、ユーザーがデータを入力し、関数がそのデータの処理を続行する必要があることを示します。 キーを押して、**キャンセル**ボタンは、ユーザーが、関数の実行を停止することを示します。 モーダル ダイアログ ボックスの最も一般的な例は、データを開く、保存する、および印刷するために表示されます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "57359134"
 ## <a name="message-boxes"></a>メッセージ ボックス  
  A*メッセージ ボックス*テキストの情報を表示し、ユーザーがボタンで意思決定できるようにするために使用できるダイアログ ボックスです。 次の図は、テキスト情報と質問を表示して、ユーザーが質問に回答するための 3 つのボタンを表示するメッセージ ボックスを示しています。  
   
- ![[Word Processor] ダイアログ ボックス](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![アプリケーションの前に、ドキュメントに変更を保存するかどうかたずねるワード プロセッサ ダイアログ ボックスを閉じます。](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  使用するメッセージ ボックスを作成する、<xref:System.Windows.MessageBox>クラス。 <xref:System.Windows.MessageBox> メッセージ ボックスのテキスト、タイトル、アイコン、および、次のようなコードを使用して、ボタンを構成できます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "57359134"
 ### <a name="open-file-dialog"></a>[ファイルを開く] ダイアログ ボックス  
  [ファイルを開く] ダイアログ ボックスは、次の図に示されているように、開くファイルの名前を取得するために、ファイルを開く機能によって使用されます。  
   
- ![[開く] ダイアログ ボックス](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![ファイルを取得する場所を示す [開く] ダイアログ ボックス。](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  一般的なファイルを開く ダイアログ ボックスとして実装されている、<xref:Microsoft.Win32.OpenFileDialog>クラスし、は、<xref:Microsoft.Win32>名前空間。 次のコードは、[ファイルを開く] ダイアログ ボックスの作成、構成、および表示の方法と、結果を処理する方法を示しています。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "57359134"
 ### <a name="save-file-dialog-box"></a>[ファイルの保存] ダイアログ ボックス  
  [ファイルの保存] ダイアログ ボックスは、次の図に示されているように、保存するファイルの名前を取得するために、ファイルを保存する機能によって使用されます。  
   
- ![[名前を付けて保存] ダイアログ ボックス](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![名前を付けて保存 ダイアログ ボックス、ファイルを保存する場所を示すです。](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  一般的な保存ファイル ダイアログ ボックスとして実装されて、<xref:Microsoft.Win32.SaveFileDialog>クラスし、は、<xref:Microsoft.Win32>名前空間。 次のコードは、[ファイルを開く] ダイアログ ボックスの作成、構成、および表示の方法と、結果を処理する方法を示しています。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "57359134"
 ### <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス  
  次の図に示されているように、[印刷] ダイアログ ボックスは、ユーザーがデータを印刷するプリンターを選択し、構成するために、印刷機能によって使用されます。  
   
- ![[印刷] ダイアログ ボックス](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![印刷ダイアログ ボックスのスクリーン ショット。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  一般的な印刷ダイアログ ボックスとして実装されて、<xref:System.Windows.Controls.PrintDialog>クラスし、は、<xref:System.Windows.Controls>名前空間。 次のコードは、[印刷] ダイアログ ボックスの作成、構成、および表示の方法を示しています。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "57359134"
 ### <a name="creating-a-modal-custom-dialog-box"></a>モーダルのカスタム ダイアログ ボックスの作成  
  このトピックでは、使用する方法を示します<xref:System.Windows.Window>一般的なモーダル ダイアログ ボックスの実装を作成するを使用して、 `Margins`  ダイアログ ボックスを例として (を参照してください[ダイアログ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984))。 `Margins`  ダイアログ ボックスは次の図に示します。  
   
- ![[余白] ダイアログ ボックス](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![左余白、上余白、右の余白および下余白を定義するフィールドの余白 ダイアログ ボックス。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>モーダル ダイアログ ボックスの構成  
  一般的なダイアログ ボックスのユーザー インターフェイスには、次の項目が含まれます。  
@@ -208,7 +208,7 @@ ms.locfileid: "57359134"
   
  検証規則が関連付けられている、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]自動的に適用されますが、バインドされたコントロールにデータが入力されるとします。 コントロールに無効なデータが含まれている場合[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]次の図に示すように、無効なコントロールでは、周囲に赤い境界線が表示されます。  
   
- ![無効な左余白](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![無効な左余白の値を囲む赤い境界線付きの余白 ダイアログ ボックス。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、ユーザーが有効なデータを入力するまで、ユーザーを無効なコントロールに制限するわけではありません。 これは、ダイアログ ボックスとして適切な動作です。データが有効かどうかにかかわらず、ユーザーはダイアログ ボックス内のコントロールを自由に移動できる必要があります。 ユーザーは、無効なデータとキーを押して入力してください。 ただし、これは意味、 **OK**ボタンをクリックします。 このため、コードも必要があるダイアログ内のすべてのコントロールを検証するときにボックス、 **[ok]** ボタンを処理することによって、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "57359134"
 ### <a name="creating-a-modeless-custom-dialog-box"></a>モードレス カスタム ダイアログ ボックスの作成  
  次の図に示されている [検索] ダイアログ ボックスなどのモードレス ダイアログ ボックスは、基本的な外観はモーダル ダイアログ ボックスと同じです。  
   
- ![[検索] ダイアログ ボックス](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![検索ダイアログ ボックスのスクリーン ショット。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  しかし、次のセクションで説明するように、動作は少し異なります。  
   

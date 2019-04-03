@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 6cecc7fc2356a265ca4a3d57c837298ec33efc60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965840"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839686"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
 パラメーターと、関数ラムダ式を定義するコードを宣言します。  
@@ -30,7 +30,7 @@ End Function
   
 |用語|定義|  
 |---|---|  
-|`parameterlist`|任意。 このプロシージャのパラメーターを表すローカル変数名の一覧。 かっこは、リストが空の場合にも存在である必要があります。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
+|`parameterlist`|省略可能です。 このプロシージャのパラメーターを表すローカル変数名の一覧。 かっこは、リストが空の場合にも存在である必要があります。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
 |`expression`|必須。 1 つの式。 式の型は、関数の戻り値の型です。|  
 |`statements`|必須。 使用して値を返すステートメントの一覧、`Return`ステートメント。 (を参照してください[Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md))。返される値の型は、関数の戻り値の型です。|  
   
@@ -88,6 +88,7 @@ Dim londonCusts = db.Customers.
  クエリ メソッドの詳細については、次を参照してください。[クエリ](../../../visual-basic/language-reference/queries/index.md)します。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

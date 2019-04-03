@@ -59,12 +59,12 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  既存のプロジェクトが Web プロジェクトの場合は、サービス ホスト ファイル (service1.svc) も作成されます。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF サービス プロジェクト/項目テンプレート  
- これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)です。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
+ これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)を参照してください。 ワークフロー プロジェクトの作成の詳細については、[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)を参照してください。  
   
  XOML 型のワークフローが使用される代わりにコード ベースのときに、visual Studio デザイナーの応答性が向上します。 XOML ワークフローは、既定で作成されるワークフロー型です。  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF 配信サービス ライブラリ テンプレート  
- このテンプレートでは、WCF サービスとして RSS または ATOM 形式のフィードを公開することができます。 詳細については、次を参照してください。 [WCF 配信](../../../docs/framework/wcf/feature-details/wcf-syndication.md)します。  
+ このテンプレートでは、WCF サービスとして RSS または ATOM 形式のフィードを公開することができます。 詳細については、[WCF 配信](../../../docs/framework/wcf/feature-details/wcf-syndication.md)を参照してください。  
   
 #### <a name="changing-the-address-of-the-feed"></a>フィードのアドレスの変更  
  配信テンプレートは、実行中に Internet Explorer を使用します。 プロジェクトを右クリックすると**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します**プロパティ**を選択してから、**デバッグ**とタブには、の既定のアドレスを表示できます、。テンプレート。 Internet Explorer は、このアドレスにあるフィードを開きます。  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  内のアドレスを変更する必要がありますもフィードのアドレスを変更する場合、**デバッグ**タブ。これを変更しないと、Internet Explorer が既定のアドレスにあるフィードを開こうとして、エラーになります。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX 対応 WCF サービス項目テンプレート  
- このテンプレートは、WCF サービスとしての AJAX コントロールを公開します。 AJAX コントロールの詳細については、次を参照してください。、 [AJAX コントロールに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=96717)します。  
+ このテンプレートは、WCF サービスとしての AJAX コントロールを公開します。 AJAX コントロールの詳細については、、 [AJAX コントロールに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=96717)を参照してください。  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight 対応 WCF サービス項目テンプレート  
  このテンプレートは、Silverlight クライアントまたはフロントエンドにデータを提供する Web サービスを作成します。 テンプレートは、サービス コードと、Silverlight クライアントとの通信をサポートする構成を含む WCF サービスを作成する Web サイトまたは Web アプリケーション プロジェクトに追加できます。 使用することができますし、**サービス参照の追加**をクライアントにサービスのクライアント プロキシを追加して、Silverlight クライアントと Silverlight 対応 WCF サービスの間でデータを交換します。  

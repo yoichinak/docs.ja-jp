@@ -16,7 +16,7 @@ Windows Workflow Foundation (WF) の式は、結果を返す任意のアクテ�
  ワークフロー デザイナーでは、Visual Basic プロジェクトのすべての式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> および <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601>、C# ワークフロー プロジェクトの式に <xref:Microsoft.CSharp.Activities.CSharpValue%601> および <xref:Microsoft.CSharp.Activities.CSharpReference%601> を使用します。  
   
 > [!NOTE]
->  ワークフロー プロジェクトでの C# 式のサポートは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入されました。 詳細については、次を参照してください。 [ C#式](csharp-expressions.md)します。  
+>  ワークフロー プロジェクトでの C# 式のサポートは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入されました。 詳細については、[ C#式](csharp-expressions.md)を参照してください。  
   
  デザイナーによって生成されたワークフローは XAML に保存されます。XAML には、次の例のように、式が角かっこに囲まれて表示されます。  
   
@@ -165,4 +165,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- コードで式の使用に関する詳細については、次を参照してください。[オーサリング ワークフロー、アクティビティ、および命令型コードを使用して式](authoring-workflows-activities-and-expressions-using-imperative-code.md)します。
+ コードで式の使用に関する詳細については、[オーサリング ワークフロー、アクティビティ、および命令型コードを使用して式](authoring-workflows-activities-and-expressions-using-imperative-code.md)を参照してください。

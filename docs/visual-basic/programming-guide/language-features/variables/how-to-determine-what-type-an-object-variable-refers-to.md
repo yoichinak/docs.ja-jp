@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571179"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816409"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数の参照 (Visual Basic) にどのような種類を決定します。
 オブジェクト変数には、別の場所に格納されているデータへのポインターが含まれています。 実行時にそのデータの種類を変更できます。 任意の時点では、使用することができます、<xref:System.Type.GetTypeCode%2A>する現在の実行時の型を判断するメソッド、または[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)ことを確認する現在の実行時の型が指定された型との互換性。  
@@ -53,6 +53,7 @@ ms.locfileid: "54571179"
  指定した型が変数または式ができないことに注意してください。 クラス、構造体、インターフェイスなどの定義済みの型の名前があります。 などの組み込みの型が含まれます`Integer`と`String`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

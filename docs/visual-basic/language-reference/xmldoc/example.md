@@ -5,12 +5,12 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8d1c2a958fa148238eaeedb9c2af3df2cb86d33d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821921"
 ---
 # <a name="example-visual-basic"></a>\<example> (Visual Basic)
 メンバーの例を指定します。  
@@ -36,4 +36,5 @@ ms.locfileid: "57502606"
  [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
