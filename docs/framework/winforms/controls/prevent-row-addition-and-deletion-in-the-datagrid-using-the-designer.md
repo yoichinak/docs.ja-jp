@@ -21,7 +21,7 @@ ms.locfileid: "57714737"
   
 ### <a name="to-prevent-row-addition-and-deletion"></a>行の追加と削除を防止するには  
   
--   スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、オフ、**追加を有効にする****削除を有効にする**チェック ボックス。  
+-   スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、オフ、 **追加を有効にする** **削除を有効にする** チェック ボックス。  
   
     > [!NOTE]
     >  コントロールを完全に読み取り専用にするには、オフ、**編集を有効にする** チェック ボックスもします。  

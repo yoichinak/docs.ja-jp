@@ -13,7 +13,7 @@ ms.locfileid: "55281334"
 
 親アクティビティが子アクティビティを取り消すための要求を追跡するのに使用するクエリを表します。 追跡参加要素がキャンセル要求レコード オブジェクトを定期受信するには、このクエリが必要です。  
   
-追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。
+追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。
   
 \<system.serviceModel>  
 \<追跡 >  
