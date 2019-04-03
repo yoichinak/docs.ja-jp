@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980777"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841174"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: 複数のバージョン (Visual Basic)、プロシージャの定義します。
 プロシージャを定義するには、複数のバージョンで*オーバー ロード*バージョンごとに同じ名前が別のパラメーター リストを使用しています。 オーバー ロードの目的では、名前で区別せずに密接に関連するいくつかのバージョンのプロシージャを定義します。  
@@ -43,6 +43,7 @@ ms.locfileid: "56980777"
  プロシージャ名が同じで別のパラメーター リストを持つ、オーバー ロードされたバージョンを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [プロシージャのトラブルシューティング](./troubleshooting-procedures.md)

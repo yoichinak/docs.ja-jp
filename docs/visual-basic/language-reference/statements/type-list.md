@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843631"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
 指定します、*パラメーター入力*の*ジェネリック*プログラミング要素です。 複数のパラメーターは、コンマで区切られます。 1 つの型パラメーターの構文を次に示します。  
@@ -44,9 +44,9 @@ ms.locfileid: "56968271"
   
 |用語|定義|  
 |---|---|  
-|`genericmodifier`|任意。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[アウト](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[で](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
+|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[アウト](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[で](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
 |`typename`|必須。 型パラメーターの名前です。 これは、対応する型引数によって提供される定義済みの型によって置き換えられるプレース ホルダーです。|  
-|`constraintlist`|任意。 指定できるデータ型を制約する要件の一覧`typename`します。 複数の制約があれば、中かっこで囲みます (`{ }`) をコンマで区切ります。 使用して、制約リストを導入する必要があります、[として](../../../visual-basic/language-reference/statements/as-clause.md)キーワード。 使用する`As`リストの先頭に一度だけです。|  
+|`constraintlist`|省略可能です。 指定できるデータ型を制約する要件の一覧`typename`します。 複数の制約があれば、中かっこで囲みます (`{ }`) をコンマで区切ります。 使用して、制約リストを導入する必要があります、[として](../../../visual-basic/language-reference/statements/as-clause.md)キーワード。 使用する`As`リストの先頭に一度だけです。|  
   
 ## <a name="remarks"></a>Remarks  
  すべて汎用のプログラミング要素には、少なくとも 1 つの型パラメーターを実行する必要があります。 型パラメーターは、特定の種類のプレース ホルダー (、*構築される要素*) クライアント コードは、ジェネリック型のインスタンスを作成するタイミングを指定します。 ジェネリック クラスを定義、構造体、インターフェイス、プロシージャを委任したりできます。  
@@ -93,6 +93,7 @@ ms.locfileid: "56968271"
  [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

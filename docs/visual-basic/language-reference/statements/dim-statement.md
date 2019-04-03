@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: 7bee6bffcfe0660d1661cd2c8e2ddf0528e98620
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836559"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim ステートメント (Visual Basic)
 宣言し、1 つまたは複数の変数の記憶域を割り当てます。  
@@ -50,7 +50,7 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+     省略可能です。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
 -   `accessmodifier`  
   
@@ -72,23 +72,23 @@ Dim [ WithEvents ] variablelist
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
+     省略可能です。 参照してください[共有](../../../visual-basic/language-reference/modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+     省略可能です。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
 -   `Static`  
   
-     任意。 参照してください[静的](../../../visual-basic/language-reference/modifiers/static.md)します。  
+     省略可能です。 参照してください[静的](../../../visual-basic/language-reference/modifiers/static.md)します。  
   
 -   `ReadOnly`  
   
-     任意。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+     省略可能です。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
   
 -   `WithEvents`  
   
-     任意。 これらはイベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 参照してください[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)します。  
+     省略可能です。 これらはイベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 参照してください[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)します。  
   
 -   `variablelist`  
   
@@ -103,11 +103,11 @@ Dim [ WithEvents ] variablelist
     |パーツ|説明|  
     |---|---|  
     |`variablename`|必須。 変数名。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
-    |`boundslist`|任意。 配列変数の各次元の境界の一覧です。|  
-    |`New`|任意。 クラスの新しいインスタンスを作成時に、`Dim`ステートメントが実行されています。|  
-    |`datatype`|任意。 変数のデータ型。|  
-    |`With`|任意。 オブジェクト初期化子リストが導入されています。|  
-    |`propertyname`|任意。 クラスのプロパティの名前のインスタンスを行っています。|  
+    |`boundslist`|省略可能です。 配列変数の各次元の境界の一覧です。|  
+    |`New`|省略可能です。 クラスの新しいインスタンスを作成時に、`Dim`ステートメントが実行されています。|  
+    |`datatype`|省略可能です。 変数のデータ型。|  
+    |`With`|省略可能です。 オブジェクト初期化子リストが導入されています。|  
+    |`propertyname`|省略可能です。 クラスのプロパティの名前のインスタンスを行っています。|  
     |`propinitializer`|後に必要な`propertyname`=。 式が評価され、プロパティ名に割り当てられているです。|  
     |`initializer`|省略可能な場合`New`が指定されていません。 評価され、作成時にその変数に代入する式。|  
   
@@ -251,10 +251,10 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
 |データ型が指定されているか|初期化子が指定されているか|例|結果|  
 |---|---|---|---|  
-|Ｘ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
+|いいえ|いいえ|`Dim qty`|場合[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)に設定されている変数 off (既定)、`Nothing`します。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |Ｘ|[はい]|`Dim qty = 5`|場合[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) (既定値) では、変数は、データが初期化子の型します。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|○|Ｘ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションの後半の表を参照してください。|  
-|[はい]|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
+|[はい]|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションの後半の表を参照してください。|  
+|[はい]|[はい]|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
  データ型を指定して、初期化子を指定しない場合、Visual Basic には、データ型の既定値に変数を初期化します。 次の表は、既定の初期値を示します。  
   
@@ -314,6 +314,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
 - [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

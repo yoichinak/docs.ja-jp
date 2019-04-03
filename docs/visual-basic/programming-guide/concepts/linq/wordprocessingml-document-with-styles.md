@@ -2,12 +2,12 @@
 title: Styles2 を含む WordprocessingML ドキュメント
 ms.date: 07/20/2015
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-ms.openlocfilehash: 685e32373f864b9e8cc04b0da5250bd96efd23c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 977de8e4272ca7cea004127adcf1b15726dcc211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729315"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839728"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  
@@ -17,7 +17,7 @@ ms.locfileid: "54729315"
  パッケージにアクセスする場合、任意のパスを使用してではなく、パーツ間のリレーションシップを通じてアクセスすることが重要です。 この問題は「WordprocessingML ドキュメント内のコンテンツの操作」のチュートリアルでは扱いませんが、このチュートリアルに用意されているプログラム例では正しい方法を示しています。  
   
 ## <a name="a-document-that-uses-styles"></a>スタイルを使用するドキュメント  
- 示されている WordML の例が表示されます、 [WordprocessingML ドキュメントの構造 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)トピックは非常に単純なものです。 次のドキュメントより複雑になります。スタイルが設定されている段落があります。 Office Open XML ドキュメントを構成する XML は、実行する最も簡単な方法、[その出力 Office Open XML ドキュメント パーツ (Visual Basic) の使用例](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)します。  
+ 示されている WordML の例が表示されます、 [WordprocessingML ドキュメントの構造 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)トピックは非常に単純なものです。 次のドキュメントはもっと複雑になっています。段落がスタイルで書式設定されています。 Office Open XML ドキュメントを構成する XML は、実行する最も簡単な方法、[その出力 Office Open XML ドキュメント パーツ (Visual Basic) の使用例](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)します。  
   
  次のドキュメントでは、最初の段落にスタイル `Heading1` が設定されています。 既定のスタイルが設定されている段落が多数あります。 スタイル `Code` が設定されている段落も多数あります。 このドキュメントは比較的複雑であるため、LINQ to XML を使用した解析を行うのに適したドキュメントといえます。  
   
@@ -138,4 +138,5 @@ ms.locfileid: "54729315"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [詳細の Office Open XML WordprocessingML ドキュメント (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

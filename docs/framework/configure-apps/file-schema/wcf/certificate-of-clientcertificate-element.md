@@ -12,13 +12,13 @@ ms.locfileid: "57366518"
 # <a name="certificate-of-clientcertificate-element"></a>\<証明書 > の\<clientCertificate > 要素
 メッセージの署名と暗号化に使用される X.509 証明書を指定します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
+ \<system.ServiceModel>  
+\<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
 \<clientCertificate>  
-\<証明書 >  
+\<証明書>  
   
 ## <a name="syntax"></a>構文  
   

@@ -2,12 +2,12 @@
 title: ソースの Office Open XML ドキュメント (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 124f22e3a4b3e43dd454aca9389691a89debcf6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617448"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838860"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>ソースの Office Open XML ドキュメント (Visual Basic) の作成
 このトピックでは、このチュートリアルの他の例で使用する Office Open XML WordprocessingML ドキュメントを作成する方法について説明します。 この手順に従うと、それぞれの例に記載されているとおりの出力が得られます。  
@@ -54,4 +54,5 @@ ms.locfileid: "54617448"
     >  Microsoft Word 2003 を使用している場合、**[ファイルの種類]** ボックスの一覧の **[Word 2007 文書]** をクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

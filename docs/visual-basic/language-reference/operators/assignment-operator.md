@@ -8,12 +8,12 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 5e6d34802f5f82373d0e8176f3b732a327c55d01
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ad74e3ebc947af4f36022be838b69df6ce24997a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964995"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840290"
 ---
 # <a name="-operator-visual-basic"></a>= 演算子 (Visual Basic)
 変数またはプロパティに値を割り当てます。  
@@ -46,6 +46,7 @@ variableorproperty = value
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [& = 演算子](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [*= 演算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)

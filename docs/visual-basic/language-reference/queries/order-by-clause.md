@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: 1d9055796687f828cc173a78feb9918cbf70bbd8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c84a4cdb4a149154d459ca4d9c290ed360d1772
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976370"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835012"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 句 (Visual Basic)
 クエリ結果の並べ替え順序を指定します。  
@@ -51,6 +51,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)

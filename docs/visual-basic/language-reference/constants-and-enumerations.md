@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839590"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
 Visual Basic では、さまざまな定義済みの定数と開発者の列挙体を提供します。 定数は、アプリケーションの実行全体で一定の値を格納します。 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。  
@@ -78,6 +78,7 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |<xref:Microsoft.VisualBasic.VbStrConv>|<xref:Microsoft.VisualBasic.Strings.StrConv%2A> 関数の呼び出しで実行する変換の種類を示します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
 - [Visual Basic](../../visual-basic/index.md)
 - [定数の概要](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: aeffdc842730a1be8160cd8db8e4c2aa849e94cc
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201730"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842695"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else ステートメント (Visual Basic)
 式の値に応じてステートメント グループを条件付きで実行します。  
@@ -65,16 +65,16 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  は単一行の構文で必要複数行の構文では省略可能です。  
   
  `statements`  
- 任意。 1 つまたは複数のステートメントの次`If`.`Then`場合に実行されている`condition`に評価される`True`します。  
+ 省略可能です。 1 つまたは複数のステートメントの次`If`.`Then`場合に実行されている`condition`に評価される`True`します。  
   
  `elseifcondition`  
  場合に、必ず`ElseIf`が存在します。 式。 評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。  
   
  `elseifstatements`  
- 任意。 1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。  
+ 省略可能です。 1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。  
   
  `elsestatements`  
- 任意。 ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。  
+ 省略可能です。 ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。  
   
  `End If`  
  複数行のバージョンを終了する`If`.`Then`...`Else`ブロックします。  
@@ -121,6 +121,7 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  [!code-vb[VbVbalrStatements#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class6.vb#103)]
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Switch%2A>
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

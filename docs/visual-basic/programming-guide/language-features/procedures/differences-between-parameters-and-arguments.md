@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694036"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838977"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>パラメーターと引数の違い (Visual Basic)
 ほとんどの場合、プロシージャが呼び出されたときの状況に関する情報が必要です。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
@@ -38,6 +38,7 @@ ms.locfileid: "54694036"
  パラメーターの定義とは対照的引数には名前がありません。 各引数は、0 以上の変数、定数、およびリテラルに含めることができる式です。 通常、対応するパラメーター、定義されているデータ型に一致する必要があります式の評価結果のデータ型と、いずれの場合も、パラメーターの型に変換できるあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)

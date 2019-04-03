@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839614"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
 1 つまたは複数の範囲変数とクエリのコレクションを指定します。  
@@ -32,7 +32,7 @@ From element [ As type ] In collection [ _ ]
 |用語|定義|  
 |---|---|  
 |`element`|必須。 A*範囲変数*コレクションの要素を反復処理するために使用します。 各メンバーを参照する範囲変数が使用される、`collection`を反復処理、クエリと、`collection`します。 列挙可能な型である必要があります。|  
-|`type`|任意。 `element` の型。 ない場合は`type`を指定の種類`element`から推論されます`collection`します。|  
+|`type`|省略可能です。 `element` の型。 ない場合は`type`を指定の種類`element`から推論されます`collection`します。|  
 |`collection`|必須。 クエリを実行するコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -70,6 +70,7 @@ From element [ As type ] In collection [ _ ]
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

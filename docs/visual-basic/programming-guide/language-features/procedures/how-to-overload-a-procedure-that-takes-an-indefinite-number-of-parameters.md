@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: 262812f5e18bb9c46ea5ec573adab914f19eef43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979478"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838996"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>方法: 不特定数のパラメーター (Visual Basic) を受け取るプロシージャをオーバー ロードします。
 プロシージャがある場合、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター、パラメーター配列の 1 次元配列を取得するオーバー ロードされたバージョンを定義することはできません。 詳細については、「暗黙的なオーバー ロードを ParamArray パラメーター」を参照してください[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)します。  
@@ -54,6 +54,7 @@ ms.locfileid: "56979478"
  無限に増大することができる配列を処理するたびに、アプリケーションの内部の容量を超過してしまう可能性があります。 パラメーター配列を受け取る場合は、呼び出し元のコードは、渡された配列の長さをテストし、がアプリケーションには大きすぎる場合は、適切な手順を実行する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [省略可能なパラメーター](./optional-parameters.md)

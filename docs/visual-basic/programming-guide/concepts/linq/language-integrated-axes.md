@@ -2,12 +2,12 @@
 title: Visual Basic の統合言語軸 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
-ms.openlocfilehash: 2bae085e82c01644127a9dbdb3a3fe6b775a08f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840992"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Visual Basic の統合言語軸 (LINQ to XML)
 このセクションでは、XML にアクセスするが簡単に Visual Basic 言語に直接組み込まれている機能について説明します。 XML ドキュメントを LINQ の例の多くは、統合された Visual Basic の軸を使用します。  
@@ -22,4 +22,5 @@ ms.locfileid: "54702120"
 |[拡張インデクサー プロパティ](../../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)|コレクション内の個々の要素にアクセスできます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
