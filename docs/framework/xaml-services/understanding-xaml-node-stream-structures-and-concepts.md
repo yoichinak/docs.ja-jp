@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034752"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824430"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
@@ -70,7 +70,7 @@ while (xxr.Read()) {
 }
 ```
 
-読み込みパスの XAML ノード ループの基本的な例では、XAML リーダーと XAML ライターが透過的に接続されています。<xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType> を使用した場合と違いはありません。 しかし、この基本構造は、読み取りと書き込みのシナリオに適用するように拡張されます。 可能なシナリオは次のとおりです。
+読み込みパスの XAML ノード ループの基本的な例では、XAML リーダーと XAML ライターが透過的に接続されています。 <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>を使用した場合と違いはありません。 しかし、この基本構造は、読み取りと書き込みのシナリオに適用するように拡張されます。 可能なシナリオは次のとおりです。
 
 - <xref:System.Xaml.XamlXmlReader.NodeType%2A>で切り替える。 読み込まれているノードの型によって、さまざまな操作を実行する。
 
@@ -188,7 +188,7 @@ public class GameBoard {
 
 `EndObject` と一致する `GameBoard`
 
-このノード ストリームには型コンバーター インスタンスがないことに注意してください。 ただし、`BoardSize` の <xref:System.Xaml.XamlMember> で <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> を呼び出して、型コンバーター情報を取得することができます。 有効な XAML スキーマ コンテキストがある場合は、 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>からインスタンスを取得することでコンバーターのメソッドを呼び出すこともできます。
+このノード ストリームには型コンバーター インスタンスがないことに注意してください。 ただし、 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> の <xref:System.Xaml.XamlMember> で `BoardSize`を呼び出して、型コンバーター情報を取得することができます。 有効な XAML スキーマ コンテキストがある場合は、 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>からインスタンスを取得することでコンバーターのメソッドを呼び出すこともできます。
 
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML ノード ストリームのマークアップ拡張機能
 
@@ -216,9 +216,9 @@ public class GameBoard {
 
 - **マークアップ拡張機能の位置指定パラメーター:** このメンバー ノードの名前は`_PositionalParameters`、XAML 言語の XAML 名前空間で定義されます。 それには常にオブジェクトのジェネリック リストが含まれ、それぞれが入力 XAML で指定される `,` 区切り文字で分割して事前に分離された位置指定パラメーターになっています。 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>から、位置指定パラメーター ディレクティブの静的なエンティティを取得できます。
 
-- **不明なコンテンツ:** このメンバー ノードの名前は`_UnknownContent`します。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent` という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
+- **不明なコンテンツ:** このメンバー ノードの名前は`_UnknownContent`します。 厳密に言うと、これは <xref:System.Xaml.XamlDirective>で、XAML 言語の XAML 名前空間で定義されます。 このディレクティブは、XAML オブジェクト要素にソース XAML のコンテンツが含まれている場合は sentinel として使用されますが、現在使用できる XAML スキーマ コンテキストで決定できるコンテンツのプロパティはありません。 `_UnknownContent`という名前のメンバーを確認すると、XAML ノード ストリームでこのケースを検出できます。 読み込みパスの XAML ノード ストリームでその他の処理が行われない場合、いずれかのオブジェクトで <xref:System.Xaml.XamlObjectWriter> のメンバーが検出されると、試行した `WriteEndObject` で既定の `_UnknownContent` がスローされます。 既定の <xref:System.Xaml.XamlXmlWriter> はスローされず、メンバーを暗黙の型として処理します。 `_UnknownContent` の静的なエンティティは <xref:System.Xaml.XamlLanguage.UnknownContent%2A>から取得できます。
 
-- **コレクションの Collection プロパティ:** XAML で使用されるコレクション クラスのバッキング CLR の型には、コレクション項目を保持する専用の名前が付いたプロパティがありますが、このプロパティは、バッキング型の解決までは XAML 型システムでは既知ではありません。 代わりに、XAML ノード ストリームでは、コレクションの XAML 型のメンバーとして `Items` プレース ホルダーを導入します。 .NET Framework XAML サービスの実装では、ノード ストリームのディレクティブまたはメンバーの名前は `_Items`です。 このディレクティブの定数は <xref:System.Xaml.XamlLanguage.Items%2A>から取得できます。
+- **コレクションの collection プロパティ:** 通常は XAML に使用されるコレクション クラスのバッキング CLR 型は、専用のコレクション アイテムを保持するプロパティをという名前がある、そのプロパティはバッキング型の解決までの XAML 型システムは不明です。 代わりに、XAML ノード ストリームでは、コレクションの XAML 型のメンバーとして `Items` プレース ホルダーを導入します。 .NET Framework XAML サービスの実装では、ノード ストリームのディレクティブまたはメンバーの名前は `_Items`です。 このディレクティブの定数は <xref:System.Xaml.XamlLanguage.Items%2A>から取得できます。
 
     XAML ノード ストリームが解析できないことに項目を含む項目プロパティを含む可能性がありますに注意してください、バッキング型の解決と XAML スキーマ コンテキストに基づいています。 例えば以下のようにします。
 

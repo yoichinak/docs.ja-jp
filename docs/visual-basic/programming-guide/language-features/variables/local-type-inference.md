@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973406"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826822"
 ---
 # <a name="local-type-inference-visual-basic"></a>ローカル型の推論 (Visual Basic)
 Visual Basic コンパイラを使用して*型推論*なしで宣言されたローカル変数のデータの種類を決定する、`As`句。 コンパイラでは、初期化式の型から変数の型を推測します。 これにより、次の例に示すように、型を明示的に指定せず変数を宣言することができます。 宣言では、結果として両方`num1`と`num2`整数として厳密に型指定します。  
@@ -72,6 +72,7 @@ Visual Basic コンパイラを使用して*型推論*なしで宣言された�
  詳細については、次を参照してください。 [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

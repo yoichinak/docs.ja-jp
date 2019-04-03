@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 58c0caa9d1df49ec53273e5b0f456cf89fc64c42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0165fb8d573878ae19378b2656d89627680b804
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683691"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826745"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic の MaskedTextBox コントロールによる正規表現を使用する
 この例を使用する正規表現を単純に変換する方法、<xref:System.Windows.Forms.MaskedTextBox>コントロール。  
@@ -56,6 +56,7 @@ ms.locfileid: "54683691"
 |`$\d{6}.00`|`$999,999.00`|0 ~ 999999 の範囲内の通貨値。 通貨、1/10,000 のおよび 10 進数の文字は、対応するカルチャに固有の実行時に置き換えられます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Visual Basic における文字列の検証](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

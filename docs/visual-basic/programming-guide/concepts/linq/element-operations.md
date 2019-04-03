@@ -2,12 +2,12 @@
 title: 要素操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: bbc16599a2688d5e0fe8b1e510946580fa2ca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501244"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836923"
 ---
 # <a name="element-operations-visual-basic"></a>要素操作 (Visual Basic)
 要素操作では、シーケンスから単一の特定の要素が返されます。  
@@ -28,6 +28,7 @@ ms.locfileid: "54501244"
 |SingleOrDefault|コレクションの唯一の要素、または条件を満たす唯一の要素を返します。 そのような要素が存在しない場合、またはコレクションの要素が 1 つだけでない場合は、既定値を返します。|該当なし。|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (Visual Basic) 内のファイルのクエリ](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

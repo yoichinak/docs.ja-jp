@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654238"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825457"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
 ほとんどの場合、プロシージャには、呼び出されたときの状況に関する情報が必要があります。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
@@ -59,6 +59,7 @@ ms.locfileid: "58654238"
  A*ジェネリック プロシージャ*も 1 つまたは複数定義します*パラメーター入力*だけでなく、通常のパラメーター。 ジェネリック プロシージャでは、個々 の呼び出しの要件をデータ型を調整できるように、プロシージャを呼び出すたびに異なるデータ型を渡すコードの呼び出しを許可します。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)

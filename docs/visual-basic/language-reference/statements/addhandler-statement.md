@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: dd57f63b5741822de7b11c1fafe90452a767aa34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e8d8f512f163d82f074a5ad53fbb38a10904dfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965645"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827082"
 ---
 # <a name="addhandler-statement"></a>AddHandler ステートメント
 実行時にイベントをイベント ハンドラーに関連付けます。  
@@ -45,6 +45,7 @@ AddHandler event, AddressOf eventhandler
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)

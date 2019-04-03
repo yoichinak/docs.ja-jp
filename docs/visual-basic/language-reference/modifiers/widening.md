@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d43d4f5f931881d5c8b663c719fe7f92559799
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703710"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825314"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 示します変換演算子 (`CType`) クラスまたは構造体を元のクラスまたは構造体のすべての値を保持できる型に変換します。  
@@ -34,6 +34,7 @@ ms.locfileid: "54703710"
  たとえばの拡大と縮小変換の演算子の定義を参照してください[方法。変換演算子を定義](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

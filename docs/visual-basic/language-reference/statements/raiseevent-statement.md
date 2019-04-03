@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973302"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821011"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent ステートメント
 クラス、フォーム、またはドキュメント内のモジュール レベルで宣言されているイベントをトリガーします。  
@@ -31,7 +31,7 @@ RaiseEvent eventname[( argumentlist )]
  必須。 トリガーするイベントの名前。  
   
  `argumentlist`  
- 任意。 変数、配列、または式のコンマ区切りのリスト。 `argumentlist`引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
+ 省略可能です。 変数、配列、または式のコンマ区切りのリスト。 `argumentlist`引数はかっこで囲む必要があります。 引数がない場合は、かっこを省略する必要があります。  
   
 ## <a name="remarks"></a>Remarks  
  必要な`eventname`は、モジュール内で宣言されたイベントの名前。 Visual Basic 変数の名前付け規則に従います。  
@@ -76,6 +76,7 @@ RaiseEvent eventname[( argumentlist )]
 >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../standard/threading/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)

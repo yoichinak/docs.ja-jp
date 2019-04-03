@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363481"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832113"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
 A*ラムダ式*は関数またはサブルーチン デリゲートは、有効な場所で使用できる名前のないです。 ラムダ式は関数またはサブルーチンを指定でき、単一行または複数行を指定できます。 ラムダ式に現在のスコープから値を渡すことができます。  
@@ -152,6 +152,7 @@ End Class
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

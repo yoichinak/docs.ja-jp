@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 636fcc36e7bac52467998dc9c59f14ba1bedead3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258626"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831489"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>基になる型\<typename > の列挙型は CLS 準拠
 この列挙体は、指定されたデータ型の一部、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS)。 これはないため、エラー、コンポーネント内で、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]と Visual Basic は、このデータ型をサポートします。 ただし、厳密に CLS 準拠コードで記述された別のコンポーネントでは、このデータ型がサポートしない可能性があります。 このようなコンポーネントはできないコンポーネントを正常にやり取りすることがあります。  
@@ -42,6 +42,6 @@ ms.locfileid: "55258626"
 -   オートメーション オブジェクトや COM オブジェクトとやり取りする場合は、一部の型のデータ幅が [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] とは異なることに注意してください。 たとえば、他の多くの環境では `uint` は 16 ビットです。 このようなコンポーネントに 16 ビットの引数を渡す場合の宣言として`UShort`の代わりに`UInteger`管理対象の Visual Basic コードです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [リフレクション (Visual Basic)](../../programming-guide/concepts/reflection.md)
 - [リフレクション](../../../framework/reflection-and-codedom/reflection.md)
-

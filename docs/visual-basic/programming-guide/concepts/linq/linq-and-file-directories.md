@@ -2,12 +2,12 @@
 title: LINQ とファイル ディレクトリ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: bd6889c087f9347c2c056ed10356ae2a55565a4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56967a82bf63d8421d34af48dcc6384ded85e2ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566867"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825119"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ とファイル ディレクトリ (Visual Basic)
 多くのファイル システム操作は基本的にクエリであるため、LINQ での使用に最適です。  
@@ -41,4 +41,5 @@ ms.locfileid: "54566867"
  ファイル システムの内容を正確に表し、例外を適切に処理するデータ ソースを作成する手順は複雑になります。 ここに示す例では、指定したルート フォルダーおよびすべてのサブフォルダーの下にある、すべてのファイルを表す <xref:System.IO.FileInfo> オブジェクトのスナップショット コレクションを作成します。 各 <xref:System.IO.FileInfo> の実際の状態は、クエリの実行の開始時点から終了時点までの間に変化する可能性があります。 たとえば、データ ソースとして使用する <xref:System.IO.FileInfo> オブジェクトの一覧を作成したとします。 クエリで `Length` プロパティにアクセスしようとすると、<xref:System.IO.FileInfo> オブジェクトがファイル システムにアクセスして `Length` の値を更新しようとします。 ファイルがもう存在しない場合は、ファイル システムを直接照会していなくても、クエリから <xref:System.IO.FileNotFoundException> が返されます。 ここで示すクエリの中には、状況により、このような特定の例外を処理する個別のメソッドを使用しているものがあります。 別の方法として、<xref:System.IO.FileSystemWatcher> を使用して、データ ソースを動的に更新して常に最新の状態に保つこともできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

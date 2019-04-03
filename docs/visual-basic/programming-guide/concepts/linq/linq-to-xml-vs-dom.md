@@ -2,12 +2,12 @@
 title: LINQ to XML およびDOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 07c54c9e2097a328ba09b16dab5b6c8b71c90934
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494848"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831268"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML およびDOM (Visual Basic)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -128,7 +128,8 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 要素は、注釈の拡張可能なセットをサポートしています。 このサポートは、スキーマの情報、要素が UI にバインドされているかどうかの情報、またはアプリケーション固有のその他の情報など、要素に関するさまざまな情報を追跡する場合に利用できます。 詳細については、「[LINQ to XML 注釈](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)」を参照してください。  
   
 ## <a name="support-for-schema-information"></a>スキーマ情報のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、「[方法 :XSD を使用して検証](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)と<xref:System.Xml.Schema.Extensions>します。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、「[方法 :XSD を使用して検証する](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)」と <xref:System.Xml.Schema.Extensions> を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

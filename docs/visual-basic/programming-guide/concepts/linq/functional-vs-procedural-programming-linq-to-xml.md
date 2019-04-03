@@ -2,12 +2,12 @@
 title: 関数型プログラミングと手続き型プログラミング (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: d5db2f686d72390cdb7e338235a39e4039281e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813459"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (Visual Basic)
 XML アプリケーションには、次のようにさまざまな種類があります。  
@@ -41,4 +41,5 @@ XML アプリケーションには、次のようにさまざまな種類があ�
  関数型変換の記述に関するチュートリアルについては、次を参照してください。[純粋関数型の XML 変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

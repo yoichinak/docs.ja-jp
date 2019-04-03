@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c4dd249620ba1bf445642ce4600498f6beb30461
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125565"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827771"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  
@@ -62,6 +62,7 @@ GoTo line
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

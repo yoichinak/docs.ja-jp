@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356781"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819594"
 ---
 # <a name="navigation-topologies-overview"></a>ナビゲーション トポロジの概要
 <a name="introduction"></a> この概要でのナビゲーション トポロジの概要については、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 3 つの一般的なナビゲーション トポロジをサンプルと共に説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "57356781"
   
  このトピックでは、次の 3 つの一般的なナビゲーション トポロジをについて説明します。*固定線形*、*固定階層*、および*動的に生成された*します。 各ナビゲーション トポロジを持つサンプルで示さ、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]などの次の図に表示される 1 つ。  
   
- ![データ項目を含むタスク ページ](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![データ項目とナビゲーション ボタンを含むタスク ページ。](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>構造化ナビゲーション トポロジ  
@@ -60,9 +60,9 @@ ms.locfileid: "57356781"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>固定線形トポロジを介したナビゲーション  
- 固定線形トポロジは、シーケンスが固定されている 1 つ以上のウィザード ページの構造に似ています。 次の図は、固定線形トポロジを持つウィザードの高レベルの構造とフローを示しています。  
+ 固定線形トポロジは、シーケンスが固定されている 1 つ以上のウィザード ページの構造に似ています。 次の図は、大まかな構造と固定線形トポロジを持つウィザードのフローを示します。  
   
- ![ナビゲーション トポロジのダイアグラム](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![固定線形トポロジを示す図。](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  固定線形トポロジを使用するナビゲーションの一般的な動作は、次のとおりです。  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356781"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>固定階層トポロジを介した動的ナビゲーション  
- 一部のアプリケーションでは、次の図に示されているように、ページから複数のページにナビゲートできる場合があります。  
+ 一部のアプリケーションでは、ページは、次の図に示すように、2 つまたは複数のページ ナビゲーションを許可します。 
   
- ![複数のページにナビゲートできるページ](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![複数のページに移動できるページを示す図。](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- この構造は固定階層トポロジと呼ばれ、通常、階層内を移動するシーケンスは、アプリケーションまたはユーザーによって実行時に決定されます。 実行時に、他の複数のページにナビゲートできる階層内の各ページは、移動先ページを決定するために必要なデータを収集します。 次の図は、前の図に基づくいくつかの可能なナビゲーション シーケンスを示しています。  
+ この構造は固定階層トポロジと呼ばれ、通常、階層内を移動するシーケンスは、アプリケーションまたはユーザーによって実行時に決定されます。 実行時に、他の複数のページにナビゲートできる階層内の各ページは、移動先ページを決定するために必要なデータを収集します。 次の図は、前の図に基づくいくつかの可能なナビゲーション シーケンスのいずれかを示しています。  
   
- ![ナビゲーション トポロジのダイアグラム](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![可能なナビゲーション シーケンスを示す図。](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  固定階層構造内のページのシーケンスは実行時に決定されますが、ユーザー エクスペリエンスは固定線形トポロジの場合と同じです。  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356781"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>動的に生成されたトポロジを介したナビゲーション  
- 一部のアプリケーションでは、複数のページ間を移動するシーケンスの決定にユーザー、アプリケーション、または外部データが必要になり、実行時にしか決定できない場合があります。 次の図は、基本となるナビゲーション シーケンスを持つ一連のページを示しています。  
+ 一部のアプリケーションでは、複数のページ間を移動するシーケンスの決定にユーザー、アプリケーション、または外部データが必要になり、実行時にしか決定できない場合があります。 次の図は、一連のページを基本となるナビゲーション シーケンスを示しています。  
   
- ![ナビゲーション トポロジのダイアグラム](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![基本となるナビゲーション シーケンスを含むページのセット。](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- 次の図は、実行時にユーザーによって選択されたナビゲーション シーケンスを示しています。  
+ 次の図は、実行時に、ユーザーが選択したナビゲーション シーケンスを示しています。  
   
- ![ナビゲーションのダイアグラム](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![実行時に選択したナビゲーション シーケンスを表示する図。](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  このナビゲーション シーケンスは、動的生成トポロジと呼ばれます。 ユーザーにとっては、他のナビゲーション トポロジと同様に、ユーザー エクスペリエンスは前述のトポロジと同じです。  
   

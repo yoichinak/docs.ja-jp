@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: a75984d0eb64ef8c18def3ae59d5e1f4b6d20ce2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980343"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821154"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic における文字列操作メソッドの種類
 いくつかの方法を分析し、文字列の操作があります。 Visual Basic 言語の一部である一部のメソッドと他のユーザーに固有では、`String`クラス。  
@@ -44,4 +44,5 @@ ms.locfileid: "56980343"
  詳細については、ドキュメントを参照して、<xref:System.String>クラス。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

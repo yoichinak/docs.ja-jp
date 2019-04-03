@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970286"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842046"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>方法: (Visual Basic) の値によって渡される引数を強制します。
 プロシージャ宣言では、引き渡し方法を決定します。 パラメーターが宣言されている場合[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)、Visual Basic で参照によって、対応する引数を渡す必要があります。 これにより、呼び出し元のコードで引数を基になるプログラミングの要素の値を変更する手順です。 オーバーライドすることができます、基になる要素に対してこのような変更を保護する場合、`ByRef`引き渡し方法の手順では、引数名をかっこで囲んで呼び出し。 このかっこは、呼び出しの引数リストを囲むかっこだけでなく、します。  
@@ -53,6 +53,7 @@ ms.locfileid: "56970286"
  呼び出し元のコードで引数を基になる値を変更するプロシージャを許可するのには、潜在的なリスクがあります。 変更して、使用する前に有効性を確認するよう準備するのには、この値を期待することを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)

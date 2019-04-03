@@ -2,12 +2,12 @@
 title: '方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616980"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828551"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。
 この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。  
@@ -29,7 +29,7 @@ ms.locfileid: "54616980"
     Garcia, Debra  
     ```  
   
-2.  これらの名前を names2.txt という名前のテキスト ファイルにコピーして、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
+2.  次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
   
     ```  
     Liu, Jinghao  
@@ -119,5 +119,6 @@ End Class
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

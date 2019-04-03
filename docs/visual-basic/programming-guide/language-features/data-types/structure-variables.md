@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640603"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816331"
 ---
 # <a name="structure-variables-visual-basic"></a>構造体の変数 (Visual Basic)
 構造体を作成すると、その型と、プロシージャ レベルとモジュール レベル変数を宣言できます。 たとえば、コンピューター システムに関する情報を記録する構造体を作成できます。 次に例を示します。  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  構造体の要素など、参照型では、かどうか、 `String`、 `Object`、またはデータへのポインター、配列をコピーします。 前の例では場合、`systemInfo`のポインターが前の例をコピーした場合、オブジェクト変数が含まれていた`mySystem`に`yourSystem`、アクセスするときに、1 つの構造をオブジェクトのデータの変更が有効になるとその他の構造をします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

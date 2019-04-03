@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e494e4e6fcbf91a7ab90b6922bc7bb4ace236b8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498636"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821479"
 ---
 # <a name="-win32icon"></a>-win32icon
 .Ico ファイルを出力ファイルに挿入します。 この .ico ファイルは、出力ファイルを表す**ファイル エクスプ ローラー**します。  
@@ -45,5 +45,6 @@ vbc -win32icon:rf.ico in.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

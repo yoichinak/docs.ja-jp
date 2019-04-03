@@ -2,12 +2,12 @@
 title: '方法: 結合および比較文字列のコレクション (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: 9948cdb4aa40ca12f7dd058fe12ffcd6462cdaae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732662"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828967"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>方法: 結合および比較文字列のコレクション (LINQ) (Visual Basic)
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
@@ -166,5 +166,6 @@ End Class
  .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

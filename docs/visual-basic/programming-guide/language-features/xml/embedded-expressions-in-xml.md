@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965788"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827576"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
 埋め込み式を使用すると、実行時に評価される式が含まれる XML リテラルを作成できます。 埋め込み式の構文は、 `<%=` `expression` `%>`で使用するための構文は同じ[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]します。  
@@ -81,6 +81,7 @@ ms.locfileid: "56965788"
 >  使用して XML 名前空間プレフィックスを宣言する場合、`xmlns`名前空間の属性、属性値に定数文字列を指定する必要があります。 この点を使用して、`xmlns`属性は使用と同様、 `Imports` XML 名前空間を宣言するステートメント。 埋め込み式を使用して、XML 名前空間の値を指定することはできません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

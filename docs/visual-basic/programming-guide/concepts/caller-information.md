@@ -2,12 +2,12 @@
 title: 呼び出し元情報 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375546"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826055"
 ---
 # <a name="caller-information-visual-basic"></a>呼び出し元情報 (Visual Basic)
 呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、および呼び出し元のメンバー名を取得できます。 この情報は、トレース、デバッグ、および診断ツールの作成に役立ちます。  
@@ -75,6 +75,7 @@ End Sub
 |含んでいないメンバー (型に適用されているアセンブリ レベルや属性など)|省略可能なパラメーターの既定値。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [属性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [一般的な属性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

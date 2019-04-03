@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d366ec750ea5a4505ae5ea618e27f47406ba959
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824274"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>式の型 '\<typename >' は制限付きの型と 'Object' または 'ValueType' から継承されたメンバーのアクセスに使用することはできません
 式では、共通言語ランタイム (CLR) でボックス化できない型に評価が、ボックス化を必要とするメンバーにアクセスします。  
@@ -32,4 +32,5 @@ ms.locfileid: "55274028"
 3.  メソッドの呼び出しを回避するために、ステートメントを書き直してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

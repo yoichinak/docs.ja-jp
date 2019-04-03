@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 56ea9bac1326ebab7ef44fb5541c05be8bc855e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967205"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841288"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動実装プロパティ (Visual Basic)
 *自動実装プロパティ*を使用すると、すばやくクラスのプロパティを指定するためのコードを記述することがなく`Get`と`Set`プロパティ。 自動実装プロパティのコードを記述する場合、Visual Basic コンパイラでは、関連付けられた `Get` プロシージャおよび `Set` プロシージャが作成されるだけでなく、プロパティの変数を格納するためのプライベート フィールドが自動的に作成されます。  
@@ -94,6 +94,7 @@ End Class
  自動実装プロパティを `Get` プロシージャまたは `Set` プロシージャを含む展開されたプロパティに変換する必要がある場合、Visual Basic コード エディターを使用すると、`Get` プロシージャおよび `Set` プロシージャと、そのプロパティの `End Property` ステートメントを自動的に生成できます。 後の空白行にカーソルを配置する場合、コードが生成、`Property`ステートメントでは、入力`G`(の`Get`) または`S`(の`Set`) し、ENTER キーを押します。 `Property` ステートメントの最後で Enter キーを押すと、読み取り専用のプロパティおよび書き込み専用のプロパティの `Get` プロシージャまたは `Set` プロシージャが Visual Basic コード エディターで自動的に作成されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)
 - [方法: 混合アクセス レベルを持つプロパティを宣言します。](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)

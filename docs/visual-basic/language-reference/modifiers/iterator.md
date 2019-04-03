@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: 06188560163491284eab0dcfc4bba6b029e65ce8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969285"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822701"
 ---
 # <a name="iterator-visual-basic"></a>反復子 (Visual Basic)
 指定する関数または`Get`アクセサーが反復子です。  
@@ -51,6 +51,7 @@ ms.locfileid: "56969285"
  その他の例では、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.CompilerServices.IteratorStateMachineAttribute>
 - [反復子](../../programming-guide/concepts/iterators.md)
 - [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)

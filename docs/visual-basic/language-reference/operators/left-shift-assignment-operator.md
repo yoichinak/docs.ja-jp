@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator<<=
 - compound assignment statements [Visual Basic]
 ms.assetid: 8ad26613-faff-4e2f-89ee-63feee33bfda
-ms.openlocfilehash: b2a642b1187c9a08007ee1eddfa0764198fc0877
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: da2b5ca0b7538d77c3c8d8bc7d45712d656ce63a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829149"
 ---
 # <a name="-operator-visual-basic"></a>\<\<= 演算子 (Visual Basic)
 変数またはプロパティの値に算術左シフトを実行し、結果を変数またはプロパティに代入します。  
@@ -50,6 +50,7 @@ variableorproperty <<= amount
  [!code-vb[VbVbalrOperators#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#13)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [<< 演算子](../../../visual-basic/language-reference/operators/left-shift-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)

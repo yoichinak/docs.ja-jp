@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465218"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822337"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>クエリ操作での型の関係 (Visual Basic)
 使用される変数[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ操作は、厳密に型指定し、相互に互換性がある必要があります。 厳密な型指定すると、データ ソース、クエリ自体、およびクエリの実行が使用されます。 次の図は、記述に使用される用語の識別、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 詳細については、クエリの部分は、次を参照してください。[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)します。  
@@ -117,6 +117,7 @@ Next
 3.  反復変数の型、`For Each`ループは、手順 2. で作成された匿名型。 型に使用できる名前があるないために、ループの反復変数の型は暗黙的に決定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

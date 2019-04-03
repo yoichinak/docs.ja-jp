@@ -2,12 +2,12 @@
 title: '方法: チェーンの軸メソッドの呼び出し (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e4e22942-39bd-460f-b3c0-9f09e53d3aa9
-ms.openlocfilehash: 2528c0bc460d5e4ca84f27aad64a25539b6ed55b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b74bcd9b9b61ddbfddcdbdf4c48af6b2fbd68a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832049"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-visual-basic"></a>方法: チェーンの軸メソッドの呼び出し (LINQ to XML) (Visual Basic)
 コードで使用する一般的なパターンでは、軸メソッドを呼び出してから、拡張メソッド軸のいずれかを呼び出します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54535102"
 ## <a name="example"></a>例  
  この例では、<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType> および <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType> を使用して、すべての `Name` 要素内にあるすべての `Address` 要素内で `PurchaseOrder` 要素をすべて検索します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:複数の発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim purchaseOrders As XElement = XElement.Load("PurchaseOrders.xml")  
@@ -88,7 +88,7 @@ Next
 ## <a name="example"></a>例  
  次の例は名前空間に含まれている XML 用の手法です。これらの手法は上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:複数の購買発注、Namespace で](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)します。  
+ この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル:名前空間内の複数の購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-in-a-namespace.md)を使用します。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -118,4 +118,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

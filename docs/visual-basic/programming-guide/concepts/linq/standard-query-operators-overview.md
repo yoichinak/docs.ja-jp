@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 1e665a9408deb5d5788301b1b24f39a4fd79fbc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841473"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準クエリ演算子の概要 (Visual Basic)
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  
@@ -101,6 +101,7 @@ MsgBox(output.ToString())
  [集計操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)

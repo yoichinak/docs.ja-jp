@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: a2394af7fc01f00a60900ed705fd1189959a50e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94fa8c5f648211252b59d3f530f6b651566a7136
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703175"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836689"
 ---
 # <a name="conversion-summary-visual-basic"></a>変換の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -32,5 +32,6 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |時刻をシリアル値に変換|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A>|  
   
 ## <a name="see-also"></a>関連項目
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RemoveHandler keyword [Visual Basic]
 - RemoveHandler statement [Visual Basic]
 ms.assetid: 647cd825-e877-4910-b4f1-8d168beebe6a
-ms.openlocfilehash: 4e53398f97cbd320c0c98250ac5abbc2e4e98027
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8a9dc5874629c1687318496bd7c4016eb318c25a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981037"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831684"
 ---
 # <a name="removehandler-statement"></a>RemoveHandler ステートメント
 イベントとイベント ハンドラー間の関連付けを削除します。  
@@ -42,6 +42,7 @@ RemoveHandler event, AddressOf eventhandler
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
 - [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)

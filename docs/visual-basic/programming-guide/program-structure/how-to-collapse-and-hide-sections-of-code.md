@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980127"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822296"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: 折りたたみし、コード (Visual Basic) のセクションを非表示
 `#Region`ディレクティブでは、折りたたんでのコード Visual Basic ファイルのセクションを非表示にすることができます。 `#Region`ディレクティブでは、Visual Studio コード エディターを使用する場合は、拡張可能なコードまたは折りたたみのブロックを指定することができます。 選択的にコードを非表示にする機能は、ファイルをより管理しやすく、読みやすくになります。 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。  
@@ -30,6 +30,7 @@ ms.locfileid: "56980127"
     >  コードを非表示にコンパイルされないは防止されませんしには影響しません`#If...#End If`ステートメント。  
   
 ## <a name="see-also"></a>関連項目
+
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region ディレクティブ](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

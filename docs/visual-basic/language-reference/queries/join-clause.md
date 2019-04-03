@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 1a2ec42adb4c41c33cb9e1c09822795c81e3a728
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 21432b95b30ae38ac2cbc9e55b5a3066f0bef665
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825847"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 2 つのコレクションを単一のコレクションに結合します。 結合操作は、一致するキーに基づいて、使用して、`Equals`演算子。  
@@ -37,10 +37,10 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  必須。 左側にあるで識別されるコレクションと結合するコレクション、`Join`演算子。 A`Join`句は、別の入れ子にすることができます`Join`句、または、`Group Join`句。  
   
  `joinClause`  
- 任意。 1 つ以上の追加`Join`句をさらに、クエリを絞り込みます。  
+ 省略可能です。 1 つ以上の追加`Join`句をさらに、クエリを絞り込みます。  
   
  `groupJoinClause`  
- 任意。 1 つ以上の追加`Group Join`句をさらに、クエリを絞り込みます。  
+ 省略可能です。 1 つ以上の追加`Group Join`句をさらに、クエリを絞り込みます。  
   
  `key1` `Equals` `key2`  
  必須。 結合するコレクションのキーを識別します。 使用する必要があります、`Equals`結合されているコレクションからキーを比較する演算子。 使用して、結合条件を組み合わせることができます、`And`演算子を複数のキーを識別します。 `key1` 左側にあるコレクションから必要があります、`Join`演算子。 `key2` 右側にあるコレクションから必要があります、`Join`演算子。  
@@ -88,6 +88,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
  `explorer (2424), File Explorer, Priority = 8`  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)

@@ -2,12 +2,12 @@
 title: 指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: a01ab79a2895bd9c5a8ae4782db06eb9dd5664a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b5634165493ff1aa5e07f5240a3db15741d57a1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580552"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831554"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)
 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> メソッドを使用すると、一定の時間が過ぎた後に非同期操作が完了するまで待たない場合に、その操作を取り消しできます。 このメソッドは、`CancelAfter` 式によって指定された時間内に完了しない、関連付けられたタスクの取り消しをスケジュールします。  
@@ -18,7 +18,7 @@ ms.locfileid: "54580552"
 >  この例を実行するには、Visual Studio 2012 以降および .NET Framework 4.5 以降がコンピューターにインストールされている必要があります。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
- 完全な Windows Presentation Foundation (WPF) プロジェクトをダウンロードする[「Async Sample:アプリケーションの調整を細かく](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)し次の手順に従います。  
+ 完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。  
   
 1.  ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
   
@@ -88,7 +88,7 @@ Downloads canceled.
   
  <xref:System.Net.Http> の参照を追加する必要があることに注意してください。  
   
- プロジェクトをダウンロードする[「Async Sample:アプリケーションを詰める](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)します。  
+ プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -190,6 +190,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)

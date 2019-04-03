@@ -3,12 +3,12 @@ title: クレーム対応の ASP.NET Web アプリケーションを初めて構
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588965"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838132"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>クレーム対応の ASP.NET Web アプリケーションを初めて構築する
 ## <a name="applies-to"></a>対象  
@@ -19,7 +19,7 @@ ms.locfileid: "54588965"
   
  このトピックでは、WIF を使用してクレーム対応 ASP.NET Web アプリケーションをビルドするシナリオの概要について説明します。 クレーム対応アプリケーションのシナリオには、通常、アプリケーション、エンド ユーザー、セキュリティ トークン サービス (STS) の 3 つ参加要素が存在します。 次の図は、このシナリオについて説明しています。  
   
- ![WIF 基本 Web アプリ](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![WIF 基本 Web アプリのコンポーネントを示す図。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  クレーム対応アプリケーションは、認証されていない要求を WIF で特定し、その要求を STS にリダイレクトします。  
   

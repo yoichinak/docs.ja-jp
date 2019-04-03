@@ -2,12 +2,12 @@
 title: '方法: グループ化 (Visual Basic) を使用して階層を作成します。'
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822896"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>方法: グループ化 (Visual Basic) を使用して階層を作成します。
 この例では、データをグループ化し、そのグループ化に基づいて XML を生成する方法を示します。  
@@ -15,7 +15,7 @@ ms.locfileid: "54520998"
 ## <a name="example"></a>例  
  この例では、まずデータをカテゴリごとにグループ化し、次にグループ化を反映した XML 階層を含む新しい XML ファイルを生成します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:数値データ (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:数値データ (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)」。  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -80,4 +80,5 @@ Console.WriteLine(newData)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

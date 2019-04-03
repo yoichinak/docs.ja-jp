@@ -8,12 +8,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-ms.openlocfilehash: 3d8f17c54d6a7767cc7a694ddb2508ae9ca4df60
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5632e69039baebb3d1f1fd90c04586d9e50fe40f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971391"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834505"
 ---
 # <a name="where-clause-visual-basic"></a>Where 句 (Visual Basic)
 クエリのフィルター処理条件を指定します。  
@@ -46,6 +46,7 @@ Where condition
  [!code-vb[VbSimpleQuerySamples#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#31)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [From 句](../../../visual-basic/language-reference/queries/from-clause.md)

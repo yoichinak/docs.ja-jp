@@ -2,12 +2,12 @@
 title: 関数型プログラミングと命令型プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dec9fd4b59d96c0548e49276a27103114a7b3e8b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579811"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827337"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>関数型プログラミングと命令型プログラミング (Visual Basic)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  
@@ -51,6 +51,7 @@ ms.locfileid: "54579811"
  さいわい、Visual Basic では、命令型と関数の両方のプログラミング方法をサポートしているために、関数型プログラミングに完全に移行が必要としません。 開発者は、個々のシナリオに適した方法を選択できます。 実際、プログラムで両方の方法が組み合わされている場合もよくあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)
 - [純粋関数 (Visual Basic) へのリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

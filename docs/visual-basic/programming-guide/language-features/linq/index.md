@@ -2,8 +2,14 @@
 title: LINQ (Visual Basic における)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824859"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ (Visual Basic における)
 このセクションでは、Visual Basic と [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] を理解して使用するのに役立つ概要、例、および背景情報を示します。  
@@ -40,6 +46,7 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
  匿名型ではなく特定の型として LINQ クエリの結果を返す方法の例を示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [統合言語クエリ (LINQ)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic における LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet の概要](../../../../framework/data/adonet/linq-to-dataset-overview.md)

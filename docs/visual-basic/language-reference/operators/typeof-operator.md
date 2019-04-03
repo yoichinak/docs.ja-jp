@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965060"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829864"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 演算子 (Visual Basic)
 オブジェクト参照変数をデータ型と比較します。  
@@ -43,19 +43,15 @@ result = TypeOf objectexpression IsNot typename
  必須。 任意のデータ型名。  
   
 ## <a name="remarks"></a>Remarks  
- 
-  `TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。 互換性は、`typename` の型のカテゴリに依存します。 互換性を決定する方法を次の表に示します。  
+ `TypeOf` 演算子は、`objectexpression` の実行時の型が `typename` と互換性があるかどうかを調べます。 互換性は、`typename` の型のカテゴリに依存します。 互換性を決定する方法を次の表に示します。  
   
-|
-  `typename` の型のカテゴリ|互換性の条件|  
+|`typename` の型のカテゴリ|互換性の条件|  
 |---------------------------------|-----------------------------|  
 |クラス|`objectexpression` が `typename` 型である、または `typename` を継承する|  
 |構造体|`objectexpression` が `typename` 型である|  
 |Interface|`objectexpression` が `typename` を実装する、または `typename` を実装するクラスを継承する|  
   
- 
-  `objectexpression` の実行時の型が互換性の条件を満たす場合、`result` は `True` です。 それ以外の場合、`result` は `False` です。  
-  `objectexpression` が null の場合、`TypeOf`...`Is` は `False` を返し、...`IsNot` は `True` を返します。  
+ `objectexpression` の実行時の型が互換性の条件を満たす場合、`result` は `True` です。 それ以外の場合、`result` は `False` です。  `objectexpression` が null の場合、`TypeOf`...`Is` は `False` を返し、...`IsNot` は `True` を返します。  
   
  `TypeOf` は、常に `Is` キーワードと共に `TypeOf`...`Is` 式を構築するか、または `IsNot` キーワードと共に `TypeOf`...`IsNot` 式を構築します。  
   
@@ -64,10 +60,10 @@ result = TypeOf objectexpression IsNot typename
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- 変数 `refInteger` は、実行時の型 `Integer` を持ちます。 
-  `Integer` と互換性がありますが、`Double` との互換性はありません。 変数 `refForm` は、実行時の型 <xref:System.Windows.Forms.Form> を持ちます。 この変数は、<xref:System.Windows.Forms.Form> (同じ型)、<xref:System.Windows.Forms.Control> (<xref:System.Windows.Forms.Form> は <xref:System.Windows.Forms.Control> を継承する)、および <xref:System.ComponentModel.IComponent> (<xref:System.Windows.Forms.Form> は <xref:System.ComponentModel.IComponent> を実装する <xref:System.ComponentModel.Component> を継承する) と互換性があります。 ただし、`refForm` には <xref:System.Windows.Forms.Label> との互換性はありません。  
+ 変数 `refInteger` は、実行時の型 `Integer` を持ちます。 `Integer` と互換性がありますが、`Double` との互換性はありません。 変数 `refForm` は、実行時の型 <xref:System.Windows.Forms.Form> を持ちます。 この変数は、<xref:System.Windows.Forms.Form> (同じ型)、<xref:System.Windows.Forms.Control> (<xref:System.Windows.Forms.Form> は <xref:System.Windows.Forms.Control> を継承する)、および <xref:System.ComponentModel.IComponent> (<xref:System.Windows.Forms.Form> は <xref:System.ComponentModel.IComponent> を実装する <xref:System.ComponentModel.Component> を継承する) と互換性があります。 ただし、`refForm` には <xref:System.Windows.Forms.Label> との互換性はありません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

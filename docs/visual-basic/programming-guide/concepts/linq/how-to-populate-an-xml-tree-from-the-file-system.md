@@ -2,12 +2,12 @@
 title: '方法: (Visual Basic) のファイル システムから XML ツリーを設定します。'
 ms.date: 07/20/2015
 ms.assetid: 34eec79e-7945-4ba8-9f74-d05bb8ec67f6
-ms.openlocfilehash: babb8f835e8320b637f131bdc2e242c460c0548c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55c182134e0cc1a7472cfaa6bb4355e9457a6977
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559789"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820838"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-visual-basic"></a>方法: (Visual Basic) のファイル システムから XML ツリーを設定します。
 XML ツリーの一般的で便利な用途の 1 つに、名前と値の階層データ ストアとしての用途があります。 階層データを XML ツリーに設定し、そのツリーをクエリや変換の対象としたり、必要に応じてシリアル化したりすることができます。 この使用シナリオでは、名前空間や空白の扱いなど XML 固有のセマンティクスの多くは重要ではありません。 この場合は、XML ツリーをメモリ内の小さなシングル ユーザー階層データベースとして使用します。  
@@ -115,4 +115,5 @@ Total File Size:59089
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

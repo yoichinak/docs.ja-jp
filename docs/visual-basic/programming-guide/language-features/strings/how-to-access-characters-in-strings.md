@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967556"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834492"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>方法: Visual Basic における文字列の文字をアクセス
 この例では、使用、<xref:System.String.Chars%2A>文字列で指定した場所にある文字にアクセスするプロパティ。  
@@ -28,6 +28,7 @@ ms.locfileid: "56967556"
  <xref:System.String.Chars%2A>プロパティがスローされます、<xref:System.IndexOutOfRangeException>例外場合、`index`パラメーターは、文字列の長さ以上には 0 より小さい場合、または  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.String.Chars%2A>
 - [方法: 文字列を文字の配列に変換します。](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
 - [Visual Basic で、文字列型とその他のデータ型との変換を行う](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)

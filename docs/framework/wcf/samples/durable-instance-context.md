@@ -2,12 +2,12 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: ec01f83e25eb003e194424bbfa247011701dc1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527493"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841452"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 このサンプルでは、永続性インスタンス コンテキストを有効にする Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
@@ -195,7 +195,7 @@ if (data != null)
 }  
 ```  
   
- この記憶域マネージャを直接インスタンス化することはできません。 その代わりに、`StorageManagerFactory` クラスを使用して、記憶域マネージャの作成に関する詳細から抽出します。 このクラスには、指定された型の記憶域マネージャのインスタンスを作成する、1 つの静的メンバ `GetStorageManager` があります。 型パラメータが `null` の場合、このメソッドは既定の `SqlServerStorageManager` クラスのインスタンスを作成して返します。 さらに指定された型を検証して、それが `IStorageManager` インターフェイスを実装していることを確認します。  
+ この記憶域マネージャを直接インスタンス化することはできません。 その代わりに、`StorageManagerFactory` クラスを使用して、記憶域マネージャの作成に関する詳細から抽出します。 このクラスには、指定された型の記憶域マネージャのインスタンスを作成する、1 つの静的メンバ `GetStorageManager` があります。 型パラメーターが `null` の場合、このメソッドは既定の `SqlServerStorageManager` クラスのインスタンスを作成して返します。 さらに指定された型を検証して、それが `IStorageManager` インターフェイスを実装していることを確認します。  
   
 ```  
 public static IStorageManager GetStorageManager(Type storageManagerType)  
@@ -391,7 +391,7 @@ public class ShoppingCart : IShoppingCart
  }  
 ```  
   
- クライアント アプリケーションは、カスタム バインディングを使用して DurableInstanceContextChannel をチャネル スタックに追加する必要があります。 構成ファイル内でチャネルを宣言して構成するには、バインド要素セクションをバインド要素拡張のコレクションに追加する必要があります。  
+ クライアント アプリケーションは、カスタム バインドを使用して DurableInstanceContextChannel をチャネル スタックに追加する必要があります。 構成ファイル内でチャネルを宣言して構成するには、バインド要素セクションをバインド要素拡張のコレクションに追加する必要があります。  
   
 ```xml  
 <system.serviceModel>  
@@ -460,4 +460,3 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   
-## <a name="see-also"></a>関連項目

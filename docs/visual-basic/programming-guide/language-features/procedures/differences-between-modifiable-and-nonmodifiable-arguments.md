@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498684"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826666"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>変更できる引数と変更できない引数の違い (Visual Basic)
 プロシージャを呼び出すときに通常を 1 つまたは複数の引数を渡します。 各引数は、基になるプログラミング要素に対応します。 基になる要素と引数自体の両方には、変更可能なか、変更不可能なをすることができます。  
@@ -38,6 +38,7 @@ ms.locfileid: "54498684"
  変更では、呼び出し元のコード内の基になる要素には影響しませんが、呼び出されたプロシージャ、変更できない引数のローカル コピーが変更される可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)

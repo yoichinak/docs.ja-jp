@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 43ac5bc9e32892541ed2f9b0410b6e0ef10558a6
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823494"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 変数の宣言でローカル型推論を使用できるようにします。  
@@ -96,6 +96,7 @@ Option Infer { On | Off }
  [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)

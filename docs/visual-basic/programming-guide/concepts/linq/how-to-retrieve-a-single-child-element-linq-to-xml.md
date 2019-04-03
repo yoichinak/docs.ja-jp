@@ -2,12 +2,12 @@
 title: '方法: 1 つの子要素 (LINQ to XML) を取得 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0033e258-d9c4-4569-86f6-79b7c06d1204
-ms.openlocfilehash: 52b626cfa7227312b1251a6fc998112268564084
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3b8c9d90f494330b30fe1b35a7fe64f882cae95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818983"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-visual-basic"></a>方法: 1 つの子要素 (LINQ to XML) を取得 (Visual Basic)
 このトピックでは、子要素名を指定して単一の子要素を取得する方法について説明します。 子要素の名前が既知であり、この名前を持つ要素が 1 つしか存在しない場合は、コレクションの代わりに 1 つの要素だけを取得する方が便利な場合があります。  
@@ -21,7 +21,7 @@ ms.locfileid: "54521921"
   
  Visual Basic の例では、配列インデクサー表記を使用して単一の要素を取得しています。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)します。  
+ この例では、XML ドキュメント、[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) を使用します。  
   
 ```vb  
 Dim po As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -38,7 +38,7 @@ Console.WriteLine(e)
 ## <a name="example"></a>例  
  上記と同じコードを使用して、名前空間内の XML から要素を取得する例を次に示します。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:一般的な購買発注、Namespace で](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)します。  
+ この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -59,4 +59,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

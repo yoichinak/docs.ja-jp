@@ -2,12 +2,12 @@
 title: '方法: Descendants メソッド (Visual Basic) を使用して単一の子孫を検索します。'
 ms.date: 07/20/2015
 ms.assetid: 0c03468c-efc8-4140-98f3-fb67acd9e8e1
-ms.openlocfilehash: 24bad2bc6ac121cd2be16933161a38a6a6fcb1e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a2574422f95ed4d2b82c33ee999b233d95ea398
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826458"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a>方法: Descendants メソッド (Visual Basic) を使用して単一の子孫を検索します。
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 軸メソッドを使用すると、一意の名前を持つ単一の要素を検索するコードを簡単に記述できます。 この手法は、特定の名前を持つ特定の子孫を検索する必要がある場合に特に役立ちます。 目的の要素に移動するコードを記述することもできますが、多くの場合、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用してコードを記述する方がより迅速で簡単です。  
@@ -81,4 +81,5 @@ GC3 Value
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

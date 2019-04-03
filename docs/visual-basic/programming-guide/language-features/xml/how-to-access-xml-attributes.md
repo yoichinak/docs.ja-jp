@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
-ms.openlocfilehash: d68596dd4f84cfcea37567bd4a43fe499848e5e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce22781584ad31766058f59a7ebf3081cb5e11cf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969982"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836910"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>方法: XML 属性にアクセス (Visual Basic)
 この例では、属性軸プロパティを使用して XML 要素内の XML 属性を名前でアクセスする方法を示します。 具体的を使用して、`type`属性軸プロパティという名前の属性にアクセスする`type`で、`phone`オブジェクト。  
@@ -21,6 +21,7 @@ ms.locfileid: "56969982"
  [!code-vb[VbXMLSamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples5.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
 - [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Visual Basic での XML へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

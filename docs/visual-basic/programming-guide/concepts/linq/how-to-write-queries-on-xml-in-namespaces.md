@@ -2,12 +2,12 @@
 title: '方法: (Visual Basic) の名前空間内の XML に対するクエリを作成します。'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609930"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833439"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>方法: (Visual Basic) の名前空間内の XML に対するクエリを作成します。
 名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。  
@@ -89,4 +89,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

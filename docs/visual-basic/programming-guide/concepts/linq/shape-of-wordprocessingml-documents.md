@@ -2,12 +2,12 @@
 title: WordprocessingML ドキュメント (Visual Basic) の構造
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 635f8a2f97f1d8568230e17f9998fa87d6a7c02c
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738852"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831814"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML ドキュメント (Visual Basic) の構造
 このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。  
@@ -95,4 +95,5 @@ End Module
  [Office 2003:XML リファレンス スキーマのダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

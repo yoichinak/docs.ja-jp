@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665696"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825144"
 ---
 # <a name="nullable-value-types-visual-basic"></a>null 許容値型 (Visual Basic)
 特定の状況で定義されている値を含まない値の型を操作することがあります。 たとえば、データベース内のフィールドは、意味のある割り当てられた値を持つと、値が割り当てられる必要があるとを区別する必要があります。 値の型は、通常の値または null 値のいずれかを拡張できます。 このような拡張機能が呼び出された、 *null 許容型*します。  
@@ -98,6 +98,7 @@ ms.locfileid: "54665696"
  データベースは、null 許容型を使用する最も重要な場所の 1 つです。 すべてのデータベース オブジェクトが現在 null 許容型をサポートしますが、デザイナーで生成されたテーブル アダプターの操作を行います。 「Null 許容型の TableAdapter サポート」を参照してください[TableAdapter の概要](/visualstudio/data-tools/tableadapter-overview)します。
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [Null 許容型の使用](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

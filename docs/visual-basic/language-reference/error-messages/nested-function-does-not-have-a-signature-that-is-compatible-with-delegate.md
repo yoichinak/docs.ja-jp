@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: ea6f230715520cb35809d57db76b300da326ec9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822290"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>入れ子になった関数には、デリゲートと互換性のあるシグネチャはありません '\<delegatename >'。
 ラムダ式は、互換性のないシグネチャを持つデリゲートに割り当てられています。 たとえば、次のコードでは、委任`Del`は 2 つの整数パラメーターがあります。  
@@ -36,5 +36,6 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 -   シグネチャに互換性があるように、デリゲートの定義または割り当てられているラムダ式のいずれかを調整します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

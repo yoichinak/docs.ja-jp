@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979926"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842253"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 要素リテラル (Visual Basic)
 
@@ -41,14 +41,14 @@ ms.locfileid: "56979926"
   
         |パーツ|説明|  
         |---|---|  
-        |`ePrefix`|任意。 要素の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ファイルまたはプロジェクト レベル、またはこの要素または親要素で定義されているローカル XML 名前空間のステートメント。|  
+        |`ePrefix`|省略可能です。 要素の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ファイルまたはプロジェクト レベル、またはこの要素または親要素で定義されているローカル XML 名前空間のステートメント。|  
         |`eName`|必須。 要素名 形式は、次のいずれかです。<br /><br /> リテラル テキスト。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。<br />形式の式を埋め込み`<%= eNameExp %>`します。 型`eNameExp`必要があります`String`または暗黙的に変換できる型<xref:System.Xml.Linq.XName>します。|  
   
     -   形式の式を埋め込む`<%= nameExp %>`します。 型`nameExp`あります`String`または型に暗黙的に変換<xref:System.Xml.Linq.XName>します。 埋め込み式は、要素の終了タグでは許可されません。  
   
 -   `attributeList`  
   
-     任意。 属性の一覧は、リテラルで宣言します。  
+     省略可能です。 属性の一覧は、リテラルで宣言します。  
   
      `attribute [ attribute ... ]`  
   
@@ -58,15 +58,15 @@ ms.locfileid: "56979926"
   
         |パーツ|説明|  
         |---|---|  
-        |`aPrefix`|任意。 属性の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ステートメント、またはこの要素または親要素で定義されているローカル XML 名前空間。|  
+        |`aPrefix`|省略可能です。 属性の XML 名前空間プレフィックス。 グローバル XML 名前空間で定義されている必要があります、`Imports`ステートメント、またはこの要素または親要素で定義されているローカル XML 名前空間。|  
         |`aName`|必須。 属性の名前。 形式は、次のいずれかです。<br /><br /> リテラル テキスト。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。<br />形式の式を埋め込み`<%= aNameExp %>`します。 型`aNameExp`必要があります`String`または暗黙的に変換できる型<xref:System.Xml.Linq.XName>します。|  
-        |`aValue`|任意。 属性の値。 形式は、次のいずれかです。<br /><br /> 、引用符で囲まれているリテラル テキスト。<br />形式の式を埋め込み`<%= aValueExp %>`します。 任意の型を許可します。|  
+        |`aValue`|省略可能です。 属性の値。 形式は、次のいずれかです。<br /><br /> 、引用符で囲まれているリテラル テキスト。<br />形式の式を埋め込み`<%= aValueExp %>`します。 任意の型を許可します。|  
   
     -   形式の式を埋め込む`<%= aExp %>`します。  
   
 -   `/>`  
   
-     任意。 要素がコンテンツのない、空の要素であることを示します。  
+     省略可能です。 要素がコンテンツのない、空の要素であることを示します。  
   
 -   `>`  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56979926"
   
 -   `elementContents`  
   
-     任意。 要素のコンテンツ。  
+     省略可能です。 要素のコンテンツ。  
   
      `content [ content ... ]`  
   
@@ -94,7 +94,7 @@ ms.locfileid: "56979926"
   
 -   `</[name]>`  
   
-     任意。 要素の終了タグを表します。 省略可能な`name`埋め込み式の結果がある場合に、パラメーターは使用できません。  
+     省略可能です。 要素の終了タグを表します。 省略可能な`name`埋め込み式の結果がある場合に、パラメーターは使用できません。  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XElement> オブジェクト。  
@@ -160,6 +160,7 @@ ms.locfileid: "56979926"
  コンパイラが XML 名前空間のプレフィックス定義にグローバル XML 名前空間のプレフィックスを変換することに注意してください。 \<Ns:middle > 要素の XML 名前空間プレフィックスを再定義、 \<ns:inner1 > 要素。 ただし、 \<ns:inner2 > 要素で定義された名前空間を使用して、`Imports`ステートメント。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement>
 - [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

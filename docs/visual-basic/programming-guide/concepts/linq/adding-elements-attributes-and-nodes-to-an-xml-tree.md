@@ -2,12 +2,12 @@
 title: XML ツリー (Visual Basic) への要素、属性、およびノードの追加
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 5b15a3a943425a7443ad0986d8d91973d0090ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669342"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814318"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>XML ツリー (Visual Basic) への要素、属性、およびノードの追加
 コンテンツ (要素、属性、コメント、処理命令、テキスト、および CDATA) を既存の XML ツリーに追加できます。  
@@ -81,4 +81,5 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML ツリー (LINQ to XML) の変更 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

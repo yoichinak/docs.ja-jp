@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 269d905ad59a162af4e790e29d3753f090f511bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975005"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824348"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 ステートメントのグループをコレクション内の各要素に対して繰り返されます。  
@@ -51,9 +51,9 @@ Next [ element ]
 |`element`|必要な`For Each`ステートメント。 省略可能で、`Next`ステートメント。 変数。 コレクションの要素を反復処理するために使用します。|  
 |`datatype`|場合に、必ず`element`既に宣言されていません。 データ型`element`します。|  
 |`group`|必須。 コレクション型またはオブジェクト型を含む変数を指定します。 コレクションを参照、`statements`られます。|  
-|`statements`|任意。 1 つまたは複数のステートメント間`For Each`と`Next`内の各項目で実行される`group`します。|  
-|`Continue For`|任意。 先頭に制御を転送、`For Each`ループします。|  
-|`Exit For`|任意。 うちに制御を転送、`For Each`ループします。|  
+|`statements`|省略可能です。 1 つまたは複数のステートメント間`For Each`と`Next`内の各項目で実行される`group`します。|  
+|`Continue For`|省略可能です。 先頭に制御を転送、`For Each`ループします。|  
+|`Exit For`|省略可能です。 うちに制御を転送、`For Each`ループします。|  
 |`Next`|必須。 定義を終了、`For Each`ループします。|  
   
 ## <a name="simple-example"></a>簡単な例  
@@ -173,6 +173,7 @@ End Sub
  [!code-vb[VbVbalrStatements#125](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#125)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [コレクション](../../../standard/collections/index.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

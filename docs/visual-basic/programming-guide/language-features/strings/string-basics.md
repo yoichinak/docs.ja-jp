@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7262fded93b02c011484919f0504bb7225d8d2af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820894"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic における文字列の基本
 `String` データ型は、一連の文字を表します (各文字は `Char` データ型のインスタンスを表しています)。 このトピックでは、Visual Basic における文字列の基本的な概念について説明します。  
@@ -72,6 +72,7 @@ World]]></xml>.Value
  他の組み込みのデータ型とは異なり、`String` は参照型です。 参照型の変数が関数またはサブルーチンへの引数として渡されると、文字列の実際の値ではなく、データが格納されているメモリ アドレスへの参照が渡されます。 そのため、前の例では変数の名前は変わりませんが、新しい値を保持している、`String` クラスの新しい別のインスタンスを指すようになります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)

@@ -2,12 +2,12 @@
 title: メッセージ資格情報付き WS トランスポート
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: fb923fd4d7271f7f364d24743c3f9f6393ef8f9f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200586"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826211"
 ---
 # <a name="ws-transport-with-message-credential"></a>メッセージ資格情報付き WS トランスポート
 このサンプルでは、メッセージに含まれるクライアント資格情報と組み合わせて SSL トランスポート セキュリティを使用する例を示します。 このサンプルでは、`wsHttpBinding` バインディングを使用します。  
@@ -16,14 +16,12 @@ ms.locfileid: "57200586"
   
  このサンプルでは、サービスに対するクライアントの認証に `UserName` 資格情報が使用されます。  
   
- このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 
-  `wsHttpBinding` バインディングは、クライアントとサービスのアプリケーション構成ファイルに指定され、構成されます。  
+ このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 `wsHttpBinding` バインディングは、クライアントとサービスのアプリケーション構成ファイルに指定され、構成されます。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- プログラム コード サンプルではのとほぼ同じ、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)サービス。 
-  `GetCallerIdentity` サービス コントラクトによって追加された操作が 1 つあります。 この操作は、呼び出し元の ID の名前を呼び出し元に返します。  
+ プログラム コード サンプルではのとほぼ同じ、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)サービス。 `GetCallerIdentity` サービス コントラクトによって追加された操作が 1 つあります。 この操作は、呼び出し元の ID の名前を呼び出し元に返します。  
 
 ```csharp
 public string GetCallerIdentity()  
@@ -99,4 +97,3 @@ Press <ENTER> to terminate client.
   
 4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-## <a name="see-also"></a>関連項目

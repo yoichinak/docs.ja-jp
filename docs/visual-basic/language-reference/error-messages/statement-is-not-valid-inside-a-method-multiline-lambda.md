@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: 8002fc347561fd5087aea474b45ef427ee8f8ec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994cafc44a37d16d0f70caec560f530c6a836ec0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508085"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841564"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>メソッドや複数行のラムダの内部では有効でないステートメントです。
 ステートメントが内で無効、 `Sub`、 `Function`、プロパティ`Get`、またはプロパティ`Set`プロシージャ。 モジュールまたはクラス レベルでは、いくつかのステートメントを配置できます。 他のユーザーなど`Option Strict`、する必要があります名前空間レベルであるし、その他のすべての宣言の前にします。  
@@ -24,6 +24,7 @@ ms.locfileid: "54508085"
 -   ステートメントをプロシージャから削除します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)

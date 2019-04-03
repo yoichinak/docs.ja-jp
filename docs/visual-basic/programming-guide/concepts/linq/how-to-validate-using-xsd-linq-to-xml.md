@@ -2,12 +2,12 @@
 title: '方法: XSD (LINQ to XML) を使用して検証 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: 9e4250ac1da4b25ce3f1644b38ff0e71693ecc57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a29473b871961af0de033b77076686cc5b9dde0e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691217"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833426"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>方法: XSD (LINQ to XML) を使用して検証 (Visual Basic)
 <xref:System.Xml.Schema> 名前空間には、XML スキーマ定義言語 (XSD) ファイルに対して XML ツリーを簡単に検証できる拡張メソッドが含まれています。 詳細については、<xref:System.Xml.Schema.Extensions.Validate%2A> メソッドのドキュメントを参照してください。  
@@ -77,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、XML ドキュメントからのことを検証[サンプル XML ファイル。顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)がスキーマに従った有効[サンプル XSD ファイル。顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
+ 次の例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」の XML ドキュメントが「[サンプル XSD ファイル: 顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)」のスキーマに従った有効なものであるかどうかを検証します。 次に、ソース XML ドキュメントを変更します。 変更するのは最初の顧客の `CustomerID` 属性です。 変更が完了すると、存在しない顧客を注文が参照するようになります。したがって、この XML ドキュメントは有効ではなくなります。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)」。  
   
- この例では、次の XSD スキーマを使用します。[サンプル XSD ファイル:顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)します。  
+ この例では、XSD スキーマ、[サンプル XSD ファイル: 顧客と注文](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md)を使用します。  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -123,5 +123,6 @@ custOrdDoc did not validate
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

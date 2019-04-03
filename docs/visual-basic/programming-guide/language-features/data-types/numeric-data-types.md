@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636416"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841642"
 ---
 # <a name="numeric-data-types-visual-basic"></a>数値データ型 (Visual Basic)
 Visual Basic では、いくつかを提供*数値データ型*のさまざまな表現での数値を処理します。 *整数*型整数を表すのみ (正、負、および 0)、および*非整数*型では、数値を表す整数と小数部の両方でします。  
@@ -79,6 +79,7 @@ Visual Basic では、いくつかを提供*数値データ型*のさまざま�
  完全な範囲を必要としない場合、`Double`に使用できるデータの種類、 `Single` - 3.4028235 e + 38 ~ 3.4028235 e + 38 から浮動小数点数を格納できるデータ型。 最も小さいマグニチュード`Single`変数は、- 1.401298E-45 の負の値および 1.401298-正の値の 45。 非常に多くの小規模の浮動小数点数を保持する変数があれば、共通言語ランタイムが格納できる場合があります、`Single`変数より効率的にして、メモリ消費量を保存します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [文字データ型](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
 - [その他のデータ型](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)

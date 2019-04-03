@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: 1b9cedc3e45795a66c203d4c86bb071045a1d3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1824e4a086ecdd4b6a776bd6894f6e003d02867
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550475"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822558"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
 コンパイル時に著作権画面を表示および情報メッセージの表示を抑制します。  
@@ -37,5 +37,6 @@ vbc -nologo t2.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726469"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819256"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 ソース ファイルの先頭にある属性がアセンブリ全体に適用されることを指定します。  
@@ -28,6 +28,6 @@ ms.locfileid: "54726469"
  適用することも、属性、AssemblyInfo.vb ファイルでアセンブリに、メインのソース コード ファイルで属性ブロックを使用するがあるない場合。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

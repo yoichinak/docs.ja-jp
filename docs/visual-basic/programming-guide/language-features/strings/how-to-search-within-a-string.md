@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-ms.openlocfilehash: c150299efe07809d0d33edf882771f552c3e5b63
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982012"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823299"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>方法: 文字列 (Visual Basic) 内の検索
 この例では、<xref:System.String.IndexOf%2A>メソッドを<xref:System.String>部分文字列の最初に見つかった位置のインデックスを報告するオブジェクト。  
@@ -34,6 +34,7 @@ ms.locfileid: "56982012"
  最適なエラーに制御するために文字列の検索をする可能性があります、`Try`のブロックを[お試しください.キャッチしてください.Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)構築します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.String.IndexOf%2A>
 - [Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

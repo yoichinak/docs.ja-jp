@@ -2,12 +2,12 @@
 title: SAML トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 1280c2892383ed295884a52e9133624460353309
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304597"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842240"
 ---
 # <a name="saml-token-provider"></a>SAML トークン プロバイダー
 このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
@@ -158,7 +158,7 @@ ms.locfileid: "56304597"
 
 2.  カスタム セキュリティ トークン マネージャーを作成します。
 
-      <xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスは、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、渡されたトークンの要件で SAML トークンが必要であることが示されている場合に、`CreateSecurityTokenProvider` メソッドをオーバーライドしてカスタムの SAML トークン プロバイダーを返します。 クライアント資格情報クラス (手順 3. を参照) がアサーションを指定していない場合、セキュリティ トークン マネージャーは適切なインスタンスを作成します。
+     <xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスは、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、渡されたトークンの要件で SAML トークンが必要であることが示されている場合に、`CreateSecurityTokenProvider` メソッドをオーバーライドしてカスタムの SAML トークン プロバイダーを返します。 クライアント資格情報クラス (手順 3. を参照) がアサーションを指定していない場合、セキュリティ トークン マネージャーは適切なインスタンスを作成します。
 
     ```
     public class SamlSecurityTokenManager :
@@ -379,8 +379,7 @@ ms.locfileid: "56304597"
   
 2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、管理者特権で開いた Visual Studio ウィンドウの開発者コマンド プロンプトで実行する必要がありますに注意してください。 
-  `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
+3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、管理者特権で開いた Visual Studio ウィンドウの開発者コマンド プロンプトで実行する必要がありますに注意してください。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
   
 4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 この手順は、サーバー証明書の発行元をクライアントが信頼できる場合は不要です。  
   
@@ -400,4 +399,3 @@ ms.locfileid: "56304597"
   
 1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
-## <a name="see-also"></a>関連項目

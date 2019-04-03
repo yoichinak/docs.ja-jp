@@ -2,12 +2,12 @@
 title: '方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 20d1bb571d9cd354ea3f3dba560743da00c8bf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359017"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836741"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -85,6 +85,7 @@ ms.locfileid: "57359017"
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性と <xref:System.Security.Permissions.StrongNameIdentityPermission> クラスには類似点があります。 主な違いは、<xref:System.Security.Permissions.StrongNameIdentityPermission> はセキュリティ アクセス許可を要求することで特定のコード セクションを実行できますが、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性では `Friend` 型とメンバーの参照可能範囲を制御することです。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)

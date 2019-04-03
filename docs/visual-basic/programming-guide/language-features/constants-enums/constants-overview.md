@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737690"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841298"
 ---
 # <a name="constants-overview-visual-basic"></a>定数の概要 (Visual Basic)
 定数とは、数値または変更されない文字列の代わりに使用されるわかりやすい名前です。 定数は、名前が示すようは、アプリケーションの実行全体で同じ値を格納します。 大幅に、コードの読みやすさを向上し、定数を使用して管理しやすくできます。 再び表示される値を含むコードで使用するが困難に注意してくださいまたは明確な意味のない特定の番号に依存します。  
@@ -45,5 +45,6 @@ ms.locfileid: "54737690"
 |[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|について説明します、`Option Strict`ステートメントとその使用します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [方法: Visual Basic で配列変数を初期化します。](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

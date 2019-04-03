@@ -2,12 +2,12 @@
 title: LINQ to XML クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822831"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML クラスの概要 (Visual Basic)
 このトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 名前空間内の <xref:System.Xml.Linq> クラスの一覧を示し、各クラスについて簡単に説明します。  
@@ -78,7 +78,7 @@ ms.locfileid: "54570123"
  <xref:System.Xml.Linq.XObjectChange> は、<xref:System.Xml.Linq.XObject> に対してイベントが生成されるときのイベントの種類を指定します。  
   
 ### <a name="xobjectchangeeventargs-class"></a>XObjectChangeEventArgs クラス  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> には、<xref:System.Xml.Linq.XObject.Changing> イベントおよび <xref:System.Xml.Linq.XObject.Changed> イベントのデータが用意されています。  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs> には、<xref:System.Xml.Linq.XObject.Changing> イベントと <xref:System.Xml.Linq.XObject.Changed> イベントのデータが用意されています。  
   
 ### <a name="xprocessinginstruction-class"></a>XProcessingInstruction クラス  
  <xref:System.Xml.Linq.XProcessingInstruction> は、XML 処理命令を表します。 処理命令は、XML を処理するアプリケーションに情報を伝達します。  
@@ -87,4 +87,5 @@ ms.locfileid: "54570123"
  <xref:System.Xml.Linq.XText> は、テキスト ノードを表します。 このクラスを使用する必要はほとんどありません。 このクラスは、主に混合コンテンツに使用されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

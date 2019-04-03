@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825379"
 ---
 # <a name="decision-structures-visual-basic"></a>条件判断構造 (Visual Basic)
 Visual Basic では、条件をテストし、そのテストの結果に応じてさまざまな操作を実行することができます。 true または false の場合、さまざまな値の式、または一連のステートメントを実行するときに生成された例外のさまざまな条件をテストできます。  
@@ -47,6 +47,7 @@ Visual Basic では、条件をテストし、そのテストの結果に応じ�
 >  多くの制御構造のキーワードをクリックすると、すべての構造のキーワードが強調表示されます。 クリックすると、`If`で、`If...Then...Else`構築のすべてのインスタンス`If`、 `Then`、 `ElseIf`、 `Else`、および`End If`構築では強調表示されます。 次または前の強調表示されているキーワードに移動するには、CTRL と shift キーを押しながら下方向キーまたは CTRL + SHIFT キーを押しながら上方向キーを押します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [その他の制御構造](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654368"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833314"
 ---
 # <a name="loop-structures-visual-basic"></a>ループ構造 (Visual Basic)
 Visual Basic のループ構造を使用して、1 つまたは複数の行のコードを繰り返し実行できます。 条件になるまで、ループ構造でステートメントを繰り返すことができます`True`条件になるまで、`False`コレクションの回数、または 1 回の各要素の数を指定します。  
@@ -37,6 +37,7 @@ Visual Basic のループ構造を使用して、1 つまたは複数の行の�
  `For Each`.`Next`構築は、コレクション内の各要素に対して 1 回のステートメントのセットを実行します。 ループ コントロール変数を指定するが、開始または終了値を決定する必要はありません。 詳細については、次を参照してください[ごとにしています...次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [その他の制御構造](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

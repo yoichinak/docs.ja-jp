@@ -2,12 +2,12 @@
 title: リフレクション (Visual Basic) を使用した属性へのアクセス
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827654"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクション (Visual Basic) を使用した属性へのアクセス
 カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「 <xref:System.Attribute> 」を参照してください。  
@@ -100,6 +100,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)

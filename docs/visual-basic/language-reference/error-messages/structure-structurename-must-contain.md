@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813939"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>構造体 '\<structurename >' に少なくとも 1 つのインスタンス メンバー変数または 'Custom' にマークされていない少なくとも 1 つのインスタンス イベント宣言を含める必要があります
 構造体の定義は、すべての非共有変数または非共有の非カスタム イベントには含まれません。  
@@ -26,6 +26,7 @@ ms.locfileid: "55267457"
 -   少なくとも 1 つの変数またはイベントでない定義`Shared`します。 1 つのみのイベントを定義する場合は、カスタムではないと非共有があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [方法: 構造体を宣言する](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)

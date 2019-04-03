@@ -1,5 +1,5 @@
 ---
-title: '方法: 色の傾斜'
+title: '方法: 色を傾斜する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720226"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826393"
 ---
-# <a name="how-to-shear-colors"></a>方法: 色の傾斜
+# <a name="how-to-shear-colors"></a>方法: 色を傾斜する
 傾斜増加またはカラー コンポーネントを別の色コンポーネントに比例した量ずつ減少します。 たとえば、赤のコンポーネントを増加して青のコンポーネントの値の半分して変換を検討してください。 このような変換では、(0.2, 0.5, 1) の色になります (0.7, 0.5, 1)。 新しいの赤のコンポーネントが 0.2 + (1/2)(1) 0.7 を = です。  
   
 ## <a name="example"></a>例  
  次の例では、構築、 <xref:System.Drawing.Image> ColorBars4.bmp ファイルからのオブジェクト。 コードは、イメージ内の各ピクセルに前の段落で説明されている傾斜変換を適用します。  
   
- 次の図は、右側の左側に、元のイメージと傾斜のイメージを示します。  
+ 次の図は、右側の左側に、元のイメージと傾斜のイメージを示します。 
   
- ![色を傾斜](./media/colortrans6.png "colortrans6")  
+ ![カラー ストライプ化 - サイド示す元のイメージと傾斜のイメージを 2 マスします。](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  次の表は、傾斜変換の前後に 4 つのバーの色のベクターを示します。  
   

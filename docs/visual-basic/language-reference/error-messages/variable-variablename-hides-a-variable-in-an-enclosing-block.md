@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 68ec1aac7ee8d292e2a433e0fb35039d4fb317b4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278500"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827134"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>変数 '\<variablename >'、それを囲むブロック内の変数を非表示になります
 ブロックで囲まれた変数では、別のローカル変数と同じ名前を持ちます。  
@@ -35,5 +35,6 @@ ms.locfileid: "55278500"
 -   このエラーのもう 1 つの一般的な原因は内で宣言されたローカル変数にアクセスしようとする`Try`個別のブロック`Catch`ブロック。 これを修正するには、外部変数を宣言、`Try...Catch...Finally`構造体。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

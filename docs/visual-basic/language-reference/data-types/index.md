@@ -2,41 +2,47 @@
 title: データ型の概要 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Boolean data type [Visual Basic], supported types in Visual Basic'
-  - 'storage [Visual Basic], order of storage'
-  - 'data types [Visual Basic], Visual Basic'
-  - 'Single data type [Visual Basic], supported types in Visual Basic'
-  - 'notation [Visual Basic], scientific'
-  - 'memory requirements, data types'
-  - 'user-defined data types [Visual Basic], Visual Basic'
-  - 'Date data type [Visual Basic], Visual Basic'
-  - 'Visual Basic, data types'
-  - 'storage [Visual Basic], allocation'
-  - 'Integer data type [Visual Basic], Visual Basic data types'
-  - 'storage [Visual Basic], space'
-  - 'Variant data types [Visual Basic], supported types in Visual Basic'
-  - 'Char data type [Visual Basic], Visual Basic data types'
-  - 'intrinsic data types [Visual Basic]'
-  - 'memory consumption [Visual Basic], data types'
-  - single-precision numbers
-  - 'data types [Visual Basic], order of storage'
-  - 'Long data type [Visual Basic], supported types in Visual Basic'
-  - 'String data type [Visual Basic], Visual Basic data types'
-  - 'storage order, data types'
-  - 'StructLayoutAttribute class, Visual Basic data type storage'
-  - scientific notation
-  - 'Double data type [Visual Basic], Visual Basic data types'
-  - 'Byte data type [Visual Basic], Visual Basic data types'
-  - 'Object data type [Visual Basic], supported types in Visual Basic'
-  - 'data types [Visual Basic], storage allocation'
-  - double-precision numbers
-  - 'data types [Visual Basic], summary'
-  - 'dates [Visual Basic], data types'
-  - 'strings [Visual Basic], data types'
-  - memory consumption
-  - 'storage order, controlling in Visual Basic'
-  - 'data types [Visual Basic], memory requirements'
+- Boolean data type [Visual Basic], supported types in Visual Basic
+- storage [Visual Basic], order of storage
+- data types [Visual Basic], Visual Basic
+- Single data type [Visual Basic], supported types in Visual Basic
+- notation [Visual Basic], scientific
+- memory requirements, data types
+- user-defined data types [Visual Basic], Visual Basic
+- Date data type [Visual Basic], Visual Basic
+- Visual Basic, data types
+- storage [Visual Basic], allocation
+- Integer data type [Visual Basic], Visual Basic data types
+- storage [Visual Basic], space
+- Variant data types [Visual Basic], supported types in Visual Basic
+- Char data type [Visual Basic], Visual Basic data types
+- intrinsic data types [Visual Basic]
+- memory consumption [Visual Basic], data types
+- single-precision numbers
+- data types [Visual Basic], order of storage
+- Long data type [Visual Basic], supported types in Visual Basic
+- String data type [Visual Basic], Visual Basic data types
+- storage order, data types
+- StructLayoutAttribute class, Visual Basic data type storage
+- scientific notation
+- Double data type [Visual Basic], Visual Basic data types
+- Byte data type [Visual Basic], Visual Basic data types
+- Object data type [Visual Basic], supported types in Visual Basic
+- data types [Visual Basic], storage allocation
+- double-precision numbers
+- data types [Visual Basic], summary
+- dates [Visual Basic], data types
+- strings [Visual Basic], data types
+- memory consumption
+- storage order, controlling in Visual Basic
+- data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
+ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821973"
 ---
 # <a name="data-type-summary-visual-basic"></a>データ型の概要 (Visual Basic)
 次の表は、Visual Basic のデータ型、サポートしている共通言語ランタイム型、その公称記憶域の割り当て、およびそれぞれの値の範囲を示します。  
@@ -86,6 +92,7 @@ ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
  `Object`型、基本または複合データを参照するだけでなく、データ型に含まれるデータの 4 バイトを使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
