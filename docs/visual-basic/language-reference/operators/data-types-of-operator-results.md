@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814984"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
 Visual Basic では、オペランドのデータ型に基づく操作の結果のデータ型を決定します。 場合によっては、データ型のいずれかのオペランドよりも広い範囲をこれがあります。  
@@ -176,6 +176,7 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
  `Like`のパターンに一致するのみの演算子が定義されている`String`オペランド。 Visual Basic が、必要に応じて各オペランドを変換しようとしています。`String`操作の前にします。 結果のデータ型は常に`Boolean`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

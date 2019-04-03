@@ -2,12 +2,12 @@
 title: Net.TCP ポート共有のサンプル
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735491"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830176"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP ポート共有のサンプル
 TCP/IP プロトコルはポートと呼ばれる 16 ビットの番号を使用して、同じコンピュータ上で実行されている複数のネットワーク アプリケーションへの接続を区別します。 アプリケーションがポートをリッスンすると、そのポートのすべての TCP トラフィックがそのアプリケーションに送られます。 他のアプリケーションは、そのポートを同時にリッスンできません。  
@@ -31,7 +31,7 @@ TCP/IP プロトコルはポートと呼ばれる 16 ビットの番号を使用
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- ポート共有をサーバー上で有効にするには、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> バインディングまたは <xref:System.ServiceModel.NetTcpBinding> バインド要素の <xref:System.ServiceModel.Channels.TcpTransportBindingElement> プロパティを設定します。 クライアントは、サーバー上で使用されるポート共有の構成内容を知る必要はありません。  
+ ポート共有をサーバー上で有効にするには、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> バインディングまたは <xref:System.ServiceModel.NetTcpBinding> バインディング要素の <xref:System.ServiceModel.Channels.TcpTransportBindingElement> プロパティを設定します。 クライアントは、サーバー上で使用されるポート共有の構成内容を知る必要はありません。  
   
 ## <a name="enabling-port-sharing"></a>ポート共有の有効化  
  次のコードでは、サーバー上でのポート共有の有効化を示します。 ランダムな URI パスが含まれる固定ポートで、`ICalculator` サービスのインスタンスを開始します。 2 つのサービスは同じポートを共有できますが、NetTcp ポート共有サービスが正しいアプリケーションにメッセージをルーティングできるように、これらのエンドポイント アドレスは全体で一意であることが必要です。  
@@ -139,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 このサンプルを実行するための詳細情報については、前述の「サンプルの実行」を参照してください。  
   
-## <a name="see-also"></a>関連項目

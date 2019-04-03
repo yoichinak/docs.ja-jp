@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974264"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814498"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ をサポートする Visual Basic の機能
 名前[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ構文のサポートを言語で直接その他の言語を構築します、Visual Basic でのテクノロジを参照します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、外部データ ソースに対してクエリを新しい言語を習得する必要はありません。 Visual Basic を使用してリレーショナル データベース、XML ストア、またはオブジェクト内のデータのクエリを行うことができます。 この統合言語クエリ機能の有効に構文エラーとタイプ セーフのコンパイル時にチェックします。 この統合は、Visual Basic での高度でさまざまなクエリを記述するために必要なほとんどを既に把握しているにも確認します。  
@@ -94,6 +94,7 @@ ms.locfileid: "56974264"
  詳細については、「[ラムダ式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

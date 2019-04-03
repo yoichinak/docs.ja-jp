@@ -2,12 +2,18 @@
 title: Visual Basic におけるデータ型
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'data types [Visual Basic], declaring'
-  - typing
-  - 'data types [Visual Basic]'
-  - 'Visual Basic code, data types'
-  - 'data types [Visual Basic], improving speed with'
+- data types [Visual Basic], declaring
+- typing
+- data types [Visual Basic]
+- Visual Basic code, data types
+- data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
+ms.openlocfilehash: 192ced1da400372f877cb54aaa29d60fcd0bbcad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829201"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic におけるデータ型
 プログラミング要素の*データ型*は、保持できるデータの種類やデータの格納方法を示します。 データ型は、コンピューターのメモリに格納できるすべての値に適用され、式の評価にも関与します。 変数、リテラル、定数、列挙値、プロパティ、プロシージャのパラメーター、プロシージャの引数、およびプロシージャの戻り値にはすべてデータ型があります。  
@@ -29,6 +35,7 @@ ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
  Visual Basic のデータ型の一覧については、[データ型](../../../../visual-basic/language-reference/data-types/index.md)に関するページをご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

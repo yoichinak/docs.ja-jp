@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967738"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818476"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>方法: Visual Basic での別のプロシージャに渡す
 この例では、プロシージャを別のプロシージャに渡すデリゲートを使用する方法を示します。  
@@ -46,6 +46,7 @@ ms.locfileid: "56967738"
      ときに`Test`が呼び出されると、その最初の結果を表示`AddNumbers`に機能している`5`と`3`8 であります。 結果、`SubtractNumbers`に作用する`9`と`3`が表示されたら、6 であります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 演算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)

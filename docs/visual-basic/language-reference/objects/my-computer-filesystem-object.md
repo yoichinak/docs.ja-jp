@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 515c12a87ddab6c616f98325624e7fd31ea926d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebdf2ac42ddd4e6e201559d9fc6711b19cbdd60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827589"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem オブジェクト
 ドライブ、ファイル、ディレクトリを操作するためのプロパティとメソッドを提供します。  
@@ -38,5 +38,6 @@ ms.locfileid: "54642923"
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
+
 - [My.Computer.FileSystem.SpecialDirectories オブジェクト](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

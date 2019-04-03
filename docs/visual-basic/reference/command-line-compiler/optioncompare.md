@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 86564b7ce419ef6c6e56a6b677b71009830b5fc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662310"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819418"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 文字列比較の方法を指定します。  
@@ -56,6 +56,7 @@ vbc -optioncompare:binary projFile.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

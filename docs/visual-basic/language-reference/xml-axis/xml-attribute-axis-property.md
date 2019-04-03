@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 081359f32438c6474fe5c229634b60969e25a24e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965385"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828808"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 属性軸プロパティ (Visual Basic)
 属性の値にアクセスできるように、<xref:System.Xml.Linq.XElement>オブジェクトまたは最初の要素のコレクションを<xref:System.Xml.Linq.XElement>オブジェクト。  
@@ -36,19 +36,18 @@ object.@<attribute>
  必須。 属性軸プロパティの開始を示します。  
   
  <  
- 任意。 属性の名前の先頭を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
+ 省略可能です。 属性の名前の先頭を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
   
  `attribute`  
  必須。 フォームにアクセスする属性の名前 [`prefix`:]`name`します。  
   
 |パーツ|説明|  
 |----------|-----------------|  
-|`prefix`|任意。 属性の XML 名前空間プレフィックス。 
-  `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
+|`prefix`|省略可能です。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
 |`name`|必須。 属性のローカル名。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
   
  \>  
- 任意。 属性の名前の終了を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
+ 省略可能です。 属性の名前の終了を示すとき`attribute`Visual Basic では有効な識別子ではありません。  
   
 ## <a name="return-value"></a>戻り値  
  値を格納する文字列`attribute`します。 属性名が存在しない場合`Nothing`が返されます。  
@@ -108,6 +107,7 @@ object.@<attribute>
  `Phone type: home`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)

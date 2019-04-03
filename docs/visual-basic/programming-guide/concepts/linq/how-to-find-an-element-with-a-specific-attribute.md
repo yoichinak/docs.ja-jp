@@ -2,12 +2,12 @@
 title: '方法: 特定の属性 (Visual Basic) を持つ要素を検索します。'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: f170daa58dc2ee8759beeb04df7670d9d43fb494
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536062"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813861"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>方法: 特定の属性 (Visual Basic) を持つ要素を検索します。
 このトピックでは、特定の値を含む属性を持つ要素を検索する方法について説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "54536062"
 ## <a name="example"></a>例  
  この例では、"Billing" の値を含む `Address` 属性を持つ `Type` 要素を検索する方法を示します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)します。  
+ この例では、XML ドキュメント、[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) を使用します。  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -46,7 +46,7 @@ Next
 ## <a name="example"></a>例  
  次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:一般的な購買発注、Namespace で](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)します。  
+ この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -79,6 +79,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

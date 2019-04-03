@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464100"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819763"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの概要
 Visual Basic Windows フォーム アプリケーションの動作を制御するための適切に定義されたモデルを提供します。 Visual Basic アプリケーション モデルです。 このモデルには、アプリケーションのスタートアップとシャット ダウン、だけでなくハンドルされない例外をキャッチのイベントを処理するためのイベントが含まれています。 単一インスタンス アプリケーションを開発するためのサポートも提供します。 アプリケーション モデルとは、拡張可能なため、詳細に制御を必要がある開発者はそのオーバーライド可能なメソッドをカスタマイズできます。  
@@ -55,6 +55,7 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
  既定では、Visual Basic アプリケーション モデルは Windows フォーム プロジェクトで使用できます。 異なるスタートアップ オブジェクトを使用するアプリケーションを構成またはカスタム アプリケーション コードを開始するかどうか`Sub Main`、し、そのオブジェクトまたはクラスは、の実装を提供する必要があります、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>アプリケーション モデルを使用するクラス。 スタートアップ オブジェクトを変更する方法の詳細については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

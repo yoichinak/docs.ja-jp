@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 66c576df7499c90ae29399ab9b0bd93f0fda6cb2
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738982"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823520"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプションのアルファベット順の一覧
 Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする代替手段として提供されます。 次にアルファベット順に並べ替える Visual Basic のコマンド ライン コンパイラ オプションの一覧を示します。  
@@ -81,5 +81,6 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Win32 リソースを出力ファイルに挿入します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic コンパイラ オプション一覧 (カテゴリ別)](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

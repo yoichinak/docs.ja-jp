@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976851"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816084"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同じです (Visual Basic) であるかどうかを確認します。
 Visual basic で 2 つの変数参照は同一と見なされます、ポインターが同じ場合、つまり、両方の変数がメモリ内と同じクラスのインスタンスを指している場合。 たとえば、Windows フォーム アプリケーションでたい判断する比較を行うことかどうか、現在のインスタンス (`Me`) など、特定のインスタンスと同じ`Form2`します。  
@@ -51,6 +51,7 @@ Visual basic で 2 つの変数参照は同一と見なされます、ポイン�
  `objA identical to objC? True`  
   
 ## <a name="see-also"></a>関連項目
+
 - [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

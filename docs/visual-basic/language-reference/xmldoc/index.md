@@ -2,12 +2,18 @@
 title: ドキュメント コメントとして推奨される XML タグ (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.XmlDocComment
+- vb.XmlDocComment
 helpviewer_keywords:
-  - 'tags, XML'
-  - 'XML comments, recommended tags [Visual Basic]'
-  - 'comments, recommended XML tags'
+- tags, XML
+- XML comments, recommended tags [Visual Basic]
+- comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814951"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>ドキュメント コメントとして推奨される XML タグ (Visual Basic)
 Visual Basic コンパイラでは、ドキュメントのコメントをコードに XML ファイルを処理できます。 その他のツールを使用して、ドキュメントに XML ファイルを処理することができます。  
@@ -34,6 +40,7 @@ Visual Basic コンパイラでは、ドキュメントのコメントをコー�
 >  山かっこをドキュメントのコメントのテキストで表示される場合を使用して、`&lt;`と`&gt;`します。 たとえば、文字列`"&lt;text in angle brackets&gt;"`として表示されます`<text in angle brackets>`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

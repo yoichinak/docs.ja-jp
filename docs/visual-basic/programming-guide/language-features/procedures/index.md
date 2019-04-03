@@ -2,12 +2,18 @@
 title: Visual Basic におけるプロシージャ
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814927"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic におけるプロシージャ
 A*プロシージャ*宣言ステートメントで囲まれている Visual Basic ステートメント ブロックは、(`Function`、 `Sub`、 `Operator`、 `Get`、 `Set`) し、対応する`End`宣言します。 Visual Basic でのすべての実行可能なステートメントは、何らかのプロシージャ内である必要があります。  
@@ -56,6 +62,7 @@ A*プロシージャ*宣言ステートメントで囲まれている Visual Bas
 -   1 つのプログラムで使用するために開発したプロシージャを、他のプログラムでも使用できます。多くの場合、プログラムをほとんどまたはまったく変更せずに使用できます。 これにより、コードの重複を避けることができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: プロシージャを作成します。](./how-to-create-a-procedure.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)

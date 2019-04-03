@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977553"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829331"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す
 A*プロパティの既定*クラスまたは構造体のプロパティで、指定しなくても、コードにアクセスできます。 呼び出し元のコードは、クラスまたは構造体がないプロパティ、およびコンテキスト プロパティへのアクセスを許可、存在する場合、Visual Basic がそのクラスまたは構造体の既定のプロパティにアクセスを解決します。  
@@ -82,6 +82,7 @@ A*プロパティの既定*クラスまたは構造体のプロパティで、�
  このような短所のためには、既定のプロパティを定義しないを検討してください。 コードを読みやすくは必要がありますも常に明示的に参照するすべてのプロパティを検討してくださいも既定のプロパティ。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: a87407fe863569ff961f4a2dc320e73719ed4d9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568927eb4759c214311ad34a5b45e28094dd80be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601763"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830033"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic における演算子の優先順位
 いくつかの操作は、式の中で発生した場合、各部分が評価されと呼ばれる事前に定義された順序で解決*演算子の優先順位*します。  
@@ -61,7 +61,7 @@ ms.locfileid: "54601763"
 ### <a name="comparison-operators"></a>比較演算子  
  すべての比較演算子 (`=`、 `<>`、 `<`、 `<=`、 `>`、 `>=`、 `Is`、 `IsNot`、 `Like`、 `TypeOf`.`Is`)  
   
-### <a name="logical-and-bitwise-operators"></a>論理/ビット処理演算子  
+### <a name="logical-and-bitwise-operators"></a>論理演算子とビット処理演算子  
  否定 (`Not`)  
   
  組み合わせて (`And`、 `AndAlso`)  
@@ -112,6 +112,7 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [= 演算子](../../../visual-basic/language-reference/operators/assignment-operator.md)
 - [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)

@@ -2,12 +2,12 @@
 title: '方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557160"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816839"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。
 特定の名前を持つ子孫をすべて検索しなければならない場合があります。 すべての子孫を反復処理するコードを記述することもできますが、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用する方が簡単です。  
@@ -101,5 +101,6 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

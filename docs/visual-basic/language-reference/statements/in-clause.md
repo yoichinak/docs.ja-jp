@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6826489970137605bf2b07f88b5a64f2ec6bfc2e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567231"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819429"
 ---
 # <a name="in-clause-visual-basic"></a>In 句 (Visual Basic)
 内でループ変数であるグループを指定します、`For Each`ループ、または、コレクション内のクエリを指定します、 `From`、 `Join`、または`Group Join`句。  
@@ -28,4 +28,5 @@ ms.locfileid: "54567231"
  [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

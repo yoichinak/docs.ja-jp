@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671500"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825158"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) では、複数の値を保持します。
 として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  
@@ -42,6 +42,7 @@ ms.locfileid: "54671500"
 5.  に従って、`As`キーワードは、適切な複合データ型の名前に置き換えます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

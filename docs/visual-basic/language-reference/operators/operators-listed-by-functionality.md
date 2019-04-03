@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 3aa2b7d1d7750de255121b4ddb81c6f9d3cef346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672371"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816227"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>機能別の演算子一覧 (Visual Basic)
 以下のカテゴリのいずれかを参照してくださいか、ヘルプの目次の Visual Basic の演算子のアルファベット順の一覧を表示するには、この部分を開きます。  
@@ -27,5 +27,6 @@ ms.locfileid: "54672371"
 |[その他の演算子](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|これらの演算子は、その他の操作を実行します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)

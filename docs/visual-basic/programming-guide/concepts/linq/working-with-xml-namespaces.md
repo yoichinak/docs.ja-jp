@@ -2,12 +2,12 @@
 title: XML 名前空間 (Visual Basic) の使用
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-ms.openlocfilehash: e103920187ecbbfb14a1723556d1fae0265a88d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828899"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>XML 名前空間 (Visual Basic) の使用
 このセクションのトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] で名前空間がどのようにサポートされるかについて説明します。  
@@ -24,4 +24,5 @@ ms.locfileid: "54607908"
 |[方法: (Visual Basic) の名前空間内の XML に対するクエリを作成します。](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Visual Basic の linq to XML のクエリ XML 名前空間を指定する方法を示します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816318"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>チュートリアル: ビジュアル継承のデモンストレーション
 ビジュアル継承により、基本フォームのコントロールを表示して、新しいコントロールを追加できます。 このチュートリアルでは、基本フォームを作成してクラス ライブラリにコンパイルします。 このクラス ライブラリを別のプロジェクトにインポートして、基本フォームから継承する新しいフォームを作成します。 このチュートリアルでは、次の作業を行う方法について説明します。  
@@ -140,7 +140,7 @@ ms.locfileid: "57721451"
   
 5.  継承されたフォームを開きます (**Form2**) がまだ開いていない場合をダブルクリックしてデザイナーでします。  
   
-     デザイナーで、継承されたボタンがある記号 (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 継承されることを示す、隅。  
+     デザイナーで、継承されたボタンがあるシンボル (![Visual Basic の継承の記号のスクリーン ショット。](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) で継承されることを示す、隅。  
   
 6.  選択、 **Say こんにちは**ボタンをクリックし、サイズ変更ハンドルを観察します。 このボタンは保護されているため、継承元が、移動、サイズ変更、キャプションの変更、およびその他の変更を実行できます。  
   

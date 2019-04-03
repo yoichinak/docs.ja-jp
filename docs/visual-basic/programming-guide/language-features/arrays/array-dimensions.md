@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634168"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836936"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 A*ディメンション*は、方向が配列の要素の仕様を変更できます。 月の日付ごとの売上合計を保持する配列には、1 つのディメンション (月の日) があります。 1 か月の日付ごとに売上を部門別合計保持する配列には、2 つのディメンション (部門の番号と月の日) があります。 配列の次元数と呼ばれる、*ランク*します。  
@@ -87,5 +87,6 @@ Dim salesAmounts(4, 11, 30) As Double
 >  使用せずに配列を作成することができます、`Dim`ステートメントまたは`New`句。 たとえば、呼び出すことができます、<xref:System.Array.CreateInstance%2A>メソッド、または別のコンポーネントをこのように作成された配列、コードを渡すことができます。 このような配列には、0 以外の下限を持つことができます。 常を使用してディメンションの下限の境界をテストすることができます、<xref:System.Array.GetLowerBound%2A>メソッドまたは`LBound`関数。  
   
 ## <a name="see-also"></a>関連項目
+
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

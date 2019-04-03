@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582100"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826588"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 プロパティまたはプロシージャが基本クラスから継承された同じ名前のプロパティまたはプロシージャをオーバーライドすることを示します。  
@@ -62,6 +62,7 @@ ms.locfileid: "54582100"
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)

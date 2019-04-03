@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412033"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819581"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -94,9 +94,9 @@ ms.locfileid: "58412033"
   
  次の図は、XAML の BAML 形式に基づいているローカリゼーションの一般的なワークフローを示します。 この図では、開発者は、英語でアプリケーションを記述を前提としています。 開発者は、作成し、WPF アプリケーションのグローバライズします。 プロジェクトの開発者のセットをファイル`<UICulture>en-US</UICulture>`ビルド時に、言語に中立的なメイン アセンブリはサテライトで生成されるようにします。 ローカライズ可能なすべてのリソースを含む resources.dll。 代わりに、WPF のローカリゼーション Api は、メイン アセンブリからの抽出をサポートするため、メイン アセンブリにソース言語に残すいずれかでした。 ビルド プロセスの後、XAML BAML にコンパイルされます。 カルチャ的にニュートラル MyDialog.exe.resources.dll 英語圏の顧客に送付されます。  
   
- ![ローカリゼーション ワークフロー](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![ローカリゼーション ワークフローを示す図。](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![ローカライズされていない作業フロー](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![ローカライズされていないワークフローを示す図。](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>WPF のローカリゼーションの例
 
@@ -108,11 +108,11 @@ ms.locfileid: "58412033"
   
  **英語：**  
   
- ![実行 ダイアログ ボックス](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![[英語での実行] ダイアログ ボックスを示すスクリーン ショット。](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **ドイツ語：**  
   
- ![ドイツ語の実行 ダイアログ ボックス](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![ドイツ語の実行 ダイアログ ボックスを表示するスクリーン ショット。](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **グローバルの実行 ダイアログ ボックスのデザイン**  
   
@@ -226,13 +226,13 @@ ms.locfileid: "58412033"
   
  **英語：**  
   
- ![英語のページ](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![英語版のホーム ページを示すスクリーン ショット。](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **アラビア語：**  
   
- ![アラビア語ページ](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![アラビア語のホーム ページを示すスクリーン ショット。](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>グローバル Microsoft ホーム ページのデザイン  
+### <a name="designing-a-global-microsoft-home-page"></a>グローバル Microsoft ホーム ページのデザイン  
  モックの Microsoft サウジアラビア web サイトは RightToLeft 言語に提供されるグローバリゼーション機能を示しています。 ヘブライ語やアラビア語などの言語がそのため、右から左への読み取り順序をあるレイアウトの[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]する必要がありますレイアウトする多くの場合、英語などの左から右の言語の場合よりも大きく異なります。 右から左の言語またはその逆に、左から右言語からのローカライズは非常に困難なことができます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このようなローカライズを簡単に設計されています。  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ ms.locfileid: "58412033"
   
  **FlowDirection="LeftToRight"**  
   
- ![左から右へのフロー](./media/lefttoright.PNG "LeftToRight")  
+ ![左から右へのグラデーションのフローを示すスクリーン ショット。](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![右から左にフロー](./media/righttoleft.PNG "RightToLeft")  
+ ![右から左へのグラデーションのフローを示すスクリーン ショット。](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **パネルとコントロールの固定サイズを使用しないでください。**  
   

@@ -2,12 +2,12 @@
 title: グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733910"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827381"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
 使用して XML 名前空間を宣言する機能は、Visual Basic で XML リテラルの主な機能の 1 つ、`Imports`ステートメント。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  
@@ -16,7 +16,7 @@ ms.locfileid: "54733910"
   
  グローバル名前空間はプロジェクト レベルで宣言できます。 また、モジュール レベルでもグローバル名前空間を宣言できます。その場合、プロジェクト レベルのグローバル名前空間はオーバーライドされます。 最終的に、グローバル名前空間は XML リテラルでオーバーライドできます。  
   
- グローバルに宣言された名前空間に含まれる XML リテラルまたは XML プロパティを使用する場合は、Visual Studio で XML リテラルまたはプロパティにカーソルを合わせることで、それらの展開名が表示されます。 展開名はツールヒントに表示されます。  
+ グローバルに宣言された名前空間に含まれる XML リテラルまたは XML プロパティを使用する場合は、Visual Studio で XML リテラルまたはプロパティにカーソルを合わせることで、それらの展開名が表示されます。 拡張名はツールヒントに表示されます。  
   
  グローバル名前空間に対応する <xref:System.Xml.Linq.XNamespace> オブジェクトを取得するには、`GetXmlNamespace` メソッドを使用します。  
   
@@ -198,4 +198,5 @@ http://www.adventure-works.com
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: c7243108d0b7c06f48a21f343321322bb2cc2946
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560283"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833816"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合データ型 (Visual Basic)
 Visual Basic に用意されている基本データ型だけでなくを作成するさまざまな種類の項目をアセンブルすることができますも*複合データ型*構造体、配列、およびクラスなどです。 基本型およびその他の複合型からは、複合データ型を構築できます。 たとえば、配列のメンバーを持つ構造体または構造体の要素の配列を定義できます。  
@@ -62,6 +62,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  クラスの詳細については、次を参照してください。[オブジェクトとクラス](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

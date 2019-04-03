@@ -2,12 +2,12 @@
 title: 関数型変換 (Visual Basic) の適用性
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699403"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827615"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>関数型変換 (Visual Basic) の適用性
 純粋関数型変換は、さまざまな状況で適用できます。  
@@ -33,6 +33,7 @@ ms.locfileid: "54699403"
  ここでも、Visual Basic に命令型と機能の両方のアプローチがサポートされているので、両方の要素を組み込むことが、アプリケーションの最適なデザインことに注意してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [純粋関数型変換 (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XML の関数型変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [純粋関数 (Visual Basic) へのリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -2,12 +2,12 @@
 title: カスタム メッセージ エンコーダー:カスタム テキスト エンコーダー
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: c5b45ed10475bdfd88998db0ead9afff1f0a0f2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54cba7eb5ff743d4fddc37a824e05a376880d6d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725507"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832321"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>カスタム メッセージ エンコーダー:カスタム テキスト エンコーダー
 このサンプルでは、Windows Communication Foundation (WCF) を使用してカスタム テキスト メッセージ エンコーダーを実装する方法を示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54725507"
   
 -   カスタム エンコーダーおよびエンコーダー ファクトリの作成。  
   
--   カスタム エンコーダーのバインディング要素の作成。  
+-   カスタム エンコーダーのバインド要素の作成。  
   
 -   カスタム バインド要素を統合するためのカスタム バインド構成の使用。  
   
@@ -189,7 +189,7 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 }  
 ```  
   
-## <a name="message-encoding-binding-element"></a>メッセージ エンコーディング バインド要素  
+## <a name="message-encoding-binding-element"></a>メッセージ エンコーディング バインディング要素  
  バインド要素は、WCF ランタイム スタックの構成を許可します。 WCF アプリケーションでカスタム メッセージ エンコーダーを使用するバインド要素が必要なランタイム スタックの適切なレベルで適切な設定で、メッセージ エンコーダー ファクトリを作成します。  
   
  `CustomTextMessageBindingElement` は <xref:System.ServiceModel.Channels.BindingElement> 基本クラスから派生し、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> クラスを継承します。 これにより、メッセージ エンコーディング バインド要素として、このバインド要素を認識するその他の WCF コンポーネントです。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> を実装すると、一致するメッセージ エンコーダー ファクトリのインスタンスが適切に設定されて返されます。  
@@ -237,4 +237,3 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>関連項目

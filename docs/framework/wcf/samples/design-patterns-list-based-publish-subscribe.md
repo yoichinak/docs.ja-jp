@@ -1,15 +1,15 @@
 ---
-title: 設計パターン:リストに基づく公開/定期受信
+title: デザイン パターン:リストに基づく公開/定期受信
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333392"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815031"
 ---
-# <a name="design-patterns-list-based-publish-subscribe"></a>設計パターン:リストに基づく公開/定期受信
+# <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン:リストに基づく公開/定期受信
 このサンプルでは、Windows Communication Foundation (WCF) プログラムとして実装されたリストに基づく公開/定期受信パターンを示します。  
   
 > [!NOTE]
@@ -138,13 +138,13 @@ public class PriceChangeEventArgs : EventArgs
   
 2.  クライアント コンピュータを設定します。  
   
-    1.  クライアント プログラム ファイルを、言語固有のフォルダにある \client\bin\ フォルダからクライアント コンピュータにコピーします。  
+    1.  クライアント プログラム ファイルを、言語固有のフォルダにある \client\bin\ フォルダーからクライアント コンピュータにコピーします。  
   
     2.  各クライアントの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
 3.  データ ソース コンピュータを設定します。  
   
-    1.  データ ソース プログラム ファイルを、言語固有のフォルダにある \datasource\bin\ フォルダからデータ ソース コンピュータにコピーします。  
+    1.  データ ソース プログラム ファイルを、言語固有のフォルダーにある \datasource\bin\ フォルダーからデータ ソース コンピュータにコピーします。  
   
     2.  データ ソースの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
@@ -161,4 +161,3 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>関連項目

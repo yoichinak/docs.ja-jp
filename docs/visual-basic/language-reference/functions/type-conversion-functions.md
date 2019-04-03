@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: ea7cc2c7f988617de67bf0ea46aeb3396acdf4b1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2b750f41343a4a68e29af6055815efd1e6470252
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980621"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816266"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 これらの関数は、インラインでのコンパイル、つまり、変換コード式を評価するコードの一部です。 場合によってパフォーマンスを向上させると、変換を実行するプロシージャの呼び出しではありません。 各関数は、特定のデータ型に式を変換します。  
@@ -286,6 +286,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
  [!code-vb[VbVbalrFunctions#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#18)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>

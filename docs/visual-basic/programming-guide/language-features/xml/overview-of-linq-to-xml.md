@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: d2f9ca8fe453f120dd52f4c4b20e75b9f933b251
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 91f622b9eecdd1aec8b9361493095e92a851988e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974121"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816175"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic における LINQ to XML の概要
 Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML リテラルおよび XML 軸プロパティを使用します。 これにより、Visual Basic コードで XML を操作するための使い慣れた、便利な構文を使用することができます。 *XML リテラル*コード内で直接 XML を有効にします。 *XML 軸プロパティ*アクセス子ノード、子孫ノード、および XML リテラルの属性を有効にします。 詳細については、次を参照してください。 [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)と[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)します。  
@@ -22,7 +22,7 @@ Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sql
   
  ![ビデオへのリンク](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo")関連のビデオによるデモを参照してください。 [LINQ to XML による開始するにはどうすればでしょうか。](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)と[LINQ to XML を使用して作成する Excel ワークシートの操作方法?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)します。  
   
-## <a name="creating-xml"></a>XML を作成します。  
+## <a name="creating-xml"></a>XML の作成  
  Visual Basic で XML ツリーを作成する 2 つの方法はあります。 コードで直接リテラル XML を宣言することができますか、使用することができます、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]ツリーを作成する Api。 両方のプロセスには、XML ツリーの最終構造を反映するようにコードが有効にします。 たとえば、次のコード例は、XML 要素を作成します。  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
@@ -62,6 +62,7 @@ Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sql
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [Visual Basic での XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Visual Basic での XML へのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)

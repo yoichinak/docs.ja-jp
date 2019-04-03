@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565021"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817155"
 ---
 # <a name="end-of-statement-expected"></a>ステートメントの終わりを指定してください。
 ステートメントが構文的に完了するが、その他のプログラミング要素に依存してステートメントを終了する要素。 行終端記号は、すべてのステートメントの末尾にある必要があります。
@@ -28,5 +28,6 @@ ms.locfileid: "54565021"
 2.  ステートメントを終了要素の後に行終端記号を挿入します。
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)

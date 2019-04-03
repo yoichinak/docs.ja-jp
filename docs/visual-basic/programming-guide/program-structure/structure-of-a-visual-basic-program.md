@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746524"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828122"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
@@ -93,6 +93,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
  この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、次を参照してください。 [Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic の名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic の制限事項](../../../visual-basic/programming-guide/program-structure/limitations.md)
