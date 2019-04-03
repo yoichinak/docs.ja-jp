@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: c6bb924a3c41e1c586f66c9473a94d1971ee262f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973770"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839081"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
 宣言を`Set`プロパティ プロシージャのプロパティに値を代入するために使用します。  
@@ -30,7 +30,7 @@ End Set
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+ 省略可能です。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
  `accessmodifier`  
  1 つだけでは省略可能、`Get`と`Set`このプロパティ内のステートメント。 次のいずれかの値を指定します。  
@@ -52,7 +52,7 @@ End Set
  場合に、必ず`Option Strict`は`On`します。 データ型、`value`パラメーター。 指定されたデータ型は、プロパティのデータ型と同じである必要があります、これ`Set`ステートメントが宣言されます。  
   
  `statements`  
- 任意。 場合に実行する 1 つまたは複数のステートメント、`Set`プロパティ プロシージャが呼び出されます。  
+ 省略可能です。 場合に実行する 1 つまたは複数のステートメント、`Set`プロパティ プロシージャが呼び出されます。  
   
  `End Set`  
  必須。 定義を終了、`Set`プロパティ プロシージャ。  
@@ -88,6 +88,7 @@ End Set
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)

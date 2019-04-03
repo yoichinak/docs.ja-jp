@@ -7,20 +7,19 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 069c03cc9666cffec2edd26afeb86f0230f9bc6f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4aa783d6179c72760a12d0259d587b5b38bb9140
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980933"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832243"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>方法: Visual Basic で配列変数を初期化します。
 配列リテラルを `New` 句に含めること、および配列の初期値を指定することで、配列変数を初期化します。 型を指定するか、配列リテラル内の値から推論することを許可できます。 型の推論方法の詳細についてを参照してください「を設定する配列の初期値の」[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>配列リテラルを使用して配列変数を初期化するには  
   
--   
-  `New` 句で、または配列値を割り当てるときに、中かっこ (`{}`) の中に要素の値を指定します。 変数を宣言、作成、および初期化して `Char` 型の要素を持つ配列を含めるいくつかの方法を次の例に示します。  
+-   `New` 句で、または配列値を割り当てるときに、中かっこ (`{}`) の中に要素の値を指定します。 変数を宣言、作成、および初期化して `Char` 型の要素を持つ配列を含めるいくつかの方法を次の例に示します。  
   
      [!code-vb[VbVbalrArrays#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#16)]  
   
@@ -55,5 +54,6 @@ ms.locfileid: "56980933"
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974303"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825756"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>方法: 数値 (Visual Basic) を計算します。
 数値式を使用して数値を計算することができます。 A*数値式*リテラル、定数、および数値の値を表す変数を含む式とそれらの値に対して作用する演算子です。  
@@ -63,6 +63,7 @@ ms.locfileid: "56974303"
      詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [演算子および式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [ステートメント](../../../../visual-basic/language-reference/statements/index.md)

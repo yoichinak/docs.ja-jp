@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 367d810c2358963bfe2f092a390443eccdc66941
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979607"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814446"
 ---
 # <a name="select-clause-visual-basic"></a>Select 句 (Visual Basic)
 クエリの結果を定義します。  
@@ -26,7 +26,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>指定項目  
  `var1`  
- 任意。 列の式の結果を参照に使用できるエイリアスです。  
+ 省略可能です。 列の式の結果を参照に使用できるエイリアスです。  
   
  `fieldName1`  
  必須。 クエリ結果を返すフィールドの名前。  
@@ -52,6 +52,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [From 句](../../../visual-basic/language-reference/queries/from-clause.md)

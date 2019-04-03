@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: d1b573dbafbead20330a4fd0f62e8f21f27dce81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610930"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842552"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
@@ -108,6 +108,7 @@ shape = square
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

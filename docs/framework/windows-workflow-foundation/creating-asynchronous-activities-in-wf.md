@@ -13,7 +13,7 @@ ms.locfileid: "57712275"
 <xref:System.Activities.AsyncCodeActivity> は使用する基本クラスをアクティビティ作成者に提供します。その結果、派生アクティビティが非同期実行ロジックを実装できるようになります。 これは、ワークフローのスケジューラ スレッドを保持したり、並行して実行される可能性があるすべてのアクティビティをブロックしたりすることなく、非同期作業を実行する必要があるカスタム アクティビティに役立ちます。 ここでは、<xref:System.Activities.AsyncCodeActivity> を使用してカスタムの非同期アクティビティを作成する方法の概要を説明します。  
   
 ## <a name="using-asynccodeactivity"></a>AsyncCodeActivity の使用  
- <xref:System.Activities?displayProperty=nameWithType> は、カスタム アクティビティ作成者に、アクティビティの作成要件に応じてさまざまな基本クラスを提供します。 それぞれが特定のセマンティックを持ち、ワークフロー作成者 (およびアクティビティ ランタイム) に対応するコントラクトを提供します。 <xref:System.Activities.AsyncCodeActivity> ベースのアクティビティは、スケジューラ スレッド、およびマネージ コードで表される実行ロジックに関連して、非同期に作業を実行するアクティビティです。 非同期作業になると、<xref:System.Activities.AsyncCodeActivity> によって実行中にアイドル ポイントが発生する可能性があります。 非同期作業には揮発的な性質があるため、<xref:System.Activities.AsyncCodeActivity> はアクティビティの実行期間に対して常に非永続的なブロックを作成します。 こうすることで、ワークフロー ランタイムによって、非同期作業中にワークフロー インスタンスが永続化されることを回避できます。また、非同期コードの実行中にワークフロー インスタンスがアンロードされることを回避できます。  
+ <xref:System.Activities?displayProperty=nameWithType> は、カスタム アクティビティ作成者に、アクティビティの作成要件に応じてさまざまな基本クラスを提供します。 それぞれが特定のセマンティックを持ち、ワークフロー作成者 (およびアクティビティ ランタイム) に対応するコントラクトを提供します。 <xref:System.Activities.AsyncCodeActivity> ベースのアクティビティは、スケジューラ スレッド、およびマネージド コードで表される実行ロジックに関連して、非同期に作業を実行するアクティビティです。 非同期作業になると、<xref:System.Activities.AsyncCodeActivity> によって実行中にアイドル ポイントが発生する可能性があります。 非同期作業には揮発的な性質があるため、<xref:System.Activities.AsyncCodeActivity> はアクティビティの実行期間に対して常に非永続的なブロックを作成します。 こうすることで、ワークフロー ランタイムによって、非同期作業中にワークフロー インスタンスが永続化されることを回避できます。また、非同期コードの実行中にワークフロー インスタンスがアンロードされることを回避できます。  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity メソッド  
  <xref:System.Activities.AsyncCodeActivity> から派生するアクティビティでは、<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> メソッドと <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> メソッドをカスタム コードでオーバーライドすることで、非同期実行ロジックを作成できます。 ランタイムによって呼び出されるとき、これらのメソッドには <xref:System.Activities.AsyncCodeActivityContext> が渡されます。 <xref:System.Activities.AsyncCodeActivityContext> により、アクティビティ作成者はにわたる共有状態を提供する<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>のコンテキスト内<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>プロパティ。 次の例では、`GenerateRandom` アクティビティによって非同期に乱数を生成します。  
@@ -31,8 +31,7 @@ ms.locfileid: "57712275"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>クラスでの非同期メソッドの呼び出し  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の多くのクラスには、非同期機能が用意されています。この非同期機能は、<xref:System.Activities.AsyncCodeActivity> ベースのアクティビティを使用して非同期に呼び出すことができます。 次の例では、アクティビティが作成を使用して非同期的にファイルを作成する、<xref:System.IO.FileStream>クラス。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の多くのクラスには、非同期機能が用意されています。この非同期機能は、<xref:System.Activities.AsyncCodeActivity> ベースのアクティビティを使用して非同期に呼び出すことができます。 次の例では、アクティビティが作成を使用して非同期的にファイルを作成する、<xref:System.IO.FileStream>クラス。  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -40,8 +39,7 @@ ms.locfileid: "57712275"
  前の例では、<xref:System.IO.FileStream> 内で作成した <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オブジェクトに <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 内でアクセスしています。 このことは、`file` 変数を <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType> 内で <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> のプロパティに渡すことで可能になっています。 これは <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> および <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> の間で状態を共有するための正しい方法です。 派生クラス内 (この場合は `FileWriter`) のメンバー変数を使用して <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> と <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> の間で状態を共有するのは正しい方法ではありません。そのようにすると、アクティビティのオブジェクトが複数のアクティビティ インスタンスから参照される可能性があります。 メンバー変数を使用して状態を共有すると、いずれかの <xref:System.Activities.ActivityInstance> の値が上書きされたり、別の <xref:System.Activities.ActivityInstance> の値が使用されたりする場合があります。  
   
 ### <a name="accessing-argument-values"></a>引数値へのアクセス  
- 
-  <xref:System.Activities.AsyncCodeActivity> の環境は、アクティビティに定義されている引数から構成されます。 これらの引数からアクセスできる、 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>上書きを使用して、<xref:System.Activities.AsyncCodeActivityContext>パラメーター。 デリゲート内で引数にアクセスすることはできませんが、デリゲートのパラメーターを使用すると、引数値や任意の他の必要なデータをデリゲートに渡すことができます。 次の例では、`Max` 引数から包含的上限を取得する乱数生成アクティビティを定義します。 デリゲートを呼び出すと、引数の値は非同期コードに渡されます。  
+ <xref:System.Activities.AsyncCodeActivity> の環境は、アクティビティに定義されている引数から構成されます。 これらの引数からアクセスできる、 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>上書きを使用して、<xref:System.Activities.AsyncCodeActivityContext>パラメーター。 デリゲート内で引数にアクセスすることはできませんが、デリゲートのパラメーターを使用すると、引数値や任意の他の必要なデータをデリゲートに渡すことができます。 次の例では、`Max` 引数から包含的上限を取得する乱数生成アクティビティを定義します。 デリゲートを呼び出すと、引数の値は非同期コードに渡されます。  
   
  [!code-csharp[CFX_ActivityExample#9](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   

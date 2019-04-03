@@ -2,12 +2,12 @@
 title: '方法: Office Open XML ドキュメント (Visual Basic) から段落を取得します。'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828577"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメント (Visual Basic) から段落を取得します。
 このトピックでは、Office Open XML ドキュメントを開き、そのドキュメント内のすべての段落のコレクションを取得する例について説明します。  
@@ -173,4 +173,5 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

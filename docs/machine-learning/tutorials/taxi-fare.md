@@ -3,15 +3,15 @@ title: 回帰ラーナーと ML.NET を使用して料金を予測する
 description: 回帰ラーナーと ML.NET を使用して料金を予測します。
 author: aditidugar
 ms.author: johalex
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7830849efaff2aa36f9bd436851a22f948908bb6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0a027b3b4930f7dda48d884faf0484cf33856c8d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846333"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307981"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
 
@@ -152,7 +152,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
-ML.NET ではデータは SQL ビューに似ています。 つまり、遅延評価、体系的、異種です。 オブジェクトはパイプラインの最初の部分であり、データを読み込みます。 このチュートリアルでは、コメントと対応する有害または無害のセンチメントを含むデータセットが読み込まれます。 これを使用して、モデルを作成してトレーニングします。
+ML.NET ではデータは SQL ビューに似ています。 つまり、遅延評価、体系的、異種です。 オブジェクトはパイプラインの最初の部分であり、データを読み込みます。 このチュートリアルでは、タクシーの運賃情報を含むデータセットを読み込みます。 これを使用して、モデルを作成してトレーニングします。
 
 `Train` メソッドの最初の行として、次のコードを追加します。
 
@@ -187,8 +187,6 @@ ML.NET ではデータは SQL ビューに似ています。 つまり、遅延�
 最後の手順は、モデルのトレーニングです。 読み込まれて変換されたデータ セットに基づいて、モデル <xref:Microsoft.ML.Data.TransformerChain> をトレーニングします。 見積もり機能が定義されたら、既に読み込まれたトレーニング データを提供しながら、<xref:Microsoft.ML.Data.EstimatorChain%601.Fit%2A> を使用してモデルをトレーニングします。 これにより、予測で使用されるモデルが返されます。 `pipeline.Fit()` でパイプラインをトレーニングし、`DataView` に基づいて `Transformer` を返します。 これが行われるまで、実験は実行されません。
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
-
-以上です。 これで機械学習モデルのトレーニングが終了し、ニューヨーク市のタクシー運賃を予測できるようになりました。 それでは、モデルの正確度について理解してから、モデルを使用してタクシー運賃の値を予測する方法について説明します。
 
 ### <a name="save-the-model"></a>モデルを保存する
 

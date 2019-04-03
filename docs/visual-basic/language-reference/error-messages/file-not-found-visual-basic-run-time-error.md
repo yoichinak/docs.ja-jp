@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 008630686256790fdf673d2b8e1830cb48061bff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cd5bba135284ba72eed595fdfc548cfea63ff70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821895"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>ファイルが見つかりません。(Visual Basic ランタイム エラー)
 指定された場所に、ファイルが見つかりませんでした。 エラーでは、次の考えられる原因があります。  
@@ -25,4 +25,5 @@ ms.locfileid: "54626551"
 1.  ファイル名とパスの指定のスペルを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)

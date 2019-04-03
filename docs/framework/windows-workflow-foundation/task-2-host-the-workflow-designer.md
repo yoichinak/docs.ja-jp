@@ -18,8 +18,7 @@ ms.locfileid: "57708640"
   
 1.  HostingApplication プロジェクトを開きますで作成した[タスク 1。新しい Windows Presentation Foundation アプリケーションを作成する](task-1-create-a-new-wpf-app.md)します。  
   
-2.  
-  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] が見やすくなるように、ウィンドウのサイズを調整します。 これを行うには、次のように選択します**MainWindow**デザイナーで表示 f4 キーを押して、**プロパティ**ウィンドウで、し、、**レイアウト**ありますセクションで、設定、**幅。** 600 の値に、**高さ**350 の値にします。  
+2.  [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] が見やすくなるように、ウィンドウのサイズを調整します。 これを行うには、次のように選択します**MainWindow**デザイナーで表示 f4 キーを押して、**プロパティ**ウィンドウで、し、、**レイアウト**ありますセクションで、設定、**幅。** 600 の値に、**高さ**350 の値にします。  
   
 3.  選択して、グリッド名を設定、**グリッド**デザイナー内のパネル (内のボックスをクリックして、 **MainWindow**) と設定、**名前**の上部にあるプロパティ、 **プロパティ**ウィンドウを「grid1」.  
   
@@ -100,8 +99,7 @@ ms.locfileid: "57708640"
   
          アクティビティ デザイナーの登録の詳細については、[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)を参照してください。  
   
-    5.  
-  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
+    5.  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
   
         ```csharp  
         public MainWindow()  

@@ -29,8 +29,7 @@ HRESULT GetNativeIP(
 ## <a name="remarks"></a>Remarks  
  この命令ポインターの意味は、次の表に示すように、イベントの種類によって異なります。  
   
-|イベントの種類|
-  `pStackPointer` 値の意味|  
+|イベントの種類|`pStackPointer` 値の意味|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|障害の発生した命令のアドレス。|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|によって示されるフレーム内のコード アドレス、 [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md)メソッドの例外が発生しなかった場合に実行を再開します。 例外によって、`try/catch/finally` 句の catch ブロックなどの別のコードがこのフレーム内で実行される原因となることもあれば、そうでない場合もあります。|  

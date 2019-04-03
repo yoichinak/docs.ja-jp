@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: 1cf0772bf4e9a77474849c59454617261475fa76
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966087"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843202"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 宣言の先頭を`Using`をブロックし、必要に応じて、ブロックを制御するシステム リソースを取得します。  
@@ -33,7 +33,7 @@ End Using
 |---|---|  
 |`resourcelist`|指定しないかどうかに必要な`resourceexpression`します。 この 1 つまたは複数のシステム リソースの一覧表示`Using`コンマで区切られたコントロールをブロックします。|  
 |`resourceexpression`|指定しないかどうかに必要な`resourcelist`します。 参照変数または式で制御するシステム リソースを参照する`Using`ブロックします。|  
-|`statements`|任意。 ステートメントのブロックを`Using`ブロックが実行されます。|  
+|`statements`|省略可能です。 ステートメントのブロックを`Using`ブロックが実行されます。|  
 |`End Using`|必須。 定義を終了、`Using`ブロックおよびそれによって制御されるすべてのリソースを破棄します。|  
   
  内の各リソース、`resourcelist`部分が次の構文と部分。  
@@ -51,7 +51,7 @@ End Using
 |`resourcename`|必須。 システム リソースを参照する参照変数を`Using`コントロールをブロックします。|  
 |`New`|必要な場合、`Using`ステートメントがリソースを取得します。 既にリソースを取得する場合は、2 番目の構文を使用します。|  
 |`resourcetype`|必須。 リソースのクラスです。 クラスを実装する必要があります、<xref:System.IDisposable>インターフェイス。|  
-|`arglist`|任意。 インスタンスを作成するコンス トラクターに渡す引数のリスト`resourcetype`します。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
+|`arglist`|省略可能です。 インスタンスを作成するコンス トラクターに渡す引数のリスト`resourcetype`します。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
 |`resourceexpression`|必須。 変数または式の要件を満たすシステム リソースを参照する`resourcetype`します。 2 番目の構文を使用する場合は、制御を渡す前に、リソースを取得する必要があります、`Using`ステートメント。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -110,6 +110,7 @@ End Try
  [!code-vb[VbVbalrStatements#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#50)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IDisposable>
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [方法: システム リソースを破棄します。](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)

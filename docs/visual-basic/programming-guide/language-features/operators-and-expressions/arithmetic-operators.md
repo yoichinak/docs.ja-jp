@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820777"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 算術演算子を使用して、多くのリテラル、変数、その他の式、関数とプロパティの呼び出し、および定数によって表される数値の計算に関連する一般的な算術演算を実行します。 算術演算子にも分類は、ビット シフト演算子のオペランドのビットごとのレベルで動作し、ビット パターンを左または右にシフトです。  
@@ -95,6 +95,7 @@ ms.locfileid: "56981271"
  設定した場合`Option Strict Off`、ただし、Visual Basic を実行する暗黙的な縮小変換のデータまたは精度の予期しない損失が発生する可能性が。 このため、私たちにを使用することお勧め`Option Strict On`運用環境のコードを記述する場合。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [算術演算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [ビット シフト演算子](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

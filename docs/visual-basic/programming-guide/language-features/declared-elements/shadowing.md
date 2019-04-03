@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411006"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839393"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
 2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 このような場合は、シャドウされた要素は参照できません。代わりに、コードでは、要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。  
@@ -97,7 +97,7 @@ End Module
  ただし、さらに、派生クラス`thirdClass`宣言`display`として`Public`ため、コードでは、`callDisplay`アクセスできます。  
   
 ## <a name="shadowing-and-overriding"></a>シャドウとオーバーライド  
- シャドウとオーバーライドを混同しないでください。 どちらも、派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義に使用されます。 2 つの重要な違いがあります。 比較については、次を参照してください。[の相違点の間でシャドウとオーバーライド](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)します。  
+ シャドウとオーバーライドを混同しないでください。 どちらも、派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義に使用されます。 2 つの重要な違いがあります。 比較については、[の相違点の間でシャドウとオーバーライド](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)を参照してください。  
   
 ## <a name="shadowing-and-overloading"></a>シャドウとオーバー ロード  
  派生クラスで 1 つ以上の要素と同じ基本クラスの要素をシャドウする場合は、その要素のオーバー ロードされたバージョンがシャドウする要素になります。 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  
@@ -138,6 +138,7 @@ End Class
  前の例では、変数`basObj`基底クラスとして宣言されます。 割り当てを`dervCls`オブジェクトをそれには、拡大変換であるためです。 基底クラスが、変数のシャドウのバージョンにアクセスできませんただし、 `z` 、派生クラスでは、そのため、コンパイラは`basObj.z`元の基本クラスの値にします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -2,17 +2,17 @@
 title: (Visual Basic) の XML の純粋関数型変換
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
-ms.openlocfilehash: 1af777296c8b8d9736b701b297b2253326c9da7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843423"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>(Visual Basic) の XML の純粋関数型変換
 ここでは、XML の関数型変換に関するチュートリアルについて説明します。 このチュートリアルには、関数型変換を使用する場合に理解しておく必要がある主な概念や言語構造についての説明と、関数型変換を使用して XML ドキュメントを操作する例が含まれています。 このチュートリアルでは、LINQ to XML のコード例が示されますが、基本的概念はすべて他の LINQ テクノロジにも適用されます。  
   
- [チュートリアル。WordprocessingML ドキュメント (Visual Basic) 内のコンテンツを操作する](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)チュートリアルの各ビルの 1 つ前の例については、シリーズを提供します。 これらの例では、純粋関数型変換を使用して XML を操作する方法を説明する複数の例が示されています。  
+ 「[チュートリアル:WordprocessingML ドキュメント (Visual Basic) 内のコンテンツを操作する](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)チュートリアルの各ビルの 1 つ前の例については、シリーズを提供します。 これらの例では、純粋関数型変換を使用して XML を操作する方法を説明する複数の例が示されています。  
   
  このチュートリアルには、Visual Basic の実務知識を前提としています。 このチュートリアルでは言語構造の詳細なセマンティクスについては説明しませんが、必要に応じて言語ドキュメントへのリンクを示します。  
   
@@ -27,4 +27,5 @@ ms.locfileid: "54584741"
 |[チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|関数型変換について例を使用して説明するチュートリアルです。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML ツリー (Visual Basic) のクエリ](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

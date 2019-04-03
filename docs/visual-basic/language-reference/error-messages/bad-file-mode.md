@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 1d85f49ce0aed44dea12c9ba16135425e6e2e431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565749"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819984"
 ---
 # <a name="bad-file-mode"></a>ファイル モードが正しくありません。
 ファイルの内容を操作するときに使用するステートメントは、ファイルを開いたモードに適切なである必要があります。 以下の原因が考えられます。  
@@ -35,5 +35,6 @@ ms.locfileid: "54565749"
 -   `My.Computer.FileSystem` オブジェクトで利用できる機能を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.FileSystem>
-- [トラブルシューティング。テキスト ファイルの読み書き](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
+- [トラブルシューティング : テキスト ファイルの読み取りと書き込み](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

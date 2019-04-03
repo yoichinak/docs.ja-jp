@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 32a5b0531851e9f8b4280e8d2908bfe2d011bf90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547724"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814993"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 コンパイラが自動的に標準のライブラリを参照します。  
@@ -39,6 +39,7 @@ vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

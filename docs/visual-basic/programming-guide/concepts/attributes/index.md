@@ -2,6 +2,12 @@
 title: 属性の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827693"
 ---
 # <a name="attributes-overview-visual-basic"></a>属性の概要 (Visual Basic)
 属性は、メタデータまたは宣言型の情報を、コード (アセンブリ、型、メソッド、プロパティなど) に関連付けるための優れた方法です。 属性をプログラム要素に関連付けると、*リフレクション*と呼ばれる手法を使用して、実行時にその属性を照会することができます。 詳細については、「[リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)」を参照してください。  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
 - [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [属性](../../../../standard/attributes/index.md)

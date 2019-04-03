@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832126"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。
 場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。 プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。  
@@ -35,6 +35,7 @@ ms.locfileid: "56972587"
      前の例では、`Get`手順では、同じ`Protected`プロパティ自体としてのアクセス中に、`Set`手順では`Private`アクセス。 派生したクラス`employee`読み取ることができます、`salary`値のみが、`employee`クラスで設定できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

@@ -4,12 +4,12 @@ description: イメージ処理からモバイル バックエンドとの ETL �
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153788"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653900"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -61,7 +61,7 @@ Azure の Web ポータルで、または Visual Studio では、単純なサー
 
 抽出、変換、および読み込み (ETL) は、さまざまなシステムを統合する共通のビジネス関数。 従来のアプローチは、多くの場合、専用の FTP サーバーをセットアップし、ファイルを解析し、業務用に変換するスケジュールされたジョブを展開する必要があります。 サーバーレス アーキテクチャ簡単ジョブ ファイルがアップロードされたときにトリガーを起動できるためです。 Azure Functions あたってタスクなどの特定の問題に焦点を少量のコードの最適な構成で ETL。
 
-![ETL アーキテクチャ](./media/csvimport.png)
+![Csv 解析プロセスを示すスクリーン ショット。](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 ソース コードとハンズオン ラボでは、[CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)を参照してください。
 

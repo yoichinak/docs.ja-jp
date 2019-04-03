@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](../../../csharp/language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../../csharp/language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。  
   
- 次の図は、CTS における値型と参照型の関係を示しています。  
+ 次の図は、CTS における値型と参照型の関係を示しています。
+
+ 次の画像は、CTS の値の型と参照型を示しています。 
   
- ![値型と参照型](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-CTS での値型と参照型  
+  
+ ![CTS の値の型と参照型を示すスクリーンショット。](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  この図を見るとわかるように、最もよく使用される型はすべて <xref:System> 名前空間に属しています。 しかし、型が属している名前空間は、その型が値型と参照型のどちらであるかには関係ありません。  

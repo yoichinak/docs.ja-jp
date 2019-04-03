@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: da3aa17c55a4ccc95e5f4c98d0f12712ef77d5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822573"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>クラスの明示的なインスタンスを指定しないで、共有メソッドまたは共有メンバー初期化子内からクラスのインスタンス メンバーへ参照することはできません。
 共有プロシージャ内からクラスの非共有メンバーを参照しようとしました。 次の例では、このような状況を示します。  
@@ -44,4 +44,5 @@ End Class
 3.  各インスタンスでメンバーの独自の個別コピーが存在する場合を指定しない`Shared`メンバーの宣言にします。 削除、`Shared`プロシージャ宣言からキーワード。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

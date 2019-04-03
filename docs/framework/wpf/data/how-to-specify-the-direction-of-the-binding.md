@@ -31,8 +31,7 @@ ms.locfileid: "57378220"
   
  詳細については、<xref:System.Windows.Data.BindingMode> 列挙型のページをご覧ください。  
   
- 
-  <xref:System.Windows.Data.Binding.Mode%2A> プロパティを設定する方法を次の例に示します。  
+ <xref:System.Windows.Data.Binding.Mode%2A> プロパティを設定する方法を次の例に示します。  
   
  [!code-xaml[DirectionalBinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#4)]  
   

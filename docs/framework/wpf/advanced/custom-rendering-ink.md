@@ -56,8 +56,7 @@ ms.locfileid: "57362631"
   
 <a name="ImplementingCustomStrokes"></a>   
 ## <a name="implementing-custom-strokes"></a>カスタム ストロークの実装  
- 
-  <xref:System.Windows.Ink.Stroke> から派生するクラスを実装します。 このクラスはレンダリング<xref:System.Windows.Input.StylusPoint>データに変換された後、<xref:System.Windows.Ink.Stroke>オブジェクト。 上書き、<xref:System.Windows.Ink.Stroke.DrawCore%2A>実際の描画を実行するためにします。  
+ <xref:System.Windows.Ink.Stroke> から派生するクラスを実装します。 このクラスはレンダリング<xref:System.Windows.Input.StylusPoint>データに変換された後、<xref:System.Windows.Ink.Stroke>オブジェクト。 上書き、<xref:System.Windows.Ink.Stroke.DrawCore%2A>実際の描画を実行するためにします。  
   
  Stroke クラスを使用してカスタム データを格納できますも、<xref:System.Windows.Ink.Stroke.AddPropertyData%2A>メソッド。 このデータは、保持されるときにストローク データと共に格納されます。  
   

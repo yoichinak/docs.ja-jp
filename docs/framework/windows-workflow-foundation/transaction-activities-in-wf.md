@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57714776"
 ---
 # <a name="transaction-activities-in-wf"></a>WF におけるトランザクションのアクティビティ
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、トランザクションや、補正、取り消しをモデル化するためのシステム指定のアクティビティがいくつかあります。 これらのプログラミング モデルにより、ビジネス ロジックとエラー処理の変更の場合に、ワークフローは進行を続けることができます。 トランザクション、補正、およびキャンセルの詳細については、[トランザクション](workflow-transactions.md)、[補正](compensation.md)、および[キャンセル](modeling-cancellation-behavior-in-workflows.md)を参照してください。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、トランザクションや、補正、取り消しをモデル化するためのシステム指定のアクティビティがいくつかあります。 これらのプログラミング モデルにより、ビジネス ロジックとエラー処理の変更の場合に、ワークフローは進行を続けることができます。 トランザクション、補正、およびキャンセルの詳細については、次を参照してください。[トランザクション](workflow-transactions.md)、[補正](compensation.md)、および[キャンセル](modeling-cancellation-behavior-in-workflows.md)します。  
   
 ## <a name="transaction-activities"></a>トランザクションのアクティビティ  
   

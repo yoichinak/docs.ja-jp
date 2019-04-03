@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: f80d9f3024107ace2102fb9ec9e8657d3219aafa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825561"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 パラメーターの名前と説明を定義します。  
@@ -45,4 +45,5 @@ ms.locfileid: "57502242"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516514"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463008"
 ---
 # <a name="using-the-assert-method"></a>Assert メソッドの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516514"
   
 -   メソッド A はアセンブリ A 内にあり、メソッド B はアセンブリ B 内にあり、以下同様です。  
   
- ![](../../../docs/framework/misc/media/assert.gif "アサート")  
-Assert の使用  
+ ![Assert メソッドのアセンブリを示す図。](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  このシナリオ、メソッド A が B を呼び出し、B が C を呼び出し、C が E、および電子メールの呼び出しでは、F は、(アクセス許可の P1)、C ドライブにファイルを読み取る権限とメソッド E は C ドライブ (P1A のアクセス許可) 上の .txt ファイルを読み取るアクセス許可を要求をアサートします。 F で要求が実行時に発生したときに F でのすべての呼び出し元の権限をチェックするスタック ウォークが実行される E から順に許可されて P1A のアクセス許可、ため、スタック ウォークは、C、C のアサーションが検出された場所のアクセス許可を確認する処理します。 要求されたアクセス許可 (P1A) は、アサートされたアクセス許可 (P1) のサブセットであるため、スタック ウォークが停止し、セキュリティ チェックは自動的に成功します。 アセンブリ A と B に P1A のアクセス許可が付与されていないことは関係ありません。 P1 をアサートすることで、メソッド C は、呼び出し元がそのリソースへのアクセス許可を付与されていない場合でも呼び出し元が、P1 で保護されているリソースにアクセスできることを保証します。  
   

@@ -2,12 +2,12 @@
 title: LINQ とリフレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2548a731-0cd8-48de-8d48-664d1b7d7526
-ms.openlocfilehash: f752eac7ee22a6cb75324e02ecfc2263513ceeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed4627fc10c1b6b56194520461146315f98f15f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586606"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813684"
 ---
 # <a name="linq-and-reflection-visual-basic"></a>LINQ とリフレクション (Visual Basic)
 .NET Framework クラス ライブラリのリフレクション API を使用すると、.NET アセンブリ内のメタデータを調べ、そのアセンブリ内にある型、型メンバー、パラメーターなどのコレクションを作成できます。 これらのコレクションは、ジェネリック `IEnumerable` インターフェイスをサポートするため、LINQ を使用して照会できます。  
@@ -18,4 +18,5 @@ ms.locfileid: "54586606"
  リフレクションと共に LINQ を使用する方法を紹介します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

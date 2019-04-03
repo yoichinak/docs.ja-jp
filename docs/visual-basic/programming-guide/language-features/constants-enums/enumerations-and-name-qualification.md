@@ -17,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 9edb809624727aba5c40b410d0356804257bf516
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0a806b040720cf6682f8a72025a0590dd4d91f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818437"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>列挙型と名前修飾 (Visual Basic)
 通常、列挙体のメンバーを指す場合は、列挙名でメンバー名を修飾する必要があります。 たとえばを参照する、`Sunday`のメンバー、`Days`列挙型では、次の構文を使用します。  
@@ -49,6 +49,7 @@ ms.locfileid: "56964657"
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
 - [方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [方法: 列挙体のメンバーを参照してください。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)

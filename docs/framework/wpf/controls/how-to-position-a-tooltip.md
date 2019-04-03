@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364535"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840498"
 ---
 # <a name="how-to-position-a-tooltip"></a>方法: ToolTip を配置する
 この例では、画面上のツールヒントの位置を指定する方法を示します。  
@@ -34,16 +34,19 @@ ms.locfileid: "57364535"
  使用して、ツールヒントの内容を定義するかどうか、<xref:System.Windows.Controls.ToolTip>オブジェクトのいずれかのクラス プロパティを使用することができます。 ただし、、<xref:System.Windows.Controls.ToolTipService>プロパティも優先されます。 使用して、<xref:System.Windows.Controls.ToolTipService>プロパティとして定義されていないヒントを<xref:System.Windows.Controls.ToolTip>オブジェクト。  
   
  次の図は、これらのプロパティを使用して、tooltip を配置する方法を示します。 ですが、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のこれらの図の例で定義されているプロパティを設定する方法を示して、<xref:System.Windows.Controls.ToolTip>クラスの対応するプロパティ、<xref:System.Windows.Controls.ToolTipService>クラスと同じレイアウト規則に従います。 配置プロパティの値の詳細については、次を参照してください。[ポップアップの配置動作](popup-placement-behavior.md)します。  
+ 
+ 次の図は、配置プロパティを使用して、ツールヒントの配置を示しています。  
   
- ![ツールヒント配置](./media/tooltipplacement.png "ToolTipPlacement")  
-配置プロパティを使用してツールヒントの配置  
+ ![配置プロパティを使用して、ツールヒントの配置を示す図。](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ 次の図は、配置、および PlacementRectangle の各プロパティを使用してツールヒントの配置を示しています。   
+
+ ![PlacementRectangle プロパティを使用して、ツールヒントの配置を示す図。](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ 次の図は、配置、PlacementRectangle、およびオフセット プロパティを使用してツールヒントの配置を示しています。   
   
- ![配置四角形を使用して、ツールヒントの配置](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-配置、および PlacementRectangle の各プロパティを使用してツールヒントの配置  
-  
- ![ツールヒント配置のダイアグラム](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-配置、PlacementRectangle、およびオフセット プロパティを使用してツールヒントの配置  
-  
+ ![オフセット プロパティを使用して、ツールヒントの配置を示す図。](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  次の例は、使用する方法を示します、<xref:System.Windows.Controls.ToolTip>プロパティが表示されるツールヒントの位置を指定する、<xref:System.Windows.Controls.ToolTip>オブジェクト。  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

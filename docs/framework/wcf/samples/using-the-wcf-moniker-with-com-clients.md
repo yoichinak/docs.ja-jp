@@ -2,12 +2,12 @@
 title: WCF モニカーの COM クライアントと組み合わせての使用
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cd334dab8574845e10332e90b50fef833447a1d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303960"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836208"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF モニカーの COM クライアントと組み合わせての使用
 このサンプルでは、Windows Communication Foundation (WCF) サービス モニカーを使用して、Web サービス アプリケーション (Office VBA) の Microsoft Office Visual Basic または Visual Basic 6.0 などの COM ベースの開発環境を統合する方法を示します。 このサンプルは、Windows スクリプト ホストのクライアント (.vbs)、サポート クライアント ライブラリ (.dll)、およびインターネット インフォメーション サービス (IIS) でホストされるサービス ライブラリ (.dll) で構成されています。 このサービスは電卓サービスの 1 つであり、COM クライアントはサービスの算術演算 (Add、Subtract、Multiply、および Divide) を呼び出します。 クライアント アクティビティは、メッセージ ボックス ウィンドウに表示されます。  
@@ -89,7 +89,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 -   サービス エンドポイントのアドレス。  
   
--   エンドポイントとの接続にクライアントが使用する必要のあるバインディング。 クライアントの構成ファイルにはカスタム バインディングを定義できますが、この場合はシステム定義の wsHttpBinding を使用します。 Windows スクリプト ホストで使用する場合、カスタム バインディングは、Cscript.exe と同じディレクトリにある Cscript.exe.config で定義されます。  
+-   エンドポイントとの接続にクライアントが使用する必要のあるバインディング。 クライアントの構成ファイルにはカスタム バインドを定義できますが、この場合はシステム定義の wsHttpBinding を使用します。 Windows スクリプト ホストで使用する場合、カスタム バインディングは、Cscript.exe と同じディレクトリにある Cscript.exe.config で定義されます。  
   
 -   エンドポイントでサポートされるコントラクトの型。 これは上の手順で生成され、登録された型です。 Visual Basic スクリプトには厳密に型指定された COM 環境がないので、コントラクトの識別子を指定する必要があります。 この GUID は CalcProxy.tlb からの `interfaceID` で、OLE/COM オブジェクト ビューアー (OleView.exe) などの COM ツールを使用して表示できます。 Office VBA や Visual Basic 6.0 などの厳密に型指定された環境では、コントラクト パラメーターを使用する代わりに、タイプ ライブラリへの明示的な参照を追加してプロキシ オブジェクトの型を宣言することができます。 これにより、クライアント アプリケーションの開発中に IntelliSense のサポートも提供されます。  
   
@@ -191,8 +191,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3.  開発者コマンド プロンプト for Visual Studio では、言語固有のフォルダーの下、\client\bin フォルダーを開きます。  
   
     > [!NOTE]
-    >  
-  [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7、または Windows Server 2008 R2 を使用している場合は、コマンド プロンプトを管理者権限で実行する必要があります。  
+    >  [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7、または Windows Server 2008 R2 を使用している場合は、コマンド プロンプトを管理者権限で実行する必要があります。  
   
 4.  入力`tlbexp.exe client.dll /out:CalcProxy.tlb`dll を tlb ファイルにエクスポートします。 "タイプ ライブラリ エクスポーターの警告" が表示されることが予想されますが、ジェネリック型は不要なので問題にはなりません。  
   
@@ -222,8 +221,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6.  Client.dll ライブラリを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターのディレクトリにコピーします。  
   
-7.  コマンド プロンプトで、クライアント コンピューターのコピー先ディレクトリに移動します。 
-  [!INCLUDE[wv](../../../../includes/wv-md.md)] または [!INCLUDE[lserver](../../../../includes/lserver-md.md)] を使用する場合は、コマンド プロンプトを管理者として実行してください。  
+7.  コマンド プロンプトで、クライアント コンピューターのコピー先ディレクトリに移動します。 [!INCLUDE[wv](../../../../includes/wv-md.md)] または [!INCLUDE[lserver](../../../../includes/lserver-md.md)] を使用する場合は、コマンド プロンプトを管理者として実行してください。  
   
 8.  入力`tlbexp.exe client.dll /out:CalcProxy.tlb`dll を tlb ファイルにエクスポートします。 "タイプ ライブラリ エクスポーターの警告" が表示されることが予想されますが、ジェネリック型は不要なので問題にはなりません。  
   
@@ -239,4 +237,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   セキュリティの目的で、サンプルの使用が終わったら、このセットアップで付与された仮想ディレクトリの定義とアクセス許可を削除してください。  
   
-## <a name="see-also"></a>関連項目

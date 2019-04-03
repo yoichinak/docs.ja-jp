@@ -2,12 +2,12 @@
 title: '方法: 空のクエリ結果セット (Visual Basic) のデバッグします。'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822797"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>方法: 空のクエリ結果セット (Visual Basic) のデバッグします。
 XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -90,4 +90,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

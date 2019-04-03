@@ -61,8 +61,7 @@ ms.locfileid: "56835357"
 |ビューが作成されるまで、メモリ割り当てを延期する (非永続化ファイルのみ)。<br /><br /> (現在のシステム ページ サイズを確認するには、<xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> プロパティを使用します)。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 値を持つ <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> メソッド<br /><br /> または<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 列挙体をパラメーターとして持つ <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> メソッド。|  
   
 ### <a name="security"></a>セキュリティ  
- 
-  <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列挙体をパラメーターとして受け取る次のメソッドを使用して、メモリ マップト ファイルの作成時にアクセス権を適用できます。  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列挙体をパラメーターとして受け取る次のメソッドを使用して、メモリ マップト ファイルの作成時にアクセス権を適用できます。  
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
@@ -70,8 +69,7 @@ ms.locfileid: "56835357"
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
- 
-  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> をパラメーターとして受け取る <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> メソッドを使用して、既存のメモリ マップト ファイルを開く操作に対するアクセス権を指定できます。  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> をパラメーターとして受け取る <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> メソッドを使用して、既存のメモリ マップト ファイルを開く操作に対するアクセス権を指定できます。  
   
  また、定義済みのアクセス規則が格納されている <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> オブジェクトを含めることもできます。  
   
@@ -80,8 +78,7 @@ ms.locfileid: "56835357"
 ## <a name="examples"></a>使用例  
   
 ### <a name="persisted-memory-mapped-files"></a>永続化メモリ マップト ファイル  
- 
-  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> メソッドは、ディスク上の既存のファイルからメモリ マップト ファイルを作成します。  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> メソッドは、ディスク上の既存のファイルからメモリ マップト ファイルを作成します。  
   
  次の例では、きわめて大きなファイルの一部のメモリ マップト ビューを作成し、その一部分を操作します。  
   
@@ -94,8 +91,7 @@ ms.locfileid: "56835357"
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>非永続化メモリ マップト ファイル  
- 
-  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> メソッドおよび <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> メソッドは、ディスク上の既存のファイルに対応付けられないメモリ マップト ファイルを作成します。  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> メソッドおよび <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> メソッドは、ディスク上の既存のファイルに対応付けられないメモリ マップト ファイルを作成します。  
   
  次の例は、メモリ マップト ファイルにブール値を書き込む、3 つの独立したプロセス (コンソール アプリケーション) で構成されます。 次の順序で処理が実行されます。  
   
@@ -107,8 +103,7 @@ ms.locfileid: "56835357"
   
 4.  `Process A` がメモリ マップト ファイルの値を読み込み、表示します。  
   
-5.  
-  `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
+5.  `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
   
  この例を実行するには、次の手順に従います。  
   
@@ -118,16 +113,13 @@ ms.locfileid: "56835357"
   
 3.  2 つ目のコマンド プロンプト ウィンドウで、`Process B` を実行します。  
   
-4.  
-  `Process A` に戻り、Enter キーを押します。  
+4.  `Process A` に戻り、Enter キーを押します。  
   
 5.  3 つ目のコマンド プロンプト ウィンドウで、`Process C` を実行します。  
   
-6.  
-  `Process A` に戻り、Enter キーを押します。  
+6.  `Process A` に戻り、Enter キーを押します。  
   
- 
-  `Process A` の出力は次のとおりです。  
+ `Process A` の出力は次のとおりです。  
   
 ```  
 Start Process B and press ENTER to continue.  

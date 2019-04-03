@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517384"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819763"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの概要
 Visual Basic Windows フォーム アプリケーションの動作を制御するための適切に定義されたモデルを提供します。 Visual Basic アプリケーション モデルです。 このモデルには、アプリケーションのスタートアップとシャット ダウン、だけでなくハンドルされない例外をキャッチのイベントを処理するためのイベントが含まれています。 単一インスタンス アプリケーションを開発するためのサポートも提供します。 アプリケーション モデルとは、拡張可能なため、詳細に制御を必要がある開発者はそのオーバーライド可能なメソッドをカスタマイズできます。  
@@ -26,9 +26,9 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
   
 -   各後続の試行の最初のインスタンスの実行中にアプリケーションを起動は、非常に異なる動作になります。 後続の試行では、コマンドラインの引数の詳細については、最初のインスタンスに通知し、すぐに終了します。 最初のインスタンス ハンドル、`StartupNextInstance`イベントに、後続のインスタンスのコマンドライン引数を通知し、実行が継続されます。  
   
-     この図では、後続のインスタンスが最初のインスタンスを通知する方法を示します。  
+     この図は、後続のインスタンスが最初のインスタンスを通知する方法を示しています。  
   
-     ![1 つのインスタンス アプリケーション イメージ](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![アプリケーションのイメージを 1 つのインスタンスを示す図。](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  処理することによって、`StartupNextInstance`イベント、単一インスタンス アプリケーションの動作を制御できます。 たとえば、Microsoft Outlook は、通常; 単一インスタンス アプリケーションとして実行します。Outlook が実行されていると、Outlook を起動しようとしたときにも、元のインスタンスにフォーカスを移動が、別のインスタンスは開くことができません。  
   
@@ -55,6 +55,7 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
  既定では、Visual Basic アプリケーション モデルは Windows フォーム プロジェクトで使用できます。 異なるスタートアップ オブジェクトを使用するアプリケーションを構成またはカスタム アプリケーション コードを開始するかどうか`Sub Main`、し、そのオブジェクトまたはクラスは、の実装を提供する必要があります、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>アプリケーション モデルを使用するクラス。 スタートアップ オブジェクトを変更する方法の詳細については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

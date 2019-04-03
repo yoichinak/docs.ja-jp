@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: c21223cc353b7a4614511aa97340c6bc5d61e70e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200658"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834310"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 条件付きコンパイル定数を定義します。  
@@ -31,7 +31,7 @@ ms.locfileid: "57200658"
   
 |用語|定義|  
 |---|---|  
-|`symbol`|必ず指定します。 定義する記号。|  
+|`symbol`|必須。 定義する記号。|  
 |`value`|省略可能です。 `symbol` に代入する値。 場合`value`文字列で、シーケンスのバック スラッシュ/引用符で囲みます (\\") 引用符の代わりにします。 値が指定されていない場合は、True として処理されます。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -45,7 +45,7 @@ ms.locfileid: "57200658"
   
 |Visual Studio 統合開発環境で /define を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.[ **詳細設定**] をクリックします。<br />4.値を変更、**カスタム定数**ボックス。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[コンパイル]** タブをクリックします。<br />3.**[詳細設定]** をクリックします。<br />4.値を変更、**カスタム定数**ボックス。|  
   
 ## <a name="example"></a>例  
  2 つの条件付きコンパイル定数を定義して使用する場合のコード例を次に示します。  
@@ -53,6 +53,7 @@ ms.locfileid: "57200658"
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)

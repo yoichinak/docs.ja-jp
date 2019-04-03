@@ -9,16 +9,15 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 987a948d739f6b9e8e5a3e8fc6eadbfd60003723
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 7b9485c1bc2f87ca9f007a4e1ce2f63c055100c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203059"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815980"
 ---
 # <a name="-netcf"></a>-netcf
-
-  [!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。  
+[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -90,6 +89,7 @@ vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactF
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

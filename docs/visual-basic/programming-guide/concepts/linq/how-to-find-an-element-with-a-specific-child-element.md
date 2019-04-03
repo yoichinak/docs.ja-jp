@@ -2,12 +2,12 @@
 title: '方法: 特定の子要素 (Visual Basic) を持つ要素を検索します。'
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: c9239ed5ff417b66cebeb3015014f1498278b602
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659083"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827056"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>方法: 特定の子要素 (Visual Basic) を持つ要素を検索します。
 このトピックでは、特定の値を含む子要素を持つ特定の要素を検索する方法について説明します。  
@@ -15,7 +15,7 @@ ms.locfileid: "54659083"
 ## <a name="example"></a>例  
  この例では、"Examp2.EXE" の値を含む `Test` 子要素を持つ `CommandLine` 要素を検索します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:テスト構成 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:テスト構成 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)」。  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>例  
  次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:Namespace 内のテスト構成](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)します。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 名前空間内のテスト構成](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)」。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -67,6 +67,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: 637eecf9526c64c47ef3559cd5b65f16dd886a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618936"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824755"
 ---
 # <a name="my-reference-visual-basic"></a>My の参照 (Visual Basic)
 `My`機能により、高速かつ簡単にプログラミングで一般的に使用されるメソッド、プロパティ、およびイベントへの直感的なアクセスを付与します。 この表の一覧に含まれるオブジェクト`My`、および各に実行できるアクション。  
@@ -29,5 +29,6 @@ ms.locfileid: "54618936"
 |現在のプロジェクトによって参照される XML Web サービスへのアクセス。|[My.WebServices オブジェクト](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic アプリケーション モデルの概要](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [My による開発](../../../visual-basic/developing-apps/development-with-my/index.md)

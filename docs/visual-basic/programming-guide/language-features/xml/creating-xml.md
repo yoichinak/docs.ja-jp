@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a9131e62ad0a4f55a88c15a8e0efa9189026eca3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615482"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813042"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic での XML の作成
 Visual Basic では、使用することができます*XML リテラル*コード内で直接します。 XML リテラルの構文を表します[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト、およびでは、XML 1.0 の構文と似ています。 これにより、簡単に、コードは、最終的な XML と同じ構造を持つため、XML 要素、ドキュメント、およびフラグメントをプログラムで作成します。  
@@ -29,4 +29,5 @@ Visual Basic では、使用することができます*XML リテラル*コー�
 |[宣言する XML 要素と属性の名前](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|XML 要素と属性の名前付けのガイドラインについて説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

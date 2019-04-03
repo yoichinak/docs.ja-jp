@@ -101,15 +101,13 @@ BasicHttpContextBinding エンドポイントとサービスの*Svcutil.exe*と�
 |/noConfig|構成ファイルを生成しません。|
 |/noStdLib|標準ライブラリを参照しません。<br /><br /> 既定:Mscorlib.dll と System.servicemodel.dll が参照されます。|
 |/out:\<file>|生成されるコードのファイル名を指定します。<br /><br /> 既定:WSDL は、WSDL 定義名から派生した、サービス名またはスキーマのいずれかのターゲット名前空間。<br /><br /> 短縮形 : `/o`|
-|/reference:\<ファイルのパス >|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> このスイッチを使用して、メッセージ コントラクト型と <xref:System.Xml.Serialization.XmlSerializer> 型は指定できません。<br /><br /> 
-  <xref:System.DateTimeOffset> が参照されている場合、新しい型を生成する代わりにこの型が使用されます。 アプリケーションが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して記述されている場合、SvcUtil.exe は、自動的に <xref:System.DateTimeOffset> を参照します。<br /><br /> 短縮形: `/r`|
+|/reference:\<ファイルのパス >|指定されたアセンブリの型を参照します。 クライアントの生成時に、このオプションを使用して、インポートするメタデータを表す型を含むアセンブリを指定します。<br /><br /> このスイッチを使用して、メッセージ コントラクト型と <xref:System.Xml.Serialization.XmlSerializer> 型は指定できません。<br /><br /> <xref:System.DateTimeOffset> が参照されている場合、新しい型を生成する代わりにこの型が使用されます。 アプリケーションが [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] を使用して記述されている場合、SvcUtil.exe は、自動的に <xref:System.DateTimeOffset> を参照します。<br /><br /> 短縮形: `/r`|
 |/serializable|シリアル化可能属性でマークされたクラスを生成します。<br /><br /> 短縮形: `/s`|
 |/serviceContract|サービス コントラクトのコードのみを生成します。 クライアント クラスと構成は生成されません。<br /><br /> 短縮形: `/sc`|
 |/serializer:Auto|シリアライザーが自動的に選択します。 これは、データ コントラクト シリアライザーを使用しようとしが失敗した場合に、XmlSerializer を使用します。<br /><br /> 短縮形: `/ser`|
 |/serializer:DataContractSerializer|シリアル化と逆シリアル化にデータ コントラクト シリアライザーを使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|シリアル化と逆シリアル化に <xref:System.Xml.Serialization.XmlSerializer> を使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:XmlSerializer`|
-|/targetClientVersion|アプリケーションが対象としている [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 
-  `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
+|/targetClientVersion|アプリケーションが対象としている [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
 |/wrapped|ラップされたパラメーターを含んでいるドキュメント リテラル スタイルのドキュメントに特別な大文字と小文字の規則が使用されるかどうかを制御します。 使用して、**ラップ/** スイッチと、[サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)通常大文字小文字の区別を指定するためのツール。|
 
 > [!NOTE]
@@ -134,8 +132,7 @@ Svcutil.exe は、コンパイル済みアセンブリのサービス、コン�
 
 ### <a name="service-validation"></a>サービスの検証
 
-検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 
-  `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
+検証は、サービスをホストせずにサービス実装でエラーを検出するために使用できます。 `/serviceName` オプションを使用して、検証するサービスを指定する必要があります。
 
 `svcutil.exe /validate /serviceName:<serviceConfigName>  <assemblyPath>*`
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: 884c5ddf15deb49719915f10e107ba6a3431c4bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965944"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826016"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: (Visual Basic) パターンとの比較の文字列と一致します。
 式かどうかを検索する場合、[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)を使用して、パターンを満たす、 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
@@ -79,6 +79,7 @@ ms.locfileid: "56965944"
      [!code-vb[VbVbalrOperators#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#74)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [演算子および式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)

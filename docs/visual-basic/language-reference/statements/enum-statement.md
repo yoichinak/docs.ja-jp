@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 662dc63b69a8229693471909a50b0c4f336b5637
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965697"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830072"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 列挙体を宣言し、そのメンバーの値を定義します。  
@@ -34,13 +34,13 @@ End Enum
   
 -   `attributelist`  
   
-     任意。 この列挙体に適用される属性の一覧です。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
+     省略可能です。 この列挙体に適用される属性の一覧です。 囲む必要があります、[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
   
      <xref:System.FlagsAttribute>属性は、列挙体のインスタンスの値が、複数の列挙型メンバーを含めることができ、各メンバーが列挙値のビット フィールドを表すことを示します。  
   
 -   `accessmodifier`  
   
-     任意。 この列挙体にアクセスできるコードを指定します。 次のいずれかの値を指定します。  
+     省略可能です。 この列挙体にアクセスできるコードを指定します。 次のいずれかの値を指定します。  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -56,7 +56,7 @@ End Enum
 
 -   `Shadows`  
   
-     任意。 この列挙体を宣言し、同じ名前を持つプログラミング要素、または基底クラスのオーバー ロードされた要素のセットを非表示にすることを指定します。 指定できる[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)列挙型自体でのみ、そのメンバーのいずれかではなく。  
+     省略可能です。 この列挙体を宣言し、同じ名前を持つプログラミング要素、または基底クラスのオーバー ロードされた要素のセットを非表示にすることを指定します。 指定できる[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)列挙型自体でのみ、そのメンバーのいずれかではなく。  
   
 -   `enumerationname`  
   
@@ -64,7 +64,7 @@ End Enum
   
 -   `datatype`  
   
-     任意。 列挙体とそのすべてのメンバーのデータ型。  
+     省略可能です。 列挙体とそのすべてのメンバーのデータ型。  
   
 -   `memberlist`  
   
@@ -75,12 +75,11 @@ End Enum
     |パーツ|説明|  
     |---|---|  
     |`membername`|必須。 このメンバーの名前。|  
-    |`initializer`|任意。 式がコンパイル時に評価され、このメンバーに割り当てられているです。|  
+    |`initializer`|省略可能です。 式がコンパイル時に評価され、このメンバーに割り当てられているです。|  
   
 -   `End` `Enum`  
   
-     
-  `Enum` ブロックを終了します。  
+     `Enum` ブロックを終了します。  
   
 ## <a name="remarks"></a>Remarks  
  互いに論理的に関連する不変の値のセットがあれば、列挙体で一緒に定義できます。 これは、列挙型とそのメンバーでは、その値よりも覚えやすく、わかりやすい名前を提供します。 コードでさまざまな場所で列挙型メンバーを使用することができます。  
@@ -173,6 +172,7 @@ End Enum
  [!code-vb[VbEnumsTask#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#51)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Enum>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)

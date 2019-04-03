@@ -1,5 +1,5 @@
 ---
-title: '方法: 回転、反転、およびイメージの傾斜'
+title: '方法: イメージを回転、反転、および傾斜させる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711500"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839913"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>方法: 回転、反転、およびイメージの傾斜
+# <a name="how-to-rotate-reflect-and-skew-images"></a>方法: イメージを回転、反転、および傾斜させる
 回転、反転、および元のイメージの左上隅や右、左下角の終点を指定することで、イメージを傾けることができます。 次の 3 つの終点では、平行四辺形に元の四角形のイメージをマップするアフィン変換を決定します。  
   
 ## <a name="example"></a>例  
@@ -30,15 +30,15 @@ ms.locfileid: "57711500"
   
  次の図は、元のイメージと平行四辺形にマップされているイメージを示します。 元のイメージがされて傾斜した、反映、回転、および翻訳されました。 元のイメージの上端に沿って、x 軸を実行している行にマップされます (200, 20) と (110, 100)。 元のイメージの左の端に沿って、y 軸を実行している行にマップされます (200, 20) と (250, 30)。  
   
- ![ストライプ](./media/stripes1.gif "Stripes1")  
+ ![元のイメージと平行四辺形にマップされているイメージ。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- 次の図は、写真のイメージに適用するような変換を示します。  
+ 次の図は、写真のイメージに適用するような変換を示しています。  
   
- ![変換クライマ](./media/transformedclimber.png "TransformedClimber")  
+ ![クライマと平行四辺形にマップされている画像の画像。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- 次の図は、メタファイルに適用するような変換を示します。  
+ 次の図は、メタファイルに適用するような変換を示しています。  
   
- ![変換メタファイル](./media/transformedmetafile.png "TransformedMetafile")  
+ ![図形とテキストを平行四辺形にマップされている図。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  次の例では、最初の図に示すようにイメージを生成します。  
   

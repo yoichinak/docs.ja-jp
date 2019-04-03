@@ -2,12 +2,12 @@
 title: 基本データ型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: d9c79ae70d860c5e86d4338038b3158ebfba184f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704970"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545703"
 ---
 # <a name="basic-data-types"></a>基本データ型
 LINQ to SQL クエリは、Microsoft SQL Server で実行される前に Transact-SQL に変換されるため、 LINQ to SQL は、SQL Server が基本データ型に対してサポートするのと同じ組み込み機能の多くをサポートします。  
@@ -18,7 +18,7 @@ LINQ to SQL クエリは、Microsoft SQL Server で実行される前に Transac
 ## <a name="equality-operators"></a>等値演算子  
  LINQ to SQL は、LINQ to SQL クエリ内の基本データ型で次の等値演算子をサポートします。  
   
--   等しいと非等値演算子。数値の等値演算子および非等値演算子がサポートされている<xref:System.Boolean>、 <xref:System.DateTime>、および<xref:System.TimeSpan>型。 詳細については、Visual Basic の演算子は`=`と`<>`を参照してください[比較演算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)します。 詳細についてはC#比較演算子`==`と`!=`を参照してください[演算子 = =](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)と[! = 演算子](~/docs/csharp/language-reference/operators/not-equal-operator.md)、それぞれ  
+-   等しいと非等値演算子。数値、等値演算子および非等値演算子がサポートされている<xref:System.Boolean>、 <xref:System.DateTime>、および<xref:System.TimeSpan>型。 詳細については、Visual Basic の演算子は`=`と`<>`を参照してください[比較演算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)します。 詳細についてはC#比較演算子`==`と`!=`を参照してください[等値演算子](~/docs/csharp/language-reference/operators/equality-operators.md)します。
   
 -   演算子を示します。`IS`継承のマッピングが使用されているときに、演算子がサポートされている変換します。 これは、オブジェクトが特定の種類のエンティティであるかどうかを検査する場合に、判別列を直接調べる代わりとして使用でき、判別列のチェックに変換されます。 Visual Basic の詳細については、 C# Is 演算子を参照してください[Is 演算子](~/docs/visual-basic/language-reference/operators/is-operator.md)と[は](~/docs/csharp/language-reference/keywords/is.md)します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 01a505130d566ec88a6d87e5e9ad525e449d7298
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981245"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828600"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XCData>オブジェクト。  
@@ -57,6 +57,7 @@ ms.locfileid: "56981245"
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XCData>
 - [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)

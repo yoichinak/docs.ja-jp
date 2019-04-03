@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: e879819d945f3e7256edd34e87b9cae4a04c0829
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512737"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834141"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 宣言されたプログラミング要素を宣言し、同じ名前を持つ要素、または基底クラスのオーバー ロードされた要素のセットを非表示にすることを指定します。  
@@ -69,6 +69,7 @@ ms.locfileid: "54512737"
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
@@ -76,7 +77,7 @@ ms.locfileid: "54512737"
 - [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [オーバーロード](../../../visual-basic/language-reference/modifiers/overloads.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

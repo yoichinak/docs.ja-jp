@@ -2,12 +2,12 @@
 title: Entity Data Model キーの概念
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574327"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825665"
 ---
 # <a name="entity-data-model-key-concepts"></a>Entity Data Model キーの概念
 Entity Data Model (EDM) では、次の 3 つの主要な概念を使用して、データの構造を記述する:*エンティティ型*、*アソシエーション型*、および*プロパティ*します。 これらは、EDM の実装においてデータ構造を記述する上で最も重要な概念です。  
@@ -32,7 +32,7 @@ Entity Data Model (EDM) では、次の 3 つの主要な概念を使用して�
 ## <a name="representations-of-a-conceptual-model"></a>概念モデルの表現  
  A*概念モデル*エンティティおよびリレーションシップとしていくつかのデータの構造の特定の表現です。 概念モデルを表現する 1 つの手段として、ダイアグラムを使用することができます。 下のダイアグラムは、3 つのエンティティ型 (`Book`、`Publisher`、および `Author`) と 2 つのアソシエーション (`PublishedBy` および `WrittenBy`) の概念モデルを表しています。  
   
- ![ナビゲーション プロパティを持つモデル](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![次の 3 つのエンティティ型を持つ概念モデルを示す図。](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  しかし、この表現には、モデルに関する詳細を伝える上でいくつかの欠点があります。 たとえば、プロパティ型とエンティティ セットの情報はダイアグラムに示されていません。 ドメイン固有言語 (DSL) を使用すると、概念モデルの詳細情報をさらに明確に伝えることができます。 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)と呼ばれる XML ベースの DSL を使用して*概念スキーマ定義言語*([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 概念モデルを定義します。 以下に、上のダイアグラムに示されている概念モデルの CSDL 定義を示します。  
   

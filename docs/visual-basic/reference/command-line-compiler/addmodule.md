@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 5a6d367f4b09de600bb744aa2abed0da2c93aa0b
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202367"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816435"
 ---
 # <a name="-addmodule"></a>-addmodule
 指定ファイル内のすべての型情報を現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -50,6 +50,7 @@ ms.locfileid: "57202367"
  実行すると`t1`、出力`802`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

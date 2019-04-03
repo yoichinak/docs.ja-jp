@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843533"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412215"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>WPF アプリケーションへのグラス フレームの拡張
 
@@ -26,11 +26,9 @@ ms.locfileid: "57843533"
 
 ## <a name="example"></a>例
 
-次の図は、Internet Explorer 7 のアドレス バーに拡張されたグラス フレームを示しています。
+次の図に、アドレス バーの Internet Explorer 7 の拡張されたグラス フレームを示しています。
 
-**アドレス バーの背後にグラス フレームが拡張された Internet Explorer。**
-
-![アドレス バーの背後にグラス フレームが拡張された IE7。](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![スクリーン ショットのグラス フレームが IE7 のアドレス バーの背後に拡張します。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションにグラス フレームを拡張するには、アンマネージ [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] へのアクセスが必要です。 次のコード例では、クライアント領域にフレームを拡張するために必要な 2 つの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] のプラットフォーム呼び出し (pinvoke) を行っています。 これらの各 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、**NonClientRegionAPI** という名前のクラスで宣言されています。
 
@@ -147,11 +145,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-次の図は、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションに拡張されたグラス フレームを示しています。
+次の図に拡張されたグラス フレームを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。
 
-**拡張されたグラス フレーム、**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**アプリケーションです。**
-
-![WPF アプリケーションに拡張されたグラス フレーム。](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![WPF アプリケーションに拡張されたグラス フレームを示すスクリーン ショット。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>関連項目
 

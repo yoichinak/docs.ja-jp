@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 8cce1cc918b150fdf30449f127b1e2f0a73e6f6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973276"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841408"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 XML リテラルおよび XML 軸のプロパティで使用するための XML 名前空間プレフィックスをインポートします。  
@@ -27,7 +27,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>指定項目  
  `xmlNamespacePrefix`  
- 任意。 XML 要素と属性を参照できます文字列`xmlNamespaceName`します。 いない場合`xmlNamespacePrefix`は既定の XML 名前空間がインポートされた XML 名前空間を指定します。 有効な XML 識別子である必要があります。 詳細については、次を参照してください。[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。  
+ 省略可能です。 XML 要素と属性を参照できます文字列`xmlNamespaceName`します。 いない場合`xmlNamespacePrefix`は既定の XML 名前空間がインポートされた XML 名前空間を指定します。 有効な XML 識別子である必要があります。 詳細については、次を参照してください。[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。  
   
  `xmlNamespaceName`  
  必須。 インポートされる XML 名前空間を識別する文字列。  
@@ -89,6 +89,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  `Patrick Hines`  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
 - [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

@@ -29,8 +29,7 @@ HRESULT GetStackPointer(
 ## <a name="remarks"></a>Remarks  
  このスタック ポインターの意味は、次の表に示すように、イベントの種類によって異なります。  
   
-|イベントの種類|
-  `pStackPointer` 値の意味|  
+|イベントの種類|`pStackPointer` 値の意味|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|例外をスローしたフレームのスタック ポインター。|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|スローされた例外の位置に最も近いユーザー コード フレームのスタック ポインター。|  

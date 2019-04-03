@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 62c0280e3773d2e3ff15bc164d9e0e6cacb7bd4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544589"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819204"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>方法: 2 つのオブジェクトが関連するかどうかを判断する (Visual Basic)
 作成元のクラス間のリレーションシップを判別する 2 つのオブジェクトを比較することができます。 <xref:System.Type.IsInstanceOfType%2A>のメソッド、<xref:System.Type?displayProperty=nameWithType>クラスを返します。`True`指定したクラスは、現在のクラスから継承する場合、または現在の型が指定したクラスでサポートされているインターフェイス。  
@@ -48,6 +48,7 @@ End Class
  予期しない呼び出しで 2 つのオブジェクト変数の配置に注意してください<xref:System.Type.IsInstanceOfType%2A>します。 想定される基本データ型の生成に使用、<xref:System.Type?displayProperty=nameWithType>クラス、および想定される派生型が引数として渡される、<xref:System.Type.IsInstanceOfType%2A>メソッド。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>

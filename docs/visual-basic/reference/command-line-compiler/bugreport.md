@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e2a6b4893229115ed1bc1329d5e81939b92eab2e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820912"
 ---
 # <a name="-bugreport"></a>-bugreport
 バグ報告を提出するときに使用できるファイルを作成します。  
@@ -61,6 +61,7 @@ vbc -bugreport:problem.txt t2.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-デバッグ (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)

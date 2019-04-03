@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411539"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838340"
 ---
 # <a name="declare-statement"></a>Declare ステートメント
 外部のファイルに実装されているプロシージャへの参照を宣言します。  
@@ -142,6 +142,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
 - [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)

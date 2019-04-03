@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281061"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824833"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>関数 '\<procedurename >' は、すべてのコード パスで値を返しません
 関数 '\<procedurename >' は、すべてのコード パスで値を返しません。 'Return' ステートメントが見当たりませんか。  
@@ -40,6 +40,7 @@ ms.locfileid: "55281061"
      常に使用する場合に、プロシージャからリターンごとに値を返すことを保証する方が簡単、`Return`ステートメント。 この場合、最後のステートメントの前に`End Function`する必要があります、`Return`ステートメント。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Function プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

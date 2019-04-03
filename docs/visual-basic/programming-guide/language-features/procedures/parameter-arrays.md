@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: e059f471f78262320f1968c12192de710876aef4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966581"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834165"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
 通常、プロシージャ宣言の指定よりも多くの引数を持つプロシージャを呼び出すことはできません。 宣言することができます、不特定多数の引数を必要がある場合、*パラメーター配列*、プロシージャ パラメーターの値の配列をそのまま使用することができます。 プロシージャを定義するときに、パラメーター配列内の要素の数を把握する必要はありません。 配列のサイズは、各プロシージャの呼び出しによって個別に決まります。  
@@ -57,6 +57,7 @@ ms.locfileid: "56966581"
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)

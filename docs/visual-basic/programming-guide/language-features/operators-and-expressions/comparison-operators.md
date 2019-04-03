@@ -15,12 +15,12 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-ms.openlocfilehash: cd7ee90e749be76012cf7143787bc6f1d096da03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969376"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826159"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic における比較演算子
 比較演算子は 2 つの式を比較し、`Boolean`これらの値のリレーションシップを表す値。 数値、文字列、比較演算子、およびオブジェクトの比較演算子を比較するための演算子があります。 すべての 3 種類の演算子はここで説明します。  
@@ -89,6 +89,7 @@ ms.locfileid: "56969376"
  詳細については、次を参照してください。 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [演算子](../../../../visual-basic/language-reference/operators/index.md)

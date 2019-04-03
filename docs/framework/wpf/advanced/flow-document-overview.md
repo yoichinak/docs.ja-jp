@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361409"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828473"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
 フロー ドキュメントは、表示と読みやすさを最適化するように設計されたドキュメントです。 フロー ドキュメントは、1 つの定義済みのレイアウトに設定するのではなく、ウィンドウのサイズ、デバイスの解像度、省略可能なユーザー設定など、ランタイム変数に基づいてコンテンツを動的に調整したりリフローしたりします。 また、フロー ドキュメントは、改ページ位置の自動修正や列などの高度なドキュメント機能を提供します。 ここでは、フロー ドキュメントの概要およびフロー ドキュメントの作成方法について説明します。  
@@ -128,9 +128,9 @@ ms.locfileid: "57361409"
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- この例の表示結果を次の図に示します。  
+ 次の図は、この例の表示方法を示しています。  
   
- ![スクリーン ショット:フロー コンテンツに埋め込まれた UIElement](./media/blockuicontainer.png "BlockUIContainer")  
+ ![UIElement を示すスクリーン ショットは、フロー コンテンツに埋め込まれます。](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **List**  
   
@@ -307,8 +307,7 @@ ms.locfileid: "57361409"
 ### <a name="text-decorations"></a>文字装飾  
  文字装飾によって、下線、上線、ベースライン、および取り消し線の効果をテキストに適用できます (下図参照)。 これらの装飾を追加するには、<xref:System.Windows.Documents.Inline.TextDecorations%2A>数などのオブジェクトによって公開されるプロパティ<xref:System.Windows.Documents.Inline>、 <xref:System.Windows.Documents.Paragraph>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.TextBox>します。  
   
- 
-  <xref:System.Windows.Documents.Paragraph.TextDecorations%2A> の <xref:System.Windows.Documents.Paragraph> プロパティを設定する方法を次の例に示します。  
+ <xref:System.Windows.Documents.Paragraph.TextDecorations%2A> の <xref:System.Windows.Documents.Paragraph> プロパティを設定する方法を次の例に示します。  
   
  [!code-xaml[InlineSnippets#_Paragraph_TextDecXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/InlineSnippets/CSharp/Window1.xaml#_paragraph_textdecxaml)]  
   

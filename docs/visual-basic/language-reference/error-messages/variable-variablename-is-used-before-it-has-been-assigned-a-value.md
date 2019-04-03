@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268835"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819360"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>変数 '\<variablename >' は、値が割り当てられる前に使用
 変数 '\<variablename >' は、値が割り当てられる前に使用します。 結果として、実行時に null 参照の例外が発生する可能性があります。  
@@ -32,6 +32,7 @@ ms.locfileid: "55268835"
 -   変数が常に有効な値を持つことを保証するために 1 つの方法では、その宣言の一部として初期化します。 「初期化」を参照してください[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [変数のトラブルシューティング](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

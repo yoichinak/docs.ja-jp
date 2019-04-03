@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: 053149334118d69e5e85bdbd0f9a45e855e3d4dd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980101"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841148"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>コード内の要素名としてのキーワード (Visual Basic)
 すべてのプログラム要素-変数、クラス、またはメンバーなど、予約されたキーワードと同じ名前を持つことができます。 たとえば、という名前の変数を作成することができます`Loop`します。 ただし、そのバージョンを参照する —、制限されたのと同じ名前を持つ`Loop`キーワード-先頭の完全修飾文字列か、角かっこで囲む必要があります (`[ ]`) 次の例に示すように。  
@@ -31,6 +31,7 @@ ms.locfileid: "56980101"
 >  プログラムは、他の参照先アセンブリによって提供される要素名もなどがあります。 これらの名前が制限されているキーワードと競合する場合は、Visual Basic は定義された要素として解釈すると、周囲に角かっこでいます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic の名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

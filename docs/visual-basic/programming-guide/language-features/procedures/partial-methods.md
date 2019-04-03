@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977462"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837469"
 ---
 # <a name="partial-methods-visual-basic"></a>部分メソッド (Visual Basic)
 部分メソッドには、カスタム ロジックをコードに挿入する開発者が有効にします。 通常、コードには、デザイナーで生成されたクラスの一部です。 部分メソッドは、コード ジェネレーターによって作成される部分クラスで定義され、何かが変更されたことを通知によく使用されます。 これらの変更に対応するカスタム動作を指定する、開発者が有効にします。  
@@ -71,6 +71,7 @@ End Sub
  `Quantity was changed to 100`  
   
 ## <a name="see-also"></a>関連項目
+
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [省略可能なパラメーター](./optional-parameters.md)

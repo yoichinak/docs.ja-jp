@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357943"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634532"
 ---
 # <a name="adorners-overview"></a>装飾の概要
 装飾は特別な種類の<xref:System.Windows.FrameworkElement>ユーザーに視覚的な手掛かりを提供するために使用します。 装飾は、要素への機能ハンドル追加やコントロールに関する状態情報の提供など、さまざまな用途に使用できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "57357943"
   
  次の図に適用された simplecircleadorner です、<xref:System.Windows.Controls.TextBox>します。  
   
- ![装飾の例:装飾された TextBox](./media/adornedtextbox.png "AdornedTextBox")  
+ ![装飾対象のテキスト ボックスを示すスクリーン ショット。](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>装飾のレンダリング動作  

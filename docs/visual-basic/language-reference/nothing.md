@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981427"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826094"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 任意のデータ型の既定値を表します。 参照型の場合、既定値は、`null`参照。 値の型の場合、既定値は、値の型が null 許容かどうかに依存します。  
@@ -51,6 +51,7 @@ ms.locfileid: "56981427"
  `Nothing` 異なります、<xref:System.DBNull>初期化されていないバリアントをまたはデータベースが存在しない列を表すオブジェクト。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../visual-basic/language-reference/statements/dim-statement.md)
 - [オブジェクトの有効期間:オブジェクトを作成および破棄する方法](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Visual Basic での有効期間](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 46bc87c653742c8469ffaff1decb9549a29feaeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972075"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816968"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
 ビット パターン上で算術右シフトを実行します。  
@@ -46,7 +46,7 @@ result = pattern >> amount
 |データ型 `pattern`|サイズのマスク (10 進数)|サイズのマスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|16|&AMP; H0000000F|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
 |`Integer`, `UInteger`|31|&AMP; H0000001F|  
 |`Long`, `ULong`|63|&AMP; H0000003F|  
   
@@ -87,6 +87,7 @@ result = pattern >> amount
 -   `negresult2` -1 (符号ビットが反映されます) です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)

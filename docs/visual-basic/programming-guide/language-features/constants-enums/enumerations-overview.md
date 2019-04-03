@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 5d84711c9efbe8d73d1cfe1dc7ac431b675d0b50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693095"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821843"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列挙型の概要 (Visual Basic)
 列挙体は、関連する定数を使用して、名前の定数値を関連付ける便利な方法を提供します。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  
@@ -18,7 +18,7 @@ ms.locfileid: "54693095"
 ## <a name="tasks-involving-enumerations"></a>列挙型に関連するタスク  
  次の表は、列挙型に関連する一般的なタスクを一覧表示します。  
   
-|目的|解決方法については、|  
+|目的|解決方法|  
 |----------------|---------|  
 |事前に定義された列挙型を検索します。|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
 |列挙体を宣言します。|[方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
@@ -29,6 +29,7 @@ ms.locfileid: "54693095"
 |列挙型を使用するタイミングを決定します。|[列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [方法: 定数を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

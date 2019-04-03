@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 7aa0bda9c87553a5c9dae38517b5d546f782bed0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5523be69f2901851c86f6c0263548e3577507ff9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974082"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835388"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)
 ループの次の反復処理に直ちに制御を転送します。  
@@ -40,6 +40,7 @@ Continue { Do | For | While }
  [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

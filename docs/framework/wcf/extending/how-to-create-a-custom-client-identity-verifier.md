@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569376"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464022"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>方法: カスタムのクライアント Id 検証機能を作成します。
 *Identity*機能の Windows Communication Foundation (WCF) が事前に予想されるサービスの id を指定するクライアントを使用できます。 サーバーがクライアントに対して自身を認証するたびに、ID がこの予想 ID と照合されます (Id とそのしくみの詳細については、次を参照してください[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)。  
@@ -64,7 +64,7 @@ ms.locfileid: "54569376"
      [!code-csharp[c_HowToSetCustomClientIdentity#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#3)]
      [!code-vb[c_HowToSetCustomClientIdentity#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#3)]  
   
-5.  返されたカスタム バインディングを使用してクライアントのインスタンスとクラスを作成します。 これにより、クライアントは、次のコードに示すようにサービスのカスタム ID 検証チェックを実行できるようになります。  
+5.  返されたカスタム バインドを使用してクライアントのインスタンスとクラスを作成します。 これにより、クライアントは、次のコードに示すようにサービスのカスタム ID 検証チェックを実行できるようになります。  
   
      [!code-csharp[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#4)]
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  
@@ -86,5 +86,4 @@ ms.locfileid: "54569376"
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [サービス ID サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655492"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814602"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>スタック領域が不足しています。(Visual Basic)
 スタックは、実行しているプログラムの要求で動的に拡張し、縮小がメモリの作業領域です。 その制限を超えました。  
@@ -29,4 +29,5 @@ ms.locfileid: "54655492"
 6.  スタックに既にイベント プロシージャを呼び出すイベントをトリガーすることによって、「イベントの連鎖」が発生しなかったことを確認します。 イベントに cascade は、終了していない再帰プロシージャ呼び出しに似ていますがわかりにくく、コード内の明示的な呼び出しではなく、Visual Basic での呼び出しが行われるため。 使用して、`Calls`スタック上でアクティブなプロシージャ ビュー ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目
+
 - [[メモリ] ウィンドウ](/visualstudio/debugger/memory-windows)

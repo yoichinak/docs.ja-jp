@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: cbb8e3b1e67150473159835ba2cd58d9ddf0c1c1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479011"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814511"
 ---
 # <a name="para-visual-basic"></a>\<para > (Visual Basic)
 コンテンツが文章としてフォーマットされているを指定します。  
@@ -36,4 +36,5 @@ ms.locfileid: "57479011"
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

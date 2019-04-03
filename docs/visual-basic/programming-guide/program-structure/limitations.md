@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596359"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824911"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic の制限事項
 以前のバージョンの Visual Basic では、変数名、モジュール、およびモジュールのサイズで許可されている変数の数の長さなど、コード内の境界を適用します。 Visual Basic .net では、これらの制限が緩和されました、書き込みと、コードを配置をより自由を与えます。  
@@ -33,5 +33,6 @@ ms.locfileid: "54596359"
 -   **環境文字列の長さ。** コマンドライン引数として使用される任意の環境文字列の 32768 文字の最大値があります。 これは、すべてのプラットフォームでの制限です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Visual Basic の名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

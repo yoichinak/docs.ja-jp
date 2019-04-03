@@ -23,8 +23,7 @@ SQL Workflow Instance Store が実行する内部タスクは、定期的にア�
   
  SQL Workflow Instance Store は、実行可能なインスタンスを見つけると <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> を生成します。 その後、SqlWorkflowInstanceStore は <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> がストアで一度呼び出されるまで監視を停止します。  
   
- 
-  <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> に定期受信し、インスタンスの読み込みが可能なワークフロー ホストは、インスタンス ストアに対して <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> を実行してインスタンスをメモリに読み込みます。 ワークフロー ホストは、ホストとインスタンスは、メタデータ プロパティを持っている場合は、ワークフロー インスタンスを読み込むことができると見なされます**WorkflowServiceType**同じ値に設定します。  
+ <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> に定期受信し、インスタンスの読み込みが可能なワークフロー ホストは、インスタンス ストアに対して <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> を実行してインスタンスをメモリに読み込みます。 ワークフロー ホストは、ホストとインスタンスは、メタデータ プロパティを持っている場合は、ワークフロー インスタンスを読み込むことができると見なされます**WorkflowServiceType**同じ値に設定します。  
   
 ## <a name="detecting-and-activating-activatable-workflow-instances"></a>アクティブ化可能なワークフロー インスタンスの検出とアクティブ化  
  ワークフロー インスタンスと見なされます*アクティブ化可能な*コンピューターでは、インスタンスを読み込むことができるワークフロー ホストが実行されていないインスタンスが実行可能な場合は、します。 実行可能なワークフロー インスタンスの定義については、前の「実行可能なワークフロー インスタンスの検出とアクティブ化」を参照してください。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 2f8b10082bb39c76ba1393daf8327df2ed631caf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568102"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817616"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>ラムダ式はこのイベント ハンドラーから削除されません
 ラムダ式は、このイベント ハンドラーからは削除されません。 変数にラムダ式を割り当てるし、変数の追加し、削除イベントを使用します。  
@@ -85,6 +85,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

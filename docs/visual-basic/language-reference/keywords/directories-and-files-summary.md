@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507305"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832477"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>ディレクトリとファイルの概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -34,6 +34,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |ファイルの属性情報の設定|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
 ## <a name="see-also"></a>関連項目
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
 - [ファイルの読み取り](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

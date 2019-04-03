@@ -32,8 +32,7 @@ ms.locfileid: "57716492"
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|常に垂直スクロール バーが表示されます。 テキストがコントロールの長さを超えていない場合は、スクロール バーを使用できなくなります。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|常に垂直スクロール バーが表示されます。 水平スクロール バーの場合に表示されます、<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>プロパティに設定されて`false`します。 テキストがコントロールの高さや幅を超えていない場合、スクロール バーは淡色表示になります。|  
   
-3.  
-  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
+3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  

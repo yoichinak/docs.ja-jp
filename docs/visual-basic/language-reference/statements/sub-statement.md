@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: 6984e7e9f8695ff5bccdde01171733e740a5d6a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965957"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817228"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 宣言名、パラメーター、および定義するコードを`Sub`プロシージャ。  
@@ -54,15 +54,15 @@ End Sub
   
 -   `attributelist`  
   
-     任意。 参照してください[属性リスト](attribute-list.md)します。  
+     省略可能です。 参照してください[属性リスト](attribute-list.md)します。  
   
 -   `Partial`  
   
-     任意。 部分メソッドの定義を示します。 参照してください[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)します。  
+     省略可能です。 部分メソッドの定義を示します。 参照してください[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)します。  
   
 -   `accessmodifier`  
   
-     任意。 次のいずれかの値を指定します。  
+     省略可能です。 次のいずれかの値を指定します。  
   
     -   [Public](../modifiers/public.md)  
   
@@ -80,7 +80,7 @@ End Sub
   
 -   `proceduremodifiers`  
   
-     任意。 次のいずれかの値を指定します。  
+     省略可能です。 次のいずれかの値を指定します。  
   
     -   [Overloads](../modifiers/overloads.md)  
   
@@ -98,15 +98,15 @@ End Sub
   
 -   `Shared`  
   
-     任意。 参照してください[共有](../modifiers/shared.md)します。  
+     省略可能です。 参照してください[共有](../modifiers/shared.md)します。  
   
 -   `Shadows`  
   
-     任意。 参照してください[Shadows](../modifiers/shadows.md)します。  
+     省略可能です。 参照してください[Shadows](../modifiers/shadows.md)します。  
   
 -   `Async`  
   
-     任意。 参照してください[Async](../modifiers/async.md)します。  
+     省略可能です。 参照してください[Async](../modifiers/async.md)します。  
   
 -   `name`  
   
@@ -114,47 +114,42 @@ End Sub
   
 -   `typeparamlist`  
   
-     任意。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。  
+     省略可能です。 ジェネリック プロシージャの型パラメーターの一覧。 参照してください[一覧を入力する](type-list.md)します。  
   
 -   `parameterlist`  
   
-     任意。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。  
+     省略可能です。 このプロシージャのパラメーターを表すローカル変数名の一覧。 参照してください[パラメーター リスト](parameter-list.md)します。  
   
 -   `Implements`  
   
-     任意。 この手順が 1 つまたは複数を実装することを示します`Sub`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。  
+     省略可能です。 この手順が 1 つまたは複数を実装することを示します`Sub`手順、この手順の包含クラスまたは構造体によって実装されるインターフェイスで定義されている 1 つずつです。 参照してください[ステートメントを実装](implements-statement.md)します。  
   
 -   `implementslist`  
   
-     
-  `Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。  
+     `Implements` を指定する場合は、必ず指定します。 実装される `Sub` プロシージャのリストです。  
   
      `implementedprocedure [ , implementedprocedure ... ]`  
   
-     
-  `implementedprocedure` の構文と指定項目は次のとおりです。  
+     `implementedprocedure` の構文と指定項目は次のとおりです。  
   
      `interface.definedname`  
   
     |パーツ|説明|  
     |---|---|  
     |`interface`|必須。 このプロシージャによって実装されるインターフェイスの名前を含むクラスまたは構造体。|  
-    |`definedname`|必須。 
-  `interface` の中でプロシージャを定義するために使用する名前。|  
+    |`definedname`|必須。 `interface` の中でプロシージャを定義するために使用する名前。|  
   
 -   `Handles`  
   
-     任意。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。  
+     省略可能です。 この手順が 1 つまたは複数の特定のイベントを処理できることを示します。 参照してください[処理](handles-clause.md)します。  
   
 -   `eventlist`  
   
-     
-  `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
+     `Handles` を指定する場合は、必ず指定します。 このプロシージャを処理するイベントの一覧です。  
   
      `eventspecifier [ , eventspecifier ... ]`  
   
-     
-  `eventspecifier` の構文と指定項目は次のとおりです。  
+     `eventspecifier` の構文と指定項目は次のとおりです。  
   
      `eventvariable.event`  
   
@@ -165,7 +160,7 @@ End Sub
   
 -   `statements`  
   
-     任意。 このプロシージャ内で実行するステートメントのブロック。  
+     省略可能です。 このプロシージャ内で実行するステートメントのブロック。  
   
 -   `End Sub`  
   
@@ -232,6 +227,7 @@ End Sub
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Implements ステートメント](implements-statement.md)
 - [Function ステートメント](function-statement.md)
 - [パラメーター リスト](parameter-list.md)

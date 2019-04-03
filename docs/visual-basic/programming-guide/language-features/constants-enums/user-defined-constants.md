@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975941"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813913"
 ---
 # <a name="user-defined-constants-visual-basic"></a>ユーザー定義定数 (Visual Basic)
 定数とは、数値または変更されない文字列の代わりに使用されるわかりやすい名前です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 コントロールまたは使用するコンポーネントで定義されている定数を使用することができますか、独自に作成することができます。 自分で作成した定数は*ユーザー定義*します。  
@@ -56,6 +56,7 @@ ms.locfileid: "56975941"
  循環参照が発生した場合、Visual Basic には、コンパイラ エラーが生成されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [定数と列挙体](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

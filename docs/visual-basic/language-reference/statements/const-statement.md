@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979074"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835311"
 ---
 # <a name="const-statement-visual-basic"></a>Const ステートメント (Visual Basic)
 宣言し、1 つまたは複数の定数を定義します。  
@@ -25,21 +25,20 @@ Const constantlist
   
 ## <a name="parts"></a>指定項目  
  `attributelist`  
- 任意。 すべての定数に適用される属性の一覧は、このステートメントで宣言します。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
+ 省略可能です。 すべての定数に適用される属性の一覧は、このステートメントで宣言します。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)山かっこ ("`<`「と」`>`")。  
   
  `accessmodifier`  
- 任意。 これを使用して、どのようなコードがアクセスできるは、これらの定数を指定します。 [パブリック](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)、または[Private Protected](../../language-reference/modifiers/private-protected.md)します。
+ 省略可能です。 これを使用して、どのようなコードがアクセスできるは、これらの定数を指定します。 [パブリック](../../../visual-basic/language-reference/modifiers/public.md)、 [Protected](../../../visual-basic/language-reference/modifiers/protected.md)、[フレンド](../../../visual-basic/language-reference/modifiers/friend.md)、 [Protected Friend](../modifiers/protected-friend.md)、[プライベート](../../../visual-basic/language-reference/modifiers/private.md)、または[Private Protected](../../language-reference/modifiers/private-protected.md)します。
   
  `Shadows`  
- 任意。 再宣言して、基底クラスでのプログラミング要素を非表示にするには、これを使用します。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+ 省略可能です。 再宣言して、基底クラスでのプログラミング要素を非表示にするには、これを使用します。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
  `constantlist`  
  必須。 このステートメントで宣言されている定数の一覧です。  
   
  `constant` `[ ,` `constant` `... ]`  
   
- 
-  `constant` の構文と指定項目は次のとおりです。  
+ `constant` の構文と指定項目は次のとおりです。  
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
@@ -101,6 +100,7 @@ Const constantlist
  上記の例では、<xref:System.Type.ToString%2A>メソッドを<xref:System.Type>によって返されるオブジェクト、 [GetType 演算子](../../../visual-basic/language-reference/operators/gettype-operator.md)ため、<xref:System.Type>に変換できない`String`を使用して`CStr`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)

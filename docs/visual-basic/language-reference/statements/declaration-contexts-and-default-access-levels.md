@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: 75c5b16164e9ecb6558e445c59e4a312158ff4f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580812"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821700"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣言コンテキストと既定のアクセス レベル (Visual Basic)
 このトピックでは、他の種類内でどの Visual Basic の型を宣言することができ、どのようなアクセス レベルを既定の指定されていない場合について説明します。  
@@ -34,24 +34,25 @@ ms.locfileid: "54580812"
   
 |宣言された要素|Namespace レベル|モジュール レベル|プロシージャ レベル|  
 |----------------------|---------------------|------------------|---------------------|  
-|変数 ([Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md))|許可されていません|`Private` (`Public`で`Structure`で許可されていない、 `Interface`)|`Public`|  
-|定数 ([Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md))|許可されていません|`Private` (`Public`で`Structure`で許可されていない、 `Interface`)|`Public`|  
-|列挙 ([Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|許可されていません|  
-|クラス ([Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|許可されていません|  
-|構造体 ([ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|許可されていません|  
-|モジュール ([モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|許可されていません|許可されていません|  
-|インターフェイス ([Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|許可されていません|  
-|プロシージャ ([Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)、 [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md))|許可されていません|`Public`|許可されていません|  
-|外部参照 ([Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md))|許可されていません|`Public` (では許可されません`Interface`)|許可されていません|  
-|演算子 ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|許可されていません|`Public` (では許可されません`Interface`または`Module`)|許可されていません|  
-|プロパティ ([Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md))|許可されていません|`Public`|許可されていません|  
-|既定のプロパティ ([既定](../../../visual-basic/language-reference/modifiers/default.md))|許可されていません|`Public` (では許可されません`Module`)|許可されていません|  
-|イベント ([Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md))|許可されていません|`Public`|許可されていません|  
-|デリゲート ([Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|許可されていません|  
+|変数 ([Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md))|使用できません|`Private` (`Public`で`Structure`で許可されていない、 `Interface`)|`Public`|  
+|定数 ([Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md))|使用できません|`Private` (`Public`で`Structure`で許可されていない、 `Interface`)|`Public`|  
+|列挙 ([Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|使用できません|  
+|クラス ([Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|使用できません|  
+|構造体 ([ステートメントの構造体](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|使用できません|  
+|モジュール ([モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|使用できません|使用できません|  
+|インターフェイス ([Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|使用できません|  
+|プロシージャ ([Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)、 [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md))|使用できません|`Public`|使用できません|  
+|外部参照 ([Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md))|使用できません|`Public` (では許可されません`Interface`)|使用できません|  
+|演算子 ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))|使用できません|`Public` (では許可されません`Interface`または`Module`)|使用できません|  
+|プロパティ ([Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md))|使用できません|`Public`|使用できません|  
+|既定のプロパティ ([既定](../../../visual-basic/language-reference/modifiers/default.md))|使用できません|`Public` (では許可されません`Module`)|使用できません|  
+|イベント ([Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md))|使用できません|`Public`|使用できません|  
+|デリゲート ([Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|使用できません|  
   
  詳細については、[ Visual Basic のアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

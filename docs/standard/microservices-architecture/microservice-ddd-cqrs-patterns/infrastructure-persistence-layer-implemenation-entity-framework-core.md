@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5174f3ac649ef002c7efff2fcc56effa3f84abba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676344"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465296"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -26,16 +26,16 @@ EF Core の概要は Microsoft ドキュメントで既に利用可能になっ�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Entity Framework Core** \
-  [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
+  [https://docs.microsoft.com/ef/core/](https://docs.microsoft.com/ef/core/)
 
 - **Visual Studio を使用した ASP.NET Core と Entity Framework Core の概要** \
-  [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
+  [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
 - **DbContext クラス** \
-  [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
+  [https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
 - **EF Core と EF6.x を比較する** \
-  [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
+  [https://docs.microsoft.com/ef/efcore-and-ef6/index](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD の観点から見た Entity Framework Core のインフラストラクチャ
 
@@ -235,13 +235,13 @@ DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定さ
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET MVC アプリケーションでの Repository および Unit of Work パターンの実装** \
-  [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 - **Jonathan Allen。Entity Framework、Dapper、Chain を使用する Repository パターンの実装方法** \
-  [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
+  [https://www.infoq.com/articles/repository-implementation-strategies](https://www.infoq.com/articles/repository-implementation-strategies)
 
 - **Cesar de la Torre。ASP.NET Core IoC コンテナー サービスの有効期間と Autofac IoC コンテナー インスタンスの範囲の比較** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>テーブル マッピング
 
@@ -452,22 +452,22 @@ public IEnumerable<T> List(ISpecification<T> spec)
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **テーブル マッピング** \
-  [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
+  [https://docs.microsoft.com/ef/core/modeling/relational/tables](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
 - **HiLo を使用して Entity Framework Core でキーを生成する** \
-  [*https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
+  [https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/](https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
 - **バッキング フィールド** \
-  [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
+  [https://docs.microsoft.com/ef/core/modeling/backing-field](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 - **Steve Smith。Entity Framework Core のカプセル化されたコレクション** \
-  [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
+  [https://ardalis.com/encapsulated-collections-in-entity-framework-core](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 - **シャドウ プロパティ** \
-  [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 - **仕様パターン** \
-  [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
+  [https://deviq.com/specification-pattern/](https://deviq.com/specification-pattern/)
 
 > [!div class="step-by-step"]
 > [前へ](infrastructure-persistence-layer-design.md)

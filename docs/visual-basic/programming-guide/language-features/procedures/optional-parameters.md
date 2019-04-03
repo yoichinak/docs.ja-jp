@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965763"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824677"
 ---
 # <a name="optional-parameters-visual-basic"></a>省略可能なパラメーター (Visual Basic)
 プロシージャのパラメーターを省略可能にすると、呼び出し時に引数を指定する必要がなくなります。 *省略可能なパラメーター*で示されます、`Optional`プロシージャ定義内のキーワード。 次の規則が適用されます。  
@@ -45,8 +45,7 @@ Sub name(argument 1, , , argument 4)
   
  次の例では、`MsgBox` 関数を数回呼び出します。 `MsgBox` には、必須パラメーター 1 つと省略可能なパラメーターが 2 つあります。  
   
- 
-  `MsgBox` の最初の呼び出しでは、`MsgBox` で定義された順番で 3 つの引数を指定します。 2 番目の呼び出しでは、必須の引数だけを指定します。 3 番目と 4 番目の呼び出しでは、1 つ目と 3 つ目の引数を指定します。 3 番目の呼び出しでは引数を位置で指定し、4 番目の呼び出しでは引数を名前で指定します。  
+ `MsgBox` の最初の呼び出しでは、`MsgBox` で定義された順番で 3 つの引数を指定します。 2 番目の呼び出しでは、必須の引数だけを指定します。 3 番目と 4 番目の呼び出しでは、1 つ目と 3 つ目の引数を指定します。 3 番目の呼び出しでは引数を位置で指定し、4 番目の呼び出しでは引数を名前で指定します。  
   
  [!code-vb[VbVbcnProcedures#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#47)]  
   
@@ -61,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  省略可能なパラメーターを持つプロシージャを定義するには、オーバーロードを使用する方法もあります。 省略可能なパラメーターが 1 つあるとすると、パラメーターを受け取る場合と受け取らない場合の、2 つのオーバーロードされたバージョンのプロシージャを定義できます。 この方法は、省略可能なパラメーターの数が増えるにつれて複雑になります。 しかし、それぞれの省略可能な引数が呼び出しプログラムによって指定されているかどうかを確実に把握できるという利点があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)

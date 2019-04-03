@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592851"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262481"
 ---
 # <a name="members-c-programming-guide"></a>メンバー (C# プログラミング ガイド)
 クラスと構造体には、そのデータおよび動作を表すメンバーがあります。 クラスのメンバーには、クラスで宣言されているすべてのメンバーと、継承の階層構造のすべてのクラスで宣言されているメンバー (コンストラクターとファイナライザーを除く) が含まれます。 基底クラスのプライベート メンバーは継承されますが、派生クラスからはアクセスできません。  
@@ -21,7 +21,7 @@ ms.locfileid: "54592851"
 |メンバー|説明|  
 |------------|-----------------|  
 |[フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)|フィールドとは、クラス スコープで宣言される変数です。 フィールドは、組み込みの数値型であったり、別のクラスのインスタンスであったりします。 たとえば、Calender クラスには、現在の日付を格納するフィールドがあります。|  
-|[定数](../../../csharp/programming-guide/classes-and-structs/constants.md)|定数とは、コンパイル時に値が設定され、設定された値を変更できないフィールドまたはプロパティです。|  
+|[定数](../../../csharp/programming-guide/classes-and-structs/constants.md)|定数とは、コンパイル時に値が設定され、設定された値を変更できないフィールドです。|  
 |[プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)|プロパティはクラスのメソッドで、そのクラスのフィールドのようにアクセスされます。 プロパティは、クラスのフィールドを保護し、オブジェクトが認識することなくフィールドが変更されるのを防止できます。|  
 |[メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)|メソッドは、クラスが実行できるアクションを定義します。 メソッドは、入力データを提供するパラメーターを受け取り、パラメーターを通じて出力データを返すことができます。 メソッドは、パラメーターを使用せずに値を直接返すこともできます。|  
 |[イベント](../../../csharp/programming-guide/events/index.md)|イベントは、ボタンのクリックやメソッドの正常な終了などの発生に関する通知を他のオブジェクトに提供します。 イベントを定義し、トリガーするには、デリゲートを使用します。|  

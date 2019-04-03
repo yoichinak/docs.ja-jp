@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355117"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464932"
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView>コントロールは、折りたたみ可能なノードを使用して階層構造で情報を表示します。  
   
  次の図の例に示します、<xref:System.Windows.Controls.TreeView>に入れ子になったコントロール<xref:System.Windows.Controls.TreeViewItem>コントロール。  
   
- ![TreeView の図](./media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![TreeViewItem の入れ子になったコントロールを示す図。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [TreeView の概要](treeview-overview.md)  

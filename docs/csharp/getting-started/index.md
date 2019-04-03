@@ -36,10 +36,6 @@ ms.date: 08/23/2017
 
 ## <a name="related-sections"></a>関連項目
 
-* [Visual C# 開発環境の使用](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
-
-    Visual C# 統合開発環境を使用する方法について説明します。
-
 * [C# プログラミング ガイド](../../csharp/programming-guide/index.md)
 
     C# プログラミングの概念に関する情報を提供し、C# でさまざまなタスクを実行する方法について説明します。
@@ -48,14 +44,10 @@ ms.date: 08/23/2017
 
     C# のキーワード、演算子、プリプロセッサ ディレクティブ、コンパイラ オプション、およびコンパイラのエラーと警告に関する詳細なリファレンス情報を紹介します。
 
-* [Visual Studio のサンプル](/visualstudio/ide/visual-studio-samples)
-
-    オンライン サンプルへのアクセス方法に関する情報を提供します。
-
 * [チュートリアル](../../csharp/walkthroughs.md)
 
     C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio を使用した Visual C# と Visual Basic の概要](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- * [Visual Studio を使用した C# 開発](/visualstudio/get-started/csharp/)

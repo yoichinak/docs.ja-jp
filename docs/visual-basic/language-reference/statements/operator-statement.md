@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818593"
 ---
 # <a name="operator-statement"></a>Operator Statement
 演算子記号、オペランド、およびクラスまたは構造体に演算子プロシージャを定義するコードを宣言します。  
@@ -41,19 +41,19 @@ End Operator
   
 ## <a name="parts"></a>指定項目  
  `attrlist`  
- 任意。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
+ 省略可能です。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。  
   
  `Public`  
  必須。 この演算子プロシージャがあることを示します[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。  
   
  `Overloads`  
- 任意。 参照してください[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)します。  
+ 省略可能です。 参照してください[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)します。  
   
  `Shared`  
  必須。 この演算子プロシージャがあることを示します、 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)プロシージャ。  
   
  `Shadows`  
- 任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+ 省略可能です。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
  `Widening`  
  指定しない限り、変換演算子に必要な`Narrowing`します。 この演算子プロシージャを定義することを示します、 [Widening](../../../visual-basic/language-reference/modifiers/widening.md)変換します。 このヘルプ ページでは、「拡大と縮小変換」を参照してください。  
@@ -84,7 +84,7 @@ End Operator
  省略可能な場合を除き、`Option Strict`は`On`します。 演算子プロシージャは、値のデータ型を返します。  
   
  `statements`  
- 任意。 演算子プロシージャを実行するステートメントのブロックです。  
+ 省略可能です。 演算子プロシージャを実行するステートメントのブロックです。  
   
  `returnvalue`  
  必須。 演算子プロシージャが呼び出し元のコードに返す値。  
@@ -139,7 +139,7 @@ End Operator
   
  戻り値の型をいずれかのオペランドの型に対応する必要はありません。 などの比較演算子など`=`または`<>`返せる`Boolean`場合でも、どちらのオペランドが`Boolean`。  
   
-## <a name="logical-and-bitwise-operators"></a>論理/ビット処理演算子  
+## <a name="logical-and-bitwise-operators"></a>論理演算子とビット処理演算子  
  `And`、 `Or`、 `Not`、および`Xor`演算子は、Visual Basic で論理またはビットごとのいずれかの操作を実行できます。 ただし、クラスまたは構造体でこれらの演算子のいずれかを定義する場合は、そのビットごとの演算のみを定義できます。  
   
  定義することはできません、`AndAlso`演算子と直接、`Operator`ステートメント。 ただし、使用することができます`AndAlso`次の条件を満たしている場合。  
@@ -171,6 +171,7 @@ End Operator
  [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

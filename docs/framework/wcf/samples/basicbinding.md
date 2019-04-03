@@ -2,12 +2,12 @@
 title: BasicBinding
 ms.date: 03/30/2017
 ms.assetid: 86fbeb87-4d89-4b61-9577-867e0ac12945
-ms.openlocfilehash: 15fdf3efb953810a5f4b2f9fe544cb3bc7114c4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a929c3bff9f6b2602a78775cdd5020220dc1f9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696517"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815941"
 ---
 # <a name="basicbinding"></a>BasicBinding
 このサンプルでは、第 1 世代と第 2 世代の Web サービスで HTTP 通信と最大限の相互運用性を実現する、`basicHttpBinding` の使用方法を示します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54696517"
 ## <a name="sample-details"></a>サンプルの詳細  
  このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  
   
- 既定の動作で基本的なバインディングを使用する場合、必要なものはバインディング セクション名だけです。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインディング構成を定義する必要があります。 エンドポイントを使用して名前でバインド構成を参照する必要があります、`bindingConfiguration`の属性、<`endpoint`> 要素は、次のサンプル コードに示すようにします。  
+ 既定の動作で基本的なバインディングを使用する場合、必要なものはバインディング セクション名だけです。 基本的なバインディングを構成してその設定の一部を変更する場合は、バインド構成を定義する必要があります。 エンドポイントを使用して名前でバインド構成を参照する必要があります、`bindingConfiguration`の属性、<`endpoint`> 要素は、次のサンプル コードに示すようにします。  
   
 ```xml  
 <services>  
@@ -42,7 +42,7 @@ ms.locfileid: "54696517"
 </services>  
 ```  
   
- このサンプルでは、バインディング構成の名前は `"Binding1"` です。これは次のコード例のように定義されます。  
+ このサンプルでは、バインド構成の名前は `"Binding1"` です。これは次のコード例のように定義されます。  
   
 ```xml  
 <bindings>  
@@ -67,7 +67,7 @@ ms.locfileid: "54696517"
 </bindings>  
 ```  
   
- バインド要素には、ホスト名比較モード、最大メッセージ サイズ、プロキシ オプション、タイムアウト、メッセージ エンコーディングなど、さまざまなオプションを設定するための属性が用意されています。  
+ バインディング要素には、ホスト名比較モード、最大メッセージ サイズ、プロキシ オプション、タイムアウト、メッセージ エンコーディングなど、さまざまなオプションを設定するための属性が用意されています。  
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。  
   
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
   
 4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-## <a name="see-also"></a>関連項目

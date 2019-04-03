@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572722"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835285"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>方法: 別の配列 (Visual Basic) を 1 つの配列を割り当てる
 配列がオブジェクトであるため、他のオブジェクト型のような代入ステートメントで使用することができます。 配列変数の配列の要素と、ランク、および長さの情報を構成するデータにポインターを保持し、割り当ては、このポインターのみをコピーします。  
@@ -43,6 +43,7 @@ ms.locfileid: "54572722"
  コンパイラは、エラー場合は、上記の規則違反の例のデータ型に互換性がない場合や、ランクが等しくないを報告します。 割り当てを試行する前に、配列に互換性があるかどうかを確認するコードにエラー処理を追加できます。 使用することも、 [TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)例外をスローしないようにする場合は、キーワード。  
   
 ## <a name="see-also"></a>関連項目
+
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)

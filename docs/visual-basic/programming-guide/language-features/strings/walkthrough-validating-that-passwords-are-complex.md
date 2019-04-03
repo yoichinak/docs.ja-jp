@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: fb95871f347bf1093701a428a8b925f884d17a56
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979698"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824937"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑な検証 (Visual Basic)
 このメソッドは、いくつかの強力なパスワードの特性を確認し、失敗、パスワードをチェックに関する情報を含む文字列パラメーターを更新します。  
@@ -44,5 +44,6 @@ ms.locfileid: "56979698"
 -   キーボードの一番上の行からのすべてのシンボルが入力されるパスワードは許可されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Text.RegularExpressions.Regex>
 - [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

@@ -28,13 +28,11 @@ ms.locfileid: "57846130"
 > [!TIP]
 > 以降では、 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で追加された非同期プログラミング機能
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で追加された非同期プログラミング機能
 
 新しい非同期プログラミング機能を使用すると、コードを簡単に非同期にすることができます。
 
-
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で導入された非同期プログラミング機能の詳細については、次の Web サイトを参照してください。
+[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で導入された非同期プログラミング機能の詳細については、次の Web サイトを参照してください。
 
 - [C# の非同期プログラミング](../../../csharp/async.md)
 
@@ -48,8 +46,7 @@ ms.locfileid: "57846130"
 
 現在は、コールバックを使用したり、コードを複数のメソッドやラムダ式で分割したりせずに、非同期メソッドを呼び出すことができるようになりました。
 
-`async` 修飾子はメソッドが非同期であることを示します。 
-  `async` メソッドを呼び出すと、タスクが返されます。 ときに、`await`タスクに演算子が適用される、現在のメソッドがすぐに終了します。 タスクが終了すると、同じメソッド内で実行が再開されます。
+`async` 修飾子はメソッドが非同期であることを示します。 `async` メソッドを呼び出すと、タスクが返されます。 ときに、`await`タスクに演算子が適用される、現在のメソッドがすぐに終了します。 タスクが終了すると、同じメソッド内で実行が再開されます。
 
 > [!WARNING]
 > 非同期呼び出しは、アプリケーションで `Context Connection` 接続文字列キーワードも使用されている場合はサポートされません。
@@ -643,8 +640,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
 ## <a name="asynchronously-using-multiple-commands-with-mars"></a>MARS を使用して複数のコマンドを非同期的に使用する
 
-1 つの接続を開く例を示します、 **AdventureWorks**データベース。 
-  <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。
+1 つの接続を開く例を示します、 **AdventureWorks**データベース。 <xref:System.Data.SqlClient.SqlCommand> オブジェクトを使用して、<xref:System.Data.SqlClient.SqlDataReader> が作成されます。 リーダーが使用されると、2 番目の <xref:System.Data.SqlClient.SqlDataReader> リーダーが開かれます。このとき、最初の <xref:System.Data.SqlClient.SqlDataReader> から取得したデータが 2 番目のリーダーの WHERE 句に入力されます。
 
 > [!NOTE]
 > 次の例は、サンプル**AdventureWorks** SQL Server に含まれているデータベース。 サンプル コードの接続文字列は、データベースがローカルのコンピューターにインストールされて利用可能な状態になっていることを前提としています。 必要に応じて、お使いの環境に合わせて接続文字列を変更してください。

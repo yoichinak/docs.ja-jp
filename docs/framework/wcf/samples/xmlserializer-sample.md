@@ -2,12 +2,12 @@
 title: XMLSerializer サンプル
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: d85080ce9aec47b2ffb0d4dc255001901f722ae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d11bc0da231f78909b79376cb51e7ab12fe2cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572761"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817008"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer サンプル
 このサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> と互換性のある型をシリアル化および逆シリアル化する方法を示します。 Windows Communication Foundation (WCF) の既定のフォーマッタは、<xref:System.Runtime.Serialization.DataContractSerializer>クラス。 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用すると、<xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用できない場合に、型をシリアル化および逆シリアル化できます。 これは、XML を厳密に制御する必要がある場合、たとえば、データの一部が XML 属性であるが XML 要素ではない、などと制御する必要がある場合に多く該当します。 また、<xref:System.Xml.Serialization.XmlSerializer>多くの場合、自動的に選択されます WCF 以外のサービス用のクライアントを作成するときにします。  
@@ -134,4 +134,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a>関連項目

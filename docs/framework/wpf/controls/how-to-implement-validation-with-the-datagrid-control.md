@@ -59,8 +59,7 @@ ms.locfileid: "57371087"
   
 ### <a name="to-customize-row-validation-feedback"></a>行の検証のフィードバックをカスタマイズするには  
   
--   
-  <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> プロパティを設定します。 このプロパティでは、個々 の行の検証のフィードバックをカスタマイズできます。<xref:System.Windows.Controls.DataGrid>コントロール。 複数のコントロールを設定する、暗黙の行のスタイルを使用しても影響、<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>プロパティ。  
+-   <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> プロパティを設定します。 このプロパティでは、個々 の行の検証のフィードバックをカスタマイズできます。<xref:System.Windows.Controls.DataGrid>コントロール。 複数のコントロールを設定する、暗黙の行のスタイルを使用しても影響、<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>プロパティ。  
   
      次の例は、既定行の検証のフィードバックをよりわかりやすいインジケーターに置き換えます。 無効な値を入力すると、行ヘッダーに白い感嘆符の付いた赤い円が表示されます。 これは、行とセルの両方の検証エラーに対して発生します。 関連付けられたエラー メッセージは、ツールヒントに表示されます。  
   

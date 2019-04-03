@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: eb6e2c0e59ae0c29937fb5542e3b4638dd2b7b8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671448"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841980"
 ---
 # <a name="await-operator-visual-basic"></a>Await 演算子 (Visual Basic)
 `Await` 演算子は、非同期のメソッドまたはラムダ式のオペランドに適用されて、待機中のタスクが完了するまでメソッドの実行を中断します。 このタスクは、進行中の作業を表します。  
@@ -24,7 +24,7 @@ ms.locfileid: "54671448"
   
  適用するタスクでは通常、`Await`演算子が実装するメソッドの呼び出しからの戻り値、[タスクベースの非同期パターン](https://go.microsoft.com/fwlink/?LinkId=204847)、つまり、<xref:System.Threading.Tasks.Task>または<xref:System.Threading.Tasks.Task%601>します。  
   
- 次のコードでは、<xref:System.Net.Http.HttpClient> メソッドの <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> が `getContentsTask` (`Task(Of Byte())`) を返します。 タスクにより、操作が完了したときに実際のバイト配列が生成されることが保証されます。 `Await` 演算子が `getContentsTask` に適用されているため、`SumPageSizesAsync` が完了するまで `getContentsTask` の実行が中断されます。 その間、コントロールは `SumPageSizesAsync` の呼び出し元に戻されます。 `getContentsTask` が終了すると、`Await` 式がバイト配列に評価されます。  
+ 次のコードでは、<xref:System.Net.Http.HttpClient> メソッドの <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> が `getContentsTask` (`Task(Of Byte())`) を返します。 これにより、操作が完了したときに実際のバイト配列が生成されることが保証されます。 `Await` 演算子が `getContentsTask` に適用されているため、`SumPageSizesAsync` が完了するまで `getContentsTask` の実行が中断されます。 その間、コントロールは `SumPageSizesAsync` の呼び出し元に戻されます。 `getContentsTask` が終了すると、`Await` 式がバイト配列に評価されます。  
   
 ```vb  
 Private Async Function SumPageSizesAsync() As Task  
@@ -104,6 +104,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [チュートリアル: Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async](../../../visual-basic/language-reference/modifiers/async.md)

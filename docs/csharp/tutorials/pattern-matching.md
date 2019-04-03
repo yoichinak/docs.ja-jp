@@ -3,12 +3,12 @@ title: パターン マッチング機能を使用してデータ型を拡張す
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125812"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262521"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>チュートリアル: パターン マッチング機能を使用してデータ型を拡張する
 
@@ -17,11 +17,11 @@ C# 7 で、基本的なパターン マッチング機能が導入されまし�
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * パターン マッチングを使用する必要がある状況を認識する方法。
-> * パターン マッチング式を使用して、型とプロパティの値に基づく動作を実装する方法。
-> * パターン マッチングと他の手法を組み合わせて、完全なアルゴリズムを作成する方法。
+> * パターン マッチングを使用する必要がある状況を認識する。
+> * パターン マッチング式を使用して、型とプロパティの値に基づく動作を実装する。
+> * パターン マッチングと他の手法を組み合わせて、完全なアルゴリズムを作成する。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 プレビュー コンパイラも実行されるようにします。 C# 8 プレビュー コンパイラは、最新の [Visual Studio 2019 プレビュー](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) または最新の [.NET Core 3.0 プレビュー](https://dotnet.microsoft.com/download/dotnet-core/3.0)で使用できます。
 
@@ -45,12 +45,12 @@ GitHub の [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp
 
 ## <a name="pattern-matching-designs"></a>パターン マッチング設計
 
-このチュートリアルで使用するシナリオでは、パターン マッチングを使用して解決するのに適した種類の問題に焦点を当てています。 
+このチュートリアルで使用するシナリオでは、パターン マッチングを使用して解決するのに適した種類の問題に焦点を当てています。
 
 - 操作する必要があるオブジェクトは、目標と一致するオブジェクト階層内にはありません。 別個のシステムの一部であるクラスを操作する可能性があります。
 - 追加する機能は、これらのクラスのコア抽象化の一部ではありません。 車両が支払う通行料金は、車両の種類によって "*変化*" しますが、通行料金は車両の中心的な関数ではありません。
 
-データの "*形状*" とデータに対する "*操作*" が一緒に記述されていない場合は、C# のパターン マッチング機能によって、作業が容易になります。 
+データの "*形状*" とデータに対する "*操作*" が一緒に記述されていない場合は、C# のパターン マッチング機能によって、作業が容易になります。
 
 ## <a name="implement-the-basic-toll-calculations"></a>基本的な通行料金計算を実装する
 
@@ -61,7 +61,7 @@ GitHub の [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp
 - `Bus` は $5.00。
 - `DeliveryTruck` は $10.00。
 
-新しい `TollCalculator` クラスを作成し、車種に対するパターン マッチングを実装して、通行料金の金額を取得します。
+新しい `TollCalculator` クラスを作成し、車種に対するパターン マッチングを実装して、通行料金の金額を取得します。 `TollCalculator` の最初の実装を次のコードに示します。
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-上記のコードでは、**型パターン**をテストする **switch 式** ([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式**は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム**が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。 最後に、`null` パターンは、このメソッドに `null` が渡されたときに、それをキャッチします。 他の型パターンが null 以外の正しい車種のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
+上記のコードでは、**型パターン**をテストする **switch 式** ([`switch`](../language-reference/keywords/switch.md) ステートメントとは異なります) が使用されています。 上記のコードでは、**switch 式**は変数 `vehicle` で始まり、`switch` キーワードが続きます。 次に、すべての **switch アーム**が中かっこ内に指定されます。 `switch` 式は、`switch` ステートメントを囲む構文に対して、その他の絞り込みを行います。 `case` キーワードは省略され、各アームの結果が式になります。 最後の 2 つのアームは、新しい言語機能を示しています。 `{ }` case は、前のアームと一致しなかった null 以外のオブジェクトと一致します。 このアームは、このメソッドに渡された正しくない型をキャッチします。  `{ }` case は、車種ごとの case に従う必要があります。 順序が逆になった場合は、`{ }` case が優先されます。 最後に、`null` パターンで、このメソッドに `null` が渡されたときを検出します。 他の型パターンが null 以外の正しい車種のオブジェクトのみと一致するため、`null` パターンを最後にすることができます。
 
 このコードを `Program.cs` の次のコードを使用してテストできます。
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ namespace toll_calculator
 - 乗車率が 50% 未満のバスは、$2.00 余分に支払う。
 - 乗車率が 90% を超えるバスは、$1.00 割引される。
 
-このルールは、同じ switch 式で**プロパティ パターン**を使用して実装できます。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。  `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
+このルールは、同じ switch 式で**プロパティ パターン**を使用して実装できます。 プロパティ パターンでは、型が決定した後、オブジェクトのプロパティが調べられます。 `Car` に対する 1 つの case が、4 つの異なる case に拡張されます。
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-最初の 3 つの case では、型を `Car` としてテストした後、`Passengers` プロパティの値がチェックされます。 両方が一致した場合は、その式が評価され、結果が返されます。 最後の句は、switch アームの `when` 句を示しています。 `when` 句を使用して、プロパティの等価以外の条件をテストできます。 上記の例では、`when` 句によって、自動車の乗客が 2 名を超えているかどうかをテストしています。 厳密に言えば、それはこの例では必要ありません。
+最初の 3 つの case では、型を `Car` としてテストした後、`Passengers` プロパティの値がチェックされます。 両方が一致した場合は、その式が評価され、結果が返されます。
 
 タクシーに対する case も、同様の方法で拡張します。
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-料金徴収機関は、配送トラックの乗客数には関心がありません。 代わりに、トラックの重量クラスに基づいて請求します。 5,000 lbs を超えるトラックは、$5.00 余分に請求される。 3,000 lbs を下回る軽トラックは、$2.00 割引される。  これらのルールは、次のコードで実装されます。
+料金徴収機関は、配送トラックの乗客数には関心がありません。 代わりに、トラックの重量クラスに基づいて請求します。 5,000 lbs を超えるトラックは、$5.00 余分に請求される。 3,000 lbs を下回る軽トラックは、$2.00 割引される。 これらのルールは、次のコードで実装されます。
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-完了すると、以下によく似たメソッドが作成されます。
+前のコードは、switch アームの `when` 句を示しています。 `when` 句を使用して、プロパティの等価以外の条件をテストできます。 完了すると、以下によく似たメソッドが作成されます。
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -274,7 +274,7 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-上記の例では、再帰式の使用は、プロパティの値をテストする子アームを含む`Car` と `Taxi` のアームを繰り返さないことを意味しています。 この手法は、プロパティの個別の値ではなくその範囲をテストする `Bus` と `DeliveryTruck` のアームでは使用されません。
+上記の例では、再帰式の使用は、プロパティの値をテストする子アームを含む `Car` と `Taxi` のアームを繰り返さないことを意味しています。 この手法は、プロパティの個別の値ではなくその範囲をテストする `Bus` と `DeliveryTruck` のアームでは使用されません。
 
 ## <a name="add-peak-pricing"></a>ピーク料金を追加する
 
@@ -288,7 +288,7 @@ public decimal CalculateToll(object vehicle) =>
 
 次の表に、入力値の組み合わせとピーク時の乗数を示します。
 
-| 曜日        | 時間帯         | 方向 | 割り増し |
+| Day        | 時刻         | 方向 | 割り増し |
 | ---------- | ------------ | --------- |--------:|
 | 平日    | 朝のラッシュ時 | インバウンド   | x 2.00  |
 | 平日    | 朝のラッシュ時 | アウトバウンド  | x 1.00  |
@@ -309,7 +309,7 @@ public decimal CalculateToll(object vehicle) =>
 
 3 つの変数の 16 組の異なる組み合わせがあります。 いくつかの条件を組み合わせることで、最終的な switch 式を簡略化します。
 
-ツールを収集するシステムでは、通行料金が徴収される時刻に対して <xref:System.DateTime> 構造体を使用しています。 上記の表から、変数を作成するメンバー メソッドを作成します。  次の関数では、パターン マッチングの switch 式を使用して、<xref:System.DateTime> が週末または平日のどちらを表しているかを示しています。
+通行料金を収集するシステムでは、通行料金が徴収される時刻に対して <xref:System.DateTime> 構造体を使用しています。 上記の表から、変数を作成するメンバー メソッドを作成します。 次の関数では、パターン マッチングの switch 式を使用して、<xref:System.DateTime> が週末または平日のどちらを表しているかを示しています。
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,7 +339,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-上記のコードは機能しますが、簡略化できます。 週末の 8 つの組み合わせは、同じ通行料金になります。 8 つのすべてを、次の 1 つの行に置き換えることができます。
+上記のコードは機能しますが、簡略化できます。 週末の 8 つの組み合わせは、同じ通行料金になります。 8 つのすべてを、次の行に置き換えることができます。
 
 ```csharp
 (false, _, _) => 1.0m,
@@ -372,9 +372,9 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-この例では、パターン マッチングの利点の 1 つに注目しています。 パターンの分岐は、順序正しく評価されます。 前のほうの分岐で後ろにあるいずれかの case が処理されるようにパターンを並べ替えると、コンパイラによって警告が表示されます。 これらの言語ルールによって、コードが変化しないという自信を持って、前述した簡略化を簡単に実行できます。
+この例では、パターン マッチングの利点の 1 つに注目しています。パターンの分岐は、順序正しく評価されます。 前のほうの分岐で後ろにあるいずれかの case が処理されるようにパターンを並べ替えると、コンパイラによって到達できないコードに関する警告が表示されます。 これらの言語ルールによって、コードが変化しないという自信を持って、前述した簡略化を簡単に実行できます。
 
-パターン マッチングは、オブジェクト指向手法を使用した場合に作成するものとは異なるソリューションを実装するための自然な構文を提供します。 クラウドによって、データと機能は分離されています。 データの "*形状*" とデータに対する "*操作*" は、必ずしも一緒に記述されるわけではありません。 このチュートリアルでは、既存のデータを、元の関数とは完全に異なる方法で使用しています。 パターン マッチングでは、型を拡張できない場合でも、それらに対する機能を記述できます。
+パターン マッチングによって、ある種のコードが読みやすくなり、クラスにコードを追加できない場合はオブジェクト指向の手法の代替として機能します。 クラウドによって、データと機能は分離されています。 データの "*形状*" とデータに対する "*操作*" は、必ずしも一緒に記述されるわけではありません。 このチュートリアルでは、既存のデータを、元の関数とは完全に異なる方法で使用しています。 パターン マッチングでは、型を拡張できない場合でも、それらをオーバーライドする機能を記述できます。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -36,19 +36,14 @@ WIF 3.5 クラスはすべて `Microsoft.IdentityModel` 名前空間 (`Microsoft
 
 |WIF 4.5 名前空間|説明|
 |-----------------------|-----------------|
-|<xref:System.IdentityModel?displayProperty=nameWithType>|クッキーの変換、セキュリティ トークン サービス、および特殊な XML ディクショナリ リーダーを表すクラスが含まれます。 
-  `Microsoft.IdentityModel`、`Microsoft.IdentityModel.SecurityTokenService`、および `Microsoft.IdentityModel.Threading` という WIF 3.5 名前空間のクラスが含まれます。|
-|<xref:System.Security.Claims?displayProperty=nameWithType>|クレーム、クレーム ベースの ID、クレーム ベースの原則、およびその他のクレーム ベースの ID モデル成果物を表すクラスが含まれます。 
-  `Microsoft.IdentityModel.Claims` 名前空間のクラスが含まれます。|
-|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|セキュリティ トークン、セキュリティ トークン ハンドラー、およびその他のセキュリティ トークンの成果物を表すクラスが含まれます。 
-  `Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Tokens.Saml11`、および `Microsoft.IdentityModel.Tokens.Saml2` という WIF 3.5 名前空間のクラスが含まれます。|
-|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|受動的な (WS-Federation) シナリオで使用されるクラスが含まれます。 
-  `Microsoft.IdentityModel.Web` 名前空間のクラスが含まれます。|
+|<xref:System.IdentityModel?displayProperty=nameWithType>|クッキーの変換、セキュリティ トークン サービス、および特殊な XML ディクショナリ リーダーを表すクラスが含まれます。 `Microsoft.IdentityModel`、`Microsoft.IdentityModel.SecurityTokenService`、および `Microsoft.IdentityModel.Threading` という WIF 3.5 名前空間のクラスが含まれます。|
+|<xref:System.Security.Claims?displayProperty=nameWithType>|クレーム、クレーム ベースの ID、クレーム ベースの原則、およびその他のクレーム ベースの ID モデル成果物を表すクラスが含まれます。 `Microsoft.IdentityModel.Claims` 名前空間のクラスが含まれます。|
+|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|セキュリティ トークン、セキュリティ トークン ハンドラー、およびその他のセキュリティ トークンの成果物を表すクラスが含まれます。 `Microsoft.IdentityModel.Tokens`、`Microsoft.IdentityModel.Tokens.Saml11`、および `Microsoft.IdentityModel.Tokens.Saml2` という WIF 3.5 名前空間のクラスが含まれます。|
+|<xref:System.IdentityModel.Services?displayProperty=nameWithType>|受動的な (WS-Federation) シナリオで使用されるクラスが含まれます。 `Microsoft.IdentityModel.Web` 名前空間のクラスが含まれます。|
 |<xref:System.ServiceModel.Security?displayProperty=nameWithType>|アクティブな (WS-Trust) シナリオで使用される WCF のコントラクト、チャネル、サービス ホスト、およびその他の成果物を表すクラスは、現在はこの名前空間にあります。 WIF 3.5 では、これらのクラスは `Microsoft.IdentityModel.Protocols.WSTrust` 名前空間にありました。|
 
 > [!IMPORTANT]
-> 
-  `System.IdentityModel`、<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、および <xref:System.IdentityModel.Policy?displayProperty=nameWithType> という <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルを実装するクラスが含まれます。 WCF クレーム ベース ID モデルは WIF に置き換えられています。 WIF に基づいてソリューションをビルドする際は、これら 3 つの名前空間でクラスを使用しないでください。
+> `System.IdentityModel`、<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、および <xref:System.IdentityModel.Policy?displayProperty=nameWithType> という <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルを実装するクラスが含まれます。 WCF クレーム ベース ID モデルは WIF に置き換えられています。 WIF に基づいてソリューションをビルドする際は、これら 3 つの名前空間でクラスを使用しないでください。
 
 ### <a name="changes-due-to-net-integration"></a>.NET の統合による変更
 
@@ -57,8 +52,7 @@ WIF は現在、.NET Framework に統合されています。 ほとんどの .N
 - クレーム、ID、およびプリンシパルを表す WIF クラスは、現在は <xref:System.Security.Claims?displayProperty=nameWithType> 名前空間にあります。
 
     > [!IMPORTANT]
-    > 
-  <xref:System.IdentityModel.Claims?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルで成果物を表すクラスが含まれます。 これらのクラスの多くは、WIF クラスと同じ名前を持ちます (`Claims` など)。 WIF に基づいてソリューションをビルドする場合は、これらのクラスは使用しないでください。
+    > <xref:System.IdentityModel.Claims?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルで成果物を表すクラスが含まれます。 これらのクラスの多くは、WIF クラスと同じ名前を持ちます (`Claims` など)。 WIF に基づいてソリューションをビルドする場合は、これらのクラスは使用しないでください。
 
 - .NET の ID およびプリンシパル クラスは、直接 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> と <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> から派生します。 したがって、WIF 3.5 インターフェイス `IClaimsIdentity` と `IClaimsPrincipal` は不要になり、WIF 4.5 では使用できません。
 
@@ -75,8 +69,7 @@ WIF は現在、.NET Framework に統合されています。 ほとんどの .N
 
 - プロトコルまたは WS-* 固有の定数を定義したクラスの多く (たとえば、WS-Addressing 1.0 に関連する定数を定義した `Microsoft.IdentityModel.WSAddressing10Constants` クラスなど) は削除されます。
 
-- 
-  `Microsoft.IdentityModel.WindowsTokenService` 名前空間の Claims to Windows Token Service (c2wts) とその関連クラスが削除されます。
+- `Microsoft.IdentityModel.WindowsTokenService` 名前空間の Claims to Windows Token Service (c2wts) とその関連クラスが削除されます。
 
 ### <a name="wif-configuration-changes"></a>WIF 構成の変更
 
@@ -126,18 +119,15 @@ Id およびアクセス ツールの詳細については、「[Identity and Ac
 
 - 受動的なシナリオをサポートするクラスが <xref:System.IdentityModel.Services?displayProperty=nameWithType> 名前空間に移動されました。 WIF 3.5 では、これらのクラスは `Microsoft.IdentityModel.Web` 名前空間にありました。
 
-- 
-  `Microsoft.IdentityModel.Web.Configuration` 名前空間のクラスは <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>に移動されました。 これらのクラスは、受動的なシナリオの構成に固有のオブジェクトを表します。
+- `Microsoft.IdentityModel.Web.Configuration` 名前空間のクラスは <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>に移動されました。 これらのクラスは、受動的なシナリオの構成に固有のオブジェクトを表します。
 
-- 
-  `FederatedPassiveSignInControl` はサポートされていません。`Microsoft.IdentityModel.Web.Controls` 名前空間のすべてのクラスは、WIF 4.5 から削除されました。
+- `FederatedPassiveSignInControl` はサポートされていません。`Microsoft.IdentityModel.Web.Controls` 名前空間のすべてのクラスは、WIF 4.5 から削除されました。
 
 - WS-Federation 認証モジュール (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) のサインアウト機能は WIF 3.5 とは異なります。 WIF 4.5 でのサインアウトの機能の詳細については、<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> クラスのトピックを参照してください。
 
 ### <a name="active-wcfws-trust-scenarios"></a>アクティブな (WCF/WS-Trust) シナリオ:
 
-- 
-  `Microsoft.IdentityModel.Protocols.WSTrust` 名前空間は、WIF 4.5 の主に 2 つの名前空間に分割されています。 WS-Trust プロトコル固有の成果物を表すクラスは <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType> にあります。 これには <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> などのクラスが含まれます。 WCF アプリケーションで WS-Trust を使用して、含まれているサービス コントラクト、チャネル、サービス ホスト、およびその他の成果物を表すクラスは、<xref:System.ServiceModel.Security?displayProperty=nameWithType> に移動されました (<xref:System.ServiceModel.Security.IWSTrust13AsyncContract> インターフェイスなど)。
+- `Microsoft.IdentityModel.Protocols.WSTrust` 名前空間は、WIF 4.5 の主に 2 つの名前空間に分割されています。 WS-Trust プロトコル固有の成果物を表すクラスは <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType> にあります。 これには <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken> などのクラスが含まれます。 WCF アプリケーションで WS-Trust を使用して、含まれているサービス コントラクト、チャネル、サービス ホスト、およびその他の成果物を表すクラスは、<xref:System.ServiceModel.Security?displayProperty=nameWithType> に移動されました (<xref:System.ServiceModel.Security.IWSTrust13AsyncContract> インターフェイスなど)。
 
 - WIF を使用するための WCF アプリケーションの構成は、大幅に単純化されました。 以前は `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement` は動作拡張として追加する必要があり、`<federatedServiceHostConfiguration>` 要素を指定することで、この機能を使用して WIF をサービス動作に追加していました。 WIF 4.5 は WCF とより密接に統合されました。 これで、次の XML に示すように `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>` 要素で `useIdentityConfiguration` 属性を指定することで WCF サービス上で WIF を有効にできます。
 

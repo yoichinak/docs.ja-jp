@@ -27,8 +27,7 @@ HRESULT GetEventKind(
  ポインターを[CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)イベントの種類を示す列挙メンバー。  
   
 ## <a name="remarks"></a>Remarks  
- 
-  `pDebugEventKind` の値に基づいて、`QueryInterface` を呼び出して、追加データを含むより正確なデバッグ イベント インターフェイスを取得できます。  
+ `pDebugEventKind` の値に基づいて、`QueryInterface` を呼び出して、追加データを含むより正確なデバッグ イベント インターフェイスを取得できます。  
   
 > [!NOTE]
 >  このメソッドは .NET ネイティブでのみ使用できます。  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971898"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835558"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>コード内の特殊文字 (Visual Basic)
 アルファベットまたは数字ではない文字をコードでは、特殊文字を使用するがある場合があります。 区切り記号および Visual Basic の文字セット内の特殊文字は、コンパイラやコンパイル済みプログラムを実行するタスクの定義をプログラム テキストの整理から、さまざまな用途があります。 実行するオペレーションを指定するのには使用されません。  
@@ -88,5 +88,6 @@ ms.locfileid: "56971898"
  `!`としても使用される文字、`Single`文字を入力します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

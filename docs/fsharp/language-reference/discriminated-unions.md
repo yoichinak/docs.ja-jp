@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 使用する方法について説明しますF#判別共用体。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611868"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821427"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -156,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 このコードでは、`resultSumTree` の値は 10 です。 次の図は、`myTree` のツリー構造を示しています。
 
-![myTree のツリー構造](../media/TreeStructureDiagram.png)
+![MyTree のツリー構造を示す図。](../media/discriminated-unions/tree-structure-mytree.png)
 
 判別共用体は、ツリーのノードが異種の場合でも、問題なく機能します。 次のコードの `Expression` 型は、数と変数の加算と乗算をサポートする簡単なプログラミング言語での式の抽象構文ツリーを表します。 共用体の一部のケースは再帰的ではなく、数 (`Number`) または変数 (`Variable`) を表します。 他のケースは再帰的で、演算 (`Add` および `Multiply`) を表し、オペランドも式です。 `Evaluate` 関数では、match 式を使用して再帰的に構文ツリーを処理しています。
 

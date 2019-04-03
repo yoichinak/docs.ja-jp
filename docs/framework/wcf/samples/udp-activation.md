@@ -2,12 +2,12 @@
 title: UDP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715518"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836325"
 ---
 # <a name="udp-activation"></a>UDP アクティベーション
 このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 拡張、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows プロセス アクティブ化サービス (WAS) を使用してプロセスのアクティブ化をサポートするためのサンプルです。  
@@ -162,4 +162,3 @@ ms.locfileid: "54715518"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   
-## <a name="see-also"></a>関連項目

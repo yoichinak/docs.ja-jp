@@ -20,15 +20,13 @@ ms.locfileid: "57357132"
 **名前空間:** System.Reflection
 
 > [!IMPORTANT]
-> 
-  `MissingMetadataException` クラスは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
+> `MissingMetadataException` クラスは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
 
 ## <a name="syntax"></a>構文
 
 [!code-csharp[ProjectN#4](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingmetadataexception_syntax1.cs#4)]
 
-
-  `MissingMetadataException` クラスが <xref:System.TypeAccessException> から派生していることに注意してください。
+`MissingMetadataException` クラスが <xref:System.TypeAccessException> から派生していることに注意してください。
 
 `MissingMetadataException` クラスには次のメンバーがあります。
 
@@ -84,8 +82,7 @@ ms.locfileid: "57357132"
 > - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/type.html) (型の場合)。
 > - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。
 
-
-  `MissingMetadataException` クラスには一意のメンバーは含まれていません。メンバーはすべて基底クラスの <xref:System.TypeAccessException> から継承されます。
+`MissingMetadataException` クラスには一意のメンバーは含まれていません。メンバーはすべて基底クラスの <xref:System.TypeAccessException> から継承されます。
 
 ## <a name="see-also"></a>関連項目
 

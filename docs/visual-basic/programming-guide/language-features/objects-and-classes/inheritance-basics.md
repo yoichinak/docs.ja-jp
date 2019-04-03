@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970299"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826575"
 ---
 # <a name="inheritance-basics-visual-basic"></a>継承の基本 (Visual Basic)
 `Inherits`ステートメントを使用して、という新しいクラスを宣言、*クラスを派生*と呼ばれる、既存のクラスに基づいて、*基本クラス*します。 派生クラスでは、継承、およびプロパティ、メソッド、イベント、フィールド、および基底クラスで定義された定数は、拡張できます。 次のセクションでは、いくつかの継承のルールについて説明し、方法クラスを変更する際、修飾子を継承または継承されます。  
@@ -143,5 +143,6 @@ End Class
  場合でも`derivedClass`オーバーライド`testMethod`、`MyClass`キーワード`useMyClass`の基底クラスのバージョンへの呼び出しをオーバーライドして、コンパイラと解決の効果を null `testMethod`。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Inherits ステートメント](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

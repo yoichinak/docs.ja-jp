@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261348"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833530"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >' (複数ファイル参照)。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致がへの参照をファイルの混合によって生じた可能性があります '\<filepath1 >' プロジェクトで'\<projectname1 >' への参照をファイルに '\<filepath2 >' プロジェクトで'\<projectname2 >'。 両方のアセンブリが同一である場合は、これらの参照を同じ場所から参照するように置き換えてください。  
@@ -32,6 +32,6 @@ ms.locfileid: "55261348"
 -   参照されたアセンブリは、同じアセンブリ id を持っていない場合、それ以外の型を 1 つの型を変換しませんようにコードを変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)
-

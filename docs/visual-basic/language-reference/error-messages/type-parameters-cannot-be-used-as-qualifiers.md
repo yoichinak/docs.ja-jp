@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659708"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819802"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型パラメーターは修飾子として使用できません。
 プログラミング要素は、型パラメーターを含む修飾文字列で修飾されます。  
@@ -39,6 +39,7 @@ End Function
 2.  修飾されているプログラミング要素の検索に構築された型を使用する必要がある場合は、プログラム ロジックの追加を使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)

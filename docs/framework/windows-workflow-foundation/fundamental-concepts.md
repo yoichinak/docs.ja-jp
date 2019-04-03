@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57703414"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows Workflow の基本概念
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のワークフロー開発で使用される概念は、一部の開発者には不慣れなことも考えられます。 ここでは、そのいくつかの概念について、内容と実装方法を説明します。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のワークフロー開発で使用される概念は、一部の開発者には不慣れなことも考えられます。 ここでは、そのいくつかの概念について、内容と実装方法を説明します。  
   
 ## <a name="workflows-and-activities"></a>ワークフローとアクティビティ  
  ワークフローは、プロセスをモデル化するアクションの構造化されたコレクションです。 ワークフローの各アクションは、アクティビティとしてモデル化されます。 ホストがワークフローとのやり取りを行う場合、メソッドと同じようにワークフローを呼び出すときは <xref:System.Activities.WorkflowInvoker> が、1 つのワークフロー インスタンスの実行を明示的に制御するときは <xref:System.Activities.WorkflowApplication> が、インスタンスが複数のシナリオでメッセージ ベースのやり取りを行うときは <xref:System.ServiceModel.WorkflowServiceHost> が使用されます。 ワークフローの手順はアクティビティの階層として定義されるため、階層の最上位のアクティビティはワークフローそのものを定義すると言えます。 この階層モデルは、前のバージョンの明示的な `SequentialWorkflow` クラスおよび `StateMachineWorkflow` クラスの代わりになります。 アクティビティ自体は、他のアクティビティの集まりとして (ベースとして <xref:System.Activities.Activity> クラスを使用。通常は XAML を使用して定義されます)、データ アクセスにランタイムを使用できる <xref:System.Activities.CodeActivity> クラスを使用して作成されるカスタムとして、またはワークフロー ランタイムの範囲をアクティビティの作成者に提示する <xref:System.Activities.NativeActivity> クラスを使用して開発されます。 <xref:System.Activities.CodeActivity> クラスおよび <xref:System.Activities.NativeActivity> クラスを使用して開発されるアクティビティは、C# などの CLR 準拠の言語を使用して作成されます。  
@@ -23,7 +22,7 @@ ms.locfileid: "57703414"
 |-|-|  
 |変数|データをアクティビティに格納します。|  
 |引数|データをアクティビティに移動したり、アクティビティから移動したりします。|  
-|式|引数のバインディングで使用される、昇格された戻り値を持つアクティビティです。|  
+|正規表現|引数のバインディングで使用される、昇格された戻り値を持つアクティビティです。|  
   
 ## <a name="workflow-runtime"></a>ワークフロー ランタイム  
  ワークフロー ランタイムはワークフローが実行される環境です。 <xref:System.Activities.WorkflowInvoker> はワークフローを実行する最も単純な方法です。 ホストは、次の処理に <xref:System.Activities.WorkflowInvoker> を使用します。  
@@ -52,8 +51,8 @@ ms.locfileid: "57703414"
   
  アクティビティは、<xref:System.Activities.ActivityContext> または <xref:System.Activities.NativeActivityContext> などの、適切な <xref:System.Activities.CodeActivityContext> 派生クラスを使用してワーク フローのランタイム環境にアクセスできます。 これらの要素がこのクラスを使用する目的は、引数や変数の解決や子アクティビティのスケジュール設定など、多岐にわたります。  
   
-## <a name="services"></a>サービス  
- ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローの内外にデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、[メッセージング アクティビティ](../wcf/feature-details/messaging-activities.md)を参照してください。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、[ホスト ワークフロー サービスの概要](../wcf/feature-details/hosting-workflow-services-overview.md)を参照してください。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../wcf/feature-details/workflow-services.md)  
+## <a name="services"></a>Services  
+ ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローの内外にデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、次を参照してください。[メッセージング アクティビティ](../wcf/feature-details/messaging-activities.md)します。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、次を参照してください。[ホスト ワークフロー サービスの概要](../wcf/feature-details/hosting-workflow-services-overview.md)します。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>永続性、アンロード、実行時間の長いワークフロー  
  Windows Workflow は次の機能により、実行時間の長いリアクティブなプログラムの作成を簡素化しています。  

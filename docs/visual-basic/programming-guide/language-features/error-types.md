@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600337"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831567"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
 Visual basic でのエラー (とも呼ばれる*例外*) 3 つのカテゴリに分類されます。 構文エラー、実行時エラー、および論理エラー。  
@@ -33,5 +33,6 @@ Visual basic でのエラー (とも呼ばれる*例外*) 3 つのカテゴリ�
  *論理エラー*は、アプリケーションが使用すると表示されます。 ユーザー アクションへの応答でほとんどの多くの場合、不要なまたは予期しない結果が表示されます。 たとえば、入力の間違いキーまたはその他の外部の影響を与える可能性が、アプリケーションに必要なパラメーター内で動作しなくなったりします。 論理エラーは、通常ではないため常に明確ではないを解決する最も困難な型です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [デバッガーの基本事項](/visualstudio/debugger/debugger-basics)

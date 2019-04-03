@@ -25,8 +25,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57468703"
 ---
 # <a name="icorprofilerinfo3setfunctionidmapper2-method"></a>ICorProfilerInfo3::SetFunctionIDMapper2 メソッド
-
-  `FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドによって拡張、 [icorprofilerinfo::setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)ランタイム間であいまいさを解消するプロファイラーを使用する、追加のデータのパラメーターを持つメソッド。  
+`FunctionID` 値を代替値に対応付けるために呼び出すプロファイラー実装関数を指定します。代替値は、プロファイラーの関数の開始フックと終了フックに渡されます。 このメソッドによって拡張、 [icorprofilerinfo::setfunctionidmapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)ランタイム間であいまいさを解消するプロファイラーを使用する、追加のデータのパラメーターを持つメソッド。  
   
 ## <a name="syntax"></a>構文  
   

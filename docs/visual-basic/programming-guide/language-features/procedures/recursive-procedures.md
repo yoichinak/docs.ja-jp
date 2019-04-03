@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969324"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832386"
 ---
 # <a name="recursive-procedures-visual-basic"></a>再帰プロシージャ (Visual Basic)
 A*再帰*手順は、自分自身を呼び出します。 通常、これは Visual Basic コードを記述する最も効果的な方法ではありません。  
@@ -38,6 +38,7 @@ A*再帰*手順は、自分自身を呼び出します。 通常、これは Vis
  **テスト**します。 再帰プロシージャを記述する場合はいくつかの制限の条件を満たしているかどうかを確認する非常に慎重にテストする必要があります。 再帰の呼び出しが多すぎるため、メモリ不足が実行できないということを確認する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.StackOverflowException>
 - [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)

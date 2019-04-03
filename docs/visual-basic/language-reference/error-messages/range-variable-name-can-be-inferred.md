@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 8b95bb3c53210cc11966466d32924c13aee8234b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842383"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます
 LINQ クエリでは、1 つまたは複数の引数を受け取るプログラミング要素が含まれます。 コンパイラは、そのプログラミング要素の範囲変数を推論できません。  
@@ -29,5 +29,6 @@ Dim query = From var1 In collection1
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)

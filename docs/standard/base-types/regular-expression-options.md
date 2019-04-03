@@ -42,20 +42,16 @@ ms.locfileid: "57677566"
 
 正規表現のオプションは、次の 3 種類の方法のいずれかで指定できます。
 
-- 
-  `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 
-  `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
+- `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
 
     クラス コンストラクターの `options` パラメーターを使用して、オプションが <xref:System.Text.RegularExpressions.Regex> インスタンスに指定されると、それらのオプションは <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティに割り当てられます。 ただし、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、正規表現パターン自体でのインライン オプションを反映しません。
 
-    具体的な例を次に示します。 
-  `options` メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを使用して、文字 "d" で始まる単語を識別するときに、大文字と小文字を区別しない一致を有効にすると同時に、パターンの空白を無視します。
+    具体的な例を次に示します。 `options` メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターを使用して、文字 "d" で始まる単語を識別するときに、大文字と小文字を区別しない一致を有効にすると同時に、パターンの空白を無視します。
 
     [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
     [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
-- `(?imnsx-imnsx)` という構文で、インライン オプションを正規表現パターンに適用します。 この場合、オプションが定義されているパターンの先頭から、パターンの末尾を含むポイントまで、または別のインライン オプションでオプションが定義されていないポイントまでを範囲として、オプションがパターンに適用されます。 
-  <xref:System.Text.RegularExpressions.Regex> インスタンスの <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、これらのインライン オプションを反映しないことに注意してください。 詳しくは、「[その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」のトピックをご覧ください。
+- `(?imnsx-imnsx)` という構文で、インライン オプションを正規表現パターンに適用します。 この場合、オプションが定義されているパターンの先頭から、パターンの末尾を含むポイントまで、または別のインライン オプションでオプションが定義されていないポイントまでを範囲として、オプションがパターンに適用されます。 <xref:System.Text.RegularExpressions.Regex> インスタンスの <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、これらのインライン オプションを反映しないことに注意してください。 詳しくは、「[その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」のトピックをご覧ください。
 
     具体的な例を次に示します。 インライン オプションを使用して、文字 "d" で始まる単語を識別するときに、大文字と小文字を区別しない一致を有効にすると同時に、パターンの空白を無視します。
 
@@ -102,14 +98,12 @@ ms.locfileid: "57677566"
 
 インスタンス化されたときに <xref:System.Text.RegularExpressions.Regex> オブジェクトに渡されたオプションの種類を確認するには、読み取り専用の <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> プロパティの値を取得します。 このプロパティは、<xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドによって作成された、コンパイルされた正規表現に定義されているオプションを確認する場合に特に役立ちます。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> を除くオプションが存在するかどうかをテストするには、目的の <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> プロパティの値と <xref:System.Text.RegularExpressions.RegexOptions> の値を使用して AND 演算を実行します。 次に、この結果が <xref:System.Text.RegularExpressions.RegexOptions> の値と等しいかどうかをテストします。 次の例は、<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションが設定されているかどうかをテストします。
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> を除くオプションが存在するかどうかをテストするには、目的の <xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> プロパティの値と <xref:System.Text.RegularExpressions.RegexOptions> の値を使用して AND 演算を実行します。 次に、この結果が <xref:System.Text.RegularExpressions.RegexOptions> の値と等しいかどうかをテストします。 次の例は、<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションが設定されているかどうかをテストします。
 
 [!code-csharp[Conceptual.Regex.Language.Options#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#19)]
 [!code-vb[Conceptual.Regex.Language.Options#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#19)]
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> をテストするには、次の例に示すように、<xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> プロパティの値が <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> と等しいかどうかを確認します。
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> をテストするには、次の例に示すように、<xref:System.Text.RegularExpressions.Regex.Options%2A?displayProperty=nameWithType> プロパティの値が <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> と等しいかどうかを確認します。
 
 [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
 [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]
@@ -120,8 +114,7 @@ ms.locfileid: "57677566"
 
 ## <a name="default-options"></a>既定のオプション
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは、オプションが指定されていないことを示します。正規表現エンジンは、このオプションの既定の動作を使用します。 次に例を示します。
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは、オプションが指定されていないことを示します。正規表現エンジンは、このオプションの既定の動作を使用します。 次に例を示します。
 
 - このパターンは、ECMAScript 正規表現ではなく、標準の形式として解釈されます。
 
@@ -140,11 +133,9 @@ ms.locfileid: "57677566"
 - 正規表現パターンのキャプチャ グループは、暗黙的に指定される場合と明示的に指定される場合があります。
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションには、等価なインライン オプションは存在しません。 正規表現オプションがインラインで適用されたときに、特定のオプションをオフにすると、既定の動作がオプションごとに復元されます。 たとえば、`(?i)` は大文字と小文字を区別しない比較をオンにし、`(?-i)` は既定の動作 (大文字と小文字を区別する比較) を復元します。
+> <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションには、等価なインライン オプションは存在しません。 正規表現オプションがインラインで適用されたときに、特定のオプションをオフにすると、既定の動作がオプションごとに復元されます。 たとえば、`(?i)` は大文字と小文字を区別しない比較をオンにし、`(?-i)` は既定の動作 (大文字と小文字を区別する比較) を復元します。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは正規表現エンジンの既定の動作を表しているので、メソッド呼び出しで明示的に指定されることはほとんどありません。 代わりに、`options` パラメーターを使用せずにコンストラクターまたは静的パターン一致メソッドが呼び出されます。
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> オプションは正規表現エンジンの既定の動作を表しているので、メソッド呼び出しで明示的に指定されることはほとんどありません。 代わりに、`options` パラメーターを使用せずにコンストラクターまたは静的パターン一致メソッドが呼び出されます。
 
 [ページのトップへ](#Top)
 
@@ -152,11 +143,9 @@ ms.locfileid: "57677566"
 
 ## <a name="case-insensitive-matching"></a>大文字と小文字を区別しない一致
 
+<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> オプションまたは `i` インライン オプションを指定すると、大文字と小文字を区別しない一致が実行されます。 既定では、現在のカルチャの大文字と小文字の表記規則が使用されます。
 
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> オプションまたは `i` インライン オプションを指定すると、大文字と小文字を区別しない一致が実行されます。 既定では、現在のカルチャの大文字と小文字の表記規則が使用されます。
-
-次の例では、"the" で始まるすべての単語と一致する正規表現パターン `\bthe\w*\b` を定義します。 
-  <xref:System.Text.RegularExpressions.Regex.Match%2A> メソッドの最初の呼び出しでは既定の大文字と小文字を区別する比較を使用しているので、結果の出力から、文の先頭の文字列 "The" は一致として処理されていないことがわかります。 これが一致として処理されるのは、オプションを <xref:System.Text.RegularExpressions.Regex.Match%2A> に設定して <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> メソッドが呼び出された場合です。
+次の例では、"the" で始まるすべての単語と一致する正規表現パターン `\bthe\w*\b` を定義します。 <xref:System.Text.RegularExpressions.Regex.Match%2A> メソッドの最初の呼び出しでは既定の大文字と小文字を区別する比較を使用しているので、結果の出力から、文の先頭の文字列 "The" は一致として処理されていないことがわかります。 これが一致として処理されるのは、オプションを <xref:System.Text.RegularExpressions.Regex.Match%2A> に設定して <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> メソッドが呼び出された場合です。
 
 [!code-csharp[Conceptual.Regex.Language.Options#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case1.cs#1)]
 [!code-vb[Conceptual.Regex.Language.Options#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case1.vb#1)]
@@ -172,14 +161,11 @@ ms.locfileid: "57677566"
 
 ## <a name="multiline-mode"></a>複数行モード
 
+<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションまたは `m` インライン オプションを指定すると、正規表現エンジンでは、複数行で構成される入力文字列の処理が有効になります。 具体的には、`^` 言語要素および `$` 言語要素の解釈を変更して、入力文字列の先頭および末尾ではなく、行の先頭および末尾に一致するものとします。
 
-  <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションまたは `m` インライン オプションを指定すると、正規表現エンジンでは、複数行で構成される入力文字列の処理が有効になります。 具体的には、`^` 言語要素および `$` 言語要素の解釈を変更して、入力文字列の先頭および末尾ではなく、行の先頭および末尾に一致するものとします。
+既定では、`$` は入力文字列の末尾とのみ一致します。 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定した場合は、改行文字 (`\n`) または入力文字列の末尾と一致します。 ただし、復帰とライン フィード文字の組み合わせとは一致しません。 この組み合わせと正常に一致させるには、`\r?$` を単独で使用する代わりに、部分式 `$` を使用します。
 
-既定では、`$` は入力文字列の末尾とのみ一致します。 
-  <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定した場合は、改行文字 (`\n`) または入力文字列の末尾と一致します。 ただし、復帰とライン フィード文字の組み合わせとは一致しません。 この組み合わせと正常に一致させるには、`\r?$` を単独で使用する代わりに、部分式 `$` を使用します。
-
-次の例では、ボウリング参加者の名前とスコアを抽出し、降順に並べ替えて、<xref:System.Collections.Generic.SortedList%602> コレクションに追加しています。 
-  <xref:System.Text.RegularExpressions.Regex.Matches%2A> メソッドは 2 回呼び出されています。 最初のメソッド呼び出しでは、`^(\w+)\s(\d+)$` という正規表現が使用され、オプションは設定されていません。 出力結果が示すように、正規表現エンジンは入力パターンを入力文字列の先頭および末尾と一致させることができないので、一致は検出されません。 2 番目のメソッド呼び出しでは、正規表現は `^(\w+)\s(\d+)\r?$` に変更されており、オプションは <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> に設定されています。 出力結果が示すように、名前とスコアの照合は正常に行われ、スコアは降順で表示されています。
+次の例では、ボウリング参加者の名前とスコアを抽出し、降順に並べ替えて、<xref:System.Collections.Generic.SortedList%602> コレクションに追加しています。 <xref:System.Text.RegularExpressions.Regex.Matches%2A> メソッドは 2 回呼び出されています。 最初のメソッド呼び出しでは、`^(\w+)\s(\d+)$` という正規表現が使用され、オプションは設定されていません。 出力結果が示すように、正規表現エンジンは入力パターンを入力文字列の先頭および末尾と一致させることができないので、一致は検出されません。 2 番目のメソッド呼び出しでは、正規表現は `^(\w+)\s(\d+)\r?$` に変更されており、オプションは <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> に設定されています。 出力結果が示すように、名前とスコアの照合は正常に行われ、スコアは降順で表示されています。
 
 [!code-csharp[Conceptual.Regex.Language.Options#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/multiline1.cs#3)]
 [!code-vb[Conceptual.Regex.Language.Options#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/multiline1.vb#3)]
@@ -206,12 +192,9 @@ ms.locfileid: "57677566"
 
 ## <a name="single-line-mode"></a>単一行モード
 
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションまたは `s` インライン オプションを指定すると、正規表現エンジンでは、入力文字列が単一行で構成されているかのように処理されます。 具体的には、ピリオド (`.`) 言語要素の動作を変更して、改行文字 (`\n` または \u000A) を除く任意の文字ではなく、改行文字を含む任意の 1 文字と一致するようにします。
 
-  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションまたは `s` インライン オプションを指定すると、正規表現エンジンでは、入力文字列が単一行で構成されているかのように処理されます。 具体的には、ピリオド (`.`) 言語要素の動作を変更して、改行文字 (`\n` または \u000A) を除く任意の文字ではなく、改行文字を含む任意の 1 文字と一致するようにします。
-
-
-  `.` オプションを使用したときに、<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 言語要素の動作が変化する例を次に示します。 正規表現 `^.+` は文字列の先頭から開始し、すべての文字と一致します。 既定では、照合は 1 行目の末尾で終了します。正規表現パターンは復帰文字 `\r` (\u000D) と一致しますが、`\n` とは一致しません。 
-  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションは入力文字列全体を単一行として解釈するので、`\n` を含む入力文字列内のすべての文字と一致します。
+`.` オプションを使用したときに、<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 言語要素の動作が変化する例を次に示します。 正規表現 `^.+` は文字列の先頭から開始し、すべての文字と一致します。 既定では、照合は 1 行目の末尾で終了します。正規表現パターンは復帰文字 `\r` (\u000D) と一致しますが、`\n` とは一致しません。 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションは入力文字列全体を単一行として解釈するので、`\n` を含む入力文字列内のすべての文字と一致します。
 
 [!code-csharp[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any2.cs#5)]
 [!code-vb[Conceptual.Regex.Language.CharacterClasses#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any2.vb#5)]
@@ -227,8 +210,7 @@ ms.locfileid: "57677566"
 
 ## <a name="explicit-captures-only"></a>明示的なキャプチャのみ
 
-既定では、キャプチャ グループは正規表現パターンでかっこを使用することで定義されます。 名前付きのグループには `(?<`*name*`>`*subexpression*`)` 言語オプションで名前または番号が与えられるのに対して、名前のないグループにはインデックスでアクセスできます。 
-  <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトでは、名前のないグループが名前付きのグループよりも優先されます。
+既定では、キャプチャ グループは正規表現パターンでかっこを使用することで定義されます。 名前付きのグループには `(?<`*name*`>`*subexpression*`)` 言語オプションで名前または番号が与えられるのに対して、名前のないグループにはインデックスでアクセスできます。 <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトでは、名前のないグループが名前付きのグループよりも優先されます。
 
 グループ化構成体は通常、複数の言語要素に量指定子を適用する場合にのみ使用され、キャプチャされた部分文字列は対象になりません。 たとえば、次の正規表現について考えます。
 
@@ -272,8 +254,7 @@ ms.locfileid: "57677566"
 
 ## <a name="compiled-regular-expressions"></a>コンパイルされた正規表現
 
-既定では、.NET の正規表現は解釈の対象になります。 
-  <xref:System.Text.RegularExpressions.Regex> オブジェクトがインスタンス化されるか、静的 <xref:System.Text.RegularExpressions.Regex> メソッドが呼び出されたときに、正規表現パターンはカスタム オペコードのセットに解析され、インタープリターがこのオペコードに基づいて正規表現を実行します。 この場合、正規表現エンジンの初期化処理を優先すると、実行時のパフォーマンスが低下するというトレードオフが伴います。
+既定では、.NET の正規表現は解釈の対象になります。 <xref:System.Text.RegularExpressions.Regex> オブジェクトがインスタンス化されるか、静的 <xref:System.Text.RegularExpressions.Regex> メソッドが呼び出されたときに、正規表現パターンはカスタム オペコードのセットに解析され、インタープリターがこのオペコードに基づいて正規表現を実行します。 この場合、正規表現エンジンの初期化処理を優先すると、実行時のパフォーマンスが低下するというトレードオフが伴います。
 
 正規表現を逐次解釈する代わりに、<xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションを使用してコンパイルされた正規表現を使用できます。 この場合、パターンは正規表現エンジンに渡され、オペコードのセットに解析されてから、Microsoft Intermediate Language (MSIL) に変換されます。変換されたコードは、共通言語ランタイムに直接渡すことができます。 コンパイルされた正規表現を使用すると、初期化処理に時間を要しますが、実行時のパフォーマンスは向上します。
 
@@ -286,14 +267,12 @@ ms.locfileid: "57677566"
 
 - 特定の正規表現を表す <xref:System.Text.RegularExpressions.Regex> オブジェクトが正規表現パターン一致メソッドの複数の呼び出しで使用されている。
 
-- 
-  <xref:System.Text.RegularExpressions.Regex> オブジェクトがスコープの外に出ることが許可されておらず、再利用できる。
+- <xref:System.Text.RegularExpressions.Regex> オブジェクトがスコープの外に出ることが許可されておらず、再利用できる。
 
 - 静的正規表現が正規表現パターン一致メソッドの複数の呼び出しで使用されている (静的メソッド呼び出しで使用した正規表現は正規表現エンジンによってキャッシュされるので、パフォーマンスの向上が可能になります)。
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションは <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドとは関係なく、定義済みのコンパイルされた正規表現を含む、特殊な目的のアセンブリを作成します。
+> <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションは <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドとは関係なく、定義済みのコンパイルされた正規表現を含む、特殊な目的のアセンブリを作成します。
 
 [ページのトップへ](#Top)
 
@@ -303,8 +282,7 @@ ms.locfileid: "57677566"
 
 既定では、正規表現パターンに含まれる空白には重要な意味があり、正規表現エンジンでは、入力文字列内の空白文字との照合が強制されます。 この結果、正規表現 "`\b\w+\s`" および "`\b\w+`" は、ほぼ等価な正規表現であると言えます。 さらに、シャープ記号 (#) が正規表現パターンに含まれている場合は、照合する対象のリテラル文字として解釈されます。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> オプションまたは `x` インライン オプションを指定すると、この既定の動作は次のように変更されます。
+<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> オプションまたは `x` インライン オプションを指定すると、この既定の動作は次のように変更されます。
 
 - 正規表現パターンでエスケープされていない空白は無視されます。 空白文字を正規表現パターンの一部に含めるには、エスケープする必要があります (たとえば、`\s` や "`\`")。
 
@@ -344,14 +322,12 @@ ms.locfileid: "57677566"
 
 ## <a name="right-to-left-mode"></a>右から左モード
 
-既定では、正規表現エンジンは左から右の方向に検索します。 この検索の方向を反転するには、<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションを使用します。 検索は、文字列の最後の文字位置から自動的に開始されます。 
-  <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> など、開始位置のパラメーターを含むパターン一致メソッドの場合は、検索の開始位置である右端の文字位置のインデックスが開始位置になります。
+既定では、正規表現エンジンは左から右の方向に検索します。 この検索の方向を反転するには、<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションを使用します。 検索は、文字列の最後の文字位置から自動的に開始されます。 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.Int32%29?displayProperty=nameWithType> など、開始位置のパラメーターを含むパターン一致メソッドの場合は、検索の開始位置である右端の文字位置のインデックスが開始位置になります。
 
 > [!NOTE]
 > 右から左モードを使用するには、<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 値を `options` クラス コンストラクターまたは静的パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡す必要があります。 インライン オプションとしては使用できません。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションは、検索の方向のみを変更します。このオプションを指定すると、正規表現パターンが右から左に解釈されるわけではありません。 たとえば、正規表現 `\bb\w+\s` は、文字 "b" で始まる単語とそれに続く空白文字と一致します。 次の例では、入力文字列は、1 文字以上の "b" を含む 3 つの単語で構成されています。 最初の単語は "b" で始まり、2 番目の単語は "b" で終わり、3 番目の単語は語内に 2 文字の "b" を含んでいます。 この例の出力結果が示すように、最初の単語のみが正規表現パターンと一致しています。
+<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションは、検索の方向のみを変更します。このオプションを指定すると、正規表現パターンが右から左に解釈されるわけではありません。 たとえば、正規表現 `\bb\w+\s` は、文字 "b" で始まる単語とそれに続く空白文字と一致します。 次の例では、入力文字列は、1 文字以上の "b" を含む 3 つの単語で構成されています。 最初の単語は "b" で始まり、2 番目の単語は "b" で終わり、3 番目の単語は語内に 2 文字の "b" を含んでいます。 この例の出力結果が示すように、最初の単語のみが正規表現パターンと一致しています。
 
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
@@ -382,8 +358,7 @@ ms.locfileid: "57677566"
 > [!NOTE]
 > ECMAScript 準拠の動作を使用するには、<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 値を `options` クラス コンストラクターまたは静的パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡す必要があります。 インライン オプションとしては使用できません。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> オプションと同時に使用できるのは、<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションおよび <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションだけです。 これ以外のオプションと同時に正規表現で使用すると、<xref:System.ArgumentOutOfRangeException> が発生します。
+<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> オプションと同時に使用できるのは、<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> オプションおよび <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションだけです。 これ以外のオプションと同時に正規表現で使用すると、<xref:System.ArgumentOutOfRangeException> が発生します。
 
 ECMAScript と標準正規表現は、文字クラスの構文、自己参照キャプチャ グループ、および 8 進数と前方参照の解釈という 3 つの点で動作が異なります。
 

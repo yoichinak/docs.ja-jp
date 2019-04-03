@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36550
 ms.assetid: 4387a51f-733c-45d7-abdb-eb64d4f51078
-ms.openlocfilehash: e2e2c41d713b0b04b8bc7208a83d059f0d16bf06
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a4561359e4d7cb0f6ebe44a5deb09b3374556ed8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278721"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826185"
 ---
 # <a name="extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations"></a>'Extension' 属性は 'Module'、'Sub'、または 'Function' の各宣言にのみ適用できます
 Visual Basic でのデータ型を拡張する唯一の方法では、標準のモジュール内で拡張メソッドを定義します。 拡張メソッドになる、`Sub`プロシージャまたは`Function`プロシージャ。 すべての拡張メソッドは、拡張機能の属性でマークする必要があります`<Extension()>`から、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType>名前空間。 必要に応じて、拡張メソッドを含むモジュールの場合は、同じ方法でマークされている可能性があります。 拡張属性の他の使用が有効ではありません。  
@@ -43,6 +43,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 - [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)

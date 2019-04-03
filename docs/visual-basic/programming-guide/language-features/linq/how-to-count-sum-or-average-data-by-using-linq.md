@@ -15,12 +15,12 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 9ff57029768c89e584fd2d7381fd79e38fbed14f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3ee518928bccaedeaa54c642944ff4e73620ef39
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203455"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819139"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>方法: 数、合計、または LINQ (Visual Basic) を使用したデータの平均
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
@@ -78,6 +78,7 @@ ms.locfileid: "57203455"
 4.  F5 キーを押してプロジェクトを実行し、結果を表示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [クエリ](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

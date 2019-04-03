@@ -16,12 +16,12 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: 93b299ffd8d2be1b1fabfd752e75d18ef87714b2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4574bab62ca6d095ab66c17bf186da5f3d79bfb7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974381"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826523"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports ステートメント (.NET 名前空間および型)
 有効では、名前空間の修飾せずに参照する名前を入力します。  
@@ -38,9 +38,9 @@ Imports [ aliasname = ] namespace.element
   
 |用語|定義|  
 |---|---|  
-|`aliasname`|任意。 *インポート エイリアス*または名前が使用されるコードを参照できます`namespace`完全に修飾文字列の代わりにします。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
+|`aliasname`|省略可能です。 *インポート エイリアス*または名前が使用されるコードを参照できます`namespace`完全に修飾文字列の代わりにします。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|  
 |`namespace`|必須。 インポートされる名前空間の完全修飾名。 名前空間の文字列はネストできますを任意のレベル。|  
-|`element`|任意。 名前空間で宣言されたプログラミング要素の名前。 任意のコンテナー要素を指定できます。|  
+|`element`|省略可能です。 名前空間で宣言されたプログラミング要素の名前。 任意のコンテナー要素を指定できます。|  
   
 ## <a name="remarks"></a>Remarks  
  `Imports`ステートメントを直接参照できる特定の名前空間に含まれる型を有効にします。  
@@ -99,6 +99,7 @@ Imports [ aliasname = ] namespace.element
  [!code-vb[VbVbalrStatements#158](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#158)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)

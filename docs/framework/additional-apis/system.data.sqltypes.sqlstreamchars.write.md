@@ -3,8 +3,7 @@ title: SqlStreamChars.Write (Char、Int32, Int32) メソッド (System.Data.SqlT
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: e2b0d2c4e68ffa0c0b9e745a15dbb8c79659008c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4084c7161eaa91d78eab32f1c14624e0032cdfcf
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826032"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675758"
 ---
 # <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars.Write (Char、Int32, Int32) メソッド
 

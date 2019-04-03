@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219686"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410746"
 ---
 # <a name="default-marshaling-for-arrays"></a>配列に対する既定のマーシャリング
 全体がマネージド コードで構成されるアプリケーションでは、共通言語ランタイムは、配列型を In/Out パラメーターとして渡します。 これに対し、相互運用マーシャラーは、既定で In パラメーターとして配列を渡します。  
   
  [ピン留め最適化](copying-and-pinning.md)を使用すると、同じアパートメント内のオブジェクトと対話するときに、blittable 配列を In/Out パラメーターとして操作しているように見せることができます。 ただし、後でコードをコンピューター間のプロキシを生成するために使用されるタイプ ライブラリにエクスポートし、そのライブラリがアパートメント間で呼び出しをマーシャリングするために使用される場合は、呼び出しで In パラメーターの動作を true に戻すことができます。  
   
- 配列は本質的に複雑で、マネージド配列とアンマネージド配列間の違いが、他の非 blittable 型より多くの情報を保証します。 このトピックでは、マーシャリング配列に関する以下の情報を示します。  
+ 配列は本質的に複雑で、マネージド配列とアンマネージド配列間の違いが、他の非 blittable 型より多くの情報を保証します。  
   
--   [マネージド配列](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [アンマネージ配列](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [.NET コードへの配列パラメーターの引き渡し](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [COM への配列の引き渡し](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>マネージド配列  
  マネージド配列型は異なっても、<xref:System.Array?displayProperty=nameWithType> クラスはすべての配列型の基底クラスです。 **System.Array** クラスには、ランク、長さ、および配列の下限と上限を決定するためのプロパティに加え、配列のアクセス、並べ替え、検索、コピー、および作成するためのメソッドがあります。  
   
@@ -46,11 +37,9 @@ ms.locfileid: "56219686"
 |**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|型で指定。|1|0|*type* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>アンマネージ配列  
  アンマネージ配列は、COM スタイルのセーフ配列または固定長または可変長の C スタイルの配列です。 セーフ配列は、関連付けられた配列データの型、ランク、および境界を格納する自己記述型の配列です。 C スタイル配列は下限が 0 に固定された 1 次元型の配列です。 マーシャリング サービスには、両方の配列型の制限されたサポートがあります。  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>.NET コードへの配列パラメーターの引き渡し  
  C スタイル配列とセーフ配列は、どちらもセーフ配列または C スタイル配列としてアンマネージ コードから .NET コードに渡すことができます。 次の表に、アンマネージ型の値とインポートされた型を示します。  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  相互運用マーシャラーは、**CoTaskMemAlloc** メソッドと **CoTaskMemFree** メソッドを使用してメモリの割り当てと取得を行います。 アンマネージ コードによって実行されるメモリの割り当てでは、これらのメソッドも使用する必要があります。  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>COM への配列の引き渡し  
  すべてのマネージド配列型は、マネージド コードからアンマネージド コードに渡すことができます。 次の表に示すように、マネージド型とそれに適用される属性に応じて、セーフ配列または C スタイル配列として配列にアクセスできます。  
   

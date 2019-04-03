@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825171"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 Windows Communication Foundation (WCF) サンプルのほとんどがインターネット インフォメーション サービス (IIS) でホストされているし、共通の仮想ディレクトリから実行します。 この 1 回限りのセットアップ手順は、ディスクにフォルダーを作成しますという名前の iis 仮想ディレクトリも追加**ServiceModelSamples**します。
@@ -19,11 +19,9 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF サンプルの 1 回限りのセットアップの手順  
   
-1.  
-  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がセットアップされていることを確認します。 設定する方法の詳細についての[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
+1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がセットアップされていることを確認します。 設定する方法の詳細についての[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
   
-2.  
-  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] がインストールされていることを確認します。 次のディレクトリに、v4.0 (またはそれ以降) を検索: **\Windows\Microsoft.NET\Framework**  
+2.  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] がインストールされていることを確認します。 次のディレクトリに、v4.0 (またはそれ以降) を検索: **\Windows\Microsoft.NET\Framework**  
   
 3.  Visual Studio 2012 がインストールされていないかどうかと、オペレーティング システムが Windows Server 2008 SP2 または後で、インストール[修正プログラム 251798](https://go.microsoft.com/fwlink/?LinkId=184693)します。  
   
@@ -64,9 +62,7 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
     > [!NOTE]
     >  この手順を完了していない場合は、ビルドの実行時に IIS でホストされているすべてのサンプルでエラーが発生します。 アクセス許可が正しく設定されていることを確認するか、SDK コマンド プロンプトと Visual Studio コマンド プロンプト (2012) を管理者として実行してください。
 
-11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7 では、 [!INCLUDE[wv](../../../../includes/wv-md.md)]、Windows Server 2008 R2 では、このアカウントは**ネットワーク サービス**します。 
-  [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では NT Authority\Network Service、 
-  [!INCLUDE[wxp](../../../../includes/wxp-md.md)] および [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では ASPNET です。
+11. コンピューター上に C:\logs ディレクトリを作成します (一部のサンプルで必要になることがあります)。 このフォルダーに対する書き込みアクセスが適切なアカウントに付与されていることを確認してください。 Windows 7 では、 [!INCLUDE[wv](../../../../includes/wv-md.md)]、Windows Server 2008 R2 では、このアカウントは**ネットワーク サービス**します。 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では NT Authority\Network Service、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] および [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では ASPNET です。
 
 12. Setupcerttool.bat ファイルを実行します。 このファイルにある、 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ フォルダー。  このスクリプトでは、次のタスクが実行されます。
 
@@ -89,5 +85,3 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
     >  メッセージ キューが必要なサンプルを実行する場合は、MSMQ サービスを事前に開始しておいてください。
 
 15. 一部のサンプルには証明書が必要です。 参照してください[インターネット インフォメーション サービス (IIS) サーバー証明書のインストール手順](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)します。
-
-## <a name="see-also"></a>関連項目

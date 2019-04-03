@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: eff367fd6cc14c655f0c623731e334054233b0a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f7a2b771cfa1bcc6581d720aa0de3505aec826
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744311"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828213"
 ---
 # <a name="-nowarn"></a>-nowarn
 警告を生成するコンパイラの機能を無効にします。  
@@ -26,7 +26,7 @@ ms.locfileid: "54744311"
   
 |用語|定義|  
 |---|---|  
-|`numberList`|任意。 コンパイラはしないようにする警告の ID 番号のコンマ区切りリスト。 警告の Id が指定されていない場合は、すべての警告が抑制されます。|  
+|`numberList`|省略可能です。 コンパイラはしないようにする警告の ID 番号のコンマ区切りリスト。 警告の Id が指定されていない場合は、すべての警告が抑制されます。|  
   
 ## <a name="remarks"></a>Remarks  
  `-nowarn`オプションと、コンパイラの警告を生成しません。 個々 の警告を抑制するのに警告の ID を指定します、`-nowarn`コロンに続くオプション。 複数の警告番号をコンマで区切ります。  
@@ -54,6 +54,7 @@ vbc -nowarn:42024 t2.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

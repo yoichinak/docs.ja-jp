@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689524"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842903"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic のプロパティと変数の違い
 変数とプロパティは、アクセス可能な値を表します。 ただし、ストレージと実装の違いがあります。  
@@ -45,6 +45,7 @@ ms.locfileid: "54689524"
  <sup>1</sup>変数とは異なり、プロパティの値は 1 つの項目の記憶域に直接対応しない可能性があります。 記憶域を利便性またはセキュリティに部分に分割する可能性がありますか、値は、暗号化された形式で格納される可能性があります。 このような場合、`Get`プロシージャはコンポーネントの編成または格納されている値の暗号化を解除し、`Set`プロシージャは新しい値を暗号化または構成の記憶域に分割することです。 プロパティ値があります、1 日の時間などの一時的な場合、`Get`プロシージャは計算こと、実行時にプロパティにアクセスするたびにします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)

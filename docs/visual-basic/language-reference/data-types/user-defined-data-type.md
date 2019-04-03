@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 33a9dd3144f6f51eb6a63ff93750019878cb4a03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507474"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814199"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 定義する形式でデータを保持します。 `Structure`ステートメントの形式を定義します。  
@@ -72,6 +72,7 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - [データの種類](../../../visual-basic/language-reference/data-types/index.md)

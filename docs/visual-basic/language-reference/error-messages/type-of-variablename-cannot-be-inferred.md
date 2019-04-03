@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367182"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815876"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>型 '\<variablename >' ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
 記述した、`For...Next`をコンパイラを推論できませんループ コントロール変数のデータ型を次の条件に当てはまるため、ループ。  
@@ -63,6 +63,7 @@ Dim n = 20
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

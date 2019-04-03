@@ -80,8 +80,7 @@ ms.locfileid: "57708406"
 |`Windows.UI.Xaml.Data.PropertyChangedEventHandler`|`System.ComponentModel.PropertyChangedEventHandler`|
 |`Windows.UI.Xaml.Data.PropertyChangedEventArgs`|`System.ComponentModel.PropertyChangedEventArgs`|
 
- 
-  [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、`IMap<K, V>` と `IMapView<K, V>` は `IKeyValuePair` を使用して反復されます。 これらをマネージド コードに渡すと、`IDictionary<TKey, TValue>` および `IReadOnlyDictionary<TKey, TValue>` として表示されるため、これを列挙するには必然的に `System.Collections.Generic.KeyValuePair<TKey, TValue>` を使用します。
+ [!INCLUDE[wrt](../../../includes/wrt-md.md)]では、`IMap<K, V>` と `IMapView<K, V>` は `IKeyValuePair` を使用して反復されます。 これらをマネージド コードに渡すと、`IDictionary<TKey, TValue>` および `IReadOnlyDictionary<TKey, TValue>` として表示されるため、これを列挙するには必然的に `System.Collections.Generic.KeyValuePair<TKey, TValue>` を使用します。
 
  インターフェイスがマネージド コード内に表示される方法によって、これらのインターフェイスを実装する型の表示方法が決まります。 たとえば、`PropertySet` クラスは `IMap<K, V>` を実装しますが、これはマネージド コードでは `IDictionary<TKey, TValue>` として表示されます。 `PropertySet` は、`IDictionary<TKey, TValue>` ではなく `IMap<K, V>` を実装したかのように表示されます。したがってマネージ コードでは、`Add` メソッド (その動作は .NET Framework ディクショナリの `Add` メソッドと同様) が含まれているように表示されます。 `Insert` メソッドがないように見えます。
 

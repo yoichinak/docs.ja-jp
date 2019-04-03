@@ -2,7 +2,7 @@
 title: Roslyn ベースのアナライザー - .NET
 description: 問題を検出し、各問題について修正を提案する Roslyn ベースのアナライザーについて説明します。
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---

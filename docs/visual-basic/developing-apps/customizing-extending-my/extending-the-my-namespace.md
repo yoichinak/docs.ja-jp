@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361201"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814160"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic における My 名前空間の拡張
 `My`プロパティとメソッドを .NET Framework の能力を簡単に利用できるようにする Visual Basic における名前空間を公開します。 `My`名前空間には一般的なプログラミングの問題を 1 行のコードに多くの場合、困難な作業を減らすことが簡略化します。 さらに、`My`の動作をカスタマイズできるように、名前空間が完全に拡張可能`My`特定のアプリケーションのニーズに対応するには、その階層に新しいサービスを追加します。 このトピックでは両方の既存のメンバーをカスタマイズする方法、`My`名前空間と、独自のカスタム クラスを追加する方法、`My`名前空間。  
@@ -101,6 +101,7 @@ ms.locfileid: "57361201"
  デプロイする方法の詳細について`My`名前空間の拡張機能を参照してください[パッケージ化と展開のカスタム マイ拡張](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [カスタム My 拡張のパッケージ化と配置](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 - [Visual Basic アプリケーション モデルの拡張](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
 - [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

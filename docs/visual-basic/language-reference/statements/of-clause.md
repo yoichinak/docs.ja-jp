@@ -17,12 +17,12 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: e4c6c5cb8c041f1f0dfb3a9a3f858850d67d1c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698239"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823442"
 ---
 # <a name="of-clause-visual-basic"></a>Of 句 (Visual Basic)
 導入されています、`Of`句は、識別、*パラメーターを入力*上、*ジェネリック*クラス、構造体、インターフェイス、デリゲート、またはプロシージャ。 ジェネリック型については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。  
@@ -65,6 +65,7 @@ Dim d As New dictionary(Of String, Integer)
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IComparable>
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
 - [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

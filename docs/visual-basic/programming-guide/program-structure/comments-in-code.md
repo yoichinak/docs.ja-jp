@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201678"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814641"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
 コード例にはコメント記号 (`'`) がしばしば見られます。 このシンボルをそれに続くテキストを無視する Visual Basic コンパイラに指示または*コメント*します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
@@ -60,6 +60,7 @@ ms.locfileid: "57201678"
 >  テキストの前に `REM` キーワードを付けて、コードにコメントを追加することもできます。 ただし、`'`シンボルと**コメント**/**コメント解除**ボタンが簡単に使用し、小さい領域とメモリが必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML コメントによるコードの文書化の基本的な本能」](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

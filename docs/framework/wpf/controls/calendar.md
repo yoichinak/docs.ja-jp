@@ -29,8 +29,7 @@ ms.locfileid: "57359407"
 |指定の日付を選択することはできません。|<xref:System.Windows.Controls.Calendar.BlackoutDates%2A> プロパティを使用します。|  
 |<xref:System.Windows.Controls.Calendar> 1 か月、1 年、または 10 年を表示します。|設定、<xref:System.Windows.Controls.Calendar.DisplayMode%2A>プロパティを 1 か月、年、または 10 年間です。|  
 |ユーザーが日付を選択するかどうか、日付の範囲または複数の日付の範囲を指定します。|使用して、<xref:System.Windows.Controls.Calendar.SelectionMode%2A>します。|  
-|日付の範囲を指定する、<xref:System.Windows.Controls.Calendar>が表示されます。|
-  <xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> プロパティおよび <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> プロパティを使用します。|  
+|日付の範囲を指定する、<xref:System.Windows.Controls.Calendar>が表示されます。|<xref:System.Windows.Controls.Calendar.DisplayDateStart%2A> プロパティおよび <xref:System.Windows.Controls.Calendar.DisplayDateEnd%2A> プロパティを使用します。|  
 |現在の日付が強調表示されているかどうかを指定します。|<xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A> プロパティを使用します。 既定では、<xref:System.Windows.Controls.Calendar.IsTodayHighlighted%2A>は`true`します。|  
 |サイズを変更、<xref:System.Windows.Controls.Calendar>します。|使用して、<xref:System.Windows.Controls.Viewbox>設定や、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティを<xref:System.Windows.Media.ScaleTransform>。 設定した場合、<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>のプロパティを<xref:System.Windows.Controls.Calendar>、実際の予定表では、そのサイズは変更されません。|  
   

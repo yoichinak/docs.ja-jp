@@ -44,8 +44,7 @@ ms.locfileid: "57712189"
   
 4.  場所、<xref:System.Windows.Forms.TextBox>を制御、`SerializationDemoControl`します。  
   
-5.  
-  <xref:System.Windows.Forms.TextBox> コントロールを選択します。 **プロパティ**ウィンドウで、次のプロパティを設定します。  
+5.  <xref:System.Windows.Forms.TextBox> コントロールを選択します。 **プロパティ**ウィンドウで、次のプロパティを設定します。  
   
     |プロパティ|変更後の値|  
     |--------------|---------------|  

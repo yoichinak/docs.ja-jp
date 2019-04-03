@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: d0a0003409f0abc277d92f4e68981d9ffd901a41
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971534"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828350"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 プロパティ プロシージャは、一連のモジュール、クラスまたは構造体のカスタム プロパティを操作する Visual Basic ステートメントです。 プロパティ プロシージャとも呼ばれます*プロパティ アクセサー*します。  
@@ -106,6 +106,7 @@ End Property
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](./index.md)
 - [Function プロシージャ](./function-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)

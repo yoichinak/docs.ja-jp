@@ -66,16 +66,14 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 文字列は、できるだけ全体を 1 つのまとまりとして扱い、個々の文字の連続として処理しない必要があります。 これは、部分文字列を並べ替えたり、検索したりするときに、組み合わせ文字の解析に関する問題を防ぐうえで特に重要です。
 
 > [!TIP]
-> 
-  <xref:System.Globalization.StringInfo> クラスを使用して、文字列の個別の文字ではなく、テキスト要素を操作できます。
+> <xref:System.Globalization.StringInfo> クラスを使用して、文字列の個別の文字ではなく、テキスト要素を操作できます。
 
 文字列の検索と比較でよくある間違いは、それぞれが <xref:System.Char> オブジェクトによって表される文字のコレクションとして文字列を処理することです。 実際に、1 つの文字が 1 つ、2 つ、またはそれ以上の <xref:System.Char> オブジェクトによって形成される場合があります。 このような文字は、アルファベットが、Unicode 基本ラテン文字の範囲 (U+0021 ～ U+007E) 外にある文字で構成されるカルチャの文字列に最もよくみられます。 次の例では、文字列で LATIN CAPITAL LETTER A WITH GRAVE 文字 (U+00C0) のインデックスを検索します。 ただし、この文字は、1 つのコード単位 (U+00C0) または複合文字 (2 つのコード単位:U+0021 と U+007E) という 2 つの方法で表現できます。 この場合、この文字は、文字列インスタンスで 2 つの <xref:System.Char> オブジェクト (U+0021 と U+007E) によって表されます。 このコード例では、<xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> オーバーロードと <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> オーバーロードを呼び出して、文字列インスタンスでのこの文字の位置を検索しますが、この 2 つは異なる結果を返します。 最初のメソッド呼び出しでは <xref:System.Char> 引数を指定しているので、序数に基づく比較が実行され、一致を見つけることができません。 2 番目の呼び出しでは <xref:System.String> 引数を指定しているので、カルチャに依存した比較が実行され、一致が見つかります。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
 
-
-  <xref:System.StringComparison> メソッド、<xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドなど <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> パラメーターを含むオーバーロードを呼び出して、この例のあいまいさ (異なる結果を返すメソッドの 2 つの類似オーバーロードの呼び出し) の一部を回避できます。
+<xref:System.StringComparison> メソッド、<xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> メソッドなど <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> パラメーターを含むオーバーロードを呼び出して、この例のあいまいさ (異なる結果を返すメソッドの 2 つの類似オーバーロードの呼び出し) の一部を回避できます。
 
 ただし、検索が常にカルチャに依存しているとは限りません。 検索の目的がセキュリティ上の決定をするか、またはリソースへのアクセスを許可または拒否することである場合、次のセクションで説明するように序数に基づく比較を実行する必要があります。
 
@@ -235,8 +233,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 
 ### <a name="perform-date-and-time-arithmetic"></a>日付と時刻の演算を実行する
 
-
-  <xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は、算術演算をサポートします。 2 つの日付の値の差を計算したり、日付の値に特定の時間間隔を加算または減算したりできます。 ただし、日付と時刻の値に対する算術演算では、タイム ゾーンとタイム ゾーン調整規則が考慮されません。 このため、時点を表す値に対して日付と時刻の算術を実行すると、不正確な結果が返されることがあります。
+<xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は、算術演算をサポートします。 2 つの日付の値の差を計算したり、日付の値に特定の時間間隔を加算または減算したりできます。 ただし、日付と時刻の値に対する算術演算では、タイム ゾーンとタイム ゾーン調整規則が考慮されません。 このため、時点を表す値に対して日付と時刻の算術を実行すると、不正確な結果が返されることがあります。
 
 たとえば、太平洋標準時から太平洋夏時間への切り替えは、3 月の第 2 日曜日、2013 年の場合は 3 月 10 日に行われます。 次の例に示すように、太平洋標準時ゾーンのシステムで 2013 年 3 月 9 日午前 10 時 30 分の 48 時間後の日時を計算すると、 結果は 2013 年 3 月 11 日午前 10 時 30 分となり、その間の時間調整は考慮されません。
 
@@ -305,8 +302,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 
 - ユーザーのカルチャに関係なく同じであるカスタム書式指定文字列を使用して数値の文字列表現を保存および解析します。
 
-- 
-  <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されるインバリアント カルチャの書式指定規則を使用して文字列として数値を保存します。
+- <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されるインバリアント カルチャの書式指定規則を使用して文字列として数値を保存します。
 
 - 文字列形式ではなく、バイナリで数値をシリアル化します。
 
@@ -329,17 +325,13 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 
 .NET では、特定のカルチャまたは地域は <xref:System.Globalization.CultureInfo> クラスによって表されます。 そのプロパティの一部は、カルチャのある側面に関する特定の情報を提供するオブジェクトを返します。
 
-- 
-  <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> プロパティは、カルチャによる文字列の比較方法および並べ替え方法に関する情報を含んだ <xref:System.Globalization.CompareInfo> オブジェクトを返します。
+- <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> プロパティは、カルチャによる文字列の比較方法および並べ替え方法に関する情報を含んだ <xref:System.Globalization.CompareInfo> オブジェクトを返します。
 
-- 
-  <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティは、日付と時刻のデータの書式設定で使用されるカルチャ固有の情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを返します。
+- <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティは、日付と時刻のデータの書式設定で使用されるカルチャ固有の情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを返します。
 
-- 
-  <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> プロパティは、数値データの書式設定で使用されるカルチャ固有の情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトを返します。
+- <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> プロパティは、数値データの書式設定で使用されるカルチャ固有の情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトを返します。
 
-- 
-  <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> プロパティは、カルチャの書記体系に関する情報を提供する <xref:System.Globalization.TextInfo> オブジェクトを返します。
+- <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> プロパティは、カルチャの書記体系に関する情報を提供する <xref:System.Globalization.TextInfo> オブジェクトを返します。
 
 一般に、特定の <xref:System.Globalization.CultureInfo> プロパティおよび関連するオブジェクトの値について何も想定しないでください。 代わりに、次の理由により、カルチャ固有のデータは変更される可能性があると考える必要があります。
 

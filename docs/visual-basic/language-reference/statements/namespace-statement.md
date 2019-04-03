@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 1268982eb841327d72ce195992f8c4dcad4440a7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966178"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820933"
 ---
 # <a name="namespace-statement"></a>Namespace ステートメント
 名前空間の名前を宣言し、ソース コードがその名前空間内でコンパイルするように宣言します。  
@@ -32,13 +32,13 @@ End Namespace
   
 ## <a name="parts"></a>指定項目  
  Global  
- 任意。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
+ 省略可能です。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
   
  `name`  
  必須。 名前空間を識別する一意の名前。 有効な Visual Basic 識別子である必要があります。 詳細については、次を参照してください。 [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
   
  `componenttypes`  
- 任意。 名前空間を構成する要素。 これらは、含めるが、列挙体、構造体、インターフェイス、クラス、モジュール、デリゲート、および他の名前空間に限定されません。  
+ 省略可能です。 名前空間を構成する要素。 これらは、含めるが、列挙体、構造体、インターフェイス、クラス、モジュール、デリゲート、および他の名前空間に限定されません。  
   
  `End Namespace`  
  終了、`Namespace`ブロックします。  
@@ -103,6 +103,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)

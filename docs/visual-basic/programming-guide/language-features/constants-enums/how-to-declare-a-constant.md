@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964927"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843410"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数 (Visual Basic) の宣言します。
 使用する、`Const`定数を宣言し、その値を設定するステートメント。 定数を宣言すると、値に意味のある名前を割り当てます。 定数が宣言されると、変更または新しい値を代入することはできません。  
@@ -66,6 +66,7 @@ ms.locfileid: "56964927"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [定数とリテラルのデータ型](constant-and-literal-data-types.md)
 - [定数の概要](constants-overview.md)

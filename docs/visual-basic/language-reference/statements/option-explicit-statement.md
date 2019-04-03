@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: bfedda6dba7f21efa8e808e85869e6f96710e11b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965879"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841460"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit ステートメント (Visual Basic)
 ファイルでは、すべての変数の明示的な宣言を強制または変数の暗黙的な宣言を許可します。  
@@ -29,10 +29,10 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>指定項目  
  `On`  
- 任意。 により、`Option Explicit`をチェックします。 場合`On`または`Off`が指定されていない、既定値は`On`します。  
+ 省略可能です。 により、`Option Explicit`をチェックします。 場合`On`または`Off`が指定されていない、既定値は`On`します。  
   
  `Off`  
- 任意。 無効にします`Option Explicit`をチェックします。  
+ 省略可能です。 無効にします`Option Explicit`をチェックします。  
   
 ## <a name="remarks"></a>Remarks  
  ときに`Option Explicit On`または`Option Explicit`を使用してすべての変数を明示的に宣言する必要がありますが、ファイルに表示されます、`Dim`または`ReDim`ステートメント。 宣言されていない変数名を使用しようとすると、コンパイル時にエラーが発生します。 `Option Explicit Off`ステートメントは、変数の暗黙的な宣言を使用できます。  
@@ -67,6 +67,7 @@ Option Explicit { On | Off }
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)

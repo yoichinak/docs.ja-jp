@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: fdea071f8c41f2e707d10c96c8b6ab1fbb44bad0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733312"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835662"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 暗黙の型変換を制限するための厳密な型のセマンティクスを適用します。  
@@ -27,7 +27,7 @@ ms.locfileid: "54733312"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 `-optionstrict+`オプションは、暗黙的な型変換を制限します。 このオプションの既定値は`-optionstrict-`します。 `-optionstrict+`オプションは、同じ`-optionstrict`します。 制限の緩やかな型のセマンティクスの両方を使用することができます。  
+ 省略可能です。 `-optionstrict+`オプションは、暗黙的な型変換を制限します。 このオプションの既定値は`-optionstrict-`します。 `-optionstrict+`オプションは、同じ`-optionstrict`します。 制限の緩やかな型のセマンティクスの両方を使用することができます。  
   
  `custom`  
  必須。 厳密な言語セマンティクスが守られていない場合に警告します。  
@@ -57,6 +57,7 @@ vbc -optionstrict+ test.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)

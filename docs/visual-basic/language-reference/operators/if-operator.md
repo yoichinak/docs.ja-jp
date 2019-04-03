@@ -11,12 +11,12 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-ms.openlocfilehash: 25b0d7e85fe1c1e0d0589b4b9a9db2d85ca71526
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965907"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834636"
 ---
 # <a name="if-operator-visual-basic"></a>If 演算子 (Visual Basic)
 ショート サーキット評価の条件付きで 2 つの値のいずれかを返すを使用します。 `If`演算子は、3 つの引数と 2 つの引数に呼び出すことができます。  
@@ -34,9 +34,9 @@ If( [argument1,] argument2, argument3 )
   
 |用語|定義|  
 |---|---|  
-|`argument1`|必須。 `Boolean`。 評価し、返すその他の引数のどちらを決定します。|  
-|`argument2`|必須。 `Object`。 評価され、返された場合`argument1`に評価される`True`します。|  
-|`argument3`|必須。 `Object`。 評価され、返された場合`argument1`に評価される`False`場合`argument1`は、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)します。|  
+|`argument1`|必須。 `Boolean`. 評価し、返すその他の引数のどちらを決定します。|  
+|`argument2`|必須。 `Object`. 評価され、返された場合`argument1`に評価される`True`します。|  
+|`argument3`|必須。 `Object`. 評価され、返された場合`argument1`に評価される`False`場合`argument1`は、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)します。|  
   
  `If`のように 3 つの引数で呼び出される演算子の動作、`IIf`関数を使用するショート サーキット評価します。 `IIf`関数は、引数の 3 つすべてを常に評価は、`If`を 3 つの引数を持つ演算子が 2 つのみを評価します。 最初の`If`引数が評価され、結果としてキャスト、`Boolean`値、`True`または`False`します。 値が場合`True`、`argument2`が評価され、その値が返されますが、`argument3`は評価されません。 場合の値、`Boolean`式が`False`、`argument3`が評価され、その値が返されますが、`argument2`は評価されません。 次の例の使用方法を示します`If`3 つの引数を使用する場合。  
   
@@ -53,14 +53,15 @@ If( [argument1,] argument2, argument3 )
   
 |用語|定義|  
 |---|---|  
-|`argument2`|必須。 `Object`。 参照または null 許容型である必要があります。 評価され、以外の値に評価するときに返される`Nothing`します。|  
-|`argument3`|必須。 `Object`。 評価され、返された場合`argument2`に評価される`Nothing`します。|  
+|`argument2`|必須。 `Object`. 参照または null 許容型である必要があります。 評価され、以外の値に評価するときに返される`Nothing`します。|  
+|`argument3`|必須。 `Object`. 評価され、返された場合`argument2`に評価される`Nothing`します。|  
   
  ときに、`Boolean`引数を省略すると、最初の引数が参照または null 許容型にする必要があります。 最初の引数が評価された場合`Nothing`、2 番目の引数の値が返されます。 その他のすべてのケースでは、最初の引数の値が返されます。 次の例では、この評価のしくみを示しています。  
   
  [!code-vb[VbVbalrOperators#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class4.vb#102)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Interaction.IIf%2A>
 - [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Nothing](../../../visual-basic/language-reference/nothing.md)

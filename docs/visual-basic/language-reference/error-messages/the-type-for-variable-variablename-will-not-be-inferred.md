@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: d7289b8ab0a141d6efdb0f4ca4b4547f15e0e182
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838819"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>変数の型 '\<variablename >' は、外側のスコープ内のフィールドにバインドされているために、推論できません。
 変数の型 '\<variablename >' は、外側のスコープ内のフィールドにバインドされているために、推論できません。 名前を変更するか '\<variablename >'、または完全修飾名 (たとえば、Me.variablename"や 'MyBase.variablename') を使用します。  
@@ -82,6 +82,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)

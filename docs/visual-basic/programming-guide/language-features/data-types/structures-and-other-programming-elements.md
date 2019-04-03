@@ -8,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679592"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819110"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>構造体およびその他のプログラミング要素 (Visual Basic)
 構造体は、配列、オブジェクト、および手順については、相互に組み合わせて使用できます。 相互作用は、これらの要素を個別に使用するように同じ構文を使用します。  
@@ -123,6 +123,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
  構造体は、任意の深さを他の構造体を含めることができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

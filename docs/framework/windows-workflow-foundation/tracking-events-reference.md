@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57712215"
 ---
 # <a name="tracking-events-reference"></a>追跡イベントのリファレンス
-
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] のワークフローが実行中にライフタイムのさまざまなステージを移行するとき、追跡イベントが発生します。 ホストはこれらのイベントに定期受信し、ライフタイム中のワークフローの進行状況について最新の状態に保ちます。 ここでは、発生する追跡イベントについて説明します。  
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] のワークフローが実行中にライフタイムのさまざまなステージを移行するとき、追跡イベントが発生します。 ホストはこれらのイベントに定期受信し、ライフタイム中のワークフローの進行状況について最新の状態に保ちます。 ここでは、発生する追跡イベントについて説明します。  
   
 ## <a name="event-reference"></a>イベント リファレンス  
   

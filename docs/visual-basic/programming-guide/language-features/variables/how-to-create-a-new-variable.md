@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: db317b160a27c7e38bddba82eb4eac3088886705
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86236f7e6f4821cc45dfab80273d82b6f167fba8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506889"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823286"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>方法: 新しい変数 (Visual Basic) を作成します。
 変数を作成する、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。  
@@ -31,7 +31,7 @@ ms.locfileid: "54506889"
   
      必要はありません、`Dim`の宣言でその他のキーワードを使用する場合は、キーワード。  
   
-3.  Visual Basic の規則と規則に従う必要があります、変数の名前を持つ仕様に従ってください。 詳細については、次を参照してください。 [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+3.  Visual Basic の規則と規則に従う必要があります、変数の名前を持つ仕様に従ってください。 詳細については、次を参照してください。 [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
   
     ```  
     Public Static newCustomer  
@@ -56,9 +56,10 @@ ms.locfileid: "54506889"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [ステートメント](../../../../visual-basic/language-reference/statements/index.md)

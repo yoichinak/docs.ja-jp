@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
-![カバーの画像](./media/cover.png)
+![最新の Web アプリケーションの設計ガイドのイメージについて説明します。](./media/index/web-application-guide-cover-image.png)
 
 発行者
 

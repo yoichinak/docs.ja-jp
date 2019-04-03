@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: 4d91b7a3c57db38fde3cf371773e8d64834a8f72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819230"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>匿名型メンバーの名前は、引数なしの簡易名または修飾名からのみ推論できます
 複雑な式から匿名型メンバーの名前を推論することはできません。  
@@ -36,5 +36,6 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [方法: 匿名型の宣言におけるプロパティ名と型を推論します。](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

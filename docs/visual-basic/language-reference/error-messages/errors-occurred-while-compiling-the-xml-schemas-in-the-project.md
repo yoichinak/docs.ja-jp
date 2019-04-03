@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 17886ececbd418ae60d6321c7a6278a1e982b9af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842526"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>プロジェクトで、XML スキーマのコンパイル中にエラーが発生しました
 プロジェクトでは、XML スキーマのコンパイル中にエラーが発生しました。 このため、XML IntelliSense は使用できません。  
@@ -32,5 +32,6 @@ ms.locfileid: "54611281"
 -   XSD スキーマのエラーが識別されない場合、XML コンパイラに詳細なエラー メッセージを提供するための十分な情報ことはできません。 場合に、プロジェクトの一致に含まれる .xsd ファイルの XML 名前空間が、Visual Studio で設定する XML スキーマで特定された XML 名前空間を使用することを確認するより詳細なエラー情報を取得することができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [[エラー一覧] ウィンドウ](/visualstudio/ide/reference/error-list-window)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: fb25ecad3b797a4993e7a780823a38a0f0ccbd1f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975629"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818421"
 ---
 # <a name="attribute-list-visual-basic"></a>属性リスト (Visual Basic)
 宣言されたプログラミング要素に適用される属性を指定します。 複数の属性を指定するときは、コンマで区切ります。 1 つの属性の構文を次に示します。  
@@ -26,8 +26,8 @@ ms.locfileid: "56975629"
 |---|---|
 |`attributemodifier`|ソース ファイルの先頭に適用される属性に必要です。 [アセンブリ](../../../visual-basic/language-reference/modifiers/assembly.md)または[モジュール](../../../visual-basic/language-reference/modifiers/module-keyword.md)します。|
 |`attributename`| 必須。 属性の名前。|
-|`attributearguments`|任意。 この属性の位置指定引数のリスト。 複数の引数は、コンマで区切られます。|
-|`attributeinitializer`|任意。 この属性の変数またはプロパティの初期化子の一覧です。 複数の初期化子は、コンマで区切られます。|
+|`attributearguments`|省略可能です。 この属性の位置指定引数のリスト。 複数の引数は、コンマで区切られます。|
+|`attributeinitializer`|省略可能です。 この属性の変数またはプロパティの初期化子の一覧です。 複数の初期化子は、コンマで区切られます。|
   
 ## <a name="remarks"></a>Remarks  
  ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティ、およびなど) には、1 つまたは複数の属性を適用できます。 属性がアセンブリのメタデータに表示され、コードの注釈を設定または特定のプログラミング要素を使用する方法を指定するのに役立ちます。 Visual Basic と .NET Framework によって定義された属性を適用して、独自の属性を定義することができます。  
@@ -54,6 +54,7 @@ ms.locfileid: "56975629"
  <xref:System.Runtime.InteropServices.DllImportAttribute> 属性付きの手順がアンマネージ ダイナミック リンク ライブラリ (DLL) のエントリ ポイントを表すことを示します。 属性は、位置指定引数として DLL 名と変数の初期化子とその他の情報を提供します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
 - [Module \<キーワード>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -2,12 +2,12 @@
 title: '方法: 作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746391"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819403"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>方法: 作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
@@ -118,6 +118,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
  コマンドラインからのビルドの詳細については、次を参照してください。 および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラミングの概念](../../../../visual-basic/programming-guide/concepts/index.md)
-- [.Net アセンブリ](../../../../standard/assembly/index.md)
+- [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [DLL 関数を保持するクラスの作成](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977982"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654823"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -60,7 +60,7 @@ query1
 
 このテーブルには、次の形式でデータベース前提としています。
 
-![サンプル データベースのダイアグラム](../media/StudentCourseDB.png)
+![サンプル データベースを示す図。](./media/query-expressions/student-course-database.png)
 
 続くテーブル内のコードでは、次のデータベース接続コードも前提としています。 プロジェクトには、System.Data、System.Data.Linq、FSharp.Data.TypeProviders アセンブリへの参照を追加する必要があります。 このデータベースを作成するコードは、このトピックの最後に含まれています。
 
@@ -1010,7 +1010,7 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>
@@ -1034,9 +1034,9 @@ query {
     for student in db.Student do
     select
         (if student.Age.HasValue && student.Age.Value = -1 then
-             (student.StudentID, System.Nullable<int>(100), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(100), student.Age)
          elif student.Age.HasValue && student.Age.Value = 0 then
-             (student.StudentID, System.Nullable<int>(1000), student.Age)
+             (student.StudentID, System.Nullable&lt;int&gt;(1000), student.Age)
          else (student.StudentID, student.Age, student.Age))
 }
 </code></pre>

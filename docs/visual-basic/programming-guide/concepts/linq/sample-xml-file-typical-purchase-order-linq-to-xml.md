@@ -1,15 +1,15 @@
 ---
-title: サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)
+title: 'サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 65321b9c-1239-45e4-af40-eb86cedf7abd
-ms.openlocfilehash: cd3478c6f8cf246d7c3f9df34c597d4d265881b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a36d5cafaa276bac667b13d0cf3ada00683acb13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729301"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820335"
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルは、一般的な購買発注書です。  
   
 ## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
@@ -52,4 +52,5 @@ ms.locfileid: "54729301"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [サンプル XML ドキュメント (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

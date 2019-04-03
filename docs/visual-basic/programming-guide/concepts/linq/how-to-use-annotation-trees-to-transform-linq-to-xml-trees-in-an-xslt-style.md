@@ -2,12 +2,12 @@
 title: '方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746300"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824872"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには
 注釈を使用することで、XML ツリーの変換が容易になります。  
@@ -34,7 +34,7 @@ ms.locfileid: "54746300"
   
 -   注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。  
   
--   特別な規則があります。かどうか、新しい要素の子ノードが別の名前空間、この目的で構成される名前空間には (この例では、名前空間は`http://www.microsoft.com/LinqToXmlTransform/2007`)、その子要素は、新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
+-   特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
   
 -   これは、XSL での変換の仕様にある程度似ています。 一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。 注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。  
   
@@ -379,4 +379,5 @@ After Transform
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

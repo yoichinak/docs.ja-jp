@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373100"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466219"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、windows で Windows Presentation Foundation (WPF) スタンドアロン アプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロン[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを使用して独自のウィンドウの提供、<xref:System.Windows.Window>クラス。 このトピックでは<xref:System.Windows.Window>を作成して、スタンドアロン アプリケーションで windows の管理の基礎を紹介します。  
@@ -44,9 +44,9 @@ ms.locfileid: "57373100"
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>ウィンドウ クラス  
- 次の図は、ウィンドウの構成パーツを示しています。  
+ 次の図は、ウィンドウの構成要素を示しています。  
   
- ![ウィンドウ要素](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![ウィンドウ要素を示すスクリーン ショット。](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  ウィンドウは、非クライアント領域とクライアント領域の 2 つに分かれます。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "57373100"
   
  呼び出すことによって、ウィンドウが開かれた最後に、<xref:System.Windows.Window.Show%2A>メソッドは、結果は次の図に示します。  
   
- ![Window.Show の呼び出しによって開いたウィンドウ](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Window.Show の呼び出しによって開いたウィンドウ](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  呼び出すことによって開かれたウィンドウ<xref:System.Windows.Window.Show%2A>はモードレス ウィンドウは、アプリケーションは、同じアプリケーションの他のウィンドウをアクティブ化できるモードで動作することを意味します。  
   
@@ -282,13 +282,13 @@ ms.locfileid: "57373100"
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>ウィンドウの有効期間イベント  
- 次の図は、ウィンドウの有効期間内における主要なイベントのシーケンスを示しています。  
+ 次の図は、ウィンドウの有効期間に主要なイベントのシーケンスを示しています。  
   
- ![ウィンドウの有効期間](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![ウィンドウの有効期間中にイベントを示す図。](./media/wpf-windows-overview/window-lifetime-events.png)  
   
  次の図は、ライセンス認証を行わずに表示されるウィンドウの有効期間の主要なイベントのシーケンスを示します (<xref:System.Windows.Window.ShowActivated%2A>に設定されている`false`ウィンドウが表示される前に)。  
   
- ![ウィンドウの有効期間 &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![ライセンス認証なしのウィンドウの有効期間でイベントを示す図。](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>ウィンドウの位置  
@@ -328,13 +328,13 @@ ms.locfileid: "57373100"
   
  ウィンドウのサイズに合わせたサイズのコンテンツ、ウィンドウの高さと幅が希望される場合は、使用することができます、<xref:System.Windows.Window.SizeToContent%2A>プロパティで、次の値があります。  
   
--   <xref:System.Windows.SizeToContent.Manual>。 効果 (既定値)。  
+-   <xref:System.Windows.SizeToContent.Manual>. 効果 (既定値)。  
   
--   <xref:System.Windows.SizeToContent.Width>。 両方の設定と同じ効果がありますが、コンテンツの幅に合わせる<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
+-   <xref:System.Windows.SizeToContent.Width>. 両方の設定と同じ効果がありますが、コンテンツの幅に合わせる<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
   
--   <xref:System.Windows.SizeToContent.Height>。 コンテンツの高さは、両方の設定と同じ効果に合わせる<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>コンテンツの高さにします。  
+-   <xref:System.Windows.SizeToContent.Height>. コンテンツの高さは、両方の設定と同じ効果に合わせる<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>コンテンツの高さにします。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>。 コンテンツの幅と高さで、両方の設定と同じ効果<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>、コンテンツと設定の両方の高さに<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. コンテンツの幅と高さで、両方の設定と同じ効果<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>、コンテンツと設定の両方の高さに<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
   
  次の例では、ウィンドウを最初に表示するときに、そのコンテンツに合わせて垂直方向と水平方向の両方のサイズを自動的に変更するウィンドウを示しています。  
   
@@ -351,21 +351,21 @@ ms.locfileid: "57373100"
   
  **高さのプロパティ:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **幅のプロパティ:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ ms.locfileid: "57373100"
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- これらのウィンドウ スタイルの効果については、次の図で説明します。  
+ これらのウィンドウ スタイルの効果は、次の図に示します。  
   
- ![ウィンドウ スタイル](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![ウィンドウの境界線のスタイルの図。](./media/wpf-windows-overview/window-border-styles.png)  
   
  設定できる<xref:System.Windows.Window.WindowStyle%2A>いずれかを使用して[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップまたはコード ウィンドウの有効期間中に変更する可能性がないため、ほとんどの場合を構成を使用して[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップ。  
   
@@ -448,9 +448,9 @@ ms.locfileid: "57373100"
 #### <a name="non-rectangular-window-style"></a>四角形以外のウィンドウ スタイル  
  境界線スタイルを設定、状況もあります<xref:System.Windows.Window.WindowStyle%2A>により満たされない場合。 たとえばなどが四角形以外の枠線でアプリケーションを作成することがあります[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]を使用します。  
   
- たとえば、次の図に示す吹き出しウィンドウを想定します。  
+ たとえば、次の図に示す吹き出しウィンドウがあるとします。  
   
- ![四角形以外のウィンドウ](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![ドラッグ me. ことを示す音声バブル ウィンドウ](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  この種類のウィンドウを設定して作成できます、<xref:System.Windows.Window.WindowStyle%2A>プロパティを<xref:System.Windows.WindowStyle.None>、および特殊なを使用してサポートを<xref:System.Windows.Window>の透明度が。  
   
@@ -460,9 +460,10 @@ ms.locfileid: "57373100"
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>タスク バーのプレゼンス  
- ウィンドウの既定の外観には、次の図に示すような、タスク バー ボタンも含まれます。  
-  
- ![タスク バー ボタンがあるウィンドウ](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+ウィンドウの既定の外観には、次の図に示すように、タスク バーのボタンが含まれています。
+
+ ![タスク バー ボタンを持つウィンドウを示すスクリーン ショット。](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  ウィンドウの種類によってはメッセージ ボックスやダイアログ ボックスなどのタスク バー ボタンがない (を参照してください[ダイアログ ボックスの概要](dialog-boxes-overview.md))。 ウィンドウのタスク バー ボタンを設定して表示するかを制御することができます、<xref:System.Windows.Window.ShowInTaskbar%2A>プロパティ (`true`既定)。  
   

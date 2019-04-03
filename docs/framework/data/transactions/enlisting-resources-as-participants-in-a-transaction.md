@@ -24,8 +24,7 @@ ms.locfileid: "57366102"
 
 簡単に説明すると、リソースが永続性をサポートするかどうかに応じて、<xref:System.Transactions.Transaction.EnlistDurable%2A> メソッドまたは <xref:System.Transactions.Transaction.EnlistVolatile%2A> メソッドのどちらを使用するかを決定した後、リソース マネージャーに <xref:System.Transactions.IEnlistmentNotification> インターフェイスを実装して、2 フェーズ コミット (2PC) に参加するようにリソースを登録する必要があります。 2 pc の詳細については、[単一フェースおよび複数フェーズでトランザクションをコミットする](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)を参照してください。
 
-
-  <xref:System.Transactions.Transaction.EnlistDurable%2A> および <xref:System.Transactions.Transaction.EnlistVolatile%2A> を複数回呼び出すことにより、これらのプロトコルのうち、複数のプロトコルに単一の参加要素を参加させることができます。
+<xref:System.Transactions.Transaction.EnlistDurable%2A> および <xref:System.Transactions.Transaction.EnlistVolatile%2A> を複数回呼び出すことにより、これらのプロトコルのうち、複数のプロトコルに単一の参加要素を参加させることができます。
 
 ### <a name="durable-enlistment"></a>永続的参加リスト
 

@@ -2,12 +2,12 @@
 title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
-ms.openlocfilehash: 9769e98d1046bbe795040782ca5d8164140b4b0d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: d7ebf32467c7ed1d54279a93c5052e7a52dc52f7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904859"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462722"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] は、<xref:System.Data.DataSet> オブジェクトにキャッシュされたデータに対するクエリをより簡単に、より高速にします。 具体的には、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]個別のクエリ言語を使用して、クエリの代わりに、プログラミング言語そのものを記述できるので、クエリを簡略化します。 これは、コンパイル時の構文チェック、静的な型指定、およびそのクエリで Visual Studio によって提供される IntelliSense サポートのメリットを得ることができます、Visual Studio 開発者に特に便利です。  
@@ -16,7 +16,7 @@ ms.locfileid: "55904859"
   
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]機能は、拡張メソッドによって主に公開されて、<xref:System.Data.DataRowExtensions>と<xref:System.Data.DataTableExtensions>クラス。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] ビルドされ、既存を使用して[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]のアーキテクチャを置き換えるものでありません[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]アプリケーション コードでします。 既存の ADO.NET 2.0 コードは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] アプリケーションにおいても機能します。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] と [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] のリレーションシップとデータ ストアを次の図に示します。  
   
- ![ADO.NET プロバイダーに基づく LINQ to DataSet](../../../../docs/framework/data/adonet/media/linqtodataset.gif "LINQtoDataSet")  
+ ![LINQ to DataSet が ADO.NET プロバイダーに基づくされていることを示す図。](./media/linq-to-dataset/linq-dataset-ado-dotnet-provider.gif)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [はじめに](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "55904859"
  <xref:System.Data.DataRowComparer>  
   
 ## <a name="see-also"></a>関連項目
-- [統合言語クエリ (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [統合言語クエリ (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ と ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

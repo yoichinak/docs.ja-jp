@@ -21,12 +21,12 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 1273871faf65afdd1a894c03f13a2c93507c1b13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505862"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836585"
 ---
 # <a name="derived-math-functions-visual-basic"></a>数値演算関数の導出 (Visual Basic)
 次の表はの組み込みの数学関数から派生可能な非組み込みの数学関数、<xref:System.Math?displayProperty=nameWithType>オブジェクト。 組み込みの数学関数を追加することでアクセスできる`Imports System.Math`ファイルまたはプロジェクトにします。  
@@ -55,4 +55,5 @@ ms.locfileid: "54505862"
 |逆双曲線余接 (Acoth(x))|Log((x + 1) / (x – 1)) / 2|  
   
 ## <a name="see-also"></a>関連項目
+
 - [数値演算関数](../../../visual-basic/language-reference/functions/math-functions.md)

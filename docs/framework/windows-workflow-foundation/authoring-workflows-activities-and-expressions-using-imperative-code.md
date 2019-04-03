@@ -52,8 +52,7 @@ new Assign<int>
   
  C# 式は、その式を含むワークフローが呼び出される前にコンパイルする必要があります。 場合、C#式がコンパイルされない、 <xref:System.NotSupportedException> 、次のようなメッセージでワークフローが呼び出される場合にスローされます。`Expression Activity type 'CSharpValue`1' を実行するためにコンパイルが必要です。  ワークフローがコンパイルされていることを確認してください。 ' Visual Studio は、c# で作成されたワークフローに関連するほとんどのシナリオで式は、自動的にコンパイルされますが、コード ワークフローなど、一部のシナリオで c# 式は、手動でコンパイルします。 C# の式をコンパイルする方法の例は、次を参照してください。、[コード ワークフローで c# を使用した式](csharp-expressions.md#CodeWorkflows)のセクション、 [C# 式](csharp-expressions.md)トピック。  
   
- 
-  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> は式の右辺値として使用できる Visual Basic 構文の式を表し、<xref:Microsoft.CSharp.Activities.CSharpValue%601> は式の右辺値として使用できる C# 構文の式を表します。 これらの式は、含まれるアクティビティが実行されるたびに評価されます。 式の結果はワークフローの変数 `n` に代入され、これらの結果はワークフローの次のアクティビティによって使用されます。 実行時にワークフローの変数 `n` の値にアクセスするには、<xref:System.Activities.ActivityContext> が必要です。 次のようなラムダ式を使用するとアクセスできます。  
+ <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> は式の右辺値として使用できる Visual Basic 構文の式を表し、<xref:Microsoft.CSharp.Activities.CSharpValue%601> は式の右辺値として使用できる C# 構文の式を表します。 これらの式は、含まれるアクティビティが実行されるたびに評価されます。 式の結果はワークフローの変数 `n` に代入され、これらの結果はワークフローの次のアクティビティによって使用されます。 実行時にワークフローの変数 `n` の値にアクセスするには、<xref:System.Activities.ActivityContext> が必要です。 次のようなラムダ式を使用するとアクセスできます。  
   
 > [!NOTE]
 >  この 2 つのコードはプログラミング言語として C# を使用している例ですが、1 つは <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用し、もう 1 つは <xref:Microsoft.CSharp.Activities.CSharpValue%601> を使用しています。 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> および <xref:Microsoft.CSharp.Activities.CSharpValue%601> は、Visual Basic と C# の両方のプロジェクトで使用できます。 既定では、ワークフロー デザイナーで作成された式は、ホスティング プロジェクトの言語に一致します。 ワークフローをコードで作成する場合、必要な言語はワークフロー作成者の判断に委ねられます。  
@@ -72,8 +71,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 
-  `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 XAML のワークフローをシリアル化の詳細については、[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)を参照してください。  
+ 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 XAML のワークフローをシリアル化の詳細については、次を参照してください。[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)します。  
   
 #### <a name="literal-expressions-and-reference-types"></a>リテラル式と参照型  
  リテラル式は、ワークフロー内では <xref:System.Activities.Expressions.Literal%601> アクティビティによって表されます。 次の <xref:System.Activities.Statements.WriteLine> アクティビティは機能的には同じです。  
@@ -144,11 +142,9 @@ new InvokeMethod<int>
 ## <a name="compiled-activities"></a>コンパイルされたアクティビティ  
  動的アクティビティは、コードを使用して引数を格納するアクティビティを定義するための 1 つの方法ですが、アクティビティをコードで作成して型にコンパイルすることもできます。 <xref:System.Activities.CodeActivity> から派生する単純なアクティビティと、<xref:System.Activities.AsyncCodeActivity> から派生する非同期アクティビティを作成できます。 これらのアクティビティは、引数を保持し、値を返して、命令型コードを使用してロジックを定義できます。 これらの種類のアクティビティを作成する例については、[CodeActivity 基本クラス](workflow-activity-authoring-using-the-codeactivity-class.md)と[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)を参照してください。  
   
- 
-  <xref:System.Activities.NativeActivity> から派生するアクティビティは、命令型コードを使用してロジックを定義できるだけでなく、ロジックを定義する子アクティビティを含むこともできます。 これらのアクティビティは、ブックマークの作成など、ランタイムの機能をすべて利用できます。 作成の例については、 <xref:System.Activities.NativeActivity>-ベースのアクティビティを参照してください[NativeActivity の基本クラス](nativeactivity-base-class.md)、[方法。アクティビティ作成](how-to-create-an-activity.md)、および[Native Activity を使用してカスタム複合](./samples/custom-composite-using-native-activity.md)サンプル。  
+ <xref:System.Activities.NativeActivity> から派生するアクティビティは、命令型コードを使用してロジックを定義できるだけでなく、ロジックを定義する子アクティビティを含むこともできます。 これらのアクティビティは、ブックマークの作成など、ランタイムの機能をすべて利用できます。 作成の例については、 <xref:System.Activities.NativeActivity>-ベースのアクティビティを参照してください[NativeActivity の基本クラス](nativeactivity-base-class.md)、[方法。アクティビティ作成](how-to-create-an-activity.md)、および[Native Activity を使用してカスタム複合](./samples/custom-composite-using-native-activity.md)サンプル。  
   
- 
-  <xref:System.Activities.Activity> から派生するアクティビティは、子アクティビティを使用してロジックだけを定義します。 これらのアクティビティは、通常、ワークフロー デザイナーを使用して作成されますが、コードを使用して定義することもできます。 次の例では、`Square` から派生する `Activity<int>` アクティビティが定義されます。 `Square` アクティビティには <xref:System.Activities.InArgument%601> という名前の 1 つの `Value` があり、そのロジックが <xref:System.Activities.Statements.Sequence> プロパティを使用して <xref:System.Activities.Activity.Implementation%2A> アクティビティを指定してロジックを定義します。 <xref:System.Activities.Statements.Sequence> アクティビティには、<xref:System.Activities.Statements.WriteLine> アクティビティと <xref:System.Activities.Statements.Assign%601> アクティビティが含まれています。 この 3 つのアクティビティは、`Square` アクティビティのロジックを実装します。  
+ <xref:System.Activities.Activity> から派生するアクティビティは、子アクティビティを使用してロジックだけを定義します。 これらのアクティビティは、通常、ワークフロー デザイナーを使用して作成されますが、コードを使用して定義することもできます。 次の例では、`Square` から派生する `Activity<int>` アクティビティが定義されます。 `Square` アクティビティには <xref:System.Activities.InArgument%601> という名前の 1 つの `Value` があり、そのロジックが <xref:System.Activities.Statements.Sequence> プロパティを使用して <xref:System.Activities.Activity.Implementation%2A> アクティビティを指定してロジックを定義します。 <xref:System.Activities.Statements.Sequence> アクティビティには、<xref:System.Activities.Statements.WriteLine> アクティビティと <xref:System.Activities.Statements.Assign%601> アクティビティが含まれています。 この 3 つのアクティビティは、`Square` アクティビティのロジックを実装します。  
   
 ```csharp  
 class Square : Activity<int>  

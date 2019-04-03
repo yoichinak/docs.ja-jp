@@ -34,8 +34,7 @@ sgen [options]
 |**/r\[eference\]:**_assemblyfiles_|XML シリアル化が必要な型によって参照されるアセンブリを指定します。 コンマで区切られた複数のアセンブリ ファイルを受け入れます。|  
 |**/s\[ilent\]**|成功メッセージを表示しません。|  
 |**/t\[ype\]:**_type_|指定された型に対してのみ、シリアル化コードを生成します。|  
-|**/v\[erbose\]**|デバッグに関する詳細出力を表示します。 
-  <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
+|**/v\[erbose\]**|デバッグに関する詳細出力を表示します。 <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -47,7 +46,7 @@ sgen [options]
   
  シリアル化する型を含むアセンブリの名前が MyType.dll の場合、関連するシリアル化アセンブリの名前は MyType.XmlSerializers.dll となります。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコマンドは、Data.dll という名前のアセンブリに含まれるすべての型をシリアル化するために、Data.XmlSerializers.dll という名前のアセンブリを作成します。  
   
 ```  

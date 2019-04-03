@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620429"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841259"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>演算子の効率のよい組み合わせ (Visual Basic)
 複雑な式は、さまざまな演算子を含めることができます。 次に例を示します。  
@@ -46,6 +46,7 @@ ms.locfileid: "54620429"
  前の例では、`z + 2`は、最初に評価し、その他のかっこで囲まれた式。 指数演算は、通常は、加算や乗算より高い優先順位はこの例での最後に評価されます他の式がかっこで囲まれているためです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における算術演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Visual Basic における比較演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic での論理とビット処理演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

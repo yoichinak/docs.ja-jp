@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351483"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463320"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>方法: 階層データでマスター詳細パターンを使用する
 この例では、マスター/詳細シナリオを実装する方法を示します。  
@@ -23,7 +23,7 @@ ms.locfileid: "57351483"
   
  次に示すのは、この例のスクリーンショットです。 `Divisions` <xref:System.Windows.Controls.ListBox>の選択項目が自動的に追跡、 `Leagues` <xref:System.Windows.Controls.ListBox>し、対応するデータを表示します。 `Teams` <xref:System.Windows.Controls.ListBox>他の 2 つの選択項目を追跡<xref:System.Windows.Controls.ListBox>コントロール。  
   
- ![マスター&#45;詳細の例](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![マスターを示すスクリーン ショット&#45;詳細のシナリオ例。](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  この例では、2 つの処理は次のとおりです。  
   

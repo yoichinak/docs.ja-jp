@@ -2,12 +2,12 @@
 title: '方法: XmlSerializer の使用 (Visual Basic) をシリアル化します。'
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
-ms.openlocfilehash: 0c57c7a1b24a77485684e9ab5d0feaea1416286e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582683"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821466"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>方法: XmlSerializer の使用 (Visual Basic) をシリアル化します。
 このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
@@ -81,4 +81,5 @@ Testing for type: XElementContainer
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [XElement オブジェクト (Visual Basic) を含むオブジェクト グラフをシリアル化します。](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

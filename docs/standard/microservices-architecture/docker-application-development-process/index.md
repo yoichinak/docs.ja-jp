@@ -26,13 +26,13 @@ ms.date: 09/27/2018
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Visual Studio**。 公式サイト。 \
-  [*https://visualstudio.microsoft.com/vs/*](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
 
 - **Visual Studio Code**。 公式サイト。 \
-  [*https://code.visualstudio.com/download*](https://code.visualstudio.com/download)
+  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
 
 - **Mac および Windows の Docker Community Edition (CE)** \
-  [*https://www.docker.com/community-editions*](https://www.docker.com/community-edition)
+  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET 言語および Docker コンテナーのフレームワーク
 

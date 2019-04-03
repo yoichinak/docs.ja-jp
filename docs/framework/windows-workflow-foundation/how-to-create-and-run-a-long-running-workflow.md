@@ -161,8 +161,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     > [!NOTE]
     >  接続文字列が異なる場合は、使用しているデータベースを参照するように `connectionString` を更新してください。  
   
-4.  
-  `WorkflowInstanceId` プロパティを `WorkflowFormHost` クラスに追加します。  
+4.  `WorkflowInstanceId` プロパティを `WorkflowFormHost` クラスに追加します。  
   
     ```vb  
     Public ReadOnly Property WorkflowInstanceId() As Guid  
@@ -203,8 +202,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     }  
     ```  
   
-6.  
-  `WorkflowHostForm_Load` に次のコードを追加します。  
+6.  `WorkflowHostForm_Load` に次のコードを追加します。  
   
     ```vb  
     'Initialize the store and configure it so that it can be used for  
@@ -234,8 +232,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
      フォームの読み込み時に、`SqlWorkflowInstanceStore` が構成され、範囲とワークフローの種類のコンボ ボックスが既定値に設定されます。さらに、永続化されたワークフロー インスタンスが `InstanceId` コンボ ボックスに追加されます。  
   
-7.  
-  `SelectedIndexChanged` の `InstanceId` ハンドラーを追加します。 切り替えて、ハンドラーを追加する**デザイン ビュー** 、フォームの選択、`InstanceId`コンボ ボックスで、をクリックして、**イベント**の上部にあるアイコン、**プロパティ**ウィンドウとダブルクリック**SelectedIndexChanged**します。  
+7.  `SelectedIndexChanged` の `InstanceId` ハンドラーを追加します。 切り替えて、ハンドラーを追加する**デザイン ビュー** 、フォームの選択、`InstanceId`コンボ ボックスで、をクリックして、**イベント**の上部にあるアイコン、**プロパティ**ウィンドウとダブルクリック**SelectedIndexChanged**します。  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -250,8 +247,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     }  
     ```  
   
-8.  
-  `InstanceId_SelectedIndexChanged` に次のコードを追加します。 ユーザーがコンボ ボックスを使用してワークフローを選択するたびに、このハンドラーによってステータス ウィンドウが更新されます。  
+8.  `InstanceId_SelectedIndexChanged` に次のコードを追加します。 ユーザーがコンボ ボックスを使用してワークフローを選択するたびに、このハンドラーによってステータス ウィンドウが更新されます。  
   
     ```vb  
     If InstanceId.SelectedIndex = -1 Then  
@@ -814,9 +810,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 ### <a name="BKMK_StartWorkflow"></a> 新しいワークフローを開始するには  
   
-1.  
-  `Click` の `NewGame` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`NewGame`します。 
-  `NewGame_Click` ハンドラーが追加され、ビューがフォームのコード ビューに切り替わります。 ユーザーがこのボタンをクリックするたびに、新しいワークフローが開始されます。  
+1.  `Click` の `NewGame` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`NewGame`します。 `NewGame_Click` ハンドラーが追加され、ビューがフォームのコード ビューに切り替わります。 ユーザーがこのボタンをクリックするたびに、新しいワークフローが開始されます。  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -1011,8 +1005,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 ### <a name="BKMK_ResumeWorkflow"></a> ワークフローを再開するには  
   
-1.  
-  `Click` の `EnterGuess` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`EnterGuess`します。 ユーザーがこのボタンをクリックするたびに、ワークフローが再開されます。  
+1.  `Click` の `EnterGuess` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`EnterGuess`します。 ユーザーがこのボタンをクリックするたびに、ワークフローが再開されます。  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1228,8 +1221,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 ### <a name="BKMK_TerminateWorkflow"></a> ワークフローを終了するには  
   
-1.  
-  `Click` の `QuitGame` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`QuitGame`します。 ユーザーがこのボタンをクリックするたびに、現在選択されているワークフローが終了します。  
+1.  `Click` の `QuitGame` ハンドラーを追加します。 ハンドラーを追加するに切り替える**デザイン ビュー**フォーム、およびダブルクリック`QuitGame`します。 ユーザーがこのボタンをクリックするたびに、現在選択されているワークフローが終了します。  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1244,8 +1236,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     }  
     ```  
   
-2.  次のコードを `QuitGame_Click` ハンドラーに追加します。 このコードは、まず、ワークフローの一覧でワークフローが選択されているかどうかを確認します。 その後、永続化されたインスタンスが `WorkflowApplicationInstance` に読み込まれ、`DefinitionIdentity` を使用して適切なワークフロー定義を判断し、`WorkflowApplication` を初期化します。 次に、拡張機能とワークフロー ライフサイクル ハンドラーは、`ConfigureWorkflowApplication` の呼び出しによって構成されます。 
-  `WorkflowApplication` は構成された後に読み込まれ、その後 `Terminate` によって呼び出されます。  
+2.  次のコードを `QuitGame_Click` ハンドラーに追加します。 このコードは、まず、ワークフローの一覧でワークフローが選択されているかどうかを確認します。 その後、永続化されたインスタンスが `WorkflowApplicationInstance` に読み込まれ、`DefinitionIdentity` を使用して適切なワークフロー定義を判断し、`WorkflowApplication` を初期化します。 次に、拡張機能とワークフロー ライフサイクル ハンドラーは、`ConfigureWorkflowApplication` の呼び出しによって構成されます。 `WorkflowApplication` は構成された後に読み込まれ、その後 `Terminate` によって呼び出されます。  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1339,8 +1330,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 6.  いることを確認**NumberGuessWorkflowHost**は、スタートアップ アプリケーションとして設定し、アプリケーションを起動するには、Ctrl + F5 キーを押します。  
   
-7.  推測ゲームとワークフローを開始、およびクリックしての種類の範囲を選択**新しいゲーム**します。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 
-  `WriteLine` アクティビティからの出力がフォームに表示されることに注意してください。  
+7.  推測ゲームとワークフローを開始、およびクリックしての種類の範囲を選択**新しいゲーム**します。 推定値を入力、**推測**ボックスし、をクリックして**移動**推定値を送信します。 `WriteLine` アクティビティからの出力がフォームに表示されることに注意してください。  
   
 8.  ワークフローの種類と数値の範囲を使用して複数のワークフローを開始、いくつかの推定値を入力およびからを選択して、ワークフロー間の切り替え、**ワークフロー インスタンス Id**一覧。  
   

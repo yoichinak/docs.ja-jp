@@ -10,16 +10,15 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: f8c0ab8f52e5819f799d21f7e23eb83684144605
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8f8283e7ed09e657a20addab0b203b3d99420d3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838814"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子軸プロパティ (Visual Basic)
-
-  <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションのいずれかの子にアクセスできます。  
+<xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションのいずれかの子にアクセスできます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,11 +30,9 @@ object.<child>
   
 |用語|定義|  
 |---|---|  
-|`object`|必須。 
-  <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションです。|  
+|`object`|必須。 <xref:System.Xml.Linq.XElement> オブジェクト、<xref:System.Xml.Linq.XDocument> オブジェクト、<xref:System.Xml.Linq.XElement> オブジェクトのコレクション、または <xref:System.Xml.Linq.XDocument> オブジェクトのコレクションです。|  
 |.<|必須。 子軸プロパティの開始を示します。|  
-|`child`|必須。 フォームにアクセスする子ノードの名前 [`prefix:]name`します。<br /><br /> -   `Prefix` -省略可能。 子ノードの XML 名前空間プレフィックスです。 
-  `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name` 必須。 ローカル子ノードの名前です。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
+|`child`|必須。 フォームにアクセスする子ノードの名前 [`prefix:]name`します。<br /><br /> -   `Prefix` -省略可能。 子ノードの XML 名前空間プレフィックスです。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。<br />-   `Name` 必須。 ローカル子ノードの名前です。 参照してください[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。|  
 |>|必須。 子軸プロパティの終了を示します。|  
   
 ## <a name="return-value"></a>戻り値  
@@ -77,6 +74,7 @@ object.<child>
  `Patrick Hines`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)

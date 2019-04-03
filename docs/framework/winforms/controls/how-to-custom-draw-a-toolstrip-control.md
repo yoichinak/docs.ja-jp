@@ -24,8 +24,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57705754"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>方法: ToolStrip コントロールをカスタム描画します。
-
-  <xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
+<xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> は、オペレーティング システムの外観とスタイルを提供します。  
   
@@ -52,8 +51,7 @@ ms.locfileid: "57705754"
   
 ### <a name="to-change-the-professionalcolortable"></a>ProfessionalColorTable を変更するには  
   
--   
-  <xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。  
+-   <xref:System.Windows.Forms.ProfessionalColorTable> をオーバーライドして必要な色を変更します。  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  

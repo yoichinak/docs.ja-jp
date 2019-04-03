@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: 4c1be34cf76cfb12ea1e3b3246e9e0bc26199c24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c086a031d5cef4563a6769e7683dcb1110b8fe49
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687961"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822727"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 オーバーフロー エラーのオンまたはオフ、整数演算のチェックをオンにします。  
@@ -29,7 +29,7 @@ ms.locfileid: "54687961"
   
 |用語|定義|  
 |---|---|  
-|`+` &#124; `-`|任意。 `-removeintchecks-`オプションは、すべての整数の計算でオーバーフロー エラーをチェックするコンパイラ。 既定値は `-removeintchecks-` です。<br /><br /> 指定する`-removeintchecks`または`-removeintchecks+`エラー チェックを防止しより高速の整数の計算を行うことができます。 ただし、エラー チェックを行わないと、エラーを発生させず不適切な結果を格納できるデータ型の容量がオーバーフローした場合。|  
+|`+` &#124; `-`|省略可能です。 `-removeintchecks-`オプションは、すべての整数の計算でオーバーフロー エラーをチェックするコンパイラ。 既定値は `-removeintchecks-` です。<br /><br /> 指定する`-removeintchecks`または`-removeintchecks+`エラー チェックを防止しより高速の整数の計算を行うことができます。 ただし、エラー チェックを行わないと、エラーを発生させず不適切な結果を格納できるデータ型の容量がオーバーフローした場合。|  
   
 |Visual Studio 統合開発環境で-removeintchecks を設定するには|  
 |---|  
@@ -43,5 +43,6 @@ vbc -removeintchecks+ test.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

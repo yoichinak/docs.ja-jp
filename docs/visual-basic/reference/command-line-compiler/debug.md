@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: e32ce702847375c85a805926c56fb965a057ff03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605503"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827979"
 ---
 # <a name="-debug-visual-basic"></a>-デバッグ (Visual Basic)
 コンパイラにデバッグ情報が生成され、出力ファイルに格納します。  
@@ -29,8 +29,8 @@ ms.locfileid: "54605503"
   
 |用語|定義|  
 |---|---|  
-|`+` &#124; `-`|任意。 指定する`+`または`/debug`コンパイラがデバッグ情報を生成して .pdb ファイルに配置します。 指定する`-`指定しない場合と同じ効果`/debug`します。|  
-|`full` &#124; `pdbonly`|任意。 コンパイラによって生成されるデバッグ情報の種類を指定します。 指定しない場合`/debug:pdbonly`、既定値は`full`、実行中のプログラムにデバッガーをアタッチできます。 `pdbonly`引数により、ソース コードのデバッグ、デバッガーでプログラムを開始、実行中のプログラムがデバッガーにアタッチされている場合にのみ、アセンブリ言語のコードを表示します。|  
+|`+` &#124; `-`|省略可能です。 指定する`+`または`/debug`コンパイラがデバッグ情報を生成して .pdb ファイルに配置します。 指定する`-`指定しない場合と同じ効果`/debug`します。|  
+|`full` &#124; `pdbonly`|省略可能です。 コンパイラによって生成されるデバッグ情報の種類を指定します。 指定しない場合`/debug:pdbonly`、既定値は`full`、実行中のプログラムにデバッガーをアタッチできます。 `pdbonly`引数により、ソース コードのデバッグ、デバッガーでプログラムを開始、実行中のプログラムがデバッガーにアタッチされている場合にのみ、アセンブリ言語のコードを表示します。|  
   
 ## <a name="remarks"></a>Remarks  
  このオプションを使用してデバッグ ビルドを作成します。 指定しない場合`/debug`、 `/debug+`、または`/debug:full`プログラムの出力ファイルをデバッグすることはできません。  
@@ -51,6 +51,7 @@ vbc -debug -out:app.exe test.vb
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707431"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653991"
 ---
 # <a name="using-transformations-to-scale-colors"></a>変換を使用した色のスケーリング
 1 つ以上の数が 4 つの色コンポーネントのスケーリング変換を乗算します。 次の表に、スケーリングを表すカラー行列のエントリが与えられます。  
@@ -33,7 +33,7 @@ ms.locfileid: "57707431"
   
  次の図は、右側の左側に、元のイメージおよびスケーリングされたイメージを示します。  
   
- ![カラー スケール](./media/colortrans3.png "colortrans3")  
+ ![元とスケールの色を比較するスクリーン ショット。](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  次の表は、青のスケーリング前に、と後に、4 つのバーの色のベクターを示します。 4 つ目のカラー バーに青のコンポーネント 0.8 から 0.6 をしたことに注意してください。 だ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]結果の小数部の一部のみが保持されます。 たとえば、(2)(0.8) = 1.6、1.6 の小数部は 0.6 です。 小数部分のみを保持により、結果が、常には [0, 1] 間隔。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "57707431"
   
  次の図は、右側の左側に、元のイメージおよびスケーリングされたイメージを示します。  
   
- ![カラー スケール](./media/colortrans4.png "colortrans4")  
+ ![元とスケールの色を比較するスクリーン ショット。](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  次の表は、赤、緑、青のスケーリング前に、と後に、4 つのバーの色のベクターを示します。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: 6c3b0d3b86e871228c4bf3b30f0871015641a730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820738"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>前の関数の評価がタイムアウトしたため、関数の評価は無効になりました。
 前の関数の評価がタイムアウトしたため、関数の評価は無効になりました。関数の評価をもう一度有効にするには、もう一度ステップを実行するか、またはデバッグを再起動してください。  
@@ -32,5 +32,6 @@ ms.locfileid: "54718274"
 2.  デバッガーのステップをもう一度実行するか、デバッガーを終了させて再起動します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)
 - [デバッガーでのコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)

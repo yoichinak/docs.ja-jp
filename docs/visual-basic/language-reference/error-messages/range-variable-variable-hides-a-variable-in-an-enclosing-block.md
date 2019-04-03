@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-ms.openlocfilehash: 8d898d2d3c5f36177a6363c1a24940fe46de83d3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e31f728de228bea743f6c7b5cbfef3cd73367262
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259876"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822714"
 ---
 # <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>範囲変数\<変数 >、それを囲むブロック、以前に定義された範囲変数、またはクエリ式で、暗黙的に宣言された変数内の変数を非表示になります
 指定された範囲変数の名前、 `Select`、 `From`、 `Aggregate`、または`Let`句、クエリまたはクエリで暗黙的に宣言されている変数の名前で既に指定されて範囲変数の名前に重複など、フィールド名または集計関数の名前。  
@@ -24,6 +24,7 @@ ms.locfileid: "55259876"
 -   特定のクエリ スコープ内のすべての範囲変数に一意の名前があることを確認します。 クエリは、入れ子になったクエリは、一意のスコープでいることを確認するためにかっこで囲むことができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
 - [Let 句](../../../visual-basic/language-reference/queries/let-clause.md)

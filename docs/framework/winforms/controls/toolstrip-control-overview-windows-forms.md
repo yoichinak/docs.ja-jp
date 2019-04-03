@@ -49,8 +49,7 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 |名前|説明|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|取得または設定の親コンテナーの端を<xref:System.Windows.Forms.ToolStrip>にドッキングされます。|  
-|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|
-  <xref:System.Windows.Forms.ToolStrip> クラスがドラッグ アンド ドロップおよび項目の並べ替えをプライベートで処理するかどうかを示す値を取得または設定します。|  
+|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|<xref:System.Windows.Forms.ToolStrip> クラスがドラッグ アンド ドロップおよび項目の並べ替えをプライベートで処理するかどうかを示す値を取得または設定します。|  
 |<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|取得または設定を示す値が、どのように<xref:System.Windows.Forms.ToolStrip>その項目のレイアウトします。|  
 |<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|取得または設定するかどうかを<xref:System.Windows.Forms.ToolStripItem>にアタッチされて、<xref:System.Windows.Forms.ToolStrip>または<xref:System.Windows.Forms.ToolStripOverflowButton>2 つの間で変動するか。|  
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|示す値を取得するかどうか、<xref:System.Windows.Forms.ToolStripItem>ドロップダウンからその他の項目を表示するときに、<xref:System.Windows.Forms.ToolStripItem>がクリックされました。|  

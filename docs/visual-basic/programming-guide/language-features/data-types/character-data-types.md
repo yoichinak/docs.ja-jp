@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 5ede86cca1bddb15cab6518e17405837bda008f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14085172a8f9f9d60af0495a36dd4ba7592213fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536894"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840979"
 ---
 # <a name="character-data-types-visual-basic"></a>文字データ型 (Visual Basic)
 Visual Basic では*文字データ型*文字や表示可能な文字を処理します。 Unicode 文字の場合は、どちらも、処理中に`Char`は単一の文字を保持`String`不特定数文字にはが含まれています。  
@@ -40,6 +40,7 @@ Visual Basic では*文字データ型*文字や表示可能な文字を処理�
  詳細については、次を参照してください。[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

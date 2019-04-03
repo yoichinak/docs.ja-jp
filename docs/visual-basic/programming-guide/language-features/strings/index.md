@@ -2,9 +2,15 @@
 title: Visual Basic における文字列
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, strings'
-  - 'strings [Visual Basic], Visual Basic'
+- Visual Basic code, strings
+- strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
+ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821076"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic における文字列
 このセクションでは、Visual Basic で文字列を使用して基本的な概念について説明します。  
@@ -29,4 +35,5 @@ ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
  Triple Data Encryption Standard アルゴリズムの暗号化サービス プロバイダー バージョンを使用して文字列を暗号化および暗号化解除する方法を説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic 言語の機能](../../../../visual-basic/programming-guide/language-features/index.md)

@@ -45,8 +45,7 @@ HRESULT GetReturnValueLiveOffset(
  オフセット IL。 関数呼び出しサイトであることが必要です。そうでない場合、関数呼び出しは失敗します。  
   
  `bufferSize`  
- 
-  `pOffsets` を格納できるバイト数。  
+ `pOffsets` を格納できるバイト数。  
   
  `pFetched`  
  実際に返されたオフセットの数へのポインター。 通常、この値は 1 ですが、単一の IL 命令が複数の `CALL` アセンブリ命令にマップする場合があります。  

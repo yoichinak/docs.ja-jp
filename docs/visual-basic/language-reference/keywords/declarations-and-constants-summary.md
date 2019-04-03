@@ -6,12 +6,12 @@ helpviewer_keywords:
 - declaring constants [Visual Basic], keywords
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
-ms.openlocfilehash: 33f07abcb67afed8d1323e9d90d3b7aabc3b2cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00c789d01a55382254e1d90a13b9d8b0a23a81de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726638"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821856"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>宣言と定数の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -29,5 +29,6 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |継承の実装|[継承](../../../visual-basic/language-reference/statements/inherits-statement.md)、 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)、 [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)、 [MyBase](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、 [MyClass](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)、[新しい](../../../visual-basic/language-reference/operators/new-operator.md)、[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)、 [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)、[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)、[オーバーライド可能な](../../../visual-basic/language-reference/modifiers/overridable.md)、[よりも優先されます](../../../visual-basic/language-reference/modifiers/overrides.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

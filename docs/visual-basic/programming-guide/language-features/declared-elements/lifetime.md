@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976045"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824924"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic における有効期間
 *有効期間*宣言された要素は、一定期間その中に、使用可能です。 変数は、有効期間を持つ要素ののみです。 このため、コンパイラは、プロシージャのパラメーターと変数の特殊なケースとして関数を返します。 変数の有効期間は、値を保持できる期間を表します。 その有効期間、その値を変更できますが、いくつかの値を常に保持します。  
@@ -72,6 +72,7 @@ ms.locfileid: "56976045"
  前の例では、宣言することによって同じ有効期間を生成できます`applesSold`モジュール レベル。 この方法で変数のスコープを変更した場合ただし、プロシージャでに排他的にアクセスが必要なくなりましたがあります。 他のプロシージャにアクセスするため`applesSold`との値を変更、コードを維持するためにはより困難になることし、累計が信頼性が高くない可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

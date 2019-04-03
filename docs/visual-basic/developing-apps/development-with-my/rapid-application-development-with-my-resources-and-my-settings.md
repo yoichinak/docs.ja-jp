@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: 1d5fe35ea491c2c2d3de82ef208fec59a6079a25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4a9021af23200323397cc49fa1a44a0cc48b5a1d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976071"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816708"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources と My.Settings による Rapid Application Development (Visual Basic)
 `My.Resources`オブジェクトは、アプリケーションのリソースへのアクセスを提供し、アプリケーションのリソースを動的に取得することができます。  
@@ -27,6 +27,7 @@ ms.locfileid: "56976071"
  同様に、`My.Settings`オブジェクトは、アプリケーションの設定へのアクセスを提供し、動的に格納し、プロパティの設定と、アプリケーションの他の情報を取得することができます。 詳細については、次を参照してください。 [My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)と[My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)
 - [My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/index.md)

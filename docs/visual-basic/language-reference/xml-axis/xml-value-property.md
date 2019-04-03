@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 7cf1dbb1d9dafa9c690b4043da5a6f36469e8d7a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c7aa1cc32bc1c5ef637f7a606db7e695f1dfaee
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821952"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Value プロパティ (Visual Basic)
 コレクションの最初の要素の値にアクセスできるように<xref:System.Xml.Linq.XElement>オブジェクト。  
@@ -68,6 +68,7 @@ object.Value
  `work`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.Linq.XElement>
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)

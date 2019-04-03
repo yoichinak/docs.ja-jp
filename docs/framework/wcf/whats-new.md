@@ -96,11 +96,9 @@ Windows Communication Foundation (WCF) では、構成ファイルまたはコ�
 
 ## <a name="channelfactory-caching"></a>ChannelFactory のキャッシュ
 
-WCF クライアント アプリケーションでは、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して WCF サービスとの通信チャネルを作成します。 
-  <xref:System.ServiceModel.ChannelFactory%601> インスタンスを作成する場合は、次の操作が必要になるため、オーバーヘッドが生じます。
+WCF クライアント アプリケーションでは、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して WCF サービスとの通信チャネルを作成します。 <xref:System.ServiceModel.ChannelFactory%601> インスタンスを作成する場合は、次の操作が必要になるため、オーバーヘッドが生じます。
 
-1. 
-  <xref:System.ServiceModel.Description.ContractDescription> ツリーの構築
+1. 構築、<xref:System.ServiceModel.Description.ContractDescription>ツリー
 
 2. 必要なすべての CLR 型の反映
 
