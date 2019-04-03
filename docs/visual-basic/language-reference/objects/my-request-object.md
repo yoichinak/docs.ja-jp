@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Request object
 ms.assetid: 93d5f0e2-6b60-4a2c-8652-d90216f6ad10
-ms.openlocfilehash: 7a4e292968cf1d30977b8cacdc8f77152e5cc770
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 08212dc5fe563ce84be02ab706b56195a0636894
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200963"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836624"
 ---
 # <a name="myrequest-object"></a>My.Request オブジェクト
 要求されたページの <xref:System.Web.HttpRequest> オブジェクトを取得します。  
@@ -28,5 +28,6 @@ ms.locfileid: "57200963"
  [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Web.HttpRequest>
 - [My.Response オブジェクト](../../../visual-basic/language-reference/objects/my-response-object.md)
