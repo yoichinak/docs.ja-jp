@@ -67,7 +67,7 @@ Visual Studio デバッガーは、発生させることによってこれらの
 
 ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、次を参照してください。 [csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[(Visual Basic) コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。 
 
-.NET Core 3.0 以降では、ことができますもビルドおよび実行する例では、.NET Core アプリを Windows として .NET Core の Windows フォームのあるフォルダーから*\<フォルダー名 > .csproj*プロジェクト ファイル。 
+.NET Core 3.0 以降では、ことができますもビルドおよび実行する例では、.NET Core アプリを Windows として .NET Core の Windows フォームのあるフォルダーから *\<フォルダー名>.csproj* プロジェクト ファイル。 
 
 ## <a name="example-use-the-invoke-method-with-a-delegate"></a>例:デリゲートで Invoke メソッドを使用します。
 
