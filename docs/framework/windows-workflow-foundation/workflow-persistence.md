@@ -20,7 +20,7 @@ ms.locfileid: "57715543"
   
  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]が付属しています、 **SqlWorkflowInstanceStore**クラスは、SQL Server 2005 または SQL Server 2008 のデータベースにワークフロー インスタンスに関するデータおよびメタデータの永続化できます。 参照してください[SQL Workflow Instance Store](sql-workflow-instance-store.md)の詳細。  
   
- アプリケーション固有のデータをワークフロー インスタンス関連の情報と共に格納し、読み込むために、<xref:System.Activities.Persistence.PersistenceParticipant> クラスを拡張する永続参加要素を作成できます。 永続参加要素は永続化プロセスに参加して、カスタムのシリアル化可能なデータを永続化ストアに保存し、インスタンス ストアからメモリにデータを読み込み、永続化トランザクションで任意の追加ロジックを実行します。 詳細については、次を参照してください。[永続参加要素](persistence-participants.md)します。  
+ アプリケーション固有のデータをワークフロー インスタンス関連の情報と共に格納し、読み込むために、<xref:System.Activities.Persistence.PersistenceParticipant> クラスを拡張する永続参加要素を作成できます。 永続参加要素は永続化プロセスに参加して、カスタムのシリアル化可能なデータを永続化ストアに保存し、インスタンス ストアからメモリにデータを読み込み、永続化トランザクションで任意の追加ロジックを実行します。 詳細については、[永続参加要素](persistence-participants.md)を参照してください。  
   
  Windows Server App Fabric を使用すると、永続化の構成のプロセスを簡潔化できます。 詳細については、次を参照してください[Windows Server App Fabric で永続化の概念。](https://go.microsoft.com/fwlink/?LinkId=201200)  
   

@@ -24,7 +24,7 @@ ms.locfileid: "55903661"
  だけでなく、System.Core.dll に実装された標準クエリ演算子[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]いくつか追加<xref:System.Data.DataSet>-特定の拡張機能のセットに対してクエリを簡単にする<xref:System.Data.DataRow>オブジェクト。 これらの <xref:System.Data.DataSet> 固有の拡張機能には、<xref:System.Data.DataRow> の列値にアクセスするためのメソッドのほか、一連の行を比較するための演算子があります。  
   
 ## <a name="n-tier-applications-and-linq-to-dataset"></a>n 層アプリケーションと LINQ to DataSet  
- n 層データ アプリケーションは、複数の論理レイヤー (層) に分けられた、データ処理を中心とするアプリケーションです。 一般に、n 層アプリケーションには、プレゼンテーション層、中間層、およびデータ層が含まれます。 アプリケーション コンポーネントを別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 N 層データ アプリケーションの詳細については、次を参照してください。 [n 層アプリケーションでデータセットを操作](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)します。  
+ n 層データ アプリケーションは、複数の論理レイヤー (層) に分けられた、データ処理を中心とするアプリケーションです。 一般に、n 層アプリケーションには、プレゼンテーション層、中間層、およびデータ層が含まれます。 アプリケーション コンポーネントを別個の層に分離すると、アプリケーションの保守容易性とスケーラビリティが向上します。 N 層データ アプリケーションの詳細については、[n 層アプリケーションでデータセットを操作](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)を参照してください。  
   
  n 層アプリケーションでは、Web アプリケーションの情報をキャッシュするために <xref:System.Data.DataSet> が中間層で使用されます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ機能は拡張メソッドによって実装され、既存の ADO.NET 2.0 の拡張<xref:System.Data.DataSet>します。  
   

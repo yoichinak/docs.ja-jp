@@ -26,7 +26,7 @@ ms.locfileid: "57711304"
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
   
 ## <a name="structures-to-bind-to"></a>連結するには構造体  
- 単純なから Windows フォームで、構造体のさまざまなにバインドできます ADO.NET データ テーブル (複合バインディング) などの複雑な一覧にオブジェクト (単純バインディング)。 単純なバインディングで Windows フォームでは単純なオブジェクトのパブリック プロパティにバインドをサポートします。 一般に Windows フォームのリストに基づくバインディングではオブジェクトをサポートしている必要があります、<xref:System.Collections.IList>インターフェイスまたは<xref:System.ComponentModel.IListSource>インターフェイス。 さらからにバインドしている場合、<xref:System.Windows.Forms.BindingSource>コンポーネントをサポートするオブジェクトにバインドすることができます、<xref:System.Collections.IEnumerable>インターフェイス。 データ バインディングに関連するインターフェイスの詳細については、次を参照してください。[データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)します。  
+ 単純なから Windows フォームで、構造体のさまざまなにバインドできます ADO.NET データ テーブル (複合バインディング) などの複雑な一覧にオブジェクト (単純バインディング)。 単純なバインディングで Windows フォームでは単純なオブジェクトのパブリック プロパティにバインドをサポートします。 一般に Windows フォームのリストに基づくバインディングではオブジェクトをサポートしている必要があります、<xref:System.Collections.IList>インターフェイスまたは<xref:System.ComponentModel.IListSource>インターフェイス。 さらからにバインドしている場合、<xref:System.Windows.Forms.BindingSource>コンポーネントをサポートするオブジェクトにバインドすることができます、<xref:System.Collections.IEnumerable>インターフェイス。 データ バインディングに関連するインターフェイスの詳細については、[データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)を参照してください。  
   
  Windows フォームにバインドすることができます、構造体を次に示します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "57711304"
  Windows フォームを使用して、オブジェクトのインスタンスでのパブリック プロパティにデータ バインド コントロールのプロパティのサポート、<xref:System.Windows.Forms.Binding>型。 Windows フォーム バインディング リスト ベースのコントロールのようサポートも、<xref:System.Windows.Forms.ListControl>インスタンス オブジェクト、<xref:System.Windows.Forms.BindingSource>使用されます。  
   
  配列またはコレクション  
- データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法。(Visual Basic) のオブジェクトの配列を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))します。  
+ データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、[方法。(Visual Basic) のオブジェクトの配列を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))を参照してください。  
   
  一般に、使用する必要があります<xref:System.ComponentModel.BindingList%601>データ バインド オブジェクトのリストを作成する場合。 <xref:System.ComponentModel.BindingList%601> ジェネリック バージョンは、<xref:System.ComponentModel.IBindingList>インターフェイス。 <xref:System.ComponentModel.IBindingList>インターフェイスは、拡張、<xref:System.Collections.IList>プロパティ、メソッド、および双方向データ バインドに必要なイベントを追加することでインターフェイス。  
   

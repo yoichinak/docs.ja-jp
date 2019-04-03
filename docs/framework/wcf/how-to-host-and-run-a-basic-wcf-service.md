@@ -17,7 +17,7 @@ ms.locfileid: "58410096"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行
 
-このチュートリアルでは、3 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
+このチュートリアルでは、3 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
 
 WCF アプリケーションを作成するための次のタスクでは、コンソール アプリケーションで WCF サービスをホストします。 WCF サービスは、1 つまたは複数公開*エンドポイント*、1 つまたは複数のサービス操作を公開します。 サービス エンドポイントは、次の情報を指定します。 
 - サービスが得られるアドレスです。
@@ -174,7 +174,7 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
     End Module
     ```
     
-    このコードの動作については、次を参照してください。[プログラムの手順をホストしているサービス](#service-hosting-program-steps)します。
+    このコードの動作については、[プログラムの手順をホストしているサービス](#service-hosting-program-steps)を参照してください。
 
 
 2. プロジェクトのプロパティを更新します。
@@ -210,10 +210,10 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
 
 - **手順 2**:インスタンスを作成、<xref:System.ServiceModel.ServiceHost>クラスは、サービスをホストするために使用します。 コンス トラクターは 2 つのパラメーター: サービス コントラクトとサービスのベース アドレスを実装するクラスの型。
 
-- **手順 3**:<xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint>コンス トラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスで構成されます。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルのバインディングが<xref:System.ServiceModel.WSHttpBinding>、組み込みのバインディングし、は、ws-に準拠するエンドポイントに接続 * の仕様。 WCF バインドの詳細については、次を参照してください。 [WCF のバインディングの概要](bindings-overview.md)します。 エンドポイントを識別するためにベース アドレスには、アドレスを追加します。 コードは、CalculatorService ととしてエンドポイントの完全修飾アドレスとしてアドレスを指定します`http://localhost:8000/GettingStarted/CalculatorService`します。
+- **手順 3**:<xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint>コンス トラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスで構成されます。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルのバインディングが<xref:System.ServiceModel.WSHttpBinding>、組み込みのバインディングし、は、ws-に準拠するエンドポイントに接続 * の仕様。 WCF バインドの詳細については、[WCF のバインディングの概要](bindings-overview.md)を参照してください。 エンドポイントを識別するためにベース アドレスには、アドレスを追加します。 コードは、CalculatorService ととしてエンドポイントの完全修飾アドレスとしてアドレスを指定します`http://localhost:8000/GettingStarted/CalculatorService`します。
 
     > [!IMPORTANT]
-    > .NET Framework バージョン 4 以降、サービス エンドポイントの追加は省略可能にします。 これらのバージョン、コードや構成を追加しない場合、WCF はベース アドレスと、サービスによって実装されるコントラクトの組み合わせごとに 1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、次を参照してください。[エンドポイント アドレスを指定する](specifying-an-endpoint-address.md)します。 既定のエンドポイント、バインディング、および動作の詳細については、次を参照してください。[簡略化された構成](simplified-configuration.md)と[WCF サービスの構成を簡略化された](samples/simplified-configuration-for-wcf-services.md)します。
+    > .NET Framework バージョン 4 以降、サービス エンドポイントの追加は省略可能にします。 これらのバージョン、コードや構成を追加しない場合、WCF はベース アドレスと、サービスによって実装されるコントラクトの組み合わせごとに 1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、[エンドポイント アドレスを指定する](specifying-an-endpoint-address.md)を参照してください。 既定のエンドポイント、バインディング、および動作の詳細については、[簡略化された構成](simplified-configuration.md)と[WCF サービスの構成を簡略化された](samples/simplified-configuration-for-wcf-services.md)を参照してください。
 
 - **手順 4**:メタデータ交換を有効にします。 クライアントは、サービス操作を呼び出すためのプロキシを生成するのにメタデータ交換を使用します。 メタデータ交換を有効にするには作成、<xref:System.ServiceModel.Description.ServiceMetadataBehavior>インスタンスは、設定、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled>プロパティを`true`、追加、`ServiceMetadataBehavior`オブジェクトを<xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>のコレクション、<xref:System.ServiceModel.ServiceHost>インスタンス。
 

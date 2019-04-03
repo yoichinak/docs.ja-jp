@@ -98,7 +98,7 @@ UPDATE Table1 Set Col1 = @NewVal1
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated イベント  
  **RowUpdated**のイベント、<xref:System.Data.Common.DataAdapter>オブジェクトは、オプティミスティック同時実行制御違反のアプリケーションに通知を提供する前に説明した手法と組み合わせて使用できます。 **RowUpdated**を更新するには、各再試行の後に発生、 **Modified**から行を**データセット**します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 <xref:System.Data.Common.RowUpdatedEventArgs>オブジェクトを返します、 **RecordsAffected**プロパティ テーブルで変更された行の特定の更新コマンドによって影響を受ける行の数を格納します。 オプティミスティック同時実行性をテストする更新コマンドを設定して、 **RecordsAffected**プロパティは、その結果の値を返す 0、オプティミスティック同時実行制御違反が発生したときにレコードが更新されないためです。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、この状況の発生を処理し、適切な設定によって、例外を回避**RowUpdatedEventArgs.Status**などの値**UpdateStatus.SkipCurrentRow**します。 詳細については、 **RowUpdated**イベントを参照してください[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
   
- 必要に応じて、設定することができます**DataAdapter.ContinueUpdateOnError**に**true**を呼び出す前に**Update**、に格納されているエラー情報および応答する**RowError**行の場合に、特定のプロパティ、 **Update**が完了します。 詳細については、次を参照してください。[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)します。  
+ 必要に応じて、設定することができます**DataAdapter.ContinueUpdateOnError**に**true**を呼び出す前に**Update**、に格納されているエラー情報および応答する**RowError**行の場合に、特定のプロパティ、 **Update**が完了します。 詳細については、[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)を参照してください。  
   
 ## <a name="optimistic-concurrency-example"></a>オプティミスティック コンカレンシーの例  
  設定する単純な例を次に、 **UpdateCommand**の**DataAdapter**をオプティミスティック同時実行性、テストし、使用して、 **RowUpdated**をテストするためのイベントオプティミスティック同時実行制御違反。 アプリケーションは、オプティミスティック同時実行制御違反が発生した場合に、設定、 **RowError**オプティミスティック同時実行制御違反を反映するように、更新が実行されている行のできます。  

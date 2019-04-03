@@ -34,13 +34,13 @@ ms.locfileid: "54704044"
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel 要素  
- 区切られたセクションを使用することができます、`system.ServiceModel`サービスの設定と同様に、1 つまたは複数のエンドポイント サービスの種類を構成する要素。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、次を参照してください。[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)します。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
+ 区切られたセクションを使用することができます、`system.ServiceModel`サービスの設定と同様に、1 つまたは複数のエンドポイント サービスの種類を構成する要素。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)を参照してください。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
   
  バインディングはトランスポート (HTTP、TCP、パイプ、およびメッセージ キュー) とプロトコル (セキュリティ、信頼性、およびトランザクション フロー) を指定し、バインド要素で構成されます。各バインド要素は、エンドポイントの通信方法のさまざまな側面を指定します。  
   
  たとえば、指定すると、 [ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要素は、エンドポイントのトランスポートとして HTTP を使用することを示します。 このエンドポイントを使用するサービスが開かれる実行時に、エンドポイントとの接続に HTTP が使用されます。  
   
- バインディングには、定義済みバインディングとカスタム バインドの 2 種類があります。 定義済みバインディングには、一般的なシナリオで使用される要素の組み合わせが含まれています。 WCF が提供される定義済みバインドの種類の一覧は、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。 定義済みバインディング コレクションに、サービス アプリケーションに必要な正しい機能の組み合わせがないときは、カスタム バインドを作成して、そのアプリケーションの要件を満たすことができます。 カスタム バインドの詳細については、次を参照してください。 [ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)します。  
+ バインディングには、定義済みバインディングとカスタム バインドの 2 種類があります。 定義済みバインディングには、一般的なシナリオで使用される要素の組み合わせが含まれています。 WCF が提供される定義済みバインドの種類の一覧は、[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。 定義済みバインディング コレクションに、サービス アプリケーションに必要な正しい機能の組み合わせがないときは、カスタム バインドを作成して、そのアプリケーションの要件を満たすことができます。 カスタム バインドの詳細については、[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)を参照してください。  
   
  次の 4 つの例では、WCF サービスを設定するために使用される最も一般的なバインド構成を示しています。  
   

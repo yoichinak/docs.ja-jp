@@ -16,7 +16,7 @@ ms.locfileid: "57721297"
  トランザクションを使用することで、複数の操作を 1 つの作業単位にまとめることができます。 アプリケーションでトランザクションを使用すると、トランザクションのプロセスでエラーが発生した場合、トランザクション内で実行されたすべての変更を中止 (ロールバック) できます。 ただし、作業が長時間実行されている場合は、トランザクションの使用が適切でないことがあります。 たとえば、旅行計画用アプリケーションはワークフローとして実装されます。 このワークフローの手順は、フライトの予約、マネージャーによる承認の待機、およびチケットの支払いで構成されていることがあります。 このプロセスには数日かかる場合があり、フライトの予約と支払いの手順を同じトランザクションに参加させるのは実用的ではありません。 このようなシナリオでは、処理の後半でエラーが発生した場合、補正を使用してワークフローの予約の手順を取り消すことができます。  
   
 > [!NOTE]
->  このトピックでは、ワーク フローの補正について説明します。 ワークフローでトランザクションの詳細については、次を参照してください。[トランザクション](workflow-transactions.md)と<xref:System.Activities.Statements.TransactionScope>します。 トランザクションの詳細については、次を参照してください。<xref:System.Transactions?displayProperty=nameWithType>と<xref:System.Transactions.Transaction?displayProperty=nameWithType>します。  
+>  このトピックでは、ワーク フローの補正について説明します。 ワークフローでトランザクションの詳細については、[トランザクション](workflow-transactions.md)と<xref:System.Activities.Statements.TransactionScope>を参照してください。 トランザクションの詳細については、<xref:System.Transactions?displayProperty=nameWithType>と<xref:System.Transactions.Transaction?displayProperty=nameWithType>を参照してください。  
   
 ## <a name="using-compensableactivity"></a>CompensableActivity の使用  
  <xref:System.Activities.Statements.CompensableActivity> は、[!INCLUDE[wf1](../../../includes/wf1-md.md)] の中心的な補正アクティビティです。 補正が必要な可能性がある作業を実行するアクティビティは、すべて <xref:System.Activities.Statements.CompensableActivity.Body%2A> の <xref:System.Activities.Statements.CompensableActivity> に配置されます。 この例では、航空券を購入する予約手順を <xref:System.Activities.Statements.CompensableActivity.Body%2A> の <xref:System.Activities.Statements.CompensableActivity> に配置し、予約の取り消しを <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> に配置します。 ワークフロー内の <xref:System.Activities.Statements.CompensableActivity> の直後には、マネージャーの承認を待ち、航空券の購入手順を完了するという 2 つのアクティビティがあります。 <xref:System.Activities.Statements.CompensableActivity> が正常に完了した後に、エラー条件によってワークフローが取り消された場合、<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> ハンドラー内のアクティビティがスケジュールされ、航空券は取り消されます。  
@@ -168,7 +168,7 @@ Activity wf = new Sequence()
 **ワークフロー未処理の例外。**   
 **System.ApplicationException:ワークフローのシミュレートされたエラー条件。**   
 **CancelCreditCard:クレジット_カードの請求をキャンセルします。**   
-**ワークフローの状態で正常に完了しました。取り消されました。**  キャンセルの詳細については、次を参照してください。[キャンセル](modeling-cancellation-behavior-in-workflows.md)します。  
+**ワークフローの状態で正常に完了しました。取り消されました。**  キャンセルの詳細については、[キャンセル](modeling-cancellation-behavior-in-workflows.md)を参照してください。  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Compensate アクティビティを使用する明示的な補正  
  前のセクションでは、暗黙的な補正について説明しました。 暗黙的な補正は単純なシナリオには適していますが、補正処理のスケジュールに関して、より明示的な制御が必要な場合は、<xref:System.Activities.Statements.Compensate> アクティビティを使用できます。 <xref:System.Activities.Statements.Compensate> アクティビティを使用して補正プロセスを開始するには、補正が望ましい <xref:System.Activities.Statements.CompensationToken> の <xref:System.Activities.Statements.CompensableActivity> を使用します。 <xref:System.Activities.Statements.Compensate> アクティビティは、完了した <xref:System.Activities.Statements.CompensableActivity> で、まだ確認または補正されていない場合に補正を開始するときに使用できます。 たとえば、<xref:System.Activities.Statements.Compensate> アクティビティは <xref:System.Activities.Statements.TryCatch.Catches%2A> アクティビティの <xref:System.Activities.Statements.TryCatch> セクションで使用できます。また、<xref:System.Activities.Statements.CompensableActivity> が完了した後の任意のタイミングで使用できます。 この例では、<xref:System.Activities.Statements.Compensate> アクティビティを <xref:System.Activities.Statements.TryCatch.Catches%2A> アクティビティの <xref:System.Activities.Statements.TryCatch> プロパティに使用し、<xref:System.Activities.Statements.CompensableActivity> のアクションを反転します。  

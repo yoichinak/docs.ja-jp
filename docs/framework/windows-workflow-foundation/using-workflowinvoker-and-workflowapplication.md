@@ -67,7 +67,7 @@ Windows Workflow Foundation (WF) ワークフローのホスティングのい�
  [!code-csharp[CFX_WorkflowApplicationExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、次を参照してください。<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>します。  
+>  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>を参照してください。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>ブックマークを使用した実行中のワークフローへのデータの受け渡し  
  ブックマークは、アクティビティが再開されるのを受動的に待機するメカニズムです。また、実行中のワークフロー インスタンスにデータを渡すメカニズムでもあります。 次の例に示すように、アクティビティがデータを待機している場合、<xref:System.Activities.Bookmark> を作成し、<xref:System.Activities.Bookmark> が再開されたときに呼び出されるコールバック メソッドを登録します。  

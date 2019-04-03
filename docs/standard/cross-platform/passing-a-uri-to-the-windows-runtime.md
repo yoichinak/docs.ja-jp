@@ -35,7 +35,7 @@ URI を <xref:System.Uri.IsAbsoluteUri%2A?displayProperty=nameWithType>に渡す
 [!code-csharp[System.URIToWindowsURI#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.uritowindowsuri/cs/mainpage.xaml.cs#2)]
 [!code-vb[System.URIToWindowsURI#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.uritowindowsuri/vb/mainpage.xaml.vb#2)]  
   
-これらのスキームの詳細については、次を参照してください。 [URI スキーム](/windows/uwp/app-resources/uri-schemes)、Windows デベロッパー センターでします。  
+これらのスキームの詳細については、[URI スキーム](/windows/uwp/app-resources/uri-schemes)、Windows デベロッパー センターでを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

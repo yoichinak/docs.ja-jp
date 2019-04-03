@@ -46,9 +46,9 @@ ms.locfileid: "58047881"
   
  `x:Array` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 `x:Array` そのルールの例外では部分的に代替の属性値の処理を提供することではなく`x:Array`その内部テキ スト コンテンツの代替の処理を提供します。 この動作により、型を配列にグループ化とは名前付きの配列にアクセスして、後で、分離コードで参照されている既存のコンテンツ モデルでサポートされていない可能性があります。呼び出すことができます<xref:System.Array>個々 の配列の項目を取得するメソッド。  
   
- 中かっこを使用して、XAML 内のすべてのマークアップ拡張機能 ({,} `)`それぞれの属性構文では、マークアップ拡張機能が属性値を処理する必要がありますを XAML プロセッサが認識される規約。 一般にマークアップ拡張機能の詳細については、次を参照してください。[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)します。  
+ 中かっこを使用して、XAML 内のすべてのマークアップ拡張機能 ({,} `)`それぞれの属性構文では、マークアップ拡張機能が属性値を処理する必要がありますを XAML プロセッサが認識される規約。 一般にマークアップ拡張機能の詳細については、[型コンバーターと XAML のマークアップ拡張機能](type-converters-and-markup-extensions-for-xaml.md)を参照してください。  
   
- XAML 2009 で`x:Array`マークアップ拡張機能ではなくプリミティブ言語として定義されます。 詳細については、次を参照してください。[共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)します。  
+ XAML 2009 で`x:Array`マークアップ拡張機能ではなくプリミティブ言語として定義されます。 詳細については、[共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)を参照してください。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
  設定するオブジェクト要素では通常、`x:Array`に存在する要素のない、 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML 名前空間に既定以外の XAML 名前空間プレフィックス マッピングが必要とします。  
@@ -67,7 +67,7 @@ ms.locfileid: "58047881"
   
  `</x:Array>`  
   
- 配列要素として使用されるカスタムの型のクラスはオブジェクト要素としての XAML でインスタンス化するための要件もサポートする必要があります。 詳細については、次を参照してください。 [XAML とカスタム クラスの WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)します。  
+ 配列要素として使用されるカスタムの型のクラスはオブジェクト要素としての XAML でインスタンス化するための要件もサポートする必要があります。 詳細については、[XAML とカスタム クラスの WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

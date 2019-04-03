@@ -16,7 +16,7 @@ ms.locfileid: "57713392"
  アプリケーションでトランザクションを使用すると、トランザクションのプロセスでエラーが発生した場合、トランザクション内で実行されたすべての変更を中止 (ロールバック) できます。 ただし、長期間にわたって実行される処理やトランザクション リソースを含まない処理など、取り消す (元に戻す) 必要がある処理によってはトランザクションに適さないものもあります。 補正は、ワークフローでエラーが発生した場合に、前に完了した非トランザクションの処理を元に戻すためのモデルを提供します。 取り消しは、完了していない非トランザクションの処理をワークフローやアクティビティの作成者が処理できるようにするためのモデルを提供します。 実行を完了していないアクティビティが取り消された場合、取り消しロジックが指定されていればそのロジックが呼び出されます。  
   
 > [!NOTE]
->  トランザクションと補正の詳細については、次を参照してください。[トランザクション](workflow-transactions.md)と[補正](compensation.md)します。  
+>  トランザクションと補正の詳細については、[トランザクション](workflow-transactions.md)と[補正](compensation.md)を参照してください。  
   
 ## <a name="using-cancellationscope"></a>CancellationScope の使用  
  <xref:System.Activities.Statements.CancellationScope> アクティビティには、子アクティビティを含めることができる <xref:System.Activities.Statements.CancellationScope.Body%2A> および <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> という 2 つのセクションがあります。 <xref:System.Activities.Statements.CancellationScope.Body%2A> には、アクティビティのロジックを構成するアクティビティを配置し、<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> には、アクティビティの取り消しロジックを指定するアクティビティを配置します。 アクティビティは、完了していない場合にのみ取り消すことができます。 <xref:System.Activities.Statements.CancellationScope> アクティビティの場合は、<xref:System.Activities.Statements.CancellationScope.Body%2A> のアクティビティが完了すると完了したことになります。 取り消し要求がスケジュールされている場合、<xref:System.Activities.Statements.CancellationScope.Body%2A> のアクティビティが完了していなければ、<xref:System.Activities.Statements.CancellationScope> が <xref:System.Activities.ActivityInstanceState.Canceled> とマークされ、<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> アクティビティが実行されます。  

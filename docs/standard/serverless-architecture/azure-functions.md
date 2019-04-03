@@ -19,7 +19,7 @@ Azure 関数は、サーバーレス コンピューティング エクスペリ
 
 Azure Functions フレームワークの 2 つのバージョンがあります。 従来のバージョンは、完全な .NET Framework をサポートしています。 新しいランタイムは、クロス プラットフォーム対応 .NET Core アプリケーションをサポートしています。 追加の言語だけでなくC#JavaScript などF#、Java がサポートされているとします。 ポータルで作成した関数では、豊富なスクリプト構文を提供します。 完全なプラットフォームのサポートと機能を持つスタンドアロン プロジェクトとして作成した関数をデプロイできます。
 
-詳細については、次を参照してください。 [Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)します。
+詳細については、[Azure Functions のドキュメント](https://docs.microsoft.com/azure/azure-functions)を参照してください。
 
 ## <a name="functions-v1-vs-v2"></a>関数の v1 と v2 の比較
 
@@ -29,7 +29,7 @@ Azure Functions ランタイムの 2 つのバージョンがあります。1.x 
 
 > **1.x の既知の問題がある[バインディング リダイレクト サポート](https://github.com/Azure/azure-functions-host/issues/992)します。** この問題は、.NET 開発に固有です。 ランタイムに含まれるライブラリから別のバージョンのライブラリへの依存関係を使用したプロジェクトが影響を受けます。 Functions チームが問題の具体的な進行状況をコミットします。 一般に入る前に、チームは 2.x でバインド リダイレクトを対処します。 チームの公式ステートメントの推奨される修正プログラムや回避策は、ここで入手できます。[Azure Functions でのアセンブリ解決](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions)します。
 
-詳細については、次を参照してください。 [1.x と 2.x の比較](https://docs.microsoft.com/azure/azure-functions/functions-versions)します。
+詳細については、[1.x と 2.x の比較](https://docs.microsoft.com/azure/azure-functions/functions-versions)を参照してください。
 
 ## <a name="programming-language-support"></a>プログラミング言語のサポート
 
@@ -48,13 +48,13 @@ Azure Functions ランタイムの 2 つのバージョンがあります。1.x 
 |**Bash**      |実験用|         |
 |**PowerShell**|実験用|         |
 
-詳細については、次を参照してください。[サポートされる言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)します。
+詳細については、[サポートされる言語](https://docs.microsoft.com/azure/azure-functions/supported-languages)を参照してください。
 
 ## <a name="app-service-plans"></a>App service プラン
 
 関数が支え、 *app service プラン*します。 プランは、関数アプリで使用されるリソースを定義します。 リージョンにプランを割り当てるを使用して、価格レベルを選択する仮想マシンの数とサイズを決定できます。 True のサーバーレス アプローチでは、関数アプリを使うことが、**消費**計画します。 従量課金プランでは、バックエンドの負荷に基づいて自動的に拡大縮小されます。
 
-詳細については、次を参照してください。 [App service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)します。
+詳細については、[App service プラン](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)を参照してください。
 
 ## <a name="create-your-first-function"></a>最初の関数を作成します。
 
@@ -64,7 +64,7 @@ Azure Functions ランタイムの 2 つのバージョンがあります。1.x 
 * Azure コマンド ライン インターフェイス (CLI) を使用しているために必要なリソースを作成します。
 * お気に入りの IDE を使用してローカルで関数をビルドし、それらを Azure に発行します。
 
-ポータルでスクリプト化された関数を作成する方法の詳細については、次を参照してください。 [、Azure portal で初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)します。
+ポータルでスクリプト化された関数を作成する方法の詳細については、[、Azure portal で初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)を参照してください。
 
 Azure CLI から作成するを参照してください。 [Azure CLI を使用した初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli)します。
 
@@ -125,7 +125,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 例は、ファイルの名前を受け取る単純な関数が変更されたまたは blob storage にアップロードし、後で処理するためのキューに配置されます。
 
-トリガーとバインドの一覧については、次を参照してください。 [Azure Functions のトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)します。
+トリガーとバインドの一覧については、[Azure Functions のトリガーとバインドの概念](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)を参照してください。
 
 ## <a name="proxies"></a>プロキシ
 
@@ -177,7 +177,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 ビデオのプロキシを使用する例が示すように[Azure:サーバーレス Azure Functions を使用してクラウドにアプリをもたらす](https://channel9.msdn.com/events/Connect/2017/E102)します。 リアルタイムでローカルの SQL Server で実行されている ASP.NET Core アプリケーションは、Azure クラウドに移行されます。 プロキシは、関数を使用する従来の Web API プロジェクトのリファクタリングのために使用されます。
 
-プロキシの詳細については、次を参照してください。 [Azure Functions proxies 作業](https://docs.microsoft.com/azure/azure-functions/functions-proxies)します。
+プロキシの詳細については、[Azure Functions proxies 作業](https://docs.microsoft.com/azure/azure-functions/functions-proxies)を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](azure-serverless-platform.md)

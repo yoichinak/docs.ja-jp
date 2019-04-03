@@ -110,7 +110,7 @@ Event Grid の使用の大きな利点は、Azure によって生成された自
 | | Microsoft.Resources.ResourceDeleteFailure | リソースの削除操作が失敗したときに発生します。 |
 | | Microsoft.Resources.ResourceDeleteCancel | リソースの削除操作が取り消されたときに発生します。 このイベントは、テンプレートのデプロイが取り消されたときに発生します。 |
 
-詳細については、次を参照してください。 [Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)します。
+詳細については、[Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)を参照してください。
 
 Event Grid は、あらゆる種類のオンプレミスで実行されるものも含めて、アプリケーションからアクセスできます。
 

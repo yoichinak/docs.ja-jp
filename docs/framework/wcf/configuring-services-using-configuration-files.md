@@ -101,7 +101,7 @@ ms.locfileid: "56261361"
 ### <a name="the-binding-element"></a>\<バインド > 要素  
  `binding`に含まれる要素、`bindings`要素は、システム指定のバインディングのいずれかを指定できます (を参照してください[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) またはカスタム バインディング (を参照してください[カスタム バインド](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 要素には、バインディングを `name` 要素の `bindingConfiguration` 属性で指定されたエンドポイントと関連付ける `endpoint` 属性があります。 名前を指定しない場合、バインディングは、バインディングの既定の種類に対応します。  
   
-サービスとクライアントの構成の詳細については、次を参照してください。[を構成する WCF サービス](configuring-services.md)します。
+サービスとクライアントの構成の詳細については、[を構成する WCF サービス](configuring-services.md)を参照してください。
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   

@@ -53,9 +53,9 @@ class MathService
   
  コントラクト名が異なるので、上記の 2 つのサービスが公開するコントラクトはそれぞれ異なります。 最初の例では、公開されるコントラクトの名前が "`IMath`" であるのに対し、2 番目の例では、コントラクトの名前は "`MathService`" です。  
   
- コンカレンシーやインスタンス化など、いくつかの項目は、サービス実装レベルと操作実装レベルで設定できます。 詳細については、次を参照してください。[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)します。  
+ コンカレンシーやインスタンス化など、いくつかの項目は、サービス実装レベルと操作実装レベルで設定できます。 詳細については、[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)を参照してください。  
   
- サービス コントラクトを実装したら、そのサービスに 1 つ以上のエンドポイントを作成する必要があります。 詳細については、次を参照してください。[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)します。 サービスを実行する方法の詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
+ サービス コントラクトを実装したら、そのサービスに 1 つ以上のエンドポイントを作成する必要があります。 詳細については、[エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)を参照してください。 サービスを実行する方法の詳細については、[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)

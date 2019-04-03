@@ -20,7 +20,7 @@ ms.locfileid: "54556039"
   
  Oracle データベースにシーケンスを作成する場合は、初期値と増分値を定義できます。 新しい行を送信する前に、新しい値のシーケンスを照会することもできます。 つまり、コードでデータベースに行を挿入する前に、新しい行のキー値を調べることができます。  
   
- SQL Server と ADO.NET を使用して自動インクリメント列の作成の詳細については、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)と[AutoIncrement 列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)です。  
+ SQL Server と ADO.NET を使用して自動インクリメント列の作成の詳細については、[Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)と[AutoIncrement 列の作成](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の C# コードは、Oracle データベースから新しいシーケンス値を取得する例です。 新しい行を送信する INSERT INTO クエリでシーケンスを参照した後、Oracle10g で導入された RETURNING 句を使って、生成されたシーケンス値を返します。 この例では、保留状態の一連の新しい行を、ADO.NET の自動増分機能を使って <xref:System.Data.DataTable> に追加し、"プレースホルダー" の主キー値を生成します。 ADO.NET が新しい行に対して生成した増分値は、単なる "プレースホルダー" である点に注意してください。 つまり、データベースで生成される値は、ADO.NET によって生成された値とは必ずしも一致しません。  

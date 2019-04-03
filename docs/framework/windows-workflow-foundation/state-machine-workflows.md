@@ -46,7 +46,7 @@ ms.locfileid: "57724961"
  最終状態以外のすべての状態には遷移が少なくとも 1 つ必要です。遷移がなくてよいのは最終状態のみです。 遷移は、状態マシン ワークフローに状態を追加した後に追加されます。または、状態をドロップしたときに作成されます。  
   
  追加する、<xref:System.Activities.Statements.State>ドラッグの 1 つのステップの遷移を作成し、**状態**からのアクティビティ、**ステート マシン**のセクション、**ツールボックス**し、別の状態に上にマウス ポインターワークフロー デザイナー。 ドラッグされている <xref:System.Activities.Statements.State> が別の <xref:System.Activities.Statements.State> の上にある場合、もう一方の <xref:System.Activities.Statements.State> の周囲に 4 つの三角形が表示されます。 
-  <xref:System.Activities.Statements.State> を 4 つの三角形のいずれかにドロップすると、ステート マシンに追加され、遷移元の <xref:System.Activities.Statements.State> からドロップされた遷移先の <xref:System.Activities.Statements.State> に遷移が作成されます。 詳細については、次を参照してください。 [Transition アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)します。  
+  <xref:System.Activities.Statements.State> を 4 つの三角形のいずれかにドロップすると、ステート マシンに追加され、遷移元の <xref:System.Activities.Statements.State> からドロップされた遷移先の <xref:System.Activities.Statements.State> に遷移が作成されます。 詳細については、[Transition アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)を参照してください。  
   
  状態の追加後に遷移を作成する方法は 2 つあります。 1 つ目は、ワークフロー デザイナー サーフェスから状態をドラッグして既存の状態の上に置き、ドロップ ポイントのいずれかにドロップする方法です。 これは、前のセクションで説明した方法によく似ています。 もう 1 つは、マウス ポインターを目的のソースの状態の上に置き、線を適切な目的の状態にドラッグする方法です。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "57724961"
 > [!NOTE]
 >  遷移の <xref:System.Activities.Statements.Transition.Condition%2A> が `False` と評価された場合 (またはトリガーを共有する遷移すべての状態が `False` と評価された場合)、遷移は行われず、その状態からのすべての遷移のすべてのトリガーが再スケジュールされます。  
   
- ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、 [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)、[アクティビティ デザイナーの状態](/visualstudio/workflow-designer/state-activity-designer)、 [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)、および[移行アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)します。  
+ ステート マシン ワークフローを作成する方法の詳細については、[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、 [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)、[アクティビティ デザイナーの状態](/visualstudio/workflow-designer/state-activity-designer)、 [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)、および[移行アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)を参照してください。  
   
 ## <a name="state-machine-terminology"></a>ステート マシン用語  
  このセクションでは、このトピック全体で使用しているステート マシン用語の定義を示します。  

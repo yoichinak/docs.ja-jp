@@ -79,7 +79,7 @@ ms.locfileid: "55904595"
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>プロバイダー名による接続文字列の取得  
- プロバイダー ファクトリを作成するには、プロバイダー名だけでなく接続文字列も指定する必要があります。 この例では、インバリアント形式でプロバイダー名を渡すことによって、アプリケーション構成ファイルから接続文字列を取得"*System.Data.ProviderName*"。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しています。 成功した場合には <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> が、それ以外の場合は `null` (Visual Basic の場合は `Nothing`) が返されます。 プロバイダーに複数のエントリが存在した場合は、最初に見つかったエントリが返されます。 詳細と構成ファイルから接続文字列を取得する例については、次を参照してください。[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)します。  
+ プロバイダー ファクトリを作成するには、プロバイダー名だけでなく接続文字列も指定する必要があります。 この例では、インバリアント形式でプロバイダー名を渡すことによって、アプリケーション構成ファイルから接続文字列を取得"*System.Data.ProviderName*"。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しています。 成功した場合には <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> が、それ以外の場合は `null` (Visual Basic の場合は `Nothing`) が返されます。 プロバイダーに複数のエントリが存在した場合は、最初に見つかったエントリが返されます。 詳細と構成ファイルから接続文字列を取得する例については、[接続文字列と構成ファイル](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)を参照してください。  
   
 > [!NOTE]
 >  このコードを実行するには、`System.Configuration.dll` を参照設定する必要があります。  

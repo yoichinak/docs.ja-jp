@@ -45,7 +45,7 @@ Exception handled.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-コンピュテーション式のコンテキストで、シーケンス式と非同期のワークフローを含む**try… finally**式は、カスタム実装を持つことができます。 詳細については、次を参照してください。[コンピュテーション式](../computation-expressions.md)します。
+コンピュテーション式のコンテキストで、シーケンス式と非同期のワークフローを含む**try… finally**式は、カスタム実装を持つことができます。 詳細については、[コンピュテーション式](../computation-expressions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

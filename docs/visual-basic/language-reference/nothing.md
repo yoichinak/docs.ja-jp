@@ -26,7 +26,7 @@ ms.locfileid: "58826094"
   
  変数を*値の型*直接その値が含まれています。 値の型は、すべての数値データ型を含める`Boolean`、 `Char`、 `Date`、すべての構造、およびすべての列挙体。 変数を*参照型*メモリ内オブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
- 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、次を参照してください。 [null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)します。  
+ 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、[null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)を参照してください。  
   
  変数が null 許容型でない値型の場合は、割り当てる`Nothing`に設定が既定値にその宣言された型。 その型に変数のメンバーが含まれている場合はすべて既定値に設定します。 次の例は、スカラー型の場合、これを示しています。  
   

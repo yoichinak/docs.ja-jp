@@ -76,9 +76,9 @@ A<xref:System.DateTimeOffset>値には、日付と時刻だけでなくを明確
 
 * <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>と<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>メソッドは、特定のタイム ゾーンの時刻 (UTC) を変換または特定のタイム ゾーンの時刻を UTC に変換します。
 
-詳細については、次を参照してください。[タイム ゾーン間で時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)します。
+詳細については、[タイム ゾーン間で時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)を参照してください。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、次を参照してください。[方法。日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)します。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、[方法。日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)を参照してください。
 
 たとえば、次のコードは、2008 年 3 月 9 日の午前 2 時に 2 時間 30 分を加算する 前のコードと似ています。 ただし、中部標準時を UTC に変換した後に日付と時刻の算術演算を実行し、その結果を UTC から中部標準時に変換するため、得られた時刻は中部標準時タイム ゾーンの夏時間への移行を反映しています。
 

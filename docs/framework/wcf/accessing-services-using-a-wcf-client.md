@@ -49,7 +49,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、次を参照してください。[サービスのバインドを構成する](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)します。
+ ファイル名を 1 つだけ指定した場合、それは出力ファイルの名前になります。 ファイル名を 2 つ指定した場合は、1 番目のファイルが入力構成ファイルになり、そのファイルの内容と生成された構成がマージされ、2 番目のファイルに書き出されます。 構成の詳細については、[サービスのバインドを構成する](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)を参照してください。
 
 > [!IMPORTANT]
 > セキュリティ保護されていないメタデータ要求には、すべてのセキュリティ保護されていないネットワーク要求を行うのと同じ方法で特定のリスクが発生し得る。通信しているエンドポイントが書かれているユーザーが不明な取得した情報が悪意のあるサービスからメタデータにあります。
@@ -184,7 +184,7 @@ WCF クライアントによってスローされる多くの例外は、サー�
 
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>:ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
 
-このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細については、次を参照してください。[トレース](../../../docs/framework/wcf/diagnostics/tracing/index.md)と[を使用して、アプリケーションのトラブルシューティングのトレース](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)します。
+このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細については、[トレース](../../../docs/framework/wcf/diagnostics/tracing/index.md)と[を使用して、アプリケーションのトラブルシューティングのトレース](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

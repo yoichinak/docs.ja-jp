@@ -21,13 +21,13 @@ WCF Data Services としてデータを公開するサービスをより簡単�
 
      WCF Data Services は、のインスタンスを返す共通言語ランタイム (CLR) オブジェクトに基づくデータ モデルもサポートしています。、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、.NET Framework のリスト、配列、およびコレクションに基づいてデータ サービスを配置できます。 これらのデータ構造での作成、更新、および削除操作を有効にするには、<xref:System.Data.Services.IUpdatable> インターフェイスも実装する必要があります。 詳細については、「[方法 :リフレクション プロバイダーを使用してデータ サービスを作成する](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)します。
 
-     高度なシナリオでは、WCF Data Services には、遅延バインディング データ型に基づいてデータ モデルを定義するためのプロバイダーのセットが含まれています。 詳細については、次を参照してください。[カスタム データ サービス プロバイダー](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)します。
+     高度なシナリオでは、WCF Data Services には、遅延バインディング データ型に基づいてデータ モデルを定義するためのプロバイダーのセットが含まれています。 詳細については、[カスタム データ サービス プロバイダー](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)を参照してください。
 
 2.  **データ サービスを作成します。** 最も基本的なデータ サービスでは、 <xref:System.Data.Services.DataService%601> クラスを継承するクラスを `T` 型 (エンティティ コンテナーの名前空間修飾名) と一緒に公開します。 詳細については、「 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)の開発と配置について説明します。
 
-3.  **データ サービスを構成します。** 既定では、WCF Data Services には、エンティティ コンテナーによって公開されているリソースへのアクセスが無効にします。 <xref:System.Data.Services.DataServiceConfiguration>インターフェイスでは、リソースへのアクセスを構成し、サービス操作、OData のサポートされているバージョンを指定して、バッチ動作や返されるエンティティの最大数など、他のサービス全体の動作を定義できます。1 つの応答。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。
+3.  **データ サービスを構成します。** 既定では、WCF Data Services には、エンティティ コンテナーによって公開されているリソースへのアクセスが無効にします。 <xref:System.Data.Services.DataServiceConfiguration>インターフェイスでは、リソースへのアクセスを構成し、サービス操作、OData のサポートされているバージョンを指定して、バッチ動作や返されるエンティティの最大数など、他のサービス全体の動作を定義できます。1 つの応答。 詳細については、[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)を参照してください。
 
-Northwind サンプル データベースに基づいている単純なデータ サービスを作成する方法の例は、次を参照してください。[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。
+Northwind サンプル データベースに基づいている単純なデータ サービスを作成する方法の例は、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -25,7 +25,7 @@ ms.locfileid: "54618949"
   
  複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 この場合は、<xref:System.Data.Common.DbCommandBuilder> を使用してコマンドを自動的に生成できないため、コマンドを明示的に指定する必要があります。 更新を解決するのにはコマンドを明示的に設定する方法については、 `DataSet` 、データ ソースを参照してください。 [Dataadapter によるデータ ソースを更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
   
- 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入行の列に自動的に生成された id フィールドのマッピングの例は、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)します。  
+ 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入行の列に自動的に生成された id フィールドのマッピングの例は、[Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)を参照してください。  
   
 ## <a name="rules-for-automatically-generated-commands"></a>コマンドの自動生成規則  
  コマンドの自動生成規則を次の表に示します。  

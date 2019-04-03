@@ -102,7 +102,7 @@ Azure SQL Database には次の利点があります。
 
 その他のデータベース (IBM DB2 など) があり、リフト アンド シフトのアプローチを選択した場合より複雑なデータ移行を実行する意思がないを引き続き Azure では、IaaS Vm としてこれらのデータベースを使用する可能性があります。 複雑なデータ移行は、新しいスキーマとさまざまなプログラミング ライブラリで別のデータベース型に移行するため、追加の作業が必要です。
 
-Azure Database Migration Service を使用してデータベースを移行する方法については、次を参照してください。 [Azure SQL Database マネージ インスタンスと Azure Database Migration Service を迅速にクラウドに](https://channel9.msdn.com/Events/Build/2017/P4008)します。
+Azure Database Migration Service を使用してデータベースを移行する方法については、[Azure SQL Database マネージ インスタンスと Azure Database Migration Service を迅速にクラウドに](https://channel9.msdn.com/Events/Build/2017/P4008)を参照してください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

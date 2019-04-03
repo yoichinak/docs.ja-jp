@@ -58,7 +58,7 @@ ms.locfileid: "56965772"
 |**数**|**VarNumeric**|**数値**||  
 |**NVARCHAR2**|**String**|**NVarChar**||  
 |**RAW**|**Binary**|**生**||  
-|**REF CURSOR**||**カーソル**|詳細については、次を参照してください。 [Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)します。|  
+|**REF CURSOR**||**カーソル**|詳細については、[Oracle REF Cursor](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)を参照してください。|  
 |**ROWID**|**AnsiString**|**Rowid**||  
 |**TIMESTAMP**|**DateTime**|**タイムスタンプ**|<xref:System.Data.OracleClient.OracleType> は、Oracle 9i クライアントとサーバー ソフトウェアの両方を使用している場合のみ使用できます。|  
 |**ローカル タイム ゾーンのタイムスタンプ**|**DateTime**|**TimestampLocal**|<xref:System.Data.OracleClient.OracleType> は、Oracle 9i クライアントとサーバー ソフトウェアの両方を使用している場合のみ使用できます。|  

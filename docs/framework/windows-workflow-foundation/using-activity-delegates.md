@@ -27,7 +27,7 @@ ms.locfileid: "57707535"
   
  [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- オブジェクト初期化子の詳細については、次を参照してください。[方法。コンス トラクターを呼び出さずにオブジェクトを初期化 (C#プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法。オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)します。  
+ オブジェクト初期化子の詳細については、[方法。コンス トラクターを呼び出さずにオブジェクトを初期化 (C#プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法。オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)を参照してください。  
   
  次の例では、ワークフローで <xref:System.Activities.Statements.TryCatch> アクティビティを使用します。 ワークフローによって <xref:System.ApplicationException> がスローされ、<xref:System.Activities.Statements.Catch%601> アクティビティによってこの例外が処理されます。 ハンドラーは、<xref:System.Activities.Statements.Catch%601>アクティビティのアクティビティのアクションは、<xref:System.Activities.Statements.WriteLine>を使用して、アクティビティ、および例外の詳細をフローさせるが、 `ex` <xref:System.Activities.DelegateInArgument%601>。  
   

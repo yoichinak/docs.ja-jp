@@ -39,7 +39,7 @@ Queue storage の概念的概要についてを参照してください[queue st
 
 ### <a name="get-your-connection-string"></a>接続文字列を取得します。
 
-このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
+このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
 
 チュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
 

@@ -15,7 +15,7 @@ ms.locfileid: "57711929"
 Windows フォームでは、ユーザー入力が Windows メッセージの形式でアプリケーションに送信されます。 一連のオーバーライド可能なメソッドは、フォーム、アプリケーションでこれらのメッセージを処理し、レベルを制御します。 これらのメソッドは、マウスとキーボード メッセージを受信するときに取得については、マウスやキーボード入力を処理できるイベントが発生します。 多くの場合、Windows フォーム アプリケーションはこれらのイベントを処理するだけですべてのユーザー入力を処理することになります。 それ以外の場合は、アプリケーションは、アプリケーション、フォーム、またはコントロールによって受信される前に、特定のメッセージをインターセプトするにはメッセージを処理する方法の 1 つをオーバーライドする必要があります。  
   
 ## <a name="mouse-and-keyboard-events"></a>マウスとキーボード イベント  
- すべての Windows フォーム コントロールは、マウスおよびキーボード入力に関連するイベントのセットを継承します。 など、コントロールで処理できる、<xref:System.Windows.Forms.Control.KeyPress>押されたキーの文字コードを確認するイベントまたはコントロールを処理できますが、<xref:System.Windows.Forms.Control.MouseClick>にマウスの位置をクリックします。 マウスとキーボード イベントの詳細については、次を参照してください。[キーボード イベントを使用した](using-keyboard-events.md)と[Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。  
+ すべての Windows フォーム コントロールは、マウスおよびキーボード入力に関連するイベントのセットを継承します。 など、コントロールで処理できる、<xref:System.Windows.Forms.Control.KeyPress>押されたキーの文字コードを確認するイベントまたはコントロールを処理できますが、<xref:System.Windows.Forms.Control.MouseClick>にマウスの位置をクリックします。 マウスとキーボード イベントの詳細については、[キーボード イベントを使用した](using-keyboard-events.md)と[Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)を参照してください。  
   
 ## <a name="methods-that-process-user-input-messages"></a>ユーザーの入力メッセージを処理するメソッド  
  フォームとコントロールへのアクセスがある、<xref:System.Windows.Forms.IMessageFilter>インターフェイスと一連のメッセージ キュー内のさまざまな時点での Windows メッセージを処理するメソッドをオーバーライドします。 これらのメソッドがすべて、<xref:System.Windows.Forms.Message>パラメーターで、Windows メッセージの低レベルの詳細をカプセル化します。 実装したり、メッセージを確認しメッセージを使用するか、メッセージ キュー内の次のコンシューマーに渡し、これらのメソッドをオーバーライドできます。 次の表は、Windows フォーム内のすべての Windows メッセージを処理するメソッドを表示します。  
@@ -28,7 +28,7 @@ Windows フォームでは、ユーザー入力が Windows メッセージの形
 |<xref:System.Windows.Forms.Control.DefWndProc%2A>|このメソッドは、フォームとコントロールのレベルでの Windows メッセージの既定の処理を実行します。 これは、ウィンドウの最小限の機能を提供します。|  
 |<xref:System.Windows.Forms.Control.OnNotifyMessage%2A>|このメソッドは、処理された後に、フォームとコントロールのレベルでメッセージを受け取ります。 <xref:System.Windows.Forms.ControlStyles.EnableNotifyMessage>このメソッドが呼び出されるのスタイル ビットを設定する必要があります。|  
   
- キーボードとマウスのメッセージは、追加のメッセージの種類に固有のオーバーライド可能なメソッドのセットでも処理されます。 詳細については、次を参照してください。[キーボード入力のしくみ](how-keyboard-input-works.md)と[Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)します。  
+ キーボードとマウスのメッセージは、追加のメッセージの種類に固有のオーバーライド可能なメソッドのセットでも処理されます。 詳細については、[キーボード入力のしくみ](how-keyboard-input-works.md)と[Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Windows フォームでのユーザー入力](user-input-in-windows-forms.md)

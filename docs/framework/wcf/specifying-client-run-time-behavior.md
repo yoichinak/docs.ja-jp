@@ -15,7 +15,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54587178"
 ---
 # <a name="specifying-client-run-time-behavior"></a>クライアントのランタイム動作の指定
-クライアント アプリケーションに合わせて実行時の動作を変更するのには、Windows Communication Foundation (WCF) サービスと同様、Windows Communication Foundation (WCF) クライアントを構成できます。 クライアントのランタイム動作を指定する際には、3 つの属性を使用できます。 双方向クライアント コールバック オブジェクトは、<xref:System.ServiceModel.CallbackBehaviorAttribute> 属性と <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性を使用して、そのランタイム動作を変更できます。 もう 1 つの属性 <xref:System.ServiceModel.Description.ClientViaBehavior> は、論理送信先を直接のネットワーク送信先と区別するために使用できます。 さらに、双方向クライアントのコールバック型では、サービス側の動作の一部を使用できます。 詳細については、次を参照してください。[サービスの実行時の動作を指定する](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)します。  
+クライアント アプリケーションに合わせて実行時の動作を変更するのには、Windows Communication Foundation (WCF) サービスと同様、Windows Communication Foundation (WCF) クライアントを構成できます。 クライアントのランタイム動作を指定する際には、3 つの属性を使用できます。 双方向クライアント コールバック オブジェクトは、<xref:System.ServiceModel.CallbackBehaviorAttribute> 属性と <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性を使用して、そのランタイム動作を変更できます。 もう 1 つの属性 <xref:System.ServiceModel.Description.ClientViaBehavior> は、論理送信先を直接のネットワーク送信先と区別するために使用できます。 さらに、双方向クライアントのコールバック型では、サービス側の動作の一部を使用できます。 詳細については、[サービスの実行時の動作を指定する](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)を参照してください。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>CallbackBehaviorAttribute の使用  
  <xref:System.ServiceModel.CallbackBehaviorAttribute> クラスを使用して、クライアント アプリケーションのコールバック コントラクト実装の実行動作を構成または拡張できます。 この属性は、インスタンス化動作とトランザクションの設定を除き、<xref:System.ServiceModel.ServiceBehaviorAttribute> クラスと同様の機能をコールバック クラスに対して実行します。  

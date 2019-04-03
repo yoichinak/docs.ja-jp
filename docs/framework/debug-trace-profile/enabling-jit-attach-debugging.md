@@ -33,7 +33,7 @@ JIT アタッチ デバッグとは、エラーが発生したとき、または
   
 -   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 関数 (Win32)。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [デバッグ、トレース、およびプロファイリング](../../../docs/framework/debug-trace-profile/index.md)

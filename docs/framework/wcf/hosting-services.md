@@ -36,7 +36,7 @@ ms.locfileid: "54637925"
 #### <a name="windows-process-activation-service-was"></a>Windows プロセス アクティブ化サービス (WAS)  
  Windows プロセス アクティブ化サービス (WAS) とは、 [!INCLUDE[lserver](../../../includes/lserver-md.md)] でも使用できる [!INCLUDE[wv](../../../includes/wv-md.md)]用の新しいプロセス アクティブ化機構です。 よく知られている [!INCLUDE[iis601](../../../includes/iis601-md.md)] のプロセス モデル (アプリケーション プールとメッセージ ベースのプロセス アクティベーション) とホスト機能 (迅速な障害保護、状態の監視、プロセスのリサイクルなど) はそのままですが、HTTP に対する依存性がアクティベーション アーキテクチャから解消されています。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] では、WAS を使用して HTTP 経由でのメッセージ ベースのアクティベーションを実現しています。 その他の WCF コンポーネントは、WCF がサポートするその他のプロトコル経由で、TCP、MSMQ、名前付きパイプなど、メッセージ ベースのライセンス認証を提供する WAS にも接続します。 これにより、IIS のプロセスのリサイクル、迅速な障害保護、一般的な構成システムなど、これまで HTTP ベースのアプリケーションのみで利用可能だった IIS 機能を、通信プロトコルを使用するアプリケーションでも使用できるようになりました。  
   
- このホスト オプションでは、WAS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 構成する方法の詳細についてをホストしていたは、次を参照してください。[方法。WAS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)します。  
+ このホスト オプションでは、WAS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 構成する方法の詳細についてをホストしていたは、[方法。WAS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)を参照してください。  
   
 ## <a name="choosing-a-hosting-environment"></a>ホスト環境の選択  
  次の表に、各ホスト オプションに関連する主な利点とシナリオの要点をまとめます。  

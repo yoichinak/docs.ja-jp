@@ -31,7 +31,7 @@ ms.locfileid: "56970975"
   
  この例では、2 つのキーを使用して XML 要素を暗号化します。 [証明書作成ツール (Makecert.exe)](/windows/desktop/SecCrypto/makecert) を使用してテストの X.509 証明書を生成し、この証明書を証明書ストアに保存します。 この例では、プログラムを使用して証明書を取得し、これを使用して <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドで XML 要素を暗号化します。 内部的には、<xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> メソッドは別のセッション キーを作成し、これを使用して XML ドキュメントを暗号化します。 このメソッドでは、セッション キーを暗号化し、新しい <`EncryptedData`> 要素内に暗号化された XML と共に保存します。  
   
- XML 要素を復号化するには、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドを呼び出します。これにより、ストアから X.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、次を参照してください。[方法。X.509 証明書で XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)します。  
+ XML 要素を復号化するには、<xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> メソッドを呼び出します。これにより、ストアから X.509 証明書が自動的に取得され、必要な復号化が実行されます。  この手順を使用して暗号化された XML 要素を復号化する方法の詳細については、[方法。X.509 証明書で XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)を参照してください。  
   
  この例は、複数のアプリケーションが暗号化されたデータを共有する必要がある状況や、1 つのアプリケーションが、実行する時間の間に暗号化されたデータを保存する必要がある状況に適しています。  
   

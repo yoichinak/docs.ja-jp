@@ -56,11 +56,11 @@ N 層ソリューションには、次の特性があります。
 
 「仮想マシン」を使用して、ハードウェア仮想化は、a Service (IaaS) としてのインフラストラクチャを有効にします。 ホスト コンピューターは、インスタンスにリソースを割り当て、独自のメモリ、CPU、および記憶域を提供する効果的なパーティション分割されます。 チームは、必要な Vm をプロビジョニングし、関連付けられているネットワークと記憶域へのアクセスを構成します。
 
-詳細については、次を参照してください。[参照アーキテクチャを N 層の仮想マシン](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)します。
+詳細については、[参照アーキテクチャを N 層の仮想マシン](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)を参照してください。
 
 仮想化と Infrastructure as a Service (IaaS) 多くの懸念に対処がまだインフラストラクチャ チームの手に多くの責任が残ります。 チームは、セキュリティ修正プログラムを適用、および対象のコンピューターでサード パーティの依存関係をインストールするオペレーティング システム バージョン管理を行います。 アプリは多くの場合、テスト環境と比較して、実稼動コンピューターで異なる方法で動作します。 問題は、さまざまな依存関係のバージョンや OS SKU レベルが原因で発生します。 多くの企業がメリットなど、複数のクラウド ネイティブ モデルへのデプロイが、多くの組織では、これらのターゲットに N 層アプリケーションをデプロイ、[サービスとしてのプラットフォーム](#platform-as-a-service-paas)します。 マイクロ サービス アーキテクチャは、弾力性と回復性のスケール アウトするための要件のためより困難になります。
 
-詳細については、次を参照してください。[仮想マシン](https://docs.microsoft.com/azure/virtual-machines/)します。
+詳細については、[仮想マシン](https://docs.microsoft.com/azure/virtual-machines/)を参照してください。
 
 ## <a name="platform-as-a-service-paas"></a>Platform as a Service (PaaS)
 
@@ -105,7 +105,7 @@ Docker コンテナーの詳細については、次を参照してください�
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-オーケストレーションの詳細については、次を参照してください。 [Kubernetes on Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)します。
+オーケストレーションの詳細については、[Kubernetes on Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)を参照してください。
 
 (FaaS) サービスとしての関数は、サーバーレスのような特殊化されたコンテナー サービスです。 特定の実装と呼ばれる FaaS の[OpenFaaS](https://github.com/openfaas/faas)、サーバーレス機能を提供するコンテナーの上に位置します。 OpenFaaS には、すべてのコードを実行するために必要なコンテナーの依存関係のパッケージ テンプレートが用意されています。 テンプレートを使用して、機能の単位としてコードをデプロイするプロセスが簡略化します。 OpenFaaS には、既存のインフラストラクチャを使用できるため、既にコンテナーおよびオーケストレーターを含むアーキテクチャが対象とします。 サーバーレス機能を提供しますが、具体的には必要がある Docker とオーケストレーターを使用します。
 

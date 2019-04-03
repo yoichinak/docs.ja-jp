@@ -24,7 +24,7 @@ System.Xaml に実装されている .NET Framework XAML サービスでは、CL
 ## <a name="rules-and-syntax-conventions-for-generics-in-xaml"></a>ルールと XAML のジェネリックの構文表記規則  
  XAML でのジェネリック型する必要があります常として表す、制約付きの汎用的な制約なしのジェネリックは、XAML 型システムまたは XAML ノード ストリームに存在することはありませんし、XAML マークアップで表現できることはできません。 によって参照されているジェネリック型の入れ子にされた型の制約である場合、XAML の属性構文内で参照できるジェネリック`x:TypeArguments`、またはの場合、`x:Type`ジェネリック型の CLR 型参照を提供します。 これは、<xref:System.Xaml.Schema.XamlTypeTypeConverter>クラスの .NET Framework XAML サービスで定義します。  
   
- XAML 属性の構文形式で有効になって<xref:System.Xaml.Schema.XamlTypeTypeConverter>一般的な MSIL を変更します]、[角度を使用する CLR の構文規則の種類と、ジェネリックの制約の角かっこし、制約のコンテナーのかっこを代わりに置き換えられます。 例については、次を参照してください。 [X:typearguments ディレクティブ](x-typearguments-directive.md)します。  
+ XAML 属性の構文形式で有効になって<xref:System.Xaml.Schema.XamlTypeTypeConverter>一般的な MSIL を変更します]、[角度を使用する CLR の構文規則の種類と、ジェネリックの制約の角かっこし、制約のコンテナーのかっこを代わりに置き換えられます。 例については、[X:typearguments ディレクティブ](x-typearguments-directive.md)を参照してください。  
   
 ## <a name="generics-and-xaml-2009-features"></a>ジェネリックと XAML 2009 の機能  
  XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[XAML 2009 の組み込み型](built-in-types-for-common-xaml-language-primitives.md)内の情報項目として`x:TypeArguments`します。 たとえば、次を宣言できます (表示されませんが、マッピングのプレフィックスが`x`は XAML 2009 の XAML 言語の XAML 名前空間です)。  

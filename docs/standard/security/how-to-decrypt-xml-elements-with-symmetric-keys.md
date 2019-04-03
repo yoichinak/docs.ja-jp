@@ -25,7 +25,7 @@ ms.locfileid: "54502625"
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>方法: 対称キーで XML 要素を復号化します。
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  このコード例では、Rijndael としても知られる Advanced Encryption Standard (AES) アルゴリズムを使用して XML 要素を復号化します。  
   
- この手順を使用して XML 要素を暗号化する方法については、次を参照してください。[方法。対称キーで XML 要素を暗号化](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)します。  
+ この手順を使用して XML 要素を暗号化する方法については、[方法。対称キーで XML 要素を暗号化](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)を参照してください。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して暗号化されたこと、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   

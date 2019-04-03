@@ -35,7 +35,7 @@ XAML のコンパイルの動作を変更するときに`x:Class`も提供され
 |*NotPublic*|正確な文字列を指定して渡す<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>を使用する分離コードのプログラミング言語によって異なります。 「解説」を参照してください。|  
   
 ## <a name="dependencies"></a>依存関係  
- [X:class](x-class-directive.md)も同じ要素に提供される必要があり、その要素は、ページのルート要素である必要があります。 詳細については、次を参照してください。 [ \[MS XAML\]セクション 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
+ [X:class](x-class-directive.md)も同じ要素に提供される必要があり、その要素は、ページのルート要素である必要があります。 詳細については、[ \[MS XAML\]セクション 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  値`x:ClassModifier`.NET Framework XAML サービスの使用状況はプログラミング言語によって異なります。 使用する文字列は、各言語の実装に依存、<xref:System.CodeDom.Compiler.CodeDomProvider>よぶ型コンバーターを返しますの意味を定義する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>、その言語が、大文字小文字を区別するかどうか。  

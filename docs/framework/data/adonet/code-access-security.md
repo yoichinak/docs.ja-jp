@@ -23,7 +23,7 @@ ms.locfileid: "58411565"
  CLR は、そのコードに許されている操作の範囲内で実行を許可します。 コードは権限を要求できますが、その要求は管理者が設定したセキュリティ ポリシーに基づいて受理されます。  
   
 > [!NOTE]
->  CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、次を参照してください。[セキュリティ ポリシーを構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))と[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))します。  
+>  CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、[セキュリティ ポリシーを構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))と[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))を参照してください。  
   
  コードのアクセス権限には、次の 3 種類があります。  
   
@@ -39,19 +39,19 @@ ms.locfileid: "58411565"
 ### <a name="requesting-permissions"></a>権限の要求  
  権限を要求する目的は、そのアプリケーションを実行するために必要な権限をランタイムに伝えると共に、実際に必要な権限以外は付与されないようにすることです。 たとえば、ローカル ディスクにデータを書き込むアプリケーションは <xref:System.Security.Permissions.FileIOPermission> を必要とします。 この権限が付与されていない場合、アプリケーションがディスクへの書き込みを試行した時点で実行に失敗します。 ただし、アプリケーションから `FileIOPermission` を要求した場合、その権限が付与されなければ、最初の段階で例外が生成され、アプリケーションが読み込まれることはありません。  
   
- ディスクからのデータの読み取りだけを必要とするアプリケーションでは、書き込み権限が決して付与されないように要求できます。 バグが存在していたり、悪意のある攻撃を受けたとしても、操作の対象となるデータに損害を与えることはありません。 詳細については、次を参照してください。[アクセス許可の要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))します。  
+ ディスクからのデータの読み取りだけを必要とするアプリケーションでは、書き込み権限が決して付与されないように要求できます。 バグが存在していたり、悪意のある攻撃を受けたとしても、操作の対象となるデータに損害を与えることはありません。 詳細については、[アクセス許可の要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))を参照してください。  
   
 ## <a name="role-based-security-and-cas"></a>ロール ベースのセキュリティと CAS  
  ロール ベースのセキュリティとコード アクセス セキュリティ (CAS) の両方を実装することで、アプリケーションの全体的なセキュリティを高めることができます。 ロール ベースのセキュリティには、Windows アカウントまたはカスタム ID を使用できます。セキュリティ プリンシパルに関する情報には、現在のスレッドからアクセスできます。 また、ユーザーによって指定された資格情報に基づいて、データやリソースへのアクセスを提供するアプリケーションも少なくありません。 このようなアプリケーションは、通常、ユーザーのロールを調べ、そのロールに基づいてリソースへのアクセスを許可します。  
   
  ロール ベースのセキュリティを使用することで、コンポーネントが、現在のユーザーおよびそのユーザーに関連付けられているロールを実行時に特定できるようになります。 この情報を CAS ポリシーを使ってマッピングすることによって、一連の権限が実行時に判別されます。 特定のアプリケーション ドメインでは、ホストが既定のロール ベース セキュリティ ポリシーを変更し、ユーザーおよびそのユーザーに関連付けられたロールを表す既定のセキュリティ プリンシパルを設定できます。  
   
- CLR にはマネージド コードに制限を適用するためのメカニズムが、権限を使用することによって実装されています。 ロール ベースのセキュリティ権限により、ユーザー (またはユーザーのために行動するエージェント) が特定の ID を持っているかどうか、または特定のロールに所属しているかどうかを検出するメカニズムが実現されます。 詳細については、次を参照してください。[セキュリティのアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100))します。  
+ CLR にはマネージド コードに制限を適用するためのメカニズムが、権限を使用することによって実装されています。 ロール ベースのセキュリティ権限により、ユーザー (またはユーザーのために行動するエージェント) が特定の ID を持っているかどうか、または特定のロールに所属しているかどうかを検出するメカニズムが実現されます。 詳細については、[セキュリティのアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100))を参照してください。  
   
- 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server でのロールベースのセキュリティの詳細については、次を参照してください。 [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)します。  
+ 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server でのロールベースのセキュリティの詳細については、[SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)を参照してください。  
   
 ## <a name="assemblies"></a>アセンブリ  
- アセンブリは、.NET Framework アプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、互いに連携して動作するように作成された一連の型やリソースを提供し、"機能" の論理上の単位を成すものです。 CLR から見て、型がアセンブリのコンテキスト外に存在することはありません。 作成して、アセンブリの展開の詳細については、次を参照してください。[アセンブリを使ったプログラミング](../../../../docs/framework/app-domains/programming-with-assemblies.md)します。  
+ アセンブリは、.NET Framework アプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、互いに連携して動作するように作成された一連の型やリソースを提供し、"機能" の論理上の単位を成すものです。 CLR から見て、型がアセンブリのコンテキスト外に存在することはありません。 作成して、アセンブリの展開の詳細については、[アセンブリを使ったプログラミング](../../../../docs/framework/app-domains/programming-with-assemblies.md)を参照してください。  
   
 ### <a name="strong-naming-assemblies"></a>厳密な名前付きアセンブリ  
  厳密な名前 (デジタル署名) は、アセンブリの ID (単純なテキスト名、バージョン番号、および使用可能な場合はカルチャ情報) と、公開キーおよびデジタル署名で構成されます。 このデジタル署名は、対応する秘密キーを使用してアセンブリ ファイルから生成されます。 アセンブリ ファイルにはアセンブリ マニフェストが格納されており、そこに、アセンブリを構成するすべてのファイルの名前とハッシュが含まれます。  
@@ -142,7 +142,7 @@ ms.locfileid: "58411565"
   `LocalIntranet` などの既定のアクセス許可セットは変更できません。 などの<xref:System.Data.SqlClient>がコードのアクセス許可を<xref:System.Security.Policy.Zone>の`LocalIntranet`、システム管理者は、アクセス許可の設定をコピーでした`LocalIntranet`、名前を"CustomLocalIntranet"に変更、追加、 <xref:System.Data.SqlClient> 、アクセス許可のインポート設定を使用して CustomLocalIntranet アクセス許可、 [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)、セットのアクセス許可セットと`LocalIntranet_Zone`を CustomLocalIntranet します。  
   
 ### <a name="sample-permission-set"></a>サンプル アクセス許可セット  
- 部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタム アクセス許可セットを作成する方法の詳細については、次を参照してください。[を構成するためのアクセス許可設定を使用して Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))します。  
+ 部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタム アクセス許可セットを作成する方法の詳細については、[を構成するためのアクセス許可設定を使用して Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))を参照してください。  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -163,7 +163,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>セキュリティ アクセス許可を使用した ADO.NET コード アクセスの検証  
- 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティ ポリシーの詳細については、次を参照してください。[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))と[セキュリティ ポリシーのベスト プラクティス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))します。  
+ 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティ ポリシーの詳細については、[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))と[セキュリティ ポリシーのベスト プラクティス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))を参照してください。  
   
 ### <a name="example"></a>例  
  次のサンプルは、特定の接続文字列を必要とするコードの作成方法を示しています。 このサンプルは、<xref:System.Data.SqlClient> に対する無制限の権限を拒否する機能をシミュレートします。この機能は、実際には、システム管理者が、CAS ポリシーを使用して実装します。  
@@ -197,7 +197,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>アンマネージ コードとの相互運用性  
  CLR の外部で実行されるコードはアンマネージ コードと呼ばれます。 したがって、CAS などのセキュリティ メカニズムをアンマネージ コードに適用することはできません。 COM コンポーネント、ActiveX インターフェイス、および Windows API 関数は、アンマネージ コードの例を示します。 アンマネージ コードを実行する場合は、アプリケーションの全体的なセキュリティが損なわれないよう特別な考慮をする必要があります。 詳細については、「[アンマネージ コードとの相互運用](../../../../docs/framework/interop/index.md)」を参照してください。  
   
- .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、次を参照してください。[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)します。  
+ .NET Framework は、COM 相互運用機能を介したアクセスを提供することによって、既存の COM コンポーネントとの下位互換性をサポートしています。 COM 相互運用ツールを使って適切な COM 型をインポートすることにより、.NET Framework アプリケーションに COM コンポーネントを組み込むことができます。 インポートが完了すると、COM 型を使用できるようになります。 アセンブリのメタデータをタイプ ライブラリにエクスポートし、マネージド コンポーネントを COM コンポーネントとして登録することで、COM クライアントからマネージド コードにアクセスすることもできます。 詳細については、[高度な COM 相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

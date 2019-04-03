@@ -19,7 +19,7 @@ ms.locfileid: "54589520"
   
  トランザクションに複数のリソースが含まれる場合は、2 フェーズ コミット (2PC) を実行する必要があります。 2 フェーズ コミット プロトコル (準備フェーズとコミット フェーズ) により、すべてのリソースに対する変更がトランザクションの終了時に完全にコミットされるか、または完全にロールバックされることが保証されます。 その後、すべての参加要素に最終結果が通知されます。 2 フェーズ コミット プロトコルの詳細については、ブックを参照してください"*トランザクション処理。概念と手法 (Morgan Kaufmann Series in Data Management Systems) ISBN:1558601902*"者、Jim Gray。  
   
- 単一フェーズ コミット プロトコルに参加することで、トランザクションのパフォーマンスを最適化することもできます。 詳細については、次を参照してください。 [Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)します。  
+ 単一フェーズ コミット プロトコルに参加することで、トランザクションのパフォーマンスを最適化することもできます。 詳細については、[Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)を参照してください。  
   
  トランザクション結果の通知を受信するだけで、コミットまたはロールバックの選択には参加しない場合は、<xref:System.Transactions.Transaction.TransactionCompleted> イベントに登録する必要があります。  
   
@@ -107,7 +107,7 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>単一フェーズ コミットの最適化  
- 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 このプロトコルの詳細については、次を参照してください。 [Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)します。  
+ 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 このプロトコルの詳細については、[Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)

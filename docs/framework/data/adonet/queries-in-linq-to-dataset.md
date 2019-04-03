@@ -31,9 +31,9 @@ ms.locfileid: "56093269"
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 2 つの異なる構文を使ってクエリを作成できます。 クエリ式の構文とメソッド ベースのクエリ構文。  
   
 ### <a name="query-expression-syntax"></a>クエリ式の構文  
- クエリ式は宣言型のクエリ構文です。 開発者は SQL に似た構文形式を C# または Visual Basic で用いてクエリを作成できます。 クエリ式の構文を使用することにより、フィルター、並べ替え、グループ化など、データ ソースに対するきわめて複雑な処理を最小限のコードで実行できます。 詳細については、次を参照してください。 [LINQ クエリ式](../../../csharp/linq/index.md#query-expression-overview)と[基本的なクエリ操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)します。
+ クエリ式は宣言型のクエリ構文です。 開発者は SQL に似た構文形式を C# または Visual Basic で用いてクエリを作成できます。 クエリ式の構文を使用することにより、フィルター、並べ替え、グループ化など、データ ソースに対するきわめて複雑な処理を最小限のコードで実行できます。 詳細については、[LINQ クエリ式](../../../csharp/linq/index.md#query-expression-overview)と[基本的なクエリ操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)を参照してください。
   
- クエリ式の構文は、C# 3.0 および [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] で新たに導入されたものです。 ただし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) は、クエリ式の構文そのものを理解することはできません。 そのため、クエリ式はコンパイル時に、CLR が理解できる形式 (メソッド呼び出し) へと変換されます。 これらのメソッドとして参照されます、*標準クエリ演算子*します。 開発者は、クエリ構文を使う代わりに、メソッド構文を使ってそれらを直接呼び出すこともできます。 詳細については、「[LINQ でのクエリ構文とメソッド構文](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+ クエリ式の構文は、C# 3.0 および [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] で新たに導入されたものです。 ただし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) は、クエリ式の構文そのものを理解することはできません。 そのため、クエリ式はコンパイル時に、CLR が理解できる形式 (メソッド呼び出し) へと変換されます。 これらのメソッドとして参照されます、*標準クエリ演算子*します。 開発者は、クエリ構文を使う代わりに、メソッド構文を使ってそれらを直接呼び出すこともできます。 詳細については、「[LINQ でのクエリ構文とメソッド構文](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)」を参照してください。 標準クエリ演算子の詳細については、[標準クエリ演算子の概要](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
  次の例では、<xref:System.Linq.Enumerable.Select%2A> を使用して `Product` テーブルからすべての行を取得し、製品名を表示しています。  
   

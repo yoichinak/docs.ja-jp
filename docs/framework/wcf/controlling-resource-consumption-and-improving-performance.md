@@ -33,7 +33,7 @@ ms.locfileid: "54664162"
 
  実行時に発生する一部の例外はアプリケーション層から見えないため、このメカニズムでは返されません。このため、カスタムの <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> 実装で処理できないことがあります。 Microsoft Visual Studio などの開発環境で作業している場合は、これらの例外のほとんどは自動的に表示されます。 ただし、いくつかの例外がマスクされる可能性などの開発環境の設定で[マイ コードのみ](/visualstudio/debugger/just-my-code)Visual Studio。
 
- 開発環境の機能に関係なく、すべての例外をデバッグし、アプリケーションのパフォーマンスを調整する WCF トレースとメッセージ ログの機能を使用できます。 詳細については、次を参照してください。[トレースを使用して、アプリケーションのトラブルシューティングを](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)します。
+ 開発環境の機能に関係なく、すべての例外をデバッグし、アプリケーションのパフォーマンスを調整する WCF トレースとメッセージ ログの機能を使用できます。 詳細については、[トレースを使用して、アプリケーションのトラブルシューティングを](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)を参照してください。
 
 ## <a name="performance-issues-and-xmlserializer"></a>パフォーマンスの問題と XmlSerializer
  <xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。
@@ -44,7 +44,7 @@ ms.locfileid: "54664162"
  [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)アプリケーションのコンパイル済みアセンブリから必要なシリアル化コードを生成することによって、これらのアプリケーションの起動時のパフォーマンスを向上させることができます。 詳細については、「[方法 :スタートアップ アプリケーション間を短縮の WCF クライアント、XmlSerializer を使用して](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)します。
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>ASP.NET で WCF サービスをホストする場合のパフォーマンスの問題
- WCF サービスを IIS および ASP.NET でホストする場合、IIS と ASP.NET の構成設定が WCF サービスのスループットやメモリの占有領域に影響する場合があります。  ASP.NET パフォーマンスの詳細については、次を参照してください。 [ASP.NET パフォーマンスの向上](https://go.microsoft.com/fwlink/?LinkId=186462)します。  予想外の結果を引き起こす可能性のある設定の 1 つに、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> があります。これは、<xref:System.Web.Configuration.ProcessModelSection> のプロパティです。 アプリケーションのクライアントが固定数または少数である場合、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> を 2 に設定すると、CPU の使用率が 100% に近いマルチプロセッサ コンピューターのスループットが向上する場合があります。 このパフォーマンスの向上にはコストが伴います。つまり、メモリの使用率も増加するため、スケーラビリティが低下する場合があります。
+ WCF サービスを IIS および ASP.NET でホストする場合、IIS と ASP.NET の構成設定が WCF サービスのスループットやメモリの占有領域に影響する場合があります。  ASP.NET パフォーマンスの詳細については、[ASP.NET パフォーマンスの向上](https://go.microsoft.com/fwlink/?LinkId=186462)を参照してください。  予想外の結果を引き起こす可能性のある設定の 1 つに、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> があります。これは、<xref:System.Web.Configuration.ProcessModelSection> のプロパティです。 アプリケーションのクライアントが固定数または少数である場合、<xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> を 2 に設定すると、CPU の使用率が 100% に近いマルチプロセッサ コンピューターのスループットが向上する場合があります。 このパフォーマンスの向上にはコストが伴います。つまり、メモリの使用率も増加するため、スケーラビリティが低下する場合があります。
 
 ## <a name="see-also"></a>関連項目
 

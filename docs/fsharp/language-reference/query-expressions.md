@@ -48,7 +48,7 @@ query1
 
 前のコード例では、クエリ式は、中かっこ内が。 式のコードの意味は、クエリの結果に、データベース内の Customers テーブルのすべての顧客を返します。 クエリ式を実装する型を返す<xref:System.Linq.IQueryable%601>と<xref:System.Collections.Generic.IEnumerable%601>を使用して反復できますので、 [Seq モジュール](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)例として示します。
 
-すべての計算式の型は、ビルダー クラスから作成されます。 クエリ式で計算のビルダー クラスは`QueryBuilder`します。 詳細については、次を参照してください。[コンピュテーション式](computation-expressions.md)と[Linq.QueryBuilder クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)します。
+すべての計算式の型は、ビルダー クラスから作成されます。 クエリ式で計算のビルダー クラスは`QueryBuilder`します。 詳細については、[コンピュテーション式](computation-expressions.md)と[Linq.QueryBuilder クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)を参照してください。
 
 ## <a name="query-operators"></a>クエリ演算子
 
@@ -56,7 +56,7 @@ query1
 
 クエリ式では、SQL に変換できる式のみが許可されます。 たとえば、関数呼び出しは許可されません、式で使用すると、`where`クエリ演算子。
 
-表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 F# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、次を参照してください。 [ODataService 型プロバイダー (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)します。
+表 1 は、使用できるクエリ演算子を示します。 さらに、Table2、SQL クエリと、同等 F# クエリ式では、このトピックで後述の比較を参照してください。 一部のクエリ演算子は、いくつかの型プロバイダーによってサポートされていません。 具体的には、OData 型プロバイダーは、OData の制限によりサポートされるクエリ演算子に制限されます。 詳細については、[ODataService 型プロバイダー (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e)を参照してください。
 
 このテーブルには、次の形式でデータベース前提としています。
 

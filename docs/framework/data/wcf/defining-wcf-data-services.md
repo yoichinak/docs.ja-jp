@@ -13,7 +13,7 @@ ms.locfileid: "54512296"
 ---
 # <a name="defining-wcf-data-services"></a>WCF Data Services の定義
 
-このセクションを作成して、データとして公開する WCF Data Services を構成する方法を説明します、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 データ サービスを作成するために必要な基本的な手順の詳細については、次を参照してください。[サービスとしてのあなたのデータを公開する](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)します。
+このセクションを作成して、データとして公開する WCF Data Services を構成する方法を説明します、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 データ サービスを作成するために必要な基本的な手順の詳細については、[サービスとしてのあなたのデータを公開する](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

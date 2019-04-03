@@ -19,19 +19,19 @@ ms.locfileid: "57714828"
   
 -   Windows Workflow Foundation を使用したプログラミングに慣れていて作業、下に表示するトピックを参照している一部のサンプル アプリケーションを確認するだけ[Windows Workflow のサンプル](./samples/index.md)します。  
   
--   Windows Workflow Foundation のさまざまなフロー制御モデルの詳細については、次を参照してください。[ワークフローの設計](designing-workflows.md)します。  
+-   Windows Workflow Foundation のさまざまなフロー制御モデルの詳細については、[ワークフローの設計](designing-workflows.md)を参照してください。  
   
--   Windows Workflow Foundation アプリケーションを作成する基本的な手順について説明するチュートリアルについては、次を参照してください。[チュートリアル入門](getting-started-tutorial.md)します。  
+-   Windows Workflow Foundation アプリケーションを作成する基本的な手順について説明するチュートリアルについては、[チュートリアル入門](getting-started-tutorial.md)を参照してください。  
   
 -   Windows Workflow Foundation の背後にある概念に関心がある場合は、トピックを参照して、 [Windows Workflow の概念](conceptual-overview.md)セクション。  
   
--   Windows Workflow Foundation のドキュメントで使用される用語の一覧は、次を参照してください。 [.NET Framework 4.5 の Windows Workflow Foundation 用語集](glossary.md)します。  
+-   Windows Workflow Foundation のドキュメントで使用される用語の一覧は、[.NET Framework 4.5 の Windows Workflow Foundation 用語集](glossary.md)を参照してください。  
   
--   新しい概念と機能の一覧は、次を参照してください。 [Windows Workflow Foundation の新](whats-new.md)します。  
+-   新しい概念と機能の一覧は、[Windows Workflow Foundation の新](whats-new.md)を参照してください。  
   
 ## <a name="programming-in-depth"></a>プログラミングの詳細  
   
--   Windows Workflow Foundation オブジェクト モデルの詳細については、次を参照してください。 [Windows Workflow のアーキテクチャ](architecture.md)します。  
+-   Windows Workflow Foundation オブジェクト モデルの詳細については、[Windows Workflow のアーキテクチャ](architecture.md)を参照してください。  
   
 -   参照してください、アプリケーション開発を開始する準備が整ったら場合[Windows Workflow Foundation プログラミング](programming.md)します。  
   

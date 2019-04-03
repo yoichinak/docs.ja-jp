@@ -35,7 +35,7 @@ XAML 名前スコープ内の XAML で定義された要素を一意に識別し
 ## <a name="remarks"></a>Remarks  
  後`x:Name`に適用されるフレームワークでプログラミング モデルのバッキング、名前は、オブジェクト参照またはコンス トラクターによって返されるインスタンスを保持する変数に相当します。  
   
- 値、`x:Name`ディレクティブの使用状況は XAML 名前スコープ内で一意である必要があります。 既定で .NET Framework XAML サービスの API で使用するとき、プライマリ XAML 名前スコープが 1 つの XAML 運用環境の XAML ルート要素で定義されており、その XAML 運用環境で格納されている要素が含まれます。 XAML の個別の名前の 1 つの XAML 運用環境で発生するスコープが追加は、特定のシナリオに対処するフレームワークで定義できます。 たとえば、WPF では、新しい XAML 名前スコープ定義され、XAML の運用環境で定義されている任意のテンプレートで作成されました。 (多くの XAML 名前スコープの概念に関連が記述 for WPF) XAML 名前スコープの詳細については、次を参照してください。 [WPF XAML 名前スコープ](../wpf/advanced/wpf-xaml-namescopes.md)します。  
+ 値、`x:Name`ディレクティブの使用状況は XAML 名前スコープ内で一意である必要があります。 既定で .NET Framework XAML サービスの API で使用するとき、プライマリ XAML 名前スコープが 1 つの XAML 運用環境の XAML ルート要素で定義されており、その XAML 運用環境で格納されている要素が含まれます。 XAML の個別の名前の 1 つの XAML 運用環境で発生するスコープが追加は、特定のシナリオに対処するフレームワークで定義できます。 たとえば、WPF では、新しい XAML 名前スコープ定義され、XAML の運用環境で定義されている任意のテンプレートで作成されました。 (多くの XAML 名前スコープの概念に関連が記述 for WPF) XAML 名前スコープの詳細については、[WPF XAML 名前スコープ](../wpf/advanced/wpf-xaml-namescopes.md)を参照してください。  
   
  一般に、`x:Name`も使用する場合に適用しない`x:Key`します。 特定の既存のフレームワークでの XAML 実装の間に代替の概念が導入`x:Key`と`x:Name`が、その推奨される方法ではありません。 .NET framework XAML サービスがこのような代替の概念をサポートしていませんなどの名前/キーの情報を処理するときに<xref:System.Windows.Markup.INameScope>または<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>します。  
   
@@ -50,7 +50,7 @@ XAML 名前スコープ内の XAML で定義された要素を一意に識別し
   
  WPF の Microsoft Visual Basic を使用するアプリケーションを対象し、XAML ファイルが含まれます`Page`ビルド アクションでは、個別の参照プロパティが追加のコンパイル時に作成された、 `WithEvents` をされているすべての要素にキーワード`x:Name`サポートするために、`Handles`イベント ハンドラー デリゲートの構文。 このプロパティはパブリックでは常にします。 詳細については、「[Visual Basic と WPF のイベント処理](../wpf/advanced/visual-basic-and-wpf-event-handling.md)」を参照してください。  
   
- `x:Name` ページがない場合 (たとえば、loose XAML リソース ディクショナリの) のビルド アクションによってマークアップ コンパイルの場合でも、読み込み時に XAML 名前スコープに名前を登録する WPF XAML プロセッサによって使用されます。 この動作の理由の 1 つがあるため、`x:Name`のために必要な可能性のある<xref:System.Windows.Data.Binding.ElementName%2A>バインドします。 詳細については、次を参照してください。[データ バインディングの概要](../wpf/data/data-binding-overview.md)します。  
+ `x:Name` ページがない場合 (たとえば、loose XAML リソース ディクショナリの) のビルド アクションによってマークアップ コンパイルの場合でも、読み込み時に XAML 名前スコープに名前を登録する WPF XAML プロセッサによって使用されます。 この動作の理由の 1 つがあるため、`x:Name`のために必要な可能性のある<xref:System.Windows.Data.Binding.ElementName%2A>バインドします。 詳細については、[データ バインディングの概要](../wpf/data/data-binding-overview.md)を参照してください。  
   
  前述の`x:Name`(または`Name`) を使用する場合に適用しない`x:Key`します。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> XAML 名前スコープとして定義すること自体が実装されていないまたは null 値を取得するのに特別な動作が<xref:System.Windows.Markup.INameScope>Api としてこの動作を強制する方法。 WPF XAML パーサーが検出した場合`Name`または`x:Name`XAML 定義で<xref:System.Windows.ResourceDictionary>名前は任意の XAML 名前スコープに追加されません。 任意の XAML 名前スコープからその名前を検索しようと`FindName`メソッドでは、有効な結果は返されません。  
   

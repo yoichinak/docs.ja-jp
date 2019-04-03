@@ -27,11 +27,11 @@ SQL Server、Oracle、OLE DB と ODBC だけでなく、ADO.NET の .NET デー�
 
 トレースを拡張することにより異なるトレース技術をサポートできます。このため、開発者はアプリケーション スタックのあらゆるレベルで問題をトレースできます。 トレースは ADO.NET のみで使用できる機能ではありませんが、Microsoft プロバイダーでは、汎用トレース機能および instrumentation API を活用しています。
 
-設定して、ADO.NET におけるマネージ トレースの構成の詳細については、次を参照してください。[データ アクセスのトレース](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))します。
+設定して、ADO.NET におけるマネージ トレースの構成の詳細については、[データ アクセスのトレース](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))を参照してください。
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server では、データ アクセス トレース ([データ アクセスのトレース](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) が容易にできるようにからの接続の障害などの診断情報とクライアントのイベントを関連付けるために簡単に更新されました、サーバーの接続のリング バッファーやアプリケーションのパフォーマンス情報を拡張イベント ログでします。 拡張イベント ログの読み取り方法の詳細については、次を参照してください。[イベント セッション データの表示](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))します。
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server では、データ アクセス トレース ([データ アクセスのトレース](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) が容易にできるようにからの接続の障害などの診断情報とクライアントのイベントを関連付けるために簡単に更新されました、サーバーの接続のリング バッファーやアプリケーションのパフォーマンス情報を拡張イベント ログでします。 拡張イベント ログの読み取り方法の詳細については、[イベント セッション データの表示](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110))を参照してください。
 
 接続操作では、ADO.NET はクライアント接続 ID を送信します。 接続に失敗した場合、接続リング バッファーを表示できます ([接続リング バッファーによる SQL Server 2008 のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) を見つけて、`ClientConnectionID`フィールドでに関する診断情報を取得し、接続エラーです。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます。 (接続がログイン前のパケットを送信する前に失敗すると、クライアント接続 ID は生成されません。)クライアント接続 ID は 16 バイトの GUID です。 拡張イベント セッション内のイベントに `client_connection_id` アクションが追加された場合にも、拡張イベントのターゲット出力のクライアント接続 ID を見つけることができます。 それ以上にクライアントのドライバーの診断について支援が必要な場合は、データ アクセスのトレースを有効にし、接続コマンドを再実行して、データ アクセスのトレースの `ClientConnectionID` フィールドを確認することができます。
 

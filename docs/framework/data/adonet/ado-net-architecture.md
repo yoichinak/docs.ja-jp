@@ -16,10 +16,10 @@ ms.locfileid: "54623184"
  データのアクセスと操作を実行する、[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] の 2 つの主要コンポーネントが、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーと <xref:System.Data.DataSet> です。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー  
- .NET Framework データ プロバイダーは、データの操作と、データに対する高速かつ前方参照専用、読み込み専用のアクセスを実行することを明確な目標としてデザインされたコンポーネントです。 `Connection` オブジェクトはデータ ソースへの接続を実現します。 `Command` オブジェクトによりデータベース コマンドにアクセスし、データの取得、データの修正、ストアド プロシージャの実行、およびパラメーター情報の送信または取得を実行できます。 `DataReader` は、データ ソースからのパフォーマンスの高いデータ ストリームを実現します。 最後に、`DataAdapter` は `DataSet` オブジェクトとデータ ソース間のブリッジとして機能します。 `DataAdapter` では `Command` オブジェクトを使用してデータ ソースに対して SQL コマンドを実行して、`DataSet` にデータを読み込むと同時に、`DataSet` のデータに加えられた変更をデータ ソースと調整します。 詳細については、次を参照してください。 [.NET Framework データ プロバイダー](../../../../docs/framework/data/adonet/data-providers.md)と[ADO.NET での変更データの取得および](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)します。  
+ .NET Framework データ プロバイダーは、データの操作と、データに対する高速かつ前方参照専用、読み込み専用のアクセスを実行することを明確な目標としてデザインされたコンポーネントです。 `Connection` オブジェクトはデータ ソースへの接続を実現します。 `Command` オブジェクトによりデータベース コマンドにアクセスし、データの取得、データの修正、ストアド プロシージャの実行、およびパラメーター情報の送信または取得を実行できます。 `DataReader` は、データ ソースからのパフォーマンスの高いデータ ストリームを実現します。 最後に、`DataAdapter` は `DataSet` オブジェクトとデータ ソース間のブリッジとして機能します。 `DataAdapter` では `Command` オブジェクトを使用してデータ ソースに対して SQL コマンドを実行して、`DataSet` にデータを読み込むと同時に、`DataSet` のデータに加えられた変更をデータ ソースと調整します。 詳細については、[.NET Framework データ プロバイダー](../../../../docs/framework/data/adonet/data-providers.md)と[ADO.NET での変更データの取得および](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)を参照してください。  
   
 ### <a name="the-dataset"></a>DataSet  
- ADO.NET `DataSet` は、どのデータ ソースにも依存しないデータ アクセスを行うことを目的としています。 したがって、複数の異なるデータ ソースと併用したり、XML データと併用したり、アプリケーションにとってローカルなデータを管理するために使用したりできます。 `DataSet` には、1 つ以上の <xref:System.Data.DataTable> オブジェクトのコレクションが含まれます。このオブジェクトは、データの行と列に加え、主キー、外部キー、制約、および `DataTable` オブジェクトのリレーション情報で構成されます。 詳細については、次を参照してください。 [Dataset、Datatable、および Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)します。  
+ ADO.NET `DataSet` は、どのデータ ソースにも依存しないデータ アクセスを行うことを目的としています。 したがって、複数の異なるデータ ソースと併用したり、XML データと併用したり、アプリケーションにとってローカルなデータを管理するために使用したりできます。 `DataSet` には、1 つ以上の <xref:System.Data.DataTable> オブジェクトのコレクションが含まれます。このオブジェクトは、データの行と列に加え、主キー、外部キー、制約、および `DataTable` オブジェクトのリレーション情報で構成されます。 詳細については、[Dataset、Datatable、および Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)を参照してください。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーと `DataSet` のリレーションシップを次の図に示します。  
   
@@ -46,7 +46,7 @@ ADO.NET のアーキテクチャ
  LINQ to SQL では、リレーショナル データベースのデータ構造と対応付けられたオブジェクト モデルに対し、中間概念モデルを使用することなくクエリを実行できます。 それぞれのテーブルは独立したクラスで表現され、オブジェクト モデルとリレーショナル データベース スキーマとが緊密に結び付けられます。 LINQ to SQL では、オブジェクト モデルの統合言語クエリが Transact-SQL に変換され、データベースに送信されて実行されます。 データベースから結果が返されると、LINQ to SQL によって、その結果が再びオブジェクトへと変換されます。 詳細については、「[LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)」を参照してください。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- ADO.NET Entity Framework は、開発者がリレーショナル ストレージ スキーマに対して直接プログラムを作成するのではなく、概念アプリケーション モデルに対してプログラムを作成して、データ アクセス アプリケーションを作成できるように設計されています。 その目的は、データ指向アプリケーションに必要なコードの量と保守作業の量を減らすことです。 詳細については、次を参照してください。 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)します。  
+ ADO.NET Entity Framework は、開発者がリレーショナル ストレージ スキーマに対して直接プログラムを作成するのではなく、概念アプリケーション モデルに対してプログラムを作成して、データ アクセス アプリケーションを作成できるように設計されています。 その目的は、データ指向アプリケーションに必要なコードの量と保守作業の量を減らすことです。 詳細については、[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)を参照してください。  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、Web またはイントラネットにデータ サービスを展開するために使用されます。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、「[WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)」を参照してください。  

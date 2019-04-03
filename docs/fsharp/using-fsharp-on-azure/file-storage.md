@@ -35,7 +35,7 @@ File storage の概念的概要についてを参照してください[file stor
 
 ### <a name="get-your-connection-string"></a>接続文字列を取得します。
 
-このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
+このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
 
 チュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
 
@@ -103,7 +103,7 @@ File storage からデータを読み書きするコードを記述する準備�
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-作成と共有アクセス署名の使用に関する詳細については、次を参照してください。[を使用して Shared Access Signature (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)と[の作成と使用して SAS を Blob storage](/azure/storage/storage-dotnet-shared-access-signature-part-2)します。
+作成と共有アクセス署名の使用に関する詳細については、[を使用して Shared Access Signature (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)と[の作成と使用して SAS を Blob storage](/azure/storage/storage-dotnet-shared-access-signature-part-2)を参照してください。
 
 ### <a name="copy-files"></a>ファイルのコピー
 

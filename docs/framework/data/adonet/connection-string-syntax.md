@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンスへの接続とアタッチ  
  ユーザー インスタンスは、SQL Server Express の機能の 1 つです。 最小限の特権しか持たないローカル Windows アカウントで実行しているユーザーが、SQL Server データベースにアタッチできます。この場合、管理特権は不要です。 ユーザー インスタンスは、サービスとしてではなく、ユーザーの Windows 資格情報で実行されます。  
   
- ユーザー インスタンスの操作方法の詳細については、次を参照してください。 [SQL Server Express ユーザー インスタンス](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)します。  
+ ユーザー インスタンスの操作方法の詳細については、[SQL Server Express ユーザー インスタンス](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)を参照してください。  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate の使用  
  `TrustServerCertificate`キーワードは、有効な証明書の SQL Server インスタンスに接続する場合にのみ有効です。 `TrustServerCertificate` を `true` に設定した場合、トランスポート層に SSL が使用されてチャネルが暗号化されます。また、証明書チェーンをたどることによる信頼性の検証は省略されます。  
@@ -119,7 +119,7 @@ Data Source=MySqlServer\MSSQL1;"
 |[はい]|[はい]|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
 |[はい]|[はい]|[はい]|[はい]|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
   
- 詳細については、次を参照してください。[を使用して検証を伴わない暗号化](/sql/relational-databases/native-client/features/using-encryption-without-validation)します。
+ 詳細については、[を使用して検証を伴わない暗号化](/sql/relational-databases/native-client/features/using-encryption-without-validation)を参照してください。
   
 ## <a name="oledb-connection-strings"></a>OleDb 接続文字列  
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> の <xref:System.Data.OleDb.OleDbConnection> プロパティを使用すると、Microsoft Access などの OLE DB データ ソースの接続文字列を取得または設定することができます。 `OleDb` クラスを使用して、実行時に <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 接続文字列を作成することもできます。  
