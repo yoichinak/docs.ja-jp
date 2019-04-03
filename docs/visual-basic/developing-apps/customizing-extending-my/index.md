@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820946"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890398"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic でのプロジェクトのカスタマイズと My の拡張
 追加するためにプロジェクト テンプレートをカスタマイズする`My`オブジェクト。 これにより、簡単に検索して、オブジェクトを使用するには、他の開発者。  
@@ -27,7 +27,7 @@ ms.locfileid: "58820946"
  メンバーをオーバーライドすることで、アプリケーション モデルを独自の拡張機能を指定する方法について説明します、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラス。  
   
  [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- これを制御する方法について説明します`My`オブジェクトは、プロジェクトの _MYTYPE の条件付きコンパイル定数を設定で有効にします。  
+ これを制御する方法について説明します`My`オブジェクトは、プロジェクトの設定で有効になって\_MYTYPE の条件付きコンパイル定数。  
   
 ## <a name="related-sections"></a>関連項目  
  [My による開発](../../../visual-basic/developing-apps/development-with-my/index.md)  

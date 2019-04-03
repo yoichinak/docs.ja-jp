@@ -22,19 +22,19 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58759847"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890811"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
-このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
+このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 表示、変換、および画像の書式を設定することができます。  
   
   
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内のイメージング機能を大幅に強化します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、基本的なイメージング機能を提供しますが、コーデックの拡張機能や高品質なイメージのサポートなどの機能が不足しています。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] と [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] の弱点を克服するように設計されており、アプリケーション内でイメージの表示と使用を行うための新しい [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] セットを提供します。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 内のイメージング機能が大幅に強化[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、基本的なイメージング機能を提供しますが、コーデックの拡張機能や高品質なイメージのサポートなどの機能が不足しています。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 場合の欠点を克服するために設計されていますが[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]と[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]の新しいセットを提供し、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]を表示し、アプリケーション内でイメージを使用します。  
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] にアクセスする方法は 2 つあります (マネージド コンポーネントとアンマネージド コンポーネント)。 アンマネージ コンポーネントは、次の機能を提供します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "58759847"
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF イメージ形式  
- コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]には、[!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]、および ICON イメージ形式用のコーデックが含まれています。 アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
+ コーデックは、特定のメディア形式をデコードまたはエンコードするために使用されます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 用のコーデックが含まれています[!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、 [!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、 [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、 [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、 [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、 [!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]、および ICON イメージ形式。 アプリケーションは、これらのコーデックを使用して、対応するイメージ形式をデコードでき、ICON を除くイメージ形式をエンコードできます。  
   
  <xref:System.Windows.Media.Imaging.BitmapSource> 重要なクラスは、デコードおよびイメージのエンコードに使用されます。 それは、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] パイプラインの基本ビルディング ブロックであり、ピクセルの単一の定数セットを特定のサイズと解像度で表現します。 A<xref:System.Windows.Media.Imaging.BitmapSource>複数フレーム イメージの個々 のフレームまたはに対して実行された変換の結果であることができます、<xref:System.Windows.Media.Imaging.BitmapSource>します。 使用される主要クラスの多くの親である[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]などイメージング<xref:System.Windows.Media.Imaging.BitmapFrame>します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "58759847"
  [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ### <a name="image-format-encoding"></a>イメージ形式のエンコード  
- イメージのエンコードは、イメージ データを特定のイメージ形式に変換する操作です。 エンコードされたイメージ データを使用して、新しいイメージ ファイルを作成できます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] には、上記で説明したイメージ形式用のエンコーダーが用意されています。  
+ イメージのエンコードは、イメージ データを特定のイメージ形式に変換する操作です。 エンコードされたイメージ データを使用して、新しいイメージ ファイルを作成できます。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 上記で説明したイメージ形式の各エンコーダーを提供します。  
   
  次の例は、エンコーダーを使用して新しく作成されたビットマップ イメージを保存する操作を示しています。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "58759847"
 ## <a name="image-metadata"></a>イメージのメタデータ  
  一部のイメージ ファイルには、ファイルの内容または特性を記述するメタデータが含まれています。 たとえば、ほとんどのデジタル カメラは、イメージをキャプチャするために使用されるカメラの型番に関するメタデータを含むイメージを作成します。 各イメージ形式は、メタデータを異なる方法で処理しますが、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] では、サポートしているイメージ形式のメタデータの格納と取得を一律に実行します。  
   
- メタデータへのアクセスがを通じて提供される、<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>のプロパティを<xref:System.Windows.Media.Imaging.BitmapSource>オブジェクト。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返します、<xref:System.Windows.Media.Imaging.BitmapMetadata>イメージに含まれるすべてのメタデータを含むオブジェクト。 このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] では、次のメタデータをサポートします。[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]EXt (PNG テキスト データ)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)][!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]および [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ メタデータへのアクセスがを通じて提供される、<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>のプロパティを<xref:System.Windows.Media.Imaging.BitmapSource>オブジェクト。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 返します、<xref:System.Windows.Media.Imaging.BitmapMetadata>イメージに含まれるすべてのメタデータを含むオブジェクト。 このデータは、1 つのメタデータ スキーマでも、異なるスキーマの組み合わせでもかまいません。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 次のイメージのメタデータのスキーマをサポートしています: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、テキスト (PNG テキスト データ)、 [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、 [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)]、および[!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]します。  
   
  メタデータの読み取りのプロセスを簡略化するため<xref:System.Windows.Media.Imaging.BitmapMetadata>など簡単にアクセスできるいくつかの名前付きプロパティを提供します<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>、 <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>、および<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>します。 これらの名前付きプロパティの多くは、メタデータを書き込むためにも使用できます。 メタデータを読み取るための追加サポートは、メタデータ クエリ リーダーによって提供されます。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>など文字列クエリを指定して、メタデータ クエリ リーダーを取得するメソッドが使用される *"/app1/app1/exif/"* します。 次の例では、<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>に格納されているテキストを取得するために使用、 *「テキスト/説明」* 場所。  
   

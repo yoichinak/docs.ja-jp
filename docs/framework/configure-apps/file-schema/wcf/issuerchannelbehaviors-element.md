@@ -2,24 +2,26 @@
 title: <issuerChannelBehaviors> 要素
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 3386a287d577681b67bd3ad54a75b0276e29da1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357249"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890476"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > 要素
 
 指定されたサービス トークン サービスと通信するときに使用するには、Windows Communication Foundation (WCF) クライアント エンドポイントの動作 (構成で定義されている) のコレクションを含みます。 定義された動作は、いずれかを含めることはできません[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。
 
-\<system.ServiceModel>\
-\<behaviors>\
-endpointBehaviors section\
-\<動作 > \
-\<clientCredentials>\
-\<issuedToken>\
-\<issuerChannelBehaviors>
+```xml
+<system.ServiceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior>
+        <clientCredentials>
+          <issuedToken>
+            <issuerChannelBehaviors>
+```
 
 ## <a name="syntax"></a>構文
 
@@ -65,6 +67,6 @@ endpointBehaviors section\
 - [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [クライアントのセキュリティ保護](../../../../../docs/framework/wcf/securing-clients.md)
-- [方法: フェデレーション クライアントを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [方法: ローカル発行者を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [方法: フェデレーション クライアントを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [方法: ローカル発行者を設定する](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [フェデレーションと発行済みトークン](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
