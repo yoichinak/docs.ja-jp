@@ -39,7 +39,7 @@ ms.locfileid: "57358189"
 チュートリアルの目的は、スタンドアロンのユーザーを選択したユーザーの経費報告書を表示できる Windows アプリケーションを構築したします。 アプリケーションは、ブラウザー スタイルのウィンドウでホストされているいくつかの WPF ページで構成されます。
 
 > [!TIP]
-> このチュートリアルの構築に使用するサンプル コードでは、Visual Basic と c# で使用可能な[Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008)します。
+> このチュートリアルの構築に使用するサンプル コードでは、Visual Basic と C# で使用可能な[Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -51,7 +51,7 @@ ms.locfileid: "57358189"
 
 最初の手順では、アプリケーションの定義を 2 つのページとイメージを含むアプリケーション インフラストラクチャを作成します。
 
-1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
+1. Visual Basic または Visual C# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
    1. Visual Studio を開き、選択**ファイル** > **新規** > **プロジェクト**します。
 
