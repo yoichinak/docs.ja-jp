@@ -1,11 +1,16 @@
 ---
 title: 'サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装'
-description: 'サーバーレス アーキテクチャについて説明します。 エンタープライズ アプリケーションにサーバーレス アーキテクチャ (サービスとしてのインフラストラクチャ [IaaS] またはサービスとしてのプラットフォーム [PaaS] ではなく) を実装するタイミング、理由、その方法を説明します。'
+description: サーバーレス アーキテクチャについて説明します。 エンタープライズ アプリケーションにサーバーレス アーキテクチャ (サービスとしてのインフラストラクチャ [IaaS] またはサービスとしてのプラットフォーム [PaaS] ではなく) を実装するタイミング、理由、その方法を説明します。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653939"
 ---
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装
 
 ![サーバーレス アプリの電子ブックのカバーを示すスクリーン ショット。](./media/index/serverless-apps-cover.jpg)

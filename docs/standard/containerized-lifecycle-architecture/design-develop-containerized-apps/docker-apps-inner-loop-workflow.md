@@ -4,12 +4,12 @@ description: Docker アプリケーションの開発の「内部ループ」ワ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676669"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920910"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -105,7 +105,7 @@ Docker 拡張機能のインストールに Ctrl + Shift + P キーを押して`
 
 **図 4-24** 使用して追加された docker ファイル、**ワークスペース コマンドに追加の Docker ファイル**
 
-使用する基本の Docker イメージを指定する DockerFile を追加する場合 (などを使用して`FROM microsoft/aspnetcore`)。 通常は、公式のリポジトリでから取得した基本イメージ上にカスタム イメージを構築します、 [Docker Hub レジストリ](https://hub.docker.com/)(など、 [.NET Core のイメージ](https://hub.docker.com/r/microsoft/dotnet/)または[for Node.js](https://hub.docker.com/_/node/)).
+使用する基本の Docker イメージを指定する DockerFile を追加する場合 (などを使用して`FROM mcr.microsoft.com/dotnet/core/aspnet`)。 通常は、公式のリポジトリでから取得した基本イメージ上にカスタム イメージを構築します、 [Docker Hub レジストリ](https://hub.docker.com/)(など、 [.NET Core のイメージ](https://hub.docker.com/_/microsoft-dotnet-core/)または[for Node.js](https://hub.docker.com/_/node/)).
 
 ***既存の公式 Docker イメージを使用して、***
 
@@ -115,7 +115,7 @@ Docker 拡張機能のインストールに Ctrl + Shift + P キーを押して`
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-この場合、イメージが、行に従って公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチ アーキテクチャ) の version 2.1 に基づきます。`FROM microsoft/dotnet:2.1-aspnetcore-runtime`します。 (詳細については、このトピックでは、次を参照してください。、 [ASP.NET Core Docker イメージ](https://hub.docker.com/r/microsoft/aspnetcore/)ページと[.NET Core Docker イメージ](https://hub.docker.com/r/microsoft/dotnet/)ページ)。
+この場合、イメージが、行に従って公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチ アーキテクチャ) の version 2.1 に基づきます。`FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`します。 (詳細については、このトピックでは、次を参照してください。、 [ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)ページと[.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)ページ)。
 
 DockerFile では、(ポート 80) などの実行時に使用する TCP ポートをリッスンするように Docker を指示することもできます。
 
@@ -143,9 +143,9 @@ DockerFile では、(ポート 80) などの実行時に使用する TCP ポー�
 
 **マルチ アーキテクチャ イメージ リポジトリを使用します。**
 
-リポジトリ内の 1 つのイメージ名には、Linux イメージと Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能は、複数のプラットフォーム (Linux および Windows) をカバーする 1 つのリポジトリを作成する Microsoft (基本イメージの作成者) のようなベンダーを使用できます。 たとえば、 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Docker Hub レジストリで利用可能なリポジトリは、同じイメージ名を使用して Linux および Windows Nano Server のサポートを提供します。
+リポジトリ内の 1 つのイメージ名には、Linux イメージと Windows イメージなどのプラットフォーム バリアントを含めることができます。 この機能は、複数のプラットフォーム (Linux および Windows) をカバーする 1 つのリポジトリを作成する Microsoft (基本イメージの作成者) のようなベンダーを使用できます。 たとえば、 [dotnet/コア/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Docker Hub レジストリで利用可能なリポジトリは、同じイメージ名を使用して Linux および Windows Nano Server のサポートを提供します。
 
-プル、 [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Linux バリアントがプル Linux ホストから同じイメージ名を取得する一方、Windows ホストからのイメージのプルを Windows バリアント。
+プル、 [dotnet/コア/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Linux バリアントがプル Linux ホストから同じイメージ名を取得する一方、Windows ホストからのイメージのプルを Windows バリアント。
 
 ***最初から基本イメージを作成します。***
 
@@ -216,7 +216,7 @@ Redis サービスの使用、[最新のパブリック redis イメージ](http
 
 アプリに 1 つのコンテナーのみがある場合だけ、Docker ホスト (VM または物理サーバー) にデプロイして実行する必要があります。 ただし、複数のサービス、アプリが構成されている場合をする必要があります*組み立てること*もします。 さまざまなオプションを見てみましょう。
 
-***オプション a:1 つのコンテナーまたはサービスを実行します。***
+***オプション A:1 つのコンテナーまたはサービスを実行します。***
 
 次に示すように docker run コマンドを使用して、Docker イメージを実行できます。
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 この特定の展開の私たち 要求をリダイレクトする内部ポート 5000 をポート 80 に送信します。 外部ポート 80、ホスト レベルで、アプリケーションがリッスンしているようになりました。
 
-***オプション b:構成して複数コンテナー アプリケーションの実行***
+***オプション B:構成して複数コンテナー アプリケーションの実行***
 
 ほとんどのエンタープライズ シナリオでは、Docker アプリケーションを複数のサービスはから構成します。 このような場合は、実行することができます、`docker-compose up`が以前に作成した docker compose.yml ファイルを使用するコマンド (図 4-27)、します。 このコマンドを実行するには、すべての関連するコンテナーの構成済みのアプリケーションはデプロイします。
 

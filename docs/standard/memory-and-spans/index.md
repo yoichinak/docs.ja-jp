@@ -3,14 +3,19 @@ title: メモリとスパン
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680144"
 ---
-
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 
 .NET Core 2.1 以降、.NET には、任意のメモリの厳密に型指定された連続する領域を表す、相互に関連する型が多数含まれています。 次の設定があります。

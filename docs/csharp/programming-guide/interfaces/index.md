@@ -1,11 +1,17 @@
 ---
-title: 'インターフェイス - C# プログラミング ガイド'
+title: インターフェイス - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-  - 'interfaces [C#]'
-  - 'C# language, interfaces'
+- interfaces [C#]
+- C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
+ms.openlocfilehash: 330e4e8b36f03b028786920422cd325b31d814e0
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262422"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 

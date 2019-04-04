@@ -2,6 +2,12 @@
 title: Async および Await を使用した非同期プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125526"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  

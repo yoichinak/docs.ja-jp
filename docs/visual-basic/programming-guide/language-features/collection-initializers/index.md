@@ -2,12 +2,17 @@
 title: コレクション初期化子 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.CollectionInitializer
+- vb.CollectionInitializer
 helpviewer_keywords:
-  - 'collection initializers [Visual Basic]'
+- collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
+ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675461"
 ---
-
 # <a name="collection-initializers-visual-basic"></a>コレクション初期化子 (Visual Basic)
 
 *コレクション初期化子*とは、コレクションを作成して一連の初期値を設定できる、短い構文です。 コレクション初期化子は、コレクションを既知の値のセットから作成する場合に便利です。値のセットの例として、メニュー オプションやカテゴリのリスト、数値の初期セット、曜日や月の名前の静的文字列のリスト、検証に使用する州のリストなどの地理的な場所が挙げられます。

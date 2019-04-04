@@ -1,12 +1,18 @@
 ---
-title: '例外と例外処理 - C# プログラミング ガイド'
+title: 例外と例外処理 - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'exception handling [C#]'
-  - 'exceptions [C#]'
-  - 'C# language, exceptions'
+- exception handling [C#]
+- exceptions [C#]
+- C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
+ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200560"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 C# 言語の例外処理機能は、プログラムの実行時に発生する予期しない状況や例外的な状況を扱うのに役立ちます。 例外処理では、キーワード `try`、`catch`、および `finally` を使用して、成功しない可能性があるアクションを試行し、適切な場合はエラーを処理して、後からリソースをクリーンアップします。 例外の発生元は、共通言語ランタイム (CLR)、.NET Framework、または任意のサード パーティ ライブラリ、またはアプリケーション コードなどさまざまです。 例外は、`throw` キーワードを使用して作成されます。  

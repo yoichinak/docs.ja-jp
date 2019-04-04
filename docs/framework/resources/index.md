@@ -2,17 +2,23 @@
 title: .NET Apps でのリソース
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203364"
 ---
 # <a name="resources-in-net-apps"></a>.NET Apps でのリソース
 ほとんどの製品レベルのアプリでは、リソースを使用する必要があります。 リソースは実行不可能なデータであり、アプリと共に論理的に配置されます。 このリソースは、アプリ内ではエラー メッセージまたはユーザー インターフェイスの一部として表示できます。 リソースには、文字列、イメージ、永続化されたオブジェクトなど、多数の形式のデータを含めることができます。 (永続化されたオブジェクトをリソース ファイルに書き込むには、そのオブジェクトをシリアル化できることが必要です)。データをリソース ファイルに格納しておけば、アプリ全体を再コンパイルすることなくデータを変更できます。 また、データの格納場所が 1 つになり、複数の場所に格納されているハードコーディングされたデータを利用する必要がなくなります。  

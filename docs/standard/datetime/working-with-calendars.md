@@ -1,26 +1,26 @@
 ---
 title: カレンダーの使用
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: HT
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845987"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921352"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -30,33 +30,33 @@ ms.locfileid: "57845987"
 
 派生して .NET でのすべてのカレンダー、<xref:System.Globalization.Calendar?displayProperty=nameWithType>クラスを基本の暦の実装を提供します。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が含まれています。
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
+* <xref:System.Globalization.ChineseLunisolarCalendar>、中国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
+* <xref:System.Globalization.GregorianCalendar>、グレゴリオ暦の暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
 
-* <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
+* <xref:System.Globalization.HebrewCalendar>、ヘブライ暦を表します。
 
-* <xref:System.Globalization.HijriCalendar>。回教暦を表します。
+* <xref:System.Globalization.HijriCalendar>、イスラム暦を表します。
 
-* <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
+* <xref:System.Globalization.JapaneseCalendar>、日本語の暦を表します。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
+* <xref:System.Globalization.JapaneseLunisolarCalendar>、日本の太陰太陽暦を表します。
 
-* <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
+* <xref:System.Globalization.JulianCalendar>、ユリウス暦を表します。
 
-* <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
+* <xref:System.Globalization.KoreanCalendar>、韓国暦を表します。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
+* <xref:System.Globalization.KoreanLunisolarCalendar>、韓国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
+* <xref:System.Globalization.PersianCalendar>、ペルシャ暦を表します。
 
-* <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
+* <xref:System.Globalization.TaiwanCalendar>、台湾暦を表します。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
+* <xref:System.Globalization.TaiwanLunisolarCalendar>、台湾の太陰太陽暦を表します。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
+* <xref:System.Globalization.ThaiBuddhistCalendar>、タイ仏暦を表します。
 
-* <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
+* <xref:System.Globalization.UmAlQuraCalendar>、ウムアルクラ暦を表します。
 
 暦は、次の 2 とおりの方法で使用できます。
 
@@ -138,13 +138,16 @@ ms.locfileid: "57845987"
 暦では通常、日付が時代 (年号) に分けられます。 ただし、 <xref:System.Globalization.Calendar> .NET のクラスは、予定表とのほとんどによって定義されたすべての時代をサポートしていません、<xref:System.Globalization.Calendar>クラスは時代は 1 つのみをサポートします。 複数の時代 (年号) をサポートしているのは、<xref:System.Globalization.JapaneseCalendar> クラスと <xref:System.Globalization.JapaneseLunisolarCalendar> クラスだけです。
 
 > [!IMPORTANT]
->  <xref:System.Globalization.JapaneseCalendar> と <xref:System.Globalization.JapaneseLunisolarCalendar> での新しい時代が 2019 年 5 月 1 日に始まります。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については「[.NET での日本語のカレンダーの新しい時代](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)」をご覧いただき、アプリケーションが影響を受けるかどうかを判断します。 参照してください[、アプリケーション、日本語の時代 (年号) の変更の準備](/windows/uwp/design/globalizing/japanese-era-change)については、時代 (年号) の変更に対する準備状況を確認する Windows 上のアプリケーションをテストします。
+>  Reiwa の時代 (年号) で新しい時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日です。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
+> - [.NET での日本語のカレンダーで新しい時代 (年号) の処理](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)、どのドキュメントをサポートするために .NET に追加された機能、複数の時代 (年号) のカレンダーおよび複数の時代 (年号) の予定表を処理するときに使用するベスト プラクティスについて説明します。
+> - [日本語の時代 (年号) 変更するアプリケーションを準備](/windows/uwp/design/globalizing/japanese-era-change)、時代 (年号) の変更に対する準備状況を確認する Windows 上のアプリケーションのテストに関する情報を提供します。
+> - [.NET Framework の更新プログラムの新しい日本語の時代 (年号) の概要](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)、日本語のカレンダーの新時代に関連する個々 の Windows バージョンの .NET Framework の更新プログラムの一覧を表示するノートの複数の時代 (年号) のサポート、.NET Framework の新しい機能とが含まれていますアプリケーションのテストで検索することです。
 
-ほとんどのカレンダーの時代 (年号) では、非常に長い期間を表します。 グレゴリオ暦でなど、現在の時代 (年号) にまたがる複数の 2 つ millenia。 <xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>、複数の時代 (年号) をサポートする予定表、2 つ、これは、ケースではありません。 時代 (年号) は、皇帝の量を設定の期間に対応します。 サポートの時代 (年号) を複数にするため、特に現在の時代 (年号) の数の上限が、不明の場合は、特別な課題をもたらします。 
+ほとんどのカレンダーの時代 (年号) では、非常に長い期間を表します。 グレゴリオ暦でなど、現在の時代 (年号) にまたがる複数の 2 つ millennia。 <xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>、複数の時代 (年号) をサポートする予定表、2 つ、これは、ケースではありません。 時代 (年号) は、皇帝の量を設定の期間に対応します。 サポートの時代 (年号) を複数にするため、特に現在の時代 (年号) の数の上限が、不明の場合は、特別な課題をもたらします。 
 
 ### <a name="eras-and-era-names"></a>時代 (年号) と時代 (年号) の名前
 
-.NET では、特定の暦の実装でサポートされる時代 (年号) を表す整数が逆の順序で格納、<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>配列。 現在の時代 (年号) のインデックスは 0 で、複数の時代 (年号) をサポートする <xref:System.Globalization.Calendar> クラスの場合は、後に続く各インデックスが前の時代 (年号) に対応します。 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 配列における現在の時代 (年号) のインデックスは、静的な <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> プロパティで定義されます。これは定数であり、値は常に 0 になります。 個々の <xref:System.Globalization.Calendar> クラスには、現在の時代 (年号) の値を返す静的フィールドも含まれています。 これらを次の表に示します。
+.NET では、特定の暦の実装でサポートされる時代 (年号) を表す整数が逆の順序で格納、<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>配列。 現在の時代 (年号) (つまり、時代 (年号) の最新の時間範囲) には、インデックス 0 位置にあると、<xref:System.Globalization.Calendar>複数の時代 (年号)、連続する各インデックスをサポートするクラスには、前の時代 (年号) が反映されます。 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 配列における現在の時代 (年号) のインデックスは、静的な <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> プロパティで定義されます。これは定数であり、値は常に 0 になります。 個々の <xref:System.Globalization.Calendar> クラスには、現在の時代 (年号) の値を返す静的フィールドも含まれています。 これらを次の表に示します。
 
 | Calendar クラス                                        | 現在の時代 (年号) のフィールド                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,10 +165,10 @@ ms.locfileid: "57845987"
 
 特定の時代 (年号) を表す数値に対応する名前は、その数値を <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> メソッドに渡すことで取得できます。 次の例では、これらのメソッドを呼び出して、<xref:System.Globalization.GregorianCalendar> クラスでサポートされる時代 (年号) に関する情報を取得しています。
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
-また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)を参照してください。
+また、"g" カスタム日時書式指定文字列では、日付と時刻の文字列形式に暦の時代 (年号) の名前が含まれます。 詳細については、次を参照してください。[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)します。
 
 ### <a name="instantiating-a-date-with-an-era"></a>日付、時代 (年号) のインスタンス化します。
 
@@ -205,7 +208,7 @@ ms.locfileid: "57845987"
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>予定表、時代 (年号)、および日付の範囲:厳密でない範囲の確認
 
-個々 の予定表に、日付範囲がサポートされているに見えるの時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>クラスもがサポートされている範囲です。 以前は、.NET は、範囲が時代 (年号) に固有の日付がその時代 (年号) の範囲内にあったことを確認しますに厳密な時代 (年号) を使用します。 範囲外の日付をスロー、.NET Framework は既定では厳密でない範囲指定された確認を使用します。 つまり、日付が指定した時代 (年号) の範囲外にある場合は、メソッドがスローします。、<xref:System.ArgumentOutOfRangeException>します。 更新プログラムをすべてのバージョンが導入された .NET Framework の時代 (年号) を緩和する範囲のチェック。次の時代 (年号)、および例外なしに指定した時代 (年号)「オーバーフロー」の範囲外の時代 (年号) 固有の日付をインスタンス化しようとするがスローされます。
+個々 の予定表に、日付範囲がサポートされているに見えるの時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>クラスもがサポートされている範囲です。 以前は、.NET は、範囲が、時代 (年号) 固有の日付がその時代 (年号) の範囲内にあったことを確認しますに厳密な時代 (年号) を使用します。 つまり、日付が指定した時代 (年号) の範囲外にある場合は、メソッドがスローします。、<xref:System.ArgumentOutOfRangeException>します。 現時点では、.NET は既定では厳密でない範囲チェックを使用します。 更新プログラムをすべてのバージョンの .NET には緩やかな時代 (年号) が導入された範囲のチェック。次時代 (年号) に、「オーバーフロー」を指定した時代 (年号) の範囲外の時代 (年号) 固有の日付をインスタンス化しようと、例外はスローされません。
 
 次の例は、1926 年 12 月 25 日に開始され、1989 年 1 月 7 日に終了しましたが、昭和時代 65th 年の日付をインスタンス化しようとします。 この日付に対応する、1990 年 1 月 9 日で表示する時代 (年号) の範囲外である、<xref:System.Globalization.JapaneseCalendar>します。 例の出力に示すように、例では、によって表示される日付は 1990 年 1 月 9日平成の時代 (年号) の 2 つ目の年です。
 
@@ -360,4 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>関連項目
 
 - [方法: グレゴリオ暦以外の暦で日付の表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [サンプル: カレンダーの週の範囲のユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [サンプル:カレンダーの週の範囲のユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Calendar クラス](xref:System.Globalization.Calendar)

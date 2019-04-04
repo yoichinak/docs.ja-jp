@@ -3,8 +3,13 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を使用して、.NET コードを理解し、エラーを見つけて、そのエラーを修正する方法について説明します。
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185845"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
 コンパイラでは、コードの構文とセマンティクスを検証するように、アプリケーション コードの詳細なモデルをビルドします。 このモデルを使用して、ソース コードから実行可能な出力をビルドします。 .NET Compiler Platform SDK では、このモデルへのアクセスが提供されます。 Microsoft では、生産性を向上させるために、IntelliSense、リファクタリング、インテリジェントな名前の変更、"すべての参照の検索"、"定義へ移動" などの統合開発環境 (IDE) 機能をますます使用するようになっています。 コードの品質を向上させるためにコード分析ツールを使用し、アプリケーションの構築に役立てるためにコード ジェネレーターを使用します。 これらのツールがスマートになったので、アプリケーション コードを処理するときに、コンパイラのみが作成するモデルにますますツールがアクセスする必要が生じます。 これが Roslyn API の主要な目的です。ブラック ボックスを開いて、ツールとエンド ユーザーが豊富な情報コンパイラを共有することを許可するためにこのコードがあります。

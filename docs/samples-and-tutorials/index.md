@@ -1,11 +1,16 @@
 ---
 title: .NET サンプルおよびチュートリアル
-description: '.NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。'
+description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習に役立つサンプルとチュートリアルの情報です。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558950"
 ---
-
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
 .NET ドキュメントには、.NET について学習できるサンプルとチュートリアルが含まれています。 ここでは、.NET Core、ASP.NET Core、C# のサンプルを検索、表示、ダウンロードする方法について説明します。 F# プログラミング言語の学習に最適なリソースは [F# Foundation のサイト](https://fsharp.org/learn.html)にあります。 オンラインでのコード エディターを使用して C# を学習する場合は、まず[この対話型のチュートリアル](https://www.microsoft.com/net/learn/in-browser-tutorial/1)、次に [C# の対話型チュートリアル](../csharp/tutorials/intro-to-csharp/index.md)をご覧ください。 サンプル コードの表示とダウンロード方法については、「[サンプルの表示とダウンロード](#viewing-and-downloading-samples)」セクションをご覧ください。

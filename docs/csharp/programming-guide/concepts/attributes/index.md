@@ -1,6 +1,12 @@
 ---
-title: '属性 (C#)'
+title: 属性 (C#)
 ms.date: 04/26/2018
+ms.openlocfilehash: 42a7035a9dae146ad7a303da41c83891e5e19ef8
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442023"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 

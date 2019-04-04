@@ -4,6 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
+ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464672"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>マイクロサービスで DDD と CQRS パターンを使ってビジネスの複雑さに取り組む
 

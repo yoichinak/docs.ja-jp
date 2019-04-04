@@ -3,15 +3,21 @@ title: コレクションとデータ構造体
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - grouping data in collections
-  - 'objects [.NET Framework], grouping in collections'
-  - 'Array class, grouping data in collections'
-  - 'threading [.NET Framework], safety'
-  - Collections classes
-  - 'collections [.NET Framework]'
+- grouping data in collections
+- objects [.NET Framework], grouping in collections
+- Array class, grouping data in collections
+- threading [.NET Framework], safety
+- Collections classes
+- collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836150"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 多くの場合、類似するデータはコレクションとして格納および操作すると、より効率的に処理できます。 <xref:System.Array?displayProperty=nameWithType> クラスまたは <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent>、System.Collections.Immutable の各名前空間のクラスを使用して、コレクションの個々の要素または一定の範囲の要素を追加、削除、および変更することができます。  

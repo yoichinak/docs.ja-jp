@@ -4,6 +4,12 @@ description: Docker ベースのアプリケーションの開発のオプショ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/27/2018
+ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465036"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker ベースのアプリケーションの開発プロセス
 

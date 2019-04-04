@@ -2,10 +2,16 @@
 title: 概要 (WPF)
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'getting started [WPF]'
-  - 'introduction [WPF]'
-  - 'WPF [WPF], getting started'
+- getting started [WPF]
+- introduction [WPF]
+- WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
+ms.openlocfilehash: 0717536912802461e6d03e240b22d3e05d535f86
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371136"
 ---
 # <a name="getting-started-wpf"></a>概要 (WPF)
 Windows Presentation Foundation (WPF) は、デスクトップ クライアント アプリケーションを作成する UI フレームワークです。 WPF の開発プラットフォームは、アプリケーション モデル、リソース、コントロール、グラフィックス、レイアウト、データ バインディング、ドキュメント、セキュリティなどのさまざまなアプリケーション開発機能の一式をサポートします。 WPF は .NET Framework のサブセットであるため、以前 ASP.NET や Windows フォームを使用して .NET Framework でアプリケーションを構築したことがあれば、プログラミングには馴染みがあるでしょう。 WPF は、Extensible Application Markup Language (XAML) を使用して、アプリケーションのプログラミング用に、宣言型モデルを提供します。 このセクションには、WPF の紹介のトピックと、WPF の使用を開始するトピックがあります。  

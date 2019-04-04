@@ -2,16 +2,22 @@
 title: アンマネージ コードとの相互運用
 ms.date: 01/17/2018
 helpviewer_keywords:
-  - 'unmanaged code, interoperation'
-  - 'managed code, interoperation with unmanaged code'
-  - '.NET Framework, interoperation with unmanaged code'
-  - unmanaged code
-  - interoperation with unmanaged code
-  - 'interoperation with unmanaged code, about interoperation'
-  - 'components [.NET Framework], interoperation with unmanaged code'
+- unmanaged code, interoperation
+- managed code, interoperation with unmanaged code
+- .NET Framework, interoperation with unmanaged code
+- unmanaged code
+- interoperation with unmanaged code
+- interoperation with unmanaged code, about interoperation
+- components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408978"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>アンマネージ コードとの相互運用
 

@@ -1,10 +1,15 @@
 ---
-title: 'C# のツアー - C# ガイド'
-description: 'C# を始めてお使いの方のために、 この言語の基本を説明します。'
+title: C# のツアー - C# ガイド
+description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843430"
 ---
-
 # <a name="a-tour-of-the-c-language"></a>C# 言語のツアー
 
 C# ("シー シャープ" と読みます) は、シンプルで最新のタイプ セーフなオブジェクト指向のプログラミング言語です。 C# は C 言語ファミリーをルーツとしているため、C、C++、Java、JavaScript のプログラマーであればすぐに使いこなすことができます。

@@ -3,9 +3,15 @@ layout: HubPage
 ms.topic: hub-page
 hide_bc: true
 title: .NET ドキュメント
-description: '.NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。'
+description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
+ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464516"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">

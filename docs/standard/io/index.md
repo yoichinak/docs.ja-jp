@@ -3,15 +3,21 @@ title: ファイルおよびストリーム入出力 - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - IO namespace
-  - 'files, I/O'
-  - System.IO namespace
-  - 'I/O [.NET Framework]'
-  - 'streams, I/O'
-  - 'data streams, I/O'
+- IO namespace
+- files, I/O
+- System.IO namespace
+- I/O [.NET Framework]
+- streams, I/O
+- data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836332"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 

@@ -2,15 +2,21 @@
 title: Windows サービス アプリケーションの開発
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'ServiceInstaller class, Windows Service applications'
-  - 'Service class, Windows Service applications'
-  - Windows Service applications
-  - Windows NT services
-  - 'ServiceProcessInstaller class, Windows Service applications'
-  - services
-  - '.NET applications, Windows applications'
+- ServiceInstaller class, Windows Service applications
+- Service class, Windows Service applications
+- Windows Service applications
+- Windows NT services
+- ServiceProcessInstaller class, Windows Service applications
+- services
+- .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
+ms.openlocfilehash: 32aa2c1c4cd31e4591c9fa30c05ebe61058f94c5
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442634"
 ---
 # <a name="develop-windows-service-apps"></a>Windows サービス アプリを開発する
 

@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634246"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a>Roslyn ベースのアナライザー
 
 Roslyn ベースのアナライザーでは、.NET Compiler SDK (Roslyn の API) を使用して、プロジェクトのソース コードを分析し、問題の検出と修正の提案を行います。 検出する問題のクラスは、バグを起こしやすい慣習から API の互換性に関するセキュリティの問題まで、アナライザーによってさまざまです。

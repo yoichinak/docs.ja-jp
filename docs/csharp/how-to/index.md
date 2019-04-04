@@ -1,9 +1,14 @@
 ---
-title: '方法に関する記事 (C# ガイド)'
+title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202341"
 ---
-
 # <a name="how-to-c"></a>方法 (C#)
 
 C# ガイドの方法に関するセクションでは、よく寄せられる質問に対する簡単な回答が見つかります。 場合によっては、記事が複数のセクションで表示されることもあります。 複数の検索パスで見つけやすいようにしました。 

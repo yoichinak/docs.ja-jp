@@ -4,6 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
+ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464815"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 

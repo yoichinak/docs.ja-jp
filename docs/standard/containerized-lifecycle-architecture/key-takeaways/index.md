@@ -4,6 +4,12 @@ description: このガイドの重要な習得事項を確認します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 092c182fd9246f4ded148302f6d49cbde24d27d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835838"
 ---
 # <a name="key-takeaways"></a>重要な習得事項
 

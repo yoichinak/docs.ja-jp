@@ -2,9 +2,15 @@
 title: イベント (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'events [Visual Basic], about events'
-  - 'events [Visual Basic]'
+- events [Visual Basic], about events
+- events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
+ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201106"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
 ほとんどのプログラムを実際には、シーケンスで実行するプロシージャのデータ系列として Visual Studio プロジェクトを視覚化する可能性がありますはイベント ドリブン-つまりの実行フローは外部の出現回数と呼ばれるによって決まります*イベント*します。  

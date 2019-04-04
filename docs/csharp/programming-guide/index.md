@@ -1,14 +1,20 @@
 ---
-title: 'C# プログラミング ガイド'
+title: C# プログラミング ガイド
 ms.date: 05/02/2017
 f1_keywords:
-  - cs.langref
+- cs.langref
 helpviewer_keywords:
-  - 'reference tables [C#]'
-  - 'C# language, programming guide'
-  - 'Visual C#, programming concepts'
-  - 'C# language, concepts'
+- reference tables [C#]
+- C# language, programming guide
+- Visual C#, programming concepts
+- C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
+ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745876"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  

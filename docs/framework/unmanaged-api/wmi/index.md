@@ -4,8 +4,13 @@ description: WMI 用の .NET Framework アンマネージド API およびパフ
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377457"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) およびパフォーマンス カウンター (アンマネージ API リファレンス)
 
 .NET Framework WMI およびパフォーマンス カウンターのアンマネージド API は、[ネイティブの Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi) の呼び出しをラップする一連の関数によって構成されています。 これを使用することで、リモート コンピューター システムの管理および監視を行うツールおよびライブラリを開発することができます。

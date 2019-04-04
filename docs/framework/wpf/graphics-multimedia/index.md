@@ -2,16 +2,22 @@
 title: グラフィックスとマルチメディア
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'media [WPF], features'
-  - 'video effects [WPF]'
-  - 'sound effects [WPF]'
-  - 'animation [WPF], features'
-  - 'graphics features [WPF]'
-  - 'transition effects [WPF]'
+- media [WPF], features
+- video effects [WPF]
+- sound effects [WPF]
+- animation [WPF], features
+- graphics features [WPF]
+- transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
+ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379563"
 ---
 # <a name="graphics-and-multimedia"></a>グラフィックスとマルチメディア
 <a name="introduction"></a>

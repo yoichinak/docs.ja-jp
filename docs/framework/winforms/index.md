@@ -2,10 +2,16 @@
 title: Windows フォーム
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723115"
 ---
 # <a name="windows-forms"></a>Windows フォーム
 フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio を使用する、豊富なコントロール セットで書き込まれたと同様に、統合開発環境 (IDE)、コードの記述を支援するために、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  

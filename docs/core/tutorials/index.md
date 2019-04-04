@@ -5,6 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
+ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788298"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく見ていくことで .NET Core と .NET Core SDK ツールについて学習する
 

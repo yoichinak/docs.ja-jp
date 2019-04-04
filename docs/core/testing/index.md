@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185507"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
 
 .NET core では、簡単に単体テストを作成できます。 この記事では、単体テストについて紹介し、その他の種類のテストとの違いを示します。 ページの下部にあるリンクされたリソースは、テスト プロジェクトをソリューションに追加する方法を示します。 テスト プロジェクトを設定した後は、コマンドラインまたは Visual Studio を使用して単体テストを実行することができます。

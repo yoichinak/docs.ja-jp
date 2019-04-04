@@ -3,16 +3,22 @@ title: .NET アプリケーションのグローバライズとローカライ�
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - 'international applications [.NET]'
-  - 'globalization [.NET], encoding'
-  - global applications
-  - internationalization
-  - world-ready applications
-  - 'application development [.NET], globalization'
-  - multilingual application development
+- international applications [.NET]
+- globalization [.NET], encoding
+- global applications
+- internationalization
+- world-ready applications
+- application development [.NET], globalization
+- multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835656"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 

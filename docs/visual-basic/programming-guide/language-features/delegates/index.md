@@ -2,11 +2,16 @@
 title: デリゲート (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674030"
 ---
-
 # <a name="delegates-visual-basic"></a>デリゲート (Visual Basic)
 
 デリゲートは、メソッドを参照するオブジェクトです。 デリゲートは他のプログラミング言語で使用される関数ポインターに似ているため、"*タイプ セーフ関数ポインター*" と説明されることがあります。 Visual Basic のデリゲートでは、関数ポインターとは異なり、クラスに基づく参照型が、<xref:System.Delegate?displayProperty=nameWithType>します。 デリゲートは、共有メソッド (特定のクラスのインスタンスがなくても呼び出すことのできるメソッド) とインスタンス メソッドの両方を参照できます。
