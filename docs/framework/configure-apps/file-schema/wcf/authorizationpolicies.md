@@ -10,7 +10,7 @@ ms.lasthandoff: 01/30/2019
 ms.locfileid: "55254772"
 ---
 # <a name="authorizationpolicies"></a>\<authorizationPolicies>
-この構成セクションには、`add` キーワードを使用して追加できる承認ポリシーの種類のコレクションが含まれています。 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 承認ポリシーのしくみの詳細については、次を参照してください。<xref:System.IdentityModel.Policy.IAuthorizationPolicy>と[承認ポリシー](../../../../../docs/framework/wcf/samples/authorization-policy.md)します。  
+この構成セクションには、`add` キーワードを使用して追加できる承認ポリシーの種類のコレクションが含まれています。 各承認ポリシーは、文字列の単一の必須属性 `policyType` を含みます。 この属性は、入力クレームのセットをクレームの別のセットに変換することを可能にする承認ポリシーを指定します。 アクセス制御は、それに基づいて許可または拒否されます。 承認ポリシーのしくみの詳細については、<xref:System.IdentityModel.Policy.IAuthorizationPolicy>と[承認ポリシー](../../../../../docs/framework/wcf/samples/authorization-policy.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>

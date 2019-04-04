@@ -35,7 +35,7 @@ ms.locfileid: "58186118"
   
  ![GridView 出力を含むの ListView を示すスクリーン ショット。](./media/gridview-overview/listview-gridview-output.jpg)  
   
- 継承するクラスを定義することでカスタム表示モードを作成することができます、<xref:System.Windows.Controls.ViewBase>クラス。 <xref:System.Windows.Controls.ViewBase>クラスには、カスタム ビューを作成する必要のあるインフラストラクチャが用意されています。 カスタム ビューを作成する方法の詳細については、次を参照してください。[を ListView のカスタム表示モードを作成する](how-to-create-a-custom-view-mode-for-a-listview.md)します。  
+ 継承するクラスを定義することでカスタム表示モードを作成することができます、<xref:System.Windows.Controls.ViewBase>クラス。 <xref:System.Windows.Controls.ViewBase>クラスには、カスタム ビューを作成する必要のあるインフラストラクチャが用意されています。 カスタム ビューを作成する方法の詳細については、[を ListView のカスタム表示モードを作成する](how-to-create-a-custom-view-mode-for-a-listview.md)を参照してください。  
   
 <a name="BindingDatatoaListView"></a>   
 ## <a name="binding-data-to-a-listview"></a>ListView へのデータ バインディング  

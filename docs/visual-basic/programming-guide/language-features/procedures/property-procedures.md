@@ -35,7 +35,7 @@ ms.locfileid: "58828350"
   
  プロパティは、クラス、構造、およびモジュールで定義できます。 プロパティは、`Public`どこからでも呼び出すことを意味する既定では、プロパティのコンテナーにアクセスできるアプリケーションでします。  
   
- プロパティと変数の比較は、次を参照してください。[プロパティ間の相違点と Visual Basic における変数](./differences-between-properties-and-variables.md)します。  
+ プロパティと変数の比較は、[プロパティ間の相違点と Visual Basic における変数](./differences-between-properties-and-variables.md)を参照してください。  
   
 ## <a name="declaration-syntax"></a>宣言の構文  
  プロパティ自体がで囲まれたコードのブロックで定義されている、 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)と`End Property`ステートメント。 このブロック内で各プロパティ プロシージャは、宣言ステートメントで囲まれた内部ブロックとして表示されます。 (`Get`または`Set`) と一致する`End`宣言します。  
@@ -59,7 +59,7 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- `Modifiers`を指定できますアクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ、に関する情報も、プロパティが読み取り専用または書き込み専用のかどうか。 `AccessLevel`上、`Get`または`Set`プロシージャには、プロパティ自体に指定されたアクセス レベルより限定的な任意のレベルがあります。 詳細については、次を参照してください。 [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)します。  
+ `Modifiers`を指定できますアクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ、に関する情報も、プロパティが読み取り専用または書き込み専用のかどうか。 `AccessLevel`上、`Get`または`Set`プロシージャには、プロパティ自体に指定されたアクセス レベルより限定的な任意のレベルがあります。 詳細については、[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)を参照してください。  
   
 ### <a name="data-type"></a>データの種類  
  プロパティのデータ型とプリンシパルのアクセス レベルで定義されます、`Property`プロパティ プロシージャではなく、ステートメント。 プロパティは、1 つのデータ型を持つことができます。 たとえば、格納するプロパティを定義することはできません、`Decimal`値しますが、取得、`Double`値。  

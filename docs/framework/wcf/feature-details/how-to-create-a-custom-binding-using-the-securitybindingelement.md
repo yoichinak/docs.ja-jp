@@ -15,7 +15,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54576158"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法: SecurityBindingElement を使用してカスタム バインディングを作成します。
-Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
+Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)を参照してください。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> では、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> が <xref:System.ServiceModel.TransferMode> に設定されている場合に TCP トランスポートによって使用される既定のチャネル形状である <xref:System.ServiceModel.TransferMode.Buffered> チャネル形状をサポートしていません。 このシナリオで <xref:System.ServiceModel.TransferMode> を使用するには、<xref:System.ServiceModel.TransferMode.Streamed> を <xref:System.ServiceModel.Channels.SecurityBindingElement> に設定する必要があります。  
@@ -75,9 +75,9 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
 |||SSL または Windows StreamSecurityBindingElement|SSL または Windows StreamSecurityBindingElement|SSL または Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- SecurityBindingElements には構成可能な設定が多数あることに注意してください。 詳細については、次を参照してください。 [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)します。  
+ SecurityBindingElements には構成可能な設定が多数あることに注意してください。 詳細については、[SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)を参照してください。  
   
- 詳細については、次を参照してください。[メッセージ交換をセキュリティで保護およびセキュリティで保護されたセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)します。  
+ 詳細については、[メッセージ交換をセキュリティで保護およびセキュリティで保護されたセッション](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)を参照してください。  
   
 ## <a name="procedures"></a>手順  
   

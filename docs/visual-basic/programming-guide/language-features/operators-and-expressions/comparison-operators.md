@@ -56,7 +56,7 @@ ms.locfileid: "58826159"
   
  `' The result of the preceding comparison is True.`  
   
- 並べ替え順序がバイナリの比較またはテキストの比較の設定に応じてのいずれかに基づいて`Option Compare`します。 詳細については、次を参照してください。 [Option Compare ステートメント](../../../../visual-basic/language-reference/statements/option-compare-statement.md)します。  
+ 並べ替え順序がバイナリの比較またはテキストの比較の設定に応じてのいずれかに基づいて`Option Compare`します。 詳細については、[Option Compare ステートメント](../../../../visual-basic/language-reference/statements/option-compare-statement.md)を参照してください。  
   
 ## <a name="comparing-objects"></a>オブジェクトの比較  
  Visual Basic での 2 つのオブジェクト参照変数を比較し、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)と[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)します。 2 つの参照変数が同じオブジェクト インスタンスを参照している場合を判断するには、これらの演算子のいずれかを使用します。 次に例を示します。  
@@ -86,7 +86,7 @@ ms.locfileid: "58826159"
   
  前の例では、`TypeOf x Is Control`式に評価されます`True`ための種類`x`は`Button`から継承される`Control`します。  
   
- 詳細については、次を参照してください。 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)します。  
+ 詳細については、[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

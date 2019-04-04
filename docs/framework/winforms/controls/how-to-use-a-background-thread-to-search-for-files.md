@@ -18,9 +18,9 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57723167"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>方法: ファイルを検索するバック グラウンド スレッドを使用して、
-<xref:System.ComponentModel.BackgroundWorker>コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間です。 ただし、、<xref:System.Threading>を選択した場合、下位互換性と将来の使用の両方の名前空間は保持されます。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)します。  
+<xref:System.ComponentModel.BackgroundWorker>コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間です。 ただし、、<xref:System.Threading>を選択した場合、下位互換性と将来の使用の両方の名前空間は保持されます。 詳細については、[BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)を参照してください。  
   
- Windows フォームは、Windows フォームのネイティブな Win32 ウィンドウは本質的に、アパートメント スレッドが基づいているために、シングル スレッド アパートメント (STA) モデルを使用します。 STA モデルことを示します、任意のスレッドでウィンドウを作成できますが、作成すると、スレッドを切り替えることはできません、作成スレッドですべての関数呼び出しを行う必要があります。 Windows フォーム、外は、.NET Framework のクラスは、フリー スレッド モデルを使用します。 .NET Framework でのスレッドについては、次を参照してください。[スレッド処理](../../../standard/threading/index.md)します。  
+ Windows フォームは、Windows フォームのネイティブな Win32 ウィンドウは本質的に、アパートメント スレッドが基づいているために、シングル スレッド アパートメント (STA) モデルを使用します。 STA モデルことを示します、任意のスレッドでウィンドウを作成できますが、作成すると、スレッドを切り替えることはできません、作成スレッドですべての関数呼び出しを行う必要があります。 Windows フォーム、外は、.NET Framework のクラスは、フリー スレッド モデルを使用します。 .NET Framework でのスレッドについては、[スレッド処理](../../../standard/threading/index.md)を参照してください。  
   
  STA モデルは、コントロールの作成のスレッドの外部から呼び出される必要があるコントロール上の任意のメソッドする必要がありますにマーシャ リングする (上で実行) が必要です、コントロールの作成のスレッド。 基本クラス<xref:System.Windows.Forms.Control>いくつかのメソッドを提供します (<xref:System.Windows.Forms.Control.Invoke%2A>、 <xref:System.Windows.Forms.Control.BeginInvoke%2A>、および<xref:System.Windows.Forms.Control.EndInvoke%2A>) この目的のためです。 <xref:System.Windows.Forms.Control.Invoke%2A> 同期メソッドの呼び出しです。<xref:System.Windows.Forms.Control.BeginInvoke%2A>は非同期メソッドの呼び出しを行います。  
   

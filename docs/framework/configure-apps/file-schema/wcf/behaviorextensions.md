@@ -49,7 +49,7 @@ ms.locfileid: "55285912"
   
  攻撃者が CLR 検索順序を悪用して、未承認のコードを実行する可能性があります。 (厳密な) 完全修飾名を使用すると、型が一意に識別され、システムのセキュリティがさらに強化されます。  
   
- 詳細については、次を参照してください。[ランタイムがアセンブリを検索する方法](https://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>します。  
+ 詳細については、[ランタイムがアセンブリを検索する方法](https://go.microsoft.com/fwlink/?LinkId=95336)と<xref:System.AppDomain.TypeResolve>を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>

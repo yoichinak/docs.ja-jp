@@ -13,7 +13,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58816175"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic における LINQ to XML の概要
-Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML リテラルおよび XML 軸プロパティを使用します。 これにより、Visual Basic コードで XML を操作するための使い慣れた、便利な構文を使用することができます。 *XML リテラル*コード内で直接 XML を有効にします。 *XML 軸プロパティ*アクセス子ノード、子孫ノード、および XML リテラルの属性を有効にします。 詳細については、次を参照してください。 [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)と[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)します。  
+Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML リテラルおよび XML 軸プロパティを使用します。 これにより、Visual Basic コードで XML を操作するための使い慣れた、便利な構文を使用することができます。 *XML リテラル*コード内で直接 XML を有効にします。 *XML 軸プロパティ*アクセス子ノード、子孫ノード、および XML リテラルの属性を有効にします。 詳細については、[XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)と[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)を参照してください。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] メモリ内 XML プログラミング API を活用するには、具体的には設計[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 呼び出すことができますが、 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api を直接、唯一の Visual Basic を使用すると、XML リテラルを宣言し、XML 軸のプロパティに直接アクセスします。  
   
@@ -27,14 +27,14 @@ Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sql
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- 詳細については、次を参照してください。 [Visual Basic における XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)です。  
+ 詳細については、[Visual Basic における XML の作成](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)を参照してください。  
   
 ## <a name="accessing-and-navigating-xml"></a>アクセスして、XML を移動します。  
  Visual Basic にアクセスして XML 構造を移動するための XML 軸プロパティを提供します。 これらのプロパティを使用すると、XML 子要素の名前を指定することによって XML 要素と属性にアクセスできます。 また、明示的に呼び出せる、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]を移動して、要素と属性を検索するためのメソッド。 たとえば、次のコード例は XML 軸のプロパティを使用して、属性と、XML 要素の子要素を参照してください。 コード例では、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]子要素を取得し、それらを効率的に変換を実行する XML 要素として出力をクエリします。  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- 詳細については、次を参照してください。 [Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)します。  
+ 詳細については、[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)を参照してください。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
  Visual Basic を使用してグローバル XML 名前空間のエイリアスを指定することができます、`Imports`ステートメント。 次の例は、使用する方法を示します、 `Imports` XML 名前空間をインポートするステートメント。  
@@ -45,7 +45,7 @@ Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sql
   
  取得することができます、<xref:System.Xml.Linq.XNamespace>を使用して特定の名前空間プレフィックスのオブジェクト、 [GetXmlNamespace 演算子](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)します。  
   
- 詳細については、次を参照してください。 [Imports ステートメント (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)します。  
+ 詳細については、[Imports ステートメント (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)を参照してください。  
   
 ### <a name="using-xml-namespaces-in-xml-literals"></a>XML リテラルでの XML 名前空間の使用  
  次の例を作成する方法を示しています、<xref:System.Xml.Linq.XElement>グローバル名前空間を使用するオブジェクトを`ns`:  

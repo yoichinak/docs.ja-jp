@@ -17,7 +17,7 @@ ms.locfileid: "57702348"
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定します。
 <xref:System.Windows.Forms.DataGridView>コントロールを使用する既定のセル スタイルを指定し、コントロール全体の特定の列、行および列のヘッダーおおよび台帳効果を作成する行を交互のデータ形式します。 既定のスタイルのコントロール全体の設定は、既定の列と交互の行のスタイル設定によって上書きされます。 さらに、個々 の行とセルのコードに設定するスタイルは、既定のスタイルをオーバーライドします。  
   
- セルのスタイルの詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。 交互の行のスタイルを設定するを参照してください。[方法。Windows フォーム DataGridView コントロールのデザイナーを使用しての交互の行のスタイル設定](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)します。  
+ セルのスタイルの詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。 交互の行のスタイルを設定するを参照してください。[方法。Windows フォーム DataGridView コントロールのデザイナーを使用しての交互の行のスタイル設定](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)します。  
   
  使用してスタイルを設定することも、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティをコントロールに追加されるすべての行に影響します。 行のテンプレートの詳細については、次を参照してください。[方法。行テンプレートを使用して Windows フォームの DataGridView コントロール内の行をカスタマイズする](use-the-row-template-to-customize-rows-in-the-datagrid.md)します。  
   

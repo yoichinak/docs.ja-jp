@@ -53,7 +53,7 @@ ms.locfileid: "57707613"
  [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
  [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
- イベント ハンドラーの使用に関する詳細については、次を参照してください。[イベント](../../../standard/events/index.md)します。  
+ イベント ハンドラーの使用に関する詳細については、[イベント](../../../standard/events/index.md)を参照してください。  
   
 > [!CAUTION]
 >  どのような種類のマルチスレッドを使用している場合でも、非常に深刻で複雑なバグを引き起こしてしまう可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージド スレッド処理の実施](../../../standard/threading/managed-threading-best-practices.md)」を参照してください。  

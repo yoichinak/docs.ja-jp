@@ -57,7 +57,7 @@ ms.locfileid: "58634454"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- メッセージ ボックスの使用の詳細については、次を参照してください。 <xref:System.Windows.MessageBox>、[メッセージ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=160023)、および[ダイアログ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)します。  
+ メッセージ ボックスの使用の詳細については、<xref:System.Windows.MessageBox>、[メッセージ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=160023)、および[ダイアログ ボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)を参照してください。  
   
  <xref:System.Windows.MessageBox>簡単なダイアログ ボックス ユーザー エクスペリエンスを使用する利点を提供できます<xref:System.Windows.MessageBox>が部分信頼セキュリティ サンド ボックス内で実行されるアプリケーションで表示できるウィンドウの唯一の種類 (を参照してください[セキュリティ](../security-wpf.md)) など[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58634454"
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- ファイルを開く ダイアログ ボックスの詳細については、次を参照してください。<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>します。  
+ ファイルを開く ダイアログ ボックスの詳細については、<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>を参照してください。  
   
 > [!NOTE]
 >  <xref:Microsoft.Win32.OpenFileDialog> 部分信頼で実行しているアプリケーションに安全にファイル名を取得する使用できます (を参照してください[セキュリティ](../security-wpf.md))。  
@@ -109,7 +109,7 @@ ms.locfileid: "58634454"
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- [印刷] ダイアログ ボックスの詳細については、次を参照してください。<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>します。 印刷の詳細については[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を参照してください[印刷の概要](../advanced/printing-overview.md)します。  
+ [印刷] ダイアログ ボックスの詳細については、<xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>を参照してください。 印刷の詳細については[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]を参照してください[印刷の概要](../advanced/printing-overview.md)します。  
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>カスタム ダイアログ ボックス  

@@ -37,7 +37,7 @@ IEEE 32 ビット (4 バイト) の単精度浮動小数点数が 3.4028235 e + 
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+-   **有効桁数です。** 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
   
 -   **拡大します。** `Single`拡大変換後のデータ型`Double`します。 つまり、変換できる`Single`に`Double`遭遇することがなく、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   

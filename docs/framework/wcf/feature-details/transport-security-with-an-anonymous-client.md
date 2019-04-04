@@ -16,7 +16,7 @@ ms.locfileid: "55260386"
 
 この Windows Communication Foundation (WCF) のシナリオでは、トランスポート セキュリティ (HTTPS) を使用して、機密性と整合性を確認します。 サーバーは SSL (Secure Sockets Layer) 証明書で認証される必要があり、クライアントはサーバーの証明書を信頼する必要があります。 クライアントを認証する機構はないため、匿名となります。
 
-サンプル アプリケーションでは、次を参照してください。 [WS トランスポート セキュリティ](../samples/ws-transport-security.md)します。 トランスポート セキュリティの詳細については、次を参照してください。[トランスポート セキュリティの概要](transport-security-overview.md)します。
+サンプル アプリケーションでは、[WS トランスポート セキュリティ](../samples/ws-transport-security.md)を参照してください。 トランスポート セキュリティの詳細については、[トランスポート セキュリティの概要](transport-security-overview.md)を参照してください。
 
 サービスで証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)と[方法。SSL 証明書でポートを構成](how-to-configure-a-port-with-an-ssl-certificate.md)します。
 

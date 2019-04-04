@@ -51,7 +51,7 @@ ms.locfileid: "57359706"
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- フラグを使用してプリンターの状態を確認する、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintQueueStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)、および<xref:System.FlagsAttribute>します。  
+ フラグを使用してプリンターの状態を確認する、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、<xref:System.Printing.PrintQueueStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)、および<xref:System.FlagsAttribute>を参照してください。  
   
  次のコードでは、ビットが設定されている属性ごとに、ユーザーに表示される最終レポートに警告を追加します  (コードの最後で呼び出している **ReportAvailabilityAtThisTime** メソッドについては以下で説明します)。  
   

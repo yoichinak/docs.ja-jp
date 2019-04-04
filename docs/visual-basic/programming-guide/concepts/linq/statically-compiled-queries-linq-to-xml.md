@@ -56,7 +56,7 @@ For Each el In list1
 Next  
 ```  
   
- この例では、前の 2 つの例と同じ結果が生成されます。 これは、静的にリンクされたメソッド呼び出しにクエリが効果的にコンパイルされたことを示します。 これと反復子の遅延実行セマンティクスが組み合わさることで、パフォーマンスが向上します。 反復子の遅延実行セマンティクスの詳細については、次を参照してください。[遅延実行と LINQ to XML (Visual Basic) における遅延評価](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)します。  
+ この例では、前の 2 つの例と同じ結果が生成されます。 これは、静的にリンクされたメソッド呼び出しにクエリが効果的にコンパイルされたことを示します。 これと反復子の遅延実行セマンティクスが組み合わさることで、パフォーマンスが向上します。 反復子の遅延実行セマンティクスの詳細については、[遅延実行と LINQ to XML (Visual Basic) における遅延評価](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)を参照してください。  
   
 > [!NOTE]
 >  これらは、コンパイラが書き込むコードの例です。 実際の実装はこれらの例と若干異なる可能性がありますが、パフォーマンスは同じか類似したものになります。  

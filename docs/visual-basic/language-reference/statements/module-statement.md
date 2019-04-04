@@ -71,7 +71,7 @@ End Module
   
 -   **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
   
--   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 したがって、クラスだけは、オブジェクトとしてインスタンス化できます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
+-   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 したがって、クラスだけは、オブジェクトとしてインスタンス化できます。 詳細については、[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   
@@ -81,7 +81,7 @@ End Module
   
      使用することはできません、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)モジュールの定義を指定するも<xref:System.Object>します。  
   
--   **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
+-   **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、[既定](../../../visual-basic/language-reference/modifiers/default.md)を参照してください。  
   
 ## <a name="behavior"></a>動作  
   
@@ -89,7 +89,7 @@ End Module
   
 -   **スコープ。** モジュールとは、名前空間全体のスコープ内で。  
   
-     すべてのモジュール メンバーのスコープは、モジュール全体です。 すべてのメンバーに注意してください*の上位変換*、これにより、モジュールを含む名前空間に昇格するには、そのスコープ。 詳細については、次を参照してください。[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)します。  
+     すべてのモジュール メンバーのスコープは、モジュール全体です。 すべてのメンバーに注意してください*の上位変換*、これにより、モジュールを含む名前空間に昇格するには、そのスコープ。 詳細については、[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)を参照してください。  
   
 -   **パス名です。** プロジェクトでは、複数のモジュールがあることができ、2 つまたは複数のモジュールで同じ名前を持つメンバーを宣言することができます。 ただし、モジュールの外部から参照がある場合は、このような適切なモジュール名を持つメンバーへの参照を修飾する必要があります。 詳細については、「 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。  
   

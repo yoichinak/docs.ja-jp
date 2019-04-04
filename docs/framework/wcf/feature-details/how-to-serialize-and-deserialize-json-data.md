@@ -23,7 +23,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Person 型のデータ コントラクトを定義するには 
   
-1.  クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、次を参照してください。[サービス コントラクトの設計](../designing-service-contracts.md)します。  
+1.  クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、[サービス コントラクトの設計](../designing-service-contracts.md)を参照してください。  
   
     ```csharp  
     [DataContract]  

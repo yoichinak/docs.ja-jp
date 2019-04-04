@@ -47,7 +47,7 @@ ms.locfileid: "57706001"
   
  <xref:System.Windows.Forms.DataGridView>コントロールは、これらのインターフェイスによって返されるオブジェクトのパブリック プロパティまたはによって返されるプロパティのコレクションにデータ バインディングをサポートしている、<xref:System.ComponentModel.ICustomTypeDescriptor>インターフェイスを実装して、返されたオブジェクトの場合。  
   
- 通常、バインド、<xref:System.Windows.Forms.BindingSource>コンポーネントおよび bind、<xref:System.Windows.Forms.BindingSource>コンポーネントを別にデータ ソースまたはビジネス オブジェクトを設定します。 <xref:System.Windows.Forms.BindingSource>コンポーネントが優先されるデータ ソースでさまざまなデータ ソースにバインドでき、自動的に多くのデータ バインドの問題を解決することができます。 詳細については、次を参照してください。 [BindingSource コンポーネント](bindingsource-component.md)します。  
+ 通常、バインド、<xref:System.Windows.Forms.BindingSource>コンポーネントおよび bind、<xref:System.Windows.Forms.BindingSource>コンポーネントを別にデータ ソースまたはビジネス オブジェクトを設定します。 <xref:System.Windows.Forms.BindingSource>コンポーネントが優先されるデータ ソースでさまざまなデータ ソースにバインドでき、自動的に多くのデータ バインドの問題を解決することができます。 詳細については、[BindingSource コンポーネント](bindingsource-component.md)を参照してください。  
   
  <xref:System.Windows.Forms.DataGridView>コントロールはでも使用できます*バインドされていない*ない基になるデータ ストアとのモード。 非結合を使用するコード例については<xref:System.Windows.Forms.DataGridView>コントロールを参照してください[チュートリアル。作成、バインドされていない Windows フォーム DataGridView コントロール](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)します。  
   

@@ -22,7 +22,7 @@ ms.locfileid: "55826955"
   
 -   ビュー ファイル  
   
- EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 EdmGen.exe コマンドの詳細については、次を参照してください。 [EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)します。  
+ EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 EdmGen.exe コマンドの詳細については、[EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)を参照してください。  
   
  引き続き使用する Visual Studio プロジェクトを構成する必要があります EdmGen.exe を使用して、モデルとマッピング ファイルを生成する場合、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 詳細については、「[方法 :Entity Framework プロジェクトを手動で構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "55826955"
   
 ### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a>EdmGen.exe を使用して Visual Basic プロジェクト用の School モデルを生成するには  
   
-1.  School データベースを作成します。 詳細については、次を参照してください。 [School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))します。  
+1.  School データベースを作成します。 詳細については、[School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))を参照してください。  
   
 2.  コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "55826955"
   
 ### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a>EdmGen.exe を使用して C# プロジェクト用の School モデルを生成するには  
   
-1.  School データベースを作成します。 詳細については、次を参照してください。 [School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))します。  
+1.  School データベースを作成します。 詳細については、[School サンプル データベースを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))を参照してください。  
   
 2.  コマンド プロンプトで、次のコマンド (改行なし) を実行します。  
   

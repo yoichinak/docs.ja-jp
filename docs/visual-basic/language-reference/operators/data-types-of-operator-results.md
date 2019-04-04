@@ -38,7 +38,7 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
   
 -   [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
   
- Visual Basic データ型の詳細については、次を参照してください。[データ型](../../../visual-basic/language-reference/data-types/index.md)します。  
+ Visual Basic データ型の詳細については、[データ型](../../../visual-basic/language-reference/data-types/index.md)を参照してください。  
   
  オペランドが評価された場合に[Nothing](../../../visual-basic/language-reference/nothing.md)、Visual Basic の算術演算子が 0 として処理します。  
   

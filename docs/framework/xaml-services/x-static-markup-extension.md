@@ -79,7 +79,7 @@ ms.locfileid: "58037684"
   
 -   カスタム アセンブリから型を参照しています。  
   
--   その型が既定の WPF XAML 名前空間の一部としてマップされていませんでしたが CLR 名前空間は WPF アセンブリに存在する型を参照しています。 WPF の既定の XAML 名前空間に CLR 名前空間のマッピングは、さまざまな WPF アセンブリ内の定義によって実行されます (この概念の詳細については、[XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 CLR 名前空間のマッピングされていないがその CLR 名前空間が、通常は想定されていません、XAML などのクラス定義のほとんどの場合で構成される場合に存在できる<xref:System.Windows.Threading>を参照してください。  
+-   その型が既定の WPF XAML 名前空間の一部としてマップされていませんでしたが CLR 名前空間は WPF アセンブリに存在する型を参照しています。 WPF の既定の XAML 名前空間に CLR 名前空間のマッピングは、さまざまな WPF アセンブリ内の定義によって実行されます (この概念の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 CLR 名前空間のマッピングされていないがその CLR 名前空間が、通常は想定されていません、XAML などのクラス定義のほとんどの場合で構成される場合に存在できる<xref:System.Windows.Threading>します。  
   
  WPF のプレフィックスと XAML 名前空間を使用する方法の詳細については、[XAML 名前空間および WPF XAML のマッピングの Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)を参照してください。  
   

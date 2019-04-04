@@ -24,4 +24,4 @@ ms.locfileid: "57360040"
   
  例を使用しますが、<xref:System.Windows.Controls.Canvas>多角形を格納することができます使用する多角形要素 (およびその他のすべての図形要素) と<xref:System.Windows.Controls.Panel>または<xref:System.Windows.Controls.Control>テキスト以外のコンテンツをサポートします。  
   
- この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。
+ この例より大きなサンプルの一部です。サンプル全体については、[Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)を参照してください。

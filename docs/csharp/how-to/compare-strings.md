@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634233"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\# で文字列を比較する方法
 

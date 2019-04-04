@@ -18,7 +18,7 @@ ms.locfileid: "58840875"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Registry` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>」をご覧ください。  
   
- 詳細については、次を参照してください。[からの読み取りとレジストリへの書き込み](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)します。  
+ 詳細については、[からの読み取りとレジストリへの書き込み](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)を参照してください。  
   
 > [!NOTE]
 >  メソッドを使用して、レジストリを操作することも、<xref:Microsoft.Win32.Registry?displayProperty=nameWithType>クラス。  

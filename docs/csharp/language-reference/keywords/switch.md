@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084720"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463255"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -59,7 +59,7 @@ C# 7.0 以降は、match 式は NULL 以外の式にできます。
 
 [!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163:"コントロールは 1 つの case ラベルから別のラベル (<case label>) へ流れ落ちることはできません。" が生成されます。
+1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163:"コントロールは 1 つの case ラベル (\<case label>) から別の case ラベルへフォールスルーすることはできません。"
 
 ```csharp
 switch (caseSwitch)

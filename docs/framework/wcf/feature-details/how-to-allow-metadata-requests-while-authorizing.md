@@ -17,7 +17,7 @@ ms.locfileid: "54591902"
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>方法: 承認中にメタデータ要求を許可します。
 カスタム承認中に、メタデータの処理要求を許可することがあります。 ここでは、このような要求を検証する手順を示します。  
   
- Windows Communication Foundation (WCF) の承認についての詳細については、次を参照してください。[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)します。  
+ Windows Communication Foundation (WCF) の承認についての詳細については、[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)を参照してください。  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>承認中にメタデータ要求を許可するには  
   

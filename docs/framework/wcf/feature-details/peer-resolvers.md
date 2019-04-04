@@ -32,7 +32,7 @@ ms.locfileid: "56333379"
 > [!NOTE]
 >  ローカル ネットワークや即席のネットワークでカスタム リゾルバーを使用するときは、リンク ローカル ネットワークまたは即席のネットワークを使用またはサポートするアプリケーションに、接続時に使用するリンク ローカル アドレスを 1 つだけ選択するロジックを含めることを強くお勧めします。 これにより、複数のリンク ローカル アドレスを持つコンピューターによって発生する可能性のある混乱をすべて回避できます。 このロジックに従って、ピア チャネルは、1 度に 1 つのリンク ローカル アドレスを使用することだけをサポートします。 このアドレスは、`ListenIpAddress` の <xref:System.ServiceModel.NetPeerTcpBinding> プロパティを使用して指定できます。  
   
- カスタム競合回避モジュールを実装する方法のデモについては、次を参照してください。[ピア チャネル カスタム ピア リゾルバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))します。  
+ カスタム競合回避モジュールを実装する方法のデモについては、[ピア チャネル カスタム ピア リゾルバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Custompeerresolverservice:クライアントの登録](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

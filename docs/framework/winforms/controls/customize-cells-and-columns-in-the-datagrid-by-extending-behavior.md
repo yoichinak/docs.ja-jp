@@ -28,7 +28,7 @@ ms.locfileid: "57721269"
 > [!NOTE]
 >  空の行を追加すると、この例は正しく動作しません。 たとえば、<xref:System.Windows.Forms.DataGridView.RowCount%2A> プロパティを設定することでコントロールに行を追加する場合に、空の行を作成します。 これは、この例で追加された行は自動的に共有されるためでです。つまり、`DataGridViewRolloverCell` オブジェクトは、各セルをクリックするまでインスタンス化されないため、関連付けられた行の共有が解除されます。  
   
- この種類のセルのカスタマイズには共有されていない行が必要なため、大量のデータ セットでの使用には適切ではありません。 行の共有の詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
+ この種類のセルのカスタマイズには共有されていない行が必要なため、大量のデータ セットでの使用には適切ではありません。 行の共有の詳細については、[Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)を参照してください。  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridViewCell> や <xref:System.Windows.Forms.DataGridViewColumn> から派生したクラスに新しいプロパティを追加するときは、`Clone` メソッドをオーバーライドし、複製操作時に新しいプロパティをコピーする必要があります。 また、基底クラスの `Clone` メソッドを呼び出して、基底クラスのプロパティを新しいセルまたは列にコピーする必要もあります。  
@@ -68,7 +68,7 @@ ms.locfileid: "57721269"
   
 -   System、System.Windows.Forms、および System.Drawing の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、次を参照してください。 [、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
+ コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

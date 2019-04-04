@@ -105,7 +105,7 @@ ms.locfileid: "58821371"
   
  使用することはできません型の名前が使用できないため、`As`を宣言する句`cust13`します。 型を推論する必要があります。 遅延バインディングを使用しない場合は、ローカル変数に匿名型の使用を制限します。  
   
- 匿名型の重大なサポートを提供する[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 クエリで匿名型の使用に関する詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)します。  
+ 匿名型の重大なサポートを提供する[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 クエリで匿名型の使用に関する詳細については、[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)を参照してください。  
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型についての解説  
   
@@ -113,7 +113,7 @@ ms.locfileid: "58821371"
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     キー プロパティの詳細については、次を参照してください。[キー](../../../../visual-basic/language-reference/modifiers/key.md)します。  
+     キー プロパティの詳細については、[キー](../../../../visual-basic/language-reference/modifiers/key.md)を参照してください。  
   
 -   このような名前付きの型、初期化子リスト匿名型の定義は、少なくとも 1 つのプロパティを宣言する必要があります。  
   

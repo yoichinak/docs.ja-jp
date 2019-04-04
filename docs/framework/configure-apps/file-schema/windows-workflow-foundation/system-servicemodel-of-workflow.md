@@ -102,7 +102,7 @@ ms.locfileid: "55271131"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|このセクションで定義、 **serviceBehaviors**コレクション。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素が、一意で識別される**名前**属性。|  
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。|  
+|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   

@@ -20,7 +20,7 @@ ms.locfileid: "58832126"
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。
 場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。 プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。  
   
- アクセス レベルの詳細については、次を参照してください。[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+ アクセス レベルの詳細については、[アクセス レベルを Visual Basic で](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
 ### <a name="to-declare-a-property-with-mixed-access-levels"></a>混合アクセス レベルを持つプロパティを宣言するには  
   

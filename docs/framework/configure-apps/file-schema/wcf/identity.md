@@ -10,7 +10,7 @@ ms.lasthandoff: 02/03/2019
 ms.locfileid: "55675401"
 ---
 # <a name="identity"></a>\<identity>
-ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービス間のハンドシェイク プロセスで Windows Communication Foundation (WCF) インフラストラクチャが予期されるサービスと一致する、この要素の値の id を保証して、そのため、認証されたことができます。 詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ID 要素を使用すると、クライアント開発者は予想されるサービスの ID をデザイン時に指定できます。 クライアントとサービス間のハンドシェイク プロセスで Windows Communication Foundation (WCF) インフラストラクチャが予期されるサービスと一致する、この要素の値の id を保証して、そのため、認証されたことができます。 詳細については、[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
  \<system.ServiceModel >  
 \<client>  

@@ -36,7 +36,7 @@ RemoveHandler event, AddressOf eventhandler
  `AddHandler`と`RemoveHandler`ステートメントでは、開始およびプログラムの実行中にいつでも、特定のイベントのイベント処理を停止することができます。  
   
 > [!NOTE]
->  カスタム イベントの場合、`RemoveHandler`ステートメントで呼び出されるイベントの`RemoveHandler`アクセサー。 カスタム イベントの詳細については、次を参照してください。 [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)します。  
+>  カスタム イベントの場合、`RemoveHandler`ステートメントで呼び出されるイベントの`RemoveHandler`アクセサー。 カスタム イベントの詳細については、[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrEvents#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#17)]  

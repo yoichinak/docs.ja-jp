@@ -46,7 +46,7 @@ ms.locfileid: "55259008"
 ## <a name="remarks"></a>Remarks  
  ダイジェストは、アルゴリズムと入力セットを使用して決定されるハッシュです。 認証する側と認証される側はアルゴリズムに同意し、入力として使用されるデータを交換します。 クライアントはハッシュを計算して、サービスに送信できます。 また、サービスもハッシュを計算して、値を比較します。 一致すると、クライアントが検証されます。  
   
- この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)します。  
+ この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、[Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>

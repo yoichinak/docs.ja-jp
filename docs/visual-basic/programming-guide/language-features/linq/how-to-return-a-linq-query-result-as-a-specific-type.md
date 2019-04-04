@@ -19,9 +19,9 @@ ms.locfileid: "58835870"
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法: LINQ クエリの結果を返す特定の型 (Visual Basic)
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。 既定では、LINQ クエリは、匿名型としてオブジェクトの一覧を返します。 クエリを使用して、特定の種類の一覧を返すことを指定することも、`Select`句。  
   
- 次の例では、SQL Server データベースに対するクエリを実行し、特定の名前付きの型として、結果を射影する新しいアプリケーションを作成する方法を示します。 詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)します。  
+ 次の例では、SQL Server データベースに対するクエリを実行し、特定の名前付きの型として、結果を射影する新しいアプリケーションを作成する方法を示します。 詳細については、[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)を参照してください。  
   
- このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+ このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

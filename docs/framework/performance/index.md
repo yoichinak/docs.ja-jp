@@ -2,11 +2,17 @@
 title: .NET Framework のパフォーマンス
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance [.NET Framework]'
-  - 'reliability [.NET Framework]'
+- performance [.NET Framework]
+- reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361279"
 ---
 # <a name="net-framework-performance"></a>.NET Framework のパフォーマンス
 優れたパフォーマンスのアプリを作成する場合は、アプリのその他の機能を設計する場合と同様に、パフォーマンスについて設計および計画する必要があります。 Microsoft が提供するツールを使用して、アプリのパフォーマンスを測定し、必要に応じて、メモリの使用、コードのスループット コード、および応答性を向上させることができます。 ここでは、Microsoft が提供するパフォーマンス分析ツールの一覧と、アプリ開発の特定の領域のパフォーマンスに関する他のトピックへのリンクを示します。  

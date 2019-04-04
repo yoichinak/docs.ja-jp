@@ -2,12 +2,12 @@
 title: セット操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675512"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408913"
 ---
 # <a name="set-operations-c"></a>セット操作 (C#)
 LINQ のセット操作は、同一または別個のコレクション (またはセット) に等しい要素があるかどうかに基づいて、結果を生成するクエリ操作です。  
@@ -28,7 +28,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 ### <a name="distinct"></a>Distinct  
  次の図は、文字のシーケンスに対する <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> メソッドの動作を示しています。 返されたシーケンスには、入力シーケンスからの一意の要素が格納されています。  
   
- ![Distinct&#40;&#41; の動作を示すグラフィック。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![Distinct&#40;&#41; の動作を示すグラフィック。](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>除く  
  <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> の動作を次の図に示します。 返されたシーケンスには、1 つ目の入力シーケンスのうち、2 つ目の入力シーケンスには存在しない要素が格納されています。  
@@ -38,13 +38,12 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 ### <a name="intersect"></a>交差  
  <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> の動作を次の図に示します。 返されたシーケンスには、両方の入力シーケンスに共通する要素が格納されています。  
   
- ![2 つのシーケンスの交差部分を示すグラフィック。](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![2 つのシーケンスの交差部分を示すグラフィック。](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>和集合  
  次の図は、2 つの文字シーケンスに対する和集合演算を示しています。 返されたシーケンスには、両方の入力シーケンスからの一意の要素が格納されています。  
   
- ![2 つのシーケンスの結合を示すグラフィック。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![2 つのシーケンスの結合を示すグラフィック。](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>

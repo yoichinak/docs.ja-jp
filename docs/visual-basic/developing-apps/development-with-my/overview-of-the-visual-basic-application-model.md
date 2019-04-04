@@ -52,7 +52,7 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
 -   **アプリケーションのシャット ダウン**します。 アプリケーションでは、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>をシャット ダウンするときに通知するイベントです。 イベントのハンドラーを行うことができますを実行する必要が、アプリケーションを操作することを確認して — を閉じると、保存、たとえば: が完了します。 アプリケーションをメイン フォームが閉じたときにシャット ダウンするか、すべてのフォームを閉じるときのみをシャット ダウンを構成することができます。  
   
 ## <a name="availability"></a>可用性  
- 既定では、Visual Basic アプリケーション モデルは Windows フォーム プロジェクトで使用できます。 異なるスタートアップ オブジェクトを使用するアプリケーションを構成またはカスタム アプリケーション コードを開始するかどうか`Sub Main`、し、そのオブジェクトまたはクラスは、の実装を提供する必要があります、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>アプリケーション モデルを使用するクラス。 スタートアップ オブジェクトを変更する方法の詳細については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)します。  
+ 既定では、Visual Basic アプリケーション モデルは Windows フォーム プロジェクトで使用できます。 異なるスタートアップ オブジェクトを使用するアプリケーションを構成またはカスタム アプリケーション コードを開始するかどうか`Sub Main`、し、そのオブジェクトまたはクラスは、の実装を提供する必要があります、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>アプリケーション モデルを使用するクラス。 スタートアップ オブジェクトを変更する方法の詳細については、[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

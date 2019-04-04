@@ -33,7 +33,7 @@ Take count
   
  使用することができます、`Take`句、`Skip`句をクエリの任意のセグメントからのデータの範囲を返します。 これを行うには、範囲の最初の要素のインデックスを渡す、`Skip`句とする範囲のサイズ、`Take`句。 ここで、`Take`後句を指定する必要があります、`Skip`句。  
   
- 使用すると、`Take`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Take`に目的の結果に含める句。 クエリの結果を順序付けの詳細については、次を参照してください。 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
+ 使用すると、`Take`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Take`に目的の結果に含める句。 クエリの結果を順序付けの詳細については、[Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)を参照してください。  
   
  使用することができます、`TakeWhile`句を指定した条件に応じて特定の要素のみを返すことを指定します。  
   

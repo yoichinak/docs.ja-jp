@@ -21,7 +21,7 @@ ms.locfileid: "58820738"
   
  プロシージャ呼び出しがタイムアウトの原因が考えられます、無限ループまたは*無限ループ*します。 詳細については、次を参照してください[をしています...次のステートメントの](../../../visual-basic/language-reference/statements/for-next-statement.md)します。  
   
- 無限ループの特殊なケースは*再帰*します。 詳細については、次を参照してください。[再帰プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)します。  
+ 無限ループの特殊なケースは*再帰*します。 詳細については、[再帰プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)を参照してください。  
   
  **エラー ID:** BC30957  
   

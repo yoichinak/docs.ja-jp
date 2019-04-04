@@ -17,7 +17,7 @@ ms.locfileid: "54700313"
   
 -   正確なコピーを作成、**データセット**(スキーマ、データ、行状態情報、行のバージョンなど)。  
   
--   作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+-   作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)を参照してください。  
   
 -   スキーマ、またはリレーショナル構造のコピー、**データセット**のみ、すべての行をコピーすることがなく。 行は、<xref:System.Data.DataTable> を使用して、既存の <xref:System.Data.DataTable.ImportRow%2A> にインポートできます。  
   

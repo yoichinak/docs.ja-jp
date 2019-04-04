@@ -69,7 +69,7 @@ Visual Basic クラスを派生する`Public`、以前のバージョンの Visu
 10. 作成し、クリックして、COM オブジェクトを登録**ように ComObject1.dll**上、**ファイル**メニュー。  
   
     > [!NOTE]
-    >  COM オブジェクトとして Visual Basic で作成したクラスを公開することも、本当の COM オブジェクトでないし、このチュートリアルでは使用できません。 詳細については、次を参照してください。 [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)します。  
+    >  COM オブジェクトとして Visual Basic で作成したクラスを公開することも、本当の COM オブジェクトでないし、このチュートリアルでは使用できません。 詳細については、[.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)を参照してください。  
   
 ## <a name="interop-assemblies"></a>相互運用機能アセンブリ  
  次の手順では、(COM オブジェクト) などのアンマネージ コードと Visual Studio を使用してマネージ コード間のブリッジとして機能する、相互運用機能アセンブリを作成します。 Visual Basic によって作成される相互運用機能アセンブリは、COM オブジェクトなどの操作の詳細の多くを処理*相互運用マーシャ リング*、パッケージ パラメーターと戻り値を同等のデータの処理の種類に移動し、COM オブジェクト。 Visual Basic アプリケーション内の参照は、実際の COM オブジェクトではなく、相互運用機能アセンブリを指します。  

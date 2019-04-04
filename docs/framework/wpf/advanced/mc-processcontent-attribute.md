@@ -44,7 +44,7 @@ ms.locfileid: "57357379"
   
  たとえば、領域の区切り記号を使用して、属性で複数のプレフィックスを指定する場合があります:`mc:ProcessContent="ignore:Element1 ignore:Element2"`します。  
   
- [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]名前空間は、他の要素とのこの領域内に記載されていない属性を定義、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]します。 詳細については、次を参照してください。 [XML マークアップ互換性仕様](https://go.microsoft.com/fwlink/?LinkId=73824)します。  
+ [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]名前空間は、他の要素とのこの領域内に記載されていない属性を定義、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]します。 詳細については、[XML マークアップ互換性仕様](https://go.microsoft.com/fwlink/?LinkId=73824)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [mc:Ignorable 属性](mc-ignorable-attribute.md)

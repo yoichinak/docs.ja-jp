@@ -21,7 +21,7 @@ ms.locfileid: "56332521"
   
  パス名は、ルーティングやキュー マネージャー転送プロトコルのアドレスをその他の側面を確認するには、"FormatNames"にマップされます。 キュー マネージャーは、ネイティブの MSMQ プロトコルと SOAP リライアブル メッセージ プロトコル (SRMP: SOAP Reliable Messaging Protocol) の 2 つの転送プロトコルをサポートしています。  
   
- MSMQ のパスと形式名の詳細については、次を参照してください。 [About Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837)します。  
+ MSMQ のパスと形式名の詳細については、[About Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837)を参照してください。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding とサービスのアドレス指定  
  メッセージをサービスにアドレス指定するときは、通信に使用するトランスポートに基づいて URI のスキームが選択されます。 WCF では、各トランスポートが、一意のスキームです。 このスキームには、通信に使用されるトランスポートの性質を反映する必要があります。 たとえば、net.tcp、net.pipe、HTTP などがあります。  
@@ -46,7 +46,7 @@ ms.locfileid: "56332521"
   
  キュー アドレスは、メッセージを読み取るリスナーにより、リッスン URI として使用されます。 つまり、キュー アドレスは TCP ソケットのリッスン ポートと同じです。  
   
- キューから読み取りを行うエンドポイントは、ServiceHost を開いたときにあらかじめ指定されているスキームと同じスキームを使用して、キューのアドレスを指定する必要があります。 例については、次を参照してください。[ネット MSMQ バインディング](../../../../docs/framework/wcf/samples/net-msmq-binding.md)します。  
+ キューから読み取りを行うエンドポイントは、ServiceHost を開いたときにあらかじめ指定されているスキームと同じスキームを使用して、キューのアドレスを指定する必要があります。 例については、[ネット MSMQ バインディング](../../../../docs/framework/wcf/samples/net-msmq-binding.md)を参照してください。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>キュー内の複数のコントラクト  
  キュー内のメッセージは、さまざまなコントラクトを実装している可能性があります。 この場合、すべてのメッセージを正常に読み取って処理するためには、次のいずれかの処置を行う必要があります。  
@@ -89,7 +89,7 @@ ms.locfileid: "56332521"
   
  net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
   
- WCF サービスは、受け取ったすべてのメッセージがリッスンしている特定のキューにアドレス指定されているかを確認します。 メッセージの送信先キューとメッセージが置かれているキューが一致しない場合、サービスはメッセージを処理しません。 この問題には、配信不能キューをリッスンしているサービスが対処する必要があります。これは、配信不能キューにあるメッセージが、他の場所に配信されることになっていたメッセージであるためです。 配信不能キューや有害メッセージ キューからメッセージを読み取るには、`ServiceBehavior` パラメーターが設定された <xref:System.ServiceModel.AddressFilterMode.Any> を使用する必要があります。 例については、次を参照してください。[配信不能キュー](../../../../docs/framework/wcf/samples/dead-letter-queues.md)します。  
+ WCF サービスは、受け取ったすべてのメッセージがリッスンしている特定のキューにアドレス指定されているかを確認します。 メッセージの送信先キューとメッセージが置かれているキューが一致しない場合、サービスはメッセージを処理しません。 この問題には、配信不能キューをリッスンしているサービスが対処する必要があります。これは、配信不能キューにあるメッセージが、他の場所に配信されることになっていたメッセージであるためです。 配信不能キューや有害メッセージ キューからメッセージを読み取るには、`ServiceBehavior` パラメーターが設定された <xref:System.ServiceModel.AddressFilterMode.Any> を使用する必要があります。 例については、[配信不能キュー](../../../../docs/framework/wcf/samples/dead-letter-queues.md)を参照してください。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding とサービスのアドレス指定  
  `MsmqIntegrationBinding` は、従来の MSMQ アプリケーションとの通信に使用されます。 既存の MSMQ アプリケーションとの相互運用が容易になります、WCF は唯一の形式名アドレス指定をサポートしています。 そのため、このバインディングを使用して送信されるメッセージは、次の URI スキームに従う必要があります。  

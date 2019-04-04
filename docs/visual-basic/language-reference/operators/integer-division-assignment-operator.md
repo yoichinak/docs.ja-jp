@@ -39,7 +39,7 @@ variableorproperty \= expression
   
  `\=`演算子は、変数または、左側のプロパティの値の右側にある値で除算し、変数またはプロパティの左側に結果の整数値を割り当てます  
   
- 整数の除算について詳しくは、次を参照してください。 [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)します。  
+ 整数の除算について詳しくは、[\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
  `\`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`\`演算子の動作に影響、`\=`演算子。 コードで使用する場合`\=`クラスまたは構造体をオーバー ロードで`\`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

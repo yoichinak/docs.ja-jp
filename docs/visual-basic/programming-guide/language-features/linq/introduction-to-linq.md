@@ -40,9 +40,9 @@ ms.locfileid: "56973627"
   
 |プロバイダー|説明|  
 |---|---|  
-|LINQ to Objects|LINQ to Objects プロバイダーは、インメモリ コレクションとインメモリ配列のクエリを可能にします。 オブジェクトが <xref:System.Collections.IEnumerable> インターフェイスまたは <xref:System.Collections.Generic.IEnumerable%601> インターフェイスをサポートしている場合、LINQ to Objects プロバイダーを使用してクエリを実行できます。<br /><br /> インポートすることによって、LINQ to Objects プロバイダーを有効にすることができます、<xref:System.Linq>名前空間は、すべての Visual Basic プロジェクトの既定でインポートされます。<br /><br /> LINQ to Objects プロバイダーの詳細については、次を参照してください。 [LINQ to Objects](../../concepts/linq/linq-to-objects.md)します。|  
-|LINQ to SQL|LINQ to SQL プロバイダーは、SQL Server データベース内のデータのクエリと変更を可能にします。 これにより、アプリケーションのオブジェクト モデルを、データベース内のテーブルとオブジェクトに簡単に対応付けることができます。<br /><br /> Visual Basic では、オブジェクト リレーショナル デザイナー (O/R デザイナー) を含めることによって、LINQ to SQL を使用するやすくなります。 このデザイナーを使用して、データベース内のオブジェクトに対応付けられるアプリケーション内のオブジェクト モデルを作成します。 O/R デザイナーもストアド プロシージャにマップする機能を提供し、関数、<xref:System.Data.Linq.DataContext>オブジェクトでは、データベースとの通信を管理し、オプティミスティック同時実行チェックの状態を保存します。<br /><br /> LINQ to SQL プロバイダーの詳細については、次を参照してください。 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)します。 オブジェクト リレーショナル デザイナーの詳細については、次を参照してください。 [LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。|  
-|LINQ to XML|LINQ to XML プロバイダーは、XML のクエリと変更を可能にします。 インメモリ XML を変更することや、XML をファイルから読み込んだりファイルに保存したりすることができます。<br /><br /> さらに、XML リテラルおよび XML 軸プロパティを有効にする Visual Basic コードで直接 XML を記述する LINQ to XML プロバイダーを使用します。 詳細については、次を参照してください。 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)します。|  
+|LINQ to Objects|LINQ to Objects プロバイダーは、インメモリ コレクションとインメモリ配列のクエリを可能にします。 オブジェクトが <xref:System.Collections.IEnumerable> インターフェイスまたは <xref:System.Collections.Generic.IEnumerable%601> インターフェイスをサポートしている場合、LINQ to Objects プロバイダーを使用してクエリを実行できます。<br /><br /> インポートすることによって、LINQ to Objects プロバイダーを有効にすることができます、<xref:System.Linq>名前空間は、すべての Visual Basic プロジェクトの既定でインポートされます。<br /><br /> LINQ to Objects プロバイダーの詳細については、[LINQ to Objects](../../concepts/linq/linq-to-objects.md)を参照してください。|  
+|LINQ to SQL|LINQ to SQL プロバイダーは、SQL Server データベース内のデータのクエリと変更を可能にします。 これにより、アプリケーションのオブジェクト モデルを、データベース内のテーブルとオブジェクトに簡単に対応付けることができます。<br /><br /> Visual Basic では、オブジェクト リレーショナル デザイナー (O/R デザイナー) を含めることによって、LINQ to SQL を使用するやすくなります。 このデザイナーを使用して、データベース内のオブジェクトに対応付けられるアプリケーション内のオブジェクト モデルを作成します。 O/R デザイナーもストアド プロシージャにマップする機能を提供し、関数、<xref:System.Data.Linq.DataContext>オブジェクトでは、データベースとの通信を管理し、オプティミスティック同時実行チェックの状態を保存します。<br /><br /> LINQ to SQL プロバイダーの詳細については、[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)を参照してください。 オブジェクト リレーショナル デザイナーの詳細については、[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を参照してください。|  
+|LINQ to XML|LINQ to XML プロバイダーは、XML のクエリと変更を可能にします。 インメモリ XML を変更することや、XML をファイルから読み込んだりファイルに保存したりすることができます。<br /><br /> さらに、XML リテラルおよび XML 軸プロパティを有効にする Visual Basic コードで直接 XML を記述する LINQ to XML プロバイダーを使用します。 詳細については、[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)を参照してください。|  
 |LINQ to DataSet|LINQ to DataSet プロバイダーによって内データをクエリおよび更新できるように、[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データセット。 データセットを使用するアプリケーションに LINQ を追加することで、データセット内のデータのクエリ、集計、および更新などの機能を単純化すると同時に拡張できます。<br /><br /> 詳細については、「[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)」を参照してください。|  
   
 ## <a name="structure-of-a-linq-query"></a>LINQ クエリの構造  
@@ -73,11 +73,11 @@ ms.locfileid: "56973627"
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
- 上記以外にも、強力なクエリ式を作成するために使用できる、さまざまな LINQ クエリ演算子があります。 このトピックの次のセクションで、クエリ式で使用できるさまざまなクエリ句について説明します。 詳細については、Visual Basic のクエリ句は、次を参照してください。[クエリ](../../../../visual-basic/language-reference/queries/index.md)します。  
+ 上記以外にも、強力なクエリ式を作成するために使用できる、さまざまな LINQ クエリ演算子があります。 このトピックの次のセクションで、クエリ式で使用できるさまざまなクエリ句について説明します。 詳細については、Visual Basic のクエリ句は、[クエリ](../../../../visual-basic/language-reference/queries/index.md)を参照してください。  
   
 ## <a name="visual-basic-linq-query-operators"></a>Visual Basic の LINQ クエリ演算子  
 
-LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他の名前空間のクラスには、アプリケーションの要件に基づいてクエリの作成と絞り込みを行うために呼び出すことができるメソッドが含まれています。 Visual Basic には、次の一般的なクエリ句のキーワードが含まれています。 詳細については、Visual Basic のクエリ句は、次を参照してください。[クエリ](../../../language-reference/queries/index.md)します。
+LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他の名前空間のクラスには、アプリケーションの要件に基づいてクエリの作成と絞り込みを行うために呼び出すことができるメソッドが含まれています。 Visual Basic には、次の一般的なクエリ句のキーワードが含まれています。 詳細については、Visual Basic のクエリ句は、[クエリ](../../../language-reference/queries/index.md)を参照してください。
 
 ### <a name="from-clause"></a>From 句
 
@@ -179,7 +179,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
   
  [!code-vb[VbVbalrIntroToLINQ#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#22)]  
   
- 詳細については、追加の LINQ 機能は、次を参照してください。[標準クエリ演算子の概要](../../concepts/linq/standard-query-operators-overview.md)します。  
+ 詳細については、追加の LINQ 機能は、[標準クエリ演算子の概要](../../concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
 ## <a name="connect-to-a-database-by-using-linq-to-sql"></a>LINQ to SQL を使用してデータベースに接続します。  
  Visual basic では、テーブル、ビュー、およびストアド プロシージャで、SQL ファイルを LINQ を使用してアクセスするなど、SQL Server のデータベース オブジェクトを識別します。 LINQ to SQL ファイルには、.dbml という拡張子が付きます。  
@@ -197,7 +197,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
   
 -   **拡張メソッド**、型自体を変更することがなく、独自のメソッドで既存の型を拡張できます。  
   
- 詳細については、次を参照してください。 [Visual Basic の機能をサポート LINQ](../../concepts/linq/features-that-support-linq.md)します。  
+ 詳細については、[Visual Basic の機能をサポート LINQ](../../concepts/linq/features-that-support-linq.md)を参照してください。  
   
 ## <a name="deferred-and-immediate-query-execution"></a>クエリ遅延に、即時実行
 
@@ -206,12 +206,12 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
  既定では、クエリを作成しても、クエリ自体が直ちに実行されることはありません。 代わりに、クエリ結果を参照するために使用される変数にクエリ定義が格納されます。 そのクエリ結果変数が、後でコード内の `For…Next` ループなどでアクセスされると、クエリが実行されます。 このプロセスと呼ばれます*遅延実行*します。  
   
  定義されていると呼ばれるときに、クエリを実行することも*即時実行*します。 即時実行は、クエリ結果の個々の要素にアクセスする必要があるメソッドを適用することで開始できます。 
-  `Count`、`Sum`、`Average`、`Min`、`Max` などの集計関数を含めることで、この結果を得ることができます。 集計関数の詳細については、次を参照してください。 [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)します。  
+  `Count`、`Sum`、`Average`、`Min`、`Max` などの集計関数を含めることで、この結果を得ることができます。 集計関数の詳細については、[Aggregate 句](../../../language-reference/queries/aggregate-clause.md)を参照してください。  
   
  
-  `ToList` メソッドまたは `ToArray` メソッドを使用することでも、即時実行を開始できます。 これは、クエリを直ちに実行し、結果をキャッシュする場合に役に立ちます。 これらのメソッドの詳細については、次を参照してください。[データ型の変換](../../concepts/linq/converting-data-types.md)します。  
+  `ToList` メソッドまたは `ToArray` メソッドを使用することでも、即時実行を開始できます。 これは、クエリを直ちに実行し、結果をキャッシュする場合に役に立ちます。 これらのメソッドの詳細については、[データ型の変換](../../concepts/linq/converting-data-types.md)を参照してください。  
   
- クエリの実行の詳細については、次を参照してください。[書き込みで初めて Your の LINQ クエリ](../../concepts/linq/writing-your-first-linq-query.md)します。  
+ クエリの実行の詳細については、[書き込みで初めて Your の LINQ クエリ](../../concepts/linq/writing-your-first-linq-query.md)を参照してください。  
   
 ## <a name="xml-in-visual-basic"></a>Visual Basic における XML  
  Visual Basic での XML 機能は、XML リテラルを含めると、作成を簡単に有効にする、XML 軸のプロパティへのアクセス、クエリ、およびコードで XML を変更します。 XML リテラルを使用すると、XML をコード内に直接記述できます。 Visual Basic コンパイラは、XML を、最初のクラスのデータ オブジェクトとして処理します。  
@@ -220,7 +220,7 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- 詳細については、次を参照してください。 [XML](../xml/index.md)します。  
+ 詳細については、[XML](../xml/index.md)を参照してください。  
   
 ## <a name="related-resources"></a>関連資料  
   

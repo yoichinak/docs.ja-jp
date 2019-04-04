@@ -29,7 +29,7 @@ ms.locfileid: "57361461"
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- 次の手順を実装するためには、<xref:System.Windows.Input.ICommandSource>メンバー。  この例では、プロパティとして実装されます<xref:System.Windows.DependencyProperty>オブジェクト。  これにより、データ バインディングを使用するプロパティです。  詳細については、<xref:System.Windows.DependencyProperty>クラスを参照してください、[依存関係プロパティの概要](dependency-properties-overview.md)します。  データ バインディングの詳細については、次を参照してください。、[データ バインディングの概要](../data/data-binding-overview.md)します。  
+ 次の手順を実装するためには、<xref:System.Windows.Input.ICommandSource>メンバー。  この例では、プロパティとして実装されます<xref:System.Windows.DependencyProperty>オブジェクト。  これにより、データ バインディングを使用するプロパティです。  詳細については、<xref:System.Windows.DependencyProperty>クラスを参照してください、[依存関係プロパティの概要](dependency-properties-overview.md)します。  データ バインディングの詳細については、、[データ バインディングの概要](../data/data-binding-overview.md)を参照してください。  
   
  のみ、<xref:System.Windows.Input.ICommandSource.Command%2A>プロパティが次に示します。  
   

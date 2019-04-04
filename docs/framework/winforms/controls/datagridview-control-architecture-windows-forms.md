@@ -134,7 +134,7 @@ ms.locfileid: "58842344"
   
  独自の型を派生させることができます、<xref:System.Windows.Forms.DataGridViewRow>クラスが、これは通常不要になります。 <xref:System.Windows.Forms.DataGridView>コントロールがいくつかの行に関連するイベントおよびプロパティの動作をカスタマイズするため、<xref:System.Windows.Forms.DataGridViewRow>オブジェクト。  
   
- 有効にした場合、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>プロパティ、新しい行を追加するための特別な行は、最後の行として表示されます。 この行の一部である、<xref:System.Windows.Forms.DataGridView.Rows%2A>が、コレクションが特別な機能に対処することがあります。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールにおける新規レコードの行を使用して](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)します。  
+ 有効にした場合、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>プロパティ、新しい行を追加するための特別な行は、最後の行として表示されます。 この行の一部である、<xref:System.Windows.Forms.DataGridView.Rows%2A>が、コレクションが特別な機能に対処することがあります。 詳細については、[Windows フォームの DataGridView コントロールにおける新規レコードの行を使用して](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)

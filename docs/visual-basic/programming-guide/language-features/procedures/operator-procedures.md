@@ -26,7 +26,7 @@ ms.locfileid: "58815571"
   
  Visual Basic では、その基本データ型でのみ演算子を定義します。 両方のオペランドは、クラスまたは構造体の型または 1 つの場合、演算子の動作を定義できます。  
   
- 詳細については、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
+ 詳細については、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
   
 ## <a name="types-of-operator-procedure"></a>演算子プロシージャの種類  
  演算子プロシージャには、次の種類のいずれかを指定できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "58815571"
 ### <a name="data-type"></a>データの種類  
  クラスまたは定義した構造体で演算子を定義しているため、そのクラスまたは構造体のデータ型のオペランドの少なくとも 1 つがあります。 型の変換演算子のオペランドまたは戻り値の型がクラスまたは構造体のデータ型でなければなりません。  
   
- 詳細については、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
+ 詳細については、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
   
 ## <a name="calling-syntax"></a>呼び出し構文  
  演算子プロシージャは、式の中で演算子記号を使用して暗黙的を呼び出します。 定義済みの演算子のと同じ方法で、オペランドを指定します。  

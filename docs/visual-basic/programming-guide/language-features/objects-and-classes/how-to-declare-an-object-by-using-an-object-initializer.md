@@ -57,7 +57,7 @@ ms.locfileid: "58825137"
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
-     詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+     詳細については、[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

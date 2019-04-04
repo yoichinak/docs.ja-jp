@@ -4,12 +4,12 @@ description: 既存の .NET Framework コンソール アプリケーション�
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126085"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633843"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows コンテナーでのコンソール アプリケーションの実行
 
@@ -55,7 +55,9 @@ Windows コンテナーをサポートするには、Docker for Windows バー�
 ## <a name="building-the-application"></a>アプリケーションのビルド
 通常、コンソール アプリケーションは、インストーラー、FTP、またはファイル共有の展開を通して配布されます。 コンテナーへの展開時には、資産をコンパイルし、Docker イメージを作成するときに使用できる場所にステージングする必要があります。
 
-*Build.ps1* で、スクリプトは資産のビルド タスクを実行するために、[MSBuild](/visualstudio/msbuild/msbuild) を使用してアプリケーションをコンパイルします。 必要な資産を最終処理するために MSBuild に渡されるいくつかのパラメーターがあります。 コンパイルするプロジェクト ファイルまたはソリューションの名前、出力の場所、および構成 (Release または Debug) です。
+サンプル アプリケーションを次に示します。[ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+*build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> で、スクリプトは資産のビルド タスクを実行するために、[MSBuild](/visualstudio/msbuild/msbuild) を使用してアプリケーションをコンパイルします。 必要な資産を最終処理するために MSBuild に渡されるいくつかのパラメーターがあります。 コンパイルするプロジェクト ファイルまたはソリューションの名前、出力の場所、および構成 (Release または Debug) です。
 
 `Invoke-MSBuild` への呼び出しで、`OutputPath` は **publish** に設定され、`Configuration` は **Release** に設定されます。 
 

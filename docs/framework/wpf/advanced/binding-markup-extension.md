@@ -44,7 +44,7 @@ ms.locfileid: "57379186"
 |`path`|暗黙を設定するパス文字列<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>プロパティ。 参照してください[PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。|  
   
 ## <a name="unqualified-binding"></a>修飾されていない {binding}  
- `{Binding}` 「バインド式の使用」で示した使用法を作成、<xref:System.Windows.Data.Binding>を含む初期既定値を持つオブジェクト<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>の`null`します。 これは、多くのシナリオにも便利ですので、作成した<xref:System.Windows.Data.Binding>など主要なデータ バインド プロパティに依存する可能性があります<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>と<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>実行時のデータ コンテキストで設定されています。 データ コンテキストの概念の詳細については、次を参照してください。[データ バインディングの](../data/data-binding-wpf.md)します。  
+ `{Binding}` 「バインド式の使用」で示した使用法を作成、<xref:System.Windows.Data.Binding>を含む初期既定値を持つオブジェクト<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>の`null`します。 これは、多くのシナリオにも便利ですので、作成した<xref:System.Windows.Data.Binding>など主要なデータ バインド プロパティに依存する可能性があります<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>と<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>実行時のデータ コンテキストで設定されています。 データ コンテキストの概念の詳細については、[データ バインディングの](../data/data-binding-wpf.md)を参照してください。  
   
 ## <a name="implicit-path"></a>暗黙のパス  
  `Binding`マークアップ拡張機能の使用<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>を概念として"プロパティを default"という`Path=`式に表示する必要はありません。 指定した場合、`Binding`暗黙的なパスを持つ式は、暗黙的なパスを前に、他の式で最初に表示する必要があります`bindProp` = `value`ペアで、<xref:System.Windows.Data.Binding>プロパティは名前によって指定します。 例:`{Binding PathString}`ここで、`PathString`の値に評価される文字列は、<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>で、<xref:System.Windows.Data.Binding>マークアップ拡張機能を使用して作成します。 たとえば、コンマ区切り記号の後に他の名前付きプロパティを持つ暗黙のパスを追加できます`{Binding LastName, Mode=TwoWay}`します。  
@@ -116,9 +116,9 @@ ms.locfileid: "57379186"
   
  XAML のブール値は大文字小文字を区別します。 たとえばいずれかを指定できます`{Binding NotifyOnValidationError=true}`または`{Binding NotifyOnValidationError=True}`します。  
   
- データの検証に関連するバインドは、通常、明示的な指定`Binding`要素ではなくとして、`{Binding ...}`式、および設定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>または<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>式ではあまりありません。 これは、ため、コンパニオン プロパティ<xref:System.Windows.Data.Binding.ValidationRules%2A>式の形式で簡単に設定することはできません。 詳細については、次を参照してください。[実装バインド検証](../data/how-to-implement-binding-validation.md)です。  
+ データの検証に関連するバインドは、通常、明示的な指定`Binding`要素ではなくとして、`{Binding ...}`式、および設定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>または<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>式ではあまりありません。 これは、ため、コンパニオン プロパティ<xref:System.Windows.Data.Binding.ValidationRules%2A>式の形式で簡単に設定することはできません。 詳細については、[実装バインド検証](../data/how-to-implement-binding-validation.md)を参照してください。  
   
- `Binding` はマークアップ拡張機能です。 通常、マークアップ拡張機能は、属性値の名前、リテラル値やハンドラー以外にエスケープする必要があるし、要件が特定の種類またはプロパティで属性付きの型コンバーターよりも多くのグローバルに実装されます。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が文字列の内容を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `Binding` はマークアップ拡張機能です。 通常、マークアップ拡張機能は、属性値の名前、リテラル値やハンドラー以外にエスケープする必要があるし、要件が特定の種類またはプロパティで属性付きの型コンバーターよりも多くのグローバルに実装されます。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が文字列の内容を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
   
  `Binding` 特殊なマークアップ拡張機能は、 <xref:System.Windows.Data.Binding> WPF の XAML 実装の拡張機能を実装するクラスは、その他のいくつかのメソッドと XAML に関連していないプロパティにも実装します。 他のメンバーにするは<xref:System.Windows.Data.Binding>汎用性と自己完結型のクラスで、XAML マークアップ拡張機能として機能しているだけでなく多くのデータ バインディングのシナリオに対処できます。  
   

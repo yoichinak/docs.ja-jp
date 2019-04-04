@@ -121,7 +121,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 ### <a name="to-specify-an-issue-token"></a>発行トークンを指定するには  
   
-1.  発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーション セキュリティの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)と[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
+1.  発行トークンは、フェデレーション セキュリティを使用するアプリケーションのみが使用します。 フェデレーション セキュリティの詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)と[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)を参照してください。  
   
      <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> メソッドを呼び出す方法を次の Visual Basic コード例に示します。  
   

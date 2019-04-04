@@ -50,7 +50,7 @@ ms.locfileid: "56971287"
 -   パターンに従い、`getStudents`の別のインスタンスを追加するメソッドを`Student`クラスの一覧にします。 受講者を追加することをオブジェクト初期化子が紹介されます。 詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)します。  
   
 ## <a name="create-a-query"></a>クエリを作成する  
- 実行すると、このセクションでは追加のクエリは、学生の成績順位に上位 10 件の配置の一覧を生成します。 完全なクエリが選択されるので`Student`オブジェクトたびに、クエリ結果の型が`IEnumerable(Of Student)`します。 ただし、クエリの種類通常が指定されていないクエリの定義にします。 代わりに、コンパイラは、種類を決定するのにローカル型推論を使用します。 詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。 クエリの範囲変数、 `currentStudent`、それぞれへの参照として機能`Student`、ソース内のインスタンス`students`、内の各オブジェクトのプロパティへのアクセスを提供する`students`します。  
+ 実行すると、このセクションでは追加のクエリは、学生の成績順位に上位 10 件の配置の一覧を生成します。 完全なクエリが選択されるので`Student`オブジェクトたびに、クエリ結果の型が`IEnumerable(Of Student)`します。 ただし、クエリの種類通常が指定されていないクエリの定義にします。 代わりに、コンパイラは、種類を決定するのにローカル型推論を使用します。 詳細については、[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。 クエリの範囲変数、 `currentStudent`、それぞれへの参照として機能`Student`、ソース内のインスタンス`students`、内の各オブジェクトのプロパティへのアクセスを提供する`students`します。  
   
 #### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには  
   
@@ -65,7 +65,7 @@ ms.locfileid: "56971287"
 2.  マウス ポインターを合わせる`studentQuery`コンパイラによって割り当てられた型があることを確認するコードで`IEnumerable(Of Student)`します。  
   
 ## <a name="run-the-query"></a>クエリを実行します。  
- 変数`studentQuery`クエリの実行結果ではありません、クエリの定義が含まれています。 クエリを実行するための一般的なメカニズムは、`For Each`ループします。 返されたシーケンス内の各要素は、ループの反復変数を通じてアクセスされます。 クエリの実行の詳細については、次を参照してください。[書き込みで初めて Your の LINQ クエリ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)します。  
+ 変数`studentQuery`クエリの実行結果ではありません、クエリの定義が含まれています。 クエリを実行するための一般的なメカニズムは、`For Each`ループします。 返されたシーケンス内の各要素は、ループの反復変数を通じてアクセスされます。 クエリの実行の詳細については、[書き込みで初めて Your の LINQ クエリ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)を参照してください。  
   
 #### <a name="to-run-the-query"></a>クエリを実行するには  
   

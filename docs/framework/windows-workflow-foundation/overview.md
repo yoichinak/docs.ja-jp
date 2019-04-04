@@ -39,7 +39,7 @@ ms.locfileid: "58464685"
   
 -   `ReadLine` という名前のカスタム アクティビティ。 <xref:System.Activities.OutArgument> メソッドの呼び出しに対して `ReadLine` アクティビティの <xref:System.Activities.WorkflowInvoker.Invoke%2A> が返されます。  
   
--   <xref:System.Activities.CodeActivity> 抽象クラスから派生するカスタム アクティビティ。 <xref:System.Activities.CodeActivity> は、<xref:System.Activities.CodeActivityContext> メソッドのパラメーターとして使用可能な <xref:System.Activities.CodeActivity.Execute%2A> を使用して、ランタイム機能 (追跡やプロパティなど) にアクセスできます。 これらのランタイム機能の詳細については、次を参照してください。[ワークフロー追跡とトレース](workflow-tracking-and-tracing.md)と[ワークフロー実行プロパティ](workflow-execution-properties.md)します。  
+-   <xref:System.Activities.CodeActivity> 抽象クラスから派生するカスタム アクティビティ。 <xref:System.Activities.CodeActivity> は、<xref:System.Activities.CodeActivityContext> メソッドのパラメーターとして使用可能な <xref:System.Activities.CodeActivity.Execute%2A> を使用して、ランタイム機能 (追跡やプロパティなど) にアクセスできます。 これらのランタイム機能の詳細については、[ワークフロー追跡とトレース](workflow-tracking-and-tracing.md)と[ワークフロー実行プロパティ](workflow-execution-properties.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [BizTalk Server 2006 または WF?適切なワークフロー ツール、プロジェクトの選択](https://go.microsoft.com/fwlink/?LinkId=154901)

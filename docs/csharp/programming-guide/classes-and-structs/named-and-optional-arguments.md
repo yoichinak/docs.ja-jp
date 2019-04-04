@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: d31cec602516b7cf3e4b358fa4b3f10e167e6e17
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202732"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654030"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>名前付き引数と省略可能な引数 (C# プログラミング ガイド)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] では、名前付き引数と省略可能な引数が導入されています。 *名前付き引数*を使用すると、パラメーター リストのパラメーターの位置ではなく、パラメーター名に引数を関連付けることによって、特定のパラメーターの引数を指定できます。 *省略可能な引数*を使用すると、一部のパラメーターの引数を省略できます。 両方の手法をメソッド、インデクサー、コンストラクター、デリゲートで使用できます。  
@@ -88,8 +88,7 @@ ms.locfileid: "57202732"
   
  次の例に示すように、IntelliSense では、省略可能なパラメーターを角かっこで示します。  
   
- ![ExampleMethod メソッドの IntelliSense によるクイック ヒント](../../../csharp/programming-guide/classes-and-structs/media/optional_parameters.png "Optional_Parameters")  
-ExampleMethod の省略可能なパラメーター  
+ ![ExampleMethod メソッドの IntelliSense クイック インフォを示すスクリーンショット。](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
 >  また、.NET <xref:System.Runtime.InteropServices.OptionalAttribute> クラスを使用して省略可能なパラメーターを宣言することもできます。 `OptionalAttribute` パラメーターに既定値は必要ありません。  
@@ -104,8 +103,7 @@ ExampleMethod の省略可能なパラメーター
   
  たとえば、Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> インターフェイスの <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> メソッドには 7 つのパラメーターがあります。それらはすべて省略可能です。 これらのパラメーターを次の例に示します。  
   
- ![AutoFormat メソッドについての IntelliSense によるクイック ヒント](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
-AutoFormat パラメーター  
+ ![AutoFormat メソッドの IntelliSense クイック インフォを示すスクリーンショット。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
  C# 3.0 以前のバージョンの C# では、次の例に示すように、各パラメーターの引数が必要です。  
   

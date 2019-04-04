@@ -19,7 +19,7 @@ ms.locfileid: "57379160"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解しておく必要があるの基本的な機能を使い慣れて<xref:System.Windows.Media.Geometry>オブジェクト。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
+ このトピックを理解しておく必要があるの基本的な機能を使い慣れて<xref:System.Windows.Media.Geometry>オブジェクト。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ミニ言語と PathFigureCollection ミニ言語  

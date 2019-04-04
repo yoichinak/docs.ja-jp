@@ -17,7 +17,7 @@ ms.locfileid: "57355520"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、基本的なアニメーション機能に精通している必要があります。 詳細については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。  
+ このトピックを理解するには、基本的なアニメーション機能に精通している必要があります。 詳細については、、[アニメーションの概要](animation-overview.md)を参照してください。  
   
 <a name="timelinetypes"></a>   
 ## <a name="timeline-types"></a>タイムラインの型  
@@ -76,7 +76,7 @@ ms.locfileid: "57355520"
   
  [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
   
- たとえば、次を参照してください。[アニメーションを反復する](how-to-repeat-an-animation.md)します。  
+ たとえば、[アニメーションを反復する](how-to-repeat-an-animation.md)を参照してください。  
   
 <a name="autoreverseproperty"></a>   
 ### <a name="the-autoreverse-property"></a>AutoReverse プロパティ  
@@ -88,7 +88,7 @@ ms.locfileid: "57355520"
   
  [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
   
- コンテナー タイムラインに子<xref:System.Windows.Media.Animation.Timeline>オブジェクトの場合は、コンテナー タイムラインが反転します。 その他の例では、次を参照してください。[を指定するかどうか、タイムラインを自動的に反転](how-to-specify-whether-a-timeline-automatically-reverses.md)します。  
+ コンテナー タイムラインに子<xref:System.Windows.Media.Animation.Timeline>オブジェクトの場合は、コンテナー タイムラインが反転します。 その他の例では、[を指定するかどうか、タイムラインを自動的に反転](how-to-specify-whether-a-timeline-automatically-reverses.md)を参照してください。  
   
 <a name="timelinebegin"></a>   
 ## <a name="the-begintime-property"></a>BeginTime プロパティ  

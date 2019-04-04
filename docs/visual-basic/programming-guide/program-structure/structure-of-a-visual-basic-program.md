@@ -17,7 +17,7 @@ ms.locfileid: "58828122"
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
   
- Visual Basic プログラムの詳細については、これらのビルディング ブロックは、次を参照してください。[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と[.net アセンブリ](../../../standard/assembly/index.md)します。  
+ Visual Basic プログラムの詳細については、これらのビルディング ブロックは、[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と[.net アセンブリ](../../../standard/assembly/index.md)を参照してください。  
   
 ## <a name="file-level-programming-elements"></a>ファイル レベルのプログラミング要素  
  プロジェクトまたはファイルを開始し、コード エディターを開き、既にとを正しい順序でいくつかのコードが表示されます。 作成するすべてのコードは、次のシーケンスに従う必要があります。  
@@ -36,13 +36,13 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
  `Option` ステートメントは、構文とロジックのエラーを防ぐ、後続のコードの基盤となる規則を確立します。 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)ことにより、すべての変数宣言なりのスペルをデバッグする時間を短縮します。 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)別のデータ型の変数を使用するときに発生する可能性がロジックのエラーとデータの損失を最小限に抑えるのに役立ちます。 [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)方法文字列は、相互にいずれかに基づく比較を指定します。 その`Binary`または`Text`値。  
   
 ### <a name="imports-statements"></a>Imports ステートメント  
- 含めることができます、 [Imports ステートメント (.NET Namespace よぶ型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)名、プロジェクトの外部で定義をインポートします。 `Imports`ステートメントにより、コードをクラスとそれらを修飾することがなく、インポートされた名前空間内で定義されているその他の型を参照してください。 多くとして使用できる`Imports`に応じてステートメント。 詳細については、次を参照してください。[参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)します。  
+ 含めることができます、 [Imports ステートメント (.NET Namespace よぶ型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)名、プロジェクトの外部で定義をインポートします。 `Imports`ステートメントにより、コードをクラスとそれらを修飾することがなく、インポートされた名前空間内で定義されているその他の型を参照してください。 多くとして使用できる`Imports`に応じてステートメント。 詳細については、[参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)を参照してください。  
   
 ### <a name="namespace-statements"></a>Namespace ステートメント  
  名前空間のヘルプを整理し、プログラミングの要素のグループ化とアクセスに容易にするための分類します。 使用する、 [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)を特定の名前空間内で、次のステートメントを分類します。 詳細については、「[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)」を参照してください。  
   
 ### <a name="conditional-compilation-statements"></a>条件付きコンパイル ステートメント  
- 条件付きコンパイル ステートメントは、ソース ファイルにどこに表示できます。 含まれるまたは特定の条件によってコンパイル時に除外するコードの部分が発生するとします。 できます使用することも、アプリケーションのデバッグの条件付きコードがデバッグ モードのみで実行されるためです。 詳細については、次を参照してください。[条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)します。  
+ 条件付きコンパイル ステートメントは、ソース ファイルにどこに表示できます。 含まれるまたは特定の条件によってコンパイル時に除外するコードの部分が発生するとします。 できます使用することも、アプリケーションのデバッグの条件付きコードがデバッグ モードのみで実行されるためです。 詳細については、[条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)を参照してください。  
   
 ## <a name="namespace-level-programming-elements"></a>Namespace レベルのプログラミング要素  
  クラス、構造、およびモジュールは、ソース ファイル内のすべてのコードを含めることができます。 *名前空間レベル*要素、または、ソース ファイル レベルで、名前空間内に表示されることができます。 その他のすべてのプログラミング要素の宣言を保持します。 要素のシグネチャを定義して実装を提供しないには、インターフェイスは、モジュール レベルも表示されます。 モジュール レベルの要素の詳細については、次を参照してください。  
@@ -90,7 +90,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
   
 -   `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、次を参照してください。 [Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
+ この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

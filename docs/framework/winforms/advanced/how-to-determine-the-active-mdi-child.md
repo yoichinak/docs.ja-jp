@@ -30,7 +30,7 @@ ms.locfileid: "57714328"
 1.  メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
+    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、[MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)を参照してください。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  

@@ -16,7 +16,7 @@ ms.locfileid: "58409966"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>チュートリアル: Windows Communication Foundation サービス コントラクトを定義します。
 
-このチュートリアルでは、最初の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
+このチュートリアルでは、最初の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
 
 WCF サービスを作成するときに、最初のタスクは、サービス コントラクトを定義します。 サービス コントラクトは、サービスがサポートする操作を指定します。 操作は Web サービス メソッドと見なすことができます。 ビジュアルを定義してサービス コントラクトを作成するC#または Visual Basic (VB) インターフェイス。 インターフェイスには、次の特徴があります。
 

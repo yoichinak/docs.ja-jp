@@ -18,13 +18,13 @@ ms.locfileid: "55904691"
   
 -   <xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType>、<xref:System.Data.Metadata.Edm.RefType> など、明示的にはスキーマで定義されない匿名型。  
   
- このセクションでは、定義されていないスキーマで明示的には、Entity SQL でサポートされている匿名型について説明します。 プリミティブ型および標準型については、次を参照してください。[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)します。  
+ このセクションでは、定義されていないスキーマで明示的には、Entity SQL でサポートされている匿名型について説明します。 プリミティブ型および標準型については、[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)を参照してください。  
   
 ## <a name="rows"></a>行  
- 行の構造は、行を構成する型指定された名前付きのメンバーの配列に依存します。 行型には ID がなく、派生元にすることはできません。 同じ行型のインスタンスは、メンバーがそれぞれ同等である場合は同等になります。 行には構造同値以外の動作はなく、共通言語ランタイムに同等のものはありません。 クエリの結果は、行または行のコレクションを含む構造になります。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリとホスト言語の間の API バインドは、結果を生成したクエリでどのように行が構成されるかを定義します。 行のインスタンスを構築する方法については、次を参照してください。[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)します。  
+ 行の構造は、行を構成する型指定された名前付きのメンバーの配列に依存します。 行型には ID がなく、派生元にすることはできません。 同じ行型のインスタンスは、メンバーがそれぞれ同等である場合は同等になります。 行には構造同値以外の動作はなく、共通言語ランタイムに同等のものはありません。 クエリの結果は、行または行のコレクションを含む構造になります。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリとホスト言語の間の API バインドは、結果を生成したクエリでどのように行が構成されるかを定義します。 行のインスタンスを構築する方法については、[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)を参照してください。  
   
 ## <a name="collections"></a>コレクション  
- コレクション型は、他のオブジェクトの 0 個以上のインスタンスを表します。 コレクションを作成する方法については、次を参照してください。[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)します。  
+ コレクション型は、他のオブジェクトの 0 個以上のインスタンスを表します。 コレクションを作成する方法については、[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)を参照してください。  
   
 ## <a name="references"></a>参照  
  参照とは、特定のエンティティ セットにある特定のエンティティへの論理ポインターです。  

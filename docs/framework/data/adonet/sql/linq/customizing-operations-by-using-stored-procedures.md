@@ -18,7 +18,7 @@ ms.locfileid: "54555519"
  Visual Studio を使用している場合を使用できます、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を挿入、更新、および削除を実行するストアド プロシージャを割り当てます。  
   
 > [!NOTE]
->  データベースによって生成された値を読み取るには、ストアド プロシージャの出力パラメーターを使用します。 出力パラメーターを使用できない場合は、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]によって生成されたオーバーライドで処理するのではなく、部分メソッドの実装を作成します。 データベースによって生成される値に割り当てられているメンバーは、`INSERT` 操作または `UPDATE` 操作が正常に完了した後で、適切な値に設定する必要があります。 詳細については、次を参照してください。[開発者でオーバーライドする既定の動作の責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)します。  
+>  データベースによって生成された値を読み取るには、ストアド プロシージャの出力パラメーターを使用します。 出力パラメーターを使用できない場合は、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]によって生成されたオーバーライドで処理するのではなく、部分メソッドの実装を作成します。 データベースによって生成される値に割り当てられているメンバーは、`INSERT` 操作または `UPDATE` 操作が正常に完了した後で、適切な値に設定する必要があります。 詳細については、[開発者でオーバーライドする既定の動作の責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)を参照してください。  
   
 ## <a name="example"></a>例  
   

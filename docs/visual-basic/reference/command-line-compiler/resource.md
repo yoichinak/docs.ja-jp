@@ -41,7 +41,7 @@ ms.locfileid: "54550358"
   
  `-resource` の省略形は `-res` です。  
   
- 設定する方法については`-resource`、Visual Studio IDE で、次を参照してください。[アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
+ 設定する方法については`-resource`、Visual Studio IDE で、[アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードのコンパイル`In.vb`とリソース ファイルのアタッチ`Rf.resource`します。  

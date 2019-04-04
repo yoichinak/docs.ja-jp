@@ -2,18 +2,18 @@
 title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084681"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654576"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
 C# の 6.0 リリースには、開発者の生産性を向上させる多くの機能が含まれています。 これらの機能がもたらす全体的な効果として、より読みやすく簡潔なコードを記述できるようになりました。 一般的なベスト プラクティスを多数反映することで、構文に使用される形式的な記述が減っています。 形式的な記述が減ったことで、設計の意図が理解しやすくなっています。 これらの機能を十分に学習すると、生産性が向上し、より読みやすいコードを記述できるようになります。 言語のコンストラクトよりも機能により集中することができます。
 
-この記事の残りの部分では、これらの各機能の概要と、各機能をより詳しく学習するためのリンクを提供します。 チュートリアル セクションの [C# 6 の対話形式チュートリアル](../tutorials/exploration/csharp-6.yml)で、機能を探究することもできます。
+この記事の残りの部分では、これらの各機能の概要と、各機能をより詳しく学習するためのリンクを提供します。 チュートリアル セクションの [C# 6 の対話型探索](../tutorials/exploration/csharp-6.yml)で、機能を探究することもできます。
 
 ## <a name="read-only-auto-properties"></a>読み取り専用の自動プロパティ
 

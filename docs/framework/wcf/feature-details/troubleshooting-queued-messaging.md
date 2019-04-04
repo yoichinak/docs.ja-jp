@@ -35,7 +35,7 @@ ms.locfileid: "58463112"
   
 -   MSMQ 4.0 のみが、リモート トランザクション読み取りをサポートします。  
   
- 詳細については、次を参照してください。 [Windows Vista、Windows Server 2003、および Windows XP でのキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)します。  
+ 詳細については、[Windows Vista、Windows Server 2003、および Windows XP でのキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)を参照してください。  
   
  **Q:** もう一方の側でキューによる通信と MSMQ 4.0 の一方の側で MSMQ 3.0 を使用できますか。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "58463112"
   
  **Q:** MSMQ によく寄せられる質問に対する回答はどこで入手できますか。  
   
- **A:** MSMQ の詳細については、次を参照してください。 [Microsoft メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=87810)します。  
+ **A:** MSMQ の詳細については、[Microsoft メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=87810)を参照してください。  
   
  **Q:** サービスはスロー理由、`ProtocolException`両方を含むキューからの読み取りがセッション メッセージをキューに置かれ、データグラム メッセージをキューに登録しますか?  
   

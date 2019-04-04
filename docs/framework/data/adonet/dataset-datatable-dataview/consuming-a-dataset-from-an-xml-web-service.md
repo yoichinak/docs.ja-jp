@@ -13,12 +13,12 @@ ms.lasthandoff: 02/07/2019
 ms.locfileid: "55828294"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
-<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。  
+<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)を参照してください。  
   
  次の例は、XML Web サービスとを使用してクライアントを作成する方法を示します、**データセット**(変更されたデータを含む)、リレーショナル データの転送を解決するには、元のデータ ソースを更新します。  
   
 > [!NOTE]
->  XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスをセキュリティで保護する方法の詳細については、次を参照してください。[セキュリティで保護する XML Web Services Created Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))します。  
+>  XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスをセキュリティで保護する方法の詳細については、[セキュリティで保護する XML Web Services Created Using ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))を参照してください。  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet を返し、処理する XML Web サービスを作成するには、次のようにします。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "55828294"
     }  
     ```  
   
-     一般的なシナリオで、 **UpdateCustomers**メソッド オプティミスティック同時実行制御違反をキャッチに書き込まれます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)します。  
+     一般的なシナリオで、 **UpdateCustomers**メソッド オプティミスティック同時実行制御違反をキャッチに書き込まれます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)を参照してください。  
   
 2.  XML Web サービス プロキシを作成します。  
   

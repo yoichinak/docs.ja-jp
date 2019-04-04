@@ -31,7 +31,7 @@ ms.locfileid: "57356293"
  [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
  [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
- サンプル全体については、次を参照してください。[高さのプロパティのサンプル](https://go.microsoft.com/fwlink/?LinkID=159993)します。  
+ サンプル全体については、[高さのプロパティのサンプル](https://go.microsoft.com/fwlink/?LinkID=159993)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.FrameworkElement>

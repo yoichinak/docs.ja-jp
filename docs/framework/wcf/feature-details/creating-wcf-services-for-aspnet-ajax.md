@@ -51,11 +51,11 @@ Microsoft ASP.NET AJAX により、応答性に優れ、使い慣れたユーザ
   
  高度なシナリオでは、WCF での AJAX のサポートの追加の詳細情報が認識する必要があります。  
   
--   データの転送方法と、AJAX ページ クライアントと JavaScript を使用して WCF サービスの詳細については .NET Framework の型を JavaScript の型にマップする方法の詳細については、次を参照してください。 [JSON およびその他のデータ転送形式サポート](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)します。  
+-   データの転送方法と、AJAX ページ クライアントと JavaScript を使用して WCF サービスの詳細については .NET Framework の型を JavaScript の型にマップする方法の詳細については、[JSON およびその他のデータ転送形式サポート](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)を参照してください。  
   
 -   たとえば、URL ベースの認証や ASP.NET セッション情報へのアクセスなどの ASP.NET 機能を活用するには、構成で ASP.NET 互換モードを有効にします。  
   
- ASP.NET AJAX フレームワークなしで WCF AJAX エンドポイントで使用可能性があります。 これを行うには、WCF での AJAX のサポートのサポート アーキテクチャの理解が必要です。 このアーキテクチャの詳細については、次を参照してください。 [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)します。 この方法を示すコード サンプルは、次を参照してください。、 [JSON および XML 形式の AJAX サービス](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)します。  
+ ASP.NET AJAX フレームワークなしで WCF AJAX エンドポイントで使用可能性があります。 これを行うには、WCF での AJAX のサポートのサポート アーキテクチャの理解が必要です。 このアーキテクチャの詳細については、[WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)を参照してください。 この方法を示すコード サンプルは、、 [JSON および XML 形式の AJAX サービス](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

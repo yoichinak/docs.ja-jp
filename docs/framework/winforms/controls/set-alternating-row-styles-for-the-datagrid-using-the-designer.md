@@ -18,7 +18,7 @@ ms.locfileid: "57724597"
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの交互の行のスタイル設定します。
 表形式のデータは多くの場合、別の背景色の交互の行のある帳簿のような形式で表示されます。 この形式を使用すると、多数の列がある幅の広いテーブルで、ユーザーが各行にあるセルを簡単に識別できるようになります。  
   
- <xref:System.Windows.Forms.DataGridView> コントロールを使用すると、1 行おきの完全なスタイル情報を指定できます。 交互の行を区別するために、前景色と背景の色に加えて、フォントなどのスタイル特性を使用できます。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+ <xref:System.Windows.Forms.DataGridView> コントロールを使用すると、1 行おきの完全なスタイル情報を指定できます。 交互の行を区別するために、前景色と背景の色に加えて、フォントなどのスタイル特性を使用できます。 詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
  次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGridView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "57724597"
 4.  残りの行のスタイルを定義するには、手順 2 および 3 を使用して、<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>プロパティ。  
   
     > [!NOTE]
-    >  セルは、複数のプロパティから継承されたスタイルを使用して表示されます。 スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+    >  セルは、複数のプロパティから継承されたスタイルを使用して表示されます。 スタイルの継承の詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

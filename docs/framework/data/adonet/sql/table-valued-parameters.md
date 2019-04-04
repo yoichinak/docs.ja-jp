@@ -39,7 +39,7 @@ ms.locfileid: "54527771"
 -   `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数行のデータをテーブルに読み込む。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
- テーブル値パラメーターは、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
+ テーブル値パラメーターは、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「を参照してください。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
   

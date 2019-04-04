@@ -18,7 +18,7 @@ ms.locfileid: "54595137"
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
   
- Kerberos プロトコルの概要については、次を参照してください。 [Kerberos](https://go.microsoft.com/fwlink/?LinkID=86946)、SSPI の概要を参照してください。 [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941)します。  
+ Kerberos プロトコルの概要については、[Kerberos](https://go.microsoft.com/fwlink/?LinkID=86946)、SSPI の概要を参照してください。 [SSPI](https://go.microsoft.com/fwlink/?LinkId=88941)を参照してください。  
   
  WCF の通常の使用、Windows 認証のため、*ネゴシエート*クライアントとサービス間の Kerberos 相互認証を実行するセキュリティ サポート プロバイダー (SSP)、します。 場合は、Kerberos プロトコルは、WCF はフォールバック NT LAN Manager (NTLM) を既定で、ご利用いただけません。 ただし、WCF、Kerberos プロトコルのみを使用する (および Kerberos が使用できない場合に例外をスローする) を構成できます。 Kerberos プロトコルの制限付きの形式を使用する WCF を構成することもできます。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "54595137"
 ### <a name="kerberos-protocol"></a>Kerberos プロトコル  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos プロトコルでの SPN と UPN の問題  
- Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスが実行されているアカウントが Active Directory ドメインでサービスを実行してこれは最も一般的に、コンピューターが追加されたときに作成されるコンピューター (既定値) のサービス プリンシパル名 (SPN) キーにアクセスを前提としています、ネットワーク サービス アカウント。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 SPN と UPN と WCF のしくみについての詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスが実行されているアカウントが Active Directory ドメインでサービスを実行してこれは最も一般的に、コンピューターが追加されたときに作成されるコンピューター (既定値) のサービス プリンシパル名 (SPN) キーにアクセスを前提としています、ネットワーク サービス アカウント。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 SPN と UPN と WCF のしくみについての詳細については、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
  Web ファームや Web ガーデンなどの負荷分散シナリオでは、各アプリケーションに一意のアカウントを定義し、そのアカウントに SPN を割り当て、アプリケーションのサービスすべてがそのアカウントで実行されるようにするのが一般的です。  
   
- サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、次を参照してください。 [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkID=88330)します。  
+ サービスのアカウント用の SPN を取得するには、Active Directory ドメイン管理者である必要があります。 詳細については、[Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkID=88330)を参照してください。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos プロトコル ダイレクトでは Domain Machine アカウントでサービスを実行する必要がある  
  この状況は、次のコードに示すように、`ClientCredentialType` プロパティが `Windows` に設定され、<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> プロパティが `false` に設定されている場合に発生します。  
@@ -121,7 +121,7 @@ ms.locfileid: "54595137"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
+ 権限借用の詳細については、[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)を参照してください。  
   
  もう 1 つの方法として、SYSTEM ビルトイン アカウントを使用する Windows サービスとしてクライアントを実行します。  
   

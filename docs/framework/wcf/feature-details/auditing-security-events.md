@@ -16,7 +16,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   
  監査を使用すると、管理者は既に発生した攻撃や現在進行中の攻撃を検出できます。 また、開発者がセキュリティ関連の問題をデバッグする際にも役立ちます。 たとえば、認証またはポリシー チェックの構成エラーによって承認済みユーザーへのアクセスが拒否された場合、開発者は、イベント ログを検査することによって、このエラーの原因をすばやく発見し、取り出すことができます。  
   
- WCF セキュリティの詳細については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF プログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
+ WCF セキュリティの詳細については、[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)を参照してください。 WCF プログラミングの詳細については、[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)を参照してください。  
   
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  

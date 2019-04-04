@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846169"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412306"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -213,9 +213,9 @@ foreach (var repo in repositories)
 
 ## <a name="controlling-serialization"></a>シリアル化を制御する
 
-機能を追加する前に、`repo` 型を処理して、その型が C# の標準的な規約に従うようにします。 そのためには、JSON シリアライザーの動作を制御する "*属性*" を使用して `repo` 型に注釈を設定します。 ここでは、これらの属性を使用して、JSON キー名と C# のクラスおよびメンバーの名前との間のマッピングを定義します。 使用する 2 つの属性は `DataContract` および `DataMember` です。 慣例により、すべての属性クラスはサフィックス `Attribute` で終わります。 ただし、属性の適用時にそのサフィックスを使用する必要はありません。
+機能を追加する前に、`repo` 型を処理して、その型が C# の標準的な規約に従うようにします。 そのためには、JSON シリアライザーの動作を制御する "*属性*" を使用して `repo` 型に注釈を設定します。 ここでは、これらの属性を使用して、JSON キー名と C# のクラスおよびメンバーの名前との間のマッピングを定義します。 使用する 2 つの属性は <xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性です。 慣例により、すべての属性クラスはサフィックス `Attribute` で終わります。 ただし、属性の適用時にそのサフィックスを使用する必要はありません。
 
-`DataContract` 属性と `DataMember` 属性は別のライブラリにあるため、C# プロジェクト ファイルにそのライブラリを依存関係として追加する必要があります。 プロジェクト ファイルの `<ItemGroup>` セクションに次の行を追加します。
+<xref:System.Runtime.Serialization.DataContractAttribute> 属性と <xref:System.Runtime.Serialization.DataMemberAttribute> 属性は別のライブラリにあるため、C# プロジェクト ファイルにそのライブラリを依存関係として追加する必要があります。 プロジェクト ファイルの `<ItemGroup>` セクションに次の行を追加します。
 
 ```xml
 <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
@@ -223,7 +223,7 @@ foreach (var repo in repositories)
 
 ファイルを保存したら、`dotnet restore` ([注記を参照](#dotnet-restore-note))を実行してこのパッケージを取得します。
 
-次に、`repo.cs` ファイルを開きます。 パスカル ケースを使用するように名前を変更し、`Repository` という名前を記述します。 この型に JSON の "repo" ノードをマップするために、クラス宣言に `DataContract` 属性を追加する必要があります。 属性の `Name` プロパティを、この型にマップする JSON ノードの名前に設定します。
+次に、`repo.cs` ファイルを開きます。 パスカル ケースを使用するように名前を変更し、`Repository` という名前を記述します。 この型に JSON の "repo" ノードをマップするために、クラス宣言に <xref:System.Runtime.Serialization.DataContractAttribute> 属性を追加する必要があります。 属性の `Name` プロパティを、この型にマップする JSON ノードの名前に設定します。
 
 ```csharp
 [DataContract(Name="repo")]
@@ -357,7 +357,7 @@ foreach (var repo in repositories)
 private string JsonDate { get; set; }
 ```
 
-`DataMember` 属性は、このプロパティがパブリック メンバーでないとしても処理する必要があることをシリアライザーに通知します。 次に、文字列を有効な <xref:System.DateTime> オブジェクトに変換してその <xref:System.DateTime> を返す読み取り専用のパブリック プロパティを記述する必要があります。
+<xref:System.Runtime.Serialization.DataMemberAttribute> 属性は、このプロパティがパブリック メンバーでないとしても処理する必要があることをシリアライザーに通知します。 次に、文字列を有効な <xref:System.DateTime> オブジェクトに変換してその <xref:System.DateTime> を返す読み取り専用のパブリック プロパティを記述する必要があります。
 
 ```csharp
 [IgnoreDataMember]

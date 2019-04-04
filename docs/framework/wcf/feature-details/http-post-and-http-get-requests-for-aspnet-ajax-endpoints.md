@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) クライアントの Web サイトの Ja
   
 1. ブラウザーを使用すると、クライアントのコードなしでサービスの GET 操作をテストできます。 サービスが構成されている場合など、 `http://example.com/service.svc` 」と入力し、アドレス`http://example.com/service.svc/LookUpArtist?album=SomeAlbum`アドレス バーには、ブラウザーにサービスを呼び出すし、応答をダウンロードまたは表示します。
   
-2. GET 操作によるサービスは、他の ASP.NET AJAX サービスと同様に、サービス URL を ASP.NET AJAX Script Manager コントロールのスクリプト コレクションに入力することで使用できます。 例については、次を参照してください。、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)します。
+2. GET 操作によるサービスは、他の ASP.NET AJAX サービスと同様に、サービス URL を ASP.NET AJAX Script Manager コントロールのスクリプト コレクションに入力することで使用できます。 例については、、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)を参照してください。
   
 ## <a name="see-also"></a>関連項目
 - [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)

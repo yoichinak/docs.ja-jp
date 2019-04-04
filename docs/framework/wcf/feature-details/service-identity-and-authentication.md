@@ -17,7 +17,7 @@ ms.locfileid: "57212522"
 # <a name="service-identity-and-authentication"></a>サービス ID と認証
 サービスの*エンドポイント id*は、サービスの Web サービス記述言語 (WSDL) から生成された値です。 この値は、すべてのクライアントに反映され、サービスの認証に使用されます。 クライアントがエンドポイントとの通信を開始し、サービスがクライアントに対して認証を行った後に、クライアントは、エンドポイント ID 値とエンドポイントの認証プロセスから返された実際の値を比較します。 この 2 つの値が一致した場合、クライアントは要求したサービス エンドポイントに接続していることを確認できます。 これは、関数に対する保護として*フィッシング*クライアントが悪意のあるサービスによってホストされるエンドポイントにリダイレクトされるようにすることで。  
   
- Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 エンドポイントとエンドポイント アドレスの詳細については、次を参照してください。[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)します。  
+ Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 エンドポイントとエンドポイント アドレスの詳細については、[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)を参照してください。  
   
 > [!NOTE]
 >  認証に NTLM (NT LanMan) を使用する場合、NTLM ではクライアントがサーバーを認証できないため、サービス ID はチェックされません。 NTLM はコンピューターが Windows ワークグループの一部である場合、または Kerberos 認証をサポートしていない古いバージョンの Windows が実行されている場合に使用されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "57212522"
 |サービス プリンシパル名 (SPN)。 `ClientCredentialType` が Windows に設定されており、サービス プロセスがシステム アカウント (LocalService、LocalSystem、または NetworkService) のいずれかで実行されている場合の既定値です。|この要素は、サービスのアカウントに関連付けられている SPN を指定します。 Kerberos プロトコルと Id のセクションを参照してください。 [Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)します。|これにより、SPN と SPN に関連付けられた特定の Windows アカウントによってサービスが識別されます。<br /><br /> Setspn.exe ツールを使用すると、サービスのユーザー アカウントに対してコンピューター アカウントを関連付けることができます。<br /><br /> サービスがシステム アカウントのいずれか、または SPN 名に関連付けられたドメイン アカウントで実行されており、コンピューターが Active Directory 環境のドメインのメンバーである場合、この設定では Windows Kerberos セキュリティを利用します。|  
   
 ## <a name="specifying-identity-at-the-service"></a>サービスでの ID の指定  
- クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 オーバーライドまたはサービス id を指定する方法の詳細については、次を参照してください。 [Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)します。  
+ クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 オーバーライドまたはサービス id を指定する方法の詳細については、[Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)を参照してください。  
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用して、 \<identity > 構成要素  
  上記の例で示したバインディングのクライアント資格情報の種類を `Certificate,` に変更すると、次のコードに示すように、生成される WSDL には、Base64 でシリアル化された、ID 値用の X.509 証明書が含まれます。 これは、Windows 以外のすべてのクライアント資格情報の種類の既定値です。  

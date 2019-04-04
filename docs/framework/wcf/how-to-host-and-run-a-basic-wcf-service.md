@@ -17,7 +17,7 @@ ms.locfileid: "58410096"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行
 
-このチュートリアルでは、3 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
+このチュートリアルでは、3 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
 
 WCF アプリケーションを作成するための次のタスクでは、コンソール アプリケーションで WCF サービスをホストします。 WCF サービスは、1 つまたは複数公開*エンドポイント*、1 つまたは複数のサービス操作を公開します。 サービス エンドポイントは、次の情報を指定します。 
 - サービスが得られるアドレスです。

@@ -18,7 +18,7 @@ ms.locfileid: "58832451"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Ports` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Ports>」をご覧ください。  
   
- 詳細については、次を参照してください。[コンピューターのポートへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)します。  
+ 詳細については、[コンピューターのポートへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)を参照してください。  
   
 > [!NOTE]
 >  プロパティとメソッドを使用することもできます、<xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>コンピューターのシリアル ポートにアクセスするクラス。  

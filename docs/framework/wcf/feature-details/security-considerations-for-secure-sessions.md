@@ -10,7 +10,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54735796"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>セキュリティで保護されたセッションに関するセキュリティの検討
-セキュリティで保護されたセッションを実装する場合に、セキュリティに影響を及ぼす次の項目について考慮する必要があります。 セキュリティに関する考慮事項の詳細については、次を参照してください。[セキュリティに関する考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)と[セキュリティのベスト プラクティス](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)します。  
+セキュリティで保護されたセッションを実装する場合に、セキュリティに影響を及ぼす次の項目について考慮する必要があります。 セキュリティに関する考慮事項の詳細については、[セキュリティに関する考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)と[セキュリティのベスト プラクティス](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)を参照してください。  
   
 ## <a name="secure-sessions-and-metadata"></a>セキュリティで保護されたセッションとメタデータ  
  セキュリティで保護されたセッションが確立されたときに、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A>プロパティに設定されて`false`、Windows Communication Foundation (WCF) の送信、`mssp:MustNotSendCancel`アサーションは、Web サービス記述言語 (WSDL) ドキュメントでメタデータの一部として、サービス エンドポイント。 `mssp:MustNotSendCancel` アサーションは、クライアントに対してセキュリティで保護されたセッションのキャンセル要求にサービスが応答しないことを通知します。 ときに、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A>プロパティに設定されて`true`、WCF では生成されませんし、`mssp:MustNotSendCancel`アサーションが WSDL ドキュメントで。 セキュリティで保護されたセッションが必要でなくなった場合、クライアントはサービスに対してキャンセル要求を送る必要があります。 使用して、クライアントが生成されたときに、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)、クライアント コードは、の有無に適切に反応、`mssp:MustNotSendCancel`アサーション。  

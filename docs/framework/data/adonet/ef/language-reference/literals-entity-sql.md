@@ -15,7 +15,7 @@ ms.locfileid: "54643105"
 ## <a name="null"></a>Null  
  NULL リテラルは、あらゆる型で NULL 値を表す際に使用されます。 NULL リテラルは、すべての型と互換性があります。  
   
- NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、次を参照してください。[キャスト](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)します。  
+ NULL リテラルをキャストすることによって、型指定された NULL を作成できます。 詳細については、[キャスト](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)を参照してください。  
   
  Null リテラルが使用できるを参照してくださいかの規則については、浮動小数点を無料の[Null リテラルと型推論](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md)します。  
   

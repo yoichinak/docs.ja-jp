@@ -44,7 +44,7 @@ ms.locfileid: "54516162"
 ## <a name="auditing-event-log-can-be-filled"></a>監査イベント ログがいっぱいになる可能性がある  
  悪意のあるユーザーに監査が有効になっていることを知られると、その攻撃者に監査エントリの書き込みにつながる無効なメッセージを送信される可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。  
   
- これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベント ビューアーを使用して、イベント ログを表示および管理の詳細については、次を参照してください。[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=186123)します。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
+ これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベント ビューアーを使用して、イベント ログを表示および管理の詳細については、[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=186123)を参照してください。 詳細については、[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>IAuthorizationPolicy の無効な実装によりサービスが停止する可能性がある  
  欠陥のある <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> インターフェイスの実装で <xref:System.IdentityModel.Policy.IAuthorizationPolicy> メソッドを呼び出すと、サービスが停止する可能性があります。  
@@ -61,7 +61,7 @@ ms.locfileid: "54516162"
   
  これを防ぐに参照をより正確な検索条件を使用して使用する正確な証明書、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。 たとえば、<xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> オプションを使用し、一意の拇印 (ハッシュ) により証明書を指定します。  
   
- 自動登録機能の詳細については、次を参照してください。 [Certificate Autoenrollment in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166)します。  
+ 自動登録機能の詳細については、[Certificate Autoenrollment in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=95166)を参照してください。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>複数の代替サブジェクト名の最後が承認に使用される  
  まれなケースとして X.509 証明書に複数の代替サブジェクト名が含まれる場合、その代替サブジェクト名を使用して承認を行うと、承認は失敗する場合があります。  

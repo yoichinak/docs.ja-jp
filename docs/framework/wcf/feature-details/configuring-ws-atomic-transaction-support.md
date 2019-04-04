@@ -21,11 +21,11 @@ ms.locfileid: "54592433"
   
  コマンド ライン ウィンドウは、Windows SDK のインストール場所の "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" で使用できます。  
   
- コマンド ライン ツールの詳細については、次を参照してください。 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)します。  
+ コマンド ライン ツールの詳細については、[WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)を参照してください。  
   
  実行している場合[!INCLUDE[wxp](../../../../includes/wxp-md.md)]または[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]に移動して、MMC スナップインにアクセスできる**コントロール パネル]、[管理ツール]、[コンポーネント サービス**右クリックし、**マイ コンピューター**と選択**プロパティ**します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。Windows Vista を実行している場合または[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、MMC スナップインをクリックして参照して、**開始**ボタン、および入力`dcomcnfg.exe`で、**検索**ボックス。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。  
   
- スナップインの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成 MMC スナップインで](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)します。  
+ スナップインの詳細については、、 [WS-AtomicTransaction 構成 MMC スナップインで](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)を参照してください。  
   
  ツールのユーザー インターフェイスを有効にするには、WsatUI.dll ファイルを登録しておく必要があります。このファイルは、次のパスにあります。  
   

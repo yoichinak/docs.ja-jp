@@ -10,9 +10,9 @@ ms.lasthandoff: 02/08/2019
 ms.locfileid: "55904644"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities クエリの標準クエリ演算子
-クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドのほとんどの操作のシーケンス。シーケンスを実装する型を持つオブジェクトをこのコンテキストで、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等のクエリ式の句がある標準クエリ演算子の一覧は、次を参照してください。[標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))します。  
+クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドのほとんどの操作のシーケンス。シーケンスを実装する型を持つオブジェクトをこのコンテキストで、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等のクエリ式の句がある標準クエリ演算子の一覧は、[標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))を参照してください。  
   
- 標準クエリ演算子のすべてが [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでサポートされるわけではありません。 詳細については、次を参照してください。[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)します。 このトピックでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] に固有の標準クエリ演算子について説明します。 既知の問題の詳細については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[既知の問題とエンティティを LINQ での考慮事項](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)します。  
+ 標準クエリ演算子のすべてが [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでサポートされるわけではありません。 詳細については、[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)を参照してください。 このトピックでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] に固有の標準クエリ演算子について説明します。 既知の問題の詳細については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[既知の問題とエンティティを LINQ での考慮事項](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)します。  
   
 ## <a name="projection-and-filtering-methods"></a>投影およびフィルター処理メソッド  
  *プロジェクション*目的のフォームに結果セットの要素の変換を参照します。 たとえば、結果セットの各オブジェクトから必要なプロパティのサブセットを投影したり、特定のプロパティを投影してそのプロパティで数学演算を実行したり、結果セットの全オブジェクトを投影したりすることが可能です。 投影メソッドは、`Select` と `SelectMany` です。  
@@ -67,7 +67,7 @@ ms.locfileid: "55904644"
 |`Sum`|null を返します。|null を返します。|シーケンス内の null 以外の値の合計を返します。|数値のシーケンスの合計を計算します。|  
   
 ## <a name="type-methods"></a>型メソッド  
- Entity Framework のコンテキストでの型変換とテストを処理する 2 つの LINQ メソッド両方がサポートされます。 つまり、唯一サポートされている型は、適切な Entity Framework の型にマップする型であります。 これらの型の一覧は、次を参照してください。[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)します。 型メソッドは、`Convert` と `OfType` です。  
+ Entity Framework のコンテキストでの型変換とテストを処理する 2 つの LINQ メソッド両方がサポートされます。 つまり、唯一サポートされている型は、適切な Entity Framework の型にマップする型であります。 これらの型の一覧は、[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)を参照してください。 型メソッドは、`Convert` と `OfType` です。  
   
  エンティティ型では、`OfType` がサポートされます。 概念モデル プリミティブ型では、`Convert` がサポートされます。  C# の `is` および `as` メソッドもサポートされます。  
   

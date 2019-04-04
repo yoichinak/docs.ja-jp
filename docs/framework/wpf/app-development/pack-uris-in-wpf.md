@@ -413,7 +413,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
   
  [!code-xaml[ImageSample#ImagePackURIContent](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageSample/CS/HomePage.xaml#imagepackuricontent)]  
   
- メディア コンテンツの操作方法の詳細については、次を参照してください。[グラフィックスとマルチ メディア](../graphics-multimedia/index.md)します。  
+ メディア コンテンツの操作方法の詳細については、[グラフィックスとマルチ メディア](../graphics-multimedia/index.md)を参照してください。  
   
 <a name="Loading_a_Resource_Dictionary_from_the_Site_of_Origin"></a>   
 #### <a name="loading-a-resource-dictionary-from-the-site-of-origin"></a>起点サイトからのリソース ディクショナリの読み込み  

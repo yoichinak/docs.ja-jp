@@ -68,7 +68,7 @@ Dim totals() As Single = New Single(8) {}
 -   変数、定数、およびフィールド  
   
 ## <a name="working-with-the-object-data-type"></a>オブジェクトのデータ型の操作  
- 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データそのものではない、データへのポインターを保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、次を参照してください。 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
+ 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データそのものではない、データへのポインターを保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)を参照してください。  
   
  かどうかを見つけることができます、`Object`に渡すことによって変数が参照型または値型として機能する、<xref:Microsoft.VisualBasic.Information.IsReference%2A>メソッドで、<xref:Microsoft.VisualBasic.Information>のクラス、<xref:Microsoft.VisualBasic?displayProperty=nameWithType>名前空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返します`True`場合のコンテンツ、`Object`変数は参照型を表します。  
   

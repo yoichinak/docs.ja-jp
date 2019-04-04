@@ -475,7 +475,7 @@ ms.locfileid: "58466219"
   
  ただし、これは、外からインターネットまたはローカル イントラネット ゾーンを使用して、起動されるアプリケーションに付与された権限のセット[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]します。 その結果、ユーザーが表示されます、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]セキュリティの警告と、アプリケーションの完全な信頼に設定するアクセス許可を昇格する必要があります。  
   
- さらに、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]既定でウィンドウまたはダイアログ ボックスを表示することはできません。 スタンドアロン アプリケーションのセキュリティに関する考慮事項については、次を参照してください。 [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../wpf-security-strategy-platform-security.md)します。  
+ さらに、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]既定でウィンドウまたはダイアログ ボックスを表示することはできません。 スタンドアロン アプリケーションのセキュリティに関する考慮事項については、[WPF のセキュリティ方針 - プラットフォーム セキュリティ](../wpf-security-strategy-platform-security.md)を参照してください。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>その他の種類のウィンドウ  

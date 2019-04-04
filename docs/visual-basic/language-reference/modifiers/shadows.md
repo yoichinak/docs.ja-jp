@@ -24,7 +24,7 @@ ms.locfileid: "58834141"
 ## <a name="remarks"></a>Remarks  
  シャドウの主な目的は、(あるとも呼ばれます*名前による隠ぺい*)、クラスのメンバーの定義を維持しています。 基底クラスには、既に定義されている 1 つとして同じ名前の要素を作成する変更を行うこともできます。 このような場合、`Shadows`するメンバーに解決するのには、クラスを通じて参照修飾子強制的に基本クラスの新しい要素の代わりに定義されました。  
   
- シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
+ シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   

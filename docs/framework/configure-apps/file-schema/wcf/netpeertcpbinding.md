@@ -73,7 +73,7 @@ ms.locfileid: "55759172"
  このバインディングは、TCP を介したピア トランスポートを使用するピア ツー ピア アプリケーションまたはマルチパーティ アプリケーションの作成をサポートします。 各ピア ノードは、この種類のバイディングを使用して定義された複数のピア チャネルをホストできます。  
   
 ## <a name="example"></a>例  
- 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、次を参照してください。[ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))します。  
+ 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、[ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))を参照してください。  
   
 ```xml  
 <configuration>

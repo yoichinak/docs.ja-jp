@@ -13,7 +13,7 @@ ms.locfileid: "58545703"
 LINQ to SQL クエリは、Microsoft SQL Server で実行される前に Transact-SQL に変換されるため、 LINQ to SQL は、SQL Server が基本データ型に対してサポートするのと同じ組み込み機能の多くをサポートします。  
   
 ## <a name="casting"></a>キャスト  
- SQL Server 内に同様の有効な変換が存在する場合は、変換元の CLR 型から変換先の CLR 型への暗黙的または明示的なキャストが有効になります。 CLR キャストの詳細については、次を参照してください。 [CType Function](~/docs/visual-basic/language-reference/functions/ctype-function.md) (Visual Basic) と[として](~/docs/csharp/language-reference/keywords/as.md)します。 変換後、CLR 式に対して実行される操作の動作は、変換先の型に通常割り当てられる他の CLR 式の動作と一致するように、キャストによって変更されます。 継承の割り当てのコンテキストにおいてもキャストは変換可能です。 より厳密なエンティティ サブタイプにオブジェクトを変換して、そのサブタイプに固有のデータへのアクセスを可能にすることができます。  
+ SQL Server 内に同様の有効な変換が存在する場合は、変換元の CLR 型から変換先の CLR 型への暗黙的または明示的なキャストが有効になります。 CLR キャストの詳細については、[CType Function](~/docs/visual-basic/language-reference/functions/ctype-function.md) (Visual Basic) と[として](~/docs/csharp/language-reference/keywords/as.md)を参照してください。 変換後、CLR 式に対して実行される操作の動作は、変換先の型に通常割り当てられる他の CLR 式の動作と一致するように、キャストによって変更されます。 継承の割り当てのコンテキストにおいてもキャストは変換可能です。 より厳密なエンティティ サブタイプにオブジェクトを変換して、そのサブタイプに固有のデータへのアクセスを可能にすることができます。  
   
 ## <a name="equality-operators"></a>等値演算子  
  LINQ to SQL は、LINQ to SQL クエリ内の基本データ型で次の等値演算子をサポートします。  

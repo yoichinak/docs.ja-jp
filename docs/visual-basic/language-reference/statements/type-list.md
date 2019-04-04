@@ -51,7 +51,7 @@ ms.locfileid: "58843631"
 ## <a name="remarks"></a>Remarks  
  すべて汎用のプログラミング要素には、少なくとも 1 つの型パラメーターを実行する必要があります。 型パラメーターは、特定の種類のプレース ホルダー (、*構築される要素*) クライアント コードは、ジェネリック型のインスタンスを作成するタイミングを指定します。 ジェネリック クラスを定義、構造体、インターフェイス、プロシージャを委任したりできます。  
   
- ジェネリック型を定義する場合の詳細については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。 型パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+ ジェネリック型を定義する場合の詳細については、[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)を参照してください。 型パラメーター名の詳細については、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   

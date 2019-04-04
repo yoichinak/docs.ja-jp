@@ -31,7 +31,7 @@ ms.locfileid: "58816883"
   
  場合、`Overridable`または`NotOverridable`修飾子が指定されていない、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドは、基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定値は`Overridable`。 それ以外は`NotOverridable`します。  
   
- 継承された要素を再定義するためにオーバーライドまたはシャドウできますが、2 つのアプローチの重要な違いがあります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
+ 継承された要素を再定義するためにオーバーライドまたはシャドウできますが、2 つのアプローチの重要な違いがあります。 詳細については、[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
   
  オーバーライド可能な要素として呼ば、*仮想*要素。 ということもありますが、オーバーライドできますが、する必要はありません、*具象*要素。  
   

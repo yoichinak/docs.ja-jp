@@ -12,7 +12,7 @@ ms.locfileid: "55254922"
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 サービスの ID をサービス プリンシパル名 (SPN) により指定します。  
   
- SPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ SPN を設定する方法についての詳細については、[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
  \<identity>  
 \<servicePrincipalName>  

@@ -71,7 +71,7 @@ ms.locfileid: "54663311"
  呼び出し元が Windows ユーザー アカウントにマップできる資格情報で認証される場合にのみ、WCF インフラストラクチャでは、呼び出し元を偽装できます。 サービスが Windows アカウントにマップできない資格情報を使用して認証を行うように構成されている場合には、サービス メソッドは実行されません。  
   
 > [!NOTE]
->  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、ステートフルな SCT が作成されると偽装が失敗し、 <xref:System.InvalidOperationException>になります。 詳細については、次を参照してください。[サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)します。  
+>  [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、ステートフルな SCT が作成されると偽装が失敗し、 <xref:System.InvalidOperationException>になります。 詳細については、[サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)を参照してください。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>サービス メソッドでの偽装:命令型のモデル  
  呼び出し元がサービス メソッドの全体ではなく、一部を偽装するだけで、その機能が実行される場合があります。 この場合、サービス メソッド内で呼び出し元の Windows ID を取得し、偽装を強制的に実行します。 これを行うには、 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> の <xref:System.ServiceModel.ServiceSecurityContext> プロパティを使用して <xref:System.Security.Principal.WindowsIdentity> クラスのインスタンスを返し、このインスタンスを使用する前に <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> メソッドを呼び出します。  

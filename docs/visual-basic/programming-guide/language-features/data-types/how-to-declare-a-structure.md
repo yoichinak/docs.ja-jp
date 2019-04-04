@@ -19,7 +19,7 @@ ms.locfileid: "58825098"
   
  構造体の宣言で構造体の要素を初期化することはできません。 構造型の変数を宣言するときに、要素に、変数を通じてアクセスすることにより値を割り当てます。  
   
- 構造体とクラス間の違いの詳細については、次を参照してください。[構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)します。  
+ 構造体とクラス間の違いの詳細については、[構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)を参照してください。  
   
  デモンストレーションを目的として、従業員の名前、電話の拡張機能と給与を追跡する必要がある状況を検討してください。 構造体を使用すると、1 つの変数でこれを行うことができます。  
   

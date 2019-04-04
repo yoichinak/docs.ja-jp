@@ -28,7 +28,7 @@ ms.locfileid: "57377297"
  このチュートリアルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラミングの基礎知識があることを前提としています。 基本的な事柄[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プログラミングを参照してください[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。 概要については[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プログラミングを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
   
 > [!NOTE]
->  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、次を参照してください。 [Win32 の相互運用性サンプルによるヒット テストの](https://go.microsoft.com/fwlink/?LinkID=159995)します。  
+>  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、[Win32 の相互運用性サンプルによるヒット テストの](https://go.microsoft.com/fwlink/?LinkID=159995)を参照してください。  
   
 <a name="creating_the_host_win32_window"></a>   
 ## <a name="creating-the-host-win32-window"></a>ホストの Win32 ウィンドウを作成する  
@@ -75,7 +75,7 @@ ms.locfileid: "57377297"
  [!code-csharp[VisualsHitTesting#104](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsHitTesting/CSharp/MyCircle.cs#104)]
  [!code-vb[VisualsHitTesting#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsHitTesting/VisualBasic/MyCircle.vb#104)]  
   
- ビジュアル オブジェクトに対するヒット テストの詳細については、次を参照してください。[ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)します。  
+ ビジュアル オブジェクトに対するヒット テストの詳細については、[ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Interop.HwndSource>

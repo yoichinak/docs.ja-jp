@@ -85,7 +85,7 @@ End Module
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>浮動小数点は誤差  
- 浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+ 浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
  `Mod`演算子は、*オーバー ロードされた*、つまり、クラスまたは構造体がその動作を再定義できます。 コードが適用される場合`Mod`クラスまたはそのようなオーバー ロードを含む構造体のインスタンスに再定義された動作を理解することを確認します。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

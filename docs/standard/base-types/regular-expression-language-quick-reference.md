@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836306"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410525"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
-<a name="top"></a> 正規表現とは、入力テキスト内で正規表現エンジンによる照合が試行されるパターンです。 パターンは、1 個以上の文字リテラル、演算子、または構成体で構成されます。  簡単な概要については、「[.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)」を参照してください。  
+ 正規表現とは、入力テキスト内で正規表現エンジンによる照合が試行されるパターンです。 パターンは、1 個以上の文字リテラル、演算子、または構成体で構成されます。  簡単な概要については、「[.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)」を参照してください。  
   
  このクイック リファレンスの各セクションでは、正規表現の定義に使用できる特定カテゴリの文字、演算子、および構成体を一覧表示します。  
-  
- [文字のエスケープ](#character_escapes)  
- [文字クラス](#character_classes)  
- [アンカー](#anchors)  
- [グループ化構成体](#grouping_constructs)  
- [量指定子](#quantifiers)  
- [前方参照構成体](#backreference_constructs)  
- [代替構成体](#alternation_constructs)  
- [置換](#substitutions)  
- [正規表現のオプション](#options)  
- [その他の構成体](#miscellaneous_constructs)  
   
  また、ダウンロードして印刷し、簡単に参照できるように、この情報を 2 種類の形式で提供します  
   
  [Word (.docx) 形式でダウンロード](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [PDF (.pdf) 形式でダウンロード](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>文字のエスケープ  
  正規表現内の円記号 (\\) は、直後の文字が特殊文字 (次の表を参照) であるか、文字どおりに解釈する必要があることを示します。 詳細については、「[文字のエスケープ](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)」を参照してください。  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>文字クラス  
  文字クラスは、文字セットのいずれかと一致します。 文字クラスに含まれる言語要素を次の表に示します。 詳細については、「 [文字クラス](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」を参照してください。  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>グループ化構成体  
  グループ化構成体は、正規表現の部分式を表し、通常は入力文字列の部分文字列をキャプチャします。 グループ化構成体に含まれる言語要素を次の表に示します。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」を参照してください。  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>量指定子  
  量指定子は、一致するために、入力文字列中に直前の要素 (文字、グループ、または文字クラス) がいくつ存在しなければならないかを指定します。 量指定子に含まれる言語要素を次の表に示します。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>前方参照構成体  
  前方参照を使用すると、以前に一致した部分式を、同じ正規表現内で引き続き識別できます。 .NET の正規表現でサポートされている前方参照構成体を、次の表に示します。 詳細については、「 [前方参照構成体](backreference-constructs-in-regular-expressions.md)」を参照してください。  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>代替構成体  
  代替構成体は、OR 一致を有効にするように正規表現を変更します。 これらの構成体に含まれる言語要素を次の表に示します。 詳細については、「 [代替構成体](alternation-constructs-in-regular-expressions.md)」を参照してください。  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>置換  
  置換は、置換パターンでサポートされる正規表現言語要素です。 詳細については、「 [置換](substitutions-in-regular-expressions.md)」を参照してください。 アトミック ゼロ幅アサーションであるメタ文字を次の表に示します。  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>正規表現のオプション  
  正規表現エンジンで正規表現パターンを解釈する方法を制御するオプションを指定できます。 これらのオプションの多くは、インラインで (正規表現パターンで) 指定することも、1 つ以上の <xref:System.Text.RegularExpressions.RegexOptions> 定数として指定することもできます。 このクイック リファレンスでは、インライン オプションのみを示しています。 インライン オプションと <xref:System.Text.RegularExpressions.RegexOptions> オプションの詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836306"
   
  [ページのトップへ](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>その他の構成体  
  その他の構成体は、正規表現パターンを変更するか、それに関する情報を指定します。 次の表に .NET でサポートされているその他の構成体を示します。 詳細については、「 [その他の構成体](miscellaneous-constructs-in-regular-expressions.md)」を参照してください。  
   

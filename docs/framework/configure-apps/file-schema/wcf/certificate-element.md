@@ -53,7 +53,7 @@ ms.locfileid: "55675388"
 ## <a name="remarks"></a>Remarks  
  この構成要素には、ピア メッシュ内の近隣ノードを認証するときに使用される X509Certificate2 インスタンスが格納されます。  
   
- ピア ツー ピア プログラミングの詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
+ ピア ツー ピア プログラミングの詳細については、[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードは、ピアツーピア シナリオで使用される証明書の検索方法を指定します。  

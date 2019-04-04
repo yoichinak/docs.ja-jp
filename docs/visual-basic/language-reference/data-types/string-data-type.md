@@ -66,7 +66,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
  別のコンポーネントによって作成される文字列は、先頭または末尾のスペースで埋められます可能性があります。 このような文字列を受信する場合は使用できます、 <xref:Microsoft.VisualBasic.Strings.Trim%2A>、 <xref:Microsoft.VisualBasic.Strings.LTrim%2A>、および<xref:Microsoft.VisualBasic.Strings.RTrim%2A>これらのスペースを削除する関数。  
   
- 文字列操作の詳細については、次を参照してください。[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)します。  
+ 文字列操作の詳細については、[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)を参照してください。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   

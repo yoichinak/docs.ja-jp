@@ -35,7 +35,7 @@ ms.locfileid: "58837729"
  共通言語ランタイム (CLR) がスローされます、<xref:System.OutOfMemoryException>エラーの新しいインスタンスを作成する十分なメモリがある場合。  
   
 > [!NOTE]
->  `New`キーワードが指定された型が、アクセス可能なパラメーターなしのコンス トラクターを公開する必要がありますを指定する型パラメーター リストで使用もします。 型パラメーターや制約の詳細については、次を参照してください。[型リスト](../../../visual-basic/language-reference/statements/type-list.md)します。  
+>  `New`キーワードが指定された型が、アクセス可能なパラメーターなしのコンス トラクターを公開する必要がありますを指定する型パラメーター リストで使用もします。 型パラメーターや制約の詳細については、[型リスト](../../../visual-basic/language-reference/statements/type-list.md)を参照してください。  
   
  クラスのコンス トラクターのプロシージャを作成するには、設定の名前、`Sub`する手順、`New`キーワード。 詳細については、次を参照してください。[オブジェクトの有効期間。オブジェクトの作成し、破棄方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)します。  
   

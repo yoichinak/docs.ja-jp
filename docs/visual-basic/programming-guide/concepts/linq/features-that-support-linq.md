@@ -22,12 +22,12 @@ ms.locfileid: "58814498"
   
  [!code-vb[VbLINQVbFeatures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#1)]  
   
- 詳細については、次を参照してください。 [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)します。  
+ 詳細については、[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)を参照してください。  
   
 ## <a name="implicitly-typed-variables"></a>暗黙的に型指定された変数  
  明示的に宣言し、変数を初期化するときに、型を指定する、代わりに、型をコンパイラを有効にできます。 呼ばれる*ローカル型推論*します。  
   
- 型を明示的に指定した変数と同様、推論される型を持つ変数を厳密に入力します。 ローカル型推論は、メソッド本文内のローカル変数を定義する場合にのみ機能します。 詳細については、次を参照してください。 [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+ 型を明示的に指定した変数と同様、推論される型を持つ変数を厳密に入力します。 ローカル型推論は、メソッド本文内のローカル変数を定義する場合にのみ機能します。 詳細については、[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
  次の例では、ローカル型推論を示しています。 この例を使用するに設定する必要があります`Option Infer`に`On`します。  
   

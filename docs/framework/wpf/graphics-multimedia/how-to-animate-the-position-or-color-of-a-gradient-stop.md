@@ -37,7 +37,7 @@ ms.locfileid: "57368887"
   
  この例では、 <xref:System.Windows.Media.LinearGradientBrush>、プロセスは、アニメーション化するため同じ<xref:System.Windows.Media.GradientStop>内でオブジェクトを<xref:System.Windows.Media.RadialGradientBrush>します。  
   
- その他の例では、次を参照してください。、[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)します。  
+ その他の例では、、[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.GradientStop>

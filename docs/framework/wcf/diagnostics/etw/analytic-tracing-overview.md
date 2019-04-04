@@ -14,7 +14,7 @@ ms.locfileid: "44070122"
 # <a name="analytic-tracing-overview"></a>分析トレースの概要
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] の分析トレースは、Event Tracing for Windows (ETW) を基盤とするトレース機能のセットです。詳細度は低いのですが、パフォーマンスに優れています。 ETW は、カーネル レベルで実行され、トレース操作のオーバーヘッドを大幅に削減します。 ユーザー モードおよびカーネル モードのイベントを効率よくバッファーし、サービスの再起動を必要とすることなく、動的にログを有効化できます。 トレース データは、生成および受信されると、イベント ログから確認できます。  
   
- ETW の詳細については、次を参照してください。[デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=164781)します。  
+ ETW の詳細については、[デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=164781)を参照してください。  
   
  Windows のシステム、セキュリティ、およびアプリケーション イベント ログによるアプリケーションの分析のほかに、 [!INCLUDE[wv](../../../../../includes/wv-md.md)] および [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] では、最上位ノードの [アプリケーションとサービス ログ] の下にログが追加されています。 これらの新しいログは、システム全体に影響するグローバルなイベント (セキュリティ イベント ログで記録されるようなイベントなど) ではなく、特定のアプリケーションやコンポーネントのイベントを格納することを目的としています。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 統合し、WCF メッセージ ログでは、WCF トレース イベントのログ記録を関連付けていますと[!INCLUDE[wf1](../../../../../includes/wf1-md.md)]Applications and Services Logs にレコードを追跡します。  
   
@@ -41,10 +41,10 @@ ms.locfileid: "44070122"
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>動的構成  
- ETW のインフラストラクチャでは、標準の Windows ツールを使用して動的にトレースを有効化および構成できます。 詳細については、次を参照してください。[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)します。  
+ ETW のインフラストラクチャでは、標準の Windows ツールを使用して動的にトレースを有効化および構成できます。 詳細については、[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)を参照してください。  
   
 ### <a name="message-flow-tracing"></a>メッセージ フローのトレース  
- メッセージ フローのトレースを有効にする方法の詳細については、次を参照してください。 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)します。  
+ メッセージ フローのトレースを有効にする方法の詳細については、[Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)を参照してください。  
   
 ### <a name="keywords"></a>キーワード  
- キーワードは、トレース メッセージをフィルター処理するため、およびイベントを生成した [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] コンポーネントを定義するために使用されます。 詳細については、次を参照してください。[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)します。
+ キーワードは、トレース メッセージをフィルター処理するため、およびイベントを生成した [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] コンポーネントを定義するために使用されます。 詳細については、[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)を参照してください。

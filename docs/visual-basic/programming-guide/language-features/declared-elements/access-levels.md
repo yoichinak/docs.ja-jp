@@ -99,7 +99,7 @@ Private Protected internalValue As Integer
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)を参照してください。
 
 ## <a name="access-modifiers"></a>アクセス修飾子  
 

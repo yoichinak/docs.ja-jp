@@ -17,7 +17,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724012"
 ---
 # <a name="combobox-control-overview-windows-forms"></a>ComboBox コントロールの概要 (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.ComboBox>ドロップダウン コンボ ボックスにデータを表示するコントロールを使用します。 既定では、<xref:System.Windows.Forms.ComboBox>コントロールは、2 つの部分が表示されます。 最上位部分は、ユーザーがリスト項目を入力できるテキスト ボックス。 2 番目の部分は、元のユーザーが選択できる 1 つの項目の一覧を表示するリスト ボックスです。 コンボ ボックスの他のスタイルの詳細については、次を参照してください。 [Windows フォーム ComboBox Instead of リスト ボックスを使用するときに](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)します。  
+Windows フォーム<xref:System.Windows.Forms.ComboBox>ドロップダウン コンボ ボックスにデータを表示するコントロールを使用します。 既定では、<xref:System.Windows.Forms.ComboBox>コントロールは、2 つの部分が表示されます。 最上位部分は、ユーザーがリスト項目を入力できるテキスト ボックス。 2 番目の部分は、元のユーザーが選択できる 1 つの項目の一覧を表示するリスト ボックスです。 コンボ ボックスの他のスタイルの詳細については、[Windows フォーム ComboBox Instead of リスト ボックスを使用するときに](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)を参照してください。  
   
  <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>プロパティは、選択した項目に対応する整数値を返します。 プログラムで変更することで、選択した項目を変更することができます、<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>コード内の値は、対応する項目の一覧では、コンボ ボックスのテキスト ボックスの部分に表示されます。 項目が選択されていない場合、<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>値は-1 です。 一覧の最初の項目が選択されている場合、<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>値は 0 です。 <xref:System.Windows.Forms.ComboBox.SelectedItem%2A>プロパティは<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>文字列値では、通常は、アイテム自体が返されます。 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A>プロパティには、リスト内の項目の数との値が反映されます、<xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A>プロパティは、常に 1 つ以上の最大の可能な限り<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>ため、その値<xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>は 0 から始まります。  
   

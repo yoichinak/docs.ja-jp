@@ -25,7 +25,7 @@ Visual Studio のレイアウト機能を使用すると、フォーム上のコ
   
 -   選択、 **SnapToGrid** Windows フォーム デザイナーでレイアウト モード**オプション** ダイアログ ボックス。  
   
-     詳細については、次を参照してください。 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))です。 すべてのコントロールでは、グリッド上の点に沿った自体今すぐ揃えます。  
+     詳細については、[全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))を参照してください。 すべてのコントロールでは、グリッド上の点に沿った自体今すぐ揃えます。  
   
      グリッドの個々 のコントロールをスナップするには、それらの場所にロックできます。 ただしがロックされているときに移動したりできないサイズを変更します。 コントロールのロックの詳細については、次を参照してください。[方法。Windows フォームにコントロールをロック](how-to-lock-controls-to-windows-forms.md)します。  
   

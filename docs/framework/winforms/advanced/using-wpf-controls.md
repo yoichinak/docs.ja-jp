@@ -17,7 +17,7 @@ Windows フォーム ベースのアプリケーションでは、Windows Presen
   
  Windows フォーム デザイナーでは、Windows Presentation Foundation コントロールをホストするためのビジュアル デ ザイン環境を提供します。 WPF コントロールがという特殊な Windows フォーム コントロールによってホストされている<xref:System.Windows.Forms.Integration.ElementHost>します。 このコントロールは、フォームのレイアウトに参加して、キーボードとマウスのメッセージを受信する WPF コントロールを使用します。 デザイン時に配置することができます、<xref:System.Windows.Forms.Integration.ElementHost>任意の Windows フォーム コントロールと同様に制御します。  
   
- Windows フォーム コントロールは WPF ベースのアプリケーションで使用することもできます。 詳細については、次を参照してください。 [Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)します。  
+ Windows フォーム コントロールは WPF ベースのアプリケーションで使用することもできます。 詳細については、[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: コピーして、デザイン時に ElementHost コントロールを貼り付ける](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  

@@ -12,7 +12,7 @@ ms.locfileid: "56332346"
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON および XML 形式の AJAX サービスのサンプル
 このサンプルでは、Windows Communication Foundation (WCF) を使用して、JavaScript Object Notation (JSON) または XML データを返す Asynchronous JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル。  
   
- 他の AJAX サンプルとは異なり、このサンプルでは ASP.NET AJAX および <xref:System.Web.UI.ScriptManager> コントロールを使用しません。 いくつか追加の構成では、WCF AJAX サービスは、JavaScript を使用して HTML ページからアクセスでき、このシナリオを次に示します。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。 [AJAX のサンプル](ajax.md)します。
+ 他の AJAX サンプルとは異なり、このサンプルでは ASP.NET AJAX および <xref:System.Web.UI.ScriptManager> コントロールを使用しません。 いくつか追加の構成では、WCF AJAX サービスは、JavaScript を使用して HTML ページからアクセスでき、このシナリオを次に示します。 WCF を使用して ASP.NET AJAX での例は、[AJAX のサンプル](ajax.md)を参照してください。
   
  このサンプルでは、JSON と XML 間で操作の応答のタイプを切り替える方法を示します。 この機能は、サービスが ASP.NET AJAX または HTML/JavaScript クライアント ページでアクセスできるように構成されているかどうかにかかわらず使用できます。  
   
@@ -38,7 +38,7 @@ ASP.NET AJAX 以外のクライアントを使用するには、.svc ファイ�
 </system.serviceModel>  
 ```  
   
- 既定のデータ形式<xref:System.ServiceModel.Description.WebHttpEndpoint>の既定のデータ形式は XML で、<xref:System.ServiceModel.Description.WebScriptEndpoint>は JSON です。 詳細については、次を参照してください。 [ASP.NET を使用せずに作成する WCF AJAX サービス](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)します。  
+ 既定のデータ形式<xref:System.ServiceModel.Description.WebHttpEndpoint>の既定のデータ形式は XML で、<xref:System.ServiceModel.Description.WebScriptEndpoint>は JSON です。 詳細については、[ASP.NET を使用せずに作成する WCF AJAX サービス](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)を参照してください。  
   
  次のサンプルのサービスには、2 つの操作で標準の WCF サービスです。 どちらの操作でも <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> または <xref:System.ServiceModel.Web.WebGetAttribute> 属性に <xref:System.ServiceModel.Web.WebInvokeAttribute> の本文スタイルが必要です。この本文スタイルは、`webHttp` 動作に固有で、JSON/XML データ形式の切り替えに影響しません。  
 

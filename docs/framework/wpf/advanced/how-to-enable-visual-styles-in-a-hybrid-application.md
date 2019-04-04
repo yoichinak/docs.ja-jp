@@ -18,9 +18,9 @@ ms.locfileid: "57371919"
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法: ハイブリッド アプリケーションで視覚スタイルを有効にします。
 このトピックでは、有効にする方法を示しています。[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]で視覚スタイルを、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされているコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。  
   
- アプリケーションを呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドでは、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、アプリケーションの実行時に、コントロールに視覚スタイルは使用に自動的に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。 詳細については、次を参照してください。 [Visual スタイルを使用しているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)します。  
+ アプリケーションを呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドでは、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、アプリケーションの実行時に、コントロールに視覚スタイルは使用に自動的に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。 詳細については、[Visual スタイルを使用しているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)を参照してください。  
   
- このトピックで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にする](https://go.microsoft.com/fwlink/?LinkID=159986)します。  
+ このトピックで示すタスクの完全なコード一覧については、[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にする](https://go.microsoft.com/fwlink/?LinkID=159986)を参照してください。  
   
 ## <a name="enabling-windows-forms-visual-styles"></a>Windows フォーム視覚スタイルの有効化  
   

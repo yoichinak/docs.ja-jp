@@ -4,12 +4,12 @@ description: docker-compose.yml を使用して複数コンテナーのアプリ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: bde29f1c67e7c6636932f063f35bc500a27abcef
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712358"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463528"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -422,11 +422,11 @@ Docker-compose は、.env ファイル内の各行が \<変数\>=\<値\> の形�
 
 #### <a name="additional-resources"></a>その他の技術情報
 
-- **Docker Compose の概要** <br/>
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
+- **Docker Compose の概要** \
+    [https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-- **複数の Compose ファイル** <br/>
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
+- **複数の Compose ファイル** \
+    [https://docs.docker.com/compose/extends/\#multiple-compose-files](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>最適化された ASP.NET Core Docker イメージをビルドする
 
@@ -464,11 +464,11 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>その他の技術情報
 
-- **ASP.NET Core を使用して最適化された Docker イメージをビルドする** <br/>
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
+- **ASP.NET Core を使用して最適化された Docker イメージをビルドする** \
+    [https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-- **.NET Core アプリケーションの Docker イメージのビルド** <br/>
-    [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
+- **.NET Core アプリケーションの Docker イメージのビルド** \
+    [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 > [!div class="step-by-step"]
 > [前へ](data-driven-crud-microservice.md)

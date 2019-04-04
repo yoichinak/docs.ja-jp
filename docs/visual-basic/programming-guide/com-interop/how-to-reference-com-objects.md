@@ -18,7 +18,7 @@ ms.locfileid: "56980192"
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>方法: Visual Basic から COM の参照オブジェクト
 Visual basic でタイプ ライブラリがある COM オブジェクトへの参照を追加する必要があります相互運用機能アセンブリの作成、COM ライブラリの。 COM オブジェクトのメンバーへの参照は、相互運用機能アセンブリにルーティングされ、実際の COM オブジェクトに転送されます。 COM オブジェクトからの応答が相互運用機能アセンブリにルーティングされ、転送、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アプリケーション。  
   
- .NET アセンブリに COM オブジェクトの型情報を埋め込むことで、相互運用機能アセンブリを使用せず、COM オブジェクトを参照できます。 型情報を埋め込むには、次のように設定します。、`Embed Interop Types`プロパティを`True`の COM オブジェクトへの参照。 コマンド ライン コンパイラを使用してコンパイルする場合は、使用、 `/link` COM ライブラリを参照するにはオプションです。 詳細については、次を参照してください。 [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)します。  
+ .NET アセンブリに COM オブジェクトの型情報を埋め込むことで、相互運用機能アセンブリを使用せず、COM オブジェクトを参照できます。 型情報を埋め込むには、次のように設定します。、`Embed Interop Types`プロパティを`True`の COM オブジェクトへの参照。 コマンド ライン コンパイラを使用してコンパイルする場合は、使用、 `/link` COM ライブラリを参照するにはオプションです。 詳細については、[/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)を参照してください。  
   
  Visual Basic は、統合開発環境 (IDE) からタイプ ライブラリへの参照を追加すると、相互運用機能アセンブリを自動的に作成されます。 コマンドラインから作業をするときは、相互運用機能アセンブリを手動で作成するのに、Tlbimp ユーティリティを使用できます。  
   

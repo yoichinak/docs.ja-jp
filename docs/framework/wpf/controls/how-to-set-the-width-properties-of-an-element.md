@@ -31,7 +31,7 @@ ms.locfileid: "57376846"
  [!code-csharp[WidthMinWidthMaxWidth#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
  [!code-vb[WidthMinWidthMaxWidth#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
- サンプル全体については、次を参照してください。[幅のプロパティの比較サンプル](https://go.microsoft.com/fwlink/?LinkID=160050)します。  
+ サンプル全体については、[幅のプロパティの比較サンプル](https://go.microsoft.com/fwlink/?LinkID=160050)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.ListBox>

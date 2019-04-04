@@ -32,7 +32,7 @@ ms.locfileid: "58842162"
 ## <a name="remarks"></a>Remarks  
  コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。 ただし、出力ファイルにコードが再配置の最適化を行うので、`-optimize+`デバッグが困難です。  
   
- 生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。 詳細については、次を参照してください。 [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。  
+ 生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。 詳細については、[-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)を参照してください。  
   
  組み合わせることができます、`-optimize`と`-debug`オプション。  
   

@@ -12,7 +12,7 @@ ms.lasthandoff: 03/29/2019
 ms.locfileid: "58654550"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../controls/control-customization.md)します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、[コントロールのカスタマイズ](../controls/control-customization.md)を参照してください。  
   
  このチュートリアル手順について説明するアプリケーションをホストする、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合コントロールを Windows フォーム アプリケーションでデータ入力を実行します。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル。WPF で複合コントロールをフォーム、Windows をホストしている](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "58654550"
   
 -   Windows フォーム ホスト アプリケーションを実装する。  
   
- このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [Windows フォームのサンプルでの WPF 複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159996)します。  
+ このチュートリアルで示すタスクの完全なコード一覧については、[Windows フォームのサンプルでの WPF 複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159996)を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
 

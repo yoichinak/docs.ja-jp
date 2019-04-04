@@ -48,7 +48,7 @@ ms.locfileid: "54617006"
 ## <a name="activity-tracing-and-propagation"></a>アクティビティのトレースと伝達  
  ある`ActivityTracing`有効になっていると`propagateActivity`に設定`true`で、`system.ServiceModel`クライアントとサービスの両方のトレース ソースは、エンドポイント (内のアクティビティ間 (アクティビティ) の処理の論理単位内でのトレースの相関関係を提供アクティビティ転送の場合) と (アクティビティ ID の伝達) を通じて複数のエンドポイントにわたるアクティビティ間。  
   
- 3 つの機構 (アクティビティ、転送、および伝達) により、サービス トレース ビューア ツールを使用してエラーの根本原因をより迅速に見つけることができます。 詳細については、次を参照してください。[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)します。  
+ 3 つの機構 (アクティビティ、転送、および伝達) により、サービス トレース ビューア ツールを使用してエラーの根本原因をより迅速に見つけることができます。 詳細については、[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)を参照してください。  
   
  ユーザー定義のアクティビティ トレースを作成することにより、サービス モデルによって提供されるトレースを拡張することができます。 ユーザー定義のアクティビティ トレースによって、次の操作を可能にするトレース アクティビティを作成できます。  
   

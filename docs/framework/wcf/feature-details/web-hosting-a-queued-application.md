@@ -14,7 +14,7 @@ Windows プロセス アクティブ化サービス (WAS) では、ライセン�
   
  WAS にはメッセージ キュー (MSMQ) アクティブ化サービスが含まれており、アプリケーションで使用されるキューのいずれかに 1 つ以上のメッセージが置かれると、キュー アプリケーションがアクティブ化されます。 MSMQ アクティブ化サービスは、既定で自動的に開始される NT サービスです。  
   
- WAS とその利点の詳細については、次を参照してください。 [Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。 MSMQ の詳細については、次を参照してください。[キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)します。
+ WAS とその利点の詳細については、[Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)を参照してください。 MSMQ の詳細については、[キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)を参照してください。
   
 ## <a name="queue-addressing-in-was"></a>WAS でのキュー アドレス指定  
  WAS アプリケーションには URI (Uniform Resource Identifier) アドレスがあります。 アプリケーション アドレスは、ベース URI プレフィックスとアプリケーション固有の相対アドレス (パス) の 2 つの部分に分かれます。 この 2 つの部分を結合すると、アプリケーションの外部アドレスになります。 ベース URI プレフィックスは、サイトのバインドが構築され、"net.msmq://localhost"、"msmq.formatname://localhost"または"net.tcp://localhost"などのサイトの下のすべてのアプリケーションに使用します。 アプリケーション アドレスがアプリケーションに固有のパス フラグメントで構築し (など"/取得")"net.msmq://localhost/applicationone などです"アプリケーションの完全 URI、たとえばに到着するプレフィックス、ベース URI に追加します。  

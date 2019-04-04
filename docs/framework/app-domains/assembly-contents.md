@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649168"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675654"
 ---
 # <a name="assembly-contents"></a>アセンブリの内容
 一般に、静的アセンブリは次の 4 つの要素から構成されます。  
@@ -31,15 +31,13 @@ ms.locfileid: "54649168"
   
  アセンブリのこれらの要素は、いくつかの方法でグループ化できます。 1 つの方法として、次の図に示すように、すべての要素を 1 つの物理ファイルにまとめることができます。  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-シングルファイル アセンブリ  
+ ![MyAssembly.dll という名前のシングルファイル アセンブリを示す図。](./media/assembly-contents/single-file-assembly.gif)  
   
  別の方法として、1 つのアセンブリの要素を複数のファイルに分けることもできます。 この操作には、コンパイル済みコードのモジュール (.netmodule)、リソース (.bmp ファイルや .jpg ファイルなど)、アプリケーションで必要なその他のファイルなどを使用できます。 複数の言語で記述されたモジュールを組み合わせたり、使用頻度の低い型を必要なときにだけダウンロードされるモジュールに配置することでアプリケーションのダウンロードを最適化したりする場合は、マルチファイル アセンブリを作成します。  
   
  あるアプリケーションの開発において、特定のユーティリティ コードを独立したモジュールに配置し、サイズの大きいリソース ファイル (ここでは .bmp イメージ) を元のファイルに残しておく例を次の図に示します。 .NET Framework では、ファイルが参照される場合にだけそのファイルがダウンロードされます。参照頻度の低いコードをアプリケーションとは別のファイルに保存することで、コードのダウンロードが最適化されます。  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-マルチファイル アセンブリ  
+ ![マルチファイル アセンブリを示す図。](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  マルチファイル アセンブリを構成する各ファイルは、ファイル システムによって物理的にリンクされるわけではありません。 これらのファイルはアセンブリ マニフェストによってリンクされ、共通言語ランタイムがこれらのファイルをまとめて管理します。  

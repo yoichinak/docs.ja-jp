@@ -16,7 +16,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
   
  JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法については、次を参照してください。[方法。および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
   
- JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている種類の一覧は、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。  
+ JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている種類の一覧は、[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)を参照してください。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。  
   
 ## <a name="mapping-net-types-to-json-types"></a>.NET 型から JSON 型へのマッピング  
  シリアル化および逆シリアル化の手順でマップされる場合の .NET 型と JSON/JavaScript 型の対応表を次に示します。  
@@ -27,7 +27,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 |<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|  
 |<xref:System.Boolean>|ブール型|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>、 <xref:System.Guid>、 <xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。|  
+|<xref:System.TimeSpan>、 <xref:System.Guid>、 <xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)を参照してください。|  
 |<xref:System.Xml.XmlQualifiedName>|String|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|  
 |<xref:System.Array> 型の <xref:System.Byte>|数値の配列型|各数値は、1 バイトの値を表します。|  
 |<xref:System.DateTime>|DateTime 型または文字列型|このトピックの「日付/時刻と JSON」を参照してください。|  
@@ -40,7 +40,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 |任意の型の `Null` 値|Null|null 許容型もサポートされており、null 非許容型と同様に JSON にマップされます。|  
   
 ### <a name="enumerations-and-json"></a>列挙体と JSON  
- 列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データ コントラクトの処理方法の詳細については、次を参照してください。[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)します。  
+ 列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データ コントラクトの処理方法の詳細については、[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)を参照してください。  
   
 -   たとえば、`public enum Color {red, green, blue, yellow, pink}` の場合、`yellow` をシリアル化すると、文字列の "yellow" ではなく、数字の 3 が生成されます。  
   
@@ -101,7 +101,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
   
  インターフェイス型に逆シリアル化する場合、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、宣言された型がオブジェクトである場合と同様に逆シリアル化します。  
   
- 独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、ある操作がある場合、`Animal`のインスタンスを返します実際に値とそれを返す`Cat`(から派生した`Animal`)、かを適用する必要があります、<xref:System.Runtime.Serialization.KnownTypeAttribute>を、`Animal`型または<xref:System.ServiceModel.ServiceKnownTypeAttribute>に。操作を指定し、`Cat`でこれらの属性の型。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
+ 独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、ある操作がある場合、`Animal`のインスタンスを返します実際に値とそれを返す`Cat`(から派生した`Animal`)、かを適用する必要があります、<xref:System.Runtime.Serialization.KnownTypeAttribute>を、`Animal`型または<xref:System.ServiceModel.ServiceKnownTypeAttribute>に。操作を指定し、`Cat`でこれらの属性の型。 詳細については、[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)を参照してください。  
   
  ポリモーフィックなシリアル化のしくみの詳細、およびポリモーフィックなシリアル化を使用するときに留意する必要のある制限事項については、このトピックで後述する「高度な情報」を参照してください。  
   
@@ -159,7 +159,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  XmlNode 配列の先頭 (他の要素の前) にある空の名前空間の属性はサポートされません。  
   
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>XElement と DataSet を含む IXmlSerializable 型  
- <xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義は、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
+ <xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義は、[XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)を参照してください。  
   
  "コンテンツ" 型と "DataSet" 型は、前のセクションで説明した <xref:System.Array> の <xref:System.Xml.XmlNode> オブジェクトと同様にシリアル化されます。 これらの型は、その型のデータ コントラクトの名前と名前空間に対応する名前と名前空間を持つ要素にラップされます。  
   
@@ -258,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  ディクショナリ型をシリアル化した場合、"Key" メンバーと "Value" メンバーを含む JSON オブジェクトは、`alwaysEmitTypeInformation` 設定の影響を受けません。オブジェクトに型ヒントが含まれるのは、前述のコレクション ルールで必要とされる場合だけです。  
   
 ### <a name="valid-json-key-names"></a>JSON の有効なキー名  
- シリアライザーは、無効な XML 名のキー名を XML エンコードします。 たとえば、「123」の名前を持つデータ メンバーでエンコードされた名前がなど"\_x0031\_\_x0032\_\_x0033\_"「123」は無効な XML 要素名であるため (始まり、桁)。 XML 名が有効ではない一部の国際文字セットでも、同様の状況が発生する場合があります。 この JSON の処理での XML の影響の詳細については、次を参照してください。 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)します。  
+ シリアライザーは、無効な XML 名のキー名を XML エンコードします。 たとえば、「123」の名前を持つデータ メンバーでエンコードされた名前がなど"\_x0031\_\_x0032\_\_x0033\_"「123」は無効な XML 要素名であるため (始まり、桁)。 XML 名が有効ではない一部の国際文字セットでも、同様の状況が発生する場合があります。 この JSON の処理での XML の影響の詳細については、[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

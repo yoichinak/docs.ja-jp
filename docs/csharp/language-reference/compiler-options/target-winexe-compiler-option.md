@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666060"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411964"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# コンパイラ オプション)
 **-target:winexe** オプションを使用すると、実行可能な (EXE) Windows プログラムがコンパイラによって作成されます。  
@@ -24,8 +24,8 @@ ms.locfileid: "54666060"
 -target:winexe  
 ```  
   
-## <a name="remarks"></a>コメント  
- 実行可能ファイルは、.exe という拡張子で作成されます。 Windows プログラムは、.NET Framework ライブラリまたは Win32 API のユーザー インターフェイスを提供するプログラムです。  
+## <a name="remarks"></a>解説  
+ 実行可能ファイルは、.exe という拡張子で作成されます。 Windows プログラムは、.NET Framework ライブラリまたは Windows API のユーザー インターフェイスを提供するプログラムです。  
   
  コンソール アプリケーションを作成するには、[-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) を使用します。  
   

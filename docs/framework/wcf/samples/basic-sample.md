@@ -13,7 +13,7 @@ ms.locfileid: "58814576"
 このサンプルでは、サービスを探索可能にする方法と、探索可能なサービスの検索方法および呼び出し方法を示します。 このサンプルは、2 つのプロジェクト (サービスとクライアント) で構成されます。
 
 > [!NOTE]
->  このサンプルでは、探索をコードで実装しています。  構成で探索を実装するサンプルについては、次を参照してください。[構成](../../../../docs/framework/wcf/samples/configuration-sample.md)します。  
+>  このサンプルでは、探索をコードで実装しています。  構成で探索を実装するサンプルについては、[構成](../../../../docs/framework/wcf/samples/configuration-sample.md)を参照してください。  
   
 ## <a name="service"></a>サービス  
  これは簡単な電卓サービスの実装です。 探索関連のコードは `Main` にあります。ここでは、次のコードに示すように、 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> がサービス ホストに追加され、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> が追加されます。  
@@ -82,7 +82,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、次を参照してください。[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)します。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)を参照してください。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Visual Studio 2012 を使用して Basic.sln を開くし、サンプルをビルドします。  
   

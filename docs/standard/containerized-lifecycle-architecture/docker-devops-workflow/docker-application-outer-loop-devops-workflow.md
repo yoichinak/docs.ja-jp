@@ -138,7 +138,7 @@ Docker タスクを使用して、定義したサービスのイメージのセ�
 
 **図 5-5** Azure DevOps サービスを使用して Docker レジストリにカスタム イメージを発行する
 
-> [!情報] Azure Container Registry の詳細については、次を参照してください。<https://aka.ms/azurecontainerregistry>します。
+> [!情報] Azure Container Registry の詳細については、<https://aka.ms/azurecontainerregistry>を参照してください。
 
 ## <a name="step-4-cd-deploy"></a>手順 4: CD、展開
 

@@ -12,9 +12,9 @@ ms.locfileid: "58841299"
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic の XML リテラルの概要
 このセクションでは、Visual Basic で XML ツリーの作成に関する情報を提供します。  
   
- LINQ クエリの結果をコンテンツとして XML ツリーの使用方法の詳細については、次を参照してください。[関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)します。  
+ LINQ クエリの結果をコンテンツとして XML ツリーの使用方法の詳細については、[関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)を参照してください。  
   
- Visual Basic で XML リテラルの詳細については、次を参照してください。[概要の LINQ to Visual Basic における XML](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)します。  
+ Visual Basic で XML リテラルの詳細については、[概要の LINQ to Visual Basic における XML](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)を参照してください。  
   
 ## <a name="creating-xml-trees"></a>XML ツリーの作成  
  <xref:System.Xml.Linq.XElement> (この場合は `contacts`) を作成する方法を次の例に示します。  

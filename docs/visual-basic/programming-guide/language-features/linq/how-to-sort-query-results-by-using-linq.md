@@ -21,9 +21,9 @@ ms.locfileid: "58829162"
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してクエリ結果の並べ替え
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  
   
- 次の例は、SQL Server データベースに対してクエリを実行しを使用して複数のフィールドで結果を並べ替えるための新しいアプリケーションを作成する方法を示します、`Order By`句。 各フィールドの並べ替え順序の昇順または降順ことができます。 詳細については、次を参照してください。 [Order By 句](../../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
+ 次の例は、SQL Server データベースに対してクエリを実行しを使用して複数のフィールドで結果を並べ替えるための新しいアプリケーションを作成する方法を示します、`Order By`句。 各フィールドの並べ替え順序の昇順または降順ことができます。 詳細については、[Order By 句](../../../../visual-basic/language-reference/queries/order-by-clause.md)を参照してください。  
   
- このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+ このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがいない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

@@ -21,7 +21,7 @@ ms.locfileid: "58843566"
   
  アクセス、`Shared`インスタンス変数によるメンバーが難しく、コード、メンバーであるという事実を隠すことで理解する`Shared`します。 さらに、このようなアクセスが式の一部である場合、ように、他のアクションを実行するには`Function`共有メンバーのインスタンスを返すプロシージャでは、Visual Basic は、式とそれ以外の場合、その他のアクションをバイパスします。  
   
- 詳細と例では、次を参照してください。 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。  
+ 詳細と例では、[Shared](../../../visual-basic/language-reference/modifiers/shared.md)を参照してください。  
   
  既定では、このメッセージは警告です。 警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   

@@ -69,7 +69,7 @@ Sub Test()
 End Sub  
 ```  
   
- 例については、次を参照してください。 [(Visual Basic) のジェネリック コレクションに対するインターフェイスでの分散の使用](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)します。  
+ 例については、[(Visual Basic) のジェネリック コレクションに対するインターフェイスでの分散の使用](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)を参照してください。  
   
  ジェネリック インターフェイスでの分散がサポートされるのは参照型だけです。 値型は変性をサポートしていません。 たとえば、整数は値型によって表されるため、`IEnumerable(Of Integer)` を暗黙的に `IEnumerable(Of Object)` に変換することはできません。  
   

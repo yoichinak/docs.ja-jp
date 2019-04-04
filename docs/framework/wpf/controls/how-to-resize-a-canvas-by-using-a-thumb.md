@@ -44,7 +44,7 @@ ms.locfileid: "57351830"
  [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
  [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
- サンプル全体については、次を参照してください。 [Thumb ドラッグ機能のサンプル](https://go.microsoft.com/fwlink/?LinkID=160042)します。  
+ サンプル全体については、[Thumb ドラッグ機能のサンプル](https://go.microsoft.com/fwlink/?LinkID=160042)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Primitives.Thumb>

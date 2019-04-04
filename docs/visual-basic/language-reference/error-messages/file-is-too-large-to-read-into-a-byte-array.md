@@ -14,7 +14,7 @@ ms.locfileid: "58831515"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   使用して、<xref:System.IO.StreamReader>ファイルを読み取れません。 詳細については、次を参照してください。 [.NET Framework ファイル I/O の基礎と、ファイル システム (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)します。  
+-   使用して、<xref:System.IO.StreamReader>ファイルを読み取れません。 詳細については、[.NET Framework ファイル I/O の基礎と、ファイル システム (Visual Basic)](../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

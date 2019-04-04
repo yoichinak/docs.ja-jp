@@ -25,7 +25,7 @@ ms.locfileid: "58834622"
 ## <a name="culture-sensitive-functions"></a>カルチャに依存する関数  
  すべての Visual Basic の文字列変換関数 (を除き、`Str`と`Val`関数)、アプリケーションのカルチャ情報を使用して変換および比較がアプリケーションのカルチャに適切であるかどうかを確認ユーザー。  
   
- キーが正常に文字列変換関数を使用して別のカルチャ設定を持つコンピューターで実行されるアプリケーションでどの関数を使用して、特定のカルチャ設定と現在のカルチャ設定を使用するを理解することです。 アプリケーションのカルチャの設定は、既定では、設定から継承される、カルチャ、オペレーティング システムのことを確認します。 詳細については、次を参照してください。 <xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>、 <xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、 <xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Conversion.Hex%2A>、 <xref:Microsoft.VisualBasic.Conversion.Oct%2A>、および[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
+ キーが正常に文字列変換関数を使用して別のカルチャ設定を持つコンピューターで実行されるアプリケーションでどの関数を使用して、特定のカルチャ設定と現在のカルチャ設定を使用するを理解することです。 アプリケーションのカルチャの設定は、既定では、設定から継承される、カルチャ、オペレーティング システムのことを確認します。 詳細については、<xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>、 <xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、 <xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Conversion.Hex%2A>、 <xref:Microsoft.VisualBasic.Conversion.Oct%2A>、および[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)を参照してください。  
   
  `Str` (数値を文字列に変換) と`Val`文字列や数値の間で変換するときに (文字列数値からに変換) 関数がアプリケーションのカルチャ情報を使用しないでください。 代わりに、有効な 10 進区切り記号としてピリオド (.) のみを認識できるとします。 これらの関数のカルチャに対応して類似のものは次のとおりです。  
   

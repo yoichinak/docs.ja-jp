@@ -69,7 +69,7 @@ Visual Basic コンパイラを使用して*型推論*なしで宣言された�
   
  ファイルの `Option Infer` に設定した値が IDE またはコマンド ラインに設定した値と競合した場合は、ファイルの値が優先されます。  
   
- 詳細については、次を参照してください。 [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
+ 詳細については、[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)と[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -26,7 +26,7 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>指定項目  
  `xmlNamespacePrefix`  
- 省略可能です。 XML 名前空間プレフィックスを識別する文字列。 指定した場合、この文字列は有効な XML 識別子である必要があります。 詳細については、次を参照してください。[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)します。 プレフィックスが指定されていない場合は、既定の名前空間が返されます。 既定の名前空間が指定されていない場合は、空の名前空間が返されます。  
+ 省略可能です。 XML 名前空間プレフィックスを識別する文字列。 指定した場合、この文字列は有効な XML 識別子である必要があります。 詳細については、[宣言されている XML 要素の名前と属性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)を参照してください。 プレフィックスが指定されていない場合は、既定の名前空間が返されます。 既定の名前空間が指定されていない場合は、空の名前空間が返されます。  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XNamespace> XML 名前空間のプレフィックスに対応するオブジェクト。  

@@ -77,7 +77,7 @@ k = CInt(q)
   
  `CType` *インライン関数*多くの場合、呼び出す関数を生成せず、変換は、コンパイル済みコードを意味します。 これにより、パフォーマンスが向上します。  
   
- 比較について`CType`他の型変換キーワードで、次を参照してください。 [DirectCast 演算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)します。  
+ 比較について`CType`他の型変換キーワードで、[DirectCast 演算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)を参照してください。  
   
 ### <a name="elementary-types"></a>基本型  
  次の例は、`CType` の使い方を示しています。  
@@ -114,7 +114,7 @@ If TypeOf obArray Is classV()
 End If  
 ```  
   
- 詳細と例では、次を参照してください。[配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)します。  
+ 詳細と例では、[配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)を参照してください。  
   
 ### <a name="types-defining-ctype"></a>CType を定義する型  
  定義できます`CType`でクラスまたは定義した構造体。 これにより、クラスまたは構造体の型との間の値を変換することができます。 詳細と例では、次を参照してください。[方法。変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  

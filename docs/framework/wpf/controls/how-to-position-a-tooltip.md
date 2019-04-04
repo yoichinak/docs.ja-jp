@@ -33,7 +33,7 @@ ms.locfileid: "58840498"
   
  使用して、ツールヒントの内容を定義するかどうか、<xref:System.Windows.Controls.ToolTip>オブジェクトのいずれかのクラス プロパティを使用することができます。 ただし、、<xref:System.Windows.Controls.ToolTipService>プロパティも優先されます。 使用して、<xref:System.Windows.Controls.ToolTipService>プロパティとして定義されていないヒントを<xref:System.Windows.Controls.ToolTip>オブジェクト。  
   
- 次の図は、これらのプロパティを使用して、tooltip を配置する方法を示します。 ですが、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のこれらの図の例で定義されているプロパティを設定する方法を示して、<xref:System.Windows.Controls.ToolTip>クラスの対応するプロパティ、<xref:System.Windows.Controls.ToolTipService>クラスと同じレイアウト規則に従います。 配置プロパティの値の詳細については、次を参照してください。[ポップアップの配置動作](popup-placement-behavior.md)します。  
+ 次の図は、これらのプロパティを使用して、tooltip を配置する方法を示します。 ですが、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のこれらの図の例で定義されているプロパティを設定する方法を示して、<xref:System.Windows.Controls.ToolTip>クラスの対応するプロパティ、<xref:System.Windows.Controls.ToolTipService>クラスと同じレイアウト規則に従います。 配置プロパティの値の詳細については、[ポップアップの配置動作](popup-placement-behavior.md)を参照してください。  
  
  次の図は、配置プロパティを使用して、ツールヒントの配置を示しています。  
   

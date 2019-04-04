@@ -41,4 +41,4 @@ ms.locfileid: "57377938"
      [!code-csharp[StringLocalizationSample#GetLocalizedResourceFromCode](~/samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml.cs#getlocalizedresourcefromcode)]
      [!code-vb[StringLocalizationSample#GetLocalizedResourceFromCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StringLocalizationSample/VisualBasic/MainWindow.xaml.vb#getlocalizedresourcefromcode)]  
   
-5.  アプリケーションをローカライズします。 詳細については、次を参照してください。[アプリケーションをローカライズする](how-to-localize-an-application.md)します。
+5.  アプリケーションをローカライズします。 詳細については、[アプリケーションをローカライズする](how-to-localize-an-application.md)を参照してください。

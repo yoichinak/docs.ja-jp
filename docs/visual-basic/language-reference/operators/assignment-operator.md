@@ -35,7 +35,7 @@ variableorproperty = value
  等号の左側にある要素 (`=`) は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。 `=`演算子は、変数に、右側の値またはプロパティの左側に代入します。  
   
 > [!NOTE]
->  `=`演算子、比較演算子としても使用します。 詳細については、次を参照してください。[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)します。  
+>  `=`演算子、比較演算子としても使用します。 詳細については、[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
  `=`関係比較演算子としてのみ、代入演算子としてではなく、演算子がオーバー ロードできます。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

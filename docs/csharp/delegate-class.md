@@ -3,12 +3,12 @@ title: System.Delegate と `delegate` キーワード
 description: デリゲートをサポートする .NET Framework のクラスと、それが ’delegate’ キーワードにどのように対応付けられるかについて取り上げます。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126176"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465777"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate と `delegate` キーワード
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 メソッド名が、かっこなしで使用されることに注意してください。 メソッドを引数として使用すると、コンパイラは、メソッドの参照を、デリゲート呼び出しターゲットとして使用できる参照に変換し、そのメソッドを呼び出しターゲットとしてアタッチします。
 
-'Comparison<string>' 型の変数を宣言し、割り当てを行うことで、明示的にそうすることもできました。
+`Comparison<string>` 型の変数を宣言し、割り当てを行うことで、明示的にそうすることもできました。
 
 ```csharp
 Comparison<string> comparer = CompareLength;

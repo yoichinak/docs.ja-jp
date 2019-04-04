@@ -59,7 +59,7 @@ WCF SOAP リライアブル メッセージ数や、メッセージング エン
 
   - `NetTcpBinding` : 双方向、要求/応答、または一方向のコントラクトを公開します。
 
-HTTPS などのカスタム バインドを作成して、他のバインディングで信頼できるセッションを使用 (問題の詳細については、次を参照してください。<a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>) または名前付きパイプ バインドします。
+HTTPS などのカスタム バインドを作成して、他のバインディングで信頼できるセッションを使用 (問題の詳細については、<a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>) または名前付きパイプ バインドを参照してください。
 
 基になるチャネルの種類の異なるで信頼できるセッションを積み重ねることができ、結果として得られる、信頼できるセッション チャネルの形状が変化します。 クライアントとサーバーの両方でサポートされている信頼できるセッション チャネルの種類に使用される基になるチャネルの種類によって異なります。 次の表では、基になるチャネルの種類ごとに、クライアントでサポートされるセッション チャネルの種類を示します。
 
@@ -107,7 +107,7 @@ WCF の信頼できるセッションを使用するには、信頼できるセ�
 
 カスタム バインドを作成する方法の例は、次を参照してください。[方法。HTTPS で信頼できるセッションをカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
 
-信頼できるセッションをサポートする WCF バインドの詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。
+信頼できるセッションをサポートする WCF バインドの詳細については、[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。
 
 ## <a name="when-to-use-reliable-sessions"></a>信頼できるセッションを使用する場合
 

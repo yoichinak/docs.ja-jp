@@ -29,7 +29,7 @@ ms.locfileid: "58826016"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>特定の文字の文字列式での文字と一致するには  
   
--   特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、次を参照してください。 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
+-   特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、[Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)を参照してください。  
   
      次の例をテストするかどうか`myString`1 文字だけで構成されます`H`します。  
   

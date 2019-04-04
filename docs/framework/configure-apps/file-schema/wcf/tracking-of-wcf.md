@@ -12,7 +12,7 @@ ms.locfileid: "55268250"
 # <a name="tracking-of-wcf"></a>\<追跡 > の WCF
 ワークフロー サービスの追跡設定を定義する構成セクションを表します。  
   
- ワークフロー追跡とその構成の詳細については、次を参照してください。[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)します。  
+ ワークフロー追跡とその構成の詳細については、[ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)と[ワークフローの追跡を構成する](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)を参照してください。  
   
  \<system.serviceModel>  
 \<追跡 >  

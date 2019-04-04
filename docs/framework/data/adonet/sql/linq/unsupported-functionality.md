@@ -24,7 +24,7 @@ LINQ to SQL では、次の SQL 機能は、既存の共通言語ランタイム
   
 -   `ROUND`  
   
-     LINQ to SQL では、`ROUND` のサポートが制限されています。 詳細については、次を参照してください。 [System.Math メソッド](system-math-methods.md)します。  
+     LINQ to SQL では、`ROUND` のサポートが制限されています。 詳細については、[System.Math メソッド](system-math-methods.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [データ型と関数](data-types-and-functions.md)

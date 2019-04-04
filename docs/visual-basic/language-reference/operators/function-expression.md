@@ -35,7 +35,7 @@ End Function
 |`statements`|必須。 使用して値を返すステートメントの一覧、`Return`ステートメント。 (を参照してください[Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md))。返される値の型は、関数の戻り値の型です。|  
   
 ## <a name="remarks"></a>Remarks  
- A*ラムダ式*を計算し、値を返します名のない関数です。 ラムダ式を使用することができますを引数としてを除く、デリゲート型を使用する任意の場所`RemoveHandler`します。 デリゲート、およびデリゲートとラムダ式の使用に関する詳細については、次を参照してください。 [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)と[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。  
+ A*ラムダ式*を計算し、値を返します名のない関数です。 ラムダ式を使用することができますを引数としてを除く、デリゲート型を使用する任意の場所`RemoveHandler`します。 デリゲート、およびデリゲートとラムダ式の使用に関する詳細については、[Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)と[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)を参照してください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  ラムダ式の構文では、標準的な関数に似ています。 相違点は次のとおりです。  
@@ -67,7 +67,7 @@ End Function
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>例  
- 引数をインクリメントし、値を返すラムダ式の例を次に示します。 この例では、単一行および複数行のラムダ式の両方の構文、関数を示します。 例については、次を参照してください。[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
+ 引数をインクリメントし、値を返すラムダ式の例を次に示します。 この例では、単一行および複数行のラムダ式の両方の構文、関数を示します。 例については、[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)を参照してください。  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- クエリ メソッドの詳細については、次を参照してください。[クエリ](../../../visual-basic/language-reference/queries/index.md)します。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+ クエリ メソッドの詳細については、[クエリ](../../../visual-basic/language-reference/queries/index.md)を参照してください。 標準クエリ演算子の詳細については、[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -18,7 +18,7 @@ ms.locfileid: "58826029"
   
  ![ワークフロー サービス ホストの概要を示す図。](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
- この図では、<xref:System.ServiceModel.WorkflowServiceHost> は .xamlx ファイルからワークフロー サービス定義を読み込み、構成ファイルから構成情報を読み込みます。 また、追跡プロファイルから追跡構成を読み込みます。 <xref:System.ServiceModel.WorkflowServiceHost> によって、ワークフロー インスタンスへの制御操作の送信を可能にするワークフロー コントロール エンドポイントが公開されます。  詳細については、次を参照してください。[ワークフロー コントロール エンドポイントのサンプル](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)します。  
+ この図では、<xref:System.ServiceModel.WorkflowServiceHost> は .xamlx ファイルからワークフロー サービス定義を読み込み、構成ファイルから構成情報を読み込みます。 また、追跡プロファイルから追跡構成を読み込みます。 <xref:System.ServiceModel.WorkflowServiceHost> によって、ワークフロー インスタンスへの制御操作の送信を可能にするワークフロー コントロール エンドポイントが公開されます。  詳細については、[ワークフロー コントロール エンドポイントのサンプル](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)を参照してください。  
   
  <xref:System.ServiceModel.WorkflowServiceHost> によって、受信アプリケーション メッセージをリッスンするアプリケーション エンドポイントも公開されます。 受信メッセージが到着すると、該当するワークフロー サービス インスタンスに送られます (現在読み込み中の場合)。 必要に応じて、新しいワークフロー インスタンスが作成されます。 既存のインスタンスが永続化されている場合は、永続ストアから読み込まれます。  
   

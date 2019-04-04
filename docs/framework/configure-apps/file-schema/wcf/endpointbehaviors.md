@@ -10,7 +10,7 @@ ms.lasthandoff: 01/30/2019
 ms.locfileid: "55272783"
 ---
 # <a name="endpointbehaviors"></a>\<endpointBehaviors>
-この構成セクションは、特定のエンドポイントに対して定義されたすべての動作を表します。 クライアント動作の構成の詳細については、次を参照してください。[クライアントの実行時の動作を指定する](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)と[クライアントの動作を構成する](../../../../../docs/framework/wcf/configuring-client-behaviors.md)します。  
+この構成セクションは、特定のエンドポイントに対して定義されたすべての動作を表します。 クライアント動作の構成の詳細については、[クライアントの実行時の動作を指定する](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)と[クライアントの動作を構成する](../../../../../docs/framework/wcf/configuring-client-behaviors.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>

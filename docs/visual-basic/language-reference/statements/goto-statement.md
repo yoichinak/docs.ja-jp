@@ -37,7 +37,7 @@ GoTo line
  `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、「[方法 :ステートメントにラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
   
 > [!NOTE]
->  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)します。  
+>  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)を参照してください。  
   
  使用することはできません、`GoTo`外からの分岐にステートメントを`For`.`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、または`Using`.`End Using`内のラベルに構築します。  
   

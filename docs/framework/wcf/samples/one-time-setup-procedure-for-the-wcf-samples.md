@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 3.  Visual Studio 2012 がインストールされていないかどうかと、オペレーティング システムが Windows Server 2008 SP2 または後で、インストール[修正プログラム 251798](https://go.microsoft.com/fwlink/?LinkId=184693)します。  
   
-4.  次のコマンドを実行します。 これらのコマンドを実行する必要があります理由の詳細については、次を参照してください。 [IIS ホスト サービスのエラー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))します。  
+4.  次のコマンドを実行します。 これらのコマンドを実行する必要があります理由の詳細については、[IIS ホスト サービスのエラー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))を参照してください。  
   
     > [!WARNING]
     >  IIS を再インストールした場合は、次のコマンドを再実行します。

@@ -12,7 +12,7 @@ ms.locfileid: "58816996"
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)
 async/await 機能を使用することで、非同期プログラムをより簡単かつ直感的に記述できます。 同期コードに似た非同期コードを記述し、通常の非同期コードが必要とする難しいコールバック関数や継続の処理をコンパイラに任せます。  
   
- 非同期機能の詳細については、次を参照してください。 [Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)します。  
+ 非同期機能の詳細については、[Async および Await (Visual Basic) を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)を参照してください。  
   
  このチュートリアルは、Web サイトの一覧でのバイト数の合計を計算する同期 Windows Presentation Foundation (WPF) アプリケーションから開始します。 その後、新しい機能を使用して、アプリケーションを非同期ソリューションに変換します。  
   
@@ -313,7 +313,7 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 5.  非同期メソッドの戻り値の型は、必ず<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>します。 Visual Basic でのメソッドは、`Task` または `Task(Of T)` を返す `Function` にするか、`Sub` にする必要があります。 通常、`Sub`メソッドは非同期のイベント ハンドラーでのみ使用場所`Sub`が必要です。 使用する場合は、 `Task(T)` 、完成したメソッドがある場合、[返す](../../../../visual-basic/language-reference/statements/return-statement.md)の値を返すステートメントが、T を入力し、使用する`Task`完成したメソッドが意味のある値を返さない場合。  
   
-     詳細については、次を参照してください。 [Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)します。  
+     詳細については、[Async 戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)を参照してください。  
   
      メソッド `GetURLContents` には return ステートメントがあり、このステートメントはバイト配列を返します。 そのため、非同期バージョンの戻り値の型は Task(T) であり、T はバイト配列です。 メソッド シグネチャに、次の変更を加えます。  
   
@@ -403,7 +403,7 @@ async/await 機能を使用することで、非同期プログラムをより�
     startButton.IsEnabled = True  
     ```  
   
-     再入の詳細については、次を参照してください。 [(Visual Basic) の非同期アプリにおける再入の処理](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)します。  
+     再入の詳細については、[(Visual Basic) の非同期アプリにおける再入の処理](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)を参照してください。  
   
 4.  最後に、`Async` 修飾子を宣言に追加し、イベント ハンドラーが `SumPagSizesAsync` を待機できるようにします。  
   

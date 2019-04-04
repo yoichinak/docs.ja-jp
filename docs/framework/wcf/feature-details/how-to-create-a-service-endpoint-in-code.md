@@ -44,7 +44,7 @@ ms.locfileid: "54517475"
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     既定のエンドポイントの詳細については、次を参照してください。 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)と[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)します。  
+     既定のエンドポイントの詳細については、[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)と[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [方法: コードでのサービス バインドを指定します。](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

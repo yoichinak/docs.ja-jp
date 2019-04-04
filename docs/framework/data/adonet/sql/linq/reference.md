@@ -12,7 +12,7 @@ ms.locfileid: "56093360"
 # <a name="reference"></a>参照
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
   
- 参加するには、特に Microsoft Docs 固有の問題を検索することが推奨されますも、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。 また、Visual Basic および C# のコード例を含む、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて記載されているホワイト ペーパーを参照することもできます。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
+ 参加するには、特に Microsoft Docs 固有の問題を検索することが推奨されますも、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。 また、Visual Basic および C# のコード例を含む、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] テクノロジについて記載されているホワイト ペーパーを参照することもできます。 詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  

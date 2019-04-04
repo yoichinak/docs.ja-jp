@@ -36,7 +36,7 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
   
  `End Sub`  
   
- `modifiers`アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)します。  
+ `modifiers`アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、[Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)を参照してください。  
   
 ## <a name="parameter-declaration"></a>パラメーターの宣言  
  各プロシージャのパラメーターと同様にどのように変数を宣言する、パラメーター名とデータ型を指定することを宣言するとします。 引数渡しの方法を指定することもでき、パラメーターは省略可能かどうか、またはパラメーター配列。  
@@ -59,7 +59,7 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- 呼び出すことができます、`Sub`からそれを定義するクラスの外側のメソッド。 最初に、使用する必要がある、`New`キーワード、クラスのインスタンスを作成またはメソッドを呼び出すには、クラスのインスタンスを返します。 詳細については、次を参照してください。 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)します。 次を呼び出す、次の構文を使用することができます、`Sub`インスタンス オブジェクトのメソッド。  
+ 呼び出すことができます、`Sub`からそれを定義するクラスの外側のメソッド。 最初に、使用する必要がある、`New`キーワード、クラスのインスタンスを作成またはメソッドを呼び出すには、クラスのインスタンスを返します。 詳細については、[New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)を参照してください。 次を呼び出す、次の構文を使用することができます、`Sub`インスタンス オブジェクトのメソッド。  
   
  *オブジェクト*.*methodname*`[(`*argumentlist*`)]`  
   

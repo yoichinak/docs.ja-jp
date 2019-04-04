@@ -30,10 +30,10 @@ ms.locfileid: "58825106"
 ## <a name="naming-enumerations"></a>名前付けの列挙型  
  列挙型メンバーの名前付け規則を使用します。 Visual Basic では、列挙体のメンバー名が検出されると、他の参照先のタイプ ライブラリには、同じ名前が含まれている場合に例外がスローする可能性があります。 アプリケーションまたはコンポーネントの値を識別する一意のプレフィックスを使用します。  
   
- 列挙体のメンバーを指すときにする必要があります、列挙名でメンバー名を修飾を使用してください、`Imports`ステートメント。 詳細については、次を参照してください。[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)します。  
+ 列挙体のメンバーを指すときにする必要があります、列挙名でメンバー名を修飾を使用してください、`Imports`ステートメント。 詳細については、[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)を参照してください。  
   
 ## <a name="predefined-enumerations"></a>定義済みの列挙型  
- Visual Basic では、多数の定義済みの列挙など`FirstDayOfWeek`と`MsgBoxResult`コードを容易にします。 これらの一覧については、次を参照してください。[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)します。  
+ Visual Basic では、多数の定義済みの列挙など`FirstDayOfWeek`と`MsgBoxResult`コードを容易にします。 これらの一覧については、[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

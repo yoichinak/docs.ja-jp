@@ -10,9 +10,9 @@ ms.lasthandoff: 02/07/2019
 ms.locfileid: "55828086"
 ---
 # <a name="deployment-considerations-entity-framework"></a>配置に関する注意事項 (Entity Framework)
-このトピックでは、データ アクセスに ADO.NET Entity Framework を使用するアプリケーションの配置について説明します。 Entity Framework の詳細については、次を参照してください。 [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md)します。  
+このトピックでは、データ アクセスに ADO.NET Entity Framework を使用するアプリケーションの配置について説明します。 Entity Framework の詳細については、[Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md)を参照してください。  
   
- Entity Framework は、Visual Studio に組み込むことにより Visual Studio での開発を容易にする一連のツールを提供します。 詳細については、次を参照してください。 [ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))します。 このトピックでは、Entity Framework ベースのアプリケーションを配置するための具体的なテクノロジの使用法については触れません。  
+ Entity Framework は、Visual Studio に組み込むことにより Visual Studio での開発を容易にする一連のツールを提供します。 詳細については、[ADO.NET Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))を参照してください。 このトピックでは、Entity Framework ベースのアプリケーションを配置するための具体的なテクノロジの使用法については触れません。  
   
  Visual Studio では、ClickOnce 配置など、アプリケーションの配布および配置のための機能が提供されています。 詳細については、次を参照してください。[アプリケーションの配置とコンポーネント](/visualstudio/deployment/deploying-applications-services-and-components)、Visual Studio ドキュメント。  
   

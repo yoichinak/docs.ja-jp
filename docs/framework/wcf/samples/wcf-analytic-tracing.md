@@ -17,7 +17,7 @@ ms.locfileid: "54748143"
  Windows でのイベント トレースの詳細についてを参照してください。[デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=166488)します。  
   
 ## <a name="disposing-eventprovider"></a>EventProvider の破棄  
- このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装するときに使用できる可能性がありますが、<xref:System.Diagnostics.Eventing.EventProvider>のサービスの有効期間にわたってリソース。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージ リソースを破棄に関する詳細については、次を参照してください。 [Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)します。  
+ このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装するときに使用できる可能性がありますが、<xref:System.Diagnostics.Eventing.EventProvider>のサービスの有効期間にわたってリソース。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージ リソースを破棄に関する詳細については、[Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)を参照してください。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自己ホスト型と Web ホスト  
  Web ホスト サービスでは、WCF の分析トレースは、"HostReference"は、サービスは、トレースの出力を識別するために使用をという名前のフィールドを指定します。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 Web ホストの形式を参照場合に、パイプ '&#124;' 文字が実際には、最終的な表示文字列は、次のいずれかを指定できます。  

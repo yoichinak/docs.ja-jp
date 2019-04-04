@@ -18,7 +18,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
   
  HTTP 設定の構成に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- 実行時に[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ではこのツールが自動的にインストールされます。 実行時に[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、次を参照してください。 [Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)します。  
+ 実行時に[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ではこのツールが自動的にインストールされます。 実行時に[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、[Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)を参照してください。  
   
  実行時に[!INCLUDE[wv](../../../../includes/wv-md.md)]Windows 7、Netsh.exe ツールを使用してこれらの設定を構成することもできます。  
   
@@ -85,7 +85,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="other-configuration-settings"></a>その他の構成設定  
  <xref:System.ServiceModel.WSDualHttpBinding> を使用すると、クライアント接続では、名前空間予約と Windows ファイアウォールに対応できる既定値が使用されます。 双方向接続のクライアント ベース アドレスをカスタマイズする場合、クライアント上で HTTP 設定を行い、新しいアドレスに一致させる必要があります。  
   
- HTTP Server API には、HttpCfg からは使用できない高度な構成設定があります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、次を参照してください。 [IIS 用の Http.sys レジストリ設定](https://go.microsoft.com/fwlink/?LinkId=94843)します。 ほとんどのユーザーは、この設定を変更する必要がありません。  
+ HTTP Server API には、HttpCfg からは使用できない高度な構成設定があります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、[IIS 用の Http.sys レジストリ設定](https://go.microsoft.com/fwlink/?LinkId=94843)を参照してください。 ほとんどのユーザーは、この設定を変更する必要がありません。  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP に固有の問題  
  IIS では、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上でのポート共有がサポートされていません。 IIS が実行されていると、WCF サービスが同じポートを持つ名前空間を使用しようとした場合、WCF サービスを開始に失敗します。 IIS と WCF どちらも、既定ポート 80 を使用します。 サービスのいずれかのポート割り当てを変更するか、IP リッスン一覧を使用して、WCF サービスを IIS で使用されていないネットワーク アダプターに割り当てます。 IIS 6.0 以上では、HTTP Server API を使用できるように設計が変更されています。  

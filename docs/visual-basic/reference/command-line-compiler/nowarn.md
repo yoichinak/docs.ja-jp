@@ -33,7 +33,7 @@ ms.locfileid: "58828213"
   
  警告 id の数値の一部だけを指定する必要があります。 たとえば、BC42024、未使用のローカル変数の警告を抑制する場合は、指定`-nowarn:42024`します。  
   
- 警告の ID 番号の詳細については、次を参照してください。 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)します。  
+ 警告の ID 番号の詳細については、[Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)を参照してください。  
   
 |Visual Studio 統合開発環境で-nowarn を設定するには|  
 |---|  

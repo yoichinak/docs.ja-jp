@@ -51,9 +51,9 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- 詳細については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。 スキーマがデータ コントラクト ルールに準拠していない場合は、別のシリアル化エンジンを使用します。 たとえば、<xref:System.Xml.Serialization.XmlSerializer> は、独自のスキーマ インポート機構を使用します。 また、サポートされるスキーマの範囲を拡張する特別なインポート モードもあります。 詳細については、生成に関するセクションを参照してください。<xref:System.Xml.Serialization.IXmlSerializable>型[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。  
+ 詳細については、[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)を参照してください。 スキーマがデータ コントラクト ルールに準拠していない場合は、別のシリアル化エンジンを使用します。 たとえば、<xref:System.Xml.Serialization.XmlSerializer> は、独自のスキーマ インポート機構を使用します。 また、サポートされるスキーマの範囲を拡張する特別なインポート モードもあります。 詳細については、生成に関するセクションを参照してください。<xref:System.Xml.Serialization.IXmlSerializable>型[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。  
   
- `XsdDataContractExporter` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] によってシリアル化できるすべての `DataContractSerializer` 型をサポートします。 詳細については、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 通常、`XsdDataContractExporter` を使用して作成されたスキーマは、`XsdDataContractImporter` を使用してカスタマイズしない限り、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> で使用できる有効なデータです。  
+ `XsdDataContractExporter` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] によってシリアル化できるすべての `DataContractSerializer` 型をサポートします。 詳細については、[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)を参照してください。 通常、`XsdDataContractExporter` を使用して作成されたスキーマは、`XsdDataContractImporter` を使用してカスタマイズしない限り、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> で使用できる有効なデータです。  
   
  使用しての詳細については、<xref:System.Runtime.Serialization.XsdDataContractImporter>を参照してください[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。  
   

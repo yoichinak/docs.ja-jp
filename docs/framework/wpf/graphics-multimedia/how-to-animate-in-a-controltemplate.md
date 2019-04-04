@@ -18,7 +18,7 @@ ms.locfileid: "57374012"
 ## <a name="example"></a>例  
  [!code-xaml[AnimatePropertyStoryboards#GraphicsMMControlTemplateStoryboardExample](~/samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/ControlTemplateStoryboardExample.xaml#graphicsmmcontroltemplatestoryboardexample)]  
   
- ストーリー ボードでプロパティをアニメーション化の詳細については、次を参照してください。[ストーリー ボードの概要](storyboards-overview.md)します。  
+ ストーリー ボードでプロパティをアニメーション化の詳細については、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.ControlTemplate>

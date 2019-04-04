@@ -43,7 +43,7 @@ ms.locfileid: "58820153"
 ## <a name="remarks"></a>Remarks  
  XML 処理命令リテラルは、アプリケーションが XML ドキュメントを処理する方法を示します。 アプリケーションでは、XML ドキュメントが読み込まれる、アプリケーションは、ドキュメントを処理する方法を決定する XML 処理命令を確認できます。 アプリケーションの意味を解釈する`piName`と`piData`します。  
   
- XML ドキュメント リテラルには、XML 処理命令の次のような構文が使用されます。 詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)します。  
+ XML ドキュメント リテラルには、XML 処理命令の次のような構文が使用されます。 詳細については、[XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)を参照してください。  
   
 > [!NOTE]
 >  `piName`要素は、XML 1.0 仕様は、これらの id を予約するため、文字列"xml"または"XML"で始めることはできません。  

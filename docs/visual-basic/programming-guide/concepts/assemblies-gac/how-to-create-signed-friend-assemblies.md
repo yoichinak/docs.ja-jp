@@ -75,7 +75,7 @@ ms.locfileid: "58836741"
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、次を参照してください。 [-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)します。  
+     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、[-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)を参照してください。  
   
 7.  friend_signed_B.exe ファイルを実行します。  
   

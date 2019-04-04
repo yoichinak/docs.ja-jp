@@ -28,7 +28,7 @@ ms.locfileid: "58833491"
 ## <a name="remarks"></a>Remarks  
  使用して、`<remarks>`で指定された情報を補うため、型に関する情報を追加するタグ[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)します。  
   
- この情報は、オブジェクト ブラウザーに表示されます。 オブジェクト ブラウザーの詳細については、次を参照してください。[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)します。  
+ この情報は、オブジェクト ブラウザーに表示されます。 オブジェクト ブラウザーの詳細については、[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)を参照してください。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   

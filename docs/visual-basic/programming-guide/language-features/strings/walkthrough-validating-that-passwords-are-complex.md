@@ -31,7 +31,7 @@ ms.locfileid: "58824937"
 -   <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
- パスワードをネットワーク経由で移動する場合は、データを転送するためのセキュリティで保護されたメソッドを使用する必要があります。 詳細については、次を参照してください。 [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))します。
+ パスワードをネットワーク経由で移動する場合は、データを転送するためのセキュリティで保護されたメソッドを使用する必要があります。 詳細については、[ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))を参照してください。
   
  精度を向上させることができます、`ValidatePassword`の他の複雑性チェックを追加することで機能します。  
   

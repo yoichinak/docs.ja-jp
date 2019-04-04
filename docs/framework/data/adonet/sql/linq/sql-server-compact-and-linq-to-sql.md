@@ -10,7 +10,7 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56092931"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact および LINQ to SQL
-SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、次を参照してください。[を使用して SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))します。  
+SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、[を使用して SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))を参照してください。  
   
  ここでは、使用量、構成、機能セット、およびスコープの主な相違点の概要について[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。  
   

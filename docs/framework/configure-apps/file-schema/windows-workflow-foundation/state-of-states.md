@@ -13,7 +13,7 @@ ms.locfileid: "57367090"
 # <a name="state-of-states"></a>\<状態 > の\<状態 >
 追跡レコードを生成する必要がある定期受信済みアクティビティの状態を含む構成要素。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
+ 追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  

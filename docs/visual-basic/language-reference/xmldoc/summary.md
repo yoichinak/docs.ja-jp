@@ -28,7 +28,7 @@ ms.locfileid: "58815006"
 ## <a name="remarks"></a>Remarks  
  使用して、`<summary>`型または型のメンバーを記述するタグ。 型の説明に補足情報を追加するには、[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) タグを使用します。  
   
- テキスト、`<summary>`タグは IntelliSense の型に関する情報の唯一のソースであり、オブジェクト ブラウザーにも表示されます。 オブジェクト ブラウザーの詳細については、次を参照してください。[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)します。  
+ テキスト、`<summary>`タグは IntelliSense の型に関する情報の唯一のソースであり、オブジェクト ブラウザーにも表示されます。 オブジェクト ブラウザーの詳細については、[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)を参照してください。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   

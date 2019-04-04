@@ -16,7 +16,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57355065"
 ---
 # <a name="how-to-enable-a-command"></a>方法: コマンドを有効にする
-次の例でコマンド処理を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  関連付ける方法の例を<xref:System.Windows.Input.RoutedCommand>を<xref:System.Windows.Controls.Button>、作成、<xref:System.Windows.Input.CommandBinding>を実装するイベント ハンドラーを作成し、 <xref:System.Windows.Input.RoutedCommand>。  コマンド実行の詳細については、次を参照してください。、[コマンド実行の概要](commanding-overview.md)します。  
+次の例でコマンド処理を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  関連付ける方法の例を<xref:System.Windows.Input.RoutedCommand>を<xref:System.Windows.Controls.Button>、作成、<xref:System.Windows.Input.CommandBinding>を実装するイベント ハンドラーを作成し、 <xref:System.Windows.Input.RoutedCommand>。  コマンド実行の詳細については、、[コマンド実行の概要](commanding-overview.md)を参照してください。  
   
 ## <a name="example"></a>例  
  コードの最初のセクションを作成、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]から構成される、<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.StackPanel>、し、作成、<xref:System.Windows.Input.CommandBinding>とコマンド ハンドラーに関連付ける、 <xref:System.Windows.Input.RoutedCommand>。  

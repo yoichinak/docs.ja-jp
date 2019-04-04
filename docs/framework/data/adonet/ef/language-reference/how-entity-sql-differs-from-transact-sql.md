@@ -168,7 +168,7 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>識別子  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] では、識別子の比較は現在のデータベースの照合順序に基づきます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の識別子では、常に大文字と小文字は区別されず、アクセントは区別されます (つまり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ではアクセントのある文字とアクセントのない文字が区別されます。たとえば、'a' と 'ấ' は等しくありません)。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、同じように表示されても別のコード ページに由来する文字の複数のバージョンを別々の文字として扱います。 詳細については、次を参照してください。[入力文字セット](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)します。  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] では、識別子の比較は現在のデータベースの照合順序に基づきます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の識別子では、常に大文字と小文字は区別されず、アクセントは区別されます (つまり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ではアクセントのある文字とアクセントのない文字が区別されます。たとえば、'a' と 'ấ' は等しくありません)。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、同じように表示されても別のコード ページに由来する文字の複数のバージョンを別々の文字として扱います。 詳細については、[入力文字セット](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)を参照してください。  
   
 ## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Entity SQL では使用できない Transact-SQL 機能  
  次の [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 機能は [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では使用できません。  

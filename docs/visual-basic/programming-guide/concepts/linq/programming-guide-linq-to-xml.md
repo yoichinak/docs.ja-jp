@@ -17,7 +17,7 @@ ms.locfileid: "58837710"
   
  このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 を使用するために上級開発者になる必要はありません。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、ジェネリック クラスに大きく依存しています。 そのため、ジェネリック型とクラスの使用を理解することが非常に重要です。 詳細については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、ジェネリック クラスに大きく依存しています。 そのため、ジェネリック型とクラスの使用を理解することが非常に重要です。 詳細については、[Visual Basic におけるジェネリック型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

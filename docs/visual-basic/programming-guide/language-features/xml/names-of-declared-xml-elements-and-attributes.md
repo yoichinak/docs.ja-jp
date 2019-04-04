@@ -16,7 +16,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58819685"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣言する XML 要素と属性の名前 (Visual Basic)
-このトピックでは、XML リテラルの XML 要素と属性の名前付けの Visual Basic のガイドラインを提供します。  XML リテラルでは、ローカル名または修飾名を指定できます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名で構成されます。 XML 名前空間プレフィックスの詳細については、次を参照してください。 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)します。  
+このトピックでは、XML リテラルの XML 要素と属性の名前付けの Visual Basic のガイドラインを提供します。  XML リテラルでは、ローカル名または修飾名を指定できます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名で構成されます。 XML 名前空間プレフィックスの詳細については、[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
  要素または Visual Basic での属性のローカル名は、次の規則に従う必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "58819685"
  XML 要素名は大文字小文字を区別します。 つまり、Visual Basic コンパイラでは、アルファベットの大文字小文字のみが異なる 2 つの名前を比較をする際にいると解釈別の名前。 たとえば、解釈`ABC`と`abc`要素を区切るを指しています。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- XML 要素リテラルを作成する場合は、要素名の XML 名前空間プレフィックスを指定できます。 詳細については、次を参照してください。 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)します。  
+ XML 要素リテラルを作成する場合は、要素名の XML 名前空間プレフィックスを指定できます。 詳細については、[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

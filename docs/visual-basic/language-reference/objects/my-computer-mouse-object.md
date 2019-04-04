@@ -17,7 +17,7 @@ ms.locfileid: "58836572"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Mouse` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Mouse>」をご覧ください。  
   
- 詳細については、次を参照してください。[マウスへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)します。  
+ 詳細については、[マウスへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  

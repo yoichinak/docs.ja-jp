@@ -37,7 +37,7 @@ ms.locfileid: "56981570"
 
  属性を使用して XML ストリームの XML 名前空間、要素名、属性名などを設定することで、**XmlSerializer** クラスによって生成される XML ストリームを制御できます。 これらの属性、および属性による XML シリアル化の制御方法については、「[属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)」を参照してください。 また、生成される XML を制御するこれらの属性の一覧については、「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」を参照してください。
 
- さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)を参照してください。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
+ さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、次を参照してください。[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)します。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
 
  **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、[SOAP メッセージの書式設定をカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))を参照してください。
 
@@ -108,7 +108,7 @@ public class OrderForm
 
 - **DataSet** オブジェクト。
 
- シリアル化またはオブジェクトを逆シリアル化の詳細については、[方法。オブジェクトをシリアル化](how-to-serialize-an-object.md)と[方法。オブジェクトを逆シリアル化](how-to-deserialize-an-object.md)を参照してください。
+ シリアル化またはオブジェクトを逆シリアル化の詳細については、次を参照してください。[方法。オブジェクトをシリアル化](how-to-serialize-an-object.md)と[方法。オブジェクトを逆シリアル化](how-to-deserialize-an-object.md)します。
 
 ## <a name="advantages-of-using-xml-serialization"></a>XML シリアル化を使用する利点
 

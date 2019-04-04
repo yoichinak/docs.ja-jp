@@ -12,7 +12,7 @@ ms.locfileid: "58814304"
 # <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Func および Action 汎用デリゲート (Visual Basic) の分散の使用
 以下の例では、`Func` 汎用デリゲートと `Action` 汎用デリゲートの共変性と反変性を使用して、メソッドの再利用を可能にし、コードの柔軟性を高める方法を示します。  
   
- 共変性と反変性の詳細については、次を参照してください。[デリゲート (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)します。  
+ 共変性と反変性の詳細については、[デリゲート (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)を参照してください。  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>デリゲートと共変の型パラメーターの使用  
  次の例は、`Func` 汎用デリゲートにおける共変性のサポートの利点を示しています。 `FindByTitle` メソッドは、`String` 型のパラメーターを受け取り、`Employee` 型のオブジェクトを返します。 ただし、このメソッドは `Func(Of String, Person)` デリゲートに割り当てることもできます。これは `Employee` が `Person` を継承するためです。  

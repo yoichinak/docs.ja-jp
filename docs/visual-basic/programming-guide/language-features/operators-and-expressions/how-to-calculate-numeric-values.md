@@ -60,7 +60,7 @@ ms.locfileid: "58825756"
   
      前の例では、計算で`j`加算演算子を実行します (`+`) 最初ので、かっこで囲んで`(67 + i)`通常の優先順位とに割り当てられた値をオーバーライド`j`276 (4 回 69) は、します。 計算`k`、通常の優先順位の演算子を実行します (`*`する前に`+`) とに割り当てられた値`k`270 (268 および 2)。  
   
-     詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
+     詳細については、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

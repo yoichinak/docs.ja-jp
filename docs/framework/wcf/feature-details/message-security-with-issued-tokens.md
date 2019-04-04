@@ -14,7 +14,7 @@ ms.locfileid: "54652970"
   
  フェデレーション セキュリティにより独立したドメイン間で信頼を確立できます。 各ドメインは、セキュリティ トークン サービスで認証と承認を集中管理します。 このようなサービス間に信頼が確立されると、各ドメインのメンバーは相手のドメインのサービスを使用できます。  
   
- フェデレーション シナリオに関する詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。  
+ フェデレーション シナリオに関する詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

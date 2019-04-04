@@ -47,7 +47,7 @@ ms.locfileid: "58843410"
   
      ときに[Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)は`Off`と[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)は`On`、データ型を指定することで、定数を明示的に宣言する必要があります (`Boolean`、 `Byte`、 `Char`、 `DateTime`、 `Decimal`、 `Double`、 `Integer`、 `Long`、 `Short`、 `Single`、または`String`)。  
   
-     ときに`Option Infer`は`On`または`Option Strict`は`Off`、定数を宣言するにはデータ型を指定せず、`As`句。 コンパイラは、定数式の型からの種類を決定します。 詳細については、次を参照してください。[定数とリテラルのデータ型](constant-and-literal-data-types.md)します。  
+     ときに`Option Infer`は`On`または`Option Strict`は`Off`、定数を宣言するにはデータ型を指定せず、`As`句。 コンパイラは、定数式の型からの種類を決定します。 詳細については、[定数とリテラルのデータ型](constant-and-literal-data-types.md)を参照してください。  
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>明示的な型を持つ定数を宣言するのには  
   

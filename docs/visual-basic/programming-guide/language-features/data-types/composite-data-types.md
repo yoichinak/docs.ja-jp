@@ -54,12 +54,12 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
   
  前の例では、配列変数`arrayA`と`arrayB`、同じデータ型と見なされます: `Byte()` -場合でも、異なる長さに初期化されます。 変数`arrayB`と`arrayC`要素型が異なるために、同じ型のないです。 変数`arrayC`と`arrayD`ランクが異なるために、同じ型のないです。 変数`arrayD`と`arrayE`同じ型である — `Short(,)` : ランクと要素の型が同じため、たとえ`arrayD`がまだ初期化されていません。  
   
- 配列の詳細については、次を参照してください。[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ 配列の詳細については、[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
   
 ## <a name="class-types"></a>クラスの種類  
  すべてのクラスを構成する 1 つのデータ型はありません。 1 つのクラスは、別のクラスから継承できます、別のデータ型はそれぞれします。 同じクラスの複数のインスタンスでは、同じデータ型です。 クラスのインスタンスの 1 つの変数を割り当てるには別に、同じデータ型がだけでなく、メモリ内と同じクラスのインスタンスを指すようにします。  
   
- クラスの詳細については、次を参照してください。[オブジェクトとクラス](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
+ クラスの詳細については、[オブジェクトとクラス](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

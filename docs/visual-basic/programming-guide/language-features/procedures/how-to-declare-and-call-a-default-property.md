@@ -22,7 +22,7 @@ A*プロパティの既定*クラスまたは構造体のプロパティで、�
   
  クラスまたは構造体が多くて 1 つの既定のプロパティ。 ただし、既定プロパティはオーバー ロードし、その 1 つ以上のバージョンがあります。  
   
- 詳細については、次を参照してください。[既定](../../../../visual-basic/language-reference/modifiers/default.md)します。  
+ 詳細については、[既定](../../../../visual-basic/language-reference/modifiers/default.md)を参照してください。  
   
 ### <a name="to-declare-a-default-property"></a>既定のプロパティを宣言するには  
   

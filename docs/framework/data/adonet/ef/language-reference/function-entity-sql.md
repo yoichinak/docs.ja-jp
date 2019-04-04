@@ -63,7 +63,7 @@ FUNCTION function-name
   
  詳細については、「[方法 :ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))します。  
   
- 関数をモデル自体で宣言することもできます。 モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。 詳細については、次を参照してください。[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)します。  
+ 関数をモデル自体で宣言することもできます。 モデルで宣言された関数は、コマンドでインラインで宣言された関数と同じように実行されます。 詳細については、[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL コマンドは、関数 `Products` を定義します。この関数は、整数値を受け取って、返された製品をフィルター処理します。  

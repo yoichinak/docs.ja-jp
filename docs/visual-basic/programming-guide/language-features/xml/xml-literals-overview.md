@@ -19,28 +19,28 @@ ms.locfileid: "58839887"
   
  Visual Basic XML リテラルをコンパイルする[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 統合し、簡単なオブジェクト モデルを作成すると、XML を操作し、このモデルを提供します。[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 詳細については、「 <xref:System.Xml.Linq.XElement> 」を参照してください。  
   
- XML リテラルでは、Visual Basic の式を埋め込むことができます。 アプリケーションを作成、実行時に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]各リテラルは、埋め込み式の値を組み込むためのオブジェクト。 これにより、XML リテラル内での動的なコンテンツを指定できます。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
+ XML リテラルでは、Visual Basic の式を埋め込むことができます。 アプリケーションを作成、実行時に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]各リテラルは、埋め込み式の値を組み込むためのオブジェクト。 これにより、XML リテラル内での動的なコンテンツを指定できます。 詳細については、[XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)を参照してください。  
   
- XML リテラルの構文と XML 1.0 の構文の違いの詳細については、次を参照してください。 [XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。  
+ XML リテラルの構文と XML 1.0 の構文の違いの詳細については、[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)を参照してください。  
   
 ## <a name="simple-literals"></a>単純なリテラル  
- 作成することができます、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]を入力するか、有効な XML に貼り付けることによって、Visual Basic コード内のオブジェクト。 リテラル XML 要素を返します、<xref:System.Xml.Linq.XElement>オブジェクト。 詳細については、次を参照してください。 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。 次の例では、いくつかの子要素を持つ XML 要素を作成します。  
+ 作成することができます、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]を入力するか、有効な XML に貼り付けることによって、Visual Basic コード内のオブジェクト。 リテラル XML 要素を返します、<xref:System.Xml.Linq.XElement>オブジェクト。 詳細については、[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)と[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)を参照してください。 次の例では、いくつかの子要素を持つ XML 要素を作成します。  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- XML ドキュメントを作成するには、XML リテラルを起動して`<?xml version="1.0"?>`次の例のようにします。 XML ドキュメント リテラルを返します、<xref:System.Xml.Linq.XDocument>オブジェクト。 詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)します。  
+ XML ドキュメントを作成するには、XML リテラルを起動して`<?xml version="1.0"?>`次の例のようにします。 XML ドキュメント リテラルを返します、<xref:System.Xml.Linq.XDocument>オブジェクト。 詳細については、[XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)を参照してください。  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
->  Visual Basic で XML リテラルの構文は、XML 1.0 仕様での構文と同じです。 詳細については、次を参照してください。 [XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)します。  
+>  Visual Basic で XML リテラルの構文は、XML 1.0 仕様での構文と同じです。 詳細については、[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)を参照してください。  
   
 ## <a name="line-continuation"></a>行の連結  
  XML リテラルは、行継続文字 (空白のアンダー スコアを入力してシーケンス) を使用せず複数の行にまたがることができます。 これにより、簡単に XML リテラルの XML ドキュメントを使用したコードを比較します。  
   
  コンパイラは、XML リテラルの一部として行継続文字を処理します。 属する場合にのみ空白-アンダー スコアを入力してシーケンスを使用する必要があります、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。  
   
- ただし、組み込み式に複数行の式がある場合は、行継続文字を必要がありますの操作を行います。 詳細については、次を参照してください。 [XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)します。  
+ ただし、組み込み式に複数行の式がある場合は、行継続文字を必要がありますの操作を行います。 詳細については、[XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)を参照してください。  
   
 ## <a name="embedding-queries-in-xml-literals"></a>XML リテラルでクエリの埋め込み  
  埋め込み式の中では、クエリを使用できます。 これを行うときに、クエリによって返される要素が XML 要素に追加されます。 これにより、XML リテラルには、ユーザーのクエリの結果などの動的なコンテンツを追加できます。  

@@ -76,7 +76,7 @@ Aggregate element [As type] In collection _
 
 ### <a name="group"></a>グループ化
 
-結果としてグループ化されているクエリの結果を指す、`Group By`または`Group Join`句。 `Group`関数はでのみ有効ですが、`Into`の句、`Group By`または`Group Join`句。 詳細と例については、次を参照してください。 [By 句のグループ](../../../visual-basic/language-reference/queries/group-by-clause.md)と[Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)します。
+結果としてグループ化されているクエリの結果を指す、`Group By`または`Group Join`句。 `Group`関数はでのみ有効ですが、`Into`の句、`Group By`または`Group Join`句。 詳細と例については、[By 句のグループ](../../../visual-basic/language-reference/queries/group-by-clause.md)と[Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)を参照してください。
 
 ### <a name="longcount"></a>LongCount
 

@@ -21,9 +21,9 @@ ms.locfileid: "56974394"
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>方法: (Visual Basic)、プロシージャに引数を渡す
 プロシージャを呼び出すときに、引数リストをかっこで、プロシージャ名に従ってください。 プロシージャに定義されたすべての必須パラメーターに対応する引数を指定して、引数を指定することができます必要に応じて、`Optional`パラメーター。 指定しない場合、`Optional`呼び出しのパラメーターは、すべての後続の引数を指定している場合、引数リスト内の場所をマークする、コンマを含める必要があります。  
   
- など、対応するパラメーターの異なるに渡すには、データ型の引数にするかどうかに`Byte`に`String`、型チェック スイッチを設定することができます ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) に`Off`します。 場合`Option Strict`は`On`、いずれかを使用する必要がありますまたはキーワードの明示的な変換の変換を拡大します。 詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
+ など、対応するパラメーターの異なるに渡すには、データ型の引数にするかどうかに`Byte`に`String`、型チェック スイッチを設定することができます ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) に`Off`します。 場合`Option Strict`は`On`、いずれかを使用する必要がありますまたはキーワードの明示的な変換の変換を拡大します。 詳細については、[Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)を参照してください。  
   
- 詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)します。  
+ 詳細については、[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)を参照してください。  
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>プロシージャに 1 つまたは複数の引数を渡す  
   

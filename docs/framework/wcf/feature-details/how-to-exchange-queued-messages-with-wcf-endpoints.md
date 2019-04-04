@@ -45,7 +45,7 @@ ms.locfileid: "58411032"
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  サービス アドレスを指定し、標準の <xref:System.ServiceModel.Description.ServiceEndpoint> バインディングを使用する <xref:System.ServiceModel.NetMsmqBinding> を構成で定義します。 詳細については、WCF 構成を使用して、次を参照してください。[を構成する WCF サービス](../configuring-services.md)します。  
+5.  サービス アドレスを指定し、標準の <xref:System.ServiceModel.Description.ServiceEndpoint> バインディングを使用する <xref:System.ServiceModel.NetMsmqBinding> を構成で定義します。 詳細については、WCF 構成を使用して、[を構成する WCF サービス](../configuring-services.md)を参照してください。  
   
   
   

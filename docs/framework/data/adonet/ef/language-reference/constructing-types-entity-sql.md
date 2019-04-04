@@ -25,7 +25,7 @@ ms.locfileid: "54718586"
   
 -   同じ行コンストラクター内の 2 つの式に同じ別名を指定することはできません。  
   
- 行コンス トラクターの詳細については、次を参照してください。[行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)します。  
+ 行コンス トラクターの詳細については、[行](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)を参照してください。  
   
 ## <a name="collection-constructors"></a>コレクション コンストラクター  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のコレクション コンストラクターを使用して、値のリストからマルチセットのインスタンスを作成します。 コンストラクターのすべての値は、相互に互換性のある型 `T` でなければなりません。また、コンストラクターは `Multiset<T>` 型のコレクションを生成します。 たとえば、次の式は整数のコレクションを作成します。  
@@ -38,7 +38,7 @@ ms.locfileid: "54718586"
   
  `multiset() {}`  
   
- 詳細については、次を参照してください。 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)します。  
+ 詳細については、[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)を参照してください。  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>名前付きの型コンストラクター (NamedType 初期化子)  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、型コンストラクター (初期化子) を使用して、名前付きの複合型およびエンティティ型のインスタンスを作成できます。 たとえば、次の式は `Person` 型のインスタンスを作成します。  
@@ -61,7 +61,7 @@ ms.locfileid: "54718586"
   
  コンストラクターに対する引数は、型の属性の宣言と同じ順序であると見なされます。  
   
- 詳細については、次を参照してください。[という名前の型コンス トラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)します。  
+ 詳細については、[という名前の型コンス トラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

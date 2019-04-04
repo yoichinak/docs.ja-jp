@@ -66,7 +66,7 @@ ms.locfileid: "56261143"
     }  
     ```  
   
-3.  構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、次を参照してください。 [ServiceModel トランザクションの構成](servicemodel-transaction-configuration.md)します。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 [\<エンドポイント >](../../configure-apps/file-schema/wcf/endpoint-element.md)要素が含まれています、`bindingConfiguration`という名前のバインド構成を参照する属性`transactionalOleTransactionsTcpBinding`の次のサンプル構成に示すようにします。  
+3.  構成ファイルでバインディングを構成して、トランザクション コンテキストのフローを指定し、そのとき使用されるプロトコルを指定します。 詳細については、[ServiceModel トランザクションの構成](servicemodel-transaction-configuration.md)を参照してください。 具体的には、エンドポイント要素の `binding` 属性でバインド型を指定します。 [\<エンドポイント >](../../configure-apps/file-schema/wcf/endpoint-element.md)要素が含まれています、`bindingConfiguration`という名前のバインド構成を参照する属性`transactionalOleTransactionsTcpBinding`の次のサンプル構成に示すようにします。  
   
     ```xml  
     <service name="CalculatorService">  

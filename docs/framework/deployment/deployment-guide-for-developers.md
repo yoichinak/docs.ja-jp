@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094010"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675914"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -307,7 +307,7 @@ Type: DWORD
  .NET Framework のオフライン インストーラーを言語パックと一緒にインストールするには、言語パックをアプリのセットアップにチェーンする必要があります。 たとえば、 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] のオフライン インストーラーを日本語言語パックと一緒に配置するには、次のコマンドを使用します。
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  Web インストーラーを使用する場合は、言語パックをチェーンする必要はありません。セットアップはユーザーの MUI 設定と一致する言語パックをインストールします。 異なる言語をインストールするには、 `/LCID` オプションを使用して言語パックを指定します。

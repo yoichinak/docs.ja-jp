@@ -26,7 +26,7 @@ ms.locfileid: "58814176"
   
      使用することはできません`Static`構造プロシージャ内にあります。  
   
--   データ型`Static`ローカル変数を推論することはできません。 詳細については、次を参照してください。[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+-   データ型`Static`ローカル変数を推論することはできません。 詳細については、[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
 -   **結合された修飾子。** 指定することはできません`Static`と共に`ReadOnly`、 `Shadows`、または`Shared`同じ宣言内。  
   

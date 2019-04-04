@@ -54,7 +54,7 @@ ms.locfileid: "57710746"
 3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
   
 ## <a name="designing-the-stackview-control"></a>StackView コントロールの設計  
- `StackView`コントロールが 1 つの子による複合コントロール<xref:System.Windows.Forms.ToolStrip>コントロール。 複合コントロールの詳細については、次を参照してください。[カスタム コントロールのさまざまな](varieties-of-custom-controls.md)します。  
+ `StackView`コントロールが 1 つの子による複合コントロール<xref:System.Windows.Forms.ToolStrip>コントロール。 複合コントロールの詳細については、[カスタム コントロールのさまざまな](varieties-of-custom-controls.md)を参照してください。  
   
 #### <a name="to-design-the-stackview-control"></a>StackView コントロールを設計するには  
   
@@ -122,7 +122,7 @@ ms.locfileid: "57710746"
   
 8.  名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
   
-     詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。  
+     詳細については、[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)を参照してください。  
   
 9. 次のコードを挿入、`stackButton_Click`イベント ハンドラー。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "57710746"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、Office XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールを作成しました。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  
   
--   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
+-   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、[ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)を参照してください。  
   
 -   自動的に設定された標準メニューには、フォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](walkthrough-providing-standard-menu-items-to-a-form.md)します。  
   

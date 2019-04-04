@@ -13,7 +13,7 @@ ms.locfileid: "54628021"
 ---
 # <a name="unsupported-expressions"></a>サポートされていない式
 
-このトピックでは、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でサポートされていない [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 式について説明します。 詳細については、次を参照してください。 [Entity SQL の相違 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)します。
+このトピックでは、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でサポートされていない [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 式について説明します。 詳細については、[Entity SQL の相違 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)を参照してください。
 
 ## <a name="quantified-predicates"></a>定量化された述語
 

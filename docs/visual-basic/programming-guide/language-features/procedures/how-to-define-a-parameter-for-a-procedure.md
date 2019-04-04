@@ -18,7 +18,7 @@ ms.locfileid: "56971794"
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャ (Visual Basic) のパラメーターを定義します。
 A*パラメーター*それを呼び出すときに、プロシージャに値を渡すコードの呼び出しを許可します。 プロシージャの各パラメーターは、変数を宣言すると、その名前とデータ型を指定することと同じ方法で宣言します。 渡す方法を指定するかどうか、パラメーターは省略可能です。  
   
- 詳細については、次を参照してください。[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)します。  
+ 詳細については、[プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)を参照してください。  
   
 ### <a name="to-define-a-procedure-parameter"></a>プロシージャのパラメーターを定義するには  
   
@@ -30,7 +30,7 @@ A*パラメーター*それを呼び出すときに、プロシージャに値�
   
 4.  パラメーターの引き渡し方法を決定します。 通常、プロシージャ呼び出し元のコードでは、その値を変更できるようにする場合を除きに、値でパラメーターを渡します。  
   
-5.  パラメーター名の前に[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)引き渡し方法を指定します。 詳細については、次を参照してください。[の相違点の間の値と参照渡しによって引数を渡す](./differences-between-passing-an-argument-by-value-and-by-reference.md)します。  
+5.  パラメーター名の前に[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)または[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)引き渡し方法を指定します。 詳細については、[の相違点の間の値と参照渡しによって引数を渡す](./differences-between-passing-an-argument-by-value-and-by-reference.md)を参照してください。  
   
 6.  渡しのパラメーターが省略可能な場合は、前に[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)は等号でパラメーターのデータ型に従います (`=`) と、既定値。  
   
