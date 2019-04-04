@@ -3,12 +3,12 @@ title: ML.NET コンテンツ ガイド
 description: ML.NET を使用してカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明します。
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826272"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920767"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET コンテンツ ガイド
 
@@ -27,25 +27,25 @@ ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.m
 
 ## <a name="tutorials"></a>チュートリアル
 
-[バイナリ分類モデルを使ったセンチメント分析](tutorials/sentiment-analysis.md)に関するページでは、センチメントが正であるか負であるかを判断するアプリの構築方法を示します。
+[バイナリ分類モデルを使ったセンチメント分析](./tutorials/sentiment-analysis.md)に関するページでは、センチメントが正であるか負であるかを判断するアプリの構築方法を示します。
 
-[多クラス分類モデルを使った GitHub の問題の分類](tutorials/github-issue-classification.md)に関するページでは、GitHub の問題に対する区分のラベルを判断するアプリを構築する方法を示します。
+[多クラス分類モデルを使った GitHub の問題の分類](./tutorials/github-issue-classification.md)に関するページでは、GitHub の問題に対する区分のラベルを判断するアプリを構築する方法を示します。
 
-[回帰モデルを使った料金の予測](tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
+[回帰モデルを使った料金の予測](./tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
 
-[特徴によるアヤメの花の分類](tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。 
+[特徴によるアヤメの花の分類](./tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。 
 
 ## <a name="how-to-guide"></a>ハウツー ガイド
 
-[Infer.NET と確率論的プログラミングを使ったゲーム対戦リスト アプリの構築](how-to-guides/matchup-app-infer-net.md)に関するページでは、Xbox のゲームに見られるような対戦アプリの簡略化バージョンを構築する方法を示します。
+[Infer.NET と確率論的プログラミングを使ったゲーム対戦リスト アプリの構築](./how-to-guides/matchup-app-infer-net.md)に関するページでは、Xbox のゲームに見られるような対戦アプリの簡略化バージョンを構築する方法を示します。
 
 ## <a name="resources"></a>リソース
 
-「[機械学習の用語集](resources/glossary.md)」には主要な用語の定義があります。
+「[機械学習の用語集](./resources/glossary.md)」には主要な用語の定義があります。
 
-「[機械学習のタスク](resources/tasks.md)」では、分類や異常検出などのタスクについて説明します。 
+「[機械学習のタスク](./resources/tasks.md)」では、分類や異常検出などのタスクについて説明します。 
 
-「[データ変換](resources/transforms.md)」では、ML.NET におけるデータ準備機能について説明します。
+「[データ変換](./resources/transforms.md)」では、ML.NET におけるデータ準備機能について説明します。
 
 
 ## <a name="api-reference"></a>API リファレンス
