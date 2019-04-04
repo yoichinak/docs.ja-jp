@@ -15,7 +15,7 @@ ms.locfileid: "54516682"
 
 この手順の重要な部分は、 **\<エンドポイント >** 構成要素を含む、`bindingConfiguration`という名前のカスタム バインド構成を参照する属性`reliableSessionOverHttps`。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を含めることによって、信頼できるセッションと HTTPS トランスポートを使用することを指定するには、この名前を参照する **\<reliableSession >** と **\<httpsTransport >** 要素。
 
-この例のソースのコピーを次を参照してください。[カスタム バインドの信頼できるセッションが HTTPS 経由で](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)します。
+この例のソースのコピーを[カスタム バインドの信頼できるセッションが HTTPS 経由で](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)を参照してください。
 
 ### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するを CustomBinding でサービスを構成します。
 

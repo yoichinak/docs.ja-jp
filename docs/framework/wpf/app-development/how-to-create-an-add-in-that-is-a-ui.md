@@ -25,7 +25,7 @@ ms.locfileid: "57366388"
   
  この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
+-   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))を参照してください。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
   
 -   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   

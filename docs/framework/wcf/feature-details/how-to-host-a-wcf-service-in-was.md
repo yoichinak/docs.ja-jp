@@ -35,7 +35,7 @@ ms.locfileid: "54651176"
   
  バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。  
   
- この例のソースのコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)します。  
+ この例のソースのコピーを[TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)を参照してください。  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>WAS でホストされる基本サービスを作成するには  
   

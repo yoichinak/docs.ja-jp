@@ -39,7 +39,7 @@ ms.locfileid: "57374298"
 
 | 属性        | 説明 |  
 | ---------------- | ----------- |  
-| discoveryMode    | 探索プロトコルのモードを示す文字列。 有効な値は"Adhoc"と"Managed です"。 マネージド モードでは、プロトコルは Discoverable サービスのリポジトリとして機能する Discovery Proxy に依存します。 アドホック モードでは、プロトコルは UDP マルチキャスト メカニズムを使用して利用可能なサービスを探索する必要があります。 プロパティの詳細については、次を参照してください。<xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>します。 |  
+| discoveryMode    | 探索プロトコルのモードを示す文字列。 有効な値は"Adhoc"と"Managed です"。 マネージド モードでは、プロトコルは Discoverable サービスのリポジトリとして機能する Discovery Proxy に依存します。 アドホック モードでは、プロトコルは UDP マルチキャスト メカニズムを使用して利用可能なサービスを探索する必要があります。 プロパティの詳細については、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>を参照してください。 |  
 | discoveryVersion | WS-Discovery プロトコルの 2 つのバージョンのうち、1 つを指定する文字列。 有効値は WSDiscovery11 と WSDiscoveryApril2005 です。 この値は、<xref:System.ServiceModel.Discovery.DiscoveryVersion> 型です。 |  
 | maxResponseDelay | Discovery プロトコルが Probe Match や Resolve Match などのメッセージを送信するまでの待機時間の最大値を指定する Timespan 値。<br /><br /> すべての ProbeMatch が同時に送信されると、ネットワーク ストームが発生することがあります。 これを防ぐために、各 ProbeMatch はランダムな時間だけ待機して送信されます。 ランダムな待機時間は、0 からこの属性に設定された値の範囲内で設定されます。 この属性を 0 に設定すると、ProbeMatch メッセージは待機せずに短いループで送信されます。 それ以外の場合は、ProbeMatch メッセージはランダムな時間だけ待機して送信されます。すべての ProbeMatch メッセージの送信にかかる合計時間が maxResponseDelay を超えることはありません。 この値はサービスのみに関連するもので、クライアントが使用するものではありません。 |  
 | `name`           | 標準エンドポイントの構成名を指定する文字列。 この名前は、サービス エンドポイントの `endpointConfiguration` 属性で使用され、標準エンドポイントと構成を関連付けます。 |  

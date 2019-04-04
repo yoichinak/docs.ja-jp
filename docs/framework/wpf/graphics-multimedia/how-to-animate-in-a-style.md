@@ -24,4 +24,4 @@ ms.locfileid: "57373960"
 
 スタイル内でアニメーション化するときに、存在しないオブジェクトはターゲットにすることことに注意してください。 たとえば、自分のスタイルを使用して、<xref:System.Windows.Media.SolidColorBrush>ボタンの背景のプロパティの設定が、ある時点で、スタイルがオーバーライドされ、ボタンの背景が設定されている、<xref:System.Windows.Media.LinearGradientBrush>します。  アニメーション化しようとして、 <xref:System.Windows.Media.SolidColorBrush> ; 例外をスローしません、アニメーションはサイレント モードで失敗します。
 
-構文を対象とするストーリー ボードの詳細については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。 アニメーションの詳細については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。 スタイルの詳細については、次を参照してください。、[スタイルとテンプレート](../controls/styling-and-templating.md)します。
+構文を対象とするストーリー ボードの詳細については、、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。 アニメーションの詳細については、、[アニメーションの概要](animation-overview.md)を参照してください。 スタイルの詳細については、、[スタイルとテンプレート](../controls/styling-and-templating.md)を参照してください。

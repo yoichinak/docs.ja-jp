@@ -13,7 +13,7 @@ ms.locfileid: "58816604"
 このサンプルではフェデレーション セキュリティを示します。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
- Windows Communication Foundation (WCF) が使用して、フェデレーション セキュリティ アーキテクチャをデプロイするためのサポートを提供、`wsFederationHttpBinding`します。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF でのフェデレーションの詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
+ Windows Communication Foundation (WCF) が使用して、フェデレーション セキュリティ アーキテクチャをデプロイするためのサポートを提供、`wsFederationHttpBinding`します。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF でのフェデレーションの詳細については、[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)を参照してください。  
   
  シナリオは、次の 4 つの部分から構成されます。  
   

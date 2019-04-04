@@ -36,7 +36,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 -   タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
   
--   コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、次を参照してください。[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)です。  
+-   コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)を参照してください。  
   
 -   1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
   

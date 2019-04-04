@@ -13,7 +13,7 @@ ms.locfileid: "58814394"
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
   
 > [!NOTE]
->  このサンプルでは、探索を構成ファイルで実装しています。 探索をコードで実装するサンプルについては、次を参照してください。[基本的な](../../../../docs/framework/wcf/samples/basic-sample.md)します。  
+>  このサンプルでは、探索を構成ファイルで実装しています。 探索をコードで実装するサンプルについては、[基本的な](../../../../docs/framework/wcf/samples/basic-sample.md)を参照してください。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -87,7 +87,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- スコープの詳細については、次を参照してください。[探索検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)します。  
+ スコープの詳細については、[探索検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)を参照してください。  
   
  探索エンドポイントに固有の詳細を制御することもできます。 この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。 このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。  
   

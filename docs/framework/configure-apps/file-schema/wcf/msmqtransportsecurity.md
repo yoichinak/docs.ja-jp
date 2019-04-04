@@ -52,7 +52,7 @@ ms.locfileid: "58018954"
 |[\<msmqTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransport.md)|ネイティブ MSMQ プロトコルを使用する Windows Communication Foundation (WCF) サービスのキュー通信プロパティを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- トランスポート セキュリティの詳細については、次を参照してください。[トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)します。  
+ トランスポート セキュリティの詳細については、[トランスポート セキュリティ](../../../../../docs/framework/wcf/feature-details/transport-security.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>

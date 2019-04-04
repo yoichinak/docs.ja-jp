@@ -109,7 +109,7 @@ ms.locfileid: "55258059"
   
  サービス構成では、TLS/SSL プロトコルを使用して保護される TCP 通信、および Windows メッセージ セキュリティをサポートするカスタム バインディングが定義されます。 カスタム バインドはサービス証明書を使用して、トランスポート レベルでサービスを認証し、クライアントとサービス間で転送中のメッセージを保護します。 これは、 [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)バインド要素。 サービスの証明書は、サービス動作を使用して構成されます。  
   
- さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素が使用するよう構成`SecureConversation`authenticationType で、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、次を参照してください。[カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)します。  
+ さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素が使用するよう構成`SecureConversation`authenticationType で、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、[カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)を参照してください。  
   
 ```xml  
 <configuration>

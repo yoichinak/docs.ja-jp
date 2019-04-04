@@ -88,7 +88,7 @@ ms.locfileid: "58830137"
  **正しいアプローチは:** プロシージャのオーバー ロードを定義できるようにするには、するには、署名を変更する必要があります。 同じ名前を使用する必要があります、ために、数、順序、またはパラメーターのデータ型を変更しなければなりません。 ジェネリック プロシージャでは、型パラメーターの数を変更できます。 変換演算子で ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md))、戻り値の型を変えることができます。  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>オーバー ロード解決でオプションおよび ParamArray 引数  
- 1 つまたは複数のプロシージャをオーバー ロードは場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターまたは[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター、複製のいずれかの回避する必要があります、*暗黙のオーバー ロード*します。 詳しくは、次を参照してください。[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)します。  
+ 1 つまたは複数のプロシージャをオーバー ロードは場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターまたは[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター、複製のいずれかの回避する必要があります、*暗黙のオーバー ロード*します。 詳しくは、[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)を参照してください。  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>オーバー ロードされたプロシージャの間違ったバージョンの呼び出し  
  プロシージャにいくつかのオーバー ロードされたバージョンがある場合は、すべてのパラメーター リストを使い慣れて、Visual Basic での通話を複数のオーバー ロードの解決方法を理解してください。 それ以外の場合、意図したものと異なるオーバー ロードを呼び出すことができます。  

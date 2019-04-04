@@ -29,7 +29,7 @@ ms.locfileid: "57708367"
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- オブジェクト初期化子の詳細については、[方法。コンス トラクターを呼び出さずにオブジェクトを初期化 (C#プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法。オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)を参照してください。  
+ オブジェクト初期化子の詳細については、次を参照してください。[方法。コンス トラクターを呼び出さずにオブジェクトを初期化 (C#プログラミング ガイド)](https://go.microsoft.com/fwlink/?LinkId=161015)と[方法。オブジェクト初期化子を使用してオブジェクトを宣言](https://go.microsoft.com/fwlink/?LinkId=161016)します。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>変数、リテラル値、および式の使用  
  コードを使用してワークフロー定義を作成する場合は、ワークフロー定義の作成の一部としてコードが実行する内容、およびそのワークフローのインスタンスの実行の一部としてコードが実行する内容に注意してください。 たとえば、次のワークフローはランダムな数値を生成し、それをコンソールに出力します。  
@@ -71,7 +71,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 XAML のワークフローをシリアル化の詳細については、次を参照してください。[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)します。  
+ 実行時に、Visual Basic 式は LINQ 式にコンパイルされます。 前の例はいずれも XAML にシリアル化できますが、シリアル化された XAML をワークフロー デザイナーで表示および編集することを目的としている場合は、式に <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用してください。 `ExpressionServices.Convert` を使用するシリアル化されたワークフローはデザイナーで開くことができますが、式の値は空白になります。 XAML のワークフローをシリアル化の詳細については、[ワークフローのシリアル化と XAML との間のアクティビティ](serializing-workflows-and-activities-to-and-from-xaml.md)を参照してください。  
   
 #### <a name="literal-expressions-and-reference-types"></a>リテラル式と参照型  
  リテラル式は、ワークフロー内では <xref:System.Activities.Expressions.Literal%601> アクティビティによって表されます。 次の <xref:System.Activities.Statements.WriteLine> アクティビティは機能的には同じです。  

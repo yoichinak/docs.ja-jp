@@ -115,7 +115,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
  **-アウト**コンパイラ オプションは、コンパイラは EXE ファイルを出力して、出力ファイルの名前を指定します (`TestCode.exe`)。 このコンパイラ オプションは省略できます。 [-参照 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプションは、このプログラムで使用される DLL ファイルを指定します。  
   
- コマンドラインからのビルドの詳細については、次を参照してください。 および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。  
+ コマンドラインからのビルドの詳細については、および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

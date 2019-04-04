@@ -28,7 +28,7 @@ ActiveX コントロールは、COM コンポーネントまたは Web ページ
      その他のツールで新しいコントロールが表示されます、**ツールボックス**します。  
   
     > [!NOTE]
-    >  Aximp ユーティリティを使用して、ActiveX コントロールの相互運用機能アセンブリを手動で作成することができます。 詳細については、次を参照してください。 [Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)します。  
+    >  Aximp ユーティリティを使用して、ActiveX コントロールの相互運用機能アセンブリを手動で作成することができます。 詳細については、[Aximp.exe (Windows フォーム ActiveX コントロール インポーター)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

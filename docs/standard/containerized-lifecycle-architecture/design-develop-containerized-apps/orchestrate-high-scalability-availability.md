@@ -211,7 +211,7 @@ Service Fabric のメッシュでホストされているアプリケーショ�
 
 Service Fabric Mesh の背後には、何千ものマシンで構成されるクラスターがあります。 クラスターのすべての操作は、開発者には表示されません。 ユーザーは、コンテナーをアップロードし、必要なリソース、可用性の要件、リソース制限を単純に指定するだけです。 Service Fabric Mesh は、アプリケーション開発で要求されたインフラストラクチャを自動的に割り当て、インフラストラクチャの障害を処理し、アプリケーションの高可用性を保証します。 ユーザーは、インフラストラクチャではなく、アプリケーションの正常性と応答性のみを考慮します。
 
-詳細については、次を参照してください。、[ドキュメントの Service Fabric のメッシュ](https://docs.microsoft.com/azure/service-fabric-mesh/)します。
+詳細については、、[ドキュメントの Service Fabric のメッシュ](https://docs.microsoft.com/azure/service-fabric-mesh/)を参照してください。
 
 ## <a name="choosing-orchestrators-in-azure"></a>Azure でオーケストレーターを選ぶ
 

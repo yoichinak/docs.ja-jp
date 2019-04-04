@@ -53,7 +53,7 @@ ms.locfileid: "58408757"
 
 - 使用<xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.StackPanel>、および<xref:System.Windows.Controls.Grid>コントロールを配置します。
 
-パネルのさまざまな種類の詳細については、次を参照してください。[パネルの概要](../controls/panels-overview.md)します。
+パネルのさまざまな種類の詳細については、[パネルの概要](../controls/panels-overview.md)を参照してください。
 
 **ウィンドウの固定サイズを設定しないでください。**
 

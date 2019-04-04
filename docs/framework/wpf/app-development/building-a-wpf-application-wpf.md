@@ -26,7 +26,7 @@ Windows Presentation Foundation (WPF) アプリケーションとしてビルド
   
 -   Microsoft Build Engine (MSBuild)。 コードと XAML ファイルに加えて、アプリケーションには MSBuild プロジェクト ファイルを含める必要があります。 詳細については、「MSBuild」を参照してください。  
   
--   Visual Studio Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、次を参照してください。[の記述と Visual Studio を使用してコードを管理](/visualstudio/ide/index-writing-code)と[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)します。  
+-   Visual Studio Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、[の記述と Visual Studio を使用してコードを管理](/visualstudio/ide/index-writing-code)と[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)を参照してください。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF ビルド パイプライン  

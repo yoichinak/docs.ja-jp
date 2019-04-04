@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153944"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409225"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 言語と .NET Framework の概要
 
@@ -58,7 +58,7 @@ C# は、タイプ セーフで洗練されたオブジェクト指向言語で�
   
  C# プログラムを実行すると、アセンブリが CLR に読み込まれ、マニフェストの情報に基づいてさまざまな処理が実行されます。 このとき、セキュリティ要件に一致すると、CLR で Just-In-Time (JIT) コンパイルが実行され、IL コードはネイティブのマシン語命令に変換されます。 CLR には、自動的なガベージ コレクション、例外処理、およびリソース管理に関するサービスも用意されています。 CLR で実行されるコードは、"マネージド コード" と呼ばれることがあります。反対に、特定のシステムを対象にしたネイティブのマシン語にコンパイルされたコードは、"アンマネージド コード" と呼ばれることがあります。 C# ソース コード ファイル、.NET Framework クラス ライブラリ、アセンブリ、および CLR について、コンパイル時間と実行時間の関係を次の図に示します。  
   
- ![ C&#35; ソース コードからマシン実行へ](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![C&#35; ソース コードからマシン実行へ](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  言語の相互運用性は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の主要機能です。 C# コンパイラで生成された IL コードは、共通型の仕様 (CTS: Common Type Specification) に準拠しています。このため、C# の IL コードは、Visual Basic、Visual C++ の .NET バージョンを始めとする、20 を超える CTS 準拠言語で生成されたコードと相互運用性があります。 1 つのアセンブリには、異なる .NET 言語で記述されたモジュールを複数含めることができます。また、同じ言語で記述されている場合と同様に、型を参照することもできます。  
   

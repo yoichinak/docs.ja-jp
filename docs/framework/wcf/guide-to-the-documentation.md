@@ -52,11 +52,11 @@ ms.locfileid: "54552625"
   
 -   既存の COM アプリケーションに WCF サービスまたはクライアントに統合する、[COM アプリケーションとの統合](../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)を参照してください。  
   
--   既存の MSMQ アプリケーションに WCF サービスまたはクライアントに統合する、[方法。Exchange には、WCF エンドポイントでメッセージがキューに置かれた](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)と[方法。WCF エンドポイントでメッセージを交換して、メッセージ キュー アプリケーション](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)を参照してください。  
+-   既存の MSMQ アプリケーションに WCF サービスまたはクライアントに統合する、次を参照してください。[方法。Exchange には、WCF エンドポイントでメッセージがキューに置かれた](../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)と[方法。WCF エンドポイントでメッセージを交換して、メッセージ キュー アプリケーション](../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)します。  
   
 -   サービスをホストするインターネット インフォメーション サービス (IIS) を使用する、[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)を参照してください。  
   
--   WCF を使用すると、Web サービス拡張 (WSE) 3.0 サービスを使用して、[方法。アクセスの WSE 3.0 サービス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)を参照してください。  
+-   WCF を使用すると、Web サービス拡張 (WSE) 3.0 サービスを使用して、次を参照してください。[方法。アクセスの WSE 3.0 サービス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)します。  
   
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation でサポートされる WS-* プロトコル  
  システム指定のバインディングでサポートされるプロトコルの一覧を表示するには、[システム標準の相互運用性バインディングでサポートされる Web サービス プロトコル](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)を参照してください。 システム指定のバインディングの一覧を表示するには、[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。  

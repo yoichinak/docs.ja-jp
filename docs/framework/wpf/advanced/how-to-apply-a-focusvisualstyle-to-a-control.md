@@ -24,7 +24,7 @@ ms.locfileid: "57366597"
   
  A<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>が付属している任意のコントロール テンプレートのスタイルに明示的なスタイルまたはテーマ スタイル; からコントロールの主なスタイルも作成できますを使用して、<xref:System.Windows.Controls.ControlTemplate>にそのスタイルを設定して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ。  
   
- フォーカスの視覚スタイルはテーマまたは、UI 全体で一貫して使用する必要があります、異なる 2 つのフォーカスを設定できる各要素を使用するのではなく。 詳細については、次を参照してください。[コントロール、および FocusVisualStyle フォーカスのスタイル](styling-for-focus-in-controls-and-focusvisualstyle.md)します。  
+ フォーカスの視覚スタイルはテーマまたは、UI 全体で一貫して使用する必要があります、異なる 2 つのフォーカスを設定できる各要素を使用するのではなく。 詳細については、[コントロール、および FocusVisualStyle フォーカスのスタイル](styling-for-focus-in-controls-and-focusvisualstyle.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>

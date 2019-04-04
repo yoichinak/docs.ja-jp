@@ -40,7 +40,7 @@ ms.locfileid: "57705598"
   
  ![色の変更](./media/recoloring02.gif "recoloring02")  
   
- マトリックスと変換の詳細については、次を参照してください。[座標系と変換](coordinate-systems-and-transformations.md)します。  
+ マトリックスと変換の詳細については、[座標系と変換](coordinate-systems-and-transformations.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、イメージを 1 つのすべての色 (0.2, 0.0、0.4, 1.0) は、前の段落で説明されている変換を適用します。  

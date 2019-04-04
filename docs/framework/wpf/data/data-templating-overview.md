@@ -129,14 +129,14 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  この例では、<xref:System.Windows.DataTrigger>を使用して、<xref:System.Windows.Setter>プロパティ値を設定します。 トリガー クラスにもがある、<xref:System.Windows.TriggerBase.EnterActions%2A>と<xref:System.Windows.TriggerBase.ExitActions%2A>アニメーションなどのアクションのセットを開始するためのプロパティ。 さらに、<xref:System.Windows.MultiDataTrigger>クラスを使用すると、変更を適用する複数のデータ バインドされたプロパティ値に基づいています。  
   
- 同じ効果を実現するために別の方法は、バインドする、<xref:System.Windows.Controls.Border.BorderBrush%2A>プロパティを`TaskType`プロパティと色を返す値コンバーターがに基づいて、`TaskType`値。 コンバーターを使って上の効果を作成するのは、パフォーマンスに関して若干効率的です。 さらに、独自のコンバーターを作成すると、独自のロジックを提供できるので柔軟性が向上します。 最終的に、どの手法を選ぶかは、シナリオと設定に依存します。 コンバーターを作成する方法については、次を参照してください。<xref:System.Windows.Data.IValueConverter>します。  
+ 同じ効果を実現するために別の方法は、バインドする、<xref:System.Windows.Controls.Border.BorderBrush%2A>プロパティを`TaskType`プロパティと色を返す値コンバーターがに基づいて、`TaskType`値。 コンバーターを使って上の効果を作成するのは、パフォーマンスに関して若干効率的です。 さらに、独自のコンバーターを作成すると、独自のロジックを提供できるので柔軟性が向上します。 最終的に、どの手法を選ぶかは、シナリオと設定に依存します。 コンバーターを作成する方法については、<xref:System.Windows.Data.IValueConverter>を参照してください。  
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate に含まれるもの  
 
 内でトリガーを配置しました。 前の例では、<xref:System.Windows.DataTemplate>を使用して、<xref:System.Windows.DataTemplate>します。<xref:System.Windows.DataTemplate.Triggers%2A> プロパティを使用する方法を示します。 <xref:System.Windows.Setter>トリガーの要素のプロパティの値を設定します (、<xref:System.Windows.Controls.Border>要素) 内にある、<xref:System.Windows.DataTemplate>します。 ただし場合、プロパティを`Setters`に不安が現在内にある要素のプロパティではない<xref:System.Windows.DataTemplate>を使用してプロパティを設定するより適切な場合があります、<xref:System.Windows.Style>については、<xref:System.Windows.Controls.ListBoxItem>クラス (場合、コントロールにバインドしているが、 <xref:System.Windows.Controls.ListBox>)。 する場合など、<xref:System.Windows.Trigger>をアニメーション化する、<xref:System.Windows.UIElement.Opacity%2A>値、項目の項目をマウスがポイントするとトリガーを定義する内で、<xref:System.Windows.Controls.ListBoxItem>スタイル。 例については、「[Introduction to Styling and Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)」(スタイルとテンプレートのサンプルの概要) をご覧ください。
   
- 一般に、注意、 <xref:System.Windows.DataTemplate> 、生成された各に適用されている<xref:System.Windows.Controls.ListBoxItem>(が実際に適用される方法と場所の詳細については、次を参照してください。、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>ページです。)。 <xref:System.Windows.DataTemplate>プレゼンテーションとデータ オブジェクトの外観を気がします。 ほとんどの場合、プレゼンテーションでは、どのようなアイテムなどの他のすべての側面次のように選択されている方法、または<xref:System.Windows.Controls.ListBox>lays、項目のレイアウトの定義に属していない、<xref:System.Windows.DataTemplate>します。 例については、「[ItemsControl のスタイルとテンプレートの設定](#DataTemplating_ItemsControl)」セクションをご覧ください。  
+ 一般に、注意、 <xref:System.Windows.DataTemplate> 、生成された各に適用されている<xref:System.Windows.Controls.ListBoxItem>(が実際に適用される方法と場所の詳細については、、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>ページを参照してください。)。 <xref:System.Windows.DataTemplate>プレゼンテーションとデータ オブジェクトの外観を気がします。 ほとんどの場合、プレゼンテーションでは、どのようなアイテムなどの他のすべての側面次のように選択されている方法、または<xref:System.Windows.Controls.ListBox>lays、項目のレイアウトの定義に属していない、<xref:System.Windows.DataTemplate>します。 例については、「[ItemsControl のスタイルとテンプレートの設定](#DataTemplating_ItemsControl)」セクションをご覧ください。  
   
 <a name="Styling_StyleSelection"></a>   
 ## <a name="choosing-a-datatemplate-based-on-properties-of-the-data-object"></a>データ オブジェクトのプロパティに基づく DataTemplate の選択  

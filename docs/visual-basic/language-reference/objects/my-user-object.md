@@ -18,7 +18,7 @@ ms.locfileid: "58835090"
 ## <a name="remarks"></a>Remarks  
  `My.User` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>」をご覧ください。  
   
- 詳細については、次を参照してください。[にアクセスするユーザー データ](../../../visual-basic/developing-apps/programming/accessing-user-data.md)します。  
+ 詳細については、[にアクセスするユーザー データ](../../../visual-basic/developing-apps/programming/accessing-user-data.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  

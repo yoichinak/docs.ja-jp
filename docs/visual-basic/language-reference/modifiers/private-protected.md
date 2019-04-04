@@ -25,7 +25,7 @@ ms.locfileid: "57376391"
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)を参照してください。
 
 > [!NOTE]
 > Visual Studio での F1 ヘルプを選択する`private protected`のいずれかのヘルプを提供します。[プライベート](private.md)または[保護](protected.md)します。 IDE では、複合語ではなく、カーソルの下の 1 つのトークンを取得します。
@@ -38,7 +38,7 @@ ms.locfileid: "57376391"
 
 - **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 基本クラスから派生し、同じアセンブリに含まれているすべてのクラスでコードがすべてにアクセスできる、`Private Protected`基底クラスの要素。 基本クラスを基底クラスから派生し、別のアセンブリに含まれているすべてのクラスでのコードでアクセスできませんただし、`Private Protected`要素。
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。
+- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。
 
 `Private Protected` 修飾子は、次のコンテキストで使用できます。
 

@@ -10,7 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57710018"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
-このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../workflow-tracking-and-tracing.md)します。
+このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、[ワークフロー追跡とトレース](../workflow-tracking-and-tracing.md)を参照してください。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
@@ -42,7 +42,7 @@ ms.locfileid: "57710018"
   
 10. WCF テスト クライアントでダブルクリック **[getstockprice]** します。 開き、`GetStockPrice`操作を 1 つのパラメーター値の型を受け取る`Contoso` をクリック**Invoke**します。  
   
-11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、次を参照してください。 [SQL Server Management Studio の概要](https://go.microsoft.com/fwlink/?LinkId=165645)します。 SQL Server 2008 Management Studio Express をダウンロードできます[ここ](https://go.microsoft.com/fwlink/?LinkId=180520)します。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
+11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、[SQL Server Management Studio の概要](https://go.microsoft.com/fwlink/?LinkId=165645)を参照してください。 SQL Server 2008 Management Studio Express をダウンロードできます[ここ](https://go.microsoft.com/fwlink/?LinkId=180520)します。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
   
 #### <a name="to-uninstall-the-sample"></a>サンプルをアンインストールするには  
   

@@ -13,7 +13,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54615443"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>方法: セッションを必要とするサービスを作成します。
-セッションでは、複数のエンドポイント間で共有される状態が作成されます。これにより、クライアントとサービス インスタンス間でのコールバック、マルチホップ セキュリティ、関連付けなどの便利な機能を使用できるようになります。 Windows Communication Foundation (WCF) アプリケーションでセッションの詳細については、次を参照してください。[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)します。  
+セッションでは、複数のエンドポイント間で共有される状態が作成されます。これにより、クライアントとサービス インスタンス間でのコールバック、マルチホップ セキュリティ、関連付けなどの便利な機能を使用できるようになります。 Windows Communication Foundation (WCF) アプリケーションでセッションの詳細については、[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)を参照してください。  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>バインディングによるセッションのサポートを要求するコントラクトを指定するには  
   

@@ -36,7 +36,7 @@ ms.locfileid: "58826198"
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- `From`句は、データ ソースを指定`customers`、および*範囲変数*、`cust`します。 範囲変数は、クエリ式では、実際の反復は発生しませんが、ループの反復変数のようなは。 クエリが実行されると、多くの場合を使用して、`For Each`ループ、連続する各要素への参照として範囲変数`customers`します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 明示的な型指定なしで記述されたクエリの例については、次を参照してください。[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)します。  
+ `From`句は、データ ソースを指定`customers`、および*範囲変数*、`cust`します。 範囲変数は、クエリ式では、実際の反復は発生しませんが、ループの反復変数のようなは。 クエリが実行されると、多くの場合を使用して、`For Each`ループ、連続する各要素への参照として範囲変数`customers`します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 明示的な型指定なしで記述されたクエリの例については、[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)を参照してください。  
   
  使用する方法についての詳細、 `From` Visual basic での句を参照してください[句から](../../../../visual-basic/language-reference/queries/from-clause.md)します。  
   
@@ -109,7 +109,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join` 同じようにコレクションを 1 つの階層コレクションを組み合わせて、 `LEFT JOIN` sql です。 詳細については、次を参照してください。 [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)と[Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)します。  
+ `Group Join` 同じようにコレクションを 1 つの階層コレクションを組み合わせて、 `LEFT JOIN` sql です。 詳細については、[Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)と[Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)を参照してください。  
   
 ## <a name="grouping-data-group-by"></a>データのグループ化 (Group By)  
  追加することができます、`Group By`要素の 1 つまたは複数のフィールドに従ってのクエリ結果内の要素をグループ化する句。 たとえば、次のコードでは、クラス年ごと学生をグループ化します。  

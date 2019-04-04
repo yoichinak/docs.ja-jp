@@ -15,7 +15,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57364750"
 ---
 # <a name="xaml-resources"></a>XAML リソース
-リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](resources-and-code.md)します。  
+リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、[リソースとコード](resources-and-code.md)を参照してください。  
   
 > [!NOTE]
 >  このトピックで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーション リソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
@@ -39,7 +39,7 @@ ms.locfileid: "57364750"
   
 <a name="staticdynamic"></a>   
 ## <a name="static-and-dynamic-resources"></a>静的および動的なリソース  
- リソースは、静的リソースまたは動的リソースのいずれかとして参照できます。 いずれかを使用して、これは、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)または[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)します。 マークアップ拡張機能の機能である[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクト参照を指定するには、マークアップ拡張機能属性文字列を処理し、オブジェクトを返すことによって起こります、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダー。 マークアップ拡張機能の動作の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ リソースは、静的リソースまたは動的リソースのいずれかとして参照できます。 いずれかを使用して、これは、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)または[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)します。 マークアップ拡張機能の機能である[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]オブジェクト参照を指定するには、マークアップ拡張機能属性文字列を処理し、オブジェクトを返すことによって起こります、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローダー。 マークアップ拡張機能の動作の詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
   
  マークアップ拡張機能を使用する場合は、その特定のマークアップ拡張機能によって処理される文字列形式の 1 つまたは複数のパラメーターではなく設定されるプロパティのコンテキストで評価される通常提供します。 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)すべての利用可能なリソース ディクショナリ内でそのキーの値を参照して、キーを処理します。 これは、読み込みプロセスを静的リソース参照を受け取るプロパティの値を割り当てる必要がある場合に、ポイントの読み込み中に発生します。 [DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)代わりにプロセス式、およびその式を作成して、キー残り評価されていないアプリケーションが実際に実行されるまで、どの時点で、式が評価され、値を指定します。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "57364750"
 ## <a name="styles-datatemplates-and-implicit-keys"></a>スタイル、Datatemplate、および暗黙的なキー  
  以前では、示されていました内の項目をすべて、<xref:System.Windows.ResourceDictionary>キーを持っている必要があります。 ただし、いないわけでは、明示的なすべてのリソースである必要があります`x:Key`します。 いくつかのオブジェクト型では、別のプロパティの値に関連付けられた、キー値をリソースとして定義されている場合に暗黙のキーをサポートします。 一方、暗黙のキーと呼ばれます、`x:Key`属性は、明示的なキー。 明示的なキーを指定することによって、暗黙のキーを上書きできます。  
   
- リソースの 1 つの非常に重要なシナリオは、定義する場合、<xref:System.Windows.Style>します。 実際を<xref:System.Windows.Style>スタイルは本質的に再利用するためのものであるため、リソース ディクショナリのエントリとしてはほぼ常に定義します。 スタイルの詳細については、次を参照してください。[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
+ リソースの 1 つの非常に重要なシナリオは、定義する場合、<xref:System.Windows.Style>します。 実際を<xref:System.Windows.Style>スタイルは本質的に再利用するためのものであるため、リソース ディクショナリのエントリとしてはほぼ常に定義します。 スタイルの詳細については、[スタイルとテンプレート](../controls/styling-and-templating.md)を参照してください。  
   
  コントロールのスタイルで作成およびできる暗黙のキーを参照します。 コントロールの既定の外観を定義するテーマ スタイルは、この暗黙のキーに依存します。 要求の観点からは、暗黙のキーは、<xref:System.Type>コントロール自体の。 リソースの定義の観点からは、暗黙のキーは、<xref:System.Windows.Style.TargetType%2A>のスタイル。 そのため、カスタム コントロールのテーマを作成する場合、既存のテーマ スタイルを使用して対話するスタイルを作成する必要はありませんを指定する、 [X:key ディレクティブ](../../xaml-services/x-key-directive.md)を<xref:System.Windows.Style>します。 テーマ スタイルを使用する場合はまったく任意のスタイルを指定する必要はありません。 たとえば、次のスタイル定義の動作、場合でも、<xref:System.Windows.Style>キーにするリソースは表示されません。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "57364750"
   
  使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されているスタイルはテーマ ディクショナリのスタイルと同じキーを使用して、テーマ ディクショナリ スタイルより参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
   
- 場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、次を参照してください。[スタイルのコントロールを設計するためのガイドライン](../controls/guidelines-for-designing-stylable-controls.md)します。  
+ 場合、スタイルの暗黙的なキーは、コントロールに適用されません<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>は`true`(またを注意<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>ネイティブの動作、コントロール クラスではなく明示的に、コントロールのインスタンスの一部として設定することがあります)。 また、暗黙的なキーの派生クラスのシナリオをサポートするために、制御する必要がありますオーバーライド<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(の一部として提供されるすべての既存コントロール[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]これを行う)。 スタイル、テーマ、およびコントロールのデザインの詳細については、[スタイルのコントロールを設計するためのガイドライン](../controls/guidelines-for-designing-stylable-controls.md)を参照してください。  
   
- <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../xaml-services/x-type-markup-extension.md). 詳細については、次を参照してください。[データ テンプレートの概要](../data/data-templating-overview.md)します。  
+ <xref:System.Windows.DataTemplate> 暗黙のキーがあります。 暗黙のキーを<xref:System.Windows.DataTemplate>は、<xref:System.Windows.DataTemplate.DataType%2A>プロパティの値。 <xref:System.Windows.DataTemplate.DataType%2A> 明示的に使用するのではなく、型の名前として指定することも[{X:type...}](../../xaml-services/x-type-markup-extension.md). 詳細については、[データ テンプレートの概要](../data/data-templating-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.ResourceDictionary>

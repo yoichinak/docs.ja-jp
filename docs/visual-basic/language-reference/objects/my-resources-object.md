@@ -19,7 +19,7 @@ ms.locfileid: "58821739"
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
   
 ## <a name="remarks"></a>Remarks  
- `My.Resources`オブジェクト、アプリケーションのリソースへのアクセスを提供でき、動的にアプリケーションのリソースを取得します。 詳細については、次を参照してください。[アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
+ `My.Resources`オブジェクト、アプリケーションのリソースへのアクセスを提供でき、動的にアプリケーションのリソースを取得します。 詳細については、[アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)を参照してください。  
   
  `My.Resources`オブジェクトはグローバル リソースのみを公開します。 フォームに関連付けられているリソース ファイルへのアクセスは行いません。 フォームのフォーム リソースにアクセスする必要があります。  
   

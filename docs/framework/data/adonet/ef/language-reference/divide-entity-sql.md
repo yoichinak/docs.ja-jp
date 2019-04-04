@@ -26,7 +26,7 @@ dividend / divisor
  被除数を除算する数値式。 `divisor` は、任意の数値データ型の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
- 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、次を参照してください。[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)します。  
+ 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリを使用して、/算術演算子を別の 1 つの数値を除算します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  

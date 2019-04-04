@@ -17,7 +17,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57369761"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement コンテンツ モデルの概要
-このコンテンツ モデルの概要についてのサポートされているコンテンツを説明します、<xref:System.Windows.Documents.TextElement>します。 <xref:System.Windows.Documents.Paragraph>クラスは、型の<xref:System.Windows.Documents.TextElement>します。 コンテンツ モデルは、他のオブジェクトや要素に含めることのできるオブジェクトや要素を記述します。 派生したオブジェクトに使用するコンテンツ モデルのこの概要を示します<xref:System.Windows.Documents.TextElement>します。 詳細については、次を参照してください。[フロー ドキュメントの概要](flow-document-overview.md)します。  
+このコンテンツ モデルの概要についてのサポートされているコンテンツを説明します、<xref:System.Windows.Documents.TextElement>します。 <xref:System.Windows.Documents.Paragraph>クラスは、型の<xref:System.Windows.Documents.TextElement>します。 コンテンツ モデルは、他のオブジェクトや要素に含めることのできるオブジェクトや要素を記述します。 派生したオブジェクトに使用するコンテンツ モデルのこの概要を示します<xref:System.Windows.Documents.TextElement>します。 詳細については、[フロー ドキュメントの概要](flow-document-overview.md)を参照してください。  
   
   
 <a name="text_element_classes"></a>   
@@ -67,7 +67,7 @@ ms.locfileid: "57369761"
  操作することができます (追加または項目を削除) のそれぞれのプロパティを使用してこれらのコレクションから**Inlines**、**ブロック**、および**ListItems**します。 次の例は、Span を使用しての内容を操作する方法を示します、 **Inlines**プロパティ。  
   
 > [!NOTE]
->  Table では、コンテンツの操作にいくつかのコレクションが使用されますが、これらのコレクションについてはここでは取り上げません。 詳細については、次を参照してください。[テーブルの概要](table-overview.md)します。  
+>  Table では、コンテンツの操作にいくつかのコレクションが使用されますが、これらのコレクションについてはここでは取り上げません。 詳細については、[テーブルの概要](table-overview.md)を参照してください。  
   
  次の例では、作成、新しい<xref:System.Windows.Documents.Span>オブジェクト、および、使用、`Add`のコンテンツの子として 2 つのテキストを追加するメソッドが実行される、<xref:System.Windows.Documents.Span>します。  
   

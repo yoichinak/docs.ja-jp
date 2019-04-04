@@ -83,13 +83,13 @@ Windows Communication Foundation (WCF) は、一連の Web サービスの仕様
 </wsFederationHttpBinding>  
 ```  
   
- 詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
+ 詳細については、[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)を参照してください。  
   
 ## <a name="system-provided-metadata-bindings"></a>システム指定のメタデータ バインディング  
  次の表に、<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> クラスによって公開される、システム指定の相互運用可能なメタデータ バインディングによってサポートされるプロトコルを示します。  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)バインディングは、次のプロトコルをサポートしています。 このバインディングの使用に関する詳細については、次を参照してください。[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)します。  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)バインディングは、次のプロトコルをサポートしています。 このバインディングの使用に関する詳細については、[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)を参照してください。  
   
 |カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) は、一連の Web サービスの仕様
 |メタデータ|WS-MetadataExchange|[WS-MetadataExchange](https://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF には、XML スキーマ、WSDL、Ws-policy を取得するには、Ws-metadataexchange が実装されています。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)は次のプロトコルをサポートします。 このバインディングの使用に関する詳細については、次を参照してください。[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)します。  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)は次のプロトコルをサポートします。 このバインディングの使用に関する詳細については、[メタデータの公開](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)を参照してください。  
   
 |カテゴリ|プロトコル|仕様と用途|  
 |--------------|--------------|-----------------------------|  

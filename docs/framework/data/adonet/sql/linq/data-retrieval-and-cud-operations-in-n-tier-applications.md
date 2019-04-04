@@ -20,7 +20,7 @@ Customers または Orders のようなエンティティ オブジェクトを�
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] エンティティをシリアル化する方法の詳細についてはまったく関与しません。 使用する方法についての詳細、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQLMetal ツールは、Windows Communication Foundation (WCF) を使用してシリアル化するクラスを生成して[方法。エンティティをシリアル化できるように](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)します。  
   
 > [!NOTE]
->  `Attach` メソッドは、新しいエンティティまたは逆シリアル化されたエンティティに対してのみ呼び出してください。 エンティティを元のデータ コンテキストからデタッチする唯一の方法は、シリアル化です。 デタッチされていないエンティティを新しいデータ コンテキストにアタッチしようとした場合、元のデータ コンテキストの遅延ローダーがそのエンティティにまだ存在するならば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は例外をスローします。 2 つの異なるデータ コンテキストの遅延ローダーを持つエンティティに対して、挿入、更新、および削除操作を実行すると、予想外の結果が生じる可能性があります。 遅延ローダーの詳細については、次を参照してください。[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)します。  
+>  `Attach` メソッドは、新しいエンティティまたは逆シリアル化されたエンティティに対してのみ呼び出してください。 エンティティを元のデータ コンテキストからデタッチする唯一の方法は、シリアル化です。 デタッチされていないエンティティを新しいデータ コンテキストにアタッチしようとした場合、元のデータ コンテキストの遅延ローダーがそのエンティティにまだ存在するならば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は例外をスローします。 2 つの異なるデータ コンテキストの遅延ローダーを持つエンティティに対して、挿入、更新、および削除操作を実行すると、予想外の結果が生じる可能性があります。 遅延ローダーの詳細については、[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)を参照してください。  
   
 ## <a name="retrieving-data"></a>データの取得  
   
@@ -400,7 +400,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3.  (true に設定された) 2 番目のブール値パラメーターを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、元の値を提供しなくても、変更トラッカーはオブジェクトが変更済みと見なします。 この手法では、オブジェクトにバージョン/タイムスタンプ フィールドが含まれる必要があります。  
   
- 詳細については、次を参照してください。[オブジェクトの状態と変更の追跡](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)します。  
+ 詳細については、[オブジェクトの状態と変更の追跡](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)を参照してください。  
   
  アタッチ対象のオブジェクトと同じ ID を持つエンティティ オブジェクトが ID キャッシュ内に既に存在する場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  
   

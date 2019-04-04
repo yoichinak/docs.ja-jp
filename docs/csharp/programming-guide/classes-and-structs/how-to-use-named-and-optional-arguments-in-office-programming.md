@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966802"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412202"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>方法: Office プログラミングで名前付き引数と省略可能な引数を使用する (C# プログラミング ガイド)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] で導入された名前付き引数と省略可能な引数を使うと、C# プログラミングの便利さ、柔軟性、読みやすさが向上します。 さらに、Microsoft Office オートメーション API などの COM インターフェイスへのアクセスが大幅に楽になります。  
@@ -79,8 +79,7 @@ ms.locfileid: "56966802"
   
 1.  `ConvertToTable` メソッドを使って、テーブル内のテキストを囲みます。 このメソッドには、16 個の省略可能なパラメーターがあります。 次の例に示すように、IntelliSense では省略可能なパラメーターは角かっこで囲まれています。  
   
-     ![ConvertToTable メソッドのパラメーターのリスト。](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-ConvertToTable のパラメーター  
+     ![ConvertToTable メソッドのパラメーターのリスト](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      名前付きの省略可能な引数を使うと、変更するパラメーターの値だけを指定できます。 簡単なテーブルを作成するには、`DisplayInWord` メソッドの最後に次のコードを追加します。 この引数は、`range` 内のテキスト文字列のコンマがテーブルのセルを区切ることを指定します。  
   

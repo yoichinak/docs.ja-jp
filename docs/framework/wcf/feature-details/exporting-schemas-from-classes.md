@@ -45,7 +45,7 @@ ms.locfileid: "54526965"
   
 -   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>。 `Type` のコレクションであり、エクスポートされる型に対応する既知の型を表します (詳細については、次を参照してください[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)。これらの既知の型は、`Export` メソッドに渡された型と共に、`Export` 呼び出しが行われるたびにエクスポートされます。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>。 このプロパティを介して <xref:System.Runtime.Serialization.IDataContractSurrogate> を渡すことにより、エクスポート処理をカスタマイズできます。 詳細については、[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)を参照してください。 既定では、サロゲートは使用されません。  
   
 ## <a name="helper-methods"></a>ヘルパー メソッド  
  `XsdDataContractExporter` には、主要な機能であるスキーマのエクスポート処理に加え、型に関する情報を調べるためのヘルパー メソッドが定義されています。 以下に例を示します。  

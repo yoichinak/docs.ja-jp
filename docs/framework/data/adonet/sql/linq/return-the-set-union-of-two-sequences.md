@@ -23,7 +23,7 @@ ms.locfileid: "54546963"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、<xref:System.Linq.Queryable.Union%2A>として、マルチセットの順序なし連結演算子がマルチセットに対して定義されます (事実上の結果、 [ `UNION ALL` ](https://docs.microsoft.com/sql/t-sql/language-elements/set-operators-union-transact-sql?view=sql-server-2017) SQL 句)。
 
-詳細と例については、次を参照してください。<xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>します。
+詳細と例については、<xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>を参照してください。
   
 ## <a name="see-also"></a>関連項目
 - [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

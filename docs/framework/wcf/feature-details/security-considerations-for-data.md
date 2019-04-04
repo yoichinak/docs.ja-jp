@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) インフラストラクチャの桁数�
 
 悪質なコードがさまざまな機能拡張ポイントに接続されないようにする必要があります。 これが特に関係するのは、部分信頼で実行する場合、部分信頼アセンブリの型を処理する場合、または部分信頼コードで使用できるコンポーネントを作成する場合です。 詳細については、後のセクションの「部分信頼に関する脅威」を参照してください。
 
-部分信頼で実行する場合、データ コントラクトのシリアル化インフラストラクチャがサポートするのは、データ コントラクト プログラミング モデルの一部のサブセットのみです。たとえば、 <xref:System.SerializableAttribute> 属性を使用するプライベート データ メンバーや型はサポートされません。 詳細については、次を参照してください。[部分信頼](../../../../docs/framework/wcf/feature-details/partial-trust.md)します。
+部分信頼で実行する場合、データ コントラクトのシリアル化インフラストラクチャがサポートするのは、データ コントラクト プログラミング モデルの一部のサブセットのみです。たとえば、 <xref:System.SerializableAttribute> 属性を使用するプライベート データ メンバーや型はサポートされません。 詳細については、[部分信頼](../../../../docs/framework/wcf/feature-details/partial-trust.md)を参照してください。
 
 ## <a name="avoiding-unintentional-information-disclosure"></a>意図しない情報公開の回避
 
@@ -118,7 +118,7 @@ MTOM メッセージ エンコーダーには、 `MaxBufferSize` 設定もあり
 
 ストリーミング サービス拒否攻撃では、メモリ消費は発生しません。 代わりに、この攻撃では送信側または受信側でデータの転送が遅くなります。 データが送信または受信されるのを待っている間、スレッドや利用可能な接続などのリソースが消耗します。 この状況は、悪質な攻撃を受けた結果として、または正当な送信側または受信側が遅いネットワーク接続を使用していることが原因で起こる可能性があります。
 
-この攻撃を軽減するには、トランスポートのタイムアウトを適切に設定します。 詳細については、次を参照してください。[トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)します。 次に、同期しない使用`Read`または`Write`WCF でストリームを操作する際に操作します。
+この攻撃を軽減するには、トランスポートのタイムアウトを適切に設定します。 詳細については、[トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)を参照してください。 次に、同期しない使用`Read`または`Write`WCF でストリームを操作する際に操作します。
 
 ## <a name="using-xml-safely"></a>XML の安全な使用
 
@@ -270,7 +270,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> で逆シリアル化が行われる際に、ほとんどのクラスで、コンストラクターが実行されません。 このため、コンストラクターで実行される状態管理には依存できません。
 
-- コールバックを使用して、オブジェクトを確実に有効な状態にします。 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性でマークされたコールバックは、逆シリアル化の完了後に実行され、全体の状態を調査して訂正できるので便利です。 詳細については、次を参照してください。[バージョン トレラントなシリアル化コールバック](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)します。
+- コールバックを使用して、オブジェクトを確実に有効な状態にします。 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 属性でマークされたコールバックは、逆シリアル化の完了後に実行され、全体の状態を調査して訂正できるので便利です。 詳細については、[バージョン トレラントなシリアル化コールバック](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)を参照してください。
 
 - データ コントラクト型は、プロパティの setter が特定の順序で呼び出されなくてもよいように設計します。
 
@@ -278,7 +278,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 - 状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティに依存することはできません。 データは常に `null`、 `zero`、または `invalid`になります。
 
-- 信頼できないデータ ソースから逆シリアル化されたオブジェクト グラフは、検証せずに信頼してはいけません。 各オブジェクトが整合状態にあっても、オブジェクト グラフ全体としては整合状態にない場合があります。 さらに、オブジェクト グラフの保存モードが無効になっている場合でも、逆シリアル化されたグラフに、同じオブジェクトへの複数の参照または循環参照が存在することがあります。 詳細については、次を参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。
+- 信頼できないデータ ソースから逆シリアル化されたオブジェクト グラフは、検証せずに信頼してはいけません。 各オブジェクトが整合状態にあっても、オブジェクト グラフ全体としては整合状態にない場合があります。 さらに、オブジェクト グラフの保存モードが無効になっている場合でも、逆シリアル化されたグラフに、同じオブジェクトへの複数の参照または循環参照が存在することがあります。 詳細については、[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)を参照してください。
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer の安全な使用
 

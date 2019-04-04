@@ -23,7 +23,7 @@ ms.locfileid: "56333054"
 
 エンドポイントの構成要素が含まれている最初のタスクで重要ですが、 `bindingConfiguration` (この例では) でという名前のバインド構成を参照する属性`MessageSecurity`。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前を参照し、`enabled`の属性、 [  **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))要素`true`します。 信頼できるセッション内で使用できる順序付き配信の保証は、`ordered` 属性を `true` に設定することによって要求できます。
 
-この構成手順は、基になる例のソースのコピーを次を参照してください。、 [WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)します。
+この構成手順は、基になる例のソースのコピーを、 [WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)を参照してください。
 
 2 番目のタスクの必要な項目は、設定によって実現されます、`mode`の属性、 **\<セキュリティ >** 要素に含まれている、 **\<バインド >** 要素は、クライアントとサービスの`Message`します。
 

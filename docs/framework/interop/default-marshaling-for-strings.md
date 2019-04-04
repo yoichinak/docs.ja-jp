@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221070"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409316"
 ---
 # <a name="default-marshaling-for-strings"></a>文字列に対する既定のマーシャリング
-
-  <xref:System.String?displayProperty=nameWithType> と <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスのマーシャリング動作は類似しています。  
+<xref:System.String?displayProperty=nameWithType> と <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスのマーシャリング動作は類似しています。  
   
  文字列は、COM スタイル `BSTR` 型または null で終わる文字列 (null 文字で終わる文字配列) としてマーシャリングされます。 文字列内の文字は、Unicode (Windows システムでの既定値) または ANSI としてマーシャリングすることができます。  
   
@@ -36,8 +35,7 @@ ms.locfileid: "56221070"
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
 ## <a name="strings-used-in-interfaces"></a>インターフェイスで使用される文字列  
- 次の表は、アンマネージ コードへのメソッド引数としてマーシャリングするときの、文字列データ型のマーシャリングのオプションを示しています。 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、COM インターフェイスへの文字列をマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
+ 次の表は、アンマネージ コードへのメソッド引数としてマーシャリングするときの、文字列データ型のマーシャリングのオプションを示しています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、COM インターフェイスへの文字列をマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
@@ -83,8 +81,7 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
 ## <a name="strings-used-in-platform-invoke"></a>プラットフォーム呼び出しで使用される文字列  
  プラットフォーム呼び出しは、文字列の引数を、.NET Framework 形式 (Unicode) から、プラットフォーム アンマネージ形式に変換してコピーします。 文字列は不変であり、呼び出しが戻るときに、アンマネージド メモリから元のマネージド メモリにコピーされることはありません。  
   
- 次の表は、文字列をプラットフォーム呼び出しのメソッド引数としてマーシャリングする際のマーシャリング オプションをリストしています。 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、文字列をマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
+ 次の表は、文字列をプラットフォーム呼び出しのメソッド引数としてマーシャリングする際のマーシャリング オプションをリストしています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、文字列をマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
@@ -142,8 +139,7 @@ String s);
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
 ## <a name="strings-used-in-structures"></a>構造体で使用される文字列  
- 文字列は構造体の有効なメンバーです。ただし、<xref:System.Text.StringBuilder> バッファーは構造体では無効です。 次の表は、型をフィールドとしてマーシャリングするときの、文字列データ型のマーシャリングのオプションを示しています。 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、文字列をフィールドにマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
+ 文字列は構造体の有効なメンバーです。ただし、<xref:System.Text.StringBuilder> バッファーは構造体では無効です。 次の表は、型をフィールドとしてマーシャリングするときの、文字列データ型のマーシャリングのオプションを示しています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、文字列をフィールドにマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
@@ -153,8 +149,7 @@ String s);
 |`UnmanagedType.LPWStr`|Unicode 文字の null で終わる配列へのポインター。|  
 |`UnmanagedType.ByValTStr`|固定長の文字配列。配列の型は、包含構造体の文字セットによって決まります。|  
   
- 
-  `ByValTStr` 型は、構造体に定義されているインライン固定長文字配列で使用します。 その他の型は、文字列へのポインターを含む構造体に含まれている文字列参照に適用されます。  
+ `ByValTStr` 型は、構造体に定義されているインライン固定長文字配列で使用します。 その他の型は、文字列へのポインターを含む構造体に含まれている文字列参照に適用されます。  
   
  包含構造体に適用される <xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性の `CharSet` 引数によって、構造体内の文字列の文字形式が決まります。 以下の構造体の例には、文字列参照とインライン文字列、そして ANSI、Unicode、およびプラットフォーム依存文字が含まれています。  
   
@@ -225,7 +220,7 @@ struct StringInfoT {
   
  この解決策は、<xref:System.Text.StringBuilder> バッファーを文字列ではなく引数として渡すことです。 呼び出し先は、`StringBuilder` の容量を超えない範囲で、`StringBuilder` を逆参照したり変更したりすることができます。 また、固定長に初期化することもできます。 たとえば、`StringBuilder` バッファーを初期化してその容量を `N` にする場合、マーシャラーは (`N`+1) 文字のサイズのバッファーを提供します。 +1 は、アンマネージ文字列に null 終了文字があることをしめしています。`StringBuilder` にはそれがありません。  
   
- たとえば、Microsoft Win32 API `GetWindowText` (Windows.h に定義されている) 関数は、固定長の文字バッファーを操作するアンマネージ コードを渡す必要があります。 `LpString` は、呼び出し元が割り当てたサイズ `nMaxCount` のバッファーを示します。 呼び出し元は、バッファーを割り当てて、`nMaxCount` 引数を割り当てられたバッファーのサイズに設定することが期待されています。 次のコードは、Windows.h で定義されている `GetWindowText` 関数宣言を示しています。  
+ たとえば、Microsoft Windows API `GetWindowText` (Windows.h に定義されている) 関数は、固定長の文字バッファーを操作するアンマネージド コードを渡す必要があります。 `LpString` は、呼び出し元が割り当てたサイズ `nMaxCount` のバッファーを示します。 呼び出し元は、バッファーを割り当てて、`nMaxCount` 引数を割り当てられたバッファーのサイズに設定することが期待されています。 次のコードは、Windows.h で定義されている `GetWindowText` 関数宣言を示しています。  
   
 ```  
 int GetWindowText(  

@@ -21,7 +21,7 @@ ms.locfileid: "57369943"
   
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するのにはの基本的な機能を使用する方法を理解しておいて、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>クラス。 これらの型の概要については、次を参照してください。、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。  
+ このトピックを理解するのにはの基本的な機能を使用する方法を理解しておいて、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>クラス。 これらの型の概要については、、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)を参照してください。  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>タイルで領域を塗りつぶす  

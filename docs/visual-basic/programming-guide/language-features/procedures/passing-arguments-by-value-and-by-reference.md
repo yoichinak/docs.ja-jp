@@ -30,7 +30,7 @@ Visual basic では、プロシージャに引数を渡すことができます*
   
 -   引数のデータ型は、値型または参照型かどうか  
   
- 詳細については、次を参照してください。[変更の間の相違点と変更できない引数](./differences-between-modifiable-and-nonmodifiable-arguments.md)と[の相違点の間の値と参照渡しによって引数を渡す](./differences-between-passing-an-argument-by-value-and-by-reference.md)します。  
+ 詳細については、[変更の間の相違点と変更できない引数](./differences-between-modifiable-and-nonmodifiable-arguments.md)と[の相違点の間の値と参照渡しによって引数を渡す](./differences-between-passing-an-argument-by-value-and-by-reference.md)を参照してください。  
   
 ## <a name="choice-of-passing-mechanism"></a>渡す機能の選択  
  慎重に各引数の引き渡し方法を選択する必要があります。  

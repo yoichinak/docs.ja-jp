@@ -14,7 +14,7 @@ ms.locfileid: "57364009"
 # <a name="maximize-wpf-3d-performance"></a>WPF の 3D パフォーマンスの最大化
 使用すると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を 3D コントロールをビルドし、アプリケーションで 3D シーンを含めることがパフォーマンスの最適化を考慮すべき重要です。 このトピックでは、3 D クラスとそれらを使用するときにパフォーマンスを最適化するための推奨事項と共に、アプリケーションのパフォーマンスに影響を与えるプロパティの一覧を示します。  
   
- このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、次を参照してください。[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)します。  
+ このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)を参照してください。  
   
 ## <a name="performance-impact-high"></a>パフォーマンスに影響します。High  
   

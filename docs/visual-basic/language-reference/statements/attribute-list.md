@@ -32,7 +32,7 @@ ms.locfileid: "58818421"
 ## <a name="remarks"></a>Remarks  
  ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティ、およびなど) には、1 つまたは複数の属性を適用できます。 属性がアセンブリのメタデータに表示され、コードの注釈を設定または特定のプログラミング要素を使用する方法を指定するのに役立ちます。 Visual Basic と .NET Framework によって定義された属性を適用して、独自の属性を定義することができます。  
 
- 属性を使用する場合の詳細については、次を参照してください。[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)します。 属性名には、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+ 属性を使用する場合の詳細については、[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)を参照してください。 属性名には、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
   
 ## <a name="rules"></a>ルール  
   

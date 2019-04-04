@@ -52,11 +52,11 @@ Option Infer { On | Off }
  ![Option Infer がオフの場合は、IntelliSense の表示を示すスクリーン ショット。](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
->  変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic と呼ばれる操作を実行する*ボックス化*と*ボックス化解除*間の変換を`Object`と実行速度が低下は、値の型。 ボックス化とボックス化解除については、次を参照してください。、 [Visual Basic 言語仕様](~/_vblang/spec/conversions.md#value-type-conversions)します。
+>  変数を `Object` として宣言すると、プログラムの実行中にランタイム型が変更される場合があります。 Visual Basic と呼ばれる操作を実行する*ボックス化*と*ボックス化解除*間の変換を`Object`と実行速度が低下は、値の型。 ボックス化とボックス化解除については、、 [Visual Basic 言語仕様](~/_vblang/spec/conversions.md#value-type-conversions)を参照してください。
   
  型の推定は、プロシージャ レベルで適用され、クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側には適用されません。  
   
- 詳細については、次を参照してください。[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+ 詳細については、[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Option Infer ステートメントが指定されていない場合  
  ソース コードが含まれていない場合、`Option Infer`ステートメントでは、 **Option Infer**の設定、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)使用されます。 コマンド ライン コンパイラを使用する場合、 [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)コンパイラ オプションを使用します。  
@@ -82,7 +82,7 @@ Option Infer { On | Off }
 |---|---|---|---|  
 |いいえ|いいえ|`Dim qty`|`Option Strict` がオフ (既定値) の場合、変数は `Nothing` に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
 |Ｘ|[はい]|`Dim qty = 5`|`Option Infer` がオン (既定値) の場合、変数は初期化子のデータ型になります。 参照してください[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|  
-|[はい]|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。|  
+|[はい]|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 詳細については、[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)を参照してください。|  
 |[はい]|[はい]|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|  
   
 ## <a name="example"></a>例  

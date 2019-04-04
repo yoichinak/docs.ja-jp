@@ -28,7 +28,7 @@ ms.locfileid: "57374662"
  ![LineGeometry](./media/graphicsmm-line.gif "graphicsmm_line")  
 (10,20) から (100,130) まで描画された LineGeometry  
   
- その他の単純なジオメトリ クラス<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.EllipseGeometry>します。 複雑なものと同様にこれらのジオメトリを作成することもを使用して、<xref:System.Windows.Media.PathGeometry>または<xref:System.Windows.Media.StreamGeometry>します。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
+ その他の単純なジオメトリ クラス<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.EllipseGeometry>します。 複雑なものと同様にこれらのジオメトリを作成することもを使用して、<xref:System.Windows.Media.PathGeometry>または<xref:System.Windows.Media.StreamGeometry>します。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [ジオメトリの概要](geometry-overview.md)

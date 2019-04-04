@@ -13,7 +13,7 @@ ms.locfileid: "53239515"
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データを公開します。  
   
 ## <a name="enabling-wmi"></a>WMI の有効化  
- WMI は、Web ベースのエンタープライズ管理 (WBEM) 標準をマイクロソフトが実装したものです。 WMI SDK の詳細については、次を参照してください。 [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)します。 WBEM は、アプリケーションが Management Instrumentation を外部管理ツールに開示する業界標準の方法です。  
+ WMI は、Web ベースのエンタープライズ管理 (WBEM) 標準をマイクロソフトが実装したものです。 WMI SDK の詳細については、[Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)を参照してください。 WBEM は、アプリケーションが Management Instrumentation を外部管理ツールに開示する業界標準の方法です。  
   
  WMI プロバイダーは、WBEM と互換性のあるインターフェイスを通して実行時にインストルメンテーションを公開するコンポーネントです。 これは、属性と値のペアを持つ WMI オブジェクトのセットで構成されます。 ペアには多くの単純型を指定できます。 管理ツールは、実行時にインターフェイスを介してサービスに接続できます。 WCF では、アドレス、バインディング、動作、およびリスナーなどのサービスの属性を公開します。  
   
@@ -30,14 +30,14 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
  この構成エントリには、WMI インターフェイスが開示されます。 管理アプリケーションはこのインターフェイスを通して接続し、アプリケーションの Management Instrumentation にアクセスできるようになります。  
   
 ## <a name="accessing-wmi-data"></a>WMI データへのアクセス  
- WMI データには、複数の異なる方法でアクセスできます。 マイクロソフトでは、WMI Api を提供するスクリプト、Visual Basic アプリケーション、C++ アプリケーションでは、および[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 詳細については、次を参照してください。 [WMI を使用した](https://go.microsoft.com/fwlink/?LinkId=95183)します。  
+ WMI データには、複数の異なる方法でアクセスできます。 マイクロソフトでは、WMI Api を提供するスクリプト、Visual Basic アプリケーション、C++ アプリケーションでは、および[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 詳細については、[WMI を使用した](https://go.microsoft.com/fwlink/?LinkId=95183)を参照してください。  
   
 > [!CAUTION]
 >  .NET Framework 提供のメソッドを使用し、プログラムで WMI データにアクセスする場合、そのようなメソッドは接続確立時に例外をスローする場合があることを認識しておく必要があります。 接続は、<xref:System.Management.ManagementObject> インスタンスの構築中に確立されませんが、実際のデータ交換が含まれた最初の要求時に確立されます。 したがって、`try..catch` ブロックを使用して例外をキャッチする必要があります。  
   
  トレース レベルやメッセージ ログ レベルだけでなく、WMI の `System.ServiceModel` トレース ソースのメッセージ ログ オプションも変更できます。 これを行うへのアクセス、 [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)インスタンスで、これらのブール型プロパティを公開します: `LogMessagesAtServiceLevel`、 `LogMessagesAtTransportLevel`、 `LogMalformedMessages`、および`TraceLevel`します。 そのため、メッセージ ログ用のトレース リスナーを構成していても、これらのオプションを構成で `false` に設定している場合は、後でアプリケーションを実行しているときに `true` に変更できます。 これで、メッセージ ログが実行時に有効になります。 同様に、構成ファイルでメッセージ ログを有効にしている場合は、実行時に WMI を使用して無効にできます。  
   
- 構成ファイルで、メッセージ ログのメッセージ ログ トレース リスナーまたはトレースの `System.ServiceModel` トレース リスナーが指定されていない場合、WMI が変更を受け入れても変更は有効になりません。 各リスナーを正しく設定の詳細については、次を参照してください。[メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)と[トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 構成で設定された他のすべてのトレース ソースのトレース レベルは、アプリケーションが開始されると有効になり変更できません。  
+ 構成ファイルで、メッセージ ログのメッセージ ログ トレース リスナーまたはトレースの `System.ServiceModel` トレース リスナーが指定されていない場合、WMI が変更を受け入れても変更は有効になりません。 各リスナーを正しく設定の詳細については、[メッセージ ログの構成](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)と[トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)を参照してください。 構成で設定された他のすべてのトレース ソースのトレース レベルは、アプリケーションが開始されると有効になり変更できません。  
   
  WCF の公開、`GetOperationCounterInstanceName`スクリプト メソッド。 このメソッドに操作名を指定した場合、このメソッドはパフォーマンス カウンターのインスタンス名を返します。 ただし、このメソッドは入力を検証しません。 したがって、正しくない操作名を指定した場合、正しくないカウンター名が返されます。  
   
@@ -147,7 +147,7 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
 Whoami /user  
 ```  
   
- これにより、現在のユーザーの SID が提供されますが、この方法を使用して任意のユーザーで SID を取得することはできません。 SID を取得するもう 1 つのメソッドは、使用する、 [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467)ツールから、[管理タスク用の Windows 2000 リソース キット ツール](https://go.microsoft.com/fwlink/?LinkId=178660)します。 このツールは、2 人のユーザー (ローカルまたはドメイン) の SID を比較し、副作用として、2 つの SID をコマンド ラインに出力します。 詳細については、次を参照してください。 [Well Known Sid](https://go.microsoft.com/fwlink/?LinkId=186468)します。  
+ これにより、現在のユーザーの SID が提供されますが、この方法を使用して任意のユーザーで SID を取得することはできません。 SID を取得するもう 1 つのメソッドは、使用する、 [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467)ツールから、[管理タスク用の Windows 2000 リソース キット ツール](https://go.microsoft.com/fwlink/?LinkId=178660)します。 このツールは、2 人のユーザー (ローカルまたはドメイン) の SID を比較し、副作用として、2 つの SID をコマンド ラインに出力します。 詳細については、[Well Known Sid](https://go.microsoft.com/fwlink/?LinkId=186468)を参照してください。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>リモート WMI オブジェクトのインスタンスへのアクセス  
  リモート コンピューター上の WCF WMI インスタンスにアクセスする必要がある場合は、パケットのプライバシーへのアクセスに使用するツールを有効にする必要があります。 次のセクションでは、WMI CIM Studio、Windows Management Instrumentation テスト、および .NET SDK 2.0 を使用してこれらを実現する方法を説明します。  

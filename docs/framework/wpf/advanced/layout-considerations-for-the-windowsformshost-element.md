@@ -30,9 +30,9 @@ ms.locfileid: "57366544"
   
 |レイアウト機能|説明|  
 |--------------------|-----------------|  
-|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、次を参照してください。 [AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)します。|  
+|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、[AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)を参照してください。|  
 |固定とドッキング|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、位置と親コンテナーに基づくサイズ変更をサポートします。 詳細については、次のトピックを参照してください。 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> および <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>|  
-|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、次を参照してください。 [Windows フォームで自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)します。|  
+|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、[Windows フォームで自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)を参照してください。|  
 |レイアウト コンテナー|<xref:System.Windows.Forms.FlowLayoutPanel>と<xref:System.Windows.Forms.TableLayoutPanel>コントロールの子コントロールを配置および自体の内容に従ってサイズします。|  
   
 ## <a name="layout-limitations"></a>レイアウトの制限事項  
@@ -73,7 +73,7 @@ ms.locfileid: "57366544"
 |オーバーフロー|ときに、<xref:System.Windows.Forms.Integration.WindowsFormsHost>から要素が変換`double`値を`int`値、オーバーフローが可能です。 も大きい値は<xref:System.Int32.MaxValue>に設定されている<xref:System.Int32.MaxValue>します。|  
   
 ### <a name="layout-related-properties"></a>レイアウト関連のプロパティ  
- レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
+ レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、[Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)を参照してください。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>ホストされるコントロールのレイアウトの変更  
  ホストのレイアウトの変更[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを反映[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウトの更新をトリガーします。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>メソッド<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホストされるコントロールのレイアウトの変更が発生することにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト エンジンを実行します。  

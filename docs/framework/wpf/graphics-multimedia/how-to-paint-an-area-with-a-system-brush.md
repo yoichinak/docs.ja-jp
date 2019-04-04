@@ -34,7 +34,7 @@ ms.locfileid: "57364113"
   
      動的参照を取得、<xref:System.Windows.Media.Color>指定したシステム カラーの構造体。  
   
- システム カラーは、<xref:System.Windows.Media.Color>ブラシを構成するために使用できます。 たとえば、システム カラーを設定して、使用してグラデーションを作成することができます、<xref:System.Windows.Media.GradientStop.Color%2A>のプロパティを<xref:System.Windows.Media.LinearGradientBrush>オブジェクトのシステム カラーとグラデーションの分岐点。 例については、次を参照してください。[グラデーションでシステム カラーを使用して](how-to-use-system-colors-in-a-gradient.md)します。  
+ システム カラーは、<xref:System.Windows.Media.Color>ブラシを構成するために使用できます。 たとえば、システム カラーを設定して、使用してグラデーションを作成することができます、<xref:System.Windows.Media.GradientStop.Color%2A>のプロパティを<xref:System.Windows.Media.LinearGradientBrush>オブジェクトのシステム カラーとグラデーションの分岐点。 例については、[グラデーションでシステム カラーを使用して](how-to-use-system-colors-in-a-gradient.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、動的なシステム ブラシの参照を使用して、ボタンの背景を設定します。  
@@ -45,7 +45,7 @@ ms.locfileid: "57364113"
   
  [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorDesktopBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemBrushExample.xaml#graphicsmmstaticsystemcolordesktopbrushexamplewholepage)]  
   
- グラデーションでシステム カラーを使用する方法を示す例は、次を参照してください。[グラデーションでシステム カラーを使用して](how-to-use-system-colors-in-a-gradient.md)します。  
+ グラデーションでシステム カラーを使用する方法を示す例は、[グラデーションでシステム カラーを使用して](how-to-use-system-colors-in-a-gradient.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [グラデーションでシステム カラーを使用する](how-to-use-system-colors-in-a-gradient.md)

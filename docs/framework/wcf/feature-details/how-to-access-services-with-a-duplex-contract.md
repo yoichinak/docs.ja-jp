@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッ�
 
 二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスだけに接続できるようにする必要があります。
 
-基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)します。
+基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。
 
 ## <a name="to-access-a-duplex-service"></a>双方向サービスにアクセスするには
 

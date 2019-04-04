@@ -64,12 +64,12 @@ ms.locfileid: "57704507"
 |<xref:System.Windows.Forms.HtmlWindow>|<xref:System.Windows.Forms.HtmlWindow.DomWindow%2A>|  
 |<xref:System.Windows.Forms.HtmlHistory>|<xref:System.Windows.Forms.HtmlHistory.DomHistory%2A>|  
   
- これはサポートされていませんが、アプリケーションから HTML DOM のアンマネージ ライブラリ (MSHTML.dll) への参照を追加する COM インターフェイスを使用する最も簡単な方法です。 詳細については、次を参照してください。[サポート技術情報記事 934368](https://support.microsoft.com/kb/934368)します。  
+ これはサポートされていませんが、アプリケーションから HTML DOM のアンマネージ ライブラリ (MSHTML.dll) への参照を追加する COM インターフェイスを使用する最も簡単な方法です。 詳細については、[サポート技術情報記事 934368](https://support.microsoft.com/kb/934368)を参照してください。  
   
 ## <a name="accessing-script-functions"></a>スクリプト関数へのアクセス  
  HTML ページなどのスクリプト言語を使用して、1 つまたは複数の関数を定義できます[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]または VBScript です。 これらの関数がの内側に配置する`SCRIPT` ページで、ページし、DOM のイベントに応答またはオンデマンドで実行できます  
   
- 使用して HTML ページで定義する、スクリプト関数を呼び出すことができます、<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>メソッド。 この返される結果に変換するキャストを使用するには、スクリプト メソッドは HTML 要素を返す場合、<xref:System.Windows.Forms.HtmlElement>します。 詳細とコード例では、次を参照してください。<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>します。  
+ 使用して HTML ページで定義する、スクリプト関数を呼び出すことができます、<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>メソッド。 この返される結果に変換するキャストを使用するには、スクリプト メソッドは HTML 要素を返す場合、<xref:System.Windows.Forms.HtmlElement>します。 詳細とコード例では、<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [マネージド HTML DOM (Document Object Model) の使用](using-the-managed-html-document-object-model.md)

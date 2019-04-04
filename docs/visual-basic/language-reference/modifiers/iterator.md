@@ -48,7 +48,7 @@ ms.locfileid: "58822701"
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- その他の例では、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)します。  
+ その他の例では、[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

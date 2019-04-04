@@ -35,7 +35,7 @@ End Sub
 |`statements`|必須。 ステートメントの一覧。|  
   
 ## <a name="remarks"></a>Remarks  
- A*ラムダ式*名前がないサブルーチンは、1 つまたは複数のステートメントを実行します。 ラムダ式を任意の場所に使用できるデリゲート型への引数としてを除き使用できます`RemoveHandler`します。 デリゲート、およびデリゲートとラムダ式の使用に関する詳細については、次を参照してください。 [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)と[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。  
+ A*ラムダ式*名前がないサブルーチンは、1 つまたは複数のステートメントを実行します。 ラムダ式を任意の場所に使用できるデリゲート型への引数としてを除き使用できます`RemoveHandler`します。 デリゲート、およびデリゲートとラムダ式の使用に関する詳細については、[Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)と[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)を参照してください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  標準的なサブルーチンのラムダ式の構文に似ています。 相違点は次のとおりです。  
@@ -53,7 +53,7 @@ End Sub
 -   ジェネリック パラメーターはラムダ式で許可されていません。  
   
 ## <a name="example"></a>例  
- 値をコンソールに出力するラムダ式の例を次に示します。 この例では、サブルーチンの両方の単一行および複数行のラムダ式構文を示します。 例については、次を参照してください。[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
+ 値をコンソールに出力するラムダ式の例を次に示します。 この例では、サブルーチンの両方の単一行および複数行のラムダ式構文を示します。 例については、[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)を参照してください。  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   

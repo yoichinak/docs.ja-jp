@@ -110,7 +110,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
     </Catalog>
     ```
 
-    XML 属性軸プロパティの詳細については、次を参照してください。 [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)します。
+    XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)を参照してください。
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>XML リテラルに要素を追加するには
 

@@ -42,7 +42,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-詳細については、[明示的なフィールド。`val`キーワード](explicit-fields-the-val-keyword.md)を参照してください。
+詳細については、次を参照してください。[明示的なフィールド。`val`キーワード](explicit-fields-the-val-keyword.md)します。
 
 ## <a name="executing-side-effects-in-constructors"></a>コンス トラクター内で実行中の副作用
 

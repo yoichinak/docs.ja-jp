@@ -13,7 +13,7 @@ ms.locfileid: "57371179"
 # <a name="argument"></a>\<argument>
 アクティビティ状態クエリに関連付けられている引数を表す構成要素。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
+ 追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  

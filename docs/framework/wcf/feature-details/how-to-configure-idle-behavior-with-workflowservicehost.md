@@ -32,7 +32,7 @@ ms.locfileid: "54727392"
      `timeToUnload` 属性は、ワークフロー サービス インスタンスがアイドル状態になってから、そのワークフロー サービス インスタンスがアンロードされるまでの時間の範囲を指定します。 `timeToPersist` 属性は、ワークフロー サービス インスタンスがアイドル状態になってから、そのワークフロー サービス インスタンスが永続化されるまでの時間の範囲を指定します。 `timeToUnload` の既定値は 1 分です。 `timeToPersist` の既定値は <xref:System.TimeSpan.MaxValue>です。 インスタンスをメモリ内でアイドル状態を保ちながら信頼性を保持する場合、 `timeToPersist` < `timeToUnload`です。 アイドル状態のインスタンスがアンロードされないようにするには、 `timeToUnload` を <xref:System.TimeSpan.MaxValue>に設定します。 詳細については<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>を参照してください[ワークフロー サービス ホストの拡張機能](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
   
     > [!NOTE]
-    >  前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、次を参照してください。 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)します。  
+    >  前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)を参照してください。  
   
 ### <a name="to-change-idle-behavior-in-code"></a>コードのアイドル動作を変更するには  
   

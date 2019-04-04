@@ -4,12 +4,12 @@ description: マイクロサービス アーキテクチャ内のコンテナー
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 60afb2e06c0c9a37104a82a74de016da5c134a61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145846"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466349"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>マイクロサービスのアドレス指定能力およびサービス レジストリ
 
@@ -24,13 +24,13 @@ ms.locfileid: "53145846"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Chris Richardson。パターン: サービス レジストリ** \
-  [*https://microservices.io/patterns/service-registry.html*](https://microservices.io/patterns/service-registry.html)
+  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
 
 - **Auth0。サービス レジストリ** \
-  [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
 - **Gabriel Schenker。サービス探索** \
-  [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 >[!div class="step-by-step"]
 >[前へ](maintain-microservice-apis.md)

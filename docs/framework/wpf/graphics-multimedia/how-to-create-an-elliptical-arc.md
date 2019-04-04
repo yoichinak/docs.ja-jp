@@ -33,7 +33,7 @@ ms.locfileid: "57354350"
   
  [!code-xaml[GeometrySample#36](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#36)]  
   
- この例は、さらに大きなサンプルの一部です。 サンプル全体については、次を参照してください。、[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)します。  
+ この例は、さらに大きなサンプルの一部です。 サンプル全体については、、[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [2 次ベジエ曲線を作成する](how-to-create-a-quadratic-bezier-curve.md)

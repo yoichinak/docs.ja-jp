@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>変換  
- A<xref:System.Drawing.Graphics>オブジェクトをで描画されるすべての項目に適用される 2 つの変換 (世界と ページ) を保持する<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換では、任意のアフィン変換を格納できます。 アフィン変換には、拡大縮小、回転、反転、傾斜、および変換が含まれます。 スケーリングの単位 (たとえば、インチをピクセル単位) を変更して、ページの変換を使用できます。 詳細については、次を参照してください。[座標系と変換](coordinate-systems-and-transformations.md)します。  
+ A<xref:System.Drawing.Graphics>オブジェクトをで描画されるすべての項目に適用される 2 つの変換 (世界と ページ) を保持する<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換では、任意のアフィン変換を格納できます。 アフィン変換には、拡大縮小、回転、反転、傾斜、および変換が含まれます。 スケーリングの単位 (たとえば、インチをピクセル単位) を変更して、ページの変換を使用できます。 詳細については、[座標系と変換](coordinate-systems-and-transformations.md)を参照してください。  
   
  次の例の世界とページの変換の設定、<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換は、30 度回転に設定されます。 ページの変換を設定すると、2 番目の座標が渡されるように<xref:System.Drawing.Graphics.DrawEllipse%2A>ピクセルではなくミリメートル単位として扱われます。 コードは、同じ 2 つの呼び出し、<xref:System.Drawing.Graphics.DrawEllipse%2A>メソッド。 ワールド変換は、最初に適用される<xref:System.Drawing.Graphics.DrawEllipse%2A>、2 つ目に呼び出し、および (世界と ページ) の両方の変換が適用<xref:System.Drawing.Graphics.DrawEllipse%2A>呼び出します。  
   

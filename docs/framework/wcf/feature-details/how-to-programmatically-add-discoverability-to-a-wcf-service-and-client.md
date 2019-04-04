@@ -220,7 +220,7 @@ ms.locfileid: "54643131"
     ```  
   
 ## <a name="example"></a>例  
- このサンプルで使用されているコード全体の一覧を次に示します。 このコードが基づいているため、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに変更されるファイルの一覧が表示されます。 自己ホスト サンプルの詳細については、次を参照してください。[セットアップ手順](https://go.microsoft.com/fwlink/?LinkId=145522)します。  
+ このサンプルで使用されているコード全体の一覧を次に示します。 このコードが基づいているため、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに変更されるファイルの一覧が表示されます。 自己ホスト サンプルの詳細については、[セットアップ手順](https://go.microsoft.com/fwlink/?LinkId=145522)を参照してください。  
   
 ```csharp  
 // Service.cs  

@@ -2,11 +2,17 @@
 title: コントロール
 ms.date: 03/30/2017
 dev_langs:
-  - csharp
-  - vb
+- csharp
+- vb
 helpviewer_keywords:
-  - 'controls [WPF], about WPF controls'
+- controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
+ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363151"
 ---
 # <a name="controls"></a>コントロール
 <a name="introduction"></a>
@@ -48,7 +54,7 @@ ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
   
  [!code-xaml[ControlsOverview#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
- キー、スタイルを割り当て、および内でそのキーを指定することによって、特定の種類の特定のコントロールのみにスタイルを適用することも、`Style`コントロールのプロパティ。  スタイルの詳細については、次を参照してください。[スタイルとテンプレート](styling-and-templating.md)します。  
+ キー、スタイルを割り当て、および内でそのキーを指定することによって、特定の種類の特定のコントロールのみにスタイルを適用することも、`Style`コントロールのプロパティ。  スタイルの詳細については、[スタイルとテンプレート](styling-and-templating.md)を参照してください。  
   
 ### <a name="creating-a-controltemplate"></a>ControlTemplate の作成  
  A <xref:System.Windows.Style> 、一度に複数のコントロールのプロパティを設定することができますの外観をカスタマイズすることがあります、<xref:System.Windows.Controls.Control>を作成して行うことができますを超える、<xref:System.Windows.Style>します。 継承するクラス、<xref:System.Windows.Controls.Control>クラスが、 <xref:System.Windows.Controls.ControlTemplate>、構造との外観を定義する、<xref:System.Windows.Controls.Control>します。 <xref:System.Windows.Controls.Control.Template%2A>のプロパティを<xref:System.Windows.Controls.Control>付けることができますので、パブリックでは、 <xref:System.Windows.Controls.Control> 、<xref:System.Windows.Controls.ControlTemplate>は既定の異なる。 多くの場合、指定、新しいできます<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.Control>の外観をカスタマイズするコントロールからの継承ではなく、 <xref:System.Windows.Controls.Control>。  
@@ -90,7 +96,7 @@ ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 -   <xref:System.Windows.Controls.HeaderedItemsControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.MenuItem>、 <xref:System.Windows.Controls.TreeViewItem>、および<xref:System.Windows.Controls.ToolBar>します。  
 
   
- これらの基本クラスの詳細については、次を参照してください。 [WPF コンテンツ モデル](wpf-content-model.md)します。  
+ これらの基本クラスの詳細については、[WPF コンテンツ モデル](wpf-content-model.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [スタイルとテンプレート](styling-and-templating.md)

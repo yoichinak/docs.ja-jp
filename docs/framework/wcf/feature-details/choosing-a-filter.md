@@ -131,9 +131,9 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  受信するメッセージに特定の値が含まれていることがわかっている場合は、このフィルターが便利です。 たとえば、同じサービスの 2 つのバージョンをホストしており、そのサービスの新しい方のバージョン宛てのメッセージのカスタム ヘッダーに一意の値が含まれていることがわかっている場合は、XPath を使用するフィルターを作成してそのヘッダーに移動し、そのヘッダー内にある値を、フィルター構成で指定されている別の値と比較して、そのフィルターが一致するかどうかを判断できます。  
   
- XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間のテーブルの詳細については、次を参照してください。[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)します。  
+ XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間のテーブルの詳細については、[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)を参照してください。  
   
- XPath クエリを設計する方法の詳細については、次を参照してください。 [XPath 構文](https://go.microsoft.com/fwlink/?LinkId=164592)します。  
+ XPath クエリを設計する方法の詳細については、[XPath 構文](https://go.microsoft.com/fwlink/?LinkId=164592)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)

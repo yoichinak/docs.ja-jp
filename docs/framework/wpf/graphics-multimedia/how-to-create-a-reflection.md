@@ -29,7 +29,7 @@ ms.locfileid: "57353570"
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- 画面の一部を拡大する方法と反射を作成する方法を示す例が含まれているサンプル全体については、次を参照してください。 [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)します。  
+ 画面の一部を拡大する方法と反射を作成する方法を示す例が含まれているサンプル全体については、[VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.VisualBrush>

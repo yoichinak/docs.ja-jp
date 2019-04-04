@@ -68,7 +68,7 @@ ms.locfileid: "57721282"
   <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType>、および <xref:System.Windows.Forms?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- スケーラビリティを最大にするには、共有する必要があります<xref:System.Windows.Forms.DataGridViewCellStyle>全体で複数の行、列、または個別に各要素のスタイル プロパティを設定するのではなく、同じスタイルを使用するセルのオブジェクト。 詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
+ スケーラビリティを最大にするには、共有する必要があります<xref:System.Windows.Forms.DataGridViewCellStyle>全体で複数の行、列、または個別に各要素のスタイル プロパティを設定するのではなく、同じスタイルを使用するセルのオブジェクト。 詳細については、[Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>

@@ -31,7 +31,7 @@ ms.locfileid: "57712163"
 -   グラフィックス リソースを解放するプロシージャです。  
   
 ## <a name="drawing-functionality-provided-by-control"></a>描画コントロールによって提供される機能  
- 基本クラス<xref:System.Windows.Forms.Control>を通じて描画機能を提供します。 その<xref:System.Windows.Forms.Control.Paint>イベント。 コントロールを有効に、<xref:System.Windows.Forms.Control.Paint>イベントの表示を更新する必要があるたびにします。 .NET Framework のイベントの詳細については、次を参照してください。[処理とイベントの発生](../../../standard/events/index.md)します。  
+ 基本クラス<xref:System.Windows.Forms.Control>を通じて描画機能を提供します。 その<xref:System.Windows.Forms.Control.Paint>イベント。 コントロールを有効に、<xref:System.Windows.Forms.Control.Paint>イベントの表示を更新する必要があるたびにします。 .NET Framework のイベントの詳細については、[処理とイベントの発生](../../../standard/events/index.md)を参照してください。  
   
  イベント データ クラスに対する、<xref:System.Windows.Forms.Control.Paint>イベント、<xref:System.Windows.Forms.PaintEventArgs>コントロールを描画するために必要なデータを保持する — グラフィック オブジェクト、および描画する領域を表す四角形オブジェクトを識別するハンドル。 これらのオブジェクトが示すように、次のコード フラグメントでは太字です。  
   

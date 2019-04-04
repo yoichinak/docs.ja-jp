@@ -433,7 +433,7 @@ End Class
   
  反復子をサポートしていない、<xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType>メソッド。 反復処理を最初から再度行う場合は、新しい反復子を取得する必要があります。  
   
- 詳細については、次を参照してください。、 [Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)します。  
+ 詳細については、、 [Visual Basic 言語仕様](../../../visual-basic/reference/language-specification/index.md)を参照してください。  
   
 ## <a name="BKMK_UseOfIterators"></a> 反復子の使用  
  反復子を使用すると、複雑なコードを使用して一覧シーケンスを設定する必要がある場合に、`For Each` ループの単純さを維持することができます。 これは次のような場合に役立ちます。  

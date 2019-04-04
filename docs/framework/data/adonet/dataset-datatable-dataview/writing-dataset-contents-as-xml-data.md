@@ -37,9 +37,9 @@ string xmlDS = custDS.GetXml();
 |-------------------------|-----------------|  
 |**IgnoreSchema**|<xref:System.Data.DataSet> の現在の内容を XML スキーマを含まない XML データとして書き込みます。 既定値です。|  
 |**WriteSchema**|<xref:System.Data.DataSet> の現在の内容を XML データとして書き込みます。このとき、リレーショナル構造がインライン XML スキーマとして書き込まれます。|  
-|**DiffGram**|元の値と現在の値を含め、<xref:System.Data.DataSet> 全体を DiffGram として書き込みます。 詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。|  
+|**DiffGram**|元の値と現在の値を含め、<xref:System.Data.DataSet> 全体を DiffGram として書き込みます。 詳細については、[Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)を参照してください。|  
   
- XML 表現を記述するとき、<xref:System.Data.DataSet>を格納している**DataRelation**オブジェクトの場合、結果の XML 要素が関連する親要素内で入れ子になった各リレーションシップの子の行に最も多くの場合は。 これを行うには、設定、**入れ子になった**のプロパティ、 **DataRelation**に**true**を追加すると、 **DataRelation** に<xref:System.Data.DataSet>. 詳細については、次を参照してください。 [Datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)します。  
+ XML 表現を記述するとき、<xref:System.Data.DataSet>を格納している**DataRelation**オブジェクトの場合、結果の XML 要素が関連する親要素内で入れ子になった各リレーションシップの子の行に最も多くの場合は。 これを行うには、設定、**入れ子になった**のプロパティ、 **DataRelation**に**true**を追加すると、 **DataRelation** に<xref:System.Data.DataSet>. 詳細については、[Datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)を参照してください。  
   
  <xref:System.Data.DataSet> の XML 表現をファイルに書き込む 2 つの例を次に示します。 最初の例は、文字列として、結果の XML ファイルの名前を渡します**WriteXml**します。 2 番目の例では、 **System.IO.StreamWriter**オブジェクト。  
   

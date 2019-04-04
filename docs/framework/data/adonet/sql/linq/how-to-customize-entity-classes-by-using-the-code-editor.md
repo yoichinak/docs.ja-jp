@@ -12,7 +12,7 @@ ms.locfileid: "54583234"
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>方法: コード エディターを使用してエンティティ クラスをカスタマイズします。
 Visual Studio を使用して開発者が使用できる、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を作成したり、エンティティ クラスをカスタマイズします。  
   
- マッピング コードを記述するか、既に生成されているコードをカスタマイズする、Visual Studio コード エディターを使用することもできます。 詳細については、次を参照してください。[属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)します。  
+ マッピング コードを記述するか、既に生成されているコードをカスタマイズする、Visual Studio コード エディターを使用することもできます。 詳細については、[属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)を参照してください。  
   
  このセクションのトピックでは、オブジェクト モデルをカスタマイズする方法について説明します。  
   

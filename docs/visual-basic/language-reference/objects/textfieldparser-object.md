@@ -25,7 +25,7 @@ Public Class TextFieldParser
 ## <a name="remarks"></a>Remarks  
  メソッドとプロパティについては、`TextFieldParser`オブジェクトを参照してください<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>します。  
   
- 詳細については、次を参照してください。[ファイルから読み取る](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)します。  
+ 詳細については、[ファイルから読み取る](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)を参照してください。  
   
 ## <a name="requirements"></a>要件  
  **Namespace:** <xref:Microsoft.VisualBasic.FileIO>  

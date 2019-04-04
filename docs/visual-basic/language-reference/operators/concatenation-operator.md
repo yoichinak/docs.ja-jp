@@ -45,7 +45,7 @@ result = expression1 & expression2
 >  `&`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 > [!NOTE]
->  型として変数を識別するために、アンパサンド (&) 文字を使用することができますも`Long`します。 詳細については、次を参照してください。[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)します。  
+>  型として変数を識別するために、アンパサンド (&) 文字を使用することができますも`Long`します。 詳細については、[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、`&`文字列の連結を強制する演算子。 結果は、2 つの文字列オペランドの連結を表す文字列値です。  

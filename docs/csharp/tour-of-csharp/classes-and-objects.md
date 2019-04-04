@@ -3,12 +3,12 @@ title: C# のクラスとオブジェクト - C# 言語のツアー
 description: C# を始めてお使いの方のために、 クラス、オブジェクト、および継承の概要を示します
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846143"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466259"
 ---
 # <a name="classes-and-objects"></a>クラスとオブジェクト
 
@@ -217,7 +217,7 @@ Entity クラスの使用例を次に示します。
 
 実行可能コードが含まれるメンバーは、クラスの "*関数メンバー*" と総称されます。 前のセクションでは、関数メンバーの主な種類であるメソッドについて説明しました。 ここでは、C# でサポートされるその他の種類の関数メンバー (コンストラクター、プロパティ、インデクサー、イベント、演算子、およびファイナライザー) について説明します。
 
-オブジェクトの拡張可能なリストを実装する、List<T> と呼ばれるジェネリック クラスを次に示します。 このクラスには、最も一般的な種類の関数メンバーの例がいくつか含まれています。
+オブジェクトの拡張可能なリストを実装する、List\<T> と呼ばれるジェネリック クラスを次に示します。 このクラスには、最も一般的な種類の関数メンバーの例がいくつか含まれています。
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

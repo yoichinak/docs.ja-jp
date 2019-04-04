@@ -12,7 +12,7 @@ ms.locfileid: "55275017"
 # <a name="userprincipalname"></a>\<userPrincipalName>
 クライアントで認証するサービスのユーザー プリンシパル名 (UPN) を指定します。  
   
- UPN を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ UPN を設定する方法についての詳細については、[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
 \<identity>  
 \<userPrincipalName>  

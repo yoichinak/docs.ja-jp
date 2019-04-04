@@ -25,7 +25,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57496275"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication メソッド
-マニフェスト ベースの ClickOnce 配置のシナリオで使用すると、新しいドメインでアクティブ化するアプリケーションを指定します。 これらのシナリオの詳細については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。  
+マニフェスト ベースの ClickOnce 配置のシナリオで使用すると、新しいドメインでアクティブ化するアプリケーションを指定します。 これらのシナリオの詳細については、[ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

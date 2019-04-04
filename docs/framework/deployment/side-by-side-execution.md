@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395162"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654602"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework での side-by-side 実行
 side-by-side 実行は、アプリケーションまたはコンポーネントの複数のバージョンを同じコンピューターで実行する機能です。 共通言語ランタイムの複数のバージョン、および 1 つの共通言語ランタイムを使用するアプリケーションとコンポーネントの複数のバージョンを同じコンピューターで同時に実行できます。  
   
  共通言語ランタイムの 2 つの異なるバージョンを同じコンピューターで使用する複数のアプリケーションを次の図に示します。 アプリケーション A、B、および C はランタイム バージョン 1.0 を使用し、アプリケーション D はランタイム バージョン 1.1 を使用します。  
   
- ![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-ランタイムの 2 つのバージョンの side-by-side 実行  
+ ![異なるランタイム バージョンの side-by-side 実行](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  .NET Framework は、共通言語ランタイムと API 型を含むアセンブリのコレクションで構成されています。 ランタイムと .NET Framework アセンブリは、個別にバージョン管理されます。 たとえば、ランタイムのバージョン 4.0 は実際にはバージョン 4.0.319 で、.NET Framework アセンブリのバージョン 1.0 はバージョン 1.0.3300.0 です。  
   
  コンポーネントの 2 つの異なるバージョンを同じコンピューターで使用する複数のアプリケーションを次の図に示します。 アプリケーション A とアプリケーション B はコンポーネントのバージョン 1.0 を使用し、アプリケーション C は同じコンポーネントのバージョン 2.0 を使用します。  
   
- ![Side&#45;by&#45;side execution](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-コンポーネントの 2 つのバージョンの side-by-side 実行  
+ ![コンポーネントの side-by-side 実行を示す図。](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  side-by-side 実行により、アプリケーションがバインドするコンポーネントのバージョンやアプリケーションが使用するランタイムのバージョンをより詳細に制御できます。  
   
@@ -53,15 +51,15 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
  .NET Framework のバージョンは、ランタイムとそれに対応する .NET Framework アセンブリで構成される単一のユニットとして扱われます。この概念をアセンブリの統一と呼んでいます。 他のバージョンの .NET Framework アセンブリを含むようにアセンブリ バインディングをリダイレクトすることもできますが、既定のアセンブリ バインディングのオーバーライドは危険性が伴うため、配置する前に厳密なテストが必要です。  
   
 ## <a name="locating-runtime-version-information"></a>ランタイム バージョン情報の検索  
- アプリケーションまたはコンポーネントのコンパイルに使用したランタイム バージョンおよびアプリケーションの実行時に必要なランタイム バージョンは、2 つの場所に格納されています。 アプリケーションまたはコンポーネントをコンパイルするとき、コンパイルに使用したランタイム バージョンの情報がマネージ実行可能ファイルに格納されます。 アプリケーションまたはコンポーネントが要求するランタイム バージョンの情報は、アプリケーション構成ファイルに格納されています。  
+ アプリケーションまたはコンポーネントのコンパイルに使用したランタイム バージョンおよびアプリケーションの実行時に必要なランタイム バージョンは、2 つの場所に格納されています。 アプリケーションまたはコンポーネントをコンパイルするとき、コンパイルに使用したランタイム バージョンの情報がマネージド実行可能ファイルに格納されます。 アプリケーションまたはコンポーネントが要求するランタイム バージョンの情報は、アプリケーション構成ファイルに格納されています。  
   
-### <a name="runtime-version-information-in-the-managed-executable"></a>マネージ実行可能ファイルのランタイム バージョン情報  
- 各マネージ アプリケーションおよびマネージ コンポーネントのポータブル実行可能 (PE) ファイル ヘッダーには、その作成に使用されたランタイム バージョンに関する情報が含まれています。 共通言語ランタイムは、この情報に基づいて、アプリケーションの実行に必要なランタイムの最も適したバージョンを決定します。  
+### <a name="runtime-version-information-in-the-managed-executable"></a>マネージド実行可能ファイルのランタイム バージョン情報  
+ 各マネージド アプリケーションおよびマネージド コンポーネントのポータブル実行可能 (PE) ファイル ヘッダーには、その作成に使用されたランタイム バージョンに関する情報が含まれています。 共通言語ランタイムは、この情報に基づいて、アプリケーションの実行に必要なランタイムの最も適したバージョンを決定します。  
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>アプリケーション構成ファイルのランタイム バージョン情報  
  PE ファイル ヘッダーの情報に加え、アプリケーションは、ランタイム バージョン情報が含まれるアプリケーション構成ファイルと共に配置できます。 アプリケーション構成ファイルは XML ベースのファイルで、アプリケーションの開発者によって作成され、アプリケーションと共に出荷されます。 このファイルに [\<startup> セクション](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)の [\<requiredRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)が存在する場合、この要素にアプリケーションでサポートするランタイムのバージョンとコンポーネントのバージョンを指定します。 また、このファイルを使用して、ランタイムの別のバージョンとアプリケーションの互換性をテストすることができます。  
   
- COM アプリケーションおよび COM+ アプリケーションを含むアンマネージ コードは、ランタイムがマネージ コードとやり取りするときに使用するアプリケーション構成ファイルを持つことができます。 アプリケーション構成ファイルは、COM 経由で起動するどのマネージ コードにも適用されます。 このファイルは、サポートするランタイム バージョンやアセンブリのリダイレクトを指定できます。 既定では、マネージ コードを呼び出す COM 相互運用アプリケーションは、コンピューターにインストールされている最新のバージョンを使用します。  
+ COM アプリケーションおよび COM+ アプリケーションを含むアンマネージド コードは、ランタイムがマネージド コードとやり取りするときに使用するアプリケーション構成ファイルを持つことができます。 アプリケーション構成ファイルは、COM 経由で起動するどのマネージド コードにも適用されます。 このファイルは、サポートするランタイム バージョンやアセンブリのリダイレクトを指定できます。 既定では、マネージド コードを呼び出す COM 相互運用アプリケーションは、コンピューターにインストールされている最新のバージョンを使用します。  
   
  アプリケーション構成ファイルの詳細については、「[Configuring Apps](../../../docs/framework/configure-apps/index.md)」(アプリケーションの構成) を参照してください。  
   
@@ -121,5 +119,5 @@ publicKeyToken=...,
 |[共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|アセンブリの概念的な概要を説明します。|  
 |[アプリケーション ドメイン](../../../docs/framework/app-domains/application-domains.md)|アプリケーション ドメインの概念的な概要を説明します。|  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  [\<supportedRuntime> 要素](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

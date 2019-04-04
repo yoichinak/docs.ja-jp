@@ -38,7 +38,7 @@ ms.locfileid: "58825457"
   
  ![パラメーターに引数を渡すことを示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- 詳細については、次を参照してください。[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)します。  
+ 詳細については、[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)を参照してください。  
   
 ## <a name="parameter-data-type"></a>パラメーターのデータ型  
  使用して、パラメーターのデータ型を定義する、`As`宣言内の句。 たとえば、次の関数は、文字列と整数を受け取ります。  

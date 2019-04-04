@@ -35,7 +35,7 @@ ms.locfileid: "57363294"
  [!code-vb[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/paintwithvideoexample.vb#graphicsmmvideoastextbackgroundtiledinline)]
  [!code-xaml[Visualbrush_markup_snip#GraphicsMMVideoAsTextBackgroundTiledInline](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/PaintWithVideoExample.xaml#graphicsmmvideoastextbackgroundtiledinline)]  
   
- アプリケーションには、メディア ファイルなどのコンテンツ ファイルを追加する方法については、次を参照してください。 [WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)します。 メディア ファイルを追加すると、リソース ファイルではなく、コンテンツ ファイルとして追加する必要があります。  
+ アプリケーションには、メディア ファイルなどのコンテンツ ファイルを追加する方法については、[WPF アプリケーションのリソース、コンテンツ、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)を参照してください。 メディア ファイルを追加すると、リソース ファイルではなく、コンテンツ ファイルとして追加する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.VisualBrush>

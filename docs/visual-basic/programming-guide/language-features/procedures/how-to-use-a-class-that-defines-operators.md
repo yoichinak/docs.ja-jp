@@ -33,7 +33,7 @@ ms.locfileid: "58829409"
  <xref:System.Data.SqlTypes.SqlString>構造体には、変換演算子が定義されています ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) から`String`に<xref:System.Data.SqlTypes.SqlString>とから<xref:System.Data.SqlTypes.SqlString>に`String`します。 代入するステートメント`title`に`jobTitle`の最初の演算子を使用し、<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>関数呼び出し、2 つ目の使用します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 必ず、クラスまたは構造体を使用しているが、使用する演算子を定義します。 クラスまたは構造体の定義がすべての演算子はオーバー ロード可能なことを前提としてはいません。 利用可能な演算子の一覧は、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
+ 必ず、クラスまたは構造体を使用しているが、使用する演算子を定義します。 クラスまたは構造体の定義がすべての演算子はオーバー ロード可能なことを前提としてはいません。 利用可能な演算子の一覧は、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
   
  含める、適切な`Imports`ソース ファイルの先頭にある SQL 文字列の文 (ここで<xref:System.Data.SqlTypes>)。  
   

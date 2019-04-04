@@ -25,7 +25,7 @@ ms.locfileid: "57375247"
   
  新規に作成すると、トランザクション スコープが開始<xref:System.Transactions.TransactionScope>オブジェクト。  コード例のようには、使用してスコープを作成することをお勧め、**を使用して**ステートメント。 **を使用して**ステートメントが使用可能なの両方でC#と Visual Basic、およびと同様に動作を**try… 最後に**ブロックをスコープが正しく破棄のことを確認します。  
   
- <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 2 つの要因に基づいて、決定: アンビエント トランザクションが存在するかどうかとの値、 **TransactionScopeOption**コンス トラクターのパラメーター。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用方法の詳細については、次を参照してください。、 [TransactionScopeOption を使用してトランザクション フローを管理する](#ManageTxFlow)このトピックの「します。  
+ <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 2 つの要因に基づいて、決定: アンビエント トランザクションが存在するかどうかとの値、 **TransactionScopeOption**コンス トラクターのパラメーター。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用方法の詳細については、、 [TransactionScopeOption を使用してトランザクション フローを管理する](#ManageTxFlow)このトピックの「を参照してください。  
   
 ## <a name="completing-a-transaction-scope"></a>トランザクション スコープの完了  
  アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> メソッドを一度だけ呼び出す必要があります。 呼び出しを配置することを非常に良好なが<xref:System.Transactions.TransactionScope.Complete%2A>の最後のステートメントとして、**を使用して**ブロックします。  

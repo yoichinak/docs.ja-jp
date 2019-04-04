@@ -131,7 +131,7 @@ ms.locfileid: "54614609"
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes メソッド  
  このメソッドは、スキーマから定義済みのカスタム データ型を取得します。 スキーマのインポートでは、このメソッドは省略可能です。  
   
- このメソッドは、スキーマのエクスポートとインポートの開始時に呼び出されます。 このメソッドは、エクスポートまたはインポートするスキーマで使用されるカスタム データ型を返します。 メソッドには、型のコレクションである <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` パラメーター) が渡されます。 このメソッドでは、既知の型をこのコレクションに追加する必要があります。 既知のカスタム データ型は、<xref:System.Runtime.Serialization.DataContractSerializer> を使用したカスタム データのシリアル化と逆シリアル化を可能にするために必要となります。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
+ このメソッドは、スキーマのエクスポートとインポートの開始時に呼び出されます。 このメソッドは、エクスポートまたはインポートするスキーマで使用されるカスタム データ型を返します。 メソッドには、型のコレクションである <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` パラメーター) が渡されます。 このメソッドでは、既知の型をこのコレクションに追加する必要があります。 既知のカスタム データ型は、<xref:System.Runtime.Serialization.DataContractSerializer> を使用したカスタム データのシリアル化と逆シリアル化を可能にするために必要となります。 詳細については、[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)を参照してください。  
   
 ## <a name="implementing-a-surrogate"></a>サロゲートの実装  
  Wcf データ コントラクト サロゲートを使用するには、いくつかの特別な手順に従ってください。  
@@ -141,7 +141,7 @@ ms.locfileid: "54614609"
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>シリアル化と逆シリアル化を実装するには  
   
-1.  サービスの <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。 完全な手順については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
+1.  サービスの <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。 完全な手順については、[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)を参照してください。  
   
 2.  指定したサービス ホストの各 <xref:System.ServiceModel.Description.ServiceEndpoint> について、<xref:System.ServiceModel.Description.OperationDescription> を検索します。  
   

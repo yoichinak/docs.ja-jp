@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978652"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654043"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ でのクエリ構文とメソッド構文 (C#)
 統合言語クエリ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) の入門的なドキュメントでは、ほとんどのクエリが、LINQ の宣言型クエリ構文を使用して記述されています。 ただし、クエリ構文は、コードのコンパイル時に、.NET 共通言語ランタイム (CLR) 用のメソッド呼び出しに変換する必要があります。 これらのメソッド呼び出しが、標準クエリ演算子 (`Where`、`Select`、`GroupBy`、`Join`、`Max`、`Average` など) を呼び出します。 これらは、クエリ構文ではなくメソッド構文を使用して直接呼び出すことができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "56978652"
   
  メソッド ベースのクエリを理解するために、より詳しく調べていきましょう。 式の右側を見ると、`where` 句が `numbers` オブジェクトのインスタンス メソッドとして表されていることがわかります。これは、既におわかりのように、`IEnumerable<int>` の型を持っています。 ジェネリック型の <xref:System.Collections.Generic.IEnumerable%601> インターフェイスについて知識があれば、これが `Where` メソッドではないことがわかるでしょう。 しかし、Visual Studio IDE で IntelliSense の入力補完リストを呼び出すと、`Where` メソッドだけでなく、`Select`、`SelectMany`、`Join`、`Orderby` など、他にも多くのメソッドが表示されます。 これらはすべて、標準クエリ演算子です。  
   
- ![Intellisense の標準クエリ演算子](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Intellisense の標準クエリ演算子をすべて示すスクリーンショット。](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  一見、<xref:System.Collections.Generic.IEnumerable%601> が再定義され、これらのメソッドが追加されたかのように見えますが、実際にはそうではありません。 標準クエリ演算子は、*拡張メソッド*という新しい種類のメソッドとして実装されています。 拡張メソッドは、既存の型を "拡張" します。これらは、あたかもその型のインスタンス メソッドであるかのように呼び出すことができます。 標準クエリ演算子が <xref:System.Collections.Generic.IEnumerable%601> を拡張しているため、`numbers.Where(...)` を書き込むことができます。  
   

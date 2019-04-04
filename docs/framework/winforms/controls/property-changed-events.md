@@ -16,7 +16,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57703232"
 ---
 # <a name="property-changed-events"></a>プロパティ変更イベント
-という名前のプロパティのときに通知を送信する、制御したいかどうか*PropertyName*という名前のイベントの定義の変更、 *PropertyName* `Changed`という名前のメソッドと`On` *PropertyName* `Changed`イベントを発生させます。 Windows フォームでの名前付け規則では、単語を追加*Changed*プロパティの名前にします。 プロパティ変更イベントに関連付けられているイベントのデリゲート型は<xref:System.EventHandler>、イベントのデータ型は、<xref:System.EventArgs>します。 基本クラス<xref:System.Windows.Forms.Control>など多くのプロパティ変更イベントを定義<xref:System.Windows.Forms.Control.BackColorChanged>、 <xref:System.Windows.Forms.Control.BackgroundImageChanged>、 <xref:System.Windows.Forms.Control.FontChanged>、 <xref:System.Windows.Forms.Control.LocationChanged>、およびその他。 イベントに関する背景情報は、次を参照してください。[イベント](../../../standard/events/index.md)と[Windows フォーム コントロールのイベント](events-in-windows-forms-controls.md)します。  
+という名前のプロパティのときに通知を送信する、制御したいかどうか*PropertyName*という名前のイベントの定義の変更、 *PropertyName* `Changed`という名前のメソッドと`On` *PropertyName* `Changed`イベントを発生させます。 Windows フォームでの名前付け規則では、単語を追加*Changed*プロパティの名前にします。 プロパティ変更イベントに関連付けられているイベントのデリゲート型は<xref:System.EventHandler>、イベントのデータ型は、<xref:System.EventArgs>します。 基本クラス<xref:System.Windows.Forms.Control>など多くのプロパティ変更イベントを定義<xref:System.Windows.Forms.Control.BackColorChanged>、 <xref:System.Windows.Forms.Control.BackgroundImageChanged>、 <xref:System.Windows.Forms.Control.FontChanged>、 <xref:System.Windows.Forms.Control.LocationChanged>、およびその他。 イベントに関する背景情報は、[イベント](../../../standard/events/index.md)と[Windows フォーム コントロールのイベント](events-in-windows-forms-controls.md)を参照してください。  
   
  プロパティ変更イベントは、変更に応答するイベント ハンドラーをアタッチするコントロールのコンシューマーができるため便利です。 コントロールを生成するプロパティ変更イベントに応答する場合は、オーバーライド、対応する`On` *PropertyName* `Changed`メソッド、イベントにデリゲートをアタッチする代わりにします。 その他のプロパティを更新するか、その描画サーフェイスの一部またはすべてを再描画、コントロールは通常、プロパティ変更イベントに応答します。  
   

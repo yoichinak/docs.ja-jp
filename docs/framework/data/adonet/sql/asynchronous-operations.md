@@ -15,7 +15,7 @@ ms.locfileid: "54538662"
  .NET Framework では、複数の標準的な非同期デザイン パターンが用意されており、バックグラウンド スレッドを利用して、その他の操作を完了するためにユーザー インターフェイスまたは優先順位の高いスレッドを解放できます。 ADO.NET では、<xref:System.Data.SqlClient.SqlCommand> クラスでこれらと同じデザイン パターンがサポートされています。 特に、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、および <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドと、<xref:System.Data.SqlClient.SqlCommand.EndExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A>、および <xref:System.Data.SqlClient.SqlCommand.EndExecuteXmlReader%2A> メソッドとのペアによって、非同期動作がサポートされています。  
   
 > [!NOTE]
->  非同期プログラミングは .NET Framework の中心的な機能であり、ADO.NET では標準のデザイン パターンが活用されます。 開発者が利用できるさまざまな非同期技法の詳細については、次を参照してください。 [Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)します。  
+>  非同期プログラミングは .NET Framework の中心的な機能であり、ADO.NET では標準のデザイン パターンが活用されます。 開発者が利用できるさまざまな非同期技法の詳細については、[Calling Synchronous Methods Asynchronously](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)を参照してください。  
   
  ADO.NET 機能での非同期技法の使用に伴う特別な考慮事項はありませんが、非同期機能は、.NET Framework のその他の領域よりも ADO.NET で使用する場合が多いと思われます。 マルチスレッドのアプリケーションは、その利点と問題点を認識した上で作成することが重要です。 このセクションに示す例は、マルチスレッド機能を組み込むアプリケーションを構築する際に考慮すべき重要な問題を提示しています。  
   

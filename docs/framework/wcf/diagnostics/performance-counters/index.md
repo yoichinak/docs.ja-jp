@@ -2,8 +2,14 @@
 title: WCF パフォーマンス カウンター
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance counters [WCF]'
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
+ms.openlocfilehash: c2bb9d2f67cfc0bf0a28492f77c16fdb39b07fe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595241"
 ---
 # <a name="wcf-performance-counters"></a>WCF パフォーマンス カウンター
 Windows Communication Foundation (WCF) には、多数アプリケーションのパフォーマンスの測定に役立つパフォーマンス カウンターにはが含まれています。  
@@ -76,7 +82,7 @@ config.Save();
   
 -   WMI を通じて操作カウンター インスタンス名を取得できます[エンドポイント](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)インスタンスの"GetOperationCounterInstanceName"メソッドです。  
   
- WMI の詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
+ WMI の詳細については、[診断用の Windows Management Instrumentation のを使用して](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)を参照してください。  
   
 ### <a name="service-performance-counters"></a>サービスのパフォーマンス カウンター  
  サービスのパフォーマンス カウンターはサービス動作全体を測定し、サービス全体のパフォーマンスを診断するために使用できます。 パフォーマンス モニターを使用して表示する場合、これらのカウンターは、`ServiceModelService 4.0.0.0` パフォーマンス オブジェクトの下にあります。 インスタンスには次のパターンの名前が付けられています。  
@@ -130,7 +136,7 @@ ServiceName@ServiceBaseAddress
   
 -   _TransactionBridgePerfCounters.vrg  
   
- カウンターをプログラムでアクセスする方法の詳細については、次を参照してください。[パフォーマンス カウンターのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=95179)します。  
+ カウンターをプログラムでアクセスする方法の詳細については、[パフォーマンス カウンターのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=95179)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

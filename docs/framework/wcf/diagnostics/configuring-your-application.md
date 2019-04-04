@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) は、.NET 構成システムを使用し
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- アプリケーション定義の構成設定は、`<appSettings>` セクション グループで定義されています。 .NET 構成ファイル内のアプリケーション設定の詳細については、次を参照してください。 [ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159)します。  
+ アプリケーション定義の構成設定は、`<appSettings>` セクション グループで定義されています。 .NET 構成ファイル内のアプリケーション設定の詳細については、[ \<appSettings >](https://go.microsoft.com/fwlink/?LinkId=95159)を参照してください。  
   
 ## <a name="using-the-configuration-editor"></a>構成エディターの使用  
  WCF[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)管理者および開発者を作成およびグラフィカル ユーザー インターフェイスを使用して WCF サービスの構成設定を変更します。 このツールでは、XML 構成ファイルを直接編集することがなく WCF バインディング、動作、サービス、および診断の設定を管理できます。  

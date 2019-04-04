@@ -33,7 +33,7 @@ ms.locfileid: "54498140"
   
 1.  新しい <xref:System.ServiceModel.BasicHttpBinding> バインド構成を作成します。 詳細については、次を参照してください。、[方法。構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。  
   
-2.  必要に応じて、バインディングのセキュリティ モードを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定して、このサービス エンドポイント バインド構成のトランスポート セキュリティを有効にします。 詳細については、次を参照してください。[トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)します。  
+2.  必要に応じて、バインディングのセキュリティ モードを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定して、このサービス エンドポイント バインド構成のトランスポート セキュリティを有効にします。 詳細については、[トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)を参照してください。  
   
 3.  上で作成したバインド構成を使用して、サービスに新しいアプリケーション エンドポイントを構成します。 構成ファイルでサービス エンドポイントを追加する方法の詳細については、次を参照してください。、[方法。サービス エンドポイントの構成で作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)です。  
   

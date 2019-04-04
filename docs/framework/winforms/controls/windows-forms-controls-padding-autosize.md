@@ -113,7 +113,7 @@ ms.locfileid: "57708432"
 ## <a name="automatically-sizing-your-controls"></a>コントロールを自動的にサイズ変更  
  一部のアプリケーションでコントロールのサイズはいないと同じである実行時にデザイン時にでした。 テキストを<xref:System.Windows.Forms.Button>コントロールなどの可能性がありますがから取得した、データベースをその長さが事前にわかっていません。  
   
- ときに、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティに設定されて`true`、そのコンテンツへ自体、コントロールのサイズが。 詳細については、次を参照してください。 [AutoSize プロパティの概要](autosize-property-overview.md)します。  
+ ときに、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティに設定されて`true`、そのコンテンツへ自体、コントロールのサイズが。 詳細については、[AutoSize プロパティの概要](autosize-property-overview.md)を参照してください。  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>AutoSize プロパティを使用して、フォーム上のコントロールを配置するには  
   

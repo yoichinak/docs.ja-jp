@@ -30,7 +30,7 @@ ms.locfileid: "57373843"
   
  他の補間方式を使用したり、3 つ以上のターゲット値の間でアニメーション化したりするには、キー フレーム アニメーションを使用します。 参照してください[キー フレーム アニメーションの概要](key-frame-animations-overview.md)詳細についてはします。  
   
- 1 つのプロパティに複数のアニメーションを適用する方法の詳細については、次を参照してください。[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
+ 1 つのプロパティに複数のアニメーションを適用する方法の詳細については、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)を参照してください。  
   
  次の例は、さまざまな設定の効果を示しています。 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>、 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>、および<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>アニメーションのプロパティ。  
   

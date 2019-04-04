@@ -100,7 +100,7 @@ Windows では、Profiler DLL をロードしようとして、Profiler DLL が�
 
 - Profiler DLL が署名されていることを確認します。
 
-- インストール必要となる開発者用ライセンス Windows 8 コンピューターに、ツールを使用する前に、ユーザーに伝えます。 これは行えます自動的に Visual Studio から、またはコマンド プロンプトから手動でします。 詳細については、次を参照してください。[開発者用ライセンスを取得](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))します。
+- インストール必要となる開発者用ライセンス Windows 8 コンピューターに、ツールを使用する前に、ユーザーに伝えます。 これは行えます自動的に Visual Studio から、またはコマンド プロンプトから手動でします。 詳細については、[開発者用ライセンスを取得](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10))を参照してください。
 
 **ファイル システム権限**
 
@@ -358,7 +358,7 @@ Profiler DLL は呼び出すことによって他のモジュールから WinMD 
 
 ### <a name="reading-metadata-from-winmds"></a>Winmd メタデータの読み取り
 
-標準のモジュールなどの WinMD ファイルには使用して読み取ることができるメタデータが含まれて、[メタデータ Api](../../../../docs/framework/unmanaged-api/metadata/index.md)します。 ただし、CLR は、マネージ コードでプログラミングして WinMD ファイルを使用する開発者がより自然なプログラミング エクスペリエンスを実現できますように WinMD のファイルを読み取る際に、.NET Framework の型を Windows ランタイム型をマップします。 これらのマッピングの例については、次を参照してください。 [.NET Framework の Windows ストア アプリのサポートと Windows ランタイム](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)します。
+標準のモジュールなどの WinMD ファイルには使用して読み取ることができるメタデータが含まれて、[メタデータ Api](../../../../docs/framework/unmanaged-api/metadata/index.md)します。 ただし、CLR は、マネージ コードでプログラミングして WinMD ファイルを使用する開発者がより自然なプログラミング エクスペリエンスを実現できますように WinMD のファイルを読み取る際に、.NET Framework の型を Windows ランタイム型をマップします。 これらのマッピングの例については、[.NET Framework の Windows ストア アプリのサポートと Windows ランタイム](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)を参照してください。
 
 ビューは、プロファイラー取りかかりましょうメタデータ Api を使用する場合: Windows ランタイム、未加工のビュー、またはマップされた .NET Framework ビューか?  回答: が稼働しています。
 

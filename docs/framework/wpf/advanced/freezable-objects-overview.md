@@ -83,7 +83,7 @@ ms.locfileid: "57375845"
   
  上記のコード例では、変更可能なコピーがの固定されたオブジェクトを使用して行われた、<xref:System.Windows.Freezable.Clone%2A>メソッド。 次のセクションでは、複製の詳細について説明します。  
   
- **注**ため、固定された freezable アニメーション化できません、アニメーション システムが自動的の変更可能な複製を作成固定された<xref:System.Windows.Freezable>オブジェクトを使用してアニメーション化しようとすると、 <xref:System.Windows.Media.Animation.Storyboard>。 オーバーヘッドを複製することがパフォーマンスをなくすため、オブジェクトをアニメーション化する場合にマスクされていないままにします。 ストーリー ボードを使用したアニメーション化の詳細については、次を参照してください。、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
+ **注**ため、固定された freezable アニメーション化できません、アニメーション システムが自動的の変更可能な複製を作成固定された<xref:System.Windows.Freezable>オブジェクトを使用してアニメーション化しようとすると、 <xref:System.Windows.Media.Animation.Storyboard>。 オーバーヘッドを複製することがパフォーマンスをなくすため、オブジェクトをアニメーション化する場合にマスクされていないままにします。 ストーリー ボードを使用したアニメーション化の詳細については、、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)を参照してください。  
   
 ### <a name="freezing-from-markup"></a>マークアップからのフリーズ  
  固定するには、<xref:System.Windows.Freezable>オブジェクトを使用する、マークアップで宣言された、`PresentationOptions:Freeze`属性。 次の例では、<xref:System.Windows.Media.SolidColorBrush>はページ リソースとして宣言されており、固定されています。 ボタンの背景を設定するのには使用されます。  
@@ -130,7 +130,7 @@ mc:Ignorable="PresentationOptions"
   
 -   簡単に複製: Freezable クラスは既にディープ クローンを生成するいくつかのメソッドを実装します。  
   
- A<xref:System.Windows.Freezable>の種類は、<xref:System.Windows.DependencyObject>をそのため、依存関係プロパティ システムを使用します。 クラスのプロパティは、依存関係プロパティにする必要はありませんが、ために書き込むがあるコードの量を減らすは依存関係プロパティを使用して、<xref:System.Windows.Freezable>クラスは依存関係プロパティを考慮して設計されました。 依存関係プロパティ システムの詳細については、次を参照してください。、[依存関係プロパティの概要](dependency-properties-overview.md)します。  
+ A<xref:System.Windows.Freezable>の種類は、<xref:System.Windows.DependencyObject>をそのため、依存関係プロパティ システムを使用します。 クラスのプロパティは、依存関係プロパティにする必要はありませんが、ために書き込むがあるコードの量を減らすは依存関係プロパティを使用して、<xref:System.Windows.Freezable>クラスは依存関係プロパティを考慮して設計されました。 依存関係プロパティ システムの詳細については、、[依存関係プロパティの概要](dependency-properties-overview.md)を参照してください。  
   
  すべて<xref:System.Windows.Freezable>サブクラスをオーバーライドする必要があります、<xref:System.Windows.Freezable.CreateInstanceCore%2A>メソッド。 クラスは、そのすべてのデータの依存関係プロパティを使用している場合は、完了します。  
   

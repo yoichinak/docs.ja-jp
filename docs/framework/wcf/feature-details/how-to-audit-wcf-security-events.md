@@ -15,7 +15,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54566828"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法: Windows Communication Foundation セキュリティ イベントを監査します。
-Windows Communication Foundation (WCF)、Windows イベント ビューアーを使用して表示できる Windows イベント ログにセキュリティ イベント ログに記録することができます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF が監査の詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
+Windows Communication Foundation (WCF)、Windows イベント ビューアーを使用して表示できる Windows イベント ログにセキュリティ イベント ログに記録することができます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF が監査の詳細については、[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
   
 ### <a name="to-audit-security-events-in-code"></a>セキュリティ イベントを監査するコードを記述するには  
   

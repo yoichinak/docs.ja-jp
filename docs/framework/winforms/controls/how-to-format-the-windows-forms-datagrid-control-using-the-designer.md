@@ -98,7 +98,7 @@ ms.locfileid: "57725364"
      **DataGridColumnStyle コレクション エディター**列のデータの文字列の書式設定、および追加し、列のスタイルを削除、表示とレイアウトのプロパティを設定およびマッピングの名前を設定します。
 
     > [!NOTE]
-    >  文字列の書式設定に関する詳細については、次を参照してください。[型の書式設定](../../../standard/base-types/formatting-types.md)します。
+    >  文字列の書式設定に関する詳細については、[型の書式設定](../../../standard/base-types/formatting-types.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -64,7 +64,7 @@ ms.locfileid: "58843124"
   
 -   `-platform:anycpu32bitpreferred` でコンパイルされた実行可能ファイルは、32 ビット CLR で実行されます。  
   
- Windows の 64 ビット バージョンで実行するアプリケーションを開発する方法の詳細については、次を参照してください。 [64 ビット アプリケーション](../../../framework/64-bit-apps.md)します。  
+ Windows の 64 ビット バージョンで実行するアプリケーションを開発する方法の詳細については、[64 ビット アプリケーション](../../../framework/64-bit-apps.md)を参照してください。  
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>-Visual Studio IDE でプラットフォームを設定するには  
   
@@ -72,7 +72,7 @@ ms.locfileid: "58843124"
   
 2.  **コンパイル**タブ、オンまたはオフ、**優先の 32 ビット**チェック ボックスをオンまたは、**ターゲット CPU**一覧で、値を選択します。  
   
-     詳細については、次を参照してください。 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
+     詳細については、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、`-platform` コンパイラ オプションを使用する方法を示しています。  

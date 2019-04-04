@@ -23,11 +23,11 @@ ms.locfileid: "57379576"
   
  いくつかの方法でプロパティをアニメーション化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)します。  
+-   **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)を参照してください。  
   
 -   **ローカル アニメーションを使用して**(コードのみ)。適用できる<xref:System.Windows.Media.Animation.AnimationTimeline>アニメーション化するプロパティに直接オブジェクト。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
   
--   **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、次を参照してください。 [AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)します。  
+-   **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、[AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)を参照してください。  
   
  この概要の例を使用して、マークアップとコードで使用することができます、ため<xref:System.Windows.Media.Animation.Storyboard>オブジェクト。 ただし、説明されている概念は、プロパティをアニメーション化するためのその他の方法にも適用できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57379576"
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 詳細な例では、次を参照してください。[受信通知時にクロックの状態の変化](how-to-receive-notification-when-clock-state-changes.md)します。  
+ 詳細な例では、[受信通知時にクロックの状態の変化](how-to-receive-notification-when-clock-state-changes.md)を参照してください。  
   
 ## <a name="public-events"></a>パブリック イベント  
  <xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>クラスはどちらもが 5 つのタイミング イベントを提供します。 次の表は、これらのイベントと、それらをトリガーする条件を示したものです。  

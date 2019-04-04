@@ -15,7 +15,7 @@ ms.locfileid: "54536725"
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>方法: サービス コントラクト インターフェイスを作成します。
 インターフェイスを使用する Windows Communication Foundation (WCF) コントラクトを作成することをお勧めです。 このコントラクトでは、サービスが提供する操作にアクセスするために必要なメッセージのコレクションと構造を指定します。 このインターフェイスでは、インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用し、公開するメソッドに <xref:System.ServiceModel.OperationContractAttribute> クラスを適用して、入力と出力の種類を定義します。  
   
- サービス コントラクトの詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。  
+ サービス コントラクトの詳細については、[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。  
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>インターフェイスを使用した WCF コントラクトの作成  
   

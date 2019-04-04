@@ -55,13 +55,13 @@ ms.locfileid: "55263012"
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙|次のいずれかの値です。None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙|次のいずれかの値です。None、PeerTrust、ChainTrust、PeerOrChainTrust、Custom です。<br /><br /> 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙|次のいずれかの値です。NoCheck、Online、Offline にします。 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙|次のいずれかの値です。NoCheck、Online、Offline にします。 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   

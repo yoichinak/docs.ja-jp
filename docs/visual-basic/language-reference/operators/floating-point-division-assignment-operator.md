@@ -38,7 +38,7 @@ variableorproperty /= expression
   
  `/=`演算子は、(演算子の右側にある) の式の値で変数または (演算子の左側にある) のプロパティの値を除算する最初。 演算子は、変数またはプロパティに、その操作の結果を浮動小数点を割り当てます。  
   
- このステートメントは、代入、`Double`変数または左のプロパティの値。 場合`Option Strict`は`On`、`variableorproperty`必要があります、`Double`します。 場合`Option Strict`は`Off`、Visual Basic の暗黙的な変換を実行します。 および、その結果の値を割り当てます`variableorproperty`、実行時に可能性のあるエラーとします。 詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。  
+ このステートメントは、代入、`Double`変数または左のプロパティの値。 場合`Option Strict`は`On`、`variableorproperty`必要があります、`Double`します。 場合`Option Strict`は`Off`、Visual Basic の暗黙的な変換を実行します。 および、その結果の値を割り当てます`variableorproperty`、実行時に可能性のあるエラーとします。 詳細については、[Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)と[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
  [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)できます*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`/`演算子の動作に影響、`/=`演算子。 コードで使用する場合`/=`クラスまたは構造体をオーバー ロードで`/`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

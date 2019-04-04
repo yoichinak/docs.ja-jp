@@ -17,7 +17,7 @@ ms.locfileid: "54509507"
   
  作成に必要な引数を**DataRelation**の名前は、 **DataRelation**作成されると、1 つまたは複数の配列<xref:System.Data.DataColumn>親と子として機能する列への参照リレーションシップ内の列。 作成した後、 **DataRelation**テーブル間を移動して、値を取得するに使用することができます。  
   
- 追加する、 **DataRelation**を<xref:System.Data.DataSet>追加すると、既定では、<xref:System.Data.UniqueConstraint>親テーブルに、<xref:System.Data.ForeignKeyConstraint>子テーブルにします。 これらの既定の制約の詳細については、次を参照してください。 [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
+ 追加する、 **DataRelation**を<xref:System.Data.DataSet>追加すると、既定では、<xref:System.Data.UniqueConstraint>親テーブルに、<xref:System.Data.ForeignKeyConstraint>子テーブルにします。 これらの既定の制約の詳細については、[DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)を参照してください。  
   
  次のコード例を作成、 **DataRelation**を使用して 2 つ<xref:System.Data.DataTable>内のオブジェクト、<xref:System.Data.DataSet>します。 各<xref:System.Data.DataTable>という名前の列を含む**CustID**、2 つの間のリンクとして機能する<xref:System.Data.DataTable>オブジェクト。 例では、1 つを追加します。 **DataRelation**を、**リレーション**のコレクション、<xref:System.Data.DataSet>します。 例では、最初の引数の名前を指定する、 **DataRelation**作成中です。 2 番目の引数は、親を設定します。 **DataColumn** 3 番目の引数、子の設定と**DataColumn**します。  
   

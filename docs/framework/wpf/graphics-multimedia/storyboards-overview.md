@@ -124,7 +124,7 @@ ms.locfileid: "57362943"
   
  [!code-csharp[storyboards_ovw_snip#134](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
   
- 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、次を参照してください。、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
+ 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)を参照してください。  
   
  また、間接的なプロパティの対象化を使用するとき、存在しないオブジェクトを対象化する可能性があることに注意してください。 などのように見えますが、<xref:System.Windows.Controls.Control.Background%2A>の特定のボタンで設定した、<xref:System.Windows.Media.SolidColorBrush>実際にその色をアニメーション化しようと、<xref:System.Windows.Media.LinearGradientBrush>ボタンの背景を設定するために使用されました。 このような場合は、例外はスローされません。効果は表示であるため、アニメーションが失敗した<xref:System.Windows.Media.LinearGradientBrush>への変更に反応しません、<xref:System.Windows.Media.SolidColorBrush.Color%2A>プロパティ。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "57362943"
   
 <a name="animateWhenAPropertyValueChanges"></a>   
 ## <a name="animate-when-a-property-value-changes"></a>プロパティ値が変化したときにアニメーション化を行う  
- スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、次を参照してください。 [、アニメーションとプロパティ値が変化をトリガー](how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)します。  
+ スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、[、アニメーションとプロパティ値が変化をトリガー](how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)を参照してください。  
   
  プロパティによって適用されるアニメーション<xref:System.Windows.Trigger>オブジェクトよりもさらに複雑な方法で動作しますが<xref:System.Windows.EventTrigger>アニメーションまたはアニメーションの開始を使用して<xref:System.Windows.Media.Animation.Storyboard>メソッド。  「ハンドオフ」アニメーションによって他の定義、<xref:System.Windows.Trigger>オブジェクトで、compose を<xref:System.Windows.EventTrigger>メソッドによってトリガーされるアニメーションです。  
   

@@ -15,9 +15,9 @@ ms.locfileid: "54704707"
 # <a name="how-to-customize-a-system-provided-binding"></a>方法: システム指定のバインディングをカスタマイズします。
 Windows Communication Foundation (WCF) には、基になるバインド要素のプロパティの一部がすべてのプロパティを構成するためのいくつかのシステム指定のバインディングが含まれています。 ここでは、バインド要素のプロパティを設定してカスタム バインドを作成する方法を示します。  
   
- 直接作成し、システム指定のバインディングを使用せず、バインド要素を構成する方法の詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+ 直接作成し、システム指定のバインディングを使用せず、バインド要素を構成する方法の詳細については、[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)を参照してください。  
   
- 作成して、カスタム バインディングの拡張の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
+ 作成して、カスタム バインディングの拡張の詳細については、[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)を参照してください。  
   
  WCF ですべてのバインドで構成されて*バインド要素*します。 各バインド要素は <xref:System.ServiceModel.Channels.BindingElement> クラスから派生します。 <xref:System.ServiceModel.BasicHttpBinding> などのシステム指定のバインディングでは、独自のバインド要素が作成され構成されます。 ここでは、バインディングに直接公開されないこのバインド要素 (具体的には <xref:System.ServiceModel.BasicHttpBinding> クラス) のプロパティにアクセスして変更する方法を示します。  
   

@@ -15,7 +15,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57361058"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: 開始後に、ストーリー ボードを制御します。
-この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、次を参照してください。 [、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  
+この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、[、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)を参照してください。  
   
  使用するストーリー ボードを開始するには、その<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド、プロパティがアニメーション化して、ストーリー ボードを開始するストーリー ボードのアニメーションを分散します。  
   

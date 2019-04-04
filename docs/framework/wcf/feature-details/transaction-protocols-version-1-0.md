@@ -10,7 +10,7 @@ ms.lasthandoff: 03/26/2019
 ms.locfileid: "58463905"
 ---
 # <a name="transaction-protocols-version-10"></a>トランザクション プロトコル バージョン 1.0
-Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic Transaction および Ws-coordination プロトコルのバージョン 1.0 を実装します。 バージョン 1.1 の詳細については、次を参照してください。[トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)します。  
+Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic Transaction および Ws-coordination プロトコルのバージョン 1.0 を実装します。 バージョン 1.1 の詳細については、[トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)を参照してください。  
   
 |仕様/ドキュメント|Link|  
 |-----------------------------|----------|  

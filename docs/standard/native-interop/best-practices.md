@@ -4,12 +4,12 @@ description: .NET でネイティブ コンポーネントとやり取りする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411453"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412059"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -160,7 +160,7 @@ handle.Free();
 
 ## <a name="common-windows-data-types"></a>一般的な Windows のデータ型
 
-Win32 API で一般的に使用されるデータ型と、Win32 コードを呼び出すときに使用する C# 型の一覧を次に示します。
+Windows API で一般的に使用されるデータ型と、Windows コードを呼び出すときに使用する C# 型の一覧を次に示します。
 
 次の型は、32 ビット版と 64 ビット版の Windows でサイズは同じですが、名前は異なります。
 

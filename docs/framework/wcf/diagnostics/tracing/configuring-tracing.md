@@ -133,7 +133,7 @@ ms.locfileid: "54584913"
 </system.diagnostics>  
 ```  
   
- ユーザー定義のトレース ソースを作成する方法の詳細については、次を参照してください。[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)します。  
+ ユーザー定義のトレース ソースを作成する方法の詳細については、[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)を参照してください。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>トレースを使用するためのトレース リスナーの構成  
  実行時に、WCF は、データを処理するリスナーをトレース データをフィードします。 WCF は、いくつかの定義済みリスナーを<xref:System.Diagnostics>出力の形式が異なります。 カスタム リスナーの種類を追加することもできます。  
@@ -174,7 +174,7 @@ ms.locfileid: "54584913"
   
  `propagateActivity` 属性は、メッセージ交換に参加している他のエンドポイントにアクティビティを伝達する必要があるかどうかを示します。 この値を `true` に設定すると、任意の 2 つのエンドポイントで生成されたトレース ファイルを取得し、一方のエンドポイントのトレース セットがもう一方のエンドポイントのトレース セットにどのように転送されるかを監視できます。  
   
- アクティビティ トレースと伝達の詳細については、次を参照してください。[伝達](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)します。  
+ アクティビティ トレースと伝達の詳細については、[伝達](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)を参照してください。  
   
  両方`propagateActivity`と`ActivityTracing`ブール値 System.ServiceModel TraceSource に適用されます。 `ActivityTracing`値は、WCF またはユーザー定義のものを含む、任意のトレース ソースにも適用されます。  
   

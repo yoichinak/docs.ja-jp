@@ -20,7 +20,7 @@ ms.locfileid: "57371503"
 ## <a name="example"></a>例  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- 例については変換が含まれているサンプル全体については、次を参照してください。 [2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)します。  
+ 例については変換が含まれているサンプル全体については、[2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [アニメーションの概要](animation-overview.md)

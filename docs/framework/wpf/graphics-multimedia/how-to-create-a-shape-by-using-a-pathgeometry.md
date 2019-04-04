@@ -25,7 +25,7 @@ ms.locfileid: "57356223"
  ![PathGeometry](./media/wcpsdk-graphicsmm-pathgeometry-triangle.gif "wcpsdk_graphicsmm_pathgeometry_triangle")  
 PathGeometry で作成された三角形  
   
- 前の例では、比較的単純な図形、三角形を作成する方法を示しました。 A<xref:System.Windows.Media.PathGeometry>円弧、曲線などのより複雑な図形を作成できます。 例については、次を参照してください。[楕円の円弧を作成する](how-to-create-an-elliptical-arc.md)、 [3 次ベジエ曲線を作成](how-to-create-a-cubic-bezier-curve.md)、および[2 次ベジエ曲線を作成する](how-to-create-a-quadratic-bezier-curve.md)します。  
+ 前の例では、比較的単純な図形、三角形を作成する方法を示しました。 A<xref:System.Windows.Media.PathGeometry>円弧、曲線などのより複雑な図形を作成できます。 例については、[楕円の円弧を作成する](how-to-create-an-elliptical-arc.md)、 [3 次ベジエ曲線を作成](how-to-create-a-cubic-bezier-curve.md)、および[2 次ベジエ曲線を作成する](how-to-create-a-quadratic-bezier-curve.md)を参照してください。  
   
  この例は、より大きなサンプルの一部です。完全なサンプルについては、「[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)」を参照してください。  
   

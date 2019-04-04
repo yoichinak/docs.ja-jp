@@ -51,9 +51,9 @@ End Structure
 |`End Structure`|必須。 `Structure` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- `Structure` ステートメントは、カスタマイズできる複合値型を定義します。 A*構造*以前のバージョンの Visual Basic のユーザー定義型 (UDT) を拡張します。 詳細については、次を参照してください。[構造](../../../visual-basic/programming-guide/language-features/data-types/structures.md)します。  
+ `Structure` ステートメントは、カスタマイズできる複合値型を定義します。 A*構造*以前のバージョンの Visual Basic のユーザー定義型 (UDT) を拡張します。 詳細については、[構造](../../../visual-basic/programming-guide/language-features/data-types/structures.md)を参照してください。  
   
- 構造体は、クラスと同じ機能の多くをサポートします。 たとえば、構造体は、プロパティやプロシージャを持つことができ、インターフェイスを実装でき、パラメーター化されたコンストラクターを持つことができます。 ただし、継承、宣言、および使用方法に関しては、構造体とクラスの間には大きな違いがあります。 また、クラスは参照型ですが、構造体は値型です。 詳細については、次を参照してください。[構造体とクラス](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)します。  
+ 構造体は、クラスと同じ機能の多くをサポートします。 たとえば、構造体は、プロパティやプロシージャを持つことができ、インターフェイスを実装でき、パラメーター化されたコンストラクターを持つことができます。 ただし、継承、宣言、および使用方法に関しては、構造体とクラスの間には大きな違いがあります。 また、クラスは参照型ですが、構造体は値型です。 詳細については、[構造体とクラス](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)を参照してください。  
   
  `Structure` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*構造体は、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
@@ -75,7 +75,7 @@ End Structure
   
 -   **実装です。** 構造体で使用する場合、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)で指定したすべてのインターフェイスで定義されたすべてのメンバーを実装する必要があります`interfacenames`します。  
   
--   **既定のプロパティ。** 構造体として最大で 1 つのプロパティを指定できます、*プロパティの既定*を使用して、[既定](../../../visual-basic/language-reference/modifiers/default.md)修飾子。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
+-   **既定のプロパティ。** 構造体として最大で 1 つのプロパティを指定できます、*プロパティの既定*を使用して、[既定](../../../visual-basic/language-reference/modifiers/default.md)修飾子。 詳細については、[既定](../../../visual-basic/language-reference/modifiers/default.md)を参照してください。  
   
 ## <a name="behavior"></a>動作  
   
@@ -89,7 +89,7 @@ End Structure
   
      インスタンスの有効期間の開始によって作成されるときに、 [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)句。 インスタンスに含まれる変数の有効期間が終わった時点で、そのインスタンスの有効期間は終わります。  
   
-     構造体インスタンスの有効期間を延長することはできません。 静的構造体に相当する機能は、モジュールに用意されています。 詳細については、次を参照してください。[モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)します。  
+     構造体インスタンスの有効期間を延長することはできません。 静的構造体に相当する機能は、モジュールに用意されています。 詳細については、[モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)を参照してください。  
   
      構造体メンバーの有効期間は、それを宣言する方法と場所で決まります。 詳細については、「有効期間」を参照してください[クラス ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)します。  
   

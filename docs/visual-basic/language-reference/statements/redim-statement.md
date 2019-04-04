@@ -98,7 +98,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  3 番目の `ReDim` は新しい配列をもう 1 つ作成し、すべての層のすべての行の終わりから別の 5 つの列を削除します。 このとき、既存の要素はコピーされません。 このステートメントは配列を元のサイズに戻します。 ステートメントに `Preserve` 修飾子が含まれないため、すべての配列要素が元の初期値に設定されます。  
   
- その他の例では、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ その他の例では、[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

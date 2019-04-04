@@ -83,7 +83,7 @@ ms.locfileid: "57712462"
   
 6.  **ツールボックス**、ダブルクリックして`UserControl1`の 2 番目のセルで別のインスタンスを作成する、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
-7.  **ドキュメント アウトライン**ウィンドウで、`tableLayoutPanel1`します。 詳細については、次を参照してください。[ドキュメント アウトライン ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)します。  
+7.  **ドキュメント アウトライン**ウィンドウで、`tableLayoutPanel1`します。 詳細については、[ドキュメント アウトライン ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/46xf4h0w(v=vs.100)#using-the-document-outline-window-for-silverlight-and-wpf)を参照してください。  
   
 8.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Forms.Control.Padding%2A>プロパティを`10, 10, 10, 10`します。  
   

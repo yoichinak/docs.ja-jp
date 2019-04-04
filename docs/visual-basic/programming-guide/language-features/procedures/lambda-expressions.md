@@ -107,7 +107,7 @@ Public Class Form1
 End Class  
 ```  
   
- 作成して、非同期メソッドを使用する方法の詳細については、次を参照してください。 [Async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)します。  
+ 作成して、非同期メソッドを使用する方法の詳細については、[Async および Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)を参照してください。  
   
 ## <a name="context"></a> コンテキスト  
  ラムダ式が定義されている外側のスコープとコンテキストを共有します。 コンテナーのスコープで記述された任意のコードと同じアクセス権を持ちます。 これにより、メンバー変数、関数とサブへのアクセスが含まれます。 `Me`、コンテナーのスコープ内のローカル変数やパラメーター。  
@@ -131,7 +131,7 @@ End Class
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
 ## <a name="converting-to-a-delegate-type"></a>デリゲート型に変換します。  
- ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性のための一般的な要件については、次を参照してください。[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。 たとえば、次のコード例に暗黙的に変換されるラムダ式を示しています。`Func(Of Integer, Boolean)`またはデリゲートのシグネチャが一致します。  
+ ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性のための一般的な要件については、[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)を参照してください。 たとえば、次のコード例に暗黙的に変換されるラムダ式を示しています。`Func(Of Integer, Boolean)`またはデリゲートのシグネチャが一致します。  
   
  [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   

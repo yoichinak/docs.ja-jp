@@ -17,7 +17,7 @@ ms.locfileid: "58840303"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Network` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Network>」をご覧ください。  
   
- 詳細については、次を参照してください。[ネットワーク操作の実行](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)します。  
+ 詳細については、[ネットワーク操作の実行](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  

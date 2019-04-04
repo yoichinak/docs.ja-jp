@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219465"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654615"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
 配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
@@ -29,7 +29,7 @@ ms.locfileid: "56219465"
 |値による整数の (2 次元)。|整数のマトリックスを In パラメーターとして渡します。|  
 |値による文字列の。|文字列の配列を In パラメーターとして渡します。|  
 |整数による構造体の。|In パラメーターとして整数を含む構造体の配列を渡します。|  
-|文字列による構造体の。|In/Out パラメーターとして整数のみを含む構造体の配列を渡します。 配列のメンバーを変更することができます。|  
+|文字列による構造体の。|In/Out パラメーターとして文字列のみを含む構造体の配列を渡します。 配列のメンバーを変更することができます。|  
   
 ## <a name="example"></a>例  
  このサンプルは、以下の種類の配列差を渡す法を示します。  

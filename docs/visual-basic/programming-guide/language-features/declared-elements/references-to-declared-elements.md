@@ -191,7 +191,7 @@ Dim xDoc As xD.XmlDocument
  すべての要素に一意の名前を指定することにより、名前のあいまいさを回避できます。 名前空間、モジュール、またはクラスでは、その名前を修飾しなくても、任意の要素への参照を行うことができます。 正しくない要素を誤って参照する可能性を低くします。  
   
 ## <a name="shadowing"></a>シャドウ  
- 2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 シャドウされた要素は参照できません。代わりに、コードでは、シャドウされた要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。 例を含む詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
+ 2 つのプログラミング要素は、同じ名前を共有、うち 1 つが非表示できる、または*シャドウ*、もう 1 つ。 シャドウされた要素は参照できません。代わりに、コードでは、シャドウされた要素名を使用する場合、Visual Basic コンパイラに解決されますがシャドウする要素。 例を含む詳細については、[Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -31,7 +31,7 @@ ms.locfileid: "58463320"
   
 2.  設定する必要があります、<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>プロパティを`true`で、<xref:System.Windows.Controls.ListBox>コントロールを追跡して選択します。 このプロパティ設定によって、選択した項目として常に設定されている、<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>します。 また場合、<xref:System.Windows.Controls.ListBox>からデータを取得しますが、<xref:System.Windows.Data.CollectionViewSource>の選択と通貨を自動的に同期されます。  
   
- 使用する場合に、この手法は若干異なります[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 例については、次を参照してください。[階層 XML データでマスター詳細パターンを使用して](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)します。  
+ 使用する場合に、この手法は若干異なります[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 例については、[階層 XML データでマスター詳細パターンを使用して](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.HierarchicalDataTemplate>

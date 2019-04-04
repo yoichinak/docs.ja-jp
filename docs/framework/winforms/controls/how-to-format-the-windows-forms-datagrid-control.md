@@ -65,7 +65,7 @@ ms.locfileid: "57705910"
     > [!NOTE]
     >  コントロールを不適切な色選択 (たとえば、赤と緑) ためにアクセスできないようにすることは、コントロールの色をカスタマイズする場合に、注意します。 使用できる色を使用して、**システム カラー**パレットに、この問題を回避します。  
   
-     次の手順は、フォームに、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、次を参照してください。 [Windows フォームの DataGrid コントロールをデータ ソースにバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
+     次の手順は、フォームに、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、[Windows フォームの DataGrid コントロールをデータ ソースにバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)を参照してください。  
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>データ テーブルのテーブルと列のスタイルをプログラムで設定するには  
   

@@ -89,7 +89,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint> 標準エンドポイントです (詳細については、次を参照してください。[標準エンドポイント](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 検索を実行すると自動的に一致するサービスを選択します。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> を作成して、検索するコントラクトおよび使用するバインディングを渡し、<xref:System.ServiceModel.Discovery.DynamicEndpoint> インスタンスを WCF クライアントに渡します。 次の例は、<xref:System.ServiceModel.Discovery.DynamicEndpoint> を作成および使用して電卓サービスを呼び出す方法を示しています。 クライアントが開かれるたびに、探索が実行されます。 構成で定義されている任意のエンドポイントをオンにできます、<xref:System.ServiceModel.Discovery.DynamicEndpoint>を追加して、`kind ="dynamicEndpoint"`属性をエンドポイント構成要素。  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> 標準エンドポイントです (詳細については、[標準エンドポイント](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 検索を実行すると自動的に一致するサービスを選択を参照してください。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> を作成して、検索するコントラクトおよび使用するバインディングを渡し、<xref:System.ServiceModel.Discovery.DynamicEndpoint> インスタンスを WCF クライアントに渡します。 次の例は、<xref:System.ServiceModel.Discovery.DynamicEndpoint> を作成および使用して電卓サービスを呼び出す方法を示しています。 クライアントが開かれるたびに、探索が実行されます。 構成で定義されている任意のエンドポイントをオンにできます、<xref:System.ServiceModel.Discovery.DynamicEndpoint>を追加して、`kind ="dynamicEndpoint"`属性をエンドポイント構成要素。  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  

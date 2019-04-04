@@ -25,7 +25,7 @@ ms.locfileid: "54593798"
     [assembly: ComVisible(true)]  
     ```  
   
-3.  厳密な名前のアセンブリとして管理対象の WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、次を参照してください。[厳密な名前でアセンブリに署名](https://go.microsoft.com/fwlink/?LinkId=94874).NET Developer's Guide でします。  
+3.  厳密な名前のアセンブリとして管理対象の WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、[厳密な名前でアセンブリに署名](https://go.microsoft.com/fwlink/?LinkId=94874).NET Developer's Guide でを参照してください。  
   
 4.  アセンブリ登録 (Regasm.exe) ツールに `/tlb` オプションを指定して、アセンブリで定義されている型を COM に登録します。  
   

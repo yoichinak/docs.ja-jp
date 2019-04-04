@@ -15,7 +15,7 @@ ms.locfileid: "54587217"
 # <a name="how-to-return-rowsets"></a>方法: 行セットを返す
 この例では、データベースから行セットを返し、入力パラメーターを使用して結果をフィルター処理します。  
   
- 行セットを返すストアド プロシージャを実行するときに使用する、*結果*ストアド プロシージャからの戻り値を格納するクラスです。 詳細については、次を参照してください。 [LINQ to SQL のソース コードに分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)します。  
+ 行セットを返すストアド プロシージャを実行するときに使用する、*結果*ストアド プロシージャからの戻り値を格納するクラスです。 詳細については、[LINQ to SQL のソース コードに分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、顧客の行を返し、入力パラメーターを使用して、顧客が在住する市が "London" である行のみを返すストアド プロシージャを示しています。 例では、列挙可能な `CustomersByCityResult` クラスを想定しています。  

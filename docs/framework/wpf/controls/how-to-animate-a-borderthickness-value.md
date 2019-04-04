@@ -24,7 +24,7 @@ ms.locfileid: "57368939"
  [!code-csharp[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/ThicknessAnimationExample.cs#thicknessanimationwholepage)]
  [!code-vb[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/ThicknessAnimationExample.vb#thicknessanimationwholepage)]  
   
- サンプル全体については、次を参照してください。[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)します。  
+ サンプル全体については、[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.ThicknessAnimation>

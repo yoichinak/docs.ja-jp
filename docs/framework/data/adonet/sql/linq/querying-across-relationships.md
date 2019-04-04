@@ -31,7 +31,7 @@ ms.locfileid: "54666437"
   
  リレーションシップが得られたので、クラスに定義されたリレーションシップ プロパティを参照してクエリを作成できます。 これらのリレーションシップ参照は、データベース内の外部キー リレーションシップに対応します。 これらのリレーションシップを使用する操作は、SQL で同等の複雑な結合として変換されます。 <xref:System.Data.Linq.Mapping.AssociationAttribute> 属性を使用してリレーションシップを定義している限りは、明示的な結合を [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] で記述する必要はありません。  
   
- この錯覚を維持するために[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]と呼ばれる手法を実装する*遅延読み込み*します。 詳細については、次を参照してください。[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)します。  
+ この錯覚を維持するために[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]と呼ばれる手法を実装する*遅延読み込み*します。 詳細については、[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)を参照してください。  
   
  プロジェクトの一覧を次の SQL クエリについて考えてみます`CustomerID` - `OrderID`ペア。  
   

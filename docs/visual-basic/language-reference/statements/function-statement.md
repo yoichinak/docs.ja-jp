@@ -184,7 +184,7 @@ End Function
  この手順で使用する場合、`Implements`キーワードを含むクラスまたは構造体があります、`Implements`直後に続くステートメント、`Class`または`Structure`ステートメント。 `Implements`ステートメントで指定されている各インターフェイスを含める必要があります`implementslist`します。 ただし、インターフェイスを定義する名前、 `Function` (で`definedname`) この手順の名前と一致する必要はありません (で`name`)。  
   
 > [!NOTE]
->  関数をインライン式を定義するのにラムダ式を使用することができます。 詳細については、次を参照してください。[関数式](../../../visual-basic/language-reference/operators/function-expression.md)と[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
+>  関数をインライン式を定義するのにラムダ式を使用することができます。 詳細については、[関数式](../../../visual-basic/language-reference/operators/function-expression.md)と[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)を参照してください。  
   
 ## <a name="returning-from-a-function"></a>関数から戻る  
  ときに、`Function`プロシージャを呼び出したステートメントに続くステートメントを使用して、プロシージャは、呼び出し元のコードに返す、実行が続行します。  
@@ -208,7 +208,7 @@ End Function
   
  呼び出す、`Function`プロシージャなどの任意のライブラリを呼び出すことと同じ方法関数`Sqrt`、 `Cos`、または`ChrW`します。  
   
- 使用して関数を呼び出すことも、`Call`キーワード。 その場合は、戻り値は無視されます。 使用、`Call`キーワードはほとんどの場合にお勧めしません。 詳細については、次を参照してください。 [Call ステートメント](call-statement.md)します。  
+ 使用して関数を呼び出すことも、`Call`キーワード。 その場合は、戻り値は無視されます。 使用、`Call`キーワードはほとんどの場合にお勧めしません。 詳細については、[Call ステートメント](call-statement.md)を参照してください。  
   
  Visual Basic では、算術式内部の効率を向上させることがあります再配置します。 そのため、使用しないでください、`Function`算術式、関数には、同じ式内の変数の値が変更されたときの手順。  
   

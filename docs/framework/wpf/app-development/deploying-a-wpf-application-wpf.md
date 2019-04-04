@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] は、アプリケーションのインストールとアンインストールを単純化しますが、インストールされたアプリケーションをバージョン管理の観点から最新に保つ機能を提供しません。  
   
- Windows インストーラーの詳細については、次を参照してください。 [Windows インストーラーの配置](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)します。
+ Windows インストーラーの詳細については、[Windows インストーラーの配置](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)を参照してください。
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 配置  

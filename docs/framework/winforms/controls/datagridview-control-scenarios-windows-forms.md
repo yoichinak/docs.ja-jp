@@ -54,7 +54,7 @@ ms.locfileid: "57721310"
 -   仮想モードは、パフォーマンスを微調整する必要がある場合は、非常に大量のデータを表示するために適しています。  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>シナリオ 4:行と列を自動的にサイズ変更  
- 定期的に更新するデータを表示するときにすべてのコンテンツが表示されていることを確認する行と列を自動的に変更できます。 <xref:System.Windows.Forms.DataGridView>コントロールは、有効または無効にする手動のサイズ変更、特定の時点でサイズをプログラムで変更できるようにするいくつかのオプションを提供します。 または、自動的にサイズ変更されるたびに、変更をコンテンツ。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)します。  
+ 定期的に更新するデータを表示するときにすべてのコンテンツが表示されていることを確認する行と列を自動的に変更できます。 <xref:System.Windows.Forms.DataGridView>コントロールは、有効または無効にする手動のサイズ変更、特定の時点でサイズをプログラムで変更できるようにするいくつかのオプションを提供します。 または、自動的にサイズ変更されるたびに、変更をコンテンツ。 詳細については、[Windows フォームの DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ### <a name="scenario-key-points"></a>シナリオの要点  
   
@@ -65,7 +65,7 @@ ms.locfileid: "57721310"
 -   プログラムによるサイズ変更するには、継続的な自動サイズ変更のパフォーマンスの低下を回避するために特定の時点でのセルのサイズを変更することができます。  
   
 ## <a name="scenario-5-simple-customization"></a>シナリオ 5:単純なカスタマイズ  
- <xref:System.Windows.Forms.DataGridView>コントロールには、その基本的な外観と動作を変更するためのさまざまな方法が用意されています。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+ <xref:System.Windows.Forms.DataGridView>コントロールには、その基本的な外観と動作を変更するためのさまざまな方法が用意されています。 詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ### <a name="scenario-key-points"></a>シナリオの要点  
   

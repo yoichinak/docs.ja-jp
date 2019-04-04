@@ -27,7 +27,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54629230"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>エンコード方式および Windows フォームのグローバリゼーション
-Windows フォーム アプリケーションは、Unicode に完全対応しているため、プラットフォーム、プログラム、または言語に関係なく、文字がそれぞれ一意の数字で表されます。 Unicode の詳細については、次を参照してください。、 [Unicode consortium Web サイト](https://www.unicode.org)します。  
+Windows フォーム アプリケーションは、Unicode に完全対応しているため、プラットフォーム、プログラム、または言語に関係なく、文字がそれぞれ一意の数字で表されます。 Unicode の詳細については、、 [Unicode consortium Web サイト](https://www.unicode.org)を参照してください。  
   
 ## <a name="benefits-of-unicode"></a>Unicode の利点  
  Unicode 対応フォームの利点として、ヒンディー語などの Unicode 専用のスクリプトを操作できる点も含まれます。 さらに、1 つのフォームで複数の言語を使用できます。 Unicode では、すべての文字が 2 バイト長なので、2 バイト文字を表すために特別な作業は必要ありません。 また、すべてのプラットフォームで動作する 1 つのコードのセットを作成することもできます。 これは以前のバージョンの Visual Basic では、Windows NT などのさまざまなプラットフォーム向けのさまざまなコードを記述する必要があるからの変更と[!INCLUDE[win98](../../../../includes/win98-md.md)]します。  

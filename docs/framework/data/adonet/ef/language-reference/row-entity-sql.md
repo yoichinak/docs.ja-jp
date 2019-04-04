@@ -43,7 +43,7 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 -   同じ行コンストラクター内の 2 つの式に同じ別名を指定することはできません。  
   
- クエリ コンス トラクターの詳細については、次を参照してください。[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)します。  
+ クエリ コンス トラクターの詳細については、[構築型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは ROW 演算子を使用して、構造的に型付けされた匿名レコードを構築します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  

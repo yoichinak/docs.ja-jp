@@ -23,4 +23,4 @@ ms.locfileid: "57363372"
 ## <a name="example"></a>例  
  [!code-xaml[timingbehaviors_snip#10](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- コードは、この例から省略されています。 完全なサンプルでは、不透明度をアニメーション化する方法も示しています、<xref:System.Windows.Media.Color>内、<xref:System.Windows.Media.LinearGradientBrush>します。  完全なサンプルは、次を参照してください。、[要素のサンプルの不透明度をアニメーション化](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation)します。
+ コードは、この例から省略されています。 完全なサンプルでは、不透明度をアニメーション化する方法も示しています、<xref:System.Windows.Media.Color>内、<xref:System.Windows.Media.LinearGradientBrush>します。  完全なサンプルは、、[要素のサンプルの不透明度をアニメーション化](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation)を参照してください。

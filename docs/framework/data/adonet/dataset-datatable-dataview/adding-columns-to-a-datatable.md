@@ -44,7 +44,7 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- この例では、プロパティを**CustID**列は許可しないように設定**DBNull**値と一意である値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**します。 詳細については、次を参照してください。[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)します。  
+ この例では、プロパティを**CustID**列は許可しないように設定**DBNull**値と一意である値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**します。 詳細については、[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)を参照してください。  
   
 > [!CAUTION]
 >  列の列名が指定されていない場合、列が指定された列のインクリメンタル既定名*N、* "Column1"から始めて、ときに追加されます、 **DataColumnCollection**します。 名前付け規則を回避することをお勧めします。"列*N*"の既存の既定の列名と競合する可能性が名前を指定するために、列名を指定するときに、 **DataColumnCollection**します。 指定した名前が既に存在する場合は、例外がスローされます。  

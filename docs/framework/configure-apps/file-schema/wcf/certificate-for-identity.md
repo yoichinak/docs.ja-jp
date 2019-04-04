@@ -12,7 +12,7 @@ ms.locfileid: "55265039"
 # <a name="certificate-for-identity"></a>\<証明書 > の\<identity >
 クライアントに対するサービスの検証に使用される X.509 証明書を指定します。  
   
- 要素の値を設定する方法についての詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ 要素の値を設定する方法についての詳細については、[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
  \<identity>  
 \<証明書 >  

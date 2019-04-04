@@ -10,7 +10,7 @@ ms.lasthandoff: 03/14/2019
 ms.locfileid: "57843931"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>ワークフロー サービス内でのシリアル化の構成
-ワークフロー サービスは、Windows Communication Foundation (WCF) サービスをそのため、オプションのいずれかを使用して、、 <xref:System.Runtime.Serialization.DataContractSerializer> (既定値) または<xref:System.Xml.Serialization.XmlSerializer>します。 ワークフロー以外のサービスを記述する場合、使用するシリアライザーの型はサービスまたは操作コントラクトで指定されます。 WCF ワークフロー サービスを作成するときに、コードでは、これらのコントラクトを指定しないが、コントラクト推論で実行時に生成されます。 コントラクト推論の詳細については、次を参照してください。[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)します。  シリアライザーは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> プロパティを使用して指定されます。 これは、次の図に示すようにデザイナーで設定できます。  
+ワークフロー サービスは、Windows Communication Foundation (WCF) サービスをそのため、オプションのいずれかを使用して、、 <xref:System.Runtime.Serialization.DataContractSerializer> (既定値) または<xref:System.Xml.Serialization.XmlSerializer>します。 ワークフロー以外のサービスを記述する場合、使用するシリアライザーの型はサービスまたは操作コントラクトで指定されます。 WCF ワークフロー サービスを作成するときに、コードでは、これらのコントラクトを指定しないが、コントラクト推論で実行時に生成されます。 コントラクト推論の詳細については、[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)を参照してください。  シリアライザーは、<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> プロパティを使用して指定されます。 これは、次の図に示すようにデザイナーで設定できます。  
   
  ![[プロパティ] ウィンドウには、SerializerOption プロパティを設定します。](./media/configuring-serialization-in-a-workflow-service/setting-serializer-property.png)  
   
@@ -27,7 +27,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
-  ワークフロー サービスにも既知の型を指定できます。 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](data-contract-known-types.md)します。 既知の型は、デザイナーまたはコードで指定できます。 デザイナーで既知の型を指定するで KnownTypes プロパティの横にある省略記号ボタンをクリックして、**プロパティ ウィンドウ**の<xref:System.ServiceModel.Activities.Receive>アクティビティの次の図に示すようにします。   
+  ワークフロー サービスにも既知の型を指定できます。 既知の型の詳細については、[Data Contract Known Types](data-contract-known-types.md)を参照してください。 既知の型は、デザイナーまたはコードで指定できます。 デザイナーで既知の型を指定するで KnownTypes プロパティの横にある省略記号ボタンをクリックして、**プロパティ ウィンドウ**の<xref:System.ServiceModel.Activities.Receive>アクティビティの次の図に示すようにします。   
   
  ![KnownTypes プロパティのダイアログ ボックスのスクリーン ショット。](./media/configuring-serialization-in-a-workflow-service/known-types-properties.png)  
   

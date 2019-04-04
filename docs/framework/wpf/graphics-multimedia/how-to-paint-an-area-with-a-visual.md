@@ -29,7 +29,7 @@ ms.locfileid: "57363073"
   
  詳細については<xref:System.Windows.Media.VisualBrush>し、その他の例を参照してください、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)の概要。  
   
- このコード例が示されている例の一部、<xref:System.Windows.Media.VisualBrush>クラス。 サンプル全体については、次を参照してください。、 [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)します。  
+ このコード例が示されている例の一部、<xref:System.Windows.Media.VisualBrush>クラス。 サンプル全体については、、 [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)

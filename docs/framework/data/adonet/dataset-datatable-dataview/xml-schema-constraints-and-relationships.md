@@ -12,7 +12,7 @@ ms.locfileid: "54602872"
 # <a name="xml-schema-constraints-and-relationships"></a>XML スキーマ制約およびリレーションシップ
 XML スキーマ定義言語 (XSD) スキーマでは、制約を指定することができます (一意、キー、およびキー参照制約) との関係 (を使用して、 **msdata:Relationship**注釈)。 このトピックでは、XML スキーマで指定した制約およびリレーションシップを解釈して <xref:System.Data.DataSet> を生成する方法について説明します。  
   
- 指定した XML スキーマで一般に、 **msdata:Relationship**注釈でのリレーションシップだけを生成する場合、**データセット**します。 詳細については、次を参照してください。 [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)します。 制約を指定する (一意、キー、およびキー参照) で制約を生成する場合、**データセット**します。 このトピックの後に説明されているように、リレーションシップを生成するにはキー制約とキー参照制約も使用するので注意してください。  
+ 指定した XML スキーマで一般に、 **msdata:Relationship**注釈でのリレーションシップだけを生成する場合、**データセット**します。 詳細については、[XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)を参照してください。 制約を指定する (一意、キー、およびキー参照) で制約を生成する場合、**データセット**します。 このトピックの後に説明されているように、リレーションシップを生成するにはキー制約とキー参照制約も使用するので注意してください。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>キー制約およびキー参照制約によるリレーションシップの生成  
  指定する代わりに、 **msdata:Relationship**注釈、XML スキーマのマッピング プロセス中に、で制約だけでなく、リレーションシップを生成するために使用するキーとキー参照制約を指定できます**データセット**します。 ただし、指定した場合`msdata:ConstraintOnly="true"`で、 **keyref**要素、**データセット**制約のみを含めるし、リレーションシップには含まれません。  
@@ -85,7 +85,7 @@ XML スキーマ定義言語 (XSD) スキーマでは、制約を指定するこ
 ..Nested: False  
 ```  
   
- 前のスキーマ例では、**順序**と**OrderDetail**要素が入れ子になっていません。 入れ子になっている Order 要素と OrderDetail 要素を含むスキーマの例を次に示します。 ただし、ありません**msdata:Relationship**注釈が指定されています。 そのため、暗黙のリレーションがと見なされます。 詳細については、次を参照してください。[マップ暗黙的なリレーションの間で入れ子になっているスキーマ要素](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)します。 スキーマでは、キー制約とキー参照制約も指定します。  
+ 前のスキーマ例では、**順序**と**OrderDetail**要素が入れ子になっていません。 入れ子になっている Order 要素と OrderDetail 要素を含むスキーマの例を次に示します。 ただし、ありません**msdata:Relationship**注釈が指定されています。 そのため、暗黙のリレーションがと見なされます。 詳細については、[マップ暗黙的なリレーションの間で入れ子になっているスキーマ要素](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)を参照してください。 スキーマでは、キー制約とキー参照制約も指定します。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   

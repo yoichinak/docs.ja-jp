@@ -63,7 +63,7 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 3.  クライアントとサービスの間の通信をセキュリティで保護するバインディングを追加します。  
   
-     この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。  
+     この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。  
   
 4.  追加することで、サービス エンドポイントの動作を関連付ける、 [\<サービス >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)要素の値を設定し、`behaviorConfiguration`属性の名前属性の値を[\<動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素。  
   

@@ -18,7 +18,7 @@ ms.locfileid: "54658927"
 > [!WARNING]
 >  `[ServiceContract]` と `[ServiceContractAttribute]` は、同じことを行います。 同じことが当てはまります`[OperationContract]`と`[OperationContractAttribute]`します。 各ケースでは、後者の短縮形です。  
   
- サービス コントラクトの詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。  
+ サービス コントラクトの詳細については、[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。  
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>クラスを使用した Windows Communication Foundation コントラクトの作成  
   

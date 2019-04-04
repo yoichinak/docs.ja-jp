@@ -13,9 +13,9 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54538389"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChange と RejectChange
-内のデータに加えられた変更の精度を確認した後、<xref:System.Data.DataTable>を使用して変更を受け入れることができます、<xref:System.Data.DataRow.AcceptChanges%2A>のメソッド、 <xref:System.Data.DataRow>、 <xref:System.Data.DataTable>、または<xref:System.Data.DataSet>、これは、設定、**現在**行値を**元**値し、設定は、 **RowState**プロパティを**Unchanged**します。 いずれかをクリアして承認または変更を拒否する**RowError**情報と設定、 **HasErrors**プロパティを**false**します。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳細については、次を参照してください。 [Dataadapter によるデータ ソースを更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
+内のデータに加えられた変更の精度を確認した後、<xref:System.Data.DataTable>を使用して変更を受け入れることができます、<xref:System.Data.DataRow.AcceptChanges%2A>のメソッド、 <xref:System.Data.DataRow>、 <xref:System.Data.DataTable>、または<xref:System.Data.DataSet>、これは、設定、**現在**行値を**元**値し、設定は、 **RowState**プロパティを**Unchanged**します。 いずれかをクリアして承認または変更を拒否する**RowError**情報と設定、 **HasErrors**プロパティを**false**します。 変更を受け入れるかまたは拒否した場合、データ ソース内で実行中の更新操作にも影響することがあります。 詳細については、[Dataadapter によるデータ ソースを更新](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)を参照してください。  
   
- 外部キー制約が存在しない場合、 **DataTable**、変更が承認されるかを使用して拒否された**AcceptChanges**と**RejectChanges** の子の行に反映されます**DataRow**に従い、 **ForeignKeyConstraint.AcceptRejectRule**します。 詳細については、次を参照してください。 [DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)します。  
+ 外部キー制約が存在しない場合、 **DataTable**、変更が承認されるかを使用して拒否された**AcceptChanges**と**RejectChanges** の子の行に反映されます**DataRow**に従い、 **ForeignKeyConstraint.AcceptRejectRule**します。 詳細については、[DataTable の制約](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)を参照してください。  
   
  行にエラーがあるかどうかをチェックし、必要に応じてエラーを解決し、エラーを解決できない場合にはその行を拒否する例を次に示します。 解決、エラーのことに注意してください、 **RowError**値は空の文字列にリセット原因、 **HasErrors**プロパティを設定する**false**します。 エラーのあるすべての行が解決または拒否されたときに**AcceptChanges**全体のすべての変更を受け入れるために呼び出される**DataTable**します。  
   

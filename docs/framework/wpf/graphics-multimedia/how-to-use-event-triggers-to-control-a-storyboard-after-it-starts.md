@@ -33,11 +33,11 @@ ms.locfileid: "57362371"
 ## <a name="example"></a>例  
  次の例では、制御可能なストーリー ボード アクションを使用して、ストーリー ボードを対話的に制御します。  
   
- **注:** コードを使用してストーリー ボードを制御するための例を表示するには、次を参照してください。 [、ストーリー ボードの後に開始の対話型メソッドを使用して制御](how-to-control-a-storyboard-after-it-starts.md)します。  
+ **注:** コードを使用してストーリー ボードを制御するための例を表示するには、[、ストーリー ボードの後に開始の対話型メソッドを使用して制御](how-to-control-a-storyboard-after-it-starts.md)を参照してください。  
   
  [!code-xaml[timingbehaviors_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/ControlStoryboardExample.xaml#controlstoryboardexampleusingwholepage)]  
   
- その他の例では、次を参照してください。、[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)します。  
+ その他の例では、、[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>

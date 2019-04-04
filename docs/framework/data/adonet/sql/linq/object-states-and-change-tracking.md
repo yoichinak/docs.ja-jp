@@ -19,7 +19,7 @@ ms.locfileid: "54683311"
 |-----------|-----------------|  
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって追跡されないオブジェクト。 具体的には次のものがあります。<br /><br /> -現在通じて照会されないオブジェクト<xref:System.Data.Linq.DataContext>(など、新しく作成されたオブジェクトの場合)。<br />逆シリアル化を通じて作成されたオブジェクト<br />-オブジェクトをさまざまなを使って照会<xref:System.Data.Linq.DataContext>します。|  
 |`Unchanged`|現在の <xref:System.Data.Linq.DataContext> を使用して取得され、作成後に変更された履歴がないオブジェクト。|  
-|`PossiblyModified`|これはオブジェクト*アタッチ*に、 <xref:System.Data.Linq.DataContext>。 詳細については、次を参照してください。[データの取得および CUD 操作 (LINQ to SQL) の N 層アプリケーションで](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)します。|  
+|`PossiblyModified`|これはオブジェクト*アタッチ*に、 <xref:System.Data.Linq.DataContext>。 詳細については、[データの取得および CUD 操作 (LINQ to SQL) の N 層アプリケーションで](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)を参照してください。|  
 |`ToBeInserted`|現在の <xref:System.Data.Linq.DataContext> を使用して取得されていないオブジェクト。 この場合、`INSERT` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|  
 |`ToBeUpdated`|取得後に変更された履歴があるオブジェクト。 この場合、`UPDATE` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|  
 |`ToBeDeleted`|削除がマークされているオブジェクト。`DELETE` 中にデータベースの <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が発生します。|  
@@ -28,7 +28,7 @@ ms.locfileid: "54683311"
 ## <a name="inserting-objects"></a>オブジェクトの挿入  
  `Inserts` を使用して、<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> を明示的に要求できます。 または、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]推論できる`Inserts`を更新する必要がある既知のオブジェクトのいずれかに接続されているオブジェクトを検索します。 追加する場合など、`Untracked`オブジェクトを<xref:System.Data.Linq.EntitySet%601>設定または、<xref:System.Data.Linq.EntityRef%601>を`Untracked`オブジェクトを作成する、`Untracked`オブジェクト グラフ内の追跡オブジェクトを通じてアクセスします。 処理中に<xref:System.Data.Linq.DataContext.SubmitChanges%2A>、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]追跡対象のオブジェクトを走査しは追跡されません。 到達可能な永続的なオブジェクトを検出します。 このようなオブジェクトは、データベースへの挿入候補です。  
   
- 継承階層内のクラスの<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) もとして指定されたメンバーの値を設定、*識別子*オブジェクトの種類に一致する`o`します。 既定の識別子の値の型が一致する場合、この操作によって、識別子の値が既定値で上書きされます。 詳細については、次を参照してください。[継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)します。  
+ 継承階層内のクラスの<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) もとして指定されたメンバーの値を設定、*識別子*オブジェクトの種類に一致する`o`します。 既定の識別子の値の型が一致する場合、この操作によって、識別子の値が既定値で上書きされます。 詳細については、[継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)を参照してください。  
   
 > [!IMPORTANT]
 >  `Table` に追加されたオブジェクトは、ID キャッシュにはありません。 ID キャッシュは、データベースから取得されたもののみを反映します。 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> を呼び出した後、<xref:System.Data.Linq.DataContext.SubmitChanges%2A> が正常終了するまで、追加されたエンティティはデータベースに対するクエリで使用されません。  

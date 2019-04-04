@@ -14,7 +14,7 @@ Windows Communication Foundation (WCF) の機能は、相互に認証し、暗�
   
  ブートス トラップ ポリシー (の 6.2.7 で定義されている、 [Ws-securitypolicy](https://go.microsoft.com/fwlink/?LinkId=99817)標準)、チャネルをセキュリティで保護し、RST および RSTR/SCT 交換する前にクライアントを認証するために使用するメッセージ セキュリティ アサーションが含まれます。 特定の WCF の標準バインディングが、`Security.Message.EstablishSecurityContext`コントロールかどうかメッセージ交換をセキュリティで保護するプロパティを使用します。 カスタム バインドを使用して、ブートス トラップが使用するか、入れ子のセキュリティ バインド要素によって示されます[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)または呼び出すことによって、構成ファイルで<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%2A>コード。  
   
- セッションの詳細については、次を参照してください。[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)します。  
+ セッションの詳細については、[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [セッション、インスタンス化、およびコンカレンシー](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)

@@ -13,7 +13,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54584533"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>方法: トランザクションを使用してデータ送信を角かっこ
-データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。 詳細については、次を参照してください。[トランザクション サポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)します。  
+データベースへの送信を <xref:System.Transactions.TransactionScope> で囲むことができます。 詳細については、[トランザクション サポート](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードでは、データベース送信を <xref:System.Transactions.TransactionScope> で囲みます。  

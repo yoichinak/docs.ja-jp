@@ -20,15 +20,15 @@ ms.locfileid: "57723089"
 
 <xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType>コンポーネントは、参照やファイルを選択する [Windows] ダイアログ ボックスを開きます。 開き、選択したファイルを読み取り、使用することができます、<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType>メソッド、またはのインスタンスを作成、<xref:System.IO.StreamReader?displayProperty=nameWithType>クラス。 次の例では、両方の方法を示します。 
 
-.NET framework で取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティには特権レベルが付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 例では、実行、<xref:System.Security.Permissions.FileIOPermission>アクセス許可を確認して、部分的に信頼されたコンテキストで実行する場合は、特権がないため例外をスローできます。 詳細については、次を参照してください。[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)します。
+.NET framework で取得または設定する、<xref:System.Windows.Forms.FileDialog.FileName%2A>プロパティには特権レベルが付与して、<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>クラス。 例では、実行、<xref:System.Security.Permissions.FileIOPermission>アクセス許可を確認して、部分的に信頼されたコンテキストで実行する場合は、特権がないため例外をスローできます。 詳細については、[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)を参照してください。
 
-ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、次を参照してください。 [csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。 
+ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、[csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)を参照してください。 
 
 .NET Core 3.0 以降では、ことができますもビルドおよび実行する例では、.NET Core アプリを Windows として .NET Core の Windows フォームのあるフォルダーから *\<フォルダー名>.csproj* プロジェクト ファイル。 
 
 ## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>例:StreamReader とストリームとしてファイルを読み取り  
   
-次のコードの例では、Windows フォーム<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>を開くイベント ハンドラー、<xref:System.Windows.Forms.OpenFileDialog>で、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。 ユーザーがファイルを選択し、選択した後**OK**のインスタンス、<xref:System.IO.StreamReader>クラス ファイルを読み取り、フォームのテキスト ボックスにその内容を表示します。 ファイル ストリームからの読み取りの詳細については、次を参照してください。<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>と<xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>します。  
+次のコードの例では、Windows フォーム<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>を開くイベント ハンドラー、<xref:System.Windows.Forms.OpenFileDialog>で、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。 ユーザーがファイルを選択し、選択した後**OK**のインスタンス、<xref:System.IO.StreamReader>クラス ファイルを読み取り、フォームのテキスト ボックスにその内容を表示します。 ファイル ストリームからの読み取りの詳細については、<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>と<xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>を参照してください。  
 
  [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
  [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  

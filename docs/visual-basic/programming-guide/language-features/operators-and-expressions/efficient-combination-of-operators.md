@@ -25,7 +25,7 @@ ms.locfileid: "58841259"
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 前の例などの複雑な式を作成するには、演算子の優先順位の規則について理解する必要があります。 詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
+ 前の例などの複雑な式を作成するには、演算子の優先順位の規則について理解する必要があります。 詳細については、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を参照してください。  
   
 ## <a name="parenthetical-expressions"></a>かっこで囲まれた式  
  多くの場合、演算子の優先順位によって決定されるとは異なる順序で演算を実行します。 例を次に示します。  

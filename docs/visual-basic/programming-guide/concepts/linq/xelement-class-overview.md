@@ -18,9 +18,9 @@ ms.locfileid: "58830710"
 ### <a name="constructing-xml-trees"></a>XML ツリーの構築  
  次のようなさまざまな方法で XML ツリーを構築できます。  
   
--   コードで XML ツリーを構築できます。 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
+-   コードで XML ツリーを構築できます。 詳細については、[XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)を参照してください。  
   
--   <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳細については、次を参照してください。 [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)します。  
+-   <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳細については、[XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)を参照してください。  
   
 -   <xref:System.Xml.XmlReader> を使用してツリーを設定できます。 詳細については、「 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 」を参照してください。  
   
@@ -81,22 +81,22 @@ Console.WriteLine(xmlTree)
 ### <a name="serializing-xml-trees"></a>XML ツリーのシリアル化  
  XML ツリーは、<xref:System.IO.File>、<xref:System.IO.TextWriter>、または <xref:System.Xml.XmlWriter> にシリアル化できます。  
   
- 詳細については、次を参照してください。 [XML ツリーをシリアル化する」(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)します。  
+ 詳細については、[XML ツリーをシリアル化する」(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)を参照してください。  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>軸メソッドによる XML データの取得  
  軸メソッドを使用すると、属性、子要素、子孫要素、および祖先要素を取得できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、軸メソッドに対して機能し、XML ツリーを操作して処理するための、柔軟で強力な複数の機能を備えています。  
   
- 詳細については、次を参照してください。 [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)します。  
+ 詳細については、[LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)を参照してください。  
   
 ### <a name="querying-xml-trees"></a>XML ツリーのクエリ  
  XML ツリーからデータを抽出する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを記述できます。  
   
- 詳細については、次を参照してください。 [XML ツリーのクエリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)します。  
+ 詳細については、[XML ツリーのクエリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)を参照してください。  
   
 ### <a name="modifying-xml-trees"></a>XML ツリーの変更  
  要素を変更するには、そのコンテンツや属性を変更するなど、さまざまな方法があります。 要素を親から削除することもできます。  
   
- 詳細については、次を参照してください。 [XML ツリーの変更 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)します。  
+ 詳細については、[XML ツリーの変更 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

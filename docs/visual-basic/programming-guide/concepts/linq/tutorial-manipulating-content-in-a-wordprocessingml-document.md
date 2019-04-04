@@ -12,7 +12,7 @@ ms.locfileid: "58834960"
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作
 このチュートリアルでは、関数型変換の方法と LINQ to XML を適用して XML ドキュメントを操作する方法について説明します。 Visual Basic の例では、クエリを実行して、Microsoft Word で保存されている Office Open XML WordprocessingML ドキュメント内の情報を操作します。  
   
- 詳細については、次を参照してください。、 [Eric White のブログ](http://www.ericwhite.com)します。  
+ 詳細については、、 [Eric White のブログ](http://www.ericwhite.com)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

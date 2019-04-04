@@ -72,7 +72,7 @@ ms.locfileid: "57679438"
 
          ![受信アクティビティのプロパティを設定](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "受信アクティビティのプロパティを設定します。")
 
-         DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフロー サービスでのコントラクトの使用方法の詳細については、次を参照してください。[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)します。
+         DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフロー サービスでのコントラクトの使用方法の詳細については、[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)を参照してください。
 
     2.  をクリックして、**を定義しています.** のリンクを**ReceiveStartOrder**活動し、次の図に示すようにプロパティを設定します。  注意、**パラメーター**オプション ボタンを選択すると、という名前のパラメーター`p_customerName`にバインドされて、`customerName`変数。 これにより、構成、**受信**アクティビティをいくつかのデータを受信し、そのデータをローカル変数にバインドします。
 
@@ -110,7 +110,7 @@ ms.locfileid: "57679438"
 
          ![受信側の 2 番目のパラメーターを指定する](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "2 つのパラメーターを受信する受信アクティビティを構成します。")
 
-    4.  をクリックして、 **CorrelateOn**省略記号ボタンをクリックし、入力`orderIdHandle`します。 **XPath クエリ**ドロップダウン矢印をクリックし、選択`p_orderId`します。 これにより、2 つ目の Receive アクティビティに相関関係が設定されます。 相関関係の詳細については、次を参照してください。[相関](../../../../docs/framework/wcf/feature-details/correlation.md)します。
+    4.  をクリックして、 **CorrelateOn**省略記号ボタンをクリックし、入力`orderIdHandle`します。 **XPath クエリ**ドロップダウン矢印をクリックし、選択`p_orderId`します。 これにより、2 つ目の Receive アクティビティに相関関係が設定されます。 相関関係の詳細については、[相関](../../../../docs/framework/wcf/feature-details/correlation.md)を参照してください。
 
          ![CorrelatesOn プロパティの設定](./media/creating-a-long-running-workflow-service/correlateson-setting.png "CorrelatesOn プロパティを設定します。")
 

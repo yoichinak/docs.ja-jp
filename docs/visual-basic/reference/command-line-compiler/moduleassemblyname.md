@@ -37,7 +37,7 @@ ms.locfileid: "58832415"
   
 -   参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
   
- モジュールの作成方法の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)します。  
+ モジュールの作成方法の詳細については、[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)を参照してください。 フレンド アセンブリの詳細については、[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)を参照してください。  
   
 > [!NOTE]
 >  `-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。 コマンド プロンプトからコンパイルするときにのみ、は使用できます。  

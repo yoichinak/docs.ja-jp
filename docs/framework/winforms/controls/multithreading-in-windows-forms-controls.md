@@ -16,7 +16,7 @@ ms.locfileid: "57703323"
 多くのアプリケーションで行うことができます、ユーザー インターフェイス (UI) の高い別のスレッドで時間のかかる操作を実行することによって。 多数のツールがあるマルチ スレッドなど、Windows フォーム コントロール、<xref:System.Threading>名前空間、<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッド、および`BackgroundWorker`コンポーネント。  
   
 > [!NOTE]
->  `BackgroundWorker`コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間と<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッドです。 ただし、これらは保持されます下位互換性と将来の使用を選択した場合。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)します。  
+>  `BackgroundWorker`コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間と<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッドです。 ただし、これらは保持されます下位互換性と将来の使用を選択した場合。 詳細については、[BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  

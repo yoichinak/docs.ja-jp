@@ -103,7 +103,7 @@ End Module
 
 標準クエリ演算子の重要な特性は、純粋関数として実装される点です。
 
-詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。
+詳細については、[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

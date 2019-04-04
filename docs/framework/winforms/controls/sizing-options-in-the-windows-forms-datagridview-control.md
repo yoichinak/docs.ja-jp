@@ -61,7 +61,7 @@ ms.locfileid: "57717909"
 ## <a name="automatic-sizing"></a>自動サイズ変更  
  自動サイズ変更の 2 種類があります、<xref:System.Windows.Forms.DataGridView>コントロール: 列フィル モードとコンテンツ ベースの自動サイズ変更します。  
   
- 列フィル モードでは、コントロールの表示領域の幅に合わせてコントロールで、表示する列が発生します。 このモードの詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールで列の塗りつぶしモード](column-fill-mode-in-the-windows-forms-datagridview-control.md)します。  
+ 列フィル モードでは、コントロールの表示領域の幅に合わせてコントロールで、表示する列が発生します。 このモードの詳細については、[Windows フォーム DataGridView コントロールで列の塗りつぶしモード](column-fill-mode-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
  行、列、およびヘッダーのサイズに合わせてセルの内容を自動的に調整を構成することもできます。 この場合、サイズ調整は、セルの内容が変更されるたびに発生します。  
   

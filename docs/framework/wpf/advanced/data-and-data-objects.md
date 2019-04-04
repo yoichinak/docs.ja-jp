@@ -54,7 +54,7 @@ ms.locfileid: "57367545"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_createdataobject_typestring)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_CreateDataObject_TypeString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_createdataobject_typestring)]  
   
- データ オブジェクトを作成するコードの例については、次を参照してください。[データ オブジェクトを作成](how-to-create-a-data-object.md)です。  
+ データ オブジェクトを作成するコードの例については、[データ オブジェクトを作成](how-to-create-a-data-object.md)を参照してください。  
   
 ### <a name="storing-data-in-multiple-formats"></a>複数の形式でデータを格納します。  
  1 つのデータ オブジェクトは複数の形式でデータを格納できます。   1 つのデータ オブジェクト内で複数のデータ形式の戦略的な使用可能性があるとデータ オブジェクトはさまざまなよりもドロップ ターゲットで使用できるだけの場合、1 つのデータ形式を表すことができます。  なお、一般に、ドラッグ ソースが潜在的なドロップ ターゲットで使用できるデータ形式に依存しない必要があります。  
@@ -72,7 +72,7 @@ ms.locfileid: "57367545"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats)]  
   
- 使用可能なデータ形式のデータ オブジェクトのクエリを実行するコードの例については、次を参照してください。[データ オブジェクト内のデータ形式を一覧表示](how-to-list-the-data-formats-in-a-data-object.md)します。  特定のデータ形式が存在するデータ オブジェクトのクエリを実行する例については、次を参照してください。[データ形式が存在するかを判断、データ オブジェクトで](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)します。  
+ 使用可能なデータ形式のデータ オブジェクトのクエリを実行するコードの例については、[データ オブジェクト内のデータ形式を一覧表示](how-to-list-the-data-formats-in-a-data-object.md)を参照してください。  特定のデータ形式が存在するデータ オブジェクトのクエリを実行する例については、[データ形式が存在するかを判断、データ オブジェクトで](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)を参照してください。  
   
 ### <a name="retrieving-data-from-a-data-object"></a>データ オブジェクトからのデータの取得  
  いずれかを呼び出すことは、特定の形式でデータ オブジェクトからデータを取得するだけです、<xref:System.Windows.DataObject.GetData%2A>メソッドと目的のデータ形式を指定します。  1 つ、<xref:System.Windows.DataObject.GetDataPresent%2A>メソッドは、特定のデータ形式の有無を確認するために使用できます。  <xref:System.Windows.DataObject.GetData%2A> 内のデータを返します、 <xref:System.Object>; データの形式によってこのオブジェクトは、型固有のコンテナーにキャストすることができます。  
@@ -82,7 +82,7 @@ ms.locfileid: "57367545"
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getspecificdataformat)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetSpecificDataFormat](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getspecificdataformat)]  
   
- データ オブジェクトからデータを取得するコードの例については、次を参照してください。[特定のデータ形式でデータの取得](how-to-retrieve-data-in-a-particular-data-format.md)します。  
+ データ オブジェクトからデータを取得するコードの例については、[特定のデータ形式でデータの取得](how-to-retrieve-data-in-a-particular-data-format.md)を参照してください。  
   
 ### <a name="removing-data-from-a-data-object"></a>データ オブジェクトからデータを削除します。  
  データ オブジェクトからデータを直接削除できません。  データ オブジェクトからデータを効果的に削除するには、次の手順を実行します。  

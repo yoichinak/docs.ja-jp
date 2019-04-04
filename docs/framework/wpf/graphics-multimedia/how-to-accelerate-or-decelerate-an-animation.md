@@ -20,4 +20,4 @@ ms.locfileid: "57376248"
 ## <a name="example"></a>例  
  [!code-xaml[timingbehaviors_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/AccelDecelExample.xaml#1)]  
   
- コードは、この例から省略されています。 完全なコードでは、次を参照してください。、[アニメーションのタイミング動作 (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp)または[アニメーションのタイミング動作 (Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic)します。
+ コードは、この例から省略されています。 完全なコードでは、、[アニメーションのタイミング動作 (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp)または[アニメーションのタイミング動作 (Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic)を参照してください。

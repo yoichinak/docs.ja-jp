@@ -54,7 +54,7 @@ ms.locfileid: "54579993"
   
  `null` が入力された場合、これらの関数は `null` を返します。  
   
- 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。  
+ 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、[Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

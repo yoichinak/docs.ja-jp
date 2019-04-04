@@ -24,7 +24,7 @@ WS-AtomicTransaction (WS-AT) は、相互運用が可能なトランザクショ
   
 -   トランザクションの結果を解決するために、クライアントのトランザクション マネージャーとサーバーのトランザクション マネージャーの間で 2 フェーズ コミット プロトコルを実行するために使用されるネットワーク プロトコル。  
   
- 場合は、サーバーとクライアントは、WCF を使用して記述されて、WS-AT を使用する必要はありません。 その代わりに、`NetTcpBinding` プロトコルを使用する `TransactionFlow` 属性を有効にして `OleTransactions` の既定の設定を使用できます。 詳細については、次を参照してください。 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。 ただし、サードパーティのテクノロジで構築された Web サービスにトランザクションをフローさせる場合は、WS-AT を使用する必要があります。  
+ 場合は、サーバーとクライアントは、WCF を使用して記述されて、WS-AT を使用する必要はありません。 その代わりに、`NetTcpBinding` プロトコルを使用する `TransactionFlow` 属性を有効にして `OleTransactions` の既定の設定を使用できます。 詳細については、[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)を参照してください。 ただし、サードパーティのテクノロジで構築された Web サービスにトランザクションをフローさせる場合は、WS-AT を使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 - [WS-AtomicTransaction サポートの構成](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

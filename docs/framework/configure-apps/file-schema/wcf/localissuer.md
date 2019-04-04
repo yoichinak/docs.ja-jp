@@ -36,7 +36,7 @@ endpointBehaviors セクション
 |属性|説明|  
 |---------------|-----------------|  
 |address|必須の文字列。 ローカル発行者の URI を指定します。|  
-|バインド|省略可能な文字列。 システム指定のバインディングの 1 つ。 一覧については、次を参照してください。 [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)します。|  
+|バインド|省略可能な文字列。 システム指定のバインディングの 1 つ。 一覧については、[System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。|  
 |bindingConfiguration|省略可能な文字列。 構成ファイル内に存在するバインド構成を指定します。|  
   
 ### <a name="child-elements"></a>子要素  

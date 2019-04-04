@@ -40,7 +40,7 @@ ms.locfileid: "54583208"
 > [!NOTE]
 >  一般的に、障害が生じたセッションフル チャネルを明示的に検出することは有用ではありません。通知されるタイミングがセッションの実装により異なるためです。 たとえば、<xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (信頼できるセッションは無効) では TCP 接続のセッションが表面に出るため、サービスまたはクライアントで <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> イベントをリッスンしていれば、ネットワーク エラーが発生すると直ちに通知される可能性があります。 一方、信頼できるセッション (<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> を有効化したバインディングにより確立される) は、サービスが小さなネットワーク エラーから分離されるように設計されています。 妥当な期間内にセッションの再確立が可能な場合、信頼できるセッション用に構成された、この同じバインディングは、中断が長期間発生し続けるまでエラーにならない場合があります。  
   
- アプリケーション層にチャネルを公開するほとんどのシステム提供のバインディングでは、既定でセッションが使用されますが、<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> では使用されません。 詳細については、次を参照してください。[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)します。  
+ アプリケーション層にチャネルを公開するほとんどのシステム提供のバインディングでは、既定でセッションが使用されますが、<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> では使用されません。 詳細については、[を使用してセッション](../../../../docs/framework/wcf/using-sessions.md)を参照してください。  
   
 ### <a name="the-proper-use-of-sessions"></a>セッションの適切な使用  
  セッションを使用すると、メッセージ交換全体が完了したかどうか、そしてメッセージ交換が成功したと両側が見なしたかどうかを認識できます。 呼び出し側のアプリケーションでは、チャネルを開き、使用して、閉じるまでを 1 つの try ブロック内で処理することをお勧めします。 セッション チャネルが開いているときに、<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> メソッドを 1 回呼び出して、その呼び出しが正常に返された場合、セッションは成功しています。 この場合の成功とは、バインディングにより指定されているすべての配信保証が満たされ、もう一方の側では <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> を呼び出す前にチャネルに対して <xref:System.ServiceModel.ICommunicationObject.Close%2A> を呼び出さなかったことを意味します。  
@@ -51,7 +51,7 @@ ms.locfileid: "54583208"
  クライアント アプリケーションで例外を処理することは簡単です。 try ブロック内部でチャネルを開き、使用して、閉じた場合、例外がスローされない限り、メッセージ交換は正常に行われています。 通常、例外がスローされた場合は、メッセージ交換が中止されます。  
   
 > [!NOTE]
->  使用、`using`ステートメント (`Using` Visual Basic で) は推奨されません。 その理由は、`using` ステートメントの最後で例外が発生し、認識する必要のある他の例外がマスクされる可能性があるためです。 詳細については、次を参照してください。[使用終了、中止 WCF クライアントのリソースを解放する](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)します。  
+>  使用、`using`ステートメント (`Using` Visual Basic で) は推奨されません。 その理由は、`using` ステートメントの最後で例外が発生し、認識する必要のある他の例外がマスクされる可能性があるためです。 詳細については、[使用終了、中止 WCF クライアントのリソースを解放する](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)を参照してください。  
   
  次のコード例は、`using` 文ではなく try/catch ブロックを使用する、推奨されるクライアント パターンを示しています。  
   
@@ -63,16 +63,16 @@ ms.locfileid: "54583208"
   
  データグラム チャネルを閉じるときに例外が発生しても、データグラム チャネルはエラーになりません。 さらに、非双方向クライアントがセキュリティで保護されたメッセージ交換を使用して認証に失敗した場合、通常、<xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType> がスローされます。 しかし、双方向クライアントがセキュリティで保護されたメッセージ交換を使用して認証に失敗した場合、クライアントは代わりに <xref:System.TimeoutException?displayProperty=nameWithType> を受信します。  
   
- アプリケーション レベルのエラー情報が作業の詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。 [予期される例外](../../../../docs/framework/wcf/samples/expected-exceptions.md)予期される例外を説明し、それらを処理する方法を示しています。 チャネル開発時にエラーを処理する方法の詳細については、次を参照してください。[例外の処理とエラー](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)します。  
+ アプリケーション レベルのエラー情報が作業の詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。 [予期される例外](../../../../docs/framework/wcf/samples/expected-exceptions.md)予期される例外を説明し、それらを処理する方法を示しています。 チャネル開発時にエラーを処理する方法の詳細については、[例外の処理とエラー](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)を参照してください。  
   
 ### <a name="client-blocking-and-performance"></a>クライアントのブロックとパフォーマンス  
- アプリケーションが要求/応答操作を同期的に呼び出す場合、戻り値が受信されるか例外 (<xref:System.TimeoutException?displayProperty=nameWithType> など) がスローされるまで、クライアントはブロックされます。 この動作はローカルの動作と似ています。 アプリケーションは、WCF クライアント オブジェクトまたはチャンネルに対する操作を同期的に起動、ネットワークまたは例外がスローされるまで、チャネル層でデータを書き込むことができますになるまで、クライアントは返しません。 また、一方向メッセージ交換パターン (<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> が `true` に設定された操作をマークすることで指定される) では、クライアントの応答性が向上する可能性がありますが、バインディングや送信済みのメッセージによっては、一方向操作でもブロックが生じる場合があります。 一方向操作とはメッセージ交換のみを指しています。 詳細については、次を参照してください。[一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)します。  
+ アプリケーションが要求/応答操作を同期的に呼び出す場合、戻り値が受信されるか例外 (<xref:System.TimeoutException?displayProperty=nameWithType> など) がスローされるまで、クライアントはブロックされます。 この動作はローカルの動作と似ています。 アプリケーションは、WCF クライアント オブジェクトまたはチャンネルに対する操作を同期的に起動、ネットワークまたは例外がスローされるまで、チャネル層でデータを書き込むことができますになるまで、クライアントは返しません。 また、一方向メッセージ交換パターン (<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> が `true` に設定された操作をマークすることで指定される) では、クライアントの応答性が向上する可能性がありますが、バインディングや送信済みのメッセージによっては、一方向操作でもブロックが生じる場合があります。 一方向操作とはメッセージ交換のみを指しています。 詳細については、[一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)を参照してください。  
   
- メッセージ交換パターンに関係なく、大規模データのチャンクによりクライアント処理が遅延する場合があります。 これらの問題を処理する方法については、次を参照してください。 [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)します。  
+ メッセージ交換パターンに関係なく、大規模データのチャンクによりクライアント処理が遅延する場合があります。 これらの問題を処理する方法については、[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)を参照してください。  
   
  場合は、アプリケーションは、操作が完了するまでより多くの作業を行う必要がありますは、WCF クライアントを実装するサービス コントラクト インターフェイスに非同期メソッド ペアを作成します。 これを行う最も簡単な方法が使用するには、`/async`スイッチ、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。 例については、「[方法: サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
- クライアントのパフォーマンス向上の詳細については、次を参照してください。[中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)します。  
+ クライアントのパフォーマンス向上の詳細については、[中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)を参照してください。  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>ユーザーによる資格情報の動的選択の有効化  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> インターフェイスを使用すると、アプリケーションによりユーザー インターフェイスが表示され、ユーザーが資格情報を選択できるようになります。この資格情報は、タイムアウト タイマーが開始される前に、チャネルの作成に使用されます。  

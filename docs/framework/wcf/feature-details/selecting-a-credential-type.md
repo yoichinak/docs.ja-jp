@@ -42,7 +42,7 @@ ms.locfileid: "54577114"
 |Windows|Windows 資格情報によって確立されたセキュリティ コンテキストで、SOAP メッセージ交換を実行できます。|  
 |[ユーザー名]|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF での署名の生成やデータの暗号化などのユーザー名と暗号化操作を許可しないことに注意してください。 WCF によりユーザー名資格情報を使用する場合に、トランスポートがセキュリティで保護されるようになります。|  
 |証明書|X.509 証明書を使用したクライアントの認証をサービスで要求できるようにします。|  
-|IssuedToken|セキュリティ ポリシーに従って構成されるカスタム トークンです。 既定のトークンの種類は、SAML (Security Assertion Markup Language) です。 トークンは、セキュリティ トークン サービスによって発行されます。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
+|IssuedToken|セキュリティ ポリシーに従って構成されるカスタム トークンです。 既定のトークンの種類は、SAML (Security Assertion Markup Language) です。 トークンは、セキュリティ トークン サービスによって発行されます。 詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>サービス資格情報のネゴシエーション モデル  
  *ネゴシエーション*は資格情報を交換することで、クライアントとサービス間の信頼を確立するプロセスです。 このプロセスは、ネゴシエーション プロセスの次の手順に必要な情報だけを公開するために、クライアントとサービスとの間で反復して実行されます。 実際には、最後に、後続の操作で使用されるサービスの資格情報がクライアントに配信されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "54577114"
  サービスをプログラミングしている場合とクライアントをプログラミングしている場合で、資格情報の値を設定する方法が少し異なります。  
   
 ### <a name="setting-service-credentials"></a>サービス資格情報の設定  
- トランスポート モードを使用し、HTTP をトランスポートとして使用する場合は、インターネット インフォメーション サービス (IIS) を使用するか、証明書でポートを構成する必要があります。 詳細については、次を参照してください。[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)と[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
+ トランスポート モードを使用し、HTTP をトランスポートとして使用する場合は、インターネット インフォメーション サービス (IIS) を使用するか、証明書でポートを構成する必要があります。 詳細については、[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)と[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)を参照してください。  
   
  コードで資格情報をサービスに提供するには、<xref:System.ServiceModel.ServiceHost> クラスのインスタンスを作成し、<xref:System.ServiceModel.Description.ServiceCredentials> プロパティからアクセスできる <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスを使用して適切な資格情報を指定します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54577114"
 > [!IMPORTANT]
 >  ID の切り替えができないこと (つまり、セキュリティ コンテキストを確立する場合の既定の動作) について、注意が必要な状況があります。 別のサービスと通信するサービスを作成する場合、2 番目のサービスの WCF クライアントを開くために使用する id を変更できません。 これは、複数のクライアントが最初のサービスを使用できる状況で、2 番目のサービスにアクセスするときに最初のサービスがクライアントを偽装する場合、問題になります。 サービスがすべての呼び出し元に対して同じクライアントを再利用する場合、2 番目のサービスへの呼び出しはすべて、2 番目のサービスに対してクライアントを開くために使用した最初の呼び出し元の ID によって実行されます。 つまり、このサービスでは、すべてのクライアントが 2 番目のサービスと通信できるように、最初のクライアントの ID が使用されます。 これによって、権限の昇格が発生する可能性があります。 これがサービスの目的の動作でない場合、各呼び出し元を追跡し、その呼び出し元ごとに 2 番目のサービスに対する新しいクライアントを作成する必要があります。これによって、適切な呼び出し元が 2 番目のサービスと通信するために、サービスは適切なクライアントだけを使用できます。  
   
- 資格情報とセキュリティで保護されたセッションの詳細については、次を参照してください。[セキュリティで保護されたセッションに関するセキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)します。  
+ 資格情報とセキュリティで保護されたセッションの詳細については、[セキュリティで保護されたセッションに関するセキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>

@@ -21,14 +21,14 @@ ms.locfileid: "57707405"
 コンテキスト内で多くの場合、[マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)ユーザーが MDI アプリケーションに、クリップボードからデータを貼り付けるときなど、アクティブな子ウィンドウにデータを送信する必要があります。  
   
 > [!NOTE]
->  どの子ウィンドウがフォーカスを確認して、その内容をクリップボードに送信する方法については、次を参照してください。[アクティブな MDI 子を決定する](how-to-determine-the-active-mdi-child.md)します。  
+>  どの子ウィンドウがフォーカスを確認して、その内容をクリップボードに送信する方法については、[アクティブな MDI 子を決定する](how-to-determine-the-active-mdi-child.md)を参照してください。  
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>アクティブな MDI 子ウィンドウに、クリップボードからデータを送信するには  
   
 1.  メソッド内には、アクティブな子フォームのアクティブなコントロールをクリップボードにテキストをコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
+    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、[MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)を参照してください。  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  

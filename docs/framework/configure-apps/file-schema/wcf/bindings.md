@@ -21,7 +21,7 @@ ms.locfileid: "57474723"
   
  システム指定のバインディングに要素または属性を追加することはできません。 これを行うに」の説明に従って、カスタム バインドを実装する必要があります、[カスタム バインド](#custom-bindings)セクション。 システム指定のバインディングを完全には、ユーザー アプリケーションは、上でコントロールを持つ必要があるいくつかの設定を追加するカスタム バインドを定義することになります。  
   
- システム指定のバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)します。  
+ システム指定のバインディングの一覧は、[System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。  
   
 ## <a name="custom-bindings"></a>カスタム バインド
 
@@ -39,7 +39,7 @@ ms.locfileid: "57474723"
   
 5.  Transport  
   
- カスタム バインドは、`name` 属性によって識別されます。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+ カスタム バインドは、`name` 属性によって識別されます。 カスタム バインドの詳細については、[カスタム バインド](../../../../../docs/framework/wcf/extending/custom-bindings.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

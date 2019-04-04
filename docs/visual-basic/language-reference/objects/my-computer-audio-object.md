@@ -18,7 +18,7 @@ ms.locfileid: "58837698"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Audio` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Audio>」をご覧ください。  
   
- 詳細については、次を参照してください。[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)します。  
+ 詳細については、[サウンドの再生に関して](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md)を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.Devices>  

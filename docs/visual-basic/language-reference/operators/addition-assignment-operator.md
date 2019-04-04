@@ -41,9 +41,9 @@ variableorproperty += expression
 > [!NOTE]
 >  使用すると、`+=`演算子、する可能性を追加または文字列の連結が発生するかどうかを判断します。 使用して、`&=`演算子の連結のあいまいさを排除し、自己文書化コードを提供します。  
   
- この代入演算子では、拡大縮小しない変換のコンパイル環境は、厳密なセマンティクスを適用している場合、暗黙的に実行します。 これらの変換の詳細については、次を参照してください。 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)します。 厳密なと制限の緩やかなセマンティクスの詳細については、次を参照してください。 [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)します。  
+ この代入演算子では、拡大縮小しない変換のコンパイル環境は、厳密なセマンティクスを適用している場合、暗黙的に実行します。 これらの変換の詳細については、[Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)を参照してください。 厳密なと制限の緩やかなセマンティクスの詳細については、[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)を参照してください。  
   
- 制限の緩やかなセマンティクスは許可されている場合、`+=`演算子は、さまざまなによって実行されるものと同じ文字列と数値の変換を暗黙的に実行、`+`演算子。 これらの変換について詳しくは、次を参照してください。 [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)します。  
+ 制限の緩やかなセマンティクスは許可されている場合、`+=`演算子は、さまざまなによって実行されるものと同じ文字列と数値の変換を暗黙的に実行、`+`演算子。 これらの変換について詳しくは、[+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)を参照してください。  
   
 ## <a name="overloading"></a>オーバーロード  
  `+`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`+`演算子の動作に影響、`+=`演算子。 コードで使用する場合`+=`クラスまたは構造体をオーバー ロードで`+`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

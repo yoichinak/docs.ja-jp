@@ -12,7 +12,7 @@ ms.locfileid: "55759445"
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 要素
 ピアツーピア クライアントの認証オプションを指定します。  
   
- ピア ツー ピア プログラミングの詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
+ ピア ツー ピア プログラミングの詳細については、[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
@@ -53,13 +53,13 @@ ms.locfileid: "55759445"
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は `ChainTrust` です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙型|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は `ChainTrust` です。<br /><br /> 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は `Online` です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
+|列挙型|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は `Online` です。<br /><br /> 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   

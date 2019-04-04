@@ -30,9 +30,9 @@ ms.locfileid: "54692731"
   
 5.  目的に適したスキーマ定義を見つけます。  
   
-    -   DbmlSchema.xsd は、.dbml ファイルを検証するためのスキーマ定義です。 詳細については、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)します。  
+    -   DbmlSchema.xsd は、.dbml ファイルを検証するためのスキーマ定義です。 詳細については、[LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)を参照してください。  
   
-    -   LinqToSqlMapping.xsd は、外部 XML マッピング ファイルを検証するためのスキーマ定義です。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
+    -   LinqToSqlMapping.xsd は、外部 XML マッピング ファイルを検証するためのスキーマ定義です。 詳細については、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
   
 6.  **使用**クリックして、ドロップ ダウン ボックスを開き、クリックして目的のスキーマ定義の行の列**このスキーマを使用して、** します。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "54692731"
   
 1.  このトピックで既に説明したように、スキーマ定義が含まれているヘルプ トピックを表示します。  
   
-    -   .Dbml ファイルでは、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)します。  
+    -   .Dbml ファイルでは、[LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)を参照してください。  
   
-    -   外部マッピング ファイルでは、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
+    -   外部マッピング ファイルでは、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
   
 2.  クリックして**コードのコピー**コード ファイルをクリップボードにコピーします。  
   

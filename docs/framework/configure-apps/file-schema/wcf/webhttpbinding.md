@@ -88,7 +88,7 @@ SOAP メッセージに代わって HTTP 要求に応答する Windows Communica
 ## <a name="remarks"></a>Remarks  
  WCF Web プログラミング モデルにより、"plain old XML"を使用する HTTP 要求を通じて WCF Web サービスを公開する開発者 (POX) スタイルの SOAP ベースのメッセージングではなくメッセージングします。 使用して HTTP 要求を使用するサービスと通信するクライアントは、サービスのエンドポイントを構成する必要があります、 [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)を持つ、 \<WebHttpBehavior > がアタッチされています。  
   
- WCF での配信および ASP をサポートします。AJAX の統合は、どちらも、Web プログラミング モデル上に構築されます。 モデルの詳細については、次を参照してください。 [WCF Web HTTP プログラミング モデル](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)します。  
+ WCF での配信および ASP をサポートします。AJAX の統合は、どちらも、Web プログラミング モデル上に構築されます。 モデルの詳細については、[WCF Web HTTP プログラミング モデル](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.WebHttpBinding>

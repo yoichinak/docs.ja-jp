@@ -26,7 +26,7 @@ ms.locfileid: "57354004"
   
  [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
- サンプル全体については、次を参照してください。[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)します。  
+ サンプル全体については、[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [反復サイクル中にアニメーション値を累積する](how-to-accumulate-animation-values-during-repeat-cycles.md)

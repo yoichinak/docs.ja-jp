@@ -40,7 +40,7 @@ ms.locfileid: "57358289"
   
  アクセスする[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データを使用してバインディングを<xref:System.Windows.Data.XmlDataProvider>クラスを参照してください[XMLDataProvider と XPath クエリを使用して XML データにバインド](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)します。 アクセスする[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データを使用してバインディングを<xref:System.Windows.Data.ObjectDataProvider>クラスを参照してください[XDocument、XElement、または LINQ for XML クエリの結果にバインド](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)します。  
   
- バインドするデータを指定するさまざまな方法については、次を参照してください。[バインディング ソースを指定](how-to-specify-the-binding-source.md)します。 どのような種類のデータにバインドすることができますか、独自に実装する方法については[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、バインディングのオブジェクトを参照してください[バインディング ソースの概要](binding-sources-overview.md)します。  
+ バインドするデータを指定するさまざまな方法については、[バインディング ソースを指定](how-to-specify-the-binding-source.md)を参照してください。 どのような種類のデータにバインドすることができますか、独自に実装する方法については[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]、バインディングのオブジェクトを参照してください[バインディング ソースの概要](binding-sources-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
 - [データ バインディングの概要](data-binding-overview.md)

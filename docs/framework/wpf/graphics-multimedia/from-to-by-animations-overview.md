@@ -20,7 +20,7 @@ ms.locfileid: "57362761"
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。  
+ このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、、[アニメーションの概要](animation-overview.md)を参照してください。  
   
 <a name="whatisanimation"></a>   
 ## <a name="what-is-a-fromtoby-animation"></a>From/To/By アニメーションとは  
@@ -83,7 +83,7 @@ ms.locfileid: "57362761"
   
  例では、このセクションの各使用、 <xref:System.Windows.Media.Animation.DoubleAnimation>、アニメーションの種類、/、アニメーション化するのには、<xref:System.Windows.FrameworkElement.Width%2A>のプロパティを<xref:System.Windows.Shapes.Rectangle>つまり 10 デバイス非依存ピクセル高と 100 デバイス非依存ピクセル幅。  
   
- 各例では、 <xref:System.Windows.Media.Animation.DoubleAnimation>、およびすべて From/に/でのプロパティによってアニメーション動作は同じです。 これらの例を使用しますが、 <xref:System.Windows.Media.Animation.Storyboard>、他の方法で、/アニメーションを使用することができます。 詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
+ 各例では、 <xref:System.Windows.Media.Animation.DoubleAnimation>、およびすべて From/に/でのプロパティによってアニメーション動作は同じです。 これらの例を使用しますが、 <xref:System.Windows.Media.Animation.Storyboard>、他の方法で、/アニメーションを使用することができます。 詳細については、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
   
 ### <a name="fromto"></a>From/To  
  設定すると、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>で指定されている値からアニメーションを同時に、値、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティで指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。  
@@ -134,11 +134,11 @@ ms.locfileid: "57362761"
 ## <a name="other-animation-types"></a>他のアニメーションの種類  
  /アニメーションがない唯一の種類のアニメーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供: キー フレーム アニメーションとパス アニメーションも用意されています。  
   
--   キー フレーム アニメーションは、キー フレームを使って記述されている任意の数の目標値に沿ってアニメーション化します。 詳細については、次を参照してください。、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
+-   キー フレーム アニメーションは、キー フレームを使って記述されている任意の数の目標値に沿ってアニメーション化します。 詳細については、、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)を参照してください。  
   
--   パス アニメーションからの出力値を生成する、<xref:System.Windows.Media.PathGeometry>します。 詳細については、次を参照してください。、[パス アニメーションの概要](path-animations-overview.md)します。  
+-   パス アニメーションからの出力値を生成する、<xref:System.Windows.Media.PathGeometry>します。 詳細については、、[パス アニメーションの概要](path-animations-overview.md)を参照してください。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、独自のカスタム アニメーションの種類を作成することもできます。 詳細については、次を参照してください。、[カスタム アニメーションの概要](custom-animations-overview.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、独自のカスタム アニメーションの種類を作成することもできます。 詳細については、、[カスタム アニメーションの概要](custom-animations-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.Timeline>

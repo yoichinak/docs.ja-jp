@@ -21,12 +21,12 @@ ms.locfileid: "54554466"
   
   
   
- Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 サービス id の詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 サービス id の詳細については、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 認証と ID  
  既定では、Windows 資格情報を使用するサービスが構成されている場合、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素を含む、 [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)または[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)要素が WSDL で生成されます。 サービスが実行されている場合、 `LocalSystem`、 `LocalService`、または`NetworkService`アカウント、サービス プリンシパル名 (SPN) が既定の形式で生成`host/` \< *hostname*> ためこれらのアカウントでは、コンピューターの SPN のデータにアクセスします。 Windows Communication Foundation (WCF) の形式で UPN が生成されます、サービスが別のアカウントで実行している場合\< *username*>@<*domainName* `>`. これらが生成されるのは、Kerberos 認証では、サービスを認証するために UPN または SPN をクライアントに提供する必要があるからです。  
   
- Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール。Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、次を参照してください。 [Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)します。  
+ Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール。Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、[Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)を参照してください。  
   
 > [!NOTE]
 >  ネゴシエーションを行わずに Windows 資格情報を使用するには、サービスのユーザー アカウントが Active Directory ドメインに登録された SPN にアクセスできる必要があります。 これは、次の方法で行うことができます。  

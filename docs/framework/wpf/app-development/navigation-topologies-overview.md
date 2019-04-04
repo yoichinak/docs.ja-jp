@@ -20,7 +20,7 @@ ms.locfileid: "58819594"
 <a name="introduction"></a> この概要でのナビゲーション トポロジの概要については、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 3 つの一般的なナビゲーション トポロジをサンプルと共に説明します。  
   
 > [!NOTE]
->  このトピックを読む前に構造化ナビゲーションの概念を理解しておく必要がありますあります[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ページ関数を使用します。 これらのトピックの両方の詳細については、次を参照してください。[構造化ナビゲーションの概要](structured-navigation-overview.md)します。  
+>  このトピックを読む前に構造化ナビゲーションの概念を理解しておく必要がありますあります[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ページ関数を使用します。 これらのトピックの両方の詳細については、[構造化ナビゲーションの概要](structured-navigation-overview.md)を参照してください。  
   
  このトピックは、次のセクションで構成されています。  
   

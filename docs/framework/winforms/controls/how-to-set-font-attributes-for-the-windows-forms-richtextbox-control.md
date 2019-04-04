@@ -51,7 +51,7 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
     ```  
   
     > [!NOTE]
-    >  これらのプロパティは選択したテキストにのみ影響します。テキストが選択されていない場合は、現在の挿入ポイントの場所に入力されるテキストに影響します。 プログラムでテキストを選択する方法の詳細については、次を参照してください。<xref:System.Windows.Forms.TextBoxBase.Select%2A>します。  
+    >  これらのプロパティは選択したテキストにのみ影響します。テキストが選択されていない場合は、現在の挿入ポイントの場所に入力されるテキストに影響します。 プログラムでテキストを選択する方法の詳細については、<xref:System.Windows.Forms.TextBoxBase.Select%2A>を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.RichTextBox>

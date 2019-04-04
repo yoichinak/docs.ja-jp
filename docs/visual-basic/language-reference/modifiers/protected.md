@@ -38,7 +38,7 @@ ms.locfileid: "58819165"
   
      保護されたアクセスは、スーパー セットまたはサブセットのフレンド アクセスではありません。  
   
--   **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+-   **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   
  `Protected` 修飾子は、次のコンテキストで使用できます。  
   

@@ -129,7 +129,7 @@ ms.locfileid: "58634220"
   
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>スプラッシュ スクリーン  
- 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
+ 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)を参照してください。  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>アプリケーションの起動  
@@ -172,7 +172,7 @@ ms.locfileid: "58634220"
  このマークアップは、ウィンドウを開くことについて、前のコードと同じ効果があります。  
   
 > [!NOTE]
->  ナビゲーションの詳細については、次を参照してください。[ナビゲーションの概要](navigation-overview.md)します。  
+>  ナビゲーションの詳細については、[ナビゲーションの概要](navigation-overview.md)を参照してください。  
   
  処理する必要がある、<xref:System.Windows.Application.Startup>を開くイベント、<xref:System.Windows.Window>既定以外のコンス トラクターを使用してインスタンス化する必要があるまたはそのプロパティを設定または表示するには、前に、そのイベントをサブスクライブする必要があるコマンドライン引数を処理する必要がある場合ですアプリケーションを起動したときに指定されました。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "58634220"
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- 完全な例では、次を参照してください。[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)します。  
+ 完全な例では、[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)を参照してください。  
   
  <xref:System.Windows.Application.Exit> スタンドアロン アプリケーションと Xbap の両方で処理できます。 Xbap の<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
   

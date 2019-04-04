@@ -66,7 +66,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]  
   
- 例については、次を参照してください。[コレクション](../../../standard/collections/index.md)と[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ 例については、[コレクション](../../../standard/collections/index.md)と[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
   
 ## <a name="nested-loops"></a>入れ子になったループ  
  入れ子にすることができます`For Each`内に別の 1 つのループを配置することでループします。  
@@ -77,12 +77,12 @@ Next [ element ]
   
  各ループが一意ありますループを入れ子にすると`element`変数。  
   
- さまざまな種類を 1 つの制御構造の入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
+ さまざまな種類を 1 つの制御構造の入れ子にすることもできます。 詳細については、[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)を参照してください。  
   
 ## <a name="exit-for-and-continue-for"></a>終了しの続行  
  [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントは、実行を終了する、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
   
- `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
+ `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)を参照してください。  
   
  次の例は、使用する方法を示します、`Continue For`と`Exit For`ステートメント。  
   
@@ -107,7 +107,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]  
   
- 詳細については、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)、 [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)、および[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。  
+ 詳細については、[反復子](../../programming-guide/concepts/iterators.md)、 [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)、および[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)を参照してください。  
   
 ## <a name="technical-implementation"></a>技術的な実装  
  ときに、 `For Each`.`Next` ステートメントが実行されて、Visual Basic では、コレクション、ループの開始前に、1 つだけの時間を評価します。 ステートメント ブロックが変更された場合`element`または`group`、これらの変更は、ループの反復処理に影響はありません。  

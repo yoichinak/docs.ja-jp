@@ -25,7 +25,7 @@ A*特性*とそのコードをやり取りする方法に影響を与える要�
   
 -   *データ型*: 要素が保持できる値、およびそれらの値を格納する方法。 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
--   *有効期間*-は、要素を使用できる実行時間の期間。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
+-   *有効期間*-は、要素を使用できる実行時間の期間。 詳細については、[Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)を参照してください。  
   
 -   *スコープ*-その名前を修飾しなくても、要素を参照できるすべてのコードのセット。 詳細については、「[方法 :変数のスコープを制御](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)します。  
   

@@ -39,7 +39,7 @@ ms.locfileid: "57712282"
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- これらのプロパティとその他のセル スタイル プロパティの詳細については、次を参照してください。、<xref:System.Windows.Forms.DataGridViewCellStyle>リファレンス ドキュメントとトピックでは、「参照」セクションに表示します。  
+ これらのプロパティとその他のセル スタイル プロパティの詳細については、、<xref:System.Windows.Forms.DataGridViewCellStyle>リファレンス ドキュメントとトピックでは、「参照」セクションに表示を参照してください。  
   
 ## <a name="using-datagridviewcellstyle-objects"></a>DataGridViewCellStyle オブジェクトを使用します。  
  取得することができます<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクトのさまざまなプロパティから、 <xref:System.Windows.Forms.DataGridView>、 <xref:System.Windows.Forms.DataGridViewColumn>、 <xref:System.Windows.Forms.DataGridViewRow>、および<xref:System.Windows.Forms.DataGridViewCell>クラスとその派生クラス。 これらのプロパティのいずれかがまだ設定されていない場合、その値を取得する方が、新規に作成されます<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクト。 インスタンス化できる独自<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクトし、これらのプロパティに割り当てます。  

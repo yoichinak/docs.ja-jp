@@ -16,7 +16,7 @@ Visual Basic を生成するか、C#データベース マークアップ言語 
   
 1.  .dbml ファイルを生成します。  
   
-2.  エディターを使用して .dbml ファイルを変更します。 .Dbml ファイルは、用のスキーマ定義 (.xsd) ファイルに対して検証する必要がありますので注意[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].dbml ファイル。 詳細については、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)します。  
+2.  エディターを使用して .dbml ファイルを変更します。 .Dbml ファイルは、用のスキーマ定義 (.xsd) ファイルに対して検証する必要がありますので注意[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].dbml ファイル。 詳細については、[LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)を参照してください。  
   
 3.  Visual Basic を生成またはC#ソース コード。  
   

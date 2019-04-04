@@ -10,7 +10,7 @@ ms.lasthandoff: 02/08/2019
 ms.locfileid: "55904141"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
-このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 このほかに、安全な [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションを作成するための推奨事項にも従うようにしてください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
+このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 このほかに、安全な [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションを作成するための推奨事項にも従うようにしてください。 詳細については、[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)を参照してください。  
   
 ## <a name="general-security-considerations"></a>セキュリティについての全般的な考慮事項  
  以下のセキュリティの注意点は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] を使用するすべてのアプリケーションに当てはまります。  
@@ -27,7 +27,7 @@ ms.locfileid: "55904141"
  ログオン操作の際には、ユーザーのパスワードに基づく情報が、基になるデータ ソースのネットワーク ライブラリを通じてサーバーに渡されます。 悪質なプロバイダーを使用すると、ユーザーの資格情報を盗まれたり、悪質なクエリを生成されたり、結果セットを改ざんされたりする可能性があります。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>接続を暗号化して機密データを保護する  
- データの暗号化は [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では直接処理されません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データ ソースでは、次を参照してください。 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=119544)します。  
+ データの暗号化は [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では直接処理されません。 ユーザーがパブリック ネットワーク経由でデータにアクセスする場合は、セキュリティを強化するためにアプリケーションでデータ ソースへの暗号化接続を確立する必要があります。 詳細については、データ ソースのセキュリティ関連のドキュメントを参照してください。 SQL Server データ ソースでは、[SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?LinkId=119544)を参照してください。  
   
 #### <a name="secure-the-connection-string"></a>接続文字列を保護する  
  アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列や適切に作成されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 接続文字列を保護するための推奨事項を以下に示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "55904141"
   
 -   保護構成を使用して構成ファイル セクションを暗号化する。  
   
-     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、次を参照してください。[暗号化構成を使用して保護された構成情報](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))します。  
+     ASP.NET には、保護構成と呼ばれる、構成ファイルの機密情報を暗号化するための機能が用意されています。 保護構成は、主に ASP.NET を想定して設計されたものですが、Windows アプリケーションの構成ファイル セクションを暗号化する目的でも使用できます。 新しい保護構成機能の詳細については、[暗号化構成を使用して保護された構成情報](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))を参照してください。  
   
 -   セキュリティで保護された構成ファイルに接続文字列を格納する。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "55904141"
   
 -   接続を動的に作成する場合は接続文字列ビルダーを使用する。  
   
-     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。 一部であるデータ ソース接続文字列を構築する、適切な文字列ビルダー クラスを使用しても、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接続文字列。 ADO.NET プロバイダー用接続文字列ビルダーの詳細については、次を参照してください。[接続文字列ビルダー](../../../../../docs/framework/data/adonet/connection-string-builders.md)します。  
+     接続文字列を実行時に作成する必要がある場合は <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用します。 この文字列ビルダー クラスは、入力情報を検証して無効な入力情報をエスケープする処理により、接続文字列インジェクション攻撃の防止に役立ちます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。 一部であるデータ ソース接続文字列を構築する、適切な文字列ビルダー クラスを使用しても、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]接続文字列。 ADO.NET プロバイダー用接続文字列ビルダーの詳細については、[接続文字列ビルダー](../../../../../docs/framework/data/adonet/connection-string-builders.md)を参照してください。  
   
  詳細については、「[接続情報の保護](../../../../../docs/framework/data/adonet/protecting-connection-information.md)」を参照してください。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "55904141"
  エンティティ型を生成したり操作したりする際には次の点に注意する必要があります。  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>ObjectContext を複数のアプリケーション ドメインで共有しない  
- <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳細については、次を参照してください。[オブジェクトのシリアル化](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))します。  
+ <xref:System.Data.Objects.ObjectContext> を複数のアプリケーション ドメインで共有すると接続文字列の情報が漏洩する可能性があります。 代わりに、シリアル化したオブジェクトやオブジェクト グラフをもう一方のアプリケーション ドメインに転送して、そのアプリケーション ドメインでそれらのオブジェクトを <xref:System.Data.Objects.ObjectContext> にアタッチするようにしてください。 詳細については、[オブジェクトのシリアル化](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100))を参照してください。  
   
 #### <a name="prevent-type-safety-violations"></a>型の安全性違反を防止する  
  型の安全性違反が発生すると、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] でオブジェクトのデータの整合性が保証されなくなります。 型の安全性違反は、信頼できないアプリケーションを完全信頼のコード アクセス セキュリティで実行できるようにすると発生する可能性があります。  

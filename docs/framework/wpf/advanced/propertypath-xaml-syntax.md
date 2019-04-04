@@ -50,7 +50,7 @@ ms.locfileid: "57363515"
   
  `key` には、ディクショナリまたはハッシュ テーブルに対する型指定されたインデックス、または配列の整数インデックスを指定する必要があります。 また、キーの値は、適用先のプロパティに直接バインドできる型である必要があります。 たとえば、文字列キーと文字列値を格納するハッシュ テーブルはこのように使用するのテキストにバインドする、<xref:System.Windows.Controls.TextBox>します。 キーがコレクションまたはサブインデックスを指す場合は、この構文を使用して、ターゲット コレクション プロパティにバインドできます。 それ以外の場合は、`<Binding Path="[key].propertyName" .../>` などの構文を通じて、特定のプロパティを参照する必要があります。  
   
- 必要に応じて、インデックスの型を指定できます。 詳細については、インデックス付きプロパティのパスのこの側面は、次を参照してください。<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>します。  
+ 必要に応じて、インデックスの型を指定できます。 詳細については、インデックス付きプロパティのパスのこの側面は、<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>を参照してください。  
   
 <a name="multipleindirect"></a>   
 ### <a name="multiple-property-indirect-property-targeting"></a>複数プロパティ (間接的なプロパティのターゲット設定)  

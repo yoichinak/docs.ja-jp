@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
 ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/05/2019
 ms.locfileid: "55738631"
@@ -21,7 +21,7 @@ ms.locfileid: "55738631"
 >
 > 既定で、 [New-selfsignedcertificate](/powershell/module/pkiclient/new-selfsignedcertificate)コマンドレットは自己署名証明書を作成し、これらの証明書は安全ではありません。 ストアは信頼されたルート証明機関に自己署名証明書を配置するデプロイ環境をより忠実にシミュレートする開発環境を作成できます。
 
- 作成して、証明書の使用の詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)します。 資格情報として証明書を使用する方法の詳細については、次を参照してください。 [Securing Services and Clients](securing-services-and-clients.md)します。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://go.microsoft.com/fwlink/?LinkId=88919)」を参照してください。
+ 作成して、証明書の使用の詳細については、[Working with Certificates](working-with-certificates.md)を参照してください。 資格情報として証明書を使用する方法の詳細については、[Securing Services and Clients](securing-services-and-clients.md)を参照してください。 Microsoft Authenticode テクノロジの使用方法については、「 [Authenticode Overviews and Tutorials (Authenticode の概要とチュートリアル)](https://go.microsoft.com/fwlink/?LinkId=88919)」を参照してください。
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>自己署名ルート証明書を作成して秘密キーをエクスポートするには
 

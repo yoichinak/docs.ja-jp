@@ -37,7 +37,7 @@ ms.locfileid: "57711304"
  Windows フォームを使用して、オブジェクトのインスタンスでのパブリック プロパティにデータ バインド コントロールのプロパティのサポート、<xref:System.Windows.Forms.Binding>型。 Windows フォーム バインディング リスト ベースのコントロールのようサポートも、<xref:System.Windows.Forms.ListControl>インスタンス オブジェクト、<xref:System.Windows.Forms.BindingSource>使用されます。  
   
  配列またはコレクション  
- データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、[方法。(Visual Basic) のオブジェクトの配列を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))を参照してください。  
+ データ ソースとして機能し、一覧を実装する必要があります、<xref:System.Collections.IList>インターフェイスは 1 つの例のインスタンスである配列になります、<xref:System.Array>クラス。 配列の詳細については、次を参照してください。[方法。(Visual Basic) のオブジェクトの配列を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100))します。  
   
  一般に、使用する必要があります<xref:System.ComponentModel.BindingList%601>データ バインド オブジェクトのリストを作成する場合。 <xref:System.ComponentModel.BindingList%601> ジェネリック バージョンは、<xref:System.ComponentModel.IBindingList>インターフェイス。 <xref:System.ComponentModel.IBindingList>インターフェイスは、拡張、<xref:System.Collections.IList>プロパティ、メソッド、および双方向データ バインドに必要なイベントを追加することでインターフェイス。  
   

@@ -103,7 +103,7 @@ match shape with
 
 アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブ パターンの詳細については、[アクティブ パターン](active-patterns.md)を参照してください。
 
-識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、[例外。`try...with`式](exception-handling/the-try-with-expression.md)を参照してください。
+識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、次を参照してください。[例外。`try...with`式](exception-handling/the-try-with-expression.md)します。
 
 ## <a name="variable-patterns"></a>変数パターン
 

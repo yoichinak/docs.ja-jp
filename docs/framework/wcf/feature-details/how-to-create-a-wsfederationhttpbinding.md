@@ -36,7 +36,7 @@ Windows Communication Foundation (WCF) で、<xref:System.ServiceModel.WSFederat
 
      SAML 1.1 トークンの URI は`http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`します。
 
-4. 任意。 フェデレーション サービスの場合、<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> プロパティの値として、セキュリティ トークン サービスのメタデータ URL を指定します。 メタデータ エンドポイントは、サービスがメタデータを公開するよう設定されている場合に、クライアントが適切なバインディング/エンドポイントのペアを選択するために必要です。 メタデータの公開の詳細については、次を参照してください。[メタデータの公開](publishing-metadata.md)します。
+4. 任意。 フェデレーション サービスの場合、<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> プロパティの値として、セキュリティ トークン サービスのメタデータ URL を指定します。 メタデータ エンドポイントは、サービスがメタデータを公開するよう設定されている場合に、クライアントが適切なバインディング/エンドポイントのペアを選択するために必要です。 メタデータの公開の詳細については、[メタデータの公開](publishing-metadata.md)を参照してください。
 
  他に設定できるプロパティとしては、発行されたトークンの証明キーとして使用するキーの種類、クライアント/サーバー間で使用するアルゴリズム スイート、サービス資格情報をネゴシエートするか明示的に指定するか、トークンに入っていればそれに応じてサービス側で処理できるクレームの種類、クライアントがセキュリティ トークン サービスに送信する要求に追加しなければならない他の XML 要素などがあります。
 
@@ -89,9 +89,9 @@ Windows Communication Foundation (WCF) で、<xref:System.ServiceModel.WSFederat
 
 11. 省略可能です。 `<identity>` 子要素を追加し、セキュリティ トークン サービスの識別子を指定します。
 
-12. 詳細については、次を参照してください。[サービス Id と認証](service-identity-and-authentication.md)します。
+12. 詳細については、[サービス Id と認証](service-identity-and-authentication.md)を参照してください。
 
-13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 作成、 [\<バインド >](../../../../docs/framework/misc/binding.md)セキュリティ トークン サービスとの通信に使用できるバインディング セクション内の要素。 バインディングの作成の詳細については、次を参照してください。[方法: 構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。
+13. クライアント側ではローカル発行者が指定されていなければ必須。サービス側では不要。 作成、 [\<バインド >](../../../../docs/framework/misc/binding.md)セキュリティ トークン サービスとの通信に使用できるバインディング セクション内の要素。 バインディングの作成の詳細については、[方法: 構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)を参照してください。
 
 14. `binding` 要素の `bindingConfiguration` 属性および `<issuer>` 属性に設定して、前の手順で作成したバインディングを指定します。
 

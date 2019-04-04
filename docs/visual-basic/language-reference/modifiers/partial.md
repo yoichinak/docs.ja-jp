@@ -27,7 +27,7 @@ ms.locfileid: "58838366"
  `Partial` キーワードを使用して、型の定義を複数の宣言に分割できます。 部分宣言は必要に応じていくつでも使用でき、複数のソース ファイルとして作成することもできます。 ただし、すべての宣言は同じアセンブリおよび同じ名前空間にある必要があります。  
   
 > [!NOTE]
->  Visual Basic は*部分メソッド*、部分クラスに通常実装されています。 詳細については、次を参照してください。[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)と[Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)します。  
+>  Visual Basic は*部分メソッド*、部分クラスに通常実装されています。 詳細については、[部分メソッド](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)と[Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -76,7 +76,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 -   **宣言の和集合。** コンパイラは型を、すべての部分宣言の共用体として扱います。 すべての部分定義で使用されているすべての修飾子は、型全体に適用され、すべての部分定義のすべてのメンバーは、型全体で使用できます。  
   
--   **型の上位変換がモジュール内の部分型は許可されていません。** 部分定義がモジュール内にある場合、その型の上位変換は自動的に失敗します。 この場合、一連の部分定義によって、予期しない結果になったり、場合によってはコンパイラ エラーが発生することがあります。 詳細については、次を参照してください。[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)します。  
+-   **型の上位変換がモジュール内の部分型は許可されていません。** 部分定義がモジュール内にある場合、その型の上位変換は自動的に失敗します。 この場合、一連の部分定義によって、予期しない結果になったり、場合によってはコンパイラ エラーが発生することがあります。 詳細については、[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)を参照してください。  
   
      コンパイラは、完全修飾されたパスがまったく同じ場合にのみ、部分定義をマージします。  
   

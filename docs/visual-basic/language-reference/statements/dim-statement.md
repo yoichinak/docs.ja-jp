@@ -146,7 +146,7 @@ Private salary As Decimal
 Static runningTotal As Integer  
 ```  
   
- 場合`Option Explicit`はコンパイラ on (既定値) を使用するすべての変数の宣言が必要です。 詳細については、次を参照してください。 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)します。  
+ 場合`Option Explicit`はコンパイラ on (既定値) を使用するすべての変数の宣言が必要です。 詳細については、[Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)を参照してください。  
   
 ## <a name="specifying-an-initial-value"></a>初期値を指定します。  
  作成時にその変数に値を割り当てることができます。 使用する値型の場合、*初期化子*変数に割り当てられる式を指定します。 式は、コンパイル時に計算できる定数に評価する必要があります。  
@@ -166,9 +166,9 @@ Dim num1 As Integer = 3
 Dim num2 = 3  
 ```  
   
- 型の推定は、プロシージャ レベルで適用されます。 クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側は適用されません。 型の推定に関する詳細については、次を参照してください。 [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+ 型の推定は、プロシージャ レベルで適用されます。 クラス、構造体、モジュール、またはインターフェイスのプロシージャの外側は適用されません。 型の推定に関する詳細については、[Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
- データ型または初期化子が指定されていないときの動作については、次を参照してください。[既定のデータ型と値](../../../visual-basic/language-reference/statements/dim-statement.md#default)このトピックで後述します。  
+ データ型または初期化子が指定されていないときの動作については、[既定のデータ型と値](../../../visual-basic/language-reference/statements/dim-statement.md#default)このトピックで後述を参照してください。  
   
  使用することができます、*オブジェクト初期化子*を名前付きの匿名型のインスタンスを宣言します。 インスタンスを作成する次のコードを`Student`クラスし、プロパティを初期化するために、オブジェクト初期化子を使用します。  
   
@@ -230,7 +230,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte  
 ```  
   
- 宣言することができます、*長さ 0 の配列*を-1 と配列の次元のいずれかを宣言することで。 長さ 0 の配列を保持する変数は、値を持たない`Nothing`します。 長さ 0 の配列には、共通言語ランタイムの一部の関数が必要です。 このような配列にアクセスしようとすると、ランタイム例外が発生します。 詳細については、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ 宣言することができます、*長さ 0 の配列*を-1 と配列の次元のいずれかを宣言することで。 長さ 0 の配列を保持する変数は、値を持たない`Nothing`します。 長さ 0 の配列には、共通言語ランタイムの一部の関数が必要です。 このような配列にアクセスしようとすると、ランタイム例外が発生します。 詳細については、[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
   
  配列の値を初期化するには、配列リテラルを使用します。 これを行うには、初期化値を中かっこで囲みます (`{}`)。  
   
@@ -244,7 +244,7 @@ Dim longArray() As Long = {0, 1, 2, 3}
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}  
 ```  
   
- 配列リテラルの詳細については、次を参照してください。[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
+ 配列リテラルの詳細については、[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
   
 ## <a name="default"></a> 既定のデータ型し、値  
  次の表では、`Dim` ステートメントのデータ型と初期化子を指定するさまざまな組み合わせの結果を示します。  
@@ -284,7 +284,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  指定することによって、変数にアクセスできるコードを指定することができます、`accessmodifier`します。 プライベート アクセスは、クラスとモジュールのメンバー (プロシージャ) の外部変数既定と構造体メンバー変数の既定のパブリック アクセスにします。 アクセス修飾子を使用してこれらのアクセス レベルを調整できます。 (プロシージャ) 内のローカル変数にアクセス修飾子を使用することはできません。  
   
- 指定できる`WithEvents`メンバー変数でのみ、プロシージャ内のローカル変数ではなく。 指定した場合`WithEvents`、変数のデータ型がない、特定のクラス型をある必要があります`Object`します。 配列を宣言することはできません`WithEvents`します。 イベントの詳細については、次を参照してください。[イベント](../../../visual-basic/programming-guide/language-features/events/index.md)します。  
+ 指定できる`WithEvents`メンバー変数でのみ、プロシージャ内のローカル変数ではなく。 指定した場合`WithEvents`、変数のデータ型がない、特定のクラス型をある必要があります`Object`します。 配列を宣言することはできません`WithEvents`します。 イベントの詳細については、[イベント](../../../visual-basic/programming-guide/language-features/events/index.md)を参照してください。  
   
 > [!NOTE]
 >  コード、クラスの外部で構造体、またはモジュール修飾する必要があります、クラス、構造体、モジュールの名前を持つメンバー変数の名前。 コードの外部プロシージャまたはブロックは、そのプロシージャまたはブロック内のローカル変数を参照できません。  

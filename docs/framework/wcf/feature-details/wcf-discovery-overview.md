@@ -146,7 +146,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>探索およびメッセージ レベルのセキュリティ  
- メッセージ レベルのセキュリティを使用する場合は、<xref:System.ServiceModel.EndpointIdentity> をサービスの探索エンドポイントに指定し、対応する <xref:System.ServiceModel.EndpointIdentity> をクライアントの探索エンドポイントに指定する必要があります。 メッセージ レベルのセキュリティの詳細については、次を参照してください。[メッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)します。  
+ メッセージ レベルのセキュリティを使用する場合は、<xref:System.ServiceModel.EndpointIdentity> をサービスの探索エンドポイントに指定し、対応する <xref:System.ServiceModel.EndpointIdentity> をクライアントの探索エンドポイントに指定する必要があります。 メッセージ レベルのセキュリティの詳細については、[メッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)を参照してください。  
   
 ## <a name="discovery-and-web-hosted-services"></a>探索および Web ホスト サービス  
  WCF サービスが探索可能であるためには、このサービスが実行されている必要があります。 IIS または WAS でホストされている WCF サービスは、IIS/WAS がサービスにバインドされているメッセージを受信するまで実行されないため、既定では探索できません。  Web ホスト サービスを探索可能にするには、次の 2 つのオプションがあります。  

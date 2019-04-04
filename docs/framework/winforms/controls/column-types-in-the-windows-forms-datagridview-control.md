@@ -65,7 +65,7 @@ ms.locfileid: "57724571"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn>、ドロップダウン リスト ボックスが含まれているセルの列を表示することができます。 これは、Northwind サンプル データベースの Products テーブルのカテゴリ列などの特定の値を含めることができますのみフィールドでのデータ入力に役立ちます。  
   
- すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、次を参照してください。 [ComboBox コントロール](combobox-control-windows-forms.md)します。  
+ すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、[ComboBox コントロール](combobox-control-windows-forms.md)を参照してください。  
   
  によって使用されるデータ ソースに実際のセル値をバインドすることができます、<xref:System.Windows.Forms.DataGridView>コントロールを設定して、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>します。  
   

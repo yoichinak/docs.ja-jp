@@ -28,7 +28,7 @@ ms.locfileid: "54548483"
   
  WCF では、WCF アプリケーションでサード パーティのテクノロジを使用して構築された相互運用の Web サービスなどの相互運用可能なアプリケーションにトランザクションをフローできるようにする WS-AtomicTransaction (WS-AT) プロトコルのサポートを実装します。 WCF では、トランザクション フローを有効にする相互運用機能が不要のシナリオで使用する OLE トランザクション プロトコルのサポートも実装します。  
   
- アプリケーション構成ファイルを使用してバインディングを構成し、トランザクション フローを有効にしたり無効にしたりできます。また、バインディングに目的のトランザクション プロトコルを設定できます。 さらに、構成ファイルを使用してサービス レベルでのトランザクションのタイムアウトを設定できます。 詳細については、次を参照してください。[トランザクション フローを有効にする](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)します。  
+ アプリケーション構成ファイルを使用してバインディングを構成し、トランザクション フローを有効にしたり無効にしたりできます。また、バインディングに目的のトランザクション プロトコルを設定できます。 さらに、構成ファイルを使用してサービス レベルでのトランザクションのタイムアウトを設定できます。 詳細については、[トランザクション フローを有効にする](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)を参照してください。  
   
  <xref:System.ServiceModel> 名前空間のトランザクション属性で次の設定が行えます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54548483"
   
 -   コントラクト メソッドで <xref:System.ServiceModel.ServiceContractAttribute> 属性と <xref:System.ServiceModel.OperationContractAttribute> 属性を使用して、トランザクション フローの要求、許可、または拒否を行う。  
   
- 詳細については、次を参照してください。 [ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)します。  
+ 詳細については、[ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)

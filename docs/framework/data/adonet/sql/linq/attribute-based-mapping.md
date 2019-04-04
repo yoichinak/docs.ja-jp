@@ -17,7 +17,7 @@ ms.locfileid: "54713903"
  通常 Visual Studio を使用している開発者を使用して属性ベースの対応付けを実行、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
 > [!NOTE]
->  外部 XML ファイルを使用して対応付けることもできます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
+>  外部 XML ファイルを使用して対応付けることもできます。 詳細については、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
   
  以下のセクションでは、属性ベースの対応付けについて詳しく説明します。 詳細については、「<xref:System.Data.Linq.Mapping>」を参照してください。  
   

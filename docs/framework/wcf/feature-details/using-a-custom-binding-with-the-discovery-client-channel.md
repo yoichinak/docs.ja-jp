@@ -43,7 +43,7 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- 探索クライアント チャネルの使用に関する詳細については、次を参照してください。[探索クライアント チャネルを使用して](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)します。 
+ 探索クライアント チャネルの使用に関する詳細については、[探索クライアント チャネルを使用して](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)を参照してください。 
   
 ## <a name="see-also"></a>関連項目
 

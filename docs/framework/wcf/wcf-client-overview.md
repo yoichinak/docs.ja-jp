@@ -49,7 +49,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  クライアント アプリケーションやクライアント アプリケーションは WCF クライアント オブジェクトを作成し、使用できる別のアセンブリに、このコントラクト コードをコンパイルできます。 構成ファイルを使用してサービスに正しく接続するクライアント オブジェクトを構成できます。  
   
- このプロセスの例は、[方法。クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)を参照してください。 コントラクトの詳細については、[コントラクト](../../../docs/framework/wcf/feature-details/contracts.md)を参照してください。  
+ このプロセスの例は、次を参照してください。[方法。クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。 コントラクトの詳細については、[コントラクト](../../../docs/framework/wcf/feature-details/contracts.md)を参照してください。  
   
 ## <a name="create-a-wcf-client-object"></a>WCF クライアント オブジェクトを作成する  
  WCF クライアントは、クライアントがリモート サービスとの通信に使用できる形式で WCF サービスを表すローカル オブジェクトです。 WCF クライアントの種類、対象サービスを実装するコントラクト、サービス操作を呼び出すには、直接クライアント オブジェクトを使用できますし、1 つ作成し、構成したときにします。 WCF ランタイム メソッドの呼び出しをメッセージに変換、サービスに送信、応答をリッスンおよび戻り値として、WCF クライアント オブジェクトにこれらの値を返しますまたは`out`または`ref`パラメーター。  

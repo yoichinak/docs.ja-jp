@@ -62,7 +62,7 @@ ms.locfileid: "58126124"
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>シャドウ効果を提供するための豊富な機能を提供します。 詳細については、次を参照してください。[テキスト シャドウを伴って作成](how-to-create-text-with-a-shadow.md)です。  
+>  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>シャドウ効果を提供するための豊富な機能を提供します。 詳細については、[テキスト シャドウを伴って作成](how-to-create-text-with-a-shadow.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [アニメーションをテキストに適用する](how-to-apply-animations-to-text.md)

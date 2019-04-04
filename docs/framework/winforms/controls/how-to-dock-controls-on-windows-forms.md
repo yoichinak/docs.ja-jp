@@ -19,7 +19,7 @@ ms.locfileid: "57720269"
 > [!NOTE]
 >  逆の z オーダーでコントロールがドッキングされます。  
   
- <xref:System.Windows.Forms.Control.Dock%2A>プロパティの対話、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティ。 詳細については、次を参照してください。 [AutoSize プロパティの概要](autosize-property-overview.md)します。  
+ <xref:System.Windows.Forms.Control.Dock%2A>プロパティの対話、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティ。 詳細については、[AutoSize プロパティの概要](autosize-property-overview.md)を参照してください。  
   
 ### <a name="to-dock-a-control"></a>コントロールをドッキングするには  
   

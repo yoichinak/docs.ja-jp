@@ -20,9 +20,9 @@ ms.locfileid: "57367857"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。  
+ このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、、[アニメーションの概要](animation-overview.md)を参照してください。  
   
- 使用するため、<xref:System.Windows.Media.PathGeometry>オブジェクトをパス アニメーションを定義する知識も必要<xref:System.Windows.Media.PathGeometry>とさまざまな種類の<xref:System.Windows.Media.PathSegment>オブジェクト。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
+ 使用するため、<xref:System.Windows.Media.PathGeometry>オブジェクトをパス アニメーションを定義する知識も必要<xref:System.Windows.Media.PathGeometry>とさまざまな種類の<xref:System.Windows.Media.PathSegment>オブジェクト。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
   
 <a name="what_is_a_path_animation"></a>   
 ## <a name="what-is-a-path-animation"></a>パス アニメーションとは  
@@ -35,9 +35,9 @@ ms.locfileid: "57367857"
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- 使用されるパスの構文の詳細については、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例を参照してください、[パス マークアップ構文](path-markup-syntax.md)の概要。 サンプル全体については、次を参照してください。[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)します。  
+ 使用されるパスの構文の詳細については、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例を参照してください、[パス マークアップ構文](path-markup-syntax.md)の概要。 サンプル全体については、[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)を参照してください。  
   
- パス アニメーションをプロパティに適用するにを使用して、<xref:System.Windows.Media.Animation.Storyboard>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード、またはを使用して、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>コード内のメソッド。 作成するパス アニメーションを使用することもできます、<xref:System.Windows.Media.Animation.AnimationClock>を 1 つまたは複数のプロパティに適用します。 アニメーションを適用するためのさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
+ パス アニメーションをプロパティに適用するにを使用して、<xref:System.Windows.Media.Animation.Storyboard>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード、またはを使用して、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>コード内のメソッド。 作成するパス アニメーションを使用することもできます、<xref:System.Windows.Media.Animation.AnimationClock>を 1 つまたは複数のプロパティに適用します。 アニメーションを適用するためのさまざまな方法の詳細については、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
   
 <a name="animation_types"></a>   
 ## <a name="path-animation-types"></a>パス アニメーションの種類  

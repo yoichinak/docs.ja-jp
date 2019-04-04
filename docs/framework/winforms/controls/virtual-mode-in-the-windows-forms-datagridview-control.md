@@ -27,7 +27,7 @@ ms.locfileid: "57709485"
 ## <a name="replacing-bound-mode"></a>バインド モードの置換  
  バインド モードが、パフォーマンスのニーズを満たしていない場合は、仮想モードのイベント ハンドラーを使用して、カスタム キャッシュ内のすべてのデータを管理できます。 ジャストイン タイム データのみを取得するメカニズムの読み込みを実装するために仮想モードを使用するなど、ネットワーク上のデータベースからデータが最適なパフォーマンスが必要です。 このシナリオは、低速ネットワーク接続経由でデータ量が多いと RAM または記憶域スペースの制限があるクライアント コンピューターを操作する場合に特に役立ちます。  
   
- ジャストイン タイムのシナリオで仮想モードの使用に関する詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールで Just-In-Time データ読み込みで仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)します。  
+ ジャストイン タイムのシナリオで仮想モードの使用に関する詳細については、[Windows フォームの DataGridView コントロールで Just-In-Time データ読み込みで仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)を参照してください。  
   
 ## <a name="virtual-mode-events"></a>仮想モードのイベント  
  データが読み取り専用である場合、`CellValueNeeded`イベントが唯一のイベントを処理する必要があります。 仮想モードの追加のイベントでは、ユーザーを編集する、行の追加と削除、および行レベルのトランザクションなど特定の機能を有効にできます。  
@@ -60,7 +60,7 @@ ms.locfileid: "57709485"
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|データ キャッシュ内の行の高さ情報を格納または取得するコントロールで使用します。 呼び出す、<xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A>メソッド以外のキャッシュされた行の高さ情報を変更するときに、<xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>イベント ハンドラーを現在の値がコントロールの表示で使用されるようにします。|  
   
 ## <a name="best-practices-in-virtual-mode"></a>仮想モードでのベスト プラクティス  
- 大量のデータを効率的に使用するには仮想モードを実装する場合、使用効率的にしていることを確認するはも、<xref:System.Windows.Forms.DataGridView>コントロール自体。 セルのスタイル、自動サイズ変更、選択内容、および行の共有の効率的な使用の詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
+ 大量のデータを効率的に使用するには仮想モードを実装する場合、使用効率的にしていることを確認するはも、<xref:System.Windows.Forms.DataGridView>コントロール自体。 セルのスタイル、自動サイズ変更、選択内容、および行の共有の効率的な使用の詳細については、[Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

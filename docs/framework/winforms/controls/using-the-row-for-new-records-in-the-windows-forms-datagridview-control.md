@@ -34,7 +34,7 @@ ms.locfileid: "57703921"
 -   新しいレコードの行の後に行を追加されません。 <xref:System.InvalidOperationException>が、これを試行した場合に発生します。 その結果、新しいレコードの行は常に最後の行で、<xref:System.Windows.Forms.DataGridView>コントロール。 メソッドを<xref:System.Windows.Forms.DataGridViewRowCollection>行を追加する-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— すべてメソッドを呼び出す挿入内部的に新しいレコードの行が存在する場合。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新しいレコードの行のビジュアルのカスタマイズ  
- 指定した行に基づいて新しいレコードの行が作成されたときに、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 この行に指定されていないセルのスタイルは、その他のプロパティから継承されます。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
+ 指定した行に基づいて新しいレコードの行が作成されたときに、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 この行に指定されていないセルのスタイルは、その他のプロパティから継承されます。 セル スタイルの継承の詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
  各セルから新しいレコードを取得、行内のセルで表示される初期値<xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A>プロパティ。 型のセルの<xref:System.Windows.Forms.DataGridViewImageCell>、このプロパティは、プレース ホルダー イメージを返します。 このプロパティを返しますそれ以外の場合、`null`します。 カスタム値を返すには、このプロパティをオーバーライドすることができます。 ただし、によってこれらの初期値を置き換えることができます、<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>新しいレコードの行にフォーカスが移ったときにイベント ハンドラー。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "57703921"
  新しいレコードの行が選択されていない状態で常に作成されます。  
   
 ## <a name="virtual-mode"></a>仮想モード  
- 仮想モードを実装する場合は、新しいレコードの行がデータ モデルと、行の追加をロールバックするために必要な場合に追跡する必要があります。 この機能の正確な実装に依存データ モデルとそのトランザクションのセマンティクスの実装など、コミットのスコープがセルまたは行レベルであるかどうか。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)します。  
+ 仮想モードを実装する場合は、新しいレコードの行がデータ モデルと、行の追加をロールバックするために必要な場合に追跡する必要があります。 この機能の正確な実装に依存データ モデルとそのトランザクションのセマンティクスの実装など、コミットのスコープがセルまたは行レベルであるかどうか。 詳細については、[Windows フォームの DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.DataGridView>

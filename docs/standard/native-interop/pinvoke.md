@@ -4,12 +4,12 @@ description: .NET で P/Invoke を介してネイティブ関数を呼び出す�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 51026eab92ae4fd47ccdd78321be21bdbb5ecf49
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981258"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409238"
 ---
 # <a name="platform-invoke-pinvoke"></a>プラットフォーム呼び出し (P/Invoke)
 
@@ -241,6 +241,6 @@ namespace PInvokeSamples {
 
 ## <a name="more-resources"></a>その他のリソース
 
-*   [PInvoke.net wiki](https://www.pinvoke.net/) は、一般的な Win32 API とそれらを呼び出す方法に関する情報を記載した優れた Wiki です。
+*   [PInvoke.net wiki](https://www.pinvoke.net/) は、一般的な Windows API とそれらを呼び出す方法に関する情報を記載した優れた Wiki です。
 *   [MSDN の P/Invoke](/cpp/dotnet/native-and-dotnet-interoperability)
 *   [P/invoke に関する Mono のドキュメント](https://www.mono-project.com/docs/advanced/pinvoke/)

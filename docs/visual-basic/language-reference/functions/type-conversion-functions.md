@@ -141,7 +141,7 @@ CUShort(expression)
  <sup>1</sup>小数部分は、特殊な種類と呼ばれる丸め処理を行うを受けることができます*銀行型丸め*します。 詳細については、「解説」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 原則として、する必要がありますを使用する方が優先的 .NET Framework のメソッドは、Visual Basic の型変換関数など`ToString()`、いずれかで、<xref:System.Convert>クラスまたは個々 の型の構造体またはクラスにします。 Visual Basic の関数は、Visual Basic コードの最適な対話のために設計されていて、ソース コードを短く読みやすくすることも、します。 さらに、.NET Framework の変換メソッドは常に結果を生成しない、同じ例では変換するときに、Visual Basic の関数として`Boolean`に`Integer`します。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+ 原則として、する必要がありますを使用する方が優先的 .NET Framework のメソッドは、Visual Basic の型変換関数など`ToString()`、いずれかで、<xref:System.Convert>クラスまたは個々 の型の構造体またはクラスにします。 Visual Basic の関数は、Visual Basic コードの最適な対話のために設計されていて、ソース コードを短く読みやすくすることも、します。 さらに、.NET Framework の変換メソッドは常に結果を生成しない、同じ例では変換するときに、Visual Basic の関数として`Boolean`に`Integer`します。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
 
 
 Visual Basic 15.8 から始めてに渡すときに、浮動-小数点からに整数型の変換のパフォーマンスは最適化された、<xref:System.Single>または<xref:System.Double>整数変換関数のいずれかに、次のメソッドによって返される値 (`CByte`、 `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
@@ -193,7 +193,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="ctype-function"></a>CType Function  
  [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) 2 番目の引数を受け取り`typename`、型に変換および`expression`に`typename`ここで、`typename`任意のデータ型、構造体、クラス、またはインターフェイスの有効な変換が存在することができます。  
   
- 比較について`CType`他の型変換キーワードで、次を参照してください。 [DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)します。  
+ 比較について`CType`他の型変換キーワードで、[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)を参照してください。  
   
 ## <a name="cbool-example"></a>CBool 例  
  次の例では、`CBool`関数を式に変換する`Boolean`値。 式が 0 以外の値に評価される場合`CBool`返します`True`。 それ以外を返します`False`します。  

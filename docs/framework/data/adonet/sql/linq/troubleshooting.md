@@ -15,7 +15,7 @@ ms.locfileid: "54586411"
  その他の問題が記載[よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)します。  
   
 ## <a name="unsupported-standard-query-operators"></a>サポートされない標準クエリ演算子  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、すべての標準クエリ演算子メソッド (たとえば <xref:System.Linq.Enumerable.ElementAt%2A>) をサポートするわけではありません。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、次を参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、すべての標準クエリ演算子メソッド (たとえば <xref:System.Linq.Enumerable.ElementAt%2A>) をサポートするわけではありません。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)を参照してください。  
   
 ## <a name="memory-issues"></a>メモリの問題  
  クエリがメモリ内コレクションが含まれる場合と[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>、2 つのコレクションを指定する順序によって、メモリ内でクエリを実行する場合があります。 クエリをメモリ内で実行する必要がある場合、データベース テーブルのデータを取得する必要があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "54586411"
  デバッグ時、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト、エンティティのリレーションシップを走査する可能性があります。 これらの項目をキャッシュにはそうと[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]存在している対応になります。 その後、同じキーの複数の行を生成する <xref:System.Data.Linq.Table%601.Attach%2A> や <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> などのメソッドを実行しようとした場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  
   
 ## <a name="string-concatenation-exceptions"></a>文字列連結の例外  
- `[n]text` と他の `[n][var]char` にマップされる複数のオペランドを連結する操作はサポートされません。 異なる 2 つの型のセットにマップされる文字列を連結しようとすると、例外がスローされます。 詳細については、次を参照してください。 [System.String メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)します。  
+ `[n]text` と他の `[n][var]char` にマップされる複数のオペランドを連結する操作はサポートされません。 異なる 2 つの型のセットにマップされる文字列を連結しようとすると、例外がスローされます。 詳細については、[System.String メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)を参照してください。  
   
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 の Skip 例外と Take 例外  
  SQL Server 2000 データベースに対して <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> または <xref:System.Linq.Queryable.Take%2A> を使用する際には、ID メンバー (<xref:System.Linq.Queryable.Skip%2A>) を使用する必要があります。 クエリは、(結合ではなく) 1 つのテーブルに対して実行されるか、<xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A>、または <xref:System.Linq.Queryable.Union%2A> 操作である必要があります。さらに、クエリに <xref:System.Linq.Queryable.Concat%2A> 操作を含めることはできません。 詳細については、「SQL Server 2000 のサポート」セクションを参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  

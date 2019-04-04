@@ -40,7 +40,7 @@ ms.locfileid: "57366609"
   
  これらの宣言の間のリレーションシップは、`x:`プレフィックスのマッピングは、組み込み XAML 言語の定義の一部であるをサポートしていると[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]言語として XAML を使用しのボキャブラリの定義を 1 つの実装は、そのXAML のオブジェクト。 WPF の語彙の使用は XAML の組み込みの使用よりもはるかに一般的になる、ために、WPF ボキャブラリは、既定値としてマップされます。  
   
- `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、次を参照してください。 [XAML の概要 (WPF)](xaml-overview-wpf.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)します。  
+ `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、[XAML の概要 (WPF)](xaml-overview-wpf.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)を参照してください。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタム クラスとアセンブリへのマッピング  

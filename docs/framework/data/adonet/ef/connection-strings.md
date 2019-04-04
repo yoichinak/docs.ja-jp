@@ -13,11 +13,9 @@ ms.locfileid: "57365036"
 
 接続文字列には、データ プロバイダーからデータ ソースにパラメーターとして渡す初期化情報が含まれています。 接続文字列は接続を開くときに解析され、その構文はデータ プロバイダーによって異なります。 Entity Framework で使用される接続文字列には、Entity Framework のサポート基盤である ADO.NET データ プロバイダーへの接続に使用される情報が含まれています。 また、必要なモデル ファイルおよびマッピング ファイルに関する情報も含まれています。
 
-接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 
-  <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。
+接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。
 
-[Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 
-  <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。
+[Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。
 
 ## <a name="connection-string-syntax"></a>接続文字列の構文
 
@@ -25,15 +23,13 @@ ms.locfileid: "57365036"
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
 
-
-  <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> のキーワード値に有効な名前を次の表に示します。
+<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> のキーワード値に有効な名前を次の表に示します。
 
 |キーワード|説明|
 |-------------|-----------------|
 |`Provider`|`Name` キーワードが指定されていない場合に必要です。 基になるプロバイダーの <xref:System.Data.Common.DbProviderFactory> オブジェクトを取得するために使用されるプロバイダー名です。 この値は定数です。<br /><br /> `Name` キーワードがエンティティ接続文字列に含まれていない場合、`Provider` キーワードの空でない値が必要になります。 このキーワードは `Name` キーワードと同時に指定できません。|
 |`Provider Connection String`|省略可能です。 基になるデータ ソースに渡される、プロバイダー固有の接続文字列を指定します。 この接続文字列には、データ プロバイダーの有効なキーワード/値ペアが含まれています。 無効な `Provider Connection String` がデータ ソースによって評価されると、ランタイム エラーが発生します。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。<br /><br /> 一般的な構文に従って値をエスケープすることを確認[ADO.NET 接続文字列](../../../../../docs/framework/data/adonet/connection-strings.md)します。 次の接続文字列の例を検討してください:`Server=serverName; User ID = userID`します。 セミコロンが含まれているため、エスケープする必要があります。 二重引用符を含まないためには、エスケープを使用できます。<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|
-|`Metadata`|
-  `Name` キーワードが指定されていない場合に必要です。 メタデータとマッピング情報の検索対象となるディレクトリ、ファイル、およびリソースの場所をパイプで区切って指定したリストです。 次に例を示します。<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> パイプ区切り記号の両側の空白は無視されます。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。|
+|`Metadata`|`Name` キーワードが指定されていない場合に必要です。 メタデータとマッピング情報の検索対象となるディレクトリ、ファイル、およびリソースの場所をパイプで区切って指定したリストです。 次に例を示します。<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> パイプ区切り記号の両側の空白は無視されます。<br /><br /> このキーワードは `Name` キーワードと同時に指定できません。|
 |`Name`|アプリケーションは、オプションで、必要なキーワード/値接続文字列値を提供する接続名をアプリケーション構成ファイル内で指定できます。 その場合は、接続文字列内に値を直接記述することはできません。 `Name` キーワードは、構成ファイル内で使用できません。<br /><br /> `Name` キーワードが接続文字列に含まれていない場合、Provider キーワードの空でない値が必要になります。<br /><br /> このキーワードは他のすべての接続文字列キーワードと同時に指定できません。|
 
 接続文字列の例を次に、 [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)アプリケーション構成ファイルに格納されています。
@@ -98,13 +94,11 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>サポート、 &#124;DataDirectory&#124;置換文字列と Web アプリケーション ルート演算子 (~)
 
-`DataDirectory` ~ 演算子で使用されて、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>の一部として、`Metadata`と`Provider Connection String`キーワード。 
-  <xref:System.Data.EntityClient.EntityConnection> によって、`DataDirectory` と ~ 演算子がそれぞれ <xref:System.Data.Metadata.Edm.MetadataWorkspace> とストア プロバイダーに転送されます。
+`DataDirectory` ~ 演算子で使用されて、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>の一部として、`Metadata`と`Provider Connection String`キーワード。 <xref:System.Data.EntityClient.EntityConnection> によって、`DataDirectory` と ~ 演算子がそれぞれ <xref:System.Data.Metadata.Edm.MetadataWorkspace> とストア プロバイダーに転送されます。
 
 |用語|説明|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory`置換文字列はパイプ文字で囲む必要があり、あります、その名前とパイプ文字の間の空白文字にすることはできません。 
-  `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory"という名前の物理ディレクトリをメタデータ パスの一覧のメンバーとして渡すことがある場合は、名前のいずれかまたは両方の側に空白を追加します。 たとえば、`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` のように指定します。 ASP.NET アプリケーションが解決される&#124;DataDirectory&#124;に、"\<アプリケーション ルート >/app_data"フォルダーです。|
+|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory`置換文字列はパイプ文字で囲む必要があり、あります、その名前とパイプ文字の間の空白文字にすることはできません。 `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory"という名前の物理ディレクトリをメタデータ パスの一覧のメンバーとして渡すことがある場合は、名前のいずれかまたは両方の側に空白を追加します。 たとえば、`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` のように指定します。 ASP.NET アプリケーションが解決される&#124;DataDirectory&#124;に、"\<アプリケーション ルート >/app_data"フォルダーです。|
 |~|Web アプリケーション ルートに解決されます。 先頭の ~ 文字は、有効なローカル サブディレクトリを表すこともありますが、常に Web アプリケーション ルート演算子 (~) として解釈されます。 このようなローカル サブディレクトリを参照するには、ユーザーが明示的に `./~` を渡す必要があります。|
 
 `DataDirectory` と ~ 演算子は、パスの先頭にのみ指定する必要があります。その他の位置では解決されません。 Entity Framework では、`~/data` の解決は試行されますが、`/data/~` は物理パスとして処理されます。

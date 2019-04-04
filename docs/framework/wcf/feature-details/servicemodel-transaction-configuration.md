@@ -15,7 +15,7 @@ ms.locfileid: "54693163"
 Windows Communication Foundation (WCF) サービスのトランザクションを構成するための 3 つの属性を提供します。 `transactionFlow`、 `transactionProtocol`、および`transactionTimeout`します。  
   
 ## <a name="configuring-transactionflow"></a>transactionFlow の構成  
- ほとんどの定義済みバインディングを含む WCF が提供されています、`transactionFlow`と`transactionProtocol`属性、特定のトランザクション フロー プロトコルを使用して特定のエンドポイントに対してトランザクションを受け入れるバインドを構成することができるようにします。 さらに、`transactionFlow` 要素とその `transactionProtocol` 属性を使用して、ユーザー独自のカスタム バインドを構築できます。 構成要素の設定の詳細については、次を参照してください。 [\<バインド >](../../../../docs/framework/misc/binding.md)と[WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)します。  
+ ほとんどの定義済みバインディングを含む WCF が提供されています、`transactionFlow`と`transactionProtocol`属性、特定のトランザクション フロー プロトコルを使用して特定のエンドポイントに対してトランザクションを受け入れるバインドを構成することができるようにします。 さらに、`transactionFlow` 要素とその `transactionProtocol` 属性を使用して、ユーザー独自のカスタム バインドを構築できます。 構成要素の設定の詳細については、[\<バインド >](../../../../docs/framework/misc/binding.md)と[WCF 構成スキーマ](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)を参照してください。  
   
  `transactionFlow` 属性は、バインディングを使用するサービス エンドポイントに対してトランザクション フローを有効にするかどうかを指定します。  
   

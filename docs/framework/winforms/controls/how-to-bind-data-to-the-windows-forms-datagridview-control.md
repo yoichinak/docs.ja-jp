@@ -36,13 +36,13 @@ DataGridView コントロールをデータに接続します。
 
 この例で必要な要素は次のとおりです。 
 
-- SQL Server の Northwind サンプル データベースへのアクセス。 Northwind サンプル データベースのインストールの詳細については、次を参照してください。 [ADO.NET コード サンプルについては、サンプル データベースを取得](../../data/adonet/sql/linq/downloading-sample-databases.md)します。 
+- SQL Server の Northwind サンプル データベースへのアクセス。 Northwind サンプル データベースのインストールの詳細については、[ADO.NET コード サンプルについては、サンプル データベースを取得](../../data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。 
 
 - System、System.Windows.Forms、System.Data、および System.Xml アセンブリへの参照。  
 
 ビルドし、この例を実行するにコードを貼り付ける、 *Form1*新しい Windows フォーム プロジェクトでコード ファイル。 ビルドについては、C#または Visual Basic のコマンド ラインで、「 [csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。  
   
-設定、`connectionString`例では、SQL Server の Northwind サンプル データベース接続の値を持つ変数です。 Windows 認証、統合のセキュリティとも呼ばれます。 は、接続文字列にパスワードを格納するよりもデータベースに接続するより安全な方法です。 接続セキュリティの詳細については、次を参照してください。[接続情報を保護する](../../data/adonet/protecting-connection-information.md)します。  
+設定、`connectionString`例では、SQL Server の Northwind サンプル データベース接続の値を持つ変数です。 Windows 認証、統合のセキュリティとも呼ばれます。 は、接続文字列にパスワードを格納するよりもデータベースに接続するより安全な方法です。 接続セキュリティの詳細については、[接続情報を保護する](../../data/adonet/protecting-connection-information.md)を参照してください。  
 
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  

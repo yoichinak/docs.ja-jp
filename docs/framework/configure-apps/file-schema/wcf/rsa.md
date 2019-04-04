@@ -42,7 +42,7 @@ ms.locfileid: "55273570"
 ## <a name="remarks"></a>Remarks  
  RSA チェックを行うと、その RSA キーまたは生成された独自の RSA キー値に基づいて、単一の証明書の認証を明確に制限できます。 これにより、RSA キーが変更された場合に既存のクライアントで使用できなくなるサービスを犠牲にして、特定の RSA キーをより厳しく認証できます。  
   
- Identity を使用して、クライアントにサービスを検証する方法の詳細については、次を参照してください。[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
+ Identity を使用して、クライアントにサービスを検証する方法の詳細については、[サービス Id と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次の構成コードは、サーバーの認証に使用される X.509 証明書の公開キー値を指定します。  

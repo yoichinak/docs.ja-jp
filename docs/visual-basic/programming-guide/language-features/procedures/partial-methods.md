@@ -48,7 +48,7 @@ Private Sub QuantityChanged()
 End Sub  
 ```  
   
- 前の例では、宣言内のシグネチャを正確には、重複するが、バリエーションが可能です。 具体的には、その他の修飾子を追加できるよう`Overloads`または`Overrides`します。 1 つだけ`Overrides`修飾子を使用します。 メソッドの修飾子の詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)します。  
+ 前の例では、宣言内のシグネチャを正確には、重複するが、バリエーションが可能です。 具体的には、その他の修飾子を追加できるよう`Overloads`または`Overrides`します。 1 つだけ`Overrides`修飾子を使用します。 メソッドの修飾子の詳細については、[Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)を参照してください。  
   
 ## <a name="use"></a>使用  
  場合とその他の部分メソッドを呼び出す`Sub`プロシージャ。 メソッドが実装されている場合は、引数が評価され、メソッドの本体が実行されます。 ただし、部分メソッドの実装は省略可能です。 メソッドが実装されていない場合は、それへの呼び出しが効果を持たず、メソッドに引数として渡される式は評価されません。  

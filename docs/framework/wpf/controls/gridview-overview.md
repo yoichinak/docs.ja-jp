@@ -92,7 +92,7 @@ ms.locfileid: "58185442"
   
      1 つまたは複数の項目を選択できる、<xref:System.Windows.Controls.GridView>します。  
   
-     変更する場合、<xref:System.Windows.Style>のアイテムを選択し、次を参照してください。[トリガー、ListView で選択した項目のスタイルを使用して](how-to-use-triggers-to-style-selected-items-in-a-listview.md)します。  
+     変更する場合、<xref:System.Windows.Style>のアイテムを選択し、[トリガー、ListView で選択した項目のスタイルを使用して](how-to-use-triggers-to-style-selected-items-in-a-listview.md)を参照してください。  
   
 -   **スクロールして画面に表示されていない内容を表示する**  
   

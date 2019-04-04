@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミング モデル�
   
 -   **複数のデータ形式**Web スタイル サービスは、さまざまな種類の SOAP メッセージ以外にもデータを処理します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>XML ドキュメント、JSON データ オブジェクトでは、イメージ、ビデオ ファイル、またはプレーン テキストなどのバイナリ コンテンツのストリームなど、さまざまなデータ形式をサポートするためにします。  
   
- WCF WEB HTTP プログラミング モデルでは、WCF WEB HTTP サービス、AJAX および JSON サービス、および配信 (ATOM および RSS) フィードを含む Web スタイルのシナリオに対応のリーチを拡張します。 AJAX および JSON サービスの詳細については、次を参照してください。 [AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)します。 配信の詳細については、次を参照してください。 [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)します。  
+ WCF WEB HTTP プログラミング モデルでは、WCF WEB HTTP サービス、AJAX および JSON サービス、および配信 (ATOM および RSS) フィードを含む Web スタイルのシナリオに対応のリーチを拡張します。 AJAX および JSON サービスの詳細については、[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)を参照してください。 配信の詳細については、[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)を参照してください。  
   
  WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされる種類の詳細については、次を参照してください。、 **UriTemplate クエリ文字列パラメーターと Url**以下のセクション。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、「<xref:System.ServiceModel.Dispatcher.QueryStringConverter>」を参照してください。  
   
@@ -135,7 +135,7 @@ interface ICustomer
   
  つまり、WCF WEB HTTP プログラミング モデルは、あらゆる種類のデータを処理できますが、に対してプログラミングすることも<xref:System.IO.Stream>します。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] は、配信フィード (ATOM および RSS) だけでなく、JSON データ (AJAX) にも対応しています。 これらの機能に関する詳細については、次を参照してください。 [WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)と[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)します。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] は、配信フィード (ATOM および RSS) だけでなく、JSON データ (AJAX) にも対応しています。 これらの機能に関する詳細については、[WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)と[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)を参照してください。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP プログラミング モデルとセキュリティ  
  WCF WEB HTTP プログラミング モデルはサポートされていません、ws-* プロトコル、WCF WEB HTTP サービスをセキュリティで保護する唯一の方法は、SSL を使用して HTTPS 経由でサービスを公開します。 SSL の設定の詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS に SSL を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131613)  

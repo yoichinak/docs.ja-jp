@@ -29,7 +29,7 @@ ms.locfileid: "57358432"
 > [!NOTE]
 >  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>のコントロール[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、このトピックでこれについては説明する必要がありますと混同しないで、 <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> Windows フォームのコンポーネント。  
   
- 使用する厳密に言えば、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>ダイアログを開くことがなくメソッド。 その意味で、コントロールを非表示の印刷コンポーネントとして使用できます。 パフォーマンス上の理由から、いずれかを使用する方がよい場合がなりますが、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドまたはその、多数の<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 詳細については、これは、次を参照してください。 [XPS ファイルをプログラムによって印刷](how-to-programmatically-print-xps-files.md)とします。  
+ 使用する厳密に言えば、<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>ダイアログを開くことがなくメソッド。 その意味で、コントロールを非表示の印刷コンポーネントとして使用できます。 パフォーマンス上の理由から、いずれかを使用する方がよい場合がなりますが、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドまたはその、多数の<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>と<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>のメソッド、<xref:System.Windows.Xps.XpsDocumentWriter>します。 詳細については、これは、[XPS ファイルをプログラムによって印刷](how-to-programmatically-print-xps-files.md)とを参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.PrintDialog>

@@ -21,11 +21,11 @@ ms.locfileid: "54596100"
 ## <a name="readxmlschema"></a>ReadXmlSchema  
  スキーマを読み込む、**データセット**任意のデータを読み込むことがなく、XML ドキュメントから使用することができます、 **ReadXmlSchema**のメソッド、**データセット**します。 **ReadXmlSchema**作成**データセット**XML スキーマ定義言語 (XSD) スキーマを使用して定義されているスキーマ。  
   
- **ReadXmlSchema**メソッドは、ストリーム、ファイル名の 1 つの引数または**XmlReader**読み込む XML ドキュメントを格納しています。 この XML ドキュメントには、スキーマだけが含まれているか、またはデータのある XML 要素と共にスキーマがインラインで含まれています。 XML スキーマとしてのインライン スキーマを書き込む方法の詳細については、次を参照してください。[派生 DataSet リレーショナル構造の XML スキーマ (XSD) から](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)します。  
+ **ReadXmlSchema**メソッドは、ストリーム、ファイル名の 1 つの引数または**XmlReader**読み込む XML ドキュメントを格納しています。 この XML ドキュメントには、スキーマだけが含まれているか、またはデータのある XML 要素と共にスキーマがインラインで含まれています。 XML スキーマとしてのインライン スキーマを書き込む方法の詳細については、[派生 DataSet リレーショナル構造の XML スキーマ (XSD) から](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)を参照してください。  
   
- XML ドキュメントが渡された場合**ReadXmlSchema**インライン スキーマの情報が含まれていない**ReadXmlSchema**は XML ドキュメント内の要素からスキーマを推論します。 場合、**データセット**既にスキーマを含む現在のスキーマがまだ存在しない場合は、新しいテーブルを追加することによって拡張されます。 既存のテーブルには新しい列は追加されません。 既に追加されている列が存在する場合、**データセット**が互換性のない型の列が見つかりません、XML で例外がスローされます。 方法の詳細について**ReadXmlSchema**スキーマの推論、XML ドキュメントから、次を参照してください。[への推論からの DataSet リレーショナル構造 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)します。  
+ XML ドキュメントが渡された場合**ReadXmlSchema**インライン スキーマの情報が含まれていない**ReadXmlSchema**は XML ドキュメント内の要素からスキーマを推論します。 場合、**データセット**既にスキーマを含む現在のスキーマがまだ存在しない場合は、新しいテーブルを追加することによって拡張されます。 既存のテーブルには新しい列は追加されません。 既に追加されている列が存在する場合、**データセット**が互換性のない型の列が見つかりません、XML で例外がスローされます。 方法の詳細について**ReadXmlSchema**スキーマの推論、XML ドキュメントから、[への推論からの DataSet リレーショナル構造 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)を参照してください。  
   
- **ReadXmlSchema**読み込みまたは推論のスキーマのみ、**データセット**、 **ReadXml**のメソッド、**データセット**読み込まれるかまたは両方の推論スキーマと XML ドキュメントに含まれるデータ。 詳細については、次を参照してください。 [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)します。  
+ **ReadXmlSchema**読み込みまたは推論のスキーマのみ、**データセット**、 **ReadXml**のメソッド、**データセット**読み込まれるかまたは両方の推論スキーマと XML ドキュメントに含まれるデータ。 詳細については、[XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)を参照してください。  
   
  次のコード例を読み込む方法を表示する、**データセット**を XML ドキュメントまたはストリームからのスキーマ。 最初の例に渡される XML スキーマ ファイル名、 **ReadXmlSchema**メソッド。 2 番目の例を示します、 **System.IO.StreamReader**します。  
   

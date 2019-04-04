@@ -67,7 +67,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  ユーザー定義エンコーディング バインド要素のオプション メソッドとプロパティの完全な一覧については、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> を参照してください。  
   
- 新しいバインド要素を作成する方法の詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)します。  
+ 新しいバインド要素を作成する方法の詳細については、[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)を参照してください。  
   
  チャネルのバインド要素を作成した後に戻り、[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)かどうかをバインド要素に構成ファイルのサポートを追加する場合と、メタデータ ドキュメントのサポートを追加する方法を表示するトピックとかどうかと、バインド要素を使用するユーザー定義のバインディングを構築する方法。  
   

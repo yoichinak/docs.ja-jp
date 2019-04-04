@@ -110,7 +110,7 @@ result = string Like pattern
  同様に、型の式を比較する`Decimal`型の式に`Single`または`Double`、`Decimal`式に変換されます`Single`または`Double`します。 `Decimal`式、小数部の値より小さい 1E-28 は失われる可能性があります。 このような小数部の値が失われるときに等しいと比較する 2 つの値があります。 このため、注意が必要と等しいかどうかを使用して (`=`) 2 つの浮動小数点変数を比較します。 2 つの数値の差の絶対値が許容差より小さいかどうかをテストすることができます。  
   
 ### <a name="floating-point-imprecision"></a>浮動小数点は誤差  
- 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と[Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)します。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+ 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と[Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)します。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
   
 ## <a name="comparing-strings"></a>文字列の比較  
  依存する、アルファベット順の並べ替え順序に基づいて、文字列式を評価する文字列を比較したときに、`Option Compare`設定します。  

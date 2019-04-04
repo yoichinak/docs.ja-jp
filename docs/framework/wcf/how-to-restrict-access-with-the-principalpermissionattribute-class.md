@@ -52,7 +52,7 @@ Windows ドメイン コンピューターのリソースへのアクセスを�
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>証明書を使用したメソッドへのアクセスの制御  
  クライアント資格情報の種類が "証明書" の場合は、`PrincipalPermissionAttribute` クラスを使用してメソッドへのアクセスを制御することもできます。 そのためには、証明書のサブジェクトと拇印が必要になります。  
   
- そのプロパティ用の証明書を検証するを参照してください。[方法。MMC スナップインで証明書を表示](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。 拇印の値を検索するには、[方法。証明書のサムプリントを取得](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)を参照してください。  
+ そのプロパティ用の証明書を検証するを参照してください。[方法。MMC スナップインで証明書を表示](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。 拇印の値を検索するには、次を参照してください。[方法。証明書のサムプリントを取得](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)します。  
   
 #### <a name="to-control-access-using-a-certificate"></a>証明書を使用してアクセスを制御するには  
   

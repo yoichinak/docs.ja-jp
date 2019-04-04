@@ -24,13 +24,13 @@ ms.locfileid: "43517784"
 ## <a name="systemtransactions-transactions"></a>System.Transactions トランザクション  
  <xref:System.Transactions> 名前空間は、<xref:System.Transactions.Transaction> クラスに基づく明示的なプログラミング モデルだけでなく、インフラストラクチャがトランザクションを自動的に管理する、<xref:System.Transactions.TransactionScope> クラスを使用した暗黙的なプログラミング モデルも提供します。  
   
- これら 2 つのモデルを使用してトランザクション アプリケーションを作成する方法の詳細については、次を参照してください。[トランザクション アプリケーションの作成](https://go.microsoft.com/fwlink/?LinkId=94947)です。  
+ これら 2 つのモデルを使用してトランザクション アプリケーションを作成する方法の詳細については、[トランザクション アプリケーションの作成](https://go.microsoft.com/fwlink/?LinkId=94947)を参照してください。  
   
  WCF サービスまたはアプリケーション、<xref:System.Transactions>サービス内で必要なときに、トランザクションに明示的に対話して、クライアント アプリケーション内でトランザクションを作成するために、プログラミング モデルを提供します。  
   
 ## <a name="msdtc-transactions"></a>MSDTC トランザクション  
  Microsoft 分散トランザクション コーディネーター (MSDTC) は、分散トランザクションをサポートするトランザクション マネージャーです。  
   
- 詳細については、次を参照してください。、 [DTC プログラマ リファレンス](https://go.microsoft.com/fwlink/?LinkId=94948)します。  
+ 詳細については、、 [DTC プログラマ リファレンス](https://go.microsoft.com/fwlink/?LinkId=94948)を参照してください。  
   
  WCF サービスまたはアプリケーションでは、MSDTC は、クライアントまたはサービス内で作成されたトランザクションの調整のインフラストラクチャを提供します。

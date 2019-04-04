@@ -60,7 +60,7 @@ Visual Basic 15.3 以降、Visual Basic はタプルの要素の名前を推測�
 
 バージョン番号は 15.3 以降、Visual Basic コンパイラの任意のバージョンを指定できます。 特定のコンパイラ バージョンをハードコーディングするのではなく指定することも"Latest"の値として`LangVersion`システムにインストールされている Visual Basic コンパイラの最新バージョンでコンパイルします。
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)を参照してください。
 
 場合によっては、Visual Basic コンパイラが、候補名からタプル要素名を推論できませんなどを使用して、既定の名前は、タプルのフィールドを参照のみ`Item1`、`Item2`など。不足している機能には次が含まれます。
 

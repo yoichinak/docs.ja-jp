@@ -47,7 +47,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |オプション|説明|  
 |------------|-----------------|  
-|**/language:\<language>**|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名か、<xref:System.CodeDom.Compiler.CodeDomProvider> から継承するクラスの完全修飾名のいずれかを指定します。<br /><br /> 値は、c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp になります。<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`<br /><br /> 詳細については、次を参照してください。 [CodeDomProvider クラス](https://go.microsoft.com/fwlink/?LinkId=94778)します。|  
+|**/language:\<language>**|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名か、<xref:System.CodeDom.Compiler.CodeDomProvider> から継承するクラスの完全修飾名のいずれかを指定します。<br /><br /> 値は、c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp になります。<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`<br /><br /> 詳細については、[CodeDomProvider クラス](https://go.microsoft.com/fwlink/?LinkId=94778)を参照してください。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>クライアントの名前空間の選択  
   

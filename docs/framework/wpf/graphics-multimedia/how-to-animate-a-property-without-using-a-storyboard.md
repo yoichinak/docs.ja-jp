@@ -34,7 +34,7 @@ ms.locfileid: "57371165"
   
  さまざまなアニメーションのクラス、<xref:System.Windows.Media.Animation>名前空間が異なる種類のプロパティをアニメーション化するために存在します。 プロパティのアニメーション化の詳細については、「[アニメーションの概要](animation-overview.md)」を参照してください。 依存関係プロパティ (これらの例に示されているプロパティの種類) とその機能の詳細については、「[依存関係プロパティの概要](../advanced/dependency-properties-overview.md)」を参照してください。  
   
- 使用せずにアニメーション化するには、他の方法はあります<xref:System.Windows.Media.Animation.Storyboard>オブジェクト。 詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
+ 使用せずにアニメーション化するには、他の方法はあります<xref:System.Windows.Media.Animation.Storyboard>オブジェクト。 詳細については、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.AnimationTimeline>

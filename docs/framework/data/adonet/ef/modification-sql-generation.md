@@ -13,7 +13,7 @@ ms.locfileid: "57374753"
 
 ここでは、SQL:1999 準拠のデータベース プロバイダーのための変更 SQL 生成モジュールを開発する方法について説明します。 このモジュールは、変更コマンド ツリーを適切な SQL INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントに変換します。
 
-Select ステートメントの SQL 生成の詳細については、次を参照してください。 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)します。
+Select ステートメントの SQL 生成の詳細については、[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)を参照してください。
 
 ## <a name="overview-of-modification-command-trees"></a>変更コマンド ツリーの概要
 

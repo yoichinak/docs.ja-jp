@@ -46,7 +46,7 @@ ms.locfileid: "57372829"
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.UIElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)を参照してください。  
   
 -   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "57372829"
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkContentElement>、それに加えてによって提供される次の機能を取得する<xref:System.Windows.ContentElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)を参照してください。  
   
 -   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   

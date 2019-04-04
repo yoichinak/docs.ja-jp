@@ -35,7 +35,7 @@ ms.locfileid: "57723648"
      [!code-csharp[DisplayWebBrowserCode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  追加、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`を<xref:System.Windows.Forms.Form>、監視する、<xref:System.Windows.Forms.Control.Click>イベント。 イベントの監視について詳しくは、次を参照してください。[イベント](../../../standard/events/index.md)します。  
+6.  追加、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`を<xref:System.Windows.Forms.Form>、監視する、<xref:System.Windows.Forms.Control.Click>イベント。 イベントの監視について詳しくは、[イベント](../../../standard/events/index.md)を参照してください。  
   
 7.  <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
   

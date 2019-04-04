@@ -31,7 +31,7 @@ ms.locfileid: "58842305"
   
  プロパティを持つのみ非キーと同じ名前、種類、順序、および値である 2 つのインスタンスが宣言されている場合は 2 つのインスタンスが等しくないです。 キー プロパティを持たないインスタンスはのみにします。  
   
- 匿名型の 2 つのインスタンスを同じ匿名型のインスタンスである条件の詳細については、次を参照してください。[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)します。  
+ 匿名型の 2 つのインスタンスを同じ匿名型のインスタンスである条件の詳細については、[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)を参照してください。  
   
 ## <a name="hash-code-calculation"></a>ハッシュ コードの計算  
  ような<xref:System.Object.Equals%2A>、ハッシュ関数で定義されている<xref:System.Object.GetHashCode%2A>匿名型が、型のキー プロパティに基づいています。 次の例では、コードの値のキー プロパティとハッシュ間のやり取りを示します。  

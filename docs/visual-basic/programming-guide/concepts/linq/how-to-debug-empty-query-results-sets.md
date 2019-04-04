@@ -16,7 +16,7 @@ XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML 
   
  2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。  
   
- 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 詳細については、[XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。  

@@ -18,7 +18,7 @@ ms.locfileid: "57372686"
 Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツを含めることができます。 このトピックでは、WPF で効率的に相互運用するための Direct3D9 コンテンツを作成する方法について説明します。  
   
 > [!NOTE]
->  WPF での Direct3D9 コンテンツを使用する場合は、パフォーマンスを考慮する必要があります。 パフォーマンスを最適化する方法の詳細については、次を参照してください。 [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)します。  
+>  WPF での Direct3D9 コンテンツを使用する場合は、パフォーマンスを考慮する必要があります。 パフォーマンスを最適化する方法の詳細については、[Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)を参照してください。  
   
 ## <a name="display-buffers"></a>バッファーを表示します。  
  <xref:System.Windows.Interop.D3DImage>クラスは、2 つ表示バッファーと呼ばれる、管理、*バック バッファー*と*フロント バッファー*します。 バック バッファーでは、Direct3D9 サーフェイスです。 バック バッファーへの変更にコピーされますフォワード フロント バッファーを呼び出すとき、<xref:System.Windows.Interop.D3DImage.Unlock%2A>メソッド。  
@@ -70,7 +70,7 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>サーフェスを作成します。  
- サーフェスを作成する前に、デバイスの機能が対象のオペレーティング システムで良好なパフォーマンスをサポートすることを確認します。 詳細については、次を参照してください。 [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)します。  
+ サーフェスを作成する前に、デバイスの機能が対象のオペレーティング システムで良好なパフォーマンスをサポートすることを確認します。 詳細については、[Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)を参照してください。  
   
  デバイスの機能を確認したら、画面を作成できます。 次のコード例では、レンダー ターゲットを作成する方法を示します。  
   

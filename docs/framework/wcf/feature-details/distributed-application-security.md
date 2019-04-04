@@ -15,7 +15,7 @@ ms.locfileid: "54709430"
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) のセキュリティは、次の 3 つの主要な機能領域に分割されます。 転送セキュリティ、アクセス制御、および監査します。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
   
- WCF メッセージ セキュリティの概要については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF セキュリティの他の 2 種類の詳細については、次を参照してください。[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)と[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
+ WCF メッセージ セキュリティの概要については、[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)を参照してください。 WCF セキュリティの他の 2 種類の詳細については、[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)と[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
   
 ## <a name="transfer-security-scenarios"></a>転送セキュリティのシナリオ  
  WCF 転送セキュリティを採用している一般的なシナリオを以下に示します。  

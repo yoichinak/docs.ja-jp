@@ -22,7 +22,7 @@ Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Prese
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]と Firefox がインストールされているは、プラグイン、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]します。 Window 7 が含まれています、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]には含まれませんが、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 用のプラグイン。 インストールすることはできません、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Windows 7、Firefox 用のプラグイン。  
   
- [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]は含まれません、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 用のプラグイン。 ただし、両方の場合、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]と[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]は、インストールされている WPF Firefox プラグインをインストールで、 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 そのため[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]WPF ホストは、framework の正しいバージョンを読み込むためのアプリケーションは引き続き実行します。 詳細については、次を参照してください。 [WPF ホスト (PresentationHost.exe)](wpf-host-presentationhost-exe.md)します。  
+ [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]は含まれません、 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Firefox 用のプラグイン。 ただし、両方の場合、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]と[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]は、インストールされている WPF Firefox プラグインをインストールで、 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]。 そのため[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]WPF ホストは、framework の正しいバージョンを読み込むためのアプリケーションは引き続き実行します。 詳細については、[WPF ホスト (PresentationHost.exe)](wpf-host-presentationhost-exe.md)を参照してください。  
   
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  Firefox ブラウザーから実行するスタンドアロンの ClickOnce アプリケーションを .NET Framework Assistant for Firefox にできます。 .NET Framework Assistant の Firefox 関数、Firefox ブラウザーの前後にインストールされているときに同じです。 Firefox ブラウザーが起動したときに、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]がインストールされている場合、Firefox で検索し、Firefox の .NET Framework Assistant をインストールします。 ユーザーは、.NET Framework Assistant for Firefox では、次の操作を構成できます。  
@@ -31,7 +31,7 @@ Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Prese
   
 -   インストールされているすべてのバージョンの .NET Framework または最新バージョンのみを報告します。  
   
- 含まれている、.NET Framework Assistant for Firefox、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]します。 Firefox 用の .NET Framework Assistant の削除方法の詳細については、次を参照してください。 [Firefox 用の .NET Framework Assistant の削除方法](https://go.microsoft.com/fwlink/?LinkId=177944)します。  
+ 含まれている、.NET Framework Assistant for Firefox、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]します。 Firefox 用の .NET Framework Assistant の削除方法の詳細については、[Firefox 用の .NET Framework Assistant の削除方法](https://go.microsoft.com/fwlink/?LinkId=177944)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)

@@ -28,7 +28,7 @@ ms.locfileid: "58654225"
   
 -   WPF ホスト アプリケーションの実装。  
   
- このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WPF サンプル Windows フォーム複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159999)します。  
+ このチュートリアルで示すタスクの完全なコード一覧については、[WPF サンプル Windows フォーム複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159999)を参照してください。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
 

@@ -98,7 +98,7 @@ ms.locfileid: "57703661"
   
 -   非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、「[方法 :バック グラウンド操作を使用してフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
--   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、次を参照してください。[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)します。  
+-   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ComponentModel.BackgroundWorker>

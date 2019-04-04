@@ -37,7 +37,7 @@ ms.locfileid: "54721790"
   
     -   <xref:System.ServiceModel.EndpointAddress.Identity%2A> プロパティは、サービスのセキュリティ ID とオプションのメッセージ ヘッダーのコレクションを表します。 オプションのメッセージ ヘッダーは、エンドポイントの識別またはエンドポイントとの対話のための、より詳細なアドレス指定情報を追加するために使用されます。  
   
-     詳細については、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
+     詳細については、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
   
 -   バインディング:バインディングはエンドポイントとの通信方法を指定します。 バインディングには、以下の項目が含まれます。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54721790"
   
     -   必要なセキュリティ要件 (例 : SSL メッセージ セキュリティや SOAP メッセージ セキュリティ)。  
   
-     詳細については、次を参照してください。 [WCF のバインディングの概要](../../../../docs/framework/wcf/bindings-overview.md)します。 バインディングは抽象基本クラスで WCF オブジェクト モデルで表される<xref:System.ServiceModel.Channels.Binding>します。 ほとんどのシナリオでは、システム指定のバインディングを使用できます。 詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。  
+     詳細については、[WCF のバインディングの概要](../../../../docs/framework/wcf/bindings-overview.md)を参照してください。 バインディングは抽象基本クラスで WCF オブジェクト モデルで表される<xref:System.ServiceModel.Channels.Binding>します。 ほとんどのシナリオでは、システム指定のバインディングを使用できます。 詳細については、[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。  
   
 -   コントラクト:コントラクトでは、クライアントに公開するエンドポイント機能について説明します。 コントラクトは、以下の項目を指定します。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54721790"
   
     -   クライアントが予期できる処理メッセージまたは応答メッセージの種類。  
   
-     コントラクトを定義する詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。  
+     コントラクトを定義する詳細については、[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。  
   
--   動作:エンドポイントの動作を使用して、サービス エンドポイントのローカル動作をカスタマイズすることができます。 エンドポイントの動作は、WCFruntime の作成プロセスで参加することでこれを実現します。 エンドポイントの動作の一例は、<xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> プロパティです。このプロパティにより、SOAP アドレスまたは Web サービス記述言語 (WSDL) アドレスとは異なるリッスン アドレスを指定できます。 詳細については、次を参照してください。 [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)します。  
+-   動作:エンドポイントの動作を使用して、サービス エンドポイントのローカル動作をカスタマイズすることができます。 エンドポイントの動作は、WCFruntime の作成プロセスで参加することでこれを実現します。 エンドポイントの動作の一例は、<xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> プロパティです。このプロパティにより、SOAP アドレスまたは Web サービス記述言語 (WSDL) アドレスとは異なるリッスン アドレスを指定できます。 詳細については、[ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)を参照してください。  
   
 ## <a name="defining-endpoints"></a>エンドポイントの定義  
  サービスのエンドポイントは、コードを使用して強制的に指定するか、構成を介して宣言として指定することができます。 詳細については、「[方法 :サービス エンドポイントの構成で作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)と[方法。コードでサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)します。  

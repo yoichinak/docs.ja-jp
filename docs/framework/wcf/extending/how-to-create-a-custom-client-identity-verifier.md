@@ -15,7 +15,7 @@ ms.locfileid: "58464022"
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>方法: カスタムのクライアント Id 検証機能を作成します。
 *Identity*機能の Windows Communication Foundation (WCF) が事前に予想されるサービスの id を指定するクライアントを使用できます。 サーバーがクライアントに対して自身を認証するたびに、ID がこの予想 ID と照合されます (Id とそのしくみの詳細については、次を参照してください[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)。  
   
- 必要に応じて、カスタム ID 検証機能を使用して検証をカスタマイズできます。 たとえば、追加のサービス ID 検証チェックを実行できます。 この例では、カスタム ID 検証機能で、サーバーから戻された X.509 証明書の追加のクレームをチェックします。 サンプル アプリケーションでは、次を参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。  
+ 必要に応じて、カスタム ID 検証機能を使用して検証をカスタマイズできます。 たとえば、追加のサービス ID 検証チェックを実行できます。 この例では、カスタム ID 検証機能で、サーバーから戻された X.509 証明書の追加のクレームをチェックします。 サンプル アプリケーションでは、[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)を参照してください。  
   
 ### <a name="to-extend-the-endpointidentity-class"></a>EndpointIdentity クラスを拡張するには  
   

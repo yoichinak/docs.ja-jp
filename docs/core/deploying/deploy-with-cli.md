@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359732"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410265"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを公開する
 
@@ -50,7 +50,7 @@ CLI の使用方法について簡単にわかるヘルプをお探しですか�
 
 ### <a name="native-dependencies"></a>ネイティブの依存関係
 
-アプリにネイティブの依存関係がある場合、別のオペレーティング システムではアプリが実行されない可能性があります。 たとえば、ネイティブの Win32 API を使用しているアプリは、macOS または Linux では実行されません。 プラットフォーム固有のコードを提供し、プラットフォームごとに実行可能ファイルをコンパイルする必要があります。
+アプリにネイティブの依存関係がある場合、別のオペレーティング システムではアプリが実行されない可能性があります。 たとえば、ネイティブの Windows API を使用しているアプリは、macOS または Linux では実行されません。 プラットフォーム固有のコードを提供し、プラットフォームごとに実行可能ファイルをコンパイルする必要があります。
 
 また、参照しているライブラリにネイティブの依存関係がある場合、すべてのプラットフォームではアプリを実行できない可能性があることも考慮してください。 ただし、参照している NuGet パッケージには、必要なネイティブの依存関係を処理するためにプラットフォーム固有のバージョンが含まれている可能性があります。
 

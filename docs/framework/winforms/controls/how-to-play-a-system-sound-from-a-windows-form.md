@@ -21,7 +21,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57711230"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>方法: Windows フォームからシステム サウンドを再生します。
-実行時に `Exclamation` システム サウンドを再生するコード例を次に示します。 システムが出す音の詳細については、次を参照してください。<xref:System.Media.SystemSounds>します。  
+実行時に `Exclamation` システム サウンドを再生するコード例を次に示します。 システムが出す音の詳細については、<xref:System.Media.SystemSounds>を参照してください。  
   
 ## <a name="example"></a>例  
   

@@ -18,13 +18,13 @@ ms.locfileid: "55904802"
 |操作|相対コスト|頻度|コメント|  
 |---------------|-------------------|---------------|--------------|  
 |メタデータの読み込み|中|各アプリケーション ドメイン内で 1 回|Entity Framework が使用するモデルとマッピングのメタデータが、<xref:System.Data.Metadata.Edm.MetadataWorkspace> に読み込まれます。 このメタデータはグローバルにキャッシュされ、同じアプリケーション ドメイン内にある <xref:System.Data.Objects.ObjectContext> の他のインスタンスも使用できるようになります。|  
-|データベース接続を開く|中程度<sup>1</sup>|必要時|データベースに接続を開くには、貴重なリソースが消費するため、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]に応じてのみデータベース接続を開いたり閉じたりします。 接続は、明示的に開くこともできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。|  
+|データベース接続を開く|中程度<sup>1</sup>|必要時|データベースに接続を開くには、貴重なリソースが消費するため、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]に応じてのみデータベース接続を開いたり閉じたりします。 接続は、明示的に開くこともできます。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。|  
 |ビューの生成|High|各アプリケーション ドメイン内で 1 回 (事前生成可能)|Entity Framework が、概念モデルに対してクエリを実行したり変更内容をデータ ソースに保存したりできるようになるには、データベースにアクセスするためのローカル クエリ ビューのセットを事前に生成しておく必要があります。 このビューを生成する際のコストは高いため、デザイン時にビューを事前に作成してプロジェクトに追加しておくことができます。 詳細については、「[方法 :クエリのパフォーマンスを向上させるためにビューを事前に生成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))します。|  
-|クエリの準備|中程度<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。 LINQ クエリの実行の詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
+|クエリの準備|中程度<sup>2</sup>|各一意のクエリに対して 1 回|クエリ コマンドを作成したり、モデルとマッピングのメタデータに基づいてコマンド ツリーを生成したり、返されるデータの形状を定義したりするためのコストが含まれます。 Entity SQL と LINQ の両方のクエリ コマンドがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済みます。 後続の実行でさらにコストを削減するためにコンパイル済み LINQ クエリを使用でき、コンパイル済みクエリが自動的にキャッシュされる LINQ クエリよりも効率的である場合があります。 詳細については、[コンパイルされたクエリ (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)を参照してください。 LINQ クエリの実行の詳細については、[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)を参照してください。 **注:** メモリ内コレクションへ `Enumerable.Contains` 演算子を追加する LINQ to Entities クエリは自動的にキャッシュされません。 またコンパイル済み LINQ クエリのメモリ内コレクションをパラメーターで表すことは許可されていません。|  
 |クエリの実行|低<sup>2</sup>|各クエリに対して 1 回|ADO.NET データ プロバイダーを使用してデータ ソースに対してコマンドを実行するコスト。 大半のデータ ソースではクエリ プランがキャッシュされるため、同じクエリであれば、後続の実行は短時間で済むことがあります。|  
 |型の読み込みと検証|低<sup>3</sup>|各 <xref:System.Data.Objects.ObjectContext> インスタンスに対して 1 回|型が読み込まれ、概念モデルが定義する型に照らし合わせて検証されます。|  
-|追跡|低<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|クエリが <xref:System.Data.Objects.MergeOption.NoTracking> のマージ オプションを使用する場合には、この段階でパフォーマンスが低下することはありません。<br /><br /> クエリが <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges>、または <xref:System.Data.Objects.MergeOption.OverwriteChanges> のいずれかのマージ オプションを使用する場合には、クエリ結果が <xref:System.Data.Objects.ObjectStateManager> で追跡されます。 クエリが返す追跡対象の各オブジェクトに対して <xref:System.Data.EntityKey> が生成され、<xref:System.Data.Objects.ObjectStateEntry> に <xref:System.Data.Objects.ObjectStateManager> を作成するために使用されます。 <xref:System.Data.Objects.ObjectStateEntry> に対応する既存の <xref:System.Data.EntityKey> がある場合には、既存のオブジェクトが返されます。 <xref:System.Data.Objects.MergeOption.PreserveChanges> または <xref:System.Data.Objects.MergeOption.OverwriteChanges> オプションが指定されている場合、オブジェクトは更新後に返されます。<br /><br /> 詳細については、次を参照してください。 [Id 解決、状態管理、および変更の追跡](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))します。|  
-|オブジェクトの具体化|中程度<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|返された <xref:System.Data.Common.DbDataReader> オブジェクトを読み取ったり、オブジェクトを作成してプロパティ値を設定したりするプロセス。プロパティ値は、<xref:System.Data.Common.DbDataRecord> クラスの各インスタンスの値に基づきます。 オブジェクトが <xref:System.Data.Objects.ObjectContext> に既に存在しており、クエリに <xref:System.Data.Objects.MergeOption.AppendOnly> または <xref:System.Data.Objects.MergeOption.PreserveChanges> マージ オプションが指定されている場合、この段階でパフォーマンスを低下することはありません。 詳細については、次を参照してください。 [Id 解決、状態管理、および変更の追跡](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))します。|  
+|追跡|低<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|クエリが <xref:System.Data.Objects.MergeOption.NoTracking> のマージ オプションを使用する場合には、この段階でパフォーマンスが低下することはありません。<br /><br /> クエリが <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges>、または <xref:System.Data.Objects.MergeOption.OverwriteChanges> のいずれかのマージ オプションを使用する場合には、クエリ結果が <xref:System.Data.Objects.ObjectStateManager> で追跡されます。 クエリが返す追跡対象の各オブジェクトに対して <xref:System.Data.EntityKey> が生成され、<xref:System.Data.Objects.ObjectStateEntry> に <xref:System.Data.Objects.ObjectStateManager> を作成するために使用されます。 <xref:System.Data.Objects.ObjectStateEntry> に対応する既存の <xref:System.Data.EntityKey> がある場合には、既存のオブジェクトが返されます。 <xref:System.Data.Objects.MergeOption.PreserveChanges> または <xref:System.Data.Objects.MergeOption.OverwriteChanges> オプションが指定されている場合、オブジェクトは更新後に返されます。<br /><br /> 詳細については、[Id 解決、状態管理、および変更の追跡](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))を参照してください。|  
+|オブジェクトの具体化|中程度<sup>3</sup>|クエリが返す各オブジェクトに対して 1 回 <sup>4</sup>|返された <xref:System.Data.Common.DbDataReader> オブジェクトを読み取ったり、オブジェクトを作成してプロパティ値を設定したりするプロセス。プロパティ値は、<xref:System.Data.Common.DbDataRecord> クラスの各インスタンスの値に基づきます。 オブジェクトが <xref:System.Data.Objects.ObjectContext> に既に存在しており、クエリに <xref:System.Data.Objects.MergeOption.AppendOnly> または <xref:System.Data.Objects.MergeOption.PreserveChanges> マージ オプションが指定されている場合、この段階でパフォーマンスを低下することはありません。 詳細については、[Id 解決、状態管理、および変更の追跡](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100))を参照してください。|  
   
  <sup>1</sup>接続を開くコストはプールに分散データ ソース プロバイダーが接続プールを実装するとします。 .NET Provider for SQL Server は、接続プールをサポートしています。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "55904802"
   
  <sup>3</sup>合計コストの増加は、クエリによって返されるオブジェクトの数に比例します。  
   
- <sup>4</sup> EntityClient クエリを返すため、このオーバーヘッドは必要ありません、<xref:System.Data.EntityClient.EntityDataReader>オブジェクトではなく。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。  
+ <sup>4</sup> EntityClient クエリを返すため、このオーバーヘッドは必要ありません、<xref:System.Data.EntityClient.EntityDataReader>オブジェクトではなく。 詳細については、[Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)を参照してください。  
   
 ## <a name="additional-considerations"></a>その他の考慮事項  
  Entity Framework アプリケーションのパフォーマンスを低下させる可能性があるその他の考慮事項を次に示します。  
@@ -41,7 +41,7 @@ ms.locfileid: "55904802"
  クエリがリソースを大量に消費することがあるので、コード内のどの個所で、またどのコンピューター上でクエリを実行するのかを検討してください。  
   
 #### <a name="deferred-versus-immediate-execution"></a>遅延実行と即時実行  
- <xref:System.Data.Objects.ObjectQuery%601> クエリまたは LINQ クエリを作成しても、すぐには実行されないことがあります。 クエリの実行は、結果が必要になるまで遅延されます。たとえば、`foreach` (C#) または `For Each` (Visual Basic) の列挙時や、<xref:System.Collections.Generic.List%601> コレクションに割り当てられた場合などです。 クエリがすぐに実行されるのは、<xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 上で <xref:System.Data.Objects.ObjectQuery%601> メソッドが呼び出されたときや、単一クエリを返す LINQ メソッド (<xref:System.Linq.Enumerable.First%2A> や <xref:System.Linq.Enumerable.Any%2A> など) が呼び出されたときです。 詳細については、次を参照してください。[オブジェクト クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))と[クエリの実行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)します。  
+ <xref:System.Data.Objects.ObjectQuery%601> クエリまたは LINQ クエリを作成しても、すぐには実行されないことがあります。 クエリの実行は、結果が必要になるまで遅延されます。たとえば、`foreach` (C#) または `For Each` (Visual Basic) の列挙時や、<xref:System.Collections.Generic.List%601> コレクションに割り当てられた場合などです。 クエリがすぐに実行されるのは、<xref:System.Data.Objects.ObjectQuery%601.Execute%2A> 上で <xref:System.Data.Objects.ObjectQuery%601> メソッドが呼び出されたときや、単一クエリを返す LINQ メソッド (<xref:System.Linq.Enumerable.First%2A> や <xref:System.Linq.Enumerable.Any%2A> など) が呼び出されたときです。 詳細については、[オブジェクト クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))と[クエリの実行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)を参照してください。  
   
 #### <a name="client-side-execution-of-linq-queries"></a>クライアント側での LINQ クエリの実行  
  LINQ クエリの実行は、データ ソースをホストするコンピューター上で行われますが、LINQ クエリは部分的にクライアント コンピューター上で評価されることがあります。 詳細については、の「ストア実行」セクションを参照してください。[クエリの実行 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)します。  
@@ -86,9 +86,9 @@ ms.locfileid: "55904802"
   
 2.  オブジェクトが公開するナビゲーション プロパティに対して `Load` メソッドを呼び出します。  
   
-3.  <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> で <xref:System.Data.Objects.ObjectContext> オプションを `true` に設定します。 これが行われる自動オブジェクト レイヤー コードを生成するときに注意してください、 [Entity Data Model デザイナー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))します。 詳細については、次を参照してください。[生成されたコードの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))します。  
+3.  <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> で <xref:System.Data.Objects.ObjectContext> オプションを `true` に設定します。 これが行われる自動オブジェクト レイヤー コードを生成するときに注意してください、 [Entity Data Model デザイナー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))します。 詳細については、[生成されたコードの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))を参照してください。  
   
- 使用するオプションを検討する際には、データベースに対する要求数と 1 つのクエリで返されるデータ量の間でのトレードオフに注意してください。 詳細については、次を参照してください。[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))します。  
+ 使用するオプションを検討する際には、データベースに対する要求数と 1 つのクエリで返されるデータ量の間でのトレードオフに注意してください。 詳細については、[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))を参照してください。  
   
 #### <a name="using-query-paths"></a>クエリ パスの使用  
  クエリ パスは、クエリによって返されるオブジェクトのグラフを定義します。 クエリ パスを定義する場合、データベースに対する 1 件の要求だけで、パスによって定義されたすべてのオブジェクトが返されます。 クエリ パスを使用すると、見かけ上は簡単なオブジェクト クエリのデータ ソースに対して複雑なコマンドが実行される可能性があります。 これは、1 つのクエリ内の関連オブジェクトを返すには、1 つまたは複数の結合が必要になるために発生します。 継承のあるエンティティや多対多のリレーションシップを含んだパスなど、複雑なエンティティ モデルに対してクエリを実行する場合は、さらに複雑になります。  
@@ -116,9 +116,9 @@ ms.locfileid: "55904802"
   
 -   明示的トランザクションを常に DTC に昇格する SQL Server 2000 データベースやその他のデータ ソースに対して、明示的トランザクションで操作を実行する場合。  
   
--   SQL Server 2005 に対して明示的トランザクションで操作を実行し、かつ接続が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって管理される場合。 これは、接続が閉じられてから同じトランザクション内で再度開かれると、SQL Server 2005 が DTC に必ず昇格するためです。この動作は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の既定の動作です。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
+-   SQL Server 2005 に対して明示的トランザクションで操作を実行し、かつ接続が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって管理される場合。 これは、接続が閉じられてから同じトランザクション内で再度開かれると、SQL Server 2005 が DTC に必ず昇格するためです。この動作は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の既定の動作です。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。  
   
- 明示的トランザクションが使用されるのは、1 つの <xref:System.Transactions> トランザクション内で操作を 1 つ以上実行するときです。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
+ 明示的トランザクションが使用されるのは、1 つの <xref:System.Transactions> トランザクション内で操作を 1 つ以上実行するときです。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。  
   
 ## <a name="strategies-for-improving-performance"></a>パフォーマンスを向上させるための戦略  
  次の戦略を使用すると、Entity Framework でのクエリの全体的なパフォーマンスを向上させることができます。  
@@ -128,21 +128,21 @@ ms.locfileid: "55904802"
   
  サイズが非常に大きいモデルで作業する場合は、次の点に注意してください。  
   
- .NET メタデータ形式では、特定のバイナリ内のユーザー文字列の数が 16,777,215 (0xFFFFFF) に制限されます。 非常に大きいモデルのビューを生成して、ビュー ファイルがこのサイズの上限に達すると、表示されます、「論理空き領域がありませんユーザー文字列の他を作成する」 コンパイル エラー。 このサイズ制限は、すべてのマネージド バイナリに適用されます。 詳細については、次を参照してください。、[ブログ](https://go.microsoft.com/fwlink/?LinkId=201476)大規模で複雑なモデルを使用する場合に、エラーを回避する方法を示します。  
+ .NET メタデータ形式では、特定のバイナリ内のユーザー文字列の数が 16,777,215 (0xFFFFFF) に制限されます。 非常に大きいモデルのビューを生成して、ビュー ファイルがこのサイズの上限に達すると、表示されます、「論理空き領域がありませんユーザー文字列の他を作成する」 コンパイル エラー。 このサイズ制限は、すべてのマネージド バイナリに適用されます。 詳細については、、[ブログ](https://go.microsoft.com/fwlink/?LinkId=201476)大規模で複雑なモデルを使用する場合に、エラーを回避する方法を示を参照してください。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>クエリの NoTracking マージ オプションの使用を検討する  
  オブジェクト コンテキスト内で返されたオブジェクトを追跡するにはコストが生じます。 オブジェクトに対する変更内容を検出したり、同じ論理エンティティに対する複数の要求で同じオブジェクト インスタンスが返されるようにするには、オブジェクトを <xref:System.Data.Objects.ObjectContext> インスタンスにアタッチする必要があります。 オブジェクトを更新または削除する予定がないして id 管理を必要としない場合は、使用を検討して、<xref:System.Data.Objects.MergeOption.NoTracking>クエリを実行するときに、マージ オプションです。  
   
 #### <a name="return-the-correct-amount-of-data"></a>適量のデータを返す  
- シナリオによっては、<xref:System.Data.Objects.ObjectQuery%601.Include%2A> メソッドを使用してクエリ パスを指定する方がはるかに速いことがあります。データベースに対する必要なラウンド トリップ数が減るからです。 ただし、他のシナリオでは、関連オブジェクトを読み込むためにデータベースへのラウンド トリップを増やす方が速くなることがあります。これは、クエリが単純で結合数が少ないほど、データの冗長性が低下するからです。 したがって、関連オブジェクトを取得するためのさまざまな方法について、パフォーマンスをテストすることをお勧めします。 詳細については、次を参照してください。[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))します。  
+ シナリオによっては、<xref:System.Data.Objects.ObjectQuery%601.Include%2A> メソッドを使用してクエリ パスを指定する方がはるかに速いことがあります。データベースに対する必要なラウンド トリップ数が減るからです。 ただし、他のシナリオでは、関連オブジェクトを読み込むためにデータベースへのラウンド トリップを増やす方が速くなることがあります。これは、クエリが単純で結合数が少ないほど、データの冗長性が低下するからです。 したがって、関連オブジェクトを取得するためのさまざまな方法について、パフォーマンスをテストすることをお勧めします。 詳細については、[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))を参照してください。  
   
  1 つのクエリで大量のデータが返されることを回避するには、クエリの結果を扱いやすいサイズのグループに分割してページングすることを検討してください。 詳細については、「[方法 :結果をページング クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))します。  
   
 #### <a name="limit-the-scope-of-the-objectcontext"></a>ObjectContext のスコープを制限する  
- 通常は、<xref:System.Data.Objects.ObjectContext> ステートメント (Visual Basic では `using`) 内に `Using…End Using` インスタンスを作成する必要があります。 これにより、パフォーマンスが向上します。これは、コードがステートメント ブロックを終了するときに、オブジェクト コンテキストに関連付けられたリソースが自動的に廃棄されるからです。 ただし、オブジェクト コンテキストによって管理されるオブジェクトにコントロールがバインドされている場合、バインドが必要とされる間は <xref:System.Data.Objects.ObjectContext> インスタンスを保持し、手動で廃棄する必要があります。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
+ 通常は、<xref:System.Data.Objects.ObjectContext> ステートメント (Visual Basic では `using`) 内に `Using…End Using` インスタンスを作成する必要があります。 これにより、パフォーマンスが向上します。これは、コードがステートメント ブロックを終了するときに、オブジェクト コンテキストに関連付けられたリソースが自動的に廃棄されるからです。 ただし、オブジェクト コンテキストによって管理されるオブジェクトにコントロールがバインドされている場合、バインドが必要とされる間は <xref:System.Data.Objects.ObjectContext> インスタンスを保持し、手動で廃棄する必要があります。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。  
   
 #### <a name="consider-opening-the-database-connection-manually"></a>データベース接続を手動で開くことを検討する  
- アプリケーションが一連のオブジェクト クエリを実行または頻繁に呼び出す<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>永続化を作成、更新、および削除操作が、データ ソース、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]継続的を開くし、データ ソースへの接続を閉じる必要があります。 このような状況では、操作の開始時に接続を手動で開いて、操作の完了時に接続を手動で閉じるか廃棄することを検討してください。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
+ アプリケーションが一連のオブジェクト クエリを実行または頻繁に呼び出す<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>永続化を作成、更新、および削除操作が、データ ソース、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]継続的を開くし、データ ソースへの接続を閉じる必要があります。 このような状況では、操作の開始時に接続を手動で開いて、操作の完了時に接続を手動で閉じるか廃棄することを検討してください。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。  
   
 ## <a name="performance-data"></a>パフォーマンス データ  
  次の投稿で Entity Framework の一部のパフォーマンス データが公開されて、 [ADO.NET チームのブログ](https://go.microsoft.com/fwlink/?LinkId=91905):  

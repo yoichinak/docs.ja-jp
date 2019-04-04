@@ -26,7 +26,7 @@ ms.locfileid: "54529787"
   
 3.  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> に設定するか、または <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> に設定します。  
   
- カスタム バインディングの作成の詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)します。 特定の認証モード用のカスタム バインディングを作成する方法の詳細については、次を参照してください。[方法。指定した認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
+ カスタム バインディングの作成の詳細については、[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)を参照してください。 特定の認証モード用のカスタム バインディングを作成する方法の詳細については、次を参照してください。[方法。指定した認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Security.MessageProtectionOrder>

@@ -23,7 +23,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
   
  Windows API を使用して、コード内の利点は、数十個は既に書き込まれている便利な関数の使用を待機しているが含まれているため、開発時間を保存することができます。 欠点は、問題が生じた場合、および晙の処理が難しくなって Windows API であることができます。  
   
- Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 これらの違いにより、Windows API は COM オブジェクト、Windows API との相互運用ではなく、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]プラットフォームを使用して実行されます呼び出すには、pinvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、次を参照してください。[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)します。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
+ Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 これらの違いにより、Windows API は COM オブジェクト、Windows API との相互運用ではなく、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]プラットフォームを使用して実行されます呼び出すには、pinvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)を参照してください。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
   
  Windows API の呼び出しでは、Visual Basic では、以前は、プログラミングの重要な部分をされたが、Visual Basic .NET を使用して必要なことはほとんどありません。 可能であればからマネージ コードを使用する必要があります、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API の呼び出しではなく、タスクを実行します。 このチュートリアルは、使用する必要のある状況についての情報を提供します。 Windows API が必要です。  
   
@@ -92,7 +92,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
 3.  F5 キーを押してプロジェクトを実行します。 両方のメッセージ ボックスが表示されます**はい**と**いいえ**返信ボタン。 いずれかをクリックします。  
   
 #### <a name="data-marshaling"></a>データのマーシャ リング  
- Visual Basic では、パラメーターと、Windows API 呼び出しの戻り値のデータ型に自動的に変換しますが、使用することができます、 `MarshalAs` API が必要とするアンマネージ データ型を明示的に指定する属性。 相互運用マーシャ リングの詳細については、次を参照してください。[相互運用マーシャ リング](../../../framework/interop/interop-marshaling.md)します。  
+ Visual Basic では、パラメーターと、Windows API 呼び出しの戻り値のデータ型に自動的に変換しますが、使用することができます、 `MarshalAs` API が必要とするアンマネージ データ型を明示的に指定する属性。 相互運用マーシャ リングの詳細については、[相互運用マーシャ リング](../../../framework/interop/interop-marshaling.md)を参照してください。  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 呼び出しで宣言して MarshalAs を使用するには  
   

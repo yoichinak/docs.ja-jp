@@ -60,7 +60,7 @@ End Enum
   
 -   `enumerationname`  
   
-     必須。 列挙体の名前。 有効な名前については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+     必須。 列挙体の名前。 有効な名前については、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
   
 -   `datatype`  
   
@@ -134,7 +134,7 @@ End Enum
 ## <a name="assigning-multiple-values"></a>複数の値を割り当てる  
  列挙体は、通常、相互に排他的な値を表します。 含めることによって、<xref:System.FlagsAttribute>属性、`Enum`宣言では、代わりに値を代入できます複数列挙体のインスタンスにします。 <xref:System.FlagsAttribute>属性は、列挙体をビット フィールド、つまりフラグのセットとして扱われることを指定します。 これらと呼びます*ビット*列挙体。  
   
- 使用して列挙体を宣言する場合、<xref:System.FlagsAttribute>属性、お勧めの値は、2、1、2、4、8、16、およびの累乗を使用することです。 また、値が 0 のメンバーの名前を"None"ことをお勧めします。 追加のガイドラインについては、次を参照してください。<xref:System.FlagsAttribute>と<xref:System.Enum>します。  
+ 使用して列挙体を宣言する場合、<xref:System.FlagsAttribute>属性、お勧めの値は、2、1、2、4、8、16、およびの累乗を使用することです。 また、値が 0 のメンバーの名前を"None"ことをお勧めします。 追加のガイドラインについては、<xref:System.FlagsAttribute>と<xref:System.Enum>を参照してください。  
   
 ## <a name="example"></a>例  
  `Enum` ステートメントを使用する方法の例を次に示します。 メンバーと呼びます注`EggSizeEnum.Medium`ではなく`Medium`します。  

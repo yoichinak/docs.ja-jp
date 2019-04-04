@@ -31,13 +31,13 @@ ms.locfileid: "56261103"
  サービスのエンドポイント アドレスは、コードを使用して命令的に、または構成を通じて宣言的に指定できます。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
 ### <a name="defining-an-address-in-configuration"></a>構成によるアドレス定義  
- 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
+ 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
   
 ### <a name="defining-an-address-in-code"></a>コードによるアドレス定義  
- エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
+ エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
   
 ### <a name="endpoints-in-wsdl"></a>WSDL のエンドポイント  
- エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
+ エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-35"></a>複数の IIS バインディングで .NET Framework 3.5 のサポート  
  インターネット サービス プロバイダーは、多くの場合、サイトの密度を高めて総所有コストを抑えるため、同じサーバーまたはサイト上で複数のアプリケーションをホストしています。 通常、これらのアプリケーションは、異なるベース アドレスにバインドされています。 インターネット インフォメーション サービス (IIS) Web サイトは、複数のアプリケーションを格納できます。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。  
@@ -95,7 +95,7 @@ ms.locfileid: "56261103"
   
  複数のサイト バインディングがこの設定を使用して有効になっている場合、HTTP プロトコルと非 HTTP プロトコルの両方について、baseAddressPrefixFilters 設定は無視されます。  
   
- 詳細と例については、次を参照してください。[複数の IIS サイト バインディングをサポートしている](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)と<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>します。  
+ 詳細と例については、[複数の IIS サイト バインディングをサポートしている](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)と<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>を参照してください。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>WCF サービスによるアドレスの拡張  
  既定のアドレス指定の WCF サービスのモデルでは、次の目的のエンドポイント アドレス URI を使用します。  

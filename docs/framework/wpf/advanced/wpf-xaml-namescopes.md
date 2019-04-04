@@ -36,7 +36,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
 ### <a name="adding-objects-to-runtime-object-trees"></a>オブジェクトをランタイム オブジェクト ツリーに追加します。  
  XAML が解析される時点では、WPF XAML 名前スコープを作成および定義の時点を表します。 オブジェクト ツリーの時点にそのツリーを生成した XAML が解析された後でオブジェクトを追加した場合、`Name`または`x:Name`新しいオブジェクトの値が XAML 名前スコープ内の情報を自動的に更新されません。 XAML が読み込まれた後に、WPF XAML 名前スコープにオブジェクトの名前を追加するには、適切な実装を呼び出す必要があります<xref:System.Windows.Markup.INameScope.RegisterName%2A>通常を XAML 名前スコープを定義するオブジェクト、XAML ページのルート。 名前が登録されていない場合追加されたオブジェクト名を使って参照できませんメソッドなど<xref:System.Windows.FrameworkElement.FindName%2A>、およびアニメーションのターゲットの名前を使用することはできません。  
   
- アプリケーション開発者向けの最も一般的なシナリオが使用する<xref:System.Windows.FrameworkElement.RegisterName%2A>ページの現在のルートの XAML 名前スコープに名前を登録します。 <xref:System.Windows.FrameworkElement.RegisterName%2A> ストーリー ボードの重要なシナリオの一部のアニメーションには、そのターゲット オブジェクト。 詳細については、次を参照してください。[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
+ アプリケーション開発者向けの最も一般的なシナリオが使用する<xref:System.Windows.FrameworkElement.RegisterName%2A>ページの現在のルートの XAML 名前スコープに名前を登録します。 <xref:System.Windows.FrameworkElement.RegisterName%2A> ストーリー ボードの重要なシナリオの一部のアニメーションには、そのターゲット オブジェクト。 詳細については、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)を参照してください。  
   
  呼び出す場合<xref:System.Windows.FrameworkElement.RegisterName%2A>XAML 名前スコープを定義するオブジェクト以外のオブジェクトの名前が登録されたまま、呼び出し元のオブジェクトが保持されている XAML 名前スコープにするを呼び出した場合と<xref:System.Windows.FrameworkElement.RegisterName%2A>でオブジェクトを定義する XAML 名前スコープ。  
   
@@ -49,7 +49,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
  として、オブジェクトが指定されている場合`dependencyObject`の<xref:System.Windows.NameScope.SetNameScope%2A>でない、<xref:System.Windows.Markup.INameScope>実装、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>を呼び出すと、<xref:System.Windows.FrameworkElement.RegisterName%2A>ですべての子要素は影響しません。 新しい XAML 名前スコープを明示的に作成に失敗した場合に呼び出して<xref:System.Windows.FrameworkElement.RegisterName%2A>で例外が発生します。  
   
- コードでの XAML 名前スコープの Api を使用しての例は、次を参照してください。[名前スコープを定義する](../graphics-multimedia/how-to-define-a-name-scope.md)します。  
+ コードでの XAML 名前スコープの Api を使用しての例は、[名前スコープを定義する](../graphics-multimedia/how-to-define-a-name-scope.md)を参照してください。  
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>スタイルとテンプレートで XAML 名前スコープ  

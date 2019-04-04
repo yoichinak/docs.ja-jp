@@ -15,7 +15,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57379602"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成
-このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでホストするための適切な Direct3D9 コンテンツを作成する方法を示します。 WPF アプリケーションでの Direct3D9 コンテンツのホストの詳細については、次を参照してください。 [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)します。
+このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでホストするための適切な Direct3D9 コンテンツを作成する方法を示します。 WPF アプリケーションでの Direct3D9 コンテンツのホストの詳細については、[WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)を参照してください。
 
  このチュートリアルでは次のタスクを実行します。
 
@@ -70,7 +70,7 @@ ms.locfileid: "57379602"
 12. ソリューション エクスプ ローラーの追加という名前の新しいモジュール定義ファイル (.def)`D3DContent.def`をプロジェクトにします。
 
 ## <a name="creating-the-direct3d9-content"></a>Direct3D9 コンテンツを作成します。
- 最適なパフォーマンスを得るには、Direct3D9 コンテンツは特定の設定を使用する必要があります。 次のコードでは、最適なパフォーマンス特性を持つ Direct3D9 サーフェスを作成する方法を示します。 詳細については、次を参照してください。 [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)します。
+ 最適なパフォーマンスを得るには、Direct3D9 コンテンツは特定の設定を使用する必要があります。 次のコードでは、最適なパフォーマンス特性を持つ Direct3D9 サーフェスを作成する方法を示します。 詳細については、[Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)を参照してください。
 
 #### <a name="to-create-the-direct3d9-content"></a>Direct3D9 コンテンツを作成するには
 

@@ -44,7 +44,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>パラメーター
 
 `dwCounterType`\
-[in]カウンターの型。 カウンターの種類の一覧は、次を参照してください。 [WMI パフォーマンス カウンターの種類](/windows/desktop/WmiSdk/wmi-performance-counter-types)します。 `dwCounterType` 以外の任意のカウンター タイプ`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`します。 
+[in]カウンターの型。 カウンターの種類の一覧は、[WMI パフォーマンス カウンターの種類](/windows/desktop/WmiSdk/wmi-performance-counter-types)を参照してください。 `dwCounterType` 以外の任意のカウンター タイプ`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`します。 
 
 `dwFormat`\
 [in]生のパフォーマンス データを変換先の形式。 次の値のいずれかを指定できます。

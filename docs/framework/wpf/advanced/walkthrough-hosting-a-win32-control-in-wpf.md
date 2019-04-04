@@ -23,7 +23,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
+ このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、[Getting Started](../getting-started/index.md)を参照してください。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
   
  このトピックに付属するサンプルがで実装されているためC#、Windows API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
   

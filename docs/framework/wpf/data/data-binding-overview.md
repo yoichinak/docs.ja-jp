@@ -366,7 +366,7 @@ ms.locfileid: "58634558"
   
 -   A<xref:System.Windows.Controls.ExceptionValidationRule>バインディング ソース プロパティの更新中にスローされる例外を確認します。 前述の例では、`StartPrice` は整数型です。 ユーザーが整数に変換できない値を入力すると、例外がスローされ、バインディングが無効としてマークされます。 設定に別の構文、<xref:System.Windows.Controls.ExceptionValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
--   A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、次を参照してください。<xref:System.Windows.Controls.DataErrorValidationRule>します。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
+-   A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、<xref:System.Windows.Controls.DataErrorValidationRule>を参照してください。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
  派生することによって、独自の検証規則を作成することも、<xref:System.Windows.Controls.ValidationRule>クラスと実装、<xref:System.Windows.Controls.ValidationRule.Validate%2A>メソッド。 次の例で使用される規則、 *Add Product Listing* 「開始日」<xref:System.Windows.Controls.TextBox>から、[データ バインディングとは何ですか?](#what_is_data_binding)セクション。  
   

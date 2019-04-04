@@ -49,8 +49,8 @@ Next [ counter ]
   
 |パーツ|説明|  
 |----------|-----------------|  
-|`counter`|必要な`For`ステートメント。 数値型の変数。 ループ コントロール変数。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
-|`datatype`|省略可能です。 データ型`counter`します。 詳細については、次を参照してください。[カウンター引数](#BKMK_Counter)このトピックで後述します。|  
+|`counter`|必要な`For`ステートメント。 数値型の変数。 ループ コントロール変数。 詳細については、[カウンター引数](#BKMK_Counter)このトピックで後述を参照してください。|  
+|`datatype`|省略可能です。 データ型`counter`します。 詳細については、[カウンター引数](#BKMK_Counter)このトピックで後述を参照してください。|  
 |`start`|必須。 数値式。 `counter` の初期値になります。|  
 |`end`|必須。 数値式。 最終値`counter`します。|  
 |`step`|省略可能です。 数値式。 量`counter`ループのたびに増加します。|  
@@ -60,7 +60,7 @@ Next [ counter ]
 |`Next`|必須。 定義を終了、`For`ループします。|  
   
 > [!NOTE]
->  `To`キーワードは、カウンターの範囲を指定するこのステートメントで使用されます。 このキーワードを使用することも、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列の宣言。 配列の宣言に関する詳細については、次を参照してください。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
+>  `To`キーワードは、カウンターの範囲を指定するこのステートメントで使用されます。 このキーワードを使用することも、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)と配列の宣言。 配列の宣言に関する詳細については、[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)を参照してください。  
   
 ## <a name="simple-examples"></a>簡単な例  
  使用する、 `For`.`Next`時間数の一連のステートメントを繰り返し表示するときに構造体します。  
@@ -83,12 +83,12 @@ Next [ counter ]
   
  ループを入れ子にする場合は、各ループが一意必要があります`counter`変数。  
   
- 内で他のさまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
+ 内で他のさまざまな種類の制御構造を入れ子にすることもできます。 詳細については、[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)を参照してください。  
   
 ## <a name="exit-for-and-continue-for"></a>終了しの続行  
  `Exit For`ステートメントがすぐに終了させる、 `For`.`Next` これに続くステートメントにループと転送の制御、`Next`ステートメント。  
   
- `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
+ `Continue For`ステートメント コントロールに直ちに移します、ループの次の反復処理します。 詳細については、[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)を参照してください。  
   
  次の例では、使用、`Continue For`と`Exit For`ステートメント。  
   
@@ -131,7 +131,7 @@ Next [ counter ]
 |`datatype`存在でしょうか。|`counter`既に定義されていますか?|結果 (かどうか`counter`全体をスコープは、新しいローカル変数を定義します`For...Next`ループ)。|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |いいえ|[はい]|いいえ、ため`counter`は既に定義されています。 場合のスコープ`counter`いない、プロシージャに対してローカルに、コンパイル時に警告が発生します。|  
-|いいえ|いいえ|はい。 データ型から推論されます、 `start`、 `end`、および`step`式。 型の推定については、次を参照してください。 [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。|  
+|いいえ|いいえ|はい。 データ型から推論されます、 `start`、 `end`、および`step`式。 型の推定については、[Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)と[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。|  
 |[はい]|[はい]|[はい] が場合にのみ、既存の`counter`プロシージャの外部変数が定義されています。 その変数は別に維持します。 場合、既存のスコープ`counter`変数は、プロシージャに対してローカルに、コンパイル時エラーが発生します。|  
 |[はい]|いいえ|はい。|  
   

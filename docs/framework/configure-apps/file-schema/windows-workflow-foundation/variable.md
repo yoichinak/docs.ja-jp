@@ -13,7 +13,7 @@ ms.locfileid: "57366531"
 # <a name="variable"></a>\<変数 >
 このアクティビティ クエリに関連付けられている変数のコレクションを表します。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
+ 追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。  
   
 \<system.serviceModel>  
 \<追跡 >  

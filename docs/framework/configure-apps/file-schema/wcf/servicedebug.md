@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) サービスのデバッグおよびヘ�
 > [!CAUTION]
 >  マネージ例外情報をクライアントに戻すことは、セキュリティ リスクになり得ます。これは、例外の詳細が、非承認のクライアントで使用可能な内部サービスの実装についての情報を公開するからです。 セキュリティの問題にかかわるため、この操作は制御されたデバッグ シナリオでのみ行うことを強くお勧めします。 アプリケーションを配置する場合は、`includeExceptionDetailInFaults` を `false` に設定する必要があります。  
   
- マネージ例外に関連するセキュリティの問題に関する詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。 コード サンプルは、次を参照してください。[サービス デバッグ動作](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)します。  
+ マネージ例外に関連するセキュリティの問題に関する詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。 コード サンプルは、[サービス デバッグ動作](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)を参照してください。  
   
  `httpsHelpPageEnabled` と `httpsHelpPageUrl` を設定して、ヘルプ ページを有効または無効にすることもできます。 各サービスは、サービスの WSDL を取得するエンドポイントなど、サービスに関する情報が含まれるヘルプ ページをオプションで公開できます。 これを有効にするには、`httpHelpPageEnabled` プロパティを `true` に設定します。 これにより、サービスのベース アドレスへの GET 要求に対して、ヘルプ ページを返すことができます。 このアドレスは、`httpHelpPageUrl` 属性を設定することで変更できます。 また、HTTP の代わりに HTTPS を使用すると、このアドレスをセキュリティで保護できます。  
   

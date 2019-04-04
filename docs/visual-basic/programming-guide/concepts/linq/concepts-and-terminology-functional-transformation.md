@@ -44,7 +44,7 @@ ms.locfileid: "58820803"
  高階 (ファーストクラス) 関数  
  プログラム オブジェクトとして扱うことのできる関数です。 たとえば、他の関数に渡したり、他の関数から返したりすることができます。 Visual basic でデリゲートやラムダ式は、高階関数をサポートする言語機能です。 高階関数を記述するには、デリゲートを受け取る引数を 1 つ以上宣言し、通常はラムダ式を使用して呼び出します。 標準クエリ演算子の多くは高階関数です。  
   
- 詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+ 詳細については、[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
  ラムダ式  
  基本的には、デリゲート型が必要とされる場所で使用できるインラインの匿名関数です。 これはラムダ式の簡略化した定義ですが、このチュートリアルの目的には十分です。  
@@ -57,17 +57,17 @@ ms.locfileid: "58820803"
  タプル (匿名型)  
  タプルは数学的概念で、それぞれが特定の型を持つオブジェクトの有限のシーケンスを意味します。 順序付きリストとも呼ばれます。 匿名型は、この概念の言語実装です。匿名型を使用すると、名前のないクラス型を宣言し、同時にその型のオブジェクトをインスタンス化することができます。  
   
- 詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)します。  
+ 詳細については、[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)を参照してください。  
   
  型推論 (暗黙の型指定)  
  明示的な型宣言がない場合に変数の型を特定するコンパイラの機能です。  
   
- 詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+ 詳細については、[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
   
  遅延実行とレイジー評価  
  解決された値が実際に必要となるまで式の評価を遅らせることを意味します。 遅延実行はコレクションでサポートされています。  
   
- 詳細については、次を参照してください。[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)と[遅延実行と LINQ to XML (Visual Basic) における遅延評価](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)します。  
+ 詳細については、[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)と[遅延実行と LINQ to XML (Visual Basic) における遅延評価](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)を参照してください。  
   
  これらの言語機能は、このセクション全体にわたってサンプル コードで使用されています。  
   

@@ -45,7 +45,7 @@ ms.locfileid: "57354649"
 ### <a name="the-purpose-of-the-logical-tree"></a>論理ツリーの目的は、  
  論理ツリーには、コンテンツ モデルは、使用可能な子オブジェクトを簡単に反復処理できるように、およびコンテンツ モデルの拡張が存在します。 また、論理ツリー フレームワークを提供、特定の論理ツリー内のすべてのオブジェクトが読み込まれるタイミングなどの通知。 基本的には、論理ツリーは、ビジュアルは含まれませんが、独自の実行時のアプリケーションの構成に対して多くのクエリ操作のための適切なフレームワーク レベルで実行時のオブジェクト グラフの概数です。  
   
- 上の論理ツリーを検索して両方の静的および動的なリソースの参照を解決するさらに、<xref:System.Windows.FrameworkElement.Resources%2A>上、最初の要求オブジェクトと論理ツリーを続行し、各コレクション<xref:System.Windows.FrameworkElement>(または<xref:System.Windows.FrameworkContentElement>)別の`Resources`値を含む、 <xref:System.Windows.ResourceDictionary>、そのキーを格納している可能性があります。 論理ツリーは、論理ツリーとビジュアル ツリーの両方が存在する場合、リソースの検索の使用されます。 リソース ディクショナリ、およびルックアップの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
+ 上の論理ツリーを検索して両方の静的および動的なリソースの参照を解決するさらに、<xref:System.Windows.FrameworkElement.Resources%2A>上、最初の要求オブジェクトと論理ツリーを続行し、各コレクション<xref:System.Windows.FrameworkElement>(または<xref:System.Windows.FrameworkContentElement>)別の`Resources`値を含む、 <xref:System.Windows.ResourceDictionary>、そのキーを格納している可能性があります。 論理ツリーは、論理ツリーとビジュアル ツリーの両方が存在する場合、リソースの検索の使用されます。 リソース ディクショナリ、およびルックアップの詳細については、[XAML リソース](xaml-resources.md)を参照してください。  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>論理ツリーのコンポジション  
@@ -53,7 +53,7 @@ ms.locfileid: "57354649"
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>論理ツリーをオーバーライドします。  
- 高度なコントロールの作成者は、いくつかの操作をオーバーライドすることで、論理ツリーをオーバーライドできます[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義します。 論理ツリーをオーバーライドする方法の例は、次を参照してください。[論理ツリーをオーバーライド](how-to-override-the-logical-tree.md)します。  
+ 高度なコントロールの作成者は、いくつかの操作をオーバーライドすることで、論理ツリーをオーバーライドできます[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的なオブジェクトまたはコンテンツ モデルが追加または論理ツリー内のオブジェクトを削除する方法を定義します。 論理ツリーをオーバーライドする方法の例は、[論理ツリーをオーバーライド](how-to-override-the-logical-tree.md)を参照してください。  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>プロパティ値の継承  
@@ -84,7 +84,7 @@ ms.locfileid: "57354649"
 ## <a name="resource-dictionaries-and-trees"></a>リソース ディクショナリとツリー  
  すべてのリソース ディクショナリのルックアップ`Resources`定義ページに基本的に、論理はツリーを走査します。 論理ツリーに含まれていないオブジェクトがキーを持つリソースを参照できますが、論理ツリーにそのオブジェクトが接続されているポイントではリソース参照シーケンスが開始されます。 WPF では、論理ツリーのノードのみを持つことができます、`Resources`プロパティを含む、 <xref:System.Windows.ResourceDictionary>、したがってからキーを持つリソースを探して、ビジュアル ツリーの走査の利点はありません、<xref:System.Windows.ResourceDictionary>します。  
   
- ただし、リソースの検索も、直接の論理ツリーを超えて拡張できます。 アプリケーション マークアップでは、アプリケーション レベルのリソース ディクショナリ、静的プロパティまたはキーとして参照されているテーマのサポート、およびシステム値へとリソース検索が続きます。 テーマ自体は、動的リソース参照である場合、テーマの論理ツリーの外部システムの値を参照できます。 リソース ディクショナリとルックアップ ロジックの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
+ ただし、リソースの検索も、直接の論理ツリーを超えて拡張できます。 アプリケーション マークアップでは、アプリケーション レベルのリソース ディクショナリ、静的プロパティまたはキーとして参照されているテーマのサポート、およびシステム値へとリソース検索が続きます。 テーマ自体は、動的リソース参照である場合、テーマの論理ツリーの外部システムの値を参照できます。 リソース ディクショナリとルックアップ ロジックの詳細については、[XAML リソース](xaml-resources.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [入力の概要](input-overview.md)

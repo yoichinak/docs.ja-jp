@@ -48,7 +48,7 @@ ms.locfileid: "57369774"
   
  特定のリソースへのアクセスのシナリオは、特に適して`DynamicResource`ではなく、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。 参照してください[XAML リソース](xaml-resources.md)相対的なメリットとパフォーマンスの問題についてディスカッションを`DynamicResource`と`StaticResource`します。  
   
- 指定した<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>によって既存のリソースに対応する[X:key ディレクティブ](../../xaml-services/x-key-directive.md)ページ、アプリケーション、使用可能なコントロールのテーマと外部のリソースなどのシステム リソースのいくつかのレベルで、リソースの検索は、この順序で実行されます。 静的および動的なリソースのリソース ルックアップの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
+ 指定した<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>によって既存のリソースに対応する[X:key ディレクティブ](../../xaml-services/x-key-directive.md)ページ、アプリケーション、使用可能なコントロールのテーマと外部のリソースなどのシステム リソースのいくつかのレベルで、リソースの検索は、この順序で実行されます。 静的および動的なリソースのリソース ルックアップの詳細については、[XAML リソース](xaml-resources.md)を参照してください。  
   
  リソース キーの任意の文字列で定義されている可能性があります、 [XamlName の文法](../../xaml-services/xamlname-grammar.md)します。 リソース キーがあります、その他のオブジェクトの種類など、<xref:System.Type>します。 A<xref:System.Type>キーがテーマでのコントロールのスタイル方法の基礎です。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57369774"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装でこのマークアップ拡張機能の処理が定義されている、<xref:System.Windows.DynamicResourceExtension>クラス。  
   
- `DynamicResource` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `DynamicResource` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [XAML リソース](xaml-resources.md)

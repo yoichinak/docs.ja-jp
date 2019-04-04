@@ -172,7 +172,7 @@ ms.locfileid: "57719430"
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     ファイル ストリームの書き込みの詳細については、次を参照してください。<xref:System.IO.FileStream.BeginWrite%2A>と<xref:System.IO.FileStream.Write%2A>します。  
+     ファイル ストリームの書き込みの詳細については、<xref:System.IO.FileStream.BeginWrite%2A>と<xref:System.IO.FileStream.Write%2A>を参照してください。  
   
     > [!NOTE]
     >  などの特定のコントロール、<xref:System.Windows.Forms.RichTextBox>制御、ファイルを保存する機能があります。 詳細については、MSDN オンライン ライブラリの技術文書「[Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)」の「SaveFileDialog コンポーネント」を参照してください。  

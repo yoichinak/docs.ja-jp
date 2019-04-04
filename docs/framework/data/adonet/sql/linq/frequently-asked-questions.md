@@ -20,7 +20,7 @@ ms.locfileid: "54679762"
 ## <a name="cannot-connect"></a>接続できない  
  Q. データベースに接続できません。  
   
- A:  接続文字列が正しいことと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、次を参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)します。  
+ A:  接続文字列が正しいことと、SQL Server インスタンスが実行されていることを確認してください。 また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、名前付きパイプ プロトコルを有効にする必要があります。 詳細については、[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)を参照してください。  
   
 ## <a name="changes-to-database-lost"></a>データベースの変更内容が失われる  
  Q. データベース内のデータを変更しましたが、アプリケーションを再実行すると、変更が元に戻っています。  
@@ -50,7 +50,7 @@ ms.locfileid: "54679762"
 ## <a name="unexpected-query-results"></a>予期しないクエリ結果  
  Q. 予期しない結果がクエリから返されます。 どうなっているのか調べる方法はありますか。  
   
- A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、次を参照してください。[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)します。  
+ A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)を参照してください。  
   
 ## <a name="unexpected-stored-procedure-results"></a>予期しないストアド プロシージャ結果  
  Q. 戻り値が `MAX()` によって計算されるストアド プロシージャがあります。 このストアド プロシージャを [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] サーフェイスにドラッグすると、戻り値が正しくありません。  
@@ -97,7 +97,7 @@ ms.locfileid: "54679762"
   
  `end`  
   
- 詳細については、次を参照してください。[カスタマイズ操作ストアド プロシージャによる](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)します。  
+ 詳細については、[カスタマイズ操作ストアド プロシージャによる](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)を参照してください。  
   
 ## <a name="serialization-errors"></a>シリアル化のエラー  
  Q. シリアル化しようとすると、次のエラーが表示されます。"... の型 'system.data.linq.changetracker+standardchangetracker' シリアル化可能としてマークされていません"。  

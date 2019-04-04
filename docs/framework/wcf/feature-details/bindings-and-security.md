@@ -17,14 +17,14 @@ ms.locfileid: "54521375"
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
   
- WCF セキュリティの概要については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF バインドを使用してプログラミングの詳細については、次を参照してください。 [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)します。  
+ WCF セキュリティの概要については、[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)を参照してください。 WCF バインドを使用してプログラミングの詳細については、[WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)を参照してください。  
   
  バインディングを既に選択した場合のセキュリティに関連付けられている実行時の動作に関する詳細は見つかります[セキュリティ動作](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)します。  
   
- セキュリティ機能のなかには、システム指定のバインディングを使用してプログラミングできないものがあります。 詳細コントロールがカスタム バインドを使用して、次を参照してください。[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)します。  
+ セキュリティ機能のなかには、システム指定のバインディングを使用してプログラミングできないものがあります。 詳細コントロールがカスタム バインドを使用して、[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)を参照してください。  
   
 ## <a name="security-functions-of-bindings"></a>バインディングのセキュリティ機能  
- WCF には、ほとんどのニーズを満たすシステム指定のバインディング数が含まれています。 特定のバインディングでは不十分な場合は、カスタム バインドを作成することもできます。 システム指定のバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
+ WCF には、ほとんどのニーズを満たすシステム指定のバインディング数が含まれています。 特定のバインディングでは不十分な場合は、カスタム バインドを作成することもできます。 システム指定のバインディングの一覧は、[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。 カスタム バインドの詳細については、[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)を参照してください。  
   
  WCF でのすべてのバインドが 2 つの形式: API とは、構成ファイルで使用する XML 要素として。 たとえば、 `WSHttpBinding` (API) の対応が、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)します。  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   WS-I で定義されている基本セキュリティ プロファイル  
   
- 既定では、このバインディングはセキュリティで保護されません。 ASMX サービスと相互運用するように設計されています。 セキュリティを有効にした場合、このバインディングは、インターネット インフォメーション サービス (IIS: Internet Information Services) のセキュリティ機構 (基本認証、ダイジェスト、Windows 統合セキュリティなど) とシームレスに相互運用できるように設計されています。 詳細については、次を参照してください。[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)します。 このバインディングでは、以下をサポートしています。  
+ 既定では、このバインディングはセキュリティで保護されません。 ASMX サービスと相互運用するように設計されています。 セキュリティを有効にした場合、このバインディングは、インターネット インフォメーション サービス (IIS: Internet Information Services) のセキュリティ機構 (基本認証、ダイジェスト、Windows 統合セキュリティなど) とシームレスに相互運用できるように設計されています。 詳細については、[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)を参照してください。 このバインディングでは、以下をサポートしています。  
   
 -   HTTPS トランスポート セキュリティ  
   
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   SOAP メッセージ資格情報セキュリティを使用した、HTTPS トランスポート保護による呼び出し元の認証。  
   
- 詳細については、次を参照してください。 <xref:System.ServiceModel.WSHttpSecurity>、 <xref:System.ServiceModel.MessageSecurityOverHttp>、 <xref:System.ServiceModel.MessageCredentialType>、 <xref:System.ServiceModel.SecurityMode>、 <xref:System.ServiceModel.HttpTransportSecurity>、 <xref:System.ServiceModel.HttpClientCredentialType>、および<xref:System.ServiceModel.HttpProxyCredentialType>します。  
+ 詳細については、<xref:System.ServiceModel.WSHttpSecurity>、 <xref:System.ServiceModel.MessageSecurityOverHttp>、 <xref:System.ServiceModel.MessageCredentialType>、 <xref:System.ServiceModel.SecurityMode>、 <xref:System.ServiceModel.HttpTransportSecurity>、 <xref:System.ServiceModel.HttpClientCredentialType>、および<xref:System.ServiceModel.HttpProxyCredentialType>を参照してください。  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
  コードでは、使用、<xref:System.ServiceModel.WSDualHttpBinding>クラスは、構成を使用して、 [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。  
@@ -112,7 +112,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   メッセージ資格情報を使用するトランスポート セキュリティ (TLS (Transport Layer Security) over TCP によって実現される機密性と整合性、および WS-Security によって提供される承認に使用する資格情報)  
   
- 詳細については、次を参照してください。 <xref:System.ServiceModel.NetTcpSecurity>、 <xref:System.ServiceModel.TcpTransportSecurity>、 <xref:System.ServiceModel.TcpClientCredentialType>、 <xref:System.ServiceModel.MessageSecurityOverTcp>、および<xref:System.ServiceModel.MessageCredentialType>します。  
+ 詳細については、<xref:System.ServiceModel.NetTcpSecurity>、 <xref:System.ServiceModel.TcpTransportSecurity>、 <xref:System.ServiceModel.TcpClientCredentialType>、 <xref:System.ServiceModel.MessageSecurityOverTcp>、および<xref:System.ServiceModel.MessageCredentialType>を参照してください。  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
  コードでは、使用、<xref:System.ServiceModel.NetNamedPipeBinding>クラスは、構成を使用して、 [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)します。  
@@ -172,10 +172,10 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  既定では、このバインディングは WS-Security (メッセージ層セキュリティ) を使用します。  
   
- 詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)、 <xref:System.ServiceModel.WSFederationHttpSecurity>、および<xref:System.ServiceModel.WSFederationHttpSecurityMode>します。  
+ 詳細については、[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)、 <xref:System.ServiceModel.WSFederationHttpSecurity>、および<xref:System.ServiceModel.WSFederationHttpSecurityMode>を参照してください。  
   
 ## <a name="custom-bindings"></a>カスタム バインディング  
- システム指定のバインディングがいずれも要件を満たさない場合は、カスタム セキュリティ バインド要素を使用してカスタム バインドを作成できます。 詳細については、次を参照してください。[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)します。  
+ システム指定のバインディングがいずれも要件を満たさない場合は、カスタム セキュリティ バインド要素を使用してカスタム バインドを作成できます。 詳細については、[カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)を参照してください。  
   
 ## <a name="binding-choices"></a>バインディングの選択肢  
  次の表は、セキュリティ モード設定で提供される機能をまとめたものです。つまり、セキュリティ モードを `Transport`、`Message`、または `TransportWithMessageCredential` に設定したときに使用できる機能の一覧です。 アプリケーションで必要なセキュリティ機能を決定するときに、この表を参考にしてください。  
@@ -210,7 +210,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 |NTLM|NTLM (NT LAN Manager) 認証です。|  
 |Windows|Windows 認証です。|  
 |証明書|証明書を使用して実行される認証です。|  
-|IssuedToken|セキュリティ トークン サービスまたは [!INCLUDE[infocard](../../../../includes/infocard-md.md)] によって発行されたトークンを使用したクライアントの認証を、サービスが要求できるようにします。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
+|IssuedToken|セキュリティ トークン サービスまたは [!INCLUDE[infocard](../../../../includes/infocard-md.md)] によって発行されたトークンを使用したクライアントの認証を、サービスが要求できるようにします。 詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>バインディングにおけるメッセージ クライアント資格情報  
  メッセージ セキュリティ モードでバインディングを使用するときに使用できるクライアント資格情報の種類を次の表に示します。  

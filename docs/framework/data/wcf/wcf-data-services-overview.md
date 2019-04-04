@@ -34,7 +34,7 @@ ms.locfileid: "58465842"
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] と ADO.NET Entity Framework の組み合わせにより、リレーショナル データを公開するデータ サービスを作成できます。 Entity Data Model ツールを使用して、エンティティとしてアドレス指定可能なリソースを含むデータ モデルを作成すると同時に、このモデルと基になるデータベースのテーブルの間のマッピングを定義できます。 詳細については、[Entity Framework プロバイダー](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)を参照してください。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 実装を返すデータ構造を公開するデータ サービスを作成することもできます、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、.NET Framework 型からデータを公開するデータ サービスを作成できます。 <xref:System.Data.Services.IUpdatable> インターフェイスも実装すると、作成、更新、および削除操作がサポートされます。 詳細については、次を参照してください。[リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 実装を返すデータ構造を公開するデータ サービスを作成することもできます、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、.NET Framework 型からデータを公開するデータ サービスを作成できます。 <xref:System.Data.Services.IUpdatable> インターフェイスも実装すると、作成、更新、および削除操作がサポートされます。 詳細については、[リフレクション プロバイダー](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)を参照してください。  
   
  方法の図解は[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]統合、これらのデータ プロバイダーでは、このトピックの「アーキテクチャ図を参照してください。  
   

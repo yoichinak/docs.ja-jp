@@ -86,7 +86,7 @@ Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終�
 </PropertyGroup>
 ```
 
-詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
+詳細については、[Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)を参照してください。
 
 ## <a name="restrictions-on-supplying-arguments-by-name"></a>名前による引数渡しに関する制限事項  
 

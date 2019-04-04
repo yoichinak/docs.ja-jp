@@ -14,6 +14,6 @@ ms.locfileid: "55828307"
   
  Entity Framework 4.1 以降では、Code First の開発を使用してモデルをプログラムで作成することもできます。 Code First の開発に対しては、2 つの異なるシナリオがあります。 どちらの場合でも、開発者は .NET Framework のクラス定義をコーディングしてモデルを定義し、データ注釈または Fluent API を使用してオプションで追加のマッピングまたは構成を指定します。  
   
- 詳細については、次を参照してください。[概念モデルのマッピングの作成と](https://go.microsoft.com/fwlink/?LinkId=235016)します。  
+ 詳細については、[概念モデルのマッピングの作成と](https://go.microsoft.com/fwlink/?LinkId=235016)を参照してください。  
   
- 含まれている EDM ジェネレーターを使用することも、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 EdmGen.exe は、既存のデータ ソースから .csdl ファイル、.ssdl ファイル、および .msl ファイルを生成します。 モデルとマッピングの内容を手動で作成することもできます。 詳細については、次を参照してください。 [EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)します。
+ 含まれている EDM ジェネレーターを使用することも、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 EdmGen.exe は、既存のデータ ソースから .csdl ファイル、.ssdl ファイル、および .msl ファイルを生成します。 モデルとマッピングの内容を手動で作成することもできます。 詳細については、[EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)を参照してください。

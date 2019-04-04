@@ -19,9 +19,9 @@ ms.locfileid: "54663080"
 >   
 >  -- 共通動作を <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性でマークし、部分信頼アプリケーションとして展開したときに実行できるようにします。 APTCA でマークされたアセンブリを実行できないように、コンピューターでレジストリ エントリを設定できます。  
 >   
->  -- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、カスタム検証コントロールは実行されず、例外もスローされません。 これを確認する方法の 1 つ、次を参照してください。、`levelfinal`オプションを使用して[コード アクセス セキュリティ ポリシー ツール (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222)します。  
+>  -- アプリケーションが完全信頼アプリケーションとして配置されている場合に、ユーザーが部分信頼環境でアプリケーションを実行するようにコード アクセス セキュリティ設定を変更できないことを確認します。 ユーザーがこのような変更を行うことができる場合、カスタム検証コントロールは実行されず、例外もスローされません。 これを確認する方法の 1 つ、、`levelfinal`オプションを使用して[コード アクセス セキュリティ ポリシー ツール (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222)を参照してください。  
 >   
->  詳細については、次を参照してください。[部分的な信頼のベスト プラクティス](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)と[Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)します。  
+>  詳細については、[部分的な信頼のベスト プラクティス](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)と[Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)を参照してください。  
   
 ### <a name="to-create-the-endpoint-validator"></a>エンドポイント検証コントロールを作成するには  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54663080"
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
+3.  コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、、[厳密名ツール (SN を参照してください。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールするには  
   

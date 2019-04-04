@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|読み取り用にファイルが開かれることを示しますへの呼び出し`QueryInterface`の[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)にことはできません。|  
 |`ofTakeOwnership`|呼び出しを使用してメモリが割り当てられたことを示します[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)メタデータによって解放されるとします。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、次を参照してください。 [Windows ランタイムと CLR の内部での .NET and Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx)します。|  
+|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、[Windows ランタイムと CLR の内部での .NET and Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx)を参照してください。|  
 |`ofReserved1`|内部使用のために予約されています。|  
 |`ofReserved2`|内部使用のために予約されています。|  
 |`ofReserved`|内部使用のために予約されています。|  

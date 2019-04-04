@@ -18,7 +18,7 @@ ms.locfileid: "58814251"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Clipboard` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>」をご覧ください。  
   
- 詳細については、次を参照してください。[にデータを格納すると、クリップボードからの読み取り](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)します。  
+ 詳細については、[にデータを格納すると、クリップボードからの読み取り](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)を参照してください。  
   
 > [!NOTE]
 >  メソッドを使用することも、<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>クリップボードを操作するクラス。  

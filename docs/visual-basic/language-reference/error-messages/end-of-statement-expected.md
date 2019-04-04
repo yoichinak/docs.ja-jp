@@ -17,7 +17,7 @@ ms.locfileid: "58817155"
 # <a name="end-of-statement-expected"></a>ステートメントの終わりを指定してください。
 ステートメントが構文的に完了するが、その他のプログラミング要素に依存してステートメントを終了する要素。 行終端記号は、すべてのステートメントの末尾にある必要があります。
   
- 行終端記号は、Visual Basic のソース ファイルの文字を行に分割します。 行ターミネータの例には、Unicode キャリッジ リターン文字 (& HD)、Unicode とライン フィード文字 (& HA)、および、Unicode 復帰文字の Unicode のラインフィード文字後にします。 行ターミネータの詳細については、次を参照してください。、 [Visual Basic 言語仕様](~/_vblang/spec/lexical-grammar.md#line-terminators)します。
+ 行終端記号は、Visual Basic のソース ファイルの文字を行に分割します。 行ターミネータの例には、Unicode キャリッジ リターン文字 (& HD)、Unicode とライン フィード文字 (& HA)、および、Unicode 復帰文字の Unicode のラインフィード文字後にします。 行ターミネータの詳細については、、 [Visual Basic 言語仕様](~/_vblang/spec/lexical-grammar.md#line-terminators)を参照してください。
   
  **エラー ID:** BC30205
   

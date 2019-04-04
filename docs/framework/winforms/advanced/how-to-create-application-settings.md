@@ -26,7 +26,7 @@ ms.locfileid: "57721243"
   
 1.  プロジェクトに新しいクラスを追加して、名前を変更します。 この手順では、このクラスを呼び出し、`MyUserSettings`します。 クラスの派生元が <xref:System.Configuration.ApplicationSettingsBase> になるようクラス定義を変更します。  
   
-2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、次を参照してください。[アプリケーション設定の概要](application-settings-overview.md)します。 ここまでで、コードは次のようになります。  
+2.  必要な各アプリケーション設定のこのラッパー クラスでプロパティを定義し、設定のスコープに応じて、そのプロパティを <xref:System.Configuration.ApplicationScopedSettingAttribute> または <xref:System.Configuration.UserScopedSettingAttribute> のいずれかを使用して適用します。 設定のスコープの詳細については、[アプリケーション設定の概要](application-settings-overview.md)を参照してください。 ここまでで、コードは次のようになります。  
   
      [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  

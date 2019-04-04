@@ -38,7 +38,7 @@ XML アプリケーションには、次のようにさまざまな種類があ�
   
  2 つの方法の違いについては、「[メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)します。  
   
- 関数型変換の記述に関するチュートリアルについては、次を参照してください。[純粋関数型の XML 変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)します。  
+ 関数型変換の記述に関するチュートリアルについては、[純粋関数型の XML 変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

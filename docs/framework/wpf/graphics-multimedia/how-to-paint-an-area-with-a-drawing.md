@@ -42,4 +42,4 @@ ms.locfileid: "57371562"
   
  ![並べて表示された DrawingBrush の出力](./media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
   
- 描画ブラシの詳細については、次を参照してください。[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)します。
+ 描画ブラシの詳細については、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)を参照してください。 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)します。

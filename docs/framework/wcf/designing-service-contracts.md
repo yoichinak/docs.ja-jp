@@ -50,11 +50,11 @@ ms.locfileid: "54583195"
 > [!NOTE]
 >  他のサービス コントラクト インターフェイスから継承した場合、操作のプロパティ (名前や名前空間など) をオーバーライドすることはできません。 これを行う場合は、現在のサービス コントラクトに新しい操作を作成します。  
   
- インターフェイスを使用して、サービス コントラクトを作成する例は、[方法。サービス コントラクト インターフェイスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)を参照してください。  
+ インターフェイスを使用して、サービス コントラクトを作成する例は、次を参照してください。[方法。サービス コントラクト インターフェイスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)です。  
   
  クラスを使用すると、サービス コントラクトの定義と実装を一度に行うことができます。 <xref:System.ServiceModel.ServiceContractAttribute> と <xref:System.ServiceModel.OperationContractAttribute> をそれぞれクラスとクラスのメソッドに直接適用してサービスを作成する方法には、サービスを迅速かつ簡単に作成できるという利点があります。 欠点は、マネージド クラスでは複数の継承をサポートしていないため、サービス コントラクトを一度に 1 つしか実装できないことです。 また、クラスまたはメソッド シグネチャに変更を加えると、そのサービスのパブリック コントラクトが変更されるため、変更されていないクライアントがサービスを使用できなくなることがあります。 詳細については、[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
   
- クラスを使用して、サービス コントラクトを作成し、同時に実装されているは、[方法。コントラクト クラスを使用してサービスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)を参照してください。  
+ クラスを使用して、サービス コントラクトを作成し、同時に実装されているは、次を参照してください。[方法。コントラクト クラスを使用してサービスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)です。  
   
  これで、サービス コントラクトを定義する際に、インターフェイスを使用した場合とクラスを使用した場合の違いがわかりました。 次に、サービスとクライアント間で受け渡しできるデータを決定します。  
   
@@ -109,7 +109,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- 上記の例では、実行に時間のかかる操作の場合に、クライアントのパフォーマンスと応答性が低下するおそれがありますが、要求/応答操作で `void` を返す場合でも、この操作には利点があります。 最も明らかな利点は、応答メッセージで SOAP エラーを返すことが可能であるということです。これにより、通信と処理のどちらで発生したかに関係なく、サービス関連の何らかのエラー状態が発生したことがわかります。 サービス コントラクトに指定された SOAP エラーは、<xref:System.ServiceModel.FaultException%601> オブジェクトとしてクライアント アプリケーションに渡されます。このオブジェクトの型パラメーターは、サービス コントラクトで指定された型です。 これによりエラー状態に関するクライアントに通知の WCF サービスで簡単。 例外、SOAP エラー、およびエラー処理の詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。 要求/応答サービスおよびクライアントの例を表示するには、[方法。要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)を参照してください。 要求/応答パターンに関する問題の詳細については、[要求/応答サービス](../../../docs/framework/wcf/feature-details/request-reply-services.md)を参照してください。  
+ 上記の例では、実行に時間のかかる操作の場合に、クライアントのパフォーマンスと応答性が低下するおそれがありますが、要求/応答操作で `void` を返す場合でも、この操作には利点があります。 最も明らかな利点は、応答メッセージで SOAP エラーを返すことが可能であるということです。これにより、通信と処理のどちらで発生したかに関係なく、サービス関連の何らかのエラー状態が発生したことがわかります。 サービス コントラクトに指定された SOAP エラーは、<xref:System.ServiceModel.FaultException%601> オブジェクトとしてクライアント アプリケーションに渡されます。このオブジェクトの型パラメーターは、サービス コントラクトで指定された型です。 これによりエラー状態に関するクライアントに通知の WCF サービスで簡単。 例外、SOAP エラー、およびエラー処理の詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。 要求/応答サービスおよびクライアントの例を表示するには、次を参照してください。[方法。要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)します。 要求/応答パターンに関する問題の詳細については、[要求/応答サービス](../../../docs/framework/wcf/feature-details/request-reply-services.md)を参照してください。  
   
 ##### <a name="one-way"></a>一方向  
  WCF サービス アプリケーションのクライアントが必要があります、操作が完了するを待たず、SOAP エラーを処理しない場合、操作が一方向メッセージ パターンを指定できます。 一方向の操作をクライアントが操作を起動し、WCF メッセージをネットワークに後の処理を続行できます。 通常、これは、送信メッセージで送信するデータが膨大な量でない限り、(データ送信時にエラーが発生しなければ) クライアントはほぼすぐに実行を続けることを意味します。 この種のメッセージ交換パターンでは、クライアントからサービス アプリケーションへのイベントのような動作をサポートします。  
@@ -143,7 +143,7 @@ Sub Hello (ByVal greeting As String)
   
  双方向パターンを実装するには、クライアントで呼び出されるメソッド宣言を含む 2 つ目のインターフェイスを作成する必要があります。  
   
- サービス、およびそのサービスにアクセスするクライアントの作成の例は、[方法。双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)と[方法。双方向コントラクトでサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)を参照してください。 実際のサンプルでは、[双方向](../../../docs/framework/wcf/samples/duplex.md)を参照してください。 双方向コントラクトを使用して問題の詳細については、[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)を参照してください。  
+ サービス、およびそのサービスにアクセスするクライアントの作成の例は、次を参照してください。[方法。双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)と[方法。双方向コントラクトでサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)します。 実際のサンプルでは、[双方向](../../../docs/framework/wcf/samples/duplex.md)を参照してください。 双方向コントラクトを使用して問題の詳細については、[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)を参照してください。  
   
 > [!CAUTION]
 >  サービスは、双方向メッセージを受信すると、その受信メッセージの `ReplyTo` 要素を参照して応答の送信先を決定します。 メッセージの受信に使用するチャネルがセキュリティで保護されていない場合、信頼関係のないクライアントが対象コンピューターの `ReplyTo` を使用して悪意のあるメッセージを送信し、その対象コンピューターのサービス拒否 (DOS: Denial Of Service) を引き起こすおそれがあります。  

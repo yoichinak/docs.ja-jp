@@ -13,7 +13,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54681171"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>方法: Atom の両方としてフィードを公開および RSS
-Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 このトピックでは、Atom 1.0 と RSS 2.0 の両方を使用して配信フィードを公開する配信サービスを作成する方法について説明します。 このサービスは、どちらかの配信フォーマットを返すエンドポイントを公開します。 簡略化のため、この例で使用するサービスは自己ホスト型です。 運用環境では、このタイプのサービスは IIS または WAS でホストされます。 さまざまな WCF ホスティング オプションの詳細については、次を参照してください。[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)します。  
+Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 このトピックでは、Atom 1.0 と RSS 2.0 の両方を使用して配信フィードを公開する配信サービスを作成する方法について説明します。 このサービスは、どちらかの配信フォーマットを返すエンドポイントを公開します。 簡略化のため、この例で使用するサービスは自己ホスト型です。 運用環境では、このタイプのサービスは IIS または WAS でホストされます。 さまざまな WCF ホスティング オプションの詳細については、[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)を参照してください。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
   

@@ -23,7 +23,7 @@ ms.locfileid: "50183491"
   
 -   バインディングまたはバインド要素に挿入して構成する WSDL とポリシー アサーションを特定します。  
   
- ユーザー定義のバインディングとバインド要素を作成する方法の詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)と[BindingElement の作成](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)、それぞれします。  
+ ユーザー定義のバインディングとバインド要素を作成する方法の詳細については、[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)と[BindingElement の作成](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)、それぞれを参照してください。  
   
 ## <a name="adding-configuration-support"></a>構成サポートの追加  
  チャネルに対する構成ファイルのサポートを有効にするには、2 つの構成セクションを実装する必要があります。1 つはバインド要素に対する構成のサポートを有効にする <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> で、もう 1 つはバインディングに対する構成のサポートを有効にする <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> と <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType> です。  

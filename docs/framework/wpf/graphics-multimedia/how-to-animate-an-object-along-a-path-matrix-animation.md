@@ -32,7 +32,7 @@ ms.locfileid: "57363736"
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathExample.cs#matrixanimationusingpathwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathExample.vb#matrixanimationusingpathwholepage)]  
   
- サンプル全体については、次を参照してください。[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)します。 ジオメトリック パスの詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
+ サンプル全体については、[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)を参照してください。 ジオメトリック パスの詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [アニメーションの概要](animation-overview.md)

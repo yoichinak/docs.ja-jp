@@ -46,7 +46,7 @@ ms.locfileid: "57369319"
   
 -   ハンドラーは、バッキング型システムで適切なイベントのデリゲートに一致する必要があります。  
   
--   Microsoft Visual Basic 言語の具体的を使えば、言語固有`Handles`インスタンスとの属性にハンドラーをアタッチする代わりに、ハンドラーの宣言内のイベントにハンドラーを関連付けるキーワード[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 ただし、この手法がいくつかの制限のため、`Handles`キーワードには、すべての特定の機能のサポートできない、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]など特定のイベントのシステム イベントのシナリオのルーティングまたはアタッチされるイベント。 詳細については、次を参照してください。 [Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)します。  
+-   Microsoft Visual Basic 言語の具体的を使えば、言語固有`Handles`インスタンスとの属性にハンドラーをアタッチする代わりに、ハンドラーの宣言内のイベントにハンドラーを関連付けるキーワード[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 ただし、この手法がいくつかの制限のため、`Handles`キーワードには、すべての特定の機能のサポートできない、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]など特定のイベントのシステム イベントのシナリオのルーティングまたはアタッチされるイベント。 詳細については、[Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)を参照してください。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x: コード  
@@ -56,7 +56,7 @@ ms.locfileid: "57369319"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>インライン コードの制限  
- 回避するインライン コードの使用を制限したりすることを検討してください。 アーキテクチャとコーディングの原理の観点からマークアップと分離コードの間の分離の維持は保持デザイナーと開発者の役割もはっきりと区別します。 技術的な詳細レベルでは、インライン コードを記述するコードできます書き込むには、厄介に常に記述するため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]部分クラスが生成され、既定の XML 名前空間のマッピングのみを使用できます。 追加できないため、`using`ステートメントでは、完全修飾して多くの[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼び出しを行います。 既定値[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マッピングを含める最もすべてではなく[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]名前空間に存在する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ; 型とその他の CLR 名前空間内に含まれるメンバーの呼び出しを完全に修飾する必要があります。 定義することもできない部分クラスを超えるもので、インライン コードと、メンバーまたは生成された部分クラス内で変数として参照するすべてのユーザー コードのエンティティが存在する必要があります。 その他の言語固有プログラミングの機能、マクロなどまたは`#ifdef`に対してグローバル変数、またはビルド変数を利用することもありません。 詳細については、次を参照してください。 [X:code 組み込み XAML 型](../../xaml-services/x-code-intrinsic-xaml-type.md)します。  
+ 回避するインライン コードの使用を制限したりすることを検討してください。 アーキテクチャとコーディングの原理の観点からマークアップと分離コードの間の分離の維持は保持デザイナーと開発者の役割もはっきりと区別します。 技術的な詳細レベルでは、インライン コードを記述するコードできます書き込むには、厄介に常に記述するため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]部分クラスが生成され、既定の XML 名前空間のマッピングのみを使用できます。 追加できないため、`using`ステートメントでは、完全修飾して多くの[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼び出しを行います。 既定値[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マッピングを含める最もすべてではなく[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]名前空間に存在する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ; 型とその他の CLR 名前空間内に含まれるメンバーの呼び出しを完全に修飾する必要があります。 定義することもできない部分クラスを超えるもので、インライン コードと、メンバーまたは生成された部分クラス内で変数として参照するすべてのユーザー コードのエンティティが存在する必要があります。 その他の言語固有プログラミングの機能、マクロなどまたは`#ifdef`に対してグローバル変数、またはビルド変数を利用することもありません。 詳細については、[X:code 組み込み XAML 型](../../xaml-services/x-code-intrinsic-xaml-type.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)

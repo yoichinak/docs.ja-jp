@@ -34,7 +34,7 @@ ms.locfileid: "58820790"
 -   [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)します。  
+>  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)を参照してください。  
   
 > [!NOTE]
 >  オーバー ロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 1 つの省略可能なパラメーターがある場合、プロシージャ、ないおよびパラメーターを受け取るいずれかの 2 つのオーバー ロードされたバージョンを定義できます。 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  

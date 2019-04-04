@@ -22,7 +22,7 @@ ms.locfileid: "58821154"
   
  この例で、`Mid`関数で直接操作を実行する`aString`に値が割り当てられます`bString`します。  
   
- Visual Basic の文字列操作メソッドの一覧は、次を参照してください。[文字列操作の概要](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)します。  
+ Visual Basic の文字列操作メソッドの一覧は、[文字列操作の概要](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)を参照してください。  
   
 ### <a name="shared-methods-and-instance-methods"></a>共有メソッドとインスタンス メソッド  
  メソッドを使って、文字列を操作することも、`String`クラス。 内のメソッドの 2 種類があります`String`:*共有*メソッドと*インスタンス*メソッド。  

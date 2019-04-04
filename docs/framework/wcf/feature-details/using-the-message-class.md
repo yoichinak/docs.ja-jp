@@ -203,7 +203,7 @@ ms.locfileid: "58409602"
   
 ## <a name="working-with-properties"></a>プロパティの操作  
  
-  `Message` インスタンスには、任意の数の任意の型の名前付きオブジェクトを含めることができます。 このコレクションは、`Properties` 型の `MessageProperties` プロパティを使用してアクセスできます。 コレクションは、<xref:System.Collections.Generic.IDictionary%602> インターフェイスを実装しており、<xref:System.String> から <xref:System.Object> へのマッピングの機能を果たします。 通常、プロパティの値は、ネットワーク上でメッセージの一部に直接マップされないが、さまざまなメッセージの処理のヒント、WCF チャネル スタックでは、さまざまなチャネルを提供、<xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>サービス フレームワーク。 例については、次を参照してください。[データ転送のアーキテクチャ概要](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)します。  
+  `Message` インスタンスには、任意の数の任意の型の名前付きオブジェクトを含めることができます。 このコレクションは、`Properties` 型の `MessageProperties` プロパティを使用してアクセスできます。 コレクションは、<xref:System.Collections.Generic.IDictionary%602> インターフェイスを実装しており、<xref:System.String> から <xref:System.Object> へのマッピングの機能を果たします。 通常、プロパティの値は、ネットワーク上でメッセージの一部に直接マップされないが、さまざまなメッセージの処理のヒント、WCF チャネル スタックでは、さまざまなチャネルを提供、<xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29>サービス フレームワーク。 例については、[データ転送のアーキテクチャ概要](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)を参照してください。  
   
 ## <a name="inheriting-from-the-message-class"></a>Message クラスからの継承  
  

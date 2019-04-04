@@ -24,7 +24,7 @@ ms.locfileid: "57358133"
   
  [!code-xaml[timingbehaviors_snip#FillBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/FillBehaviorExample.xaml#fillbehaviorwholepage)]  
   
- サンプル全体については、次を参照してください。[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)します。  
+ サンプル全体については、[アニメーション サンプル ギャラリー](https://go.microsoft.com/fwlink/?LinkID=159969)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Media.Animation.DoubleAnimation>

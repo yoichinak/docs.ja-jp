@@ -21,7 +21,7 @@ ms.locfileid: "58838158"
  COM クラス テンプレートを使用する COM オブジェクトを公開する最も簡単な方法です。 COM クラス テンプレートは、新しいクラスを作成し、COM オブジェクトとしてクラスおよび相互運用性レイヤーを生成し、オペレーティング システムに登録するプロジェクトを構成します。  
   
 > [!NOTE]
->  Visual Basic で使用するアンマネージ コードの COM オブジェクトとして作成したクラスを公開することも、本当の COM オブジェクトでないし、Visual Basic では使用できません。 詳細については、次を参照してください。 [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)します。  
+>  Visual Basic で使用するアンマネージ コードの COM オブジェクトとして作成したクラスを公開することも、本当の COM オブジェクトでないし、Visual Basic では使用できません。 詳細については、[.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -88,7 +88,7 @@ ms.locfileid: "58838158"
 9. プロパティ、メソッド、およびイベントを終了して、クラスに追加、`End Class`ステートメント。 選択**ソリューションのビルド**から、**ビルド**メニュー。 Visual Basic では、アセンブリがビルドされ、オペレーティング システムを COM オブジェクトを登録します。  
   
     > [!NOTE]
-    >  True の COM オブジェクトではないために、Visual Basic で生成する COM オブジェクトを他の Visual Basic アプリケーションで使用できません。 このような COM オブジェクトへの参照を追加するには、エラーが発生します。 詳細については、次を参照してください。 [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)します。  
+    >  True の COM オブジェクトではないために、Visual Basic で生成する COM オブジェクトを他の Visual Basic アプリケーションで使用できません。 このような COM オブジェクトへの参照を追加するには、エラーが発生します。 詳細については、[.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

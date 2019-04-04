@@ -56,7 +56,7 @@ ms.locfileid: "54495306"
   
 -   動的構成  
   
- メッセージ フィルターとフィルター テーブルの詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)と[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)します。  
+ メッセージ フィルターとフィルター テーブルの詳細については、[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)と[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)を参照してください。  
   
 ### <a name="service-aggregation"></a>サービスの集計  
  コンテンツ ベースのルーティングを使用することで、外部のクライアント アプリケーションからメッセージを受信する 1 つのエンドポイントを公開し、メッセージ内の値に基づいて、各メッセージを適切な内部エンドポイントにルーティングできます。 これは、さまざまなバックエンド アプリケーションに対して単一のエンドポイントを提供する場合だけでなく、アプリケーションをさまざまなサービスにファクタリングしているときに単一のアプリケーション エンドポイントを顧客に提供する場合にも便利です。  
@@ -70,7 +70,7 @@ ms.locfileid: "54495306"
 ## <a name="dynamic-configuration"></a>動的構成  
  サービスを中断させずにメッセージを処理する必要があるミッション クリティカルなシステムをサポートするには、システム内のコンポーネントの構成を実行時に変更できることが非常に重要です。 このニーズを満たすために、ルーティング サービスでは <xref:System.ServiceModel.IExtension%601> 実装が提供されています。これは、実行時にルーティング サービス構成を動的に更新できるようにする <xref:System.ServiceModel.Routing.RoutingExtension> です。  
   
- ルーティング サービスの動的構成の詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)します。  
+ ルーティング サービスの動的構成の詳細については、[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)を参照してください。  
   
 ## <a name="protocol-bridging"></a>プロトコル ブリッジ  
  中継局シナリオの課題の 1 つは、内部エンドポイントとメッセージの送信先エンドポイントのトランスポートまたは SOAP バージョンの要件が異なる場合があることです。 このシナリオをサポートするために、ルーティング サービスでは、SOAP メッセージを送信先エンドポイントが必要とする <xref:System.ServiceModel.Channels.MessageVersion> に合わせて処理するなど、プロトコル間をブリッジできます。 これを利用して、内部の通信と外部の通信に別々のプロトコルを使用することができます。  
@@ -80,19 +80,19 @@ ms.locfileid: "54495306"
 ## <a name="soap-processing"></a>SOAP 処理  
  一般的なルーティング要件は、異なる SOAP 要件を持つエンドポイント間でメッセージをルーティングできることです。 ルーティング サービスは、この要件をサポートするために、<xref:System.ServiceModel.Routing.SoapProcessingBehavior>自動的に作成する新しい**MessageVersion**にメッセージがルーティングされる前に、送信先エンドポイントの要件を満たしています。 この動作も作成する新しい**MessageVersion**ことを確認する、要求元のクライアント アプリケーションに返す前にすべての応答メッセージに対して、 **MessageVersion**応答の一致しています。元の要求。  
   
- SOAP 処理の詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)します。  
+ SOAP 処理の詳細については、[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)を参照してください。  
   
 ## <a name="error-handling"></a>エラー処理  
  システムを構成する分散サービスがネットワーク通信に依存する場合は、システム内の通信が、一時的なネットワーク障害に対応可能である必要があります。  ルーティング サービスはエラー処理を実装しており、これによって、サービスの停止を招く可能性がある多くの通信障害を処理できます。  
   
  ルーティング サービスがメッセージを送信している間に <xref:System.ServiceModel.CommunicationException> が発生した場合は、エラー処理が実行されます。  これらの例外は、一般的に、<xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException>、<xref:System.ServiceModel.CommunicationObjectFaultedException> など、定義されているクライアント エンドポイントとの通信を試みている間に問題が発生したことを示します。  エラー処理コードもキャッチされ、しようとして再送信すると、 **TimeoutException**発生すると、別の一般的な例外から派生していないです**CommunicationException**。  
   
- エラー処理の詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)します。  
+ エラー処理の詳細については、[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)を参照してください。  
   
 ## <a name="backup-endpoints"></a>バックアップ エンドポイント  
  フィルター テーブル内の各フィルター定義と関連付けられる送信先クライアント エンドポイントに加えて、転送エラーが発生した場合にメッセージをルーティングする、バックアップ エンドポイントのリストも作成できます。 エラーが発生した場合に、フィルター エントリのバックアップ リストが定義されていると、ルーティング サービスにより、そのリストに定義されている最初のエンドポイントにメッセージが送信されます。 この送信に失敗した場合は、送信に成功する、送信失敗に関連しないエラーが返される、またはバックアップ リスト内のすべてのエンドポイントで送信エラーが返されるまで、次のエンドポイントへの送信が試みられます。  
   
- バックアップ エンドポイントの詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)と[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)します。  
+ バックアップ エンドポイントの詳細については、[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)と[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)を参照してください。  
   
 ## <a name="streaming"></a>ストリーム  
  バインディングがストリーミングをサポートするように設定すると、ルーティング サービスはメッセージを正常にストリーミングできます。  ただし、メッセージのバッファーが必要となる可能性のある条件がいくつかあります。  

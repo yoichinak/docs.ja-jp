@@ -2,12 +2,12 @@
 title: 射影操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: fa9b1d2a0dc63be89e8a93fd5d234f131a2943e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74792c1a58aa17c65f3a153216d50c672e0b6cf6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723954"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411214"
 ---
 # <a name="projection-operations-c"></a>射影操作 (C#)
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。  
@@ -77,11 +77,11 @@ foreach (string s in query)
   
  次の図は、`Select()` がソース コレクションと同じ数の要素を持つコレクションを返すしくみを示しています。  
   
- ![ Select&#40;&#41; のアクションの概念を示す図](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Select&#40;&#41; のアクションを示すグラフィック。](./media/projection-operations/select-action-graphic.png)  
   
  次の図は、`SelectMany()` が中間配列シーケンスを、各中間配列の値を含む最終的な結果値に連結するしくみを示しています。  
   
- ![ SelectMany&#40;&#41; のアクションを示すグラフィック](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![SelectMany&#40;&#41; のアクションを示すグラフィック。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>コード例  
  次の例は、`Select()` と `SelectMany()` の動作を比較しています。 コードは、ソース コレクションの花の名前の各リストから最初の 2 つの項目を取って "花束" を作成します。 この例では、変換関数 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> が使用する "単一の値" 自体が値のコレクションになっています。 各サブ シーケンスで各文字列を列挙するために追加の `foreach` ループを使用しています。  

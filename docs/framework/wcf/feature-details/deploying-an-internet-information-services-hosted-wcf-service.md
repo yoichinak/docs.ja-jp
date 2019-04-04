@@ -27,7 +27,7 @@ IIS でホストされる WCF サービスの作成の詳細なチュートリ�
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS、ASP.NET、および WCF が正しくインストールおよび登録されていることの確認
 
-IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、次を参照してください。[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの **選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
+IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)を参照してください。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの **選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
 
 ![強調表示されている IIS と Windows の機能](media/windows-features-iis.png)
 
@@ -37,13 +37,13 @@ IIS でホストされる WCF services が正しく機能するには、WCF、II
 
 - Windows 7 および Windows Server 2003: 使用して、 [ServiceModel 登録ツール (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) WCF を IIS に登録するためのツール。 このツールを使用する入力**ServiceModelReg.exe/i/x**で、 [Visual Studio 用開発者コマンド プロンプト](../../tools/developer-command-prompt-for-vs.md)します。
 
-- Windows 7: 最後に、必要がありますを確認する、.NET Framework version 4 以降を使用する ASP.NET が構成されていること。 指定して ASPNET_Regiis ツールを実行して、これを行う、`–i`オプション。 詳細については、次を参照してください。 [ASP.NET IIS 登録ツール](https://go.microsoft.com/fwlink/?LinkId=201186)します。
+- Windows 7: 最後に、必要がありますを確認する、.NET Framework version 4 以降を使用する ASP.NET が構成されていること。 指定して ASPNET_Regiis ツールを実行して、これを行う、`–i`オプション。 詳細については、[ASP.NET IIS 登録ツール](https://go.microsoft.com/fwlink/?LinkId=201186)を参照してください。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>新しい IIS アプリケーションの作成、または既存の ASP.NET アプリケーションの再利用
 
 IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 または、既にホストしている既存のアプリケーションに、WCF サービスをデプロイできる[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]コンテンツ (.aspx ページや ASP.NET Web サービス (ASMX))。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
 
-[!INCLUDE[iis601](../../../../includes/iis601-md.md)] とそれ以降のバージョンでは、隔離されているオブジェクト指向プログラミング アプリケーションは定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
+[!INCLUDE[iis601](../../../../includes/iis601-md.md)] とそれ以降のバージョンでは、隔離されているオブジェクト指向プログラミング アプリケーションは定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)を参照してください。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF サービス用の .svc ファイルの作成
 
@@ -61,7 +61,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 サービスのベース アドレスの一覧を作成するなど、追加のホスト構成を実行することもできます。 カスタム <xref:System.ServiceModel.Activation.ServiceHostFactory> を使用して、このディレクティブをカスタム ホスト ソリューション用に拡張することもできます。 WCF サービスをホストする IIS アプリケーションは作成との有効期間を管理する責任を負いません<xref:System.ServiceModel.ServiceHost>インスタンス。 管理対象の WCF ホスティング インフラストラクチャの作成、必要な<xref:System.ServiceModel.ServiceHost>.svc ファイルの最初の要求が受信したときにインスタンスを動的にします。 このインスタンスは、コードによって明示的に閉じられるか、アプリケーションがリサイクルされるときまで解放されません。
 
-.Svc ファイルの構文の詳細については、次を参照してください。 [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)します。
+.Svc ファイルの構文の詳細については、[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)を参照してください。
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS アプリケーションへのサービス実装の展開
 

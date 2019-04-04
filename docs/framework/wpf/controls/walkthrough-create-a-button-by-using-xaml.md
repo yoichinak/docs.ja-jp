@@ -54,7 +54,7 @@ ms.locfileid: "57377286"
      基本的なボタンを作成するには、Window1.xaml ファイルの操作が完了したら。 このチュートリアルの残りの部分は、スタイルとボタンのテンプレートを定義する、app.xaml ファイルについて説明します。  
   
 ## <a name="set-basic-properties"></a>基本的なプロパティを設定します。  
- 次に、ボタンの外観とレイアウトを制御するこれらのボタンをいくつかのプロパティを設定してみましょう。 ボタンのプロパティを個別に設定するのではなく、アプリケーション全体のボタンのプロパティを定義するのにリソースを使用します。 アプリケーション リソースは外部に概念的に似ています[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]Web ページです。 ただし、リソースはよりもはるかに強力な[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]、このチュートリアルの最後で表示されます。 リソースの詳細については、次を参照してください。 [XAML リソース](../advanced/xaml-resources.md)します。  
+ 次に、ボタンの外観とレイアウトを制御するこれらのボタンをいくつかのプロパティを設定してみましょう。 ボタンのプロパティを個別に設定するのではなく、アプリケーション全体のボタンのプロパティを定義するのにリソースを使用します。 アプリケーション リソースは外部に概念的に似ています[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]Web ページです。 ただし、リソースはよりもはるかに強力な[!INCLUDE[TLA#tla_css](../../../../includes/tlasharptla-css-md.md)]、このチュートリアルの最後で表示されます。 リソースの詳細については、[XAML リソース](../advanced/xaml-resources.md)を参照してください。  
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>スタイルを使用して、ボタンの基本プロパティを設定するには  
   
@@ -396,7 +396,7 @@ ms.locfileid: "57377286"
   
      ポインターがボタンを超えた場合にトリガーされる 2 つのアニメーションがある (<xref:System.Windows.UIElement.MouseEnter>イベントが発生します)。 これらのアニメーションは、X と Y 軸に沿ったグラス四角形を縮小します。 プロパティに注目してください、<xref:System.Windows.Media.Animation.DoubleAnimation>要素-<xref:System.Windows.Media.Animation.Timeline.Duration%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>します。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>を 0.5 秒、発生するアニメーションのことを指定します、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>ガラスが 10% に縮小ことを指定します。  
   
-     2 番目のイベント トリガー (<xref:System.Windows.UIElement.MouseLeave>) 1 つ目を単純に停止します。 停止すると、 <xref:System.Windows.Media.Animation.Storyboard>、アニメーション化されたすべてのプロパティが既定値に戻ります。 そのため、ユーザーがポインター ボタンから離れると、ボタンに戻りますがマウス ポインターがボタンの上に移動する前にする方法。 アニメーションの詳細については、次を参照してください。[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
+     2 番目のイベント トリガー (<xref:System.Windows.UIElement.MouseLeave>) 1 つ目を単純に停止します。 停止すると、 <xref:System.Windows.Media.Animation.Storyboard>、アニメーション化されたすべてのプロパティが既定値に戻ります。 そのため、ユーザーがポインター ボタンから離れると、ボタンに戻りますがマウス ポインターがボタンの上に移動する前にする方法。 アニメーションの詳細については、[アニメーションの概要](../graphics-multimedia/animation-overview.md)を参照してください。  
   
 5.  **ボタンがクリックされたときのアニメーションを追加します。** 最後の手順では、ユーザーがボタンをクリックしたときにトリガーを追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロック。  
   

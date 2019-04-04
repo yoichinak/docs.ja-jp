@@ -15,7 +15,7 @@ ms.locfileid: "56260687"
 
 この手順の重要な部分は、エンドポイント構成要素を含む、`bindingConfiguration`という名前のバインド構成を参照する属性`Binding1`します。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を設定して、信頼できるセッションを有効にするには、この名前の参照、`enabled`の属性、 [ **\<reliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100))要素`true`します。 信頼できるセッションで順序付き配信の保証を指定するには、`ordered` 属性を `true` に設定します。
 
-この例のソースのコピーを次を参照してください。 [WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)します。
+この例のソースのコピーを[WS 信頼できるセッション](../../../../docs/framework/wcf/samples/ws-reliable-session.md)を参照してください。
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>信頼できるセッションを使用する WSHttpBinding 使用サービスを構成します。
 

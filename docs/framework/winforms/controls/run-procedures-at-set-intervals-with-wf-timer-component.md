@@ -27,7 +27,7 @@ ms.locfileid: "57705572"
   
 > [!NOTE]
 >  
-  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、次を参照してください。 [、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](limitations-of-the-timer-component-interval-property.md)します。  
+  <xref:System.Windows.Forms.Timer> コンポーネントを使用する場合に、いくつかの制限があります。 詳細については、[、Windows フォームの Timer コンポーネントの Interval プロパティの制限事項](limitations-of-the-timer-component-interval-property.md)を参照してください。  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Timer コンポーネントで設定された間隔でプロシージャを実行するには  
   

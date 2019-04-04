@@ -35,7 +35,7 @@ Mscorlib.dll および Microsoft.VisualBasic.dll の位置を指定します。
 > [!NOTE]
 >  `-sdkpath`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。 `-sdkpath` Visual Basic プロジェクトのデバイスが読み込まれるときにオプションを設定します。  
   
- 使用して、コンパイラが、Visual Basic ランタイム ライブラリを参照しないでコンパイルを指定することができます、`-vbruntime`コンパイラ オプション。 詳細については、次を参照してください。 [-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)します。  
+ 使用して、コンパイラが、Visual Basic ランタイム ライブラリを参照しないでコンパイルを指定することができます、`-vbruntime`コンパイラ オプション。 詳細については、[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)を参照してください。  
   
 ## <a name="example"></a>例  
  次のコードのコンパイル`Myfile.vb`で、[!INCLUDE[Compact](~/includes/compact-md.md)]の既定のインストール ディレクトリにある Mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、 [!INCLUDE[Compact](~/includes/compact-md.md)] C ドライブにします。 通常の最新バージョンを使用すると、[!INCLUDE[Compact](~/includes/compact-md.md)]します。  

@@ -2,13 +2,18 @@
 title: Visual Basic における配列
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675966"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Visual Basic における配列
 
 配列と呼ばれるものの値のセットは、*要素*、互いに論理的に関連します。 たとえば、配列が学校; の各学年の生徒の数の構成可能性があります。配列の各要素は、1 つ学年の生徒の数です。 同様に、配列が、クラスの学生の成績のあります。配列の各要素は、1 つのレベルです。
@@ -86,7 +91,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-詳細については、次を参照してください。、 [ReDim ステートメント](../../../language-reference/statements/redim-statement.md)します。
+詳細については、、 [ReDim ステートメント](../../../language-reference/statements/redim-statement.md)を参照してください。
 
 ## <a name="storing-values-in-an-array"></a>配列内の値を格納します。
 
@@ -107,7 +112,7 @@ Dim sales()() As Double = New Double(11)() {}
 型の推定を使用する場合、配列の型はによって決まります、*優先型*リテラル値の一覧にします。 主要な型は、配列内の他のすべての型が拡大変換できる型です。 この一意の型を特定できない場合、最も優先度の高い型は、配列内の他のすべての型から縮小変換できる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 たとえば、配列リテラルに指定された値の一覧に `Integer`型、 `Long`型、および `Double`型の値が含まれている場合、結果の配列の型は `Double`です。 `Integer`と`Long`にのみ拡大変換`Double`、`Double`は、主要な型です。 詳細については、「 [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 > [!NOTE]
-> 型の推定は、型のメンバーのローカル変数として定義されている配列に対してのみ使用できます。 クラス レベルの配列リテラルで定義されている配列がの型は、明示的な型定義がない場合は、`Object[]`します。 詳細については、次を参照してください。[ローカル型推論](../variables/local-type-inference.md)します。
+> 型の推定は、型のメンバーのローカル変数として定義されている配列に対してのみ使用できます。 クラス レベルの配列リテラルで定義されている配列がの型は、明示的な型定義がない場合は、`Object[]`します。 詳細については、[ローカル型推論](../variables/local-type-inference.md)を参照してください。
 
 前の例を定義する注`values`型の配列として`Double`場合でも、すべての配列リテラルが型`Integer`します。 この配列を作成するには、配列リテラル内の値に拡大変換することができますので`Double`値。
 

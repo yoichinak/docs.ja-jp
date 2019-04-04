@@ -71,7 +71,7 @@ End Select
  設定は、`Option Compare`文字列比較に影響を与えることができます。 `Option Compare Text`、Equal、として比較してが文字列"Apples"と"apples" `Option Compare Binary`、一致していないためです。  
   
 > [!NOTE]
->  A`Case`句を指定して複数のステートメントと呼ばれる動作が発生することができます*ショート サーキット*します。 Visual Basic は、左から右への句を評価し、1 つの場合との一致を作成します。 `testexpression`、残りの句は評価されません。 ショート サーキットのパフォーマンスが向上するのすべての式が必要な場合、予期しない結果を生成できる`expressionlist`評価されます。 ショート サーキットの詳細については、次を参照してください。[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)します。  
+>  A`Case`句を指定して複数のステートメントと呼ばれる動作が発生することができます*ショート サーキット*します。 Visual Basic は、左から右への句を評価し、1 つの場合との一致を作成します。 `testexpression`、残りの句は評価されません。 ショート サーキットのパフォーマンスが向上するのすべての式が必要な場合、予期しない結果を生成できる`expressionlist`評価されます。 ショート サーキットの詳細については、[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)を参照してください。  
   
  場合内のコードを`Case`または`Case Else`ステートメント ブロックは、ブロックで以上のステートメントを実行する必要はありませんを使用して、ブロックを終了できますが、`Exit Select`ステートメント。 ステートメントに制御を直ちに転送この`End Select`します。  
   

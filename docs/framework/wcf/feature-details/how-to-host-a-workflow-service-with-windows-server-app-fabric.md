@@ -10,7 +10,7 @@ ms.lasthandoff: 03/26/2019
 ms.locfileid: "58465127"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>方法: Windows Server App Fabric でのワークフロー サービスをホストします。
-AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングに似ています。 唯一の違いは、ワークフロー サービスの投入、監視、および管理のために AppFabric に用意されているツールです。 このトピックで作成したワークフロー サービスを使用して、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)します。 ワークフロー サービスの作成方法はそちらのトピックで説明されています。 このトピックでは、AppFabric を使用したワークフロー サービスのホスティング方法を説明します。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server Appfabric のドキュメント](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)します。 下の手順を完了する前に、Windows Server AppFabric がインストールされていることを確認してください。  インターネット インフォメーション サービス (inetmgr.exe) を開いてでサーバー名をクリックします。、**接続**表示、サイト、 をクリックおよびクリック**既定の Web サイト**します。 画面の右側にあるという名前のセクションを参照する必要があります**App Fabric**します。 (右側のペインの一番上に表示される) このセクションが表示されない場合は、AppFabric がインストールされていません。 Windows Server Appfabric のインストールの詳細については、次を参照してください。[インストールの Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)します。  
+AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングに似ています。 唯一の違いは、ワークフロー サービスの投入、監視、および管理のために AppFabric に用意されているツールです。 このトピックで作成したワークフロー サービスを使用して、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)します。 ワークフロー サービスの作成方法はそちらのトピックで説明されています。 このトピックでは、AppFabric を使用したワークフロー サービスのホスティング方法を説明します。 Windows Server App Fabric の詳細については、[Windows Server Appfabric のドキュメント](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)を参照してください。 下の手順を完了する前に、Windows Server AppFabric がインストールされていることを確認してください。  インターネット インフォメーション サービス (inetmgr.exe) を開いてでサーバー名をクリックします。、**接続**表示、サイト、 をクリックおよびクリック**既定の Web サイト**します。 画面の右側にあるという名前のセクションを参照する必要があります**App Fabric**します。 (右側のペインの一番上に表示される) このセクションが表示されない場合は、AppFabric がインストールされていません。 Windows Server Appfabric のインストールの詳細については、[インストールの Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)を参照してください。  
   
 ### <a name="creating-a-simple-workflow-service"></a>単純なワークフロー サービスの作成  
   
@@ -46,31 +46,31 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
   
      ![App Fabric の構成&#45;永続化](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 永続化")  
   
-     Windows Server App Fabric でのワークフローの永続化の構成の詳細については、次を参照してください。 [Appfabric におけるワークフロー永続化の構成](https://go.microsoft.com/fwlink/?LinkId=193148)します。  
+     Windows Server App Fabric でのワークフローの永続化の構成の詳細については、[Appfabric におけるワークフロー永続化の構成](https://go.microsoft.com/fwlink/?LinkId=193148)を参照してください。  
   
 7.  選択、**ワークフロー ホスト管理**タブ。ここでは、次のスクリーン ショットに見られるように、アイドル状態のワークフロー サービス インスタンスをいつアンロードして永続化するかを指定できます。  
   
      ![App Fabric の構成ワークフロー ホスト管理](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration 管理")  
   
-     ワークフロー ホスト管理の構成の詳細については、次を参照してください。 [App Fabric を使用したワークフロー ホスト管理を構成する](https://go.microsoft.com/fwlink/?LinkId=193151)します。  
+     ワークフロー ホスト管理の構成の詳細については、[App Fabric を使用したワークフロー ホスト管理を構成する](https://go.microsoft.com/fwlink/?LinkId=193151)を参照してください。  
   
 8.  選択、 **Auto-start**タブ。ここでは、次のスクリーン ショットに示すように、アプリケーションでのワークフロー サービスに対する自動開始の設定を指定できます。  
   
      ![App Fabric の自動を示すスクリーン ショット&#45;構成を開始します。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
-     Auto-start の構成の詳細については、次を参照してください。 [App Fabric で自動的に開始構成](https://go.microsoft.com/fwlink/?LinkId=193150)します。  
+     Auto-start の構成の詳細については、[App Fabric で自動的に開始構成](https://go.microsoft.com/fwlink/?LinkId=193150)を参照してください。  
   
 9. 選択、**スロットル**タブ。ここでは、次のスクリーン ショットに示すように、ワークフロー サービスのスロットル設定を構成できます。  
   
      ![App Fabric のスロットル構成を示すスクリーン ショット。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
-     Throttling の構成の詳細については、次を参照してください。 [App Fabric で調整を構成する](https://go.microsoft.com/fwlink/?LinkId=193149)します。  
+     Throttling の構成の詳細については、[App Fabric で調整を構成する](https://go.microsoft.com/fwlink/?LinkId=193149)を参照してください。  
   
 10. 選択、**セキュリティ**タブ。ここでは、次のスクリーン ショットに示すように、アプリケーションに対するセキュリティの設定を構成できます。  
   
      ![App Fabric のセキュリティ構成](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration セキュリティ")  
   
-     Windows Server App Fabric でのセキュリティの構成の詳細については、次を参照してください。 [App Fabric でのセキュリティ構成](https://go.microsoft.com/fwlink/?LinkId=193152)します。  
+     Windows Server App Fabric でのセキュリティの構成の詳細については、[App Fabric でのセキュリティ構成](https://go.microsoft.com/fwlink/?LinkId=193152)を参照してください。  
   
 ### <a name="using-windows-server-app-fabric"></a>Windows Server AppFabric の使用  
   

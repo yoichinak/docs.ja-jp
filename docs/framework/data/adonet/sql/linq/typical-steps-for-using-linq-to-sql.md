@@ -15,7 +15,7 @@ ms.locfileid: "54548012"
  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を使用してオブジェクト モデルを作成し、クエリのコーディングを開始すると、非常に簡単です。  
   
 ## <a name="creating-the-object-model"></a>オブジェクト モデルの作成  
- 最初に、既存のリレーショナル データベースのメタデータからオブジェクト モデルを作成します。 オブジェクト モデルは、開発者のプログラミング言語に従ってデータベースを表します。 詳細については、次を参照してください。 [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)します。  
+ 最初に、既存のリレーショナル データベースのメタデータからオブジェクト モデルを作成します。 オブジェクト モデルは、開発者のプログラミング言語に従ってデータベースを表します。 詳細については、[LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)を参照してください。  
   
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.モデルを作成するツールを選択します。  
  モデルを作成するツールとして、3 つのツールを使用できます。  
@@ -36,11 +36,11 @@ ms.locfileid: "54548012"
   
 -   AC#または Visual Basic のソース コード ファイルの属性ベースの対応付け。  
   
-     このコード ファイルは、Visual Studio プロジェクトに含めます。 詳細については、次を参照してください。[属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)します。  
+     このコード ファイルは、Visual Studio プロジェクトに含めます。 詳細については、[属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)を参照してください。  
   
 -   外部マッピング用の XML ファイル。  
   
-     この方法を使用すると、アプリケーション コードとは別にマッピング メタデータを保持できます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
+     この方法を使用すると、アプリケーション コードとは別にマッピング メタデータを保持できます。 詳細については、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
   
     > [!NOTE]
     >  [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]は、外部マッピング ファイルの生成をサポートしていません。 SQLMetal ツールを使用してこの機能を実装する必要があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "54548012"
  この目的で、[!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]またはコード エディターを使用できます。  
   
 ## <a name="using-the-object-model"></a>オブジェクト モデルの使用  
- 2 層シナリオでの開発者とデータの関係を次の図に示します。 その他のシナリオでは、次を参照してください。 [N 層アプリケーションと linq to SQL のリモート アプリケーション](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)します。  
+ 2 層シナリオでの開発者とデータの関係を次の図に示します。 その他のシナリオでは、[N 層アプリケーションと linq to SQL のリモート アプリケーション](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)を参照してください。  
   
  ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
   
@@ -64,22 +64,22 @@ ms.locfileid: "54548012"
  作成したオブジェクト モデルの典型的な使用手順を次に示します。  
   
 ### <a name="1-create-queries-to-retrieve-information-from-the-database"></a>1.クエリを作成し、データベースから情報を取得します。  
- 詳細については、次を参照してください。[クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)と[クエリ例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)します。  
+ 詳細については、[クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)と[クエリ例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)を参照してください。  
   
 ### <a name="2-override-default-behaviors-for-insert-update-and-delete"></a>2.挿入、更新、および削除の既定の動作をオーバーライドします。  
- この手順は省略できます。 詳細については、次を参照してください。[のカスタマイズを挿入、更新、および削除を行う](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)します。  
+ この手順は省略できます。 詳細については、[のカスタマイズを挿入、更新、および削除を行う](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)を参照してください。  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3.適切なオプションを設定し、コンカレンシーの競合を検出およびレポートします。  
  コンカレンシーの競合の処理について、モデルの既定値をそのまま使用することも、目的に合わせて変更することもできます。 詳細については、「[方法 :同時実行の競合を検査するメンバーを指定](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)と[方法。ときの同時実行例外がスローされる指定](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)します。  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4.継承階層を確立します。  
- この手順は省略できます。 詳細については、次を参照してください。[継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)します。  
+ この手順は省略できます。 詳細については、[継承のサポート](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)を参照してください。  
   
 ### <a name="5-provide-an-appropriate-user-interface"></a>5.適切なユーザー インターフェイスを提供します。  
  この手順は省略でき、アプリケーションの使用方法によって異なります。  
   
 ### <a name="6-debug-and-test-your-application"></a>6.アプリケーションをデバッグおよびテストします。  
- 詳細については、次を参照してください。[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)します。  
+ 詳細については、[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

@@ -40,7 +40,7 @@ object.Value
 > [!NOTE]
 >  使用して XML 属性の値にアクセスするときに、'\@' 識別子、属性の値として返されます、`String`を明示的に指定する必要はありませんし、<xref:System.Xml.Linq.XAttribute.Value%2A>プロパティ。  
   
- コレクション内の他の要素にアクセスするには、XML 拡張機能インデクサー プロパティを使用できます。 詳細については、次を参照してください。[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)します。  
+ コレクション内の他の要素にアクセスするには、XML 拡張機能インデクサー プロパティを使用できます。 詳細については、[拡張インデクサー プロパティ](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)を参照してください。  
   
 ## <a name="inheritance"></a>継承  
  ほとんどのユーザーが実装する必要はありません<xref:System.Collections.Generic.IEnumerable%601>、し、このため、このセクションを無視できます。  

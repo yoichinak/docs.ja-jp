@@ -10,7 +10,7 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54532709"
 ---
 # <a name="using-impersonation-with-transport-security"></a>トランスポート セキュリティでの偽装の使用
-*権限借用*はクライアントの id で実行するサーバー アプリケーションの機能です。 リソースへのアクセスを検証するときに、サービスでは偽装が広く使用されます。 サーバー アプリケーションはサービス アカウントを使用して実行されますが、クライアントの接続を受け入れたサーバーは、クライアントの資格情報を使用してアクセス チェックが実行できるようにクライアントを偽装します。 トランスポート セキュリティは、資格情報を渡すこと、および渡された資格情報を使用して通信をセキュリティで保護することの 2 つの機構から成ります。 このトピックでは、偽装機能を Windows Communication Foundation (WCF) でトランスポート セキュリティの使用について説明します。 メッセージ セキュリティを使用して権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
+*権限借用*はクライアントの id で実行するサーバー アプリケーションの機能です。 リソースへのアクセスを検証するときに、サービスでは偽装が広く使用されます。 サーバー アプリケーションはサービス アカウントを使用して実行されますが、クライアントの接続を受け入れたサーバーは、クライアントの資格情報を使用してアクセス チェックが実行できるようにクライアントを偽装します。 トランスポート セキュリティは、資格情報を渡すこと、および渡された資格情報を使用して通信をセキュリティで保護することの 2 つの機構から成ります。 このトピックでは、偽装機能を Windows Communication Foundation (WCF) でトランスポート セキュリティの使用について説明します。 メッセージ セキュリティを使用して権限借用の詳細については、[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)を参照してください。  
   
 ## <a name="five-impersonation-levels"></a>5 つの偽装レベル  
  トランスポート セキュリティでは、次の表で説明するように 5 つの偽装レベルを使用します。  
@@ -37,7 +37,7 @@ ms.locfileid: "54532709"
   
 -   名前付きパイプは、`Impersonate` または `Delegate` 偽装レベルでは使用できません。 これらの偽装レベルでは、名前付きパイプはコンピューター上で保障されません。  
   
- 名前付きパイプの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。  
+ 名前付きパイプの詳細については、[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)を参照してください。  
   
 ### <a name="http-transport"></a>HTTP トランスポート  
  HTTP トランスポートを使用するバインディング (<xref:System.ServiceModel.WSHttpBinding>と<xref:System.ServiceModel.BasicHttpBinding>) で説明したように、いくつかの認証方式をサポート[Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)します。 サポートされる偽装レベルは、認証方式によって異なります。 次の項目が HTTP トランスポートと共に使用されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "54532709"
   
 -   Kerberos 認証方式は、ネゴシエーション経由でのみ選択可能で、サポートされるすべての偽装レベルで使用できます。  
   
- HTTP トランスポートの詳細については、次を参照してください。[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)します。  
+ HTTP トランスポートの詳細については、[トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

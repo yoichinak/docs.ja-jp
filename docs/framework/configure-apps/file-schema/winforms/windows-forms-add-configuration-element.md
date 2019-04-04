@@ -67,7 +67,7 @@ ms.locfileid: "57788480"
 
 `<System.Windows.Forms.ApplicationConfigurationSection>`要素では、1 つまたは複数の子を追加できます。`<add>`要素は、それぞれが特定の構成設定を定義します。
 
-Windows フォームの高 DPI サポートの概要については、次を参照してください。 [Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)します。
+Windows フォームの高 DPI サポートの概要については、[Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)を参照してください。
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
@@ -99,7 +99,7 @@ Windows フォームの高 DPI サポートの概要については、次を参�
 
 通常、オプトアウトする特定の機能をプログラムで処理することを選択したためです。
 
-Windows フォーム アプリケーションの高 DPI サポートの利用の詳細については、次を参照してください。 [Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)します。
+Windows フォーム アプリケーションの高 DPI サポートの利用の詳細については、[Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)を参照してください。
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 

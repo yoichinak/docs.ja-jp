@@ -71,7 +71,7 @@ ms.locfileid: "58412046"
 |[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- ポート共有の詳細については、次を参照してください。 [Net.TCP ポート共有](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)します。 ポート共有サービスを構成する方法については、次を参照してください。 [Net.TCP ポート共有サービスを構成する](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)します。  
+ ポート共有の詳細については、[Net.TCP ポート共有](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)を参照してください。 ポート共有サービスを構成する方法については、[Net.TCP ポート共有サービスを構成する](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>

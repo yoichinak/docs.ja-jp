@@ -43,7 +43,7 @@ ms.locfileid: "55739515"
  使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  
+ 設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、[Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)を参照してください。  
   
  使用するための証明書を構成する[!INCLUDE[iis601](../../../../includes/iis601-md.md)]を参照してください[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)します。  
   

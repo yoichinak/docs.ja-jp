@@ -30,7 +30,7 @@ ms.locfileid: "57358484"
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- サンプル全体については、次を参照してください。[ポップアップの配置のサンプル](https://go.microsoft.com/fwlink/?LinkID=160032)します。  
+ サンプル全体については、[ポップアップの配置のサンプル](https://go.microsoft.com/fwlink/?LinkID=160032)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Controls.Primitives.Popup>

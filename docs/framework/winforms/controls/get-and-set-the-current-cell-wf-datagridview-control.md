@@ -22,7 +22,7 @@ ms.locfileid: "57724025"
 > [!NOTE]
 >  行または列を持つ現在のセルを設定することはできません、<xref:System.Windows.Forms.DataGridViewBand.Visible%2A>プロパティに設定`false`します。  
   
- に応じて、<xref:System.Windows.Forms.DataGridView>現在のセルを変更するコントロールの選択モードが選択を変更できます。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)します。  
+ に応じて、<xref:System.Windows.Forms.DataGridView>現在のセルを変更するコントロールの選択モードが選択を変更できます。 詳細については、[Windows フォームの DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)を参照してください。  
   
 ### <a name="to-get-the-current-cell-programmatically"></a>現在のセルをプログラムで取得するには  
   

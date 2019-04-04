@@ -15,7 +15,7 @@ ms.locfileid: "56093932"
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、標準クエリ演算子から SQL コマンドへの変換が行われます。 データベースのクエリ プロセッサは、SQL 変換の実行のセマンティクスを決定します。  
   
- 標準クエリ演算子が定義されている*シーケンス*します。 シーケンスは*注文*シーケンスの各要素の参照 id に依存しています。 詳細については、次を参照してください。[標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+ 標準クエリ演算子が定義されている*シーケンス*します。 シーケンスは*注文*シーケンスの各要素の参照 id に依存しています。 詳細については、[標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
   
  主に SQL が扱う*値のセットを順不同*します。 通常、順序付けは、明示的な後処理の操作として、クエリの中間結果ではなく最終結果に対して適用されます。 ID は値で定義されます。 このため、SQL クエリを理解して、マルチセットを処理する (*バッグ*) の代わりに*設定*します。  
   
@@ -173,7 +173,7 @@ ORDER BY [t0].[CustomerID]
   
 -   `Sum`  
   
- これらの SQL Server の日付と時刻型へのマッピングの詳細については、次を参照してください。 [SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)します。  
+ これらの SQL Server の日付と時刻型へのマッピングの詳細については、[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)を参照してください。  
   
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 のサポート  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL Server 2005 の以下の機能をサポートしていません。  

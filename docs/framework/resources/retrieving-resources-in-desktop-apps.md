@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221226"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653926"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -149,10 +149,11 @@ GetObject.exe
  サテライト アセンブリにリソースを展開しないように選択した場合でも、 <xref:System.Resources.ResourceManager> オブジェクトを使用して、.resources ファイルからリソースに直接アクセスすることができます。 そのためには、.resources ファイルを正しく展開する必要があります。 次に、 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化し、スタンドアロンの .resources ファイルを含むディレクトリを指定します。  
   
 ### <a name="deploying-resources-files"></a>.resources ファイルの展開  
- アプリケーション アセンブリとサテライト アセンブリに .resources ファイルを埋め込むと、各サテライト アセンブリのファイル名は同じになりますが、各サテライト アセンブリが配置される場所はそれぞれのカルチャを反映するサブディレクトリとなります。 これに対して、.resources ファイルからリソースに直接アクセスする場合は、すべての .resources ファイルを単一のディレクトリ (通常は、アプリケーション ディレクトリのサブディレクトリ) に配置することができます。 アプリの既定の .resources ファイルの名前は、ルート名のみで構成され、カルチャ名はありません (たとえば、strings.resources)。 ローカライズされた各カルチャのリソースが格納されるファイルの名前は、ルート名の後にカルチャが続きます (たとえば、strings.ja.resources または strings.de-DE.resources)。 次の図では、ディレクトリ構造内のどこにリソース ファイルを配置する必要があるかを示しています。  
-  
- ![アプリケーションのメイン ディレクトリ](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-ディレクトリ構造と .resources ファイルの名前付け規則  
+ アプリケーション アセンブリとサテライト アセンブリに .resources ファイルを埋め込むと、各サテライト アセンブリのファイル名は同じになりますが、各サテライト アセンブリが配置される場所はそれぞれのカルチャを反映するサブディレクトリとなります。 これに対して、.resources ファイルからリソースに直接アクセスする場合は、すべての .resources ファイルを単一のディレクトリ (通常は、アプリケーション ディレクトリのサブディレクトリ) に配置することができます。 アプリの既定の .resources ファイルの名前は、ルート名のみで構成され、カルチャ名はありません (たとえば、strings.resources)。 ローカライズされた各カルチャのリソースが格納されるファイルの名前は、ルート名の後にカルチャが続きます (たとえば、strings.ja.resources または strings.de-DE.resources)。 
+ 
+ 次の図では、ディレクトリ構造内のどこにリソース ファイルを配置する必要があるかを示しています。 また、.resource ファイルの名前付け規則が与えられます。  
+
+ ![アプリケーションのメイン ディレクトリを示す図。](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>リソース マネージャーの使用  
  リソースを作成し、それを適切なディレクトリに配置したら、 <xref:System.Resources.ResourceManager> メソッドを呼び出して、リソースを使用する <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> オブジェクトを作成します。 最初のパラメーターでは、アプリの既定の .resources ファイルのルート名を指定します (前のセクションの例では、"strings" でした)。 2 番目のパラメーターでは、リソースの場所を指定します (前の例では "Resources")。 3 番目のパラメーターでは、使用する <xref:System.Resources.ResourceSet> 実装を指定します。 3 番目のパラメーターが `null`である場合、既定のランタイム <xref:System.Resources.ResourceSet> が使用されます。  

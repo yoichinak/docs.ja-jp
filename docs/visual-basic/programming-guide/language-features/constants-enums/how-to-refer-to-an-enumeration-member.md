@@ -17,7 +17,7 @@ ms.locfileid: "58813978"
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>方法: 列挙体のメンバー (Visual Basic) を参照してください。
 列挙体は、関連する定数を使用して、名前の定数値を関連付ける便利な方法を提供します。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  
   
- 完全修飾名の使用を避けることができます、`Imports`ステートメント。 詳細については、次を参照してください。[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)します。  
+ 完全修飾名の使用を避けることができます、`Imports`ステートメント。 詳細については、[列挙型と名前修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)を参照してください。  
   
 ### <a name="to-refer-to-an-enumeration-member"></a>列挙体のメンバーを参照するには  
   

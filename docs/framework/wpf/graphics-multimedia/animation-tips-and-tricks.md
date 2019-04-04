@@ -28,13 +28,13 @@ ms.locfileid: "57362436"
 ## <a name="general-issues"></a>一般的な問題  
   
 ### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>スクロール バーまたはスライダーの位置をアニメーション化するとフリーズする  
- スクロール バーまたはスライダーを持つアニメーションを使用しての位置をアニメーション化する場合、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>(既定値) の場合は、ユーザーしなくなるスクロール バーまたはスライダーを移動できません。 原因は、アニメーションが終了しても、ターゲット プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
+ スクロール バーまたはスライダーを持つアニメーションを使用しての位置をアニメーション化する場合、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>(既定値) の場合は、ユーザーしなくなるスクロール バーまたはスライダーを移動できません。 原因は、アニメーションが終了しても、ターゲット プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)を参照してください。  
   
 ### <a name="animating-the-output-of-an-animation-has-no-effect"></a>アニメーションの出力のアニメーション化の効果がない  
  別のアニメーションの出力であるオブジェクトをアニメーション化することはできません。 使用する場合など、<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>をアニメーション化する、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Rectangle>から、<xref:System.Windows.Media.RadialGradientBrush>を<xref:System.Windows.Media.SolidColorBrush>の任意のプロパティをアニメーション化することはできません、<xref:System.Windows.Media.RadialGradientBrush>または<xref:System.Windows.Media.SolidColorBrush>します。  
   
 ### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>プロパティをアニメーション化した後にその値を変更できない  
- 場合によっては、アニメーションが完了した後でも、アニメーション化の後にプロパティの値を変更できないように見えることがあります。 原因は、アニメーションが終了しても、プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
+ 場合によっては、アニメーションが完了した後でも、アニメーション化の後にプロパティの値を変更できないように見えることがあります。 原因は、アニメーションが終了しても、プロパティの基底値をまだオーバーライドしているためです。 プロパティの現在の値を上書きするアニメーションを停止するには、削除するか、試して、<xref:System.Windows.Media.Animation.FillBehavior>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 詳細と例では、[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)を参照してください。  
   
 ### <a name="changing-a-timeline-has-no-effect"></a>タイムラインを変更しても効果がない  
  ただしほとんど<xref:System.Windows.Media.Animation.Timeline>プロパティはアニメーション化できる、データ バインドできるは、アクティブなプロパティ値を変更する<xref:System.Windows.Media.Animation.Timeline>効果がないようです。 です、<xref:System.Windows.Media.Animation.Timeline>はタイミング システムの開始のコピーを作成、<xref:System.Windows.Media.Animation.Timeline>を使用して作成し、<xref:System.Windows.Media.Animation.Clock>オブジェクト。 元を変更しても、システムのコピーには影響しません。  
@@ -47,7 +47,7 @@ ms.locfileid: "57362436"
   
 -   クロック レベルで直接操作している場合は、新しいクロック セットを作成して適用し、それらを使って、生成されたクロックの以前のセットを置換します。  
   
- 詳細については、タイムラインとクロックは、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
+ 詳細については、タイムラインとクロックは、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
   
 ### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop が期待どおりに動作しない  
  あります設定するときに、<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.FillBehavior.Stop>場合などの効果がないように見えるアニメーションを 1 つに「ハンドオフ」間があるため、<xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>の設定<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>。  
@@ -113,7 +113,7 @@ ms.locfileid: "57362436"
   
 -   特定のプロパティからアニメーションを削除するには、使用、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29>メソッド。 最初のパラメーターとしてアニメーション化されているプロパティを指定し、 `null` 2 つ目として。 これにより、すべてのアニメーション クロックがプロパティから削除されます。  
   
- プロパティをアニメーション化するさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
+ プロパティをアニメーション化するさまざまな方法の詳細については、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>HandoffBehavior を使うとシステム リソースが消費される  
  適用すると、 <xref:System.Windows.Media.Animation.Storyboard>、 <xref:System.Windows.Media.Animation.AnimationTimeline>、または<xref:System.Windows.Media.Animation.AnimationClock>を使用してプロパティを<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>、any<xref:System.Windows.Media.Animation.Clock>以前そのプロパティに関連付けられているオブジェクトは引き続きシステム リソースを消費しますタイミング システムはありません。これらのクロックを自動的に削除します。  
@@ -126,7 +126,7 @@ ms.locfileid: "57362436"
   
  これは主に、有効期間が長いオブジェクトでのアニメーションの問題です。  オブジェクトがガベージ コレクションされる場合は、そのクロックも切断されて、ガベージ コレクションされます。  
   
- クロック オブジェクトの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
+ クロック オブジェクトの詳細については、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [アニメーションの概要](animation-overview.md)

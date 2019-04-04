@@ -85,7 +85,7 @@ Dim contacts = _
   
  Visual Basic コンパイラが XML リテラルに変換[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]メソッドの呼び出し。  
   
- 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
+ 詳細については、[XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

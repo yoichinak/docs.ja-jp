@@ -12,7 +12,7 @@ ms.locfileid: "54616057"
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのエクスポート
 Windows Communication Foundation (WCF) では、メタデータのエクスポートはサービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に投影するそれらのプロセスです。 カスタム メタデータは、システム指定のメタデータ エクスポーターでエクスポートできない XML 要素で構成されます。 通常、これは、ユーザー定義動作のカスタム WSDL 要素とバインド要素、およびバインディングとコントラクトの機能と要件に関するポリシー アサーションを含みます。  
   
- ここでは、カスタム WSDL またはポリシー アサーションのエクスポートについて説明し、エクスポート プロセス自体には重点を置きません。 型をエクスポートおよびインポートのメタデータがカスタムであるか、システムによって作成されたかどうかに関係なくメタデータを使用する方法の詳細については、次を参照してください。[エクスポートおよびインポートするメタデータ](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)します。  
+ ここでは、カスタム WSDL またはポリシー アサーションのエクスポートについて説明し、エクスポート プロセス自体には重点を置きません。 型をエクスポートおよびインポートのメタデータがカスタムであるか、システムによって作成されたかどうかに関係なくメタデータを使用する方法の詳細については、[エクスポートおよびインポートするメタデータ](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)を参照してください。  
   
 ## <a name="overview"></a>概要  
  使用してメタデータが公開されるときに、 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>が調べられるすべてのコントラクトと WCF は、システム指定の属性とバインドを使用してサポートできるバインドに対して XSD と WSDL のポリシー アサーションを含む--を生成します。 ただし、カスタム動作属性やバインド要素を適切にエクスポートするには、あらかじめサポートしておく必要があります。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) では、メタデータのエクスポ�
   
 2.  WSDL データに含まれるポリシー アサーションをエクスポートする前にポリシー データを公開する <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> インターフェイスを実装して使用する方法。  
   
- カスタム WSDL とポリシー アサーションをインポートする方法の詳細については、次を参照してください。 [WCF 拡張機能のカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)します。  
+ カスタム WSDL とポリシー アサーションをインポートする方法の詳細については、[WCF 拡張機能のカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)を参照してください。  
   
 ## <a name="exporting-custom-wsdl-elements"></a>カスタム WSDL 要素のエクスポート  
  操作の動作、コントラクトの動作、エンドポイントの動作、またはバインド要素 <xref:System.ServiceModel.Description.IWsdlExportExtension> (それぞれ <xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior>、<xref:System.ServiceModel.Description.IEndpointBehavior>、<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>) を実装し、エクスポートしようとしているサービスの説明に動作またはバインド要素を挿入します  (動作を挿入する方法の詳細については、次を参照してください。[構成と、ランタイムの動作を拡張](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md))。 <xref:System.ServiceModel.Description.IWsdlExportExtension> はエンドポイントごとに呼び出され、コントラクトがエクスポートされていない場合は、各エンドポイントによって最初にコントラクトがエクスポートされます。 必要に応じて、次のいずれかのエクスポート プロセスに参加できます。  

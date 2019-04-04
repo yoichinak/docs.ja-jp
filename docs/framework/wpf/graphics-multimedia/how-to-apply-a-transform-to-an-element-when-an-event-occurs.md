@@ -19,7 +19,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57357934"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>方法: イベントの発生時に要素に変換を適用する
-この例は、適用する方法を示します、<xref:System.Windows.Media.ScaleTransform>イベントが発生します。 ここで示される概念は、他の種類の変換を適用する場合に使用するものと同じです。 使用可能な種類の変換の詳細については、次を参照してください。、<xref:System.Windows.Media.Transform>クラスまたは[変換の概要](transforms-overview.md)します。  
+この例は、適用する方法を示します、<xref:System.Windows.Media.ScaleTransform>イベントが発生します。 ここで示される概念は、他の種類の変換を適用する場合に使用するものと同じです。 使用可能な種類の変換の詳細については、、<xref:System.Windows.Media.Transform>クラスまたは[変換の概要](transforms-overview.md)を参照してください。  
   
  要素に変換を適用するには、次の 2 つの方法があります。  
   

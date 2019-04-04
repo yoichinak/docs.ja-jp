@@ -18,11 +18,11 @@ ms.locfileid: "56094127"
   
 -   通常、集計クエリはコレクションではなく 1 つの数値を返します。  
   
-     詳細については、次を参照してください。[集計操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))します。  
+     詳細については、[集計操作](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546138(v=vs.120))を参照してください。  
   
 -   匿名型に対して集計を呼び出すことはできません。  
   
- 以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+ 以下のトピックの例は、Northwind サンプル データベースから派生しています。 詳細については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [一連の数値の平均値の取得](../../../../../../docs/framework/data/adonet/sql/linq/return-the-average-value-from-a-numeric-sequence.md)  

@@ -130,7 +130,7 @@ ms.locfileid: "57365049"
     [!code-csharp[DataGrid_GroupSortFilter#113](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#113)]
     [!code-vb[DataGrid_GroupSortFilter#113](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#113)]
 
-内の項目をフィルター処理する代わりに、<xref:System.Windows.Controls.DataGrid>フィルター処理のロジックと設定を提供するメソッドを作成して、<xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType>フィルターを適用するプロパティ。 このメソッドの例を表示するには、次を参照してください。[ビュー内のフィルター データ](../data/how-to-filter-data-in-a-view.md)します。
+内の項目をフィルター処理する代わりに、<xref:System.Windows.Controls.DataGrid>フィルター処理のロジックと設定を提供するメソッドを作成して、<xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType>フィルターを適用するプロパティ。 このメソッドの例を表示するには、[ビュー内のフィルター データ](../data/how-to-filter-data-in-a-view.md)を参照してください。
 
 ## <a name="example"></a>例
 

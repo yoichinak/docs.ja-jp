@@ -16,7 +16,7 @@ ms.locfileid: "54620387"
 # <a name="wcf-security-terminology"></a>WCF セキュリティ用語
 セキュリティについて説明するときに使用する用語の中には、だれもが知っているとは限らないものもあります。 ここでは、セキュリティ用語の一部を簡単に説明します。このトピックは、すべての項目について詳細に説明することを目的としたものではありません。  
   
- Windows Communication Foundation (WCF) のドキュメントで使用される用語の詳細については、次を参照してください。[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)します。  
+ Windows Communication Foundation (WCF) のドキュメントで使用される用語の詳細については、[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)を参照してください。  
   
  アクセス制御リスト (ACL: Access Control List)  
  オブジェクトに適用されるセキュリティ保護のリスト。 オブジェクトには、ファイル、プロセス、イベント、またはセキュリティ記述子を持つすべてのものが含まれます。ACL 内のエントリは、アクセス制御エントリ (ACE: Access Control Entry) と呼ばれます。 ACL には、随意 ACL とシステム ACL の 2 種類があります。  

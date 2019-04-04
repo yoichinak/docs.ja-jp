@@ -137,7 +137,7 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
   
- 詳細については<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>構文と例については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。  
+ 詳細については<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>構文と例については、、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。  
   
 <a name="opacity_animation_step3"></a>   
 ### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>パート 3 (XAML):ストーリー ボードをトリガーに関連付ける  
@@ -253,7 +253,7 @@ ms.locfileid: "57373739"
 #### <a name="repeatbehavior"></a>RepeatBehavior  
  <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティが、タイムラインの再生回数を指定します。 既定では、タイムラインがあるの反復カウント`1.0`、いずれかの再生、つまり時間、まったく、繰り返されない。  
   
- これらのプロパティとその他のユーザーの詳細については、次を参照してください。、[タイミング動作の概要](timing-behaviors-overview.md)します。  
+ これらのプロパティとその他のユーザーの詳細については、、[タイミング動作の概要](timing-behaviors-overview.md)を参照してください。  
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>プロパティにアニメーションを適用する  
@@ -268,7 +268,7 @@ ms.locfileid: "57373739"
   
 -   させる、<xref:System.Windows.Freezable>オブジェクトをアニメーションのターゲットで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../xaml-services/x-name-directive.md)名前を指定します。 使用するだけのコードでは、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページ オブジェクトを登録します。  
   
- 次のセクションでは、内の要素の名前付けの例を提供する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 名前付けとターゲット設定の詳細については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。  
+ 次のセクションでは、内の要素の名前付けの例を提供する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 名前付けとターゲット設定の詳細については、、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。  
   
 ### <a name="applying-and-starting-storyboards"></a>ストーリーボードの適用と開始  
  ストーリー ボードを起動する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、関連付けること、<xref:System.Windows.EventTrigger>します。 <xref:System.Windows.EventTrigger>は指定されたイベントが発生したときに実行するアクションを記述するオブジェクトです。 これらのアクションのいずれかを指定できます、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションは、ストーリー ボードを開始するために使用します。 イベント トリガーは、アプリケーションが特定のイベントに応答する方法を指定できるようにするため、概念はイベント ハンドラーに似ています。 イベント トリガーで完全に記述する、イベント ハンドラーとは異なり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; その他のコードは必要ありません。  
@@ -292,9 +292,9 @@ ms.locfileid: "57373739"
   
  ため、その<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>は既定値から変更されていない<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>アニメーションを保持して、最終的な値は 0 で終了時にします。 そのため、<xref:System.Windows.UIElement.Opacity%2A>のアニメーションの終了後に 0 で、四角形は終了します。 設定した場合、 <xref:System.Windows.UIElement.Opacity%2A> 、別の値に四角形のコードが表示されます、効果がない、アニメーションがまだに影響を与えるため、<xref:System.Windows.UIElement.Opacity%2A>プロパティ。  
   
- コードでアニメーション化されたプロパティの制御を取り戻す方法の 1 つが使用するには、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドに null を指定し、<xref:System.Windows.Media.Animation.AnimationTimeline>パラメーター。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
+ コードでアニメーション化されたプロパティの制御を取り戻す方法の 1 つが使用するには、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドに null を指定し、<xref:System.Windows.Media.Animation.AnimationTimeline>パラメーター。 詳細と例では、[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)を参照してください。  
   
- 持つプロパティ値を設定するが、<xref:System.Windows.Media.Animation.ClockState.Active>または<xref:System.Windows.Media.Animation.ClockState.Filling>効果がないアニメーションが表示されたら、プロパティの値は変更できます。 詳細については、次を参照してください。、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
+ 持つプロパティ値を設定するが、<xref:System.Windows.Media.Animation.ClockState.Active>または<xref:System.Windows.Media.Animation.ClockState.Filling>効果がないアニメーションが表示されたら、プロパティの値は変更できます。 詳細については、、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
   
 <a name="databindingAndAnimatingAnimationsSection"></a>   
 ## <a name="data-binding-and-animating-animations"></a>アニメーションのデータ バインディングとアニメーション化  
@@ -308,11 +308,11 @@ ms.locfileid: "57373739"
   
  アニメーションがデータ バインディングまたはアニメーションの変更を反映するためには、そのクロックを再生成する必要があります。 クロックは、自動的には再生成されません。 アニメーションの変更を反映するために、そのストーリー ボードを再適用を使用して、<xref:System.Windows.Media.Animation.BeginStoryboard>または<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド。 これらのメソッドのいずれかを使うと、アニメーションが再起動されます。 コードでは、使用することができます、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>ストーリー ボードをシフトするメソッドが前の位置に戻ります。  
   
- データの例では、アニメーションがバインドされている、参照してください[キー スプライン アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160011)します。 アニメーションとタイミング システムのしくみの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
+ データの例では、アニメーションがバインドされている、参照してください[キー スプライン アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160011)します。 アニメーションとタイミング システムのしくみの詳細については、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
   
 <a name="otherWaysToAnimateSection"></a>   
 ## <a name="other-ways-to-animate"></a>その他のアニメーション化方法  
- この概要の例では、ストーリーボードを使ってアニメーション化する方法を示します。 コードを使う場合は、その他のいくつかの方法でアニメーション化できます。 詳細については、次を参照してください。、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
+ この概要の例では、ストーリーボードを使ってアニメーション化する方法を示します。 コードを使う場合は、その他のいくつかの方法でアニメーション化できます。 詳細については、、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
   
 <a name="animation_samples"></a>   
 ## <a name="animation-samples"></a>アニメーションのサンプル  

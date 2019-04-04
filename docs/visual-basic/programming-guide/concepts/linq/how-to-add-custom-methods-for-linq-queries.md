@@ -51,7 +51,7 @@ End Module
  この拡張メソッドは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにある他の集計メソッドを呼び出すときと同じように、列挙可能な任意のコレクションに対して呼び出すことができます。  
   
 > [!NOTE]
->  Visual basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、次を参照してください。 [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)します。  
+>  Visual basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、[Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)を参照してください。  
   
  `double` 型の配列に対して `Median` メソッドを使用する方法を次のコード例に示します。  
   

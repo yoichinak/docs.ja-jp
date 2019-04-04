@@ -20,7 +20,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
   
  チェック ボックス コントロールは、各ユーザーによって行われた選択範囲を示すために使用がそのラジオ ボタン コントロールに似ています。 これらとはそのグループ内の 1 つだけのラジオ ボタンを一度に選択できます。 チェック ボックス コントロールで、ただし、任意の数のチェック ボックスを選択できます。  
   
- チェック ボックスは、単純データ バインディングを使用してデータベース内の要素に接続することがあります。 複数のチェック ボックスを使用してグループ化する可能性があります、<xref:System.Windows.Forms.GroupBox>コントロール。 これは、機能は、グループ化されたコントロールの周囲をまとめて移動して、フォーム デザイナーであるため視覚的な外観とユーザー インターフェイスのデザインに便利です。 詳細については、次を参照してください。 [Windows フォーム データ バインディング](../windows-forms-data-binding.md)と[GroupBox コントロール](groupbox-control-windows-forms.md)します。  
+ チェック ボックスは、単純データ バインディングを使用してデータベース内の要素に接続することがあります。 複数のチェック ボックスを使用してグループ化する可能性があります、<xref:System.Windows.Forms.GroupBox>コントロール。 これは、機能は、グループ化されたコントロールの周囲をまとめて移動して、フォーム デザイナーであるため視覚的な外観とユーザー インターフェイスのデザインに便利です。 詳細については、[Windows フォーム データ バインディング](../windows-forms-data-binding.md)と[GroupBox コントロール](groupbox-control-windows-forms.md)を参照してください。  
   
  <xref:System.Windows.Forms.CheckBox>コントロールに 2 つの重要なプロパティがある<xref:System.Windows.Forms.CheckBox.Checked%2A>と<xref:System.Windows.Forms.CheckBox.CheckState%2A>します。 <xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティは、どちらかを返します`true`または`false`します。 <xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティは、どちらかを返します<xref:System.Windows.Forms.CheckState.Checked>または<xref:System.Windows.Forms.CheckState.Unchecked>; 場合、<xref:System.Windows.Forms.CheckBox.ThreeState%2A>プロパティに設定されて`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>を返すことも<xref:System.Windows.Forms.CheckState.Indeterminate>します。 中間の状態で淡色表示を示す、オプションは使用できません、ボックスが表示されます。  
   

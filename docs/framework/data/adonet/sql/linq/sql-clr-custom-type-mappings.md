@@ -21,7 +21,7 @@ SQL Server と共通言語ランタイム (CLR) 間の型マッピングは、SQ
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>SQLMetal または O/R デザイナーを使用したカスタマイズ  
  SQLMetal と O/R デザイナーを使用すると、コード ファイルの内外の型マッピング情報を含むオブジェクト ファイルを自動作成できます。 これらのファイルはマッピングを再作成するたびに SQLMetal または O/R デザイナーによって上書きされるため、カスタム型マッピングを指定する場合は DBML ファイルをカスタマイズする方法をお勧めします。  
   
- SQLMetal または O/R デザイナーで型マッピングをカスタマイズするには、最初に DBML ファイルを生成します。 次に、コード ファイルやマッピング ファイルを生成する前に、DBML ファイルを変更して適切な型マッピングを指定します。 SQLMetal では、DBML ファイルの `Type` 属性と `DbType` 属性を手動で変更して、型マッピングをカスタマイズする必要があります。 O/R デザイナーでは、デザイナー内で変更を加えることができます。 詳細については、O/R デザイナーを使用して、次を参照してください。 [LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
+ SQLMetal または O/R デザイナーで型マッピングをカスタマイズするには、最初に DBML ファイルを生成します。 次に、コード ファイルやマッピング ファイルを生成する前に、DBML ファイルを変更して適切な型マッピングを指定します。 SQLMetal では、DBML ファイルの `Type` 属性と `DbType` 属性を手動で変更して、型マッピングをカスタマイズする必要があります。 O/R デザイナーでは、デザイナー内で変更を加えることができます。 詳細については、O/R デザイナーを使用して、[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を参照してください。  
   
 > [!NOTE]
 >  一部の型マッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。 型マッピングの実行時動作の関係を慎重に確認[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)カスタマイズを加える前にします。  

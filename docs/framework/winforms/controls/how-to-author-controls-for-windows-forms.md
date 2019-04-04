@@ -49,7 +49,7 @@ ms.locfileid: "57713415"
   
 9. 繰り返して、デザインを調整します。  
   
-10. コントロールをパッケージ化してデプロイします。 詳細については、次を参照してください。[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)します。  
+10. コントロールをパッケージ化してデプロイします。 詳細については、[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)

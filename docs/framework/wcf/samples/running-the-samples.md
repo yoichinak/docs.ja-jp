@@ -19,7 +19,7 @@ ms.locfileid: "56304675"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1.  場合は、サービスが IIS によってホストされている、次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることを確認します:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。 [確認] ページが表示されない場合は、次を参照してください。 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+1.  場合は、サービスが IIS によってホストされている、次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることを確認します:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。 [確認] ページが表示されない場合は、[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))を参照してください。  
   
 2.  サービスが自己ホスト型の場合は、言語固有のフォルダーの下の \service\bin にある Service.exe を実行します。 サービス アクティビティがサービス コンソール ウィンドウに表示されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "56304675"
   
     1.  サービスの実行に使用されているのがドメイン アカウントではない場合、クライアント構成ファイルを開き、エンドポイント定義のアドレス値をサービスの新しいアドレスに変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
-    2.  サービスの実行に使用されているのがドメイン アカウントの場合、サービスに対して Svcutil.exe を実行し、クライアントの構成を再生成します。 Svcutil.exe を実行する方法の詳細については、次を参照してください。 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 サンプルの構成ファイルではなく、生成されたファイルを使用します。 生成された構成ファイルには、追加の ID 情報があります (また、サービス エンドポイントへの接続に必要なすべての設定が、既定の設定であるにもかかわらず含まれています)。 Id 情報の詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)、および[ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)します。  
+    2.  サービスの実行に使用されているのがドメイン アカウントの場合、サービスに対して Svcutil.exe を実行し、クライアントの構成を再生成します。 Svcutil.exe を実行する方法の詳細については、[Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)を参照してください。 サンプルの構成ファイルではなく、生成されたファイルを使用します。 生成された構成ファイルには、追加の ID 情報があります (また、サービス エンドポイントへの接続に必要なすべての設定が、既定の設定であるにもかかわらず含まれています)。 Id 情報の詳細については、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)、および[ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)を参照してください。  
   
 4.  クライアント コンピューターで、コマンド プロンプトから Client.exe を起動します。  
   

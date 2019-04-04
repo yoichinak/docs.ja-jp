@@ -61,7 +61,7 @@ ms.locfileid: "57724961"
 > [!NOTE]
 >  遷移の <xref:System.Activities.Statements.Transition.Condition%2A> が `False` と評価された場合 (またはトリガーを共有する遷移すべての状態が `False` と評価された場合)、遷移は行われず、その状態からのすべての遷移のすべてのトリガーが再スケジュールされます。  
   
- ステート マシン ワークフローを作成する方法の詳細については、[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、 [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)、[アクティビティ デザイナーの状態](/visualstudio/workflow-designer/state-activity-designer)、 [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)、および[移行アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)を参照してください。  
+ ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、 [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)、[アクティビティ デザイナーの状態](/visualstudio/workflow-designer/state-activity-designer)、 [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)、および[移行アクティビティ デザイナー](/visualstudio/workflow-designer/transition-activity-designer)します。  
   
 ## <a name="state-machine-terminology"></a>ステート マシン用語  
  このセクションでは、このトピック全体で使用しているステート マシン用語の定義を示します。  

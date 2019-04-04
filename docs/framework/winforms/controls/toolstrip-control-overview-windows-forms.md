@@ -77,7 +77,7 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 |<xref:System.Windows.Forms.ToolStripControlHost>|具体的にはないその他のコントロールをホスト<xref:System.Windows.Forms.ToolStrip>コントロールを決定するが、<xref:System.Windows.Forms.ToolStrip>機能します。|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|指定するかどうかを<xref:System.Windows.Forms.ToolStripItem>、メイン レイアウトするのには、 <xref:System.Windows.Forms.ToolStrip>、オーバーフローに<xref:System.Windows.Forms.ToolStrip>、またはどちらもします。|  
   
- 詳細については、次を参照してください。 [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)します。  
+ 詳細については、[ToolStrip テクノロジの概要](toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.Forms.ToolStrip>

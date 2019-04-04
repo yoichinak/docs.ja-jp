@@ -30,7 +30,7 @@ ms.locfileid: "54623444"
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 配信のサポートについては、構築、WCF REST プログラミング モデルを定義する、<xref:System.ServiceModel.WebHttpBinding>と組み合わせて使用するバインディング<xref:System.ServiceModel.Description.WebHttpBehavior>フィードをサービスとして利用可能にします。 WCF REST プログラミング モデルの詳細については、次を参照してください。 [WCF Web HTTP プログラミング モデル概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)します。  
+ 配信のサポートについては、構築、WCF REST プログラミング モデルを定義する、<xref:System.ServiceModel.WebHttpBinding>と組み合わせて使用するバインディング<xref:System.ServiceModel.Description.WebHttpBehavior>フィードをサービスとして利用可能にします。 WCF REST プログラミング モデルの詳細については、[WCF Web HTTP プログラミング モデル概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)を参照してください。  
   
 > [!NOTE]
 >  Atom 1.0 仕様では、date コンストラクトで小数秒を指定できます。 シリアル化および逆シリアル化と WCF の実装には、秒の小数部が無視されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "54623444"
   
 ## <a name="extensibility"></a>機能拡張  
   
--   配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、次を参照してください。[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)します。  
+-   配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)

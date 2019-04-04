@@ -60,7 +60,7 @@ ms.locfileid: "57379030"
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>リソースが実際に定義されているターゲット アセンブリ内に存在する型を指定します。 A`ComponentResourceKey`定義して正確に知ることとは無関係に使用できる場所、<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>を定義しても、最終的に参照されたアセンブリから型を解決する必要があります。  
   
- 一般的な使用方法<xref:System.Windows.ComponentResourceKey>クラスのメンバーとして、公開されているキーを定義することです。 この方法で使用する、<xref:System.Windows.ComponentResourceKey>クラスのコンス トラクター、マークアップ拡張機能ではありません。 詳細については、次を参照してください。 <xref:System.Windows.ComponentResourceKey>、またはトピックの"定義し、を参照するキーのテーマのリソース"セクション[コントロールの作成の概要](../controls/control-authoring-overview.md)します。  
+ 一般的な使用方法<xref:System.Windows.ComponentResourceKey>クラスのメンバーとして、公開されているキーを定義することです。 この方法で使用する、<xref:System.Windows.ComponentResourceKey>クラスのコンス トラクター、マークアップ拡張機能ではありません。 詳細については、<xref:System.Windows.ComponentResourceKey>、またはトピックの"定義し、を参照するキーのテーマのリソース"セクション[コントロールの作成の概要](../controls/control-authoring-overview.md)を参照してください。  
   
  属性構文は、一般に使用するキーを確立してを参照するキーを持つリソース、用、`ComponentResourceKey`マークアップ拡張機能。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57379030"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リーダー実装では、このマークアップ拡張機能の処理がによって定義されている、<xref:System.Windows.ComponentResourceKey>クラス。  
   
- `ComponentResourceKey` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `ComponentResourceKey` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - <xref:System.Windows.ComponentResourceKey>

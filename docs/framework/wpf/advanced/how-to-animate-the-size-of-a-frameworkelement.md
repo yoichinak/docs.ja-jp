@@ -24,4 +24,4 @@ ms.locfileid: "57360993"
   
  要素のサイズをアニメーション化するアニメーションの変換を適用することでその<xref:System.Windows.UIElement.RenderTransform%2A>プロパティがアニメーション化されるより優れたパフォーマンスを提供しますその<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>を直接ため、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティでレイアウト パスがトリガーされません。  
   
- プロパティをアニメーション化の詳細については、次を参照してください。、[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。 変換の詳細については、次を参照してください。、[変換の概要](../graphics-multimedia/transforms-overview.md)します。
+ プロパティをアニメーション化の詳細については、、[アニメーションの概要](../graphics-multimedia/animation-overview.md)を参照してください。 変換の詳細については、、[変換の概要](../graphics-multimedia/transforms-overview.md)を参照してください。

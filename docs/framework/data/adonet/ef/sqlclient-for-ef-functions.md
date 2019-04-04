@@ -12,9 +12,9 @@ ms.locfileid: "54730634"
 # <a name="sqlclient-for-entity-framework-functions"></a>Entity Framework 用 SqlClient 関数
 Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) には、`System.DateTime` や `string` の操作を実行する関数の他に、数学計算および集計計算を実行する関数のセットが用意されています。 これらの関数は `SQLServer` 名前空間にあります。  
   
- すべてのプロバイダーで動作する関数の一覧は、次を参照してください。[正規関数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)します。  
+ すべてのプロバイダーで動作する関数の一覧は、[正規関数](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)を参照してください。  
   
- SQL Server 関数にどのように正規関数のマップの詳細については、次を参照してください。[概念モデル正規 SQL Server 関数にマッピング](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)します。  
+ SQL Server 関数にどのように正規関数のマップの詳細については、[概念モデル正規 SQL Server 関数にマッピング](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [概念モデル正規関数と SQL Server 関数とのマッピング](../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  
