@@ -45,13 +45,13 @@ ms.locfileid: "57358189"
 
 - Visual Studio 2017 またはそれ以降
 
-   最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
+   最新バージョンの Visual Studio のインストールの詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)を参照してください。
 
 ## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
 
 最初の手順では、アプリケーションの定義を 2 つのページとイメージを含むアプリケーション インフラストラクチャを作成します。
 
-1. Visual Basic または Visual C# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
+1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
    1. Visual Studio を開き、選択**ファイル** > **新規** > **プロジェクト**します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "57358189"
    </NavigationWindow>
    ```
 
-   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow>  は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、次を参照してください。[ナビゲーションの概要](../app-development/navigation-overview.md)します。
+   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow>  は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、[ナビゲーションの概要](../app-development/navigation-overview.md)を参照してください。
 
 5. 次のプロパティを変更、<xref:System.Windows.Navigation.NavigationWindow>要素。
 
@@ -233,7 +233,7 @@ ms.locfileid: "57358189"
 これらの各レイアウト コントロールは、その子要素に対する特別な種類のレイアウトをサポートしています。 `ExpenseIt` ページのサイズを変更できる、および各ページが他の要素の横の水平および垂直に配置された要素があります。 その結果、<xref:System.Windows.Controls.Grid>は、アプリケーションの最適なレイアウト要素です。
 
 > [!TIP]
-> 詳細については<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトの詳細については、次を参照してください。[レイアウト](../advanced/layout.md)します。
+> 詳細については<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトの詳細については、[レイアウト](../advanced/layout.md)を参照してください。
 
 セクションで、単一列テーブル 3 つの行と 10 ピクセルの余白を追加して作成する列と行の定義を<xref:System.Windows.Controls.Grid>で *`ExpenseItHome.xaml`* します。
 
@@ -270,7 +270,7 @@ ms.locfileid: "57358189"
 - <xref:System.Windows.Controls.Label> (一覧のヘッダーとして)。
 - <xref:System.Windows.Controls.Button> (クリックする一覧で選択されているユーザーの経費報告書を表示する)。
 
-行の各コントロールを配置、<xref:System.Windows.Controls.Grid>を設定して、<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>添付プロパティ。 添付プロパティの詳細については、次を参照してください。[添付プロパティの概要](../advanced/attached-properties-overview.md)します。
+行の各コントロールを配置、<xref:System.Windows.Controls.Grid>を設定して、<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>添付プロパティ。 添付プロパティの詳細については、[添付プロパティの概要](../advanced/attached-properties-overview.md)を参照してください。
 
 1. 開いている *`ExpenseItHome.xaml`* します。
 
@@ -387,7 +387,7 @@ ms.locfileid: "57358189"
 
     - `buttonStyle`:書式設定、<xref:System.Windows.Controls.Button>で`ExpenseItHome.xaml`します。
 
-    スタイルは、リソースとの子に注目してください、<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>プロパティ要素。 ここでは、スタイルはアプリケーション内のすべての要素に適用されます。 .NET Framework アプリケーションでリソースの使用の例は、次を参照してください。[アプリケーション リソースを使用](../advanced/how-to-use-application-resources.md)します。
+    スタイルは、リソースとの子に注目してください、<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>プロパティ要素。 ここでは、スタイルはアプリケーション内のすべての要素に適用されます。 .NET Framework アプリケーションでリソースの使用の例は、[アプリケーション リソースを使用](../advanced/how-to-use-application-resources.md)を参照してください。
 
 3. 開いている *`ExpenseItHome.xaml`* します。
 
@@ -425,7 +425,7 @@ ms.locfileid: "57358189"
     [!code-xaml[ExpenseIt#24](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#24)]
     [!code-xaml[ExpenseIt#22](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#22)]
 
-    データ テンプレートの詳細については、次を参照してください。[データ テンプレートの概要](../data/data-templating-overview.md)します。
+    データ テンプレートの詳細については、[データ テンプレートの概要](../data/data-templating-overview.md)を参照してください。
 
 4. 既存<xref:System.Windows.Controls.ListBox>次の XAML で。
 
@@ -457,7 +457,7 @@ ms.locfileid: "57358189"
 
 1. *ExpenseReportPage.xaml*を開きます。
 
-2. "Name"および"Department"の内容をバインド<xref:System.Windows.Controls.Label>要素を適切なデータ ソースのプロパティ。 データ バインディングの詳細については、次を参照してください。[データ バインディングの概要](../data/data-binding-overview.md)します。
+2. "Name"および"Department"の内容をバインド<xref:System.Windows.Controls.Label>要素を適切なデータ ソースのプロパティ。 データ バインディングの詳細については、[データ バインディングの概要](../data/data-binding-overview.md)を参照してください。
 
     [!code-xaml[ExpenseIt#31](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#31)]
 
