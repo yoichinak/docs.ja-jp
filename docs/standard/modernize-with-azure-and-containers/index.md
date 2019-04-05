@@ -4,6 +4,12 @@ description: リフト アンド シフトし、Azure クラウドとこの電�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
+ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675927"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 
