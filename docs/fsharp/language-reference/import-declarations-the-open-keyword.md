@@ -1,13 +1,13 @@
 ---
 title: インポート宣言:Open キーワード
 description: 完全修飾名を使用せずに参照できる要素を持つ F# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610321"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055002"
 ---
 # <a name="import-declarations-the-open-keyword"></a>インポート宣言:`open`キーワード
 
@@ -60,14 +60,14 @@ printfn "%A" empty
 
 ## <a name="autoopen-attribute"></a>AutoOpen 属性
 
-適用することができます、`AutoOpen`アセンブリに属性をアセンブリが参照されている場合に、名前空間またはモジュールが自動的に開きたい場合。 適用することも、`AutoOpen`親モジュールまたは名前空間が開かれるときに、そのモジュールを自動的に開くモジュールに属性します。 詳細については、[Core.AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)を参照してください。
+適用することができます、`AutoOpen`アセンブリに属性をアセンブリが参照されている場合に、名前空間またはモジュールが自動的に開きたい場合。 適用することも、`AutoOpen`親モジュールまたは名前空間が開かれるときに、そのモジュールを自動的に開くモジュールに属性します。 詳細については、次を参照してください。 [Core.AutoOpenAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)します。
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 属性
 
-一部のモジュール、レコード、または共用体の型を指定できます、`RequireQualifiedAccess`属性。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 この属性を戦略的に使用する場合は、よくを定義する型名を使用する、役立つように名前の競合を回避し、コードより回復力のあるライブラリの変更に。 詳細については、[Core.RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)を参照してください。
+一部のモジュール、レコード、または共用体の型を指定できます、`RequireQualifiedAccess`属性。 これらのモジュール、レコード、または共用体の要素を参照する場合は、インポート宣言を含めるかどうかに関係なく、修飾名を使用する必要があります。 この属性を戦略的に使用する場合は、よくを定義する型名を使用する、役立つように名前の競合を回避し、コードより回復力のあるライブラリの変更に。 詳細については、次を参照してください。 [Core.RequireQualifiedAccessAttribute クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)します。
 
 ## <a name="see-also"></a>関連項目
 
-- [# 言語リファレンス](index.md)
+- [F# 言語リファレンス](index.md)
 - [名前空間](namespaces.md)
 - [モジュール](modules.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: cdf2f9aebaac09ed3e03148fdf1bc899f1e1fc45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721997"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055210"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -58,13 +58,13 @@ ms.locfileid: "57721997"
   
  <xref:System.Windows.Forms.DataGrid> の有効なデータ ソースには、次が含まれます。  
   
--   <xref:System.Data.DataTable> クラス  
+-   <xref:System.Data.DataTable> class  
   
--   <xref:System.Data.DataView> クラス  
+-   <xref:System.Data.DataView> class  
   
--   <xref:System.Data.DataSet> クラス  
+-   <xref:System.Data.DataSet> class  
   
--   <xref:System.Data.DataViewManager> クラス  
+-   <xref:System.Data.DataViewManager> class  
   
  ソースがデータセットの場合、データセットは、フォーム内のオブジェクト、または XML Web サービスによってフォームに渡されるオブジェクトの可能性があります。 型指定されたか、型指定されていないデータセットにバインドできます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "57721997"
  ![DataGrid コントロールに含まれるオブジェクト](./media/vbcolumns1.gif "vbColumns1")  
 DataGrid コントロールに含まれるオブジェクトを次の図に示します。  
   
- テーブルのスタイルおよび列のスタイルは、`MappingName` プロパティを適切な <xref:System.Data.DataTable.TableName%2A> プロパティと <xref:System.Data.DataColumn.ColumnName%2A> プロパティに設定することで <xref:System.Data.DataTable> オブジェクトおよび <xref:System.Data.DataColumn> オブジェクトと同期されます。 列のスタイルを持たない <xref:System.Windows.Forms.DataGridTableStyle> が、有効なデータ ソースにバインドされた <xref:System.Windows.Forms.DataGrid> コントロールに追加され、テーブルのスタイルの <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> プロパティが有効な <xref:System.Data.DataTable.TableName%2A> プロパティに設定される場合に、<xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが、そのテーブルのスタイルに対して作成されます。 <xref:System.Data.DataTable> の <xref:System.Data.DataTable.Columns%2A> のコレクションで見つかった各 <xref:System.Data.DataColumn> に対して、対応する <xref:System.Windows.Forms.DataGridColumnStyle> が <xref:System.Windows.Forms.GridColumnStylesCollection> に追加されます。 <xref:System.Windows.Forms.GridColumnStylesCollection> は、<xref:System.Windows.Forms.DataGridTableStyle> の <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> プロパティによりアクセスされます。 <xref:System.Windows.Forms.GridColumnStylesCollection> で <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> メソッドまたは <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> メソッドを使用して、列をグリッドに追加または削除できます。 詳細については、「[方法 :テーブルを追加し、列を Windows フォーム DataGrid コントロール](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)と[方法。削除または非表示にする列で、Windows フォーム DataGrid コントロール](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)します。  
+ テーブルのスタイルおよび列のスタイルは、`MappingName` プロパティを適切な <xref:System.Data.DataTable.TableName%2A> プロパティと <xref:System.Data.DataColumn.ColumnName%2A> プロパティに設定することで <xref:System.Data.DataTable> オブジェクトおよび <xref:System.Data.DataColumn> オブジェクトと同期されます。 列のスタイルを持たない <xref:System.Windows.Forms.DataGridTableStyle> が、有効なデータ ソースにバインドされた <xref:System.Windows.Forms.DataGrid> コントロールに追加され、テーブルのスタイルの <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> プロパティが有効な <xref:System.Data.DataTable.TableName%2A> プロパティに設定される場合に、<xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが、そのテーブルのスタイルに対して作成されます。 <xref:System.Data.DataTable> の <xref:System.Data.DataTable.Columns%2A> のコレクションで見つかった各 <xref:System.Data.DataColumn> に対して、対応する <xref:System.Windows.Forms.DataGridColumnStyle> が <xref:System.Windows.Forms.GridColumnStylesCollection> に追加されます。 <xref:System.Windows.Forms.GridColumnStylesCollection> <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>のプロパティ、<xref:System.Windows.Forms.DataGridTableStyle>します。 <xref:System.Windows.Forms.GridColumnStylesCollection> で <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> メソッドまたは <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> メソッドを使用して、列をグリッドに追加または削除できます。 詳細については、「[方法 :テーブルを追加し、列を Windows フォーム DataGrid コントロール](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)と[方法。削除または非表示にする列で、Windows フォーム DataGrid コントロール](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)します。  
   
  列の型のコレクションは、豊富な書式設定と編集機能を持つ <xref:System.Windows.Forms.DataGridColumnStyle> クラスを拡張します。 すべての列の型は、<xref:System.Windows.Forms.DataGridColumnStyle> 基底クラスから継承します。 作成されるクラスは、<xref:System.Web.UI.WebControls.DataGridColumn> の基底である <xref:System.Data.DataColumn> の <xref:System.Data.DataColumn.DataType%2A> プロパティに依存します。 たとえば、<xref:System.Data.DataColumn.DataType%2A> プロパティが <xref:System.Boolean> に設定された <xref:System.Data.DataColumn> は、<xref:System.Windows.Forms.DataGridBoolColumn> に関連付けられます。 各列の型に関する説明を次の表に示します。  
   
@@ -141,7 +141,7 @@ DataGrid コントロールに含まれるオブジェクトを次の図に示�
   
 ## <a name="see-also"></a>関連項目
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
-- [方法: Windows フォームの DataGrid コントロールをデータ ソースにバインドします。](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [方法: Windows フォームの DataGrid コントロールの書式設定します。](how-to-format-the-windows-forms-datagrid-control.md)
+- [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールの書式を設定する](how-to-format-the-windows-forms-datagrid-control.md)

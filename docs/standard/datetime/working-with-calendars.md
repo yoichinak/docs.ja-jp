@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921352"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055314"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -163,7 +163,7 @@ ms.locfileid: "58921352"
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-特定の時代 (年号) を表す数値に対応する名前は、その数値を <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> メソッドに渡すことで取得できます。 次の例では、これらのメソッドを呼び出して、<xref:System.Globalization.GregorianCalendar> クラスでサポートされる時代 (年号) に関する情報を取得しています。
+特定の時代 (年号) を表す数値に対応する名前は、その数値を <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> メソッドに渡すことで取得できます。 次の例では、これらのメソッドを呼び出して、<xref:System.Globalization.GregorianCalendar> クラスでサポートされる時代 (年号) に関する情報を取得しています。 各サポートされている日本語のカレンダーの時代 (年号) の 2 つ目の年の 1 月 1 日に対応するグレゴリオ暦の日付と現在時代 (年号) の 2 つ目の年の 1 月 1 日に対応するグレゴリオ暦の日付が表示されます。
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ ms.locfileid: "58921352"
 
 ### <a name="instantiating-a-date-with-an-era"></a>日付、時代 (年号) のインスタンス化します。
 
-2 つの<xref:System.Globalization.Calendar>複数の時代 (年号) をサポートするクラスでは、特定の年、月、および日の月の値で構成される日付をあいまいになることができます。 たとえば、すべて時代 (年号) でサポートされている、<xref:System.Globalization.JapaneseCalendar>の数は 1 年があります。 通常、時代 (年号) が指定されていない場合は、日時および暦のどちらのメソッドでも、値が現在の時代 (年号) に属すると見なされます。 場合は true これは、<xref:System.DateTime.%23ctor%2A>と<xref:System.DateTimeOffset.%23ctor%2A>型のパラメーターを含むコンス トラクター <xref:System.Globalization.Calendar>、だけでなく[JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))と[JapaneseLunisolarCalendar.ToDateTime。](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))メソッド。 次の例は、指定されていない、時代 (年号) の 2 つ目の年の 1 月 1 日を表す日付をインスタンス化します。 例の出力として、日付は平成時代、この例の実行時に現在の時代 (年号) の 2 つ目の年として解釈されます。 時代 (年号)、平成、によって返される文字列の年の前に、<xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType>メソッド、グレゴリオ暦では、1990 年 1 月 1 日に対応します。 (平成の時代 (年号) の範囲は 1989 年からグレゴリオ暦カレンダーにおける 2019年に) です。
+2 つの<xref:System.Globalization.Calendar>複数の時代 (年号) をサポートするクラスでは、特定の年、月、および日の月の値で構成される日付をあいまいになることができます。 たとえば、すべて時代 (年号) でサポートされている、<xref:System.Globalization.JapaneseCalendar>の数は 1 年があります。 通常、時代 (年号) が指定されていない場合は、日時および暦のどちらのメソッドでも、値が現在の時代 (年号) に属すると見なされます。 場合は true これは、<xref:System.DateTime.%23ctor%2A>と<xref:System.DateTimeOffset.%23ctor%2A>型のパラメーターを含むコンス トラクター <xref:System.Globalization.Calendar>、だけでなく[JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))と[JapaneseLunisolarCalendar.ToDateTime。](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))メソッド。 次の例は、指定されていない、時代 (年号) の 2 つ目の年の 1 月 1 日を表す日付をインスタンス化します。 Reiwa の時代 (年号) が現在の時代 (年号) の例を実行する場合は、日付が Reiwa の時代 (年号) の 2 つ目の年として解釈されます。 時代 (年号)、令和、によって返される文字列の年の前に、<xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType>メソッド、グレゴリオ暦で 2020 年 1 月 1日年に対応しています。 (Reiwa の時代 (年号) を構成のグレゴリオ暦カレンダーの 2019 年の開始) します。
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

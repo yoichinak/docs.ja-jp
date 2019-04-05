@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370723"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055327"
 ---
 # <a name="styling-and-templating"></a>スタイルとテンプレート
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]スタイルとテンプレートは、開発者および設計者が視覚的に説得力のある効果を作成し、製品の一貫した外観を作成できる、一連の機能 (スタイル、テンプレート、トリガー、およびストーリーボード) を表します。 開発者や設計者は、アプリケーション単位で広範囲に外観をカスタマイズできますが、アプリケーション内およびアプリケーション間で外観の保守および共有を可能にするには、強力なスタイルとテンプレートのモデルが必要です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はそのモデルを提供します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スタイルとテンプレートは、一連の開発者および設計者は、視覚的に説得力のある効果を作成して、それらの製品の一貫した外観を作成できるようにする機能 (スタイル、テンプレート、トリガー、およびストーリー ボード) を参照してください。 開発者や設計者は、アプリケーション単位で広範囲に外観をカスタマイズできますが、アプリケーション内およびアプリケーション間で外観の保守および共有を可能にするには、強力なスタイルとテンプレートのモデルが必要です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] そのモデルを提供します。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスタイル モデルの他の機能は、表示とロジックの分離です。 つまり、設計者は、開発者が C# や Visual Basic を使用してプログラミング ロジックについて作業するのと同時に [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のみを使用してアプリケーションの外観について作業できます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "57370723"
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>バインディング、動的リソース、およびイベント ハンドラー  
  `Setter.Value` プロパティを使用して、[バインディング マークアップ拡張機能](../advanced/binding-markup-extension.md)または[DynamicResource マークアップ拡張機能](../advanced/dynamicresource-markup-extension.md)を指定できます。 詳細については、指定された例を参照して、<xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType>プロパティ。  
   
- ここまでは、この概要は、プロパティ値を設定する setterの使用のみを説明しています。 スタイルではイベント ハンドラーも指定できます。 詳細については、「 <xref:System.Windows.EventSetter> 」を参照してください。  
+ ここまでは、この概要は、プロパティ値を設定する setterの使用のみを説明しています。 スタイルではイベント ハンドラーも指定できます。 詳細については、「<xref:System.Windows.EventSetter>」を参照してください。  
   
 <a name="styling_datatemplates"></a>   
 ## <a name="data-templates"></a>データ テンプレート  
@@ -198,5 +198,5 @@ ms.locfileid: "57370723"
   
 ## <a name="see-also"></a>関連項目
 - [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)
-- [方法: ControlTemplate によって生成された要素を検索します。](how-to-find-controltemplate-generated-elements.md)
+- [方法: ControlTemplate によって生成された要素を検索する](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate によって生成された要素を検索する](../data/how-to-find-datatemplate-generated-elements.md)

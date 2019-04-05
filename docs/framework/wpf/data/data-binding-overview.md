@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634558"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055353"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>などの <xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など <xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>を 1 つのデータ項目の柔軟なスタイルまたはデータ項目のコレクションを有効にする機能が組み込まれました。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>s など<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など s<xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>柔軟なスタイルの単一のデータ項目またはデータ項目のコレクションを有効にする組み込みの機能があります。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のデータ バインディング機能には、本質的にデータ バインディングをサポートする広範なプロパティ、データの柔軟な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 表現、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] からのビジネス ロジックの明確な分離など、従来のモデルより優れた長所がいくつかあります  
   
@@ -33,7 +33,7 @@ ms.locfileid: "58634558"
   
  データ バインディングの例については、[データ バインディング デモ](https://go.microsoft.com/fwlink/?LinkID=163703)の次のアプリケーション [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を参照してください。  
   
- ![データ バインディングのサンプル スクリーン ショット](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
+ ![データ バインド サンプルのスクリーン ショット](./media/databinding-databindingdemo.png "DataBinding_DataBindingDemo")  
   
  上記は、オークション品目の一覧を表示するアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] です。 このアプリケーションは、データ バインディングの次の機能を示しています。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "58634558"
   
 -   ターゲット プロパティは、依存関係プロパティである必要があります。 ほとんど<xref:System.Windows.UIElement>プロパティは、依存関係プロパティと、読み取り専用のものを除く、ほとんどの依存関係プロパティが既定ではデータ バインディングをサポートします。 (だけ<xref:System.Windows.DependencyObject>依存関係プロパティとそのすべての種類を定義できます<xref:System.Windows.UIElement>から派生する<xref:System.Windows.DependencyObject>)。  
   
--   図では指定されていませんが、バインディング ソース オブジェクトはカスタム [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトに制限されないことに注意してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] の形式でデータをサポートします。 いくつかの例を提供する場合、バインディング ソースがあります、 <xref:System.Windows.UIElement>、任意のリスト オブジェクト、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクトに関連付けられている[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]データまたは Web サービス、またはを含む XmlNode、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 詳しくは、「[バインディング ソースの概要](binding-sources-overview.md)」をご覧ください。  
+-   図では指定されていませんが、バインディング ソース オブジェクトはカスタム [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトに制限されないことに注意してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングの形式でデータをサポートする[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクトと[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]します。 いくつかの例を提供する場合、バインディング ソースがあります、 <xref:System.Windows.UIElement>、任意のリスト オブジェクト、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクトに関連付けられている[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]データまたは Web サービス、またはを含む XmlNode、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 詳しくは、「[バインディング ソースの概要](binding-sources-overview.md)」をご覧ください。  
   
  他の [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] トピックを読みながら、バインディングを確立すると、バインディング ターゲットをバインディング ソース*に*バインドしていることを理解することが重要です。 例では、基になるいくつかを表示する場合の[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]内のデータを<xref:System.Windows.Controls.ListBox>バインドするデータ バインディングを使用して、<xref:System.Windows.Controls.ListBox>を[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。  
   
@@ -366,7 +366,7 @@ ms.locfileid: "58634558"
   
 -   A<xref:System.Windows.Controls.ExceptionValidationRule>バインディング ソース プロパティの更新中にスローされる例外を確認します。 前述の例では、`StartPrice` は整数型です。 ユーザーが整数に変換できない値を入力すると、例外がスローされ、バインディングが無効としてマークされます。 設定に別の構文、<xref:System.Windows.Controls.ExceptionValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
--   A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、<xref:System.Windows.Controls.DataErrorValidationRule>を参照してください。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
+-   A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、次を参照してください。<xref:System.Windows.Controls.DataErrorValidationRule>します。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
  派生することによって、独自の検証規則を作成することも、<xref:System.Windows.Controls.ValidationRule>クラスと実装、<xref:System.Windows.Controls.ValidationRule.Validate%2A>メソッド。 次の例で使用される規則、 *Add Product Listing* 「開始日」<xref:System.Windows.Controls.TextBox>から、[データ バインディングとは何ですか?](#what_is_data_binding)セクション。  
   
@@ -435,5 +435,5 @@ ms.locfileid: "58634558"
 - [LINQ クエリの結果にバインドする](how-to-bind-to-the-results-of-a-linq-query.md)
 - [データ バインディング](../advanced/optimizing-performance-data-binding.md)
 - [データ バインディング デモ](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)
 - [ADO.NET データ ソースにバインドする](how-to-bind-to-an-ado-net-data-source.md)

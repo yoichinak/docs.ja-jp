@@ -2,12 +2,12 @@
 title: Byref
 description: Byref と F# での低レベルのプログラミングに使用される byref のような種類について説明します。
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976552"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055366"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 使用して、ポインターに書き込む、`outref<'T>`または`byref<'T>`へのポインターを取得する値を行う必要があります`mutable`します。
@@ -84,7 +85,7 @@ f &dt
 次のコードがあるとします。
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 意味は次の意味としては。
@@ -121,7 +122,7 @@ C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を�
 |F#コンス トラクター|生成されたコンス トラクター|
 |------------|-----------------|
 |`inref<'T>` 引数|`[In]` 引数の属性|
-|`inref<'T>` 戻り値|`modreq` 値の属性|
+|`inref<'T>` return|`modreq` 値の属性|
 |`inref<'T>` 抽象スロットまたは実装|`modreq` 引数または戻り値|
 |`outref<'T>` 引数|`[Out]` 引数の属性|
 
@@ -133,7 +134,7 @@ C# のサポート、`in ref`と`out ref`に加えて、キーワード`ref`を�
 2. `this`変更可能なフィールドを持たない構造体の型のポインター。
 3. メモリの場所のアドレスが別の派生`inref<_>`ポインター。
 
-暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例:
+暗黙的なアドレスのとき、`inref`が行われている、型の引数とオーバー ロード`SomeType`型の引数とオーバー ロードに優先`inref<SomeType>`。 例えば:
 
 ```fsharp
 type C() =

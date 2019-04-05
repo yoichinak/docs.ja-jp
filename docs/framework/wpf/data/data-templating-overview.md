@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376105"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055340"
 ---
 # <a name="data-templating-overview"></a>データ テンプレートの概要
 WPF のデータ テンプレート モデルは、データのプレゼンテーションを定義する優れた柔軟性を提供します。 WPF のコントロールには、データ プレゼンテーションのカスタマイズをサポートする組み込み機能があります。 このトピックでは最初に定義する方法を示します、<xref:System.Windows.DataTemplate>し、カスタム ロジックと階層データを表示するためのサポートに基づくテンプレートの選択など、他のデータ テンプレート機能を紹介します。  
@@ -41,7 +41,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
 ### <a name="without-a-datatemplate"></a>DataTemplate がない場合  
  なし、 <xref:System.Windows.DataTemplate>、<xref:System.Windows.Controls.ListBox>現在次に示します。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  何が起こっているかがないと、特定の指示、<xref:System.Windows.Controls.ListBox>既定の呼び出しによって`ToString`コレクション内のオブジェクトを表示しようとしています。 そのため場合、`Task`オブジェクトの上書き、`ToString`メソッド、<xref:System.Windows.Controls.ListBox>基になるコレクション内の各ソース オブジェクトの文字列表現を表示します。  
   
@@ -52,7 +52,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  次に、<xref:System.Windows.Controls.ListBox>次のようになります。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  ただし、これは制限があり、柔軟性ではありません。 また、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] データにバインドしている場合、`ToString` をオーバーライドすることはできません。  
   
@@ -66,7 +66,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  これで、<xref:System.Windows.Controls.ListBox>次のようになります。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>リソースとしての DataTemplate の作成  
@@ -103,7 +103,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  次のスクリーン ショット、<xref:System.Windows.Controls.ListBox>で修正された<xref:System.Windows.DataTemplate>:  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  設定することが<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>に<xref:System.Windows.HorizontalAlignment.Stretch>上、<xref:System.Windows.Controls.ListBox>項目の幅がスペース全体を占めることを確認します。  
   
@@ -111,7 +111,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>プロパティに設定<xref:System.Windows.HorizontalAlignment.Stretch>、<xref:System.Windows.Controls.ListBox>今すぐ次に示します。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>DataTrigger を使ってプロパティ値を適用する  
@@ -125,18 +125,18 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  これで、アプリケーションの表示は次のようになります。 家のタスクは黄色の境界線で、会社のタスクは水色の境界線で示されます。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  この例では、<xref:System.Windows.DataTrigger>を使用して、<xref:System.Windows.Setter>プロパティ値を設定します。 トリガー クラスにもがある、<xref:System.Windows.TriggerBase.EnterActions%2A>と<xref:System.Windows.TriggerBase.ExitActions%2A>アニメーションなどのアクションのセットを開始するためのプロパティ。 さらに、<xref:System.Windows.MultiDataTrigger>クラスを使用すると、変更を適用する複数のデータ バインドされたプロパティ値に基づいています。  
   
- 同じ効果を実現するために別の方法は、バインドする、<xref:System.Windows.Controls.Border.BorderBrush%2A>プロパティを`TaskType`プロパティと色を返す値コンバーターがに基づいて、`TaskType`値。 コンバーターを使って上の効果を作成するのは、パフォーマンスに関して若干効率的です。 さらに、独自のコンバーターを作成すると、独自のロジックを提供できるので柔軟性が向上します。 最終的に、どの手法を選ぶかは、シナリオと設定に依存します。 コンバーターを作成する方法については、<xref:System.Windows.Data.IValueConverter>を参照してください。  
+ 同じ効果を実現するために別の方法は、バインドする、<xref:System.Windows.Controls.Border.BorderBrush%2A>プロパティを`TaskType`プロパティと色を返す値コンバーターがに基づいて、`TaskType`値。 コンバーターを使って上の効果を作成するのは、パフォーマンスに関して若干効率的です。 さらに、独自のコンバーターを作成すると、独自のロジックを提供できるので柔軟性が向上します。 最終的に、どの手法を選ぶかは、シナリオと設定に依存します。 コンバーターを作成する方法については、次を参照してください。<xref:System.Windows.Data.IValueConverter>します。  
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>DataTemplate に含まれるもの  
 
 内でトリガーを配置しました。 前の例では、<xref:System.Windows.DataTemplate>を使用して、<xref:System.Windows.DataTemplate>します。<xref:System.Windows.DataTemplate.Triggers%2A> プロパティを使用する方法を示します。 <xref:System.Windows.Setter>トリガーの要素のプロパティの値を設定します (、<xref:System.Windows.Controls.Border>要素) 内にある、<xref:System.Windows.DataTemplate>します。 ただし場合、プロパティを`Setters`に不安が現在内にある要素のプロパティではない<xref:System.Windows.DataTemplate>を使用してプロパティを設定するより適切な場合があります、<xref:System.Windows.Style>については、<xref:System.Windows.Controls.ListBoxItem>クラス (場合、コントロールにバインドしているが、 <xref:System.Windows.Controls.ListBox>)。 する場合など、<xref:System.Windows.Trigger>をアニメーション化する、<xref:System.Windows.UIElement.Opacity%2A>値、項目の項目をマウスがポイントするとトリガーを定義する内で、<xref:System.Windows.Controls.ListBoxItem>スタイル。 例については、「[Introduction to Styling and Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)」(スタイルとテンプレートのサンプルの概要) をご覧ください。
   
- 一般に、注意、 <xref:System.Windows.DataTemplate> 、生成された各に適用されている<xref:System.Windows.Controls.ListBoxItem>(が実際に適用される方法と場所の詳細については、、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>ページを参照してください。)。 <xref:System.Windows.DataTemplate>プレゼンテーションとデータ オブジェクトの外観を気がします。 ほとんどの場合、プレゼンテーションでは、どのようなアイテムなどの他のすべての側面次のように選択されている方法、または<xref:System.Windows.Controls.ListBox>lays、項目のレイアウトの定義に属していない、<xref:System.Windows.DataTemplate>します。 例については、「[ItemsControl のスタイルとテンプレートの設定](#DataTemplating_ItemsControl)」セクションをご覧ください。  
+ 一般に、注意、 <xref:System.Windows.DataTemplate> 、生成された各に適用されている<xref:System.Windows.Controls.ListBoxItem>(が実際に適用される方法と場所の詳細については、次を参照してください。、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>ページです。)。 <xref:System.Windows.DataTemplate>プレゼンテーションとデータ オブジェクトの外観を気がします。 ほとんどの場合、プレゼンテーションでは、どのようなアイテムなどの他のすべての側面次のように選択されている方法、または<xref:System.Windows.Controls.ListBox>lays、項目のレイアウトの定義に属していない、<xref:System.Windows.DataTemplate>します。 例については、「[ItemsControl のスタイルとテンプレートの設定](#DataTemplating_ItemsControl)」セクションをご覧ください。  
   
 <a name="Styling_StyleSelection"></a>   
 ## <a name="choosing-a-datatemplate-based-on-properties-of-the-data-object"></a>データ オブジェクトのプロパティに基づく DataTemplate の選択  
@@ -165,7 +165,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  インプレースでのテンプレート セレクター、<xref:System.Windows.Controls.ListBox>次のように表示されます。  
   
- ![データ テンプレートのサンプルのスクリーンショット](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![データ テンプレート サンプルのスクリーン ショット](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 これがこの例の結論です。 完全なサンプルについては、「[Introduction to Data Templating Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro)」(データ テンプレート サンプルの概要) をご覧ください。
 
@@ -191,7 +191,7 @@ WPF のデータ テンプレート モデルは、データのプレゼンテ�
   
  例を使用して示します<xref:System.Windows.HierarchicalDataTemplate>、他のリストを含むリストのデータを簡単に表示できます。 次に示すのは、この例のスクリーンショットです。  
   
- ![HierarchicalDataTemplate サンプルのスクリーンショット](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![HierarchicalDataTemplate サンプルのスクリーン ショット](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>関連項目
 - [データ バインディング](../advanced/optimizing-performance-data-binding.md)
