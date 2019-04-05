@@ -1,11 +1,17 @@
 ---
-title: '文字列 - C# プログラミング ガイド'
+title: 文字列 - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, strings'
-  - 'strings [C#]'
+- C# language, strings
+- strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
+ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920689"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -68,7 +74,7 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
  書式指定文字列は、その内容が実行時に動的に決定される文字列です。 書式指定文字列を作成するには、文字列内の中かっこの内側に "*挿入式*" かプレースホルダーを埋め込みます。 中かっこ (`{...}`) 内にあるものはすべて値に解決され、実行時に書式設定された文字列として出力されます。 書式指定文字列を作成するには、文字列補間と複合書式設定の 2 つの方法があります。
 
 ### <a name="string-interpolation"></a>文字列補間
-C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/tokens/interpolated.md) は、特殊文字 `$` によって識別され、中かっこ内に挿入式を含みます。 文字列補間を初めて使用する場合は、簡単な概要として「[文字列補間 - C# の対話形式チュートリアル](../../tutorials/intro-to-csharp/interpolated-strings.yml)」をご覧ください。
+C# 6.0 以降で使用できる ["*補間文字列*"](../../language-reference/tokens/interpolated.md) は、特殊文字 `$` によって識別され、中かっこ内に挿入式を含みます。 文字列補間を初めて使用する場合は、簡単な概要として「[文字列補間 - C# の対話形式チュートリアル](../../tutorials/exploration/interpolated-strings.yml)」をご覧ください。
 
 文字列補間を使ってコードの読みやすさと保守性を向上させます。 文字列補間がもたらす結果は `String.Format` メソッドと同じですが、使いやすさとインラインのわかりやすさが向上します。
 
