@@ -1,5 +1,5 @@
 ---
-title: '方法: マウスとキーボード イベントをコードでシミュレートします。'
+title: '方法: マウス イベントとキーボード イベントをコードでシミュレートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57713762"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>方法: マウスとキーボード イベントをコードでシミュレートします。
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>方法: マウス イベントとキーボード イベントをコードでシミュレートする
 Windows フォームは、プログラムでマウスおよびキーボード入力をシミュレートするためのいくつかのオプションを提供します。 ここでは、これらのオプションの概要について説明します。  
   
 ## <a name="simulating-mouse-input"></a>マウス入力のシミュレート  
