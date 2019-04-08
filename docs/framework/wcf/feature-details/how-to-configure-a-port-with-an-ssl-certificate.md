@@ -1,5 +1,5 @@
 ---
-title: '方法: SSL 証明書でポートを構成します。'
+title: '方法: SSL 証明書を使用してポートを構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139816"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書でポートを構成します。
-自己ホスト型 Windows Communication Foundation (WCF) サービスを作成するときに、<xref:System.ServiceModel.WSHttpBinding>クラスを使用してトランスポート セキュリティ、X.509 証明書でポートを構成することも必要があります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)を参照してください。  
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書を使用してポートを構成する
+自己ホスト型 Windows Communication Foundation (WCF) サービスを作成するときに、<xref:System.ServiceModel.WSHttpBinding>クラスを使用してトランスポート セキュリティ、X.509 証明書でポートを構成することも必要があります。 自己ホスト型サービスを作成するのでなければ、インターネット インフォメーション サービス (IIS) でサービスをホストできます。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
  ポートを構成する場合に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] を実行している場合は、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、このツールは自動的にインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、[Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)を参照してください。 [Windows サポート ツールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=94840)Httpcfg.exe ツールの構文について説明します。  
+ [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] または [!INCLUDE[wxp](../../../../includes/wxp-md.md)] を実行している場合は、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] では、このツールは自動的にインストールされています。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、次を参照してください。 [Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)します。 [Windows サポート ツールのドキュメント](https://go.microsoft.com/fwlink/?LinkId=94840)Httpcfg.exe ツールの構文について説明します。  
   
  [!INCLUDE[wv](../../../../includes/wv-md.md)] を実行している場合は、Netsh.exe ツールを使用します。これは既にインストールされています。  
   
@@ -130,4 +130,5 @@ ms.locfileid: "54521717"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

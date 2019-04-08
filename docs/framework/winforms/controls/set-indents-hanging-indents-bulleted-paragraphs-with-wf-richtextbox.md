@@ -1,5 +1,5 @@
 ---
-title: '方法: インデント、ぶら下げインデント、および箇条書き段落を Windows フォームの RichTextBox コントロールでを設定します。'
+title: '方法: Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140648"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>方法: インデント、ぶら下げインデント、および箇条書き段落を Windows フォームの RichTextBox コントロールでを設定します。
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールを使用してインデント、ぶら下げインデント、箇条書き段落を設定する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。 設定して箇条書きとして選択した段落を書式設定することができます、<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>プロパティ。 使用することも、 <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>、 <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>、および<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>左側と、コントロールの右端と左端の他の行のテキストの段落のインデントを設定するプロパティ。  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>段落を箇条書きとして書式設定するには  
@@ -66,9 +66,10 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
     ```  
   
     > [!NOTE]
-    >  これらすべてのプロパティは、選択したテキストを含む段落に影響し、現在の挿入ポイントの後に入力されるテキストにも影響します。 たとえば、ユーザーが段落内の単語を選択して、インデントを調整すると、新しい設定はその単語を含む段落全体に適用され、選択した段落の後に入力される段落にも適用されます。 プログラムでテキストを選択する方法の詳細については、<xref:System.Windows.Forms.TextBoxBase.Select%2A>を参照してください。  
+    >  これらすべてのプロパティは、選択したテキストを含む段落に影響し、現在の挿入ポイントの後に入力されるテキストにも影響します。 たとえば、ユーザーが段落内の単語を選択して、インデントを調整すると、新しい設定はその単語を含む段落全体に適用され、選択した段落の後に入力される段落にも適用されます。 プログラムでテキストを選択する方法の詳細については、次を参照してください。<xref:System.Windows.Forms.TextBoxBase.Select%2A>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

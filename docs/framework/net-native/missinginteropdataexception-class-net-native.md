@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137957"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException クラス (.NET ネイティブ)
 **Windows 10 の Windows アプリ用 .NET ([!INCLUDE[net_native](../../../includes/net-native-md.md)]のみ)**  
@@ -80,6 +80,7 @@ ms.locfileid: "54698064"
  `MissingInteropDataException` クラスには、正常なメソッド呼び出しのためにどの型のメタデータが必要かを示す、1 つの一意メンバーである `MissingType` プロパティが含まれています。 その他のメンバーはすべて基底クラス <xref:System.Exception?displayProperty=nameWithType> から継承されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Exception?displayProperty=nameWithType>
 - [MissingMetadataException クラス](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
