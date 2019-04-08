@@ -1,26 +1,26 @@
 ---
-title: '方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。'
+title: '方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: e12498bc71957d49893e49e54095b6bb184ac2c3
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074658"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする
 コントロールがフォームに追加し、アプリケーションのユーザー インターフェイスを決定したら後、は、実行時に、ユーザーは変更して、アプリケーションに関連するデータを保存できるように、データ ソースにコントロールをバインドできます。  
   
  使用して最も簡単に実現は、Windows フォーム コントロールまたは一連のコントロールをバインドする、<xref:System.Windows.Forms.BindingSource>コントロールをフォーム上のコントロールとデータ ソース間のブリッジとして。  
   
  フォーム上の 1 つまたは複数のコントロールをデータにバインドできます。次の手順で、<xref:System.Windows.Forms.TextBox>コントロールがデータ ソースにバインドします。  
   
- データベースから取得したデータ ソースにバインドすることは、手順を完了するには、と見なされます。 その他のデータ ストアからデータ ソースを作成する方法の詳細については、[新しいデータ ソースの追加](/visualstudio/data-tools/add-new-data-sources)を参照してください。  
+ データベースから取得したデータ ソースにバインドすることは、手順を完了するには、と見なされます。 その他のデータ ストアからデータ ソースを作成する方法の詳細については、次を参照してください。[新しいデータ ソースの追加](/visualstudio/data-tools/add-new-data-sources)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -60,6 +60,7 @@ ms.locfileid: "56441919"
      **DataSource** UI 型エディターが終了し、データ セット<xref:System.Windows.Forms.BindingSource>およびテーブル アダプターをフォームにデータ接続が追加されたことを特定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [新しいデータ ソースの追加](/visualstudio/data-tools/add-new-data-sources)

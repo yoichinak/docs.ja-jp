@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 04eb56fe78aa2d9ef5ab0daae4ba1c873cfc2b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097760"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
 カスタム コントロールでは、プロパティとしてコレクションを公開が場合があります。 このチュートリアルを使用する方法について説明、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>デザイン時にコレクションをシリアル化する方法を制御するクラス。 適用、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値をコレクション プロパティにより、プロパティをシリアル化されます。  
@@ -36,9 +36,9 @@ ms.locfileid: "57712189"
   
 #### <a name="to-create-a-control-with-a-serializable-collection"></a>シリアル化可能なコレクションを使用してコントロールを作成するには  
   
-1.  という名前の Windows コントロール ライブラリ プロジェクトを作成する`SerializationDemoControlLib`します。 詳細については、[Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))を参照してください。  
+1.  という名前の Windows コントロール ライブラリ プロジェクトを作成する`SerializationDemoControlLib`します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。  
   
-2.  名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)を参照してください。  
+2.  名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。  
   
 3.  **プロパティ**ウィンドウで、設定の値、<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>プロパティを`10`します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57712189"
     |プロパティ|変更後の値|  
     |--------------|---------------|  
     |**Multiline**|`true`|  
-    |**ドッキング ステーション**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**ドッキング**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
@@ -138,7 +138,8 @@ ms.locfileid: "57712189"
 -   [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
 - [デザイナーのシリアル化の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 - [方法: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

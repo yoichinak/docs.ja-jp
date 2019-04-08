@@ -1,5 +1,5 @@
 ---
-title: '方法: 指定した位置のテキストの描画'
+title: '方法: テキストを指定の位置に描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3f54da182e6cc1489eadba6fa1d3cef683c3ba51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075512"
 ---
-# <a name="how-to-draw-text-at-a-specified-location"></a>方法: 指定した位置のテキストの描画
+# <a name="how-to-draw-text-at-a-specified-location"></a>方法: テキストを指定の位置に描画する
 カスタム描画を実行するときに、指定された位置から始まる 1 つの水平方向にテキストを描画できます。 使用して、この方法でテキストを描画することができます、<xref:System.Drawing.Graphics.DrawString%2A>のメソッドをオーバー ロード、<xref:System.Drawing.Graphics>を受け取るクラス、<xref:System.Drawing.Point>または<xref:System.Drawing.PointF>パラメーター。 <xref:System.Drawing.Graphics.DrawString%2A>メソッドも必要になります、<xref:System.Drawing.Brush>と <xref:System.Drawing.Font>  
   
  使用することも、<xref:System.Windows.Forms.TextRenderer.DrawText%2A>のメソッドをオーバー ロード、<xref:System.Windows.Forms.TextRenderer>を受け取る、<xref:System.Drawing.Point>します。 <xref:System.Windows.Forms.TextRenderer.DrawText%2A> 必要です、<xref:System.Drawing.Color>と<xref:System.Drawing.Font>します。  
@@ -46,7 +46,8 @@ ms.locfileid: "58412241"
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`でのパラメーターである<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)
+
+- [方法: GDI を使用してテキストを描画する](how-to-draw-text-with-gdi.md)
 - [フォントとテキストの使用](using-fonts-and-text.md)
-- [方法: フォント ファミリとフォントを作成します。](how-to-construct-font-families-and-fonts.md)
-- [方法: 四角形内にテキストを折り返して描画](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [方法: フォント ファミリとフォントを作成する](how-to-construct-font-families-and-fonts.md)
+- [方法: 四角形内にテキストを折り返して描画する](how-to-draw-wrapped-text-in-a-rectangle.md)

@@ -1,5 +1,5 @@
 ---
-title: 空白 XAML での処理
+title: XAML での空白の処理
 ms.date: 03/30/2017
 helpviewer_keywords:
 - East Asian characters [XAML Services]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102233"
 ---
-# <a name="white-space-processing-in-xaml"></a>空白 XAML での処理
+# <a name="white-space-processing-in-xaml"></a>XAML での空白の処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  
   
 <a name="whitespace_definition"></a>   
@@ -75,6 +75,7 @@ XAML の言語規則の状態によってその有意の空白を処理する必
  また、フロー ドキュメント モデルで改行を意味する特定のインライン要素では、空白が有意なコレクションであっても、余分なスペースが生じるは意図的にする必要があります。 など、<xref:System.Windows.Documents.LineBreak>要素と同じ目的には、 \<BR/> にタグを付ける[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]、マークアップでは、読みやすくするため、通常、<xref:System.Windows.Documents.LineBreak>は改行を入れてで後続のテキストから区切られます。 その改行は、正規化されて後続の行の先頭のスペースになってはなりません。 クラス定義は、その動作を有効にする、<xref:System.Windows.Documents.LineBreak>要素が適用される、 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>、によって解釈されるし、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]空白文字を囲むことを意味するプロセッサ<xref:System.Windows.Documents.LineBreak>は常に切り捨てられます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML 文字エンティティと XAML](xml-character-entities-and-xaml.md)
 - [xml:space の XAML での処理](xml-space-handling-in-xaml.md)

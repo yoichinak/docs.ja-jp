@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: ef9fcd31253283248dfe773ac4dde4fcbb358a2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098924"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
   
-|Event|説明|  
+|event|説明|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|<xref:System.Data.DataTable.EndInit%2A> の `DataTable` メソッドが呼び出された後に発生します。 このイベントは、主にデザイン時のシナリオをサポートすることを目的としています。|  
 |<xref:System.Data.DataTable.ColumnChanged>|<xref:System.Data.DataColumn> で値が正常に変更された後に発生します。|  
@@ -80,6 +80,7 @@ ms.locfileid: "54660984"
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataAdapter のイベント処理](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [DataSet のイベント処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)

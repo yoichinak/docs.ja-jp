@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102350"
 ---
 # <a name="graphics"></a>グラフィックス
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プランには、マルチ メディア、ベクター グラフィックス、アニメーション、および簡単興味深いユーザー インターフェイスやコンテンツを構築する開発者向けコンテンツの構成のサポートが統合されています。  
@@ -26,9 +26,10 @@ ms.locfileid: "57361162"
  [図形](shapes.md)  
  [変換](transformations.md)  
  [グラフィックス レンダリングのレジストリ設定](graphics-rendering-registry-settings.md)  
- [方法トピック](graphics-how-to-topics.md)  
+ [方法のトピック](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
