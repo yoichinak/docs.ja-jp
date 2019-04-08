@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072845"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows フォームの ClickOnce 配置
 次のトピックでは、Windows フォーム アプリケーションをクライアント コンピューターに簡単に配置するために使用されるテクノロジである [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] について説明します。  
@@ -38,16 +38,16 @@ ms.locfileid: "57702569"
  [ClickOnce と Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Authenticode テクノロジが信頼されたアプリケーション配置で使用される方法について説明します。  
   
- [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [チュートリアル: ClickOnce アプリケーションを手動で展開します。](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  コマンド ラインと SDK ツールを使用し、Visual Studio を使用せずに [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションを配置する方法について説明します。  
   
- [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [方法: ClickOnce アプリケーション用のクライアント コンピューターに信頼された発行元を追加します。](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  信頼されたアプリケーションの配置に必要なクライアント コンピューターの 1 回限りの構成について説明します。  
   
  [方法: 配置の更新用に別の場所を指定する](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  SDK ツールを使用して、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションを構成し、新しいバージョンのアプリケーションの別の場所を確認する方法を示します。  
   
- [チュートリアル: ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [チュートリアル: チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  API 呼び出しを使用して、アプリケーションが初めて読み込もうとしたときにアセンブリを取得する方法を示します。  
   
  [方法: オンライン ClickOnce アプリケーションでクエリ文字列を取得する](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
@@ -63,6 +63,7 @@ ms.locfileid: "57702569"
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] データ ディレクトリで利用できるファイルにマークする方法を示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション設定の概要](./advanced/application-settings-overview.md)
 - [ClickOnce アプリケーションの発行](/visualstudio/deployment/publishing-clickonce-applications)
 - [ClickOnce アプリケーションのコマンド ラインからのビルド](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)

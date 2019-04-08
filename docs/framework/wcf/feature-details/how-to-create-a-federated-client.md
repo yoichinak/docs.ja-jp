@@ -1,5 +1,5 @@
 ---
-title: '方法: フェデレーション クライアントを作成します。'
+title: '方法: フェデレーション クライアントを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 18c01c8ea6ada24a551b92fc571b68b336e10f64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 457c09ec381db97bc757b9288c9d6ebc0890a305
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104326"
 ---
-# <a name="how-to-create-a-federated-client"></a>方法: フェデレーション クライアントを作成します。
+# <a name="how-to-create-a-federated-client"></a>方法: フェデレーション クライアントを作成する
 Windows Communication Foundation (WCF) でのクライアントの作成、*フェデレーション サービス*の 3 つの主な手順で構成されます。  
   
 1.  構成、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)または同様のカスタム バインディング。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。 代わりに、実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)フェデレーション サービスと 1 つ以上と通信するための構成ファイルを生成するフェデレーション サービスのメタデータ エンドポイントに対してセキュリティ トークン サービスです。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
 > [!NOTE]
 >  クライアントが、偽装された資格情報、<xref:System.Security.Cryptography.CryptographicException> バインディングやカスタムの発行済みトークン、および非対称キーを使用すると、<xref:System.ServiceModel.WSFederationHttpBinding> がスローされる可能性があります。 <xref:System.ServiceModel.WSFederationHttpBinding> プロパティと <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> プロパティをそれぞれ <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> に設定すると、<xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> バインディングとカスタムの発行済みトークンで非対称キーが使用されます。 クライアントがメッセージを送信しようとするときに、クライアントが偽装している ID のユーザー プロファイルが存在しないと、<xref:System.Security.Cryptography.CryptographicException> がスローされます。 この問題を回避するには、クライアント コンピューターにログオンした後、または `LoadUserProfile` を呼び出した後に、メッセージを送信します。  
   
- ここでは、これらの手順について詳しく説明します。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。 フェデレーション サービスの動作方法の詳細については、[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)を参照してください。  
+ ここでは、これらの手順について詳しく説明します。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。 フェデレーション サービスの動作方法の詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>フェデレーション サービスの構成を生成し、確認するには  
   
@@ -161,10 +161,11 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
 >  特定の URI に範囲指定された証明書というクライアントの概念は、該当する URI でエンドポイントを公開するサービスへの送信呼び出しを行うアプリケーションにだけ適用されます。 によって返されるコレクション内のサーバーで構成されているものなど、発行済みトークンの署名に使用される証明書には適用されません、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>の<xref:System.ServiceModel.Security.IssuedTokenServiceCredential>クラス。 詳細については、「[方法 :フェデレーション サービスで資格情報を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [方法: WSFederationHttpBinding を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [方法: ローカル発行者を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [方法: WSFederationHttpBinding を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [方法: フェデレーション サービスで資格情報を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: ローカル発行者を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [方法: メタデータ エンドポイントをセキュリティで保護します。](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [方法: セキュリティで保護されたメタデータ エンドポイント](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)

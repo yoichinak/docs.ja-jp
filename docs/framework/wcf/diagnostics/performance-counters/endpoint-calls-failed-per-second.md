@@ -2,12 +2,12 @@
 title: エンドポイント:1 秒あたりの失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: bcbe9da4-c8dd-4e27-b630-11611adc7580
-ms.openlocfilehash: 03fbdd83246fa811424f445823f705a3bef5697a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52419f45adde768d19d6b46642d52ad0a1844197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100029"
 ---
 # <a name="endpoint-calls-failed-per-second"></a>エンドポイント:1 秒あたりの失敗した呼び出し
 カウンター名:1 秒あたりの呼び出しに失敗しました。  
@@ -22,4 +22,5 @@ ms.locfileid: "54608038"
  このカウンターは、このエンドポイントで未処理の例外が発生すると常にインクリメントされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [コントラクトおよびサービスのエラーの指定と処理](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

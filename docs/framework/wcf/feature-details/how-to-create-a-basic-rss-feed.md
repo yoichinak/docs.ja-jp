@@ -1,18 +1,18 @@
 ---
-title: '方法: 基本的な RSS フィードを作成します。'
+title: '方法: 基本的な RSS フィードを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 1de8d252be4740ad2a23ce1074d772364529eecf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073833"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>方法: 基本的な RSS フィードを作成します。
+# <a name="how-to-create-a-basic-rss-feed"></a>方法: 基本的な RSS フィードを作成する
 Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 ここでは、RSS 配信フィードを公開する配信サービスを作成する方法について説明します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
@@ -95,5 +95,6 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
  上記のコードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll が参照されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

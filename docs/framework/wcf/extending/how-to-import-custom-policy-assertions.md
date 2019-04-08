@@ -1,18 +1,18 @@
 ---
-title: '方法: カスタム ポリシー アサーションをインポートします。'
+title: '方法: カスタム ポリシー アサーションをインポートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073625"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをインポートします。
+# <a name="how-to-import-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをインポートする
 ポリシー アサーションはサービス エンドポイントの機能と要件を説明します。  クライアント アプリケーションはサービス メタデータにあるポリシー アサーションを使用して、クライアント バインディングを構成したり、サービス エンドポイントのサービス コントラクトをカスタマイズしたりできます。  
   
  カスタム ポリシー アサーションは、<xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> インターフェイスを実装して、このオブジェクトをメタデータ システムに渡すか、またはアプリケーション構成ファイルに実装型を登録することによってインポートします。  <xref:System.ServiceModel.Description.IPolicyImportExtension> インターフェイスの実装は、既定のコンストラクターを提供する必要があります。  
@@ -64,6 +64,7 @@ ms.locfileid: "54674782"
 1.  メタデータをインポートする前に、インポーターを <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> プロパティに追加します (たとえば、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> を使用している場合)。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

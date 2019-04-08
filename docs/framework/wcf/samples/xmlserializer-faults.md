@@ -2,12 +2,12 @@
 title: XmlSerializer エラー
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: 71d273f1fe695fb8210eed7492ef987716d3b8ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69b68603225a8d2cf2e7a97f4d6cf7edb9c3ffab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073044"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer エラー
 <xref:System.Xml.Serialization.XmlSerializer> のエラー コントラクトのサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> を使用して、エラー情報をサービスからクライアントに通信する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、いくつか追加コードが内部例外をエラーに変換するサービスに追加します。 クライアントは 0 による除算を試行し、サービスを強制的にエラー状態にします。  
@@ -57,5 +57,6 @@ public interface ICalculator
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\XmlSerializerFaults`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.XmlSerializerFormatAttribute>
 - <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>

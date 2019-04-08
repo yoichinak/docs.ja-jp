@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104092"
 ---
 # <a name="how-to-clone-a-printer"></a>方法: プリンターを複製する
 ほとんどの企業が、ある時点で、購入、同じモデルの複数のプリンターです。 通常、これらがすべてインストールと実質的に同じ構成設定。 かかることがあります各プリンターをインストールしてエラーが発生します。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>名前空間と<xref:System.Printing.PrintServer.InstallPrintQueue%2A>Microsoft .NET Framework で公開されているクラスでは、すぐに既存の印刷キューから任意の数の複製がその他の印刷キューをインストールすることです。  
@@ -56,6 +56,7 @@ ms.locfileid: "57378807"
  [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
 - <xref:System.Printing.LocalPrintServer>
