@@ -23,7 +23,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58842266"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
-Visual basic の条件付きコンパイラ定数を定義します。  
+Visual Basic の条件付きコンパイラ定数を定義します。  
   
 ## <a name="syntax"></a>構文  
   

@@ -22,7 +22,7 @@ ms.locfileid: "58821050"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  不足している `Sub Main` ステートメントを指定するか、存在する場合はコード内の適切な位置に移動します。 詳細については`Sub Main`を参照してください[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
+1.  不足している `Sub Main` ステートメントを指定するか、存在する場合はコード内の適切な位置に移動します。 詳細については`Sub Main`を参照してください[Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
   
 2.  内のプロジェクトのスタートアップ オブジェクトの場所を指定、**スタートアップ フォーム**のボックス、**プロジェクト デザイナー**します。  
   

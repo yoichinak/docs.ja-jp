@@ -58,14 +58,14 @@ ms.locfileid: "55675271"
 ## <a name="remarks"></a>Remarks  
  .NET framework version 3.5 では、Code Document Object Model (CodeDOM) コード プロバイダーを使用してプロバイダーに固有のオプションをサポートできる、`<providerOption>`要素。  
   
- .NET Framework 3.5 では、更新された .NET Framework 2.0 アセンブリが含まれていて、新しい型を含む新しいバージョン 3.5 アセンブリを提供します。 Microsoft c# と Visual Basic コード プロバイダーは、.NET Framework 2.0 アセンブリに含まれるが、version 3.5 のコンパイラをサポートするが更新されました。 既定では、更新されたコード プロバイダーは、バージョン 2.0 コンパイラ用のコードを生成します。 使用することができます、 `<providerOption>` 3.5 をターゲット コンパイラのバージョンを変更する要素。 これを行うには、"CompilerVersion"を指定の`name`属性と"v3.5"用、`value`属性。 小文字の"v"のバージョン番号の前にする必要があります。  
+ .NET Framework 3.5 では、更新された .NET Framework 2.0 アセンブリが含まれていて、新しい型を含む新しいバージョン 3.5 アセンブリを提供します。 Microsoft C# と Visual Basic コード プロバイダーは、.NET Framework 2.0 アセンブリに含まれるが、version 3.5 のコンパイラをサポートするが更新されました。 既定では、更新されたコード プロバイダーは、バージョン 2.0 コンパイラ用のコードを生成します。 使用することができます、 `<providerOption>` 3.5 をターゲット コンパイラのバージョンを変更する要素。 これを行うには、"CompilerVersion"を指定の`name`属性と"v3.5"用、`value`属性。 小文字の"v"のバージョン番号の前にする必要があります。  
   
  行うことができます、バージョン指定グローバルを追加して、`<providerOption>`を .NET Framework 2.0 Machine.config または Web.config ファイルのルート要素。 Machine.config ファイルで 3.5 に既定のコンパイラ バージョンを更新した場合ことができますに変更する戻るアプリケーションごとに 2.0 を使用して、`<providerOption>`アプリケーション構成ファイル内の要素。  
   
  CodeDOM コード プロバイダーの実装を受け取るコンス トラクターを提供することによってカスタム オプションを処理できる、`providerOptions`型のパラメーター<xref:System.Collections.Generic.IDictionary%602>します。  
   
 ## <a name="example"></a>例  
- 次の例では、c# コード プロバイダーのバージョン 3.5 を使用する必要がありますを指定する方法を示します。  
+ 次の例では、C# コード プロバイダーのバージョン 3.5 を使用する必要がありますを指定する方法を示します。  
   
 ```xml  
 <configuration>  

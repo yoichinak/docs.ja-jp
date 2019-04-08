@@ -51,7 +51,7 @@ End Module
  この拡張メソッドは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにある他の集計メソッドを呼び出すときと同じように、列挙可能な任意のコレクションに対して呼び出すことができます。  
   
 > [!NOTE]
->  Visual basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、[Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)を参照してください。  
+>  Visual Basic でできますか、またはを使用するメソッドの呼び出しの標準的なクエリ構文、`Aggregate`または`Group By`句。 詳細については、[Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)と[By 句のグループ](../../../../visual-basic/language-reference/queries/group-by-clause.md)を参照してください。  
   
  `double` 型の配列に対して `Median` メソッドを使用する方法を次のコード例に示します。  
   
@@ -125,7 +125,7 @@ Function Median(Of T)(ByVal source As IEnumerable(Of T),
 End Function  
 ```  
   
- これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 Visual basic では、この目的のため、ラムダ式を使用できます。 また、使用する場合、`Aggregate`または`Group By`句、メソッドの呼び出しではなく、任意の値またはこの句は、スコープ内の式を渡すことができます。  
+ これで、任意の型の一連のオブジェクトに対して `Median` メソッドを呼び出すことができます。 型に固有のメソッド オーバーロードがない場合は、デリゲート パラメーターを渡す必要があります。 Visual Basic では、この目的のため、ラムダ式を使用できます。 また、使用する場合、`Aggregate`または`Group By`句、メソッドの呼び出しではなく、任意の値またはこの句は、スコープ内の式を渡すことができます。  
   
  次のコード例では、整数の配列と文字列の配列に対して `Median` メソッドを呼び出す方法を示します。 文字列の場合は、配列に格納されている文字列の長さの中央値が計算されます。 この例は、それぞれのケースについて、`Median` メソッドに <xref:System.Func%602> デリゲート パラメーターを渡す方法を示しています。  
   

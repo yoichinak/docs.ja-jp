@@ -43,7 +43,7 @@ ms.locfileid: "58654550"
   
 1.  起動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]を開き、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  Visual c# および Windows のカテゴリを選択して、 **WPF ユーザー コントロール ライブラリ**テンプレート。  
+2.  Visual C# および Windows のカテゴリを選択して、 **WPF ユーザー コントロール ライブラリ**テンプレート。  
   
 3.  新しいプロジェクトに `MyControls` という名前を付けます。  
   
@@ -192,7 +192,7 @@ namespace MyControls
   
 1.  起動[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]を開き、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  Visual c# および Windows のカテゴリを選択して、 **Windows フォーム アプリケーション**テンプレート。  
+2.  Visual C# および Windows のカテゴリを選択して、 **Windows フォーム アプリケーション**テンプレート。  
   
 3.  新しいプロジェクトに `WFHost` という名前を付けます。  
   

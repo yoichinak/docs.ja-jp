@@ -10,7 +10,7 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56092008"
 ---
 # <a name="samples"></a>サンプル
-このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
+このトピックでは、Visual Basic および C# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  SampleQueries ソリューションの Visual Basic バージョン  
@@ -26,7 +26,7 @@ ms.locfileid: "56092008"
   
 -   参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
   
--   詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。  
+-   詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と C# のコード例を完了します。 詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)

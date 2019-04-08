@@ -79,5 +79,5 @@ ms.locfileid: "55675336"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [/appconfig (c# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [/appconfig (C# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [.NET framework アセンブリ統合の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

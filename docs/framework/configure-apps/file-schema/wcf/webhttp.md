@@ -32,8 +32,8 @@ ms.locfileid: "55259871"
 |属性|説明|  
 |---------------|-----------------|  
 |automaticFormatSelectionEnabled|このプロパティが `true` に設定されている場合は、使用する最適な形式が WCF インフラストラクチャで決定されます。 形式の自動選択は、既定で、下位互換性のために無効になっています。 形式の自動選択は、プログラムで有効にすることも、構成ファイルを使用して有効にすることもできます。|  
-|defaultBodyStyle|返されたメッセージの既定の本文のスタイルを指定します。 詳細については、次を参照してください。<xref:System.ServiceModel.Web.WebMessageBodyStyle>と[WCF Web HTTP 書式](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)します。|  
-|defaultOutgoingResponseFormat|メッセージの既定の送信応答形式を指定します。 詳細については、次を参照してください。 [WCF Web HTTP 書式](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)します。|  
+|defaultBodyStyle|返されたメッセージの既定の本文のスタイルを指定します。 詳細については、<xref:System.ServiceModel.Web.WebMessageBodyStyle>と[WCF Web HTTP 書式](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)を参照してください。|  
+|defaultOutgoingResponseFormat|メッセージの既定の送信応答形式を指定します。 詳細については、[WCF Web HTTP 書式](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)を参照してください。|  
 |faultExceptionEnabled|内部サーバー エラー (HTTP ステータス コード: 500) が発生したときに FaultException が生成されるかどうかを指定するフラグを取得または設定します。|  
 |helpEnabled| ヘルプ ページが有効かどうかを示す値を取得または設定します。|  
   

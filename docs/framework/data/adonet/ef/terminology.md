@@ -44,7 +44,7 @@ ms.locfileid: "55904126"
 |独立した関連付け (アソシエーション)|独立オブジェクトによって表され、追跡されるエンティティ間のアソシエーション。|  
 |key|エンティティ型の一意のインスタンスを識別するために使用されるプロパティまたはプロパティ セットを指定するエンティティ型の属性。 オブジェクト レイヤーでは、<xref:System.Data.EntityKey> クラスで表現されます。<br /><br /> 詳細については、[キー要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl)と[エンティティ キー](../../../../../docs/framework/data/adonet/entity-key.md)を参照してください。|  
 |遅延読み込み|クエリがオブジェクトを返す場合、関連オブジェクトは同時に読み込まれません。 代わりに、ナビゲーション プロパティへのアクセス時に自動的に読み込まれます。|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Visual c# および Visual Basic での直接的な宣言型の方法で表現できるに走査、フィルター、およびプロジェクション操作を許可するクエリ演算子のセットを定義するクエリ構文。<br /><br /> 詳細については、[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)を参照してください。|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Visual C# および Visual Basic での直接的な宣言型の方法で表現できるに走査、フィルター、およびプロジェクション操作を許可するクエリ演算子のセットを定義するクエリ構文。<br /><br /> 詳細については、[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)を参照してください。|  
 |マップ|概念モデルの項目とストレージ モデルの項目の対応付けの指定。<br /><br /> 詳細については、[MSL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)を参照してください。|  
 |.msl ファイル|MSL で表現された概念モデルとストレージ モデルの間のマッピングを含む XML ファイル。|  
 |マッピング仕様言語 (MSL)|概念モデルで定義された項目をストレージ モデルの項目に対応付ける XML ベースの言語。<br /><br /> 詳細については、[MSL 仕様](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)を参照してください。|  

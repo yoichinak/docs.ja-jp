@@ -91,7 +91,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  メッセージ ヘッダーへの情報の配置と、メッセージ ヘッダーからの情報の抽出は、メッセージ本文を使用する場合と似ています。 ストリーミングがサポートされていないため、プロセスは若干簡略化されます。 ヘッダーは常に強制的にバッファーに保持されるため、同じヘッダーの内容に何度もアクセスすることが可能であり、各ヘッダーに任意の順序でアクセスできます。 ヘッダーと、XML リーダーを取得する使用可能な汎用メカニズムはありませんが、ある、`MessageHeader`このような機能を備えた読み取り可能なヘッダーを表す WCF の内部サブクラスです。 この種の `MessageHeader` は、カスタム アプリケーション ヘッダーを持つメッセージが到着したときにチャネル スタックによって作成されます。 これにより、サービス フレームワークは、逆シリアル化エンジン ( <xref:System.Runtime.Serialization.DataContractSerializer>など) を使用してこれらのヘッダーを解釈できます。  
   
- 詳細については、次を参照してください。 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)します。  
+ 詳細については、[Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)を参照してください。  
   
 ## <a name="message-properties"></a>メッセージ プロパティ  
  メッセージには、プロパティを含めることができます。 *"プロパティ"* とは、文字列名に関連付けられた任意の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトです。 プロパティには、 `Properties` の `Message`プロパティからアクセスします。  
@@ -100,7 +100,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  たとえば、WCF の一部として含まれる HTTP トランスポート チャネルはなど各種の HTTP 状態コードを生成できる"404 (Not Found)"や「500 (内部サーバー エラー)」のクライアントに応答を送信するとします。 応答メッセージを送信する前に確認するかどうか、`Properties`の`Message`型のオブジェクトを格納する"httpResponse"というプロパティが含まれて<xref:System.ServiceModel.Channels.HttpResponseMessageProperty>します。 このようなプロパティが見つかった場合、 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> プロパティを調べ、そのステータス コードを使用します。 該当のプロパティが見つからなかった場合は、既定の "200 (OK)" コードが使用されます。  
   
- 詳細については、次を参照してください。 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)します。  
+ 詳細については、[Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)を参照してください。  
   
 ### <a name="the-message-as-a-whole"></a>メッセージ全体  
  これまで、メッセージのさまざまな部分に個別にアクセスするためのメソッドについて説明してきましたが、 <xref:System.ServiceModel.Channels.Message> クラスには、メッセージ全体を使用するためのメソッドも用意されています。 たとえば、 `WriteMessage` メソッドは、メッセージ全体を XML ライターに書き込みます。  
@@ -242,7 +242,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
  より複雑なメッセージ コントラクトや `Message`ベースのプログラミング モデルに移行する特別な理由がない限り、操作コントラクト パラメーターの簡単なリストとして送信または受信するように情報を記述することをお勧めします。  
   
 ### <a name="5-stream"></a>5.ストリーム  
- `Stream` またはそのサブクラスのいずれかを、操作コントラクトで使用したり、メッセージ コントラクトでメッセージ本文の単独の部分として使用したりすることは、これまでに説明したものとは別のプログラミング モデルと考えることができます。 ストリーミングに対応する独自の `Stream` サブクラスを作成する場合を除き、 `Message` をこのように使用することは、コントラクトをストリーミング方式で使用できることを保証する唯一の方法です。 詳細については、次を参照してください。 [Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)します。  
+ `Stream` またはそのサブクラスのいずれかを、操作コントラクトで使用したり、メッセージ コントラクトでメッセージ本文の単独の部分として使用したりすることは、これまでに説明したものとは別のプログラミング モデルと考えることができます。 ストリーミングに対応する独自の `Stream` サブクラスを作成する場合を除き、 `Message` をこのように使用することは、コントラクトをストリーミング方式で使用できることを保証する唯一の方法です。 詳細については、[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)を参照してください。  
   
  `Stream` またはそのサブクラスのいずれかをこのように使用した場合、シリアライザーは呼び出されません。 送信メッセージの場合、 `Message` インターフェイスのセクションで説明したように、特殊なストリーミング <xref:System.Xml.IStreamProvider> サブクラスが作成され、ストリームが書き込まれます。 受信メッセージの場合は、サービス フレームワークが受信メッセージに `Stream` サブクラスを作成し、操作に提供します。  
   

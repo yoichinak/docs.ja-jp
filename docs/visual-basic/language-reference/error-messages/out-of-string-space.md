@@ -12,7 +12,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58821284"
 ---
 # <a name="out-of-string-space-visual-basic"></a>文字列スペースが不足しています。(Visual Basic)
-Visual basic の場合は、非常に大きな文字列を使用することができます。 ただし、他のプログラムと、文字列内で操作する方法の要件によっては、このエラーが発生することができますも。  
+Visual Basic の場合は、非常に大きな文字列を使用することができます。 ただし、他のプログラムと、文字列内で操作する方法の要件によっては、このエラーが発生することができますも。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

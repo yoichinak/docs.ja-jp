@@ -101,7 +101,7 @@ ms.locfileid: "57365842"
 -   <xref:System.SerializableAttribute>属性が適用されています。  
   
 > [!NOTE]
->  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))します。  
+>  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))を参照してください。  
   
  WPF の UI 型は、リモート処理可能ではありません。 この問題を解決するためには、WPF は、ホスト アプリケーションから表示する WPF の UI アドインを使用して作成を有効にする .NET Framework アドイン モデルを拡張します。 このサポートが 2 つの種類での WPF で提供される:<xref:System.AddIn.Contract.INativeHandleContract>インターフェイスと 2 つの静的メソッドによって実装される、<xref:System.AddIn.Pipeline.FrameworkElementAdapters>クラス:<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。 大まかに、これらの型とメソッドは次のように使用されます。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "57365842"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI を返すアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)します。  
+ UI を返すアドインを実装する方法については、例では、[UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)を参照してください。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>ユーザー インターフェイスであるアドイン  
@@ -149,7 +149,7 @@ ms.locfileid: "57365842"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI であるアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)します。  
+ UI であるアドインを実装する方法については、例では、[UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)を参照してください。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>複数の UI を返すアドイン  

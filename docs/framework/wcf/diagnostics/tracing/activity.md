@@ -13,7 +13,7 @@ ms.locfileid: "54505589"
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ トレースについて説明します。 アクティビティは、ユーザーがエラーの範囲を絞り込む上で役立つ処理単位です。 同じアクティビティで発生したエラーは直接関連します。 たとえば、メッセージを復号化できなかったために、ある操作が失敗したとします。 この操作とメッセージ復号化失敗のトレースは同じアクティビティ内に表示され、復号化エラーと要求エラー間の直接相関関係が示されます。  
   
 ## <a name="configuring-activity-tracing"></a>アクティビティ トレースの構成  
- WCF には、アプリケーションを処理するための定義済みのアクティビティが用意されています (を参照してください[アクティビティ リスト](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、次を参照してください。[ユーザー コード トレースの出力](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)します。  
+ WCF には、アプリケーションを処理するための定義済みのアクティビティが用意されています (を参照してください[アクティビティ リスト](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、[ユーザー コード トレースの出力](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)を参照してください。  
   
  実行時にアクティビティ トレースを出力するには使用、`ActivityTracing`の設定、`System.ServiceModel`構成コードを次に示すようにソース、またはその他の WCF またはカスタム トレース ソースをトレースします。  
   

@@ -106,7 +106,7 @@ ms.locfileid: "58634220"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>現在のアプリケーションの取得  
- の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、 `static` <xref:System.Windows.Application.Current%2A>プロパティ。  
+ の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in C#](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、 `static` <xref:System.Windows.Application.Current%2A>プロパティ。  
   
  次のコードへの参照を取得する方法を示しています、 <xref:System.Windows.Application> 、現在のオブジェクト<xref:System.AppDomain>します。  
   

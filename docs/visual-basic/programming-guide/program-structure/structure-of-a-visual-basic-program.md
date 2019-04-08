@@ -90,7 +90,7 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
   
 -   `Function Main(ByVal cmdArgs() As String) As Integer`  
   
- この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、[Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)を参照してください。  
+ この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、[Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

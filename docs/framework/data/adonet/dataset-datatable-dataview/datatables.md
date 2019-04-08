@@ -18,7 +18,7 @@ ms.locfileid: "54653251"
   
  スキーマだけでなく、 **DataTable**行が含まれており、データを注文する必要があります。 <xref:System.Data.DataRow> クラスは、テーブルに格納される実際のデータを表します。 使用する、 **DataRow**とそのプロパティとメソッドを取得するには、評価、およびテーブルにデータを操作します。 アクセスして、行内のデータを変更すると、 **DataRow**オブジェクトは、両方の現在と元の状態を維持します。  
   
- テーブル間で 1 つ以上の列を関連付け、テーブル間の親子のリレーションシップを作成できます。 間のリレーションシップを作成する**DataTable**オブジェクトを使用して、<xref:System.Data.DataRelation>します。 **DataRelation**オブジェクトは、特定の行の関連子または親の行を取得し、使用できます。 詳細については、次を参照してください。 [Datarelation の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)します。  
+ テーブル間で 1 つ以上の列を関連付け、テーブル間の親子のリレーションシップを作成できます。 間のリレーションシップを作成する**DataTable**オブジェクトを使用して、<xref:System.Data.DataRelation>します。 **DataRelation**オブジェクトは、特定の行の関連子または親の行を取得し、使用できます。 詳細については、[Datarelation の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataTable の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  

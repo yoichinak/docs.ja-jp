@@ -46,9 +46,9 @@ XAML のコンパイルの動作を変更するときに`x:Class`も提供され
   
 -   [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]ターゲットをサポートする XAML をコンパイルするが存在しない; そのため、に渡す値は指定されていません。  
   
- 指定することも<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public` c# で`Public`Visual Basic で)。 ただし、を指定する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>ために頻繁に行われます<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>が既に既定の動作。  
+ 指定することも<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public` C# で`Public`Visual Basic で)。 ただし、を指定する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>ために頻繁に行われます<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>が既に既定の動作。  
   
- 対応するユーザー コードでは、その他の値へのアクセス レベルの制限など`private`c# では関連しない`x:ClassModifier`、XAML では、入れ子になったクラスの参照はサポートされていないため、それによって、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修飾子のと同じ効果します。  
+ 対応するユーザー コードでは、その他の値へのアクセス レベルの制限など`private`C# では関連しない`x:ClassModifier`、XAML では、入れ子になったクラスの参照はサポートされていないため、それによって、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>修飾子のと同じ効果します。  
   
 ## <a name="security-notes"></a>セキュリティに関する注意事項  
  アクセス レベルで宣言されている`x:ClassModifier`は特定のフレームワークとその機能によって解釈される可能性があります。 WPF に読み込むし、型のインスタンスを作成する機能が含まれています、`x:ClassModifier`は`internal`pack URI 参照を使用して、WPF リソースからそのクラスが参照されている場合、します。 この場合、可能性のある他のフレームワークによって実装されるような結果、管理者はで排他的に依存しない`x:ClassModifier`使用可能なすべてのインスタンス化をブロックしようとします。  

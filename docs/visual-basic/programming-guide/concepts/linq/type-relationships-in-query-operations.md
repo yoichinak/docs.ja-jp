@@ -25,7 +25,7 @@ ms.locfileid: "58822337"
   
  クエリで範囲変数の型は、データ ソース内の要素の型と互換性のあるである必要があります。 クエリ変数の型で定義されたシーケンスの要素と互換性のある必要があります、`Select`句。 最後に、シーケンスの要素の型も必要がありますで使用されているループ コントロール変数の型と互換性のある、`For Each`クエリを実行するステートメント。 この厳密な型指定すると、コンパイル時に型のエラーの識別が容易になります。  
   
- Visual Basic により、厳密な型指定便利とも呼ばれるローカル型推論を実装することによって*暗黙の型指定*します。 機能は、前の例で使用して、全体で使用されることが表示されます、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]サンプルとドキュメントです。 Visual basic でローカル型推論は使用するだけで実現を`Dim`ステートメントを除く、`As`句。 次の例では、`city`を文字列として厳密に型指定します。  
+ Visual Basic により、厳密な型指定便利とも呼ばれるローカル型推論を実装することによって*暗黙の型指定*します。 機能は、前の例で使用して、全体で使用されることが表示されます、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]サンプルとドキュメントです。 Visual Basic でローカル型推論は使用するだけで実現を`Dim`ステートメントを除く、`As`句。 次の例では、`city`を文字列として厳密に型指定します。  
   
  [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   

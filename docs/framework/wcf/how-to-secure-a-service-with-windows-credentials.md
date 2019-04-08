@@ -54,7 +54,7 @@ ms.locfileid: "58410928"
 1.  前の手順のコードの後に、この手順のコードを挿入します。  
   
 2.  
-  <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用するとき、`GetType`演算子を使用すると c# を使用する場合、`typeof`キーワード。  
+  <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用するとき、`GetType`演算子を使用すると C# を使用する場合、`typeof`キーワード。  
   
 3.  
   <xref:System.Type> という名前の 2 つ目の `serviceType` 変数を作成し、その変数に実装されたコントラクトの型 (`Calculator`) を割り当てます。  
