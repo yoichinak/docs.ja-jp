@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081490"
 ---
 # <a name="getting-started-with-net-native"></a>.NET ネイティブの概要
 Windows 10 用に新しい Windows アプリを作成する場合も、既存の Windows ストア アプリを移行する場合も、次に示す同じ手順を実行することになります。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] アプリを作成するには、次の手順を実行します。  
@@ -106,16 +106,17 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
   
  アプリのテスト時に発生する例外およびその他の問題の処理に関する具体的な例については、次のページを参照してください。  
   
--   [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [例:データ バインド時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [.NET ネイティブ アプリでのランタイム例外](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET ネイティブのセットアップと構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET ネイティブのセットアップおよび構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native とコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [リフレクションに依存する API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [シリアル化とメタデータ](../../../docs/framework/net-native/serialization-and-metadata.md)

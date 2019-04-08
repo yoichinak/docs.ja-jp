@@ -1,5 +1,5 @@
 ---
-title: '方法: ポップアップ ヘルプを表示します。'
+title: '方法: ポップアップ ヘルプを表示する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pop-up Help
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 875ed49e3a7dbe7205abb47ee1f2012d82826416
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6b6fa0c111783dcdad0387aed7d40fb54fa7b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078370"
 ---
-# <a name="how-to-display-pop-up-help"></a>方法: ポップアップ ヘルプを表示します。
+# <a name="how-to-display-pop-up-help"></a>方法: ポップアップ ヘルプを表示する
 Windows フォーム上のヘルプを表示する 1 つの方法は、使用、**ヘルプ**を通じてアクセス可能なタイトル バーの右側にあるボタンをクリック、<xref:System.Windows.Forms.Form.HelpButton%2A>プロパティ。 この種類のヘルプの表示は、ダイアログ ボックスでの使用に適しています。 モーダル形式で表示されるダイアログ ボックス (<xref:System.Windows.Forms.Form.ShowDialog%2A> メソッドを使用) は、別のウィンドウにフォーカスを移動するときはモーダル ダイアログ ボックスを閉じる必要があるため、外部のヘルプ システムを起動する場合は問題が発生します。 さらを使用して、**ヘルプ**ボタンがあることが必要ですありません**最小化**ボタンまたは**最大化**タイトル バーに表示されるボタンをクリックします。 フォームは、通常はあるが、これは、標準のダイアログ ボックスの規約では、**最小化**と**最大化**ボタン。  
   
- また、ポップアップ ヘルプを実装している場合でも、<xref:System.Windows.Forms.HelpProvider> コンポーネントを使用して、コントロールをヘルプ システムのファイルにリンクできることにも注意してください。 詳細については、[Windows アプリケーションでヘルプを提供する](how-to-provide-help-in-a-windows-application.md)を参照してください。  
+ また、ポップアップ ヘルプを実装している場合でも、<xref:System.Windows.Forms.HelpProvider> コンポーネントを使用して、コントロールをヘルプ システムのファイルにリンクできることにも注意してください。 詳細については、次を参照してください。 [Windows アプリケーションでヘルプを提供する](how-to-provide-help-in-a-windows-application.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -43,6 +43,7 @@ Windows フォーム上のヘルプを表示する 1 つの方法は、使用、
 6.  キーを押して、**ヘルプ**タイトル バーにボタンをクリックし、ヘルプ文字列を設定するコントロールをクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツールヒントを使用したコントロールのヘルプ](control-help-using-tooltips.md)
 - [Windows フォームでのヘルプの統合](integrating-user-help-in-windows-forms.md)
 - [Windows フォーム](../index.md)

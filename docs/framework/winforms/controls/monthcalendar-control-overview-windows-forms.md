@@ -8,12 +8,12 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: a081c4e6d8210a6bb65fa14b31d12d4295931d53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106237"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールがユーザーに表示し、日付情報を設定するための直感的なグラフィカル インターフェイスを表示します。 カレンダーを表示、: 曜日、強調表示されている日付の選択範囲を下にある列には、月の番号付きの日を含むグリッドです。 1 か月のキャプションのどちら側にある矢印ボタンをクリックして、別の月を選択できます。 異なり、類似<xref:System.Windows.Forms.DateTimePicker>コントロールでは、このコントロールでは、複数の日付を選択することができます。 詳細については、<xref:System.Windows.Forms.DateTimePicker>コントロールを参照してください[DateTimePicker コントロール](datetimepicker-control-windows-forms.md)します。  
@@ -26,5 +26,6 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
  キー プロパティ、<xref:System.Windows.Forms.MonthCalendar>コントロールが<xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>コントロールで選択した日付の範囲。 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>値が選択できる設定日の最大数を超えることはできません、<xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>プロパティ。 ユーザーが選択できる最初と最後の日付が定め、<xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>と<xref:System.Windows.Forms.MonthCalendar.MinDate%2A>プロパティ。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)

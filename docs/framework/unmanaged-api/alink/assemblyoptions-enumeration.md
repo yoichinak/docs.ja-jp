@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 293787d7798768ff2b4e2fb8fec9ed201fdb85ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085416"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列挙体
 アセンブリ オプションを列挙します。  
@@ -85,4 +85,5 @@ typedef enum _AssemblyOptions {
  **ライブラリ**: alink.dll  
   
 ## <a name="see-also"></a>関連項目
+
 - [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

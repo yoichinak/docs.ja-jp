@@ -2,12 +2,12 @@
 title: UriTemplate サンプル
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
-ms.openlocfilehash: 565e01fd591149e7eefb7e125b917ddb9acccbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0fa339cb4c8feab3c8341b4508826ca75d4259
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083778"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate サンプル
 <xref:System.UriTemplate> クラスには、共通構造を共有する URI のセットを使用するためのメソッドが用意されています。 このサンプルでは、次の `UriTemplate` に関連する重要な概念を示します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54735478"
   
 -   `UriTemplate` および <xref:System.UriTemplate.BindByName%2A> を使用した、<xref:System.UriTemplate.BindByPosition%2A> からの URI のインスタンス化  
   
--   <xref:System.UriTemplateTable.Match%2A> および `BindByName` の逆の操作である `BindByPosition`  
+-   <xref:System.UriTemplateTable.Match%2A>での逆の操作である`BindByName`と`BindByPosition`します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
@@ -34,5 +34,6 @@ ms.locfileid: "54735478"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplate`  
   
 ## <a name="see-also"></a>関連項目
+
 - [UriTemplate テーブル](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [UriTemplate テーブル ディスパッチャー](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

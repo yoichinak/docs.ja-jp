@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104209"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 2 つのコレクションに共通の要素が存在するかどうかを調べます。  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  コレクションを返す任意の有効なクエリ式。もう一方のクエリ式から返されたコレクションと比較されます。 すべての式は、 `expression`と同じ型であるか、共通の基本型または派生型である必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- 2 つのコレクションに共通の要素がある場合は`true` 、それ以外の場合は `false`。  
+ `true` 2 つのコレクションは共通の要素である場合それ以外の場合、`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  機能的には、次と同等で重複が用意されています。  
@@ -42,4 +42,5 @@ expression OVERLAPS expression
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

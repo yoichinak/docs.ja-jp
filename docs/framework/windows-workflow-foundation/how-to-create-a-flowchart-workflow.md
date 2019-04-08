@@ -1,18 +1,18 @@
 ---
-title: '方法: フローチャート ワークフローを作成します。'
+title: '方法: フローチャート ワークフローを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: e4a4714c1d93280cb86e2887505fc2b0b79484d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1da81ae47fa9f74b6037b6fcec4dbac5350c4481
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080242"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成します。
+# <a name="how-to-create-a-flowchart-workflow"></a>方法: フローチャート ワークフローを作成する
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Flowchart>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
   
 > [!NOTE]
@@ -151,10 +151,11 @@ ms.locfileid: "57718352"
      ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)ステップのワークフローのさまざまなスタイルと共に、フローチャート ワークフローがこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミング](programming.md)
+- [Windows Workflow Foundation プログラミングの新機能](programming.md)
 - [ワークフローの設計](designing-workflows.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
-- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)
+- [方法: アクティビティを作成する](how-to-create-an-activity.md)
+- [方法: ワークフローを実行する](how-to-run-a-workflow.md)

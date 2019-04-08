@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 34c1843873e2f6a9a4ad78ed860a0115e0f02e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102428"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
@@ -67,10 +67,10 @@ ms.locfileid: "57716947"
   
     -   Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
   
-3.  コマンド プロンプトで次のように入力します。 `Form1.exe`  
+3.  コマンド プロンプトで、次のコマンドを入力します。 `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>コントロールの追加とイベントの処理  
- 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加することができます、コントロールの詳細については、[Windows フォーム コントロール](./controls/index.md)を参照してください。  
+ 前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加することができます、コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](./controls/index.md)します。  
   
  Windows フォーム アプリケーションを作成する方法を理解するだけでなく、イベント ベースのプログラミングとユーザー入力を処理する方法を理解する必要があります。 詳細については、次を参照してください[Windows フォームでのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)、および[ユーザー入力の処理。](./controls/handling-user-input.md)  
   
@@ -117,6 +117,7 @@ ms.locfileid: "57716947"
 -   コードをコンパイルするには、アプリケーションをコンパイルして実行する方法を説明した、前述の手順に従います。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
 - [Windows フォームの表示形式の変更](changing-the-appearance-of-windows-forms.md)

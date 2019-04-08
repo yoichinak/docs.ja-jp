@@ -2,12 +2,12 @@
 title: < (より小さい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0373dc2d066252d76cd3d4408790404ca70ab701
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105171"
 ---
 # <a name="-less-than-entity-sql"></a>\< (より小さい) (Entity SQL)
 2 つの式を比較して、左の式の値が右の式の値よりも小さいかどうかを判別します。  
@@ -23,7 +23,7 @@ expression < expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- 左の式の値が右の式の値よりも小さい場合は`true` 、そうでない場合は `false`。  
+ `true` 左の式がある右の式より小さい値である場合それ以外の場合、`false`します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、「<」比較演算子を使用して 2 つの式を比較し、左の式の値が右の式の値よりも小さいかどうかを判別します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -35,4 +35,5 @@ expression < expression
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

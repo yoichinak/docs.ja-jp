@@ -6,18 +6,18 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074275"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>方法: GridSplitter を使用して行のサイズを変更する
 この例は、水平方向を使用する方法を示します<xref:System.Windows.Controls.GridSplitter>の 2 つの行の間のスペースを再配分を<xref:System.Windows.Controls.Grid>の寸法を変更せず、<xref:System.Windows.Controls.Grid>します。  
   
 ## <a name="example"></a>例  
- **行の端に重なって表示される GridSplitter を作成する方法**  
+ **GridSplitter を作成する方法、行の端**  
   
  指定する、<xref:System.Windows.Controls.GridSplitter>で隣接する行のサイズを変更する、<xref:System.Windows.Controls.Grid>設定、<xref:System.Windows.Controls.Grid.Row%2A>添付プロパティのサイズを変更する行の 1 つをします。 場合、<xref:System.Windows.Controls.Grid>が 1 つ以上の列は、設定、<xref:System.Windows.Controls.Grid.ColumnSpan%2A>添付プロパティを列の数を指定します。 設定し、<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>に<xref:System.Windows.VerticalAlignment.Top>または<xref:System.Windows.VerticalAlignment.Bottom>(どちらの配置を設定する依存する 2 つの行のサイズを変更する)。 最後に、設定、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティを<xref:System.Windows.HorizontalAlignment.Stretch>します。  
   
@@ -37,5 +37,6 @@ ms.locfileid: "57370047"
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [方法トピック](gridsplitter-how-to-topics.md)
+- [方法のトピック](gridsplitter-how-to-topics.md)
