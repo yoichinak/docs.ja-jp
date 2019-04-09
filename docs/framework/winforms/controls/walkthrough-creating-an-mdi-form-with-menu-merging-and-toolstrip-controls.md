@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: メニューのマージと ToolStrip コントロールを MDI フォームを作成します。'
+title: 'チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: 49d9b10d8a87af1c3600756efe8dba3f81df90a6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9c4195cc6f26dd10f22bacb5bcba9ca2a078499c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160629"
 ---
-# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>チュートリアル: メニューのマージと ToolStrip コントロールを MDI フォームを作成します。
+# <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する
 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、マルチ ドキュメント インターフェイス (MDI) アプリケーションをサポートし、<xref:System.Windows.Forms.MenuStrip> コントロールはメニューの結合をサポートします。 MDI フォームは、<xref:System.Windows.Forms.ToolStrip> コントロールもサポートします。  
   
  このチュートリアルを使用する方法について説明<xref:System.Windows.Forms.ToolStripPanel>を MDI フォームでコントロールできます。 フォームは、子メニューをマージするメニューもサポートしています。 このチュートリアルで、次のタスクを示します。  
@@ -115,7 +115,7 @@ ms.locfileid: "57717140"
   
 4.  **Items コレクション エディター**  ダイアログ ボックスで、新しい追加<xref:System.Windows.Forms.ToolStripMenuItem>という名前の**ChildMenuItem**子メニューにします。  
   
-     詳細については、[ToolStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))を参照してください。  
+     詳細については、次を参照してください。 [ToolStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))します。  
   
 ## <a name="testing-the-form"></a>フォームのテスト  
   
@@ -198,17 +198,18 @@ ms.locfileid: "57717140"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルで MDI 親フォームを作成した<xref:System.Windows.Forms.ToolStrip>コントロールとメニューのマージします。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  
   
--   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、[ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)を参照してください。  
+-   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
   
 -   標準のメニューが自動的に設定されたフォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](walkthrough-providing-standard-menu-items-to-a-form.md)します。  
   
 -   与える、<xref:System.Windows.Forms.ToolStrip>プロフェッショナルな外観を制御します。 詳細については、「[方法 :アプリケーションの ToolStrip レンダラーを設定](how-to-set-the-toolstrip-renderer-for-an-application.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [方法: MDI 親フォームを作成します。](../advanced/how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](../advanced/how-to-create-mdi-child-forms.md)
-- [方法: MDI ドロップダウン メニューに MenuStrip を挿入します。](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)
+- [方法: MDI ドロップダウン メニューに MenuStrip を挿入する](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)

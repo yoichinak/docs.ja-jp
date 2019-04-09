@@ -2,12 +2,12 @@
 title: カスタム バインディングの信頼できるセッション
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d419a5793abd6c89b4cddb3b5d3c3359361d5b5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172420"
 ---
 # <a name="custom-binding-reliable-session"></a>カスタム バインディングの信頼できるセッション
 カスタム バインドは、個々のバインド要素の順序付きリストとして定義されます。 このサンプルでは、さまざまなトランスポートとメッセージ エンコーディング要素を使用し、特に信頼できるセッションを有効化することによって、カスタム バインディングを構成する方法を示します。  
@@ -122,4 +122,3 @@ Press <ENTER> to terminate client.
     ... />  
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
-  

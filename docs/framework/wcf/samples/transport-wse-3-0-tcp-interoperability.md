@@ -2,12 +2,12 @@
 title: トランスポート:WSE 3.0 TCP 相互運用性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162177"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>トランスポート:WSE 3.0 TCP 相互運用性
 WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カスタムの Windows Communication Foundation (WCF) トランスポートとして、TCP 二重セッションを実装する方法を示します。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順では、このカスタム WCF トランスポートを構築する方法を示します。  
@@ -23,7 +23,7 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
 5.  チャネル スタックにカスタム トランスポートを追加するバインド要素を追加します。 詳細については、[バインド要素の追加] を参照してください。  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel の作成  
- WSE 3.0 TCP 相互運用性トランスポートを作成するには、まず、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> 上に <xref:System.Net.Sockets.Socket> の実装を作成します。 `WseTcpDuplexSessionChannel` は、<xref:System.ServiceModel.Channels.ChannelBase> から派生します。 メッセージを送信するロジックは、2 つの主要部分で構成されます。(1) (バイト単位) と (2) それらのバイトをフレーム化し、ネットワーク上での送信に、メッセージをエンコードします。  
+ WSE 3.0 TCP 相互運用性トランスポートを作成するには、まず、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> 上に <xref:System.Net.Sockets.Socket> の実装を作成します。 `WseTcpDuplexSessionChannel` 派生した<xref:System.ServiceModel.Channels.ChannelBase>します。 メッセージを送信するロジックは、2 つの主要部分で構成されます。(1) (バイト単位) と (2) それらのバイトをフレーム化し、ネットワーク上での送信に、メッセージをエンコードします。  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   
@@ -31,13 +31,13 @@ WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カス�
   
  さらに、Send() 呼び出しが IDuplexSessionChannel の順序の保証を保持し、基になるソケットに対する呼び出しが正しく同期されるように、ロックを取得します。  
   
- `WseTcpDuplexSessionChannel` は、<xref:System.ServiceModel.Channels.MessageEncoder> と byte[] を相互に変換するために、<xref:System.ServiceModel.Channels.Message> を使用します。 `WseTcpDuplexSessionChannel` はトランスポートであるため、チャネルが構成されたリモート アドレスの適用も行います。 `EncodeMessage` は、この変換ロジックをカプセル化します。  
+ `WseTcpDuplexSessionChannel` 使用して、<xref:System.ServiceModel.Channels.MessageEncoder>を変換するため、 <xref:System.ServiceModel.Channels.Message> byte[] を送受信します。 `WseTcpDuplexSessionChannel` はトランスポートであるため、チャネルが構成されたリモート アドレスの適用も行います。 `EncodeMessage` この変換ロジックをカプセル化します。  
   
  `this.RemoteAddress.ApplyTo(message);`  
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- <xref:System.ServiceModel.Channels.Message> がバイトにエンコードされたら、ネットワーク上に送信する必要があります。 これを行うには、メッセージ境界を定義するシステムが必要です。 WSE 3.0 のバージョンを使用して[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)フレーム プロトコルとして。 `WriteData` はこのフレーム ロジックをカプセル化して、byte[] を一連の DIME レコードにラップします。  
+ <xref:System.ServiceModel.Channels.Message> がバイトにエンコードされたら、ネットワーク上に送信する必要があります。 これを行うには、メッセージ境界を定義するシステムが必要です。 WSE 3.0 のバージョンを使用して[DIME](https://go.microsoft.com/fwlink/?LinkId=94999)フレーム プロトコルとして。 `WriteData` byte[] を一連の DIME レコードにラップするフレーム ロジックをカプセル化します。  
   
  メッセージ受信用のロジックは、上記のロジックとほぼ同じです。 複雑な点は、主に、読み取られたソケットによって返されるバイトが、要求されたバイトよりも少ない場合があることに関する処理です。 メッセージを受信するには、`WseTcpDuplexSessionChannel` がネットワーク経由でないバイトを読み取って DIME フレームを復号化し、その後<xref:System.ServiceModel.Channels.MessageEncoder> を使用して byte[] を <xref:System.ServiceModel.Channels.Message> に変換します。  
   
@@ -194,4 +194,3 @@ Symbols:
     7.  F5 キーを押して、TCP トランスポートのサンプルを開始します。  
   
     8.  TCP トランスポートのテスト クライアントが、新しいコンソールで開始します。 クライアントはサービスに株価情報を要求し、その結果がコンソール ウィンドウに表示されます。  
-  

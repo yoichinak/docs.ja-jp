@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174604"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>チュートリアル: ビジュアル継承のデモンストレーション
 ビジュアル継承により、基本フォームのコントロールを表示して、新しいコントロールを追加できます。 このチュートリアルでは、基本フォームを作成してクラス ライブラリにコンパイルします。 このクラス ライブラリを別のプロジェクトにインポートして、基本フォームから継承する新しいフォームを作成します。 このチュートリアルでは、次の作業を行う方法について説明します。  
@@ -146,7 +146,7 @@ ms.locfileid: "58816318"
   
 7.  プライベート**Say Goodbye**ボタン、およびサイズ変更ハンドルがないことに注意してください。 さらに、**プロパティ**を変更できないことを示すために、このボタンのプロパティ ウィンドウが淡色表示されています。  
   
-8.  Visual C#: 使用している場合  
+8.  Visual c#: 使用している場合  
   
     1.  **ソリューション エクスプ ローラー**、右クリックして**Form1**で、 **InheritanceTest**プロジェクト**削除**します。 メッセージ ボックスが表示されますが、次のようにクリックします。 **OK** 、削除を確定します。  
   
@@ -161,9 +161,10 @@ ms.locfileid: "58816318"
 12. F5 を押してアプリケーションを実行し、継承されたフォームの動作を確認します。  
   
 ## <a name="next-steps"></a>次の手順  
- ユーザー コントロールの継承はほぼ同じ方法で機能します。 新しいクラス ライブラリ プロジェクトを開き、ユーザー コントロールを追加します。 内在コントロールを配置し、プロジェクトをコンパイルします。 別の新しいクラス ライブラリ プロジェクトを開き、コンパイル済みのクラス ライブラリへの参照を追加します。 また、[継承コントロールを追加してみてください (を通じて、**新しい項目の追加**] ダイアログ ボックス) をプロジェクトを使用して、**継承ピッカー**します。 ユーザー コントロールを追加し、変更、 `Inherits` (`:` Visual C#) ステートメント。 詳細については、「[方法 :Windows フォームを継承する](how-to-inherit-windows-forms.md)します。  
+ ユーザー コントロールの継承はほぼ同じ方法で機能します。 新しいクラス ライブラリ プロジェクトを開き、ユーザー コントロールを追加します。 内在コントロールを配置し、プロジェクトをコンパイルします。 別の新しいクラス ライブラリ プロジェクトを開き、コンパイル済みのクラス ライブラリへの参照を追加します。 また、[継承コントロールを追加してみてください (を通じて、**新しい項目の追加**] ダイアログ ボックス) をプロジェクトを使用して、**継承ピッカー**します。 ユーザー コントロールを追加し、変更、 `Inherits` (`:` Visual c#) ステートメント。 詳細については、「[方法 :Windows フォームを継承する](how-to-inherit-windows-forms.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: Windows フォームを継承します。](how-to-inherit-windows-forms.md)
+
+- [方法: Windows フォームを継承する](how-to-inherit-windows-forms.md)
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
 - [Windows フォーム](../index.md)

@@ -1,23 +1,23 @@
 ---
-title: '方法: コードでのサービス バインドを指定します。'
+title: '方法: コード内でサービス バインディングを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162359"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>方法: コードでのサービス バインドを指定します。
+# <a name="how-to-specify-a-service-binding-in-code"></a>方法: コード内でサービス バインディングを指定する
 この例では、電卓サービスに `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスに実装し、コード内でサービス エンドポイントを定義します。このエンドポイントでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> クラスを使用するように指定します。  
   
  通常、ベスト プラクティスは、コードで命令として記述するよりも、構成でバインディングを指定して情報を明示的にアドレス指定することです。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般的に、バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
- コードではなく構成要素を使用してこのサービスを構成する方法については、[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)を参照してください。  
+ コードではなく構成要素を使用してこのサービスを構成する方法については、次を参照してください。[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。  
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>サービスで BasicHttpBinding が使用されるようにコードで指定するには  
   
@@ -49,5 +49,6 @@ ms.locfileid: "54531210"
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [エンドポイント アドレスの指定](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

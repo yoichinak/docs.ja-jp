@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 98eba600f64c8b656e3597b429cc69766f398f7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161487"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: 開始後に、ストーリー ボードを制御します。
-この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、[、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)を参照してください。  
+この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、次を参照してください。 [、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  
   
  使用するストーリー ボードを開始するには、その<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド、プロパティがアニメーション化して、ストーリー ボードを開始するストーリー ボードのアニメーションを分散します。  
   
@@ -44,4 +44,5 @@ ms.locfileid: "57361058"
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [開始後のストーリーボードをイベント トリガーを使用して制御する](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

@@ -1,19 +1,19 @@
 ---
-title: '方法: 追加またはデザイナーを使って ImageList イメージを削除します。'
+title: '方法: デザイナーを使って ImageList イメージを追加または削除する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161526"
 ---
-# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>方法: 追加またはデザイナーを使って ImageList イメージを削除します。
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>方法: デザイナーを使って ImageList イメージを追加または削除する
 イメージを追加することができます、<xref:System.Windows.Forms.ImageList>コンポーネントのいくつかの方法です。 関連付けられているスマート タグを使用してイメージを非常に簡単に追加することができます、 <xref:System.Windows.Forms.ImageList>、やの他のいくつかのプロパティを設定する場合、 <xref:System.Windows.Forms.ImageList>、[プロパティ] ウィンドウを使用したイメージを追加する方が便利見つけることがあります。 コードを使用してイメージを追加することもできます。 コードを使用したイメージを追加する方法の詳細については、次を参照してください。[方法。追加または削除のイメージで、Windows フォームの ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)します。 値を設定する通常、<xref:System.Windows.Forms.ImageList>コンポーネントにイメージの前に、コントロールに関連付けられているが、これは必要ありません。  
   
 > [!NOTE]
@@ -38,6 +38,7 @@ ms.locfileid: "57723748"
 4.  **イメージ コレクション エディター**クリックして**追加**または**削除**を追加または一覧からイメージを削除します。  
   
 ## <a name="see-also"></a>関連項目
-- [イメージ、ビットマップ、メタファイル](../advanced/images-bitmaps-and-metafiles.md)
-- [チュートリアル: スマートを使用して一般的なタスクを実行する Windows フォーム コントロールをタグ](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+
+- [イメージ、ビットマップ、およびメタファイル](../advanced/images-bitmaps-and-metafiles.md)
+- [チュートリアル: Windows フォーム コントロールのスマート タグを使用した共通タスクの実行](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)

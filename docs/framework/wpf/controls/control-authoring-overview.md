@@ -8,34 +8,32 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171861"
 ---
 # <a name="control-authoring-overview"></a>コントロールの作成の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コントロール モデルの機能拡張により、新しいコントロールを作成する必要性が大幅に削減されます。 ただし、場合によっては、カスタム コントロールを作成する必要があります。 このトピックでは、カスタム コントロールを作成する必要性を最小限に抑える機能と、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のさまざまなコントロール作成モデルについて説明します。 また、新しいコントロールを作成する方法も示します。  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>新しいコントロールの作成に代わる方法  
  従来は、既存のコントロールをカスタマイズする場合、背景色、境界線の幅、フォントのサイズなど、コントロールの標準プロパティを変更するなどの範囲に制限されていました。 これらの定義済みのパラメーター以外に、コントロールの外観や動作にまでカスタマイズを拡張しようとすると、通常、既存のコントロールを継承し、コントロールを描画するメソッドをオーバーライドして、新しいコントロールを作成する必要がありました。  その方法は今でも選択できますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の場合、リッチ コンテンツ モデル、スタイル、テンプレート、トリガーを使用して、既存のコントロールをカスタマイズできます。 新しいコントロールを作成しなくても、これらの機能を使用して、カスタマイズされた一貫性のあるエクスペリエンスを得られる方法としては、次のような例が挙げられます。  
   
 -   **リッチ コンテンツ。** 標準の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールの多くがリッチ コンテンツをサポートしています。 コンテンツのプロパティなど、<xref:System.Windows.Controls.Button>の種類は<xref:System.Object>、理論上何も表示できます、<xref:System.Windows.Controls.Button>します。  イメージとテキストの表示 ボタンを表示するには、イメージを追加することができます、<xref:System.Windows.Controls.TextBlock>を<xref:System.Windows.Controls.StackPanel>を割り当てると、<xref:System.Windows.Controls.StackPanel>を<xref:System.Windows.Controls.ContentControl.Content%2A>プロパティ。 コントロールには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の視覚的要素と任意のデータを表示できるため、複雑な視覚化をサポートするために、新しいコントロールを作成したり、既存のコントロールを変更したりする必要性が少なくなります。 コンテンツ モデルの詳細については<xref:System.Windows.Controls.Button>での他のコンテンツ モデルと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を参照してください[WPF コンテンツ モデル](wpf-content-model.md)します。  
   
--   **スタイル** A<xref:System.Windows.Style>はコントロールのプロパティを表す値のコレクションです。 スタイルを使用すると、新しいコントロールを作成しなくても、必要なコントロールの外観と動作を備えた再利用可能な表現を作成できます。 たとえば、すべての必要な<xref:System.Windows.Controls.TextBlock>コントロールにフォント サイズ 14 の赤、Arial フォント。 そこで、リソースとしてスタイルを作成し、それに応じて、適切なプロパティを設定します。 すべてし<xref:System.Windows.Controls.TextBlock>同じ外観をアプリケーションに追加する必要があります。  
+-   **スタイル。** A<xref:System.Windows.Style>はコントロールのプロパティを表す値のコレクションです。 スタイルを使用すると、新しいコントロールを作成しなくても、必要なコントロールの外観と動作を備えた再利用可能な表現を作成できます。 たとえば、すべての必要な<xref:System.Windows.Controls.TextBlock>コントロールにフォント サイズ 14 の赤、Arial フォント。 そこで、リソースとしてスタイルを作成し、それに応じて、適切なプロパティを設定します。 すべてし<xref:System.Windows.Controls.TextBlock>同じ外観をアプリケーションに追加する必要があります。  
   
 -   **データ テンプレート。** A<xref:System.Windows.DataTemplate>コントロールにデータを表示する方法をカスタマイズすることができます。 たとえば、<xref:System.Windows.DataTemplate>にデータを表示する方法を指定するために使用できる、 <xref:System.Windows.Controls.ListBox>。  この例については、「[データ テンプレートの概要](../data/data-templating-overview.md)」を参照してください。  データの外観のカスタマイズに加え、<xref:System.Windows.DataTemplate>これにより、高度な柔軟性ではカスタム Ui の UI 要素を含めることができます。  などを使用して、 <xref:System.Windows.DataTemplate>、作成することができます、<xref:System.Windows.Controls.ComboBox>でその各項目には、チェック ボックスが含まれています。  
   
--   **コントロール テンプレート。** コントロールの多く[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用して、<xref:System.Windows.Controls.ControlTemplate>コントロールの構造とコントロールの外観では、コントロールの機能から分離の外観を定義します。 再定義コントロールの外観を大幅に変更することができます、<xref:System.Windows.Controls.ControlTemplate>します。  たとえば、信号機のような外観のコントロールが必要だとします。 このコントロールのユーザー インターフェイスと機能は単純です。  コントロールは 3 つの円で構成され、一度に点灯するのはそのうちの 1 つだけです。 いくつかのリフレクションの後を実現可能性があります、<xref:System.Windows.Controls.RadioButton>の 1 つだけが、時刻の既定の外観に選択されている機能を提供、<xref:System.Windows.Controls.RadioButton>信号機のライトとは何も検索します。  <xref:System.Windows.Controls.RadioButton> 、外観を定義して、コントロール テンプレートを使用して再定義するは簡単、<xref:System.Windows.Controls.ControlTemplate>コントロールの要件に合わせておよびラジオ ボタンを使用して、信号機を作成します。  
+-   **コントロールのテンプレートです。** コントロールの多く[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用して、<xref:System.Windows.Controls.ControlTemplate>コントロールの構造とコントロールの外観では、コントロールの機能から分離の外観を定義します。 再定義コントロールの外観を大幅に変更することができます、<xref:System.Windows.Controls.ControlTemplate>します。  たとえば、信号機のような外観のコントロールが必要だとします。 このコントロールのユーザー インターフェイスと機能は単純です。  コントロールは 3 つの円で構成され、一度に点灯するのはそのうちの 1 つだけです。 いくつかのリフレクションの後を実現可能性があります、<xref:System.Windows.Controls.RadioButton>の 1 つだけが、時刻の既定の外観に選択されている機能を提供、<xref:System.Windows.Controls.RadioButton>信号機のライトとは何も検索します。  <xref:System.Windows.Controls.RadioButton> 、外観を定義して、コントロール テンプレートを使用して再定義するは簡単、<xref:System.Windows.Controls.ControlTemplate>コントロールの要件に合わせておよびラジオ ボタンを使用して、信号機を作成します。  
   
     > [!NOTE]
     >  ですが、<xref:System.Windows.Controls.RadioButton>使用できる、 <xref:System.Windows.DataTemplate>、<xref:System.Windows.DataTemplate>はこの例では不十分です。  <xref:System.Windows.DataTemplate>コントロールのコンテンツの外観を定義します。 場合、 <xref:System.Windows.Controls.RadioButton>、コンテンツがその分岐点の円の右側に表示されるかどうか、<xref:System.Windows.Controls.RadioButton>が選択されています。  信号機の例では、オプション ボタンに必要なのは "点灯" する円だけです。 信号機の外観の要件は、既定の外観の異なるため、 <xref:System.Windows.Controls.RadioButton>、再定義する必要がある、<xref:System.Windows.Controls.ControlTemplate>します。  一般に、<xref:System.Windows.DataTemplate>コントロール、およびのコンテンツ (またはデータ) を定義するために使用<xref:System.Windows.Controls.ControlTemplate>コントロールを構成する方法を定義するために使用します。  
   
--   **トリガー。** A<xref:System.Windows.Trigger>新しいコントロールを作成せず、コントロールの動作と外観を動的に変更することができます。 たとえば、複数<xref:System.Windows.Controls.ListBox>アプリケーションではコントロールに各項目を追加および<xref:System.Windows.Controls.ListBox>太字、色を赤を選択すると、あります。 まず思いつくが継承するクラスを作成することがあります<xref:System.Windows.Controls.ListBox>をオーバーライドし、<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>選択した項目がより優れたアプローチの外観を変更する方法は、トリガーのスタイルを追加する、<xref:System.Windows.Controls.ListBoxItem>の外観を変更します。選択された項目。 トリガーを使用すると、プロパティ値を変更したり、プロパティ値に基づいた処理を実行したりできます。 <xref:System.Windows.EventTrigger>イベントが発生したときにアクションを実行することができます。  
+-   **トリガーします。** A<xref:System.Windows.Trigger>新しいコントロールを作成せず、コントロールの動作と外観を動的に変更することができます。 たとえば、複数<xref:System.Windows.Controls.ListBox>アプリケーションではコントロールに各項目を追加および<xref:System.Windows.Controls.ListBox>太字、色を赤を選択すると、あります。 まず思いつくが継承するクラスを作成することがあります<xref:System.Windows.Controls.ListBox>をオーバーライドし、<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>選択した項目がより優れたアプローチの外観を変更する方法は、トリガーのスタイルを追加する、<xref:System.Windows.Controls.ListBoxItem>の外観を変更します。選択された項目。 トリガーを使用すると、プロパティ値を変更したり、プロパティ値に基づいた処理を実行したりできます。 <xref:System.Windows.EventTrigger>イベントが発生したときにアクションを実行することができます。  
   
  スタイル、テンプレート、トリガーの詳細については、「[スタイルとテンプレート](styling-and-templating.md)」を参照してください。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "57368728"
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>コントロール作成モデル  
- リッチ コンテンツ モデル、スタイル、テンプレート、トリガーを使用すると、新しいコントロールを作成する必要性が最小限に抑えられます。 ただし、新しいコントロールを作成する必要がある場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の各種のコントロール作成モデルを理解することが重要です。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、コントロールを作成するための一般的なモデルが 3 つあり、各モデルはそれぞれ異なる機能と柔軟性レベルを備えています。 基本クラスの 3 つのモデルは<xref:System.Windows.Controls.UserControl>、 <xref:System.Windows.Controls.Control>、および<xref:System.Windows.FrameworkElement>します。  
+ リッチ コンテンツ モデル、スタイル、テンプレート、トリガーを使用すると、新しいコントロールを作成する必要性が最小限に抑えられます。 ただし、新しいコントロールを作成する必要がある場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の各種のコントロール作成モデルを理解することが重要です。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] さまざまな一連の機能と柔軟性レベルは、それぞれのコントロールを作成するためには、次の 3 つの一般的なモデルを提供します。 基本クラスの 3 つのモデルは<xref:System.Windows.Controls.UserControl>、 <xref:System.Windows.Controls.Control>、および<xref:System.Windows.FrameworkElement>します。  
   
 ### <a name="deriving-from-usercontrol"></a>UserControl からの派生  
  コントロールを作成する最も簡単な方法は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]から派生するは<xref:System.Windows.Controls.UserControl>します。 継承するコントロールを作成するときに<xref:System.Windows.Controls.UserControl>に既存のコンポーネントを追加する、<xref:System.Windows.Controls.UserControl>でイベント ハンドラーを参照し、コンポーネントという名前を[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 次に、指定の要素を参照し、コードでイベント ハンドラーを定義します。 この開発モデルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのアプリケーション開発に使用されるモデルとよく似ています。  
@@ -114,7 +112,7 @@ ms.locfileid: "57368728"
   
 -   プロパティの `get` アクセサーと `set` アクセサーを実装することにより、依存関係プロパティの登録名と同じ `Value` という名前で [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] ラッパー プロパティを定義します。 なお、`get`と`set`アクセサーのみを呼び出す<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>それぞれします。 ある依存関係プロパティのアクセサーが含まれていない追加のロジックにはためにお勧めクライアントと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アクセサーと呼び出しをバイパスできる<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>直接します。 たとえば、プロパティがデータ ソースにバインドされている場合、プロパティの `set` アクセサーは呼び出されません。  取得する追加のロジックを追加する代わりに、set アクセサーは、使用、 <xref:System.Windows.ValidateValueCallback>、<xref:System.Windows.CoerceValueCallback>と<xref:System.Windows.PropertyChangedCallback>デリゲートに応答したり、変更するときに、値を確認します。  これらのコールバックの詳細については、「[依存関係プロパティのコールバックと検証](../advanced/dependency-property-callbacks-and-validation.md)」を参照してください。  
   
--   メソッドを定義、<xref:System.Windows.CoerceValueCallback>という`CoerceValue`します。 `CoerceValue` によって、`Value` は `MinValue` 以上で `MaxValue` 以下になります。  
+-   メソッドを定義、<xref:System.Windows.CoerceValueCallback>という`CoerceValue`します。 `CoerceValue` 確実に`Value`が以上に`MinValue`以下と等しい、`MaxValue`します。  
   
 -   メソッドを定義、 <xref:System.Windows.PropertyChangedCallback>、名前付き`OnValueChanged`します。 `OnValueChanged` 作成、<xref:System.Windows.RoutedPropertyChangedEventArgs%601>オブジェクトし、発生させる準備、`ValueChanged`ルーティング イベント。 ルーティング イベントについては、次のセクションで説明します。  
   
@@ -184,7 +182,7 @@ ms.locfileid: "57368728"
   
 -   `Set` *PropertyName* および `Get` *PropertyName* という名前の `public``static` CLR メソッドのペアを実装します。 どちらの方法から派生したクラスを受け入れる必要があります<xref:System.Windows.DependencyProperty>最初の引数として。 また、`Set` *PropertyName* メソッドでは、プロパティの登録データ型と同じ型の引数も受け取ります。 `Get` *PropertyName*メソッドでは、同じ型の値を返す必要があります。 `Set` *PropertyName*メソッドがない場合、プロパティは読み取り専用としてマークされます。  
   
--   `Set` *PropertyName*と`Get` *PropertyName*に直接ルーティングする必要があります、<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>オブジェクトのメソッド ターゲット依存関係に、それぞれします。 デザイナーが添付プロパティにアクセスするには、メソッド ラッパー経由で呼び出す場合もあれば、対象の依存関係オブジェクトを直接呼び出す場合もあります。  
+-   `Set` **PropertyName*と`Get` *PropertyName*に直接ルーティングする必要があります、<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>オブジェクトのメソッド ターゲット依存関係に、それぞれします。Dデザイナーが添付プロパティにアクセスするには、メソッド ラッパー経由で呼び出す場合もあれば、対象の依存関係オブジェクトを直接呼び出す場合もあります。  
   
  添付プロパティの詳細については、「[添付プロパティの概要](../advanced/attached-properties-overview.md)」を参照してください。  
   
@@ -229,7 +227,7 @@ ms.locfileid: "57368728"
  [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>テーマ レベルでのリソース定義  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、さまざまな Windows テーマ用にリソースを作成できます。  コントロールの作成者は、特定のテーマ用のリソースを定義して、使用するテーマに応じてコントロールの外観を変更できます。 外観など、 <xref:System.Windows.Controls.Button> Windows クラシックのテーマ (Windows 2000 の既定のテーマ) とは異なります、 <xref:System.Windows.Controls.Button> Windows Luna テーマ (Windows XP の既定のテーマ) のため、<xref:System.Windows.Controls.Button>別使用<xref:System.Windows.Controls.ControlTemplate>各テーマ。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] さまざまな Windows テーマのリソースを作成できます。  コントロールの作成者は、特定のテーマ用のリソースを定義して、使用するテーマに応じてコントロールの外観を変更できます。 外観など、 <xref:System.Windows.Controls.Button> Windows クラシックのテーマ (Windows 2000 の既定のテーマ) とは異なります、 <xref:System.Windows.Controls.Button> Windows Luna テーマ (Windows XP の既定のテーマ) のため、<xref:System.Windows.Controls.Button>別使用<xref:System.Windows.Controls.ControlTemplate>各テーマ。  
   
  テーマ固有のリソースは、固有のファイル名でリソース ディクショナリに保持されます。 これらのファイルは、コントロールが格納されているフォルダーのサブフォルダーである `Themes` フォルダー内に配置する必要があります。 次の表は、リソース ディクショナリ ファイルと、各ファイルに関連付けられているテーマを示しています。  
   
@@ -269,6 +267,7 @@ ms.locfileid: "57368728"
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)
 - [コントロールのカスタマイズ](control-customization.md)

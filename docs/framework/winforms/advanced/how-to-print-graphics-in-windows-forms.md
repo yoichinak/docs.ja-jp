@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームでグラフィックスを印刷します。'
+title: '方法: Windows フォームでグラフィックスを印刷する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167207"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>方法: Windows フォームでグラフィックスを印刷します。
+# <a name="how-to-print-graphics-in-windows-forms"></a>方法: Windows フォームでグラフィックスを印刷する
 多くの場合、Windows ベースのアプリケーションでグラフィックスを印刷するされます。 <xref:System.Drawing.Graphics>クラスは、画面やプリンターなどのデバイスにオブジェクトを描画するためのメソッドを提供します。  
   
 ### <a name="to-print-graphics"></a>グラフィックスを印刷するには  
@@ -67,6 +67,7 @@ ms.locfileid: "57721314"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

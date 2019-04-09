@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161513"
 ---
 # <a name="structured-navigation-overview"></a>構造化ナビゲーションの概要
 ホストされるコンテンツ、 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>、または<xref:System.Windows.Navigation.NavigationWindow>はパックによって識別できるページで構成されます[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]ハイパーリンクに移動するとします。 ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。  
@@ -20,9 +20,7 @@ ms.locfileid: "58125604"
  ただし、アプリケーションによっては、移動のタイミングを理解している必要があるページを使用します。 たとえば、組織内のすべての従業員を一覧するページ ([従業員の一覧] ページ) を使用する人事アプリケーションがあるものとします。 このページでは、ハイパーリンクをクリックすることによって、新しい従業員を追加することもできます。 クリックすると、[従業員の追加] ページに移動して新しい従業員の詳細情報を収集します。次に、それを [従業員の一覧] ページに返して、新しい従業員を作成し、一覧を更新します。 このスタイルのナビゲーションは、構造化プログラミングと呼ばれる、処理を実行して値を返すメソッドの呼び出しに似ています。 そのため、このスタイルのナビゲーションを、*構造化ナビゲーション*と呼びます。  
   
  <xref:System.Windows.Controls.Page>クラスは、構造化ナビゲーションのサポートを実装しません。 代わりに、<xref:System.Windows.Navigation.PageFunction%601>クラスから派生<xref:System.Windows.Controls.Page>構造化ナビゲーションのために必要な基本コンストラクトで拡張されています。 このトピックでは、構造化ナビゲーションを使用して確立する方法を示しています。<xref:System.Windows.Navigation.PageFunction%601>します。  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>構造化ナビゲーション  
  構造化ナビゲーションで、あるページが別のページを呼び出す場合、以下の一部またはすべての動作が必要です。  
@@ -170,6 +168,7 @@ ms.locfileid: "58125604"
  また、構造化ナビゲーションに基づいて効率的な操作を実行する複雑なナビゲーション トポロジを使用するアプリケーションもあります。 詳細については、「[ナビゲーション トポロジの概要](navigation-topologies-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
 - [ナビゲーション トポロジの概要](navigation-topologies-overview.md)

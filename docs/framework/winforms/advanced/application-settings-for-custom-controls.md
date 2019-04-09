@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169742"
 ---
 # <a name="application-settings-for-custom-controls"></a>カスタム コントロールのアプリケーション設定
 コントロールがサード パーティ製のアプリケーションでホストされている場合は、アプリケーションの設定を保存する機能、カスタム コントロールを提供する特定のタスクを完了する必要があります。  
@@ -46,6 +46,7 @@ ms.locfileid: "57714347"
  すべてのインスタンスの値を指定されていないコントロールの<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>同じ設定で共有されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [アプリケーション設定アーキテクチャ](application-settings-architecture.md)

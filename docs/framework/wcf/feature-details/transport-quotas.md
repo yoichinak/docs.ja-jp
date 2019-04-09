@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174630"
 ---
 # <a name="transport-quotas"></a>トランスポート クォータ
 トランスポート クォータは、接続がリソースを過剰に消費している時期を特定するポリシー機構です。 クォータとは、クォータ値を超えた場合に、それ以上のリソースの使用を禁止する確実な制限です。 トランスポート クォータは、悪質な、または意図的でないサービス拒否攻撃を防ぎます。  
@@ -108,6 +108,7 @@ ms.locfileid: "54542770"
  アプリケーション構成からバインディング上のプロパティに直接アクセスして、同じトランスポート クォータを設定できます。 構成ファイルでは、トランスポート クォータの名前は必ず小文字で始めます。 たとえば、バインディングの `CloseTimeout` プロパティは構成では `closeTimeout` 設定に対応し、バインディングの `MaxConnections` プロパティは構成では `maxConnections` 設定に対応します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

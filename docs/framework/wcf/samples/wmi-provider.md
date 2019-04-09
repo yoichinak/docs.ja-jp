@@ -2,17 +2,17 @@
 title: WMI プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162294"
 ---
 # <a name="wmi-provider"></a>WMI プロバイダー
 このサンプルでは、WCF に組み込まれている Windows Management Instrumentation (WMI) プロバイダーを使用して、実行時に Windows Communication Foundation (WCF) サービスからデータを収集する方法を示します。 また、このサンプルでは、ユーザー定義の WMI オブジェクトをサービスに追加する方法も示します。 サンプルの WMI プロバイダーをアクティブ化、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)からデータを収集する方法について説明し、`ICalculator`実行時にサービス。  
   
- WMI は、Web ベースのエンタープライズ管理 (WBEM) 標準をマイクロソフトが実装したものです。 WMI SDK の詳細については、[Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)を参照してください。 WBEM は、アプリケーションが Management Instrumentation を外部管理ツールに開示する業界標準の方法です。  
+ WMI は、Web ベースのエンタープライズ管理 (WBEM) 標準をマイクロソフトが実装したものです。 WMI SDK の詳細については、次を参照してください。 [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page)します。 WBEM は、アプリケーションが Management Instrumentation を外部管理ツールに開示する業界標準の方法です。  
   
  WCF では、WMI プロバイダー、WBEM と互換性のあるインターフェイスを通して実行時にインストルメンテーションを公開するコンポーネントを実装します。 管理ツールは、実行時にインターフェイスを介してサービスに接続できます。 WCF では、アドレス、バインディング、動作、およびリスナーなどのサービスの属性を公開します。  
   
@@ -144,4 +144,5 @@ cscript EnumerateCustomObjects.js
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

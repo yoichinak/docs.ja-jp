@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162803"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 一連の `Boolean` 式を評価して結果を決定します。  
@@ -29,13 +29,13 @@ END
  複数の WHEN `Boolean_expression` THEN `result_expression` 句が使用できることを示すプレースホルダーです。  
   
  THEN `result_expression`  
- `Boolean_expression` が `true`に評価されると返される式です。 `result expression` は、任意の有効な式です。  
+ `Boolean_expression` が `true`に評価されると返される式です。 `result expression` 有効な式です。  
   
  ELSE `else_result_expression`  
- 比較操作の評価がいずれも `true`でなかった場合に返される式です。 この引数を省略し、比較演算のいずれも `true`に評価されなかった場合、CASE は NULL を返します。 `else_result_expression` は、任意の有効な式です。 `else_result_expression` と任意の `result_expression` のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
+ 比較操作の評価がいずれも `true`でなかった場合に返される式です。 この引数を省略し、比較演算のいずれも `true`に評価されなかった場合、CASE は NULL を返します。 `else_result_expression` 有効な式です。 `else_result_expression` と任意の `result_expression` のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
   
  WHEN `Boolean_expression`  
- 検索 CASE 形式を使用した場合に評価される `Boolean` 式です。 `Boolean_expression` は、任意の有効な `Boolean` 式です。  
+ 検索 CASE 形式を使用した場合に評価される `Boolean` 式です。 `Boolean_expression` 有効な`Boolean`式。  
   
 ## <a name="return-value"></a>戻り値  
  `result_expression` およびオプションの `else_result_expression`の一連の型の中から、最も優先順位の高い型を返します。  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
 - [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

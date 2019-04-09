@@ -1,5 +1,5 @@
 ---
-title: '方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント'
+title: '方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 65be2367091144945e9540c848e6131deac9d725
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163255"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する
 並べ替えとフィルタ リングの機能を公開する<xref:System.Windows.Forms.BindingSource>を介して制御、<xref:System.Windows.Forms.BindingSource.Sort%2A>と<xref:System.Windows.Forms.BindingSource.Filter%2A>プロパティ。 基になるデータ ソースの場合は、単純な並べ替えを適用することができます、 <xref:System.ComponentModel.IBindingList>、フィルター処理を適用することができ、高度な並べ替え、データ ソースの場合と、<xref:System.ComponentModel.IBindingListView>します。 <xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティには標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]構文: データ ソース内のデータの列の名前を表す文字列が続く`ASC`または`DESC`一覧を昇順または降順で並べ替える必要があるかどうかを示す。 高度な並べ替え、または各列をコンマ区切り記号で区切って複数列の並べ替えを設定することができます。 <xref:System.Windows.Forms.BindingSource.Filter%2A>プロパティは文字列式を受け取ります。  
   
 > [!NOTE]
@@ -54,6 +54,7 @@ ms.locfileid: "57703102"
  この例を実行するには、フォームが含まれていますにコードを貼り付けます、<xref:System.Windows.Forms.BindingSource>という名前`BindingSource1`と<xref:System.Windows.Forms.DataGridView>という`dataGridView1`します。 処理、<xref:System.Windows.Forms.Form.Load>フォームに対する呼び出しイベント`InitializeSortedFilteredBindingSource`load イベント ハンドラー メソッドにします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
 - [方法: サンプル データベースをインストールします。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))

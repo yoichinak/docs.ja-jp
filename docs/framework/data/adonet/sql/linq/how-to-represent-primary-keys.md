@@ -2,12 +2,12 @@
 title: '方法: 主キーを表す'
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: a7cea40b30243c6b15da0500a59ba801f2c8da68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 714211046afcafab4c2b67bf9318cfbede314476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173213"
 ---
 # <a name="how-to-represent-primary-keys"></a>方法: 主キーを表す
 使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>プロパティを<xref:System.Data.Linq.Mapping.ColumnAttribute>をデータベース列に主キーを表すフィールドまたはプロパティを指定する属性。  
@@ -15,7 +15,7 @@ ms.locfileid: "54687428"
  コード例については、「<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>」を参照してください。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、計算列は主キーとしてサポートされません。  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 主キーとしては、計算列をサポートしません。  
   
 ### <a name="to-designate-a-property-or-field-as-a-primary-key"></a>プロパティまたはフィールドを主キーとして指定するには  
   
@@ -24,5 +24,6 @@ ms.locfileid: "54687428"
 2.  値として `true` を指定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [方法: コード エディターを使用してエンティティ クラスをカスタマイズする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

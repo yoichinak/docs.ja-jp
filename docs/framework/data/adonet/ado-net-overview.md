@@ -2,12 +2,12 @@
 title: ADO.NET の概要
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170066"
 ---
 # <a name="adonet-overview"></a>ADO.NET の概要
 ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や ODBC 経由で公開されるデータ ソースに対する一貫性を持ったアクセス機能を実現します。 データを共有する消費者向けアプリケーションで ADO.NET を使用することで、そのようなデータ ソースへの接続や、データ ソースに格納されているデータの取得、操作、更新を実行できます。  
@@ -58,6 +58,7 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
  データ ソースへの接続、データの取得、データの変更の方法について説明します。 これには、`DataReaders` と `DataAdapters` が含まれます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio でのデータにアクセスします。](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

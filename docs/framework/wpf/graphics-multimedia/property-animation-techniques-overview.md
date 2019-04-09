@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165439"
 ---
 # <a name="property-animation-techniques-overview"></a>プロパティ アニメーションの手法の概要
 このトピックでは、ストーリーボード、ローカル アニメーション、クロック、フレームごとのアニメーションなど、プロパティをアニメーション化するさまざまなアプローチについて説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "57366778"
 |-------------------------|---------------|-------------------|--------------------------------|  
 |ストーリー ボード アニメーション|インスタンスごとの<xref:System.Windows.Style>、 <xref:System.Windows.Controls.ControlTemplate>、 <xref:System.Windows.DataTemplate>|[はい]|[はい]|  
 |ローカル アニメーション|インスタンス単位|いいえ|いいえ|  
-|クロック アニメーション|インスタンス単位|いいえ|[はい]|  
+|クロック アニメーション|インスタンス単位|いいえ|はい|  
 |フレーム単位のアニメーション|インスタンス単位|いいえ|N/A|  
   
 <a name="storyboard_animations"></a>   
@@ -56,9 +56,9 @@ ms.locfileid: "57366778"
   
 |ストーリーボードが開始される場所|インスタンス単位|スタイル|コントロール テンプレート|データ テンプレート|例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|はい|はい|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|[はい]|[プロパティ値が変化したときにアニメーションをトリガーする](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|はい|[はい]|[方法: データが変更されたときにアニメーションをトリガーします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|はい|はい|はい|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|はい|[プロパティ値が変化したときにアニメーションをトリガーする](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|はい|はい|[方法: データが変更されたときにアニメーションをトリガーします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|[はい]|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  詳細については<xref:System.Windows.Media.Animation.Storyboard>、オブジェクトを参照してください、[ストーリー ボードの概要](storyboards-overview.md)します。  
@@ -122,6 +122,7 @@ ms.locfileid: "57366778"
  詳細については、次を参照してください。、<xref:System.Windows.Media.CompositionTarget.Rendering>ページ。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションの概要](animation-overview.md)
 - [ストーリーボードの概要](storyboards-overview.md)
 - [アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)

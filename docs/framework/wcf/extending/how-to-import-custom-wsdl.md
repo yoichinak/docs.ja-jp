@@ -1,20 +1,20 @@
 ---
-title: '方法: カスタム WSDL をインポートします。'
+title: '方法: カスタム WSDL をインポートする'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: dba3ec52d03939a306709e7756ff4e801699cf38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 790fee1b798db1c1c2b0b37b0f48b93dd44bc5e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164282"
 ---
-# <a name="how-to-import-custom-wsdl"></a>方法: カスタム WSDL をインポートします。
+# <a name="how-to-import-custom-wsdl"></a>方法: カスタム WSDL をインポートする
 このトピックでは、カスタム WSDL をインポートする方法について説明します。 カスタム WSDL を処理するには、<xref:System.ServiceModel.Description.IWsdlImportExtension> インターフェイスを実装する必要があります。  
   
 ### <a name="to-import-custom-wsdl"></a>カスタム WSDL をインポートするには  
   
-1.  <xref:System.ServiceModel.Description.IWsdlImportExtension> を実装します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> メソッドを実装してメタデータをインポートする前に変更します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> メソッドと <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドを実装してメタデータからインポートされたコントラクトとエンドポイントを変更します。 インポートしたコントラクトまたはエンドポイントにアクセスするには、対応するコンテキスト オブジェクト (<xref:System.ServiceModel.Description.WsdlContractConversionContext> または <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>) を使用します。  
+1.  <xref:System.ServiceModel.Description.IWsdlImportExtension>を実装します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%28System.Web.Services.Description.ServiceDescriptionCollection%2CSystem.Xml.Schema.XmlSchemaSet%2CSystem.Collections.Generic.ICollection%7BSystem.Xml.XmlElement%7D%29> メソッドを実装してメタデータをインポートする前に変更します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> メソッドと <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドを実装してメタデータからインポートされたコントラクトとエンドポイントを変更します。 インポートしたコントラクトまたはエンドポイントにアクセスするには、対応するコンテキスト オブジェクト (<xref:System.ServiceModel.Description.WsdlContractConversionContext> または <xref:System.ServiceModel.Description.WsdlEndpointConversionContext>) を使用します。  
   
     ```  
     public class WsdlDocumentationImporter : IWsdlImportExtension  
@@ -78,6 +78,7 @@ ms.locfileid: "54575607"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
 - [カスタム WSDL パブリケーション](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)

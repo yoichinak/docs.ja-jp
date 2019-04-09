@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169573"
 ---
 # <a name="brush-transformation-overview"></a>ブラシの変換の概要
 Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.Brush.Transform%2A>と<xref:System.Windows.Media.Brush.RelativeTransform%2A>します。 これらのプロパティを使うと、ブラシの内容を回転、拡大縮小、傾斜、移動できます。 このトピックでは、これら 2 つのプロパティの違いについて説明し、それらの使用例を示します。  
@@ -98,6 +98,7 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
  この例は、さらに大きなサンプルの一部です。 完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」をご覧ください。 ブラシについて詳しくは、「[WPF のブラシの概要](wpf-brushes-overview.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>

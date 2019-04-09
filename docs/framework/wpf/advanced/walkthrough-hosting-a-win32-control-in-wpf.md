@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF の Win32 コントロールのホスト'
+title: 'チュートリアル: WPF での Win32 コントロールのホスト'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160694"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF の Win32 コントロールのホスト
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF での Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
   
  このトピックで説明するアプリケーション、 [WPF のサンプルでの Win32 ListBox コントロールをホストしている](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)Win32 のリスト ボックス コントロールがホストされます。 この一般的な手順は、すべての Win32 ウィンドウのホスティングに拡張できます。  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、[Getting Started](../getting-started/index.md)を参照してください。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
+ このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
   
  このトピックに付属するサンプルがで実装されているためC#、Windows API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
   
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
  最後に、設定`handled`に`true`をメッセージが処理されたことを示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162229"
 ---
 # <a name="how-to-create-outlined-text"></a>方法: 中抜きの文字列を作成する
 ほとんどの場合、テキスト文字列内に装飾を追加するときに、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーションでは、一連の個別の文字とグリフの観点からテキストを使用しています。 たとえば、線状グラデーション ブラシを作成してに適用、<xref:System.Windows.Controls.Control.Foreground%2A>のプロパティを<xref:System.Windows.Controls.TextBox>オブジェクト。 表示またはテキスト ボックスを編集すると、線状グラデーション ブラシがテキスト文字列内の文字の現在のセットに自動的に適用します。  
@@ -52,7 +52,8 @@ ms.locfileid: "58125942"
  [!code-csharp[OutlineTextControlViewer#OnRender](~/samples/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs#onrender)]
  [!code-vb[OutlineTextControlViewer#OnRender](~/samples/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb#onrender)]  
   
-  カスタム ユーザー コントロール オブジェクトの例のソースを参照してください。[の OutlineTextControl.cs C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs)と[Visual Basic の OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb)します。 
+  カスタム ユーザー コントロール オブジェクトの例のソースを参照してください。[の OutlineTextControl.cs C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs)と[Visual basic の OutlineTextControl.vb](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb)します。 
   
 ## <a name="see-also"></a>関連項目
+
 - [書式設定されたテキストの描画](drawing-formatted-text.md)

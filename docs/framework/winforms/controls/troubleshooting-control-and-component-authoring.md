@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168065"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>コントロールとコンポーネントの作成時のトラブルシューティング
 このトピックでは、コンポーネントとコントロールの開発時に発生する次の一般的な問題について説明します。 詳細については、「[コンポーネントによるプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))」を参照してください。  
@@ -108,9 +108,10 @@ ms.locfileid: "57712696"
  使用すると<xref:System.Drawing.ToolboxBitmapAttribute>をカスタム コンポーネントにアイコンを関連付けるには、ビットマップは自動生成されたコンポーネントのツールボックスに表示されません。 ビットマップを表示するには、**[ツールボックス アイテムの選択]** ダイアログ ボックスを使用してコントロールを再読み込みします。 詳細については、「[方法 :コントロールにツールボックス ビットマップを指定](how-to-provide-a-toolbox-bitmap-for-a-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)
-- [チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [コンポーネントの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [デザイン時開発のトラブルシューティング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

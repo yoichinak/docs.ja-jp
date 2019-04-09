@@ -1,18 +1,18 @@
 ---
-title: '方法: カスタム クレームを作成します。'
+title: '方法: カスタム クレームを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167428"
 ---
-# <a name="how-to-create-a-custom-claim"></a>方法: カスタム クレームを作成します。
+# <a name="how-to-create-a-custom-claim"></a>方法: カスタム クレームを作成する
 Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) を作成するための組み込みクレームの種類とヘルパー関数の権限のセットを提供する<xref:System.IdentityModel.Claims.Claim>その種類と権限を持つインスタンス。 この組み込みクレームは、モデルに関する情報を WCF がサポートするクライアント資格情報の種類に既定で設計されています。 多くの場合はこの組み込みクレームで十分ですが、一部のアプリケーションでカスタム クレームが必要になる場合があります。 クレームは、クレームが適用されるリソースを示すクレームの種類と、リソースにアサートされる権限で構成されます。 このトピックでは、カスタム クレームを作成する方法について説明します。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>プリミティブ データ型に基づくカスタム クレームを作成するには  
@@ -75,6 +75,7 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>

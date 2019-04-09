@@ -2,12 +2,12 @@
 title: USING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: a07ee1c32a93ee22b7418784fbd893e7699c553e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6a5b374bc253cb2deb7a9e1de942c32d8e8bbfcf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168026"
 ---
 # <a name="using-entity-sql"></a>USING (Entity SQL)
 クエリ式で使用する名前空間を指定します。  
@@ -37,5 +37,6 @@ using SqlServer; RAND()
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [名前空間](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

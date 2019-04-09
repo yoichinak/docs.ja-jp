@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171892"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF と Win32 の相互運用性
-このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用する方法の概要について説明します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードに多くの投資を行った場合は、そのコードの一部を再利用する方がより効率的である場合があります。  
-  
+このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用する方法の概要について説明します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するための豊富な環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードに多くの投資を行った場合は、そのコードの一部を再利用する方がより効率的である場合があります。  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF と Win32 の相互運用の基本  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用するための基本的な手法は 2 つあります。  
@@ -31,7 +29,7 @@ ms.locfileid: "57377295"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 相互運用プロジェクト  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] はマネージド コードですが、ほとんどの既存の [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラムはアンマネージド [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] で記述されています。  純粋なアンマネージ プログラムから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を呼び出すことはできません。 ただし、[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] コンパイラで `/clr` オプションを使用すると、マネージドとアンマネージドの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼び出しをシームレスに混在させることができる、マネージドとアンマネージドの混在プログラムを作成することができます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sマネージ コードですがほとんど既存[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プログラムはアンマネージで記述[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]します。en純粋なアンマネージ プログラムから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を呼び出すことはできません。nただし、[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] コンパイラで `/clr` オプションを使用すると、マネージドとアンマネージドの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼び出しをシームレスに混在させることができる、マネージドとアンマネージドの混在プログラムを作成することができます。  
   
  プロジェクト レベルで、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ファイルを [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] プロジェクトにコンパイルできないという問題があります。  これを解決するために、プロジェクトを分割する手法がいくつかあります。  
   
@@ -64,7 +62,7 @@ ms.locfileid: "57377295"
   
 2.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)] で実装します。 既存のアンマネージド [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] アプリケーションから始める場合、通常、`/clr` コンパイラ フラグが含まれるようにプロジェクトの設定を変更して、アプリケーションでマネージド コードを呼び出すようにできます (`/clr` コンパイルをサポートするための要件の詳細については、ここでは説明しません)。  
   
-3.  スレッド処理モデルをシングル スレッド アパートメント (STA: Single Threaded Apartment) に設定します。 このスレッド処理モデルを使用するのは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のみです。  
+3.  スレッド処理モデルをシングル スレッド アパートメント (STA: Single Threaded Apartment) に設定します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このスレッド処理モデルを使用します。  
   
 4.  ウィンドウ プロシージャで WM_CREATE 通知を処理します。  
   
@@ -122,15 +120,15 @@ ms.locfileid: "57377295"
   
 #### <a name="notable-differences-in-output-behavior"></a>出力動作の顕著な違い  
   
--   <xref:System.Windows.FrameworkElement> の基底クラスである <xref:System.Windows.Interop.HwndHost> には、UI の変更に関係する多くのプロパティが用意されています。 これには、親要素内の要素のレイアウトを変更する <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType> などのプロパティが含まれます。 ただし、これらのプロパティの多くは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] で等価機能が存在し得るとしても、それに対応付けられていません。 非常に多くのプロパティとその意味がレンダリング テクノロジ固有でありすぎるために、対応付けをしても役に立ちません。 そのためなどのプロパティを設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>で<xref:System.Windows.Interop.HwndHost>も何も起こりません。  
+-   <xref:System.Windows.FrameworkElement>、これは、<xref:System.Windows.Interop.HwndHost>基底クラスでは UI の変更を示すもので、かなり多くのプロパティがあります。 これには、親要素内の要素のレイアウトを変更する <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType> などのプロパティが含まれます。 ただし、これらのプロパティの多くは、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] で等価機能が存在し得るとしても、それに対応付けられていません。 非常に多くのプロパティとその意味がレンダリング テクノロジ固有でありすぎるために、対応付けをしても役に立ちません。 そのためなどのプロパティを設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>で<xref:System.Windows.Interop.HwndHost>も何も起こりません。  
   
--   <xref:System.Windows.Interop.HwndHost> は、回転、拡大縮小、傾斜、または変換の影響を受けません。  
+-   <xref:System.Windows.Interop.HwndHost> ことはできません回転、スケーリング、傾斜、またはそれ以外の場合、変換によって影響を受けます。  
   
--   <xref:System.Windows.Interop.HwndHost> では、<xref:System.Windows.UIElement.Opacity%2A> プロパティ (アルファ ブレンディング) はサポートされません。 <xref:System.Windows.Interop.HwndHost> 内のコンテンツでアルファ情報を含む <xref:System.Drawing> 操作が実行される場合、それ自体は違反ではありませんが、<xref:System.Windows.Interop.HwndHost> 全体では不透明度 = 1.0 (100%) のみがサポートされます。  
+-   <xref:System.Windows.Interop.HwndHost> サポートしていません、<xref:System.Windows.UIElement.Opacity%2A>プロパティ (アルファ ブレンド)。 <xref:System.Windows.Interop.HwndHost> 内のコンテンツでアルファ情報を含む <xref:System.Drawing> 操作が実行される場合、それ自体は違反ではありませんが、<xref:System.Windows.Interop.HwndHost> 全体では不透明度 = 1.0 (100%) のみがサポートされます。  
   
--   <xref:System.Windows.Interop.HwndHost> は、同じトップレベル ウィンドウの他の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素の上に表示されます。 ただし、<xref:System.Windows.Controls.ToolTip> または <xref:System.Windows.Controls.ContextMenu> で生成されるメニューは独立したトップレベル ウィンドウであるため、<xref:System.Windows.Interop.HwndHost> で正しく動作します。  
+-   <xref:System.Windows.Interop.HwndHost> その他の上に表示されます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]同じトップレベル ウィンドウ内の要素。 ただし、<xref:System.Windows.Controls.ToolTip> または <xref:System.Windows.Controls.ContextMenu> で生成されるメニューは独立したトップレベル ウィンドウであるため、<xref:System.Windows.Interop.HwndHost> で正しく動作します。  
   
--   <xref:System.Windows.Interop.HwndHost> は、親 <xref:System.Windows.UIElement> のクリッピング領域に対応しません。 これは、<xref:System.Windows.Interop.HwndHost> クラスをスクロール領域または <xref:System.Windows.Controls.Canvas> に格納しようとする場合に問題となる可能性があります。  
+-   <xref:System.Windows.Interop.HwndHost> 親のクリッピング領域を考慮せず<xref:System.Windows.UIElement>します。 これは、<xref:System.Windows.Interop.HwndHost> クラスをスクロール領域または <xref:System.Windows.Controls.Canvas> に格納しようとする場合に問題となる可能性があります。  
   
 #### <a name="notable-differences-in-input-behavior"></a>入力動作の顕著な違い  
   
@@ -157,8 +155,9 @@ ms.locfileid: "57377295"
  インターフェイスは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 領域と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 領域間の遷移で発生する処理をサポートするだけです。 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 領域では、Tab キーによる移動動作は、Tab キーによる移動の [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 実装ロジック (ある場合) によって完全に制御されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [チュートリアル: WPF の Win32 コントロールのホスト](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [チュートリアル: WPF での Win32 コントロールのホスト](walkthrough-hosting-a-win32-control-in-wpf.md)
 - [チュートリアル: Win32 での WPF コンテンツのホスト](walkthrough-hosting-wpf-content-in-win32.md)

@@ -2,12 +2,12 @@
 title: 探索のセキュリティのサンプル
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c77bedbea3d9002b24556d240d5b788fe6c53d67
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160765"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
 Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、両方をサポート、 [2005 Discovery 仕様](https://go.microsoft.com/fwlink/?LinkId=177912)と[バージョン 1.1](https://go.microsoft.com/fwlink/?LinkId=179677)します。  
@@ -74,4 +74,3 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
-  

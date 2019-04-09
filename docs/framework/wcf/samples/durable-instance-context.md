@@ -2,12 +2,12 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160967"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 このサンプルでは、永続性インスタンス コンテキストを有効にする Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

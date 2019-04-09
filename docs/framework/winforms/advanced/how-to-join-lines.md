@@ -1,5 +1,5 @@
 ---
-title: '方法: 結合線'
+title: '方法: 直線を接合する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: a43cfb8a51435aa0c5c3f7aae673d38d3f7792ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174916"
 ---
-# <a name="how-to-join-lines"></a>方法: 結合線
+# <a name="how-to-join-lines"></a>方法: 直線を接合する
 直線の接合部は、2 つの行の端を満たすまたはオーバー ラップによって構成される一般的な領域です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の 3 つの行の結合スタイルを提供します。 マイタ、傾斜、およびラウンドします。 直線の接合スタイルのプロパティである、<xref:System.Drawing.Pen>クラス。 直線の接合スタイルを指定すると、<xref:System.Drawing.Pen>オブジェクトのいずれかで接続されているすべての行を結合スタイルが適用されること<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトがそのペンを使用して描画します。  
   
  次の図は、直線のベベル結合の結果を示します。  
@@ -35,7 +35,8 @@ ms.locfileid: "58410876"
  [!code-vb[System.Drawing.UsingAPen#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+ 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

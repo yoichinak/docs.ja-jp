@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168132"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
 このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細についてを参照してください。[トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 トレース ファイル ビューアーの詳細についてを参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
@@ -19,27 +19,27 @@ ms.locfileid: "56442296"
   
      HTTP エラー 404.3 - Not Found 拡張構成により、要求しているページは使用できません。 ページがスクリプトの場合は、ハンドラーを追加します。 ファイルをダウンロードする場合は、MIME マップを追加します。 エラーの詳細: InformationModule StaticFileModule。  
   
-2.  [最初の要求の後でクライアントがしばらくアイドル状態になった場合、2 番目の要求で MessageSecurityException を受け取ることがあります。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2.  [最初の要求の後でクライアントがしばらくアイドル状態になった場合、2 番目の要求で MessageSecurityException を受け取ることがあります。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [サービスと対話しているクライアントの数が約 10 個になると、サービスが新しいクライアントを拒否し始めます。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3.  [サービスと対話しているクライアントの数が約 10 個になると、サービスが新しいクライアントを拒否し始めます。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
 4.  [WCF アプリケーションの構成ファイル以外の場所からサービス構成を読み込むことはできますか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [サービスとクライアントの動作に問題はないのですが、クライアントが別のコンピューター上にあるときにサービスとクライアントがうまく動作しません。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5.  [サービスとクライアントの動作に問題はないのですが、クライアントが別のコンピューター上にあるときにサービスとクライアントがうまく動作しません。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [FaultException をスローするときに\<例外 > 型は、例外は、必ずクライアントで一般的な FaultException 型とジェネリック型ではなく受け取ります。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6.  [FaultException をスローするときに\<例外 > 型は、例外は、必ずクライアントで一般的な FaultException 型とジェネリック型ではなく受け取ります。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [応答にデータがない場合、一方向操作と要求/応答操作が戻る速度がほぼ同じになるようです。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7.  [応答にデータがない場合、一方向操作と要求/応答操作が戻る速度がほぼ同じになるようです。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [サービスで X.509 証明書を使用していますが、System.Security.Cryptography.CryptographicException を受け取ります。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8.  [サービスで X.509 証明書を使用していますが、System.Security.Cryptography.CryptographicException を受け取ります。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
-9. [操作の最初のパラメーターを大文字から小文字に変更したら、クライアントが例外をスローするようになりました。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
+9. [操作の最初のパラメーターを大文字から小文字に変更したら、クライアントが例外をスローするようになりました。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
-10. [トレース ツールの 1 つを使用していますが、EndpointNotFoundException を受け取りました。どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
+10. [トレース ツールの 1 つを使用していますが、EndpointNotFoundException を受け取りました。 どうしてでしょうか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q99)  
   
 11. [WCF SOAP アプリケーションから WCF Web HTTP アプリケーションを呼び出すときに、サービスには、次のエラーが返されます。許可されていない 405 メソッド](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BK_MK99)  
   
- [ベース アドレスについて教えてください。エンドポイント アドレスとどのように関連していますか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
+ [ベース アドレスについて教えてください。 エンドポイント アドレスとどのように関連していますか。](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q10)  
   
 <a name="bkmk_0"></a>   
 ## <a name="after-installing-windows-7-and-iis-when-i-attempt-to-browse-to-a-wcf-service-i-get-the-following-error-message-http-error-4043--not-found"></a>Windows 7 と IIS をインストールした後は、WCF サービスを参照するときに、次のエラー メッセージは取得します。HTTP エラー 404.3-Not Found  
@@ -148,13 +148,13 @@ public class MyServiceHost : ServiceHost
   
 -   標準的な方法でシリアル化している例外に依存できません。 <xref:System.Security.SecurityException>のような例外はまったくシリアル化できない可能性があります。  
   
--   クライアントに内部実装の詳細が公開されます。 詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
+-   クライアントに内部実装の詳細が公開されます。 詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
  ただし、アプリケーションをデバッグしている場合、 <xref:System.ServiceModel.Description.ServiceDebugBehavior> クラスを使用することによって例外情報をシリアル化して、その情報をクライアントに返すことができます。  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>応答にデータがない場合、一方向操作と要求/応答操作が戻る速度がほぼ同じになるようです。 どうしてでしょうか。  
- 操作を一方向に指定すると、操作コントラクトは入力メッセージを受け入れるだけで、出力メッセージを返しません。 WCF では、送信データがネットワークに書き込まれた、または例外がスローされたときにすべてのクライアント呼び出しが返されます。 一方向操作は同様に動作し、この操作では、サービスが見つからない場合は例外をスローし、サービスがネットワークからのデータの受け入れ準備を完了していない場合はブロックできます。 通常 WCF では、これにより、一方向呼び出しは要求/応答よりも速くクライアントに戻りますネットワーク経由で送信データの送信速度が低下する任意の条件には、一方向操作と要求/応答操作が速度が低下します。 詳細については、[一方向サービス](../../../docs/framework/wcf/feature-details/one-way-services.md)と[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)を参照してください。  
+ 操作を一方向に指定すると、操作コントラクトは入力メッセージを受け入れるだけで、出力メッセージを返しません。 WCF では、送信データがネットワークに書き込まれた、または例外がスローされたときにすべてのクライアント呼び出しが返されます。 一方向操作は同様に動作し、この操作では、サービスが見つからない場合は例外をスローし、サービスがネットワークからのデータの受け入れ準備を完了していない場合はブロックできます。 通常 WCF では、これにより、一方向呼び出しは要求/応答よりも速くクライアントに戻りますネットワーク経由で送信データの送信速度が低下する任意の条件には、一方向操作と要求/応答操作が速度が低下します。 詳細については、次を参照してください。[一方向サービス](../../../docs/framework/wcf/feature-details/one-way-services.md)と[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)します。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>サービスで X.509 証明書を使用していますが、System.Security.Cryptography.CryptographicException を受け取ります。 どうしてでしょうか。  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

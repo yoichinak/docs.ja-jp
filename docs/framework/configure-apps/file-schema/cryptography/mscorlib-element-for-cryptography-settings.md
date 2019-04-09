@@ -1,5 +1,5 @@
 ---
-title: 暗号設定の <mscorlib> 要素
+title: <mscorlib> 暗号設定の要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 84eb12916c2d1ec2d35830fae2c6ce07f1c7c664
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165153"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 要素の暗号化の設定
 含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)します。  
@@ -69,9 +69,10 @@ ms.locfileid: "55259627"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
 - <xref:System.Security.Cryptography>
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [暗号設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [暗号化サービス](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

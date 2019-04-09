@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 280b2f08c78933924abfeceb3d315fcd20503c92
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2d23bf14fbb3d75534ac2d4a43eca0fbf3e994ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161396"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName メソッド
 インスタンス フィールドの名前を取得します。  
@@ -46,8 +46,9 @@ HRESULT GetName(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorDebugInstanceFieldSymbol インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

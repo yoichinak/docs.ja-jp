@@ -2,18 +2,18 @@
 title: サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160668"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング
 ここでは、トレース データの形式、表示方法、およびサービス トレース ビューアーを使用したアプリケーションのトラブルシューティングの方法について説明します。  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>サービス トレース ビューアー ツールの使用  
- Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、エラーの根本原因を特定する WCF リスナーによって生成された診断トレースを関連付けることができます。 ツールでは、簡単に表示、グループ、および診断、修復および WCF サービスで問題を確認できるようにトレースのフィルターを適用する方法を使用します。 詳細については、このツールを使用して、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を参照してください。  
+ Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、エラーの根本原因を特定する WCF リスナーによって生成された診断トレースを関連付けることができます。 ツールでは、簡単に表示、グループ、および診断、修復および WCF サービスで問題を確認できるようにトレースのフィルターを適用する方法を使用します。 詳細については、このツールを使用して、次を参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
   
  このトピックの「には実行によって生成されたトレースのスクリーン ショットが含まれています、[トレースとメッセージ ログ](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)を使用して表示するときにサンプリング、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。 ここでは、トレースの内容、アクティビティ、およびアクティビティの相関関係を理解する方法と、トラブルシューティングを行うときに多数のトレースを分析する方法について説明します。  
   
@@ -169,8 +169,7 @@ ms.locfileid: "58465062"
  次の図は、WCF サービス アクティビティのグラフ ビューを示します。   
 
  ![スクリーン ショット トレース ビューアーの WCF サービス アクティビティの一覧を表示](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  次のスクリーンショットは、クライアントとサービスの両方のアクティビティを示しています。プロセス全体にわたり、"プロセス アクション Add" アクティビティはオレンジで強調表示されています。 矢印は、クライアントとサービスによって送受信された要求メッセージと応答メッセージを関連付けています。 このグラフでは、"プロセス アクション" のトレースはプロセス間で分かれていますが、右上のパネルには同じアクティビティの一部として示されています。 このパネルには、送信されたメッセージのクライアント トレースの後に、受信および処理されたメッセージのサービス トレースが表示されています。  
   
  次の図は、両方の WCF クライアントとサービス アクティビティのグラフ ビューを示しています。  
@@ -182,15 +181,14 @@ ms.locfileid: "58465062"
  ![トレース ビューアーを使用して](../../../../../docs/framework/wcf/diagnostics/tracing/media/wcfc-e2etrace9s.gif "wcfc_e2etrace9s")  
 サービスとクライアント間のエラーの相関関係  
   
- これらのトレースの生成に使用したサンプルは、wsHttpBinding を使用する一連の同期要求です。 セキュリティを使用しないシナリオ、または非同期要求を使用するシナリオの場合は、このグラフとは違う部分があります。非同期要求の場合、"プロセス アクション" アクティビティは、非同期呼び出しを構成する開始操作と終了操作の間に配置され、コールバック アクティビティへの転送が示されます。 その他のシナリオの詳細については、[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)を参照してください。  
+ これらのトレースの生成に使用したサンプルは、wsHttpBinding を使用する一連の同期要求です。 セキュリティを使用しないシナリオ、または非同期要求を使用するシナリオの場合は、このグラフとは違う部分があります。非同期要求の場合、"プロセス アクション" アクティビティは、非同期呼び出しを構成する開始操作と終了操作の間に配置され、コールバック アクティビティへの転送が示されます。 その他のシナリオの詳細については、次を参照してください。[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)します。  
   
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>サービス トレース ビューアーを使用したトラブルシューティング  
  サービス トレース ビューアー ツールにトレース ファイルを読み込むと、左のパネルの赤または黄色のアクティビティを選択することによって、アプリケーションの問題の原因を突き止めることができます。 通常、000 アクティビティには、ユーザーにバブリングする未処理の例外が含まれます。  
   
   次の図は、問題のルートに移動する赤または黄色のアクティビティを選択する方法を示します。   
  ![赤または黄色のアクティビティ、問題の根本原因を特定するためのスクリーン ショット。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  右上のパネルでは、左側で選択したアクティビティのトレースを調べることができます。 このパネルで赤または黄色のトレースを調べ、それらがどのように関連しているかを確認できます。 前のグラフで、同じ "プロセス アクション" アクティビティのクライアントとサービスの警告トレースを確認します。  
   
  これらのトレースからエラーの根本原因がわからない場合は、左のパネルで選択したアクティビティ (ここでは "プロセス アクション") をダブルクリックすることでグラフを利用できます。 関連アクティビティが含まれたグラフが表示されます。 (「+」記号をクリック) して、関連アクティビティを展開することができますし、赤または黄色で関連するアクティビティで最初に出力されたトレースが見つかりません。 調べる対象の赤または黄色のトレースの直前に発生したアクティビティを展開し、エンドポイント間の関連アクティビティまたはメッセージ フローをたどって問題の根本原因を突き止めます。  
@@ -207,6 +205,7 @@ ms.locfileid: "58465062"
 トラブルシューティングを開始するには、ことも赤または黄色のメッセージのトレースを選択し、根本原因を追跡するためにこれをダブルクリックできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

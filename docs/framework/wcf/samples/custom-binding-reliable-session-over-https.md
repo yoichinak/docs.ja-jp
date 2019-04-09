@@ -2,12 +2,12 @@
 title: HTTPS を介したカスタム バインドの信頼できるセッション
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: eaf82e304dec2c8210cede64d4874670c8642156
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e29910be074f8196094186f7d81787ac5ee829b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172433"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS を介したカスタム バインドの信頼できるセッション
 このサンプルでは、信頼できるセッションを使用した SSL トランスポート セキュリティを示します。 信頼できるセッションは、WS-ReliableMessaging プロトコルを実装しています。 信頼できるセッションを介して WS-Security を構築することにより、セキュリティで保護された信頼できるセッションを持つことができます。 ただし、SSL による HTTP トランスポート セキュリティの使用を選択できる場合もあります。  
@@ -135,4 +135,3 @@ Press <ENTER> to terminate client.
 4.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 5.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
-  

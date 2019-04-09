@@ -2,12 +2,12 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 484fad33614ca2b9507ed88aadfc1a41bb216c28
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167649"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
@@ -55,7 +55,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
  テキスト エンコードとバイナリ エンコードの両方がサポートされています。 すべての WCF 転送モードがサポートされています。 詳細については、「 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)」を参照してください。  
   
 ### <a name="add-service-reference"></a>サービス参照の追加  
- WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューション エクスプ ローラーで"すべてのファイルを表示 を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、[非同期タスクのタスクを使用した非同期プログラミングを簡略化](https://msdn.microsoft.com/magazine/ff959203.aspx)を参照してください。  
+ WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューション エクスプ ローラーで"すべてのファイルを表示 を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、次を参照してください。[非同期タスクのタスクを使用した非同期プログラミングを簡略化](https://msdn.microsoft.com/magazine/ff959203.aspx)します。  
   
  構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。 この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。 部分メソッドは次のように宣言されています。  
   
@@ -175,9 +175,10 @@ void async SomeMethod()
  非同期呼び出しを行うメソッドでは async キーワード、非同期メソッドの呼び出し時には await キーワードが使用されていることに注意してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows ストア アプリ ブログの WCF](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
 - [WCF Windows ストア クライアントおよびセキュリティ](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
 - [Windows ストア アプリとコンピューター間の呼び出し](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [Windows ストア アプリから Azure にデプロイされた WCF サービスの呼び出し](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Azure にデプロイされた WCF サービスの Windows ストア アプリからの呼び出し](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [バインディング](../../../../docs/framework/wcf/bindings.md)

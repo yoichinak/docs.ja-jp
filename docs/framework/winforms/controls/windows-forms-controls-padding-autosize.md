@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト'
+title: 'チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト'
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167870"
 ---
-# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 **Windows フォーム デザイナー**はこれを実現する多くのレイアウト ツールを提供します。 3 つ最も重要なは、 <xref:System.Windows.Forms.Control.Margin%2A>、 <xref:System.Windows.Forms.Control.Padding%2A>、および<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティで、すべての Windows フォーム コントロールの上に存在します。  
   
  <xref:System.Windows.Forms.Control.Margin%2A> プロパティは、その他のコントロールで、コントロールの枠線からの指定された距離を保持するコントロールの周囲のスペースを定義します。  
@@ -113,7 +113,7 @@ ms.locfileid: "57708432"
 ## <a name="automatically-sizing-your-controls"></a>コントロールを自動的にサイズ変更  
  一部のアプリケーションでコントロールのサイズはいないと同じである実行時にデザイン時にでした。 テキストを<xref:System.Windows.Forms.Button>コントロールなどの可能性がありますがから取得した、データベースをその長さが事前にわかっていません。  
   
- ときに、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティに設定されて`true`、そのコンテンツへ自体、コントロールのサイズが。 詳細については、[AutoSize プロパティの概要](autosize-property-overview.md)を参照してください。  
+ ときに、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティに設定されて`true`、そのコンテンツへ自体、コントロールのサイズが。 詳細については、次を参照してください。 [AutoSize プロパティの概要](autosize-property-overview.md)します。  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>AutoSize プロパティを使用して、フォーム上のコントロールを配置するには  
   
@@ -185,11 +185,12 @@ ms.locfileid: "57708432"
 -   子コントロールのドッキングを使用した実験を<xref:System.Windows.Forms.Panel>コントロール。 <xref:System.Windows.Forms.Control.Padding%2A>プロパティの全般的な実現は、<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>プロパティを満たすことが自分子コントロールを配置することで大文字と小文字である、<xref:System.Windows.Forms.Panel>コントロールと子コントロールの設定<xref:System.Windows.Forms.Control.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>. 設定、<xref:System.Windows.Forms.Panel>コントロールの<xref:System.Windows.Forms.Control.Padding%2A>プロパティをさまざまな値の影響に注意してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

@@ -2,12 +2,12 @@
 title: Windows のイベント トレースへの追跡イベント
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166531"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows のイベント トレースへの追跡イベント
 このサンプルでは、Windows Workflow Foundation (WF) ワークフロー サービスの追跡を有効にして、追跡イベントで Event Tracing for Windows (ETW) を出力する方法を示します。 ワークフロー追跡レコードを ETW に出力するために、このサンプルでは ETW 追跡参加要素 (<xref:System.Activities.Tracking.EtwTrackingParticipant>) を使用します。
@@ -20,7 +20,7 @@ ms.locfileid: "54592862"
 |コンポーネント|説明|
 |---------------|-----------------|
 |追跡ランタイム|追跡レコードを出力するためのインフラストラクチャを提供します。|
-|追跡参加要素|追跡レコードにアクセスします。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む追跡参加要素が用意されています。|
+|追跡参加要素|追跡レコードにアクセスします。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む追跡参加要素が付属しています。|
 |追跡プロファイル|ワークフロー インスタンスから出力された追跡レコードのサブセットを追跡参加要素から定期受信するためのフィルター機構。|
 
  次の表で、ワークフロー ランタイムが出力する追跡レコードの詳細を説明します。
@@ -150,4 +150,5 @@ ms.locfileid: "54592862"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

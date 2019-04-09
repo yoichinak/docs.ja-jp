@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172108"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>ルーティング イベントの処理済みとしてのマーキング、およびクラス処理
 ルーティング イベントのハンドラーでは、イベント データ内で、イベントを処理済みとしてマークできます。 イベントを処理すると、ルートが事実上短縮されます。 クラス処理は、ルーティング イベントでサポートされているプログラミング概念です。 クラス ハンドラーでは、特定のルーティング イベントをクラス レベルのハンドラーで処理することができます。このハンドラーは、そのクラスのどのインスタンスのどのインスタンス ハンドラーよりも先に呼び出されます。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックでは、「[ルーティング イベントの概要](routed-events-overview.md)」で紹介した概念を詳しく説明します。  
@@ -99,6 +97,7 @@ ms.locfileid: "57378840"
  2 つ目の方法は、トンネル バージョンとバブル バージョンのルーティング イベントがペアになっている入力イベントでのみ使用できます。 これらのルーティング イベントについて、対応するプレビュー/トンネル ルーティング イベントにハンドラーを追加することができます。 そのルーティング イベントはルートからトンネリングを開始するため、アプリケーション要素ツリーの先祖要素のレベルにプレビュー ハンドラーをアタッチしておけば、イベントがボタン クラス処理コードによってインターセプトされなくなります。 この方法を使用する場合は、プレビュー イベントを処理済みとしてマークする際に注意が必要です。 指定の例の<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>としてイベントをマークされている場合、ルート要素で処理される<xref:System.Windows.RoutedEventArgs.Handled%2A>ハンドラーの実装では実際に抑制する、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。 通常これは望ましくない動作です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.EventManager>
 - [プレビュー イベント](preview-events.md)
 - [カスタム ルーティング イベントを作成する](how-to-create-a-custom-routed-event.md)
