@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125763"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>方法: Windows Communication Foundation セキュリティ イベントを監査します。
-Windows Communication Foundation (WCF)、Windows イベント ビューアーを使用して表示できる Windows イベント ログにセキュリティ イベント ログに記録することができます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF が監査の詳細については、[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
+Windows Communication Foundation (WCF)、Windows イベント ビューアーを使用して表示できる Windows イベント ログにセキュリティ イベント ログに記録することができます。 このトピックでは、セキュリティ イベントをログ出力するようにアプリケーションを設定する方法について説明します。 WCF が監査の詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
 ### <a name="to-audit-security-events-in-code"></a>セキュリティ イベントを監査するコードを記述するには  
   
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF)、Windows イベント ビューアーを
  場合、<xref:System.ServiceModel.AuditLogLocation>プロパティに設定されて<xref:System.ServiceModel.AuditLogLocation.Security>と**オブジェクト アクセスの監査**に設定されていない、**ローカル セキュリティ ポリシー**、監査イベントは、セキュリティ ログに書き込まれません。 エラーが返らない場合でも、監査エントリはセキュリティ ログに書き込まれません。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

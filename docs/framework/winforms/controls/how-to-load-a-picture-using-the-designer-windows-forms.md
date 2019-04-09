@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: febe1fc616bd1405e699c03fa673814a45976769
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127141"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法: デザイナー (Windows フォーム) を使用してピクチャを読み込む.
 Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール、読み込みし、設定して、デザイン時にフォームに画像を表示できます、<xref:System.Windows.Forms.PictureBox.Image%2A>に有効な画像のプロパティ。 次の表では、許容されるファイルの種類を示します。  
@@ -44,8 +44,9 @@ Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール�
 1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティと、イメージ オブジェクトの名前の左側に表示される小さなのサムネイル画像を右クリックします。 選択**リセット**します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
-- [方法: 実行時にサイズまたは画像の配置を変更します。](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [方法: 実行時にピクチャを設定します。](how-to-set-pictures-at-run-time-windows-forms.md)
+- [方法: 実行時にピクチャのサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [方法: 実行時にピクチャを設定する](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox コントロール](picturebox-control-windows-forms.md)

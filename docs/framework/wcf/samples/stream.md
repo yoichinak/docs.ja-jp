@@ -2,12 +2,12 @@
 title: ストリーム
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e4e70a3bf4137169afa94a122225f27c25909713
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127310"
 ---
 # <a name="stream"></a>ストリーム
 このストリーム サンプルでは、ストリーミング転送モードの通信を使用する方法を示します。 サービスは、ストリームを送受信する複数の操作を公開します。 このサンプルは自己ホスト型です。 クライアントとサービスはどちらもコンソール プログラムです。  
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- `GetStream` 操作は、一部の入力データを文字列として受信 (バッファ) し、`Stream` (ストリーミング) を返します。 逆に言えば、`UploadStream` は `Stream` (ストリーミング) を取り込んで、`bool` (バッファー) を返します。 `EchoStream` は `Stream` を出し入れします。これは、入力および出力メッセージがどちらもストリーミングされる操作の例です。 最後に、`GetReversedStream` は入力を行わずに `Stream` (ストリーミング) を返します。  
+ `GetStream` 操作は、一部の入力データを文字列として受信 (バッファ) し、`Stream` (ストリーミング) を返します。 逆に言えば、`UploadStream` は `Stream` (ストリーミング) を取り込んで、`bool` (バッファー) を返します。 `EchoStream` 受け取りを返す`Stream`操作の例は、入力をして、出力メッセージの両方をストリーミングします。 最後に、`GetReversedStream` は入力を行わずに `Stream` (ストリーミング) を返します。  
   
 ## <a name="enabling-streamed-transfers"></a>ストリーミング転送の有効化  
  前述のように操作コントラクトを定義することにより、プログラミング モデル レベルでのストリーミングが実現します。 ここで作業を終えても、トランスポートはメッセージ全体の内容をバッファします。 トランスポートのストリーミングを有効にするには、トランスポートのバインディング要素で転送モードを選択します。 バインディング要素には、`TransferMode` プロパティがあり、`Buffered`、`Streamed`、`StreamedRequest`、または `StreamedResponse` に設定できます。 転送モードを `Streamed` に設定すると、両方向のストリーミング通信が可能になります。 転送モードを `StreamedRequest` または `StreamedResponse` に設定すると、それぞれ要求または応答のみでのストリーミング通信が可能になります。  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>ストリーミングされる際のデータの処理  
  `GetStream`、`UploadStream`、および `EchoStream` の各操作はすべて、ファイルからデータを直接送信したり、データをファイルに直接受信したりします。 ただし場合によっては、大量のデータを送信または受信し、データの送受信時に一部の処理をデータのチャンク上で実行する必要があります。 このようなシナリオに対応する 1 つの方法は、データの読み取りまたは書き込み時にデータを処理するカスタム ストリーム (<xref:System.IO.Stream> から派生するクラス) を記述することです。 `GetReversedStream` 操作と `ReverseStream` クラスがこの例です。  
   
- `GetReversedStream` では、`ReverseStream` の新しいインスタンスを作成して返します。 実際の処理は、システムが `ReverseStream` オブジェクトの読み取りを行うときに発生します。 `ReverseStream.Read` の実装により、基になるファイルからバイトのチャンクが読み取られ、バイトが反転され、その反転されたバイトが返されます。 この処理ではファイル全体の内容は反転されません。一度に 1 つのバイトのチャンクが反転されます。 これは、ストリームの内容を読み取ったりストリームに内容を書き込んだりするときに、ストリーミング処理を実行する方法を示す例です。  
+ `GetReversedStream` 作成しの新しいインスタンスを返します`ReverseStream`します。 実際の処理は、システムが `ReverseStream` オブジェクトの読み取りを行うときに発生します。 `ReverseStream.Read` の実装により、基になるファイルからバイトのチャンクが読み取られ、バイトが反転され、その反転されたバイトが返されます。 この処理ではファイル全体の内容は反転されません。一度に 1 つのバイトのチャンクが反転されます。 これは、ストリームの内容を読み取ったりストリームに内容を書き込んだりするときに、ストリーミング処理を実行する方法を示す例です。  
   
 ```csharp
 class ReverseStream : Stream  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
-  

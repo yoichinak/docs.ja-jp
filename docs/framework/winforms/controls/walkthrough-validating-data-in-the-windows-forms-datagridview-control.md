@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: Windows フォームの DataGridView コントロールのデータの検証'
+title: 'チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127349"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>チュートリアル: Windows フォームの DataGridView コントロールのデータの検証
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査
 データ エントリの機能をユーザーに表示するときに頻繁に、フォームに入力されたデータを検証する必要があります。 <xref:System.Windows.Forms.DataGridView>クラスには、データがデータ ストアにコミットする前に検証を実行する便利な方法が用意されています。 データを検証するには、処理することによって、<xref:System.Windows.Forms.DataGridView.CellValidating>によって発生するイベント、<xref:System.Windows.Forms.DataGridView>現在のセルが変更されたとき。  
   
  このチュートリアルから行を取得、`Customers`テーブルに Northwind サンプル データベースとその表示、<xref:System.Windows.Forms.DataGridView>コントロール。 ユーザーが内のセルを編集するときに、`CompanyName`列と、セルのままにする、<xref:System.Windows.Forms.DataGridView.CellValidating>イベント ハンドラーは新しい値が空の文字列である場合は空ではありませんかどうかを確認する新しい会社名の文字列を調べて、<xref:System.Windows.Forms.DataGridView>により、ユーザーのカーソル。空でない文字列が入力されるまで、セルのままです。  
@@ -89,9 +89,10 @@ ms.locfileid: "57710031"
 -   セルの外観をカスタマイズします。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)と[方法。Windows フォームの DataGridView コントロールのフォントと色のスタイルを設定する](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows フォーム DataGridView コントロールでのデータ入力](data-entry-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールでデータを検証します。](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールでのデータ入力中に発生したエラーの処理](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [方法: Windows フォーム DataGridView コントロールのデータを検証する](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [接続情報の保護](../../data/adonet/protecting-connection-information.md)

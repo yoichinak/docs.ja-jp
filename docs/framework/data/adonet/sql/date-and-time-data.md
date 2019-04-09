@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127115"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
 SQL Server 2008 では、日付と時刻の情報を扱うための新しいデータ型が導入されました。 新しいデータ型には、日付と時刻の別個のデータ型と、範囲、有効桁数、タイム ゾーン処理が向上した拡張データ型が含まれています。 .NET Framework 3.5 Service Pack (SP) 1 以降では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) が SQL Server 2008 データベース エンジンの新機能すべてをサポートします。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。  
@@ -21,7 +21,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  **SQL Server オンライン ブック**  
   
-1.  [日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [日時データの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表は、新しい日付と時刻のデータ型の説明です。  
@@ -41,12 +41,12 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  Transact-SQL の SET LANGUAGE ステートメントは、日付の構成要素の並べ方を決定する DATEFORMAT を暗黙に設定します。 日付構成要素の表記順序が MDY、DMY、YMD、YDM、MYD、DYM のいずれであるかを明確にするには、接続で Transact-SQL の SET DATEFORMAT ステートメントを使用します。  
   
- 接続で DATEFORMAT を指定しないと、SQL Server はその接続に関連付けられている既定の言語を使用します。 たとえば、日付文字列 '01/02/03' は、言語が United States English に設定されているサーバーでは MDY (January 2, 2003) として、British English に設定されているサーバーでは DMY (February 1, 2003) として処理されます。 年は、SQL Server の終了年の規則に従って決定されます。この規則では、世紀の値を割り当てるための終了日が定義されます。 詳細については、[two digit year cutoff オプション](https://go.microsoft.com/fwlink/?LinkId=120473)SQL Server オンライン ブックの「を参照してください。  
+ 接続で DATEFORMAT を指定しないと、SQL Server はその接続に関連付けられている既定の言語を使用します。 たとえば、日付文字列 '01/02/03' は、言語が United States English に設定されているサーバーでは MDY (January 2, 2003) として、British English に設定されているサーバーでは DMY (February 1, 2003) として処理されます。 年は、SQL Server の終了年の規則に従って決定されます。この規則では、世紀の値を割り当てるための終了日が定義されます。 詳細については、次を参照してください。 [two digit year cutoff オプション](https://go.microsoft.com/fwlink/?LinkId=120473)SQL Server オンライン ブックの「します。  
   
 > [!NOTE]
 >  YDM 日付書式は、文字列形式から `date`、`time`、`datetime2`、または `datetimeoffset` に変換する場合にはサポートされません。  
   
- SQL Server が日付と時刻のデータを解釈する方法の詳細については、[を使用して日付と時刻のデータ](https://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 オンライン ブックの「を参照してください。  
+ SQL Server が日付と時刻のデータを解釈する方法の詳細については、次を参照してください。[を使用して日付と時刻のデータ](https://go.microsoft.com/fwlink/?LinkID=98361)SQL Server 2008 オンライン ブックの「します。  
   
 ## <a name="datetime-data-types-and-parameters"></a>Date/Time データ型とパラメーター  
  新しい日付型と時刻型をサポートするために、<xref:System.Data.SqlDbType> には、次の列挙値が追加されています。  
@@ -99,9 +99,9 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 >  時刻の値が 0 と 24 の間にない場合は、<xref:System.ArgumentException> がスローされます。  
   
 ### <a name="creating-parameters"></a>パラメーターの作成  
- <xref:System.Data.SqlClient.SqlParameter> オブジェクトは、そのコンストラクターを使って作成できるほか、<xref:System.Data.SqlClient.SqlCommand> の <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> メソッドを呼び出して、`Add`<xref:System.Data.SqlClient.SqlParameterCollection> コレクションにそれを追加することによって作成することもできます。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
+ 作成することができます、<xref:System.Data.SqlClient.SqlParameter>オブジェクトまたは追加することで、コンス トラクターを使用して、<xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>呼び出してコレクション、`Add`のメソッド、 <xref:System.Data.SqlClient.SqlParameterCollection>。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
   
- このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用方法の例については、[構成パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)と[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)を参照してください。  
+ このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用方法の例については、次を参照してください。[構成パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)と[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)します。  
   
 ### <a name="date-example"></a>Date の例  
  次のコード フラグメントは、`date` パラメーターの指定方法を示しています。  
@@ -235,11 +235,12 @@ command.Parameters.AddWithValue( _
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[日付と時刻のデータ型および関数 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
-|[日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
-|[データ型 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
+|[日付と時刻のデータ型および関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
+|[日時データの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
+|[データ型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
