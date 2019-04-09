@@ -44,7 +44,7 @@ ms.locfileid: "58843631"
   
 |用語|定義|  
 |---|---|  
-|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[アウト](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[で](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
+|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[で](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
 |`typename`|必須。 型パラメーターの名前です。 これは、対応する型引数によって提供される定義済みの型によって置き換えられるプレース ホルダーです。|  
 |`constraintlist`|省略可能です。 指定できるデータ型を制約する要件の一覧`typename`します。 複数の制約があれば、中かっこで囲みます (`{ }`) をコンマで区切ります。 使用して、制約リストを導入する必要があります、[として](../../../visual-basic/language-reference/statements/as-clause.md)キーワード。 使用する`As`リストの先頭に一度だけです。|  
   
