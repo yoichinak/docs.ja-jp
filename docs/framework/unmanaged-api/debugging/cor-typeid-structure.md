@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b905d3b5de39057cba384ea7bca917bc3476623f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51104516008ffee0694c72733cb5f82b5ba6d8cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109864"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID 構造体
 型識別子が含まれます。  
@@ -54,8 +54,9 @@ typedef struct COR_TYPEID{
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

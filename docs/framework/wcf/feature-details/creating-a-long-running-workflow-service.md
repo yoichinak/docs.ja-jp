@@ -2,12 +2,12 @@
 title: 長時間のワークフロー サービスの作成
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109656"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>長時間のワークフロー サービスの作成
 ここでは、実行時間の長いワークフロー サービスを作成する方法について説明します。 実行時間の長いワークフロー サービスは、長期間にわたって実行できます。 ワークフローでは、いくつかの追加情報を待つ間アイドル状態になることがあります。 アイドル状態になると、ワークフローは SQL データベースに永続化され、メモリから削除されます。 追加情報が使用可能になると、ワークフロー インスタンスがメモリに読み込み直されて、実行を継続します。  このシナリオでは、非常に簡略化された注文システムを実装します。  クライアントは、最初のメッセージをワークフロー サービスに送信して注文を開始します。 ワークフロー サービスは、注文 ID をクライアントに返します。 この時点で、ワークフロー サービスは、クライアントからの別のメッセージを待機しており、アイドル状態に入って、SQL Server データベースに永続化されます。  クライアントが次のメッセージを送信して項目を注文すると、ワークフロー サービスはメモリに読み込み直されて、注文の処理を終了します。 次のコード例では、項目が注文に追加されたことを示す文字列を返します。 このコード例は、テクノロジの実際の適用を意図するものではなく、実行時間の長いワークフロー サービスを示す簡単な例です。 このトピックでは、Visual Studio 2012 プロジェクトとソリューションの作成方法を知っていると仮定します。
@@ -19,7 +19,7 @@ ms.locfileid: "57679438"
 
 2.  Visual Studio 2012
 
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  WCF と Visual Studio 2012 に精通し、プロジェクト/ソリューションを作成する方法を理解します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "57679438"
 
          ![受信アクティビティのプロパティを設定](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "受信アクティビティのプロパティを設定します。")
 
-         DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフロー サービスでのコントラクトの使用方法の詳細については、[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)を参照してください。
+         DisplayName プロパティは、デザイナーに表示される Receive アクティビティの名前を設定します。 ServiceContractName プロパティと OperationName プロパティは、Receive アクティビティで実装されるサービス コントラクトおよび操作の名前を指定します。 ワークフロー サービスでのコントラクトの使用方法の詳細については、次を参照してください。[ワークフローを使用してコントラクト](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)します。
 
     2.  をクリックして、**を定義しています.** のリンクを**ReceiveStartOrder**活動し、次の図に示すようにプロパティを設定します。  注意、**パラメーター**オプション ボタンを選択すると、という名前のパラメーター`p_customerName`にバインドされて、`customerName`変数。 これにより、構成、**受信**アクティビティをいくつかのデータを受信し、そのデータをローカル変数にバインドします。
 
@@ -110,7 +110,7 @@ ms.locfileid: "57679438"
 
          ![受信側の 2 番目のパラメーターを指定する](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "2 つのパラメーターを受信する受信アクティビティを構成します。")
 
-    4.  をクリックして、 **CorrelateOn**省略記号ボタンをクリックし、入力`orderIdHandle`します。 **XPath クエリ**ドロップダウン矢印をクリックし、選択`p_orderId`します。 これにより、2 つ目の Receive アクティビティに相関関係が設定されます。 相関関係の詳細については、[相関](../../../../docs/framework/wcf/feature-details/correlation.md)を参照してください。
+    4.  をクリックして、 **CorrelateOn**省略記号ボタンをクリックし、入力`orderIdHandle`します。 **XPath クエリ**ドロップダウン矢印をクリックし、選択`p_orderId`します。 これにより、2 つ目の Receive アクティビティに相関関係が設定されます。 相関関係の詳細については、次を参照してください。[相関](../../../../docs/framework/wcf/feature-details/correlation.md)します。
 
          ![CorrelatesOn プロパティの設定](./media/creating-a-long-running-workflow-service/correlateson-setting.png "CorrelatesOn プロパティを設定します。")
 
@@ -200,4 +200,5 @@ ms.locfileid: "57679438"
     ```
 
 ## <a name="see-also"></a>関連項目
+
 - [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)

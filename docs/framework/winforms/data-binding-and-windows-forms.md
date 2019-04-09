@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095491"
 ---
 # <a name="data-binding-and-windows-forms"></a>データ連結と Windows フォーム
 Windows フォームでは、従来のデータ ソースだけでなく、データを含むほぼすべての構造にバインドできます。 実行時に計算する値、ファイルから読み取る値、または他のコントロールの値から派生する値の配列にバインドできます。  
@@ -38,7 +38,7 @@ Windows フォームでは、従来のデータ ソースだけでなく、デ�
 |データ バインディングの種類|説明|  
 |--------------------------|-----------------|  
 |単純データ バインディング|データセット テーブル内の列の値など、1 つのデータ要素にバインドするコントロールの機能。 これは、<xref:System.Windows.Forms.TextBox> コントロールや <xref:System.Windows.Forms.Label> コントロールなどのコントロールで一般的に使用される種類のバインディングです。これらのコントロールでは通常、1 つの値のみが表示されます。 実際には、コントロールのどのプロパティもデータベース内のフィールドにバインドできます。 Visual Studio でこの機能の広範なサポートがあります。<br /><br /> 詳細については次を参照してください:<br /><br /> -   [データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)<br />-   [方法: Windows フォームでデータを移動します。](how-to-navigate-data-in-windows-forms.md)<br />-   [方法: Windows フォームに単純バインド コントロールを作成します。](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
-|複合データ バインディング|複数のデータ要素、一般的にはデータベース内の複数のレコードにバインドするコントロールの機能。 複合バインディングは、リストベース バインディングとも呼ばれます。 複合バインディングをサポートするコントロールの例には、<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox>、および <xref:System.Windows.Forms.ComboBox> の各コントロールがあります。 複合データ バインディングの例は、[方法。Windows フォームの ComboBox または ListBox コントロールをデータにバインド](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)を参照してください。|  
+|複合データ バインディング|複数のデータ要素、一般的にはデータベース内の複数のレコードにバインドするコントロールの機能。 複合バインディングは、リストベース バインディングとも呼ばれます。 複合バインディングをサポートするコントロールの例には、<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox>、および <xref:System.Windows.Forms.ComboBox> の各コントロールがあります。 複合データ バインディングの例は、次を参照してください。[方法。Windows フォームの ComboBox または ListBox コントロールをデータにバインド](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)します。|  
   
 ## <a name="bindingsource-component"></a>BindingSource コンポーネント  
  データ バインディングを単純化するために、Windows フォームでは、データ ソースを <xref:System.Windows.Forms.BindingSource> コンポーネントにバインドしてから、コントロールを <xref:System.Windows.Forms.BindingSource> にバインドできます。 <xref:System.Windows.Forms.BindingSource> は、単純バインディングまたは複合バインディングのシナリオで使用できます。 いずれの場合も、<xref:System.Windows.Forms.BindingSource> はデータ ソースとバインドされたコントロールの間の媒介として機能し、変更通知、通貨管理などのサービスを提供します。  
@@ -54,7 +54,8 @@ Windows フォームでは、従来のデータ ソースだけでなく、デ�
 |ルックアップ テーブル|別の一般的なデータ表示/操作シナリオに、テーブル ルックアップがあります。 多くの場合、より大きなデータ表示の一部として、<xref:System.Windows.Forms.ComboBox> コントロールを使用してデータを表示および操作します。 重要な点は、<xref:System.Windows.Forms.ComboBox> コントロールで表示されるデータは、データベースに書き込まれるデータとは異なることです。 たとえば、食料品店から入手できる項目を表示する <xref:System.Windows.Forms.ComboBox> コントロールがあり、製品の名前 (パン、牛乳、卵) を表示するとします。 しかし、データベース内での情報の取得を容易にしたり、データベースを正規化したりするには、ある注文の特定の項目に関する情報を項目番号 (#501、#603 など) で格納する必要がある場合があります。 そのため、フォームの <xref:System.Windows.Forms.ComboBox> コントロールにある食料品項目の "わかりやすい名前" と、注文に表示される該当する項目番号との間には暗黙的なつながりがあります。 これがテーブル ルックアップの本質です。 詳細については、「[方法 :Windows フォーム BindingSource コンポーネントを使用するルックアップ テーブルを作成](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)です。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Binding>
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)
-- [方法: Windows フォームの DataGrid コントロールをデータ ソースにバインドします。](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource コンポーネント](./controls/bindingsource-component.md)

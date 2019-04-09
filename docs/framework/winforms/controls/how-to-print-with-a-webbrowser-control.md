@@ -1,5 +1,5 @@
 ---
-title: '方法: WebBrowser コントロールを使用して印刷します。'
+title: '方法: WebBrowser コントロールを使用して印刷する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: fbbbba1bd620858eaa57559b1a9787956bfef1f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094945"
 ---
-# <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷します。
+# <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷する
 コード例を次に示しますを使用する方法、<xref:System.Windows.Forms.WebBrowser>コントロールを表示せず、Web ページを印刷します。  
   
 ## <a name="example"></a>例  
@@ -33,11 +33,12 @@ ms.locfileid: "57702452"
 -   `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [方法: WebBrowser コントロールで URL に移動する](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加する](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [WebBrowser コントロールの概要](webbrowser-control-overview.md)
 - [WebBrowser セキュリティ](webbrowser-security.md)

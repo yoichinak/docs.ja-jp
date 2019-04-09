@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091617"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  .NET Framework アドイン モデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。  
@@ -101,7 +99,7 @@ ms.locfileid: "57365842"
 -   <xref:System.SerializableAttribute>属性が適用されています。  
   
 > [!NOTE]
->  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))を参照してください。  
+>  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))します。  
   
  WPF の UI 型は、リモート処理可能ではありません。 この問題を解決するためには、WPF は、ホスト アプリケーションから表示する WPF の UI アドインを使用して作成を有効にする .NET Framework アドイン モデルを拡張します。 このサポートが 2 つの種類での WPF で提供される:<xref:System.AddIn.Contract.INativeHandleContract>インターフェイスと 2 つの静的メソッドによって実装される、<xref:System.AddIn.Pipeline.FrameworkElementAdapters>クラス:<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。 大まかに、これらの型とメソッドは次のように使用されます。  
   
@@ -131,7 +129,7 @@ ms.locfileid: "57365842"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI を返すアドインを実装する方法については、例では、[UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)を参照してください。  
+ UI を返すアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)します。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>ユーザー インターフェイスであるアドイン  
@@ -149,7 +147,7 @@ ms.locfileid: "57365842"
   
 6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI であるアドインを実装する方法については、例では、[UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)を参照してください。  
+ UI であるアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)します。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>複数の UI を返すアドイン  
@@ -168,7 +166,7 @@ ms.locfileid: "57365842"
  これらのタスクについて、次のサブセクションで詳しく説明します。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 配置のためのパイプラインとアドインの構成  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 配置キャッシュの安全なフォルダーにダウンロードされ、そこから実行されます。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] でアドインをホストするには、パイプラインとアドインのアセンブリも同じ安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] で実行することが最も簡単ですが、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] でパイプラインをアセンブリとして検出するには、パイプラインとアドインのアセンブリが、ホスト [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルート フォルダーに存在する必要があります。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ダウンロードされ、安全なフォルダーから実行、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]配置キャッシュします。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] でアドインをホストするには、パイプラインとアドインのアセンブリも同じ安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] で実行することが最も簡単ですが、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] でパイプラインをアセンブリとして検出するには、パイプラインとアドインのアセンブリが、ホスト [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルート フォルダーに存在する必要があります。  
   
  したがって、まず、パイプライン アセンブリとアドイン アセンブリの各プロジェクトのビルド出力を設定し、パイプラインとアドインのアセンブリを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルートにビルドします。 次の表は、ホストの [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトと同じソリューションとルートのフォルダーに格納される、パイプライン アセンブリ プロジェクトとアドイン アセンブリ プロジェクトのビルド出力パスを示します。  
   
@@ -284,9 +282,10 @@ ms.locfileid: "57365842"
  既定では、複数のアプリケーション ドメインを使用している場合の各アプリケーションに必要なさまざまな .NET Framework アセンブリがすべて読み込まれますそのアプリケーションのドメインにします。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、.NET Framework は、既に読み込まれている場合は、アプリケーション ドメイン間でアセンブリを共有するアプリケーションに指示して開始時間を短縮するための手段を提供します。 使用してこれを行う、<xref:System.LoaderOptimizationAttribute>属性には、エントリ ポイント メソッドに適用する必要があります (`Main`)。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](application-management-overview.md)」を参照)。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.LoaderOptimizationAttribute>
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [アプリケーション ドメイン](../../app-domains/application-domains.md)
-- [.NET framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [オブジェクトをリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [方法トピック](how-to-topics.md)
+- [.NET Framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [オブジェクトをリモート処理可能にする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [方法のトピック](how-to-topics.md)
