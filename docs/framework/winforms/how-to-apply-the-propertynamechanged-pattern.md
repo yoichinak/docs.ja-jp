@@ -1,5 +1,5 @@
 ---
-title: '方法: PropertyNameChanged パターンを適用します。'
+title: '方法: PropertyNameChanged パターンを適用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57703479"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>方法: PropertyNameChanged パターンを適用します。
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>方法: PropertyNameChanged パターンを適用する
 次のコード例は、適用する方法を示します、 *PropertyName*Changed パターンをカスタム コントロール。 Windows フォーム データ バインディング エンジンで使用されるカスタム コントロールを実装する場合は、このパターンを適用します。  
   
 ## <a name="example"></a>例  
