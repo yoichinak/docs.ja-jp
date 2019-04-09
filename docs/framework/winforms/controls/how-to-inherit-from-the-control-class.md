@@ -1,5 +1,5 @@
 ---
-title: '方法: コントロール クラスから継承します。'
+title: '方法: コントロール クラスを継承する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141987"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>方法: コントロール クラスから継承します。
+# <a name="how-to-inherit-from-the-control-class"></a>方法: コントロール クラスを継承する
 Windows フォームで使用する完全なカスタム コントロールを作成する場合から継承する必要があります、<xref:System.Windows.Forms.Control>クラス。 継承中に、<xref:System.Windows.Forms.Control>クラスは、多くの計画と実装を実行することは、オプションの最大範囲にも提供が必要です。 継承する場合<xref:System.Windows.Forms.Control>コントロールを動作を実現する非常に基本的な機能を継承します。 固有の機能、<xref:System.Windows.Forms.Control>クラス、キーボードとマウスによるユーザー入力の処理、コントロールのサイズと境界を定義します。、、windows ハンドルを提供しますおよびメッセージの処理とセキュリティを提供します。 描画機能 (ここではコントロールのグラフィカル インターフェイスを実際に表示する機能) や、ユーザーとやり取りするための特定の機能は含まれていません。 このような機能はすべて、カスタム コードによって提供する必要があります。  
   
 > [!NOTE]
@@ -44,9 +44,10 @@ Windows フォームで使用する完全なカスタム コントロールを�
 8.  コントロールを保存して、動作確認を行います。  
   
 ## <a name="see-also"></a>関連項目
+
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
-- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
-- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)
-- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
+- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)
+- [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)

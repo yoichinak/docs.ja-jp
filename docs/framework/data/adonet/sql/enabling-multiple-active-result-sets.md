@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147551"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  アプリケーションは、`SqlConnection.ServerVersion` の値を読み取って MARS サポートを確認することができます。 SQL Server 2005 のメジャー番号は 9、SQL Server 2008 のメジャー番号は 10 です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [複数のアクティブな結果セット (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

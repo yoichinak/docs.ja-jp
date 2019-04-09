@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: 32a81ba462eccfc6f4ba2a694793895810074b7e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 63219feb9e8d0ae542b3ab39c932915101bd3a9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143865"
 ---
 # <a name="session"></a>セッション
 このセッションのサンプルでは、セッションを必要とするコントラクトを実装する方法を示します。 セッションは、複数の操作を実行するためのコンテキストを提供します。 これにより、サービスは特定のセッションに状態を関連付けることができ、後続の操作はその前の操作の状態を使用できます。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、電卓サービスを実装します。 `ICalculator` コントラクトは、一連の算術演算を実行して実行結果を保持できるように変更されました。 この機能は `ICalculatorSession` コントラクトによって定義されます。 サービスは、複数のサービス操作が呼び出されて計算を実行する際に、クライアントの状態を保持します。 クライアントは `Result()` を呼び出して現在の結果を取得したり、`Clear()` を呼び出してその結果をクリアし、0 にすることができます。  
@@ -91,4 +91,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Session`  
-  

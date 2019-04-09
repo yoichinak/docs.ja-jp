@@ -1,18 +1,18 @@
 ---
-title: '方法: デザイナーを使用して、[キャンセル] ボタンとして Windows フォームの Button を指定します。'
+title: '方法: デザイナーを使用して Windows フォームの Button コントロールをキャンセル ボタンとして指定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: 85387c22dafb34b15b995d8f60f2fd9b3ec18227
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: be0847d1837ec85ed9d82dc7cc879d0cffa19cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156222"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>方法: デザイナーを使用して、[キャンセル] ボタンとして Windows フォームの Button を指定します。
+# <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>方法: デザイナーを使用して Windows フォームの Button コントロールをキャンセル ボタンとして指定する
 任意の Windows フォームで指定することができます、<xref:System.Windows.Forms.Button>コントロールをキャンセル ボタン。 ユーザーがフォーム上の他のコントロールにフォーカスがあるか、ESC キーを押すと [キャンセル] ボタンをクリックします。 このようなボタンは通常、ユーザーは、すばやく操作をコミットせずに操作を終了できるようにする設定します。  
   
 > [!NOTE]
@@ -25,9 +25,10 @@ ms.locfileid: "57708289"
 2.  **プロパティ**ウィンドウで、設定フォームの<xref:System.Windows.Forms.Form.CancelButton%2A>プロパティを<xref:System.Windows.Forms.Button>コントロールの名前。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
-- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
-- [方法: Windows フォームの Button をデザイナーの使用を承認ボタンとして指定します。](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
 - [Button コントロール](button-control-windows-forms.md)

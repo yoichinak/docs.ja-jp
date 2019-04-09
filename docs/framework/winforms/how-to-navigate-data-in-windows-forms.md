@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームでデータを移動します。'
+title: '方法: Windows フォームでデータ間を移動する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154597"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>方法: Windows フォームでデータを移動します。
+# <a name="how-to-navigate-data-in-windows-forms"></a>方法: Windows フォームでデータ間を移動する
 Windows アプリケーションでは、データ ソース内のレコードをナビゲートする最も簡単な方法は、バインドする、<xref:System.Windows.Forms.BindingSource>コンポーネントをデータ ソースとし、バインド コントロールを<xref:System.Windows.Forms.BindingSource>します。 組み込みのナビゲーション メソッドを使用することができますし、<xref:System.Windows.Forms.BindingSource>このような<xref:System.Windows.Forms.BindingSource.MoveNext%2A>、 <xref:System.Windows.Forms.BindingSource.MoveLast%2A>、<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>と<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>します。 これらのメソッドを使用して、調整は、<xref:System.Windows.Forms.BindingSource.Position%2A>と<xref:System.Windows.Forms.BindingSource.Current%2A>のプロパティ、<xref:System.Windows.Forms.BindingSource>適切にします。 項目を検索し、設定して、現在の項目として設定できる、<xref:System.Windows.Forms.BindingSource.Position%2A>プロパティ。  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>データ ソース内の位置をインクリメントするには  
@@ -51,7 +51,8 @@ Windows アプリケーションでは、データ ソース内のレコード�
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームがサポートするデータ ソース](data-sources-supported-by-windows-forms.md)
-- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
+- [Windows フォーム データ バインディングの変更通知](change-notification-in-windows-forms-data-binding.md)
 - [データ連結と Windows フォーム](data-binding-and-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

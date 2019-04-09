@@ -1,5 +1,5 @@
 ---
-title: '方法: ツール バー ボタンのアイコンを定義します。'
+title: '方法: ツール バー ボタンのアイコンを定義する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153128"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>方法: ツール バー ボタンのアイコンを定義します。
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>方法: ツール バー ボタンのアイコンを定義する
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  <xref:System.Windows.Forms.ToolBar> ボタンは、ユーザーがそれらに含まれるを簡単に識別のアイコンを表示できません。 これは画像を追加することによって実現、 [ImageList コンポーネント](imagelist-component-windows-forms.md)コンポーネントと関連付ける、<xref:System.Windows.Forms.ImageList>コンポーネントを<xref:System.Windows.Forms.ToolBar>コントロール。  
   
@@ -117,7 +116,8 @@ ms.locfileid: "57712748"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolBar>
-- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [方法: ツール バー ボタンのメニュー イベントをトリガーする](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar コントロール](toolbar-control-windows-forms.md)
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)

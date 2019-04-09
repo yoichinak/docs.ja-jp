@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: f76e3d7f928faebedcaf199eb6dc1e8fdccde640
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158887"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>方法: DockPanel 要素を使用して領域を分割する
 次の例では、単純な[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]フレームワークを使用して、<xref:System.Windows.Controls.DockPanel>要素。 <xref:System.Windows.Controls.DockPanel>子要素に使用可能な領域をパーティション分割します。  
@@ -36,5 +36,6 @@ ms.locfileid: "57363385"
  ![代表的な DockPanel シナリオ: ](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.DockPanel>
 - [パネルの概要](panels-overview.md)

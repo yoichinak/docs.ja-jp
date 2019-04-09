@@ -2,18 +2,18 @@
 title: 転送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: d6ca1f8471fb1513263354e2369891bf9ffcb583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145042"
 ---
 # <a name="transfer"></a>転送
 このトピックでは、Windows Communication Foundation (WCF) のアクティビティ トレース モデルでの転送について説明します。  
   
 ## <a name="transfer-definition"></a>転送の定義  
- アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、バイトは、サービスで受信したときに、"リッスン"アクティビティに転送されますバイトを受信アクティビティ メッセージ オブジェクトが作成される場所。 エンド ツー エンドのトレースのシナリオ、および個々 のアクティビティとトレース デザインについては、[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)を参照してください。  
+ アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、バイトは、サービスで受信したときに、"リッスン"アクティビティに転送されますバイトを受信アクティビティ メッセージ オブジェクトが作成される場所。 エンド ツー エンドのトレースのシナリオ、および個々 のアクティビティとトレース デザインについては、次を参照してください。[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)します。  
   
  転送トレースを出力するには、次の構成コードのように、トレース ソースに `ActivityTracing` を設定します。  
   
@@ -103,6 +103,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

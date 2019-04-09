@@ -2,12 +2,12 @@
 title: 双方向通信
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 3aa01140ef62bd3658696e889038e099ed76da20
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a74d40fc8c8d4bfb547bd6b21609b59a42891dfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148942"
 ---
 # <a name="two-way-communication"></a>双方向通信
 このサンプルでは、双方向のトランザクション化キューを MSMQ を介して実行する方法を示します。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 このサンプルのサービスは自己ホスト型コンソール アプリケーションであるので、サンプルを実行すると、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
@@ -330,4 +330,3 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
-  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156105"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
 により、ホストがプロセス内で、CLR を明示的に初期化する前に使用する共通言語ランタイム (CLR) のバージョンを決定します。  
@@ -91,7 +91,8 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

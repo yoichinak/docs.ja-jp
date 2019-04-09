@@ -1,5 +1,5 @@
 ---
-title: '方法: 子テーブルの選択行が正しい位置に保持することを確認します。'
+title: '方法: 子テーブルの選択行が現在位置を保持することを保証する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 930d0dc28a4ab0e34a6229a4b74617084918a275
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149111"
 ---
-# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法: 子テーブルの選択行が正しい位置に保持することを確認します。
+# <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法: 子テーブルの選択行が現在位置を保持することを保証する
 多くの場合、Windows フォームでデータ バインディングを処理するときは、いわゆる親/子ビューまたはマスター/詳細ビューにデータを表示します。 これは、同一ソースのデータが、2 つのコントロールに表示されるデータ バインディング シナリオを示します。 片方のコントロールで選択を変更すると、他方のコントロールに表示されるデータが変化します。 たとえば、第 1 のコントロールに顧客リストが含まれ、第 2 のコントロールに、第 1 のコントロールで選択された顧客に関連する注文リストが含まれます。  
   
  .NET Framework Version 2.0 以降、親/子ビューにデータを表示する場合は、子テーブルで現在選択されている行が、親テーブルの先頭行にリセットされないようにするために、追加の手順を実行する必要があります。 そのためには、子テーブルの位置をキャッシュし、親テーブルが変更された後で位置をリセットする必要があります。 通常、子テーブルのリセットは、親テーブルの行のフィールドが初めて変更されたときに発生します。  
@@ -42,8 +42,7 @@ ms.locfileid: "57713463"
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  親リストの親現在位置マネージャーの <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> イベントを処理します。 ハンドラーで、キャッシュ シナリオではないことを示すブール値を設定します。 
-  <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> が発生した場合、親の変更はリストの位置の変更であり、項目値の変更ではありません。  
+4.  親リストの親現在位置マネージャーの <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> イベントを処理します。 ハンドラーで、キャッシュ シナリオではないことを示すブール値を設定します。 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> が発生した場合、親の変更はリストの位置の変更であり、項目値の変更ではありません。  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
@@ -82,9 +81,10 @@ ms.locfileid: "57713463"
   
 -   System、System.Data、System.Drawing、System.Windows.Forms、および System.XML の各アセンブリへの参照。  
   
- Visual Basic または Visual C# のコマンドラインからこの例を構築する方法については、[、コマンドラインからビルドする](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ Visual Basic または Visual c# のコマンドラインからこの例を構築する方法については、次を参照してください。 [、コマンドラインからビルドする](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)します。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](multiple-controls-bound-to-data-source-synchronized.md)
+
+- [方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource コンポーネント](./controls/bindingsource-component.md)
 - [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

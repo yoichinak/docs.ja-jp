@@ -29,18 +29,16 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149306"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](xaml-overview-wpf.md)します。  
-  
 
-  
 <a name="the_xaml_language_specification"></a>   
 ## <a name="the-xaml-language-specification"></a>XAML 言語仕様  
  ここで定義されている XAML 構文の用語の定義または、XAML 言語仕様内で参照されてもします。 XAML では、依存しか、拡張 XML の構造上のルールは XML に基づく言語です。 一部の用語はから共有されてまたは XML 言語または XML ドキュメント オブジェクト モデルを記述する場合によく使用する用語に基づきます。  
@@ -130,11 +128,11 @@ ms.locfileid: "57367961"
   
  または、添付イベントの格納オブジェクト要素の独立したか、添付プロパティを参照できます。 (添付プロパティは、以下のセクションで説明しますが)。  
   
- 使用して既定の名前空間を介してアクセス可能な任意のオブジェクトからすべてのイベントを付けることができます、 *typeName*.*イベント*部分的に修飾名。 この構文のルーティング イベントのハンドラーのアタッチをサポートしています、子要素が親要素からルーティング イベントを処理するために、ハンドラーは、場所もがそのイベントのメンバー テーブルにします。 この構文には、添付イベント構文が似ていますが、ここで、イベントが true の添付イベントではありません。 代わりに、修飾名を持つイベントを参照しています。 詳細については、[ルーティング イベントの概要](routed-events-overview.md)を参照してください。  
+ 使用して既定の名前空間を介してアクセス可能な任意のオブジェクトからすべてのイベントを付けることができます、 *typeName*.*イベント*部分的に修飾名。 この構文のルーティング イベントのハンドラーのアタッチをサポートしています、子要素が親要素からルーティング イベントを処理するために、ハンドラーは、場所もがそのイベントのメンバー テーブルにします。 この構文には、添付イベント構文が似ていますが、ここで、イベントが true の添付イベントではありません。 代わりに、修飾名を持つイベントを参照しています。 詳細については、次を参照してください。[ルーティング イベントの概要](routed-events-overview.md)します。  
   
- 一部のシナリオでは、プロパティ名は属性名ではなく、属性の値として提供場合があります。 プロパティ名は、フォームで指定されたプロパティなどの修飾子を含めることができますも*ownerType*.*dependencyPropertyName*します。 XAML でスタイルまたはテンプレートを記述するとき、このシナリオが一般的です。 属性値として指定したプロパティ名の処理ルールが異なると、設定されるプロパティのタイプまたは特定の WPF サブシステムの動作によって制御されます。 詳細については、[スタイルとテンプレート](../controls/styling-and-templating.md)を参照してください。  
+ 一部のシナリオでは、プロパティ名は属性名ではなく、属性の値として提供場合があります。 プロパティ名は、フォームで指定されたプロパティなどの修飾子を含めることができますも*ownerType*.*dependencyPropertyName*します。 XAML でスタイルまたはテンプレートを記述するとき、このシナリオが一般的です。 属性値として指定したプロパティ名の処理ルールが異なると、設定されるプロパティのタイプまたは特定の WPF サブシステムの動作によって制御されます。 詳細については、次を参照してください。[スタイルとテンプレート](../controls/styling-and-templating.md)します。  
   
- プロパティ名の別の使用方法では、属性値がプロパティ間のリレーションシップについて説明します。 この機能は、データ バインディングとストーリー ボードのターゲットに使用されで有効になって、<xref:System.Windows.PropertyPath>クラスとその型コンバーター。 検索セマンティクスの詳細については、[PropertyPath の XAML 構文](propertypath-xaml-syntax.md)を参照してください。  
+ プロパティ名の別の使用方法では、属性値がプロパティ間のリレーションシップについて説明します。 この機能は、データ バインディングとストーリー ボードのターゲットに使用されで有効になって、<xref:System.Windows.PropertyPath>クラスとその型コンバーター。 検索セマンティクスの詳細については、次を参照してください。 [PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。  
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>プロパティ要素構文  
@@ -246,7 +244,7 @@ ms.locfileid: "57367961"
 ## <a name="xaml-namespaces"></a>XAML 名前空間  
  上記の構文例の既定の XAML 名前空間以外の XAML 名前空間を指定しなければ。 一般的な[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]に指定する XAML 名前空間の既定のアプリケーション、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]名前空間。 既定の XAML 名前空間以外の XAML 名前空間を指定し、同様の構文を引き続き使用できます。 次に、任意の場所で、クラスの名前が既定の XAML 名前空間内でアクセス可能でないクラス名にする必要がありますの前に、XAML 名前空間のプレフィックスに対応する CLR 名前空間にマップします。 たとえば、`<custom:Example/>`のインスタンスをインスタンス化するオブジェクト要素構文には、`Example`クラス、そのクラス (および場合によってバッキング型を含む外部アセンブリ情報) を含む CLR 名前空間を以前に割り当てられて、`custom`プレフィックス。  
   
- XAML 名前空間の詳細については、[XAML 名前空間および WPF XAML のマッピングの Namespace](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)を参照してください。  
+ XAML 名前空間の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>マークアップ拡張機能  
@@ -316,8 +314,9 @@ ms.locfileid: "57367961"
  同じように、 *typeName*.*memberName*属性について、フォーム*baseTypeName*.*memberName*マークアップでは、不適切なスタイルは、これを避ける必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)
-- [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 名前空間 (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 拡張機能](wpf-xaml-extensions.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [TypeConverters および XAML](typeconverters-and-xaml.md)

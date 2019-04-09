@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144028"
 ---
 # <a name="drawing-objects-overview"></a>Drawing オブジェクトの概要
 このトピックでは<xref:System.Windows.Media.Drawing>オブジェクトし、それらを使用して、図形、ビットマップ、テキスト、およびメディアを効率的に描画する方法について説明します。 使用して、<xref:System.Windows.Media.Drawing>を使用して、クリップアートを作成するときに、オブジェクトのペイントを<xref:System.Windows.Media.DrawingBrush>を使用して、または<xref:System.Windows.Media.Visual>オブジェクト。  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>Drawing オブジェクトとは  
  A<xref:System.Windows.Media.Drawing>オブジェクトには、図形、ビットマップ、ビデオ、または行のテキストなど、表示されるコンテンツがについて説明します。 さまざまな種類の描画で、さまざまな種類のコンテンツを記述します。 次の一覧に、さまざまな種類の描画オブジェクトを示します。  
@@ -221,7 +219,7 @@ DrawingBrush で使われる GeometryDrawing
 ## <a name="drawingcontext-objects"></a>DrawingContext オブジェクト  
  <xref:System.Windows.Media.DrawingContext>クラスでは、設定することができます、<xref:System.Windows.Media.Visual>または<xref:System.Windows.Media.Drawing>にビジュアル コンテンツ。 このような多くの低レベルのグラフィック オブジェクトを使用して、<xref:System.Windows.Media.DrawingContext>グラフィカル コンテンツを非常に効率よく記述できるため、します。  
   
- ですが、<xref:System.Windows.Media.DrawingContext>の描画メソッドのような描画メソッドが表示されます、<xref:System.Drawing.Graphics?displayProperty=nameWithType>型が実際には非常に異なります。 <xref:System.Windows.Media.DrawingContext> 保持モード グラフィックス システムで使用中に、<xref:System.Drawing.Graphics?displayProperty=nameWithType>型はイミディ エイト モード グラフィックス システムで使用します。 使用すると、<xref:System.Windows.Media.DrawingContext>オブジェクトの描画コマンド、レンダリング命令のセットを実際に格納する (厳密なストレージ メカニズムを提供するオブジェクトの種類によって異なります、 <xref:System.Windows.Media.DrawingContext>)、グラフィックスによって後で使用されるシステムはリアルタイムの画面に描画されません。 Windows Presentation Foundation (WPF) のグラフィックス システムのしくみの詳細については、、 [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)を参照してください。  
+ ですが、<xref:System.Windows.Media.DrawingContext>の描画メソッドのような描画メソッドが表示されます、<xref:System.Drawing.Graphics?displayProperty=nameWithType>型が実際には非常に異なります。 <xref:System.Windows.Media.DrawingContext> 保持モード グラフィックス システムで使用中に、<xref:System.Drawing.Graphics?displayProperty=nameWithType>型はイミディ エイト モード グラフィックス システムで使用します。 使用すると、<xref:System.Windows.Media.DrawingContext>オブジェクトの描画コマンド、レンダリング命令のセットを実際に格納する (厳密なストレージ メカニズムを提供するオブジェクトの種類によって異なります、 <xref:System.Windows.Media.DrawingContext>)、グラフィックスによって後で使用されるシステムはリアルタイムの画面に描画されません。 Windows Presentation Foundation (WPF) のグラフィックス システムのしくみの詳細については、次を参照してください。、 [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)します。  
   
  決して直接インスタンス化する、 <xref:System.Windows.Media.DrawingContext>; など、特定のメソッドから描画コンテキストを取得することができます、ただし、<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>と<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>します。  
   
@@ -234,6 +232,7 @@ DrawingBrush で使われる GeometryDrawing
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
@@ -242,4 +241,4 @@ DrawingBrush で使われる GeometryDrawing
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)
 - [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)
-- [方法トピック](drawings-how-to-topics.md)
+- [方法のトピック](drawings-how-to-topics.md)

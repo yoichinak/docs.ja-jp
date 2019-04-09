@@ -1,15 +1,15 @@
 ---
-title: '方法: サービスを受け入れる任意のデータを作成、WCF REST プログラミング モデルを使用します。'
+title: '方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144080"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>方法: サービスを受け入れる任意のデータを作成、WCF REST プログラミング モデルを使用します。
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作をする必要があります形式でデータがサポートされていません byWCF を返す場合に、ケースです。 このトピックでは、WCF REST プログラミング モデルを使用して、任意のデータを受信するサービスを作成するについて説明します。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   コードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

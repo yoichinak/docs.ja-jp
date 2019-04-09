@@ -1,18 +1,18 @@
 ---
-title: '方法: ToolStrip を toolstripcontainer からフォームに移動します。'
+title: '方法: ToolStrip を ToolStripContainer からフォームに移動する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 100e744e6e49fbf214488e9bbb796b5b6fb9591a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142364"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>方法: ToolStrip を toolstripcontainer からフォームに移動します。
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>方法: ToolStrip を ToolStripContainer からフォームに移動する
 移動する、次の手順を使用して、<xref:System.Windows.Forms.ToolStrip>のうち、<xref:System.Windows.Forms.ToolStripContainer>からフォームにします。  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ ms.locfileid: "57708419"
 5.  設定、<xref:System.Windows.Forms.ToolStrip.Dock%2A>のプロパティ、<xref:System.Windows.Forms.ToolStrip>に**上部**します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

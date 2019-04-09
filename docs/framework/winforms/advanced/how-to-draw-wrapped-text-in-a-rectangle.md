@@ -1,5 +1,5 @@
 ---
-title: '方法: 四角形内にテキストを折り返して描画'
+title: '方法: 四角形内にテキストを折り返して描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152790"
 ---
-# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>方法: 四角形内にテキストを折り返して描画
+# <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>方法: 四角形内にテキストを折り返して描画する
 使用して四角形でラップされたテキストを描画することができます、<xref:System.Drawing.Graphics.DrawString%2A>のメソッドをオーバー ロード、<xref:System.Drawing.Graphics>を受け取るクラス、<xref:System.Drawing.Rectangle>または<xref:System.Drawing.RectangleF>パラメーター。 使用することも、<xref:System.Drawing.Brush>と<xref:System.Drawing.Font>します。  
   
  使用して、四角形でラップされたテキストを描画することも、<xref:System.Windows.Forms.TextRenderer.DrawText%2A>のメソッドをオーバー ロード、<xref:System.Windows.Forms.TextRenderer>を受け取る、<xref:System.Drawing.Rectangle>と<xref:System.Windows.Forms.TextFormatFlags>パラメーター。 使用することも、<xref:System.Drawing.Color>と<xref:System.Drawing.Font>します。  
@@ -45,7 +45,8 @@ ms.locfileid: "58654531"
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`でのパラメーターである<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)
+
+- [方法: GDI を使用してテキストを描画する](how-to-draw-text-with-gdi.md)
 - [フォントとテキストの使用](using-fonts-and-text.md)
-- [方法: フォント ファミリとフォントを作成します。](how-to-construct-font-families-and-fonts.md)
-- [方法: 指定した位置のテキストの描画](how-to-draw-text-at-a-specified-location.md)
+- [方法: フォント ファミリとフォントを作成する](how-to-construct-font-families-and-fonts.md)
+- [方法: テキストを指定の位置に描画する](how-to-draw-text-at-a-specified-location.md)

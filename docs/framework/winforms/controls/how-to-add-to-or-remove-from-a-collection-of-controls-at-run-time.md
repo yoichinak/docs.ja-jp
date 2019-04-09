@@ -1,5 +1,5 @@
 ---
-title: '方法: 追加または実行時にコントロールのコレクションから削除するには'
+title: '方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143144"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>方法: 追加または実行時にコントロールのコレクションから削除するには
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する
 アプリケーション開発の一般的なタスクをするコントロールを追加し、フォーム上のコンテナー コントロールからコントロールを削除する (など、<xref:System.Windows.Forms.Panel>または<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム自体)。 デザイン時に、コントロールをパネルやグループ ボックスに直接ドラッグすることができます。 実行時には、これらのコントロールは `Controls` コレクションを保持し、それらにどのコントロールが置かれているかを追跡します。  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ ms.locfileid: "57720892"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Panel>
 - [Panel コントロール](panel-control-windows-forms.md)

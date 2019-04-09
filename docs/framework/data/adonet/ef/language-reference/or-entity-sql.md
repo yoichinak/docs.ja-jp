@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 4d0bed2fb000e96e9fd0ceac6ea90e19b8fa7514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141285"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 2 つの `Boolean` 式を結合します。  
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  `Boolean`値を返す任意の有効な式。  
   
 ## <a name="return-value"></a>戻り値  
- いずれかの条件が`true` の場合は `true`、それ以外の場合は `false`。  
+ `true` 条件のいずれかが場合`true`、それ以外の`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  OR は [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の論理演算子です。 2 つの条件を結合する場合に使用します。 1 つのステートメント内に複数の論理演算子が使われている場合、OR 演算子は AND 演算子の次に評価されます。 ただし、かっこを使うと、演算の順序を変更することができます。  
@@ -36,9 +36,9 @@ boolean_expression || boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|TRUE|TRUE|  
-|`FALSE`|TRUE|FALSE|NULL|  
-|`NULL`|TRUE|NULL|NULL|  
+|`TRUE`|true|true|true|  
+|`FALSE`|true|false|NULL|  
+|`NULL`|true|NULL|NULL|  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、OR 演算子を使用して 2 つの `Boolean` 式を結合します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -50,4 +50,5 @@ boolean_expression || boolean_expression
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

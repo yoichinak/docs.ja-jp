@@ -1,15 +1,15 @@
 ---
-title: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成します。'
+title: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157484"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成します。
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式のデータを返す必要があるときに、大文字と小文字です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用して、このようなサービスを作成するについて説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
@@ -51,7 +51,7 @@ ms.locfileid: "54576396"
        }  
     ```  
   
-     コードの最後から 2 番目の行にある `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";` に注意してください。  
+     2 番目のコードの最後の行に注意してください。 `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      コンテンツ タイプのヘッダーにこの設定`"image/jpeg"`します。 この例では .jpg ファイルを戻す方法を示していますが、必要に応じて、任意の種類のデータを任意の形式で戻すように変更できます。 操作はデータを生成または取得してそれをストリームに書き込む必要があります。  
   
@@ -176,4 +176,5 @@ namespace RawImageService
 -   コード例のコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

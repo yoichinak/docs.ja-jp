@@ -1,5 +1,5 @@
 ---
-title: '方法: カスタム ユーザー名およびパスワード検証を使用して、'
+title: '方法: カスタム ユーザー名およびパスワード検証を使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160252"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>方法: カスタム ユーザー名およびパスワード検証を使用して、
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>方法: カスタム ユーザー名およびパスワード検証を使用する
 既定では、ユーザー名とパスワードを使用すると認証では、Windows Communication Foundation (WCF) を使用して Windows ユーザー名とパスワードを検証します。 ただし、WCF では、カスタム ユーザー名とパスワードの認証スキームとも呼ばれます*バリデーター*します。 ユーザー名およびパスワードのカスタム検証を組み込むには、<xref:System.IdentityModel.Selectors.UserNamePasswordValidator> から派生するクラスを作成して構成します。  
   
- サンプル アプリケーションでは、[ユーザー名パスワード検証](../../../../docs/framework/wcf/samples/user-name-password-validator.md)を参照してください。  
+ サンプル アプリケーションでは、次を参照してください。[ユーザー名パスワード検証](../../../../docs/framework/wcf/samples/user-name-password-validator.md)です。  
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>カスタムのユーザー名/パスワード検証コントロールを作成するには  
   
@@ -118,6 +118,7 @@ ms.locfileid: "54700534"
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [方法: ASP.NET メンバーシップ プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [方法: ASP.NET メンバーシップ プロバイダーを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [認証](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

@@ -3,12 +3,12 @@ title: クレーム対応の ASP.NET Web アプリケーションを初めて構
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: b6be3d84a292e5f14e1cdc70a181e8fd2c065a68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151373"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>クレーム対応の ASP.NET Web アプリケーションを初めて構築する
 ## <a name="applies-to"></a>対象  
@@ -41,11 +41,12 @@ ms.locfileid: "58838132"
   
  WIF を使用してクレーム対応 ASP.NET アプリケーションを初めてビルドするには、次のいずれかの手順に従ってください。  
   
--   [方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションを作成します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [方法: フォーム ベース認証を使用してクレーム対応 ASP.NET アプリケーションを構築します。](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [方法: フォームベースの認証を使用するクレーム対応 ASP.NET アプリケーションをビルドする](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [WIF の概要](../../../docs/framework/security/getting-started-with-wif.md)

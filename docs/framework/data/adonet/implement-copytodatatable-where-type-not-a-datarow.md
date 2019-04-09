@@ -1,16 +1,16 @@
 ---
-title: '方法: 実装 CopyToDataTable<T>ジェネリック型 T が DataRow ではありません'
+title: '方法: ジェネリック型 T が DataRow ではない CopyToDataTable<T> を実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 1f79bd421d4c504556074468f8ab7e032d3eca43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ec609ac38b3fa91a4b11b93e24b465f48696a9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159232"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>方法: 実装 CopyToDataTable\<T > ジェネリック型 T が DataRow ではありません
 データ バインドには、しばしば <xref:System.Data.DataTable> オブジェクトが使用されます。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインディングに利用できます。 ただし、<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ジェネリック パラメーター <xref:System.Collections.Generic.IEnumerable%601> が `T` 型である <xref:System.Data.DataRow> ソースに対してのみ作用します。 有用ではありますが、一連のスカラー型、匿名型を射影するクエリ、またはテーブルの結合を実行するクエリからは、テーブルを作成できません。  
@@ -74,5 +74,6 @@ public class ObjectShredder<T>
 ```
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリによる DataTable の作成](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)
 - [プログラミング ガイド](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

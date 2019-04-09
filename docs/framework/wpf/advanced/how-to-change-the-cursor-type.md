@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mouse pointer [WPF], cursor type
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
-ms.openlocfilehash: e62658f4c4249c93bd24dffd3878dd2ec2b75029
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141207"
 ---
 # <a name="how-to-change-the-cursor-type"></a>方法: カーソルの種類を変更する
 この例では、変更、<xref:System.Windows.Input.Cursor>とアプリケーションの特定の要素をマウス ポインターの。  
@@ -33,4 +33,5 @@ ms.locfileid: "57371153"
  [!code-vb[cursors#ChangeCursorsSample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/cursors/VisualBasic/Window1.xaml.vb#changecursorssample)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [入力の概要](input-overview.md)

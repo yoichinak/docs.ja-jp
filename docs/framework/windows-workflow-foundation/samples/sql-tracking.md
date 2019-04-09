@@ -2,15 +2,15 @@
 title: SQL 追跡
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146342"
 ---
 # <a name="sql-tracking"></a>SQL 追跡
-このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、[ワークフロー追跡とトレース](../workflow-tracking-and-tracing.md)を参照してください。
+このサンプルでは、カスタム SQL 追跡参加要素を作成し、追跡レコードを SQL データベースに書き込む方法を示します。 Windows Workflow Foundation (WF) は、ワークフロー インスタンスの実行時に可視性を示すワークフロー追跡を提供します。 追跡ランタイムでは、ワークフローの実行中にワークフロー追跡レコードが出力されます。 ワークフロー追跡の詳細については、次を参照してください。[ワークフロー追跡とトレース](../workflow-tracking-and-tracing.md)します。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
@@ -35,14 +35,13 @@ ms.locfileid: "57710018"
   
      ローカル サービスの WSDL アドレスの例は`http://localhost:65193/StockPriceService.xamlx?wsdl`します。  
   
-8.  
-  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
+8.  [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] を使用して、WCF テスト クライアント (WcfTestClient.exe) を実行します。 このテスト クライアントは Microsoft Visual Studio 10.0\Common7\IDE ディレクトリにあります。  
   
 9. WCF テスト クライアントでのクリックして、**ファイル**メニュー選択し、**サービスの追加**します。 テキスト ボックスにローカル サービスのアドレスを貼り付けます。 クリックして**OK**ダイアログ ボックスを閉じます。  
   
 10. WCF テスト クライアントでダブルクリック **[getstockprice]** します。 開き、`GetStockPrice`操作を 1 つのパラメーター値の型を受け取る`Contoso` をクリック**Invoke**します。  
   
-11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、[SQL Server Management Studio の概要](https://go.microsoft.com/fwlink/?LinkId=165645)を参照してください。 SQL Server 2008 Management Studio Express をダウンロードできます[ここ](https://go.microsoft.com/fwlink/?LinkId=180520)します。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
+11. 出力された追跡レコードが SQL データベースに書き込まれます。 追跡レコードを表示するには、SQL Management Studio で TrackingSample データベースを開き、テーブルに移動します。 SQL Server Management Studio の詳細については、次を参照してください。 [SQL Server Management Studio の概要](https://go.microsoft.com/fwlink/?LinkId=165645)します。 SQL Server 2008 Management Studio Express をダウンロードできます[ここ](https://go.microsoft.com/fwlink/?LinkId=180520)します。 テーブルで選択クエリを実行すると、それぞれのテーブルに格納されている追跡レコード内のデータが表示されます。  
   
 #### <a name="to-uninstall-the-sample"></a>サンプルをアンインストールするには  
   
@@ -61,4 +60,5 @@ ms.locfileid: "57710018"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

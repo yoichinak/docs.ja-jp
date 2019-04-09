@@ -2,12 +2,12 @@
 title: '* (乗算)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 508ce246-4e86-47dd-a605-4af4bebb9891
-ms.openlocfilehash: 68544823d2279b76920e057829fc61a469d39730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cddcaa61c6241b5f5a37bac96ef08c3322367823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146420"
 ---
 # <a name="-multiply-entity-sql"></a>* (乗算) (Entity SQL)
 2 つの式を乗算します。  
@@ -23,7 +23,7 @@ expression * expression
  任意の数値データ型の有効な式。  
   
 ## <a name="result-types"></a>戻り値の型  
- 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)を参照してください。  
+ 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、次を参照してください。[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、* 算術演算子を使用して 2 つの数値を乗算します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -35,4 +35,5 @@ expression * expression
  [!code-csharp[DP EntityServices Concepts 2#MULTIPLY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#multiply)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
-ms.openlocfilehash: 8c2d4adb2471c0f1891288573ce6b6460b20151d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145406"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>方法: トリガーを使用して、ListView で選択された項目のスタイルを設定する
 この例は、定義する方法を示します<xref:System.Windows.Style.Triggers%2A>の<xref:System.Windows.Controls.ListViewItem>コントロールようにプロパティ値を<xref:System.Windows.Controls.ListViewItem>変更、<xref:System.Windows.Style>の<xref:System.Windows.Controls.ListViewItem>対応する変更点。  
@@ -30,9 +30,10 @@ ms.locfileid: "57367922"
 [!code-xaml[ListViewChkBox#ListViewItemTriggersEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#listviewitemtriggersend)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [方法トピック](listview-how-to-topics.md)
+- [方法のトピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)
 - [GridView の概要](gridview-overview.md)

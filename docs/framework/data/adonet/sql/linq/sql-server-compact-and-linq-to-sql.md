@@ -2,15 +2,15 @@
 title: SQL Server Compact および LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: d7c0b34c431947a3e9f3f6b87e5d66e800c58f44
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: db3f7aef082d965dc27b69f5a966ff038c0ffac0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145718"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact および LINQ to SQL
-SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、[を使用して SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))を参照してください。  
+SQL Server Compact は、Visual Studio にインストールされている既定のデータベースです。 詳細については、次を参照してください。[を使用して SQL Server Compact (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110))します。  
   
  ここでは、使用量、構成、機能セット、およびスコープの主な相違点の概要について[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。  
   
@@ -43,4 +43,5 @@ SQL Server Compact は、Visual Studio にインストールされている既�
 -   SQL Server Compact は、部分信頼をサポートしません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148955"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同期操作と非同期操作
 ここでは、非同期サービス操作の実装と呼び出しについて説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "54529123"
 3.  IAsyncResult 非同期パターン  
   
 #### <a name="task-based-asynchronous-pattern"></a>タスク ベースの非同期パターン  
- 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 例:  
+ 非同期操作を実装する方法としては、最も直接的でわかりやすいタスク ベースの非同期パターンが推奨されます。 この方法を使用するには、単にサービス操作を実装し、戻り値の型 Task\<T> (T は論理操作によって返される型) を指定します。 例えば:  
   
 ```csharp  
 public class SampleService:ISampleService   
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- これらのオプションを指定すると、Svcutil.exe によって、イベント インフラストラクチャを持つ WCF クライアント クラスが生成されます。このインフラストラクチャにより、呼び出し元アプリケーションは、応答を受信して適切なアクションを実行するイベント ハンドラーを実装し、割り当てることができます。 完全な例を参照してください。[方法。サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
+ これらのオプションを指定すると、Svcutil.exe によって、イベント インフラストラクチャを持つ WCF クライアント クラスが生成されます。このインフラストラクチャにより、呼び出し元アプリケーションは、応答を受信して適切なアクションを実行するイベント ハンドラーを実装し、割り当てることができます。 コード例全体については、「[方法: サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。  
   
  イベント ベースの非同期モデルは、[!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] でのみ使用できます。 また、<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> を使用して WCF クライアント チャネルを作成した場合は、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] でもサポートされません。 WCF クライアント チャネル オブジェクトを使用する場合、<xref:System.IAsyncResult?displayProperty=nameWithType> オブジェクトを使用して操作を非同期に呼び出す必要があります。 この手法を使用するには、次の例に示すように、[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) で **/async** コマンド オプションを指定します。  
   
@@ -182,7 +182,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  これにより、対応する `<Begin>` メソッドを持ち、<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> プロパティが `true` に設定された `<End>` メソッドとして各操作がモデル化されたサービス コントラクトが生成されます。 完全な例を使用して、<xref:System.ServiceModel.ChannelFactory%601>を参照してください[方法。チャネル ファクトリを使用して非同期的に操作を呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)します。  
   
- いずれの場合も、サービスが同期的に実装されていても、アプリケーションは操作を非同期に呼び出すことができます。これは、アプリケーションで同じパターンを使用してローカルの同期メソッドを非同期に呼び出す場合と同様です。 クライアントにとって操作がどのように実装されているかは重要ではありません。応答メッセージが到着すると、その内容がクライアントの非同期 <`End`> メソッドにディスパッチされ、クライアントは情報を取得します。  
+ いずれの場合も、サービスが同期的に実装されていても、アプリケーションは操作を非同期に呼び出すことができます。これは、アプリケーションで同じパターンを使用してローカルの同期メソッドを非同期に呼び出す場合と同様です。 操作の実装方法がクライアントに意味はありません。応答メッセージが到着すると、そのコンテンツにディスパッチされるクライアントの非同期 <`End`> メソッドと、クライアントは、情報を取得します。  
   
 ### <a name="one-way-message-exchange-patterns"></a>一方向メッセージ交換パターン  
  クライアントまたはサービスが単独で一方向操作 (<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> が `true` に設定されている操作には相関する応答がない) を相手側に送信できる、非同期メッセージ交換パターンを作成することもできます  (双方向メッセージ交換パターンを一方向メッセージで使用します)。この場合、サービス コントラクトは、両側が非同期呼び出しまたは非同期実装として実装できる一方向メッセージ交換を指定します。また、状況によっては指定しません。 一般的に、コントラクトが一方向メッセージ交換の場合、メッセージが送信されるとアプリケーションは応答を待機することなく他の作業を継続できるため、多くの場合、実装が非同期になります。  
@@ -193,5 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、**/messageContract** コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

@@ -2,12 +2,12 @@
 title: 'チュートリアル: データの操作 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143287"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>チュートリアル: データの操作 (C#)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54637308"
   
 -   Northwind サンプル データベース。  
   
-     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
+     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
   
 -   Northwind データベースから生成された C# コード ファイル。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54637308"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
   
-1.  **プロジェクト** メニューのをクリックして**既存項目の追加**します。  
+1.  **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
 2.  **既存項目の追加**ダイアログ ボックスは c:\linqtest6\northwind.cs に移動し、をクリックし、**追加**します。  
   
@@ -162,4 +162,5 @@ ms.locfileid: "54637308"
 >  変更内容を送信して新しい顧客を追加した後で、このソリューションを再度実行することはできません。 ソリューションを再度実行するには、追加する顧客の名前と顧客 ID を変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -2,12 +2,12 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153076"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
@@ -74,4 +74,5 @@ aspnet_regiis.exe -i -enable
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [セットアップ手順](../../../docs/framework/wcf/samples/set-up-instructions.md)

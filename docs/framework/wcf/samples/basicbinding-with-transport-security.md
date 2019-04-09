@@ -2,12 +2,12 @@
 title: トランスポート セキュリティ付き BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 5f3e2305a4ae8da13a5241bef9c438a060234132
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6a1c54f7a4985e5d1e7b65226aeca4f808619542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153193"
 ---
 # <a name="basicbinding-with-transport-security"></a>トランスポート セキュリティ付き BasicBinding
 このサンプルでは、基本的なバインディングを使用した SSL トランスポート セキュリティを示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  
@@ -88,4 +88,3 @@ Press <ENTER> to terminate client.
 4.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 5.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
-  

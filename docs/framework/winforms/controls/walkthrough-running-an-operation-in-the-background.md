@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: バック グラウンドで操作を実行します。'
+title: 'チュートリアル: 操作をバックグラウンドで実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149085"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル: バック グラウンドで操作を実行します。
+# <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル: 操作をバックグラウンドで実行する
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
   
  この例で使用するコードの完全な一覧については、次を参照してください。[方法。バックグラウンドで操作を実行する](how-to-run-an-operation-in-the-background.md)」を参照してください。  
@@ -98,9 +98,10 @@ ms.locfileid: "57703661"
   
 -   非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、「[方法 :バック グラウンド操作を使用してフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
--   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)を参照してください。  
+-   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、次を参照してください。[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)

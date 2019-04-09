@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 4d04347025de53add09f50646f1e2934b7959048
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: afa92cc46aba9def65dddd490a2df3350c163af9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143163"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
@@ -60,4 +60,5 @@ CAST( e as T )
  [!code-csharp[DP EntityServices Concepts 2#CAST](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#cast)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

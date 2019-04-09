@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: 単純なオブジェクト モデルとクエリ (C#)'
+title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155130"
 ---
-# <a name="walkthrough-simple-object-model-and-query-c"></a>チュートリアル: 単純なオブジェクト モデルとクエリ (C#)
+# <a name="walkthrough-simple-object-model-and-query-c"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)
 このチュートリアルでは、複雑さを抑えた、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 全体の基本的なシナリオを示します。 サンプルの Northwind データベースにある Customers テーブルのモデル化を行うエンティティ クラスを作成します。 次に、住所がロンドンの顧客を表示するための簡単なクエリを作成します。  
   
  このチュートリアルでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の考え方を示すために、コード中心の方法をあえて使用しています。 通常は、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を使用してオブジェクト モデルを作成できます。  
@@ -22,7 +22,7 @@ ms.locfileid: "54686869"
   
 -   このチュートリアルでは、専用フォルダー ("c:\linqtest5") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。 データベースをダウンロードしたら、ファイルを c:\linqtest5 フォルダーにコピーします。  
+-   このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、ファイルを c:\linqtest5 フォルダーにコピーします。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
@@ -87,7 +87,7 @@ ms.locfileid: "54686869"
   
 -   `CustomerID` プロパティを、データベースの主キー列を表すものとして指定します。  
   
--   プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 これで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ビジネス ロジックを含む場合があるパブリック アクセサーを使用せずに、値を直接格納および取得できます。  
+-   プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] できます格納およびビジネス ロジックを含む場合があるパブリック アクセサーを使用する代わりに直接、値を取得します。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>2 つのデータベース列の特性を指定するには  
   
@@ -155,4 +155,5 @@ ms.locfileid: "54686869"
  「リレーションシップ間でクエリを実行する」のチュートリアルに進む場合は、必要条件として、ここで完了したチュートリアルのソリューションを保存しておく必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

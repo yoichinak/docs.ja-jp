@@ -1,5 +1,5 @@
 ---
-title: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用して、'
+title: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143911"
 ---
-# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>方法: Modifiers プロパティおよび GenerateMember プロパティを使用して、
+# <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>方法: Modifiers プロパティおよび GenerateMember プロパティを使用する
 2 つのプロパティが、デザイン環境によって提供される Windows フォームにコンポーネントを配置すると:`GenerateMember`と`Modifiers`します。 `GenerateMember`プロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときを指定します。 `Modifiers`プロパティは、そのメンバー変数に割り当てられているアクセス修飾子。 場合の値、`GenerateMember`プロパティは`false`の値、`Modifiers`プロパティは影響を与えません。  
   
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57710798"
   
 3.  設定、`GenerateMember`と`Modifiers`の各プロパティ<xref:System.Windows.Forms.Button>次の表に従ってコントロール。  
   
-    |ボタンの名前|GenerateMember 値|修飾子の値|  
+    |Button name|GenerateMember 値|修飾子の値|  
     |-----------------|--------------------------|---------------------|  
     |`button1`|`true`|`private`|  
     |`button2`|`true`|`protected`|  
@@ -60,7 +60,8 @@ ms.locfileid: "57710798"
 >  既定では、Windows フォーム デザイナーによって、 `private` (`Friend` Visual basic) 修飾子などのコンテナー コントロールを<xref:System.Windows.Forms.Panel>します。 場合、ベース<xref:System.Windows.Forms.UserControl>または<xref:System.Windows.Forms.Form>がコンテナー コントロールでは、継承されたコントロールとフォーム内の新しい子を受け付けることができません。 ソリューションは、基本のコンテナー コントロールの修飾子を変更する`protected`または`public`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Button>
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
 - [チュートリアル: ビジュアル継承のデモンストレーション](walkthrough-demonstrating-visual-inheritance.md)
-- [方法: Windows フォームを継承します。](how-to-inherit-windows-forms.md)
+- [方法: Windows フォームを継承する](how-to-inherit-windows-forms.md)

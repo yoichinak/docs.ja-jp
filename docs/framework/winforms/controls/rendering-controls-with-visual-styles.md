@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146771"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>visual スタイルが使用されているコントロールのレンダリング
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] は、視覚スタイルをサポートするオペレーティング システムでの、それらを使用したコントロールと他の Windows ユーザー インターフェイス (UI) 要素のレンダリングをサポートします。 このトピックでは、オペレーティング システムの現在の視覚スタイルを使用したコントロールと他の UI 要素のレンダリングに関して [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] でのいくつかのサポート レベルについて説明します。  
@@ -54,9 +54,9 @@ ms.locfileid: "57708055"
 ## <a name="visual-style-element-and-rendering-classes"></a>視覚スタイル要素とレンダリング クラス  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 名前空間に含まれるクラスを使用して、視覚スタイルによってサポートされる任意のコントロールまたは UI 要素を描画したり、それらに関する情報を取得したりすることができます。 サポートされるコントロールには、 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間のレンダリング クラスを使用する一般的なコントロール (前のセクションを参照してください)、およびタブ コントロールや rebar コントロールなどの他のコントロールが含まれます。 他のサポートされる UI 要素には、 **[スタート]** メニュー、タスクバー、ウィンドウの非クライアント領域のパーツなどがあります。  
   
- <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 名前空間の主要なクラスは <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> と <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>です。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> は、視覚スタイルによってサポートされる任意のコントロールまたはユーザー インターフェイス要素を識別するための基盤クラスです。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 自体に加えて、 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 名前空間には、視覚スタイルによってサポートされるコントロール、コントロール パーツ、その他の UI 要素のすべての状態の <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> を返す `static` プロパティを持つ <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> の多くの入れ子になったクラスが含まれています。  
+ <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 名前空間の主要なクラスは <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> と <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>です。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 視覚スタイルによってサポートされているコントロールまたはユーザー インターフェイス要素を識別するための基盤クラスです。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 自体に加えて、 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 名前空間には、視覚スタイルによってサポートされるコントロール、コントロール パーツ、その他の UI 要素のすべての状態の <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> を返す `static` プロパティを持つ <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> の多くの入れ子になったクラスが含まれています。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> は、オペレーティング システムの現在の視覚スタイルによって定義される各 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> を描画したり、それらに関する情報を取得したりするメソッドを提供します。 取得可能な要素に関する情報には、既定のサイズ、背景の種類、色の定義などが含まれます。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> は、Windows プラットフォーム SDK の Windows シェル部分からの視覚スタイル (UxTheme) API の機能をラップします。 詳細については、[Visual スタイルを有効にする](/windows/desktop/controls/cookbook-overview)を参照してください。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 描画およびそれぞれに関する情報を取得するメソッドを提供<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>オペレーティング システムの現在の visual スタイルで定義されています。 取得可能な要素に関する情報には、既定のサイズ、背景の種類、色の定義などが含まれます。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> visual スタイル (UxTheme) API、Windows Platform SDK の Windows シェル部分からの機能をラップします。 詳細については、次を参照してください。 [Visual スタイルを有効にする](/windows/desktop/controls/cookbook-overview)します。  
   
  使用しての詳細については<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>と<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>を参照してください[方法。Visual スタイル要素を描画](how-to-render-a-visual-style-element.md)します。  
   
@@ -79,4 +79,5 @@ ms.locfileid: "57708055"
 >  ユーザーが視覚スタイルを有効にしたり切り替えたりしたときに、 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> を使用してコントロールまたは UI 要素をレンダリングする場合は、 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントではなく <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> イベントを処理するときにこの処理を実行してください。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> を処理するときに <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>クラスを使用した場合は、例外がスローされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [コントロールのカスタム描画およびレンダリング](custom-control-painting-and-rendering.md)

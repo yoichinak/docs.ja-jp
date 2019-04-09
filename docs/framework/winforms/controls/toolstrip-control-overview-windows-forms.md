@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144574"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールとその関連クラスは、ツールバー、ステータス バー、およびメニューにユーザー インターフェイス要素を結合するため、共通のフレームワークを提供します。 <xref:System.Windows.Forms.ToolStrip> コントロールでは、水平または垂直スペースを共有するツールバーの機能は、インプレース アクティブ化と編集、カスタム レイアウト、およびラフティング、豊富なデザイン時エクスペリエンスを提供します。  
@@ -77,9 +77,10 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 |<xref:System.Windows.Forms.ToolStripControlHost>|具体的にはないその他のコントロールをホスト<xref:System.Windows.Forms.ToolStrip>コントロールを決定するが、<xref:System.Windows.Forms.ToolStrip>機能します。|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|指定するかどうかを<xref:System.Windows.Forms.ToolStripItem>、メイン レイアウトするのには、 <xref:System.Windows.Forms.ToolStrip>、オーバーフローに<xref:System.Windows.Forms.ToolStrip>、またはどちらもします。|  
   
- 詳細については、[ToolStrip テクノロジの概要](toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)を参照してください。  
+ 詳細については、次を参照してください。 [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)と[ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

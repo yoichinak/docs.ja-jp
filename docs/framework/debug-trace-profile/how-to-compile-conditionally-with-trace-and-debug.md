@@ -1,5 +1,5 @@
 ---
-title: '方法: トレースとデバッグによる条件付きコンパイルします。'
+title: '方法: トレースとデバッグを指定して条件付きコンパイルを実行する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158659"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグによる条件付きコンパイルします。
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグを指定して条件付きコンパイルを実行する
 開発時にアプリケーションをデバッグするときは、トレース出力とデバッグ出力の両方が Visual Studio の [出力] ウィンドウに表示されます。 ただし、配置されるアプリケーションにトレース機能を組み込むには、**TRACE** コンパイラ ディレクティブを有効にして、インストルメント化されたアプリケーションをコンパイルする必要があります。 これにより、コンパイルされたアプリケーションのリリース バージョンに、トレース コードが組み込まれます。 **TRACE** ディレクティブを有効にしないと、コンパイル時にすべてのトレース コードが無視され、配置する実行可能コードに含まれなくなります。  
   
  トレース用のメソッドとデバッグ用のメソッドにはどちらも、関連付けられた条件属性があります。 たとえば、トレースの条件属性が **true** の場合は、すべてのトレース ステートメントがアセンブリ (コンパイル済みの .exe ファイルや .dll ファイル) 内に組み込まれます。また、**Trace** 条件属性が **false** の場合、トレース ステートメントは組み込まれません。  
@@ -67,7 +67,7 @@ ms.locfileid: "54523559"
     |`-d:`|条件付きコンパイル シンボルを定義します。|  
   
     > [!NOTE]
-    >  TRACE または DEBUG は大文字で入力する必要があります。 条件付きコンパイル コマンドの詳細情報を参照するには、コマンド プロンプトに `vbc /?` (Visual Basic の場合) または `csc /?` (c# の場合) と入力します。 詳細については、「[コマンド ラインからのビルド](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」(C# の場合) または「[コマンド ライン コンパイラの起動](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)」(Visual Basic の場合) を参照してください。  
+    >  TRACE または DEBUG は大文字で入力する必要があります。 条件付きコンパイル コマンドの詳細情報を参照するには、コマンド プロンプトに `vbc /?` (Visual Basic の場合) または `csc /?` (C# の場合) と入力します。 詳細については、「[コマンド ラインからのビルド](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)」(C# の場合) または「[コマンド ライン コンパイラの起動](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)」(Visual Basic の場合) を参照してください。  
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>#CONST または #define を使用して条件付きコンパイルを実行するには  
   
@@ -96,10 +96,11 @@ ms.locfileid: "54523559"
 >  コンパイルの準備ができたら、**[ビルド]** メニューの **[ビルド]** を選択できます。または、条件付きコンパイル シンボルを定義するための「**d:**」を入力せずにコマンド ライン メソッドを使用することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: 作成、初期化、およびトレース スイッチを構成します。](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [方法: トレース スイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [方法: Visual Studio のコマンドラインの環境変数を設定します。](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [方法: コマンド ライン コンパイラを起動する](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法: Visual Studio のコマンドラインのための環境変数を設定する](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [方法: コマンド ライン コンパイラを呼び出す](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

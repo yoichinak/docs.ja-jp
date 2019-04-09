@@ -9,18 +9,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148305"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>純色およびグラデーションによる塗りつぶしの概要
 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.SolidColorBrush>、 <xref:System.Windows.Media.LinearGradientBrush>、および<xref:System.Windows.Media.RadialGradientBrush>純色、線状グラデーション、および放射状グラデーションを描画するオブジェクト。  
-  
 
-  
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>領域を純色で塗りつぶす  
  信頼性の高い領域を塗りつぶすには、任意のプラットフォームで最も一般的な操作のいずれかの<xref:System.Windows.Media.Color>します。 このタスクを実行する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供、<xref:System.Windows.Media.SolidColorBrush>クラス。 次のセクションでは、描画に使用するさまざまな方法を説明します、<xref:System.Windows.Media.SolidColorBrush>します。  
@@ -148,7 +146,7 @@ GradientOrigin、Center、RadiusX、および RadiusY の設定が異なる Radi
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>"XAML" でのカラーの不透明度の指定  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、[!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記を使用して、個々の色の不透明度を指定します。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記では、次の構文を使用します。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、[!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] の 16 進表記を使用して、個々の色の不透明度を指定します。 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 16 進数表記では、次の構文を使用します。  
   
  `#` **aa** *rrggbb*  
   
@@ -169,6 +167,7 @@ GradientOrigin、Center、RadiusX、および RadiusY の設定が異なる Radi
  <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>クラスは、イメージ、描画、またはビジュアルで領域を塗りつぶすことができます。 イメージ、描画、およびパターンによる塗りつぶしの詳細については、「[イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>

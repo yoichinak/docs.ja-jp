@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9afe4afcaefb9409edb93bd1da96a02db20dbd20
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144327"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 関数
 プロセスに読み込まれる共通言語ランタイム (CLR) のインストール ディレクトリを返します。 インストール ディレクトリは、完全修飾"c:\windows\microsoft.net\framework\v1.0.3705"など。  
@@ -61,7 +61,8 @@ HRESULT GetCORSystemDirectory (
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

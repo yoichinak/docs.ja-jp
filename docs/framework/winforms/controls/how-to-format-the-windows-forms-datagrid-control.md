@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの DataGrid コントロールの書式設定します。'
+title: '方法: Windows フォーム DataGrid コントロールの書式を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 696fdc09d285e0a04148e82b0cece6108b7d5a45
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147902"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control"></a>方法: Windows フォームの DataGrid コントロールの書式設定します。
+# <a name="how-to-format-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールの書式を設定する
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  さまざまな部分に別の色を適用する、<xref:System.Windows.Forms.DataGrid>コントロールのことで情報を読みやすくするヘルプことができます。 色は、行と列に適用できます。 行と列も非表示にしたりユーザーの判断で示すようにします。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "57705910"
     > [!NOTE]
     >  コントロールを不適切な色選択 (たとえば、赤と緑) ためにアクセスできないようにすることは、コントロールの色をカスタマイズする場合に、注意します。 使用できる色を使用して、**システム カラー**パレットに、この問題を回避します。  
   
-     次の手順は、フォームに、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、[Windows フォームの DataGrid コントロールをデータ ソースにバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)を参照してください。  
+     次の手順は、フォームに、<xref:System.Windows.Forms.DataGrid>コントロールがデータ テーブルにバインドします。 詳細については、次を参照してください。 [Windows フォームの DataGrid コントロールをデータ ソースにバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>データ テーブルのテーブルと列のスタイルをプログラムで設定するには  
   
@@ -155,8 +154,9 @@ ms.locfileid: "57705910"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

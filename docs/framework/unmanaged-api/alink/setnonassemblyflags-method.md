@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6c07a6679326548535985e4c938c3fddbb2a0cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c7716db814e86258c4cb81047b39142f33798782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143196"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags メソッド
 アセンブリに固有でないフラグを設定します。  
@@ -45,6 +45,7 @@ HRESULT SetNonAssemblyFlags(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールで Web スタイル リンクを表示します。'
+title: '方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148240"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールで Web スタイル リンクを表示します。
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは、カラーや下線が引かれたとしての Web リンクを表示できます。 リンクがクリックされたときに、リンク テキストに指定された Web サイトを表示するブラウザー ウィンドウを開いてコードを記述することができます。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox コントロールでの Web ページにリンクするには  
@@ -117,6 +117,7 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>

@@ -2,12 +2,12 @@
 title: 有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ec7603e547c065b4b86f2c81650c6e8a2ce09e6f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146524"
 ---
 # <a name="poison-message-handling"></a>有害メッセージ処理
 A*有害なメッセージ*をアプリケーションに配信試行の最大数を超えたメッセージです。 この状況は、キュー ベースのアプリケーションがエラーによってメッセージを処理できないときに発生する可能性があります。 信頼性に対する要求を満たすために、キューに置かれたアプリケーションはトランザクションの下でメッセージを受信します。 キューに置かれたメッセージを受信したトランザクションを中止すると、メッセージはそのままキューに残り、新しいトランザクションの下で再試行されます。 トランザクションを中止させた問題が解決されなければ、受信側のアプリケーションは、配信試行回数の最大値を超えるまで同じメッセージの受信と中止を繰り返す悪循環に陥る可能性があり、その結果、有害メッセージが生じることになります。  
@@ -21,9 +21,9 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
   
 -   `ReceiveRetryCount`. アプリケーション キューからアプリケーションへのメッセージの配信を再試行する最大回数を示す整数値。 既定値は 5 です。 データベースの一時的なデッドロックなどの問題を即時再試行で解決する場合は、この値で十分です。  
   
--   `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 [!INCLUDE[wv](../../../../includes/wv-md.md)] では、メッセージが最大で (`ReceiveRetryCount` + 1) × (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` は、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では無視されます。  
+-   `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 [!INCLUDE[wv](../../../../includes/wv-md.md)] では、メッセージが最大で (`ReceiveRetryCount` + 1) × (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` 時に無視されます[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]と[!INCLUDE[wxp](../../../../includes/wxp-md.md)]します。  
   
--   `RetryCycleDelay`. 再試行サイクル間の遅延時間。 既定値は 30 分です。 `MaxRetryCycles` と `RetryCycleDelay` の組み合わせにより、問題に対処する機構が提供されます。この場合、定期的な遅延後に再試行が行われ、問題が解決されます。 たとえば、SQL Server の保留中のトランザクションのコミットでロックされた行セットが処理されます。  
+-   `RetryCycleDelay`. 再試行サイクル間の遅延時間。 既定値は 30 分です。 `MaxRetryCycles` `RetryCycleDelay`まとめて、定期的な遅延後に再試行が問題を解決する問題に対処するためのメカニズムを提供します。 たとえば、SQL Server の保留中のトランザクションのコミットでロックされた行セットが処理されます。  
   
 -   `ReceiveErrorHandling`. 再試行を最大回数実行しても配信できなかったメッセージに対して実行するアクションを示す列挙値。 値には、Fault、Drop、Reject、および Move の 4 つがあります。 既定のオプションは Fault です。  
   
@@ -52,9 +52,9 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
   
  WCF には、2 つの標準的なキューに置かれたバインディングが用意されています。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>。 A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントとの通信をキュー ベースの実行に適したバインディング。  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントとの通信をキュー ベースの実行に適したバインディング。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 既存のメッセージ キュー アプリケーションとの通信に適したバインディング。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 既存のメッセージ キュー アプリケーションとの通信に適したバインディング。  
   
 > [!NOTE]
 >  WCF サービスの要件に基づいてこれらのバインドのプロパティを変更することができます。 有害メッセージ処理機構全体は、受信側アプリケーションに対してローカルです。 このプロセスは、受信側アプリケーションが最終的に処理を停止し、送信側に否定受信確認を返信する場合を除き、送信元アプリケーションには認識されません。 この場合、メッセージは、送信元の配信不能キューに送られます。  
@@ -62,7 +62,7 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>ベスト プラクティス:Msmqpoisonmessageexception の処理  
  メッセージが有害であるとサービスが判断した場合、キューに置かれたトランスポートは <xref:System.ServiceModel.MsmqPoisonMessageException> をスローします。この例外には、有害メッセージの `LookupId` が含まれます。  
   
- 受信側アプリケーションでは、必要な <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを実装して、すべてのエラーを処理できます。 詳細については、[拡張コントロール経由でエラー処理とレポート](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)を参照してください。  
+ 受信側アプリケーションでは、必要な <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを実装して、すべてのエラーを処理できます。 詳細については、次を参照してください。[拡張コントロール経由でエラー処理とレポート](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)します。  
   
  アプリケーションでは、有害メッセージを有害メッセージ キューに移動し、サービスがキュー内の残りのメッセージにアクセスできるようにする、なんらかの有害メッセージ自動処理を必要とする場合があります。 エラー処理機構を使用して有害メッセージの例外をリッスンする唯一のシナリオは、<xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> の設定を <xref:System.ServiceModel.ReceiveErrorHandling.Fault> に設定した場合です。 メッセージ キュー 3.0 の有害メッセージ サンプルは、この動作を示しています。 ベスト プラクティスを含め、有害メッセージを処理するために必要な手順の概要を以下に示します。  
   
@@ -77,9 +77,7 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
 4.  サービスに有害動作属性による注釈が付けられていることを確認します。  
-  
-  
-  
+
  また、`ReceiveErrorHandling` を `Fault` に設定した場合は、`ServiceHost` が有害メッセージを検出するとエラーになります。 この場合、faulted イベントにフックしてサービスを終了し、修正措置を講じた後に再起動できます。 たとえば、`LookupId` に伝達された <xref:System.ServiceModel.MsmqPoisonMessageException> に含まれる `IErrorHandler` は記録しておくことができます。そのため、サービス ホストでエラーが発生したときに、`System.Messaging` API を使用して、この `LookupId` に基づいてキューからメッセージを受信し、そのメッセージをキューから削除して、外部ストアまたは別のキューに格納できます。 これで `ServiceHost` を再起動して、通常の処理を再開できるようになります。 [有害メッセージを MSMQ 4.0 で処理](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)はこの動作を示します。  
   
 ## <a name="transaction-time-out-and-poison-messages"></a>トランザクション タイムアウトと有害メッセージ  
@@ -94,7 +92,7 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
  バッチの一部であるメッセージが有害メッセージになった場合は、バッチ全体がロールバックされ、チャネルはメッセージを 1 つずつ読み取る処理に戻ります。 バッチ処理の詳細については、次を参照してください[トランザクションでメッセージのバッチ処理。](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>有害キュー内のメッセージに対する有害メッセージ処理  
- 有害メッセージ処理は、メッセージが有害メッセージ キューに配置された時点では終了しません。 有害メッセージ キューに置かれたメッセージは、依然として読み取り、処理する必要があります。 最終有害サブキューからメッセージを読み取るときは、有害メッセージ処理設定のサブセットを使用できます。 適用できる設定は、`ReceiveRetryCount` と `ReceiveErrorHandling` です。 `ReceiveErrorHandling` は Drop、Rreject、Fault のいずれかに設定できます。 `MaxRetryCycles` が Move に設定されている場合は、`ReceiveErrorHandling` が無視され、例外がスローされます。  
+ 有害メッセージ処理は、メッセージが有害メッセージ キューに配置された時点では終了しません。 有害メッセージ キューに置かれたメッセージは、依然として読み取り、処理する必要があります。 最終有害サブキューからメッセージを読み取るときは、有害メッセージ処理設定のサブセットを使用できます。 適用できる設定は、`ReceiveRetryCount` と `ReceiveErrorHandling` です。 `ReceiveErrorHandling` は Drop、Rreject、Fault のいずれかに設定できます。 `MaxRetryCycles` 無視される場合、例外がスローされます`ReceiveErrorHandling`が Move に設定します。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003、および Windows XP の相違点  
  前述のように、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] には、すべての有害メッセージ処理設定が適用されるわけではありません。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、および [!INCLUDE[wv](../../../../includes/wv-md.md)] のメッセージ キューには、有害メッセージの処理に関連する次のような重要な違いがあります。  
@@ -106,6 +104,7 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] のメッセージ キューは、メッセージの配信試行回数を保持するメッセージ プロパティをサポートしています。 この中止回数のプロパティは、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では使用できません。 WCF は、ので、このプロパティが含まれていないこと、正確な値にはファーム内の 1 つ以上の WCF サービスによって、同じメッセージが読み取られるときに、中止回数をメモリ内を保持します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
 - [コントラクトおよびサービスのエラーの指定と処理](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

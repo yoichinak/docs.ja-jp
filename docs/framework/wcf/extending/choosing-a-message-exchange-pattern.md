@@ -2,12 +2,12 @@
 title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157780"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
 カスタム トランスポートを記述する最初の手順は、これを決定する*メッセージ交換パターン*(または Mep) を開発しているチャネルに必要な。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、最初のタスクで説明されているチャネル開発タスクの一覧で[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
@@ -93,4 +93,5 @@ ms.locfileid: "54594760"
 -   チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 このときも、何も実行しないことを意味する場合もあれば、ネットワーク接続または他のリソースの中止を伴う場合もあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チャネル モデルの概要](../../../../docs/framework/wcf/extending/channel-model-overview.md)

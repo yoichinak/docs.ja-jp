@@ -2,12 +2,12 @@
 title: 循環トレース
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2339cb780cd09a98dd0cb77eefd66b2473597860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152374"
 ---
 # <a name="circular-tracing"></a>循環トレース
 このサンプルでは、循環バッファ トレース リスナの実装を示します。 製品版サービスの一般的なシナリオは、長期間使用できるサービスを持つことと、トレース ログを低レベルで有効にすることです。 こうしたサービスは、大量のディスク領域を消費します。 サービスのトラブルシューティングを行う場合、問題の解決に関連するのはトレース ログの最新データです。 このサンプルで示す循環バッファ トレース リスナの実装では、設定可能なデータ量を上限とする最新のトレースのみがディスク上に保持されます。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)カスタム トレース リスナーが含まれています。  
@@ -60,4 +60,5 @@ ms.locfileid: "54646436"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)
