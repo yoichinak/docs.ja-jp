@@ -1,5 +1,5 @@
 ---
-title: '方法: セキュリティ モードを設定します。'
+title: '方法: セキュリティ モードを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116403"
 ---
-# <a name="how-to-set-the-security-mode"></a>方法: セキュリティ モードを設定します。
+# <a name="how-to-set-the-security-mode"></a>方法: セキュリティ モードを設定する
 Windows Communication Foundation (WCF) のセキュリティは、ほとんどの定義済みバインド上にある 3 つの一般的なセキュリティ モード: トランスポート、メッセージ、および「メッセージ資格情報付きトランスポート」。 これ以外に、2 つのバインディングに固有の 2 つのモードがあります。<xref:System.ServiceModel.BasicHttpBinding> の "トランスポート資格情報専用" モードと、<xref:System.ServiceModel.NetMsmqBinding> の "両方" モードです。 ここでは、3 つの共通のセキュリティモードである <xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message>、および <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> に重点を置いて説明します。  
   
  ただし、これらのモードがすべての定義済みバインディングでサポートされるわけではありません。 ここでは、<xref:System.ServiceModel.WSHttpBinding> クラスと <xref:System.ServiceModel.NetTcpBinding> クラスでモードを設定し、プログラムと構成の両方を使用してモードを設定する方法を示します。  
   
- 詳細についてを参照してください、WCF のセキュリティを参照してください。[セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)、 [Securing Services](../../../docs/framework/wcf/securing-services.md)、と[Securing Services and Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。 トランスポート モードとメッセージの詳細については、[トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)と[メッセージ セキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)を参照してください。  
+ 詳細についてを参照してください、WCF のセキュリティを参照してください。[セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)、 [Securing Services](../../../docs/framework/wcf/securing-services.md)、と[Securing Services and Clients](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。 トランスポート モードとメッセージの詳細については、次を参照してください。[トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)と[メッセージ セキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)します。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>コードでセキュリティ モードを設定するには  
   
-1.  使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
+1.  使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
   
 2.  `Mode` プロパティから返されるオブジェクトの `Security` プロパティを設定します。  
   
@@ -114,12 +114,13 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
  詳細については、「[方法 :トランスポート セキュリティの使用とメッセージ資格情報](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: SSL 証明書でポートを構成します。](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [方法: トランスポート セキュリティの使用とメッセージ資格情報](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+
+- [方法: SSL 証明書を使用してポートを構成する](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [方法: トランスポート セキュリティとメッセージ資格情報を使用する](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [メッセージのセキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
