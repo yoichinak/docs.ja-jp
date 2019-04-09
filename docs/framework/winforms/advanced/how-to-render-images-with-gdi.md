@@ -1,5 +1,5 @@
 ---
-title: '方法: GDI + を使用したイメージをレンダリングします。'
+title: '方法: GDI+ を使用してイメージをレンダリングする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: d2c626f46862e5fdc7c51b509a6419a3d67c4102
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb43536f941ea7a6e1a48e78046089636360eef5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079449"
 ---
-# <a name="how-to-render-images-with-gdi"></a>方法: GDI + を使用したイメージをレンダリングします。
+# <a name="how-to-render-images-with-gdi"></a>方法: GDI+ を使用してイメージをレンダリングする
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] を使用すると、アプリケーションにファイルとして存在するイメージをレンダリングできます。 新しいオブジェクトを作成してこれを行う、<xref:System.Drawing.Image>クラス (など<xref:System.Drawing.Bitmap>)、作成、 <xref:System.Drawing.Graphics> 、使用する描画サーフェイスへの参照オブジェクトし、呼び出し、<xref:System.Drawing.Graphics.DrawImage%2A>のメソッド、<xref:System.Drawing.Graphics>オブジェクト。 イメージは、グラフィックス クラスで表される描画サーフェイス上に描画されます。 イメージ エディターを使用して、デザイン時にイメージ ファイルを作成および編集し、実行時に [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] を使用してレンダリングできます。 詳細については、「[アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)」を参照してください。  
   
 ### <a name="to-render-an-image-with-gdi"></a>GDI + を使用してイメージをレンダリングするには  
@@ -82,10 +82,11 @@ ms.locfileid: "57702829"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
-- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
+- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+ でのペン、直線、および四角形](pens-lines-and-rectangles-in-gdi.md)
-- [方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)
+- [方法: Windows フォームにテキストを描画する](how-to-draw-text-on-a-windows-form.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
-- [描画線または閉じた図形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [線または閉じた図形の描画](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)

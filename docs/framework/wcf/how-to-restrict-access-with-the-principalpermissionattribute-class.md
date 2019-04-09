@@ -1,5 +1,5 @@
 ---
-title: '方法: PrincipalPermissionAttribute クラスでアクセスを制限します。'
+title: '方法: PrincipalPermissionAttribute クラスでアクセスを制限する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105288"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>方法: PrincipalPermissionAttribute クラスでアクセスを制限します。
-Windows ドメイン コンピューターのリソースへのアクセスを制御することは、基本的なセキュリティ タスクです。 たとえば、給与情報のような機密データは、特定のユーザーだけが表示できるようにする必要があります。 ここでは、ユーザーが定義済みグループに属していることを要求することによって、メソッドへのアクセスを制限する方法について説明します。 実際のサンプルでは、[サービス操作へのアクセスの承認](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)を参照してください。  
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>方法: PrincipalPermissionAttribute クラスでアクセスを制限する
+Windows ドメイン コンピューターのリソースへのアクセスを制御することは、基本的なセキュリティ タスクです。 たとえば、給与情報のような機密データは、特定のユーザーだけが表示できるようにする必要があります。 ここでは、ユーザーが定義済みグループに属していることを要求することによって、メソッドへのアクセスを制限する方法について説明します。 実際のサンプルでは、次を参照してください。[サービス操作へのアクセスの承認](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)します。  
   
  タスクは、2 つの別個の手順で構成されます。 最初の手順では、グループを作成してユーザーを追加します。 2 番目の手順では、グループを指定するために <xref:System.Security.Permissions.PrincipalPermissionAttribute> クラスを適用します。  
   
@@ -39,7 +39,7 @@ Windows ドメイン コンピューターのリソースへのアクセスを�
   
 ### <a name="to-demand-user-membership"></a>ユーザー メンバーシップを要求するには  
   
-1.  実装されたサービス コントラクト コードを含む Windows Communication Foundation (WCF) のコード ファイルを開きます。 コントラクトの実装の詳細については、[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
+1.  実装されたサービス コントラクト コードを含む Windows Communication Foundation (WCF) のコード ファイルを開きます。 コントラクトの実装の詳細については、次を参照してください。 [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)します。  
   
 2.  特定のグループに制限される必要がある各メソッドに <xref:System.Security.Permissions.PrincipalPermissionAttribute> 属性を適用します。 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> プロパティを <xref:System.Security.Permissions.SecurityAction.Demand> に設定し、<xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> プロパティをグループの名前に設定します。 例:  
   
@@ -85,6 +85,7 @@ Windows ドメイン コンピューターのリソースへのアクセスを�
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - <xref:System.Security.Permissions.SecurityAction.Demand>

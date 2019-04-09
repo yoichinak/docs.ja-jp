@@ -2,12 +2,12 @@
 title: 型指定されていない要求/応答
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: bdd0ae5ac53bf1a35817efba7ae11d947e3a5b33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ae3c89f9eec9b1684f8c87af200ba87ca8dec093
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101206"
 ---
 # <a name="untyped-requestreply"></a>型指定のない要求/応答
 このサンプルは、Message クラスを使用する操作コントラクトを定義する方法を示します。  
@@ -88,4 +88,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
-  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65dbbeb76c1f31044fddf6df69c4daf63617c079
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: de0fe4a51fbb49e80377b6b434bf3b72ddb90f02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081623"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
 現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。  
@@ -68,8 +68,9 @@ HRESULT EnumTypeRefs (
   
  **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

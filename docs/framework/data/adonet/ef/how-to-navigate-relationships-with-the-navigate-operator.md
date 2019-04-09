@@ -1,18 +1,18 @@
 ---
-title: '方法: リレーションシップをナビゲート、Navigate 演算子'
+title: '方法: Navigate 演算子でリレーションシップをナビゲートする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
-ms.openlocfilehash: 04114a0dd855d6543b238111d745eb386d4d2988
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e5b7ba8ab6dc0d144ea57598c38ba8d1bbd5dc1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085286"
 ---
-# <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: リレーションシップをナビゲート、Navigate 演算子
+# <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: Navigate 演算子でリレーションシップをナビゲートする
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  
   
 ### <a name="to-run-the-code-in-this-example"></a>この例のコードを実行するには  
@@ -31,5 +31,6 @@ ms.locfileid: "55826513"
  [!code-vb[DP EntityServices Concepts#NavigateWithNavOperatorWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#navigatewithnavoperatorwithentitycommand)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
 - [Entity SQL 言語](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

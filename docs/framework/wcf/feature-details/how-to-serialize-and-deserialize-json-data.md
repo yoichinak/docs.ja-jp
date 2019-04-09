@@ -1,13 +1,13 @@
 ---
-title: '方法: および JSON データを逆シリアル化'
+title: '方法: JSON データをシリアル化および逆シリアル化する'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106159"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>方法: および JSON データを逆シリアル化
 JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJAX 対応の Web サービスとの間で、少量のデータを高速に交換できる効率的なデータ エンコード形式です。  
@@ -23,7 +23,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Person 型のデータ コントラクトを定義するには 
   
-1.  クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、[サービス コントラクトの設計](../designing-service-contracts.md)を参照してください。  
+1.  クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、次を参照してください。[サービス コントラクトの設計](../designing-service-contracts.md)します。  
   
     ```csharp  
     [DataContract]  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [スタンドアロン JSON のシリアル化](stand-alone-json-serialization.md)
 - [JSON のサポートおよびその他のデータ転送の形式](support-for-json-and-other-data-transfer-formats.md)

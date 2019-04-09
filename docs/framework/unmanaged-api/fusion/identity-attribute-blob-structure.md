@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102987"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
 アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
@@ -240,9 +240,10 @@ Exit:
   
  **ヘッダー:** Isolation.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IReferenceIdentity インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE インターフェイス](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
 - [IDENTITY_ATTRIBUTE 構造体](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
