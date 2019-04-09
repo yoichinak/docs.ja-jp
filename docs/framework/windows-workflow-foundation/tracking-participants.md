@@ -2,15 +2,15 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138828"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
-追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
+追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
   
 ## <a name="tracking-participants"></a>追跡参加要素  
  追跡インフラストラクチャを使用すると、送信の追跡レコードにフィルターを適用して、参加要素からレコードのサブセットに定期受信できるようになります。 フィルターを適用するメカニズムは、追跡プロファイルを通して行われます。  
@@ -18,7 +18,7 @@ ms.locfileid: "58462995"
  Windows Workflow Foundation (WF) で[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]追跡レコードを ETW セッションに書き込む追跡参加要素を提供します。 参加要素は、追跡固有の動作を構成ファイルに追加することによって、ワークフロー サービスで構成されます。 ETW 追跡参加要素を有効にすると、追跡レコードをイベント ビューアーで表示できます。 ETW ベースの追跡用の SDK のサンプルを使用すると、ETW ベースの追跡参加要素を使用した WF の追跡を理解するうえで便利です。  
   
 ## <a name="etw-tracking-participant"></a>ETW 追跡参加要素  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] には、追跡レコードを ETW セッションに書き込む ETW 追跡参加要素が含まれています。 これは、アプリケーションのパフォーマンスやサーバーのスループットに与える影響を最小限に抑えたまま、非常に効率的な方法で実行されます。 標準の ETW 追跡参加要素を使用する利点は、受信する追跡レコードを他のアプリケーションや Windows イベント ビューアーのシステム ログで表示できることです。  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ETW 追跡参加要素追跡レコードを ETW セッションに書き込むにはが含まれています。 これは、アプリケーションのパフォーマンスやサーバーのスループットに与える影響を最小限に抑えたまま、非常に効率的な方法で実行されます。 標準の ETW 追跡参加要素を使用する利点は、受信する追跡レコードを他のアプリケーションや Windows イベント ビューアーのシステム ログで表示できることです。  
   
  次の例に示すように、標準の ETW 追跡参加要素は Web.config ファイルで構成されます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58462995"
 ## <a name="custom-tracking-participant"></a>カスタムの追跡参加要素  
  追跡参加要素 API では、ワークフロー ランタイムが出力する追跡レコードを処理するためのカスタム ロジックを含めることが可能なユーザー指定の追跡参加要素を使用して、追跡ランタイムを拡張できます。 カスタムの追跡参加要素を作成するためには、開発者が `Track` クラスの <xref:System.Activities.Tracking.TrackingParticipant> メソッドを実装する必要があります。 このメソッドは、ワークフロー ランタイムによって追跡レコードが出力されるときに呼び出されます。  
   
- 追跡参加要素は <xref:System.Activities.Tracking.TrackingParticipant> クラスから派生します。 システムによって提供される <xref:System.Activities.Tracking.EtwTrackingParticipant> は、受信する追跡レコードごとに Event Tracking for Windows (ETW) イベントを出力します。 カスタムの追跡参加要素を作成するには、<xref:System.Activities.Tracking.TrackingParticipant> の派生クラスを作成します。 基本的な追跡機能を提供するには、<xref:System.Activities.Tracking.TrackingParticipant.Track%2A> をオーバーライドします。 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> は、ランタイムによって追跡レコードが送信されるときに呼び出され、必要な方法で処理できます。 次の例では、すべての追跡レコードをコンソール ウィンドウに出力するカスタムの追跡参加要素クラスを定義します。 また、<xref:System.Activities.Tracking.TrackingParticipant> および `BeginTrack` メソッドを使用して、非同期で追跡レコードを処理する `EndTrack` オブジェクトを実装することもできます。  
+ 追跡参加要素は <xref:System.Activities.Tracking.TrackingParticipant> クラスから派生します。 システムによって提供される <xref:System.Activities.Tracking.EtwTrackingParticipant> は、受信する追跡レコードごとに Event Tracking for Windows (ETW) イベントを出力します。 カスタムの追跡参加要素を作成するには、<xref:System.Activities.Tracking.TrackingParticipant> の派生クラスを作成します。 基本的な追跡機能を提供するには、<xref:System.Activities.Tracking.TrackingParticipant.Track%2A> をオーバーライドします。 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 追跡レコードは、ランタイムによって送信され、必要な方法で処理できると呼び出されます。 次の例では、すべての追跡レコードをコンソール ウィンドウに出力するカスタムの追跡参加要素クラスを定義します。 また、<xref:System.Activities.Tracking.TrackingParticipant> および `BeginTrack` メソッドを使用して、非同期で追跡レコードを処理する `EndTrack` オブジェクトを実装することもできます。  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -141,5 +141,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Server App Fabric の監視](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric でアプリケーションの監視](https://go.microsoft.com/fwlink/?LinkId=201275)

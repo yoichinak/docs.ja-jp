@@ -2,12 +2,12 @@
 title: '方法: サービスのバージョン管理'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085377"
 ---
 # <a name="how-to-service-versioning"></a>方法: サービスのバージョン管理
 このトピックでは、メッセージを同じサービスの異なるバージョンにルーティングするルーティング構成を作成するために必要な、基本的な手順について説明します。 この例では、電卓サービスの 2 つのバージョン `roundingCalc` (v1) および `regularCalc` (v2) にメッセージがルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、古い方のサービス `roundingCalc` では、戻る前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションは、新しい方の `regularCalc` サービスを使用するかどうかを示すことが可能である必要があります。  
@@ -325,4 +325,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティング サービス](../../../../docs/framework/wcf/samples/routing-services.md)

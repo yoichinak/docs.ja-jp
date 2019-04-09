@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087964"
 ---
 # <a name="vector-graphics-overview"></a>ベクター グラフィックスの概要
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系には、線、四角形、およびその他の図形を描画します。 さまざまな座標系から選択できますが、既定の座標系では、左上隅の原点が、x 軸が右と下向きの y 軸を参照します。 既定の座標系内のメジャーの単位は、ピクセルです。  
@@ -57,7 +57,8 @@ ms.locfileid: "57720411"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
+- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)

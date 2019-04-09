@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081269"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>s など<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など s<xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>柔軟なスタイルの単一のデータ項目またはデータ項目のコレクションを有効にする組み込みの機能があります。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -23,8 +23,7 @@ ms.locfileid: "59055353"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のデータ バインディング機能には、本質的にデータ バインディングをサポートする広範なプロパティ、データの柔軟な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 表現、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] からのビジネス ロジックの明確な分離など、従来のモデルより優れた長所がいくつかあります  
   
  このトピックでは最初に基本的な概念を説明[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]データのバインドとの使用状況に移動し、<xref:System.Windows.Data.Binding>クラスとデータ バインディングの他の機能です。  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>データ バインディングとは  
  データ バインディングとは、アプリケーション [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] とビジネス ロジックの間の接続を確立する処理です。 バインドが適切に設定され、データから適切な通知が提供される場合、データの値が変更されると、そのデータにバインドされている要素に変更が自動的に反映されます。 データ バインディングには、要素内のデータの外部表現が変更された場合、基になるデータを自動的に更新して変更を反映できるという意味もあります。 たとえば、ユーザーがの値を編集、<xref:System.Windows.Controls.TextBox>要素、基になるデータ値が自動的にその変更を反映するように更新します。  
@@ -232,8 +231,7 @@ ms.locfileid: "59055353"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>コレクション ビュー  
  1 回、<xref:System.Windows.Controls.ItemsControl>データ コレクションにバインドされて、並べ替え、フィルター、またはグループのデータをする可能性があります。 コレクション ビューは、実装するクラスを使用して、<xref:System.ComponentModel.ICollectionView>インターフェイス。  
-  
-  
+
 #### <a name="what-are-collection-views"></a>コレクション ビューとは  
  コレクション ビューは、基になるソース コレクション自体を変更することなく、並べ替え、フィルター、およびグループのクエリに基づくソース コレクションを移動および表示を可能にするバインディング ソース コレクションの上にある層です。 コレクション ビューには、コレクション内の現在の項目へのポインターも保持されます。 ソース コレクションを実装する場合、<xref:System.Collections.Specialized.INotifyCollectionChanged>インターフェイスによって発生した変更、<xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>イベントは、ビューに反映されます。  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055353"
  添付プロパティを設定する<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>特定のバインドの状態に関する情報を受信するバインディングに関連するオブジェクト。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [WPF Version 4.5 の新機能](../getting-started/whats-new.md)
 - [LINQ クエリの結果にバインドする](how-to-bind-to-the-results-of-a-linq-query.md)

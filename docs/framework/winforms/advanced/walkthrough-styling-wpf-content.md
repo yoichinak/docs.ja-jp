@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: WPF コンテンツのスタイル設定'
+title: 'チュートリアル: WPF コンテンツへのスタイルの適用'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079359"
 ---
-# <a name="walkthrough-styling-wpf-content"></a>チュートリアル: WPF コンテンツのスタイル設定
+# <a name="walkthrough-styling-wpf-content"></a>チュートリアル: WPF コンテンツへのスタイルの適用
 このチュートリアルでは、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
 
  このチュートリアルでは次のタスクを行います。
@@ -73,7 +73,7 @@ ms.locfileid: "57712397"
   
 3.  スマート タグ パネルで`elementHost1`、 をクリックして**ホストされているコンテンツの編集**ドロップダウン リストから。  
   
-     `UserControl1` が [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] で開きます。  
+     `UserControl1` 開く、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
   
 4.  XAML ビューで、次の XAML を `<UserControl>` の開始タグの後に挿入します。  
   
@@ -151,6 +151,7 @@ ms.locfileid: "57712397"
 5.  [OK] ボタンと [Cancel] ボタンをクリックして、違いを確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移行と相互運用性](../../wpf/advanced/migration-and-interoperability.md)

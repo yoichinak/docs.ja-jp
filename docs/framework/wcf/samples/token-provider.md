@@ -2,12 +2,12 @@
 title: トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: 39a898286447168c68e2b91b03ba816b4b7aa8fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085761"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
 このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
@@ -292,4 +292,3 @@ static void DisplayIdentityInformation()
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
-  

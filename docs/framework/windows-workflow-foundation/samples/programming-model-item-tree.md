@@ -2,12 +2,12 @@
 title: モデル アイテム ツリーのプログラミング
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 428012cf483595a280ef70b488ed1f344474948a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086469"
 ---
 # <a name="programming-model-item-tree"></a>モデル アイテム ツリーのプログラミング
 このサンプルでは、移動、<xref:System.Activities.Presentation.Model.ModelItem>宣言型データ バインディング、Windows Presentation Foundation (WPF) のツリー ビューを使用してツリーします。
@@ -49,4 +49,5 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.IValueConverter>

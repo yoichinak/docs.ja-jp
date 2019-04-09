@@ -1,5 +1,5 @@
 ---
-title: '方法: エラーとデータ バインドで発生する例外を処理します。'
+title: '方法: データ バインドで発生するエラーと例外を処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: 8400ce602d15c195aea43f9e5a162fddb1783830
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084623"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>方法: エラーとデータ バインドで発生する例外を処理します。
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>方法: データ バインドで発生するエラーと例外を処理する
 基になるビジネス オブジェクトをコントロールにバインドするときに、それらのビジネス オブジェクトで例外やエラーが発生することがよくあります。 特定の <xref:System.Windows.Forms.Binding> コンポーネント、<xref:System.Windows.Forms.BindingSource> コンポーネント、または <xref:System.Windows.Forms.CurrencyManager> コンポーネントの <xref:System.Windows.Forms.Binding.BindingComplete> イベントを処理することにより、これらのエラーや例外をインターセプトし、回復したり、エラー情報をユーザーに渡したりできます。  
   
 ## <a name="example"></a>例  
@@ -37,9 +37,10 @@ ms.locfileid: "57703155"
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
 - [BindingSource コンポーネント](bindingsource-component.md)

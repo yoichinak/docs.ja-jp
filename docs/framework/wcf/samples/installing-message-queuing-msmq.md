@@ -2,12 +2,12 @@
 title: メッセージ キュー (MSMQ) のインストール
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2edd293d8616c2e3c140f909728d87437d20b34c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101498"
 ---
 # <a name="installing-message-queuing-msmq"></a>メッセージ キュー (MSMQ) のインストール
 メッセージ キュー 4.0 およびメッセージ キュー 3.0 をインストールする方法を次の手順に示します。  
@@ -63,4 +63,5 @@ ms.locfileid: "54588026"
 6.  コンピューターを再起動するメッセージが表示されたら、クリックして**OK**インストールを完了します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セットアップ手順](../../../../docs/framework/wcf/samples/set-up-instructions.md)

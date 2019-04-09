@@ -1,5 +1,5 @@
 ---
-title: '方法: によって表示されるテキストを設定、Windows フォーム コントロール'
+title: '方法: Windows フォーム コントロールによって表示されるテキストを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096187"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法: によって表示されるテキストを設定、Windows フォーム コントロール
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法: Windows フォーム コントロールによって表示されるテキストを設定する
 Windows フォーム コントロールは、通常、コントロールの主な機能に関連するいくつかのテキストを表示します。 たとえば、<xref:System.Windows.Forms.Button> コントロールは、通常、ボタンがクリックされたときにどのようなアクションを実行するかを示すキャプションを表示します。 すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。 <xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。 また、デザイナーを使用してテキストを設定することもできます。  参照してください[方法。Windows フォーム デザイナーを使用してコントロールのアクセス キーを作成](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)、[方法。によって表示されるテキストを設定、Windows フォーム デザイナーを使用してコントロール](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)、[方法。によって表示されるイメージの設定を Windows フォーム デザイナーを使用してコントロール](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)します。  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>コントロールによって表示されるテキストをプログラムで設定するには  
   
 1.  <xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。  
   
-     下線付きのアクセス キーを作成するには、アクセス キーにする文字の前にアンパサンド (&) を含めます。  
+     下線付きのアクセス キーを作成するアンパサンドが含まれています (&) は、アクセス キーとなる文字の前にします。  
   
 2.  <xref:System.Windows.Forms.Control.Font%2A> プロパティを型 <xref:System.Drawing.Font> のオブジェクトに設定します。  
   
@@ -57,7 +57,7 @@ Windows フォーム コントロールは、通常、コントロールの主�
     ```  
   
     > [!NOTE]
-    >  エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。 たとえば、次のコード行は、メニュー項目のテキストが "& Now For Something Completely Different" と読めるように設定します。  
+    >  エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。 たとえば、次のコード行は、メニュー項目のテキストを読み取るを設定します。"& Now For Something まったく異なる"。  
   
     ```vb  
     MPMenuItem.Text = "&& Now For Something Completely Different"  
@@ -72,6 +72,7 @@ Windows フォーム コントロールは、通常、コントロールの主�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [方法: Windows フォーム コントロールのアクセス キーを作成します。](how-to-create-access-keys-for-windows-forms-controls.md)
-- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)
+- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
