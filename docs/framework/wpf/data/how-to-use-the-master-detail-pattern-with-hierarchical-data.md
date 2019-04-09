@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082660"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>方法: 階層データでマスター詳細パターンを使用する
 この例では、マスター/詳細シナリオを実装する方法を示します。  
@@ -31,11 +31,12 @@ ms.locfileid: "58463320"
   
 2.  設定する必要があります、<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>プロパティを`true`で、<xref:System.Windows.Controls.ListBox>コントロールを追跡して選択します。 このプロパティ設定によって、選択した項目として常に設定されている、<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>します。 また場合、<xref:System.Windows.Controls.ListBox>からデータを取得しますが、<xref:System.Windows.Data.CollectionViewSource>の選択と通貨を自動的に同期されます。  
   
- 使用する場合に、この手法は若干異なります[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 例については、[階層 XML データでマスター詳細パターンを使用して](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)を参照してください。  
+ 使用する場合に、この手法は若干異なります[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 例については、次を参照してください。[階層 XML データでマスター詳細パターンを使用して](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [コレクションにバインドして選択に基づく情報を表示する](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [データ バインディングの概要](data-binding-overview.md)
 - [データ テンプレートの概要](data-templating-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

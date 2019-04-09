@@ -5,28 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082192"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>認証のためのサービスの ID のオーバーライド
 クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 たとえば、次の構成コードを使用して、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素とセット、`clientCredentialType`属性を Windows にします。  
-  
-  
-  
+
  次の Web サービス記述言語 (WSDL) コードは、定義済みのエンドポイントの ID を示しています。 特定のユーザー アカウントで自己ホスト型サービスとして、この例では、サービスが実行されている (username@contoso.com) でユーザー プリンシパル名 (UPN) id を含んでいる、アカウント名。 UPN は、Windows ドメインではユーザー ログオン名とも呼ばれます。  
-  
-  
-  
- Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 サービス id の詳細については、[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。  
+
+ Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 サービス id の詳細については、次を参照してください。[サービス Id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 認証と ID  
  既定では、Windows 資格情報を使用するサービスが構成されている場合、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素を含む、 [ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)または[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)要素が WSDL で生成されます。 サービスが実行されている場合、 `LocalSystem`、 `LocalService`、または`NetworkService`アカウント、サービス プリンシパル名 (SPN) が既定の形式で生成`host/` \< *hostname*> ためこれらのアカウントでは、コンピューターの SPN のデータにアクセスします。 Windows Communication Foundation (WCF) の形式で UPN が生成されます、サービスが別のアカウントで実行している場合\< *username*>@<*domainName* `>`. これらが生成されるのは、Kerberos 認証では、サービスを認証するために UPN または SPN をクライアントに提供する必要があるからです。  
   
- Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール。Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、[Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)を参照してください。  
+ Setspn.exe ツールを使用して、他の SPN をドメイン内のサービスのアカウントに登録することもできます。 登録した SPN は、そのサービスの ID として使用できます。 このツールをダウンロードするには、次を参照してください。 [Windows 2000 リソース キット ツール。Setspn.exe](https://go.microsoft.com/fwlink/?LinkId=91752)します。 ツールの詳細については、次を参照してください。 [Setspn の概要](https://go.microsoft.com/fwlink/?LinkId=61374)します。  
   
 > [!NOTE]
 >  ネゴシエーションを行わずに Windows 資格情報を使用するには、サービスのユーザー アカウントが Active Directory ドメインに登録された SPN にアクセスできる必要があります。 これは、次の方法で行うことができます。  
@@ -52,13 +48,9 @@ ms.locfileid: "54554466"
   
 ### <a name="using-the-identity-element-in-configuration"></a>使用して、 \<identity > 構成要素  
  前の例で示したバインディングのクライアント資格情報の種類を Certificate に変更すると、生成される WSDL には、Base64 でシリアル化された ID 値用の X.509 証明書が含まれます。コードを次に示します`,`。 これは、Windows 以外のすべてのクライアント資格情報の種類の既定値です。  
-  
-  
-  
+
  構成で <`identity`> 要素を使用したり、コードで ID を設定したりすることにより、既定のサービス ID の値を変更したり、ID の種類を変更したりすることが可能です。 値 `contoso.com` を使用してドメイン ネーム システム (DNS) ID を設定する構成コードを次に示します。  
-  
-  
-  
+
 ### <a name="setting-identity-programmatically"></a>プログラムによる ID の設定  
  WCF が自動的に決定されるため、サービスは、id を明示的に指定がありません。 ただし、WCF は、必要な場合、エンドポイントで id を指定することです。 特定の DNS ID を持つ新しいサービス エンドポイントを追加するコードを次に示します。  
   
@@ -66,5 +58,6 @@ ms.locfileid: "54554466"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法: カスタムのクライアント Id 検証機能を作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [方法: カスタム クライアント ID 検証機能を作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

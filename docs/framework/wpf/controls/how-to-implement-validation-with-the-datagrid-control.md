@@ -1,5 +1,5 @@
 ---
-title: '方法: DataGrid コントロールに検証を実装します。'
+title: '方法: DataGrid コントロールを使用して検証を実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371087"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086808"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>方法: DataGrid コントロールに検証を実装します。
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>方法: DataGrid コントロールを使用して検証を実装する
 <xref:System.Windows.Controls.DataGrid>コントロールでは、セルと行の両方のレベルでの検証を実行することができます。 セル レベルの検証、ユーザーが値を更新したときに、バインドされたデータ オブジェクトの個々 のプロパティを検証します。 行レベルの検証、ユーザーが行への変更をコミット時に、データ オブジェクト全体を検証します。 検証エラーの場合は、カスタマイズされた視覚的なフィードバックを提供したり、既定の視覚的フィードバックを使用したりできる<xref:System.Windows.Controls.DataGrid>コントロールを提供します。  
   
  次の手順の検証ルールを適用する方法について説明<xref:System.Windows.Controls.DataGrid>バインドと、視覚的なフィードバックをカスタマイズします。  
@@ -91,6 +91,7 @@ ms.locfileid: "57371087"
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [データ バインディング](../data/data-binding-wpf.md)

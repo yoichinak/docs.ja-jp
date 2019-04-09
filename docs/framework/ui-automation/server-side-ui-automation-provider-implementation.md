@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: df2c1fcd6c84b7670c53a8f06f97c2ea46b8b33d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077291"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "57679412"
   
  このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。  
   
- Windows Presentation Foundation (WPF) 要素および以外の実装-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]要素 (用に設計されたものなど[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) は基本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] から派生したクラスを使用して <xref:System.Windows.Automation.Peers.AutomationPeer>をサポートします。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。  
+ Windows Presentation Foundation (WPF) 要素および以外の実装-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]要素 (用に設計されたものなど[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) は基本的に異なります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素のサポートを提供する[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]から派生したクラスを通じて<xref:System.Windows.Automation.Peers.AutomationPeer>します。 非[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 要素は、プロバイダー インターフェイスの実装を通じてサポートを提供します。  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>セキュリティの考慮事項  
@@ -42,8 +42,7 @@ ms.locfileid: "57679412"
 -   UIAutomationTypes.dll  
   
 -   WindowsBase.dll  
-  
-  
+
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>プロバイダーのインターフェイス  
  すべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、次のインターフェイスのいずれかを実装する必要があります。  
@@ -69,7 +68,7 @@ ms.locfileid: "57679412"
   
 |機能|実装|  
 |-------------------|--------------------|  
-|プロバイダーを [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に公開する|コントロール ウィンドウに送信された WM_GETOBJECT メッセージの応答として、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (または派生インターフェイス) を実装するオブジェクトを返します。 フラグメントの場合、これはフラグメント ルートのプロバイダーである必要があります。|  
+|プロバイダーを公開します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|コントロール ウィンドウに送信された WM_GETOBJECT メッセージの応答として、 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> (または派生インターフェイス) を実装するオブジェクトを返します。 フラグメントの場合、これはフラグメント ルートのプロバイダーである必要があります。|  
 |プロパティ値を指定する|値を指定またはオーバーライドする <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A> を実装します。|  
 |クライアントがコントロールと対話できるようにする|<xref:System.Windows.Automation.Provider.IInvokeProvider>などのコントロール パターンをサポートするインターフェイスを実装します。 <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A>の実装でこれらのパターンのプロバイダーを返します。|  
 |イベントを発生させる|<xref:System.Windows.Automation.Provider.AutomationInteropProvider> のメソッドの 1 つを呼び出して、クライアントがリッスンできるイベントを発生させます。|  
@@ -78,7 +77,7 @@ ms.locfileid: "57679412"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>非 WPF プロバイダー内のプロパティ値  
- カスタム コントロールの[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、オートメーション システムおよびクライアント アプリケーションで使用できる特定のプロパティをサポートする必要があります。 ウィンドウでホストされている (HWND) 要素の場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は一部のプロパティを既定のウィンドウ プロバイダーから取得できますが、他のプロパティはカスタム プロバイダーから取得する必要があります。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] カスタム コントロールのプロバイダーは、オートメーション システムおよびクライアント アプリケーションに使用できる特定のプロパティをサポートする必要があります。 ウィンドウでホストされている (HWND) 要素の場合、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は一部のプロパティを既定のウィンドウ プロバイダーから取得できますが、他のプロパティはカスタム プロバイダーから取得する必要があります。  
   
  HWND ベースのコントロールのプロバイダーは通常、次のプロパティを指定する必要はありません (フィールド値で識別されます)。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "57679412"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>非 WPF プロバイダー内のイベント  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、イベントを発生させて、UI の状態の変更をクライアント アプリケーションに通知する必要があります。 イベントを発生させるには、次のメソッドを使用します。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダーは、UI の状態の変化のクライアント アプリケーションに通知するイベントを発生させる必要があります。 イベントを発生させるには、次のメソッドを使用します。  
   
 |メソッド|説明|  
 |------------|-----------------|  
@@ -145,7 +144,7 @@ ms.locfileid: "57679412"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>非 WPF プロバイダーの親の変更  
- ポップアップ ウィンドウは、実際には最上位のウィンドウであり、既定ではデスクトップの子として [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーに表示されます。 ただし、多くの場合、ポップアップ ウィンドウは論理的には他のコントロールの子になります。 たとえば、コンボ ボックスのドロップダウン リストは、論理的にはコンボ ボックスの子です。 同様に、メニューのポップアップ ウィンドウは、論理的にはメニューの子になります。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] はポップアップ ウィンドウの親の変更をサポートしているため、ポップアップ ウィンドウを関連するコントロールの子として表示できます。  
+ ポップアップ ウィンドウは、実際には最上位のウィンドウであり、既定ではデスクトップの子として [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーに表示されます。 ただし、多くの場合、ポップアップ ウィンドウは論理的には他のコントロールの子になります。 たとえば、コンボ ボックスのドロップダウン リストは、論理的にはコンボ ボックスの子です。 同様に、メニューのポップアップ ウィンドウは、論理的にはメニューの子になります。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 関連付けられたコントロールの子として表示されるようにポップアップ ウィンドウを親に対するサポートを提供します。  
   
  ポップアップ ウィンドウの親を変更するには:  
   
@@ -163,13 +162,14 @@ ms.locfileid: "57679412"
   
 <a name="Non_WPF_Provider_Repositioning"></a>   
 ### <a name="non-wpf-provider-repositioning"></a>非 WPF プロバイダーの再配置  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] フラグメントは、それぞれウィンドウ (HWND) に含まれる 2 つ以上の要素を含んでいる場合があります。 各 HWND には独自の既定のプロバイダーがあり、その HWND を含む HWND をその親と見なしているため、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは既定で、HWND を親ウィンドウの子としてフラグメント内に表示します。 ほとんどの場合、これは適切な動作ですが、場合によっては [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の論理構造が一致しないために混乱を招く可能性があります。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] フラグメントは、ウィンドウ (HWND) に含まれる各要素が 2 つ以上を含めることができます。 各 HWND には独自の既定のプロバイダーがあり、その HWND を含む HWND をその親と見なしているため、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは既定で、HWND を親ウィンドウの子としてフラグメント内に表示します。 ほとんどの場合、これは適切な動作ですが、場合によっては [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の論理構造が一致しないために混乱を招く可能性があります。  
   
  良い例が Rebar コントロールです。 Rebar はバンドを格納し、各バンドはツール バー、編集ボックス、コンボ ボックスなど HWND ベースのコントロールを格納します。 Rebar HWND の既定のウィンドウ プロバイダーは、バンド コントロール HWND を子と見なし、Rebar プロバイダーはバンドを子と見なします。 HWND プロバイダーと Rebar プロバイダーは連動し、互いの子を結合するため、バンドと HWND ベースのコントロールはどちらも Rebar の子として表示されます。 ただし、論理的には、バンドのみが Rebar の子として表示され、各バンド プロバイダーは、格納されるコントロールの既定の HWND プロバイダーと結合される必要があります。  
   
  これを実現するため、Rebar のフラグメント ルート プロバイダーは、バンドを表す子のセットを公開します。 各バンドには、プロパティとパターンを公開するプロバイダーが 1 つあります。 その <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>の実装で、バンド プロバイダーはコントロール HWND の既定のウィンドウ プロバイダーを返します。これを取得するには、コントロールのウィンドウ ハンドルを渡して <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>を呼び出します。 最後に、Rebar のフラグメント ルート プロバイダーは <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> インターフェイスを実装し、その <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> の実装で、指定した HWND に含まれるコントロールの適切なバンド プロバイダーを返します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [サーバー側 UI オートメーション プロバイダーの公開](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
 - [UI オートメーション プロバイダーからのプロパティの返却](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)

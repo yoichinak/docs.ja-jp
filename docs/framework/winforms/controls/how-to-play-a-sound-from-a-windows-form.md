@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームからサウンドを再生します。'
+title: '方法: Windows フォームからサウンドを再生する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078682"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>方法: Windows フォームからサウンドを再生します。
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>方法: Windows フォームからサウンドを再生する
 この例では、実行時に指定されたパスでサウンドを再生します。  
   
 ## <a name="example"></a>例  
@@ -65,6 +65,6 @@ private void playSimpleSound()
  ファイル名からファイルの内容を判断しないでください。 たとえば、`Form1.vb` というファイルは Visual Basic のソース ファイルではない可能性もあります。 アプリケーションでデータを使用する前に、入力をすべて検証してください。  
   
 ## <a name="see-also"></a>関連項目
-- <xref:System.Media.SoundPlayer>
-- [方法: Windows フォーム内で非同期的にサウンドを読み込む](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [方法: Windows フォーム内でサウンドを非同期的に読み込む](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

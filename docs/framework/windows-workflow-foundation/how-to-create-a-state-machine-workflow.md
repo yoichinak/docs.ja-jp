@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: d3ec8c1b8c9b30a23dacabeb033d525c34709931
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139634"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.StateMachine>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -188,10 +188,11 @@ ms.locfileid: "57708263"
      ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)さまざまなスタイルのワークフロー ステップ、状態マシン ワークフローは、この手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミング](programming.md)
+- [Windows Workflow Foundation プログラミングの新機能](programming.md)
 - [ワークフローの設計](designing-workflows.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
-- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)
+- [方法: アクティビティを作成する](how-to-create-an-activity.md)
+- [方法: ワークフローを実行する](how-to-run-a-workflow.md)

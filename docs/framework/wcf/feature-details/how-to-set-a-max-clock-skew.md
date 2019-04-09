@@ -1,5 +1,5 @@
 ---
-title: '方法: 最大クロックのずれを設定'
+title: '方法: 時刻のずれの最大値を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: 73c3bd7c8bf02fd003510c838fec45a68829fe1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076629"
 ---
-# <a name="how-to-set-a-max-clock-skew"></a>方法: 最大クロックのずれを設定
+# <a name="how-to-set-a-max-clock-skew"></a>方法: 時刻のずれの最大値を設定する
 時刻が重要な要素となる機能は、2 台のコンピューターで時刻の設定が異なっていると失敗する可能性があります。 この可能性を減らすには、`MaxClockSkew` プロパティを <xref:System.TimeSpan> に設定します。 このプロパティは、次の 2 つのクラスで使用できます。  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
@@ -85,7 +85,8 @@ ms.locfileid: "54646879"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

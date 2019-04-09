@@ -1,22 +1,22 @@
 ---
-title: '方法: カスタム WSDL をエクスポートします。'
+title: '方法: カスタム WSDL をエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 86c6be86febb21f3c676d28357b29db5dcca07db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16f34a71882587bbd9782d7a9ea807faa72e8238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080761"
 ---
-# <a name="how-to-export-custom-wsdl"></a>方法: カスタム WSDL をエクスポートします。
+# <a name="how-to-export-custom-wsdl"></a>方法: カスタム WSDL をエクスポートする
 ここでは、カスタム WSDL 情報をエクスポートする方法について説明します。 そのために、サービスによって生成された WSDL にカスタム情報を追加する `WsdlDocumentationAttribute` という名前の新しいコード属性を定義します。  
   
 ### <a name="to-export-custom-wsdl-information"></a>カスタム WSDL 情報をエクスポートするには  
   
 1.  <xref:System.ServiceModel.Description.IWsdlExportExtension> インターフェイスを実装します。 このインターフェイスは、<xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior>、または <xref:System.ServiceModel.Description.IEndpointBehavior> インターフェイスを実装するクラスに実装できます。 また、<xref:System.ServiceModel.Channels.BindingElement> から派生したクラスに実装することもできます。 このサンプルでは、<xref:System.ServiceModel.Description.IWsdlExportExtension> を実装する属性クラスに <xref:System.ServiceModel.Description.IContractBehavior> を実装します。  
   
-2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> は、<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> メソッドと <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドを定義します。 これらのメソッドを使用すると、<xref:System.ServiceModel.Description.WsdlContractConversionContext> を変更したり、情報を追加したりできます (変更と追加の両方を行うこともできます)。 このサンプルは、<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドで <xref:System.ServiceModel.Description.OperationDescription> オブジェクトのコレクションを取得し、そのコレクションを反復処理して `WsdlDocumentationAttribute` が存在するかどうかをチェックします。 見つかった場合は、属性に関連付けられたテキストが抽出され、summary 要素が生成され、その summary 要素が操作の `DocumentationElement` に追加されます。  
+2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> 2 つのメソッドを定義します。<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29>と<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>します。 これらのメソッドを使用すると、<xref:System.ServiceModel.Description.WsdlContractConversionContext> を変更したり、情報を追加したりできます (変更と追加の両方を行うこともできます)。 このサンプルは、<xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドで <xref:System.ServiceModel.Description.OperationDescription> オブジェクトのコレクションを取得し、そのコレクションを反復処理して `WsdlDocumentationAttribute` が存在するかどうかをチェックします。 見つかった場合は、属性に関連付けられたテキストが抽出され、summary 要素が生成され、その summary 要素が操作の `DocumentationElement` に追加されます。  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -196,4 +196,5 @@ return lines;
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
