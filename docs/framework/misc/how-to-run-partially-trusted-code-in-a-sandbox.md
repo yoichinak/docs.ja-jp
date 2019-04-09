@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104859"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法: サンド ボックスで部分信頼コードを実行します。
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     証拠のゾーンに応じて、<xref:System.Security.SecurityManager.GetStandardSandbox%2A> メソッドは `Internet` アクセス許可セットまたは `LocalIntranet` アクセス許可セットを返します。 また、<xref:System.Security.SecurityManager.GetStandardSandbox%2A> は、参照として渡される一部の証拠オブジェクトの ID アクセス許可を構築します。  
+     証拠のゾーンに応じて、<xref:System.Security.SecurityManager.GetStandardSandbox%2A> メソッドは `Internet` アクセス許可セットまたは `LocalIntranet` アクセス許可セットを返します。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> いくつかの参照として渡される証拠オブジェクトの id アクセス許可を構築します。  
   
 2.  信頼関係のないコードを呼び出すホスト クラス (この例では `Sandboxer`) を含むアセンブリに署名します。 アセンブリの署名で使用した <xref:System.Security.Policy.StrongName> を、<xref:System.Security.Policy.StrongName> を呼び出す際の `fullTrustAssemblies` パラメーターに <xref:System.AppDomain.CreateDomain%2A> 配列として追加します。 部分信頼コードを実行できるようにする場合、または部分信頼アプリケーションにサービスを提供する場合は、ホスト クラスを完全信頼として実行する必要があります。 アセンブリの <xref:System.Security.Policy.StrongName> を読み取る方法は次のとおりです。  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> を使用して、部分的に信頼されたアセンブリでメソッドのハンドルを取得します。 このハンドルは、最小限のアクセス許可を持つ安全な方法でコードを実行するために使用できます。  
+     <xref:System.Reflection> 部分的に信頼されたアセンブリのメソッドのハンドルの取得に使用されます。 このハンドルは、最小限のアクセス許可を持つ安全な方法でコードを実行するために使用できます。  
   
      上記のコードでは、<xref:System.Security.SecurityException> を出力する前に完全信頼のアクセス許可の <xref:System.Security.PermissionSet.Assert%2A> があることがわかります。  
   
@@ -274,4 +274,5 @@ class Sandboxer : MarshalByRefObject
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

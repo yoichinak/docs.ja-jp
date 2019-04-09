@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム LinkLabel コントロールの外観を変更します。'
+title: '方法: Windows フォーム LinkLabel コントロールの表示形式を変更する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105028"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールの外観を変更します。
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールの表示形式を変更する
 によって表示されるテキストを変更することができます、<xref:System.Windows.Forms.LinkLabel>さまざまな目的に合わせてコントロール。 たとえば、下線付きで特定の色で表示するテキストを設定してテキストをクリックすることをユーザーに示すために一般的なプラクティスを勧めします。 ユーザーは、テキストをクリックすると、異なる色に色を変更します。 この動作を制御するには、5 つの異なるプロパティを設定することができます。 <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>、 <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>、 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>、および<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティ。  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>LinkLabel コントロールの外観を変更するには  
@@ -122,10 +122,11 @@ ms.locfileid: "57717727"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
-- [方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)
