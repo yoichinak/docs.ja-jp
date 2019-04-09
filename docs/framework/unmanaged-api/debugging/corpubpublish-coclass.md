@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a0d796b9c507665ff3ba67153df4691f078e5c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05d9eef36885aee05d88f7da994c8b168c3221b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130534"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish コクラス
 アプリケーション ドメインとプロセスに関する情報を発行するためのインターフェイスを提供します。  
@@ -58,7 +58,8 @@ coclass CorpubPublish {
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: **  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ef92fbe5ba99d93eaf06aacc7efd943136e9785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c59a0c5ef1e89c2853a566bd3b587d15a1ed80c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119263"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop メソッド
 現在のプロセスの実行時にコードの実行を停止します。  
@@ -58,4 +58,5 @@ HRESULT Stop ();
  **.NET framework のバージョン:** 1.0, 1.1  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
