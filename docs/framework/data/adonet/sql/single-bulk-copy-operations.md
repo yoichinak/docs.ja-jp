@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 286199a595e7b34c25fcc13d37c5c913f269304d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112074"
 ---
 # <a name="single-bulk-copy-operations"></a>バルク コピー操作の単一実行
 SQL Server のバルク コピー操作を実行する簡単な方法は、データベースに対して単一操作を実行することです。 既定では、バルク コピー操作は分離された操作として実行されます。このコピー操作は非トランザクション方式で処理され、ロールバックできません。  
@@ -18,7 +18,7 @@ SQL Server のバルク コピー操作を実行する簡単な方法は、デ�
 > [!NOTE]
 >  エラーの発生時に、バルク コピー処理の全部または一部をロールバックする必要がある場合は、<xref:System.Data.SqlClient.SqlBulkCopy> が管理するトランザクションを使用するか、または既存のトランザクション内でバルク コピー操作を実行できます。 **SqlBulkCopy**はでも動作<xref:System.Transactions>かどうか、接続が参加している (暗黙的または明示的に) に、 **System.Transactions**トランザクション。  
 >   
->  詳細については、[トランザクションとバルク コピー操作](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)を参照してください。  
+>  詳細については、次を参照してください。[トランザクションとバルク コピー操作](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)します。  
   
  通常、バルク コピー操作の実行手順は次のようになります。  
   
@@ -80,5 +80,6 @@ command.ExecuteNonQuery();
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server でのバルク コピー操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

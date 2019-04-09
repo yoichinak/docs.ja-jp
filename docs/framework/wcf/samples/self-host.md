@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: efcccb651ec838aa8d2173200c100ed89ddb50c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b3e2a7bea7a0749707416e0fce7be25cf00c99e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135754"
 ---
 # <a name="self-host"></a>自己ホスト
 このサンプルでは、自己ホスト型サービスをコンソール アプリケーションに実装する方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 サービス構成ファイルは、名前が Web.config から App.config に変更され、ホストが使用するベース アドレスを構成するように変更されました。 サービス ソース コードは、構成されたベース アドレスを提供するサービス ホストを作成して開く、静的な `Main` 関数を実装するように変更されました。 サービス実装は、操作ごとにコンソールに出力を書き込むように変更されました。 クライアントは、サービスのエンドポイント アドレスが正しく構成されたことを除き、変更されていません。  
@@ -76,4 +76,5 @@ public static void Main()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

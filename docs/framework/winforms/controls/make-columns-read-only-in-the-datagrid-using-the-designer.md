@@ -1,5 +1,5 @@
 ---
-title: '方法: 読み取り専用デザイナーを使用して Windows フォーム DataGridView コントロールで列を作成します。'
+title: '方法: デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 0219f0cf50d9cce630dc44a37dd3c16d26874012
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8639c1e6f4382c1f91ed2c777b1b0ff29c5a60a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113517"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: 読み取り専用デザイナーを使用して Windows フォーム DataGridView コントロールで列を作成します。
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする
 ユーザーが既定では、テキストと Windows フォームに表示される数値のデータ変更できる<xref:System.Windows.Forms.DataGridView>コントロール。 変更できないデータを表示する場合は、読み取り専用データを含む列を行う必要があります。 完全に読み取り専用コントロールを作成する方法については、次を参照してください。[方法。行の追加を回避し、削除を Windows フォーム DataGridView コントロールのデザイナーを使用して](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)します。  
   
  次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGridView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
@@ -34,9 +34,10 @@ ms.locfileid: "57718559"
     >  行うことができますも列を読み取り専用を選択して追加すると、**読み取り専用** チェック ボックス、**列の追加** ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
-- [方法: 追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行の追加および削除を防ぐ](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)
-- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行が追加および削除されないようにする](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)
+- [方法: Windows フォーム アプリケーション プロジェクトを作成します。](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

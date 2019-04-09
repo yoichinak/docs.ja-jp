@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows 資格情報でサービスをセキュリティで保護します。'
+title: '方法: Windows 資格情報でサービスをセキュリティで保護する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111333"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護します。
-このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)を参照してください。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護する
+このトピックでは、Windows ドメインに存在し、同じドメイン内のクライアントによって呼び出される、Windows Communication Foundation (WCF) サービスのトランスポート セキュリティを有効にする方法を示します。 このシナリオの詳細については、次を参照してください。[トランスポート セキュリティと Windows 認証](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)します。 サンプル アプリケーションでは、次を参照してください。、 [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。  
   
  このトピックでは、定義済みのコントラクト インターフェイスと実装が既に存在するものとして、それに機能を追加していきます。 既存のサービスとクライアントを変更することもできます。  
   
@@ -47,14 +47,14 @@ ms.locfileid: "58410928"
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>サービスでのバインディングの使用  
- この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティング サービスの詳細については、[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)を参照してください。  
+ この 2 番目の手順では、自己ホスト型サービスでバインディングを使用する方法を示します。 ホスティング サービスの詳細については、次を参照してください。[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)します。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>サービスでバインディングを使用するには  
   
 1.  前の手順のコードの後に、この手順のコードを挿入します。  
   
 2.  
-  <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用するとき、`GetType`演算子を使用すると C# を使用する場合、`typeof`キーワード。  
+  <xref:System.Type> という名前の `contractType` 変数を作成し、その変数にインターフェイスの型 (`ICalculator`) を割り当てます。 Visual Basic を使用するとき、`GetType`演算子を使用すると c# を使用する場合、`typeof`キーワード。  
   
 3.  
   <xref:System.Type> という名前の 2 つ目の `serviceType` 変数を作成し、その変数に実装されたコントラクトの型 (`Calculator`) を割り当てます。  
@@ -106,7 +106,7 @@ ms.locfileid: "58410928"
 ## <a name="using-the-configuration-file"></a>構成ファイルの使用  
  手順コードを使用してバインディングを作成する代わりに、構成ファイルのバインディング セクションに次のコードを記述することもできます。  
   
- 定義されているサービスがいない場合は、[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)、および[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)を参照してください。  
+ 定義されているサービスがいない場合は、次を参照してください。[のデザインと実装サービス](../../../docs/framework/wcf/designing-and-implementing-services.md)、および[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
   
  **注**この構成コードは、サービスとクライアントの構成ファイルで使用します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "58410928"
   
 4.  追加の <`message`> 要素、`clientCredentialType`属性を Windows にします。  
   
-5.  サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービスの構成ファイルがあるまだない場合は、[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)を参照してください。  
+5.  サービスの構成ファイルで、`<bindings>` セクションを次のコードに置き換えます。 サービスの構成ファイルがあるまだない場合は、次を参照してください。[サービスを構成してクライアントを使用してバインド](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)します。  
   
     ```xml  
     <bindings>  
@@ -160,8 +160,9 @@ ms.locfileid: "58410928"
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: ad5436a60b5cd82b44931713d863eaeed791e264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112867"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルでは、シリアル化および逆シリアル化の際に CLR 型と xsi:type 表現との間にマッピングを行うために DataContractResolver を使用する方法を示します。
@@ -166,4 +166,5 @@ class MyDataContractResolver : DataContractResolver
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ コントラクト リゾルバーの使用](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)

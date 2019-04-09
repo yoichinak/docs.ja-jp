@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: f64580e5ca34bf094d6019e994f40f11ed9586cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f7c61d8e4de2a63708ef6d4437ca53de854af9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116871"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 参照値を逆参照し、その逆参照の結果を生成します。  
@@ -38,6 +38,7 @@ SELECT DEREF ( o.expression ) from Table as o;
  [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
 - [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
