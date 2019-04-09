@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: d15662958c6967d8bbb157c1af99b4666cebecc2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121720"
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual オブジェクトの使用
 このトピックでは、使用する方法の概要を示します<xref:System.Windows.Media.DrawingVisual>内のオブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ビジュアル層。  
@@ -70,6 +70,7 @@ ms.locfileid: "57375052"
  [!code-vb[DrawingVisualSample#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.DrawingVisual>
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

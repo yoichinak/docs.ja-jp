@@ -3,12 +3,12 @@ title: WIF 構成スキーマの規則
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: acdce1f0ae35713dd4955e1353e0a83000898408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120875"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 構成スキーマの規則
 このトピックでは、Windows Identity Foundation (WIF) 構成トピックを通して利用される規則について説明し、[\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) セクションと [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) セクションで利用されるいくつかの一般的な機能と属性について説明します。  
@@ -45,5 +45,6 @@ ms.locfileid: "54711396"
  カスタム型は、指定された型から派生する必要があります。`public` の既定 (0 引数) コンストラクターを提供する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
 - [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

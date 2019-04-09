@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: 61fd40500934bc7b67d2960f4a64f8ac12466883
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125186"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  
@@ -39,8 +39,8 @@ ms.locfileid: "55285832"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|IP アドレスまたは DNS 名を接続管理リストに追加します。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|接続の管理の一覧をクリアします。|  
+|[追加](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|IP アドレスまたは DNS 名を接続管理リストに追加します。|  
+|[クリア](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|接続の管理の一覧をクリアします。|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|接続管理リストから IP アドレスまたは DNS 名を削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -70,6 +70,7 @@ ms.locfileid: "55285832"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

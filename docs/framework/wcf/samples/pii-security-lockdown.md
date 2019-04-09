@@ -2,12 +2,12 @@
 title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122058"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
 このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
@@ -41,7 +41,7 @@ ms.locfileid: "54699780"
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>サンプルの Web.config で appSettings セクションの値を暗号化するには  
   
-1.  [スタート] > [ファイル名を指定して実行…] を使用してコマンド プロンプトを開き、 入力`cmd` をクリック**OK**します。  
+1.  -> 実行開始を使用してコマンド プロンプトのオープンしています. 入力`cmd` をクリック**OK**します。  
   
 2.  コマンド「`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`」を実行して、現在の .NET Framework ディレクトリに移動します。  
   
@@ -143,4 +143,5 @@ ms.locfileid: "54699780"
 1.  Machine.config を編集して `enableLoggingKnownPii` 属性を `false` に設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

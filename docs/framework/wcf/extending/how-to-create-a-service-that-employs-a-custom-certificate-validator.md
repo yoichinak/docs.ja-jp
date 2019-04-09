@@ -1,5 +1,5 @@
 ---
-title: '方法: カスタム証明書の検証を使用するサービスを作成します。'
+title: '方法: カスタム証明書検証を使用するサービスを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119627"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>方法: カスタム証明書の検証を使用するサービスを作成します。
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>方法: カスタム証明書検証を使用するサービスを作成する
 このトピックでは、カスタム証明書検証を実装する方法、クライアントまたはサービスの資格情報の設定により、既定の証明書検証機能を、カスタム証明書検証で置き換える方法について解説します。  
   
  クライアントまたはサービスの認証に X.509 証明書を使用する場合既定で Windows Communication Foundation (WCF) を使用して Windows 証明書ストアと Crypto API 証明書を検証して、信頼されていることを確認します。 ただし、組み込みの検証機能では不十分で、処理内容を変更する必要がある場合もあります。 WCF には、カスタム証明書検証を追加するユーザーを許可することで、検証ロジックを変更する簡単な方法が用意されています。 カスタム証明書の検証が指定されている場合、WCF は組み込みの証明書の検証ロジックを使用しませんが、代わりにカスタム検証に依存しています。  
@@ -47,7 +47,7 @@ ms.locfileid: "54569324"
   
 6.  `customCertificateValidatorType` 属性に検証処理の型を設定します。 この属性に型の名前空間と名前を設定する例を以下に示します。  
   
-7.  `certificateValidationMode` 属性を `Custom` に設定します。  
+7.  `certificateValidationMode` 属性に `Custom` を設定  
   
     ```xml  
     <configuration>  
@@ -83,7 +83,7 @@ ms.locfileid: "54569324"
   
 7.  `customCertificateValidatorType` 属性に検証処理の型を設定します。  
   
-8.  `certificateValidationMode` 属性を `Custom` に設定します。 この属性に型の名前空間と名前を設定する例を以下に示します。  
+8.  `certificateValidationMode` 属性に `Custom` を設定 この属性に型の名前空間と名前を設定する例を以下に示します。  
   
     ```xml  
     <configuration>  
@@ -118,7 +118,7 @@ ms.locfileid: "54569324"
   
 1.  カスタム証明書検証を、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> プロパティを使って指定します。 クライアントの資格情報には、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> プロパティを使用してアクセスできます。 (によって生成されたクライアント クラス[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)から常に派生、<xref:System.ServiceModel.ClientBase%601>クラスです)。  
   
-2.  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>に設定します。  
+2.  <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> に設定します。  
   
 ## <a name="example"></a>例  
   
@@ -130,4 +130,5 @@ ms.locfileid: "54569324"
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

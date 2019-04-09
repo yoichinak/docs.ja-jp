@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: b3fda706f4f2a4aa44b3627a6e6339ef0e3acb03
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: dd8bc880126cd6fa82f7f3a775edf47f0725b6d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123930"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>UI オートメーション プロバイダーでのコントロール パターンのサポート
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57673159"
   
 1.  <xref:System.Windows.Automation.Provider.IInvokeProvider> の <xref:System.Windows.Automation.InvokePattern>など、要素がサポートする必要のあるコントロール パターンの適切なインターフェイスを実装します。  
   
-2.   <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2.  実装で各コントロールのインターフェイスの実装を格納するオブジェクトを返す <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
   
 ## <a name="example"></a>例  
  単一選択のカスタム リスト ボックスの <xref:System.Windows.Automation.Provider.ISelectionProvider> の実装例を次に示します。 3 つのプロパティを返し、現在選択されている項目を取得します。  
@@ -40,5 +40,6 @@ ms.locfileid: "57673159"
  [!code-vb[UIAFragmentProvider_snip#120](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#120)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
