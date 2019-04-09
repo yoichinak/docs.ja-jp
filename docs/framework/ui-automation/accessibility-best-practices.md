@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074236"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57676136"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>すべての UI 要素とテキストでのプログラムによるアクセスの有効化  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 要素では、プログラムによるアクセスを有効にする必要があります。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] が標準的な [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールである場合、プログラムによるアクセスのサポートがコントロールに含まれます。 コントロールがカスタム コントロール (コモン コントロールのサブクラスに指定されているコントロール、またはコントロールからサブクラスに指定されたコントロール) である場合、変更が必要な領域に対する <xref:System.Windows.Automation.Peers.AutomationPeer> の実装を確認する必要があります。  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 要素は、プログラムによるアクセスを有効にする必要があります。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] が標準的な [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールである場合、プログラムによるアクセスのサポートがコントロールに含まれます。 コントロールがカスタム コントロール (コモン コントロールのサブクラスに指定されているコントロール、またはコントロールからサブクラスに指定されたコントロール) である場合、変更が必要な領域に対する <xref:System.Windows.Automation.Peers.AutomationPeer> の実装を確認する必要があります。  
   
  このベスト プラクティスに従うことで [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] ベンダーは、製品の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の要素を特定および操作することができます。  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676136"
  デバイスに依存しない呼び出しは、キーボードとマウスの機能が同等であることを保証する一方、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] に関する必要な情報を [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に提供します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.Peers>
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

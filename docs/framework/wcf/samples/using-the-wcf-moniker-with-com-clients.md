@@ -2,12 +2,12 @@
 title: WCF モニカーの COM クライアントと組み合わせての使用
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098131"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF モニカーの COM クライアントと組み合わせての使用
 このサンプルでは、Windows Communication Foundation (WCF) サービス モニカーを使用して、Web サービス アプリケーション (Office VBA) の Microsoft Office Visual Basic または Visual Basic 6.0 などの COM ベースの開発環境を統合する方法を示します。 このサンプルは、Windows スクリプト ホストのクライアント (.vbs)、サポート クライアント ライブラリ (.dll)、およびインターネット インフォメーション サービス (IIS) でホストされるサービス ライブラリ (.dll) で構成されています。 このサービスは電卓サービスの 1 つであり、COM クライアントはサービスの算術演算 (Add、Subtract、Multiply、および Divide) を呼び出します。 クライアント アクティビティは、メッセージ ボックス ウィンドウに表示されます。  
@@ -236,4 +236,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 -   セキュリティの目的で、サンプルの使用が終わったら、このセットアップで付与された仮想ディレクトリの定義とアクセス許可を削除してください。  
-  

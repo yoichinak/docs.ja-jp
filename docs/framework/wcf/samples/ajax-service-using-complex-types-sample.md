@@ -2,17 +2,17 @@
 title: 複合型を使用した AJAX サービスのサンプル
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 17c760c8276799fed7e7a8366c17ef9f5cf7081c
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 54d8c90f8317b69195401eda64e8a482aaf8460a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128506"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>複合型を使用した AJAX サービスのサンプル
 このサンプルでは、Windows Communication Foundation (WCF) を使用して、複合型のインスタンスを作成し、サービスとクライアントの JavaScript Object Notation (JSON) との間で送信する ASP.NET Asynchronous JavaScript and XML (AJAX) サービスを作成する方法を示します。 AJAX サービスには、Web ブラウザー クライアントから JavaScript コードを使用してアクセスできます。 このサンプルでビルド、[基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)サンプル。  
   
- WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、<xref:System.Web.UI.ScriptManager>コントロール。 WCF を使用して ASP.NET AJAX での例は、、 [AJAX のサンプル](ajax.md)を参照してください。  
+ WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、<xref:System.Web.UI.ScriptManager>コントロール。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。、 [AJAX のサンプル](ajax.md)します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -68,4 +68,5 @@ function onSuccess(mathResult){
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

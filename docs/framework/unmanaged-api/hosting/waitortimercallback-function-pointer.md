@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a2c3baec0d958302101c295966f945ae98fa78
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f8cf12fc6828c5e439a6a86532f22b8a598a9f03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120992"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 関数ポインター
 待機を処理するホストに通知する関数を指します (<xref:System.Threading.WaitHandle>) がされたシグナルまたはタイムアウトします。  
@@ -54,7 +54,8 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
  **ライブラリ:** MSCorWks.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
