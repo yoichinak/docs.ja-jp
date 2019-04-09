@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115701"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -102,7 +102,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
  証明書に関する一般的な質問は、どの証明書を使用するかということとその理由に関するものです。 その答えは、クライアントとサービスのどちらをプログラミングするかによって異なります。 以下に一般的なガイドラインを示します (これらの質問に対する包括的な答えではありません)。  
   
 ### <a name="service-certificates"></a>サービス証明書  
- サービス証明書の第一のタスクは、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI は、 `http://www.contoso.com/endpoint/` 、**サブジェクト**フィールドでは、値を含める必要がありますも`www.contoso.com`します。  
+ サービス証明書の第一の目的は、クライアントに対してサーバーを認証することです。 クライアントがサーバーを認証するときの最初のチェックの 1 つとして、"**サブジェクト**" フィールドの値とサービスへのアクセスに使用する URI (Uniform Resource Identifier) が比較されます。この場合、双方の DNS が一致する必要があります。 たとえば、サービスの URI は、 `http://www.contoso.com/endpoint/` 、**サブジェクト**フィールドでは、値を含める必要がありますも`www.contoso.com`します。  
   
  このフィールドには複数の値を含めることができますが、各値の先頭にはその値を示す初期化コードが付加されます。 ほとんどの場合、初期化が"CN"の共通名は、たとえば、`CN = www.contoso.com`します。 "**サブジェクト**" フィールドを空白にすることもできます。この場合、"**サブジェクト代替名**" フィールドに値として **DNS 名**を含めることができます。  
   
@@ -171,6 +171,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
  WCF の最初のリリースでは、ドメイン ポリシーを参照せずにマッピングが実行されます。 そのため、マッピングが有効になっており、X.509 証明書がドメイン ポリシーを満たしていない場合は、最初のリリースの下で実行しているときには動作していた古いアプリケーションが動作しなくなる可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>

@@ -2,12 +2,12 @@
 title: メッセージ ログを参照する
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: f368d4f8f2a214feaa24b732513a99edf2e28296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139062"
 ---
 # <a name="viewing-message-logs"></a>メッセージ ログを参照する
 ここでは、メッセージ ログの表示方法について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54603577"
   
  メッセージ ログの出力はメッセージの転送形式とは関係がないため、メッセージ ログは常にデコードされたメッセージを出力します。 メッセージ ログが適切に設定されていれば、すべてのログ メッセージはプレーンテキストになります。 たとえば、ログ メッセージの形式 (プレーンテキスト) は、バイナリ メッセージ エンコーダーの使用には影響されません。  
   
- XmlWriterTraceListener の出力は、一連の XML フラグメントを含んだファイルです。 このファイルは有効な XML ファイルではないことに注意してください。 使用することをお勧め、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)メッセージのログ ファイルを表示します。 このツールを使用する方法の詳細については、[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)を参照してください。  
+ XmlWriterTraceListener の出力は、一連の XML フラグメントを含んだファイルです。 このファイルは有効な XML ファイルではないことに注意してください。 使用することをお勧め、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)メッセージのログ ファイルを表示します。 このツールを使用する方法の詳細については、次を参照してください。[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)します。  
   
  サービス トレース ビューアーでのメッセージが表示されている、**メッセージ**タブ。操作エラーの原因となった、または操作エラーに関連するメッセージは、エラーの重大度に応じて、黄色 (警告レベル) または赤色 (エラー レベル) で強調表示されます。 メッセージをダブルクリックすると、要求の処理のコンテキストに従ってメッセージ トレースが表示されます。  
   
@@ -61,6 +61,7 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 -   UTF-8 へ変換するためのエンコードが有効な場合。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)

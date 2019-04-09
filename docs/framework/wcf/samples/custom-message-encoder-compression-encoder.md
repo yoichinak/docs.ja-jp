@@ -2,12 +2,12 @@
 title: カスタム メッセージ エンコーダー:Expression Encoder
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140687"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:Expression Encoder
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
@@ -354,4 +354,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  

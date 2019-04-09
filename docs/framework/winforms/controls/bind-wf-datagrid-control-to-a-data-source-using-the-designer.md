@@ -1,5 +1,5 @@
 ---
-title: '方法: デザイナーを使用してデータ ソースへの Windows フォームの DataGrid コントロールのバインドします。'
+title: '方法: デザイナーを使ってデータ ソースに Windows フォーム DataGrid コントロールをバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: 9386ca229894cff61da32289f2d78a7016ea00e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115731"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>方法: デザイナーを使用してデータ ソースへの Windows フォームの DataGrid コントロールのバインドします。
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>方法: デザイナーを使ってデータ ソースに Windows フォーム DataGrid コントロールをバインドする
 
 > [!NOTE]
 >  
@@ -31,7 +31,7 @@ ms.locfileid: "57720467"
   
  グリッドは実行時にプログラムでバインドすることもできます。 これは、実行時に取得した情報に基づくデータ ソースを設定する場合に便利です。 たとえば、アプリケーション ユーザーに表示するテーブルの名前を指定することができます。 場所、データ ソースがデザイン時に存在しない状況で必要です。 これには、配列、コレクション、型指定されていないデータセット、およびデータ リーダーなどのデータ ソースが含まれます。  
   
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。 Visual Studio 2005 で、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 追加の詳細については、次を参照してください。[方法。項目をツールボックスに追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))します。 さらに、Visual Studio 2005 で使用できます、**データソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、[Visual Studio でのデータ コントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)を参照してください。  
+ 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGrid>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。 Visual Studio 2005 で、<xref:System.Windows.Forms.DataGrid>制御されていない、**ツールボックス**既定。 追加の詳細については、次を参照してください。[方法。項目をツールボックスに追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))します。 さらに、Visual Studio 2005 で使用できます、**データソース**デザイン時のデータ バインディングのウィンドウ。 詳細については、次を参照してください。 [Visual Studio でのデータ コントロールをバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -71,8 +71,9 @@ ms.locfileid: "57720467"
 3.  データセットを挿入するコードを記述します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
-- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
-- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio でのデータにアクセスします。](/visualstudio/data-tools/accessing-data-in-visual-studio)
