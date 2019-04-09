@@ -1,5 +1,5 @@
 ---
-title: '方法: データをクリップボードに追加します。'
+title: '方法: クリップボードにデータを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109097"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>方法: データをクリップボードに追加します。
+# <a name="how-to-add-data-to-the-clipboard"></a>方法: クリップボードにデータを追加する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションからデータを転送するために役立ちます。  
   
  クリップボードにデータを追加すると、その形式を使用する場合、その他のアプリケーションは、データを認識できるように、データ形式を指定できます。 データを使用できる可能性のあるその他のアプリケーションの数を増やすに複数の異なる形式でクリップボードにデータを追加することもできます。  
@@ -61,5 +61,6 @@ ms.locfileid: "57717126"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ドラッグ アンド ドロップ操作とクリップボードのサポート](drag-and-drop-operations-and-clipboard-support.md)
-- [方法: クリップボードからデータを取得します。](how-to-retrieve-data-from-the-clipboard.md)
+- [方法: クリップボードからデータを取得する](how-to-retrieve-data-from-the-clipboard.md)

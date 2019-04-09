@@ -1,5 +1,5 @@
 ---
-title: '方法: 単純な Windows フォーム コントロールを開発します。'
+title: '方法: シンプルな Windows フォーム コントロールを開発する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089370"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: 単純な Windows フォーム コントロールを開発します。
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: シンプルな Windows フォーム コントロールを開発する
 ここでは、カスタム Windows フォーム コントロールの主な作成手順を紹介します。 このチュートリアルで開発された単純なコントロールでの配置は、その<xref:System.Windows.Forms.Control.Text%2A>プロパティを変更します。 イベントを発生させたり処理したりすることはありません。  
   
 ### <a name="to-create-a-simple-custom-control"></a>シンプルなカスタム コントロールを作成するには  
@@ -103,5 +103,6 @@ ms.locfileid: "57723284"
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
 - [Windows フォーム コントロールのイベント](events-in-windows-forms-controls.md)

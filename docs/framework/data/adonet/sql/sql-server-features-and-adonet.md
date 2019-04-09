@@ -2,12 +2,12 @@
 title: SQL Server の機能と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107524"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server の機能と ADO.NET
 このセクションのトピックでは、ADO.NET を使用したデータベース アプリケーションの開発を目的とする SQL Server の機能について説明します。  
@@ -40,13 +40,14 @@ ms.locfileid: "54705374"
  [SQL Server でのスナップショット分離](../../../../../docs/framework/data/adonet/sql/snapshot-isolation-in-sql-server.md)  
  トランザクション アプリケーションでのブロックの軽減を目的とする行バージョン管理機構であるスナップショット分離のサポートについて説明します。  
   
- [高可用性ディザスター リカバリーのための SqlClient サポート](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
+ [高可用性障害復旧のための SqlClient サポート](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)  
  高可用性ディザスター リカバリー (AlwaysOn) 可用性グループの SqlClient サポートについて説明します。  
   
  [SqlClient による LocalDB のサポート](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  LocalDB データベースの SqlClient サポートについて説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [ADO.NET でのデータの取得および変更](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 2c33fa1ebb3c9dd4f05c24db9de42ff47c84f983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107927"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>方法: キー フレームを使用して行列をアニメーション化する
 この例は、アニメーション化する方法を示しています。、<xref:System.Windows.Media.MatrixTransform.Matrix%2A>のプロパティを<xref:System.Windows.Media.MatrixTransform>キー フレームを使用しています。  
@@ -35,6 +35,7 @@ ms.locfileid: "57370580"
  サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
 - <xref:System.Windows.Media.MatrixTransform>
 - [キー フレーム アニメーションの概要](key-frame-animations-overview.md)

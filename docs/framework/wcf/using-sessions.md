@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095868"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
@@ -32,11 +32,11 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは常にサーバーによって開始されます。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションには、暗黙的に順序付けします。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求間で、一般的なデータ ストレージ機構を提供します。  
   
  このトピックでは、次の項目について説明します。  
   
@@ -62,13 +62,13 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  WCF には、次の種類のセッション ベースのアプリケーションの動作が用意されています。  
   
--   2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、 <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、[Securing Services](../../../docs/framework/wcf/securing-services.md)を参照してください。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
+-   2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、 <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> バインディングは、TCP/IP ベースのセッションをサポートしており、すべてのメッセージがソケット レベルの接続によって関連付けられます。  
   
--   WS-ReliableMessaging 仕様を実装する <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 要素は、メッセージを順番に 1 回だけ配信するように構成できる、信頼できるセッションをサポートします。これにより、メッセージ交換時にメッセージが複数のノードを通過する場合でもメッセージが受信されます。 詳細については、[信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)を参照してください。  
+-   WS-ReliableMessaging 仕様を実装する <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 要素は、メッセージを順番に 1 回だけ配信するように構成できる、信頼できるセッションをサポートします。これにより、メッセージ交換時にメッセージが複数のノードを通過する場合でもメッセージが受信されます。 詳細については、次を参照してください。[信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)します。  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> バインディングは、MSMQ データグラム セッションを提供します。 詳細については、[WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)を参照してください。  
+-   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> バインディングは、MSMQ データグラム セッションを提供します。 詳細については、次を参照してください。 [WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)します。  
   
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティを設定しても、コントラクトが必要とするセッションの種類は指定されず、コントラクトがセッションを必要とすることだけが指定されます。  
   
@@ -108,14 +108,14 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
 > [!NOTE]
 >  既定の動作は、ローカルのコンストラクターとデストラクターに似ていますが、あくまで似ているだけです。 開始または終了操作は、あるいはその両方同時に、WCF サービス操作ができます。 さらに既定では、開始操作は、任意の順序で何回でも呼び出すことができます。そのため、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> オブジェクトを操作することでサービス インスタンスの有効期間を明示的に制御しない限り、セッションが確立されインスタンスに関連付けられた後に、追加セッションは作成されません。 また、状態はセッションに関連付けられ、サービス オブジェクトには関連付けられません。  
   
- たとえば、`ICalculatorSession`前の例で使用されるコントラクトは、WCF クライアント オブジェクトの最初の呼び出しである必要があります、 `Clear` を呼び出すときにこのWCFクライアントオブジェクトとのセッションの他の操作とする前に操作が終了する必要があります`Equals`操作。 次のコード例は、この要件を強制的に適用するコントラクトを示しています。 セッションを開始するにはまず`Clear` を呼び出す必要があります。 `Equals` を呼び出すとセッションが終了します。  
+ たとえば、`ICalculatorSession`前の例で使用されるコントラクトは、WCF クライアント オブジェクトの最初の呼び出しである必要があります、 `Clear` を呼び出すときにこのWCFクライアントオブジェクトとのセッションの他の操作とする前に操作が終了する必要があります`Equals`操作。 次のコード例は、この要件を強制的に適用するコントラクトを示しています。 `Clear` セッションを開始するには最初に呼び出す必要があり、セッションは終了`Equals`が呼び出されます。  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  サービスは、クライアントとのセッションを開始しません。 WCF クライアント アプリケーションでセッション ベースのチャネルの有効期間とセッション自体の有効期間の間の直接的なリレーションシップが存在します。 そのため、クライアントは、新しいセッション ベースのチャネルを作成することによって新しいセッションを作成し、セッション ベースのチャネルを正常に閉じることによって、既存のセッションを破棄します。 クライアントは、次のいずれかを呼び出してサービス エンドポイントとのセッションを開始します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 呼び出しによって返されるチャネル<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>します。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> によって生成された WCF クライアント オブジェクトで、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
@@ -123,7 +123,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  通常は、クライアントが次のいずれかを呼び出して、サービス エンドポイントとのセッションを終了します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 呼び出しによって返されるチャネル<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>します。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe によって生成された WCF クライアント オブジェクトです。  
   
@@ -131,10 +131,10 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  たとえば、「[方法:作成する Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)だけでなく[Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md)と[Instancing](../../../docs/framework/wcf/samples/instancing.md)サンプル。  
   
- クライアントとセッションに関する詳細については、[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)を参照してください。  
+ クライアントとセッションに関する詳細については、次を参照してください。[にアクセスするサービスの WCF クライアントを使用して](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)します。  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>InstanceContext 設定と対話するセッション  
- コントラクト内の <xref:System.ServiceModel.SessionMode> 列挙と、チャネルと特定のサービス オブジェクト間の関連付けを制御する <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティの間には相互作用があります。 詳細については、[セッション、インスタンス化、および同時実行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)を参照してください。  
+ コントラクト内の <xref:System.ServiceModel.SessionMode> 列挙と、チャネルと特定のサービス オブジェクト間の関連付けを制御する <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティの間には相互作用があります。 詳細については、次を参照してください。[セッション、インスタンス化、および同時実行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)します。  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext オブジェクトの共有  
  ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッション ベースのチャネルまたは呼び出しを関連付けるかを制御することもできます。 
@@ -146,5 +146,6 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
 >  この場合、利用可能になる "セッション" は 1 つしかないため、MaxConcurrentSessions は効力を失います。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

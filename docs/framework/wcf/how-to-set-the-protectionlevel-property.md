@@ -1,5 +1,5 @@
 ---
-title: '方法: ProtectionLevel プロパティを設定します。'
+title: '方法: ProtectionLevel プロパティを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089849"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>方法: ProtectionLevel プロパティを設定します。
+# <a name="how-to-set-the-protectionlevel-property"></a>方法: ProtectionLevel プロパティを設定する
 適切な属性を適用してプロパティを設定することで、保護レベルを設定できます。 サービス レベルですべてのメッセージのすべての部分に影響する保護を設定したり、メソッドからメッセージ部分まで、段階的にきめ細かなレベルで保護を設定したりすることができます。 詳細については、`ProtectionLevel`プロパティを参照してください[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)します。  
   
 > [!NOTE]
@@ -61,7 +61,7 @@ ms.locfileid: "54586857"
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>メッセージ部分の保護  
- メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージ コントラクトの詳細については、[Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)を参照してください。  
+ メッセージ部分を保護するには、メッセージ コントラクトを使用します。 メッセージ コントラクトの詳細については、次を参照してください。 [Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)します。  
   
 #### <a name="to-protect-a-message-body"></a>メッセージ本文を保護するには  
   
@@ -89,6 +89,7 @@ ms.locfileid: "54586857"
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
