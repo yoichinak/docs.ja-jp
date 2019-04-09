@@ -1,5 +1,5 @@
 ---
-title: '方法: MDI 子フォームを作成します。'
+title: '方法: MDI 子フォームを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124528"
 ---
-# <a name="how-to-create-mdi-child-forms"></a>方法: MDI 子フォームを作成します。
+# <a name="how-to-create-mdi-child-forms"></a>方法: MDI 子フォームを作成する
 MDI 子フォームの重要な要素を[マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)ユーザーの操作の中心となるためです。  
   
  次の手順では、ほとんどのワード プロセッシング アプリケーションに似ている <xref:System.Windows.Forms.RichTextBox> コントロールを表示する MDI 子フォームを作成します。 <xref:System.Windows.Forms> コントロールを、<xref:System.Windows.Forms.DataGridView> コントロールやコントロールを組み合わせたその他のコントロールで置き換えることで、さまざまな可能性のある MDI 子ウィンドウ (およびその拡張としての MDI アプリケーション) を作成できます。  
@@ -110,8 +110,9 @@ MDI 子フォームの重要な要素を[マルチ ドキュメント インタ�
   <xref:System.ComponentModel.CancelEventArgs> 引数を `false` に設定することで、MDI 親レポートとすべての MDI 子フォームを強制的に閉じることができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
-- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
-- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)
+- [方法: MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)
+- [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)
+- [方法: アクティブな MDI 子フォームにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)

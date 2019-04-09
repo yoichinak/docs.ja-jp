@@ -2,12 +2,12 @@
 title: TryCatch を使用した Flowchart アクティビティでのエラー処理
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119809"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch を使用した Flowchart アクティビティでのエラー処理
 このサンプルでは、複雑な制御フロー アクティビティ内で <xref:System.Activities.Statements.TryCatch> アクティビティを使用する方法を示します。
@@ -23,7 +23,7 @@ ms.locfileid: "57708835"
 
  `CreateFlowchartWithFaults` アクティビティでは、<xref:System.Activities.Statements.FlowSwitch%601> 引数を有効にする `promoCode` アクティビティを使用し、次の式を使って割引率を計算します。
 
-|`promoCode` の値|割引率 (%)|
+|値 `promoCode`|割引率 (%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|16|
@@ -47,5 +47,6 @@ ms.locfileid: "57708835"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>関連項目
+
 - [Flowchart のワークフロー](../flowchart-workflows.md)
 - [例外](../exceptions.md)
