@@ -18,7 +18,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57707029"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールで項目を選択します。
-この例では、プログラムで Windows フォームで項目を選択<xref:System.Windows.Forms.ListView>コントロール。 プログラムで項目を選択しても、そのにフォーカスが自動的に変更はありません、<xref:System.Windows.Forms.ListView>コントロール。 このためは通常もを設定する項目と項目を選択するときに重点を置いています。  
+この例では、プログラムで Windows フォームで項目を選択<xref:System.Windows.Forms.ListView>コントロール。 プログラムで項目を選択しても、そのにフォーカスが自動的に変更はありません、<xref:System.Windows.Forms.ListView>コントロール。 このため通常もを設定する項目と項目を選択するときに重点を置いています。  
   
 ## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
