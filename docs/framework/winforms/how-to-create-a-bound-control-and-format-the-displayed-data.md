@@ -1,5 +1,5 @@
 ---
-title: '方法: バインドされたコントロールを作成し、表示されているデータの書式設定'
+title: '方法: バインド コントロールを作成して表示データの書式を設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57710499"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインドされたコントロールを作成し、表示されているデータの書式設定
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインド コントロールを作成して表示データの書式を設定する
 Windows フォーム データ バインディングでは、データ バインド コントロールを使用して表示データの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
   
 > [!NOTE]
@@ -55,6 +55,6 @@ Windows フォーム データ バインディングでは、データ バイン
 8.  をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: Windows フォームに単純バインド コントロールを作成します。](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [方法: Windows フォームに単純バインド コントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows フォームでのユーザー入力の検証](user-input-validation-in-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)
