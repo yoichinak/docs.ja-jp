@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: ac888a26f906d8439b51c9c56d966440d7a25b7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f5d3c9a65bd9ac412a908a3e850a7e01d2ee6cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116663"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 SELECT ステートメントで返されるオブジェクトで使用される並べ替え順を指定します。  
@@ -125,6 +125,7 @@ SELECT C2.FirstName, C2.LastName
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)

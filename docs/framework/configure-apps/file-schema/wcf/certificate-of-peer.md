@@ -1,13 +1,13 @@
 ---
-title: <certificate> の <peer>
+title: <certificate> (行中)  <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 57f011bd0d6311c71871773ea866ef4c52513b17
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 5fdcb94e0c252d0bf5c215c08d44061bfe09a537
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120706"
 ---
 # <a name="certificate-of-peer"></a>\<証明書 > の\<ピア >
 ピアで使用される証明書を指定します。  
@@ -18,7 +18,7 @@ ms.locfileid: "55674608"
 \<behavior>  
 \<serviceCredentials>  
 \<ピア >  
-\<証明書 >  
+\<証明書>  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,14 +48,15 @@ ms.locfileid: "55674608"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。|  
+|[\<ピア >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  この構成要素には、ピア メッシュ内の近隣ノードを認証するときに使用される `X509Certificate2` インスタンスが格納されます。  
   
- ピア ツー ピア プログラミングの詳細については、[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
+ ピア ツー ピア プログラミングの詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>

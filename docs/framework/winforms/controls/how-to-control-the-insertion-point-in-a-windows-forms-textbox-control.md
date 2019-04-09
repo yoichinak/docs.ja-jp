@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。'
+title: '方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,21 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: cb3e7e7a44391ec7ee34ad0659f4185bd2304d26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110717"
 ---
-# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。
+# <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する
 Windows フォームと<xref:System.Windows.Forms.TextBox>コントロールがフォーカスを受け取る最初に、テキスト ボックス内の既定のカーソルが既存のテキストの左側にします。 ユーザーは、キーボードまたはマウス カーソルを移動できます。 テキスト ボックスは、フォーカスを得たを失い場合、カーソルが任意の場所、ユーザー置かれたことになります。  
   
  場合によっては、この動作は、ユーザーの混乱を招くにできます。 アプリケーションをワード プロセッシング、ユーザーは既存のテキストの後に表示される新しい文字を予想どおりです。 データ エントリのアプリケーションで、ユーザーが任意の既存のエントリを置換する新しい文字予想します。 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>と<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>プロパティを有効にすることを目的に合わせて動作を変更します。  
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>TextBox コントロールでのカーソル位置を制御するには  
   
-1.  
-  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> プロパティに適切な値を設定します。 0 は、最初の文字の左側にすぐにカーソルを配置します。  
+1.  <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> プロパティに適切な値を設定します。 0 は、最初の文字の左側にすぐにカーソルを配置します。  
   
 2.  (省略可能)設定、<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>プロパティを選択するテキストの長さにします。  
   
@@ -63,11 +62,12 @@ Windows フォームと<xref:System.Windows.Forms.TextBox>コントロールが�
 -   設定、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティを`0`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: 文字列に引用符を挿入します。](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成する](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: 文字列に引用符を挿入する](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでテキストを選択する](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールで複数行を表示する](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox コントロール](textbox-control-windows-forms.md)

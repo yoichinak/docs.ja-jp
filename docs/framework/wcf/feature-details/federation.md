@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114043"
 ---
 # <a name="federation"></a>フェデレーション
 ここでは、フェデレーション セキュリティの概念について簡単に説明します。 フェデレーション セキュリティ アーキテクチャをデプロイするための Windows Communication Foundation (WCF) のサポートについても説明します。 フェデレーションを示すサンプル アプリケーションを参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  フェデレーション セキュリティを使用すると、役割を明確に分離できるため、安全で拡張性のあるサービス アーキテクチャを構築できます。 分散アプリケーションの構築と配置のプラットフォーム、としては、WCF は、フェデレーション セキュリティを実装するためのネイティブ サポートを提供します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
