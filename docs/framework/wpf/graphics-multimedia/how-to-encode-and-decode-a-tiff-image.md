@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - TIFF decoding [WPF]
 ms.assetid: 1dfe3209-fc73-40e6-ad1c-71c1c58b3364
-ms.openlocfilehash: e89f39dedcc210aaa6917b4b964d1944673047b5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b2b638d3aa81e48a1378794435d59da1b323aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107433"
 ---
 # <a name="how-to-encode-and-decode-a-tiff-image"></a>方法: TIFF イメージのエンコードおよびデコード
 次の例では、デコードおよびエンコードする方法、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]特定を使用するイメージ<xref:System.Windows.Media.Imaging.TiffBitmapDecoder>と<xref:System.Windows.Media.Imaging.TiffBitmapEncoder>オブジェクト。  
@@ -38,4 +38,5 @@ ms.locfileid: "57356677"
  [!code-vb[TiffBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TiffBitmapDecoderEncoder/VB/TiffEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [イメージングの概要](imaging-overview.md)

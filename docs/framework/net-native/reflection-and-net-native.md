@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105854"
 ---
 # <a name="reflection-and-net-native"></a>リフレクションおよび .NET ネイティブ
 .NET Framework では、マネージド開発はリフレクション API を介してメタプログラミングをサポートします。 リフレクションによって、アプリ内のオブジェクトの検査、検査で検出されたオブジェクトでのメソッドの呼び出し、実行時の新しい型の生成、およびその他多数の動的コード シナリオのサポートが可能になります。 シリアル化と逆シリアル化もサポートしているため、オブジェクトのフィールド値を保持して、後で復元できます。 これらすべてのシナリオで、使用可能なメタデータに基づいてネイティブ コードを生成するために .NET Framework Just-In-Time (JIT) コンパイラが必要です。  
@@ -34,5 +34,6 @@ ms.locfileid: "54507227"
 -   [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [.NET ネイティブによるアプリのコンパイル](../../../docs/framework/net-native/index.md)
-- [.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native とコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
