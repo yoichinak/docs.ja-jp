@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム上のコントロールの位置'
+title: '方法: Windows フォーム上のコントロールを位置設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 0503deb3fbb6dc157d8796580ece847bbfb8edfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132796"
 ---
-# <a name="how-to-position-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールの位置
+# <a name="how-to-position-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールを位置設定する
 コントロールの位置、Windows フォーム デザイナーを使用するかを指定する、<xref:System.Windows.Forms.Control.Location%2A>プロパティ。  
   
 > [!NOTE]
@@ -96,10 +96,11 @@ ms.locfileid: "57723102"
     >  使用して、<xref:System.Windows.Forms.Control.Location%2A>コントロールの X と Y を設定するプロパティを同時に配置します。 位置を個別に設定するには、コントロールを使用して、 <xref:System.Windows.Forms.Control.Left%2A> (**X**) または<xref:System.Windows.Forms.Control.Top%2A>(**Y**) サブプロパティ。 座標 X と Y 座標を暗黙的に設定しないで、<xref:System.Drawing.Point>この構造体には、ボタンの座標のコピーが含まれているため、ボタンの場所を表す構造体です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロール](index.md)
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

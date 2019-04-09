@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム TabControl の外観を変更します。'
+title: '方法: Windows フォーム TabControl の表示形式を変更する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133134"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl の外観を変更します。
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl の表示形式を変更する
 プロパティを使用して Windows フォームのタブの外観を変更することができます、<xref:System.Windows.Forms.TabControl>と<xref:System.Windows.Forms.TabPage>コントロールの個々 のタブを構成するオブジェクト。 これらのプロパティを設定することができますタブ上のイメージを表示、水平方向にではなく縦方向にタブが表示されます、タブなどの複数の行を表示し有効または無効にタブ プログラムでします。  
   
 ### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>タブのラベルのアイコンを表示するには  
@@ -66,8 +66,9 @@ ms.locfileid: "57702413"
 -   設定、<xref:System.Windows.Forms.TabControl.Appearance%2A>のプロパティ、<xref:System.Windows.Forms.TabControl>に<xref:System.Windows.Forms.TabAppearance.Buttons>または<xref:System.Windows.Forms.TabAppearance.FlatButtons>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
-- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
-- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133823"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>アプリケーション ドメインのリソース監視 (ARM) ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーション ドメインの状態に関する詳細な診断の情報を提供します。 これらのイベントを使用することもできますが、アプリケーション ドメインのリソース監視 (ARM) の機能を使用しても同じ情報を得られます。  
@@ -157,4 +157,5 @@ ms.locfileid: "54689836"
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
