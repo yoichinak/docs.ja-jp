@@ -2,12 +2,12 @@
 title: '> (より大きい)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: c4a0f60f6dcaf503dca0b16ed80bc05884922b34
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 992e1b7cf4733266f606f8357c71d72722b04896
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127128"
 ---
 # <a name="-greater-than-entity-sql"></a>> (より大きい) (Entity SQL)
 2 つの式を比較して、左の式の値が右の式の値よりも大きいかどうかを判別します。  
@@ -23,7 +23,7 @@ expression > expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- 左の式の値が右の式の値よりも大きい場合は`true` 、そうでない場合は `false`。  
+ `true` 左の式がある右の式より大きい値である場合それ以外の場合、`false`します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは「>」比較演算子を使用して 2 つの式を比較し、左の式の値が右の式の値よりも大きいかどうかを判別します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -35,4 +35,5 @@ expression > expression
  [!code-csharp[DP EntityServices Concepts 2#GREATER](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#greater)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
