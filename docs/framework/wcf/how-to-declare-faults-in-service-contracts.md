@@ -1,27 +1,27 @@
 ---
-title: '方法: サービス コントラクトでのエラーを宣言します。'
+title: '方法: サービス コントラクトでのエラーを宣言する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 145e9d7551e59a246d2540c2a7106e1a16686099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90abb29550ce7e027244b220f30e9fe46e282ff3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129494"
 ---
-# <a name="how-to-declare-faults-in-service-contracts"></a>方法: サービス コントラクトでのエラーを宣言します。
-マネージド コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーション、ただし、サービス コントラクト指定サービス コントラクトの SOAP エラーを宣言することでどのようなエラー情報がクライアントに返されます。 例外とエラーの間のリレーションシップの概要については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
+# <a name="how-to-declare-faults-in-service-contracts"></a>方法: サービス コントラクトでのエラーを宣言する
+マネージド コードでは、エラー条件が発生すると例外がスローされます。 Windows Communication Foundation (WCF) アプリケーション、ただし、サービス コントラクト指定サービス コントラクトの SOAP エラーを宣言することでどのようなエラー情報がクライアントに返されます。 例外とエラーの間のリレーションシップの概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>SOAP エラーを指定するサービス コントラクトを作成する  
   
 1.  サービス コントラクトを作成し、操作をいくつか定義します。 例については、「[方法: サービス コントラクトを定義する](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)します。  
   
-2.  操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化するには、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
+2.  操作を選択します。これに対して指定したエラー条件が発生したとき、クライアント側に通知することになります。 エラー状態がクライアントに SOAP エラーを返すことを正当化するには、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
-3.  選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 詳細については、作成して、シリアル化可能な型を使用して、[Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)を参照してください。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
+3.  選択した操作に対して <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 属性を適用し、シリアル化可能なエラー型をコンストラクターに渡します。 詳細については、作成して、シリアル化可能な型を使用して、次を参照してください。 [Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)します。 `SampleMethod` 操作で `GreetingFault` を返せるように指定する例を次に示します。  
   
      [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
      [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
@@ -45,5 +45,6 @@ ms.locfileid: "54727951"
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

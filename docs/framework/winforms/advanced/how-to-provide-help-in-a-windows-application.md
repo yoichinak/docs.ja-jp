@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows アプリケーションにヘルプを提供します。'
+title: '方法: Windows アプリケーションにヘルプを提供する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129481"
 ---
-# <a name="how-to-provide-help-in-a-windows-application"></a>方法: Windows アプリケーションにヘルプを提供します。
+# <a name="how-to-provide-help-in-a-windows-application"></a>方法: Windows アプリケーションにヘルプを提供する
 使用することができます、<xref:System.Windows.Forms.HelpProvider>ヘルプ ファイル内のヘルプ トピックを特定の Windows フォーム コントロールにアタッチするコンポーネント。 ヘルプ ファイルの形式には、HTML または HTMLHelp 1.x 以上を指定できます。  
   
 > [!NOTE]
@@ -56,7 +56,8 @@ ms.locfileid: "57724935"
  使用することも、 <xref:System.Windows.Forms.HelpProvider> Windows フォーム上のコントロールのヘルプ ファイルを表示する構成している場合でも、ポップアップのヘルプを表示するコンポーネント。 詳細については、「[方法 :ポップアップ ヘルプを表示](how-to-display-pop-up-help.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ポップアップ ヘルプを表示します。](how-to-display-pop-up-help.md)
+
+- [方法: ポップアップ ヘルプを表示する](how-to-display-pop-up-help.md)
 - [ツールヒントを使用したコントロールのヘルプ](control-help-using-tooltips.md)
 - [Windows フォームでのヘルプの統合](integrating-user-help-in-windows-forms.md)
 - [Windows フォーム](../index.md)
