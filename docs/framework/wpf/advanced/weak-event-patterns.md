@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139257"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベント ソースに接続されているハンドラーがハンドラーをソースに接続されているリスナーのオブジェクトと連携して破棄されないです。 このような状況は、メモリ リークにつながります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 特定のイベントの専任マネージャー クラスを提供することでそのイベントのリスナー インターフェイスを実装してこの問題に対処するために使用する設計パターンについて説明します。 この設計パターンと呼ばれる、*弱いイベント パターン*します。  
@@ -131,6 +131,7 @@ ms.locfileid: "57367610"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [ルーティング イベントの概要](routed-events-overview.md)
