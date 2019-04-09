@@ -2,12 +2,12 @@
 title: 永続参加要素
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115896"
 ---
 # <a name="persistence-participants"></a>永続参加要素
 永続参加要素は、アプリケーション ホストによってトリガーされる永続化操作 (保存または読み込み) に参加できます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 2 つの抽象クラスが付属しています**PersistenceParticipant**と**PersistenceIOParticipant**、永続参加要素を作成に使用できます。 永続参加要素はこれらのクラスの 1 つから派生し、目的のメソッドを実装して、このクラスのインスタンスを <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> の <xref:System.ServiceModel.Activities.WorkflowServiceHost> コレクションに追加します。 アプリケーション ホストは、ワークフロー インスタンスを永続化するときにこのようなワークフロー拡張機能を必要とする場合があり、適切なときに永続参加要素の適切なメソッドを呼び出します。  
@@ -58,7 +58,8 @@ ms.locfileid: "57723765"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [方法: カスタム永続参加要素を作成します。](how-to-create-a-custom-persistence-participant.md)  
+-   [方法: カスタム永続参加要素を作成する](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ストア拡張](store-extensibility.md)

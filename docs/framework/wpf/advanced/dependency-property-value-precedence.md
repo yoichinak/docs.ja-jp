@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117761"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 <a name="introduction"></a>このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの動作が依存関係プロパティの値に与える影響と、システムのさまざまな部分がプロパティの有効な値に適用する優先順位について説明します。  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](dependency-properties-overview.md)」を読んでいることを前提としています。 このトピックの例について理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法について知っておく必要もあります。  
@@ -52,11 +51,11 @@ ms.locfileid: "57367938"
   
     2.  プロパティ セット (通常を通じて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性) で、<xref:System.Windows.FrameworkElement.TemplatedParent%2A>テンプレート。  
   
-5.  **暗黙的スタイル。** `Style` プロパティのみに適用されます。 `Style` プロパティは、その要素の型と一致するキーを持つスタイル リソースによって設定されます。 そのスタイル リソースは、ページまたはアプリケーション内に存在する必要があります。暗黙的スタイル リソースの参照はテーマまでは及びません。  
+5.  **暗黙的なスタイル。** `Style` プロパティのみに適用されます。 `Style` プロパティは、その要素の型と一致するキーを持つスタイル リソースによって設定されます。 そのスタイル リソースは、ページまたはアプリケーション内に存在する必要があります。暗黙的スタイル リソースの参照はテーマまでは及びません。  
   
 6.  **スタイルのトリガー。** ページまたはアプリケーションに含まれるスタイル内のトリガー (これらのスタイルは、明示的スタイルまたは暗黙的スタイルどちらの場合もありますが、優先順位の低い既定スタイルではありません)。  
   
-7.  **テンプレートのトリガー。** スタイル内のテンプレートまたは直接適用されたテンプレートからのトリガーです。  
+7.  **テンプレートにトリガーされます。** スタイル内のテンプレートまたは直接適用されたテンプレートからのトリガーです。  
   
 8.  **スタイルのセッター。** 値から、<xref:System.Windows.Setter>ページまたはアプリケーションからのスタイル内。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "57367938"
   
 10. **継承。** いくつかの依存関係プロパティは親要素から子要素に値を継承するので、アプリケーション全体で各要素に値を明示的に設定する必要はありません。 詳しくは、「[プロパティ値の継承](property-value-inheritance.md)」をご覧ください。  
   
-11. **依存関係プロパティのメタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
+11. **依存関係プロパティ メタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -78,9 +77,9 @@ ms.locfileid: "57367938"
 ## <a name="the-style-property"></a>スタイル プロパティ  
  1 つを除くすべての可能な依存関係プロパティに適用される前に説明した参照の順序は、:<xref:System.Windows.FrameworkElement.Style%2A>プロパティ。 <xref:System.Windows.FrameworkElement.Style%2A>プロパティは、そのことはできません自体スタイル設定するため、優先順位の項目 5 ~ 8 は適用されません。 また、アニメーション化または強制型変換<xref:System.Windows.FrameworkElement.Style%2A>はお勧めしません (アニメーション化と<xref:System.Windows.FrameworkElement.Style%2A>カスタム アニメーション クラスが必要になります)。 これにより、3 つの方法を<xref:System.Windows.FrameworkElement.Style%2A>プロパティを設定することがあります。  
   
--   **明示的スタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定します。 ほとんどの場合、スタイルはインラインでは定義されず、代わりにリソースとして明示的なキーにより参照されます。 この場合、スタイル プロパティ自体は、ローカル値と同じように扱われます (優先順位の項目 3)。  
+-   **明示的なスタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定します。 ほとんどの場合、スタイルはインラインでは定義されず、代わりにリソースとして明示的なキーにより参照されます。 この場合、スタイル プロパティ自体は、ローカル値と同じように扱われます (優先順位の項目 3)。  
   
--   **暗黙的スタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定されません。 ただし、<xref:System.Windows.FrameworkElement.Style%2A>リソース参照シーケンス (ページ、アプリケーション) のいくつかのレベルで存在しに適用されるスタイルは、型と一致するリソース キーを使用して、キーになります。 ここで、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ自体は、項目 5 としてシーケンスで識別される優先順位で動作します。 使用して、この条件を検出できる<xref:System.Windows.DependencyPropertyHelper>に対して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティと探して<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果にします。  
+-   **暗黙的なスタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定されません。 ただし、<xref:System.Windows.FrameworkElement.Style%2A>リソース参照シーケンス (ページ、アプリケーション) のいくつかのレベルで存在しに適用されるスタイルは、型と一致するリソース キーを使用して、キーになります。 ここで、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ自体は、項目 5 としてシーケンスで識別される優先順位で動作します。 使用して、この条件を検出できる<xref:System.Windows.DependencyPropertyHelper>に対して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティと探して<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果にします。  
   
 -   **既定のスタイル** (別称**テーマ スタイル**)。 <xref:System.Windows.FrameworkElement.Style%2A>プロパティを直接設定されていないととして実際に読み取られます`null`実行時までです。 この場合、スタイルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プレゼンテーション エンジンの一部である実行時テーマ評価によって決定されます。  
   
@@ -127,6 +126,7 @@ ms.locfileid: "57367938"
  <xref:System.Windows.DependencyObject.ClearValue%2A>メソッドが任意のローカルで適用された要素が設定されている依存関係プロパティ値をクリアする便利な手段を提供します。 ただし、呼び出す<xref:System.Windows.DependencyObject.ClearValue%2A>プロパティの登録中にメタデータで確立されると、既定値は、新しい有効な値である保証はありません。 値の優先順位に関係する他のすべての要因はアクティブなままです。 ローカルで設定された値が優先順位のシーケンスから削除されるだけです。 呼び出す場合など、<xref:System.Windows.DependencyObject.ClearValue%2A>テーマのスタイルによってもそのプロパティを設定し、テーマの値がメタデータに基づく既定ではなく、新しい値として適用されるプロパティ。 依存関係プロパティ メタデータ、その後のクエリを実行して選択肢の既定値が既定値をローカルで使用できることを取得するには、プロセス外のすべてのプロパティ値の参加者を受け取り、登録されているメタデータの既定値を設定する場合は、呼び出しにプロパティを設定<xref:System.Windows.DependencyObject.SetValue%2A>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [依存関係プロパティの概要](dependency-properties-overview.md)
