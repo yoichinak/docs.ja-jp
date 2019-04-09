@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122786"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows フォームにおけるマウス ポインター
 マウス*ポインター*、ユーザー入力、マウスで画面のフォーカス ポイントを指定するビットマップには、そのカーソルと呼ばします。 このトピックでは、Windows フォームにおけるマウス ポインターの概要を示し、いくつかの変更およびマウス ポインターを制御する方法について説明します。  
@@ -31,6 +31,7 @@ ms.locfileid: "57712735"
  マウス ポインターを変更する主な方法は、設定して、<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>または<xref:System.Windows.Forms.Control.DefaultCursor%2A>を新しいコントロールのプロパティの<xref:System.Windows.Forms.Cursor>します。 マウス ポインターを変更する例のコード例を参照してください、<xref:System.Windows.Forms.Cursor>クラス。 さらに、<xref:System.Windows.Forms.Cursors>クラスのセットを公開する<xref:System.Windows.Forms.Cursor>ポインター、手の形のようなポインターなどのさまざまな種類のオブジェクト。 砂時計コントロールにマウス ポインターがあるたびに似ていますが、待機のポインターを表示するには使用、<xref:System.Windows.Forms.Control.UseWaitCursor%2A>のプロパティ、<xref:System.Windows.Forms.Control>クラス。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Cursor>
 - [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)
 - [Windows フォームにおけるドラッグ アンド ドロップ機能](drag-and-drop-functionality-in-windows-forms.md)

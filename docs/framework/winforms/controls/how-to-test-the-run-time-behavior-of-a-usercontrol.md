@@ -1,5 +1,5 @@
 ---
-title: '方法: UserControl の実行時の動作をテストします。'
+title: '方法: UserControl の実行時の動作をテストする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116494"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>方法: UserControl の実行時の動作をテストします。
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>方法: UserControl の実行時の動作をテストする
 開発する際に、<xref:System.Windows.Forms.UserControl>実行時の動作をテストする必要があります。 別の Windows ベースのアプリケーション プロジェクトを作成し、テスト フォーム上にコントロールを配置することができますが、この手順は便利です。 速くて簡単方法は使用する、 **UserControl Test Container** Visual Studio で提供します。 このテスト コンテナーは、Windows コントロール ライブラリ プロジェクトから直接開始します。  
   
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "57707886"
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>UserControl の実行時の動作をテストするには  
   
-1.  呼ばれる Windows コントロール ライブラリ プロジェクトを作成**ファイルを開く**します。 詳細については、[Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))を参照してください。  
+1.  呼ばれる Windows コントロール ライブラリ プロジェクトを作成**ファイルを開く**します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。  
   
 2.  **Windows フォーム デザイナー**、ドラッグ、<xref:System.Windows.Forms.Label>コントロールから、**ツールボックス**コントロールのデザイン サーフェイスにします。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57707886"
   
 #### <a name="to-test-user-controls-from-another-project"></a>別のプロジェクトからユーザー コントロールをテストするには  
   
-1.  呼ばれる Windows コントロール ライブラリ プロジェクトを作成**TestContainerExample2**します。 詳細については、[Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))を参照してください。  
+1.  呼ばれる Windows コントロール ライブラリ プロジェクトを作成**TestContainerExample2**します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。  
   
 2.  **Windows フォーム デザイナー**、ドラッグ、<xref:System.Windows.Forms.RadioButton>コントロールから、**ツールボックス**コントロールのデザイン サーフェイスにします。  
   
@@ -67,8 +67,9 @@ ms.locfileid: "57707886"
 6.  使用して、**ユーザー コントロールの選択**<xref:System.Windows.Forms.ComboBox>から 2 つのユーザー コントロール間を切り替える、**ファイルを開く**プロジェクト。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.UserControl>
-- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)
+- [方法: 複合コントロールを作成する](how-to-author-composite-controls.md)
 - [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [ユーザー コントロール デザイナー](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

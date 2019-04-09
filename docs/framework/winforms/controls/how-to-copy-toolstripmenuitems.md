@@ -1,19 +1,19 @@
 ---
-title: '方法: ToolStripMenuItems をコピーします。'
+title: '方法: ToolStripMenuItems をコピーする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116351"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>方法: ToolStripMenuItems をコピーします。
+# <a name="how-to-copy-toolstripmenuitems"></a>方法: ToolStripMenuItems をコピーする
 デザイン時に、トップレベル メニュー全体とそのサブメニュー項目を、 <xref:System.Windows.Forms.MenuStrip>の別の場所にコピーできます。 トップレベル メニュー間で個々のメニュー項目のコピーをすることも、またはメニュー内のメニュー項目の位置を変更することもできます。  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>トップレベル メニューとサブメニュー項目を別のトップレベルの場所にコピーするには  
@@ -43,6 +43,7 @@ ms.locfileid: "57713879"
      選んだサブメニュー項目の前に、コピーしたサブメニュー項目が挿入されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)
