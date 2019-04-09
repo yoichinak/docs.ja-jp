@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186668"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip コントロールのアーキテクチャ
 <xref:System.Windows.Forms.ToolStrip>と<xref:System.Windows.Forms.ToolStripItem>クラスは、ツールバー、ステータス、およびメニュー項目を表示するため、柔軟で拡張性の高いシステムを提供します。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms>名前空間と、通常、すべて"ToolStrip"プレフィックスを持つという名前 (など<xref:System.Windows.Forms.ToolStripOverflow>) または「ストリップ」サフィックスを持つ (など<xref:System.Windows.Forms.MenuStrip>)。  
@@ -64,7 +64,7 @@ ms.locfileid: "58654771"
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenu> が <xref:System.Windows.Forms.ContextMenuStrip> に置き換えられます。 関連付けることができます、<xref:System.Windows.Forms.ContextMenuStrip>任意のコントロールとマウスの右クリック自動的に表示されますコンテキスト メニュー (またはショートカット メニュー)。 表示することができます、<xref:System.Windows.Forms.ContextMenuStrip>を使用してプログラムで、<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>メソッド。 <xref:System.Windows.Forms.ContextMenuStrip> キャンセル可能なサポート<xref:System.Windows.Forms.ToolStripDropDown.Opening>と<xref:System.Windows.Forms.ToolStripDropDown.Closing>動的母集団とクリックで複数のシナリオを処理するイベントです。 <xref:System.Windows.Forms.ContextMenuStrip> イメージ、メニュー項目のチェック状態、テキスト、アクセス キー、ショートカット、およびカスケード メニューをサポートしています。  
+ <xref:System.Windows.Forms.ContextMenuStrip> 置換<xref:System.Windows.Forms.ContextMenu>します。 関連付けることができます、<xref:System.Windows.Forms.ContextMenuStrip>任意のコントロールとマウスの右クリック自動的に表示されますコンテキスト メニュー (またはショートカット メニュー)。 表示することができます、<xref:System.Windows.Forms.ContextMenuStrip>を使用してプログラムで、<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>メソッド。 <xref:System.Windows.Forms.ContextMenuStrip> キャンセル可能なサポート<xref:System.Windows.Forms.ToolStripDropDown.Opening>と<xref:System.Windows.Forms.ToolStripDropDown.Closing>動的母集団とクリックで複数のシナリオを処理するイベントです。 <xref:System.Windows.Forms.ContextMenuStrip> イメージ、メニュー項目のチェック状態、テキスト、アクセス キー、ショートカット、およびカスケード メニューをサポートしています。  
   
  次のものを両方でシームレスに動作する目的<xref:System.Windows.Forms.ToolStripSystemRenderer>と<xref:System.Windows.Forms.ToolStripProfessionalRenderer>ですべての向き。 デザイン時に既定で使用できますが、<xref:System.Windows.Forms.ContextMenuStrip>コントロール。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "58654771"
 ##### <a name="stack-layouts"></a>スタック レイアウト  
  スタックの両方の end にある他の横にある項目の配置には、<xref:System.Windows.Forms.ToolStrip>します。 次の一覧には、スタック レイアウトについて説明します。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> が既定値です。 この設定により、<xref:System.Windows.Forms.ToolStrip>でに従ってで自動的にそのレイアウトを変更する、<xref:System.Windows.Forms.ToolStrip.Orientation%2A>をドラッグして、ドッキング シナリオを処理するプロパティ。  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 既定値です。 この設定により、<xref:System.Windows.Forms.ToolStrip>でに従ってで自動的にそのレイアウトを変更する、<xref:System.Windows.Forms.ToolStrip.Orientation%2A>をドラッグして、ドッキング シナリオを処理するプロパティ。  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> レンダリング、<xref:System.Windows.Forms.ToolStrip>互いの横にある項目を垂直方向にします。  
   
@@ -264,16 +264,16 @@ ms.locfileid: "58654771"
 |含まれるアイテム|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
 |<xref:System.Windows.Forms.ToolStripButton>|[はい]|×|×|×|[はい]|  
-|<xref:System.Windows.Forms.ToolStripComboBox>|はい|はい|はい|×|[はい]|  
-|<xref:System.Windows.Forms.ToolStripSplitButton>|はい|×|×|[はい]|はい|  
-|<xref:System.Windows.Forms.ToolStripLabel>|はい|×|×|[はい]|はい|  
-|<xref:System.Windows.Forms.ToolStripSeparator>|はい|はい|はい|×|[はい]|  
-|<xref:System.Windows.Forms.ToolStripDropDownButton>|はい|×|×|[はい]|はい|  
-|<xref:System.Windows.Forms.ToolStripTextBox>|はい|はい|はい|×|はい|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|×|[はい]|はい|×|×|  
+|<xref:System.Windows.Forms.ToolStripComboBox>|はい|はい|[はい]|×|[はい]|  
+|<xref:System.Windows.Forms.ToolStripSplitButton>|[はい]|×|×|[はい]|はい|  
+|<xref:System.Windows.Forms.ToolStripLabel>|[はい]|×|×|[はい]|はい|  
+|<xref:System.Windows.Forms.ToolStripSeparator>|はい|はい|[はい]|×|[はい]|  
+|<xref:System.Windows.Forms.ToolStripDropDownButton>|[はい]|×|×|[はい]|はい|  
+|<xref:System.Windows.Forms.ToolStripTextBox>|はい|はい|[はい]|×|はい|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|×|[はい]|[はい]|×|×|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|×|×|×|はい|×|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|はい|×|×|はい|×|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|はい|×|[はい]|[はい]|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|[はい]|×|[はい]|[はい]|  
   
 ### <a name="toolstripbutton"></a>オブジェクト  
  <xref:System.Windows.Forms.ToolStripButton> ボタンの項目は、<xref:System.Windows.Forms.ToolStrip>します。 これを表示するにはさまざまな境界線のスタイル、およびを表し、操作状態をアクティブ化に使用できます。 既定でフォーカスを持つことを定義することもできます。  
@@ -377,6 +377,7 @@ ms.locfileid: "58654771"
 -   <xref:System.Windows.Forms.ToolStripPanel> 移動および配置するための領域を提供します<xref:System.Windows.Forms.ToolStrip>コントロール。 1 つだけのパネルを使用するには、そのために選択した場合と<xref:System.Windows.Forms.ToolStripPanel>は MDI のシナリオに適しています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)

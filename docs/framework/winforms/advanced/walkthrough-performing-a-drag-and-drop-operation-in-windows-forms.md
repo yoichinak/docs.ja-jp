@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189028"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行
 Windows ベースのアプリケーション内でドラッグ アンド ドロップ操作を実行する必要がありますを処理する、一連のイベント、特に、 <xref:System.Windows.Forms.Control.DragEnter>、 <xref:System.Windows.Forms.Control.DragLeave>、および<xref:System.Windows.Forms.Control.DragDrop>イベント。 利用可能な情報、イベントのこれらのイベントの引数を使用して、ドラッグ アンド ドロップ操作を簡単に実行できます。  
@@ -107,6 +107,7 @@ Windows ベースのアプリケーション内でドラッグ アンド ドロ�
     >  さらに、使用できる、<xref:System.Windows.Forms.DragEventArgs.KeyState%2A>プロパティ、キーによって、ドラッグ アンド ドロップ操作中に押されているように、特定の効果の発生 (たとえばには、CTRL キーが押されたときに、ドラッグしたデータをコピーする標準的な)。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: データをクリップボードに追加します。](how-to-add-data-to-the-clipboard.md)
-- [方法: クリップボードからデータを取得します。](how-to-retrieve-data-from-the-clipboard.md)
+
+- [方法: クリップボードにデータを追加する](how-to-add-data-to-the-clipboard.md)
+- [方法: クリップボードからデータを取得する](how-to-retrieve-data-from-the-clipboard.md)
 - [ドラッグ アンド ドロップ操作とクリップボードのサポート](drag-and-drop-operations-and-clipboard-support.md)

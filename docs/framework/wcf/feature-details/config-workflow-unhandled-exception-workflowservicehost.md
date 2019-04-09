@@ -1,15 +1,15 @@
 ---
-title: '方法: ワークフローを構成する未処理の例外動作 WorkflowServiceHost を使用'
+title: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 9a13bb9390e891295491722898bd780bc1cac587
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f7fe203a4198aa98e8aee1be3a12e4d72a066f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175410"
 ---
-# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>方法: ワークフローを構成する未処理の例外動作 WorkflowServiceHost を使用
+# <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> は、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフロー内で未処理の例外が発生した場合のアクションを指定できるようにする動作です。 このトピックでは、この動作を構成ファイルで構成する方法を示します。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>WorkflowUnhandledExceptionBehavior を構成するには  
@@ -27,7 +27,7 @@ ms.locfileid: "54636158"
     ```  
   
     > [!NOTE]
-    >  前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)を参照してください。  
+    >  前の構成サンプルでは、簡略化された構成を使用しています。 詳細については、次を参照してください。 [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)します。  
   
      この動作は、次の例に示すように、コードで構成できます。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54636158"
      **abandonAndSuspend**  
      メモリ内のインスタンスを中止し、永続化されているインスタンスを中断状態に更新します。  
   
-     **キャンセル**  
+     **cancel**  
      インスタンスのキャンセル ハンドラーを呼び出してから、メモリ内のインスタンスを完了状態にします。これにより、そのインスタンスがインスタンス ストアから削除される場合もあります。  
   
      **terminate**  
@@ -52,5 +52,6 @@ ms.locfileid: "54636158"
      詳細については<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>を参照してください[ワークフロー サービス ホストの拡張機能](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ワークフロー サービス ホストの拡張機能](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)

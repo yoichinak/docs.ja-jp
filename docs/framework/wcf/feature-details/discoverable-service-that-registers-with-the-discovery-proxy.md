@@ -1,15 +1,15 @@
 ---
-title: '方法: 探索プロキシで登録される探索可能なサービスを実装します。'
+title: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177828"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスを実装します。
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスの実装する
 これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピックで[方法。探索プロキシの実装](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)、探索プロキシを実装します。 このトピックでは、アナウンス メッセージを送信する WCF サービスを作成 (`Hello`と`Bye`) に、探索プロキシに登録または登録解除、探索プロキシの原因です。
 
 ### <a name="to-define-the-service-contract"></a>サービス コントラクトを定義するには
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>関連項目
+
 - [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [方法: 探索プロキシを実装します。](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [方法: 探索プロキシを実装する](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

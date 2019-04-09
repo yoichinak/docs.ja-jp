@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186499"
 ---
 # <a name="listview-overview"></a>ListView の概要
 <xref:System.Windows.Controls.ListView>コントロールには、さまざまなレイアウトやビューにデータ項目のセットを表示するインフラストラクチャが用意されています。 たとえば、ユーザーは、テーブルにデータ項目を表示し、その列を並べ替えできます。  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>ListView とは  
  <xref:System.Windows.Controls.ListView>コントロールが、<xref:System.Windows.Controls.ItemsControl>から派生する<xref:System.Windows.Controls.ListBox>します。 通常、その項目のデータ コレクションのメンバーであるし、として表される<xref:System.Windows.Controls.ListViewItem>オブジェクト。 A<xref:System.Windows.Controls.ListViewItem>は、 <xref:System.Windows.Controls.ContentControl> 1 つの子要素のみを含めることができます。 ただし、その子要素は、任意のビジュアル要素にできます。  
@@ -82,10 +81,11 @@ ms.locfileid: "58186118"
  ようにビューをカスタマイズ<xref:System.Windows.Controls.GridView>から派生、<xref:System.Windows.Controls.ViewBase>として表されるデータ項目を表示するためのツールを提供するクラスを抽象化<xref:System.Windows.Controls.ListViewItem>オブジェクト。    
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [GridView の概要](gridview-overview.md)
-- [方法トピック](listview-how-to-topics.md)
+- [方法のトピック](listview-how-to-topics.md)
 - [コントロール](../advanced/optimizing-performance-controls.md)

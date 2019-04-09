@@ -1,5 +1,5 @@
 ---
-title: '方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。'
+title: '方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - captions [Windows Forms], sizing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - labels [Windows Forms], sizing to fit contents
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
-ms.openlocfilehash: 5771b232d77e3e5a792b179ebffd3fa0edda7c9b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9e7fad1f8b2b4e962f46a1e32522f47f01de2b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191875"
 ---
-# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。
+# <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する
 Windows フォーム<xref:System.Windows.Forms.Label>コントロールは 1 行または複数の行であることができ、自動的にサイズを変更できる自体のキャプションを対応するために、サイズか固定できます。 <xref:System.Windows.Forms.Label.AutoSize%2A>プロパティは、大きくまたは小さくのキャプションに合わせてコントロールのサイズをこれには、実行時に、キャプションが変更される場合に特に便利です。  
   
 ### <a name="to-make-a-label-control-resize-dynamically-to-fit-its-contents"></a>内容に合わせて動的にサイズを変更するラベル コントロールを作成するには  
@@ -25,6 +25,7 @@ Windows フォーム<xref:System.Windows.Forms.Label>コントロールは 1 行
  場合<xref:System.Windows.Forms.Label.AutoSize%2A>に設定されている`false`、指定した単語、<xref:System.Windows.Forms.Label.Text%2A>プロパティは、可能であれば、次の行に折り返されますが、コントロールは拡張されません。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: Windows フォームの Label コントロールでのアクセス キーを作成します。](how-to-create-access-keys-with-windows-forms-label-controls.md)
+
+- [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label コントロールの概要](label-control-overview-windows-forms.md)
 - [Label コントロール](label-control-windows-forms.md)

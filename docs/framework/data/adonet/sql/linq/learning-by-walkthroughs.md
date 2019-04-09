@@ -2,12 +2,12 @@
 title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 1ddd2b8dacaccc0911a7e5a2bd684bba0fa16012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189004"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントには、いくつかのチュートリアルが用意されています。 このトピックでは、チュートリアルに関する全般的な話題 (トラブルシューティングを含む) を取り上げます。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] について学ぶための、いくつかの入門レベルのチュートリアルへのリンクを示します。  
@@ -22,22 +22,22 @@ ms.locfileid: "54589924"
   
 |目標|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|エンティティ クラスを作成し、簡単なクエリを実行します。|[チュートリアル: 単純なオブジェクト モデルとクエリ (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[チュートリアル: 単純なオブジェクト モデルとクエリ (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|2 番目のクラスを追加し、より複雑なクエリを実行します <br /><br /> (前のチュートリアルを完了している必要があります)。|[チュートリアル: リレーションシップ (Visual Basic) 間でクエリを実行します。](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[チュートリアル: リレーションシップ間でクエリを実行する (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
+|エンティティ クラスを作成し、簡単なクエリを実行します。|[チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|2 番目のクラスを追加し、より複雑なクエリを実行します <br /><br /> (前のチュートリアルを完了している必要があります)。|[チュートリアル: リレーションシップを介したクエリの実行 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[チュートリアル: リレーションシップを介したクエリの実行 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
 |データベースの項目を追加、変更、および削除します。|[チュートリアル: データの操作 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[チュートリアル: データの操作 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|ストアド プロシージャを使用します。|[チュートリアル: ストアド プロシージャ (Visual Basic) の使用のみ](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[チュートリアル: ストアド プロシージャを使用してのみ (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|ストアド プロシージャを使用します。|[チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[チュートリアル: ストアド プロシージャのみを使用する (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>全般  
  以下の情報は、これらのチュートリアル全体に該当します。  
   
 -   環境:各[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]チュートリアルでは、その統合開発環境 (IDE) として Visual Studio を使用します。  
   
--   SQL エンジン:SQL Server Express を使用して実装するのには、これらのチュートリアルが書き込まれます。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。  
+-   SQL エンジン:SQL Server Express を使用して実装するのには、これらのチュートリアルが書き込まれます。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルでは、ファイル名を接続文字列として使用します。 ファイル名を指定するだけで済むのは、SQL Server Express ユーザーのために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に備わっている機能です。 セキュリティ問題には常に注意してください。 詳細については、[LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)を参照してください。  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] チュートリアルでは、接続文字列としてファイル名を使用します。 ファイル名を指定するだけで済むのは、SQL Server Express ユーザーのために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に備わっている機能です。 セキュリティ問題には常に注意してください。 詳細については、次を参照してください。 [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)します。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通常、チュートリアルには、Northwind サンプル データベースが必要です。 詳細については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通常、チュートリアルには、Northwind サンプル データベースが必要です。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
 -   アクティブな設定またはエディションの Visual Studio によって、ヘルプの説明から、ダイアログ ボックスとメニュー コマンドのチュートリアルが表示が異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
@@ -88,4 +88,5 @@ ms.locfileid: "54589924"
 3.  右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**再起動**します。  
   
 ## <a name="see-also"></a>関連項目
-- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+
+- [作業の開始](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

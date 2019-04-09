@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191589"
 ---
 # <a name="key-frame-animations-overview"></a>キー フレーム アニメーションの概要
 このトピックでは、キー フレーム アニメーションの概要を説明します。 キー フレーム アニメーションでは、3 つ以上のターゲット値を使用してアニメーション化することができ、アニメーションの補間方式を制御できます。  
@@ -46,11 +46,11 @@ ms.locfileid: "57362982"
   
  属している、キー フレーム アニメーション クラス、<xref:System.Windows.Media.Animation>名前空間と、次の名前付け規則に従います。  
   
- *\<Type>* `AnimationUsingKeyFrames`  
+ *\<型 >* `AnimationUsingKeyFrames`  
   
  ここで、*\<Type>* は、クラスがアニメーション化する値の型です。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、次のキー フレーム アニメーション クラスを提供します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次のキー フレーム アニメーション クラスを提供します。  
   
 |プロパティの型|対応するFrom/To/By アニメーションのクラス|サポートされる補間方式|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "57362982"
 ## <a name="target-values-key-frames-and-key-times"></a>ターゲット値 (キー フレーム) とキー時刻  
  さまざまな種類のプロパティをアニメーション化するための多様な種類のキー フレーム アニメーションがあるように、さまざまな種類のキー フレーム オブジェクトがあります (アニメーション化される値の型とサポートされる補間方式ごとに 1 種類のオブジェクト)。 キー フレームの種類は、次の名前付け規則に従います。  
   
- *\<InterpolationMethod>\<Type>* `KeyFrame`  
+ *\<InterpolationMethod >\<型 >* `KeyFrame`  
   
  ここで、*\<InterpolationMethod>* は、キー フレームで使用される補間方式であり、*\<Type>* は、クラスがアニメーション化する値の型です。 3 つの補間方式のすべてをサポートするキー フレーム アニメーションでは、3 種類のキー フレームを使用できます。 たとえば、キー フレームの 3 種類を使用することができます、 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>、 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>、および<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>します。 (補間方式については、後のセクションで詳しく説明します)。  
   
@@ -284,6 +284,7 @@ ms.locfileid: "57362982"
 8.  つまり解決時間 (主キー) の順序と宣言 (セカンダリ キー) の順序でキー フレームを並べ替え、解決されたキー フレームに基づいて、使用して安定した並べ替え<xref:System.Windows.Media.Animation.KeyTime>値。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>

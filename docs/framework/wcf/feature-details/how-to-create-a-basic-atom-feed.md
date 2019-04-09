@@ -1,18 +1,18 @@
 ---
-title: '方法: 基本的な Atom フィードを作成します。'
+title: '方法: 基本的な ATOM フィードを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 1229257cc8c15ea67bd4fdf3ff6ffa959a6bfe02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2d254d0c87bb9e0a2ce10b8cba0233680b24f4be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181559"
 ---
-# <a name="how-to-create-a-basic-atom-feed"></a>方法: 基本的な Atom フィードを作成します。
+# <a name="how-to-create-a-basic-atom-feed"></a>方法: 基本的な ATOM フィードを作成する
 Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 ここでは、ATOM 配信フィードを公開する配信サービスを作成する方法について説明します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
@@ -97,5 +97,6 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
  上記のコードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll が参照されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

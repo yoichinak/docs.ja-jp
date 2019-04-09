@@ -1,5 +1,5 @@
 ---
-title: '方法: ハイブリッド アプリケーションで視覚スタイルを有効にします。'
+title: '方法: ハイブリッド アプリケーションで視覚スタイルを有効にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 9588a2e2d839af43ffe4397303c4a45cad5af2e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176372"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法: ハイブリッド アプリケーションで視覚スタイルを有効にします。
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法: ハイブリッド アプリケーションで視覚スタイルを有効にする
 このトピックでは、有効にする方法を示しています。[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]で視覚スタイルを、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされているコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。  
   
- アプリケーションを呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドでは、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、アプリケーションの実行時に、コントロールに視覚スタイルは使用に自動的に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。 詳細については、[Visual スタイルを使用しているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)を参照してください。  
+ アプリケーションを呼び出す場合、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッドでは、ほとんどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、アプリケーションの実行時に、コントロールに視覚スタイルは使用に自動的に[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]します。 詳細については、次を参照してください。 [Visual スタイルを使用しているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)します。  
   
- このトピックで示すタスクの完全なコード一覧については、[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にする](https://go.microsoft.com/fwlink/?LinkID=159986)を参照してください。  
+ このトピックで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルの Visual スタイルを有効にする](https://go.microsoft.com/fwlink/?LinkID=159986)します。  
   
 ## <a name="enabling-windows-forms-visual-styles"></a>Windows フォーム視覚スタイルの有効化  
   
@@ -67,6 +67,7 @@ ms.locfileid: "57371919"
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが既定のシステム スタイルで塗りつぶされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
