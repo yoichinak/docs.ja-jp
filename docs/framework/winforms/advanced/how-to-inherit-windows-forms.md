@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームを継承します。'
+title: '方法: Windows フォームを継承する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112750"
 ---
-# <a name="how-to-inherit-windows-forms"></a>方法: Windows フォームを継承します。
+# <a name="how-to-inherit-windows-forms"></a>方法: Windows フォームを継承する
 新規の Windows フォームは、基本フォームから継承して簡単に複製できます。フォームが必要になるたびに、最初から作成し直す必要はありません。  
   
  使用してデザイン時にフォームの継承の詳細については、**継承ピッカー**継承されるコントロールのダイアログ ボックスとのセキュリティ レベルを視覚的に区別する方法は、「[方法。継承ピッカー ダイアログ ボックスを使用してフォームを継承する](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)します。  
@@ -41,8 +41,9 @@ ms.locfileid: "57720866"
  フォームを継承する場合は、イベント ハンドラーが 2 回呼び出されることで問題が発生する可能性があることに注意してください。これは、各イベントが基底クラスと継承クラスの両方によって処理されるためです。 この問題を回避する方法の詳細については、「[Visual Basic で継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [Inherits ステートメント](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports ステートメント (.NET 名前空間および型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [使用](~/docs/csharp/language-reference/keywords/using.md)
 - [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)

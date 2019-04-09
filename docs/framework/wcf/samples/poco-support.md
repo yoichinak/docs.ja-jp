@@ -2,15 +2,15 @@
 title: POCO サポート
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8d94d6a9700c38014aa53ee9910b53239fc28b0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f81db536e3b57f733494283bbaaa9644ec4dac9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112698"
 ---
 # <a name="poco-support"></a>POCO サポート
-このサンプルでは、マークされていない型 (シリアル化属性が適用されていない型で、POCO (Plain Old CLR Object) 型と呼ばれる場合もあります) のシリアル化のサポートについて説明します。 <xref:System.Runtime.Serialization.DataContractSerializer> では、既定のコンストラクタを持つすべてのマークされていないパブリック型について、データ コントラクトを推測します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 マークされていない種類の詳細については、[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)を参照してください。  
+このサンプルでは、マークされていない型 (シリアル化属性が適用されていない型で、POCO (Plain Old CLR Object) 型と呼ばれる場合もあります) のシリアル化のサポートについて説明します。 <xref:System.Runtime.Serialization.DataContractSerializer> では、既定のコンストラクタを持つすべてのマークされていないパブリック型について、データ コントラクトを推測します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 マークされていない種類の詳細については、次を参照してください。[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)します。  
   
  このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)がプリミティブ数値型ではなく複素数を使用します。 またに似ています、[基本的なデータ コントラクト](../../../../docs/framework/wcf/samples/basic-data-contract.md)点を除いて、サンプル、<xref:System.Runtime.Serialization.DataContractAttribute>と<xref:System.Runtime.Serialization.DataMemberAttribute>属性は使用されません。  
   
@@ -57,5 +57,6 @@ public class ComplexNumber
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\POCO`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - [シリアル化可能な型](../../../../docs/framework/wcf/feature-details/serializable-types.md)

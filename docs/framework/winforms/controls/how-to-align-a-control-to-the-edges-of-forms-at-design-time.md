@@ -1,20 +1,19 @@
 ---
-title: '方法: デザイン時にコントロールをフォームの端を揃える'
+title: '方法: デザイン時にフォームの端に合わせてコントロールを配置する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: b81cb839664499d69710d81b7b0c8a479966d569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140896"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>方法: デザイン時にコントロールをフォームの端を揃える
-コントロールを設定して、フォームの端に合わせて整列を行うことができます、<xref:System.Windows.Forms.Control.Dock%2A>します。 このプロパティは、フォーム内のコントロールの場所を指定します。 
-  <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>方法: デザイン時にフォームの端に合わせてコントロールを配置する
+コントロールを設定して、フォームの端に合わせて整列を行うことができます、<xref:System.Windows.Forms.Control.Dock%2A>します。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
   
 |設定|コントロールへの影響|  
 |-------------|----------------------------|  
@@ -43,13 +42,14 @@ ms.locfileid: "57724948"
 4.  コントロールの設定で指定された方法でドッキングされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [方法: コントロールをフォームの端を揃える](how-to-align-a-control-to-the-edges-of-forms.md)
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [方法: Windows フォームにコントロールを固定](how-to-anchor-controls-on-windows-forms.md)
-- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [方法: フォームの端に合わせてコントロールを配置する](how-to-align-a-control-to-the-edges-of-forms.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [方法: Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
+- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)

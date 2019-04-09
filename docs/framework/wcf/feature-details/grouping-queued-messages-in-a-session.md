@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115272"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>セッションでキューに置かれたメッセージのグループ化
 Windows Communication Foundation (WCF) は、1 つの受信側アプリケーションで関連するメッセージの処理のセットをグループ化できるようにするセッションを提供します。 セッションに含まれるメッセージは、同じトランザクションに含まれる必要があります。 すべてのメッセージが同じトランザクションに含まれるため、1 つのメッセージの処理が失敗すると、セッション全体がロールバックされます。 各セッションは、配信不能キューや有害キューに関してよく似た動作をします。 キューに置かれたバインディングに設定される有効期間 (TTL: Time To Live) プロパティがセッションに構成されている場合は、セッション全体に適用されます。 したがって、TTL が切れる前にセッション内の一部のメッセージが送信された場合は、セッション全体が配信不能キューに配置されます。 同様に、アプリケーション キューからアプリケーションにセッション内のメッセージを送信できなかった場合は、セッション全体が有害キューに配置されます (有害キューを使用できる場合)。  
@@ -50,7 +50,8 @@ Windows Communication Foundation (WCF) は、1 つの受信側アプリケーシ
   
 5.  システム指定の `NetMsmqBinding` バインディングを使用するエンドポイントを構成します。  
   
-6.  <xref:System.Messaging> を使用してトランザクション キューを作成します。 代わりに、MSMQ (メッセージ キュー) または MMC を使用してキューを作成することもできます。 この場合、トランザクション キューを作成します。  
+6.  
+  <xref:System.Messaging> を使用してトランザクション キューを作成します。 代わりに、MSMQ (メッセージ キュー) または MMC を使用してキューを作成することもできます。 この場合、トランザクション キューを作成します。  
   
 7.  <xref:System.ServiceModel.ServiceHost> を使用して、サービスのサービス ホストを作成します。  
   
@@ -76,15 +77,12 @@ Windows Communication Foundation (WCF) は、1 つの受信側アプリケーシ
 ### <a name="code-for-the-service"></a>サービスのコード  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>クライアントのコード  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>関連項目
+
 - [セッションとキュー](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)

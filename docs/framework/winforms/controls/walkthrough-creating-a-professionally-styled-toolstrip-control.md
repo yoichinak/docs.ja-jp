@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115792"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成
 アプリケーションを与えることができます<xref:System.Windows.Forms.ToolStrip>から派生した独自のクラスを記述することで、プロフェッショナルな外観と動作を制御、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型。  
@@ -54,7 +54,7 @@ ms.locfileid: "57710746"
 3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
   
 ## <a name="designing-the-stackview-control"></a>StackView コントロールの設計  
- `StackView`コントロールが 1 つの子による複合コントロール<xref:System.Windows.Forms.ToolStrip>コントロール。 複合コントロールの詳細については、[カスタム コントロールのさまざまな](varieties-of-custom-controls.md)を参照してください。  
+ `StackView`コントロールが 1 つの子による複合コントロール<xref:System.Windows.Forms.ToolStrip>コントロール。 複合コントロールの詳細については、次を参照してください。[カスタム コントロールのさまざまな](varieties-of-custom-controls.md)します。  
   
 #### <a name="to-design-the-stackview-control"></a>StackView コントロールを設計するには  
   
@@ -122,7 +122,7 @@ ms.locfileid: "57710746"
   
 8.  名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
   
-     詳細については、[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)を参照してください。  
+     詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。  
   
 9. 次のコードを挿入、`stackButton_Click`イベント ハンドラー。  
   
@@ -179,15 +179,16 @@ ms.locfileid: "57710746"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、Office XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールを作成しました。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  
   
--   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、[ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)を参照してください。  
+-   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
   
 -   自動的に設定された標準メニューには、フォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](walkthrough-providing-standard-menu-items-to-a-form.md)します。  
   
 -   ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[方法 :メニューのマージと ToolStrip コントロールを MDI フォームを作成](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)
-- [方法: フォームに標準メニュー項目を提供します。](how-to-provide-standard-menu-items-to-a-form.md)
+- [方法: フォームに標準メニュー項目を追加する](how-to-provide-standard-menu-items-to-a-form.md)

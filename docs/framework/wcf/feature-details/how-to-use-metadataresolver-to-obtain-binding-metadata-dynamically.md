@@ -1,15 +1,15 @@
 ---
-title: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得するには'
+title: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得する'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 9887f74902a1f324f57e39a61a48b5826127cba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8efe2522d17829cc42d8ed1304983f6da46fb58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111203"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>方法: MetadataResolver を使用してバインディング メタデータを動的に取得するには
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>方法: MetadataResolver を使用してバインディング メタデータを動的に取得する
 ここでは、<xref:System.ServiceModel.Description.MetadataResolver> クラスを使用してバインディング メタデータを動的に取得する方法を示します。  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>バインディング メタデータを動的に取得するには  
@@ -46,4 +46,5 @@ ms.locfileid: "54735975"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)

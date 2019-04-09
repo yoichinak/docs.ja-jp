@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: c64dd88915fdd17deee415b4d6c3fd088fbcfbfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115532"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>方法: (Windows フォーム) MenuStrip にオプション ボタンを表示
 オプション ボタン、オプション ボタンとも呼ばれるは、ユーザーには、一度に 1 つだけ選択できますが、チェック ボックスをオンに似ています。 既定では、<xref:System.Windows.Forms.ToolStripMenuItem>クラスは、オプション ボタンの動作を提供していない、オプション ボタンのメニュー項目の動作を実装するためにカスタマイズできるチェック ボックスの動作、クラスを提供する<xref:System.Windows.Forms.MenuStrip>コントロール。  
@@ -81,6 +81,7 @@ ms.locfileid: "57718871"
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>
@@ -90,4 +91,4 @@ ms.locfileid: "57718871"
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
 - [MenuStrip コントロール](menustrip-control-windows-forms.md)
-- [方法: カスタムの ToolStripRenderer を実装します。](how-to-implement-a-custom-toolstriprenderer.md)
+- [方法: カスタムの ToolStripRenderer を実装する](how-to-implement-a-custom-toolstriprenderer.md)
