@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081919"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 クエリ ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
@@ -20,7 +20,7 @@ ms.locfileid: "54740568"
   
 ## <a name="arguments"></a>引数  
  `aliasedExpression`  
- グループ化の実行対象となる有効なクエリ式。 `expression` には、プロパティを指定することも、FROM 句から返されたプロパティを参照する非集計式を指定することもできます。 GROUP BY 句内の各式は、等価かどうかを比較できる型に評価される必要があります。 通常、これらの型は数値、文字列、日付などのスカラー プリミティブです。 コレクション別にグループ化することはできません。  
+ グループ化の実行対象となる有効なクエリ式。 `expression` プロパティまたは FROM 句によって返されるプロパティを参照する非集計式を指定できます。 GROUP BY 句内の各式は、等価かどうかを比較できる型に評価される必要があります。 通常、これらの型は数値、文字列、日付などのスカラー プリミティブです。 コレクション別にグループ化することはできません。  
   
 ## <a name="remarks"></a>Remarks  
  SELECT 句で集計関数が含まれている場合\<選択リスト >、GROUP BY には、各グループの集計値を計算します。 GROUP BY を指定する場合は、選択リスト内の非集計式内の各プロパティ名が GROUP BY リストに含まれるか、GROUP BY 式が選択リスト式に正確に一致する必要があります。  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084051"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>方法: 複合図形の塗りつぶしを制御する
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A>のプロパティを<xref:System.Windows.Media.GeometryGroup>または<xref:System.Windows.Media.PathGeometry>、複合図形を使用して、指定された点がジオメトリの一部であるかどうかを確認する「規則」を指定します。 2 つの値がある<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>と<xref:System.Windows.Media.FillRule.Nonzero>します。 以下のセクションでは、これら 2 つの規則の使用方法を説明します。  
@@ -62,5 +62,6 @@ ms.locfileid: "57357288"
 ## <a name="example"></a>例  
   
 ## <a name="see-also"></a>関連項目
+
 - [複合図形を作成する](how-to-create-a-composite-shape.md)
 - [ジオメトリの概要](geometry-overview.md)

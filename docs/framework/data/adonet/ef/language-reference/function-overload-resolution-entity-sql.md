@@ -2,12 +2,12 @@
 title: 関数のオーバーロードの解決方法 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 9b8e2a4f26c0101141292b768ee5870db78c90b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e80704da9657dccfbfea548df074a95327cdc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082043"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>関数のオーバーロードの解決方法 (Entity SQL)
 このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 関数の解決方法について説明します。  
@@ -31,6 +31,7 @@ ms.locfileid: "54625174"
  ユーザー定義関数の場合、そのユーザー定義関数に適したシグネチャとモデル定義関数が存在する場合でも、インライン クエリ関数の定義が優先されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [関数](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)
