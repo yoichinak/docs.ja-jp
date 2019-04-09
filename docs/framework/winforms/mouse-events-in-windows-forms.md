@@ -15,20 +15,20 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134980"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
-マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、[Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)を参照してください。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
+マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、次を参照してください。 [Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
   
 ## <a name="mouse-information"></a>マウスの情報  
- <xref:System.Windows.Forms.MouseEventArgs> は、マウス ボタンのクリック、およびマウスの動きの追跡に関連するマウス イベントのハンドラーに送信します。 <xref:System.Windows.Forms.MouseEventArgs> は、マウスのボタンが押された、およびマウスのホイールがスクロールされたといった、クライアント座標のマウス ポインターの場所を含む、マウスの現在の状態に関する情報を提供します。 マウス ポインターがコントロールの境界内に入った、または境界から出たときの通知など、いくつかのマウスイベントは、それ以上の情報はなしで <xref:System.EventArgs> をイベント ハンドラーに送信します。  
+ <xref:System.Windows.Forms.MouseEventArgs> は、マウス ボタンのクリック、およびマウスの動きの追跡に関連するマウス イベントのハンドラーに送信します。 <xref:System.Windows.Forms.MouseEventArgs> マウス ボタンが押されているし、マウス ホイールがスクロールするかどうかをクライアント座標でマウス ポインターの位置を含む、マウスの現在の状態に関する情報を提供します。 マウス ポインターがコントロールの境界内に入った、または境界から出たときの通知など、いくつかのマウスイベントは、それ以上の情報はなしで <xref:System.EventArgs> をイベント ハンドラーに送信します。  
   
- マウス ボタン、または、マウス ポインターの位置の現在の状態を確認して、マウス イベントの処理を回避する場合は、<xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.MouseButtons%2A> プロパティと <xref:System.Windows.Forms.Control.MousePosition%2A> プロパティも使用できます。 <xref:System.Windows.Forms.Control.MouseButtons%2A> は現在押されているマウス ボタンに関する情報を返します。 <xref:System.Windows.Forms.Control.MousePosition%2A> はマウス ポインターの画面の座標を返しますが、<xref:System.Windows.Forms.Cursor.Position%2A> によって返される値と同じです。  
+ マウス ボタン、または、マウス ポインターの位置の現在の状態を確認して、マウス イベントの処理を回避する場合は、<xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.MouseButtons%2A> プロパティと <xref:System.Windows.Forms.Control.MousePosition%2A> プロパティも使用できます。 <xref:System.Windows.Forms.Control.MouseButtons%2A> マウス ボタンが押された現在に関する情報を返します。 <xref:System.Windows.Forms.Control.MousePosition%2A> はマウス ポインターの画面の座標を返しますが、<xref:System.Windows.Forms.Cursor.Position%2A> によって返される値と同じです。  
   
 ## <a name="converting-between-screen-and-client-coordinates"></a>画面の座標とクライアント座標の間の変換  
  マウスの位置情報は、クライアント座標の場合と画面の座標の場合があるため、ポインターの座標システムの変換が必要になることがあります。 これは、<xref:System.Windows.Forms.Control> クラスで利用できる <xref:System.Windows.Forms.Control.PointToClient%2A> メソッドと <xref:System.Windows.Forms.Control.PointToScreen%2A> メソッドを使用して簡単に実行できます。  
@@ -67,57 +67,57 @@ ms.locfileid: "57712306"
 ### <a name="individual-controls"></a>個別のコントロール  
  次のコントロールは、標準のマウス クリック イベントの動作に準拠していません。  
   
--   <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.CheckBox>、<xref:System.Windows.Forms.ComboBox>、および <xref:System.Windows.Forms.RadioButton> の各コントロール  
+-   <xref:System.Windows.Forms.Button>、 <xref:System.Windows.Forms.CheckBox>、 <xref:System.Windows.Forms.ComboBox>、および<xref:System.Windows.Forms.RadioButton>コントロール  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.ComboBox> コントロールについて、ユーザーが編集フィールド、ボタン、またはリスト内の項目をクリックすると、後述するイベントの動作が発生します。  
   
-    -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   左クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
     -   右クリックします。クリック イベントは発生しません  
   
-    -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   左ダブル クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>;<xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
     -   右ダブル クリックします。クリック イベントは発生しません  
   
--   <xref:System.Windows.Forms.TextBox>、<xref:System.Windows.Forms.RichTextBox>、<xref:System.Windows.Forms.ListBox>、<xref:System.Windows.Forms.MaskedTextBox> および <xref:System.Windows.Forms.CheckedListBox> の各コントロール  
+-   <xref:System.Windows.Forms.TextBox>、 <xref:System.Windows.Forms.RichTextBox>、 <xref:System.Windows.Forms.ListBox>、 <xref:System.Windows.Forms.MaskedTextBox>、および<xref:System.Windows.Forms.CheckedListBox>コントロール  
   
     > [!NOTE]
     >  ユーザーがこれらのコントロール内で任意の場所をクリックすると、後述するイベントの動作が発生します。  
   
-    -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   左クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
     -   右クリックします。クリック イベントは発生しません  
   
-    -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   左ダブル クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>、 <xref:System.Windows.Forms.Control.DoubleClick>、 <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
     -   右ダブル クリックします。クリック イベントは発生しません  
   
--   <xref:System.Windows.Forms.ListView> コントロール  
+-   <xref:System.Windows.Forms.ListView> control  
   
     > [!NOTE]
     >  ユーザーが <xref:System.Windows.Forms.ListView> コントロールの項目をクリックした場合のみ、後述するイベントの動作が発生します。 コントロールのその他の場所をクリックした場合、イベントは発生しません。 後述するイベントに加えて、<xref:System.Windows.Forms.ListView.BeforeLabelEdit> と <xref:System.Windows.Forms.ListView.AfterLabelEdit> のイベントがあり、<xref:System.Windows.Forms.ListView> コントロールによる検証を使用する場合のためにまとめておきます。  
   
-    -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   左クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   右クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   右クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   左ダブル クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>;<xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   右ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   右ダブル クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>;<xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
--   <xref:System.Windows.Forms.TreeView> コントロール  
+-   <xref:System.Windows.Forms.TreeView> control  
   
     > [!NOTE]
     >  ユーザーが項目自体をクリックするか、<xref:System.Windows.Forms.TreeView> コントロールの項目の右側をクリックした場合にのみ、後述するイベントの動作が発生します。 コントロールのその他の場所をクリックした場合、イベントは発生しません。 後述するイベントに加えて、<xref:System.Windows.Forms.TreeView.BeforeCheck>、<xref:System.Windows.Forms.TreeView.BeforeSelect>、<xref:System.Windows.Forms.TreeView.BeforeLabelEdit>、<xref:System.Windows.Forms.TreeView.AfterSelect>、<xref:System.Windows.Forms.TreeView.AfterCheck>、および <xref:System.Windows.Forms.TreeView.AfterLabelEdit> の各イベントがあり、<xref:System.Windows.Forms.TreeView> コントロールを持つ検証を使用する場合のためにまとめておきます。  
   
-    -   左クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   左クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   右クリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>  
+    -   右クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   左ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   左ダブル クリック: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>;<xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   右ダブルクリック : <xref:System.Windows.Forms.Control.Click>、<xref:System.Windows.Forms.Control.MouseClick>、<xref:System.Windows.Forms.Control.DoubleClick>、<xref:System.Windows.Forms.Control.MouseDoubleClick>  
+    -   右ダブル クリックして: <xref:System.Windows.Forms.Control.Click>、 <xref:System.Windows.Forms.Control.MouseClick>;<xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
 ### <a name="painting-behavior-of-toggle-controls"></a>切り替えコントロールの描画の動作  
  <xref:System.Windows.Forms.ButtonBase> クラスから派生するコントロールなど、切り替えコントロールには、次のようなマウス クリック イベントと組み合わせた独自の描画の動作があります。  
@@ -143,4 +143,5 @@ ms.locfileid: "57712306"
   <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)
