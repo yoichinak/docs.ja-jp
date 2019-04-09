@@ -1,5 +1,5 @@
 ---
-title: '方法: タブ ページを無効にします。'
+title: '方法: タブ ページを無効化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107576"
 ---
-# <a name="how-to-disable-tab-pages"></a>方法: タブ ページを無効にします。
+# <a name="how-to-disable-tab-pages"></a>方法: タブ ページを無効化する
 状況によっては、Windows フォーム アプリケーション内で使用できるデータ アクセスを制限するされます。 タブ コントロールのタブ ページに表示されるデータがある場合をこの 1 つの例として使用することがあります。管理者には、ゲストまたは低いレベルのユーザーを制限するタブ ページの情報があります。  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>タブ ページをプログラムで無効にするには  
@@ -102,7 +102,8 @@ ms.locfileid: "57705000"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
-- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
+- [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

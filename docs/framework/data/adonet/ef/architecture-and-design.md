@@ -2,12 +2,12 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096138"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
 SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
@@ -91,7 +91,7 @@ class TopClause : ISqlFragment {
 }  
 ```  
   
-### <a name="symbols"></a>Symbols  
+### <a name="symbols"></a>シンボル  
  Symbol 関連のクラスおよびシンボル テーブルは、入力の別名の名前変更、結合の別名のフラット化、および列の別名の名前変更を実行します。  
   
  Symbol クラスは、エクステント、入れ子になった SELECT ステートメント、または列を表します。 Symbol クラスは、使用後に名前を変更できるように、実際の別名の代わりに使用されます。また、Symbol クラスが表す成果物の追加情報も伝達します (型も同様です)。  
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  入力の別名のリダイレクトを説明するための最初の例を参照してください[コマンド ツリーのベスト プラクティスからの SQL の生成](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)します。  この例では、"a" を投影の "b" にリダイレクトする必要がありました。  
   
- SqlSelectStatement オブジェクトが作成されると、ノードへの入力であるエクステントが SqlSelectStatement の From プロパティに配置されます。 Symbol (<symbol_b>) は、入力バインディング名 ("b") に基づいて作成され、エクステントおよび "AS  " +  <symbol_b> が From 句に追加されることを表します。  シンボルは FromExtents プロパティにも追加されます。  
+ SqlSelectStatement オブジェクトが作成されると、ノードへの入力であるエクステントが SqlSelectStatement の From プロパティに配置されます。 シンボル (< symbol_b >) が、そのエクステントを表す入力バインディング名 ("b") と"AS"に基づいて作成 + < symbol_b > が From 句に追加されます。  シンボルは FromExtents プロパティにも追加されます。  
   
- シンボルはシンボル テーブルにも追加され、入力バインディング名がシンボルにリンクされます ("b", <symbol_b>)。  
+ シンボルは、入力バインディング名をリンクする ("b", < symbol_b >) シンボル テーブルにも追加されます。  
   
  後続のノードが SqlSelectStatement を再利用する場合、シンボル テーブルにエントリが追加され、その入力バインディング名がそのシンボルにリンクされます。 この例では、入力バインディング名が"a"の DbProjectExpression は、SqlSelectStatement を再利用を追加 ("a"、 \< symbol_b >) をテーブルにします。  
   
- SqlSelectStatement を再利用しているノードの入力バインディング名を式で参照すると、その参照は、シンボル テーブルを使用して、リダイレクトされた正しいシンボルに解決されます。 "a" を表す DbVariableReferenceExpression にアクセスしているときに "a.x" から "a" に解決されると、Symbol <symbol_b> に解決されます。  
+ SqlSelectStatement を再利用しているノードの入力バインディング名を式で参照すると、その参照は、シンボル テーブルを使用して、リダイレクトされた正しいシンボルに解決されます。 ときに"a.x"から"a"を表す DbVariableReferenceExpression にアクセス中には、"a"は、Symbol < symbol_b > に解決されます。  
   
 ### <a name="join-alias-flattening"></a>結合の別名のフラット化  
  結合の別名のフラット化は、「DbPropertyExpression」で説明されているように、DbPropertyExpression にアクセスするときに行われます。  
@@ -389,7 +389,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 ```  
   
 ### <a name="dbnotexpression"></a>DbNotExpression  
- 場合によっては、入力式を使用して DbNotExpression の変換を折りたたむことができます。 次に例を示します。  
+ 場合によっては、入力式を使用して DbNotExpression の変換を折りたたむことができます。 例えば:  
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  列の名前変更は、Symbol オブジェクトを文字列に書き込むときに行われます。 最初のフェーズの AddDefaultColumns は、特定の列のシンボルの名前を変更する必要があるかどうかを判断します。 2 番目のフェーズでは、生成された名前が AllColumnNames で使用される名前と競合しないことを確認するために、名前の変更のみが行われます。  
   
- エクステントの別名と列の両方について一意の名前を生成するには、<existing_name>_n を使用します。n はまだ使用されていない最小の別名です。 すべての別名のグローバル リストを使用すると、連鎖名前変更の必要性が高くなります。  
+ エクステントの別名と列の両方の一意の名前を生成するために、n はまだ使用されていない最小の別名 < existing_name > _n を使用します。 すべての別名のグローバル リストを使用すると、連鎖名前変更の必要性が高くなります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サンプル プロバイダーでの SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

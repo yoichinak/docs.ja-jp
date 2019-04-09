@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092470"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
 6.  RP はセキュリティ トークンからクライアントのクレームを抽出し、承認決定を実行します。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET を使用したフェデレーション認証モジュールの使用  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) は [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションにフェデレーション認証を追加可能にする HTTP モジュールです。 フェデレーション認証により、認証ロジックが STS によって処理されるので、ビジネス ロジックの作成に集中できます。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) は、フェデレーション認証を追加できるようにする HTTP モジュール、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション。 フェデレーション認証により、認証ロジックが STS によって処理されるので、ビジネス ロジックの作成に集中できます。  
   
  WS-FAM を構成して、未認証の要求のリダイレクト先に対して STS を指定します。 WIF では次の 2 つの方法でユーザーを認証できます。  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
  ![コントロールを使用するサインインを示す SAM タイミング図](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>イベント  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule>、および親クラス <xref:System.IdentityModel.Services.HttpModuleBase> は、HTTP 要求処理のさまざまな段階でイベントを発生させます。 `global.asax` アプリケーションの [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ファイルでこれらのイベントを処理できます。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、 <xref:System.IdentityModel.Services.SessionAuthenticationModule>、および親クラス<xref:System.IdentityModel.Services.HttpModuleBase>、HTTP 要求の処理のさまざまな段階でイベントを発生させます。 `global.asax` アプリケーションの [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ファイルでこれらのイベントを処理できます。  
   
 -   ASP.NET のインフラストラクチャは、モジュールを初期化するためにモジュールの <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> メソッドを呼び出します。  
   
@@ -140,6 +140,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

@@ -1,18 +1,18 @@
 ---
-title: '方法: Windows フォームに単純バインド コントロールを作成します。'
+title: '方法: Windows フォームに単純バインド コントロールを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094080"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成します。
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>方法: Windows フォームに単純バインド コントロールを作成する
 *単純バインディング*コントロールでデータセット テーブルの列の値などの 1 つのデータ要素を表示することができます。 できます単純にバインドするコントロールの任意のプロパティのデータ値にします。  
   
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "57708341"
   
 ### <a name="to-simple-bind-a-control"></a>単純なコントロールをバインドする  
   
-1.  データ ソースに接続します。 詳細については、[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)を参照してください。  
+1.  データ ソースに接続します。 詳細については、次を参照してください。[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)します。  
   
 2.  フォームのコントロールを選択し、表示、**プロパティ**ウィンドウ。  
   
@@ -46,6 +46,7 @@ ms.locfileid: "57708341"
     >  単純バインド コントロールでは、1 つのデータ要素のみを表示するためには、Windows フォームに単純バインド コントロールにナビゲーション ロジックを含める非常に一般的です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Binding>
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)
 - [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

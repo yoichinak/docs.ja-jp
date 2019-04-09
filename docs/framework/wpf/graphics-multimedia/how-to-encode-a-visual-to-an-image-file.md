@@ -9,12 +9,12 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096785"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>方法: ビジュアルをイメージ ファイルにエンコードする
 エンコードする方法を示します、<xref:System.Windows.Media.Visual>オブジェクトを使用してイメージ ファイルに、<xref:System.Windows.Media.Imaging.RenderTargetBitmap>と<xref:System.Windows.Media.Imaging.PngBitmapEncoder>します。  
@@ -28,6 +28,7 @@ ms.locfileid: "57355996"
  A<xref:System.Windows.Media.Imaging.PngBitmapEncoder>でこの例では、派生のいずれかが使用されていた<xref:System.Windows.Media.Imaging.BitmapEncoder>オブジェクトが、イメージ ファイルの作成に使用されている可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.DrawingContext>
 - [イメージングの概要](imaging-overview.md)
 - [Drawing オブジェクトの概要](drawing-objects-overview.md)
