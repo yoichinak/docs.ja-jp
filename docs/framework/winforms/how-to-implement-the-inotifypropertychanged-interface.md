@@ -1,5 +1,5 @@
 ---
-title: '方法: INotifyPropertyChanged インターフェイスを実装します。'
+title: '方法: INotifyPropertyChanged インターフェイスを実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57704090"
 ---
-# <a name="how-to-implement-the-inotifypropertychanged-interface"></a>方法: INotifyPropertyChanged インターフェイスを実装します。
+# <a name="how-to-implement-the-inotifypropertychanged-interface"></a>方法: INotifyPropertyChanged インターフェイスを実装する
 次のコード例は、実装する方法を示します、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 Windows フォーム データ バインディングで使用されているビジネス オブジェクトでこのインターフェイスを実装します。 実装された場合、インターフェイスは、ビジネス オブジェクトでプロパティの変更をバインドされたコントロールに通信します。  
   
 ## <a name="example"></a>例  
