@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300984"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する
 パスワード ボックスは、ユーザーが入力文字列中に、プレース ホルダー文字を表示する Windows フォーム テキスト ボックスです。  
   
 ### <a name="to-create-a-password-text-box"></a>パスワード テキスト ボックスを作成するには  
   
-1.  設定、<xref:System.Windows.Forms.TextBox.PasswordChar%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>特定の文字をコントロールします。  
+1. 設定、<xref:System.Windows.Forms.TextBox.PasswordChar%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>特定の文字をコントロールします。  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A>プロパティは、テキスト ボックスに表示される文字を指定します。 たとえば、アスタリスクをパスワード ボックスに表示する場合は、指定 * の<xref:System.Windows.Forms.TextBox.PasswordChar%2A>プロパティ ウィンドウでプロパティ。 次に、どのような文字は、ユーザーがテキスト ボックスに関係なく、アスタリスクが表示されます。  
   
-2.  (省略可能)設定、<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>プロパティ。 プロパティは、テキスト ボックスに入力できる文字数を決定します。 最大長を超過した場合は、ビープ音が鳴ります、テキスト ボックスは、多くの文字を受け付けません。 使用すると、パスワードを推測しようとしているハッカーのパスワードの最大長としてしない可能性がありますので注意があります。  
+2. (省略可能)設定、<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>プロパティ。 プロパティは、テキスト ボックスに入力できる文字数を決定します。 最大長を超過した場合は、ビープ音が鳴ります、テキスト ボックスは、多くの文字を受け付けません。 使用すると、パスワードを推測しようとしているハッカーのパスワードの最大長としてしない可能性がありますので注意があります。  
   
      次のコード例では、最大で 14 文字の文字列をそのまま使用され、文字列の代わりにアスタリスクが表示されるテキスト ボックスを初期化する方法を示します。 `InitializeMyControl`プロシージャが自動的に実行されません。 呼び出す必要があります。  
   

@@ -2,12 +2,12 @@
 title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089888"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310422"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework には、既存のアプリケーションにとっていくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 使用する利点の詳細については、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください[Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)と[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
@@ -31,11 +31,11 @@ ms.locfileid: "59089888"
 > [!NOTE]
 >  Visual Studio 2008 以降で Entity Data Model ツールを使用する場合は、自動的に実行これらすべてのタスク。 詳細については、「[方法 :エンティティ データ モデル ウィザードを使用して](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))します。  
   
-1.  アプリケーションをアップグレードします。  
+1. アプリケーションをアップグレードします。  
   
      Visual Studio の以前のバージョンを使用して作成されたプロジェクトと[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]使用して、Visual Studio 2008 SP1 にアップグレードする必要があります、 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 3.5 SP1 以降します。  
   
-2.  モデルおよびマッピングを定義します。  
+2. モデルおよびマッピングを定義します。  
   
      モデル ファイルとマッピング ファイルでは、概念モデルのエンティティ、データ ソースの構造 (テーブル、ストアド プロシージャ、ビューなど)、およびエンティティとデータ ソース構造との間のマッピングを定義します。 詳細については、「[方法 :モデルを定義して、マッピング ファイルを手動で](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))します。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59089888"
     > [!NOTE]
     >  Entity Data Model デザイナーを使用すると、概念モデルのエンティティの名前を既存のオブジェクトに合わせて変更できます。 詳細については、次を参照してください。 [Entity Data Model デザイナー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))します。  
   
-3.  接続文字列を定義します。  
+3. 接続文字列を定義します。  
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で概念モデルに対してクエリを実行する際には特殊な形式の接続文字列を使用します。 この接続文字列は、モデル ファイルとマッピング ファイルに関する情報とデータ ソースへの接続に関する情報をカプセル化したものです。 詳細については、「[方法 :接続文字列を定義](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)します。  
   
-4.  Visual Studio プロジェクトを構成します。  
+4. Visual Studio プロジェクトを構成します。  
   
      参照[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アセンブリおよびモデルとマッピング ファイルは、Visual Studio プロジェクトに追加する必要があります。 これらのマッピング ファイルをプロジェクトに追加することで、接続文字列で指定された場所にアプリケーションと共に配置されるようにすることができます。 詳細については、「[方法 :Entity Framework プロジェクトを手動で構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))します。  
   

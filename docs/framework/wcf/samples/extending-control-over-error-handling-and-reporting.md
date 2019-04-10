@@ -2,12 +2,12 @@
 title: エラー処理およびレポートに対する制御の拡張
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303207"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>エラー処理およびレポートに対する制御の拡張
 このサンプルではエラー処理およびを使用して Windows Communication Foundation (WCF) サービスのエラー報告に対する制御を拡張する方法、<xref:System.ServiceModel.Dispatcher.IErrorHandler>インターフェイス。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)いくつか追加のコード エラーを処理するサービスに追加します。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
@@ -141,13 +141,13 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  error.txt ファイル用に c:\logs ディレクトリを作成したことを確認します。 または、`CalculatorErrorHandler.HandleError` で使用されるファイル名を変更します。  
+3. error.txt ファイル用に c:\logs ディレクトリを作成したことを確認します。 または、`CalculatorErrorHandler.HandleError` で使用されるファイル名を変更します。  
   
-4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

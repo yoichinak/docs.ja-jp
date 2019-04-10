@@ -14,23 +14,23 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096037"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298020"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>方法: ColorDialog コンポーネントを使用してカラー パレットを表示する
 [ColorDialog](colordialog-component-windows-forms.md)コンポーネントは、色のパレットが表示され、ユーザーが選択した色を含むプロパティを返します。  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>ColorDialog コンポーネントを使用して色を選択するには  
   
-1.  使用して、ダイアログ ボックスを表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。  
+1. 使用して、ダイアログ ボックスを表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。  
   
-2.  使用して、 <xref:System.Windows.Forms.DialogResult>  ダイアログ ボックスが閉じられた方法を決定するプロパティ。  
+2. 使用して、 <xref:System.Windows.Forms.DialogResult>  ダイアログ ボックスが閉じられた方法を決定するプロパティ。  
   
-3.  使用して、<xref:System.Windows.Forms.ColorDialog.Color%2A>のプロパティ、<xref:System.Windows.Forms.ColorDialog>選択した色を設定するコンポーネント。  
+3. 使用して、<xref:System.Windows.Forms.ColorDialog.Color%2A>のプロパティ、<xref:System.Windows.Forms.ColorDialog>選択した色を設定するコンポーネント。  
   
      次の例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーが表示されます、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 色が選択されると、ユーザーの場合、クリックした**OK**、<xref:System.Windows.Forms.Button>コントロールの背景色が、選択した色に設定されています。 この例では、フォームに、<xref:System.Windows.Forms.Button>コントロールと<xref:System.Windows.Forms.ColorDialog>コンポーネント。  
   

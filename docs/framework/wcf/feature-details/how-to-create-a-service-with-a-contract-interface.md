@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298540"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>方法: コントラクト インターフェイスを使用してサービスを作成する
 インターフェイスを使用する Windows Communication Foundation (WCF) コントラクトを作成することをお勧めです。 このコントラクトでは、サービスが提供する操作にアクセスするために必要なメッセージのコレクションと構造を指定します。 このインターフェイスでは、インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用し、公開するメソッドに <xref:System.ServiceModel.OperationContractAttribute> クラスを適用して、入力と出力の種類を定義します。  
@@ -19,13 +19,13 @@ ms.locfileid: "59128714"
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>インターフェイスを使用した WCF コントラクトの作成  
   
-1.  Visual Basic を使用して新しいインターフェイスを作成C#、またはその他の共通言語ランタイム言語。  
+1. Visual Basic を使用して新しいインターフェイスを作成C#、またはその他の共通言語ランタイム言語。  
   
-2.  インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用します。  
+2. インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用します。  
   
-3.  インターフェイスのメソッドを定義します。  
+3. インターフェイスのメソッドを定義します。  
   
-4.  適用、<xref:System.ServiceModel.OperationContractAttribute>パブリックの WCF コントラクトの一部として公開する必要がある各メソッドにクラス。  
+4. 適用、<xref:System.ServiceModel.OperationContractAttribute>パブリックの WCF コントラクトの一部として公開する必要がある各メソッドにクラス。  
   
 ## <a name="example"></a>例  
  次のコード例は、サービス コントラクトを定義するインターフェイスを示しています。  

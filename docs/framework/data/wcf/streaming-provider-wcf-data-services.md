@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087899"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298878"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 データ サービスは、ラージ オブジェクトのバイナリ データを公開できます。 このバイナリ データは、ビデオ ストリームとオーディオ ストリーム、画像、ドキュメント ファイル、またはその他の種類のバイナリのメディアを表すことができます。 データ モデルのエンティティに 1 つ以上のバイナリ プロパティが含まれている場合、データ サービスは、このバイナリ データを応答フィードのエントリ内に Base-64 としてエンコードして返します。 読み込みと、この方法で大きなバイナリ データをシリアル化するには、パフォーマンスに影響するので、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]が所属するエンティティの独立したバイナリ データを取得するためのメカニズムを定義します。 これは、バイナリ データとエンティティを分離して 1 つ以上のデータ ストリームを生成することで実現されます。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087899"
   
  バイナリ データのストリーミングをサポートするデータ サービスを構成するには、次の手順に従う必要があります。  
   
-1.  データ モデル内の 1 つ以上のエンティティをメディア リンク エントリとして属性化します。 これらのエンティティには、ストリーミング対象のバイナリ データを含めないでください。 エンティティのバイナリ プロパティは、常に Base-64 でエンコードされたバイナリとしてエントリで返されます。  
+1. データ モデル内の 1 つ以上のエンティティをメディア リンク エントリとして属性化します。 これらのエンティティには、ストリーミング対象のバイナリ データを含めないでください。 エンティティのバイナリ プロパティは、常に Base-64 でエンコードされたバイナリとしてエントリで返されます。  
   
-2.  T:System.Data.Services.Providers.IDataServiceStreamProvider インターフェイスを実装します。  
+2. T:System.Data.Services.Providers.IDataServiceStreamProvider インターフェイスを実装します。  
   
-3.  <xref:System.IServiceProvider> インターフェイスを実装するデータ サービスを定義します。 データ サービスは、<xref:System.IServiceProvider.GetService%2A> の実装を使用してストリーミング データ プロバイダーの実装にアクセスします。 このメソッドは、適切なストリーミング プロバイダーの実装を返します。  
+3. <xref:System.IServiceProvider> インターフェイスを実装するデータ サービスを定義します。 データ サービスは、<xref:System.IServiceProvider.GetService%2A> の実装を使用してストリーミング データ プロバイダーの実装にアクセスします。 このメソッドは、適切なストリーミング プロバイダーの実装を返します。  
   
-4.  Web アプリケーション構成で大きいメッセージ ストリームを有効にします。  
+4. Web アプリケーション構成で大きいメッセージ ストリームを有効にします。  
   
-5.  サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。  
+5. サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。  
   
  このトピックの例ではストリーミング フォト サービスは、投稿の詳細については、サンプルに基づきます[Data Services ストリーミング プロバイダー シリーズ。ストリーミング プロバイダー (パート 1) を実装する](https://go.microsoft.com/fwlink/?LinkID=198989)します。 このサンプル サービスのソース コードは、[ストリーミング フォト データ サービスのサンプル ページ](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
   

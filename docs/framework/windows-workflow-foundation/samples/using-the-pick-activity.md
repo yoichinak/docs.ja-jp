@@ -2,12 +2,12 @@
 title: Pick アクティビティの使用
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302981"
 ---
 # <a name="using-the-pick-activity"></a>Pick アクティビティの使用
 このサンプルでは、<xref:System.Activities.Statements.Pick> アクティビティを使用する方法を示します。
@@ -24,25 +24,25 @@ ms.locfileid: "48848284"
 
  デザイナーのワークフローのデザイナー バージョンのサンプルでは、デザイナーでワークフローを作成する方法を示します。 次のファイルがあります。
 
--   Program.cs: サンプル ワークフローを実行する `Main` 関数が含まれています。
+-   Program.cs:含まれています、`Main`サンプル ワークフローを実行する関数。
 
--   ReadString.cs: コンソールからの入力を読み取るカスタム アクティビティです。
+-   Readstring.cs:コンソールからいくつかの入力を読み取るカスタム アクティビティ。
 
--   Sequence1.xaml: Pick を使用する、デザイナーで作成されたワークフローです。
+-   Sequence1.xaml:Pick を使用するデザイナーを使用して作成されたワークフローです。
 
  コード化されたワークフロー コード化されたバージョンのサンプルでは、デザイナーでワークフローを作成する方法を示します。 次のファイルがあります。
 
--   Program.cs: サンプル ワークフローを実行する `Main` 関数が含まれています。
+-   Program.cs:含まれています、`Main`サンプル ワークフローを実行する関数。
 
--   ReadString.cs: コンソールからの入力を読み取るカスタム アクティビティです。
+-   Readstring.cs:コンソールからいくつかの入力を読み取るカスタム アクティビティ。
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、Pick.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、Pick.sln ソリューション ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  ソリューションを実行するには、F5 キーを押します。
+3. ソリューションを実行するには、F5 キーを押します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

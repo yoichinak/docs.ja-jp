@@ -2,12 +2,12 @@
 title: ETW トレース
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300685"
 ---
 # <a name="etw-tracing"></a>ETW トレース
 このサンプルでは、Event Tracing for Windows (ETW) と、このサンプルに用意されている `ETWTraceListener` を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ETW トレースが含まれています。  
@@ -80,22 +80,22 @@ Logman stop Wcf
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行済みであるかどうかを必ず、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行済みであるかどうかを必ず、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
     > [!NOTE]
     >  RegisterProvider.bat、SetupETW.bat、および CleanupETW.bat コマンドを使用するには、ローカル管理者アカウントで実行する必要があります。 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以降を使用している場合は、コマンド プロンプトも管理者権限で実行する必要があります。 これを行うには、コマンド プロンプトのアイコンを右クリックし、をクリックして**管理者として実行**します。  
   
-3.  サンプルを実行する前に、クライアントとサーバーで RegisterProvider.bat を実行します。 この結果、トレースを生成する ETWTracingSampleLog.etl ファイルがセットアップされます。このトレースはサービス トレース ビューアで読み取ることができます。 このファイルは、C:\logs フォルダにあります。 このフォルダーが存在しない場合はフォルダーを作成する必要があります。作成しない場合、トレースは生成されません。 次に、クライアント コンピューターとサーバー コンピューターで SetupETW.bat を実行し、ETW トレース セッションを開始します。 SetupETW.bat ファイルは、CS\Client フォルダーの下にあります。  
+3. サンプルを実行する前に、クライアントとサーバーで RegisterProvider.bat を実行します。 この結果、トレースを生成する ETWTracingSampleLog.etl ファイルがセットアップされます。このトレースはサービス トレース ビューアで読み取ることができます。 このファイルは、C:\logs フォルダにあります。 このフォルダーが存在しない場合はフォルダーを作成する必要があります。作成しない場合、トレースは生成されません。 次に、クライアント コンピューターとサーバー コンピューターで SetupETW.bat を実行し、ETW トレース セッションを開始します。 SetupETW.bat ファイルは、CS\Client フォルダーの下にあります。  
   
-4.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+4. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-5.  サンプルの使用が終わったら、CleanupETW.bat を実行して ETWTracingSampleLog.etl ファイルの作成を完了します。  
+5. サンプルの使用が終わったら、CleanupETW.bat を実行して ETWTracingSampleLog.etl ファイルの作成を完了します。  
   
-6.  サービス トレース ビューア内で ETWTracingSampleLog.etl ファイルを開きます。 このバイナリ形式のファイルを .svclog ファイルとして保存するかどうかを尋ねるメッセージが表示されます。  
+6. サービス トレース ビューア内で ETWTracingSampleLog.etl ファイルを開きます。 このバイナリ形式のファイルを .svclog ファイルとして保存するかどうかを尋ねるメッセージが表示されます。  
   
-7.  新しく作成された .svclog ファイルをサービス トレース ビューアー内で開き、ETW トレースと ServiceModel トレースを表示します。  
+7. 新しく作成された .svclog ファイルをサービス トレース ビューアー内で開き、ETW トレースと ServiceModel トレースを表示します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

@@ -2,12 +2,12 @@
 title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307575"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
 SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  これらのノードへのアクセスは、次のパターンに従います。  
   
-1.  リレーショナル入力にアクセスし、結果の SqlSelectStatement を取得します。 リレーショナル ノードへの入力は次のいずれかになります。  
+1. リレーショナル入力にアクセスし、結果の SqlSelectStatement を取得します。 リレーショナル ノードへの入力は次のいずれかになります。  
   
     -   エクステントを含むリレーショナル ノード (DbScanExpression など)。 このようなノードにアクセスすると、SqlSelectStatement が返されます。  
   
     -   集合演算式 (UNION ALL など)。 結果は、角かっこで囲み、新しい SqlSelectStatement の FROM 句に配置する必要があります。  
   
-2.  入力によって生成された SqlSelectStatement に現在のノードを追加できるかどうかを確認します。 これについては、「SQL ステートメントへの式ノードのグループ化」で説明しています。 追加できない場合は、次の操作を行います。  
+2. 入力によって生成された SqlSelectStatement に現在のノードを追加できるかどうかを確認します。 これについては、「SQL ステートメントへの式ノードのグループ化」で説明しています。 追加できない場合は、次の操作を行います。  
   
     -   現在の SqlSelectStatement オブジェクトを表示します。  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   スタックの先頭に新しいオブジェクトを配置します。  
   
-3.  入力式バインディングを入力から正しいシンボルにリダイレクトします。 この情報は、SqlSelectStatement オブジェクトに保持されます。  
+3. 入力式バインディングを入力から正しいシンボルにリダイレクトします。 この情報は、SqlSelectStatement オブジェクトに保持されます。  
   
-4.  新しい SymbolTable スコープを追加します。  
+4. 新しい SymbolTable スコープを追加します。  
   
-5.  式の非入力部分 (投影や述語など) にアクセスします。  
+5. 式の非入力部分 (投影や述語など) にアクセスします。  
   
-6.  グローバル スタックに追加されたすべてのオブジェクトを表示します。  
+6. グローバル スタックに追加されたすべてのオブジェクトを表示します。  
   
  SQL で DbSkipExpression に相当するものはありません。 論理上、次のように変換されます。  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  次に、入力を 1 つずつ処理します。 入力ごとに、次の手順を実行します。  
   
-1.  入力にアクセスします。  
+1. 入力にアクセスします。  
   
-2.  ProcessJoinInputResult を呼び出して、入力にアクセスした結果の後処理を実行します。ProcessJoinInputResult は、結合式の子にアクセスした後にシンボル テーブルを保持し、場合によっては、子によって生成された SqlSelectStatement を終了します。 子の結果は次のいずれかになります。  
+2. ProcessJoinInputResult を呼び出して、入力にアクセスした結果の後処理を実行します。ProcessJoinInputResult は、結合式の子にアクセスした後にシンボル テーブルを保持し、場合によっては、子によって生成された SqlSelectStatement を終了します。 子の結果は次のいずれかになります。  
   
     -   親が追加される SqlSelectStatement とは別の SqlSelectStatement。 この場合、既定の列を追加して完了する必要があります。 入力が Join だった場合、新しい結合シンボルを作成する必要があります。 それ以外の場合は、標準のシンボルを作成します。  
   

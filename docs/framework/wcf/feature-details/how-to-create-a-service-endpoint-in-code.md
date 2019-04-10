@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 65d26c0b9a41a6825108b73f822add4d91400055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302531"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>方法: コード内にサービス エンドポイントを作成する
 この例では、電卓サービスに `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスに実装し、コード内でサービス エンドポイントを定義します。このエンドポイントでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> クラスを使用するように指定します。  
@@ -19,22 +19,22 @@ ms.locfileid: "59139868"
   
 #### <a name="to-create-a-service-endpoint-in-code"></a>コード内にサービス エンドポイントを作成するには  
   
-1.  サービス コントラクトを定義するインターフェイスを作成します。  
+1. サービス コントラクトを定義するインターフェイスを作成します。  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  手順 1. で定義したサービス コントラクトを実装します。  
+2. 手順 1. で定義したサービス コントラクトを実装します。  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  アプリケーションをホストする場合は、サービスで使用するサービスとバインディングのベース アドレスを作成します。  
+3. アプリケーションをホストする場合は、サービスで使用するサービスとバインディングのベース アドレスを作成します。  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  ホストを作成し、<xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> または他のオーバーロードの 1 つを呼び出して、ホストのサービス エンドポイントを追加します。  
+4. ホストを作成し、<xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29> または他のオーバーロードの 1 つを呼び出して、ホストのサービス エンドポイントを追加します。  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  

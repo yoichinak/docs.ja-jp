@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304585"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities は、開発者が Visual Basic または Visual C# を使用して Entity Framework 概念モデルに対するクエリを作成するための統合言語クエリ (LINQ) のサポートを提供します。 Entity Framework に対するクエリで代表的なものが、コマンド ツリー クエリです。これはオブジェクト コンテキストに対して実行されます。 LINQ to Entities では、統合言語クエリ (LINQ) クエリをコマンド ツリー クエリに変換し、そのクエリを Entity Framework に対して実行します。返されたオブジェクトは、Entity Framework でも LINQ でも使用できます。 次に、LINQ to Entities クエリを作成して実行する手順を示します。  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601> から <xref:System.Data.Objects.ObjectContext> インスタンスを作成します。  
+1. <xref:System.Data.Objects.ObjectQuery%601> から <xref:System.Data.Objects.ObjectContext> インスタンスを作成します。  
   
-2.  <xref:System.Data.Objects.ObjectQuery%601> インスタンスを使用して、C# または Visual Basic で LINQ to Entities クエリを作成します。  
+2. <xref:System.Data.Objects.ObjectQuery%601> インスタンスを使用して、C# または Visual Basic で LINQ to Entities クエリを作成します。  
   
-3.  LINQ 標準クエリ演算子および標準クエリ式をコマンド ツリーに変換します。  
+3. LINQ 標準クエリ演算子および標準クエリ式をコマンド ツリーに変換します。  
   
-4.  コマンド ツリーで表されたクエリをデータ ソースに対して実行します。 実行中にデータ ソースに対してスローされた例外は、クライアントに直接渡されます。  
+4. コマンド ツリーで表されたクエリをデータ ソースに対して実行します。 実行中にデータ ソースに対してスローされた例外は、クライアントに直接渡されます。  
   
-5.  クエリの結果をクライアントに返します。  
+5. クエリの結果をクライアントに返します。  
   
 ## <a name="constructing-an-objectquery-instance"></a>ObjectQuery インスタンスの構築  
  <xref:System.Data.Objects.ObjectQuery%601> ジェネリック クラスは、0 個以上の型指定されたエンティティのコレクションを返すクエリを表します。 通常、オブジェクト クエリは手作業で構築されるのではなく、既存のオブジェクト コンテキストから構築され、常にそのオブジェクト コンテキストに属しています。 このコンテキストにより、クエリの作成と実行に必要な接続情報とメタデータ情報が取得されます。 <xref:System.Data.Objects.ObjectQuery%601> ジェネリック クラスでは、<xref:System.Linq.IQueryable%601> ジェネリック インターフェイスが実装されます。このインターフェイスのビルダー メソッドにより、LINQ クエリを段階的に構築できます。 C# `var` キーワード (Visual Basic の場合は `Dim`、ローカル型推論を有効にする) を使用することで、コンパイラでエンティティの型を推論することもできます。  

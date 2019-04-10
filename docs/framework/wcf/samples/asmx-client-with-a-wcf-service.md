@@ -2,12 +2,12 @@
 title: WCF サービス付き ASMX クライアント
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: e8cf536d93337986882a0a5136194a3ad4a03b58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302238"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF サービス付き ASMX クライアント
 このサンプルでは、Windows Communication Foundation (WCF) を使用してサービスを作成し、ASMX クライアントなど、WCF 以外のクライアントからサービスにアクセスする方法を示します。  
@@ -131,11 +131,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!NOTE]
 >  渡すと、複雑なデータを返すことの詳細については型参照してください。[データ バインディング、Windows フォーム クライアント](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)、 [Windows Presentation Foundation クライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)、および[ASP.NET クライアントでのデータ バインディング](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  

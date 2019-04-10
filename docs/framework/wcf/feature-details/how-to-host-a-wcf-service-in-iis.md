@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309681"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>方法: IIS で WCF サービスをホストする
 このトピックでは、インターネット インフォメーション サービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、次を参照してください。[インターネット インフォメーション サービス](https://go.microsoft.com/fwlink/?LinkId=132449)します。 IIS 環境での実行がプロセスのリサイクルなどの IIS 機能を最大限に活用する WCF サービスはアイドル シャット ダウン、処理状況の監視、およびメッセージ ベースのアクティブ化します。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  
@@ -21,28 +21,28 @@ ms.locfileid: "59124554"
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>IIS でホストされるサービスを作成するには  
   
-1.  コンピューターに IIS がインストールされ、実行されていることを確認します。 インストールと IIS の構成の詳細については、次を参照してください[のインストールと IIS 7.0 の構成。](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. コンピューターに IIS がインストールされ、実行されていることを確認します。 インストールと IIS の構成の詳細については、次を参照してください[のインストールと IIS 7.0 の構成。](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  アプリケーション ファイル用に "IISHostedCalcService" という新しいフォルダーを作成し、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がそのフォルダーの内容にアクセスできることを確認します。次に、IIS 管理ツールを使用して、このアプリケーション ディレクトリに物理的に配置する新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
+2. アプリケーション ファイル用に "IISHostedCalcService" という新しいフォルダーを作成し、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がそのフォルダーの内容にアクセスできることを確認します。次に、IIS 管理ツールを使用して、このアプリケーション ディレクトリに物理的に配置する新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
   
-3.  "service.svc" という新しいファイルをアプリケーション ディレクトリに作成します。 次を追加してこのファイルを編集@ServiceHost要素。  
+3. "service.svc" という新しいファイルをアプリケーション ディレクトリに作成します。 次を追加してこのファイルを編集@ServiceHost要素。  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  アプリケーション ディレクトリ内に App_Code サブディレクトリを作成します。  
+4. アプリケーション ディレクトリ内に App_Code サブディレクトリを作成します。  
   
-5.  App_Code サブディレクトリに Service.cs というコード ファイルを作成します。  
+5. App_Code サブディレクトリに Service.cs というコード ファイルを作成します。  
   
-6.  Service.cs ファイルの先頭に次の using ステートメントを追加します。  
+6. Service.cs ファイルの先頭に次の using ステートメントを追加します。  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  using ステートメントの後に、次の名前空間宣言を追加します。  
+7. using ステートメントの後に、次の名前空間宣言を追加します。  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ ms.locfileid: "59124554"
     }  
     ```  
   
-8.  次のコードに示すように、名前空間宣言内にサービス コントラクトを定義します。  
+8. 次のコードに示すように、名前空間宣言内にサービス コントラクトを定義します。  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

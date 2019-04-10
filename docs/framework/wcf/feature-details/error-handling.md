@@ -2,12 +2,12 @@
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300282"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  
@@ -34,15 +34,15 @@ ms.locfileid: "59136436"
   
  IErrorHandler を使用すると、例外がスローされたときのアプリケーションの動作を明示的に制御できます。 次のような操作が可能です。  
   
-1.  クライアントにエラーを送信するかどうかを決定する  
+1. クライアントにエラーを送信するかどうかを決定する  
   
-2.  例外をエラーに置き換える  
+2. 例外をエラーに置き換える  
   
-3.  エラーを別のエラーに置き換える  
+3. エラーを別のエラーに置き換える  
   
-4.  ログまたはトレースを実行する  
+4. ログまたはトレースを実行する  
   
-5.  他のカスタム アクティビティを実行する  
+5. 他のカスタム アクティビティを実行する  
   
  カスタム エラー ハンドラーは、サービスのチャネル ディスパッチャーの ErrorHandlers プロパティに追加することでインストールできます。  複数のエラー ハンドラーを設定することができ、これらはこのコレクションに追加された順序で呼び出されます。  
   

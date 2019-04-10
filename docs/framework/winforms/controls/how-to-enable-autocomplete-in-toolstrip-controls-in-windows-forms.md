@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307900"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>方法: Windows フォームで ToolStrip コントロールの AutoComplete を有効にします。
 次の手順を組み合わせて、<xref:System.Windows.Forms.ToolStripLabel>で、<xref:System.Windows.Forms.ToolStripComboBox>を削除できる最近など、アイテムの一覧を表示する Web サイトにアクセスします。 リスト内の項目のいずれかの最初の文字に一致する文字を入力すると、項目がすぐに表示されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "59112113"
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>ToolStrip コントロールの AutoComplete を有効にするには  
   
-1.  作成、<xref:System.Windows.Forms.ToolStrip>を制御し、項目を追加します。  
+1. 作成、<xref:System.Windows.Forms.ToolStrip>を制御し、項目を追加します。  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ ms.locfileid: "59112113"
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  設定、<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>プロパティのラベルとコンボ ボックスに<xref:System.Windows.Forms.ToolStripItemOverflow.Never>一覧が常に、フォームのサイズに関係なく使用できるようにします。  
+2. 設定、<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>プロパティのラベルとコンボ ボックスに<xref:System.Windows.Forms.ToolStripItemOverflow.Never>一覧が常に、フォームのサイズに関係なく使用できるようにします。  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "59112113"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3.  項目のコレクションに単語を追加、<xref:System.Windows.Forms.ToolStripComboBox>コントロール。  
+3. 項目のコレクションに単語を追加、<xref:System.Windows.Forms.ToolStripComboBox>コントロール。  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "59112113"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  設定、<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>コンボ ボックスのプロパティ<xref:System.Windows.Forms.AutoCompleteMode.Append>します。  
+4. 設定、<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>コンボ ボックスのプロパティ<xref:System.Windows.Forms.AutoCompleteMode.Append>します。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "59112113"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  設定、<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>コンボ ボックスのプロパティ<xref:System.Windows.Forms.AutoCompleteSource.ListItems>します。  
+5. 設定、<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>コンボ ボックスのプロパティ<xref:System.Windows.Forms.AutoCompleteSource.ListItems>します。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

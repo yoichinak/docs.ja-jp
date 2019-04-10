@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305248"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>方法: Visual Basic での別のプロシージャに渡す
 この例では、プロシージャを別のプロシージャに渡すデリゲートを使用する方法を示します。  
@@ -21,25 +21,25 @@ ms.locfileid: "58818476"
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>デリゲートと一致するプロシージャを作成します。  
   
-1.  という名前のデリゲートを作成する`MathOperator`します。  
+1. という名前のデリゲートを作成する`MathOperator`します。  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2.  という名前のプロシージャを作成する`AddNumbers`パラメーターと戻り値のものと一致する`MathOperator`署名が一致するようにします。  
+2. という名前のプロシージャを作成する`AddNumbers`パラメーターと戻り値のものと一致する`MathOperator`署名が一致するようにします。  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3.  という名前のプロシージャを作成する`SubtractNumbers`と一致するシグネチャを持つ`MathOperator`します。  
+3. という名前のプロシージャを作成する`SubtractNumbers`と一致するシグネチャを持つ`MathOperator`します。  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4.  という名前のプロシージャを作成`DelegateTest`をパラメーターとしてデリゲートを取得します。  
+4. という名前のプロシージャを作成`DelegateTest`をパラメーターとしてデリゲートを取得します。  
   
      この手順への参照を受け入れることができる`AddNumbers`または`SubtractNumbers`、署名が一致しているため、`MathOperator`署名します。  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5.  という名前のプロシージャを作成する`Test`を呼び出す`DelegateTest`のデリゲートが 1 回`AddNumbers`をパラメーターとして、もう一度のデリゲートと`SubtractNumbers`をパラメーターとして。  
+5. という名前のプロシージャを作成する`Test`を呼び出す`DelegateTest`のデリゲートが 1 回`AddNumbers`をパラメーターとして、もう一度のデリゲートと`SubtractNumbers`をパラメーターとして。  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
