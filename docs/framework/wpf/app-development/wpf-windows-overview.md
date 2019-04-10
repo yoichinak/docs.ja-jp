@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166934"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、windows で Windows Presentation Foundation (WPF) スタンドアロン アプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロン[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを使用して独自のウィンドウの提供、<xref:System.Windows.Window>クラス。 このトピックでは<xref:System.Windows.Window>を作成して、スタンドアロン アプリケーションで windows の管理の基礎を紹介します。  
   
 > [!NOTE]
 >  ブラウザーによってホストされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]など、アプリケーション[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]や loose[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ページは、独自のウィンドウを指定しません。 代わりに、によって提供されるウィンドウにホストされている[!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]します。 参照してください[WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)します。  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>ウィンドウ クラス  
  次の図は、ウィンドウの構成要素を示しています。  
@@ -130,8 +129,7 @@ ms.locfileid: "58466219"
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>ウィンドウの有効期間  
  クラスと同様に、ウィンドウにも有効期間があります。有効期間は、ウィンドウが開いて最初にインスタンス化されたときに開始し、アクティブ化と非アクティブ化を経て、最後に閉じられるまで継続します。  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>ウィンドウを開く  
  ウィンドウを開くには、次の例に示すように最初にインスタンスを作成します。  
@@ -258,9 +256,8 @@ ms.locfileid: "58466219"
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- <xref:System.Windows.Window.Closing>イベント ハンドラーに渡される、 <xref:System.ComponentModel.CancelEventArgs>、実装、 `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティを設定した`true`が閉じないようにするのにします。  
+
+ <xref:System.Windows.Window.Closing>イベント ハンドラーに渡される、 <xref:System.ComponentModel.CancelEventArgs>、実装、`Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティを設定した`true`が閉じないようにするのにします。  
   
  場合<xref:System.Windows.Window.Closing>が処理されないとウィンドウが閉じるか、処理しますが、取り消されないことができます。 ウィンドウが実際に閉じられる直前に<xref:System.Windows.Window.Closed>が発生します。 この時点で、ウィンドウが閉じるのを防ぐことはできません。  
   
@@ -275,7 +272,7 @@ ms.locfileid: "58466219"
   
 -   アプリケーションのメイン ウィンドウが閉じられると<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
   
--   <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
+-   <xref:System.Windows.Application.Shutdown%2A> 呼び出されます。  
   
 > [!NOTE]
 >  ウィンドウを閉じると、再度開くことはできません。  
@@ -349,7 +346,7 @@ ms.locfileid: "58466219"
 ## <a name="order-of-precedence-for-sizing-properties"></a>サイズ変更プロパティの優先順位  
  基本的に、ウィンドウのさまざまなサイズのプロパティを組み合わせて、サイズを変更できるウィンドウの幅と高さの範囲を定義します。 有効な範囲を維持すること<xref:System.Windows.Window>優先順位の次の注文を使用して、サイズ プロパティの値を評価します。  
   
- **高さのプロパティ:**  
+ **高さのプロパティ。**  
   
 1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
@@ -359,7 +356,7 @@ ms.locfileid: "58466219"
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **幅のプロパティ:**  
+ **幅のプロパティ。**  
   
 1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
@@ -401,8 +398,7 @@ ms.locfileid: "58466219"
  ウィンドウのクライアント領域の外観を変更するために、ボタン、ラベル、テキスト ボックスなど、ウィンドウ固有のコンテンツを追加します。 非クライアント領域を構成する<xref:System.Windows.Window>を含むいくつかのプロパティを提供します<xref:System.Windows.Window.Icon%2A>ウィンドウのアイコンを設定して<xref:System.Windows.Window.Title%2A>タイトルを設定します。  
   
  また、ウィンドウのサイズ変更モード、ウィンドウ スタイル、デスクトップのタスク バーにボタンとして表示するかどうかを構成して、非クライアント領域の境界線の外観と動作も変更できます。  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>サイズ変更モード  
  に応じて、<xref:System.Windows.Window.WindowStyle%2A>プロパティを制御できますか (および場合) ユーザーがウィンドウのサイズを変更します。 ウィンドウ スタイルの選択に影響をユーザーには、マウスで境界線をドラッグするかどうか、ウィンドウがサイズ変更するかどうか、**最小化**、**最大化**、および**サイズを変更する**ボタン非クライアント領域に表示し、有効にするかどうか、表示される場合。  
@@ -475,7 +471,7 @@ ms.locfileid: "58466219"
   
  ただし、これは、外からインターネットまたはローカル イントラネット ゾーンを使用して、起動されるアプリケーションに付与された権限のセット[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]します。 その結果、ユーザーが表示されます、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]セキュリティの警告と、アプリケーションの完全な信頼に設定するアクセス許可を昇格する必要があります。  
   
- さらに、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]既定でウィンドウまたはダイアログ ボックスを表示することはできません。 スタンドアロン アプリケーションのセキュリティに関する考慮事項については、[WPF のセキュリティ方針 - プラットフォーム セキュリティ](../wpf-security-strategy-platform-security.md)を参照してください。  
+ さらに、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]既定でウィンドウまたはダイアログ ボックスを表示することはできません。 スタンドアロン アプリケーションのセキュリティに関する考慮事項については、次を参照してください。 [WPF のセキュリティ方針 - プラットフォーム セキュリティ](../wpf-security-strategy-platform-security.md)します。  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>その他の種類のウィンドウ  
@@ -484,6 +480,7 @@ ms.locfileid: "58466219"
  ダイアログ ボックスは、ユーザーから情報を収集して機能を完了するためによく使用されるウィンドウです。 ユーザーが、ファイルが場合など、**ファイルを開く** ダイアログ ボックスは通常、ユーザーからファイル名を取得するアプリケーションで表示されます。 詳細については、「[ダイアログ ボックスの概要](dialog-boxes-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
