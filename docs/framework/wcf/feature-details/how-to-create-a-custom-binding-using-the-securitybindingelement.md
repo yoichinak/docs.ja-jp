@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316805"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法: SecurityBindingElement を使用してカスタム バインドを作成する
 Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement を使用するカスタム バインドを作成するには  
   
-1.  <xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスを `outputBec` という名前で作成します。  
+1. <xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスを `outputBec` という名前で作成します。  
   
-2.  静的メソッド `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)` を呼び出します。このメソッドは、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスのインスタンスを返します。  
+2. 静的メソッド `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)` を呼び出します。このメソッドは、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスのインスタンスを返します。  
   
-3.  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの `outputBec` の `Add` メソッドを呼び出して、<xref:System.Collections.ObjectModel.Collection%601> をコレクション (<xref:System.ServiceModel.Channels.BindingElement>) に追加します。  
+3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> クラスの `outputBec` の `Add` メソッドを呼び出して、<xref:System.Collections.ObjectModel.Collection%601> をコレクション (<xref:System.ServiceModel.Channels.BindingElement>) に追加します。  
   
-4.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> クラスのインスタンスを作成し、これをコレクション (`outputBec`) に追加します。 これにより、バインディングによって使用されるエンコーディングが指定されます。  
+4. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> クラスのインスタンスを作成し、これをコレクション (`outputBec`) に追加します。 これにより、バインディングによって使用されるエンコーディングが指定されます。  
   
-5.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> を作成し、これをコレクション (`outputBec`) に追加します。 これにより、バインディングが HTTP トランスポートを使用することが指定されます。  
+5. <xref:System.ServiceModel.Channels.HttpTransportBindingElement> を作成し、これをコレクション (`outputBec`) に追加します。 これにより、バインディングが HTTP トランスポートを使用することが指定されます。  
   
-6.  <xref:System.ServiceModel.Channels.CustomBinding> クラスのインスタンスを作成し、コレクション `outputBec` をコンストラクターに渡して、新規のカスタム バインドを作成します。  
+6. <xref:System.ServiceModel.Channels.CustomBinding> クラスのインスタンスを作成し、コレクション `outputBec` をコンストラクターに渡して、新規のカスタム バインドを作成します。  
   
-7.  作成されたカスタム バインドは、標準の <xref:System.ServiceModel.WSHttpBinding> と同じ特性を数多く共有しています。 カスタム バインディングではメッセージ レベルのセキュリティと Windows 資格情報が指定されていますが、セキュリティで保護されたセッションは無効になっているため、サービス資格情報が帯域外で指定される必要があり、また署名も暗号化されません。 署名の暗号化は、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> プロパティを手順 4. で示したように設定することでのみ制御できます。 他の 2 つについては、標準バインディングの設定を使用することで制御できます。  
+7. 作成されたカスタム バインドは、標準の <xref:System.ServiceModel.WSHttpBinding> と同じ特性を数多く共有しています。 カスタム バインディングではメッセージ レベルのセキュリティと Windows 資格情報が指定されていますが、セキュリティで保護されたセッションは無効になっているため、サービス資格情報が帯域外で指定される必要があり、また署名も暗号化されません。 署名の暗号化は、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> プロパティを手順 4. で示したように設定することでのみ制御できます。 他の 2 つについては、標準バインディングの設定を使用することで制御できます。  
   
 ## <a name="example"></a>例  
   

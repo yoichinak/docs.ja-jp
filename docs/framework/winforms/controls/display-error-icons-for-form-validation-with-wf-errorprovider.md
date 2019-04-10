@@ -11,23 +11,23 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316506"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する
 Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無効なデータが入力されたときにエラー アイコンを表示するコンポーネント。 それらの間のタブし、検証コードを呼び出すためにフォーム上の少なくとも 2 つのコントロールが必要です。  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>コントロールの値が有効でないときに、エラー アイコンを表示するには  
   
-1.  2 つのコントロールを追加-たとえば、テキスト ボックス: Windows フォームに。  
+1. 2 つのコントロールを追加-たとえば、テキスト ボックス: Windows フォームに。  
   
-2.  追加、<xref:System.Windows.Forms.ErrorProvider>コンポーネントをフォームにします。  
+2. 追加、<xref:System.Windows.Forms.ErrorProvider>コンポーネントをフォームにします。  
   
-3.  最初のコントロールを選択し、コードを追加してその<xref:System.Windows.Forms.Control.Validating>イベント ハンドラー。 このコードを正常に実行するためには、プロシージャは、イベントに接続する必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
+3. 最初のコントロールを選択し、コードを追加してその<xref:System.Windows.Forms.Control.Validating>イベント ハンドラー。 このコードを正常に実行するためには、プロシージャは、イベントに接続する必要があります。 詳細については、「[方法 :Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
   
      次のコードは、ユーザーが入力したデータの有効性をテストします。データが有効でない場合、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドが呼び出されます。 最初の引数、<xref:System.Windows.Forms.ErrorProvider.SetError%2A>メソッドでは、横にアイコンを表示するコントロールを指定します。 2 番目の引数は、表示するエラー テキストです。  
   
@@ -90,7 +90,7 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無�
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  プロジェクトを実行します。 最初のコントロールとし、2 番目のタブには、(この例では、数値以外) では無効なデータを入力します。 エラー アイコンが表示されたら、エラー テキストを表示するマウス ポインターでポイントします。  
+4. プロジェクトを実行します。 最初のコントロールとし、2 番目のタブには、(この例では、数値以外) では無効なデータを入力します。 エラー アイコンが表示されたら、エラー テキストを表示するマウス ポインターでポイントします。  
   
 ## <a name="see-also"></a>関連項目
 

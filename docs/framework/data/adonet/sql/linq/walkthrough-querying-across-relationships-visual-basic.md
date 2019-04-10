@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314660"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>チュートリアル: リレーションシップを介したクエリの実行 (Visual Basic)
 このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
@@ -53,15 +53,15 @@ ms.locfileid: "59213351"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
   
-1.  `Sub Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
+1. `Sub Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  F5 キーを押して、アプリケーションをデバッグします。  
+2. F5 キーを押して、アプリケーションをデバッグします。  
   
      2 つの名前がメッセージ ボックスに表示され、生成された SQL コードがコンソール ウィンドウに表示されます。  
   
-3.  メッセージ ボックスを閉じて、デバッグを停止します。  
+3. メッセージ ボックスを閉じて、デバッグを停止します。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>データベースの厳密に型指定されたビューを作成する  
  データベースの厳密に型指定されたビューを使用すると、操作が非常に簡単になります。 <xref:System.Data.Linq.DataContext> オブジェクトを厳密に型指定することによって、<xref:System.Data.Linq.DataContext.GetTable%2A> を呼び出す必要がありません。 厳密に型指定された <xref:System.Data.Linq.DataContext> オブジェクトを使用する場合は、すべてのクエリで、厳密に型指定されたテーブルを使用できます。  
@@ -70,23 +70,23 @@ ms.locfileid: "59213351"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
   
-1.  `Customer` クラス宣言の上に次のコードを追加します。  
+1. `Customer` クラス宣言の上に次のコードを追加します。  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  `Sub Main` を次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
+2. `Sub Main` を次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  F5 キーを押して、アプリケーションをデバッグします。  
+3. F5 キーを押して、アプリケーションをデバッグします。  
   
      コンソール ウィンドウの出力は次のとおりです。  
   
      `ID=WHITC`  
   
-4.  コンソール ウィンドウで Enter キーを押してアプリケーションを終了します。  
+4. コンソール ウィンドウで Enter キーを押してアプリケーションを終了します。  
   
-5.  **ファイル** メニューのをクリックして**すべて保存**このアプリケーションを保存する場合。  
+5. **ファイル** メニューのをクリックして**すべて保存**このアプリケーションを保存する場合。  
   
 ## <a name="next-steps"></a>次の手順  
  次のチュートリアル ([チュートリアル。データの操作 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301036"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 さらに、このトピックでは、プレゼンスと WPF XAML ファイルのルート タグによく見られる 2 つの XAML 名前空間マッピングの目的について説明します。 また、独自のコードで、または個別のアセンブリ内に定義されている要素を使用するためのようなマッピングを生成する方法も説明します。  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF およびアセンブリの読み込み  
  WPF の XAML スキーマ コンテキストと統合の CLR で定義された概念を使用して、WPF アプリケーション モデル、<xref:System.AppDomain>します。 次の順序は、XAML スキーマ コンテキストでアセンブリを読み込むかの WPF の使用状況に基づいて実行時またはデザイン時に、型を検索する方法を解釈する方法について説明します<xref:System.AppDomain>およびその他の要因です。  
   
-1.  反復処理、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、読み込まれたアセンブリを最近開始します。  
+1. 反復処理、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、読み込まれたアセンブリを最近開始します。  
   
-2.  名前が修飾されている場合に呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
+2. 名前が修飾されている場合に呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
   
-3.  短い名前と修飾名の公開キー トークンは、マークアップから読み込まれたアセンブリに一致すると、そのアセンブリを返します。  
+3. 短い名前と修飾名の公開キー トークンは、マークアップから読み込まれたアセンブリに一致すると、そのアセンブリを返します。  
   
-4.  短い名前と公開キー トークンを使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
+4. 短い名前と公開キー トークンを使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
   
-5.  名前が修飾されていない場合は、呼び出す<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>します。  
+5. 名前が修飾されていない場合は、呼び出す<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>します。  
   
  Loose XAML は、手順 3; を使用しません読み込まれたアセンブリがありません。  
   

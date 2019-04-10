@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315817"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>方法: 署名確認を設定する
 *署名確認*は送信者の元のメッセージへの応答で受信した応答が生成されたことを確認するメッセージのイニシエーターのメカニズムです。 署名確認は、WS-Security 1.1 仕様で定義されています。 エンドポイントが WS-Security 1.0 をサポートしている場合は、署名確認を使用できません。  
@@ -22,29 +22,29 @@ ms.locfileid: "59176164"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>コードを使用して署名確認を有効にするには  
   
-1.  <xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスを作成します。  
+1. <xref:System.ServiceModel.Channels.BindingElementCollection> クラスのインスタンスを作成します。  
   
-2.  インスタンスを作成、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>クラス。  
+2. インスタンスを作成、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>クラス。  
   
-3.  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> を `true` に設定します。  
+3. <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> を `true` に設定します。  
   
-4.  バインディング コレクションにセキュリティ要素を追加します。  
+4. バインディング コレクションにセキュリティ要素を追加します。  
   
-5.  指定されている、カスタム バインドを作成[方法。SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。  
+5. 指定されている、カスタム バインドを作成[方法。SecurityBindingElement を使用してカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)します。  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>構成を使用して署名確認を有効にするには  
   
-1.  `<customBinding>` 要素を構成ファイルの `<bindings>` セクションに追加します。  
+1. `<customBinding>` 要素を構成ファイルの `<bindings>` セクションに追加します。  
   
-2.  `<binding>` 要素を追加し、名前属性を適切な値に設定します。  
+2. `<binding>` 要素を追加し、名前属性を適切な値に設定します。  
   
-3.  適切なエンコード要素を追加します。 次の例では `<TextMessageEncoding>` 要素を追加しています。  
+3. 適切なエンコード要素を追加します。 次の例では `<TextMessageEncoding>` 要素を追加しています。  
   
-4.  `<security>` 子要素を追加し、`requireSignatureConfirmation` 属性を `true` に設定します。  
+4. `<security>` 子要素を追加し、`requireSignatureConfirmation` 属性を `true` に設定します。  
   
-5.  任意。 ブートス トラップ中に署名確認を有効にするには追加、 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子要素とセット、`equireSignatureConfirmation`属性を`true`します。  
+5. 省略可能です。 ブートス トラップ中に署名確認を有効にするには追加、 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子要素とセット、`equireSignatureConfirmation`属性を`true`します。  
   
-6.  適切なトランスポート要素を追加します。 次の例では、追加、 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. 適切なトランスポート要素を追加します。 次の例では、追加、 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

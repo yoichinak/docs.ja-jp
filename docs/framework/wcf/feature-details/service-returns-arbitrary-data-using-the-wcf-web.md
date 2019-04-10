@@ -2,19 +2,19 @@
 title: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157484"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303922"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式のデータを返す必要があるときに、大文字と小文字です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用して、このようなサービスを作成するについて説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
   
-1.  サービス コントラクトを定義します。 コントラクトは `IImageServer` と呼ばれ、`GetImage` を返す <xref:System.IO.Stream> というメソッドが入っています。  
+1. サービス コントラクトを定義します。 コントラクトは `IImageServer` と呼ばれ、`GetImage` を返す <xref:System.IO.Stream> というメソッドが入っています。  
   
     ```  
     [ServiceContract]  
@@ -27,7 +27,7 @@ ms.locfileid: "59157484"
   
      メソッドを返すため、<xref:System.IO.Stream>適用なしに返されるデータの書式設定、WCF は、操作がサービス操作から返されるバイト数を完全に制御を持つことを想定しています。  
   
-2.  サービス コントラクトを実装します。 コントラクトには 1 つの操作 (`GetImage`) しかありません。 このメソッドはビットマップを生成して、それを <xref:System.IO.MemoryStream> に .jpg 形式で保存します。 操作はそのストリームを呼び出し元に戻します。  
+2. サービス コントラクトを実装します。 コントラクトには 1 つの操作 (`GetImage`) しかありません。 このメソッドはビットマップを生成して、それを <xref:System.IO.MemoryStream> に .jpg 形式で保存します。 操作はそのストリームを呼び出し元に戻します。  
   
     ```  
     public class Service : IImageServer  
@@ -57,7 +57,7 @@ ms.locfileid: "59157484"
   
 ### <a name="to-host-the-service"></a>サービスをホストするには  
   
-1.  コンソール アプリケーションを作成し、サービスをホストします。  
+1. コンソール アプリケーションを作成し、サービスをホストします。  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ ms.locfileid: "59157484"
     }  
     ```  
   
-2.  変数を作成し、`Main` メソッド内のサービスに使用するベース アドレスを保持します。  
+2. 変数を作成し、`Main` メソッド内のサービスに使用するベース アドレスを保持します。  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  サービス クラスとベース アドレスを指定するサービスの <xref:System.ServiceModel.ServiceHost> インスタンスを作成します。  
+3. サービス クラスとベース アドレスを指定するサービスの <xref:System.ServiceModel.ServiceHost> インスタンスを作成します。  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  <xref:System.ServiceModel.WebHttpBinding> と <xref:System.ServiceModel.Description.WebHttpBehavior> を使用して、エンドポイントを追加します。  
+4. <xref:System.ServiceModel.WebHttpBinding> と <xref:System.ServiceModel.Description.WebHttpBehavior> を使用して、エンドポイントを追加します。  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  サービス ホストを開きます。  
+5. サービス ホストを開きます。  
   
     ```  
     host.Open()  
     ```  
   
-6.  サービスを終了するためにユーザーが Enter キーを押すのを待ちます。  
+6. サービスを終了するためにユーザーが Enter キーを押すのを待ちます。  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -103,9 +103,9 @@ ms.locfileid: "59157484"
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>Internet Explorer を使用して生のサービスを呼び出すには  
   
-1.  サービスを実行します。サービスからの次の出力が表示されます。 `Service is running Press ENTER to close the host`  
+1. サービスを実行します。サービスからの次の出力が表示されます。 `Service is running Press ENTER to close the host`  
   
-2.  Internet Explorer を開き「`http://localhost:8000/Service/GetImage?width=50&height=40`」と入力します。黄色い長方形とその中心を通る青い斜線が表示されます。  
+2. Internet Explorer を開き「`http://localhost:8000/Service/GetImage?width=50&height=40`」と入力します。黄色い長方形とその中心を通る青い斜線が表示されます。  
   
 ## <a name="example"></a>例  
  この例で使用されているコードの全容を次に示します。  

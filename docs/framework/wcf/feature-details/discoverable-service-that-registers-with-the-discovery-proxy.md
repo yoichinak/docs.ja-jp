@@ -2,36 +2,36 @@
 title: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302193"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスの実装する
 これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピックで[方法。探索プロキシの実装](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)、探索プロキシを実装します。 このトピックでは、アナウンス メッセージを送信する WCF サービスを作成 (`Hello`と`Bye`) に、探索プロキシに登録または登録解除、探索プロキシの原因です。
 
 ### <a name="to-define-the-service-contract"></a>サービス コントラクトを定義するには
 
-1.  新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。
+1. 新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。
 
-2.  次のアセンブリへの参照を追加します。
+2. 次のアセンブリへの参照を追加します。
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  新しいクラスを `CalculatorService` プロジェクトに追加します。
+3. 新しいクラスを `CalculatorService` プロジェクトに追加します。
 
-4.  次の using ステートメントを追加します。
+4. 次の using ステートメントを追加します。
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  CalculatorService.cs でサービス コントラクトを定義します。
+5. CalculatorService.cs でサービス コントラクトを定義します。
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "59177828"
     }
     ```
 
-6.  また、CalculatorService.cs でサービス コントラクトを実装します。
+6. また、CalculatorService.cs でサービス コントラクトを実装します。
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ ms.locfileid: "59177828"
 
 ### <a name="to-host-the-service"></a>サービスをホストするには
 
-1.  プロジェクトの作成時に生成された Program.cs ファイルを開きます。
+1. プロジェクトの作成時に生成された Program.cs ファイルを開きます。
 
-2.  次の using ステートメントを追加します。
+2. 次の using ステートメントを追加します。
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "59177828"
     using System.ServiceModel.Discovery;
     ```
 
-3.  `Main()` メソッド内に次のコードを追加します。
+3. `Main()` メソッド内に次のコードを追加します。
 
     ```csharp
     // Define the base address of the service

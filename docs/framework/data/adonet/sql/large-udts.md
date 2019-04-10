@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303480"
 ---
 # <a name="large-udts"></a>大きな UDT
 開発者は、ユーザー定義型 (UDT) を使用すると、SQL Server データベースに共通言語ランタイム (CLR) オブジェクトを格納して、サーバーのスカラー型システムを拡張することができます。 UDT は複数の要素を持つことができ、動作を定義できます。この点は、1 つの SQL Server システム データ型から構成される従来の別名データ型と異なります。  
@@ -24,7 +24,7 @@ ms.locfileid: "59181533"
   
  **SQL Server オンライン ブック**  
   
-1.  [CLR ユーザー定義型](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR ユーザー定義型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema による UDT スキーマの取得  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> の <xref:System.Data.SqlClient.SqlConnection> メソッドは、データベース スキーマ情報を <xref:System.Data.DataTable> に返します。 詳細については、次を参照してください。 [SQL Server スキーマ コレクション](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)します。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317891"
 ---
 # <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証する
 このトピックでは、アプリケーション設定を永続化する前に検証する方法について説明します。  
@@ -78,7 +78,7 @@ ms.locfileid: "59212090"
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>設定の変更時にアプリケーション設定を検証するには  
   
-1.  使用する場合、C#開発者は、フォームまたはコントロールの`Load`イベント、イベント ハンドラーを追加、<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>イベント。  
+1. 使用する場合、C#開発者は、フォームまたはコントロールの`Load`イベント、イベント ハンドラーを追加、<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>イベント。  
   
      - または -  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59212090"
     End Sub   
     ```  
   
-2.  イベント ハンドラーを定義し、誕生日の範囲チェックを実行するコードをイベント ハンドラー内に記述します。  
+2. イベント ハンドラーを定義し、誕生日の範囲チェックを実行するコードをイベント ハンドラー内に記述します。  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ ms.locfileid: "59212090"
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>保存時にアプリケーション設定を検証するには  
   
-1.  フォームまたはコントロールの`Load`イベントのイベント ハンドラーを追加、<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>イベント。  
+1. フォームまたはコントロールの`Load`イベントのイベント ハンドラーを追加、<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>イベント。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ ms.locfileid: "59212090"
     End Sub  
     ```  
   
-2.  イベント ハンドラーを定義し、誕生日の範囲チェックを実行するコードをイベント ハンドラー内に記述します。  
+2. イベント ハンドラーを定義し、誕生日の範囲チェックを実行するコードをイベント ハンドラー内に記述します。  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313568"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)します。  
@@ -103,15 +103,15 @@ ms.locfileid: "59193669"
   
  この方法でセキュリティで保護することができる機能のコレクションがのゾーンごとに構成されている、**インターネット**、**イントラネット**、**信頼済みサイト**、および**制限付きサイト**ゾーン。 次の手順では、セキュリティ設定の構成方法について説明します。  
   
-1.  **[コントロール パネル]** を開きます。  
+1. **[コントロール パネル]** を開きます。  
   
-2.  クリックして**ネットワークとインターネット** をクリックし、**インターネット オプション**します。  
+2. クリックして**ネットワークとインターネット** をクリックし、**インターネット オプション**します。  
   
      [インターネット オプション] ダイアログ ボックスが表示されます。  
   
-3.  **セキュリティ** タブで、セキュリティ設定を構成するゾーンを選択します。  
+3. **セキュリティ** タブで、セキュリティ設定を構成するゾーンを選択します。  
   
-4.  をクリックして、**レベルのカスタマイズ**ボタンをクリックします。  
+4. をクリックして、**レベルのカスタマイズ**ボタンをクリックします。  
   
      **セキュリティ設定** ダイアログ ボックスが表示され、選択したゾーンのセキュリティ設定を構成することができます。  
   

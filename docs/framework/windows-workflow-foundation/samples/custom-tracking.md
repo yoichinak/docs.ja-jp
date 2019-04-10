@@ -2,12 +2,12 @@
 title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307635"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
 このサンプルでは、カスタムの追跡参加要素を作成し、追跡データをコンソールに出力する方法を示します。 また、ユーザー定義データが設定された <xref:System.Activities.Tracking.CustomTrackingRecord> オブジェクトを出力する方法も示します。 コンソール ベースの追跡参加要素は、コードで作成された追跡プロファイル オブジェクトを使用して、ワークフローで出力された <xref:System.Activities.Tracking.TrackingRecord> オブジェクトをフィルター処理します。
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、CustomTrackingSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、CustomTrackingSample.sln ソリューション ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
+3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

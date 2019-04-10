@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315856"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175605"
   
 ### <a name="to-change-data-programmatically"></a>プログラムでデータを変更するには  
   
-1.  目的のテーブルの指定、<xref:System.Data.DataSet>オブジェクトおよび必要な行しテーブルのフィールドし、セルを新しい値に設定します。  
+1. 目的のテーブルの指定、<xref:System.Data.DataSet>オブジェクトおよび必要な行しテーブルのフィールドし、セルを新しい値に設定します。  
   
     > [!NOTE]
     >  最初のテーブルを指定する、<xref:System.Data.DataSet>か、テーブルの最初の行は 0 を使用します。  
@@ -68,7 +68,7 @@ ms.locfileid: "59175605"
   
 ### <a name="to-change-the-datasource-programmatically"></a>データ ソースをプログラムで変更するには  
   
-1.  設定、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドをデータ ソースにバインドするテーブルの名前。  
+1. 設定、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドをデータ ソースにバインドするテーブルの名前。  
   
      次の例は、日付を使用してソースを変更する方法を示します、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドを[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]Pubs データベースの Authors テーブルに接続されているデータ コントロール (adoPubsAuthors)。  
   

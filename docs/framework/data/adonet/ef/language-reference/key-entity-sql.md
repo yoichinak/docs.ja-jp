@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 820d357baf8f3e17a10ced84babc6745512e572b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319340"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 参照またはエンティティ式のキーを抽出します。  
@@ -31,9 +31,9 @@ from LOB.Orders as o
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、KEY 演算子を使用して、型参照を持つ式のキー部分を抽出します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#KEY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#key)]  
   

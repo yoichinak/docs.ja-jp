@@ -2,12 +2,12 @@
 title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309460"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)
 このチュートリアルでは、複雑さを抑えた、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 全体の基本的なシナリオを示します。 サンプルの Northwind データベースにある Customers テーブルのモデル化を行うエンティティ クラスを作成します。 次に、住所がロンドンの顧客を表示するための簡単なクエリを作成します。  
@@ -44,30 +44,30 @@ ms.locfileid: "59155130"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  Visual Studio で**ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**します。  
+1. Visual Studio で**ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**します。  
   
-2.  **プロジェクトの種類**のウィンドウ、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual C#** します。  
+2. **プロジェクトの種類**のウィンドウ、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual C#** します。  
   
-3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+3. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに「 **LinqConsoleApp**します。  
+4. **名前**ボックスに「 **LinqConsoleApp**します。  
   
-5.  **場所**ボックスで、プロジェクト ファイルを格納することを確認します。  
+5. **場所**ボックスで、プロジェクト ファイルを格納することを確認します。  
   
-6.  **[OK]** をクリックします。  
+6. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
  このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 かどうか System.Data.Linq がプロジェクトに参照として一覧表示されません (展開、**参照**ノード**ソリューション エクスプ ローラー**)、次の手順で説明したように、それを追加します。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
+2. **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
   
      アセンブリがプロジェクトに追加されます。  
   
-3.  上部にある次のディレクティブを追加**Program.cs**:  
+3. 上部にある次のディレクティブを追加**Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ ms.locfileid: "59155130"
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   
-1.  `Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
+1. `Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  F5 キーを押してアプリケーションをデバッグします。  
+2. F5 キーを押してアプリケーションをデバッグします。  
   
     > [!NOTE]
     >  アプリケーションでは、実行時エラーを生成する場合のトラブルシューティングに関するセクションを参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)します。  
@@ -147,7 +147,7 @@ ms.locfileid: "59155130"
   
      `ID=SEVES, City=London`  
   
-3.  コンソール ウィンドウで Enter キーを押してアプリケーションを終了します。  
+3. コンソール ウィンドウで Enter キーを押してアプリケーションを終了します。  
   
 ## <a name="next-steps"></a>次の手順  
  [チュートリアル。「リレーションシップ間でクエリの実行 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) 」トピックでは、このチュートリアル終わりは続行します。 チュートリアルの「リレーションシップ間でクエリ方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]と同様に、テーブル間クエリは*結合*リレーショナル データベースでします。  

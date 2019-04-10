@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296213"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip コントロールのアーキテクチャ
 <xref:System.Windows.Forms.ToolStrip>と<xref:System.Windows.Forms.ToolStripItem>クラスは、ツールバー、ステータス、およびメニュー項目を表示するため、柔軟で拡張性の高いシステムを提供します。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms>名前空間と、通常、すべて"ToolStrip"プレフィックスを持つという名前 (など<xref:System.Windows.Forms.ToolStripOverflow>) または「ストリップ」サフィックスを持つ (など<xref:System.Windows.Forms.MenuStrip>)。  
@@ -121,19 +121,19 @@ ms.locfileid: "59186668"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>継承の ToolStripContainer サポート  
  <xref:System.Windows.Forms.ToolStripContainer>コントロールは、次の例のような限られた継承されたシナリオをサポートします。  
   
-1.  新しい Windows フォーム アプリケーションを作成します。  
+1. 新しい Windows フォーム アプリケーションを作成します。  
   
-2.  フォームに <xref:System.Windows.Forms.ToolStripContainer> を追加します。  
+2. フォームに <xref:System.Windows.Forms.ToolStripContainer> を追加します。  
   
-3.  アクセス修飾子を設定、<xref:System.Windows.Forms.ToolStripContainer>に`public`または`protected`します。  
+3. アクセス修飾子を設定、<xref:System.Windows.Forms.ToolStripContainer>に`public`または`protected`します。  
   
-4.  任意の組み合わせを追加<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、および<xref:System.Windows.Forms.ContextMenuStrip>にコントロールを<xref:System.Windows.Forms.ToolStripPanel>のリージョン、<xref:System.Windows.Forms.ToolStripContainer>します。  
+4. 任意の組み合わせを追加<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、および<xref:System.Windows.Forms.ContextMenuStrip>にコントロールを<xref:System.Windows.Forms.ToolStripPanel>のリージョン、<xref:System.Windows.Forms.ToolStripContainer>します。  
   
-5.  プロジェクトをビルドします。  
+5. プロジェクトをビルドします。  
   
-6.  最初のフォームから継承したフォームを追加します。  
+6. 最初のフォームから継承したフォームを追加します。  
   
-7.  選択、継承された<xref:System.Windows.Forms.ToolStripContainer>形式にします。  
+7. 選択、継承された<xref:System.Windows.Forms.ToolStripContainer>形式にします。  
   
 #### <a name="inherited-behavior-of-child-controls"></a>子コントロールの継承の動作  
  前の手順を完了すると、次の継承の動作が発生します。  
@@ -263,7 +263,7 @@ ms.locfileid: "59186668"
   
 |含まれるアイテム|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|[はい]|×|×|×|[はい]|  
+|<xref:System.Windows.Forms.ToolStripButton>|はい|×|×|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|はい|はい|[はい]|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|[はい]|×|×|[はい]|はい|  
 |<xref:System.Windows.Forms.ToolStripLabel>|[はい]|×|×|[はい]|はい|  
@@ -273,7 +273,7 @@ ms.locfileid: "59186668"
 |<xref:System.Windows.Forms.ToolStripMenuItem>|×|[はい]|[はい]|×|×|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|×|×|×|はい|×|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|はい|×|×|はい|×|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|[はい]|×|[はい]|[はい]|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|[はい]|×|[はい]|はい|  
   
 ### <a name="toolstripbutton"></a>オブジェクト  
  <xref:System.Windows.Forms.ToolStripButton> ボタンの項目は、<xref:System.Windows.Forms.ToolStrip>します。 これを表示するにはさまざまな境界線のスタイル、およびを表し、操作状態をアクティブ化に使用できます。 既定でフォーカスを持つことを定義することもできます。  

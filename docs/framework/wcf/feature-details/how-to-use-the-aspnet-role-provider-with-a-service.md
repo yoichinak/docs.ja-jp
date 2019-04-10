@@ -2,12 +2,12 @@
 title: '方法: ASP.NET のロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 20ffd1bb51bc2d6ac106927f805c7349c12059c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301140"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>方法: ASP.NET のロール プロバイダーとサービスを使用する
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール プロバイダーを [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] メンバーシップ プロバイダーと共に使用すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開発者は、サイトで使用するアカウントをユーザーが作成し、承認のためにユーザーにロールを割り当てることができる Web サイトを作成できます。 この機能を使用すれば、ユーザーはだれでもサイトでアカウントを作成し、そのサイトにログインしてサービスに排他的にアクセスできます。 これは、ユーザーが Windows ドメイン内にアカウントを持っていることが必要な Windows セキュリティとは対照的です。 自分の資格情報 (ユーザー名とパスワードの組み合わせ) を提示したユーザーは、だれでもサイトとそのサービスを使用できます。  
@@ -18,13 +18,13 @@ ms.locfileid: "59209087"
   
 ### <a name="to-configure-the-role-provider"></a>ロール プロバイダーを構成するには  
   
-1.  Web.config ファイルでの下、<`system.web`> 要素を追加、<`roleManager`> 要素の`enabled`属性を`true`。  
+1. Web.config ファイルでの下、<`system.web`> 要素を追加、<`roleManager`> 要素の`enabled`属性を`true`。  
   
-2.  `defaultProvider` 属性に `SqlRoleProvider` を設定  
+2. `defaultProvider` 属性に `SqlRoleProvider` を設定  
   
-3.  子として、<`roleManager`> 要素を追加する <`providers`> 要素。  
+3. 子として、<`roleManager`> 要素を追加する <`providers`> 要素。  
   
-4.  子として、<`providers`> 要素を追加、<`add`> 次の属性を持つ要素が適切な値に設定: `name`、 `type`、`connectionStringName`と`applicationName`次の例のようにします。  
+4. 子として、<`providers`> 要素を追加、<`add`> 次の属性を持つ要素が適切な値に設定: `name`、 `type`、`connectionStringName`と`applicationName`次の例のようにします。  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -41,19 +41,19 @@ ms.locfileid: "59209087"
   
 ### <a name="to-configure-the-service-to-use-the-role-provider"></a>ロール プロバイダーを使用するようにサービスを構成するには  
   
-1.  Web.config ファイルで、追加、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
+1. Web.config ファイルで、追加、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素。  
   
-2.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素を <`system.ServiceModel`> 要素。  
+2. 追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素を <`system.ServiceModel`> 要素。  
   
-3.  追加、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)に、<`behaviors`> 要素。  
+3. 追加、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)に、<`behaviors`> 要素。  
   
-4.  追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)要素、`name`属性に適切な値。  
+4. 追加、 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)要素、`name`属性に適切な値。  
   
-5.  追加、 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)に、<`behavior`> 要素。  
+5. 追加、 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)に、<`behavior`> 要素。  
   
-6.  `principalPermissionMode` 属性に `UseAspNetRoles` を設定  
+6. `principalPermissionMode` 属性に `UseAspNetRoles` を設定  
   
-7.  `roleProviderName` 属性に `SqlRoleProvider` を設定 この構成の一部を次の例に示します。  
+7. `roleProviderName` 属性に `SqlRoleProvider` を設定 この構成の一部を次の例に示します。  
   
     ```xml  
     <behaviors>  

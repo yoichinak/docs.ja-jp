@@ -2,12 +2,12 @@
 title: アクションを使用してサーバー側の動作を実装する
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294939"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>アクションを使用してサーバー側の動作を実装する
 
@@ -40,11 +40,11 @@ OData アクションを使用すると、OData サービスから取得した�
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  このインターフェイスは、WCF Data Services アクションの実行方法を提供します。 IDataServiceInvokable を実装する場合は、次の 3 つを行う必要があります。  
   
-1.  パラメーターをキャプチャし、場合によってはマーシャリングを行う。  
+1. パラメーターをキャプチャし、場合によってはマーシャリングを行う。  
   
-2.  Invoke() の呼び出し時に、アクションを実際に実装するコードにパラメーターをディスパッチする。  
+2. Invoke() の呼び出し時に、アクションを実際に実装するコードにパラメーターをディスパッチする。  
   
-3.  GetResult() を使用して取得できるように、Invoke() の結果を保存する。  
+3. GetResult() を使用して取得できるように、Invoke() の結果を保存する。  
   
  パラメーターは、トークンとして渡すことができます。 これは、リソースを表すトークンを扱うデータ サービス プロバイダーを作成することができるためです。ただしその場合は、実際のアクションにディスパッチする前に、トークンを実際のリソースに変換 (マーシャリング) する必要があります。 アクションが呼び出されたときに発生したリソースへの変更を保存してディスクに書き込むことができるよう、マーシャリングを行ったパラメーターは編集可能な状態にしておく必要があります。  
   

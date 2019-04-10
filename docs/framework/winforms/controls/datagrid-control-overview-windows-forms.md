@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304737"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -37,8 +37,7 @@ ms.locfileid: "59189314"
   
  次のスクリーン ショットは、複数のテーブルのデータにバインドされた DataGrid を示しています。  
   
- ![複数のテーブルのデータにバインドされた DataGrid](./media/vbcontrol1.gif "vbControl1")  
-複数のテーブルを持つデータにバインドされた DataGrid  
+ ![データ グリッドを表示、WinForms アプリケーションは、複数のテーブル データにバインドします。](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid> はデータセットのユーザー インターフェイス、関連するテーブル間のナビゲーション、および豊富な書式設定および編集機能を提供することができます。  
   
@@ -94,15 +93,16 @@ ms.locfileid: "59189314"
   
  <xref:System.Windows.Forms.DataGrid> コントロールがテーブルに表示され、<xref:System.Windows.Forms.DataGrid.AllowSorting%2A> プロパティが `true` に設定される場合、データは列ヘッダーをクリックして再度並べ替えることができます。 ユーザーは行の追加やセルの編集も実行できます。  
   
- 一連のテーブル間のリレーションシップは、ナビゲーションの親/子構造体を使用してユーザーに表示されます。 親テーブルは最高レベルのデータ、および子テーブルは、親テーブルの個別の一覧から派生した個々 のデータ テーブルです。 展開コントロールは、子テーブルを含む各親の行に表示されます。 展開コントロールをクリックすると、子テーブルへの Web のようなリンクの一覧が生成されます。 ユーザーがリンクを選択すると、子テーブルが表示されます。 親行の表示/非表示のアイコン (![親行の表示&#47;非表示アイコン](./media/vbicon.gif "vbIcon")) をクリックすると、親テーブルに関する情報が非表示になるか、または、ユーザーが以前非表示にしている場合は再表示します。 ユーザーは、戻るボタンをクリックして、前に表示されていたテーブルに移動することができます。  
+ 一連のテーブル間のリレーションシップは、ナビゲーションの親/子構造体を使用してユーザーに表示されます。 親テーブルは最高レベルのデータ、および子テーブルは、親テーブルの個別の一覧から派生した個々 のデータ テーブルです。 展開コントロールは、子テーブルを含む各親の行に表示されます。 展開コントロールをクリックすると、子テーブルへの Web のようなリンクの一覧が生成されます。 ユーザーがリンクを選択すると、子テーブルが表示されます。 親行の表示/非表示 アイコン (をクリックします。![親行のアイコンの表示/非表示](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif))、親テーブルに関する情報を非表示または場合は、ユーザーが以前非表示にして再表示されます。 ユーザーは、戻るボタンをクリックして、前に表示されていたテーブルに移動することができます。  
   
 ## <a name="columns-and-rows"></a>列と行  
  <xref:System.Windows.Forms.DataGrid> は、<xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridTableStyle> オブジェクトのコレクションから構成されます。 テーブルのスタイルには、<xref:System.Windows.Forms.DataGridTableStyle> の <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> プロパティに含まれる <xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが含まれる可能性があります。 編集することができます、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>と<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティを通じてアクセスできるコレクション エディターを使用して、**プロパティ**ウィンドウ。  
   
  <xref:System.Windows.Forms.DataGrid> コントロールに関連付けられている任意の <xref:System.Windows.Forms.DataGridTableStyle> は <xref:System.Windows.Forms.GridTableStylesCollection> によってアクセスできます。 <xref:System.Windows.Forms.GridTableStylesCollection> は、<xref:System.Windows.Forms.DataGridTableStyle> コレクション エディターを使用してデザイナーで編集することも、<xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティからプログラムで編集することもできます。  
-  
- ![DataGrid コントロールに含まれるオブジェクト](./media/vbcolumns1.gif "vbColumns1")  
-DataGrid コントロールに含まれるオブジェクトを次の図に示します。  
+
+ 次の図は、DataGrid コントロールに含まれるオブジェクトを示しています。
+
+ ![DataGrid コントロールに含まれるオブジェクトを示す図。](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  テーブルのスタイルおよび列のスタイルは、`MappingName` プロパティを適切な <xref:System.Data.DataTable.TableName%2A> プロパティと <xref:System.Data.DataColumn.ColumnName%2A> プロパティに設定することで <xref:System.Data.DataTable> オブジェクトおよび <xref:System.Data.DataColumn> オブジェクトと同期されます。 列のスタイルを持たない <xref:System.Windows.Forms.DataGridTableStyle> が、有効なデータ ソースにバインドされた <xref:System.Windows.Forms.DataGrid> コントロールに追加され、テーブルのスタイルの <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> プロパティが有効な <xref:System.Data.DataTable.TableName%2A> プロパティに設定される場合に、<xref:System.Windows.Forms.DataGridColumnStyle> オブジェクトのコレクションが、そのテーブルのスタイルに対して作成されます。 <xref:System.Data.DataTable> の <xref:System.Data.DataTable.Columns%2A> のコレクションで見つかった各 <xref:System.Data.DataColumn> に対して、対応する <xref:System.Windows.Forms.DataGridColumnStyle> が <xref:System.Windows.Forms.GridColumnStylesCollection> に追加されます。 <xref:System.Windows.Forms.GridColumnStylesCollection> <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>のプロパティ、<xref:System.Windows.Forms.DataGridTableStyle>します。 <xref:System.Windows.Forms.GridColumnStylesCollection> で <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> メソッドまたは <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> メソッドを使用して、列をグリッドに追加または削除できます。 詳細については、「[方法 :テーブルを追加し、列を Windows フォーム DataGrid コントロール](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)と[方法。削除または非表示にする列で、Windows フォーム DataGrid コントロール](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)します。  
   

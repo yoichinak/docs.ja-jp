@@ -2,12 +2,12 @@
 title: 変数と引数の追跡
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300893"
 ---
 # <a name="variable-and-argument-tracking"></a>変数と引数の追跡
 ワークフローの実行を追跡するときは、データを抽出すると便利です。 これにより、実行後に追跡レコードにアクセスするときにコンテキストが追加されます。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] では、追跡を使用して、ワークフローのアクティビティのスコープ内の参照可能な変数や引数を抽出できます。 プロファイルを追跡すると、データを簡単に抽出できるようになります。  
@@ -40,11 +40,11 @@ ms.locfileid: "59231039"
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>変数および引数に格納される情報の保護  
  追跡される変数や引数は、既定では WF ランタイムによって参照可能になります。 ワークフローの開発者は、次のような手順を行うことで、追跡対象の変数や引数へのアクセスを防止できます。  
   
-1.  変数の値を暗号化します。  
+1. 変数の値を暗号化します。  
   
-2.  追跡プロファイルの作成を管理して、変数や引数の抽出を防止します。  
+2. 追跡プロファイルの作成を管理して、変数や引数の抽出を防止します。  
   
-3.  カスタムの追跡参加要素については、変数や引数に格納されている機密情報が WF コードによって公開されないようにします。  
+3. カスタムの追跡参加要素については、変数や引数に格納されている機密情報が WF コードによって公開されないようにします。  
   
 ## <a name="see-also"></a>関連項目
 

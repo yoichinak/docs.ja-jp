@@ -2,12 +2,12 @@
 title: '方法: 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305967"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンする
 大規模な企業では、多くの場合、企業のセキュリティ ポリシーに準拠してアプリケーションを開発する必要があります。 次のトピックでは、開発し、コンピューターにインストールされているすべての Windows Communication Foundation (WCF) クライアント アプリケーションの検証に使用できるクライアント エンドポイント検証コントロールをインストールする方法について説明します。  
@@ -25,23 +25,23 @@ ms.locfileid: "59181364"
   
 ### <a name="to-create-the-endpoint-validator"></a>エンドポイント検証コントロールを作成するには  
   
-1.  <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 次にコード例を示します。 (、`InternetClientValidatorBehavior`から取得されますが、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
+1. <xref:System.ServiceModel.Description.IEndpointBehavior> メソッドに、必要な検証手順を備えた <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> を作成します。 次にコード例を示します。 (、`InternetClientValidatorBehavior`から取得されますが、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
+2. 手順 1. で作成したエンドポイント検証コントロールを登録する新しい <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を作成します。 このコード例を次に示します。 (この例の元のコードは、[セキュリティ検証](../../../../docs/framework/wcf/samples/security-validation.md)サンプル)。  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
+3. コンパイル済みのアセンブリが厳密な名前で署名されていることを確認します。 詳細については、次を参照してください。、[厳密名ツール (SN です。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)と言語のコンパイラ コマンド。  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>検証コントロールをターゲット コンピューターにインストールするには  
   
-1.  適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
+1. 適切な機構を使用してエンドポイント検証をインストールします。 企業では、グループ ポリシーと Systems Management Server (SMS) を使用してインストールします。  
   
-2.  厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)します。  
+2. 厳密な名前付きアセンブリを使用してグローバル アセンブリ キャッシュにインストール、 [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)します。  
   
-3.  <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。  
+3. <xref:System.Configuration?displayProperty=nameWithType> 名前空間の型を使用して、次の処理を行います。  
   
     1.  拡張を追加、 [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)セクションの完全修飾型名を使用して、要素をロックします。  
   

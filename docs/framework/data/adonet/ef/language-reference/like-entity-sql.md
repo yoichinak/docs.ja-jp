@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302258"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 指定された文字列 `String` が指定されたパターンと一致するかどうかを判断します。  
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>例  
  次の 2 つ[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリなどを使用して、特定の文字の文字列かどうかを判断する ESCAPE 演算子指定パターンに一致します。 最初のクエリを検索、`Name`文字で始まる`Down_`します。 アンダースコア (`_`) はワイルドカード文字であるため、このクエリは ESCAPE オプションを使用します。 ESCAPE オプションを指定せず、クエリでいずれかの検索は`Name`という単語で始まる値`Down`後にアンダー スコア文字以外の 1 文字。 クエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
   
-2.  次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

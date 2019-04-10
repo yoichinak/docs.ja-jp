@@ -2,12 +2,12 @@
 title: 転送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311020"
 ---
 # <a name="transfer"></a>転送
 このトピックでは、Windows Communication Foundation (WCF) のアクティビティ トレース モデルでの転送について説明します。  
@@ -42,21 +42,21 @@ ms.locfileid: "59145042"
 ## <a name="activity-transfer-sequence"></a>アクティビティ転送シーケンス  
  適切なアクティビティ転送シーケンスには、次の手順が含まれます。  
   
-1.  新しい gAId を選択して、新しいアクティビティを開始します。  
+1. 新しい gAId を選択して、新しいアクティビティを開始します。  
   
-2.  現在のアクティビティ ID から新しい gAId への転送トレースを出力します。  
+2. 現在のアクティビティ ID から新しい gAId への転送トレースを出力します。  
   
-3.  TLS に新しい ID を設定します。  
+3. TLS に新しい ID を設定します。  
   
-4.  Start トレースを出力して、新しいアクティビティの開始を示します。  
+4. Start トレースを出力して、新しいアクティビティの開始を示します。  
   
-5.  次の手順を実行して、元のアクティビティに戻ります。  
+5. 次の手順を実行して、元のアクティビティに戻ります。  
   
-6.  元の gAId への転送トレースを出力します。  
+6. 元の gAId への転送トレースを出力します。  
   
-7.  Stop トレースを出力して、新しいアクティビティの終了を示します。  
+7. Stop トレースを出力して、新しいアクティビティの終了を示します。  
   
-8.  TLS を以前の gAId に設定します。  
+8. TLS を以前の gAId に設定します。  
   
  これを実行する方法を次のコード例に示します。 この例は、新しいアクティビティへの転送時にブロック呼び出しが行われることを想定しており、Suspend トレースと Resume トレースが含まれています。  
   

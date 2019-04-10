@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315180"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-AtomicTransaction サポートの構成
 ここでは、WS-AtomicTransaction (WS-AT) 構成ユーティリティを使用して WS-AT サポートを構成する方法について説明します。  
@@ -56,19 +56,19 @@ ms.locfileid: "59203536"
   
  信頼を確立するために必要な証明書は、あらかじめ用意されている必要があります。 作成し、次の手順の前に新しい証明書をインストールする方法については、次を参照してください。[方法。作成し、開発時に WCF の一時的なクライアント証明書をインストール](https://go.microsoft.com/fwlink/?LinkId=158925)します。  
   
-1.  コンピューター A で、MMC 証明書スナップインを使用して、既存の証明書 (certA) を LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。 特定のノードに証明書をインポートするノードを右クリックし **すべてのタスク/インポート**です。  
+1. コンピューター A で、MMC 証明書スナップインを使用して、既存の証明書 (certA) を LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。 特定のノードに証明書をインポートするノードを右クリックし **すべてのタスク/インポート**です。  
   
-2.  コンピューター B で、MMC 証明書スナップインを使用して、秘密キーを持つ証明書 certB を作成するか取得し、LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。  
+2. コンピューター B で、MMC 証明書スナップインを使用して、秘密キーを持つ証明書 certB を作成するか取得し、LocalMachine\MY (Personal Node) ストアと LocalMachine\ROOT (信頼されたルート証明機関のノード) ストアにインポートします。  
   
-3.  certA の秘密キーをファイルにエクスポートします (エクスポートしていない場合)。  
+3. certA の秘密キーをファイルにエクスポートします (エクスポートしていない場合)。  
   
-4.  certB の秘密キーをファイルにエクスポートします (エクスポートしていない場合)。  
+4. certB の秘密キーをファイルにエクスポートします (エクスポートしていない場合)。  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>コンピューター間での相互の信頼関係の確立  
   
-1.  コンピューター A で、certB のファイルを LocalMachine\MY ストアと LocalMachine\ROOT ストアにインポートします。 これによって、コンピューター A が certB を信頼して通信することを宣言します。  
+1. コンピューター A で、certB のファイルを LocalMachine\MY ストアと LocalMachine\ROOT ストアにインポートします。 これによって、コンピューター A が certB を信頼して通信することを宣言します。  
   
-2.  コンピューター B で、certA のファイルを LocalMachine\MY ストアと LocalMachine\ROOT ストアにインポートします。 これによって、コンピューター B が certA を信頼して通信することを示します。  
+2. コンピューター B で、certA のファイルを LocalMachine\MY ストアと LocalMachine\ROOT ストアにインポートします。 これによって、コンピューター B が certA を信頼して通信することを示します。  
   
  この手順が完了すると、2 台のコンピューター間に信頼が確立されるので、WS-AT を使用して相互に通信するように構成できます。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "59203536"
   
  これを構成するには、MMC WS-AT スナップインを使用します。 このツールの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成 MMC スナップインで](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)トピック。 次の手順では、MSDTC を実行している 2 台のコンピューター間に信頼を確立する方法を説明します。  
   
-1.  コンピューター A の設定を構成します。 [エンドポイント証明書] certA を選択します。 "承認された証明書"で、certB を選択します。  
+1. コンピューター A の設定を構成します。 [エンドポイント証明書] certA を選択します。 "承認された証明書"で、certB を選択します。  
   
-2.  コンピューター B の設定を構成します。 「エンドポイントの証明書」certB を選択します。 "承認された証明書"で、certA を選択します。  
+2. コンピューター B の設定を構成します。 「エンドポイントの証明書」certB を選択します。 "承認された証明書"で、certA を選択します。  
   
 > [!NOTE]
 >  一方のコンピューターからもう一方のコンピューターにメッセージを送信する場合、送信側は、受信側の証明書のサブジェクト名と受信側のコンピューターの名前が一致することを確認します。 これらが一致しないと、証明書の確認が失敗し、2 台のコンピューターは通信できなくなります。  
@@ -98,13 +98,13 @@ ms.locfileid: "59203536"
   
  WS-AT プロトコル サービスは、ETW トレース セッションを通じて統合 ServiceModel トレースもサポートします。 これにより、既存のトランザクション トレースに加えて、より詳細な通信固有のトレースが得られます。  これらの追加トレースを有効にするには、次の手順を実行します。  
   
-1.  開く、**開始/実行** メニューの [入力] ボックスに「regedit」を入力し、、選択**OK**です。  
+1. 開く、**開始/実行** メニューの [入力] ボックスに「regedit」を入力し、、選択**OK**です。  
   
-2.  **レジストリ エディター**Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\、左側のウィンドウで次のフォルダーに移動します  
+2. **レジストリ エディター**Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\、左側のウィンドウで次のフォルダーに移動します  
   
-3.  右クリックして、`ServiceModelDiagnosticTracing`値の右側のウィンドウで、選択**変更**します。  
+3. 右クリックして、`ServiceModelDiagnosticTracing`値の右側のウィンドウで、選択**変更**します。  
   
-4.  **値データ**入力ボックスに、有効にするトレース レベルを指定する有効な値は次のいずれかを入力します。  
+4. **値データ**入力ボックスに、有効にするトレース レベルを指定する有効な値は次のいずれかを入力します。  
   
 -   0 : オフ  
   

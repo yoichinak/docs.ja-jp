@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300607"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>方法: アクティブな MDI 子フォームを特定する
 場合によっては、現在アクティブな子フォームでフォーカスのあるコントロールを操作するコマンドを指定するします。 たとえば、子フォームのテキスト ボックスから選択したテキストをクリップボードにコピーするとします。 クリップボードを使用して、選択したテキストをコピーするプロシージャを作成すると、<xref:System.Windows.Forms.Control.Click>の編集 メニューの標準的なコピー メニュー項目のイベント。  
@@ -27,7 +27,7 @@ ms.locfileid: "59229473"
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>アクティブな MDI 子ウィンドウ (そのテキストをクリップボードにコピー) を決定するには  
   
-1.  メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
+1. メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
   
     > [!NOTE]
     >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  

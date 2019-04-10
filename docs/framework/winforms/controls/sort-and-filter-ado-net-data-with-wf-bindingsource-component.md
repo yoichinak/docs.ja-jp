@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8904eff39b7278b2a185cc5e2f738ece1e8e88e4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306509"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントで ADO.NET データを並べ替える/フィルター処理する
 並べ替えとフィルタ リングの機能を公開する<xref:System.Windows.Forms.BindingSource>を介して制御、<xref:System.Windows.Forms.BindingSource.Sort%2A>と<xref:System.Windows.Forms.BindingSource.Filter%2A>プロパティ。 基になるデータ ソースの場合は、単純な並べ替えを適用することができます、 <xref:System.ComponentModel.IBindingList>、フィルター処理を適用することができ、高度な並べ替え、データ ソースの場合と、<xref:System.ComponentModel.IBindingListView>します。 <xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティには標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]構文: データ ソース内のデータの列の名前を表す文字列が続く`ASC`または`DESC`一覧を昇順または降順で並べ替える必要があるかどうかを示す。 高度な並べ替え、または各列をコンマ区切り記号で区切って複数列の並べ替えを設定することができます。 <xref:System.Windows.Forms.BindingSource.Filter%2A>プロパティは文字列式を受け取ります。  
@@ -37,9 +37,9 @@ ms.locfileid: "59163255"
   
 ### <a name="to-sort-data-with-the-bindingsource"></a>BindingSource でデータを並べ替える  
   
-1.  設定、<xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティ後に必要な列名を`ASC`または`DESC`を昇順または降順を示します。  
+1. 設定、<xref:System.Windows.Forms.BindingSource.Sort%2A>プロパティ後に必要な列名を`ASC`または`DESC`を昇順または降順を示します。  
   
-2.  複数の列をコンマで区切ります。  
+2. 複数の列をコンマで区切ります。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  

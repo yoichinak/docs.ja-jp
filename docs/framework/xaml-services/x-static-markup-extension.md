@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295711"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static のマークアップ拡張機能
 定義されている任意の静的な値をコード エンティティを参照、 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– に準拠した方法。 XAML のプロパティの値を提供する、参照されている静的プロパティを使用できます。  
@@ -55,13 +55,13 @@ ms.locfileid: "59207085"
 
 技術的に可能なその他の 2 つの XAML 使用法があります。 ただし、これらの使用方法は、不必要に詳細があまり一般的なは。  
 
-1.  オブジェクト要素構文です。
+1. オブジェクト要素構文です。
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  初期化文字列の明示的なメンバー プロパティの構文を属性します。
+2. 初期化文字列の明示的なメンバー プロパティの構文を属性します。
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

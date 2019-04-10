@@ -2,19 +2,19 @@
 title: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 8f7fe203a4198aa98e8aee1be3a12e4d72a066f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd3729019b5371b5313bba3814758c723c0d448a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175410"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318748"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> は、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフロー内で未処理の例外が発生した場合のアクションを指定できるようにする動作です。 このトピックでは、この動作を構成ファイルで構成する方法を示します。  
   
 ### <a name="to-configure-workflowunhandledexceptionbehavior"></a>WorkflowUnhandledExceptionBehavior を構成するには  
   
-1.  追加、<`workflowUnhandledException`> 内の要素を <`behavior`> 内の要素を <`serviceBehaviors`> 要素を使用して、`action`次の例に示すように、ハンドルされない例外が発生したときに実行するアクションを指定する属性。  
+1. 追加、<`workflowUnhandledException`> 内の要素を <`behavior`> 内の要素を <`serviceBehaviors`> 要素を使用して、`action`次の例に示すように、ハンドルされない例外が発生したときに実行するアクションを指定する属性。  
   
     ```xml  
     <behaviors>  

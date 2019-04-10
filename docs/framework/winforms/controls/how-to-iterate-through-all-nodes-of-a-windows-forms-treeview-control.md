@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314231"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する
 Windows フォーム内の各ノードをチェックすると役立つ場合があります<xref:System.Windows.Forms.TreeView>ノード値にいくつかの計算を実行するために制御します。 この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。  
@@ -24,9 +24,9 @@ Windows フォーム内の各ノードをチェックすると役立つ場合が
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView コントロールのすべてのノードを反復処理するには  
   
-1.  各ノードをテストする再帰プロシージャ (C# および C++ における再帰メソッド) を作成します。  
+1. 各ノードをテストする再帰プロシージャ (C# および C++ における再帰メソッド) を作成します。  
   
-2.  プロシージャを呼び出します。  
+2. プロシージャを呼び出します。  
   
      次の例は、それぞれを印刷する方法を示しています。<xref:System.Windows.Forms.TreeNode>オブジェクトの<xref:System.Windows.Forms.TreeNode.Text%2A>プロパティ。  
   

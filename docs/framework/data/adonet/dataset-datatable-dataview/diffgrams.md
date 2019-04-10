@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313516"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 ときに、<xref:System.Data.DataSet>正確に再作成する内容は、ただし、スキーマの DiffGram に必要なすべての情報を格納しますが、DiffGram として書き込まれますが、 <xref:System.Data.DataSet>、両方の列の値を含む、**元**と**現在**行のバージョン、行エラー情報、および行の順序。  
@@ -20,26 +20,26 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 ### <a name="to-generate-a-diffgram"></a>Diffgram を生成するには  
   
-1.  ルート テーブル (親を一切持たないテーブル) のリストを生成します。  
+1. ルート テーブル (親を一切持たないテーブル) のリストを生成します。  
   
-2.  リストの各テーブルとその子孫について、すべての行の現在のバージョンを最初の Diffgram セクションに書き込みます。  
+2. リストの各テーブルとその子孫について、すべての行の現在のバージョンを最初の Diffgram セクションに書き込みます。  
   
-3.  各テーブルに対して、 <xref:System.Data.DataSet>、存在する場合に、すべての行の元のバージョンを書き出すの**\<する前に >** Diffgram のセクション。  
+3. 各テーブルに対して、 <xref:System.Data.DataSet>、存在する場合に、すべての行の元のバージョンを書き出すの**\<する前に >** Diffgram のセクション。  
   
-4.  、エラーが発生した行の書き込みエラーの内容について、 **\<エラー >** 、Diffgram のセクション。  
+4. 、エラーが発生した行の書き込みエラーの内容について、 **\<エラー >** 、Diffgram のセクション。  
   
  Diffgram は XML ファイルの上から下に向かって処理されます。  
   
 ### <a name="to-process-a-diffgram"></a>Diffgram を処理するには  
   
-1.  Diffgram の最初のセクションを処理します。このセクションには、行の現在のバージョンが格納されています。  
+1. Diffgram の最初のセクションを処理します。このセクションには、行の現在のバージョンが格納されています。  
   
-2.  2 つ目の処理、または**\<する前に >** の元の行バージョンが含まれるセクションは変更または削除された行。  
+2. 2 つ目の処理、または**\<する前に >** の元の行バージョンが含まれるセクションは変更または削除された行。  
   
     > [!NOTE]
     >  行が削除済みとしてマークされていた場合、削除操作によってその行の子孫も削除される場合があります。この点は、現在の `Cascade` の <xref:System.Data.DataSet> プロパティに依存します。  
   
-3.  プロセス、 **\<エラー >** セクション。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
+3. プロセス、 **\<エラー >** セクション。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
   
 > [!NOTE]
 >  <xref:System.Data.XmlWriteMode> を Diffgram に設定した場合、ターゲット <xref:System.Data.DataSet> の内容が、元の <xref:System.Data.DataSet> の内容と異なる場合があります。  

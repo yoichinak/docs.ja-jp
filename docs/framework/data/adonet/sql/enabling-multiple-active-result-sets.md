@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304403"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  このシナリオに対応するには、次の 3 つの方法があります。  
   
-1.  リーダーが作成されてからトランザクションを開始し、リーダーがトランザクションの一部にならないようにします。 すべての更新は、それ自身のトランザクションになります。  
+1. リーダーが作成されてからトランザクションを開始し、リーダーがトランザクションの一部にならないようにします。 すべての更新は、それ自身のトランザクションになります。  
   
-2.  リーダーが閉じてからすべての操作をコミットします。 この場合、後続の更新バッチが実行される可能性があります。  
+2. リーダーが閉じてからすべての操作をコミットします。 この場合、後続の更新バッチが実行される可能性があります。  
   
-3.  MARS を使用せず、代わりに MARS が導入される以前に行っていたように、コマンド オブジェクトごとに別々の接続を使用します。  
+3. MARS を使用せず、代わりに MARS が導入される以前に行っていたように、コマンド オブジェクトごとに別々の接続を使用します。  
   
 ### <a name="detecting-mars-support"></a>MARS サポートの検出  
  アプリケーションは、`SqlConnection.ServerVersion` の値を読み取って MARS サポートを確認することができます。 SQL Server 2005 のメジャー番号は 9、SQL Server 2008 のメジャー番号は 10 です。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320233"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>チュートリアル: WPF での Direct3D9 コンテンツのホスト
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツをホストする方法を示します。  
@@ -48,9 +48,9 @@ ms.locfileid: "59145913"
   
 #### <a name="to-import-direct3d9-content"></a>Direct3D9 コンテンツをインポートするには  
   
-1.  コード エディターでの MainWindow.xaml.cs を開きます。  
+1. コード エディターでの MainWindow.xaml.cs を開きます。  
   
-2.  自動的に生成されたコードを次のコードに置き換えます。  
+2. 自動的に生成されたコードを次のコードに置き換えます。  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,15 +59,15 @@ ms.locfileid: "59145913"
   
 #### <a name="to-host-the-direct3d9-content"></a>Direct3D9 コンテンツをホストするには  
   
-1.  MainWindow.xaml で、自動的に生成された XAML を次の XAML に置き換えます。  
+1. MainWindow.xaml で、自動的に生成された XAML を次の XAML に置き換えます。  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  プロジェクトをビルドします。  
+2. プロジェクトをビルドします。  
   
-3.  Bin/debug フォルダーに Direct3D9 コンテンツを含んでいる DLL をコピーします。  
+3. Bin/debug フォルダーに Direct3D9 コンテンツを含んでいる DLL をコピーします。  
   
-4.  F5 キーを押してプロジェクトを実行します。  
+4. F5 キーを押してプロジェクトを実行します。  
   
      WPF アプリケーション内での Direct3D9 コンテンツが表示されます。  
   

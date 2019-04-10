@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306054"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>方法: Windows フォームの ComboBox または ListBox コントロールをデータにバインドする
 バインドすることができます、<xref:System.Windows.Forms.ComboBox>と<xref:System.Windows.Forms.ListBox>データベース内のデータの参照などのタスクを実行するデータに新しいデータの入力または既存のデータを編集します。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox または ListBox コントロールにバインドするには  
   
-1.  設定、`DataSource`プロパティをデータ ソース オブジェクト。 データ ソースには、<xref:System.Windows.Forms.BindingSource>データ、データ テーブル、データ ビュー、データセットにバインドするデータ マネージャー、配列、または表示を実装するクラス、<xref:System.Collections.IList>インターフェイス。 詳細については、次を参照してください。 [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md)します。  
+1. 設定、`DataSource`プロパティをデータ ソース オブジェクト。 データ ソースには、<xref:System.Windows.Forms.BindingSource>データ、データ テーブル、データ ビュー、データセットにバインドするデータ マネージャー、配列、または表示を実装するクラス、<xref:System.Collections.IList>インターフェイス。 詳細については、次を参照してください。 [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md)します。  
   
-2.  テーブルにバインドする場合は、設定、`DisplayMember`プロパティをデータ ソース内の列の名前にします。  
+2. テーブルにバインドする場合は、設定、`DisplayMember`プロパティをデータ ソース内の列の名前にします。  
   
      \- または -  
   

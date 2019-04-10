@@ -12,12 +12,12 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9e803b6450fb8c9ade4adde5bf98fb1c3c62c861
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313219"
 ---
 # <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理
 基になるデータ ストアからのエラーの処理は、データ入力アプリケーションの必要な機能です。 Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロールによって、この簡単に公開することで、<xref:System.Windows.Forms.DataGridView.DataError>制約違反または壊れているビジネス ルールをデータ ストアを検出したときに発生するイベントです。  
@@ -35,7 +35,7 @@ ms.locfileid: "59230474"
   
 #### <a name="to-handle-data-entry-errors-in-the-datagridview-control"></a>DataGridView コントロールでのデータ エントリ エラーを処理するには  
   
-1.  派生するクラスを作成<xref:System.Windows.Forms.Form>が含まれています、<xref:System.Windows.Forms.DataGridView>コントロールと<xref:System.Windows.Forms.BindingSource>コンポーネント。  
+1. 派生するクラスを作成<xref:System.Windows.Forms.Form>が含まれています、<xref:System.Windows.Forms.DataGridView>コントロールと<xref:System.Windows.Forms.BindingSource>コンポーネント。  
   
      次のコード例は基本的な初期化を提供しが含まれています、`Main`メソッド。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59230474"
     [!code-csharp[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridView.DataError#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#02)]  
   
-2.  データベースへの接続の詳細を処理するためのフォームのクラス定義でメソッドを実装します。  
+2. データベースへの接続の詳細を処理するためのフォームのクラス定義でメソッドを実装します。  
   
      このコード例では、`GetData`設定されてを返すメソッド<xref:System.Data.DataTable>オブジェクト。 設定することを必ず、`connectionString`変数は、データベースの適切な値にします。  
   
@@ -54,12 +54,12 @@ ms.locfileid: "59230474"
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#30)]  
   
-3.  フォームのハンドラーを実装<xref:System.Windows.Forms.Form.Load>を初期化するイベント、<xref:System.Windows.Forms.DataGridView>と<xref:System.Windows.Forms.BindingSource>し、データ バインディングを設定します。  
+3. フォームのハンドラーを実装<xref:System.Windows.Forms.Form.Load>を初期化するイベント、<xref:System.Windows.Forms.DataGridView>と<xref:System.Windows.Forms.BindingSource>し、データ バインディングを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/CS/errorhandling.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridView.DataError#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DataError/VB/errorhandling.vb#10)]  
   
-4.  処理、<xref:System.Windows.Forms.DataGridView.DataError>上のイベント、<xref:System.Windows.Forms.DataGridView>します。  
+4. 処理、<xref:System.Windows.Forms.DataGridView.DataError>上のイベント、<xref:System.Windows.Forms.DataGridView>します。  
   
      コミット操作の場合は、エラーのコンテキストでエラーを表示、<xref:System.Windows.Forms.MessageBox>します。  
   

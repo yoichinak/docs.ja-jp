@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299450"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
@@ -25,11 +25,11 @@ ms.locfileid: "59228263"
 ## <a name="debugging-methodology"></a>デバッグ方法  
  基本的な方法は次のとおりです。  
   
-1.  Windows 認証を使用しているかどうかを確認します。 他の方式を使用している場合には、このトピックは該当しません。  
+1. Windows 認証を使用しているかどうかを確認します。 他の方式を使用している場合には、このトピックは該当しません。  
   
-2.  Windows 認証を使用している場合は、WCF 構成で Kerberos ダイレクトまたはネゴシエートを使用するかどうかを決定します。  
+2. Windows 認証を使用している場合は、WCF 構成で Kerberos ダイレクトまたはネゴシエートを使用するかどうかを決定します。  
   
-3.  構成で Kerberos プロトコルと NTLM のどちらを使用しているかを確認した後は、現在のコンテキストでのエラー メッセージを理解できます。  
+3. 構成で Kerberos プロトコルと NTLM のどちらを使用しているかを確認した後は、現在のコンテキストでのエラー メッセージを理解できます。  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Kerberos プロトコルと NTLM の可用性  
  Kerberos SSP は、Kerberos キー配布センター (KDC: Key Distribution Center) として機能するドメイン コントローラーを必要とします。 Kerberos プロトコルを使用できるのは、クライアントとサービスの両方がドメイン ID を使用している場合だけです。 次の表に示すように、アカウントの他の組み合わせでは NTLM が使用されます。  
@@ -81,15 +81,15 @@ ms.locfileid: "59228263"
   
  資格情報ネゴシエーションを使用する Kerberos を実装するには、次の手順を実行します。  
   
-1.  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> を <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> に設定して委任を実装します。  
+1. <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> を <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> に設定して委任を実装します。  
   
-2.  次のような SSPI ネゴシエーションが必要です。  
+2. 次のような SSPI ネゴシエーションが必要です。  
   
     1.  標準バインディングを使用する場合は、`NegotiateServiceCredential` プロパティを `true` に設定します。  
   
     2.  カスタム バインドを使用する場合は、`AuthenticationMode` 要素の `Security` 属性を `SspiNegotiated` に設定します。  
   
-3.  次のように、NTLM を使用できないようにすることで、SSPI ネゴシエーションで Kerberos を使用する必要があります。  
+3. 次のように、NTLM を使用できないようにすることで、SSPI ネゴシエーションで Kerberos を使用する必要があります。  
   
     1.  これは、次のステートメントでのコードで行います。 `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

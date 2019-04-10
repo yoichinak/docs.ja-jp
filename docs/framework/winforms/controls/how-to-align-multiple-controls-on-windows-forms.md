@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307744"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置する
 Windows ベースのアプリケーションのユーザー インターフェイス (UI) のレイアウトを標準化するには、1 つのコマンドでコントロールのグループを配置することができます。  
@@ -22,11 +22,11 @@ Windows ベースのアプリケーションのユーザー インターフェ�
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>フォーム上の複数のコントロールを配置するには  
   
-1.  位置するコントロールを含むフォームを開いて、 **Windows フォーム デザイナー**します。  
+1. 位置するコントロールを含むフォームを開いて、 **Windows フォーム デザイナー**します。  
   
-2.  最初に選択したコントロールがプライマリのコントロールを配置する、他のユーザーをするように配置するコントロールを選択します。  
+2. 最初に選択したコントロールがプライマリのコントロールを配置する、他のユーザーをするように配置するコントロールを選択します。  
   
-3.  **形式**メニューで、 **Align**、利用可能な 7 つの選択肢のいずれかをクリックします。  
+3. **形式**メニューで、 **Align**、利用可能な 7 つの選択肢のいずれかをクリックします。  
   
 ## <a name="see-also"></a>関連項目
 

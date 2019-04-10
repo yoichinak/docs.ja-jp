@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199324"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307731"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF と Direct3D9 の相互運用性
 Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツを含めることができます。 このトピックでは、WPF で効率的に相互運用するための Direct3D9 コンテンツを作成する方法について説明します。  
@@ -112,13 +112,13 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
   
  パフォーマンスの低下を回避するには、マルチ モニターの具体的にはコードを記述します。 マルチ モニターのコードを記述する 1 つの方法を次に示します。  
   
-1.  ポイントの検索、<xref:System.Windows.Interop.D3DImage>画面領域で、`Visual.ProjectToScreen`メソッド。  
+1. ポイントの検索、<xref:System.Windows.Interop.D3DImage>画面領域で、`Visual.ProjectToScreen`メソッド。  
   
-2.  使用して、`MonitorFromPoint`ポイントが表示されているモニターを検索する GDI メソッド。  
+2. 使用して、`MonitorFromPoint`ポイントが表示されているモニターを検索する GDI メソッド。  
   
-3.  使用して、 `IDirect3D9::GetAdapterMonitor` Direct3D9 アダプターの種類のモニターを検索する方法はオンです。  
+3. 使用して、 `IDirect3D9::GetAdapterMonitor` Direct3D9 アダプターの種類のモニターを検索する方法はオンです。  
   
-4.  新しいモニター新しいバック バッファーを作成し、それを割り当てるアダプターとアダプターのバック バッファーと同じでない場合、<xref:System.Windows.Interop.D3DImage>バック バッファー。  
+4. 新しいモニター新しいバック バッファーを作成し、それを割り当てるアダプターとアダプターのバック バッファーと同じでない場合、<xref:System.Windows.Interop.D3DImage>バック バッファー。  
   
 > [!NOTE]
 >  場合、<xref:System.Windows.Interop.D3DImage>をまたぐモニター、パフォーマンス速度が遅くなります、除く WDDM の場合と`IDirect3D9Ex`同じアダプターでします。 このような状況でパフォーマンスを向上させる方法はありません。  

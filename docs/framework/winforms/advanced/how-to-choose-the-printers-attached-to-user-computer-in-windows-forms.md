@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318807"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する
 既定のプリンター以外のプリンターに印刷することがよくあります。 <xref:System.Windows.Forms.PrintDialog> コンポーネントを使用すると、現在インストールされているプリンターからユーザーに選択させることができます。 <xref:System.Windows.Forms.PrintDialog> コンポーネントでは、 <xref:System.Windows.Forms.DialogResult> コンポーネントの <xref:System.Windows.Forms.PrintDialog> がキャプチャされ、プリンターの選択に使用されます。  
@@ -23,7 +23,7 @@ ms.locfileid: "59184029"
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>プリンターを選択してファイルを印刷するには  
   
-1.  使用して使用するプリンターの選択、<xref:System.Windows.Forms.PrintDialog>コンポーネント。  
+1. 使用して使用するプリンターの選択、<xref:System.Windows.Forms.PrintDialog>コンポーネント。  
   
      次のコード例では、2 つのイベントを処理しています。 最初の例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>、イベント、<xref:System.Windows.Forms.PrintDialog>クラスがインスタンス化され、ユーザーが選択したプリンターがでキャプチャされた、<xref:System.Windows.Forms.DialogResult>プロパティ。  
   

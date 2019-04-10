@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300867"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル: ハイブリッド アプリケーションでのデータへのバインディング
 使用しているかどうかをコントロールにデータ ソースのバインドは、基になるデータへのアクセス権を持つユーザーに提供するために不可欠な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 このチュートリアルでは、両方を含むハイブリッド アプリケーションでデータ バインディングを使用するどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
@@ -49,23 +49,23 @@ ms.locfileid: "59191992"
   
 #### <a name="to-create-and-set-up-the-project"></a>プロジェクトを作成し、設定するには  
   
-1.  という名前の WPF アプリケーション プロジェクトを作成する`WPFWithWFAndDatabinding`します。  
+1. という名前の WPF アプリケーション プロジェクトを作成する`WPFWithWFAndDatabinding`します。  
   
-2.  ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
+2. ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
+3. MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
   
-4.  <xref:System.Windows.Window>要素では、次の追加[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]名前空間のマッピング。  
+4. <xref:System.Windows.Window>要素では、次の追加[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]名前空間のマッピング。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  既定の名前を付けます<xref:System.Windows.Controls.Grid>要素`mainGrid`を割り当てることによって、<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。  
+5. 既定の名前を付けます<xref:System.Windows.Controls.Grid>要素`mainGrid`を割り当てることによって、<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ ms.locfileid: "59191992"
   
 #### <a name="to-add-the-data-source"></a>データ ソースを追加するには  
   
-1.  **データ**メニューの **新しいデータ ソースの追加**します。  
+1. **データ**メニューの **新しいデータ ソースの追加**します。  
   
-2.  **データ ソース構成ウィザード**データセットを使用して、Northwind データベースへの接続を作成します。 詳細については、「[方法 :データをデータベースに接続する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))します。  
+2. **データ ソース構成ウィザード**データセットを使用して、Northwind データベースへの接続を作成します。 詳細については、「[方法 :データをデータベースに接続する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))します。  
   
-3.  によってメッセージが表示されたら、**データ ソース構成ウィザード**、接続文字列として保存`NorthwindConnectionString`します。  
+3. によってメッセージが表示されたら、**データ ソース構成ウィザード**、接続文字列として保存`NorthwindConnectionString`します。  
   
-4.  データベース オブジェクトの選択を求められたら、選択、`Customers`と`Orders`テーブル、および生成されたデータ セットの名前`NorthwindDataSet`します。  
+4. データベース オブジェクトの選択を求められたら、選択、`Customers`と`Orders`テーブル、および生成されたデータ セットの名前`NorthwindDataSet`します。  
   
 ## <a name="binding-to-the-data-source"></a>データ ソースにバインドします。  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>コンポーネントは、アプリケーションのデータ ソースの統一インターフェイスを提供します。 データ ソースへのバインドは、分離コード ファイルに実装されます。  
   
 #### <a name="to-bind-to-the-data-source"></a>データ ソースにバインドするには  
   
-1.  MainWindow.xaml.vb または MainWindow.xaml.cs の名前は分離コード ファイルを開きます。  
+1. MainWindow.xaml.vb または MainWindow.xaml.cs の名前は分離コード ファイルを開きます。  
   
-2.  次のコードをコピー、`MainWindow`クラスの定義。  
+2. 次のコードをコピー、`MainWindow`クラスの定義。  
   
      このコードで宣言、<xref:System.Windows.Forms.BindingSource>コンポーネントと、データベースに接続する関連ヘルパー クラス。  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  コンス トラクターに次のコードをコピーします。
+3. コンス トラクターに次のコードをコピーします。
 
      このコードは、作成し、初期化、<xref:System.Windows.Forms.BindingSource>コンポーネント。
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  MainWindow.xaml を開きます。
+4. MainWindow.xaml を開きます。
 
-5.  デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>要素。
+5. デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>要素。
 
-6.  [プロパティ] ウィンドウ、**イベント**タブ。
+6. [プロパティ] ウィンドウ、**イベント**タブ。
 
-7.  ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
+7. ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
 
-8.  次のコードをコピー、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。
+8. 次のコードをコピー、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。
 
      このコードに割り当てます、<xref:System.Windows.Forms.BindingSource>データ コンテキストとしてコンポーネント設定と、`Customers`と`Orders`アダプター オブジェクト。
 

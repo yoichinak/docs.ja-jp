@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313958"
 ---
 # <a name="documents-in-wpf"></a>WPF のドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ドキュメントの機能をより簡単にアクセスおよびの前の世代よりも読み取りをするために設計された高品質なコンテンツの作成を有効にするが幅広く[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]します。 拡張された機能と品質に加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ドキュメントの表示、パッケージ化、およびセキュリティの統合されたサービスも提供します。 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のドキュメントの種類とドキュメントのパッケージ化の概要を説明します。  
@@ -89,9 +89,9 @@ ms.locfileid: "59169612"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  セキュリティのため、 <xref:System.IO.Packaging.PackageDigitalSignature> (「デジタル署名」) は、パッケージ内のパーツと関連付けることができます。 A<xref:System.IO.Packaging.PackageDigitalSignature>する [509] が組み込まれています。 2 つの機能を提供します。  
   
-1.  パーツの発行元を識別および認証します。  
+1. パーツの発行元を識別および認証します。  
   
-2.  パーツが変更されていないことを検証します。  
+2. パーツが変更されていないことを検証します。  
   
  デジタル署名はパーツを変更できなくするものではありませんが、パーツが何らかの方法で変更されている場合、デジタル署名に対する検証チェックは失敗します。 その後、アプリケーションでは適切なアクションを実行することができます。たとえば、パーツを開く操作をブロックしたり、パーツが変更されていて安全ではないことをユーザーに知らせたりすることができます。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169612"
   
  パッケージ リレーションシップは、追加情報を個別のパーツまたはパッケージ全体に追加または関連付けるための検出可能な方法を提供します。 パッケージ リレーションシップは、次の 2 つの主要な機能のために使用されます。  
   
-1.  1 つのパーツから別のパーツへの依存関係の定義。  
+1. 1 つのパーツから別のパーツへの依存関係の定義。  
   
-2.  メモまたはパーツに関連したその他のデータを追加する情報リレーションシップの定義。  
+2. メモまたはパーツに関連したその他のデータを追加する情報リレーションシップの定義。  
   
  A<xref:System.IO.Packaging.PackageRelationship>依存関係を定義し、パッケージまたはパッケージ全体の一部に関連付けられているその他の情報を追加する迅速で探索可能な手段を提供します。  
   

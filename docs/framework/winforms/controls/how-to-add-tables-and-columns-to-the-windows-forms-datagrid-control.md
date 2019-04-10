@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319912"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222043"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>データ グリッドにテーブルと列をプログラムで追加するには  
   
-1.  テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
+1. テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
   
     > [!CAUTION]
     >  列のスタイルをプログラムで指定するには、ときに常に作成**DataGridColumnStyle**オブジェクトに追加して、 **GridColumnStylesCollection**オブジェクトを追加する前に**DataGridTableStyle**オブジェクトを**GridTableStylesCollection**オブジェクト。 空の追加と**DataGridTableStyle**オブジェクトをコレクションに**DataGridColumnStyle**オブジェクトが自動的に生成します。 新規追加しようとする場合に例外がスローされます、 **DataGridColumnStyle**重複オブジェクト**MappingName**値を**GridColumnStylesCollection**オブジェクト。  
   
-2.  新しいテーブルのスタイルを宣言し、そのマッピングの名前を設定します。  
+2. 新しいテーブルのスタイルを宣言し、そのマッピングの名前を設定します。  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222043"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  新しい列のスタイルを宣言し、そのマッピングの名前とその他のプロパティを設定します。  
+3. 新しい列のスタイルを宣言し、そのマッピングの名前とその他のプロパティを設定します。  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222043"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト  
+4. 呼び出す、**追加**のメソッド、 **GridColumnStylesCollection**テーブルのスタイルに列を追加するオブジェクト  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222043"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。  
+5. 呼び出す、**追加**のメソッド、 **GridTableStylesCollection**データ グリッドにテーブルのスタイルを追加するオブジェクト。  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

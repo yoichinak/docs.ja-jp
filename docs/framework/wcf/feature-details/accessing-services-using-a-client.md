@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314881"
 ---
 # <a name="accessing-services-using-a-client"></a>クライアントを使用したサービスへのアクセス
 クライアント アプリケーションは、作成、構成、およびサービスと通信する WCF クライアントまたはチャネル オブジェクトを使用する必要があります。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)トピックでは、オブジェクトと基本的なクライアントやチャネル オブジェクトを作成すると、それらを使用して必要な手順の概要を説明します。  
@@ -83,11 +83,11 @@ ms.locfileid: "59194527"
   
  明示的方法を使用する場合、アプリケーションで次の手順を順番に実行する必要があります。  
   
-1.  <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (または非同期バージョン) を呼び出します。  
+1. <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (または非同期バージョン) を呼び出します。  
   
-2.  初期化子が返された場合は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> オブジェクトまたは <xref:System.ServiceModel.IClientChannel> プロパティで返された <xref:System.ServiceModel.IClientChannel> オブジェクトの <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> メソッドを呼び出します。  
+2. 初期化子が返された場合は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> オブジェクトまたは <xref:System.ServiceModel.IClientChannel> プロパティで返された <xref:System.ServiceModel.IClientChannel> オブジェクトの <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> メソッドを呼び出します。  
   
-3.  操作を呼び出します。  
+3. 操作を呼び出します。  
   
  製品品質のアプリケーションでは、明示的な方法を採用することによってユーザー インターフェイスのプロセスを制御することをお勧めします。  
   

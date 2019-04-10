@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191589"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316740"
 ---
 # <a name="key-frame-animations-overview"></a>キー フレーム アニメーションの概要
 このトピックでは、キー フレーム アニメーションの概要を説明します。 キー フレーム アニメーションでは、3 つ以上のターゲット値を使用してアニメーション化することができ、アニメーションの補間方式を制御できます。  
@@ -259,9 +259,9 @@ ms.locfileid: "59191589"
   
  キー フレーム アニメーションのキー フレームのキー時刻が解決される手順を次に示します。  
   
-1.  解決<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>値。  
+1. 解決<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>値。  
   
-2.  アニメーションの*合計補間時間*を決定します。これは、キー フレーム アニメーションが順方向の反復を完了するまでにかかる合計時間です。  
+2. アニメーションの*合計補間時間*を決定します。これは、キー フレーム アニメーションが順方向の反復を完了するまでにかかる合計時間です。  
   
     1.  場合、アニメーションの<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ない<xref:System.Windows.Duration.Automatic%2A>または<xref:System.Windows.Duration.Forever%2A>、合計補間時間は、アニメーションの値<xref:System.Windows.Media.Animation.Timeline.Duration%2A>プロパティ。  
   
@@ -269,19 +269,19 @@ ms.locfileid: "59191589"
   
     3.  それ以外の場合、合計補間時間は 1 秒間です。  
   
-3.  解決するのには、合計補間の時刻の値を使用して<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>値。  
+3. 解決するのには、合計補間の時刻の値を使用して<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>値。  
   
-4.  前の手順で解決されていなければ、最後のキー フレームを解決します。 場合、<xref:System.Windows.Media.Animation.KeyTime>キー フレームは、前回の<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>または<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>、解決時間、合計補間時間に等しくなります。  
+4. 前の手順で解決されていなければ、最後のキー フレームを解決します。 場合、<xref:System.Windows.Media.Animation.KeyTime>キー フレームは、前回の<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>または<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>、解決時間、合計補間時間に等しくなります。  
   
      場合、<xref:System.Windows.Media.Animation.KeyTime>の最初のキー フレームが<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>このアニメーションが複数のキー フレームは、解決するには、その<xref:System.Windows.Media.Animation.KeyTime>1 つのキー フレームがある場合は、値 0 をその<xref:System.Windows.Media.Animation.KeyTime>値は<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>は合計値に解決されます前の手順で説明されている補間時間。  
   
-5.  残りの解決<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>値: これらはそれぞれ指定を均等に利用可能な時間。  このプロセスの間の未解決<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>値として扱われます一時的に<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>値、および一時的な解決時間を取得します。  
+5. 残りの解決<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>値: これらはそれぞれ指定を均等に利用可能な時間。  このプロセスの間の未解決<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>値として扱われます一時的に<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>値、および一時的な解決時間を取得します。  
   
-6.  解決するには、<xref:System.Windows.Media.Animation.KeyTime>キー フレームの値では、解決、最も近くに宣言されているキー フレームを使用してキー時刻が指定されていない<xref:System.Windows.Media.Animation.KeyTime>値。  
+6. 解決するには、<xref:System.Windows.Media.Animation.KeyTime>キー フレームの値では、解決、最も近くに宣言されているキー フレームを使用してキー時刻が指定されていない<xref:System.Windows.Media.Animation.KeyTime>値。  
   
-7.  解決するには残り<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>値。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用して、<xref:System.Windows.Media.Animation.KeyTime>の近隣の値のキーを解決時間を決定します。  目標は、アニメーションの速度がこのキー フレームの解決時間近くで一定であることを保証することです。  
+7. 解決するには残り<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>値。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用して、<xref:System.Windows.Media.Animation.KeyTime>の近隣の値のキーを解決時間を決定します。  目標は、アニメーションの速度がこのキー フレームの解決時間近くで一定であることを保証することです。  
   
-8.  つまり解決時間 (主キー) の順序と宣言 (セカンダリ キー) の順序でキー フレームを並べ替え、解決されたキー フレームに基づいて、使用して安定した並べ替え<xref:System.Windows.Media.Animation.KeyTime>値。  
+8. つまり解決時間 (主キー) の順序と宣言 (セカンダリ キー) の順序でキー フレームを並べ替え、解決されたキー フレームに基づいて、使用して安定した並べ替え<xref:System.Windows.Media.Animation.KeyTime>値。  
   
 ## <a name="see-also"></a>関連項目
 

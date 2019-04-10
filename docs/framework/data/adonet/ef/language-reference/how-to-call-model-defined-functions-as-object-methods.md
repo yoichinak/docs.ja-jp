@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151230"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304832"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>方法: モデル定義関数をオブジェクト メソッドとして呼び出す
 ここでは、モデル定義関数を <xref:System.Data.Objects.ObjectContext> オブジェクトのメソッドまたはカスタム クラスの静的メソッドとして呼び出す方法について説明します。 A*モデル定義関数*は概念モデルで定義されている関数です。 このトピックで説明する手順は、これらの関数を LINQ to Entities クエリから呼び出すのではなく、直接呼び出す方法を示すものです。 Linq to Entities クエリ モデル定義関数を呼び出す方法の詳細については、次を参照してください。[方法。クエリ モデル定義関数を呼び出す](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)します。  
@@ -21,19 +21,19 @@ ms.locfileid: "59151230"
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>モデル定義関数を ObjectContext オブジェクトのメソッドとして呼び出すには  
   
-1.  ソース ファイルを追加して、部分クラスを拡張します。このクラスは、<xref:System.Data.Objects.ObjectContext> クラスから派生したものであり、Entity Framework ツールによって自動生成されます。 CLR スタブを別のソース ファイルで定義すると、ファイルを再生成しても変更内容が失われません。  
+1. ソース ファイルを追加して、部分クラスを拡張します。このクラスは、<xref:System.Data.Objects.ObjectContext> クラスから派生したものであり、Entity Framework ツールによって自動生成されます。 CLR スタブを別のソース ファイルで定義すると、ファイルを再生成しても変更内容が失われません。  
   
-2.  共通言語ランタイム (CLR) メソッドを、次のことを行う <xref:System.Data.Objects.ObjectContext> クラスに追加します。  
+2. 共通言語ランタイム (CLR) メソッドを、次のことを行う <xref:System.Data.Objects.ObjectContext> クラスに追加します。  
   
     -   概念モデルで定義された関数にマップします。 メソッドをマップするには、ユーザーが <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> をメソッドに適用する必要があります。 属性の <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> パラメーターと <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> パラメーターが、それぞれ概念モデルの名前空間と概念モデルの関数名であることに注意してください。 LINQ の関数名解決では、大文字と小文字が区別されます。  
   
     -   <xref:System.Linq.IQueryProvider.Execute%2A> プロパティによって返される <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> メソッドの結果を返します。  
   
-3.  メソッドを <xref:System.Data.Objects.ObjectContext> クラスのインスタンスのメンバーとして呼び出します。  
+3. メソッドを <xref:System.Data.Objects.ObjectContext> クラスのインスタンスのメンバーとして呼び出します。  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>モデル定義関数をカスタム クラスの静的メソッドとして呼び出すには  
   
-1.  クラスを次のことを行う静的メソッドでアプリケーションに追加します。  
+1. クラスを次のことを行う静的メソッドでアプリケーションに追加します。  
   
     -   概念モデルで定義された関数にマップします。 メソッドをマップするには、ユーザーが <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> をメソッドに適用する必要があります。 属性の <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> パラメーターと <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> パラメーターが、それぞれ概念モデルの名前空間と概念モデルの関数名であることに注意してください。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "59151230"
   
     -   <xref:System.Linq.IQueryProvider.Execute%2A> プロパティによって返される <xref:System.Linq.IQueryable.Provider%2A> メソッドの結果を返します。  
   
-2.  メソッドをカスタム クラスの静的メソッドのメンバーとして呼び出します。  
+2. メソッドをカスタム クラスの静的メソッドのメンバーとして呼び出します。  
   
 ## <a name="example"></a>例  
  **モデル定義関数を ObjectContext オブジェクトのメソッドとして呼び出す**  

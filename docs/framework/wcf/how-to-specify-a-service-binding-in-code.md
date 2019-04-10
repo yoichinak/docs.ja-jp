@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303454"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>方法: コード内でサービス バインディングを指定する
 この例では、電卓サービスに `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスに実装し、コード内でサービス エンドポイントを定義します。このエンドポイントでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> クラスを使用するように指定します。  
@@ -21,29 +21,29 @@ ms.locfileid: "59162359"
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>サービスで BasicHttpBinding が使用されるようにコードで指定するには  
   
-1.  サービスの種類にサービス コントラクトを定義します。  
+1. サービスの種類にサービス コントラクトを定義します。  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  サービス クラスにサービス コントラクトを実装します。  
+2. サービス クラスにサービス コントラクトを実装します。  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  ホスト アプリケーションで、サービスのベース アドレスとサービスで使用するバインドを作成します。  
+3. ホスト アプリケーションで、サービスのベース アドレスとサービスで使用するバインドを作成します。  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  サービスのホストを作成し、エンドポイントを追加して、ホストを開きます。  
+4. サービスのホストを作成し、エンドポイントを追加して、ホストを開きます。  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>バインディング プロパティの既定値を変更するには  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding> クラスの既定のプロパティ値を変更するには、ホストを作成する前に、バインディングのプロパティ値を新しい値に設定します。 たとえば、開くおよび閉じる操作の既定のタイムアウト値を 1 分から 2 分に変更するには、次のようにします。  
+1. <xref:System.ServiceModel.BasicHttpBinding> クラスの既定のプロパティ値を変更するには、ホストを作成する前に、バインディングのプロパティ値を新しい値に設定します。 たとえば、開くおよび閉じる操作の既定のタイムアウト値を 1 分から 2 分に変更するには、次のようにします。  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  

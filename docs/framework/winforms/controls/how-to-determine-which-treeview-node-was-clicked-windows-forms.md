@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 073b953d2a39b27081020c56399ea3beae2083e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71f13c7b160822c92475d4d03e923b40d4f0454d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296733"
 ---
 # <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>方法: (Windows フォーム) がクリックしてされた TreeView ノードを決定します。
 Windows フォームを使用するときに<xref:System.Windows.Forms.TreeView>コントロール、一般的なタスクが判断するノードがクリックしてされ、適切に応答します。  
   
 ### <a name="to-determine-which-treeview-node-was-clicked"></a>クリックしてされた TreeView ノードを確認するには  
   
-1.  使用して、<xref:System.EventArgs>クリックされたノードのオブジェクトへの参照を取得するオブジェクト。  
+1. 使用して、<xref:System.EventArgs>クリックされたノードのオブジェクトへの参照を取得するオブジェクト。  
   
-2.  チェックしているノードがクリックしてされたかを判断、<xref:System.Windows.Forms.TreeViewEventArgs>クラスは、イベントに関連するデータが含まれています。  
+2. チェックしているノードがクリックしてされたかを判断、<xref:System.Windows.Forms.TreeViewEventArgs>クラスは、イベントに関連するデータが含まれています。  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  

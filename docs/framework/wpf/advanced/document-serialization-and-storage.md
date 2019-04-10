@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295901"
 ---
 # <a name="document-serialization-and-storage"></a>ドキュメントのシリアル化および保存
 Microsoft .NET Framework では、作成して、高品質のドキュメントを表示するための強力な環境を提供します。  固定ドキュメントとフロー ドキュメント、詳細の両方をサポートする拡張機能は強力な 2D と組み合わせて表示コントロール、および 3D グラフィックス機能を .NET Framework アプリケーションの品質とユーザー エクスペリエンスの新しいレベルをします。  .NET Framework の主な機能は、ドキュメントのメモリ内表現を柔軟に管理できることと、ほとんどすべてのアプリケーションの必要があることを効率的に保存し、データ ストアからドキュメントを読み込みます。  内部のメモリ内表現から外部のデータ ストアにドキュメントを変換するプロセスは、シリアル化と呼ばれます。  データ ストアを読み取って元のメモリ内インスタンスを再作成する逆のプロセスは、逆シリアル化と呼ばれます。  
@@ -65,11 +65,11 @@ Microsoft .NET Framework では、作成して、高品質のドキュメント�
 ### <a name="creating-a-plug-in-serializer"></a>プラグイン シリアライザーの作成  
  プラグイン シリアライザーとリンクされたシリアライザーはどちらも、同じ公開されたパブリック メソッドとイベントを使い、同期または非同期で動作するように同じように設計できます。  通常、プラグイン シリアライザーの作成には 3 つの基本的な手順があります。  
   
-1.  最初に、シリアライザーをリンクされたシリアライザーとして実装してデバッグします。  コンパイルしてテスト アプリケーションに直接リンクするシリアライザーを最初に作成すると、テストに役立つブレークポイントや他のデバッグ サービスに完全にアクセスできます。  
+1. 最初に、シリアライザーをリンクされたシリアライザーとして実装してデバッグします。  コンパイルしてテスト アプリケーションに直接リンクするシリアライザーを最初に作成すると、テストに役立つブレークポイントや他のデバッグ サービスに完全にアクセスできます。  
   
-2.  シリアライザーを完全にテストした後、<xref:System.Windows.Documents.Serialization.ISerializerFactory>プラグインを作成するインターフェイスを追加します。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>インターフェイスは、論理ツリーが含まれるすべての .NET Framework オブジェクトへのフル アクセスを許可<xref:System.Windows.UIElement>オブジェクト、 <xref:System.Windows.Documents.IDocumentPaginatorSource>、および<xref:System.Windows.Media.Visual>要素。  さらに<xref:System.Windows.Documents.Serialization.ISerializerFactory>同じ同期および非同期のメソッドとリンクされたシリアライザーで使用されるイベントを提供します。  サイズの大きいドキュメントの出力には時間がかかる場合があるため、ユーザーの操作に応答できる状態を維持し、データ ストアで問題が発生した場合の "キャンセル" オプションを提供できるよう、非同期操作を使うことをお勧めします。  
+2. シリアライザーを完全にテストした後、<xref:System.Windows.Documents.Serialization.ISerializerFactory>プラグインを作成するインターフェイスを追加します。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>インターフェイスは、論理ツリーが含まれるすべての .NET Framework オブジェクトへのフル アクセスを許可<xref:System.Windows.UIElement>オブジェクト、 <xref:System.Windows.Documents.IDocumentPaginatorSource>、および<xref:System.Windows.Media.Visual>要素。  さらに<xref:System.Windows.Documents.Serialization.ISerializerFactory>同じ同期および非同期のメソッドとリンクされたシリアライザーで使用されるイベントを提供します。  サイズの大きいドキュメントの出力には時間がかかる場合があるため、ユーザーの操作に応答できる状態を維持し、データ ストアで問題が発生した場合の "キャンセル" オプションを提供できるよう、非同期操作を使うことをお勧めします。  
   
-3.  プラグイン シリアライザーを作成した後、プラグインを配布してインストール (およびアンインストール) するためのインストール スクリプトを実装します (前の「[プラグイン シリアライザーのインストール](#InstallingPluginSerializers)」を参照)。  
+3. プラグイン シリアライザーを作成した後、プラグインを配布してインストール (およびアンインストール) するためのインストール スクリプトを実装します (前の「[プラグイン シリアライザーのインストール](#InstallingPluginSerializers)」を参照)。  
   
 ## <a name="see-also"></a>関連項目
 

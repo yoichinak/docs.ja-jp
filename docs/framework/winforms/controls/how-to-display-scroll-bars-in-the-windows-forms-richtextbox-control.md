@@ -6,21 +6,21 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312658"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールにスクロール バーを表示する
 既定では、Windows フォームで<xref:System.Windows.Forms.RichTextBox>コントロールは、必要に応じて、垂直および水平スクロール バーを表示します。 7 つの可能な値がある、<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>のプロパティ、<xref:System.Windows.Forms.RichTextBox>コントロールは、次の表で説明されています。  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>RichTextBox コントロールにスクロール バーを表示するには  
   
-1.  <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティを `true` に設定します。 場合、水平スクロール バーなどの型は表示されません、<xref:System.Windows.Forms.RichTextBox.Multiline%2A>プロパティに設定されて`false`します。  
+1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティを `true` に設定します。 場合、水平スクロール バーなどの型は表示されません、<xref:System.Windows.Forms.RichTextBox.Multiline%2A>プロパティに設定されて`false`します。  
   
-2.  設定、<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>プロパティの適切な値を<xref:System.Windows.Forms.RichTextBoxScrollBars>列挙体。  
+2. 設定、<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>プロパティの適切な値を<xref:System.Windows.Forms.RichTextBoxScrollBars>列挙体。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -32,7 +32,7 @@ ms.locfileid: "59142559"
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|常に垂直スクロール バーが表示されます。 テキストがコントロールの長さを超えていない場合は、スクロール バーを使用できなくなります。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|常に垂直スクロール バーが表示されます。 水平スクロール バーの場合に表示されます、<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>プロパティに設定されて`false`します。 テキストがコントロールの高さや幅を超えていない場合、スクロール バーは淡色表示になります。|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
+3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  

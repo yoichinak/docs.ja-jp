@@ -2,12 +2,12 @@
 title: 有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305027"
 ---
 # <a name="poison-message-handling"></a>有害メッセージ処理
 A*有害なメッセージ*をアプリケーションに配信試行の最大数を超えたメッセージです。 この状況は、キュー ベースのアプリケーションがエラーによってメッセージを処理できないときに発生する可能性があります。 信頼性に対する要求を満たすために、キューに置かれたアプリケーションはトランザクションの下でメッセージを受信します。 キューに置かれたメッセージを受信したトランザクションを中止すると、メッセージはそのままキューに残り、新しいトランザクションの下で再試行されます。 トランザクションを中止させた問題が解決されなければ、受信側のアプリケーションは、配信試行回数の最大値を超えるまで同じメッセージの受信と中止を繰り返す悪循環に陥る可能性があり、その結果、有害メッセージが生じることになります。  
@@ -66,17 +66,17 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
   
  アプリケーションでは、有害メッセージを有害メッセージ キューに移動し、サービスがキュー内の残りのメッセージにアクセスできるようにする、なんらかの有害メッセージ自動処理を必要とする場合があります。 エラー処理機構を使用して有害メッセージの例外をリッスンする唯一のシナリオは、<xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> の設定を <xref:System.ServiceModel.ReceiveErrorHandling.Fault> に設定した場合です。 メッセージ キュー 3.0 の有害メッセージ サンプルは、この動作を示しています。 ベスト プラクティスを含め、有害メッセージを処理するために必要な手順の概要を以下に示します。  
   
-1.  有害メッセージの設定がアプリケーションの要件を反映していることを確認します。 設定を処理するときは、[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] でのメッセージ キューの機能の相違点を理解してください。  
+1. 有害メッセージの設定がアプリケーションの要件を反映していることを確認します。 設定を処理するときは、[!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] でのメッセージ キューの機能の相違点を理解してください。  
   
-2.  必要に応じて `IErrorHandler` を実装し、有害メッセージのエラーを処理します。 `ReceiveErrorHandling` を `Fault` に設定する場合、有害メッセージをキューから取り除いたり、外部の従属的な問題を解決したりする手動の機構が必要となります。そのため、`IErrorHandler` を `ReceiveErrorHandling` に設定するときは、次のコードに示すように `Fault` を実装するのが一般的です。  
+2. 必要に応じて `IErrorHandler` を実装し、有害メッセージのエラーを処理します。 `ReceiveErrorHandling` を `Fault` に設定する場合、有害メッセージをキューから取り除いたり、外部の従属的な問題を解決したりする手動の機構が必要となります。そのため、`IErrorHandler` を `ReceiveErrorHandling` に設定するときは、次のコードに示すように `Fault` を実装するのが一般的です。  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  サービス動作が使用できる `PoisonBehaviorAttribute` を作成します。 この動作により、`IErrorHandler` がディスパッチャーにインストールされます。 このコード例を次に示します。  
+3. サービス動作が使用できる `PoisonBehaviorAttribute` を作成します。 この動作により、`IErrorHandler` がディスパッチャーにインストールされます。 このコード例を次に示します。  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  サービスに有害動作属性による注釈が付けられていることを確認します。  
+4. サービスに有害動作属性による注釈が付けられていることを確認します。  
 
  また、`ReceiveErrorHandling` を `Fault` に設定した場合は、`ServiceHost` が有害メッセージを検出するとエラーになります。 この場合、faulted イベントにフックしてサービスを終了し、修正措置を講じた後に再起動できます。 たとえば、`LookupId` に伝達された <xref:System.ServiceModel.MsmqPoisonMessageException> に含まれる `IErrorHandler` は記録しておくことができます。そのため、サービス ホストでエラーが発生したときに、`System.Messaging` API を使用して、この `LookupId` に基づいてキューからメッセージを受信し、そのメッセージをキューから削除して、外部ストアまたは別のキューに格納できます。 これで `ServiceHost` を再起動して、通常の処理を再開できるようになります。 [有害メッセージを MSMQ 4.0 で処理](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)はこの動作を示します。  
   

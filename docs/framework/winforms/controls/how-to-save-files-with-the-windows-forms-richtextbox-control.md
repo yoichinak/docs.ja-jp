@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318417"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールを使用してファイルを保存する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールがいくつかの形式のいずれかで表示される情報を書き込むことができます。  
@@ -39,11 +39,11 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>コントロールの内容をファイルに保存するには  
   
-1.  保存するファイルのパスを決定します。  
+1. 保存するファイルのパスを決定します。  
   
      実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)します。  
   
-2.  呼び出す、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>のメソッド、<xref:System.Windows.Forms.RichTextBox>コントロール、ファイルを保存して、必要に応じてファイルの種類を指定します。 唯一の引数としてファイル名を持つメソッドを呼び出す場合、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。  
+2. 呼び出す、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>のメソッド、<xref:System.Windows.Forms.RichTextBox>コントロール、ファイルを保存して、必要に応じてファイルの種類を指定します。 唯一の引数としてファイル名を持つメソッドを呼び出す場合、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。  
   
      リッチ テキスト ファイルの場所は次の例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例でフォームを前提としています、<xref:System.Windows.Forms.RichTextBox>コントロールが既に追加されています。  
   

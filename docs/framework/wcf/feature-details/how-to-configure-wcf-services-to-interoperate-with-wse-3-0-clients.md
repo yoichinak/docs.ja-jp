@@ -2,19 +2,19 @@
 title: '方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303896"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する
 Windows Communication Foundation (WCF) サービス ワイヤレベルの互換性が Web サービス拡張 3.0 Microsoft .NET (WSE) クライアントの Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF サービスが構成されている場合。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>WCF サービスを WSE 3.0 クライアントと相互運用できるようにするには  
   
-1.  WCF サービス用のカスタム バインディングを定義します。  
+1. WCF サービス用のカスタム バインディングを定義します。  
   
      メッセージ エンコーディングに 2004 年 8 月版の WS-Addressing 仕様が使用されるように指定するには、カスタム バインディングを作成する必要があります。  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) サービス ワイヤレベルの互換�
         > [!NOTE]
         >  SOAP 1.2 の使用時には、`messageVersion` 属性を <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A> に設定します。  
   
-2.  サービスがカスタム バインドを使用するように指定します。  
+2. サービスがカスタム バインドを使用するように指定します。  
   
     1.  設定、`binding`の属性、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素`customBinding`します。  
   

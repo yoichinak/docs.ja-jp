@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228355"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303987"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>方法: ツール バー ボタンのメニュー イベントをトリガーする
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228355"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>ツール バーの Click イベントを処理するには  
   
-1.  プロシージャでは、ツールバー ボタンを追加、<xref:System.Windows.Forms.ToolBar>コントロール。  
+1. プロシージャでは、ツールバー ボタンを追加、<xref:System.Windows.Forms.ToolBar>コントロール。  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228355"
        }  
     ```  
   
-2.  イベント ハンドラーを追加、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベント。 ケース切り替えステートメントを使用して、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>ツールバーのボタンがクリックされたを確認するクラス。 この結果に基づいて、適切なメッセージ ボックスが表示されます。  
+2. イベント ハンドラーを追加、<xref:System.Windows.Forms.ToolBar>コントロールの<xref:System.Windows.Forms.ToolBar.ButtonClick>イベント。 ケース切り替えステートメントを使用して、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>ツールバーのボタンがクリックされたを確認するクラス。 この結果に基づいて、適切なメッセージ ボックスが表示されます。  
   
     > [!NOTE]
     >  この例では、メッセージ ボックスは、プレースホルダーとして単独で使用されています。 ツール バーのボタンがクリックされたときに実行するコードは、自由に追加できます。  

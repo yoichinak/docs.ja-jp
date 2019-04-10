@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320133"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194813"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript を使用する XBAP のデバッグ  
  XBAP で使用する場合、<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>オブジェクトを HTML ウィンドウとの通信は、2 つの設定を実行し、Visual Studio でアプリケーションのデバッグを指定する必要があります。 そのアプリケーションは元のサイトにアクセスできる必要がありますが、そのアプリケーションを開始するときは、XBAP を含む HTML ページを使用しなければなりません。 この 2 つの設定を確認する手順を次に示します。  
   
-1.  Visual Studio でプロジェクトのプロパティを開きます。  
+1. Visual Studio でプロジェクトのプロパティを開きます。  
   
-2.  **[セキュリティ]** タブの **[詳細設定]** をクリックします。  
+2. **[セキュリティ]** タブの **[詳細設定]** をクリックします。  
   
      [セキュリティの詳細設定] ダイアログ ボックスが表示されます。  
   
-3.  **[アプリケーション アクセスをその元のサイトに与える]** チェック ボックスがオンになっていることを確認し、**[OK]** をクリックします。  
+3. **[アプリケーション アクセスをその元のサイトに与える]** チェック ボックスがオンになっていることを確認し、**[OK]** をクリックします。  
   
-4.  **[デバッグ]** タブで、**[ブラウザーを開始時に使用する URL]** をクリックし、XBAP を含む HTML ページの URL を指定します。  
+4. **[デバッグ]** タブで、**[ブラウザーを開始時に使用する URL]** をクリックし、XBAP を含む HTML ページの URL を指定します。  
   
-5.  Internet Explorer で、**[ツール]** をクリックし、**[インターネット オプション]** をクリックします。  
+5. Internet Explorer で、**[ツール]** をクリックし、**[インターネット オプション]** をクリックします。  
   
      [インターネット オプション] ダイアログ ボックスが表示されます。  
   
-6.  **[詳細設定]** タブをクリックします。  
+6. **[詳細設定]** タブをクリックします。  
   
-7.  **[セキュリティ]** の下にある **[設定]** ボックスで、**[マイ コンピューターのファイルでのアクティブ コンテンツの実行を許可する]** チェック ボックスをオンにします。  
+7. **[セキュリティ]** の下にある **[設定]** ボックスで、**[マイ コンピューターのファイルでのアクティブ コンテンツの実行を許可する]** チェック ボックスをオンにします。  
   
-8.  **[OK]** をクリックします。  
+8. **[OK]** をクリックします。  
   
      変更は、Internet Explorer を再起動すると有効になります。  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194813"
 ### <a name="creating-a-full-trust-xbap"></a>完全な信頼の XBAP の作成  
  XBAP で完全な信頼が必要な場合、プロジェクトを変更してこのアクセス許可を有効にできます。 完全な信頼を有効にする手順を次に示します。  
   
-1.  Visual Studio でプロジェクトのプロパティを開きます。  
+1. Visual Studio でプロジェクトのプロパティを開きます。  
   
-2.  **[セキュリティ]** タブで、**[これは完全に信頼するアプリケーションです]** をクリックします。  
+2. **[セキュリティ]** タブで、**[これは完全に信頼するアプリケーションです]** をクリックします。  
   
  この設定により、次の変更が実行されます。  
   

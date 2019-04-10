@@ -2,12 +2,12 @@
 title: WCF で使用されるセキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142221"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295550"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF で使用されるセキュリティの概要
 Windows Communication Foundation (WCF) のセキュリティは既に使用されている概念に基づいて構築されており、さまざまなセキュリティ インフラストラクチャにデプロイされています。  
@@ -34,15 +34,15 @@ Windows Communication Foundation (WCF) のセキュリティは既に使用さ�
 ## <a name="access-control-mechanisms"></a>アクセス制御機構  
  WCF には、サービスや操作へのアクセスを制御するさまざまな方法が用意されています。 次に例を示します。  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET メンバーシップ プロバイダー  
+2. ASP.NET メンバーシップ プロバイダー  
   
-3.  ASP.NET ロール プロバイダー  
+3. ASP.NET ロール プロバイダー  
   
-4.  承認マネージャー  
+4. 承認マネージャー  
   
-5.  ID モデル  
+5. ID モデル  
   
  詳細については、これらのトピックは、「[アクセス制御メカニズム](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

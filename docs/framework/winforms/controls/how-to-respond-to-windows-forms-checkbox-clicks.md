@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319899"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>方法: Windows フォーム CheckBox のクリックに応答する
 ユーザーが Windows フォームをクリックするたびに<xref:System.Windows.Forms.CheckBox>コントロール、<xref:System.Windows.Forms.Control.Click>イベントが発生します。 チェック ボックスの状態に応じていくつかの操作を実行するアプリケーションをプログラミングできます。  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>CheckBox のクリックに応答するには  
   
-1.  <xref:System.Windows.Forms.Control.Click>イベント ハンドラーを使用して、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティをコントロールの状態を確認し、必要なアクションを実行します。  
+1. <xref:System.Windows.Forms.Control.Click>イベント ハンドラーを使用して、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティをコントロールの状態を確認し、必要なアクションを実行します。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ ms.locfileid: "59211986"
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>操作のチェック ボックスを決定するには、がクリックされます。  
   
-1.  値をクエリする case ステートメントを使用して、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティを一連の措置を決定します。 ときに、<xref:System.Windows.Forms.CheckBox.ThreeState%2A>プロパティに設定されて`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティは、チェック ボックスを表す 3 つの値を返す可能性があります ボックスがオフの場合、またはサードパーティ中間状態、ボックスが表示されます、淡色表示に外観をオプションを示すためには、ご利用いただけません。  
+1. 値をクエリする case ステートメントを使用して、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティを一連の措置を決定します。 ときに、<xref:System.Windows.Forms.CheckBox.ThreeState%2A>プロパティに設定されて`true`、<xref:System.Windows.Forms.CheckBox.CheckState%2A>プロパティは、チェック ボックスを表す 3 つの値を返す可能性があります ボックスがオフの場合、またはサードパーティ中間状態、ボックスが表示されます、淡色表示に外観をオプションを示すためには、ご利用いただけません。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320471"
 ---
 # <a name="adorners-overview"></a>装飾の概要
 装飾は特別な種類の<xref:System.Windows.FrameworkElement>ユーザーに視覚的な手掛かりを提供するために使用します。 装飾は、要素への機能ハンドル追加やコントロールに関する状態情報の提供など、さまざまな用途に使用できます。  
@@ -74,9 +74,9 @@ ms.locfileid: "59227692"
 ## <a name="adorning-a-single-uielement"></a>単一の UIElement の装飾  
  特定の装飾をバインドする<xref:System.Windows.UIElement>、これらの手順に従います。  
   
-1.  静的メソッドを呼び出す<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>を取得する、<xref:System.Windows.Documents.AdornerLayer>オブジェクト、<xref:System.Windows.UIElement>装飾対象。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 指定された、ビジュアル ツリーをウォーク<xref:System.Windows.UIElement>、し、最初に見つかった装飾層を返します。 (装飾層が見つからない場合、メソッドにより null が返されます)。  
+1. 静的メソッドを呼び出す<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>を取得する、<xref:System.Windows.Documents.AdornerLayer>オブジェクト、<xref:System.Windows.UIElement>装飾対象。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 指定された、ビジュアル ツリーをウォーク<xref:System.Windows.UIElement>、し、最初に見つかった装飾層を返します。 (装飾層が見つからない場合、メソッドにより null が返されます)。  
   
-2.  呼び出す、<xref:System.Windows.Documents.AdornerLayer.Add%2A>ターゲットに装飾をバインドするメソッド<xref:System.Windows.UIElement>します。  
+2. 呼び出す、<xref:System.Windows.Documents.AdornerLayer.Add%2A>ターゲットに装飾をバインドするメソッド<xref:System.Windows.UIElement>します。  
   
  次の例では、simplecircleadorner に (上図) を参照、<xref:System.Windows.Controls.TextBox>という*myTextBox*します。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59227692"
 ## <a name="adorning-the-children-of-a-panel"></a>パネルの子の装飾  
  子に装飾をバインドする、 <xref:System.Windows.Controls.Panel>、これらの手順に従います。  
   
-1.  呼び出す、`static`メソッド<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>子が装飾対象の要素の装飾層が見つかりません。  
+1. 呼び出す、`static`メソッド<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>子が装飾対象の要素の装飾層が見つかりません。  
   
-2.  呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。  
+2. 呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。  
   
  次の例は、simplecircleadorner 参照の子に (上記) を連結、<xref:System.Windows.Controls.StackPanel>という*myStackPanel*します。  
   

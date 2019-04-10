@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190731"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313945"
 ---
 # <a name="custom-animations-overview"></a>カスタム アニメーションの概要
 このトピックでは、カスタム キー フレームやアニメーション クラスを作成して、またはフレームごとのコールバックを使ってバイパスすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション システムを拡張する方法と、それが必要な状況について説明します。  
@@ -99,9 +99,9 @@ ms.locfileid: "59190731"
   
  推奨される ([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションによって使われる) パラダイムは、2 つの継承レベルを使うことです。  
   
-1.  作成する抽象*\<型 >* AnimationBase クラスから派生した<xref:System.Windows.Media.Animation.AnimationTimeline>します。 このクラスをオーバーライドする必要があります、<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>メソッド。 また新しい抽象メソッド GetCurrentValueCore を導入し、オーバーライドする必要があります<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>GetCurrentValueCore を呼び出すし、既定の配信元の値と既定の宛先値パラメーターの型を検証します。  
+1. 作成する抽象*\<型 >* AnimationBase クラスから派生した<xref:System.Windows.Media.Animation.AnimationTimeline>します。 このクラスをオーバーライドする必要があります、<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>メソッド。 また新しい抽象メソッド GetCurrentValueCore を導入し、オーバーライドする必要があります<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>GetCurrentValueCore を呼び出すし、既定の配信元の値と既定の宛先値パラメーターの型を検証します。  
   
-2.  継承する別のクラスを作成から、新しい*\<型 >* AnimationBase クラスをオーバーライドし、<xref:System.Windows.Freezable.CreateInstanceCore%2A>メソッド、導入した GetCurrentValueCore メソッド、<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>プロパティ。  
+2. 継承する別のクラスを作成から、新しい*\<型 >* AnimationBase クラスをオーバーライドし、<xref:System.Windows.Freezable.CreateInstanceCore%2A>メソッド、導入した GetCurrentValueCore メソッド、<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>プロパティ。  
   
  **別の方法**  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312580"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える
 Windows フォーム コントロールでは、データ バインドされるときに並べ替えられません。 並べ替えられたデータを表示するには、並べ替えをサポートするデータ ソースを使用して、並べ替え、データ ソース。 並べ替えをサポートするデータ ソースはデータ ビュー、データのビュー マネージャー、および並べ替えられた配列。  
@@ -22,7 +22,7 @@ Windows フォーム コントロールでは、データ バインドされる�
   
 ### <a name="to-sort-the-list"></a>一覧を並べ替える  
   
-1.  `Sorted` プロパティを `true` に設定します。  
+1. `Sorted` プロパティを `true` に設定します。  
   
      この設定は、並べ替えられた順序ですべての既存のリスト アイテムを再配置します。  
   

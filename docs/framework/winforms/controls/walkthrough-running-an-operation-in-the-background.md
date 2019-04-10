@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149085"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308446"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル: 操作をバックグラウンドで実行する
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
@@ -30,33 +30,33 @@ ms.locfileid: "59149085"
   
 ### <a name="to-run-an-operation-in-the-background"></a>バック グラウンドで操作を実行するには  
   
-1.  2 つの Windows フォーム デザイナーでアクティブなフォームにドラッグ<xref:System.Windows.Forms.Button>コントロールを**ツールボックス**フォームを設定して、`Name`と<xref:System.Windows.Forms.Control.Text%2A>次の表に従って、ボタンのプロパティ。  
+1. 2 つの Windows フォーム デザイナーでアクティブなフォームにドラッグ<xref:System.Windows.Forms.Button>コントロールを**ツールボックス**フォームを設定して、`Name`と<xref:System.Windows.Forms.Control.Text%2A>次の表に従って、ボタンのプロパティ。  
   
     |ボタン|名前|テキスト|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**[開始]**|  
     |`button2`|`cancelBtn`|**キャンセル**|  
   
-2.  開く、**ツールボックス**、クリックして、**コンポーネント**タブをクリックし、ドラッグ、<xref:System.ComponentModel.BackgroundWorker>コンポーネントをフォームにします。  
+2. 開く、**ツールボックス**、クリックして、**コンポーネント**タブをクリックし、ドラッグ、<xref:System.ComponentModel.BackgroundWorker>コンポーネントをフォームにします。  
   
      `backgroundWorker1`コンポーネントに表示されます、**コンポーネント トレイ**します。  
   
-3.  **[プロパティ]** ウィンドウで、 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true`に設定します。  
+3. **[プロパティ]** ウィンドウで、 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true`に設定します。  
   
-4.  **プロパティ**ウィンドウの**イベント**ボタンをクリックし、ダブルクリック、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。  
+4. **プロパティ**ウィンドウの**イベント**ボタンをクリックし、ダブルクリック、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントをイベント ハンドラーを作成します。  
   
-5.  挿入に時間のかかるコード、<xref:System.ComponentModel.BackgroundWorker.DoWork>イベント ハンドラー。  
+5. 挿入に時間のかかるコード、<xref:System.ComponentModel.BackgroundWorker.DoWork>イベント ハンドラー。  
   
-6.  操作に必要なすべてのパラメーターを抽出、<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>のプロパティ、<xref:System.ComponentModel.DoWorkEventArgs>パラメーター。  
+6. 操作に必要なすべてのパラメーターを抽出、<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>のプロパティ、<xref:System.ComponentModel.DoWorkEventArgs>パラメーター。  
   
-7.  計算の結果に割り当てる、<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>のプロパティ、<xref:System.ComponentModel.DoWorkEventArgs>します。  
+7. 計算の結果に割り当てる、<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>のプロパティ、<xref:System.ComponentModel.DoWorkEventArgs>します。  
   
      これは使用できる、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベント ハンドラー。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  操作の結果を取得するためのコードを挿入、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベント ハンドラー。  
+8. 操作の結果を取得するためのコードを挿入、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベント ハンドラー。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -90,7 +90,7 @@ ms.locfileid: "59149085"
 > [!NOTE]
 >  例外が発生した場合は、デバッガーの下でアプリケーションの実行に f5 キーを押すと、`TimeConsumingOperation`メソッドがキャッチされ、デバッガーによって表示されます。 デバッガーの外部のアプリケーションを実行すると、 <xref:System.ComponentModel.BackgroundWorker> 、例外を処理し、キャッシュで、<xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>のプロパティ、<xref:System.ComponentModel.RunWorkerCompletedEventArgs>します。  
   
-1.  をクリックして、**開始**、非同期操作を実行するボタンをクリックし、をクリックし、**キャンセル**実行中の非同期操作を停止するボタンをクリックします。  
+1. をクリックして、**開始**、非同期操作を実行するボタンをクリックし、をクリックし、**キャンセル**実行中の非同期操作を停止するボタンをクリックします。  
   
      各操作の結果は、<xref:System.Windows.Forms.MessageBox> に表示されます。  
   

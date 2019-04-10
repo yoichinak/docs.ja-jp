@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297786"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 <xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **データセット**への入力として指定できますまたはコードを追加せず、XML Web サービスからの出力のコンテンツをストリームするために必要という点では、「シリアル化可能な」、**データセット**XML Web サービスからクライアントとバックエンド。 **データセット**DiffGram 形式を使用して XML ストリームに暗黙的に変換は、ネットワーク経由で送信およびとして XML ストリームから再構築し、**データセット**受信側でします。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、次を参照してください。 [Diffgram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)します。  
@@ -22,7 +22,7 @@ ms.locfileid: "59180246"
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet を返し、処理する XML Web サービスを作成するには、次のようにします。  
   
-1.  XML Web サービスを作成します。  
+1. XML Web サービスを作成します。  
   
      例では、XML Web サービスが作成から顧客の一覧をここでは、データを返す、 **Northwind**データベース、および受信を**データセット**データへの更新プログラムを使用する XML Web サービス元のデータ ソースに解決します。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "59180246"
   
      一般的なシナリオで、 **UpdateCustomers**メソッド オプティミスティック同時実行制御違反をキャッチに書き込まれます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)します。  
   
-2.  XML Web サービス プロキシを作成します。  
+2. XML Web サービス プロキシを作成します。  
   
      XML Web サービスのクライアントは、公開されたメソッドを使用するために SOAP プロキシを必要とします。 このプロキシは、Visual Studio を使用して生成することができます。 Visual Studio から既存の Web サービスへの Web 参照を設定することにより、この手順で説明されているすべての動作が自動的に実行されます。 プロキシ クラスを手動で作成する場合は、後述の手順を参照してください。 ほとんどの場合、Visual Studio による、クライアント アプリケーションのプロキシ クラスの作成で十分です。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "59180246"
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  XML Web サービスのクライアントを作成します。  
+3. XML Web サービスのクライアントを作成します。  
   
      Visual studio で、Web サービス プロキシ クラスを生成する場合は、簡単に、クライアント プロジェクトを作成し、ソリューション エクスプ ローラー ウィンドウで、プロジェクトを右クリックし、 をクリックして**Web 参照の追加**から Web サービスを選択します。(この必要があります、Web サービス エンドポイントのアドレスを提供して、Web サービスを現在のソリューション内、または現在のコンピューターで使用できない場合。) Web サービスの一覧上記の手順に従って、XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。 次のサンプル コードは、プロキシのライブラリ呼び出しをインポート**GetCustomers**顧客の一覧を取得する、新しい顧客に追加して返します、**データセット**する更新プログラムが、 **UpdateCustomers**.  
   

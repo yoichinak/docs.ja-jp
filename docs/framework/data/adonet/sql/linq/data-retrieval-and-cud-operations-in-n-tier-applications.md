@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318430"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
 Customers または Orders のようなエンティティ オブジェクトをネットワークを介してクライアントにシリアル化すると、これらのエンティティはデータ コンテキストからデタッチされます。 変更内容、および他のオブジェクトとの関連付けはデータ コンテキストによって追跡されなくなります。 クライアントがデータを読み取るだけの場合は、これは問題にはなりません。 また、クライアントが新しい行をデータベースに追加できるようにすることも、ある程度簡単です。 しかし、アプリケーションでクライアントによるデータの更新または削除を可能にする必要がある場合には、<xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> を呼び出す前に、新しいデータ コンテキストにエンティティをアタッチする必要があります。 さらに、元の値によるオプティミスティック コンカレンシーチェックを使用する場合には、何らかの方法で、元のエンティティと変更後のエンティティをデータベースに渡す必要もあります。 エンティティがデタッチされた後に新しいデータ コンテキストにエンティティを入れるために、`Attach` メソッドが用意されています。  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>状態  
  エンティティ オブジェクトが <xref:System.Data.Linq.DataContext> インスタンスにアタッチされた後、そのオブジェクトは `PossiblyModified` 状態にあると見なされます。 アタッチされたオブジェクトを強制的に `Modified` 状態にする方法は、3 つあります。  
   
-1.  未変更としてアタッチした後、フィールドを直接変更する。  
+1. 未変更としてアタッチした後、フィールドを直接変更する。  
   
-2.  現在のオブジェクト インスタンスと元のオブジェクト インスタンスを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、古い値と新しい値が変更トラッカーに提供されるため、変更されたフィールドが自動的に判別されます。  
+2. 現在のオブジェクト インスタンスと元のオブジェクト インスタンスを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、古い値と新しい値が変更トラッカーに提供されるため、変更されたフィールドが自動的に判別されます。  
   
-3.  (true に設定された) 2 番目のブール値パラメーターを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、元の値を提供しなくても、変更トラッカーはオブジェクトが変更済みと見なします。 この手法では、オブジェクトにバージョン/タイムスタンプ フィールドが含まれる必要があります。  
+3. (true に設定された) 2 番目のブール値パラメーターを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、元の値を提供しなくても、変更トラッカーはオブジェクトが変更済みと見なします。 この手法では、オブジェクトにバージョン/タイムスタンプ フィールドが含まれる必要があります。  
   
  詳細については、次を参照してください。[オブジェクトの状態と変更の追跡](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)します。  
   

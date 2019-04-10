@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40679136ea62a437009b308a8b206cf251b46222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307326"
 ---
 # <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>方法: FontDialog コンポーネントを使用してフォントの一覧を表示する
 [FontDialog](fontdialog-component-windows-forms.md)コンポーネントを重みとサイズなど、表示属性を変更できるだけでなく、フォントを選択してユーザーを使用できます。  
@@ -27,11 +27,11 @@ ms.locfileid: "59220189"
   
 ### <a name="to-select-font-properties-using-the-fontdialog-component"></a>FontDialog コンポーネントを使用するフォント プロパティを選択するには  
   
-1.  使用して、ダイアログ ボックスを表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。  
+1. 使用して、ダイアログ ボックスを表示、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>メソッド。  
   
-2.  使用して、 <xref:System.Windows.Forms.DialogResult>  ダイアログ ボックスが閉じられた方法を決定するプロパティ。  
+2. 使用して、 <xref:System.Windows.Forms.DialogResult>  ダイアログ ボックスが閉じられた方法を決定するプロパティ。  
   
-3.  使用して、<xref:System.Windows.Forms.FontDialog.Font%2A>目的のフォントを設定するプロパティ。  
+3. 使用して、<xref:System.Windows.Forms.FontDialog.Font%2A>目的のフォントを設定するプロパティ。  
   
      次の例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーが表示されます、<xref:System.Windows.Forms.FontDialog>コンポーネント。 フォントが選択されると、ユーザーの場合にクリックする **[ok]**、<xref:System.Windows.Forms.FontDialog.Font%2A>のプロパティを<xref:System.Windows.Forms.TextBox>フォーム上にあるコントロールを選択したフォントを設定します。 この例では、フォームに、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Windows.Forms.TextBox>コントロール、および<xref:System.Windows.Forms.FontDialog>コンポーネント。  
   

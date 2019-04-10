@@ -2,12 +2,12 @@
 title: DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 455ffe936373525f574d4401412c099d41d45f66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295147"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を適切な <xref:System.Runtime.Serialization.DataContractResolver> と共に使用して、<xref:System.Runtime.Serialization.NetDataContractSerializer> と同じ機能を提供する方法を示します。 このサンプルで示すのは、<xref:System.Runtime.Serialization.DataContractResolver> を作成して <xref:System.Runtime.Serialization.DataContractSerializer> に追加する方法です。
@@ -57,21 +57,21 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2012 を使用して、DCRSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2012 を使用して、DCRSample.sln ソリューション ファイルを開きます。
 
-2.  ソリューション ファイルを右クリックし **プロパティ**します。
+2. ソリューション ファイルを右クリックし **プロパティ**します。
 
-3.  **ソリューション プロパティ ページ**ダイアログで、**共通プロパティ**、**スタートアップ プロジェクト**を選択します**マルチ スタートアップ プロジェクト:** します。
+3. **ソリューション プロパティ ページ**ダイアログで、**共通プロパティ**、**スタートアップ プロジェクト**を選択します**マルチ スタートアップ プロジェクト:** します。
 
-4.  次に、 **DCSwithDCR**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+4. 次に、 **DCSwithDCR**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
 
-5.  次に、 **NetDCS**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+5. 次に、 **NetDCS**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
 
-6.  クリックして**OK**ダイアログ ボックスを閉じます。
+6. クリックして**OK**ダイアログ ボックスを閉じます。
 
-7.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+7. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-8.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
+8. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

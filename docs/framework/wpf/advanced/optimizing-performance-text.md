@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317208"
 ---
 # <a name="optimizing-performance-text"></a>パフォーマンスの最適化:テキスト
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 豊富な機能を使用してテキスト コンテンツのプレゼンテーションのサポートが含まれています[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]コントロール。 一般にテキスト レンダリングは 3 つの階層に分けることができます。  
   
-1.  使用して、<xref:System.Windows.Documents.Glyphs>と<xref:System.Windows.Media.GlyphRun>オブジェクトを直接します。  
+1. 使用して、<xref:System.Windows.Documents.Glyphs>と<xref:System.Windows.Media.GlyphRun>オブジェクトを直接します。  
   
-2.  使用して、<xref:System.Windows.Media.FormattedText>オブジェクト。  
+2. 使用して、<xref:System.Windows.Media.FormattedText>オブジェクト。  
   
-3.  などの高度なコントロールを使用して、<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。  
+3. などの高度なコントロールを使用して、<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。  
   
  このトピックでは、テキスト レンダリングのパフォーマンスに関する推奨事項を説明します。  
 

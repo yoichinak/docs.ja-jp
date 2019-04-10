@@ -2,12 +2,12 @@
 title: セットアップに関する問題のトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299619"
 ---
 # <a name="troubleshooting-setup-issues"></a>セットアップに関する問題のトラブルシューティング
 このトピックでは、Windows Communication Foundation (WCF) がセットアップ問題のトラブルシューティングを行う方法について説明します。  
@@ -30,13 +30,13 @@ ms.locfileid: "59153076"
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI サービスの破損により .NET Framework 3.0 パッケージのインストール中に Windows Communication Foundation WMI プロバイダーのインストールがブロックされる  
  WMI サービスの破損により、Windows Communication Foundation WMI プロバイダーのインストールがブロックされることがあります。 インストール中、Windows Communication Foundation インストーラーは mofcomp.exe コンポーネントを使用して WCF .mof ファイルを登録できません。 発生する現象を次に示します。  
   
-1.  .NET Framework 3.0 のインストールは正常に完了するのに、WCF WMI プロバイダーが登録されない。  
+1. .NET Framework 3.0 のインストールは正常に完了するのに、WCF WMI プロバイダーが登録されない。  
   
-2.  アプリケーション イベント ログに、WCF の WMI プロバイダーの登録、または mofcomp.exe の実行に関する問題を示すエラー イベントが表示される。  
+2. アプリケーション イベント ログに、WCF の WMI プロバイダーの登録、または mofcomp.exe の実行に関する問題を示すエラー イベントが表示される。  
   
-3.  ユーザーの %temp% ディレクトリの dd_wcf_retCA* という名前のセットアップ ログ ファイルに、WCF WMI プロバイダーの登録に失敗したことが示される。  
+3. ユーザーの %temp% ディレクトリの dd_wcf_retCA* という名前のセットアップ ログ ファイルに、WCF WMI プロバイダーの登録に失敗したことが示される。  
   
-4.  イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
+4. イベント ログまたはセットアップ トレース ログ ファイルに、次の例外のいずれかが記録される。  
   
      ServiceModelReg [11:09:59:046]:System.ApplicationException:Unexpected result 3 executing E:\WINDOWS\system32\wbem\mofcomp.exe with "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59153076"
   
  上で説明した問題を解決するためには、次の手順を実行する必要があります。  
   
-1.  実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
+1. 実行[WMI 診断ユーティリティ、バージョン 2.0](https://go.microsoft.com/fwlink/?LinkId=94685)の WMI サービスを修復します。 詳細については、このツールを使用して、次を参照してください。、 [WMI 診断ユーティリティ](https://go.microsoft.com/fwlink/?LinkId=94686)トピック。  
   
  使用して、.NET Framework 3.0 のインストールを修復、**プログラムの追加/削除**アプレットにある**コントロール パネルの**、または .NET Framework 3.0 をアンインストール/再インストールします。  
   

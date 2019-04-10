@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302622"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
@@ -58,7 +58,7 @@ ms.locfileid: "59188605"
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>ランタイム プロバイダーとランダウン プロバイダーによる ETW データの収集  
  次の例は、マネージド プロセスのシンボルを、プロセスの開始または終了がプロファイリング期間の範囲内かどうかに関係なく最小限の影響で解決できるようにするための CLR ランダウン プロバイダーの使用方法を示しています。  
   
-1.  CLR ランタイム プロバイダーを使用して ETW のログの記録を有効にします。  
+1. CLR ランタイム プロバイダーを使用して ETW のログの記録を有効にします。  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ ms.locfileid: "59188605"
   
      ログは、clr1.etl ファイルに保存されます。  
   
-2.  プロセスの実行中にプロファイリングを停止するには、ランダウン プロバイダーを開始して `DCEnd` イベントをキャプチャします。  
+2. プロセスの実行中にプロファイリングを停止するには、ランダウン プロバイダーを開始して `DCEnd` イベントをキャプチャします。  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ ms.locfileid: "59188605"
   
      これにより、`DCEnd` イベントの収集を有効にして、ランダウン セッションを開始できます。 すべてのイベントが収集されるまでには 30 ～ 60 秒かかります。 ログは、clr1.et2 ファイルに保存されます。  
   
-3.  すべての ETW プロファイリングを停止します。  
+3. すべての ETW プロファイリングを停止します。  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  プロファイルをマージして 1 つのログ ファイルを作成します。  
+4. プロファイルをマージして 1 つのログ ファイルを作成します。  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

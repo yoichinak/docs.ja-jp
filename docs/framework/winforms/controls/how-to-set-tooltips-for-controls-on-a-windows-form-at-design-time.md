@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301335"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する
 設定することができます、<xref:System.Windows.Forms.ToolTip>コードや、Windows フォーム デザイナーでの文字列。 詳細については、<xref:System.Windows.Forms.ToolTip>コンポーネントを参照してください[ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)します。  
@@ -24,9 +24,9 @@ ms.locfileid: "59157606"
   
 ### <a name="to-set-a-tooltip-programmatically"></a>ツールヒントをプログラムで設定するには  
   
-1.  ツールヒントを表示するコントロールを追加します。  
+1. ツールヒントを表示するコントロールを追加します。  
   
-2.  使用して、<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>のメソッド、<xref:System.Windows.Forms.ToolTip>コンポーネント。  
+2. 使用して、<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>のメソッド、<xref:System.Windows.Forms.ToolTip>コンポーネント。  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ ms.locfileid: "59157606"
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>デザイナーでツールヒントを設定するには  
   
-1.  フォームに <xref:System.Windows.Forms.ToolTip> コンポーネントを追加します。  
+1. フォームに <xref:System.Windows.Forms.ToolTip> コンポーネントを追加します。  
   
-2.  ツールヒントを表示または、フォームに追加されるコントロールを選択します。  
+2. ツールヒントを表示または、フォームに追加されるコントロールを選択します。  
   
-3.  **プロパティ**ウィンドウで、設定、 **ToolTip1 のツールヒント**テキストの適切な文字列値。  
+3. **プロパティ**ウィンドウで、設定、 **ToolTip1 のツールヒント**テキストの適切な文字列値。  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>ツールヒントをプログラムで削除するには  
   
-1.  使用して、<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>のメソッド、<xref:System.Windows.Forms.ToolTip>コンポーネント。  
+1. 使用して、<xref:System.Windows.Forms.ToolTip.SetToolTip%2A>のメソッド、<xref:System.Windows.Forms.ToolTip>コンポーネント。  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ ms.locfileid: "59157606"
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>デザイナーでツールヒントを削除するには  
   
-1.  ツールヒントが表示されているコントロールを選択します。  
+1. ツールヒントが表示されているコントロールを選択します。  
   
-2.  **プロパティ**ウィンドウ内のテキストを削除、 **ToolTip1 のツールヒント**します。  
+2. **プロパティ**ウィンドウ内のテキストを削除、 **ToolTip1 のツールヒント**します。  
 
 ## <a name="see-also"></a>関連項目
 

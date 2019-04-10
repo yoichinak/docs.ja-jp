@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315155"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
@@ -30,7 +30,7 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>プログラムによって Outlook のようなユーザー インターフェイスを作成するには  
   
-1.  フォーム内のユーザー インターフェイスを構成する各コントロールを宣言します。 この例では、使用、 <xref:System.Windows.Forms.TreeView>、 <xref:System.Windows.Forms.ListView>、 <xref:System.Windows.Forms.SplitContainer>、および<xref:System.Windows.Forms.RichTextBox>Microsoft Outlook のユーザー インターフェイスを模倣するコントロール。  
+1. フォーム内のユーザー インターフェイスを構成する各コントロールを宣言します。 この例では、使用、 <xref:System.Windows.Forms.TreeView>、 <xref:System.Windows.Forms.ListView>、 <xref:System.Windows.Forms.SplitContainer>、および<xref:System.Windows.Forms.RichTextBox>Microsoft Outlook のユーザー インターフェイスを模倣するコントロール。  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  ユーザー インターフェイスを定義するプロシージャを作成します。 次のコードは、Microsoft Outlook のユーザー インターフェイス フォームのようになりますようにプロパティを設定します。 ただし、それらを異なる方法でドッキングやその他のコントロールを使用して、同じは柔軟性に均等に他のユーザー インターフェイスを作成すると簡単です。  
+2. ユーザー インターフェイスを定義するプロシージャを作成します。 次のコードは、Microsoft Outlook のユーザー インターフェイス フォームのようになりますようにプロパティを設定します。 ただし、それらを異なる方法でドッキングやその他のコントロールを使用して、同じは柔軟性に均等に他のユーザー インターフェイスを作成すると簡単です。  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
     }  
     ```  
   
-3.  Visual basic の場合は、追加で作成したプロシージャの呼び出し、`New()`プロシージャ。 ビジュアルでC#、フォーム クラスのコンス トラクターに次のコード行を追加します。  
+3. Visual basic の場合は、追加で作成したプロシージャの呼び出し、`New()`プロシージャ。 ビジュアルでC#、フォーム クラスのコンス トラクターに次のコード行を追加します。  
   
     ```vb  
     ' Add this to the New procedure.  

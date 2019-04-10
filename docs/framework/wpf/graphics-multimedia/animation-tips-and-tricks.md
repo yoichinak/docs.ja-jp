@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295953"
 ---
 # <a name="animation-tips-and-tricks"></a>アニメーションのヒントとテクニック
 アニメーションを扱うときに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ヒントがいくつか、およびアニメーションを実行できるテクニックはパフォーマンスを向上させ、不満を解消します。  
@@ -71,9 +71,9 @@ ms.locfileid: "59202145"
   
  最初の 2 番目のボタンをクリックすると<xref:System.Windows.Media.Animation.Storyboard>が再生するには、次の動作を期待可能性があります。  
   
-1.  最初のストーリー ボードが終了し、アニメーションがあるため、元の位置に、四角形を送信する<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。  
+1. 最初のストーリー ボードが終了し、アニメーションがあるため、元の位置に、四角形を送信する<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>の<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。  
   
-2.  2 つ目のストーリーボードが反映され、現在位置である 0 から 500 にアニメーション化します。  
+2. 2 つ目のストーリーボードが反映され、現在位置である 0 から 500 にアニメーション化します。  
   
  **しかしは行われません。** 代わりに、四角形は戻らずに、右に移動し続けます。 その理由は、2 番目のアニメーションは最初のアニメーションの現在の値を開始値として使い、その値から 500 までアニメーション化するためです。 に 2 番目のアニメーションが最初を置換するときに、<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>を使用する、<xref:System.Windows.Media.Animation.FillBehavior>最初のアニメーションは重要ではありません。  
   

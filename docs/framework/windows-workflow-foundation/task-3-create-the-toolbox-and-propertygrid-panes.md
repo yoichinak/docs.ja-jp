@@ -2,12 +2,12 @@
 title: タスク 3:ツールボックス ペインと PropertyGrid ペインの作成
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306019"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>タスク 3:ツールボックス ペインと PropertyGrid ペインの作成
 このタスクでは、作成、**ツールボックス**と**PropertyGrid**ペインがありますし、再ホストされたに追加[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]します。  
@@ -16,11 +16,11 @@ ms.locfileid: "59175046"
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>ツールボックスを作成し、グリッドに追加するには  
   
-1.  説明されている手順を実行して取得した HostingApplication プロジェクトを開く[タスク 2。ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)します。  
+1. 説明されている手順を実行して取得した HostingApplication プロジェクトを開く[タスク 2。ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)します。  
   
-2.  **ソリューション エクスプ ローラー**ウィンドウで、MainWindow.xaml ファイルを右クリックし、選択**コードの表示**します。  
+2. **ソリューション エクスプ ローラー**ウィンドウで、MainWindow.xaml ファイルを右クリックし、選択**コードの表示**します。  
   
-3.  追加、`GetToolboxControl`メソッドを`MainWindow`を作成するクラス、 <xref:System.Activities.Presentation.Toolbox.ToolboxControl>、新しく追加**ツールボックス**カテゴリを**ツールボックス**、割り当てます、<xref:System.Activities.Statements.Assign>と<xref:System.Activities.Statements.Sequence>アクティビティの種類をそのカテゴリ。  
+3. 追加、`GetToolboxControl`メソッドを`MainWindow`を作成するクラス、 <xref:System.Activities.Presentation.Toolbox.ToolboxControl>、新しく追加**ツールボックス**カテゴリを**ツールボックス**、割り当てます、<xref:System.Activities.Statements.Assign>と<xref:System.Activities.Statements.Sequence>アクティビティの種類をそのカテゴリ。  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "59175046"
     }  
     ```  
   
-4.  追加プライベート`AddToolbox`メソッドを`MainWindow`配置クラス、**ツールボックス**グリッドで左の列にします。  
+4. 追加プライベート`AddToolbox`メソッドを`MainWindow`配置クラス、**ツールボックス**グリッドで左の列にします。  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ ms.locfileid: "59175046"
     }  
     ```  
   
-5.  次のコードのように、`AddToolBox` クラス コンストラクターに `MainWindow()` メソッドへの呼び出しを追加します。  
+5. 次のコードのように、`AddToolBox` クラス コンストラクターに `MainWindow()` メソッドへの呼び出しを追加します。  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ ms.locfileid: "59175046"
     }  
     ```  
   
-6.  F5 キーを押して、ソリューションをビルドおよび実行します。 **ツールボックス**を含む、<xref:System.Activities.Statements.Assign>と<xref:System.Activities.Statements.Sequence>のアクティビティを表示する必要があります。  
+6. F5 キーを押して、ソリューションをビルドおよび実行します。 **ツールボックス**を含む、<xref:System.Activities.Statements.Assign>と<xref:System.Activities.Statements.Sequence>のアクティビティを表示する必要があります。  
   
 ### <a name="to-create-the-propertygrid"></a>PropertyGrid を作成するには  
   
-1.  **ソリューション エクスプ ローラー**ウィンドウで、MainWindow.xaml ファイルを右クリックし、選択**コードの表示**します。  
+1. **ソリューション エクスプ ローラー**ウィンドウで、MainWindow.xaml ファイルを右クリックし、選択**コードの表示**します。  
   
-2.  追加、`AddPropertyInspector`メソッドを`MainWindow`を配置するクラス、 **PropertyGrid**ウィンドウ グリッドの最も右側の列。  
+2. 追加、`AddPropertyInspector`メソッドを`MainWindow`を配置するクラス、 **PropertyGrid**ウィンドウ グリッドの最も右側の列。  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ ms.locfileid: "59175046"
     }  
     ```  
   
-3.  次のコードのように、`AddPropertyInspector` クラス コンストラクターに `MainWindow()` メソッドへの呼び出しを追加します。  
+3. 次のコードのように、`AddPropertyInspector` クラス コンストラクターに `MainWindow()` メソッドへの呼び出しを追加します。  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ ms.locfileid: "59175046"
     }  
     ```  
   
-4.  F5 キーを押して、ソリューションをビルドおよび実行します。 **ツールボックス**、ワークフロー デザイン キャンバス、および**PropertyGrid**ウィンドウすべて表示するか、およびドラッグすると、<xref:System.Activities.Statements.Assign>アクティビティまたは<xref:System.Activities.Statements.Sequence>デザイン キャンバスにアクティビティ、強調表示されているアクティビティに応じてプロパティ グリッドを更新する必要があります。  
+4. F5 キーを押して、ソリューションをビルドおよび実行します。 **ツールボックス**、ワークフロー デザイン キャンバス、および**PropertyGrid**ウィンドウすべて表示するか、およびドラッグすると、<xref:System.Activities.Statements.Assign>アクティビティまたは<xref:System.Activities.Statements.Sequence>デザイン キャンバスにアクティビティ、強調表示されているアクティビティに応じてプロパティ グリッドを更新する必要があります。  
   
 ## <a name="example"></a>例  
  MainWindow.xaml.cs ファイルに次のコードが含まれます。  

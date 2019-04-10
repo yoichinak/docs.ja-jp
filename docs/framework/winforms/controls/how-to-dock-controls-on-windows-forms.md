@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317260"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールをドッキングする
 コントロールをフォームの端にドッキングまたはコントロールのコンテナー (フォームまたはコンテナー コントロールのいずれか) を入力することがあることができます。 たとえば、Windows エクスプ ローラーをドッキングその<xref:System.Windows.Forms.TreeView>、ウィンドウの左側にあるコントロールとその<xref:System.Windows.Forms.ListView>ウィンドウの右側にあるコントロール。 使用して、<xref:System.Windows.Forms.Control.Dock%2A>ドッキングのモードを定義する表示されているすべての Windows フォーム コントロールのプロパティ。  
@@ -23,13 +23,13 @@ ms.locfileid: "59231527"
   
 ### <a name="to-dock-a-control"></a>コントロールをドッキングするには  
   
-1.  ドッキングするコントロールを選択します。  
+1. ドッキングするコントロールを選択します。  
   
-2.  [プロパティ] ウィンドウの右側にある矢印をクリックします。、<xref:System.Windows.Forms.Control.Dock%2A>プロパティ。  
+2. [プロパティ] ウィンドウの右側にある矢印をクリックします。、<xref:System.Windows.Forms.Control.Dock%2A>プロパティ。  
   
      一連の端とフォームの中央を表すボックスを示しています。 エディターが表示されます。  
   
-3.  コントロールをドッキングするフォームの端を表すボタンをクリックします。 コントロールのフォームまたはコンテナー コントロールの内容を入力するには、中央のボックスをクリックします。 クリックして **(なし)** ドッキングを無効にします。  
+3. コントロールをドッキングするフォームの端を表すボタンをクリックします。 コントロールのフォームまたはコンテナー コントロールの内容を入力するには、中央のボックスをクリックします。 クリックして **(なし)** ドッキングを無効にします。  
   
      コントロールのドッキングのエッジの境界に合わせてサイズを自動的にします。  
   
