@@ -2,12 +2,12 @@
 title: = (等しい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 2791bc0940bad92208c5bdce3659534f237bd6e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ad9eda5a3544ea157d06c57876b1b0454a25dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215681"
 ---
 # <a name="-equals-entity-sql"></a>= (等しい) (Entity SQL)
 2 つの式の等価性を比較します。  
@@ -25,7 +25,7 @@ expression == expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- 左の式が右の式と等しい場合は`true` 、等しくない場合は `false`。  
+ `true` 左の式が右の式に等しい場合それ以外の場合、`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  == 演算子は = 演算子と同じです。  
@@ -40,4 +40,5 @@ expression == expression
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

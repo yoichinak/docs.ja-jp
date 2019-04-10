@@ -1,5 +1,5 @@
 ---
-title: '方法: X.509 証明書を WCF からアクセスできるように'
+title: '方法: X.509 証明書を WCF からアクセス可能にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741884"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219916"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセスできるように
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセス可能にする
 アプリケーション コードには、X.509 証明書を Windows Communication Foundation (WCF) にアクセスすることができるようにするには、証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアに X.509 証明書に関連付けられている秘密キーを取得するには、WCF は、そのアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X.509 証明書を WCF からアクセス可能にするには  
@@ -29,10 +29,10 @@ ms.locfileid: "54741884"
   
         |X.509 証明書の使用法|秘密キー|  
         |---------------------------|-----------------|  
-        |送信 SOAP メッセージにデジタル署名する。|[はい]|  
+        |送信 SOAP メッセージにデジタル署名する。|はい|  
         |受信 SOAP メッセージの署名を検証する。|いいえ|  
         |送信 SOAP メッセージを暗号化する。|いいえ|  
-        |受信 SOAP メッセージを復号化する。|[はい]|  
+        |受信 SOAP メッセージを復号化する。|はい|  
   
     2.  証明書が格納されている証明書ストアの場所と名前を決定します。  
   
@@ -71,6 +71,7 @@ ms.locfileid: "54741884"
         ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [方法: 証明書のサムプリントを取得します。](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [方法: 証明書のサムプリントを取得する](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

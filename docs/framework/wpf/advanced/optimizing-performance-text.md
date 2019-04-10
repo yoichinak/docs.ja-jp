@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225964"
 ---
 # <a name="optimizing-performance-text"></a>パフォーマンスの最適化:テキスト
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、機能豊富な [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] コントロールを使用した、テキスト コンテンツ表示のサポートが含まれています。 一般にテキスト レンダリングは 3 つの階層に分けることができます。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 豊富な機能を使用してテキスト コンテンツのプレゼンテーションのサポートが含まれています[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]コントロール。 一般にテキスト レンダリングは 3 つの階層に分けることができます。  
   
 1.  使用して、<xref:System.Windows.Documents.Glyphs>と<xref:System.Windows.Media.GlyphRun>オブジェクトを直接します。  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409407"
 3.  などの高度なコントロールを使用して、<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。  
   
  このトピックでは、テキスト レンダリングのパフォーマンスに関する推奨事項を説明します。  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>グリフ レベルでのテキスト レンダリング  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 直接アクセスによるグリフ レベルのマークアップなどの高度なテキスト サポートを提供します<xref:System.Windows.Documents.Glyphs>を使用し、書式設定後のテキストの保持を希望するお客様向けです。 これらの機能は、下記のようなシナリオでのさまざまなテキスト レンダリング要件をサポートする不可欠なものです。  
@@ -38,7 +37,7 @@ ms.locfileid: "58409407"
   
 -   印刷シナリオ。  
   
-    -   デバイス プリンター言語としての [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] デバイス プリンター言語。  
   
     -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
@@ -75,7 +74,7 @@ ms.locfileid: "58409407"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument、TextBlock、ラベル コントロール  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument は TextBlock やラベルよりもパフォーマンスへの影響が大きい  
  一般に、<xref:System.Windows.Controls.TextBlock>要素は、制限付きのテキストのサポートがで短い文など、必要な場合に、使用する必要があります、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 <xref:System.Windows.Controls.Label> 最小限のテキストのサポートが必要な場合に使用できます。 <xref:System.Windows.Documents.FlowDocument>要素は、コンテンツのリッチ プレゼンテーションをサポートする再フロー ドキュメントのコンテナーであり、したがって、使用するよりも大きい、パフォーマンスに影響があります、<xref:System.Windows.Controls.TextBlock>または<xref:System.Windows.Controls.Label>コントロール。  
@@ -150,7 +149,7 @@ ms.locfileid: "58409407"
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>テキスト書式設定機能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、自動ハイフネーションなどのリッチ テキスト書式設定サービスを提供します。 これらのサービスはアプリケーションのパフォーマンスに影響を与える可能性があり、必要な場合のみ使用すべきです。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] リッチ テキスト書式を自動ハイフネーションなどのサービスを提供します。 これらのサービスはアプリケーションのパフォーマンスに影響を与える可能性があり、必要な場合のみ使用すべきです。  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>ハイフネーションの不要な使用を避ける  
  自動ハイフネーションは、テキスト、行のハイフンのブレークポイントを検索でき、内の行の追加の改行位置<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Documents.FlowDocument>オブジェクト。 既定では、これらのオブジェクトでは自動ハイフネーション機能は無効です。 この機能は、オブジェクトの IsHyphenationEnabled プロパティを `true` に設定することで有効にできます。 しかし、この機能を有効にすると [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] によって [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] の相互運用機能が開始され、アプリケーションのパフォーマンスに影響を与えることがあります。 必要でない限り、自動ハイフネーションを使用しないことをお勧めします。  
@@ -162,6 +161,7 @@ ms.locfileid: "58409407"
  最適な段落の機能、<xref:System.Windows.Documents.FlowDocument>オブジェクトは、空白文字をできるだけ均等に分散するように段落をレイアウトします。 既定では、適切な段落の機能は無効です。 この機能を有効にするには、オブジェクトの<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>プロパティを`true`します。 ただし、この機能を有効にするとアプリケーションのパフォーマンスに影響します。 必要でない限り、適切な段落の機能を使用しないことをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
 - [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
 - [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)

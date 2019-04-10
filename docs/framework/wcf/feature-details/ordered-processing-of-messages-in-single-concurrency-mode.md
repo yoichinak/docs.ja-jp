@@ -2,12 +2,12 @@
 title: Single コンカレンシー モードでメッセージを順番に処理する
 ms.date: 03/30/2017
 ms.assetid: a90f5662-a796-46cd-ae33-30a4072838af
-ms.openlocfilehash: c9f2460a1def19212d3ba866b0b443830e9b69bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 785c2953e57eaf967209b0d9e52ab85a3a99c450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229720"
 ---
 # <a name="ordered-processing-of-messages-in-single-concurrency-mode"></a>Single コンカレンシー モードでメッセージを順番に処理する
 WCF は、基になるチャネルがセッションフルでない限りには、メッセージの処理順序に関する保証しません。  たとえば、セッションフル チャネルではない MsmqInputChannel を使用する WCF サービスは順序でメッセージの処理に失敗します。 これは、状況によっては、開発者を必要とする処理動作しますが、セッションを使用しない場合があります。 このトピックでは、サービスが Single コンカレンシー モードで実行されている場合にこの動作を構成する方法について説明します。  
@@ -26,5 +26,6 @@ WCF は、基になるチャネルがセッションフルでない限りには�
  <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> をその他の値に設定すると、<xref:System.InvalidOperationException> がスローされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セッション、インスタンス化、およびコンカレンシー](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [コンカレンシー](../../../../docs/framework/wcf/samples/concurrency.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム上の複数のコントロールを配置します。'
+title: '方法: Windows フォーム上の複数のコントロールを配置する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: cf9213d4d7c5d7586a632374310a284c36f31bb6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209542"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置します。
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置する
 Windows ベースのアプリケーションのユーザー インターフェイス (UI) のレイアウトを標準化するには、1 つのコマンドでコントロールのグループを配置することができます。  
   
 > [!NOTE]
@@ -29,12 +29,13 @@ Windows ベースのアプリケーションのユーザー インターフェ�
 3.  **形式**メニューで、 **Align**、利用可能な 7 つの選択肢のいずれかをクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロール](index.md)
-- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [方法: 既存のコントロールを別の親に再配置します。](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [方法: 既存のコントロールを別の親に再配置する](how-to-reassign-existing-controls-to-a-different-parent.md)

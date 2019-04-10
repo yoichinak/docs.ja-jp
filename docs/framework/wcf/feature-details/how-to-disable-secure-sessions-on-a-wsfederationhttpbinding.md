@@ -1,5 +1,5 @@
 ---
-title: '方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。'
+title: '方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 809626d0d6d69d22f09b0f10210cfda7a033ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211804"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする
 フェデレーション資格情報を必要とするサービスの中には、セキュリティで保護されたセッションをサポートしないものがあります。 その場合は、セキュリティで保護されたセッション機能を無効にする必要があります。 <xref:System.ServiceModel.WSHttpBinding> とは異なり、<xref:System.ServiceModel.WSFederationHttpBinding> クラスでは、サービスとの通信中に、セキュリティで保護されたセッションを無効にできません。 代わりに、セキュリティで保護されたセッションの設定をブートストラップで置き換えるカスタム バインドを作成する必要があります。  
   
  ここでは、<xref:System.ServiceModel.WSFederationHttpBinding> に含まれるバインド要素を変更してカスタム バインドを作成する方法を示します。 結果は、セキュリティで保護されたセッションを使用しないことを除き、<xref:System.ServiceModel.WSFederationHttpBinding> と同じです。  
@@ -43,4 +43,5 @@ ms.locfileid: "54720029"
 -   このコード例をコンパイルするには、System.ServiceModel.dll アセンブリを参照するプロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

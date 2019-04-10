@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227484"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Version 4.5 の新機能
 <a name="introduction"></a> このトピックには、新機能および強化機能に関する情報が含まれています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5。  
@@ -102,8 +102,8 @@ ms.locfileid: "57368169"
 |ターゲット プロパティ|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
 |ソース オブジェクト|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
 |ソース プロパティ|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
-|<xref:System.Windows.Data.BindingExpression> が <xref:System.Windows.Data.BindingGroup> に属するかどうか|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
-|<xref:System.Windows.Data.BindingGroup> の所有者|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|かどうか、<xref:System.Windows.Data.BindingExpression>に属している、 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|所有者、 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
 ## <a name="checking-for-a-valid-datacontext-object"></a>有効な DataContext オブジェクトの確認  
@@ -119,11 +119,12 @@ ms.locfileid: "57368169"
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>ディスパッチャー クラスの新しいメソッド  
- ディスパッチャー クラスは、同期操作および非同期操作の新しいメソッドを定義します。  同期メソッドである <xref:System.Windows.Threading.Dispatcher.Invoke%2A> は、<xref:System.Action> パラメーターまたは <xref:System.Func%601> パラメーターを受け取るオーバーロードを定義します。 新しい非同期メソッドである <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>は、コールバック パラメーターとして <xref:System.Action> か <xref:System.Func%601> を受け取り、<xref:System.Windows.Threading.DispatcherOperation> か <xref:System.Windows.Threading.DispatcherOperation%601> を返します。   <xref:System.Windows.Threading.DispatcherOperation> クラスと <xref:System.Windows.Threading.DispatcherOperation%601> クラスは、<xref:System.Threading.Tasks.Task> プロパティを定義します。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> を呼び出すと、`await` または関連付けられた <xref:System.Windows.Threading.DispatcherOperation>の <xref:System.Threading.Tasks.Task> を持つキーワードを使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> を呼び出すと、呼び出し元スレッドで操作がキューに置かれた場合はデッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行する、[タスクの並列化 (タスク並列ライブラリ)](../../../standard/parallel-programming/task-based-asynchronous-programming.md)を参照してください。  
+ ディスパッチャー クラスは、同期操作および非同期操作の新しいメソッドを定義します。  同期メソッドである <xref:System.Windows.Threading.Dispatcher.Invoke%2A> は、<xref:System.Action> パラメーターまたは <xref:System.Func%601> パラメーターを受け取るオーバーロードを定義します。 新しい非同期メソッドである <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>は、コールバック パラメーターとして <xref:System.Action> か <xref:System.Func%601> を受け取り、<xref:System.Windows.Threading.DispatcherOperation> か <xref:System.Windows.Threading.DispatcherOperation%601> を返します。   <xref:System.Windows.Threading.DispatcherOperation> クラスと <xref:System.Windows.Threading.DispatcherOperation%601> クラスは、<xref:System.Threading.Tasks.Task> プロパティを定義します。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> を呼び出すと、`await` または関連付けられた <xref:System.Windows.Threading.DispatcherOperation>の <xref:System.Threading.Tasks.Task> を持つキーワードを使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> を呼び出すと、呼び出し元スレッドで操作がキューに置かれた場合はデッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行する、次を参照してください。[タスクの並列化 (タスク並列ライブラリ)](../../../standard/parallel-programming/task-based-asynchronous-programming.md)します。  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>イベントのマークアップ拡張機能  
  WPF 4.5 では、イベントのマークアップ拡張機能がサポートされます。  WPF はイベントに使用されるマークアップ拡張機能を定義しませんが、サードパーティがイベントで使用できるマークアップ拡張機能を作成できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [.NET Framework の新機能](../../whats-new/index.md)

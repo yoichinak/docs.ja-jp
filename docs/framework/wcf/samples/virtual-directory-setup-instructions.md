@@ -2,12 +2,12 @@
 title: 仮想ディレクトリのセットアップ手順
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225587"
 ---
 # <a name="virtual-directory-setup-instructions"></a>仮想ディレクトリのセットアップ手順
 Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\wwwroot\servicemodelsamples フォルダーにマップされている servicemodelsamples という仮想ディレクトリを共有するためのものです。  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 7.  既定では、次のチェック ボックスがオンになっています。  
   
-    -   **Read**  
+    -   **読み取り**  
   
-    -   **ASP などのスクリプトを実行します。**  
+    -   **[ASP などのスクリプトを実行する]**  
   
 8.  をクリックして **[次へ]**、順にクリックします**完了**ウィザードを完了します。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 2.  既定では、次のチェック ボックスがオンになっています。  
   
-    -   **Read**  
+    -   **読み取り**  
   
     -   **[ログ アクセス]**  
   
-    -   **このリソースします。**  
+    -   **[このリソースにインデックスを付ける]**  
   
 3.  選択、**ディレクトリの参照**チェック ボックスをオンします。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
   
@@ -184,11 +184,12 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
      ASPNET の一部であるかどうかにチェックする、**ユーザー**セキュリティ グループ。  
   
-    1.  **開始**] メニューのをクリックして**コントロール パネルの [** します。  
+    1.  **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。  
   
     2.  をクリックして、**ユーザー アカウント**アイコン。  
   
     3.  **グループ**列、いることを確認の値は、 **ASPNET**は「ユーザー」にします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

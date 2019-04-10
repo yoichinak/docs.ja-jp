@@ -1,18 +1,18 @@
 ---
-title: '方法: 構成のカスタム Ws-metadata Exchange バインディング'
+title: '方法: カスタム WS-Metadata Exchange バインディングを構成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210504"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法: 構成のカスタム Ws-metadata Exchange バインディング
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法: カスタム WS-Metadata Exchange バインディングを構成する
 ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Windows Communication Foundation (WCF) には、4 つのシステム定義のメタデータ バインディングが含まれていますが、どのバインディングを使用してメタデータを公開することができます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
   
 ### <a name="using-a-configuration-file"></a>構成ファイルの使用  
@@ -114,6 +114,7 @@ ms.locfileid: "54642465"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ公開動作](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [メタデータの抽出](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)

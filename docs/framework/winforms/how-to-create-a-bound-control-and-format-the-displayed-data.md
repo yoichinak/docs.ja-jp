@@ -1,19 +1,19 @@
 ---
-title: '方法: バインドされたコントロールを作成し、表示されているデータの書式設定'
+title: '方法: バインド コントロールを作成して表示データの書式を設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225535"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインドされたコントロールを作成し、表示されているデータの書式設定
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインド コントロールを作成して表示データの書式を設定する
 Windows フォーム データ バインディングでは、データ バインド コントロールを使用して表示データの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ Windows フォーム データ バインディングでは、データ バイン
   
 1.  データ ソースに接続します。  
   
-     詳細については、[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)を参照してください。  
+     詳細については、次を参照してください。[データ ソースに接続する](../data/adonet/connecting-to-a-data-source.md)します。  
   
 2.  フォームでコントロールを選択し、[プロパティ] ウィンドウを開きます。  
   
@@ -55,6 +55,7 @@ Windows フォーム データ バインディングでは、データ バイン
 8.  をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: Windows フォームに単純バインド コントロールを作成します。](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [方法: Windows フォームに単純バインド コントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows フォームでのユーザー入力の検証](user-input-validation-in-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

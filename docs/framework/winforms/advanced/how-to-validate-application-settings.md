@@ -1,5 +1,5 @@
 ---
-title: '方法: アプリケーション設定を検証します。'
+title: '方法: アプリケーション設定を検証する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212090"
 ---
-# <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証します。
+# <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証する
 このトピックでは、アプリケーション設定を永続化する前に検証する方法について説明します。  
   
  アプリケーション設定は厳密に型指定されているため、ユーザーが特定の設定に誤った型のデータを割り当てることはほとんどありません。 しかし、誕生日として未来の日付を入力するなど、ユーザーが許容範囲外の値を設定に割り当てようとする場合もあります。 <xref:System.Configuration.ApplicationSettingsBase>を、すべてのアプリケーション設定クラスの親クラスは、このような境界のチェックを有効にする 4 つのイベントを公開します。 これらのイベントを処理すると、検証コードがプロジェクト全体に分散するのではなく、すべての検証コードが 1 か所に配置されます。  
@@ -161,5 +161,6 @@ ms.locfileid: "57705832"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム内でのイベント ハンドラーの作成](../creating-event-handlers-in-windows-forms.md)
-- [方法: アプリケーション設定を作成します。](how-to-create-application-settings.md)
+- [方法: アプリケーション設定を作成する](how-to-create-application-settings.md)

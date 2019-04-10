@@ -1,23 +1,23 @@
 ---
-title: '方法: Atom の両方としてフィードを公開および RSS'
+title: '方法: Atom および RSS の両方としてフィードを公開する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228407"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>方法: Atom の両方としてフィードを公開および RSS
-Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 このトピックでは、Atom 1.0 と RSS 2.0 の両方を使用して配信フィードを公開する配信サービスを作成する方法について説明します。 このサービスは、どちらかの配信フォーマットを返すエンドポイントを公開します。 簡略化のため、この例で使用するサービスは自己ホスト型です。 運用環境では、このタイプのサービスは IIS または WAS でホストされます。 さまざまな WCF ホスティング オプションの詳細については、[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)を参照してください。  
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>方法: Atom および RSS の両方としてフィードを公開する
+Windows Communication Foundation (WCF) では、配信フィードを公開するサービスを作成できます。 このトピックでは、Atom 1.0 と RSS 2.0 の両方を使用して配信フィードを公開する配信サービスを作成する方法について説明します。 このサービスは、どちらかの配信フォーマットを返すエンドポイントを公開します。 簡略化のため、この例で使用するサービスは自己ホスト型です。 運用環境では、このタイプのサービスは IIS または WAS でホストされます。 さまざまな WCF ホスティング オプションの詳細については、次を参照してください。[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)します。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
   
-1.  <xref:System.ServiceModel.Web.WebGetAttribute> 属性でマークされたインターフェイスを使用して、サービス コントラクトを定義します。 配信フィードとして公開される各操作は、<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> オブジェクトを返します。 <xref:System.ServiceModel.Web.WebGetAttribute> のパラメーターに注意してください。 `UriTemplate` は、このサービス操作を呼び出すために使用される URL を指定します。 このパラメーターの文字列には、リテラルと中かっこ内の変数が含まれています ({*形式*})。 この変数は、サービス操作の `format` パラメーターに対応します。 詳細については、「 <xref:System.UriTemplate> 」を参照してください。 `BodyStyle` は、このサービス操作が送受信するメッセージの書き方に影響を与えます。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> は、このサービス操作に送受信されるデータが、インフラストラクチャにより定義された XML 要素でラップされないことを指定します。 詳細については、「 <xref:System.ServiceModel.Web.WebMessageBodyStyle> 」を参照してください。  
+1.  <xref:System.ServiceModel.Web.WebGetAttribute> 属性でマークされたインターフェイスを使用して、サービス コントラクトを定義します。 配信フィードとして公開される各操作は、<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> オブジェクトを返します。 <xref:System.ServiceModel.Web.WebGetAttribute> のパラメーターに注意してください。 `UriTemplate` このサービス操作の呼び出しに使用する URL を指定します。 このパラメーターの文字列には、リテラルと中かっこ内の変数が含まれています ({*形式*})。 この変数は、サービス操作の `format` パラメーターに対応します。 詳細については、「 <xref:System.UriTemplate> 」を参照してください。 `BodyStyle` このサービス操作が送受信するメッセージが書き込まれる方法に影響します。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> このサービス操作の間で送受信データ インフラストラクチャにより定義された XML 要素でラップされないことを指定します。 詳細については、「 <xref:System.ServiceModel.Web.WebMessageBodyStyle> 」を参照してください。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -96,5 +96,6 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
  上記のコードのコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll が参照されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

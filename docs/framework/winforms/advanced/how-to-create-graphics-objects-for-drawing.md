@@ -1,5 +1,5 @@
 ---
-title: '方法: 描画の Graphics オブジェクトを作成します。'
+title: '方法: 描画する Graphics オブジェクトを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223629"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画の Graphics オブジェクトを作成します。
+# <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
 直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
   
  グラフィックスを操作には、2 つの手順があります。  
@@ -163,15 +163,16 @@ ms.locfileid: "57709052"
   
      詳細については、次のトピックを参照してください。  
   
-    |表示するには|解決方法|  
+    |表示するには|参照トピック|  
     |---------------|---------|  
-    |線|[方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)|  
-    |図形|[方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)|  
-    |テキスト|[方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)|  
-    |イメージ|[方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)|  
+    |線|[方法: Windows フォームに直線を描画する](how-to-draw-a-line-on-a-windows-form.md)|  
+    |図形|[方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)|  
+    |テキスト|[方法: Windows フォームにテキストを描画する](how-to-draw-text-on-a-windows-form.md)|  
+    |イメージ|[方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)
+- [方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)

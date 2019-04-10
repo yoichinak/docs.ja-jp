@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 45a904eb9e38b13fc3502264f4659bfd25465630
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209503"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>サービスとクライアントを構成するためのバインディングの使用
 バインディングとは、エンドポイントへの接続に必要な通信の詳細設定を指定するオブジェクトです。 具体的には、バインディングには構成情報が含まれており、この情報を使用してそれぞれのエンドポイントまたはクライアント チャネルで使用されるトランスポート仕様、ワイヤ形式 (メッセージ エンコード) 仕様、プロトコル仕様が定義され、クライアントまたはサービスのランタイムが作成されます。 機能している Windows Communication Foundation (WCF) サービスを作成するには、サービス内の各エンドポイントにバインディングが必要です。 ここでは、エンドポイントにおけるバインディングの概要と定義方法、特定のバインディングの指定方法を説明します。  
@@ -57,8 +57,9 @@ ms.locfileid: "58410421"
 -   [チュートリアル: Windows Communication Foundation クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [方法: 構成でサービス バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法: コードでのサービス バインドを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [方法: 構成でクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [方法: コードでクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [方法: 構成でサービス バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [方法: コード内でサービス バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [方法: 構成でクライアント バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [方法: コード内でクライアント バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

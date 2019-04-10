@@ -1,5 +1,5 @@
 ---
-title: '方法: 発行者ポリシーを作成します。'
+title: '方法: 発行者ポリシーを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - publisher policy assembly
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227393"
 ---
-# <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成します。
+# <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
   
  パブリッシャー ポリシーを作成するのには、3 つの手順があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "55758990"
 </configuration>  
 ```  
   
- コード ベースを指定する方法については、[アセンブリの場所を指定する](../../../docs/framework/configure-apps/specify-assembly-location.md)を参照してください。  
+ コード ベースを指定する方法については、次を参照してください。[アセンブリの場所を指定する](../../../docs/framework/configure-apps/specify-assembly-location.md)します。  
   
 ## <a name="creating-the-publisher-policy-assembly"></a>発行者ポリシー アセンブリを作成します。  
  使用して、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)発行者ポリシー アセンブリを作成します。  
@@ -61,7 +61,7 @@ ms.locfileid: "55758990"
   
     -   *PublisherPolicyAssemblyFile*引数は、このコマンドに起因する発行者ポリシー アセンブリの名前。 アセンブリ ファイルの名前は、形式に従う必要があります。  
   
-         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **ポリシー。** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile*引数はキー ペアを含むファイルの名前です。 アセンブリと同じキーのペアで発行者ポリシー アセンブリに署名する必要があります。  
   
@@ -101,9 +101,10 @@ ms.locfileid: "55758990"
     >  元の発行者ポリシー ファイルは、アセンブリと同じディレクトリにある場合を除き、発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加できません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アセンブリを使用したプログラミング](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [構成ファイルを使用してアプリを構成します。](../../../docs/framework/configure-apps/index.md)
+- [構成ファイルを使用してアプリを構成する方法](../../../docs/framework/configure-apps/index.md)
 - [ランタイム設定スキーマ](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
 - [アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

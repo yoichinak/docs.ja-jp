@@ -2,12 +2,12 @@
 title: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213390"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、WCF によって生成される診断トレースを分析できます。 サービス トレース ビューアーは、簡単にマージし、表示、および、診断、修復、および WCF サービスの問題を確認できるように、ログにトレース メッセージのフィルターを適用する方法を提供します。  
@@ -49,9 +49,7 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
 |詳細|-デバッグ レベルのユーザー コードの両方のトレースとサービスを提供します。 このレベルは次のような場合に設定します。<br />-不明なエラーが発生したときにコード内のどのメソッドが呼び出されました。<br />-不正なエンドポイントが構成されてあり、サービスは、予約ストアのエントリがロックされているために開始できませんでした。|  
 |ActivityTracing|処理アクティビティとコンポーネント間のフロー イベント。<br /><br /> このレベルを使用すると、管理者と開発者は同じアプリケーション ドメイン内のアプリケーションの相関関係を示すことができます。<br /><br /> -アクティビティ境界のトレース: 開始/停止します。<br />-転送のトレース。|  
   
- 
-  `add` を使用して、使用するトレース リスナーの名前と種類を指定できます。 この例の構成では、リスナーに `sdt` という名前を付け、使用する種類として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 
-  `initializeData` を使用して、そのリスナーのログ ファイルの名前を設定します。 さらに、単純なファイル名の代わりに完全修飾パスを使用できます。  
+ `add` を使用して、使用するトレース リスナーの名前と種類を指定できます。 この例の構成では、リスナーに `sdt` という名前を付け、使用する種類として標準の .NET Framework トレース リスナー (`System.Diagnostics.XmlWriterTraceListener`) を追加しています。 `initializeData` を使用して、そのリスナーのログ ファイルの名前を設定します。 さらに、単純なファイル名の代わりに完全修飾パスを使用できます。  
 
 .NET Framework 4.8 以降、一部のハイ コントラスト テーマでのコンボ ボックス コントロールは正しい色で表示されます。 次の設定を削除することでこの変更を無効にすることができます、 *svcTraceViewer.exe.config*ファイル。
 
@@ -113,7 +111,7 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
 -   **プロジェクト** タブで、ファイルをプロジェクトに追加することができます。  
   
 ### <a name="viewing-wcf-traces"></a>WCF トレースの表示  
- WCF は、アクティビティ トレース形式を使用してトレースを出力します。 アクティビティ トレース モデルでは、各トレースはそれぞれの目的に従ってアクティビティにグループ化されます。 論理制御フローは、アクティビティ間で転送されます。 たとえば、アプリケーションの有効期間の間、多くの "メッセージ送信アクティビティ" が出現したり消えたりします。 すぎるトレースとアクティビティ、およびサービス トレース ビューアーのユーザー インターフェイスを表示する方法の詳細については、[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)を参照してください。  
+ WCF は、アクティビティ トレース形式を使用してトレースを出力します。 アクティビティ トレース モデルでは、各トレースはそれぞれの目的に従ってアクティビティにグループ化されます。 論理制御フローは、アクティビティ間で転送されます。 たとえば、アプリケーションの有効期間の間、多くの "メッセージ送信アクティビティ" が出現したり消えたりします。 すぎるトレースとアクティビティ、およびサービス トレース ビューアーのユーザー インターフェイスを表示する方法の詳細については、次を参照してください。[相関トレースの表示とトラブルシューティングのサービス トレース ビューアーを使用して](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)します。  
   
 #### <a name="switching-to-different-views"></a>別のビューへの切り替え  
  サービス トレース ビューアーは、次の別のビューを提供します。 ビューアーの左側のウィンドウでタブとして表示されますからアクセスすることも、**ビュー**メニュー。  
@@ -458,6 +456,7 @@ Windows Communication Foundation (WCF) サービス トレース ビューアー
  アラビア語のオペレーティング システムを使用して作成されたトレース ログを開く場合に、時間ベースのフィルターが機能しません。 たとえば、2005 年がアラビア カレンダーの 1427 年に対応します。 ただし、サービス トレース ビューアー ツールのフィルターがサポートする時間の範囲は、1752 年より前の日付を含みません。 このことは、フィルターで正しい日付を選択できないことを示します。 この問題を解決するには、カスタム フィルターを作成することができます (**ビュー/カスタム フィルター**) 特定の時間範囲を含めるには、XPath 式を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [エンドツーエンドのトレース](./diagnostics/tracing/end-to-end-tracing.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール'
+title: '方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222732"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>方法: オブジェクトへのリンクまたは Web ページと Windows フォーム LinkLabel コントロール
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする
 Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールをフォーム上で Web スタイルのリンクを作成できます。 リンクがクリックされたときに、リンクにアクセスしたかを示す色を変更できます。 色の変更の詳細については、次を参照してください。[方法。Windows フォーム LinkLabel コントロールの外観を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)します。  
   
 ## <a name="linking-to-another-form"></a>別のフォームへのリンク  
@@ -179,7 +179,8 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
-- [方法: Windows フォーム LinkLabel コントロールの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [方法: Windows フォーム LinkLabel コントロールの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

@@ -1,19 +1,19 @@
 ---
-title: '方法: コントロール デザイナーを使用して Windows フォーム Panel コントロールをグループ'
+title: '方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214833"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>方法: コントロール デザイナーを使用して Windows フォーム Panel コントロールをグループ
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する
 Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用すると、その他のコントロールをグループ化します。 コントロールをグループ化の 3 つの理由があります。 視覚的にわかりやすいユーザー インターフェイスです。 関連するフォーム要素のグループ化もう 1 つは、プログラムによるグループ化、ラジオ ボタンの例です。最後には、単位としてデザイン時にコントロールを移動するためです。  
   
 > [!NOTE]
@@ -30,6 +30,7 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用
 3.  (省略可能)パネルに罫線を追加する場合は、設定、<xref:System.Windows.Forms.BorderStyle>プロパティ。 次の 3 つの選択肢があります: <xref:System.Windows.Forms.BorderStyle.Fixed3D>、 <xref:System.Windows.Forms.BorderStyle.FixedSingle>、および<xref:System.Windows.Forms.BorderStyle.None>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Panel コントロール](panel-control-windows-forms.md)
 - [Panel コントロールの概要](panel-control-overview-windows-forms.md)
-- [方法: パネルの背景を設定します。](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [方法: パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel.md)

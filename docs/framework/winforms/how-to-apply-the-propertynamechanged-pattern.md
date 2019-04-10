@@ -1,5 +1,5 @@
 ---
-title: '方法: PropertyNameChanged パターンを適用します。'
+title: '方法: PropertyNameChanged パターンを適用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], custom controls
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
-ms.openlocfilehash: 889a7f5f7a84db378acaa88b717b6011f1a3dfdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213026"
 ---
-# <a name="how-to-apply-the-propertynamechanged-pattern"></a>方法: PropertyNameChanged パターンを適用します。
+# <a name="how-to-apply-the-propertynamechanged-pattern"></a>方法: PropertyNameChanged パターンを適用する
 次のコード例は、適用する方法を示します、 *PropertyName*Changed パターンをカスタム コントロール。 Windows フォーム データ バインディング エンジンで使用されるカスタム コントロールを実装する場合は、このパターンを適用します。  
   
 ## <a name="example"></a>例  
@@ -29,6 +29,7 @@ ms.locfileid: "57703479"
 -   空のコード ファイルには、コードを貼り付けます。 含む Windows フォームでのカスタム コントロールを使用する必要があります、`Main`メソッド。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: INotifyPropertyChanged インターフェイスを実装します。](how-to-implement-the-inotifypropertychanged-interface.md)
-- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
+
+- [方法: INotifyPropertyChanged インターフェイスを実装する](how-to-implement-the-inotifypropertychanged-interface.md)
+- [Windows フォーム データ バインディングの変更通知](change-notification-in-windows-forms-data-binding.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

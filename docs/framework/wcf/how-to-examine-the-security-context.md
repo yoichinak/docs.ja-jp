@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207111"
 ---
 # <a name="how-to-examine-the-security-context"></a>方法: セキュリティ コンテキストを調べる
 Windows Communication Foundation (WCF) サービスをプログラミングする場合、サービス セキュリティ コンテキストでは、クライアント資格情報と、サービスで認証するために使用するクレームの詳細を確認することができます。 これは、<xref:System.ServiceModel.ServiceSecurityContext> クラスのプロパティを使用することで可能になります。  
@@ -55,5 +55,6 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
 - [サービス ID と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -1,19 +1,19 @@
 ---
-title: '方法: Windows フォームのコントロールの作成'
+title: '方法: Windows フォームのコントロールを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224339"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームのコントロールの作成
+# <a name="how-to-author-controls-for-windows-forms"></a>方法: Windows フォームのコントロールを作成する
 コントロールは、ユーザーとプログラムの間のグラフィカルなリンクを表します。 コントロールは、データの提供または処理、ユーザー入力の受け付け、イベントへの応答、ユーザーとアプリケーションを接続する他の任意の数の関数の実行を行うことができます。 コントロールは、基本的にグラフィカル インターフェイスを持つコンポーネントであるため、ユーザーとの対話だけでなく、コンポーネントが実行するあらゆる機能を果たします。 コントロールは特定の目的に使用するために作成します。コントロールの作成は、まったく別のプログラミング タスクです。 このことを念頭に、次の手順では、コントロールの作成手順の概要を示します。 個々の手順のリンクで追加情報を提供します。  
   
 > [!NOTE]
@@ -49,13 +49,14 @@ ms.locfileid: "57713415"
   
 9. 繰り返して、デザインを調整します。  
   
-10. コントロールをパッケージ化してデプロイします。 詳細については、[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)を参照してください。  
+10. コントロールをパッケージ化してデプロイします。 詳細については、次を参照してください。[最初に、Visual Studio でのデプロイについて](/visualstudio/deployment/deploying-applications-services-and-components)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
-- [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)
-- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)
-- [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [チュートリアル: Visual Basic による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)
+- [方法: 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)
+- [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

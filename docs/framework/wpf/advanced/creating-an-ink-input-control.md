@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219669"
 ---
 # <a name="creating-an-ink-input-control"></a>インク入力コントロールの作成
 できるカスタム コントロールを動的に作成し、静的にインクを描画します。 つまり、ユーザーが"flow"、タブレット ペンからおよびインクをその後に表示を追加するコントロールに、クリップボードから貼り付ける、タブレット ペンを使用していずれか、またはファイルから読み込まれたを表示するインク ストロークを描画するインクをレンダリングします。 インクを動的にレンダリングするコントロールを使用する必要があります、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します。 静的にインクをレンダリングするには、スタイラス イベント メソッドをオーバーライドする必要があります (<xref:System.Windows.UIElement.OnStylusDown%2A>、 <xref:System.Windows.UIElement.OnStylusMove%2A>、および<xref:System.Windows.UIElement.OnStylusUp%2A>) を収集する<xref:System.Windows.Input.StylusPoint>データ、ストロークの作成に追加して、 <xref:System.Windows.Controls.InkPresenter> (このコントロールでインクを描画)。  
@@ -99,5 +99,6 @@ ms.locfileid: "57378068"
  収集し、スタイラス イベント メソッドをオーバーライドすることで、インクをレンダリングするコントロールを作成することができます。 独自のコントロールを作成すると、派生独自<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラス、および挿入しに<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>、デジタル インクの考えられるあらゆる動作を実装することができます。 アクセスがある、<xref:System.Windows.Input.StylusPoint>ほどデータの生成をカスタマイズする機会を与える<xref:System.Windows.Input.Stylus>入力し、それをアプリケーションに適したとして画面にレンダリングします。 このような低レベルのアクセス権があるため、<xref:System.Windows.Input.StylusPoint>データ、インクのコレクションを実装して、アプリケーションの最適なパフォーマンスでレンダリングします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [高度なインク処理](advanced-ink-handling.md)
 - [アクセスして、ペン入力を操作します。](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 68ee7d512e0a3b5d912dc12c55be6f0135129225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 820d357baf8f3e17a10ced84babc6745512e572b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230032"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 参照またはエンティティ式のキーを抽出します。  
@@ -38,6 +38,7 @@ from LOB.Orders as o
  [!code-csharp[DP EntityServices Concepts 2#KEY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#key)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
 - [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

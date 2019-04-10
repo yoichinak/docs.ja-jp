@@ -1,15 +1,15 @@
 ---
-title: タスク 2:ワークフロー デザイナーをホスティングします。
+title: タスク 2:ワークフロー デザイナーのホスティング
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218707"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>タスク 2:ワークフロー デザイナーをホスティングします。
+# <a name="task-2-host-the-workflow-designer"></a>タスク 2:ワークフロー デザイナーのホスティング
 このトピックでは、のインスタンスをホストするための手順を説明します、 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) アプリケーションでします。  
   
  プロシージャを構成、**グリッド**、デザイナーを格納しているコントロールのインスタンスをプログラムで作成する、 <xref:System.Activities.Presentation.WorkflowDesigner> 、既定値を格納している<xref:System.Activities.Statements.Sequence>アクティビティを提供する、デザイナーのメタデータを登録しますすべての組み込みのアクティビティ、およびホストのデザイナー サポート、[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]で、[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]アプリケーション。  
@@ -97,7 +97,7 @@ ms.locfileid: "57708640"
         }  
         ```  
   
-         アクティビティ デザイナーの登録の詳細については、[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)を参照してください。  
+         アクティビティ デザイナーの登録の詳細については、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)です。  
   
     5.  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
   
@@ -122,6 +122,7 @@ ms.locfileid: "57708640"
 10. 参照してください[タスク 3。ツールボックス ペインと PropertyGrid ペインの作成](task-3-create-the-toolbox-and-propertygrid-panes.md)を追加する方法について**ツールボックス**と**PropertyGrid**を再ホストされたワークフロー デザイナーをサポートします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
-- [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](task-1-create-a-new-wpf-app.md)
-- [タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [タスク 1:新しい Windows Presentation Foundation アプリケーションの作成](task-1-create-a-new-wpf-app.md)
+- [タスク 3:ツールボックス ペインと PropertyGrid ペインの作成](task-3-create-the-toolbox-and-propertygrid-panes.md)
