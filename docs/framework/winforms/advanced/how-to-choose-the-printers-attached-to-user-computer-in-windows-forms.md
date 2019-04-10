@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームでユーザーのコンピューターに接続されているプリンターを選択します。'
+title: '方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184029"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>方法: Windows フォームでユーザーのコンピューターに接続されているプリンターを選択します。
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する
 既定のプリンター以外のプリンターに印刷することがよくあります。 <xref:System.Windows.Forms.PrintDialog> コンポーネントを使用すると、現在インストールされているプリンターからユーザーに選択させることができます。 <xref:System.Windows.Forms.PrintDialog> コンポーネントでは、 <xref:System.Windows.Forms.DialogResult> コンポーネントの <xref:System.Windows.Forms.PrintDialog> がキャプチャされ、プリンターの選択に使用されます。  
   
  次の手順では、既定のプリンターに印刷するテキスト ファイルを選択します。 <xref:System.Windows.Forms.PrintDialog> クラスがインスタンス化されます。  
@@ -107,4 +107,5 @@ ms.locfileid: "57702734"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

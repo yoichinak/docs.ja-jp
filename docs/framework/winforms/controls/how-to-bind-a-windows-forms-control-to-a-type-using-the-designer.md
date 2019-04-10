@@ -1,19 +1,19 @@
 ---
-title: '方法: Windows フォーム コントロールをデザイナーを使用して型にバインドします。'
+title: '方法: デザイナーを使って Windows フォーム コントロールを型にバインドする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b10b443581a261a753c9f9d940a774159dc9d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202301"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>方法: Windows フォーム コントロールをデザイナーを使用して型にバインドします。
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>方法: デザイナーを使って Windows フォーム コントロールを型にバインドする
 データをやり取りするコントロールを作成する際、オブジェクトではなく型にコントロールをバインドすることが必要な場合があります。 データを使用できないが、データ バインド コントロールで型のパブリック インターフェイスからデータを表示する必要がある場合、通常はデザイン時にコントロールを型にバインドする必要があります。 次の手順を新規作成する方法を説明する<xref:System.Windows.Forms.BindingSource>は、型にバインドし、いずれかの型のプロパティにバインドする方法、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティを<xref:System.Windows.Forms.TextBox>します。  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource を型にバインドするには  
@@ -52,6 +52,7 @@ ms.locfileid: "57712098"
 4.  **DataSource UI 型エディター**、ノードを展開、<xref:System.Windows.Forms.BindingSource>以前に追加しにバインドするバインドの型のプロパティを選択、<xref:System.Windows.Forms.TextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [BindingSource コンポーネント](bindingsource-component.md)
-- [方法: Windows フォーム コントロールを型にバインドします。](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [方法: Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

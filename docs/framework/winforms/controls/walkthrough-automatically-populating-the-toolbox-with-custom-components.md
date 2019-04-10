@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力'
+title: 'チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178790"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定
 自動的に表示されます、コンポーネントは現在開いているソリューション内のプロジェクトで定義されている場合、**ツールボックス**操作は必要とします。 手動で設定することができます、**ツールボックス**を使用して、カスタム コンポーネントで、[選択ツールボックス項目 ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))が、**ツールボックス**を考慮に入れたソリューションの内の項目の次のすべての特性を持つ出力をビルドします。  
   
 -   実装<xref:System.ComponentModel.IComponent>;  
@@ -94,7 +94,8 @@ ms.locfileid: "57723973"
  このチュートリアルで説明する、**ツールボックス**プロジェクトのコンポーネントを考慮に入れたが、**ツールボックス**コントロールになります。 追加と管理プロジェクトをソリューションから削除して、独自のカスタム コントロールを試します。  
   
 ## <a name="see-also"></a>関連項目
-- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [[全般] ([オプション] ダイアログ ボックス - [Windows フォーム デザイナー])](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [方法: [ツールボックス] タブを操作します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [ツールボックス項目 ダイアログ ボックス (Visual Studio) を選択します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)

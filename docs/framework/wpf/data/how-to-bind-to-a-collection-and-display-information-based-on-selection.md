@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188748"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>方法: コレクションにバインドして選択に基づく情報を表示する
 データ バインドがある場合、単純なマスター詳細シナリオで<xref:System.Windows.Controls.ItemsControl>など、<xref:System.Windows.Controls.ListBox>します。 ユーザー選択に基づいて、選択した項目の詳細についてを表示します。 この例では、このシナリオを実装する方法を示します。  
@@ -46,8 +46,9 @@ ms.locfileid: "57360395"
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [階層データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [階層 XML データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [データ バインディングの概要](data-binding-overview.md)
 - [データ テンプレートの概要](data-templating-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

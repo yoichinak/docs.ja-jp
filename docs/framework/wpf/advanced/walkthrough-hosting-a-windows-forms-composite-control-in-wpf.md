@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF で Windows フォーム複合コントロールのホスト'
+title: 'チュートリアル: WPF での Windows フォーム複合コントロールのホスト'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174357"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>チュートリアル: WPF で Windows フォーム複合コントロールのホスト
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コードをより効果的か以上で再利用するには、そのコードの一部、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションではなく最初から修正します。 最も一般的なシナリオでは、既存の Windows フォーム コントロールがある場合です。 場合によってもがありませんこれらのコントロールのソース コードにアクセスします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このようなコントロールをホストするため、簡単な手順を提供する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 たとえば、使用することができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特殊なをホストしているときに、プログラミングの大部分の<xref:System.Windows.Forms.DataGridView>コントロール。  
+# <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム複合コントロールのホスト
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するための豊富な環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コードをより効果的か以上で再利用するには、そのコードの一部、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションではなく最初から修正します。 最も一般的なシナリオでは、既存の Windows フォーム コントロールがある場合です。 場合によってもがありませんこれらのコントロールのソース コードにアクセスします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このようなコントロールをホストするため、簡単な手順を提供する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 たとえば、使用することができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特殊なをホストしているときに、プログラミングの大部分の<xref:System.Windows.Forms.DataGridView>コントロール。  
   
  このチュートリアルでのデータ入力を実行する Windows フォーム複合コントロールをホストするアプリケーションを通じて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 複合コントロールは DLL にパッケージ化されています。 この一般的な手順は、より複雑なアプリケーションやコントロールに拡張することができます。 このチュートリアルの外観と機能をほぼ同じにする目的は[チュートリアル。Windows フォームでの WPF 複合コントロールをホストしている](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)します。 主な違いは、ホストする側とされる側が逆であることです。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "58654225"
   
 -   WPF ホスト アプリケーションの実装。  
   
- このチュートリアルで示すタスクの完全なコード一覧については、[WPF サンプル Windows フォーム複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159999)を参照してください。  
+ このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WPF サンプル Windows フォーム複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159999)します。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
 
@@ -239,8 +239,9 @@ using MyControls;
  アプリケーションをビルドして実行します。 Windows フォーム複合コントロールでテキストを追加し、クリックして**OK**します。 そのテキストがラベルに表示されます。 コントロールに影響を表示するさまざまなオプション ボタンをクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [チュートリアル: WPF での Windows フォーム コントロールのホスト](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

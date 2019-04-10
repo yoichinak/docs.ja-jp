@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186109"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>チュートリアル: Visual Basic による複合コントロールの作成
 複合コントロールは、カスタム グラフィカル インターフェイスを作成し、再利用するための手段を提供します。 複合コントロールは、基本的には視覚的に表示されるコンポーネントです。 そのため、複合コントロールは、1 つ以上の Windows フォーム コントロール、コンポーネント、または機能を拡張できるコード ブロックで構成されます。コード ブロックでは、ユーザー入力の検証、表示プロパティの変更、作成者が必要とする他のタスクの実行などによって機能を拡張します。 複合コントロールは、他のコントロールと同様に Windows フォームに配置できます。 このチュートリアルの前半では、`ctlClock` という単純な複合コントロールを作成します。 チュートリアルの後半では、継承によって `ctlClock` の機能を拡張します。  
@@ -35,7 +35,7 @@ ms.locfileid: "57714282"
   
 2.  Visual Basic プロジェクトのリストから選択、 **Windows コントロール ライブラリ**プロジェクト テンプレート、型`ctlClockLib`で、**名前**ボックスし、順にクリックします **[ok]**。  
   
-     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ctlClock` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ctlClockLib.ctlClock.` を使用して目的の `ctlClock` コンポーネントを指定できます。  
+     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、次の 2 つのアセンブリがという名前のコンポーネントを提供`ctlClock`を指定することができます、`ctlClock`を使用してコンポーネント `ctlClockLib.ctlClock.`  
   
 3.  ソリューション エクスプローラーで、**[UserControl1.vb]** を右クリックし、**[名前の変更]** をクリックします。 ファイル名を `ctlClock.vb` に変更します。 コード要素 "UserControl1" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "57714282"
   
     |プロパティ|変更後の値|  
     |--------------|---------------|  
-    |**Name**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**名前**|`lblDisplay`|  
+    |**テキスト**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -244,8 +244,8 @@ ms.locfileid: "57714282"
   
     |プロパティ|設定|  
     |--------------|-------------|  
-    |**Name**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**名前**|`lblAlarm`|  
+    |**テキスト**|**警告!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`False`|  
   
@@ -358,10 +358,10 @@ ms.locfileid: "57714282"
   
     |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
-    ||**Name**|`lblTest`|  
-    |`dateTimePicker1`|**Name**|`dtpTest`|  
-    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    |`label1`|**テキスト**|`(blank space)`|  
+    ||**名前**|`lblTest`|  
+    |`dateTimePicker1`|**名前**|`dtpTest`|  
+    ||**形式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. デザイナーで **[dtpTest]** をダブルクリックします。  
   
@@ -396,6 +396,7 @@ ms.locfileid: "57714282"
      このチュートリアルでは、多数の重要な概念を取り上げました。 コントロールとコンポーネントを複合コントロール コンテナーに組み込んで複合コントロールを作成する方法を説明しました。 また、コントロールにプロパティを追加する方法と、カスタム機能を実装するコードを記述する方法も説明しました。 最後のセクションでは、継承によって特定の複合コントロールの機能を拡張する方法と、ホスト メソッドをオーバーライドすることでメソッドの機能を変更する方法を説明しました。  
   
 ## <a name="see-also"></a>関連項目
+
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
-- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)
-- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [方法: 複合コントロールを作成する](how-to-author-composite-controls.md)
+- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

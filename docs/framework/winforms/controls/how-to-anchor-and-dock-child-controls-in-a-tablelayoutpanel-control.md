@@ -1,5 +1,5 @@
 ---
-title: '方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール'
+title: '方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: a4fcb4e527825a9946861a46dc336db227e52296
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dbd5d04bc1a4505fd2cb75913110199080ca6323
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200260"
 ---
-# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール
+# <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする
 <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、子コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティと <xref:System.Windows.Forms.Control.Dock%2A> プロパティをサポートします。  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>TableLayoutPanel のセル内の子コントロールを揃えるには  
@@ -28,45 +28,36 @@ ms.locfileid: "57709624"
   
 2.  値を設定、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>と<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>プロパティ**1**します。  
   
-3.  
-  <xref:System.Windows.Forms.TableLayoutPanel> コントロールで <xref:System.Windows.Forms.Button> コントロールを作成します。 
-  <xref:System.Windows.Forms.Button> がセルの左上隅を占有します。  
+3.  <xref:System.Windows.Forms.TableLayoutPanel> コントロールで <xref:System.Windows.Forms.Button> コントロールを作成します。 <xref:System.Windows.Forms.Button> がセルの左上隅を占有します。  
   
-4.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Left`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールが、セルの左罫線に合うように移動します。  
+4.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Left`に変更します。 <xref:System.Windows.Forms.Button> コントロールが、セルの左罫線に合うように移動します。  
   
     > [!NOTE]
     >  この動作は、他のコンテナー コントロールの動作と異なります。 他のコンテナー コントロールでは、<xref:System.Windows.Forms.Control.Anchor%2A> プロパティが設定されてと子コントロールは移動せず、固定されたコントロールと親コンテナーの境界間の距離は、<xref:System.Windows.Forms.Control.Anchor%2A> プロパティが設定されたときに固定されます。  
   
-5.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Left`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがセルの左上隅を占有するよう移動します。  
+5.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Left`に変更します。 <xref:System.Windows.Forms.Button> コントロールがセルの左上隅を占有するよう移動します。  
   
 6.  手順 5. を繰り返し、値の`Top, Right`を移動する、<xref:System.Windows.Forms.Button>セルの右上隅にあるコントロール。 `Bottom, Left` と `Bottom, Right` の値を指定して繰り返します。  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>TableLayoutPanel セル内の子コントロールを拡大するには  
   
-1.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Left, Right`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルいっぱいに拡大されます。  
+1.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Left, Right`に変更します。 <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルいっぱいに拡大されます。  
   
     > [!NOTE]
     >  この動作は、他のコンテナー コントロールの動作と異なります。 その他のコンテナー コントロールで子コントロールでないときにサイズ変更、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティに設定されて`Left, Right`または`Top, Bottom`します。  
   
-2.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Bottom`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルの上から下まで拡大されます。  
+2.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Bottom`に変更します。 <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルの上から下まで拡大されます。  
   
-3.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Bottom, Left, Right`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがセルを満たすようサイズ変更されます。  
+3.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `Top, Bottom, Left, Right`に変更します。 <xref:System.Windows.Forms.Button> コントロールがセルを満たすようサイズ変更されます。  
   
-4.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `None`に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルの中央に配置されます。  
+4.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を `None`に変更します。 <xref:System.Windows.Forms.Button> コントロールがサイズ変更され、セルの中央に配置されます。  
   
 5.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Left> に変更します。 <xref:System.Windows.Forms.Button> コントロールが、セルの左罫線に合うように移動します。 <xref:System.Windows.Forms.Button> コントロールの幅は保持されますが、高さはセルを垂直方向に満たすようサイズ変更されます。  
   
     > [!NOTE]
     >  これは、他のコンテナー コントロール内で発生するのと同じ動作です。  
   
-6.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Fill> に変更します。 
-  <xref:System.Windows.Forms.Button> コントロールがセルを満たすようサイズ変更されます。  
+6.  <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Fill> に変更します。 <xref:System.Windows.Forms.Button> コントロールがセルを満たすようサイズ変更されます。  
   
 ## <a name="example"></a>例  
  次の図は、5 つの個別の <xref:System.Windows.Forms.TableLayoutPanel> のセルに固定されている 5 つのボタンを示しています。  
@@ -91,8 +82,9 @@ ms.locfileid: "57709624"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [TableLayoutPanel コントロール](tablelayoutpanel-control-windows-forms.md)

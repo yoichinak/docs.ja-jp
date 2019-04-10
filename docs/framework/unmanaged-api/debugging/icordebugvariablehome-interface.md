@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome Interface
+title: ICorDebugVariableHome インターフェイス
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -18,14 +18,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78325236ab262c474e57b0d903033990b0e85f12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 339a0f502b7e47f7bee82a0da92185481d909e64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202912"
 ---
-# <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome Interface
+# <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome インターフェイス
 ローカル変数または関数の引数を表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -89,8 +89,9 @@ for (int i = 0; i < celtFetched; i++)
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)

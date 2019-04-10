@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204082"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>クエリによる DataTable の作成 (LINQ to DataSet)
-<xref:System.Data.DataTable> オブジェクトの一般的な利用法の 1 つが、データ バインディングです。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインドに利用できます。 このデータ操作が実行されると、新しい <xref:System.Data.DataTable> が、基となった <xref:System.Data.DataTable> にマージ バックされます。  
+<xref:System.Data.DataTable> オブジェクトの一般的な利用法の 1 つが、データ バインディングです。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインディングに利用できます。 このデータ操作が実行されると、新しい <xref:System.Data.DataTable> が、基となった <xref:System.Data.DataTable> にマージ バックされます。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドでは、次の処理を実行することでクエリの結果から <xref:System.Data.DataTable> を作成します。  
   
@@ -75,6 +75,7 @@ ms.locfileid: "54708351"
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラミング ガイド](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [ジェネリック メソッド Field および SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
 - [LINQ to DataSet の例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

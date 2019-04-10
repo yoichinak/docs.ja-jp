@@ -2,12 +2,12 @@
 title: カスタム メッセージ インターセプター
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181416"
 ---
 # <a name="custom-message-interceptor"></a>カスタム メッセージ インターセプター
 このサンプルでは、チャネル拡張モデルの使用方法を示します。 特に、チャネル ファクトリとチャネル リスナーを作成するカスタム バインド要素を実装して、ランタイム スタックの特定のポイントですべての送受信メッセージを中断する方法を示します。 また、このサンプルには、こうしたカスタム ファクトリの使用方法を示すクライアントとサーバーも含まれます。  
@@ -160,4 +160,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 4.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 5.  最初に Service.exe を実行して次に Client.exe を実行し、両方のコンソール ウィンドウで出力を表示します。  
-  

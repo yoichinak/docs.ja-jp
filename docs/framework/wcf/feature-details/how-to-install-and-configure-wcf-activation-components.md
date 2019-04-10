@@ -1,17 +1,17 @@
 ---
-title: '方法: インストールし、WCF アクティブ化コンポーネントの構成'
+title: '方法: WCF アクティブ化コンポーネントをインストールして設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199220"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: インストールし、WCF アクティブ化コンポーネントの構成
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: WCF アクティブ化コンポーネントをインストールして設定する
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
   
 -   インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。  
@@ -101,6 +101,7 @@ ms.locfileid: "54726898"
     >  このコマンドはテキスト 1 行です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ アクティベーション](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe アクティベーション](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174123"
 ---
 # <a name="batching-messages-in-a-transaction"></a>トランザクションに含まれるメッセージのバッチ処理
-キューに置かれたアプリケーションは、トランザクションを使用してメッセージの正確性および信頼性のある配信を確保します。 ただし、トランザクション操作には負荷がかかるため、メッセージのスループットが大幅に低下する可能性があります。 メッセージ スループットを向上する方法の 1 つは、アプリケーションにより、単一のトランザクション内で複数のメッセージを読み取って処理することです。 ただし、その場合、バッチ内のメッセージ数が増えるにつれて、トランザクションをロールバックしたときに必要な回復の作業量も増えるため、パフォーマンスと回復の間のトレードオフを考慮する必要があります。 したがって、トランザクションでのメッセージのバッチ処理とセッションの違いに注目することが重要です。 A*セッション*は単一のアプリケーションによって処理され、1 つの単位としてコミットされる関連するメッセージのグループです。 セッションは、一般に、関連メッセージのグループをまとめて処理する必要がある場合に使用されます。 この例として、オンライン ショッピング Web サイトがあります。 *バッチ*複数処理に使用される、メッセージ スループットを向上できる方法でメッセージとは無関係です。 セッションの詳細については、[セッションでキューに置かれたメッセージをグループ化](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)を参照してください。 バッチ内のメッセージもまた、単一のアプリケーションによって処理され、1 つの単位としてコミットされますが、バッチ内のメッセージが関連している必要はありません。 トランザクションでのメッセージのバッチ処理は、アプリケーションの実行方法を変更しない最適化です。  
+キューに置かれたアプリケーションは、トランザクションを使用してメッセージの正確性および信頼性のある配信を確保します。 ただし、トランザクション操作には負荷がかかるため、メッセージのスループットが大幅に低下する可能性があります。 メッセージ スループットを向上する方法の 1 つは、アプリケーションにより、単一のトランザクション内で複数のメッセージを読み取って処理することです。 ただし、その場合、バッチ内のメッセージ数が増えるにつれて、トランザクションをロールバックしたときに必要な回復の作業量も増えるため、パフォーマンスと回復の間のトレードオフを考慮する必要があります。 したがって、トランザクションでのメッセージのバッチ処理とセッションの違いに注目することが重要です。 A*セッション*は単一のアプリケーションによって処理され、1 つの単位としてコミットされる関連するメッセージのグループです。 セッションは、一般に、関連メッセージのグループをまとめて処理する必要がある場合に使用されます。 この例として、オンライン ショッピング Web サイトがあります。 *バッチ*複数処理に使用される、メッセージ スループットを向上できる方法でメッセージとは無関係です。 セッションの詳細については、次を参照してください。[セッションでキューに置かれたメッセージをグループ化](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)します。 バッチ内のメッセージもまた、単一のアプリケーションによって処理され、1 つの単位としてコミットされますが、バッチ内のメッセージが関連している必要はありません。 トランザクションでのメッセージのバッチ処理は、アプリケーションの実行方法を変更しない最適化です。  
   
 ## <a name="entering-batching-mode"></a>バッチ処理モードの開始  
  バッチ処理は、<xref:System.ServiceModel.Description.TransactedBatchingBehavior> エンドポイント動作によって制御されます。 このエンドポイント動作をサービス エンドポイントに追加すると、トランザクションでメッセージのバッチに Windows Communication Foundation (WCF) が通知されます。 すべてのメッセージのバッチで配置がトランザクションを必要とするメッセージのみ、トランザクションを必要とし、操作から送信されたメッセージのみが付いた`TransactionScopeRequired`  =  `true`と`TransactionAutoComplete`  =  `true`はバッチと見なされます。 サービス コントラクトのすべての操作が付いているかどうかは`TransactionScopeRequired`  =  `false`と`TransactionAutoComplete`  =  `false`、バッチ処理モードには入りません。  
@@ -20,11 +20,11 @@ ms.locfileid: "54700556"
 ## <a name="committing-a-transaction"></a>トランザクションのコミット  
  バッチ トランザクションは、次の基準に基づいてコミットされます。  
   
--   `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 動作のプロパティ。 このプロパティは、バッチに含められるメッセージの最大数を決定します。 この数に達すると、バッチがコミットされます。 この値は厳密に定められたものではないため、この数のメッセージを受信する前にバッチをコミットすることもできます。  
+-   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 動作のプロパティ。 このプロパティは、バッチに含められるメッセージの最大数を決定します。 この数に達すると、バッチがコミットされます。 この値は厳密に定められたものではないため、この数のメッセージを受信する前にバッチをコミットすることもできます。  
   
--   `Transaction Timeout`。 トランザクションのタイムアウトの 80% が経過すると、バッチがコミットされ、新しいバッチが作成されます。 つまり、トランザクションが完了するために指定された時間の残りが 20% 以下になると、バッチがコミットされます。  
+-   `Transaction Timeout`. トランザクションのタイムアウトの 80% が経過すると、バッチがコミットされ、新しいバッチが作成されます。 つまり、トランザクションが完了するために指定された時間の残りが 20% 以下になると、バッチがコミットされます。  
   
--   `TransactionScopeRequired`。 WCF では、1 つを持つ検出されると、メッセージのバッチを処理するときに`TransactionScopeRequired`  =  `false`、バッチをコミットし、最初のメッセージの受信時に新しいバッチが再度開かれます`TransactionScopeRequired`  =  `true`と`TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`. WCF では、1 つを持つ検出されると、メッセージのバッチを処理するときに`TransactionScopeRequired`  =  `false`、バッチをコミットし、最初のメッセージの受信時に新しいバッチが再度開かれます`TransactionScopeRequired`  =  `true`と`TransactionAutoComplete` = `true`.  
   
 -   キューのメッセージがなくなると、`MaxBatchSize` に達していない場合やトランザクションのタイムアウトの 80% が経過していない場合でも、現在のバッチがコミットされます。  
   
@@ -83,5 +83,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

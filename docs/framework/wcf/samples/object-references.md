@@ -2,12 +2,12 @@
 title: オブジェクト参照
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 393a6cb446d8216659c2b2f63b21754c37291ca7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203003"
 ---
 # <a name="object-references"></a>オブジェクト参照
 このサンプルでは、サーバーとクライアント間でオブジェクトを参照渡しする方法を示します。 シミュレートされたサンプルは*ソーシャル ネットワーク*します。 ソーシャル ネットワークは、友人のリストを含んでいる `Person` クラスで構成され、このリストの各友人は、それぞれ独自の友人のリストを持つ `Person` クラスのインスタンスです。 これにより、オブジェクトのグラフが作成されます。 このようなソーシャル ネットワークに対する操作は、サービスによって公開されます。  
@@ -114,5 +114,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [相互運用可能なオブジェクト参照](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

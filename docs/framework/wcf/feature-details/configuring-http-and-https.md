@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
-ms.translationtype: MT
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195151"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
 WCF サービスと WCF クライアントは、HTTP および HTTPS を介して通信できます。 HTTP または HTTPS の設定は、インターネット インフォメーション サービス (IIS) またはコマンド ライン ツールを使用して構成します。 WCF サービスが IIS でホストされている場合は、IIS 内で HTTP または HTTPS の設定を構成できます (inetmgr.exe ツールを使用)。 WCF サービスが自己ホスト型の場合は、コマンド ライン ツールを使用して HTTP または HTTPS の設定を構成します。  
@@ -18,7 +18,7 @@ WCF サービスと WCF クライアントは、HTTP および HTTPS を介し�
   
  HTTP 設定の構成に使用するツールは、コンピューターで実行されているオペレーティング システムによって異なります。  
   
- 実行時に[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ではこのツールが自動的にインストールされます。 実行時に[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、[Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)を参照してください。  
+ 実行時に[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]または[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、HttpCfg.exe ツールを使用します。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] このツールは自動的にインストールされます。 実行時に[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、ツールをダウンロードする[Windows XP Service Pack 2 サポート ツール](https://go.microsoft.com/fwlink/?LinkId=88606)します。 詳細については、次を参照してください。 [Httpcfg の概要](https://go.microsoft.com/fwlink/?LinkId=88605)します。  
   
  実行時に[!INCLUDE[wv](../../../../includes/wv-md.md)]Windows 7、Netsh.exe ツールを使用してこれらの設定を構成することもできます。  
   
@@ -85,11 +85,12 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="other-configuration-settings"></a>その他の構成設定  
  <xref:System.ServiceModel.WSDualHttpBinding> を使用すると、クライアント接続では、名前空間予約と Windows ファイアウォールに対応できる既定値が使用されます。 双方向接続のクライアント ベース アドレスをカスタマイズする場合、クライアント上で HTTP 設定を行い、新しいアドレスに一致させる必要があります。  
   
- HTTP Server API には、HttpCfg からは使用できない高度な構成設定があります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、[IIS 用の Http.sys レジストリ設定](https://go.microsoft.com/fwlink/?LinkId=94843)を参照してください。 ほとんどのユーザーは、この設定を変更する必要がありません。  
+ HTTP Server API には、HttpCfg からは使用できない高度な構成設定があります。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、次を参照してください。 [IIS 用の Http.sys レジストリ設定](https://go.microsoft.com/fwlink/?LinkId=94843)します。 ほとんどのユーザーは、この設定を変更する必要がありません。  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP に固有の問題  
  IIS では、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上でのポート共有がサポートされていません。 IIS が実行されていると、WCF サービスが同じポートを持つ名前空間を使用しようとした場合、WCF サービスを開始に失敗します。 IIS と WCF どちらも、既定ポート 80 を使用します。 サービスのいずれかのポート割り当てを変更するか、IP リッスン一覧を使用して、WCF サービスを IIS で使用されていないネットワーク アダプターに割り当てます。 IIS 6.0 以上では、HTTP Server API を使用できるように設計が変更されています。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [方法: SSL 証明書でポートを構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

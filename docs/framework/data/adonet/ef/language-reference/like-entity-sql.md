@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197712"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 指定された文字列 `String` が指定されたパターンと一致するかどうかを判断します。  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  LIKE の結果を否定することを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` がパターンに一致する場合は `string`、一致しない場合は `false`。  
+ `true` 場合、`string`パターンに一致する、それ以外の`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式は、フィルター条件として等しいかどうかを使用する式と同じように評価されます。 ただし、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式はリテラルとワイルドカード文字の両方を含めることができます。  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  特定のプロバイダーを対象とする場合は、プロバイダー固有の拡張機能を使用できます。 ただし、たとえばコンストラクターの扱いは、プロバイダーによって異なる場合があります。 SqlServer では、[first-last] および [^first-last] のパターンがサポートされています。前者は先頭と末尾の間の 1 文字が完全に一致し、後者は先頭と末尾の間以外の 1 文字が完全に一致します。  
   
 ### <a name="escape"></a>エスケープ特殊文字  
- 前のセクションの表で説明しているように、ESCAPE 句を使用することで、1 文字以上の特殊なワイルドカード文字を含む文字列を検索できます。 たとえば、複数のドキュメントのタイトルにリテラル "100%" が含まれており、そのドキュメントすべてを検索するとします。 使用してエスケープする必要があります、パーセント (%) 文字がワイルドカード文字であるため、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]エスケープ句検索を正常に実行します。 このフィルターの例は次のとおりです。  
+ 前のセクションの表で説明しているように、ESCAPE 句を使用することで、1 文字以上の特殊なワイルドカード文字を含む文字列を検索できます。 たとえば、複数のドキュメントのタイトルにリテラル "100%" が含まれており、そのドキュメントすべてを検索するとします。 ため、パーセント (%)文字がワイルドカード文字を使用してエスケープする必要があります、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]エスケープ句検索を正常に実行します。 このフィルターの例は次のとおりです。  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

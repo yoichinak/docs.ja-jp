@@ -1,5 +1,5 @@
 ---
-title: '方法: クライアント資格情報の種類を指定します。'
+title: '方法: クライアントの資格情報の種類を指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185056"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>方法: クライアント資格情報の種類を指定します。
-セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティ モード (クライアントの資格情報の種類を設定する前に必要な手順) を設定する方法についての詳細については、[方法。セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)を参照してください。  
+# <a name="how-to-specify-the-client-credential-type"></a>方法: クライアントの資格情報の種類を指定する
+セキュリティ モード (トランスポートまたはメッセージ) を設定してから、クライアント資格情報の種類を指定することができます。 このプロパティでは、クライアントが認証時にサービスに提供する必要のある資格情報の種類を指定します。 セキュリティ モード (クライアントの資格情報の種類を設定する前に必要な手順) を設定する方法についての詳細については、次を参照してください。[方法。セキュリティ モードを設定](../../../docs/framework/wcf/how-to-set-the-security-mode.md)します。  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>コードでクライアント資格情報の種類を設定するには  
   
@@ -58,5 +58,6 @@ ms.locfileid: "54643379"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [方法: セキュリティ モードを設定します。](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [方法: セキュリティ モードを設定する](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

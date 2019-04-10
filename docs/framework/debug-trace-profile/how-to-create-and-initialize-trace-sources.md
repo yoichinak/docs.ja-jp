@@ -1,5 +1,5 @@
 ---
-title: '方法: 作成し、トレース ソースの初期化'
+title: '方法: トレース ソースを作成し初期化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194891"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>方法: 作成し、トレース ソースの初期化
-<xref:System.Diagnostics.TraceSource> クラスをアプリケーションで使用すると、アプリケーションに関連付けることができるトレースを生成できます。 <xref:System.Diagnostics.TraceSource> は、イベントのトレース、データのトレース、および情報トレースの発行を簡単に実行できるトレース メソッドを提供します。 <xref:System.Diagnostics.TraceSource> からのトレース出力は、構成ファイルを使用してもしなくても作成および初期化できます。 このトピックでは、この両方の手順について説明しています。 ただし、実行時にトレース ソースによって作成されるトレースの再構成を容易にするために構成ファイルを使用することをお勧めします。  
+# <a name="how-to-create-and-initialize-trace-sources"></a>方法: トレース ソースを作成し初期化する
+<xref:System.Diagnostics.TraceSource> クラスをアプリケーションで使用すると、アプリケーションに関連付けることができるトレースを生成できます。 <xref:System.Diagnostics.TraceSource> トレース イベントを簡単に、トレース データ、および情報トレースの発行に実行できるトレース メソッドを提供します。 <xref:System.Diagnostics.TraceSource> からのトレース出力は、構成ファイルを使用してもしなくても作成および初期化できます。 このトピックでは、この両方の手順について説明しています。 ただし、実行時にトレース ソースによって作成されるトレースの再構成を容易にするために構成ファイルを使用することをお勧めします。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>構成ファイルを使用してトレース ソースを作成し、初期化するには  
   
@@ -79,6 +79,7 @@ ms.locfileid: "54570097"
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>

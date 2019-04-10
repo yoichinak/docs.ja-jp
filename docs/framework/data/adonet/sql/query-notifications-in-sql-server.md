@@ -2,12 +2,12 @@
 title: SQL Server のクエリ通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203679"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server のクエリ通知
 クエリ通知は Service Broker インフラストラクチャに基づいて構築されており、データが変更されたときにクエリ通知を使用してアプリケーションに通知できます。 この機能は、Web アプリケーションなど、データベースから情報のキャッシュを提供し、ソース データが変更された場合に通知を必要とするアプリケーションに特に役立ちます。  
@@ -16,7 +16,7 @@ ms.locfileid: "56092294"
   
 1.  基本レベルの実装は、`SqlNotificationRequest` クラスによって行われます。これによってサーバー側の機能が公開され、通知要求を伴うコマンドを実行できます。  
   
-2.  高レベルの実装は、`SqlDependency` クラスによって行われます。このクラスでは、ソース アプリケーションと SQL Server 間の通知機能が高度に抽象化され、その依存関係を使用してサーバー内の変更を検出することができます。 マネージ クライアント アプリケーションが .NET Framework Data Provider for SQL Server を使用して SQL Server の通知機能を活用するには、ほとんどの場合、これが最も簡単かつ効果的な方法です。  
+2.  高レベルの実装は、`SqlDependency` クラスによって行われます。このクラスでは、ソース アプリケーションと SQL Server 間の通知機能が高度に抽象化され、その依存関係を使用してサーバー内の変更を検出することができます。 マネージド クライアント アプリケーションが .NET Framework Data Provider for SQL Server を使用して SQL Server の通知機能を活用するには、ほとんどの場合、これが最も簡単かつ効果的な方法です。  
   
 3.  さらに、ASP.NET 2.0 以降を使用して構築された Web アプリケーションでは、`SqlCacheDependency` ヘルパー クラスを使用できます。  
   
@@ -28,15 +28,15 @@ ms.locfileid: "56092294"
   
  **SQL Server のドキュメント**  
   
--   [クエリ通知の使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+-   [クエリ通知機能の使用](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [通知のクエリを作成します。](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [クエリ通知の作成](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [開発 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+-   [開発者ガイド (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 -   [Service Broker 開発者向けの情報](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Developer's Guide (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+-   [開発者ガイド (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クエリ通知の有効化](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -53,16 +53,15 @@ ms.locfileid: "56092294"
   
 ## <a name="reference"></a>参照  
  <xref:System.Data.Sql.SqlNotificationRequest>  
- 
-  <xref:System.Data.Sql.SqlNotificationRequest> クラスおよびそのすべてのメンバーについて説明します。  
+ <xref:System.Data.Sql.SqlNotificationRequest> クラスおよびそのすべてのメンバーについて説明します。  
   
  <xref:System.Data.SqlClient.SqlDependency>  
  <xref:System.Data.SqlClient.SqlDependency> クラスおよびそのすべてのメンバーについて説明します。  
   
  <xref:System.Web.Caching.SqlCacheDependency>  
- 
-  <xref:System.Web.Caching.SqlCacheDependency> クラスおよびそのすべてのメンバーについて説明します。  
+ <xref:System.Web.Caching.SqlCacheDependency> クラスおよびそのすべてのメンバーについて説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

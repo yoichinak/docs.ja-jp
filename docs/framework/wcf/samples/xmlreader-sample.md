@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: fc25f2fccdc7becb8989c3cabe8b7b82d865fa13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 261bc371ce9a6da09ef49f0ddd1274be5757c7bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194671"
 ---
 # <a name="xmlreader-sample"></a>XmlReader サンプル
 XmlReader サンプルでは、<xref:System.Xml.XmlReader> を使用したメッセージ本文の処理を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、電卓サービスを実装します。 `Sum` という 1 つのサービス操作が追加され、このサービス操作は、合計する値の配列を含むメッセージを受け入れます。 サービスは、<xref:System.Xml.XmlReader> を使用してメッセージを読み取ります。  
@@ -108,4 +108,3 @@ Press <ENTER> to terminate client.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  
-  

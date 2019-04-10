@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの DataGrid コントロールをデータ ソースにバインドします。'
+title: '方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176684"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>方法: Windows フォームの DataGrid コントロールをデータ ソースにバインドします。
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  Windows フォーム<xref:System.Windows.Forms.DataGrid>コントロールが具体的には、データ ソースから情報を表示するように設計します。 実行時に呼び出すことによって、コントロールをバインドする、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド。 さまざまなデータ ソースからデータを表示できますが、最も一般的なソース、データセットとデータのビューです。  
   
@@ -105,7 +104,8 @@ ms.locfileid: "57702959"
 3.  (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。 テーブル スタイルがない場合は、テーブルが表示されますが、最低限の書式と表示されているすべての列。  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
-- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)

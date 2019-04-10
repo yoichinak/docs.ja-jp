@@ -1,16 +1,16 @@
 ---
-title: '方法: アプリケーションに複数の設定セットを追加します。C#'
+title: '方法: C# のアプリケーションに複数の設定セットを追加する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 106e0ee0b8775f329f3ffd8babe458cac8492bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187383"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>方法: C 言語でアプリケーションに複数の設定セットを追加します。\#
 場合によっては、アプリケーションで複数の設定のセットがある可能性があります。 たとえば、アプリケーションを開発し、頻繁に変更する設定の特定のグループが必要な場合は場合があります、ファイルごとに、置換できるように、すべて 1 つのファイルにそれらを分離するその他の設定の影響を受けていません。 Visual Studio プロジェクトに複数の設定セットを追加することができます。 設定の追加セットは、Properties.Settings オブジェクトを使用してアクセスできます。  
@@ -26,5 +26,6 @@ ms.locfileid: "57719651"
 4.  追加し、他の設定ファイルと同様に、このファイルの設定を使用します。 この Properties.Settings オブジェクトを使用して設定のグループにアクセスできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
 - [アプリケーション設定の概要](application-settings-overview.md)

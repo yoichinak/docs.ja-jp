@@ -2,12 +2,12 @@
 title: 弱い型指定の JSON のシリアル化のサンプル
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 370030671a6a8c6709567bf070411543722ab8d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205057"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱い型指定の JSON のシリアル化のサンプル
 特定のワイヤ形式にユーザー定義型をシリアル化するときや、ユーザー定義型にワイヤ形式を逆シリアル化するときは、そのユーザー定義型がサービスとクライアントの両方で使用可能である必要があります。 通常、これを実現するために、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性がこのユーザー定義型に適用され、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がそのメンバに適用されます。 このメカニズムも適用されます、JavaScript Object Notation (JSON) オブジェクトを使用する場合、トピックの説明に従って[方法。および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
@@ -58,7 +58,7 @@ ms.locfileid: "58842669"
   
  この手順は、特にクライアントが複数の型の JSON オブジェクトを処理する必要がある場合に、複雑になる可能性があります。  
   
- このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject` は、JSON オブジェクトと [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ディクショナリ間の自然な割り当て、および JSON 配列と [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 配列間の割り当てに依存しています。 `JsonObject` 型のコードを次に示します。  
+ このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject` JSON オブジェクト間の自然な割り当てに依存し、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ディクショナリ、および JSON 配列の間のマッピングと[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]配列。 `JsonObject` 型のコードを次に示します。  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -139,4 +139,3 @@ My favorite bands are Band ABC and Band XYZ.
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
-  

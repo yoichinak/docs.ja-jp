@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。'
+title: '方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192695"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
   
  コントロールをドッキングするときに、親コンテナーの端にコントロールを固定を決定します。 そのため、設定した場合、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Right>コントロールの右端が親コントロールの右端にドッキングされます。 さらに、ドッキングされたコントロールの端は、コンテナー コントロールの一致するようにサイズ変更します。 方法の詳細については<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを参照してください[方法。Windows フォーム上のコントロールをドッキング](how-to-dock-controls-on-windows-forms.md)します。  
@@ -177,6 +177,7 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)
-- [方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する](create-a-multipane-user-interface-with-wf-using-the-designer.md)

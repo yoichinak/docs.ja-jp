@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム BindingSource コンポーネントを使用するルックアップ テーブルを作成します。'
+title: '方法: Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181481"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントを使用するルックアップ テーブルを作成します。
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する
 ルックアップ テーブルは、関連するテーブル内のレコードのデータを表示する列を持つ、データ テーブルです。 以下の手順では、<xref:System.Windows.Forms.ComboBox> コントロールを使用して、親テーブルから子テーブルへの外部キー リレーションシップを持つフィールドを表示します。  
   
  これらの 2 つのテーブルとこの関係をわかりやすく視覚化するために、親テーブルと子テーブルの例を次に示します。  
@@ -37,8 +37,7 @@ ms.locfileid: "57723921"
   
  ルックアップ テーブルを作成するには、[ComboBox コントロール](combobox-control-windows-forms.md)で次の 4 つの重要なプロパティを設定します。  
   
--   
-  <xref:System.Windows.Forms.ComboBox.DataSource%2A> プロパティには、テーブルの名前が格納されます。  
+-   <xref:System.Windows.Forms.ComboBox.DataSource%2A> プロパティには、テーブルの名前が格納されます。  
   
 -   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> プロパティには、コントロール テキスト (顧客名) に対して表示する、テーブルのデータ列が格納されます。  
   
@@ -56,13 +55,11 @@ ms.locfileid: "57723921"
   
 2.  子テーブルの詳細を表示する他のコントロールをドラッグします。 テーブル内のデータの形式によって、選択するコントロールが決まります。 詳細については、「[Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)」を参照してください。  
   
-3.  
-  <xref:System.Windows.Forms.BindingNavigator> コントロールをフォームにドラッグします。これにより、子テーブル内のデータを移動できるようになります。  
+3.  <xref:System.Windows.Forms.BindingNavigator> コントロールをフォームにドラッグします。これにより、子テーブル内のデータを移動できるようになります。  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>データに接続し、コントロールにバインドするには  
   
-1.  
-  <xref:System.Windows.Forms.ComboBox> を選択し、スマート タスク グリフをクリックして [スマート タスク] ダイアログ ボックスを表示します。  
+1.  <xref:System.Windows.Forms.ComboBox> を選択し、スマート タスク グリフをクリックして [スマート タスク] ダイアログ ボックスを表示します。  
   
 2.  **[データ バインド項目を使用する]** を選択します。  
   
@@ -92,10 +89,10 @@ ms.locfileid: "57723921"
   
 7.  <xref:System.Windows.Forms.BindingNavigator> コントロールを子テーブルの <xref:System.Windows.Forms.BindingSource> (`OrdersBindingSource` など) にバインドします。  
   
-8.  
-  <xref:System.Windows.Forms.ComboBox> および <xref:System.Windows.Forms.BindingNavigator> コントロール以外のコントロールを、表示する子テーブルの <xref:System.Windows.Forms.BindingSource> (`OrdersBindingSource` など) の詳細フィールドにバインドします。  
+8.  <xref:System.Windows.Forms.ComboBox> および <xref:System.Windows.Forms.BindingNavigator> コントロール以外のコントロールを、表示する子テーブルの <xref:System.Windows.Forms.BindingSource> (`OrdersBindingSource` など) の詳細フィールドにバインドします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource コンポーネント](bindingsource-component.md)
 - [ComboBox コントロール](combobox-control-windows-forms.md)

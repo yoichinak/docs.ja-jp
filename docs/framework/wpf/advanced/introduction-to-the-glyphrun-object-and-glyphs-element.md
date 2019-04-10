@@ -9,17 +9,16 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 24ffffc959891b6dab45350c6cda02adcc4f619a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 7c78853aef9dfa96c49a0f2a4b585a2bd0cd5e98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206981"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun オブジェクトと Glyphs 要素の概要
 このトピックで説明します、<xref:System.Windows.Media.GlyphRun>オブジェクトと<xref:System.Windows.Documents.Glyphs>要素。  
-  
-  
+
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>GlyphRun の概要  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 直接アクセスによるグリフ レベルのマークアップなどの高度なテキスト サポートを提供します<xref:System.Windows.Documents.Glyphs>を使用し、書式設定後のテキストの保持を希望するお客様向けです。 これらの機能は、下記のようなシナリオでのさまざまなテキスト レンダリング要件をサポートする不可欠なものです。  
@@ -28,9 +27,9 @@ ms.locfileid: "57362891"
   
 2.  印刷シナリオ。  
   
-    -   デバイス プリンター言語としての [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] デバイス プリンター言語。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
     -   以前のプリンター ドライバー、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]アプリケーションから固定形式への出力。  
   
@@ -95,6 +94,7 @@ ms.locfileid: "57362891"
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のタイポグラフィ](typography-in-wpf.md)
 - [WPF のドキュメント](documents-in-wpf.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: コントロールをフォームの端を揃える'
+title: '方法: フォームの端に合わせてコントロールを配置する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 33a3b2e996bdab280eb7a4cd8ad7c59ccb1a1bd2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185784"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: コントロールをフォームの端を揃える
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: フォームの端に合わせてコントロールを配置する
 <xref:System.Windows.Forms.Control.Dock%2A> プロパティを設定することにより、フォームの端に合わせてコントロールを配置することができます。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
   
 |設定|コントロールへの影響|  
@@ -50,9 +50,10 @@ ms.locfileid: "57713892"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
-- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)

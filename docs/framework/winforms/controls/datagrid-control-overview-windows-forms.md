@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189314"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -140,6 +140,7 @@ DataGrid コントロールに含まれるオブジェクトを次の図に示�
  <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter>、および <xref:System.Windows.Forms.DataGrid.Scroll> などの一般的なコントロール イベントのほかに、<xref:System.Windows.Forms.DataGrid> コントロールはグリッド内の編集と移動に関連付けられたイベントをサポートします。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> プロパティは、どのセルが選択されるか決定します。 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> イベントは、ユーザーが新しいセルに移動するときに発生します。 ユーザーが親子のリレーションを使用して新しいテーブルに移動するときに、<xref:System.Windows.Forms.DataGrid.Navigate> イベントが発生します。 <xref:System.Windows.Forms.DataGrid.BackButtonClick> イベントは、ユーザーが子テーブルを表示している場合にユーザーが [戻る] ボタンをクリックすると発生し、<xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> イベントは、親行の表示/非表示のアイコンをクリックすると発生します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

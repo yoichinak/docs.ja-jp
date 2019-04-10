@@ -1,15 +1,15 @@
 ---
-title: '方法: WAS で WCF サービスをホストします。'
+title: '方法: WAS で WCF サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195450"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>方法: WAS で WCF サービスをホストします。
+# <a name="how-to-host-a-wcf-service-in-was"></a>方法: WAS で WCF サービスをホストする
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順について説明しますには、Windows Communication Foundation (WCF) サービスがホストされています。 WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。 WCF では、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信するために、リスナー アダプター インターフェイスを使用します。  
   
  このホスト オプションでは、WAS アクティブ化コンポーネントのインストールと構成が正しく行われている必要がありますが、アプリケーションの一部としてホスト コードを記述する必要はありません。 インストールして、WAS の構成の詳細については、次を参照してください。[方法。インストールし、構成の WCF アクティブ化コンポーネント](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)します。  
@@ -35,7 +35,7 @@ ms.locfileid: "54651176"
   
  バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。  
   
- この例のソースのコピーを[TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)を参照してください。  
+ この例のソースのコピーを次を参照してください。 [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)します。  
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>WAS でホストされる基本サービスを作成するには  
   
@@ -99,5 +99,6 @@ ms.locfileid: "54651176"
 6.  クライアントをコンパイルして実行します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [TCP アクティベーション](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

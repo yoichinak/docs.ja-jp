@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a7bd1d67d9730c75e3f3f3b1eeb59f5d2d3c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204836"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>方法: WCF サービス操作を非同期的に呼び出す
-ここでは、クライアントからサービス操作に非同期にアクセスする方法について説明します。 このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントは、イベント ドリブンの非同期呼び出しモデルを使用して、このインターフェイスで操作を非同期に呼び出すことができます  (イベント ベースの非同期呼び出しモデルの詳細については、次を参照してください。[イベント ベースの非同期パターンを使用したマルチ スレッド プログラミング](https://go.microsoft.com/fwlink/?LinkId=248184))。 サービスで操作を非同期的に実装する方法の例を参照してください[方法。非同期サービス操作を実装](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)します。 同期および非同期操作の詳細については、[同期および非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)を参照してください。  
+ここでは、クライアントからサービス操作に非同期にアクセスする方法について説明します。 このトピックのサービスは、`ICalculator` インターフェイスを実装しています。 クライアントは、イベント ドリブンの非同期呼び出しモデルを使用して、このインターフェイスで操作を非同期に呼び出すことができます  (イベント ベースの非同期呼び出しモデルの詳細については、次を参照してください。[イベント ベースの非同期パターンを使用したマルチ スレッド プログラミング](https://go.microsoft.com/fwlink/?LinkId=248184))。 サービスで操作を非同期的に実装する方法の例を参照してください[方法。非同期サービス操作を実装](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)します。 同期および非同期操作の詳細については、次を参照してください。[同期および非同期操作](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)します。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ChannelFactory%601> を使用している場合、イベント ドリブンの非同期呼び出しモデルはサポートされません。 使用して非同期呼び出しを行う方法については、<xref:System.ServiceModel.ChannelFactory%601>を参照してください[方法。チャネル ファクトリを使用して非同期的に操作を呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)します。  
@@ -40,7 +40,7 @@ ms.locfileid: "54625550"
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> 各操作の種類 (形式の <`operationName`>`CompletedEventArgs`) - イベント ベースの非同期呼び出し方法を使用します。 例:  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> 各操作の種類 (形式の <`operationName`>`CompletedEventArgs`) - イベント ベースの非同期呼び出し方法を使用します。 例えば:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -64,4 +64,5 @@ ms.locfileid: "54625550"
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 非同期サービス操作を実装します。](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+
+- [方法: 非同期サービス操作を実装する](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

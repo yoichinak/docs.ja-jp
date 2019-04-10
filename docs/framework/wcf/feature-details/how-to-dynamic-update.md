@@ -2,12 +2,12 @@
 title: '方法: 動的な更新'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: a021e6b550baf8fb7034a163179e0626bf42cfb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190991"
 ---
 # <a name="how-to-dynamic-update"></a>方法: 動的な更新
 ここでは、ルーティング構成の作成および動的な更新に必要な基本的手順について説明します。 この例では、ルーティングの初期構成を構成ファイルから取得し、すべてのメッセージを regularCalc 電卓サービスにルーティングします。ただし、これは、roundingCalc のサービスの提供先となるエンドポイントを変更するために、後でプログラムによって更新されます。  
@@ -297,4 +297,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティング サービス](../../../../docs/framework/wcf/samples/routing-services.md)

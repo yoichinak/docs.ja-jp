@@ -1,15 +1,15 @@
 ---
-title: '方法: Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには'
+title: '方法: Svcutil.exe を使用してコンパイル済みサービス コードを検証する'
 ms.date: 03/30/2017
 ms.assetid: d0d820fb-41c2-45b8-8f22-0fa5aeebbbaa
-ms.openlocfilehash: a06cf57fce883753af4686b294396d6d6da73a13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1e90d71d5831ccf262315ebf9c1deb99b386e224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196412"
 ---
-# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>方法: Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには
+# <a name="how-to-use-svcutilexe-to-validate-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みサービス コードを検証する
 使用することができます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)サービスをホストせず、サービス実装と構成でエラーを検出します。  
   
 ### <a name="to-validate-a-service"></a>サービスを検証するには  
@@ -36,4 +36,5 @@ svcutil /validate /serviceName:myServiceName myServiceHost.exe
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

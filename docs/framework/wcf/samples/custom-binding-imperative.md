@@ -2,12 +2,12 @@
 title: カスタム バインド強制
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: 62c043e616073a71f2aaabe4f2098592e975f661
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: d8d185aefcf9a5efe6f50c4ff5389df2de520f1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198895"
 ---
 # <a name="custom-binding-imperative"></a>カスタム バインド強制
 このサンプルでは、定義および構成ファイルや Windows Communication Foundation (WCF) が生成されたクライアントを使用せずにカスタム バインドを使用する命令型コードを記述する方法を示します。 このサンプルでは、HTTP トランスポートと信頼できるセッション チャネルによって提供される機能を組み合わせて、HTTP ベースの信頼できるバインディングを作成します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。  
@@ -81,4 +81,5 @@ Press <ENTER> to terminate client.
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
 ## <a name="see-also"></a>関連項目
+
 - [カスタム バインディング サンプル](custom-binding.md)

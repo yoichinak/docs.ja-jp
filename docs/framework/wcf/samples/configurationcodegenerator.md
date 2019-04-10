@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195190"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator は、カスタム チャネルの実装を構成システムに公開する際に使用できるツールです。 カスタム チャネルのユーザーは、このツールを使用することによって、`NetTcpBinding` などのシステム指定のバインディングやカスタム バインドを `TcpTransportBindingElement` で構成するのと同じように、.config ファイルを使用してカスタム チャネルを構成できます。  
@@ -49,4 +49,3 @@ ConfigurationCodeGenerator は、カスタム チャネルの実装を構成シ�
          /Sb が指定されている場合: オプション、CodeToAddTo\<*YourStdBinding*> .cs にはコードを標準バインディングを実装するクラスに手動で追加する必要があります。  
   
      SampleConfig.xml ファイルには、構成コードが含まれます。このコードは、前の手順 1. または 2. で定義されたハンドラーを登録する構成ファイルに追加する必要があります。  
-  

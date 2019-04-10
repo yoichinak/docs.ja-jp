@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム アプリケーションでフォント パターンの変更に応答します。'
+title: '方法: Windows フォーム アプリケーションでのフォント パターンの変更に応答する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182105"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>方法: Windows フォーム アプリケーションでフォント パターンの変更に応答します。
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>方法: Windows フォーム アプリケーションでのフォント パターンの変更に応答する
 Windows オペレーティング システムでは、ユーザーが表示される既定のフォントのサイズを変更するシステム全体のフォント設定を変更できます。 これらのフォント設定を変更することは、視覚障害のある、各自の画面にテキストを読み取るより大きい型を必要とするユーザーにとって重要です。 フォントの設定を変更するたびに、フォームと含まれているすべてのテキストのサイズを増減してこれらの変更に対応するため、Windows フォーム アプリケーションを調整することができます。 フォント サイズの変更を動的に対応するために、フォームを設定する場合は、フォームにコードを追加できます。  
   
  通常、Windows フォームで使用される既定のフォントは、によって返されるフォント、<xref:Microsoft.Win32>名前空間の呼び出し`GetStockObject(DEFAULT_GUI_FONT)`します。 この呼び出しによって返されたフォントは、画面の解像度が変更されたときにのみ変更します。 コードの既定のフォントを変更する必要があります、次の手順に示すように<xref:System.Drawing.SystemFonts.IconTitleFont%2A>フォント サイズの変更に応答します。  
@@ -65,5 +65,6 @@ Windows オペレーティング システムでは、ユーザーが表示さ�
  このコード例では constructer にはへの呼び出しが含まれています`InitializeComponent`、これは Visual Studio で新しい Windows フォーム プロジェクトを作成するときに定義されています。 コマンドラインでアプリケーションを構築している場合は、次のコード行を削除します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows フォームにおける自動スケーリング](automatic-scaling-in-windows-forms.md)

@@ -1,21 +1,21 @@
 ---
-title: '方法: COM + サービス モデル構成ツールを使用します。'
+title: '方法: COM+ サービス モデル構成ツールを使用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196893"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM + サービス モデル構成ツールを使用します。
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
   
 > [!NOTE]
->  以下の各作業を実行するには、コンピューターの管理者である必要があります。  
+>  以下の各タスクを実行するには、コンピューターの管理者である必要があります。  
   
  Windows 7 コンピューターで ComSvcConfig.exe を使用して、最新のサービス モデル バージョン (現在 v4.5) を使用するように Web サービスを構成する場合は、次の手順を実行します。  
   
@@ -110,4 +110,5 @@ ms.locfileid: "54736248"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM+ アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

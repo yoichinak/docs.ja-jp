@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
-ms.translationtype: MT
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188605"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
@@ -92,4 +92,5 @@ ms.locfileid: "58890515"
  ツールを使用して、ユーザーがプロファイリングの停止を要求したときに直ちにプロファイリングを停止する代わりに手順 2. と 3. (ランダウン セッションを開始してからプロファイリングを終了する) が実行されるようにすることも、 手順 4. もツールで実行できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -2,12 +2,12 @@
 title: カスタム トークン
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: f056e54197a98a0218ef94e4df2fc46745a08985
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201768"
 ---
 # <a name="custom-token"></a>カスタム トークン
 このサンプルでは、Windows Communication Foundation (WCF) アプリケーションにカスタム トークンの実装を追加する方法を示します。 この例では、`CreditCardToken` を使用して、クライアントのクレジット カードに関する情報をサーバーに安全に渡します。 このトークンは、WS-Security メッセージ ヘッダー内で渡され、対称セキュリティ バインド要素を使用してメッセージ本文と他のメッセージ ヘッダーと共に署名および暗号化されます。 これは、組み込みのトークンでは不十分な場合に役立ちます。 このサンプルでは、組み込みのトークンのいずれかを使用する代わりに、カスタム セキュリティ トークンをサービスに提供する方法を示します。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。
@@ -628,4 +628,3 @@ string GetCallerCreditCardNumber()
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
-  

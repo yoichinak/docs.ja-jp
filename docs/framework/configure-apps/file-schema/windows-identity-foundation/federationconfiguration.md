@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195294"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 構成、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) を使用する場合は、Ws-federation プロトコルを使用した認証をフェデレーションします。 構成、<xref:System.Security.Claims.ClaimsAuthorizationManager>を使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>クレーム ベースのアクセス制御を提供するクラス。  
@@ -33,7 +33,7 @@ ms.locfileid: "55286404"
 |属性|説明|  
 |---------------|-----------------|  
 |name|このフェデレーションの構成要素の名前。 主に、この属性は、将来のプロトコルの機能拡張ポイントを提供します。 任意。|  
-|identityConfigurationName|指定されている id の構成セクションの名前、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)を使用する要素。 この属性が指定されていない場合は、既定の id 構成セクションが使用されます。 任意。|  
+|identityConfigurationName|指定されている id の構成セクションの名前、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)を使用する要素。 この属性が指定されていない場合は、既定の id 構成セクションが使用されます。 省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -41,7 +41,7 @@ ms.locfileid: "55286404"
 |-------------|-----------------|  
 |[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM で使用されるクッキー ハンドラーを構成します。 任意。|  
 |[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|暗号化し、トークン暗号化解除に使用される証明書を構成します。 任意。|  
-|[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Ws-federation 認証モジュール (WSFAM) を構成します。 任意。|  
+|[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Ws-federation 認証モジュール (WSFAM) を構成します。 任意。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -92,6 +92,7 @@ ms.locfileid: "55286404"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

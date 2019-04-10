@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200988"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML の型コンバーターおよびマークアップ拡張機能
 型コンバーターとマークアップ拡張機能は、XAML 型システムと XAML ライターが、オブジェクト グラフ コンポーネントを生成するために使用する 2 つの手法です。 型コンバーターとマークアップ拡張機能は、一部の特性を共有しますが、XAML ノード ストリームでは異なる方法で表現されます。 このドキュメント セットでは、型コンバーター、マークアップ拡張機能、およびこれに類似したコンストラクトを、値コンバーターと総称することがあります。  
@@ -32,7 +32,7 @@ ms.locfileid: "58050533"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>型コンバーター  
- .NET Framework XAML サービスの定義では、型コンバーターは CLR の <xref:System.ComponentModel.TypeConverter> クラスから派生したクラスです。 <xref:System.ComponentModel.TypeConverter> XAML が導入される前に、Microsoft .NET Framework でいたクラスです。 当初の目的は、プロパティ ウィンドウや、 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] プロパティの同様のテキスト ベースの編集をサポートすることでした。 .NET Framework に導入された XAML では、 <xref:System.ComponentModel.TypeConverter> を使用して、テキスト構文 (属性値または XAML 値ノードに含まれる) をオブジェクトに変換します。 また、<xref:System.ComponentModel.TypeConverter> を使用して、オブジェクト値をテキスト構文にシリアル化することもできます。 <xref:System.ComponentModel.TypeConverter> でも Windows Presentation Foundation (WPF) や Windows Communication Foundation (WCF) で以前のフレームワーク固有 XAML 実装で使用されていました。 XAML の <xref:System.ComponentModel.TypeConverter> の詳細については、「 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)といった以前のフレームワーク固有の XAML 実装でも使用されていました。  
+ .NET Framework XAML サービスの定義では、型コンバーターは CLR の <xref:System.ComponentModel.TypeConverter> クラスから派生したクラスです。 <xref:System.ComponentModel.TypeConverter> XAML が導入される前に、Microsoft .NET Framework でいたクラスです。 当初の目的は、プロパティ ウィンドウや、 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] プロパティの同様のテキスト ベースの編集をサポートすることでした。 .NET Framework に導入された XAML では、 <xref:System.ComponentModel.TypeConverter> を使用して、テキスト構文 (属性値または XAML 値ノードに含まれる) をオブジェクトに変換します。 <xref:System.ComponentModel.TypeConverter> オブジェクトの値をテキスト構文にシリアル化にも使用できます。 <xref:System.ComponentModel.TypeConverter> でも Windows Presentation Foundation (WPF) や Windows Communication Foundation (WCF) で以前のフレームワーク固有 XAML 実装で使用されていました。 XAML の <xref:System.ComponentModel.TypeConverter> の詳細については、「 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)といった以前のフレームワーク固有の XAML 実装でも使用されていました。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>マークアップ拡張機能  
@@ -45,7 +45,7 @@ ms.locfileid: "58050533"
  XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これらの型がそれ以外の場合、文字列を含む CLR 名前空間を設定、WPF、または Windows フォームのいずれかのテクノロジに固有であるわけ`Windows`します。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、これらの型は CLR 名前空間に存在し、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] でも引き続き CLR 名前空間に残っているので、既存の WPF プロジェクトの参照は破損しません。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  
+>  <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これらの型がそれ以外の場合、文字列を含む CLR 名前空間を設定、WPF、または Windows フォームのいずれかのテクノロジに固有であるわけ`Windows`します。 <xref:System.Windows.Markup.MarkupExtension> <xref:System.Windows.Markup.ValueSerializer> System.Xaml アセンブリでは、特定のフレームワークの依存関係はありません。 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、これらの型は CLR 名前空間に存在し、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] でも引き続き CLR 名前空間に残っているので、既存の WPF プロジェクトの参照は破損しません。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>値シリアライザー  
@@ -66,8 +66,9 @@ ms.locfileid: "58050533"
  値コンバーターを実装する際には、通常、値コンバーターが適用されるコンテキストにアクセスする必要があります。 このコンテキストは、サービス コンテキストと呼ばれます。 サービス コンテキストには、アクティブな XAML スキーマ コンテキスト、XAML スキーマ コンテキストや XAML オブジェクト ライターが提供する型マッピング システムへのアクセスなどの情報が含まれます。 値コンバーターで使用可能なサービス コンテキストとサービス コンテキストが提供するサービスへのアクセス方法の詳細については、「[型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト](service-contexts-available-to-type-converters-and-markup-extensions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
 - [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)
 - [XAML の型コンバーターの概要](type-converters-for-xaml-overview.md)
-- [Service Contexts Available to Type Converters and Markup Extensions](service-contexts-available-to-type-converters-and-markup-extensions.md)
+- [型コンバーターおよびマークアップ拡張機能で使用できるサービス コンテキスト](service-contexts-available-to-type-converters-and-markup-extensions.md)

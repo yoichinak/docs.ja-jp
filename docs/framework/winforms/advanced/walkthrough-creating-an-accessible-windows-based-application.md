@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203692"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  
@@ -69,7 +69,7 @@ ms.locfileid: "58823468"
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|オーダー フォーム|  
     ||AccessibleName|オーダー フォーム|  
-    ||フォントサイズ|10|  
+    ||フォント サイズ|10|  
     ||テキスト|ピザ オーダー フォーム|  
     |PictureBox|名前|ロゴ|  
     ||AccessibleDescription|ピザのスライス|  
@@ -141,7 +141,6 @@ ms.locfileid: "58823468"
     
       ![名前テキスト ボックスに、およびサイズとトッピングの選択のピザ オーダー フォーム。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>ハイ コントラスト モードのサポート  
  ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを指定します。  
   

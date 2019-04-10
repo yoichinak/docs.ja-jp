@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a731a54771f3ac589031e856539ba0c21ca22778
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201014"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 要素
 Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。  
@@ -75,7 +75,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
   
      呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)STARTUP_LEGACY_IMPERSONATION にします。  
   
- 詳細については、、 [ \<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)を参照してください。  
+ 詳細については、次を参照してください。、 [ \<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  .NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。  
@@ -116,6 +116,7 @@ Windows ID が、現在のスレッドの実行コンテキストのフロー設
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<alwaysFlowImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

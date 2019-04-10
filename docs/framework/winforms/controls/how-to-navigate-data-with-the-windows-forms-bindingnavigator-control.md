@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの BindingNavigator コントロールを使用してデータを移動します。'
+title: '方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 5fd1caabbc876d5b71deae2d9b1b9cf232d17700
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fe1d037d7d72f41b602abe823a26655750338d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202158"
 ---
-# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>方法: Windows フォームの BindingNavigator コントロールを使用してデータを移動します。
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する
 Windows フォームに <xref:System.Windows.Forms.BindingNavigator> コントロールが登場したことで、開発者はエンドユーザーに、作成したフォームにおける単純なデータ移動および操作のためのユーザー インターフェイスを提供できるようになります。  
   
  <xref:System.Windows.Forms.BindingNavigator> コントロールは、データセットの最初、最後、次、前のレコードへの移動が構成済みのボタンや、レコードを追加および削除するためのボタンを持つ <xref:System.Windows.Forms.ToolStrip> コントロールです。 <xref:System.Windows.Forms.BindingNavigator> コントロールへのボタンの追加は、<xref:System.Windows.Forms.ToolStrip> コントロールなので簡単です。 たとえば、「[方法:保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール](load-save-and-cancel-bindingnavigator.md)します。  
@@ -51,9 +51,10 @@ Windows フォームに <xref:System.Windows.Forms.BindingNavigator> コント�
   
 -   System、System.Data、System.Drawing、System.Windows.Forms、および System.Xml アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)

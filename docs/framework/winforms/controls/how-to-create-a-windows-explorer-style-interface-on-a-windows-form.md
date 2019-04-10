@@ -1,19 +1,19 @@
 ---
-title: '方法: Windows フォームで Windows エクスプ ローラー スタイルのインターフェイスを作成します。'
+title: '方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 444d85265822b5dd4b3a5fd5f4329ec6cc1427f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192135"
 ---
-# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプ ローラー スタイルのインターフェイスを作成します。
+# <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
 Windows エクスプ ローラーは、準備ができて、慣れ親しんだのためのアプリケーションの一般的なユーザー インターフェイス選択です。  
   
  Windows エクスプ ローラーは、基本的に、<xref:System.Windows.Forms.TreeView>コントロールと<xref:System.Windows.Forms.ListView>別のパネル上のコントロール。 パネルは、スプリッターによってサイズ変更可能で行われます。 このコントロールの配置は、情報の表示と参照は非常に効果的です。  
@@ -50,8 +50,9 @@ Windows エクスプ ローラーは、準備ができて、慣れ親しんだ�
     >  分割線をドラッグすると、パネルでは、自身サイズを変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [方法: サイズ変更および位置指定動作を分割ウィンドウを定義します。](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [方法: ウィンドウを水平方向に分割します。](how-to-split-a-window-horizontally.md)
+- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [方法: 分割ウィンドウでのサイズ変更および位置指定動作を定義する](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [方法: ウィンドウを水平方向に分割する](how-to-split-a-window-horizontally.md)
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

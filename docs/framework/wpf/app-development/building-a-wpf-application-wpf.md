@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184484"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF アプリケーション (WPF) のビルド
 Windows Presentation Foundation (WPF) アプリケーションとしてビルドできます[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]実行可能ファイル (.exe)、ライブラリ (.dll)、またはアセンブリの両方の種類の組み合わせ。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをビルドする方法を紹介し、ビルド プロセスの主な手順について説明します。  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>WPF アプリケーションのビルド  
  WPF アプリケーションは、次の方法でコンパイルできます。  
@@ -26,7 +25,7 @@ Windows Presentation Foundation (WPF) アプリケーションとしてビルド
   
 -   Microsoft Build Engine (MSBuild)。 コードと XAML ファイルに加えて、アプリケーションには MSBuild プロジェクト ファイルを含める必要があります。 詳細については、「MSBuild」を参照してください。  
   
--   Visual Studio Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、[の記述と Visual Studio を使用してコードを管理](/visualstudio/ide/index-writing-code)と[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)を参照してください。  
+-   Visual Studio Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、次を参照してください。[の記述と Visual Studio を使用してコードを管理](/visualstudio/ide/index-writing-code)と[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)します。  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>WPF ビルド パイプライン  
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>マークアップ コンパイル - パス 2  
- マークアップ コンパイルのパス 1 ですべての [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページがコンパイルされるわけではありません。 ローカルで定義された型参照 (同じプロジェクト内の他のコードで定義された型の参照) を含む [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルは、この時点ではコンパイルから除外されます。 これは、ローカルで定義された型は、ソース内にのみ存在し、まだコンパイルされていないためです。 これを判別するために、パーサーは、マークアップ ファイル内で `x:Name` などの項目を検索するヒューリスティックを使用します。 このようなインスタンスが見つかると、そのマークアップ ファイルのコンパイルは、コード ファイルがコンパイルされるまで延期され、その後、2 階目のマークアップ コンパイル パスで、これらのファイルが処理されます。  
+ マークアップ コンパイルのパス 1 ですべての [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページがコンパイルされるわけではありません。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 型参照 (同じプロジェクト内の他の場所でのコードで定義された型への参照) をローカルで定義されたファイルは、この時点でのコンパイルから除外されます。 これは、ローカルで定義された型は、ソース内にのみ存在し、まだコンパイルされていないためです。 これを判別するために、パーサーは、マークアップ ファイル内で `x:Name` などの項目を検索するヒューリスティックを使用します。 このようなインスタンスが見つかると、そのマークアップ ファイルのコンパイルは、コード ファイルがコンパイルされるまで延期され、その後、2 階目のマークアップ コンパイル パスで、これらのファイルが処理されます。  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>ファイルの分類  
@@ -167,7 +166,8 @@ End Sub
 -   何も再コンパイルされない (プロジェクトに何も変更が加えられていない場合)。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)
-- [WPF MSBuild Reference (WPF MSBuild リファレンス)](/visualstudio/msbuild/wpf-msbuild-reference)
+- [WPF MSBuild のリファレンス](/visualstudio/msbuild/wpf-msbuild-reference)
 - [WPF におけるパッケージの URI](pack-uris-in-wpf.md)
 - [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)

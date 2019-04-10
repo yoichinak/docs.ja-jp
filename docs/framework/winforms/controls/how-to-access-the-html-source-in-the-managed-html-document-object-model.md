@@ -1,5 +1,5 @@
 ---
-title: '方法: マネージ HTML ドキュメント オブジェクト モデルでの HTML ソースへのアクセスします。'
+title: '方法: マネージド HTML DOM (Document Object Model) の HTML ソースにアクセスする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203263"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>方法: マネージ HTML ドキュメント オブジェクト モデルでの HTML ソースへのアクセスします。
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) の HTML ソースにアクセスする
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> コントロールの <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> プロパティおよび <xref:System.Windows.Forms.WebBrowser> プロパティは、現在のドキュメントが最初に表示されたときに存在した HTML を返します。 ただし、<xref:System.Windows.Forms.HtmlElement.AppendChild%2A> や <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A> のようなメソッド呼び出しやプロパティ呼び出しを使用してページを変更すると、<xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> や <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> を呼び出したときにこれらの変更は表示されません。 DOM の最新の HTML ソースを取得するには、HTML 要素の <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> プロパティを呼び出す必要があります。  
   
  次の手順では、動的ソースを取得し、別のショートカット メニューに表示する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "57723648"
      [!code-csharp[DisplayWebBrowserCode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  追加、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`を<xref:System.Windows.Forms.Form>、監視する、<xref:System.Windows.Forms.Control.Click>イベント。 イベントの監視について詳しくは、[イベント](../../../standard/events/index.md)を参照してください。  
+6.  追加、<xref:System.Windows.Forms.Button>という名前のコントロール`Button1`を<xref:System.Windows.Forms.Form>、監視する、<xref:System.Windows.Forms.Control.Click>イベント。 イベントの監視について詳しくは、次を参照してください。[イベント](../../../standard/events/index.md)します。  
   
 7.  <xref:System.Windows.Forms.Control.Click> イベント ハンドラーに次のコードを追加します。  
   
@@ -46,5 +46,6 @@ ms.locfileid: "57723648"
  <xref:System.Windows.Forms.WebBrowser.Document%2A> の値を取得する前に、必ずテストしてください。 現在のページの読み込みが完了していない場合、<xref:System.Windows.Forms.WebBrowser.Document%2A> またはその 1 つ以上の子オブジェクトが初期化されていない可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [マネージド HTML DOM (Document Object Model) の使用](using-the-managed-html-document-object-model.md)
 - [WebBrowser コントロールの概要](webbrowser-control-overview.md)

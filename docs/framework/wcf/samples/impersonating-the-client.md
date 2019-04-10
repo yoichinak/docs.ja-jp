@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 8338d04382e77c231232ca2080c21e8732a683b7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: bd03ddb2478d8f9938a8c89c04f536a81e9e24da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202470"
 ---
 # <a name="impersonating-the-client"></a>クライアントの偽装
 偽装のサンプルでは、サービスで呼び出し元のアプリケーションを偽装し、サービスが呼び出し元の代わりにシステム リソースにアクセスできるようにする方法を示します。  
@@ -124,4 +124,3 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
      次に、パスワードの入力が求められます。 先ほど指定したアカウントのパスワードを入力します。  
   
 5.  クライアントを実行する際、クライアントを実行する前と後で ID の資格情報が異なることに注意してください。  
-  

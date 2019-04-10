@@ -2,17 +2,17 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197998"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 ときに、<xref:System.Data.DataSet>正確に再作成する内容は、ただし、スキーマの DiffGram に必要なすべての情報を格納しますが、DiffGram として書き込まれますが、 <xref:System.Data.DataSet>、両方の列の値を含む、**元**と**現在**行のバージョン、行エラー情報、および行の順序。  
   
- XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 さらの内容を読み込むときに、<xref:System.Data.DataSet>から XML を使用して、 **ReadXml**メソッドの内容を記述する場合、または、 <xref:System.Data.DataSet> XML を使用して、 **WriteXml**メソッドを指定できます内容の読み取りがまたはを DiffGram として書き込みます。 詳細については、[XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)と[書き込み DataSet の内容を XML データとして](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)を参照してください。  
+ XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 さらの内容を読み込むときに、<xref:System.Data.DataSet>から XML を使用して、 **ReadXml**メソッドの内容を記述する場合、または、 <xref:System.Data.DataSet> XML を使用して、 **WriteXml**メソッドを指定できます内容の読み取りがまたはを DiffGram として書き込みます。 詳細については、次を参照してください。 [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)と[書き込み DataSet の内容を XML データとして](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)します。  
   
  .NET Framework では、DiffGram 形式は主に <xref:System.Data.DataSet> の内容をシリアル化するときの形式として使用されますが、Microsoft SQL Server データベース内のテーブル データを変更するときにも DiffGrams を使用できます。  
   
@@ -85,7 +85,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 |----------------|-----------------|  
 |**ID**|要素と対応するために使用、  **\<diffgr: する前に >** と **\<diffgr:errors >** ブロックの要素、 **\<*****DataInstance*** **>** ブロックします。 値で、 **diffgr:id**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
 |**parentId**|要素を識別する、 **\<** ***DataInstance*** **>** ブロックは、現在の要素の親要素。 値で、 **diffgr:parentId**注釈は、形式 *[TableName] [RowIdentifier]* します。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
-|**hasChanges**|行を識別、 **\<** ***DataInstance*** **>** 変更とブロックされます。 **HasChanges**注釈は、次の 2 つの値のいずれかを指定できます。<br /><br /> **inserted**<br /> 識別、 **Added**行。<br /><br /> **変更**<br /> 識別、 **Modified**を含む行を**元**で行のバージョン、  **\<diffgr: する前に >** ブロック。 注意**Deleted**の行、**元**で行のバージョン、  **\<diffgr: する前に >** ブロックが、注釈付き要素、ことはできません**\<**  ***DataInstance*** **>** ブロックします。|  
+|**hasChanges**|行を識別、 **\<** ***DataInstance*** **>** 変更とブロックされます。 **HasChanges**注釈は、次の 2 つの値のいずれかを指定できます。<br /><br /> **inserted**<br /> 識別、 **Added**行。<br /><br /> **modified**<br /> 識別、 **Modified**を含む行を**元**で行のバージョン、  **\<diffgr: する前に >** ブロック。 注意**Deleted**の行、**元**で行のバージョン、  **\<diffgr: する前に >** ブロックが、注釈付き要素、ことはできません**\<**  ***DataInstance*** **>** ブロックします。|  
 |**hasErrors**|行を識別、 **\<** ***DataInstance*** **>** ブロックと一緒に、 **RowError**します。 エラー要素は内に、  **\<diffgr:errors >** ブロックします。|  
 |**Error**|テキストを含む、 **RowError**で特定の要素に対して、  **\<diffgr:errors >** ブロックします。|  
   
@@ -132,6 +132,7 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [XML からの DataSet の読み込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [DataSet 内容の XML データとしての書き込み](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)

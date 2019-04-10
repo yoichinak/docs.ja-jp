@@ -2,12 +2,12 @@
 title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204758"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
 SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server の軽量バージョンは提供されます。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
@@ -29,7 +29,7 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` は LocalDB データベースに接続するときに使用することはできません。  
+ `User Instance=True` LocalDB データベースに接続するときに使用できません。  
   
  LocalDB は [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065)からダウンロードできます。 Sqlcmd.exe を使用する LocalDB インスタンスのデータを変更するため、SQL Server 2012、SQL Server 2012 Feature Pack から取得することもできます。 から sqlcmd を必要があります。  
   
@@ -59,5 +59,6 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
 -   .MDF ファイルを指定するには、 `AttachDBFilename` 接続文字列キーワードを使用する。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192863"
 ---
 # <a name="interceptors-wcf-data-services"></a>インターセプター (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] アプリケーションの操作にカスタム ロジックを追加できるように、要求メッセージを途中受信を有効にします。 このカスタム ロジックを使用して、受信メッセージ内のデータを検証することができます。 このカスタム ロジックを使用して、クエリ要求の範囲をさらに制限することもできます (カスタム認証ポリシーを要求ごとに挿入するなど)。  
@@ -49,4 +49,5 @@ ms.locfileid: "54626759"
  詳細については、「[方法 :データ サービス メッセージを途中受信](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

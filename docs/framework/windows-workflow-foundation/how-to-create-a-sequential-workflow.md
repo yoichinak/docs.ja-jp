@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189301"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>方法: シーケンシャル ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.Sequence>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  
@@ -64,7 +64,7 @@ ms.locfileid: "58463801"
   
 ## <a name="to-add-the-workflow-activities"></a>ワークフロー アクティビティを追加するには  
   
-1.  ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティ。 型`Target`に、**に**ボックスし、次の式を**C# 式を入力します**または**VB の式を入力します。** ボックス。  
+1.  ドラッグ、**割り当てる**からのアクティビティ、**プリミティブ**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティ。 型`Target`に、**に**ボックスし、次の式を**c# 式を入力します**または**VB の式を入力します。** ボックス。  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -111,7 +111,7 @@ ms.locfileid: "58463801"
     > [!NOTE]
     >  ドロップすると、**割り当てる**アクティビティをワークフロー デザイナーが自動的に追加する方法を確認、**シーケンス**両方を含むアクティビティ、**プロンプト**アクティビティと新しく追加されました。**割り当てる**アクティビティ。  
   
-7.  型`Turns`に、**に**ボックスと`Turns + 1`に、 **C# 式を入力します**または**VB の式を入力します。** ボックス。  
+7.  型`Turns`に、**に**ボックスと`Turns + 1`に、 **c# 式を入力します**または**VB の式を入力します。** ボックス。  
   
 8.  ドラッグ、**場合**からのアクティビティ、**制御フロー**のセクション、**ツールボックス**にドロップし、**シーケンス**アクティビティの後になるように、新しく追加された**割り当てる**アクティビティ。  
   
@@ -158,10 +158,11 @@ ms.locfileid: "58463801"
      ワークフローを実行する方法について、次のトピックをご覧ください[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。 既に完了している場合、[方法。ワークフローを実行する](how-to-run-a-workflow.md)さまざまなスタイルのワークフローにステップ イン、シーケンシャル ワークフローこの手順を使用してを実行してに進んで、 [、アプリケーションをビルドして実行](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)のセクション[方法。ワークフローを実行する](how-to-run-a-workflow.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミング](programming.md)
+- [Windows Workflow Foundation プログラミングの新機能](programming.md)
 - [ワークフローの設計](designing-workflows.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
-- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)
+- [方法: アクティビティを作成する](how-to-create-an-activity.md)
+- [方法: ワークフローを実行する](how-to-run-a-workflow.md)

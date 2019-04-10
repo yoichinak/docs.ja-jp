@@ -2,12 +2,12 @@
 title: THEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: ea4e84ec1c09b0f315694f74f4dc9504672c3896
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d5f9f2b8c9d7397cbcd91fa52a95544fc66e4dce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184595"
 ---
 # <a name="then-entity-sql"></a>THEN (Entity SQL)
 WHEN 句が `true`として評価された場合の結果です。  
@@ -28,7 +28,7 @@ WHEN when_expression THEN then_expression
 ## <a name="remarks"></a>Remarks  
  `when_expression` が `true`として評価された場合、対応する `then-expression`が評価されます。 WHEN の条件が満たされなかった場合は、 `else-expression` が評価されます。 ただし、 `else-expression`が存在しない場合、結果は NULL になります。  
   
- 例については、[ケース](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)を参照してください。  
+ 例については、次を参照してください。[ケース](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、CASE 式を使用して、一連の `Boolean` 式を評価します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -40,5 +40,6 @@ WHEN when_expression THEN then_expression
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

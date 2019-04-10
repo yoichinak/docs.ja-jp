@@ -2,12 +2,12 @@
 title: トークン認証システム
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 027f6c55cb0390084f1a7926a5c79d8591090df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193409"
 ---
 # <a name="token-authenticator"></a>トークン認証システム
 このサンプルでは、カスタム トークンの認証システムを実装する方法を示します。 トークン認証システムの Windows Communication Foundation (WCF) では、自己矛盾があるし、id の認証トークンに関連付けられていることを確認するメッセージで使用されるトークンを検証するために使用されます。
@@ -366,4 +366,3 @@ static void DisplayIdentityInformation()
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
-  

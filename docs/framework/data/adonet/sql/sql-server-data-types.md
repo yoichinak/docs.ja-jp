@@ -2,12 +2,12 @@
 title: SQL Server データ型と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 14a3c8b2f520efce96667b2028405ca36ed17a28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 90589f54728ad5e887b96f37f96ff31928c680ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168416"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server データ型と ADO.NET
 SQL Server と .NET Framework は異なる型システムに基づいているので、両者間でデータ損失が発生する可能性があります。 データの整合性を維持するために、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) では、SQL Server データを処理するための型指定されたアクセサー メソッドが提供されています。 <xref:System.Data.SqlDbType> クラスの列挙値を使用して、<xref:System.Data.SqlClient.SqlParameter> データ型を指定できます。  
@@ -55,6 +55,7 @@ SQL Server と .NET Framework は異なる型システムに基づいている�
  `DbType` 列挙型およびそのすべてのメンバーについて説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [テーブル値パラメーター](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)

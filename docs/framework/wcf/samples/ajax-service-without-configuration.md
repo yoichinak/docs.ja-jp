@@ -2,17 +2,17 @@
 title: 構成を使用しない AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 2ea5c61ea3f0f8adcce6dc14be11a8b098c7ca0f
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 0a8c75136af728c2110affe224fe8bf6c47fc1eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191784"
 ---
 # <a name="ajax-service-without-configuration"></a>構成を使用しない AJAX サービス
 このサンプルは、Windows Communication Foundation (WCF) を使用して、任意の構成を使用せずに基本的な ASP.NET Asynchronous JavaScript and XML (AJAX) サービス (Web ブラウザー クライアントから JavaScript コードを使用してアクセスできるサービス) を作成する方法を示します。設定。 このサービスは .svc ファイルの特殊な構文を使用して AJAX エンドポイントを自動的に有効にします。  
   
- WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、`ScriptManager`コントロール。 WCF を使用して ASP.NET AJAX での例は、、 [Ajax のサンプル](ajax.md)を参照してください。  
+ WCF での AJAX のサポートがを介して ASP.NET AJAX と共に使用するために最適化された、`ScriptManager`コントロール。 WCF を使用して ASP.NET AJAX での例は、次を参照してください。、 [Ajax のサンプル](ajax.md)します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -28,7 +28,7 @@ ms.locfileid: "56332924"
 %>  
 ```
 
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> は、<xref:System.ServiceModel.Description.WebScriptEndpoint> をサービスに自動的に追加します。 エンドポイントに対する構成変更が不要な場合、`<system.ServiceModel>` セクションはサービスの Web.config ファイルから完全に削除できます。 Web.config ファイルには、ConfigFreeClientPage.aspx で使用される ASP.NET 設定がいくつか含まれます。 そうでない場合は、Web.config ファイル全体を削除できます。  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 自動的に追加されます、<xref:System.ServiceModel.Description.WebScriptEndpoint>サービスにします。 エンドポイントに対する構成変更が不要な場合、`<system.ServiceModel>` セクションはサービスの Web.config ファイルから完全に削除できます。 Web.config ファイルには、ConfigFreeClientPage.aspx で使用される ASP.NET 設定がいくつか含まれます。 そうでない場合は、Web.config ファイル全体を削除できます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -51,4 +51,5 @@ ms.locfileid: "56332924"
 >  このサンプルを実行する場合、IIS の ServiceModelSamples フォルダーで匿名認証と Windows 認証が同時に有効になっていないことを確認してください。 有効になっている場合は、Windows 認証を無効にしてください。 サンプルの実行が終了したら、Windows 認証を有効にし、"iisreset" を実行します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的な AJAX サービス](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

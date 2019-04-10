@@ -2,15 +2,15 @@
 title: セキュリティ検証
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202873"
 ---
 # <a name="security-validation"></a>セキュリティ検証
-このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインド要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
+このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインディング要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -107,4 +107,5 @@ public void Validate(ServiceDescription serviceDescription,
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: b997703fced354024fc075dc21df70cfed26d29c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c8fad81e65e5e5e070b011ece1cbbdefa40f4a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193981"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>UI オートメーションによる CheckBox コントロール型のサポート
 > [!NOTE]
@@ -62,7 +62,7 @@ ms.locfileid: "57676006"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのチェック ボックス コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
@@ -76,6 +76,7 @@ ms.locfileid: "57676006"
  チェック ボックスの既定の動作では、ラジオ ボタンにフォーカスが設定されて、その現在の状態を切り替えます。 前述のように、チェック ボックスでは、2 項 (はい/いいえ)、(オン/オフ) または 3 項 (オン/オフ、不定) のいずれかの決定項目をユーザーに提示します。 チェック ボックスが 2 項の場合、既定の動作では、「オン」の状態が「オフ」になり、「オフ」の状態が「オン」になります。 3 項のチェック ボックスで、既定の動作では、ユーザーがコントロールに連続するマウス クリックを送信した場合と同じ順序で、チェック ボックスの状態を切り替えます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.CheckBox>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

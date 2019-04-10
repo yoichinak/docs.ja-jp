@@ -7,18 +7,18 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199324"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF と Direct3D9 の相互運用性
 Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツを含めることができます。 このトピックでは、WPF で効率的に相互運用するための Direct3D9 コンテンツを作成する方法について説明します。  
   
 > [!NOTE]
->  WPF での Direct3D9 コンテンツを使用する場合は、パフォーマンスを考慮する必要があります。 パフォーマンスを最適化する方法の詳細については、[Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)を参照してください。  
+>  WPF での Direct3D9 コンテンツを使用する場合は、パフォーマンスを考慮する必要があります。 パフォーマンスを最適化する方法の詳細については、次を参照してください。 [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)します。  
   
 ## <a name="display-buffers"></a>バッファーを表示します。  
  <xref:System.Windows.Interop.D3DImage>クラスは、2 つ表示バッファーと呼ばれる、管理、*バック バッファー*と*フロント バッファー*します。 バック バッファーでは、Direct3D9 サーフェイスです。 バック バッファーへの変更にコピーされますフォワード フロント バッファーを呼び出すとき、<xref:System.Windows.Interop.D3DImage.Unlock%2A>メソッド。  
@@ -70,7 +70,7 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>サーフェスを作成します。  
- サーフェスを作成する前に、デバイスの機能が対象のオペレーティング システムで良好なパフォーマンスをサポートすることを確認します。 詳細については、[Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)を参照してください。  
+ サーフェスを作成する前に、デバイスの機能が対象のオペレーティング システムで良好なパフォーマンスをサポートすることを確認します。 詳細については、次を参照してください。 [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)します。  
   
  デバイスの機能を確認したら、画面を作成できます。 次のコード例では、レンダー ターゲットを作成する方法を示します。  
   
@@ -148,7 +148,8 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
 >  ソフトウェアでは、WPF が完全にレンダリングしている場合<xref:System.Windows.Interop.D3DImage>WPF にフロント バッファーがあるないためには表示されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
 - [チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [チュートリアル: WPF での Direct3D9 コンテンツをホストしています。](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [チュートリアル: WPF での Direct3D9 コンテンツのホスト](walkthrough-hosting-direct3d9-content-in-wpf.md)

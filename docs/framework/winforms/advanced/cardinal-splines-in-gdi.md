@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200416"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ でのカーディナル スプライン
 カーディナル スプラインは、大きな曲線を形成に参加している個々 の曲線のシーケンスです。 スプラインは、ポイントおよびテンション パラメーターの配列を指定します。 カーディナル スプラインは、配列内の各ポイントをスムーズに通過します。曲線のテンションの急激な変化やがあります。 次の図は、一連のポイントと、セット内の各ポイントを通過するカーディナル スプラインを示します。  
@@ -36,5 +36,6 @@ ms.locfileid: "57705286"
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
 - [曲線の作成と描画](constructing-and-drawing-curves.md)

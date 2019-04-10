@@ -2,12 +2,12 @@
 title: メンバーシップとロール プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 195940bea9c0fc8b26b6b49eadc1927ff156c514
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176944"
 ---
 # <a name="membership-and-role-provider"></a>メンバーシップとロール プロバイダー
 メンバーシップとロール プロバイダーのサンプルでは、サービスが [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] メンバーシップとロール プロバイダーを使用してクライアントを認証および承認するための方法を示します。  
@@ -118,7 +118,7 @@ ms.locfileid: "58839757"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  ソリューションの C# または Visual Basic .NET 版をビルドする手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+1.  ソリューションの c# または Visual Basic .NET 版をビルドする手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 2.  構成したことを確認、 [ASP.NET アプリケーション サービス データベース](https://go.microsoft.com/fwlink/?LinkId=94997)します。  
   
@@ -197,4 +197,3 @@ ms.locfileid: "58839757"
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
-  

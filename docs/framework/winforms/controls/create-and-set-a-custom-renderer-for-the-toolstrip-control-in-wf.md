@@ -1,5 +1,5 @@
 ---
-title: '方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定'
+title: '方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d8a85edf8c001b19191fdfd74d1f9ebdf87024ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195489"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する
 <xref:System.Windows.Forms.ToolStrip> コントロールは、テーマとスタイルを簡単にサポートを提供します。 いずれかを設定して完全にカスタムの外観と動作 (ルック アンド フィール) を実現できる、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>プロパティまたは<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>プロパティ、カスタム レンダラーをします。  
   
  レンダラーを各ユーザーに割り当てることができます<xref:System.Windows.Forms.ToolStrip>、 <xref:System.Windows.Forms.MenuStrip>、 <xref:System.Windows.Forms.ContextMenuStrip>、または<xref:System.Windows.Forms.StatusStrip>コントロール、またはを使用できる、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>プロパティを設定してすべてのオブジェクトに影響を与える、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>プロパティを<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>します。  
@@ -82,6 +82,7 @@ ms.locfileid: "57721009"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>

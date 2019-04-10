@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171575"
 ---
 # <a name="how-to-localize-an-application"></a>方法: アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
@@ -149,7 +149,7 @@ ms.locfileid: "57374116"
   
    次の表は、.csv ファイルの区切り記号付きの値にこれらのフィールドをマップする方法を示しています。  
   
-   |BAML 名|リソース キー|Category|読みやすさ|変更可能性|コメント|[値]|  
+   |BAML 名|リソース キー|カテゴリ|読みやすさ|変更可能性|コメント|[値]|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|true|true||Hello World|
@@ -210,5 +210,6 @@ ms.locfileid: "57374116"
  これで、LocBaml ツールの使用方法に関する基本的な知識が得られました。  UID を含むファイルを作成できるようになりました。 LocBaml ツールを使用することで、ローカライズ可能なコンテンツを抽出するファイルを解析できます。コンテンツを翻訳すると、翻訳済みのコンテンツをマージする .resources.dll ファイルを生成できます。 このトピックには、可能性のあるすべての詳細情報は含まれていませんが、LocBaml を使用してアプリケーションをローカライズするために必要な知識は得られました。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のグローバリゼーション](globalization-for-wpf.md)
 - [自動レイアウトの使用の概要](use-automatic-layout-overview.md)

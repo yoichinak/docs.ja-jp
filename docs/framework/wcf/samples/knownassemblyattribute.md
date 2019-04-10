@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: e02aa10f585cd4ad61e6a07d48a0c7e66e4c7523
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196867"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  
@@ -370,4 +370,3 @@ Lists combined:
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
-  

@@ -1,5 +1,5 @@
 ---
-title: '方法: 標準の Windows フォーム印刷ジョブを作成します。'
+title: '方法: 標準の Windows フォーム印刷ジョブを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170977"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>方法: 標準の Windows フォーム印刷ジョブを作成します。
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>方法: 標準の Windows フォーム印刷ジョブを作成する
 Windows フォームにおける印刷の基盤は、<xref:System.Drawing.Printing.PrintDocument>コンポーネント、具体的には、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント。 処理するコードを記述することで、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント、印刷と印刷方法を指定できます。  
   
 ### <a name="to-create-a-print-job"></a>印刷ジョブを作成するには  
@@ -77,5 +77,6 @@ Windows フォームにおける印刷の基盤は、<xref:System.Drawing.Printi
      Windows フォームの詳細詳細については、プログラムで印刷ジョブを作成する方法など、印刷ジョブを参照してください<xref:System.Drawing.Printing.PrintPageEventArgs>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

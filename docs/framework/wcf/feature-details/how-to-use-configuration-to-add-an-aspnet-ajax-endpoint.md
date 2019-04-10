@@ -1,15 +1,15 @@
 ---
-title: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには'
+title: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 188e88d40536b1d31c72f404957ef2de4ff87b1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26a7b0d3fef67cf9dae0913e22e3cd7ec443c111
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202977"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する
 Windows Communication Foundation (WCF) をクライアントの Web サイトの JavaScript から呼び出すことが使用可能な ASP.NET AJAX 対応エンドポイントを利用するサービスを作成することができます。 このようなエンドポイントを作成するには、他のすべての Windows Communication Foundation (WCF) エンドポイントと同様に、構成ファイルを使用するか、構成要素を必要としないメソッドを使用します。 ここでは、構成を使用する方法について説明します。  
   
  使用するエンドポイントの構成で構成されますが、ASP.NET AJAX 対応のサービス エンドポイントを有効にする手順の一部、<xref:System.ServiceModel.WebHttpBinding>を追加して、 [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md)エンドポイントの動作。 エンドポイントを構成した後を実装し、サービスをホストする手順は、すべての WCF サービスで使用されるものに似ています。 実際の例を参照してください、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)します。  
@@ -102,8 +102,9 @@ Windows Communication Foundation (WCF) をクライアントの Web サイトの
   
 ### <a name="to-call-the-service"></a>サービスを呼び出すには  
   
-1.  サービスが利用できるようになりましたしに対してに要求を送信することによって呼び出すことができます、.svc ファイルに相対する空のアドレスにエンドポイントが構成されている\<操作 > - たとえば、service.svc/Add の`Add`操作。 これは、ASP.NET AJAX Script Manager コントロールのスクリプト コレクションにエンドポイント URL を入力することで使用できます。 例については、、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)を参照してください。  
+1.  サービスが利用できるようになりましたしに対してに要求を送信することによって呼び出すことができます、.svc ファイルに相対する空のアドレスにエンドポイントが構成されている\<操作 > - たとえば、service.svc/Add の`Add`操作。 これは、ASP.NET AJAX Script Manager コントロールのスクリプト コレクションにエンドポイント URL を入力することで使用できます。 例については、次を参照してください。、 [AJAX サービスを使用して HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ASP.NET AJAX 用の WCF サービスの作成](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [方法: AJAX 対応 ASP.NET Web サービスを WCF に移行します。](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

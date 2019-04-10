@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3254b449c06ad54bca438905ec1c413338f87e69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205863"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName インターフェイス
 厳密な名前を持つアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべて`ICLRStrongName`メソッドは、標準の COM Hresult を返します。  
@@ -66,8 +66,9 @@ ms.locfileid: "54737008"
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)

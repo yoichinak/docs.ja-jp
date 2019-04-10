@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171523"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのセルのスタイル
 内の各セル、<xref:System.Windows.Forms.DataGridView>コントロールがテキスト形式、背景色、前景色、およびフォントなどの独自のスタイルを持つことができます。 通常、ただし、複数のセルが共有の特定のスタイル特性。  
@@ -21,17 +21,17 @@ ms.locfileid: "57712282"
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle クラス  
  <xref:System.Windows.Forms.DataGridViewCellStyle>クラスには、次の visual スタイルに関連するプロパティが含まれています。  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> と、呼び出し <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> と、呼び出し <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  このクラスには、書式設定に関連する次のプロパティも含まれています。  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> と、呼び出し <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> と、呼び出し <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
@@ -39,7 +39,7 @@ ms.locfileid: "57712282"
   
 -   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
- これらのプロパティとその他のセル スタイル プロパティの詳細については、、<xref:System.Windows.Forms.DataGridViewCellStyle>リファレンス ドキュメントとトピックでは、「参照」セクションに表示を参照してください。  
+ これらのプロパティとその他のセル スタイル プロパティの詳細については、次を参照してください。、<xref:System.Windows.Forms.DataGridViewCellStyle>リファレンス ドキュメントとトピックでは、「参照」セクションに表示します。  
   
 ## <a name="using-datagridviewcellstyle-objects"></a>DataGridViewCellStyle オブジェクトを使用します。  
  取得することができます<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクトのさまざまなプロパティから、 <xref:System.Windows.Forms.DataGridView>、 <xref:System.Windows.Forms.DataGridViewColumn>、 <xref:System.Windows.Forms.DataGridViewRow>、および<xref:System.Windows.Forms.DataGridViewCell>クラスとその派生クラス。 これらのプロパティのいずれかがまだ設定されていない場合、その値を取得する方が、新規に作成されます<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクト。 インスタンス化できる独自<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクトし、これらのプロパティに割り当てます。  
@@ -62,7 +62,7 @@ ms.locfileid: "57712282"
   
  各スタイル プロパティが、対応する*PropertyName* `Changed`上のイベント、<xref:System.Windows.Forms.DataGridView>コントロール。 行、列、およびセルのプロパティ、イベントの名前の先頭に"`Row`「,」`Column`"、または"`Cell`"(たとえば、 <xref:System.Windows.Forms.DataGridView.RowDefaultCellStyleChanged>)。 これらの各イベントは別に、対応するスタイル プロパティが設定されている場合に発生します。<xref:System.Windows.Forms.DataGridViewCellStyle>オブジェクト。 取得するときに、これらのイベントが発生しない、<xref:System.Windows.Forms.DataGridViewCellStyle>スタイル プロパティからオブジェクトし、そのプロパティ値を変更します。 セルのスタイル オブジェクト自体への変更に応答して、処理、<xref:System.Windows.Forms.DataGridView.CellStyleContentChanged>イベント。  
   
-## <a name="style-inheritance"></a>スタイル継承  
+## <a name="style-inheritance"></a>スタイルの継承  
  各<xref:System.Windows.Forms.DataGridViewCell>からその外観を取得します。 その<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>プロパティ。 <xref:System.Windows.Forms.DataGridViewCellStyle>型のプロパティの階層からこのプロパティによって返されるオブジェクトがその値を継承<xref:System.Windows.Forms.DataGridViewCellStyle>します。 これらのプロパティがする順序で以下、<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>非ヘッダー セルの値を取得します。  
   
 1.  <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>  
@@ -85,7 +85,7 @@ ms.locfileid: "57712282"
   
 3.  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
- 次の図は、このプロセスを示しています。  
+ このプロセスを説明する図を次に示します。  
   
  ![DataGridViewCellStyle 型のプロパティ](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 継承ダイアグラム")  
   
@@ -145,6 +145,7 @@ ms.locfileid: "57712282"
 >  格納されたセルの値をキャッシュ<xref:System.Windows.Forms.DataGridViewCell.Style%2A>プロパティが特定のスタイル値が設定されているかに関係なく重要です。 スタイル設定を一時的に交換する場合は、セルがより高いレベルからスタイル設定の継承に戻すに移動により元の「設定なし」状態に復元すること。 有効なスタイルを継承するかどうかに関係なく、セルの実際のスタイルを決定する必要がある場合は、セルを使用して<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>プロパティ。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
@@ -163,5 +164,5 @@ ms.locfileid: "57712282"
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
 - [Windows フォームの DataGridView コントロールの基本的な書式設定およびスタイル設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールの既定のセル スタイルを設定します。](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールの既定のセル スタイルを設定する](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでのデータの書式設定](data-formatting-in-the-windows-forms-datagridview-control.md)

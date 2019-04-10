@@ -2,12 +2,12 @@
 title: '方法: Windows Server AppFabric を使用してワークフロー サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 96842f103618b9c83f74c8ad0b758f7a425d8939
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: d762863b70191662f4eb145388a48484c944e1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202262"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>方法: Windows Server AppFabric を使用してワークフロー サービスをホストする
 AppFabric でのワークフロー サービスのホスティングは IIS/WAS でのホスティングに似ています。 唯一の違いは、ワークフロー サービスの投入、監視、および管理のために AppFabric に用意されているツールです。 このトピックで作成したワークフロー サービスを使用して、[実行時間の長いワークフロー サービスを作成する](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)します。 ワークフロー サービスの作成方法はそちらのトピックで説明されています。 このトピックでは、AppFabric を使用したワークフロー サービスのホスティング方法を説明します。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server Appfabric のドキュメント](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)します。 下の手順を完了する前に、Windows Server AppFabric がインストールされていることを確認してください。  インターネット インフォメーション サービス (inetmgr.exe) を開いてでサーバー名をクリックします。、**接続**表示、サイト、 をクリックおよびクリック**既定の Web サイト**します。 画面の右側にあるという名前のセクションを参照する必要があります**App Fabric**します。 (右側のペインの一番上に表示される) このセクションが表示されない場合は、AppFabric がインストールされていません。 Windows Server Appfabric のインストールの詳細については、次を参照してください。[インストールの Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)します。  
@@ -91,6 +91,7 @@ AppFabric でのワークフロー サービスのホスティングは IIS/WAS 
      Windows Server App Fabric の詳細については機能とその使用方法を参照してください[Windows Server Appfabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>関連項目
+
 - [長時間のワークフロー サービスの作成](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Windows Server App Fabric をインストールします。](https://go.microsoft.com/fwlink/?LinkId=193136)

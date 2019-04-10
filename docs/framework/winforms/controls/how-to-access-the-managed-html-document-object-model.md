@@ -1,5 +1,5 @@
 ---
-title: '方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。'
+title: '方法: マネージド HTML DOM (Document Object Model) にアクセスする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205018"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。
+# <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) にアクセスする
 マネージド HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
   
 -   マネージド <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
@@ -46,4 +46,5 @@ ms.locfileid: "57715946"
 1.  アプリケーションまたは <xref:System.Windows.Forms.UserControl> がマネージド HTML DOM にアクセスするには、完全信頼が必要です。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用して Windows フォーラム アプリケーションを配置するときは、"アクセス許可の昇格" または "信頼されたアプリケーションの配置" を使用して完全信頼を要求できます。詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [マネージド HTML DOM (Document Object Model) の使用](using-the-managed-html-document-object-model.md)

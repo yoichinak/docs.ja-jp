@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e264a63dcea9c351289d1f63e1907f7c68779011
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e600f29a9036bb28031bd7854bc8cbb34c4566a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200650"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock メソッド
 コード ベースのセクションのブロックを取得します。  
@@ -63,7 +63,8 @@ HRESULT GetSectionBlock (
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

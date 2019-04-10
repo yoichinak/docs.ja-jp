@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。'
+title: '方法: Windows フォーム ProgressBar コントロールによって表示される値を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,17 +8,16 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: a889d6e5cd40833353c1b294031621b7b289ac4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196880"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>方法: Windows フォーム ProgressBar コントロールによって表示される値を設定する
 > [!IMPORTANT]
->  
-  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]内で指定された値を表示するいくつかの方法を提供する、<xref:System.Windows.Forms.ProgressBar>コントロール。 どのアプローチを選択するは、手元のタスクまたは当面の問題によって異なります。 選択することができます、方法を次の表に示します。  
   
@@ -226,6 +225,7 @@ ms.locfileid: "57715894"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
 - [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)
