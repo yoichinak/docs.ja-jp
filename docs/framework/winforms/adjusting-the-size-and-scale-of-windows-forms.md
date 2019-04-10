@@ -1,5 +1,5 @@
 ---
-title: サイズと Windows フォームのスケールを調整します。
+title: Windows フォームのサイズとスケールを調整する
 ms.date: 04/07/2017
 helpviewer_keywords:
 - Windows Forms, changing size
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57717311"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>サイズと Windows フォームのスケールを調整します。
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Windows フォームのサイズとスケールを調整する
 このトピックは、Windows フォームのサイズ変更に関する情報へのリンクを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
