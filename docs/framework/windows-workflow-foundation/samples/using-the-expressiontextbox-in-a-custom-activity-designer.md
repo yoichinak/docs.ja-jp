@@ -2,12 +2,12 @@
 title: カスタム アクティビティ デザイナーでの ExpressionTextBox の使用
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344976"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>カスタム アクティビティ デザイナーでの ExpressionTextBox の使用
 このサンプルでは、カスタム アクティビティ デザイナーで <xref:System.Activities.Presentation.View.ExpressionTextBox> を使用する方法を示します。 カスタム アクティビティ `MultiAssign` は、2 つの文字列値を 2 つの文字列変数に割り当てます。 <xref:System.Activities.Presentation.View.ExpressionTextBox> コントロールには、<xref:System.Activities.InArgument> にバインドされるものと <xref:System.Activities.OutArgument> にバインドされるものがあります。
@@ -23,19 +23,19 @@ ms.locfileid: "59229382"
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、ExpressionTextBoxSample.sln ファイルを開きます。
+1. Visual Studio 2010 を使用して、ExpressionTextBoxSample.sln ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
 #### <a name="to-run-this-sample"></a>このサンプルを実行するには
 
-1.  新しいワークフロー コンソール アプリケーションをソリューションに追加します。
+1. 新しいワークフロー コンソール アプリケーションをソリューションに追加します。
 
-2.  参照を追加、 **ExpressionTextBoxSample**新しいワークフロー コンソール アプリケーション プロジェクトからプロジェクト。
+2. 参照を追加、 **ExpressionTextBoxSample**新しいワークフロー コンソール アプリケーション プロジェクトからプロジェクト。
 
-3.  ソリューションをビルドします。
+3. ソリューションをビルドします。
 
-4.  ドラッグ、 **MultiAssign**アクティビティをツールボックスからワークフローにドロップします。
+4. ドラッグ、 **MultiAssign**アクティビティをツールボックスからワークフローにドロップします。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

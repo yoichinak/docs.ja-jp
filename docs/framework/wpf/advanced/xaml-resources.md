@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230019"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344924"
 ---
 # <a name="xaml-resources"></a>XAML リソース
 リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 リソースの例には、ブラシ、スタイルが含まれます。 この概要でのリソースを使用する方法を説明します[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 作成し、コードを使用して、またはコードの間で同じ意味でリソースにアクセスすることができますもと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 詳細については、次を参照してください。[リソースとコード](resources-and-code.md)します。  
@@ -69,11 +69,11 @@ ms.locfileid: "59230019"
   
 #### <a name="static-resource-lookup-behavior"></a>静的リソース参照動作  
   
-1.  プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
+1. プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
   
-2.  参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
+2. 参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
   
-3.  次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+3. 次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
  リソース ディクショナリ内の静的リソース参照では、既に定義されている構文的リソース参照の前にリソースを参照する必要があります。 静的リソース参照では、前方参照を解決できません。 このため、静的リソース参照を使用する場合する必要があります構造を設計する、リソース ディクショナリで、または各リソース ディクショナリの先頭付近に、リソースで使用するためのリソースが定義されているようにします。  
   
@@ -101,19 +101,19 @@ ms.locfileid: "59230019"
 #### <a name="dynamic-resource-lookup-behavior"></a>動的リソース参照動作  
  呼び出す場合、動的リソース参照のリソースの検索の動作は、コード内の検索の動作に対応して<xref:System.Windows.FrameworkElement.FindResource%2A>または<xref:System.Windows.FrameworkElement.SetResourceReference%2A>します。  
   
-1.  プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
+1. プロパティを設定する要素によって定義されたリソース ディクショナリ内で要求されたキーの参照プロセスを確認します。  
   
     -   要素が定義されている場合、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ、<xref:System.Windows.Style.Resources%2A>ディクショナリ内で、<xref:System.Windows.Style>がチェックされます。  
   
     -   要素が定義されている場合、<xref:System.Windows.Controls.Control.Template%2A>プロパティ、<xref:System.Windows.FrameworkTemplate.Resources%2A>ディクショナリ内で、<xref:System.Windows.FrameworkTemplate>がチェックされます。  
   
-2.  参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
+2. 参照プロセスは、親要素とそのリソース ディクショナリにし、論理ツリーを上を走査します。 これは、ルート要素に達するまで続きます。  
   
-3.  次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+3. 次に、アプリケーションのリソースがチェックされます。 アプリケーション リソースで定義されているリソース ディクショナリ内では、<xref:System.Windows.Application>オブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
-4.  現在アクティブなテーマのテーマのリソース ディクショナリがチェックされます。 実行時にテーマが変更された場合、値が再評価されます。  
+4. 現在アクティブなテーマのテーマのリソース ディクショナリがチェックされます。 実行時にテーマが変更された場合、値が再評価されます。  
   
-5.  システム リソースがチェックされます。  
+5. システム リソースがチェックされます。  
   
  (あれば) 例外の動作が異なります。  
   

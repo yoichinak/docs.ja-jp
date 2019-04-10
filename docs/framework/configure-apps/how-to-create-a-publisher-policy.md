@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344664"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
   
  パブリッシャー ポリシーを作成するのには、3 つの手順があります。  
   
-1.  発行者ポリシー ファイルを作成します。  
+1. 発行者ポリシー ファイルを作成します。  
   
-2.  発行者ポリシー アセンブリを作成します。  
+2. 発行者ポリシー アセンブリを作成します。  
   
-3.  発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加します。  
+3. 発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加します。  
   
  パブリッシャー ポリシー用のスキーマについては、「[アセンブリ バージョンのリダイレクト](../../../docs/framework/configure-apps/redirect-assembly-versions.md)します。 次の例は、パブリッシャー ポリシー ファイルの 1 つのバージョンをリダイレクトする`myAssembly`間。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59227393"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>発行者ポリシー アセンブリを作成するには  
   
-1.  コマンド プロンプトで次のコマンドを入力します。  
+1. コマンド プロンプトで次のコマンドを入力します。  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59227393"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>発行者ポリシー アセンブリをグローバル アセンブリ キャッシュに追加するには  
   
-1.  コマンド プロンプトで次のコマンドを入力します。  
+1. コマンド プロンプトで次のコマンドを入力します。  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

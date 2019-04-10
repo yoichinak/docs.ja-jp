@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344178"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>方法: データベースの行を更新する
 関連付けられているオブジェクトのメンバーの値を変更して、データベース内の行を更新することができます、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>コレクションとし、データベースへの変更を送信します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 適切な SQL に変更を変換`UPDATE`コマンド。  
@@ -24,11 +24,11 @@ ms.locfileid: "59091201"
   
 ### <a name="to-update-a-row-in-the-database"></a>データベースの行を更新するには  
   
-1.  データベースで更新する行をクエリします。  
+1. データベースで更新する行をクエリします。  
   
-2.  結果として得られた [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクトのメンバー値に、必要な変更を加えます。  
+2. 結果として得られた [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクトのメンバー値に、必要な変更を加えます。  
   
-3.  データベースに変更内容を送信します。  
+3. データベースに変更内容を送信します。  
   
 ## <a name="example"></a>例  
  次の例では、データベースの注文 #11000 をクエリし、結果として得られた `ShipName` オブジェクトの `ShipVia` と `Order` の値を変更します。 次に、これらのメンバー値の変更内容を、`ShipName` 列と `ShipVia` 列に対する変更としてデータベースに送信します。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344105"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する
 Windows フォーム上ではわかりやすい形式でデータを表示し、一方プログラムにはより意味のある形式でデータを格納すると便利な場合があります。 たとえば、食品の注文書の場合、リスト ボックスにメニュー項目が名前で表示されます。 一方、注文を記録するデータ テーブルには、食品を表す一意の ID 番号が含まれることになります。 次の表は、食品の注文書データを格納および表示する方法の例を示しています。  
@@ -46,13 +46,13 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
   
 ### <a name="to-create-a-lookup-table"></a>ルックアップ テーブルを作成するには  
   
-1.  フォームに <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox>、または <xref:System.Windows.Forms.CheckedListBox> コントロールを追加します。  
+1. フォームに <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox>、または <xref:System.Windows.Forms.CheckedListBox> コントロールを追加します。  
   
-2.  データ ソースに接続します。  
+2. データ ソースに接続します。  
   
-3.  2 つのテーブル間のデータ リレーションシップを確立します。 参照してください[DataRelation オブジェクトの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))します。  
+3. 2 つのテーブル間のデータ リレーションシップを確立します。 参照してください[DataRelation オブジェクトの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))します。  
   
-4.  次のプロパティを設定します。 これらはコードまたはデザイナーで設定できます。  
+4. 次のプロパティを設定します。 これらはコードまたはデザイナーで設定できます。  
   
     |プロパティ|設定|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|コントロールに表示するデータ ソース テーブルの列。 これは、前のシナリオで`"Name"`(コードで設定するには引用符を使用)。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|格納された情報を含むデータ ソース テーブルの列。 これは、前のシナリオで`"ID"`(コードで設定するには引用符を使用)。|  
   
-5.  プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection> クラスの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 行うこともできますこのコードでは、代わりに、デザイナーでコントロールのアクセスすることによって<xref:System.Windows.Forms.Control.DataBindings%2A>プロパティ、**プロパティ**ウィンドウ。 これは、前のシナリオで`OrderDetailsTable`、列と`"ItemID"`します。  
+5. プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection> クラスの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 行うこともできますこのコードでは、代わりに、デザイナーでコントロールのアクセスすることによって<xref:System.Windows.Forms.Control.DataBindings%2A>プロパティ、**プロパティ**ウィンドウ。 これは、前のシナリオで`OrderDetailsTable`、列と`"ItemID"`します。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

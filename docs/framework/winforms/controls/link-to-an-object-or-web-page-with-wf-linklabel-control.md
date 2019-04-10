@@ -15,12 +15,12 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344014"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする
 Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールをフォーム上で Web スタイルのリンクを作成できます。 リンクがクリックされたときに、リンクにアクセスしたかを示す色を変更できます。 色の変更の詳細については、次を参照してください。[方法。Windows フォーム LinkLabel コントロールの外観を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)します。  
@@ -29,9 +29,9 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
   
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel コントロールで別のフォームにリンクするには  
   
-1.  設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
+1. 設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
   
-2.  設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。 示される方法は、リンク ラベルの外観に関連するプロパティに依存します。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>によって表される値、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 2 つの数値、文字の開始位置および文字の数を含むオブジェクト。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティ ウィンドウで、または、次のような方法でのコードでプロパティを設定することができます。  
+2. 設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。 示される方法は、リンク ラベルの外観に関連するプロパティに依存します。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>によって表される値、 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 2 つの数値、文字の開始位置および文字の数を含むオブジェクト。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティ ウィンドウで、または、次のような方法でのコードでプロパティを設定することができます。  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,7 +54,7 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  <xref:System.Windows.Forms.LinkLabel.LinkClicked>イベント ハンドラーを呼び出す、<xref:System.Windows.Forms.Form.Show%2A>プロジェクトで、別のフォームを開き、設定する方法、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`します。  
+3. <xref:System.Windows.Forms.LinkLabel.LinkClicked>イベント ハンドラーを呼び出す、<xref:System.Windows.Forms.Form.Show%2A>プロジェクトで、別のフォームを開き、設定する方法、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`します。  
   
     > [!NOTE]
     >  インスタンス、<xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>クラスへの参照を実行する、<xref:System.Windows.Forms.LinkLabel>にキャストする必要はありませんが、クリックしてされたコントロール、`sender`オブジェクト。  
@@ -97,11 +97,11 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
   
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>LinkLabel コントロールで Internet Explorer と Web ページへのリンクを開始するには  
   
-1.  設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
+1. 設定、<xref:System.Windows.Forms.LinkLabel.Text%2A>プロパティに適切なキャプション。  
   
-2.  設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。  
+2. 設定、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>プロパティのキャプションのどの部分がリンクとして示されます。  
   
-3.  <xref:System.Windows.Forms.LinkLabel.LinkClicked>例外処理ブロックでは、途中のイベント ハンドラーを設定する 2 番目のプロシージャを呼び出す、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`を使用して、 <xref:System.Diagnostics.Process.Start%2A> URL を使用して、既定のブラウザーを開始する方法。 使用する、<xref:System.Diagnostics.Process.Start%2A>メソッドへの参照を追加する必要がある、<xref:System.Diagnostics?displayProperty=nameWithType>名前空間。  
+3. <xref:System.Windows.Forms.LinkLabel.LinkClicked>例外処理ブロックでは、途中のイベント ハンドラーを設定する 2 番目のプロシージャを呼び出す、<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>プロパティを`true`を使用して、 <xref:System.Diagnostics.Process.Start%2A> URL を使用して、既定のブラウザーを開始する方法。 使用する、<xref:System.Diagnostics.Process.Start%2A>メソッドへの参照を追加する必要がある、<xref:System.Diagnostics?displayProperty=nameWithType>名前空間。  
   
     > [!IMPORTANT]
     >  部分信頼環境で次のコードを実行するかどうか (など、共有ドライブ上)、JIT コンパイラが失敗したときに、`VisitLink`メソッドが呼び出されます。 `System.Diagnostics.Process.Start`ステートメントが失敗した、リンク確認要求があるとします。 例外をキャッチするときに、`VisitLink`メソッドが呼び出されると、次のコードにより、JIT コンパイラに失敗した場合、エラー適切に処理されます。  

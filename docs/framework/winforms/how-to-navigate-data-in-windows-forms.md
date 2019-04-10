@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345002"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>方法: Windows フォームでデータ間を移動する
 Windows アプリケーションでは、データ ソース内のレコードをナビゲートする最も簡単な方法は、バインドする、<xref:System.Windows.Forms.BindingSource>コンポーネントをデータ ソースとし、バインド コントロールを<xref:System.Windows.Forms.BindingSource>します。 組み込みのナビゲーション メソッドを使用することができますし、<xref:System.Windows.Forms.BindingSource>このような<xref:System.Windows.Forms.BindingSource.MoveNext%2A>、 <xref:System.Windows.Forms.BindingSource.MoveLast%2A>、<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>と<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>します。 これらのメソッドを使用して、調整は、<xref:System.Windows.Forms.BindingSource.Position%2A>と<xref:System.Windows.Forms.BindingSource.Current%2A>のプロパティ、<xref:System.Windows.Forms.BindingSource>適切にします。 項目を検索し、設定して、現在の項目として設定できる、<xref:System.Windows.Forms.BindingSource.Position%2A>プロパティ。  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>データ ソース内の位置をインクリメントするには  
   
-1.  設定、<xref:System.Windows.Forms.BindingSource.Position%2A>のプロパティ、<xref:System.Windows.Forms.BindingSource>に進むにはレコードの位置に、バインドされたデータ。 次の例を使用して、<xref:System.Windows.Forms.BindingSource.MoveNext%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>インクリメント、<xref:System.Windows.Forms.BindingSource.Position%2A>プロパティと、`nextButton`がクリックされました。 <xref:System.Windows.Forms.BindingSource>に関連付けられている、`Customers`データセットのテーブル`Northwind`します。  
+1. 設定、<xref:System.Windows.Forms.BindingSource.Position%2A>のプロパティ、<xref:System.Windows.Forms.BindingSource>に進むにはレコードの位置に、バインドされたデータ。 次の例を使用して、<xref:System.Windows.Forms.BindingSource.MoveNext%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>インクリメント、<xref:System.Windows.Forms.BindingSource.Position%2A>プロパティと、`nextButton`がクリックされました。 <xref:System.Windows.Forms.BindingSource>に関連付けられている、`Customers`データセットのテーブル`Northwind`します。  
   
     > [!NOTE]
     >  設定、<xref:System.Windows.Forms.BindingSource.Position%2A>最初または最後のレコードを超える値にプロパティにならないエラーとして、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]位置を一覧の境界外の値に設定することはできません。 最初と最後のレコードを経過したかどうかを知るためにアプリケーションで重要な場合は、データ要素の数を超えますかどうかをテストするロジックが含まれます。  
@@ -33,7 +33,7 @@ Windows アプリケーションでは、データ ソース内のレコード�
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>末尾または先頭が渡されるかどうかを確認するには  
   
-1.  <xref:System.Windows.Forms.BindingSource.PositionChanged> イベントのイベント ハンドラーを作成します。 ハンドラーでは、提案された位置の値が実際のデータ要素の数を超えたかどうかをテストできます。  
+1. <xref:System.Windows.Forms.BindingSource.PositionChanged> イベントのイベント ハンドラーを作成します。 ハンドラーでは、提案された位置の値が実際のデータ要素の数を超えたかどうかをテストできます。  
   
      次の例では、データの最後の要素に到達したかどうかをテストする方法を示します。 最後の要素でない場合は、例では、**次**フォーム上のボタンが無効になっています。  
   
@@ -45,7 +45,7 @@ Windows アプリケーションでは、データ ソース内のレコード�
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>項目を検索し、現在の項目として設定するには  
   
-1.  現在の項目として設定するレコードを検索します。 これを行うを使用して、<xref:System.Windows.Forms.BindingSource.Find%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>場合は、データ ソースの実装、<xref:System.ComponentModel.IBindingList>します。 データの例をいくつかは実装するソース<xref:System.ComponentModel.IBindingList>は<xref:System.ComponentModel.BindingList%601>と<xref:System.Data.DataView>します。  
+1. 現在の項目として設定するレコードを検索します。 これを行うを使用して、<xref:System.Windows.Forms.BindingSource.Find%2A>のメソッド、<xref:System.Windows.Forms.BindingSource>場合は、データ ソースの実装、<xref:System.ComponentModel.IBindingList>します。 データの例をいくつかは実装するソース<xref:System.ComponentModel.IBindingList>は<xref:System.ComponentModel.BindingList%601>と<xref:System.Data.DataView>します。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
