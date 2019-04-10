@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225769"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333315"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>チュートリアル: ステータス バー情報の実行時更新
 > [!IMPORTANT]
@@ -28,29 +28,29 @@ ms.locfileid: "59225769"
   
 ### <a name="to-get-the-status-bar-ready-for-updating"></a>ステータス バーを更新できる状態にするには  
   
-1.  新しい Windows フォームを作成します。  
+1. 新しい Windows フォームを作成します。  
   
-2.  フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
+2. フォームに <xref:System.Windows.Forms.StatusBar> コントロールを追加します。 詳細については、「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)します。  
   
-3.  ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、「[方法: StatusBar コントロールにパネルを追加](how-to-add-panels-to-a-statusbar-control.md)します。  
+3. ステータス バー パネルを追加、<xref:System.Windows.Forms.StatusBar>コントロール。 詳細については、「[方法: StatusBar コントロールにパネルを追加](how-to-add-panels-to-a-statusbar-control.md)します。  
   
-4.  <xref:System.Windows.Forms.StatusBar>をフォームに追加されたコントロールの設定、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`true`します。  
+4. <xref:System.Windows.Forms.StatusBar>をフォームに追加されたコントロールの設定、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`true`します。  
   
-5.  Windows フォームの追加<xref:System.Windows.Forms.Timer>コンポーネントをフォームにします。  
+5. Windows フォームの追加<xref:System.Windows.Forms.Timer>コンポーネントをフォームにします。  
   
     > [!NOTE]
     >  Windows フォーム<xref:System.Windows.Forms.Timer?displayProperty=nameWithType>コンポーネントが Windows フォーム環境向けに設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))」を参照してください。  
   
-6.  <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `true` に設定します。  
+6. <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `true` に設定します。  
   
-7.  設定、<xref:System.Windows.Forms.Timer.Interval%2A>のプロパティ、<xref:System.Windows.Forms.Timer>を 30000 に設定します。  
+7. 設定、<xref:System.Windows.Forms.Timer.Interval%2A>のプロパティ、<xref:System.Windows.Forms.Timer>を 30000 に設定します。  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.Timer.Interval%2A>のプロパティ、<xref:System.Windows.Forms.Timer>部分が表示される時刻に正確な時刻が反映されることを確認に 30 秒 (30,000 ミリ秒) に設定します。  
   
 ### <a name="to-implement-the-timer-to-update-the-status-bar"></a>タイマーを実装してステータス バーを更新するには  
   
-1.  イベント ハンドラーに次のコードを挿入、<xref:System.Windows.Forms.Timer>のパネルを更新するコンポーネント、<xref:System.Windows.Forms.StatusBar>コントロール。  
+1. イベント ハンドラーに次のコードを挿入、<xref:System.Windows.Forms.Timer>のパネルを更新するコンポーネント、<xref:System.Windows.Forms.StatusBar>コントロール。  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -79,7 +79,7 @@ ms.locfileid: "59225769"
   
 ### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  アプリケーションをデバッグし、F5 キーを押してアプリケーションを実行します。 デバッグの詳細については、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
+1. アプリケーションをデバッグし、F5 キーを押してアプリケーションを実行します。 デバッグの詳細については、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
   
     > [!NOTE]
     >  ステータス バーに時計が表示されるまでに約 30 秒かかります。 これは、できるだけ正確な時刻を取得するためです。 逆に表示するにクロックをするためを減らせるの値、<xref:System.Windows.Forms.Timer.Interval%2A>前の手順では、手順 7. で設定するプロパティ。  

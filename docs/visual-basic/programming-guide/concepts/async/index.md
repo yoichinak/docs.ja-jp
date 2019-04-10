@@ -2,12 +2,12 @@
 title: Async および Await を使用した非同期プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324722"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 パフォーマンスのボトルネックを回避しアプリケーション全体の応答性を向上させるために、非同期プログラミングを使用できます。 ただ、非同期アプリケーションを作成する従来の方法は複雑で、プログラムの作成、デバッグ、保守が困難な場合があります。  
@@ -25,7 +25,7 @@ ms.locfileid: "58125526"
 |----------------------|------------------------------------------------|  
 |Web アクセス|<xref:System.Net.Http.HttpClient>, <xref:Windows.Web.Syndication.SyndicationClient>|  
 |ファイルの処理|<xref:Windows.Storage.StorageFile>, <xref:System.IO.StreamWriter>, <xref:System.IO.StreamReader>, <xref:System.Xml.XmlReader>|  
-|イメージの処理|<xref:Windows.Media.Capture.MediaCapture>、 <xref:Windows.Graphics.Imaging.BitmapEncoder>、 <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
+|イメージの処理|<xref:Windows.Media.Capture.MediaCapture>では、 <xref:Windows.Graphics.Imaging.BitmapEncoder>では、 <xref:Windows.Graphics.Imaging.BitmapDecoder>|  
 |WCF プログラミング|[同期操作と非同期操作](../../../../framework/wcf/synchronous-and-asynchronous-operations.md)|  
 |||  
   
@@ -87,9 +87,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   戻り値の型は次のいずれかになります:  
   
-    -   メソッドが、オペランドに TResult 型を持つステートメントを戻す場合、<xref:System.Threading.Tasks.Task%601>。  
+    -   <xref:System.Threading.Tasks.Task%601> 場合は、メソッドには、オペランドが TResult 型を持つ、return ステートメントがあります。  
   
-    -   メソッドがステートメントを戻さない、またはオペランドを持たないステートメントを戻す場合、<xref:System.Threading.Tasks.Task>。  
+    -   <xref:System.Threading.Tasks.Task> 場合は、メソッドは、return ステートメントがないか、オペランドを持たない return ステートメントが。  
   
     -   非同期のイベント ハンドラーを作成する場合、[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)。  
   
@@ -108,30 +108,30 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  図内の数字は、次の手順の番号に対応しています。  
   
-1.  イベント ハンドラーは `AccessTheWebAsync` 非同期のメソッドを呼び出して待機します。  
+1. イベント ハンドラーは `AccessTheWebAsync` 非同期のメソッドを呼び出して待機します。  
   
-2.  `AccessTheWebAsync` は <xref:System.Net.Http.HttpClient> インスタンスを作成し、文字列として Web サイトのコンテンツをダウンロードする <xref:System.Net.Http.HttpClient.GetStringAsync%2A> 非同期メソッドを呼び出します。  
+2. `AccessTheWebAsync` 作成、<xref:System.Net.Http.HttpClient>インスタンスと呼び出し、<xref:System.Net.Http.HttpClient.GetStringAsync%2A>を文字列として web サイトのコンテンツをダウンロードする非同期メソッドです。  
   
-3.  `GetStringAsync` に何かが発生するとプロセスが中断します。 Web サイトからのダウンロード処理、または他のブロックしているアクティビティを待機する必要が考えられます。 リソースのブロックを回避するために、`GetStringAsync` は呼び出し元の `AccessTheWebAsync` にコントロールを戻します。  
+3. `GetStringAsync` に何かが発生するとプロセスが中断します。 Web サイトからのダウンロード処理、または他のブロックしているアクティビティを待機する必要が考えられます。 リソースのブロックを回避するために、`GetStringAsync` は呼び出し元の `AccessTheWebAsync` にコントロールを戻します。  
   
-     `GetStringAsync` は TResult が文字列である <xref:System.Threading.Tasks.Task%601> を返し、`AccessTheWebAsync` は `getStringTask` 変数にタスクを割り当てます。 タスクには `GetStringAsync` への呼び出しの進行中のプロセスを表し、作業が完了すると実際の文字列値を生成するコミットメントがあります。  
+     `GetStringAsync` 返します、 <xref:System.Threading.Tasks.Task%601> TResult が文字列、および`AccessTheWebAsync`にタスクを割り当てます、`getStringTask`変数。 タスクには `GetStringAsync` への呼び出しの進行中のプロセスを表し、作業が完了すると実際の文字列値を生成するコミットメントがあります。  
   
-4.  `getStringTask` が待機しないため、`AccessTheWebAsync` は `GetStringAsync` からの最終結果に依存しない他の作業を続行できます。 この作業は同期メソッド `DoIndependentWork` への呼び出しによって表されます。  
+4. `getStringTask` が待機しないため、`AccessTheWebAsync` は `GetStringAsync` からの最終結果に依存しない他の作業を続行できます。 この作業は同期メソッド `DoIndependentWork` への呼び出しによって表されます。  
   
-5.  `DoIndependentWork` は、作業を実行し、呼び出し元に戻る同期メソッドです。  
+5. `DoIndependentWork` その作業を行い、呼び出し元に返します同期メソッドです。  
   
-6.  `AccessTheWebAsync` は `getStringTask` からの結果なしで実行できる作業を使い果たしました。 `AccessTheWebAsync` は次に、ダウンロードする文字列の長さを計算しますが、メソッドに文字列が戻されるまで、メソッドはその値を計算できません。  
+6. `AccessTheWebAsync` 結果なしで実行できる作業が使い果たした`getStringTask`します。 `AccessTheWebAsync` [次へ] の要望を計算して、ダウンロードする文字列が、メソッドの長さを返すは、メソッドには、文字列まで、その値を計算できません。  
   
-     そのため、`AccessTheWebAsync` は await 演算子を使用してその進行を中断し、`AccessTheWebAsync` を呼び出したメソッドにコントロールを戻します。 `AccessTheWebAsync` は呼び出し元に `Task<int>` (Visual Basic では `Task(Of Integer)`) を返します。 タスクは、ダウンロードされた文字列の長さの整数値を生成することの保証を表します。  
+     そのため、`AccessTheWebAsync` は await 演算子を使用してその進行を中断し、`AccessTheWebAsync` を呼び出したメソッドにコントロールを戻します。 `AccessTheWebAsync` 返します、 `Task<int>` (`Task(Of Integer)` Visual Basic で) 呼び出し元にします。 タスクは、ダウンロードされた文字列の長さの整数値を生成することの保証を表します。  
   
     > [!NOTE]
     >  `GetStringAsync` (および、結果として `getStringTask`) が `AccessTheWebAsync` が待機する前に完了した場合、コントロールは `AccessTheWebAsync` に残ります。 `AccessTheWebAsync` を中断して後から戻ることは、呼び出された非同期プロセス (`getStringTask`) が既に完了していて、AccessTheWebSync が最終結果を待つ必要がない場合に、無駄になることがあります。  
   
      呼び出し元 (この例ではイベント ハンドラー) の内部で、処理パターンが続行されます。 呼び出し元は `AccessTheWebAsync` からの結果に依存しない他の作業をすることもあり、または直ちに待機状態になることもあります。   イベント ハンドラーは `AccessTheWebAsync` を待機し、`AccessTheWebAsync` は、`GetStringAsync` を待機します。  
   
-7.  `GetStringAsync` が完了し、文字列の結果を生成します。 文字列の結果は、`GetStringAsync` への呼び出しによって、意図した形式では戻されません。 (メソッドは既に手順 3 のタスクで戻されていることに注意してください)。代わりに、文字列の結果は、`getStringTask` メソッドの完了を表すタスク内に格納されます。 await 演算子は、`getStringTask` から結果を取得します。 代入ステートメントは `urlContents` に取得された結果を割り当てます。  
+7. `GetStringAsync` 完了すると、結果の文字列を生成します。 文字列の結果は、`GetStringAsync` への呼び出しによって、意図した形式では戻されません。 (メソッドは既に手順 3 のタスクで戻されていることに注意してください)。代わりに、文字列の結果は、`getStringTask` メソッドの完了を表すタスク内に格納されます。 await 演算子は、`getStringTask` から結果を取得します。 代入ステートメントは `urlContents` に取得された結果を割り当てます。  
   
-8.  `AccessTheWebAsync` に文字列の結果がある場合、メソッドは文字列の長さを計算できます。 次に `AccessTheWebAsync` の作業も完了し、待機しているイベント ハンドラーが再開できます。 トピックの最後にある完全なサンプルでは、イベント ハンドラーが長さの結果の値を取得して印刷することを確認できます。  
+8. `AccessTheWebAsync` に文字列の結果がある場合、メソッドは文字列の長さを計算できます。 次に `AccessTheWebAsync` の作業も完了し、待機しているイベント ハンドラーが再開できます。 トピックの最後にある完全なサンプルでは、イベント ハンドラーが長さの結果の値を取得して印刷することを確認できます。  
   
  非同期プログラミングの経験がない場合、同期および非同期の動作の違いを、少し時間を割いて考慮してください。 同期メソッドは作業が完了すると戻されます (手順 5.) が、非同期のメソッドは、作業が中断されるとタスクの値を戻します。(手順 3. および 6.) 非同期のメソッドが最終的に作業を完了すると、タスクは完了とマークされ、結果が存在する場合はタスクに格納されます。  
   
@@ -160,7 +160,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  非同期のメソッドには、通常の `Await` 演算子が 1 つ以上ありますが、`Await` 式がない場合もコンパイラ エラーの原因にはなりません。 中断ポイントをマークするために非同期のメソッドが `Await` 演算子を使用しない場合、`Async` 修飾子が存在しても、メソッドは同期メソッドと同様に実行されます。 このようなメソッドには、コンパイラが警告を発行します。  
   
- `Async` と `Await` は、コンテキスト キーワードです。 詳細およびサンプルについては、次のトピックを参照してください:  
+ `Async` `Await`はコンテキスト キーワードです。 詳細およびサンプルについては、次のトピックを参照してください:  
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
@@ -217,9 +217,9 @@ Await Task_MethodAsync()
   
  Windows ランタイム プログラミングの非同期 API には、タスクに類似した次のような戻り値の型の 1 つがあります。  
   
--   <xref:Windows.Foundation.IAsyncOperation%601> は <xref:System.Threading.Tasks.Task%601> に対応します  
+-   <xref:Windows.Foundation.IAsyncOperation%601>、に対応します。 <xref:System.Threading.Tasks.Task%601>  
   
--   <xref:Windows.Foundation.IAsyncAction> は <xref:System.Threading.Tasks.Task> に対応します  
+-   <xref:Windows.Foundation.IAsyncAction>、に対応します。 <xref:System.Threading.Tasks.Task>  
   
 -   <xref:Windows.Foundation.IAsyncActionWithProgress%601>  
   
@@ -236,15 +236,15 @@ Await Task_MethodAsync()
   
 |Title|説明|サンプル|  
 |-----------|-----------------|------------|  
-|[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|同期 WPF のソリューションを非同期 WPF のソリューションに変換する方法を示します。 アプリケーションは、一連の Web サイトをダウンロードします。|[Async Sample:Accessing the Web Walkthrough (非同期のサンプル: Web サイトへのアクセスのチュートリアル)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
+|[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|同期 WPF のソリューションを非同期 WPF のソリューションに変換する方法を示します。 アプリケーションは、一連の Web サイトをダウンロードします。|[「Async Sample:Accessing the Web Walkthrough](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)|  
 |[方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|前のチュートリアルに <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> を追加します。 `WhenAll` を使用すると、すべてのダウンロードが同時に開始します。||  
-|[方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|複数のタスクを同時に開始する方法を示します。|[Async Sample:Make Multiple Web Requests in Parallel (非同期のサンプル: 複数の Web 要求を並行して作成する)](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
+|[方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|複数のタスクを同時に開始する方法を示します。|[「Async Sample:並列で make Multiple Web Requests](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)|  
 |[非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)|非同期のメソッドが戻す型、および各型の適切な使用方法を説明します。||  
-|[非同期プログラムにおける制御フロー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|非同期プログラムでの await 式を継続して、コントロールのフローの詳細をトレースします。|[非同期のサンプル:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
-|[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|非同期のソリューションに次の機能を追加する方法を示します:<br /><br /> -   [非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [完了後の残りの非同期タスクのキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [完了時での複数の同期タスクとプロセスの実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
-|[非同期アプリにおける再入の処理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|実行中にアクティブな非同期操作を再起動するケースの処理方法を示します。||  
-|[WhenAny:.NET Framework と Windows ランタイム間のブリッジ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|[!INCLUDE[wrt](~/includes/wrt-md.md)] のメソッドの <xref:System.Threading.Tasks.Task.WhenAny%2A> を使用可能にするために、[!INCLUDE[wrt](~/includes/wrt-md.md)] で、.NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[Async Sample:Bridging between .NET and Windows Runtime (AsTask and WhenAny) (非同期のサンプル: .NET と Windows ランタイム間のブリッジ (AsTask と WhenAny))](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
-|非同期のキャンセル:.NET Framework と Windows ランタイム間のブリッジ|[!INCLUDE[wrt](~/includes/wrt-md.md)] のメソッドの <xref:System.Threading.CancellationTokenSource> を使用可能にするために、[!INCLUDE[wrt](~/includes/wrt-md.md)] で、.NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[Async Sample:Bridging between .NET and Windows Runtime (AsTask & Cancellation) (非同期のサンプル: .NET と Windows ランタイム間のブリッジ (AsTask と Cancellation))](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
+|[(Visual Basic) の非同期プログラムにおける制御フロー](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)|非同期プログラムでの await 式を継続して、コントロールのフローの詳細をトレースします。|[「Async Sample:非同期プログラムにおける制御フロー](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)|  
+|[非同期アプリケーション (Visual Basic) の微調整](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)|非同期のソリューションに次の機能を追加する方法を示します:<br /><br /> -   [非同期タスクまたはタスクの一覧のキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)<br />-   [指定した時間の経過後の非同期タスクのキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md)<br />-   [完了後の残りの非同期タスクのキャンセル (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)<br />-   [完了時での複数の同期タスクとプロセスの実行 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)|[「Async Sample:アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)|  
+|[(Visual Basic) の非同期アプリにおける再入の処理](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)|実行中にアクティブな非同期操作を再起動するケースの処理方法を示します。||  
+|[WhenAny:.NET Framework と Windows ランタイム間のブリッジ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|[!INCLUDE[wrt](~/includes/wrt-md.md)] のメソッドの <xref:System.Threading.Tasks.Task.WhenAny%2A> を使用可能にするために、[!INCLUDE[wrt](~/includes/wrt-md.md)] で、.NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[「Async Sample:Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
+|非同期のキャンセル:.NET Framework と Windows ランタイム間のブリッジ|[!INCLUDE[wrt](~/includes/wrt-md.md)] のメソッドの <xref:System.Threading.CancellationTokenSource> を使用可能にするために、[!INCLUDE[wrt](~/includes/wrt-md.md)] で、.NET Framework および IAsyncOperations のタスクの種類間をブリッジする方法を示します。|[「Async Sample:Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[ファイル アクセスにおける非同期の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|async および await を使用してファイルにアクセスすることの利点の一覧と紹介です。||  
 |[タスク ベースの非同期パターン (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|.NET Framework での非同期性の新しいパターンについて説明します。 パターンは <xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> の型に基づいています。||  
 |[Channel 9 の非同期に関するビデオ](https://channel9.msdn.com/search?term=async+&type=All)|非同期のプログラミングに関するさまざまなビデオへのリンクを示します。||  

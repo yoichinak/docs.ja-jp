@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319860"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>方法: StatusBar コントロールにパネルを追加する
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227796"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>ステータス バー パネルを追加するには  
   
-1.  プロシージャでは、ステータス バー パネルを追加することによって作成、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>します。 を介して渡されたインデックスを使用して個別のパネルにプロパティの設定を指定、<xref:System.Windows.Forms.StatusBar.Panels%2A>プロパティ。  
+1. プロシージャでは、ステータス バー パネルを追加することによって作成、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>します。 を介して渡されたインデックスを使用して個別のパネルにプロパティの設定を指定、<xref:System.Windows.Forms.StatusBar.Panels%2A>プロパティ。  
   
      アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.StatusBar>コントロールが既に追加されています。  
   

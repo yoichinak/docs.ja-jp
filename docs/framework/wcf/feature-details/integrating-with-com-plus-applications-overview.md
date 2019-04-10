@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328726"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
 Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされるコンポーネント ベースのアプリケーション ロジックを既に使用している場合は、既存のロジックを修正することがなく拡張する WCF を使用できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
  COM+ コンポーネントを修正することなく、そのインターフェイスを Web サービスとして公開するための手順を次に示します。  
   
-1.  COM+ コンポーネントのインターフェイスを、実際に Web サービスとして公開してかまわないかどうか、あらかじめ確認してください。  
+1. COM+ コンポーネントのインターフェイスを、実際に Web サービスとして公開してかまわないかどうか、あらかじめ確認してください。  
   
-2.  適切なホスティング モードを選択します。  
+2. 適切なホスティング モードを選択します。  
   
-3.  COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe を使用する方法の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
+3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe を使用する方法の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
   
-4.  アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントを構成する方法の詳細については、次を参照してください。[方法。COM + サービス設定の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)します。  
+4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントを構成する方法の詳細については、次を参照してください。[方法。COM + サービス設定の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)します。  
   
 ## <a name="supported-interfaces"></a>公開可能なインターフェイス  
  Web サービスとして公開できるインターフェイスの種類に関して、いくつか制約があります。 次のようなインターフェイスは公開できません。  
