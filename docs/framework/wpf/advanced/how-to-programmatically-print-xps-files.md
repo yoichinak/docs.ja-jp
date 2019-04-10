@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114297"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312073"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>方法: XPS ファイルをプログラムにより印刷する
 1 つのオーバー ロードを使用することができます、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドを印刷する[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]ファイルを開くことがなく、<xref:System.Windows.Controls.PrintDialog>や、原則として、任意[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]まったくです。  
@@ -25,13 +25,13 @@ ms.locfileid: "59114297"
 ## <a name="example"></a>例  
  3 つのパラメーターを使用する主な手順<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは、次のとおりです。 詳細は、下記の例に示します。  
   
-1.  プリンターが XPSDrv プリンターかどうかを確認します  (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。  
+1. プリンターが XPSDrv プリンターかどうかを確認します  (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。  
   
-2.  プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。  
+2. プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。  
   
-3.  プリント サーバーと印刷キューのオブジェクトをインスタンス化します。  
+3. プリント サーバーと印刷キューのオブジェクトをインスタンス化します。  
   
-4.  ジョブ名、印刷するファイルを指定するメソッドを呼び出し、<xref:System.Boolean>プリンターが XPSDrv プリンターかどうかどうかを示すフラグします。  
+4. ジョブ名、印刷するファイルを指定するメソッドを呼び出し、<xref:System.Boolean>プリンターが XPSDrv プリンターかどうかどうかを示すフラグします。  
   
  ディレクトリ内のすべての [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルをバッチ印刷する方法を次の例に示します。 アプリケーションは、ディレクトリ、3 つのパラメーターを指定するユーザーを要求が<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは必要ありません、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 このメソッドは、そのメソッドに渡すことができる [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイル名とパスが記述された任意のコード パスで使用できます。  
   

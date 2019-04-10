@@ -2,12 +2,12 @@
 title: 既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295602"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 XAML スキーマ コンテキストとは、特定の XAML ボキャブラリを使用する XAML の運用環境とやり取りする方法などの型のマッピングが解決する方法、アセンブリが読み込まれる方法、特定のリーダーとライターの動作を記述するオブジェクトを修飾するエンティティの概念設定が解釈されます。 このトピックでは、.NET Framework XAML サービスと CLR 型システムに基づく関連付けられた既定の XAML スキーマ コンテキストの機能について説明します。 このトピックでは、WPF に使用される XAML スキーマ コンテキストにも説明します。  
@@ -46,9 +46,9 @@ XAML スキーマ コンテキストとは、特定の XAML ボキャブラリ�
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML リーダーの入力 (loose XAML)  
   
-1.  反復処理、XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
+1. 反復処理、XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
   
-2.  CLR、次の手法のいずれかに基づいてそれ以外の場合、 <xref:System.Reflection.Assembly> API の使用は、アセンブリを読み込みます。  
+2. CLR、次の手法のいずれかに基づいてそれ以外の場合、 <xref:System.Reflection.Assembly> API の使用は、アセンブリを読み込みます。  
   
     -   マッピングの名前を修飾すると場合、によって呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
   
@@ -61,9 +61,9 @@ XAML スキーマ コンテキストとは、特定の XAML ボキャブラリ�
   
  アセンブリを参照するメモ`XamlBuildTask`は、常に完全修飾します。  
   
-1.  呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
+1. 呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
   
-2.  前の手順に失敗した場合は、短い名前 (および存在する場合の公開キー トークン) を使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
+2. 前の手順に失敗した場合は、短い名前 (および存在する場合の公開キー トークン) を使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  BAML のアセンブリの読み込みに 2 つの側面があります: コンポーネントとして BAML を含む初期アセンブリの読み込みと運用環境の BAML によって参照される任意の型の型のバッキング アセンブリを読み込みます。  
@@ -71,16 +71,16 @@ XAML スキーマ コンテキストとは、特定の XAML ボキャブラリ�
 ##### <a name="assembly-load-for-initial-markup"></a>初期のマークアップのアセンブリの読み込み:  
  マークアップを読み込むアセンブリへの参照は、常に修飾されません。  
   
-1.  反復処理、WPF XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、WPF アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
+1. 反復処理、WPF XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、WPF アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
   
-2.  前の手順に失敗した場合は、短い名前 (および存在する場合の公開キー トークン) を使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
+2. 前の手順に失敗した場合は、短い名前 (および存在する場合の公開キー トークン) を使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
   
 ##### <a name="assembly-references-by-baml-types"></a>BAML 型でアセンブリ参照:  
  BAML 運用環境で使用される型のアセンブリ参照は、ビルド タスクの出力として、完全修飾では常にします。  
   
-1.  反復処理、WPF XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、WPF アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
+1. 反復処理、WPF XAML スキーマ コンテキスト、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、WPF アプリケーションのアセンブリを読み込む最近最もから開始します。 一致が見つかった場合は、そのアセンブリが解決に使用します。  
   
-2.  それ以外の場合、アセンブリを読み込む、次の手法のいずれかを使用します。  
+2. それ以外の場合、アセンブリを読み込む、次の手法のいずれかを使用します。  
   
     -   呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
   

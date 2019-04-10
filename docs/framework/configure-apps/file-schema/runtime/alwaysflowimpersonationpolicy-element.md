@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1928254699f4de41e92087c76be9bc3c249523
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314777"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
@@ -62,11 +62,11 @@ ms.locfileid: "59108044"
   
  他の 2 つの方法でこの既定の動作を変更することができます。  
   
-1.  スレッドごとにマネージ コードは。  
+1. スレッドごとにマネージ コードは。  
   
      スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。  
   
-2.  で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。  
+2. で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。  
   
      呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`します。  
   

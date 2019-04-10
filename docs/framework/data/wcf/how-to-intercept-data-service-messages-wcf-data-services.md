@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317481"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>方法: データ サービス メッセージ (WCF Data Services) をインターセプトします。
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、要求メッセージを先に取得して、操作にカスタム ロジックを追加することができます。 メッセージをインターセプトするには、データ サービスで特別なメソッドを使用します。 詳細については、次を参照してください。[インターセプター](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)します。  
@@ -22,23 +22,23 @@ ms.locfileid: "59101298"
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Orders エンティティ セットのクエリ インターセプターを定義するには  
   
-1.  Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
+1. Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
   
-2.  `Northwind` クラスのコード ページで次の `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。  
+2. `Northwind` クラスのコード ページで次の `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  `Northwind` クラスで、次に示すように `OnQueryOrders` というサービス操作メソッドを定義します。  
+3. `Northwind` クラスで、次に示すように `OnQueryOrders` というサービス操作メソッドを定義します。  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Products エンティティ セットの変更インターセプターを定義するには  
   
-1.  Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
+1. Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
   
-2.  `Northwind` クラスで、次に示すように `OnChangeProducts` というサービス操作メソッドを定義します。  
+2. `Northwind` クラスで、次に示すように `OnChangeProducts` というサービス操作メソッドを定義します。  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  

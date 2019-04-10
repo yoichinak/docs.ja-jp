@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315882"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  これを可能にするには、 `Message` インスタンス全体と XML Infoset 間のマッピングが定義されている必要があります。 このようなマッピングは、実際には、存在する場合します。WCF では、SOAP 標準を使用して、このマッピングを定義します。 `Message` インスタンスが XML Infoset として書き込まれると、書き込まれた Infoset はメッセージを含む有効な SOAP エンベロープになります。 したがって、通常、 `WriteMessage` は次の手順を実行します。  
   
-1.  SOAP エンベロープ要素の開始タグを書き込みます。  
+1. SOAP エンベロープ要素の開始タグを書き込みます。  
   
-2.  SOAP ヘッダー要素の開始タグを書き込み、すべてのヘッダーを書き込んで、ヘッダー要素を閉じます。  
+2. SOAP ヘッダー要素の開始タグを書き込み、すべてのヘッダーを書き込んで、ヘッダー要素を閉じます。  
   
-3.  SOAP 本文要素の開始タグを書き込みます。  
+3. SOAP 本文要素の開始タグを書き込みます。  
   
-4.  `WriteBodyContents` または同等のメソッドを呼び出して、本文を書き込みます。  
+4. `WriteBodyContents` または同等のメソッドを呼び出して、本文を書き込みます。  
   
-5.  本文要素とエンベロープ要素を閉じます。  
+5. 本文要素とエンベロープ要素を閉じます。  
   
  上記の手順は、SOAP 標準に密接に関連しています。 これは、SOAP の複数のバージョンが存在することで複雑になります。たとえば、使用している SOAP のバージョンがわからなければ、SOAP エンベロープ要素を正しく書き込むことはできません。 また、SOAP 固有のこの複雑なマッピングを完全に無効にすることが望ましい場合もあります。  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  このために、 <xref:System.Xml.IStreamProvider> インターフェイスが使用されます。 このインターフェイスには、書き込むストリームを返す <xref:System.Xml.IStreamProvider.GetStream> メソッドがあります。 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> でストリーミングされたメッセージ本文を書き込む適切な方法は次のとおりです。  
   
-1.  ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
+1. ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
   
-2.  書き込むストリームを返す `WriteValue` 実装で、 <xref:System.Xml.XmlDictionaryWriter> を受け取る <xref:System.Xml.IStreamProvider>に対して `IStreamProvider` オーバーロードを呼び出します。  
+2. 書き込むストリームを返す `WriteValue` 実装で、 <xref:System.Xml.XmlDictionaryWriter> を受け取る <xref:System.Xml.IStreamProvider>に対して `IStreamProvider` オーバーロードを呼び出します。  
   
-3.  ストリームの後に情報を書き込みます (XML 終了タグなど)。  
+3. ストリームの後に情報を書き込みます (XML 終了タグなど)。  
   
  この方法を使用すると、XML ライターは <xref:System.Xml.IStreamProvider.GetStream> を呼び出し、ストリーミングされたデータを書き込む時期を選択できます。 たとえば、テキスト XML ライターやバイナリ XML ライターは、このメソッドをすぐに呼び出し、開始タグと終了タグの間にストリーミングされたコンテンツを書き込むことができます。 MTOM ライターは、メッセージの適切な部分を書き込む準備ができたときに、後で <xref:System.Xml.IStreamProvider.GetStream> を呼び出すことができます。  
   

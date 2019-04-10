@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313321"
 ---
 # <a name="programming-wcf-security"></a>WCF セキュリティのプログラミング
 このトピックでは、セキュリティで保護された Windows Communication Foundation (WCF) アプリケーションを作成するために使用する基本的なプログラミング タスクについて説明します。 このトピックでは、認証、機密性、整合性、総称とのみについて説明します。*転送セキュリティ*します。 このトピックでは承認 (リソースまたはサービスへのアクセス制御); については説明しません承認方法については、次を参照してください。[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)します。  
@@ -25,11 +25,11 @@ ms.locfileid: "59087808"
 ## <a name="setting-the-security-mode"></a>セキュリティ モードの設定  
  次に、WCF でのセキュリティ モードを使用したプログラミングの一般的な手順について説明します。  
   
-1.  アプリケーション要件を満たす適切な定義済みバインディングを選択します。 バインディングの選択肢の一覧は、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。 既定では、ほとんどのバインディングでセキュリティが有効になっています。 1 つの例外は、<xref:System.ServiceModel.BasicHttpBinding>クラス (構成を使用して、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
+1. アプリケーション要件を満たす適切な定義済みバインディングを選択します。 バインディングの選択肢の一覧は、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。 既定では、ほとんどのバインディングでセキュリティが有効になっています。 1 つの例外は、<xref:System.ServiceModel.BasicHttpBinding>クラス (構成を使用して、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
   
      選択するバインディングによってトランスポートが決まります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> はトランスポートとして HTTP を使用し、<xref:System.ServiceModel.NetTcpBinding> は TCP を使用します。  
   
-2.  バインディングのセキュリティ モードを選択します。 選択したバインディングによって、選択できるモードが決まります。 たとえば、<xref:System.ServiceModel.WSDualHttpBinding> を選択すると、トランスポート セキュリティを使用できません (このオプションはありません)。 同様に、<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を選択すると、メッセージ セキュリティを使用できません。  
+2. バインディングのセキュリティ モードを選択します。 選択したバインディングによって、選択できるモードが決まります。 たとえば、<xref:System.ServiceModel.WSDualHttpBinding> を選択すると、トランスポート セキュリティを使用できません (このオプションはありません)。 同様に、<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を選択すると、メッセージ セキュリティを使用できません。  
   
      次の 3 つの選択肢があります。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "59087808"
   
          このモードを選択すると、トランスポート層を使用してメッセージの転送がセキュリティで保護されると同時に、他のサービスが必要とするさまざまな資格情報がすべてのメッセージに含まれます。 これにより、トランスポート セキュリティのパフォーマンス上の利点とメッセージ セキュリティの豊富な資格情報の利点の両方が提供されます。 このモードは、<xref:System.ServiceModel.BasicHttpBinding>、<xref:System.ServiceModel.WSFederationHttpBinding>、<xref:System.ServiceModel.NetPeerTcpBinding>、および <xref:System.ServiceModel.WSHttpBinding> の各バインディングで使用できます。  
   
-3.  HTTP でトランスポート セキュリティを使用する (つまり、HTTPS を使用する) 場合は、SSL 証明書を使用してホストを構成し、ポートで SSL を有効にします。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
+3. HTTP でトランスポート セキュリティを使用する (つまり、HTTPS を使用する) 場合は、SSL 証明書を使用してホストを構成し、ポートで SSL を有効にします。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
-4.  <xref:System.ServiceModel.WSHttpBinding> を使用している場合、セキュリティで保護されたセッションを確立する必要がないときは、<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> プロパティを `false` に設定します。  
+4. <xref:System.ServiceModel.WSHttpBinding> を使用している場合、セキュリティで保護されたセッションを確立する必要がないときは、<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> プロパティを `false` に設定します。  
   
      セキュリティで保護されたセッションは、クライアントとサーバーが対称キーを使用してチャネルを作成するときに発生します (メッセージ交換中、やりとりが終了するまで、クライアントとサーバーの両方が同じキーを使用します)。  
   

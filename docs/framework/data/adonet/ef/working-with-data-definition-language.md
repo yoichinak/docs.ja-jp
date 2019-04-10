@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904376"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313243"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
 以降では、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 4、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
@@ -36,9 +36,9 @@ ms.locfileid: "55904376"
   
 #### <a name="to-define-a-database-based-on-the-existing-model"></a>既存のモデルに基づいてデータベースを定義するには  
   
-1.  コンソール アプリケーションを作成します。  
+1. コンソール アプリケーションを作成します。  
   
-2.  既存のモデルをアプリケーションに追加します。  
+2. 既存のモデルをアプリケーションに追加します。  
   
     1.  という名前の空のモデルを追加`SchoolModel`します。 空のモデルを作成するを参照してください。、[方法。新しい .edmx ファイルを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))トピック。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "55904376"
   
     2.  SchoolModel.edmx ファイルを開き、`edmx:Runtime` タグ内にその内容を貼り付けます。  
   
-3.  main 関数に次のコードを追加します。 このコードでは、データベース サーバーへの接続文字列を初期化し、DDL スクリプトを表示して、データベースを作成します。さらに、コンテキストに新しいエンティティを追加して、データベースに変更内容を保存します。  
+3. main 関数に次のコードを追加します。 このコードでは、データベース サーバーへの接続文字列を初期化し、DDL スクリプトを表示して、データベースを作成します。さらに、コンテキストに新しいエンティティを追加して、データベースに変更内容を保存します。  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

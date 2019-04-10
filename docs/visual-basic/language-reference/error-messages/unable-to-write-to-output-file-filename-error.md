@@ -1,5 +1,5 @@
 ---
-title: "出力ファイル '<filename>' に書き込めません : <error>"
+title: 出力ファイルに書き込めません。 '<filename>'。 <error>
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318222"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>出力ファイルに書き込めません '\<filename >':\<エラー >。
 ファイルの作成で問題が発生しました。  
@@ -31,32 +31,32 @@ ms.locfileid: "58827199"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  プログラムをもう一度コンパイルし、エラーがまだ発生するかどうか確認します。  
+1. プログラムをもう一度コンパイルし、エラーがまだ発生するかどうか確認します。  
   
-2.  エラーが引き続き発生する場合は、作業内容を保存し、Visual Studio を再起動します。  
+2. エラーが引き続き発生する場合は、作業内容を保存し、Visual Studio を再起動します。  
   
-3.  エラーが引き続き発生する場合は、コンピューターを再起動します。  
+3. エラーが引き続き発生する場合は、コンピューターを再起動します。  
   
-4.  エラーが再発する場合は、Visual Basic を再インストールします。  
+4. エラーが再発する場合は、Visual Basic を再インストールします。  
   
-5.  再インストールした後にエラーが続く場合は、マイクロソフト プロダクト サポート サービスに通知してください。  
+5. 再インストールした後にエラーが続く場合は、マイクロソフト プロダクト サポート サービスに通知してください。  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>エクスプローラーでファイル属性を確認するには  
   
-1.  対象のフォルダーを開きます。  
+1. 対象のフォルダーを開きます。  
   
-2.  をクリックして、**ビュー**アイコンを選択し、**詳細**します。  
+2. をクリックして、**ビュー**アイコンを選択し、**詳細**します。  
   
-3.  列ヘッダーを右クリックして選択**属性**ドロップダウン リストから。  
+3. 列ヘッダーを右クリックして選択**属性**ドロップダウン リストから。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>ファイルやフォルダーの属性を変更するには  
   
-1.  **ファイル エクスプ ローラー**をファイルまたはフォルダーを右クリックして**プロパティ**します。  
+1. **ファイル エクスプ ローラー**をファイルまたはフォルダーを右クリックして**プロパティ**します。  
   
-2.  **属性**のセクション、**全般**タブで、、**読み取り専用**ボックス。  
+2. **属性**のセクション、**全般**タブで、、**読み取り専用**ボックス。  
   
-3.  **[OK]** を押します。  
+3. **[OK]** を押します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ご意見](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

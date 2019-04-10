@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314075"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 構造体
 アセンブリでは、1 つの属性に関する情報を格納および 3 つから成る`DWORD`秒。 各`DWORD`によって生成される文字バッファーへのオフセットです、`CurrentIntoBuffer`のメソッド、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)インターフェイス  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>サンプル  
  次の例は、最終的に設定されているいくつかの基本的な手順を示しています。`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-1.  取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。  
+1. 取得、 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)アセンブリ。  
   
-2.  呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。  
+2. 呼び出す、`IReferenceIdentity::EnumAttributes`メソッドを取得し、 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)します。  
   
-3.  文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+3. 文字バッファーを作成し、としてキャスト、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
-4.  呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
+4. 呼び出す、`CurrentIntoBuffer`のメソッド、`IEnumIDENTITY_ATTRIBUTE`インターフェイス。 このメソッドは、属性をコピー `Namespace`、 `Name`、および`Value`文字バッファーにします。 これらの文字列に 3 つのオフセットで使用可能になる、`IDENTITY_ATTRIBUTE_BLOB`構造体。  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

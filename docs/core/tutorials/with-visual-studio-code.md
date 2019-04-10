@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788337"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890554"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -91,14 +91,14 @@ ms.locfileid: "57788337"
 ## <a name="add-a-class"></a>クラスを追加する
 
 1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、**[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
-2. ファイルに `Class1.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
+2. ファイルに `MyClass.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
 3. 次のコードを追加して、1 つ目のクラスを作成します。 `Program.cs` ファイルから参照できるように、正しい名前空間を含めるようにします。
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }

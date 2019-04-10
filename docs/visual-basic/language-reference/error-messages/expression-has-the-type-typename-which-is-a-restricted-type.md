@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314621"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>式の型 '\<typename >' は制限付きの型と 'Object' または 'ValueType' から継承されたメンバーのアクセスに使用することはできません
 式では、共通言語ランタイム (CLR) でボックス化できない型に評価が、ボックス化を必要とするメンバーにアクセスします。  
@@ -25,11 +25,11 @@ ms.locfileid: "58824274"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  問題の型に評価される式を探します。  
+1. 問題の型に評価される式を探します。  
   
-2.  継承されたメソッドを呼び出そうとすると、ステートメントの部分を探します<xref:System.Object>または<xref:System.ValueType>します。  
+2. 継承されたメソッドを呼び出そうとすると、ステートメントの部分を探します<xref:System.Object>または<xref:System.ValueType>します。  
   
-3.  メソッドの呼び出しを回避するために、ステートメントを書き直してください。  
+3. メソッドの呼び出しを回避するために、ステートメントを書き直してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: b0001ec1b6ff9360fce05648ba2da9d4bc2edfed
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 8f98ccca39fb3489094a9f3c7d219d7a4887f0c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58022449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313750"
 ---
 # <a name="no-default-member-found-for-type-typename"></a>型の既定のメンバーが見つかりません '\<typename >'
 遅延バインディング インデックス `Get` または `Set` を呼び出そうとしました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  実行している操作に応じて `Get` または `Set`で既定プロパティがオブジェクトに含まれていることを確認します。  
+1. 実行している操作に応じて `Get` または `Set`で既定プロパティがオブジェクトに含まれていることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 
