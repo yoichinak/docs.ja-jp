@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335408"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>方法: 標準の Windows フォーム印刷ジョブを作成する
 Windows フォームにおける印刷の基盤は、<xref:System.Drawing.Printing.PrintDocument>コンポーネント、具体的には、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント。 処理するコードを記述することで、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベント、印刷と印刷方法を指定できます。  
   
 ### <a name="to-create-a-print-job"></a>印刷ジョブを作成するには  
   
-1.  追加、<xref:System.Drawing.Printing.PrintDocument>コンポーネントをフォームにします。  
+1. 追加、<xref:System.Drawing.Printing.PrintDocument>コンポーネントをフォームにします。  
   
-2.  <xref:System.Drawing.Printing.PrintDocument.PrintPage> イベントを処理するコードを記述します。  
+2. <xref:System.Drawing.Printing.PrintDocument.PrintPage> イベントを処理するコードを記述します。  
   
      独自の印刷ロジックをコーディングする必要があります。 さらに、印刷する対象を指定する必要があります。  
   

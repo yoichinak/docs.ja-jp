@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336695"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
 により、ホストがプロセス内で、CLR を明示的に初期化する前に使用する共通言語ランタイム (CLR) のバージョンを決定します。  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  次の手順は、ランタイムの初期化時に発生します。  
   
-1.  ホスト呼び出し[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)またはその他のランタイム初期化関数の 1 つ。 または、ホストは、COM オブジェクトのアクティベーションを使用してランタイムを初期化する可能性があります。  
+1. ホスト呼び出し[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)またはその他のランタイム初期化関数の 1 つ。 または、ホストは、COM オブジェクトのアクティベーションを使用してランタイムを初期化する可能性があります。  
   
-2.  ランタイムがで指定された関数を呼び出す、`hostCallback`パラメーター。  
+2. ランタイムがで指定された関数を呼び出す、`hostCallback`パラメーター。  
   
-3.  指定された関数`hostCallback`続いて、次の一連の呼び出し。  
+3. 指定された関数`hostCallback`続いて、次の一連の呼び出し。  
   
     -   指定された関数、`pBeginHostSetup`パラメーター。  
   

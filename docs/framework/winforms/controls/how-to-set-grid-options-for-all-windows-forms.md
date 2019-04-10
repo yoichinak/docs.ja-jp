@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199823"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336058"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>方法: すべての Windows フォームにグリッド オプションを設定する
 なるは、Visual Studio 開発環境での作業に使用されるため、Windows フォーム デザイナーで、すべてのフォームおよび操作するプロジェクトの基本設定を設定できます。  
@@ -23,9 +23,9 @@ ms.locfileid: "59199823"
   
 ### <a name="to-set-global-windows-forms-options"></a>グローバルの Windows フォームのオプションを設定するには  
   
-1.  **ツール**メニューの **オプション**します。  
+1. **ツール**メニューの **オプション**します。  
   
-2.  左側のウィンドウで、**オプション**ダイアログ ボックスで、をクリックして**Windows フォーム デザイナー**します。  
+2. 左側のウィンドウで、**オプション**ダイアログ ボックスで、をクリックして**Windows フォーム デザイナー**します。  
   
      右側のウィンドウで 、**レイアウト設定**見出しで、設定を行う既定のグリッドを作成するすべての新しいフォームの。 グリッドのサイズは、コントロールをスナップするかどうか、既定では、これらの設定が含まれます。 さらから選択できます**SnapToGrid**と**スナップ**レイアウト モードです。 スナップ ガイドラインの詳細については、次を参照してください。[チュートリアル。フォームのスナップ線を使用して Windows 上のコントロール](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
   

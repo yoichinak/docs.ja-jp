@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336877"
 ---
 # <a name="exporting-schemas-from-classes"></a>クラスからのスキーマのエクスポート
 データ コントラクト モデルで使用されているクラスから XML スキーマ定義言語 (XSD) スキーマを生成するには、 <xref:System.Runtime.Serialization.XsdDataContractExporter> クラスを使います。 このトピックでは、スキーマの作成手順を説明します。  
@@ -25,20 +25,20 @@ ms.locfileid: "59185436"
   
 #### <a name="to-export-schemas"></a>スキーマをエクスポートするには  
   
-1.  <xref:System.Runtime.Serialization.XsdDataContractExporter>のインスタンスを作成します。  
+1. <xref:System.Runtime.Serialization.XsdDataContractExporter>のインスタンスを作成します。  
   
-2.  省略可能です。 <xref:System.Xml.Schema.XmlSchemaSet> をコンストラクターに渡します。 この場合、空の <xref:System.Xml.Schema.XmlSchemaSet> から開始するのではなく、スキーマのエクスポート時に生成されたスキーマが、この <xref:System.Xml.Schema.XmlSchemaSet>インスタンスに追加されます。  
+2. 省略可能です。 <xref:System.Xml.Schema.XmlSchemaSet> をコンストラクターに渡します。 この場合、空の <xref:System.Xml.Schema.XmlSchemaSet> から開始するのではなく、スキーマのエクスポート時に生成されたスキーマが、この <xref:System.Xml.Schema.XmlSchemaSet>インスタンスに追加されます。  
   
-3.  省略可能です。 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> メソッドのいずれかを呼び出します。 指定された型がエクスポート可能かどうかを判定するメソッドです。 このメソッドには、次に説明する `Export` メソッドと同じオーバーロードがあります。  
+3. 省略可能です。 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> メソッドのいずれかを呼び出します。 指定された型がエクスポート可能かどうかを判定するメソッドです。 このメソッドには、次に説明する `Export` メソッドと同じオーバーロードがあります。  
   
-4.  <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> メソッドのいずれかを呼び出します。 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> オブジェクトの `Type` 、または <xref:System.Collections.Generic.List%601> オブジェクトの <xref:System.Reflection.Assembly> を受け取る 3 種類のオーバーロードがあります。 3 つ目のメソッドの場合、指定されたアセンブリのすべての型がエクスポートされます。  
+4. <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> メソッドのいずれかを呼び出します。 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> オブジェクトの `Type` 、または <xref:System.Collections.Generic.List%601> オブジェクトの <xref:System.Reflection.Assembly> を受け取る 3 種類のオーバーロードがあります。 3 つ目のメソッドの場合、指定されたアセンブリのすべての型がエクスポートされます。  
   
      `Export` メソッドを何度も呼び出すと、同じ `XmlSchemaSet`に複数の項目が追加されます。 `XmlSchemaSet` に既に存在する型は生成されません。 したがって、 `Export` クラスのインスタンスを複数作成するのではなく、同じ `XsdDataContractExporter` に対して `XsdDataContractExporter` を複数回呼び出すようにします。 これにより、同じスキーマ型が重複して生成される状況を回避できます。  
   
     > [!NOTE]
     >  エクスポート処理中に障害が発生した場合、 `XmlSchemaSet` は予測できない状態になります。  
   
-5.  <xref:System.Xml.Schema.XmlSchemaSet> プロパティを介して、 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> にアクセスします。  
+5. <xref:System.Xml.Schema.XmlSchemaSet> プロパティを介して、 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> にアクセスします。  
   
 ## <a name="export-options"></a>エクスポート オプション  
  <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> の <xref:System.Runtime.Serialization.XsdDataContractExporter> プロパティとして <xref:System.Runtime.Serialization.ExportOptions> クラスのインスタンスを設定することにより、エクスポート処理の方法を制御できます。 具体的には、次のオプションを設定できます。  

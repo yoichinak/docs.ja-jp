@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336188"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement コンテンツ モデルの概要
 このコンテンツ モデルの概要についてのサポートされているコンテンツを説明します、<xref:System.Windows.Documents.TextElement>します。 <xref:System.Windows.Documents.Paragraph>クラスは、型の<xref:System.Windows.Documents.TextElement>します。 コンテンツ モデルは、他のオブジェクトや要素に含めることのできるオブジェクトや要素を記述します。 派生したオブジェクトに使用するコンテンツ モデルのこの概要を示します<xref:System.Windows.Documents.TextElement>します。 詳細については、次を参照してください。[フロー ドキュメントの概要](flow-document-overview.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "59125121"
   
  前の図からわかるように、要素で許容される子は必ずしも決定されませんからクラスを派生するかどうかによって、<xref:System.Windows.Documents.Block>クラスまたは<xref:System.Windows.Documents.Inline>クラス。 など、 <xref:System.Windows.Documents.Span> (、 <xref:System.Windows.Documents.Inline>-クラスの派生) のみ持つことができます<xref:System.Windows.Documents.Inline>、子要素が、 <xref:System.Windows.Documents.Figure> (も、 <xref:System.Windows.Documents.Inline>-派生クラス) のみ持つことができます<xref:System.Windows.Documents.Block>子要素。 そのため、どの要素を別の要素に含めることができるかをすばやく判断するには、図が役立ちます。 たとえばのフロー コンテンツを構築する方法を決定するみましょう、図を使用する<xref:System.Windows.Controls.RichTextBox>します。  
   
-1.  A<xref:System.Windows.Controls.RichTextBox>含める必要があります、<xref:System.Windows.Documents.FlowDocument>をさらに含める必要があります、 <xref:System.Windows.Documents.Block>-派生オブジェクト。 上の図に対応するセグメントを次に示します。  
+1. A<xref:System.Windows.Controls.RichTextBox>含める必要があります、<xref:System.Windows.Documents.FlowDocument>をさらに含める必要があります、 <xref:System.Windows.Documents.Block>-派生オブジェクト。 上の図に対応するセグメントを次に示します。  
   
      ![図に示します。RichTextBox コンテインメント規則](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59125121"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  に従って、ダイアグラムは、いくつか<xref:System.Windows.Documents.Block>要素を含むを<xref:System.Windows.Documents.Paragraph>、 <xref:System.Windows.Documents.Section>、 <xref:System.Windows.Documents.Table>、 <xref:System.Windows.Documents.List>、および<xref:System.Windows.Documents.BlockUIContainer>(前の図の Block の派生クラスを参照してください)。 ここですると、<xref:System.Windows.Documents.Table>します。 上記の図によると、<xref:System.Windows.Documents.Table>が含まれています、<xref:System.Windows.Documents.TableRowGroup>を含む<xref:System.Windows.Documents.TableRow>を含む要素を<xref:System.Windows.Documents.TableCell>要素を含む、 <xref:System.Windows.Documents.Block>-派生オブジェクト。 次に、対応するセグメントの<xref:System.Windows.Documents.Table>上の図から取得されます。  
+2. に従って、ダイアグラムは、いくつか<xref:System.Windows.Documents.Block>要素を含むを<xref:System.Windows.Documents.Paragraph>、 <xref:System.Windows.Documents.Section>、 <xref:System.Windows.Documents.Table>、 <xref:System.Windows.Documents.List>、および<xref:System.Windows.Documents.BlockUIContainer>(前の図の Block の派生クラスを参照してください)。 ここですると、<xref:System.Windows.Documents.Table>します。 上記の図によると、<xref:System.Windows.Documents.Table>が含まれています、<xref:System.Windows.Documents.TableRowGroup>を含む<xref:System.Windows.Documents.TableRow>を含む要素を<xref:System.Windows.Documents.TableCell>要素を含む、 <xref:System.Windows.Documents.Block>-派生オブジェクト。 次に、対応するセグメントの<xref:System.Windows.Documents.Table>上の図から取得されます。  
   
      ![図に示します。親&#47;子テーブルのスキーマ](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59125121"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  ここでも、1 つまたは複数<xref:System.Windows.Documents.Block>要素は、下にある必要がある、<xref:System.Windows.Documents.TableCell>します。 簡単にするために、セル内にいくつかのテキストを配置することにします。 これにを使用して、<xref:System.Windows.Documents.Paragraph>で、<xref:System.Windows.Documents.Run>要素。 示すダイアグラムから対応するセグメントを次に、<xref:System.Windows.Documents.Paragraph>かかることがあります、<xref:System.Windows.Documents.Inline>要素とする、 <xref:System.Windows.Documents.Run> (、<xref:System.Windows.Documents.Inline>要素) プレーン テキストのみを取ることができます。  
+3. ここでも、1 つまたは複数<xref:System.Windows.Documents.Block>要素は、下にある必要がある、<xref:System.Windows.Documents.TableCell>します。 簡単にするために、セル内にいくつかのテキストを配置することにします。 これにを使用して、<xref:System.Windows.Documents.Paragraph>で、<xref:System.Windows.Documents.Run>要素。 示すダイアグラムから対応するセグメントを次に、<xref:System.Windows.Documents.Paragraph>かかることがあります、<xref:System.Windows.Documents.Inline>要素とする、 <xref:System.Windows.Documents.Run> (、<xref:System.Windows.Documents.Inline>要素) プレーン テキストのみを取ることができます。  
   
      ![図に示します。親&#47;段落の子スキーマ](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

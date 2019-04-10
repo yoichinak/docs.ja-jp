@@ -2,21 +2,21 @@
 title: '方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339178"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>方法: 署名のないフレンド アセンブリ (Visual Basic) を作成します。
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>署名のないアセンブリとフレンド アセンブリを作成するには  
   
-1.  コマンド プロンプトを開きます。  
+1. コマンド プロンプトを開きます。  
   
-2.  という名前の Visual Basic ファイルを作成する`friend_signed_A.`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
+2. という名前の Visual Basic ファイルを作成する`friend_signed_A.`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ ms.locfileid: "58819386"
     End Class  
     ```  
   
-3.  次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
+3. 次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  という名前の Visual Basic ファイルを作成する`friend_unsigned_B`次のコードを格納しています。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `Friend` 型とメンバーにアクセスできます。  
+4. という名前の Visual Basic ファイルを作成する`friend_unsigned_B`次のコードを格納しています。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `Friend` 型とメンバーにアクセスできます。  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ ms.locfileid: "58819386"
     End Module  
     ```  
   
-5.  次のコマンドを使用して friend_signed_B をコンパイルします。  
+5. 次のコマンドを使用して friend_signed_B をコンパイルします。  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,7 +77,7 @@ ms.locfileid: "58819386"
   
      コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`/out`コンパイラ オプション。  
   
-6.  friend_signed_B.exe ファイルを実行します。  
+6. friend_signed_B.exe ファイルを実行します。  
   
      プログラムでは、2 つの文字列が表示されます。"Class1.Test" と "Class2.Test" です。  
   

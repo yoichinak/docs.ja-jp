@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336123"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールの書式を設定する
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147902"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid コントロールの既定のスタイルを確立するには  
   
-1.  必要に応じて、次のプロパティを設定します。  
+1. 必要に応じて、次のプロパティを設定します。  
   
     |プロパティ|説明|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147902"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>データ テーブルのテーブルと列のスタイルをプログラムで設定するには  
   
-1.  新しいテーブルのスタイルを作成し、そのプロパティを設定します。  
+1. 新しいテーブルのスタイルを作成し、そのプロパティを設定します。  
   
-2.  列のスタイルを作成し、そのプロパティを設定します。  
+2. 列のスタイルを作成し、そのプロパティを設定します。  
   
-3.  テーブル スタイルの列スタイルのコレクションに列のスタイルを追加します。  
+3. テーブル スタイルの列スタイルのコレクションに列のスタイルを追加します。  
   
-4.  データ グリッドのテーブル スタイルのコレクションには、テーブルのスタイルを追加します。  
+4. データ グリッドのテーブル スタイルのコレクションには、テーブルのスタイルを追加します。  
   
-5.  次の例での新しいインスタンスを作成<xref:System.Windows.Forms.DataGridTableStyle>設定とその<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>プロパティ。  
+5. 次の例での新しいインスタンスを作成<xref:System.Windows.Forms.DataGridTableStyle>設定とその<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>プロパティ。  
   
-6.  新しいインスタンスを作成、 **GridColumnStyle**設定とその**MappingName** (およびその他のいくつかのレイアウトと表示プロパティ)。  
+6. 新しいインスタンスを作成、 **GridColumnStyle**設定とその**MappingName** (およびその他のいくつかのレイアウトと表示プロパティ)。  
   
-7.  各列のスタイルを作成するには、手順 2. ~ 6. を繰り返します。  
+7. 各列のスタイルを作成するには、手順 2. ~ 6. を繰り返します。  
   
      次の例を示して 方法、<xref:System.Windows.Forms.DataGridTextBoxColumn>名前が列に表示されるため、作成されます。 さらに、列のスタイルを追加、<xref:System.Windows.Forms.GridColumnStylesCollection>のテーブルのスタイルをテーブルのスタイルを追加して、<xref:System.Windows.Forms.GridTableStylesCollection>データ グリッドの。  
   

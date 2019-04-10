@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335876"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する
 Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使用すると、その他のコントロールをグループ化します。 コントロールをグループ化の 3 つの理由があります。  
@@ -24,13 +24,13 @@ Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使
   
 ### <a name="to-create-a-group-of-controls"></a>コントロールのグループを作成するには  
   
-1.  描画を<xref:System.Windows.Forms.GroupBox>フォーム上のコントロール。  
+1. 描画を<xref:System.Windows.Forms.GroupBox>フォーム上のコントロール。  
   
-2.  グループ ボックスで、各グループ ボックス内を描画するには、他のコントロールを追加します。  
+2. グループ ボックスで、各グループ ボックス内を描画するには、他のコントロールを追加します。  
   
      グループ ボックスで囲むしたい既存のコントロールの場合は、すべてのコントロールを選択して、選択、クリップボードに切り取ります、<xref:System.Windows.Forms.GroupBox>コントロールし、グループ ボックスに貼り付けます。 グループ ボックスにドラッグすることもできます。  
   
-3.  設定、<xref:System.Windows.Forms.GroupBox.Text%2A>に適切なキャプション グループ ボックスのプロパティ。  
+3. 設定、<xref:System.Windows.Forms.GroupBox.Text%2A>に適切なキャプション グループ ボックスのプロパティ。  
   
 ## <a name="see-also"></a>関連項目
 

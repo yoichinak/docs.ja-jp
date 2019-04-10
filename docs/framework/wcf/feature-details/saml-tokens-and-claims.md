@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339841"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML トークンとクレーム
 セキュリティ アサーション マークアップ言語 (SAML)*トークン*は要求の XML 表現です。 フェデレーション セキュリティ シナリオで Windows Communication Foundation (WCF) を使用して SAML トークンは、既定では、*発行済みトークン*します。  
   
  SAML トークンは、ステートメント (特定のエンティティによって他のエンティティに関して作成されるクレームのセット) を伝達します。 たとえば、フェデレーション セキュリティ シナリオでは、ステートメントがセキュリティ トークン サービスによって、システム内の特定のユーザーに関して作成されます。 セキュリティ トークン サービスは、トークンに含まれるステートメントの信憑性を示すために SAML トークンに署名します。 また、SAML トークンは、SAML トークンのユーザーが証明として提示する暗号化キー マテリアルに関連付けられています。 これが証拠となり、証明書利用者は、SAML トークンが実際にそのユーザーに対して発行されたことを確認できます。 一般的なシナリオでの例を次に示します。  
   
-1.  クライアントは、セキュリティ トークン サービスから SAML トークンを要求し、Windows 資格情報を使用して、そのセキュリティ トークン サービスに対して認証を行います。  
+1. クライアントは、セキュリティ トークン サービスから SAML トークンを要求し、Windows 資格情報を使用して、そのセキュリティ トークン サービスに対して認証を行います。  
   
-2.  セキュリティ トークン サービスは、SAML トークンをクライアントに発行します。 SAML トークンは、セキュリティ トークン サービスに関連付けられた証明書を使用して署名され、ターゲット サービス用に暗号化された証明キーを含んでいます。  
+2. セキュリティ トークン サービスは、SAML トークンをクライアントに発行します。 SAML トークンは、セキュリティ トークン サービスに関連付けられた証明書を使用して署名され、ターゲット サービス用に暗号化された証明キーを含んでいます。  
   
-3.  クライアントのコピーを受け取ることも、*証明キー*します。 クライアント アプリケーション サービスに SAML トークンを提示し、(、*証明書利用者*) し、その証明キーを持つメッセージに署名します。  
+3. クライアントのコピーを受け取ることも、*証明キー*します。 クライアント アプリケーション サービスに SAML トークンを提示し、(、*証明書利用者*) し、その証明キーを持つメッセージに署名します。  
   
-4.  SAML トークンの署名は、そのトークンがセキュリティ トークン サービスによって発行されたことを証明書利用者に示します。 また、証明キーを使用して作成されたメッセージ署名は、トークンがそのクライアントに対して発行されたことを示します。  
+4. SAML トークンの署名は、そのトークンがセキュリティ トークン サービスによって発行されたことを証明書利用者に示します。 また、証明キーを使用して作成されたメッセージ署名は、トークンがそのクライアントに対して発行されたことを示します。  
   
 ## <a name="from-claims-to-samlattributes"></a>クレームから SamlAttributes  
  WCF では、SAML トークン内のステートメントとしてモデル化します<xref:System.IdentityModel.Tokens.SamlAttribute>から直接データを読み込むことができます、オブジェクト<xref:System.IdentityModel.Claims.Claim>提供されているオブジェクト、<xref:System.IdentityModel.Claims.Claim>オブジェクトには、<xref:System.IdentityModel.Claims.Claim.Right%2A>プロパティの<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>、<xref:System.IdentityModel.Claims.Claim.Resource%2A>のプロパティは、。型<xref:System.String>します。 例:  

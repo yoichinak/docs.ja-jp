@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144015"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341492"
 ---
 # <a name="how-to-create-thumbnail-images"></a>方法: サムネイル イメージを作成する
 サムネイル イメージは、小さいイメージのバージョンです。 サムネイル イメージを作成するには呼び出すことによって、<xref:System.Drawing.Image.GetThumbnailImage%2A>のメソッド、<xref:System.Drawing.Image>オブジェクト。  
@@ -34,19 +34,19 @@ ms.locfileid: "59144015"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 例を実行するには、次の手順に従います。  
   
-1.  新しい Windows フォーム アプリケーションを作成します。  
+1. 新しい Windows フォーム アプリケーションを作成します。  
   
-2.  コード例をフォームに追加します。  
+2. コード例をフォームに追加します。  
   
-3.  フォームのハンドラーを作成<xref:System.Windows.Forms.Control.Paint>イベント  
+3. フォームのハンドラーを作成<xref:System.Windows.Forms.Control.Paint>イベント  
   
-4.  <xref:System.Windows.Forms.Control.Paint>ハンドラーを呼び出し、`GetThumbnail`メソッドを渡します`e`の<xref:System.Windows.Forms.PaintEventArgs>します。  
+4. <xref:System.Windows.Forms.Control.Paint>ハンドラーを呼び出し、`GetThumbnail`メソッドを渡します`e`の<xref:System.Windows.Forms.PaintEventArgs>します。  
   
-5.  サムネイルを作成したいイメージ ファイルを検索します。  
+5. サムネイルを作成したいイメージ ファイルを検索します。  
   
-6.  `GetThumbnail`メソッドは、パスを指定し、ファイル名をイメージにします。  
+6. `GetThumbnail`メソッドは、パスを指定し、ファイル名をイメージにします。  
   
-7.  F5 キーを押して、例を実行します。  
+7. F5 キーを押して、例を実行します。  
   
      フォームに 100 × 100 のサムネイル画像が表示されます。  
   

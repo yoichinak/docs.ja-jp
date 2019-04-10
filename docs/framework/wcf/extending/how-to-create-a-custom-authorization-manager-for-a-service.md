@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337839"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>方法: サービスで使用するカスタム承認マネージャーを作成する
 Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) には、拡張可能なクレーム ベースの承認モデルがサポートしています。 クレームはトークンから抽出され、状況に応じてカスタム承認ポリシーによって処理されてから、<xref:System.IdentityModel.Policy.AuthorizationContext> に格納されます。 承認マネージャーは、<xref:System.IdentityModel.Policy.AuthorizationContext> 内のクレームを検査して承認に関する決定を行います。  
@@ -28,12 +28,12 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 ### <a name="to-create-a-custom-authorization-manager"></a>カスタム承認マネージャーを作成するには  
   
-1.  <xref:System.ServiceModel.ServiceAuthorizationManager> クラスからクラスを派生させます。  
+1. <xref:System.ServiceModel.ServiceAuthorizationManager> クラスからクラスを派生させます。  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> メソッドをオーバーライドします。  
+2. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> メソッドをオーバーライドします。  
   
      <xref:System.ServiceModel.OperationContext> メソッドに渡される <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> を使用して、承認に関する決定を行います。  
   
@@ -44,7 +44,7 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>コードを使用してカスタム承認マネージャーを登録するには  
   
-1.  カスタム承認マネージャーのインスタンスを作成し、これを <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> プロパティに割り当てます。  
+1. カスタム承認マネージャーのインスタンスを作成し、これを <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> プロパティに割り当てます。  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> には、<xref:System.ServiceModel.ServiceHostBase.Authorization%2A> プロパティを使用してアクセスできます。  
   
@@ -55,17 +55,17 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>構成を使用してカスタム承認マネージャーを登録するには  
   
-1.  サービスの構成ファイルを開きます。  
+1. サービスの構成ファイルを開きます。  
   
-2.  追加、 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)します。  
+2. 追加、 [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)します。  
   
      [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)、追加、`serviceAuthorizationManagerType`属性し、カスタム承認マネージャーを表す型に値を設定します。  
   
-3.  クライアントとサービスの間の通信をセキュリティで保護するバインディングを追加します。  
+3. クライアントとサービスの間の通信をセキュリティで保護するバインディングを追加します。  
   
      この通信用に選択されたバインディングによって、<xref:System.IdentityModel.Policy.AuthorizationContext> に追加されるクレームが決まります。これは、カスタム承認マネージャーが承認に関する決定を行うために使用します。 システム指定のバインディングの詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。  
   
-4.  追加することで、サービス エンドポイントの動作を関連付ける、 [\<サービス >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)要素の値を設定し、`behaviorConfiguration`属性の名前属性の値を[\<動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素。  
+4. 追加することで、サービス エンドポイントの動作を関連付ける、 [\<サービス >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)要素の値を設定し、`behaviorConfiguration`属性の名前属性の値を[\<動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素。  
   
      サービス エンドポイントを構成する方法の詳細については、次を参照してください。[方法。サービス エンドポイントの構成で作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)です。  
   

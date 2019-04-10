@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137671"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335395"
 ---
 # <a name="object-materialization-wcf-data-services"></a>オブジェクトの具体化 (WCF Data Services)
 使用すると、**サービス参照の追加**ダイアログを使用する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]同等のデータ クラスは .NET Framework ベースのクライアント アプリケーションでのフィード、フィードによって公開されているデータ モデルのエンティティ型ごと生成されます。 詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 マージ オプションおよび追跡オブジェクトの id 解決については、次を参照してください。[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)します。  
@@ -19,7 +19,7 @@ ms.locfileid: "59137671"
   
  返されたデータを具体化ライブラリでは、クエリの応答メッセージを受信した後、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]クライアント データのインスタンスには、クエリの種類のサービス クラスにフィードします。 これらのオブジェクトを具体化する一般的なプロセスは次のとおりです。  
   
-1.  クライアント ライブラリは、応答メッセージ フィード内の `entry` 要素からシリアル化された型を読み取り、次のいずれかの方法で正しい型の新しいインスタンスの作成を試みます。  
+1. クライアント ライブラリは、応答メッセージ フィード内の `entry` 要素からシリアル化された型を読み取り、次のいずれかの方法で正しい型の新しいインスタンスの作成を試みます。  
   
     -   フィードで宣言された型の名前が <xref:System.Data.Services.Client.DataServiceQuery%601> の型と同じ場合は、空のコンストラクターを使用してこの型の新しいインスタンスが作成されます。  
   
@@ -29,9 +29,9 @@ ms.locfileid: "59137671"
   
     -   <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A> プロパティが設定されている場合、指定されたデリゲートが呼び出され、既定の名前ベースの型のマッピングを上書きし、<xref:System.Func%602> によって返された型の新しいインスタンスが代わりに作成されます。 このデリゲートが NULL 値を返した場合、クエリされた型の新しいインスタンスが代わりに作成されます。 継承のシナリオをサポートするために、既定の名前ベースの型名のマッピングをオーバーライドすることが必要な場合があります。  
   
-2.  クライアント ライブラリは `id` の `entry` 要素から URI 値を読み取ります。これがエンティティの ID 値です。 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> の  <xref:System.Data.Services.Client.MergeOption.NoTracking> 値が使用されない限り、<xref:System.Data.Services.Client.DataServiceContext> のオブジェクトの追跡には、ID 値が使用されます。 さらに、クエリ応答でエンティティが複数回返されたときでも、単一のエンティティ インスタンスのみが作成されることを保証するためにも ID 値を使用します。  
+2. クライアント ライブラリは `id` の `entry` 要素から URI 値を読み取ります。これがエンティティの ID 値です。 <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A> の  <xref:System.Data.Services.Client.MergeOption.NoTracking> 値が使用されない限り、<xref:System.Data.Services.Client.DataServiceContext> のオブジェクトの追跡には、ID 値が使用されます。 さらに、クエリ応答でエンティティが複数回返されたときでも、単一のエンティティ インスタンスのみが作成されることを保証するためにも ID 値を使用します。  
   
-3.  クライアント ライブラリは、フィード エントリからプロパティを読み取り、新しく作成されたオブジェクトに対応するプロパティを設定します。 <xref:System.Data.Services.Client.DataServiceContext> に同じ ID 値のオブジェクトが既に存在する場合、プロパティは、<xref:System.Data.Services.Client.MergeOption> の <xref:System.Data.Services.Client.DataServiceContext> 設定に基づき設定されます。 応答には、クライアント型で対応するプロパティがないプロパティ値が含まれる場合があります。 そのような場合、アクションは、<xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> の <xref:System.Data.Services.Client.DataServiceContext> プロパティの値によって異なります。 このプロパティが `true` に設定されている場合は、欠落しているプロパティは無視されます。 それ以外の場合は、エラーが発生します。 プロパティは次のように設定されます。  
+3. クライアント ライブラリは、フィード エントリからプロパティを読み取り、新しく作成されたオブジェクトに対応するプロパティを設定します。 <xref:System.Data.Services.Client.DataServiceContext> に同じ ID 値のオブジェクトが既に存在する場合、プロパティは、<xref:System.Data.Services.Client.MergeOption> の <xref:System.Data.Services.Client.DataServiceContext> 設定に基づき設定されます。 応答には、クライアント型で対応するプロパティがないプロパティ値が含まれる場合があります。 そのような場合、アクションは、<xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> の <xref:System.Data.Services.Client.DataServiceContext> プロパティの値によって異なります。 このプロパティが `true` に設定されている場合は、欠落しているプロパティは無視されます。 それ以外の場合は、エラーが発生します。 プロパティは次のように設定されます。  
   
     -   スカラー プロパティは、応答メッセージのエントリ内の対応する値に設定されます。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "59137671"
         > [!NOTE]
         >  生成されたクライアント データ クラスでデータ バインディングがサポートされる場合、ナビゲーション プロパティは代わりに <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスを返します。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。  
   
-4.  <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> イベントが発生します。  
+4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> イベントが発生します。  
   
-5.  クライアント ライブラリは <xref:System.Data.Services.Client.DataServiceContext> にオブジェクトをアタッチします。 <xref:System.Data.Services.Client.MergeOption> が <xref:System.Data.Services.Client.MergeOption.NoTracking> の場合は、オブジェクトはアタッチされません。  
+5. クライアント ライブラリは <xref:System.Data.Services.Client.DataServiceContext> にオブジェクトをアタッチします。 <xref:System.Data.Services.Client.MergeOption> が <xref:System.Data.Services.Client.MergeOption.NoTracking> の場合は、オブジェクトはアタッチされません。  
   
 ## <a name="see-also"></a>関連項目
 

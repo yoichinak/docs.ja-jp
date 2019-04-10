@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: e66d8c81114a4550f0473f75a8101e79e8db2c76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 888b1910902819b847d7d622f7b086fec82d669d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334355"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>方法: デザイナーを使って Windows フォーム パネルの背景を設定する
 Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背景色と背景イメージの両方を表示できます。 <xref:System.Windows.Forms.Control.BackColor%2A>プロパティ パネルで、ラベルなどが含まれており、ラジオ ボタン コントロールの背景色を設定します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されていない、<xref:System.Windows.Forms.Control.BackColor%2A>選択がパネルのすべてを入力します。 場合、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティが設定されて、パネルに含まれるコントロールの背後にある画像が表示されます。  
@@ -24,17 +24,17 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背
   
 ### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Windows フォーム デザイナーの背景を設定するには  
   
-1.  <xref:System.Windows.Forms.Panel> コントロールを選択します。  
+1. <xref:System.Windows.Forms.Panel> コントロールを選択します。  
   
-2.  **プロパティ**ウィンドウで、矢印ボタンをクリックして、 <xref:System.Windows.Forms.Control.BackColor%2A> 3 つのタブとウィンドウを表示するプロパティ。  
+2. **プロパティ**ウィンドウで、矢印ボタンをクリックして、 <xref:System.Windows.Forms.Control.BackColor%2A> 3 つのタブとウィンドウを表示するプロパティ。  
   
-3.  選択、**カスタム**色のパレットを表示するタブ。  
+3. 選択、**カスタム**色のパレットを表示するタブ。  
   
-4.  選択、 **Web**または**システム**色の定義済みの名前の一覧を表示するタブし、色を選択します。  
+4. 選択、 **Web**または**システム**色の定義済みの名前の一覧を表示するタブし、色を選択します。  
   
-5.  **プロパティ**ウィンドウで、矢印ボタンをクリックして、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティ。  
+5. **プロパティ**ウィンドウで、矢印ボタンをクリックして、<xref:System.Windows.Forms.Control.BackgroundImage%2A>プロパティ。  
   
-6.  **オープン** ダイアログ ボックスを表示するファイルを選択します。  
+6. **オープン** ダイアログ ボックスを表示するファイルを選択します。  
   
 ## <a name="see-also"></a>関連項目
 

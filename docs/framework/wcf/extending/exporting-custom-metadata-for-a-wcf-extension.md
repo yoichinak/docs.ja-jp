@@ -2,12 +2,12 @@
 title: WCF 拡張に対するカスタム メタデータのエクスポート
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334511"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのエクスポート
 Windows Communication Foundation (WCF) では、メタデータのエクスポートはサービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に投影するそれらのプロセスです。 カスタム メタデータは、システム指定のメタデータ エクスポーターでエクスポートできない XML 要素で構成されます。 通常、これは、ユーザー定義動作のカスタム WSDL 要素とバインド要素、およびバインディングとコントラクトの機能と要件に関するポリシー アサーションを含みます。  
@@ -19,9 +19,9 @@ Windows Communication Foundation (WCF) では、メタデータのエクスポ�
   
  ここでは、次の内容について説明します。  
   
-1.  WSDL を発行する前に WSDL の生成データを公開する <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> インターフェイスを実装して使用する方法。  
+1. WSDL を発行する前に WSDL の生成データを公開する <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> インターフェイスを実装して使用する方法。  
   
-2.  WSDL データに含まれるポリシー アサーションをエクスポートする前にポリシー データを公開する <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> インターフェイスを実装して使用する方法。  
+2. WSDL データに含まれるポリシー アサーションをエクスポートする前にポリシー データを公開する <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> インターフェイスを実装して使用する方法。  
   
  カスタム WSDL とポリシー アサーションをインポートする方法の詳細については、次を参照してください。 [WCF 拡張機能のカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)します。  
   

@@ -2,12 +2,12 @@
 title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337423"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応の Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 同等の WCF が ASP.NET AJAX サービスのバージョンを作成する方法を示します。 並行して 2 つのサービスは使用して、または WCF サービスが ASP.NET AJAX サービスを置き換えることができます。
@@ -26,21 +26,21 @@ ms.locfileid: "59143001"
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>ASP.NET Web サービス アプリケーションを作成してテストする
 
-1.  Visual Studio 2012 を開きます。
+1. Visual Studio 2012 を開きます。
 
-2.  **ファイル**メニューの **新規**、し**プロジェクト**、し**Web**、し、 **ASP.NET Web サービス アプリケーション**.
+2. **ファイル**メニューの **新規**、し**プロジェクト**、し**Web**、し、 **ASP.NET Web サービス アプリケーション**.
 
-3.  プロジェクトに名前を`ASPHello` をクリック**OK**します。
+3. プロジェクトに名前を`ASPHello` をクリック**OK**します。
 
-4.  Service1.asmx.cs ファイルで、`System.Web.Script.Services.ScriptService]` が含まれた行のコメントを解除し、このサービスに対して AJAX を有効にします。
+4. Service1.asmx.cs ファイルで、`System.Web.Script.Services.ScriptService]` が含まれた行のコメントを解除し、このサービスに対して AJAX を有効にします。
 
-5.  **ビルド**メニューの **ソリューションのビルド**します。
+5. **ビルド**メニューの **ソリューションのビルド**します。
 
-6.  **[デバッグ]** メニューの **[デバッグなしで開始]** をクリックします。
+6. **[デバッグ]** メニューの **[デバッグなしで開始]** をクリックします。
 
-7.  生成された Web ページで、`HelloWorld` 操作を選択します。
+7. 生成された Web ページで、`HelloWorld` 操作を選択します。
 
-8.  をクリックして、 **Invoke**のボタンでは、`HelloWorld`テスト ページ。 次の XML 応答を受信します。
+8. をクリックして、 **Invoke**のボタンでは、`HelloWorld`テスト ページ。 次の XML 応答を受信します。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -53,13 +53,13 @@ ms.locfileid: "59143001"
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>同等の WCF AJAX サービス アプリケーションを作成するには
 
-1.  右クリックし、 **ASPHello**順に選択して**追加**、し**新しい項目の**、し**AJAX 対応 WCF サービス**します。
+1. 右クリックし、 **ASPHello**順に選択して**追加**、し**新しい項目の**、し**AJAX 対応 WCF サービス**します。
 
-2.  サービスの名前を付けます`WCFHello` をクリック**追加**します。
+2. サービスの名前を付けます`WCFHello` をクリック**追加**します。
 
-3.  WCFHello.svc.cs ファイルを開きます。
+3. WCFHello.svc.cs ファイルを開きます。
 
-4.  Service1.asmx.cs からの次の実装をコピー、`HelloWorld`操作。
+4. Service1.asmx.cs からの次の実装をコピー、`HelloWorld`操作。
 
     ```
     public string HelloWorld()
@@ -68,7 +68,7 @@ ms.locfileid: "59143001"
     }
     ```
 
-5.  コピーの実装に貼り付け、`HelloWorld`次のコードの代わりに、WCFHello.svc.cs ファイル操作。
+5. コピーの実装に貼り付け、`HelloWorld`次のコードの代わりに、WCFHello.svc.cs ファイル操作。
 
     ```
     public void DoWork()
@@ -78,7 +78,7 @@ ms.locfileid: "59143001"
     }
     ```
 
-6.  指定、`Namespace`属性<xref:System.ServiceModel.ServiceContractAttribute>として`WCFHello`します。
+6. 指定、`Namespace`属性<xref:System.ServiceModel.ServiceContractAttribute>として`WCFHello`します。
 
     ```
     [ServiceContract(Namespace="WCFHello")]
@@ -87,7 +87,7 @@ ms.locfileid: "59143001"
     { … }
     ```
 
-7.  追加、<xref:System.ServiceModel.Web.WebInvokeAttribute>を`HelloWorld`操作し、セット、<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>プロパティを返す<xref:System.ServiceModel.Web.WebMessageFormat.Xml>します。 この設定を行わない場合、既定の戻り値の型は <xref:System.ServiceModel.Web.WebMessageFormat.Json> です。
+7. 追加、<xref:System.ServiceModel.Web.WebInvokeAttribute>を`HelloWorld`操作し、セット、<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>プロパティを返す<xref:System.ServiceModel.Web.WebMessageFormat.Xml>します。 この設定を行わない場合、既定の戻り値の型は <xref:System.ServiceModel.Web.WebMessageFormat.Json> です。
 
     ```
     [OperationContract]
@@ -98,7 +98,7 @@ ms.locfileid: "59143001"
     }
     ```
 
-8.  **ビルド**メニューの **ソリューションのビルド**します。
+8. **ビルド**メニューの **ソリューションのビルド**します。
 
 9. WCFHello.svc ファイルを開くとの間、**デバッグ**メニューの **デバッグなしで開始**します。
 

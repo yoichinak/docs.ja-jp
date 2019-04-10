@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334004"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールを位置設定する
 コントロールの位置、Windows フォーム デザイナーを使用するかを指定する、<xref:System.Windows.Forms.Control.Location%2A>プロパティ。  
@@ -37,9 +37,9 @@ ms.locfileid: "59132796"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>[プロパティ] ウィンドウを使用してコントロールを配置するには  
   
-1.  移動するコントロールをクリックします。  
+1. 移動するコントロールをクリックします。  
   
-2.  **プロパティ**ウィンドウで、値を入力、<xref:System.Windows.Forms.Control.Location%2A>プロパティ、コントロール コンテナー内の位置をコンマで区切って指定します。  
+2. **プロパティ**ウィンドウで、値を入力、<xref:System.Windows.Forms.Control.Location%2A>プロパティ、コントロール コンテナー内の位置をコンマで区切って指定します。  
   
      最初の数値 (X) は、コンテナーの左端からの距離2 番目の数字 (Y) は、ピクセル単位で、コンテナーの領域の上端からの距離です。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59132796"
   
 ### <a name="to-position-a-control-programmatically"></a>プログラムでコントロールを配置するには  
   
-1.  設定、<xref:System.Windows.Forms.Control.Location%2A>するコントロールのプロパティを<xref:System.Drawing.Point>します。  
+1. 設定、<xref:System.Windows.Forms.Control.Location%2A>するコントロールのプロパティを<xref:System.Drawing.Point>します。  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "59132796"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  変更するコントロールの位置の X 座標を使用して、<xref:System.Windows.Forms.Control.Left%2A>サブプロパティ。  
+2. 変更するコントロールの位置の X 座標を使用して、<xref:System.Windows.Forms.Control.Left%2A>サブプロパティ。  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "59132796"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>コントロールの位置をプログラムでインクリメントするには  
   
-1.  設定、<xref:System.Windows.Forms.Control.Left%2A>サブプロパティをコントロールの X 座標をインクリメントします。  
+1. 設定、<xref:System.Windows.Forms.Control.Left%2A>サブプロパティをコントロールの X 座標をインクリメントします。  
   
     ```vb  
     Button1.Left += 200  

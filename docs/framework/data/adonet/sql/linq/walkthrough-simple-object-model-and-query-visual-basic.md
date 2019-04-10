@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338073"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)
 このチュートリアルでは、複雑さを抑えた、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 全体の基本的なシナリオを示します。 サンプルの Northwind データベースにある Customers テーブルのモデル化を行うエンティティ クラスを作成します。 次に、住所がロンドンの顧客を表示するための簡単なクエリを作成します。  
@@ -46,32 +46,32 @@ ms.locfileid: "59169105"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-2.  **プロジェクトの種類**のウィンドウ、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual Basic**します。  
+2. **プロジェクトの種類**のウィンドウ、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual Basic**します。  
   
-3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+3. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに「 **LinqConsoleApp**します。  
+4. **名前**ボックスに「 **LinqConsoleApp**します。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
  このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 場合`System.Data.Linq`がプロジェクトの参照として表示されない (をクリックして**すべてのファイル**で**ソリューション エクスプ ローラー**を展開し、**参照**ノード) で説明したように、それを追加次の手順。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
+2. **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
   
      アセンブリがプロジェクトに追加されます。  
   
-3.  さらに、**参照の追加**ダイアログ ボックスで、をクリックして **.NET**をスクロールして [System.Windows.Forms、] をクリックし、順にクリックします **[ok]** します。  
+3. さらに、**参照の追加**ダイアログ ボックスで、をクリックして **.NET**をスクロールして [System.Windows.Forms、] をクリックし、順にクリックします **[ok]** します。  
   
      このチュートリアルで使用するメッセージ ボックスをサポートするアセンブリがプロジェクトに追加されます。  
   
-4.  `Module1` の上に次のディレクティブを追加します。  
+4. `Module1` の上に次のディレクティブを追加します。  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ ms.locfileid: "59169105"
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   
-1.  `Sub Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
+1. `Sub Main` メソッドの末尾 (クエリ指定の後) に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  F5 キーを押してアプリケーションをデバッグします。  
+2. F5 キーを押してアプリケーションをデバッグします。  
   
     > [!NOTE]
     >  アプリケーションでは、実行時エラーを生成する場合のトラブルシューティングに関するセクションを参照してください。[チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)します。  
   
      メッセージ ボックスには 6 人の顧客の一覧が表示されます。 コンソール ウィンドウには生成された SQL コードが表示されます。  
   
-3.  **[OK]** をクリックしてメッセージ ボックスを閉じます。  
+3. **[OK]** をクリックしてメッセージ ボックスを閉じます。  
   
      アプリケーションが終了します。  
   
-4.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
+4. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
      引き続き次のチュートリアルに進む場合は、このアプリケーションが必要になります。  
   

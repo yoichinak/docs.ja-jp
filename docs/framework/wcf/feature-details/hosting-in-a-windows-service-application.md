@@ -2,12 +2,12 @@
 title: Windows サービス アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216757"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335369"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows サービス アプリケーションのホスト
 Windows サービス (従来 Windows NT サービスと呼ばれていたもの) が提供するプロセス モデルが特に適しているのは、長い期間にわたって動作し続ける必要があり、どのような形式でもユーザー インターフェイスを表示することのないアプリケーションです。 Windows サービス アプリケーションのプロセスの有効期間を管理するのは、サービス コントロール マネージャー (SCM) です。SCM を使用して、Windows サービス アプリケーションを起動、停止、および一時停止できます。 「常時オン」のアプリケーションの適切なホスティング環境のため、コンピューターの起動時に自動的に開始する、Windows サービスのプロセスを構成することができます。 Windows サービス アプリケーションの詳細については、次を参照してください。 [Windows サービス アプリケーション](https://go.microsoft.com/fwlink/?LinkId=89450)します。  
@@ -24,9 +24,9 @@ Windows サービス (従来 Windows NT サービスと呼ばれていたもの)
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Windows サービス アプリケーションの内部で WCF をホストするには  
   
-1.  Windows サービス アプリケーションを作成します。 Windows サービス アプリケーションは、<xref:System.ServiceProcess> 名前空間のクラスを使用して、マネージ コードとして記述することができます。 このアプリケーションには、<xref:System.ServiceProcess.ServiceBase> から派生したクラスを 1 つ含める必要があります。  
+1. Windows サービス アプリケーションを作成します。 Windows サービス アプリケーションは、<xref:System.ServiceProcess> 名前空間のクラスを使用して、マネージ コードとして記述することができます。 このアプリケーションには、<xref:System.ServiceProcess.ServiceBase> から派生したクラスを 1 つ含める必要があります。  
   
-2.  WCF サービスの有効期間を Windows サービス アプリケーションの有効期間にリンクします。 通常、ホスティング サービス開始時にアクティブになる、ホスティング、サービスが停止すると、WCF サービスには、エラーが発生したときに、ホスト プロセスをシャット ダウン場合に、メッセージのリッスンを停止する Windows サービス アプリケーションでホストされる WCF サービスをします。 これは次のようにして実装します。  
+2. WCF サービスの有効期間を Windows サービス アプリケーションの有効期間にリンクします。 通常、ホスティング サービス開始時にアクティブになる、ホスティング、サービスが停止すると、WCF サービスには、エラーが発生したときに、ホスト プロセスをシャット ダウン場合に、メッセージのリッスンを停止する Windows サービス アプリケーションでホストされる WCF サービスをします。 これは次のようにして実装します。  
   
     -   <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> をオーバーライドして、<xref:System.ServiceModel.ServiceHost> のインスタンスを必要な個数開くようにします。 1 つの Windows サービス アプリケーションは、開始時刻と停止をグループとして複数の WCF サービスをホストできます。  
   

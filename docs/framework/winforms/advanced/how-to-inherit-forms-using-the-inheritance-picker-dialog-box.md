@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212285"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342092"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法: [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する
 フォームまたは他のオブジェクトを継承する最も簡単な方法は、**[継承ピッカー]** ダイアログ ボックスを使用することです。 これを使用して、その他のソリューションで作成済みのコードまたはユーザー インターフェイス (UI) を利用できます。  
@@ -23,23 +23,23 @@ ms.locfileid: "59212285"
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>継承ピッカーを使用して既存のフォームから継承された Windows フォームを作成するには  
   
-1.  **[プロジェクト]** メニューの **[Windows フォームの追加]** を選択します。  
+1. **[プロジェクト]** メニューの **[Windows フォームの追加]** を選択します。  
   
      **[新しい項目の追加]** ダイアログ ボックスが開きます。  
   
-2.  検索、**継承されたフォーム**searchbox に対応するかをクリックして、テンプレート、 **Windows フォーム**カテゴリを選択しとで名前を付けます、**名前**ボックス。 **[追加]** をクリックして続行します。  
+2. 検索、**継承されたフォーム**searchbox に対応するかをクリックして、テンプレート、 **Windows フォーム**カテゴリを選択しとで名前を付けます、**名前**ボックス。 **[追加]** をクリックして続行します。  
   
      **[継承ピッカー]** ダイアログ ボックスが開きます。 現在のプロジェクトに既にフォームが含まれている場合は、**[継承ピッカー]** ダイアログ ボックスに表示されます。  
   
-3.  別のアセンブリのフォームから継承する場合は、**[参照]** をクリックします。  
+3. 別のアセンブリのフォームから継承する場合は、**[参照]** をクリックします。  
   
-4.  **[継承元コンポーネントを含むファイルの選択]** ダイアログ ボックスで、目的のフォームまたはモジュールを含むプロジェクトに移動します。  
+4. **[継承元コンポーネントを含むファイルの選択]** ダイアログ ボックスで、目的のフォームまたはモジュールを含むプロジェクトに移動します。  
   
-5.  .exe ファイルまたは .dll ファイルの名前をクリックして選択し、**[開く]** をクリックします。  
+5. .exe ファイルまたは .dll ファイルの名前をクリックして選択し、**[開く]** をクリックします。  
   
      これにより、**[継承ピッカー]** ダイアログ ボックスに戻ります。ダイアログ ボックスには、配置されているプロジェクトと共に、コンポーネントが表示されています。  
   
-6.  コンポーネントを選択します。  
+6. コンポーネントを選択します。  
   
      **ソリューション エクスプローラー**で、コンポーネントがプロジェクトに追加されます。 継承されたフォームの一部であるコントロールがグリフと見なされる UI がある場合 (![Visual Basic の継承シンボルのスクリーン ショット](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)) を選択すると、必要で、コントロールのあるセキュリティのレベルを示す罫線、スーパークラスのフォームです。 様々なセキュリティ レベルに対応する動作を、次の表に示します。  
   

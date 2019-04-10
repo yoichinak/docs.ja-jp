@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340725"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行
 Windows ベースのアプリケーション内でドラッグ アンド ドロップ操作を実行する必要がありますを処理する、一連のイベント、特に、 <xref:System.Windows.Forms.Control.DragEnter>、 <xref:System.Windows.Forms.Control.DragLeave>、および<xref:System.Windows.Forms.Control.DragDrop>イベント。 利用可能な情報、イベントのこれらのイベントの引数を使用して、ドラッグ アンド ドロップ操作を簡単に実行できます。  
@@ -28,7 +28,7 @@ Windows ベースのアプリケーション内でドラッグ アンド ドロ�
   
 #### <a name="to-start-a-drag-operation"></a>ドラッグ操作を開始するには  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 、ドラッグを開始する場所を使用してコントロールのイベントを`DoDragDrop`ドラッグされるデータを設定するメソッドと許可される効果をドラッグすることになります。 詳細については、次のトピックを参照してください。 <xref:System.Windows.Forms.DragEventArgs.Data%2A> および <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>  
+1. <xref:System.Windows.Forms.Control.MouseDown> 、ドラッグを開始する場所を使用してコントロールのイベントを`DoDragDrop`ドラッグされるデータを設定するメソッドと許可される効果をドラッグすることになります。 詳細については、次のトピックを参照してください。 <xref:System.Windows.Forms.DragEventArgs.Data%2A> および <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>  
   
      次の例では、ドラッグ操作を開始する方法を示します。 コントロールのドラッグが開始されるは、<xref:System.Windows.Forms.Button>コントロール、ドラッグされているデータは、文字列を表す、<xref:System.Windows.Forms.Control.Text%2A>のプロパティ、<xref:System.Windows.Forms.Button>制御、および許可された効果は、コピーまたは移動します。  
   
@@ -57,9 +57,9 @@ Windows ベースのアプリケーション内でドラッグ アンド ドロ�
   
 #### <a name="to-perform-a-drop"></a>ドロップを実行するには  
   
-1.  設定、<xref:System.Windows.Forms.Control.AllowDrop%2A>プロパティを true にします。  
+1. 設定、<xref:System.Windows.Forms.Control.AllowDrop%2A>プロパティを true にします。  
   
-2.  `DragEnter`ドラッグされているデータが適切な型が、ドロップが行われるコントロールのイベントを確認します (この場合、 <xref:System.Windows.Forms.Control.Text%2A>)。 コードの値に、ドロップが発生したときに行われる効果を設定し、<xref:System.Windows.Forms.DragDropEffects>列挙体。 詳細については、「 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 」を参照してください。  
+2. `DragEnter`ドラッグされているデータが適切な型が、ドロップが行われるコントロールのイベントを確認します (この場合、 <xref:System.Windows.Forms.Control.Text%2A>)。 コードの値に、ドロップが発生したときに行われる効果を設定し、<xref:System.Windows.Forms.DragDropEffects>列挙体。 詳細については、「 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 」を参照してください。  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Windows ベースのアプリケーション内でドラッグ アンド ドロ�
     > [!NOTE]
     >  独自に定義することができます<xref:System.Windows.Forms.DataFormats>オブジェクトとして指定することによって、<xref:System.Object>のパラメーター、<xref:System.Windows.Forms.DataObject.SetData%2A>メソッド。 確認、これについては、指定されたオブジェクトがシリアル化可能なことです。 詳細については、「 <xref:System.Runtime.Serialization.ISerializable> 」を参照してください。  
   
-3.  <xref:System.Windows.Forms.Control.DragDrop>使用して、ドロップが行われるコントロールのイベントを<xref:System.Windows.Forms.DataObject.GetData%2A>ドラッグされているデータを取得します。 詳細については、「 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A> 」を参照してください。  
+3. <xref:System.Windows.Forms.Control.DragDrop>使用して、ドロップが行われるコントロールのイベントを<xref:System.Windows.Forms.DataObject.GetData%2A>ドラッグされているデータを取得します。 詳細については、「 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A> 」を参照してください。  
   
      次の例で、<xref:System.Windows.Forms.TextBox>コントロールは、(ドロップが行われる) にドラッグされているコントロール。 コードのセット、<xref:System.Windows.Forms.Control.Text%2A>のプロパティ、<xref:System.Windows.Forms.TextBox>制御ドラッグされているデータに相当します。  
   

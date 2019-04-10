@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343052"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>チュートリアル: カスタム クライアントおよびサービスの資格情報を作成する
 このトピックでは、クライアントおよびサービスにカスタム資格情報を実装する方法と、これをアプリケーション コードから使用する方法について説明します。  
@@ -50,40 +50,40 @@ ms.locfileid: "59191693"
   
 #### <a name="to-implement-custom-client-credentials"></a>カスタム クライアント資格情報を実装するには  
   
-1.  <xref:System.ServiceModel.Description.ClientCredentials> クラスから派生する新しいクラスを定義します。  
+1. <xref:System.ServiceModel.Description.ClientCredentials> クラスから派生する新しいクラスを定義します。  
   
-2.  任意。 新しい資格情報の種類に新しいメソッドまたはプロパティを追加します。 新しい資格情報の種類を追加しない場合は、この手順を省略します。 次の例では、`CreditCardNumber` プロパティを追加します。  
+2. 任意。 新しい資格情報の種類に新しいメソッドまたはプロパティを追加します。 新しい資格情報の種類を追加しない場合は、この手順を省略します。 次の例では、`CreditCardNumber` プロパティを追加します。  
   
-3.  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> メソッドをオーバーライドします。 このメソッドは、カスタム クライアント資格情報を使用する場合に自動的に WCF のセキュリティ インフラストラクチャによって呼び出されます。 このメソッドは、<xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスの実装のインスタンスを作成して返す役割を担います。  
+3. <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> メソッドをオーバーライドします。 このメソッドは、カスタム クライアント資格情報を使用する場合に自動的に WCF のセキュリティ インフラストラクチャによって呼び出されます。 このメソッドは、<xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスの実装のインスタンスを作成して返す役割を担います。  
   
     > [!IMPORTANT]
     >  カスタム セキュリティ トークン マネージャーを作成するために、<xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> メソッドがオーバーライドされることに注意する必要があります。 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> から派生したセキュリティ トークン マネージャーは、実際のセキュリティ トークンを作成するために、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> から派生したカスタム セキュリティ トークン プロバイダーを返す必要があります。 このパターンに従ってセキュリティ トークンを作成しないと、<xref:System.ServiceModel.ChannelFactory> オブジェクトがキャッシュされたとき (これは、WCF クライアント プロキシの既定の動作です)、権限の昇格攻撃を受ける可能性があり、アプリケーションが正常に機能しない場合があります。 カスタム資格情報オブジェクトは、<xref:System.ServiceModel.ChannelFactory> の一部としてキャッシュされます。 ただし、カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager> がすべての呼び出し時に作成され、これにより、トークン作成ロジックが <xref:System.IdentityModel.Selectors.SecurityTokenManager> にある限り、セキュリティの脅威が軽減されます。  
   
-4.  <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> メソッドをオーバーライドします。  
+4. <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> メソッドをオーバーライドします。  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
   
 #### <a name="to-implement-a-custom-client-security-token-manager"></a>カスタム クライアント セキュリティ トークン マネージャーを実装するには  
   
-1.  <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> から派生する新しいクラスを定義します。  
+1. <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> から派生する新しいクラスを定義します。  
   
-2.  任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
+2. 省略可能です。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
   
-3.  省略可能です。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン オーセンティケーターの作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)です。  
+3. 省略可能です。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン オーセンティケーターの作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)です。  
   
-4.  任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタム セキュリティ トークンおよびカスタム セキュリティ トークン シリアライザーの詳細については、次を参照してください。[方法。カスタム トークンを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)です。  
+4. 省略可能です。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタム セキュリティ トークンおよびカスタム セキュリティ トークン シリアライザーの詳細については、次を参照してください。[方法。カスタム トークンを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)です。  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>アプリケーション コードによるカスタム クライアント資格情報を使用するには  
   
-1.  サービス インターフェイスを表す、生成されたクライアントのインスタンスを作成するか、または通信の対象となるサービスを指す <xref:System.ServiceModel.ChannelFactory> のインスタンスを作成します。  
+1. サービス インターフェイスを表す、生成されたクライアントのインスタンスを作成するか、または通信の対象となるサービスを指す <xref:System.ServiceModel.ChannelFactory> のインスタンスを作成します。  
   
-2.  <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> コレクションから、システム指定のクライアント資格情報の動作を削除します。このコレクションには、<xref:System.ServiceModel.ChannelFactory.Endpoint%2A> プロパティからアクセスできます。  
+2. <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> コレクションから、システム指定のクライアント資格情報の動作を削除します。このコレクションには、<xref:System.ServiceModel.ChannelFactory.Endpoint%2A> プロパティからアクセスできます。  
   
-3.  カスタム資格情報クラスの新しいインスタンスを作成し、<xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> コレクションに追加します。このコレクションには、<xref:System.ServiceModel.ChannelFactory.Endpoint%2A> プロパティからアクセスできます。  
+3. カスタム資格情報クラスの新しいインスタンスを作成し、<xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> コレクションに追加します。このコレクションには、<xref:System.ServiceModel.ChannelFactory.Endpoint%2A> プロパティからアクセスできます。  
   
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
@@ -94,15 +94,15 @@ ms.locfileid: "59191693"
   
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>カスタム クライアント資格情報の構成ハンドラーの作成  
   
-1.  <xref:System.ServiceModel.Configuration.ClientCredentialsElement> から派生する新しいクラスを定義します。  
+1. <xref:System.ServiceModel.Configuration.ClientCredentialsElement> から派生する新しいクラスを定義します。  
   
-2.  任意。 アプリケーション構成を通じて公開する必要があるすべての追加構成パラメーターのプロパティを追加します。 次の例では、`CreditCardNumber` という名前のプロパティを追加します。  
+2. 任意。 アプリケーション構成を通じて公開する必要があるすべての追加構成パラメーターのプロパティを追加します。 次の例では、`CreditCardNumber` という名前のプロパティを追加します。  
   
-3.  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> プロパティをオーバーライドして、構成要素によって作成されたカスタム クライアント資格情報クラスの型を返します。  
+3. <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> プロパティをオーバーライドして、構成要素によって作成されたカスタム クライアント資格情報クラスの型を返します。  
   
-4.  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> メソッドをオーバーライドします。 このメソッドは、構成ファイルから読み込まれた設定に基づいてカスタム資格情報クラスのインスタンスを作成して返す役割を担います。 このメソッドから <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 基本メソッドを呼び出し、カスタム クライアント資格情報インスタンスに読み込まれたシステム指定の資格情報の設定を取得します。  
+4. <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> メソッドをオーバーライドします。 このメソッドは、構成ファイルから読み込まれた設定に基づいてカスタム資格情報クラスのインスタンスを作成して返す役割を担います。 このメソッドから <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 基本メソッドを呼び出し、カスタム クライアント資格情報インスタンスに読み込まれたシステム指定の資格情報の設定を取得します。  
   
-5.  省略可能です。 手順 2. で追加のプロパティを追加している場合は、<xref:System.Configuration.ConfigurationElement.Properties%2A> プロパティをオーバーライドして、追加した構成設定が構成フレームワークから認識されるよう登録します。 追加したプロパティを基本クラスのプロパティと結合して、このカスタム クライアント資格情報の構成要素を通じてシステム指定の設定が構成されるようにします。  
+5. 任意。 手順 2. で追加のプロパティを追加している場合は、<xref:System.Configuration.ConfigurationElement.Properties%2A> プロパティをオーバーライドして、追加した構成設定が構成フレームワークから認識されるよう登録します。 追加したプロパティを基本クラスのプロパティと結合して、このカスタム クライアント資格情報の構成要素を通じてシステム指定の設定が構成されるようにします。  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
@@ -111,11 +111,11 @@ ms.locfileid: "59191693"
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>カスタム クライアント資格情報構成ハンドラーをアプリケーション構成に登録して使用するには  
   
-1.  追加、<`extensions`> 要素と <`behaviorExtensions`> 要素を構成ファイル。  
+1. 追加、<`extensions`> 要素と <`behaviorExtensions`> 要素を構成ファイル。  
   
-2.  追加、<`add`> 要素を <`behaviorExtensions`> 要素、`name`属性に適切な値。  
+2. 追加、<`add`> 要素を <`behaviorExtensions`> 要素、`name`属性に適切な値。  
   
-3.  `type` 属性を完全修飾型名に設定します。 また、アセンブリ名と他のアセンブリ属性を含めます。  
+3. `type` 属性を完全修飾型名に設定します。 また、アセンブリ名と他のアセンブリ属性を含めます。  
   
     ```xml  
     <system.serviceModel>  
@@ -127,7 +127,7 @@ ms.locfileid: "59191693"
     <system.serviceModel>  
     ```  
   
-4.  構成ハンドラーを登録すると、カスタムの資格情報要素を使用して、システム指定の代わりに、同じ構成ファイル内で <`clientCredentials`> 要素。 システム指定のプロパティと、構成ハンドラーの実装に追加した任意の新規プロパティのどちらも使用できます。 次の例では、`creditCardNumber` 属性を使用して、カスタム プロパティの値を設定します。  
+4. 構成ハンドラーを登録すると、カスタムの資格情報要素を使用して、システム指定の代わりに、同じ構成ファイル内で <`clientCredentials`> 要素。 システム指定のプロパティと、構成ハンドラーの実装に追加した任意の新規プロパティのどちらも使用できます。 次の例では、`creditCardNumber` 属性を使用して、カスタム プロパティの値を設定します。  
   
     ```xml  
     <behaviors>  
@@ -141,37 +141,37 @@ ms.locfileid: "59191693"
   
 #### <a name="to-implement-custom-service-credentials"></a>カスタム サービス資格情報を実装するには  
   
-1.  <xref:System.ServiceModel.Description.ServiceCredentials> から派生する新しいクラスを定義します。  
+1. <xref:System.ServiceModel.Description.ServiceCredentials> から派生する新しいクラスを定義します。  
   
-2.  任意。 追加している新しい資格情報の値に API を提供するために新しいプロパティを追加します。 新しい資格情報の値を追加しない場合は、この手順を省略します。 次の例では、`AdditionalCertificate` プロパティを追加します。  
+2. 任意。 追加している新しい資格情報の値に API を提供するために新しいプロパティを追加します。 新しい資格情報の値を追加しない場合は、この手順を省略します。 次の例では、`AdditionalCertificate` プロパティを追加します。  
   
-3.  <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> メソッドをオーバーライドします。 このメソッドは、カスタム クライアント資格情報を使用する場合に自動的に、WCF インフラストラクチャによって呼び出されます。 このメソッドは、<xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスの実装のインスタンスを作成して返す役割を担います (次の手順で説明)。  
+3. <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> メソッドをオーバーライドします。 このメソッドは、カスタム クライアント資格情報を使用する場合に自動的に、WCF インフラストラクチャによって呼び出されます。 このメソッドは、<xref:System.IdentityModel.Selectors.SecurityTokenManager> クラスの実装のインスタンスを作成して返す役割を担います (次の手順で説明)。  
   
-4.  省略可能です。 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> メソッドをオーバーライドします。 この手順は、カスタム クライアント資格情報の実装に新しいプロパティまたは内部フィールドを追加する場合にのみ必要になります。  
+4. 省略可能です。 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> メソッドをオーバーライドします。 この手順は、カスタム クライアント資格情報の実装に新しいプロパティまたは内部フィールドを追加する場合にのみ必要になります。  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
   
 #### <a name="to-implement-a-custom-service-security-token-manager"></a>カスタム サービス セキュリティ トークン マネージャーを実装するには  
   
-1.  <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> クラスから派生する新しいクラスを定義します。  
+1. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> クラスから派生する新しいクラスを定義します。  
   
-2.  省略可能です。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
+2. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッドをオーバーライドします。 カスタム セキュリティ トークン プロバイダーの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン プロバイダーを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)です。  
   
-3.  任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン認証システムを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)トピック。  
+3. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 実装を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> メソッドをオーバーライドします。 カスタム セキュリティ トークン認証システムの詳細については、次を参照してください。[方法。カスタム セキュリティ トークン認証システムを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)トピック。  
   
-4.  任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタム セキュリティ トークンおよびカスタム セキュリティ トークン シリアライザーの詳細については、次を参照してください。[方法。カスタム トークンを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)です。  
+4. 任意。 カスタム <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> を作成する必要がある場合は、<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> メソッドをオーバーライドします。 カスタム セキュリティ トークンおよびカスタム セキュリティ トークン シリアライザーの詳細については、次を参照してください。[方法。カスタム トークンを作成](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)です。  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>アプリケーション コードによるカスタム サービス資格情報を使用するには  
   
-1.  <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。  
+1. <xref:System.ServiceModel.ServiceHost> のインスタンスを作成します。  
   
-2.  <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションから、システム指定のサービス資格情報の動作を削除します。  
+2. <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションから、システム指定のサービス資格情報の動作を削除します。  
   
-3.  カスタム サービス資格情報クラスの新しいインスタンスを作成し、これを <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションに追加します。  
+3. カスタム サービス資格情報クラスの新しいインスタンスを作成し、これを <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションに追加します。  
   
      [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
      [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]  

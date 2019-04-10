@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204745"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342174"
 ---
 # <a name="how-keyboard-input-works"></a>キーボード入力のしくみ
 Windows フォームは、Windows メッセージに応答してキーボード イベントを発生させることにより、キーボード入力を処理します。 多くの Windows フォーム アプリケーションは、キーボード イベントを処理することによってキーボード入力を排他的に処理します。 しかし、高度なキーボード入力のシナリオ (キーがコントロールに到達する前にインターセプトするなど) を実装するためには、キーボード メッセージのしくみについて理解することが必要です。 このトピックでは、Windows フォームが認識するキー データの種類について説明し、キーボード メッセージをルーティングする方法について概要を説明します。 キーボード イベントの詳細については、「[キーボード イベントの使用](using-keyboard-events.md)」を参照してください。  
@@ -22,13 +22,13 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 ## <a name="order-of-keyboard-events"></a>キーボード イベントの順序  
  先に説明したとおり、コントロール上では 3 つのキーボード関連のイベントが発生します。 イベントは一般に次の順序で発生します。  
   
-1.  ユーザーにプッシュ"a"キー、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyDown>イベントが発生します。  
+1. ユーザーにプッシュ"a"キー、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyDown>イベントが発生します。  
   
-2.  ユーザーが"a"キーを保持して、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyPress>イベントが発生します。  
+2. ユーザーが"a"キーを保持して、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyPress>イベントが発生します。  
   
      このイベントはユーザーがキーを押し続けているとき複数回発生します。  
   
-3.  "A"キー、キーが前処理され、ユーザーのリリースのディスパッチと<xref:System.Windows.Forms.Control.KeyUp>イベントが発生します。  
+3. "A"キー、キーが前処理され、ユーザーのリリースのディスパッチと<xref:System.Windows.Forms.Control.KeyUp>イベントが発生します。  
   
 ## <a name="preprocessing-keys"></a>キーの前処理  
  他のメッセージのようなキーボード メッセージの処理、<xref:System.Windows.Forms.Control.WndProc%2A>フォームまたはコントロールのメソッド。 ただし、キーボードの前にメッセージが処理を<xref:System.Windows.Forms.Control.PreProcessMessage%2A>メソッドの特殊文字のキーと物理キーを処理するためにオーバーライド可能な 1 つまたは複数のメソッドを呼び出します。 これらのメソッドをオーバーライドすると、コントロールがメッセージを処理する前に、特定のキーを検出してフィルターできます。 次の表に、実行される処理と、そのとき呼び出されるメソッドを、メソッドが呼び出される順に示します。  

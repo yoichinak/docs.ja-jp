@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343267"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>方法: Windows フォームで実行時にイベント ハンドラーを作成する
 Windows フォーム デザイナーを使用してイベント ハンドラーを作成する他に、実行時にもイベント ハンドラーを作成できます。 これにより、プログラムが最初に起動したときにイベント ハンドラーを接続する代わりに、コード内に記述されている条件に基づいて、実行時にイベント ハンドラーを接続できます。  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>実行時にイベント ハンドラーを作成するには  
   
-1.  コード エディターで、イベント ハンドラーを追加するフォームを開きます。  
+1. コード エディターで、イベント ハンドラーを追加するフォームを開きます。  
   
-2.  処理するイベントに対応するメソッド シグネチャを持つメソッドをフォームに追加します。  
+2. 処理するイベントに対応するメソッド シグネチャを持つメソッドをフォームに追加します。  
   
      処理された場合など、<xref:System.Windows.Forms.Control.Click>のイベントを<xref:System.Windows.Forms.Button>コントロールでは、次のようメソッドを作成すると。  
   
@@ -52,11 +52,11 @@ Windows フォーム デザイナーを使用してイベント ハンドラー�
        }  
     ```  
   
-3.  アプリケーションに応じて、イベント ハンドラーにコードを追加します。  
+3. アプリケーションに応じて、イベント ハンドラーにコードを追加します。  
   
-4.  イベント ハンドラーをどのフォームまたはコントロールに対して作成するかを指定します。  
+4. イベント ハンドラーをどのフォームまたはコントロールに対して作成するかを指定します。  
   
-5.  フォームのクラスのメソッドに、イベントを処理するためのイベント ハンドラーを指定するコードを追加します。 たとえば、次のコードには、イベント ハンドラーを指定します。`button1_Click`ハンドル、<xref:System.Windows.Forms.Control.Click>のイベントを<xref:System.Windows.Forms.Button>コントロール。  
+5. フォームのクラスのメソッドに、イベントを処理するためのイベント ハンドラーを指定するコードを追加します。 たとえば、次のコードには、イベント ハンドラーを指定します。`button1_Click`ハンドル、<xref:System.Windows.Forms.Control.Click>のイベントを<xref:System.Windows.Forms.Button>コントロール。  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

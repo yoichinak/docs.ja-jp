@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342532"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>クエリによる DataTable の作成 (LINQ to DataSet)
 <xref:System.Data.DataTable> オブジェクトの一般的な利用法の 1 つが、データ バインディングです。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインディングに利用できます。 このデータ操作が実行されると、新しい <xref:System.Data.DataTable> が、基となった <xref:System.Data.DataTable> にマージ バックされます。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドでは、次の処理を実行することでクエリの結果から <xref:System.Data.DataTable> を作成します。  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドにより、ソース テーブル (<xref:System.Data.DataTable> インターフェイスを実装する <xref:System.Data.DataTable> オブジェクト) から <xref:System.Linq.IQueryable%601> を複製します。 通常、<xref:System.Collections.IEnumerable> ソースは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 式またはメソッド クエリから生成されます。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドにより、ソース テーブル (<xref:System.Data.DataTable> インターフェイスを実装する <xref:System.Data.DataTable> オブジェクト) から <xref:System.Linq.IQueryable%601> を複製します。 通常、<xref:System.Collections.IEnumerable> ソースは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 式またはメソッド クエリから生成されます。  
   
-2.  複製の <xref:System.Data.DataTable> のスキーマは、ソース テーブルで最初に列挙されている <xref:System.Data.DataRow> オブジェクトの列から作成されます。複製したテーブルの名前は、ソース テーブルの名前に "query" という単語を付加した名前になります。  
+2. 複製の <xref:System.Data.DataTable> のスキーマは、ソース テーブルで最初に列挙されている <xref:System.Data.DataRow> オブジェクトの列から作成されます。複製したテーブルの名前は、ソース テーブルの名前に "query" という単語を付加した名前になります。  
   
-3.  ソース テーブルの各行について、行の内容が新しい <xref:System.Data.DataRow> オブジェクトにコピーされた後、それが複製のテーブルに挿入されます。 このコピー操作の間、<xref:System.Data.DataRow.RowState%2A> プロパティと <xref:System.Data.DataRow.RowError%2A> プロパティは保持されます。 基になる <xref:System.ArgumentException> オブジェクトが別々のテーブルに由来している場合、<xref:System.Data.DataRow> がスローされます。  
+3. ソース テーブルの各行について、行の内容が新しい <xref:System.Data.DataRow> オブジェクトにコピーされた後、それが複製のテーブルに挿入されます。 このコピー操作の間、<xref:System.Data.DataRow.RowState%2A> プロパティと <xref:System.Data.DataRow.RowError%2A> プロパティは保持されます。 基になる <xref:System.ArgumentException> オブジェクトが別々のテーブルに由来している場合、<xref:System.Data.DataRow> がスローされます。  
   
-4.  クエリ実行可能な入力テーブルの <xref:System.Data.DataTable> オブジェクトがすべてコピーされた後、複製の <xref:System.Data.DataRow> が返されます。 基となるシーケンスに <xref:System.Data.DataRow> オブジェクトが含まれていない場合、このメソッドは空の <xref:System.Data.DataTable> を返します。  
+4. クエリ実行可能な入力テーブルの <xref:System.Data.DataTable> オブジェクトがすべてコピーされた後、複製の <xref:System.Data.DataRow> が返されます。 基となるシーケンスに <xref:System.Data.DataRow> オブジェクトが含まれていない場合、このメソッドは空の <xref:System.Data.DataTable> を返します。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドを呼び出すと、ソース テーブルにバインドされているクエリが実行されることに注意してください。  
   

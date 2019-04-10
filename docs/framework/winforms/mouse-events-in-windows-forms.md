@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333679"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
 マウス入力を処理する場合、通常はマウスのポインターの位置とマウス ボタンの状態を確認しようとします。 このトピックでは、マウスのイベントからこの情報を取得する方法について詳しく説明し、Windows フォーム コントロールでマウス クリック イベントが発生する順序について説明します。 リストとすべてのマウス イベントの説明では、次を参照してください。 [Windows フォームにおけるマウス入力動作方法](how-mouse-input-works-in-windows-forms.md)します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
@@ -36,31 +36,31 @@ ms.locfileid: "59134980"
 ## <a name="standard-click-event-behavior"></a>標準のクリック イベントの動作  
  マウスのクリック イベントを適切な順序で処理する場合は、Windows フォーム コントロールでクリック イベントが発生した順序を知る必要があります。 Windows フォームのコントロールは、すべて、(どちらのマウス ボタンかは関係なく) マウス ボタンを押したときと離したときに同じ順序でクリック イベントを発生させますが、各コントロールについて、次のリストに記載する例外があります。 マウス ボタンのシングル クリックに対して発生したイベントの順序を次に示します。  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> イベント。  
+1. <xref:System.Windows.Forms.Control.MouseDown> イベント。  
   
-2.  <xref:System.Windows.Forms.Control.Click> イベント。  
+2. <xref:System.Windows.Forms.Control.Click> イベント。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> イベント。  
+3. <xref:System.Windows.Forms.Control.MouseClick> イベント。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> イベント。  
+4. <xref:System.Windows.Forms.Control.MouseUp> イベント。  
   
  マウス ボタンのダブル クリックに対して発生したイベントの順序を次に示します。  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> イベント。  
+1. <xref:System.Windows.Forms.Control.MouseDown> イベント。  
   
-2.  <xref:System.Windows.Forms.Control.Click> イベント。  
+2. <xref:System.Windows.Forms.Control.Click> イベント。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> イベント。  
+3. <xref:System.Windows.Forms.Control.MouseClick> イベント。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> イベント。  
+4. <xref:System.Windows.Forms.Control.MouseUp> イベント。  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> イベント。  
+5. <xref:System.Windows.Forms.Control.MouseDown> イベント。  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> イベント。 (これは、問題のコントロールで <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> スタイルのビットが `true` に設定されているかどうかに応じて異なる可能性があります。 <xref:System.Windows.Forms.ControlStyles> のビットの設定方法の詳細については、<xref:System.Windows.Forms.Control.SetStyle%2A> メソッドを参照してください。)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> イベント。 (これは、問題のコントロールで <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> スタイルのビットが `true` に設定されているかどうかに応じて異なる可能性があります。 <xref:System.Windows.Forms.ControlStyles> のビットの設定方法の詳細については、<xref:System.Windows.Forms.Control.SetStyle%2A> メソッドを参照してください。)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> イベント。  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> イベント。  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> イベント。  
+8. <xref:System.Windows.Forms.Control.MouseUp> イベント。  
   
  イベントをクリックして、マウスの順序を示すコード例を参照してください[方法。イベントを Windows フォーム コントロール ユーザー入力処理](how-to-handle-user-input-events-in-windows-forms-controls.md)します。  
   
@@ -122,25 +122,24 @@ ms.locfileid: "59134980"
 ### <a name="painting-behavior-of-toggle-controls"></a>切り替えコントロールの描画の動作  
  <xref:System.Windows.Forms.ButtonBase> クラスから派生するコントロールなど、切り替えコントロールには、次のようなマウス クリック イベントと組み合わせた独自の描画の動作があります。  
   
-1.  ユーザーがマウス ボタンを押します。  
+1. ユーザーがマウス ボタンを押します。  
   
-2.  押された状態で、コントロールが描画します。  
+2. 押された状態で、コントロールが描画します。  
   
-3.  <xref:System.Windows.Forms.Control.MouseDown> イベントが発生します。  
+3. <xref:System.Windows.Forms.Control.MouseDown> イベントが発生します。  
   
-4.  ユーザーがマウス ボタンを離します。  
+4. ユーザーがマウス ボタンを離します。  
   
-5.  離した状態でコントロールが描画します。  
+5. 離した状態でコントロールが描画します。  
   
-6.  <xref:System.Windows.Forms.Control.Click> イベントが発生します。  
+6. <xref:System.Windows.Forms.Control.Click> イベントが発生します。  
   
-7.  <xref:System.Windows.Forms.Control.MouseClick> イベントが発生します。  
+7. <xref:System.Windows.Forms.Control.MouseClick> イベントが発生します。  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> イベントが発生します。  
+8. <xref:System.Windows.Forms.Control.MouseUp> イベントが発生します。  
   
     > [!NOTE]
-    >  マウス ボタンが押されているときにユーザーがポインターを切り替えコントロールの外に移動した (例 : <xref:System.Windows.Forms.Button> コントロールを押しているときにマウスを移動した) 場合、離された状態で切り替えコントロールが描画し、<xref:System.Windows.Forms.Control.MouseUp> イベントのみが発生します。 
-  <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。  
+    >  マウス ボタンが押されているときにユーザーがポインターを切り替えコントロールの外に移動した (例 : <xref:System.Windows.Forms.Button> コントロールを押しているときにマウスを移動した) 場合、離された状態で切り替えコントロールが描画し、<xref:System.Windows.Forms.Control.MouseUp> イベントのみが発生します。 <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336656"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  
@@ -158,7 +158,7 @@ ms.locfileid: "59203692"
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>効果的な方法でハイ コントラスト モードを有効にするには  
   
-1.  ラベルの色をシステム カラーを設定するメソッドを作成します。  
+1. ラベルの色をシステム カラーを設定するメソッドを作成します。  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ ms.locfileid: "59203692"
     }  
     ```  
   
-2.  フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public class Form1`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。  
+2. フォームのコンストラクターで `SetColorScheme` プロシージャを呼び出します (Visual Basic では `Public Sub New()`、Visual C# では `public class Form1`)。 Visual Basic でコンストラクターにアクセスするには、**Windows フォーム デザイナーで生成されたコード**というラベルが付いた領域を展開する必要があります。  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ ms.locfileid: "59203692"
     }  
     ```  
   
-3.  適切なシグネチャを持つイベント プロシージャを作成して、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントに対応します。  
+3. 適切なシグネチャを持つイベント プロシージャを作成して、<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントに対応します。  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ ms.locfileid: "59203692"
     }  
     ```  
   
-4.  `InitializeComponents` への呼び出しの後でコードをフォームのコンストラクターに追加して、イベント プロシージャをシステム イベントにフックします。 このメソッドは `SetColorScheme` プロシージャを呼び出します。  
+4. `InitializeComponents` への呼び出しの後でコードをフォームのコンストラクターに追加して、イベント プロシージャをシステム イベントにフックします。 このメソッドは `SetColorScheme` プロシージャを呼び出します。  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ ms.locfileid: "59203692"
     }  
     ```  
   
-5.  基本クラスの <xref:System.Windows.Forms.Control.Dispose%2A> メソッドへの呼び出しの前に、フォームの <xref:System.Windows.Forms.Control.Dispose%2A> メソッドにコードを追加して、アプリケーションの終了時にイベントを解放します。 Visual Basic で <xref:System.Windows.Forms.Control.Dispose%2A> メソッドにアクセスするには、「Windows フォーム デザイナーで生成されたコード」というラベルが付いた領域を展開する必要があります。  
+5. 基本クラスの <xref:System.Windows.Forms.Control.Dispose%2A> メソッドへの呼び出しの前に、フォームの <xref:System.Windows.Forms.Control.Dispose%2A> メソッドにコードを追加して、アプリケーションの終了時にイベントを解放します。 Visual Basic で <xref:System.Windows.Forms.Control.Dispose%2A> メソッドにアクセスするには、「Windows フォーム デザイナーで生成されたコード」というラベルが付いた領域を展開する必要があります。  
   
     > [!NOTE]
     >  システム イベントのコードが、メイン アプリケーションとは別のスレッドを実行します。 イベントを解放しないと、プログラムが終了した後でも、イベントにフックするコードが実行されます。  
@@ -281,38 +281,38 @@ ms.locfileid: "59203692"
     }  
     ```  
   
-6.  F5 キーを押してアプリケーションを実行します。  
+6. F5 キーを押してアプリケーションを実行します。  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>サウンド以外の方法で重要な情報を伝達する  
  このアプリケーションでは、サウンドだけで伝達される情報はありません。 アプリケーションでサウンドを使用する場合は、別の方法もで情報を提供する必要があります。  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>サウンド以外の方法で情報を提供するには  
   
-1.  Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例は、次を参照してください。[チュートリアル。Windows API の呼び出し](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
+1. Windows API 関数 FlashWindow を使用して、タイトル バーをフラッシュさせます。 Windows API 関数を呼び出す方法の例は、次を参照してください。[チュートリアル。Windows API の呼び出し](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
     > [!NOTE]
     >  ユーザーが Windows SoundSentry サービスを有効にして、コンピューターの内蔵スピーカーを通じてシステム サウンドが再生されるときにウィンドウをフラッシュさせていることがあります。  
   
-2.  ユーザーがそれに応答できるように、非モーダル ウィンドウで重要な情報を表示します。  
+2. ユーザーがそれに応答できるように、非モーダル ウィンドウで重要な情報を表示します。  
   
-3.  キーボード フォーカスを取得するメッセージ ボックスを表示します。 ユーザーが入力しているときは、このメソッドは回避します。  
+3. キーボード フォーカスを取得するメッセージ ボックスを表示します。 ユーザーが入力しているときは、このメソッドは回避します。  
   
-4.  タスクバーの状態通知領域に状態インジケーターを表示します。 詳細については、「[Windows フォームの NotifyIcon コンポーネントによるタスクバーへのアプリケーション アイコンの追加](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)」を参照してください。  
+4. タスクバーの状態通知領域に状態インジケーターを表示します。 詳細については、「[Windows フォームの NotifyIcon コンポーネントによるタスクバーへのアプリケーション アイコンの追加](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)」を参照してください。  
   
 ## <a name="testing-the-application"></a>アプリケーションのテスト  
  アプリケーションを配置する前に、実装したユーザー補助機能をテストする必要があります。  
   
 #### <a name="to-test-accessibility-features"></a>ユーザー補助機能をテストするには  
   
-1.  キーボード アクセスをテストするには、マウスを外し、キーボードのみを使用して各機能のユーザー インターフェイスを移動します。 キーボードのみを使用してすべてのタスクが実行できることを確認します。  
+1. キーボード アクセスをテストするには、マウスを外し、キーボードのみを使用して各機能のユーザー インターフェイスを移動します。 キーボードのみを使用してすべてのタスクが実行できることを確認します。  
   
-2.  ハイ コントラストのサポートをテストするには、コントロール パネルの [ユーザー補助のオプション] アイコンを選択します。 [表示] タブをクリックし、[ハイ コントラストを使用する] チェック ボックスを選択します。 色とフォントの変更が反映されることを確認するために、すべてのユーザー インターフェイス要素を移動します。 また、テキストの背景に描画されるイメージやパターンが省略されていることを確認します。  
+2. ハイ コントラストのサポートをテストするには、コントロール パネルの [ユーザー補助のオプション] アイコンを選択します。 [表示] タブをクリックし、[ハイ コントラストを使用する] チェック ボックスを選択します。 色とフォントの変更が反映されることを確認するために、すべてのユーザー インターフェイス要素を移動します。 また、テキストの背景に描画されるイメージやパターンが省略されていることを確認します。  
   
     > [!NOTE]
     >  Windows NT 4 では、コントロール パネルにユーザー補助機能オプション アイコンがありません。 したがって、SystemInformation.HighContrast の設定変更のこの手順は、Windows NT 4 では機能しません。  
   
-3.  その他のツールは、アプリケーションのユーザー補助機能をテストするためにすぐに使用できます。  
+3. その他のツールは、アプリケーションのユーザー補助機能をテストするためにすぐに使用できます。  
   
-4.  キーボード フォーカスを公開することをテストするには、拡大鏡を実行します。 (拡大鏡を開くには、**[スタート]** メニューをクリックし、**[すべてのプログラム]**、**[アクセサリ]**、**[アクセシビリティ]** の順でポイントして、**[拡大鏡]** をクリックします)。 キーボードの [Tab] キーとマウスの両方を使用して、ユーザー インターフェイスを移動します。 すべての操作が**拡大鏡**で正常に追跡されることを確認します。  
+4. キーボード フォーカスを公開することをテストするには、拡大鏡を実行します。 (拡大鏡を開くには、**[スタート]** メニューをクリックし、**[すべてのプログラム]**、**[アクセサリ]**、**[アクセシビリティ]** の順でポイントして、**[拡大鏡]** をクリックします)。 キーボードの [Tab] キーとマウスの両方を使用して、ユーザー インターフェイスを移動します。 すべての操作が**拡大鏡**で正常に追跡されることを確認します。  
   
-5.  画面要素の公開をテストするには、検査を実行し、マウスと TAB キーの両方を使用して、各要素に到達します。 [検査] ウィンドウの名前、状態、ロール、場所、および値のフィールドに表示される情報が UI 内の各オブジェクトについて、ユーザーにとって意味があることを確認します。
+5. 画面要素の公開をテストするには、検査を実行し、マウスと TAB キーの両方を使用して、各要素に到達します。 [検査] ウィンドウの名前、状態、ロール、場所、および値のフィールドに表示される情報が UI 内の各オブジェクトについて、ユーザーにとって意味があることを確認します。

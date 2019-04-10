@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339022"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>方法: TableLayoutPanel コントロールの行と列を拡大する
 コントロールで、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが隣接する行と列にまたがることができます。  
@@ -25,15 +25,15 @@ ms.locfileid: "59193136"
   
 ### <a name="to-span-columns-and-rows"></a>列と行にまたがること  
   
-1.  <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
+1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
   
-2.  ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**の左上隅のセルに、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
+2. ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**の左上隅のセルに、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
-3.  設定、<xref:System.Windows.Forms.Button>コントロールの**ColumnSpan**プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>にまたがる最初と 2 番目の列を制御します。  
+3. 設定、<xref:System.Windows.Forms.Button>コントロールの**ColumnSpan**プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>にまたがる最初と 2 番目の列を制御します。  
   
-4.  設定、<xref:System.Windows.Forms.Button>コントロールの**RowSpan**プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>コントロールが最初と 2 番目の行にまたがっています。  
+4. 設定、<xref:System.Windows.Forms.Button>コントロールの**RowSpan**プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>コントロールが最初と 2 番目の行にまたがっています。  
   
-5.  設定、<xref:System.Windows.Forms.Button>コントロールの**ColumnSpan**プロパティを**1**します。 なお、<xref:System.Windows.Forms.Button>コントロールは、最初の列に移動し、最初と 2 番目の行にまたがます。  
+5. 設定、<xref:System.Windows.Forms.Button>コントロールの**ColumnSpan**プロパティを**1**します。 なお、<xref:System.Windows.Forms.Button>コントロールは、最初の列に移動し、最初と 2 番目の行にまたがます。  
   
 ## <a name="see-also"></a>関連項目
 
