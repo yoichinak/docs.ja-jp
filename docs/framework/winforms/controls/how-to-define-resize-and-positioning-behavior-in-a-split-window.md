@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217069"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328674"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>方法: 分割ウィンドウでのサイズ変更および位置指定動作を定義する
 パネル、<xref:System.Windows.Forms.SplitContainer>コントロールを起こすもされているサイズを変更して、ユーザーによって操作します。 ただし、するは、スプリッターをプログラムで制御する場合は、場所が配置されているし、移動できるどの程度までです。  
@@ -31,7 +31,7 @@ ms.locfileid: "59217069"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer サイズ変更動作を定義するには  
   
-1.  プロシージャでは、次のように設定します。、<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>目的のサイズにプロパティ 'スナップ' スプリッターの動作を実現できるようにします。  
+1. プロシージャでは、次のように設定します。、<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>目的のサイズにプロパティ 'スナップ' スプリッターの動作を実現できるようにします。  
   
      フォームの内で、次のコード例で<xref:System.Windows.Forms.Form.Load>イベント、内のスプリッター、<xref:System.Windows.Forms.SplitContainer>コントロールをドラッグすると、10 ピクセルのジャンプを設定します。  
   

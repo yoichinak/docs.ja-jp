@@ -2,12 +2,12 @@
 title: 仮想ディレクトリのセットアップ手順
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325346"
 ---
 # <a name="virtual-directory-setup-instructions"></a>仮想ディレクトリのセットアップ手順
 Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\wwwroot\servicemodelsamples フォルダーにマップされている servicemodelsamples という仮想ディレクトリを共有するためのものです。  
@@ -21,19 +21,19 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>IIS 7.0 または 7.5 で仮想ディレクトリを作成するには  
   
-1.  **開始** メニューのをクリックして**実行**、入力**inetmgr**インターネット インフォメーション サービス (IIS) MMC スナップインを開きます。  
+1. **開始** メニューのをクリックして**実行**、入力**inetmgr**インターネット インフォメーション サービス (IIS) MMC スナップインを開きます。  
   
-2.  左側のウィンドウで コンピューターの名前を持つノードを展開し、展開、**サイト**ノード。  
+2. 左側のウィンドウで コンピューターの名前を持つノードを展開し、展開、**サイト**ノード。  
   
-3.  右クリック**既定の Web サイト**、し、**アプリケーションの追加**を開く、**アプリケーションの追加ウィンドウ**します。  
+3. 右クリック**既定の Web サイト**、し、**アプリケーションの追加**を開く、**アプリケーションの追加ウィンドウ**します。  
   
-4.  ウィンドウで、次のように入力します。`servicemodelsamples`として作成する仮想ディレクトリのエイリアスです。  
+4. ウィンドウで、次のように入力します。`servicemodelsamples`として作成する仮想ディレクトリのエイリアスです。  
   
-5.  次のディレクトリを作成します。%SystemDrive%\inetpub\wwwroot\servicemodelsamples  
+5. 次のディレクトリを作成します。%SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
-6.  物理パスを %SystemDrive%\inetpub\wwwroot\servicemodelsamples に設定します。  WCF サンプルの多くは、ビルド時にサービス実行可能ファイルをこの場所にコピーします。  
+6. 物理パスを %SystemDrive%\inetpub\wwwroot\servicemodelsamples に設定します。  WCF サンプルの多くは、ビルド時にサービス実行可能ファイルをこの場所にコピーします。  
   
-7.  **[OK]** をクリックします。 Web アプリケーションが、WCF サンプル用に作成されました。  
+7. **[OK]** をクリックします。 Web アプリケーションが、WCF サンプル用に作成されました。  
   
     > [!NOTE]
     >  このタスクは、すべての WCF サンプルで同じ servicemodelsamples Web アプリケーションを使用するため、1 回だけ実行する必要があります。  
@@ -45,44 +45,44 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>仮想ディレクトリを IIS 5.1 または 6.0 で作成するには  
   
-1.  コマンド プロンプト ウィンドウを開き`start inetmgr`インターネット インフォメーション サービス (IIS) MMC スナップインを開きます。  
+1. コマンド プロンプト ウィンドウを開き`start inetmgr`インターネット インフォメーション サービス (IIS) MMC スナップインを開きます。  
   
-2.  左側のウィンドウで コンピューターの名前を持つノードを展開し、展開、 **Websites**ノード。  
+2. 左側のウィンドウで コンピューターの名前を持つノードを展開し、展開、 **Websites**ノード。  
   
-3.  右クリック**既定の Web サイト**選択 **、新しい仮想ディレクトリ**仮想ディレクトリの作成ウィザードを開きます。  
+3. 右クリック**既定の Web サイト**選択 **、新しい仮想ディレクトリ**仮想ディレクトリの作成ウィザードを開きます。  
   
-4.  ウィザードで、次のように入力します。`servicemodelsamples`として作成する仮想ディレクトリのエイリアスです。  
+4. ウィザードで、次のように入力します。`servicemodelsamples`として作成する仮想ディレクトリのエイリアスです。  
   
-5.  パスを %SystemDrive%\inetpub\wwwroot\servicemodelsamples に設定します。 WCF サンプルの多くは、ビルド時にサービス実行可能ファイルをこの場所にコピーします。  
+5. パスを %SystemDrive%\inetpub\wwwroot\servicemodelsamples に設定します。 WCF サンプルの多くは、ビルド時にサービス実行可能ファイルをこの場所にコピーします。  
   
-6.  **[次へ]** をクリックします。  
+6. **[次へ]** をクリックします。  
   
-7.  既定では、次のチェック ボックスがオンになっています。  
+7. 既定では、次のチェック ボックスがオンになっています。  
   
     -   **読み取り**  
   
     -   **[ASP などのスクリプトを実行する]**  
   
-8.  をクリックして **[次へ]**、順にクリックします**完了**ウィザードを完了します。  
+8. をクリックして **[次へ]**、順にクリックします**完了**ウィザードを完了します。  
   
     > [!NOTE]
     >  このタスクは、すべての WCF サンプルで同じ servicemodelsamples 仮想ディレクトリを使用するため、1 回だけ実行する必要があります。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>IIS 7.0 で追加の仮想ディレクトリのプロパティまたは 7.5 を設定するには  
   
-1.  servicemodelsamples ノードをクリックします。 ウィンドウの下端に沿って 2 つのビューが表示されます。 選択**機能ビュー**が選択されていない場合。  
+1. servicemodelsamples ノードをクリックします。 ウィンドウの下端に沿って 2 つのビューが表示されます。 選択**機能ビュー**が選択されていない場合。  
   
-2.  エントリをダブルクリック**ディレクトリの参照**します。  
+2. エントリをダブルクリック**ディレクトリの参照**します。  
   
-3.  [操作] ウィンドウで、選択、**を有効にする**オプション。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
+3. [操作] ウィンドウで、選択、**を有効にする**オプション。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
   
  最後に、servicemodelsamples フォルダーのセキュリティ プロパティを、他のユーザーがアクセスできるように設定する必要があります。 詳細については、以下を参照してください。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>仮想ディレクトリの追加プロパティを IIS 5.1 または 6.0 で設定するには  
   
-1.  Servicemodelsamples ノードを右クリックし、をクリックし、**プロパティ**します。  
+1. Servicemodelsamples ノードを右クリックし、をクリックし、**プロパティ**します。  
   
-2.  既定では、次のチェック ボックスがオンになっています。  
+2. 既定では、次のチェック ボックスがオンになっています。  
   
     -   **読み取り**  
   
@@ -90,25 +90,25 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
     -   **[このリソースにインデックスを付ける]**  
   
-3.  選択、**ディレクトリの参照**チェック ボックスをオンします。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
+3. 選択、**ディレクトリの参照**チェック ボックスをオンします。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>IIS 7.0 または 7.5 でフォルダーのセキュリティ プロパティを設定するには  
   
-1.  %SystemDrive%\inetpub\wwwroot\servicemodelsamples に移動します。  
+1. %SystemDrive%\inetpub\wwwroot\servicemodelsamples に移動します。  
   
-2.  Servicemodelsamples フォルダーを右クリックし、をクリックして**共有**または**共有する相手**します。  
+2. Servicemodelsamples フォルダーを右クリックし、をクリックして**共有**または**共有する相手**します。  
   
-3.  左側に下向きの矢印をクリックして、**追加**ボタンをクリックします。  
+3. 左側に下向きの矢印をクリックして、**追加**ボタンをクリックします。  
   
-4.  選択、**検索**エントリ。 **ユーザーまたはグループ**ウィンドウが開きます。  
+4. 選択、**検索**エントリ。 **ユーザーまたはグループ**ウィンドウが開きます。  
   
-5.  **[詳細設定]** をクリックします。  
+5. **[詳細設定]** をクリックします。  
   
-6.  クリックして**場所**します。 **場所**ウィンドウが開きます。  
+6. クリックして**場所**します。 **場所**ウィンドウが開きます。  
   
-7.  使用するコンピューターのエントリを選択します。 一覧表示されているドメインやネットワークのエントリではなく、ローカル コンピューターを選択してください。 コンピューターを選択したらクリックして**OK**します。  
+7. 使用するコンピューターのエントリを選択します。 一覧表示されているドメインやネットワークのエントリではなく、ローカル コンピューターを選択してください。 コンピューターを選択したらクリックして**OK**します。  
   
-8.  クリックして**検索開始**します。 これで、ローカル コンピューターに関連付けられたオブジェクトが検索結果に表示されます。  
+8. クリックして**検索開始**します。 これで、ローカル コンピューターに関連付けられたオブジェクトが検索結果に表示されます。  
   
 9. 検索、 **IIS_IUSRS**内のエントリ、**名前 (相対識別名)** 列。 そのエントリを選択し、クリックして**OK**結果ウィンドウの検索を閉じます。  
   
@@ -120,13 +120,13 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>フォルダーのセキュリティ プロパティを IIS 5.1 または 6.0 で設定するには  
   
-1.  %SystemDrive%\inetpub\wwwroot\servicemodelsamples に移動します。  
+1. %SystemDrive%\inetpub\wwwroot\servicemodelsamples に移動します。  
   
-2.  右クリックし、 **servicemodelsamples**フォルダーをクリック**共有とセキュリティ。**  
+2. 右クリックし、 **servicemodelsamples**フォルダーをクリック**共有とセキュリティ。**  
   
-3.  **[セキュリティ]** タブをクリックします。  
+3. **[セキュリティ]** タブをクリックします。  
   
-4.  IIS 6.0 を使用している場合、**グループまたはユーザー名**ボックス、チェックするかどうか**インターネット ゲスト アカウント**が表示されています。  
+4. IIS 6.0 を使用している場合、**グループまたはユーザー名**ボックス、チェックするかどうか**インターネット ゲスト アカウント**が表示されています。  
   
      表示されていない場合:  
   
@@ -162,7 +162,7 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
     16. クリックして**名前の確認**追加を確認します。 名前が有効な場合は、すべての文字が下線付きの大文字になります。  
   
-5.  IIS 6.0 の確認もネットワーク サービスが表示されている、**グループまたはユーザー名**ボックス。  
+5. IIS 6.0 の確認もネットワーク サービスが表示されている、**グループまたはユーザー名**ボックス。  
   
      NETWORK SERVICE が表示されていない場合:  
   
@@ -178,7 +178,7 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
     6.  クリックして**OK**を閉じる、 **[ユーザーまたはグループ**] ダイアログ ボックス。  
   
-6.  Windows XP SP2 で IIS 5.1 を使用している場合でインターネット ゲスト アカウントと"aspnet"の両方が表示されていることを確認、**グループまたはユーザー名**ボックス。  
+6. Windows XP SP2 で IIS 5.1 を使用している場合でインターネット ゲスト アカウントと"aspnet"の両方が表示されていることを確認、**グループまたはユーザー名**ボックス。  
   
      ASPNET ユーザーは、組み込みのメンバーであることに注意してください。**ユーザー**セキュリティ グループ。 場合は、次の場合、**ユーザー**グループが表示されます ダイアログ ボックスで、個別のアイテムとして許可されているユーザーの一覧に追加する必要はありません。  
   

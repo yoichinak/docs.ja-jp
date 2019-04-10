@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330455"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのルーティング イベントの概念について説明します。 ここでは、ルーティング イベントの用語を定義し、要素ツリーを通じたルーティング イベントのルーティング方法、ルーティング イベントの処理方法、カスタム ルーティング イベントの作成方法について説明します。
@@ -204,17 +204,17 @@ ms.locfileid: "59171159"
   
  次の順序でイベントが処理されます。  
   
-1.  `PreviewMouseDown` (トンネル) のルート要素。  
+1. `PreviewMouseDown` (トンネル) のルート要素。  
   
-2.  `PreviewMouseDown` (トンネル) 中間要素 #1。  
+2. `PreviewMouseDown` (トンネル) 中間要素 #1。  
   
-3.  `PreviewMouseDown` (トンネル) ソース要素 #2。  
+3. `PreviewMouseDown` (トンネル) ソース要素 #2。  
   
-4.  `MouseDown` (バブル) ソース要素 #2。  
+4. `MouseDown` (バブル) ソース要素 #2。  
   
-5.  `MouseDown` (バブル) 中間要素 #1。  
+5. `MouseDown` (バブル) 中間要素 #1。  
   
-6.  `MouseDown` (バブル) のルート要素。  
+6. `MouseDown` (バブル) のルート要素。  
   
  ルーティング イベント ハンドラー デリゲートは、2 つのオブジェクトへの参照を提供します。その 2 つは、イベントを発生したオブジェクトと、ハンドラーが呼び出されたオブジェクトです。 ハンドラーが呼び出されたオブジェクトは、`sender` パラメーターによって報告されるオブジェクトです。 イベントが発生した最初のオブジェクトがによって報告された、<xref:System.Windows.RoutedEventArgs.Source%2A>イベント データのプロパティ。 ルーティング イベントはまだ発生し、場合、同一のオブジェクトによって処理される`sender`と<xref:System.Windows.RoutedEventArgs.Source%2A>は同一 (これは、手順 3. および 4. イベントの一覧の例の処理の場合)。  
   

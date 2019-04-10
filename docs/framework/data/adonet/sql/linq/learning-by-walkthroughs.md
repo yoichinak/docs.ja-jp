@@ -2,12 +2,12 @@
 title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329311"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントには、いくつかのチュートリアルが用意されています。 このトピックでは、チュートリアルに関する全般的な話題 (トラブルシューティングを含む) を取り上げます。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] について学ぶための、いくつかの入門レベルのチュートリアルへのリンクを示します。  
@@ -53,13 +53,13 @@ ms.locfileid: "59189004"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>データベース ログオンを確認または変更するには  
   
-1.  Windows で**開始**メニューで、**すべてのプログラム**、 **Microsoft SQL Server 2005**、 をポイント**構成ツール**、順にクリックします**SQL Server 構成マネージャー**します。  
+1. Windows で**開始**メニューで、**すべてのプログラム**、 **Microsoft SQL Server 2005**、 をポイント**構成ツール**、順にクリックします**SQL Server 構成マネージャー**します。  
   
-2.  左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
+2. 左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
   
-3.  右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**プロパティ**します。  
+3. 右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**プロパティ**します。  
   
-4.  をクリックして、**ログオン**タブし、サーバーにログオンを行う方法を確認します。  
+4. をクリックして、**ログオン**タブし、サーバーにログオンを行う方法を確認します。  
   
      ほとんどの場合、**ローカル システム**動作します。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59189004"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>名前付きパイプ プロトコルを有効にするには  
   
-1.  左側のウィンドウで、 **SQL Server 構成マネージャー**、展開**SQL Server 2005 ネットワークの構成**、 をクリックし、 **SQLEXPRESS のプロトコル**します。  
+1. 左側のウィンドウで、 **SQL Server 構成マネージャー**、展開**SQL Server 2005 ネットワークの構成**、 をクリックし、 **SQLEXPRESS のプロトコル**します。  
   
-2.  右側のウィンドウで、**名前付きパイプ**プロトコルを有効にします。 そうでない場合は右クリック**名前付きパイプ**し**を有効にする**します。  
+2. 右側のウィンドウで、**名前付きパイプ**プロトコルを有効にします。 そうでない場合は右クリック**名前付きパイプ**し**を有効にする**します。  
   
      サービスの停止および再起動が必要になります。 次のブロックの手順に従って操作します。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59189004"
   
 ##### <a name="to-stop-and-restart-the-service"></a>サービスを停止および再起動するには  
   
-1.  左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
+1. 左側のウィンドウで、 **SQL Server 構成マネージャー**、 をクリックして**SQL Server 2005 Services**します。  
   
-2.  右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**停止**します。  
+2. 右側のウィンドウで右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**停止**します。  
   
-3.  右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**再起動**します。  
+3. 右クリック**SQL Server (SQLEXPRESS)**、 をクリックし、**再起動**します。  
   
 ## <a name="see-also"></a>関連項目
 

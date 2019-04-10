@@ -2,12 +2,12 @@
 title: '方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: dfc3dc8247a25442511d422192fea4f49bee5d92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169807"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326425"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する
 <xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化できるデータ型を使用するサービスおよびクライアント アプリケーションは、実行時にこのようなデータ型のシリアル化コードを生成およびコンパイルします。このため、起動時のパフォーマンスが低下することがあります。  
@@ -19,11 +19,11 @@ ms.locfileid: "59169807"
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>XmlSerializer シリアル化コードを生成するには  
   
-1.  サービスまたはクライアント コードを 1 つ以上のアセンブリにコンパイルします。  
+1. サービスまたはクライアント コードを 1 つ以上のアセンブリにコンパイルします。  
   
-2.  SDK コマンド プロンプトを開きます。  
+2. SDK コマンド プロンプトを開きます。  
   
-3.  コマンド プロンプトで、次の形式を使用して Svcutil.exe ツールを起動します。  
+3. コマンド プロンプトで、次の形式を使用して Svcutil.exe ツールを起動します。  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -35,7 +35,7 @@ ms.locfileid: "59169807"
   
      依存アセンブリへのパスを指定するには、使用、 **/reference**オプション。  
   
-4.  次のオプションのいずれかを使用して、生成したシリアル化コードをアプリケーションから利用できるようにします。  
+4. 次のオプションのいずれかを使用して、生成したシリアル化コードをアプリケーションから利用できるようにします。  
   
     1.  名前の別のアセンブリに生成されたシリアル化コードをコンパイル [*元のアセンブリ*]。XmlSerializers.dll (たとえば、MyApp.XmlSerializers.dll)。 アプリケーションがアセンブリを読み込むことができ、アセンブリが元のアセンブリと同じキーで署名されている必要があります。 元のアセンブリを再コンパイルする場合は、シリアル化アセンブリも再生成する必要があります。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "59169807"
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Visual Studio で XmlSerializer シリアル化コードを生成するには  
   
-1.  Visual Studio で WCF サービスとクライアント プロジェクトを作成します。 次に、クライアント プロジェクトにサービス参照を追加します。  
+1. Visual Studio で WCF サービスとクライアント プロジェクトを作成します。 次に、クライアント プロジェクトにサービス参照を追加します。  
   
-2.  追加、<xref:System.ServiceModel.XmlSerializerFormatAttribute>でサービス コントラクトに、 *reference.cs*ファイルでクライアント アプリ プロジェクトで**serviceReference** -> **reference.svcmap**. すべてのファイルを表示する必要がありますに注意してください。**ソリューション エクスプ ローラー**にこれらのファイルを参照してください。  
+2. 追加、<xref:System.ServiceModel.XmlSerializerFormatAttribute>でサービス コントラクトに、 *reference.cs*ファイルでクライアント アプリ プロジェクトで**serviceReference** -> **reference.svcmap**. すべてのファイルを表示する必要がありますに注意してください。**ソリューション エクスプ ローラー**にこれらのファイルを参照してください。  
   
-3.  クライアント アプリをビルドします。  
+3. クライアント アプリをビルドします。  
   
-4.  使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)事前生成されたシリアライザーを作成する *.cs*コマンドを使用してファイル。  
+4. 使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)事前生成されたシリアライザーを作成する *.cs*コマンドを使用してファイル。  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -67,7 +67,7 @@ ms.locfileid: "59169807"
   
      *WCFClient.XmlSerializers.dll.cs*ファイルが生成されます。  
   
-5.  生成済みシリアル化アセンブリをコンパイルします。  
+5. 生成済みシリアル化アセンブリをコンパイルします。  
   
      前の手順の例に基づいて、コンパイルのコマンドは、次のようになります  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59169807"
   
      必ず、生成された*WCFClient.XmlSerializers.dll*はクライアント アプリと同じディレクトリに*WCFClient.exe*ここでします。  
   
-6.  クライアント アプリを通常どおり実行します。 生成済みシリアル化アセンブリが使用されます。  
+6. クライアント アプリを通常どおり実行します。 生成済みシリアル化アセンブリが使用されます。  
   
 ## <a name="example"></a>例  
  次のコマンドにより、アセンブリに含まれているサービス コントラクトが使用する `XmlSerializer` 型用のシリアル化型を生成します。  

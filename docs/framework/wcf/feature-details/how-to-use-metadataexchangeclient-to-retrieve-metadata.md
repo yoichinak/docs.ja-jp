@@ -2,12 +2,12 @@
 title: '方法: MetadataExchangeClient を使用してメタデータを取得する'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327881"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>方法: MetadataExchangeClient を使用してメタデータを取得する
 WS-MetadataExchange (MEX) プロトコルを使用してメタデータをダウンロードするには、<xref:System.ServiceModel.Description.MetadataExchangeClient> クラスを使用します。 取得されたメタデータ ファイルは、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトとして返されます。 返された <xref:System.ServiceModel.Description.MetadataSet> オブジェクトには、<xref:System.ServiceModel.Description.MetadataSection> オブジェクトのコレクションが含まれ、コレクションの各オブジェクトには、特定のメタデータの言語と識別子が含まれます。 返されたメタデータはファイルに書き込むことができます。また、返されたメタデータに Web サービス記述言語 (WSDL: Web Services Description Language) ドキュメントが含まれている場合は、<xref:System.ServiceModel.Description.WsdlImporter> を使用してメタデータをインポートできます。  
@@ -21,11 +21,11 @@ WS-MetadataExchange (MEX) プロトコルを使用してメタデータをダウ
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>MetadataExchangeClient を使用してメタデータを取得するには  
   
-1.  新しい <xref:System.ServiceModel.Description.MetadataExchangeClient> オブジェクトを作成するには、バインディング、エンドポイント構成名、またはメタデータのアドレスを明示的に指定します。  
+1. 新しい <xref:System.ServiceModel.Description.MetadataExchangeClient> オブジェクトを作成するには、バインディング、エンドポイント構成名、またはメタデータのアドレスを明示的に指定します。  
   
-2.  必要に応じて <xref:System.ServiceModel.Description.MetadataExchangeClient> を構成します。 たとえば、メタデータを要求するときに使用する証明書を指定したり、メタデータ参照の解決方法を制御したり、<xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> プロパティを設定してメタデータ要求がタイムアウトするまでの待機時間を制御したりできます。  
+2. 必要に応じて <xref:System.ServiceModel.Description.MetadataExchangeClient> を構成します。 たとえば、メタデータを要求するときに使用する証明書を指定したり、メタデータ参照の解決方法を制御したり、<xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> プロパティを設定してメタデータ要求がタイムアウトするまでの待機時間を制御したりできます。  
   
-3.  <xref:System.ServiceModel.Description.MetadataSet> メソッドのいずれかを呼び出して、取得されたメタデータを含む <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> オブジェクトを取得します。 <xref:System.ServiceModel.Description.MetadataExchangeClient> の構築時にアドレスを明示的に指定した場合は、引数を受け取らない <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> オーバーロードしか使用できません。  
+3. <xref:System.ServiceModel.Description.MetadataSet> メソッドのいずれかを呼び出して、取得されたメタデータを含む <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> オブジェクトを取得します。 <xref:System.ServiceModel.Description.MetadataExchangeClient> の構築時にアドレスを明示的に指定した場合は、引数を受け取らない <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> オーバーロードしか使用できません。  
   
 ## <a name="example"></a>例  
  <xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータ ファイルをダウンロードし、列挙する方法を次のコード例に示します。  

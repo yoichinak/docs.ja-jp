@@ -2,12 +2,12 @@
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332314"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -43,31 +43,31 @@ ms.locfileid: "59229174"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
   
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-3.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
+3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
      Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。  
   
-4.  WCF テスト クライアント (WcfTestClient.exe) を実行します。  
+4. WCF テスト クライアント (WcfTestClient.exe) を実行します。  
   
      WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。 既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。  
   
-5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
+5. 選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
   
      入力ボックスにエンドポイントのアドレスを追加します。  
   
-6.  クリックして**OK**ダイアログ ボックスを閉じます。  
+6. クリックして**OK**ダイアログ ボックスを閉じます。  
   
      下の左ペインで、ICalculator サービスが追加された**マイ サービス プロジェクト**します。  
   
-7.  イベント ビューアー アプリケーションを開きます。  
+7. イベント ビューアー アプリケーションを開きます。  
   
      サービスを呼び出す前に、イベント ビューアーを起動し、WCF サービスから生成された追跡イベントのイベント ログがリッスンしていることを確認します。  
   
-8.  **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
+8. **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
   
 9. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリックして**アプリケーション サーバー-アプリケーション**を選択します**ビュー**、し**分析およびデバッグ ログ**します。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59229174"
   
 #### <a name="to-clean-up-optional"></a>クリーンアップするには (省略可能)  
   
-1.  開いている**イベント ビューアー**します。  
+1. 開いている**イベント ビューアー**します。  
   
-2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
+2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
   
-3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
+3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
   
-4.  クリックして**オフ**イベントを消去します。  
+4. クリックして**オフ**イベントを消去します。  
   
 ## <a name="known-issue"></a>既知の問題  
  既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 というエラー メッセージを参照してください可能性があります。"イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  

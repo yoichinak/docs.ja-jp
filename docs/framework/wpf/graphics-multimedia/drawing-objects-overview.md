@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325515"
 ---
 # <a name="drawing-objects-overview"></a>Drawing オブジェクトの概要
 このトピックでは<xref:System.Windows.Media.Drawing>オブジェクトし、それらを使用して、図形、ビットマップ、テキスト、およびメディアを効率的に描画する方法について説明します。 使用して、<xref:System.Windows.Media.Drawing>を使用して、クリップアートを作成するときに、オブジェクトのペイントを<xref:System.Windows.Media.DrawingBrush>を使用して、または<xref:System.Windows.Media.Visual>オブジェクト。  
@@ -94,27 +94,27 @@ GeometryDrawing
   
  独自に作成しないでメディアを再生する<xref:System.Windows.Media.MediaTimeline>、次の手順を実行します。  
   
-1.  <xref:System.Windows.Media.MediaPlayer> オブジェクトを作成します。  
+1. <xref:System.Windows.Media.MediaPlayer> オブジェクトを作成します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  使用して、<xref:System.Windows.Media.MediaPlayer.Open%2A>メディア ファイルを読み込みます。  
+2. 使用して、<xref:System.Windows.Media.MediaPlayer.Open%2A>メディア ファイルを読み込みます。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  <xref:System.Windows.Media.VideoDrawing> を作成します。  
+3. <xref:System.Windows.Media.VideoDrawing> を作成します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  指定サイズと位置を設定して、メディアを描画するために、<xref:System.Windows.Media.VideoDrawing.Rect%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>します。  
+4. 指定サイズと位置を設定して、メディアを描画するために、<xref:System.Windows.Media.VideoDrawing.Rect%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  設定、<xref:System.Windows.Media.VideoDrawing.Player%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>で、<xref:System.Windows.Media.MediaPlayer>を作成します。  
+5. 設定、<xref:System.Windows.Media.VideoDrawing.Player%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>で、<xref:System.Windows.Media.MediaPlayer>を作成します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  使用して、<xref:System.Windows.Media.MediaPlayer.Play%2A>のメソッド、<xref:System.Windows.Media.MediaPlayer>メディアの再生を開始します。  
+6. 使用して、<xref:System.Windows.Media.MediaPlayer.Play%2A>のメソッド、<xref:System.Windows.Media.MediaPlayer>メディアの再生を開始します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -124,19 +124,19 @@ GeometryDrawing
   
  使用して、メディアを介した追加のタイミングを制御する、<xref:System.Windows.Media.MediaTimeline>で、<xref:System.Windows.Media.MediaPlayer>と<xref:System.Windows.Media.VideoDrawing>オブジェクト。 <xref:System.Windows.Media.MediaTimeline>ビデオを繰り返す必要があるかどうかを指定することができます。 使用する、<xref:System.Windows.Media.MediaTimeline>で、 <xref:System.Windows.Media.VideoDrawing>、次の手順を実行します。  
   
-1.  宣言、<xref:System.Windows.Media.MediaTimeline>し、そのタイミング動作を設定します。  
+1. 宣言、<xref:System.Windows.Media.MediaTimeline>し、そのタイミング動作を設定します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  作成、<xref:System.Windows.Media.MediaClock>から、<xref:System.Windows.Media.MediaTimeline>します。  
+2. 作成、<xref:System.Windows.Media.MediaClock>から、<xref:System.Windows.Media.MediaTimeline>します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  作成、<xref:System.Windows.Media.MediaPlayer>を使用して、<xref:System.Windows.Media.MediaClock>設定をその<xref:System.Windows.Media.MediaPlayer.Clock%2A>プロパティ。  
+3. 作成、<xref:System.Windows.Media.MediaPlayer>を使用して、<xref:System.Windows.Media.MediaClock>設定をその<xref:System.Windows.Media.MediaPlayer.Clock%2A>プロパティ。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  作成、<xref:System.Windows.Media.VideoDrawing>を割り当てると、<xref:System.Windows.Media.MediaPlayer>を<xref:System.Windows.Media.VideoDrawing.Player%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>します。  
+4. 作成、<xref:System.Windows.Media.VideoDrawing>を割り当てると、<xref:System.Windows.Media.MediaPlayer>を<xref:System.Windows.Media.VideoDrawing.Player%2A>のプロパティ、<xref:System.Windows.Media.VideoDrawing>します。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331521"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>サービス コントラクトでのデータ転送の指定
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 サービス操作では、メッセージを受信し、それらのメッセージを処理し、送信することができます。 メッセージは、操作コントラクトを使用して記述されます。 たとえば、次のようなコントラクトがあるとします。  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  前の 3 つのケース (.NET 型の保存、オブジェクト グラフの保存、および `XmlObjectSerializer` ベースの完全なカスタム シリアル化) では、必ずカスタム シリアライザーをプラグインする必要があります。 この操作を行うには、次の手順に従います。  
   
-1.  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> から派生する独自の動作を記述します。  
+1. <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> から派生する独自の動作を記述します。  
   
-2.  独自のシリアライザー (`CreateSerializer`、<xref:System.Runtime.Serialization.NetDataContractSerializer> が <xref:System.Runtime.Serialization.DataContractSerializer> に設定された `preserveObjectReferences`、独自のカスタム `true` のいずれか) を返すように 2 つの <xref:System.Runtime.Serialization.XmlObjectSerializer> メソッドをオーバーライドします。  
+2. 独自のシリアライザー (`CreateSerializer`、<xref:System.Runtime.Serialization.NetDataContractSerializer> が <xref:System.Runtime.Serialization.DataContractSerializer> に設定された `preserveObjectReferences`、独自のカスタム `true` のいずれか) を返すように 2 つの <xref:System.Runtime.Serialization.XmlObjectSerializer> メソッドをオーバーライドします。  
   
-3.  サービス ホストを開いたり、クライアント チャネルを作成したりする前に、既存の <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 動作を削除し、前の手順で作成したカスタム派生クラスをプラグインします。  
+3. サービス ホストを開いたり、クライアント チャネルを作成したりする前に、既存の <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 動作を削除し、前の手順で作成したカスタム派生クラスをプラグインします。  
   
  高度なシリアル化の概念の詳細については、次を参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。  
   

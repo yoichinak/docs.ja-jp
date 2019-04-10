@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327374"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
 Windows エクスプ ローラーは、準備ができて、慣れ親しんだのためのアプリケーションの一般的なユーザー インターフェイス選択です。  
@@ -25,9 +25,9 @@ Windows エクスプ ローラーは、準備ができて、慣れ親しんだ�
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Windows エクスプ ローラー スタイルの Windows フォームを作成するには  
   
-1.  新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
+1. 新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
-2.  **ツールボックス**:  
+2. **ツールボックス**:  
   
     1.  ドラッグ、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームにします。  
   
@@ -35,14 +35,14 @@ Windows エクスプ ローラーは、準備ができて、慣れ親しんだ�
   
     3.  ドラッグ、<xref:System.Windows.Forms.ListView>にコントロールを**SplitterPanel2** (のパネル、<xref:System.Windows.Forms.SplitContainer>マークされているコントロール**Panel2**)。  
   
-3.  CTRL キーをクリックするとさらに 3 つすべてのコントロールを選択します。 選択すると、<xref:System.Windows.Forms.SplitContainer>コントロールをパネルではなく、スプリッター バーをクリックします。  
+3. CTRL キーをクリックするとさらに 3 つすべてのコントロールを選択します。 選択すると、<xref:System.Windows.Forms.SplitContainer>コントロールをパネルではなく、スプリッター バーをクリックします。  
   
     > [!NOTE]
     >  使用しないでください、**すべて選択**コマンドを**編集**メニュー。 これを行う場合、次の手順で必要なプロパティでは表示されません、**プロパティ**ウィンドウ。  
   
-4.  **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
+4. **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
   
-5.  F5 キーを押してアプリケーションを実行します。  
+5. F5 キーを押してアプリケーションを実行します。  
   
      フォームには、Windows エクスプ ローラーのような 2 つの部分のユーザー インターフェイスが表示されます。  
   

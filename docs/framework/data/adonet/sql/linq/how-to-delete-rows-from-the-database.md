@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331677"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>方法: 行をデータベースから削除する
 データベース内の行を削除するには、対応するから削除[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テーブルに関連付けられたコレクションからオブジェクト。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 適切な SQL への変更を変換`DELETE`コマンド。  
@@ -32,11 +32,11 @@ ms.locfileid: "59213299"
   
 ### <a name="to-delete-a-row-in-the-database"></a>データベースから行を削除するには  
   
-1.  データベースで削除する行をクエリします。  
+1. データベースで削除する行をクエリします。  
   
-2.  <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> メソッドを呼び出します。  
+2. <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> メソッドを呼び出します。  
   
-3.  データベースに変更内容を送信します。  
+3. データベースに変更内容を送信します。  
   
 ## <a name="example"></a>例  
  この最初のコード例では、注文 #11000 に属する注文詳細情報をデータベースに照会し、それらの注文詳細情報を削除するようにマークして、変更をデータベースに送信します。  

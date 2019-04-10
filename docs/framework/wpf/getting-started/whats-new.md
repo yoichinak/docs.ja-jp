@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227484"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325827"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Version 4.5 の新機能
 <a name="introduction"></a> このトピックには、新機能および強化機能に関する情報が含まれています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5。  
@@ -56,9 +56,9 @@ ms.locfileid: "59227484"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel の新機能  
   
-1.  <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを指定することで、<xref:System.Windows.Controls.VirtualizingStackPanel> (<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> など) に部分的な項目を表示するかどうかを指定できます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Item> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には完全に表示される項目だけが表示されます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Pixel> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には部分的に表示される項目も表示されます。  
+1. <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを指定することで、<xref:System.Windows.Controls.VirtualizingStackPanel> (<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> など) に部分的な項目を表示するかどうかを指定できます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Item> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には完全に表示される項目だけが表示されます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Pixel> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には部分的に表示される項目も表示されます。  
   
-2.  <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを使用して <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> を仮想化すると、ビューポートの前後でキャッシュのサイズを指定できます。  キャッシュは、項目が仮想化されないビューポートの上または下の領域の量です。  キャッシュを使用して、UI 要素がビューにスクロールされたときに UI 要素が生成されないようすると、パフォーマンスが向上します。 キャッシュは、操作中にアプリケーションが応答を停止しないように低い優先度で実行されます。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> プロパティは、<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType> により使用される測定単位を決定します。  
+2. <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを使用して <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> を仮想化すると、ビューポートの前後でキャッシュのサイズを指定できます。  キャッシュは、項目が仮想化されないビューポートの上または下の領域の量です。  キャッシュを使用して、UI 要素がビューにスクロールされたときに UI 要素が生成されないようすると、パフォーマンスが向上します。 キャッシュは、操作中にアプリケーションが応答を停止しないように低い優先度で実行されます。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> プロパティは、<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType> により使用される測定単位を決定します。  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>静的プロパティへのバインド  
@@ -86,11 +86,11 @@ ms.locfileid: "59227484"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>ICustomTypeProvider を実装する型へのバインド  
  WPF では、<xref:System.Reflection.ICustomTypeProvider> を実装するオブジェクトへのデータ バインディングがサポートされます (カスタムの型とも呼ばれます)。  カスタムの型は、次の場合に使用できます。  
   
-1.  データ バインディングにおける <xref:System.Windows.PropertyPath> として。 たとえば、<xref:System.Windows.Data.Binding.Path%2A> の <xref:System.Windows.Data.Binding> プロパティは、カスタムの型のプロパティを参照できます。  
+1. データ バインディングにおける <xref:System.Windows.PropertyPath> として。 たとえば、<xref:System.Windows.Data.Binding.Path%2A> の <xref:System.Windows.Data.Binding> プロパティは、カスタムの型のプロパティを参照できます。  
   
-2.  <xref:System.Windows.DataTemplate.DataType%2A> プロパティの値として。  
+2. <xref:System.Windows.DataTemplate.DataType%2A> プロパティの値として。  
   
-3.  <xref:System.Windows.Controls.DataGrid> で自動的に生成された列を決定する型として。  
+3. <xref:System.Windows.Controls.DataGrid> で自動的に生成された列を決定する型として。  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>バインディング式からのデータ バインディング情報の取得  

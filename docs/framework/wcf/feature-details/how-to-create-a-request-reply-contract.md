@@ -2,25 +2,25 @@
 title: '方法: 要求/応答コントラクトを作成する'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327478"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>方法: 要求/応答コントラクトを作成する
 要求/応答コントラクトは、応答を返すメソッドを指定します。 応答が送信され、このコントラクトの条件の下で要求に関連付けられる必要があります。 メソッドが応答を返さない場合 (C# の場合は `void` または Visual Basic の場合は `Sub`) でも、インフラストラクチャは、空のメッセージを作成して送信することで、メソッドが返ったことを呼び出し元に示します。 空の応答メッセージが送信されるのを防ぐには、操作で 1 方向コントラクトを使用します。  
   
 ### <a name="to-create-a-request-reply-contract"></a>要求/応答コントラクトを作成するには  
   
-1.  選択したプログラミング言語でインターフェイスを作成します。  
+1. 選択したプログラミング言語でインターフェイスを作成します。  
   
-2.  インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> 属性を適用します。  
+2. インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> 属性を適用します。  
   
-3.  クライアントが呼び出すことのできる各メソッドに <xref:System.ServiceModel.OperationContractAttribute> 属性を適用します。  
+3. クライアントが呼び出すことのできる各メソッドに <xref:System.ServiceModel.OperationContractAttribute> 属性を適用します。  
   
-4.  任意。 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティの値を `true` に設定して、空の応答メッセージが送信されることを防止します。 既定では、すべての操作は要求/応答コントラクトです。  
+4. 省略可能です。 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティの値を `true` に設定して、空の応答メッセージが送信されることを防止します。 既定では、すべての操作は要求/応答コントラクトです。  
   
 ## <a name="example"></a>例  
  次のサンプルは、`Add` メソッドと `Subtract` メソッドを提供する電卓サービスのコントラクトを定義します。 `Multiply` メソッドは <xref:System.ServiceModel.OperationContractAttribute> クラスでマークされていないため、このコントラクトの一部ではありません。したがって、クライアントからはアクセスできません。  

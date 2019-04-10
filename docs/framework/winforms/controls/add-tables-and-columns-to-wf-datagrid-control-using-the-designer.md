@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201534"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329961"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールにテーブルと列を追加する
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201534"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>デザイナーの DataGrid コントロールにテーブルを追加するには  
   
-1.  テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :デザイナーを使用してデータ ソースに Windows フォーム DataGrid コントロールをバインド](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)します。  
+1. テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :デザイナーを使用してデータ ソースに Windows フォーム DataGrid コントロールをバインド](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)します。  
   
-2.  選択、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.TableStyles%2A>[プロパティ] ウィンドウで、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横にこのプロパティを表示、 **DataGridTableStyle コレクション エディター**します。  
+2. 選択、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.TableStyles%2A>[プロパティ] ウィンドウで、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横にこのプロパティを表示、 **DataGridTableStyle コレクション エディター**します。  
   
-3.  コレクション エディターで **追加**テーブル スタイルを挿入します。  
+3. コレクション エディターで **追加**テーブル スタイルを挿入します。  
   
-4.  クリックして**OK**コレクション エディターを終了し、横にある省略記号ボタンをクリックして再度、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティ。  
+4. クリックして**OK**コレクション エディターを終了し、横にある省略記号ボタンをクリックして再度、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティ。  
   
      コレクション エディターを開くと、コントロールにバインドされているすべてのデータ テーブルは、のドロップダウン リストに表示されます、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>テーブル スタイルのプロパティ。  
   
-5.  **メンバー**ボックス、コレクション エディターのテーブルのスタイルをクリックします。  
+5. **メンバー**ボックス、コレクション エディターのテーブルのスタイルをクリックします。  
   
-6.  **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>を表示するテーブルの値。  
+6. **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>を表示するテーブルの値。  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>デザイナーの DataGrid コントロールに列を追加するには  
   
-1.  **メンバー**のボックス、 **DataGridTableStyle コレクション エディター**、適切なテーブルのスタイルを選択します。 **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクション、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) を表示するプロパティの横にある、 **DataGridColumnStyle コレクション エディター**します。  
+1. **メンバー**のボックス、 **DataGridTableStyle コレクション エディター**、適切なテーブルのスタイルを選択します。 **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクション、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) を表示するプロパティの横にある、 **DataGridColumnStyle コレクション エディター**します。  
   
-2.  コレクション エディターで **追加**列スタイルの挿入または下向きの矢印をクリックして**追加**列の型を指定します。  
+2. コレクション エディターで **追加**列スタイルの挿入または下向きの矢印をクリックして**追加**列の型を指定します。  
   
      ドロップダウン ボックスで、いずれかを選択できます、<xref:System.Windows.Forms.DataGridTextBoxColumn>または<xref:System.Windows.Forms.DataGridBoolColumn>型。  
   
-3.  閉じるには、[ok] をクリックして、 **DataGridColumnStyle コレクション エディター**、横にある省略記号ボタンをクリックして再度開くと、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティ。  
+3. 閉じるには、[ok] をクリックして、 **DataGridColumnStyle コレクション エディター**、横にある省略記号ボタンをクリックして再度開くと、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティ。  
   
      ドロップダウン リストにバインドされたデータ テーブル内のデータ列が表示されます、コレクション エディターを再度開くと、<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>列スタイルのプロパティ。  
   
-4.  **メンバー**ボックス、コレクション エディターの列のスタイルをクリックします。  
+4. **メンバー**ボックス、コレクション エディターの列のスタイルをクリックします。  
   
-5.  **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>を表示する列の値。  
+5. **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>を表示する列の値。  
   
 ## <a name="see-also"></a>関連項目
 

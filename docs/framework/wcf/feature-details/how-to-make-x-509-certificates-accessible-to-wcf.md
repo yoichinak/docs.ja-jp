@@ -9,19 +9,19 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331079"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセス可能にする
 アプリケーション コードには、X.509 証明書を Windows Communication Foundation (WCF) にアクセスすることができるようにするには、証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアに X.509 証明書に関連付けられている秘密キーを取得するには、WCF は、そのアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>X.509 証明書を WCF からアクセス可能にするには  
   
-1.  どの WCF が実行されている読み取りアクセス権を X.509 証明書に関連付けられている秘密キーを含むファイルをアカウントに与えます。  
+1. どの WCF が実行されている読み取りアクセス権を X.509 証明書に関連付けられている秘密キーを含むファイルをアカウントに与えます。  
   
     1.  WCF が X.509 証明書の秘密キーへの読み取りアクセスを必要とするかどうかを決定します。  
   

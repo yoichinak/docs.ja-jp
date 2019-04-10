@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323253"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A:  これは高度なシナリオですが、以下の手順に従ってください。  
   
-1.  .dbml ファイル内で、<xref:System.Data.Linq.ITable.IsReadOnly%2A> フラグを `True` に変更することにより、プロパティを変更します。  
+1. .dbml ファイル内で、<xref:System.Data.Linq.ITable.IsReadOnly%2A> フラグを `True` に変更することにより、プロパティを変更します。  
   
-2.  部分クラスを追加します。 読み取り専用メンバー用のパラメーターを使ってコンストラクターを作成します。  
+2. 部分クラスを追加します。 読み取り専用メンバー用のパラメーターを使ってコンストラクターを作成します。  
   
-3.  既定の <xref:System.Data.Linq.Mapping.UpdateCheck> 値 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) がアプリケーションにとって適切な値かどうかをレビューします。  
+3. 既定の <xref:System.Data.Linq.Mapping.UpdateCheck> 値 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) がアプリケーションにとって適切な値かどうかをレビューします。  
   
     > [!CAUTION]
     >  使用する場合、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio で、変更を上書きする可能性があります。  

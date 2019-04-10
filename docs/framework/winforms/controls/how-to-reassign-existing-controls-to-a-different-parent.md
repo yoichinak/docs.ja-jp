@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162245"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328219"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>方法: 既存のコントロールを別の親に再配置する
 フォームに存在するコントロールを新しいコンテナー コントロールに割り当てることができます。  
@@ -21,25 +21,25 @@ ms.locfileid: "59162245"
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>既存のコントロールを別の親に再配置するには  
   
-1.  <xref:System.Windows.Forms.Button> [ツールボックス] **から 3 つの** コントロールをフォームにドラッグします。  
+1. <xref:System.Windows.Forms.Button> [ツールボックス] **から 3 つの** コントロールをフォームにドラッグします。  
   
      これらを互いに近づけて配置しますが、整列はさせません。  
   
-2.  **[ツールボックス]** で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。  
+2. **[ツールボックス]** で <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンをクリックします。  
   
      アイコンはフォームにドラッグしないでください。  
   
-3.  マウス ポインターを 3 つの <xref:System.Windows.Forms.Button> コントロールに近づけます。  
+3. マウス ポインターを 3 つの <xref:System.Windows.Forms.Button> コントロールに近づけます。  
   
      ポインターが <xref:System.Windows.Forms.FlowLayoutPanel> コントロール アイコンが付いた十字カーソルに変わります。  
   
-4.  マウス ボタンを押したままにします。  
+4. マウス ボタンを押したままにします。  
   
-5.  マウス ポインターをドラッグして、 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのアウトラインを描画します。  
+5. マウス ポインターをドラッグして、 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのアウトラインを描画します。  
   
-6.  3 つの <xref:System.Windows.Forms.Button> コントロールを囲むようにアウトラインを描画します。  
+6. 3 つの <xref:System.Windows.Forms.Button> コントロールを囲むようにアウトラインを描画します。  
   
-7.  マウスのボタンを離します。  
+7. マウスのボタンを離します。  
   
      これで、3 つの <xref:System.Windows.Forms.Button> コントロールが <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに挿入されました。  
   

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4cbb5fbdb24790a7ddbce5c38060703c7ba7024a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326893"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>方法: Windows フォーム TreeView コントロールでノードを追加および削除する
 Windows フォーム<xref:System.Windows.Forms.TreeView>コントロール内の最上位ノードを保存します。 その<xref:System.Windows.Forms.TreeView.Nodes%2A>コレクション。 各<xref:System.Windows.Forms.TreeNode>独自もが<xref:System.Windows.Forms.TreeNode.Nodes%2A>その子ノードを格納するコレクション。 両方のコレクション プロパティは型<xref:System.Windows.Forms.TreeNodeCollection>、高を追加するための標準的なコレクションのメンバーを削除して、ノード階層の 1 つのレベルにあるノードの再配置します。  
   
 ### <a name="to-add-nodes-programmatically"></a>プログラムでノードを追加するには  
   
-1.  使用して、<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>プロパティ。  
+1. 使用して、<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>プロパティ。  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -45,7 +45,7 @@ Windows フォーム<xref:System.Windows.Forms.TreeView>コントロール内の
   
 ### <a name="to-remove-nodes-programmatically"></a>プログラムでノードを削除するには  
   
-1.  使用して、<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>1 つのノードを削除するプロパティまたは<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>メソッドをすべてのノードをオフにします。  
+1. 使用して、<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>のツリー ビューのメソッド<xref:System.Windows.Forms.TreeView.Nodes%2A>1 つのノードを削除するプロパティまたは<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>メソッドをすべてのノードをオフにします。  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  

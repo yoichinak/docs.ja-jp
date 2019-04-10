@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329974"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: フォームの端に合わせてコントロールを配置する
 <xref:System.Windows.Forms.Control.Dock%2A> プロパティを設定することにより、フォームの端に合わせてコントロールを配置することができます。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "59185784"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>実行時にコントロールの Dock プロパティを設定するには  
   
-1.  コードで <xref:System.Windows.Forms.Control.Dock%2A> プロパティを適切な値に設定します。  
+1. コードで <xref:System.Windows.Forms.Control.Dock%2A> プロパティを適切な値に設定します。  
   
     ```vb  
     ' To set the Dock property internally.  

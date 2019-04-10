@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332145"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  さらに、`DataRow.["columnName"]` の NULL 値割り当てのインスタンスには、次の規則が適用されます。  
   
-1.  既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
+1. 既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
   
-2.  XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
+2. XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
   
-3.  既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
+3. 既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
   
-4.  XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
+4. XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
+5. <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
   
 ## <a name="assigning-null-values"></a>NULL 値の割り当て  
  任意の <xref:System.Data.SqlTypes> インスタンスの既定値は NULL です。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 61a234a679d9937cb38a753a3d73f2ecc9ec891a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 10554145de9725bb4cfc655ed88195dce28d739c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190368"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321615"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>チュートリアル: WPF での XAML を使用した Windows フォーム コントロールのホスト
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 豊富な機能セットには、多くのコントロールを提供します。 ただしを使用する可能性がありますも[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]のコントロールに対して、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ページ。 たとえば、既存のかなりの投資を必要に応じて[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール、またはする必要があります、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]独自の機能を提供するコントロール。  
@@ -26,29 +26,29 @@ ms.locfileid: "59190368"
   
 #### <a name="to-host-the-maskedtextbox-control"></a>MaskedTextBox コントロールをホストするには  
   
-1.  という名前の WPF アプリケーション プロジェクトを作成する`HostingWfInWpfWithXaml`します。  
+1. という名前の WPF アプリケーション プロジェクトを作成する`HostingWfInWpfWithXaml`します。  
   
-2.  次のアセンブリへの参照を追加します。  
+2. 次のアセンブリへの参照を追加します。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
+3. MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
   
-4.  <xref:System.Windows.Window>要素では、次の名前空間マッピングを追加します。 `wf`名前空間のマッピングは、Windows フォーム コントロールを格納するアセンブリへの参照を確立します。  
+4. <xref:System.Windows.Window>要素では、次の名前空間マッピングを追加します。 `wf`名前空間のマッピングは、Windows フォーム コントロールを格納するアセンブリへの参照を確立します。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  <xref:System.Windows.Controls.Grid>要素は、次の XAML を追加します。  
+5. <xref:System.Windows.Controls.Grid>要素は、次の XAML を追加します。  
   
      <xref:System.Windows.Forms.MaskedTextBox>コントロールの子として作成されますが、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロール。  
   
      [!code-xaml[HostingWfInWpfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWpfWithXaml/CSharp/HostingWfInWpf/Window1.xaml#3)]  
   
-6.  F5 キーを押してアプリケーションをビルドし、実行します。  
+6. F5 キーを押してアプリケーションをビルドし、実行します。  
   
 ## <a name="see-also"></a>関連項目
 

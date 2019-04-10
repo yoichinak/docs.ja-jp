@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200234"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321849"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする
 デザイナーを使用して、接続、<xref:System.Windows.Forms.DataGridView>データベース、ビジネス オブジェクト、Web サービスなど、いくつかの異なる種類のデータ ソースへのコントロール。 デザイナーを使用してデータ ソースにコントロールをバインドすると、コントロールに自動的にバインドを<xref:System.Windows.Forms.BindingSource>コンポーネントをデータ ソースを表します。 さらに、データ ソースによって提供されるスキーマ情報に対応するように、このコントロールの列が自動的に生成されます。  
@@ -27,19 +27,19 @@ ms.locfileid: "59200234"
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>コントロールをデータ ソースにバインドするには  
   
-1.  スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、<xref:System.Windows.Forms.DataGridView>コントロール。  
+1. スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、<xref:System.Windows.Forms.DataGridView>コントロール。  
   
-2.  **[データ ソースの選択]** オプションのドロップダウン矢印をクリックします。  
+2. **[データ ソースの選択]** オプションのドロップダウン矢印をクリックします。  
   
-3.  プロジェクトにまだデータ ソースがない場合は、**[プロジェクト データ ソースの追加]** をクリックし、ウィザードに示される手順に従います。  
+3. プロジェクトにまだデータ ソースがない場合は、**[プロジェクト データ ソースの追加]** をクリックし、ウィザードに示される手順に従います。  
   
      詳細については、「[データ ソース構成ウィザード](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))」を参照してください。 **[データ ソースの選択]** ドロップダウン ウィンドウに新しいデータ ソースが表示されます。 新しいデータ ソースに含まれるのが単一データベース テーブルなど、1 つのメンバーのみの場合、コントロールはそのメンバーに自動的にバインドされます。 それ以外の場合は、次の手順に進みます。  
   
-4.  展開されていない場合は **[他のデータ ソース]** ノードと **[プロジェクト データ ソース]** ノードを展開し、コントロールをバインドするデータ ソースを選択します。  
+4. 展開されていない場合は **[他のデータ ソース]** ノードと **[プロジェクト データ ソース]** ノードを展開し、コントロールをバインドするデータ ソースを選択します。  
   
-5.  データ ソースには、複数のメンバーが含まれている場合などを作成した場合、<xref:System.Data.DataSet?displayProperty=nameWithType>複数のテーブルを格納している、データ ソースを展開し、特定のメンバーにバインドします。  
+5. データ ソースには、複数のメンバーが含まれている場合などを作成した場合、<xref:System.Data.DataSet?displayProperty=nameWithType>複数のテーブルを格納している、データ ソースを展開し、特定のメンバーにバインドします。  
   
-6.  マスター/詳細リレーションシップを作成する、**データ ソースの選択**を 2 番目のドロップダウン ウィンドウ<xref:System.Windows.Forms.DataGridView>コントロールを展開し、<xref:System.Windows.Forms.BindingSource>親テーブルの作成し、一覧から関連する子テーブルを選択表示されます。  
+6. マスター/詳細リレーションシップを作成する、**データ ソースの選択**を 2 番目のドロップダウン ウィンドウ<xref:System.Windows.Forms.DataGridView>コントロールを展開し、<xref:System.Windows.Forms.BindingSource>親テーブルの作成し、一覧から関連する子テーブルを選択表示されます。  
   
     > [!NOTE]
     >  プロジェクトにデータ ソースが既にある場合は、**[データソース]** ウィンドウを使用してデータ フォームを作成することもできます。 詳細については、「[[データ ソース] ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))」を参照してください。  

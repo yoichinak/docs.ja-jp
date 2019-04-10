@@ -2,12 +2,12 @@
 title: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325372"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
 このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
@@ -51,16 +51,16 @@ ms.locfileid: "59184887"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
   
-1.  `Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
+1. `Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  F5 キーを押して、アプリケーションをデバッグします。  
+2. F5 キーを押して、アプリケーションをデバッグします。  
   
     > [!NOTE]
     >  `db.Log = Console.Out;` をコメント アウトすることによって、コンソール ウィンドウ内の SQL コードを除去できます。  
   
-3.  コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
+3. コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>データベースの厳密に型指定されたビューを作成する  
  データベースの厳密に型指定されたビューを使用すると、操作が非常に簡単になります。 <xref:System.Data.Linq.DataContext> オブジェクトを厳密に型指定することによって、<xref:System.Data.Linq.DataContext.GetTable%2A> を呼び出す必要がありません。 厳密に型指定された <xref:System.Data.Linq.DataContext> オブジェクトを使用する場合は、すべてのクエリで、厳密に型指定されたテーブルを使用できます。  
@@ -69,21 +69,21 @@ ms.locfileid: "59184887"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
   
-1.  `Customer` クラス宣言の上に次のコードを追加します。  
+1. `Customer` クラス宣言の上に次のコードを追加します。  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  `Main` メソッドを次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
+2. `Main` メソッドを次のように変更し、厳密に型指定された <xref:System.Data.Linq.DataContext> を使用するようにします。  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  F5 キーを押して、アプリケーションをデバッグします。  
+3. F5 キーを押して、アプリケーションをデバッグします。  
   
      コンソール ウィンドウの出力は次のとおりです。  
   
      `ID=WHITC`  
   
-4.  コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
+4. コンソール ウィンドウで Enter キーを押して、デバッグを停止します。  
   
 ## <a name="next-steps"></a>次の手順  
  次のチュートリアル ([チュートリアル。データの操作 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) データを操作する方法を示します。 そのチュートリアルを実行するのに、既に終了したこのシリーズの 2 つのチュートリアルを保存する必要はありません。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323604"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法: ハイブリッド アプリケーションで視覚スタイルを有効にする
 このトピックでは、有効にする方法を示しています。[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]で視覚スタイルを、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]でホストされているコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。  
@@ -26,25 +26,25 @@ ms.locfileid: "59176372"
   
 #### <a name="to-enable-windows-forms-visual-styles"></a>Windows フォーム視覚スタイルを有効にするには  
   
-1.  作成、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]という名前のアプリケーション プロジェクト`HostingWfWithVisualStyles`します。  
+1. 作成、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]という名前のアプリケーション プロジェクト`HostingWfWithVisualStyles`します。  
   
-2.  ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
+2. ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  ツールボックスでダブルクリックして、<xref:System.Windows.Controls.Grid>を配置するにはアイコン、<xref:System.Windows.Controls.Grid>デザイン サーフェイス上の要素。  
+3. ツールボックスでダブルクリックして、<xref:System.Windows.Controls.Grid>を配置するにはアイコン、<xref:System.Windows.Controls.Grid>デザイン サーフェイス上の要素。  
   
-4.  [プロパティ] ウィンドウでの値を設定、<xref:System.Windows.FrameworkElement.Height%2A>と<xref:System.Windows.FrameworkElement.Width%2A>プロパティ**自動**します。  
+4. [プロパティ] ウィンドウでの値を設定、<xref:System.Windows.FrameworkElement.Height%2A>と<xref:System.Windows.FrameworkElement.Width%2A>プロパティ**自動**します。  
   
-5.  デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>します。  
+5. デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>します。  
   
-6.  [プロパティ] ウィンドウ、**イベント**タブ。  
+6. [プロパティ] ウィンドウ、**イベント**タブ。  
   
-7.  ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
+7. ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
   
-8.  MainWindow.xaml.vb または MainWindow.xaml.cs で、処理するために次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。  
+8. MainWindow.xaml.vb または MainWindow.xaml.cs で、処理するために次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
@@ -58,11 +58,11 @@ ms.locfileid: "59176372"
   
 #### <a name="to-disable-windows-forms-visual-styles"></a>Windows フォーム視覚スタイルを無効にするには  
   
-1.  コード エディターで MainWindow.xaml.vb または MainWindow.xaml.cs を開きます。  
+1. コード エディターで MainWindow.xaml.vb または MainWindow.xaml.cs を開きます。  
   
-2.  呼び出しをコメント、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。  
+2. 呼び出しをコメント、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>メソッド。  
   
-3.  F5 キーを押してアプリケーションをビルドし、実行します。  
+3. F5 キーを押してアプリケーションをビルドし、実行します。  
   
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールが既定のシステム スタイルで塗りつぶされます。  
   

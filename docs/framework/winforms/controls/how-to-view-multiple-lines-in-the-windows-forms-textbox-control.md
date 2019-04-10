@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324189"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールで複数行を表示する
 既定では、Windows フォームで<xref:System.Windows.Forms.TextBox>コントロールが 1 行のテキストを表示し、スクロール バーは表示されません。 テキストが使用可能な領域よりも長い場合は、テキストの一部のみが表示されます。 この既定の動作を設定して変更することができます、 <xref:System.Windows.Forms.TextBox.Multiline%2A>、 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>、および<xref:System.Windows.Forms.TextBox.ScrollBars%2A>プロパティを適切な値にします。  
@@ -29,9 +29,9 @@ ms.locfileid: "59190913"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>TextBox コントロールで複数の行を表示するには  
   
-1.  <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true` に設定します。 場合<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>は`true`(既定)、コントロール内のテキストは、1 つまたは複数の段落を感じるかもしれません。 それ以外の場合、一部の行が、コントロールの端にあるクリップが一覧として表示されます。  
+1. <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true` に設定します。 場合<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>は`true`(既定)、コントロール内のテキストは、1 つまたは複数の段落を感じるかもしれません。 それ以外の場合、一部の行が、コントロールの端にあるクリップが一覧として表示されます。  
   
-2.  <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
+2. <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "59190913"
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|幅を超える可能性がありますうちいくつかの行の一覧を表示する場合、この値を使用して、<xref:System.Windows.Forms.TextBox>コントロール。|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|一覧は、コントロールの高さを超える可能性がある場合は、この値を使用します。|  
   
-3.  <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
+3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
     |[値]|説明|  
     |-----------|-----------------|  

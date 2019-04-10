@@ -2,12 +2,12 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332522"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
@@ -261,10 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  ビルド ディレクトリからサービス実行可能ファイルを実行します。  
+3. ビルド ディレクトリからサービス実行可能ファイルを実行します。  
   
-4.  クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  
+4. クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  

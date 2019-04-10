@@ -2,12 +2,12 @@
 title: '方法: データベース データ型を指定する'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: bf53463be8c715fd1c599efac1b19d838be19f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333211"
 ---
 # <a name="how-to-specify-database-data-types"></a>方法: データベース データ型を指定する
 使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>プロパティを<xref:System.Data.Linq.Mapping.ColumnAttribute>属性 T-SQL テーブル宣言内で列を定義する正確なテキストを指定します。  
@@ -18,9 +18,9 @@ ms.locfileid: "59218044"
   
 ### <a name="to-specify-text-to-define-a-data-type-in-a-t-sql-table"></a>データ型を T-SQL テーブルに定義するテキストを指定するには  
   
-1.  <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。  
+1. <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。  
   
-2.  <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> プロパティの値を T-SQL で使用される正確なテキストに設定します。  
+2. <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> プロパティの値を T-SQL で使用される正確なテキストに設定します。  
   
 ## <a name="see-also"></a>関連項目
 

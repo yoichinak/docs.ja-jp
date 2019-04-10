@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325359"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ
 カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
@@ -58,13 +58,13 @@ ms.locfileid: "59213690"
   
 #### <a name="to-create-the-control-library-project"></a>コントロール ライブラリ プロジェクトを作成するには  
   
-1.  追加、 **Windows コントロール ライブラリ**プロジェクトがソリューションにします。  
+1. 追加、 **Windows コントロール ライブラリ**プロジェクトがソリューションにします。  
   
-2.  新しい追加**UserControl** DebugControlLibrary プロジェクトに項目。 詳細については、「[方法: 新しいプロジェクト項目の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))します。 新しいソース ファイルに「タブ」の基本の名前を付けます。  
+2. 新しい追加**UserControl** DebugControlLibrary プロジェクトに項目。 詳細については、「[方法: 新しいプロジェクト項目の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))します。 新しいソース ファイルに「タブ」の基本の名前を付けます。  
   
-3.  使用して、**ソリューション エクスプ ローラー**の基本名を持つコード ファイルを削除することによって、プロジェクトの既定のコントロールを削除"`UserControl1`"。 詳細については、「[方法: 削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
+3. 使用して、**ソリューション エクスプ ローラー**の基本名を持つコード ファイルを削除することによって、プロジェクトの既定のコントロールを削除"`UserControl1`"。 詳細については、「[方法: 削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
   
-4.  ソリューションをビルドします。  
+4. ソリューションをビルドします。  
   
 ## <a name="checkpoint"></a>チェックポイント  
  この時点では、ことができますでカスタム コントロールを表示する、**ツールボックス**します。  
@@ -78,7 +78,7 @@ ms.locfileid: "59213690"
   
 #### <a name="to-add-a-property-to-your-custom-control"></a>カスタム コントロールにプロパティを追加するには  
   
-1.  開いている**タブ**で、**コード エディター**します。 クラス定義には、次のコードを追加します。  
+1. 開いている**タブ**で、**コード エディター**します。 クラス定義には、次のコードを追加します。  
   
     ```vb  
     Private demoStringValue As String = Nothing  
@@ -112,42 +112,42 @@ ms.locfileid: "59213690"
     }  
     ```  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
 ## <a name="adding-your-custom-control-to-the-host-form"></a>ホストのフォームにカスタム コントロールを追加します。  
  カスタム コントロールのデザイン時の動作をデバッグするには、ホストのフォームにカスタム コントロール クラスのインスタンスを配置します。  
   
 #### <a name="to-add-your-custom-control-to-the-host-form"></a>ホストのフォームにカスタム コントロールを追加するには  
   
-1.  "DebuggingExample"プロジェクトで、Form1 を開き、 **Windows フォーム デザイナー**します。  
+1. "DebuggingExample"プロジェクトで、Form1 を開き、 **Windows フォーム デザイナー**します。  
   
-2.  **ツールボックス**、オープン、 **DebugControlLibrary コンポーネント**タブし、ドラッグ、**タブ**フォーム上にインスタンス。  
+2. **ツールボックス**、オープン、 **DebugControlLibrary コンポーネント**タブし、ドラッグ、**タブ**フォーム上にインスタンス。  
   
-3.  検索、`DemoString`にカスタム プロパティ、**プロパティ**ウィンドウ。 他のプロパティと同様、その値を変更できますに注意してください。 場合にも注意してください、`DemoString`プロパティが選択されている場合の下部にあるプロパティの説明文字列が表示されます、**プロパティ**ウィンドウ。  
+3. 検索、`DemoString`にカスタム プロパティ、**プロパティ**ウィンドウ。 他のプロパティと同様、その値を変更できますに注意してください。 場合にも注意してください、`DemoString`プロパティが選択されている場合の下部にあるプロパティの説明文字列が表示されます、**プロパティ**ウィンドウ。  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>デザイン時のデバッグ プロジェクトの設定  
  カスタム コントロールのデザイン時の動作をデバッグするには、カスタム コントロールのコードを実行している Visual Studio の別のインスタンスをデバッグします。  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>デザイン時のデバッグ プロジェクトを設定するには  
   
-1.  右クリックし、 **DebugControlLibrary**プロジェクト、**ソリューション エクスプ ローラー**選択**プロパティ**します。  
+1. 右クリックし、 **DebugControlLibrary**プロジェクト、**ソリューション エクスプ ローラー**選択**プロパティ**します。  
   
-2.  **DebugControlLibrary**プロパティ シート、**デバッグ**タブ。  
+2. **DebugControlLibrary**プロパティ シート、**デバッグ**タブ。  
   
      **開始動作**セクションで、**外部プログラムの開始**します。 されますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton"))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は**devenv.exe**、され、パスは %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe で既定の場所にインストールした場合。  
   
-3.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+3. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-4.  右クリックし、 **DebugControlLibrary**順に選択して**スタートアップ プロジェクトとして設定**このデバッグ構成を有効にします。  
+4. 右クリックし、 **DebugControlLibrary**順に選択して**スタートアップ プロジェクトとして設定**このデバッグ構成を有効にします。  
   
 ## <a name="debugging-your-custom-control-at-design-time"></a>カスタム コントロールをデザイン時のデバッグ  
  デザイン モードで実行するときに、カスタム コントロールをデバッグする準備が整いました。 デバッグ セッションを開始して、Visual Studio の新しいインスタンスを作成は"DebuggingExample"ソリューションの読み込みに使用します。 Form1 を開くと、**フォーム デザイナー**、カスタム コントロールのインスタンスが作成され、実行が開始されます。  
   
 #### <a name="to-debug-your-custom-control-at-design-time"></a>デザイン時に、カスタム コントロールをデバッグするには  
   
-1.  開く、**タブ**内のソース ファイル、**コード エディター**にブレークポイントを配置し、`Set`のアクセサー、`DemoString`プロパティ。  
+1. 開く、**タブ**内のソース ファイル、**コード エディター**にブレークポイントを配置し、`Set`のアクセサー、`DemoString`プロパティ。  
   
-2.  F5 キーを押して、デバッグ セッションを開始します。 Visual Studio の新しいインスタンスが作成されたことに注意してください。 2 つの方法でインスタンスを区別することができます。  
+2. F5 キーを押して、デバッグ セッションを開始します。 Visual Studio の新しいインスタンスが作成されたことに注意してください。 2 つの方法でインスタンスを区別することができます。  
   
     -   デバッグ インスタンスが、word**を実行している**のタイトル バーに  
   
@@ -155,13 +155,13 @@ ms.locfileid: "59213690"
   
      デバッグ インスタンスで、ブレークポイントが設定されます。  
   
-3.  Visual Studio の新しいインスタンスでは、"DebuggingExample"ソリューションを開きます。 選択して、ソリューションを簡単に見つけることができます**最近使ったプロジェクト**から、**ファイル**メニュー。 "DebuggingExample.sln"ソリューション ファイルは、最近使用したファイルとして表示されます。  
+3. Visual Studio の新しいインスタンスでは、"DebuggingExample"ソリューションを開きます。 選択して、ソリューションを簡単に見つけることができます**最近使ったプロジェクト**から、**ファイル**メニュー。 "DebuggingExample.sln"ソリューション ファイルは、最近使用したファイルとして表示されます。  
   
-4.  Form1 を開き、**フォーム デザイナー**を選択し、**タブ**コントロール。  
+4. Form1 を開き、**フォーム デザイナー**を選択し、**タブ**コントロール。  
   
-5.  `DemoString` プロパティの値を変更します。 変更をコミットするときに、Visual Studio のデバッグ インスタンスがフォーカスを取得し、実行がブレークポイントで停止に注意してください。 プロパティ アクセサーを 1 ステップを実行できますと同様、その他のコードには。  
+5. `DemoString` プロパティの値を変更します。 変更をコミットするときに、Visual Studio のデバッグ インスタンスがフォーカスを取得し、実行がブレークポイントで停止に注意してください。 プロパティ アクセサーを 1 ステップを実行できますと同様、その他のコードには。  
   
-6.  Visual Studio のホスト インスタンスを閉じるか、クリックして終了する、デバッグ セッションがしたら、**デバッグの停止**デバッグ インスタンスでボタンをクリックします。  
+6. Visual Studio のホスト インスタンスを閉じるか、クリックして終了する、デバッグ セッションがしたら、**デバッグの停止**デバッグ インスタンスでボタンをクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
  これで、カスタム コントロールをデバッグするにはデザイン時に、Visual Studio IDE とコントロールの相互作用を拡張するためのさまざまな操作があります。  

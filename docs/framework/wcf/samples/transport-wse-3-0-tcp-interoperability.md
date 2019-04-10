@@ -2,25 +2,25 @@
 title: トランスポート:WSE 3.0 TCP 相互運用性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162177"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324215"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>トランスポート:WSE 3.0 TCP 相互運用性
 WSE 3.0 TCP 相互運用性トランスポートのサンプルでは、カスタムの Windows Communication Foundation (WCF) トランスポートとして、TCP 二重セッションを実装する方法を示します。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順では、このカスタム WCF トランスポートを構築する方法を示します。  
   
-1.  まず TCP ソケットを使用して、DIME フレームを使用する <xref:System.ServiceModel.Channels.IDuplexSessionChannel> のクライアント実装とサーバー実装を作成し、メッセージ境界を決定します。  
+1. まず TCP ソケットを使用して、DIME フレームを使用する <xref:System.ServiceModel.Channels.IDuplexSessionChannel> のクライアント実装とサーバー実装を作成し、メッセージ境界を決定します。  
   
-2.  WSE TCP サービスに接続してクライアント <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 経由でフレーム メッセージを送信する、チャネル ファクトリを作成します。  
+2. WSE TCP サービスに接続してクライアント <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 経由でフレーム メッセージを送信する、チャネル ファクトリを作成します。  
   
-3.  受信 TCP 接続を受け入れて対応するチャネルを作成するチャネル リスナーを作成します。  
+3. 受信 TCP 接続を受け入れて対応するチャネルを作成するチャネル リスナーを作成します。  
   
-4.  ネットワーク固有の例外が、<xref:System.ServiceModel.CommunicationException> の適切な派生クラスに標準化されていることを確認します。  
+4. ネットワーク固有の例外が、<xref:System.ServiceModel.CommunicationException> の適切な派生クラスに標準化されていることを確認します。  
   
-5.  チャネル スタックにカスタム トランスポートを追加するバインド要素を追加します。 詳細については、[バインド要素の追加] を参照してください。  
+5. チャネル スタックにカスタム トランスポートを追加するバインド要素を追加します。 詳細については、[バインド要素の追加] を参照してください。  
   
 ## <a name="creating-iduplexsessionchannel"></a>IDuplexSessionChannel の作成  
  WSE 3.0 TCP 相互運用性トランスポートを作成するには、まず、<xref:System.ServiceModel.Channels.IDuplexSessionChannel> 上に <xref:System.Net.Sockets.Socket> の実装を作成します。 `WseTcpDuplexSessionChannel` 派生した<xref:System.ServiceModel.Channels.ChannelBase>します。 メッセージを送信するロジックは、2 つの主要部分で構成されます。(1) (バイト単位) と (2) それらのバイトをフレーム化し、ネットワーク上での送信に、メッセージをエンコードします。  
@@ -172,12 +172,12 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  このサンプルを実行するには、WSE 3.0 と WSE `TcpSyncStockService` サンプルがインストールされている必要があります。 ダウンロードできる[MSDN から WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)します。  
+1. このサンプルを実行するには、WSE 3.0 と WSE `TcpSyncStockService` サンプルがインストールされている必要があります。 ダウンロードできる[MSDN から WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)します。  
   
 > [!NOTE]
 >  [!INCLUDE[lserver](../../../../includes/lserver-md.md)] では WSE 3.0 がサポートされていないので、このオペレーティング システムでは `TcpSyncStockService` サンプルをインストールすることも、実行することもできません。  
   
-1.  `TcpSyncStockService` サンプルをインストールしたら、次の手順を実行します。  
+1. `TcpSyncStockService` サンプルをインストールしたら、次の手順を実行します。  
   
     1.  Visual Studio で `TcpSyncStockService` を開きます (TcpSyncStockService サンプルは WSE 3.0 と共にインストールされます。 このサンプル コードの一部ではありません)。  
   

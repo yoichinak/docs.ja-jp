@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332236"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する
 Windows フォームの重要な特徴<xref:System.Windows.Forms.MonthCalendar>コントロールは、ユーザーが日付の範囲を選択できます。 この機能が、日付選択機能の改良、<xref:System.Windows.Forms.DateTimePicker>のみユーザーが 1 つの日付/時刻値を選択できるようにするコントロール。 日付の範囲を設定または選択範囲のプロパティを使用して、ユーザーが設定を取得できます、<xref:System.Windows.Forms.MonthCalendar>コントロール。 次のコード例では、選択範囲を設定する方法を示します。  
   
 ### <a name="to-select-a-range-of-dates"></a>日付の範囲を選択するには  
   
-1.  作成<xref:System.DateTime>範囲の最初と最後の日付を表すオブジェクト。  
+1. 作成<xref:System.DateTime>範囲の最初と最後の日付を表すオブジェクト。  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,8 +40,7 @@ Windows フォームの重要な特徴<xref:System.Windows.Forms.MonthCalendar>�
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  
-  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。  
+2. <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> プロパティを設定します。  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  

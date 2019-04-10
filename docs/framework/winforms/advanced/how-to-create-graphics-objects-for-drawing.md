@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324202"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
 直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
   
  グラフィックスを操作には、2 つの手順があります。  
   
-1.  作成、<xref:System.Drawing.Graphics>オブジェクト。  
+1. 作成、<xref:System.Drawing.Graphics>オブジェクト。  
   
-2.  使用して、<xref:System.Drawing.Graphics>直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するオブジェクト。  
+2. 使用して、<xref:System.Drawing.Graphics>直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するオブジェクト。  
   
 ## <a name="creating-a-graphics-object"></a>グラフィックス オブジェクトを作成します。  
  グラフィックス オブジェクトは、さまざまな方法で作成できます。  
@@ -48,11 +48,11 @@ ms.locfileid: "59223629"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>描画イベントで PaintEventArgs からグラフィックス オブジェクトへの参照を取得するには  
   
-1.  宣言、<xref:System.Drawing.Graphics>オブジェクト。  
+1. 宣言、<xref:System.Drawing.Graphics>オブジェクト。  
   
-2.  参照する変数を割り当てる、<xref:System.Drawing.Graphics>の一部として渡されたオブジェクト、<xref:System.Windows.Forms.PaintEventArgs>します。  
+2. 参照する変数を割り当てる、<xref:System.Drawing.Graphics>の一部として渡されたオブジェクト、<xref:System.Windows.Forms.PaintEventArgs>します。  
   
-3.  フォームまたはコントロールを描画するコードを挿入します。  
+3. フォームまたはコントロールを描画するコードを挿入します。  
   
      次の例を参照する方法を示しています、<xref:System.Drawing.Graphics>オブジェクトから、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>イベント。  
   

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164022"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330156"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用してアイドル動作を構成する
 ワークフローは、外部からの働きかけによって再開される必要があるブックマークに遭遇すると、アイドル状態になります。たとえば、 <xref:System.ServiceModel.Activities.Receive> アクティビティを使用して配信されるメッセージをワークフローが待機している場合などです。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> インスタンスが永続化またはアンロードされると、サービス インスタンスがアイドル状態の間の時間を指定できる動作です。 これには、これらの時間の範囲を設定する 2 つのプロパティがあります。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> ワークフロー サービス インスタンスがアイドル状態とワークフロー サービス インスタンスが永続化されるときまでの時間の範囲を指定します。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> ワークフロー サービス インスタンス間の時間がアイドル ワークフロー サービス インスタンスがアンロードされるとき、アンロード、インスタンス ストアにインスタンスを永続化とメモリから削除することを指定します。 このトピックでは、 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> を構成ファイルで構成する方法について説明します。  
   
 ### <a name="to-configure-workflowidlebehavior"></a>WorkflowIdleBehavior を構成するには  
   
-1.  次の例に示すように、<`workflowIdle`> 要素を <`serviceBehaviors`> 要素内の <`behavior`> 要素に追加します。  
+1. 次の例に示すように、<`workflowIdle`> 要素を <`serviceBehaviors`> 要素内の <`behavior`> 要素に追加します。  
   
     ```xml  
     <behaviors>  

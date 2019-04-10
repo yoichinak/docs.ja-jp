@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327855"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 要素のレイアウトに関する考慮事項
 このトピックで説明する方法、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素と対話、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
@@ -84,13 +84,13 @@ ms.locfileid: "59168988"
 ### <a name="sizing-algorithm"></a>サイズ調整アルゴリズム  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素は、次の手順を使用してホストされるコントロールのサイズを変更します。  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
   
-2.  ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
+2. ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
   
-4.  場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
+4. 場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
   
  場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致しません、ホストされるコントロールは継続的なサイズ変更をサポートしていません。 たとえば、<xref:System.Windows.Forms.MonthCalendar>コントロールは、不連続のサイズだけを使用できます。 このコントロールの使用可能なサイズは、高さと幅の両方の整数 (月の数を表す) で構成されます。 、このような状況で、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の次のように動作します。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332574"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176684"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>DataGrid コントロールをプログラムでデータ バインドする  
   
-1.  データセットを挿入するコードを記述します。  
+1. データセットを挿入するコードを記述します。  
   
      データ ソースがデータセットまたはデータセットのテーブルに基づくデータ ビューの場合は、データセットを挿入するためのフォームにコードを追加します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176684"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  呼び出す、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド、データ ソースとデータ メンバーに渡します。 データ メンバーを明示的に渡す必要がない場合は、空の文字列を渡します。  
+2. 呼び出す、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド、データ ソースとデータ メンバーに渡します。 データ メンバーを明示的に渡す必要がない場合は、空の文字列を渡します。  
   
     > [!NOTE]
     >  最初に、グリッドをバインドする場合は、コントロールを設定できます<xref:System.Windows.Forms.DataGrid.DataSource%2A>と<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。 ただし、設定されていると、これらのプロパティをリセットできません。 そのため、お勧め必ず使用すること、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッド。  
@@ -101,7 +101,7 @@ ms.locfileid: "59176684"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。 テーブル スタイルがない場合は、テーブルが表示されますが、最低限の書式と表示されているすべての列。  
+3. (省略可能)グリッドに適切なテーブルのスタイルおよび列のスタイルを追加します。 テーブル スタイルがない場合は、テーブルが表示されますが、最低限の書式と表示されているすべての列。  
   
 ## <a name="see-also"></a>関連項目
 

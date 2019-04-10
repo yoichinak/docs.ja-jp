@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321039"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>方法: ユーザー名とパスワードで認証する
 
@@ -21,7 +21,7 @@ ms.locfileid: "59174136"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Windows ドメイン ユーザー名とパスワードを使用して認証する WCF サービスを構成するには
   
-1.  次のコードに示すように、<xref:System.ServiceModel.WSHttpBinding> のインスタンスを作成し、バインディングのセキュリティ モードを <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> に設定した後、バインディングの `ClientCredentialType` を <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> に設定し、構成されたバインディングを使用するサービス エンドポイントをサービス ホストに追加します。  
+1. 次のコードに示すように、<xref:System.ServiceModel.WSHttpBinding> のインスタンスを作成し、バインディングのセキュリティ モードを <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> に設定した後、バインディングの `ClientCredentialType` を <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> に設定し、構成されたバインディングを使用するサービス エンドポイントをサービス ホストに追加します。  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ ms.locfileid: "59174136"
     // ...  
     ```  
   
-2.  ネットワーク経由で送信されるユーザー名とパスワードの情報を暗号化するために使用するサーバー証明書を指定します。 次のコードは、上記のコードの直後に追加します。 次の例から setup.bat ファイルによって作成される証明書を使用して、[メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)サンプル。  
+2. ネットワーク経由で送信されるユーザー名とパスワードの情報を暗号化するために使用するサーバー証明書を指定します。 次のコードは、上記のコードの直後に追加します。 次の例から setup.bat ファイルによって作成される証明書を使用して、[メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)サンプル。  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ ms.locfileid: "59174136"
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>ユーザー名とパスワードを渡すサービスを呼び出すには  
   
-1.  クライアント アプリケーションは、ユーザー名とパスワードの入力をユーザーに求める必要があります。 次のコードでは、ユーザー名とパスワードの入力をユーザーに求めます。  
+1. クライアント アプリケーションは、ユーザー名とパスワードの入力をユーザーに求める必要があります。 次のコードでは、ユーザー名とパスワードの入力をユーザーに求めます。  
   
     > [!WARNING]
     >  このコードは、入力中のパスワードが表示されるため、運用環境では使用しないでください。  
@@ -61,7 +61,7 @@ ms.locfileid: "59174136"
             }  
     ```  
   
-2.  次のコードに示すように、クライアントの資格情報を指定して、クライアント プロキシのインスタンスを作成します。  
+2. 次のコードに示すように、クライアントの資格情報を指定して、クライアント プロキシのインスタンスを作成します。  
   
     ```  
     string username;  

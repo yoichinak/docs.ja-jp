@@ -2,12 +2,12 @@
 title: SQL Server での借用を使用した権限のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202795"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326971"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>SQL Server での借用を使用した権限のカスタマイズ
 多くのアプリケーションでは、ベース テーブルへのアクセスを制限する組み合わせ所有権を利用して、ストアド プロシージャを使ってデータにアクセスします。 ストアド プロシージャに対して EXECUTE 権限を付与するとき、ベース テーブルに対する権限を取り消したり拒否したりできます。 ストアド プロシージャとテーブルの所有者が同じ場合、SQL Server では呼び出し元の権限をチェックしません。 ただし、オブジェクトの所有者が異なる場合や、動的 SQL の場合には、組み合わせ所有権が無効になります。  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  プロシージャで EXECUTE AS 句を使用する際には、次の 3 つの手順を実行します。  
   
-1.  ログインに割り当てられていないプロキシ ユーザーをデータベースに作成します。 この操作は必須ではありませんが、権限を管理するときに役立ちます。  
+1. ログインに割り当てられていないプロキシ ユーザーをデータベースに作成します。 この操作は必須ではありませんが、権限を管理するときに役立ちます。  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  プロキシ ユーザーに必要な権限を与えます。  
+1. プロキシ ユーザーに必要な権限を与えます。  
   
-2.  ストアド プロシージャまたはユーザー定義関数に EXECUTE AS 句を追加します。  
+2. ストアド プロシージャまたはユーザー定義関数に EXECUTE AS 句を追加します。  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
