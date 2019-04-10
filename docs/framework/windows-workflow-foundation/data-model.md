@@ -15,7 +15,7 @@ ms.locfileid: "57709048"
 Windows Workflow Foundation のデータ モデルは、変数、引数、式の 3 つの概念で構成されます。 変数はデータ ストレージを表し、引数はアクティビティへのデータ フローを表します。 引数は、変数を参照できる式を使用してバインドされます (値が代入されます)。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [変数と引数](variables-and-arguments.md)します。  
+ [変数と引数](variables-and-arguments.md)
  変数と引数の概念と使用方法を説明します。  
   
  [式](expressions.md)  
