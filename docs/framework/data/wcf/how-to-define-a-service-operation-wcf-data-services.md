@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Service Operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
-ms.openlocfilehash: 75691a49624c179166d18225fac9fdc6c17a2308
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88e9b20f3ecefbd39789dfbc942af3938a9a2117
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326399"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>方法: サービス操作 (WCF Data Services) の定義します。
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] サービス操作として、サーバーで定義されているメソッドを公開します。 サービス操作では、サーバーで定義されているメソッドに URI を介してアクセスを提供するデータ サービスを使用します。 サービス操作を定義するには、適用、[`WebGet]`または`[WebInvoke]`属性をメソッド。 クエリ演算子をサポートするために、サービス操作を返す必要があります、<xref:System.Linq.IQueryable%601>インスタンス。 サービス操作は、<xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> プロパティを介して、基になるデータ ソースにアクセスできます。 詳細については、次を参照してください。[サービス操作](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)します。  
@@ -22,14 +22,14 @@ ms.locfileid: "59138100"
   
 ### <a name="to-define-a-service-operation-in-the-northwind-data-service"></a>Northwind データ サービスのサービス操作を定義するには  
   
-1.  Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
+1. Northwind データ サービス プロジェクトで Northwind.svc ファイルを開きます。  
   
-2.  `Northwind` クラスで、次に示すように `GetOrdersByCity` というサービス操作メソッドを定義します。  
+2. `Northwind` クラスで、次に示すように `GetOrdersByCity` というサービス操作メソッドを定義します。  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
      [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
-3.  `InitializeService` クラスの `Northwind` メソッドで次のコードを追加して、サービス操作へのアクセスを有効にします。  
+3. `InitializeService` クラスの `Northwind` メソッドで次のコードを追加して、サービス操作へのアクセスを有効にします。  
   
      [!code-csharp[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationconfig)]
      [!code-vb[Astoria Northwind Service#ServiceOperationConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationconfig)]  

@@ -2,32 +2,32 @@
 title: '方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321004"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する
 これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピックで[方法。探索プロキシで登録される探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)、探索プロキシに自らを登録する WCF サービスを実装します。 このトピックでは、WCF サービスを検索する探索プロキシを使用する WCF クライアントを作成します。  
   
 ### <a name="implement-the-client"></a>クライアントの実装  
   
-1.  新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Client` ソリューションに追加します。  
+1. 新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Client` ソリューションに追加します。  
   
-2.  次のアセンブリへの参照を追加します。  
+2. 次のアセンブリへの参照を追加します。  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  このトピックの最後にある GeneratedClient.cs をプロジェクトに追加します。  
+3. このトピックの最後にある GeneratedClient.cs をプロジェクトに追加します。  
   
     > [!NOTE]
     >  このファイルは、通常、Svcutil.exe などのツールを使用して生成されます。 このトピックでは、作業を単純化するためにこのファイルを提供しています。  
   
-4.  Program.cs ファイルを開き、次のメソッドを追加します。 このメソッドは、引数で指定されたエンドポイント アドレスを使用して、サービス クライアント (プロキシ) を初期化します。  
+4. Program.cs ファイルを開き、次のメソッドを追加します。 このメソッドは、引数で指定されたエンドポイント アドレスを使用して、サービス クライアント (プロキシ) を初期化します。  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ ms.locfileid: "59115974"
     }  
     ```  
   
-5.  `Main` メソッドに次のコードを追加します。  
+5. `Main` メソッドに次のコードを追加します。  
   
     ```csharp  
     public static void Main()  

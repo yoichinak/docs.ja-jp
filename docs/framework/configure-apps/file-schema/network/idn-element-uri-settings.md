@@ -2,12 +2,12 @@
 title: <idn> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129403"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321758"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 要素 (Uri 設定)
 ドメイン名に国際化ドメイン名 (IDN) 解析が適用されるかどうかを指定します。  
@@ -50,13 +50,13 @@ ms.locfileid: "59129403"
   
  IRI のサポートを有効にするのには、次の 2 つの変更が必要です。  
   
-1.  .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
+1. .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  国際化ドメイン名 (IDN) 解析のドメイン名に適用するかどうか、および IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
+2. 国際化ドメイン名 (IDN) 解析のドメイン名に適用するかどうか、および IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
   
  IDN を使用する DNS サーバーによって可能な値は 3 つです。  
   

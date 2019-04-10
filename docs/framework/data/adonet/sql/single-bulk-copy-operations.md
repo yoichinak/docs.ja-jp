@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112074"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323370"
 ---
 # <a name="single-bulk-copy-operations"></a>バルク コピー操作の単一実行
 SQL Server のバルク コピー操作を実行する簡単な方法は、データベースに対して単一操作を実行することです。 既定では、バルク コピー操作は分離された操作として実行されます。このコピー操作は非トランザクション方式で処理され、ロールバックできません。  
@@ -22,19 +22,19 @@ SQL Server のバルク コピー操作を実行する簡単な方法は、デ�
   
  通常、バルク コピー操作の実行手順は次のようになります。  
   
-1.  コピー元のサーバーに接続し、コピーするデータを取得します。 <xref:System.Data.IDataReader> オブジェクトまたは <xref:System.Data.DataTable> オブジェクトからデータを取得できる場合は、他のソースからデータを取得して利用することもできます。  
+1. コピー元のサーバーに接続し、コピーするデータを取得します。 <xref:System.Data.IDataReader> オブジェクトまたは <xref:System.Data.DataTable> オブジェクトからデータを取得できる場合は、他のソースからデータを取得して利用することもできます。  
   
-2.  移行先サーバーに接続 (する場合を除き、 **SqlBulkCopy**の接続を確立するために)。  
+2. 移行先サーバーに接続 (する場合を除き、 **SqlBulkCopy**の接続を確立するために)。  
   
-3.  <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを作成し、必要なプロパティを設定します。  
+3. <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを作成し、必要なプロパティを設定します。  
   
-4.  設定、 **DestinationTableName**を一括の対象テーブルを示すプロパティが操作を挿入します。  
+4. 設定、 **DestinationTableName**を一括の対象テーブルを示すプロパティが操作を挿入します。  
   
-5.  1 つを呼び出して、 **WriteToServer**メソッド。  
+5. 1 つを呼び出して、 **WriteToServer**メソッド。  
   
-6.  プロパティと呼び出しを必要に応じて、更新**WriteToServer**必要に応じて、もう一度です。  
+6. プロパティと呼び出しを必要に応じて、更新**WriteToServer**必要に応じて、もう一度です。  
   
-7.  <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> を呼び出すか、または `Using` ステートメント内にバルク コピー操作をラップします。  
+7. <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A> を呼び出すか、または `Using` ステートメント内にバルク コピー操作をラップします。  
   
 > [!CAUTION]
 >  コピー元とコピー先の列のデータ型を一致させることをお勧めします。 データ型が一致しない場合**SqlBulkCopy**で採用されている規則を使用して、対象のデータ型への各ソース値の変換を試みます<xref:System.Data.SqlClient.SqlParameter.Value%2A>します。 この変換はパフォーマンスに影響を及ぼし、予期しないエラーが発生することもあります。 たとえば、`Double` データ型は、多くの場合 `Decimal` データ型に変換されますが、常にというわけではありません。  

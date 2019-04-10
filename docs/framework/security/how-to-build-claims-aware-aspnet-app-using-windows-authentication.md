@@ -1,16 +1,16 @@
 ---
-title: '方法: Windows 認証を使用するクレーム対応 ASP.NET アプリケーションをビルドする'
+title: '方法: Windows 認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする'
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323669"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>方法: Windows 認証を使用するクレーム対応 ASP.NET アプリケーションをビルドする
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>方法: Windows 認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,13 +58,13 @@ ms.locfileid: "47198529"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1.  Visual Studio を起動してから、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動してから、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-3.  **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+3. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
   
-4.  **TestApp** プロジェクトが作成されたら、**ソリューション エクスプローラー**でそれをクリックします。 プロジェクトのプロパティが、**ソリューション エクスプローラー**の下の **[プロパティ]** ウィンドウに表示されます。 **[Windows 認証]** プロパティを **[有効]** に設定します。  
+4. **TestApp** プロジェクトが作成されたら、**ソリューション エクスプローラー**でそれをクリックします。 プロジェクトのプロパティが、**ソリューション エクスプローラー**の下の **[プロパティ]** ウィンドウに表示されます。 **[Windows 認証]** プロパティを **[有効]** に設定します。  
   
     > [!WARNING]
     >  新しい ASP.NET アプリケーションでは Windows 認証が既定で無効になるため、手動で有効にする必要があります。  
@@ -74,7 +74,7 @@ ms.locfileid: "47198529"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET アプリケーションを構成するには  
   
-1.  **TestApp** プロジェクトの *Default.aspx* ファイルで、既存のマークアップを次のものに置き換えます。  
+1. **TestApp** プロジェクトの *Default.aspx* ファイルで、既存のマークアップを次のものに置き換えます。  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198529"
   
      この手順では GridView コントロールを *Default.aspx* ページに追加します。このページには、Windows 認証から取得されたクレームが取り込まれます。  
   
-2.  *Default.aspx* ファイルを保存し、*Default.aspx.cs* という名前の分離コード ファイルを開きます。 既存のコードを次のコードに置き換えます。  
+2. *Default.aspx* ファイルを保存し、*Default.aspx.cs* という名前の分離コード ファイルを開きます。 既存のコードを次のコードに置き換えます。  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198529"
   
      上記のコードでは、認証ユーザーに関するクレームが表示されます。  
   
-3.  アプリケーションの認証の種類を変更するには、プロジェクトのルート *Web.config* ファイルの **\<system.web>** セクション内の **\<authentication>** ブロックを変更して、以下の構成エントリのみが含まれるようにします。  
+3. アプリケーションの認証の種類を変更するには、プロジェクトのルート *Web.config* ファイルの **\<system.web>** セクション内の **\<authentication>** ブロックを変更して、以下の構成エントリのみが含まれるようにします。  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  最後に、同じ *Web.config* ファイルの **\<system.web>** セクション内の **\<authorization>** ブロックを変更して、認証を強制します。  
+4. 最後に、同じ *Web.config* ファイルの **\<system.web>** セクション内の **\<authorization>** ブロックを変更して、認証を強制します。  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198529"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには  
   
-1.  **F5** キーを押してアプリケーションをビルドし、実行します。 *Default.aspx* が表示されます。Windows アカウント名 (ドメイン名を含む) は、ページの右上に認証ユーザーとして既に表示されています。 ページの内容には、Windows アカウントから取得されたクレームが入力されたテーブルが含まれています。
+1. **F5** キーを押してアプリケーションをビルドし、実行します。 *Default.aspx* が表示されます。Windows アカウント名 (ドメイン名を含む) は、ページの右上に認証ユーザーとして既に表示されています。 ページの内容には、Windows アカウントから取得されたクレームが入力されたテーブルが含まれています。

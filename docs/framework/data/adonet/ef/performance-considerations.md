@@ -2,12 +2,12 @@
 title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324046"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -82,11 +82,11 @@ ms.locfileid: "59087951"
 ### <a name="query-paths"></a>クエリ パス  
  既定では、<xref:System.Data.Objects.ObjectQuery%601> を実行しても、関連オブジェクトは返されません (リレーションシップ自体を表現するオブジェクトが存在する場合でも)。 関連オブジェクトは、次の 3 つの方法のいずれかで読み込むことができます。  
   
-1.  <xref:System.Data.Objects.ObjectQuery%601> が実行される前にクエリ パスを設定します。  
+1. <xref:System.Data.Objects.ObjectQuery%601> が実行される前にクエリ パスを設定します。  
   
-2.  オブジェクトが公開するナビゲーション プロパティに対して `Load` メソッドを呼び出します。  
+2. オブジェクトが公開するナビゲーション プロパティに対して `Load` メソッドを呼び出します。  
   
-3.  <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> で <xref:System.Data.Objects.ObjectContext> オプションを `true` に設定します。 これが行われる自動オブジェクト レイヤー コードを生成するときに注意してください、 [Entity Data Model デザイナー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))します。 詳細については、次を参照してください。[生成されたコードの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))します。  
+3. <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> で <xref:System.Data.Objects.ObjectContext> オプションを `true` に設定します。 これが行われる自動オブジェクト レイヤー コードを生成するときに注意してください、 [Entity Data Model デザイナー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))します。 詳細については、次を参照してください。[生成されたコードの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))します。  
   
  使用するオプションを検討する際には、データベースに対する要求数と 1 つのクエリで返されるデータ量の間でのトレードオフに注意してください。 詳細については、次を参照してください。[関連オブジェクトの読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))します。  
   
