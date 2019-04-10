@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113205"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328063"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法: (Windows フォーム) 文字列に引用符を挿入します。
 テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例:  
@@ -26,7 +26,7 @@ ms.locfileid: "59113205"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>コードの文字列に引用符を挿入するには  
   
-1.  Visual basic を埋め込み引用符として行の 2 つの引用符を挿入します。 ビジュアルでC#と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]、エスケープ シーケンスを挿入\\"を埋め込み引用符として。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
+1. Visual basic を埋め込み引用符として行の 2 つの引用符を挿入します。 ビジュアルでC#と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]、エスケープ シーケンスを挿入\\"を埋め込み引用符として。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "59113205"
   
      - または -  
   
-2.  引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 ビジュアルでC#、Unicode 文字 (\u0022) を使用します。  
+2. 引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 ビジュアルでC#、Unicode 文字 (\u0022) を使用します。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ ms.locfileid: "59113205"
   
      - または -  
   
-3.  文字の定数を定義し、必要に応じてその定数を使用することもできます。  
+3. 文字の定数を定義し、必要に応じてその定数を使用することもできます。  
   
     ```vb  
     Const quote As String = """"  
