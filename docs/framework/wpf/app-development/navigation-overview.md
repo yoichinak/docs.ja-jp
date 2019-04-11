@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335083"
 ---
 # <a name="navigation-overview"></a>ナビゲーションの概要
 Windows Presentation Foundation (WPF) は、2 種類のアプリケーションで使用できるブラウザー スタイルのナビゲーションをサポートしています: スタンドアロン アプリケーションと[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]します。 ナビゲーションのためのパッケージ コンテンツに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供、<xref:System.Windows.Controls.Page>クラス。 1 つから移動することができます<xref:System.Windows.Controls.Page>別に宣言を使用して、 <xref:System.Windows.Documents.Hyperlink>、またはを使用してプログラムで、<xref:System.Windows.Navigation.NavigationService>します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ナビゲート元のページを記憶して、アクセスするために、ジャーナルを使用します。  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  既定で各テキスト<xref:System.Windows.Controls.Page>に表示される、**最近表示したページ**の一覧[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]は、[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の<xref:System.Windows.Controls.Page>します。 多くの場合、これは、ユーザーにとって特に意味がありません。 幸い、次のオプションのいずれかを使用して、テキストを変更できます。  
   
-1.  関連付けられている`JournalEntry.Name`属性の値。  
+1. 関連付けられている`JournalEntry.Name`属性の値。  
   
-2.  `Page.Title`属性の値。  
+2. `Page.Title`属性の値。  
   
-3.  `Page.WindowTitle`属性の値と[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]、現在の<xref:System.Windows.Controls.Page>します。  
+3. `Page.WindowTitle`属性の値と[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]、現在の<xref:System.Windows.Controls.Page>します。  
   
-4.  現在の [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] の <xref:System.Windows.Controls.Page>。 (既定)  
+4. 現在の [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] の <xref:System.Windows.Controls.Page>。 (既定)  
   
  これらのオプションの順序は、テキスト検索の優先順位と一致します。 たとえば場合、`JournalEntry.Name`が設定された場合、その他の値は無視されます。  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) は、2 種類のアプリケーション�
   
  さいわい、ジャーナルは間でデータを記憶しておくのサポートを提供<xref:System.Windows.Controls.Page>コントロール データを含むナビゲーション。 具体的には、各履歴<xref:System.Windows.Controls.Page>関連付けられている一時的なコンテナーとして機能します<xref:System.Windows.Controls.Page>状態。 次の手順は、このサポートの使用方法を説明と、<xref:System.Windows.Controls.Page>ナビゲートします。  
   
-1.  現在のエントリ<xref:System.Windows.Controls.Page>履歴に追加されます。  
+1. 現在のエントリ<xref:System.Windows.Controls.Page>履歴に追加されます。  
   
-2.  状態、<xref:System.Windows.Controls.Page>戻るスタックに追加される、そのページの履歴エントリに格納されます。  
+2. 状態、<xref:System.Windows.Controls.Page>戻るスタックに追加される、そのページの履歴エントリに格納されます。  
   
-3.  新しい<xref:System.Windows.Controls.Page>にナビゲートするとします。  
+3. 新しい<xref:System.Windows.Controls.Page>にナビゲートするとします。  
   
  ときにページ<xref:System.Windows.Controls.Page>が journal を使用して移動する、次の手順が実行します。  
   
-1.  <xref:System.Windows.Controls.Page> (戻るスタック上の最上位の履歴エントリ) をインスタンス化します。  
+1. <xref:System.Windows.Controls.Page> (戻るスタック上の最上位の履歴エントリ) をインスタンス化します。  
   
-2.  <xref:System.Windows.Controls.Page>の履歴エントリに格納された状態で更新されますが、<xref:System.Windows.Controls.Page>します。  
+2. <xref:System.Windows.Controls.Page>の履歴エントリに格納された状態で更新されますが、<xref:System.Windows.Controls.Page>します。  
   
-3.  <xref:System.Windows.Controls.Page>に移動します。  
+3. <xref:System.Windows.Controls.Page>に移動します。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 次のコントロールを使用すると自動的にこのサポートを使用して、 <xref:System.Windows.Controls.Page>:  
   
