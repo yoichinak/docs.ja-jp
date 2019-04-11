@@ -1,13 +1,13 @@
 ---
-title: <transport> の <peerTransport>
+title: <transport> (行中)  <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076004"
 ---
 # <a name="transport-of-peertransport"></a>\<トランスポート > の\<peerTransport >
 このバインドで構成されたピアが送信する、セキュリティで保護されたメッセージのトランスポートの型を指定します。  
@@ -35,11 +35,11 @@ ms.locfileid: "55284012"
   
 |属性|説明|  
 |---------------|-----------------|  
-|credentialType|省略可能です。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
+|credentialType|任意。 ピア トランスポートにより送信されるメッセージの検証に使用される資格情報の種類を指定します。 この属性は <xref:System.ServiceModel.PeerTransportCredentialType> 型です。|  
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |証明書|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
 |[Password]|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
@@ -51,12 +51,13 @@ ms.locfileid: "55284012"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|ピア トランスポートのセキュリティ設定を定義します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|ピア トランスポートのセキュリティ設定を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
  場合にのみこの要素は、設定の mode 属性[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)に設定されている`Transport`または`TransportWithMessageCredential`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>

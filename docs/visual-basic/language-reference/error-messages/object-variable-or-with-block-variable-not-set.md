@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297929"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>オブジェクト変数または With ブロック変数が設定されていません。
 無効なオブジェクト変数が参照されています。   このエラーが発生する原因は複数あります。  
@@ -36,7 +36,7 @@ ms.locfileid: "58831658"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  設定`Option Strict`に`On`ファイルの先頭に次のコードを追加することで。  
+1. 設定`Option Strict`に`On`ファイルの先頭に次のコードを追加することで。  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  有効にしたくない場合`Option Strict`、せず、型指定されている変数がある場合、コードを検索 (`Dim x`の代わりに`Dim x As String`) し、目的の型を宣言に追加します。  
+2. 有効にしたくない場合`Option Strict`、せず、型指定されている変数がある場合、コードを検索 (`Dim x`の代わりに`Dim x As String`) し、目的の型を宣言に追加します。  
   
-3.  設定されているオブジェクト変数を参照していないことを確認`Nothing`します。  コード内のキーワードの`Nothing`、オブジェクトに設定されていないように、コードの修正と`Nothing`を参照した後になるまでです。  
+3. 設定されているオブジェクト変数を参照していないことを確認`Nothing`します。  コード内のキーワードの`Nothing`、オブジェクトに設定されていないように、コードの修正と`Nothing`を参照した後になるまでです。  
   
-4.  アクセスする前に、配列変数の寸法はことを確認します。 最初に、配列を作成するときに、ディメンションを割り当てることができますか (`Dim x(5) As String`の代わりに`Dim x() As String`)、またはを使用して、`ReDim`キーワードを最初にアクセスする前に、配列の次元を設定します。  
+4. アクセスする前に、配列変数の寸法はことを確認します。 最初に、配列を作成するときに、ディメンションを割り当てることができますか (`Dim x(5) As String`の代わりに`Dim x() As String`)、またはを使用して、`ReDim`キーワードを最初にアクセスする前に、配列の次元を設定します。  
   
-5.  必ず、`With`ブロックが実行することによって初期化されて、`With`ステートメントのエントリ ポイント。  
+5. 必ず、`With`ブロックが実行することによって初期化されて、`With`ステートメントのエントリ ポイント。  
   
 ## <a name="see-also"></a>関連項目
 

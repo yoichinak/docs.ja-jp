@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204199"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>イメージ、描画、およびビジュアルによる塗りつぶし
 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>イメージで領域を塗りつぶすオブジェクト、 <xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックを理解するには、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] に用意されているさまざまな種類のブラシとその基本的な機能を理解している必要があります。 概要については、「[WPF のブラシの概要](wpf-brushes-overview.md)」を参照してください。  
@@ -122,7 +121,7 @@ DrawingBrush で塗りつぶされたオブジェクト
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush の機能  
- <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>種類<xref:System.Windows.Media.TileBrush>オブジェクト。 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージ、描画、またはビジュアルで領域を塗りつぶす方法を制御します。 たとえば、1 つのイメージを引き伸ばして領域を塗りつぶす代わりに、一連のイメージ タイルでパターンを作って領域を塗りつぶすことができます。  
+ <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>種類<xref:System.Windows.Media.TileBrush>オブジェクト。 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージ、描画、またはビジュアルで領域を塗りつぶす方法を制御します。 たとえば、単一のイメージを引き伸ばして領域を塗りつぶすだけではなく、一連のイメージ タイルでパターンを作って領域を塗りつぶすことができます。  
   
  A<xref:System.Windows.Media.TileBrush>が 3 つの主要なコンポーネント: コンテンツ、タイル、および出力領域。  
   
@@ -135,6 +134,7 @@ DrawingBrush で塗りつぶされたオブジェクト
  タイル表示機能の詳細については<xref:System.Windows.Media.TileBrush>、オブジェクトを参照してください、 [TileBrush の概要](tilebrush-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

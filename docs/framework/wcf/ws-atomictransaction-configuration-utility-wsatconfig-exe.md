@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e5a22e54bf977143b2ae94e678ad5106ec9ed6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191823"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 WS-AtomicTransaction 構成ユーティリティは、基本的な WS-AtomicTransaction サポート設定を構成するために使用されます。  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、更新プログラムをダウンロードしてから、WsatConfig.exe を実行する必要があります。 この更新プログラムの詳細については、[Commerce Server 2007 (KB912817) 用更新](https://go.microsoft.com/fwlink/?LinkId=95340)と[可用性の Windows XP COM + Hotfix Rollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341)を参照してください。  
+ [!INCLUDE[wxp](../../../includes/wxp-md.md)] または [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] を実行している場合は、更新プログラムをダウンロードしてから、WsatConfig.exe を実行する必要があります。 この更新プログラムの詳細については、次を参照してください。 [Commerce Server 2007 (KB912817) 用更新](https://go.microsoft.com/fwlink/?LinkId=95340)と[可用性の Windows XP COM + Hotfix Rollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341)します。  
   
  次の表は、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) で使用できるオプションを示します。  
   
@@ -50,5 +50,6 @@ wsatConfig [Options]
 |-仮想サーバー:\<virtualServer >|DTC リソース クラスター名を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [WS-AtomicTransaction の使用](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
 - [WS-AtomicTransaction サポートの構成](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

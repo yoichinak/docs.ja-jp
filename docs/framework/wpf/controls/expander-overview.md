@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130404"
 ---
 # <a name="expander-overview"></a>エキスパンダーの概要
 <xref:System.Windows.Controls.Expander>コントロール ウィンドウに似ていますし、ヘッダーを含む展開可能な領域内のコンテンツを提供する方法を提供します。  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>単純なエキスパンダーの作成  
  次の例は、単純なを作成する方法を示します<xref:System.Windows.Controls.Expander>コントロール。 この例で作成、<xref:System.Windows.Controls.Expander>前の図のようになります。  
@@ -29,7 +28,7 @@ ms.locfileid: "58409459"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>コンテンツ エリアの展開方向の設定  
- コンテンツ エリアを設定することができます、 <xref:System.Windows.Controls.Expander> 4 方向のどちらに展開するコントロール (<xref:System.Windows.Controls.ExpandDirection.Down>、 <xref:System.Windows.Controls.ExpandDirection.Up>、 <xref:System.Windows.Controls.ExpandDirection.Left>、または<xref:System.Windows.Controls.ExpandDirection.Right>) を使用して、<xref:System.Windows.Controls.ExpandDirection>プロパティ。 ときに、コンテンツ領域は折りたたまれて、のみ、 <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>され、そのトグル ボタンが表示されます。 A<xref:System.Windows.Controls.Button>方向矢印を表示するコントロールが展開または折りたたみのコンテンツ エリアにトグル ボタンとして使用されます。 展開すると、<xref:System.Windows.Controls.Expander>ウィンドウに似た領域内のすべてのコンテンツの表示を試みます。  
+ コンテンツ エリアを設定することができます、 <xref:System.Windows.Controls.Expander> 4 方向のどちらに展開するコントロール (<xref:System.Windows.Controls.ExpandDirection.Down>、 <xref:System.Windows.Controls.ExpandDirection.Up>、 <xref:System.Windows.Controls.ExpandDirection.Left>、または<xref:System.Windows.Controls.ExpandDirection.Right>) を使用して、<xref:System.Windows.Controls.ExpandDirection>プロパティ。 ときに、コンテンツ領域は折りたたまれて、のみ、<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>され、そのトグル ボタンが表示されます。 A<xref:System.Windows.Controls.Button>方向矢印を表示するコントロールが展開または折りたたみのコンテンツ エリアにトグル ボタンとして使用されます。 展開すると、<xref:System.Windows.Controls.Expander>ウィンドウに似た領域内のすべてのコンテンツの表示を試みます。  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>パネル内のエキスパンダーのサイズの制御  
@@ -60,6 +59,7 @@ ms.locfileid: "58409459"
  コンテンツの配置を設定して、<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>と<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>プロパティを<xref:System.Windows.Controls.Expander>コントロール。 これらのプロパティを設定すると、配置がヘッダーに適用され、展開されたコンテンツにも適用されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [方法トピック](expander-how-to-topics.md)
+- [方法のトピック](expander-how-to-topics.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ed615ea641293f8ea3fdf962e3f84d602934df60
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 050ed0bbd4da38bede5a56ff95d0243f5f3cf1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220085"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder メソッド
 指定したアセンブリの型のテーブルを入れ子にされた型の型フォワーダーを追加します。  
@@ -69,6 +69,7 @@ HRESULT ExportNestedTypeForwarder(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

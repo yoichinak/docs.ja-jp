@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: a8822c9a26db445080668b1b493803369ccbae4d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328063"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法: (Windows フォーム) 文字列に引用符を挿入します。
 テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例:  
@@ -26,7 +26,7 @@ ms.locfileid: "57714815"
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>コードの文字列に引用符を挿入するには  
   
-1.  Visual basic を埋め込み引用符として行の 2 つの引用符を挿入します。 ビジュアルでC#と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]、エスケープ シーケンスを挿入\\"を埋め込み引用符として。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
+1. Visual basic を埋め込み引用符として行の 2 つの引用符を挿入します。 ビジュアルでC#と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]、エスケープ シーケンスを挿入\\"を埋め込み引用符として。 たとえば、上記の文字列を作成するには、次のコードを使用します。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ ms.locfileid: "57714815"
   
      - または -  
   
-2.  引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 ビジュアルでC#、Unicode 文字 (\u0022) を使用します。  
+2. 引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual basic では、ASCII 文字 (34) を使用します。 ビジュアルでC#、Unicode 文字 (\u0022) を使用します。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ ms.locfileid: "57714815"
   
      - または -  
   
-3.  文字の定数を定義し、必要に応じてその定数を使用することもできます。  
+3. 文字の定数を定義し、必要に応じてその定数を使用することもできます。  
   
     ```vb  
     Const quote As String = """"  
@@ -89,12 +89,13 @@ ms.locfileid: "57714815"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
-- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [方法: Windows フォーム TextBox コントロールでパスワード テキスト ボックスを作成します。](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [方法: 読み取り専用テキスト ボックスを作成します。](how-to-create-a-read-only-text-box-windows-forms.md)
-- [方法: Windows フォームの TextBox コントロールでテキストを選択します。](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [方法: Windows フォームの TextBox コントロールで複数の行を表示します。](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [方法: 読み取り専用テキスト ボックスを作成する](how-to-create-a-read-only-text-box-windows-forms.md)
+- [方法: Windows フォーム TextBox コントロールでテキストを選択する](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [方法: Windows フォーム TextBox コントロールで複数行を表示する](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox コントロール](textbox-control-windows-forms.md)

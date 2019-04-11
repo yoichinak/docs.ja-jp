@@ -2,20 +2,20 @@
 title: ADO.NET での side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136761"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)を参照してください。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
   
  あるバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を使用してコンパイルされたアプリケーションを、別のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で実行することもできます。 ただし、インストールされている [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のバージョンごとにアプリケーションをコンパイルして、各バージョンを別々に実行することをお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>上位互換性と下位互換性  
- 上位互換性とは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の旧バージョンでコンパイルしたアプリケーションが、新しいバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] でも実行できることを意味します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] version 1.1 用に書かれた [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] コードは、後のバージョンとの上位互換性があります。  
+ 上位互換性とは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の旧バージョンでコンパイルしたアプリケーションが、新しいバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] でも実行できることを意味します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 用に記述されたコード、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.1 は、以降のバージョンと上位互換性があります。  
   
  下位互換性とは、アプリケーションが [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用にコンパイルされ、機能を低下させずに、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンで引き続き実行できることを意味します。 当然のことながら、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョンで導入された機能については、これは該当しません。  
   
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET の概要](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET でのデータの取得および変更](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

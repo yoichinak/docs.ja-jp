@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324384"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>コンス トラクター '\<名 >' 自体を呼び出すことはできません
 A`Sub New`クラスまたは構造体でプロシージャを呼び出します。  
@@ -23,10 +23,10 @@ A`Sub New`クラスまたは構造体でプロシージャを呼び出します�
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  呼び出されるコンス トラクターのパラメーター リストを確認します。 コンス トラクターの呼び出しを行うのと異なる場合があります。  
+1. 呼び出されるコンス トラクターのパラメーター リストを確認します。 コンス トラクターの呼び出しを行うのと異なる場合があります。  
   
-2.  別のコンス トラクターを呼び出すしない場合は、削除、`Sub New`完全呼び出します。  
+2. 別のコンス トラクターを呼び出すしない場合は、削除、`Sub New`完全呼び出します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクトの有効期間:オブジェクトを作成および破棄する方法](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [オブジェクトの有効期間:オブジェクトの作成と破棄](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

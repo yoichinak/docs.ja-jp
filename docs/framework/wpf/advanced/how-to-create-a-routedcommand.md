@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109045"
 ---
 # <a name="how-to-create-a-routedcommand"></a>方法: RoutedCommand を作成する
-カスタムを作成する方法を示します<xref:System.Windows.Input.RoutedCommand>を作成して、カスタム コマンドを実装する方法と、<xref:System.Windows.Input.ExecutedRoutedEventHandler>と<xref:System.Windows.Input.CanExecuteRoutedEventHandler>にアタッチし、<xref:System.Windows.Input.CommandBinding>します。  コマンド実行の詳細については、、[コマンド実行の概要](commanding-overview.md)を参照してください。  
+カスタムを作成する方法を示します<xref:System.Windows.Input.RoutedCommand>を作成して、カスタム コマンドを実装する方法と、<xref:System.Windows.Input.ExecutedRoutedEventHandler>と<xref:System.Windows.Input.CanExecuteRoutedEventHandler>にアタッチし、<xref:System.Windows.Input.CommandBinding>します。  コマンド実行の詳細については、次を参照してください。、[コマンド実行の概要](commanding-overview.md)します。  
   
 ## <a name="example"></a>例  
  最初の手順で作成、<xref:System.Windows.Input.RoutedCommand>コマンドを定義して、インスタンス化することができます。  
@@ -48,5 +48,6 @@ ms.locfileid: "57372088"
  ボタンがクリックされたときに、 <xref:System.Windows.Input.RoutedCommand.Execute%2A> 、カスタム<xref:System.Windows.Input.RoutedCommand>が呼び出されます。  <xref:System.Windows.Input.RoutedCommand>発生させる、<xref:System.Windows.Input.CommandManager.PreviewExecuted>と<xref:System.Windows.Input.CommandManager.Executed>ルーティング イベント。  これらのイベントを探して、要素ツリーの走査、<xref:System.Windows.Input.CommandBinding>この特定のコマンド。  場合、<xref:System.Windows.Input.CommandBinding>が見つかると、<xref:System.Windows.Input.ExecutedRoutedEventHandler>に関連付けられている<xref:System.Windows.Input.CommandBinding>が呼び出されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [コマンド実行の概要](commanding-overview.md)

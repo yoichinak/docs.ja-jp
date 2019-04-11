@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d32e5ed28153ae3ad54e1f75242a767d2e764a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a3bbbaa565a6c118082456a1ab6d7af59db7067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119276"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>部分信頼コードからのライブラリの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  このトピックでは、厳密な名前付きアセンブリの動作に対処しにのみ適用されます[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)アセンブリ。 [透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)内のアセンブリ、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]または後での影響を受けない厳密な名前。 セキュリティ システムへの変更の詳細については、[セキュリティ変更](../../../docs/framework/security/security-changes.md)を参照してください。  
+>  このトピックでは、厳密な名前付きアセンブリの動作に対処しにのみ適用されます[レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)アセンブリ。 [透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)内のアセンブリ、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]または後での影響を受けない厳密な名前。 セキュリティ システムへの変更の詳細については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。  
   
  ホストまたはサンドボックスから不完全な信頼を受けているアプリケーションは、ライブラリの作成者が <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用して具体的に許可しない限り、共有マネージド ライブラリを呼び出せません。 そのため、アプリケーションの作成者は、ライブラリによっては部分的に信頼されたコンテキストから使用できないことを認識する必要があります。 既定では、すべてのコードで実行する部分的に信頼された[サンド ボックス](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)ではありません。 完全信頼アセンブリの一覧が部分的に信頼されているとします。 部分的に信頼されたコンテキストからコードを実行する、または部分的に信頼されたコードによってコードが呼び出されることはないと考えられる場合は、このセクションの情報を考慮する必要はありません。 ただし、部分的に信頼されたコードと対話する必要があるコード、または部分的に信頼されたコンテキストから操作するコードを記述する場合は、次の要因を考慮する必要があります。  
   
@@ -52,4 +52,5 @@ ms.locfileid: "54585272"
 >  .NET Framework クラス ライブラリのいくつかのクラスにはありません、 **AllowPartiallyTrustedCallersAttribute**属性し、部分的に信頼されたコードから呼び出すことはできません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [コード アクセス セキュリティ](../../../docs/framework/misc/code-access-security.md)

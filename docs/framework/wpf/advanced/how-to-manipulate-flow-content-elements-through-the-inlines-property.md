@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186070"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>方法: Inlines プロパティを介してフロー コンテンツ要素を操作する
 これらの例では、インライン フロー コンテンツ要素に対して実行できる一般的な操作の一部を示します (および、このような要素のコンテナーなど<xref:System.Windows.Controls.TextBlock>) を通じて、 **Inlines**プロパティ。 このプロパティを使用して項目を追加および削除を<xref:System.Windows.Documents.InlineCollection>します。 フロー コンテンツ要素にその機能、 **Inlines**プロパティが含まれます。  
@@ -65,6 +65,7 @@ ms.locfileid: "57361812"
  [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>

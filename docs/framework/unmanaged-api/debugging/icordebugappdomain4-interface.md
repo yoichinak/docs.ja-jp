@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14f358de02f24a304cf0d5249b0f8916c7290b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099301"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4 インターフェイス
 COM 呼び出し可能ラッパーからマネージ オブジェクトを取得する ICorDebugAppDomain インターフェイスを論理的に拡張します。  
@@ -29,8 +29,9 @@ COM 呼び出し可能ラッパーからマネージ オブジェクトを取得
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

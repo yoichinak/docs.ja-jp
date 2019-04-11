@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200060"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344248"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>動作を使用したランタイムの構成と拡張
-ビヘイビアーを使用すると、既定の動作を変更し、検査またはサービス構成を検証および Windows Communication Foundation (WCF) クライアントとサービス アプリケーションのランタイム動作を変更するカスタム拡張機能を追加できます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 詳細については、システム指定の動作を使用して、[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)と[クライアントの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)を参照してください。  
+ビヘイビアーを使用すると、既定の動作を変更し、検査またはサービス構成を検証および Windows Communication Foundation (WCF) クライアントとサービス アプリケーションのランタイム動作を変更するカスタム拡張機能を追加できます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 詳細については、システム指定の動作を使用して、次を参照してください。[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)と[クライアントの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)します。  
   
 ## <a name="behaviors"></a>ビヘイビアー  
  サービスまたはサービス エンドポイント説明オブジェクトに追加される動作の種類 (サービスまたはクライアントにそれぞれ) WCF サービスまたは WCF クライアントを実行するランタイムの作成に Windows Communication Foundation (WCF) によってがそれらのオブジェクトで使用する前にします。 ランタイムの構築プロセスでこれらの動作を呼び出すと、コントラクト、バインディング、およびアドレスによって構築されたランタイムを変更するランタイム プロパティやランタイム メソッドにアクセスできます。  
   
 ### <a name="behavior-methods"></a>動作メソッド  
- すべての動作で、`AddBindingParameters` メソッド、`ApplyDispatchBehavior` メソッド、`Validate` メソッド、および `ApplyClientBehavior` メソッドを使用できます。ただし、<xref:System.ServiceModel.Description.IServiceBehavior> には、例外が 1 つあります。`ApplyClientBehavior` はクライアントで実行できないため、このメソッドを実装していません。  
+ すべての動作が、`AddBindingParameters`メソッド、`ApplyDispatchBehavior`メソッド、`Validate`メソッド、および`ApplyClientBehavior`例外が 1 つのメソッド。<xref:System.ServiceModel.Description.IServiceBehavior>を実行できません実装していないクライアントでは、`ApplyClientBehavior`します。  
   
 -   カスタム オブジェクトを変更したり、ランタイム構築時に使用するためにカスタム バインディングがアクセスできるコレクションにカスタム オブジェクトを追加したりするには、`AddBindingParameters` メソッドを使用します。 たとえば、これによって、チャネルを構築する方法に影響するが、チャネル開発者には知られていない保護要件を指定します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "50200060"
  変更できるプロパティと実装できるカスタマイズ インターフェイスには、サービスおよびクライアントのランタイム クラスからアクセスできます。 サービス型は、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスと <xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスです。 クライアント型は、<xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスと <xref:System.ServiceModel.Dispatcher.ClientOperation> クラスです。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスと <xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスは、それぞれクライアント全体またはサービス全体のランタイム プロパティと拡張コレクションにアクセスするための拡張エントリ ポイントです。 同様に、<xref:System.ServiceModel.Dispatcher.ClientOperation> クラスと <xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスは、それぞれクライアント操作またはサービス操作のランタイム プロパティと拡張コレクションを公開します。 ただし、必要に応じて、操作ランタイム オブジェクトからより広いスコープのランタイム オブジェクトにアクセスできます。また、逆の場合も同様です。  
   
 > [!NOTE]
->  ランタイム プロパティと、クライアントの実行動作を変更に使用できる拡張機能の種類の詳細については、[拡張クライアント](../../../../docs/framework/wcf/extending/extending-clients.md)を参照してください。 ランタイム プロパティとサービスのディスパッチャーの実行動作を変更に使用できる拡張機能の種類の詳細については、[ディスパッチャーの拡張](../../../../docs/framework/wcf/extending/extending-dispatchers.md)を参照してください。  
+>  ランタイム プロパティと、クライアントの実行動作を変更に使用できる拡張機能の種類の詳細については、次を参照してください。[拡張クライアント](../../../../docs/framework/wcf/extending/extending-clients.md)します。 ランタイム プロパティとサービスのディスパッチャーの実行動作を変更に使用できる拡張機能の種類の詳細については、次を参照してください。[ディスパッチャーの拡張](../../../../docs/framework/wcf/extending/extending-dispatchers.md)します。  
   
  WCF のほとんどのユーザーは直接、ランタイムと対話しません。代わりに、コア プログラミング エンドポイント、コントラクト、バインディング、アドレス、およびクラスや動作の構成ファイル内での動作属性などのモデルの構成要素を使用します。 これらの要素、*説明ツリー*説明ツリーで記述されるクライアントやサービスをサポートするランタイムを構築するための完全な仕様です。  
   
@@ -54,16 +54,16 @@ ms.locfileid: "50200060"
 #### <a name="service-behaviors"></a>サービスの動作  
  <xref:System.ServiceModel.Description.IServiceBehavior> を実装するサービスの動作は、サービス ランタイム全体を変更する主要機構です。 サービスの動作をサービスに追加する場合、3 つの方法があります。  
   
-1.  サービス クラスの属性を使用する方法。  <xref:System.ServiceModel.ServiceHost> を構築すると、<xref:System.ServiceModel.ServiceHost> 実装は、リフレクションを使用してそのサービス型の属性セットを検出します。 これらの属性のいずれかが <xref:System.ServiceModel.Description.IServiceBehavior> の実装である場合、<xref:System.ServiceModel.Description.ServiceDescription> の動作コレクションに追加されます。 これにより、これらの動作はサービス ランタイムの構築に参加できます。  
+1. サービス クラスの属性を使用する方法。  <xref:System.ServiceModel.ServiceHost> を構築すると、<xref:System.ServiceModel.ServiceHost> 実装は、リフレクションを使用してそのサービス型の属性セットを検出します。 これらの属性のいずれかが <xref:System.ServiceModel.Description.IServiceBehavior> の実装である場合、<xref:System.ServiceModel.Description.ServiceDescription> の動作コレクションに追加されます。 これにより、これらの動作はサービス ランタイムの構築に参加できます。  
   
-2.  プログラムによって、<xref:System.ServiceModel.Description.ServiceDescription> の動作コレクションに動作を追加する方法。 これを行うには、次のコード行を使用します。  
+2. プログラムによって、<xref:System.ServiceModel.Description.ServiceDescription> の動作コレクションに動作を追加する方法。 これを行うには、次のコード行を使用します。  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  構成を拡張するカスタムの <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を実装する方法。 これにより、アプリケーション構成ファイルからサービスの動作を使用できるようになります。  
+3. 構成を拡張するカスタムの <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を実装する方法。 これにより、アプリケーション構成ファイルからサービスの動作を使用できるようになります。  
   
  WCF でサービスの動作の例を示します、<xref:System.ServiceModel.ServiceBehaviorAttribute>属性、 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>、および<xref:System.ServiceModel.Description.ServiceMetadataBehavior>動作。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "50200060"
   
  エンドポイントの動作をサービスに追加する場合、2 つの方法があります。  
   
-1.  <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> プロパティに動作を追加する方法。  
+1. <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> プロパティに動作を追加する方法。  
   
-2.  構成を拡張するカスタムの <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を実装する方法。  
+2. 構成を拡張するカスタムの <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> を実装する方法。  
   
  詳細および例については、リファレンス トピックを参照してください。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "50200060"
  サービス、エンドポイント、およびコントラクトの動作は、コードまたは属性を使用して指定するように設計できます。アプリケーション構成ファイルまたは Web 構成ファイルを使用して構成できるのは、サービスの動作とエンドポイントの動作だけです。 属性を使用して動作を公開した場合、開発者は、実行時に追加、削除、または変更できない動作をコンパイル時に指定できます。 多くの場合、これはサービスの適切な操作のために常に必要となる動作に適しています (<xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> 属性に対するトランザクション関連のパラメーターなど)。 構成を使用して動作を公開すると、開発者はサービス展開者に動作の仕様と構成を委ねることができます。 これは、動作がオプション コンポーネント、または他の展開固有の構成 (サービスまたはサービスの特定の承認構成についてメタデータを公開するかどうかなど) である場合に適しています。  
   
 > [!NOTE]
->  企業のアプリケーション ポリシーを machine.config 構成ファイルに挿入し、これらの項目をロックダウンすることで、ポリシーを適用する構成をサポートする動作を使用することもできます。 説明と例では、[方法: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)を参照してください。  
+>  企業のアプリケーション ポリシーを machine.config 構成ファイルに挿入し、これらの項目をロックダウンすることで、ポリシーを適用する構成をサポートする動作を使用することもできます。 説明と例では、次を参照してください。[方法。企業内のエンドポイントをロックダウン](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)します。  
   
  構成を使用して動作を公開するには、開発者は <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> の派生クラスを作成し、その拡張を構成に登録する必要があります。  
   
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  <xref:System.ServiceModel.ServiceHost> は次の順序で動作を適用します。  
   
-1.  サービス  
+1. サービス  
   
-2.  コントラクト  
+2. コントラクト  
   
-3.  エンドポイント  
+3. エンドポイント  
   
-4.  操作  
+4. 操作  
   
  動作のどのコレクション内でも、順序が保証されるというわけではありません。  
   
  <xref:System.ServiceModel.ChannelFactory%601> は次の順序で動作を適用します。  
   
-1.  コントラクト  
+1. コントラクト  
   
-2.  エンドポイント  
+2. エンドポイント  
   
-3.  操作  
+3. 操作  
   
  この場合も、動作のどのコレクション内でも、順序が保証されるというわけではありません。  
   

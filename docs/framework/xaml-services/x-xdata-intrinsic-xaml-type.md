@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125160"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 組み込み XAML 型
 XAML の運用環境での XML データ アイランドの配置を有効にします。 内の XML 要素`x:XData`が動作する既定の XAML 名前空間の一部かその他の XAML 名前空間かのように XAML プロセッサで扱うことはできません。 `x:XData` 任意の整形式 XML を含めることができます。  
@@ -50,6 +50,7 @@ XAML の運用環境での XML データ アイランドの配置を有効にし
  技術的には、`x:XData`型のプロパティの内容として使用できる<xref:System.Xml.Serialization.IXmlSerializable>します。 ただし、<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>のみ、著名な実装です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [データ バインディングの概要](../wpf/data/data-binding-overview.md)
 - [バインドのマークアップ拡張機能](../wpf/advanced/binding-markup-extension.md)

@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073729"
 ---
 # <a name="using-the-assert-method"></a>Assert メソッドの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> は、コードのアクセス許可のクラスおよび <xref:System.Security.PermissionSet>クラスで呼び出すことができるメソッドです。 使用することができます**Assert**コードは、権限を持つアクションがその呼び出し元を実行する、コード (および下流の呼び出し元) を有効にする権限がないためです。 セキュリティ アサーションは、セキュリティ チェック時にランタイムが実行する正常なプロセスを変更します。 アクセス許可をアサートすると、アサートされたアクセス許可のためにコードの呼び出し元をチェックしないようセキュリティ システムに指示します。  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> コード アクセス許可クラスを呼び出すことができるとメソッドでは、<xref:System.Security.PermissionSet>クラス。 使用することができます**Assert**コードは、権限を持つアクションがその呼び出し元を実行する、コード (および下流の呼び出し元) を有効にする権限がないためです。 セキュリティ アサーションは、セキュリティ チェック時にランタイムが実行する正常なプロセスを変更します。 アクセス許可をアサートすると、アサートされたアクセス許可のためにコードの呼び出し元をチェックしないようセキュリティ システムに指示します。  
   
 > [!CAUTION]
 >  アサーションはセキュリティ ホールを開き、セキュリティの制限事項を適用するランタイムのメカニズムを弱体化させる可能性があるため、慎重に使用してください。  
@@ -168,6 +168,7 @@ namespace LogUtil
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.SecurityPermission>
 - <xref:System.Security.Permissions.FileIOPermission>

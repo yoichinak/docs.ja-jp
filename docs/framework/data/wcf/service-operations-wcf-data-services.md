@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211973"
 ---
 # <a name="service-operations-wcf-data-services"></a>サービス操作 (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、データ サービスでサービス操作を定義して、サーバーでメソッドを公開できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI (に基づいて、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)データ サービス) の値を渡します`London`を`city`パラメーター。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] サーバー上のメソッドを公開するデータ サービスでサービス操作を定義できます。 その他のデータ サービス リソースと同様に、サービス操作は URI によってアドレス指定できます。 サービス操作では、データ サービスでビジネス ロジックを公開できます (検証ロジックの実装、ロール ベースのセキュリティの適用、特殊なクエリ機能の公開など)。 サービス操作は、<xref:System.Data.Services.DataService%601> から派生するデータ クラスに追加されるメソッドです。 その他のすべてのデータ サービス リソースと同様に、パラメーターをサービス操作メソッドに指定できます。 たとえば、次のサービス操作 URI (に基づいて、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)データ サービス) の値を渡します`London`を`city`パラメーター。  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -29,7 +29,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
  <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> の <xref:System.Data.Services.DataService%601> を使用して、データ サービスが使用するデータ ソースに直接アクセスできます。 詳細については、「[方法 :サービス操作を定義](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)します。  
   
- .NET Framework クライアント アプリケーションからサービス操作を呼び出す方法については、[サービス操作を呼び出す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)を参照してください。  
+ .NET Framework クライアント アプリケーションからサービス操作を呼び出す方法については、次を参照してください。[サービス操作を呼び出す](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)します。  
   
 ## <a name="service-operation-requirements"></a>サービス操作の要件  
  データ サービスでサービス操作を定義する場合、次の要件が適用されます。 これらの要件を満たしていないメソッドは、データ サービスのサービス操作として公開されません。  
@@ -42,7 +42,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   メソッドは次のいずれかを返す必要があります。  
   
-    -   `void` (Visual Basic の場合は `Nothing`)。  
+    -   `void` (`Nothing` Visual basic)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   メソッドには、`[WebGet]` 属性または `[WebInvoke]` 属性を使用して注釈を付ける必要があります。  
   
-    -   `[WebGet]` では、GET 要求を使用してメソッドを呼び出すことができます。  
+    -   `[WebGet]` GET 要求を使用して呼び出されるメソッドを有効にします。  
   
-    -   `[WebInvoke(Method = "POST")]` では、POST 要求を使用してメソッドを呼び出すことができます。 その他の <xref:System.ServiceModel.Web.WebInvokeAttribute> メソッドはサポートされていません。  
+    -   `[WebInvoke(Method = "POST")]` POST 要求を使用して呼び出されるメソッドを有効にします。 その他の <xref:System.ServiceModel.Web.WebInvokeAttribute> メソッドはサポートされていません。  
   
 -   サービス操作には、<xref:System.Data.Services.SingleResultAttribute> を使用して注釈を付けることができます。この属性は、メソッドからの戻り値がエンティティのコレクションではなく 1 つのエンティティとなるように指定します。 この区別により、応答の結果のシリアル化、および追加のナビゲーション プロパティのトラバーサルを URI で表す方法が決定されます。 たとえば、AtomPub シリアル化を使用すると、1 種類のリソースのインスタンスがエントリ要素として表され、一連のインスタンスがフィード要素として表されます。  
   
@@ -77,7 +77,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
 |有効な戻り値の型|URI のルール|  
 |------------------------|---------------|  
-|`void` (Visual Basic の場合は `Nothing`)。<br /><br /> または<br /><br /> エンティティ型<br /><br /> または<br /><br /> プリミティブ型|URI は、サービス操作の名前である 1 つのパス セグメントである必要があります。 クエリ オプションは許可されません。|  
+|`void` (`Nothing` Visual basic)<br /><br /> - または -<br /><br /> エンティティ型<br /><br /> または<br /><br /> プリミティブ型|URI は、サービス操作の名前である 1 つのパス セグメントである必要があります。 クエリ オプションは許可されません。|  
 |<xref:System.Collections.Generic.IEnumerable%601>|URI は、サービス操作の名前である 1 つのパス セグメントである必要があります。 結果型は <xref:System.Linq.IQueryable%601> 型ではないので、クエリ オプションは使用できません。|  
 |<xref:System.Linq.IQueryable%601>|サービス操作の名前であるパスに追加したクエリ パス セグメント セグメントが許可されます。 クエリ オプションも許可されます。|  
   
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターセプター](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

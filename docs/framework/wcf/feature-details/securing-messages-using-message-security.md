@@ -2,12 +2,12 @@
 title: メッセージ セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172004"
 ---
 # <a name="securing-messages-using-message-security"></a>メッセージ セキュリティを使用したメッセージのセキュリティ保護
 このセクションを使用する場合、WCF メッセージ セキュリティをについて説明します<xref:System.ServiceModel.NetMsmqBinding>します。  
@@ -41,7 +41,7 @@ ms.locfileid: "54610952"
   
  キューは切断されているため、クライアントとサービスが同時にオンライン状態にならない可能性があります。 したがって、クライアントとサービスは、帯域外で証明書を交換する必要があります。 特にクライアントは、信頼されたストア内にサービスの証明書 (証明機関にチェーンできる) を保持しているという理由で、正しいサービスと通信していると信じる必要があります。 クライアントを認証する場合、サービスはメッセージに添付された X509 証明書を使用し、ストア内の証明書と照合してクライアントの信頼性を確認します。 この場合も、証明書は証明機関にチェーンされている必要があります。  
   
- Windows を実行しているコンピューターでは、証明書は数種類のストアで保持されています。 異なるストアの詳細については、[証明書のストア](https://go.microsoft.com/fwlink/?LinkId=87787)を参照してください。  
+ Windows を実行しているコンピューターでは、証明書は数種類のストアで保持されています。 異なるストアの詳細については、次を参照してください。[証明書のストア](https://go.microsoft.com/fwlink/?LinkId=87787)します。  
   
 ### <a name="windows"></a>Windows  
  メッセージ資格情報の種類に Windows を設定すると、Kerberos プロトコルが使用されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "54610952"
   
  この種類の資格情報を使用する場合、SERVICE アカウントでサービスが実行されている必要があります。  
   
- メッセージ資格情報を選択すると、既定で Kerberos プロトコルが使用されます。 詳細については、[探索 Kerberos、Windows 2000 でのセキュリティの配布用のプロトコル](https://go.microsoft.com/fwlink/?LinkId=87790)を参照してください。  
+ メッセージ資格情報を選択すると、既定で Kerberos プロトコルが使用されます。 詳細については、次を参照してください。[探索 Kerberos、Windows 2000 でのセキュリティの配布用のプロトコル](https://go.microsoft.com/fwlink/?LinkId=87790)します。  
   
 ### <a name="username-password"></a>ユーザー名とパスワード  
  このプロパティを使用すると、クライアントは、メッセージのセキュリティ ヘッダーに含まれるユーザー名とパスワードを使用してサーバーに認証できます。  
@@ -64,6 +64,7 @@ ms.locfileid: "54610952"
  トランスポート セキュリティとメッセージ セキュリティの両方を使用する場合は、トランスポート レベルと SOAP メッセージ レベルの両方で同じ証明書を使用してメッセージを保護する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

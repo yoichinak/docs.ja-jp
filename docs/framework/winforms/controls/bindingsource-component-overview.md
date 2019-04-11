@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098638"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource コンポーネントの概要
 <xref:System.Windows.Forms.BindingSource> コンポーネントは、基になるデータ ソースにコントロールをバインドするプロセスを簡略化するように設計されています。 <xref:System.Windows.Forms.BindingSource> コンポーネントは、他のコントロールのバインド先となるパイプおよびデータ ソースの両方の働きをします。 このコンポーネントは、フォームのデータ接続を抽象化し、基になるデータ リストにコマンドを渡します。 また、コンポーネントに直接データを追加することにより、コンポーネント自体がデータ ソースとして機能するようにすることができます。  
@@ -40,9 +40,9 @@ ms.locfileid: "57724467"
   
 |メンバー|説明|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> プロパティ|データソースの現在の項目を取得します。|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> プロパティ|基になるリストでの現在の位置を取得または設定します。|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> プロパティ|<xref:System.Windows.Forms.BindingSource.DataSource%2A> と <xref:System.Windows.Forms.BindingSource.DataMember%2A> の評価であるリストを取得します。 <xref:System.Windows.Forms.BindingSource.DataMember%2A> が設定されていないときは、<xref:System.Windows.Forms.BindingSource.DataSource%2A> によって指定されたリストを返します。|  
+|<xref:System.Windows.Forms.BindingSource.Current%2A> property|データソースの現在の項目を取得します。|  
+|<xref:System.Windows.Forms.BindingSource.Position%2A> property|基になるリストでの現在の位置を取得または設定します。|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> property|<xref:System.Windows.Forms.BindingSource.DataSource%2A> と <xref:System.Windows.Forms.BindingSource.DataMember%2A> の評価であるリストを取得します。 <xref:System.Windows.Forms.BindingSource.DataMember%2A> が設定されていないときは、<xref:System.Windows.Forms.BindingSource.DataSource%2A> によって指定されたリストを返します。|  
 |<xref:System.Windows.Forms.BindingSource.Insert%2A> メソッド|リスト内の指定されたインデックス位置に項目を挿入します。|  
 |<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> メソッド|リストから現在の項目を削除します。|  
 |<xref:System.Windows.Forms.BindingSource.EndEdit%2A> メソッド|基になるデータ ソースに保留中の変更を適用します。|  
@@ -54,10 +54,11 @@ ms.locfileid: "57724467"
   
 |メンバー|説明|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。 データ ソースが <xref:System.ComponentModel.IBindingListView> であり、高度な並べ替えをサポートしている場合は、並べ替えに使用する複数の列名と並べ替え順序情報を取得します。|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingListView> である場合は、表示する行のフィルター処理に使用する式を取得または設定します。|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> property|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。 データ ソースが <xref:System.ComponentModel.IBindingListView> であり、高度な並べ替えをサポートしている場合は、並べ替えに使用する複数の列名と並べ替え順序情報を取得します。|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> property|データ ソースが <xref:System.ComponentModel.IBindingListView> である場合は、表示する行のフィルター処理に使用する式を取得または設定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource コンポーネント アーキテクチャ](bindingsource-component-architecture.md)

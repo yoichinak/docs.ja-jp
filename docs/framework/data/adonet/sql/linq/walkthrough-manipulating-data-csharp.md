@@ -2,12 +2,12 @@
 title: 'チュートリアル: データの操作 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330780"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>チュートリアル: データの操作 (C#)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54637308"
   
 -   Northwind サンプル データベース。  
   
-     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)を参照してください。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
+     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest6 フォルダーにコピーします。  
   
 -   Northwind データベースから生成された C# コード ファイル。  
   
@@ -53,30 +53,30 @@ ms.locfileid: "54637308"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  Visual Studio で**ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**します。  
+1. Visual Studio で**ファイル**メニューで、**新規**、 をクリックし、**プロジェクト**します。  
   
-2.  **プロジェクトの種類**ペインで、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual C#** します。  
+2. **プロジェクトの種類**ペインで、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual C#** します。  
   
-3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+3. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに「 **LinqDataManipulationApp**します。  
+4. **名前**ボックスに「 **LinqDataManipulationApp**します。  
   
-5.  **場所**ボックスで、プロジェクト ファイルを格納することを確認します。  
+5. **場所**ボックスで、プロジェクト ファイルを格納することを確認します。  
   
-6.  **[OK]** をクリックします。  
+6. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
  このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 System.Data.Linq がプロジェクトの参照として表示されない場合は、次に説明する手順に従って追加してください。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
+1. **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
+2. **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
   
      アセンブリがプロジェクトに追加されます。  
   
-3.  Program.cs の冒頭に、次のディレクティブを追加します。  
+3. Program.cs の冒頭に、次のディレクティブを追加します。  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "54637308"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
   
-1.  **プロジェクト** メニューのをクリックして**既存項目の追加**します。  
+1. **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
-2.  **既存項目の追加**ダイアログ ボックスは c:\linqtest6\northwind.cs に移動し、をクリックし、**追加**します。  
+2. **既存項目の追加**ダイアログ ボックスは c:\linqtest6\northwind.cs に移動し、をクリックし、**追加**します。  
   
      northwind.cs ファイルがプロジェクトに追加されます。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "54637308"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>データベース接続を設定してテストするには  
   
-1.  Program クラスの `Main` メソッドに次のコードを入力するか、貼り付けます。  
+1. Program クラスの `Main` メソッドに次のコードを入力するか、貼り付けます。  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2.  この時点でアプリケーションをテストするには、F5 キーを押します。  
+2. この時点でアプリケーションをテストするには、F5 キーを押します。  
   
      A**コンソール**ウィンドウが開きます。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "54637308"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>新しい Customer エンティティ オブジェクトを追加するには  
   
-1.  次のコードを `Customer` メソッド内の `Console.ReadLine();` の前に追加することで、新しい `Main` を作成します。  
+1. 次のコードを `Customer` メソッド内の `Console.ReadLine();` の前に追加することで、新しい `Main` を作成します。  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2.  F5 キーを押してソリューションをデバッグします。  
+2. F5 キーを押してソリューションをデバッグします。  
   
-3.  Enter キーを押して、**コンソール**ウィンドウでデバッグを停止およびチュートリアルを続行します。  
+3. Enter キーを押して、**コンソール**ウィンドウでデバッグを停止およびチュートリアルを続行します。  
   
 ## <a name="updating-an-entity"></a>エンティティの更新  
  以降の手順では、`Customer` オブジェクトを取得し、そのプロパティの 1 つを変更します。  
@@ -146,20 +146,21 @@ ms.locfileid: "54637308"
   
 #### <a name="to-submit-changes-to-the-database"></a>データベースに変更内容を送信するには  
   
-1.  `Console.ReadLine` の直前に次のコードを挿入します。  
+1. `Console.ReadLine` の直前に次のコードを挿入します。  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2.  変更内容の送信前と送信後の変化を示すために、次のコードを (`SubmitChanges` の後に) 挿入します。  
+2. 変更内容の送信前と送信後の変化を示すために、次のコードを (`SubmitChanges` の後に) 挿入します。  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3.  F5 キーを押してソリューションをデバッグします。  
+3. F5 キーを押してソリューションをデバッグします。  
   
-4.  Enter キーを押して、**コンソール**ウィンドウ アプリケーションを終了します。  
+4. Enter キーを押して、**コンソール**ウィンドウ アプリケーションを終了します。  
   
 > [!NOTE]
 >  変更内容を送信して新しい顧客を追加した後で、このソリューションを再度実行することはできません。 ソリューションを再度実行するには、追加する顧客の名前と顧客 ID を変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

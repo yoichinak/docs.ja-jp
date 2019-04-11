@@ -2,12 +2,12 @@
 title: カスタム エンコーダー
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190575"
 ---
 # <a name="custom-encoders"></a>カスタム エンコーダー
 このトピックでは、カスタム エンコーダーを作成する方法について説明します。  
@@ -38,8 +38,7 @@ ms.locfileid: "58411370"
   
  バインド要素は、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 ファクトリは、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 通常、インスタンスは 1 つだけあります。 ただし、セッションを使用すると、異なるエンコーダーを各セッションに提供できます。 バイナリ エンコーダーでは、これを利用して動的ディクショナリ (XML インフラストラクチャを参照) を調整します。  
   
- 
-  <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> メソッドと <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> メソッドは、エンコーダーのコアです。 このメソッドは、ストリームまたは <xref:System.Byte> 配列からのメッセージの読み取りに対応します。 バイト配列は、トランスポートをバッファー モードで操作している場合に使用されます。 メッセージはストリームに常に書き込まれます。 トランスポートでメッセージをバッファーする必要がある場合は、バッファリングを行うストリームが提供されます。  
+ <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> メソッドと <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> メソッドは、エンコーダーのコアです。 このメソッドは、ストリームまたは <xref:System.Byte> 配列からのメッセージの読み取りに対応します。 バイト配列は、トランスポートをバッファー モードで操作している場合に使用されます。 メッセージはストリームに常に書き込まれます。 トランスポートでメッセージをバッファーする必要がある場合は、バッファリングを行うストリームが提供されます。  
   
  残りのメンバーは、サポート コンテンツ、メディア タイプ、および <xref:System.ServiceModel.Channels.MessageEncoder.MessageVersion%2A> を処理します。 トランスポートは、このエンコーダー メソッドを呼び出して、受信メッセージがデコード可能かどうかをテストするか、または送信メッセージがこのエンコーダーに対して有効かどうかを決定します。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "58411370"
 ### <a name="pooling"></a>Pooling  
  各エンコーダー実装は、可能な限りプールを試みます。 マネージド コードのパフォーマンスを向上するには、割り当てを減らすことが重要です。 このプールを実現するには、実装で `SynchronizedPool` クラスを使用します。 C# ファイルには、このクラスで使用する追加の最適化に関する記述を含めます。  
   
- メッセージごとに新しい <xref:System.Xml.XmlDictionaryReader> および <xref:System.Xml.XmlDictionaryWriter> インスタンスを割り当てるのを避けるため、これらのインスタンスをプールして再初期化します。 リーダーについては、`OnClose` の呼び出し時に `Close()` コールバックでリーダーが再利用されます。 また、エンコーダーでは、メッセージを作成するときに使用するいくつかのメッセージ状態オブジェクトが再利用されます。 このプールのサイズは、`MaxReadPoolSize` から派生した 3 つの各クラスの `MaxWritePoolSize` プロパティと <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> プロパティによって構成可能です。  
+ <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter>インスタンスはプールされ、各メッセージ用に新しいルールを割り当てないように再初期化します。 リーダーについては、`OnClose` の呼び出し時に `Close()` コールバックでリーダーが再利用されます。 また、エンコーダーでは、メッセージを作成するときに使用するいくつかのメッセージ状態オブジェクトが再利用されます。 このプールのサイズは、`MaxReadPoolSize` から派生した 3 つの各クラスの `MaxWritePoolSize` プロパティと <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> プロパティによって構成可能です。  
   
 ### <a name="binary-encoding"></a>バイナリ エンコーディング  
  バイナリ エンコーディングでセッションを使用する場合、動的ディクショナリの文字列をメッセージの受信者と通信する必要があります。 これを行うには、メッセージのプレフィックスに動的ディクショナリの文字列を指定します。 受信側では、その文字列を取り除いて、セッションに追加し、メッセージ処理を行います。 ディクショナリの文字列を正しく渡すには、トランスポートをバッファーする必要があります。  
@@ -61,8 +60,7 @@ ms.locfileid: "58411370"
  動的ディクショナリ キーの処理に加え、バッファーされセッションの多いメッセージが独自の方法で受信されます。 ドキュメントでリーダーを作成して処理する代わりに、バイナリ エンコーダーは、内部 `MessagePatterns` クラスを使用してバイナリ ストリームを分解します。 考え方は、ほとんどのメッセージがある特定のセットの特定の順序で WCF によって生成されたときに表示されるヘッダーです。 想定を基にしたパターン システムによりメッセージは分割されます。 成功した場合は、XML の解析を行わずに <xref:System.ServiceModel.Channels.MessageHeaders> オブジェクトを初期化します。 成功しなかった場合は、標準の方法に戻ります。  
   
 ### <a name="mtom-encoding"></a>MTOM エンコーディング  
- 
-  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> クラスには、<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> という追加の構成プロパティがあります。 これには、メッセージ読み取り中にバッファーできるデータ量の上限が設けられています。 すべての MIME パートを 1 つのメッセージに再アセンブルするために、XML 情報セット (Infoset) または他の MIME パートをバッファーすることが必要な場合もあります。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> クラスには、<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> という追加の構成プロパティがあります。 これには、メッセージ読み取り中にバッファーできるデータ量の上限が設けられています。 すべての MIME パートを 1 つのメッセージに再アセンブルするために、XML 情報セット (Infoset) または他の MIME パートをバッファーすることが必要な場合もあります。  
   
  HTTP を正しく操作するために、内部 MTOM メッセージ エンコーダーのクラスでは、`GetContentType` (内部) や `WriteMessage` (パブリックで、オーバーライド可能) の内部 API がいくつか用意されています。 HTTP ヘッダーの値を MIME ヘッダーの値と一致させるには、多くの通信を行う必要があります。  
   
@@ -81,20 +79,20 @@ ms.locfileid: "58411370"
   
 -   オーバーライドを必要とする、このクラスの主要なメソッドを次に示します。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>。<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> オブジェクトを受け取り、それを <xref:System.IO.Stream> オブジェクトに書き込みます。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 受け取り、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>オブジェクトし、それに書き込みます、<xref:System.IO.Stream>オブジェクト。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>。<xref:System.IO.Stream> オブジェクトと最大ヘッダー サイズを受け取り、<xref:System.ServiceModel.Channels.Message> オブジェクトを返します。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 受け取り、<xref:System.IO.Stream>オブジェクトと最大ヘッダー サイズを返します、<xref:System.ServiceModel.Channels.Message>オブジェクト。  
   
  これらのメソッドに記述するコードは、標準トランスポート プロトコルとカスタマイズしたエンコーディングの間の変換処理です。  
   
- 次に、カスタム エンコーダーを作成するファクトリ クラスをコーディングする必要があります。 
-  <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> をオーバーライドして、独自のカスタム <xref:System.ServiceModel.Channels.MessageEncoder> のインスタンスを返します。  
+ 次に、カスタム エンコーダーを作成するファクトリ クラスをコーディングする必要があります。 <xref:System.ServiceModel.Channels.MessageEncoderFactory.Encoder%2A> をオーバーライドして、独自のカスタム <xref:System.ServiceModel.Channels.MessageEncoder> のインスタンスを返します。  
   
  次に、<xref:System.ServiceModel.Channels.MessageEncoderFactory> メソッドをオーバーライドしてこのファクトリのインスタンスを返すようにすることで、サービスまたはクライアントの構成に使用されるバインド要素スタックにカスタム <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> を接続します。  
   
  WCF に付属のサンプル コードでは、このプロセスを説明する 2 つのサンプルがあります。[カスタム メッセージ エンコーダー:カスタム テキスト エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)と[カスタム メッセージ エンコーダー。圧縮エンコーダー](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>

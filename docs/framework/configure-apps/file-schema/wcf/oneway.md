@@ -2,12 +2,12 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 35631cc4b120169e0cadb80c6beba26ab9eafd7a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bfda2b9d7b3aa5219a3e4c344347d3b10419a7bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102415"
 ---
 # <a name="oneway"></a>\<oneWay>
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  
@@ -35,7 +35,7 @@ ms.locfileid: "55283271"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`packetRoutable`|パケット ルーティングが有効かどうかを示すブール値。 既定値は、`false` です。|  
+|`packetRoutable`|パケット ルーティングが有効かどうかを示すブール値。 既定値は `false` です。|  
 |`MaxAcceptedChannels`|許容できるチャネルの最大数を指定する整数。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -51,9 +51,10 @@ ms.locfileid: "55283271"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
- パケット ルーティングを有効にするには、この要素が提供する "一方向の変換" 層が必要です。 カスタム バインディングを作成し、このバインディングをセッション対応または要求応答のトランスポートの上に重ねて、パケット ルーティング可能にすることができます。 この要素は、一方向メソッドをよりネイティブな形式で公開するときにも役に立ちます。 複合二重や信頼できるメッセージ機能などのさらに大きい変換は、この層に対して適用できます。  
+ パケット ルーティングを有効にするには、この要素が提供する "一方向の変換" 層が必要です。 カスタム バインドを作成し、このバインディングをセッション対応または要求応答のトランスポートの上に重ねて、パケット ルーティング可能にすることができます。 この要素は、一方向メソッドをよりネイティブな形式で公開するときにも役に立ちます。 複合二重や信頼できるメッセージ機能などのさらに大きい変換は、この層に対して適用できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.OneWayBindingElement>
 - <xref:System.ServiceModel.Configuration.OneWayElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

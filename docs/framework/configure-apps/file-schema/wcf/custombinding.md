@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159745"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -190,12 +190,12 @@ ms.locfileid: "57366674"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|カスタム バインドの双方向のメッセージングを指定します。 たとえば HTTP のように、ネイティブでの二重通信を許可しないトランスポートで使用されます。 これとは対照的に、TCP では、二重通信がネイティブで許可されているので、クライアントにメッセージを返信するためにこのバインディング要素をサービスで使用する必要はありません。<br /><br /> クライアントは、サービスのアドレスを公開して、アクセスおよび接続の確立ができるようにする必要があります。 このクライアント アドレスは、`ClientBaseAddress` 属性によって提供されます。<br /><br /> この要素は <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 型です。|
+|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|カスタム バインドの双方向のメッセージングを指定します。 たとえば HTTP のように、ネイティブでの二重通信を許可しないトランスポートで使用されます。 これとは対照的に、TCP では、二重通信がネイティブで許可されているので、クライアントにメッセージを返信するためにこのバインディング要素をサービスで使用する必要はありません。<br /><br /> クライアントは、サービスのアドレスを公開して、アクセスおよび接続の確立ができるようにする必要があります。 このクライアント アドレスは、`ClientBaseAddress` 属性によって提供されます。<br /><br /> この要素は <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 型です。|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|PNRP (Peer Name Resolution Protocol) ピア名リゾルバーを指定します。 この要素は <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 型です。|
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-ReliableMessaging の設定を指定します。 この要素がカスタム バインディングに追加される場合、その結果となるチャネルにより、正確に 1 回の配信保証をサポートできます。 この要素は <xref:System.ServiceModel.Configuration.ReliableSessionElement> 型です。|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|カスタム バインドのセキュリティ オプションを指定します。 この要素は <xref:System.ServiceModel.Configuration.SecurityElement> 型です。|
+|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-ReliableMessaging の設定を指定します。 この要素がカスタム バインドに追加される場合、その結果となるチャネルにより、正確に 1 回の配信保証をサポートできます。 この要素は <xref:System.ServiceModel.Configuration.ReliableSessionElement> 型です。|
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|カスタム バインドのセキュリティ オプションを指定します。 この要素は <xref:System.ServiceModel.Configuration.SecurityElement> 型です。|
 |[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL ストリーム バインディングのセキュリティ設定を指定します。 この要素は <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> 型です。|
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|バインディングがトランザクション フローをサポートし、プロトコルが `transactionProtocol` 属性によって使用される必要があることを指定します。 この要素は <xref:System.ServiceModel.Configuration.TransactionFlowElement> 型です。|
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|バインディングがトランザクション フローをサポートし、プロトコルが `transactionProtocol` 属性によって使用される必要があることを指定します。 この要素は <xref:System.ServiceModel.Configuration.TransactionFlowElement> 型です。|
 |[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|カスタム バインドのストリーミング セキュリティのオプションを指定します。 この要素は <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> 型です。|
 
 ### <a name="parent-elements"></a>親要素
@@ -222,7 +222,7 @@ ms.locfileid: "57366674"
 
 5. エンコーダー (省略可能)
 
-システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、カスタム バインディングを使用します。 たとえば、カスタム バインドを使用すると、サービス エンドポイントで新しいトランスポートや新しいエンコーダーを使用できます。
+システムが提供するバインディングの中にサービスの要件を満たすものがない場合は、カスタム バインドを使用します。 たとえば、カスタム バインドを使用すると、サービス エンドポイントで新しいトランスポートや新しいエンコーダーを使用できます。
 
 カスタム バインドは、特定の順序で "積み重ねられている" バインド要素のコレクションから <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> の 1 つを使用して作成します。
 
@@ -252,7 +252,7 @@ ms.locfileid: "57366674"
 
     - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- その次にあるのは、必須のメッセージ エンコード バインディング要素です。 独自のトランスポートを使用することも、以下のメッセージ エンコード バインドのいずれかを使用することもできます。
+- その次にあるのは、必須のメッセージ エンコード バインド要素です。 独自のトランスポートを使用することも、以下のメッセージ エンコード バインドのいずれかを使用することもできます。
 
     - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -282,16 +282,15 @@ ms.locfileid: "57366674"
 |-----------|-------------|--------------|
 |トランザクション フロー|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Ｘ|
 |信頼性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Ｘ|
-|セキュリティ|同期、非同期、トランスポート レベル|Ｘ|
-|形状の変更|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Ｘ|
-|トランスポートのアップグレード|SSL ストリーム、Windows ストリーム、ピア リゾルバー|Ｘ|
+|セキュリティ|同期、非同期、トランスポート レベル|いいえ|
+|形状の変更|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|いいえ|
+|トランスポートのアップグレード|SSL ストリーム、Windows ストリーム、ピア リゾルバー|いいえ|
 |エンコーディング|テキスト、バイナリ、MTOM、カスタム|はい|
 |Transport|TCP、名前付きパイプ、HTTP、HTTPS、MSMQ のフレーバー、カスタム|はい|
 
 さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。
 
 カスタム システム指定のバインディングを変更するバインドを使用する方法の詳細については、次を参照してください。[方法。システム指定のバインディングをカスタマイズ](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。
-
 
 ## <a name="see-also"></a>関連項目
 

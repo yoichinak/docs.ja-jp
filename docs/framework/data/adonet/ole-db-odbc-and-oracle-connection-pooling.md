@@ -2,12 +2,12 @@
 title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208892"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
 接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 このセクションでは、OLE DB、ODBC、および Oracle 用の .NET Framework データ プロバイダーの接続プールについて説明します。  
@@ -21,7 +21,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  接続がプールに返されるようにするために、接続を使い終えたら必ず接続を終了または破棄することをお勧めします。 明示的に終了されていない接続は、プールに返されない場合があります。 たとえば、スコープ外に出ても、明示的に終了されていない接続は、最大プール サイズに達した時点でその接続がまだ有効である場合にだけ接続プールに返されます。  
   
- OLE DB セッションまたはリソース プールだけでなく OLE DB プロバイダー サービスの既定をオーバーライドしてプール機能を無効にする方法の詳細については、、 [OLE DB プログラマ ガイド](https://go.microsoft.com/fwlink/?linkid=45232)を参照してください。  
+ OLE DB セッションまたはリソース プールだけでなく OLE DB プロバイダー サービスの既定をオーバーライドしてプール機能を無効にする方法の詳細については、次を参照してください。、 [OLE DB プログラマ ガイド](https://go.microsoft.com/fwlink/?linkid=45232)します。  
   
 ## <a name="connection-pooling-for-odbc"></a>Odbc の接続プール  
  .NET Framework Data Provider for ODBC の接続プールは、接続に使用される ODBC ドライバー マネージャーによって管理されるため、.NET Framework Data Provider for ODBC の影響は受けません。  
@@ -48,7 +48,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときに、プールからその接続を削除できます。 このような状況が発生したときは、例外が生成されます。 ただし、その場合も開発者は接続を終了して解放し、プールへ返す必要があります。  
   
- クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)を参照してください。  
+ クラスの `Close` メソッド内で `Dispose`、`Connection`、またはその他のマネージド オブジェクトの `DataReader` または `Finalize` を呼び出さないでください。 終了処理では、クラスに直接所有されているアンマネージ リソースだけを解放してください。 クラスがアンマネージ リソースを所有していない場合は、クラス定義に `Finalize` メソッドを含めないでください。 詳細については、次を参照してください。[ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)します。  
   
 ### <a name="transaction-support"></a>トランザクションのサポート  
  接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 要求スレッドのコンテキストと割り当てられた接続は一致している必要があります。 そのため、各接続プールを実際に細分接続に関連付けられている、それらにないトランザクション コンテキストに*N*特定のトランザクション コンテキストとの接続が含まれる目盛り。  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|`true` に設定すると、接続が適切なプールから取り出されるか、または必要に応じて作成され、適切なプールに追加されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)
+- [[パフォーマンス カウンター]](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

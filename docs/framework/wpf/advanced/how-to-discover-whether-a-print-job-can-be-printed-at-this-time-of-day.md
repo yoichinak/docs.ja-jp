@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352738"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326867"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>方法: 現在、印刷ジョブが印刷可能であるかどうかを検出する
 印刷キューは常に使用できません、1 日 24 時間です。 特定の時間帯で使用できないように設定可能な開始と終了時のプロパティがあります。 たとえば、この機能は、特定の部門午後 5 時以降後に排他的に使用するプリンターを予約するは使用できます。 その部門は、別のキュー サービスの他の部門よりプリンターを使用して、必要があります。 他の部署のキューは午後 5 時以降に設定されます、する部門用のキューに設定できるときに常に利用できます。  
@@ -29,9 +29,9 @@ ms.locfileid: "57352738"
   
  この種類の関数の 2 つの主要な手順は次があります。  
   
-1.  読み取り、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintQueue>現在の時刻がそれらの間がかどうかを判断します。  
+1. 読み取り、<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>と<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintQueue>現在の時刻がそれらの間がかどうかを判断します。  
   
-2.  読み取り、<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>と<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintSystemJobInfo>現在の時刻がそれらの間がかどうかを判断します。  
+2. 読み取り、<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>と<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>のプロパティ、<xref:System.Printing.PrintSystemJobInfo>現在の時刻がそれらの間がかどうかを判断します。  
   
  ただしこれらのプロパティがないという事実から<xref:System.DateTime>オブジェクト。 これらのプロパティは<xref:System.Int32>午前 0 時以降の分単位の数として 1 日の時間を表すオブジェクト。 さらに、this は午前 0 時では、現在のタイム ゾーンが午前 0 時 UTC (世界協定時刻) です。  
   
@@ -75,6 +75,7 @@ ms.locfileid: "57352738"
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>

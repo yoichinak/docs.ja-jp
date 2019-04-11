@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157873"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は要素のレンダリングを制御するコンポーネントなど、サイズ、ディメンション、位置、および、子コンテンツの配置。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の数は、定義済み<xref:System.Windows.Controls.Panel>要素とカスタムを作成する機能<xref:System.Windows.Controls.Panel>要素。  
@@ -23,7 +23,7 @@ ms.locfileid: "57377266"
   
 -   [パネル クラス](#Panels_view_from_10000_feet)  
   
--   [パネルの要素の一般的なメンバー](#Panels_declared_members)  
+-   [パネル要素の一般的なメンバー](#Panels_declared_members)  
   
 -   [派生パネル要素](#Panels_derived_elements)  
   
@@ -65,15 +65,15 @@ ms.locfileid: "57377266"
 |要素名|UI パネル?|説明|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|[はい]|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
-|<xref:System.Windows.Controls.DockPanel>|[はい]|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
-|<xref:System.Windows.Controls.Grid>|[はい]|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
-|<xref:System.Windows.Controls.StackPanel>|[はい]|子要素を水平方向または垂直方向の単一行に整列します。|  
+|<xref:System.Windows.Controls.DockPanel>|はい|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
+|<xref:System.Windows.Controls.Grid>|はい|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
+|<xref:System.Windows.Controls.StackPanel>|はい|子要素を水平方向または垂直方向の単一行に整列します。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|いいえ|タブ ボタンのレイアウトを処理する<xref:System.Windows.Controls.TabControl>します。|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|いいえ|内のコンテンツを配置、<xref:System.Windows.Controls.ToolBar>コントロール。|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|いいえ|<xref:System.Windows.Controls.Primitives.UniformGrid> グリッド内の子をすべて同じセル サイズを調整に使用されます。|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|いいえ|子コレクションを "仮想化" できるパネルに基本クラスを提供します。|  
-|<xref:System.Windows.Controls.VirtualizingStackPanel>|[はい]|水平方向または垂直方向の単一行でコンテンツを整列し、仮想化します。|  
-|<xref:System.Windows.Controls.WrapPanel>|[はい]|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
+|<xref:System.Windows.Controls.VirtualizingStackPanel>|はい|水平方向または垂直方向の単一行でコンテンツを整列し、仮想化します。|  
+|<xref:System.Windows.Controls.WrapPanel>|はい|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>ユーザー インターフェイス パネル  
@@ -81,7 +81,7 @@ ms.locfileid: "57377266"
   
  それぞれの派生<xref:System.Windows.Controls.Panel>要素がサイズ制約を異なる方法で扱われます。 理解する方法、<xref:System.Windows.Controls.Panel>水平または垂直方向のいずれかの制約をハンドルすると、レイアウトより予測可能な。  
   
-|**パネル名**|**x 方向**|**y 方向**|  
+|**パネル名**|**x 次元**|**y 次元**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|コンテンツに対する制約あり。|コンテンツに対する制約あり。|  
 |<xref:System.Windows.Controls.DockPanel>|制約あり。|制約あり。|  
@@ -242,7 +242,7 @@ ms.locfileid: "57377266"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>ローカライズ/グローバリゼーション サポート  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ローカライズ可能な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] の作成を支援する多数の機能をサポートしています。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカライズの作成時に、多くを支援する機能をサポートしている[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。  
   
  すべてのパネル要素をネイティブ サポート、<xref:System.Windows.FrameworkElement.FlowDirection%2A>プロパティは、ユーザーのロケールまたは言語設定に基づいてコンテンツを動的に再フローするために使用できます。 詳細については、「 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 」を参照してください。  
   
@@ -253,10 +253,11 @@ ms.locfileid: "57377266"
  ローカライズ可能な [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] を備えた [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの作成方法の詳細については、「[自動レイアウトの使用の概要](../advanced/use-automatic-layout-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [レイアウト](../advanced/layout.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF コントロール ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [配置、余白、パディングの概要](../advanced/alignment-margins-and-padding-overview.md)
 - [カスタム コンテンツ折り返しパネルのサンプルを作成します。](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [添付プロパティの概要](../advanced/attached-properties-overview.md)

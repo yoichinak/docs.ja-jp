@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd7d5f66ef7c8f2b36b8dcb725b1931993c118dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47359cd71460732100364f07e0dc5efacc44c760
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092046"
 ---
 # <a name="icorprofilerthreadenum-interface"></a>ICorProfilerThreadEnum インターフェイス
 共通言語ランタイムのスレッドのコレクションを順番に反復処理するメソッドを提供します。  
@@ -30,9 +30,9 @@ ms.locfileid: "54526393"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Clone メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|この `ICorProfilerThreadEnum` インターフェイスのコピーに対するインターフェイス ポインターを取得します。|  
+|[Clone メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-clone-method.md)|この `ICorProfilerThreadEnum` インターフェイスのコピーへのインターフェイス ポインターを取得します。|  
 |[GetCount メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-getcount-method.md)|アプリケーションで使用されるスレッドの数を取得します。|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|スレッドのシーケンシャル コレクションから、シーケンスにおいて列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。|  
+|[Next メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-next-method.md)|スレッドのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するスレッドを取得します。|  
 |[Reset メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-reset-method.md)|列挙子のカーソルをシーケンスの開始位置に移動します。|  
 |[Skip メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-skip-method.md)|指定した数の要素をスキップするため、この列挙子のカーソルを現在の位置から進めます。|  
   
@@ -46,8 +46,9 @@ ms.locfileid: "54526393"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

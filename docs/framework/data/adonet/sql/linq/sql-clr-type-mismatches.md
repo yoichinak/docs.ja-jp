@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172888"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL と CLR の型の不一致
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はオブジェクト モデルと SQL Server 間の変換のほとんどを自動化します。 ただし、正確な変換が実行されない場合もあります。 以下のセクションでは、共通言語ランタイム (CLR) の型と SQL Server データベースの型の主な不一致について概要を示します。 詳細については、特定の型のマッピングと関数の変換で見つかります[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)と[データ型および関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクト モデルと SQL Server 間の変換の多くを自動化します。 ただし、正確な変換が実行されない場合もあります。 以下のセクションでは、共通言語ランタイム (CLR) の型と SQL Server データベースの型の主な不一致について概要を示します。 詳細については、特定の型のマッピングと関数の変換で見つかります[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)と[データ型および関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
   
 ## <a name="data-types"></a>データの種類  
  CLR と SQL Server 間の変換は、クエリがデータベースに送信されるときと、結果がオブジェクト モデルに返されるときに発生します。 たとえば、次の Transact-SQL では 2 つの値の変換が必要です。  
@@ -114,11 +114,11 @@ or col1 != col2
  `null` (`nothing`) の値の照合順序は SQL Server で定義され、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変更されません。  
   
 ### <a name="type-conversion-and-promotion"></a>型変換と上位変換  
- SQL では、式における暗黙の型変換が豊富にサポートされています。 同じような式でも、C# では明示的なキャストが必要です。 次に例を示します。  
+ SQL では、式における暗黙の型変換が豊富にサポートされています。 同じような式でも、C# では明示的なキャストが必要です。 例:  
   
--   `Nvarchar` 型と `DateTime` 型は、SQL では明示的にキャストせずに比較できますが、C# では明示的に変換する必要があります。  
+-   `Nvarchar` `DateTime` ; 明示的にキャストせずに SQL 型を比較できますC#明示的な変換が必要です。  
   
--   `Decimal` は、SQL では暗黙に `DateTime` に変換されます。 C# では、暗黙の変換は行われません。  
+-   `Decimal` 変換が暗黙的に`DateTime`sql です。 C# では、暗黙の変換は行われません。  
   
  同様に、型の基本セットが異なるため、Transact-SQL の型の優先順位は C# の優先順位と異なります。 実際に、両者の優先順位のリストには明白なサブセットやスーパーセットの関係は成り立ちません。 たとえば、`nvarchar` を `varchar` と比較すると、`varchar` 式が `nvarchar` に暗黙的に変換されます。 これに相当する上位変換は CLR にはありません。  
   
@@ -146,7 +146,7 @@ Where Col1 = Col2
   
  実際には、collation サブ句を作成、*型を制限*置換でないです。  
   
- 同様に、並べ替え順序も型システムによって顕著に異なります。 この相違は、結果の並べ替えに影響します。 <xref:System.Guid> は、すべての 16 バイトを辞書の編集順序 (`IComparable()`) で並べ替えますが、T-SQL は、node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3) の順序で GUID を比較します。 この順序は、NT 生成の GUID がこのようなオクテット順になった SQL 7.0 で採用されました。 この方法により、同じノード クラスターで生成された GUID がタイムスタンプに従って順番に並ぶことが保証されていました。 また、この方法はインデックスの作成にも便利でした (挿入時にランダムな入出力の代わりに追加が発生します)。 この順番はプライバシーを考慮して後に Windows で暗号化されましたが、SQL では互換性を維持する必要があります。 回避策は、使用する<xref:System.Data.SqlTypes.SqlGuid>の代わりに<xref:System.Guid>します。  
+ 同様に、並べ替え順序も型システムによって顕著に異なります。 この相違は、結果の並べ替えに影響します。 <xref:System.Guid> すべて 16 バイトを辞書式順序で並べ替えられます (`IComparable()`) であるのに対し、T-SQL では、次の順序で Guid を比較します: node(10-15)、clock-seq(8-9)、time-high(6-7)、time-mid(4-5)、time-low(0-3) します。 この順序は、NT 生成の GUID がこのようなオクテット順になった SQL 7.0 で採用されました。 この方法により、同じノード クラスターで生成された GUID がタイムスタンプに従って順番に並ぶことが保証されていました。 また、この方法はインデックスの作成にも便利でした (挿入時にランダムな入出力の代わりに追加が発生します)。 この順番はプライバシーを考慮して後に Windows で暗号化されましたが、SQL では互換性を維持する必要があります。 回避策は、使用する<xref:System.Data.SqlTypes.SqlGuid>の代わりに<xref:System.Guid>します。  
   
 ### <a name="operator-and-function-differences"></a>演算子と関数の相違  
  基本的には対応する関係にある演算子と関数にも、若干のセマンティクスの違いがあります。 次に例を示します。  
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   柔軟に変換する`AND` / `OR`場合、演算子の予期しないエラーが発生する、C#式では、最初のオペランドの評価の結果に基づく 2 番目のオペランドを評価の設定に依存します。  
   
--   `Round()` 関数のセマンティクスは、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] と T-SQL で異なります。  
+-   `Round()` 関数は、の異なるセマンティクス[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]と T-SQL でします。  
   
 -   文字列のインデックスは、CLR では 0 から始まりますが、SQL では 1 から始まります。 したがって、インデックスのある関数にはインデックスの変換が必要です。  
   
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  SQL Server と CLR の型システムの境界を越えるときは、セマンティクスの相違に加えて、パフォーマンスへの影響も考慮することが重要です。 データセットが大きい場合、このようなパフォーマンスの問題が、アプリケーションの展開が可能かどうかを左右することがあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

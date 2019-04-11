@@ -2,12 +2,12 @@
 title: 正規関数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202938"
 ---
 # <a name="canonical-functions"></a>正規関数
 このセクションでは、すべてのデータ プロバイダーがサポートし、あらゆるクエリ テクノロジで使用されている正規関数について説明します。 正規関数は、プロバイダーが拡張することはできません。  
@@ -48,6 +48,7 @@ ms.locfileid: "54513881"
  ビット単位、日付/時刻、文字列、数学、または集計に分類されない関数について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [概念モデル正規関数と SQL Server 関数とのマッピング](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)

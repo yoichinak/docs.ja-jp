@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], regions
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
-ms.openlocfilehash: 31c0e4b1509c478786d075b127f0b181d5cdd1c6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076030"
 ---
 # <a name="regions-in-gdi"></a>GDI+ での領域
 リージョンは、出力デバイスの表示領域の一部を示します。 リージョンは、単純な (1 つの四角形) または複合 (多角形と閉じた曲線の組み合わせ) を指定できます。 次の図は、2 つのリージョン: 四角形から構築された 1 つと、パスから構築されました。  
@@ -40,6 +40,7 @@ ms.locfileid: "57724974"
  [!code-vb[LinesCurvesAndShapes#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
 - [領域の使用](using-regions.md)

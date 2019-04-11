@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079696"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータ表示モード
 <xref:System.Windows.Forms.DataGridView>コントロールは、次の 3 つの異なるモードでデータを表示することができます。 バインド、バインドされていない、および仮想です。 要件に基づいて最も適したモードを選択します。  
@@ -24,7 +24,7 @@ ms.locfileid: "57703068"
  読み取り専用に使用する例については、バインドされていない<xref:System.Windows.Forms.DataGridView>を参照してください[方法。バインドされていない Windows フォーム DataGridView コントロールの作成](how-to-create-an-unbound-windows-forms-datagridview-control.md)です。  
   
 ## <a name="bound"></a>バインドされています。  
- バインド モードは、データ ストアと自動の操作を使用してデータを管理するために適しています。 アタッチすることができます、<xref:System.Windows.Forms.DataGridView>コントロールを設定してそのデータ ソースに直接、<xref:System.Windows.Forms.DataGridView.DataSource%2A>プロパティ。 コントロールがバインドされたデータの場合は、データ行はプッシュし、プル ユーザー側で明示的に管理する必要がありません。 ときに、<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>プロパティは`true`、データ ソース内の各列は、コントロール内に作成する対応する列になります。 このプロパティを設定するには、独自の列を作成する場合は、`false`を使用して、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>プロパティを構成するときに、各列をバインドします。 これは、既定で生成される型以外の列の型を使用する場合に便利です。 詳細については、[Windows フォームの DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)を参照してください。  
+ バインド モードは、データ ストアと自動の操作を使用してデータを管理するために適しています。 アタッチすることができます、<xref:System.Windows.Forms.DataGridView>コントロールを設定してそのデータ ソースに直接、<xref:System.Windows.Forms.DataGridView.DataSource%2A>プロパティ。 コントロールがバインドされたデータの場合は、データ行はプッシュし、プル ユーザー側で明示的に管理する必要がありません。 ときに、<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>プロパティは`true`、データ ソース内の各列は、コントロール内に作成する対応する列になります。 このプロパティを設定するには、独自の列を作成する場合は、`false`を使用して、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>プロパティを構成するときに、各列をバインドします。 これは、既定で生成される型以外の列の型を使用する場合に便利です。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)します。  
   
  バインドされたを使用する例については<xref:System.Windows.Forms.DataGridView>コントロールを参照してください[チュートリアル。フォームの DataGridView コントロールを Windows のデータの検証](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)です。  
   
@@ -39,9 +39,10 @@ ms.locfileid: "57703068"
   
  仮想モードを実装するときは、新しい行が新しい行の追加をロールバックするときにデータ モデルを必要なときに追跡する必要があります。 この機能の正確な実装は、データ モデルの実装と、データ モデルのトランザクション セマンティクスに依存します。コミットのスコープがセルまたは行レベルでかどうか。  
   
- 仮想モードの詳細については、[Windows フォームの DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)を参照してください。 仮想モードのイベントを使用する方法を示しますたとえば、次を参照してください。[チュートリアル。仮想モードの実装で、Windows フォーム DataGridView コントロール](implementing-virtual-mode-wf-datagridview-control.md)します。  
+ 仮想モードの詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)します。 仮想モードのイベントを使用する方法を示しますたとえば、次を参照してください。[チュートリアル。仮想モードの実装で、Windows フォーム DataGridView コントロール](implementing-virtual-mode-wf-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ ms.locfileid: "57703068"
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)
-- [チュートリアル: 作成、バインドされていない Windows フォーム DataGridView コントロール](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールにデータをバインドします。](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [チュートリアル: バインドされていない Windows フォーム DataGridView コントロールを作成する](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [方法: データを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](implementing-virtual-mode-wf-datagridview-control.md)
+- [チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードを実装する](implementing-virtual-mode-wf-datagridview-control.md)

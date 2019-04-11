@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fb9dd56cb19b62543d14ae02fe6f198c0164107
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 825da3a09f8b8013ffecaedfee0dce2362c8a7b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227809"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
 コントロールは、関数に渡されると、フレームと関数の引数はスタックに関する情報を提供をプロファイラーに通知します。 この関数は、 [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)関数。  
@@ -76,9 +76,10 @@ void __stdcall FunctionEnter2 (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
 - [SetEnterLeaveFunctionHooks2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)

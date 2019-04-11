@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098781"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
 このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、UI のローカライズは時間のかかるプロセスでした。 各言語 UI が変更するには、ピクセル単位で調整が必要です。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
@@ -53,7 +53,7 @@ ms.locfileid: "58408757"
 
 - 使用<xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.StackPanel>、および<xref:System.Windows.Controls.Grid>コントロールを配置します。
 
-パネルのさまざまな種類の詳細については、[パネルの概要](../controls/panels-overview.md)を参照してください。
+パネルのさまざまな種類の詳細については、次を参照してください。[パネルの概要](../controls/panels-overview.md)します。
 
 **ウィンドウの固定サイズを設定しないでください。**
 
@@ -107,6 +107,7 @@ ms.locfileid: "58408757"
  **注**完全なコード サンプルでは、次を参照してください[共有サイズ設定プロパティの間でグリッド。](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のグローバリゼーション](globalization-for-wpf.md)
 - [自動レイアウトを使用してボタンを作成する](how-to-use-automatic-layout-to-create-a-button.md)
 - [自動レイアウト用のグリッドを使用する](how-to-use-a-grid-for-automatic-layout.md)

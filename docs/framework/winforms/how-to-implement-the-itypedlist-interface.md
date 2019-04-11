@@ -1,5 +1,5 @@
 ---
-title: '方法: ITypedList インターフェイスを実装します。'
+title: '方法: ITypedList インターフェイスを実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: df4b009ca225b4bf4290398ccd7dd252c9189915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084928"
 ---
-# <a name="how-to-implement-the-itypedlist-interface"></a>方法: ITypedList インターフェイスを実装します。
+# <a name="how-to-implement-the-itypedlist-interface"></a>方法: ITypedList インターフェイスを実装する
 実装、<xref:System.ComponentModel.ITypedList>バインド可能な一覧については、スキーマの検出を有効にするインターフェイス。  
   
 ## <a name="example"></a>例  
@@ -38,6 +38,7 @@ ms.locfileid: "57709801"
 -   System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>

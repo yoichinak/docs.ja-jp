@@ -2,12 +2,12 @@
 title: XmlSerializerOperationBehavior
 ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-ms.openlocfilehash: 1e5c6217003923c21181f6a1f2efd942b2d53cf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38282577c2f759bff9927a8369349c689e26808a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174097"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
@@ -35,7 +35,7 @@ class XmlSerializerOperationBehavior : Behavior
   
  SOAP メッセージのスタイルを定義します。  
   
-### <a name="use"></a>使用  
+### <a name="use"></a>用途  
  データ型: string  
   
  アクセスの種類:読み取り専用  
@@ -46,7 +46,8 @@ class XmlSerializerOperationBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

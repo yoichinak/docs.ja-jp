@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146875"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 要素
 クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
@@ -74,8 +74,9 @@ ms.locfileid: "55262518"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [暗号設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [暗号化サービス](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

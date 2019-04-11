@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: f4b719727f3264886f8c4c313d4e1154f0d04728
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549264"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823572"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>キーボードへのアクセス (Visual Basic)
 `My.Computer.Keyboard` オブジェクトは、現在どのキーが押されているかなど、キーボードの現在の状態にアクセスするためのプロパティを提供します。また、キーストロークを作業中のウィンドウに送る方法を提供します。  
@@ -31,5 +31,6 @@ ms.locfileid: "54549264"
 |アプリケーションを起動してキーストロークを送る|[方法: アプリケーションを起動してキーストロークを送る (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

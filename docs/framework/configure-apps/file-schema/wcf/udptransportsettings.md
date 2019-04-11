@@ -2,12 +2,12 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f0f58b9c93d00d300d4a81b443b7013203484136
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218499"
 ---
 # <a name="udptransportsettings"></a>\<udpTransportSettings>
 この構成要素の UDP トランスポート設定を公開する[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)します。  
@@ -65,4 +65,5 @@ ms.locfileid: "55258189"
 |[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|固定探索コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

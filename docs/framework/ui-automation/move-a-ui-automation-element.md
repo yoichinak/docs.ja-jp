@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-ms.openlocfilehash: fa3d3751411b74a3ce14e3bd40fee1b82e3f03cd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7ecc272ceefe6755daa002eafd19c7e5d1c192f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137138"
 ---
 # <a name="move-a-ui-automation-element"></a>UI オートメーション要素の移動
 > [!NOTE]
@@ -31,4 +31,5 @@ ms.locfileid: "57677657"
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WindowPattern サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)

@@ -1,5 +1,5 @@
 ---
-title: "リソース ファイル '<filename>' にリンクできません : <error message>"
+title: リソース ファイルにリンクできません '<filename>'。 <error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: a4e53cd2d330fd3ee78d2de4246e5c51e77ed713
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759419"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327816"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>リソース ファイルにリンクできません '\<filename >':\<エラー メッセージ >
 Visual Basic コンパイラでは、マニフェストを持つアセンブリを生成するには、アセンブリ リンカー (Al.exe、Alink とも呼ばれます) を呼び出します。 リンカーが、アセンブリからネイティブな COM+ リソース ファイルにリンクするときにエラーが発生したことを報告しています。  
@@ -21,11 +21,11 @@ Visual Basic コンパイラでは、マニフェストを持つアセンブリ�
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  引用符で囲まれたエラー メッセージを確認し、トピックを参照してください。 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)します。 さらに詳しい説明とアドバイスします。  
+1. 引用符で囲まれたエラー メッセージを確認し、トピックを参照してください。 [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)します。 さらに詳しい説明とアドバイスします。  
   
-2.  エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
+2. エラーが続く場合は、状況に関する情報を収集し、マイクロソフト プロダクト サポート サービスに通知してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [ご意見](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

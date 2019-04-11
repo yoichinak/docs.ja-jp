@@ -1,5 +1,5 @@
 ---
-title: '方法: ペンの色を設定します。'
+title: '方法: ペンの色を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: a2645112950be88cbc569e0be7889c0f1019223d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213416"
 ---
-# <a name="how-to-set-the-color-of-a-pen"></a>方法: ペンの色を設定します。
+# <a name="how-to-set-the-color-of-a-pen"></a>方法: ペンの色を設定する
 この例は、既存の色を変更<xref:System.Drawing.Pen>オブジェクト  
   
 ## <a name="example"></a>例  
@@ -33,8 +33,9 @@ ms.locfileid: "57710387"
  呼び出す必要があります<xref:System.Drawing.Pen.Dispose%2A>システム リソースを消費するオブジェクト (など<xref:System.Drawing.Pen>オブジェクト) を使用してそれらが完了した後。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Pen>
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
-- [方法: ペンを作成します。](how-to-create-a-pen.md)
+- [方法: ペンを作成する](how-to-create-a-pen.md)
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+ でのペン、直線、および四角形](pens-lines-and-rectangles-in-gdi.md)

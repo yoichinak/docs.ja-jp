@@ -1,14 +1,14 @@
 ---
 title: ML.NET コンテンツ ガイド
 description: ML.NET を使用してカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明します。
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231332"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET コンテンツ ガイド
 
@@ -33,7 +33,11 @@ ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.m
 
 [回帰モデルを使った料金の予測](./tutorials/taxi-fare.md)に関するページでは、履歴データの多数の要因を使って回答を決定する、予測的なアプリの構築方法を示します。
 
-[特徴によるアヤメの花の分類](./tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。 
+[特徴によるアヤメの花の分類](./tutorials/iris-clustering.md)に関するページでは、クラスタ リング モデルを使ってアヤメのデータセットを分析する方法を示します。
+
+[ML.NET を使った映画の推奨システムの作成](./tutorials/movie-recommmendation.md)に関するページでは、ユーザーの履歴に基づいて映画を推奨する推奨アプリを構築する方法を示します。
+
+[TensorFlow を使った ML.NET のカスタム画像分類アプリの構築](./tutorials/image-classification.md)に関するページでは、既存の Tensorflow モデルを再トレーニングし、ML.NET を使ってカスタム画像分類アプリを作成する方法を示します。
 
 ## <a name="how-to-guide"></a>ハウツー ガイド
 
@@ -46,7 +50,6 @@ ML.NET について学習するには、[ML.NET とは何か](what-is-mldotnet.m
 「[機械学習のタスク](./resources/tasks.md)」では、分類や異常検出などのタスクについて説明します。 
 
 「[データ変換](./resources/transforms.md)」では、ML.NET におけるデータ準備機能について説明します。
-
 
 ## <a name="api-reference"></a>API リファレンス
 

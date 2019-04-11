@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF の Win32 コントロールのホスト'
+title: 'チュートリアル: WPF での Win32 コントロールのホスト'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307705"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF の Win32 コントロールのホスト
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF での Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
   
  このトピックで説明するアプリケーション、 [WPF のサンプルでの Win32 ListBox コントロールをホストしている](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)Win32 のリスト ボックス コントロールがホストされます。 この一般的な手順は、すべての Win32 ウィンドウのホスティングに拡張できます。  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
- このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、[Getting Started](../getting-started/index.md)を参照してください。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
+ このトピックでは、WPF と Windows API の両方のプログラミングの基礎知識を前提とします。 WPF プログラミングに基本的な概要については、次を参照してください。 [Getting Started](../getting-started/index.md)します。 Windows API のプログラミングの概要についてを参照してください、数多くの書籍の件名、特に*プログラミング Windows* Charles Petzold 著。  
   
  このトピックに付属するサンプルがで実装されているためC#、Windows API にアクセスするプラットフォーム呼び出しサービス (PInvoke) の使用します。 PInvoke の知識は役立ちますが、必須ではありませんが。  
   
@@ -36,25 +35,25 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  基本的なホスティング手順です。  
   
-1.  ウィンドウをホストする WPF ページを実装します。 1 つの方法は、<xref:System.Windows.Controls.Border>にホストされたウィンドウのページのセクションを予約する要素。  
+1. ウィンドウをホストする WPF ページを実装します。 1 つの方法は、<xref:System.Windows.Controls.Border>にホストされたウィンドウのページのセクションを予約する要素。  
   
-2.  継承するコントロールをホストするクラスを実装する<xref:System.Windows.Interop.HwndHost>します。  
+2. 継承するコントロールをホストするクラスを実装する<xref:System.Windows.Interop.HwndHost>します。  
   
-3.  そのクラスでオーバーライド、<xref:System.Windows.Interop.HwndHost>クラス メンバー<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>します。  
+3. そのクラスでオーバーライド、<xref:System.Windows.Interop.HwndHost>クラス メンバー<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>します。  
   
-4.  WPF ページを含むウィンドウの子としてホストされたウィンドウを作成します。 従来の WPF プログラミングが明示的に作成する必要はありませんが、それを使用して、ホスティング ページは、ウィンドウ ハンドル (HWND) を使用します。 ページの HWND を受け取るを通じて、`hwndParent`のパラメーター、<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>メソッド。 この HWND の子としてホストされたウィンドウを作成する必要があります。  
+4. WPF ページを含むウィンドウの子としてホストされたウィンドウを作成します。 従来の WPF プログラミングが明示的に作成する必要はありませんが、それを使用して、ホスティング ページは、ウィンドウ ハンドル (HWND) を使用します。 ページの HWND を受け取るを通じて、`hwndParent`のパラメーター、<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>メソッド。 この HWND の子としてホストされたウィンドウを作成する必要があります。  
   
-5.  ホスト ウィンドウを作成した後は、ホストされたウィンドウの HWND を返します。 1 つまたは複数の Win32 コントロールをホストする場合を通常 HWND の子としてホスト ウィンドウを作成してそのホスト ウィンドウのコントロールの子。 ホスト ウィンドウで、コントロールをラップするには、HWND の境界にまたがっていくつか特定の Win32 問題の通知を処理する、コントロールから通知を受け取る WPF ページの簡単な方法が提供します。  
+5. ホスト ウィンドウを作成した後は、ホストされたウィンドウの HWND を返します。 1 つまたは複数の Win32 コントロールをホストする場合を通常 HWND の子としてホスト ウィンドウを作成してそのホスト ウィンドウのコントロールの子。 ホスト ウィンドウで、コントロールをラップするには、HWND の境界にまたがっていくつか特定の Win32 問題の通知を処理する、コントロールから通知を受け取る WPF ページの簡単な方法が提供します。  
   
-6.  子コントロールからの通知など、ホスト ウィンドウに送信される選択したメッセージを処理します。 これには、2 つの方法があります。  
+6. 子コントロールからの通知など、ホスト ウィンドウに送信される選択したメッセージを処理します。 これには、2 つの方法があります。  
   
     -   ホストするクラスでのメッセージを処理する場合は、オーバーライド、<xref:System.Windows.Interop.HwndHost.WndProc%2A>のメソッド、<xref:System.Windows.Interop.HwndHost>クラス。  
   
     -   WPF のメッセージを処理、処理を行う場合、<xref:System.Windows.Interop.HwndHost>クラス<xref:System.Windows.Interop.HwndHost.MessageHook>分離コードでイベント。 このイベントは、ホストされたウィンドウで受信されるすべてのメッセージに対して発生します。 まだをオーバーライドする必要がある場合、このオプションを選択すると、 <xref:System.Windows.Interop.HwndHost.WndProc%2A>、最小限の実装のみ必要しますが、あります。  
   
-7.  上書き、<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>と<xref:System.Windows.Interop.HwndHost.WndProc%2A>メソッドの<xref:System.Windows.Interop.HwndHost>します。 満たすためにこれらのメソッドをオーバーライドする必要があります、<xref:System.Windows.Interop.HwndHost>コントラクトが最小限の実装を提供する必要がありますのみです。  
+7. 上書き、<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>と<xref:System.Windows.Interop.HwndHost.WndProc%2A>メソッドの<xref:System.Windows.Interop.HwndHost>します。 満たすためにこれらのメソッドをオーバーライドする必要があります、<xref:System.Windows.Interop.HwndHost>コントラクトが最小限の実装を提供する必要がありますのみです。  
   
-8.  分離コード ファイルで、コントロール ホスト クラスのインスタンスを作成しの子、<xref:System.Windows.Controls.Border>ウィンドウをホストするためのものでは、要素。  
+8. 分離コード ファイルで、コントロール ホスト クラスのインスタンスを作成しの子、<xref:System.Windows.Controls.Border>ウィンドウをホストするためのものでは、要素。  
   
 9. 送信することで、ホストされたウィンドウとの通信[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]メッセージとコントロールによる通知の送信など、その子ウィンドウからメッセージを処理します。  
   
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
  最後に、設定`handled`に`true`をメッセージが処理されたことを示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

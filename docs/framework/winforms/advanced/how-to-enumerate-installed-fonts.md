@@ -1,5 +1,5 @@
 ---
-title: '方法: インストールされているフォントを列挙します。'
+title: '方法: インストールされているフォントを列挙する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155013"
 ---
-# <a name="how-to-enumerate-installed-fonts"></a>方法: インストールされているフォントを列挙します。
+# <a name="how-to-enumerate-installed-fonts"></a>方法: インストールされているフォントを列挙する
 <xref:System.Drawing.Text.InstalledFontCollection>クラスから継承、<xref:System.Drawing.Text.FontCollection>抽象基本クラス。 使用することができます、<xref:System.Drawing.Text.InstalledFontCollection>コンピューターにインストールされているフォントを列挙するオブジェクト。 <xref:System.Drawing.Text.FontCollection.Families%2A>のプロパティ、<xref:System.Drawing.Text.InstalledFontCollection>オブジェクトの配列は、<xref:System.Drawing.FontFamily>オブジェクト。  
   
 ## <a name="example"></a>例  
@@ -32,4 +32,5 @@ ms.locfileid: "58653744"
  前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。 さらに、インポートする必要があります、<xref:System.Drawing.Text>名前空間。  
   
 ## <a name="see-also"></a>関連項目
+
 - [フォントとテキストの使用](using-fonts-and-text.md)

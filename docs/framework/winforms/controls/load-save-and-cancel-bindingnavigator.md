@@ -1,5 +1,5 @@
 ---
-title: '方法: 保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール'
+title: '方法: Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304780"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法: 保存、読み込みを追加し、[キャンセル] ボタンを Windows フォーム BindingNavigator コントロール
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法: Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する
 <xref:System.Windows.Forms.BindingNavigator>コントロールが特別な用途<xref:System.Windows.Forms.ToolStrip>移動し、フォーム上のデータにバインドされているコントロールを操作することが想定されているコントロール。  
   
  ある、<xref:System.Windows.Forms.ToolStrip>コントロール、<xref:System.Windows.Forms.BindingNavigator>コンポーネントは、ユーザーの追加のまたは別のコマンドを含めるに簡単に変更できます。  
@@ -24,22 +24,21 @@ ms.locfileid: "57722439"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>負荷を追加するには、保存、およびキャンセル ボタンに BindingNavigator コンポーネント  
   
-1.  フォームに <xref:System.Windows.Forms.TextBox> コントロールを追加します。  
+1. フォームに <xref:System.Windows.Forms.TextBox> コントロールを追加します。  
   
-2.  バインドする<xref:System.Windows.Forms.BindingSource>、データ ソースにバインドされます。 この例で、<xref:System.Windows.Forms.BindingSource>データベースにバインドされます。  
+2. バインドする<xref:System.Windows.Forms.BindingSource>、データ ソースにバインドされます。 この例で、<xref:System.Windows.Forms.BindingSource>データベースにバインドされます。  
   
-3.  データセットとテーブルのアダプターが生成されると、ドラッグ、<xref:System.Windows.Forms.BindingNavigator>コントロールをフォームにします。  
+3. データセットとテーブルのアダプターが生成されると、ドラッグ、<xref:System.Windows.Forms.BindingNavigator>コントロールをフォームにします。  
   
-4.  設定、<xref:System.Windows.Forms.BindingNavigator>コントロールの<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>プロパティを<xref:System.Windows.Forms.BindingSource>コントロールにバインドされている形式にします。  
+4. 設定、<xref:System.Windows.Forms.BindingNavigator>コントロールの<xref:System.Windows.Forms.BindingNavigator.BindingSource%2A>プロパティを<xref:System.Windows.Forms.BindingSource>コントロールにバインドされている形式にします。  
   
-5.  
-  <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。  
+5. <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。  
   
-6.  スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
+6. スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) ため、 **BindingNavigator タスク**ダイアログが表示され選択**アイテムの編集**.  
   
      **Items コレクション エディター**が表示されます。  
   
-7.  **Items コレクション エディター**を次の手順します。  
+7. **Items コレクション エディター**を次の手順します。  
   
     1.  追加、<xref:System.Windows.Forms.ToolStripSeparator>と 3 つ<xref:System.Windows.Forms.ToolStripButton>を適切な種類の選択項目<xref:System.Windows.Forms.ToolStripItem>クリックして、**追加**ボタン。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "57722439"
   
     5.  クリックして**OK**ダイアログ ボックスを閉じます。ボタンに追加されて、<xref:System.Windows.Forms.ToolStrip>します。  
   
-8.  フォームを右クリックし **コードの表示**します。  
+8. フォームを右クリックし **コードの表示**します。  
   
 9. コード エディターでは、テーブル アダプターにデータを読み込むコードの行を見つけます。 このコードは、手順 2 でのデータ バインディングを設定するときに生成されました。 コードは、次のようになります:`TableAdapterName.Fill(DataSetName.TableName)`します。 ほとんどは、フォームのいる可能性がある<xref:System.Windows.Forms.Form.Load>イベント。  
   
@@ -111,6 +110,7 @@ ms.locfileid: "57722439"
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>メソッドのスコープは、データの行にします。 次のレコードに移動する前に個々 のレコードを表示中に加えたあらゆる変更を保存します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>

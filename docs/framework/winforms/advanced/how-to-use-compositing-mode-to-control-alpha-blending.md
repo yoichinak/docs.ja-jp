@@ -1,5 +1,5 @@
 ---
-title: '方法: アルファ ブレンドを制御する複合モードを使用して、'
+title: '方法: 複合モードを使用してアルファ ブレンドを制御する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210699"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>方法: アルファ ブレンドを制御する複合モードを使用して、
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>方法: 複合モードを使用してアルファ ブレンドを制御する
 次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。  
   
 -   色のアルファ値 255 未満であるがあります。  
@@ -54,8 +54,9 @@ ms.locfileid: "58462865"
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)

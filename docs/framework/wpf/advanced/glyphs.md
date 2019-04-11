@@ -10,21 +10,22 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193149"
 ---
 # <a name="glyphs"></a>グリフ
 グリフは、画面上に描画される文字の低レベルの表現です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用し、書式設定後のテキストを保持する必要があるお客様のグリフに直接アクセスを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [GlyphRun オブジェクトと Glyphs 要素の概要](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [方法: グリフを使用してテキストを描画します。](draw-text-using-glyphs.md)  
+  [方法: グリフを使用したテキストの描画](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>

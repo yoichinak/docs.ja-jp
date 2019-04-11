@@ -1,5 +1,5 @@
 ---
-title: '方法: ツール バー ボタンのアイコンを定義します。'
+title: '方法: ツール バー ボタンのアイコンを定義する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,26 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712748"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336508"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>方法: ツール バー ボタンのアイコンを定義します。
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>方法: ツール バー ボタンのアイコンを定義する
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  <xref:System.Windows.Forms.ToolBar> ボタンは、ユーザーがそれらに含まれるを簡単に識別のアイコンを表示できません。 これは画像を追加することによって実現、 [ImageList コンポーネント](imagelist-component-windows-forms.md)コンポーネントと関連付ける、<xref:System.Windows.Forms.ImageList>コンポーネントを<xref:System.Windows.Forms.ToolBar>コントロール。  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>ツール バー ボタンのアイコンをプログラムで設定するには  
   
-1.  プロシージャでは、インスタンス化、<xref:System.Windows.Forms.ImageList>コンポーネントと<xref:System.Windows.Forms.ToolBar>コントロール。  
+1. プロシージャでは、インスタンス化、<xref:System.Windows.Forms.ImageList>コンポーネントと<xref:System.Windows.Forms.ToolBar>コントロール。  
   
-2.  同じプロシージャ内にイメージを割り当てる、<xref:System.Windows.Forms.ImageList>コンポーネント。  
+2. 同じプロシージャ内にイメージを割り当てる、<xref:System.Windows.Forms.ImageList>コンポーネント。  
   
-3.  同じ手順で割り当てる、<xref:System.Windows.Forms.ImageList>への制御、<xref:System.Windows.Forms.ToolBar>制御し、割り当てます、<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>個々 のツール バー ボタンのプロパティ。  
+3. 同じ手順で割り当てる、<xref:System.Windows.Forms.ImageList>への制御、<xref:System.Windows.Forms.ToolBar>制御し、割り当てます、<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>個々 のツール バー ボタンのプロパティ。  
   
      イメージの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 これは、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのディレクトリが含まれていると想定できます。 また、このようにすることで、最小限のシステム アクセス レベルしか持たないユーザーもアプリケーションを安全に実行できるようになります。 次の例でフォームを前提としています、<xref:System.Windows.Forms.PictureBox>コントロールが既に追加されています。  
   
@@ -117,7 +116,8 @@ ms.locfileid: "57712748"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolBar>
-- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [方法: ツール バー ボタンのメニュー イベントをトリガーする](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar コントロール](toolbar-control-windows-forms.md)
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)

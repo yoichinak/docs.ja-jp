@@ -6,12 +6,12 @@ helpviewer_keywords:
 - image sources [WPF], drawings
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
-ms.openlocfilehash: 07659463a3fec9b962f7b4bb255ed065d544d954
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097861"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>方法: 描画をイメージ ソースとして使用する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Drawing>として、<xref:System.Windows.Controls.Image.Source%2A>の<xref:System.Windows.Controls.Image>コントロール。 表示する、<xref:System.Windows.Media.Drawing>で、<xref:System.Windows.Controls.Image>コントロールを使用して、<xref:System.Windows.Media.DrawingImage>として、<xref:System.Windows.Controls.Image>コントロールの<xref:System.Windows.Controls.Image.Source%2A>設定と、<xref:System.Windows.Media.DrawingImage>オブジェクトの<xref:System.Windows.Media.DrawingImage.Drawing%2A?displayProperty=nameWithType>プロパティを表示する描画。  
@@ -26,6 +26,7 @@ DrawingImage
  [!code-xaml[DrawingMiscSnippets_snip#DrawingImageExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingImageExample.xaml#drawingimageexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [ImageDrawing を使用してイメージを描画する](how-to-draw-an-image-using-imagedrawing.md)
 - [Drawing オブジェクトの概要](drawing-objects-overview.md)

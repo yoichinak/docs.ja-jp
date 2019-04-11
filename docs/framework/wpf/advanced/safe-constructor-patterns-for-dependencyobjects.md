@@ -6,18 +6,16 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086729"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject の安全なコンストラクター パターン
 一般的に、コンストラクターは派生クラスのコンストラクターの基底の初期化として呼び出されることがあるため、クラスのコンストラクターでは、仮想メソッドやデリゲートなどのコールバックを呼び出しません。 対象オブジェクトの初期化が不完全な状態で、仮想メソッドに入ることがあります。 ただし、プロパティ システム自体は、依存関係プロパティ システムの一部としてコールバックを呼び出し、内部的に公開します。 単純な操作で依存関係プロパティの値を設定すると<xref:System.Windows.DependencyObject.SetValue%2A>呼び出し組み込めますコールバックどこかを決定します。 このため、使用する型が基底クラスとして使われる場合に、コンストラクター本体内に依存関係プロパティ値を設定すると問題が発生する可能性があり、注意が必要です。 実装するための特定のパターンがある<xref:System.Windows.DependencyObject>コンス トラクターをここに記載されている依存関係プロパティの状態と固有のコールバックでは、特定の問題を回避できます。  
-  
- 
-  
+
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>プロパティ システムの仮想メソッド  
  計算中には、次の仮想メソッドまたはコールバックは呼び出される可能性のある、<xref:System.Windows.DependencyObject.SetValue%2A>依存関係プロパティの値を設定する呼び出し: <xref:System.Windows.ValidateValueCallback>、 <xref:System.Windows.PropertyChangedCallback>、 <xref:System.Windows.CoerceValueCallback>、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>します。 これらの仮想メソッドまたはコールバックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムと依存関係プロパティの汎用性を高めるうえで、それぞれ特定の目的を果たします。 これらの仮想メソッドを使用してプロパティ値の決定をカスタマイズする方法の詳細については、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。  
@@ -115,6 +113,7 @@ public MyClass : SomeBaseClass {
  ラッパー プロパティの設定の利便性を持たないしの値を設定するプロパティを設定する場合は、これらの同じパターンが適用されます<xref:System.Windows.DependencyObject.SetValue%2A>します。 呼び出しを<xref:System.Windows.DependencyObject.SetValue%2A>パススルーそのコンス トラクターのパラメーターは、初期化のため、クラスの既定のコンス トラクターを呼び出すも必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [依存関係プロパティのセキュリティ](dependency-property-security.md)

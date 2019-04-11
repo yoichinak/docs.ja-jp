@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842331"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304156"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型の式\<型 > はクエリ不可能
 型の式\<型 > はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートを欠落していないことを確認します。  
@@ -29,9 +29,9 @@ ms.locfileid: "58842331"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  追加、`Import`のステートメント、 <xref:System.Linq>、 <xref:System.Data.Linq>、または<xref:System.Xml.Linq>をコード ファイルの名前空間。 使用して、プロジェクトの名前空間をインポートすることも、**参照**プロジェクト デザイナーのページ (**My Project**)。  
+1. 追加、`Import`のステートメント、 <xref:System.Linq>、 <xref:System.Data.Linq>、または<xref:System.Xml.Linq>をコード ファイルの名前空間。 使用して、プロジェクトの名前空間をインポートすることも、**参照**プロジェクト デザイナーのページ (**My Project**)。  
   
-2.  クエリのソースはクエリ可能型を指定した型を確認します。 実装する型は、<xref:System.Collections.Generic.IEnumerable%601>または<xref:System.Linq.IQueryable%601>します。  
+2. クエリのソースはクエリ可能型を指定した型を確認します。 実装する型は、<xref:System.Collections.Generic.IEnumerable%601>または<xref:System.Linq.IQueryable%601>します。  
   
 ## <a name="see-also"></a>関連項目
 

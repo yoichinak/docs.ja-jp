@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308485"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>プロジェクト レベル インポートで指定された Namespace または型\<qualifiedelementname >' のパブリック メンバーを含んでいないか、見つかりません
 プロジェクト レベル インポートで指定された Namespace または型\<qualifiedelementname >' のパブリック メンバーを含んでいないか、見つかりません。 確認して、名前空間または型が定義されているし、少なくとも 1 つのパブリック メンバーが含まれています。 エイリアス名には他のエイリアスが含まれていないことを確認します。  
@@ -31,11 +31,11 @@ ms.locfileid: "58816820"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  開く、**プロジェクト デザイナー**に切り替えると、**参照**ページ。  
+1. 開く、**プロジェクト デザイナー**に切り替えると、**参照**ページ。  
   
-2.  **インポートされた名前空間**セクションで、コンテナーの要素がプロジェクトからアクセスできることを確認します。  
+2. **インポートされた名前空間**セクションで、コンテナーの要素がプロジェクトからアクセスできることを確認します。  
   
-3.  コンテナーの要素が少なくとも 1 つを公開していることを確認します。`Public`メンバー。  
+3. コンテナーの要素が少なくとも 1 つを公開していることを確認します。`Public`メンバー。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -43,4 +43,4 @@ ms.locfileid: "58816820"
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

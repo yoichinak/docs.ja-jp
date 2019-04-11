@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 3b9e8835c50ea6c1795fc33aa46bac51cd77defc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230630"
 ---
 # <a name="defining-primary-keys"></a>主キーの定義
 通常、データベース テーブルには、テーブル内の各行を一意に識別する単一の列または複数の列があります。 行を識別するこのような列を、主キーと呼びます。  
@@ -66,6 +66,7 @@ workTable.PrimaryKey = keyColumn;
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataTable>
 - [DataTable スキーマの定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
