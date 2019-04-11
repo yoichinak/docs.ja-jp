@@ -9,18 +9,18 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 8ec59ef316bfa19046082a8ee0a4052c69d5c323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092281"
 ---
 # <a name="administration-and-diagnostics"></a>管理と診断
 Windows Communication Foundation (WCF) は、アプリケーションのライフ サイクルのさまざまな段階を監視するのに役立つ機能の豊富なセットを提供します。 たとえば、展開時に構成を使用してサービスとクライアントを設定できます。 WCF には、多数アプリケーションのパフォーマンスの測定に役立つパフォーマンス カウンターにはが含まれています。 WCF には、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データも公開します。 アプリケーションにエラーが発生したり、適切に動作しなくなったりした場合は、イベント ログを使用して、何か重大なことが発生していないかを確認できます。 メッセージ ログとトレースを使用して、アプリケーションでどのようなイベントが発生しているのかをエンドツーエンドで確認することもできます。 これらの機能は、開発者や IT プロフェッショナルの両方が正しく動作しない場合、WCF アプリケーションのトラブルシューティングに役立ちます。  
   
 > [!NOTE]
->  有効にした具体的な詳細情報のないエラーが発生した場合、`includeExceptionDetailInFaults`の属性、 [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)構成要素。 これより高度な診断を必要とせず、多くの一般的な問題を検出することができます WCF クライアントに例外の詳細を送信するように指示します。 詳細については、[Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。  
+>  有効にした具体的な詳細情報のないエラーが発生した場合、`includeExceptionDetailInFaults`の属性、 [ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)構成要素。 これより高度な診断を必要とせず、多くの一般的な問題を検出することができます WCF クライアントに例外の詳細を送信するように指示します。 詳細については、次を参照してください。 [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  
   
 ## <a name="diagnostics-features-provided-by-wcf"></a>WCF に用意された診断機能  
  WCF には、次の診断機能が用意されています。  
@@ -37,9 +37,10 @@ Windows Communication Foundation (WCF) は、アプリケーションのライ�
   
 -   WMI を使用すると、コンピューター上でリッスン中のサービスと使用しているバインディングを確認できます。 詳細については、次を参照してください。、[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)トピック。  
   
- WCF には、作成、展開、および WCF アプリケーションの管理を容易にいくつかの GUI とコマンド ライン ツールも用意されています。 詳細については、[Windows Communication Foundation ツール](../../../../docs/framework/wcf/tools.md)を参照してください。 たとえば、使用することができます、[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)を作成して XML を直接編集する代わりに、ウィザードを使用して WCF 構成設定を編集します。 使用することも、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を表示、グループ、および診断できるように、トレース メッセージをフィルター処理、修復、および WCF サービスで問題を確認します。  
+ WCF には、作成、展開、および WCF アプリケーションの管理を容易にいくつかの GUI とコマンド ライン ツールも用意されています。 詳細については、次を参照してください。 [Windows Communication Foundation ツール](../../../../docs/framework/wcf/tools.md)します。 たとえば、使用することができます、[構成エディター ツール (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)を作成して XML を直接編集する代わりに、ウィザードを使用して WCF 構成設定を編集します。 使用することも、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を表示、グループ、および診断できるように、トレース メッセージをフィルター処理、修復、および WCF サービスで問題を確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーションの構成](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [サービスの配置](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [例外リファレンス](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
@@ -50,5 +51,5 @@ Windows Communication Foundation (WCF) は、アプリケーションのライ�
 - [ServiceModel 登録ツール](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [トレース](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [診断用の WMI (Windows Management Instrumentation) の使用](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
-- [パフォーマンス カウンター](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+- [[パフォーマンス カウンター]](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation ツール](../../../../docs/framework/wcf/tools.md)

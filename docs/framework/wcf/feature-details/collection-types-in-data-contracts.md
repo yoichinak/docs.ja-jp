@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106744"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
 *"コレクション"* は、特定の型の項目のリストです。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]では、このようなリストは、配列や他のさまざまな型を使用して表すことができます (ジェネリック List、ジェネリック <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>、または <xref:System.Collections.ArrayList>)。 たとえば、コレクションでは指定された顧客のアドレスのリストを保持できます。 これらのコレクションは、実際の型に関係なく、 *リスト コレクション*と呼びます。  
@@ -27,7 +27,7 @@ ms.locfileid: "54516132"
   
  `Add` というメソッドと既定のコンストラクターを持つなど、コレクション型のその他の要件については、以降のセクションで詳しく説明します。 これにより、コレクション型を確実にシリアル化および逆シリアル化できます。 これは、直接サポートされないコレクションもあることを意味します。たとえば、ジェネリック <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (既定のコンストラクターを持たないため) などは直接サポートされません。 これらの制限を回避する方法については、このトピックで後述する「コレクション インターフェイス型と読み取り専用コレクションの使用」を参照してください。  
   
- コレクションに含まれる型は、データ コントラクト型である必要があります。それ以外の場合は、シリアル化可能な型であることが必要です。 詳細については、[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)を参照してください。  
+ コレクションに含まれる型は、データ コントラクト型である必要があります。それ以外の場合は、シリアル化可能な型であることが必要です。 詳細については、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。  
   
  概要と、有効なコレクションとは見なされませんについて、およびコレクションをシリアル化する方法についての詳細については、このトピックの「コレクションの高度な規則」セクションではコレクションのシリアル化に関する情報を参照してください。  
   
@@ -273,7 +273,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|非ジェネリック|`MyType : IList`<br /><br /> または<br /><br /> `MyType<T> : IList`<br /><br /> ここでは、T= `int`|`Object` のクローズ ジェネリック (例 : `IList<object>`)|  
 |非ジェネリックまたはクローズ ジェネリック (コレクション型と必ずしも一致するわけではない任意の数のパラメーター)|クローズ ジェネリック|`MyType : IList<string>`<br /><br /> または<br /><br /> `MyType<T> : IList<string>` ここでは、T=`int`|クローズ ジェネリック (例 : `IList<string>`)|  
-|任意の数のパラメーターを持つクローズ ジェネリック|型のパラメーターのいずれかを使用するオープン ジェネリック|`MyType<T,U,V> : IList<U>`<br /><br /> ここでは、T=`int`、U=`string`、V=`bool`|クローズ ジェネリック (例 : `IList<string>`)|  
+|任意の数のパラメーターを持つクローズ ジェネリック|型のパラメーターのいずれかを使用するオープン ジェネリック|`MyType<T,U,V> : IList<U>`<br /><br /> 位置 T =`int`、U =`string`V =`bool`|クローズ ジェネリック (例 : `IList<string>`)|  
 |パラメーターを 1 つ持つオープン ジェネリック|型のパラメーターを使用するオープン ジェネリック|`MyType<T> : IList<T>`、T はオープン|オープン ジェネリック (例 : `IList<T>`)|  
   
  型が複数のリスト コレクション インターフェイスを実装している場合、以下の制限が適用されます。  
@@ -287,10 +287,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |参照される型|参照される型で実装されるインターフェイス|例|型の処理|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> または<br /><br /> `MyType<T> : IDictionary` ここでは、T=`int`|クローズ ジェネリック `IDictionary<object,object>`|  
-|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>、クローズ|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` ここでは、T=`int`、U=`float`、V=`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` ここでは、T=`int`、U=`bool`、V=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
-|オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K と V は共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>を閉じる|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` 位置 T =`int`、U =`float`V =`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` 位置 T =`int`、U =`bool`V =`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
+|オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K および V 共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|  
   
  型が <xref:System.Collections.IDictionary> とジェネリック <xref:System.Collections.Generic.IDictionary%602>の両方を実装している場合、ジェネリック <xref:System.Collections.Generic.IDictionary%602> だけが考慮されます。  
   
@@ -327,7 +327,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |ジェネリック <xref:System.Collections.Generic.ICollection%601>|列挙子|ジェネリック Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> インデクサー|`Add`|  
 |ジェネリック <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|適切な型 (ジェネリック パラメーターの型、またはその基本型のいずれか) のパラメーターを 1 つ受け取る `Add` という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
-|<xref:System.Collections.IEnumerable> (およびこのインターフェイスから派生した <xref:System.Collections.ICollection>)|`GetEnumerator`|`Add` 型のパラメーターを 1 つ受け取る `Object`という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
+|<xref:System.Collections.IEnumerable> (つまり<xref:System.Collections.ICollection>、そこから派生する)|`GetEnumerator`|`Add` 型のパラメーターを 1 つ受け取る `Object`という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
   
  前の表に示すコレクション インターフェイスは、優先度の高いものから順に並べられています。 たとえば、型が <xref:System.Collections.IList> とジェネリック <xref:System.Collections.Generic.IEnumerable%601>の両方を実装している場合、 <xref:System.Collections.IList> の規則に従って、コレクションがシリアル化および逆シリアル化されます。  
   
@@ -348,7 +348,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Name を使用してオーバーライドしていない場合、リスト コレクション データ コントラクトの既定の名前は、文字列 "ArrayOf" とコレクションに含まれる型のデータ コントラクト名を組み合わせたものです。 たとえば、Integers のジェネリック List のデータ コントラクト名は "ArrayOfint" です。 `Object` のデータ コントラクト名は "anyType" であることに留意してください。したがって、 <xref:System.Collections.ArrayList> のような非ジェネリック リストのデータ コントラクト名は、"ArrayOfanyType" になります。  
   
- `Name`を使用してオーバーライドしていない場合、ディクショナリ コレクション データ コントラクトの既定の名前は、文字列 "ArrayOfKeyValueOf"、キーの型のデータ コントラクト名、および値の型のデータ コントラクト名をこの順番で組み合わせたものです。 たとえば、String と Integer のジェネリック ディクショナリのデータ コントラクト名は、"ArrayOfKeyValueOfstringint" になります。 また、キーの型と値の型がいずれもプリミティブ型ではない場合は、キーおよび値の型のデータ コントラクト名前空間の名前空間ハッシュが名前に付加されます。 名前空間ハッシュの詳細については、[Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)を参照してください。  
+ `Name`を使用してオーバーライドしていない場合、ディクショナリ コレクション データ コントラクトの既定の名前は、文字列 "ArrayOfKeyValueOf"、キーの型のデータ コントラクト名、および値の型のデータ コントラクト名をこの順番で組み合わせたものです。 たとえば、String と Integer のジェネリック ディクショナリのデータ コントラクト名は、"ArrayOfKeyValueOfstringint" になります。 また、キーの型と値の型がいずれもプリミティブ型ではない場合は、キーおよび値の型のデータ コントラクト名前空間の名前空間ハッシュが名前に付加されます。 名前空間ハッシュの詳細については、次を参照してください。 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)します。  
   
  各ディクショナリ コレクション データ コントラクトには、ディクショナリの 1 エントリを表すコンパニオン データ コントラクトが存在します。 コンパニオン データ コントラクトの名前は、"ArrayOf" プレフィックスを除いたディクショナリ データ コントラクトの名前と同じです。また、名前空間は、ディクショナリ データ コントラクトの名前空間と同じです。 たとえば、"ArrayOfKeyValueOfstringint" ディクショナリ データ コントラクトの場合、"KeyValueofstringint" データ コントラクトがディクショナリの 1 エントリを表します。 次のセクションで説明するように、このデータ コントラクトの名前は、 `ItemName` プロパティを使用してカスタマイズできます。  
   
@@ -396,4 +396,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
  シリアライザーがオブジェクト参照を保存するモードで機能している場合、オブジェクト参照の保存はコレクションにも適用されます。 具体的には、コレクション全体と、コレクションに含まれる個々の項目の両方のオブジェクト ID が保存されます。 ディクショナリの場合、キーと値のペア オブジェクトと、個々のキー オブジェクトおよび値オブジェクトのオブジェクト ID が保存されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

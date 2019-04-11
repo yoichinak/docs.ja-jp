@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212454"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics オブジェクトの状態の管理
 <xref:System.Drawing.Graphics>クラスは、の中核[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。 取得するものを描画する、<xref:System.Drawing.Graphics>オブジェクトでそのプロパティを設定し、そのメソッドを呼び出す<xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawImage%2A>、<xref:System.Drawing.Graphics.DrawString%2A>など)。  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>変換  
- A<xref:System.Drawing.Graphics>オブジェクトをで描画されるすべての項目に適用される 2 つの変換 (世界と ページ) を保持する<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換では、任意のアフィン変換を格納できます。 アフィン変換には、拡大縮小、回転、反転、傾斜、および変換が含まれます。 スケーリングの単位 (たとえば、インチをピクセル単位) を変更して、ページの変換を使用できます。 詳細については、[座標系と変換](coordinate-systems-and-transformations.md)を参照してください。  
+ A<xref:System.Drawing.Graphics>オブジェクトをで描画されるすべての項目に適用される 2 つの変換 (世界と ページ) を保持する<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換では、任意のアフィン変換を格納できます。 アフィン変換には、拡大縮小、回転、反転、傾斜、および変換が含まれます。 スケーリングの単位 (たとえば、インチをピクセル単位) を変更して、ページの変換を使用できます。 詳細については、次を参照してください。[座標系と変換](coordinate-systems-and-transformations.md)します。  
   
  次の例の世界とページの変換の設定、<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換は、30 度回転に設定されます。 ページの変換を設定すると、2 番目の座標が渡されるように<xref:System.Drawing.Graphics.DrawEllipse%2A>ピクセルではなくミリメートル単位として扱われます。 コードは、同じ 2 つの呼び出し、<xref:System.Drawing.Graphics.DrawEllipse%2A>メソッド。 ワールド変換は、最初に適用される<xref:System.Drawing.Graphics.DrawEllipse%2A>、2 つ目に呼び出し、および (世界と ページ) の両方の変換が適用<xref:System.Drawing.Graphics.DrawEllipse%2A>呼び出します。  
   
@@ -151,5 +151,6 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
  ![制限されたクリップ領域を示す図。](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [入れ子になっているグラフィックス コンテナーの使用](using-nested-graphics-containers.md)

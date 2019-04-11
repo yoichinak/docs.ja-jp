@@ -2,12 +2,12 @@
 title: Entity SQL クイック リファレンス
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207072"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL クイック リファレンス
 このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリのクイック リファレンスを提供します。 このトピック内のクエリは、AdventureWorks Sales model に基づいています。  
@@ -27,7 +27,7 @@ ms.locfileid: "54539404"
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |hello|  
   
@@ -44,11 +44,11 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>整数  
+### <a name="integer"></a>整数型  
  整数リテラルには Int32 (123) 型、UInt32 (123U) 型、Int64 (123L) 型、および UInt64 (123UL) 型があります。  
   
  例:  
@@ -60,7 +60,7 @@ DATETIME '2006-12-25 01:01'
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -252,7 +252,7 @@ using SqlServer; LOWER('AA');
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |aa|  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE AND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 暗黙の行の構築をスキップする SELECT VALUE 句を提供します。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
   
  例:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、任意の行を構築するための行コンストラクターも用意されています。 SELECT は、投影内の 1 つまたは複数の要素、および `SELECT a, b, c` などのフィールドを持つデータ レコードの結果を取得します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] また、任意の行を構築する行コンス トラクターを提供します。 SELECT は、投影内の 1 つまたは複数の要素、および `SELECT a, b, c` などのフィールドを持つデータ レコードの結果を取得します。  
   
  例:  
   
@@ -358,10 +358,11 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Output:  
   
-|値|  
+|[値]|  
 |-----------|  
 |true|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

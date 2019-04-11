@@ -2,12 +2,12 @@
 title: 部分信頼のベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184081"
 ---
 # <a name="partial-trust-best-practices"></a>部分信頼のベスト プラクティス
 このトピックでは、部分信頼環境で Windows Communication Foundation (WCF) を実行する場合のベスト プラクティスについて説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "54640109"
   
 -   `OnSerializing`、`OnSerialized`、`OnDeserializing`、`OnDeserialized` などのシリアル化イベントを処理するメソッドは、パブリックとして宣言する必要があります。 ただし、明示的および暗黙的な <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> の実装は、いずれもサポートされています。  
   
--   `[DataContract]` は、逆シリアル化の間に新しくインスタンス化されたオブジェクトのコンストラクターを呼び出さないため、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> でマークされて、アセンブリで実装された <xref:System.Runtime.Serialization.DataContractSerializer> 型は、型コンストラクターでセキュリティ関連の操作を実行することはできません。 特に、`[DataContract]` 型では、次の一般的なセキュリティ手法の使用を避ける必要があります。  
+-   `[DataContract]` マークされたアセンブリで実装された型、<xref:System.Security.AllowPartiallyTrustedCallersAttribute>として型コンス トラクターでセキュリティ関連の操作を実行する必要がありますいない、<xref:System.Runtime.Serialization.DataContractSerializer>逆シリアル化中に、新しくインスタンス化されたオブジェクトのコンス トラクターを呼び出しません。 特に、`[DataContract]` 型では、次の一般的なセキュリティ手法の使用を避ける必要があります。  
   
 -   型のコンストラクターを内部またはプライベートにすることにより、部分信頼アクセスを制限する。  
   
@@ -66,5 +66,6 @@ ms.locfileid: "54640109"
  <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A>、または <xref:System.Security.PermissionSet.Deny%2A> を呼び出すことにより、スレッド固有のアクセス許可コンテキストを作成しないことをお勧めします。 代わりに、<xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A>、または <xref:System.Security.PermissionSet.PermitOnly%2A> が不要となるように、アプリケーション自体に特権を付与するか、特権を拒否します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

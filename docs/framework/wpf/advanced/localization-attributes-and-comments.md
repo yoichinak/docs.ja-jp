@@ -5,29 +5,27 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301855"
 ---
 # <a name="localization-attributes-and-comments"></a>ローカリゼーション属性とコメント
-[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コード内部の [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントはプロパティで、ローカライズのルールとヒントを提供するために開発者によって提供されます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントには、ローカライズ可否属性と自由形式のローカリゼーション コメントの 2 つの情報が含まれます。 ローカライズ可否属性は、ローカライズするリソースを示すために [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカリゼーション API によって使用されます。 自由形式のコメントは、アプリケーションの作成者が含めたい任意の情報です。  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメント内のプロパティは、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]ソース コード、ローカライズのルールとヒントを提供する開発者によって提供されます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 2 つの情報を含むローカリゼーション コメント: ローカライズ可否属性と自由形式のローカリゼーション コメント。 ローカライズ可否属性は、ローカライズするリソースを示すために [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカリゼーション API によって使用されます。 自由形式のコメントは、アプリケーションの作成者が含めたい任意の情報です。  
 
-  
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>ローカリゼーション コメント  
  マークアップ アプリケーションの作成者が、テキストの長さ、フォント ファミリ、またはフォント サイズの制約など、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] に特定の要素の要件がある場合は、この情報を [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] コードのコメントによりローカライザーに伝達できます。 ソース コードにコメントを追加する手順は次のとおりです。  
   
-1.  アプリケーション開発者がローカリゼーション コメントを [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コードに追加します。  
+1. アプリケーション開発者がローカリゼーション コメントを [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コードに追加します。  
   
-2.  ビルド プロセス中に、.proj ファイル内でアセンブリ内に自由形式のローカリゼーション コメントを残すかどうか、コメントの一部を取り除くか、またはすべてのコメントを取り除くかのいずれかを指定できます。 取り除かれたコメントは、別のファイルに配置されます。 次のような `LocalizationDirectivesToLocFile` タグを使用して、オプションを指定します。  
+2. ビルド プロセス中に、.proj ファイル内でアセンブリ内に自由形式のローカリゼーション コメントを残すかどうか、コメントの一部を取り除くか、またはすべてのコメントを取り除くかのいずれかを指定できます。 取り除かれたコメントは、別のファイルに配置されます。 次のような `LocalizationDirectivesToLocFile` タグを使用して、オプションを指定します。  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *値* `</LocalizationDirectivesToLocFile>`  
   
-3.  割り当てることのできる値は次のとおりです。  
+3. 割り当てることのできる値は次のとおりです。  
   
     -   **None** - コメントと属性の両方がアセンブリ内に残り、別のファイルは生成されません。  
   
@@ -35,9 +33,9 @@ ms.locfileid: "57377101"
   
     -   **All** - コメントと属性の両方をアセンブリから取り除き、両方とも別の 1 つの LocFile に配置します。  
   
-4.  ローカライズ可能なリソースが [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] から抽出されると、ローカライズ可否属性が [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] ローカリゼーション API によって使用されます。  
+4. ローカライズ可能なリソースが [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] から抽出されると、ローカライズ可否属性が [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] ローカリゼーション API によって使用されます。  
   
-5.  自由形式のコメントのみを含むローカリゼーション コメント ファイルは、後でローカライズ プロセスに組み込まれます。  
+5. 自由形式のコメントのみを含むローカリゼーション コメント ファイルは、後でローカライズ プロセスに組み込まれます。  
   
  次の例では、ローカリゼーション コメントを [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ファイルに追加する方法を示しています。  
   
@@ -88,7 +86,7 @@ ms.locfileid: "57377101"
   
  次の表に、特殊なカテゴリの意味を示します。  
   
-|Category|説明|  
+|カテゴリ|説明|  
 |--------------|-------------|  
 |なし|ターゲット値に定義済みのカテゴリがありません。|  
 |継承|ターゲット値は、その親からそのカテゴリを継承します。|  
@@ -100,6 +98,7 @@ ms.locfileid: "57377101"
  Localization.Comments には、ターゲットの値に関する自由形式の文字列が含まれます。 アプリケーション開発者は、アプリケーションのテキストを変換する方法についてのヒントをローカライザーに提供するための情報を追加できます。 コメントの形式は、"()" で囲まれた任意の文字列で指定できます。 文字をエスケープするには、'\\' を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のグローバリゼーション](globalization-for-wpf.md)
 - [自動レイアウトを使用してボタンを作成する](how-to-use-automatic-layout-to-create-a-button.md)
 - [自動レイアウト用のグリッドを使用する](how-to-use-a-grid-for-automatic-layout.md)

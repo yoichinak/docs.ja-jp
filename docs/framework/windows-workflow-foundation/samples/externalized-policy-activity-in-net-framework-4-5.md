@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 の外部化されたポリシー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338281"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 の外部化されたポリシー アクティビティ
 
@@ -56,8 +56,7 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 と ExternalPolicy4
 
-ポリシー アクティビティを作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行できます。 
-  <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
+ポリシー アクティビティを作成して、WF 4.5 ワークフローでの .NET Framework 3.5 RuleSet を実行できます。 <xref:System.Workflow.Activities.Rules.RuleSet> は、Policy4 アクティビティの XAML 定義でインラインでシリアル化されます。 ExternalizedPolicy4 サンプルでは、既存の外部 <xref:System.Workflow.Activities.Rules.RuleSet> (.rules ファイル内に格納) を使用する方法を示します。
 
 ## <a name="use-this-sample"></a>このサンプルを使用します。
 
@@ -67,21 +66,21 @@ ExternalizedPolicy4 デザイナーを使用すると、コードを記述せず
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>ImperativeCodeClientSample アプリケーションを実行します。
 
-1.  Visual Studio を使用してを開く、 *Policy4sample.sln*ソリューション ファイル。
+1. Visual Studio を使用してを開く、 *Policy4sample.sln*ソリューション ファイル。
 
-2.  **ソリューション エクスプ ローラー**を右クリックし、 **ImperativeCodeClientSample**プロジェクト選び**スタートアップ プロジェクトとして設定**します。
+2. **ソリューション エクスプ ローラー**を右クリックし、 **ImperativeCodeClientSample**プロジェクト選び**スタートアップ プロジェクトとして設定**します。
 
-3.  プロジェクトを実行するには、キーを押して**Ctrl**+**f5 キーを押して**します。
+3. プロジェクトを実行するには、キーを押して**Ctrl**+**f5 キーを押して**します。
 
 ### <a name="run-the-designerclientsample-application"></a>DesignerClientSample アプリケーションを実行します。
 
-1.  Visual Studio を使用してを開く、 *Policy4sample.sln*ソリューション ファイル。
+1. Visual Studio を使用してを開く、 *Policy4sample.sln*ソリューション ファイル。
 
-2.  **ソリューション エクスプ ローラー**を右クリックし、 **DesignerClientSample**プロジェクト選び**スタートアップ プロジェクトとして設定**します。
+2. **ソリューション エクスプ ローラー**を右クリックし、 **DesignerClientSample**プロジェクト選び**スタートアップ プロジェクトとして設定**します。
 
-3.  キーを押して**Ctrl**+**Shift**+**B**プロジェクトをコンパイルします。
+3. キーを押して**Ctrl**+**Shift**+**B**プロジェクトをコンパイルします。
 
-4.  キーを押して**Ctrl**+**F5**プロジェクトを実行します。
+4. キーを押して**Ctrl**+**F5**プロジェクトを実行します。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。

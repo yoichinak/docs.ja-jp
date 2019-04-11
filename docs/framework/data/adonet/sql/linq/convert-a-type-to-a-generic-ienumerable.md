@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d1f4c1c4a561c893b5846e6ae0b08b2d78c3589d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190380"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>汎用 IEnumerable への型の変換
-汎用 `IEnumerable` として型指定された引数を返すには、<xref:System.Linq.Enumerable.AsEnumerable%2A> を使用します。  
+汎用 <xref:System.Linq.Enumerable.AsEnumerable%2A> として型指定された引数を返すには、`IEnumerable` を使用します。  
   
 ## <a name="example"></a>例  
  この例では、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (既定の汎用 `Query` を使用) は、クエリを SQL に変換し、サーバー上での実行を試みます。 しかし、`where` 句が、SQL に変換できない、ユーザー定義のクライアント側メソッド (`isValidProduct`) を参照しています。  
@@ -24,4 +24,5 @@ ms.locfileid: "54509598"
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

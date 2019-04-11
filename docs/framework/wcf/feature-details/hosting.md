@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209113"
 ---
 # <a name="hosting"></a>ホスト
 このセクションのトピックでは、サービス ホスティングについて説明します。 インターネット インフォメーション サービス (IIS)、Windows プロセス アクティブ化サービス (WAS)、Windows Server AppFabric、Windows サービス、またはマネージ アプリケーションによっては、サービスをホストされていることができます: このオプションとして呼ば*自己ホスト*します。  
@@ -34,5 +34,6 @@ ms.locfileid: "54503011"
  1 つの Web サイト上で同じ URI スキームを使用してサービスの複数のベース アドレスを指定する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
 - [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089303"
 ---
 # <a name="types-of-coordinate-systems"></a>座標系の種類
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の 3 つの座標空間を使用して: 世界、ページ、およびデバイス。 ワールド座標は特定のグラフィック ワールドをモデル化するために使用する座標は、.NET Framework のメソッドに渡す座標です。 ページ座標は、フォームやコントロールなどの描画サーフェイスで使用される座標系を参照してください。 デバイス座標は、画面や紙など、描画されている物理デバイスで使用される座標です。 呼び出しを行うとき`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`、ポイントに渡す、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド:`(0, 0)`と`(160, 80)`: ワールド座標空間では。 前に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]画面に、直線を描画することができます、座標変換のシーケンスを通過します。 ワールド変換と呼ばれる 1 つの変換は、ページ座標にワールド座標を変換し、ページの変換と呼ばれる別の変換は、ページ座標をデバイス座標に変換します。  
@@ -38,7 +38,7 @@ ms.locfileid: "57715856"
   
 |||  
 |-|-|  
-|世界|(0, 0) に (160, 80)|  
+|World|(0, 0) に (160, 80)|  
 |ページ|(100, 50) を (260、130)|  
 |デバイス|(100, 50) を (260、130)|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57715856"
   
 |||  
 |-|-|  
-|世界|(0, 0) に (2, 1)|  
+|World|(0, 0) に (2, 1)|  
 |ページ|(0, 0) に (2, 1)|  
 |デバイス|(0, 0, に (192, 96)|  
   
@@ -90,10 +90,11 @@ ms.locfileid: "57715856"
   
 |||  
 |-|-|  
-|世界|(0, 0) に (2, 1)|  
+|World|(0, 0) に (2, 1)|  
 |ページ|(2, 0.5) に (4, 1.5)|  
 |デバイス|(192, 48) に (384、144)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [座標系と変換](coordinate-systems-and-transformations.md)
 - [変換の行列表現](matrix-representation-of-transformations.md)

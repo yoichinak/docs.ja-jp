@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164360"
 ---
 # <a name="client"></a>\<client>
 `client` 要素は、クライアントが接続可能なエンドポイントの一覧を定義します。  
@@ -42,7 +42,7 @@ ms.locfileid: "55280905"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|このクライアントが接続可能なエンドポイントを指定するエンドポイント要素のコレクションを含みます。|  
-|[\<metadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|メタデータを処理するための設定を含みます。|  
+|[\<matadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|メタデータを処理するための設定を含みます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -73,6 +73,7 @@ ms.locfileid: "55280905"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - [WCF クライアントの構成](../../../../../docs/framework/wcf/feature-details/client-configuration.md)

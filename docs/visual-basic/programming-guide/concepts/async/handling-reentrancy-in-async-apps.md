@@ -2,12 +2,12 @@
 title: (Visual Basic) の非同期アプリにおける再入の処理
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324787"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) の非同期アプリにおける再入の処理
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。  
@@ -132,11 +132,11 @@ End Sub
 ### <a name="BKMK_CancelAndRestart"></a>操作を取り消して再開する  
  **[Start]** ボタンを無効にせず、有効の状態を保持できますが、ユーザーがボタンを再度クリックしたときに、実行中の処理を取り消し、最後に開始された処理を続行できます。  
   
- キャンセルの詳細については、[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)を参照してください。  
+ キャンセルの詳細については、次を参照してください。[非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)します。  
   
  このシナリオを設定するには、「[例のアプリをレビューして実行する](#BKMD_SettingUpTheExample)」に用意されている基本コードを次のように変更します。 また、完成したアプリを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。 このプロジェクトの名前は CancelAndRestart です。  
   
-1.  すべてのメソッドのスコープである <xref:System.Threading.CancellationTokenSource> 変数、`cts` を宣言します。  
+1. すべてのメソッドのスコープである <xref:System.Threading.CancellationTokenSource> 変数、`cts` を宣言します。  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 場合の値`cts`は`Nothing`操作は既にアクティブです。 値がない場合`Nothing`、既に実行されている操作が取り消されました。  
+2. `StartButton_Click` で、処理が既に実行されているかどうかを確認します。 場合の値`cts`は`Nothing`操作は既にアクティブです。 値がない場合`Nothing`、既に実行されている操作が取り消されました。  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  `cts` に、現在のプロセスを表す別の値を設定します。  
+3. `cts` に、現在のプロセスを表す別の値を設定します。  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  末尾に`StartButton_Click`、現在のプロセスが完了したら、設定の値`cts`に`Nothing`します。  
+4. 末尾に`StartButton_Click`、現在のプロセスが完了したら、設定の値`cts`に`Nothing`します。  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync メソッド  
  この例では、`AccessTheWebAsync` を 2 つのメソッドに分割します。 最初のメソッド、`AccessTheWebAsync` は、グループのすべてのダウンロード タスクを開始し、`pendingWork` を設定して表示プロセスを制御します。 このメソッドは、統合言語クエリ (LINQ クエリ) と <xref:System.Linq.Enumerable.ToArray%2A> を使用して、すべてのダウンロードを同時に開始します。  
   
- その後、`AccessTheWebAsync` は、`FinishOneGroupAsync` を呼び出して各ダウンロードが完了するまで待機し、その長さを表示します。  
+ `AccessTheWebAsync` 呼び出して`FinishOneGroupAsync`各ダウンロードの完了を待機し、その長さを表示します。  
   
- `FinishOneGroupAsync` は、`pendingWork` の `AccessTheWebAsync` に割り当てられたタスクを返します。 この値は、タスクが完了する前に、別の操作によって操作が中断されないようにします。  
+ `FinishOneGroupAsync` 割り当てられているタスクを返します`pendingWork`で`AccessTheWebAsync`します。 この値は、タスクが完了する前に、別の操作によって操作が中断されないようにします。  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a>アプリをダウンロードする  
   
-1.  圧縮ファイルを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。  
+1. 圧縮ファイルを「[Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)」 (非同期の例: .NET デスクトップ アプリでの再入) からダウンロードします。  
   
-2.  ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
+2. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
   
-3.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
+3. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-4.  圧縮解除したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開きます。  
+4. 圧縮解除したサンプル コードが含まれるフォルダーに移動し、ソリューション (.sln) ファイルを開きます。  
   
-5.  **ソリューション エクスプローラー**で、実行するプロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** を選択します。  
+5. **ソリューション エクスプローラー**で、実行するプロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** を選択します。  
   
-6.  Ctrl キーを押しながら F5 キーを押してプロジェクトをビルドし、実行します。  
+6. Ctrl キーを押しながら F5 キーを押してプロジェクトをビルドし、実行します。  
   
 ### <a name="BKMK_BuildingTheApp"></a>アプリケーションをビルドする  
  次のセクションでは、WPF アプリとして例をビルドするコードを示します。  
   
 ##### <a name="to-build-a-wpf-app"></a>WPF アプリをビルドするには  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+2. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **インストールされたテンプレート**ウィンドウで、展開**Visual Basic**、順に展開**Windows**します。  
+3. **インストールされたテンプレート**ウィンドウで、展開**Visual Basic**、順に展開**Windows**します。  
   
-4.  プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。  
+4. プロジェクトの種類の一覧の **[WPF アプリケーション]** をクリックします。  
   
-5.  プロジェクトに `WebsiteDownloadWPF` という名前を付けて **[OK]** をクリックします。  
+5. プロジェクトに `WebsiteDownloadWPF` という名前を付けて **[OK]** をクリックします。  
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-6.  Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
+6. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
   
      タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、**[コードの表示]** を選択します。  
   
-7.  MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。  
+7. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      テキスト ボックスとボタンを含む簡単なウィンドウが、MainWindow.xaml の**デザイン** ビューに表示されます。  
   
-8.  <xref:System.Net.Http> への参照を追加します。  
+8. <xref:System.Net.Http> への参照を追加します。  
   
 9. **ソリューション エクスプ ローラー**MainWindow.xaml.vb のショートカット メニューを開き、選択し、**コードの表示**します。  
   

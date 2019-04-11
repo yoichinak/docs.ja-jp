@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316272"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: (Visual Basic) パターンとの比較の文字列と一致します。
 式かどうかを検索する場合、[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)を使用して、パターンを満たす、 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
@@ -29,7 +29,7 @@ ms.locfileid: "58826016"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>特定の文字の文字列式での文字と一致するには  
   
--   特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、[Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)を参照してください。  
+-   特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、次を参照してください。 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
   
      次の例をテストするかどうか`myString`1 文字だけで構成されます`H`します。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "58826016"
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>文字または文字の一覧に対して、文字列式での文字と一致するには  
   
-1.  呼び出す、`Like`演算子を 2 回に同じ文字列式、および 2 つの呼び出しのいずれかで接続、[または演算子](../../../../visual-basic/language-reference/operators/or-operator.md)または[OrElse 演算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)します。  
+1. 呼び出す、`Like`演算子を 2 回に同じ文字列式、および 2 つの呼び出しのいずれかで接続、[または演算子](../../../../visual-basic/language-reference/operators/or-operator.md)または[OrElse 演算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)します。  
   
-2.  最初のパターン文字列に`Like`句では、角かっこで囲まれた、文字の一覧が含まれます (`[ ]`)。  
+2. 最初のパターン文字列に`Like`句では、角かっこで囲まれた、文字の一覧が含まれます (`[ ]`)。  
   
-3.  2 つ目のパターン文字列内`Like`句では、配置しない任意の文字位置にある問題です。  
+3. 2 つ目のパターン文字列内`Like`句では、配置しない任意の文字位置にある問題です。  
   
      次の例は、7 桁の電話番号をテスト`phoneNum`の 3 桁の数字の後にスペース、ハイフン (`–`)、ピリオド (`.`)、または文字、後ろにないに 4 桁の数値。  
   
@@ -83,4 +83,4 @@ ms.locfileid: "58826016"
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [演算子および式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [文字列型 (String)](../../../../visual-basic/language-reference/data-types/string-data-type.md)

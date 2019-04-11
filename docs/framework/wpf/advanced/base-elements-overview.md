@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110059"
 ---
 # <a name="base-elements-overview"></a>基本要素の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のクラスの大部分は、[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] のドキュメントで一般に基本要素クラスと呼ばれている 4 つのクラスから派生しています。 これらのクラスは<xref:System.Windows.UIElement>、 <xref:System.Windows.FrameworkElement>、 <xref:System.Windows.ContentElement>、および<xref:System.Windows.FrameworkContentElement>します。 <xref:System.Windows.DependencyObject>クラスも関連が、両方の共通基本クラスであるため<xref:System.Windows.UIElement>と <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF クラスの基本要素 API  
  両方<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>から派生<xref:System.Windows.DependencyObject>、若干異なる経路でします。 このレベルで分割が扱う方法、<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>点は、アプリケーションでユーザー インターフェイスで使用します。 <xref:System.Windows.UIElement> <xref:System.Windows.Media.Visual>基になる低いレベルのグラフィックス サポートを公開するクラスをそのクラスの階層構造では、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。 <xref:System.Windows.Media.Visual> 独立した四角形の画面領域を定義することで、レンダリングのフレームワークを提供します。 実際には、<xref:System.Windows.UIElement>大規模オブジェクト モデルをサポートする要素は、表示するために意図したものとレイアウト領域を四角形の画面領域として記述でき、コンテンツ モデルが意図的に複数開いている、異なるを許可するには要素の組み合わせ。 <xref:System.Windows.ContentElement> 派生していない<xref:System.Windows.Media.Visual>; をそのモデルでは、<xref:System.Windows.ContentElement>リーダーやビューアーが、要素を解釈し、完全な生成などの他のものによって消費は<xref:System.Windows.Media.Visual>の[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を使用します。 特定<xref:System.Windows.UIElement>クラスは、コンテンツ ホスト: 1 つまたは複数のホスティングとレンダリングを提供する<xref:System.Windows.ContentElement>クラス (<xref:System.Windows.Controls.DocumentViewer>このようなクラスの例を示します)。 <xref:System.Windows.ContentElement> 比較的小さなオブジェクト モデルを持つ要素の基本クラスと、テキスト、情報、対処の詳細はまたはドキュメントのコンテンツ内でホストされるように使用する<xref:System.Windows.UIElement>します。  
@@ -46,7 +45,7 @@ ms.locfileid: "57372829"
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.UIElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)を参照してください。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
   
 -   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "57372829"
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkContentElement>、それに加えてによって提供される次の機能を取得する<xref:System.Windows.ContentElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)を参照してください。  
+-   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
   
 -   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
@@ -98,6 +97,7 @@ ms.locfileid: "57372829"
  <xref:System.Windows.Controls.Control> 目的の基底クラスは、コントロールまたはテクノロジによって、コンポーネントと呼ばれるさまざまなオブジェクトの型です。 一般に [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロール クラスは、UI コントロールを直接表すクラスか、コントロールの複合に密接に参加するクラスです。 主な機能を<xref:System.Windows.Controls.Control>有効では、コントロールのテンプレート。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Control>
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [コントロールの作成の概要](../controls/control-authoring-overview.md)

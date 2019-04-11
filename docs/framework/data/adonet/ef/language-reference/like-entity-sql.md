@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302258"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 指定された文字列 `String` が指定されたパターンと一致するかどうかを判断します。  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  LIKE の結果を否定することを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` がパターンに一致する場合は `string`、一致しない場合は `false`。  
+ `true` 場合、`string`パターンに一致する、それ以外の`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式は、フィルター条件として等しいかどうかを使用する式と同じように評価されます。 ただし、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式はリテラルとワイルドカード文字の両方を含めることができます。  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  特定のプロバイダーを対象とする場合は、プロバイダー固有の拡張機能を使用できます。 ただし、たとえばコンストラクターの扱いは、プロバイダーによって異なる場合があります。 SqlServer では、[first-last] および [^first-last] のパターンがサポートされています。前者は先頭と末尾の間の 1 文字が完全に一致し、後者は先頭と末尾の間以外の 1 文字が完全に一致します。  
   
 ### <a name="escape"></a>エスケープ特殊文字  
- 前のセクションの表で説明しているように、ESCAPE 句を使用することで、1 文字以上の特殊なワイルドカード文字を含む文字列を検索できます。 たとえば、複数のドキュメントのタイトルにリテラル "100%" が含まれており、そのドキュメントすべてを検索するとします。 使用してエスケープする必要があります、パーセント (%) 文字がワイルドカード文字であるため、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]エスケープ句検索を正常に実行します。 このフィルターの例は次のとおりです。  
+ 前のセクションの表で説明しているように、ESCAPE 句を使用することで、1 文字以上の特殊なワイルドカード文字を含む文字列を検索できます。 たとえば、複数のドキュメントのタイトルにリテラル "100%" が含まれており、そのドキュメントすべてを検索するとします。 ため、パーセント (%)文字がワイルドカード文字を使用してエスケープする必要があります、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]エスケープ句検索を正常に実行します。 このフィルターの例は次のとおりです。  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -68,11 +68,12 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>例  
  次の 2 つ[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリなどを使用して、特定の文字の文字列かどうかを判断する ESCAPE 演算子指定パターンに一致します。 最初のクエリを検索、`Name`文字で始まる`Down_`します。 アンダースコア (`_`) はワイルドカード文字であるため、このクエリは ESCAPE オプションを使用します。 ESCAPE オプションを指定せず、クエリでいずれかの検索は`Name`という単語で始まる値`Down`後にアンダー スコア文字以外の 1 文字。 クエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
   
-2.  次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

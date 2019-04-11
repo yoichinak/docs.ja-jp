@@ -2,12 +2,12 @@
 title: クエリ プランのキャッシュ (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178179"
 ---
 # <a name="query-plan-caching-entity-sql"></a>クエリ プランのキャッシュ (Entity SQL)
 クエリの実行が試行されると、クエリ パイプラインではそのクエリ プランのキャッシュを検索し、同じクエリが既にコンパイルされ使用可能になっているかどうかを確認します。 使用可能になっている場合は、新しいクエリを構築する代わりに、キャッシュされたプランを再利用します。 クエリ プランのキャッシュ内に一致するものが見つからない場合は、クエリがコンパイルされ、キャッシュされます。 クエリはその [!INCLUDE[esql](../../../../../../includes/esql-md.md)] テキストとパラメーターのコレクション (名前と型) によって識別されます。 テキストの比較では、常に大文字と小文字が区別されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "54671136"
   
 -   クエリ テキストは定数パターンにする必要があり、最も望ましいのは定数文字列またはリソースです。  
   
--   ユーザーが指定した値を渡す必要があるときは、<xref:System.Data.EntityClient.EntityParameter> または <xref:System.Data.Objects.ObjectParameter> を使用します。  
+-   <xref:System.Data.EntityClient.EntityParameter> または<xref:System.Data.Objects.ObjectParameter>ユーザー指定の値を渡す必要がある場所で使用する必要があります。  
   
  クエリ プランのキャッシュ内のスロットを必要以上に消費する次のようなクエリ パターンは避けます。  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54671136"
 -   コメント内のテキストの変更  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

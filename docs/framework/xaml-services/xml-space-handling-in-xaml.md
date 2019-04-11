@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193318"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML における xml:space の処理
 `xml:space`属性は、オブジェクト要素内で大量の空白処理動作を宣言する XML で定義された属性。 この動作は、要素内に含まれるすべてのコンテンツ (内部テキ スト) に関連する場所`xml:space`が宣言され、スコープも子要素にします。  
@@ -38,8 +38,9 @@ ms.locfileid: "58037055"
   
  ほとんどの解釈、`xml:space`属性の効果と属性の値が子要素にスコープ設定されます。  
   
- 空白文字で XAML 処理の詳細については、[空白 XAML 処理](whitespace-processing-in-xaml.md)を参照してください。  
+ 空白文字で XAML 処理の詳細については、次を参照してください。[空白 XAML 処理](whitespace-processing-in-xaml.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [空白 XAML での処理](whitespace-processing-in-xaml.md)
+
+- [XAML での空白の処理](whitespace-processing-in-xaml.md)
 - [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

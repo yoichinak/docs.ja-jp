@@ -2,12 +2,12 @@
 title: トレースとメッセージ ログの推奨設定
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132366"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>トレースとメッセージ ログの推奨設定
 このトピックでは、さまざまな動作環境における、推奨されるトレースとメッセージ ログの設定について説明します。  
@@ -113,4 +113,5 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [診断用の WMI (Windows Management Instrumentation) の使用](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

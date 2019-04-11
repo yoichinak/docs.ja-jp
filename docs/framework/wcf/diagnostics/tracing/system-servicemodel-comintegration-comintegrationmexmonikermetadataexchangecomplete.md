@@ -2,12 +2,12 @@
 title: System.Runtime.Serialization.ReadObjectEnd
 ms.date: 03/30/2017
 ms.assetid: 1c997554-a08e-4d14-8628-c92e2cf84fcb
-ms.openlocfilehash: 9df7b4482549402c5478e589b30ab5d245c73da6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad0d5a4118f1ba65a842ee56b96e0b45e0b272fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099665"
 ---
 # <a name="systemruntimeserializationreadobjectend"></a>System.Runtime.Serialization.ReadObjectEnd
 System.Runtime.Serialization.ReadObjectEnd  
@@ -16,6 +16,7 @@ System.Runtime.Serialization.ReadObjectEnd
  終了した ReadObject。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

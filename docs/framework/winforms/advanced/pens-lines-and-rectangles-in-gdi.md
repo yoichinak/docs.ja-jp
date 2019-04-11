@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078227"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ でのペン、直線、および四角形
 使用して線を描画するために[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]を作成する必要がある、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが実際には、描画を実行するメソッドを提供し、<xref:System.Drawing.Pen>オブジェクトが線の色、幅、およびスタイルなどの属性を格納します。  
@@ -68,9 +68,10 @@ ms.locfileid: "57705741"
  A<xref:System.Drawing.Rectangle>オブジェクトがメソッドとプロパティを操作すると、四角形に関する情報を収集します。 たとえば、<xref:System.Drawing.Rectangle.Inflate%2A>と<xref:System.Drawing.Rectangle.Offset%2A>メソッドは、四角形の位置とサイズを変更します。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>メソッドに指示するかどうか、四角形と交差する別の四角形を指定し、<xref:System.Drawing.Rectangle.Contains%2A>メソッドは、指定された点が四角形の内側がかどうかを示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [方法: ペンを作成します。](how-to-create-a-pen.md)
-- [方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)
-- [方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)
+- [方法: ペンを作成する](how-to-create-a-pen.md)
+- [方法: Windows フォームに直線を描画する](how-to-draw-a-line-on-a-windows-form.md)
+- [方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)

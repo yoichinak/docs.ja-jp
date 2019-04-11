@@ -2,12 +2,12 @@
 title: WCF のテスト用クライアント (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106770"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF のテスト用クライアント (WcfTestClient.exe)
 Windows Communication Foundation (WCF) のテスト クライアント (WcfTestClient.exe) は、テスト パラメーターを入力し、そのサービスに入力するユーザーを有効にし、サービスが返送する応答を表示する GUI ツールです。 テストを行う WCF サービス ホストと組み合わせたときに、シームレスにサービスを提供します。  
@@ -166,4 +166,5 @@ Windows Communication Foundation (WCF) のテスト クライアント (WcfTestC
 -   右クリックし、 **WCF サービス ホスト**アイコン、通知領域とクリック**終了します。** これにより、シャット ダウン、WCF サービスの自動ホストと WCF テスト クライアントの両方と、Visual Studio のプロセスのデバッグを停止します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

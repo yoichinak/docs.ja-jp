@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-ms.openlocfilehash: baef8bdee73d8493ba406f5eef1e3e3676680704
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147096"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>方法: テンプレートを使用して、GridView を使用する ListView のスタイルを設定する
 この例は、使用する方法を示します、<xref:System.Windows.DataTemplate>と<xref:System.Windows.Style>の外観を指定するオブジェクト、<xref:System.Windows.Controls.ListView>を使用するコントロールを<xref:System.Windows.Controls.GridView>表示モード。  
@@ -36,8 +36,9 @@ ms.locfileid: "57355767"
  [!code-xaml[ListViewTemplate#CellTemplateProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [GridView の概要](gridview-overview.md)
-- [方法トピック](listview-how-to-topics.md)
+- [方法のトピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)

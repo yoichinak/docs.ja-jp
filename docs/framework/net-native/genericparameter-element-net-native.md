@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111658"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 要素 (.NET ネイティブ)
 ジェネリック型またはメソッドのパラメーターの型にポリシーを適用します。  
@@ -51,13 +51,13 @@ ms.locfileid: "55257773"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*generic_parameter_name*|必須の属性です。 ジェネリック型パラメーターの名前。 たとえば、ジェネリック デリゲート <xref:System.Func%603> の場合、*generic_parameter_name* の値 "TResult" によって、デリゲートの戻り値に実行時ポリシーが適用されます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -68,8 +68,8 @@ ms.locfileid: "55257773"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体など、特定の型にランタイム リフレクション ポリシーを適用します。|  
+|[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
+|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体など、特定の型にランタイム リフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<GenericParameter>` 要素は [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 要素または [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素のいずれかの子で、ジェネリック型またはメソッド シグネチャでの名前によって指定される、特定のジェネリック型パラメーターにポリシーを適用するために使用されます。  
@@ -87,7 +87,8 @@ ms.locfileid: "55257773"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<メソッド > 要素](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<型 > 要素](../../../docs/framework/net-native/type-element-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

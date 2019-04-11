@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107329"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;ベジエ スプラインを GDI + で
 ベジエ スプラインは、4 つのポイントで指定された曲線: 2 つの終点 (p1 および p2) と 2 つの制御点 (c1 と c2)。 曲線が p1 で始まり p2 で終了します。 曲線が制御点を通過しませんが、制御点は磁石、特定の方向に曲線を取得し、湾曲方法に影響を与えてとして機能します。 次の図は、そのエンドポイントの制御点とベジエ曲線を示します。  
@@ -38,9 +38,10 @@ ms.locfileid: "57707262"
  ![パス](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
 - [曲線の作成と描画](constructing-and-drawing-curves.md)
-- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
-- [方法: ペンを作成します。](how-to-create-a-pen.md)
+- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
+- [方法: ペンを作成する](how-to-create-a-pen.md)

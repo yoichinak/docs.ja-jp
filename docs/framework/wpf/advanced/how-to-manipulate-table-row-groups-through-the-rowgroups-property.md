@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209971"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>方法: RowGroups プロパティを介してテーブルの行グループを操作する
 この例を使用してテーブルの行グループで実行できる一般的な操作の一部を示します、<xref:System.Windows.Documents.Table.RowGroups%2A>プロパティ。  
@@ -84,6 +84,7 @@ ms.locfileid: "57351971"
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法:Inlines プロパティを介してフロー コンテンツ要素を操作します。](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [方法:Inlines プロパティを介してフロー コンテンツ要素を操作する](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Blocks プロパティを介して FlowDocument を操作する](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Columns プロパティによってテーブルの列を操作する](how-to-manipulate-table-columns-through-the-columns-property.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102740"
 ---
 # <a name="designing-service-contracts"></a>サービス コントラクトの設計
 ここでは、サービス コントラクトの概要、定義方法、使用できる操作 (および基になるメッセージ交換の影響)、使用するデータ型、およびシナリオの要件を満たす操作を設計する際に役立つその他の問題について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "54583195"
   
  インターフェイスを使用して、サービス コントラクトを作成する例は、次を参照してください。[方法。サービス コントラクト インターフェイスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)です。  
   
- クラスを使用すると、サービス コントラクトの定義と実装を一度に行うことができます。 <xref:System.ServiceModel.ServiceContractAttribute> と <xref:System.ServiceModel.OperationContractAttribute> をそれぞれクラスとクラスのメソッドに直接適用してサービスを作成する方法には、サービスを迅速かつ簡単に作成できるという利点があります。 欠点は、マネージド クラスでは複数の継承をサポートしていないため、サービス コントラクトを一度に 1 つしか実装できないことです。 また、クラスまたはメソッド シグネチャに変更を加えると、そのサービスのパブリック コントラクトが変更されるため、変更されていないクライアントがサービスを使用できなくなることがあります。 詳細については、[Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
+ クラスを使用すると、サービス コントラクトの定義と実装を一度に行うことができます。 <xref:System.ServiceModel.ServiceContractAttribute> と <xref:System.ServiceModel.OperationContractAttribute> をそれぞれクラスとクラスのメソッドに直接適用してサービスを作成する方法には、サービスを迅速かつ簡単に作成できるという利点があります。 欠点は、マネージド クラスでは複数の継承をサポートしていないため、サービス コントラクトを一度に 1 つしか実装できないことです。 また、クラスまたはメソッド シグネチャに変更を加えると、そのサービスのパブリック コントラクトが変更されるため、変更されていないクライアントがサービスを使用できなくなることがあります。 詳細については、次を参照してください。 [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)します。  
   
  クラスを使用して、サービス コントラクトを作成し、同時に実装されているは、次を参照してください。[方法。コントラクト クラスを使用してサービスを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)です。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "54583195"
   
  データ コントラクトは opt-in 方式のコントラクトは。データ コントラクト属性を明示的に適用されない限り、シリアル化型またはデータ メンバーはありません。 データ コントラクトは、マネージ コードのアクセス スコープに関連は。プライベート データ メンバーをシリアル化およびパブリックにアクセスする他の場所で送信されることができます。 (データ コントラクトの基本的な例を参照してください。[方法。クラスまたは構造体に基本的なデータ コントラクトを作成](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md))。WCF では、操作の機能を有効にする、基になる SOAP メッセージの定義に加え、シリアル化、データ型のメッセージの本文の出入りを処理します。 使用するデータ型がシリアル化可能であれば、操作の設計時に、基盤となるメッセージ交換インフラストラクチャについて考える必要はありません。  
   
- 一般的な WCF アプリケーションを使用しますが、<xref:System.Runtime.Serialization.DataContractAttribute>と<xref:System.Runtime.Serialization.DataMemberAttribute>属性操作については、データ コントラクトを作成するその他のシリアル化メカニズムを使用することができます。 <xref:System.Runtime.Serialization.ISerializable>、<xref:System.SerializableAttribute>、および <xref:System.Xml.Serialization.IXmlSerializable> の各標準機構はすべて、基になる SOAP メッセージへのデータ型のシリアル化を処理します。このメッセージはアプリケーション間でデータ型を伝達します。 使用するデータ型で特別なサポートが必要な場合は、さらに多くのシリアル化方法を使用できます。 WCF アプリケーションでのデータ型のシリアル化の選択肢の詳細については、[Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)を参照してください。  
+ 一般的な WCF アプリケーションを使用しますが、<xref:System.Runtime.Serialization.DataContractAttribute>と<xref:System.Runtime.Serialization.DataMemberAttribute>属性操作については、データ コントラクトを作成するその他のシリアル化メカニズムを使用することができます。 <xref:System.Runtime.Serialization.ISerializable>、<xref:System.SerializableAttribute>、および <xref:System.Xml.Serialization.IXmlSerializable> の各標準機構はすべて、基になる SOAP メッセージへのデータ型のシリアル化を処理します。このメッセージはアプリケーション間でデータ型を伝達します。 使用するデータ型で特別なサポートが必要な場合は、さらに多くのシリアル化方法を使用できます。 WCF アプリケーションでのデータ型のシリアル化の選択肢の詳細については、次を参照してください。 [Data Transfer in Service Contracts にを指定する](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)します。  
   
 #### <a name="mapping-parameters-and-return-values-to-message-exchanges"></a>メッセージ交換へのパラメーターと戻り値のマッピング  
  サービス操作は、特定の標準セキュリティ、トランザクション、およびセッション関連の機能をサポートするためにアプリケーションが必要とするデータに加え、アプリケーション データをやり取りする SOAP メッセージの基になる交換によってサポートされます。 これは大文字と小文字であるため、サービス操作のシグネチャは、基になるによって決まります*メッセージ交換パターン*(MEP) データ転送と操作に必要な機能をサポートすることができます。 3 つのパターンを指定するには、WCF プログラミング モデルで: 要求/応答、一方向と双方向メッセージ パターン。  
@@ -109,7 +109,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- 上記の例では、実行に時間のかかる操作の場合に、クライアントのパフォーマンスと応答性が低下するおそれがありますが、要求/応答操作で `void` を返す場合でも、この操作には利点があります。 最も明らかな利点は、応答メッセージで SOAP エラーを返すことが可能であるということです。これにより、通信と処理のどちらで発生したかに関係なく、サービス関連の何らかのエラー状態が発生したことがわかります。 サービス コントラクトに指定された SOAP エラーは、<xref:System.ServiceModel.FaultException%601> オブジェクトとしてクライアント アプリケーションに渡されます。このオブジェクトの型パラメーターは、サービス コントラクトで指定された型です。 これによりエラー状態に関するクライアントに通知の WCF サービスで簡単。 例外、SOAP エラー、およびエラー処理の詳細については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。 要求/応答サービスおよびクライアントの例を表示するには、次を参照してください。[方法。要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)します。 要求/応答パターンに関する問題の詳細については、[要求/応答サービス](../../../docs/framework/wcf/feature-details/request-reply-services.md)を参照してください。  
+ 上記の例では、実行に時間のかかる操作の場合に、クライアントのパフォーマンスと応答性が低下するおそれがありますが、要求/応答操作で `void` を返す場合でも、この操作には利点があります。 最も明らかな利点は、応答メッセージで SOAP エラーを返すことが可能であるということです。これにより、通信と処理のどちらで発生したかに関係なく、サービス関連の何らかのエラー状態が発生したことがわかります。 サービス コントラクトに指定された SOAP エラーは、<xref:System.ServiceModel.FaultException%601> オブジェクトとしてクライアント アプリケーションに渡されます。このオブジェクトの型パラメーターは、サービス コントラクトで指定された型です。 これによりエラー状態に関するクライアントに通知の WCF サービスで簡単。 例外、SOAP エラー、およびエラー処理の詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。 要求/応答サービスおよびクライアントの例を表示するには、次を参照してください。[方法。要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)します。 要求/応答パターンに関する問題の詳細については、次を参照してください。[要求/応答サービス](../../../docs/framework/wcf/feature-details/request-reply-services.md)します。  
   
 ##### <a name="one-way"></a>一方向  
  WCF サービス アプリケーションのクライアントが必要があります、操作が完了するを待たず、SOAP エラーを処理しない場合、操作が一方向メッセージ パターンを指定できます。 一方向の操作をクライアントが操作を起動し、WCF メッセージをネットワークに後の処理を続行できます。 通常、これは、送信メッセージで送信するデータが膨大な量でない限り、(データ送信時にエラーが発生しなければ) クライアントはほぼすぐに実行を続けることを意味します。 この種のメッセージ交換パターンでは、クライアントからサービス アプリケーションへのイベントのような動作をサポートします。  
@@ -132,7 +132,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- このメソッドは、前述の要求/応答の例と同じです。ただし、<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティを `true` に設定するということは、メソッドは同じでも、サービス操作は戻りメッセージを送信せず、送信メッセージがチャネル レイヤーに渡されると、すぐにクライアントに制御が戻ることを意味します。 例については、「[方法: 一方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)します。 一方向パターンの詳細については、[一方向サービス](../../../docs/framework/wcf/feature-details/one-way-services.md)を参照してください。  
+ このメソッドは、前述の要求/応答の例と同じです。ただし、<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> プロパティを `true` に設定するということは、メソッドは同じでも、サービス操作は戻りメッセージを送信せず、送信メッセージがチャネル レイヤーに渡されると、すぐにクライアントに制御が戻ることを意味します。 例については、「[方法: 一方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)します。 一方向パターンの詳細については、次を参照してください。[一方向サービス](../../../docs/framework/wcf/feature-details/one-way-services.md)します。  
   
 ##### <a name="duplex"></a>二重  
  双方向パターンの特徴は、一方向メッセージングと要求/応答メッセージングのどちらを使用しているかに関係なく、サービスとクライアントが共に独立して、相互にメッセージを送信できるという点です。 二方向通信のこの形式は、サービスがクライアントと直接通信する必要がある場合や、イベントのような動作など、メッセージを交換するどちらの側も非同期で動作できるようにする場合に役立ちます。  
@@ -143,7 +143,7 @@ Sub Hello (ByVal greeting As String)
   
  双方向パターンを実装するには、クライアントで呼び出されるメソッド宣言を含む 2 つ目のインターフェイスを作成する必要があります。  
   
- サービス、およびそのサービスにアクセスするクライアントの作成の例は、次を参照してください。[方法。双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)と[方法。双方向コントラクトでサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)します。 実際のサンプルでは、[双方向](../../../docs/framework/wcf/samples/duplex.md)を参照してください。 双方向コントラクトを使用して問題の詳細については、[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)を参照してください。  
+ サービス、およびそのサービスにアクセスするクライアントの作成の例は、次を参照してください。[方法。双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)と[方法。双方向コントラクトでサービスへのアクセス](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)します。 実際のサンプルでは、次を参照してください。[双方向](../../../docs/framework/wcf/samples/duplex.md)します。 双方向コントラクトを使用して問題の詳細については、次を参照してください。[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)します。  
   
 > [!CAUTION]
 >  サービスは、双方向メッセージを受信すると、その受信メッセージの `ReplyTo` 要素を参照して応答の送信先を決定します。 メッセージの受信に使用するチャネルがセキュリティで保護されていない場合、信頼関係のないクライアントが対象コンピューターの `ReplyTo` を使用して悪意のあるメッセージを送信し、その対象コンピューターのサービス拒否 (DOS: Denial Of Service) を引き起こすおそれがあります。  
@@ -180,7 +180,7 @@ End Interface
  保護レベルは、サービスをサポートするメッセージ (またはメッセージ部分) が署名されるのか、署名および暗号化されるのか、または署名と暗号化なしで送信されるのかを指定する値です。 保護レベルは、さまざまなスコープで設定できます。サービス レベルの操作、またはメッセージ部分内のメッセージの特定の操作。 あるスコープで設定された値は、明示的にオーバーライドしない限り、そのスコープよりも小さなスコープの既定値になります。 コントラクトに必要とされる最小限の保護レベルをバインディング構成で提供できない場合は、例外がスローされます。 保護レベルの値がコントラクトで明示的に設定されていない場合、バインディングのメッセージ セキュリティが有効であれば、バインド構成によってすべてのメッセージの保護レベルが制御されます。 これが既定の動作です。  
   
 > [!IMPORTANT]
->  一般に、コントラクトのさまざまなスコープを完全な保護レベルである <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> よりも下のレベルに明示的に設定するかどうかは、パフォーマンスの向上と引き換えに、ある程度のセキュリティで妥協できるかどうかという判断によって決まります。 このような場合、操作および操作で交換するデータの価値に焦点を絞って判断を下す必要があります。 詳細については、[Securing Services](../../../docs/framework/wcf/securing-services.md)を参照してください。  
+>  一般に、コントラクトのさまざまなスコープを完全な保護レベルである <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> よりも下のレベルに明示的に設定するかどうかは、パフォーマンスの向上と引き換えに、ある程度のセキュリティで妥協できるかどうかという判断によって決まります。 このような場合、操作および操作で交換するデータの価値に焦点を絞って判断を下す必要があります。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。  
   
  たとえば、次のコード例では、<xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> も、コントラクトの <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> プロパティも設定していません。  
   
@@ -257,12 +257,12 @@ End Interface
   
 -   `GetGuid` 操作の <xref:System.Guid?displayProperty=nameWithType> は、暗号化および署名されたメッセージで返されます。  
   
- 保護レベルとその使用方法の詳細については、[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)を参照してください。 セキュリティの詳細については、[Securing Services](../../../docs/framework/wcf/securing-services.md)を参照してください。  
+ 保護レベルとその使用方法の詳細については、次を参照してください。[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)します。 セキュリティの詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。  
   
 ##### <a name="other-operation-signature-requirements"></a>操作シグネチャのその他の要件  
  アプリケーションの一部の機能では、特定の種類の操作シグネチャを必要とします。 たとえば、<xref:System.ServiceModel.NetMsmqBinding> バインディングは、永続的なサービスとクライアントをサポートします。永続的なサービスとクライアントでは、通信の途中でアプリケーションを再起動し、メッセージを失うことなく、アプリケーションが中止された場所を検出できます  (詳細については、次を参照してください[WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)。ただし、永続的操作では、`in` パラメーターを 1 つしか受け取ることができず、戻り値を持つこともできません。  
   
- もう 1 つの例として、操作における <xref:System.IO.Stream> 型の使用が挙げられます。 <xref:System.IO.Stream> パラメーターにはメッセージの本文全体が含まれるため、入力または出力 (つまり、`ref` パラメーター、`out` パラメーター、または戻り値) が <xref:System.IO.Stream> 型である場合、操作で指定された入力または出力に限定する必要があります。 また、パラメーターまたは戻り値の型は <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>、<xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> のいずれかである必要があります。 ストリームの詳細については、[Large Data and Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)を参照してください。  
+ もう 1 つの例として、操作における <xref:System.IO.Stream> 型の使用が挙げられます。 <xref:System.IO.Stream> パラメーターにはメッセージの本文全体が含まれるため、入力または出力 (つまり、`ref` パラメーター、`out` パラメーター、または戻り値) が <xref:System.IO.Stream> 型である場合、操作で指定された入力または出力に限定する必要があります。 また、パラメーターまたは戻り値の型は <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>、<xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType> のいずれかである必要があります。 ストリームの詳細については、次を参照してください。 [Large Data and Streaming](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)します。  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>名前、名前空間、および難読化  
  コントラクトおよび操作の定義内の .NET 型の名前や名前空間は、コントラクトが WSDL に変換されるとき、およびコントラクト メッセージが作成および送信されるときに重要になります。 したがって、サービス コントラクトの名前と名前空間は、`Name`、`Namespace`、<xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> などの、すべてのサポート対象コントラクト属性や、他のコントラクト属性の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティと <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを使用して明示的に設定することを強くお勧めします。  
@@ -270,9 +270,10 @@ End Interface
  この 1 つの結果として、名前と名前空間が明示的に設定されていない場合、アセンブリで IL 難読化を使用すると、コントラクトの型名と名前空間が変更され、その結果、WSDL が変更され、通常はネットワークでのメッセージ交換に失敗します。 コントラクトの名前と名前空間を明示的に設定せずに難読化を使用する場合は、<xref:System.Reflection.ObfuscationAttribute> 属性と <xref:System.Reflection.ObfuscateAssemblyAttribute> 属性を使用して、コントラクトの型名と名前空間が変更されないようにします。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 要求/応答コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [方法: 一方向コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [方法: 双方向コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+
+- [方法: 要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [方法: 一方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [方法: 双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [サービス コントラクトでのデータ転送の指定](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [セッションの使用](../../../docs/framework/wcf/using-sessions.md)

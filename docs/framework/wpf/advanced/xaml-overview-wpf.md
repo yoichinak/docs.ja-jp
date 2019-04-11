@@ -19,18 +19,16 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102831"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
-  
-  
-  
+
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>XAML とは何ですか。  
  XAML は、宣言型マークアップ言語です。 .NET Framework のプログラミング モデルに適用される、XAML が作成を簡素化、 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] .NET Framework アプリケーション用。 表示を作成する[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]宣言型の XAML マークアップでと、別の要素、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]部分クラス定義を通じてマークアップに参加している、分離コード ファイルを使用して、実行時のロジックを定義します。 XAML は、直接バッキング アセンブリで定義されている型の特定のセット内のオブジェクトのインスタンス化を表します。 これは、ほとんどのマークアップ言語は、バッキング型システムに直接結合せずインタープリター言語では通常とは異なりします。 XAML により、別のパーティが取り組むことができます、ワークフロー、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]と異なる可能性のあるツールを使用して、アプリケーションのロジック。  
@@ -43,7 +41,7 @@ ms.locfileid: "57379238"
   
 <a name="xaml_syntax_in_brief"></a>   
 ## <a name="xaml-syntax-in-brief"></a>XAML 構文の概要  
- 次のセクションでは、XAML 構文の基本的な形式を説明し、短いマークアップの例を提供します。 これらのセクションは、これらバッキング型システムでの表現方法など、それぞれの構文形式の完全な情報を提供するものはありません。 このトピックで導入された構文の各の XAML 構文の仕様の詳細については、[XAML 構文の詳細](xaml-syntax-in-detail.md)を参照してください。  
+ 次のセクションでは、XAML 構文の基本的な形式を説明し、短いマークアップの例を提供します。 これらのセクションは、これらバッキング型システムでの表現方法など、それぞれの構文形式の完全な情報を提供するものはありません。 このトピックで導入された構文の各の XAML 構文の仕様の詳細については、次を参照してください。 [XAML 構文の詳細](xaml-syntax-in-detail.md)します。  
   
  次のセクションでは、いくつかの内容の大半は、XML 言語に精通していれば、基本になります。 これは、XAML の基本的な設計原則の 1 つの結果です。  XAML 言語には、独自の概念が定義されていますが、これらの概念が XML 言語とマークアップ フォーム内で機能します。  
   
@@ -161,7 +159,7 @@ ms.locfileid: "57379238"
 ## <a name="case-and-white-space-in-xaml"></a>ケース テーブルと XAML 内の空白  
  XAML は、大文字と小文字は一般にです。 バッキング型の解決のために、WPF の XAML は、CLR は大文字小文字を区別する、同じルールで大文字小文字を区別します。 名前、アセンブリ内の基になる型または型のメンバーと比較した場合の機密性の高い文字種を使用してには、オブジェクトの要素、プロパティ要素、および属性名のすべてを指定してください。 XAML 言語のキーワードとプリミティブも小文字が区別されます。 値は、常に大文字小文字が区別されません。 値の大文字小文字の区別には、値、またはプロパティ値の型を受け取るプロパティに関連付けられている型コンバーターの動作は異なります。 使用するプロパティなど、<xref:System.Boolean>種類は、いずれかを実行できる`true`または`True`ネイティブの WPF XAML パーサーは入力文字列に変換するためにのみ、同等の値として<xref:System.Boolean>の同等としてこれらを既に許可します。  
   
- WPF XAML プロセッサとシリアライザーを無視するか、伴わないすべての空白文字を削除しは有意の空白を正規化します。 これは、XAML 仕様の空白に対する動作の既定の推奨設定と一致します。 この動作は、通常 XAML コンテンツ プロパティ内の文字列を指定した場合ののみです。 簡単に言うでは、XAML スペース、改行やタブ文字を空白に変換し、領域の場合は 1 つが保持されますが、連続する文字列の両端が見つかりましたします。 XAML の空白文字の処理の詳しい説明については、このトピックでは説明しません。 詳細については、[スペースで XAML 処理](../../xaml-services/whitespace-processing-in-xaml.md)を参照してください。  
+ WPF XAML プロセッサとシリアライザーを無視するか、伴わないすべての空白文字を削除しは有意の空白を正規化します。 これは、XAML 仕様の空白に対する動作の既定の推奨設定と一致します。 この動作は、通常 XAML コンテンツ プロパティ内の文字列を指定した場合ののみです。 簡単に言うでは、XAML スペース、改行やタブ文字を空白に変換し、領域の場合は 1 つが保持されますが、連続する文字列の両端が見つかりましたします。 XAML の空白文字の処理の詳しい説明については、このトピックでは説明しません。 詳細については、次を参照してください。[スペースで XAML 処理](../../xaml-services/whitespace-processing-in-xaml.md)します。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>マークアップ拡張機能  
@@ -175,7 +173,7 @@ ms.locfileid: "57379238"
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]  
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]  
   
- 参照を一覧表示するマークアップ拡張機能のすべての XAML は、WPF で具体的には実装を参照してください。 [WPF XAML 拡張機能](wpf-xaml-extensions.md)します。 System.Xaml と .NET Framework の XAML 実装のより幅広く利用できるは、定義されているマークアップ拡張機能の参照一覧については、次を参照してください[XAML Namespace (x:)。言語機能](../../xaml-services/xaml-namespace-x-language-features.md)します。 マークアップ拡張機能の概念の詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
+ 参照を一覧表示するマークアップ拡張機能のすべての XAML は、WPF で具体的には実装を参照してください。 [WPF XAML 拡張機能](wpf-xaml-extensions.md)します。 System.Xaml と .NET Framework の XAML 実装のより幅広く利用できるは、定義されているマークアップ拡張機能の参照一覧については、次を参照してください[XAML Namespace (x:)。言語機能](../../xaml-services/xaml-namespace-x-language-features.md)します。 マークアップ拡張機能の概念の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>型コンバーター  
@@ -243,9 +241,9 @@ ms.locfileid: "57379238"
 </Page>  
 ```  
   
- XAML でのカスタムの種類の詳細については、[XAML とカスタム クラスの WPF](xaml-and-custom-classes-for-wpf.md)を参照してください。  
+ XAML でのカスタムの種類の詳細については、次を参照してください。 [XAML とカスタム クラスの WPF](xaml-and-custom-classes-for-wpf.md)します。  
   
- XML 名前空間とアセンブリでバッキング コードの名前空間との関連付けに関する詳細については、[XAML 名前空間および WPF XAML のマッピングの Namespace](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)を参照してください。  
+ XML 名前空間とアセンブリでバッキング コードの名前空間との関連付けに関する詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>イベントと XAML 分離コード  
@@ -265,7 +263,7 @@ ms.locfileid: "57379238"
  分離コード ファイルを作成したくない場合は、することもできますインライン XAML ファイルでコード。 ただし、インライン コードは、多くの制限のある小さい汎用的な手法です。 詳細については、「[WPF における分離コードと XAML](code-behind-and-xaml-in-wpf.md)」を参照してください。  
   
 ### <a name="routed-events"></a>ルーティング イベント  
- 特定のイベントの機能の基盤を[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]はルーティング イベントです。 要素がツリーのリレーションシップを介して接続している限り、別の要素で発生したイベントを処理する要素にルーティング イベントを使用します。 XAML 属性使用してイベント処理を指定するときに、ルーティング イベントをリッスンおよびクラスのメンバー テーブルでその特定のイベントが記載されていない要素を含む任意の要素で処理します。 これは、所有しているクラスの名前を持つイベントの名前属性を修飾することによって実現されます。 たとえば、親`StackPanel`、進行中で`StackPanel`  /  `Button`の例は、子要素のボタンのハンドラーを登録できます<xref:System.Windows.Controls.Primitives.ButtonBase.Click>属性を指定することによってイベント`Button.Click`で、 `StackPanel`オブジェクト要素の属性値として、ハンドラー名。 どのようにルーティング イベントの動作の詳細については、[ルーティング イベントの概要](routed-events-overview.md)を参照してください。  
+ 特定のイベントの機能の基盤を[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]はルーティング イベントです。 要素がツリーのリレーションシップを介して接続している限り、別の要素で発生したイベントを処理する要素にルーティング イベントを使用します。 XAML 属性使用してイベント処理を指定するときに、ルーティング イベントをリッスンおよびクラスのメンバー テーブルでその特定のイベントが記載されていない要素を含む任意の要素で処理します。 これは、所有しているクラスの名前を持つイベントの名前属性を修飾することによって実現されます。 たとえば、親`StackPanel`、進行中で`StackPanel`  /  `Button`の例は、子要素のボタンのハンドラーを登録できます<xref:System.Windows.Controls.Primitives.ButtonBase.Click>属性を指定することによってイベント`Button.Click`で、 `StackPanel`オブジェクト要素の属性値として、ハンドラー名。 どのようにルーティング イベントの動作の詳細については、次を参照してください。[ルーティング イベントの概要](routed-events-overview.md)します。  
   
 <a name="x_name_and_xaml_named_elements"></a>   
 ## <a name="xaml-named-elements"></a>XAML の名前付き要素  
@@ -299,7 +297,7 @@ ms.locfileid: "57379238"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ほとんどまたはすべての添付プロパティは依存関係プロパティとしても実装されます。 詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。  
   
- 添付イベントを使用して、類似した*ownerType*.*eventName*属性構文の形式。 、非添付イベントと同じようには、XAML の添付イベントの属性の値は、要素のイベントが処理されるときに呼び出されるハンドラー メソッドの名前を指定します。 WPF XAML の添付イベントの使用法は、まれです。 詳細については、[添付イベントの概要](attached-events-overview.md)を参照してください。  
+ 添付イベントを使用して、類似した*ownerType*.*eventName*属性構文の形式。 、非添付イベントと同じようには、XAML の添付イベントの属性の値は、要素のイベントが処理されるときに呼び出されるハンドラー メソッドの名前を指定します。 WPF XAML の添付イベントの使用法は、まれです。 詳細については、次を参照してください。[添付イベントの概要](attached-events-overview.md)します。  
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基本型、および XAML  
@@ -309,7 +307,7 @@ ms.locfileid: "57379238"
 ## <a name="xaml-security"></a>XAML セキュリティ  
  XAML は、オブジェクトのインスタンス化と実行を直接表すマークアップ言語です。 そのため、対応する生成 (ネットワーク アクセス、ファイル システムの IO など) のシステム リソースと対話するのと同じ機能のある要素の XAML で作成したコードは。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポート、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]セキュリティ フレームワーク[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]します。 つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インターネット ゾーンで実行されているコンテンツが実行のアクセス許可を削減します。 "Loose XAML"(コンパイルされない XAML ページ XAML ビューアーでの読み込み時に解釈) と[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]このインターネット ゾーンでは、通常実行して、同じアクセス許可セットを使用します。  ただしに完全に信頼されたアプリケーションに読み込まれた XAML では、ホスト アプリケーションのようにシステム リソースに同じアクセス権があります。 詳細については、[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポート、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]セキュリティ フレームワーク[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]します。 つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インターネット ゾーンで実行されているコンテンツが実行のアクセス許可を削減します。 "Loose XAML"(コンパイルされない XAML ページ XAML ビューアーでの読み込み時に解釈) と[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]このインターネット ゾーンでは、通常実行して、同じアクセス許可セットを使用します。  ただしに完全に信頼されたアプリケーションに読み込まれた XAML では、ホスト アプリケーションのようにシステム リソースに同じアクセス権があります。 詳細については、次を参照してください。 [WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)します。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>コードから XAML の読み込み  
@@ -317,20 +315,21 @@ ms.locfileid: "57379238"
   
 <a name="whats_next"></a>   
 ## <a name="whats-next"></a>次の内容  
- このトピックでは、WPF に適用される XAML 構文の概念と用語の概要を提供します。 ここで使用される用語の詳細については、[XAML 構文の詳細](xaml-syntax-in-detail.md)を参照してください。  
+ このトピックでは、WPF に適用される XAML 構文の概念と用語の概要を提供します。 ここで使用される用語の詳細については、次を参照してください。 [XAML 構文の詳細](xaml-syntax-in-detail.md)します。  
   
  この手順をまだ行っていないことは場合、チュートリアルのトピックで行う演習を試す[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。 このチュートリアルで説明されているマークアップを中心としたアプリケーションを作成するときにこのトピックで説明した概念の多くが深まります。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基づく特定のアプリケーション モデルを使用して、<xref:System.Windows.Application>クラス。 詳細については、[アプリケーション管理の概要](../app-development/application-management-overview.md)を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 基づく特定のアプリケーション モデルを使用して、<xref:System.Windows.Application>クラス。 詳細については、次を参照してください。[アプリケーション管理の概要](../app-development/application-management-overview.md)します。  
   
  [WPF アプリケーションのビルド](../app-development/building-a-wpf-application-wpf.md)とコマンド ラインから XAML の包括的なアプリケーションを構築する方法の詳細については、[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]します。  
   
  [依存関係プロパティの概要](dependency-properties-overview.md)でプロパティの用途の詳細については、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、および依存関係プロパティの概念が導入されました。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML 構文の詳細](xaml-syntax-in-detail.md)
 - [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)
-- [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML 名前空間 (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 拡張機能](wpf-xaml-extensions.md)
 - [基本要素の概要](base-elements-overview.md)
 - [WPF のツリー](trees-in-wpf.md)

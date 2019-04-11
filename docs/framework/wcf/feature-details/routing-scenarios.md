@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223828"
 ---
 # <a name="routing-scenarios"></a>ルーティング シナリオ
 ルーティング サービスは自由にカスタマイズできますが、まったく新しい構成を作成するときは、効率的なルーティング ロジックを設計するのが困難である場合があります。  しかし、ほとんどのルーティング サービスの構成で想定されている一般的なシナリオがいくつかあります。 これらのシナリオは、特定の構成に直接、適用できない場合もありますが、これらのシナリオに対応するルーティング サービスの構成方法を理解しておくことは、ルーティング サービスを理解する助けとなります。  
@@ -70,9 +70,10 @@ ms.locfileid: "54699598"
   
  [方法: サービス データのパーティション分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [方法: 動的更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [方法: 動的な更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
  [方法: エラー処理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

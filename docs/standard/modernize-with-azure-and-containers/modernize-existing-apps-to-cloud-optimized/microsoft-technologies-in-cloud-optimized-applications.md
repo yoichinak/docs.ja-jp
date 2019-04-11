@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296252"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 
@@ -25,9 +25,9 @@ ms.locfileid: "53153879"
 
 -   **監視、製品利用統計情報、ログ記録と監査**:監視と監査のアプリケーションとクラウドで実行されているコンテナー機能は、任意のクラウドに最適化されたアプリケーションにとって重要です。 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/)と[Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite)はクラウドに最適化されたアプリの監視と監査を提供するマイクロソフトの主要なツールです。
 
--   **プロビジョニング**:自動化ツールでは、インフラストラクチャをプロビジョニングし、複数の環境 (運用、テスト、ステージング) にアプリケーションを展開できます。 Chef、Puppet などのツールを使用して、アプリケーションの構成と環境を管理することができます。 このレイヤーより簡単かつ直接的な方法を使用しても実装できます。 たとえば、ツール、Azure コマンド ライン インターフェイス (Azure CLI) を使用して直接展開し継続的なデプロイを使用し、リリース管理パイプラインで[Azure DevOps サービス](https://visualstudio.microsoft.com/team-services/)します。
+-   **プロビジョニング**:自動化ツールでは、インフラストラクチャをプロビジョニングし、複数の環境 (運用、テスト、ステージング) にアプリケーションを展開できます。 Chef、Puppet などのツールを使用して、アプリケーションの構成と環境を管理することができます。 このレイヤーより簡単かつ直接的な方法を使用しても実装できます。 たとえば、ツール、Azure コマンド ライン インターフェイス (Azure CLI) を使用して直接展開し継続的なデプロイを使用し、リリース管理パイプラインで[Azure DevOps サービス](https://azure.microsoft.com/services/devops/)します。
 
--   **アプリケーションのライフ サイクル**:[Azure DevOps サービス](https://visualstudio.microsoft.com/team-services/)、Jenkins などの他のツールはビルド オートメーション サーバーにする際に役立つ実装 CI/CD パイプライン、リリース管理を含むとします。
+-   **アプリケーションのライフ サイクル**:[Azure DevOps サービス](https://azure.microsoft.com/services/devops/)、Jenkins などの他のツールはビルド オートメーション サーバーにする際に役立つ実装 CI/CD パイプライン、リリース管理を含むとします。
 
 この章では、および関連のチュートリアルの次のセクションでは、ランタイム レイヤー (Windows コンテナー) の詳細について重点的に説明します。 ガイダンスでは、Windows Server 2016 (およびそれ以降のバージョン) で Windows コンテナーの Vm と Azure Container Instances を展開する方法について説明します。 Azure App Service などのより高度な PaaS プラットフォームと Azure Service Fabric と Azure Kubernetes サービスなどのオーケストレーターについても説明します。
 

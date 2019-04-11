@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: d7ff88f877f73382f69874c58392c3374a83c019
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112880"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -47,7 +47,7 @@ ms.locfileid: "57706001"
   
  <xref:System.Windows.Forms.DataGridView>コントロールは、これらのインターフェイスによって返されるオブジェクトのパブリック プロパティまたはによって返されるプロパティのコレクションにデータ バインディングをサポートしている、<xref:System.ComponentModel.ICustomTypeDescriptor>インターフェイスを実装して、返されたオブジェクトの場合。  
   
- 通常、バインド、<xref:System.Windows.Forms.BindingSource>コンポーネントおよび bind、<xref:System.Windows.Forms.BindingSource>コンポーネントを別にデータ ソースまたはビジネス オブジェクトを設定します。 <xref:System.Windows.Forms.BindingSource>コンポーネントが優先されるデータ ソースでさまざまなデータ ソースにバインドでき、自動的に多くのデータ バインドの問題を解決することができます。 詳細については、[BindingSource コンポーネント](bindingsource-component.md)を参照してください。  
+ 通常、バインド、<xref:System.Windows.Forms.BindingSource>コンポーネントおよび bind、<xref:System.Windows.Forms.BindingSource>コンポーネントを別にデータ ソースまたはビジネス オブジェクトを設定します。 <xref:System.Windows.Forms.BindingSource>コンポーネントが優先されるデータ ソースでさまざまなデータ ソースにバインドでき、自動的に多くのデータ バインドの問題を解決することができます。 詳細については、次を参照してください。 [BindingSource コンポーネント](bindingsource-component.md)します。  
   
  <xref:System.Windows.Forms.DataGridView>コントロールはでも使用できます*バインドされていない*ない基になるデータ ストアとのモード。 非結合を使用するコード例については<xref:System.Windows.Forms.DataGridView>コントロールを参照してください[チュートリアル。作成、バインドされていない Windows フォーム DataGridView コントロール](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)します。  
   
@@ -81,6 +81,7 @@ ms.locfileid: "57706001"
  大量のデータを扱うときのパフォーマンスの問題を避けるために、このコントロールを効率的に使用する方法について説明するトピックを示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [DataGridView コントロール](datagridview-control-windows-forms.md)

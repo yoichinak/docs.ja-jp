@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32025
 ms.assetid: 43707bf1-1c6b-4d82-b081-e5a17dca51c1
-ms.openlocfilehash: deef3de645040d7c3d95b1a6c8a25fcf10de881b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c41b95da7e3565ae7aaf332fe49361336e79f7c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303909"
 ---
 # <a name="region-and-end-region-statements-are-not-valid-within-method-bodiesmultiline-lambdas"></a>'#Region' および '#End Region' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。
 `#Region`ブロックは、クラス、モジュール、または名前空間レベルで宣言する必要があります。 折りたたみ可能な領域は、1 つ以上のプロシージャを含めることができますが、開始またはプロシージャの内部で終了することはできません。  
@@ -21,9 +21,9 @@ ms.locfileid: "58842708"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  直前のプロシージャが、`End Function`ステートメントまたは`End Sub`ステートメントによって正しく終了していることを確認します。  
+1. 直前のプロシージャが、`End Function`ステートメントまたは`End Sub`ステートメントによって正しく終了していることを確認します。  
   
-2.  `#Region`ディレクティブおよび`#End Region`ディレクティブが同じコード ブロック内にあることを確認します。  
+2. `#Region`ディレクティブおよび`#End Region`ディレクティブが同じコード ブロック内にあることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

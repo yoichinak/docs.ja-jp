@@ -2,12 +2,12 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 57fbdd2cf7c398e611f835eeb4e924fb4f3e0c9e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197959"
 ---
 # <a name="service"></a>\<service>
 `service` 要素には Windows Communication Foundation (WCF) サービスの設定が含まれます。 また、サービスを公開するエンドポイントも含まれます。  
@@ -32,7 +32,7 @@ ms.locfileid: "55270304"
 |属性|説明|  
 |---------------|-----------------|  
 |behaviorConfiguration|サービスのインスタンス化に使用される動作の動作名を含む文字列。 動作名は、サービスが定義される時点でスコープ内にある必要があります。 既定値は空の文字列です。|  
-|name|インスタンス化するサービスの型を指定する必須の文字列属性。 この設定は有効な型と同じでなければなりません。 形式は、`Namespace.Class.` です。|  
+|name|インスタンス化するサービスの型を指定する必須の文字列属性。 この設定は有効な型と同じでなければなりません。 形式は、 `Namespace.Class.`|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -69,5 +69,6 @@ ms.locfileid: "55270304"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ServiceElement>
 - [サービスの構成](../../../../../docs/framework/wcf/configuring-services.md)

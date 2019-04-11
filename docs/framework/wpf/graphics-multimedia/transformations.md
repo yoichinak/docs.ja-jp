@@ -16,21 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227231"
 ---
 # <a name="transformations"></a>変換
 変換を使用し、回転、拡大縮小、平行移動、または傾斜<xref:System.Windows.FrameworkElement>オブジェクト。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [変換の概要](transforms-overview.md)  
- [方法トピック](transformations-how-to-topics.md)  
+ [方法のトピック](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Transform>
 - [グラフィックスとマルチメディア](index.md)
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

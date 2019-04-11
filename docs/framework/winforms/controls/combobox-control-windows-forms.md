@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227121"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox コントロール (Windows フォーム)
 Windows フォーム`ComboBox`ドロップダウン コンボ ボックスにデータを表示するコントロールを使用します。 既定では、`ComboBox`コントロールは、2 つの部分が表示されます。 最上位部分は、ユーザーがリスト項目を入力できるテキスト ボックス。 2 番目の部分は、元のユーザーが選択できる 1 つの項目の一覧を表示するリスト ボックスです。  
@@ -24,11 +24,11 @@ Windows フォーム`ComboBox`ドロップダウン コンボ ボックスにデ
  [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [方法: ComboBox コントロールにサイズ変更可能なテキストを作成する](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  内のテキストのカスタム描画を示して、`ComboBox`コントロール。  
   
 ## <a name="reference"></a>参照  
- <xref:System.Windows.Forms.ComboBox> クラス  
+ <xref:System.Windows.Forms.ComboBox> class  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
@@ -36,4 +36,5 @@ Windows フォーム`ComboBox`ドロップダウン コンボ ボックスにデ
  リスト ボックス、コンボ ボックス、およびチェックされたリスト ボックスで実行できる操作の一覧を示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

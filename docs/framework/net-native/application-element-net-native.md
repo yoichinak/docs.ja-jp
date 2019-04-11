@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228303"
 ---
 # <a name="application-element-net-native"></a>\<Application > 要素 (.NET ネイティブ)
 実行時にリフレクションに使用可能なメタデータを持つアプリケーション全体の型と型のメンバーのコンテナーとして機能し、アプリ内のすべてのプログラム要素にランタイム リフレクション ポリシーを適用します。  
@@ -52,7 +52,7 @@ ms.locfileid: "55270811"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|アプリで型に適用する、このポリシーの設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -60,21 +60,21 @@ ms.locfileid: "55270811"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
+|[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
+|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
+|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
+|[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
+|[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
+|[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
+|[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
+|[\<ディレクティブ >](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 要素には、0 または 1 個の `<Application>` 要素を含めることができます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
@@ -86,7 +86,8 @@ ms.locfileid: "55270811"
 -   リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 `<Application>` 要素の属性はアプリケーション全体のポリシーを定義します。このポリシーは、`<Application>` 要素または [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により定義される子要素によってオーバーライドできます。  
   
 ## <a name="see-also"></a>関連項目
-- [\<ライブラリ > 要素](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)
+
+- [\<Library> 要素](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives> 要素](../../../docs/framework/net-native/directives-element-net-native.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

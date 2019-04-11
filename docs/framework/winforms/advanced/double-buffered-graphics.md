@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103442"
 ---
 # <a name="double-buffered-graphics"></a>ダブル バッファリングされたグラフィックス
 グラフィックスをプログラミングするときは、ちらつきが一般的な問題になります。 複数の複雑な描画操作を必要とするグラフィックス操作を実行すると、描画されたイメージがちらつきなどによって適切に表示されないことがあります。 このような問題に対処するために、.NET Framework では、ダブル バッファリングを利用できます。  
@@ -33,10 +33,11 @@ ms.locfileid: "57707704"
  使用しての詳細については、<xref:System.Drawing.BufferedGraphics>クラスを参照してください[バッファリングされたグラフィックスのレンダリング手動で](how-to-manually-render-buffered-graphics.md)します。 グラフィックスの描画の詳細については、「[Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [方法: バッファリングされたグラフィックスを手動で描画します。](how-to-manually-render-buffered-graphics.md)
-- [方法: フォームとコントロールのダブル バッファリングによってグラフィックスのちらつきを軽減します。](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [方法: バッファリングされたグラフィックスを手動で管理します。](how-to-manually-manage-buffered-graphics.md)
+- [方法: バッファリングされたグラフィックスを手動で描画する](how-to-manually-render-buffered-graphics.md)
+- [方法: フォームとコントロールのダブル バッファリングを行うことによってグラフィックスのちらつきを軽減する](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [方法: バッファリングされたグラフィックスを手動で管理する](how-to-manually-manage-buffered-graphics.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

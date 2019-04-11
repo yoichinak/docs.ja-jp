@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379277"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314699"
 ---
 # <a name="framework-property-metadata"></a>フレームワーク プロパティ メタデータ
 フレームワーク プロパティ メタデータのオプションは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アーキテクチャの WPF フレームワーク レベルにあると見なされるオブジェクト要素のプロパティに対して報告されます。 一般に、WPF フレームワーク レベルが指定されている場合、レンダリング、データ バインディング、プロパティ システムの調整などの機能が、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプレゼンテーション [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] と実行可能ファイルによって処理されます。 フレームワーク プロパティ メタデータがこれらのシステムによって照会されて、特定の要素プロパティに対する機能固有の特性が決まります。  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックでは、ユーザーが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティの使用という観点から依存関係プロパティを理解し、「[依存関係プロパティの概要](dependency-properties-overview.md)」トピックを通読していることを前提としています。 また、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」を読んでいる必要もあります。  
@@ -29,7 +27,7 @@ ms.locfileid: "57379277"
   
 -   要素の親要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 既定ではこれらのフラグが設定される場所の例をいくつかは<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>と<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>します。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
   
     > [!NOTE]
     >  プロパティ値のコンテキストにおける "継承" という用語は、依存関係プロパティに固有の事項を意味します。つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムの WPF フレームワーク レベルの機能によって、実際の依存関係プロパティ値を子要素が親要素から継承できることを意味します。 派生型を通じたマネージド コードの型およびメンバーの継承とは直接関係はありません。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。  
@@ -50,9 +48,9 @@ ms.locfileid: "57379277"
   
  作成する場合、<xref:System.Windows.FrameworkPropertyMetadata>インスタンス、フレームワーク プロパティの特性を通信する特定のプロパティの値をそのメタデータを設定する 2 つの方法があります。  
   
-1.  使用して、<xref:System.Windows.FrameworkPropertyMetadata>できるコンス トラクターのシグネチャを`flags`パラメーター。 このパラメーターは必要なすべての値の組み合わせを入力する必要があります、<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙フラグ。  
+1. 使用して、<xref:System.Windows.FrameworkPropertyMetadata>できるコンス トラクターのシグネチャを`flags`パラメーター。 このパラメーターは必要なすべての値の組み合わせを入力する必要があります、<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙フラグ。  
   
-2.  持たないシグネチャのいずれかを使用して、`flags`パラメーター、し、設定のブール型プロパティを報告する各<xref:System.Windows.FrameworkPropertyMetadata>に`true`特性の変更が必要な各。 この場合、この依存関係プロパティを持つすべての要素の構築前に、これらのプロパティを設定する必要があります。`flags` パラメーターを使用せずに引き続きメタデータを読み込めるよう、これらのブール型プロパティは読み書き可能な状態ですが、プロパティの使用前にメタデータを事実上シールする必要があります。 そのため、メタデータの要求後にこれらのプロパティを設定しようとすると、無効な操作となります。  
+2. 持たないシグネチャのいずれかを使用して、`flags`パラメーター、し、設定のブール型プロパティを報告する各<xref:System.Windows.FrameworkPropertyMetadata>に`true`特性の変更が必要な各。 この場合、この依存関係プロパティを持つすべての要素の構築前に、これらのプロパティを設定する必要があります。`flags` パラメーターを使用せずに引き続きメタデータを読み込めるよう、これらのブール型プロパティは読み書き可能な状態ですが、プロパティの使用前にメタデータを事実上シールする必要があります。 そのため、メタデータの要求後にこれらのプロパティを設定しようとすると、無効な操作となります。  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>フレームワーク プロパティ メタデータのマージ動作  
@@ -73,6 +71,7 @@ ms.locfileid: "57379277"
  この動作を実装して<xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>、派生メタデータ クラスでオーバーライドすることができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [依存関係プロパティのメタデータ](dependency-property-metadata.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)

@@ -2,12 +2,12 @@
 title: プライバシーとデータ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081851"
 ---
 # <a name="privacy-and-data-security"></a>プライバシーとデータ セキュリティ
 ADO.NET アプリケーションにおける機密情報の保護と管理は、基になる製品および作成に使用されたテクノロジに依存します。 ADO.NET そのものは、データを保護したり暗号化したりするためのサービスを提供しません。  
@@ -28,6 +28,7 @@ ADO.NET アプリケーションにおける機密情報の保護と管理は、
  <xref:System.Security.SecureString> クラスには、Data Protection API (DPAPI) を使ってメモリ内のテキストを暗号化するためのメソッドが用意されています。 文字列は不要になった段階でメモリから削除されます。 文字列の内容を簡単に読み取ることのできる `ToString` メソッドは、<xref:System.Security.SecureString> には存在しません。 `SecureString` の新しいインスタンスを作成する際は、値を渡さずに初期化することも、<xref:System.Char> オブジェクトの配列へのポインターを渡して初期化することもできます。 その後、このクラスの各種のメソッドを使って文字列を操作できます。 詳細については、ダウンロード、 [SecureString サンプル アプリケーション](https://go.microsoft.com/fwlink/?LinkId=120418)、使用する方法を示しています、`SecureString`クラスします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server のセキュリティ](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

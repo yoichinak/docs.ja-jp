@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078499"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>直線と曲線のアンチエイリアシング
 使用すると[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]直線を描画する開始点と、直線の終了点を提供するが、行の個々 のピクセルについての情報を提供する必要はありません。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 特定のディスプレイ デバイスに、行を表示するにどのピクセルはオンにする、ディスプレイ ドライバー ソフトウェアと連携して動作します。  
@@ -45,6 +45,7 @@ ms.locfileid: "57725013"
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: テキストのアンチエイリアシングを使用します。](how-to-use-antialiasing-with-text.md)
+- [方法: テキストでのアンチエイリアシングの使用](how-to-use-antialiasing-with-text.md)

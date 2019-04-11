@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092891"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>方法: ListView のカスタム表示モードを作成する
 この例は、カスタムを作成する方法を示しています。<xref:System.Windows.Controls.ListView.View%2A>のモードを<xref:System.Windows.Controls.ListView>コントロール。  
@@ -40,11 +40,12 @@ ms.locfileid: "57374766"
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- サンプル全体については、[ListView で複数のビュー (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)または[複数 Views(Visual Basic) で ListView](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)を参照してください。  
+ サンプル全体については、次を参照してください。 [ListView で複数のビュー (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)または[複数 Views(Visual Basic) で ListView](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [方法トピック](listview-how-to-topics.md)
+- [方法のトピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)
 - [GridView の概要](gridview-overview.md)

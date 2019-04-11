@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107368"
 ---
 # <a name="how-to-implement-icommandsource"></a>方法: ICommandSource を実装する
 この例は、実装することで、コマンド ソースを作成する方法を示しています。<xref:System.Windows.Input.ICommandSource>します。  コマンド ソースは、コマンドを呼び出す方法を認識しているオブジェクトです。  <xref:System.Windows.Input.ICommandSource>インターフェイスで公開される 3 つのメンバー: <xref:System.Windows.Input.ICommandSource.Command%2A>、 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>、および<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>します。  <xref:System.Windows.Input.ICommandSource.Command%2A> 呼び出されるコマンドです。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>がコマンド ソースからコマンドを処理するメソッドに渡されるユーザー定義データ型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>でコマンドが実行されているオブジェクトです。  
@@ -29,7 +29,7 @@ ms.locfileid: "57361461"
  [!code-csharp[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandsourceclassdefinition)]
  [!code-vb[ImplementICommandSource#ImplementICommandSourceClassDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandsourceclassdefinition)]  
   
- 次の手順を実装するためには、<xref:System.Windows.Input.ICommandSource>メンバー。  この例では、プロパティとして実装されます<xref:System.Windows.DependencyProperty>オブジェクト。  これにより、データ バインディングを使用するプロパティです。  詳細については、<xref:System.Windows.DependencyProperty>クラスを参照してください、[依存関係プロパティの概要](dependency-properties-overview.md)します。  データ バインディングの詳細については、、[データ バインディングの概要](../data/data-binding-overview.md)を参照してください。  
+ 次の手順を実装するためには、<xref:System.Windows.Input.ICommandSource>メンバー。  この例では、プロパティとして実装されます<xref:System.Windows.DependencyProperty>オブジェクト。  これにより、データ バインディングを使用するプロパティです。  詳細については、<xref:System.Windows.DependencyProperty>クラスを参照してください、[依存関係プロパティの概要](dependency-properties-overview.md)します。  データ バインディングの詳細については、次を参照してください。、[データ バインディングの概要](../data/data-binding-overview.md)します。  
   
  のみ、<xref:System.Windows.Input.ICommandSource.Command%2A>プロパティが次に示します。  
   
@@ -59,6 +59,7 @@ ms.locfileid: "57361461"
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>

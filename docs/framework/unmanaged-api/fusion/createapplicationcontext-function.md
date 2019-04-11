@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6b5aa78efcc19f1fc50c8e9bfc5105f9afd7d50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170964"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 関数
 この関数は、.NET Framework インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -49,9 +49,10 @@ HRESULT CreateApplicationContext (
   
  **ライブラリ:** Fusion.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

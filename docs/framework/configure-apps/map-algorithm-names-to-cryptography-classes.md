@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 6bf6e79923f0b3119c516ed97e0e86971368a34c
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098742"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>暗号化クラスへのアルゴリズム名の割り当て
 開発者を使用して暗号化オブジェクトを作成する 4 つの方法がある、 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
@@ -65,8 +65,9 @@ ms.locfileid: "55083656"
 > [!NOTE]
 >  SHA1 アルゴリズムを呼び出すことによって取得できます、<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>または**Security.CryptoConfig.CreateFromName("SHA1")** メソッド。 各メソッドは、SHA1 アルゴリズムを実装するオブジェクトを返すことのみ保証されます。 構成ファイルで同じクラスに、アルゴリズムのそれぞれの表示名をマップする必要はありません。  
   
- 既定の名前とそれをマッピングするクラスの一覧は、<xref:System.Security.Cryptography.CryptoConfig>を参照してください。  
+ 既定の名前とそれをマッピングするクラスの一覧は、次を参照してください。<xref:System.Security.Cryptography.CryptoConfig>します。  
   
 ## <a name="see-also"></a>関連項目
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+
+- [暗号化サービス](../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

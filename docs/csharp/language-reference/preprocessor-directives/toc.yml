@@ -14,11 +14,11 @@ items:
     href: preprocessor-define.md
   - name: '#undef'
     href: preprocessor-undef.md
-  - name: '#警告'
+  - name: '#warning'
     href: preprocessor-warning.md
-  - name: '#エラー'
+  - name: '#error'
     href: preprocessor-error.md
-  - name: '#線'
+  - name: '#line'
     href: preprocessor-line.md
   - name: '#region'
     href: preprocessor-region.md

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: ce9b03b1eae2a88a9e09449719b3a8e522409418
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0443e5b37e637351d6491c37ec443c93636460a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134889"
 ---
 # <a name="contracts"></a>コントラクト
 このセクションでは、定義し、Windows Communication Foundation (WCF) コントラクトを実装する方法を示します。 サービス コントラクトとは、エンドポイントが外部と何をやりとりするかを指定するものです。 より具体的には、要求/応答、一方向、双方向というような、基本的なメッセージ交換パターン (MEP) として編成された一連のメッセージに関する記述です。 サービス コントラクトが一連のメッセージ交換に論理的に関連付けられていれば、サービスの操作は単一のメッセージ交換になります。 たとえば、`Hello` という操作は、必ず 1 つのメッセージを受け取らなければならず (呼び出し元があいさつを通知できるようにするため) 、これに対してメッセージを返したり、返さなかったりします (その操作がマナーを守っているかどうかによる)。  
   
- コントラクトおよびその他のコア WCF 概念の詳細については、[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)を参照してください。 このトピックでは、サービス コントラクトの理解を深めることに焦点をあてています。 サービスへ接続するためにサービス コントラクトを使用するクライアントを構築する方法の詳細については、 [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)を参照してください。 クライアント チャネル、クライアント アーキテクチャ、およびその他のクライアントの問題の詳細については、[クライアント](../../../../docs/framework/wcf/feature-details/clients.md)を参照してください。  
+ コントラクトおよびその他のコア WCF 概念の詳細については、次を参照してください。[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)します。 このトピックでは、サービス コントラクトの理解を深めることに焦点をあてています。 サービスへ接続するためにサービス コントラクトを使用するクライアントを構築する方法の詳細については、 [WCF クライアントの概要](../../../../docs/framework/wcf/wcf-client-overview.md)を参照してください。 クライアント チャネル、クライアント アーキテクチャ、およびその他のクライアントの問題の詳細については、次を参照してください。[クライアント](../../../../docs/framework/wcf/feature-details/clients.md)します。  
   
 ## <a name="overview"></a>概要  
  このトピックでは、大まかな概念的位置付けの設計と実装の WCF サービスを提供します。 サブトピックでは、設計と実装の仕様についてより詳しく説明します。 設計と、WCF アプリケーションを実装する前にお勧めします。  
@@ -48,24 +48,25 @@ ms.locfileid: "54499302"
   
 -   メッセージを正常に処理するために必要な通信インフラストラクチャに関する明確な記述。 たとえば、正常な通信を確立するためにセキュリティが必要かどうか、また、どのような形式のセキュリティが必要かなどの詳細を記述します。  
   
- この種の他のプラットフォーム (など、Microsoft 以外のプラットフォーム) 上のアプリケーションに情報を伝達するために XML サービス コントラクトが公開されているで表現される標準の XML 形式など[Web サービス記述言語 (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004)[XML スキーマ (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005)、他のユーザーの間で。 多くのプラットフォームの開発者は、このパブリック コントラクト情報を使用して、サービスと通信できるアプリケーションを作成できます。これは、開発者が仕様の言語を理解しているだけでなく、これらの言語はサービスがサポートするパブリックな形式、書式、およびプロトコルを記述することで相互運用できるように設計されているためです。 WCF がこの種の情報を処理する方法の詳細については、[メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)を参照してください。  
+ この種の他のプラットフォーム (など、Microsoft 以外のプラットフォーム) 上のアプリケーションに情報を伝達するために XML サービス コントラクトが公開されているで表現される標準の XML 形式など[Web サービス記述言語 (WSDL)](https://go.microsoft.com/fwlink/?LinkId=87004)[XML スキーマ (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005)、他のユーザーの間で。 多くのプラットフォームの開発者は、このパブリック コントラクト情報を使用して、サービスと通信できるアプリケーションを作成できます。これは、開発者が仕様の言語を理解しているだけでなく、これらの言語はサービスがサポートするパブリックな形式、書式、およびプロトコルを記述することで相互運用できるように設計されているためです。 WCF がこの種の情報を処理する方法の詳細については、次を参照してください。[メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)します。  
   
  コントラクトはさまざまな方法で表現できます。ただし、WSDL と XSD は、利用しやすい方法でサービスを記述する優れた言語ではあるものの直接使用するのが難しいため、どのような場合でも、サービス コントラクトの実装ではなく、サービスを記述するだけです。 そのため、WCF アプリケーションを使用して、マネージ属性、インターフェイス、およびクラスの構造を定義して、サービスを実装します。  
   
  マネージ型で定義されたコントラクトを変換することができます (とも呼ばれます*エクスポート*) メタデータとして、WSDL と XSD — クライアントや他のプラットフォームでは特にその他のサービス実装側で必要な場合。 これにより、どのクライアント アプリケーションに対してもパブリック メタデータを使用して記述できる、簡単なプログラミング モデルが実現します。 輸送と、セキュリティ関連の情報など、基になる SOAP メッセージの詳細については、XML 型システムに必要な変換と、サービス コントラクトの型システムの間に自動的に実行するには、WCF をおくことができます。  
   
- コントラクトの設計に関する詳細については、[Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。 コントラクトの実装の詳細については、[Implementing Service Contracts](../../../../docs/framework/wcf/implementing-service-contracts.md)を参照してください。  
+ コントラクトの設計に関する詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。 コントラクトの実装の詳細については、次を参照してください。 [Implementing Service Contracts](../../../../docs/framework/wcf/implementing-service-contracts.md)します。  
   
- さらに、WCF サービス コントラクト、メッセージ レベルで完全に開発する機能も提供します。 サービス コントラクト、メッセージ レベルでの開発の詳細については、[Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)を参照してください。 SOAP XML 以外のサービスの開発に関する詳細については、[POX アプリケーションとの相互運用](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)を参照してください。  
+ さらに、WCF サービス コントラクト、メッセージ レベルで完全に開発する機能も提供します。 サービス コントラクト、メッセージ レベルでの開発の詳細については、次を参照してください。 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)します。 SOAP XML 以外のサービスの開発に関する詳細については、次を参照してください。 [POX アプリケーションとの相互運用](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md)します。  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>要件の階層の理解  
  サービス コントラクトは、操作をグループ化し、MEP、メッセージの種類、およびメッセージに格納されているデータ型を指定します。さらに、実装でコントラクトをサポートするために必要な実行時の動作のカテゴリ (メッセージの暗号化と署名を要求するなど) を示します。 ただし、サービス コントラクト自体は、これらの要件を満たす方法を正確に指定するわけではなく、これらの要件が必要であることを示すだけです。 暗号化の種類やメッセージに署名する方法は、準拠サービスの実装と構成によって決まります。  
   
  コントラクトに必要なのは、サービス コントラクトの実装と、動作を追加するための実行時の構成に関するものであるという点に注意してください。 使用するサービスを公開するために満たす必要のある要件のセットは、上記の要件のセットを基に作成されます。 コントラクトが実装の要件を作成しても、実装ではサービスの実行を可能にするために、さらに多くの構成とバインディングを必要とする場合があります。 また、ホスト アプリケーションも、サービス構成とバインディングによって追加されるすべての要件をサポートする必要があります。  
   
- この追加要件の処理は、設計、実装、構成、および Windows Communication Foundation (WCF) サービス アプリケーションをホストしているときに覚えておく必要があります。 たとえば、コントラクトでセッションをサポートする必要があることが指定されている場合があります。 その場合、コントラクトの要件をサポートするようにバインディングを構成する必要があります。そうしないと、サービス実装は機能しなくなります。 また、サービスが統合 Windows 認証を必要としており、インターネット インフォメーション サービス (IIS) でホストされる場合、サービスが存在する Web アプリケーションでは、統合 Windows 認証を有効にし、匿名サポートを無効にしておく必要があります。 機能と別のサービス ホスト アプリケーションの種類の影響の詳細については、[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)を参照してください。  
+ この追加要件の処理は、設計、実装、構成、および Windows Communication Foundation (WCF) サービス アプリケーションをホストしているときに覚えておく必要があります。 たとえば、コントラクトでセッションをサポートする必要があることが指定されている場合があります。 その場合、コントラクトの要件をサポートするようにバインディングを構成する必要があります。そうしないと、サービス実装は機能しなくなります。 また、サービスが統合 Windows 認証を必要としており、インターネット インフォメーション サービス (IIS) でホストされる場合、サービスが存在する Web アプリケーションでは、統合 Windows 認証を有効にし、匿名サポートを無効にしておく必要があります。 機能と別のサービス ホスト アプリケーションの種類の影響の詳細については、次を参照してください。[ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [サービス コントラクトの設計](../../../../docs/framework/wcf/designing-service-contracts.md)
 - [サービス コントラクトの実装](../../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191449"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>方法: Freezable を読み取り専用にする
 この例では、作成、<xref:System.Windows.Freezable>呼び出すことによって、読み取り専用の<xref:System.Windows.Freezable.Freeze%2A>メソッド。  
@@ -21,7 +21,7 @@ ms.locfileid: "57360352"
   
 -   アニメーション化されたまたは、データ バインドされたプロパティ。  
   
--   動的なリソースが設定されているプロパティがあります。 動的リソースの詳細については、、 [XAML リソース](xaml-resources.md)を参照してください。  
+-   動的なリソースが設定されているプロパティがあります。 動的リソースの詳細については、次を参照してください。、 [XAML リソース](xaml-resources.md)します。  
   
 -   含まれている<xref:System.Windows.Freezable>サブオブジェクトを固定することはできません。  
   
@@ -36,8 +36,9 @@ ms.locfileid: "57360352"
  詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](freezable-objects-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Freezable オブジェクトの概要](freezable-objects-overview.md)
-- [方法トピック](base-elements-how-to-topics.md)
+- [方法のトピック](base-elements-how-to-topics.md)

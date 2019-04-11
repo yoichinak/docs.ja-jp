@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087626"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM アプリケーションとの統合の概要
 Windows Communication Foundation (WCF) は、マネージ コードを開発者には、接続型アプリケーションを作成するための豊富な環境を提供します。 ただし、アンマネージ COM ベースのコードにかなりの投資がある、移行したくない場合は、まだ統合できます WCF Web サービスの既存のコードに直接 WCF サービス モニカーを使用しています。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) は、マネージ コードを開発者�
 >  `</configuration>`  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 登録し、サービス モニカーの構成](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [方法: サービス モニカーを登録および構成する](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
