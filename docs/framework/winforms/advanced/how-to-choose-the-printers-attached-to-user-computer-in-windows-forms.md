@@ -89,7 +89,7 @@ ms.locfileid: "57702734"
        }  
     ```  
   
-     (Visual C# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
+     (Visual C# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])フォームのコンストラクターに次のコードを配置して、イベントハンドラを登録します。
   
     ```csharp  
     this.printDocument1.PrintPage += new  
