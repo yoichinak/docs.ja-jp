@@ -1,5 +1,5 @@
 ---
-title: '方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける'
+title: '方法: ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337059"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>方法: ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける
 > [!NOTE]
 >  <xref:System.Windows.Forms.MenuStrip>と<xref:System.Windows.Forms.ContextMenuStrip>が置換または追加する機能、<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>、以前のバージョン コントロール<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>を選択した場合に、旧バージョンとの互換性と将来の使用のため保持されます。  
   
@@ -28,23 +28,23 @@ ms.locfileid: "57720385"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>デザイン時に NotifyIcon コンポーネントのショートカット メニューを関連付ける  
   
-1.  追加、<xref:System.Windows.Forms.NotifyIcon>をフォームにコンポーネントなど、重要なプロパティを設定し、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>と<xref:System.Windows.Forms.NotifyIcon.Visible%2A>プロパティ。  
+1. 追加、<xref:System.Windows.Forms.NotifyIcon>をフォームにコンポーネントなど、重要なプロパティを設定し、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>と<xref:System.Windows.Forms.NotifyIcon.Visible%2A>プロパティ。  
   
      詳細については、「[方法 :アプリケーション アイコンをタスク バーで、Windows フォームの NotifyIcon コンポーネントの追加](app-icons-to-the-taskbar-with-wf-notifyicon.md)します。  
   
-2.  追加、<xref:System.Windows.Forms.ContextMenu>を Windows フォーム コンポーネント。  
+2. 追加、<xref:System.Windows.Forms.ContextMenu>を Windows フォーム コンポーネント。  
   
      実行時に使用できるようにするコマンドを表すショートカット メニューにメニュー項目を追加します。 アクセス キーなど、これらのメニュー項目をメニューの拡張機能を追加するよい機会もです。  
   
-3.  設定、<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>のプロパティ、<xref:System.Windows.Forms.NotifyIcon>コンポーネントを追加したショートカット メニュー。  
+3. 設定、<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>のプロパティ、<xref:System.Windows.Forms.NotifyIcon>コンポーネントを追加したショートカット メニュー。  
   
      このプロパティ設定すると、タスク バーのアイコンがクリックされたときに、ショートカット メニューが表示されます。  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>NotifyIcon コンポーネントにプログラムでショートカット メニューを関連付ける  
   
-1.  インスタンスを作成、<xref:System.Windows.Forms.NotifyIcon>クラスと<xref:System.Windows.Forms.ContextMenu>クラスのインスタンスとアプリケーションで必要なプロパティ設定 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>と<xref:System.Windows.Forms.NotifyIcon.Visible%2A>プロパティを<xref:System.Windows.Forms.NotifyIcon>コンポーネントのメニュー項目を<xref:System.Windows.Forms.ContextMenu>コンポーネントの場合)。  
+1. インスタンスを作成、<xref:System.Windows.Forms.NotifyIcon>クラスと<xref:System.Windows.Forms.ContextMenu>クラスのインスタンスとアプリケーションで必要なプロパティ設定 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>と<xref:System.Windows.Forms.NotifyIcon.Visible%2A>プロパティを<xref:System.Windows.Forms.NotifyIcon>コンポーネントのメニュー項目を<xref:System.Windows.Forms.ContextMenu>コンポーネントの場合)。  
   
-2.  設定、<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>のプロパティ、<xref:System.Windows.Forms.NotifyIcon>コンポーネントを追加したショートカット メニュー。  
+2. 設定、<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>のプロパティ、<xref:System.Windows.Forms.NotifyIcon>コンポーネントを追加したショートカット メニュー。  
   
      このプロパティ設定すると、タスク バーのアイコンがクリックされたときに、ショートカット メニューが表示されます。  
   
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
 - [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)

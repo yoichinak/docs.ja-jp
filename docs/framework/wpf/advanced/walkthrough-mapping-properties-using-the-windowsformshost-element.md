@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング'
+title: 'チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 86a7a8a937b9407690d7f1981b91857d1b44ded1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296525"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て
 
 このチュートリアルは、使用する方法を示します、<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>プロパティにマップする[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。
 
@@ -33,7 +33,7 @@ ms.locfileid: "57373882"
 
 -   既定のプロパティ マッピングを拡張します。
 
-このチュートリアルで示すタスクの完全なコード一覧については、[WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160019)を参照してください。
+このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160019)します。
 
 マップが完了したらができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、ホスト型に対応するプロパティをプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。
 
@@ -45,11 +45,11 @@ ms.locfileid: "57373882"
 
 ## <a name="create-and-set-up-the-project"></a>作成し、プロジェクトを設定します。
 
-1.  作成、 **WPF アプリ**という名前のプロジェクト`PropertyMappingWithWfhSample`します。
+1. 作成、 **WPF アプリ**という名前のプロジェクト`PropertyMappingWithWfhSample`します。
 
-2.  **ソリューション エクスプ ローラー**、WindowsFormsIntegration.dll という WindowsFormsIntegration アセンブリへの参照を追加します。
+2. **ソリューション エクスプ ローラー**、WindowsFormsIntegration.dll という WindowsFormsIntegration アセンブリへの参照を追加します。
 
-3.  **ソリューション エクスプ ローラー**System.Drawing、および System.Windows.Forms アセンブリへの参照を追加します。
+3. **ソリューション エクスプ ローラー**System.Drawing、および System.Windows.Forms アセンブリへの参照を追加します。
 
 ## <a name="defining-the-application-layout"></a>アプリケーションのレイアウトを定義します。
 
@@ -57,15 +57,15 @@ ms.locfileid: "57373882"
 
 ### <a name="to-define-the-application-layout"></a>アプリケーションのレイアウトを定義するには
 
-1.  Window1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。
+1. Window1.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。
 
-2.  既存のコードを次のコードに置き換えます。
+2. 既存のコードを次のコードに置き換えます。
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3.  Window1.xaml.cs のコード エディターでを開きます。
+3. Window1.xaml.cs のコード エディターでを開きます。
 
-4.  ファイルの上部にある次の名前空間をインポートします。
+4. ファイルの上部にある次の名前空間をインポートします。
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
@@ -138,20 +138,20 @@ ms.locfileid: "57373882"
 
 ### <a name="to-initialize-your-property-mappings"></a>プロパティ マッピングを初期化するには
 
-1.  定義に次のコードをコピー、`Window1`クラス。
+1. 定義に次のコードをコピー、`Window1`クラス。
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
      `WindowLoaded`メソッド ハンドル、<xref:System.Windows.FrameworkElement.Loaded>イベントと、次の初期化を実行します。
 
-    -   作成、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox>コントロール。
+    -   作成、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>コントロール。
 
     -   プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
 
     -   マップされたプロパティに初期値を割り当てます。
 
-2.  **F5** キーを押してアプリケーションをビルドし、実行します。 効果を確認するチェック ボックスをクリックして、<xref:System.Windows.FrameworkElement.FlowDirection%2A>マッピングします。 チェック ボックスをクリックすると、レイアウトは左から右方向を反転させます。
+2. **F5** キーを押してアプリケーションをビルドし、実行します。 効果を確認するチェック ボックスをクリックして、<xref:System.Windows.FrameworkElement.FlowDirection%2A>マッピングします。 チェック ボックスをクリックすると、レイアウトは左から右方向を反転させます。
 
 ## <a name="see-also"></a>関連項目
 

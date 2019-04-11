@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119133"
 ---
 # <a name="thread-pool-etw-events"></a>スレッド プール ETW イベント
 <a name="top"></a> これらのイベントは、ワーカー スレッドと I/O スレッドに関する情報を収集します。  
@@ -216,4 +216,5 @@ ms.locfileid: "54503314"
 |ClrInstanceID|Win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

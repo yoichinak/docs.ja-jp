@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba0838d562ac0ec0ea531161c437dec5ce66c3f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304234"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。
 この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。 呼び出しの結果に 'Await' 演算子を適用することを検討してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "54609799"
   
  ベスト プラクティスとしては、常に呼び出しを待機する必要があります。  
   
- 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
+ 既定では、このメッセージは警告です。 警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
  **エラー ID:** BC42358  
   
@@ -95,13 +95,13 @@ ms.locfileid: "54609799"
 ## <a name="example"></a>例  
  次の Windows Presentation Foundation (WPF) アプリケーションには、前の例のメソッドが含まれています。 このアプリケーションを設定するには、次の手順を実行します。  
   
-1.  WPF アプリケーションを作成し、 `AsyncWarning`という名前を付けます。  
+1. WPF アプリケーションを作成し、 `AsyncWarning`という名前を付けます。  
   
-2.  Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
+2. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。  
   
      タブが表示されない場合は、 **ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。  
   
-3.  MainWindow.xaml の **[XAML]** ビューで、コードを次のコードに置き換えます。  
+3. MainWindow.xaml の **[XAML]** ビューで、コードを次のコードに置き換えます。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ ms.locfileid: "54609799"
   
      ボタンとテキスト ボックスを含むシンプルなウィンドウが、MainWindow.xaml の **[デザイン]** ビューに表示されます。  
   
-     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、次を参照してください。、「WPF アプリケーションを作成するには"および"単純な WPF MainWindow をデザインするには」のセクションでは[チュートリアル。Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。  
+     XAML デザイナーの詳細については、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」を参照してください。 独自の単純な UI を構築する方法については、「[チュートリアル: Async と Await を使用した Web へのアクセス」の WPF アプリケーションの作成に関するセクションと単純な WPF MainWindow のデザインに関するセクションを参照してください。Async と Await を使用した Web へのアクセス](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」をご覧ください。  
   
-4.  MainWindow.xaml.vb のコードを次のコードに置き換えます。  
+4. MainWindow.xaml.vb のコードを次のコードに置き換えます。  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ ms.locfileid: "54609799"
     ' Exiting the Click event handler.  
     ```  
   
-5.  F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。  
+5. F5 キーを押してプログラムを実行し、 **[Start]** を複数回クリックします。  
   
      想定される出力がコードの最後に表示されます。  
   

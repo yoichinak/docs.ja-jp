@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835285"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303091"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>方法: 別の配列 (Visual Basic) を 1 つの配列を割り当てる
 配列がオブジェクトであるため、他のオブジェクト型のような代入ステートメントで使用することができます。 配列変数の配列の要素と、ランク、および長さの情報を構成するデータにポインターを保持し、割り当ては、このポインターのみをコピーします。  
   
 ### <a name="to-assign-one-array-to-another-array"></a>別の配列に 1 つの配列を割り当てる  
   
-1.  2 つの配列に同じランク (次元数) と互換性のある要素のデータ型があることを確認します。  
+1. 2 つの配列に同じランク (次元数) と互換性のある要素のデータ型があることを確認します。  
   
-2.  標準の代入ステートメントを使用して、コピー先の配列を元の配列を割り当てます。 いずれの配列名をかっこでは使用しないでください。  
+2. 標準の代入ステートメントを使用して、コピー先の配列を元の配列を割り当てます。 いずれの配列名をかっこでは使用しないでください。  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -47,4 +47,4 @@ ms.locfileid: "58835285"
 - [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [配列の変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

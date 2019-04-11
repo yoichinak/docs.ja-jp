@@ -2,12 +2,12 @@
 title: シーケンス演算子
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113686"
 ---
 # <a name="sequence-operators"></a>シーケンス演算子
 一般的には、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、次のいずれかの性質を持つシーケンス演算子はサポートされません。  
@@ -43,7 +43,8 @@ ms.locfileid: "54666164"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>.NET との相違  
- サポートされるすべてのシーケンス演算子は、`Average` を除いて、共通言語ランタイム (CLR) で正常に動作します。 `Average` は、平均化される型と同じ型の値を返しますが、CLR での `Average` は、常に <xref:System.Double> または <xref:System.Decimal> を返します。 ソース引数が明示的に double / decimal にキャストされている場合、または、セレクターが double / decimal にキャストする場合、作成される SQL でもこのような変換が行われるため、結果に問題はありません。  
+ サポートされるすべてのシーケンス演算子は、`Average` を除いて、共通言語ランタイム (CLR) で正常に動作します。 `Average` 平均化される型と同じ型の値を返すに対し、CLR で`Average`常にいずれかを返します、<xref:System.Double>または<xref:System.Decimal>します。 ソース引数が明示的に double / decimal にキャストされている場合、または、セレクターが double / decimal にキャストする場合、作成される SQL でもこのような変換が行われるため、結果に問題はありません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

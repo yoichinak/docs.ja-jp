@@ -2,12 +2,12 @@
 title: デザイナーのホスト変更
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328167"
 ---
 # <a name="designer-rehosting"></a>デザイナーのホスト変更
 デザイナーのホスト変更は、カスタム アプリケーション内でワークフロー デザイン キャンバスをホストすることを示す一般的なシナリオです。 多くのユーザーにとって、使い慣れたホスト アプリケーションは Visual Studio ですが、アプリケーションでワークフロー デザイナーを表示すると役立つ場合があるシナリオも数多くあります。  
@@ -40,7 +40,7 @@ ms.locfileid: "48837359"
 </Grid>  
 ```  
   
- 次に、このサンプルではデザイナーを作成し、そのプライマリ <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> および <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> をユーザー インターフェイスの適切なコンテナーに関連付けます。 次の例に示すいくつかのコード行について説明します。 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 呼び出しは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] に付属しているアクティビティの既定のアクティビティ デザイナーを関連付けるために必要です。 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> は、編集する WF 項目を渡すために呼び出されます。 最後に、<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (プライマリ キャンバス) および <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (プロパティ グリッド) がユーザー インターフェイス画面に配置されます。  
+ 次に、このサンプルではデザイナーを作成し、そのプライマリ <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> および <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> をユーザー インターフェイスの適切なコンテナーに関連付けます。 次の例に示すいくつかのコード行について説明します。 <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> 呼び出しは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] に付属しているアクティビティの既定のアクティビティ デザイナーを関連付けるために必要です。 <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> 編集する WF 項目を渡すと呼びます。 最後に、<xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (プライマリ キャンバス) および <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (プロパティ グリッド) がユーザー インターフェイス画面に配置されます。  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>サンプルの使用  
   
-1.  Visual Studio 2010 で DesignerRehosting.sln ソリューションを開きます。  
+1. Visual Studio 2010 で DesignerRehosting.sln ソリューションを開きます。  
   
-2.  F5 キーを押してアプリケーションをコンパイルし、実行します。  
+2. F5 キーを押してアプリケーションをコンパイルし、実行します。  
   
-3.  WPF アプリケーションが再ホストされたデザイナーと共に起動します。  
+3. WPF アプリケーションが再ホストされたデザイナーと共に起動します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

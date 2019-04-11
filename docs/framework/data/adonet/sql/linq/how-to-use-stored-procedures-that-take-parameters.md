@@ -1,19 +1,19 @@
 ---
-title: '方法: パラメーターを受け取るストアド プロシージャを使用します。'
+title: '方法: パラメーターを受け取るストアド プロシージャを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181767"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>方法: パラメーターを受け取るストアド プロシージャを使用します。
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、出力パラメーターを参照パラメーターに対応付け、値型はパラメーターを null 許容型として宣言します。  
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>方法: パラメーターを受け取るストアド プロシージャを使用する
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] パラメーターを参照する出力パラメーターをマップし、値型の null 許容型としてパラメーターを宣言します。  
   
  入力パラメーターの行セットを返すクエリで使用する方法の例は、次を参照してください。[方法。行セットを返す](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)します。  
   
@@ -40,6 +40,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Null 許容型の使用](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)

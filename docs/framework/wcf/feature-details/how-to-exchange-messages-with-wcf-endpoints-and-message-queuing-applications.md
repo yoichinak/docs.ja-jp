@@ -1,18 +1,18 @@
 ---
-title: '方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換'
+title: '方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: f0bfb966026d7588de63bef38eb289bb33a7a688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310306"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する
 既存のメッセージ キュー (MSMQ) アプリケーションは、WCF メッセージから MSMQ メッセージの変換に、MSMQ 統合バインディングを使用して、Windows Communication Foundation (WCF) アプリケーションと統合できます。 これにより、WCF クライアントから MSMQ 受信側アプリケーションへの呼び出しと MSMQ の送信元アプリケーションから WCF サービスを呼び出すことができます。  
   
  このセクションで使用する方法を説明します<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>(1)、WCF クライアントと System.Messaging と (2) MSMQ アプリケーション クライアントと WCF サービスを使用して記述された MSMQ アプリケーション サービスのキューに置かれた通信します。  
@@ -23,48 +23,45 @@ ms.locfileid: "54620163"
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>MSMQ クライアントからのメッセージを受信する WCF サービスを作成するには  
   
-1.  次のコード例に示すように、MSMQ の送信側アプリケーションからキューに置かれたメッセージを受信する WCF サービスのサービス コントラクトを定義するインターフェイスを定義します。  
+1. 次のコード例に示すように、MSMQ の送信側アプリケーションからキューに置かれたメッセージを受信する WCF サービスのサービス コントラクトを定義するインターフェイスを定義します。  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2.  次のコード例に示すように、定義したインターフェイスを実装し、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性をクラスに適用します。  
+2. 次のコード例に示すように、定義したインターフェイスを実装し、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性をクラスに適用します。  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3.  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を指定する構成ファイルを作成します。  
-  
-  
-  
-4.  構成されたバインディングを使用する <xref:System.ServiceModel.ServiceHost> オブジェクトをインスタンス化します。  
-  
-  
-  
+3. <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を指定する構成ファイルを作成します。  
+
+4. 構成されたバインディングを使用する <xref:System.ServiceModel.ServiceHost> オブジェクトをインスタンス化します。  
+
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>MSMQ の受信側アプリケーションにメッセージを送信する WCF クライアントを作成するには  
   
-1.  次のコード例に示すように送信しますが、MSMQ の受信側にメッセージをキューに置かれた WCF クライアントのサービス コントラクトを定義するインターフェイスを定義します。  
+1. 次のコード例に示すように送信しますが、MSMQ の受信側にメッセージをキューに置かれた WCF クライアントのサービス コントラクトを定義するインターフェイスを定義します。  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  WCF クライアントが MSMQ の受信側の呼び出しに使用されるクライアント クラスを定義します。  
+2. WCF クライアントが MSMQ の受信側の呼び出しに使用されるクライアント クラスを定義します。  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
   
-3.  MsmqIntegrationBinding バインディングの使用を指定する構成を作成します。  
+3. MsmqIntegrationBinding バインディングの使用を指定する構成を作成します。  
   
      [!code-csharp[S_WcfToMsmq#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#3)]
      [!code-vb[S_WcfToMsmq#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#3)]  
   
-4.  クライアント クラスのインスタンスを作成し、メッセージ受信サービスによって定義されたメソッドを呼び出します。  
+4. クライアント クラスのインスタンスを作成し、メッセージ受信サービスによって定義されたメソッドを呼び出します。  
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [方法: WCF エンドポイントとキューに置かれたメッセージを交換します。](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Windows Communication Foundation でのメッセージ キュー](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [メッセージ キュー (MSMQ) のインストール](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Windows Communication Foundation へのメッセージ キュー](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

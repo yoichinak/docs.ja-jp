@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098183"
 ---
 # <a name="setting-up-a-profiling-environment"></a>プロファイル環境の設定
 > [!NOTE]
@@ -91,9 +91,10 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  環境変数 COR_ENABLE_PROFILING と COR_PROFILER を設定し、プロファイラー DLL を登録したら、これらの変更が Windows サービスで検出されるようにするために、ターゲット コンピューターを再起動してください。  
   
- これらの変更を行うと、プロファイリングがシステム全体で有効になります。 以降に実行するすべてのマネージ アプリケーションがプロファイルされるのを避けるには、ターゲット コンピューターを再起動した後で、システム環境変数を削除します。  
+ これらの変更を行うと、プロファイリングがシステム全体で有効になります。 以降に実行するすべてのマネージド アプリケーションがプロファイルされるのを避けるには、ターゲット コンピューターを再起動した後で、システム環境変数を削除します。  
   
  この方法では、すべての CLR プロセスもプロファイリングの対象になります。 プロファイラーは、ロジックを追加する必要があります、 [icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)現在のプロセスが関心のあるかどうかを検出するためにコールバックします。 プロファイリングの対象ではない場合、プロファイラーは、初期化を実行せずにコールバックからエラーを返すことができます。  
   
 ## <a name="see-also"></a>関連項目
-- [プロファイルの概要](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+
+- [プロファイリングの概要](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

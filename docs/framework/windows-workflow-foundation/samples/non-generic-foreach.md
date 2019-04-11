@@ -2,17 +2,17 @@
 title: 非ジェネリックの ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303545"
 ---
 # <a name="non-generic-foreach"></a>非ジェネリックの ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] のツールボックスには、制御フロー アクティビティのセットが用意されています。これには、<xref:System.Activities.Statements.ForEach%601> コレクションを反復処理できる <xref:System.Collections.Generic.IEnumerable%601> が含まれています。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] などの制御フロー アクティビティのセットをツールボックスに付属<xref:System.Activities.Statements.ForEach%601>、反復処理に使用できる<xref:System.Collections.Generic.IEnumerable%601>コレクション。  
   
- <xref:System.Activities.Statements.ForEach%601> では、その <xref:System.Activities.Statements.ForEach%601.Values%2A> プロパティを <xref:System.Collections.Generic.IEnumerable%601> 型にする必要があります。 このため、ユーザーは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイス (<xref:System.Collections.ArrayList> など) を実装するデータ構造を反復処理できません。 <xref:System.Activities.Statements.ForEach%601> の非ジェネリック バージョンにはこの要件はありませんが、コレクション内の値の型の互換性を確保するために実行時の複雑さが増します。  
+ <xref:System.Activities.Statements.ForEach%601> 必要があります、<xref:System.Activities.Statements.ForEach%601.Values%2A>プロパティの型を<xref:System.Collections.Generic.IEnumerable%601>します。 このため、ユーザーは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイス (<xref:System.Collections.ArrayList> など) を実装するデータ構造を反復処理できません。 <xref:System.Activities.Statements.ForEach%601> の非ジェネリック バージョンにはこの要件はありませんが、コレクション内の値の型の互換性を確保するために実行時の複雑さが増します。  
   
  このサンプルでは、非ジェネリックの <xref:System.Activities.Statements.ForEach%601> アクティビティとそのデザイナーを実装する方法を示します。 このアクティビティは、<xref:System.Collections.ArrayList> の反復処理に使用できます。  
   
@@ -67,9 +67,9 @@ Activity sampleUsage =
    };  
 ```  
   
-|状態|メッセージ|重大度|例外の種類|  
+|条件|メッセージ|重要度|例外の種類|  
 |---------------|-------------|--------------|--------------------|  
-|値が `null` である|必須のアクティビティ引数 'Values' の値が指定されませんでした。|Error|<xref:System.InvalidOperationException>|  
+|値は、します。 `null`|必須のアクティビティ引数 'Values' の値が指定されませんでした。|Error|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach デザイナー  
  サンプルのアクティビティ デザイナーは、組み込みの <xref:System.Activities.Statements.ForEach%601> アクティビティ用に提供されているデザイナーに外観が似ています。 ツールボックス、デザイナーが表示されます、**サンプル**、**非ジェネリック アクティビティ**カテゴリ。 デザイナーの名前は**ForEachWithBodyFactory**ツールボックスで、活動が公開するため、<xref:System.Activities.Presentation.IActivityTemplateFactory>で適切に構成されたアクティビティを作成するツールボックスで、<xref:System.Activities.ActivityAction>します。  
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>このサンプルを実行するには  
   
-1.  選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
+1. 選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
   
     1.  **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
   
     2.  **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
   
-2.  プロジェクトをビルドして実行します。  
+2. プロジェクトをビルドして実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

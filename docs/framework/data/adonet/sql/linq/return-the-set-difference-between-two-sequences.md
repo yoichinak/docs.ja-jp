@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
-ms.openlocfilehash: 282ec36a2ad489e77db9fb5b338d3189c3001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609032"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124281"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>2 つのシーケンスの差集合の取得
 2 つのシーケンスの差集合を返すには、<xref:System.Linq.Queryable.Except%2A> 演算子を使用します。  
@@ -24,5 +24,6 @@ ms.locfileid: "54609032"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、<xref:System.Linq.Queryable.Except%2A> 演算は集合でのみ適切に定義されます。 マルチセットのセマンティクスは未定義です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

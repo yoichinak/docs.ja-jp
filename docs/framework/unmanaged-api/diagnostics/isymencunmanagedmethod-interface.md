@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f46aeed0a303278fd67265e471bfa13b43cede12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4474269688094ea6c81b06659727acfb9c2ad6c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095712"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod インターフェイス
 エディット コンティニュの機能についてを説明します。  
@@ -40,4 +40,5 @@ ms.locfileid: "54680189"
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

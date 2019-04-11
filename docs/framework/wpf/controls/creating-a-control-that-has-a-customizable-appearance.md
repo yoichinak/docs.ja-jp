@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: bb82921070cb5040cd279830bafd3d0e718d1374
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298345"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>外観をカスタマイズできるコントロールの作成
 <a name="introduction"></a>
@@ -47,7 +47,7 @@ ms.locfileid: "57372708"
   
 -   [コントロール コントラクトを提供します。](#providing_the_control_contract)  
   
--   [完全な例](#complete_example)  
+-   [コード例全体](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -94,15 +94,15 @@ ms.locfileid: "57372708"
   
  次のプラクティスは、コントロールが不足しているに適切に応答することを確認<xref:System.Windows.FrameworkElement>オブジェクト。  
   
-1.  設定、`x:Name`属性ごとに<xref:System.Windows.FrameworkElement>コード内で参照する必要があります。  
+1. 設定、`x:Name`属性ごとに<xref:System.Windows.FrameworkElement>コード内で参照する必要があります。  
   
-2.  それぞれのプライベート プロパティを定義<xref:System.Windows.FrameworkElement>と対話する必要があります。  
+2. それぞれのプライベート プロパティを定義<xref:System.Windows.FrameworkElement>と対話する必要があります。  
   
-3.  サブスクライブし、コントロールで処理するイベントの登録を解除、<xref:System.Windows.FrameworkElement>プロパティがアクセサーを設定します。  
+3. サブスクライブし、コントロールで処理するイベントの登録を解除、<xref:System.Windows.FrameworkElement>プロパティがアクセサーを設定します。  
   
-4.  設定、<xref:System.Windows.FrameworkElement>プロパティで定義されている手順 2、<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>メソッド。 これは、最も古いを<xref:System.Windows.FrameworkElement>で、<xref:System.Windows.Controls.ControlTemplate>はコントロールに使用できます。 使用して、`x:Name`の<xref:System.Windows.FrameworkElement>から取得する、<xref:System.Windows.Controls.ControlTemplate>します。  
+4. 設定、<xref:System.Windows.FrameworkElement>プロパティで定義されている手順 2、<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>メソッド。 これは、最も古いを<xref:System.Windows.FrameworkElement>で、<xref:System.Windows.Controls.ControlTemplate>はコントロールに使用できます。 使用して、`x:Name`の<xref:System.Windows.FrameworkElement>から取得する、<xref:System.Windows.Controls.ControlTemplate>します。  
   
-5.  いることを確認、<xref:System.Windows.FrameworkElement>ない`null`そのメンバーにアクセスする前にします。  場合は`null`エラーを報告しません。  
+5. いることを確認、<xref:System.Windows.FrameworkElement>ない`null`そのメンバーにアクセスする前にします。  場合は`null`エラーを報告しません。  
   
  次の例に示す方法、`NumericUpDown`コントロールとやり取り<xref:System.Windows.FrameworkElement>上記の推奨事項に従ってオブジェクト。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "57372708"
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>VisualStateManager を使用して状態を管理するには  
  <xref:System.Windows.VisualStateManager>のコントロールの状態を追跡し、状態間の遷移に必要なロジックを実行します。 追加すると<xref:System.Windows.VisualState>オブジェクトを<xref:System.Windows.Controls.ControlTemplate>に追加する、<xref:System.Windows.VisualStateGroup>を追加し、<xref:System.Windows.VisualStateGroup>を<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>添付プロパティように、<xref:System.Windows.VisualStateManager>それにアクセスします。  
   
- 次の例では、繰り返しの前の例を示す、<xref:System.Windows.VisualState>に対応するオブジェクト、`Positive`と`Negative`コントロールの状態。 <xref:System.Windows.Media.Animation.Storyboard>で、 `Negative` <xref:System.Windows.VisualState>オン、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>赤。   ときに、`NumericUpDown`コントロールが、`Negative`でストーリー ボードの状態、`Negative`状態が開始します。  次に、<xref:System.Windows.Media.Animation.Storyboard>で、`Negative`が停止状態のコントロールに戻ったとき、`Positive`状態。  `Positive` <xref:System.Windows.VisualState>を格納する必要はありません、<xref:System.Windows.Media.Animation.Storyboard>ためと、<xref:System.Windows.Media.Animation.Storyboard>の`Negative`停止すると、<xref:System.Windows.Controls.TextBlock.Foreground%2A>元の色を返します。  
+ 次の例では、繰り返しの前の例を示す、<xref:System.Windows.VisualState>に対応するオブジェクト、`Positive`と`Negative`コントロールの状態。 <xref:System.Windows.Media.Animation.Storyboard>で、`Negative`<xref:System.Windows.VisualState>オン、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>赤。   ときに、`NumericUpDown`コントロールが、`Negative`でストーリー ボードの状態、`Negative`状態が開始します。  次に、<xref:System.Windows.Media.Animation.Storyboard>で、`Negative`が停止状態のコントロールに戻ったとき、`Positive`状態。  `Positive`<xref:System.Windows.VisualState>を格納する必要はありません、<xref:System.Windows.Media.Animation.Storyboard>ためと、<xref:System.Windows.Media.Animation.Storyboard>の`Negative`停止すると、<xref:System.Windows.Controls.TextBlock.Foreground%2A>元の色を返します。  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ ms.locfileid: "57372708"
   
  状態の名前を渡す場合<xref:System.Windows.VisualStateManager.GoToState%2A>コントロールがその状態のとき<xref:System.Windows.VisualStateManager.GoToState%2A>コントロールの現在の状態を確認する必要はありませんので、何もしません。  たとえば場合、`Value`負の数を 1 つから別の負の値数のストーリー ボードへの変更、`Negative`状態は中断されず、ユーザーは、コントロールの変更は表示されません。  
   
- <xref:System.Windows.VisualStateManager>使用<xref:System.Windows.VisualStateGroup>オブジェクトを呼び出すときに終了するには、どの状態を判断する<xref:System.Windows.VisualStateManager.GoToState%2A>します。 コントロールごとに 1 つの状態は常に<xref:System.Windows.VisualStateGroup>で定義されているその<xref:System.Windows.Controls.ControlTemplate>し同じから別の状態になったときにのみ、状態のまま<xref:System.Windows.VisualStateGroup>します。 など、<xref:System.Windows.Controls.ControlTemplate>の`NumericUpDown`コントロールを定義、`Positive`と`Negative`<xref:System.Windows.VisualState>にあるオブジェクトの<xref:System.Windows.VisualStateGroup>と`Focused`と`Unfocused`<xref:System.Windows.VisualState>別のオブジェクト。 (確認できます、`Focused`と`Unfocused`<xref:System.Windows.VisualState>で定義されている、[完全な例](#complete_example)からコントロールになったときは、このトピックのセクション、`Positive`状態、`Negative`状態、またはその逆、コントロールのいずれかのまま、`Focused`または`Unfocused`状態。  
+ <xref:System.Windows.VisualStateManager>使用<xref:System.Windows.VisualStateGroup>オブジェクトを呼び出すときに終了するには、どの状態を判断する<xref:System.Windows.VisualStateManager.GoToState%2A>します。 コントロールごとに 1 つの状態は常に<xref:System.Windows.VisualStateGroup>で定義されているその<xref:System.Windows.Controls.ControlTemplate>し同じから別の状態になったときにのみ、状態のまま<xref:System.Windows.VisualStateGroup>します。 など、<xref:System.Windows.Controls.ControlTemplate>の`NumericUpDown`コントロールを定義、`Positive`と`Negative`<xref:System.Windows.VisualState>にあるオブジェクトの<xref:System.Windows.VisualStateGroup>と`Focused`と`Unfocused`<xref:System.Windows.VisualState>別のオブジェクト。 (確認できます、`Focused`と`Unfocused`<xref:System.Windows.VisualState>で定義されている、[完全な例](#complete_example)からコントロールになったときは、このトピックのセクション、`Positive`状態、`Negative`状態、またはその逆は、コントロールいずれか、`Focused`または`Unfocused`状態。  
   
  コントロールの状態の変更可能性がありますが、3 つの一般的な場所があります。  
   
@@ -238,5 +238,6 @@ ms.locfileid: "57372708"
  [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)
 - [コントロールのカスタマイズ](control-customization.md)

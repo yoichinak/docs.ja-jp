@@ -2,12 +2,12 @@
 title: メッセージ転送ストリーミング
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136878"
 ---
 # <a name="streaming-message-transfer"></a>メッセージ転送ストリーミング
 Windows Communication Foundation (WCF) トランスポートでは、メッセージを転送するため 2 つのモードをサポートします。  
@@ -41,10 +41,11 @@ Windows Communication Foundation (WCF) トランスポートでは、メッセ�
   
  信頼できるメッセージング、トランザクション、および SOAP メッセージ レベルのセキュリティなど、一部の WCF 機能は、転送するメッセージのバッファー処理に依存します。 これらの機能を使用すると、ストリーミングによって得られるパフォーマンス上の利点が減少したり、失われたりする可能性があります。 ストリーミングされたトランスポートをセキュリティで保護する場合は、トランスポート レベルのセキュリティだけを使用するか、または、トランスポート レベルのセキュリティと認証のみのメッセージ セキュリティを組み合わせて使用してください。  
   
- SOAP ヘッダーは、転送モードがストリーミングに設定されている場合でも、必ずバッファーされます。 メッセージのヘッダーが `MaxBufferSize` トランスポート クォータのサイズを超えないようにしてください。 この設定の詳細については、[トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)を参照してください。  
+ SOAP ヘッダーは、転送モードがストリーミングに設定されている場合でも、必ずバッファーされます。 メッセージのヘッダーが `MaxBufferSize` トランスポート クォータのサイズを超えないようにしてください。 この設定の詳細については、次を参照してください。[トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)します。  
   
 ## <a name="differences-between-buffered-and-streamed-transfers"></a>バッファー転送とストリーミング転送の違い  
  転送モードをバッファーからストリーミングに変更すると、TCP トランスポートと名前付きパイプ トランスポートのネイティブなチャネル形状も変更されます。 バッファー転送では、ネイティブなチャネル形状は <xref:System.ServiceModel.Channels.IDuplexSessionChannel> です。 ストリーム転送では、ネイティブなチャネル形状は <xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel> です。 これらのトランスポートを直接 (つまり、サービス コントラクトを介さずに) 使用する既存のアプリケーションで転送モードを変更するには、チャネル ファクトリおよびリスナーの予測されるチャネル形状を変更する必要があります。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ストリーミングを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [方法: ストリーミングを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

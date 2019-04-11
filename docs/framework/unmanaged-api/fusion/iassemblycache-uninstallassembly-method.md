@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5347d25f3fe1d5136917564b1fed24df5df0449c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 75ef24162adbb653671ed070587e7155fae6b949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079111"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly メソッド
 指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。  
@@ -49,7 +49,7 @@ HRESULT UninstallAssembly (
  [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)アセンブリのインストール データを含む構造体。  
   
  `pulDisposition`  
- [out] 省略可能ものがありますで定義されている配置の値の 1 つ。 使用可能な値を以下に示します。  
+ [out] 省略可能ものがありますで定義されている配置の値の 1 つ。 使用できる値は次のとおりです。  
   
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -68,7 +68,8 @@ HRESULT UninstallAssembly (
   
  **ヘッダー:** Fusion.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

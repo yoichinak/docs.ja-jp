@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091409"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource のマークアップ拡張機能
 いずれかの値を提供[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定義されているリソースへの参照にするには、その値を遅らせることで、プロパティの属性。 そのリソースの検索の動作は、実行時参照に似ています。  
@@ -48,7 +48,7 @@ ms.locfileid: "57369774"
   
  特定のリソースへのアクセスのシナリオは、特に適して`DynamicResource`ではなく、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。 参照してください[XAML リソース](xaml-resources.md)相対的なメリットとパフォーマンスの問題についてディスカッションを`DynamicResource`と`StaticResource`します。  
   
- 指定した<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>によって既存のリソースに対応する[X:key ディレクティブ](../../xaml-services/x-key-directive.md)ページ、アプリケーション、使用可能なコントロールのテーマと外部のリソースなどのシステム リソースのいくつかのレベルで、リソースの検索は、この順序で実行されます。 静的および動的なリソースのリソース ルックアップの詳細については、[XAML リソース](xaml-resources.md)を参照してください。  
+ 指定した<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>によって既存のリソースに対応する[X:key ディレクティブ](../../xaml-services/x-key-directive.md)ページ、アプリケーション、使用可能なコントロールのテーマと外部のリソースなどのシステム リソースのいくつかのレベルで、リソースの検索は、この順序で実行されます。 静的および動的なリソースのリソース ルックアップの詳細については、次を参照してください。 [XAML リソース](xaml-resources.md)します。  
   
  リソース キーの任意の文字列で定義されている可能性があります、 [XamlName の文法](../../xaml-services/xamlname-grammar.md)します。 リソース キーがあります、その他のオブジェクトの種類など、<xref:System.Type>します。 A<xref:System.Type>キーがテーマでのコントロールのスタイル方法の基礎です。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "57369774"
   
  `DynamicResource` オブジェクト要素構文で使用できます。 この場合は、値を指定する、<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>プロパティが必要です。  
   
- `DynamicResource` は、<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> プロパティをプロパティおよび値のペアとして指定する詳細出力属性使用でも使用できます。  
+ `DynamicResource` 指定する詳細な属性の使用方法でも使用できます、<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>プロパティとしてプロパティ値のペアを =。  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -72,9 +72,10 @@ ms.locfileid: "57369774"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装でこのマークアップ拡張機能の処理が定義されている、<xref:System.Windows.DynamicResourceExtension>クラス。  
   
- `DynamicResource` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
+ `DynamicResource` マークアップ拡張機能。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML リソース](xaml-resources.md)
 - [リソースとコード](resources-and-code.md)
 - [x:Key ディレクティブ](../../xaml-services/x-key-directive.md)

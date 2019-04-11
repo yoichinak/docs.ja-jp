@@ -5,31 +5,29 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 12ca85132ca063471092078c6f54e23a57f574ae
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079826"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 その他の開発プラットフォームとは異なり[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向コンテンツの迅速な開発をサポートする多くの機能、たとえば、データを同じドキュメント内まま混合の左から右、および右にします。 同時に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向機能のアラビア語やヘブライ語を話すユーザーなどを必要とするユーザー用の優れたエクスペリエンスを作成します。  
   
  以降のセクションでは、多数の双方向機能と双方向コンテンツを最適に表示した例について説明します。 ほとんどのサンプルを使用して、[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]しておくべき概念を簡単に適用できますが、C#または Microsoft Visual Basic コードです。  
-  
 
-  
 <a name="FlowDirection"></a>   
 ## <a name="flowdirection"></a>FlowDirection  
  コンテンツのフローの方向を定義する基本的なプロパティ、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションが<xref:System.Windows.FrameworkElement.FlowDirection%2A>します。 このプロパティは、2 つの列挙値のいずれかに設定できます<xref:System.Windows.FlowDirection.LeftToRight>または<xref:System.Windows.FlowDirection.RightToLeft>します。 プロパティがすべて使用できる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素から継承する<xref:System.Windows.FrameworkElement>します。  
   
  次の例のフロー方向を設定する、<xref:System.Windows.Controls.TextBox>要素。  
   
- **左から右へ記述するフロー方向**  
+ **左から右のフローの方向**  
   
  [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
- **右から左へ記述するフロー方向**  
+ **右から左にフローの方向**  
   
  [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
@@ -43,7 +41,7 @@ ms.locfileid: "57846442"
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- 最上位レベル<xref:System.Windows.Window>が、 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>でそれに含まれるすべての要素と同じ継承もあるため、<xref:System.Windows.FrameworkElement.FlowDirection%2A>します。 指定されたをオーバーライドする要素の<xref:System.Windows.FrameworkElement.FlowDirection%2A>など、2 つ目の明示的な方向変更を追加する必要があります<xref:System.Windows.Controls.TextBlock>を変更する前の例で<xref:System.Windows.FlowDirection.LeftToRight>します。 ない場合<xref:System.Windows.FrameworkElement.FlowDirection%2A>が定義されている既定の<xref:System.Windows.FlowDirection.LeftToRight>適用されます。  
+ 最上位レベル<xref:System.Windows.Window>が、<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>でそれに含まれるすべての要素と同じ継承もあるため、<xref:System.Windows.FrameworkElement.FlowDirection%2A>します。 指定されたをオーバーライドする要素の<xref:System.Windows.FrameworkElement.FlowDirection%2A>など、2 つ目の明示的な方向変更を追加する必要があります<xref:System.Windows.Controls.TextBlock>を変更する前の例で<xref:System.Windows.FlowDirection.LeftToRight>します。 ない場合<xref:System.Windows.FrameworkElement.FlowDirection%2A>が定義されている既定の<xref:System.Windows.FlowDirection.LeftToRight>適用されます。  
   
  次の図は、前の例の出力を示しています。
 
@@ -116,7 +114,7 @@ ms.locfileid: "57846442"
     
  ![ツールバーを右左のグラデーションからを示しますグラフィック。](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- 次の例では、描画、 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>します。 (描画左右から、削除、<xref:System.Windows.FlowDirection>属性を<xref:System.Windows.Controls.ToolBar>します。  
+ 次の例では、描画、<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>します。 (描画左右から、削除、<xref:System.Windows.FlowDirection>属性を<xref:System.Windows.Controls.ToolBar>します。  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -142,7 +140,7 @@ ms.locfileid: "57846442"
   
  **パス**  
   
- 加え、 <xref:System.Windows.Controls.Image>、もう 1 つの興味深い要素は<xref:System.Windows.Shapes.Path>します。 パスは、接続された一連の線と曲線を描画できるオブジェクトです。 同様の方法で動作、<xref:System.Windows.Controls.Image>に関するその<xref:System.Windows.FlowDirection>。 たとえば、 <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>の水平方向のミラーの<xref:System.Windows.FlowDirection.LeftToRight>いずれか。 ただしとは異なり、 <xref:System.Windows.Controls.Image>、<xref:System.Windows.Shapes.Path>継承その<xref:System.Windows.FlowDirection>コンテナーと 1 つからしなくても、明示的に指定します。  
+ 加え、 <xref:System.Windows.Controls.Image>、もう 1 つの興味深い要素は<xref:System.Windows.Shapes.Path>します。 パスは、接続された一連の線と曲線を描画できるオブジェクトです。 同様の方法で動作、<xref:System.Windows.Controls.Image>に関するその<xref:System.Windows.FlowDirection>。 たとえば、<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>の水平方向のミラーの<xref:System.Windows.FlowDirection.LeftToRight>いずれか。 ただしとは異なり、 <xref:System.Windows.Controls.Image>、<xref:System.Windows.Shapes.Path>継承その<xref:System.Windows.FlowDirection>コンテナーと 1 つからしなくても、明示的に指定します。  
   
  次の例では、3 本の線を使用して単純な矢印を描画します。 最初の矢印は、<xref:System.Windows.FlowDirection.RightToLeft>フローの方向から、<xref:System.Windows.Controls.StackPanel>その始点と終点が右側を起点として計測されるようにします。 2 番目の矢印は、明示的な<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>も右側にある開始します。 ただし、3 番目の矢印の起点は左側です。 参照の描画の詳細については<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.GeometryGroup>します。  
   
@@ -160,7 +158,7 @@ ms.locfileid: "57846442"
   
  これを 1 つの言語に変換することがなく、数値を処理するアプリケーションを許可するが、たとえば、ユーザーが開くことができます、[!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)]ローカライズされたアラビア語のスプレッドシート[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]で開く、アラビア語の形状の数字を参照してくださいヨーロッパ言語バージョン[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]と、同じ数字のヨーロッパ語表現を参照してください。 これは、コンマ区切りやパーセント記号などの他の記号でも必要です。これらの記号は、通常同じドキュメント内で数字を伴っているからです。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は引き続きこの機能を備え、置換を使用するタイミングと方法をユーザーがさらに制御できるようにこの機能のサポートが強化されています。 この機能はすべての言語向けに設計されていますが、アプリケーションが実行される可能性のあるカルチャが多岐にわたるために特定の言語に合わせて数字の形状を設定することがアプリケーション開発者にとって通常は問題となる双方向コンテンツに対して特に有用です。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 同じ、これまで、さらにこの置換を使用するタイミングと方法を複数のユーザー制御できるようにする機能のサポートを追加します。 この機能はすべての言語向けに設計されていますが、アプリケーションが実行される可能性のあるカルチャが多岐にわたるために特定の言語に合わせて数字の形状を設定することがアプリケーション開発者にとって通常は問題となる双方向コンテンツに対して特に有用です。  
   
  数字の置換を制御するコア プロパティは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>依存関係プロパティ。 <xref:System.Windows.Media.NumberSubstitution>クラスは、テキスト内の数字の表示方法を指定します。 その動作を定義する 3 つのパブリック プロパティがあります。 以下は、各プロパティの概要です。  
   
@@ -210,7 +208,7 @@ ms.locfileid: "57846442"
   
  まず、設定して、アプリケーション コンポーネントの`NumberSubstitution.CultureSource="Text"`します。 設定がから提供されないことを確認は、この設定を使用して、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]のテキスト要素など、既定値として"User"が含まれない<xref:System.Windows.Controls.TextBlock>します。  
   
-例えば:  
+例:  
 
 ```xaml  
 <TextBlock

@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4dbdec05df91547a2dc2c57f7bd902c14600daaf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d7fd463a8cc8ad6a88818669de6fb495e12e497b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215145"
 ---
 # <a name="icordebugeditandcontinuesnapshot-interface"></a>ICorDebugEditAndContinueSnapshot インターフェイス
 
-`ICorDebugEditAndContinueSnapshot` は互換性のために残されています。 このインターフェイスは使用しないでください。  
+`ICorDebugEditAndContinueSnapshot` 古い形式です。 このインターフェイスは使用しないでください。  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

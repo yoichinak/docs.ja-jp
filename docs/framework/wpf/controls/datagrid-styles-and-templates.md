@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: 582179d8469cabc3551e1bed53c87e045f26e7cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dacc1222958ab05971c9681d33a0c431b72d0531
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218460"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid のスタイルとテンプレート
 このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.DataGrid>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "57366076"
 |MouseOver|CommonStates|マウス ポインターがセルに配置されます。|  
 |フォーカスされている|FocusStates|セルにフォーカスがあります。|  
 |フォーカスされていない|FocusStates|セルにフォーカスがないです。|  
-|[現在]|CurrentStates|セルは、現在のセルです。|  
+|現在|CurrentStates|セルは、現在のセルです。|  
 |Regular|CurrentStates|セルは、現在のセルではありません。|  
 |表示|InteractionStates|セルが表示モードです。|  
 |編集|InteractionStates|セルが編集モードにします。|  
@@ -170,6 +170,7 @@ ms.locfileid: "57366076"
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)

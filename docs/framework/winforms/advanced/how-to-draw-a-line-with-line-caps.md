@@ -1,5 +1,5 @@
 ---
-title: '方法: ライン キャップを持つ行を描画します。'
+title: '方法: ライン キャップを使用した直線を描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 7ebb49ad5e1262dcb71dcd31c9073dfe52c49789
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146212"
 ---
-# <a name="how-to-draw-a-line-with-line-caps"></a>方法: ライン キャップを持つ行を描画します。
+# <a name="how-to-draw-a-line-with-line-caps"></a>方法: ライン キャップを使用した直線を描画する
 ライン キャップと呼ばれるいくつかの図形のいずれかでは、先頭または末尾の行を描画できます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] round、正方形、ひし形、および矢印などのいくつかのライン キャップをサポートしています。  
   
 ## <a name="example"></a>例  
@@ -35,6 +35,7 @@ ms.locfileid: "58409862"
 -   Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 例のコードを<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーを渡す`e`として<xref:System.Windows.Forms.PaintEventArgs>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

@@ -1,19 +1,19 @@
 ---
-title: '方法: ストアと再利用のクエリ'
+title: '方法: クエリを格納および再利用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084195"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>方法: ストアと再利用のクエリ
-同じ構造のクエリを何回も実行するアプリケーションでは、1 回コンパイルしたクエリを、パラメーターを変えて何回も実行する方が、多くの場合にパフォーマンスを向上できます。 たとえば、特定の市に住むすべての顧客を取得するアプリケーションで、ユーザーが、対象の市を実行時にフォームで指定するとします。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] はこの目的のために *コンパイル済みクエリ* の使用をサポートしています。  
+# <a name="how-to-store-and-reuse-queries"></a>方法: クエリを格納および再利用する
+同じ構造のクエリを何回も実行するアプリケーションでは、1 回コンパイルしたクエリを、パラメーターを変えて何回も実行する方が、多くの場合にパフォーマンスを向上できます。 たとえば、特定の市に住むすべての顧客を取得するアプリケーションで、ユーザーが、対象の市を実行時にフォームで指定するとします。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用をサポートする*コンパイル済みクエリ*この目的のためです。  
   
 > [!NOTE]
 >  コンパイル済みクエリは、このパターンの使用法が最も一般的です。 その他にも方法は考えられます。 たとえば、デザイナーによって生成されたコードを継承した部分クラスの静的メンバーとしてコンパイル済みクエリを格納するなどです。  
@@ -34,6 +34,7 @@ ms.locfileid: "54630771"
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.Linq.CompiledQuery>
 - [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [データベースに対するクエリの実行](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323825"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>'AddressOf' オペランドはメソッドの名前でなければなりません。かっこは不要です。
 `AddressOf` 演算子は、特定のプロシージャを参照するプロシージャ デリゲート インスタンスを作成します。 構文は次のとおりです。  
@@ -25,9 +25,9 @@ ms.locfileid: "58813965"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  次の引数を囲むかっこを削除`AddressOf`します。  
+1. 次の引数を囲むかっこを削除`AddressOf`します。  
   
-2.  引数がメソッド名を確認します。  
+2. 引数がメソッド名を確認します。  
   
 ## <a name="see-also"></a>関連項目
 

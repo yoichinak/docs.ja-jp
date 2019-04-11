@@ -2,12 +2,12 @@
 title: ADO.NET でのデータの取得および変更
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097624"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得および変更
 データベース アプリケーションの主な機能は、データ ソースとの接続およびデータベースに格納されているデータの取得です。 使用してデータの取得も同様のコマンドを実行することができます、アプリケーションと、データ ソース間のブリッジとしての ADO.NET の .NET Framework データ プロバイダーの機能、 **DataReader**または**DataAdapter**. データベースに格納されているデータを更新する機能は、データベース アプリケーションの重要な機能の 1 つです。 ADO.NET では、データを更新する必要がありますを使用して、 **DataAdapter**と<xref:System.Data.DataSet>、および**コマンド**オブジェクトも含まれますトランザクションを使用します。  
@@ -28,7 +28,7 @@ ms.locfileid: "54556432"
  [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  DataReaders、DataAdapters、パラメーター、DataAdapter イベントの処理、およびバッチ操作の実行について説明します。  
   
- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [トランザクションとコンカレンシー](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  ローカル トランザクションや分散トランザクションの実行方法、およびオプティミスティック コンカレンシーの使用方法について説明します。  
   
  [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "54556432"
  [ADO.NET のデータ追跡](../../../../docs/framework/data/adonet/data-tracing.md)  
  ADO.NET が備える組み込みデータ トレース機能のしくみについて説明します。  
   
- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [[パフォーマンス カウンター]](../../../../docs/framework/data/adonet/performance-counters.md)  
  `SqlClient` および `OracleClient` で使用できるパフォーマンス カウンターについて説明します。  
   
  [非同期プログラミング](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
@@ -59,6 +59,7 @@ ms.locfileid: "54556432"
  完全にメモリに読み込まれていることをしなくても SQL Server からアプリケーション データのストリームを記述する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET でのデータ型のマッピング](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

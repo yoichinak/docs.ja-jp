@@ -1,13 +1,13 @@
 ---
-title: <issuer> の <issuedTokenParameters>
+title: <issuer> (行中)  <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 411fd1addb41822043d72de1edffee9f8733bc08
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 690ab14ea33ba9bef29788b2eb35f86ed945ce2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113543"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<発行者 > の\<issuedTokenParameters >
 セキュリティ トークンを発行するセキュリティ トークン サービス (STS) を指定します。  
@@ -49,6 +49,7 @@ ms.locfileid: "55256642"
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|現在発行されているトークンを指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -60,5 +61,5 @@ ms.locfileid: "55256642"
 - [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインディング セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

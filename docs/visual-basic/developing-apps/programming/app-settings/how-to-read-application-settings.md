@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], reading application settings
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-ms.openlocfilehash: abee69d9959e899259aff8b8a49caea6bcd997fb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975239"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823585"
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>方法: Visual Basic でアプリケーション設定を読み取る
 `My.Settings` オブジェクトで設定のプロパティにアクセスすると、ユーザー設定を読み取ることができます。  
@@ -26,6 +26,7 @@ ms.locfileid: "56975239"
  この例を実行するには、アプリケーションで `String` 型の `Nickname` を設定する必要があります。 詳細については、「[アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [My.Settings オブジェクト](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [方法: Visual Basic でユーザー設定を変更する](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
 - [方法: Visual Basic でユーザー設定を永続化する](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)

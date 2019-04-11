@@ -1,18 +1,18 @@
 ---
-title: '方法: マネージ Windows サービスでの WCF サービスをホストします。'
+title: '方法: マネージド Windows サービスで WCF サービスをホストする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297760"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法: マネージ Windows サービスでの WCF サービスをホストします。
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法: マネージド Windows サービスで WCF サービスをホストする
 
 このトピックでは、Windows サービスによってホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 シナリオは、ホスト オプションがアクティブ化メッセージをセキュリティで保護された環境でインターネット インフォメーション サービス (IIS) の外部でホストされている実行時間の長い WCF サービスでは、マネージ Windows サービスで有効です。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。
 
@@ -22,13 +22,13 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a> サービスを構築してホスティング コードを提供する
 
-1.  作成する新しい Visual Studio**コンソール アプリ**という名前のプロジェクト**サービス**します。
+1. 作成する新しい Visual Studio**コンソール アプリ**という名前のプロジェクト**サービス**します。
 
-2.  Program.cs を Service.cs に変更します。
+2. Program.cs を Service.cs に変更します。
 
-3.  名前空間を変更`Microsoft.ServiceModel.Samples`します。
+3. 名前空間を変更`Microsoft.ServiceModel.Samples`します。
 
-4.  次のアセンブリへの参照を追加します。
+4. 次のアセンブリへの参照を追加します。
 
     - System.ServiceModel.dll
 
@@ -36,22 +36,22 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
     - System.Configuration.Install.dll
 
-5.  次の using ステートメントを Service.cs に追加します。
+5. 次の using ステートメントを Service.cs に追加します。
 
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6.  次のコードに示すように、`ICalculator` サービス コントラクトを定義します。
+6. 次のコードに示すように、`ICalculator` サービス コントラクトを定義します。
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7.  次のコードに示すように、`CalculatorService` というクラスにサービス コントラクトを実装します。
+7. 次のコードに示すように、`CalculatorService` というクラスにサービス コントラクトを実装します。
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8.  `CalculatorWindowsService` クラスから継承する <xref:System.ServiceProcess.ServiceBase> という新しいクラスを作成します。 `serviceHost` というローカル変数を追加して、<xref:System.ServiceModel.ServiceHost> インスタンスを参照します。 `Main` を呼び出す `ServiceBase.Run(new CalculatorWindowsService)` というメソッドを定義します。
+8. `CalculatorWindowsService` クラスから継承する <xref:System.ServiceProcess.ServiceBase> という新しいクラスを作成します。 `serviceHost` というローカル変数を追加して、<xref:System.ServiceModel.ServiceHost> インスタンスを参照します。 定義、`Main`メソッドを呼び出す `ServiceBase.Run(new CalculatorWindowsService)`
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -116,13 +116,13 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
 ## <a name="install-and-run-the-service"></a>サービスをインストールして実行する
 
-1.  ソリューションをビルドして `Service.exe` 実行可能ファイルを作成します。
+1. ソリューションをビルドして `Service.exe` 実行可能ファイルを作成します。
 
-2.  For Visual Studio 開発者コマンド プロンプトを開き、プロジェクト ディレクトリに移動します。 コマンド プロンプトで「`installutil bin\service.exe`」と入力して、Windows サービスをインストールします 
+2. For Visual Studio 開発者コマンド プロンプトを開き、プロジェクト ディレクトリに移動します。 コマンド プロンプトで「`installutil bin\service.exe`」と入力して、Windows サービスをインストールします 
 
      コマンド プロンプトで「`services.msc`」と入力してサービス コントロール マネージャー (SCM) にアクセスします。 Windows サービスは、[Services] に "WCFWindowsServiceSample" として表示されます。 WCF サービスは、Windows サービスが実行されている場合にのみクライアントに応答できます。 サービスを開始する、SCM"Start"、または選択の種類で右**net start WCFWindowsServiceSample**コマンド プロンプトでします。
 
-3.  サービスを変更する場合は、まずそのサービスを停止してからアンインストールする必要があります。 サービスを停止し、SCM でそのサービスを右クリックし、"Stop"を選択または**型 net stop WCFWindowsServiceSample**コマンド プロンプトでします。 Windows サービスを停止してクライアントを実行すると、クライアントがこのサービスにアクセスしようとしたときに <xref:System.ServiceModel.EndpointNotFoundException> 例外が発生することに注意してください。 Windows サービスの種類をアンインストールする**installutil/u bin\service.exe**コマンド プロンプトでします。
+3. サービスを変更する場合は、まずそのサービスを停止してからアンインストールする必要があります。 サービスを停止し、SCM でそのサービスを右クリックし、"Stop"を選択または**型 net stop WCFWindowsServiceSample**コマンド プロンプトでします。 Windows サービスを停止してクライアントを実行すると、クライアントがこのサービスにアクセスしようとしたときに <xref:System.ServiceModel.EndpointNotFoundException> 例外が発生することに注意してください。 Windows サービスの種類をアンインストールする**installutil/u bin\service.exe**コマンド プロンプトでします。
 
 ## <a name="example"></a>例
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231280"
 ---
 # <a name="one-way-services"></a>一方向サービス
 サービス操作の既定の動作は、要求/応答パターンです。 要求/応答パターンでは、サービス操作がコードで `void` 型のメソッドとして表される場合であっても、クライアントは応答メッセージを待機します。 一方向操作では、メッセージが 1 つ送信されるだけです。 受信者は応答メッセージを送信せず、送信者もこれを待機しません。  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  代わりに、クライアントおよびサービスの各種コントロールを調べてアプリケーション シナリオをテストし、最適な構成がどちら側にあるのかを判断することをお勧めします。 たとえば、セッションの使用によりサービスでのメッセージの処理がブロックされている場合、<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.InstanceContextMode.PerCall> に設定することによって、異なるサービス インスタンスによって各メッセージが処理されるようにし、また <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> を <xref:System.ServiceModel.ConcurrencyMode.Multiple> に設定することによって、複数のスレッドで同時にメッセージをディスパッチできるようにします。 また、別のアプローチとして、サービスとクライアント バインディングの読み取りクォータを増やすという方法もあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [一方向](../../../../docs/framework/wcf/samples/one-way.md)

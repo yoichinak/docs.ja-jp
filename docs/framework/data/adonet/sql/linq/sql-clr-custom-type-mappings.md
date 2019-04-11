@@ -2,12 +2,12 @@
 title: SQL と CLR のカスタム型マッピング
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 36763be3cd4845fbbd027b448098d0dafb9e448a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140414"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL と CLR のカスタム型マッピング
 SQL Server と共通言語ランタイム (CLR) 間の型マッピングは、SQLMetal コマンド ライン ツールのオブジェクト リレーショナル デザイナー (O/R デザイナー) を使用すると、自動的に指定されます。  
@@ -21,7 +21,7 @@ SQL Server と共通言語ランタイム (CLR) 間の型マッピングは、SQ
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>SQLMetal または O/R デザイナーを使用したカスタマイズ  
  SQLMetal と O/R デザイナーを使用すると、コード ファイルの内外の型マッピング情報を含むオブジェクト ファイルを自動作成できます。 これらのファイルはマッピングを再作成するたびに SQLMetal または O/R デザイナーによって上書きされるため、カスタム型マッピングを指定する場合は DBML ファイルをカスタマイズする方法をお勧めします。  
   
- SQLMetal または O/R デザイナーで型マッピングをカスタマイズするには、最初に DBML ファイルを生成します。 次に、コード ファイルやマッピング ファイルを生成する前に、DBML ファイルを変更して適切な型マッピングを指定します。 SQLMetal では、DBML ファイルの `Type` 属性と `DbType` 属性を手動で変更して、型マッピングをカスタマイズする必要があります。 O/R デザイナーでは、デザイナー内で変更を加えることができます。 詳細については、O/R デザイナーを使用して、[LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を参照してください。  
+ SQLMetal または O/R デザイナーで型マッピングをカスタマイズするには、最初に DBML ファイルを生成します。 次に、コード ファイルやマッピング ファイルを生成する前に、DBML ファイルを変更して適切な型マッピングを指定します。 SQLMetal では、DBML ファイルの `Type` 属性と `DbType` 属性を手動で変更して、型マッピングをカスタマイズする必要があります。 O/R デザイナーでは、デザイナー内で変更を加えることができます。 詳細については、O/R デザイナーを使用して、次を参照してください。 [LINQ to Visual Studio での SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)します。  
   
 > [!NOTE]
 >  一部の型マッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。 型マッピングの実行時動作の関係を慎重に確認[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)カスタマイズを加える前にします。  
@@ -32,5 +32,6 @@ SQL Server と共通言語ランタイム (CLR) 間の型マッピングは、SQ
  データベースを変更すると、DBML ファイルを更新して、これらの変更を反映する必要があります。 その 1 つの方法として、新しい DBML ファイルを自動作成してから型マッピングのカスタマイズをやり直します。 もう 1 つは、新しい DBML ファイルとカスタマイズした DBML ファイルを比較し、カスタム DBML ファイルを手動で更新してデータベースの変更を反映させる方法です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

@@ -1,13 +1,13 @@
 ---
-title: <transport> の <webHttpBinding>
+title: <transport> (行中)  <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: d2c7ee3512ddeefae6e5551a58b3bab76742ed30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116283"
 ---
 # <a name="transport-of-webhttpbinding"></a>\<トランスポート > の\<webHttpBinding >
 HTTP 要求を受信するように構成されたサービス エンドポイントのトランスポート レベルのセキュリティ設定を定義します。  
@@ -56,7 +56,7 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Basic`|基本認証を使用します。|  
@@ -67,7 +67,7 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |`None`|セキュリティを無効にします。|  
 |`Basic`|基本認証を使用します。|  
@@ -82,9 +82,10 @@ HTTP 要求を受信するように構成されたサービス エンドポイ�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|セキュリティ機能を表す、 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>

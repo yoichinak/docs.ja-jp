@@ -3,12 +3,12 @@ title: カスタムのトークン ハンドラー
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312112"
 ---
 # <a name="custom-token-handlers"></a>カスタムのトークン ハンドラー
 このトピックでは、WIF のトークン ハンドラーと、それらを使用してトークンをどのように処理するかを説明します。 また、WIF で既定ではサポートされていないトークンの種類用にカスタム トークン ハンドラーを作成するために必要なことについても説明します。  
@@ -42,9 +42,9 @@ ms.locfileid: "47200881"
   
 #### <a name="adding-a-custom-token-handler"></a>カスタム トークン ハンドラーの追加  
   
-1.  <xref:System.IdentityModel.Tokens.SecurityTokenHandler> から派生する新しいクラスを作成します。  
+1. <xref:System.IdentityModel.Tokens.SecurityTokenHandler> から派生する新しいクラスを作成します。  
   
-2.  以下のメソッドをオーバーライドし、独自の実装を指定します。  
+2. 以下のメソッドをオーバーライドし、独自の実装を指定します。  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47200881"
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  WIF に適用される **\<system.identityModel>** セクション内の、*Web.config* または *App.config* ファイルの新しいカスタム トークン ハンドラーへの参照を追加します。 たとえば、次の構成マークアップでは、**CustomToken** 名前空間に存在する **MyCustomTokenHandler** という名前の新しいトークン ハンドラーを指定します。  
+3. WIF に適用される **\<system.identityModel>** セクション内の、*Web.config* または *App.config* ファイルの新しいカスタム トークン ハンドラーへの参照を追加します。 たとえば、次の構成マークアップでは、**CustomToken** 名前空間に存在する **MyCustomTokenHandler** という名前の新しいトークン ハンドラーを指定します。  
   
     ```xml  
     <system.identityModel>  

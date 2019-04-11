@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343455"
 ---
 # <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 
@@ -57,7 +57,7 @@ printfn "%s" html
 
 前述のように、非同期コードを明示的に開始する必要がある別のコンテキストで実行する作業の仕様です。 これを実現する 2 つの主な方法を次に示します。
 
-1.  `Async.RunSynchronously` 別のスレッドで非同期ワークフローを開始し、その結果を待機します。
+1. `Async.RunSynchronously` 別のスレッドで非同期ワークフローを開始し、その結果を待機します。
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 別のスレッドで非同期ワークフローが開始され、**いない**その結果を待機します。
+2. `Async.Start` 別のスレッドで非同期ワークフローが開始され、**いない**その結果を待機します。
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ for html in htmlList do
 
 これに対し、F#非同期ワークフローがより自然にキャンセル可能です。 キャンセルは、単純な 3 段階のプロセスです。
 
-1.  新規の `CancellationTokenSource` を作成します。
-2.  開始関数に渡します。
-3.  呼び出す`Cancel`トークンにします。
+1. 新規の `CancellationTokenSource` を作成します。
+2. 開始関数に渡します。
+3. 呼び出す`Cancel`トークンにします。
 
 例:
 

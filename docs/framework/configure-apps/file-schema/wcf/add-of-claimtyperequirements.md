@@ -1,13 +1,13 @@
 ---
-title: <add> の <claimTypeRequirements>
+title: <add> (行中)  <claimTypeRequirements>
 ms.date: 03/30/2017
 ms.assetid: c68e83c9-39e8-4264-b1ce-b6a9eb5b98aa
-ms.openlocfilehash: 6a8c96fb2cb2050cac7b8853b84caecc883449d7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97d3ecca369aeffb7b2e8464f385eeae13bd470f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168850"
 ---
 # <a name="add-of-claimtyperequirements"></a>\<add> of \<claimTypeRequirements>
 フェデレーション資格情報に表示されると予想される必須のクレームおよび省略可能なクレームの種類を指定します。 たとえば、サービスは、クレームの種類の特定のセットを処理する必要がある受信資格情報について要件を記述します。  
@@ -73,6 +73,7 @@ ms.locfileid: "55268783"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
@@ -84,5 +85,5 @@ ms.locfileid: "55268783"
 - [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインディング セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558950"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330819"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -25,7 +25,7 @@ ms.locfileid: "57558950"
 
 ### <a name="tutorials"></a>チュートリアル
 
-**[CLI ツールを使用する .NET Core コンソール アプリの作成: 手順ガイド](../core/tutorials/using-with-xplat-cli.md)**
+**[CLI ツールを使用する .NET Core コンソール アプリの作成:手順ガイド](../core/tutorials/using-with-xplat-cli.md)**
 
 このガイドでは、.NET Core CLI ツールを使用してクロスプラットフォーム コンソール アプリを作成する方法を説明します。 基本的なコンソール アプリから始めて、最終的にテストを含む複数プロジェクトまで拡張します。 段階的に機能を追加し、作業を進めながらナレッジを構築します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/console-apps)は、GitHub の dotnet/samples リポジトリにあります。
 
@@ -41,7 +41,7 @@ ms.locfileid: "57558950"
 
 ### <a name="samples"></a>サンプル
 
-**[反復子](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 このサンプルは、C# 反復子の作成と使用のための構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/iterators)は、GitHub の dotnet/samples リポジトリにあります。
 
@@ -57,7 +57,7 @@ ms.locfileid: "57558950"
 
 このサンプルは、式ツリーを使用して解決できる問題の多くを示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)は、GitHub の dotnet/samples リポジトリにあります。
 
-**LINQ のサンプル**
+**LINQ サンプル**
 
 この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
 
@@ -112,6 +112,6 @@ ms.locfileid: "57558950"
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。
    * [dotnet CLI ツール](../core/tools/index.md)を使用する: コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
-   * [Visual Studio](https://visualstudio.microsoft.com/) または [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル (*.csproj* または *.fsproj*) を選択します。
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) または [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル (*.csproj* または *.fsproj*) を選択します。
    * [Visual Studio Code](https://code.visualstudio.com/) を使用する: メニュー バーから **[ファイル] > [フォルダーを開く]** の順に選択し、サンプルのプロジェクト フォルダーを選択してサンプルを開きます。
    * .NET Core プロジェクトをサポートする別の IDE を使用する。

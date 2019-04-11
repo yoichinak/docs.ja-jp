@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: 67da1c1ba411e0ee5328ce521acb52b47d614c4c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 8c9f326cc165955353dab6c33b65ed23e3f03d35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58041441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338632"
 ---
 # <a name="path-pathname-not-found"></a>パス '\<pathname >' が見つかりません。
 ファイル アクセス操作またはディスク アクセス操作において指定されたパスをオペレーティング システムが見つけることができません。 ファイルへのパスには、対象ファイルを検索するために走査しなければならないドライブ、ディレクトリ、サブディレクトリの指定を含める必要があります。 相対ファイル パスと絶対ファイル パスのどちらでも構いません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  パスに必要な要素が含まれていることを確認します。  
+1. パスに必要な要素が含まれていることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

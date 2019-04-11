@@ -1,5 +1,5 @@
 ---
-title: '方法: カスタム破線を描画します。'
+title: '方法: カスタム破線を描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109188"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>方法: カスタム破線を描画します。
+# <a name="how-to-draw-a-custom-dashed-line"></a>方法: カスタム破線を描画する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 記載されているいくつかの破線スタイルを提供します、<xref:System.Drawing.Drawing2D.DashStyle>列挙体。 これらの標準の破線スタイルがニーズに合わないしない場合は、カスタムの破線パターンを作成できます。  
   
 ## <a name="example"></a>例  
@@ -33,4 +33,5 @@ ms.locfileid: "58410226"
  Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 上記のコードを貼り付け、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

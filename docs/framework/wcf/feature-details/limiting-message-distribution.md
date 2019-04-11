@@ -2,12 +2,12 @@
 title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130222"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
 ピア チャネルは仕様上はブロードキャスト メッシュです。 その基本的な大量転送モデルでは、メッシュの任意のメンバーが送信した各メッセージをそのメッシュの他のメンバー全員に配布します。 これは、1 人のメンバーが生成した各メッセージが他のメンバー全員に関係していて、役立つものであるような状況 (チャット ルームなど) に最適です。 ただし、多くのアプリケーションではメッセージの配布を制限する必要が生じることがあります。 たとえば、新しいメンバーがメッシュに参加し、メッシュを経由して送信された最新のメッセージを取得しようとする場合、この要求をメッシュのメンバー全員に転送する必要はありません。 要求は近くの近隣ノードに制限できます。また、ローカルで生成されたメッセージをフィルターで除外することもできます。メッセージはメッシュの個別のノードに送信することもできます。 このトピックでは、ホップ数、メッセージ伝達フィルター、ローカル フィルター、または直接接続を使用し、メッシュを経由してメッセージを転送する方法について説明し、1 つの方法を選択するための一般的なガイドラインを示します。  
@@ -17,14 +17,14 @@ ms.locfileid: "54686765"
   
  ホップ数をメッセージに追加するには、メッセージ クラスの実装で、適切なプロパティまたはフィールドに `PeerHopCount` を属性として追加します。 この値は、メッセージをメッシュに送信する前に特定の値に設定できます。 このように、ホップ数を使用するとメッシュを経由したメッセージの配布を必要に応じて制限し、不要なメッセージの重複を避けることができます。 これは、メッシュに大量の重複データが含まれている場合や、メッセージをすぐ隣の近隣ノードまたはいくつかのホップ内の近隣ノードに送信する場合に役立ちます。  
   
--   コード スニペットと関連情報については、、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114531)を参照してください。  
+-   コード スニペットと関連情報については、次を参照してください。、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114531)します。  
   
 ## <a name="message-propagation-filter"></a>メッセージ伝達フィルター  
- `MessagePropagationFilter` は、特にメッセージの内容や他の特定のシナリオによってメッセージを伝達するかどうかを決定する場合など、メッセージの大量転送の制御をカスタマイズするために使用できます。 このフィルターにより、ノードを通過する各メッセージを伝達するかどうかが決定されます。 これは、メッシュ内の他の場所から送信され、使用しているノードで受信したメッセージと、使用しているアプリケーションで作成したメッセージの両方に適用されます。 フィルターはメッセージとその発信元の両方にアクセスできるため、利用できるすべての情報に基づいてメッセージを転送するか、破棄するかを決定します。  
+ `MessagePropagationFilter` メッセージの洪水、メッセージやその他の特定のシナリオの内容の伝達を判断する場合に特にのカスタマイズされたコントロールを使用できます。 このフィルターにより、ノードを通過する各メッセージを伝達するかどうかが決定されます。 これは、メッシュ内の他の場所から送信され、使用しているノードで受信したメッセージと、使用しているアプリケーションで作成したメッセージの両方に適用されます。 フィルターはメッセージとその発信元の両方にアクセスできるため、利用できるすべての情報に基づいてメッセージを転送するか、破棄するかを決定します。  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> は、単一の関数 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> を持つ抽象基本クラスです。 メソッド呼び出しの最初の引数には、メッセージの完全なコピーを渡します。 このメッセージに対して行われた変更が実際のメッセージに影響することはありません。 このメソッド呼び出しの最後の引数は、メッセージの送信元 (`PeerMessageOrigination.Local` または `PeerMessageOrigination.Remote`) を識別します。 このメソッドの具体的な実装は、メッセージの転送先 (ローカル アプリケーション (<xref:System.ServiceModel.PeerMessagePropagation>)、リモート クライアント (`Local`)、ローカル アプリケーションとリモート クライアントの両方 (`Remote`)、どちらにも転送しない (`LocalAndRemote`)) を示す `None` 列挙体から定数を返す必要があります。 このフィルターは、対応する `PeerNode` オブジェクトにアクセスし、`PeerNode.MessagePropagationFilter` プロパティで伝達フィルター派生クラスのインスタンスを指定することによって適用できます。 ピア チャネルを開く前に、伝達フィルターがアタッチされていることを確認してください。  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> 1 つの関数を持つ抽象基本クラスは、<xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>します。 メソッド呼び出しの最初の引数には、メッセージの完全なコピーを渡します。 このメッセージに対して行われた変更が実際のメッセージに影響することはありません。 このメソッド呼び出しの最後の引数は、メッセージの送信元 (`PeerMessageOrigination.Local` または `PeerMessageOrigination.Remote`) を識別します。 このメソッドの具体的な実装は、メッセージの転送先 (ローカル アプリケーション (<xref:System.ServiceModel.PeerMessagePropagation>)、リモート クライアント (`Local`)、ローカル アプリケーションとリモート クライアントの両方 (`Remote`)、どちらにも転送しない (`LocalAndRemote`)) を示す `None` 列挙体から定数を返す必要があります。 このフィルターは、対応する `PeerNode` オブジェクトにアクセスし、`PeerNode.MessagePropagationFilter` プロパティで伝達フィルター派生クラスのインスタンスを指定することによって適用できます。 ピア チャネルを開く前に、伝達フィルターがアタッチされていることを確認してください。  
   
--   コード スニペットと関連情報については、、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114532)を参照してください。  
+-   コード スニペットと関連情報については、次を参照してください。、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114532)します。  
   
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>メッシュ内の個別ノードへのアクセス  
  メッシュ内の個別のノードには、ローカル フィルターを設定するか、直接接続を設定することでアクセスできます。  
@@ -44,7 +44,7 @@ ms.locfileid: "54686765"
   
  これらの質問の回答は、ホップ数、メッセージ伝達フィルター、ローカル フィルター、直接接続のいずれを使用するかを決定するのに役立ちます。 次の一般的なガイドラインを考慮してください。  
   
--   **誰が**  
+-   **誰**  
   
     -   *個々 のノード*:ローカル フィルターまたは直接接続します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54686765"
   
     -   *メッシュの複雑なサブセット*:MessagePropagationFilter します。  
   
--   **どのくらいの頻度**  
+-   **頻度**  
   
     -   *頻度の高い*:直接接続 PeerHopCount、MessagePropagationFilter をします。  
   
@@ -65,4 +65,5 @@ ms.locfileid: "54686765"
     -   *低*:直接接続は、通常は不要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

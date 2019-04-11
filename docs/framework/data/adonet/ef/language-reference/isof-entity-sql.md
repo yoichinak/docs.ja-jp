@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 87d69f58fc0c45eacb4ee63997129347f7f2a857
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195749"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 式の型が指定の型であるか、またはそのサブタイプであるかを判断します。  
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `expression` を判定するための型。 型は名前空間で修飾する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- `true` が型 T で、T が基本データ型または `expression` の派生型である場合は、`type` となります。`expression` が実行時に null である場合は null となり、それ以外の場合は `false` となります。  
+ `true` 場合`expression`は型の T と T が基本型、または派生型の`type`; 場合は null`expression`が実行時に null。 それ以外`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  式`expression IS NOT OF (type)`と`expression IS NOT OF (ONLY type)`を構文的に等価`NOT (expression IS OF (type))`と`NOT (expression IS OF (ONLY type))`、それぞれします。  
@@ -57,4 +57,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

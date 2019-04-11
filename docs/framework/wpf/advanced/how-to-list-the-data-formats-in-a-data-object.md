@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
-ms.openlocfilehash: c8e9f24a0e991fa44ddd3f4d778cc7ba640ae9c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8230eac33a18a0d99cc757d54c2b901c1afe977
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077746"
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>方法: データ オブジェクト内のデータ形式の一覧を表示する
 次の例を使用する方法を示して、<xref:System.Windows.DataObject.GetFormats%2A>メソッドのオーバー ロードは、各データ オブジェクトで使用できるデータ形式を示す文字列の配列を取得します。  
@@ -38,5 +38,6 @@ ms.locfileid: "57370177"
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.IDataObject>
 - [ドラッグ アンド ドロップの概要](drag-and-drop-overview.md)

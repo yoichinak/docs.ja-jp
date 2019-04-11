@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094386"
 ---
 # <a name="how-to-create-a-simple-binding"></a>方法: 簡単なバインディングを作成する
 この例、単純なを作成する方法を示します<xref:System.Windows.Data.Binding>します。  
@@ -26,5 +26,6 @@ ms.locfileid: "57373583"
  強調表示された行を含む、`<TextBlock>`要素にバインドし、<xref:System.Windows.Controls.TextBlock>への制御、`PersonName`プロパティ。 結果として、 <xref:System.Windows.Controls.TextBlock> "Joe"の値が表示されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

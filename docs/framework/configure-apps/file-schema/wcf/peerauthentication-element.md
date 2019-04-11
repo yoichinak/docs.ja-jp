@@ -2,17 +2,17 @@
 title: <peerAuthentication> 要素
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 7607f5bab6083c190303fd0a9121ffab55c620c3
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092969"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 要素
 ピアツーピア クライアントの認証オプションを指定します。  
   
- ピア ツー ピア プログラミングの詳細については、[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
+ ピア ツー ピア プログラミングの詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
  \<system.ServiceModel >  
 \<<behaviors>  
@@ -53,13 +53,13 @@ ms.locfileid: "55759445"
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は `ChainTrust` です。<br /><br /> 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
+|列挙型|`None`、`PeerTrust`、`ChainTrust`、`PeerOrChainTrust`、`Custom` のいずれかの値にします。 既定値は `ChainTrust` です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|列挙型|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は `Online` です。<br /><br /> 詳細については、[Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。|  
+|列挙型|`NoCheck`、`Online`、`Offline` のいずれかの値にします。 既定値は `Online` です。<br /><br /> 詳細については、次を参照してください。 [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation 属性  
   
@@ -74,7 +74,7 @@ ms.locfileid: "55759445"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|ピア サービスに対するクライアントの認証に使用される資格情報を指定します。|  
+|[\<ピア >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|ピア サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<authentication>` 要素は、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> クラスに対応します。 この要素は、メッシュ内の近隣ノード間の認証時に呼び出される検証コントロールを指定します。 新しいピアが近隣ノードとの接続を確立しようとするとき、自身の資格情報を応答側のピアに渡します。 リモート パーティの資格情報を検証するために、応答側の検証が呼び出されます。 メッシュ内でピア接続が確立されるたびに、両方のピアが相互に認証されます。つまり、双方の検証が呼び出されます。  
@@ -101,6 +101,7 @@ ms.locfileid: "55759445"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>

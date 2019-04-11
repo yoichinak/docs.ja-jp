@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151503"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  
@@ -44,10 +44,10 @@ ms.locfileid: "56333405"
   
  認証によって、通信するエンドポイント間にセキュリティで保護されたセッションを確立できます。 このセッションは、セキュリティ セッションの有効期間が切れるまで有効な GUID によって識別されます。 格納されるデータと格納場所を次の表に示します。  
   
-|データ|ストレージ|  
+|データ|記憶域|  
 |----------|-------------|  
 |ユーザー名、X.509 証明書、Kerberos トークンなどのプレゼンテーション資格情報、および資格情報への参照|Windows 証明書ストアなど、標準の Windows 資格情報管理機構|  
-|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー|  
+|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー。|  
 |クライアントに対するサービスの認証に使用されるサービスの ID 情報|サービスのエンドポイント アドレス|  
 |呼び出し元情報|監査ログ|  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56333405"
   
  `/>?`  
   
- <AuthorityBinding  
+ < AuthorityBinding  
   
  AuthorityKind="[QName]"  
   
@@ -385,7 +385,7 @@ ms.locfileid: "56333405"
  ビューアーには、WCF トレース ファイルが表示されます。 このビューアーは、トレースに含まれているすべての情報を表示します。  
   
 #### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
- エディターは、作成および WCF 構成ファイルを編集できます。 このエディターは、構成ファイルに含まれているすべての情報を表示します。 テキスト エディターでも同じ操作を実行できます。  
+ エディターは、作成および WCF 構成ファイルを編集できます。 このエディターは、構成ファイルに含まれているすべての情報を表示します。 テキスト エディターでも同じタスクを実行できます。  
   
 #### <a name="servicemodelreg"></a>ServiceModel_Reg  
  このツールでは、コンピューター上の ServiceModel のインストールを管理できます。 実行し、処理で、WCF のインストールの構成に関する情報を表示できますと、コンソール ウィンドウにステータス メッセージが表示されます。  
@@ -402,5 +402,6 @@ ms.locfileid: "56333405"
  Web サービス記述言語 (WSDL) には、ポートの定義が入ります。 各ポートには、エンドポイント アドレス、およびアプリケーションが使用するサービスを表すバインディングがあります。 WSDL の公開は、構成を使用して無効にできます。 コンピューターに保持される情報はありません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation](index.md)
 - [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)

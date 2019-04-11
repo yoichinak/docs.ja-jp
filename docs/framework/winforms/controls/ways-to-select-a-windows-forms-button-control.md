@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223291"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Windows フォームの Button コントロールを選択する方法
 次の方法で Windows フォームのボタンを選択できます。  
@@ -29,6 +29,7 @@ ms.locfileid: "57717259"
 -   呼び出す、<xref:System.Windows.Forms.Button.PerformClick%2A>メソッドをプログラムで、ボタンを選択します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
-- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button コントロール](button-control-windows-forms.md)

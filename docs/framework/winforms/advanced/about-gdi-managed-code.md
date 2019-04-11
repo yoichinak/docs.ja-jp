@@ -60,6 +60,6 @@ ms.locfileid: "57705026"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [マネージ グラフィックス クラスを使用して](using-managed-graphics-classes.md)します。  
+ [マネージ グラフィックス クラスを使用して](using-managed-graphics-classes.md)
  
   `Graphics` プログラミング インターフェイスを使用する方法を説明するトピックへのリンクが含まれます。

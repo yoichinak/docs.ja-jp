@@ -163,7 +163,7 @@ SendReply ReplyToStartOrder = new SendReply
 
  間で永続化は許可されていません、 <xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>ペアまたは<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>ペア。 両方のアクティビティが完了するまで存続する非永続化ゾーンが作成されます。 遅延アクティビティなどのアクティビティがこの非永続化ゾーンにあって、ワークフローのアイドル状態を引き起こした場合、ホストでワークフローがアイドル状態になったときにワークフローを永続化するようにホストが構成されていても、ワークフローは永続化されません。 Persist アクティビティなどのアクティビティが非永続化ゾーンで明示的に永続化を試みた場合、致命的な例外がスローされ、ワークフローが中止されて、<xref:System.ServiceModel.FaultException> が呼び出し元に返されます。 次の致命的な例外メッセージが表示されます。"System.InvalidOperationException: 持続性のないブロックに Persist アクティビティを含めることはできません。" この例外は呼び出し元に返されませんが、追跡が有効になっている場合は確認できます。 呼び出し元に返される <xref:System.ServiceModel.FaultException> のメッセージは、"WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' が完了しているため、操作を実行できませんでした" です。
 
- 要求-応答の相関関係の詳細については、次を参照してください。[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)します。
+ 要求-応答の相関関係の詳細については、[要求/応答](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)を参照してください。
 
 ## <a name="common-content-correlation-issues"></a>コンテンツ ベースの相関関係の一般的な問題
  コンテンツ ベースの相関関係は、ワークフロー サービスが複数のメッセージを受信し、交換されるメッセージ内の一部のデータによって目的のインスタンスが識別される場合に使用されます。 コンテンツ ベースの相関関係では、顧客番号や注文 ID などのメッセージ内のデータを使用して、適切なワークフロー インスタンスにメッセージをルーティングします。 ここでは、コンテンツ ベースの相関関係を使用するときに発生するいくつかの一般的な問題について説明します。

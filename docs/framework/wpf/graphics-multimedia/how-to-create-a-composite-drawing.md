@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132471"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>方法: 複合描画を作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.DrawingGroup>複数を組み合わせることで複雑な描画を作成する<xref:System.Windows.Media.Drawing>オブジェクトを 1 つの複合描画にします。  
@@ -42,6 +42,7 @@ DrawingGroup を使用して作成された複合描画
  詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[Drawing オブジェクトの概要](drawing-objects-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
 - <xref:System.Windows.Media.DrawingGroup.Transform%2A>
 - <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>

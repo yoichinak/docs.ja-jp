@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088822"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows フォームと WPF プロパティの割り当て
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジに 2 つのプロパティが似ていますが、異なるモデルがあります。 *プロパティ マッピング*2 つのアーキテクチャ間の相互運用をサポートし、次の機能を提供します。  
@@ -38,7 +38,7 @@ ms.locfileid: "57358562"
 |---------------------------------------------|-------------------|-----------------------------|  
 |<xref:System.Windows.Controls.Control.Background%2A><br /><br /> (<xref:System.Windows.Media.Brush?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.BackColor%2A><br /><br /> (<xref:System.Drawing.Color?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素セット、<xref:System.Windows.Forms.Control.BackColor%2A>ホストされるコントロールのプロパティと<xref:System.Windows.Forms.Control.BackgroundImage%2A>ホストされるコントロールのプロパティ。 マッピングは、次の規則を使用して実行されます。<br /><br /> If<xref:System.Windows.Controls.Control.Background%2A>が純色を変換して設定するため、<xref:System.Windows.Forms.Control.BackColor%2A>ホストされるコントロールのプロパティ。 <xref:System.Windows.Forms.Control.BackColor%2A>プロパティが設定されていないホスト型のコントロールでは、ホストされるコントロールの値を継承できるため、<xref:System.Windows.Forms.Control.BackColor%2A>プロパティ。 **注:** ホストされるコントロールは、透明度をサポートしていません。 割り当てられている任意の色<xref:System.Windows.Forms.Control.BackColor%2A>0 xff のアルファ値を持つ、完全に不透明である必要があります。 <br /><br /> If<xref:System.Windows.Controls.Control.Background%2A>純色ではありません、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールからビットマップを作成する、<xref:System.Windows.Controls.Control.Background%2A>プロパティ。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、このビットマップを割り当てます、<xref:System.Windows.Forms.Control.BackgroundImage%2A>ホストされるコントロールのプロパティ。 これは、透過性のような効果を提供します。 **注:** この動作をオーバーライドすることができますか、削除することができます、<xref:System.Windows.Controls.Control.Background%2A>プロパティ マッピングします。|  
 |<xref:System.Windows.FrameworkElement.Cursor%2A>|<xref:System.Windows.Forms.Control.Cursor%2A>|既定のマッピングが割り当てされていない場合<xref:System.Windows.Forms.Integration.WindowsFormsHost>の先祖が見つかるまで、コントロールがその先祖の階層を走査その<xref:System.Windows.FrameworkElement.Cursor%2A>プロパティ セット。 この値は、最も近い対応する翻訳[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]カーソル。<br /><br /> 場合の既定のマッピング、<xref:System.Windows.FrameworkElement.ForceCursor%2A>プロパティが再割り当てされていない、トラバーサルの停止を持つ最初の先祖に対して<xref:System.Windows.FrameworkElement.ForceCursor%2A>に設定`true`します。|  
-|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FlowDirection.LeftToRight> は <xref:System.Windows.Forms.RightToLeft.No> にマップされます。<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft> は <xref:System.Windows.Forms.RightToLeft.Yes> にマップされます。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Inherit> マップされていません。<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> は <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> にマップされます。|  
+|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection?displayProperty=nameWithType>)|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FlowDirection.LeftToRight> マップ<xref:System.Windows.Forms.RightToLeft.No>します。<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft> マップ<xref:System.Windows.Forms.RightToLeft.Yes>します。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Inherit> マップされていません。<br /><br /> <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> マップ<xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType>します。|  
 |<xref:System.Windows.Controls.Control.FontStyle%2A>|<xref:System.Drawing.Font.Style%2A> ホストされるコントロールの上 <xref:System.Drawing.Font?displayProperty=nameWithType>|一連の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プロパティに変換される、対応する<xref:System.Drawing.Font>します。 これらのプロパティのいずれかが変更されると、新しい<xref:System.Drawing.Font>が作成されます。 <xref:System.Windows.FontStyles.Normal%2A>:<xref:System.Drawing.FontStyle.Italic>は無効です。 <xref:System.Windows.FontStyles.Italic%2A>または<xref:System.Windows.FontStyles.Oblique%2A>:<xref:System.Drawing.FontStyle.Italic>を有効にします。|  
 |<xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Drawing.Font.Style%2A> ホストされるコントロールの上 <xref:System.Drawing.Font?displayProperty=nameWithType>|一連の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プロパティに変換される、対応する<xref:System.Drawing.Font>します。 これらのプロパティのいずれかが変更されると、新しい<xref:System.Drawing.Font>が作成されます。 <xref:System.Windows.FontWeights.Black%2A>、 <xref:System.Windows.FontWeights.Bold%2A>、 <xref:System.Windows.FontWeights.DemiBold%2A>、 <xref:System.Windows.FontWeights.ExtraBold%2A>、 <xref:System.Windows.FontWeights.Heavy%2A>、 <xref:System.Windows.FontWeights.Medium%2A>、 <xref:System.Windows.FontWeights.SemiBold%2A>、または<xref:System.Windows.FontWeights.UltraBold%2A>:<xref:System.Drawing.FontStyle.Bold>を有効にします。 <xref:System.Windows.FontWeights.ExtraLight%2A>、 <xref:System.Windows.FontWeights.Light%2A>、 <xref:System.Windows.FontWeights.Normal%2A>、 <xref:System.Windows.FontWeights.Regular%2A>、 <xref:System.Windows.FontWeights.Thin%2A>、または<xref:System.Windows.FontWeights.UltraLight%2A>:<xref:System.Drawing.FontStyle.Bold>は無効です。|  
 |<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|一連の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プロパティに変換される、対応する<xref:System.Drawing.Font>します。 これらのプロパティのいずれかが変更されると、新しい<xref:System.Drawing.Font>が作成されます。 ホストされた[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]フォント サイズに基づくサイズ変更を制御します。<br /><br /> フォント サイズで[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は 1 つ 90 6 インチを単位ととして表現[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]インチの 70-2 番目の 1 つとして。 対応する変換では。<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] フォント サイズ =[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フォント サイズ * 72.0 96.0/。|  
@@ -95,7 +95,7 @@ ms.locfileid: "57358562"
   
 -   場所  
   
--   余白  
+-   Margin  
   
 -   [間隔]  
   
@@ -113,7 +113,7 @@ ms.locfileid: "57358562"
   
 -   テキスト  
   
--   可視  
+-   Visible  
   
  <xref:System.Windows.Forms.Integration.ElementHost>コントロールが既定値を変換します[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]次の変換テーブルを使用して対応します。  
   
@@ -131,13 +131,14 @@ ms.locfileid: "57358562"
 |<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> ホストされている要素|<xref:System.Drawing.Font.Italic%2A> が `true` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Italic%2A> に設定されます。<br /><br /> <xref:System.Drawing.Font.Italic%2A> が `false` の場合、<xref:System.Windows.Controls.Control.FontStyle%2A> が <xref:System.Windows.FontStyles.Normal%2A> に設定されます。|  
 |<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations> ホストされている要素|ホストしている場合にのみ適用されます、<xref:System.Windows.Controls.TextBlock>コントロール。|  
 |<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations> ホストされている要素|ホストしている場合にのみ適用されます、<xref:System.Windows.Controls.TextBlock>コントロール。|  
-|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> は <xref:System.Windows.FlowDirection.LeftToRight> にマップされます。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> は <xref:System.Windows.FlowDirection.RightToLeft> にマップされます。|  
+|<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> マップ<xref:System.Windows.FlowDirection.LeftToRight>します。<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> マップ<xref:System.Windows.FlowDirection.RightToLeft>します。|  
 |<xref:System.Windows.Forms.Control.Visible%2A>|<xref:System.Windows.UIElement.Visibility%2A>|<xref:System.Windows.Forms.Integration.ElementHost>コントロール セット、<xref:System.Windows.UIElement.Visibility%2A>次の規則を使用してホストされている要素のプロパティ。<br /><br /> -   <xref:System.Windows.Forms.Control.Visible%2A> = `true` マップ<xref:System.Windows.Visibility.Visible>します。<br />-   <xref:System.Windows.Forms.Control.Visible%2A> = `false` マップ<xref:System.Windows.Visibility.Hidden>します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
 - [WPF と Windows フォームの相互運用性](wpf-and-windows-forms-interoperation.md)
-- [チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [チュートリアル: ElementHost コントロールを使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [チュートリアル: ElementHost コントロールを使用したプロパティの割り当て](walkthrough-mapping-properties-using-the-elementhost-control.md)

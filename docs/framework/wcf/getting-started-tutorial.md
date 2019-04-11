@@ -7,21 +7,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137931"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>チュートリアル: Windows Communication Foundation アプリケーションを概要します。
 次の一連のチュートリアルに、Windows Communication Foundation (WCF) プログラミングの経験を紹介します。 順序でこれらのチュートリアルに従って作業では、WCF アプリケーションの作成に必要な手順の概要を理解するを指定します。 完了したら、実行中の WCF サービスと WCF クライアント サービスを呼び出す必要があります。 
 
 このチュートリアルでは、開発環境として Visual Studio を使用している前提としています。 他の開発環境を使用している場合は、Visual Studio 固有の手順を無視します。 
 
-サンプル WCF アプリケーションをダウンロードして実行できる、[Windows Communication Foundation サンプル](samples/index.md)を参照してください。 サンプルの概要については、[Getting started サンプル](samples/getting-started-sample.md)を参照してください。
+サンプル WCF アプリケーションをダウンロードして実行できる、次を参照してください。 [Windows Communication Foundation サンプル](samples/index.md)します。 サンプルの概要については、次を参照してください。 [Getting started サンプル](samples/getting-started-sample.md)します。
 
-サービスとクライアントの作成の詳細の詳細については、[基本的な WCF プログラミング](basic-wcf-programming.md)を参照してください。
+サービスとクライアントの作成の詳細の詳細については、次を参照してください。[基本的な WCF プログラミング](basic-wcf-programming.md)します。
 
 ## <a name="wcf-tutorials"></a>WCF のチュートリアル
 
@@ -72,5 +72,3 @@ ms.locfileid: "58408861"
 - [入門サンプル](samples/getting-started-sample.md)
 - [Windows Communication Foundation サンプル](samples/index.md)
 - [自己ホスト](samples/self-host.md)
-
-

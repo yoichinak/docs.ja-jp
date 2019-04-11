@@ -9,12 +9,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215782"
 ---
 # <a name="sources-element"></a>\<ソース > 要素
 トレース メッセージを開始するトレース ソースを指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "55262505"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必須の要素です。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
+|[\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必須の要素です。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -80,6 +80,7 @@ ms.locfileid: "55262505"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
@@ -87,4 +88,4 @@ ms.locfileid: "55262505"
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)

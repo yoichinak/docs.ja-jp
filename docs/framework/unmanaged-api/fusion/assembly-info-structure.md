@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b69aa42fc2ebb9f59cbf699d83b521704805ea5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110878"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO 構造体
 グローバル アセンブリ キャッシュに登録されているアセンブリに関する情報が含まれています。  
@@ -53,8 +53,9 @@ typedef struct _ASSEMBLY_INFO {
   
  **ヘッダー:** Fusion.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Fusion 構造体](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [グローバル アセンブリ キャッシュ](../../../../docs/framework/app-domains/gac.md)

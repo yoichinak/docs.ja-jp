@@ -1,17 +1,17 @@
 ---
-title: Windows コンテナーとして既存の .NET アプリをデプロイします。
+title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Windows コンテナーとして既存の .NET アプリをデプロイします。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216666"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリをデプロイします。
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
 基づく Windows コンテナーのデプロイでは、クラウドに最適化されたアプリケーションとクラウド ネイティブ アプリケーションに適用されます。
 
@@ -95,7 +95,7 @@ Dockerfile ファイルにイメージ名を追加する場合は、.NET Framewo
 
 > | **タグ** | **システムとバージョン** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x を Windows Server Core |
+> | **microsoft/dotnet-framework:4.x windowsservercore** | .NET framework 4.x を Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x の Windows Server core、ASP.NET の他のカスタマイズ |
 
 .NET Core (Linux および Windows 用はクロス プラットフォーム)、タグは次のようになります。
@@ -134,7 +134,6 @@ HYPER-V による分離の有無で Windows コンテナーを実行すると、
 -   **インフォ グラフィック:Microsoft とコンテナー**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>Azure でコンテナーのエコシステム
 

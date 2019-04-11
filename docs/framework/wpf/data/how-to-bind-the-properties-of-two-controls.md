@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: f3355969d0f12f0f3ed9b49bdb7efa6913c5e4c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222068"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>方法: 2 つのコントロールのプロパティをバインドする
 この例を使用して別の 1 つのインスタンス化されたコントロールのプロパティをバインドする方法を示しています、<xref:System.Windows.Data.Binding.ElementName%2A>プロパティ。  
@@ -28,5 +28,6 @@ ms.locfileid: "57372101"
  **注**バインディング ターゲット プロパティ (この例で、<xref:System.Windows.Controls.Panel.Background%2A>プロパティ) 依存関係プロパティである必要があります。 詳しくは、「 [データ バインディングの概要](data-binding-overview.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [バインディング ソースを指定する](how-to-specify-the-binding-source.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

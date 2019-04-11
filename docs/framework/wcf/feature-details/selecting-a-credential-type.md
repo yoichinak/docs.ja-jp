@@ -2,12 +2,12 @@
 title: 資格情報の種類の選択
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167844"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
 *資格情報* とはWindows Communication Foundation (WCF) が要求された身分証明または資格を確立するために使用するデータです。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンと X.509 証明書などのさまざまな形式を実行できます。 このトピックでは、資格情報、WCF では、使用する方法と、アプリケーションの適切な資格情報を選択する方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "54577114"
 |Windows|Windows 資格情報によって確立されたセキュリティ コンテキストで、SOAP メッセージ交換を実行できます。|  
 |[ユーザー名]|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF での署名の生成やデータの暗号化などのユーザー名と暗号化操作を許可しないことに注意してください。 WCF によりユーザー名資格情報を使用する場合に、トランスポートがセキュリティで保護されるようになります。|  
 |証明書|X.509 証明書を使用したクライアントの認証をサービスで要求できるようにします。|  
-|IssuedToken|セキュリティ ポリシーに従って構成されるカスタム トークンです。 既定のトークンの種類は、SAML (Security Assertion Markup Language) です。 トークンは、セキュリティ トークン サービスによって発行されます。 詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。|  
+|IssuedToken|セキュリティ ポリシーに従って構成されるカスタム トークンです。 既定のトークンの種類は、SAML (Security Assertion Markup Language) です。 トークンは、セキュリティ トークン サービスによって発行されます。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>サービス資格情報のネゴシエーション モデル  
  *ネゴシエーション*は資格情報を交換することで、クライアントとサービス間の信頼を確立するプロセスです。 このプロセスは、ネゴシエーション プロセスの次の手順に必要な情報だけを公開するために、クライアントとサービスとの間で反復して実行されます。 実際には、最後に、後続の操作で使用されるサービスの資格情報がクライアントに配信されます。  
@@ -64,7 +64,7 @@ ms.locfileid: "54577114"
  サービスをプログラミングしている場合とクライアントをプログラミングしている場合で、資格情報の値を設定する方法が少し異なります。  
   
 ### <a name="setting-service-credentials"></a>サービス資格情報の設定  
- トランスポート モードを使用し、HTTP をトランスポートとして使用する場合は、インターネット インフォメーション サービス (IIS) を使用するか、証明書でポートを構成する必要があります。 詳細については、[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)と[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)を参照してください。  
+ トランスポート モードを使用し、HTTP をトランスポートとして使用する場合は、インターネット インフォメーション サービス (IIS) を使用するか、証明書でポートを構成する必要があります。 詳細については、次を参照してください。[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)と[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
  コードで資格情報をサービスに提供するには、<xref:System.ServiceModel.ServiceHost> クラスのインスタンスを作成し、<xref:System.ServiceModel.Description.ServiceCredentials> プロパティからアクセスできる <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスを使用して適切な資格情報を指定します。  
   
@@ -95,9 +95,10 @@ ms.locfileid: "54577114"
 > [!IMPORTANT]
 >  ID の切り替えができないこと (つまり、セキュリティ コンテキストを確立する場合の既定の動作) について、注意が必要な状況があります。 別のサービスと通信するサービスを作成する場合、2 番目のサービスの WCF クライアントを開くために使用する id を変更できません。 これは、複数のクライアントが最初のサービスを使用できる状況で、2 番目のサービスにアクセスするときに最初のサービスがクライアントを偽装する場合、問題になります。 サービスがすべての呼び出し元に対して同じクライアントを再利用する場合、2 番目のサービスへの呼び出しはすべて、2 番目のサービスに対してクライアントを開くために使用した最初の呼び出し元の ID によって実行されます。 つまり、このサービスでは、すべてのクライアントが 2 番目のサービスと通信できるように、最初のクライアントの ID が使用されます。 これによって、権限の昇格が発生する可能性があります。 これがサービスの目的の動作でない場合、各呼び出し元を追跡し、その呼び出し元ごとに 2 番目のサービスに対する新しいクライアントを作成する必要があります。これによって、適切な呼び出し元が 2 番目のサービスと通信するために、サービスは適切なクライアントだけを使用できます。  
   
- 資格情報とセキュリティで保護されたセッションの詳細については、[セキュリティで保護されたセッションに関するセキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)を参照してください。  
+ 資格情報とセキュリティで保護されたセッションの詳細については、次を参照してください。[セキュリティで保護されたセッションに関するセキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>

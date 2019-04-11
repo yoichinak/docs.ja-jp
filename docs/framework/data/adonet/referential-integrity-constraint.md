@@ -2,12 +2,12 @@
 title: 参照整合性制約
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 7d3304393ef4e97887d9b8afec94ed265e38eaf0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073976"
 ---
 # <a name="referential-integrity-constraint"></a>参照整合性制約
 A*参照整合性制約*Entity Data Model (EDM) では、リレーショナル データベースで参照整合性制約に似ています。 同様に、データベース テーブルから列 (または列) は、別のテーブルの主キーで参照できます、[プロパティ](../../../../docs/framework/data/adonet/property.md)(またはプロパティ) の[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)参照できる、[エンティティ キー](../../../../docs/framework/data/adonet/entity-key.md)別のエンティティ型。 参照されるエンティティ型が呼び出される、*プリンシパル end*の制約。 プリンシパル end を参照するエンティティ型が呼び出される、*依存 end*の制約。  
@@ -22,7 +22,7 @@ A*参照整合性制約*Entity Data Model (EDM) では、リレーショナル �
   
 -   依存 End の参照プロパティ。  
   
- EDM の参照整合性制約の目的は、常に有効なアソシエーションが存在することを確認するためです。 詳細については、[外部キー プロパティ](../../../../docs/framework/data/adonet/foreign-key-property.md)を参照してください。  
+ EDM の参照整合性制約の目的は、常に有効なアソシエーションが存在することを確認するためです。 詳細については、次を参照してください。[外部キー プロパティ](../../../../docs/framework/data/adonet/foreign-key-property.md)します。  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`WrittenBy` および `PublishedBy` という 2 つのアソシエーションの概念モデルを示しています。 
@@ -35,5 +35,6 @@ A*参照整合性制約*Entity Data Model (EDM) では、リレーショナル �
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [エンティティ データ モデル](../../../../docs/framework/data/adonet/entity-data-model.md)

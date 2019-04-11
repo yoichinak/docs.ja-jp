@@ -2,12 +2,12 @@
 title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300282"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  
@@ -34,15 +34,15 @@ ms.locfileid: "56261153"
   
  IErrorHandler を使用すると、例外がスローされたときのアプリケーションの動作を明示的に制御できます。 次のような操作が可能です。  
   
-1.  クライアントにエラーを送信するかどうかを決定する  
+1. クライアントにエラーを送信するかどうかを決定する  
   
-2.  例外をエラーに置き換える  
+2. 例外をエラーに置き換える  
   
-3.  エラーを別のエラーに置き換える  
+3. エラーを別のエラーに置き換える  
   
-4.  ログまたはトレースを実行する  
+4. ログまたはトレースを実行する  
   
-5.  他のカスタム アクティビティを実行する  
+5. 他のカスタム アクティビティを実行する  
   
  カスタム エラー ハンドラーは、サービスのチャネル ディスパッチャーの ErrorHandlers プロパティに追加することでインストールできます。  複数のエラー ハンドラーを設定することができ、これらはこのコレクションに追加された順序で呼び出されます。  
   
@@ -68,4 +68,5 @@ ms.locfileid: "56261153"
  型変換のディスパッチ エラーは、エラー ハンドラーをインストールすることで、その他多くの種類のディスパッチ エラーと同様に調査できます。 IErrorHandler 機能拡張ポイントは、サービス レベルの例外を処理するために呼び出されます。 そこから、呼び出し元に返される応答を選択できます (カスタム タスクとレポートを実行することもできます)。  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的な WCF プログラミング](../basic-wcf-programming.md)

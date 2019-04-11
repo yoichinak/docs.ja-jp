@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077733"
 ---
 # <a name="data"></a>データ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ドラッグ アンド ドロップ操作を使用してデータの転送メカニズムも提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [データ バインディング](data-binding-wpf.md)  
@@ -39,5 +39,6 @@ ms.locfileid: "57353973"
  [データ バインディング](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

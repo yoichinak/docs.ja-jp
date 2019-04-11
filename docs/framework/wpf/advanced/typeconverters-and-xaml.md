@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164990"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能として、文字列からの型変換の目的について説明します。 .NET Framework で、<xref:System.ComponentModel.TypeConverter>クラスは、特定の目的を XAML 属性の使用法のプロパティの値として使用できる管理対象のカスタム クラスの実装の一部として機能します。 カスタム クラスを作成する XAML 設定可能な属性の値として使用するのには、クラスのインスタンスが必要な場合は、可能性があります、適用する必要があります、<xref:System.ComponentModel.TypeConverterAttribute>カスタムを作成し、クラスに<xref:System.ComponentModel.TypeConverter>クラス、またはその両方です。  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>型変換の概念  
   
 ### <a name="xaml-and-string-values"></a>XAML と文字列値  
@@ -48,7 +46,7 @@ ms.locfileid: "57352712"
 ### <a name="type-converters-and-markup-extensions"></a>型コンバーターとマークアップ拡張機能  
  マークアップ拡張機能よぶ型コンバーターは、XAML プロセッサの動作とに適用するシナリオの観点から両方の役割を入力します。 マークアップ拡張機能の使用時にはコンテキストを利用できますが、マークアップ拡張機能が値を提供するプロパティの型変換動作は一般にマークアップ拡張機能の実装ではチェックされません。 つまり、マークアップ拡張機能としてテキスト文字列を返した場合であってもその`ProvideValue`出力するには、特定のプロパティまたはプロパティ値の型に適用されると、その文字列に対する型変換動作は呼び出されません、一般に、マークアップ拡張機能の目的は、プロセスには、文字列と関連する型コンバーターを呼び出さず、オブジェクトを返します。  
   
- マークアップ拡張機能が型コンバーターではなく必要な場合、1 つの一般的な状況は既に存在するオブジェクトへの参照です。 せいぜい、ステートレスな型コンバーターは、望ましいことができない可能性がありますの新しいインスタンスを生成のみでした。 マークアップ拡張機能の詳細については、[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)を参照してください。  
+ マークアップ拡張機能が型コンバーターではなく必要な場合、1 つの一般的な状況は既に存在するオブジェクトへの参照です。 せいぜい、ステートレスな型コンバーターは、望ましいことができない可能性がありますの新しいインスタンスを生成のみでした。 マークアップ拡張機能の詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
 ### <a name="native-type-converters"></a>ネイティブな型コンバーター  
  XAML パーサーの WPF と .NET Framework の実装では、ネイティブ型の変換処理、まだがプリミティブとして考えるが従来どおり型ではない特定の種類があります。 このような型の例として、 <xref:System.DateTime>が挙げられます。 この理由は、.NET Framework のアーキテクチャの動作方法に基づきは: 種類<xref:System.DateTime>mscorlib、.NET で最も基本的なライブラリで定義されます。 <xref:System.DateTime> 属性、依存関係を導入する別のアセンブリから来る属性を設定するのには許可されていません (<xref:System.ComponentModel.TypeConverterAttribute>は System から) ため、属性によって、通常の型コンバーターの検出メカニズムがサポートされることはできません。 代わりに、XAML パーサーでは、このようなネイティブの処理が必要な型のリストがあるし、通常のプリミティブの処理方法と同様にこれらを処理します。 (の場合に<xref:System.DateTime>への呼び出しは、 <xref:System.DateTime.Parse%2A>)。  
@@ -73,7 +71,7 @@ ms.locfileid: "57352712"
   
  [次へ] の最も重要なメソッドは<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>します。 かどうか、アプリケーションは、マークアップ表現に変換されます (たとえば、ファイルとして XAML に保存されます) 場合、<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>はマークアップ表現を生成を担当します。 この場合は、XAML の重要なコード パスは、渡すときに、`destinationType`の<xref:System.String>します。  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> と <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> は、サービスが <xref:System.ComponentModel.TypeConverter> の実装の機能を照会する時に使用されるサポート メソッドです。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>はサポートされているサービスの機能を照会するときに使用する方法、<xref:System.ComponentModel.TypeConverter>実装します。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>カルチャ情報と XAML の型コンバーター  
  各<xref:System.ComponentModel.TypeConverter>実装ことができます、変換に対して有効な文字列の構成要素の独自の解釈があるとも使用したり、パラメーターとして渡された型の説明を無視します。 カルチャと XAML 型の変換に関して重要な考慮事項があります。 XAML では、ローカライズ可能な文字列を使用して属性値としてはサポートされて完全。 XAML 属性値の型コンバーターが、必ずしも特定の言語の解析動作が関与するための特定のカルチャ要件型コンバーターの入力がサポートされていないためにそのローカライズ可能な文字列を使用して、使用して、`en-US`カルチャ。 この制限の設計上の理由の詳細については、XAML 言語仕様を参照してください ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525))。  
@@ -89,7 +87,7 @@ ms.locfileid: "57352712"
 >  特に、中かっこ文字を使用しないでください {、文字列の書式の要素として。 これらの文字は、マークアップ拡張シーケンスの開始および終了を示す文字として予約されています。  
   
 ### <a name="implementing-convertto"></a>ConvertTo の実装  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> は、シリアル化のサポートで使用される可能性があります。 カスタム型およびその型コンバーターに対して <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> によるシリアル化をサポートすることは、絶対要件ではありません。 ただし、コントロールを実装する場合、またはクラスの機能または設計の一部としてシリアル化を使用する場合は、 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>を実装する必要があります。  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> シリアル化のサポートの使用可能性があります。 カスタム型およびその型コンバーターに対して <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> によるシリアル化をサポートすることは、絶対要件ではありません。 ただし、コントロールを実装する場合、またはクラスの機能または設計の一部としてシリアル化を使用する場合は、 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>を実装する必要があります。  
   
  として使用するのには、 <xref:System.ComponentModel.TypeConverter> 、XAML をサポートする実装、<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>としてそのコンバーターのメソッドがサポートされている型 (または値) のインスタンスを受け入れる必要があります、`value`パラメーター。 ときに、`destinationType`パラメーターは、型<xref:System.String>、返されるオブジェクトとしてキャストできる必要がありますし、<xref:System.String>します。 返される文字列は、 `value`のシリアル化された値を表している必要があります。 理想的には、シリアル化形式を選択する必要がありますにその文字列が渡された場合は、同じ値を生成できるが、<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>重要な情報が失われることがなく、同じコンバーターの実装。  
   
@@ -110,6 +108,7 @@ ms.locfileid: "57352712"
  また、プロパティごとに型コンバーターを提供することもできます。 クラス定義に [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> を適用する代わりに、プロパティ定義 (メイン定義内の `get`/`set` 実装ではなくメイン定義自体) に適用します。 プロパティの型は、カスタム型コンバーターによって処理される型と一致する必要があります。 この属性を適用するには、Xaml では、そのプロパティの値を処理する場合、入力文字列を処理し、オブジェクト インスタンスを返します。 プロパティの型コンバーターの手法は Microsoft .NET Framework とは、クラス定義を制御することはできませんし、適用できません他のいくつかのライブラリからプロパティの型を使用する場合に特に便利です、<xref:System.ComponentModel.TypeConverterAttribute>があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)
 - [マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)

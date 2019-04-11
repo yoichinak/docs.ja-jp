@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492339"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328726"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
 Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされるコンポーネント ベースのアプリケーション ロジックを既に使用している場合は、既存のロジックを修正することがなく拡張する WCF を使用できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
  COM+ コンポーネントを修正することなく、そのインターフェイスを Web サービスとして公開するための手順を次に示します。  
   
-1.  COM+ コンポーネントのインターフェイスを、実際に Web サービスとして公開してかまわないかどうか、あらかじめ確認してください。  
+1. COM+ コンポーネントのインターフェイスを、実際に Web サービスとして公開してかまわないかどうか、あらかじめ確認してください。  
   
-2.  適切なホスティング モードを選択します。  
+2. 適切なホスティング モードを選択します。  
   
-3.  COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe を使用する方法の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
+3. COM+ サービス モデル構成ツール (ComSvcConfig.exe) を使用して、当該インターフェイスを公開するための Web サービスを追加します。 ComSvcConfig.exe を使用する方法の詳細については、次を参照してください。[方法。COM + サービス モデル構成ツールを使用して](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)します。  
   
-4.  アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントを構成する方法の詳細については、次を参照してください。[方法。COM + サービス設定の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)します。  
+4. アプリケーション構成ファイルで、追加のサービス設定を構成します。 コンポーネントを構成する方法の詳細については、次を参照してください。[方法。COM + サービス設定の構成](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)します。  
   
 ## <a name="supported-interfaces"></a>公開可能なインターフェイス  
  Web サービスとして公開できるインターフェイスの種類に関して、いくつか制約があります。 次のようなインターフェイスは公開できません。  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
 ### <a name="limited-object-reference-support"></a>オブジェクト参照を渡せる場合  
  展開済みの COM+ コンポーネントの多くが、ADO Recordset オブジェクトを返す場合などに、パラメーターとしてオブジェクト参照を渡すようになっているため、COM+ 統合においても、一定の条件を満たす場合には、オブジェクト参照をパラメーターとして渡せるようになっています。 オブジェクト参照を渡せるのは、`IPersistStream` COM インターフェイスを実装しているオブジェクトに限ります。 たとえば ADO Recordset オブジェクトがそうで、アプリケーション固有の COM オブジェクトについてはオブジェクト参照を実装できます。  
   
- ComSvcConfig.exe ツールにより、このサポートを有効にする、 **allowreferences**スイッチを通常のメソッド シグネチャのパラメーターが無効になり、オブジェクト参照のパラメーターが使用されていないことを確認するツールを実行することを確認します. ただし、パラメーターとして渡すオブジェクト型に名前を付け、<`persistableTypes`> 構成要素 (<`comContract`> 要素の子要素) で識別できるようにする必要があります。  
+ ComSvcConfig.exe ツールにより、このサポートを有効にする、 **allowreferences**スイッチを通常のメソッド シグネチャのパラメーターが無効になり、オブジェクト参照のパラメーターが使用されていないことを確認するツールを実行することを確認します. さらに、パラメーターとして渡すオブジェクトの種類をという名前し、内で識別する必要があります、<`persistableTypes`> 構成要素の子である、<`comContract`> 要素。  
   
  この機能を使用する場合、COM+ 統合サービスは、`IPersistStream` インターフェイスを使用してオブジェクト インスタンスのシリアル化および逆シリアル化を行います。 オブジェクト インスタンスが `IPersistStream` インターフェイスを実装していない場合、例外がスローされます。  
   
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
  COM+ のプロセス リサイクル機能は、統合アプリケーションでは使えません。 アプリケーションがこの機能を使用するよう設定されている場合、コンポーネントが COM+ ホスト プロセスとして動作していると、サービスを起動できません。 "Web ホスト (インプロセス)" モードであれば、プロセス リサイクル設定は適用されないので問題ありません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

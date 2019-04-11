@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム DataGridView コントロールのセルの変更に基づくカスタム動作を実行します。'
+title: '方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], detecting changes in cells
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
-ms.openlocfilehash: ad1c60c34fc5461de21e2ad5d4d02f5b2abd6dfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229161"
 ---
-# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールのセルの変更に基づくカスタム動作を実行します。
+# <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する
 <xref:System.Windows.Forms.DataGridView>コントロールが状態の変更を検出するために使用できるイベントの数が<xref:System.Windows.Forms.DataGridView>セル。 2 つの最も一般的に使用される、<xref:System.Windows.Forms.DataGridView.CellValueChanged>と<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>DataGridView セルの値に変更を検出するには  
@@ -36,15 +36,14 @@ ms.locfileid: "57705585"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。 C#、対応するイベントにイベント ハンドラーを接続する必要があります。  
+-   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。 C#、対応するイベントにイベント ハンドラーを接続する必要があります。  
   
--   
-  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellValueChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellStateChanged?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールのデータの検証](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)

@@ -2,12 +2,12 @@
 title: WSDL とポリシー
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151906"
 ---
 # <a name="wsdl-and-policy"></a>WSDL とポリシー
 このトピックでは、Windows Communication Foundation (WCF) の WSDL 1.1、Ws-policy と Ws-policyattachment の実装の詳細だけでなく追加の Ws-policy アサーションおよび WCF で導入された WSDL 1.1 拡張について説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54741432"
   
  このドキュメントでは、次の表に示すプレフィックスと名前空間を使用します。  
   
-|プレフィックス|Namespace|  
+|プレフィックス|名前空間|  
 |------------|---------------|  
 |wsp (WS-Policy 1.2)|http://schemas.xmlsoap.org/ws/2004/09/policy|  
 |wsp (WS-Policy 1.5)|http://www.w3.org/ns/ws-policy|  
@@ -73,6 +73,7 @@ ms.locfileid: "54741432"
 |mssp:RequireClientCertificate|入れ子|このオプション要素では、TLSNEGO プロトコルの一部としてクライアント証明書を提供するという要件を指定します。 このアサーションが存在する場合、クライアント証明書を提供する必要があります。 このアサーションが存在しない場合、クライアント証明書を提供しないでください。 このアサーションは、mssp:SslContextToken の外側で使用することはできません。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [カスタム WSDL パブリケーション](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [方法: カスタム WSDL をエクスポートします。](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [方法: カスタム WSDL をインポートします。](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [方法: カスタム WSDL をエクスポートする](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [方法: カスタム WSDL をインポートする](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

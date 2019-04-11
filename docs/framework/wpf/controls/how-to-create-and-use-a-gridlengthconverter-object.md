@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], GridLengthConverter objects
 ms.assetid: 5ab75911-e36a-4825-80e4-081c57e8e182
-ms.openlocfilehash: 0455d91eff820e5c087af20207ece1313f6f3a39
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 498d2b9c531f391f4cbeb1478469a99d381deec7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206786"
 ---
 # <a name="how-to-create-and-use-a-gridlengthconverter-object"></a>方法: GridLengthConverter オブジェクトを作成および使用する
 ## <a name="example"></a>例  
@@ -26,5 +26,6 @@ ms.locfileid: "57352257"
  [!code-vb[gridlengthConverterGrid#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridlengthConverterGrid/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.GridLengthConverter>
 - <xref:System.Windows.GridLength>

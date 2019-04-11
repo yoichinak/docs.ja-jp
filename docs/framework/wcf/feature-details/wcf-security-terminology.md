@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158744"
 ---
 # <a name="wcf-security-terminology"></a>WCF セキュリティ用語
 セキュリティについて説明するときに使用する用語の中には、だれもが知っているとは限らないものもあります。 ここでは、セキュリティ用語の一部を簡単に説明します。このトピックは、すべての項目について詳細に説明することを目的としたものではありません。  
   
- Windows Communication Foundation (WCF) のドキュメントで使用される用語の詳細については、[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)を参照してください。  
+ Windows Communication Foundation (WCF) のドキュメントで使用される用語の詳細については、次を参照してください。[基本的な Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)します。  
   
  アクセス制御リスト (ACL: Access Control List)  
  オブジェクトに適用されるセキュリティ保護のリスト。 オブジェクトには、ファイル、プロセス、イベント、またはセキュリティ記述子を持つすべてのものが含まれます。ACL 内のエントリは、アクセス制御エントリ (ACE: Access Control Entry) と呼ばれます。 ACL には、随意 ACL とシステム ACL の 2 種類があります。  
@@ -182,6 +182,7 @@ ms.locfileid: "54620387"
  国際的に認知されている証明書の規格。証明書の必須部分が定義されています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation の基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

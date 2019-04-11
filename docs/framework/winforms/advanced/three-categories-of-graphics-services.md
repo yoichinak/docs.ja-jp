@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083596"
 ---
 # <a name="three-categories-of-graphics-services"></a>グラフィックス サービスの 3 つのカテゴリ
 Windows フォームでグラフィックスの提供は、次の 3 つの広範なカテゴリに分類されます。  
@@ -40,6 +40,7 @@ Windows フォームでグラフィックスの提供は、次の 3 つの広範
  Windows フォームがテキストを描画するオプションを提供するさらに、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]機能でその<xref:System.Windows.Forms.TextRenderer>クラス。  
   
 ## <a name="see-also"></a>関連項目
+
 - [グラフィックスの概要](graphics-overview-windows-forms.md)
 - [GDI+ マネージド コードについて](about-gdi-managed-code.md)
 - [マネージド グラフィックス クラスの使用](using-managed-graphics-classes.md)

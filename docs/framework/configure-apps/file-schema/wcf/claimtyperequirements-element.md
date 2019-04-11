@@ -2,12 +2,12 @@
 title: <claimTypeRequirements> 要素
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 95cc1adf7ab37475e8d3eeb01750531a7f8ab249
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 236ae880fff24f7ccbf5d6c9c03c0208d446688f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085845"
 ---
 # <a name="claimtyperequirements-element"></a>\<claimTypeRequirements > 要素
 必須のクレームの種類のコレクションを指定します。  
@@ -17,6 +17,7 @@ ms.locfileid: "55279631"
  クレームの種類の要件は、発行されるトークンで要求されているクレームの種類の URI と、発行されるトークンでそのクレームの種類が必須かまたは省略可能かを示すブール型のパラメーターで構成されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
@@ -32,5 +33,5 @@ ms.locfileid: "55279631"
 - [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインディング セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

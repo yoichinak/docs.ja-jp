@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: 9d72350c472ff68d8ee623d82096bdab0c88abb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164516"
 ---
 # <a name="remote-vs-local-execution"></a>クエリのリモート実行とローカル実行
 クエリは、リモートで実行することも (データベース エンジンによるデータベースに対するクエリの実行)、ローカルに実行することも ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によるローカル キャッシュに対するクエリの実行) できます。  
@@ -45,7 +45,8 @@ ms.locfileid: "54547119"
  この 2 種類の実行方法は、強力なオプションの組み合わせになります。つまり、大規模なコレクションではリモート実行を、小規模なコレクションまたは完全なコレクションが必要な場合はローカル実行を選択できます。 リモート実行は <xref:System.Linq.IQueryable> を使用して実装し、ローカル実行はメモリ内の <xref:System.Collections.Generic.IEnumerable%601> コレクションに対して行います。 ローカル実行を強制する (つまり、 <xref:System.Collections.Generic.IEnumerable%601>) を参照してください[汎用 IEnumerable に型を変換](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md)します。  
   
 ### <a name="queries-against-unordered-sets"></a>順序なしのセットに対するクエリ  
- 実装するローカル コレクションの重要な違いに注意してください<xref:System.Collections.Generic.List%601>およびコレクションに対して実行されるリモート クエリを提供する*セットを順不同*リレーショナル データベースでします。 インデックス値を使用するメソッドなど、<xref:System.Collections.Generic.List%601> のメソッドにはリストのセマンティクスが必要ですが、これは通常、順序なしのセットに対するリモート クエリからは得られません。 このため、このようなメソッドでは、ローカル実行を可能にするために暗黙的に <xref:System.Data.Linq.EntitySet%601> が読み込まれます。  
+ 実装するローカル コレクションの重要な違いに注意してください<xref:System.Collections.Generic.List%601>およびコレクションに対して実行されるリモート クエリを提供する*セットを順不同*リレーショナル データベースでします。 <xref:System.Collections.Generic.List%601> インデックス値を使用するような方法では、リストのセマンティクスは、通常、順序なしのセットに対するリモート クエリからは得られませんが必要です。 このため、このようなメソッドでは、ローカル実行を可能にするために暗黙的に <xref:System.Data.Linq.EntitySet%601> が読み込まれます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

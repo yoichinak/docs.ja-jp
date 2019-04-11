@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58027137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162269"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices クラスおよび基本的な XAML の読み取りまたは書き込み
-<xref:System.Xaml.XamlServices> は、XAML ノード ストリーム、またはこれらのノードから取得された XAML 型システム情報への固有のアクセスを必要としない XAML シナリオに対応するために使用できる、.NET Framework XAML サービスによって提供されるクラスです。 要約すると、<xref:System.Xaml.XamlServices> API は次のように説明できます。 `Load` または `Parse` to suppまたはt a XAML load path, `Save` to suppまたはt a XAML save path, and `Transform` で読み込みパスと保存パスを連結する方法を指定します。 `Transform` は、XAML スキーマを別の XAML スキーマに変更するために使用できます。 このトピックでは、それぞれの API 分類について要約し、特定のメソッド オーバーロード間の相違点について説明します。  
+<xref:System.Xaml.XamlServices> XAML ノード ストリームへのアクセスを必要としない XAML シナリオに対処するために使用する .NET Framework XAML サービスによって提供されるクラスまたは XAML 型システムの情報がそれらのノードから取得します。 <xref:System.Xaml.XamlServices> API は、次のようにまとめることができます:`Load`または`Parse`XAML 読み込みパスをサポートするために`Save`保存パスでの XAML をサポートするために、`Transform`読み込みパスを結合する方法を指定し、パスを保存します。 `Transform` 1 つの XAML スキーマを変更するために使用します。 このトピックでは、それぞれの API 分類について要約し、特定のメソッド オーバーロード間の相違点について説明します。  
   
 <a name="load"></a>   
 ## <a name="load"></a>Load  
@@ -21,9 +21,9 @@ ms.locfileid: "58027137"
   
  ほとんどのシナリオにおいて最もシンプルなオーバーロードは、 <xref:System.Xaml.XamlServices.Load%28System.String%29>です。 このオーバーロードには、読み込まれる XAML を含むテキスト ファイル名を表す `fileName` パラメーターがあります。 これは、以前にローカル コンピューターに対してシリアル化された状態またはデータを持つ、完全信頼アプリケーションなどのアプリケーション シナリオに適しています。 また、アプリケーション モデル (フレームワーク) を定義している場合に、アプリケーションの動作、開始 UI、またはフレームワークによって定義された XAML を使用するその他の機能を定義した標準ファイルの 1 つを読み込む場合にも便利です。  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> にも、類似したシナリオがあります。 <xref:System.IO.Stream> はファイル システムにアクセスできるその他の <xref:System.IO> API の出力として頻繁に使用されるため、読み込むファイルをユーザーが選択できるようにする場合は、このオーバーロードが便利です。 または、非同期ダウンロードや、ストリームを生成するその他のネットワーク技術を使用して XAML ソースにアクセスすることもできます。 (ストリームまたはユーザーが選択したソースからの読み込みは、セキュリティに影響が出ることがあります。 詳しくは、「 [XAML Security Considerations](xaml-security-considerations.md)」をご覧ください。)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 同様のシナリオがあります。 <xref:System.IO.Stream> はファイル システムにアクセスできるその他の <xref:System.IO> API の出力として頻繁に使用されるため、読み込むファイルをユーザーが選択できるようにする場合は、このオーバーロードが便利です。 または、非同期ダウンロードや、ストリームを生成するその他のネットワーク技術を使用して XAML ソースにアクセスすることもできます。 (ストリームまたはユーザーが選択したソースからの読み込みは、セキュリティに影響が出ることがあります。 詳しくは、「 [XAML Security Considerations](xaml-security-considerations.md)」をご覧ください。)  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> と <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> は、.NET Framework の前のバージョンの形式のリーダーに依存するオーバーロードです。 これらのオーバーロードを使用するには、あらかじめリーダー インスタンスを作成し、その `Create` API を使用して XAML を関連形式 (テキストまたは XML) に読み込む必要があります。 レコード ポインターを他のリーダーに既に移動したり、またはレコード ポインターを使用して他の操作を実行したりした場合でも、そのことは問題になりません。 <xref:System.Xaml.XamlServices.Load%2A> からの読み込みパス ロジックは、常にルート以下の XAML 入力全体を処理します。 これらのオーバーロードのシナリオには、次のものがあります。  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>の .NET Framework の以前のバージョンからの形式のリーダーに依存するオーバー ロードします。 これらのオーバーロードを使用するには、あらかじめリーダー インスタンスを作成し、その `Create` API を使用して XAML を関連形式 (テキストまたは XML) に読み込む必要があります。 レコード ポインターを他のリーダーに既に移動したり、またはレコード ポインターを使用して他の操作を実行したりした場合でも、そのことは問題になりません。 <xref:System.Xaml.XamlServices.Load%2A> からの読み込みパス ロジックは、常にルート以下の XAML 入力全体を処理します。 これらのオーバーロードのシナリオには、次のものがあります。  
   
 -   既存の XML 用テキスト エディターを利用してシンプルな XAML 編集機能を提供するデザイン サーフェイス。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "58027137"
   
 <a name="parse"></a>   
 ## <a name="parse"></a>Parse  
- <xref:System.Xaml.XamlServices.Parse%2A> は、XAML 入力から XAML ノード ストリームを作成する読み込みパス API であるため、 `Load` に似ています。 ただし、この場合の XAML 入力は、読み込まれる XAML 全体を含む文字列として直接指定されます。 <xref:System.Xaml.XamlServices.Parse%2A> は軽量のアプローチであり、フレームワーク シナリオよりもアプリケーション シナリオにより適しています 詳細については、「 <xref:System.Xaml.XamlServices.Parse%2A>」を参照してください。 実際には、<xref:System.Xaml.XamlServices.Parse%2A> はラップされた <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 呼び出しで、内部では <xref:System.IO.StringReader> を使用します。  
+ <xref:System.Xaml.XamlServices.Parse%2A> ように、`Load`読み込みパスの XAML 入力から XAML ノード ストリームを作成する API があるためです。 ただし、この場合の XAML 入力は、読み込まれる XAML 全体を含む文字列として直接指定されます。 <xref:System.Xaml.XamlServices.Parse%2A> フレームワーク シナリオよりもアプリケーション シナリオに適している軽量なアプローチです。 詳細については、「 <xref:System.Xaml.XamlServices.Parse%2A> 」を参照してください。 <xref:System.Xaml.XamlServices.Parse%2A> 実際にはラップ<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>呼び出しを含む、<xref:System.IO.StringReader>内部的にします。  
   
 <a name="save"></a>   
-## <a name="save"></a>Save  
+## <a name="save"></a>保存  
  <xref:System.Xaml.XamlServices.Save%2A> のさまざまなオーバーロードは、保存パスを実装しています。 どの <xref:System.Xaml.XamlServices.Save%2A> メソッドもオブジェクト グラフを入力として取り、ストリーム、ファイル、または <xref:System.Xml.XmlWriter>/<xref:System.IO.TextWriter> インスタンスとして出力を生成します。  
   
  入力オブジェクトは、何らかのオブジェクト表現のルート オブジェクトであると想定されます。 ビジネス オブジェクトの単一ルート、UI シナリオでのページのオブジェクト ツリーのルート、デザイン ツールの作業用の編集サーフェイス、またはシナリオに適したその他のルート オブジェクト概念などが考えられます。  
@@ -57,11 +57,12 @@ ms.locfileid: "58027137"
   
 <a name="transform"></a>   
 ## <a name="transform"></a>変換  
- <xref:System.Xaml.XamlServices.Transform%2A> は、読み込みパスと保存パスを単一の操作としてリンクすることによって、XAML を変換します。 <xref:System.Xaml.XamlReader> および <xref:System.Xaml.XamlWriter>に対して異なるスキーマ コンテキストまたは異なるバッキング型システムを使用できます。これは、結果として生成される XAML がどのように変換されるかに影響します。 これは、さまざまな変換操作で機能します。  
+ <xref:System.Xaml.XamlServices.Transform%2A> 変換または XAML を変換、読み込みパスと保存をリンクすることで 1 回の操作のパス。 <xref:System.Xaml.XamlReader> および <xref:System.Xaml.XamlWriter>に対して異なるスキーマ コンテキストまたは異なるバッキング型システムを使用できます。これは、結果として生成される XAML がどのように変換されるかに影響します。 これは、さまざまな変換操作で機能します。  
   
  XAML ノード ストリームの各ノードの確認に依存する操作については、通常、 <xref:System.Xaml.XamlServices.Transform%2A>は使用しません。 代わりに、読み込みパスから保存パスへの一連の操作を独自に定義し、独自のロジックを挿入する必要があります。 たとえば、独自のノード ループの中で XAML リーダーと XAML ライターのペアを使用します。 具体的に言うと、 <xref:System.Xaml.XamlXmlReader> を使用して最初の XAML を読み込み、 <xref:System.Xaml.XamlXmlReader.Read%2A> を連続的に呼び出してノードにステップ インします。 XAML ノード ストリーム レベルの操作では、個々のノード (型、メンバー、その他のノード) を調整して変換を適用するか、ノードをそのままにしておくことができます。 その後、ノードを `Write` の関連する <xref:System.Xaml.XamlObjectWriter> API に送り、オブジェクトを書き込みます。 詳細については、「 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
 - [XAML サービス](index.md)

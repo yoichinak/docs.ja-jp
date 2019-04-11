@@ -1,5 +1,5 @@
 ---
-title: connectionManagement の <add> 要素 (ネットワーク設定)
+title: <add> ConnectionManagement (ネットワーク設定) の要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204251"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<追加 > connectionManagement (ネットワーク設定) の要素
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
@@ -76,6 +76,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

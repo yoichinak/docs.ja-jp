@@ -1,5 +1,5 @@
 ---
-title: '方法: 色の回転'
+title: '方法: 色を回転させる'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175540"
 ---
-# <a name="how-to-rotate-colors"></a>方法: 色の回転
+# <a name="how-to-rotate-colors"></a>方法: 色を回転させる
 4 次元色空間で回転は、視覚化が困難です。 できることができます簡単に固定色コンポーネントの 1 つを保持することに同意する回転を視覚化できます。 そうですね、アルファ コンポーネントに 1 に固定の (完全に不透明) を保持するとします。 次の図に示すように赤、緑、および青の軸を持つ 3 次元のカラー スペースを視覚化できます。  
   
  ![赤、緑、および青の軸の回転を示す図。](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
@@ -45,9 +45,10 @@ ms.locfileid: "58125890"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。 置換`RotationInput.bmp`イメージ ファイル名とパス、システムでは無効です。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 置換`RotationInput.bmp`イメージ ファイル名とパス、システムでは無効です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

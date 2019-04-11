@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294679"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub または Function が定義されていません。(Visual Basic)
 A`Sub`または`Function`呼び出すには定義する必要があります。 このエラーでは以下の原因が考えられます。  
@@ -24,11 +24,11 @@ A`Sub`または`Function`呼び出すには定義する必要があります。 
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  プロシージャ名のスペルが正しいことを確認します。  
+1. プロシージャ名のスペルが正しいことを確認します。  
   
-2.  呼び出そうとプロシージャを含むプロジェクトの名前を検索、**参照** ダイアログ ボックス。 表示されない場合は、クリックして、**参照**検索ボタンをクリックします。 プロジェクト名の左側にチェック ボックスを選択し、クリックして**OK**します。  
+2. 呼び出そうとプロシージャを含むプロジェクトの名前を検索、**参照** ダイアログ ボックス。 表示されない場合は、クリックして、**参照**検索ボタンをクリックします。 プロジェクト名の左側にチェック ボックスを選択し、クリックして**OK**します。  
   
-3.  ルーチンの名前を確認します。  
+3. ルーチンの名前を確認します。  
   
 ## <a name="see-also"></a>関連項目
 

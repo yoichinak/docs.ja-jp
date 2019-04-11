@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301036"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 さらに、このトピックでは、プレゼンスと WPF XAML ファイルのルート タグによく見られる 2 つの XAML 名前空間マッピングの目的について説明します。 また、独自のコードで、または個別のアセンブリ内に定義されている要素を使用するためのようなマッピングを生成する方法も説明します。  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>XAML Namespace とは何ですか。  
  XAML 名前空間は、実際には、XML 名前空間の概念の拡張です。 XAML 名前空間を指定するための手法では、XML 名前空間の構文、Uri を使用して、同じマークアップ ソースから複数の名前空間を参照するための手段を提供するプレフィックスを使用して、名前空間の識別子としての規則に依存しにします。 XML 名前空間の XAML 定義に追加される主要な概念は XAML 名前空間が両方の一意性のスコープ マークアップの使用を意味し、マークアップのエンティティが可能性のある特定の CLR 名前空間に支えし、参照されている方法にも影響を与えますアセンブリ。 後者の考慮事項は、XAML スキーマ コンテキストの概念の影響も受けます。 WPF の XAML 名前空間を持つ動作方法のために、考えることができます一般に、既定の XAML 名前空間、言語の XAML 名前空間、およびさらに XAML 名前空間によって、XAML マークアップは、特定のバッキング CLR を直接マップされるよう面での XAML 名前空間が、名前空間と参照アセンブリ。  
   
@@ -40,7 +39,7 @@ ms.locfileid: "57366609"
   
  これらの宣言の間のリレーションシップは、`x:`プレフィックスのマッピングは、組み込み XAML 言語の定義の一部であるをサポートしていると[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]言語として XAML を使用しのボキャブラリの定義を 1 つの実装は、そのXAML のオブジェクト。 WPF の語彙の使用は XAML の組み込みの使用よりもはるかに一般的になる、ために、WPF ボキャブラリは、既定値としてマップされます。  
   
- `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、[XAML の概要 (WPF)](xaml-overview-wpf.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)を参照してください。  
+ `x:`プレフィックス規則、プロジェクト テンプレートの後に、XAML 言語の組み込みサポートをマッピングのサンプル コード、および言語のドキュメントがこの機能[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 名前空間は、基本的な WPF アプリケーションにも必要なは一般的に使用される多くの機能を定義します。 たとえば、部分クラスを XAML ファイルに分離コードを結合するには名前を付けてとしてそのクラス、`x:Class`関連する XAML ファイルのルート要素の属性。 または、任意の要素へのアクセス キーを持つリソースが必要とする XAML ページで定義されている、`x:Key`属性が「問題の要素に設定します。 これらやその他のさまざまな XAML の詳細については、次を参照してください。 [XAML の概要 (WPF)](xaml-overview-wpf.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)します。  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタム クラスとアセンブリへのマッピング  
@@ -120,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF およびアセンブリの読み込み  
  WPF の XAML スキーマ コンテキストと統合の CLR で定義された概念を使用して、WPF アプリケーション モデル、<xref:System.AppDomain>します。 次の順序は、XAML スキーマ コンテキストでアセンブリを読み込むかの WPF の使用状況に基づいて実行時またはデザイン時に、型を検索する方法を解釈する方法について説明します<xref:System.AppDomain>およびその他の要因です。  
   
-1.  反復処理、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、読み込まれたアセンブリを最近開始します。  
+1. 反復処理、<xref:System.AppDomain>名前のすべての側面に一致する読み込み済みアセンブリを探して、読み込まれたアセンブリを最近開始します。  
   
-2.  名前が修飾されている場合に呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
+2. 名前が修飾されている場合に呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名にします。  
   
-3.  短い名前と修飾名の公開キー トークンは、マークアップから読み込まれたアセンブリに一致すると、そのアセンブリを返します。  
+3. 短い名前と修飾名の公開キー トークンは、マークアップから読み込まれたアセンブリに一致すると、そのアセンブリを返します。  
   
-4.  短い名前と公開キー トークンを使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
+4. 短い名前と公開キー トークンを使用して呼び出す<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>します。  
   
-5.  名前が修飾されていない場合は、呼び出す<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>します。  
+5. 名前が修飾されていない場合は、呼び出す<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>します。  
   
  Loose XAML は、手順 3; を使用しません読み込まれたアセンブリがありません。  
   
@@ -137,5 +136,6 @@ End Namespace
  BAML にはもする必要がありますが含まれていない非修飾アセンブリ名が、コンパイル済みの BAML (PresentationBuildTask を使用して生成) は、すべての手順を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML 名前空間を理解します。](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)

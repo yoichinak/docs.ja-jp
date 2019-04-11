@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143768"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>アンマネージド コードの安全なコーディングのガイドライン
 一部のライブラリ コードは、アンマネージド コードを呼び出す必要があります (たとえば、Win32 などのネイティブ コード API)。 これは、マネージド コード用のセキュリティの境界の外部に出ることなので、注意が必要です。 セキュリティ的に中立なコードである場合、コードとそのコードを呼び出すコードは、アンマネージド コードのアクセス許可 (<xref:System.Security.Permissions.SecurityPermission> フラグを指定した <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ) を持つ必要があります。  
@@ -52,4 +52,5 @@ ms.locfileid: "54711974"
 |**unsafe**|セキュリティが抑止された、危険性のあるアンマネージド コード エントリ ポイントです。 このようなアンマネージド コードを使用するとき、開発者は最大限の注意を払う必要があり、セキュリティ脆弱性を避けるための別の手段の保護機能が設定されていることを確認します。 このキーワードはセキュリティ システムをオーバーライドするため、開発者がセキュリティ対策を行う必要があります。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
