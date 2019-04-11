@@ -2,12 +2,12 @@
 title: 配信のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075913"
 ---
 # <a name="architecture-of-syndication"></a>配信のアーキテクチャ
 配信 API は、形式に依存せず、さまざま形式で概要コンテンツをネットワークに書き込むことができるプログラミング モデルを提供することを目的としています。 抽象データ モデルは、次のクラスで構成されています。  
@@ -30,7 +30,7 @@ ms.locfileid: "54623444"
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 配信のサポートについては、構築、WCF REST プログラミング モデルを定義する、<xref:System.ServiceModel.WebHttpBinding>と組み合わせて使用するバインディング<xref:System.ServiceModel.Description.WebHttpBehavior>フィードをサービスとして利用可能にします。 WCF REST プログラミング モデルの詳細については、[WCF Web HTTP プログラミング モデル概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)を参照してください。  
+ 配信のサポートについては、構築、WCF REST プログラミング モデルを定義する、<xref:System.ServiceModel.WebHttpBinding>と組み合わせて使用するバインディング<xref:System.ServiceModel.Description.WebHttpBehavior>フィードをサービスとして利用可能にします。 WCF REST プログラミング モデルの詳細については、次を参照してください。 [WCF Web HTTP プログラミング モデル概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)します。  
   
 > [!NOTE]
 >  Atom 1.0 仕様では、date コンストラクトで小数秒を指定できます。 シリアル化および逆シリアル化と WCF の実装には、秒の小数部が無視されます。  
@@ -75,9 +75,10 @@ ms.locfileid: "54623444"
   
 ## <a name="extensibility"></a>機能拡張  
   
--   配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)を参照してください。  
+-   配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、次を参照してください。[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

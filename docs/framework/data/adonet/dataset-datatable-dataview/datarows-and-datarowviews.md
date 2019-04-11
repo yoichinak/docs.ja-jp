@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: b7f92c0341a63df6bb5553d656469b374755aae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096356"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow および DataRowView
 <xref:System.Data.DataView> は、<xref:System.Data.DataRowView> オブジェクトの列挙可能なコレクションを公開します。 **DataRowView**オブジェクトは、名前または基になるテーブル内の列の序数参照によってインデックスが作成されるオブジェクトの配列として値を公開します。 アクセスできる、<xref:System.Data.DataRow>公開している、 **DataRowView**を使用して、<xref:System.Data.DataRowView.Row%2A>のプロパティ、 **DataRowView**します。  
@@ -60,9 +60,10 @@ public static void WriteView(DataView thisDataView)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

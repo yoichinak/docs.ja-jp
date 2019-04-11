@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140869"
 ---
 # <a name="transformations-how-to-topics"></a>変換に関する方法のトピック
 このセクションのトピックでは、オブジェクトを別の変換を適用する方法について説明します。  
@@ -31,6 +31,7 @@ ms.locfileid: "57361357"
  [MatrixTransform を使用してカスタム変換を作成する](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Transform>
 - [グラフィックスとマルチメディア](index.md)
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

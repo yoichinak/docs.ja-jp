@@ -2,12 +2,12 @@
 title: 動作クラス
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 5d988ae32684bb3ef7ba3dc2ee8c1d749126bcc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c25e63677ca2b48a5df18892d2e8ab946ad08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144003"
 ---
 # <a name="behavior-class"></a>動作クラス
 ## <a name="syntax"></a>構文  
@@ -36,7 +36,8 @@ class Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>

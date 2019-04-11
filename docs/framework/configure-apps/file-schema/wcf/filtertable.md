@@ -2,12 +2,12 @@
 title: <filterTable>
 ms.date: 03/30/2017
 ms.assetid: e9f05441-3ad1-49b9-a267-71724aa094b4
-ms.openlocfilehash: ba65d3858cdbdf6b49c50e60f4e3cc9624fef136
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e5c7d56e35afe3001f4c70064adbfef7702c720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229278"
 ---
 # <a name="filtertable"></a>\<filterTable>
 フィルターが true に評価された場合、メッセージと照合し、クライアントのエンドポイントにメッセージをルーティングを評価するフィルターの一覧を含むルーティング テーブルを表します。  
@@ -56,4 +56,5 @@ ms.locfileid: "55254406"
 |[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|ルーティング テーブルを含む構成セクション。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>

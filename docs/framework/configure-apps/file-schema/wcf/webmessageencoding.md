@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191745"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Windows Communication Foundation (WCF) での使用時に、プレーンテキストの XML、JavaScript Object Notation (JSON) メッセージ エンコード、および "無変換の" バイナリ コンテンツの読み取りおよび書き込みを有効にします。  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
   
  `writeEncoding` 属性を使用すると、バインディング要素に書き込みの文字エンコーディングを構成できます。 指定された <xref:System.Text.Encoding> 値は、JSON およびテキスト形式の XML の場合の書き込みの動作を指定します。 読み取りについては、任意の有効なメッセージ エンコーディングとテキスト エンコーディングが認識されます。  
   
- `maxReadPoolSize` と `maxWritePoolSize` を使用して、割り当てられるリーダーとライターの最大数をそれぞれ設定することもできます。 既定では、64 のリーダーと 16 のライターが割り当てられています。  
+ `maxReadPoolSize` `maxWritePoolSize`それぞれに割り当てられるリーダーとライターの最大数を設定できます。 既定では、64 のリーダーと 16 のライターが割り当てられています。  
   
  既定の複雑さの制約を使用してを設定しても、 [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))サービス拒否 (DOS) のクラスから保護するための要素がメッセージの複雑さを使用してエンドポイント処理を停滞させるを試行するを攻撃リソース。  
   
@@ -72,6 +72,7 @@ Windows Communication Foundation (WCF) での使用時に、プレーンテキ�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202561"
 ---
 # <a name="serialization"></a>シリアル化
 このトピックで説明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]シリアル化機能。 デザイン時のコード生成でシリアル化を追加する方法と、実行時の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクラスのシリアル化の動作について説明します。  
@@ -26,8 +26,7 @@ ms.locfileid: "58408926"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]シリアル化機能で主に 2 つのメカニズムを通じて、この問題に対応します。  
   
--   
-  <xref:System.Data.Linq.DataContext> のモードにより、遅延読み込みをオフにします (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 詳細については、「 <xref:System.Data.Linq.DataContext> 」を参照してください。  
+-   <xref:System.Data.Linq.DataContext> のモードにより、遅延読み込みをオフにします (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 詳細については、「 <xref:System.Data.Linq.DataContext> 」を参照してください。  
   
 -   コード生成のスイッチにより、生成するエンティティに <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 属性および <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 属性を生成します。 この方法と、シリアル化での遅延読み込みクラスの動作が、このトピックの主な話題です。  
   
@@ -37,8 +36,7 @@ ms.locfileid: "58408926"
   
 -   *単方向シリアル化*:(循環を避けるため) には、一方向の関連付けプロパティのみが含まれるクラスのシリアル化されたバージョン。 慣例として、主キー/外部キーのリレーションシップの親側のプロパティをシリアル化の対象としてマークします。 双方向の関連付けの反対側はシリアル化しません。  
   
-     
-  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、シリアル化の種類として、単方向シリアル化のみがサポートされています。  
+     [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、シリアル化の種類として、単方向シリアル化のみがサポートされています。  
   
 ## <a name="code-example"></a>コード例  
  次のコードは、Northwind サンプル データベースの典型的な `Customer` クラスおよび `Order` クラスを使用して、これらのクラスをシリアル化の属性で装飾するようすを示します。  
@@ -75,6 +73,7 @@ ms.locfileid: "58408926"
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [方法: エンティティをシリアル化可能にします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [方法: エンティティをシリアル化可能にする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

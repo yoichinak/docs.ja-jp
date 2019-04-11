@@ -44,7 +44,7 @@ ms.locfileid: "58843631"
   
 |用語|定義|  
 |---|---|  
-|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[アウト](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[で](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
+|`genericmodifier`|省略可能です。 ジェネリック インターフェイスとデリゲートでのみ使用できます。 型を宣言した共変を使用して、[out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)キーワードまたは反変を使用して、[in](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)キーワード。 「 [共変性と反変性](../../programming-guide/concepts/covariance-contravariance/index.md)を参照してください。|  
 |`typename`|必須。 型パラメーターの名前です。 これは、対応する型引数によって提供される定義済みの型によって置き換えられるプレース ホルダーです。|  
 |`constraintlist`|省略可能です。 指定できるデータ型を制約する要件の一覧`typename`します。 複数の制約があれば、中かっこで囲みます (`{ }`) をコンマで区切ります。 使用して、制約リストを導入する必要があります、[として](../../../visual-basic/language-reference/statements/as-clause.md)キーワード。 使用する`As`リストの先頭に一度だけです。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "58843631"
   
     -   1 つのクラス。 指定された型は、そのクラスから継承する必要があります。  
   
-    -   `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンス トラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンス トラクターを公開し、コンス トラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
+    -   `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンストラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンストラクターを公開し、コンストラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
   
     -   いずれか、`Class`キーワードまたは`Structure`キーワード。 `Class`キーワードは、すべての型引数が渡された文字列、配列、またはデリゲートでは、たとえば、参照型であること、またはクラスからオブジェクトが作成されたことを必要とするジェネリック型パラメーターを制約します。 `Structure`キーワードで制約などの構造体、列挙型、または基本データ型をジェネリック型パラメーターに渡されるすべての型引数の値の型である必要があります。 両方を含めることはできません`Class`と`Structure`同じ`constraintlist`します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
-ms.openlocfilehash: a05d294f80943e771a298b4442a521de86ff2f19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7687378ae2a6c7d8021acc53b19544206ee0cc84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092631"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティ (WCF Data Services) を読み込む
 関連付けられたエンティティを [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で読み込む必要がある場合、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> クラスで <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用できます。 使用することも、<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>メソッドを<xref:System.Data.Services.Client.DataServiceQuery%601>に関連するエンティティを同じクエリの応答で頻繁に読み込むことが必要です。  
@@ -33,4 +33,5 @@ ms.locfileid: "54616967"
  [!code-vb[Astoria Northwind Client#ExpandOrderDetails](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetails)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

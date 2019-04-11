@@ -1,5 +1,5 @@
 ---
-title: '方法: 対称キーで XML 要素を暗号化します。'
+title: '方法: 共通キーで XML 要素を暗号化する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbc06264dd2153818d69c0124e8a263bf4265ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2268dc813d6f12b69bee99dd07f8f4431b12a283
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295628"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 対称キーで XML 要素を暗号化します。
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズム (Rijndael としても知られる) を使用して XML 要素を復号化します。  
   
- この手順を使用して暗号化された XML 要素を復号化する方法については、[方法。対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)を参照してください。  
+ この手順を使用して暗号化された XML 要素を復号化する方法については、次を参照してください。[方法。対称キーで XML 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)します。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -36,42 +36,42 @@ ms.locfileid: "54622833"
   
 ### <a name="to-encrypt-an-xml-element-with-a-symmetric-key"></a>対称キーで XML 要素を暗号化するには  
   
-1.  <xref:System.Security.Cryptography.RijndaelManaged> クラスを使用して対称キーを生成します。  このキーは、XML 要素の暗号化に使用されます。  
+1. <xref:System.Security.Cryptography.RijndaelManaged> クラスを使用して対称キーを生成します。  このキーは、XML 要素の暗号化に使用されます。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementSymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#2)]  
   
-2.  ディスクから XML ファイルを読み込んで <xref:System.Xml.XmlDocument> オブジェクトを作成します。  <xref:System.Xml.XmlDocument> オブジェクトには、暗号化する XML 要素が含まれています。  
+2. ディスクから XML ファイルを読み込んで <xref:System.Xml.XmlDocument> オブジェクトを作成します。  <xref:System.Xml.XmlDocument> オブジェクトには、暗号化する XML 要素が含まれています。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementSymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#3)]  
   
-3.  <xref:System.Xml.XmlDocument> オブジェクトで指定された要素を検索し、暗号化する要素を表す新しい <xref:System.Xml.XmlElement> オブジェクトを作成します。  この例では、`"creditcard"` 要素が暗号化されます。  
+3. <xref:System.Xml.XmlDocument> オブジェクトで指定された要素を検索し、暗号化する要素を表す新しい <xref:System.Xml.XmlElement> オブジェクトを作成します。  この例では、`"creditcard"` 要素が暗号化されます。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementSymmetric#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#4)]  
   
-4.  <xref:System.Security.Cryptography.Xml.EncryptedXml> クラスの新しいインスタンスを作成し、これを使用して対称キーで <xref:System.Xml.XmlElement> を暗号化します。  <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> メソッドは、暗号化された要素を、暗号化されたバイトの配列として返します。  
+4. <xref:System.Security.Cryptography.Xml.EncryptedXml> クラスの新しいインスタンスを作成し、これを使用して対称キーで <xref:System.Xml.XmlElement> を暗号化します。  <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A> メソッドは、暗号化された要素を、暗号化されたバイトの配列として返します。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementSymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#5)]  
   
-5.  <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトを構築し、XML 暗号化要素の URL 識別子を読み込みます。  この URL 識別子は、復号化側に、XML に暗号化された要素が含まれていることを知らせます。  <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> フィールドを使用して URL 識別子を指定することができます。  
+5. <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトを構築し、XML 暗号化要素の URL 識別子を読み込みます。  この URL 識別子は、復号化側に、XML に暗号化された要素が含まれていることを知らせます。  <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl> フィールドを使用して URL 識別子を指定することができます。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementSymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#6)]  
   
-6.  キーの生成に使用する暗号化アルゴリズムの URL 識別子に初期化された <xref:System.Security.Cryptography.Xml.EncryptionMethod> オブジェクトを作成します。  <xref:System.Security.Cryptography.Xml.EncryptionMethod> オブジェクトを <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A> プロパティに渡します。  
+6. キーの生成に使用する暗号化アルゴリズムの URL 識別子に初期化された <xref:System.Security.Cryptography.Xml.EncryptionMethod> オブジェクトを作成します。  <xref:System.Security.Cryptography.Xml.EncryptionMethod> オブジェクトを <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A> プロパティに渡します。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementSymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#7)]  
   
-7.  暗号化された要素のデータを <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトに追加します。  
+7. 暗号化された要素のデータを <xref:System.Security.Cryptography.Xml.EncryptedData> オブジェクトに追加します。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementSymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#8)]  
   
-8.  元の <xref:System.Xml.XmlDocument> オブジェクトの要素を <xref:System.Security.Cryptography.Xml.EncryptedData> 要素に置き換えます。  
+8. 元の <xref:System.Xml.XmlDocument> オブジェクトの要素を <xref:System.Security.Cryptography.Xml.EncryptedData> 要素に置き換えます。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#9)]  
@@ -104,4 +104,4 @@ ms.locfileid: "54622833"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Cryptography.Xml>
-- [方法: 対称キーで XML 要素を復号化します。](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [方法: 共通キーで XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)

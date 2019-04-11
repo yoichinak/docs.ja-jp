@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 7b0c91bafc14dee0d298a5cd31dc674f5002466a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209828"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 この構成セクションには、すべての Windows Communication Foundation (WCF) ServiceModel 構成要素が含まれています。  
@@ -61,19 +61,19 @@ ms.locfileid: "55274197"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|このセクションは、`endpointBehaviors` と`serviceBehaviors` という 2 つの子コレクションを定義します。  各コレクションは、エンドポイントとサービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、その一意の `name` 属性で識別されます。|  
+|[\<<behaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|このセクションは、`endpointBehaviors` と`serviceBehaviors` という 2 つの子コレクションを定義します。  各コレクションは、エンドポイントとサービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、その一意の `name` 属性で識別されます。|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|このセクションには、標準バインディングおよびカスタム バインドのコレクションが保持されます。 各エントリは、その一意の `name` により識別されます。 サービスは、`name` を使用してバインディングをリンクすることにより、バインディングを使用します。|  
 |[\<client>](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|このセクションは、クライアントがサービスの接続に使用するエンドポイントの一覧を含みます。|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|このセクションは、WCF と COM 相互運用が有効な COM コントラクトを定義します。|  
 |[\<commonBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|このセクションは、machine.config ファイルでだけ定義できます。 このセクションは、`endpointBehaviors` と`serviceBehaviors` という 2 つの子コレクションを定義します。  各コレクションは、それぞれのすべての WCF エンドポイントと、コンピューター上のサービスで使用された動作要素を定義します。  両方で、動作が定義されている場合`<commonBehaviors>`と`<behaviors>`での動作、\<動作 > セクションが優先されます。|  
 |[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|このセクションには、WCF の診断機能の設定が含まれます。 ユーザーはトレース、パフォーマンス カウンター、および WMI プロバイダーを有効または無効にしたり、カスタム メッセージ フィルターを追加したりできます。|  
 |[\<extensions>](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|このセクションには、拡張のコレクションが含まれています。これにより、ユーザー定義のバインディング、動作、およびその他の拡張機能を作成できるようになります。|  
-|[\<protocolMapping>](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|このセクションでは、トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義します。|  
+|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|このセクションでは、トランスポート プロトコル スキーム (など、http、net.tcp、net.pipe など) と WCF バインディング間の既定のプロトコル マッピングのセットを定義します。|  
 |[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|このセクションでは、Windows Communication Foundation (WCF) の種類を指定するルーティング フィルター セットを定義します<xref:System.ServiceModel.Dispatcher.MessageFilter>受信メッセージの評価とルーティング テーブルをときにメッセージを送信するターゲット エンドポイントを定義するときに使用される、。フィルターに一致します。|  
 |[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|このセクションは、環境をホストするサービスがインスタンス化する特定のトランスポートの型を定義します。 このセクションが空の場合は、既定の型が使用されます。|  
 |[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|このセクションには、サービスのコレクションが含まれています。 アセンブリで定義された各サービスの場合、この要素は、サービスの設定を指定する `service` 要素を含みます。|  
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|このセクションは、再使用可能な構成済みのエンドポイントである標準エンドポイントのコレクションを定義します。 標準エンドポイントは、固定値に設定されたアドレス、バインディング、およびコントラクトの 1 つ以上の属性を持ちます。 たとえば、探索エンドポイントでは、コントラクトが固定されています。 標準エンドポイントを使用して、カスタム バインドの定義と同様に新しいプロパティを指定して、サービス エンドポイントを拡張することもできます。|
-|[\<tracking>](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|このセクションでは、ワークフロー サービスの追跡設定を定義します。|
+|[\<追跡 >](../../../../../docs/framework/configure-apps/file-schema/wcf/tracking-of-wcf.md)|このセクションでは、ワークフロー サービスの追跡設定を定義します。|
 
 ### <a name="parent-elements"></a>親要素  
   
@@ -128,4 +128,5 @@ ms.locfileid: "55274197"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

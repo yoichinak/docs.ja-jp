@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 60a9ffa8061f5bc576aa919aa742f1c5e6b07124
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115766"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows フォームにおけるファイルおよびデータへのより安全なアクセス
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、リソースとデータを保護できるアクセス許可を使用します。 アプリケーションでデータを読み取りまたは書き込みできる場所は、アプリケーションに付与されるアクセス許可に依存します。 部分信頼環境でアプリケーションを実行すると、データにアクセス許可がないか、またはデータにアクセスする方法を変更しなければならない可能性があります。  
@@ -26,7 +26,7 @@ ms.locfileid: "57724545"
  セキュリティの制限が発生した場合、アクセス許可をアサートする (アプリケーションに付与されていると仮定した場合)、または部分信頼で動作するよう作成されたバージョンの機能を使用するという 2 つのオプションがあります。 次のセクションでは、部分信頼環境で実行されているアプリケーションからファイル、データベース、およびレジストリ アクセスを操作する方法について説明します。  
   
 > [!NOTE]
->  既定では、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を生成するツールは、これらの配置が、実行するコンピューターから完全信頼を要求するよう既定で設定されます。 部分信頼で実行されている追加のセキュリティ上の利点をする場合は、Visual Studio またはのいずれかのいずれかでこの既定の設定を変更する必要があります、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]ツール (Mage.exe または MageUI.exe)。 Windows フォームのセキュリティ、およびアプリケーションの適切な信頼レベルを決定する方法の詳細については、[のセキュリティの Windows フォームの概要](security-in-windows-forms-overview.md)を参照してください。  
+>  既定では、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を生成するツールは、これらの配置が、実行するコンピューターから完全信頼を要求するよう既定で設定されます。 部分信頼で実行されている追加のセキュリティ上の利点をする場合は、Visual Studio またはのいずれかのいずれかでこの既定の設定を変更する必要があります、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]ツール (Mage.exe または MageUI.exe)。 Windows フォームのセキュリティ、およびアプリケーションの適切な信頼レベルを決定する方法の詳細については、次を参照してください。[のセキュリティの Windows フォームの概要](security-in-windows-forms-overview.md)します。  
   
 ## <a name="file-access"></a>ファイル アクセス  
  <xref:System.Security.Permissions.FileIOPermission> クラスは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のファイルとフォルダーへのアクセスを制御します。 既定では、セキュリティ システムは、ローカルのイントラネットやインターネット ゾーンなどの部分信頼環境に <xref:System.Security.Permissions.FileIOPermission> を付与しません。 ただし、ファイルへのアクセスを必要とするアプリケーションは、アプリケーションの設計を変更するかファイルにアクセスする別の方法を使用すると、引き続きこれらの環境で機能することが可能です。 既定では、ローカル イントラネット ゾーンに、同じサイトと同じディレクトリにアクセスして、その起点のサイトに接続し、インストール ディレクトリから読み取るための権限が付与されます。 既定では、インターネット ゾーンは、起点のサイトに接続する権限のみが付与されます。  
@@ -133,10 +133,10 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C# では、イベント ハンドラーを有効にするコードを追加することを確認します。 前の例でのコードを使用することで、次のコードではイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
+>  Visual C# では、イベント ハンドラーを有効にするコードを追加することを確認します。 前の例のコードを使用するは、次のコードは、イベント ハンドラーを有効にする方法を示します。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>その他のファイル  
- 場合によって、アプリケーション設定を保存しなければならないという場合など、ユーザーが指定しないファイルへの読み取りまたは書き込みを実行する必要があります。 ローカルのイントラネット ゾーンとインターネット ゾーンでは、アプリケーションにローカル ファイルにデータを格納するためのアクセス許可がありません。 ただし、アプリケーションが分離ストレージにデータを格納できるようにします。 分離ストレージは (特定の記憶場所ではなく) 抽象的なデータ コンパートメントであり、データが保存される実際のディレクトリの場所を含む、ストアと呼ばれる 1 つ以上の分離ストレージ ファイルが含まれます。 <xref:System.Security.Permissions.FileIOPermission> のようなファイルのアクセス許可は必要なく、代わりに <xref:System.Security.Permissions.IsolatedStoragePermission> クラスが分離ストレージのアクセス許可を制御します。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンで実行されているアプリケーションが、分離ストレージを使用してデータを格納できます。ただし、ディスク クォータのように設定が変わることがあります。 分離ストレージの詳細については、[分離ストレージ](../../standard/io/isolated-storage.md)を参照してください。  
+ 場合によって、アプリケーション設定を保存しなければならないという場合など、ユーザーが指定しないファイルへの読み取りまたは書き込みを実行する必要があります。 ローカルのイントラネット ゾーンとインターネット ゾーンでは、アプリケーションにローカル ファイルにデータを格納するためのアクセス許可がありません。 ただし、アプリケーションが分離ストレージにデータを格納できるようにします。 分離ストレージは (特定の記憶場所ではなく) 抽象的なデータ コンパートメントであり、データが保存される実際のディレクトリの場所を含む、ストアと呼ばれる 1 つ以上の分離ストレージ ファイルが含まれます。 <xref:System.Security.Permissions.FileIOPermission> のようなファイルのアクセス許可は必要なく、代わりに <xref:System.Security.Permissions.IsolatedStoragePermission> クラスが分離ストレージのアクセス許可を制御します。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンで実行されているアプリケーションが、分離ストレージを使用してデータを格納できます。ただし、ディスク クォータのように設定が変わることがあります。 分離ストレージの詳細については、次を参照してください。[分離ストレージ](../../standard/io/isolated-storage.md)します。  
   
  次の例では、分離ストレージを使用して、ストアにあるファイルにデータを書き込みます。 この例では、<xref:System.Security.Permissions.IsolatedStorageFilePermission> および <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser> 列挙値が必要です。 例では、分離ストレージ内のファイルに対する、<xref:System.Windows.Forms.Button> コントロールの特定のプロパティ値の読み取りと書き込みを示しています。 `Read` 関数はアプリケーションの起動後に呼び出され、`Write` 関数はアプリケーションの終了前に呼び出されます。 この例では、する必要があります、`Read`と`Write`関数がのメンバーとして存在、<xref:System.Windows.Forms.Form>を格納している、<xref:System.Windows.Forms.Button>という名前のコントロール`MainButton`します。  
   
@@ -349,16 +349,17 @@ public void Write()
 ```  
   
 ## <a name="database-access"></a>データベースへのアクセス  
- データベースにアクセスするために必要なアクセス許可は、データベース プロバイダーに応じて異なります。ただし、適切なアクセス許可で実行されているアプリケーションのみがデータ接続を使用してデータベースにアクセスできます。 データベースにアクセスするために必要なアクセス許可の詳細については、[コード アクセス セキュリティと ADO.NET](../data/adonet/code-access-security.md)を参照してください。  
+ データベースにアクセスするために必要なアクセス許可は、データベース プロバイダーに応じて異なります。ただし、適切なアクセス許可で実行されているアプリケーションのみがデータ接続を使用してデータベースにアクセスできます。 データベースにアクセスするために必要なアクセス許可の詳細については、次を参照してください。[コード アクセス セキュリティと ADO.NET](../data/adonet/code-access-security.md)します。  
   
- アプリケーションを部分信頼で実行するためにデータベースに直接アクセスできない場合は、データにアクセスする別の方法として Web サービスを使用することができます。 Web サービスは、ネットワーク経由でプログラムでアクセスできるソフトウェアです。 Web サービスを使用すると、アプリケーションはコード グループのゾーンにまたがるデータを共有できます。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンのアプリケーションに、元のサイトへのアクセス権が付与され、同じサーバーにホストされる Web サービスを呼び出すことができます。 詳細については、[ASP.NET AJAX での Web サービス](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))または[Windows Communication Foundation](../wcf/index.md)を参照してください。  
+ アプリケーションを部分信頼で実行するためにデータベースに直接アクセスできない場合は、データにアクセスする別の方法として Web サービスを使用することができます。 Web サービスは、ネットワーク経由でプログラムでアクセスできるソフトウェアです。 Web サービスを使用すると、アプリケーションはコード グループのゾーンにまたがるデータを共有できます。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンのアプリケーションに、元のサイトへのアクセス権が付与され、同じサーバーにホストされる Web サービスを呼び出すことができます。 詳細については、次を参照してください。 [ASP.NET AJAX での Web サービス](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))または[Windows Communication Foundation](../wcf/index.md)します。  
   
 ## <a name="registry-access"></a>レジストリへのアクセス  
- <xref:System.Security.Permissions.RegistryPermission> クラスは、オペレーティング システムのレジストリへのアクセスを制御します。 既定では、ローカルで実行されているアプリケーションのみが、レジストリにアクセスできます。  <xref:System.Security.Permissions.RegistryPermission> はレジストリにアクセスしようとする権利のみをアプリケーションに付与します。オペレーティング システムは、引き続きレジストリのセキュリティを強制するため、アクセスが成功するかどうかは保証されません。  
+ <xref:System.Security.Permissions.RegistryPermission> クラスは、オペレーティング システムのレジストリへのアクセスを制御します。 既定では、ローカルで実行されているアプリケーションのみが、レジストリにアクセスできます。  <xref:System.Security.Permissions.RegistryPermission> のみを付与アプリケーション レジストリのアクセスを試みます限りませんアクセスが成功すると、オペレーティング システムでは、レジストリのセキュリティを引き続き適用されるためです。  
   
  部分信頼の下のレジストリにアクセスすることはできないため、データを格納するその他のメソッドを検索する必要がある場合があります。 アプリケーション設定を保存する場合、レジストリの代わりに分離ストレージを使用します。 また、分離ストレージを使用して、その他のアプリケーション固有のファイルを格納することもできます。 既定では、アプリケーションの発生元のサイトへのアクセスがアプリケーションに付与されているため、サーバーまたは元のサイトに関するグローバルなアプリケーションの情報を格納することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)
 - [Windows フォームのセキュリティに関するその他の考慮事項](additional-security-considerations-in-windows-forms.md)
 - [Windows フォームのセキュリティの概要](security-in-windows-forms-overview.md)

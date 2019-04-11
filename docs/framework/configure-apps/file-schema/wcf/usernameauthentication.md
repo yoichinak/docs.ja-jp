@@ -2,12 +2,12 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 05aa326c50823810caee5d6552af4d50424251dd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083145"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication>
 ユーザー名とパスワードに基づいてサービスの資格情報を指定します。  
@@ -39,9 +39,9 @@ ms.locfileid: "55274020"
 |属性|説明|  
 |---------------|-----------------|  
 |`cacheLogonTokenLifetime`|トークンがキャッシュ内に保持される最大時間を指定する <xref:System.TimeSpan>。 既定値は 00:15:00 です。|  
-|`cacheLogonTokens`|ログオン トークンがキャッシュされるかどうかを指定するブール値。 既定値は、`false` です。|  
+|`cacheLogonTokens`|ログオン トークンがキャッシュされるかどうかを指定するブール値。 既定値は `false` です。|  
 |`customUserNamePasswordValidatorType`|使用されるカスタム ユーザー名およびパスワード検証の種類を指定する文字列。 既定値は空の文字列です。|  
-|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定するブール値。 既定値は、`true` です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、このプロパティを `false` に設定します。|  
+|`includeWindowsGroups`|セキュリティ コンテキストに Windows グループが含まれるかどうかを指定するブール値。 既定値は `true` です。<br /><br /> この属性を `true` に設定すると、グループ全体が拡張されるため、パフォーマンスに影響が及びます。 ユーザーが属するグループの一覧を生成する必要がない場合は、このプロパティを `false` に設定します。|  
 |`maxCacheLogonTokens`|キャッシュするログオン トークンの最大数を指定する整数。 この値は、ゼロより大きい値である必要があります。 既定値は 128 です。|  
 |`membershipProviderName`|バインディングの `clientCredentialType` 属性が `username` に設定されている場合、ユーザー名は Windows アカウントにマップされます。 関連するパスワード検証機構を提供する <xref:System.Web.Security.MembershipProvider> 値の名前を含む文字列であるこの属性を使用して動作をオーバーライドできます。|  
 |`userNamePasswordValidationMode`|ユーザー名とパスワードを検証する方法を指定します。 次の値を指定できます。<br /><br /> -Windows<br />-MembershipProvider<br />-カスタム<br /><br /> 既定は Windows です。 この属性は <xref:System.ServiceModel.Security.UserNamePasswordValidationMode> 型です。|  
@@ -61,6 +61,7 @@ ms.locfileid: "55274020"
  サービスで使用されるバインディングが Windows 認証のユーザー名とパスワードを使用するように構成されていない場合、ログオン トークンのキャッシュに関連する設定は無視されます。 これには、`cacheLogonTokenLifetime`、`cacheLogonTokens`、および `maxCacheLogonTokens`、が含まれます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.UserNameServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.UserNameAuthentication%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential>

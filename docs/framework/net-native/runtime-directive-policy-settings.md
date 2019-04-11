@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098235"
 ---
 # <a name="runtime-directive-policy-settings"></a>ランタイム ディレクティブ ポリシーの設定
 > [!NOTE]
@@ -24,100 +24,100 @@ ms.locfileid: "54642569"
   
 -   リフレクション ポリシー種類は、実行時にリフレクションで使用できるメタデータを決定します。  
   
-    -   `Activate` はコンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。  
+    -   `Activate` インスタンスのアクティブ化を有効にする、コンス トラクターへの実行時アクセスを制御します。  
   
-    -   `Browse` は、プログラム要素に関する情報の照会を制御します。  
+    -   `Browse` コントロールに関する情報の照会はプログラム要素です。  
   
-    -   `Dynamic` は、すべての型とメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。  
+    -   `Dynamic` プログラミングを動的に有効にする、すべての型とメンバーに実行時アクセスを制御します。  
   
      次の表に、リフレクション ポリシー種類と、この種類で使用できるプログラム要素を示します。  
   
     |要素|Activate|参照|動的|  
     |-------------|--------------|------------|-------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<アプリケーション >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
+    |[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
+    |[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
+    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 -   シリアル化ポリシー種類は、実行時にシリアル化と逆シリアル化で使用できるメタデータを決定します。  
   
-    -   `Serialize` は、コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化できるようにします。  
+    -   `Serialize` 実行時アクセスをコンス トラクター、フィールド、および型のインスタンスを Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによってシリアル化を有効にするためのプロパティを制御します。  
   
-    -   `DataContractSerializer` はコンストラクター、フィールド、およびプロパティへの実行時アクセスを制御して、型インスタンスを <xref:System.Runtime.Serialization.DataContractSerializer> クラスによりシリアル化できるようにします。  
+    -   `DataContractSerializer` コンス トラクター、フィールド、およびプロパティは、型のインスタンスでシリアル化をできるようにするランタイムへのアクセス制御、<xref:System.Runtime.Serialization.DataContractSerializer>クラス。  
   
-    -   `DataContractJsonSerializer` はコンストラクター、フィールド、およびプロパティへの実行時アクセスを制御して、型インスタンスを <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> クラスによりシリアル化できるようにします。  
+    -   `DataContractJsonSerializer` コンス トラクター、フィールド、およびプロパティは、型のインスタンスでシリアル化をできるようにするランタイムへのアクセス制御、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>クラス。  
   
-    -   `XmlSerializer` はコンストラクター、フィールド、およびプロパティへの実行時アクセスを制御して、型インスタンスを <xref:System.Xml.Serialization.XmlSerializer> クラスによりシリアル化できるようにします。  
+    -   `XmlSerializer` コンス トラクター、フィールド、およびプロパティは、型のインスタンスでシリアル化をできるようにするランタイムへのアクセス制御、<xref:System.Xml.Serialization.XmlSerializer>クラス。  
   
      次の表に、シリアル化ポリシー種類と、この種類で使用できるプログラム要素を示します。  
   
     |要素|シリアル化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|  
     |-------------|---------------|----------------------------|--------------------------------|-------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<アプリケーション >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
+    |[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
+    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|✓|  
   
 -   相互運用ポリシー種類は、COM および Windows ランタイムに参照型、値型、および関数ポインターを渡すために実行時に使用できるメタデータを決定します。  
   
-    -   `MarshalObject` は、参照型の COM および Windows ランタイムへのネイティブ マーシャリングを制御します。  
+    -   `MarshalObject` COM および参照型の Windows ランタイムへのネイティブ マーシャ リングを制御します。  
   
-    -   `MarshalDelegate` は、関数ポインターとしてのデリゲート型のネイティブ マーシャリングを制御します。  
+    -   `MarshalDelegate` 関数ポインターとしてデリゲート型のネイティブ マーシャ リングを制御します。  
   
-    -   `MarshalStructure` は、値型の COM および Windows ランタイムへのネイティブ マーシャリングを制御します。  
+    -   `MarshalStructure` COM および値型の Windows ランタイムへのネイティブ マーシャ リングを制御します。  
   
      次の表に、相互運用ポリシー種類と、この種類で使用できるプログラム要素を示します。  
   
     |要素|MarshalObject|MarshalDelegate|MarshalStructure|  
     |-------------|-------------------|---------------------|----------------------|  
-    |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
-    |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
-    |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
-    |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<アプリケーション >](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
+    |[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
+    |[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
+    |[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)||||  
+    |[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
-    |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
-    |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
+    |[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
+    |[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
-    |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
-    |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
-    |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
+    |[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
+    |[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
+    |[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|✓|✓|✓|  
   
 ## <a name="policy-settings"></a>ポリシーの設定  
  各ポリシーの種類は、次の表に示すいずれかの値に設定できます。 型のメンバーを表す要素は、他の要素とは異なる一連のポリシー設定をサポートしていることに注意してください。  
   
-|ポリシーの設定|説明|`Assembly`、`Namespace`、`Type`、および `TypeInstantiation` 要素|`Event`、`Field`、`Method`、`MethodInstantiation`、および `Property` 要素|  
+|ポリシーの設定|説明|`Assembly`、 `Namespace`、 `Type`、および`TypeInstantiation`要素|`Event`、 `Field`、 `Method`、 `MethodInstantiation`、および`Property`要素|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|.NET ネイティブ ツール チェーンが削除しないすべての型とメンバーのポリシーを有効にします。|✓||  
-|`Auto`|そのプログラム要素のポリシーの種類に、既定のポリシーを使用する必要があることを指定します。 これは、そのポリシーの種類のポリシーを省略することと同じです。 `Auto` は通常、ポリシーが親要素から継承されることを示すために使用されます。|✓|✓|  
+|`Auto`|そのプログラム要素のポリシーの種類に、既定のポリシーを使用する必要があることを指定します。 これは、そのポリシーの種類のポリシーを省略することと同じです。 `Auto` ポリシーが親要素から継承されていることを示すために通常使用されます。|✓|✓|  
 |`Excluded`|特定のプログラム要素についてポリシーを無効にすることを指定します。 たとえば、次のランタイム ディレクティブは、<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> `BusinessClasses.Person` オブジェクトの参照、および動的なインスタンス化と変更のいずれにも、`Person` クラスのメタデータを使用できないことを示しています。|✓|✓|  
 |`Included`|親型のメタデータが使用可能な場合に、ポリシーを有効にします。||✓|  
 |`Public`|ツール チェーンによってパブリック型またはパブリック メンバーが不要と判断され、削除されない限り、それらの型またはメンバーのポリシーを有効にします。 この設定は、ツール チェーンによって不要であると判断された場合でもパブリック型とパブリック メンバーのメタデータを常に使用可能にする `Required Public` とは異なります。|✓||  
@@ -128,5 +128,6 @@ ms.locfileid: "54642569"
 |`Required All`|使用されているかどうかに関係なく、すべての型とメンバーを保持し、そのポリシーを有効にするために、ツール チェーンを要求します。|✓||  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

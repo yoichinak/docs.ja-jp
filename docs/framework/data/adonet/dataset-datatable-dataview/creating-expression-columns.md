@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: db38d42e9c7dc1657e06030599ae2b8ba66ef6b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e19e4e7cc0ea92e9d93e45c2a50d009e46b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175501"
 ---
 # <a name="creating-expression-columns"></a>式列の作成
 列の式を定義すると、同じ行の他の列値またはテーブル内の複数の行の列値に基づいて計算した値を、その列に格納できます。 評価する式を定義するには、対象の列の <xref:System.Data.DataColumn.Expression%2A> プロパティを使用し、その式で <xref:System.Data.DataColumn.ColumnName%2A> プロパティを使用して他の列を参照します。 式列の <xref:System.Data.DataColumn.DataType%2A> は、その式が返す値に適した型であることが必要です。  
@@ -19,7 +19,7 @@ ms.locfileid: "54549877"
   
 |式の種類|例|  
 |---------------------|-------------|  
-|比較|"Total >= 500"|  
+|比較|"合計 > = 500"|  
 |計算|"UnitPrice * Quantity"|  
 |集約|Sum(Price)|  
   
@@ -39,6 +39,7 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  式は他の式列を参照できます。ただし、2 つの式が相互に参照し合う循環参照の場合は、例外が生成されます。 式の作成に関する規則は、次を参照してください。、<xref:System.Data.DataColumn.Expression%2A>のプロパティ、 **DataColumn**クラス。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>

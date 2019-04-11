@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd8e86b119a3c19417306dee056e435a4f5d07a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dffefedf14d5f219736e429be191021b2de7ddd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125594"
 ---
 # <a name="corprffunctionargumentrange-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 構造体
 メモリに左から右方向へ連続で格納される関数の引数のブロックを表します。  
@@ -49,7 +49,8 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [構造体のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

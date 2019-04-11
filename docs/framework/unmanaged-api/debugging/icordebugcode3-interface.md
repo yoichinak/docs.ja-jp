@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085039"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 インターフェイス
 マネージ戻り値に関する情報を提供するには、"ICorDebugCode"および"ICorDebugCode2"まで拡張するメソッドを提供します。  
@@ -30,7 +30,7 @@ ms.locfileid: "54576877"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetReturnValueLiveOffSet メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|指定した IL オフセットについて、デバッガーが関数からの戻り値を取得できるように、ブレークポイントを配置する必要があるネイティブなオフセットを取得します。|  
+|[GetReturnValueLiveOffset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|指定した IL オフセットについて、デバッガーが関数からの戻り値を取得できるように、ブレークポイントを配置する必要があるネイティブなオフセットを取得します。|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -44,11 +44,9 @@ ms.locfileid: "54576877"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-
-
 - [ICorDebugILFrame3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-ms.openlocfilehash: fdd0e3974964e141c4b65e1c8851f3c371a4d501
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224586"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>方法: テキスト選択を取得する
 この例を使用する 1 つの方法を示しています、<xref:System.Windows.Controls.TextBox.SelectedText%2A>で、ユーザーが選択したテキストを取得するプロパティを<xref:System.Windows.Controls.TextBox>コントロール。  
@@ -33,5 +33,6 @@ ms.locfileid: "57357613"
  [!code-vb[TextBox_MiscCode#_SelectText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [TextBox の概要](textbox-overview.md)
 - [RichTextBox の概要](richtextbox-overview.md)

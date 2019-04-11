@@ -1,5 +1,5 @@
 ---
-title: '方法: 追加および削除項目、Windows からフォーム ComboBox、ListBox、または CheckedListBox コントロール'
+title: '方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322733"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: 追加および削除項目、Windows からフォーム ComboBox、ListBox、または CheckedListBox コントロール
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する
 項目は、Windows フォームのコンボ ボックス、リスト ボックスに追加できるまたはこれらのコントロールは、さまざまなデータ ソースにバインドできるため、さまざまな方法でリスト ボックスをオンにします。 ただし、このトピックでは、最も簡単な方法について説明し、データ バインドは必要ありません。 表示される項目が文字列では、通常、ただし、すべてのオブジェクトを使用できます。 コントロールに表示されるテキストは、オブジェクトのによって返される値`ToString`メソッド。  
   
 ### <a name="to-add-items"></a>項目を追加するには  
   
-1.  使用して、文字列またはオブジェクトを一覧に追加、`Add`のメソッド、`ObjectCollection`クラス。 使用して、コレクションを参照、`Items`プロパティ。  
+1. 使用して、文字列またはオブジェクトを一覧に追加、`Add`のメソッド、`ObjectCollection`クラス。 使用して、コレクションを参照、`Items`プロパティ。  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ ms.locfileid: "57710447"
   
      - または  
   
-2.  目的の時点で、リスト内の文字列またはオブジェクトの挿入、`Insert`メソッド。  
+2. 目的の時点で、リスト内の文字列またはオブジェクトの挿入、`Insert`メソッド。  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ ms.locfileid: "57710447"
   
      - または  
   
-3.  配列全体を割り当てる、`Items`コレクション。  
+3. 配列全体を割り当てる、`Items`コレクション。  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ ms.locfileid: "57710447"
   
 ### <a name="to-remove-an-item"></a>アイテムを削除するには  
   
-1.  呼び出す、`Remove`または`RemoveAt`アイテムを削除するメソッド。  
+1. 呼び出す、`Remove`または`RemoveAt`アイテムを削除するメソッド。  
   
      `Remove` 削除する項目を指定する 1 つの引数を持ちます。`RemoveAt` 指定したインデックス番号を持つ項目を削除します。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "57710447"
   
 ### <a name="to-remove-all-items"></a>すべての項目を削除するには  
   
-1.  呼び出す、`Clear`コレクションからすべての項目を削除する方法。  
+1. 呼び出す、`Clear`コレクションからすべての項目を削除する方法。  
   
     ```vb  
     ListBox1.Items.Clear()  
@@ -137,9 +137,10 @@ ms.locfileid: "57710447"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [方法: Windows の内容を並べ替えるフォーム ComboBox、ListBox、または CheckedListBox コントロール](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
 - [ListBox の代わりに Windows フォーム ComboBox を使用する場合](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

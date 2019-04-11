@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105275"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
 トランスポート セキュリティ機構では、Windows Communication Foundation (WCF) は、バインドと使用されているトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 このトピックでは、WCF のシステム指定のバインディングで使用される主要なトランスポート セキュリティ機構について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "54529162"
 >  .NET Framework 3.5 以降のバージョンと SSL セキュリティを使用する場合、WCF クライアントは両方、中間証明書を使用してその証明書ストアに、サービスの証明書チェーンの検証を実行する SSL ネゴシエーション中に受信した中間証明書証明書。 .NET Framework 3.0 では、ローカルの証明書ストアにインストールされている中間証明書のみが使用されます。  
   
 > [!WARNING]
->  トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この設定に防ぐため、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
+>  トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この設定に防ぐため、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> サービスの説明で設定できるサービス動作です。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  既定では、<xref:System.ServiceModel.BasicHttpBinding> クラスはセキュリティを提供しません。 このバインディングは、セキュリティを実装していない Web サービス プロバイダーとの相互運用性のためにデザインされています。 ただし、<xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> プロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外の値に設定することにより、セキュリティを有効にすることができます。 トランスポート セキュリティを有効にするには、このプロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定します。  
@@ -62,7 +62,7 @@ ms.locfileid: "54529162"
  この値を使用すると、Kerberos プロトコルが失敗した場合に、サーバーは、NTLM を使用して認証を実行できます。 IIS の構成の詳細については[!INCLUDE[iis601](../../../../includes/iis601-md.md)]を参照してください[強制的に NTLM 認証](https://go.microsoft.com/fwlink/?LinkId=88598)します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] では、Windows 認証に NTLM 認証が含まれます。 詳細については、次を参照してください[IIS 7.0 Beta:。Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> クラスは、WS-* 仕様を実装するサービスと共に相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。 SSL を使用する WCF アプリケーションを作成するのにには、アプリケーションをホストするのに IIS を使用します。 自己ホスト型アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、X.509 証明書をコンピューターの特定のポートにバインドします。 ポート番号は、エンドポイント アドレスとして、WCF アプリケーションの一部として指定されます。 トランスポート モードを使用する場合は、エンドポイント アドレスに HTTPS プロトコルを含める必要があります。そうしないと、実行時に例外が発生します。 詳細については、[HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)を参照してください。  
+ <xref:System.ServiceModel.WSHttpBinding> クラスは、WS-* 仕様を実装するサービスと共に相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。 SSL を使用する WCF アプリケーションを作成するのにには、アプリケーションをホストするのに IIS を使用します。 自己ホスト型アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、X.509 証明書をコンピューターの特定のポートにバインドします。 ポート番号は、エンドポイント アドレスとして、WCF アプリケーションの一部として指定されます。 トランスポート モードを使用する場合は、エンドポイント アドレスに HTTPS プロトコルを含める必要があります。そうしないと、実行時に例外が発生します。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  
   
  クライアント認証の場合、<xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> クラスの <xref:System.ServiceModel.HttpTransportSecurity> プロパティを <xref:System.ServiceModel.HttpClientCredentialType> 列挙値のいずれかに設定します。 この列挙値は、<xref:System.ServiceModel.BasicHttpBinding> のクライアント資格情報の種類と同一であり、IIS サービスを使用してホストされるようにデザインされています。  
   
@@ -112,13 +112,14 @@ ms.locfileid: "54529162"
  同じネットワーク上の 2 台のコンピューター間に名前付きパイプ チャネルを作成できますが、<xref:System.ServiceModel.NetNamedPipeBinding> クラスは、コンピューター内通信 (つまり、同じコンピューター上で実行されるプロセス) を効率的に行うことができるようにデザインされています。 このバインディングが提供するのは、トランスポート レベルのセキュリティだけです。 このバインディングを使用してアプリケーションを作成する場合は、エンドポイント アドレスにプロトコルとして "net.pipe" を含める必要があります。  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- トランスポート セキュリティを使用する場合、このバインディングでは SSL over HTTP を使用します。SSL over HTTP は HTTPS とも呼ばれ、発行済みトークン (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>) を含みます。 フェデレーション アプリケーションの詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。  
+ トランスポート セキュリティを使用する場合、このバインディングでは SSL over HTTP を使用します。SSL over HTTP は HTTPS とも呼ばれ、発行済みトークン (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>) を含みます。 フェデレーション アプリケーションの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- <xref:System.ServiceModel.NetPeerTcpBinding> クラスは、ピアツーピア ネットワーク機能を使用して効率的に通信できるようにデザインされた、セキュリティ保護されたトランスポートです。 クラスとバインディングの名前が示すように、プロトコルは TCP です。 セキュリティ モードが Transport に設定されている場合、このバインディングは TLS over TCP を実装します。 ピア ツー ピア機能の詳細については、[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
+ <xref:System.ServiceModel.NetPeerTcpBinding> クラスは、ピアツーピア ネットワーク機能を使用して効率的に通信できるようにデザインされた、セキュリティ保護されたトランスポートです。 クラスとバインディングの名前が示すように、プロトコルは TCP です。 セキュリティ モードが Transport に設定されている場合、このバインディングは TLS over TCP を実装します。 ピア ツー ピア機能の詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding と NetMsmqBinding  
  トランスポートの詳細についてはセキュリティとメッセージ キュー (MSMQ と呼ばれる以前) を参照してください[トランスポート セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

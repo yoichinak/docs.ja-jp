@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148084"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Windows セキュリティで保護されたサービスを説明します。 プログラミングの詳細については、次を参照してください。[方法。Windows 資格情報でサービスをセキュリティで保護された](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "58125448"
 |整合性|はい|  
 |機密性|はい|  
 |Transport|NET.TCP|  
-|バインド|<xref:System.ServiceModel.NetTcpBinding>|  
+|バインディング|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
@@ -118,6 +118,7 @@ ms.locfileid: "58125448"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [方法: Windows 資格情報でサービスをセキュリティで保護します。](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

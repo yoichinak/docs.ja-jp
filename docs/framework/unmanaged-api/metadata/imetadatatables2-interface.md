@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd90e3d10bc5f110622f11fd5bfd17853142ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081685"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 インターフェイス
 拡張[IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)メタデータ ストリームを操作するためのメソッドを含めます。  
@@ -40,8 +40,9 @@ ms.locfileid: "54516630"
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

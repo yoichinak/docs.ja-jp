@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 15beb15d7927d616cc09c7e318ef26a6627926af
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130521"
 ---
 # <a name="compilers-element"></a>\<コンパイラ > 要素
 0 個以上の [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 要素を含むコンパイラ構成要素のコンテナー。  
@@ -47,7 +47,7 @@ ms.locfileid: "55260607"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<configuration > 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |[\<system.codedom > 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -78,6 +78,7 @@ ms.locfileid: "55260607"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

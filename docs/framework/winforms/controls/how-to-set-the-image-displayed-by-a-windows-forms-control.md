@@ -1,5 +1,5 @@
 ---
-title: '方法: によって表示されるイメージの設定を Windows フォーム コントロール'
+title: '方法: Windows フォーム コントロールによって表示されるイメージを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333926"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法: によって表示されるイメージの設定を Windows フォーム コントロール
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法: Windows フォーム コントロールによって表示されるイメージを設定する
 いくつかの Windows フォーム コントロールは、イメージを表示できます。 これらのイメージには、ボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にするアイコンがあります、**保存**コマンド。 また、アイコンには、外観と動作を制御するための背景イメージもあります。  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>コントロールによって表示されるイメージを設定するには  
   
-1.  コントロールの設定`Image`または`BackgroundImage`プロパティ型のオブジェクトを<xref:System.Drawing.Image>します。 一般に、するはから読み込まれるイメージ ファイルを使用して、<xref:System.Drawing.Image.FromFile%2A>メソッド。  
+1. コントロールの設定`Image`または`BackgroundImage`プロパティ型のオブジェクトを<xref:System.Drawing.Image>します。 一般に、するはから読み込まれるイメージ ファイルを使用して、<xref:System.Drawing.Image.FromFile%2A>メソッド。  
   
      イメージの場所は次のコード例で、パスが設定、**マイ ピクチャ**フォルダー。 Windows オペレーティング システムを実行しているほとんどのコンピューターでは、このディレクトリが含まれます。 これにより、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行がもできます。 次のコード例では、既に使用して、フォームが必要です、<xref:System.Windows.Forms.PictureBox>コントロールを追加します。  
   
@@ -57,6 +57,7 @@ ms.locfileid: "54644925"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

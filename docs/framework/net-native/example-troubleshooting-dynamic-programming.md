@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137892"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 > [!NOTE]
@@ -61,5 +61,6 @@ AppViewModel.Current.LayoutVM.PageMap
  アプリで `typeof(LayoutApplicationVM)` ではなく `Type.GetType("LayoutApplicationVM")` を使用している場合、ツール チェーンに `browse` メタデータが保存されている可能性があります。  ただし、それでも `invoke` メタデータは作成されておらず、そのため型をインスタンス化するときに [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外が発生する可能性があります。 この例外を回避するには、名前空間または `dynamic` ポリシーを指定する型のランタイム ディレクティブを追加する必要があります。 ランタイム ディレクティブの詳細については、「[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+
+- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [例:データ バインド時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

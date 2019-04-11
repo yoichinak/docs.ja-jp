@@ -2,12 +2,12 @@
 title: SQL Server でのデータの暗号化
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102168"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server でのデータの暗号化
 SQL Server には、証明書、非対称キー、対称キーのいずれかを使ってデータを暗号化したり、復号化したりできる関数が用意されています。 これらはすべて内部の証明書ストアで管理されます。 証明書ストアは、1 つ上の層がその下の層を保護する暗号化階層を使用することによって、証明書およびキーを保護します。 SQL Server では、この機能領域をシークレット ストレージと呼びます。  
@@ -30,10 +30,11 @@ SQL Server には、証明書、非対称キー、対称キーのいずれかを
 |[暗号化階層](/sql/relational-databases/security/encryption/encryption-hierarchy)|SQL Server における暗号化の概要を説明します。 このトピックでは、その他の記事へのリンクを提供します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [SQL Server の承認と権限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

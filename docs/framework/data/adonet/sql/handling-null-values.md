@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332145"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
@@ -35,7 +35,7 @@ ms.locfileid: "54554687"
  ![真理値表](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>ANSI_NULLS オプションについて  
- <xref:System.Data.SqlTypes> では、ANSI_NULLS オプションが SQL Server で設定された場合と同じセマンティクスになります。 すべての算術演算子 (+、-、*、/、%)、ビットごとの演算子 (~、&、 &#124;)、ほとんどの関数が null の場合は、オペランドまたは引数のいずれかが null 以外に、プロパティ、戻って`IsNull`します。  
+ <xref:System.Data.SqlTypes> ANSI_NULLS オプションでは、SQL Server で設定されている場合と同じセマンティクスを提供します。 すべての算術演算子 (+、-、*、/、%)、ビットごとの演算子 (~、&、 &#124;)、ほとんどの関数が null の場合は、オペランドまたは引数のいずれかが null 以外に、プロパティ、戻って`IsNull`します。  
   
  ANSI sql-92 標準がサポートしていません*columnName* WHERE 句で NULL を = です。 SQL Server では、ANSI_NULLS オプションによって、データベース内の既定の NULL 値と、NULL 値に対する比較の評価の両方が制御されます。 ANSI_NULLS がオン (既定) である場合、IS NULL 演算子を NULL 値のテストを行う式で使用する必要があります。 たとえば次の比較では、ANSI_NULLS がオンである場合、常に不明となります。  
   
@@ -83,19 +83,19 @@ WHERE TerritoryID IN (1, 2, 3)
 >  `Nullable<T>` または <xref:System.Nullable> 構造体は、現在 `DataSet` ではサポートされていません。  
   
 ### <a name="multiple-column-row-assignment"></a>複数列 (行) の割り当て  
- `DataTable.Add` を行にマップできる、`DataTable.LoadDataRow` や <xref:System.Data.DataRow.ItemArray%2A> などの API については、DataColumn の既定値に 'null' をマップします。 配列内のオブジェクトに `DbNull.Value` またはその厳密に型指定された値が含まれる場合は、上記と同じ規則が適用されます。  
+ `DataTable.Add`、 `DataTable.LoadDataRow`、またはそのまま使用する他の Api、<xref:System.Data.DataRow.ItemArray%2A>行にマップを取得する、DataColumn の既定値に ' null' にマップします。 配列内のオブジェクトに `DbNull.Value` またはその厳密に型指定された値が含まれる場合は、上記と同じ規則が適用されます。  
   
  さらに、`DataRow.["columnName"]` の NULL 値割り当てのインスタンスには、次の規則が適用されます。  
   
-1.  既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
+1. 既定の*既定*値は`DbNull.Value`が適切な厳密に厳密に型指定された null 列に null 値が型指定された点を除いてすべて。  
   
-2.  XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
+2. XML ファイルへのシリアル化中に NULL 値が書き出されることはありません ("xsi:nil" と同じ)。  
   
-3.  既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
+3. 既定値を含む NULL 以外のすべての値は、常に XML へのシリアル化中に書き出されます。 これは、NULL 値 (xsi:nil) が明示的で既定値が暗黙的である、XSD/XML セマンティクスとは異なります (XML にない場合は、検証パーサーが関連付けられた XSD スキーマから取得します)。 逆に `DataTable` では、NULL 値が暗黙的で、既定値が明示的になります。  
   
-4.  XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
+4. XML 入力から読み取られた各行の欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または類似のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
+5. <xref:System.Data.DataRow.IsNull%2A> メソッドは、`true` と `DbNull.Value` のどちらに対しても `INullable.Null` を返します。  
   
 ## <a name="assigning-null-values"></a>NULL 値の割り当て  
  任意の <xref:System.Data.SqlTypes> インスタンスの既定値は NULL です。  
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server データ型と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

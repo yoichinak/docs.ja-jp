@@ -2,12 +2,12 @@
 title: WCF での複数の認証方式の使用
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 9f2c9944b424ba527fb20562706d5ad7fc3f8359
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102311"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF での複数の認証方式の使用
 WCF では、単一のエンドポイントに複数の認証方式を指定できるようになりました。 さらに、Web ホスト サービスは、認証設定を IIS から直接継承できます。 自己ホスト型サービスは、使用可能な認証方式を指定できます。 IIS での認証設定の詳細については、次を参照してください[IIS 認証。](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -120,6 +120,7 @@ else
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [システムが提供するバインディングの構成](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

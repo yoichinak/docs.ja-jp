@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225951"
 ---
 # <a name="ui-automation-tree-overview"></a>UI オートメーション ツリーの概要
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57675577"
   
  UI オートメーション プロバイダーは、要素にプロパティ (<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty> および <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty> プロパティを含む) を定義することで、フィルター処理をサポートしています。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、次の 3 つの既定のビューを提供します。 これらのビューは、実行されるフィルター処理の種類によって定義されます。すべてのビューのスコープは、アプリケーションによって定義されます。 さらに、アプリケーションではプロパティに他のフィルターを適用して、たとえば有効にされているコントロールだけをコントロール ビューに含めることもできます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 次の 3 つの既定のビューを提供します。 これらのビューは、実行されるフィルター処理の種類によって定義されます。すべてのビューのスコープは、アプリケーションによって定義されます。 さらに、アプリケーションではプロパティに他のフィルターを適用して、たとえば有効にされているコントロールだけをコントロール ビューに含めることもできます。  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>列ビュー  
@@ -55,5 +55,6 @@ ms.locfileid: "57675577"
  コンテンツ ビューを取得するには、<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> プロパティが `true` に設定された要素を検索するか、<xref:System.Windows.Automation.TreeWalker.ContentViewWalker> を使用してツリーを移動します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.AutomationElement>
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

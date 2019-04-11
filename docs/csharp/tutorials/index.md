@@ -2,12 +2,12 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214443"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
@@ -61,5 +61,3 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 * [LINQ の操作](working-with-linq.md): LINQ の多くの機能と、それをサポートする言語要素について説明します。
 * [属性の使用](attributes.md): C# における属性の作成方法と使用方法について説明します。
 * [文字列補間](exploration/interpolated-strings.yml)チュートリアルでは、文字列に値を挿入する方法について説明します。 埋め込みの C# 式が含まれる挿入文字列の作成方法と、結果の文字列が生じる式の結果のテキスト表示の制御方法を学ぶことになります。 このチュートリアルも[ご利用のコンピューターでローカルで実行するために](exploration/interpolated-strings-local.md)使用できます。
-
-

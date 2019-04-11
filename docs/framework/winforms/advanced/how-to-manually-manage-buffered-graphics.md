@@ -1,5 +1,5 @@
 ---
-title: '方法: バッファリングされたグラフィックスを手動で管理します。'
+title: '方法: バッファリングされたグラフィックスを手動で管理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: 013118ea15184ee4dfbbcd5dcaff054a2cf6a9ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138672"
 ---
-# <a name="how-to-manually-manage-buffered-graphics"></a>方法: バッファリングされたグラフィックスを手動で管理します。
+# <a name="how-to-manually-manage-buffered-graphics"></a>方法: バッファリングされたグラフィックスを手動で管理する
 高度なダブル バッファリングのシナリオで使用することができます、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]ダブル バッファリング ロジックを実装するクラス。 割り当てと管理、個々 のグラフィックス バッファーを担当するクラスは、<xref:System.Drawing.BufferedGraphicsContext>クラス。 すべてのアプリケーションが独自の既定<xref:System.Drawing.BufferedGraphicsContext>ダブル バッファリングをそのアプリケーション用の既定のすべてを管理します。 このインスタンスへの参照を取得するには呼び出すことによって、<xref:System.Drawing.BufferedGraphicsManager.Current%2A>します。  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>既定 BufferedGraphicsContext への参照を取得するには  
@@ -38,6 +38,7 @@ ms.locfileid: "57702933"
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [ダブル バッファリングされたグラフィックス](double-buffered-graphics.md)
-- [方法: バッファリングされたグラフィックスを手動で描画します。](how-to-manually-render-buffered-graphics.md)
+- [方法: バッファリングされたグラフィックスを手動で描画する](how-to-manually-render-buffered-graphics.md)

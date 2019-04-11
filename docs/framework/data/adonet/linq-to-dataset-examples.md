@@ -2,15 +2,15 @@
 title: LINQ to DataSet の例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: ae43111a5b56e1edf3e1b4089902a8ca1d822d0d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091695"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet の例
-ここでは、LINQ を標準クエリ演算子を使用するデータセットのプログラミングの例に示します。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、[標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
+ここでは、LINQ を標準クエリ演算子を使用するデータセットのプログラミングの例に示します。 <xref:System.Data.DataSet>これらの例で使用されるを使用して設定されますが、`FillDataSet`メソッドで指定されている[をデータセットにデータを読み込む](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。 詳細については、次を参照してください。[標準クエリ演算子の概要 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [クエリ式の例](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
@@ -22,7 +22,7 @@ ms.locfileid: "55903797"
   
 -   [パーティション分割](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [順序付け](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [順序](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [要素演算子](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "55903797"
   
 -   [パーティション分割](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [順序付け](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [順序](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [集合演算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
@@ -53,5 +53,6 @@ ms.locfileid: "55903797"
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドおよび <xref:System.Data.DataRowComparer> クラスの使用例を紹介しています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プログラミング ガイド](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [DataSet へのデータの読み込み](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

@@ -2,12 +2,12 @@
 title: . (メンバー アクセス) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-ms.openlocfilehash: e2874e5bff8d8c34f700a81bf52c6729df49aca5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ebedd2b381d035d199e151f64632acf7d502ff5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139712"
 ---
 # <a name="-member-access-entity-sql"></a>. (メンバー アクセス) (Entity SQL)
 ドット演算子 (.) は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]メンバー アクセス演算子。 メンバー アクセス演算子を使用すると、構造型概念モデル型のインスタンスのプロパティ値またはフィールド値を生成できます。  
@@ -31,4 +31,5 @@ expression.identifier
  `select p.Name.FirstName from LOB.Person as p`  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

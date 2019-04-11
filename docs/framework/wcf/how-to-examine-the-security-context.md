@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305105"
 ---
 # <a name="how-to-examine-the-security-context"></a>方法: セキュリティ コンテキストを調べる
 Windows Communication Foundation (WCF) サービスをプログラミングする場合、サービス セキュリティ コンテキストでは、クライアント資格情報と、サービスで認証するために使用するクレームの詳細を確認することができます。 これは、<xref:System.ServiceModel.ServiceSecurityContext> クラスのプロパティを使用することで可能になります。  
@@ -29,13 +29,13 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>呼び出し元の ID を確認するには  
   
-1.  <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティおよび <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> プロパティの値を表示します。  
+1. <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティおよび <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> プロパティの値を表示します。  
   
 ### <a name="to-parse-the-claims-of-a-caller"></a>呼び出し元のクレームを解析するには  
   
-1.  現在の <xref:System.IdentityModel.Policy.AuthorizationContext> クラスを返します。 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> プロパティを使用して、現在のサービス セキュリティ コンテキストを返し、次に `AuthorizationContext` プロパティを使用して <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> を返します。  
+1. 現在の <xref:System.IdentityModel.Policy.AuthorizationContext> クラスを返します。 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> プロパティを使用して、現在のサービス セキュリティ コンテキストを返し、次に `AuthorizationContext` プロパティを使用して <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> を返します。  
   
-2.  <xref:System.IdentityModel.Claims.ClaimSet> クラスの <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> プロパティによって返された <xref:System.IdentityModel.Policy.AuthorizationContext> オブジェクトのコレクションを解析します。  
+2. <xref:System.IdentityModel.Claims.ClaimSet> クラスの <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> プロパティによって返された <xref:System.IdentityModel.Policy.AuthorizationContext> オブジェクトのコレクションを解析します。  
   
 ## <a name="example"></a>例  
  次の例では、現在のセキュリティ コンテキストの <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> プロパティおよび <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティの値、<xref:System.IdentityModel.Claims.Claim.ClaimType%2A> プロパティの値、クレームのリソース値、および現在のセキュリティ コンテキストのすべてのクレームの <xref:System.IdentityModel.Claims.Claim.Right%2A> プロパティを表示します。  
@@ -55,5 +55,6 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
 - [サービス ID と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

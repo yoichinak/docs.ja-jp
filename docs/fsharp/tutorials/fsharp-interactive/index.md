@@ -2,12 +2,12 @@
 title: F# Interactive (fsi.exe) のリファレンス
 description: 学習方法F#Interactive (fsi.exe) は、実行に使用されるF#対話的に、コンソールで、またはを実行するコードF#スクリプト。
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172264"
 ---
 # <a name="interactive-programming-with-f"></a>F# による対話型プログラミング\#
 
@@ -43,10 +43,8 @@ Visual Studio で実行する場合、F# Interactive はプロジェクトとは
 
 設定を調整することで、F# Interactive コマンド ライン引数 (オプション) を制御できます。 **[ツール]** メニューの **[オプション]** をクリックし、**[F# ツール]** を展開します。 変更できる 2 つの設定は、F# Interactive オプションおよび 64 ビット コンピューターで F# Interactive を実行する場合にのみ関連する **64 ビット F# Interactive** 設定です。 この設定によって、32 ビットまたは 64 ビット プロセスとして実行するかどうかを決定するためにコンピューター アーキテクチャを使用する、fsi.exe または fsianycpu.exe の専用の 64 ビット バージョンを実行するかどうかが決定されます。
 
-
 ## <a name="scripting-with-f"></a>F によるスクリプト\#
 スクリプトで使用されるファイル拡張子は **.fsx** または **.fsscript** です。 ソース コードをコンパイルし、後でそのコンパイル済みのアセンブリを実行する代わりに、**fsi.exe** を実行し、F# ソース コードのスクリプトのファイル名を指定するだけで、F# Interactive によってコードを読み取り、リアルタイムで実行することができます。
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>対話型、スクリプト、およびコンパイル型の環境の相違
 F# Interactive でのコードのコンパイル時には、対話形式で実行しているか、スクリプトを実行しているかにかかわらず、シンボル **INTERACTIVE** が定義されます。 コンパイラでのコードのコンパイル時には、シンボル **COMPILED** が定義されます。 したがって、コンパイル モードと対話モードでコードを別にする必要がある場合は、条件付きコンパイルを行うプリプロセッサ ディレクティブを使用して、どちらを有効にするかを決定できます。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 873defb025ff02e6af2572d8d2587f86e5228ca0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968791"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816578"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>方法: Visual Basic でディレクトリを別のディレクトリにコピーする
 ディレクトリを別のディレクトリにコピーするには、<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> メソッドを使用します。 このメソッドでは、ディレクトリ自体とその内容がコピーされます。 コピー先のディレクトリが存在しない場合は作成されます。 コピー先の場所に同じ名前のディレクトリが存在し、`overwrite` が `False` に設定されている場合は、2 つのディレクトリの内容がマージされます。 操作中に、ディレクトリに新しい名前を指定できます。  
@@ -61,6 +61,7 @@ ms.locfileid: "56968791"
 -   コピー先のファイルは存在するが、アクセスできない (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
 - [方法: 特定のパターンに一致するサブディレクトリを検索する](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [方法: ディレクトリにあるファイルのコレクションを取得する](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

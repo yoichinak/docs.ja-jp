@@ -2,12 +2,12 @@
 title: WmiPutInstanceFailed
 ms.date: 03/30/2017
 ms.assetid: 1e56f6db-c6f6-4e57-9668-3ca79c3750af
-ms.openlocfilehash: a28c49a73ccdaeabae4874eb6e651347066fae48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cfc58eb23e4d5be260df3282f34486910d368c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090551"
 ---
 # <a name="wmiputinstancefailed"></a>WmiPutInstanceFailed
 Id:121  
@@ -20,5 +20,6 @@ Id:121
  このイベントは、WMI PutInstance 要求が処理されなかったことを示します。 イベントには、WMI オブジェクト、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

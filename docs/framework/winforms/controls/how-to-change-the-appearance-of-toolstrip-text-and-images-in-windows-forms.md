@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームにおける ToolStrip テキストとイメージの外観を変更します。'
+title: '方法: Windows フォーム内の ToolStrip テキストとイメージの外観を変更する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: cd15e581e646f53ed56af654917c7543bf18617e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088483"
 ---
-# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>方法: Windows フォームにおける ToolStrip テキストとイメージの外観を変更します。
+# <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>方法: Windows フォーム内の ToolStrip テキストとイメージの外観を変更する
 テキストとイメージを表示するかどうかを制御できます、<xref:System.Windows.Forms.ToolStripItem>と相対的な配置と<xref:System.Windows.Forms.ToolStrip>します。  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Toolstripitem の表示される内容を定義するには  
@@ -76,6 +76,7 @@ ms.locfileid: "57705403"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)

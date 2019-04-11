@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634f30186c552f0e5330dd94f78c585da7d450c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d90aeb22a945f4fa1576009c700c420704dd891b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144782"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent メソッド
 このスコープの親スコープを取得します。  
@@ -45,5 +45,6 @@ HRESULT GetParent(
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
 - [GetChildren メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getchildren-method.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085923"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>方法: カスタム オブジェクトに検証ロジックを実装する
 この例では、カスタム オブジェクトに検証ロジックを実装し、それにバインドする方法を示します。  
@@ -33,6 +33,7 @@ ms.locfileid: "57365361"
  使用する代わりに、代わりに、 <xref:System.Windows.Controls.DataErrorValidationRule>、設定することができます、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [バインディングの検証の実装](how-to-implement-binding-validation.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

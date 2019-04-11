@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.SystemTimeResolution
 ms.date: 03/30/2017
 ms.assetid: eaab4ce9-b16a-4fe8-9271-3a1ab1dfa93a
-ms.openlocfilehash: 9dd15c1d223a20263a2c14d3392a48a830b3dd88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47dd35ccbbfe997129ed24c11ed473f142412de4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140921"
 ---
 # <a name="systemservicemodelchannelssystemtimeresolution"></a>System.ServiceModel.Channels.SystemTimeResolution
 System.ServiceModel.Channels.SystemTimeResolution  
@@ -16,6 +16,7 @@ System.ServiceModel.Channels.SystemTimeResolution
  オペレーティング システムのタイマー精度が検出されました*n*タイマー刻みで、これは約*m* (ミリ秒)。 場所*n*と*m*は数値の値です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

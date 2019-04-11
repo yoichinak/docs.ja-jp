@@ -1,13 +1,13 @@
 ---
-title: <transport> の <msmqIntegrationBinding>
+title: <transport> (行中)  <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: f404782ed54d27d5dcfdfba126f6992d9badf060
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073456"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<トランスポート > の\<msmqIntegrationBinding >
 メッセージ キュー統合トランスポートのセキュリティ設定を定義します。  
@@ -49,12 +49,13 @@ msmqIntegrationBinding
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|MSMQ バインディングのセキュリティ設定を定義します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|MSMQ バインディングのセキュリティ設定を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
  この要素は、メッセージ キュー統合トランスポートのセキュリティ設定をカプセル化します。 設定は、メッセージ キュー統合トランスポートとキューに置かれているトランスポートの両方で同じです。 この設定を使用すると、認証モード、暗号化アルゴリズム、セキュア ハッシュ アルゴリズム、および保護レベルを設定できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>

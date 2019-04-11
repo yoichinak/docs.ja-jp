@@ -2,12 +2,12 @@
 title: リプレイ攻撃
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186759"
 ---
 # <a name="replay-attacks"></a>リプレイ攻撃
 A*リプレイ攻撃*攻撃者は、2 つのパーティ間のメッセージのストリームをコピーし、そのストリームを 1 つまたは複数のパーティのときに発生します。 攻撃が和らげられていない場合、攻撃対象になったコンピューターはストリームを正当なメッセージとして処理するため、項目の順序が重複するなど、望ましくない状況に陥ります。  
@@ -23,7 +23,7 @@ A*リプレイ攻撃*攻撃者は、2 つのパーティ間のメッセージの
   
 -   双方向シーケンスの場合、2 つのシーケンス ID が一意である必要があります。 このため、送信シーケンス メッセージを受信シーケンス メッセージとしてリプレイできません (すべてのシーケンス ヘッダーと本文も署名されています)。  
   
- リフレクション攻撃の影響を受けやすい唯一のバインディングは WS-Addressing を使用しないバインディング (WS-Addressing を無効にして、対称キー ベースのセキュリティを使用するカスタム バインディング) です。 <xref:System.ServiceModel.BasicHttpBinding> は、既定では WS-Addressing を使用しませんが、この攻撃を受けやすい方法で対称キー ベースのセキュリティを使用することはありません。  
+ リフレクション攻撃の影響を受けやすい唯一のバインディングは WS-Addressing を使用しないバインディング (WS-Addressing を無効にして、対称キー ベースのセキュリティを使用するカスタム バインド) です。 <xref:System.ServiceModel.BasicHttpBinding> は、既定では WS-Addressing を使用しませんが、この攻撃を受けやすい方法で対称キー ベースのセキュリティを使用することはありません。  
   
  カスタム バインドに対する攻撃を軽減するには、セキュリティ コンテキストを確立しないか、WS-Addressing ヘッダーを要求します。  
   
@@ -37,9 +37,10 @@ A*リプレイ攻撃*攻撃者は、2 つのパーティ間のメッセージの
 -   トランスポート レベルのセキュリティを使用するようにサービスを構成します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [情報の漏えい](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

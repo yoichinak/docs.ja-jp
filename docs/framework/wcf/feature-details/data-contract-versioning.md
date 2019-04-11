@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118028"
 ---
 # <a name="data-contract-versioning"></a>データ コントラクトのバージョン管理
 アプリケーションの進化に伴って、サービスが使用するデータ コントラクトを変更することが必要になる場合があります。 ここでは、データ コントラクトをバージョン管理する方法について説明します。 データ コントラクトのバージョン管理のメカニズムについても説明します。 完全な概要および規範的なバージョン管理のガイダンスでは、「[ベスト プラクティス。データ コントラクトのバージョン管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)します。  
@@ -95,7 +95,7 @@ ms.locfileid: "54646920"
 -   `EmitDefaultValue` が `false` に設定されている必須データ メンバーは、既定値 (NULL またはゼロ) をシリアル化で使用できませんが、逆シリアル化ではこのような値を受信できます。 これによりラウンド トリップの問題が発生します (データを読み取ることはできますが、書き込むことができません)。 そのため、あるバージョンにおいて `IsRequired` が `true` であり、`EmitDefaultValue` が `false` である場合、どのバージョンのデータ コントラクトにおいてもラウンド トリップを発生させる値を生成できるように、これ以外のすべてのバージョンに同じ組み合わせを適用する必要があります。  
   
 ## <a name="schema-considerations"></a>スキーマの考慮事項  
- データ コントラクト型用に生成されるスキーマの詳細については、[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)を参照してください。  
+ データ コントラクト型用に生成されるスキーマの詳細については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。  
   
  スキーマを WCF には、データ コントラクト型には、バージョン管理に対応がないが生成されます。 つまり、あるバージョンの型からエクスポートされたスキーマには、そのバージョンに存在するデータ メンバーのみが含まれます。 <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装しても、型のスキーマは変更されません。  
   
@@ -109,13 +109,14 @@ ms.locfileid: "54646920"
  <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスの実装は、互換性に影響しない変更です。 ただし、<xref:System.Runtime.Serialization.IExtensibleDataObject> が実装されていた型のバージョンより前のバージョンでは、ラウンド トリップはサポートされていません。 詳細については、「[上位互換性のあるデータ コントラクト](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。  
   
 ## <a name="enumerations"></a>列挙  
- 列挙体メンバーの追加や削除は、互換性に影響する変更です。 `EnumMemberAttribute` 属性を使用して古いバージョンのコントラクト名を保持しない限り、列挙体メンバーの名前の変更は互換性に影響します。 詳細については、[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)を参照してください。  
+ 列挙体メンバーの追加や削除は、互換性に影響する変更です。 `EnumMemberAttribute` 属性を使用して古いバージョンのコントラクト名を保持しない限り、列挙体メンバーの名前の変更は互換性に影響します。 詳細については、次を参照してください。[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)します。  
   
 ## <a name="collections"></a>コレクション  
- コレクション型の大半はデータ コントラクト モデル内で交換可能であるため、多くの場合、コレクションの変更は互換性に影響しません。 ただし、カスタマイズされていないコレクションからカスタマイズされたコレクションへの変更またはその逆の変更は、互換性に影響する変更です。 また、コレクションのカスタマイズ設定の変更 (データ コントラクトの名前と名前空間の変更、要素名、キー要素名、および値要素名の反復) も互換性に影響します。 コレクションのカスタマイズの詳細については、[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)を参照してください。  
+ コレクション型の大半はデータ コントラクト モデル内で交換可能であるため、多くの場合、コレクションの変更は互換性に影響しません。 ただし、カスタマイズされていないコレクションからカスタマイズされたコレクションへの変更またはその逆の変更は、互換性に影響する変更です。 また、コレクションのカスタマイズ設定の変更 (データ コントラクトの名前と名前空間の変更、要素名、キー要素名、および値要素名の反復) も互換性に影響します。 コレクションのカスタマイズの詳細については、次を参照してください。[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)します。  
 また、コレクションの内容のデータ コントラクトの変更 (整数のリストから文字列のリストへの変更など) は互換性に影響する変更です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

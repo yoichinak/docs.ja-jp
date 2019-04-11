@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 217da219dc49c588a7f6bc8d32048553f179d67f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315882"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
@@ -81,8 +81,8 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
 |------------------|--------------------------|--------------------------------------------------|-------------------------------------------------------|  
 |送信 (非ストリーム プログラミング モデルから作成)|メッセージの書き込みに必要なデータ (例 : オブジェクトとそのシリアル化に必要な <xref:System.Runtime.Serialization.DataContractSerializer> インスタンス)*|格納されたデータに基づいてメッセージを書き込むためのカスタム ロジック (例 : `WriteObject` を使用している場合に、このシリアライザーで `DataContractSerializer` を呼び出す)*|`OnWriteBodyContents`を呼び出し、結果をバッファーに保持し、バッファーで XML リーダーを返します。|  
 |送信 (ストリーム プログラミング モデルから作成)|書き込むデータを含む `Stream` *|<xref:System.Xml.IStreamProvider> 機構を使用して、格納されたストリームからデータを書き込みます*。|`OnWriteBodyContents`を呼び出し、結果をバッファーに保持し、バッファーで XML リーダーを返します。|  
-|ストリーミング チャネル スタックからの受信|ネットワーク上で到着したデータを表す `Stream` オブジェクトと、このオブジェクトに配置された <xref:System.Xml.XmlReader>| `XmlReader` を使用して、格納された `WriteNode`からコンテンツを書き込みます。|格納された `XmlReader`を返します。|  
-|非ストリーミング チャネル スタックからの受信|本文データを格納するバッファーと、このバッファーに配置された `XmlReader`| `XmlReader` を使用して、格納された `WriteNode`からコンテンツを書き込みます。|格納された lang を返します。|  
+|ストリーミング チャネル スタックからの受信|ネットワーク上で到着したデータを表す `Stream` オブジェクトと、このオブジェクトに配置された <xref:System.Xml.XmlReader>|格納されている内容を書き出す`XmlReader`を使用して `WriteNode`|格納されているを返します。 `XmlReader`|  
+|非ストリーミング チャネル スタックからの受信|本文データを格納するバッファーと、このバッファーに配置された `XmlReader`|格納されている内容を書き込みます`XmlReader`を使用して `WriteNode`|格納された lang を返します。|  
   
  \* これらの項目が直接に実装されていない`Message`サブクラスのサブクラスでは、<xref:System.ServiceModel.Channels.BodyWriter>クラス。 詳細については、<xref:System.ServiceModel.Channels.BodyWriter>を参照してください[Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)します。  
   
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  これを可能にするには、 `Message` インスタンス全体と XML Infoset 間のマッピングが定義されている必要があります。 このようなマッピングは、実際には、存在する場合します。WCF では、SOAP 標準を使用して、このマッピングを定義します。 `Message` インスタンスが XML Infoset として書き込まれると、書き込まれた Infoset はメッセージを含む有効な SOAP エンベロープになります。 したがって、通常、 `WriteMessage` は次の手順を実行します。  
   
-1.  SOAP エンベロープ要素の開始タグを書き込みます。  
+1. SOAP エンベロープ要素の開始タグを書き込みます。  
   
-2.  SOAP ヘッダー要素の開始タグを書き込み、すべてのヘッダーを書き込んで、ヘッダー要素を閉じます。  
+2. SOAP ヘッダー要素の開始タグを書き込み、すべてのヘッダーを書き込んで、ヘッダー要素を閉じます。  
   
-3.  SOAP 本文要素の開始タグを書き込みます。  
+3. SOAP 本文要素の開始タグを書き込みます。  
   
-4.  `WriteBodyContents` または同等のメソッドを呼び出して、本文を書き込みます。  
+4. `WriteBodyContents` または同等のメソッドを呼び出して、本文を書き込みます。  
   
-5.  本文要素とエンベロープ要素を閉じます。  
+5. 本文要素とエンベロープ要素を閉じます。  
   
  上記の手順は、SOAP 標準に密接に関連しています。 これは、SOAP の複数のバージョンが存在することで複雑になります。たとえば、使用している SOAP のバージョンがわからなければ、SOAP エンベロープ要素を正しく書き込むことはできません。 また、SOAP 固有のこの複雑なマッピングを完全に無効にすることが望ましい場合もあります。  
   
@@ -135,7 +135,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  既に説明したように、アクションはさまざまです。たとえば、各種プロトコル上でのネットワーク パケットの送信/受信、データベースでのメッセージの読み取り/書き込み、メッセージ キューへのメッセージの配置/キューからのメッセージの削除などがあります。 これらすべてのアクションの 1 つの共通のある: WCF 間の変換を必要な`Message`インスタンスと実際のグループに送信できる、受信、読み取り、書き込まれると、バイトのキューに置かれた、またはキューから削除します。 `Message` をバイト グループに変換するプロセスは *エンコード*と呼ばれ、バイト グループから `Message` を作成する逆のプロセスは *デコード*と呼ばれます。  
   
- ほとんどのトランスポート チャネルでは、 *メッセージ エンコーダー* と呼ばれるコンポーネントを使用して、エンコードとデコードの処理を行います。 メッセージ エンコーダーは、 <xref:System.ServiceModel.Channels.MessageEncoder> クラスのサブクラスです。 `MessageEncoder` には、 `ReadMessage` とバイト グループとの間の変換を行う `WriteMessage` メソッドと `Message` メソッドのさまざまなオーバーロードが含まれます。  
+ ほとんどのトランスポート チャネルでは、 *メッセージ エンコーダー* と呼ばれるコンポーネントを使用して、エンコードとデコードの処理を行います。 メッセージ エンコーダーは、 <xref:System.ServiceModel.Channels.MessageEncoder> クラスのサブクラスです。 `MessageEncoder` さまざまなが含まれています`ReadMessage`と`WriteMessage`間で変換するメソッドのオーバー ロード`Message`バイト グループとの。  
   
  送信側では、バッファー トランスポート チャネルが上のチャネルから受け取った `Message` オブジェクトを `WriteMessage`に渡します。 バッファー トランスポート チャネルはバイト配列を取得し、アクション (これらのバイトを有効な TCP パケットとしてパッケージングし、適切な送信先に送信するなど) を実行するために使用します。 ストリーミング トランスポート チャネルは、(たとえば、送信 TCP 接続で) まず `Stream` を作成します。次に、この `Stream` と送信に必要な `Message` の両方を適切な `WriteMessage` オーバーロードに渡し、このオーバーロードによってメッセージが書き込まれます。  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  このために、 <xref:System.Xml.IStreamProvider> インターフェイスが使用されます。 このインターフェイスには、書き込むストリームを返す <xref:System.Xml.IStreamProvider.GetStream> メソッドがあります。 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> でストリーミングされたメッセージ本文を書き込む適切な方法は次のとおりです。  
   
-1.  ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
+1. ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
   
-2.  書き込むストリームを返す `WriteValue` 実装で、 <xref:System.Xml.XmlDictionaryWriter> を受け取る <xref:System.Xml.IStreamProvider>に対して `IStreamProvider` オーバーロードを呼び出します。  
+2. 書き込むストリームを返す `WriteValue` 実装で、 <xref:System.Xml.XmlDictionaryWriter> を受け取る <xref:System.Xml.IStreamProvider>に対して `IStreamProvider` オーバーロードを呼び出します。  
   
-3.  ストリームの後に情報を書き込みます (XML 終了タグなど)。  
+3. ストリームの後に情報を書き込みます (XML 終了タグなど)。  
   
  この方法を使用すると、XML ライターは <xref:System.Xml.IStreamProvider.GetStream> を呼び出し、ストリーミングされたデータを書き込む時期を選択できます。 たとえば、テキスト XML ライターやバイナリ XML ライターは、このメソッドをすぐに呼び出し、開始タグと終了タグの間にストリーミングされたコンテンツを書き込むことができます。 MTOM ライターは、メッセージの適切な部分を書き込む準備ができたときに、後で <xref:System.Xml.IStreamProvider.GetStream> を呼び出すことができます。  
   
@@ -268,9 +268,10 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  WCF は、パラメーターおよびメッセージ部分を逆シリアル化のシリアル化と「なし」の 2 つのシリアル化テクノロジをサポートしています。 <xref:System.Runtime.Serialization.DataContractSerializer> 、`XmlSerializer`します。 また、カスタム シリアライザーを作成することもできます。 ただし、WCF の他の部分 (ジェネリックなど`GetBody`メソッドや SOAP エラーのシリアル化) のみを使用する制限があります、<xref:System.Runtime.Serialization.XmlObjectSerializer>サブクラス (<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.NetDataContractSerializer>、ではなく、 <xref:System.Xml.Serialization.XmlSerializer>)、ハード コードのみを使用することがありますか<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
- `XmlSerializer` は、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サービスで使用されるシリアル化エンジンです。 `DataContractSerializer` は、新しいデータ コントラクト プログラミング モデルを認識する新しいシリアル化エンジンです。 `DataContractSerializer` が既定で選択されています。 `XmlSerializer` を使用する場合は、 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 属性を使用して操作ごとに選択できます。  
+ `XmlSerializer` は、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サービスで使用されるシリアル化エンジンです。 `DataContractSerializer` は、新しいデータ コントラクト プログラミング モデルを認識する新しいシリアル化エンジンです。 `DataContractSerializer` 既定で選択および使用する選択肢は、`XmlSerializer`を使用しての操作ごとに作成できる、<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A>属性。  
   
- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> と <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> は、それぞれ `DataContractSerializer` および `XmlSerializer`のメッセージ フォーマッタをプラグインする役割を担う操作の動作です。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> の動作は、 <xref:System.Runtime.Serialization.XmlObjectSerializer>など、 <xref:System.Runtime.Serialization.NetDataContractSerializer> から派生した任意のシリアライザーで実際に操作できます (詳細については、「スタンドアロンのシリアル化の使用」を参照してください)。 この動作では、 `CreateSerializer` 仮想メソッド オーバーロードのいずれかを呼び出して、シリアライザーを取得します。 別のシリアライザーをプラグインするには、新しい <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> サブクラスを作成し、 `CreateSerializer` の両方のオーバーロードをオーバーライドします。  
+ <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>操作の動作は、メッセージ フォーマッタをプラグインするため、`DataContractSerializer`と`XmlSerializer`、それぞれします。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> の動作は、 <xref:System.Runtime.Serialization.XmlObjectSerializer>など、 <xref:System.Runtime.Serialization.NetDataContractSerializer> から派生した任意のシリアライザーで実際に操作できます (詳細については、「スタンドアロンのシリアル化の使用」を参照してください)。 この動作では、 `CreateSerializer` 仮想メソッド オーバーロードのいずれかを呼び出して、シリアライザーを取得します。 別のシリアライザーをプラグインするには、新しい <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> サブクラスを作成し、 `CreateSerializer` の両方のオーバーロードをオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

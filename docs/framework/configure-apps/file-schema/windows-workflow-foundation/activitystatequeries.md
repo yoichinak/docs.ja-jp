@@ -3,17 +3,17 @@ title: <activityStateQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: bdd3c8ae-a13f-4df1-9b3c-a9d6c4bb1b5f
-ms.openlocfilehash: ad41c1afec0b46a404f8f24882587c1dfeb68a80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90acda7277fd276f43a619a014fbce103261aa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112230"
 ---
 # <a name="activitystatequeries"></a>\<activityStateQueries>
 ワークフロー インスタンスを構成するアクティビティのライフサイクルの変化を追跡するために使用する、クエリのコレクションを表します。 たとえば、ワークフロー インスタンス内で、「電子メールの送信」アクティビティが完了するたびの追跡する可能性があります。 追跡参加要素がアクティビティ状態レコード オブジェクトを定期受信するには、このクエリが必要です。 定期受信可能な状態は ActivityStates で指定します。  
   
- 追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。  
+ 追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。  
   
 \<system.serviceModel>  
 \<追跡 >  
@@ -60,10 +60,11 @@ ms.locfileid: "55267808"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
+|[\<ワークフロー >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

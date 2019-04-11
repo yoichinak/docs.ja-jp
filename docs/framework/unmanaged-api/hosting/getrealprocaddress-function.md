@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089592"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 関数
 共通言語ランタイム (CLR) のインストールされている最新のバージョンからエクスポートされる、指定された関数のアドレスを取得します。  
@@ -50,7 +50,7 @@ HRESULT GetRealProcAddress (
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`ppv` が無効です。|  
+|E_POINTER|`ppv` 無効です。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|関数は、ランタイムからはエクスポートされません。|  
   
 ## <a name="requirements"></a>必要条件  
@@ -60,7 +60,8 @@ HRESULT GetRealProcAddress (
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

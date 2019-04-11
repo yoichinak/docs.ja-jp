@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0889b1f3e5aac00c4cbb0361a95732fa951cc48d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea8acab4b8a45fe089a871fb5ada5e24aa98bb84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112035"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant インターフェイス
 非管理対象の定数へのアクセスを提供します。  
@@ -38,4 +38,5 @@ ms.locfileid: "54555961"
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

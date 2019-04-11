@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089264"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>方法: コードでバインディングを作成する
 この例は、コード中で<xref:System.Windows.Data.Binding>を作成し設定する方法を示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "57371187"
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 完全なコード サンプルでは、[コードのみのバインドのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90))を参照してください。  
+ 完全なコード サンプルは、[コードのみのバインドのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90))を参照してください。  
   
  <xref:System.Windows.FrameworkElement.SetBinding%2A>を呼び出す代わりに、<xref:System.Windows.Data.BindingOperations>クラスの静的メソッド<xref:System.Windows.Data.BindingOperations.SetBinding%2A>を使用することができます。 次の例では、<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>の代わりに<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>メソッドを呼び出して、`myText`を`myDataProperty`にバインドしています。  
   
@@ -39,5 +39,6 @@ ms.locfileid: "57371187"
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

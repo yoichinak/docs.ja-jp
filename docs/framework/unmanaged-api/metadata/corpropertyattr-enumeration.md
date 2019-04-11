@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 713913fa046fc1bef12b8849ac82e4399a8dc534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1a0fff266e964b506b2dc7c4030caa54abaa5ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171822"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 列挙型
 プロパティのメタデータを記述する値が格納されます。  
@@ -55,7 +55,8 @@ typedef enum CorPropertyAttr {
   
  **ヘッダー:** CorHdr.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

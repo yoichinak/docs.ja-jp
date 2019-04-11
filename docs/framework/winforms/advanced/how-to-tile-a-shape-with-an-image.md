@@ -1,5 +1,5 @@
 ---
-title: '方法: タイル イメージを持つ図形'
+title: '方法: イメージを並べたパターンによって図形を塗りつぶす'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221539"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>方法: タイル イメージを持つ図形
+# <a name="how-to-tile-a-shape-with-an-image"></a>方法: イメージを並べたパターンによって図形を塗りつぶす
 フロアをカバーする他の横にあるタイルを配置すると同様、(タイル) 図形の塗りつぶし、四角形のイメージを互いの横にある配置できます。 形状の内部を並べて表示するには、テクスチャ ブラシを使用します。 構築する際に、<xref:System.Drawing.TextureBrush>オブジェクトのコンス トラクターに渡す引数の 1 つは、<xref:System.Drawing.Image>オブジェクト。 テクスチャ ブラシを使用して、図形の内部を描画するときにこのイメージのコピーを繰り返し、図形が入力されます。  
   
  ラップ モード プロパティ、<xref:System.Drawing.TextureBrush>方法、画像には、四角形グリッドでこれが繰り返されるオブジェクトを決定します。 行うことができます、グリッド内のタイルがすべて同じ方向、または反転させる 1 つのグリッド位置から、次に、イメージを行うことができます。 反転は、水平、垂直、またはその両方です。 次の例では、さまざまな種類の反転を並べて表示します。  
@@ -61,4 +61,5 @@ ms.locfileid: "57719690"
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ブラシを使用した図形の塗りつぶし](using-a-brush-to-fill-shapes.md)

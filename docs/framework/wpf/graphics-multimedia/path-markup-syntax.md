@@ -7,19 +7,19 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082491"
 ---
 # <a name="path-markup-syntax"></a>パス マークアップ構文
 パスは、後ほど[図形と基本描画の WPF の概要](shapes-and-basic-drawing-in-wpf-overview.md)と[ジオメトリの概要](geometry-overview.md)、ただし、このトピックで詳しく説明パスを指定するのに使用できる、強力で複雑なミニ言語ジオメトリを使用してよりコンパクト[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解しておく必要があるの基本的な機能を使い慣れて<xref:System.Windows.Media.Geometry>オブジェクト。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
+ このトピックを理解しておく必要があるの基本的な機能を使い慣れて<xref:System.Windows.Media.Geometry>オブジェクト。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ミニ言語と PathFigureCollection ミニ言語  
@@ -69,11 +69,11 @@ ms.locfileid: "57379160"
   
 |構文|  
 |------------|  
-|`M` *startPoint*<br /><br /> または<br /><br /> `m` *startPoint*|  
+|`M` *始点*<br /><br /> または<br /><br /> `m` *始点*|  
   
 |用語|説明|  
 |----------|-----------------|  
-|*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 新しい図形の始点。|  
+|*始点*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 新しい図形の始点。|  
   
  大文字`M`ことを示します`startPoint`絶対値; は、小文字`m`ことを示します`startPoint`過去の時点へのオフセットです (0, 0) が存在しない場合。 移動コマンドの後ろに複数の点を指定した場合は、直線コマンドを指定した場合でも、これらの点を結ぶ線が描画されます。  
   
@@ -88,18 +88,17 @@ ms.locfileid: "57379160"
   
 |構文|  
 |------------|  
-|`L` *endPoint*<br /><br /> または<br /><br /> `l` *endPoint*|  
+|`L` *エンドポイント*<br /><br /> または<br /><br /> `l` *エンドポイント*|  
   
 |用語|説明|  
 |----------|-----------------|  
-|*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 線の終点。|  
+|*エンドポイント*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 線の終点。|  
 
 大文字`L`ことを示します`endPoint`絶対値; は、小文字`l`ことを示します`endPoint`過去の時点へのオフセットです (0, 0) が存在しない場合。
 
 ### <a name="horizontal-line-command"></a>水平線コマンド  
- 現在の点と指定された x 座標の間に水平線を作成します。 `H 90` は、有効な水平線コマンドの例です。
+ 現在の点と指定された x 座標の間に水平線を作成します。 `H 90` 有効な水平線コマンドの例に示します。
 
-  
 |構文|  
 |------------|  
 |`H`  *x*<br /><br /> または<br /><br /> `h`  *x*|  
@@ -111,21 +110,20 @@ ms.locfileid: "57379160"
 大文字`H`ことを示します`x`絶対値; は、小文字`h`ことを示します`x`過去の時点へのオフセットです (0, 0) が存在しない場合。
   
 ### <a name="vertical-line-command"></a>垂直線コマンド  
- 現在の点と指定された y 座標の間に垂直線を作成します。 `v 90` は、有効な垂直線コマンドの例です。
+ 現在の点と指定された y 座標の間に垂直線を作成します。 `v 90` 有効な垂直線コマンドの例に示します。
 
-  
 |構文|  
 |------------|  
-|`V`  *y*<br /><br /> または<br /><br /> `v`  *y*|  
+|`V`  *Y*<br /><br /> または<br /><br /> `v`  *Y*|  
   
 |用語|説明|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> 直線の終点の y 座標。|  
+|*Y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> 直線の終点の y 座標。|  
 
 大文字`V`ことを示します`y`絶対値; は、小文字`v`ことを示します`y`過去の時点へのオフセットです (0, 0) が存在しない場合。  
     
 ### <a name="cubic-bezier-curve-command"></a>3 次ベジエ曲線コマンド  
- 2 つの指定されたコントロール ポイントを使用して、現在の点と指定された終点の間に 3 次ベジエ曲線を作成します (`controlPoint`1 と`controlPoint`2)。 `C 100,200 200,400 300,200` は、有効な曲線コマンドの例です。  
+ 2 つの指定されたコントロール ポイントを使用して、現在の点と指定された終点の間に 3 次ベジエ曲線を作成します (`controlPoint`1 と`controlPoint`2)。 `C 100,200 200,400 300,200` 有効な曲線コマンドの例に示します。  
   
 |構文|  
 |------------|  
@@ -138,7 +136,7 @@ ms.locfileid: "57379160"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線が描画される点。|  
   
 ### <a name="quadratic-bezier-curve-command"></a>2 次ベジエ曲線コマンド  
- 指定されたコントロール ポイントを使用して現在の点と指定された終点の間で 2 次ベジエ曲線を作成します (`controlPoint`)。 `q 100,200 300,200` は、有効な 2 次ベジエ曲線コマンドの例です。  
+ 指定されたコントロール ポイントを使用して現在の点と指定された終点の間で 2 次ベジエ曲線を作成します (`controlPoint`)。 `q 100,200 300,200` 有効な 2 次ベジエ曲線コマンドの例に示します。  
   
 |構文|  
 |------------|  
@@ -225,10 +223,11 @@ ms.locfileid: "57379160"
  指数表記を使用することもできます。 たとえば、`+1.e17`有効な値です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
 - [ジオメトリの概要](geometry-overview.md)
-- [方法トピック](geometries-how-to-topics.md)
+- [方法のトピック](geometries-how-to-topics.md)

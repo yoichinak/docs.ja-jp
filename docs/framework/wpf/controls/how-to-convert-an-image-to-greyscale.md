@@ -9,12 +9,12 @@ helpviewer_keywords:
 - converting [WPF], images to grayscale
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
-ms.openlocfilehash: 3fcc758007bf0a7e3f6c9a3597d628fae506fda4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200286"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>方法: イメージをグレースケールに変換する
 この例では、イメージをグレースケールを使用して変換する<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>します。  
@@ -26,6 +26,7 @@ ms.locfileid: "57357535"
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [イメージ要素を使用する](how-to-use-the-image-element.md)
 - [イメージをトリミングする](how-to-crop-an-image.md)
 - [イメージを回転させる](how-to-rotate-an-image.md)

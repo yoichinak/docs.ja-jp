@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150541"
 ---
 # <a name="how-to-repeat-an-animation"></a>方法: アニメーションを反復する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>のプロパティを<xref:System.Windows.Media.Animation.Timeline>アニメーションの繰り返し動作を制御するためにします。  
@@ -26,11 +26,12 @@ ms.locfileid: "57354004"
   
  [!code-xaml[timingbehaviors_snip#RepeatBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/RepeatBehaviorExample.xaml#repeatbehaviorwholepage)]  
   
- サンプル全体については、[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)を参照してください。  
+ サンプル全体については、次を参照してください。[アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [反復サイクル中にアニメーション値を累積する](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [タイムラインを自動的に反転するかどうかを指定する](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)
+- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)
 - [アニメーションの概要](animation-overview.md)
 - [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

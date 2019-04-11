@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192980"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>方法: コンテキスト メニューでスペル チェックを使用する
 既定では、編集コントロールでスペル チェックを有効にするとがなど<xref:System.Windows.Controls.TextBox>または<xref:System.Windows.Controls.RichTextBox>、コンテキスト メニューでスペル チェックの選択肢を取得します。 たとえば、ユーザーは、スペル ミスの単語を右クリックし、ときのセットを取得するオプションや、スペルの修正候補**すべて無視**します。 ただし、独自のカスタム コンテキスト メニューで、既定のショートカット メニューをオーバーライドするときにこの機能は失われ、コンテキスト メニューでスペル チェック機能を再度有効にするコードを記述する必要があります。 次の例でこれを有効にする方法を示しています、<xref:System.Windows.Controls.TextBox>します。  
@@ -39,6 +39,7 @@ ms.locfileid: "57377808"
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>関連項目
+
 - [TextBox の概要](textbox-overview.md)
 - [RichTextBox の概要](richtextbox-overview.md)
 - [テキスト編集コントロールでスペル チェックを有効にする](how-to-enable-spell-checking-in-a-text-editing-control.md)

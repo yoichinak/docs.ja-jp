@@ -1,13 +1,13 @@
 ---
-title: <security> の <basicHttpBinding>
+title: <security> (行中)  <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118054"
 ---
 # <a name="security-of-basichttpbinding"></a>\<セキュリティ > の\<basicHttpBinding >
 セキュリティ機能を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。  
@@ -37,11 +37,11 @@ ms.locfileid: "55261298"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|省略可能です。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
+|モード|任意。 使用されるセキュリティの種類を指定します。 既定値は `None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|メッセージの数は、転送中にセキュリティ保護されません。|  
 |Transport|セキュリティは、HTTPS トランスポートを使用して提供されます。 SOAP メッセージは、HTTPS を使用したセキュリティで保護されます。 サービスは、サービスの X.509 証明書を使用してクライアントに認証されます。 クライアントは、提供される ClientCredentialType を使用して認証されます。 参照してください、 [\<トランスポート >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)します。|  
@@ -66,6 +66,7 @@ ms.locfileid: "55261298"
  既定では、SOAP メッセージはセキュリティで保護されず、クライアントは認証されません。 この要素を使用すると、`basicHttpBinding` 要素に追加のセキュリティ設定を構成できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>

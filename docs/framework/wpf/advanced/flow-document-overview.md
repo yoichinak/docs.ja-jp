@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303493"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
 フロー ドキュメントは、表示と読みやすさを最適化するように設計されたドキュメントです。 フロー ドキュメントは、1 つの定義済みのレイアウトに設定するのではなく、ウィンドウのサイズ、デバイスの解像度、省略可能なユーザー設定など、ランタイム変数に基づいてコンテンツを動的に調整したりリフローしたりします。 また、フロー ドキュメントは、改ページ位置の自動修正や列などの高度なドキュメント機能を提供します。 ここでは、フロー ドキュメントの概要およびフロー ドキュメントの作成方法について説明します。  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>フロー ドキュメントとは  
  フロー ドキュメントは、ウィンドウ サイズ、デバイスの解像度、およびその他の環境変数に応じて "コンテンツをリフロー" するために設計されています。 また、フロー ドキュメントには、検索、読みやすさを最適化するモードの表示、およびフォントのサイズと外観を変更する機能を含むさまざまな組み込み機能があります。 フロー ドキュメントは、主なドキュメントの使用シナリオが読みやすさである場合に最適です。 これに対し、固定ドキュメントは、静的なプレゼンテーションを行うように設計されています。 ソース コンテンツの再現性が重要である場合は、固定ドキュメントが便利です。 参照してください[WPF のドキュメント](documents-in-wpf.md)ドキュメントのさまざまな種類の詳細についてはします。  
@@ -46,7 +44,7 @@ ms.locfileid: "58828473"
   
 -   検索:ドキュメント全体のフルテキスト検索を実行できます。  
   
--   表示モード:ユーザーは、単一ページ (ページに-、-時に) 表示モード、2 つのページ-で-、-時間 (読書形式) 表示モード、連続したスクロール (ボトムレス) 表示モードなど、適切な表示モードを選択できます。  これらの表示モードの詳細については、<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>を参照してください。  
+-   表示モード:ユーザーは、単一ページ (ページに-、-時に) 表示モード、2 つのページ-で-、-時間 (読書形式) 表示モード、連続したスクロール (ボトムレス) 表示モードなど、適切な表示モードを選択できます。  これらの表示モードの詳細については、次を参照してください。<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>します。  
   
 -   ページ ナビゲーション コントロール:ドキュメントの表示モードでは、ページを使用する場合にページ ナビゲーション コントロールには、次のページ (下矢印) または前のページ (上向きの矢印) だけでなく、現在のページ番号とページの合計数のインジケーターにジャンプするためのボタンが含まれます。 ページ間の移動は、キーボードの方向キーを使用して行うこともできます。  
   
@@ -61,7 +59,7 @@ ms.locfileid: "58828473"
  **注:** <xref:System.Windows.Documents.FlowDocument>が直接フロー コンテンツをホストする、必要なすべてのこれらのコントロールの表示を使用ため、<xref:System.Windows.Documents.FlowDocument>フロー コンテンツのホスティングを有効にします。
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> 単一ページ (ページに-、-時に) 表示モード、2 つのページ-で-、-時間 (読書形式) 表示モード、連続したスクロール (ボトムレス) 表示モードなど、各種の表示モードの間で動的に選択するユーザーを有効にする機能が含まれています。 これらの表示モードの詳細については、<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>を参照してください。 さまざまな表示モードを動的に切り替える機能が必要ない場合<xref:System.Windows.Controls.FlowDocumentPageViewer>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>コンテンツ ビューアーは、特定の表示モードで修正される軽量のフローを提供します。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 単一ページ (ページに-、-時に) 表示モード、2 つのページ-で-、-時間 (読書形式) 表示モード、連続したスクロール (ボトムレス) 表示モードなど、各種の表示モードの間で動的に選択するユーザーを有効にする機能が含まれています。 これらの表示モードの詳細については、次を参照してください。<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>します。 さまざまな表示モードを動的に切り替える機能が必要ない場合<xref:System.Windows.Controls.FlowDocumentPageViewer>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>コンテンツ ビューアーは、特定の表示モードで修正される軽量のフローを提供します。  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer と FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> コンテンツを時間でのページで表示モードを表示するには、while<xref:System.Windows.Controls.FlowDocumentScrollViewer>コンテンツを連続したスクロール モードで表示します。 両方<xref:System.Windows.Controls.FlowDocumentPageViewer>と<xref:System.Windows.Controls.FlowDocumentScrollViewer>は特定の表示モードに固定されます。 比較する<xref:System.Windows.Controls.FlowDocumentReader>、さまざまな表示モードを動的に選択するユーザーを有効にする機能が含まれています (によって提供される、<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列挙型) より多くのリソースよりも処理を要するができますが<xref:System.Windows.Controls.FlowDocumentPageViewer>または<xref:System.Windows.Controls.FlowDocumentScrollViewer>します。  
@@ -91,14 +89,14 @@ ms.locfileid: "58828473"
   
  フロー コンテンツのために、次の 2 つの重要なカテゴリがあります。  
   
-1.  **Block の派生クラス**:「Block コンテンツ要素」または単に「ブロック要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Block>共通の親要素をグループ化またはグループに共通の属性を適用するために使用できます。  
+1. **Block の派生クラス**:「Block コンテンツ要素」または単に「ブロック要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Block>共通の親要素をグループ化またはグループに共通の属性を適用するために使用できます。  
   
-2.  **Inline の派生クラス**:「Inline コンテンツ要素」または単に「インライン要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Inline>Block 要素または別の Inline 要素に含まれるいずれか。 Inline 要素は、多くの場合、画面にレンダリングされるコンテンツの直接のコンテナーとして使用されます。 たとえば、 <xref:System.Windows.Documents.Paragraph> (Block 要素) を含めることができます、 <xref:System.Windows.Documents.Run> (Inline 要素) が、<xref:System.Windows.Documents.Run>実際に画面に表示されるテキストが含まれています。  
+2. **Inline の派生クラス**:「Inline コンテンツ要素」または単に「インライン要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Inline>Block 要素または別の Inline 要素に含まれるいずれか。 Inline 要素は、多くの場合、画面にレンダリングされるコンテンツの直接のコンテナーとして使用されます。 たとえば、 <xref:System.Windows.Documents.Paragraph> (Block 要素) を含めることができます、 <xref:System.Windows.Documents.Run> (Inline 要素) が、<xref:System.Windows.Documents.Run>実際に画面に表示されるテキストが含まれています。  
   
  これらの 2 つのカテゴリの各クラスについて、以下に簡単に説明します。  
   
 ### <a name="block-derived-classes"></a>Block の派生クラス  
- **Paragraph**  
+ **段落**  
   
  <xref:System.Windows.Documents.Paragraph> 段落にグループの内容を通常に使用されます。 Paragraph の最も単純かつ一般的な用途は、テキストの段落の作成です。  
   
@@ -132,7 +130,7 @@ ms.locfileid: "58828473"
   
  ![UIElement を示すスクリーン ショットは、フロー コンテンツに埋め込まれます。](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **List**  
+ **リスト**  
   
  <xref:System.Windows.Documents.List> 箇条書きまたは数値のリストの作成に使用されます。 設定、<xref:System.Windows.Documents.List.MarkerStyle%2A>プロパティを<xref:System.Windows.TextMarkerStyle>リストのスタイルを決定する列挙値。 簡単なリストを作成する方法を次の例に示します。  
   
@@ -156,7 +154,7 @@ ms.locfileid: "58828473"
   
  **注:** 以降では、 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>のプロパティ、<xref:System.Windows.Documents.Run>オブジェクトが依存関係プロパティ。 バインドすることができます、<xref:System.Windows.Documents.Run.Text%2A>プロパティをデータ ソースなど、<xref:System.Windows.Controls.TextBlock>します。 <xref:System.Windows.Documents.Run.Text%2A>プロパティは、一方向のバインドを完全にサポートします。 <xref:System.Windows.Documents.Run.Text%2A>以外のプロパティが双方向のバインドにもサポートしています<xref:System.Windows.Controls.RichTextBox>します。 例については、「<xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>」を参照してください。  
   
- **Span**  
+ **スパン**  
   
  <xref:System.Windows.Documents.Span> その他のインライン コンテンツ要素をグループ化します。 内のコンテンツに固有のレンダリングが適用されず、<xref:System.Windows.Documents.Span>要素。 ただし、要素から継承した<xref:System.Windows.Documents.Span>など<xref:System.Windows.Documents.Hyperlink>、 <xref:System.Windows.Documents.Bold>、<xref:System.Windows.Documents.Italic>と<xref:System.Windows.Documents.Underline>テキストに書式を適用しないでください。  
   
@@ -196,7 +194,7 @@ ms.locfileid: "58828473"
   
  <xref:System.Windows.Documents.Figure> <xref:System.Windows.Documents.Floater>いくつかの方法が異なるし、さまざまなシナリオのために使用します。  
   
- **Figure:**  
+ **図:**  
   
 -   配置することができます。ページ、コンテンツ、列、または段落に対して相対的にドッキングする、水平および垂直方向のアンカーを設定することができます。 使用することもその<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>と<xref:System.Windows.Documents.Figure.VerticalOffset%2A>プロパティを任意のオフセットを指定します。  
   
@@ -204,7 +202,7 @@ ms.locfileid: "58828473"
   
 -   改ページ調整されません。場合内のコンテンツを<xref:System.Windows.Documents.Figure>内に収まらない、<xref:System.Windows.Documents.Figure>はあらゆるコンテンツに合わせて表示して、残りの内容は失われます  
   
- **Floater:**  
+ **浮遊要素:**  
   
 -   配置できません。必要なスペースを確保できる場所に描画されます。 オフセットやアンカーを設定することはできません、<xref:System.Windows.Documents.Floater>します。  
   
@@ -349,9 +347,10 @@ ms.locfileid: "58828473"
  参照してください[WPF のタイポグラフィ](typography-in-wpf.md)文字体裁の詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目
-- [Text](optimizing-performance-text.md)
+
+- [テキスト](optimizing-performance-text.md)
 - [WPF のタイポグラフィ](typography-in-wpf.md)
-- [方法トピック](flow-content-elements-how-to-topics.md)
+- [方法のトピック](flow-content-elements-how-to-topics.md)
 - [TextElement コンテンツ モデルの概要](textelement-content-model-overview.md)
 - [RichTextBox の概要](../controls/richtextbox-overview.md)
 - [WPF のドキュメント](documents-in-wpf.md)

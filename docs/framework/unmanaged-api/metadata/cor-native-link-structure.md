@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08d27eb834c1a9a3a5d163bb2d3054f599ae1669
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157587"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK 構造体
 ネイティブ コードのリンクに使用される情報が含まれます。  
@@ -52,9 +52,10 @@ typedef struct
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [CorNativeLinkType 列挙型](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)
 - [CorNativeLinkFlags 列挙型](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)

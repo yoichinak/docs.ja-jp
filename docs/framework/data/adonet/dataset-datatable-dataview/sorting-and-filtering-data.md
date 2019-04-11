@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166245"
 ---
 # <a name="sorting-and-filtering-data"></a>データの並べ替えとフィルター処理
 <xref:System.Data.DataView> には、<xref:System.Data.DataTable> のデータの並べ替えとフィルター処理を行うさまざまな方法が用意されています。  
@@ -31,14 +31,14 @@ ms.locfileid: "54661218"
     |------------------------------|-----------------|  
     |**CurrentRows**|**現在**行バージョンのすべて**Unchanged**、 **Added**、および**Modified**行。 既定値です。|  
     |**追加**|**現在**行バージョンのすべて**Added**行。|  
-    |**削除**|**元**行バージョンのすべて**Deleted**行。|  
+    |**Deleted**|**元**行バージョンのすべて**Deleted**行。|  
     |**ModifiedCurrent**|**現在**行バージョンのすべて**Modified**行。|  
     |**ModifiedOriginal**|**元**行バージョンのすべて**Modified**行。|  
-    |**None**|行がありません。|  
+    |**なし**|行がありません。|  
     |**OriginalRows**|**元**行バージョンのすべて**Unchanged**、 **Modified**、および**Deleted**行。|  
-    |**変更なし**|**現在**行バージョンのすべて**Unchanged**行。|  
+    |**Unchanged**|**現在**行バージョンのすべて**Unchanged**行。|  
   
- 行の状態と行のバージョンの詳細については、[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)を参照してください。  
+ 行の状態と行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
  在庫数が標準在庫数以下である製品を、仕入先 ID (supplier ID) で並べ替え、さらに製品名 (product name) で並べ替えたビューを作成するコード サンプルを次に示します。  
   
@@ -57,9 +57,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

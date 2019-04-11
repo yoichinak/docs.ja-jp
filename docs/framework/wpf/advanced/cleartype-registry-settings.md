@@ -5,20 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079995"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType レジストリの設定
-このトピックの概要を示します、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]レジストリ設定で使用される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
-  
-  
+このトピックの概要を示します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]レジストリ設定で使用される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>テクノロジの概要  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト表示デバイスの使用をレンダリングするアプリケーション[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]機能、強化された閲覧エクスペリエンスを提供します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] が開発したソフトウェア テクノロジです。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、LCD 画面の各ピクセル内の個々の垂直カラー ストライプ要素にアクセスすることによって機能します。 詳細については[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]を参照してください[ClearType の概要](cleartype-overview.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] テキスト表示デバイスの使用をレンダリングするアプリケーション[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]機能、強化された閲覧エクスペリエンスを提供します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 開発したソフトウェア テクノロジ[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ラップトップや Pocket PC の画面、フラット パネル モニターなどの既存の Lcd (液晶ディスプレイ) 上のテキストの読みやすさを向上します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] LCD 画面の各ピクセル内の個々 の垂直カラー ストライプ要素にアクセスすることによって機能します。 詳細については[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]を参照してください[ClearType の概要](cleartype-overview.md)します。  
   
  レンダリングされるテキスト[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]ディスプレイ デバイスで表示したときに大幅に異なる表示されることができます。 青、緑、赤の順でカラー ストライプ要素ではなく、一般的な赤、緑、青のモニターの数が少ないの実装例 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) の順序。  
   
@@ -32,17 +31,17 @@ ms.locfileid: "58675901"
   
 |設定|説明|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レベル|レベルを示します[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]わかりやすくするための色します。|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|レベルを示します[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]わかりやすくするための色します。|  
 |ガンマ レベル|ディスプレイ デバイスのピクセル カラー コンポーネントのレベルを示します。|  
 |ピクセル構造|ディスプレイ デバイスのピクセルの配置を示します。|  
 |テキストのコントラスト レベル|表示されるテキストのコントラストのレベルを示します。|  
   
  これらの設定は、識別されたを参照する方法を認識している外部構成ユーティリティによってアクセスできる[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]レジストリ設定します。 これらの設定は、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] レジストリ エディターを使用して値に直接アクセスして作成または変更することもできます。  
   
- 場合、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]レジストリ設定が (これは、既定の状態) を設定されていない、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションのクエリ、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]フォント スムージング設定用システム パラメーター情報。  
+ 場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]レジストリ設定が (これは、既定の状態) を設定されていない、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションのクエリ、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]フォント スムージング設定用システム パラメーター情報。  
   
 > [!NOTE]
->  ディスプレイ デバイス名を列挙する方法の詳細については、次を参照してください。、 `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数。  
+>  ディスプレイ デバイス名を列挙する方法の詳細については、次を参照してください。、`SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数。  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType レベル  
@@ -83,14 +82,14 @@ ms.locfileid: "58675901"
   
 |型|[値]|説明|  
 |----------|-----------|-----------------|  
-|フラット|0|ディスプレイ デバイスにピクセル構造がありません。 つまり、各色の光源がピクセル領域に均等に拡散しています。これは、グレースケール レンダリングと呼ばれます。 標準のディスプレイ デバイスはこのようにして機能します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] はレンダリングされたテキストに適用されません。|  
-|RGB|1|ディスプレイ デバイスのピクセルは、赤、緑、青の順の 3 つのストライプで構成されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] がレンダリングされたテキストに適用されます。|  
-|BGR|2|ディスプレイ デバイスのピクセルは、青、緑、赤の順の 3 つのストライプで構成されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] がレンダリングされたテキストに適用されます。 順序が RGB の場合の逆であることに注目してください。|  
+|フラット|0|ディスプレイ デバイスにピクセル構造がありません。 つまり、各色の光源がピクセル領域に均等に拡散しています。これは、グレースケール レンダリングと呼ばれます。 標準のディスプレイ デバイスはこのようにして機能します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダリングされたテキストに適用されませんが。|  
+|RGB|1|ディスプレイ デバイスのピクセルは、赤、緑、青の順の 3 つのストライプで構成されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダリングされたテキストに適用されます。|  
+|BGR|2|ディスプレイ デバイスのピクセルは、青、緑、赤の順の 3 つのストライプで構成されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] レンダリングされたテキストに適用されます。 順序が RGB の場合の逆であることに注目してください。|  
   
  ピクセル構造は、0 から 2 の範囲の整数値に対応します。 既定のレベルは 0 です。これは、フラット ピクセル構造を表します。  
   
 > [!NOTE]
->  ディスプレイ デバイス名を列挙する方法の詳細については、次を参照してください。、 `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数。  
+>  ディスプレイ デバイス名を列挙する方法の詳細については、次を参照してください。、`EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数。  
   
 ### <a name="registry-setting"></a>レジストリ設定  
  ピクセル構造のレジストリ設定は、特定のディスプレイ デバイス名に対応するローカル マシン設定の場所にあります。  
@@ -115,5 +114,6 @@ ms.locfileid: "58675901"
  ![レジストリ エディターの ClearType 設定します。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ClearType の概要](cleartype-overview.md)
 - [ClearType アンチエイリアシング](/windows/desktop/gdi/cleartype-antialiasing)

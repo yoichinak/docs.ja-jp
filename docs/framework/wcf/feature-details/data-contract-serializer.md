@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: 3dc9119cdf4473e3923fd24d3f444eed9cae0220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eba12a38ee852dcdc08f27bc9e3cb02332fd7071
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199532"
 ---
 # <a name="data-contract-serializer"></a>データ コントラクト シリアライザー
 Windows Communication Foundation (WCF) インフラストラクチャを使用して、<xref:System.Runtime.Serialization.DataContractSerializer>として既定のシリアライザー クラス。 このセクションの各トピックでは、これをスタンドアロンのシリアライザーとして使用するときの詳細について説明します。  
@@ -38,5 +38,6 @@ Windows Communication Foundation (WCF) インフラストラクチャを使用�
  [データ転送とシリアル化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
 - [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163021"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 関数
 検索し、メッセージ DLL を読み込みます。 メッセージ DLL が発見または読み込まれた場合は、0 を返します。 メッセージ DLL は、言語 ID の名前を持つサブディレクトリまたは現在のディレクトリ内のいずれかになります。  
@@ -39,4 +39,5 @@ HINSTANCE WINAPI GetALinkMessageDll();
  **ライブラリ**: alink.dll  
   
 ## <a name="see-also"></a>関連項目
+
 - [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -2,12 +2,12 @@
 title: DataSet、DataTable、および DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 098dc3ec198edc84b67ae3ed9d2610b2386a3205
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105730"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable、および DataView
 ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 <xref:System.Data.DataSet> とは、テーブル間のリレーションシップだけでなく、包括するテーブル、整列するテーブル、およびデータを制約するテーブルを含むデータのセットを表します。  
@@ -50,10 +50,10 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  <xref:System.Data.DataTable> の作成方法、スキーマの定義方法、およびデータの操作方法について説明します。  
   
- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
+ [DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
  <xref:System.Data.DataTableReader> の作成方法および使用方法について説明します。  
   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  `DataViews` の作成方法および操作方法、および <xref:System.Data.DataView> イベントの操作方法について説明します。  
   
  [DataSet での XML の使用](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
@@ -79,5 +79,6 @@ ADO.NET <xref:System.Data.DataSet> はメモリ常駐型のデータ表現であ
  **DataSet** にデータ ソースの主キー情報を設定する方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

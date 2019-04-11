@@ -6,33 +6,33 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 32f1940db7e2e77b2d878a71c9e1aa4e394b349f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134671"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]
 >  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] は、 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]をサポートするすべてのオペレーティング システムで利用可能な、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]の新しいアクセシビリティ フレームワークです。  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 新しいアクセシビリティ フレームワークは、[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]をサポートするすべてのオペレーティング システムで利用可能な[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、デスクトップ上のほとんどの [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素へのプログラムによるアクセスを提供し、スクリーン リーダーなどの補助技術製品が [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] に関する情報をエンド ユーザーに提供したり、標準入力方式以外の方法で [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] を操作したりできるようにします。 また、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、自動テスト スクリプトが [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]と対話できるようにします。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ほとんどのプログラムによるアクセスを提供します[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]支援技術製品の有効化など、デスクトップ上の要素に関する情報を提供するリーダーの画面、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]エンドユーザーに、操作したり、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]以外の方法で。標準入力します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 自動テスト スクリプトと対話することができます、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]します。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、 **[別のユーザーとして実行]** コマンドを使用して別々のユーザーが開始したプロセス間の通信を行うことはできません。  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 使用して別のユーザーが開始したプロセス間通信を有効にしません、**として実行**コマンド。  
   
  UI オートメーション クライアント アプリケーションを作成すると、そのアプリケーションは、複数のフレームワーク上で動作することが保証されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コアは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]のさまざまな部分の基になるフレームワークのあらゆる差異をマスクします。 たとえば、 `Content` のボタンの [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] プロパティ、 `Caption` のボタンの [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] プロパティ、および HTML イメージの `ALT` プロパティは、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>ビュー内では、すべて単一のプロパティ、つまり [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] にマップされます。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の完全な機能は、 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]、および [!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]で利用できます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 完全な機能を提供します[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)]、および[!INCLUDE[TLA2#tla_winnetsvrfam](../../../includes/tla2sharptla-winnetsvrfam-md.md)]します。  
   
  UI オートメーション プロバイダーは、組み込みのブリッジ サービスを通じて、[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] クライアント アプリケーションを一部サポートします。  
   
 <a name="Providers_and_Clients"></a>   
 ## <a name="providers-and-clients"></a>プロバイダーおよびクライアント  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] には、次の表に示す 4 つの主要なコンポーネントがあります。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 次の表に示すように、次の 4 つの主要なコンポーネントがあります。  
   
 |コンポーネント|説明|  
 |---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "57677202"
 |[マネージド コードの UI オートメーション クライアント](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|クライアント API を使用する際に役立つ概要と「方法」トピック。|クライアント アプリケーションの開発者。|  
 |[UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|コントロール パターンをプロバイダーで実装する方法と、クライアントで使用可能な機能に関する情報。|すべて。|  
 |[UI オートメーション テキスト パターン](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Text コントロール パターンをプロバイダーで実装する方法と、クライアントで使用可能な機能に関する情報。|すべて。|  
-|[UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)|さまざまなコントロール型でサポートされるプロパティとコントロール パターンに関する情報。|すべて。|  
+|[UI オートメーション コントロール型](../../../docs/framework/ui-automation/ui-automation-control-types.md)|さまざまなコントロール型でサポートされるプロパティとコントロール パターンに関する情報。|すべて。|  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の名前空間、それらの名前空間を含む DLL、およびそれらを使用する対象ユーザーを次の表に示します。  
   
@@ -63,20 +63,21 @@ ms.locfileid: "57677202"
   
 <a name="UI_Automation_Model"></a>   
 ## <a name="ui-automation-model"></a>UI オートメーション モデル  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] のすべての部分を、クライアント アプリケーションに対して、 <xref:System.Windows.Automation.AutomationElement>として公開します。 各要素は、デスクトップをルート要素とするツリー構造に格納されます。 クライアントでは、ツリーの未加工ビューを、コントロール ビューまたはコンテンツ ビューとしてフィルター処理できます。 アプリケーションでは、カスタム ビューを作成することもできます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] すべての情報を公開、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]としてクライアント アプリケーションに、<xref:System.Windows.Automation.AutomationElement>します。 各要素は、デスクトップをルート要素とするツリー構造に格納されます。 クライアントでは、ツリーの未加工ビューを、コントロール ビューまたはコンテンツ ビューとしてフィルター処理できます。 アプリケーションでは、カスタム ビューを作成することもできます。  
   
- <xref:System.Windows.Automation.AutomationElement> オブジェクトは、それらが表す [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素の一般的なプロパティを公開します。 これらのプロパティの 1 つにコントロール型があります。これは、その基本的な外観と機能を認識可能な単一のエンティティとして定義するもので、ボタンやチェック ボックスなどがその例です。  
+ <xref:System.Windows.Automation.AutomationElement> オブジェクトの共通プロパティを公開する、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]が表す要素。 これらのプロパティの 1 つにコントロール型があります。これは、その基本的な外観と機能を認識可能な単一のエンティティとして定義するもので、ボタンやチェック ボックスなどがその例です。  
   
  また、各要素は、そのコントロール型に固有のプロパティを提供するコントロール パターンも公開します。 コントロール パターンは、クライアントが要素に関するより詳細な情報を取得し、入力を提供できるようにするメソッドも公開します。  
   
 > [!NOTE]
 >  コントロール型とコントロール パターンの間には、1 対 1 の対応はありせん。 1 つのコントロール パターンが複数のコントロール型でサポートされる場合もありますし、1 つのコントロールが複数のコントロール パターンをサポートし、各パターンがそのコントロールの動作の異なる側面を公開する場合もあります。 たとえば、1 つのコンボ ボックスは、少なくとも 2 つのコントロール パターンを持ちます。1 つは、それを展開して折りたたむ機能を表し、もう 1 つは、選択機構を表します。 詳しくは、「 [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)」をご覧ください。  
   
- また、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、クライアント アプリケーションにイベントを通じて情報を提供します。 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]とは異なり、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のイベントは、ブロードキャスト機構に基づいていません。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のクライアントは、特定のイベント通知を登録し、特定の [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティとコントロール パターン情報を自身のイベント ハンドラーに渡すように要求することができます。 また、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントには、原因となった要素への参照が含まれています。 プロバイダーはイベントを選択的に発生させることによってパフォーマンスを向上させることができますが、クライアントがリッスンしているかどうかによって異なります  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを通じてクライアント アプリケーションに情報を提供します。 [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]とは異なり、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のイベントは、ブロードキャスト機構に基づいていません。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントは、特定のイベント通知に登録し、その特定を要求できます[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロパティとコントロール パターンについては、それぞれのイベント ハンドラーに渡されます。 また、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントには、原因となった要素への参照が含まれています。 プロバイダーはイベントを選択的に発生させることによってパフォーマンスを向上させることができますが、クライアントがリッスンしているかどうかによって異なります  
   
 ## <a name="see-also"></a>関連項目
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロパティの概要](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
 - [UI オートメーション イベントの概要](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
 - [UI オートメーションのセキュリティの概要](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

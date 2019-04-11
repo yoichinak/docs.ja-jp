@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider, exposing
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
-ms.openlocfilehash: d2964e8cee509062353e0eb7aed998c49dd86dbe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 61515c4c87638d7e2bde63f0ca9faac58128f2e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225028"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>サーバー側 UI オートメーション プロバイダーの公開
 > [!NOTE]
@@ -29,5 +29,6 @@ ms.locfileid: "57673302"
  [!code-vb[UIAFragmentProvider_snip#116](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#116)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

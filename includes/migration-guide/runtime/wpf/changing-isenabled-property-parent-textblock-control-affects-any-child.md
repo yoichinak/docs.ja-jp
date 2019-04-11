@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 38dd0b33202b8e8f1708ebec689333bd5367c93f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760679"
+---
 ### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>TextBlock コントロールの親の IsEnabled プロパティの変更がすべての子コントロールに影響する
 
 |   |   |

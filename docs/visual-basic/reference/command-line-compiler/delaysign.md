@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334602"
 ---
 # <a name="-delaysign"></a>-delaysign
 アセンブリに完全に署名するか、部分的に署名するかを指定します。  
@@ -24,7 +24,7 @@ ms.locfileid: "58830371"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 完全署名されたアセンブリを作成する場合は、`-delaysign-` を使用します。 使用`-delaysign+`かどうかは、署名のハッシュのアセンブリと予約のスペースで公開キーを配置します。 既定値は `-delaysign-` です。  
+ 任意。 完全署名されたアセンブリを作成する場合は、`-delaysign-` を使用します。 使用`-delaysign+`かどうかは、署名のハッシュのアセンブリと予約のスペースで公開キーを配置します。 既定値は `-delaysign-` です。  
   
 ## <a name="remarks"></a>Remarks  
  `-delaysign`オプションも何も起こりません併用しない限り、 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)または[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)します。  
@@ -37,11 +37,11 @@ ms.locfileid: "58830371"
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Visual Studio 統合開発環境で-delaysign を設定するには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
   
-2.  **[署名]** タブをクリックします。  
+2. **[署名]** タブをクリックします。  
   
-3.  値を設定、**遅延署名のみ**ボックス。  
+3. 値を設定、**遅延署名のみ**ボックス。  
   
 ## <a name="see-also"></a>関連項目
 

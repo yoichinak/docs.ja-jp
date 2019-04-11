@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100965"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>方法: パラメーターとしてジオメトリを使用してヒット テストを実行する
 この例を使用して、ビジュアル オブジェクトに対してヒット テストを実行する方法を示しています、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーター。  
@@ -38,5 +38,6 @@ ms.locfileid: "58410616"
 >  <xref:System.Windows.Media.HitTestResult> 、Intersectiondetail がときに、コールバックを呼び出すことはできません<xref:System.Windows.Media.IntersectionDetail.Empty>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)
 - [ビジュアル内のジオメトリのヒット テストを実行する](how-to-hit-test-geometry-in-a-visual.md)

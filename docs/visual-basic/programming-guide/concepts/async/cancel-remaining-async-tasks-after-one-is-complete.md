@@ -2,12 +2,12 @@
 title: 1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dd9a99b96dc1e599fc2bde3a796beadf33f8147
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645809"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324514"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> メソッドを <xref:System.Threading.CancellationToken> と共に使用すると、1 つのタスクが完了したときに残りのすべてのタスクを取り消しできます。 `WhenAny` メソッドは、タスクのコレクションである引数を受け取ります。 このメソッドは、すべてのタスクを開始し、単一のタスクを返します。 単一のタスクは、コレクションのいずれかのタスクが完了すると完了します。  
@@ -18,21 +18,21 @@ ms.locfileid: "54645809"
 >  この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。  
   
 ## <a name="downloading-the-example"></a>例をダウンロードする  
- 完全な Windows Presentation Foundation (WPF) プロジェクトをダウンロードする[「Async Sample:アプリケーションの調整を細かく](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)し次の手順に従います。  
+ 完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。  
   
-1.  ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
+1. ダウンロードしたファイルを圧縮解除し、Visual Studio を起動します。  
   
-2.  メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
+2. メニュー バーで **[ファイル]**、 **[開く]**、 **[プロジェクト/ソリューション]** の順に選択します。  
   
-3.  **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。  
+3. **[プロジェクトを開く]** ダイアログ ボックスで、圧縮解除したサンプル コードを含むフォルダーを開き、AsyncFineTuningVB 用のソリューション (.sln) ファイルを開きます。  
   
-4.  **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
+4. **ソリューション エクスプローラー**で、**CancelAfterOneTask** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。  
   
-5.  F5 キーを押してプロジェクトを実行します。  
+5. F5 キーを押してプロジェクトを実行します。  
   
      Ctrl + F5 キーを押して、デバッグを行わずにプロジェクトを実行します。  
   
-6.  プログラムを複数回実行し、最初に終了するダウンロードが異なることを確認します。  
+6. プログラムを複数回実行し、最初に終了するダウンロードが異なることを確認します。  
   
  プロジェクトをダウンロードしない場合は、このトピックの最後の MainWindow.xaml.vb ファイルをレビューできます。  
   
@@ -61,9 +61,9 @@ End Function
   
  `AccessTheWebAsync` で次の変更を行います。 アスタリスクはコード ファイルの変更点を示しています。  
   
-1.  ループをコメント アウトするか、削除します。  
+1. ループをコメント アウトするか、削除します。  
   
-2.  実行されると、一般的なタスクのコレクションを生成するクエリを作成します。 `ProcessURLAsync` に対する各呼び出しは、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` を返します。  
+2. 実行されると、一般的なタスクのコレクションを生成するクエリを作成します。 `ProcessURLAsync` に対する各呼び出しは、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` を返します。  
   
     ```vb  
     ' ***Create a query that, when executed, returns a collection of tasks.  
@@ -71,14 +71,14 @@ End Function
         From url In urlList Select ProcessURLAsync(url, client, ct)  
     ```  
   
-3.  `ToArray` を呼び出してクエリを実行し、タスクを開始します。 次の手順で `WhenAny` メソッドのアプリケーションは、`ToArray` を使用せずにクエリを実行してタスクを開始しますが、他のメソッドはそうでない場合があります。 最も安全な方法は、クエリの実行を明示的に強制することです。  
+3. `ToArray` を呼び出してクエリを実行し、タスクを開始します。 次の手順で `WhenAny` メソッドのアプリケーションは、`ToArray` を使用せずにクエリを実行してタスクを開始しますが、他のメソッドはそうでない場合があります。 最も安全な方法は、クエリの実行を明示的に強制することです。  
   
     ```vb  
     ' ***Use ToArray to execute the query and start the download tasks.   
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  タスクのコレクションで `WhenAny` を呼び出します。 `WhenAny` は `Task(Of Task(Of Integer))` または `Task<Task<int>>` を返します。  つまり、`WhenAny` は、待機すると、単一の `Task(Of Integer)` または `Task<int>` に評価するタスクを返します。 その単一のタスクが、コレクションで最初に終了するタスクです。 最初に終了したタスクは `firstFinishedTask` に割り当てられます。 `firstFinishedTask` の型は、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` です。それは `ProcessURLAsync` の戻り値の型であるためです。  
+4. タスクのコレクションで `WhenAny` を呼び出します。 `WhenAny` 返します、`Task(Of Task(Of Integer))`または`Task<Task<int>>`します。  つまり、`WhenAny` は、待機すると、単一の `Task(Of Integer)` または `Task<int>` に評価するタスクを返します。 その単一のタスクが、コレクションで最初に終了するタスクです。 最初に終了したタスクは `firstFinishedTask` に割り当てられます。 `firstFinishedTask` の型は、<xref:System.Threading.Tasks.Task%601> が整数である `TResult` です。それは `ProcessURLAsync` の戻り値の型であるためです。  
   
 ```vb  
 ' ***Call WhenAny and then await the result. The task that finishes   
@@ -86,14 +86,14 @@ End Function
 Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
 ```  
   
-5.  この例では、最初に終了したタスクにのみ焦点を当てています。 したがって、<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> を使用して、残りのタスクを取り消します。  
+5. この例では、最初に終了したタスクにのみ焦点を当てています。 したがって、<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> を使用して、残りのタスクを取り消します。  
   
 ```vb  
 ' ***Cancel the rest of the downloads. You just want the first one.  
 cts.Cancel()  
 ```  
   
-6.  最後に、`firstFinishedTask` を待機して、ダウンロードされたコンテンツの長さを取得します。  
+6. 最後に、`firstFinishedTask` を待機して、ダウンロードされたコンテンツの長さを取得します。  
   
 ```vb  
 Dim length = Await firstFinishedTask  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  <xref:System.Net.Http> の参照を追加する必要があることに注意してください。  
   
- プロジェクトをダウンロードする[「Async Sample:アプリケーションを詰める](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)します。  
+ プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -235,6 +235,6 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- [非同期アプリケーションの微調整 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
+- [非同期アプリケーション (Visual Basic) の微調整](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [「Async Sample:アプリケーションの微調整](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 860295a3d10acd67f5fb7665a7213dc90e4a4829
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180077"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete 関数
 名前によって指定した修飾子が削除されます。  
@@ -72,7 +72,8 @@ HRESULT QualifierSet_Delete (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

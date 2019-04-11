@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: 3273b6f45c367afeb8e572d0f68e6774075890c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108603"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>方法: StreamGeometry を使用して図形を作成する
 <xref:System.Windows.Media.StreamGeometry> 軽量の代わりには、<xref:System.Windows.Media.PathGeometry>幾何学的図形を作成するためです。 使用して、<xref:System.Windows.Media.StreamGeometry>複雑なジオメトリを記述する必要がある場合がデータ バインディング、アニメーション、または変更をサポートするオーバーヘッドを作成したくないです。 など、効率的であるため、<xref:System.Windows.Media.StreamGeometry>クラスは、装飾の記述に適しています。  
@@ -38,6 +38,7 @@ ms.locfileid: "57361019"
  [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryexample.vb#streamgeometryexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>

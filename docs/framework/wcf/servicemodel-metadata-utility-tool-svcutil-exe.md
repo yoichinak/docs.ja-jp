@@ -94,7 +94,7 @@ BasicHttpContextBinding エンドポイントとサービスの*Svcutil.exe*と�
 |/excludeType:\<type>|参照されるコントラクト型から除外する完全修飾またはアセンブリ修飾の型名を指定します。<br /><br /> このスイッチを個別の DLL から `/r` と共に使用する場合は、XSD クラスの完全名を参照します。<br /><br /> 短縮形: `/et`|
 |/importXmlTypes|非データ コントラクト型を IXmlSerializable 型としてインポートするようにデータ コントラクト シリアライザーを構成します。|
 |/internal|内部としてマークされるクラスを生成します。 既定 : パブリック クラスのみを生成します。<br /><br /> 短縮形: `/i`|
-|/language:\<language>|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名または継承するクラスの完全修飾名を指定する必要があります<xref:System.CodeDom.Compiler.CodeDomProvider>します。<br /><br /> 値 : c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`|
+|/language:\<language>|コード生成に使用するプログラミング言語を指定します。 Machine.config ファイルに登録された言語名または継承するクラスの完全修飾名を指定する必要があります<xref:System.CodeDom.Compiler.CodeDomProvider>します。<br /><br /> 値 : C#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 既定値: csharp<br /><br /> 短縮形 : `/l`|
 |/mergeConfig|既存のファイルを上書きする代わりに、生成される構成ファイルを既存のファイルにマージします。|
 |/messageContract|メッセージ コントラクト型を生成します。<br /><br /> 短縮形: `/mc`|
 |/namespace:\<string,string>|WSDL または XML スキーマの targetNamespace から CLR 名前空間へのマッピングを指定します。 使用して '\*' の targetNamespace には、その CLR 名前空間に、明示的なマッピングがないすべての targetNamespaces がマップされます。<br /><br /> メッセージ コントラクト名が操作名と競合しないようにするには、型参照を `::` で修飾するか、名前を一意にする必要があります。<br /><br /> 既定:データ コントラクトのスキーマ ドキュメントのターゲットの名前空間から派生します。 既定の名前空間は、生成される他のすべての型に使用されます。<br /><br /> 短縮形:`/n` **注:** XmlSerializer を使用する型を生成する場合は、単一の名前空間のマッピングのみがサポートされます。 生成されたすべての型が既定の名前空間またはで指定された名前空間に存在するか、' *'。|

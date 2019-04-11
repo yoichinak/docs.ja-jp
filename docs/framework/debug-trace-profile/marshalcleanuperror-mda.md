@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096590"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 共通言語ランタイム (CLR) が、ネイティブ コードとマネージド コードの境界間でのデータ型のマーシャリングに使用した一時的な構造体とメモリをクリーンアップしようとしたときにエラーが発生すると、`marshalCleanupError` マネージド デバッグ アシスタント (MDA) がアクティブ化されます。  
@@ -28,8 +28,8 @@ ms.locfileid: "54564670"
 ## <a name="cause"></a>原因  
  一時的な構造体のクリーンアップ中に予期しないエラーが発生しました。  
   
-## <a name="resolution"></a>解決策  
- すべての <xref:System.Runtime.InteropServices.SafeHandle> デストラクター、ファイナライザー、カスタム マーシャラーの実装を調べ、エラーがないかどうかを確認します。  
+## <a name="resolution"></a>解像度  
+ すべての <xref:System.Runtime.InteropServices.SafeHandle> デストラクター、ファイナライザー、カスタム マーシャラーの実装を調べ、エラーがないかどうかをレビューします。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
@@ -48,6 +48,7 @@ ms.locfileid: "54564670"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

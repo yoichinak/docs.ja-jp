@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203549"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu の概要
 <xref:System.Windows.Controls.ContextMenu>クラスは、特定のコンテキストを使用して機能を公開する要素を表します<xref:System.Windows.Controls.Menu>します。 通常、ユーザーが公開する、<xref:System.Windows.Controls.ContextMenu>で、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]をマウスのボタンを右クリックします。 このトピックでは、<xref:System.Windows.Controls.ContextMenu>要素で使用する方法の例を示します[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]とコード。  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>ContextMenu コントロール  
  A<xref:System.Windows.Controls.ContextMenu>が特定のコントロールにアタッチされています。 <xref:System.Windows.Controls.ContextMenu>要素では、コマンドまたはなどで、特定のコントロールに関連するオプションを指定する項目の一覧をユーザーに表示することができます、<xref:System.Windows.Controls.Button>します。 ユーザーがコントロールを右クリックすると、メニューが表示されます。 通常をクリックすると、<xref:System.Windows.Controls.MenuItem>サブメニューを開くまたはによりアプリケーションは、コマンドを実行します。  
@@ -63,10 +61,11 @@ ms.locfileid: "57357366"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>
 - <xref:System.Windows.Controls.MenuItem>
 - [ContextMenu](contextmenu.md)
 - [ContextMenu のスタイルとテンプレート](contextmenu-styles-and-templates.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF コントロール ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160053)

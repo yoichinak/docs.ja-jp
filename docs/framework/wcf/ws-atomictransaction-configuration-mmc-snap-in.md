@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 構成 MMC スナップイン
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138210"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 構成 MMC スナップイン
 WS-AtomicTransaction 構成 MMC スナップインは、WS-AtomicTransaction 設定の一部をローカル マシンとリモート マシンの両方で構成するために使用されます。  
@@ -33,7 +33,7 @@ regasm.exe /codebase WsatUI.dll
   
  WS-AtomicTransaction サポートをローカル マシン上にのみ構成する必要がある場合は、このツールのコマンド ライン バージョンを使用できます。 コマンド ライン ツールの詳細については、次を参照してください。、 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)トピック。  
   
- MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、[Ws-atomic トランザクションのサポートを構成する](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)を参照してください。  
+ MMC スナップインとコマンド ライン ツールはいずれも、すべての WS-AT 設定を構成できるわけではありません。 これらの設定は、レジストリを直接変更することによってのみ編集できます。 これらのレジストリ設定の詳細については、次を参照してください。 [Ws-atomic トランザクションのサポートを構成する](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)します。  
   
 ### <a name="user-interface-description"></a>ユーザー インターフェイスの説明  
  **Ws-atomictransaction ネットワーク サポートを有効にする**:  
@@ -45,7 +45,7 @@ regasm.exe /codebase WsatUI.dll
 #### <a name="network-group-box"></a>Network グループ ボックス  
  Network グループでは、HTTPS ポートや追加のセキュリティ設定 (SSL 暗号化など) を指定できます。 DTC ネットワーク トランザクションが有効でない場合、このグループは無効 (灰色表示) です。  
   
- **HTTPS ポート**  
+ **HTTPS Port**  
   
  これは WS-AT に使用される HTTPS ポートの値です。 有効なポートを表す値は、1 ～ 65535 の範囲内であることが必要です。 HTTP ポートを変更すると、HTTP サービス構成が変更されます。つまり、前に使用していた WS-AT サービス アドレスが解放され、新しいポートに基づいて新しい WS-AT サービス アドレスが登録されます。 さらに、新しく選択したポートは、現在選択している SSL 証明書で暗号化されます。  
   
@@ -54,18 +54,18 @@ regasm.exe /codebase WsatUI.dll
   
  WS-AT の構成後にファイアウォールを有効にする場合は、このツールを再度実行し、このパラメーターを使用してポート番号を指定する必要があります。 WS-AT の構成後にファイアウォールを無効にする場合は、入力を追加しないで WS-AT の動作を続行します。  
   
- **エンドポイントの証明書**  
+ **エンドポイント証明書**  
   
  クリックすると、**選択**ボタンでは、ユーザーが SSL 暗号化に使用できる証明書を選択できるように、ローカル コンピューターに証明書が現在使用可能な一覧が表示されます。 証明書には、秘密キーが必要です。 秘密キーがない場合は、エラー メッセージが表示されます。  
   
 > [!NOTE]
 >  選択したポートに SSL 証明書を設定すると、そのポートに関連付けられたオリジナルの SSL 証明書が上書きされます。  
   
- **承認されたアカウント**  
+ **Authorized Accounts**  
   
  クリックすると、**選択**ボタンは、指定できます、ユーザーまたはグループが参加できる ws-atomictransaction でチェックして、Windows アクセス制御リスト エディターを呼び出す、**許可**または**Deny**ボックスに、**参加**アクセス許可グループ。  
   
- **承認された証明書**  
+ **Authorized Certificates**  
   
  クリックすると、**選択**ボタンは LocalMachine で現在使用可能な証明書の一覧を表示します。 WS-AtomicTransaction への参加が許可される証明書 ID を選択できます。  
   
@@ -84,9 +84,10 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  別のトレース コンシューマーが WS-AT トレース プロバイダーを使用している場合は、トレース イベントの新しいログ セッションを作成できません。 このときにログ記録を構成しようとすると、エラー メッセージ "プロバイダーを有効にできませんでした。 エラー コード:1".  
   
- トレースとログ記録の詳細については、[管理と診断](../../../docs/framework/wcf/diagnostics/index.md)を参照してください。  
+ トレースとログ記録の詳細については、次を参照してください。[管理と診断](../../../docs/framework/wcf/diagnostics/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WS-AtomicTransaction サポートの構成](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
 - [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [管理と診断](../../../docs/framework/wcf/diagnostics/index.md)

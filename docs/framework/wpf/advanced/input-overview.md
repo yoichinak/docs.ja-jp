@@ -24,17 +24,16 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320016"
 ---
 # <a name="input-overview"></a>入力の概要
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]サブシステムは、強力な[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]を提供しており、マウス、キーボード、タッチ、スタイラスを含むさまざまなデバイスからの入力を取得できます。
  このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で提供されるサービスと、入力システムのアーキテクチャについて説明します。
-
 
 
 <a name="input_api"></a>
@@ -62,7 +61,7 @@ ms.locfileid: "57376820"
  <xref:System.Windows.Input.Mouse>クラスと<xref:System.Windows.Input.Keyboard>クラスについては、この記事でさらに詳細を扱います。
 
 ### <a name="stylus-input"></a>スタイラス入力
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートが統合された、<xref:System.Windows.Input.Stylus>します。  <xref:System.Windows.Input.Stylus>で一般的になったペン入力には、[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、マウス [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] を使用して、スタイラスをマウスとして処理できますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、キーボードとマウスに類似したモデルを使用するスタイラス デバイスの抽象型も公開しています。  スタイラス関連のすべての [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] に、"Stylus" という単語が含まれます。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートが統合された、<xref:System.Windows.Input.Stylus>します。  <xref:System.Windows.Input.Stylus>で一般的になったペン入力には、[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションは、マウスとしてスタイラスをマウスを使用して処理できます[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]が[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]キーボードとマウスのようなモデルを使用するスタイラス デバイスの抽象化を公開します。  スタイラス関連のすべての [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] に、"Stylus" という単語が含まれます。
 
  スタイラスはマウスとして動作できるため、マウス入力のみをサポートするアプリケーションでも、ある程度のスタイラス入力が自動的にサポートされます。 スタイラスがこのような手法で使用される場合、適切なスタイラス イベントを処理する機会が与えられた後に、対応するマウス イベントを処理する機会が与えられます。 さらに、インク入力などのより高レベルなサービスも、スタイラス デバイスの抽象型を使って利用できます。  入力としてのインクの詳細については、「[インクの概要](getting-started-with-ink.md)」を参照してください。
 
@@ -72,7 +71,7 @@ ms.locfileid: "57376820"
 
  イベント ルーティングは、ルートに沿った特定のオブジェクトや要素が、異なる要素によって供給されたイベントに、(処理を介して) 重要な応答を提供できるように、イベントを複数の要素に転送するプロセスです。  ルーティング イベントには、直接、バブル、トンネルのいずれかのルーティング メカニズムが使用されます。  直接ルーティングでは、ソース要素が通知を受ける唯一の要素であり、イベントは他の要素にルーティングされません。 ただし、直接ルーティング イベントは、標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントではなく、ルーティング イベントにのみ存在するいくつかの追加機能を提供します。 バブル ルーティングでは、最初にイベントの発生元である要素に通知し、次にその親要素へ、その次へと順に通知することで、要素ツリーの上位へ処理が実行されます。  トンネル ルーティングでは、要素ツリーのルートから始まり、下位へと処理が実行され、元のソース要素で終了します。  ルーティング イベントの詳細については、「[ルーティング イベントの概要](routed-events-overview.md)」を参照してください。
 
- 一般に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の入力イベントは、トンネル イベントとバブル イベントのペアで構成されます。  トンネリング イベントは、"Preview" プレフィックスでバブルリング イベントと区別されます。  たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>マウス移動イベントのトンネル バージョンと<xref:System.Windows.Input.Mouse.MouseMove>はこのイベントのバブルのバージョンです。 このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。 詳細については、「[ルーティング イベントの概要](routed-events-overview.md)」の「WPF の入力イベント」を参照してください。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 入力イベントは、通常、トンネル イベントとバブル イベントで構成されるペアになっています。  トンネリング イベントは、"Preview" プレフィックスでバブルリング イベントと区別されます。  たとえば、<xref:System.Windows.Input.Mouse.PreviewMouseMove>マウス移動イベントのトンネル バージョンと<xref:System.Windows.Input.Mouse.MouseMove>はこのイベントのバブルのバージョンです。 このイベントのペアは、要素レベルで実装される規則であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベント システムの継承機能ではありません。 詳細については、「[ルーティング イベントの概要](routed-events-overview.md)」の「WPF の入力イベント」を参照してください。
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>入力イベントの処理
@@ -147,9 +146,9 @@ ms.locfileid: "57376820"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>タッチおよび操作
- Windows 7 オペレーティング システムの新しいハードウェアと API では、アプリケーションが、複数のタッチからの入力を同時に受け取ることができる機能を提供しています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用すると、タッチが行われたときにイベントを発生させることで、マウスやキーボードなどの他の入力に応答する場合と同様に、アプリケーションでタッチを検出して応答できます。
+ Windows 7 オペレーティング システムの新しいハードウェアと API では、アプリケーションが、複数のタッチからの入力を同時に受け取ることができる機能を提供しています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを検出し、タッチが行われるときにイベントを発生させることによって、マウスやキーボードなどの他の入力に応答する場合と同様に、タッチに応答できます。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、タッチが行われると、タッチ イベントと操作イベントという 2 種類のイベントを公開します。 タッチ イベントは、タッチスクリーン上の各指とその動きについて生データを提供します。 操作イベントは、入力を特定のアクションとして解釈します。 このセクションでは、この 2 種類のイベントについて説明します。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] タッチが行われるときのイベントの 2 つの種類を公開します。 タッチ イベントと操作イベント。 タッチ イベントは、タッチスクリーン上の各指とその動きについて生データを提供します。 操作イベントは、入力を特定のアクションとして解釈します。 このセクションでは、この 2 種類のイベントについて説明します。
 
 ### <a name="prerequisites"></a>必須コンポーネント
  タッチに応答するアプリケーションを開発するには、次のコンポーネントが必要です。
@@ -227,15 +226,15 @@ ms.locfileid: "57376820"
 
  次のリストに、前の図のイベントのシーケンスを示します。
 
-1.  <xref:System.Windows.UIElement.TouchEnter>イベント要素のユーザーの指が 1 回発生します。
+1. <xref:System.Windows.UIElement.TouchEnter>イベント要素のユーザーの指が 1 回発生します。
 
-2.  <xref:System.Windows.UIElement.TouchDown>イベントが 1 回に発生します。
+2. <xref:System.Windows.UIElement.TouchDown>イベントが 1 回に発生します。
 
-3.  <xref:System.Windows.UIElement.TouchMove>要素内で指を動かしたイベントに複数回に発生します。
+3. <xref:System.Windows.UIElement.TouchMove>要素内で指を動かしたイベントに複数回に発生します。
 
-4.  <xref:System.Windows.UIElement.TouchUp>イベント、ユーザーが要素から指を離したときに 1 回発生します。
+4. <xref:System.Windows.UIElement.TouchUp>イベント、ユーザーが要素から指を離したときに 1 回発生します。
 
-5.  <xref:System.Windows.UIElement.TouchLeave>イベントが 1 回に発生します。
+5. <xref:System.Windows.UIElement.TouchLeave>イベントが 1 回に発生します。
 
  3 本以上の指を使用した場合は、それぞれの指に対してイベントが発生します。
 
@@ -250,7 +249,7 @@ ms.locfileid: "57376820"
 
  2 種類以上の操作を同時に発生させることもできます。
 
- オブジェクトを操作に応答させると、オブジェクトに慣性があるように見せることができます。 これにより、オブジェクトに現実の世界をシミュレートさせることができます。 たとえば、テーブル上で書籍を押す場合、強く押すと、書籍は離した後も移動し続けます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用すると、ユーザーがオブジェクトから指を離した後に、操作イベントを発生させることで、この動作をシミュレートできます。
+ オブジェクトを操作に応答させると、オブジェクトに慣性があるように見せることができます。 これにより、オブジェクトに現実の世界をシミュレートさせることができます。 たとえば、テーブル上で書籍を押す場合、強く押すと、書籍は離した後も移動し続けます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ユーザーの本の指がオブジェクトを解放した後、操作イベントを発生させることでこの動作をシミュレートできます。
 
  ユーザーが移動、サイズ変更、およびオブジェクトを回転できるようにするアプリケーションを作成する方法については、次を参照してください。[チュートリアル。初めてのタッチ アプリケーションを作成する](walkthrough-creating-your-first-touch-application.md)します。
 
@@ -279,17 +278,17 @@ ms.locfileid: "57376820"
 
  次のリストに、前の図のイベントのシーケンスを示します。
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting>イベントは、ユーザーは、オブジェクトの指を置いた場合に発生します。 特に、このイベントを使用すると、設定、<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>プロパティ。 関連する後続のイベントで、操作の位置であるが、<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>します。 以外のイベントで<xref:System.Windows.UIElement.ManipulationStarting>、このプロパティは読み取り専用ため、<xref:System.Windows.UIElement.ManipulationStarting>イベントは、このプロパティを設定できる唯一の時間。
+1. <xref:System.Windows.UIElement.ManipulationStarting>イベントは、ユーザーは、オブジェクトの指を置いた場合に発生します。 特に、このイベントを使用すると、設定、<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>プロパティ。 関連する後続のイベントで、操作の位置であるが、<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>します。 以外のイベントで<xref:System.Windows.UIElement.ManipulationStarting>、このプロパティは読み取り専用ため、<xref:System.Windows.UIElement.ManipulationStarting>イベントは、このプロパティを設定できる唯一の時間。
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted>イベントは次が発生します。 このイベントは、操作の起点を報告します。
+2. <xref:System.Windows.UIElement.ManipulationStarted>イベントは次が発生します。 このイベントは、操作の起点を報告します。
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta>イベントがタッチ スクリーンで、ユーザーの本の指の移動として複数回に発生します。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>のプロパティ、<xref:System.Windows.Input.ManipulationDeltaEventArgs>クラスは、操作が移動、拡大縮小、または変換として解釈されるかどうかを報告します。 ここで、オブジェクトを操作する作業のほとんどを実行します。
+3. <xref:System.Windows.UIElement.ManipulationDelta>イベントがタッチ スクリーンで、ユーザーの本の指の移動として複数回に発生します。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A>のプロパティ、<xref:System.Windows.Input.ManipulationDeltaEventArgs>クラスは、操作が移動、拡大縮小、または変換として解釈されるかどうかを報告します。 ここで、オブジェクトを操作する作業のほとんどを実行します。
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting>イベントは、ユーザーの本の指がオブジェクトとの接続が失われるときに発生します。 このイベントでは、慣性による処理中の操作の減速を指定できます。 これは、選択した場合、オブジェクトが異なる物理領域や属性をエミュレートできるようにするためです。 たとえば、アプリケーションが現実の世界のアイテムを表す 2 つのオブジェクトを保持していて、一方のオブジェクトがもう一方のオブジェクトよりも重いとします。 重いオブジェクトを軽いオブジェクトよりもすばやく減速させるようにすることができます。
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting>イベントは、ユーザーの本の指がオブジェクトとの接続が失われるときに発生します。 このイベントでは、慣性による処理中の操作の減速を指定できます。 これは、選択した場合、オブジェクトが異なる物理領域や属性をエミュレートできるようにするためです。 たとえば、アプリケーションが現実の世界のアイテムを表す 2 つのオブジェクトを保持していて、一方のオブジェクトがもう一方のオブジェクトよりも重いとします。 重いオブジェクトを軽いオブジェクトよりもすばやく減速させるようにすることができます。
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta>慣性による処理が発生するとイベントに複数回に発生します。 このイベントは、ユーザーの指がタッチスクリーン上で移動したとき、および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が慣性による処理をシミュレートしたときに発生することに注意してください。 つまり、<xref:System.Windows.UIElement.ManipulationDelta>発生前に、と後、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType>プロパティ レポートかどうか、<xref:System.Windows.UIElement.ManipulationDelta>イベントが慣性による処理中に、発生しますので、そのプロパティを確認し、その値に応じて、さまざまなアクションを実行することができます。
+5. <xref:System.Windows.UIElement.ManipulationDelta>慣性による処理が発生するとイベントに複数回に発生します。 このイベントは、ユーザーの指がタッチスクリーン上で移動したとき、および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] が慣性による処理をシミュレートしたときに発生することに注意してください。 つまり、<xref:System.Windows.UIElement.ManipulationDelta>発生前に、と後、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。 <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType>プロパティ レポートかどうか、<xref:System.Windows.UIElement.ManipulationDelta>イベントが慣性による処理中に、発生しますので、そのプロパティを確認し、その値に応じて、さまざまなアクションを実行することができます。
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted>イベントが発生した操作と、慣性による処理が終了します。 後のすべて、<xref:System.Windows.UIElement.ManipulationDelta>イベントが発生する、<xref:System.Windows.UIElement.ManipulationCompleted>操作が完了したことを通知するイベントが発生します。
+6. <xref:System.Windows.UIElement.ManipulationCompleted>イベントが発生した操作と、慣性による処理が終了します。 後のすべて、<xref:System.Windows.UIElement.ManipulationDelta>イベントが発生する、<xref:System.Windows.UIElement.ManipulationCompleted>操作が完了したことを通知するイベントが発生します。
 
  <xref:System.Windows.UIElement>も定義、<xref:System.Windows.UIElement.ManipulationBoundaryFeedback>イベント。 このイベントが発生したときに、<xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A>メソッドが呼び出される、<xref:System.Windows.UIElement.ManipulationDelta>イベント。 <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>イベントにより、アプリケーションやコンポーネントは、オブジェクトが境界に接したときに、視覚的なフィードバックを提供します。 たとえば、<xref:System.Windows.Window>クラスのハンドル、<xref:System.Windows.UIElement.ManipulationBoundaryFeedback>ウィンドウを少し移動の端が発生した場合に発生するイベントです。
 
@@ -297,9 +296,9 @@ ms.locfileid: "57376820"
 
 |Cancel が呼び出されるイベント|既に行われている入力に対して発生するマウス イベント|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> および <xref:System.Windows.UIElement.ManipulationStarted>|マウス ボタンを押すイベント。|
+|<xref:System.Windows.UIElement.ManipulationStarting> と、呼び出し <xref:System.Windows.UIElement.ManipulationStarted>|マウス ボタンを押すイベント。|
 |<xref:System.Windows.UIElement.ManipulationDelta>|マウス ボタンを押すイベントおよびマウス移動イベント。|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> および <xref:System.Windows.UIElement.ManipulationCompleted>|マウス ボタンを押すイベント、マウス移動イベント、およびマウス ボタンを放すイベント。|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> と、呼び出し <xref:System.Windows.UIElement.ManipulationCompleted>|マウス ボタンを押すイベント、マウス移動イベント、およびマウス ボタンを放すイベント。|
 
  呼び出す場合<xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A>メソッドが返す操作が慣性による処理が、`false`し、入力では、マウス イベントは発生しません。
 
@@ -325,7 +324,7 @@ ms.locfileid: "57376820"
 ### <a name="keyboard-focus"></a>キーボード フォーカス
  キーボード フォーカスは、キーボード入力を受け取っている要素を参照しています。  キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、 キーボード フォーカスを持つ要素の<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>は`true`に設定されます。  <xref:System.Windows.Input.Keyboard>クラスの静的メソッド<xref:System.Windows.Input.Keyboard.FocusedElement%2A>は、 現在キーボード フォーカスがある要素を返します。
 
- tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、 キーボード フォーカスを取得できます。  また、<xref:System.Windows.Input.Keyboard>クラスの<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを使用して、 プログラムでキーボード フォーカスを取得することもできます。  <xref:System.Windows.Input.Keyboard.Focus%2A>メソッドは、指定された要素にキーボード フォーカスを与えようとします。  <xref:System.Windows.Input.Keyboard.Focus%2A>の返す要素が、現在キーボード フォーカスを持つ要素です。
+ tab キーで要素に移動したり、<xref:System.Windows.Controls.TextBox>など特定の要素上でマウスをクリックしたりすることで、 キーボード フォーカスを取得できます。  また、<xref:System.Windows.Input.Keyboard>クラスの<xref:System.Windows.Input.Keyboard.Focus%2A>メソッドを使用して、 プログラムでキーボード フォーカスを取得することもできます。  <xref:System.Windows.Input.Keyboard.Focus%2A> 指定された要素のキーボード フォーカスを試行します。  <xref:System.Windows.Input.Keyboard.Focus%2A>の返す要素が、現在キーボード フォーカスを持つ要素です。
 
  要素にキーボード フォーカスを設定するために、<xref:System.Windows.UIElement.Focusable%2A>プロパティ および<xref:System.Windows.UIElement.IsVisible%2A>プロパティは**true**に設定しておく必要があります。  <xref:System.Windows.Controls.Panel>などのいくつかのクラスでは、 <xref:System.Windows.UIElement.Focusable%2A>がデフォルトで`false`に設定されているため、 その要素にフォーカスを設定したい場合は`true`に設定する必要があります。
 
@@ -374,9 +373,7 @@ ms.locfileid: "57376820"
 同じコマンドにアクセスできるかもしれません。
  またコマンドは、コマンドが使用できないときにコントロールを無効にするための機構も提供します。
 
- <xref:System.Windows.Input.RoutedCommand>は、
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]における<xref:System.Windows.Input.ICommand>の実装です。
-  <xref:System.Windows.Input.RoutedCommand>が実行されると、<xref:System.Windows.Input.CommandManager.PreviewExecuted>イベントと
+ <xref:System.Windows.Input.RoutedCommand> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]の実装<xref:System.Windows.Input.ICommand>します。  <xref:System.Windows.Input.RoutedCommand>が実行されると、<xref:System.Windows.Input.CommandManager.PreviewExecuted>イベントと
 <xref:System.Windows.Input.CommandManager.Executed>イベントがコマンド ターゲットで発生し、他の入力と同様に要素ツリーをトンネルあるいはバブリングします。
   コマンドの対象が設定されていない場合は、キーボード フォーカスを持つ要素がコマンドの対象になります。  コマンドを実行するロジックは<xref:System.Windows.Input.CommandBinding>にアタッチされています。  <xref:System.Windows.Input.CommandManager.Executed>イベントがそのコマンドの<xref:System.Windows.Input.CommandBinding>に到達すると、
 <xref:System.Windows.Input.CommandBinding>上の<xref:System.Windows.Input.ExecutedRoutedEventHandler>が呼び出されます。
@@ -384,10 +381,7 @@ ms.locfileid: "57376820"
 
  コマンドの詳細については、[コマンド実行の概要](commanding-overview.md)を参照してください。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、<xref:System.Windows.Input.ApplicationCommands>、 
-<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、
-<xref:System.Windows.Documents.EditingCommands>で一般的なコマンドのライブラリを提供しています。また、コマンドを独自に定義することもできます。
-
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 構成される一般的なコマンドのライブラリを提供します<xref:System.Windows.Input.ApplicationCommands>、 <xref:System.Windows.Input.MediaCommands>、 <xref:System.Windows.Input.ComponentCommands>、 <xref:System.Windows.Input.NavigationCommands>、および<xref:System.Windows.Documents.EditingCommands>、独自に定義することもできます。
 
  次の例では、<xref:System.Windows.Controls.MenuItem>がクリックされたとき、
 <xref:System.Windows.Controls.TextBox>上で<xref:System.Windows.Input.ApplicationCommands.Paste%2A>コマンドを実行するよう設定する方法を示します。
@@ -416,8 +410,9 @@ ms.locfileid: "57376820"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワークの要素とイベント ルーティングの詳細については、 他のリソースを参照することができます。 詳細については、「[コマンド実行の概要](commanding-overview.md)」、 「[フォーカスの概要](focus-overview.md)」、 「[基本要素の概要](base-elements-overview.md)」、 「[WPF のツリー](trees-in-wpf.md)」、 「[ルーティング イベントの概要](routed-events-overview.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
+
 - [フォーカスの概要](focus-overview.md)
 - [コマンド実行の概要](commanding-overview.md)
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [基本要素の概要](base-elements-overview.md)
-- [Properties](properties-wpf.md)
+- [プロパティ](properties-wpf.md)

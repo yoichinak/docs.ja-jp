@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117405"
 ---
 # <a name="runtime-information-etw-events"></a>ランタイム情報 ETW イベント
 これらの ETW イベントは、SKU、バージョン番号、ランタイムのアクティブ化の方法、起動時に使用されたコマンド ライン パラメーター、GUID (該当する場合) などのランタイムに関する情報をログに記録します。 1 つのプロセスで複数のランタイムが実行されている場合は、これらのイベントの情報 (ClrInstanceID) によって、ランタイムのあいまいさを解消できます。  
@@ -45,4 +45,5 @@ ms.locfileid: "54735715"
 |RuntimeDLLPath|win:UnicodeString|プロセスに読み込まれた CLR .dll ファイルへのパス。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

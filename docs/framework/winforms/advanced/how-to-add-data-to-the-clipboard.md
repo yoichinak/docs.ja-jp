@@ -1,5 +1,5 @@
 ---
-title: '方法: データをクリップボードに追加します。'
+title: '方法: クリップボードにデータを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325684"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>方法: データをクリップボードに追加します。
+# <a name="how-to-add-data-to-the-clipboard"></a>方法: クリップボードにデータを追加する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションからデータを転送するために役立ちます。  
   
  クリップボードにデータを追加すると、その形式を使用する場合、その他のアプリケーションは、データを認識できるように、データ形式を指定できます。 データを使用できる可能性のあるその他のアプリケーションの数を増やすに複数の異なる形式でクリップボードにデータを追加することもできます。  
@@ -35,14 +35,14 @@ ms.locfileid: "57717126"
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>1 つの一般的な形式でクリップボードにデータを追加するには  
   
-1.  使用して、 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>、 <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>、 <xref:System.Windows.Forms.Clipboard.SetImage%2A>、または<xref:System.Windows.Forms.Clipboard.SetText%2A>メソッド。 これらのメソッドはでのみ使用可能な[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
+1. 使用して、 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>、 <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>、 <xref:System.Windows.Forms.Clipboard.SetImage%2A>、または<xref:System.Windows.Forms.Clipboard.SetText%2A>メソッド。 これらのメソッドはでのみ使用可能な[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>カスタム形式でクリップボードにデータを追加するには  
   
-1.  使用して、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッドをカスタム形式名を使用します。 このメソッドでのみ使用[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
+1. 使用して、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッドをカスタム形式名を使用します。 このメソッドでのみ使用[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
   
      定義済みの形式名を使用することも、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッド。 詳細については、「 <xref:System.Windows.Forms.DataFormats> 」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "57717126"
   
 ### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>複数の形式でクリップボードにデータを追加するには  
   
-1.  使用して、<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>メソッドを渡します、<xref:System.Windows.Forms.DataObject>データを格納しています。 このメソッドを使用してデータのバージョンでクリップボードを追加する必要がありますよりも前[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]します。  
+1. 使用して、<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>メソッドを渡します、<xref:System.Windows.Forms.DataObject>データを格納しています。 このメソッドを使用してデータのバージョンでクリップボードを追加する必要がありますよりも前[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]します。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
@@ -61,5 +61,6 @@ ms.locfileid: "57717126"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ドラッグ アンド ドロップ操作とクリップボードのサポート](drag-and-drop-operations-and-clipboard-support.md)
-- [方法: クリップボードからデータを取得します。](how-to-retrieve-data-from-the-clipboard.md)
+- [方法: クリップボードからデータを取得する](how-to-retrieve-data-from-the-clipboard.md)

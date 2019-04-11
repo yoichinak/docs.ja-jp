@@ -2,17 +2,17 @@
 title: チャネル ファクトリとキャッシュ
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106458"
 ---
 # <a name="channel-factory-and-caching"></a>チャネル ファクトリとキャッシュ
 WCF クライアント アプリケーションでは、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して WCF サービスとの通信チャネルを作成します。  <xref:System.ServiceModel.ChannelFactory%601> インスタンスを作成する場合は、次の操作が必要になるため、オーバーヘッドが生じます。  
   
--   <xref:System.ServiceModel.Description.ContractDescription> ツリーの構築  
+-   構築、<xref:System.ServiceModel.Description.ContractDescription>ツリー  
   
 -   必要なすべての CLR 型の反映  
   
@@ -25,7 +25,7 @@ WCF クライアント アプリケーションでは、<xref:System.ServiceMode
 > [!TIP]
 >  <xref:System.ServiceModel.ChannelFactory%601> クラスを直接使用する場合は、チャネル ファクトリの作成を直接制御できます。  
   
- WCF クライアント プロキシを使用して生成された[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)から派生<xref:System.ServiceModel.ClientBase%601>します。 <xref:System.ServiceModel.ClientBase%601> では、チャネル ファクトリのキャッシュ動作を定義する静的な <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> プロパティを定義します。 キャッシュ設定は特定の型に対して行われます。 たとえば、設定`ClientBase<ITest>.CacheSettings`以下に定義された値の 1 つにのみプロキシ/clientbase 型の影響は`ITest`します。 最初のプロキシ/ClientBase インスタンスが作成された時点で、特定の <xref:System.ServiceModel.ClientBase%601> のキャッシュ設定は不変になります。  
+ WCF クライアント プロキシを使用して生成された[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)から派生<xref:System.ServiceModel.ClientBase%601>します。 <xref:System.ServiceModel.ClientBase%601> 静的な定義<xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>チャネル ファクトリ キャッシュの動作を定義するプロパティです。 キャッシュ設定は特定の型に対して行われます。 たとえば、設定`ClientBase<ITest>.CacheSettings`以下に定義された値の 1 つにのみプロキシ/clientbase 型の影響は`ITest`します。 最初のプロキシ/ClientBase インスタンスが作成された時点で、特定の <xref:System.ServiceModel.ClientBase%601> のキャッシュ設定は不変になります。  
   
 ## <a name="specifying-caching-behavior"></a>キャッシュ動作の指定  
  キャッシュ動作は、<xref:System.ServiceModel.ClientBase%601.CacheSetting> プロパティを次のいずれかの値に設定することで指定します。  
@@ -112,8 +112,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  上の例では、`TestClient` のすべてのインスタンスで異なるチャネル ファクトリを使用します。 これは、エンドポイントごとにセキュリティ要件が異なり、キャッシュする意味がない場合に便利です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.ClientBase%601>
 - [クライアントを構築する](../../../../docs/framework/wcf/building-clients.md)
 - [クライアント](../../../../docs/framework/wcf/feature-details/clients.md)
 - [WCF クライアントを使用したサービスへのアクセス](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [方法: ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [方法: ChannelFactory を使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームにユーザー インターフェイスを持たないコントロールを追加します。'
+title: '方法: ユーザー インターフェイスを持たないコントロールを Windows フォームに追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330104"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>方法: Windows フォームにユーザー インターフェイスを持たないコントロールを追加します。
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>方法: ユーザー インターフェイスを持たないコントロールを Windows フォームに追加する
 非ビジュアル コントロール (またはコンポーネント) は、アプリケーションに機能を提供します。 他のコントロールとは異なり、コンポーネントは、ユーザーにユーザー インターフェイスを提供しないし、ので、Windows フォーム デザイナー画面に表示する必要はありません。 コンポーネントはフォームに追加するときに、Windows フォーム デザイナーはすべてのコンポーネントが表示されるフォームの下部にあるサイズ変更可能なトレイを表示します。 コントロールがコンポーネント トレイに追加されたら、コンポーネントを選択し、フォーム上の他のコントロールと同様に、そのプロパティを設定することができます。  
   
 > [!NOTE]
@@ -29,9 +29,9 @@ ms.locfileid: "57703628"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Windows フォームにコンポーネントを追加するには  
   
-1.  フォームを開きます。 詳細については、「[方法: デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
+1. フォームを開きます。 詳細については、「[方法: デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
-2.  **ツールボックス**コンポーネントをクリックし、フォームにドラッグします。  
+2. **ツールボックス**コンポーネントをクリックし、フォームにドラッグします。  
   
      コンポーネントがコンポーネント トレイに表示されます。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "57703628"
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>プログラムでコンポーネントを Windows フォームに追加するには  
   
-1.  インスタンスを作成、<xref:System.Windows.Forms.Timer>コード内のクラス。  
+1. インスタンスを作成、<xref:System.Windows.Forms.Timer>コード内のクラス。  
   
-2.  設定、`Interval`タイマーのティック間の時間を決定するプロパティ。  
+2. 設定、`Interval`タイマーのティック間の時間を決定するプロパティ。  
   
-3.  コンポーネントに必要なその他のプロパティを構成します。  
+3. コンポーネントに必要なその他のプロパティを構成します。  
   
      次のコードの作成を示しています、<xref:System.Windows.Forms.Timer>でその`Interval`プロパティ セット。  
   
@@ -80,10 +80,11 @@ ms.locfileid: "57703628"
     >  悪意のあるユーザー コントロールを参照することで、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する可能性があります。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロール](index.md)
-- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
-- [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)
-- [方法: Windows フォーム間でコントロールをコピーします。](how-to-copy-controls-between-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームに ActiveX コントロールを追加する](how-to-add-activex-controls-to-windows-forms.md)
+- [方法: Windows フォーム間でコントロールをコピーする](how-to-copy-controls-between-windows-forms.md)
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

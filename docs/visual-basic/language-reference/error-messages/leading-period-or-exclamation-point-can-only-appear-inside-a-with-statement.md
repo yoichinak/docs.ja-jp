@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-ms.openlocfilehash: 4821dbab90eec3c99c0996e8bff10d51b5a8f99d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15390fb506fe9bca10f6917f5b26451a5569bece
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824950"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322850"
 ---
 # <a name="leading--or--can-only-appear-inside-a-with-statement"></a>先頭の '.' または '!' は、'With' ステートメント内でのみ使用できます。
 ピリオド (.) または感嘆符 (!) でない内部、`With`左の式がブロックされます。 メンバー アクセス (`.`) およびディクショナリ メンバー アクセス (`!`) メンバーを含む要素を指定する式が必要です。 これは、アクセサーのまたはのターゲットとしての左側にすぐに表示する必要があります、`With`メンバー アクセスを含むブロックします。  
@@ -21,9 +21,9 @@ ms.locfileid: "58824950"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  いることを確認、`With`ブロックが正しく書式設定します。  
+1. いることを確認、`With`ブロックが正しく書式設定します。  
   
-2.  存在する場合ありません`With`ブロック、メンバーを含む定義の要素に評価されるアクセサーの左側に式を追加します。  
+2. 存在する場合ありません`With`ブロック、メンバーを含む定義の要素に評価されるアクセサーの左側に式を追加します。  
   
 ## <a name="see-also"></a>関連項目
 

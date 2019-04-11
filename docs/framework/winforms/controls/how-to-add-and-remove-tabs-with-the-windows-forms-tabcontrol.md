@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム tabcontrol のタブ追加および削除'
+title: '方法: Windows フォーム TabControl のタブを追加および削除する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101602"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>方法: Windows フォーム tabcontrol のタブ追加および削除
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl のタブを追加および削除する
 既定で、<xref:System.Windows.Forms.TabControl>コントロールでは、2 つ含まれている<xref:System.Windows.Forms.TabPage>コントロール。 を通じてこれらのタブにアクセスすることができます、<xref:System.Windows.Forms.TabControl.TabPages%2A>プロパティ。  
   
 ### <a name="to-add-a-tab-programmatically"></a>プログラムでタブを追加するには  
@@ -75,7 +75,8 @@ ms.locfileid: "57707947"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
-- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
-- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

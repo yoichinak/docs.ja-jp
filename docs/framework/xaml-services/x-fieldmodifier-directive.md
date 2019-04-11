@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144548"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier ディレクティブ
 名前付きオブジェクトの参照フィールドが定義されているように、XAML のコンパイルの動作を変更します<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>へのアクセスの代わりに、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>既定の動作。  
@@ -51,6 +51,7 @@ ms.locfileid: "58042452"
  既定では、ルート要素の部分クラスはパブリックです。ただし、行うことができます、非公開を使用して、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)ルート要素クラスのインスタンスのアクセス レベルにも影響します。 両方を配置できる`x:Name`と`x:FieldModifier`ルートに要素が、これだけパブリック フィールドのコピーを作成真のルート要素クラスのアクセス レベルも、ルート要素によって制御される[X:classmodifier ディレクティブ](x-classmodifier-directive.md)。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF における XAML とカスタム クラス](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [WPF における分離コードと XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name ディレクティブ](x-name-directive.md)

@@ -6,17 +6,18 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130970"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
 
-このセクションでは、C# と .NET Core を使用して短時間でアプリケーションを構築できる、短いシンプルなチュートリアルについて説明します。 Visual Studio 2017 と Visual Studio Code については、その概要を説明しているトピックがあります。 単純な Hello World アプリケーションをビルドするか、Visual Studio 2017 を持っている場合は、他のアプリケーションで使用できる単純なクラス ライブラリをビルドできます。
+このセクションでは、C# と .NET Core を使用して短時間でアプリケーションを構築できる、短いシンプルなチュートリアルについて説明します。 Visual Studio 2017 と Visual Studio Code については、その概要を説明しているトピックがあります。 これらの記事は、ある程度のプログラミング経験を仮定しています。 初めてプログラミングを行う場合は、[C# の概要](../tutorials/intro-to-csharp/index.md)に関する対話型チュートリアルをお試しください。
 
 次のトピックを参照できます。
 
@@ -30,7 +31,7 @@ ms.locfileid: "58675667"
 
    このトピックでは、単純な Hello World アプリケーションを作成して実行した後、やや対話的な Hello World アプリケーションとして実行するための修正を行います。 アプリケーションのビルドと実行が完了したら、[デバッグ](../../core/tutorials/debugging-with-visual-studio.md)方法と[発行](../../core/tutorials/publishing-with-visual-studio.md)方法も学習することで、.NET Core でサポートされている任意のプラットフォームでアプリケーションを実行できるようにします。
 
-* [Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
+* [Visual Studio 2017 の C# および .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
 
    クラス ライブラリを使用して、別のアプリケーションから呼び出すことができる型と型のメンバーを定義できます。 このトピックでは、文字列が大文字で始まるかどうかを決定する単一のメソッドがあるクラス ライブラリを作成できます。 ライブラリの構築が完了したら、[単体テスト](../../core/tutorials/testing-library-with-visual-studio.md)を開発して、それが期待どおりに動作することを確認した後、[そのライブラリを使用したいアプリケーション](../../core/tutorials/consuming-library-with-visual-studio.md)で使用できるようにします。
 

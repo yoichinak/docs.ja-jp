@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327855"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 要素のレイアウトに関する考慮事項
 このトピックで説明する方法、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素と対話、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
@@ -30,9 +30,9 @@ ms.locfileid: "57366544"
   
 |レイアウト機能|説明|  
 |--------------------|-----------------|  
-|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、[AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)を参照してください。|  
+|自動サイズ調整|いくつか[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]自体の内容を正しく表示するコントロールのサイズを変更します。 詳細については、次を参照してください。 [AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)します。|  
 |固定とドッキング|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、位置と親コンテナーに基づくサイズ変更をサポートします。 詳細については、次のトピックを参照してください。 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> および <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>|  
-|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、[Windows フォームで自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)を参照してください。|  
+|自動スケール|自身とその子の出力デバイスまたはコンテナーの既定のフォントのピクセル単位で、サイズ、解像度に基づくコンテナー コントロールのサイズを変更します。 詳細については、次を参照してください。 [Windows フォームで自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)します。|  
 |レイアウト コンテナー|<xref:System.Windows.Forms.FlowLayoutPanel>と<xref:System.Windows.Forms.TableLayoutPanel>コントロールの子コントロールを配置および自体の内容に従ってサイズします。|  
   
 ## <a name="layout-limitations"></a>レイアウトの制限事項  
@@ -73,7 +73,7 @@ ms.locfileid: "57366544"
 |オーバーフロー|ときに、<xref:System.Windows.Forms.Integration.WindowsFormsHost>から要素が変換`double`値を`int`値、オーバーフローが可能です。 も大きい値は<xref:System.Int32.MaxValue>に設定されている<xref:System.Int32.MaxValue>します。|  
   
 ### <a name="layout-related-properties"></a>レイアウト関連のプロパティ  
- レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、[Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)を参照してください。  
+ レイアウト動作を制御するプロパティ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素が、適切にマップされている、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素。 詳細については、次を参照してください。 [Windows フォームと WPF プロパティのマッピング](windows-forms-and-wpf-property-mapping.md)します。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>ホストされるコントロールのレイアウトの変更  
  ホストのレイアウトの変更[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを反映[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウトの更新をトリガーします。 <xref:System.Windows.UIElement.InvalidateMeasure%2A>メソッド<xref:System.Windows.Forms.Integration.WindowsFormsHost>ホストされるコントロールのレイアウトの変更が発生することにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト エンジンを実行します。  
@@ -84,13 +84,13 @@ ms.locfileid: "57366544"
 ### <a name="sizing-algorithm"></a>サイズ調整アルゴリズム  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素は、次の手順を使用してホストされるコントロールのサイズを変更します。  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素をオーバーライド、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>と<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッド。  
   
-2.  ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
+2. ホストされるコントロールのサイズを決定する、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッドは、ホストされるコントロールの<xref:System.Windows.Forms.Control.GetPreferredSize%2A>制約を持つメソッドの変換に渡される制約から、<xref:System.Windows.FrameworkElement.MeasureOverride%2A>メソッド。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>メソッドは、指定されたサイズの制約にホストされるコントロールを設定しようとしています。  
   
-4.  場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
+4. 場合、ホストされるコントロールの<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致する、ホストされるコントロールのサイズは、制約にします。  
   
  場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致しません、ホストされるコントロールは継続的なサイズ変更をサポートしていません。 たとえば、<xref:System.Windows.Forms.MonthCalendar>コントロールは、不連続のサイズだけを使用できます。 このコントロールの使用可能なサイズは、高さと幅の両方の整数 (月の数を表す) で構成されます。 、このような状況で、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の次のように動作します。  
   
@@ -99,9 +99,10 @@ ms.locfileid: "57366544"
 -   場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約よりも小さいサイズを返します<xref:System.Windows.Forms.Integration.WindowsFormsHost>このサイズの値を受け取り、値を返します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [チュートリアル: WPF でのフォーム コントロールの Windows の配置](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [チュートリアル: WPF での Windows フォーム コントロールの配置](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [WPF のサンプルでのフォーム コントロールの Windows の配置](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Windows フォームと WPF プロパティの割り当て](windows-forms-and-wpf-property-mapping.md)
 - [移行と相互運用性](migration-and-interoperability.md)

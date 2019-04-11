@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8966a2fc9e38594e8b2727077b7e1e85c3e52b16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99db173aa7c6064d9f635412d539cc2d4509b24a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124658"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum インターフェイス
 アプリケーションまたはプロファイラーによってロードされたモジュールのコレクションを順番に反復処理するためのメソッドを提供します。  
@@ -30,7 +30,7 @@ ms.locfileid: "54705483"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Clone メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|この `ICorProfilerModuleEnum` インターフェイスのコピーに対するインターフェイス ポインターを取得します。|  
+|[Clone メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|この `ICorProfilerModuleEnum` インターフェイスのコピーへのインターフェイス ポインターを取得します。|  
 |[GetCount メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|アプリケーションによって読み込まれたマネージド モジュールの数を取得します。|  
 |[Next メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-next-method.md)|オブジェクトのシーケンシャル コレクションから、列挙子の現在の位置以降にある指定した数の隣接するモジュールを取得します。|  
 |[Reset メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-reset-method.md)|列挙子のカーソルをシーケンスの開始位置に移動します。|  
@@ -46,9 +46,10 @@ ms.locfileid: "54705483"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [EnumModules メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)

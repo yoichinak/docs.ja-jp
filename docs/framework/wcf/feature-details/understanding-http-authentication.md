@@ -2,12 +2,12 @@
 title: HTTP 認証の理解
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206396"
 ---
 # <a name="understanding-http-authentication"></a>HTTP 認証の理解
 認証は、リソースにアクセスする権限をクライアントが持つかどうかを確認するプロセスです。 HTTP プロトコルは、セキュリティで保護されたリソースへのアクセスをネゴシエートする手段として、認証をサポートしています。  
@@ -24,7 +24,7 @@ ms.locfileid: "54525795"
 |Digest|ダイジェスト認証は、基本認証の代わりに使用できるチャレンジ レスポンス方式の認証です。 サーバーと呼ばれるランダムなデータの文字列の送信、 *nonce*チャレンジとしてクライアントにします。 クライアントは、ユーザー名、パスワード、nonce およびその他の追加情報を含むハッシュを使用して応答します。 この認証方式では、このようなデータの交換によってもたらされる複雑さとデータのハッシュにより、ユーザーの資格情報を盗んで再使用することがより困難になります。<br /><br /> ダイジェスト認証では、Windows ドメイン アカウントを使用する必要があります。 ダイジェスト*レルム*Windows ドメイン名です。 そのため、Windows XP Home Edition などの Windows ドメイン、ダイジェスト認証をサポートしていないオペレーティング システムで実行されているサーバーを使用することはできません。 逆に、Windows ドメインをサポートしていないオペレーティング システムでクライアントが実行されている場合は、認証時にドメイン アカウントを明示的に指定する必要があります。|  
 |NTLM|NTLM (NT LAN Manager) 認証もチャレンジ レスポンス方式の認証ですが、ダイジェスト認証よりもセキュリティが強化されています。 NTLM 認証では、エンコードされていないユーザー名とパスワードではなく、Windows 資格情報を使用してチャレンジ データが変換されます。 NTLM 認証では、クライアントとサーバー間で複数のメッセージ交換を行う必要があります。 認証を正常に完了するため、サーバーおよび介在するすべてのプロキシが永続的な接続をサポートしている必要があります。|  
 |Negotiate|ネゴシエート認証では、可用性に応じて、Kerberos プロトコルと NTLM 認証のいずれかが自動的に選択されます。 Kerberos プロトコルを使用できる場合は Kerberos プロトコルが使用され、それ以外の場合は NTLM が使用されます。 Kerberos 認証は、NTLM 認証を大幅に強化した認証方式です。 Kerberos 認証は NTLM 認証よりも高速であるだけでなく、相互認証およびリモート コンピューターへの資格情報の委任を使用できます。|  
-|Windows Live ID|基になる Windows HTTP サービスには、フェデレーション プロトコルを使用する認証が含まれます。 ただし、WCF での標準 HTTP トランスポートが Microsoft Windows Live ID などのフェデレーション認証方式の使用をサポートして 現時点では、この機能をサポートするには、メッセージ セキュリティを使用する必要があります。 詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。|  
+|Windows Live ID|基になる Windows HTTP サービスには、フェデレーション プロトコルを使用する認証が含まれます。 ただし、WCF での標準 HTTP トランスポートが Microsoft Windows Live ID などのフェデレーション認証方式の使用をサポートして 現時点では、この機能をサポートするには、メッセージ セキュリティを使用する必要があります。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
   
 ## <a name="choosing-an-authentication-scheme"></a>認証方式の選択  
  HTTP サーバーに使用できる認証方式を選択する際には、以下の項目について検討します。  
@@ -36,6 +36,7 @@ ms.locfileid: "54525795"
 -   受け入れる準備ができていない認証方式、またはリソースを十分にセキュリティで保護できない認証方式をサーバーが (WWW 認証ヘッダー内で) 提示しないことを確認してください。 クライアントは、サーバーによって提示された認証方式を自由に選択します。 クライアントによっては、弱い認証方式、またはサーバーのリストにある最初の認証方式を既定で選択します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
 - [トランスポート セキュリティでの偽装の使用](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

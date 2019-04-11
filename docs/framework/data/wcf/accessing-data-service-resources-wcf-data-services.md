@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085871"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>データ サービス リソースへのアクセス (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] サポート、 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Uri によってアドレス可能なリソースのフィードとしてデータを公開します。 これらのリソースはエンティティとリレーションシップの規則に従って表現、 [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)します。 このモデルでは、エンティティはアプリケーション ドメイン内のデータの操作単位 (データ型) を表します (顧客、注文、項目、製品など)。 エンティティ データは、Representational State Transfer (REST) のセマンティクス (特に、標準的な HTTP 動詞である GET、PUT、POST、および DELETE) を使用してアクセスおよび変更できます。  
@@ -94,7 +94,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  詳細については、次を参照してください[OData:。エントリ間のリンクをアドレス指定](https://go.microsoft.com/fwlink/?LinkId=187351)します。  
   
 ## <a name="consuming-the-returned-feed"></a>返されたフィードの使用  
- URI、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]リソースをサービスによって公開されるエンティティ データのアドレスが有効です。 Web ブラウザーのアドレス フィールドに URI を入力すると、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]要求されたリソースのフィード表現が返されます。 詳細については、、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)を参照してください。 Web ブラウザーは、データ サービス リソースが必要なデータを返します、アプリケーション コードによってアクセスできますも作成、更新、およびデータを削除する運用データ サービスのことをテストまたはスクリプト言語で Web ページは便利です。 詳細については、[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)を参照してください。  
+ URI、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]リソースをサービスによって公開されるエンティティ データのアドレスが有効です。 Web ブラウザーのアドレス フィールドに URI を入力すると、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]要求されたリソースのフィード表現が返されます。 詳細については、次を参照してください。、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。 Web ブラウザーは、データ サービス リソースが必要なデータを返します、アプリケーション コードによってアクセスできますも作成、更新、およびデータを削除する運用データ サービスのことをテストまたはスクリプト言語で Web ページは便利です。 詳細については、次を参照してください。[クライアント アプリケーションでデータ サービスを使用して](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Open Data Protocol Web サイト](https://go.microsoft.com/fwlink/?LinkID=182204)

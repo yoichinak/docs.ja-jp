@@ -14,12 +14,12 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222329"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールの推奨される手順
 <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、Windows フォームで使用する前に慎重に考慮すべき強力なレイアウト機能を提供します。  
@@ -56,5 +56,6 @@ ms.locfileid: "54674194"
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールが、Windows フォーム デザイナーでビジュアル継承をサポートしていません。 A<xref:System.Windows.Forms.TableLayoutPanel>デザイン時に、「ロック」として、派生クラスでのコントロールが表示されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

@@ -2,12 +2,12 @@
 title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614615"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218681"
 ---
 # <a name="external-mapping"></a>外部マップ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポート*外部マッピング*、これによって、データベースのデータ モデルと、オブジェクト モデル間のマッピングを指定する別の XML ファイルを使用するプロセス。 外部マッピング ファイルを使用すると、次のような利点があります。  
@@ -27,7 +27,7 @@ ms.locfileid: "54614615"
   
 -   外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 2 つのマッピング方法 (属性ベースと外部) のハイブリッドの使用はできません。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の外部マッピングは、以下のような XML スキーマ定義に対して有効である必要があります。  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [方法: 外部ファイルとしてのオブジェクト モデルを生成します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [方法: オブジェクト モデルを外部ファイルとして生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

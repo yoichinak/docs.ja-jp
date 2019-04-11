@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 2734d5e808e8bc1f78c281e3fd6ab3c6ff12c58f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 261026b994b432565928b38ff1657115ff7cbe4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217355"
 ---
 # <a name="how-to-draw-a-rectangle"></a>方法: 四角形を描画する
 この例を使用して四角形を描画する方法を示しています、<xref:System.Windows.Shapes.Rectangle>要素。  
@@ -25,11 +25,12 @@ ms.locfileid: "57363749"
 ## <a name="example"></a>例  
  [!code-xaml[drawingwithshapeelements#Rectangle1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- この例を使用しますが、<xref:System.Windows.Controls.Canvas>四角形を格納することができます使用する四角形要素 (およびその他のすべての図形要素) のいずれか<xref:System.Windows.Controls.Panel>または<xref:System.Windows.Controls.Control>テキスト以外のコンテンツをサポートします。 実際には、四角形の部分の背景を提供するために特に便利ですが<xref:System.Windows.Controls.Grid>パネル。 例については、、[テーブルの概要](../advanced/table-overview.md)を参照してください。  
+ この例を使用しますが、<xref:System.Windows.Controls.Canvas>四角形を格納することができます使用する四角形要素 (およびその他のすべての図形要素) のいずれか<xref:System.Windows.Controls.Panel>または<xref:System.Windows.Controls.Control>テキスト以外のコンテンツをサポートします。 実際には、四角形の部分の背景を提供するために特に便利ですが<xref:System.Windows.Controls.Grid>パネル。 例については、次を参照してください。、[テーブルの概要](../advanced/table-overview.md)します。  
   
- この例より大きなサンプルの一部です。サンプル全体については、[Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)を参照してください。  
+ この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Rectangle>
 - [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)

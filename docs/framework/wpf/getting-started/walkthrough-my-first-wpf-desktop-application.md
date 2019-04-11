@@ -51,7 +51,7 @@ ms.locfileid: "59055249"
 
 最初の手順では、アプリケーションの定義を 2 つのページとイメージを含むアプリケーション インフラストラクチャを作成します。
 
-1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
+1. Visual Basic または Visual C# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
    1. Visual Studio を開き、選択**ファイル** > **新規** > **プロジェクト**します。
 
@@ -68,7 +68,7 @@ ms.locfileid: "59055249"
    > [!NOTE]
    > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
-2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (c#)。
+2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (C#)。
 
     この XAML ファイルでは、WPF アプリケーションとすべてのアプリケーション リソースを定義します。 ときに自動的に表示する UI を指定することもこのファイルを使用するアプリケーションを起動します。この場合、 *MainWindow.xaml*します。
 
@@ -118,7 +118,7 @@ ms.locfileid: "59055249"
 
     このファイルは、分離コード ファイルで宣言されたイベントを処理するコードを含む*MainWindow.xaml*します。 このファイルには、XAML で定義されたウィンドウの部分クラスが含まれています。
 
-7. C# を使用している場合は、変更、`MainWindow`クラスから派生する<xref:System.Windows.Navigation.NavigationWindow>します。 (Visual basic の場合は、これは XAML でウィンドウを変更するときにします。)
+7. C# を使用している場合は、変更、`MainWindow`クラスから派生する<xref:System.Windows.Navigation.NavigationWindow>します。 (Visual Basic の場合は、これは XAML でウィンドウを変更するときにします。)
 
    コードについては、次のようになります。
 
@@ -509,5 +509,5 @@ ms.locfileid: "59055249"
 
 - [パネルの概要](../controls/panels-overview.md)
 - [データ テンプレートの概要](../data/data-templating-overview.md)
-- [WPF アプリケーションを構築します。](../app-development/building-a-wpf-application-wpf.md)
+- [WPF アプリケーションのビルド](../app-development/building-a-wpf-application-wpf.md)
 - [スタイルとテンプレート](../controls/styles-and-templates.md)

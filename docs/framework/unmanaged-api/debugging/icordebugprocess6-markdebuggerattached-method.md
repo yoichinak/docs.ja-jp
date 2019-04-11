@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63300f65a811b80132e6569a599044ff2d480acd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 15e2e94ac4e30fbdb375175148a5b448c51821f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128025"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached メソッド
 .NET Framework クラス ライブラリの <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> メソッドが `true` を返すように、デバッグ対象の内部状態を変更します。  
@@ -24,7 +24,7 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="parameters"></a>パラメーター  
  `fIsAttached`  
- `true` メソッドが、デバッガーが接続されていることを示す必要がある場合は、<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>。それ以外の場合は、`false`。  
+ `true` 場合、<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>メソッドは、デバッガーが接続されているを指定する必要があります`false`それ以外の場合。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の表に記載されている値を返す場合があります。  
@@ -47,8 +47,9 @@ HRESULT MarkDebuggerAttached(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorDebugProcess6 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

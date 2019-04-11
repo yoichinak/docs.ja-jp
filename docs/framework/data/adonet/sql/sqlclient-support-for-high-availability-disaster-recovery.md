@@ -2,12 +2,12 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307611"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
@@ -27,9 +27,9 @@ ms.locfileid: "54609123"
   
  プログラムによって、これらの接続文字列キーワードを次のとおりに変更できます。  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  設定`MultiSubnetFailover`に`true`が必要でない[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]以降のバージョン。
@@ -59,11 +59,11 @@ ms.locfileid: "54609123"
   
  読み取り専用のルーティングが有効でない場合は、セカンダリ レプリカの場所への接続は、次の場合に失敗します。  
   
-1.  セカンダリ レプリカの場所が接続を受け入れないように構成されている場合。  
+1. セカンダリ レプリカの場所が接続を受け入れないように構成されている場合。  
   
-2.  アプリケーションが `ApplicationIntent=ReadWrite` (後で説明) を使用している場合、セカンダリ レプリカの場所は読み取り専用アクセスとして構成されます。  
+2. アプリケーションが `ApplicationIntent=ReadWrite` (後で説明) を使用している場合、セカンダリ レプリカの場所は読み取り専用アクセスとして構成されます。  
   
- <xref:System.Data.SqlClient.SqlDependency> は、読み取り専用のセカンダリ レプリカではサポートされていません。  
+ <xref:System.Data.SqlClient.SqlDependency> 読み取り専用のセカンダリ レプリカでサポートされていません。  
   
  プライマリ レプリカが読み取り専用のワークロードを拒否するように設定され、接続文字列が  `ApplicationIntent=ReadOnly` を含んでいる場合、接続は失敗します。  
   
@@ -79,23 +79,24 @@ ms.locfileid: "54609123"
   
  `ApplicationIntent` キーワードは従来の読み取り専用のデータベースでは機能しません。  
   
- データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは `ALLOW_CONNECTIONS` の `PRIMARY_ROLE` 句および `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ステートメントを使用して行います。)  
+ データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは、`ALLOW_CONNECTIONS`の句、`PRIMARY_ROLE`と`SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]ステートメントです)。  
   
  `ApplicationIntent` キーワードは、読み取り専用のルーティングを有効にするために使用されます。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
  読み取り専用のルーティングはデータベースの読み取り専用のレプリカの可用性を確保できる機能です。 読み取り専用のルーティングを有効にするには次のことが必要です。  
   
-1.  AlwaysOn 可用性グループの可用性グループ リスナーに接続する必要があります。  
+1. AlwaysOn 可用性グループの可用性グループ リスナーに接続する必要があります。  
   
-2.  `ApplicationIntent` 接続文字列キーワードを `ReadOnly` に設定する必要があります。  
+2. `ApplicationIntent` 接続文字列キーワードを `ReadOnly` に設定する必要があります。  
   
-3.  可用性グループは、データベース管理者によって、読み取り専用のルーティングを有効にするように構成される必要があります。  
+3. 可用性グループは、データベース管理者によって、読み取り専用のルーティングを有効にするように構成される必要があります。  
   
  読み取り専用のルーティングを使用する複数の接続のすべてが、同じ読み取り専用のレプリカに接続しないようにすることができます。 データベースの同期変更またはサーバーのルーティング構成の変更は、異なる読み取り専用のレプリカに対するクライアントの接続につながることがあります。 すべての読み取り専用の要求が、確実に同じ読み取り専用のレプリカに接続するようにするには、`Data Source` 接続文字列キーワードに可用性グループ リスナーを渡さないでください。 代わりに、読み取り専用のインスタンスの名前を指定します。  
   
  読み取り専用のルーティングでは、最初にプライマリに接続し、最適な可用性の読み取り可能なセカンダリを検索するため、プライマリに接続するよりも時間がかかる場合があります。 そのため、ログインのタイムアウトを増やす必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

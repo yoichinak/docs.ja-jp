@@ -10,22 +10,22 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 981fecf33b60c76ecab760185db7dab4bbb254d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165206"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>方法: コマンドをサポートするコントロールにコマンドをフックする
 次の例では、コマンドのサポートが組み込まれている <xref:System.Windows.Controls.Control> に <xref:System.Windows.Input.RoutedCommand> をフックする方法を示します。  コマンドを複数のソースに関連付けるサンプル全体については、「[カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)」を参照してください。  
   
 ## <a name="example"></a>例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、アプリケーション プログラマがよく使用する一般的なコマンドのライブラリが用意されています。  コマンド ライブラリを構成するクラスは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands> です。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーション プログラマが定期的に発生する一般的なコマンドのライブラリを提供します。  コマンド ライブラリを構成するクラスは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands> です。  
   
  これらのクラスを構成する静的な <xref:System.Windows.Input.RoutedCommand> オブジェクトには、コマンド ロジックが用意されていません。  コマンドのロジックは、<xref:System.Windows.Input.CommandBinding> でコマンドに関連付けられます。  一部のコントロールには、コマンドの CommandBindings が組み込まれています。  これにより、コマンドの意味は変わりませんが、実際の実装は変わる場合があります。  たとえば、<xref:System.Windows.Controls.TextBox> は、<xref:System.Windows.Input.ApplicationCommands.Paste%2A> コマンドの処理方法が、イメージをサポートするよう設計されたコントロールとは異なります。ただし、何かを貼り付けるという基本的な概念は変わりません。  コマンド ロジックはコマンドでは提供できませんが、コントロールまたはアプリケーションで提供する必要があります。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の多くのコントロールには、コマンド ライブラリにある一部のコマンドのサポートが組み込まれています。  たとえば、<xref:System.Windows.Controls.TextBox> では、<xref:System.Windows.Input.ApplicationCommands.Paste%2A>、<xref:System.Windows.Input.ApplicationCommands.Copy%2A>、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.ApplicationCommands.Redo%2A>、<xref:System.Windows.Input.ApplicationCommands.Undo%2A> などの多くのアプリケーション編集コマンドがサポートされます。  アプリケーション開発者は、コントロールで使用するこれらのコマンドを取得するのに特別な作業を行う必要はありません。  <xref:System.Windows.Controls.TextBox> がコマンド ターゲットである場合は、コマンドを実行すると、コントロールに組み込まれている <xref:System.Windows.Input.CommandBinding> を使用してコマンドが処理されます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の多くのコントロールには、コマンド ライブラリにある一部のコマンドのサポートが組み込まれています。  <xref:System.Windows.Controls.TextBox>、たとえば、多くのアプリケーション編集コマンドなどをサポート<xref:System.Windows.Input.ApplicationCommands.Paste%2A>、 <xref:System.Windows.Input.ApplicationCommands.Copy%2A>、 <xref:System.Windows.Input.ApplicationCommands.Cut%2A>、 <xref:System.Windows.Input.ApplicationCommands.Redo%2A>、および<xref:System.Windows.Input.ApplicationCommands.Undo%2A>します。  アプリケーション開発者は、コントロールで使用するこれらのコマンドを取得するのに特別な作業を行う必要はありません。  <xref:System.Windows.Controls.TextBox> がコマンド ターゲットである場合は、コマンドを実行すると、コントロールに組み込まれている <xref:System.Windows.Input.CommandBinding> を使用してコマンドが処理されます。  
   
  <xref:System.Windows.Input.ApplicationCommands.Paste%2A> コマンドのコマンド ソースとして <xref:System.Windows.Controls.MenuItem> を使用する方法を以下に示します。この場合、<xref:System.Windows.Controls.TextBox> がコマンドのターゲットとなります。  <xref:System.Windows.Controls.TextBox> での貼り付け方法を定義するすべてのロジックは、<xref:System.Windows.Controls.TextBox> コントロールに組み込まれています。  
   
@@ -37,5 +37,6 @@ ms.locfileid: "57364438"
  [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [コマンド実行の概要](commanding-overview.md)
 - [コマンドをサポートしないコントロールにコマンドをフックする](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

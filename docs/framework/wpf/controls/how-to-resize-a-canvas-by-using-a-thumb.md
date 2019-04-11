@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: 80b873e81acc243ff61257bc305c4f782b5bf867
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146355"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>方法: つまみを使用したキャンバスのサイズ変更
 この例は、使用する方法を示します、<xref:System.Windows.Controls.Primitives.Thumb>サイズを変更するコントロールを<xref:System.Windows.Controls.Canvas>コントロール。  
@@ -44,9 +44,10 @@ ms.locfileid: "57351830"
  [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
  [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
- サンプル全体については、[Thumb ドラッグ機能のサンプル](https://go.microsoft.com/fwlink/?LinkID=160042)を参照してください。  
+ サンプル全体については、次を参照してください。 [Thumb ドラッグ機能のサンプル](https://go.microsoft.com/fwlink/?LinkID=160042)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Primitives.Thumb>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>

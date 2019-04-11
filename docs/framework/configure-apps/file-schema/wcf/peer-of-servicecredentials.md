@@ -1,13 +1,13 @@
 ---
-title: <peer> の <serviceCredentials>
+title: <peer> (行中)  <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: c1df586916ebf165942c66ff2113c3199e31c3aa
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d726ab460141b1e373a1cabf770b8958f50319eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219149"
 ---
 # <a name="peer-of-servicecredentials"></a>\<ピア > の\<serviceCredentials >
 ピア ノードの現在の資格情報を指定します。  
@@ -39,7 +39,7 @@ ms.locfileid: "55758522"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|ピアツーピア サービスのメッセージの署名と暗号化に使用する X.509 証明書を指定します。 .|  
+|[\<証明書>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|ピアツーピア サービスのメッセージの署名と暗号化に使用する X.509 証明書を指定します。 .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|メッセージ送信者の認証オプションを指定します。|  
 |[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|ピア サービスの認証オプションを指定します。|  
   
@@ -50,6 +50,7 @@ ms.locfileid: "55758522"
 |[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>

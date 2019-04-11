@@ -1,16 +1,16 @@
 ---
-title: '方法: 外部ファイルとしてのオブジェクト モデルを生成します。'
+title: '方法: オブジェクト モデルを外部ファイルとして生成する'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 44b123130b79026ed7638ccc7abeb13d8a5f55ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095583"
 ---
-# <a name="how-to-generate-the-object-model-as-an-external-file"></a>方法: 外部ファイルとしてのオブジェクト モデルを生成します。
-属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。 さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。 詳細については、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
+# <a name="how-to-generate-the-object-model-as-an-external-file"></a>方法: オブジェクト モデルを外部ファイルとして生成する
+属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。 さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
   
 > [!NOTE]
 >  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、外部マッピング ファイルの生成をサポートしていません。  
@@ -49,6 +49,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [外部マップ](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

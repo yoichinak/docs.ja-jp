@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077460"
 ---
 # <a name="collection-type-dependency-properties"></a>コレクション型依存関係プロパティ
 ここでは、プロパティの型がコレクション型である場合に依存関係プロパティを実装する方法についての、ガイダンスと推奨されるパターンを示します。  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>コレクション型依存関係プロパティの実装  
  依存関係プロパティの一般に従う実装パターンが定義する、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]プロパティ ラッパーをそのプロパティはによって支えられて、<xref:System.Windows.DependencyProperty>識別子ではなく、フィールドまたは他の構造体。 コレクション型プロパティを実装するときは、これと同じパターンに従います。 ただし、コレクション型のプロパティが導入されています、パターンをいくつかの複雑さ、コレクション内に含まれる型自体がたびに、<xref:System.Windows.DependencyObject>または<xref:System.Windows.Freezable>クラスを派生します。  
@@ -57,6 +55,7 @@ ms.locfileid: "57354896"
  依存関係オブジェクト コレクションでサブプロパティのバインディングを有効にするには、型としてコレクション プロパティを作成<xref:System.Windows.FreezableCollection%601>、いずれかにそのコレクションの型制約<xref:System.Windows.DependencyObject>クラスを派生します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FreezableCollection%601>
 - [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)
 - [データ バインディングの概要](../data/data-binding-overview.md)

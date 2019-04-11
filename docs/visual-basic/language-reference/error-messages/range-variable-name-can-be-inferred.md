@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331651"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます
 LINQ クエリでは、1 つまたは複数の引数を受け取るプログラミング要素が含まれます。 コンパイラは、そのプログラミング要素の範囲変数を推論できません。  
@@ -21,7 +21,7 @@ LINQ クエリでは、1 つまたは複数の引数を受け取るプログラ�
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  次のコードに示すように、プログラミングの要素に明示的な変数名を指定します。  
+1. 次のコードに示すように、プログラミングの要素に明示的な変数名を指定します。  
   
 ```  
 Dim query = From var1 In collection1   

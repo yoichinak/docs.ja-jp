@@ -2,12 +2,12 @@
 title: UDP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337657"
 ---
 # <a name="udp-activation"></a>UDP アクティベーション
 このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 拡張、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows プロセス アクティブ化サービス (WAS) を使用してプロセスのアクティブ化をサポートするためのサンプルです。  
@@ -75,13 +75,13 @@ ms.locfileid: "58836325"
   
 #### <a name="to-set-up-this-sample"></a>このサンプルをセットアップするには  
   
-1.  次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
+1. 次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Windows Vista でプロジェクトをビルドします。 コンパイル後、ビルド後のフェーズで次の操作を実行します。  
+2. Windows Vista でプロジェクトをビルドします。 コンパイル後、ビルド後のフェーズで次の操作を実行します。  
   
     -   UDP バインディングを [既定の Web サイト] のサイトにインストールします。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "58836325"
   
     -   さらに、この仮想アプリケーションの "net.udp" プロトコルを有効にします。  
   
-3.  ユーザー インターフェイス アプリケーション "WasNetActivator.exe" を起動します。 をクリックして、**セットアップ** タブで、次のチェック ボックスをオンにし、をクリックし、**インストール**それらをインストールします。  
+3. ユーザー インターフェイス アプリケーション "WasNetActivator.exe" を起動します。 をクリックして、**セットアップ** タブで、次のチェック ボックスをオンにし、をクリックし、**インストール**それらをインストールします。  
   
     -   UDP リスナ アダプタ  
   
     -   UDP プロトコル ハンドラ  
   
-4.  をクリックして、**アクティベーション**ユーザー インターフェイス アプリケーション"WasNetActivator.exe"のタブ。 をクリックして、**開始**リスナ アダプタを開始するボタンをクリックします。 これで、プログラムを実行する準備ができました。  
+4. をクリックして、**アクティベーション**ユーザー インターフェイス アプリケーション"WasNetActivator.exe"のタブ。 をクリックして、**開始**リスナ アダプタを開始するボタンをクリックします。 これで、プログラムを実行する準備ができました。  
   
     > [!NOTE]
     >  このサンプルの実行後は、Cleanup.bat を実行して、[既定の Web サイト] から net.udp バインディングを削除する必要があります。  
@@ -113,15 +113,15 @@ ms.locfileid: "58836325"
   
 -   必要なすべての要素が正しくインストールされていることを確認します。 サンプルを実行する方法を、次の手順に示します。  
   
-1.  次の Windows サービスが開始されていることを確認します。  
+1. 次の Windows サービスが開始されていることを確認します。  
   
     -   Windows プロセス アクティブ化サービス (WAS)。  
   
     -   インターネット インフォメーション サービス (IIS):たとえば、W3SVC。  
   
-2.  次に、アクティベータ WasNetActivator.exe を起動します。 下、**アクティベーション** タブ、唯一のプロトコル**UDP**がドロップダウン リストで選択されています。 をクリックして、**開始**アクティベータを開始するボタンをクリックします。  
+2. 次に、アクティベータ WasNetActivator.exe を起動します。 下、**アクティベーション** タブ、唯一のプロトコル**UDP**がドロップダウン リストで選択されています。 をクリックして、**開始**アクティベータを開始するボタンをクリックします。  
   
-3.  アクティベータが開始されると、コマンド ウィンドウで Client.exe を実行することにより、クライアント コードを実行できます。 このサンプルの出力は、次のようになります。  
+3. アクティベータが開始されると、コマンド ウィンドウで Client.exe を実行することにより、クライアント コードを実行できます。 このサンプルの出力は、次のようになります。  
   
     ```  
     Testing Udp Activation.  
@@ -161,4 +161,3 @@ ms.locfileid: "58836325"
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
-  

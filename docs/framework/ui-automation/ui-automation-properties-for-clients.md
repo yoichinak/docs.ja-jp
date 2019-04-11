@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: 0bfd07788bd8d2ebf028865478b0db6fb86c2f46
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116364"
 ---
 # <a name="ui-automation-properties-for-clients"></a>クライアントの UI オートメーション プロパティ
 > [!NOTE]
@@ -25,9 +25,9 @@ ms.locfileid: "57677293"
   
  また、コントロール パターンもプロパティを持ちます。 コントロール パターンのプロパティは、パターンに固有です。 たとえば、 <xref:System.Windows.Automation.ScrollPattern> に含まれるプロパティを使用すると、ウィンドウを垂直方向または水平方向のどちらにスクロールできるのかや、現在のビュー サイズおよびスクロール位置をクライアント アプリケーションで検出できます。 コントロール パターンは、そのすべてのプロパティを構造体 ( <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>など) を介して公開します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロパティは、読み取り専用です。 コントロールのプロパティを設定するには、適切なコントロール パターンのメソッドを使用する必要があります。 たとえば、スクロール ウィンドウの位置の値を変更する場合は、 <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> を使用します。  
   
- パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、[UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)を参照してください。  
+ パフォーマンスを向上させるために、 <xref:System.Windows.Automation.AutomationElement> オブジェクトを取得したときに、コントロールおよびコントロール パターンのプロパティ値をキャッシュできます。 詳細については、次を参照してください。 [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)します。  
   
 <a name="Property_IDs"></a>   
 ## <a name="property-ids"></a>プロパティ ID  
@@ -104,6 +104,7 @@ ms.locfileid: "57677293"
 |<xref:System.Windows.Automation.AutomationElement.RootElement%2A>|(静的プロパティ) ルート <xref:System.Windows.Automation.AutomationElement>。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [UI オートメーション クライアントにおけるキャッシュ](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

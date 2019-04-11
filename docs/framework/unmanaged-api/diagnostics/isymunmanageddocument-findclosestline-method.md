@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 760a6feb8400e60b7e14bf244d66c9026031e5dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ab7df9b77b1820f291c1b1873b4dfb39e326bc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193162"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine メソッド
 行を指定したシーケンス ポイントができない可能性がありますが、このドキュメントでは、シーケンス ポイントである最も近い行を返します。  
@@ -46,4 +46,5 @@ HRESULT FindClosestLine(
  メソッドが成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

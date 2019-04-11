@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131171"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>共有のデータ型 (アンマネージ API リファレンス)
 このトピックでは、C/C++ `typedef` ステートメントで定義される .NET Framework のアンマネージ API で使用する、簡単なデータ型について示します。 これらのデータ型は通常、C/C++ のプリミティブ データ型のエイリアスです。 一般的にこれらのデータ型の値は不透明です。これらのデータ型の値は他の関数またはメソッドに対して変更なしで渡せるように、特定の関数またはメソッドによって返されるためです。  
   
-|データ型|定義|定義されている場所|説明|  
+|データの種類|定義|定義されている場所|説明|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|アプリケーション ドメインの識別子。|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|アセンブリの識別子。|  
@@ -34,10 +34,11 @@ ms.locfileid: "55065831"
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|メタデータ トークン (メタデータ テーブルの行)。|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|アセンブリ モジュールの識別子。|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|オブジェクトの識別子。|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|マネージ プロセスの識別子。|  
+|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|マネージド プロセスの識別子。|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|JIT コンパイルされた関数の識別子。|  
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h、mscoree.h|識別子、 [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンス。|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|マネージド スレッドの識別子。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ API リファレンス](../../../docs/framework/unmanaged-api/index.md)

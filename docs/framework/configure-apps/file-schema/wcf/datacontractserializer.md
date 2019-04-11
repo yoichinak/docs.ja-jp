@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139049"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。  
@@ -51,6 +51,7 @@ ms.locfileid: "54539845"
 >  `<dataContractSerializer>` 動作要素が存在する場合は、構成ファイル内で `<enableWebScript>` 動作要素よりも前に出現する必要があります。 それ以外の場合は、動作結果は未定義になります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>

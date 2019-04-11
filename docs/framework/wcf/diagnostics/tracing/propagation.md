@@ -2,12 +2,12 @@
 title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154038"
 ---
 # <a name="propagation"></a>伝達
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。  
@@ -77,6 +77,7 @@ ms.locfileid: "54686336"
  異なるコンピューター上で実行されるエンドポイント間でイベントを同期するには、メッセージ内で伝達される ActivityId ヘッダーに CorrelationId を追加します。 ツールはこの ID を使用することにより、クロックにずれのあるコンピューター間でもイベントを同期できます。 具体的に言うと、サービス トレース ビューアー ツールは、エンドポイント間のメッセージ フローを示す際に、この ID を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

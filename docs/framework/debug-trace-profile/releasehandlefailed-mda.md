@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217875"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 `releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
@@ -28,14 +28,14 @@ ms.locfileid: "54673047"
 ## <a name="cause"></a>原因  
  ユーザーは、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスを作成している場合に、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドの実装を行う必要があります。このため、状況は個別のリソースに固有です。 ただし、要件は次のとおりです。  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 型および <xref:System.Runtime.InteropServices.CriticalHandle> 型は、プロセスの重要なリソースのラッパーを表します。 メモリ リークは、時間の経過と共にプロセスを使用不能にしてしまいます。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle>型はプロセスの重要なリソースのラッパーを表します。 メモリ リークは、時間の経過と共にプロセスを使用不能にしてしまいます。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドは、その機能を実行しないことがあってはなりません。 プロセスがこのようなリソースを取得したら、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> が解放する唯一の方法です。 そのため、実行しないとリソースのリークになってしまいます。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> の実行中に発生する、リソースの解放を妨げるエラーは、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッド自体の実装のバグです。 そのコードが、機能を実行するために他のプログラマが作成したコードを呼び出している場合でも、この規定を実行するようにすることがプログラマの責任です。  
   
 ## <a name="resolution"></a>解像度  
- MDA 通知を発生させた特定の <xref:System.Runtime.InteropServices.SafeHandle> (または <xref:System.Runtime.InteropServices.CriticalHandle>) 型を使用するコードを確認し、未処理のハンドル値が<xref:System.Runtime.InteropServices.SafeHandle> から抽出されて、別の場所にコピーされている場所を探します。 これは、未処理のハンドル値の使用がランタイムにより追跡できなくなっているため、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> の実装内のエラーの一般的な原因です。 未処理のハンドルのコピーがその後閉じられると、同じハンドルを閉じようとして無効になるため、後で <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 呼び出しがエラーになる可能性があります。  
+ MDA 通知を発生させた特定の <xref:System.Runtime.InteropServices.SafeHandle> (または <xref:System.Runtime.InteropServices.CriticalHandle>) 型を使用するコードをレビューし、未処理のハンドル値が<xref:System.Runtime.InteropServices.SafeHandle> から抽出されて、別の場所にコピーされている場所を探します。 これは、未処理のハンドル値の使用がランタイムにより追跡できなくなっているため、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> の実装内のエラーの一般的な原因です。 未処理のハンドルのコピーがその後閉じられると、同じハンドルを閉じようとして無効になるため、後で <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 呼び出しがエラーになる可能性があります。  
   
  不適切なハンドルの重複は、様々な方法で発生します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54673047"
  この MDA は CLR に影響しません。  
   
 ## <a name="output"></a>出力  
- <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 次に例を示します。  
+ <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 例:  
   
 ```  
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

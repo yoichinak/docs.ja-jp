@@ -2,12 +2,12 @@
 title: 大規模データとストリーミング
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176333"
 ---
 # <a name="large-data-and-streaming"></a>大規模データとストリーミング
 Windows Communication Foundation (WCF) は、XML ベースの通信インフラストラクチャです。 XML データは通常で定義されている標準のテキスト形式でエンコードするため、 [XML 1.0 仕様](https://go.microsoft.com/fwlink/?LinkId=94838)、接続されたシステムの開発者やアーキテクトが通常懸念送信されたメッセージのワイヤのフット プリント (またはサイズ) 間でネットワーク、および XML のテキストに基づくエンコーディングは、効率的なバイナリ データを転送するため特別な課題をもたらします。  
@@ -112,8 +112,7 @@ class MyData
   
  MTOM を使用する場合、上記のデータ コントラクトは次の規則に従ってシリアル化されます。  
   
--   
-  `binaryBuffer` が `null` ではなく、それぞれに格納されているデータのサイズが大きい場合、つまり Base64 エンコーディングと比較しても MTOM 外部化によるオーバーヘッド (MIME ヘッダーなど) を正当化できるサイズである場合は、データが外部化され、バイナリ MIME パートとしてメッセージと共に転送されます。 しきい値を超えていない場合、データは Base64 としてエンコードされます。  
+-   `binaryBuffer` が `null` ではなく、それぞれに格納されているデータのサイズが大きい場合、つまり Base64 エンコーディングと比較しても MTOM 外部化によるオーバーヘッド (MIME ヘッダーなど) を正当化できるサイズである場合は、データが外部化され、バイナリ MIME パートとしてメッセージと共に転送されます。 しきい値を超えていない場合、データは Base64 としてエンコードされます。  
   
 -   メッセージの本体で、文字列 (およびバイナリ以外のその他の型) はサイズに関係なく文字列として表現されます。  
   
@@ -174,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -204,8 +203,7 @@ public interface IStreamedService
 }  
 ```  
   
- 上記の例で操作 `Echo` は、ストリームの受信および返信を行うので、<xref:System.ServiceModel.TransferMode.Streamed> が設定されたバインディングで使用する必要があります。 
-  `RequestInfo` 操作の場合、<xref:System.ServiceModel.TransferMode.StreamedResponse> だけを返すので、<xref:System.IO.Stream> が最も適しています。 一方向操作は、<xref:System.ServiceModel.TransferMode.StreamedRequest> に最適です。  
+ 上記の例で操作 `Echo` は、ストリームの受信および返信を行うので、<xref:System.ServiceModel.TransferMode.Streamed> が設定されたバインディングで使用する必要があります。 `RequestInfo` 操作の場合、<xref:System.ServiceModel.TransferMode.StreamedResponse> だけを返すので、<xref:System.IO.Stream> が最も適しています。 一方向操作は、<xref:System.ServiceModel.TransferMode.StreamedRequest> に最適です。  
   
  次の `Echo` 操作または `ProvideInfo` 操作に 2 つ目のパラメーターを追加すると、サービス モデルはバッファー モードに戻り、ストリームの実行時シリアル化表現が使用されます。 エンドツーエンドの要求ストリーミングとの互換性があるのは、単一の入力ストリーム パラメーターを使用する操作だけです。  
   
@@ -235,10 +233,11 @@ public class UploadStreamMessage
   
  そのため、この場合は、受信メッセージの最大サイズを制限するだけでは不十分です。 `MaxBufferSize`その WCF バッファーをメモリに制限するプロパティが必要です。 ストリーミングを使用する場合は、これを安全な値に設定する (または既定値のままにしておく) ことが重要です。 たとえば、サービスでは、サイズが 4 GB までのファイルを受信し、それをローカル ディスクに格納する必要があるとします。 また、一度に 64 KB のデータしかバッファーできないようにメモリが制限されているとします。 その場合、`MaxReceivedMessageSize` を 4 GB、`MaxBufferSize` を 64 KB に設定します。 また、サービス実装において、64 KB ずつ受信ストリームから読み取り、前のデータがディスクに書き込まれ、メモリから破棄されるまで次のデータを読み取らないようにする必要があります。  
   
- このクォータは、WCF によって行われるバッファーをのみは制限を理解しておく必要もし、独自のサービスまたはクライアント実装で行われるバッファーからは保護することはできません。 追加のセキュリティに関する考慮事項の詳細については、[Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)を参照してください。  
+ このクォータは、WCF によって行われるバッファーをのみは制限を理解しておく必要もし、独自のサービスまたはクライアント実装で行われるバッファーからは保護することはできません。 追加のセキュリティに関する考慮事項の詳細については、次を参照してください。 [Security Considerations for Data](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)します。  
   
 > [!NOTE]
 >  バッファー転送とストリーミング転送のどちらを使用するかは、エンドポイントごとにローカルに決定します。 HTTP トランスポートの場合、転送モードは、接続、つまりプロキシ サーバーなどの中継局に伝達されません。 転送モードの設定は、サービス インターフェイスの記述に反映されません。 サービスの WCF クライアントを生成した後は、ストリーミング転送モードの設定を使用する予定のサービスの構成ファイルを編集する必要があります。 TCP トランスポートと名前付きパイプ トランスポートの場合、転送モードはポリシー アサーションとして伝達されます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ストリーミングを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [方法: ストリーミングを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

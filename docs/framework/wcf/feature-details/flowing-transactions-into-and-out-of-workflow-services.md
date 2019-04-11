@@ -2,12 +2,12 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: a74a2a82e63ddd6c331dd90f9eb894ed5069da3d
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315115"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
@@ -23,9 +23,9 @@ ms.locfileid: "58675719"
   
 ### <a name="create-a-shared-library"></a>共有ライブラリの作成  
   
-1.  新しい空の Visual Studio ソリューションを作成します。  
+1. 新しい空の Visual Studio ソリューションを作成します。  
   
-2.  `Common` という新しいクラス ライブラリ プロジェクトを追加します。 次のアセンブリへの参照を追加します。  
+2. `Common` という新しいクラス ライブラリ プロジェクトを追加します。 次のアセンブリへの参照を追加します。  
   
     -   System.Activities.dll  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58675719"
   
     -   System.Transactions.dll  
   
-3.  `PrintTransactionInfo` という新しいクラスを `Common` プロジェクトに追加します。 このクラスは <xref:System.Activities.NativeActivity> の派生クラスで、<xref:System.Activities.NativeActivity.Execute%2A> メソッドをオーバーロードします。  
+3. `PrintTransactionInfo` という新しいクラスを `Common` プロジェクトに追加します。 このクラスは <xref:System.Activities.NativeActivity> の派生クラスで、<xref:System.Activities.NativeActivity.Execute%2A> メソッドをオーバーロードします。  
   
     ```  
     using System;  
@@ -76,28 +76,28 @@ ms.locfileid: "58675719"
   
 ### <a name="implement-the-workflow-service"></a>ワークフロー サービスの実装  
   
-1.  呼ばれる新しい WCF ワークフロー サービスの追加`WorkflowService`を`Common`プロジェクト。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**WCF ワークフロー サービス**します。  
+1. 呼ばれる新しい WCF ワークフロー サービスの追加`WorkflowService`を`Common`プロジェクト。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**WCF ワークフロー サービス**します。  
   
      ![ワークフロー サービスの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
-2.  既定の `ReceiveRequest` アクティビティと `SendResponse` アクティビティを削除します。  
+2. 既定の `ReceiveRequest` アクティビティと `SendResponse` アクティビティを削除します。  
   
-3.  <xref:System.Activities.Statements.WriteLine> アクティビティを `Sequential Service` アクティビティにドラッグ アンド ドロップします。 次の例に示すように、Text プロパティを `"Workflow Service starting ..."` に設定します。  
+3. <xref:System.Activities.Statements.WriteLine> アクティビティを `Sequential Service` アクティビティにドラッグ アンド ドロップします。 次の例に示すように、Text プロパティを `"Workflow Service starting ..."` に設定します。  
   
      ![シーケンシャル サービス activity(./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg) を WriteLine アクティビティの追加  
   
-4.  <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが記載されて、**メッセージング**のセクション、**ツールボックス**します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが 2 つのセクションで構成される**要求**と**本文**します。 **要求**セクションが含まれています、<xref:System.ServiceModel.Activities.Receive>アクティビティ。 **本文**セクションには、メッセージが受信された後に、トランザクション内で実行する活動が含まれています。  
+4. <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが記載されて、**メッセージング**のセクション、**ツールボックス**します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが 2 つのセクションで構成される**要求**と**本文**します。 **要求**セクションが含まれています、<xref:System.ServiceModel.Activities.Receive>アクティビティ。 **本文**セクションには、メッセージが受信された後に、トランザクション内で実行する活動が含まれています。  
   
      ![TransactedReceiveScope アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5.  選択、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティをクリックして、**変数**ボタンをクリックします。 次の変数を追加します。  
+5. 選択、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティをクリックして、**変数**ボタンをクリックします。 次の変数を追加します。  
   
      ![TransactedReceiveScope への変数の追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
     >  既定で含まれているデータ変数は削除してかまいません。 既存のハンドル変数を使用することもできます。  
   
-6.  ドラッグ アンド ドロップ、<xref:System.ServiceModel.Activities.Receive>内のアクティビティ、**要求**のセクション、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。 次のプロパティを設定します。  
+6. ドラッグ アンド ドロップ、<xref:System.ServiceModel.Activities.Receive>内のアクティビティ、**要求**のセクション、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。 次のプロパティを設定します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
@@ -109,11 +109,11 @@ ms.locfileid: "58675719"
   
      ![Receive アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7.  をクリックして、**を定義しています.** のリンクを<xref:System.ServiceModel.Activities.Receive>活動し、次の設定を行います。  
+7. をクリックして、**を定義しています.** のリンクを<xref:System.ServiceModel.Activities.Receive>活動し、次の設定を行います。  
   
      ![Receive アクティビティのメッセージ設定](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
-8.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> の Body セクションにドラッグ アンド ドロップします。 <xref:System.Activities.Statements.Sequence> アクティビティに 2 つの <xref:System.Activities.Statements.WriteLine> アクティビティをドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを次の表のとおりに設定します。  
+8. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> の Body セクションにドラッグ アンド ドロップします。 <xref:System.Activities.Statements.Sequence> アクティビティに 2 つの <xref:System.Activities.Statements.WriteLine> アクティビティをドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを次の表のとおりに設定します。  
   
     |アクティビティ|[値]|  
     |--------------|-----------|  
@@ -155,29 +155,29 @@ ms.locfileid: "58675719"
   
 ### <a name="implement-the-workflow-client"></a>ワークフロー クライアントの実装  
   
-1.  `WorkflowClient` という新しい WCF ワークフロー アプリケーションを `Common` プロジェクトに追加します。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**アクティビティ**します。  
+1. `WorkflowClient` という新しい WCF ワークフロー アプリケーションを `Common` プロジェクトに追加します。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**アクティビティ**します。  
   
      ![アクティビティ プロジェクトの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
-2.  <xref:System.Activities.Statements.Sequence> アクティビティをデザイン画面にドラッグ アンド ドロップします。  
+2. <xref:System.Activities.Statements.Sequence> アクティビティをデザイン画面にドラッグ アンド ドロップします。  
   
-3.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティにドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを `"Client: Workflow starting"` に設定します。 ワークフローは次のようになります。  
+3. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティにドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを `"Client: Workflow starting"` に設定します。 ワークフローは次のようになります。  
   
      ![WriteLine アクティビティを追加する](./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-activity.jpg)  
   
-4.  <xref:System.Activities.Statements.TransactionScope> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  <xref:System.Activities.Statements.TransactionScope> アクティビティを選択し、[変数] をクリックして次の変数を追加します。  
+4. <xref:System.Activities.Statements.TransactionScope> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  <xref:System.Activities.Statements.TransactionScope> アクティビティを選択し、[変数] をクリックして次の変数を追加します。  
   
      ![TransactionScope への変数の追加](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
   
-5.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.TransactionScope> アクティビティの Body セクションにドラッグ アンド ドロップします。  
+5. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.TransactionScope> アクティビティの Body セクションにドラッグ アンド ドロップします。  
   
-6.  `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.Sequence> アクティビティにドラッグ アンド ドロップします。  
+6. ドラッグ アンド ドロップ、`PrintTransactionInfo`内のアクティビティ、 <xref:System.Activities.Statements.Sequence>  
   
-7.  ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`PrintTransactionInfo`アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。"送信を開始します。 ワークフローは次のようになります。  
+7. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`PrintTransactionInfo`アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。"送信を開始します。 ワークフローは次のようになります。  
   
      ![クライアントを追加するには。Send アクティビティの開始](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
-8.  <xref:System.ServiceModel.Activities.Send> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、次のプロパティを設定します。  
+8. <xref:System.ServiceModel.Activities.Send> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、次のプロパティを設定します。  
   
     |プロパティ|[値]|  
     |--------------|-----------|  
@@ -213,7 +213,7 @@ ms.locfileid: "58675719"
   
 ### <a name="create-the-service-application"></a>サービス アプリケーションの作成  
   
-1.  `Service` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 次のアセンブリへの参照を追加します。  
+1. `Service` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 次のアセンブリへの参照を追加します。  
   
     1.  System.Activities.dll  
   
@@ -221,7 +221,7 @@ ms.locfileid: "58675719"
   
     3.  System.ServiceModel.Activities.dll  
   
-2.  生成された Program.cs ファイルを開き、次のコードを追加します。  
+2. 生成された Program.cs ファイルを開き、次のコードを追加します。  
   
     ```  
     static void Main()  
@@ -241,7 +241,7 @@ ms.locfileid: "58675719"
           }  
     ```  
   
-3.  次の app.config ファイルをプロジェクトに追加します。  
+3. 次の app.config ファイルをプロジェクトに追加します。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -259,9 +259,9 @@ ms.locfileid: "58675719"
   
 ### <a name="create-the-client-application"></a>クライアント アプリケーションの作成  
   
-1.  `Client` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 System.Activities.dll への参照を追加します。  
+1. `Client` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 System.Activities.dll への参照を追加します。  
   
-2.  program.cs ファイルを開き、次のコードを追加します。  
+2. program.cs ファイルを開き、次のコードを追加します。  
   
     ```  
     class Program  

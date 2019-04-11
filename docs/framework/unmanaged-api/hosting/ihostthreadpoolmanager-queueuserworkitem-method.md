@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03185f3f554c5454b23b0c72c42d68714488e6be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082115"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem メソッド
 キューに入れ、実行するための関数をその関数によって使用されるデータを格納しているオブジェクトを指定します。 スレッドが利用可能になったら、関数を実行します。  
@@ -68,9 +68,10 @@ HRESULT QueueUserWorkItem (
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>
 - <xref:System.Threading.ThreadPool>
 - [IHostThreadPoolManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)

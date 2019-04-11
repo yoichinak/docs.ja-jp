@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 763767514f5f157c676f2e5c86ff9b1e4e64f233
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199405"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 PresentationHost.exe が、ホスト アプリケーションに必要な未加工入力デバイス (ヒューマン インターフェイス デバイス) を検出できるようにします。  
@@ -38,5 +38,6 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
  未加工の入力デバイスの一覧を取得すると、PresentationHost.exe は WM_INPUT 通知メッセージを受信するデバイスを登録します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)
 - [FilterInputMessage](filterinputmessage.md)
