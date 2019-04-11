@@ -37,5 +37,5 @@ ms.locfileid: "57717311"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームの外観を変更します。](~/docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Windows フォームの表示形式の変更](~/docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
  Windows フォームの外観を変更する他の方法を説明するトピックへのリンクを提供します。
