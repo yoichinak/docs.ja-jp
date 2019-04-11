@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203198"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 構造体
 
@@ -73,7 +73,6 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | 要求されたネイティブのアドレスの Rejit 情報。                                             |
 | `cJittedRejitVersions`       | メソッドは実装を通じて rejitted された回数。                           |
 
-
 ## <a name="remarks"></a>Remarks
 
 この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用するには、上で指定した構造を定義します。
@@ -82,9 +81,10 @@ struct DacpMethodDescData
 **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
+
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [共有のデータ型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

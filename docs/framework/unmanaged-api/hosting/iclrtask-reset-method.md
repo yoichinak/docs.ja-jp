@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300308"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset メソッド
 ホストは、タスクを完了し、現在を再利用する CLR を有効に、共通言語ランタイム (CLR) を通知[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)を別のタスクを表すインスタンス。  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Remarks  
  以前に作成した、CLR をリサイクルできます`ICLRTask`インスタンスに新しいタスクが必要があるたびに、新しいインスタンスを繰り返し作成のオーバーヘッドを回避します。 ホストが呼び出すことによってこの機能を有効`ICLRTask::Reset`の代わりに[iclrtask::exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)タスクを完了したとき。 次の一覧は、通常のライフ サイクルをまとめたものです、`ICLRTask`インスタンス。  
   
-1.  新しいランタイムを作成`ICLRTask`インスタンス。  
+1. 新しいランタイムを作成`ICLRTask`インスタンス。  
   
-2.  ランタイム呼び出し[ihosttaskmanager::getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)ホストの現在のタスクへの参照を取得します。  
+2. ランタイム呼び出し[ihosttaskmanager::getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)ホストの現在のタスクへの参照を取得します。  
   
-3.  ランタイム呼び出し[ihosttask::setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)に新しいインスタンスを関連付けるホスト タスク。  
+3. ランタイム呼び出し[ihosttask::setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)に新しいインスタンスを関連付けるホスト タスク。  
   
-4.  タスクを実行し、完了します。  
+4. タスクを実行し、完了します。  
   
-5.  ホストが呼び出すことによって、タスクを破棄`ICLRTask::ExitTask`します。  
+5. ホストが呼び出すことによって、タスクを破棄`ICLRTask::ExitTask`します。  
   
  `Reset` このシナリオは 2 つの方法を変更します。 5 は、ホストの呼び出し前の手順で`Reset`タスクをクリーンな状態にリセットしてを分離し、`ICLRTask`から関連付けられたインスタンス[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス。 ホストをキャッシュできますも、必要な場合は、`IHostTask`インスタンスを再利用します。 1 つ目の手順で、ランタイムは、リサイクル`ICLRTask`新しいインスタンスを作成する代わりにキャッシュからします。  
   
@@ -76,9 +76,10 @@ HRESULT Reset (
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

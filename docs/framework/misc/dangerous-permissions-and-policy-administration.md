@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 281582b04aabd8a18af8bf17091979385d009ee8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae24cdcb97e30da0bd4aec6569ef3dcda11488c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078943"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>危険なアクセス許可とポリシー管理
 .NET Framework がアクセス許可を提供する保護された操作のいくつかで、セキュリティ システムが回避されてしまう可能性があります。 これらの危険なアクセス許可は信頼できるコードにのみ付与し、その付与は必要な場合に限る必要があります。 これらのアクセス許可が付与されると、通常、悪意のあるコードに対する防御策はありません。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]では、.NET Framework のセキュリティ モデルと用語に重要な変更が加えられています。 これらの変更の詳細については、[セキュリティ変更](../../../docs/framework/security/security-changes.md)を参照してください。  
+>  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]では、.NET Framework のセキュリティ モデルと用語に重要な変更が加えられています。 これらの変更の詳細については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。  
   
  危険なアクセス許可については、次の表で説明します。  
   
@@ -39,4 +39,5 @@ ms.locfileid: "54536543"
 |<xref:System.MemberAccessException>|プライベート メンバーを使用して、ユーザー補助機能のメカニズムを無効にすることができます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

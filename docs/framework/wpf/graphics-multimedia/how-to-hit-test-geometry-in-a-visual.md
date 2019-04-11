@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227341"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>方法: ビジュアル内のジオメトリのヒット テストを実行する
 この例は、1 つまたは複数で構成されるビジュアル オブジェクトに対してヒット テストを実行する方法を示しています。<xref:System.Windows.Media.Geometry>オブジェクト。  
@@ -36,5 +36,6 @@ ms.locfileid: "57363801"
 >  このサンプルでは、ジオメトリに適用される可能性のある変換やクリッピングは考慮していません。 また、スタイルが設定されたコントロールには直接関連付けられた描画がないので、このサンプルはスタイルが設定されたコントロールに対しては機能しません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)
 - [パラメーターとしてジオメトリを使用してヒット テストを実行する](how-to-hit-test-using-geometry-as-a-parameter.md)

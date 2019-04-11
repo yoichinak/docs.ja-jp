@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116139"
 ---
 # <a name="windows-forms-coordinates"></a>Windows フォームの座標
 Windows フォームの座標システムは、デバイス座標に基づいており、Windows フォームで描画するときに、メジャーの基本単位はデバイス単位 (通常は、ピクセル) です。 画面上の点は、増加、右、上から下に増やすと、y 座標の x 座標と、x 座標と y 座標のペアで説明します。 画面を基準とした、元の場所は、画面またはクライアント座標を指定するかどうかによって異なります。  
@@ -29,5 +29,6 @@ Windows フォームの座標システムは、デバイス座標に基づいて
  場合によっては、画面座標からクライアント座標にマップする必要があります。 簡単にこれを使用して、<xref:System.Windows.Forms.Control.PointToClient%2A>と<xref:System.Windows.Forms.Control.PointToScreen%2A>メソッドで使用できる、<xref:System.Windows.Forms.Control>クラス。 たとえば、<xref:System.Windows.Forms.Control.MousePosition%2A>プロパティの<xref:System.Windows.Forms.Control>画面座標で報告されたクライアント座標に変換することができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

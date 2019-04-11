@@ -2,12 +2,12 @@
 title: ルーティングの概要
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158679"
 ---
 # <a name="routing-introduction"></a>ルーティングの概要
 ルーティング サービスは、メッセージの内容を基にメッセージをルーティングできる、プラグ可能な汎用の SOAP 中継局を提供します。 ルーティング サービスを使用すると、サービスの集計、サービスのバージョン管理、優先度ルーティング、マルチキャスト ルーティングなどのシナリオを実装できる複雑なルーティング ロジックを作成できます。 また、ルーティング サービスは、バックアップ エンドポイントのリストを設定できるエラー処理機能も提供します。バックアップ エンドポイントは、プライマリ送信先エンドポイントへの送信時に障害が発生した場合に、メッセージの送信先になります。  
@@ -31,7 +31,7 @@ ms.locfileid: "58409849"
 > [!NOTE]
 > 複数の通信パターン (一方向の操作と双方向の操作の混合など) を指定するコントラクトを使用している場合は、<xref:System.ServiceModel.Routing.IDuplexSessionRouter> など、二重のコントラクトをルーティング サービスで使用して対処します。 ただし、この場合は、バインドが二重通信に対応可能である必要があり、シナリオによっては、それが可能でない場合もあります。 対応が不可能なシナリオでは、複数のエンドポイントに通信をファクタリングするか、アプリケーションの変更が必要になる可能性があります。  
   
- ルーティング コントラクトの詳細については、[ルーティング コントラクト](routing-contracts.md)を参照してください。  
+ ルーティング コントラクトの詳細については、次を参照してください。[ルーティング コントラクト](routing-contracts.md)します。  
   
  使用することができます、サービス エンドポイントを定義した後、 **RoutingBehavior**に関連付ける特定**RoutingConfiguration**エンドポイントにします。 構成ファイルを使用して、ルーティング サービスを構成するときに、 **RoutingBehavior**このエンドポイントで受信したメッセージを処理するために使用するルーティング ロジックを含むフィルター テーブルを指定するために使用します。 使用して、フィルター テーブルを指定するには、ルーティング サービスをプログラムで構成している場合、 **RoutingConfiguration**します。  
   
@@ -103,11 +103,11 @@ serviceHost.Description.Behaviors.Add(
 ### <a name="routing-logic"></a>ルーティング ロジック  
  メッセージのルーティングに使用されるルーティング ロジックを定義するには、受信メッセージに含まれるデータのうち、一意に識別して処理できるものを特定する必要があります。 たとえば、ルーティング先のすべてのエンドポイントが同じ SOAP アクションを共有する場合、メッセージに含まれる Action の値は、メッセージのルーティング先となる特定のエンドポイントを示す値としては不適切です。 ある特定のエンドポイントにメッセージを一意にルーティングする必要がある場合は、メッセージのルーティング先エンドポイントを一意に識別できるデータを基に、フィルター処理を行います。  
   
- ルーティング サービスでは、いくつか用意されて**MessageFilter**アドレス、アクション、エンドポイント名、またはさらに XPath クエリなど、メッセージ内の特定の値を検査する実装。 これらの実装のいずれもニーズを満たす場合は、カスタムを作成できます**MessageFilter**実装します。 メッセージ フィルターと、ルーティング サービスが使用する実装の比較の詳細については、[メッセージ フィルター](message-filters.md)と[フィルターの選択](choosing-a-filter.md)を参照してください。  
+ ルーティング サービスでは、いくつか用意されて**MessageFilter**アドレス、アクション、エンドポイント名、またはさらに XPath クエリなど、メッセージ内の特定の値を検査する実装。 これらの実装のいずれもニーズを満たす場合は、カスタムを作成できます**MessageFilter**実装します。 メッセージ フィルターと、ルーティング サービスが使用する実装の比較の詳細については、次を参照してください。[メッセージ フィルター](message-filters.md)と[フィルターの選択](choosing-a-filter.md)します。  
   
  複数のメッセージ フィルターをまとめてフィルター テーブルは、各関連付ける**MessageFilter**を送信先エンドポイントにします。 または、フィルター テーブルを使用して、通信エラーが発生した場合に、ルーティング サービスがメッセージを送信するバックアップ エンドポイントのリストを指定することもできます。  
   
- 既定では、フィルター テーブル内のすべてのメッセージ フィルターが同時に評価されます。ただし、<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> を指定すると、特定の順序でメッセージ フィルターが評価されるようにすることができます。 優先度が最も高いすべてのエントリが最初に評価されます。優先度レベルが高いフィルターの中に一致するものが見つかった場合、それよりも優先度の低いメッセージ フィルターは評価されません。 フィルター テーブルの詳細については、[メッセージ フィルター](message-filters.md)を参照してください。  
+ 既定では、フィルター テーブル内のすべてのメッセージ フィルターが同時に評価されます。ただし、<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.Priority%2A> を指定すると、特定の順序でメッセージ フィルターが評価されるようにすることができます。 優先度が最も高いすべてのエントリが最初に評価されます。優先度レベルが高いフィルターの中に一致するものが見つかった場合、それよりも優先度の低いメッセージ フィルターは評価されません。 フィルター テーブルの詳細については、次を参照してください。[メッセージ フィルター](message-filters.md)します。  
   
  次の例では <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> を使用しています。これは、すべてのメッセージに対して `true` に評価されます。 これは、 **MessageFilter**に関連付ける"routingTable1"フィルター テーブルを追加、 **MessageFilter** "CalculatorService"という名前のクライアント エンドポイントを使用します。 **RoutingBehavior**し、このテーブルをサービス エンドポイントによって処理されるメッセージのルーティングに使用することを指定します。  
   
@@ -390,9 +390,9 @@ using (ServiceHost serviceHost =
 ```  
   
 ## <a name="routing-service-and-impersonation"></a>ルーティング サービスと偽装  
- WCF ルーティング サービスは、メッセージの送受信両方の偽装で使用できます。 偽装に関する通常の Windows のすべての制約が適用されます。 独自のサービスを作成する際、偽装を使用するためにサービスまたはアカウントのアクセス許可を設定する必要があった場合は、ルーティング サービスで偽装を使用する場合と同じ手順を実行する必要があります。 詳細については、[委任と偽装](delegation-and-impersonation-with-wcf.md)を参照してください。  
+ WCF ルーティング サービスは、メッセージの送受信両方の偽装で使用できます。 偽装に関する通常の Windows のすべての制約が適用されます。 独自のサービスを作成する際、偽装を使用するためにサービスまたはアカウントのアクセス許可を設定する必要があった場合は、ルーティング サービスで偽装を使用する場合と同じ手順を実行する必要があります。 詳細については、次を参照してください。[委任と偽装](delegation-and-impersonation-with-wcf.md)します。  
   
- ルーティング サービスでの偽装には、ASP.NET 互換モードで ASP.NET の偽装を使用するか、偽装を許可するように構成された Windows 資格情報を使用する必要があります。 ASP.NET 互換モードの詳細については、[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)を参照してください。  
+ ルーティング サービスでの偽装には、ASP.NET 互換モードで ASP.NET の偽装を使用するか、偽装を許可するように構成された Windows 資格情報を使用する必要があります。 ASP.NET 互換モードの詳細については、次を参照してください。 [WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。  
   
 > [!WARNING]
 >  WCF ルーティング サービスは、基本認証での偽装をサポートしません。  
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  ルーティング サービスで Windows 資格情報の偽装を使用するには、資格情報とサービスの両方を構成する必要があります。 クライアント資格情報オブジェクト (<xref:System.ServiceModel.Security.WindowsClientCredential> からアクセス可能な <xref:System.ServiceModel.ChannelFactory>) は、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> プロパティを定義します。偽装を許可するには、このプロパティを設定する必要があります。 最後に、サービスで、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 動作を構成して、`ImpersonateCallerForAllOperations` を `true` に設定する必要があります。 ルーティング サービスでは、偽装が有効になっているメッセージを転送するためのクライアントを作成するかどうかを、このフラグを使用して決定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [メッセージ フィルター](message-filters.md)
 - [ルーティング コントラクト](routing-contracts.md)
 - [フィルターの選択](choosing-a-filter.md)

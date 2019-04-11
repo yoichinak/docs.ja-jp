@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb73980faa64464c572945fe5ad04e015dc8805b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142169"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 構造体
 モジュールまたは複合イメージをインストールするときに使用する情報が含まれます。  
@@ -53,7 +53,8 @@ typedef struct {
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)

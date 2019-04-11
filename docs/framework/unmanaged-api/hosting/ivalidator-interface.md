@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f307ad5689602b030c609a51f6834bdbb0ec4f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f516bf1f19e4d4a77e2d6af834a1c3d4e34c327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121915"
 ---
 # <a name="ivalidator-interface"></a>IValidator インターフェイス
 ポータブル実行可能 (PE) イメージを検証し、検証エラーを報告するためのメソッドを提供します。  
@@ -40,8 +40,9 @@ ms.locfileid: "54717716"
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost コクラス](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

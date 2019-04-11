@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4956a763c9a5b2fc1ad74463fdfdeef2b5dc379e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229428"
 ---
 # <a name="ehostapplicationpolicy-enumeration"></a>EHostApplicationPolicy 列挙型
 変更する方法を示します、 [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)インターフェイス オブジェクト。 この列挙体は非推奨とされました。  
@@ -41,7 +41,8 @@ typedef enum _HostApplicationPolicy {
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+
+- [ホスティングの列挙体](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

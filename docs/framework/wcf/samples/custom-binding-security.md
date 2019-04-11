@@ -2,15 +2,15 @@
 title: カスタム バインディング セキュリティ
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339451"
 ---
 # <a name="custom-binding-security"></a>カスタム バインディング セキュリティ
-このサンプルでは、カスタム バインディングを使用してセキュリティを構成する方法を示します。 カスタム バインドを使用して、セキュリティで保護されたトランスポートと共にメッセージ レベルのセキュリティを有効にする方法を示します。 これは、クライアントとサービス間でメッセージを転送する際にセキュリティで保護されたトランスポートが必要であると同時に、そのメッセージをメッセージ レベルでセキュリティ保護する必要がある場合に便利です。 この構成は、システム指定のバインディングではサポートされていません。
+このサンプルでは、カスタム バインディングを使用してセキュリティを構成する方法を示します。 カスタム バインディングを使用して、セキュリティで保護されたトランスポートと共にメッセージ レベルのセキュリティを有効にする方法を示します。 これは、クライアントとサービス間でメッセージを転送する際にセキュリティで保護されたトランスポートが必要であると同時に、そのメッセージをメッセージ レベルでセキュリティ保護する必要がある場合に便利です。 この構成は、システム指定のバインディングではサポートされていません。
 
  このサンプルは、クライアント コンソール プログラム (EXE) とサービス コンソール プログラム (EXE) で構成されています。 サービスは、双方向コントラクトを実装します。 このコントラクトは `ICalculatorDuplex` インターフェイスによって定義されており、算術演算 (加算、減算、乗算、および 除算) を公開しています。 `ICalculatorDuplex` インターフェイスを使用することにより、クライアントは算術演算を実行し、セッション経由で実行結果を計算できます。 サービスは、`ICalculatorDuplexCallback` インターフェイスで結果を個別に返すことができます。 コンテキストを確立して、クライアントとサービスの間で送信される一連のメッセージを相互に関連付ける必要があるため、二重のコントラクトにはセッションが必要です。 カスタム バインドは、双方向通信をサポートしてセキュリティで保護されるよう定義されます。
 
@@ -105,28 +105,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
 
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-3.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。
+3. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1.  管理者特権で Visual Studio ウィンドウの開発者コマンド プロンプトを開き、サンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で Visual Studio ウィンドウの開発者コマンド プロンプトを開き、サンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
     >  Setup.bat バッチ ファイルは、Visual Studio 2012 コマンド プロンプトから実行する設計されています。 Visual Studio 2012 のコマンド プロンプト ポイント内で設定して、Setup.bat スクリプトで必要な実行可能ファイルを格納するディレクトリ パス環境変数。  
   
-2.  Service.exe を \service\bin で起動します。  
+2. Service.exe を \service\bin で起動します。  
   
-3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
+3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
-1.  サービス コンピューター上で次の手順を実行します。  
+1. サービス コンピューター上で次の手順を実行します。  
   
     1.  サービス コンピューターで、servicemodelsamples という仮想ディレクトリを作成します。  
   
@@ -143,7 +143,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     6.  コマンド プロンプトから Service.exe を起動します。
 
-2.  クライアント コンピューター上で次の手順を実行します。
+2. クライアント コンピューター上で次の手順を実行します。
 
     1.  クライアント プログラム ファイルを、\client\bin\ フォルダーからクライアント コンピューターにコピーします。 Cleanup.bat ファイルもコピーします。
 

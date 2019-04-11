@@ -2,12 +2,12 @@
 title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: b9d30d7e1c9d211cd57982a0f03fe855a6b53c12
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204238"
 ---
 # <a name="behaviors"></a>\<<behaviors>
 この要素は、`endpointBehaviors` と`serviceBehaviors` という 2 つの子コレクションを定義します。  各コレクションは、エンドポイントとサービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、その一意の `name` 属性で識別されます。 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 以降では、バインディングおよび動作に名前を付ける必要はありません。 既定の構成と無名のバインディングおよび動作の詳細については、「[簡略化された構成](../../../../../docs/framework/wcf/simplified-configuration.md)」と「[WCF サービスの構成を簡略化](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」を参照してください。  
@@ -48,6 +48,7 @@ ms.locfileid: "55257922"
  `<remove>` 要素を使用して、コレクションから特定の動作を削除できます。 これを行うには、`name` 要素の `<remove>` 属性に、削除する動作の名前を指定します。  また、`<clear>` 要素を使用してコレクションの内容をすべて消去し、動作コレクションの初期値を確実に空にすることもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>

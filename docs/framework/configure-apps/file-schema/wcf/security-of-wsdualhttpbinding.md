@@ -1,13 +1,13 @@
 ---
-title: <security> の <wsDualHttpBinding>
+title: <security> (行中)  <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 8bc35b3bc8f0cbe1a51ceab63d876d5859d6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171510"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<セキュリティ > の\<wsDualHttpBinding >
 セキュリティ機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。  
@@ -39,7 +39,7 @@ ms.locfileid: "55270855"
   
 ## <a name="mode-attribute"></a>Mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|セキュリティを無効にします。|  
 |メッセージ|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。|  
@@ -60,6 +60,7 @@ ms.locfileid: "55270855"
  二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスに対して接続のみを可能にする必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: それぞれの動作と外観を拡張することによって、セルと、Windows フォーム DataGridView コントロール内の列をカスタマイズします。'
+title: '方法: Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 7ea684fd0a3f23005e70594bf1870851a3708a8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6b0773b4c41b77fe43a5b7fba994778ae18c16c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325008"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>方法: それぞれの動作と外観を拡張することによって、セルと、Windows フォーム DataGridView コントロール内の列をカスタマイズします。
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>方法: Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする
 <xref:System.Windows.Forms.DataGridView> コントロールは、プロパティ、イベント、およびコンパニオン クラスを使用して外観と動作をカスタマイズする様々な方法を提供します。 場合によっては、これらの機能が提供するもの以外にも、セルの要件がある場合があります。 独自のカスタム <xref:System.Windows.Forms.DataGridViewCell> クラスを作成して、拡張機能を提供することができます。  
   
  <xref:System.Windows.Forms.DataGridViewCell> 基底クラスまたは派生クラスの 1 つから派生することで、カスタム <xref:System.Windows.Forms.DataGridViewCell> クラスを作成します。 任意の種類の列の任意の種類のセルを表示できますが、多くの場合は、セルの種類の表示に特化したカスタムの <xref:System.Windows.Forms.DataGridViewColumn> クラスを作成することになります。 列のクラスは、<xref:System.Windows.Forms.DataGridViewColumn> または派生型のいずれかから派生します。  
@@ -28,31 +28,31 @@ ms.locfileid: "57721269"
 > [!NOTE]
 >  空の行を追加すると、この例は正しく動作しません。 たとえば、<xref:System.Windows.Forms.DataGridView.RowCount%2A> プロパティを設定することでコントロールに行を追加する場合に、空の行を作成します。 これは、この例で追加された行は自動的に共有されるためでです。つまり、`DataGridViewRolloverCell` オブジェクトは、各セルをクリックするまでインスタンス化されないため、関連付けられた行の共有が解除されます。  
   
- この種類のセルのカスタマイズには共有されていない行が必要なため、大量のデータ セットでの使用には適切ではありません。 行の共有の詳細については、[Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)を参照してください。  
+ この種類のセルのカスタマイズには共有されていない行が必要なため、大量のデータ セットでの使用には適切ではありません。 行の共有の詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridViewCell> や <xref:System.Windows.Forms.DataGridViewColumn> から派生したクラスに新しいプロパティを追加するときは、`Clone` メソッドをオーバーライドし、複製操作時に新しいプロパティをコピーする必要があります。 また、基底クラスの `Clone` メソッドを呼び出して、基底クラスのプロパティを新しいセルまたは列にコピーする必要もあります。  
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>DataGridView コントロール内でセルと列をカスタマイズするには  
   
-1.  `DataGridViewRolloverCell`という新しいセル クラスを <xref:System.Windows.Forms.DataGridViewTextBoxCell> 型から派生させます。  
+1. `DataGridViewRolloverCell`という新しいセル クラスを <xref:System.Windows.Forms.DataGridViewTextBoxCell> 型から派生させます。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2.  <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> クラスの `DataGridViewRolloverCell` メソッドをオーバーライドします。 オーバーライドで最初にホストされているテキスト ボックスの機能を処理する基本クラスの実装を呼び出します。 次に、コントロールの <xref:System.Windows.Forms.Control.PointToClient%2A> メソッドを使用して、(画面座標の) カーソル位置を <xref:System.Windows.Forms.DataGridView> クライアント領域の座標に変換します。 マウスの座標がセルの境界内にある場合は、埋め込みの四角形を描画します。  
+2. <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> クラスの `DataGridViewRolloverCell` メソッドをオーバーライドします。 オーバーライドで最初にホストされているテキスト ボックスの機能を処理する基本クラスの実装を呼び出します。 次に、コントロールの <xref:System.Windows.Forms.Control.PointToClient%2A> メソッドを使用して、(画面座標の) カーソル位置を <xref:System.Windows.Forms.DataGridView> クライアント領域の座標に変換します。 マウスの座標がセルの境界内にある場合は、埋め込みの四角形を描画します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3.  `DataGridViewRolloverCell` クラスの <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> メソッドと <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> メソッドをオーバーライドして、マウス ポインターがに入る時点または出る時点でセルが自身を再描画するよう強制します。  
+3. `DataGridViewRolloverCell` クラスの <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> メソッドと <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> メソッドをオーバーライドして、マウス ポインターがに入る時点または出る時点でセルが自身を再描画するよう強制します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4.  `DataGridViewRolloverCellColumn` という新しいクラスを <xref:System.Windows.Forms.DataGridViewColumn> 型から派生させます。 コンストラクターで、新しい `DataGridViewRolloverCell` オブジェクトを <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> プロパティに割り当てます。  
+4. `DataGridViewRolloverCellColumn` という新しいクラスを <xref:System.Windows.Forms.DataGridViewColumn> 型から派生させます。 コンストラクターで、新しい `DataGridViewRolloverCell` オブジェクトを <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> プロパティに割り当てます。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  
@@ -68,9 +68,10 @@ ms.locfileid: "57721269"
   
 -   System、System.Windows.Forms、および System.Drawing の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>

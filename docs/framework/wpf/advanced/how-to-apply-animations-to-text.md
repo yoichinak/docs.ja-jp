@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108213"
 ---
 # <a name="how-to-apply-animations-to-text"></a>方法: アニメーションをテキストに適用する
 アニメーションを利用すると、アプリケーションのテキストの表示方法や見た目を変えることができます。 次の例のテキストの表示に影響を与えるさまざまな種類のアニメーションを使用して、<xref:System.Windows.Controls.TextBlock>コントロール。  
@@ -37,4 +37,5 @@ ms.locfileid: "58463125"
  [!code-xaml[TextAnimationSample#TextAnimationSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションの概要](../graphics-multimedia/animation-overview.md)

@@ -1,13 +1,13 @@
 ---
-title: <add> の <baseAddressPrefixFilter>
+title: <add> (行中)  <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 9179abfb26229a845d9618afe30b088252c9c2db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143898"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> of \<baseAddressPrefixFilter>
 パススルー フィルター、IIS で Windows Communication Foundation (WCF) アプリケーションをホストする場合は、適切なインターネット インフォメーション サービス (IIS) バインドを選択するメカニズムを提供するを指定する構成要素を表します。  
@@ -80,7 +80,8 @@ http://test2.fabrikam.com/Service.svc
 >  フィルターでワイルドカードはサポートされません。 また、IIS が提供する baseAddresses には、`baseAddressPrefixFilters` リストに存在しない他のスキームにバインドされたアドレスが指定される場合があります。 これらのアドレスはフィルターで除外されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスト](../../../../../docs/framework/wcf/feature-details/hosting.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-ms.openlocfilehash: 442fff7a36a48d5df7ba9e07426e50f602cb93e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090096"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>方法: ドラッグされた GridView 列ヘッダーのスタイルを作成する
 この例は、ドラッグ中の外観を変更する方法を示しています。<xref:System.Windows.Controls.GridViewColumnHeader>にユーザーが列の位置を変更します。  
@@ -31,10 +31,11 @@ ms.locfileid: "57357496"
 [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.GridViewColumnHeader>
 - <xref:System.Windows.Controls.GridViewColumnHeaderRole>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [方法トピック](listview-how-to-topics.md)
+- [方法のトピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)
 - [GridView の概要](gridview-overview.md)

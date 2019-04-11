@@ -5,12 +5,12 @@ helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 4e3cfca9a84ef56ceb9ac0785af039f9b24603e2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c089910e3fd5d02b674cfed3062fb15275d91486
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971989"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834609"
 ---
 # <a name="how-to-parse-file-paths-in-visual-basic"></a>方法: Visual Basic でファイル パスを解析する
 <xref:Microsoft.VisualBasic.FileIO.FileSystem> オブジェクトには、ファイル パスを解析するときに役立つメソッドがいくつか用意されています。  
@@ -36,6 +36,7 @@ ms.locfileid: "56971989"
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
 - <xref:System.IO.FileInfo>

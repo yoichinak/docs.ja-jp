@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5b0a394500dbea0d557a33ea8d2e169c2c6561f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195671"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 要素
 かどうか、ランタイムが使用 COM 相互運用機能のリモート処理ではなくすべての呼び出しに対してアプリケーション ドメイン境界を越えてを指定します。  
@@ -74,5 +74,6 @@ ms.locfileid: "55260362"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

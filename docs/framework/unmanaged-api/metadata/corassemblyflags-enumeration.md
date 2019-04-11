@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072715"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列挙型
 アセンブリ コンパイルに適用されるメタデータを記述する値が格納されます。  
@@ -83,7 +83,8 @@ typedef enum CorAssemblyFlags {
   
  **ヘッダー:** CorHdr.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

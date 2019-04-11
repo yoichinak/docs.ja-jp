@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139426"
 ---
 # <a name="optimizing-performance-application-resources"></a>パフォーマンスの最適化:アプリケーション リソース
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同様に型指定された要素の間で一貫性のある外観や動作をサポートできるように、アプリケーションのリソースを共有することができます。 このトピックでは、この領域に役立ついくつかの推奨事項が、アプリケーションのパフォーマンスを向上します。  
@@ -43,12 +43,13 @@ ms.locfileid: "57352400"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
 - [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
 - [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

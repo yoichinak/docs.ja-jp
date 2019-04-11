@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163177"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>パフォーマンスの最適化:ハードウェアの活用
 内部アーキテクチャ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、2 つのレンダリング パイプライン、ハードウェアおよびソフトウェア。 このトピックでは、アプリケーションのパフォーマンスの最適化に関する決定を行うためのこれらのレンダリング パイプラインについてを説明します。  
@@ -55,12 +55,13 @@ ms.locfileid: "57374259"
  詳細については[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]階層を表示するを参照してください[グラフィックスの描画層](graphics-rendering-tiers.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
 - [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 15a78558789ef998d31d704a3fcfbf43dc364757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330663"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 エンティティ インスタンスへの参照を返します。  
@@ -33,13 +33,14 @@ REF( expression )
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、REF 演算子を使用して入力エンティティ引数の参照を返します。 プロパティ抽出演算子 (.) を使用して Product エンティティのプロパティにアクセスすることにより、同じクエリでこの参照が逆参照されます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
   
-2.  次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
 - [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
 - [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)

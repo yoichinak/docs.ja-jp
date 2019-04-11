@@ -1,5 +1,5 @@
 ---
-title: '方法: 進行状況を示す Windows フォーム コントロールを作成します。'
+title: '方法: 進行状況を示す Windows フォーム コントロールを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 6910a7e2e68a3807e08a8b196dde003e1d5bc9af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202015"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>方法: 進行状況を示す Windows フォーム コントロールを作成します。
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>方法: 進行状況を示す Windows フォーム コントロールを作成する
 次のコード例は、アプリケーションのレベルまたは進行状況の表示にに使用できる `FlashTrackBar` というカスタム コントロールを示していいます。 これは、グラデーションを使用して、進行状況を視覚的に表示します。  
   
  `FlashTrackBar` コントロールには次のような機能が含まれます。  
@@ -28,9 +28,9 @@ ms.locfileid: "57720247"
   
 -   オーバーライドする、<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールを描画するロジックを提供するメソッド。  
   
--   使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` は、`OptimizedInvalidate` メソッドでこの計算を実行します。  
+-   使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` これはその`OptimizedInvalidate`メソッド。  
   
--   Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `StartColor` プロパティと `EndColor` プロパティをシリアル化するために、`ShouldSerializeStartColor` メソッドと `ShouldSerializeEndColor` メソッドを定義します。  
+-   Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` 定義、`ShouldSerializeStartColor`と`ShouldSerializeEndColor`シリアル化するためのメソッド、`StartColor`と`EndColor`プロパティ。  
   
  `FlashTrackBar` によって定義されるカスタム プロパティを次の表に示します。  
   
@@ -93,5 +93,6 @@ ms.locfileid: "57720247"
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Windows フォーム コントロール開発の基本概念](windows-forms-control-development-basics.md)

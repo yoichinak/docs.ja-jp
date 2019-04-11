@@ -1,33 +1,33 @@
 ---
-title: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得するには'
+title: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得する'
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 9887f74902a1f324f57e39a61a48b5826127cba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fe09699304de42ed00312f50f3b9e0edb20615d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298930"
 ---
-# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>方法: MetadataResolver を使用してバインディング メタデータを動的に取得するには
+# <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>方法: MetadataResolver を使用してバインディング メタデータを動的に取得する
 ここでは、<xref:System.ServiceModel.Description.MetadataResolver> クラスを使用してバインディング メタデータを動的に取得する方法を示します。  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>バインディング メタデータを動的に取得するには  
   
-1.  メタデータ エンドポイントのアドレスを持つ <xref:System.ServiceModel.EndpointAddress> オブジェクトを作成します。  
+1. メタデータ エンドポイントのアドレスを持つ <xref:System.ServiceModel.EndpointAddress> オブジェクトを作成します。  
   
     ```  
     EndpointAddress metaAddress  
       = new EndpointAddress(new   Uri("http://localhost:8080/SampleService/mex"));  
     ```  
   
-2.  サービス型とメタデータ エンドポイント アドレスを渡して、<xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> を呼び出します。 これにより、指定したコントラクトを実装したエンドポイントのコレクションが返されます。 メタデータからはバインディング情報のみがインポートされます。コントラクト情報はインポートされません。 提供されたコントラクトが代わりに使用されます。  
+2. サービス型とメタデータ エンドポイント アドレスを渡して、<xref:System.ServiceModel.Description.MetadataResolver.Resolve%28System.Type%2CSystem.ServiceModel.EndpointAddress%29> を呼び出します。 これにより、指定したコントラクトを実装したエンドポイントのコレクションが返されます。 メタデータからはバインディング情報のみがインポートされます。コントラクト情報はインポートされません。 提供されたコントラクトが代わりに使用されます。  
   
     ```  
     ServiceEndpointCollection endpoints = MetadataResolver.Resolve(typeof(SampleServiceClient),metaAddress);  
     ```  
   
-3.  これで、サービス エンドポイントのコレクションを反復処理して必要なバインディング情報を抽出できます。 次のコードは、エンドポイントを反復処理し、現在のエンドポイントに関連付けられたバインディングとアドレスを渡すサービス クライアント オブジェクトを作成し、そのサービスでメソッドを呼び出します。  
+3. これで、サービス エンドポイントのコレクションを反復処理して必要なバインディング情報を抽出できます。 次のコードは、エンドポイントを反復処理し、現在のエンドポイントに関連付けられたバインディングとアドレスを渡すサービス クライアント オブジェクトを作成し、そのサービスでメソッドを呼び出します。  
   
     ```  
     foreach (ServiceEndpoint point in endpoints)  
@@ -46,4 +46,5 @@ ms.locfileid: "54735975"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)

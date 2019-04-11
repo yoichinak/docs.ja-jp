@@ -3,12 +3,12 @@ title: F# を使用した Azure Table Storage の概要
 description: Azure Table storage または Azure Cosmos DB を使用してクラウドで構造化データを格納します。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086703"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Azure Table storage と F を使用した Azure Cosmos DB Table API の概要します。\#
 
@@ -26,7 +26,7 @@ Azure Cosmos DB では、Azure Table storage に書き込まれなどのプレ�
 
 Azure Table storage 用に記述されたアプリケーションでは、コードの変更を Table API を使用して、Azure Cosmos DB に移行でき、高度な機能を利用することができます。 Table API では、.NET、Java、Python、および Node.js の使用可能なクライアント Sdk があります。
 
-詳細については、[Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)を参照してください。
+詳細については、次を参照してください。 [Azure Cosmos DB Table API の概要](https://docs.microsoft.com/azure/cosmos-db/table-introduction)します。
 
 ## <a name="about-this-tutorial"></a>このチュートリアルについて
 
@@ -35,7 +35,6 @@ Azure Table storage 用に記述されたアプリケーションでは、コー
 ## <a name="prerequisites"></a>必須コンポーネント
 
 このガイドを使用するのにはまず[Azure ストレージ アカウントを作成](/azure/storage/storage-create-storage-account)または[Azure Cosmos DB アカウント](https://azure.microsoft.com/try/cosmosdb/)します。
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>作成して、F# スクリプトと開始 F# 対話型
 
@@ -51,7 +50,7 @@ Azure Table storage 用に記述されたアプリケーションでは、コー
 
 ### <a name="get-your-azure-storage-connection-string"></a>Azure Storage 接続文字列を取得します。
 
-Azure Storage Table service に接続する場合は、このチュートリアルでは、接続文字列を必要があります。 Azure portal から接続文字列をコピーすることができます。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
+Azure Storage Table service に接続する場合は、このチュートリアルでは、接続文字列を必要があります。 Azure portal から接続文字列をコピーすることができます。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB 接続文字列を取得します。
 
@@ -128,7 +127,6 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>パーティション内のエンティティの範囲を取得します。
 
 パーティション内のすべてのエンティティのクエリを実行しない場合は、パーティション キー フィルターと行キー フィルターを組み合わせることで、範囲を指定できます。 ここでは、フィルターを使用する 2 つ、"Smith"パーティション内のすべてのエンティティを取得するのに、行キー (名) 文字から始まり、アルファベットの"M"よりも前。
@@ -148,7 +146,6 @@ Azure Configuration Manager の使用は省略可能です。 .NET Framework の
 結果を印刷するようになりました。
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>エンティティを置換します。
 

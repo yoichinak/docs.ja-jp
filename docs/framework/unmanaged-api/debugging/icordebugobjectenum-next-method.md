@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4db5b6c6d54729363cd734840926f97d89aa4bfa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175092"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next メソッド
 列挙体の現在位置から指定した数のオブジェクトの相対仮想アドレス (Rva) を取得します。  
@@ -55,7 +55,6 @@ HRESULT Next (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

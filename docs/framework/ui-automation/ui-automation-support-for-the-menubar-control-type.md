@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Menu Bar
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
-ms.openlocfilehash: c29a6c24920ee43108b30df0a515f72479b77b85
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d577f053e2865462a32349baba97edeff89cb585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215184"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>UI オートメーションによる MenuBar コントロール型のサポート
 > [!NOTE]
@@ -67,7 +67,7 @@ ms.locfileid: "57673718"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのメニュー バー コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート/値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート/値|メモ|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
@@ -77,6 +77,7 @@ ms.locfileid: "57673718"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.MenuBar>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

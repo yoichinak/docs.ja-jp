@@ -2,15 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: f66569f36dc61a063b79a088dcbc405126a074d8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204446"
 ---
 # <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
-SSL ストリームを使用してチャネル セキュリティをサポートするカスタム バインド要素を表します。  
+SSL ストリームを使用するチャネル セキュリティをサポートするカスタム バインディング要素を表します。  
   
  \<system.serviceModel>  
 \<bindings>  
@@ -45,6 +45,7 @@ SSL ストリームを使用してチャネル セキュリティをサポート
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>

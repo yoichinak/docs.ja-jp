@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。'
+title: '方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714256"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304520"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する
 Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネントは、タスク バーの状態通知領域に 1 つのアイコンを表示します。 を、ステータス領域に複数のアイコンを表示するには、複数がする必要があります<xref:System.Windows.Forms.NotifyIcon>フォーム上のコンポーネント。 コントロールに表示されるアイコンを設定するには、使用、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 コードを記述することも、<xref:System.Windows.Forms.NotifyIcon.DoubleClick>ユーザー アイコンをダブルクリックしたときの動作のためのイベント ハンドラー。 たとえば、アイコンで表される、バック グラウンド プロセスを構成するユーザーの表示 ダイアログ ボックスを行うことができます。  
   
 > [!NOTE]
@@ -28,11 +28,11 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
   
 ### <a name="to-set-the-icon"></a>アイコンを設定するには  
   
-1.  値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、 **プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
+1. 値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、 **プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
   
-2.  <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true`に設定します。  
+2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true` に設定します。  
   
-3.  設定、<xref:System.Windows.Forms.NotifyIcon.Text%2A>プロパティを適切なツールヒント文字列。  
+3. 設定、<xref:System.Windows.Forms.NotifyIcon.Text%2A>プロパティを適切なツールヒント文字列。  
   
      アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.NotifyIcon>コントロールが既に追加されています。 という名前のアイコン ファイルも必要があります。`Icon.ico`します。  
   
@@ -72,8 +72,9 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [方法: ショートカット メニューを Windows フォームの NotifyIcon コンポーネントに関連付ける](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [方法: ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
 - [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)

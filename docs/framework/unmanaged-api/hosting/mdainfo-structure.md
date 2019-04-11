@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d48c3d701b0369ab00150625c26d94f4111b2d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104612"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 構造体
 詳細について説明します、 `Event_MDAFired` 、マネージ デバッグ アシスタント (MDA) の作成をトリガーするイベントです。  
@@ -51,7 +51,7 @@ typedef struct _MDAInfo {
   
 -   ホストには、このイベントのハンドラーが登録されている場合、ランタイムは、デバッガーがプロセスにアタッチされているかどうかを確認します。 場合は、ランタイムはデバッガーを中断します。 デバッガーが引き続き発生する場合は、ホストを呼び出します。 デバッガーがアタッチされていない場合、ランタイムが呼び出す`IActionOnCLREvent::OnEvent`へのポインターを渡すと、`MDAInfo`インスタンスとして、`data`パラメーター。  
   
- Mda をアクティブ化して、MDA がアクティブ化されたときに通知するホストを選択できます。 これにより、ホストは、既定の動作をオーバーライドして、プロセスの状態の破損を防ぐために、イベントを発生させたマネージ スレッドを中止できます。 詳細については、Mda を使用して、[マネージ デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)を参照してください。  
+ Mda をアクティブ化して、MDA がアクティブ化されたときに通知するホストを選択できます。 これにより、ホストは、既定の動作をオーバーライドして、プロセスの状態の破損を防ぐために、イベントを発生させたマネージ スレッドを中止できます。 詳細については、Mda を使用して、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)します。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
@@ -60,8 +60,9 @@ typedef struct _MDAInfo {
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

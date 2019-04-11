@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5ea6ce91e0651e09fb908d8b8b35811349ac8845
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089433"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope メソッド
 現在のメソッドの構文の新しいスコープを開きます。 スコープは、新しい現在のスコープになり、スコープのスタックにプッシュされます。 スコープは、階層を形成する必要があります。 兄弟は、重複は許可されません。  
@@ -52,4 +52,5 @@ HRESULT OpenScope(
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

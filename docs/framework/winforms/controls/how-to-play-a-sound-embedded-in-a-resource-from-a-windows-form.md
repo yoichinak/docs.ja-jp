@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームからリソースに埋め込まれたサウンドを再生します。'
+title: '方法: Windows フォームからリソースに埋め込まれたサウンドを再生する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078578"
 ---
-# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>方法: Windows フォームからリソースに埋め込まれたサウンドを再生します。
+# <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>方法: Windows フォームからリソースに埋め込まれたサウンドを再生する
 使用することができます、<xref:System.Media.SoundPlayer>埋め込みリソースからサウンドを再生するクラス。  
   
 ## <a name="example"></a>例  
@@ -34,6 +34,7 @@ ms.locfileid: "57708185"
  "\<AssemblyName>" を、サウンド ファイルが埋め込まれているアセンブリの名前に置換。 ".dll" というサフィックスは含めないでください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Media.SoundPlayer>
-- [方法: Windows フォームからサウンドを再生します。](how-to-play-a-sound-from-a-windows-form.md)
-- [方法: Windows フォームで再生するサウンドをループします。](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [方法: Windows フォームからサウンドを再生する](how-to-play-a-sound-from-a-windows-form.md)
+- [方法: Windows フォームでサウンドの再生をループする](how-to-loop-a-sound-playing-on-a-windows-form.md)

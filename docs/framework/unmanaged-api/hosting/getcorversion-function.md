@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3d30603f16841a92013dd5cc2032799365e8c76
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f66e00c3334aecdf8c653f57e28d1b327c4170e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094068"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 関数
 現在のプロセスで実行されている共通言語ランタイム (CLR) のバージョン番号を返します。  
@@ -56,7 +56,8 @@ HRESULT GetCORVersion (
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

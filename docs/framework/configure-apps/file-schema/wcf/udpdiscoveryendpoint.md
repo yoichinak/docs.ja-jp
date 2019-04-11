@@ -2,12 +2,12 @@
 title: <udpDiscoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: af925a0f16e59cb6fec3ec246bd64a8f109d4d57
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 180763404ee9070e9ed6e5476d4568a0a018dcb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203367"
 ---
 # <a name="udpdiscoveryendpoint"></a>\<udpDiscoveryEndpoint>
 この構成要素は、UDP マルチキャスト バインディングを使用した探索操作用に事前に構成される標準エンドポイントを定義します。 このエンドポイントには固定コントラクトがあり、WS-Discovery プロトコルの 2 つのバージョンをサポートします。 また、WS-Discovery の仕様 (WS-Discovery April 2005 または WS-Discovery V1.1) に規定された固定 UDP バインディングと既定のアドレスも備えています。  
@@ -79,4 +79,5 @@ ms.locfileid: "55270331"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>

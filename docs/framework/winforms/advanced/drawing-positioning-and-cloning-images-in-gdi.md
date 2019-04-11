@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188449"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>GDI+ でのイメージの描画、配置、およびクローン作成
 使用することができます、<xref:System.Drawing.Bitmap>読み込みし、ラスター イメージを表示するクラスを使用できます、<xref:System.Drawing.Imaging.Metafile>クラスを読み込み、ベクター イメージを表示します。 <xref:System.Drawing.Bitmap>と<xref:System.Drawing.Imaging.Metafile>クラスから継承、<xref:System.Drawing.Image>クラス。 インスタンスが必要なベクター画像を表示する、<xref:System.Drawing.Graphics>クラスと<xref:System.Drawing.Imaging.Metafile>します。 インスタンスが必要なラスター イメージを表示する、<xref:System.Drawing.Graphics>クラスと<xref:System.Drawing.Bitmap>します。 インスタンス、<xref:System.Drawing.Graphics>クラスには、<xref:System.Drawing.Graphics.DrawImage%2A>メソッドで、受信、<xref:System.Drawing.Imaging.Metafile>または<xref:System.Drawing.Bitmap>を引数として。  
@@ -52,6 +52,7 @@ ms.locfileid: "57724664"
  ![トリミング](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>関連項目
-- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
-- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
+
+- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
+- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

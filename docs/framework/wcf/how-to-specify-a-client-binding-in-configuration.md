@@ -1,18 +1,18 @@
 ---
-title: '方法: 構成でクライアント バインディングを指定します。'
+title: '方法: 構成でクライアント バインディングを指定する'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091565"
 ---
-# <a name="how-to-specify-a-client-binding-in-configuration"></a>方法: 構成でクライアント バインディングを指定します。
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>方法: 構成でクライアント バインディングを指定する
 この例では、電卓サービスを使用するためのクライアント コンソール アプリケーションを作成し、そのクライアントのバインディングを構成で宣言によって指定します。 クライアントは `CalculatorService` にアクセスします。これにより、`ICalculator` インターフェイスが実装され、サービスとクライアントの両方で <xref:System.ServiceModel.BasicHttpBinding> クラスが使用されます。  
   
- ここで説明する手順は、電卓サービスが実行されていることを前提とします。 サービスを構築する方法については、[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)を参照してください。 また、使用、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コンポーネントを自動的に生成する Windows Communication Foundation (WCF) が提供します。 このツールにより、サービスにアクセスするためのクライアント コードと構成が生成されます。  
+ ここで説明する手順は、電卓サービスが実行されていることを前提とします。 サービスを構築する方法については、次を参照してください。[方法。構成でサービス バインディング指定](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。 また、使用、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント コンポーネントを自動的に生成する Windows Communication Foundation (WCF) が提供します。 このツールにより、サービスにアクセスするためのクライアント コードと構成が生成されます。  
   
  クライアントは 2 つの部分で構成されます。 Svcutil.exe によって、`ClientCalculator` インターフェイスを実装する `ICalculator` が生成されます。 次に、`ClientCalculator` のインスタンスを作成することで、クライアント アプリケーションを作成します。  
   
@@ -51,4 +51,5 @@ ms.locfileid: "54606388"
 6.  クライアントをコンパイルして実行します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスとクライアントを構成するためのバインディングの使用](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

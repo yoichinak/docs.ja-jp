@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e5c12cc6d09e2f1c5b0c58ac4ad3462dca3463c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87094532a52d8f6309998486375ef4eb33b07f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189392"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 `fatalExecutionEngineError` マネージド デバッグ アシスタント (MDA) は、共通言語ランタイム (CLR) で致命的なエラーが検出されたときにアクティブ化されます。 プロセスは終了されます。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  予期せずにプロセスが終了します。 CLR エラーは、さまざまな理由により発生する可能性があるため、他の症状を特定できません。  
   
 ## <a name="cause"></a>原因  
@@ -74,6 +74,7 @@ ms.locfileid: "54700976"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

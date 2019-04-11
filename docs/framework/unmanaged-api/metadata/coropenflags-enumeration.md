@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108519"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags 列挙型
 マニフェスト ファイルを開くときにメタデータの動作を制御するフラグ値を含めます。  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|読み取り用にファイルが開かれることを示しますへの呼び出し`QueryInterface`の[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)にことはできません。|  
 |`ofTakeOwnership`|呼び出しを使用してメモリが割り当てられたことを示します[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)メタデータによって解放されるとします。|  
 |`ofNoTypeLib`|互換性のために残されています。 このフラグは無視されます。|  
-|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、[Windows ランタイムと CLR の内部での .NET and Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx)を参照してください。|  
+|`ofNoTransform`|.winmd ファイルの自動変換を無効にする必要があることを示します。 つまり、Windows Runtime タイプから .NET Framework タイプへの投射は無効になります。 詳細については、次を参照してください。 [Windows ランタイムと CLR の内部での .NET and Windows Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx)します。|  
 |`ofReserved1`|内部使用のために予約されています。|  
 |`ofReserved2`|内部使用のために予約されています。|  
 |`ofReserved`|内部使用のために予約されています。|  
@@ -71,7 +71,8 @@ typedef enum CorOpenFlags
   
  **ヘッダー:** CorHdr.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

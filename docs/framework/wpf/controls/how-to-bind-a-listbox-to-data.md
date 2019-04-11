@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106440"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>方法: ListBox にデータをバインドする
 アプリケーション開発者が作成できる<xref:System.Windows.Controls.ListBox>それぞれのコンテンツを指定することがなくコントロール<xref:System.Windows.Controls.ListBoxItem>とは別にします。 データ バインディングを使用すると、個々 の項目にデータをバインドします。  
@@ -23,6 +23,7 @@ ms.locfileid: "57372882"
 [!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
 - [コントロール](../advanced/optimizing-performance-controls.md)

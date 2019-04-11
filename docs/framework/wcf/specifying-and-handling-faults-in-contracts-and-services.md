@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210673"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>コントラクトおよびサービスのエラーの指定と処理
 Windows Communication Foundation (WCF) アプリケーションは、マネージ例外オブジェクトを SOAP エラー オブジェクトを SOAP エラー オブジェクトをマネージ例外オブジェクトにマップすることによって、エラー状況を処理します。 ここでは、エラー状態がカスタムの SOAP エラーとして公開されるようにコントラクトを設計する方法、そのエラーをサービス実装の一部として返す方法、およびクライアントがそのエラーをキャッチする方法を説明します。  
@@ -34,12 +34,12 @@ Windows Communication Foundation (WCF) アプリケーションは、マネー�
 ## <a name="map-exceptions-to-soap-faults"></a>SOAP エラーへの例外のマッピング  
  エラー状態の処理操作を作成するための最初の手順は、クライアント アプリケーションにエラーを通知する状態を決定することです。 一部の操作には、その機能に固有のエラー状態があります。 たとえば、`PurchaseOrder` 操作では、発注書の作成が禁止になっている顧客に特定の情報を返すことができます。 また、`Calculator` サービスなどでは、より一般的な `MathFault` SOAP エラーを使用してサービス全体のすべてのエラー状態を記述できます。 サービスのクライアントのエラー状態を特定したら、カスタム SOAP エラーを作成し、エラー状態が発生したときに SOAP エラーを返す操作として、対応する操作をマークします。  
   
- サービスまたはクライアントの開発のこの手順の詳細については、[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)を参照してください。  
+ サービスまたはクライアントの開発のこの手順の詳細については、次を参照してください。[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)します。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>クライアントとサービスによる例外としての SOAP エラーの処理  
  操作のエラー条件を識別する、カスタムの SOAP エラーを定義してエラーを返す操作にマークすることは、正常にエラーを WCF アプリケーションでの処理で最初の手順を示します。 次の手順では、このエラーの送受信を適切に実装します。 通常は、サービスがエラーを送信してクライアント アプリケーションにエラー状態を通知しますが、双方向クライアントが SOAP エラーをサービスに送信することもできます。  
   
- 詳細については、[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。  
+ 詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>非宣言 SOAP エラーとデバッグ  
  宣言 SOAP エラーは、堅牢で相互運用可能な分散アプリケーションを構築するうえで便利です。 ただし、サービス (または双方向クライアント) が非宣言 SOAP エラーを送信することが役立つ場合があります。非宣言 SOAP エラーとは、その操作について Web サービス記述言語 (WSDL) で宣言されていないエラーです。 たとえば、サービスの開発時に予期しない状況が発生する可能性があります。この場合、デバッグのために情報をクライアントに送信することが役立ちます。 さらに、設定、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティまたは<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティを`true`内部サービス操作例外に関する情報を取得する WCF クライアントを許可するようにします。 個別のエラー送信とデバッグ動作プロパティの設定の両方がで説明されている[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。  
@@ -56,6 +56,7 @@ Windows Communication Foundation (WCF) アプリケーションは、マネー�
  WCF では、エラー コントラクトを逆シリアル化する場合、最初に SOAP メッセージのエラー コントラクト名とエラー コントラクトの型を一致させようとします。 正しく一致しない場合、使用可能なエラー コントラクトのアルファベット順のリストで互換性のある型を検索します。 2 つのエラー コントラクトが互換性のある型である場合 (たとえば、一方のコントラクトが別のコントラクトのサブクラスである場合)、エラーを逆シリアル化するときに間違った型が使用される場合があります。 このような問題は、エラー コントラクトで名前、名前空間、およびアクションが指定されていない場合に発生します。 このような問題が発生しないようにするには、常に名前、名前空間、およびアクションの属性を指定して、エラー コントラクトを完全修飾するようにしてください。 また、共有基本クラスから派生した関連エラー コントラクトを定義している場合は、新しいメンバーを `[DataMember(IsRequired=true)]` でマークしてください。 この `IsRequired` 属性の詳細については、「<xref:System.Runtime.Serialization.DataMemberAttribute>」を参照してください。 この結果、基本クラスに互換性のある型が指定されなくなり、正しい派生型にエラーが逆シリアル化されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

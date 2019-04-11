@@ -9,12 +9,12 @@ helpviewer_keywords:
 - syntax [WPF], Storyboard
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
-ms.openlocfilehash: 53d31d00729485e99b76305c45eeeb3659a41b7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124840"
 ---
 # <a name="storyboards-overview"></a>ストーリーボードの概要
 このトピックでは、使用する方法を示します<xref:System.Windows.Media.Animation.Storyboard>オブジェクトを編成およびアニメーションを適用します。 対話的に操作する方法を説明<xref:System.Windows.Media.Animation.Storyboard>オブジェクトおよび構文を対象とする間接的なプロパティについて説明します。  
@@ -61,9 +61,9 @@ ms.locfileid: "57362943"
   
 |ストーリーボードが開始される場所|インスタンス単位|スタイル|コントロール テンプレート|データ テンプレート|例|  
 |--------------------------------|-------------------|-----------|----------------------|-------------------|-------------|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|はい|はい|[はい]|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|[はい]|[プロパティ値が変化したときにアニメーションをトリガーする](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
-|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|はい|[はい]|[方法: データが変更されたときにアニメーションをトリガーします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.EventTrigger>|[はい]|はい|はい|はい|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> プロパティと、 <xref:System.Windows.Trigger>|いいえ|[はい]|はい|はい|[プロパティ値が変化したときにアニメーションをトリガーする](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
+|<xref:System.Windows.Media.Animation.BeginStoryboard> および <xref:System.Windows.DataTrigger>|いいえ|[はい]|はい|はい|[方法: データが変更されたときにアニメーションをトリガーします。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
 |<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッド|[はい]|×|×|いいえ|[ストーリーボードを使ってプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  次の例では、<xref:System.Windows.Media.Animation.Storyboard>をアニメーション化する、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>要素と<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を描画するために使用<xref:System.Windows.Shapes.Rectangle>します。  
@@ -124,7 +124,7 @@ ms.locfileid: "57362943"
   
  [!code-csharp[storyboards_ovw_snip#134](~/samples/snippets/csharp/VS_Snippets_Wpf/storyboards_ovw_snip/CSharp/IndirectTargetingExample.xaml.cs#134)]  
   
- 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)を参照してください。  
+ 場合に、注意してください、<xref:System.Windows.Freezable>は固定されている場合、複製になります、およびその複製がアニメーション化します。 この場合、元のオブジェクトの<xref:System.Windows.Media.Animation.Animatable.HasAnimatedProperties%2A>プロパティを返し続けます`false`元のオブジェクトが実際にアニメーション化されないためです。 複製の詳細については、次を参照してください。、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
  また、間接的なプロパティの対象化を使用するとき、存在しないオブジェクトを対象化する可能性があることに注意してください。 などのように見えますが、<xref:System.Windows.Controls.Control.Background%2A>の特定のボタンで設定した、<xref:System.Windows.Media.SolidColorBrush>実際にその色をアニメーション化しようと、<xref:System.Windows.Media.LinearGradientBrush>ボタンの背景を設定するために使用されました。 このような場合は、例外はスローされません。効果は表示であるため、アニメーションが失敗した<xref:System.Windows.Media.LinearGradientBrush>への変更に反応しません、<xref:System.Windows.Media.SolidColorBrush.Color%2A>プロパティ。  
   
@@ -298,11 +298,12 @@ ms.locfileid: "57362943"
   
 <a name="animateWhenAPropertyValueChanges"></a>   
 ## <a name="animate-when-a-property-value-changes"></a>プロパティ値が変化したときにアニメーション化を行う  
- スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、[、アニメーションとプロパティ値が変化をトリガー](how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)を参照してください。  
+ スタイル内およびコントロール テンプレート内では、トリガー オブジェクトを使用して、プロパティが変化したときにストーリーボードを開始します。 例については、次を参照してください。 [、アニメーションとプロパティ値が変化をトリガー](how-to-trigger-an-animation-when-a-property-value-changes.md)と[ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)します。  
   
  プロパティによって適用されるアニメーション<xref:System.Windows.Trigger>オブジェクトよりもさらに複雑な方法で動作しますが<xref:System.Windows.EventTrigger>アニメーションまたはアニメーションの開始を使用して<xref:System.Windows.Media.Animation.Storyboard>メソッド。  「ハンドオフ」アニメーションによって他の定義、<xref:System.Windows.Trigger>オブジェクトで、compose を<xref:System.Windows.EventTrigger>メソッドによってトリガーされるアニメーションです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションの概要](animation-overview.md)
 - [プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)
 - [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)

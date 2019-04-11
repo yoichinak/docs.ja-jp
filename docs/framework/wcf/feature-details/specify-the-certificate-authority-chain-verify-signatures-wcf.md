@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224483"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>方法: 署名 (WCF) を確認するために使用する証明機関証明書チェーンを指定します。
 Windows Communication Foundation (WCF) では、X.509 証明書を使用して署名された SOAP メッセージを受信したときに既定ではことを確認、X.509 証明書が信頼された証明機関によって発行されたことです。 これは、証明書ストアを検索し、その証明機関の証明書が信頼された証明書として指定されているかどうかを確認することによって行われます。 WCF この判断を行うためには、適切な証明書ストアに証明機関の証明書チェーンをインストールする必要があります。  
@@ -34,4 +34,5 @@ Windows Communication Foundation (WCF) では、X.509 証明書を使用して�
          詳細については、MMC で証明書スナップインを使用して、次を参照してください。[方法。MMC スナップインで証明書を表示](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

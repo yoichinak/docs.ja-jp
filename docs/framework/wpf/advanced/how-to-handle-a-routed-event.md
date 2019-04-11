@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211596"
 ---
 # <a name="how-to-handle-a-routed-event"></a>方法: ルーティング イベントを処理する
 バブル イベントの動作と、ルーティング イベント データを処理できるハンドラーを作成する方法を次の例に示します。  
@@ -35,8 +35,9 @@ ms.locfileid: "57368195"
  [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.RoutedEvent>
 - [入力の概要](input-overview.md)
 - [ルーティング イベントの概要](routed-events-overview.md)
-- [方法トピック](events-how-to-topics.md)
+- [方法のトピック](events-how-to-topics.md)
 - [XAML 構文の詳細](xaml-syntax-in-detail.md)

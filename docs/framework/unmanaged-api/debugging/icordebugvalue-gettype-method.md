@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f99495b04942b7902619e0383522caf9f78ae984
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83265c4f6dffed76f1710378cf5293aac7020ef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119354"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType メソッド
 この"ICorDebugValue"オブジェクトのプリミティブ型を取得します。  
@@ -51,7 +51,6 @@ HRESULT GetType (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

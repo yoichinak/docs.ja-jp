@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306431"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 クエリで返される要素を指定します。  
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  JOIN 構文 (FULL、INNER、LEFT、OUTER、ON、および RIGHT) を使用することもできます。 内部結合に対しては ON が必要ですが、クロス結合に対しては ON を使用できません。  
   
 ## <a name="row-and-value-select-clauses"></a>ROW 句および VALUE SELECT 句  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、SELECT 句の 2 つのバリアントをサポートします。 最初のバリアント、row select は、SELECT キーワードによって識別され、このバリアントを使用して、投影する必要がある 1 つまたは複数の値を指定できます。row ラッパーは、返された値の前後に暗黙的に追加されるため、クエリ式の結果は常に、行のマルチセットになります。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT 句の 2 つのバリエーションをサポートしています。 最初のバリアント、row select は、SELECT キーワードによって識別され、このバリアントを使用して、投影する必要がある 1 つまたは複数の値を指定できます。row ラッパーは、返された値の前後に暗黙的に追加されるため、クエリ式の結果は常に、行のマルチセットになります。  
   
  row select の各クエリ式は、別名を指定する必要があります。 別名を指定しないと、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は別名生成規則を使用して別名の生成を試みます。  
   
@@ -94,13 +94,14 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、SELECT 演算子を使用して、クエリによって返される要素を指定します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリ式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

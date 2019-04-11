@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154077"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType メソッド
 このドキュメントのドキュメントの種類を取得します。  
@@ -42,4 +42,5 @@ HRESULT GetDocumentType(
  メソッドが成功した場合は s_ok を返します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedDocument インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

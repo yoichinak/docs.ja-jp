@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b69970d50652da203ecf1ae6fe8d604ccee06cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228537"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode メソッド
 指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは、.NET Framework version 2.0 で廃止されました。 使用[icordebugcode 2::getcodechunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)代わりにします。  
@@ -69,5 +69,5 @@ HRESULT GetCode (
  **.NET framework のバージョン:** 1.1, 1.0  
   
 ## <a name="see-also"></a>関連項目
-- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 
+- [GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)

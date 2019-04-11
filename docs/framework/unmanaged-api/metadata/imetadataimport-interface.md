@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180402"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport インターフェイス
 ポータブル実行可能 (PE) ファイルまたはその他のソース (タイプ ライブラリ、スタンドアロンのランタイム メタデータ バイナリなど) から既存のメタデータをインポートおよび操作するメソッドを提供します。  
@@ -63,7 +63,7 @@ ms.locfileid: "54732844"
 |[GetClassLayout メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)|指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。|  
 |[GetCustomAttributeByName メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributebyname-method.md)|指定した名前のカスタム属性の値を取得します。|  
 |[GetCustomAttributeProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|指定したメタデータ トークンのカスタム属性の値を取得します。|  
-|[GetEventProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。この情報には、宣言する型、デリゲートの add メソッドおよび remove メソッド、任意のフラグとその他の関連付けられているデータなどがあります。|  
+|[GetEventProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。この情報には、宣言型、デリゲートの add メソッドおよび remove メソッド、任意のフラグとその他の関連付けられているデータなどがあります。|  
 |[GetFieldMarshal メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldmarshal-method.md)|指定した Field メタデータ トークンによって表されるフィールドのネイティブなアンマネージ型へのポインターを取得します。|  
 |[GetFieldProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldprops-method.md)|指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。|  
 |[GetInterfaceImplProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getinterfaceimplprops-method.md)|指定したメソッドを実装する型、およびそのメソッドを宣言するインターフェイスのメタデータ トークンへのポインターを取得します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "54732844"
 |[GetModuleFromScope メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulefromscope-method.md)|現在のメタデータ スコープ内で参照されるモジュールのメタデータ トークンへのポインターを取得します。|  
 |[GetModuleRefProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulerefprops-method.md)|指定したメタデータ トークンによって参照されるモジュールの名前を取得します。|  
 |[GetNameFromToken メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnamefromtoken-method.md)|指定したメタデータ トークンによって参照されるオブジェクトの UTF-8 名を取得します。|  
-|[GetNativeCallConvFromSig メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規則を取得します。|  
+|[GetNativeCallConvFromSig メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規約を取得します。|  
 |[GetNestedClassProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnestedclassprops-method.md)|入れ子にされた型を指定して、それを囲んでいる親の型の TypeDef トークンを取得します。|  
 |[GetParamForMethodIndex メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamformethodindex-method.md)|指定した MethodDef トークンが表すメソッドの一連のメソッド パラメーターにおいて、指定した序数位置にあるパラメーターを表すトークンへのポインターを取得します。|  
 |[GetParamProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamprops-method.md)|指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。|  
@@ -111,8 +111,9 @@ ms.locfileid: "54732844"
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

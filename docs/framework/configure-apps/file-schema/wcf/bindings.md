@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316792"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -21,7 +21,7 @@ ms.locfileid: "57474723"
   
  システム指定のバインディングに要素または属性を追加することはできません。 これを行うに」の説明に従って、カスタム バインドを実装する必要があります、[カスタム バインド](#custom-bindings)セクション。 システム指定のバインディングを完全には、ユーザー アプリケーションは、上でコントロールを持つ必要があるいくつかの設定を追加するカスタム バインドを定義することになります。  
   
- システム指定のバインディングの一覧は、[System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。  
+ システム指定のバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md)します。  
   
 ## <a name="custom-bindings"></a>カスタム バインド
 
@@ -29,17 +29,17 @@ ms.locfileid: "57474723"
   
  要素がスタックに出現する順序は重要です。それは、その順序で操作がメッセージに適用されるためです。 スタック要素で必要な順序を次に示します。  
   
-1.  トランザクション (省略可能)  
+1. トランザクション (省略可能)  
   
-2.  信頼性の高いメッセージング (省略可能)  
+2. 信頼性の高いメッセージング (省略可能)  
   
-3.  セキュリティ (省略可能)  
+3. セキュリティ (省略可能)  
   
-4.  エンコーダー  
+4. エンコーダー  
   
-5.  Transport  
+5. Transport  
   
- カスタム バインドは、`name` 属性によって識別されます。 カスタム バインドの詳細については、[カスタム バインド](../../../../../docs/framework/wcf/extending/custom-bindings.md)を参照してください。  
+ カスタム バインドは、`name` 属性によって識別されます。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152517"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ
 マークアップ要素の一意の識別子を提供します。 多くのシナリオでは、この一意の識別子は XAML のローカライズ プロセスとツールによって使用されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "58042972"
 |`identifier`|手動で作成または自動生成された文字列を指定する必要がありますで一意であるファイルによって解釈されるは、その場合、`x:Uid`コンシューマー。|  
   
 ## <a name="remarks"></a>Remarks  
- MS-XAML で`x:Uid`ディレクティブとして定義されます。 詳細については、[ \[MS XAML\]セクション 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。  
+ MS-XAML で`x:Uid`ディレクティブとして定義されます。 詳細については、次を参照してください。 [ \[MS XAML\]セクション 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
  `x:Uid` 不連続`x:Name`両方規定された XAML のローカライズ シナリオのため、ローカライズに使用される識別子のプログラミング モデルの結果に対する依存関係があるないように`x:Name`。 また、`x:Name`は規定された XAML 名前スコープ。 ただし、`x:Uid`一意性の強制の XAML 定義されている言語概念によって制御されていません。 XAML プロセッサは広い意味 (プロセッサ、ローカライズ プロセスの一部ではない) では、一意性を適用する必要はありません`x:Uid`値。 その責任は元の値には、概念的には。 一意性のことを期待`x:Uid`1 つの XAML ソース内の値は、値は、専用のグローバル化のプロセスやツールなどのコンシューマーに適しています。 一意性の一般的なモデルは`x:Uid`値は、XAML を表す XML でエンコードされたファイル内で一意です。  
   
@@ -42,6 +42,7 @@ ms.locfileid: "58042972"
  ロールの詳細については`x:Uid`WPF のローカライズ プロセスおよび XAML の BAML 形式では、「 [WPF のグローバリゼーション](../wpf/advanced/globalization-for-wpf.md)または <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
 - [WPF のグローバリゼーション](../wpf/advanced/globalization-for-wpf.md)

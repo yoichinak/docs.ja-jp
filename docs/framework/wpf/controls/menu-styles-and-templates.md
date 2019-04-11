@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], Menu
 - parts [WPF], Menu
 ms.assetid: b89da183-9b87-42c6-ac53-731a42c7b09e
-ms.openlocfilehash: d5b170bff841369e48d082f018577ee8f6f09f39
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6818be4ac92dbdd7de0c6c6fa65109e21eadc2f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094204"
 ---
 # <a name="menu-styles-and-templates"></a>メニューのスタイルとテンプレート
 このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Menu>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  
@@ -71,6 +71,7 @@ ms.locfileid: "57355624"
  完全なサンプルについては、[Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [コントロールのスタイルとテンプレート](control-styles-and-templates.md)

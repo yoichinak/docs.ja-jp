@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5c21d329ed35f82e36c2d88ac911401799e820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee825da1f3f0fd72a3b47b48783f0f344af99b65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077785"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc インターフェイス
 新しい Microsoft intermediate language (MSIL) 関数本体にメモリを割り当てるメソッドを提供します。  
@@ -45,7 +45,8 @@ ms.locfileid: "54596021"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

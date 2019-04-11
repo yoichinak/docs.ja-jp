@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c18919a6c48c251138a3d5e88079d3383979ef1a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137879"
 ---
 # <a name="parameter-element-net-native"></a>\<パラメーター > 要素 (.NET ネイティブ)
 メソッドに渡された引数の型にリフレクション ポリシーを適用します。  
@@ -51,13 +51,13 @@ ms.locfileid: "55266404"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*parameter_name*|ポリシーが適用されるメソッド パラメーターの名前。 たとえば、メソッド シグネチャ `String.CompareTo(Object value)` の場合、`Name` 属性の値は "value" です。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -68,13 +68,14 @@ ms.locfileid: "55266404"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
+|[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<Parameter>` 要素は [\<Method>](../../../docs/framework/net-native/method-element-net-native.md) 要素の子で、特定のメソッド パラメーターにポリシーを適用するために使用されます。 特定のメソッド パラメーターは、型ではなく名前で指定されます。 `Activate` や `Dynamic` などのポリシーの種類を表す属性が 1 つ以上必要です。  
   
 ## <a name="see-also"></a>関連項目
-- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<メソッド > 要素](../../../docs/framework/net-native/method-element-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)

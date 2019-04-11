@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076290"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > 要素
 ランタイムが発行元ポリシーを適用するかどうかを指定します。  
@@ -65,7 +65,7 @@ ms.locfileid: "55253939"
   
  既定の設定、**適用**属性が**はい**します。 設定、**適用**属性を**ありません**上書き前**はい**アセンブリの設定。  
   
- アクセス許可が明示的にポリシーを使用してパブリッシャーを無視するアプリケーションに必要な[ \<publisherPolicy 適用 ="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)アプリケーション構成ファイル内の要素。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 詳細については、[アセンブリ バインド リダイレクトのセキュリティ権限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)を参照してください。  
+ アクセス許可が明示的にポリシーを使用してパブリッシャーを無視するアプリケーションに必要な[ \<publisherPolicy 適用 ="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)アプリケーション構成ファイル内の要素。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 詳細については、次を参照してください。[アセンブリ バインド リダイレクトのセキュリティ権限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)します。  
   
 ## <a name="example"></a>例  
  次の例が、アセンブリの発行者ポリシーをオフに`myAssembly`します。  
@@ -86,6 +86,7 @@ ms.locfileid: "55253939"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

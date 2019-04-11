@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086443"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows フォーム コントロール開発の基本概念
 Windows フォーム コントロールから直接または間接的に派生するクラスは、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。 次の一覧には、Windows フォーム コントロールを開発するための一般的なシナリオについて説明します。  
@@ -31,7 +31,8 @@ Windows フォーム コントロールから直接または間接的に派生�
  Windows フォーム コントロールの基底クラス<xref:System.Windows.Forms.Control>、Windows ベースのクライアント側アプリケーションでのビジュアル表示に必要なプラミングを提供します。 <xref:System.Windows.Forms.Control> ウィンドウ ハンドル、メッセージのルーティングを処理し、マウスとキーボード イベントとその他の多くのユーザー インターフェイス イベントを提供します。 高度なレイアウトを提供し、ビジュアルの表示に固有のプロパティをなどがあります。 <xref:System.Windows.Forms.Control.ForeColor%2A>、 <xref:System.Windows.Forms.Control.BackColor%2A>、 <xref:System.Windows.Forms.Control.Height%2A>、 <xref:System.Windows.Forms.Control.Width%2A>、およびその他の多くの。 さらに、スレッドのサポート、および ActiveX コントロールとの相互運用のセキュリティを提供します。 インフラストラクチャの大部分は基本クラスによって提供されるため、独自の Windows フォーム コントロールを比較的簡単に開発できます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: 単純な Windows フォーム コントロールを開発します。](how-to-develop-a-simple-windows-forms-control.md)
+
+- [方法: シンプルな Windows フォーム コントロールを開発する](how-to-develop-a-simple-windows-forms-control.md)
 - [複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)
-- [方法: 進行状況を示す Windows フォーム コントロールを作成します。](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [方法: 進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

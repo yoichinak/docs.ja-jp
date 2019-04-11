@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d3c05715ffb4f7a366e3b3c9951ab68477c5c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0782533f773b69eeeb0b89175e5b22c61e822ed9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147213"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader インターフェイス
 ドキュメント、メソッド、およびシンボル ストア内の変数へのアクセスを提供するためのシンボル リーダーを表します。  
@@ -52,5 +52,6 @@ ms.locfileid: "54561492"
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

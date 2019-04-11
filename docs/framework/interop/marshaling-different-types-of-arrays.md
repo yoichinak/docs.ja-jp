@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654615"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890437"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
 配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
@@ -86,7 +86,7 @@ ms.locfileid: "58654615"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON**に関する実装を含んでいます。 構造体には次の要素が含まれます。  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON**に関する実装を含んでいます。 構造体には次の要素が含まれます。  
   
 ```  
 typedef struct _MYPOINT  

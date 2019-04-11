@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-ms.openlocfilehash: 53a25396ba5d8a5c78e850e636b7c882c03d5152
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da318fee42b4628351217774de2a2225cfb21ee1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120810"
 ---
 # <a name="how-to-implement-an-adorner"></a>方法: 装飾を実装する
 この例では、最小限の装飾の実装を示します。  
@@ -30,4 +30,5 @@ ms.locfileid: "57362644"
  [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [装飾の概要](adorners-overview.md)

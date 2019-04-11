@@ -1,5 +1,5 @@
 ---
-title: <add> の <listeners> の <trace> 要素
+title: <add> 要素の<listeners>の <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: 31ab58d6817c6c5064182ab5ef8b9595e92bef7d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089583"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<追加 > 要素の\<リスナー > の\<トレース >
 リスナーを追加、**リスナー**コレクション。  
@@ -39,7 +39,7 @@ ms.locfileid: "55260654"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
+|**種類**|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
 |**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
 |**name**|省略可能な属性です。<br /><br /> リスナーの名前を指定します。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "55260654"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。|  
+|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -102,6 +102,7 @@ ms.locfileid: "55260654"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.EventLogTraceListener>

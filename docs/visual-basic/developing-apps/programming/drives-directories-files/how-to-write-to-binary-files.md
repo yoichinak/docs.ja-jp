@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 9e83029b7b5fd635ff08e608760b6c64c7945da0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965931"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833691"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>方法: Visual Basic でバイナリ ファイルに書き込む
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> メソッドは、バイナリ ファイルにデータを書き込みます。 `append` パラメーターが `True` の場合、データはファイルに追加されます。それ以外の場合は、ファイル内のデータが上書きされます。  
@@ -42,5 +42,6 @@ ms.locfileid: "56965931"
 -   ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [方法: ファイルにテキストを書き込む](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

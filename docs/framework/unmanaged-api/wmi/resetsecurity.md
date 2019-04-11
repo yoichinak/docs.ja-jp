@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f117b9807d57847d53cf00fbb4983e187798f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e937690c184d810549e8ab11ef1fc2273a45c5f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115129"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity 関数
 指定した偽装トークンが現在のスレッドに割り当てられます。   
@@ -52,7 +52,8 @@ HRESULT ResetSecurity (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a072e124343641c9f75fb9f924a6409efc8e1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166635"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions 列挙型
 メタデータ リンカーのオプションを選択するためのフラグを指定します。  
@@ -47,7 +47,8 @@ typedef enum CorLinkerOptions {
   
  **ヘッダー:** CorHdr.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 591a1129625a4ff08c9aa37ce651bbc0320ff25d
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 6d7a2e52177c05ead6300e775021572f3a64340a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634272"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822270"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>方法: WebRequest クラスを使用してデータを送信する
 次の手順では、サーバーにデータを送信するための手順について説明します。 この手順は、通常、Web ページへのデータをポストするときに使用されます。 
@@ -150,120 +150,9 @@ ms.locfileid: "58634272"
   
 次のコード例は、Web サーバーにデータを送信し、その応答内のデータを読み取る方法を示しています。  
 
-```csharp  
-using System;  
-using System.IO;  
-using System.Net;  
-using System.Text;  
-  
-namespace Examples.System.Net  
-{  
-    public class WebRequestPostExample  
-    {  
-        public static void Main()  
-        {  
-            // Create a request by using a URL that can receive a post.   
-            WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ");  
-            // Set the Method property of the request to POST.  
-            request.Method = "POST";  
+[!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
+[!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-            // Create POST data and convert it to a byte array.  
-            string postData = "This is a test that posts this string to a Web server.";  
-            byte[] byteArray = Encoding.UTF8.GetBytes(postData);  
-
-            // Set the ContentType property of the request.  
-            request.ContentType = "application/x-www-form-urlencoded";  
-            // Set the ContentLength property of the request.  
-            request.ContentLength = byteArray.Length;  
-
-            // Get the request stream.  
-            Stream dataStream = request.GetRequestStream();  
-            // Write the data to the request stream.  
-            dataStream.Write(byteArray, 0, byteArray.Length);  
-            // Close the stream.  
-            dataStream.Close();  
-
-            // Get the response.  
-            WebResponse response = request.GetResponse();  
-            // Display the status.  
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);  
-
-            // Get the stream containing content returned by the server.  
-            dataStream = response.GetResponseStream();  
-            // Open the stream by using a StreamReader for easy access.  
-            StreamReader reader = new StreamReader(dataStream);  
-
-            // Read the content.  
-            string responseFromServer = reader.ReadToEnd();  
-            // Display the content.  
-            Console.WriteLine(responseFromServer);  
-
-            // Clean up the response.  
-            reader.Close();  
-            response.Close();  
-        }  
-    }  
-}  
-```  
-  
-```vb  
-Imports System  
-Imports System.IO  
-Imports System.Net  
-Imports System.Text  
-
-Namespace Examples.System.Net  
-
-    Public Class WebRequestPostExample  
-  
-        Public Shared Sub Main()  
-
-            ' Create a request by using a URL that can receive a post.   
-            Dim request As WebRequest = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx ")  
-            ' Set the Method property of the request to POST.  
-            request.Method = "POST"  
-
-            ' Create POST data and convert it to a byte array.  
-            Dim postData As String = "This is a test that posts this string to a Web server."  
-            Dim byteArray As Byte() = Encoding.UTF8.GetBytes(postData)  
-
-            ' Set the ContentType property of the WebRequest.  
-            request.ContentType = "application/x-www-form-urlencoded"  
-            ' Set the ContentLength property of the WebRequest.  
-            request.ContentLength = byteArray.Length  
-
-            ' Get the request stream.  
-            Dim dataStream As Stream = request.GetRequestStream()  
-            ' Write the data to the request stream.  
-            dataStream.Write(byteArray, 0, byteArray.Length)  
-            ' Close the stream.  
-            dataStream.Close()  
-
-            ' Get the response.  
-            Dim response As WebResponse = request.GetResponse()  
-            ' Display the status.  
-            Console.WriteLine(CType(response, HttpWebResponse).StatusDescription)  
-
-            ' Get the stream containing content returned by the server.  
-            dataStream = response.GetResponseStream()  
-            ' Open the stream by using a StreamReader for easy access.  
-            Dim reader As New StreamReader(dataStream)  
-
-            ' Read the content.  
-            Dim responseFromServer As String = reader.ReadToEnd()  
-            ' Display the content.  
-            Console.WriteLine(responseFromServer)  
-
-            ' Clean up the response.  
-            reader.Close()  
-            response.Close()  
-
-        End Sub  
-
-    End Class  
-
-End Namespace  
-```  
   
 ## <a name="see-also"></a>関連項目
 - [インターネット要求の作成](creating-internet-requests.md)

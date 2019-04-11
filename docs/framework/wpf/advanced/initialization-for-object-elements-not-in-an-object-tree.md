@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108967"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>オブジェクト ツリーに存在しないオブジェクト要素の初期化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の初期化処理では、プロセスに処理を委任することがあり、そのプロセスは、一般的にその要素が論理ツリーまたはビジュアル ツリーのいずれかに接続されていることを前提としています。 このトピックでは、どちらのツリーにも接続されていない要素を初期化するために必要となる場合がある手順について説明します。  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>要素と論理ツリー  
  コード内で [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスのインスタンスを作成するときは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスのオブジェクト初期化処理の一部が、クラス コンストラクターの呼び出し時に実行されるコードから意図的に除外されていることに注意してください。 特に、コントロール クラスの場合は、コントロールの視覚的表現のほとんどが、コンストラクターでは定義されません。 代わりに、視覚的表現は、コントロールのテンプレートによって定義されます。 このテンプレートのソースには、さまざまなものがありますが、ほとんどの場合は、テーマ スタイルから取得されます。 テンプレートは、実質的には遅延バインディングです。そのコントロールがレイアウト可能になるまで、必要なテンプレートはコントロールに適用されません。 コントロールは、ルートでレンダリングするための表面に接続される論理ツリーに適用されるまで、レイアウトが可能になりません。 このルート レベル要素によって、論理ツリーで定義されているすべての子要素のレンダリングが開始されます。  
   
@@ -43,6 +41,7 @@ ms.locfileid: "57376374"
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のツリー](trees-in-wpf.md)
 - [WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)

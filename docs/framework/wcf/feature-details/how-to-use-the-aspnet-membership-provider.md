@@ -1,19 +1,19 @@
 ---
-title: '方法: ASP.NET メンバーシップ プロバイダーを使用します。'
+title: '方法: ASP.NET メンバーシップ プロバイダーを使用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 4653a4b4ae90f391eac559210deb611e2a83d0f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634507"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310357"
 ---
-# <a name="how-to-use-the-aspnet-membership-provider"></a>方法: ASP.NET メンバーシップ プロバイダーを使用します。
+# <a name="how-to-use-the-aspnet-membership-provider"></a>方法: ASP.NET メンバーシップ プロバイダーを使用する
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] メンバーシップ プロバイダーを使用すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開発者は、ユーザーが一意のユーザー名とパスワードの組み合わせを作成できる Web サイトを作成できます。 この機能を使用すれば、ユーザーはだれでもサイトでアカウントを作成し、そのサイトにサインインして、サービスに排他的にアクセスできます。 これは、ユーザーが Windows ドメイン内にアカウントを持っていることが必要な Windows セキュリティとは対照的です。 自分の資格情報 (ユーザー名とパスワードの組み合わせ) を提示したユーザーは、だれでもサイトとそのサービスを使用できるからです。  
   
  サンプル アプリケーションについては「[メンバーシップとロール プロバイダー](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)」を参照してください。 使用方法について、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]ロール プロバイダー機能を参照してください[方法。ASP.NET ロール プロバイダーを使用して、サービスと](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)します。  
@@ -27,13 +27,13 @@ ms.locfileid: "54634507"
   
 ### <a name="to-configure-the-membership-provider"></a>メンバーシップ プロバイダーを構成するには  
   
-1.  Web.config ファイルで、<`system.web`> 要素の下に、<`membership`> 要素を作成します。  
+1. Web.config ファイルで、<`system.web`> 要素の下に、<`membership`> 要素を作成します。  
   
-2.  `<membership>` 要素の下に、`<providers>` 要素を作成します。  
+2. `<membership>` 要素の下に、`<providers>` 要素を作成します。  
   
-3.  子として、<`providers`> 要素を追加、`<clear />`プロバイダーのコレクションをフラッシュする要素。  
+3. 子として、<`providers`> 要素を追加、`<clear />`プロバイダーのコレクションをフラッシュする要素。  
   
-4.  下、`<clear />`要素を作成、<`add`> 次の属性を持つ要素が適切な値に設定: `name`、 `type`、 `connectionStringName`、 `applicationName`、 `enablePasswordRetrieval`、 `enablePasswordReset`、 `requiresQuestionAndAnswer`、 `requiresUniqueEmail`、および`passwordFormat`します。 `name` 属性は、構成ファイルの値として後で使用します。 `SqlMembershipProvider` に設定する方法の例を次に示します。  
+4. 下、`<clear />`要素を作成、<`add`> 次の属性を持つ要素が適切な値に設定: `name`、 `type`、 `connectionStringName`、 `applicationName`、 `enablePasswordRetrieval`、 `enablePasswordReset`、 `requiresQuestionAndAnswer`、 `requiresUniqueEmail`、および`passwordFormat`します。 `name` 属性は、構成ファイルの値として後で使用します。 `SqlMembershipProvider` に設定する方法の例を次に示します。  
   
      次の例は構成セクションを示します。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54634507"
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>ユーザー名/パスワードの組み合わせを受け入れるようにサービス セキュリティを構成するには  
   
-1.  構成ファイルでの下、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素を追加、 [\<バインド >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素。  
+1. 構成ファイルでの下、 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)要素を追加、 [\<バインド >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)要素。  
   
-2.  追加、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)をバインディング セクション。 WCF のバインド要素を作成する方法の詳細については、次を参照してください。[方法。構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。  
+2. 追加、 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)をバインディング セクション。 WCF のバインド要素を作成する方法の詳細については、次を参照してください。[方法。構成でサービス バインディング指定](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)します。  
   
-3.  `mode` 要素の `<security>` 属性を `Message` に設定します。  
+3. `mode` 要素の `<security>` 属性を `Message` に設定します。  
   
-4.  設定、`clientCredentialType`の属性、<`message`> 要素を`UserName`します。 これにより、ユーザー名/パスワードの組み合わせがクライアントの資格情報として使用されるようになります。  
+4. 設定、`clientCredentialType`の属性、<`message`> 要素を`UserName`します。 これにより、ユーザー名/パスワードの組み合わせがクライアントの資格情報として使用されるようになります。  
   
      次のコード例は、バインディングの構成コードを示しています。  
   
@@ -85,22 +85,22 @@ ms.locfileid: "54634507"
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>メンバーシップ プロバイダーを使用するようにサービスを構成するには  
   
-1.  `<system.serviceModel>`要素の子として [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 要素を追加  
+1. `<system.serviceModel>`要素の子として [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 要素を追加  
   
-2.  追加、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)に、<`behaviors`> 要素。  
+2. 追加、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)に、<`behaviors`> 要素。  
   
-3.  [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) を追加し、`name` 属性に適切な値を設定  
+3. [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) を追加し、`name` 属性に適切な値を設定  
   
-4.  ``behavior`` 要素に [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) を追加  
+4. ``behavior`` 要素に [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) を追加  
   
-5.  ``<serviceCredentials>`` 要素に [\<userNameAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) を追加  
+5. ``<serviceCredentials>`` 要素に [\<userNameAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) を追加  
   
-6.  `userNamePasswordValidationMode` 属性に `MembershipProvider` を設定  
+6. `userNamePasswordValidationMode` 属性に `MembershipProvider` を設定  
   
     > [!IMPORTANT]
     >  `userNamePasswordValidationMode` に値が設定されていない場合、WCF は [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー の代わりに Windows 認証を使用します。  
   
-7.  `membershipProviderName` 属性をプロバイダーの名前 (このトピックの最初の手順でプロバイダーを追加したときに指定したもの) に設定します。 次の例に、この時点での `<serviceCredentials>` のフラグメントを示します。  
+7. `membershipProviderName` 属性をプロバイダーの名前 (このトピックの最初の手順でプロバイダーを追加したときに指定したもの) に設定します。 次の例に、この時点での `<serviceCredentials>` のフラグメントを示します。  
   
     ```xml  
     <behaviors>  
@@ -155,5 +155,6 @@ ms.locfileid: "54634507"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [方法: サービスで ASP.NET ロール プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+
+- [方法: ASP.NET のロール プロバイダーとサービスを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [メンバーシップとロール プロバイダー](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209711"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 表示、変換、および画像の書式を設定することができます。  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 内のイメージング機能が大幅に強化[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、基本的なイメージング機能を提供しますが、コーデックの拡張機能や高品質なイメージのサポートなどの機能が不足しています。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 場合の欠点を克服するために設計されていますが[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]と[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]の新しいセットを提供し、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]を表示し、アプリケーション内でイメージを使用します。  
@@ -190,6 +189,7 @@ ms.locfileid: "58890811"
 >  システムで認識するは、コーデックをデジタル署名する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

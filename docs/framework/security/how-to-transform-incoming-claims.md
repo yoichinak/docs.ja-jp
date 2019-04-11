@@ -3,12 +3,12 @@ title: '方法: 入力方向の要求の変換'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344638"
 ---
 # <a name="how-to-transform-incoming-claims"></a>方法: 入力方向の要求の変換
 ## <a name="applies-to"></a>対象  
@@ -58,19 +58,19 @@ ms.locfileid: "50181632"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1.  システム特権のあるモードで管理者として Visual Studio を起動します。  
+1. システム特権のあるモードで管理者として Visual Studio を起動します。  
   
-2.  Visual Studio で、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+2. Visual Studio で、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
   
-3.  **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+3. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-4.  **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+4. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
   
-5.  **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
+5. **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
   
-6.  **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
+6. **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
   
-7.  *Default.aspx* ファイルの既存のマークアップを次のものに置き換え、ファイルを保存します。  
+7. *Default.aspx* ファイルの既存のマークアップを次のものに置き換え、ファイルを保存します。  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181632"
     </asp:Content>  
     ```  
   
-8.  *Default.aspx.cs* という名前の分離コード ファイルを開きます。 既存のコードを次のコードに置き換え、ファイルを保存します。  
+8. *Default.aspx.cs* という名前の分離コード ファイルを開きます。 既存のコードを次のコードに置き換え、ファイルを保存します。  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181632"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装するには  
   
-1.  Visual Studio でソリューションを右クリックし、**[追加]** をクリックして **[新しいプロジェクト]** をクリックします。  
+1. Visual Studio でソリューションを右クリックし、**[追加]** をクリックして **[新しいプロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクトの追加]** ウィンドウで、**[Visual C#]** テンプレート一覧から **[クラス ライブラリ]** を選択し、「`ClaimsTransformation`」と入力して **[OK]** をクリックします。 新しいプロジェクトがソリューション フォルダーに作成されます。  
+2. **[新しいプロジェクトの追加]** ウィンドウで、**[Visual C#]** テンプレート一覧から **[クラス ライブラリ]** を選択し、「`ClaimsTransformation`」と入力して **[OK]** をクリックします。 新しいプロジェクトがソリューション フォルダーに作成されます。  
   
-3.  **[ClaimsTransformation]** プロジェクトの下の **[参照]** を右クリックし、**[参照の追加]** をクリックします。  
+3. **[ClaimsTransformation]** プロジェクトの下の **[参照]** を右クリックし、**[参照の追加]** をクリックします。  
   
-4.  **参照マネージャー** ウィンドウで、**System.IdentityModel** を選択し、**[OK]** をクリックします。  
+4. **参照マネージャー** ウィンドウで、**System.IdentityModel** を選択し、**[OK]** をクリックします。  
   
-5.  **Class1.cs** を開くか、存在しない場合は **ClaimsTransformation** を右クリックして、**[追加]** をクリックし、**[クラス]** をクリックします。  
+5. **Class1.cs** を開くか、存在しない場合は **ClaimsTransformation** を右クリックして、**[追加]** をクリックし、**[クラス]** をクリックします。  
   
-6.  ディレクティブを使用して以下をコード ファイルに追加します。  
+6. ディレクティブを使用して以下をコード ファイルに追加します。  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  次のクラスとメソッドをコード ファイルに追加します。  
+7. 次のクラスとメソッドをコード ファイルに追加します。  
   
     > [!WARNING]
     >  次のコードは、デモの目的でのみ使用します。実稼働コードで、目的のアクセス許可を確認してください。  
@@ -150,7 +150,7 @@ ms.locfileid: "50181632"
     }  
     ```  
   
-8.  ファイルを保存し、**ClaimsTransformation** プロジェクトをビルドします。  
+8. ファイルを保存し、**ClaimsTransformation** プロジェクトをビルドします。  
   
 9. **TestApp** ASP.NET プロジェクトで、[参照] を右クリックし、**[参照の追加]** をクリックします。  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181632"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>フォーム認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには  
   
-1.  **F5** キーを押してアプリケーションをビルドし、実行します。 *Default.aspx* が表示されます。  
+1. **F5** キーを押してアプリケーションをビルドし、実行します。 *Default.aspx* が表示されます。  
   
-2.  *Default.aspx* ページで、**Your Claims** 見出しの下の表に、アカウントに関する **Issuer**、**OriginalIssuer**、**Type**、**Value**、および**ValueType** クレーム情報が表示されます。 最後の行は、次のように表示されます。  
+2. *Default.aspx* ページで、**Your Claims** 見出しの下の表に、アカウントに関する **Issuer**、**OriginalIssuer**、**Type**、**Value**、および**ValueType** クレーム情報が表示されます。 最後の行は、次のように表示されます。  
   
     ||||||  
     |-|-|-|-|-|  

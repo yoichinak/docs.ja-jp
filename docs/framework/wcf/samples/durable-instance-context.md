@@ -2,12 +2,12 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316935"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 このサンプルでは、永続性インスタンス コンテキストを有効にする Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
@@ -23,9 +23,9 @@ ms.locfileid: "58841452"
   
  前の説明から、目標を達成するための手順は大きく次の 2 つに分けられます。  
   
-1.  ネットワークに出力されるメッセージを、コンテキスト ID が含まれるように変更します。  
+1. ネットワークに出力されるメッセージを、コンテキスト ID が含まれるように変更します。  
   
-2.  サービス側のローカル動作を変更して、カスタムのインスタンス化ロジックを実装します。  
+2. サービス側のローカル動作を変更して、カスタムのインスタンス化ロジックを実装します。  
   
  この一覧の前者の手順は、カスタム チャネルとして実装され、チャネル レイヤにフックされる、ネットワーク上のメッセージに影響します。 後者の手順が影響を及ぼすのは、サービスのローカル動作だけです。したがって、いくつかのサービス拡張ポイントを拡張することによって実装できます。 以降のセクションでは、こうしたそれぞれの拡張について説明します。  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
 > [!NOTE]
 >  このサンプルを実行するには、SQL Server 2005 または SQL Express 2005 を実行している必要があります。 SQL Server 2005 を実行している場合は、サービスの接続文字列の構成を変更する必要があります  複数コンピューターで実行している場合、SQL Server が必要なのはサーバー コンピューターだけです。  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

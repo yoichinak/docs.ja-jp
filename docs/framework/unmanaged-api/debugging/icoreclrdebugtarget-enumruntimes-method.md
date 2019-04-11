@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134681"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes メソッド
 リモート コンピューターで実行されている指定のプロセスの共通言語ランタイム (CLR: Common Language Runtime) を列挙します。  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  成功。  
   
  S_FALSE  
- `dwInternalProcessID` が、コンピューターで実行されているどのプロセスにも一致しません。多くの場合、プロセスが既に終了していることが原因です。 `pcRuntimes` と `ppRuntimes` は null になります。  
+ `dwInternalProcessID` プロセスが終了したためは、おそらく、コンピューターで実行されている任意のプロセスを一致しません。 `pcRuntimes` `ppRuntimes`は null になります。  
   
  E_OUTOFMEMORY  
  `ppRuntimes`  用に十分なメモリを割り当てることができません。  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **.NET framework のバージョン:** 3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICoreClrDebugTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

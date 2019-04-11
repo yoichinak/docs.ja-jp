@@ -2,12 +2,12 @@
 title: ADO.NET でのデータ ソースへの接続
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083713"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET でのデータ ソースへの接続
 ADO.NET で使用して、**接続**接続文字列に必要な認証情報を指定して特定のデータ ソースに接続するオブジェクト。 **接続**オブジェクトを使用するデータ ソースの種類に依存します。  
@@ -22,9 +22,10 @@ ADO.NET で使用して、**接続**接続文字列に必要な認証情報を�
  使用する方法について説明します、 **InfoMessage**イベント データ ソースから情報メッセージを取得します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
 - [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [トランザクションとコンカレンシー](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

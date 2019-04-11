@@ -11,19 +11,19 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822909"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332327"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows API の呼び出し (Visual Basic)
 Windows API は、Windows オペレーティング システムの一部であるダイナミック リンク ライブラリ (Dll) です。 それらを使用するには、独自の同等のプロシージャを記述するのにことは困難である場合は、タスクを実行します。 たとえば、という名前の関数は、Windows`FlashWindowEx`を可能にすること、アプリケーションのタイトル バーを薄いおよび濃い網掛けを切り替える。  
   
  Windows API を使用して、コード内の利点は、数十個は既に書き込まれている便利な関数の使用を待機しているが含まれているため、開発時間を保存することができます。 欠点は、問題が生じた場合、および晙の処理が難しくなって Windows API であることができます。  
   
- Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 これらの違いにより、Windows API は COM オブジェクト、Windows API との相互運用ではなく、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]プラットフォームを使用して実行されます呼び出すには、pinvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)を参照してください。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
+ Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 これらの違いにより、Windows API は COM オブジェクト、Windows API との相互運用ではなく、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]プラットフォームを使用して実行されます呼び出すには、pinvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、次を参照してください。[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)します。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
   
  Windows API の呼び出しでは、Visual Basic では、以前は、プログラミングの重要な部分をされたが、Visual Basic .NET を使用して必要なことはほとんどありません。 可能であればからマネージ コードを使用する必要があります、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API の呼び出しではなく、タスクを実行します。 このチュートリアルは、使用する必要のある状況についての情報を提供します。 Windows API が必要です。  
   
@@ -34,16 +34,16 @@ Windows API は、Windows オペレーティング システムの一部であ�
   
 #### <a name="to-declare-a-dll-procedure"></a>DLL のプロシージャを宣言するには  
   
-1.  を呼び出そうと関数とその引数、引数の型の名前を特定し、値だけでなく、名前とそれを含んでいる DLL の場所を返します。  
+1. を呼び出そうと関数とその引数、引数の型の名前を特定し、値だけでなく、名前とそれを含んでいる DLL の場所を返します。  
   
     > [!NOTE]
     >  Windows API については、プラットフォーム SDK の Windows API で Win32 SDK ドキュメントを参照してください。 Windows API を使用する定数の詳細については、Windows.h、Platform SDK に含まれているなどのヘッダー ファイルを調べてください。  
   
-2.  クリックして、新しい Windows アプリケーション プロジェクトを開く**新規**上、**ファイル** メニューのをクリックして**プロジェクト**します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+2. クリックして、新しい Windows アプリケーション プロジェクトを開く**新規**上、**ファイル** メニューのをクリックして**プロジェクト**します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  選択**Windows アプリケーション**Visual Basic プロジェクト テンプレートの一覧から。 新しいプロジェクトが表示されます。  
+3. 選択**Windows アプリケーション**Visual Basic プロジェクト テンプレートの一覧から。 新しいプロジェクトが表示されます。  
   
-4.  次の追加`Declare`クラスまたはモジュールの DLL を使用するのいずれかの機能します。  
+4. 次の追加`Declare`クラスまたはモジュールの DLL を使用するのいずれかの機能します。  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
@@ -71,38 +71,38 @@ Windows API は、Windows オペレーティング システムの一部であ�
   
 ###### <a name="to-declare-constants-for-windows-api-calls"></a>Windows API 呼び出しのための定数を宣言するには  
   
-1.  Windows 関数の呼び出しと、ドキュメントを参照してください。 使用されている定数の名前と、これらの定数の数値を含む .h ファイルの名前を決定します。  
+1. Windows 関数の呼び出しと、ドキュメントを参照してください。 使用されている定数の名前と、これらの定数の数値を含む .h ファイルの名前を決定します。  
   
-2.  メモ帳などのテキスト エディターを使用して、ヘッダー (.h) ファイルの内容を表示、使用する定数に関連付けられている値を見つけてください。 たとえば、 `MessageBox` API は、定数を使用して`MB_ICONQUESTION`メッセージ ボックスに疑問符を表示します。 定義を`MB_ICONQUESTION`WinUser.h では、次のように表示されます。  
+2. メモ帳などのテキスト エディターを使用して、ヘッダー (.h) ファイルの内容を表示、使用する定数に関連付けられている値を見つけてください。 たとえば、 `MessageBox` API は、定数を使用して`MB_ICONQUESTION`メッセージ ボックスに疑問符を表示します。 定義を`MB_ICONQUESTION`WinUser.h では、次のように表示されます。  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  同等の追加`Const`ステートメントをクラスまたはモジュールがアプリケーションで利用できるこれらの定数を確認します。 例:  
+3. 同等の追加`Const`ステートメントをクラスまたはモジュールがアプリケーションで利用できるこれらの定数を確認します。 例:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>DLL のプロシージャを呼び出す  
   
-1.  という名前のボタンを追加`Button1`の起動時に、プロジェクトの形式し、すると、そのコードの表示をダブルクリックします。 ボタンのイベント ハンドラーが表示されます。  
+1. という名前のボタンを追加`Button1`の起動時に、プロジェクトの形式し、すると、そのコードの表示をダブルクリックします。 ボタンのイベント ハンドラーが表示されます。  
   
-2.  コードを追加して、`Click`プロシージャを呼び出すし、適切な引数を提供する、追加したボタンのイベント ハンドラー。  
+2. コードを追加して、`Click`プロシージャを呼び出すし、適切な引数を提供する、追加したボタンのイベント ハンドラー。  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3.  F5 キーを押してプロジェクトを実行します。 両方のメッセージ ボックスが表示されます**はい**と**いいえ**返信ボタン。 いずれかをクリックします。  
+3. F5 キーを押してプロジェクトを実行します。 両方のメッセージ ボックスが表示されます**はい**と**いいえ**返信ボタン。 いずれかをクリックします。  
   
 #### <a name="data-marshaling"></a>データのマーシャ リング  
- Visual Basic では、パラメーターと、Windows API 呼び出しの戻り値のデータ型に自動的に変換しますが、使用することができます、 `MarshalAs` API が必要とするアンマネージ データ型を明示的に指定する属性。 相互運用マーシャ リングの詳細については、[相互運用マーシャ リング](../../../framework/interop/interop-marshaling.md)を参照してください。  
+ Visual Basic では、パラメーターと、Windows API 呼び出しの戻り値のデータ型に自動的に変換しますが、使用することができます、 `MarshalAs` API が必要とするアンマネージ データ型を明示的に指定する属性。 相互運用マーシャ リングの詳細については、次を参照してください。[相互運用マーシャ リング](../../../framework/interop/interop-marshaling.md)します。  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>API 呼び出しで宣言して MarshalAs を使用するには  
   
-1.  データの型を引数、呼び出そうと関数の名前を特定し、値を返します。  
+1. データの型を引数、呼び出そうと関数の名前を特定し、値を返します。  
   
-2.  アクセスを簡略化する、`MarshalAs`属性を追加、`Imports`クラスまたはモジュールの次の例のように、コードの先頭にステートメント。  
+2. アクセスを簡略化する、`MarshalAs`属性を追加、`Imports`クラスまたはモジュールの次の例のように、コードの先頭にステートメント。  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3.  クラスまたはモジュールを使用しているし、適用するにインポートした関数の関数プロトタイプを追加、`MarshalAs`属性をパラメーターまたは戻り値。 次の例では、型を要求する API 呼び出しで`void*`としてマーシャ リング`AsAny`:  
+3. クラスまたはモジュールを使用しているし、適用するにインポートした関数の関数プロトタイプを追加、`MarshalAs`属性をパラメーターまたは戻り値。 次の例では、型を要求する API 呼び出しで`void*`としてマーシャ リング`AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
@@ -113,27 +113,27 @@ Windows API は、Windows オペレーティング システムの一部であ�
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>DllImport 属性を使用して Windows API を呼び出す  
   
-1.  クリックして、新しい Windows アプリケーション プロジェクトを開く**新規**上、**ファイル** メニューのをクリックして**プロジェクト**します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+1. クリックして、新しい Windows アプリケーション プロジェクトを開く**新規**上、**ファイル** メニューのをクリックして**プロジェクト**します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  選択**Windows アプリケーション**Visual Basic プロジェクト テンプレートの一覧から。 新しいプロジェクトが表示されます。  
+2. 選択**Windows アプリケーション**Visual Basic プロジェクト テンプレートの一覧から。 新しいプロジェクトが表示されます。  
   
-3.  という名前のボタンを追加`Button2`スタートアップ フォームにします。  
+3. という名前のボタンを追加`Button2`スタートアップ フォームにします。  
   
-4.  ダブルクリック`Button2`フォームのコード ビューを開きます。  
+4. ダブルクリック`Button2`フォームのコード ビューを開きます。  
   
-5.  アクセスを簡略化する`DllImport`、追加、`Imports`スタートアップ フォーム クラスのコードの先頭にステートメント。  
+5. アクセスを簡略化する`DllImport`、追加、`Imports`スタートアップ フォーム クラスのコードの先頭にステートメント。  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6.  空の関数を前の宣言、`End Class`フォーム、および名、関数のステートメント`MoveFile`します。  
+6. 空の関数を前の宣言、`End Class`フォーム、および名、関数のステートメント`MoveFile`します。  
   
-7.  適用、`Public`と`Shared`関数宣言とパラメーターを設定する修飾子`MoveFile`Windows API 関数を使用して、引数に基づいた。  
+7. 適用、`Public`と`Shared`関数宣言とパラメーターを設定する修飾子`MoveFile`Windows API 関数を使用して、引数に基づいた。  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      関数は、任意の有効なプロシージャ名前を持つことができます。`DllImport`属性は、DLL の名前を指定します。 パラメーターのマーシャ リングの相互運用性も処理して、データに類似した Visual Studio のデータ型を選択できるように、戻り値の型 API では。  
   
-8.  適用、`DllImport`属性を空の関数。 最初のパラメーターを呼び出している関数を含む DLL の場所と名前です。 Windows システムのディレクトリにあるファイルのパスを指定する必要はありません。 2 番目のパラメーターは、Windows api 関数の名前を指定する名前付き引数です。 この例で、`DllImport`属性への呼び出しを強制する`MoveFile`に転送される`MoveFileW`KERNEL32 でします。DLL です。 `MoveFileW`メソッドは、パスからファイルをコピー`src`パスに`dst`します。  
+8. 適用、`DllImport`属性を空の関数。 最初のパラメーターを呼び出している関数を含む DLL の場所と名前です。 Windows システムのディレクトリにあるファイルのパスを指定する必要はありません。 2 番目のパラメーターは、Windows api 関数の名前を指定する名前付き引数です。 この例で、`DllImport`属性への呼び出しを強制する`MoveFile`に転送される`MoveFileW`KERNEL32 でします。DLL です。 `MoveFileW`メソッドは、パスからファイルをコピー`src`パスに`dst`します。  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
@@ -152,7 +152,7 @@ Windows API は、Windows オペレーティング システムの一部であ�
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [自動](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
 - [マネージド コードでのプロトタイプの作成](../../../framework/interop/creating-prototypes-in-managed-code.md)

@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45278b116ce1ea1a910d806df408c8692338d9a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083674"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 列挙体
 ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。  
@@ -42,7 +42,7 @@ typedef enum CorDebugRecordFormat {
  メンバー、`CorDebugRecordFormat`に列挙体が渡される、 [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)メソッド内のバイト配列の形式を指定するその`pRecord`引数。  
   
 > [!NOTE]
->  この列挙体は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
+>  この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
@@ -51,7 +51,8 @@ typedef enum CorDebugRecordFormat {
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [列挙体のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

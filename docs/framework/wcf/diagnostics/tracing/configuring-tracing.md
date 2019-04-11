@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162882"
 ---
 # <a name="configuring-tracing"></a>トレースの構成
 ここでは、トレースを有効にする方法、トレースを出力し、トレース レベルを設定するようにトレース ソースを構成する方法、エンドツーエンドのトレース相関をサポートするようにアクティビティ トレースと伝達を設定する方法、およびトレースにアクセスするようにトレース リスナーを設定する方法について説明します。  
@@ -133,7 +133,7 @@ ms.locfileid: "54584913"
 </system.diagnostics>  
 ```  
   
- ユーザー定義のトレース ソースを作成する方法の詳細については、[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)を参照してください。  
+ ユーザー定義のトレース ソースを作成する方法の詳細については、次を参照してください。[トレース拡張](../../../../../docs/framework/wcf/samples/extending-tracing.md)します。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>トレースを使用するためのトレース リスナーの構成  
  実行時に、WCF は、データを処理するリスナーをトレース データをフィードします。 WCF は、いくつかの定義済みリスナーを<xref:System.Diagnostics>出力の形式が異なります。 カスタム リスナーの種類を追加することもできます。  
@@ -174,14 +174,15 @@ ms.locfileid: "54584913"
   
  `propagateActivity` 属性は、メッセージ交換に参加している他のエンドポイントにアクティビティを伝達する必要があるかどうかを示します。 この値を `true` に設定すると、任意の 2 つのエンドポイントで生成されたトレース ファイルを取得し、一方のエンドポイントのトレース セットがもう一方のエンドポイントのトレース セットにどのように転送されるかを監視できます。  
   
- アクティビティ トレースと伝達の詳細については、[伝達](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)を参照してください。  
+ アクティビティ トレースと伝達の詳細については、次を参照してください。[伝達](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)します。  
   
  両方`propagateActivity`と`ActivityTracing`ブール値 System.ServiceModel TraceSource に適用されます。 `ActivityTracing`値は、WCF またはユーザー定義のものを含む、任意のトレース ソースにも適用されます。  
   
  ユーザー定義のトレース ソースでは、`propagateActivity` 属性を使用できません。 ユーザー コード アクティビティ ID の伝達では、ServiceModel `ActivityTracing` 属性を `propagateActivity` に設定しているときは、ServiceModel `true` を設定しないでください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [方法: 作成し、トレース リスナーの初期化](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [方法: トレース リスナーを作成し初期化する](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)

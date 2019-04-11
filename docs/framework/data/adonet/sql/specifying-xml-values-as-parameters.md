@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 23c594fc57b74ea4c40a95d18b060bc6ccee46ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159251"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
 クエリには、値を持つ XML 文字列のパラメーターが必要な場合は、開発者がのインスタンスを使用してその値を提供できます、 **SqlXml**データ型。 特別な処理はありません。SQL Server の XML 列では、他のデータ型とまったく同じ方法でパラメーター値をそのまま使用します。  
@@ -160,6 +160,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server における XML データ](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

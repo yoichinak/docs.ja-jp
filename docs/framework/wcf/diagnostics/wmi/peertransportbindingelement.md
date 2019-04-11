@@ -2,12 +2,12 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 437ccc0446e3cc05596ab12b7908177b7f78e431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba9031dad96f12c7c48b03f1da4af1b3adc6dd4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194067"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
@@ -54,7 +54,8 @@ class PeerTransportBindingElement : TransportBindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

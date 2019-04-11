@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207332"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 関数
 指定したアプリケーションによって要求された共通言語ランタイム (CLR) のバージョン番号を取得します。 そのバージョンがインストールされていない場合は、要求されるバージョンより前にインストールされた最も新しいバージョンを取得します。  
@@ -60,7 +60,7 @@ HRESULT GetRequestedRuntimeVersion (
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
 |ERROR_INSUFFICIENT_BUFFER|バージョン バッファーは、バージョン文字列を格納するのに十分な大きさではありません。|  
-|E_POINTER|`pdwLength` が null です。|  
+|E_POINTER|`pdwLength` null です。|  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
@@ -69,9 +69,10 @@ HRESULT GetRequestedRuntimeVersion (
   
  **ライブラリ:** MSCorEE.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [GetRequestedRuntimeInfo 関数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetVersionFromProcess 関数](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

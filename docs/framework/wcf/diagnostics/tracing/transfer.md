@@ -2,18 +2,18 @@
 title: 転送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: d6ca1f8471fb1513263354e2369891bf9ffcb583
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311020"
 ---
 # <a name="transfer"></a>転送
 このトピックでは、Windows Communication Foundation (WCF) のアクティビティ トレース モデルでの転送について説明します。  
   
 ## <a name="transfer-definition"></a>転送の定義  
- アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、バイトは、サービスで受信したときに、"リッスン"アクティビティに転送されますバイトを受信アクティビティ メッセージ オブジェクトが作成される場所。 エンド ツー エンドのトレースのシナリオ、および個々 のアクティビティとトレース デザインについては、[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)を参照してください。  
+ アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、バイトは、サービスで受信したときに、"リッスン"アクティビティに転送されますバイトを受信アクティビティ メッセージ オブジェクトが作成される場所。 エンド ツー エンドのトレースのシナリオ、および個々 のアクティビティとトレース デザインについては、次を参照してください。[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)します。  
   
  転送トレースを出力するには、次の構成コードのように、トレース ソースに `ActivityTracing` を設定します。  
   
@@ -42,21 +42,21 @@ ms.locfileid: "54552922"
 ## <a name="activity-transfer-sequence"></a>アクティビティ転送シーケンス  
  適切なアクティビティ転送シーケンスには、次の手順が含まれます。  
   
-1.  新しい gAId を選択して、新しいアクティビティを開始します。  
+1. 新しい gAId を選択して、新しいアクティビティを開始します。  
   
-2.  現在のアクティビティ ID から新しい gAId への転送トレースを出力します。  
+2. 現在のアクティビティ ID から新しい gAId への転送トレースを出力します。  
   
-3.  TLS に新しい ID を設定します。  
+3. TLS に新しい ID を設定します。  
   
-4.  Start トレースを出力して、新しいアクティビティの開始を示します。  
+4. Start トレースを出力して、新しいアクティビティの開始を示します。  
   
-5.  次の手順を実行して、元のアクティビティに戻ります。  
+5. 次の手順を実行して、元のアクティビティに戻ります。  
   
-6.  元の gAId への転送トレースを出力します。  
+6. 元の gAId への転送トレースを出力します。  
   
-7.  Stop トレースを出力して、新しいアクティビティの終了を示します。  
+7. Stop トレースを出力して、新しいアクティビティの終了を示します。  
   
-8.  TLS を以前の gAId に設定します。  
+8. TLS を以前の gAId に設定します。  
   
  これを実行する方法を次のコード例に示します。 この例は、新しいアクティビティへの転送時にブロック呼び出しが行われることを想定しており、Suspend トレースと Resume トレースが含まれています。  
   
@@ -103,6 +103,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

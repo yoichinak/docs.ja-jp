@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Window control type
 - control types, Window
 ms.assetid: 53be78a6-cdcc-4af3-a464-5927d19c54e8
-ms.openlocfilehash: 40e1b79a23d1732319861b536362b208b9fba92b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a35076da60ecaf0a60fed339992b3d25c03f3452
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216510"
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>UI オートメーションによる Window コントロール型のサポート
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57678710"
   
 |コントロール ビュー|コンテンツ ビュー|  
 |------------------|------------------|  
-|[Window]|[Window]|  
+|ウィンドウ|ウィンドウ|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>必須の UI オートメーション プロパティ  
@@ -40,7 +40,7 @@ ms.locfileid: "57678710"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|「ノート」をご覧ください。|このプロパティの値は、アプリケーションのすべてのコントロールで一意である必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|「ノート」をご覧ください。|コントロール全体を格納する最も外側の四角形。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|「ノート」をご覧ください。|ウィンドウ コントロールにはクリック可能なポイントがなければならず、これをクリックすることによってウィンドウが選択、または選択解除された状態になります。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|[Window]|この値は、すべての UI フレームワークで同じです。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ウィンドウ|この値は、すべての UI フレームワークで同じです。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|ウィンドウ コントロールは、常にコンテンツである必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|ウィンドウ コントロールは、常にコントロールである必要があります。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|「ノート」をご覧ください。|コントロールがキーボード フォーカスを受け取ることができる場合は、このプロパティをサポートする必要があります。|  
@@ -62,7 +62,7 @@ ms.locfileid: "57678710"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのウィンドウ コントロールでサポートする必要がある [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AsyncContentLoadedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|必須|なし|  
@@ -83,6 +83,7 @@ ms.locfileid: "57678710"
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> プロパティ変更イベント。|状況に依存|なし|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.Window>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

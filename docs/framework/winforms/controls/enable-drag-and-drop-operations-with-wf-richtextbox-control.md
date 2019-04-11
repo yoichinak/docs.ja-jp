@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールでドラッグ アンド ドロップ操作を有効にします。'
+title: '方法: Windows フォームの RichTextBox コントロールにおけるドラッグ アンド ドロップ操作を有効にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310279"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールでドラッグ アンド ドロップ操作を有効にします。
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールにおけるドラッグ アンド ドロップ操作を有効にする
 Windows フォームでのドラッグ アンド ドロップ操作の <xref:System.Windows.Forms.RichTextBox> コントロールは、 <xref:System.Windows.Forms.RichTextBox.DragEnter> および <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントを処理すると実行されます。 そのため、ドラッグ アンド ドロップの操作は <xref:System.Windows.Forms.RichTextBox> コントロールを使用すると非常にシンプルです。  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>RichTextBox コントロールでドラッグ操作を有効にするには  
   
-1.  <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを `true`に設定します。  
+1. <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを `true`に設定します。  
   
-2.  <xref:System.Windows.Forms.RichTextBox.DragEnter> イベントのイベント ハンドラーで適切なコードを作成します。 `if` ステートメントを使用して、ドラッグされるデータが適切な型 (この場合はテキスト) であることを確認します。 <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> プロパティは、いずれかの <xref:System.Windows.Forms.DragDropEffects> 列挙値に設定できます。  
+2. <xref:System.Windows.Forms.RichTextBox.DragEnter> イベントのイベント ハンドラーで適切なコードを作成します。 `if` ステートメントを使用して、ドラッグされるデータが適切な型 (この場合はテキスト) であることを確認します。 <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> プロパティは、いずれかの <xref:System.Windows.Forms.DragDropEffects> 列挙値に設定できます。  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -76,7 +76,7 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントを処理するコードを記述します。 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> メソッドを使用してドラッグされるデータを取得します。  
+3. <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントを処理するコードを記述します。 <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> メソッドを使用してドラッグされるデータを取得します。  
   
      次の例では、コードは、ドラッグされるデータに相当する <xref:System.Windows.Forms.RichTextBox.Text%2A> コントロールの <xref:System.Windows.Forms.RichTextBox> のプロパティを設定します。 <xref:System.Windows.Forms.RichTextBox> コントロール内にすでにテキストがある場合、ドラッグされたデータが挿入ポイントに挿入されます。  
   
@@ -154,18 +154,19 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
   
 ### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>アプリケーションでドラッグ アンド ドロップ機能をテストするには  
   
-1.  アプリケーションを保存し、ビルドします。 実行中にワードパッドを起動します。  
+1. アプリケーションを保存し、ビルドします。 実行中にワードパッドを起動します。  
   
      ワードパッドは、Windows によってインストールされるテキスト エディターであり、ドラッグ アンド ドロップ操作をサポートします。 ワードパッドを起動するには、 **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** を選択し、 `WordPad` [ファイル名を指定して実行] **ダイアログ ボックスのテキスト ボックスに「** 」と入力し、 **[OK]** をクリックします。  
   
-2.  ワードパッドが起動したら、テキストの文字列を入力します。 マウスを使用してテキストを選択し、選択したテキストを Windows アプリケーションの <xref:System.Windows.Forms.RichTextBox> コントロールにドラッグします。  
+2. ワードパッドが起動したら、テキストの文字列を入力します。 マウスを使用してテキストを選択し、選択したテキストを Windows アプリケーションの <xref:System.Windows.Forms.RichTextBox> コントロールにドラッグします。  
   
      マウスを <xref:System.Windows.Forms.RichTextBox> コントロールに移動すると (そして、その結果 <xref:System.Windows.Forms.RichTextBox.DragEnter> イベントが発生すると)、マウス ポインターの形が変化し、選択したテキストを <xref:System.Windows.Forms.RichTextBox> コントロールにドロップできます。  
   
      マウス ボタンを放すと、選択したテキストがドロップ (つまり <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントが発生) し、 <xref:System.Windows.Forms.RichTextBox> コントロール内に挿入されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行する](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

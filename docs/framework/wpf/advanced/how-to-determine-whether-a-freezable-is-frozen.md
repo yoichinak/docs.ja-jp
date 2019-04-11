@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-ms.openlocfilehash: 005bb27803830a2e38a7b143d2c4cff669ad1da6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197062"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>方法: Freezable が固定されているかどうかを判別する
 この例を確認する方法を示して かどうかを<xref:System.Windows.Freezable>オブジェクトが固定されています。 固定された変更を行う場合<xref:System.Windows.Freezable>オブジェクトがスローされます、<xref:System.InvalidOperationException>します。 この例外をスローすることを避けるため、使用、<xref:System.Windows.Freezable.IsFrozen%2A>のプロパティ、<xref:System.Windows.Freezable>が固定されているかどうかを判断するオブジェクト。  
@@ -26,7 +26,8 @@ ms.locfileid: "57362514"
  詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](freezable-objects-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
 - [Freezable オブジェクトの概要](freezable-objects-overview.md)
-- [方法トピック](base-elements-how-to-topics.md)
+- [方法のトピック](base-elements-how-to-topics.md)

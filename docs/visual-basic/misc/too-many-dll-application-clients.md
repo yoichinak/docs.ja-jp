@@ -12,7 +12,7 @@ ms.lasthandoff: 03/15/2019
 ms.locfileid: "58051034"
 ---
 # <a name="too-many-dll-application-clients"></a>DLL のクライアント アプリケーションの数が多すぎます
-Visual basic のダイナミック リンク ライブラリ (DLL) によってアプリケーション ホストの数に制限アクセスにのみ対応できます。 アプリケーションは Visual Basic のホスト (アプリケーションによって一部のアクセス可能性があります) である他のアプリケーションすべてを試みていると同時に、Visual Basic DLL にアクセスします。  
+Visual Basic のダイナミック リンク ライブラリ (DLL) によってアプリケーション ホストの数に制限アクセスにのみ対応できます。 アプリケーションは Visual Basic のホスト (アプリケーションによって一部のアクセス可能性があります) である他のアプリケーションすべてを試みていると同時に、Visual Basic DLL にアクセスします。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

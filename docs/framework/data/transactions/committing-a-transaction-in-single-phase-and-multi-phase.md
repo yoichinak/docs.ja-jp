@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089559"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>単一フェースおよび複数フェーズでのトランザクションのコミット
 トランザクションで使用される各リソースは、リソース マネージャー (RM) によって管理され、その動作はトランザクション マネージャー (TM) によって調整されます。 [トランザクションの参加者として参加リソース](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)トピックでは、リソース (または複数のリソース) をトランザクションに参加する方法について説明します。 ここでは、参加リソース間でトランザクションのコミットメントを調整する方法について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "54589520"
   
  トランザクションに複数のリソースが含まれる場合は、2 フェーズ コミット (2PC) を実行する必要があります。 2 フェーズ コミット プロトコル (準備フェーズとコミット フェーズ) により、すべてのリソースに対する変更がトランザクションの終了時に完全にコミットされるか、または完全にロールバックされることが保証されます。 その後、すべての参加要素に最終結果が通知されます。 2 フェーズ コミット プロトコルの詳細については、ブックを参照してください"*トランザクション処理。概念と手法 (Morgan Kaufmann Series in Data Management Systems) ISBN:1558601902*"者、Jim Gray。  
   
- 単一フェーズ コミット プロトコルに参加することで、トランザクションのパフォーマンスを最適化することもできます。 詳細については、[Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)を参照してください。  
+ 単一フェーズ コミット プロトコルに参加することで、トランザクションのパフォーマンスを最適化することもできます。 詳細については、次を参照してください。 [Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)します。  
   
  トランザクション結果の通知を受信するだけで、コミットまたはロールバックの選択には参加しない場合は、<xref:System.Transactions.Transaction.TransactionCompleted> イベントに登録する必要があります。  
   
@@ -107,8 +107,9 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>単一フェーズ コミットの最適化  
- 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 このプロトコルの詳細については、[Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)を参照してください。  
+ 単一フェーズ コミット プロトコルは、すべての更新が明示的な調整なしに行われるため、実行時に、より効率的です。 このプロトコルの詳細については、次を参照してください。 [Single Phase Commit and Promotable Single Phase Notification を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [トランザクションの参加要素としてのリソースの参加](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

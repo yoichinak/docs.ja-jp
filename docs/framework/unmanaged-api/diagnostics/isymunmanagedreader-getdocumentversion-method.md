@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 863ad8e18909a834f1da816c73fe3dc71504caff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 92353cfc2d9ce39074bf43937b5673ff51e34822
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080008"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion メソッド
 指定されたドキュメントの指定したバージョンを取得します。 ドキュメントのバージョンが 1 から始まりを使用して、ドキュメントが更新されるたびに増分されますが、 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md)メソッド。 場合、`pbCurrent`パラメーターが`true`、これは、ドキュメントの最新バージョンです。  
@@ -53,4 +53,5 @@ HRESULT GetDocumentVersion (
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

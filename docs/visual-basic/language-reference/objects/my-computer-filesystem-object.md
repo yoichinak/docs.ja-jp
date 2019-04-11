@@ -25,7 +25,7 @@ ms.locfileid: "58827589"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.FileSystem` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.FileSystem>」をご覧ください。  
   
- 詳細については、[Visual basic におけるファイル アクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)を参照してください。  
+ 詳細については、[Visual Basic におけるファイル アクセス](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)を参照してください。  
   
 > [!NOTE]
 >  内のクラスを使用することも、<xref:System.IO?displayProperty=nameWithType>ドライブ、ファイル、およびディレクトリを使用する名前空間。  

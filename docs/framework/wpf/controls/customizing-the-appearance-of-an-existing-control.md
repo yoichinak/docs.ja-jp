@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098963"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>視覚的な構造とコントロールの視覚的な動作を指定します。 コントロールの外観をカスタマイズするには、新しい it 提供することにより<xref:System.Windows.Controls.ControlTemplate>します。 作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、その機能を変更することがなく、既存のコントロールの外観を置き換えます。 たとえば、行うことができます、ボタン、アプリケーションで、既定の四角形から丸い形が、ボタンが引き続き発生、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
@@ -31,8 +31,7 @@ ms.locfileid: "57375104"
   
  ![赤い境界線付きのボタンをクリックします。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 カスタム コントロール テンプレートを使用したボタンにマウス ポインターを置いた状態  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックは、「[コントロール](index.md)」で説明したコントロールとスタイルの作成方法および使用方法を理解していることを前提としています。 継承する要素にこのトピックで説明する概念を適用、<xref:System.Windows.Controls.Control>クラスを除く、 <xref:System.Windows.Controls.UserControl>。 適用することはできません、<xref:System.Windows.Controls.ControlTemplate>を<xref:System.Windows.Controls.UserControl>します。  
@@ -262,4 +261,5 @@ ms.locfileid: "57375104"
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [スタイルとテンプレート](styling-and-templating.md)

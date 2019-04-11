@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107986"
 ---
 # <a name="using-transformations-to-scale-colors"></a>変換を使用した色のスケーリング
 1 つ以上の数が 4 つの色コンポーネントのスケーリング変換を乗算します。 次の表に、スケーリングを表すカラー行列のエントリが与えられます。  
@@ -64,6 +64,7 @@ ms.locfileid: "58653991"
 |(1, 0, 1, 1)|(0.75, 0, 0.5, 1)|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197387"
 ---
 # <a name="graphics-rendering-tiers"></a>グラフィックスの描画層
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを実行するデバイスのグラフィックス ハードウェア性能は描画層で決まります。  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>グラフィックス ハードウェア  
  描画層に最も影響を与えるグラフィックス ハードウェアの機能:  
@@ -58,7 +56,7 @@ ms.locfileid: "57357522"
   
 |機能|層 1|層 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] のバージョン|9.0 以上が要求されます。|9.0 以上が要求されます。|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|9.0 以上が要求されます。|9.0 以上が要求されます。|  
 |ビデオ RAM|60MB 以上が要求されます。|120MB 以上が要求されます。|  
 |ピクセル シェーダー|バージョン 2.0 以上が要求されます。|バージョン 2.0 以上が要求されます。|  
 |頂点シェーダー|要件はありません。|バージョン 2.0 以上が要求されます。|  
@@ -70,10 +68,10 @@ ms.locfileid: "57357522"
 |-------------|-----------|  
 |2D 描画|ほとんどの 2D 描画をサポートします。|  
 |3D ラスター化|ほとんどの 3D ラスター化をサポートします。|  
-|3D 異方性フィルター処理|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は 3D コンテンツを描画するとき、異方性フィルター処理を試行します。 異方性フィルター処理は、カメラから遠くにあり、カメラに対して急な角度が付く表面の画質を上げます。|  
-|3D MIP マッピング|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は 3D コンテンツを描画するとき、MIP マッピングを試行します。 テクスチャで小さな視野を占めるとき、MIP マッピングがテクスチャの描画品質を向上する<xref:System.Windows.Controls.Viewport3D>します。|  
+|3D 異方性フィルター処理|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3D コンテンツを描画するとき、異方性フィルタ リングを使用しようとします。 異方性フィルター処理は、カメラから遠くにあり、カメラに対して急な角度が付く表面の画質を上げます。|  
+|3D MIP マッピング|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 3D コンテンツを描画するときに、MIP マッピングを使用しようとします。 テクスチャで小さな視野を占めるとき、MIP マッピングがテクスチャの描画品質を向上する<xref:System.Windows.Controls.Viewport3D>します。|  
 |放射状グラデーション|サポートされていますの使用を避けるため<xref:System.Windows.Media.RadialGradientBrush>ラージ オブジェクトにします。|  
-|3D ライティング計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は頂点ごとに照明を実行します。つまり、メッシュに適用される素材ごとに各頂点で光の強度を計算する必要があります。|  
+|3D ライティング計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] メッシュに適用される素材ごとに各頂点で光の強度を計算する必要があるため、頂点ごとに照明を実行します。|  
 |テキスト描画|サブピクセル フォント描画では、グラフィックス ハードウェアのピクセル シェーダーを利用します。|  
   
  次の機能は、描画層 2 でのみハードウェア高速化されます。  
@@ -98,11 +96,11 @@ ms.locfileid: "57357522"
  次のリソースは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションのパフォーマンス特性の分析に役立ちます。  
   
 ### <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の描画を制御するためのレジストリ設定が 4 つあります。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 4 つのレジストリ設定を制御するには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レンダリング。  
   
 |設定|説明|  
 |-------------|-----------------|  
-|**Disable Hardware Acceleration Option (ハードウェア高速化オプションを無効にする)**|ハードウェア高速化を有効にするかどうかを指定します。|  
+|**Disable Hardware Acceleration Option (ハードウェアの高速化オプションを無効にする)**|ハードウェア高速化を有効にするかどうかを指定します。|  
 |**Maximum Multisample Value (最大マルチサンプル値)**|[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] コンテンツをアンチエイリアシングするためのマルチサンプリングの度合いを指定します。|  
 |**Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)**|2004 年 11 月より前にリリースされたドライバーについて、ハードウェア高速化を無効にするかどうかを指定します。|  
 |**Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)**|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でリファレンス ラスタライザーを使用するかどうかを指定します。|  
@@ -110,7 +108,7 @@ ms.locfileid: "57357522"
  これらの設定には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レジストリ設定の参照方法を認識する外部構成ユーティリティを使用してアクセスできます。 これらの設定は、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] レジストリ エディターを使用して値に直接アクセスして作成または変更することもできます。 詳細については、「[グラフィックス レンダリングのレジストリ設定](../graphics-multimedia/graphics-rendering-registry-settings.md)」を参照してください。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF パフォーマンス プロファイリング データ  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にはパフォーマンス プロファイリング ツールのセットがあります。アプリケーションの実行時動作を分析したり、適用できるパフォーマンス最適化の種類を決定したりできます。 次の表は、[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] ツール、WPF Performance Suite に含まれるパフォーマンス プロファイリング ツールをまとめたものです。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] パフォーマンス プロファイル、アプリケーションの実行時の動作を分析し、適用できるパフォーマンス最適化の種類を決定するためのツールのスイートを提供します。 次の表は、[!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] ツール、WPF Performance Suite に含まれるパフォーマンス プロファイリング ツールをまとめたものです。  
   
 |ツール|説明|  
 |----------|-----------------|  
@@ -130,6 +128,7 @@ ms.locfileid: "57357522"
 DirectX 診断ツールのメイン ウィンドウ  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)

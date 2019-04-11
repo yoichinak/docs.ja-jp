@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 945972269871c3e78c19cc1038dd96a7f098b997
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e480c408c10eb9e135f260426750f7747e5d8ce5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117353"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
 このアセンブリが参照するアセンブリのメタデータを含む `AssemblyRef` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
@@ -56,7 +56,7 @@ HRESULT DefineAssemblyRef (
  [in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- [in]参照先のアセンブリに関連付けられたデータをハッシュします。 任意。  
+ [in]参照先のアセンブリに関連付けられたデータをハッシュします。 省略可能です。  
   
  `cbHashValue`  
  [in]バイト サイズ`pbHashValue`します。  
@@ -79,7 +79,8 @@ HRESULT DefineAssemblyRef (
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03d701d0801c55b6e91600f0767a6d737e4915c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 002e53d380140a63297a90baa270b5a6f1e5e328
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192265"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType メソッド
 "ICorDebugType"オブジェクトを表すインターフェイス ポインターを取得、<xref:System.Type>のこの値。  
@@ -49,7 +49,6 @@ HRESULT GetExactType (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの DataGridView コントロール内の列の順序を変更します。'
+title: '方法: Windows フォーム DataGridView コントロールの列の順序を変更する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 0e49107193d546e590582ca6bab798149d7064a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90d262e738f092215e88e38e31169d74059e4401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228797"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロール内の列の順序を変更します。
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの列の順序を変更する
 <xref:System.Windows.Forms.DataGridView> を使用してデータをデータ ソースから表示する場合、データ ソースのスキーマの列が、表示したい順序で表示されないことがあります。 <xref:System.Windows.Forms.DataGridViewColumn> クラスの <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> プロパティを使用して、列の表示順序を変更できます。  
   
  次のコード例は、Northwind サンプル データベース内の Customers テーブルにバインドするときに自動的に生成される列のいくつかを再配置します。 バインドする方法について、<xref:System.Windows.Forms.DataGridView>データベース テーブルにコントロールを参照してください[方法。バインド データを Windows フォーム DataGridView コントロール](how-to-bind-data-to-the-windows-forms-datagridview-control.md)します。  
@@ -35,9 +35,10 @@ ms.locfileid: "57711266"
 -   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType>、および <xref:System.Xml?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールにデータをバインドします。](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [方法: データを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

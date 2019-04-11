@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072546"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>データ コントラクト シリアライザーでサポートされる型
 Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Serialization.DataContractSerializer>データを XML に変換して、XML をデータに変換する既定のシリアル化エンジンとして。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 *データ コントラクト* 型をシリアル化するように設計されています。 ただし、暗黙のデータ コントラクトを持つと考えられるその他の型も多数サポートされています。 以下は、シリアル化可能なすべての型です。  
   
 -   パラメーターを持たないコンストラクターを持つ公開されている型すべて  
   
--   データ コントラクト型。 <xref:System.Runtime.Serialization.DataContractAttribute> 属性が適用される型です。 ビジネス オブジェクトを表す新しいカスタム型は、通常、データ コントラクト型として作成されます。 詳細については、[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)と[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)を参照してください。  
+-   データ コントラクト型。 <xref:System.Runtime.Serialization.DataContractAttribute> 属性が適用される型です。 ビジネス オブジェクトを表す新しいカスタム型は、通常、データ コントラクト型として作成されます。 詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)と[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)します。  
   
--   コレクション型。 データのリストを表す型です。 型の通常の配列、または <xref:System.Collections.ArrayList> や <xref:System.Collections.Generic.Dictionary%602>などのコレクション型です。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を使用してこれらの型のシリアル化をカスタマイズすることもできますが、必須ではありません。 詳細については、[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)を参照してください。  
+-   コレクション型。 データのリストを表す型です。 型の通常の配列、または <xref:System.Collections.ArrayList> や <xref:System.Collections.Generic.Dictionary%602>などのコレクション型です。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を使用してこれらの型のシリアル化をカスタマイズすることもできますが、必須ではありません。 詳細については、次を参照してください。[データ コントラクトのコレクション型](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)します。  
   
--   列挙型。 フラグ列挙体などの列挙体はシリアル化できます。 列挙型は、必要に応じて、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性でマークできます。その場合は、シリアル化に参加するすべてのメンバーを <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性でマークする必要があります。 マークされていないメンバーはシリアル化されません。 詳細については、[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)を参照してください。  
+-   列挙型。 フラグ列挙体などの列挙体はシリアル化できます。 列挙型は、必要に応じて、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性でマークできます。その場合は、シリアル化に参加するすべてのメンバーを <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性でマークする必要があります。 マークされていないメンバーはシリアル化されません。 詳細については、次を参照してください。[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)します。  
   
 -   .NET Framework プリミティブ型。 .NET Framework に組み込まれている型 ( <xref:System.Byte>、 <xref:System.SByte>、 <xref:System.Int16>、 <xref:System.Int32>、 <xref:System.Int64>、 <xref:System.UInt16>、 <xref:System.UInt32>、 <xref:System.UInt64>、 <xref:System.Single>、 <xref:System.Double>、 <xref:System.Boolean>、 <xref:System.Char>、 <xref:System.Decimal>、 <xref:System.Object>、および <xref:System.String>) は、すべてシリアル化可能であり、プリミティブ型であると考えられます。  
   
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Se
   
 -   <xref:System.SerializableAttribute> 属性でマークされた型。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基本クラス ライブラリに含まれる多くの型は、このカテゴリに分類されます。 <xref:System.Runtime.Serialization.DataContractSerializer> は、.NET Framework リモート処理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>で使用されていたこのシリアル化プログラミング モデルを完全にサポートします。これは、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスのサポートを含みます。  
   
--   未処理の XML を表す型、または [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] のリレーショナル データを表す型。 <xref:System.Xml.XmlElement> 型および <xref:System.Xml.XmlNode> 型の配列は、XML を直接表す方法としてサポートされています。 また、 <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、および <xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型を含む) もサポートされています。 部分信頼環境では、 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 型と <xref:System.Data.DataSet> 型 (およびその型指定された派生クラス) はすべて <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装するので、このカテゴリに属します。 詳細については、[XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)を参照してください。  
+-   未処理の XML を表す型、または [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] のリレーショナル データを表す型。 <xref:System.Xml.XmlElement> 型および <xref:System.Xml.XmlNode> 型の配列は、XML を直接表す方法としてサポートされています。 また、 <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、および <xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型を含む) もサポートされています。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable>型と<xref:System.Data.DataSet>型 (およびその型指定された派生クラス) を実装、<xref:System.Xml.Serialization.IXmlSerializable>インターフェイス、およびので、このカテゴリに属します。 詳細については、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>部分信頼モードにおける特定の型の使用制限  
  部分信頼モードのシナリオで型を使用する場合、型によっては次の制限があります。  
@@ -68,6 +68,7 @@ Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Se
 -   <xref:System.DBNull> 型は、特殊な方法で処理されます。 これは、シングルトン型です。デシリアライザーは、逆シリアル化後にシングルトン制約に従い、シングルトン インスタンスへのすべての `DBNull` 参照を指します。 `DBNull` はシリアル化可能な型であるため、 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> アクセス許可が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ コントラクトの XML および ADO.NET の種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
 - [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [シリアル化可能な型](../../../../docs/framework/wcf/feature-details/serializable-types.md)

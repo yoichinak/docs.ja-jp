@@ -2,12 +2,12 @@
 title: SQL Server における XML データ
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-ms.openlocfilehash: 71933640f2b333aa4be40416db346b5accf2ae73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158718"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server における XML データ
 SQL Server は、.NET Framework 内部の SQLXML の機能を公開します。 開発者は、SQL Server のインスタンスから XML データにアクセスし、データを .NET Framework 環境に持ち込んで処理し、更新を SQL Server に送り返すアプリケーションを作成できます。 SQL Server では、XML データをデータ ストレージなどの目的に、あるいはデータを取得するときのパラメーター値として使用できます。 **SqlXml** .NET Framework クラスは、SQL Server 内の XML 列に格納されたデータを操作するため、クライアント側のサポートを提供します。 詳細については、SQL Server オンライン ブックの「SQLXML マネージド クラス」を参照してください。  
@@ -20,5 +20,6 @@ SQL Server は、.NET Framework 内部の SQLXML の機能を公開します。 
  コマンドに XML データをパラメーターとして渡す方法について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server と ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

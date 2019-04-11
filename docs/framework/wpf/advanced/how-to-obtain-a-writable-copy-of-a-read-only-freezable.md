@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-ms.openlocfilehash: 08b7007911d15019c043a74e093ccc0fba072fd1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206474"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>方法: 読み取り専用の Freezable の書き込み可能なコピーを取得する
 この例は、使用する方法を示します、<xref:System.Windows.Freezable.Clone%2A>読み取り専用の書き込み可能なコピーを作成するメソッドを<xref:System.Windows.Freezable>します。  
@@ -29,7 +29,8 @@ ms.locfileid: "57361617"
  詳細については<xref:System.Windows.Freezable>、オブジェクトを参照してください、 [Freezable オブジェクトの概要](freezable-objects-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
 - [Freezable オブジェクトの概要](freezable-objects-overview.md)
-- [方法トピック](base-elements-how-to-topics.md)
+- [方法のトピック](base-elements-how-to-topics.md)

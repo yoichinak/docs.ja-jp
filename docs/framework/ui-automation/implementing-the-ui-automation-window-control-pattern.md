@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: eca3b597f556115adb34adc6507151e0bd03a53c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168039"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>UI オートメーション Window コントロール パターンの実装
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.locfileid: "57677723"
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|メソッド|なし|  
 |<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|なし|  
 |<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|なし|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event| <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.WindowInteractionState>|event|保証されません。 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外  
@@ -64,8 +64,9 @@ ms.locfileid: "57677723"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> 場合、パラメーターは、有効な数値ではありません。|  
   
 ## <a name="see-also"></a>関連項目
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

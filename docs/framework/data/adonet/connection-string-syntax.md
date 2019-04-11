@@ -2,12 +2,12 @@
 title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084966"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 すべての .NET Framework データ プロバイダーは、`Connection` を継承する <xref:System.Data.Common.DbConnection> オブジェクトに加え、プロバイダー固有の <xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティを持ちます。 それぞれのプロバイダーに固有の接続文字列の構文は、対応する `ConnectionString` プロパティのトピックで説明されています。 次の表は、.NET Framework に含まれている 4 つのデータ プロバイダーを一覧にしたものです。  
@@ -43,7 +43,7 @@ ms.locfileid: "54524547"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` プロバイダーで `OleDb` に設定すると例外がスローされます。  
+>  `Integrated Security=true` 使用すると、例外がスローされます、`OleDb`プロバイダー。  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 接続文字列  
 <xref:System.Data.SqlClient.SqlConnection> 接続文字列の構文については、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> プロパティで説明されています。 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> プロパティを使用すると、SQL Server データベースの接続文字列を取得または設定することができます。 以前のバージョンの SQL Server に接続する必要がある場合は、.NET Framework Data Provider for OleDb (<xref:System.Data.OleDb>) を使用する必要があります。 接続文字列のほとんどのキーワードは、<xref:System.Data.SqlClient.SqlConnectionStringBuilder> のプロパティにマップされています。  
@@ -90,7 +90,7 @@ Data Source=MySqlServer\MSSQL1;"
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンスへの接続とアタッチ  
  ユーザー インスタンスは、SQL Server Express の機能の 1 つです。 最小限の特権しか持たないローカル Windows アカウントで実行しているユーザーが、SQL Server データベースにアタッチできます。この場合、管理特権は不要です。 ユーザー インスタンスは、サービスとしてではなく、ユーザーの Windows 資格情報で実行されます。  
   
- ユーザー インスタンスの操作方法の詳細については、[SQL Server Express ユーザー インスタンス](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)を参照してください。  
+ ユーザー インスタンスの操作方法の詳細については、次を参照してください。 [SQL Server Express ユーザー インスタンス](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)します。  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate の使用  
  `TrustServerCertificate`キーワードは、有効な証明書の SQL Server インスタンスに接続する場合にのみ有効です。 `TrustServerCertificate` を `true` に設定した場合、トランスポート層に SSL が使用されてチャネルが暗号化されます。また、証明書チェーンをたどることによる信頼性の検証は省略されます。  
@@ -113,13 +113,13 @@ Data Source=MySqlServer\MSSQL1;"
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Ｘ|N/A|無効 (既定値)|無視|暗号化は行われません。|  
 |Ｘ|N/A|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書が提供されている場合にのみ行われます。それ以外の場合は、接続試行が失敗します。|  
-|Ｘ|N/A|はい|[はい]|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
+|Ｘ|N/A|はい|[はい]|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
 |[はい]|Ｘ|無視|無視|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
-|[はい]|はい|無効 (既定値)|無視|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
-|[はい]|[はい]|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
-|[はい]|[はい]|[はい]|[はい]|暗号化は常に発生するが自己署名サーバー証明書を使用することがあります。|  
+|[はい]|はい|無効 (既定値)|無視|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
+|[はい]|はい|はい|無効 (既定値)|暗号化は、検証可能なサーバー証明書がある場合にのみに発生します。それ以外の場合、接続の試行は失敗します。|  
+|[はい]|はい|はい|[はい]|暗号化は常に行われますが、自己署名入りのサーバー証明書を使用することがあります。|  
   
- 詳細については、[を使用して検証を伴わない暗号化](/sql/relational-databases/native-client/features/using-encryption-without-validation)を参照してください。
+ 詳細については、「[検証を伴わない暗号化の使用](/sql/relational-databases/native-client/features/using-encryption-without-validation)」を参照してください。
   
 ## <a name="oledb-connection-strings"></a>OleDb 接続文字列  
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> の <xref:System.Data.OleDb.OleDbConnection> プロパティを使用すると、Microsoft Access などの OLE DB データ ソースの接続文字列を取得または設定することができます。 `OleDb` クラスを使用して、実行時に <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 接続文字列を作成することもできます。  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  接続情報を提供することは、 **OleDbConnection** Universal Data Link (UDL) ファイルです。 ただししないでそうです。 UDL ファイルは暗号化されないため、接続文字列をテキスト形式で表現してしまいます。 UDL ファイルは、アプリケーションにとって外部ファイルをベースにしたリソースであるため、.NET Framework でセキュリティ保護できません。 UDL ファイルはサポートされていません**SqlClient**します。  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>DataDirectory を使用した Access/Jet との接続  
- `DataDirectory` の使用は `SqlClient` に限定されません。 <xref:System.Data.OleDb> および <xref:System.Data.Odbc> .NET データ プロバイダーでも使用できます。 アプリケーションの app_data フォルダーに格納された Northwind.mdb に接続するための <xref:System.Data.OleDb.OleDbConnection> 文字列の構文を次の例に示します。 この場所には、システム データベース (System.mdw) も格納されています。  
+ `DataDirectory` 限定されていない`SqlClient`します。 <xref:System.Data.OleDb> および <xref:System.Data.Odbc> .NET データ プロバイダーでも使用できます。 アプリケーションの app_data フォルダーに格納された Northwind.mdb に接続するための <xref:System.Data.OleDb.OleDbConnection> 文字列の構文を次の例に示します。 この場所には、システム データベース (System.mdw) も格納されています。  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  ODBC 接続文字列の構文の詳細については、「<xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [接続文字列](../../../../docs/framework/data/adonet/connection-strings.md)
 - [データ ソースへの接続](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978177"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821063"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>チュートリアル: .NET Framework のメソッドによるファイル操作 (Visual Basic)
 このチュートリアルでは、<xref:System.IO.StreamReader> クラスを使用してファイルを開いて読み取り、ファイルがアクセスされているかどうかをチェックし、<xref:System.IO.StreamReader> クラスのインスタンスを使用したファイル読み取り内の文字列を検索し、<xref:System.IO.StreamWriter> クラスを使用してファイルにデータを書き込む方法について説明します。  
@@ -148,6 +148,7 @@ ms.locfileid: "56978177"
  コードをテストするには、F5 キーを押してアプリケーションをコンパイルします。 **[エントリの取得]** をクリックし、エントリを選択して、**[表示]** をクリックします。 `DisplayEntry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 **[エントリの編集]** をクリックします。 `Entry`<xref:System.Windows.Forms.TextBox> にエントリが表示されます。 `Entry`<xref:System.Windows.Forms.TextBox> でエントリを編集し、**[Submit Edit] (編集結果の送信)** をクリックします。 `MyDiary.txt` ファイルを開いて修正結果を確認します。 確認したら、エントリを選択し、**[エントリの削除]** をクリックします。 <xref:System.Windows.Forms.MessageBox> で確認を求められたら、**[OK]** をクリックします。 アプリケーションを閉じ、`MyDiary.txt` を開いて削除を確認します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [チュートリアル](../../../../visual-basic/walkthroughs.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307176"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920897"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -87,7 +87,7 @@ ms.locfileid: "54307176"
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-文字列補間を初めてお使いの場合は、[C# の文字列補完](../../tutorials/intro-to-csharp/interpolated-strings.yml)に関する対話形式チュートリアルを参照してください。 あるいは、ご自分のコンピューターで [C# における文字列補間](../../tutorials/string-interpolation.md)チュートリアルを試すことができます。
+文字列補間を初めてお使いの場合は、[C# の文字列補完](../../tutorials/exploration/interpolated-strings.yml)に関する対話形式チュートリアルを参照してください。 あるいは、ご自分のコンピューターで [C# における文字列補間](../../tutorials/string-interpolation.md)チュートリアルを試すことができます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -98,5 +98,5 @@ ms.locfileid: "54307176"
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [文字列](../../programming-guide/strings/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# 特殊文字](index.md)
+- [C# の特殊文字](index.md)
 - [C# リファレンス](../index.md)

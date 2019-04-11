@@ -1,5 +1,5 @@
 ---
-title: '方法: ウィンドウを水平方向に分割します。'
+title: '方法: ウィンドウを水平方向に分割する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: e11e1d6730c6c8c9c0a1ac170aeb5393bf3153b7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321082"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>方法: ウィンドウを水平方向に分割します。
+# <a name="how-to-split-a-window-horizontally"></a>方法: ウィンドウを水平方向に分割する
 次のコード例は、分割するスプリッター、<xref:System.Windows.Forms.SplitContainer>コントロールの水平方向。  
   
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "57708042"
   
 ### <a name="to-split-a-window-horizontally"></a>ウィンドウを水平方向に分割するには  
   
-1.  プロシージャ内で、設定、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>に制御を<xref:System.Windows.Forms.Orientation.Horizontal>。  
+1. プロシージャ内で、設定、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>に制御を<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -56,5 +56,6 @@ ms.locfileid: "57708042"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

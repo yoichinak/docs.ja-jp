@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216783"
 ---
 # <a name="how-to-use-systemfonts"></a>方法: SystemFonts を使用する
 この例の静的なリソースを使用する方法を示しています、<xref:System.Windows.SystemFonts>クラスのスタイル設定やボタンをカスタマイズするためにします。  
@@ -37,11 +37,12 @@ ms.locfileid: "57378900"
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.SystemFonts>
 - [システム ブラシで領域を塗りつぶす](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [SystemParameters を使用する](how-to-use-systemparameters.md)
 - [システム フォント キーを使用する](how-to-use-system-fonts-keys.md)
-- [方法トピック](resources-how-to-topics.md)
+- [方法のトピック](resources-how-to-topics.md)
 - [x:Static のマークアップ拡張機能](../../xaml-services/x-static-markup-extension.md)
 - [XAML リソース](xaml-resources.md)
-- [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)
+- [DynamicResource のマークアップ拡張機能](dynamicresource-markup-extension.md)

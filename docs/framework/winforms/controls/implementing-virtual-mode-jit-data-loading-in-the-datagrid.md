@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088653"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装
 仮想モードを実装する理由の 1 つ、<xref:System.Windows.Forms.DataGridView>コントロールは、必要な場合にのみデータを取得します。 これは呼び出されます*ジャストイン タイムのデータの読み込み*します。  
@@ -71,10 +71,11 @@ ms.locfileid: "57705559"
  アプリケーションのスクロールのパフォーマンスを向上させるのには、ローカルに格納されているデータの量を変更できます。 起動時間を向上させるため、ただし、回避しなければならない大量のデータを最初に読み込みます。 変更することも、`Cache`クラスを格納できるデータ ページの数を増やしてください。 スクロールの効率を向上させる複数のデータ ページを使用することができますが、使用可能な帯域幅とサーバーの待機時間に応じて、データ ページ内の行の理想的な数を決定する必要があります。 サイズの小さいページでは、サーバーは、アクセス頻度の高いより短時間で要求されたデータを返します。 待機時間がより多くの帯域幅よりも問題の場合は、大規模なデータ ページを使用したい場合があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [チュートリアル: Windows フォームの DataGridView コントロールで仮想モードの実装](implementing-virtual-mode-wf-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールでジャストイン タイムのデータ読み込みによる仮想モードの実装](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードを実装する](implementing-virtual-mode-wf-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールで Just-In-Time データ読み込みを使用して仮想モードを実装する](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

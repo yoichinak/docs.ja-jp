@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209165"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>配置、余白、パディングの概要
 <xref:System.Windows.FrameworkElement>クラスは、子要素の正確な配置に使用されるいくつかのプロパティを公開します。 このトピックでは、4 つの最も重要なプロパティについて説明します。 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.Margin%2A>、 <xref:System.Windows.Controls.Border.Padding%2A>、および<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>します。 これらのプロパティの効果を理解することが重要です。[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの要素の位置を制御するための基本となるためです。  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>要素配置の概要  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を利用し、さまざまな方法で要素を配置できます。 ただし、単に、右側の選択を超えるは最適なレイアウトを実現する<xref:System.Windows.Controls.Panel>要素。 配置の制御の理解が必要です、 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.Margin%2A>、 <xref:System.Windows.Controls.Border.Padding%2A>、および<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>プロパティ。  
@@ -56,7 +55,7 @@ ms.locfileid: "57355410"
 |<xref:System.Windows.HorizontalAlignment.Left>|子要素は、親要素に割り当てられたレイアウト領域の左に揃えて配置されます。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子要素は、親要素に割り当てられたレイアウト領域の中央に揃えて配置されます。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子要素は、親要素に割り当てられたレイアウト領域の右に揃えて配置されます。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (既定値)|子要素は引き伸ばされ、親要素に割り当てられたレイアウト領域を埋めます。 明示的な<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>値が優先されます。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (既定)|子要素は引き伸ばされ、親要素に割り当てられたレイアウト領域を埋めます。 明示的な<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>値が優先されます。|  
   
  次の例では、適用する方法を示しています、<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>プロパティを<xref:System.Windows.Controls.Button>要素。 各属性値が示され、さまざまなレンダリング動作をより良く表しています。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "57355410"
 |<xref:System.Windows.VerticalAlignment.Top>|子要素は、親要素に割り当てられたレイアウト領域の上に揃えて配置されます。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子要素は、親要素に割り当てられたレイアウト領域の中央に揃えて配置されます。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子要素は、親要素に割り当てられたレイアウト領域の下に揃えて配置されます。|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (既定値)|子要素は引き伸ばされ、親要素に割り当てられたレイアウト領域を埋めます。 明示的な<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>値が優先されます。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (既定)|子要素は引き伸ばされ、親要素に割り当てられたレイアウト領域を埋めます。 明示的な<xref:System.Windows.FrameworkElement.Width%2A>と<xref:System.Windows.FrameworkElement.Height%2A>値が優先されます。|  
   
  次の例では、適用する方法を示しています、<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>プロパティを<xref:System.Windows.Controls.Button>要素。 各属性値が示され、さまざまなレンダリング動作をより良く表しています。 このサンプルの目的で、<xref:System.Windows.Controls.Grid>表示のグリッド線を持つ要素は、各プロパティ値のレイアウト動作をよく示すために、親として使用されます。  
   
@@ -142,6 +141,7 @@ ms.locfileid: "57355410"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトの詳細はその他の資料で確認できます。 [パネルの概要](../controls/panels-overview.md)トピックには、さまざまな詳細が含まれています。<xref:System.Windows.Controls.Panel>要素。 トピック[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)コンポーネントを配置して、その操作をデータ ソースにバインドするレイアウト要素を使用して高度な手法が導入されています。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>

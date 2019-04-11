@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: 90f315bc9153fd79f12e3dcbbfe0f238f4090b25
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0c909e3dfce1af17cc74ca526ba0409d5e9f93f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976877"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843722"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>方法: ファイルを移動する (Visual Basic)
 `My.Computer.FileSystem.MoveFile` メソッドは、ファイルを別のフォルダーに移動するために使用できます。 ターゲットの構造が存在しない場合は作成されます。  
@@ -50,6 +50,7 @@ ms.locfileid: "56976877"
 -   ユーザーに必要なアクセス許可がない (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
 - [方法: ファイルの名前を変更する](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
 - [方法: ファイルのコピーを別のディレクトリに作成する](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)

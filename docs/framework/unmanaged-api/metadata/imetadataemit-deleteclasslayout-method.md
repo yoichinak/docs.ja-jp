@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f44b7e073840d4d425cfc91c3156293cee07b4ab
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a195daf2aa1b1c5a8f9c4335f7c4185f30093360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178530"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout メソッド
 指定したトークンによって表される型のクラス レイアウト メタデータ シグネチャを破棄します。  
@@ -46,8 +46,9 @@ HRESULT DeleteClassLayout (
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

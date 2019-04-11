@@ -2,12 +2,12 @@
 title: 演算子の優先順位 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159134"
 ---
 # <a name="operator-precedence-entity-sql"></a>演算子の優先順位 (Entity SQL)
 ときに、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリが複数の演算子、演算子の優先順位は、操作が実行されるシーケンスを決定します。 実行される順序により、クエリ結果の値は大きく変わります。  
@@ -20,7 +20,7 @@ ms.locfileid: "54506837"
 |2|単項|`! not`|  
 |3|乗法|`* / %`|  
 |4|加法|`+ -`|  
-|5|並べ替え|`< > <= >=`|  
+|5|順序|`< > <= >=`|  
 |6|等価比較|`= != <>`|  
 |7|条件 AND|`and &&`|  
 |8|条件 OR|`or &#124;&#124;`|  
@@ -30,4 +30,5 @@ ms.locfileid: "54506837"
  クエリの中で演算子の定義済みの優先順位をオーバーライドするには、かっこを使用します。 この場合、かっこ内のすべての演算が評価され、1 つの結果が作成されてから、かっこ外の演算子でこの結果が使用されます。 たとえば、`x+y*z`を乗算します`y`によって`z`し追加します`x`が`(x+y)*z`を追加します`x`に`y`には、結果を乗算`z`。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

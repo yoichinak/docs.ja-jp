@@ -7,12 +7,12 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: bb3d5751ae7d88af05c2a77e9b64f9cb28179a35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973016"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826263"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>方法: Visual Basic で接続ステータスをチェックする
 正常に動作しているネットワーク接続またはインターネット接続がコンピューターにあるかどうかは、<xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> プロパティを使って調べることができます。  
@@ -28,5 +28,6 @@ ms.locfileid: "56973016"
      このコード例は、IntelliSense コード スニペットとしても利用できます。 コード スニペット ピッカーでは、これは **[接続とネットワーク]** にあります。 詳細については、「[Code Snippets](/visualstudio/ide/code-snippets)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

@@ -2,12 +2,12 @@
 title: WCF でのキュー
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-ms.openlocfilehash: fcdd38cf02157829bdc476cc289ea89ff8767487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128766"
 ---
 # <a name="queuing-in-wcf"></a>WCF でのキュー
 このセクションでは、Windows Communication Foundation (WCF) をキューに置かれた通信に使用する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "54559467"
   
  MSMQ キューも、Active Directory ディレクトリ サービスに登録された Windows ID を使用してセキュリティで保護できます。 MSMQ をインストールするとき、Active Directory 統合をインストールできます。Active Directory 統合では、コンピューターを Windows ドメイン ネットワークに含める必要があります。  
   
- MSMQ の詳細については、[インストール メッセージ キュー (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)を参照してください。  
+ MSMQ の詳細については、次を参照してください。[インストール メッセージ キュー (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)します。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF で MSMQ を使用して通信する 2 つの WCF エンドポイントは、キューに置かれたバインディングです。 したがって、このバインディングは、MSMQ 固有のプロパティを公開します。 ただし、すべての MSMQ 機能とプロパティが `NetMsmqBinding` で公開されるわけではありません。 コンパクトな `NetMsmqBinding` は、大部分のユーザーが満足できる最適な機能セットを考慮して設計されています。  
@@ -50,7 +50,7 @@ ms.locfileid: "54559467"
   
 -   `ExactlyOnce`:設定すると`true`(既定)、キューに置かれたチャネルにより、メッセージ配信される場合は、重複していないこと。 また、メッセージが失われないようにすることもできます。 メッセージを配信できない場合、またはメッセージを配信する前にメッセージの有効期間 (TTL: Time To Live) が切れた場合、失敗したメッセージが配信エラー理由と共に配信不能キューに記録されます。 `false` に設定した場合、キューに置かれたチャネルにより、メッセージの転送が試行されます。 この場合、必要に応じて配信不能キューを選択できます。  
   
--   `Durable:` `true` (既定) に設定した場合、キューに置かれたチャネルによって、MSMQ がメッセージをディスクに永続的に格納することが保証されます。 したがって、MSMQ サービスを停止して再起動した場合、ディスク上のメッセージがターゲット キューに転送されるか、サービスに配信されます。 `false` に設定した場合、メッセージは揮発性ストアに格納され、MSMQ サービスを停止して再起動すると、メッセージは失われます。  
+-   `Durable:` 設定すると`true`(既定)、キューに置かれたチャネルにより、ディスク上にある MSMQ がメッセージを永続的格納します。 したがって、MSMQ サービスを停止して再起動した場合、ディスク上のメッセージがターゲット キューに転送されるか、サービスに配信されます。 `false` に設定した場合、メッセージは揮発性ストアに格納され、MSMQ サービスを停止して再起動すると、メッセージは失われます。  
   
  `ExactlyOnce` の信頼できる転送を実現するために、MSMQ ではトランザクション キューを使用する必要があります。 また、MSMQ では、トランザクションがトランザクション キューから読み取られる必要があります。 このため、`NetMsmqBinding` を使用する場合、`ExactlyOnce` を `true` に設定したときは、メッセージの送受信にトランザクションが必要なことに注意してください。 同様に、ベスト エフォート保証を使用する場合 (`ExactlyOnce` が `false` の場合など) および揮発性メッセージングを行う場合、MSMQ で非トランザクション キューを使用する必要があります。 このため、`ExactlyOnce` を `false` に設定するか、または Durable を `false` に設定した場合、トランザクションを使用して送受信できません。  
   
@@ -71,14 +71,14 @@ ms.locfileid: "54559467"
 -   `CustomDeadLetterQueue`:このプロパティは、アプリケーション固有の配信不能キューの Uniform Resource Identifier (URI) アドレスです。 これは、必要な場合`DeadLetterQueue`します。`Custom` 選択されます。  
   
 #### <a name="poison-message-handling-properties"></a>有害メッセージ処理プロパティ  
- サービスがトランザクションでターゲット キューからメッセージを読み取るとき、サービスはさまざまな原因でメッセージの処理に失敗する可能性があります。 失敗したメッセージは、再度読み取るためにキューに戻されます。 繰り返し失敗するメッセージを処理するために、有害メッセージ処理プロパティをバインディングで構成できます。 `ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay`、および `ReceiveErrorHandling` という 4 つのプロパティがあります。 これらのプロパティの詳細については、[の有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)を参照してください。  
+ サービスがトランザクションでターゲット キューからメッセージを読み取るとき、サービスはさまざまな原因でメッセージの処理に失敗する可能性があります。 失敗したメッセージは、再度読み取るためにキューに戻されます。 繰り返し失敗するメッセージを処理するために、有害メッセージ処理プロパティをバインディングで構成できます。 `ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay`、および `ReceiveErrorHandling` という 4 つのプロパティがあります。 これらのプロパティの詳細については、次を参照してください。[の有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)します。  
   
 #### <a name="security-properties"></a>セキュリティ プロパティ  
- MSMQ では、キューのアクセス制御リスト (ACL)、認証されたメッセージの送信など、独自のセキュリティ モデルを公開します。 `NetMsmqBinding` は、このセキュリティ プロパティをそのトランスポート セキュリティ設定の一部として公開します。 トランスポート セキュリティのバインディングには、`MsmqAuthenticationMode` プロパティおよび `MsmqProtectionLevel` プロパティという 2 つのプロパティがあります。 このプロパティの設定は、MSMQ の構成方法によって異なります。 詳細については、[トランスポート セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)を参照してください。  
+ MSMQ では、キューのアクセス制御リスト (ACL)、認証されたメッセージの送信など、独自のセキュリティ モデルを公開します。 `NetMsmqBinding` は、このセキュリティ プロパティをそのトランスポート セキュリティ設定の一部として公開します。 トランスポート セキュリティのバインディングには、`MsmqAuthenticationMode` プロパティおよび `MsmqProtectionLevel` プロパティという 2 つのプロパティがあります。 このプロパティの設定は、MSMQ の構成方法によって異なります。 詳細については、次を参照してください。[トランスポート セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)します。  
   
- トランスポート セキュリティに加えて、実際の SOAP メッセージはメッセージ セキュリティでも保護できます。 詳細については、[メッセージ セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)を参照してください。  
+ トランスポート セキュリティに加えて、実際の SOAP メッセージはメッセージ セキュリティでも保護できます。 詳細については、次を参照してください。[メッセージ セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)します。  
   
- また、`MsmqTransportSecurity` は、2 つのプロパティ `MsmqEncryptionAlgorithm` と `MsmqHashAlgorithm` を公開します。 このプロパティは、キュー間の転送でメッセージを暗号化するために、または署名をハッシュするために選択できる異なるアルゴリズムの列挙体です。  
+ `MsmqTransportSecurity` 2 つのプロパティも公開`MsmqEncryptionAlgorithm`と`MsmqHashAlgorithm`します。 このプロパティは、キュー間の転送でメッセージを暗号化するために、または署名をハッシュするために選択できる異なるアルゴリズムの列挙体です。  
   
 #### <a name="other-properties"></a>その他のプロパティ  
  上記のプロパティに加えて、次の MSMQ 固有のプロパティがバインディングで公開されます。  
@@ -89,7 +89,7 @@ ms.locfileid: "54559467"
   
 -   `QueueTransferProtocol`:キューのキューのメッセージの転送に使用するプロトコルの列挙。 MSMQ では、ネイティブのキュー間転送プロトコルおよび SOAP リライアブル メッセージ プロトコル (SRMP) と呼ばれる SOAP ベースのプロトコルを実装しています。 SRMP は、キュー間の転送に HTTP トランスポートを使用している場合に使用します。 SRMP Secure は、キュー間の転送に HTTPS を使用している場合に使用します。  
   
--   `UseActiveDirectory`:キューのアドレス解決のため、Active Directory を使用する必要があるかどうかを示すブール値。 既定ではオフになっています。 詳細については、[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)を参照してください。  
+-   `UseActiveDirectory`:キューのアドレス解決のため、Active Directory を使用する必要があるかどうかを示すブール値。 既定ではオフになっています。 詳細については、次を参照してください。[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)します。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  `MsmqIntegrationBinding` C、C++、COM、または System.Messaging Api で記述された既存の MSMQ アプリケーションとの通信に WCF エンドポイントが必要なときに使用されます。  
@@ -105,9 +105,9 @@ ms.locfileid: "54559467"
 ### <a name="sample-code"></a>サンプル コード  
  MSMQ を使用する WCF サービスを書き込む方法の手順については、次のトピックを参照してください。  
   
--   [方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [方法: WCF エンドポイントとキューに置かれたメッセージを交換します。](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF での MSMQ の使用を示す完全なコード サンプルについては、次のトピックを参照してください。  
   
@@ -126,5 +126,6 @@ ms.locfileid: "54559467"
 -   [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
 - [キューに置かれたアプリケーションの Web ホスト](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
