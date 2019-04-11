@@ -6,12 +6,12 @@ title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297269"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "58464516"
         <h1>.NET ドキュメント</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">ドキュメント</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">開始するには</a>
@@ -153,7 +153,7 @@ ms.locfileid: "58464516"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">クロスプラットフォーム開発</a></p>
+                                                <p><a href="/xamarin/cross-platform">プラットフォーム間の開発</a></p>
                                                 <p><a href="/xamarin/ios">Xamarin.iOS のガイド</a></p>
                                                 <p><a href="/xamarin/android">Xamarin.Android のガイド</a></p>
                                                 <p><a href="/xamarin/xamarin-forms">Xamarin.Forms のガイド</a></p>
@@ -231,8 +231,8 @@ ms.locfileid: "58464516"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET ガイド</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">チュートリアル</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">リソース</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">チュートリアル</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">リソース</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">用語集</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API リファレンス</a></p>
                                             </div>
@@ -434,7 +434,7 @@ ms.locfileid: "58464516"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">モバイル</a>
+                        <a href="#mobile">携帯</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -582,7 +582,7 @@ ms.locfileid: "58464516"
                         <a href="#gaming">ゲーム</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -663,7 +663,7 @@ ms.locfileid: "58464516"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">Machine Learning と AI</a>
+                        <a href="#ml-ai">機械学習と AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">
