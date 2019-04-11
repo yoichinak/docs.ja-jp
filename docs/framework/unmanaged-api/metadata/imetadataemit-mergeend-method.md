@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8602405a743f1ced6485d84a34a267771716d9b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 277e7e57ae01128039c3a280158110acde3363a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230006"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd メソッド
 マージを現在のスコープを 1 つまたは複数の前の呼び出しで指定されたすべてのメタデータ スコープ[imetadataemit::merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)します。  
@@ -68,8 +68,9 @@ HRESULT MergeEnd ();
   
  **ライブラリ:** MSCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

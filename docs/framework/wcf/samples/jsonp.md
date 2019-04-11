@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329662"
 ---
 # <a name="jsonp"></a>JSONP
 このサンプルでは、WCF REST サービスの JSONP (JSON with Padding) をサポートする方法を示します。 JSONP とは、現在のドキュメントでスクリプト タグを生成してドメイン間スクリプトを呼び出す際に使用される変換です。 結果は、指定したコールバック関数で返されます。 JSONP は、`<script src="http://..." >` などのタグで任意のドメインからのスクリプトを評価でき、このようなタグによって取得されたスクリプトを既に他の関数が定義されている範囲で評価するという考えに基づいています。
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>サンプルを実行するには  
   
-1.  JSONP サンプルのソリューションを開きます。  
+1. JSONP サンプルのソリューションを開きます。  
   
-2.  F5 キーを押して起動`http://localhost:26648/JSONPClientPage.aspx`ブラウザーにします。  
+2. F5 キーを押して起動`http://localhost:26648/JSONPClientPage.aspx`ブラウザーにします。  
   
-3.  通知は、ページの読み込み後に"Name"および"Address"のテキスト入力は、値が格納されます。  これらの値は、ブラウザーはページのレンダリングを完了した後に、WCF サービスへの呼び出しから提供されたものです。
+3. 通知は、ページの読み込み後に"Name"および"Address"のテキスト入力は、値が格納されます。  これらの値は、ブラウザーはページのレンダリングを完了した後に、WCF サービスへの呼び出しから提供されたものです。

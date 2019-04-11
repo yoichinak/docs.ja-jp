@@ -5,16 +5,16 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174370"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを作成します。
 
-このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)を参照してください。
+このチュートリアルでは、4 番目の基本的な Windows Communication Foundation (WCF) アプリケーションを作成するために必要な 5 つのタスクについて説明します。 チュートリアルの概要については、次を参照してください。[チュートリアル。Windows Communication Foundation アプリケーションの概要](getting-started-tutorial.md)します。
 
 WCF アプリケーションを作成するための次のタスクでは、WCF サービスからメタデータを取得することによって、クライアントを作成します。 Visual Studio を使用して、サービスの MEX エンドポイントからメタデータを取得します。 サービス参照を追加します。 Visual Studio は、選択した言語でクライアント プロキシのマネージ ソース コード ファイルを生成します。 クライアント構成ファイルが作成されます (*App.config*)。 このファイルは、エンドポイントのサービスに接続するクライアント アプリケーションを使用します。 
 
@@ -30,7 +30,6 @@ WCF アプリケーションを作成するための次のタスクでは、WCF 
 > [!div class="checklist"]
 > - 作成し、WCF クライアントのコンソール アプリ プロジェクトを構成します。
 > - プロキシ クラスと構成ファイルを生成する WCF サービスにサービス参照を追加します。
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Windows Communication Foundation クライアントを作成します。
 
@@ -67,7 +66,6 @@ WCF アプリケーションを作成するための次のタスクでは、WCF 
    3. 選択**CalculatorService**展開すると、サービスによって実装されるサービス コントラクトを表示します。 既定値のままに**Namespace**選択**OK**します。
 
       Visual Studio は、新しい項目を追加、**接続済みサービス**フォルダーで、 **GettingStartedClient**プロジェクト。 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel メタデータ ユーティリティ ツール
 
@@ -129,5 +127,3 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 > [!div class="nextstepaction"]
 > [チュートリアル: WCF クライアントを使用します。](how-to-use-a-wcf-client.md)
-
-

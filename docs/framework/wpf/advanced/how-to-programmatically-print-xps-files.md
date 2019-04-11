@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372725"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312073"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>方法: XPS ファイルをプログラムにより印刷する
 1 つのオーバー ロードを使用することができます、<xref:System.Printing.PrintQueue.AddJob%2A>メソッドを印刷する[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]ファイルを開くことがなく、<xref:System.Windows.Controls.PrintDialog>や、原則として、任意[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]まったくです。  
@@ -25,13 +25,13 @@ ms.locfileid: "57372725"
 ## <a name="example"></a>例  
  3 つのパラメーターを使用する主な手順<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは、次のとおりです。 詳細は、下記の例に示します。  
   
-1.  プリンターが XPSDrv プリンターかどうかを確認します  (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。  
+1. プリンターが XPSDrv プリンターかどうかを確認します  (XPSDrv の詳細については、「[印刷の概要](printing-overview.md)」を参照してください)。  
   
-2.  プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。  
+2. プリンターが XPSDrv プリンターでない場合は、スレッドのアパートメントをシングル スレッドに設定します。  
   
-3.  プリント サーバーと印刷キューのオブジェクトをインスタンス化します。  
+3. プリント サーバーと印刷キューのオブジェクトをインスタンス化します。  
   
-4.  ジョブ名、印刷するファイルを指定するメソッドを呼び出し、<xref:System.Boolean>プリンターが XPSDrv プリンターかどうかどうかを示すフラグします。  
+4. ジョブ名、印刷するファイルを指定するメソッドを呼び出し、<xref:System.Boolean>プリンターが XPSDrv プリンターかどうかどうかを示すフラグします。  
   
  ディレクトリ内のすべての [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルをバッチ印刷する方法を次の例に示します。 アプリケーションは、ディレクトリ、3 つのパラメーターを指定するユーザーを要求が<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>メソッドは必要ありません、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 このメソッドは、そのメソッドに渡すことができる [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイル名とパスが記述された任意のコード パスで使用できます。  
   
@@ -59,13 +59,14 @@ ms.locfileid: "57372725"
  **注**わかりやすくするため、上記の例ではのプレゼンスを使用して、 \*.xps 拡張機能は、ファイルのテストとして[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]します。 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ファイルには、この拡張子を付ける必要はありません。 [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) は、ファイルが [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] かどうかをテストする 1 つの手段です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
 - [XPS ドキュメント](/windows/desktop/printdocs/documents)
 - [XPS ドキュメントの印刷](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [マネージ コードとアンマネージ スレッド処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [マネージド スレッドとアンマネージド スレッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (isXPS 適合性ツール)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)

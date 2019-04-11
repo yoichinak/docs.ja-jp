@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170106"
 ---
 # <a name="tooltip-overview"></a>ToolTip の概要
 ツールヒントは、ユーザーが経由の要素の上にマウス ポインターを置いたときに表示される小さいポップアップ ウィンドウ、<xref:System.Windows.Controls.Button>します。 このトピックでは、ツールヒントを紹介し、ツールヒントの内容を作成およびカスタマイズする方法について説明します。  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>ツールヒントとは  
  ツールヒントを持つ要素の上にマウス ポインターを置くと、一定の時間、ツールヒントの内容 (たとえば、コントロールの機能を説明するテキスト コンテンツ) を含むウィンドウが表示されます。 コントロールからマウス ポインターを移動すると、ツールヒントの内容がフォーカスを受け取ることができなくなるため、ウィンドウが消えます  
@@ -76,8 +74,9 @@ ms.locfileid: "57376326"
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [方法トピック](tooltip-how-to-topics.md)
+- [方法のトピック](tooltip-how-to-topics.md)

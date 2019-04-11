@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150762"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT トレース ETW イベント
 <a name="top"></a> これらのイベントは、Just-in-time (JIT) インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。  
@@ -150,4 +150,5 @@ ms.locfileid: "54536647"
 |ClrInstanceID|win:UInt16|CLR または CoreCLR のインスタンスの一意の ID。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

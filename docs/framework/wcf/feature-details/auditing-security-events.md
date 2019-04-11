@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101297"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 Windows Communication Foundation (WCF) で作成されたアプリケーションは、監査機能とセキュリティ イベント (成功、失敗、またはその両方) にログインできます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
   
  監査を使用すると、管理者は既に発生した攻撃や現在進行中の攻撃を検出できます。 また、開発者がセキュリティ関連の問題をデバッグする際にも役立ちます。 たとえば、認証またはポリシー チェックの構成エラーによって承認済みユーザーへのアクセスが拒否された場合、開発者は、イベント ログを検査することによって、このエラーの原因をすばやく発見し、取り出すことができます。  
   
- WCF セキュリティの詳細については、[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)を参照してください。 WCF プログラミングの詳細については、[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)を参照してください。  
+ WCF セキュリティの詳細については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF プログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
   
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   
  セキュリティ ログへの書き込みを行うには、`SeAuditPrivilege` が必要です。 既定では、この権限は Local System アカウントと Network Service アカウントだけに与えられています。 セキュリティ ログの `read` および `delete` 機能を管理するには、`SeSecurityPrivilege` が必要です。 既定では、この権限は管理者だけに与えられています。  
   
- これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 既定では、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] は、監査イベントをアプリケーション ログに書き込みます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
+ これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 書き込みは、既定では、アプリケーション ログにイベントを監査します。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
   
 ## <a name="suppressing-audit-failures"></a>監査エラーの抑制  
  監査中に監査エラーを表示しないように指定するオプションも用意されています。 既定では、監査エラーはアプリケーションに影響を与えません。 ただし、必要に応じて、このオプションを `false` に設定し、例外をスローすることもできます。  
@@ -87,8 +87,8 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   
 |システム|アプリケーション ログ|セキュリティ ログ|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 以降|サポート状況|サポートなし|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] および [!INCLUDE[wv](../../../../includes/wv-md.md)]|サポート状況|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] またはそれ以降|サポート状況|サポートなし|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] と、呼び出し [!INCLUDE[wv](../../../../includes/wv-md.md)]|サポート状況|スレッド コンテキストを持つ必要があります。 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>その他の要素  
  オペレーティング システム以外に、ログ記録の使用可能性を制御する設定を次の表に示します。  
@@ -99,11 +99,12 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
 |既定のユーザー エクスペリエンス|すべての認証済みユーザーがアプリケーション ログに書き込むことができるため、アプリケーション プロセスでは追加のアクセス許可手順は必要ありません。|アプリケーション プロセス (コンテキスト) が `SeAuditPrivilege` を持つ必要があります。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [方法: セキュリティ イベントを監査します。](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [方法: セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [\<<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

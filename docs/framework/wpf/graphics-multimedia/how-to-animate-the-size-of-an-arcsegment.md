@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: c97b528a581703a717743af8a3c9da651b2eaf2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de36010e44c2f926b5839f4ec120f90c288f7501
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227770"
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>方法: ArcSegment のサイズをアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Media.ArcSegment.Size%2A>のプロパティ、<xref:System.Windows.Media.ArcSegment>します。  
@@ -25,12 +25,13 @@ ms.locfileid: "57367428"
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- 追加のジオメトリとアニメーションのサンプルでは、、[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)を参照してください。  
+ 追加のジオメトリとアニメーションのサンプルでは、次を参照してください。、[ジオメトリのサンプル](https://go.microsoft.com/fwlink/?LinkID=159989)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>
 - [アニメーションの概要](animation-overview.md)
 - [ジオメトリの概要](geometry-overview.md)
-- [ジオメトリの操作方法に関するトピック](geometries-how-to-topics.md)
-- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)
+- [ジオメトリに関する「方法」トピック](geometries-how-to-topics.md)
+- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)

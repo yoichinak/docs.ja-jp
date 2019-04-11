@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120979"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>トランザクション スコープを使用した暗黙的なトランザクションの実装
 <xref:System.Transactions.TransactionScope> クラスを使用すると、コード ブロックがトランザクションに参加しているものとして簡単にマークすることができ、トランザクション自体と対話する必要がありません。 トランザクション スコープは、アンビエント トランザクションを自動的に選択して管理することができます。 トランザクション アプリケーションを開発する際は、使いやすさと効率の点から、<xref:System.Transactions.TransactionScope> クラスを使用することをお勧めします。  
@@ -25,7 +25,7 @@ ms.locfileid: "57375247"
   
  新規に作成すると、トランザクション スコープが開始<xref:System.Transactions.TransactionScope>オブジェクト。  コード例のようには、使用してスコープを作成することをお勧め、**を使用して**ステートメント。 **を使用して**ステートメントが使用可能なの両方でC#と Visual Basic、およびと同様に動作を**try… 最後に**ブロックをスコープが正しく破棄のことを確認します。  
   
- <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 2 つの要因に基づいて、決定: アンビエント トランザクションが存在するかどうかとの値、 **TransactionScopeOption**コンス トラクターのパラメーター。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用方法の詳細については、、 [TransactionScopeOption を使用してトランザクション フローを管理する](#ManageTxFlow)このトピックの「を参照してください。  
+ <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 2 つの要因に基づいて、決定: アンビエント トランザクションが存在するかどうかとの値、 **TransactionScopeOption**コンス トラクターのパラメーター。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用方法の詳細については、次を参照してください。、 [TransactionScopeOption を使用してトランザクション フローを管理する](#ManageTxFlow)このトピックの「します。  
   
 ## <a name="completing-a-transaction-scope"></a>トランザクション スコープの完了  
  アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> メソッドを一度だけ呼び出す必要があります。 呼び出しを配置することを非常に良好なが<xref:System.Transactions.TransactionScope.Complete%2A>の最後のステートメントとして、**を使用して**ブロックします。  
@@ -166,8 +166,9 @@ using(TransactionScope scope1 = new TransactionScope())
  入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトを使用する場合、入れ子になったすべてのスコープがアンビエント トランザクションに参加するときには、必ず同じ分離レベルを使用するようにそれらのスコープを構成する必要があります。 入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトがアンビエント トランザクションに参加するときに、別の分離レベルが指定された場合は、<xref:System.ArgumentException> がスローされます。  
   
 ## <a name="interop-with-com"></a>COM+ との相互運用  
- 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳細については、これは、[Enterprise Services および COM + トランザクションとの相互運用性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)を参照してください。  
+ 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳細については、これは、次を参照してください。 [Enterprise Services および COM + トランザクションとの相互運用性](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

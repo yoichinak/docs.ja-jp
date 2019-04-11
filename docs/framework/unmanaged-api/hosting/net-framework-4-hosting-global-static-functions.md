@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 825df88f4e8ee79f7159307d3f22416ddc27ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178244"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 ホスト グローバル静的関数
 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll で 1 つの新しいエクスポートされたメソッドが導入されています。[CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)します。  
@@ -23,5 +23,6 @@ ms.locfileid: "54734342"
  次の 3 つのインターフェイスの 1 つを提供します。[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト グローバル静的関数](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)

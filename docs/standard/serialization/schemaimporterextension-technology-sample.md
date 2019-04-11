@@ -2,12 +2,12 @@
 title: SchemaImporterExtension の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 3f5eb78f-0ef6-433a-b095-3a63b1ce0bc9
-ms.openlocfilehash: 04e2b3f9fb1ea6f9bbb3c1e1886911cbacda7a62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5027897bcf62e52dae5aab6090c01518a92636dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633899"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298501"
 ---
 # <a name="schemaimporterextension-technology-sample"></a>SchemaImporterExtension の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/SchemaImporterExtension.zip.exe)  
@@ -16,25 +16,25 @@ ms.locfileid: "54633899"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには  
   
-1.  コマンド プロンプト ウィンドウを開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
+1. コマンド プロンプト ウィンドウを開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  コマンド ラインで「**msbuild.exe OrderSchemaImporterExtension.sln**」と入力します。  
+2. コマンド ラインで「**msbuild.exe OrderSchemaImporterExtension.sln**」と入力します。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
+1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  OrderSchemaImporterExtension.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
+2. OrderSchemaImporterExtension.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
   
-3.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
+3. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
  アプリケーションは、既定の \bin ディレクトリまたは \bin\Debug ディレクトリにビルドされます。  
   
 ### <a name="to-run-the-sample"></a>サンプルを実行するには  
   
-1.  コマンド プロンプトを使用して、新しい実行可能ファイルが格納されているディレクトリに移動します。  
+1. コマンド プロンプトを使用して、新しい実行可能ファイルが格納されているディレクトリに移動します。  
   
-2.  コマンド ラインで**実行ファイル名**を入力します。  
+2. コマンド ラインで**実行ファイル名**を入力します。  
   
 ## <a name="remarks"></a>Remarks  
  サンプルのバイナリ ファイルを作成する方法およびサンプルを登録する手順の詳細については、ソース コード ファイルおよび build.proj ファイル内のコメントを参照してください。  

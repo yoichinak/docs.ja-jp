@@ -1,5 +1,5 @@
 ---
-title: '方法: 単純な Windows フォーム コントロールを開発します。'
+title: '方法: シンプルな Windows フォーム コントロールを開発する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328141"
 ---
-# <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: 単純な Windows フォーム コントロールを開発します。
+# <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: シンプルな Windows フォーム コントロールを開発する
 ここでは、カスタム Windows フォーム コントロールの主な作成手順を紹介します。 このチュートリアルで開発された単純なコントロールでの配置は、その<xref:System.Windows.Forms.Control.Text%2A>プロパティを変更します。 イベントを発生させたり処理したりすることはありません。  
   
 ### <a name="to-create-a-simple-custom-control"></a>シンプルなカスタム コントロールを作成するには  
   
-1.  <xref:System.Windows.Forms.Control?displayProperty=nameWithType> から派生するクラスを定義します。  
+1. <xref:System.Windows.Forms.Control?displayProperty=nameWithType> から派生するクラスを定義します。  
   
     ```vb  
     Public Class FirstControl  
@@ -34,26 +34,26 @@ ms.locfileid: "57723284"
     public class FirstControl:Control {}  
     ```  
   
-2.  プロパティを定義します  (コントロールから多くのプロパティを継承するためのプロパティを定義する必要はありません、<xref:System.Windows.Forms.Control>追加のプロパティを定義して一般に、クラスが、ほとんどのカスタム コントロールです)。次のコード フラグメントは、という名前のプロパティを定義します。`TextAlignment`を`FirstControl`の表示形式を使用して、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>します。 プロパティの定義の詳細については、「[プロパティの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))」を参照してください。  
+2. プロパティを定義します  (コントロールから多くのプロパティを継承するためのプロパティを定義する必要はありません、<xref:System.Windows.Forms.Control>追加のプロパティを定義して一般に、クラスが、ほとんどのカスタム コントロールです)。次のコード フラグメントは、という名前のプロパティを定義します。`TextAlignment`を`FirstControl`の表示形式を使用して、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>します。 プロパティの定義の詳細については、「[プロパティの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))」を参照してください。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
      コントロールの視覚的な表示を変更するプロパティを設定するときに呼び出す必要があります、<xref:System.Windows.Forms.Control.Invalidate%2A>コントロールを再描画するメソッド。 <xref:System.Windows.Forms.Control.Invalidate%2A> 基本クラスで定義されて<xref:System.Windows.Forms.Control>します。  
   
-3.  保護されたオーバーライド<xref:System.Windows.Forms.Control.OnPaint%2A>から継承されたメソッド<xref:System.Windows.Forms.Control>をコントロールにレンダリング ロジックを提供します。 オーバーライドしていない場合<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールは描画できません。 次のコード フラグメントで、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドが表示されます、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>によって指定された配置と、`alignmentValue`フィールド。  
+3. 保護されたオーバーライド<xref:System.Windows.Forms.Control.OnPaint%2A>から継承されたメソッド<xref:System.Windows.Forms.Control>をコントロールにレンダリング ロジックを提供します。 オーバーライドしていない場合<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールは描画できません。 次のコード フラグメントで、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドが表示されます、<xref:System.Windows.Forms.Control.Text%2A>プロパティから継承<xref:System.Windows.Forms.Control>によって指定された配置と、`alignmentValue`フィールド。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  コントロールの属性を指定します。 ビジュアル デザイナーでは、デザイン時に属性を使用することで、コントロール、コントロールのプロパティ、およびイベントを適切に表示します。 次のコード フラグメントでは、属性が `TextAlignment` プロパティに適用されます。 Visual Studio などのデザイナーで、 <xref:System.ComponentModel.CategoryAttribute.Category%2A> (コード フラグメントで示されている) 属性が論理カテゴリの下に表示するプロパティ。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性によって、わかりやすい文字列の下部に表示される、**プロパティ**ウィンドウと、`TextAlignment`プロパティが選択されています。 属性の詳細については、「[コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))」を参照してください。  
+4. コントロールの属性を指定します。 ビジュアル デザイナーでは、デザイン時に属性を使用することで、コントロール、コントロールのプロパティ、およびイベントを適切に表示します。 次のコード フラグメントでは、属性が `TextAlignment` プロパティに適用されます。 Visual Studio などのデザイナーで、 <xref:System.ComponentModel.CategoryAttribute.Category%2A> (コード フラグメントで示されている) 属性が論理カテゴリの下に表示するプロパティ。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>属性によって、わかりやすい文字列の下部に表示される、**プロパティ**ウィンドウと、`TextAlignment`プロパティが選択されています。 属性の詳細については、「[コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))」を参照してください。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (省略可能) コントロールに対してリソースを指定します。 コントロールに対してビットマップなどのリソースを指定するには、コンパイラ オプション (C# の場合は `/res`) を使用して、リソースをコントロールと共にパッケージ化します。 実行時に、リソース取得できるのメソッドを使用して、<xref:System.Resources.ResourceManager>クラス。 リソースの作成と使用の詳細については、「[デスクトップ アプリケーションのリソース](../../resources/index.md)」を参照してください。  
+5. (省略可能) コントロールに対してリソースを指定します。 コントロールに対してビットマップなどのリソースを指定するには、コンパイラ オプション (C# の場合は `/res`) を使用して、リソースをコントロールと共にパッケージ化します。 実行時に、リソース取得できるのメソッドを使用して、<xref:System.Resources.ResourceManager>クラス。 リソースの作成と使用の詳細については、「[デスクトップ アプリケーションのリソース](../../resources/index.md)」を参照してください。  
   
-6.  コンパイルしてコントロールを配置します。 `FirstControl,` をコンパイルして配置するには、次の手順を実行します。  
+6. コンパイルしてコントロールを配置します。 `FirstControl,` をコンパイルして配置するには、次の手順を実行します。  
   
     1.  次のサンプル コードをソース ファイル (FirstControl.cs、FirstControl.vb など) に保存します。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "57723284"
   
 #### <a name="to-compile-and-run-this-sample"></a>このサンプルをコンパイルして実行するには  
   
-1.  このサンプルをコンパイルして実行するには、次に示すサンプルのコードをソース ファイル (SimpleForm.cs または SimpleForms.vb) に保存します。  
+1. このサンプルをコンパイルして実行するには、次に示すサンプルのコードをソース ファイル (SimpleForm.cs または SimpleForms.vb) に保存します。  
   
-2.  ソース ファイルが格納されているディレクトリから次のコマンドを実行して、ソース コードを実行可能アセンブリにコンパイルします。  
+2. ソース ファイルが格納されているディレクトリから次のコマンドを実行して、ソース コードを実行可能アセンブリにコンパイルします。  
   
     ```console  
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
@@ -93,7 +93,7 @@ ms.locfileid: "57723284"
   
      CustomWinControls.dll は、クラスを含むアセンブリ`FirstControl`します。 フォームがアセンブリにアクセスできるように、そのアセンブリはソース ファイル (SimpleForm.cs または SimpleForms.vb) と同じディレクトリに格納されている必要があります。  
   
-3.  次のコマンドで SimpleForm.exe を実行します。  
+3. 次のコマンドで SimpleForm.exe を実行します。  
   
     ```console
     SimpleForm  
@@ -103,5 +103,6 @@ ms.locfileid: "57723284"
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
 - [Windows フォーム コントロールのイベント](events-in-windows-forms-controls.md)

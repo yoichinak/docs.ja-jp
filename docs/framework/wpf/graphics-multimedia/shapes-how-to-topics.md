@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150164"
 ---
 # <a name="shapes-how-to-topics"></a>図形に関する「方法」トピック
 このセクションのトピックでは、使用する方法を示します<xref:System.Windows.Shapes.Shape>画面に基本的な図形を描画するオブジェクト。  
@@ -28,5 +28,6 @@ ms.locfileid: "57358068"
  [直線または線分の終点のキャップを変更する](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Shape>
 - [グラフィックスとマルチメディア](index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], animation
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
-ms.openlocfilehash: 04dbcfdb64525e6231ecf33c8ac5ecf2a2d2cb7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111307"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>方法: PointAnimation を使用してオブジェクトの位置をアニメーション化する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.PointAnimation>に沿ってオブジェクトをアニメーション化するクラス、<xref:System.Windows.Shapes.Path>します。  
@@ -25,11 +25,12 @@ ms.locfileid: "57357933"
  [!code-vb[BasicAnimations_snip#PointAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/PointAnimationExample.vb#pointanimationwholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Animation.PointAnimation>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.EllipseGeometry>
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [アニメーションの概要](animation-overview.md)
 - [グラフィックスとマルチメディア](index.md)
-- [グラフィックスの操作方法に関するトピック](graphics-how-to-topics.md)
-- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)
+- [グラフィックスに関する「方法」トピック](graphics-how-to-topics.md)
+- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)

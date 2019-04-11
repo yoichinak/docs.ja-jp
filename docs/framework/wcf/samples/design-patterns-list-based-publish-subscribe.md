@@ -2,12 +2,12 @@
 title: デザイン パターン:リストに基づく公開/定期受信
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815031"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312047"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン:リストに基づく公開/定期受信
 このサンプルでは、Windows Communication Foundation (WCF) プログラムとして実装されたリストに基づく公開/定期受信パターンを示します。  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
-1.  次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることのテスト:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。  
+1. 次のアドレスを入力して、ブラウザーを使用して、サービスにアクセスできることのテスト:`http://localhost/servicemodelsamples/service.svc`します。 これに応答して、確認ページが表示されます。  
   
-2.  Client.exe を \client\bin 実行\\、言語固有のフォルダーの下。 クライアント アクティビティがクライアント コンソール ウィンドウに表示されます。 複数のクライアントを起動します。  
+2. Client.exe を \client\bin 実行\\、言語固有のフォルダーの下。 クライアント アクティビティがクライアント コンソール ウィンドウに表示されます。 複数のクライアントを起動します。  
   
-3.  \Datasource\bin から Datasource.exe を実行\\、言語固有のフォルダーの下。 データ ソース アクティビティがコンソール ウィンドウに表示されます。 データ ソースがサービスに情報を送信すると、その情報は各クライアントに渡されます。  
+3. \Datasource\bin から Datasource.exe を実行\\、言語固有のフォルダーの下。 データ ソース アクティビティがコンソール ウィンドウに表示されます。 データ ソースがサービスに情報を送信すると、その情報は各クライアントに渡されます。  
   
-4.  クライアント、データ ソース、およびサービス プログラムが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアント、データ ソース、およびサービス プログラムが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 ### <a name="to-run-the-sample-across-machines"></a>サンプルを複数コンピューターで実行するには  
   
-1.  サービス コンピュータを設定します。  
+1. サービス コンピュータを設定します。  
   
     1.  サービス コンピューターで、ServiceModelSamples という仮想ディレクトリを作成します。 バッチ ファイル Setupvroot.bat ファイル、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ディスク ディレクトリと仮想ディレクトリを作成するために使用できます。  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  ブラウザーを使用して、サービスにクライアント コンピューターからアクセスできるかどうかをテストします。  
   
-2.  クライアント コンピュータを設定します。  
+2. クライアント コンピュータを設定します。  
   
     1.  クライアント プログラム ファイルを、言語固有のフォルダにある \client\bin\ フォルダーからクライアント コンピュータにコピーします。  
   
     2.  各クライアントの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
-3.  データ ソース コンピュータを設定します。  
+3. データ ソース コンピュータを設定します。  
   
     1.  データ ソース プログラム ファイルを、言語固有のフォルダーにある \datasource\bin\ フォルダーからデータ ソース コンピュータにコピーします。  
   
     2.  データ ソースの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
-4.  クライアント コンピュータで、コマンド プロンプトから Client.exe を起動します。  
+4. クライアント コンピュータで、コマンド プロンプトから Client.exe を起動します。  
   
-5.  データ ソース コンピューターで、コマンド プロンプトから Datasource.exe を起動します。  
+5. データ ソース コンピューターで、コマンド プロンプトから Datasource.exe を起動します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -160,4 +160,3 @@ public class PriceChangeEventArgs : EventArgs
 >  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
-  

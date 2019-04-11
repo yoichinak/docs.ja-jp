@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178777"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -42,10 +42,10 @@ ms.locfileid: "54631266"
  偽装されたコンテキストにアセンブリを読み込むためのアクセス権がない場合、共通言語ランタイム (CLR: Common Language Runtime) が AppDomain のアセンブリを初めて読み込もうとしたときに、その <xref:System.AppDomain> はエラーをキャッシュします。 この場合、偽装を元に戻した後、元に戻されたコンテキストにアセンブリを読み込むためのアクセス権があったとしても、それ以降のアセンブリの読み込みは失敗します。 これは、ユーザー コンテキストの変更後に、CLR が読み込みを再試行しないためです。 このエラーから回復するには、アプリケーション ドメインを再起動する必要があります。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)を参照してください。  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> クラスの <xref:System.ServiceModel.Security.WindowsClientCredential> プロパティの既定値は <xref:System.Security.Principal.TokenImpersonationLevel.Identification> です。 ほとんどの場合、ID レベルの偽装コンテキストには、追加のアセンブリを読み込むための権限がありません。 これは既定値であるため、非常に一般的な状態として認識しておく必要があります。 ID レベルの偽装は、偽装プロセスが `SeImpersonate` 権限を持たない場合にも発生します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委任には資格情報ネゴシエーションが必要  
- 委任で Kerberos 認証プロトコルを使用するには、資格情報ネゴシエーションを使用する Kerberos プロトコル ("マルチレッグ" Kerberos または "マルチステップ" Kerberos とも呼ばれます) を実装する必要があります。 資格情報ネゴシエーションを使用しない Kerberos 認証 (ワンショット Kerberos またはシングルレッグ Kerberos とも呼ばれる) を実装した場合は、例外がスローされます。 資格情報ネゴシエーションを実装する方法の詳細については、[Windows 認証エラーのデバッグ](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)を参照してください。  
+ 委任で Kerberos 認証プロトコルを使用するには、資格情報ネゴシエーションを使用する Kerberos プロトコル ("マルチレッグ" Kerberos または "マルチステップ" Kerberos とも呼ばれます) を実装する必要があります。 資格情報ネゴシエーションを使用しない Kerberos 認証 (ワンショット Kerberos またはシングルレッグ Kerberos とも呼ばれる) を実装した場合は、例外がスローされます。 資格情報ネゴシエーションを実装する方法の詳細については、次を参照してください。 [Windows 認証エラーのデバッグ](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)します。  
   
 ## <a name="cryptography"></a>暗号  
   
@@ -70,18 +70,18 @@ ms.locfileid: "54631266"
   
 -   `p/invoke` を `CertGetCertificateContextProperty` に対して実行し、返された `dwProvType` で `CertGetCertificateContextProperty` を調べる。  
   
--   使用して、`certutil`証明書を調べるためのコマンドラインからコマンド。 詳細については、[証明書のトラブルシューティングに関する Certutil タスク](https://go.microsoft.com/fwlink/?LinkId=120056)を参照してください。  
+-   使用して、`certutil`証明書を調べるためのコマンドラインからコマンド。 詳細については、次を参照してください。[証明書のトラブルシューティングに関する Certutil タスク](https://go.microsoft.com/fwlink/?LinkId=120056)します。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
  WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 権限借用が有効になっているとします。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   
 -   メッセージ モード セキュリティを使用している。  
   
- これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 または、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードが必要ですが、無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用機能し、WCF が提供する偽装の代わりに使用します。 詳細については、[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)を参照してください。  
+ これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 または、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードが必要ですが、無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用機能し、WCF が提供する偽装の代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 リテラル アドレス エラー  
  クライアントとサービスが同じコンピューター上に存在し、サービスに対して IPv6 リテラル アドレスが使用されている場合は、セキュリティ要求が失敗します。  
@@ -109,6 +109,7 @@ ms.locfileid: "54631266"
  解決策は、インポートを行った後、クライアント側で直接バインディングを変更することです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [情報の漏えい](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

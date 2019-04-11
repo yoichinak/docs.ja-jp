@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 8ab2b00767aed19cff5448d811d7cdcd1871d9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319639"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 2 つのコレクションに共通の要素が存在するかどうかを調べます。  
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  コレクションを返す任意の有効なクエリ式。もう一方のクエリ式から返されたコレクションと比較されます。 すべての式は、 `expression`と同じ型であるか、共通の基本型または派生型である必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- 2 つのコレクションに共通の要素がある場合は`true` 、それ以外の場合は `false`。  
+ `true` 2 つのコレクションは共通の要素である場合それ以外の場合、`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  機能的には、次と同等で重複が用意されています。  
@@ -35,11 +35,12 @@ expression OVERLAPS expression
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、OVERLAPS 演算子を使用して、2 つのコレクションに共通の値が存在するかどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 これをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202990"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>方法: グリッドの子要素を配置する
 この例は、get を使用してで定義されているメソッドを設定する方法を示しています。<xref:System.Windows.Controls.Grid>子要素を配置します。  
@@ -31,5 +31,6 @@ ms.locfileid: "57369176"
  ![スクリーン ショットは、2 つの列を含む WPF ユーザー インターフェイスを示しています、右側にある 3 x 3 のグリッドがあり、左の列と、グリッドの行の間、色付きの四角形を移動するボタン](././media/grid-methods-sample.png) 
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Grid>
 - [パネルの概要](panels-overview.md)

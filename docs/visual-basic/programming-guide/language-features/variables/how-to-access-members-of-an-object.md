@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322759"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>方法: オブジェクト (Visual Basic) のメンバーへのアクセス
 オブジェクトを参照するオブジェクト変数がある場合は、多くの場合、メソッド、プロパティ、フィールド、イベントなど、そのオブジェクトのメンバーを操作します。 たとえば、1 回作成した新しい<xref:System.Windows.Forms.Form>オブジェクトを設定することがあります、<xref:System.Windows.Forms.Control.Text%2A>プロパティまたは呼び出しの<xref:System.Windows.Forms.Control.Focus%2A>メソッド。  
@@ -33,7 +33,7 @@ ms.locfileid: "58819653"
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>コンパイル時に、型を認識するオブジェクトのメンバーにアクセスするには  
   
-1.  変数に代入するオブジェクトの型のオブジェクト変数を宣言します。  
+1. 変数に代入するオブジェクトの型のオブジェクト変数を宣言します。  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ ms.locfileid: "58819653"
   
      `Option Strict On`、のみ割り当てることができます<xref:System.Windows.Forms.Form>オブジェクト (から派生した型のオブジェクトまたは<xref:System.Windows.Forms.Form>) に`extraForm`します。 クラスまたは拡大と構造体を定義しているかどうか`CType`への変換<xref:System.Windows.Forms.Form>、そのクラスを割り当てるか、構造体をすることができますも`extraForm`します。  
   
-2.  メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
+2. メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ ms.locfileid: "58819653"
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>対象のわからない型コンパイル時にオブジェクトのメンバーにアクセスするには  
   
-1.  オブジェクト変数を宣言、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。 (として変数を宣言する`Object`として宣言することと同じ<xref:System.Object?displayProperty=nameWithType>)。  
+1. オブジェクト変数を宣言、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。 (として変数を宣言する`Object`として宣言することと同じ<xref:System.Object?displayProperty=nameWithType>)。  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ ms.locfileid: "58819653"
   
      `Option Strict On`で定義されているメンバーのみにアクセスすることができます、<xref:System.Object>クラス。  
   
-2.  メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
+2. メンバー アクセス演算子を使用して (`.`) オブジェクトの変数名とメンバー名の間。  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ ms.locfileid: "58819653"
 - <xref:System.MemberAccessException>
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300799"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。  
@@ -38,9 +38,9 @@ ms.locfileid: "58833719"
   
  アプリケーションは、次の条件のいずれかが true の場合、仮想化されます。  
   
-1.  使用する、`-nowin32manifest`オプションを渡さないように後のビルド手順で、または Windows リソース (.res) ファイルの一部としてマニフェストを使用して、`-win32resource`オプション。  
+1. 使用する、`-nowin32manifest`オプションを渡さないように後のビルド手順で、または Windows リソース (.res) ファイルの一部としてマニフェストを使用して、`-win32resource`オプション。  
   
-2.  要求実行レベルが指定されていないカスタム マニフェストを提供している。  
+2. 要求実行レベルが指定されていないカスタム マニフェストを提供している。  
   
  Visual Studio は、既定の .manifest ファイルを作成し、それを実行可能ファイルと一緒にデバッグ ディレクトリとリリース ディレクトリに保存します。 表示したり、クリックして既定のアプリケーション マニフェスト ファイルを編集**UAC 設定の表示**上、**アプリケーション**プロジェクト デザイナー タブ。 詳細については、「[[アプリケーション] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)」を参照してください。  
   

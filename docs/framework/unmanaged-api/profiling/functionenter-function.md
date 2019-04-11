@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 886e2a81bab9fbf64668159b501a1d20180b9462
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6018b5b06a138b38b7b97df280a3e4c4ea0512d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208411"
 ---
 # <a name="functionenter-function"></a>FunctionEnter 関数
 コントロールが関数に渡されることをプロファイラーに通知します。  
@@ -64,6 +64,7 @@ void __stdcall FunctionEnter (
  **.NET framework のバージョン:** 1.1, 1.0  
   
 ## <a name="see-also"></a>関連項目
+
 - [FunctionEnter2 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)

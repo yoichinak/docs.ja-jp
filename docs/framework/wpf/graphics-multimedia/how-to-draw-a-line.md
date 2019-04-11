@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: a194fad5471cafcb567aa00522a597a4186ef4af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143521"
 ---
 # <a name="how-to-draw-a-line"></a>方法: 線を描画する
 この例を使用して線を描画する方法を示します、<xref:System.Windows.Shapes.Line>要素。  
@@ -25,8 +25,9 @@ ms.locfileid: "57374188"
 ## <a name="example"></a>例  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- この例より大きなサンプルの一部です。サンプル全体については、[Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)を参照してください。  
+ この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Line>
 - [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)

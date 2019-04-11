@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 515eb0633c82c3e1386487d1866de79c9898c9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22c3a480e2b68377e300df1083b3178ee4e2d2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198843"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager インターフェイス
 Id とフレンドリ名を関連付ける一連のタスクをホストできるようにするメソッドを提供します。  
@@ -53,7 +53,8 @@ Id とフレンドリ名を関連付ける一連のタスクをホストでき�
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

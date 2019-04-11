@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083246"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>方法: 背景として使用するイメージの縦横比を保持する
 この例は、使用する方法を示します、<xref:System.Windows.Media.TileBrush.Stretch%2A>のプロパティ、<xref:System.Windows.Media.ImageBrush>イメージの縦横比を維持するためにします。  
@@ -37,8 +37,9 @@ ms.locfileid: "57353947"
   
  なおが、<xref:System.Windows.Media.TileBrush.Stretch%2A>を指定するプロパティが表示される方法、<xref:System.Windows.Media.TileBrush>コンテンツは、その出力領域に合わせて拡大、実際に指定する方法、<xref:System.Windows.Media.TileBrush>端まで拡大する基本タイルのコンテンツします。 詳細については、「 <xref:System.Windows.Media.TileBrush> 」を参照してください。  
   
- このコード例はに対して提供されている例の一部、<xref:System.Windows.Media.ImageBrush>クラス。 サンプル全体については、[ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)を参照してください。  
+ このコード例はに対して提供されている例の一部、<xref:System.Windows.Media.ImageBrush>クラス。 サンプル全体については、次を参照してください。 [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.TileBrush>
 - [イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)

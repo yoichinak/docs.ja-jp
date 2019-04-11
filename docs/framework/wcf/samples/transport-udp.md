@@ -2,31 +2,31 @@
 title: トランスポート:UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334667"
 ---
 # <a name="transport-udp"></a>トランスポート:UDP
 UDP トランスポートのサンプルでは、UDP ユニキャストとマルチキャストをカスタムの Windows Communication Foundation (WCF) トランスポートとして実装する方法を示します。 このサンプルでは、チャネル フレームワークを使用して、WCF のベスト プラクティスに従うと、WCF では、カスタム トランスポートを作成するための推奨手順について説明します。 カスタム トランスポートを作成する手順は、次のとおりです。  
   
-1.  チャネルの決定[メッセージ交換パターン](#MessageExchangePatterns)(IOutputChannel、IInputChannel、IDuplexChannel、IRequestChannel、または IReplyChannel)、ChannelFactory と ChannelListener でサポートします。 次に、こうしたインターフェイスのセッションフル バリエーションをサポートするかどうかを決定します。  
+1. チャネルの決定[メッセージ交換パターン](#MessageExchangePatterns)(IOutputChannel、IInputChannel、IDuplexChannel、IRequestChannel、または IReplyChannel)、ChannelFactory と ChannelListener でサポートします。 次に、こうしたインターフェイスのセッションフル バリエーションをサポートするかどうかを決定します。  
   
-2.  メッセージ交換パターンをサポートするチャネル ファクトリおよびリスナーを作成します。  
+2. メッセージ交換パターンをサポートするチャネル ファクトリおよびリスナーを作成します。  
   
-3.  ネットワーク固有の例外が、<xref:System.ServiceModel.CommunicationException> の適切な派生クラスに標準化されていることを確認します。  
+3. ネットワーク固有の例外が、<xref:System.ServiceModel.CommunicationException> の適切な派生クラスに標準化されていることを確認します。  
   
-4.  追加、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素をチャネル スタックにカスタム トランスポートを追加します。 詳細については、[バインド要素を追加する](#AddingABindingElement)を参照してください。  
+4. 追加、 [\<バインド >](../../../../docs/framework/misc/binding.md)要素をチャネル スタックにカスタム トランスポートを追加します。 詳細については、次を参照してください。[バインド要素を追加する](#AddingABindingElement)します。  
   
-5.  バインド要素拡張セクションを追加して、新しいバインド要素を構成システムに公開します。  
+5. バインド要素拡張セクションを追加して、新しいバインド要素を構成システムに公開します。  
   
-6.  他のエンドポイントに機能を伝達するメタデータ拡張を追加します。  
+6. 他のエンドポイントに機能を伝達するメタデータ拡張を追加します。  
   
-7.  適切に定義されたプロファイルに従って、バインド要素のスタックを事前構成するバインディングを追加します。 詳細については、[標準バインド要素を追加する](#AddingAStandardBinding)を参照してください。  
+7. 適切に定義されたプロファイルに従って、バインド要素のスタックを事前構成するバインディングを追加します。 詳細については、次を参照してください。[標準バインド要素を追加する](#AddingAStandardBinding)します。  
   
-8.  構成システムにバインディングを開示する、バインディング セクションおよびバインド構成要素を追加します。 詳細については、[構成サポートの追加](#AddingConfigurationSupport)を参照してください。  
+8. 構成システムにバインディングを開示する、バインディング セクションおよびバインド構成要素を追加します。 詳細については、次を参照してください。[構成サポートの追加](#AddingConfigurationSupport)します。  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>メッセージ交換パターン  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  Svcutil.exe を実行する場合、Svcutil.exe に WSDL インポートの拡張を読み込ませるために次の 2 つのオプションがあります。  
   
-1.  Svcutil.exe/SvcutilConfig を使用して、構成ファイルを指定する:\<ファイル >。  
+1. Svcutil.exe/SvcutilConfig を使用して、構成ファイルを指定する:\<ファイル >。  
   
-2.  Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
+2. Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
   
  `UdpBindingElementImporter` 型は、`IWsdlImportExtension` インターフェイスを実装します。 `ImportEndpoint` メソッドは、次のようにして WSDL ポートからアドレスをインポートします。  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  次に、登録されたクラス (`IPolicyImporterExtension`) から `UdpBindingElementImporter` を実装します。 `ImportPolicy()` で、名前空間内のアサーションを調べ、そのアサーションを処理してトランスポートを生成し、マルチキャストであるかどうかをチェックします。 さらに、処理したアサーションをバインディング アサーションの一覧から削除する必要もあります。 Svcutil.exe を実行する場合、ここでも、統合用に次の 2 つのオプションがあります。  
   
-1.  Svcutil.exe/SvcutilConfig を使用して、構成ファイルを指定する:\<ファイル >。  
+1. Svcutil.exe/SvcutilConfig を使用して、構成ファイルを指定する:\<ファイル >。  
   
-2.  Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
+2. Svcutil.exe と同じディレクトリにある Svcutil.exe.config に構成セクションを追加します。  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>標準バインド要素の追加  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+1. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-2.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+2. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-3.  前の「UDP テスト サービスとクライアント」セクションを参照してください。  
+3. 前の「UDP テスト サービスとクライアント」セクションを参照してください。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

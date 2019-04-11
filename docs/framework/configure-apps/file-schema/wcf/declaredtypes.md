@@ -8,17 +8,17 @@ helpviewer_keywords:
 - KnownTypes
 - <declaredTypes> element
 ms.assetid: f35184e4-9d9e-4d37-8fb4-d5b58220eb3e
-ms.openlocfilehash: d347afb183b23410359a0972d7fd3b1f851971bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8919ee717012f8badcf7015bf8d850ed431c5943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090278"
 ---
 # <a name="declaredtypes"></a>\<declaredTypes>
 逆シリアル化時に <xref:System.Runtime.Serialization.DataContractSerializer> が使用する既知の型が含まれています。  
   
- データ コントラクトと既知の型の詳細については、[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)を参照してください。  
+ データ コントラクトと既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
   
  system.runtime.serialization  
 \<dataContractSerializer >  
@@ -58,10 +58,10 @@ ms.locfileid: "55264994"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。|  
+|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|<xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 既知の型の詳細については、[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>を参照してください。  
+ 既知の型の詳細については、次を参照してください。 [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)と<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
 ## <a name="example"></a>例  
  宣言された型と既知の型に追加された次の XML コードを示しています、`DataContractSerializer`要素。 この例は、追加された 3 つの型を示しています。 最初の型は、"Item" という既知の型を使用する "Orders" という名前のカスタム型です。 2 つ目の宣言型は、既知の型として <xref:System.Collections.Generic.List%601> を使用する `Item` です。 最後の 3 つ目の宣言型は、<xref:System.Collections.Generic.Dictionary%602> です。 <xref:System.Collections.Generic.Dictionary%602> クラスの型は、2 種類のパラメーターを持つジェネリック型です。 最初のパラメーターはキーを表し、2 番目のパラメーターは値を表します。 次の例は、2 番目の型 (値) の <xref:System.Collections.Generic.List%601> を既知の型の一覧に追加します。 `index` 属性を使用して、既知の型で使用する型パラメーターを指定する必要があります。 この場合には、"1" に設定された index 属性 (コレクションは 0 から始まる) によって値型が示されます。  
@@ -89,7 +89,8 @@ ms.locfileid: "55264994"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
+- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
 - [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

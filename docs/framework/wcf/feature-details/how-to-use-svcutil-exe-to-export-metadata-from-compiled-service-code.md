@@ -1,15 +1,15 @@
 ---
-title: '方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには'
+title: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648102"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329389"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
 Svcutil.exe は、次のように、コンパイル済みアセンブリのサービス、コントラクト、およびデータ型のメタデータをエクスポートできます。  
   
 -   Svcutil.exe を使用して、アセンブリのセットに対するすべてのコンパイル済みサービス コントラクトのメタデータをエクスポートするには、入力パラメーターとして各アセンブリを指定します。 これが既定の動作です。  
@@ -23,9 +23,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>コンパイル済みサービス コントラクトのメタデータをエクスポートするには  
   
-1.  サービス コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
+1. サービス コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
   
-2.  コンパイルされたアセンブリに対して Svcutil.exe を実行します。  
+2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
@@ -36,9 +36,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>コンパイル済みサービスのメタデータをエクスポートするには  
   
-1.  サービスの実装を実行可能アセンブリにコンパイルします。  
+1. サービスの実装を実行可能アセンブリにコンパイルします。  
   
-2.  サービス実行可能ファイルの構成ファイルを作成し、サービス構成を追加します。  
+2. サービス実行可能ファイルの構成ファイルを作成し、サービス構成を追加します。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
     </configuration>  
     ```  
   
-3.  コンパイルされたサービス実行可能ファイルに対して Svcutil.exe を実行します。その際、`/serviceName` スイッチを使用してサービスの構成名を指定してください。  
+3. コンパイルされたサービス実行可能ファイルに対して Svcutil.exe を実行します。その際、`/serviceName` スイッチを使用してサービスの構成名を指定してください。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
@@ -64,9 +64,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>コンパイル済みデータ コントラクトのメタデータをエクスポートするには  
   
-1.  データ コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
+1. データ コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
   
-2.  コンパイルされたアセンブリに対して Svcutil.exe を実行します。その際、`/dataContract` スイッチを使用して、データ コントラクトのメタデータだけが生成されるように指定してください。  
+2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。その際、`/dataContract` スイッチを使用して、データ コントラクトのメタデータだけが生成されるように指定してください。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
@@ -163,5 +163,6 @@ public class MyService : IPersonFinder
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

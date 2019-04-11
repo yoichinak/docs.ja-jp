@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: df26d2bd08e4691837f739a4e71d3bb1a25bdd00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210023"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>方法: 列挙値にバインドする
 この例では、列挙型の GetValues メソッドにバインドして列挙型にバインドする方法を示します。  
@@ -22,6 +22,7 @@ ms.locfileid: "57377795"
  [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メソッドにバインドする](how-to-bind-to-a-method.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

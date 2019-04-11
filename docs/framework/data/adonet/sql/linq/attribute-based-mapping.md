@@ -2,12 +2,12 @@
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223564"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] マップを SQL Server データベース、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]いずれかの属性の適用、または外部マッピング ファイルを使用してオブジェクト モデルです。 このトピックでは、属性ベースの方法について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54713903"
  通常 Visual Studio を使用している開発者を使用して属性ベースの対応付けを実行、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
 > [!NOTE]
->  外部 XML ファイルを使用して対応付けることもできます。 詳細については、[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)を参照してください。  
+>  外部 XML ファイルを使用して対応付けることもできます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  
   
  以下のセクションでは、属性ベースの対応付けについて詳しく説明します。 詳細については、「<xref:System.Data.Linq.Mapping>」を参照してください。  
   
@@ -26,12 +26,12 @@ ms.locfileid: "54713903"
   
 |プロパティ|種類|既定値|説明|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|「<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>」を参照してください。|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> プロパティを使用して、データベースの名前を指定します。|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|参照トピック <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> プロパティを使用して、データベースの名前を指定します。|  
   
  詳細については、「<xref:System.Data.Linq.Mapping.DatabaseAttribute>」を参照してください。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 属性  
- この属性は、クラスを、データベース テーブルまたはビューに関連付けられたエンティティ クラスとして指定するために使用します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、この属性を持つクラスを、永続的なクラスとして扱います。 次の表は、<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティについての説明です。  
+ この属性は、クラスを、データベース テーブルまたはビューに関連付けられたエンティティ クラスとして指定するために使用します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] この属性を持つ永続的なクラスとしてクラスを扱います。 次の表は、<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> プロパティについての説明です。  
   
 |プロパティ|種類|既定値|説明|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "54713903"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 継承階層の識別子の値が列に含まれることを示します。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|このクラス メンバーが、テーブルの主キーの列、または主キーの一部である列を表すことを指定します。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|メンバーの列の型を、データベースのタイムスタンプまたはバージョン番号として指定します。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always` (メンバーの <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> が `true` の場合は除く)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] がオプティミスティック同時実行競合を検出する方法を指定します。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`、しない限り、<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>は`true`メンバー|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] がオプティミスティック同時実行競合を検出する方法を指定します。|  
   
  詳細については、「<xref:System.Data.Linq.Mapping.ColumnAttribute>」を参照してください。  
   
@@ -143,4 +143,5 @@ ms.locfileid: "54713903"
  詳細については、「 <xref:System.Data.Linq.Mapping.DataAttribute> 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

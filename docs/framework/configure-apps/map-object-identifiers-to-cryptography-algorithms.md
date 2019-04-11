@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: 000d5d94b19907dfed40ac03f3172b9b8449c6f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130612"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>暗号化アルゴリズムへのオブジェクト ID の割り当て
 データが 1 つのプログラムから別の送信時いない改ざんデジタル署名を確認します。 通常、デジタル署名がハッシュに署名するデータの数学関数を適用することによって計算されます。 署名のハッシュ値を書式設定時に、一部のデジタル署名アルゴリズムは、書式設定操作の一部として ASN.1 オブジェクト識別子 (OID) を追加します。 OID は、ハッシュを計算に使用されたアルゴリズムを識別します。 アルゴリズムは、カスタム アルゴリズムを使用する暗号化メカニズムを拡張するオブジェクトの識別子にマップできます。 次の例では、新しいハッシュ アルゴリズムにオブジェクト識別子をマップする方法を示します。  
@@ -41,5 +41,6 @@ ms.locfileid: "55083453"
  [ \<OidEntry > 要素](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)2 つの属性が含まれています。 **OID**属性は、オブジェクトの識別番号。 **名前**属性の値が、**名前**属性を[ \<nameEntry > 要素](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md)します。 オブジェクト識別子は、簡易名にマップできる前に、アルゴリズム名からクラスへのマッピングする必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [暗号化クラスの設定](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化サービス](../../../docs/standard/security/cryptographic-services.md)

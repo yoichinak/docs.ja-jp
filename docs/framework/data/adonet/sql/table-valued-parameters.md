@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 130b5338b14bc7c1f36feb620d549295867ef64e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113621"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 テーブル値パラメーターを使用すると、ラウンド トリップを何度も繰り返したり、サーバー側にデータを処理するための特殊なロジックを組み込んだりすることなく、複数行のデータをクライアント アプリケーションから SQL Server へと簡単にマーシャリングできます。 テーブル値パラメーターを使用すると、クライアント アプリケーションのデータ行をカプセル化して単一のパラメーター化コマンドでサーバーに送ることができます。 受信データ行はテーブル変数に格納され、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] によって操作できるようになります。  
@@ -39,7 +39,7 @@ ms.locfileid: "54527771"
 -   `bcp` ユーティリティ プログラムまたは <xref:System.Data.SqlClient.SqlBulkCopy> オブジェクトを使用して、多数行のデータをテーブルに読み込む。 この方法は効率的ですが、データが一時テーブルまたはテーブル変数に読み込まれなければ、サーバー側での処理がサポートされません。  
   
 ## <a name="creating-table-valued-parameter-types"></a>テーブル値パラメーター型の作成  
- テーブル値パラメーターは、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「を参照してください。  
+ テーブル値パラメーターは、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] の CREATE TYPE ステートメントを使用して定義された厳密に型指定されたテーブルの構造に基づいています。 クライアント アプリケーションでテーブル値パラメーターを使用するには、まず SQL Server でテーブル型を作成し、その構造を定義する必要があります。 テーブル型の作成の詳細については、次を参照してください。[ユーザー定義テーブル型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server オンライン ブックの「します。  
   
  次のステートメントは、CategoryID と CategoryName 列から成る CategoryTableType というテーブル型を作成します。  
   
@@ -273,6 +273,7 @@ insertCommand.ExecuteNonQuery()
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [コマンドおよびパラメーター](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)

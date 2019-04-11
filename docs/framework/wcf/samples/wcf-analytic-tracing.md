@@ -2,12 +2,12 @@
 title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332314"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54748143"
  Windows でのイベント トレースの詳細についてを参照してください。[デバッグの向上およびパフォーマンス調整 ETW を](https://go.microsoft.com/fwlink/?LinkId=166488)します。  
   
 ## <a name="disposing-eventprovider"></a>EventProvider の破棄  
- このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装するときに使用できる可能性がありますが、<xref:System.Diagnostics.Eventing.EventProvider>のサービスの有効期間にわたってリソース。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージ リソースを破棄に関する詳細については、[Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)を参照してください。  
+ このサンプルでは、<xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> を実装した <xref:System.IDisposable?displayProperty=nameWithType> クラスを使用します。 WCF サービスのトレースを実装するときに使用できる可能性がありますが、<xref:System.Diagnostics.Eventing.EventProvider>のサービスの有効期間にわたってリソース。 そのため、読みやすくするためにも、このサンプルでは、ラップされた <xref:System.Diagnostics.Eventing.EventProvider> を破棄しません。 何かの理由で、サービスに対して別のトレースの要件を設定し、このリソースを破棄しなければならない場合は、アンマネージ リソースの破棄に関するベスト プラクティスに従ってこのサンプルを変更してください。 アンマネージ リソースを破棄に関する詳細については、次を参照してください。 [Dispose メソッドの実装](https://go.microsoft.com/fwlink/?LinkId=166436)します。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自己ホスト型と Web ホスト  
  Web ホスト サービスでは、WCF の分析トレースは、"HostReference"は、サービスは、トレースの出力を識別するために使用をという名前のフィールドを指定します。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 Web ホストの形式を参照場合に、パイプ '&#124;' 文字が実際には、最終的な表示文字列は、次のいずれかを指定できます。  
@@ -43,31 +43,31 @@ ms.locfileid: "54748143"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2012 を使用して、WCFAnalyticTracingExtensibility.sln ソリューション ファイルを開きます。  
   
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-3.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
+3. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
      Web ブラウザーで次のようにクリックします。 **[calculator.svc]** します。 サービスの WSDL ドキュメントの URI がブラウザーに表示されます。 その URI をコピーします。  
   
-4.  WCF テスト クライアント (WcfTestClient.exe) を実行します。  
+4. WCF テスト クライアント (WcfTestClient.exe) を実行します。  
   
      WCF テスト クライアント (WcfTestClient.exe) は`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`します。 既定の Visual Studio 2012 のインストール ディレクトリは`C:\Program Files\Microsoft Visual Studio 10.0`します。  
   
-5.  選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
+5. 選択して、サービスを追加、WCF テスト クライアント内で**ファイル**、し**サービスの追加**します。  
   
      入力ボックスにエンドポイントのアドレスを追加します。  
   
-6.  クリックして**OK**ダイアログ ボックスを閉じます。  
+6. クリックして**OK**ダイアログ ボックスを閉じます。  
   
      下の左ペインで、ICalculator サービスが追加された**マイ サービス プロジェクト**します。  
   
-7.  イベント ビューアー アプリケーションを開きます。  
+7. イベント ビューアー アプリケーションを開きます。  
   
      サービスを呼び出す前に、イベント ビューアーを起動し、WCF サービスから生成された追跡イベントのイベント ログがリッスンしていることを確認します。  
   
-8.  **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
+8. **開始**メニューの **管理ツール**、し**イベント ビューアー**します。 有効にする、**分析**と**デバッグ**ログ。  
   
 9. イベント ビューアーのツリー ビューでに移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し、。**アプリケーション サーバー-アプリケーション**します。 右クリックして**アプリケーション サーバー-アプリケーション**を選択します**ビュー**、し**分析およびデバッグ ログ**します。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "54748143"
   
 #### <a name="to-clean-up-optional"></a>クリーンアップするには (省略可能)  
   
-1.  開いている**イベント ビューアー**します。  
+1. 開いている**イベント ビューアー**します。  
   
-2.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
+2. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、し**アプリケーション サーバー-アプリケーション**します。 右クリック**分析**選択**ログの無効化**します。  
   
-3.  移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
+3. 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、 **アプリケーション サーバー-アプリケーション**、し**分析**します。 右クリック**分析**選択**ログの消去**します。  
   
-4.  クリックして**オフ**イベントを消去します。  
+4. クリックして**オフ**イベントを消去します。  
   
 ## <a name="known-issue"></a>既知の問題  
  既知の問題がある、**イベント ビューアー** ETW イベントのデコードに失敗する可能性があります。 というエラー メッセージを参照してください可能性があります。"イベント ID の説明\<id > 元が Microsoft Windows のアプリケーション サーバー-アプリケーションが見つかりません。 このイベントを発生させるコンポーネントがローカル コンピューターにインストールされていないか、インストールが破損しています。 インストールしたり、ローカル コンピューターのコンポーネントを修復できます。" このエラーが発生した場合は、選択**更新**から、**アクション**メニュー。 これにより、イベントが正常にデコードされます。  
@@ -118,4 +118,5 @@ ms.locfileid: "54748143"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric の監視のサンプル](https://go.microsoft.com/fwlink/?LinkId=193959)

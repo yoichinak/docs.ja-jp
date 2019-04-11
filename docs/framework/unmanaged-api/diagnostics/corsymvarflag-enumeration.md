@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c797378f5e13f39c1c786237a3a7b9cf577fccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198856"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 列挙体
 変数がコンパイラによって生成されたかどうかを示します。  
@@ -45,4 +45,5 @@ typedef enum CorSymVarFlag
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
-- [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+
+- [シンボル ストア診断列挙体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

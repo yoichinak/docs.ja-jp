@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。'
+title: '方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: adc54ace6ea7511f1f92945b9e0c8f44b5d8f4fe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304286"
 ---
-# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。
+# <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57712722"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>クリックしてされたパネルを確認するには  
   
-1.  <xref:System.Windows.Forms.StatusBar.PanelClick>イベント ハンドラーを使用して、 `Select Case` (Visual Basic) でまたは`switch case`(VisualC#または[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) イベントの引数でクリックされたパネルのインデックスを調べることでクリックしてされたパネルを判断するステートメント。  
+1. <xref:System.Windows.Forms.StatusBar.PanelClick>イベント ハンドラーを使用して、 `Select Case` (Visual Basic) でまたは`switch case`(VisualC#または[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) イベントの引数でクリックされたパネルのインデックスを調べることでクリックしてされたパネルを判断するステートメント。  
   
      次のコード例のフォームで、存在が必要です、<xref:System.Windows.Forms.StatusBar>コントロール、 `StatusBar1`、2 つと<xref:System.Windows.Forms.StatusBarPanel>オブジェクト、`StatusBarPanel1`と`StatusBarPanel2`します。  
   
@@ -94,8 +94,9 @@ ms.locfileid: "57712722"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [方法: ステータス バー パネルのサイズを設定します。](how-to-set-the-size-of-status-bar-panels.md)
-- [チュートリアル: 実行時にステータス バー情報の更新](walkthrough-updating-status-bar-information-at-run-time.md)
+- [方法: ステータス バー パネルのサイズを設定する](how-to-set-the-size-of-status-bar-panels.md)
+- [チュートリアル: ステータス バー情報の実行時更新](walkthrough-updating-status-bar-information-at-run-time.md)
 - [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

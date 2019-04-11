@@ -1,5 +1,5 @@
 ---
-title: '方法: アクセス キー、Windows フォームのコレクションを指定'
+title: '方法: Windows フォームのコレクションにアクセス キーを指定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: af398e8ac051bfc89c532fe5dc216e9cfbfdc4b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709619"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214041"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>方法: アクセス キー、Windows フォームのコレクションを指定
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>方法: Windows フォームのコレクションにアクセス キーを指定する
 -   個々 のコレクション アイテムは、キーにアクセスできます。 この機能は Windows フォーム アプリケーションで通常使用される多くのコレクション クラスに追加されました。 キー付きコレクションがアクセス可能なコレクション クラスの一部を次に示します。  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -52,5 +52,6 @@ ms.locfileid: "57709619"
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームについて](getting-started-with-windows-forms.md)
-- [方法: 追加または削除のイメージを Windows フォームの ImageList コンポーネント](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

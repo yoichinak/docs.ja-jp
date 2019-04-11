@@ -6,28 +6,26 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296109"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ホストするための簡単なメカニズムを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するための豊富な環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ホストするための簡単なメカニズムを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
   
  このチュートリアルは、サンプル アプリケーションを記述する方法を説明します[Win32 ウィンドウのサンプルで WPF コンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)、そのホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。 このサンプルを拡張すると、いずれの [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ウィンドウでもホストできます。 マネージド コードとアンマネージド コードの混在が関係しているため、このアプリケーションは [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] で記述されます。  
-  
- 
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
  このチュートリアルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラミングの基礎知識があることを前提としています。 基本的な事柄[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プログラミングを参照してください[Getting Started](../getting-started/index.md)します。 概要については[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プログラミングでは、参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
   
- このチュートリアルに付属するサンプルがで実装されているため[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]、このチュートリアルの使用に関する知識を前提としています[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]プログラムに、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]マネージ コード プログラミングの理解。 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の知識があることは、役立ちますが、必須ではありません。  
+ このチュートリアルに付属するサンプルがで実装されているため[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]、このチュートリアルの使用に関する知識を前提としています[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]プログラムに、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]マネージ コード プログラミングの理解。 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の知識があることは、役立ちますが、必須ではありません。  
   
 > [!NOTE]
->  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、[Win32 ウィンドウのサンプルで WPF のコンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)を参照してください。  
+>  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、次を参照してください。 [Win32 ウィンドウのサンプルで WPF のコンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)します。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本手順  
@@ -35,13 +33,13 @@ ms.locfileid: "57363164"
   
  ホストする鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウは、<xref:System.Windows.Interop.HwndSource>クラス。 このクラスは、ラップ、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]に組み込むことができるように、ウィンドウ、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]子ウィンドウとして。 次の方法では、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を単一のアプリケーションに統合します。  
   
-1.  実装、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マネージ クラスとしてコンテンツ。  
+1. 実装、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マネージ クラスとしてコンテンツ。  
   
-2.  [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] で実装します。 既存のアプリケーションとアンマネージドの [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] コードで使用を開始する場合、通常は、プロジェクトの設定を `/clr` コンパイラ フラグを含めるように変更して、マネージド コードを呼び出せるようにします。  
+2. [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] で実装します。 既存のアプリケーションとアンマネージドの [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] コードで使用を開始する場合、通常は、プロジェクトの設定を `/clr` コンパイラ フラグを含めるように変更して、マネージド コードを呼び出せるようにします。  
   
-3.  スレッド処理モデルをシングル スレッド アパートメント (STA: Single Threaded Apartment) に設定します。  
+3. スレッド処理モデルをシングル スレッド アパートメント (STA: Single Threaded Apartment) に設定します。  
   
-4.  処理、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウ プロシージャと次の操作で通知します。  
+4. 処理、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウ プロシージャと次の操作で通知します。  
   
     1.  新しい <xref:System.Windows.Interop.HwndSource> オブジェクトを、親ウィンドウがその `parent` パラメーターとなるように指定して作成します。  
   
@@ -51,13 +49,13 @@ ms.locfileid: "57363164"
   
     4.  コンテンツの HWND を取得します。 <xref:System.Windows.Interop.HwndSource.Handle%2A> オブジェクトの <xref:System.Windows.Interop.HwndSource> プロパティにウィンドウ ハンドル (HWND) が格納されます。 アプリケーションのアンマネージ部分で使用できる HWND を取得するには、`Handle.ToPointer()` を HWND にキャストします。  
   
-5.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を保持する静的フィールドを含むマネージド クラスを実装します。 このクラスを使用すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コードから [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コンテンツへの参照を取得できるようになります。  
+5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を保持する静的フィールドを含むマネージド クラスを実装します。 このクラスを使用すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コードから [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コンテンツへの参照を取得できるようになります。  
   
-6.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを静的フィールドに割り当てます。  
+6. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを静的フィールドに割り当てます。  
   
-7.  通知を受信、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを 1 つまたは複数のハンドラーをアタッチすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イベント。  
+7. 通知を受信、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツを 1 つまたは複数のハンドラーをアタッチすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イベント。  
   
-8.  静的フィールドに格納した参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信し、プロパティの設定などを行います。  
+8. 静的フィールドに格納した参照を使用して [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツと通信し、プロパティの設定などを行います。  
   
 > [!NOTE]
 >  使用することも[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]実装するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ。 ただし、このコンテンツは [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] として別にコンパイルしてから、その [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] に [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションから参照する必要があります。 手順の残りの部分は、前述の手順と同様です。
@@ -79,13 +77,13 @@ ms.locfileid: "57363164"
 ### <a name="the-basic-application"></a>基本的なアプリケーション
  ホスト アプリケーションの開始点は、Visual Studio 2005 テンプレートを作成しました。
 
-1.  Visual Studio 2005 を開き、選択**新しいプロジェクト**から、**ファイル**メニュー。
+1. Visual Studio 2005 を開き、選択**新しいプロジェクト**から、**ファイル**メニュー。
 
-2.  選択**Win32**の一覧から[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]プロジェクトの種類。 既定の言語がない場合[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]、これらのプロジェクト タイプの下に表示されます**他の言語**します。
+2. 選択**Win32**の一覧から[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]プロジェクトの種類。 既定の言語がない場合[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]、これらのプロジェクト タイプの下に表示されます**他の言語**します。
 
-3.  選択、 **Win32 プロジェクト**テンプレート、プロジェクトに名前を割り当てるし、をクリックして**OK**を起動する、 **Win32 アプリケーション ウィザード**。
+3. 選択、 **Win32 プロジェクト**テンプレート、プロジェクトに名前を割り当てるし、をクリックして**OK**を起動する、 **Win32 アプリケーション ウィザード**。
 
-4.  ウィザードの既定の設定をそのまま使用し、をクリックして**完了**プロジェクトを開始します。
+4. ウィザードの既定の設定をそのまま使用し、をクリックして**完了**プロジェクトを開始します。
 
  このテンプレートは、次のような基本的な [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを作成します。
 
@@ -99,18 +97,18 @@ ms.locfileid: "57363164"
 
  1 つ目は、プロジェクトをマネージド コードとしてコンパイルすることです。 既定では、プロジェクトはアンマネージ コードとしてコンパイルされます。 ただし、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] はマネージド コードで実装されているため、プロジェクトは状況に応じてコンパイルする必要があります。
 
-1.  プロジェクト名を右クリックして**ソリューション エクスプ ローラー**選択**プロパティ**を起動するコンテキスト メニューから、**プロパティ ページ** ダイアログ ボックス。
+1. プロジェクト名を右クリックして**ソリューション エクスプ ローラー**選択**プロパティ**を起動するコンテキスト メニューから、**プロパティ ページ** ダイアログ ボックス。
 
-2.  選択**構成プロパティ**左側のウィンドウで、ツリー ビューから。
+2. 選択**構成プロパティ**左側のウィンドウで、ツリー ビューから。
 
-3.  選択**共通言語ランタイム**からサポート、**プロジェクトの既定値**右側のウィンドウの一覧。
+3. 選択**共通言語ランタイム**からサポート、**プロジェクトの既定値**右側のウィンドウの一覧。
 
-4.  選択**共通言語ランタイム サポート (/clr)** ドロップダウン リスト ボックスから。
+4. 選択**共通言語ランタイム サポート (/clr)** ドロップダウン リスト ボックスから。
 
 > [!NOTE]
 >  このコンパイラ フラグを使用すると、アプリケーションでマネージド コードを使用できますが、アンマネージド コードは以前と同様にコンパイルされます。
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、シングル スレッド アパートメント (STA) スレッド処理モデルを使用します。 正しく動作するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ コードは、する必要があります設定するアプリケーションのスレッド モデルを STA にエントリ ポイントに属性を適用しています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] シングル スレッド アパートメント (STA) スレッド モデルを使用します。 正しく動作するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ コードは、する必要があります設定するアプリケーションのスレッド モデルを STA にエントリ ポイントに属性を適用しています。
 
  [!code-cpp[Win32HostingWPFPage#WinMain](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#winmain)]
 

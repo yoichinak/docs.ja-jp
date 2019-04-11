@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091435"
 ---
 # <a name="inline-styles-and-templates"></a>インライン スタイルおよびテンプレート
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>オブジェクトおよびオブジェクトのテンプレート (<xref:System.Windows.FrameworkTemplate>サブクラス) リソース内の要素の視覚的な外観を定義する方法、として使用できるように複数回です。 このため、属性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]型を受け取る<xref:System.Windows.Style>と<xref:System.Windows.FrameworkTemplate>インライン新しいものを定義するのではなく、ほとんどの場合に既存のスタイルとテンプレートにリソース参照を作成します。  
@@ -37,4 +37,5 @@ ms.locfileid: "57373388"
  オブジェクトを返すマークアップ拡張機能によって有効になっているその他の構文は、スタイルとテンプレートのこともできます。 考えられるシナリオがある場合、このような 2 つの拡張子を含める[TemplateBinding](templatebinding-markup-extension.md)と<xref:System.Windows.Data.Binding>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [スタイルとテンプレート](../controls/styling-and-templating.md)

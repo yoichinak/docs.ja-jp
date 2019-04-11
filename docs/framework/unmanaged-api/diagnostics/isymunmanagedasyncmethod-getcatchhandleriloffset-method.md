@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d5f88656-433d-447c-b21c-2a12bed2e72a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82101da6c4e47f0e981bb358b79ae2c6670af2c5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8c9fbada0317738c80f21e0c86199c1df43d1be6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128493"
 ---
 # <a name="isymunmanagedasyncmethodgetcatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::GetCatchHandlerILOffset メソッド
 参照してください[DefineCatchHandlerILOffset メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md)します。  
@@ -33,4 +33,5 @@ HRESULT GetCatchHandlerILOffset(    [out, retval] ULONG32* pRetVal);
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedAsyncMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

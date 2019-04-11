@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9b4e9149fa50a951f2a56c83412e42fe86b9563
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167662"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 関数
 次の 3 つのインターフェイスの 1 つを提供します。[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)します。  
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`ppInterface` が null です。|  
+|E_POINTER|`ppInterface` null です。|  
   
 ## <a name="remarks"></a>Remarks  
  次の表は、サポートされている組み合わせ`clsid`と`riid`します。  
@@ -89,7 +89,8 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+
+- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)

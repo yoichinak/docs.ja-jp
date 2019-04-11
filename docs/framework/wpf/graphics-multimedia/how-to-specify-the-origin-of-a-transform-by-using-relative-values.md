@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082959"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>方法: 変換の原点を相対値で指定する
 この例の原点を指定する相対値を使用する方法を示しています、<xref:System.Windows.UIElement.RenderTransform%2A>に適用される、<xref:System.Windows.FrameworkElement>します。  
@@ -40,6 +40,7 @@ RenderTransformOrigin が (0.5, 0.5) の RenderTransform を使用した 45 度�
  変換の詳細については<xref:System.Windows.FrameworkElement>、オブジェクトを参照してください、[変換の概要](transforms-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Transform>
 - [変換の概要](transforms-overview.md)
-- [方法トピック](transformations-how-to-topics.md)
+- [方法のトピック](transformations-how-to-topics.md)

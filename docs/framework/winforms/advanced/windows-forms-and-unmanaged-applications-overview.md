@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195645"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows フォームおよびアンマネージ アプリケーションの概要
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
@@ -27,7 +27,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
   
  Windows フォーム コントロールのサポートをホストしている、使用できる ActiveX を次の表に示します。  
   
-|Windows フォームのバージョン|Support|  
+|Windows フォームのバージョン|サポート|  
 |---------------------------|-------------|  
 |.NET Framework version 1.0|Internet Explorer 5.01 以降のバージョン|  
 |.NET Framework version 1.1 以降|Internet Explorer 5.01 以降のバージョン<br /><br /> Microsoft Foundation Classes (MFC) 7.0 以降|  
@@ -47,7 +47,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
  アプリケーションのメッセージ ループは、スレッドのメッセージ キューのメッセージを取得して変換し、処理のためにアプリケーションに送信する内部プログラム ループです。 Windows フォームのメッセージ ループは、Visual Basic 6.0 アプリケーションや MFC アプリケーションなど、以前のアプリケーションが提供するメッセージ ループと同じアーキテクチャを持っていません。 メッセージ ループにポストされたウィンドウのメッセージは、Windows フォームの要求とは異なる処理を実行することがあります。 そのため、予期しない動作が発生する可能性があります。 一部のキーストロークの組み合わせ、一部のマウスのアクティビティが動作せず、一部のイベントが想定どおりに発生しないことがあります。  
   
 ## <a name="resolving-interoperability-issues"></a>相互運用性の問題の解決  
- これらの問題は、<xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> メソッドを使用して作成された [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メッセージ ループでフォームを表示することで解決できます。  
+ これらの問題は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メソッドを使用して作成された <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> メッセージ ループでフォームを表示することで解決できます。  
   
  Windows フォームが COM クライアント アプリケーションから正しく動作するには、Windows フォームのメッセージ ループ上で実行する必要があります。 そのためには、次の方法のいずれかを使用します。  
   
@@ -56,7 +56,8 @@ Windows フォーム アプリケーションとコントロールは、いく�
 -   各 Windows フォームを新しいスレッドで表示します。 詳細については、「[方法 :独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポート](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
+
+- [Windows フォームとアンマネージ アプリケーション](windows-forms-and-unmanaged-applications.md)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 相互運用性サンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -64,5 +65,5 @@ Windows フォーム アプリケーションとコントロールは、いく�
 - [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
 - [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
-- [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](com-interop-by-displaying-a-windows-form-shadow.md)
-- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)
+- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

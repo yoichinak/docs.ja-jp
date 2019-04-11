@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba084444-9e68-4cde-9388-54b950670987
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84aef2b26e008d1a3c6d95d7ec1e130ab0594a11
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4599d41336778db8ce8dcf3ac567e4e2cc8833e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174942"
 ---
 # <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a>ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド
 参照してください[DefineKickoffMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)します。  
@@ -33,4 +33,5 @@ HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);
  **ヘッダー:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedAsyncMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

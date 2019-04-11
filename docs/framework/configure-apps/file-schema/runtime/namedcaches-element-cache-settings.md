@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104937"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 要素 (キャッシュ設定)
 名前付きの構成設定のコレクションを指定します<xref:System.Runtime.Caching.MemoryCache>インスタンス。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>プロパティから 1 つまたは複数の構成設定のコレクションの参照`namedCaches`構成ファイルの要素。  
@@ -88,4 +88,5 @@ ms.locfileid: "55287483"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [\<memoryCache > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

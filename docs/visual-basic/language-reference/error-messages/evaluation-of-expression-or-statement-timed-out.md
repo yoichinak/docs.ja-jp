@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 0825ce16869aece54919fa1a514b29f2b49faa44
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305664"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>式またはステートメントの評価がタイムアウトしました。
 適切なタイミングで、式の評価が完了しませんでした。  
@@ -21,9 +21,9 @@ ms.locfileid: "58843436"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  入力されたコードが正しいことを確認します。  
+1. 入力されたコードが正しいことを確認します。  
   
-2.  実行時間を短くなるように、式を簡略化します。  
+2. 実行時間を短くなるように、式を簡略化します。  
   
 ## <a name="see-also"></a>関連項目
 

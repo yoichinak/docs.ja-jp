@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 872164e2f48f1ef234b729b28aa9b1af1589c0fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180944"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 関数
 Windows 管理から非同期呼び出しを受信する際にクライアントを支援するオブジェクト転送シンクが作成されます。
@@ -60,7 +60,8 @@ HRESULT GetDemultiplexedStub (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

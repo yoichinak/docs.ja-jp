@@ -2,12 +2,12 @@
 title: サンプル
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 840aeaee70df02dc07033490db5bd081de5500cf
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107175"
 ---
 # <a name="samples"></a>サンプル
 このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
@@ -26,8 +26,9 @@ ms.locfileid: "56092008"
   
 -   参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
   
--   詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。  
+-   詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

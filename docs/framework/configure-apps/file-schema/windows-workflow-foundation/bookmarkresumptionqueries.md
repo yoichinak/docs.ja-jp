@@ -3,12 +3,12 @@ title: <bookmarkResumptionQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8ed61a7f-4254-439c-bdd8-b474971533f7
-ms.openlocfilehash: 4277df5b4c36fa2f3571ba8441a7eb8aaf6d106a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 186990577ec4eedc7cae3710c455816c3162fc94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109410"
 ---
 # <a name="bookmarkresumptionqueries"></a>\<bookmarkResumptionQueries>
 ワークフロー インスタンス内のブックマークの再開を追跡するために使用する、クエリのコレクションを表します。 追跡参加要素がブックマーク再開レコードを定期受信するには、このクエリが必要です。  
@@ -52,10 +52,11 @@ ms.locfileid: "55261550"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
+|[\<ワークフロー >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

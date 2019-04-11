@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145237"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 組み込み XAML 型 
 XAML の運用環境でコードを配置をできます。 XAML、またはランタイムによって解釈など、後から使用の XAML の運用環境で左側をコンパイルする任意の XAML プロセッサ実装によってこのようなコードをコンパイルすることができますか。  
@@ -49,6 +49,7 @@ XAML の運用環境でコードを配置をできます。 XAML、またはラ�
 -   部分クラスの CLR 名前空間の外部のコード エンティティを参照する必要がありますすべて完全修飾します。 部分クラスのオーバーライド可能なメンバーをオーバーライド メンバーが宣言されている場合は、これを言語固有の override キーワードを指定する必要があります。 メンバーが宣言されている場合`x:Code`XAML から作成された部分クラスのメンバーと競合するスコープ、このような方法で、コンパイラが、競合を報告する XAML ファイルことはできませんコンパイルまたは読み込みます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [x:Class ディレクティブ](x-class-directive.md)
 - [WPF における分離コードと XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330494"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
@@ -64,17 +64,17 @@ ms.locfileid: "58464568"
   
  ごとに子<xref:System.Windows.UIElement>がその位置を変更、レイアウト システムによる新しいパスをトリガーする可能性があります。 したがって、不要な呼び出しはアプリケーション パフォーマンスの低下につながる可能性があるため、レイアウト システムを呼び出す可能性があるイベントを理解することが重要です。 以下に、レイアウト システムが呼び出されたときに発生するプロセスについて説明します。  
   
-1.  子<xref:System.Windows.UIElement>最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
+1. 子<xref:System.Windows.UIElement>最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
   
-2.  サイズ設定プロパティで定義されている<xref:System.Windows.FrameworkElement>など、評価は<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>します。  
+2. サイズ設定プロパティで定義されている<xref:System.Windows.FrameworkElement>など、評価は<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>します。  
   
-3.  <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される<xref:System.Windows.Controls.Dock>方向や積み重ね<xref:System.Windows.Controls.StackPanel.Orientation%2A>します。  
+3. <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される<xref:System.Windows.Controls.Dock>方向や積み重ね<xref:System.Windows.Controls.StackPanel.Orientation%2A>します。  
   
-4.  すべての子が測定された後にコンテンツが配置されます。  
+4. すべての子が測定された後にコンテンツが配置されます。  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A>コレクションが画面に描画されます。  
+5. <xref:System.Windows.Controls.Panel.Children%2A>コレクションが画面に描画されます。  
   
-6.  追加する場合、プロセスがもう一度呼び出される<xref:System.Windows.Controls.Panel.Children%2A>、コレクションに追加する、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>が適用される、または<xref:System.Windows.UIElement.UpdateLayout%2A>メソッドが呼び出されます。  
+6. 追加する場合、プロセスがもう一度呼び出される<xref:System.Windows.Controls.Panel.Children%2A>、コレクションに追加する、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>が適用される、または<xref:System.Windows.UIElement.UpdateLayout%2A>メソッドが呼び出されます。  
   
  このプロセスとその呼び出し方法は、次のセクションで詳細に定義します。  
   
@@ -149,6 +149,7 @@ ms.locfileid: "58464568"
  要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 詳細については、使用可能な<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 カスタムの例については<xref:System.Windows.Controls.Panel>要素を参照してください[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)します。 軽量のアプリケーションにまとめて配置する準備ができたらを参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [パネルの概要](../controls/panels-overview.md)

@@ -16,16 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f2223230b18f175427bfbfeaa46bf1406d8c7e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: db322bbdc7293410968542d0d22c572edb87795a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184705"
 ---
 # <a name="icordebugthread-interface"></a>ICorDebugThread インターフェイス
-プロセス内のスレッドを表します。 
-  `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
+プロセス内のスレッドを表します。 `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -60,7 +59,8 @@ ms.locfileid: "56976357"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

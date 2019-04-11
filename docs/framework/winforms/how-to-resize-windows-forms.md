@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームのサイズを変更します。'
+title: '方法: Windows フォームのサイズ変更'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,15 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077226"
 ---
-# <a name="how-to-resize-windows-forms"></a>方法: Windows フォームのサイズを変更します。
-Windows フォームのサイズは、いくつかの方法で指定できます。 
-  <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォーム デザイナーを使用してサイズを変更できます。 参照してください[方法。デザイナーを使用して Windows フォームのサイズを変更](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))します。  
+# <a name="how-to-resize-windows-forms"></a>方法: Windows フォームのサイズ変更
+Windows フォームのサイズは、いくつかの方法で指定できます。 <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォーム デザイナーを使用してサイズを変更できます。 参照してください[方法。デザイナーを使用して Windows フォームのサイズを変更](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))します。  
   
 ### <a name="to-resize-a-form-programmatically"></a>プログラムによってフォームのサイズを変更するには  
   
@@ -56,7 +55,7 @@ Windows フォームのサイズは、いくつかの方法で指定できます
     Form1->Width = 300;  
     ```  
   
-     または  
+     - または -  
   
      <xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、<xref:System.Drawing.Size.Width%2A> または <xref:System.Drawing.Size.Height%2A> を変更します。  
   
@@ -114,5 +113,6 @@ Windows フォームのサイズは、いくつかの方法で指定できます
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームについて](getting-started-with-windows-forms.md)
 - [Windows フォーム アプリケーションの拡張](./advanced/index.md)

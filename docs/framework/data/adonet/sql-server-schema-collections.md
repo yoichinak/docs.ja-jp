@@ -2,17 +2,17 @@
 title: SQL Server スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224569"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server スキーマ コレクション
 Microsoft .NET Framework Data Provider for SQL Server は、共通のスキーマ コレクションに加えて追加のスキーマ コレクションをサポートしています。 スキーマ コレクションは、使用している SQL Server のバージョンによって多少異なります。 サポートされるスキーマ コレクションの一覧を確認するのには、呼び出し、 **GetSchema**メソッド引数なしでまたはスキーマ コレクション名に"metadatacollections を指定"します。 これにより、サポートされるスキーマ コレクションの一覧、それぞれがサポートする制限数、および使用する識別子部分の数と共に、<xref:System.Data.DataTable> が返されます。  
   
-## <a name="databases"></a>Databases  
+## <a name="databases"></a>データベース  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -20,7 +20,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |dbid|Int16|データベース ID。|  
 |create_date|DateTime|データベースの作成日。|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>外部キー  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -216,7 +216,7 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |createdate|DateTime|アカウントが追加された日付。|  
 |updatedate|DateTime|アカウントが最後に変更された日付。|  
   
-## <a name="views"></a>ビュー  
+## <a name="views"></a>Views  
   
 |ColumnName|DataType|説明|  
 |----------------|--------------|-----------------|  
@@ -256,5 +256,6 @@ Microsoft .NET Framework Data Provider for SQL Server は、共通のスキー�
 |Permission_set_desc|String|アセンブリのアクセス許可セット/セキュリティ レベルのフレンドリ名。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [データベース スキーマ情報の取得](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

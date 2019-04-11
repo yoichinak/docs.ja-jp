@@ -2,42 +2,42 @@
 title: 拡張保護認証のサンプルの ReadMe
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: 19fe961e346874346485442bd0ba90badab5f79f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319353"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>拡張保護認証のサンプルの ReadMe
 拡張保護を攻撃者 (、「- the-中間」) がクライアントの資格情報をインターセプトし、クライアントの目的のサーバー上のセキュリティで保護されたリソースにアクセスする、中間の (MITM) 攻撃から保護するためのセキュリティ イニシアチブです。  
   
- 詳細については、[認証の概要の拡張保護](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)を参照してください。  
+ 詳細については、次を参照してください。[認証の概要の拡張保護](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md)します。  
   
 > [!NOTE]
 >  このサンプルは、IIS でホストされた場合にのみ機能します。 このサンプルは HTTPS をサポートしないので、Visual Studio Development Server 上では機能しません。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップしてビルドし、実行するには  
   
-1.  [プログラムの追加と削除] の [Windows の機能] から IIS をインストールします。  
+1. [プログラムの追加と削除] の [Windows の機能] から IIS をインストールします。  
   
-2.  Windows 機能の Windows 認証を有効にします ([インターネット インフォメーション サービス] -> [World Wide Web サービス] -> [セキュリティ] -> [Windows 認証])。  
+2. Windows の機能では、Windows 認証を有効にします。インターネット インフォメーション サービス] の [World Wide Web サービスのセキュリティ]、[Windows 認証]-> [です。  
   
-3.  Windows 機能の HTTP アクティブ化を有効にします ([Microsoft .NET Framework 3.5.1] -> [Windows Communication Foundation HTTP Activation])。  
+3. Windows の機能では、HTTP アクティブ化を有効にします。Microsoft .NET Framework 3.5.1 には、Windows Communication Foundation HTTP Activation]-> [です。  
   
-4.  このサンプルを実行するには、サーバーとの安全なチャネルを確立する必要のあるクライアントが必要なので、インターネット インフォメーション サービス (IIS) マネージャーからインストールすることのできるサーバー証明書が存在する必要があります。  
+4. このサンプルを実行するには、サーバーとの安全なチャネルを確立する必要のあるクライアントが必要なので、インターネット インフォメーション サービス (IIS) マネージャーからインストールすることのできるサーバー証明書が存在する必要があります。  
   
     1.  IIS マネージャーを開いて、[機能表示] タブから [サーバー証明書] を選択します。  
   
     2.  このサンプルをテストする目的で、自己署名証明書を作成できます  (インターネット エクスプローラーで証明書の安全性に関するプロンプトが表示されないようにする場合は、信頼されたルート証明機関ストアに証明書をインストールできます)。  
   
-5.  既定の Web サイトの操作ウィンドウに移動します。 [サイトの編集] の [バインド] をクリックします。 存在しない場合は、種類として HTTPS を追加します。ポート番号に 443 を指定し、前の手順で作成した SSL 証明書を割り当てます。  
+5. 既定の Web サイトの操作ウィンドウに移動します。 [サイトの編集] の [バインド] をクリックします。 存在しない場合は、種類として HTTPS を追加します。ポート番号に 443 を指定し、前の手順で作成した SSL 証明書を割り当てます。  
   
-6.  サービスをビルドします。 (プロジェクト プロパティで指定されたビルド後のアクションから) IIS に仮想ディレクトリが作成され、サービスを Web ホスト サービスにするために必要な dll、.svc、および構成ファイルがコピーされます。  
+6. サービスをビルドします。 (プロジェクト プロパティで指定されたビルド後のアクションから) IIS に仮想ディレクトリが作成され、サービスを Web ホスト サービスにするために必要な dll、.svc、および構成ファイルがコピーされます。  
   
-7.  IIS マネージャーを開きます。 前の手順で作成した仮想ディレクトリ (ExtendedProtection) を右クリックして、[アプリケーションへの変換] を選択します。  
+7. IIS マネージャーを開きます。 前の手順で作成した仮想ディレクトリ (ExtendedProtection) を右クリックして、[アプリケーションへの変換] を選択します。  
   
-8.  この仮想ディレクトリの認証モジュールを IIS マネージャーで開き、Windows 認証を有効にします。  
+8. この仮想ディレクトリの認証モジュールを IIS マネージャーで開き、Windows 認証を有効にします。  
   
 9. このサンプルでは対応する ExtendedProtection 設定が [常に] に設定されているので、この仮想ディレクトリの Windows 認証の [詳細設定] を開き、[必須] に設定します。  
   

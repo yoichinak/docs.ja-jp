@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195008"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer クラスの概要
 <xref:System.Media.SoundPlayer> クラスを使用すると、アプリケーションにサウンドを簡単に組み込むことができます。  
@@ -24,16 +24,17 @@ ms.locfileid: "54690687"
   
 |名前|説明|  
 |----------|-----------------|  
-|<xref:System.Media.SoundPlayer.SoundLocation%2A> プロパティ|サウンドのファイル パスまたは Web アドレスです。 使用可能な値には UNC または HTTP があります。|  
-|<xref:System.Media.SoundPlayer.LoadTimeout%2A> プロパティ|プログラムが、例外をスローする前にサウンドの読み込みを待機するミリ秒単位の時間です。 既定値は 10 秒です。|  
-|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> プロパティ|サウンドの読み込みが終了したかどうかを示すブール値です。|  
+|<xref:System.Media.SoundPlayer.SoundLocation%2A> property|サウンドのファイル パスまたは Web アドレスです。 使用可能な値には UNC または HTTP があります。|  
+|<xref:System.Media.SoundPlayer.LoadTimeout%2A> property|プログラムが、例外をスローする前にサウンドの読み込みを待機するミリ秒単位の時間です。 既定値は 10 秒です。|  
+|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> property|サウンドの読み込みが終了したかどうかを示すブール値です。|  
 |<xref:System.Media.SoundPlayer.Load%2A> メソッド|サウンドを同期的に読み込みます。|  
 |<xref:System.Media.SoundPlayer.LoadAsync%2A> メソッド|サウンドの非同期的な読み込みを開始します。 読み込みが完了したら、生成、<xref:System.Media.SoundPlayer.OnLoadCompleted%2A>イベント。|  
 |<xref:System.Media.SoundPlayer.Play%2A> メソッド|指定されたサウンドを再生、<xref:System.Media.SoundPlayer.SoundLocation%2A>または<xref:System.Media.SoundPlayer.Stream%2A>新しいスレッドのプロパティ。|  
 |<xref:System.Media.SoundPlayer.PlaySync%2A> メソッド|指定されたサウンドを再生、<xref:System.Media.SoundPlayer.SoundLocation%2A>または<xref:System.Media.SoundPlayer.Stream%2A>プロパティ、現在のスレッドにします。|  
 |<xref:System.Media.SoundPlayer.Stop%2A> メソッド|現在再生されているサウンドを停止します。|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> イベント|サウンドの読み込みが試みられた後に発生します。|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> event|サウンドの読み込みが試みられた後に発生します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

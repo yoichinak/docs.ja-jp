@@ -2,18 +2,18 @@
 title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 80c4bb3ccbab75c17b098723fc10b8b996e40576
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181650"
 ---
 # <a name="property"></a>property
 *プロパティ*の基本的な構成要素を[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)と[複合型](../../../../docs/framework/data/adonet/complex-type.md)します。 プロパティは、エンティティ型または複合型のインスタンスに含まれるデータの形と特性を定義します。 概念モデルのプロパティは、クラスに定義されるプロパティに似ています。 クラスのプロパティがクラスの構造を定義し、オブジェクトに関する情報を伝達するのと同様に、概念モデルのプロパティはエンティティ型の構造を定義し、エンティティ型のインスタンスに関する情報を伝達します。  
   
 > [!NOTE]
->  このトピックで説明するプロパティは、ナビゲーション プロパティとは異なります。 詳細については、[ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)を参照してください。  
+>  このトピックで説明するプロパティは、ナビゲーション プロパティとは異なります。 詳細については、次を参照してください。[ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)します。  
   
  プロパティの定義には、次の情報が含まれます。  
   
@@ -42,5 +42,6 @@ ms.locfileid: "58409719"
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [エンティティ データ モデル](../../../../docs/framework/data/adonet/entity-data-model.md)

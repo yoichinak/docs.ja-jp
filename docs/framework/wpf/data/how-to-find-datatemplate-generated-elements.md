@@ -8,12 +8,12 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: 4317d22a786caa6a191002ff411fe54436f3dbcc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089187"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>方法: DataTemplate によって生成された要素を検索する
 この例によって生成される要素を検索する方法を示しています、<xref:System.Windows.DataTemplate>します。  
@@ -38,9 +38,10 @@ ms.locfileid: "57362215"
  [!code-vb[FindGeneratedItems#FVC](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ControlTemplate によって生成された要素を検索します。](../controls/how-to-find-controltemplate-generated-elements.md)
+
+- [方法: ControlTemplate によって生成された要素を検索する](../controls/how-to-find-controltemplate-generated-elements.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)
 - [スタイルとテンプレート](../controls/styling-and-templating.md)
 - [WPF XAML 名前スコープ](../advanced/wpf-xaml-namescopes.md)
 - [WPF のツリー](../advanced/trees-in-wpf.md)

@@ -2,12 +2,12 @@
 title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101713"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
 このトピックでは、Windows Communication Foundation (WCF) の管理と診断機能を使用して、トランザクション アプリケーションをトラブルシューティングする方法について説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "54550280"
 |1 秒あたりのトランザクション フロー|毎秒ごとにこのエンドポイントでの操作に対して実行されたトランザクションの数。 このカウンターは、エンドポイントに送信されたメッセージにトランザクションがある場合は常にインクリメントされます。|  
   
 ## <a name="windows-management-instrumentation"></a>WMI (Windows Management Instrumentation)  
- WCF では、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時に、サービスの検査データを公開します。 WMI データにアクセスする方法の詳細については、[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)を参照してください。  
+ WCF では、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時に、サービスの検査データを公開します。 WMI データにアクセスする方法の詳細については、次を参照してください。[診断用の Windows Management Instrumentation のを使用して](../../../../docs/framework/wcf/diagnostics/wmi/index.md)します。  
   
  WMI プロパティには、サービスに適用されるトランザクション設定を示す読み取り専用のプロパティが多数あります。 次の表にこれらの設定をすべて示します。  
   
@@ -121,6 +121,7 @@ ms.locfileid: "54550280"
      WCF を利用またとして、WCF トレースの場合は、これもできます、<xref:System.Transactions>インフラストラクチャ。  
   
 ## <a name="see-also"></a>関連項目
+
 - [管理と診断](../../../../docs/framework/wcf/diagnostics/index.md)
 - [トレースの構成](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

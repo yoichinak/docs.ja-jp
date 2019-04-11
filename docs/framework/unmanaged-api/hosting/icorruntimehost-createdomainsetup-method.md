@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157366"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup メソッド
 インターフェイス ポインターの型を IAppDomainSetup の取得、<xref:System.AppDomainSetup?displayProperty=nameWithType>インスタンス。 `IAppDomainSetup` 作成される前に、アプリケーション ドメインの側面を構成する方法を提供します。  
@@ -61,6 +61,7 @@ HRESULT CreateDomainSetup (
  **.NET framework のバージョン:** 1.0, 1.1  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>

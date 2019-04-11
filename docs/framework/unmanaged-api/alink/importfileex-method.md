@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6956fd0bd8217a3b0b44f48cabc80d0c95db8f36
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3b3cf91ad4e048ddfccb4086f36923f33d754ac0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131041"
 ---
 # <a name="importfileex-method"></a>ImportFileEx メソッド
 インポートには、アセンブリまたはバインドされていないモジュールが示されます。  
@@ -69,6 +69,7 @@ HRESULT ImportFileEx(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

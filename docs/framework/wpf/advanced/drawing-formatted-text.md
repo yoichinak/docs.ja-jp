@@ -10,17 +10,16 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a61031c36dea84449ad07175287bf834544df886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129091"
 ---
 # <a name="drawing-formatted-text"></a>書式設定されたテキストの描画
 このトピックでの機能の概要、<xref:System.Windows.Media.FormattedText>オブジェクト。 このオブジェクトは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのテキストの描画に対する低レベルの制御を提供します。  
-  
-  
+
 ## <a name="technology-overview"></a>テクノロジの概要  
  <xref:System.Windows.Media.FormattedText>オブジェクトを使用すると、これで、テキスト内の各文字に個別に書式設定できます、複数行のテキストを描画します。 複数の書式が適用されたテキストを次の例に示します。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "58125435"
 >  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API から移行する開発者のために、「[Win32 の移行](#win32_migration)」の表に [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText フラグと [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] におけるほぼ同等のものを示します。  
   
 ### <a name="reasons-for-using-formatted-text"></a>書式設定されたテキストを使用する理由  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、<xref:System.Windows.Controls.TextBlock>要素は、制限付きのテキストのサポートがで短い文など、必要な場合に、使用する必要があります、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 <xref:System.Windows.Controls.Label> 最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、<xref:System.Windows.Controls.TextBlock>要素は、制限付きのテキストのサポートがで短い文など、必要な場合に、使用する必要があります、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 <xref:System.Windows.Controls.Label> 最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
   
  <xref:System.Windows.Media.FormattedText>オブジェクトは、書式設定機能よりも大きい値のテキストを提供します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]テキスト コントロール、およびテキスト装飾的な要素として使用する場合に便利です。 詳細については、後の「[書式設定されたテキストのジオメトリへの変換](#converting_formatted_text)」を参照してください。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "58125435"
 |DT_PREFIX|なし|サポートされていません。 アンダー スコア、アクセラレータ キーやリンクなどのテキストを使用する場合は、使用、<xref:System.Windows.Media.FormattedText.SetTextDecorations%2A>メソッド。|  
 |DT_PREFIXONLY|なし|サポートされていません。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用して、<xref:System.Windows.Media.FormattedText.TextAlignment%2A>プロパティ値を設定して<xref:System.Windows.TextAlignment.Right>します。 (WPF のみ)。|  
-|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> プロパティを <xref:System.Windows.FlowDirection.RightToLeft>に設定します。|  
+|DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|<xref:System.Windows.Media.FormattedText.FlowDirection%2A> プロパティを <xref:System.Windows.FlowDirection.RightToLeft> に設定します。|  
 |DT_SINGLELINE|なし|不要。 <xref:System.Windows.Media.FormattedText> オブジェクトは、しない限りは単一行コントロールとして動作しますか、<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>プロパティを設定またはテキストにキャリッジ リターン/ライン フィード (CR/LF) が含まれています。|  
 |DT_TABSTOP|なし|ユーザー定義のタブ位置はサポートされていません。|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不要。 上端揃えが既定値です。 その他の垂直方向の配置の値を使用して定義することができます、<xref:System.Windows.Media.FormattedText.Height%2A>プロパティを適切なコンピューティング[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText の 'y' 位置。|  
@@ -117,6 +116,7 @@ ms.locfileid: "58125435"
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用して、<xref:System.Windows.Media.FormattedText.Trimming%2A>プロパティ値を持つ<xref:System.Windows.TextTrimming.WordEllipsis>します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.FormattedText>
 - [WPF のドキュメント](documents-in-wpf.md)
 - [WPF のタイポグラフィ](typography-in-wpf.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-ms.openlocfilehash: 6d5d0b413f940a2c7f70e05135ff070c1fe5ba21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123059"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>方法: LineGeometry を使用して線を作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.LineGeometry>行を記述するクラス。 A<xref:System.Windows.Media.LineGeometry>の始点と終点で定義されます。  
@@ -28,9 +28,10 @@ ms.locfileid: "57374662"
  ![LineGeometry](./media/graphicsmm-line.gif "graphicsmm_line")  
 (10,20) から (100,130) まで描画された LineGeometry  
   
- その他の単純なジオメトリ クラス<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.EllipseGeometry>します。 複雑なものと同様にこれらのジオメトリを作成することもを使用して、<xref:System.Windows.Media.PathGeometry>または<xref:System.Windows.Media.StreamGeometry>します。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
+ その他の単純なジオメトリ クラス<xref:System.Windows.Media.LineGeometry>と<xref:System.Windows.Media.EllipseGeometry>します。 複雑なものと同様にこれらのジオメトリを作成することもを使用して、<xref:System.Windows.Media.PathGeometry>または<xref:System.Windows.Media.StreamGeometry>します。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ジオメトリの概要](geometry-overview.md)
 - [複合図形を作成する](how-to-create-a-composite-shape.md)
 - [PathGeometry を使用して図形を作成する](how-to-create-a-shape-by-using-a-pathgeometry.md)

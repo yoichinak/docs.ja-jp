@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187339"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats メソッド
 共通言語ランタイムのガベージ コレクション システムに関する現在の統計情報のセットを取得します。  
@@ -70,15 +70,16 @@ pCLRGCManager->GetStats(&GCStats);
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS 構造体](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [COR_GC_STAT_TYPES 列挙型](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
+- [COR_GC_STAT_TYPES 列挙体](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)

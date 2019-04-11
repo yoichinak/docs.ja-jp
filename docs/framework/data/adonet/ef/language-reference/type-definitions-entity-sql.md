@@ -2,12 +2,12 @@
 title: 型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096024"
 ---
 # <a name="type-definitions-entity-sql"></a>型定義 (Entity SQL)
 型定義は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline 関数の宣言ステートメントで使用されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "54743531"
   
  型定義のオプションは、次のとおりです。  
   
--   `IdentifierName supported_type`、または   
+-   `IdentifierName supported_type`、または  
   
--   `IdentifierName` COLLECTION(`type_definition`)、または  
+-   `IdentifierName` コレクション (`type_definition`)、または  
   
--   `IdentifierName` ROW(`property_definition`)、または  
+-   `IdentifierName` 行 (`property_definition`)、または  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+-   `IdentifierName` REF (`supported_entity_type`)  
   
  プロパティ定義オプションは、`IdentifierName type_definition` です。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54743531"
   
  サポートされるエンティティ型は、現在の名前空間で使用されているエンティティ型だけを参照します。 これには、プリミティブ型は含まれません。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  簡単な型定義の例を次に示します。  
   
 ```  
@@ -87,5 +87,6 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL の概要](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

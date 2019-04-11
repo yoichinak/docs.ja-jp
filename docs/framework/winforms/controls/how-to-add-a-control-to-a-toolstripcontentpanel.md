@@ -1,5 +1,5 @@
 ---
-title: '方法: ToolStripContentPanel にコントロールを追加します。'
+title: '方法: ToolStripContentPanel にコントロールを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 23ec06c86454938b9cdf40c7a45a305a1f61e685
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177880"
 ---
-# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>方法: ToolStripContentPanel にコントロールを追加します。
+# <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>方法: ToolStripContentPanel にコントロールを追加する
 <xref:System.Windows.Forms.ToolStripContentPanel> に対して、1 つまたは複数のコントロールをプログラムで追加できます。  
   
 ## <a name="example"></a>例  
@@ -28,9 +28,10 @@ ms.locfileid: "57720879"
   
 -   System、System.Data、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer コントロール](toolstripcontainer-control.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174175"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler メソッド
 指定されたプロファイラーを、指定されたプロセスにアタッチします。  
@@ -50,12 +50,10 @@ HRESULT AttachProfiler(
  [in] 読み込まれるプロファイラーの CLSID へのポインター。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。  
   
  `wszProfilerPath`  
- [in] 読み込まれるプロファイラーの DLL ファイルへの完全パス。 この文字列に含める文字数は、null 終端文字も含めて 260 文字以内にする必要があります。 
-  `wszProfilerPath` が null または空の文字列である場合、共通言語ランタイム (CLR: Common Language Runtime) は、`pClsidProfiler` が示す CLSID のレジストリ内を探してプロファイラーの DLL ファイルの場所を見つけることを試みます。  
+ [in] 読み込まれるプロファイラーの DLL ファイルへの完全パス。 この文字列に含める文字数は、null 終端文字も含めて 260 文字以内にする必要があります。 `wszProfilerPath` が null または空の文字列である場合、共通言語ランタイム (CLR: Common Language Runtime) は、`pClsidProfiler` が示す CLSID のレジストリ内を探してプロファイラーの DLL ファイルの場所を見つけることを試みます。  
   
  `pvClientData`  
- [in]によってプロファイラーに渡されるデータへのポインター、 [icorprofilercallback 3::initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)メソッド。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 
-  `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。  
+ [in]によってプロファイラーに渡されるデータへのポインター、 [icorprofilercallback 3::initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)メソッド。 トリガー プロセスでは、`AttachProfiler` が戻った後にこのメモリを再利用できます。 `pvClientData` が null の場合、`cbClientData` を 0 (ゼロ) にする必要があります。  
   
  `cbClientData`  
  [in] `pvClientData` がポイントするデータのサイズ (バイト単位)。  
@@ -90,9 +88,10 @@ HRESULT AttachProfiler(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

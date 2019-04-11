@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームのボタン クリックに応答するには'
+title: '方法: Windows フォームのボタンのクリックに応答する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110072"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>方法: Windows フォームのボタン クリックに応答するには
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>方法: Windows フォームのボタンのクリックに応答する
 Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button>コントロールのボタンがクリックされたときに、いくつかのコードを実行します。  
   
  クリックすると、<xref:System.Windows.Forms.Button>コントロールもなどが生成されるその他のイベント数、 <xref:System.Windows.Forms.Control.MouseEnter>、 <xref:System.Windows.Forms.Control.MouseDown>、および<xref:System.Windows.Forms.Control.MouseUp>イベント。 これらの関連イベントのイベント ハンドラーをアタッチする場合は、そのアクションが競合しないことを確認します。 たとえば場合、ユーザーがテキスト ボックスに入力した情報をクリア ボタンをクリックして、ボタンの上にマウス ポインターを置く必要があります表示されません現時点で存在しない情報をツール ヒント。  
@@ -56,6 +56,7 @@ Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
 - [Button コントロール](button-control-windows-forms.md)

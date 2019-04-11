@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085130"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
 注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 型指定された、基になるスキーマの要素の名前を変更することになる**データセット**にはない、データ ソースに存在だけでなく、データ ソース内に存在しているオブジェクトへの参照が失われるオブジェクトを参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "55825733"
   
 |nullValue の値|説明|  
 |---------------------|-----------------|  
-|*置換値*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
+|*Replacement Value*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
 |**_throw**|例外をスローします。 既定値です。|  
 |**_null**|プリミティブ型が見つかった場合は、null 参照を返すか、例外をスローします。|  
 |**_empty**|文字列を返す**String.Empty**、それ以外の場合、空のコンス トラクターから作成されたオブジェクトを返します。 プリミティブ型が見つかった場合、例外をスローします。|  
@@ -69,7 +69,7 @@ ms.locfileid: "55825733"
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**プロパティ**|PropertyName|typedName|  
 |**子**アクセサー|GetChildTableNameRows|typedChildren|  
 |**親**アクセサー|TableNameRow|typedParent|  
 |**データセット**イベント|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,6 +223,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [型指定されたデータセット](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)

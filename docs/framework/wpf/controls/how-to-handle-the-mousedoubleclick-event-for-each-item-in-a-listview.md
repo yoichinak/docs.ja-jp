@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: a4a93ffdf7c9cf2737c41a7fd196d8cfff716ea1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145081"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>方法: ListView の各項目の MouseDoubleClick イベントを処理する
 内の項目のイベントを処理するために、 <xref:System.Windows.Controls.ListView>、それぞれにイベント ハンドラーを追加する必要がある<xref:System.Windows.Controls.ListViewItem>します。 ときに、<xref:System.Windows.Controls.ListView>がバインドされているデータ ソースに明示的に作成しない、 <xref:System.Windows.Controls.ListViewItem>、追加することで各項目のイベントを処理することができますが、<xref:System.Windows.EventSetter>のスタイルを<xref:System.Windows.Controls.ListViewItem>します。  
@@ -33,6 +33,7 @@ ms.locfileid: "57377201"
 >  バインドする最も一般的な<xref:System.Windows.Controls.ListView>各にイベント ハンドラーを追加するスタイルを使用するデータ ソースに<xref:System.Windows.Controls.ListViewItem>、非データ バインドで<xref:System.Windows.Controls.ListView>明示的に作成するかどうかに関係なく、<xref:System.Windows.Controls.ListViewItem>します。  明示的および暗黙的が作成の詳細については<xref:System.Windows.Controls.ListViewItem>コントロールを参照してください<xref:System.Windows.Controls.ItemsControl>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.XmlElement>
 - [データ バインディングの概要](../data/data-binding-overview.md)
 - [スタイルとテンプレート](styling-and-templating.md)

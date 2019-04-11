@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224050"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 カスタム クッキー ハンドラーの型を設定します。 この要素が存在するのみ場合、`mode`の属性、`<cookieHandler>`要素が"Custom"。 カスタム型から派生する必要があります、<xref:System.IdentityModel.Services.CookieHandler>クラス。  
@@ -38,7 +38,7 @@ ms.locfileid: "55288185"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生したカスタム型を指定します、<xref:System.IdentityModel.Services.CookieHandler>クラス。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。|  
+|種類|派生したカスタム型を指定します、<xref:System.IdentityModel.Services.CookieHandler>クラス。 詳細を指定する方法については、`type`属性は、「[カスタム型の参照](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -64,4 +64,5 @@ ms.locfileid: "55288185"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Services.CookieHandler>

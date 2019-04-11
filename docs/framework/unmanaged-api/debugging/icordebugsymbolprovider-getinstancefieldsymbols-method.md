@@ -1,17 +1,17 @@
 ---
-title: ICorDebugSymbolProvider::GetInstanceFieldSymbols メソッド
+title: Icordebugsymbolprovider::getinstancefieldsymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d149eeec545909d9d6b7413c7ad6d537c1493bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9ea9afdd2c032e99d7feee6b2935161c70c56787
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187695"
 ---
-# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>ICorDebugSymbolProvider::GetInstanceFieldSymbols メソッド
+# <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Icordebugsymbolprovider::getinstancefieldsymbols メソッド
 typespec シグネチャに対応するインスタンス フィールド シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -54,9 +54,10 @@ HRESULT GetInstanceFieldSymbols(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [GetStaticFieldSymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)
 - [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

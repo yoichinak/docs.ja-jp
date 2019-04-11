@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 8ef13ef89072f91c847a05facbcce344dda6ade2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e9b42738ff661425b05a63f2a5e5790c5cbd84b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374891"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311917"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールのホスト
 
@@ -20,7 +20,7 @@ ms.locfileid: "57374891"
 
 このチュートリアルは、ホストする方法を示します、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>の control 権限、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コードを使用してページ。
 
-このチュートリアルで示すタスクの完全なコード一覧については、[WPF のサンプルでの Windows フォーム コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=160057)を参照してください。
+このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WPF のサンプルでの Windows フォーム コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=160057)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -30,27 +30,27 @@ ms.locfileid: "57374891"
 
 ### <a name="to-host-the-maskedtextbox-control"></a>MaskedTextBox コントロールをホストするには
 
-1.  という名前の WPF アプリケーション プロジェクトを作成する`HostingWfInWpf`します。
+1. という名前の WPF アプリケーション プロジェクトを作成する`HostingWfInWpf`します。
 
-2.  次のアセンブリへの参照を追加します。
+2. 次のアセンブリへの参照を追加します。
 
     -   WindowsFormsIntegration
 
     -   System.Windows.Forms
 
-3.  MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。
+3. MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。
 
-4.  名前、<xref:System.Windows.Controls.Grid>要素`grid1`します。
+4. 名前、<xref:System.Windows.Controls.Grid>要素`grid1`します。
 
      [!code-xaml[HostingWfInWPF#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml#1)]
 
-5.  デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>要素。
+5. デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>要素。
 
-6.  [プロパティ] ウィンドウ、**イベント**タブ。
+6. [プロパティ] ウィンドウ、**イベント**タブ。
 
-7.  ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
+7. ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
 
-8.  処理するために次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。
+8. 処理するために次のコードを挿入、<xref:System.Windows.FrameworkElement.Loaded>イベント。
 
      [!code-csharp[HostingWfInWPF#10](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#10)]
      [!code-vb[HostingWfInWPF#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#10)]
@@ -67,8 +67,8 @@ ms.locfileid: "57374891"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [チュートリアル: XAML を使用して、WPF での Windows フォーム コントロールをホストしています。](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
-- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: WPF での XAML を使用した Windows フォーム コントロールのホスト](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
+- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Windows フォーム コントロールおよび同等の WPF コントロール](windows-forms-controls-and-equivalent-wpf-controls.md)
 - [WPF のサンプル Windows フォーム コントロールのホスト](https://go.microsoft.com/fwlink/?LinkID=160057)

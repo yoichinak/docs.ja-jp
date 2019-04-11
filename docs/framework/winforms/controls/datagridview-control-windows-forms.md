@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 52ff12df7de7dc43c9cea2f36d3780fd0dd6ae3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124320"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView コントロール (Windows フォーム)
 `DataGridView` コントロールには、データを表形式で表示するための強力で柔軟な機能が用意されています。 `DataGridView` コントロールを使用すると、読み取り専用のビューに少量のデータを表示したり、拡大して非常に大量のデータのセットの編集可能なビューを表示したりできます。  
@@ -62,7 +62,8 @@ ms.locfileid: "57722329"
  セル、行、および列オブジェクトを使用したプログラミング方法を説明するトピックを示します。  
   
  [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)  
- `DataGridView` のセルおよび行のカスタム描画と、セル、列、および行の派生型の作成について説明するトピックを示します。  
+ 
+  `DataGridView` のセルおよび行のカスタム描画と、セル、列、および行の派生型の作成について説明するトピックを示します。  
   
  [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  大量のデータを扱うときのパフォーマンスの問題を避けるために、このコントロールを効率的に使用する方法について説明するトピックを示します。  
@@ -83,4 +84,5 @@ ms.locfileid: "57722329"
  <xref:System.Windows.Forms.BindingSource> コンポーネントのリファレンス ドキュメントを提供します。 <xref:System.Windows.Forms.DataGridView> コントロールと <xref:System.Windows.Forms.BindingSource> コンポーネントは、密接に連携して機能するようにデザインされています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

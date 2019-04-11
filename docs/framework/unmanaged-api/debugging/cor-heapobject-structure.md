@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34b02dfa3fb0f1e5f4cfadc297194dc4f3160c8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f179b58ff8eb51e2843780d3212cf38ed7d13216
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168832"
 ---
 # <a name="corheapobject-structure"></a>COR_HEAPOBJECT 構造体
 マネージド ヒープ上のオブジェクトに関する情報が提供されます。  
@@ -62,8 +62,9 @@ typedef struct _COR_HEAPOBJECT {
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

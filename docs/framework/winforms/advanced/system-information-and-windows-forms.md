@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228901"
 ---
 # <a name="system-information-and-windows-forms"></a>システム情報と Windows フォーム
 コードで決定するために、アプリケーションが実行されているコンピューターに関する情報を収集するために必要な場合があります。 たとえば、のみ、特定のネットワークのドメインに接続しているときに適用される関数がある可能性があります。ここでドメインを確認して、ドメインが存在しない場合、関数を無効にする方法する必要があります。  
@@ -43,5 +43,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
  いくつかの便利なメンバーの<xref:System.Windows.Forms.SystemInformation>クラスが含まれて<xref:System.Windows.Forms.SystemInformation.ComputerName%2A>、 <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>、 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>、および<xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.SystemInformation>
 - [Windows フォームでの電源管理](power-management-in-windows-forms.md)

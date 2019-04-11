@@ -2,12 +2,12 @@
 title: SQL Server のサーバー ロールとデータベース ロール
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087977"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server のサーバー ロールとデータベース ロール
 SQL Server では、すべてのバージョンで、個々のユーザーではなくロール (つまり、ユーザーのグループ) に対して権限を割り当てることのできるロール ベースのセキュリティが使用されています。 固定サーバー ロールおよび固定データベース ロールには、固定された一連の権限が割り当てられています。  
@@ -16,7 +16,7 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
  固定サーバー ロールは、固定された一連の権限とサーバー規模のスコープを持ちます。 SQL Server の管理を目的としており、このロールに割り当てられた権限を変更することはできません。 固定サーバー ロールには、データベースにユーザー アカウントがなくても、ログインを割り当てることができます。  
   
 > [!IMPORTANT]
->  `sysadmin` 固定サーバー ロールは他のすべてのロールを内包し、無制限のスコープを持ちます。 本当に信頼できる場合以外は、このロールにプリンシパルを追加することは避けてください。 `sysadmin` ロールのメンバーには、サーバーのすべてのデータベースおよびリソースに対する取り消し不可能な管理特権が与えられます。  
+>  `sysadmin` 固定サーバー ロールは他のすべてのロールを内包し、無制限のスコープを持ちます。 本当に信頼できる場合以外は、このロールにプリンシパルを追加することは避けてください。 `sysadmin` ロールのメンバーでは、すべてのサーバーのデータベースおよびリソースに対する取り消し不可能の管理者権限があります。  
   
  固定サーバー ロールに追加するユーザーは慎重に選ぶ必要があります。 たとえば、`bulkadmin` ロールでは、ユーザーがローカル ファイルの内容をテーブルに挿入できるため、データの整合性が損なわれる可能性があります。 固定サーバー ロールとアクセス許可の完全な一覧については、SQL Server オンライン ブックを参照します。  
   
@@ -28,7 +28,7 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
 |リソース|説明|  
 |--------------|-----------------|  
 |[サーバー レベルのロール](/sql/relational-databases/security/authentication-access/server-level-roles)|固定サーバー ロールと SQL Server に関連付けられている権限について説明します。|  
-|[データベース レベル ロール](/sql/relational-databases/security/authentication-access/database-level-roles)|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
+|[データベース レベルのロール](/sql/relational-databases/security/authentication-access/database-level-roles)|固定データベース ロールおよびそれに関連付けられている権限について説明します。|  
   
 ## <a name="database-roles-and-users"></a>データベース ロールおよびユーザー  
  データベース ユーザー アカウントはデータベース オブジェクトを扱う関係上、ログインにマップされている必要があります。 データベース ユーザーをデータベース ロールに追加すると、そのロールに関連付けられたすべての権限セットが継承されます。 すべての権限を付与できます。  
@@ -39,14 +39,12 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
  `public` ロールは、システム データベースを含め、すべてのデータベースに存在します。 このロールは削除できません。また、ユーザーを追加したり削除したりすることもできません。 他のすべてのユーザーおよびロールは既定で `public` ロールに所属するため、`public` ロールに付与された権限を継承します。 `public` には、すべてのユーザーに割り当てる必要のある権限だけを付与してください。  
   
 ### <a name="the-dbo-user-account"></a>dbo ユーザー アカウント  
- `dbo` (データベース所有者) は、データベースのすべてのアクティビティを実行する暗黙権限を持ったユーザー アカウントです。 
-  `sysadmin` 固定サーバー ロールのメンバーは、自動的に `dbo` にマップされます。  
+ `dbo` (データベース所有者) は、データベースのすべてのアクティビティを実行する暗黙権限を持ったユーザー アカウントです。 `sysadmin` 固定サーバー ロールのメンバーは、自動的に `dbo` にマップされます。  
   
 > [!NOTE]
 >  `dbo` 説明したように、スキーマの名前をも[所有権と SQL Server のユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)します。  
   
- 
-  `dbo` ユーザー アカウントは、よく `db_owner` 固定データベース ロールと混同されます。 `db_owner` のスコープがサーバー全体であるのに対し、`sysadmin` のスコープはデータベースです。 `db_owner` ロールのメンバーであるからといって、`dbo` のユーザー権限があるとは限りません。  
+ `dbo` ユーザー アカウントは、よく `db_owner` 固定データベース ロールと混同されます。 `db_owner` のスコープがサーバー全体であるのに対し、`sysadmin` のスコープはデータベースです。 `db_owner` ロールのメンバーであるからといって、`dbo` のユーザー権限があるとは限りません。  
   
 ### <a name="the-guest-user-account"></a>guest ユーザー アカウント  
  認証されて SQL Server のインスタンスへのログインが許可されたユーザーが、その後、データベースにアクセスするためには各データベースに別個のユーザー アカウントが存在している必要があります。 データベースごとにユーザー アカウントが要求されるため、SQL Server のインスタンスに接続したとしても、ユーザーは、サーバー上のすべてのデータベースにアクセスできるわけではありません。 この要件を回避するには、データベースに `guest` ユーザー アカウントを設定します。guest ユーザーは、データベースにユーザー アカウントがなくてもデータベースにログインしてアクセスできます。  
@@ -64,9 +62,10 @@ SQL Server では、すべてのバージョンで、個々のユーザーでは
 |[プリンシパル](/sql/relational-databases/security/authentication-access/principals-database-engine)|プリンシパルの説明のほか、サーバー ロールとデータベース ロールについて説明したトピックへのリンクが含まれています。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [SQL Server の承認と権限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

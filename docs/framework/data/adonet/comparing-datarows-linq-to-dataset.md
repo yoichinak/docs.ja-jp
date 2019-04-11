@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077174"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>DataRow の比較 (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] では、ソース要素を比較し、両者が等しいかどうかを調べるための各種の集合演算子が定義されています。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] が提供している集合演算子は次のとおりです。  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 等しいかどうかを確認するソース要素を比較する各種の集合演算子を定義します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 次の集合演算子が用意されています。  
   
 -   <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -39,6 +39,7 @@ ms.locfileid: "54659190"
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataRowComparer>
 - [DataSet へのデータの読み込み](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet の例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

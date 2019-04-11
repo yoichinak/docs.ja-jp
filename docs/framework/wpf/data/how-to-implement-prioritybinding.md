@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207566"
 ---
 # <a name="how-to-implement-prioritybinding"></a>方法: PriorityBinding を実装する
 <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]のバインディングの一覧を指定することによって動作します。 バインディングのリストの順序は、最も高い優先度から最も低い優先順位。 最高の優先度のバインドは、値を返す場合が正常に処理されるときはありますありません、リスト内の他のバインディングを処理する必要が。 最高の優先度のバインドを評価する時間がかかる場合がある可能性がありますの優先順位の高いバインドが正常に値を返すまで正常に値を返す次の最も高い優先順位が使用されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "57354597"
  Get アクセサー`SlowestDP`までの値を返す前に 5 秒間待機、`_slowestDP`データ メンバー。  
   
 > [!NOTE]
->  この例は、デモンストレーション目的のみで提供されます。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]桁違いのフィールド セットをよりも、プロパティ定義のガイドラインをお勧めします。 詳細については、[を選択するプロパティとメソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))を参照してください。  
+>  この例は、デモンストレーション目的のみで提供されます。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]桁違いのフィールド セットをよりも、プロパティ定義のガイドラインをお勧めします。 詳細については、次を参照してください。[を選択するプロパティとメソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))します。  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
@@ -45,6 +45,7 @@ ms.locfileid: "57354597"
  参照してください<xref:System.Windows.Data.PriorityBinding>については、バインドからの成功した戻り値と見なされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

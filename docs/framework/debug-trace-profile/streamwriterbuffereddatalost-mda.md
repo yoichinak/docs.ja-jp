@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b35e6ab4de699126b4b3b5f74d7a9a8dacfa4a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117392"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` マネージド デバッグ アシスタント (MDA) は <xref:System.IO.StreamWriter> が書き込まれたときに起動しますが、その後、<xref:System.IO.StreamWriter> のインスタンスが破棄される前に <xref:System.IO.StreamWriter.Flush%2A> または <xref:System.IO.StreamWriter.Close%2A> メソッドが呼び出されません。 この MDA が有効になると、バッファーに入れられたデータが <xref:System.IO.StreamWriter> 内に残っているか、ランタイムにより判断されます。 バッファーに入れられたデータが残っている場合、MDA が起動します。 <xref:System.GC.Collect%2A> メソッドと <xref:System.GC.WaitForPendingFinalizers%2A> メソッドを呼び出すことで、ファイナライザーを強制的に実行できます。 それ以外の場合、ファイナライザーは任意のタイミングで実行されます。プロセス終了時に実行されることは、ほぼありません。 この MDA が有効になっている状態でファイナライザーを明示的に実行すると、この種類の問題をより確実に再現できます。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  <xref:System.IO.StreamWriter> では、最後の 1 – 4 KB のデータがファイルに書き込まれません。  
   
 ## <a name="cause"></a>原因  
@@ -105,5 +105,6 @@ static WriteToFile()
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IO.StreamWriter>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

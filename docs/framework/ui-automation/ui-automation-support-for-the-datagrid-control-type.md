@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 0c9873638bca43e5e0d005d36053e7c75d48168b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161032"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI オートメーションによる DataGrid コントロール型のサポート
 > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "57679074"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|データ グリッドをスクロールする機能はコンテンツ、およびスクロール バーが存在するかどうかによって異なります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|データ グリッドを選択する機能は、コンテンツに依存します。|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|データ グリッド コントロールはサブツリー内に常にヘッダーがあるため、Table コントロール パターンがサポートされる必要があります。|  
@@ -73,7 +73,7 @@ ms.locfileid: "57679074"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのデータ グリッド コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
@@ -105,6 +105,7 @@ ms.locfileid: "57679074"
  * 上記の例では、コントロールの複数のレベルを含む DataGrid を示します。 グループ ("Contoso") のコントロールには、2 つのDataItem コントロール ("Accounts Receivable.doc" および "Accounts Payable.doc") が含まれています。 DataGrid と GridItem ペアは、他のレベルのペアから独立しています。 グループの下にある DataItem コントロールは、ListItem コントロール型として公開することもでき、単純なデータ要素としてではなく、選択可能オブジェクトとして、より明確に提示することができます。 この例では、グループ化されたデータ項目のサブ要素は含まれません。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.DataGrid>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180064"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ## <a name="client-credentials"></a>クライアント資格情報  
  クライアント資格情報は、相互認証が必要な場合にサービスに対するクライアントの認証に使用されます。 また、このセクションを使用して、クライアントがサービスの証明書によってサービスへのメッセージをセキュリティで保護する必要がある場合に使用するサービス証明書を指定することもできます。  
   
- セキュリティ トークン サービスまたはローカル発行者から発行されたトークンを使用するフェデレーション シナリオの一部として、クライアントを構成することもできます。 フェデレーション シナリオの詳細については、[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)を参照してください。 すべてのクライアント資格情報が見つかります、 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)、次のコードに示すようにします。  
+ セキュリティ トークン サービスまたはローカル発行者から発行されたトークンを使用するフェデレーション シナリオの一部として、クライアントを構成することもできます。 フェデレーション シナリオの詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。 すべてのクライアント資格情報が見つかります、 [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)、次のコードに示すようにします。  
   
 ```xml  
 <behaviors>  
@@ -118,7 +118,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
  この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、「[方法 :クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 #### <a name="httpdigest"></a>\<httpDigest>  
- この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、[Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)を参照してください。  
+ この機能は、Windows の Active Directory およびインターネット インフォメーション サービス (IIS) と共に有効にする必要があります。 詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443)します。  
   
 #### <a name="issuedtoken-element"></a>\<issuedToken > 要素  
  [ \<IssuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)トークン、またはセキュリティ トークン サービスで使用する動作のローカル発行者の構成に使用する要素が含まれています。 ローカル発行者を使用するクライアントの構成については、次を参照してください。[方法。ローカル発行者を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)します。  
@@ -146,7 +146,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素は、証明書の認証に使用される信頼レベルを指定します。 既定のレベルは "ChainTrust" に設定され、チェーンの最上位の信頼された証明機関で終了する証明書の階層構造で各証明書を検索するよう指定します。 これは最もセキュリティで保護されているモードです。 また、値を "PeerOrChainTrust" に設定することもできます。これは、信頼されたチェーン内の証明書と共に、自己発行された証明書 (ピア信頼) も受け入れることを指定します。 自己発行の資格情報は信頼された証明機関から購入したものである必要はないため、この値はクライアントとサービスの開発およびデバッグに使用されます。 クライアントを展開するときは、代わりに "ChainTrust" 値を使用します。 値を "Custom" または "None" に設定できます。 "Custom" 値を使用するには、`CustomCertificateValidatorType` 属性も証明書の検証に使用するアセンブリと型に設定する必要があります。 独自のカスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスを継承する必要があります。 詳細については、「[方法 :カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   
- [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素が含まれています、`RevocationMode`失効証明書をチェックする方法を指定する属性。 既定値は "online" です。この場合、証明書が失効していないかどうかが自動的にチェックされます。 詳細については、[Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。  
+ [\<認証 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)要素が含まれています、`RevocationMode`失効証明書をチェックする方法を指定する属性。 既定値は "online" です。この場合、証明書が失効していないかどうかが自動的にチェックされます。 詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
 ## <a name="serviceauthorization"></a>ServiceAuthorization  
  [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)要素には、承認、カスタム ロール プロバイダー、および偽装に影響する要素が含まれています。  
@@ -188,7 +188,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ```  
   
 ## <a name="configuring-security-audits"></a>セキュリティ監査の構成  
- 使用して、 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)書き込み先のログとその内容を指定するログに記録するイベントの種類。 詳細については、[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
+ 使用して、 [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)書き込み先のログとその内容を指定するログに記録するイベントの種類。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
 ```xml  
 <system.serviceModel>  
@@ -218,5 +218,6 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

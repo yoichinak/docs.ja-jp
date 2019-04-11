@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125380"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>方法: アプリケーション スコープのリソース ディクショナリを使用する
 この例では、アプリケーション スコープのカスタム リソース ディクショナリを定義して、使用する方法を示します。  
@@ -26,8 +26,7 @@ ms.locfileid: "57369735"
   
  [!code-xaml[HOWTOResourceDictionaries#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/MyResourceDictionary.xaml#1)]  
   
- 使用して全体のリソース ディクショナリのスワップ<xref:System.Windows.Application.Resources%2A>各テーマが 1 つのリソース ディクショナリでカプセル化、アプリケーション スコープのテーマをサポートすることができます。 
-  <xref:System.Windows.ResourceDictionary> を設定する方法を次の例に示します。  
+ 使用して全体のリソース ディクショナリのスワップ<xref:System.Windows.Application.Resources%2A>各テーマが 1 つのリソース ディクショナリでカプセル化、アプリケーション スコープのテーマをサポートすることができます。 <xref:System.Windows.ResourceDictionary> を設定する方法を次の例に示します。  
   
  [!code-xaml[HOWTOResourceDictionaries#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HowToResourceDictionaries/CSharp/App.xaml#2)]  
   
@@ -43,6 +42,7 @@ ms.locfileid: "57369735"
  使用するときに 2 つの考慮事項があります<xref:System.Windows.Application.Resources%2A>します。 まず、ディクショナリ*キー*オブジェクトは両方の設定とプロパティ値を取得するときに正確に同じオブジェクト インスタンスを使用する必要があります。 (キーに文字列を使用する場合、大文字と小文字が区別されることに注意してください)。2 つ目は、ディクショナリ*値*オブジェクトはプロパティ値を取得するときに、目的の型に値を変換する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [XAML リソース](../advanced/xaml-resources.md)

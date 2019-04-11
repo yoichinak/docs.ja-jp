@@ -1,13 +1,13 @@
 ---
-title: <message> 要素 <netTcpBinding>
+title: '<message> 要素。次に含まれます: <netTcpBinding>'
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161019"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<メッセージ > 要素の\<netTcpBinding >
 構成されているエンドポイントのメッセージ レベルのセキュリティ要件の種類を定義、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。  
@@ -33,12 +33,12 @@ ms.locfileid: "55276927"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`algorithmSuite`|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> 指定できる値を次の表に示します。 既定値は `Basic256` です。<br /><br /> サービス バインディングで指定されている `algorithmSuite` 値が既定値と異なると、Svcutil.exe を使用して構成ファイルを生成したときにファイルが正しく生成されません。この場合は、構成ファイルを手動で編集して、この属性を適切な値に設定する必要があります。|  
-|`clientCredentialType`|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 指定できる値を次の表に示します。 既定値は `UserName` です。 この属性は <xref:System.ServiceModel.MessageCredentialType> 型です。|  
+|`algorithmSuite`|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> 次の表に、使用可能な値を示します。 既定値は `Basic256` です。<br /><br /> サービス バインディングで指定されている `algorithmSuite` 値が既定値と異なると、Svcutil.exe を使用して構成ファイルを生成したときにファイルが正しく生成されません。この場合は、構成ファイルを手動で編集して、この属性を適切な値に設定する必要があります。|  
+|`clientCredentialType`|メッセージ ベースのセキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。 次の表に、使用可能な値を示します。 既定値は `UserName` です。 この属性は <xref:System.ServiceModel.MessageCredentialType> 型です。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |Basic128|Aes128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Aes192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -59,7 +59,7 @@ ms.locfileid: "55276927"
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|サービスが匿名クライアントと対話できるようになります。 サービス側では、サービスがクライアントの資格情報を必要としないことを示しています。 クライアント側では、クライアントがクライアントの資格情報を提示しないことを示しています。|  
 |Windows|SOAP 交換を、Windows 資格情報の認証されたコンテキストで行うことが可能になります。|  
@@ -74,12 +74,13 @@ ms.locfileid: "55276927"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|<xref:System.ServiceModel.Configuration.NetTcpBindingElement>のセキュリティ機能を定義します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|<xref:System.ServiceModel.Configuration.NetTcpBindingElement>のセキュリティ機能を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
  メッセージは、SOAP メッセージの整合性と機密性を確保し、通信ピアの相互認証を行うために、メッセージ レベルのセキュリティを使用します。 バインディング上でこのセキュリティ モードが選択された場合、チャネル スタックは、メッセージ セキュリティ バインド要素を使用して構成され、SOAP メッセージは WS-Security* 標準に従って保護されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clipping [Windows Forms], using GDI+
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
-ms.openlocfilehash: da12ece815d8ae9d1f974b02198498b250885843
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074964"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+ での描画サーフェイスの制限
 クリッピングでは、描画を四角形または領域を制限します。 次の図、文字列「こんにちは」ハート形の領域にクリップされます。  
@@ -32,6 +32,7 @@ ms.locfileid: "57717118"
  [!code-vb[LinesCurvesAndShapes#91](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#91)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Region?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)

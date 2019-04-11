@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296096"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
 このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装するが、操作に起因するの使い方を示していますが、`TransactionFlowAttribute`で、 **TransactionFlowOption**どの程度のトランザクションをフローが有効になっているかを決定する列挙です。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
@@ -223,11 +223,11 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  C# または Visual Basic .NET のバージョンのソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. C# または Visual Basic .NET のバージョンのソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  SQL Server Express Edition または SQL Server がインストールされ、接続文字列が、サービスのアプリケーション構成ファイルで正しく設定されていることを確認します。 データベースを使用せずにサンプルを実行するには、サービスのアプリケーション構成ファイルで `usingSql` の値を `false` に設定します。  
+2. SQL Server Express Edition または SQL Server がインストールされ、接続文字列が、サービスのアプリケーション構成ファイルで正しく設定されていることを確認します。 データベースを使用せずに、サンプルを実行するには設定、`usingSql`サービスのアプリケーション構成ファイル内の値 `false`  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
     > [!NOTE]
     >  複数コンピューター構成の場合は、次の説明に従って分散トランザクション コーディネーターを有効にし、Windows SDK の WsatConfig.exe ツールを使用して WCF トランザクション ネットワークのサポートを有効にします。 参照してください[Ws-atomic トランザクションのサポートを構成する](https://go.microsoft.com/fwlink/?LinkId=190370)WsatConfig.exe のセットアップについて。  
@@ -236,7 +236,7 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Microsoft 分散トランザクション コーディネーター (MSDTC) を構成してサンプルを実行できるようにするには  
   
-1.  Windows Server 2003 または Windows XP が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
+1. Windows Server 2003 または Windows XP が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
     1.  **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
   
@@ -252,7 +252,7 @@ Press <ENTER> to terminate the service.
   
     7.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-2.  Windows Server 2008 または Windows Vista が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
+2. Windows Server 2008 または Windows Vista が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
     1.  **開始** メニューに移動します**コントロール パネル**、し**管理ツール**、し**コンポーネント サービス**します。  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate the service.
   
     6.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-3.  クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
+3. クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
     1.  **開始** メニューに移動します`Control Panel`、し**管理ツール**、し**コンポーネント サービス**します。  
   

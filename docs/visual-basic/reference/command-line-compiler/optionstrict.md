@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336084"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 暗黙の型変換を制限するための厳密な型のセマンティクスを適用します。  
@@ -27,7 +27,7 @@ ms.locfileid: "58835662"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 `-optionstrict+`オプションは、暗黙的な型変換を制限します。 このオプションの既定値は`-optionstrict-`します。 `-optionstrict+`オプションは、同じ`-optionstrict`します。 制限の緩やかな型のセマンティクスの両方を使用することができます。  
+ 任意。 `-optionstrict+`オプションは、暗黙的な型変換を制限します。 このオプションの既定値は`-optionstrict-`します。 `-optionstrict+`オプションは、同じ`-optionstrict`します。 制限の緩やかな型のセマンティクスの両方を使用することができます。  
   
  `custom`  
  必須。 厳密な言語セマンティクスが守られていない場合に警告します。  
@@ -39,11 +39,11 @@ ms.locfileid: "58835662"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Visual Studio IDE で-optionstrict を設定するには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **プロジェクト** メニューのをクリックして**プロパティ。**   
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **プロジェクト** メニューのをクリックして**プロパティ。**   
   
-2.  **[コンパイル]** タブをクリックします。  
+2. **[コンパイル]** タブをクリックします。  
   
-3.  値を変更、 **Option Strict**ボックス。  
+3. 値を変更、 **Option Strict**ボックス。  
   
 ### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict をプログラムで設定するには  
   
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [[Visual Basic の既定値] ([オプション] ダイアログ ボックス - [プロジェクト])](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211674"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>方法: 純色で図形を塗りつぶす
 純色で図形を塗りつぶす、作成、<xref:System.Drawing.SolidBrush>オブジェクト、および渡す<xref:System.Drawing.SolidBrush>オブジェクトの fill メソッドのいずれかの引数として、<xref:System.Drawing.Graphics>クラス。 次の例では、楕円の塗りつぶし色が赤にする方法を示します。  
@@ -30,4 +30,5 @@ ms.locfileid: "57704438"
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ブラシを使用した図形の塗りつぶし](using-a-brush-to-fill-shapes.md)

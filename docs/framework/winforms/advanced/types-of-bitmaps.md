@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089172"
 ---
 # <a name="types-of-bitmaps"></a>ビットマップの種類
 ビットマップは、ピクセルの四角形の配列の各ピクセルの色を指定するビットの配列です。 個々 のピクセル ビット数は、そのピクセルに割り当てることができる色の数を決定します。 たとえば、各ピクセルは 4 ビットで表される場合、し、特定のピクセル割り当てることができます 16 色のいずれか (2 ^4 = 16)。 次の表では、指定したビット数で表されるピクセルに割り当てることができる色の数のいくつかの例を示します。  
@@ -86,8 +86,9 @@ ms.locfileid: "57713216"
  TIFF は、さまざまなプラットフォームと画像処理アプリケーションでサポートされている柔軟性と拡張性の高い形式です。 TIFF ファイルでは、任意の数のピクセルあたりのビットを使用したイメージを格納できる、さまざまな圧縮アルゴリズムを使用できます。 いくつかのイメージは、1 つ、複数のページの TIFF ファイルに格納できます。 (スキャナーの種類、ホスト コンピューターの種類の圧縮、向き、ピクセルあたりのサンプル) のイメージに関連する情報をファイルに格納し、タグを使用して配置されます。 TIFF 形式は、承認して新しいタグの追加、必要に応じて拡張できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

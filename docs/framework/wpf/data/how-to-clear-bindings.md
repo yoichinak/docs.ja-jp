@@ -9,12 +9,12 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101420"
 ---
 # <a name="how-to-clear-bindings"></a>方法: バインディングをクリアする
 この例では、オブジェクトからバインディングをクリアする方法を示します。  
@@ -30,6 +30,7 @@ ms.locfileid: "57360229"
  オブジェクトのすべてのプロパティからバインディングをクリアする<xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.BindingOperations>
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

@@ -1,16 +1,16 @@
 ---
-title: '方法: WIF トレースを有効にします。'
+title: '方法: WIF トレースの有効化'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605171"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310266"
 ---
-# <a name="how-to-enable-wif-tracing"></a>方法: WIF トレースを有効にします。
+# <a name="how-to-enable-wif-tracing"></a>方法: WIF トレースの有効化
 ## <a name="applies-to"></a>対象  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -55,19 +55,19 @@ ms.locfileid: "54605171"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1.  Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-3.  **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+3. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
   
-4.  **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
+4. **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
   
-5.  **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
+5. **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
   
-6.  新しいフォルダーを作成するという名前で**ログ**のルートに、 **c:** ドライブに表示。**C:\logs**  
+6. 新しいフォルダーを作成するという名前で**ログ**のルートに、 **c:** ドライブに表示。**C:\logs**  
   
-7.  表示されている例のように、終了要素 **\</configSections>** の直後に、以下の **\<system.diagnostics>** 要素を *Web.config* 構成ファイルに追加します。  
+7. 表示されている例のように、終了要素 **\</configSections>** の直後に、以下の **\<system.diagnostics>** 要素を *Web.config* 構成ファイルに追加します。  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605171"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>正常なトレースのために WIF 対応 ASP.NET アプリケーションをテストするには  
   
-1.  **F5** キーを押して、ソリューションを実行します。 既定の ASP.NET ホーム ページが開き、ユーザー名 *Terry* (開発用 STS によって返される既定のユーザー) で自動的に認証されます。  
+1. **F5** キーを押して、ソリューションを実行します。 既定の ASP.NET ホーム ページが開き、ユーザー名 *Terry* (開発用 STS によって返される既定のユーザー) で自動的に認証されます。  
   
-2.  ブラウザー ウィンドウを閉じ、**C:\logs** フォルダーに移動します。 テキスト エディターを使用して **C:\logs\WIF.xml** ファイルを開きます。  
+2. ブラウザー ウィンドウを閉じ、**C:\logs** フォルダーに移動します。 テキスト エディターを使用して **C:\logs\WIF.xml** ファイルを開きます。  
   
-3.  **WIF.xml** ファイルを調べ、**\<E2ETraceEvent>** で始まるエントリが含まれていることを確認します。 これらのトレースには、**\<TraceRecord>** 要素と、トレースされるアクティビティ (**Validating SecurityToken** など) の説明が含まれています。
+3. **WIF.xml** ファイルを調べ、**\<E2ETraceEvent>** で始まるエントリが含まれていることを確認します。 これらのトレースには、**\<TraceRecord>** 要素と、トレースされるアクティビティ (**Validating SecurityToken** など) の説明が含まれています。

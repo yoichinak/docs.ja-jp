@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115753"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>方法: UI を返すアドインを作成する
 この例では、スタンドアロンの WPF アプリケーションのホストに Windows Presentation Foundation (WPF) を返すアドインを作成する方法を示します。  
@@ -25,14 +25,13 @@ ms.locfileid: "57364880"
   
  この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))を参照してください。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](../../add-ins/walkthrough-create-extensible-app.md)します。  
+-   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](../../add-ins/walkthrough-create-extensible-app.md)します。  
   
 -   WPF の拡張機能を .NET Framework アドイン モデルはこちらのサポート技術情報:[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
  WPF UI を返すアドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>コントラクト パイプライン セグメントの実装  
  メソッドは、UI を返すためのコントラクトを定義する必要があり、その戻り値型でなければなりません<xref:System.AddIn.Contract.INativeHandleContract>します。 これを示します、`GetAddInUI`のメソッド、`IWPFAddInContract`次のコード コントラクトします。  
@@ -90,5 +89,6 @@ ms.locfileid: "57364880"
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF のアドインの概要](wpf-add-ins-overview.md)
+- [WPF アドインの概要](wpf-add-ins-overview.md)

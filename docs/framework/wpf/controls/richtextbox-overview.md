@@ -8,25 +8,24 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162712"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox の概要
 <xref:System.Windows.Controls.RichTextBox>コントロールでは、段落、イメージ、テーブル、およびなどのフロー コンテンツを編集または表示することができます。 このトピックでは、<xref:System.Windows.Controls.TextBox>クラスし、両方で使用する方法の例を示します[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]とC#します。  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox か RichTextBox か  
  両方<xref:System.Windows.Controls.RichTextBox>と<xref:System.Windows.Controls.TextBox>テキストを編集できるように、ただし、2 つのコントロールがさまざまなシナリオで使用します。 A<xref:System.Windows.Controls.RichTextBox>は、ユーザーが書式設定されたテキスト、イメージ、テーブル、またはその他のリッチ コンテンツを編集するために必要なときに、ことをお勧めします。 たとえば、イメージ ドキュメント、記事、または書式設定、必要とするブログを編集などを使用して最適な実行、<xref:System.Windows.Controls.RichTextBox>します。 A<xref:System.Windows.Controls.TextBox>システム リソースが必要です、<xref:System.Windows.Controls.RichTextBox>するニーズをプレーン テキストのみ (つまりフォームで使用) を編集する際に最適です。 参照してください[TextBox の概要](textbox-overview.md)の詳細については<xref:System.Windows.Controls.TextBox>します。 次の表は、の主な機能をまとめたものです。<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.RichTextBox>します。  
   
 |コントロール|リアルタイム スペル チェック|コンテキスト メニュー|書式設定コマンドのような<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(<xref:system.windows.documents.editingcommands.togglebold%2a>(ctr + B)|<xref:System.Windows.Documents.FlowDocument> イメージ、段落、テーブルなどのコンテンツ。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|<xref:System.Windows.Controls.TextBox>|[はい]|はい|いいえ|いいえ。|  
-|<xref:System.Windows.Controls.RichTextBox>|[はい]|はい|はい|[はい]|  
+|<xref:System.Windows.Controls.TextBox>|はい|[はい]|いいえ|いいえ。|  
+|<xref:System.Windows.Controls.RichTextBox>|はい|はい|はい|はい|  
   
  **注:**<xref:System.Windows.Controls.TextBox>は書式設定などの関連コマンドをサポートしていません<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(CTR+B) など、多くの基本的なコマンドは両方のコントロールでサポートされて<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>します。  
   
@@ -95,5 +94,6 @@ ms.locfileid: "57378198"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法トピック](richtextbox-how-to-topics.md)
+
+- [方法のトピック](richtextbox-how-to-topics.md)
 - [TextBox の概要](textbox-overview.md)

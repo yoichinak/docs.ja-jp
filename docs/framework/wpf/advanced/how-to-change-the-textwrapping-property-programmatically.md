@@ -8,12 +8,12 @@ helpviewer_keywords:
 - documents [WPF], changing TextWrapping property programmatically
 - TextWrapping property [WPF], changing programmatically
 ms.assetid: 30d25554-4c82-4df9-a8d6-35683a4a13bb
-ms.openlocfilehash: 70dc73fe16ebb98e466c4363e5ac26562329dcd4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 21ca31d24121492fe6927cd533d5b3c0785b5a28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095842"
 ---
 # <a name="how-to-change-the-textwrapping-property-programmatically"></a>方法: TextWrapping プロパティをプログラムにより変更する
 ## <a name="example"></a>例  
@@ -27,5 +27,6 @@ ms.locfileid: "57362267"
  [!code-vb[TextWrapProperty#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextWrapProperty/VisualBasic/Pane1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.TextBlock.TextWrapping%2A>
 - <xref:System.Windows.TextWrapping>

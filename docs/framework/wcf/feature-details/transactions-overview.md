@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223109"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation のトランザクションの概要
 トランザクションを使用すると、一連の処理や操作を 1 つの不可分の実行単位にグループ化できます。 トランザクションとは、次の性質を持つ操作のコレクションです。  
@@ -28,7 +28,7 @@ ms.locfileid: "54548483"
   
  WCF では、WCF アプリケーションでサード パーティのテクノロジを使用して構築された相互運用の Web サービスなどの相互運用可能なアプリケーションにトランザクションをフローできるようにする WS-AtomicTransaction (WS-AT) プロトコルのサポートを実装します。 WCF では、トランザクション フローを有効にする相互運用機能が不要のシナリオで使用する OLE トランザクション プロトコルのサポートも実装します。  
   
- アプリケーション構成ファイルを使用してバインディングを構成し、トランザクション フローを有効にしたり無効にしたりできます。また、バインディングに目的のトランザクション プロトコルを設定できます。 さらに、構成ファイルを使用してサービス レベルでのトランザクションのタイムアウトを設定できます。 詳細については、[トランザクション フローを有効にする](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)を参照してください。  
+ アプリケーション構成ファイルを使用してバインディングを構成し、トランザクション フローを有効にしたり無効にしたりできます。また、バインディングに目的のトランザクション プロトコルを設定できます。 さらに、構成ファイルを使用してサービス レベルでのトランザクションのタイムアウトを設定できます。 詳細については、次を参照してください。[トランザクション フローを有効にする](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)します。  
   
  <xref:System.ServiceModel> 名前空間のトランザクション属性で次の設定が行えます。  
   
@@ -38,8 +38,9 @@ ms.locfileid: "54548483"
   
 -   コントラクト メソッドで <xref:System.ServiceModel.ServiceContractAttribute> 属性と <xref:System.ServiceModel.OperationContractAttribute> 属性を使用して、トランザクション フローの要求、許可、または拒否を行う。  
   
- 詳細については、[ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)を参照してください。  
+ 詳細については、次を参照してください。 [ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ServiceModel トランザクションの属性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
 - [トランザクション フローの有効化](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

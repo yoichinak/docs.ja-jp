@@ -1,5 +1,5 @@
 ---
-title: '方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。'
+title: '方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 36f9280ff3269997098673c30a1b95f8b51b9df8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072676"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メッセージ ループでフォームを表示して、COM 相互運用性の問題を解決できます。これは、 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> メソッドを使用して作成することができます。  
   
  Windows フォームが COM クライアント アプリケーションから正しく動作するには、Windows フォームのメッセージ ループ上でフォームを実行する必要があります。 そのためには、次の方法のいずれかを使用します。  
@@ -46,8 +46,9 @@ ms.locfileid: "57717480"
 -   `COMForm`、 `Form1`、および `FormManager` の型を、 `COMWinform.dll`と呼ばれるアセンブリにコンパイルします。 「 [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)」で説明するメソッドのいずれかを使用して COM にアセンブリを登録します。 これで、アンマネージ アプリケーションのアセンブリと対応する型のライブラリ (.tlb) ファイルを使用できます。 たとえば、Visual Basic 6.0 の実行可能なプロジェクトで参照として型ライブラリを使用することができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)
 - [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
-- [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](com-interop-by-displaying-a-windows-form-shadow.md)
+- [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)
 - [Windows フォームおよびアンマネージ アプリケーションの概要](windows-forms-and-unmanaged-applications-overview.md)

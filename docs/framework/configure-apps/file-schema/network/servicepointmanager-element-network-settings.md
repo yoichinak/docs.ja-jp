@@ -8,12 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202210"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 要素 (ネットワーク設定)
 ネットワーク リソースへの接続を構成します。  
@@ -67,6 +67,7 @@ ms.locfileid: "55277551"
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

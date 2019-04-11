@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171679"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>方法: 1 つの B を描画&#233;ベジエ スプライン
 ベジエ スプラインは、4 つの点によって定義されます。 開始点、2 つの制御点、およびエンドポイント。  
@@ -32,6 +32,7 @@ ms.locfileid: "58126280"
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [GDI+ でのベジエ スプライン](bezier-splines-in-gdi.md)
-- [方法: 一連のベジエ スプラインを描画します。](how-to-draw-a-sequence-of-bezier-splines.md)
+- [方法: 一連のベジエ スプラインを描画する](how-to-draw-a-sequence-of-bezier-splines.md)

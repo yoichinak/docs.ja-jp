@@ -77,7 +77,7 @@ Calling WCF Data Service...
 次の例では、 `ListCustomers` アクティビティを定義します。 このアクティビティは、Northwind データ サービス サンプルを照会し、Northwind データベース内の顧客をすべて含む `List<Customer>` を返します。 非同期操作は `GetCustomers` メソッドによって実行されます。 このメソッドは、サービスに対してすべての顧客を照会し、これらの顧客を `List<Customer>`にコピーします。 次に、結果がページングされているかどうかを確認します。 ページングされている場合は、サービスに対して結果の次のページを照会し、それを一覧に追加します。処理は顧客データをすべて取得するまで続行されます。
 
 > [!NOTE]
-> WCF Data Services でのページングの詳細については、[方法。ページングされた結果 (WCF Data Services) を読み込む](../data/wcf/how-to-load-paged-results-wcf-data-services.md)を参照してください。
+> WCF Data Services でのページングの詳細については、次を参照してください。[方法。ページングされた結果 (WCF Data Services) を読み込む](../data/wcf/how-to-load-paged-results-wcf-data-services.md)します。
 
 顧客がすべて追加されると、一覧が返されます。 `GetCustomers` メソッドはアクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドで指定されます。 メソッドには戻り値があるので、メソッドを指定するために `Func<string, List<Customer>>` が作成されます。
 

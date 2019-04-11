@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230864"
 ---
 # <a name="navigation-topologies-overview"></a>ナビゲーション トポロジの概要
 <a name="introduction"></a> この概要でのナビゲーション トポロジの概要については、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 3 つの一般的なナビゲーション トポロジをサンプルと共に説明します。  
   
 > [!NOTE]
->  このトピックを読む前に構造化ナビゲーションの概念を理解しておく必要がありますあります[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ページ関数を使用します。 これらのトピックの両方の詳細については、[構造化ナビゲーションの概要](structured-navigation-overview.md)を参照してください。  
+>  このトピックを読む前に構造化ナビゲーションの概念を理解しておく必要がありますあります[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ページ関数を使用します。 これらのトピックの両方の詳細については、次を参照してください。[構造化ナビゲーションの概要](structured-navigation-overview.md)します。  
   
  このトピックは、次のセクションで構成されています。  
   
@@ -141,6 +141,7 @@ ms.locfileid: "58819594"
 -   ウィザードが完了すると (受け入れられた場合も、キャンセルされた場合も)、ウィザードを構成するページは履歴から削除されます。 これにより、ウィザードの各インスタンスが分離され、異常なデータや状態の発生を防ぎます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

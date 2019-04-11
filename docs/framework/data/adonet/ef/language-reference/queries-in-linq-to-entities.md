@@ -2,12 +2,12 @@
 title: LINQ to Entities でのクエリ
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: aef82fffda1177d87b7f811ef75f37872c8c3799
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e005939c8168606c7f58467f11115666cf1ef24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124749"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 統合言語クエリ (LINQ) は、データ ソースや形式の違いを意識することなくデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 LINQ クエリでは、常にプログラミング オブジェクトを操作することになります。  
@@ -28,7 +28,7 @@ ms.locfileid: "54528656"
   
 -   [クエリ式の構文例:フィルター処理](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [クエリ式の構文例:順序付け](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [クエリ式の構文例:順序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
 -   [クエリ式の構文例:集計演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54528656"
   
 -   [クエリ式の構文例:グループ化](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [クエリ式の構文例:リレーションシップのナビゲーション](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [クエリ式の構文例:リレーションシップの操作](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリを作成するもう 1 つの方法として、メソッド ベースのクエリがあります。 メソッド ベースのクエリ構文は、LINQ 演算子のメソッド、ラムダ式をパラメーターとして渡すことへのダイレクト メソッド呼び出しのシーケンスです。 詳細については、「[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。 メソッドベースの構文の使用方法を示す例については、次のトピックを参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "54528656"
   
 -   [メソッド ベースのクエリ構文例:フィルター処理](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [メソッド ベースのクエリ構文例:順序付け](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [メソッド ベースのクエリ構文例:順序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
 -   [メソッド ベースのクエリ構文例:集計演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
@@ -63,10 +63,11 @@ ms.locfileid: "54528656"
   
 -   [メソッド ベースのクエリ構文例:グループ化](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [メソッド ベースのクエリ構文例:リレーションシップのナビゲーション](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [メソッド ベースのクエリ構文例:リレーションシップの操作](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [C# の LINQ の概要](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Visual Basic の LINQ の概要](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Entity Framework マージ オプションおよびコンパイル済みクエリ](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Entity Framework マージ オプションおよびコンパイルされたクエリ](https://go.microsoft.com/fwlink/?LinkId=199591)

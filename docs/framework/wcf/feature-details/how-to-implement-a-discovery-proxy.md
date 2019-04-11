@@ -1,16 +1,16 @@
 ---
-title: '方法: 探索プロキシを実装します。'
+title: '方法: 探索プロキシを実装する'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321017"
 ---
-# <a name="how-to-implement-a-discovery-proxy"></a>方法: 探索プロキシを実装します。
-このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
+# <a name="how-to-implement-a-discovery-proxy"></a>方法: 探索プロキシを実装する
+このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、 `OnFindAsyncResult`、および`AsyncResult`します。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
 
  このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。
 
@@ -22,11 +22,11 @@ ms.locfileid: "54608915"
 
 ### <a name="to-create-a-new-console-application-project"></a>新しいコンソール アプリケーション プロジェクトを作成するには
 
-1.  Visual Studio 2012 を起動します。
+1. Visual Studio 2012 を起動します。
 
-2.  新しいコンソール アプリケーション プロジェクトを作成します。 プロジェクトに「`DiscoveryProxy`」という名前を付け、ソリューションに「`DiscoveryProxyExample`」という名前を付けます。
+2. 新しいコンソール アプリケーション プロジェクトを作成します。 プロジェクトに「`DiscoveryProxy`」という名前を付け、ソリューションに「`DiscoveryProxyExample`」という名前を付けます。
 
-3.  プロジェクトに次の参照を追加します。
+3. プロジェクトに次の参照を追加します。
 
     1.  System.ServiceModel.dll
 
@@ -37,9 +37,9 @@ ms.locfileid: "54608915"
 
 ### <a name="to-implement-the-proxydiscoveryservice-class"></a>ProxyDiscoveryService クラスを実装するには
 
-1.  新しいコード ファイルをプロジェクトに追加し、DiscoveryProxy.cs という名前を付けます。
+1. 新しいコード ファイルをプロジェクトに追加し、DiscoveryProxy.cs という名前を付けます。
 
-2.  次の `using` ステートメントを DiscoveryProxy.cs に追加します。
+2. 次の `using` ステートメントを DiscoveryProxy.cs に追加します。
 
     ```
     using System;
@@ -49,7 +49,7 @@ ms.locfileid: "54608915"
     using System.Xml;
     ```
 
-3.  `DiscoveryProxyService` から <xref:System.ServiceModel.Discovery.DiscoveryProxy> を派生させます。 下の例に示すように、`ServiceBehavior` 属性をクラスに適用します。
+3. `DiscoveryProxyService` から <xref:System.ServiceModel.Discovery.DiscoveryProxy> を派生させます。 下の例に示すように、`ServiceBehavior` 属性をクラスに適用します。
 
     ```
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -59,14 +59,14 @@ ms.locfileid: "54608915"
     }
     ```
 
-4.  `DiscoveryProxy` クラス内で、登録済みサービスを保持するディクショナリを定義します。
+4. `DiscoveryProxy` クラス内で、登録済みサービスを保持するディクショナリを定義します。
 
     ```
     // Repository to store EndpointDiscoveryMetadata.
     Dictionary<EndpointAddress, EndpointDiscoveryMetadata> onlineServices;
     ```
 
-5.  ディクショナリを初期化するコンストラクターを定義します。
+5. ディクショナリを初期化するコンストラクターを定義します。
 
     ```
     public DiscoveryProxyService()
@@ -77,7 +77,7 @@ ms.locfileid: "54608915"
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>探索プロキシ キャッシュの更新に使用するメソッドを定義するには
 
-1.  `AddOnlineservice` メソッドを実装して、サービスをキャッシュに追加します。 これは、プロキシがアナウンス メッセージを受け取るたびに呼び出されます。
+1. `AddOnlineservice` メソッドを実装して、サービスをキャッシュに追加します。 これは、プロキシがアナウンス メッセージを受け取るたびに呼び出されます。
 
     ```
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -91,7 +91,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-2.  キャッシュからサービスを削除するのに使用する `RemoveOnlineService` メソッドを実装します。
+2. キャッシュからサービスを削除するのに使用する `RemoveOnlineService` メソッドを実装します。
 
     ```
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -108,7 +108,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-3.  サービスをディクショナリ内のサービスと照合する、`MatchFromOnlineService` メソッドを実装します。
+3. サービスをディクショナリ内のサービスと照合する、`MatchFromOnlineService` メソッドを実装します。
 
     ```
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -144,7 +144,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-4.  探索プロキシの処理に関するコンソール テキスト出力をユーザーに提供する、`PrintDiscoveryMetadata` メソッドを実装します。
+4. 探索プロキシの処理に関するコンソール テキスト出力をユーザーに提供する、`PrintDiscoveryMetadata` メソッドを実装します。
 
     ```
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -159,7 +159,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-5.  次の AsyncResult クラスを DiscoveryProxyService に追加します。 これらのクラスは、非同期操作の各結果を区別するために使用されます。
+5. 次の AsyncResult クラスを DiscoveryProxyService に追加します。 これらのクラスは、非同期操作の各結果を区別するために使用されます。
 
     ```
     sealed class OnOnlineAnnouncementAsyncResult : AsyncResult
@@ -225,7 +225,7 @@ ms.locfileid: "54608915"
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>探索プロキシ機能を実装するメソッドを定義するには
 
-1.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオンライン アナウンス メッセージを受け取ると呼び出されます。
+1. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオンライン アナウンス メッセージを受け取ると呼び出されます。
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-2.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがアナウンス メッセージの処理を終了すると呼び出されます。
+2. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがアナウンス メッセージの処理を終了すると呼び出されます。
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-3.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオフライン アナウンス メッセージを受け取ると呼び出されます。
+3. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオフライン アナウンス メッセージを受け取ると呼び出されます。
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-4.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオフライン アナウンス メッセージの処理を終了すると呼び出されます。
+4. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシがオフライン アナウンス メッセージの処理を終了すると呼び出されます。
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-5.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが検索要求を受け取ると呼び出されます。
+5. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが検索要求を受け取ると呼び出されます。
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ ms.locfileid: "54608915"
     }
     ```
 
-6.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが検索要求の処理を終了すると呼び出されます。
+6. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが検索要求の処理を終了すると呼び出されます。
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ ms.locfileid: "54608915"
             }
     ```
 
-7.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが解決メッセージを受け取ると呼び出されます。
+7. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが解決メッセージを受け取ると呼び出されます。
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ ms.locfileid: "54608915"
     }
     ```
 
-8.  <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが解決メッセージの処理を終了すると呼び出されます。
+8. <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 このメソッドは、探索プロキシが解決メッセージの処理を終了すると呼び出されます。
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -323,18 +323,18 @@ ms.locfileid: "54608915"
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult クラスを実装するには
 
-1.  各種の非同期結果クラスを派生させるために使用する抽象基本クラス AsyncResult を定義します。
+1. 各種の非同期結果クラスを派生させるために使用する抽象基本クラス AsyncResult を定義します。
 
-2.  AsyncResult.cs という名前の新しいコード ファイルを作成します。
+2. AsyncResult.cs という名前の新しいコード ファイルを作成します。
 
-3.  次の `using` ステートメントを AsyncResult.cs に追加します。
+3. 次の `using` ステートメントを AsyncResult.cs に追加します。
 
     ```
     using System;
     using System.Threading;
     ```
 
-4.  次の AsyncResult クラスを追加します。
+4. 次の AsyncResult クラスを追加します。
 
     ```
     abstract class AsyncResult : IAsyncResult
@@ -487,9 +487,9 @@ ms.locfileid: "54608915"
 
 ### <a name="to-host-the-discoveryproxy"></a>DiscoveryProxy をホストするには
 
-1.  DiscoveryProxyExample プロジェクトで Program.cs ファイルを開きます。
+1. DiscoveryProxyExample プロジェクトで Program.cs ファイルを開きます。
 
-2.  次の `using` ステートメントを追加します。
+2. 次の `using` ステートメントを追加します。
 
     ```
     using System;
@@ -497,7 +497,7 @@ ms.locfileid: "54608915"
     using System.ServiceModel.Discovery;
     ```
 
-3.  `Main()` メソッド内に次のコードを追加します。 これにより、`DiscoveryProxy` クラスのインスタンスが作成されます。
+3. `Main()` メソッド内に次のコードを追加します。 これにより、`DiscoveryProxy` クラスのインスタンスが作成されます。
 
     ```
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -507,7 +507,7 @@ ms.locfileid: "54608915"
                 ServiceHost proxyServiceHost = new ServiceHost(new DiscoveryProxyService());
     ```
 
-4.  次に、探索エンドポイントとアナウンス エンドポイントを追加する、次のコードを追加します。
+4. 次に、探索エンドポイントとアナウンス エンドポイントを追加する、次のコードを追加します。
 
     ```
     try
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>関連項目
 
 - [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [方法: 探索プロキシで登録される探索可能なサービスを実装します。](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [方法: 探索プロキシをテストします。](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [方法: 探索プロキシで登録される探索可能なサービスの実装する](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [方法: 探索プロキシをテストする](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

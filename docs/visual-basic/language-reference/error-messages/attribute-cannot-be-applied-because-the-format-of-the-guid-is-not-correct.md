@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330676"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'GUID '\<number>' の形式が正しくないため、'\<attribute>' を適用できません。
-`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。 `COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
+`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。 `COMClassAttribute` クラス、インターフェイス、および作成イベントを一意に識別するのに Guid を使用します。  
   
  GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。 GUID は uuidgen.exe などの Microsoft ユーティリティで生成され、空間および時間内で一意であることが保証されています。  
   
@@ -23,9 +23,9 @@ ms.locfileid: "58832269"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  COM オブジェクトを識別するために必要な正しい GUID を決定します。  
+1. COM オブジェクトを識別するために必要な正しい GUID を決定します。  
   
-2.  `COMClassAttribute` 属性ブロックに示される GUID 文字列が正しくコピーされていることを確認します。  
+2. `COMClassAttribute` 属性ブロックに示される GUID 文字列が正しくコピーされていることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220436"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  
@@ -31,13 +31,13 @@ ms.locfileid: "56261103"
  サービスのエンドポイント アドレスは、コードを使用して命令的に、または構成を通じて宣言的に指定できます。 設置済みサービスのバインドおよびアドレスは一般的に、サービスの開発中に使用されるものとは異なるので、コード内でエンドポイントを定義することは通常、実用的ではありません。 一般に、サービス エンドポイントの定義にはコードではなく、構成を使用する方がより実用的です。 バインディング情報とアドレス情報をコードに含めないことで、変更時にアプリケーションの再コンパイルや再展開を行う必要がなくなります。  
   
 ### <a name="defining-an-address-in-configuration"></a>構成によるアドレス定義  
- 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
+ 構成ファイルでエンドポイントを定義するには、使用、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
   
 ### <a name="defining-an-address-in-code"></a>コードによるアドレス定義  
- エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
+ エンドポイント アドレスは、コードで <xref:System.ServiceModel.EndpointAddress> クラスを使用して作成できます。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
   
 ### <a name="endpoints-in-wsdl"></a>WSDL のエンドポイント  
- エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例では、[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)を参照してください。  
+ エンドポイント アドレスは、対応するエンドポイントの `wsdl:port` 要素内の WS-Addressing EPR 要素として WSDL で表すこともできます。 EPR には、エンドポイントのアドレスのほかに、アドレスのすべてのプロパティが含まれます。 詳細と例では、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-35"></a>複数の IIS バインディングで .NET Framework 3.5 のサポート  
  インターネット サービス プロバイダーは、多くの場合、サイトの密度を高めて総所有コストを抑えるため、同じサーバーまたはサイト上で複数のアプリケーションをホストしています。 通常、これらのアプリケーションは、異なるベース アドレスにバインドされています。 インターネット インフォメーション サービス (IIS) Web サイトは、複数のアプリケーションを格納できます。 サイト内のアプリケーションに、1 つ以上の IIS バインディングからアクセスできます。  
@@ -95,7 +95,7 @@ ms.locfileid: "56261103"
   
  複数のサイト バインディングがこの設定を使用して有効になっている場合、HTTP プロトコルと非 HTTP プロトコルの両方について、baseAddressPrefixFilters 設定は無視されます。  
   
- 詳細と例については、[複数の IIS サイト バインディングをサポートしている](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)と<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>を参照してください。  
+ 詳細と例については、次を参照してください。[複数の IIS サイト バインディングをサポートしている](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)と<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>します。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>WCF サービスによるアドレスの拡張  
  既定のアドレス指定の WCF サービスのモデルでは、次の目的のエンドポイント アドレス URI を使用します。  
@@ -138,5 +138,6 @@ ms.locfileid: "56261103"
  シナリオによっては、適切な `To` ヘッダーを持つメッセージだけではなく、基になるトランスポートに到着したすべてのメッセージをエンドポイントで受信します。 これを行うには、ユーザーは <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> クラスを使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エンドポイント アドレスの指定](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

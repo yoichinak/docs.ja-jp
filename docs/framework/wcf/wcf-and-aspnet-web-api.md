@@ -2,12 +2,12 @@
 title: WCF と ASP.NET Web API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192005"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF と ASP.NET Web API
 WCF は、サービス指向のアプリケーションを構築するための Microsoft の統一プログラミング モデルです。 これを使用して開発者は、プラットフォーム間を統合し、既存のコンポーネントと相互運用する、セキュリティで保護された信頼性の高いトランザクション型のソリューションを構築できます。 [ASP.NET Web API](https://www.asp.net/web-api)をさまざまなブラウザーやモバイル デバイスなどのクライアントに提供される HTTP サービスを構築するが容易にするフレームワークです。 ASP.NET Web API は、.NET Framework に基づいて RESTful アプリケーションを構築するのに最適なプラットフォームです。 このトピックでは、ニーズに最適なテクノロジを決定するのに役立つガイドラインを示します。  
@@ -27,5 +27,6 @@ WCF は、サービス指向のアプリケーションを構築するための 
  WCF を使用すると、さまざまなトランスポート経由でアクセスできる信頼性の高い、セキュリティで保護された web サービスを作成します。 ASP.NET Web API を使用すると、さまざまなクライアントからアクセスできる HTTP ベースのサービスを作成できます。 ASP.NET Web API は、新しい REST スタイルのサービスを作成および設計する場合に使用します。 WCF では REST スタイルのサービスの作成を一部サポートしていますが、ASP.NET Web API の REST のサポートはより詳細で、以降の REST 機能の強化は ASP.NET Web API で行われる予定です。 既存の WCF サービスがあり、追加の REST エンドポイントを公開する場合は、WCF および <xref:System.ServiceModel.WebHttpBinding> を使用してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation の基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

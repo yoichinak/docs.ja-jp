@@ -11,15 +11,15 @@ helpviewer_keywords:
 - properties [WPF], RenderTransform
 - LayoutTransform property [WPF]
 ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
-ms.openlocfilehash: c14f746846943d3fa5150fbee405a62249dee9c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 973b9267eaef5d55176633ee80a1dc7f8b043909
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126439"
 ---
 # <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>方法: イベントの発生時に要素に変換を適用する
-この例は、適用する方法を示します、<xref:System.Windows.Media.ScaleTransform>イベントが発生します。 ここで示される概念は、他の種類の変換を適用する場合に使用するものと同じです。 使用可能な種類の変換の詳細については、、<xref:System.Windows.Media.Transform>クラスまたは[変換の概要](transforms-overview.md)を参照してください。  
+この例は、適用する方法を示します、<xref:System.Windows.Media.ScaleTransform>イベントが発生します。 ここで示される概念は、他の種類の変換を適用する場合に使用するものと同じです。 使用可能な種類の変換の詳細については、次を参照してください。、<xref:System.Windows.Media.Transform>クラスまたは[変換の概要](transforms-overview.md)します。  
   
  要素に変換を適用するには、次の 2 つの方法があります。  
   
@@ -36,8 +36,9 @@ ms.locfileid: "57357934"
  [!code-vb[ButtonTransform#1cb](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [変換の概要](transforms-overview.md)
-- [方法トピック](transformations-how-to-topics.md)
+- [方法のトピック](transformations-how-to-topics.md)
 - [ルーティング イベントの概要](../advanced/routed-events-overview.md)

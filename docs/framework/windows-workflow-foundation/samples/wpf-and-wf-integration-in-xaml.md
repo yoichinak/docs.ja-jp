@@ -2,18 +2,18 @@
 title: XAML での WPF と WF の統合
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298644"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML での WPF と WF の統合
 このサンプルでは、単一の XAML ドキュメントで Windows Presentation Foundation (WPF) および Windows Workflow Foundation (WF) の機能を使用するアプリケーションを作成する方法を示します。 これを行うには、サンプルは、Windows Workflow Foundation (WF) と XAML 機能拡張を使用します。
 
 ## <a name="sample-details"></a>サンプルの詳細
- ShowWindow.xaml ファイルは、シーケンスのアクティビティによって操作される 2 つの文字列変数 <xref:System.Activities.Statements.Sequence> および `ShowWindow` を持つ `WriteLine` アクティビティに逆シリアル化します。 <xref:System.Activities.Statements.WriteLine> アクティビティは、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティに割り当てる式をコンソール ウィンドウに出力します。 `ShowWindow` アクティビティは、実行ロジックの一部として [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] ウィンドウを表示します。 このウィンドウの <xref:System.Activities.ActivityContext.DataContext%2A> には、シーケンスで宣言された変数が含まれます。 `ShowWindow` アクティビティで宣言されたウィンドウのコントロールは、データ バインドを使用してこれらの変数を操作します。 最後に、このウィンドウにはボタン コントロールが含まれます。 このボタンの `Click` イベントは、<xref:System.Activities.ActivityDelegate> アクティビティを含む `MarkupExtension` という名前の `CloseWindow` によって処理されます。 `MarkUpExtension` は、`x:Name` によって識別されるオブジェクトおよび格納先ウィンドウの <xref:System.Activities.ActivityContext.DataContext%2A> を、コンテキストとして提供する、含まれているアクティビティを呼び出します。 したがって、`CloseWindow.InArgument<Window>` は、ウィンドウの名前を参照する式を使用してバインドできます。
+ ShowWindow.xaml ファイルは、シーケンスのアクティビティによって操作される 2 つの文字列変数 <xref:System.Activities.Statements.Sequence> および `ShowWindow` を持つ `WriteLine` アクティビティに逆シリアル化します。 <xref:System.Activities.Statements.WriteLine> アクティビティは、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティに割り当てる式をコンソール ウィンドウに出力します。 `ShowWindow` アクティビティは、実行ロジックの一部として [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] ウィンドウを表示します。 このウィンドウの <xref:System.Activities.ActivityContext.DataContext%2A> には、シーケンスで宣言された変数が含まれます。 `ShowWindow` アクティビティで宣言されたウィンドウのコントロールは、データ バインドを使用してこれらの変数を操作します。 最後に、このウィンドウにはボタン コントロールが含まれます。 このボタンの `Click` イベントは、<xref:System.Activities.ActivityDelegate> アクティビティを含む `MarkupExtension` という名前の `CloseWindow` によって処理されます。 `MarkUpExtension` によって識別される任意のオブジェクトをコンテキストとして提供する含まれているアクティビティを呼び出す、 `x:Name`、だけでなく<xref:System.Activities.ActivityContext.DataContext%2A>の格納先ウィンドウ。 したがって、`CloseWindow.InArgument<Window>` は、ウィンドウの名前を参照する式を使用してバインドできます。
 
  `ShowWindow` アクティビティは、<xref:System.Activities.AsyncCodeActivity%601> ウィンドウを表示するために [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] クラスから派生し、ウィンドウが閉じられるときに完了します。 `Window` プロパティは、アクティビティの実行ごとにウィンドウを必要に応じて作成できるようにする `Func<Window>` 型です。 `Window` プロパティは、<xref:System.Xaml.XamlDeferringLoader> を使用してこの遅延評価モデルを有効にします。 `FuncFactoryDeferringLoader` を使用すると、`XamlReader` をシリアル化中にキャプチャしてアクティビティの実行中に読み取ることができます。
 
@@ -26,15 +26,15 @@ ms.locfileid: "48840876"
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 を使用して、WPFWFIntegration.sln ソリューション ファイルを開きます。
+1. Visual Studio 2010 を使用して、WPFWFIntegration.sln ソリューション ファイルを開きます。
 
-2.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  ソリューションを実行するには、F5 キーを押します。
+3. ソリューションを実行するには、F5 キーを押します。
 
-4.  姓と名をダイアログ ボックスに入力します。
+4. 姓と名をダイアログ ボックスに入力します。
 
-5.  ダイアログ ボックスを閉じると、コンソールに名前がエコーされます。
+5. ダイアログ ボックスを閉じると、コンソールに名前がエコーされます。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

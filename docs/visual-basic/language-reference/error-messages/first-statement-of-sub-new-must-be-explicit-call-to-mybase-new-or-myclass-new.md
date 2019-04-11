@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313478"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>この 'Sub New' の最初のステートメントは、ためには、'mybase.new' または 'myclass.new' の明示的な呼び出しにある必要があります、'\<ある >' の基底クラスの\<baseclassname >' の'\<derivedclassname >' 旧式とマークされて: '\<errormessage >'
 クラス コンストラクターが基底クラスのコンストラクターを明示的に呼び出さず、暗黙的な基底クラスのコンストラクターが <xref:System.ObsoleteAttribute> 属性およびエラーとして扱うことを示すディレクティブでマークされています。  
@@ -25,9 +25,9 @@ ms.locfileid: "58814095"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  引用符で囲まれたエラー メッセージを確認し、適切な処理を行います。  
+1. 引用符で囲まれたエラー メッセージを確認し、適切な処理を行います。  
   
-2.  `MyBase.New()` または `MyClass.New()` の呼び出しを `Sub New` の最初のステートメントとして派生クラスに含めます。  
+2. `MyBase.New()` または `MyClass.New()` の呼び出しを `Sub New` の最初のステートメントとして派生クラスに含めます。  
   
 ## <a name="see-also"></a>関連項目
 

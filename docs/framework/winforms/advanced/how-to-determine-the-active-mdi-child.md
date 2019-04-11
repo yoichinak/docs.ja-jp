@@ -1,5 +1,5 @@
 ---
-title: '方法: アクティブな MDI 子を決定します。'
+title: '方法: アクティブな MDI 子フォームを特定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300607"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>方法: アクティブな MDI 子を決定します。
+# <a name="how-to-determine-the-active-mdi-child"></a>方法: アクティブな MDI 子フォームを特定する
 場合によっては、現在アクティブな子フォームでフォーカスのあるコントロールを操作するコマンドを指定するします。 たとえば、子フォームのテキスト ボックスから選択したテキストをクリップボードにコピーするとします。 クリップボードを使用して、選択したテキストをコピーするプロシージャを作成すると、<xref:System.Windows.Forms.Control.Click>の編集 メニューの標準的なコピー メニュー項目のイベント。  
   
  MDI アプリケーションが同じ子フォームの多くのインスタンスを持てないため、プロシージャを使用するフォームを把握する必要があります。 正しい形式を指定するには、使用、<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>プロパティで、フォーカスのある、または最後にアクティブだった子フォームを返します。  
@@ -27,10 +27,10 @@ ms.locfileid: "57714328"
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>アクティブな MDI 子ウィンドウ (そのテキストをクリップボードにコピー) を決定するには  
   
-1.  メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
+1. メソッド内には、アクティブな子フォームのアクティブなコントロールのテキストをクリップボードにコピーします。  
   
     > [!NOTE]
-    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、[MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)を参照してください。  
+    >  この例では、MDI 親フォームがある (`Form1`) を含む 1 つまたは複数の MDI 子ウィンドウを持つ、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)します。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,9 @@ ms.locfileid: "57714328"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
-- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)
+- [方法: MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成する](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子フォームにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)

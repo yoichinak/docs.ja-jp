@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 0e71284e914dac2d28448f3d8bd4bdc7a9f6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180630"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > 要素 (ネットワーク設定)
 電子メールの送信オプションを設定します。  
@@ -40,13 +40,13 @@ ms.locfileid: "55277616"
   
 |属性|説明|  
 |---------------|-----------------|  
-|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル オプションを構成します。|  
+|[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル オプションを構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<system.Net> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[\<system.Net > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
 ## <a name="example"></a>例  
  次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。  
@@ -68,5 +68,6 @@ ms.locfileid: "55277616"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.Mail.SmtpClient>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

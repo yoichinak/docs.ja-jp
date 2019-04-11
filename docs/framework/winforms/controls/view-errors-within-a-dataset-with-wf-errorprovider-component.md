@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内のエラーの表示'
+title: '方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310448"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内のエラーの表示
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する
 Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>データセットまたは他のデータ ソース内の列のエラーを表示するコンポーネント。 <xref:System.Windows.Forms.ErrorProvider>フォームのデータのエラーを表示するコンポーネントにすることはありません、コントロールに直接関連付けられています。 データ ソースにバインドされていると、同じデータ ソースにバインドされている任意のコントロールの横にエラー アイコンを表示できます。  
   
 > [!NOTE]
@@ -24,7 +24,7 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>デ�
   
 ### <a name="to-display-data-errors"></a>データ エラーを表示するには  
   
-1.  コンポーネントをデータ テーブル内の特定の列にバインドします。  
+1. コンポーネントをデータ テーブル内の特定の列にバインドします。  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>デ�
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  設定、<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>プロパティをフォームにします。  
+2. 設定、<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>プロパティをフォームにします。  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>デ�
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  列のエラーを含む行を現在のレコードの位置を設定します。  
+3. 列のエラーを含む行を現在のレコードの位置を設定します。  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -63,5 +63,6 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>デ�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)
-- [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証のエラー アイコンを表示します。](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する](display-error-icons-for-form-validation-with-wf-errorprovider.md)
