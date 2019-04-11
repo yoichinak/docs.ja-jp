@@ -2,12 +2,12 @@
 title: エンドツーエンドのトレース
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092138"
 ---
 # <a name="end-to-end-tracing"></a>エンドツーエンドのトレース
 エンド ツー エンド (e2e) のトレースでは、開発者はコード パスが失敗した理由を調査したり、キャパシティ プランニングやパフォーマンス分析の詳細なトレースを提供する Windows Communication Foundation (WCF) インフラストラクチャ内のコードの実行ができます。 Windows Communication Foundation (WCF) が、エラーの原因の診断に役立つ 3 つの相関機構を提供します。 アクティビティ、転送、および伝達します。  
@@ -26,6 +26,7 @@ ms.locfileid: "54569064"
  すべてのアクティビティ トレースの概要を説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

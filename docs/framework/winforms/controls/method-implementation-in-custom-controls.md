@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 5bcc6441ab1a615c31a5a028fc7f8f09cbdd4c10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117418"
 ---
 # <a name="method-implementation-in-custom-controls"></a>カスタム コントロールへのメソッドの実装
 コントロールにメソッドを実装する方法は、他のコンポーネントにメソッドを実装する場合と同じです。  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  コントロールのユーザーが、メソッドにさまざまなパラメーターの組み合わせを指定できるようにするには、明示的なデータ型を使用して、メソッドのオーバーロードを複数提供します。 テスト時にエラーが検出されない場合があるため、任意のデータ型を含めることのできる `As Object` として宣言するパラメーターは作成しないでください。  
   
 > [!NOTE]
->  共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。 `Variant` は、言語から削除されました。  
+>  共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。 `Variant` 言語から削除されました。  
   
  たとえば、`Spin` という仮想のコントロールに `Widget` メソッドがあり、スピンの方向と速度を直接指定するか、角運動量を吸収する他の `Widget` オブジェクトを指定できます。  
   
@@ -76,5 +76,6 @@ public void Spin(Widget driver)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [イベント](../../../standard/events/index.md)
 - [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)

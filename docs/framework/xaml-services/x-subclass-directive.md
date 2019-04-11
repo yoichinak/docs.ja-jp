@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140791"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass ディレクティブ
 XAML マークアップのコンパイルの動作を変更するときに`x:Class`も提供されます。 基づいている部分クラスを作成する代わりに`x:Class`、提供されている`x:Class`は中間のクラスとして作成し、指定された派生クラスをベースにする予定ですし`x:Class`。  
@@ -34,7 +34,7 @@ XAML マークアップのコンパイルの動作を変更するときに`x:Cla
 |-|-|  
 |`namespace`|任意。 含む CLR 名前空間を指定します`classname`します。 場合`namespace`を指定すると、ドット (.) で区切られます`namespace`と`classname`します。|  
 |`classname`|必須。 読み込まれた XAML およびその XAML の分離コードで接続する部分クラスの CLR 名を指定します。 「解説」を参照してください。|  
-|`subclassNamespace`|任意。 異なっていてもかまいません`namespace`他の各名前空間を解決できない場合。 含む CLR 名前空間を指定します`subclassName`します。 場合`subclassName`を指定すると、ドット (.) で区切られます`subclassNamespace`と`subclassName`します。|  
+|`subclassNamespace`|省略可能です。 異なっていてもかまいません`namespace`他の各名前空間を解決できない場合。 含む CLR 名前空間を指定します`subclassName`します。 場合`subclassName`を指定すると、ドット (.) で区切られます`subclassNamespace`と`subclassName`します。|  
 |`subclassName`|必須。 サブクラスの CLR 名を指定します。|  
   
 ## <a name="dependencies"></a>依存関係  
@@ -57,5 +57,6 @@ XAML マークアップのコンパイルの動作を変更するときに`x:Cla
  両方を定義するときに`x:Class`と`x:Subclass`、によって参照されるクラスのすべての実装を提供する必要はありません`x:Class`します。 のみを使用して、名前を指定する必要があります、`x:Class`属性、コンパイラに中間ファイル (コンパイラはオンに既定の名前をここで) で作成したクラスのガイダンスがあります。 与えることができます、`x:Class`クラスの実装。 ただし、これは、典型的なシナリオの両方を使用して`x:Class`と`x:Subclass`します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [x:Class ディレクティブ](x-class-directive.md)
 - [WPF における XAML とカスタム クラス](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - scrolling content [WPF]
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
-ms.openlocfilehash: 145c58064b8557f9cb4730ec9272c354c7aa9c1b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098547"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>方法: IScrollInfo インターフェイスを使用してコンテンツをスクロールする
 この例を使用してコンテンツをスクロール、<xref:System.Windows.Controls.Primitives.IScrollInfo>インターフェイス。  
@@ -30,9 +30,10 @@ ms.locfileid: "57378979"
  [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - <xref:System.Windows.Controls.StackPanel>
 - [ScrollViewer の概要](scrollviewer-overview.md)
-- [方法トピック](scrollviewer-how-to-topics.md)
+- [方法のトピック](scrollviewer-how-to-topics.md)
 - [パネルの概要](panels-overview.md)

@@ -2,12 +2,12 @@
 title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322603"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティは、取得、情報を変更または使用するデータベースへのアクセスを許可する[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|実行する <xref:System.Data.Common.DbCommand> の種類。|
 |Sql|実行する SQL コマンド。|
 |パラメーター|SQL クエリのパラメーターのコレクション。|
-|結果|クエリの実行後に取得された <xref:System.Data.DataSet>。|
+|結果|<xref:System.Data.DataSet> クエリの実行後に取得しました。|
 
 ## <a name="configuring-connection-information"></a>接続情報の構成
  すべての DbActivities は同じ構成パラメーターを共有します。 パラメーターを構成するには次の 2 つの方法があります。
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd を実行するには
 
-1.  コマンド プロンプトを開きます。
+1. コマンド プロンプトを開きます。
 
-2.  DbActivities サンプル フォルダーに移動します。
+2. DbActivities サンプル フォルダーに移動します。
 
-3.  "Setup.cmd"を入力し、ENTER キーを押します。
+3. "Setup.cmd"を入力し、ENTER キーを押します。
 
     > [!NOTE]
     >  Setup.cmd は、ローカル コンピューターの SqlExpress インスタンスにサンプルをインストールしようとします。 他の SQL Server インスタンスにインストールする場合は、その新しいインスタンス名を使用して Setup.cmd を編集します。
 
 ##### <a name="to-uninstall-the-sample-database"></a>サンプル データベースをアンインストールするには
 
-1.  コマンド プロンプトで、サンプル フォルダーから Cleanup.cmd を実行します。
+1. コマンド プロンプトで、サンプル フォルダーから Cleanup.cmd を実行します。
 
 ##### <a name="to-run-the-sample"></a>サンプルを実行するには
 
-1.  Visual Studio 2010 でソリューションを開きます
+1. Visual Studio 2010 でソリューションを開きます
 
-2.  ソリューションをコンパイルするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. ソリューションをコンパイルするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-3.  Ctrl キーを押しながら F5 キーを押して、サンプルをデバッグなしで実行します。
+3. Ctrl キーを押しながら F5 キーを押して、サンプルをデバッグなしで実行します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

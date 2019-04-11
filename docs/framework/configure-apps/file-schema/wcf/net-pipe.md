@@ -1,13 +1,13 @@
 ---
-title: < net.pipe >
+title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 90d081c1287362669286aaa1185ed3b0bbe09b07
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103399"
 ---
 # <a name="netpipe"></a>\<net.pipe>
 名前付きパイプ接続の有効期間を管理し、名前付きパイプを介して到着するアクティベーション要求を処理する名前付きパイプ アクティベーション サービスの構成設定を指定します。  
@@ -64,7 +64,8 @@ ms.locfileid: "58412111"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
+|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection>

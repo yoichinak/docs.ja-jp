@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137350"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 構造体
 オーバーフローによりスローされた例外でオーバーフローが発生しましたが、情報の種類を格納します。  
@@ -52,7 +52,8 @@ typedef struct _StackOverflowInfo {
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

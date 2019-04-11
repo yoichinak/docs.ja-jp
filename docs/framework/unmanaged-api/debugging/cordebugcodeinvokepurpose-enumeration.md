@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4eeecc3b1c248f4f0bf4372801f6bc71a22f260
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155572"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 列挙体
 エクスポートされた関数がマネージド コードを呼び出す理由を示します。  
@@ -40,14 +40,14 @@ typedef enum CorDebugCodeInvokePurpose
 |------------|-----------------|  
 |`CODE_INVOKE_PURPOSE_NONE`|None または不明です。|  
 |`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|マネージド コードは、逆 p-invoke などのすべてのマネージド エントリ ポイントを実行します。 より詳細な目的は、ランタイムによって認識されません。|  
-|`CODE_INVOKE_PURPOSE_CLASS_INIT`|マネージ コードは、静的コンストラクターを実行します。|  
+|`CODE_INVOKE_PURPOSE_CLASS_INIT`|マネージド コードは、静的コンストラクターを実行します。|  
 |`CODE_INVOKE_PURPOSE_INTERFACE_DISPATCH`|マネージド コードは、呼び出されたいくつかのインターフェイス メソッドの実装を実行します。|  
   
 ## <a name="remarks"></a>Remarks  
  この列挙体を使って、 [icordebugprocess 6::getexportstepinfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md)マネージ コードをステップ実行に関する情報を提供するメソッド。  
   
 > [!NOTE]
->  この列挙体は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
+>  この列挙型は .NET ネイティブのデバッグ シナリオのみで使用することを目的としています。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
@@ -56,8 +56,9 @@ typedef enum CorDebugCodeInvokePurpose
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [列挙体のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

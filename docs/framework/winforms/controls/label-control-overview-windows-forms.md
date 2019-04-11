@@ -8,12 +8,12 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-ms.openlocfilehash: 13dcd6c63c30a5726a959c33f75c0c54e2810ef4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210092"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.Label>テキストまたはユーザーが編集できないイメージを表示するコントロールを使用します。 フォーム上のオブジェクトの識別に使用されます — 特定コントロールの説明をクリックした場合などを提供する、または実行時イベントまたはアプリケーションのプロセスへの応答の情報を表示します。 たとえば、ラベルを使用して、テキスト ボックス、リスト ボックス、コンボ ボックス、および具合にわかりやすいキャプションを追加することができます。 実行時に、イベントへの応答では、ラベルによって表示されるテキストを変更するコードを記述することもできます。 たとえば、アプリケーションでは、変更を処理するまでに数分かかる、ラベル内で処理ステータス メッセージを表示できます。  
@@ -24,6 +24,7 @@ Windows フォーム<xref:System.Windows.Forms.Label>テキストまたはユー
  ラベルに表示するキャプションが含まれている、<xref:System.Windows.Forms.Label.Text%2A>プロパティ。 <xref:System.Windows.Forms.Label.TextAlign%2A>プロパティでは、ラベル内のテキストの配置を設定することができます。 詳細については、「[方法 :によって表示されるテキストを設定、Windows フォーム コントロール](how-to-set-the-text-displayed-by-a-windows-forms-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Label>
-- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [方法: Windows フォームの Label コントロールでのアクセス キーを作成します。](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)

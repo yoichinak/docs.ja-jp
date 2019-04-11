@@ -2,12 +2,12 @@
 title: メタデータを使用する場合のセキュリティ上の考慮事項
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172966"
 ---
 # <a name="security-considerations-with-metadata"></a>メタデータを使用する場合のセキュリティ上の考慮事項
 Windows Communication Foundation (WCF) をメタデータ機能を使用する場合は、公開、取得、およびサービスのメタデータを使用してのセキュリティの影響を検討してください。  
@@ -26,19 +26,19 @@ Windows Communication Foundation (WCF) をメタデータ機能を使用する�
  サービス メタデータを取得する際、セキュリティ保護された方法を使わないと、改ざんやなりすましのおそれがあります。 メタデータが改ざんされると、知らない間に悪質なサービスに接続されたり、セキュリティ上問題のある設定に切り替えられたり、XML 構造が破壊されたりすることがあります。 メタデータ ドキュメントはかなりの容量になることがあるので、多くの場合、ファイル システムに保存することになります。 改ざんやなりすましを防ぐために、サービス メタデータを要求するときには、できるだけセキュリティで保護されたバインディングを使用してください。  
   
 ## <a name="using-safe-techniques-for-processing-metadata"></a>安全な技術を使ってメタデータを処理  
- サービス メタデータは多くの場合、MEX (WS-Metadata Exchange) などの標準的なプロトコルを使用して、ネットワーク経由で伝送されます。 メタデータの形式を見ると、多くの場合、他のメタデータを参照する旨の記述ができるようになっています。 
-  <xref:System.ServiceModel.Description.MetadataExchangeClient> 型は、Web サービス記述言語 (WSDL) ドキュメント、XML スキーマ、および MEX ドキュメント内の参照を自動的に処理します。 取得したメタデータから生成される <xref:System.ServiceModel.Description.MetadataSet> オブジェクトのサイズは、使用されている <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> インスタンスの <xref:System.ServiceModel.Description.MetadataExchangeClient> の値と、この `MaxReceivedMessageSize` インスタンスが使用するバインディングの <xref:System.ServiceModel.Description.MetadataExchangeClient> の値に比例します。 動作環境に合わせてこのクォータ値を適切に設定してください。  
+ サービス メタデータは多くの場合、MEX (WS-Metadata Exchange) などの標準的なプロトコルを使用して、ネットワーク経由で伝送されます。 メタデータの形式を見ると、多くの場合、他のメタデータを参照する旨の記述ができるようになっています。 <xref:System.ServiceModel.Description.MetadataExchangeClient> 型は、Web サービス記述言語 (WSDL) ドキュメント、XML スキーマ、および MEX ドキュメント内の参照を自動的に処理します。 取得したメタデータから生成される <xref:System.ServiceModel.Description.MetadataSet> オブジェクトのサイズは、使用されている <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> インスタンスの <xref:System.ServiceModel.Description.MetadataExchangeClient> の値と、この `MaxReceivedMessageSize` インスタンスが使用するバインディングの <xref:System.ServiceModel.Description.MetadataExchangeClient> の値に比例します。 動作環境に合わせてこのクォータ値を適切に設定してください。  
   
  WCF では、サービス メタデータは、XML として処理されます。 XML ドキュメントを処理するアプリケーションは、悪質な XML 構造が現れても破綻しないようになっていなければなりません。 使用して、<xref:System.Xml.XmlDictionaryReader>でクォータを適切な XML を処理するときに、設定も、<xref:System.Xml.XmlTextReader.DtdProcessing%2A>プロパティを<xref:System.Xml.DtdProcessing.Prohibit>します。  
   
  WCF では、メタデータ システムは拡張とメタデータの拡張機能は、アプリケーション構成ファイルに登録することができます (を参照してください[メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md))。 メタデータ拡張はどのようなコードでも実行できるので、適切なアクセス制御リスト (ACL) でアプリケーション構成ファイルを保護し、信頼できるメタデータ拡張以外は登録しないようにする必要があります。  
   
 ## <a name="validating-generated-clients"></a>生成されたクライアントの検証  
- 信頼できないソースから取得したメタデータを基にクライアント コードを生成した場合、これがクライアント アプリケーションのセキュリティ ポリシーに合致しているかどうか検証する必要があります。 動作を検証するための専用クライアントを使うか、あるいはツールが生成したコードを目視で検査してください。 クライアントの動作の検証を実装する方法の例は、[クライアント検証](../../../../docs/framework/wcf/samples/client-validation.md)を参照してください。  
+ 信頼できないソースから取得したメタデータを基にクライアント コードを生成した場合、これがクライアント アプリケーションのセキュリティ ポリシーに合致しているかどうか検証する必要があります。 動作を検証するための専用クライアントを使うか、あるいはツールが生成したコードを目視で検査してください。 クライアントの動作の検証を実装する方法の例は、次を参照してください。[クライアント検証](../../../../docs/framework/wcf/samples/client-validation.md)です。  
   
 ## <a name="protecting-application-configuration-files"></a>アプリケーション構成ファイルの保護  
  サービスのアプリケーション構成ファイルでは、メタデータを公開する方法、および公開の有無を制御できます。 攻撃者が設定を変更できないように、適切なアクセス制御リスト (ACL) でアプリケーション構成ファイルを保護することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: メタデータ エンドポイントをセキュリティで保護します。](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [方法: セキュリティで保護されたメタデータ エンドポイント](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)

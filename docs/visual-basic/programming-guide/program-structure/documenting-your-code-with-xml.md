@@ -14,7 +14,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58831580"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML の使用によるコードのドキュメントの作成 (Visual Basic)
-Visual basic で XML を使用してコードを文書化します。  
+Visual Basic で XML を使用してコードを文書化します。  
   
 ## <a name="xml-documentation-comments"></a>XML ドキュメントのコメント  
  Visual Basic では、プロジェクトの XML ドキュメントを自動的に作成する簡単な方法を提供します。 型とメンバーの XML スケルトンが自動的に生成し、パラメーターごとに、その他の注釈の概要、説明的なドキュメントを提供できます。 適切なセットアップで、プロジェクトと .xml 拡張子と同じ名前を持つ XML ファイルに XML ドキュメントは自動的に生成されます。 詳細については、「[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)」を参照してください。  

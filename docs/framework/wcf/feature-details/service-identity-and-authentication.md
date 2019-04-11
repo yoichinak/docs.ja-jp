@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145627"
 ---
 # <a name="service-identity-and-authentication"></a>サービス ID と認証
 サービスの*エンドポイント id*は、サービスの Web サービス記述言語 (WSDL) から生成された値です。 この値は、すべてのクライアントに反映され、サービスの認証に使用されます。 クライアントがエンドポイントとの通信を開始し、サービスがクライアントに対して認証を行った後に、クライアントは、エンドポイント ID 値とエンドポイントの認証プロセスから返された実際の値を比較します。 この 2 つの値が一致した場合、クライアントは要求したサービス エンドポイントに接続していることを確認できます。 これは、関数に対する保護として*フィッシング*クライアントが悪意のあるサービスによってホストされるエンドポイントにリダイレクトされるようにすることで。  
   
- Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 エンドポイントとエンドポイント アドレスの詳細については、[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)を参照してください。  
+ Id の設定を示すサンプル アプリケーションを参照してください。[サービス Id サンプル](../../../../docs/framework/wcf/samples/service-identity-sample.md)します。 エンドポイントとエンドポイント アドレスの詳細については、次を参照してください。[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)します。  
   
 > [!NOTE]
 >  認証に NTLM (NT LanMan) を使用する場合、NTLM ではクライアントがサーバーを認証できないため、サービス ID はチェックされません。 NTLM はコンピューターが Windows ワークグループの一部である場合、または Kerberos 認証をサポートしていない古いバージョンの Windows が実行されている場合に使用されます。  
@@ -50,17 +50,13 @@ ms.locfileid: "57212522"
 |サービス プリンシパル名 (SPN)。 `ClientCredentialType` が Windows に設定されており、サービス プロセスがシステム アカウント (LocalService、LocalSystem、または NetworkService) のいずれかで実行されている場合の既定値です。|この要素は、サービスのアカウントに関連付けられている SPN を指定します。 Kerberos プロトコルと Id のセクションを参照してください。 [Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)します。|これにより、SPN と SPN に関連付けられた特定の Windows アカウントによってサービスが識別されます。<br /><br /> Setspn.exe ツールを使用すると、サービスのユーザー アカウントに対してコンピューター アカウントを関連付けることができます。<br /><br /> サービスがシステム アカウントのいずれか、または SPN 名に関連付けられたドメイン アカウントで実行されており、コンピューターが Active Directory 環境のドメインのメンバーである場合、この設定では Windows Kerberos セキュリティを利用します。|  
   
 ## <a name="specifying-identity-at-the-service"></a>サービスでの ID の指定  
- クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 オーバーライドまたはサービス id を指定する方法の詳細については、[Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)を参照してください。  
+ クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 オーバーライドまたはサービス id を指定する方法の詳細については、次を参照してください。 [Id 認証サービスのオーバーライド](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)します。  
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用して、 \<identity > 構成要素  
  上記の例で示したバインディングのクライアント資格情報の種類を `Certificate,` に変更すると、次のコードに示すように、生成される WSDL には、Base64 でシリアル化された、ID 値用の X.509 証明書が含まれます。 これは、Windows 以外のすべてのクライアント資格情報の種類の既定値です。  
-  
-  
-  
+
  既定のサービス id の値を変更またはを使用して、id の種類を変更することができます、`<identity>`要素の構成またはコードで id を設定します。 値 `contoso.com` を使用してドメイン ネーム システム (DNS) ID を設定する構成コードを次に示します。  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>プログラムによる ID の設定  
  WCF が自動的に決定されるため、サービスは、id を明示的に指定がありません。 ただし、WCF は、必要な場合、エンドポイントで id を指定することです。 特定の DNS ID を持つ新しいサービス エンドポイントを追加するコードを次に示します。  
   
@@ -69,16 +65,12 @@ ms.locfileid: "57212522"
   
 ## <a name="specifying-identity-at-the-client"></a>クライアントでの ID の指定  
  クライアント開発者の通常の使用、デザイン時に、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアント構成を生成します。 生成された構成ファイル (クライアントが使用するもの) には、サービスの ID が含まれます。 たとえば、次のコードは、前の例で示した DNS ID を指定するサービスから生成されたものです。 クライアントのエンドポイント ID 値が、サービスのエンドポイント ID 値と一致していることに注意してください。 この場合、クライアントは、サービスの Windows (Kerberos) 資格情報を受け取るときに、この値が `contoso.com` であることを要求します。  
-  
-  
-  
+
  サービスでクライアント資格情報の種類として Windows ではなく証明書を指定した場合は、証明書の DNS プロパティの値が `contoso.com` であることが要求されます  (DNS プロパティが `null` の場合は、証明書のサブジェクト名が `contoso.com` である必要があります)。  
   
 #### <a name="using-a-specific-value-for-identity"></a>ID の特定の値の使用  
  次のクライアント構成ファイルは、サービスの ID に特定の値を要求する方法を示しています。 次の例では、クライアントは 2 つのエンドポイントと通信できます。 1 つ目のエンドポイントは証明書の拇印で識別され、もう 1 つは証明書の RSA キーで識別されます。 つまり、公開キーと秘密キーのペアだけが含まれた証明書ですが、この証明書は信頼された証明機関によって発行されたものではありません。  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>実行時の ID 検査  
  デザイン時には、クライアント開発者はサービスのメタデータで ID を確認します。 実行時には、サービスのエンドポイントを呼び出す前に ID 検査が実行されます。  
   
@@ -113,11 +105,12 @@ ms.locfileid: "57212522"
  バインドをスタックする方法の詳細について要素正しく、カスタム バインディングを参照してください[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)します。 カスタム バインディングの作成の詳細については、<xref:System.ServiceModel.Channels.SecurityBindingElement>を参照してください[方法。指定した認証モード用の SecurityBindingElement を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)です。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [方法: 指定した認証モード用の SecurityBindingElement を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [方法: カスタムのクライアント Id 検証機能を作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [方法: 指定した認証モード用の SecurityBindingElement を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [方法: カスタム クライアント ID 検証機能を作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [資格情報の種類の選択](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [ユーザー定義バインディングの作成](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [方法: 証明書のサムプリントを取得します。](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [方法: 証明書のサムプリントを取得する](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

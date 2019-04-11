@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324319"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) のスコープを制御します。
 変数が、通常、*スコープ*、または宣言をリージョン全体での参照を表示します。 場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。  
@@ -43,19 +43,19 @@ ms.locfileid: "58818724"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>変数をモジュール、クラスまたは構造体全体にわたって表示されるようにするには  
   
-1.  場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
   
-2.  含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
+2. 含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
   
-3.  なく、モジュール、クラス、または構造内で任意の場所から変数を参照できる外です。  
+3. なく、モジュール、クラス、または構造内で任意の場所から変数を参照できる外です。  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>変数を名前空間全体で表示されるようにするには  
   
-1.  場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
   
-2.  含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)または[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
+2. 含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)または[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
   
-3.  任意の場所から変数を参照できるモジュール、クラスまたは構造体を含む名前空間内で。  
+3. 任意の場所から変数を参照できるモジュール、クラスまたは構造体を含む名前空間内で。  
   
 ## <a name="example"></a>例  
  次の例では、モジュール レベル変数を宣言し、モジュール内のコードをその可視性を制限します。  
@@ -89,7 +89,7 @@ Public strMsg As String
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic における有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

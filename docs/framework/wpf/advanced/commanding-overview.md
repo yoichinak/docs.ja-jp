@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: 1e756aa633ddf87267baa1fc52343a0b7570f753
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139036"
 ---
 # <a name="commanding-overview"></a>コマンド実行の概要
 <a name="introduction"></a> コマンド実行は [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の入力メカニズムであり、デバイス入力よりいっそうセマンティックなレベルでの入力処理を提供します。 コマンドの例は、多くのアプリケーションで見られる**コピー**、**切り取り**、**貼り付け**などの操作です。  
@@ -72,13 +72,13 @@ ms.locfileid: "57379082"
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>コマンド  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコマンドは、<xref:System.Windows.Input.ICommand> インターフェイスを実装することで作成されます。  <xref:System.Windows.Input.ICommand> では、2 つのメソッド (<xref:System.Windows.Input.ICommand.Execute%2A> と <xref:System.Windows.Input.ICommand.CanExecute%2A>)、およびイベント (<xref:System.Windows.Input.ICommand.CanExecuteChanged>) を公開します。 <xref:System.Windows.Input.ICommand.Execute%2A> では、コマンドに関連付けられているアクションを実行します。 <xref:System.Windows.Input.ICommand.CanExecute%2A> では、現在のコマンド ターゲットでコマンドを実行できるかどうかを判断します。 コマンド実行操作を集中管理するコマンド マネージャーが、既に発生しているがコマンド バインドによってまだ実行されていないコマンドを無効にする可能性のある変更をコマンド ソースで検出した場合、<xref:System.Windows.Input.ICommand.CanExecuteChanged> が発生します。  <xref:System.Windows.Input.ICommand> での [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の実装は <xref:System.Windows.Input.RoutedCommand> クラスであり、この概要の焦点になります。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコマンドは、<xref:System.Windows.Input.ICommand> インターフェイスを実装することで作成されます。  <xref:System.Windows.Input.ICommand> 2 つのメソッドを公開する<xref:System.Windows.Input.ICommand.Execute%2A>と<xref:System.Windows.Input.ICommand.CanExecute%2A>、およびイベント、<xref:System.Windows.Input.ICommand.CanExecuteChanged>します。 <xref:System.Windows.Input.ICommand.Execute%2A> コマンドに関連付けられているアクションを実行します。 <xref:System.Windows.Input.ICommand.CanExecute%2A> 現在のコマンド ターゲットでコマンドを実行できるかどうかを判断します。 <xref:System.Windows.Input.ICommand.CanExecuteChanged> コマンド実行の操作を一元管理するコマンド マネージャーが発生しているがコマンド バインディングによって実行されていないコマンドが無効になるコマンド ソースで変更が検出される場合に発生します。  <xref:System.Windows.Input.ICommand> での [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の実装は <xref:System.Windows.Input.RoutedCommand> クラスであり、この概要の焦点になります。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での主な入力ソースは、マウス、キーボード、インク、およびルーティング コマンドです。  デバイス指向性の高い入力では、<xref:System.Windows.RoutedEvent> を使って、入力イベントが発生したことをアプリケーション ページのオブジェクトに通知します。  <xref:System.Windows.Input.RoutedCommand> も同様です。  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.Execute%2A> メソッドと <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドにはコマンドのアプリケーション ロジックは含まれませんが、これらのメソッドが発生させたルーティング イベントは、<xref:System.Windows.Input.CommandBinding> を含むオブジェクトに遭遇するまで、要素ツリー内をトンネリングおよびバブリングします。  <xref:System.Windows.Input.CommandBinding> にはこれらのイベント用のハンドラーが含まれ、そのハンドラーがコマンドを実行します。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのルーティング イベントについて詳しくは、「[ルーティング イベントの概要](routed-events-overview.md)」をご覧ください。  
   
  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.Execute%2A> メソッドは、コマンド ターゲットで <xref:System.Windows.Input.CommandManager.PreviewExecuted> イベントと <xref:System.Windows.Input.CommandManager.Executed> イベントを発生させます。  <xref:System.Windows.Input.RoutedCommand> の <xref:System.Windows.Input.RoutedCommand.CanExecute%2A> メソッドは、コマンド ターゲットで <xref:System.Windows.Input.CommandManager.CanExecute> イベントと <xref:System.Windows.Input.CommandManager.PreviewCanExecute> イベントを発生させます。  これらのイベントは、その特定のコマンドの <xref:System.Windows.Input.CommandBinding> を持つオブジェクトに遭遇するまで、要素ツリー内をトンネリングおよびバブリングします。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Documents.EditingCommands> などの複数のクラスにわたる共通のルーティング コマンドのセットが提供されます。  これらのクラスは <xref:System.Windows.Input.RoutedCommand> オブジェクトのみで構成され、コマンドの実装ロジックは含みません。  実装ロジックは、コマンドが実行されるオブジェクトに存在します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 一般的なルーティング コマンドのセットをいくつかのクラスに分散装置: <xref:System.Windows.Input.MediaCommands>、 <xref:System.Windows.Input.ApplicationCommands>、 <xref:System.Windows.Input.NavigationCommands>、 <xref:System.Windows.Input.ComponentCommands>、および<xref:System.Windows.Documents.EditingCommands>します。  これらのクラスは <xref:System.Windows.Input.RoutedCommand> オブジェクトのみで構成され、コマンドの実装ロジックは含みません。  実装ロジックは、コマンドが実行されるオブジェクトに存在します。  
   
 <a name="Command_Sources"></a>   
 ### <a name="command-sources"></a>コマンド ソース  
@@ -86,15 +86,15 @@ ms.locfileid: "57379082"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコマンド ソースでは、通常、<xref:System.Windows.Input.ICommandSource> インターフェイスを実装します。  
   
- <xref:System.Windows.Input.ICommandSource> では、<xref:System.Windows.Input.ICommandSource.Command%2A>、<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>、<xref:System.Windows.Input.ICommandSource.CommandParameter%2A> という 3 つのプロパティを公開します。  
+ <xref:System.Windows.Input.ICommandSource> 次の 3 つのプロパティを公開します: <xref:System.Windows.Input.ICommandSource.Command%2A>、 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>、および<xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A> は、コマンド ソースが呼び出されたときに実行されるコマンドです。  
+-   <xref:System.Windows.Input.ICommandSource.Command%2A> コマンド ソースが呼び出されたときに実行するコマンドです。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> は、コマンドを実行するオブジェクトです。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、<xref:System.Windows.Input.ICommandSource> の <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> プロパティは、<xref:System.Windows.Input.ICommand> が <xref:System.Windows.Input.RoutedCommand> である場合にのみ適用可能であることに注意してください。  <xref:System.Windows.Input.ICommandSource> で <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> が設定されていて、対応するコマンドが <xref:System.Windows.Input.RoutedCommand> ではない場合、コマンド ターゲットは無視されます。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> が設定されていない場合は、キーボード フォーカスを持つ要素がコマンド ターゲットになります。  
+-   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> コマンドを実行するオブジェクトです。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、<xref:System.Windows.Input.ICommandSource> の <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> プロパティは、<xref:System.Windows.Input.ICommand> が <xref:System.Windows.Input.RoutedCommand> である場合にのみ適用可能であることに注意してください。  <xref:System.Windows.Input.ICommandSource> で <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> が設定されていて、対応するコマンドが <xref:System.Windows.Input.RoutedCommand> ではない場合、コマンド ターゲットは無視されます。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> が設定されていない場合は、キーボード フォーカスを持つ要素がコマンド ターゲットになります。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> は、コマンドを実装しているハンドラーに情報を渡すために使われるユーザー定義データ型です。  
+-   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> コマンドを実装するユーザー定義データ型が、ハンドラーに情報を渡すために使用します。  
   
- <xref:System.Windows.Input.ICommandSource> を実装する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスは、<xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Input.InputBinding> です。  <xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink> は、クリックされたときにコマンドを呼び出します。<xref:System.Windows.Input.InputBinding> は、関連付けられている <xref:System.Windows.Input.InputGesture> が実行されたときにコマンドを呼び出します。  
+ <xref:System.Windows.Input.ICommandSource> を実装する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスは、<xref:System.Windows.Controls.Primitives.ButtonBase>、<xref:System.Windows.Controls.MenuItem>、<xref:System.Windows.Documents.Hyperlink>、<xref:System.Windows.Input.InputBinding> です。  <xref:System.Windows.Controls.Primitives.ButtonBase>、 <xref:System.Windows.Controls.MenuItem>、と<xref:System.Windows.Documents.Hyperlink>がクリックされたときに、コマンドを呼び出す<xref:System.Windows.Input.InputBinding>コマンドを呼び出すときに、<xref:System.Windows.Input.InputGesture>関連付けられているで実行されます。  
   
  次の例では、<xref:System.Windows.Input.ApplicationCommands.Properties%2A> コマンドのコマンド ソースとして、<xref:System.Windows.Controls.ContextMenu> で <xref:System.Windows.Controls.MenuItem> を使用する方法を示します。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "57379082"
   
  <xref:System.Windows.Input.CommandBinding> クラスには、<xref:System.Windows.Input.CommandBinding.Command%2A> プロパティと、<xref:System.Windows.Input.CommandBinding.PreviewExecuted>、<xref:System.Windows.Input.CommandBinding.Executed>、<xref:System.Windows.Input.CommandBinding.PreviewCanExecute>、<xref:System.Windows.Input.CommandBinding.CanExecute> イベントが含まれます。  
   
- <xref:System.Windows.Input.CommandBinding.Command%2A> は、<xref:System.Windows.Input.CommandBinding> が関連付けられているコマンドです。  <xref:System.Windows.Input.CommandBinding.PreviewExecuted> および <xref:System.Windows.Input.CommandBinding.Executed> イベントに関連付けられているイベント ハンドラーは、コマンド ロジックを実装します。  <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> および <xref:System.Windows.Input.CommandBinding.CanExecute> イベントに関連付けられているイベント ハンドラーは、現在のコマンド ターゲットでコマンドを実行できるかどうかを判断します。  
+ <xref:System.Windows.Input.CommandBinding.Command%2A> コマンドを<xref:System.Windows.Input.CommandBinding>が関連付けられています。  <xref:System.Windows.Input.CommandBinding.PreviewExecuted> および <xref:System.Windows.Input.CommandBinding.Executed> イベントに関連付けられているイベント ハンドラーは、コマンド ロジックを実装します。  <xref:System.Windows.Input.CommandBinding.PreviewCanExecute> および <xref:System.Windows.Input.CommandBinding.CanExecute> イベントに関連付けられているイベント ハンドラーは、現在のコマンド ターゲットでコマンドを実行できるかどうかを判断します。  
   
  アプリケーションのルート <xref:System.Windows.Window> で <xref:System.Windows.Input.CommandBinding> を作成する方法の例を以下に示します。  <xref:System.Windows.Input.CommandBinding> は、<xref:System.Windows.Input.ApplicationCommands.Open%2A> コマンドと、<xref:System.Windows.Input.CommandManager.Executed> および <xref:System.Windows.Input.CommandBinding.CanExecute> ハンドラーを関連付けます。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "57379082"
   
 <a name="Command_Library"></a>   
 ## <a name="command-library"></a>コマンド ライブラリ  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、定義済みのコマンドのセットが用意されています。  コマンド ライブラリは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands>、<xref:System.Windows.Input.ComponentCommands> というクラスで構成されています。  これらのクラスでは、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> と <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A>、<xref:System.Windows.Input.MediaCommands.Pause%2A> などのコマンドが提供されます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義済みのコマンドのセットを提供します。  コマンド ライブラリは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands>、<xref:System.Windows.Input.ComponentCommands> というクラスで構成されています。  これらのクラスでは、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> と <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A>、<xref:System.Windows.Input.MediaCommands.Pause%2A> などのコマンドが提供されます。  
   
  これらのコマンドの多くには、既定の入力バインディングのセットが含まれます。  たとえば、アプリケーションがコピー コマンドを処理することを指定すると、キーボード バインディング "Ctrl + C" が自動的に有効になります。また、[!INCLUDE[TLA2#tla_tpc](../../../../includes/tla2sharptla-tpc-md.md)] のペン ジェスチャや音声情報などの他の入力デバイスに対するバインディングも有効になります。  
   
@@ -184,6 +184,7 @@ ms.locfileid: "57379082"
  カスタムの <xref:System.Windows.Input.RoutedCommand> を作成する例については、「[Create a Custom RoutedCommand Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)」 (カスタム RoutedCommand の作成のサンプル) を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Input.RoutedCommand>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
@@ -192,4 +193,4 @@ ms.locfileid: "57379082"
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [ICommandSource を実装する](how-to-implement-icommandsource.md)
 - [方法: コマンド メニュー アイテムを追加します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
-- [カスタム RoutedCommand の作成のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+- [カスタム RoutedCommand のサンプルを作成します。](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -9,17 +9,16 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: 8180064d1a500ea17568f6790e13398524eb5f36
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146498"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML 構文
 などのいくつかのコントロール<xref:System.Windows.Controls.Calendar>と<xref:System.Windows.Controls.DatePicker>を使用したプロパティ、<xref:System.DateTime>型。 これらのコントロールに対する日付または時刻の初期値は、分離コードで実行時に指定するのが一般的です。ただし、日付または時刻の初期値を XAML で指定することもできます。 WPF XAML パーサーの処理の解析<xref:System.DateTime>組み込み XAML テキスト構文を使用して値します。 このトピックの詳細を記述する、 <xref:System.DateTime> XAML テキスト構文。  
-  
-  
+
 <a name="where_datetime_xaml_syntax_is_used"></a>   
 ## <a name="when-to-use-datetime-xaml-syntax"></a>DateTime XAML 構文が使用される状況  
  日付は必ずしも XAML で設定する必要はありません。また、XAML で設定することが適切とは言えない場合もあります。 たとえば、使用する、<xref:System.DateTime.Now%2A?displayProperty=nameWithType>プロパティで、実行時の日付を初期化するためには、ユーザー入力に基づいて、コード分離の予定表の日付のすべての調整を行うことができます。 ただし、シナリオにハードコードされた日付にすることがありますがある、<xref:System.Windows.Controls.Calendar>と<xref:System.Windows.Controls.DatePicker>コントロール テンプレートにします。 <xref:System.DateTime> XAML 構文は、これらのシナリオのために使用する必要があります。  
@@ -75,4 +74,5 @@ ms.locfileid: "57365686"
  以前は、説明したように、 <xref:System.DateTime> XAML では、許容される任意の文字列として指定できますの入力として<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>します。 その他の形式化された形式が含まれます (たとえば<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>)、および特定として形式化されていない形式<xref:System.Globalization.DateTimeFormatInfo>フォーム。 たとえば、フォーム`YYYY/mm/dd`が許容される入力として<xref:System.DateTime.Parse%2A?displayProperty=nameWithType>します。 このトピックでは、使用可能な形式の一部を説明します。標準的な使用手順としては、短い形式の日付パターンをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)

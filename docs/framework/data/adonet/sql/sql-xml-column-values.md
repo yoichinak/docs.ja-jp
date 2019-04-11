@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 1cd6962a02a50ecd9f9b634148eeb38ad0a45e05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149709"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列値
 SQL Server では、`xml`データ型の場合は、開発者が標準の動作を使用してこの型を含む結果セットを取得し、<xref:System.Data.SqlClient.SqlCommand>クラス。 `xml` 列は、その他の列と同じようにして (<xref:System.Data.SqlClient.SqlDataReader> などに) 取得することができますが、その列の内容を XML として使用する場合は、<xref:System.Xml.XmlReader> を使用する必要があります。  
@@ -25,6 +25,7 @@ SQL Server では、`xml`データ型の場合は、開発者が標準の動作�
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server における XML データ](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

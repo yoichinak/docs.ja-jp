@@ -1,19 +1,19 @@
 ---
-title: <serviceCertificate> の <serviceCredentials>
+title: <serviceCertificate> (行中)  <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173564"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate > の\<serviceCredentials >
 メッセージ セキュリティ モードを使用しているクライアントへのサービスの認証に使用する X.509 証明書を指定します。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<<behaviors>  
 \<serviceBehaviors>  
 \<behavior>  
 \<serviceCredentials>  
@@ -55,9 +55,10 @@ ms.locfileid: "57373804"
  詳細については、要素を使用して、次を参照してください。[方法。クライアント資格情報の値を指定](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [方法: クライアント資格情報の値を指定します。](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [方法: クライアントの資格情報の値を指定する](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

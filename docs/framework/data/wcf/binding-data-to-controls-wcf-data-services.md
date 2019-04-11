@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226665"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>コントロールへのデータのバインド (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、`ComboBox` や `ListView` などのコントロールを <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスにバインドすることができます。 このコレクションは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスから継承され、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードのデータが含まれます。 このクラスは、項目が追加または削除されたときに通知を行う動的なデータ コレクションを表します。 インスタンスを使用すると<xref:System.Data.Services.Client.DataServiceCollection%601>、データ バインディングの[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリによって追跡されるオブジェクトにこれらのイベントを処理する、<xref:System.Data.Services.Client.DataServiceContext>バインドされている UI 要素のデータの同期を維持します。  
@@ -25,7 +25,7 @@ ms.locfileid: "54538532"
 >  使用すると、**サービス参照の追加**ダイアログまたは[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)ツールを`/dataservicecollection`クライアント データ サービス クラスを生成するオプションは、生成されたデータ クラスの実装、 <xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 詳細については、「[方法 :クライアント データ サービス クラスを手動で生成](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)します。  
   
 ## <a name="creating-the-binding-collection"></a>バインディング コレクションの作成  
- 指定した <xref:System.Data.Services.Client.DataServiceCollection%601> インスタンスでクラス コンストラクター メソッドの 1 つを呼び出し、オプションで <xref:System.Data.Services.Client.DataServiceContext> または実行時に <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスを返す LINQ クエリを呼び出して <xref:System.Collections.Generic.IEnumerable%601> クラスの新しいインスタンスを作成します。 これは、<xref:System.Collections.Generic.IEnumerable%601>から具体化されるバインディング コレクションのオブジェクトのソースを提供する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。 詳細については、[オブジェクトの具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)を参照してください。 既定では、バインドされたオブジェクトおよびコレクションに挿入された項目に対する変更は、<xref:System.Data.Services.Client.DataServiceContext> によって自動的に追跡されます。 手動でこれらの変更を追跡する必要がある場合を受け取るコンス トラクター メソッドの 1 つを呼び出して、`trackingMode`パラメーターの値を指定して<xref:System.Data.Services.Client.TrackingMode.None>します。  
+ 指定した <xref:System.Data.Services.Client.DataServiceCollection%601> インスタンスでクラス コンストラクター メソッドの 1 つを呼び出し、オプションで <xref:System.Data.Services.Client.DataServiceContext> または実行時に <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスを返す LINQ クエリを呼び出して <xref:System.Collections.Generic.IEnumerable%601> クラスの新しいインスタンスを作成します。 これは、<xref:System.Collections.Generic.IEnumerable%601>から具体化されるバインディング コレクションのオブジェクトのソースを提供する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。 詳細については、次を参照してください。[オブジェクトの具体化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)します。 既定では、バインドされたオブジェクトおよびコレクションに挿入された項目に対する変更は、<xref:System.Data.Services.Client.DataServiceContext> によって自動的に追跡されます。 手動でこれらの変更を追跡する必要がある場合を受け取るコンス トラクター メソッドの 1 つを呼び出して、`trackingMode`パラメーターの値を指定して<xref:System.Data.Services.Client.TrackingMode.None>します。  
   
  次の例は、指定された <xref:System.Data.Services.Client.DataServiceCollection%601> と、すべての顧客と関連する注文を返す <xref:System.Data.Services.Client.DataServiceContext> に基づいて、<xref:System.Data.Services.Client.DataServiceQuery%601> のインスタンスを作成する方法を示します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54538532"
  [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Windows Presentation Foundation 要素へのデータのバインド  
- <xref:System.Data.Services.Client.DataServiceCollection%601> クラスは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを継承しているため、バインディングに <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを使用する場合と同様に、オブジェクトを Windows Presentation Foundation (WPF) アプリケーション内の要素 (またはコントロール) にバインドできます。 詳細については、[データ バインド (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md)を参照してください。 データ サービスのデータを WPF コントロールにバインドする 1 つの方法は、要素の `DataContext` プロパティをクエリ結果を含む <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスに設定することです。 この場合、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティを使用して、コントロールのオブジェクト ソースを設定します。 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> プロパティを使用して、バインドされたオブジェクトのどのプロパティを表示するかを指定します。 ナビゲーション プロパティから返される関連オブジェクトに要素をバインドする場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティに対して定義されているバインドにパスを含めます。 このパスは、親コントロールの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティで設定されたルート オブジェクトを基準とした相対パスになります。 次の例では、<xref:System.Windows.FrameworkElement.DataContext%2A> 要素の <xref:System.Windows.Controls.StackPanel> プロパティを設定して、親コントロールをカスタム オブジェクトの <xref:System.Data.Services.Client.DataServiceCollection%601> にバインドします。  
+ <xref:System.Data.Services.Client.DataServiceCollection%601> クラスは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを継承しているため、バインディングに <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスを使用する場合と同様に、オブジェクトを Windows Presentation Foundation (WPF) アプリケーション内の要素 (またはコントロール) にバインドできます。 詳細については、次を参照してください。[データ バインド (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md)します。 データ サービスのデータを WPF コントロールにバインドする 1 つの方法は、要素の `DataContext` プロパティをクエリ結果を含む <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスに設定することです。 この場合、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティを使用して、コントロールのオブジェクト ソースを設定します。 <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> プロパティを使用して、バインドされたオブジェクトのどのプロパティを表示するかを指定します。 ナビゲーション プロパティから返される関連オブジェクトに要素をバインドする場合は、<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> プロパティに対して定義されているバインドにパスを含めます。 このパスは、親コントロールの <xref:System.Windows.FrameworkElement.DataContext%2A> プロパティで設定されたルート オブジェクトを基準とした相対パスになります。 次の例では、<xref:System.Windows.FrameworkElement.DataContext%2A> 要素の <xref:System.Windows.Controls.StackPanel> プロパティを設定して、親コントロールをカスタム オブジェクトの <xref:System.Data.Services.Client.DataServiceCollection%601> にバインドします。  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
@@ -63,7 +63,7 @@ ms.locfileid: "54538532"
  使用すると、**サービス参照の追加**クライアント データ サービス クラス、データ ソースも作成されているプロジェクトを生成するためのダイアログは、生成されたに基づく<xref:System.Data.Services.Client.DataServiceContext>します。 このデータ ソースと UI 要素またはから項目をドラッグするだけで、データ サービスからデータを表示するコントロールを作成することができます、**データソース**デザイナーにウィンドウ。 これらの項目は、データ ソースにバインドされるアプリケーション UI の要素になります。 詳細については、「[方法 :プロジェクトのデータ ソースを使用してデータをバインド](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md)します。  
   
 ## <a name="binding-paged-data"></a>ページングされたデータのバインド  
- データ サービスは、1 つの応答メッセージで返されるクエリ データの量を制限するよう構成できます。 詳細については、[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)を参照してください。 データ サービスによって応答データのページングが行われる場合、各応答には、結果の次のページを返すためのリンクが含まれます。 詳細については、[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)を参照してください。 この場合、次の例に示すように、<xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> プロパティから取得した URI を渡すことによって <xref:System.Data.Services.Client.DataServiceCollection%601> で <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> メソッドを呼び出してページを明示的に読み込む必要があります。  
+ データ サービスは、1 つの応答メッセージで返されるクエリ データの量を制限するよう構成できます。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。 データ サービスによって応答データのページングが行われる場合、各応答には、結果の次のページを返すためのリンクが含まれます。 詳細については、次を参照してください。[遅延コンテンツの読み込み](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)します。 この場合、次の例に示すように、<xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> プロパティから取得した URI を渡すことによって <xref:System.Data.Services.Client.DataServiceCollection%601> で <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> メソッドを呼び出してページを明示的に読み込む必要があります。  
   
  [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
  [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
@@ -81,12 +81,12 @@ ms.locfileid: "54538532"
   
  <xref:System.Data.Services.Client.DataServiceCollection%601> の新しいインスタンスを作成するとき、次のパラメーターを指定して、バインドされたオブジェクトが変更されたときに発生するイベントを処理するメソッドに対してデリゲートを定義できます。  
   
--   `entityChanged` - バインドされたオブジェクトのプロパティが変更されたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityChangedParams> オブジェクトを受け入れ、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> で <xref:System.Data.Services.Client.DataServiceContext> を呼び出す既定の動作を引き続き発生させるかどうかを示すブール値を返します。  
+-   `entityChanged` -バインドされたオブジェクトのプロパティが変更されたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityChangedParams> オブジェクトを受け入れ、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> で <xref:System.Data.Services.Client.DataServiceContext> を呼び出す既定の動作を引き続き発生させるかどうかを示すブール値を返します。  
   
--   `entityCollectionChanged` - バインディング コレクションに対してオブジェクトの追加または削除が行われたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityCollectionChangedParams> オブジェクトを受け入れ、既定の動作 (<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> での <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> アクションの <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> または <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> アクションの <xref:System.Data.Services.Client.DataServiceContext> 呼び出し) を引き続き発生させるかどうかを示すブール値を返します。  
+-   `entityCollectionChanged` -オブジェクトが追加またはバインディング コレクションから削除されるときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityCollectionChangedParams> オブジェクトを受け入れ、既定の動作 (<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> での <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> アクションの <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> または <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> アクションの <xref:System.Data.Services.Client.DataServiceContext> 呼び出し) を引き続き発生させるかどうかを示すブール値を返します。  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、これらのデリゲートで実装したカスタムの動作を検証しません。  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] これらのデリゲートに実装するカスタム動作の検証は実行されません。  
   
  次の例では、<xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> アクションがカスタマイズされ、<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> および <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> メソッドが呼び出されて、削除された `Orders_Details` エンティティに属する `Orders` エンティティが削除されます。 親エンティティを削除しても依存エンティティは自動的に削除されないので、このカスタム アクションが実行されます。  
   
@@ -101,18 +101,19 @@ ms.locfileid: "54538532"
 ## <a name="data-binding-with-custom-client-data-classes"></a>カスタム クライアント データ クラスでのデータ バインディング  
  オブジェクトを <xref:System.Data.Services.Client.DataServiceCollection%601> に読み込むには、オブジェクト自身が <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装する必要があります。 データ サービスを使用するときに生成されるクライアント クラス、**サービス参照の追加** ダイアログ ボックスまたは[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)ツールは、このインターフェイスを実装します。 独自のクライアント データ クラスを提供する場合、データ バインディングに別の種類のコレクションを使用する必要があります。 オブジェクトが変更されると、データ バインド コントロール内のイベントを処理して、<xref:System.Data.Services.Client.DataServiceContext> クラスの次のメソッドを呼び出す必要があります。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 新しいオブジェクトがコレクションに追加されたとき。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> -新しいオブジェクトがコレクションに追加されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - オブジェクトがコレクションから削除されたとき。  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> -オブジェクトをコレクションから削除する場合。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - コレクション内のオブジェクトでプロパティが変更されたとき。  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> -コレクション内のオブジェクトのプロパティが変更されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> -オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> -オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
   
- 詳細については、[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)を参照してください。  
+ 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: クライアント データ サービス クラスを手動で生成します。](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
-- [方法: データ サービス参照を追加します。](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+
+- [方法: クライアント データ サービス クラスを手動で生成する](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [方法: データ サービス参照を追加する](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

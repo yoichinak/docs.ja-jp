@@ -2,12 +2,12 @@
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: 648147a7e3977648ac3c26c9dfc469629f3b70c3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a72641b438801cfd493c322297e7c384e83e687c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230500"
 ---
 # <a name="xmlelement"></a>\<xmlElement>
 トークンの要求時にセキュリティ トークン サービスへのメッセージ本文で送信される XML 要素を指定します。  
@@ -47,6 +47,7 @@ ms.locfileid: "55278292"
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|トークン要求パラメーターのコレクション。 各パラメーターは、XML 要素です。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>
 - [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

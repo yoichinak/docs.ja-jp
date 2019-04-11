@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: e0653fbcb8eb052b12be7344ffe239431b67a951
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139595"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>方法: BetweenShowDelay プロパティを使用する
 使用する方法を示します、<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>時間プロパティのツールヒントがすぐに表示されるように、ほとんどまたはまったくない遅延が、移動したときに、ユーザー、マウスのポインター 1 つのヒントからを別。  
@@ -28,7 +28,8 @@ ms.locfileid: "57370975"
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [方法トピック](tooltip-how-to-topics.md)
+- [方法のトピック](tooltip-how-to-topics.md)
 - [ToolTip の概要](tooltip-overview.md)

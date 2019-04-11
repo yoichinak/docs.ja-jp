@@ -2,12 +2,12 @@
 title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-ms.openlocfilehash: 334bab97a04ed464dce6944692b04a9ed1295296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e6a96c217b038e870b4e865315766afa3b3c757
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165476"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
 MustUnderstandBehavior  
@@ -38,7 +38,8 @@ class MustUnderstandBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.MustUnderstandBehavior>

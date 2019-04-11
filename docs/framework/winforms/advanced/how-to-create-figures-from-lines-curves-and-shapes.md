@@ -1,5 +1,5 @@
 ---
-title: '方法: 直線、曲線、および形状から図形を作成します。'
+title: '方法: 直線、曲線、および形状から図形を作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224911"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>方法: 直線、曲線、および形状から図形を作成します。
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>方法: 直線、曲線、および形状から図形を作成する
 図を作成するには、構築、<xref:System.Drawing.Drawing2D.GraphicsPath>などのメソッドを呼び出すと<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>と<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>にプリミティブを追加するパス。  
   
 ## <a name="example"></a>例  
@@ -35,6 +35,7 @@ ms.locfileid: "57709498"
  前の例は、Windows フォームで使用するために設計されていて、必要な<xref:System.Windows.Forms.PaintEventArgs>`e`はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [パスの作成および描画](constructing-and-drawing-paths.md)
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

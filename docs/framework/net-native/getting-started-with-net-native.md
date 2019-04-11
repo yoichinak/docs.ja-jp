@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298475"
 ---
 # <a name="getting-started-with-net-native"></a>.NET ネイティブの概要
 Windows 10 用に新しい Windows アプリを作成する場合も、既存の Windows ストア アプリを移行する場合も、次に示す同じ手順を実行することになります。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] アプリを作成するには、次の手順を実行します。  
   
-1.  [Windows 10 を対象とするユニバーサル Windows プラットフォーム (UWP) ストア アプリを開発](#Step1)し、アプリのデバッグ ビルドをテストして、そのアプリが適切に動作することを確認します。  
+1. [Windows 10 を対象とするユニバーサル Windows プラットフォーム (UWP) ストア アプリを開発](#Step1)し、アプリのデバッグ ビルドをテストして、そのアプリが適切に動作することを確認します。  
   
-2.  [追加のリフレクションおよびシリアル化の使用を処理](#Step2)します。  
+2. [追加のリフレクションおよびシリアル化の使用を処理](#Step2)します。  
   
-3.  [リリース ビルドのアプリを展開して、テストします](#Step3)。  
+3. [リリース ビルドのアプリを展開して、テストします](#Step3)。  
   
-4.  [メタデータの欠落を手動で解決し](#Step4)、すべての問題が解決されるまで [手順 3](#Step3) を繰り返します。  
+4. [メタデータの欠落を手動で解決し](#Step4)、すべての問題が解決されるまで [手順 3](#Step3) を繰り返します。  
   
 > [!NOTE]
 >  既存の Windows ストア アプリを [!INCLUDE[net_native](../../../includes/net-native-md.md)]に移行する場合は、「 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)します。  
@@ -29,9 +29,9 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>手順 1: 開発し、UWP アプリのデバッグ ビルドのテスト  
  新しいアプリを開発するか既存のアプリを移行するかに関係なく、Windows アプリについては同じ手順を実行します。  
   
-1.  Visual C# または Visual Basic のユニバーサル Windows アプリ テンプレートを使用して、Visual Studio で新しい UWP プロジェクトを作成します。 既定では、すべての UWP アプリケーションは CoreCLR を対象としていて、.NET ネイティブ ツール チェーンを使用してリリース ビルドがコンパイルされます。  
+1. Visual C# または Visual Basic のユニバーサル Windows アプリ テンプレートを使用して、Visual Studio で新しい UWP プロジェクトを作成します。 既定では、すべての UWP アプリケーションは CoreCLR を対象としていて、.NET ネイティブ ツール チェーンを使用してリリース ビルドがコンパイルされます。  
   
-2.  UWP アプリ プロジェクトのコンパイルに .NET ネイティブ ツール チェーンを使用する場合と使用しない場合では、両者の間に既知の互換性問題がある点にご注意ください。 詳細については、 [移行ガイド](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) を参照してください。  
+2. UWP アプリ プロジェクトのコンパイルに .NET ネイティブ ツール チェーンを使用する場合と使用しない場合では、両者の間に既知の互換性問題がある点にご注意ください。 詳細については、 [移行ガイド](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) を参照してください。  
   
  これで、 [!INCLUDE[net_native](../../../includes/net-native-md.md)] サーフェス領域に対してローカル システム (またはシミュレーター) で実行される C# または Visual Basic コードを作成できるようになりました。  
   
@@ -106,16 +106,17 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
   
  アプリのテスト時に発生する例外およびその他の問題の処理に関する具体的な例については、次のページを参照してください。  
   
--   [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [例:データ バインド時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [.NET ネイティブ アプリでのランタイム例外](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET ネイティブのセットアップと構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET ネイティブのセットアップおよび構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native とコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [リフレクションに依存する API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [シリアル化とメタデータ](../../../docs/framework/net-native/serialization-and-metadata.md)

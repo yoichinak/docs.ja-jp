@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212911"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly メソッド
 アセンブリを作成します。 アセンブリ ファイルを除くその他のすべてのファイルが閉じられた後は、このメソッドを呼び出します。 バインドされていないモジュールを生成するときに、このメソッドを呼び出さないでください。  
@@ -46,6 +46,7 @@ HRESULT EmitAssembly(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

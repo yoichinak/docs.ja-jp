@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 ms.date: 03/30/2017
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
-ms.openlocfilehash: 8a892453ded1bd4ca1b996efab66701521eee735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0958744d1d3eb9a122137330da4621158a256d47
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092115"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 指定したトランザクションが指定した操作にフローされました。  
@@ -16,6 +16,7 @@ ms.locfileid: "54528109"
  ユーザー コードから利用できるトランザクションが外部ソースからフローされた場合にトレースされます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

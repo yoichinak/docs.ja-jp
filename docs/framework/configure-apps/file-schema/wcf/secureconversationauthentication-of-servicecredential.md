@@ -1,13 +1,13 @@
 ---
-title: <secureConversationAuthentication> の <serviceCredential>
+title: <secureConversationAuthentication> (行中)  <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 13e9312e4c4eade003fec77909a743009aa9bca7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083700"
 ---
 # <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > の\<serviceCredential >
 安全な会話サービスの設定を指定します。  
@@ -47,6 +47,7 @@ ms.locfileid: "55278526"
  この構成要素を使用して、セキュリティ コンテキスト トークン (SCT) クッキーのシリアル化のための既知のクレームの種類のリストと、クッキーの情報をエンコードしてセキュリティで保護するためのエンコーダーを指定します。 SCT の詳細については、「<xref:System.ServiceModel.Security.SecureConversationServiceCredential>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>

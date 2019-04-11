@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083323"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid コントロールの既定のキーボード動作とマウス動作
 このトピックでは、ユーザーの対話方法について説明します、<xref:System.Windows.Controls.DataGrid>キーボードとマウスを使用して制御します。  
@@ -38,8 +38,8 @@ ms.locfileid: "54741614"
 |Ctrl + ↑|現在の列の最初のセルにフォーカスを移動します。|  
 |Ctrl + →|現在の行の最後のセルにフォーカスを移動します。|  
 |Ctrl + ←|現在の行の最初のセルにフォーカスを移動します。|  
-|CTRL + ホーム|コントロールの最初のセルにフォーカスを移動します。|  
-|CTRL + END|コントロールの最後のセルにフォーカスを移動します。|  
+|Ctrl + Home|コントロールの最初のセルにフォーカスを移動します。|  
+|Ctrl + End|コントロールの最後のセルにフォーカスを移動します。|  
 |Ctrl + PageDown|PAGEDOWN と同じです。|  
 |Ctrl + PageUp|ページの上と同じです。|  
 |F2|場合、<xref:System.Windows.Controls.DataGrid.IsReadOnly%2A?displayProperty=nameWithType>プロパティは`false`と<xref:System.Windows.Controls.DataGridColumn.IsReadOnly%2A?displayProperty=nameWithType>プロパティは`false`現在の列のセルの編集モードに現在のセルを格納します。|  
@@ -67,9 +67,9 @@ ms.locfileid: "54741614"
   
 -   Ctrl + Shift + ↑  
   
--   CTRL + SHIFT + ホーム  
+-   Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home  
   
--   CTRL + SHIFT + END  
+-   Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End  
   
 ## <a name="default-mouse-behavior"></a>既定のマウス動作  
  次の表に、マウスの既定の動作、<xref:System.Windows.Controls.DataGrid>します。  
@@ -97,5 +97,6 @@ ms.locfileid: "54741614"
  隣接する行の連続していない範囲を選択するには、CTRL + SHIFT を組み合わせることできます。 これを行うには、shift キーを使用して、最初の範囲を選択 + 前述のようにクリックします。 行の最初の範囲を選択した後、ctrl キーを使用 + をクリックして [次へ] の範囲の最初の行を選択し、CTRL + SHIFT を押しながら次の範囲の最後の行をクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

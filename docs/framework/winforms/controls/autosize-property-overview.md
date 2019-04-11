@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173629"
 ---
 # <a name="autosize-property-overview"></a>AutoSize プロパティの概要
 <xref:System.Windows.Forms.Control.AutoSize%2A>プロパティによって指定された値を取得するために必要な場合は、そのサイズを変更するコントロールを使用する、<xref:System.Windows.Forms.Control.PreferredSize%2A>プロパティ。 設定して、特定のコントロールのサイズ変更動作を調整する、`AutoSizeMode`プロパティ。  
@@ -67,6 +67,7 @@ ms.locfileid: "54649831"
 >  Windows フォーム デザイナーの影の生産性を最大化する、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティを<xref:System.Windows.Forms.Form>クラス。 デザイン時に、フォームにいなくても動作、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティに設定されて`false`その実際の設定に関係なく、します。 時に、特別な宿泊施設は行われません、および<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティが適用されるプロパティの設定で指定されました。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66b2e6a3ef73b70a7ce78e3d6f32ba48f8cba980
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182352"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > 要素
 プロセスにおける既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーを提供するアセンブリを指定します。  
@@ -74,6 +74,7 @@ ms.locfileid: "55269706"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
 - [\<appDomainManagerType > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)

@@ -2,12 +2,12 @@
 title: 標準エンドポイントの使用
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304611"
 ---
 # <a name="usage-of-standard-endpoints"></a>標準エンドポイントの使用
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2012 を使用して、StandardEndpoints.sln ファイルを開きます。
+1. Visual Studio 2012 を使用して、StandardEndpoints.sln ファイルを開きます。
 
-2.  複数のプロジェクトを起動できるようにします。
+2. 複数のプロジェクトを起動できるようにします。
 
     1.  **ソリューション エクスプ ローラー**標準エンドポイント ソリューションを右クリックし、**プロパティ**します。
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          これで、Client プロジェクトは Service プロジェクトの後に実行されます。
 
-3.  ソリューションを実行するには、F5 キーを押します。
+3. ソリューションを実行するには、F5 キーを押します。
 
 > [!NOTE]
 > 次の手順が機能しない場合は、環境が設定されている正しく、次の手順を使用してを確認します。

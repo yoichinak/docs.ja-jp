@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115675"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの列型
 <xref:System.Windows.Forms.DataGridView>コントロールがその情報を表示したり変更したり、情報を追加するユーザーを有効にするためにいくつかの列の型を使用します。  
@@ -65,7 +65,7 @@ ms.locfileid: "57724571"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn>、ドロップダウン リスト ボックスが含まれているセルの列を表示することができます。 これは、Northwind サンプル データベースの Products テーブルのカテゴリ列などの特定の値を含めることができますのみフィールドでのデータ入力に役立ちます。  
   
- すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、[ComboBox コントロール](combobox-control-windows-forms.md)を参照してください。  
+ すべてのセルの設定と同じ方法で使用するドロップダウン リストを設定することができます、<xref:System.Windows.Forms.ComboBox>によって返されるコレクションを手動でいずれか、ドロップダウン リスト、<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>プロパティ、またはデータ ソースにバインドして、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>、 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>、および<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>プロパティ。 詳細については、次を参照してください。 [ComboBox コントロール](combobox-control-windows-forms.md)します。  
   
  によって使用されるデータ ソースに実際のセル値をバインドすることができます、<xref:System.Windows.Forms.DataGridView>コントロールを設定して、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>します。  
   
@@ -81,6 +81,7 @@ ms.locfileid: "57724571"
  <xref:System.Windows.Forms.DataGridViewLinkColumn>クラスでは、いくつかのプロパティを提供する前に、中、および後へのリンクの外観を変更するためをクリックします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewButtonColumn>
@@ -90,6 +91,6 @@ ms.locfileid: "57724571"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
-- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールでイメージの列の使用します。](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールのイメージ列を操作する](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)

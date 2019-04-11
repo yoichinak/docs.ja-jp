@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219812"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>依存関係プロパティのコールバックと検証
 このトピックでは、検証による判定、プロパティの有効値が変更されたときに呼び出されるコールバック、値の決定への外部的影響のオーバーライドなど、プロパティ関連機能の代替カスタム実装を使用して依存関係プロパティを作成する方法について説明します。 また、これらの手法を用いてプロパティ システムの既定の動作を拡張することが適切であるシナリオについても説明します。  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックでは、依存関係プロパティの実装の基本シナリオとカスタム依存関係プロパティへのメタデータの適用方法を理解していることを前提とします。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」および「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」を参照してください。  
@@ -81,6 +79,7 @@ ms.locfileid: "57363931"
  プロパティ システムには、いずれかの処理は<xref:System.Windows.CoerceValueCallback>値を返す<xref:System.Windows.DependencyProperty.UnsetValue>特殊なケースとして。 この特殊なケースを意味するプロパティの変更を発生させた、<xref:System.Windows.CoerceValueCallback>プロパティ システムによって拒否される必要がありますが呼び出されると、プロパティ システムは、プロパティの直前の値をレポートする代わりにします。 このメカニズムは、非同期に開始されたプロパティの変更が現在のオブジェクトの状態に対して依然として有効であるかどうかをチェックし、有効でない場合はその変更を抑制する場合に役立ちます。 考えられるもう 1 つのシナリオとして、プロパティ値の決定におけるどの構成要素が報告されるプロパティ値を決定するかに応じて値を選択的に抑制することもできます。 これを行うには、使用することができます、<xref:System.Windows.DependencyProperty>コールバックとプロパティ識別子の入力として渡さ<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>、し、処理、<xref:System.Windows.ValueSource>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [依存関係プロパティのメタデータ](dependency-property-metadata.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)

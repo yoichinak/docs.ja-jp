@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089420"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>方法: CompositionTarget を使用したフレームの間隔ごとの描画
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション エンジンには、フレームベースのアニメーションを作成するためのさまざまな機能が用意されています。 ただし、フレームベースの描画をさらにきめ細かく制御することが必要となるアプリケーション シナリオがあります。 <xref:System.Windows.Media.CompositionTarget>オブジェクトは、フレームごとのコールバックに基づいてカスタム アニメーションを作成する機能を提供します。  
@@ -41,5 +41,6 @@ ms.locfileid: "57353206"
  追加または削除を表示する<xref:System.EventHandler>デリゲート、イベントの発生中には、イベントの終了後まで遅延されますを起動します。 これは、一貫性のある方法で<xref:System.MulticastDelegate>-ベースのイベントは共通言語ランタイム (CLR) で処理されます。 また、描画イベントが特定の順序で呼び出されるかどうかは保証されません。 複数ある場合<xref:System.EventHandler>特定の順序に依存するデリゲート、1 つを登録する必要があります<xref:System.Windows.Media.CompositionTarget.Rendering>イベントとマルチプレクシングが適切でデリゲートでは、自分で注文します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

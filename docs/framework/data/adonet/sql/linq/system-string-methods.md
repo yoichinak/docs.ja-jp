@@ -2,15 +2,15 @@
 title: System.String メソッド
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160499"
 ---
 # <a name="systemstring-methods"></a>System.String メソッド
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.String> メソッドをサポートしていません。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次をサポートしていません<xref:System.String>メソッド。  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>サポートされていない一般的な System.String メソッド  
  サポートされていない一般的な <xref:System.String> メソッドは次のとおりです。  
@@ -56,4 +56,5 @@ ms.locfileid: "54618128"
 -   `Replace` 列、`ToLower` 列、および XML では、`ToUpper`、`TEXT`、`NTEXT` などの多くのメソッドや文字インデクサーで有効な変換が用意されていないため、通常の変換を行おうとすると `SqlExceptions` が発生します。 これらの型については、これが適切な動作と見なされます。 ただし、`VARCHAR`、`NVARCHAR`、`VARCHAR(max)`、および `NVARCHAR(max)` については、すべての文字列操作が共通言語ランタイム (CLR: Common Language Runtime) のセマンティクと一致している必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

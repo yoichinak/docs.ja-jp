@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826679"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296187"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 変数 (Visual Basic) と同じ名前の変数を非表示にします。
 変数を非表示にすることができます*シャドウ*は、これによって、同じ名前の変数で再定義します。 2 つの方法で非表示に変数をシャドウすることができます。  
@@ -30,7 +30,7 @@ ms.locfileid: "58826679"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>スコープによるシャドウすることによって、変数を非表示にするには  
   
-1.  を非表示にする変数を定義するリージョンを特定し、で、変数を使用してを再定義するサブ領域を決定します。  
+1. を非表示にする変数を定義するリージョンを特定し、で、変数を使用してを再定義するサブ領域を決定します。  
   
     |変数の領域|再定義が使用可能なサブ地域|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "58826679"
   
      再定義できませんそのプロシージャ内のブロックでプロシージャの変数などの、 `If`.。`End If`構築または`For`ループします。  
   
-2.  存在しない場合は、サブ領域を作成します。  
+2. 存在しない場合は、サブ領域を作成します。  
   
-3.  、地区内では、書き込み、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)シャドウの変数を宣言します。  
+3. 、地区内では、書き込み、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)シャドウの変数を宣言します。  
   
      サブ領域内のコードは、変数名が参照されているとき、コンパイラは変数のシャドウへの参照を解決します。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "58826679"
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>継承によるシャドウすることによって、変数を非表示にするには  
   
-1.  必ず、クラスでは、および (プロシージャ) の外側のクラス レベルで非表示にする、変数が宣言されてください。 それ以外の場合継承によるシャドウすることはできません。  
+1. 必ず、クラスでは、および (プロシージャ) の外側のクラス レベルで非表示にする、変数が宣言されてください。 それ以外の場合継承によるシャドウすることはできません。  
   
-2.  既に存在しない場合、変数のクラスから派生したクラスを定義します。  
+2. 既に存在しない場合、変数のクラスから派生したクラスを定義します。  
   
-3.  派生クラス内では、書き込み、`Dim`ステートメント、変数を宣言します。 含める、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードで宣言します。  
+3. 派生クラス内では、書き込み、`Dim`ステートメント、変数を宣言します。 含める、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードで宣言します。  
   
      派生クラスのコードは、変数名が参照されていると、コンパイラは、変数への参照を解決します。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "58826679"
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [方法: 継承された変数を非表示にします。](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [方法: 派生クラスによって非表示に変数にアクセスします。](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [方法: 派生クラスによって非表示になっている変数にアクセスする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [オーバーライド](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

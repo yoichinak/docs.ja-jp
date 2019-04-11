@@ -2,12 +2,12 @@
 title: System.Object メソッド
 ms.date: 03/30/2017
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-ms.openlocfilehash: cae06286b77e23718facfc5be2b0ac2d27381ad3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a52f081f1c0c6e6c5218550009c736d0ed60514
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097669"
 ---
 # <a name="systemobject-methods"></a>System.Object メソッド
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次のサポート<xref:System.Object>メソッド。  
@@ -17,16 +17,17 @@ ms.locfileid: "54713415"
 |<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>|<xref:System.Object.Equals%28System.Object%2CSystem.Object%29?displayProperty=nameWithType>|  
 |<xref:System.Object.ToString?displayProperty=nameWithType>||  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.Object> メソッドをサポートしていません。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次をサポートしていません<xref:System.Object>メソッド。  
   
 |||  
 |-|-|  
 |<xref:System.Object.GetHashCode?displayProperty=nameWithType>|<xref:System.Object.ReferenceEquals%28System.Object%2CSystem.Object%29?displayProperty=nameWithType>|  
 |<xref:System.Object.MemberwiseClone?displayProperty=nameWithType>|<xref:System.Object.GetType?displayProperty=nameWithType>|  
-|<xref:System.Object.ToString?displayProperty=nameWithType>、`BINARY`、`VARBINARY`、`IMAGE` などのバイナリ型の `TIMESTAMP`||  
+|<xref:System.Object.ToString?displayProperty=nameWithType> などのバイナリ型`BINARY`、 `VARBINARY`、 `IMAGE`、および`TIMESTAMP`します。||  
   
 ## <a name="differences-from-net"></a>.NET との相違  
  出力<xref:System.Object.ToString?displayProperty=nameWithType>倍を使用する SQL `CONVERT`(nvarchar (30), @x, 2) sql です。 このとき、SQL は常に 16 桁と指数表記を使用します (たとえば、0 に対して "0.000000000000000e+000" を使用)。 そのため、<xref:System.Object.ToString?displayProperty=nameWithType> 変換では、.NET Framework 内の <xref:System.Convert.ToString%2A?displayProperty=nameWithType>  と同じ文字列は作成されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

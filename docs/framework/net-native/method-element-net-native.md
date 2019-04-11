@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131717"
 ---
 # <a name="method-element-net-native"></a>\<メソッド > 要素 (.NET ネイティブ)
 コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。  
@@ -37,19 +37,19 @@ ms.locfileid: "55288081"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*method_name*|メソッド名。 メソッドの型は、親の [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 要素または [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素により定義されます。|  
   
 ## <a name="signature-attribute"></a>シグネチャ属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*method_signature*|メソッド シグネチャを形成するパラメーター型です。 複数のパラメーターは、`"System.String,System.Int32,System.Int32)"` のようにコンマで区切ります。 パラメーターの型名は完全修飾されている必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -58,16 +58,16 @@ ms.locfileid: "55288081"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|メソッドに渡された引数の型にポリシーを適用します。|  
-|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|ジェネリック型またはメソッドのパラメーターの型にポリシーを適用します。|  
+|[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|ジェネリック型またはメソッドのパラメーターの型にポリシーを適用します。|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|型にポリシーを適用します (含んでいる `<Method>` 要素によって表されるメソッドにそのポリシーが適用されている場合)。|  
-|[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|メソッドに渡された <xref:System.Type> 引数によって表される型にポリシーを適用します。|  
+|[\<TypeParameter >](../../../docs/framework/net-native/typeparameter-element-net-native.md)|メソッドに渡された <xref:System.Type> 引数によって表される型にポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  ジェネリック メソッドの `<Method>` 要素は、独自のポリシーを持たないインスタンス化すべてにそのポリシーを適用します。  
@@ -146,7 +146,8 @@ ms.locfileid: "55288081"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<MethodInstantiation> 要素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation > 要素](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

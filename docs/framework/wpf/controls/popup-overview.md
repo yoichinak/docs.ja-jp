@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102779"
 ---
 # <a name="popup-overview"></a>ポップアップの概要
 <xref:System.Windows.Controls.Primitives.Popup>コントロールには、指定された要素や画面座標を基準と現在のアプリケーション ウィンドウから浮遊した別のウィンドウの内容を表示する方法が用意されています。 このトピックでは、<xref:System.Windows.Controls.Primitives.Popup>を制御し、その使用方法についての情報を提供します。  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>ポップアップとは  
  A<xref:System.Windows.Controls.Primitives.Popup>要素または画面上のポイントを基準とした別のウィンドウでコントロールがコンテンツを表示します。 ときに、<xref:System.Windows.Controls.Primitives.Popup>が表示されて、<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>プロパティに設定されて`true`します。  
@@ -36,13 +34,13 @@ ms.locfileid: "57358471"
 ## <a name="controls-that-implement-a-popup"></a>ポップアップを実装するコントロール  
  ビルドすることができます<xref:System.Windows.Controls.Primitives.Popup>他のコントロールにコントロール。 次のコントロールの実装、<xref:System.Windows.Controls.Primitives.Popup>特定の使用目的。  
   
--   <xref:System.Windows.Controls.ToolTip>。 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ToolTip>. 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
   
--   <xref:System.Windows.Controls.ContextMenu>。 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](contextmenu-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ContextMenu>. 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](contextmenu-overview.md)を参照してください。  
   
--   <xref:System.Windows.Controls.ComboBox>。 または、非表示に使用できるドロップダウン リスト ボックスのある選択コントロールを作成する場合、<xref:System.Windows.Controls.ComboBox>コントロール。  
+-   <xref:System.Windows.Controls.ComboBox>. または、非表示に使用できるドロップダウン リスト ボックスのある選択コントロールを作成する場合、<xref:System.Windows.Controls.ComboBox>コントロール。  
   
--   <xref:System.Windows.Controls.Expander>。 コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](expander-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.Expander>. コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](expander-overview.md)を参照してください。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>ポップアップの動作と外観  
@@ -89,6 +87,7 @@ ms.locfileid: "57358471"
  <xref:System.Windows.Controls.Primitives.Popup>コントロールへの参照を保持する、<xref:System.Windows.Controls.Primitives.Popup.Child%2A>論理上の子としてコンテンツ。 新しいウィンドウが作成されたとき、コンテンツの<xref:System.Windows.Controls.Primitives.Popup>、ウィンドウのビジュアルの子になり、論理上の子を引き続き<xref:System.Windows.Controls.Primitives.Popup>します。 逆に、<xref:System.Windows.Controls.Primitives.Popup>の論理上の親のままその<xref:System.Windows.Controls.Primitives.Popup.Child%2A>コンテンツ。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>
@@ -96,5 +95,5 @@ ms.locfileid: "57358471"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [方法トピック](popup-how-to-topics.md)
-- [方法トピック](tooltip-how-to-topics.md)
+- [方法のトピック](popup-how-to-topics.md)
+- [方法のトピック](tooltip-how-to-topics.md)

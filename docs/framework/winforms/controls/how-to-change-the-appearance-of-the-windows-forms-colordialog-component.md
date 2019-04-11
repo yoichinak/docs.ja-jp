@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ColorDialog コンポーネントの外観を変更します。'
+title: '方法: Windows フォーム ColorDialog コンポーネントの表示形式を変更する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329233"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>方法: Windows フォーム ColorDialog コンポーネントの外観を変更します。
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>方法: Windows フォーム ColorDialog コンポーネントの表示形式を変更する
 Windows フォームの外観を構成する<xref:System.Windows.Forms.ColorDialog>コンポーネント プロパティの数にします。 ダイアログ ボックスが 2 つのセクションでは、いずれかの基本色とカスタムの色を定義するユーザーを許可する 1 つを示しています。  
   
  ほとんどのプロパティは、ユーザーがダイアログ ボックスから選択できる色を制限します。 場合、<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>プロパティに設定されて`true`、カスタムの色を定義するユーザーを許可します。 <xref:System.Windows.Forms.ColorDialog.FullOpen%2A>プロパティは`true`; カスタムの色を定義する ダイアログ ボックスが展開されている場合はそれ以外の場合、ユーザーが「カスタム色の定義」ボタンする必要がありますクリックします。 ときに、<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>プロパティに設定されて`true`、ダイアログ ボックスは、基本色のセットで使用可能なすべての色を表示します。 場合、<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>プロパティに設定されて`true`ユーザーがディザリングされた色を選択できません; を選択する純色のみ利用できます。  
@@ -26,7 +26,7 @@ Windows フォームの外観を構成する<xref:System.Windows.Forms.ColorDial
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>色のダイアログ ボックスの外観を構成するには  
   
-1.  設定、 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>、 <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>、 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>、および<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>プロパティを目的の値にします。  
+1. 設定、 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>、 <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>、 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>、および<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>プロパティを目的の値にします。  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -50,6 +50,7 @@ Windows フォームの外観を構成する<xref:System.Windows.Forms.ColorDial
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog コンポーネント](colordialog-component-windows-forms.md)
 - [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073885"
 ---
 # <a name="focus-overview"></a>フォーカスの概要
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、キーボード フォーカスと論理フォーカスという、フォーカスに関する 2 つの主要な概念があります。  キーボード フォーカスはキーボード入力を受け取る要素を指し、論理フォーカスはフォーカスを持つフォーカス範囲内の要素を指します。  これらの概念については、この概要で詳しく説明します。  フォーカスを取得可能な領域を複数持つ複雑なアプリケーションを作成する場合は、これらの概念の違いを理解することが重要です。  
@@ -21,9 +21,7 @@ ms.locfileid: "57369917"
  フォーカス管理に参加する主要なクラスは、<xref:System.Windows.Input.Keyboard>クラス、<xref:System.Windows.Input.FocusManager>クラス、および基本要素クラス、<xref:System.Windows.UIElement>と<xref:System.Windows.ContentElement>します。  基本要素の詳細については、「[基本要素の概要](base-elements-overview.md)」を参照してください。  
   
  <xref:System.Windows.Input.Keyboard>主にキーボード フォーカスを持つクラスでは、および<xref:System.Windows.Input.FocusManager>が論理フォーカスを中心に説明が絶対的な区別はありません。  キーボード フォーカスを持つ要素は論理フォーカスも持ちますが、論理フォーカスを持つ要素は必ずしもキーボード フォーカスを持ちません。  使用する場合に、このことは明らかな、<xref:System.Windows.Input.Keyboard>にキーボード フォーカスがある要素を設定するクラスが要素にも論理フォーカスを設定します。  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>キーボード フォーカス  
  キーボード フォーカスは、現在キーボード入力を受け取っている要素を指します。  キーボード フォーカスを持つ要素は、デスクトップ全体で 1 つしかありません。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、 キーボード フォーカスを持つ要素の<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>は`true`に設定されます。  静的プロパティ<xref:System.Windows.Input.Keyboard.FocusedElement%2A>上、<xref:System.Windows.Input.Keyboard>クラスは、現在キーボード フォーカスがある要素を取得します。  
@@ -118,6 +116,7 @@ ms.locfileid: "57369917"
  論理フォーカスに関連するイベントは<xref:System.Windows.UIElement.GotFocus>と<xref:System.Windows.UIElement.LostFocus>します。  これらのイベントが定義されている、<xref:System.Windows.Input.FocusManager>として添付イベントですが、 <xref:System.Windows.Input.FocusManager> CLR イベント ラッパーを公開しません。  <xref:System.Windows.UIElement> <xref:System.Windows.ContentElement>より簡単にこれらのイベントを公開します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

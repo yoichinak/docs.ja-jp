@@ -1,5 +1,5 @@
 ---
-title: '方法: データ保護を使用します。'
+title: '方法: データ保護の使用'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698394"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314459"
 ---
-# <a name="how-to-use-data-protection"></a>方法: データ保護を使用します。
+# <a name="how-to-use-data-protection"></a>方法: データ保護の使用
 .NET Framework では、データ保護 API (DPAPI) へのアクセスを提供しています。DPAPI を使用すると、現在のユーザー アカウントまたはコンピューターからの情報を使用してデータを暗号化できます。  DPAPI を使用すると、暗号化キーを明示的に生成および格納するという困難な問題を軽減できます。  
   
  <xref:System.Security.Cryptography.ProtectedMemory> クラスを使用すると、メモリ内のバイト配列を暗号化できます。  この機能は、Microsoft Windows XP 以降のオペレーティング システムで使用できます。  現在のプロセスによって暗号化されるメモリは、現在のプロセスのみ、すべてのプロセス、または同じユーザーのコンテキストによって復号化されることを指定できます。  <xref:System.Security.Cryptography.ProtectedMemory> オプションの詳しい説明については、「<xref:System.Security.Cryptography.MemoryProtectionScope> 列挙型」を参照してください。  
@@ -34,25 +34,25 @@ ms.locfileid: "54698394"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>データの保護を使用してメモリ内のデータを暗号化するには  
   
-1.  暗号化するバイト配列、エントロピ、およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> メソッドを呼び出します。  
+1. 暗号化するバイト配列、エントロピ、およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> メソッドを呼び出します。  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>データ保護を使用してメモリ内のデータを復号化するには  
   
-1.  復号化するバイト配列およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> メソッドを呼び出します。  
+1. 復号化するバイト配列およびメモリ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> メソッドを呼び出します。  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>データ保護を使用してファイルやストリームのデータを暗号化するには  
   
-1.  ランダム エントロピを作成します。  
+1. ランダム エントロピを作成します。  
   
-2.  暗号化するバイト配列、エントロピ、およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Protect%2A> メソッドを呼び出します。  
+2. 暗号化するバイト配列、エントロピ、およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Protect%2A> メソッドを呼び出します。  
   
-3.  ファイルまたはストリームに暗号化されたデータを書き込みます。  
+3. ファイルまたはストリームに暗号化されたデータを書き込みます。  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>データ保護を使用してファイルやストリームからデータを復号化するには  
   
-1.  ファイルまたはストリームから暗号化されたデータを読み取ります。  
+1. ファイルまたはストリームから暗号化されたデータを読み取ります。  
   
-2.  復号化するバイト配列およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> メソッドを呼び出します。  
+2. 復号化するバイト配列およびデータ保護スコープを渡す際に、静的な <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> メソッドを呼び出します。  
   
 ## <a name="example"></a>例  
  次のコード例は、暗号化と復号化の 2 つの形式を示しています。  最初に、コード例では、メモリ内のバイト配列を暗号化してから復号化します。  次に、コード例では、バイト配列のコピーを暗号化し、ファイルに保存して、そのファイルからデータを読み込み、その後データを復号化しています。  例では、元のデータ、暗号化されたデータ、および復号化されたデータが表示されます。  

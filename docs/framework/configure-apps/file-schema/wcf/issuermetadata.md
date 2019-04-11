@@ -2,12 +2,12 @@
 title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
-ms.openlocfilehash: c557bd903462ccf4029b7317cbd45610e3fba165
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090109"
 ---
 # <a name="issuermetadata"></a>\<issuerMetadata >
 \<system.serviceModel>  
@@ -48,7 +48,7 @@ ms.locfileid: "55264454"
   
 |属性|説明|  
 |---------------|-----------------|  
-|address|必須の `string` 属性です。<br /><br /> エンドポイントのアドレスを指定します。 アドレスは、絶対 URI にする必要があります。 既定値は空の文字列です。|  
+|アドレス|必須の `string` 属性です。<br /><br /> エンドポイントのアドレスを指定します。 アドレスは、絶対 URI にする必要があります。 既定値は空の文字列です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -64,6 +64,7 @@ ms.locfileid: "55264454"
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)要素。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.IssuerMetadata%2A>
 - [サービス ID と認証](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

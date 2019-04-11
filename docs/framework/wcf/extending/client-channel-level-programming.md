@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486506"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324132"
 ---
 # <a name="client-channel-level-programming"></a>クライアントのチャネル レベルのプログラミング
-このトピックを使用せずに Windows Communication Foundation (WCF) クライアント アプリケーションを記述する方法について説明、<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>クラスとその関連付けられたオブジェクト モデルです。  
+このトピックを使用せず、Windows Communication Foundation (WCF) クライアント アプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>クラスとその関連付けられたオブジェクト モデルです。  
   
 ## <a name="sending-messages"></a>メッセージの送信  
  メッセージを送信し、応答を受信して処理できるようにするには、次の手順に従う必要があります。  
   
-1.  バインディングを作成します。  
+1. バインディングを作成します。  
   
-2.  チャネル ファクトリをビルドします。  
+2. チャネル ファクトリをビルドします。  
   
-3.  チャネルを作成します。  
+3. チャネルを作成します。  
   
-4.  要求を送信し、応答を読み取ります。  
+4. 要求を送信し、応答を読み取ります。  
   
-5.  すべてのチャネル オブジェクトを閉じます。  
+5. すべてのチャネル オブジェクトを閉じます。  
   
 #### <a name="creating-a-binding"></a>バインディングの作成  
  受信側の場合と同様に (を参照してください[サービス チャネル レベルのプログラミング](../../../../docs/framework/wcf/extending/service-channel-level-programming.md))、メッセージの開始を送信するバインディングを作成します。 この例では、新しい <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> を作成し、その要素コレクションに <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> を追加します。  

@@ -2,12 +2,12 @@
 title: LINQ to SQL におけるセキュリティ
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: 7730419509cd0c3530813734a98f777ddf9d9f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078145"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL におけるセキュリティ
 データベースに接続するときは、常にセキュリティのリスクがあります。 LINQ to SQL には SQL Server のデータを操作する新しい方法が含まれていますが、セキュリティ メカニズムは追加されていません。  
@@ -21,7 +21,7 @@ ms.locfileid: "54625680"
 ## <a name="connection-strings"></a>接続文字列  
  接続文字列にパスワードを使用することは、できるだけ避けてください。 接続文字列自体がセキュリティのリスクであるうえに、接続文字列はオブジェクト リレーショナル デザイナーまたは SQLMetal コマンド ライン ツールの使用時にオブジェクト モデルや外部マッピング ファイルにクリア テキストで追加できます。 ファイル システムでオブジェクト モデルまたは外部マッピング ファイルに対してアクセス権があれば、どのユーザーでも接続パスワードを見ることができます (パスワードが接続文字列に含まれている場合)。  
   
- このようなリスクを最小限に抑えるには、SQL Server で信頼された接続を作成するのに統合セキュリティを使用します。 この方法を使用すると、接続文字列にパスワードを含める必要がなくなります。 詳細については、[SQL Server のセキュリティ](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)を参照してください。  
+ このようなリスクを最小限に抑えるには、SQL Server で信頼された接続を作成するのに統合セキュリティを使用します。 この方法を使用すると、接続文字列にパスワードを含める必要がなくなります。 詳細については、次を参照してください。 [SQL Server のセキュリティ](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)します。  
   
  統合セキュリティがない場合は、接続文字列にクリア テキストのパスワードが必要になります。 以下は、接続文字列のセキュリティ保護に最も有効な手段です。  
   
@@ -34,5 +34,6 @@ ms.locfileid: "54625680"
 -   すべての接続文字列の期限と接触点を最小限にします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295095"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 クエリ式が NULL かどうかを調べます。  
@@ -26,7 +26,7 @@ expression IS [ NOT ] NULL
  IS NULL の EDM.Boolean の結果を否定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` によって NULL が返される場合は `expression`、それ以外の場合は `false` です。  
+ `true` 場合`expression`null。 それ以外を返します`false`します。  
   
 ## <a name="remarks"></a>Remarks  
  外部結合の要素が NULL かどうかを確認するには、`IS NULL` を使用します。  
@@ -52,18 +52,19 @@ select c from LOB.Customer as c where c.DOB is not null
 |TREAT (null AS EntityType) IS NULL|`true` を返します。|  
 |TREAT (null AS ComplexType) IS NULL|エラーをスローします。|  
 |TREAT (null AS RowType) IS NULL|エラーをスローします。|  
-|EntityType IS NULL|`true` または `false` を返します。|  
+|EntityType IS NULL|`true` または `false`を返します。|  
 |ComplexType IS NULL|エラーをスローします。|  
 |RowType IS NULL|エラーをスローします。|  
   
 ## <a name="example"></a>例  
  次[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリでは、IS NOT NULL 演算子を使用して、クエリ式が null でないかどうかを判断します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

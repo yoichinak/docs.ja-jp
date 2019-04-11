@@ -5,17 +5,17 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132061"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) のセキュリティは、次の 3 つの主要な機能領域に分割されます。 転送セキュリティ、アクセス制御、および監査します。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
   
- WCF メッセージ セキュリティの概要については、[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)を参照してください。 WCF セキュリティの他の 2 種類の詳細については、[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)と[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。  
+ WCF メッセージ セキュリティの概要については、次を参照してください。[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)します。 WCF セキュリティの他の 2 種類の詳細については、次を参照してください。[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)と[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
 ## <a name="transfer-security-scenarios"></a>転送セキュリティのシナリオ  
  WCF 転送セキュリティを採用している一般的なシナリオを以下に示します。  
@@ -95,7 +95,8 @@ Windows Communication Foundation (WCF) のセキュリティは、次の 3 つ�
  また、メッセージ セキュリティ モードでは、初期ネゴシエーションの一環としてサービス資格情報がクライアントと交換されるように転送のセキュリティを実行できます。 ネゴシエーションを有効にするには、<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> プロパティを `true` に設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

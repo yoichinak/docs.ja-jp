@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295875"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表現されます。 時間の経過と共にさまざまな言語用に開発したさまざまな種類のデータ ソース、たとえば、SQL のリレーショナル データベースや XML 用の XQuery です。 これにより、必要なアプリケーション開発者はデータ ソースまたはサポートされているデータ形式の種類ごとに新しいクエリ言語について説明します。  
@@ -21,11 +21,11 @@ ms.locfileid: "56975148"
 ## <a name="three-stages-of-a-query-operation"></a>クエリ操作の 3 つの段階  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ操作では、3 つのアクションで構成されます。  
   
-1.  データ ソースまたはソースを取得します。  
+1. データ ソースまたはソースを取得します。  
   
-2.  クエリを作成します。  
+2. クエリを作成します。  
   
-3.  クエリを実行します。  
+3. クエリを実行します。  
   
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリの実行は、クエリの作成とは異なります。 クエリを作成するだけでは、すべてのデータは取得しません。 この点については、後で詳しく説明します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "56975148"
   
  暗黙的にクエリ可能な型として、配列は必要ありません変更や特別な処理として処理するために、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]データ ソース。 サポートする任意のコレクション型の場合も同様<xref:System.Collections.Generic.IEnumerable%601>、ジェネリックを含む<xref:System.Collections.Generic.List%601>、 <xref:System.Collections.Generic.Dictionary%602>、および、.NET Framework クラス ライブラリの他のクラス。  
   
- ソース データが既に実装しない場合<xref:System.Collections.Generic.IEnumerable%601>、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]の機能を実装するプロバイダーが必要な*標準クエリ演算子*そのデータ ソース。 たとえば、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]に、クエリ可能な XML ドキュメントの読み込みの処理<xref:System.Xml.Linq.XElement>の次の例に示すように入力します。 標準クエリ演算子の詳細については、[標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)を参照してください。  
+ ソース データが既に実装しない場合<xref:System.Collections.Generic.IEnumerable%601>、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]の機能を実装するプロバイダーが必要な*標準クエリ演算子*そのデータ ソース。 たとえば、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]に、クエリ可能な XML ドキュメントの読み込みの処理<xref:System.Xml.Linq.XElement>の次の例に示すように入力します。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)します。  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
@@ -69,7 +69,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- クエリ式には、3 つの句が含まれています: `From`、 `Where`、および`Select`します。 特定の関数と各クエリ式の句の目的は、後ほど[基本的なクエリ操作 (Visual Basic)](basic-query-operations.md)します。 詳細については、[クエリ](../../../../visual-basic/language-reference/queries/index.md)を参照してください。 なお[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、クエリ定義多くの場合は変数に格納し、後で実行します。 クエリ変数など、`evensQuery`前の例では、クエリ可能な型でなければなりません。 型`evensQuery`は`IEnumerable(Of Integer)`、ローカル型推論を使用して、コンパイラによって割り当てられています。  
+ クエリ式には、3 つの句が含まれています: `From`、 `Where`、および`Select`します。 特定の関数と各クエリ式の句の目的は、後ほど[基本的なクエリ操作 (Visual Basic)](basic-query-operations.md)します。 詳細については、次を参照してください。[クエリ](../../../../visual-basic/language-reference/queries/index.md)します。 なお[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、クエリ定義多くの場合は変数に格納し、後で実行します。 クエリ変数など、`evensQuery`前の例では、クエリ可能な型でなければなりません。 型`evensQuery`は`IEnumerable(Of Integer)`、ローカル型推論を使用して、コンパイラによって割り当てられています。  
   
  クエリ変数そのものは何も実行し、データは返されませんことに注意してください。 クエリの定義のみ格納されます。 前の例では、`For Each`クエリを実行するループします。  
   
@@ -98,7 +98,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>即時実行  
- クエリの遅延実行では、クエリの定義は、後で実行するクエリの変数に格納されます。 即時実行は、クエリがその定義の時点で実行されます。 クエリ結果の個々 の要素へのアクセスを必要とするメソッドを適用すると、実行がトリガーされます。 1 つの値を返す標準クエリ演算子のいずれかを使用して強制的に多くの場合、即時に実行されます。 例としては、 `Count`、 `Max`、 `Average`、および`First`します。 これらの標準クエリ演算子は、計算して単一の結果を返すために適用されるとすぐにクエリを実行します。 1 つの値を返す標準クエリ演算子の詳細については、[集計操作](aggregation-operations.md)、[要素操作](element-operations.md)、および[量指定子操作](quantifier-operations.md)を参照してください。  
+ クエリの遅延実行では、クエリの定義は、後で実行するクエリの変数に格納されます。 即時実行は、クエリがその定義の時点で実行されます。 クエリ結果の個々 の要素へのアクセスを必要とするメソッドを適用すると、実行がトリガーされます。 1 つの値を返す標準クエリ演算子のいずれかを使用して強制的に多くの場合、即時に実行されます。 例としては、 `Count`、 `Max`、 `Average`、および`First`します。 これらの標準クエリ演算子は、計算して単一の結果を返すために適用されるとすぐにクエリを実行します。 1 つの値を返す標準クエリ演算子の詳細については、次を参照してください。[集計操作](aggregation-operations.md)、[要素操作](element-operations.md)、および[量指定子操作](quantifier-operations.md)します。  
   
  次のクエリでは、整数の配列に偶数の数を返します。 クエリの定義は保存されず、および`numEvens`は、単純な`Integer`します。  
   
@@ -114,7 +114,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  前の例で`evensQuery3`クエリ変数しますですが、`evensList`一覧と`evensArray`は配列です。  
   
- 使用して`ToList`または`ToArray`強制的に即時に実行がすぐにクエリを実行し、1 つのコレクション オブジェクトで結果をキャッシュするシナリオに特に便利です。 これらのメソッドの詳細については、[データ型の変換](converting-data-types.md)を参照してください。  
+ 使用して`ToList`または`ToArray`強制的に即時に実行がすぐにクエリを実行し、1 つのコレクション オブジェクトで結果をキャッシュするシナリオに特に便利です。 これらのメソッドの詳細については、次を参照してください。[データ型の変換](converting-data-types.md)します。  
   
  使用して実行するクエリが発生することも、`IEnumerable`などのメソッド、<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>メソッド。  
   

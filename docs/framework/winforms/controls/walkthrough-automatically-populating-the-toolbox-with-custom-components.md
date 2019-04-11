@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力'
+title: 'チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338099"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: カスタム コンポーネントでツールボックスが自動的に入力
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定
 自動的に表示されます、コンポーネントは現在開いているソリューション内のプロジェクトで定義されている場合、**ツールボックス**操作は必要とします。 手動で設定することができます、**ツールボックス**を使用して、カスタム コンポーネントで、[選択ツールボックス項目 ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))が、**ツールボックス**を考慮に入れたソリューションの内の項目の次のすべての特性を持つ出力をビルドします。  
   
 -   実装<xref:System.ComponentModel.IComponent>;  
@@ -45,31 +45,31 @@ ms.locfileid: "57723973"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  という名前の Windows ベースのアプリケーション プロジェクトを作成する`ToolboxExample`(**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
+1. という名前の Windows ベースのアプリケーション プロジェクトを作成する`ToolboxExample`(**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
-2.  新しいコンポーネントをプロジェクトに追加します。 このプロジェクトに `DemoComponent`という名前を付けます。  
+2. 新しいコンポーネントをプロジェクトに追加します。 このプロジェクトに `DemoComponent`という名前を付けます。  
   
      詳細については、「[方法 :新しいプロジェクト項目の追加](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))します。  
   
-3.  プロジェクトをビルドします。  
+3. プロジェクトをビルドします。  
   
-4.  **ツール** メニューのをクリックして、**オプション**項目。 をクリックして**全般**下、 **Windows フォーム デザイナー**いることを確認し、 **AutoToolboxPopulate**にオプションが設定されている**True**します。  
+4. **ツール** メニューのをクリックして、**オプション**項目。 をクリックして**全般**下、 **Windows フォーム デザイナー**いることを確認し、 **AutoToolboxPopulate**にオプションが設定されている**True**します。  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>カスタム コンポーネントのインスタンスを作成します。  
  次の手順では、フォームにカスタム コンポーネントのインスタンスを作成します。 **ツールボックス**を自動的に新しいコンポーネントのアカウントは、これは他のコンポーネントまたはコントロールの作成と同じくらい簡単です。  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>カスタム コンポーネントのインスタンスを作成するには  
   
-1.  プロジェクトのフォームを開き、**フォーム デザイナー**します。  
+1. プロジェクトのフォームを開き、**フォーム デザイナー**します。  
   
-2.  **ツールボックス**と呼ばれる新しいタブをクリックします。 **ToolboxExample コンポーネント**します。  
+2. **ツールボックス**と呼ばれる新しいタブをクリックします。 **ToolboxExample コンポーネント**します。  
   
      このタブをクリックすると表示されます**と**します。  
   
     > [!NOTE]
     >  パフォーマンス上の理由から、コンポーネントの自動設定 領域で、**ツールボックス**カスタムのビットマップを表示しないと、<xref:System.Drawing.ToolboxBitmapAttribute>はサポートされていません。 カスタムのコンポーネントのアイコンを表示する、**ツールボックス**を使用して、**ツールボックス アイテムの選択**コンポーネントの読み込み ダイアログ ボックス。  
   
-3.  コンポーネントをフォームにドラッグします。  
+3. コンポーネントをフォームにドラッグします。  
   
      コンポーネントのインスタンスが作成されに追加、**コンポーネント トレイ**します。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "57723973"
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>アンロードとコンポーネントを再読み込みのツールボックスに影響を確認するには  
   
-1.  ソリューションからプロジェクトをアンロードします。  
+1. ソリューションからプロジェクトをアンロードします。  
   
      プロジェクトのアンロードの詳細については、次を参照してください。[方法。アンロードし、プロジェクトの再読み込み](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100))します。 保存するメッセージが表示されたら、選択**はい**します。  
   
-2.  新しい追加**Windows アプリケーション**プロジェクトがソリューションにします。 フォームを開いて、**デザイナー**します。  
+2. 新しい追加**Windows アプリケーション**プロジェクトがソリューションにします。 フォームを開いて、**デザイナー**します。  
   
      **ToolboxExample コンポーネント**前のプロジェクトからのタブがここではなくなっています。  
   
-3.  再読み込み、`ToolboxExample`プロジェクト。  
+3. 再読み込み、`ToolboxExample`プロジェクト。  
   
      **ToolboxExample コンポーネント** タブのようになりましたが再表示されます。  
   
@@ -94,7 +94,8 @@ ms.locfileid: "57723973"
  このチュートリアルで説明する、**ツールボックス**プロジェクトのコンポーネントを考慮に入れたが、**ツールボックス**コントロールになります。 追加と管理プロジェクトをソリューションから削除して、独自のカスタム コントロールを試します。  
   
 ## <a name="see-also"></a>関連項目
-- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [[全般] ([オプション] ダイアログ ボックス - [Windows フォーム デザイナー])](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [方法: [ツールボックス] タブを操作します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
-- [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
+- [ツールボックス項目 ダイアログ ボックス (Visual Studio) を選択します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)

@@ -51,7 +51,7 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- このコーディング スタイルでは、XML ツリーの構造の多くを視覚的に認識できません。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、このような XML ツリーの構築方法をサポートしていますが、別の方法として*関数型構築*もサポートしています。 Visual basic では、関数型構築は、XML ツリーを構築するのに XML リテラルを使用します。  
+ このコーディング スタイルでは、XML ツリーの構造の多くを視覚的に認識できません。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、このような XML ツリーの構築方法をサポートしていますが、別の方法として*関数型構築*もサポートしています。 Visual Basic では、関数型構築は、XML ツリーを構築するのに XML リテラルを使用します。  
   
  上記の例と同じ XML ツリーを [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の関数型構築を使用して構築すると、次のようになります。  
   

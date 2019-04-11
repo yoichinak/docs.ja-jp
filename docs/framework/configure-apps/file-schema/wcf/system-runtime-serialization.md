@@ -2,12 +2,12 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 5aa5d75e12852fe6a0e4e9a2eb4ae57d25d1022c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165894"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 <xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。  
@@ -43,15 +43,16 @@ ms.locfileid: "55272686"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|逆シリアル化時に使用される既知の型の追加を可能にします。|  
+|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|逆シリアル化時に使用される既知の型の追加を可能にします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|構成の最上位の要素。|  
+|[\<configuration > 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|構成の最上位の要素。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization>
 - [データ コントラクトの使用](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [既知のデータ コントラクト型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111476"
 ---
 # <a name="metadata-architecture-overview"></a>メタデータ アーキテクチャの概要
 Windows Communication Foundation (WCF) は、エクスポート、公開、取得、およびサービスのメタデータをインポートするためのさまざまなインフラストラクチャを提供します。 WCF サービスでは、メタデータを使用して、Svcutil.exe などのツールが、サービスにアクセスするためのクライアント コードを自動的に生成されるように、サービスのエンドポイントと対話する方法について説明します。  
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
   
 - <xref:System.ServiceModel.Description.MetadataLocation> のインスタンス。  
   
- <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> インスタンスは別のメタデータ交換 (MEX) エンドポイントをポイントし、<xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> インスタンスは HTTP URL を使用してメタデータ ドキュメントをポイントします。 WCF サービス エンドポイント、サービス コントラクト、バインディング、メッセージ交換パターン、メッセージおよびサービスによって実装されるエラー メッセージを記述する WSDL ドキュメントの使用をサポートします。 サービスで使用されるデータ型は、XML スキーマを使用して WSDL ドキュメントに記述されます。 詳細については、[スキーマのインポートとエクスポート](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)を参照してください。 WCF は、サービス動作、コントラクト動作、およびサービスの機能を拡張するバインド要素の WSDL 拡張エクスポートおよびインポートに使用できます。 詳細については、[WCF 拡張機能のカスタム メタデータのエクスポート](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)を参照してください。  
+ <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> インスタンスは別のメタデータ交換 (MEX) エンドポイントをポイントし、<xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> インスタンスは HTTP URL を使用してメタデータ ドキュメントをポイントします。 WCF サービス エンドポイント、サービス コントラクト、バインディング、メッセージ交換パターン、メッセージおよびサービスによって実装されるエラー メッセージを記述する WSDL ドキュメントの使用をサポートします。 サービスで使用されるデータ型は、XML スキーマを使用して WSDL ドキュメントに記述されます。 詳細については、次を参照してください。[スキーマのインポートとエクスポート](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)します。 WCF は、サービス動作、コントラクト動作、およびサービスの機能を拡張するバインド要素の WSDL 拡張エクスポートおよびインポートに使用できます。 詳細については、次を参照してください。 [WCF 拡張機能のカスタム メタデータのエクスポート](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)します。  
   
 ## <a name="exporting-service-metadata"></a>サービス メタデータのエクスポート  
  WCF では、*メタデータのエクスポート*はサービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に移し替えたりするプロセスです。 メタデータを <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスからエクスポートするには、<xref:System.ServiceModel.Description.MetadataExporter> 抽象クラスの実装を使用します。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> の実装によって、<xref:System.ServiceModel.Description.MetadataSet> インスタンスにカプセル化されたメタデータが生成されます。  
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
   
  MEX プロトコルを使用するメタデータ エンドポイントを追加するには、名前付き IMetadataExchange.WCF を定義するサービス コントラクトを使用するサービス ホストにサービス エンドポイントを追加、<xref:System.ServiceModel.Description.IMetadataExchange>このサービス コントラクト名を持つインターフェイスです。 Ws-metadataexchange のエンドポイント、または、MEX エンドポイントはで静的ファクトリ メソッドによって公開されている 4 つの既定のバインディングのいずれかで使用できます、<xref:System.ServiceModel.Description.MetadataExchangeBindings>クラス Svcutil.exe などの WCF ツールで使用される既定のバインディングを照合します。 また、カスタム バインドを使用して MEX メタデータ エンドポイントを構成することもできます。  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> は <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> を使用して、サービス内のすべてのサービス エンドポイント用のメタデータをエクスポートします。 サービスからメタデータをエクスポートする方法の詳細については、[エクスポートおよびインポートするメタデータ](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)を参照してください。  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> は <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> を使用して、サービス内のすべてのサービス エンドポイント用のメタデータをエクスポートします。 サービスからメタデータをエクスポートする方法の詳細については、次を参照してください。[エクスポートおよびインポートするメタデータ](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)します。  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> は、<xref:System.ServiceModel.Description.ServiceMetadataExtension> インスタンスを拡張としてサービス ホストに追加することで、サービス ホストを拡張します。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> により、メタデータ公開プロトコルを実装することができます。 また、<xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> を使用して、<xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> プロパティにアクセスすることにより、実行時にサービスのメタデータを取得できます。  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
 >
 > <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を構成ファイルに追加するか、またはエンドポイントと <xref:System.ServiceModel.Description.ServiceMetadataBehavior> の両方をコードに追加することにより、この問題を回避できます。  
 >
-> 追加の例については<xref:System.ServiceModel.Description.ServiceMetadataBehavior>、アプリケーション構成ファイルで、、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)を参照してください。 追加の例については<xref:System.ServiceModel.Description.ServiceMetadataBehavior>コードでは、次を参照してください。、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプル。  
+> 追加の例については<xref:System.ServiceModel.Description.ServiceMetadataBehavior>、アプリケーション構成ファイルで、次を参照してください。、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 追加の例については<xref:System.ServiceModel.Description.ServiceMetadataBehavior>コードでは、次を参照してください。、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプル。  
 
 > [!CAUTION]
 > それぞれに同じ名前の操作が含まれている 2 つ異なるサービス コントラクトを公開するサービスのメタデータを公開すると、例外がスローされます。 たとえば、Get(Car c) 操作を含む ICarService という名前のサービス コントラクトを公開するサービスがあり、その同じサービスが Get(Book b) 操作を含む IBookService という名前のサービス コントラクトを公開する場合、サービスのメタデータを生成するときに、例外がスローされるか、エラー メッセージが表示されます。 この問題を回避するには、次のいずれかの操作を実行します。  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
  エンドポイントのバインドが変化するイベントでサービス エンドポイントへのチャネルを作成する、または、同じコントラクトを使用しているがバインドが異なるエンドポイントへのチャネルを作成するために使用するバインドを動的に更新することができます。 <xref:System.ServiceModel.Description.MetadataResolver> 静的クラスを使用して、特定のコントラクトを実装しているサービス エンドポイントのメタデータを、実行時に取得またはインポートできます。 その後、インポートした <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> オブジェクトを使用して、必要なエンドポイントに対するクライアントまたはチャネル ファクトリを作成できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description>
 - [メタデータ形式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

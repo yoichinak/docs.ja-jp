@@ -2,12 +2,12 @@
 title: PnrpPeerResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 050f24bf-dc23-4181-ad1e-a4cce1dc89fb
-ms.openlocfilehash: 6d7727383509668172bb85487d2f9e05754d8e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34a6b44c080a68063549b10ccb8556ce76421f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129286"
 ---
 # <a name="pnrppeerresolverbindingelement"></a>PnrpPeerResolverBindingElement
 PnrpPeerResolverBindingElement  
@@ -26,7 +26,8 @@ class PnrpPeerResolverBindingElement : PeerResolverBindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096050"
 ---
 # <a name="understanding-protection-level"></a>保護レベルの理解
 `ProtectionLevel` プロパティは、<xref:System.ServiceModel.ServiceContractAttribute> クラス、<xref:System.ServiceModel.OperationContractAttribute> クラスなど、多くのクラスで使用されています。 このプロパティは、メッセージの一部または全体を保護する方法を制御します。 このトピックでは、Windows Communication Foundation (WCF) 機能とそのしくみについて説明します。  
   
- 保護レベルを設定する手順については、[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)を参照してください。  
+ 保護レベルを設定する手順については、次を参照してください。[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。  
   
 > [!NOTE]
 >  保護レベルは構成ではなく、コードでのみ設定できます。  
@@ -28,11 +28,11 @@ ms.locfileid: "54564632"
   
 -   メッセージのどの部分の保護にも、3 つの基本レベルがあります。 このプロパティは、必ず、<xref:System.Net.Security.ProtectionLevel> 列挙値の 1 つに設定されます。 以下に、これらの値を保護の弱いものから順に示します。  
   
-    -   `None`。  
+    -   `None`.  
   
-    -   `Sign`。 保護された部分はデジタル署名されます。 これによって、保護されたメッセージ部分に対する改ざんが確実に検出されます。  
+    -   `Sign`. 保護された部分はデジタル署名されます。 これによって、保護されたメッセージ部分に対する改ざんが確実に検出されます。  
   
-    -   `EncryptAndSign`。 メッセージ部分は、署名される前に機密性を保証するために暗号化されます。  
+    -   `EncryptAndSign`. メッセージ部分は、署名される前に機密性を保証するために暗号化されます。  
   
 -   専用の保護要件を設定する*アプリケーション データ*この機能を使用します。 たとえば、WS-Addressing ヘッダーは、インフラストラクチャ データであるため、`ProtectionLevel` の影響を受けません。  
   
@@ -95,6 +95,7 @@ ms.locfileid: "54564632"
  クライアントが `Price` メソッドを呼び出し、サービスから応答を受け取ると、例外をスローします。 例外をスローするのは、クライアントが `ProtectionLevel` で `ServiceContractAttribute` を指定していないため、<xref:System.Net.Security.ProtectionLevel.EncryptAndSign> メソッドを含むすべてのメソッドに既定値 (`Price`) を使用するからです。 ただし、保護レベルが <xref:System.Net.Security.ProtectionLevel.Sign> に設定された 1 つのメソッドがサービス コントラクトで定義されているため、サービスは、<xref:System.Net.Security.ProtectionLevel.Sign> レベルを使用して値を返します。 この場合、クライアントは、サービスからの応答を検証するときにエラーをスローします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -103,6 +104,6 @@ ms.locfileid: "54564632"
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [メッセージ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

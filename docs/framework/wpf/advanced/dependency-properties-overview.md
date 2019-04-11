@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188644"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
 
@@ -36,7 +36,7 @@ Windows Presentation Foundation (WPF) には、型の[プロパティ](../../../
 SDK リファレンスで、プロパティのマネージド リファレンス ページの「依存関係プロパティの情報」セクションの有無によって、どのプロパティが依存関係プロパティかを特定できます。 「依存関係プロパティの情報」セクションにはその依存関係プロパティの <xref:System.Windows.DependencyProperty> 識別子フィールドへのリンクがあり、そのプロパティに設定されるメタデータ オプションのリスト、クラスごとのオーバーライド情報、およびその他の詳細も示されています。
 
 ## <a name="dependency-properties-back-clr-properties"></a>依存関係プロパティによる CLR プロパティの補足
-依存関係プロパティおよび WPF プロパティ システムは、プライベート フィールドでプロパティをサポートする標準パターンの代替実装として、プロパティをサポートする型を提供することによって、プロパティ機能を拡張します。 この型の名前は <xref:System.Windows.DependencyProperty> です。 WPF プロパティ システムを定義するその他の重要な型は <xref:System.Windows.DependencyObject> です。 <xref:System.Windows.DependencyObject> は、依存関係プロパティを登録および所有できる基本クラスを定義します。
+依存関係プロパティおよび WPF プロパティ システムは、プライベート フィールドでプロパティをサポートする標準パターンの代替実装として、プロパティをサポートする型を提供することによって、プロパティ機能を拡張します。 この型の名前は <xref:System.Windows.DependencyProperty> です。 WPF プロパティ システムを定義するその他の重要な型は <xref:System.Windows.DependencyObject> です。 <xref:System.Windows.DependencyObject> 登録および依存関係プロパティを所有できる基本クラスを定義します。
 
 依存関係プロパティで使用される用語を次に示します。
 
@@ -91,7 +91,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 - [スタイル](#styles)
 
-- [アニメーション](#animations)
+- [Animations](#animations)
 
 - [メタデータのオーバーライド](#metadata-overrides)
 
@@ -108,7 +108,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 [!code-xaml[PropertiesOvwSupport#ResourcesReference](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page2.xaml#resourcesreference)]
 
-この特定のリソースは、[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)として参照されます (WPF XAML では、静的リソース参照または動的リソース参照を使用できます)。 動的リソース参照を使用するには、依存関係プロパティに設定している必要があるため、これは具体的には、WPF プロパティ システムによって有効になる動的リソース参照の使用方法になります。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。
+この特定のリソースは、[DynamicResource マークアップ拡張機能](dynamicresource-markup-extension.md)として参照されます (WPF XAML では、静的リソース参照または動的リソース参照を使用できます)。 動的リソース参照を使用するには、依存関係プロパティに設定している必要があるため、これは具体的には、WPF プロパティ システムによって有効になる動的リソース参照の使用方法になります。 詳しくは、「[XAML リソース](xaml-resources.md)」を参照してください。
 
 > [!NOTE]
 > リソースはローカル値として扱われます。つまり、別のローカル値を設定すると、リソース参照がなくなります。 詳細については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。
@@ -197,6 +197,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 - 依存関係プロパティは通常、インスタンスにアクセスできる呼び出し元がアクセス可能か、少なくとも検出可能なパブリック プロパティと見なされます。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
+
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
 - [読み取り専用の依存関係プロパティ](read-only-dependency-properties.md)
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)

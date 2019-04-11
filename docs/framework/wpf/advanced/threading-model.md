@@ -18,30 +18,26 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200351"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スレッド処理の難しさから開発者を保存する設計されています。 その結果、ほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを記述する必要はありません。 マルチ スレッド プログラムは複雑になり、デバッグが困難であるため、シングル スレッドのソリューションが存在する場合、回避する必要があります。  
   
  関係なくどの程度設計、ただし、いいえ[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]framework はすべての種類の問題に対してシングル スレッドのソリューションを提供できるようことになります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複数のスレッドを向上させるような状況はまだあります[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]応答性またはアプリケーションのパフォーマンス。 いくつかの背景情報を紹介した後は、このホワイト ペーパーは、このような状況のいくつか解説し、最後にいくつかの下位レベルの詳細の詳細についてはします。  
-  
 
-  
 > [!NOTE]
->  このトピックでは、スレッドを使用して、<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>メソッドの非同期呼び出し。 呼び出すことによって、非同期呼び出しを作成することも、<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>メソッドで、実行、<xref:System.Action>または<xref:System.Func%601>をパラメーターとして。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>メソッドを返します。 を<xref:System.Windows.Threading.DispatcherOperation>または<xref:System.Windows.Threading.DispatcherOperation%601>、を持つ、<xref:System.Windows.Threading.DispatcherOperation.Task%2A>プロパティ。 使用することができます、`await`でいずれかのキーワード、<xref:System.Windows.Threading.DispatcherOperation>または関連付けられた<xref:System.Threading.Tasks.Task>します。 
-  <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。  呼び出す<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>デッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行するタスクの並列化を参照してください。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>メソッドがありますを受け取るオーバー ロードを<xref:System.Action>または<xref:System.Func%601>をパラメーターとして。  使用することができます、 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 、デリゲートを渡すことで同期させるメソッドを呼び出します<xref:System.Action>または<xref:System.Func%601>します。  
+>  このトピックでは、スレッドを使用して、<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>メソッドの非同期呼び出し。 呼び出すことによって、非同期呼び出しを作成することも、<xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>メソッドで、実行、<xref:System.Action>または<xref:System.Func%601>をパラメーターとして。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>メソッドを返します。 を<xref:System.Windows.Threading.DispatcherOperation>または<xref:System.Windows.Threading.DispatcherOperation%601>、を持つ、<xref:System.Windows.Threading.DispatcherOperation.Task%2A>プロパティ。 使用することができます、`await`でいずれかのキーワード、<xref:System.Windows.Threading.DispatcherOperation>または関連付けられた<xref:System.Threading.Tasks.Task>します。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。  呼び出す<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>デッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行するタスクの並列化を参照してください。  <xref:System.Windows.Threading.Dispatcher.Invoke%2A>メソッドがありますを受け取るオーバー ロードを<xref:System.Action>または<xref:System.Func%601>をパラメーターとして。  使用することができます、 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 、デリゲートを渡すことで同期させるメソッドを呼び出します<xref:System.Action>または<xref:System.Func%601>します。  
   
 <a name="threading_overview"></a>   
 ## <a name="overview-and-the-dispatcher"></a>概要と、ディスパッチャー  
  通常、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションは、2 つのスレッドで開始: レンダリングおよび管理用に別の処理の 1 つ、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]します。 レンダリング スレッドが効率的に実行中にバック グラウンドで非表示、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドの入力を受け取り、イベントを処理、画面を描画およびアプリケーション コードを実行します。 ほとんどのアプリケーションは、1 つを使用して[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド、いくつかの状況ではいくつかの使用を推奨します。 この例を使用して後で説明します。  
   
- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド キューの作業と呼ばれるオブジェクト内の項目を<xref:System.Windows.Threading.Dispatcher>します。 
-  <xref:System.Windows.Threading.Dispatcher> は作業項目を優先順位に従って選択し、それぞれを最後まで実行します。  すべて[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドが少なくとも 1 つあります<xref:System.Windows.Threading.Dispatcher>、および各<xref:System.Windows.Threading.Dispatcher>正確に 1 つのスレッドで作業項目を実行することができます。  
+ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド キューの作業と呼ばれるオブジェクト内の項目を<xref:System.Windows.Threading.Dispatcher>します。 <xref:System.Windows.Threading.Dispatcher> は作業項目を優先順位に従って選択し、それぞれを最後まで実行します。  すべて[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドが少なくとも 1 つあります<xref:System.Windows.Threading.Dispatcher>、および各<xref:System.Windows.Threading.Dispatcher>正確に 1 つのスレッドで作業項目を実行することができます。  
   
  最大化するの応答性の高い、使いやすいアプリケーションを構築することが重要です、<xref:System.Windows.Threading.Dispatcher>小さな作業項目を保持することでスループット。 により、この項目は決して内に留まっている古い取得、<xref:System.Windows.Threading.Dispatcher>キュー処理を待機しています。 ユーザーが入力と応答の間に遅延のストレスを感じることができます。  
   
@@ -101,7 +97,7 @@ ms.locfileid: "58125682"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- このメソッドは、[次へ] の数が奇数の素数を確認します。 メソッドを直接更新が素数を場合、 `bigPrime` <xref:System.Windows.Controls.TextBlock>探索を反映するようにします。 これは、計算は、コンポーネントの作成に使用されたものと同じスレッドで発生しているため実行できます。 計算に個別のスレッドを使用して選択したより複雑な同期メカニズムを使用しの更新プログラムを実行する必要が、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 このような状況を次にについて説明します。  
+ このメソッドは、[次へ] の数が奇数の素数を確認します。 メソッドを直接更新が素数を場合、`bigPrime`<xref:System.Windows.Controls.TextBlock>探索を反映するようにします。 これは、計算は、コンポーネントの作成に使用されたものと同じスレッドで発生しているため実行できます。 計算に個別のスレッドを使用して選択したより複雑な同期メカニズムを使用しの更新プログラムを実行する必要が、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 このような状況を次にについて説明します。  
   
  このサンプルの完全なソース コードについては、[実行時間の長い計算のサンプルを使用して、シングル スレッド アプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -147,7 +143,7 @@ ms.locfileid: "58125682"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] エクスプ ローラーは、この方法で動作します。 新しい各エクスプ ローラー ウィンドウが元のプロセスが属しているが、独立したスレッドの制御下で作成されます。  
   
- 使用して、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame>コントロール、Web ページを表示します。 単純な簡単に作成できます[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]に置き換えてください。 重要な機能を始めます。 新しいエクスプ ローラー ウィンドウを開くことができます。 ユーザーが、「新しい期間」をクリックするとボタン、個別のスレッドで、ウィンドウのコピーを起動します。 これにより、windows のいずれかで実行時間の長い、またはブロックしている操作は、その他のすべての windows をロックしません。  
+ 使用して、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame>コントロール、Web ページを表示します。 単純な簡単に作成できます[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]に置き換えてください。 重要な機能を始めます。 新しいエクスプ ローラー ウィンドウを開くことができます。 ユーザーが、「新しい期間」をクリックするとボタン、個別のスレッドで、ウィンドウのコピーを起動します。 これにより、windows のいずれかで実行時間の長い、またはブロックしている操作は、その他のすべての windows をロックしません。  
   
  実際には、Web ブラウザーのモデルには、独自の複雑なスレッド モデルがあります。 ほとんどの読者にとって馴染み深い必要があるため、これを選択しました。  
   
@@ -220,4 +216,5 @@ ms.locfileid: "58125682"
  タスクを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]させず、すべての場所で再入をブロックしないため、メモリ リークの予期しない再入を回避するためには。  
   
 ## <a name="see-also"></a>関連項目
+
 - [実行時間の長い計算のサンプルを使用して、シングル スレッド アプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)

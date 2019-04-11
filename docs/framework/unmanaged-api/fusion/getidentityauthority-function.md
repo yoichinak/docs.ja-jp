@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09d6284d7042dfebee004c4cb18d8ef3752c325c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3090887d3c670b2784b7b40c7d63832715596c3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141519"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority 関数
 ポインターを取得、 [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)コード オブジェクトのキーを管理するインスタンス。  
@@ -44,8 +44,9 @@ HRESULT GetIdentityAuthority (
   
  **ヘッダー:** Isolation.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IIdentityAuthority インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
 - [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
