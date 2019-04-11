@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332691"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194066"
   
  解決方法は 2 つの部分で構成されます。  
   
-1.  まず、クライアント アプリケーションを [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。 それには、起動時に [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `SetProcessDPIAware` を呼び出します。 マネージド コードで、次の宣言によりこの関数を使用できるようになります。  
+1. まず、クライアント アプリケーションを [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]対応にします。 それには、起動時に [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `SetProcessDPIAware` を呼び出します。 マネージド コードで、次の宣言によりこの関数を使用できるようになります。  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      この関数は、プロセス全体を dpi 対応では、プロセスに属するすべての windows がスケーリングされたいないことを意味します。 [蛍光ペン サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)、たとえば、強調表示の四角形を構成する 4 つのウィンドウは、UI オートメーション、論理座標ではないから取得した物理座標にあります。 サンプルが dpi 対応でない場合、強調表示はデスクトップであるため、96 dpi ではない環境では正しく配置論理座標で描画します。  
   
-2.  カーソルの座標を取得するには、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `GetPhysicalCursorPos`を呼び出します。 次の例に、この関数を宣言して使用する方法を示します。  
+2. カーソルの座標を取得するには、 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 関数 `GetPhysicalCursorPos`を呼び出します。 次の例に、この関数を宣言して使用する方法を示します。  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
