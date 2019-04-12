@@ -173,7 +173,7 @@ ms.locfileid: "59177412"
 [!code-csharp[DialogBoxSample#OpenMarginsDialogCODEBEHIND4](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs#openmarginsdialogcodebehind4)]
 [!code-vb[DialogBoxSample#OpenMarginsDialogCODEBEHIND4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb#openmarginsdialogcodebehind4)]  
   
- ここでは、コードは、既定の情報 (現在の余白) をダイアログ ボックスに渡しています。 設定されることも、 <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>  ダイアログ ボックスが表示されているウィンドウへの参照を持つプロパティです。 すべてのダイアログ ボックスに共通するウィンドウの状態関連の動作を提供するダイアログ ボックスの所有者を設定するは常に一般に、(を参照してください[WPF Windows 概要](wpf-windows-overview.md)詳細については)。  
+ ここでは、コードは、既定の情報 (現在の余白) をダイアログ ボックスに渡しています。 設定されることも、 <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType>  ダイアログ ボックスが表示されているウィンドウへの参照を持つプロパティです。 すべてのダイアログ ボックスに共通するウィンドウの状態関連の動作を提供するダイアログ ボックスの所有者を設定するは常に一般に、(を参照してください[WPF ウィンドウの概要](wpf-windows-overview.md)詳細については)。  
   
 > [!NOTE]
 >  サポートするために所有者を指定する必要があります[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ダイアログ ボックスのための自動化 (を参照してください[UI オートメーションの概要](../../ui-automation/ui-automation-overview.md))。  

@@ -46,6 +46,6 @@ WCF は、いずれかで展開された部分的に信頼されたアプリケ�
 ## <a name="see-also"></a>関連項目
 
 - [コード アクセス セキュリティ](../../misc/code-access-security.md)
-- [Windows Presentation Foundation ブラウザーによってホストされるアプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [WPF XAML ブラウザー アプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
 - [部分信頼](partial-trust.md)
 - [ASP.NET の信頼レベルとポリシー ファイル](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))

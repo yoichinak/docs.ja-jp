@@ -68,7 +68,7 @@ ms.locfileid: "59175793"
   
 -   <xref:System.Windows.Application>:[アプリケーション管理の概要](../app-development/application-management-overview.md)します。  
   
--   <xref:System.Windows.Window>:[WPF Windows 概要](../app-development/wpf-windows-overview.md)します。  
+-   <xref:System.Windows.Window>:[WPF ウィンドウの概要](../app-development/wpf-windows-overview.md)します。  
   
 -   <xref:System.Windows.Controls.Page>、 <xref:System.Windows.Navigation.NavigationWindow>、および<xref:System.Windows.Controls.Frame>:[ナビゲーションの概要](../app-development/navigation-overview.md)します。  
   

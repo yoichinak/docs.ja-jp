@@ -65,7 +65,7 @@ GeometryDrawing
   
  その他の<xref:System.Windows.Media.Geometry>などのクラス<xref:System.Windows.Media.PathGeometry>曲線や円弧を作成してより複雑な図形を作成することができます。 詳細については<xref:System.Windows.Media.Geometry>、オブジェクトを参照してください、[ジオメトリの概要](geometry-overview.md)します。  
   
- 使用していない図形を描画するには、他の方法の詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[図形と基本描画の WPF の概要](shapes-and-basic-drawing-in-wpf-overview.md)します。  
+ 使用していない図形を描画するには、他の方法の詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)します。  
   
 <a name="drawingimagessection"></a>   
 ## <a name="draw-an-image"></a>イメージの描画  

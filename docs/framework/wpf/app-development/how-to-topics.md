@@ -23,4 +23,4 @@ ms.locfileid: "57358588"
  [UI であるアドインを作成する](how-to-create-an-add-in-that-is-a-ui.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF のアドインの概要](wpf-add-ins-overview.md)
+ [WPF アドインの概要](wpf-add-ins-overview.md)

@@ -29,7 +29,7 @@ ms.locfileid: "57370710"
  [移行と相互運用性](migration-and-interoperability.md)  
  [パフォーマンス](performance.md)  
  [スレッド モデル](threading-model.md)  
- [WPF のアドインの概要](../app-development/wpf-add-ins-overview.md)  
+ [WPF アドインの概要](../app-development/wpf-add-ins-overview.md)  
  [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)  
   
 ## <a name="related-sections"></a>関連項目
