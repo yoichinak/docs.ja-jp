@@ -17,7 +17,7 @@ ms.locfileid: "57707561"
 Windows フォームの <xref:System.Windows.Forms.FontDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは同じ**フォント** ダイアログ ボックスが、Windows オペレーティング システムによって公開されています。 コンポーネントが継承、<xref:System.Windows.Forms.CommonDialog>クラス。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [FontDialog コンポーネントの概要](fontdialog-component-overview-windows-forms.md)  
+ [FontDialog コンポーネントの概要 (Windows フォーム)](fontdialog-component-overview-windows-forms.md)  
  一般的な概念が導入されています、<xref:System.Windows.Forms.FontDialog>コンポーネントは、構成済みのダイアログ ボックスを表示するために使用します。 ユーザーは、フォントとその設定を操作するのにダイアログ ボックスを使用できます。  
   
  [方法: FontDialog コンポーネントでのフォントの一覧を表示します。](how-to-show-a-font-list-with-the-fontdialog-component.md)  

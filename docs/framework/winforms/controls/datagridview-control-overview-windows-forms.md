@@ -54,7 +54,7 @@ ms.locfileid: "59112880"
  <xref:System.Windows.Forms.DataGridView>コントロール、構成可能かつ拡張可能なおよび多くのプロパティ、メソッド、およびその外観と動作をカスタマイズするイベントを提供します。 表形式のデータを表示するには、Windows フォーム アプリケーションを設定する場合は、使用を検討して、<xref:System.Windows.Forms.DataGridView>前に他のユーザー コントロール (たとえば、 <xref:System.Windows.Forms.DataGrid>)。 読み取り専用の値を小さなグリッドを表示する場合、または数百万件のレコードのテーブルを編集するユーザーを有効にする場合、<xref:System.Windows.Forms.DataGridView>コントロールで、簡単にプログラミング可能なメモリ効率の高いソリューションを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DataGridView コントロール テクノロジの概要](datagridview-control-technology-summary-windows-forms.md)  
+ [DataGridView コントロール テクノロジの概要 (Windows フォーム)](datagridview-control-technology-summary-windows-forms.md)  
  要約<xref:System.Windows.Forms.DataGridView>概念と、関連するクラスの使用を制御します。  
   
  [DataGridView コントロールのアーキテクチャ](datagridview-control-architecture-windows-forms.md)  

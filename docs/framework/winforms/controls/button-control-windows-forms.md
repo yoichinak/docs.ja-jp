@@ -16,7 +16,7 @@ ms.locfileid: "57704987"
 Windows フォームの `Button` コントロールを使用すると、ユーザーはそれをクリックしてアクションを実行できます。 `Button` コントロールには、テキストとイメージの両方を表示できます。 ボタンをクリックすると、ボタンを実際に押して離したかのように表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Button コントロールの概要](button-control-overview-windows-forms.md)  
+ [Button コントロールの概要 (Windows フォーム)](button-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)  

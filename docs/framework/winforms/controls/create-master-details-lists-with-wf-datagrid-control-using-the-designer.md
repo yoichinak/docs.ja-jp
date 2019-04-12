@@ -55,6 +55,6 @@ ms.locfileid: "59332080"
 ## <a name="see-also"></a>関連項目
 
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
-- [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
+- [DataGrid コントロールの概要 (Windows フォーム)](datagrid-control-overview-windows-forms.md)
 - [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

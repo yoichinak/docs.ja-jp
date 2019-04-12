@@ -21,7 +21,7 @@ ms.locfileid: "59227121"
 Windows フォーム`ComboBox`ドロップダウン コンボ ボックスにデータを表示するコントロールを使用します。 既定では、`ComboBox`コントロールは、2 つの部分が表示されます。 最上位部分は、ユーザーがリスト項目を入力できるテキスト ボックス。 2 番目の部分は、元のユーザーが選択できる 1 つの項目の一覧を表示するリスト ボックスです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)  
+ [ComboBox コントロールの概要 (Windows フォーム)](combobox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: ComboBox コントロールにサイズ変更可能なテキストを作成する](how-to-create-variable-sized-text-in-a-combobox-control.md)  

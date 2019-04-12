@@ -77,4 +77,4 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
 - [方法: ショートカット メニューを Windows フォーム NotifyIcon コンポーネントに関連付ける](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
-- [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)
+- [NotifyIcon コンポーネントの概要 (Windows フォーム)](notifyicon-component-overview-windows-forms.md)

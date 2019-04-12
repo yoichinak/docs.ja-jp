@@ -19,7 +19,7 @@ ms.locfileid: "57720472"
  このセクションのトピックでは、`BindingNavigator` コントロールの概要について説明し、コントロール移動データを使用して <xref:System.Data.DataSet> を移動する方法について、詳細な手順を示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [BindingNavigator コントロールの概要](bindingnavigator-control-overview-windows-forms.md)  
+ [BindingNavigator コントロールの概要 (Windows フォーム)](bindingnavigator-control-overview-windows-forms.md)  
  ユーザーがデータ ソースの項目を移動できるようにする `BindingNavigator` コントロールの一般的な概念を紹介します。  
   
  [方法: Windows フォームの BindingNavigator コントロールを使用してデータを移動します。](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  

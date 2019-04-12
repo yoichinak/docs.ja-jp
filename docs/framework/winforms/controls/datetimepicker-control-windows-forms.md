@@ -18,7 +18,7 @@ ms.locfileid: "57704363"
 Windows フォーム`DateTimePicker`コントロールによりユーザーは日付または時刻の一覧から 1 つの項目を選択します。 2 つの部分に表示される日付の表示に使用する場合: テキスト、および一覧の横の下向きの矢印をクリックしたときに表示されるグリッドで表される日付のドロップダウン リスト。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DateTimePicker コントロールの概要](datetimepicker-control-overview-windows-forms.md)  
+ [DateTimePicker コントロールの概要 (Windows フォーム)](datetimepicker-control-overview-windows-forms.md)  
  一般的な概念が導入されています、`DateTimePicker`コントロールで、日付または時刻の一覧から 1 つの項目を選択することができます。  
   
  [方法: Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示します。](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  

@@ -24,7 +24,7 @@ ms.locfileid: "57724428"
 Windows フォーム`CheckedListBox`コントロールがこのような項目の一覧を表示、<xref:System.Windows.Forms.ListBox>制御、および一覧の項目の横にチェック マークを表示できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)  
+ [CheckedListBox コントロールの概要 (Windows フォーム)](checkedlistbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォーム CheckedListBox コントロールでチェックされた項目を決定します。](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  

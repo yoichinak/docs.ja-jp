@@ -62,6 +62,6 @@ ms.locfileid: "59217420"
   
 ## <a name="see-also"></a>関連項目
 
-- [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
+- [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)
 - [DataGridView コントロールのアーキテクチャ](datagridview-control-architecture-windows-forms.md)
 - [接続情報の保護](../../data/adonet/protecting-connection-information.md)

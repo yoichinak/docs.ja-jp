@@ -89,4 +89,4 @@ ms.locfileid: "59175293"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
+- [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)

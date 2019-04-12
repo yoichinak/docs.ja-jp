@@ -37,7 +37,7 @@ Windows フォームため<xref:System.Windows.Forms.TreeView>コントロール
 ## <a name="see-also"></a>関連項目
 
 - [TreeView コントロール](treeview-control-windows-forms.md)
-- [TreeView コントロールの概要](treeview-control-overview-windows-forms.md)
+- [TreeView コントロールの概要 (Windows フォーム)](treeview-control-overview-windows-forms.md)
 - [方法: Windows フォーム TreeView コントロールのアイコンを設定する](how-to-set-icons-for-the-windows-forms-treeview-control.md)
 - [方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [方法: クリックされた TreeView ノードを判別する](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
