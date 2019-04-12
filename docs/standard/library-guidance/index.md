@@ -25,7 +25,7 @@ ms.locfileid: "53128071"
 > * **信頼されている** - .NET ライブラリは、セキュリティのベスト プラクティスを使用して NuGet に発行することにより、開発者から信頼されています。
 
 > [!div class="nextstepaction"]
-> [開始するには](./get-started.md)
+> [高品質な .NET ライブラリの作成の概要](./get-started.md)
 
 ## <a name="types-of-recommendations"></a>推奨事項の種類
 

@@ -54,7 +54,7 @@ ms.locfileid: "54415404"
 * [.NET の基本型](base-types/index.md)
 * [コレクション](collections/index.md)
 * [日付、時刻、およびタイム ゾーン](datetime/index.md)
-* [非同期プログラミング](async.md)
+* [非同期の概要](async.md)
 
 さらに、.NET の主要な 3 つの言語については、各言語のガイドを参照してください。
 

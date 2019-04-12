@@ -45,7 +45,7 @@ ms.locfileid: "59086846"
   
  **関連トピック**  
   
- 詳細については<xref:System.Windows.Media.SolidColorBrush>し、その他の例を参照してください、[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)の概要。  
+ 詳細については<xref:System.Windows.Media.SolidColorBrush>し、その他の例を参照してください、[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)の概要。  
   
  このコード例が示されている例の一部、<xref:System.Windows.Media.SolidColorBrush>クラス。 完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」をご覧ください。  
   
