@@ -94,5 +94,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

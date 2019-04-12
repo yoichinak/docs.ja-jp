@@ -15,7 +15,7 @@ ms.locfileid: "59208281"
 デバッグ構成とリリース構成は完全に異なるため、ターゲット プラットフォームでユニバーサル Windows プラットフォーム アプリのリリース ビルドをテストすることは重要です。 既定では、デバッグ構成は .NET Core ランタイムを使用してアプリをコンパイルしますが、リリース構成は .NET ネイティブを使用してアプリをネイティブ コードにコンパイルします。  
   
 > [!IMPORTANT]
->  処理する方法については、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、および[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)する可能性のある例外アプリのリリース バージョンをテストするときに発生しを参照してください"手順 4。メタデータの欠落を手動で解決: で、 [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md)トピックだけでなく[リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)と[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+>  処理する方法については、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、および[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)する可能性のある例外アプリのリリース バージョンをテストするときに発生しを参照してください"手順 4。メタデータの欠落を手動で解決: で、 [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)トピックだけでなく[リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)と[ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>デバッグ ビルドとリリース ビルド  
  .NET Core ランタイムに対してデバッグ ビルドを実行した場合は、ネイティブ コードにコンパイルされません。 このため、一般にランタイムによって提供されるすべてのサービスをアプリで使用することができます。  
@@ -62,4 +62,4 @@ Additional information: Value does not fall within the expected range.
 ## <a name="see-also"></a>関連項目
 
 - [.NET ネイティブの Windows ユニバーサル アプリのデバッグ](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)

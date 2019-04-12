@@ -20,7 +20,7 @@ ms.locfileid: "55739112"
  [はじめに](../../framework/get-started/index.md)  
  .NET Framework の包括的な概要と、追加リソースへのリンクを説明します。  
   
- [クラス ライブラリの概要](../../standard/class-library-overview.md)  
+ [.NET クラス ライブラリの概要](../../standard/class-library-overview.md)  
  クラス、インターフェイス、および高速化し、開発プロセスを最適化およびシステム機能へのアクセスを提供するのに役立つ値の型が導入されています。  
   
  [開発ガイド](../../framework/development-guide.md)  

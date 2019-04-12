@@ -51,4 +51,4 @@ ms.locfileid: "59169079"
 - [MissingInteropDataException クラス](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)
 - [MissingMetadataException クラス](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
 - [MissingRuntimeArtifactException クラス](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)

@@ -63,7 +63,7 @@ NuGet 上の自分のライブラリを使用して、アナライザーとコ�
 .NET Compiler Platform SDK の概念の詳細については、次の 5 つのトピックを参照してください。
 
 - [構文ビジュアライザーでコードを調べる](syntax-visualizer.md)
-- [コンパイラ API モデルを理解する](compiler-api-model.md)
+- [.NET Compiler Platform SDK の概念とオブジェクト モデル](compiler-api-model.md)
 - [構文の使用](work-with-syntax.md)
 - [セマンティクスの使用](work-with-semantics.md)
 - [ワークスペースの使用](work-with-workspace.md)

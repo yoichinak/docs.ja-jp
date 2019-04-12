@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

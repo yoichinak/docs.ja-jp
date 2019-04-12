@@ -52,7 +52,7 @@ ms.locfileid: "59207319"
  <xref:System.Data.DataTable>  
  参照情報を提供、 **DataTable**オブジェクト。  
   
- [クラス ライブラリの概要](../../../../../docs/standard/class-library-overview.md)  
+ [.NET クラス ライブラリの概要](../../../../../docs/standard/class-library-overview.md)  
  .NET Framework クラス ライブラリの概要を説明など、**システム**名前空間、2 番目のレベルの名前空間と**System.Data**。  
   
 ## <a name="see-also"></a>関連項目

@@ -63,7 +63,7 @@ ms.locfileid: "34457308"
 ## <a name="in-this-section"></a>このセクションの内容  
  .NET ネイティブ コード コンパイルを使用したアプリ開発の詳細については、次のトピックを参照してください。  
   
--   [.NET ネイティブ コード コンパイルの概要: 開発者向けチュートリアル](../../../docs/framework/net-native/getting-started-with-net-native.md)  
+-   [.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)  
   
 -   [.NET ネイティブとコンパイル:](../../../docs/framework/net-native/net-native-and-compilation.md) .NET ネイティブがプロジェクトをネイティブ コードにコンパイルする方法を取り上げます。  
   

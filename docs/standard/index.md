@@ -29,7 +29,7 @@ ms.locfileid: "54415404"
 
 ## <a name="new-to-net-core"></a>.NET Core を初めて使う
 
-.NET Core を初めて使用する場合は、[「.NET Core の概要」](../core/get-started.md)を参照してください。
+.NET Core を初めて使用する場合は、[.NET Core の概要](../core/get-started.md)を参照してください。
 
 ## <a name="new-to-net-standard"></a>.NET Standard を初めて使う
 
