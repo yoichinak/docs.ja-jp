@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170327"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517240"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>バイナリ データの操作 (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリを使用すると、取得し、更新からのバイナリ データ、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]次の方法のいずれかでフィードします。  
@@ -30,7 +30,7 @@ ms.locfileid: "59170327"
 ## <a name="entity-metadata"></a>エンティティ メタデータ  
  メディア リソース ストリームが関連付けられているエンティティは、データ サービス メタデータで `HasStream` 属性によって示されます。この属性は、メディア リンク エントリであるエンティティ型に適用されます。 次の例では、`PhotoInfo`エンティティがメディア リンク エントリで示される、関連するメディア リソースがある、`HasStream`属性。  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  このトピックのその他の例では、メディア リソース ストリームにアクセスし変更する方法を紹介します。 使用して、.NET Framework クライアント アプリケーションでメディア リソース ストリームを使用する方法の完全な例については、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリは、記事をご覧ください[クライアントからメディア リソースの Stream へのアクセス](https://go.microsoft.com/fwlink/?LinkID=201637)します。  
   
@@ -43,14 +43,14 @@ ms.locfileid: "59170327"
 ### <a name="getting-the-uri-of-the-binary-stream"></a>バイナリ ストリームの URI の取得  
  画像やその他のメディア ファイルなど、取得するメディア リソースの種類によっては、アプリケーションでメディア リソースの URI を使用する方がバイナリ データ ストリーム自体を処理するよりも簡単です。 特定のメディア リンク エントリに関連付けられているリソース ストリームの URI を取得するには、そのエンティティを追跡している <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> インスタンスの <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出す必要があります。 次の例は、クライアントで新しい画像を作成するために使用するメディア リソース ストリームの URI を取得するために <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> メソッドを呼び出す方法を示しています。  
   
- [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photowindow.xaml.cs#getreadstreamuri)]
- [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photowindow.xaml.vb#getreadstreamuri)]  
+ [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
+ [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
 ### <a name="downloading-the-binary-resource-stream"></a>バイナリ リソース ストリームのダウンロード  
  バイナリ リソース ストリームを取得する場合、メディア リンク エントリを追跡している <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> インスタンスの <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出す必要があります。 このメソッドは、<xref:System.Data.Services.Client.DataServiceStreamResponse> オブジェクトを返すデータ サービスに要求を送信します。このオブジェクトは、リソースが含まれるストリームを参照します。 アプリケーションでバイナリ リソースを <xref:System.IO.Stream> として取得する必要がある場合にこのメソッドを使用します。 次の例は、クライアントで新しい画像を作成するために使用するストリームを取得するために <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> メソッドを呼び出す方法を示しています。  
   
- [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria streaming client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
- [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria streaming client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
+ [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
+ [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
 >  バイナリ ストリームを含む応答メッセージの Content-Length ヘッダーは、このデータ サービスによって設定されません。 この値は、バイナリ データ ストリームの実際の長さを反映していない場合があります。  
@@ -58,8 +58,8 @@ ms.locfileid: "59170327"
 ### <a name="uploading-a-media-resource-as-a-stream"></a>ストリームとしてのメディア リソースのアップロード  
  メディア リソースを挿入または更新するには、エンティティを追跡している <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> インスタンスの <xref:System.Data.Services.Client.DataServiceContext> メソッドを呼び出します。 このメソッドは、指定ストリームから読み込まれたメディア リソースを含むデータ サービスに要求を送信します。 次の例は、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> メソッドを呼び出してデータ サービスに画像を送信する方法を示しています。  
   
- [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photodetailswindow.xaml.cs#setsavestream)]
- [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photodetailswindow.xaml.vb#setsavestream)]  
+ [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
+ [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
  この例では、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> パラメーターに値 `true` を指定して `closeStream` メソッドを呼び出しています。 したがって、必ず、バイナリ データがデータ サービスにアップロードされた後で <xref:System.Data.Services.Client.DataServiceContext> がストリームを閉じます。  
   
