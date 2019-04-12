@@ -53,5 +53,5 @@ ms.locfileid: "59314023"
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [ListView コントロール](listview-control-windows-forms.md)
-- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
 - [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

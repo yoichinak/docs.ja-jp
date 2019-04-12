@@ -103,7 +103,7 @@ ms.locfileid: "59336071"
   
 ## <a name="see-also"></a>関連項目
 
-- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
+- [TabControl コントロールの概要 (Windows フォーム)](tabcontrol-control-overview-windows-forms.md)
 - [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
 - [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
 - [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

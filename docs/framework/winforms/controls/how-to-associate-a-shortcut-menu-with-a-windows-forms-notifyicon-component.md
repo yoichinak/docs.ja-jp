@@ -132,4 +132,4 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
 - [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon コンポーネント](notifyicon-component-windows-forms.md)
-- [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)
+- [NotifyIcon コンポーネントの概要 (Windows フォーム)](notifyicon-component-overview-windows-forms.md)

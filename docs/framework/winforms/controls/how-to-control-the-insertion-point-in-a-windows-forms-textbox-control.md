@@ -64,7 +64,7 @@ Windows フォームと<xref:System.Windows.Forms.TextBox>コントロールが�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
+- [TextBox コントロールの概要 (Windows フォーム)](textbox-control-overview-windows-forms.md)
 - [方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [方法: 読み取り専用テキスト ボックスを作成する](how-to-create-a-read-only-text-box-windows-forms.md)
 - [方法: 文字列に引用符を挿入する](how-to-put-quotation-marks-in-a-string-windows-forms.md)

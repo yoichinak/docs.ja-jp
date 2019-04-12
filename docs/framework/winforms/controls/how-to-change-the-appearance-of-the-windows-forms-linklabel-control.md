@@ -127,6 +127,6 @@ ms.locfileid: "59322018"
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
-- [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
+- [LinkLabel コントロールの概要 (Windows フォーム)](linklabel-control-overview-windows-forms.md)
 - [方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

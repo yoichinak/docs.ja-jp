@@ -38,4 +38,4 @@ ms.locfileid: "59091253"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolStripButton>
-- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)

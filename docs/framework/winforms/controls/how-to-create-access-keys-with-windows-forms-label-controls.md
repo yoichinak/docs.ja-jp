@@ -66,5 +66,5 @@ Windows フォーム<xref:System.Windows.Forms.Label>他のコントロールの
 ## <a name="see-also"></a>関連項目
 
 - [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Label コントロールの概要](label-control-overview-windows-forms.md)
+- [Label コントロールの概要 (Windows フォーム)](label-control-overview-windows-forms.md)
 - [Label コントロール](label-control-windows-forms.md)

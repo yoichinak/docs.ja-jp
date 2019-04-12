@@ -105,7 +105,7 @@ ms.locfileid: "59332574"
   
 ## <a name="see-also"></a>関連項目
 
-- [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
+- [DataGrid コントロールの概要 (Windows フォーム)](datagrid-control-overview-windows-forms.md)
 - [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)

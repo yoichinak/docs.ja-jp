@@ -33,5 +33,5 @@ Windows フォーム<xref:System.Windows.Forms.TreeView>コントロールは、
 ## <a name="see-also"></a>関連項目
 
 - [TreeView コントロール](treeview-control-windows-forms.md)
-- [TreeView コントロールの概要](treeview-control-overview-windows-forms.md)
+- [TreeView コントロールの概要 (Windows フォーム)](treeview-control-overview-windows-forms.md)
 - [ContextMenuStrip コントロール](contextmenustrip-control.md)

@@ -37,4 +37,4 @@ Windows フォームに項目を追加するプロセス<xref:System.Windows.For
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView コントロール](listview-control-windows-forms.md)
-- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
