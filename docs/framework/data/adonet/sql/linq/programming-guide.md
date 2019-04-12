@@ -46,5 +46,5 @@ ms.locfileid: "56093445"
  [LINQ の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
  SQL を使用する LINQ について学習を開始するのに役立つリソースを提供します。C#します。
 
- [LINQ の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [LINQ (Visual Basic) の概要](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  LINQ to SQL は Visual Basic を使用して学習を開始するのに役立つリソースを提供します。

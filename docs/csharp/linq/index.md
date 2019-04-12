@@ -28,7 +28,7 @@ ms.locfileid: "50197389"
 
 - クエリ式内の変数はすべて厳密に型指定されますが、多くの場合、型はコンパイラが推測できるため、明示的に指定する必要はありません。 詳細については、「[LINQ クエリ操作での型の関係](../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)」を参照してください。
 
-- クエリは、たとえば `foreach` ステートメントでクエリ変数を反復処理するまで実行されません。 詳細については、「[LINQ クエリの概要](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
+- クエリは、たとえば `foreach` ステートメントでクエリ変数を反復処理するまで実行されません。 詳細については、「[LINQ クエリの概要 (C#)](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
 
 - コンパイル時に、クエリ式は、C# 仕様に規定された規則に従って、標準クエリ演算子メソッドの呼び出しに変換されます。 クエリ構文を使用して表現できるすべてのクエリは、メソッド構文でも表現することができます。 ただし、ほとんどの場合、クエリ構文のほうが読みやすく、簡潔です。 詳細については、「[# 言語仕様](~/_csharplang/spec/expressions.md#query-expressions)」と「[標準クエリ演算子の概要](../programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。
 

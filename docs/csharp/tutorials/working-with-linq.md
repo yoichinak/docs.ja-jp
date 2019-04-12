@@ -340,7 +340,7 @@ LINQ の他に、マジシャンがカードのトリックで使用するテク
 
 LINQ の詳細については、以下を参照してください。
 - [統合言語クエリ (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [LINQ の概要](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [LINQ の概要 (C#)](../programming-guide/concepts/linq/introduction-to-linq.md)
     - [C# の LINQ の概要](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [LINQ クエリの基本操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [LINQ によるデータ変換 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)

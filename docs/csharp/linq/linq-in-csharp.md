@@ -16,7 +16,7 @@ ms.locfileid: "56968544"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[LINQ クエリの概要](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+[LINQ クエリの概要 (C#)](../programming-guide/concepts/linq/introduction-to-linq-queries.md)  
 すべての言語とデータ ソースに共通する基本的な LINQ クエリ操作の 3 つの部分について説明します。  
 
 [LINQ とジェネリック型](../programming-guide/concepts/linq/linq-and-generic-types.md)  
