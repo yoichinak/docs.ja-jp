@@ -17,7 +17,7 @@ ms.locfileid: "57716974"
 Windows フォーム`RichTextBox`を表示する、入力、およびテキストの書式形式のコントロールを使用します。 `RichTextBox`コントロールはすべて、<xref:System.Windows.Forms.TextBox>コントロールを使用して、できますが、できますフォント、色、およびリンクの表示; ファイルは元に戻すおよびやり直し操作の編集からテキストと埋め込み画像を読み込み、指定した文字を検索します。 `RichTextBox`コントロールを通常使用するテキストの操作を行い、Microsoft Word などのワード プロセッシング アプリケーションに似た機能を表示します。 ように、<xref:System.Windows.Forms.TextBox>コントロール、`RichTextBox`コントロールがスクロール バーを表示できますとは異なり、<xref:System.Windows.Forms.TextBox>コントロール、既定では水平および垂直の両方向のスクロール バーを表示し、スクロール バーの追加の設定があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [RichTextBox コントロールの概要](richtextbox-control-overview-windows-forms.md)  
+ [RichTextBox コントロールの概要 (Windows フォーム)](richtextbox-control-overview-windows-forms.md)  
  一般的な概念が導入されています、`RichTextBox`コントロールで、ユーザー入力を許可するには、表示、および書式設定オプションのテキストを操作します。  
   
  [方法: Windows フォームの RichTextBox コントロールにおける属性の変更を書式設定するかを判断します。](determine-when-formatting-attributes-change-wf-richtextbox-control.md)  

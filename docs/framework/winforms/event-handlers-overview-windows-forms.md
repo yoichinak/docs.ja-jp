@@ -51,4 +51,4 @@ private:
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
-- [イベントの概要](events-overview-windows-forms.md)
+- [イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)

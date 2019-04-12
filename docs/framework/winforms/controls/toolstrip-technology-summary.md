@@ -120,5 +120,5 @@ ms.locfileid: "59120961"
   
 ## <a name="see-also"></a>関連項目
 
-- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)

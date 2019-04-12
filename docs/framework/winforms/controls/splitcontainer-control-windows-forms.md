@@ -22,7 +22,7 @@ Windows フォームの `SplitContainer` コントロールは複合と考える
  `SplitContainer` コントロールでは複雑なユーザー インターフェイスを作成できます。多くの場合、1 つのパネルの選択項目が、もう一方のパネルに表示されるオブジェクトを決定します。 この配置は、情報の表示と参照に対して非常に効果的です。 2 つのパネルを使用することで、情報を領域に集約でき、バーまたは「分割」により、ユーザーがパネルを簡単にサイズ変更できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SplitContainer コントロールの概要](splitcontainer-control-overview-windows-forms.md)  
+ [SplitContainer コントロールの概要 (Windows フォーム)](splitcontainer-control-overview-windows-forms.md)  
  
   `SplitContainer` コントロールを導入し、一般的に使用されるプロパティ、メソッド、およびイベントについて説明します。  
   

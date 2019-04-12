@@ -16,7 +16,7 @@ ms.locfileid: "57713086"
 Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは、Windows で使用される標準の [ファイルを保存] ダイアログ ボックスと同じです。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)  
+ [SaveFileDialog コンポーネントの概要 (Windows フォーム)](savefiledialog-component-overview-windows-forms.md)  
  
   <xref:System.Windows.Forms.SaveFileDialog> コンポーネントの全般的な概念を説明します。このコンポーネントにより、ユーザーがファイルを指定した場所に保存するために使用する事前構成済みダイアログを表示できます。  
   

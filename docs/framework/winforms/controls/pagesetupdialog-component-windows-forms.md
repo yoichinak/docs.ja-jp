@@ -30,7 +30,7 @@ ms.locfileid: "57723935"
 Windows フォーム<xref:System.Windows.Forms.PageSetupDialog>コンポーネントは Windows ベースのアプリケーションの印刷用ページの詳細を設定するための事前構成済みダイアログ ボックス。 代わりに、独自のダイアログ ボックスの構成ページの基本設定を設定するのにユーザーの簡単な解決策として、Windows ベース アプリケーションの中で使用します。 境界線と余白の調整、ヘッダーとフッター、および横方向と縦向きを設定するユーザーを有効にすることができます。 Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [PageSetupDialog コンポーネントの概要](pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog コンポーネントの概要 (Windows フォーム)](pagesetupdialog-component-overview-windows-forms.md)  
  一般的な概念が導入されています、<xref:System.Windows.Forms.PageSetupDialog>コンポーネントで、ページの設定を操作するユーザーが使用できる構成済みのダイアログ ボックスを表示する使用することができます。  
   
  [方法: PageSetupDialog コンポーネントを使用してページのプロパティを決定します。](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  

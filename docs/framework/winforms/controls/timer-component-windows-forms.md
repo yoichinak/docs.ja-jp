@@ -17,7 +17,7 @@ ms.locfileid: "57710290"
 Windows フォーム <xref:System.Windows.Forms.Timer> は、一定の間隔でイベントを発生させるコンポーネントです。 このコンポーネントは、Windows フォームの環境用に設計されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Timer コンポーネントの概要](timer-component-overview-windows-forms.md)  
+ [Timer コンポーネントの概要 (Windows フォーム)](timer-component-overview-windows-forms.md)  
  アプリケーションが定期的なイベントに応答するよう設定できる <xref:System.Windows.Forms.Timer> コンポーネントの一般的な概念について説明しています。  
   
  [Windows フォームの Timer コンポーネントの Interval プロパティの制限](limitations-of-the-timer-component-interval-property.md)  

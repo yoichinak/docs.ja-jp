@@ -97,4 +97,4 @@ Windows フォームの数値<xref:System.Windows.Forms.NumericUpDown>コント�
 - <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>
 - [NumericUpDown コントロール](numericupdown-control-windows-forms.md)
-- [NumericUpDown コントロールの概要](numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown コントロールの概要 (Windows フォーム)](numericupdown-control-overview-windows-forms.md)

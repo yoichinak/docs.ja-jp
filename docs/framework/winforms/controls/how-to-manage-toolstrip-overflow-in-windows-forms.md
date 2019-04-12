@@ -49,6 +49,6 @@ ms.locfileid: "57707275"
 - <xref:System.Windows.Forms.ToolStripOverflowButton>
 - <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
 - [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

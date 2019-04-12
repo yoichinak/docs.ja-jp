@@ -16,7 +16,7 @@ ms.locfileid: "57716318"
 Windows フォームのテキスト ボックスは、ユーザーからの入力を取得する、またはテキストを表示するに使用されます。 `TextBox`コントロールもできる読み取り専用ですが、通常、編集可能なテキストに使用します。 テキスト ボックスでは、複数の行を表示、テキスト、コントロールのサイズをラップ、および基本的な書式設定を追加できます。 `TextBox`コントロールがテキスト コントロールに表示または入力の 1 つの形式を使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)  
+ [TextBox コントロールの概要 (Windows フォーム)](textbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御します。](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  

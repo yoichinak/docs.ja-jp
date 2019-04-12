@@ -17,7 +17,7 @@ ms.lasthandoff: 04/09/2019
 ms.locfileid: "59301335"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する
-設定することができます、<xref:System.Windows.Forms.ToolTip>コードや、Windows フォーム デザイナーでの文字列。 詳細については、<xref:System.Windows.Forms.ToolTip>コンポーネントを参照してください[ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)します。  
+設定することができます、<xref:System.Windows.Forms.ToolTip>コードや、Windows フォーム デザイナーでの文字列。 詳細については、<xref:System.Windows.Forms.ToolTip>コンポーネントを参照してください[ToolTip コンポーネントの概要 (Windows フォーム)](tooltip-component-overview-windows-forms.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -78,6 +78,6 @@ ms.locfileid: "59301335"
 
 ## <a name="see-also"></a>関連項目
 
-- [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)
+- [ToolTip コンポーネントの概要 (Windows フォーム)](tooltip-component-overview-windows-forms.md)
 - [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip コンポーネント](tooltip-component-windows-forms.md)

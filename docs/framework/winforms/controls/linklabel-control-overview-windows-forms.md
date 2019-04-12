@@ -26,6 +26,6 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールで�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.LinkLabel>
-- [Label コントロールの概要](label-control-overview-windows-forms.md)
+- [Label コントロールの概要 (Windows フォーム)](label-control-overview-windows-forms.md)
 - [方法: Windows フォーム LinkLabel コントロールでオブジェクトまたは Web ページにリンクする](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [方法: Windows フォーム LinkLabel コントロールの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

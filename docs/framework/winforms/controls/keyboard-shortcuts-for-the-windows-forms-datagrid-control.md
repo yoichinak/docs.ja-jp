@@ -52,5 +52,5 @@ ms.locfileid: "59145978"
   
 ## <a name="see-also"></a>関連項目
 
-- [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
+- [DataGrid コントロールの概要 (Windows フォーム)](datagrid-control-overview-windows-forms.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

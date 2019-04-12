@@ -17,7 +17,7 @@ ms.locfileid: "57711955"
 Windows フォーム`TrackBar`コントロール ("slider"コントロールと呼ばれることもあります) が大量の情報をナビゲートするのか、数値の設定を視覚的に調整するために使用されます。 `TrackBar`コントロールに 2 つの部分がある: 一般的に、スライダーとティックとも呼ばれます。 Thumb は、調整可能な部分です。 その位置に対応して、<xref:System.Windows.Forms.TrackBar.Value%2A>プロパティ。 目盛りは、一定の間隔で間隔が視覚インジケーターです。 トラック バーを移動単位を指定し、水平方向または垂直方向に配置することができます。 カーソルの点滅速度やマウス速度を設定するためのトラック バーの使用例となります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TrackBar コントロールの概要](trackbar-control-overview-windows-forms.md)  
+ [TrackBar コントロールの概要 (Windows フォーム)](trackbar-control-overview-windows-forms.md)  
  一般的な概念が導入されています、`TrackBar`コントロールで、視覚的に、数値の設定を調整して情報をナビゲートすることができます。  
   
 ## <a name="reference"></a>参照  

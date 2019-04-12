@@ -17,7 +17,7 @@ ms.locfileid: "57709069"
 Windows フォーム`Panel`コントロールを使用すると、他のコントロールの特定のグループ化を提供します。 通常、関数によってフォームを分割するのにパネルを使用します。 `Panel`コントロールに似ていますが、<xref:System.Windows.Forms.GroupBox>制御。 ただし、のみ、`Panel`コントロールがスクロール バーを持つことができますのみと、<xref:System.Windows.Forms.GroupBox>コントロールにキャプションが表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Panel コントロールの概要](panel-control-overview-windows-forms.md)  
+ [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: コントロール デザイナーを使用して Windows フォーム Panel コントロールをグループ](group-controls-with-wf-panel-control-using-the-designer.md)  

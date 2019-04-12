@@ -18,7 +18,7 @@ ms.locfileid: "59176632"
  Windows フォーム`MainMenu`コンポーネントには、実行時にメニューが表示されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [MainMenu コンポーネントの概要](mainmenu-component-overview-windows-forms.md)  
+ [MainMenu コンポーネントの概要 (Windows フォーム)](mainmenu-component-overview-windows-forms.md)  
  このコンポーネントの用途、主な機能、およびプロパティについて説明します。  
   
 ## <a name="reference"></a>参照  

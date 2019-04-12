@@ -16,7 +16,7 @@ ms.locfileid: "57707587"
 このコントロールは、アプリケーション コマンドをグループ化して簡単にアクセスできるようにします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)  
+ [MenuStrip コントロールの概要 (Windows フォーム)](menustrip-control-overview-windows-forms.md)  
  このコントロールの用途、主な機能、およびプロパティについて説明します  
   
  [方法: ToolStripMenuItems に拡張機能を追加します。](how-to-add-enhancements-to-toolstripmenuitems.md)  

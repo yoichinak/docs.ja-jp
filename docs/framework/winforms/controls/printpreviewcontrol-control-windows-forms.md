@@ -18,7 +18,7 @@ ms.locfileid: "57723895"
 Windows フォーム `PrintPreviewControl` は、印刷するときに表示されるドキュメントを表示するために使用されます。 このコントロールには、ボタンやその他のユーザー インターフェイスの要素がないため、通常は、独自の印刷プレビューのユーザー インターフェイスを作成する場合にのみ `PrintPreviewControl` を使用します。 標準のユーザー インターフェイスが必要な場合は、<xref:System.Windows.Forms.PrintPreviewDialog> コントロールを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)  
+ [PrintPreviewControl コントロールの概要 (Windows フォーム)](printpreviewcontrol-control-overview-windows-forms.md)  
  独自の印刷プレビュー ダイアログまたはコンポーネントの設計に使用できる、`PrintPreviewControl` の一般的な概念について説明します。  
   
 ## <a name="reference"></a>参照  

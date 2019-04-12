@@ -30,7 +30,7 @@ ms.locfileid: "57723115"
  [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)  
  Windows フォームのデータ バインディング アーキテクチャについて説明するトピックへのリンクが含まれます。  
   
- [グラフィックスの概要](./advanced/graphics-overview-windows-forms.md)  
+ [グラフィックスの概要 (Windows フォーム)](./advanced/graphics-overview-windows-forms.md)  
  Windows のグラフィック デザイン インターフェイスの高度な実装を使用して、オブジェクトとして、グラフィックスを作成、テキストを描画、および、画像を操作する方法について説明します。  
   
  [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)  

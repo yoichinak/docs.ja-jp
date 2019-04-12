@@ -45,13 +45,13 @@ ms.locfileid: "57719360"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)  
+ [CheckedListBox コントロールの概要 (Windows フォーム)](checkedlistbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)  
+ [ComboBox コントロールの概要 (Windows フォーム)](combobox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)  
+ [ListBox コントロールの概要 (Windows フォーム)](listbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  

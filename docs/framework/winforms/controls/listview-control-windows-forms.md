@@ -22,7 +22,7 @@ ms.locfileid: "59200312"
 Windows フォーム `ListView` コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ListView コントロールの概要](listview-control-overview-windows-forms.md)  
+ [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)  
  このコントロールの用途、主な機能、およびプロパティについて説明します。  
   
  [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  

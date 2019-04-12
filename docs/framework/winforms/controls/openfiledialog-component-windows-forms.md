@@ -16,7 +16,7 @@ ms.locfileid: "57704740"
 Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは同じ**ファイルを開く** ダイアログ ボックスが、Windows オペレーティング システムによって公開されています。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [OpenFileDialog コンポーネントの概要](openfiledialog-component-overview-windows-forms.md)  
+ [OpenFileDialog コンポーネントの概要 (Windows フォーム)](openfiledialog-component-overview-windows-forms.md)  
  
   <xref:System.Windows.Forms.OpenFileDialog> コンポーネントの全般的な概念を説明します。このコンポーネントにより、ユーザーがファイルを開くために使用する事前構成済みダイアログ ボックスを表示できます。  
   

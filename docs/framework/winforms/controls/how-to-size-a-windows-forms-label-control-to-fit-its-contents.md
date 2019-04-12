@@ -27,5 +27,5 @@ Windows フォーム<xref:System.Windows.Forms.Label>コントロールは 1 行
 ## <a name="see-also"></a>関連項目
 
 - [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)
-- [Label コントロールの概要](label-control-overview-windows-forms.md)
+- [Label コントロールの概要 (Windows フォーム)](label-control-overview-windows-forms.md)
 - [Label コントロール](label-control-windows-forms.md)

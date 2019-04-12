@@ -28,5 +28,5 @@ ms.locfileid: "57709807"
  [Windows フォームの表示形式の変更](changing-the-appearance-of-windows-forms.md)  
  Windows フォーム アプリケーションの外観を変更する方法について説明したトピックへのリンクを示します。  
   
- [TabControl コントロールの概要](./controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl コントロールの概要 (Windows フォーム)](./controls/tabcontrol-control-overview-windows-forms.md)  
  ダイアログ ボックスにタブ コントロールを組み込む方法について説明します。

@@ -16,7 +16,7 @@ ms.locfileid: "57719261"
 Windows フォーム `PrintDocument` コンポーネントを使用して印刷する対象を記述するプロパティを設定し、Windows ベースのアプリケーション内でドキュメントを印刷します。 ドキュメント印刷のあらゆる側面を管理するために、<xref:System.Windows.Forms.PrintDialog> コンポーネントと組み合わせて使用することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [PrintDocument コンポーネントの概要](printdocument-component-overview-windows-forms.md)  
+ [PrintDocument コンポーネントの概要 (Windows フォーム)](printdocument-component-overview-windows-forms.md)  
  印刷する内容を記述し、Windows ベースのアプリケーションで印刷を起動するプロパティを設定できる `PrintDocument` コンポーネントの一般的な概念を紹介します。  
   
 ## <a name="reference"></a>参照  

@@ -181,6 +181,6 @@ Windows フォーム<xref:System.Windows.Forms.LinkLabel>コントロールを�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)
+- [LinkLabel コントロールの概要 (Windows フォーム)](linklabel-control-overview-windows-forms.md)
 - [方法: Windows フォーム LinkLabel コントロールの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

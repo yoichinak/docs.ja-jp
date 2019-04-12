@@ -17,7 +17,7 @@ ms.locfileid: "57702751"
 Windows フォーム`PictureBox`ビットマップ、GIF、JPEG、メタファイル、またはアイコンの形式でグラフィックスを表示するコントロールを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)  
+ [PictureBox コントロールの概要 (Windows フォーム)](picturebox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: 実行時にサイズまたは画像の配置を変更します。](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  

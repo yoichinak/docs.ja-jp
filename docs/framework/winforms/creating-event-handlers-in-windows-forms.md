@@ -19,10 +19,10 @@ ms.locfileid: "57716869"
 イベント ハンドラーは、ユーザーがボタンをクリックする、またはメッセージ キューがメッセージを受信するなどのイベントが発生したときに実行するアクションを決定する、コード内の手順です。 イベントが発生すると、そのイベントを受信した一つまたは複数のイベント ハンドラーが実行されます。 イベントは複数のハンドラーに割り当てられ、特定のイベントを処理するメソッドは動的に変更できます。 イベント ハンドラーを作成するには、Windows フォーム デザイナーを使用することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [イベントの概要](events-overview-windows-forms.md)  
+ [イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)  
  イベント モデルおよびデリゲートの役割を説明します。  
   
- [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)  
+ [イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)  
  イベントを処理する方法について説明します。  
   
  [方法: Windows フォームの実行時にイベント ハンドラーを作成します。](how-to-create-event-handlers-at-run-time-for-windows-forms.md)  

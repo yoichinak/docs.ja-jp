@@ -22,7 +22,7 @@ ms.locfileid: "57718806"
 Windows フォーム`NotifyIcon`バック グラウンドで実行し、それ以外の場合とないプロセスがユーザー インターフェイス コンポーネントに、タスク バーの状態通知領域にアイコンが表示されます。 たとえば、タスクバーの状態通知領域のアイコンをクリックしてアクセス可能なウイルス対策プログラムなどです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [NotifyIcon コンポーネントの概要](notifyicon-component-overview-windows-forms.md)  
+ [NotifyIcon コンポーネントの概要 (Windows フォーム)](notifyicon-component-overview-windows-forms.md)  
  一般的な概念が導入されています、`NotifyIcon`コンポーネントで、ユーザー インターフェイスがないバック グラウンドで実行されているプロセスのアイコンを表示することができます。  
   
  [方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加します。](app-icons-to-the-taskbar-with-wf-notifyicon.md)  

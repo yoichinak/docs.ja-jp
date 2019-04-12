@@ -20,7 +20,7 @@ ms.locfileid: "57707743"
  Windows フォーム<xref:System.Windows.Forms.Label>テキストまたはユーザーが編集できないイメージを表示するコントロールを使用します。 フォーム上のオブジェクトの識別に使用されます — 特定コントロールの説明をクリックした場合などを提供する、または実行時イベントまたはアプリケーションのプロセスへの応答の情報を表示します。 <xref:System.Windows.Forms.Label>コントロールがフォーカスを受け取ることはできません、他のコントロールへのアクセス キーの作成にも使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Label コントロールの概要](label-control-overview-windows-forms.md)  
+ [Label コントロールの概要 (Windows フォーム)](label-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォームの Label コントロールでのアクセス キーを作成します。](how-to-create-access-keys-with-windows-forms-label-controls.md)  

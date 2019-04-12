@@ -19,7 +19,7 @@ ms.locfileid: "57714672"
 Windows フォーム`LinkLabel`コントロールでは、Windows フォーム アプリケーションを Web スタイルのリンクを追加することができます。 使用することができます、`LinkLabel`使用できるすべてのコントロール、<xref:System.Windows.Forms.Label>の制御も設定できるは、テキストの一部としてオブジェクトまたは Web ページへのリンク。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)  
+ [LinkLabel コントロールの概要 (Windows フォーム)](linklabel-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォーム LinkLabel コントロールの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  

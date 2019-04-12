@@ -98,4 +98,4 @@ ms.locfileid: "59295342"
 
 - [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
 - [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)
-- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)
+- [MenuStrip コントロールの概要 (Windows フォーム)](menustrip-control-overview-windows-forms.md)

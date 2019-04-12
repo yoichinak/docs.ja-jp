@@ -61,4 +61,4 @@ Windows フォームで値を表示する方法を構成する<xref:System.Windo
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown コントロール](numericupdown-control-windows-forms.md)
-- [NumericUpDown コントロールの概要](numericupdown-control-overview-windows-forms.md)
+- [NumericUpDown コントロールの概要 (Windows フォーム)](numericupdown-control-overview-windows-forms.md)

@@ -41,5 +41,5 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールは、背
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
 - [Panel コントロール](panel-control-windows-forms.md)
-- [Panel コントロールの概要](panel-control-overview-windows-forms.md)
+- [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)
 - [方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する](group-controls-with-wf-panel-control-using-the-designer.md)

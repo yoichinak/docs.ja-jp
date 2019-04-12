@@ -54,6 +54,6 @@ Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロ�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewControl コントロールの概要 (Windows フォーム)](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)
 - [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)

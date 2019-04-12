@@ -75,5 +75,5 @@ Windows フォーム デザイナーを使用してイベント ハンドラー�
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
-- [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)
+- [イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

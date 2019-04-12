@@ -32,4 +32,4 @@ Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer コンポーネント](timer-component-windows-forms.md)
-- [Timer コンポーネントの概要](timer-component-overview-windows-forms.md)
+- [Timer コンポーネントの概要 (Windows フォーム)](timer-component-overview-windows-forms.md)

@@ -86,6 +86,6 @@ Windows フォームを使用する場合<xref:System.Windows.Forms.PictureBox>�
 
 - <xref:System.Windows.Forms.PictureBox>
 - [方法: デザイナーを使用してピクチャを読み込む](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
+- [PictureBox コントロールの概要 (Windows フォーム)](picturebox-control-overview-windows-forms.md)
 - [方法: 実行時にピクチャを設定する](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox コントロール](picturebox-control-windows-forms.md)

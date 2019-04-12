@@ -19,7 +19,7 @@ ms.locfileid: "57725306"
 Windows フォーム`RadioButton`コントロールがユーザーに一連の 2 つ以上の相互に排他的な選択肢を提示します。 同様に機能するラジオ ボタンおよびチェック ボックスがあります、中には、重要な違いがあります。 ユーザーは、ラジオ ボタンを選択するときに、同じグループ内の他のオプション ボタンをも選択できません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [RadioButton コントロールの概要](radiobutton-control-overview-windows-forms.md)  
+ [RadioButton コントロールの概要 (Windows フォーム)](radiobutton-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  

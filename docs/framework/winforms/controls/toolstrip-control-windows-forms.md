@@ -16,7 +16,7 @@ ms.locfileid: "57721464"
 <xref:System.Windows.Forms.ToolStrip> コントロールは、Windows フォーム アプリケーションでメニュー、コントロール、およびユーザー コントロールをホストするツール バーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: ToolStrip オーバーフローを管理します。](how-to-manage-toolstrip-overflow-in-windows-forms.md)  
