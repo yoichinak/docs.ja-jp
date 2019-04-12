@@ -34,7 +34,7 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>XAML に固有の文字のエンティティとエスケープの問題  
  XAML マークアップでは、一般に、XML で定義されているものと同じ文字エンティティおよびエスケープ シーケンスを使用します。  
   
- 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
+ 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
  ただし、XML ではなく XAML に固有のエスケープ シーケンスを使用すると、中かっこをリテラル文字として表示できます。 詳細については、次を参照してください。 [ {}エスケープ シーケンス/マークアップ拡張](escape-sequence-markup-extension.md)します。  
   

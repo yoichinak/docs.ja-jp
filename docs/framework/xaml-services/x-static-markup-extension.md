@@ -69,7 +69,7 @@ ms.locfileid: "59295711"
 
 このマークアップ拡張機能の処理がによって定義されている、.NET Framework XAML サービス実装、<xref:System.Windows.Markup.StaticExtension>クラス。  
 
-`x:Static` マークアップ拡張機能。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が値を指定する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
+`x:Static` マークアップ拡張機能。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が値を指定する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 マークアップ拡張機能について詳しくは、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
  WPF プログラミングで使用する既定の XAML 名前空間に多数の便利な静的プロパティが含まれていないと、便利な静的プロパティのほとんどはなどを必要とせず、使用状況を容易にする型コンバーターをサポート`{x:Static}`します。 静的プロパティは、次のいずれかが true の場合、XAML 名前空間のプレフィックスをマップする必要があります。  

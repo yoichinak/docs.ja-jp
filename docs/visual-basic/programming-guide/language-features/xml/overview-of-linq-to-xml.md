@@ -13,7 +13,7 @@ ms.lasthandoff: 04/02/2019
 ms.locfileid: "58816175"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic における LINQ to XML の概要
-Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML リテラルおよび XML 軸プロパティを使用します。 これにより、Visual Basic コードで XML を操作するための使い慣れた、便利な構文を使用することができます。 *XML リテラル*コード内で直接 XML を有効にします。 *XML 軸プロパティ*アクセス子ノード、子孫ノード、および XML リテラルの属性を有効にします。 詳細については、[XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)と[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)を参照してください。  
+Visual Basic のサポートを提供する[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML リテラルおよび XML 軸プロパティを使用します。 これにより、Visual Basic コードで XML を操作するための使い慣れた、便利な構文を使用することができます。 *XML リテラル*コード内で直接 XML を有効にします。 *XML 軸プロパティ*アクセス子ノード、子孫ノード、および XML リテラルの属性を有効にします。 詳細については、[XML リテラルの概要 (Visual Basic)](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)と[Visual Basic における XML のへのアクセス](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)を参照してください。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] メモリ内 XML プログラミング API を活用するには、具体的には設計[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]します。 呼び出すことができますが、 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api を直接、唯一の Visual Basic を使用すると、XML リテラルを宣言し、XML 軸のプロパティに直接アクセスします。  
   

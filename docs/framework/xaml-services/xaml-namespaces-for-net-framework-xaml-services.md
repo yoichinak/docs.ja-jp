@@ -51,7 +51,7 @@ XAML 名前空間は、XML 名前空間の定義を拡張する概念です。 X
   
  または、XAML 型システムへの他のアクセスにより、XAML ノード ストリームの一部としての XAML 名前空間の情報が見つかった場合<xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType>XAML 名前空間の識別子を報告および<xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType>XAML 名前空間プレフィックスを報告します。  
   
- XAML ノード ストリームで XAML 名前空間の情報は、それを適用するエンティティの前にある XAML ノードとして表示できます。 XAML 名前空間の情報がよりも前の場合など、`StartObject`の XAML ルート要素。 詳細については、「 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
+ XAML ノード ストリームで XAML 名前空間の情報は、それを適用するエンティティの前にある XAML ノードとして表示できます。 XAML 名前空間の情報がよりも前の場合など、`StartObject`の XAML ルート要素。 詳細については、「 [XAML ノード ストリームの構造と概念について](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
   
  .NET Framework XAML サービス API を使用する多くのシナリオでは、存在しますが、少なくとも 1 つの XAML 名前空間宣言が必要ですし、宣言は必要がありますが含まれているか、XAML スキーマ コンテキストで必要な情報を参照してください。 XAML 名前空間は、アセンブリを読み込む、または名前空間と既に読み込まれてまたは XAML スキーマ コンテキストで認識されているアセンブリ内の特定の型の解決に役立つを指定する必要がありますか。  
   

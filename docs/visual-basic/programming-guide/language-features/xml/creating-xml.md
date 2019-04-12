@@ -20,7 +20,7 @@ Visual Basic では、使用することができます*XML リテラル*コー�
   
 |用語|定義|  
 |---|---|  
-|[XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|XML リテラルとどのように関連する概要[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]します。|  
+|[XML リテラルの概要 (Visual Basic)](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|XML リテラルとどのように関連する概要[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]します。|  
 |[XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|XML リテラルで埋め込み式を使用する方法について説明します。|  
 |[方法: XML リテラルを作成します。](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|XML リテラルを使用して、コードで XML 要素を作成する方法について説明します。|  
 |[XML リテラルでの空白文字](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Visual Basic は XML リテラルの空白文字を処理する方法について説明します。|  
