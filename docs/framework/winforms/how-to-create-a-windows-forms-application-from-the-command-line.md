@@ -18,8 +18,8 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59299872"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>コマンド ラインから Windows フォーム アプリケーションを作成する方法
-次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
+次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。[チュートリアル: WPF での Windows フォーム コントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。  
   
 ## <a name="procedure"></a>プロシージャ  
   
