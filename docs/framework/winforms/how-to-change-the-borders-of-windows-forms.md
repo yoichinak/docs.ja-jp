@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの境界線を変更する'
+title: 'Windows フォームの境界線を変更する方法'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57713905"
 ---
-# <a name="how-to-change-the-borders-of-windows-forms"></a>方法: Windows フォームの境界線を変更する
+# <a name="how-to-change-the-borders-of-windows-forms"></a>Windows フォームの境界線を変更する方法
 Windows フォームの外観や動作を決定する際にはさまざまな境界線スタイルを選択できます。 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> プロパティを変更して、フォームのサイズ変更動作を制御できます。 また、<xref:System.Windows.Forms.Form.FormBorderStyle%2A> を設定すると、キャプション バーの表示方法や、キャプション バーに表示されるボタンを変更できます。 詳細については、「 <xref:System.Windows.Forms.FormBorderStyle> 」を参照してください。  
   
  Visual Studio では、このタスクに対する広範なサポートが用意されています。  
