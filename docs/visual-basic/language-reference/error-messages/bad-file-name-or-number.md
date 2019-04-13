@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: b6da1031b60a4cd73c53588cf18992797c3fddab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322161"
 ---
 # <a name="bad-file-name-or-number"></a>ファイル名または番号が正しくありません。
 指定したファイルにアクセスしているときにエラーが発生しました。 このエラーの考えられる原因には。  
@@ -22,11 +22,11 @@ ms.locfileid: "58839068"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  ファイル名がで指定されたことを確認、`FileOpen`ステートメント。 呼び出した場合、`FileClose`ステートメント引数を指定せず可能性がありますが誤って閉じたすべての開いているファイル。  
+1. ファイル名がで指定されたことを確認、`FileOpen`ステートメント。 呼び出した場合、`FileClose`ステートメント引数を指定せず可能性がありますが誤って閉じたすべての開いているファイル。  
   
-2.  場合は、コードの生成は、ファイルの番号にアルゴリズムが、番号は有効なことを確認します。  
+2. 場合は、コードの生成は、ファイルの番号にアルゴリズムが、番号は有効なことを確認します。  
   
-3.  オペレーティング システムの規約に準拠しているかどうかを確認するファイル名を確認します。  
+3. オペレーティング システムの規約に準拠しているかどうかを確認するファイル名を確認します。  
   
 ## <a name="see-also"></a>関連項目
 

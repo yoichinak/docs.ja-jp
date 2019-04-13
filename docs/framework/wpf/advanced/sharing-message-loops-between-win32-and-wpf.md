@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115077"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 と WPF 間でのメッセージ ループの共有
 このトピックとの相互運用のメッセージ ループを実装する方法を説明します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、既存を使用していずれかのメッセージ ループ危険にさらされる<xref:System.Windows.Threading.Dispatcher>またはで個別のメッセージ ループを作成して、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]の相互運用コード側。  
@@ -62,6 +62,7 @@ ms.locfileid: "57378215"
  使用してそのメッセージ フックを追加した場合、キーボード シンクに移動するメッセージを HWND に送信しない場合があります、<xref:System.Windows.Interop.HwndSource.AddHook%2A>メソッド。 直接および not に送信されたメッセージ ポンプ レベルでメッセージが処理される可能性がありますが、`DispatchMessage`関数。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)

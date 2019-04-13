@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e9a7efadea7960eadccfa1637489ed14bbeb26f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110189"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent インターフェイス
-すべての `ICorDebug` デバッグ イベントを派生させる基底インターフェイスを定義します。  
+すべての `ICorDebug` デバッグ イベントを派生させる基本インターフェイスを定義します。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -38,8 +38,9 @@ ms.locfileid: "54576318"
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

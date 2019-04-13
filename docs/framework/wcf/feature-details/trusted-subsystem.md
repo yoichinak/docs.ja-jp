@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319366"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
@@ -19,15 +19,15 @@ ms.locfileid: "54744584"
   
  上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。  
   
-1.  クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。  
+1. クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。  
   
-2.  信頼できるサブシステムが、ユーザーの認証と承認を行います。  
+2. 信頼できるサブシステムが、ユーザーの認証と承認を行います。  
   
-3.  信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。 この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。  
+3. 信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。 この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。  
   
-4.  バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。 次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。  
+4. バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。 次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。  
   
-5.  信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
+5. 信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
   
 |特徴|説明|  
 |--------------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "54744584"
 |整合性|はい|  
 |機密性|はい|  
 |Transport|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|バインディング|<xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -211,5 +211,6 @@ ms.locfileid: "54744584"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

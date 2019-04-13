@@ -4,11 +4,11 @@ description: このチュートリアルでは、.NET コンパイラ SDK を使
 ms.date: 02/06/2018
 ms.custom: mvc
 ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359628"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760054"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 

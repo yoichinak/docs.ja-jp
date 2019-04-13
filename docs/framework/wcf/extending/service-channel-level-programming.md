@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197198"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329131"
 ---
 # <a name="service-channel-level-programming"></a>サービス チャネル レベルのプログラミング
 このトピックを使用せずに Windows Communication Foundation (WCF) サービスのアプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>とその関連付けられたオブジェクト モデルです。  
@@ -18,15 +18,15 @@ ms.locfileid: "50197198"
 ## <a name="receiving-messages"></a>メッセージの受信  
  メッセージの受信と処理の準備を整えるには、次の手順に従う必要があります。  
   
-1.  バインディングを作成します。  
+1. バインディングを作成します。  
   
-2.  チャネル リスナーをビルドします。  
+2. チャネル リスナーをビルドします。  
   
-3.  チャネル リスナーを開きます。  
+3. チャネル リスナーを開きます。  
   
-4.  要求を読み取り、応答を送信します。  
+4. 要求を読み取り、応答を送信します。  
   
-5.  すべてのチャネル オブジェクトを閉じます。  
+5. すべてのチャネル オブジェクトを閉じます。  
   
 #### <a name="creating-a-binding"></a>バインディングの作成  
  メッセージのリッスンと受信の最初の手順として、バインディングを作成します。 WCF のうち 1 つのインスタンス化で直接使用できるいくつかの組み込みまたはシステム提供のバインディングに同梱されています。 また、CustomBinding クラスをインスタンス化することにより、独自のバインディングを作成することもできます。手順 1. のコードは、この処理を実行します。  
@@ -36,7 +36,7 @@ ms.locfileid: "50197198"
 #### <a name="building-a-channellistener"></a>ChannelListener のビルド  
  バインディングを作成したら、<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> を呼び出してチャネル リスナーをビルドします。型パラメーターは、作成するチャネル形状です。 この例では、要求/応答メッセージ交換パターンで受信メッセージをリッスンする必要があるため、<xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> を使用します。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> は、要求メッセージを受信し、応答メッセージを返信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> 要求メッセージと送信応答メッセージを受信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
   
  リスナーを作成する際には、リッスンするネットワーク アドレス (この場合は `http://localhost:8080/channelapp`) を渡します。 一般に、各トランスポート チャネルは 1 つまたは複数のアドレス スキームをサポートします。たとえば、HTTP トランスポートは、http スキームと https スキームの両方をサポートします。  
   

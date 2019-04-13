@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームにコントロールを追加します。'
+title: '方法: Windows フォームにコントロールを追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720775"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343590"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加します。
-ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。 A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。 コントロールの詳細については、[Windows フォーム コントロール](index.md)を参照してください。  
+# <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加する
+ほとんどのフォームは、ユーザー インターフェイス (UI) を定義するフォームのサーフェイスにコントロールを追加して設計されています。 A*コントロール*は情報を表示するか、ユーザー入力をそのまま使用するためのフォーム上のコンポーネントです。 コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](index.md)します。  
   
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
 ### <a name="to-draw-a-control-on-a-form"></a>フォームのコントロールを描画するには  
   
-1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
+1. フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
-2.  **ツールボックス**フォームに追加するコントロールをクリックします。  
+2. **ツールボックス**フォームに追加するコントロールをクリックします。  
   
-3.  フォーム、検索するコントロールの左上隅をクリックし、検索するコントロールの右下隅を先にドラッグします。  
+3. フォーム、検索するコントロールの左上隅をクリックし、検索するコントロールの右下隅を先にドラッグします。  
   
      コントロールは、指定した位置とサイズをフォームに追加されます。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "57720775"
   
 ### <a name="to-drag-a-control-to-a-form"></a>コントロールをフォームにドラッグするには  
   
-1.  フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
+1. フォームを開きます。 詳細については、「[方法 :デザイナーで Windows フォームを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))します。  
   
-2.  **ツールボックス**フォームにドラッグしてコントロールをクリックします。  
+2. **ツールボックス**フォームにドラッグしてコントロールをクリックします。  
   
      コントロールは、既定のサイズで指定した場所にあるフォームに追加されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "57720775"
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>プログラムでコントロールをフォームに追加するには  
   
-1.  ボタンを処理するメソッドで`Click`、制御変数への参照を追加するには、次のようなコードを挿入、フォームのクラス内のイベントの設定、コントロールの`Location`コントロールを追加します。  
+1. ボタンを処理するメソッドで`Click`、制御変数への参照を追加するには、次のようなコードを挿入、フォームのクラス内のイベントの設定、コントロールの`Location`コントロールを追加します。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -90,8 +90,9 @@ ms.locfileid: "57720775"
     >  悪意のあるを参照して、ローカル コンピューターがネットワーク経由のセキュリティ リスクを公開する`UserControl`します。 誤ってそれをプロジェクトに追加した後に、有害なカスタム コントロールを作成する悪意のあるユーザーの場合の問題のみなります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム コントロール](index.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
-- [方法: Windows フォーム上のコントロールのサイズを変更します。](how-to-resize-controls-on-windows-forms.md)
-- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [方法: Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
+- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

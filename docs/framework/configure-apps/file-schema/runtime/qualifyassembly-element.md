@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109449"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > 要素
 部分名が使用された場合に動的に読み込む必要があるアセンブリの完全名を指定します。  
@@ -76,6 +76,7 @@ ms.locfileid: "55674673"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [部分アセンブリ参照](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

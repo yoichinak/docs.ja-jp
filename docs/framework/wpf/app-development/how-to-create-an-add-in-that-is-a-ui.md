@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100302"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -25,14 +25,13 @@ ms.locfileid: "57366388"
   
  この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))を参照してください。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
+-   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
   
 -   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
  WPF の UI は、アドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>コントラクト パイプライン セグメントの実装  
  アドインの UI である、ときに、アドインのコントラクトを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。 例では、`IWPFAddInContract`実装<xref:System.AddIn.Contract.INativeHandleContract>、次のコードに示すようにします。  
@@ -63,17 +62,13 @@ ms.locfileid: "57366388"
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>ホスト ビュー パイプライン セグメントの実装  
  このモデルで、ホスト アプリケーション通常はホスト ビューに、<xref:System.Windows.FrameworkElement>サブクラスです。 ホスト側アダプターに変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>後、<xref:System.AddIn.Contract.INativeHandleContract>分離境界を超えています。 メソッドを取得するホスト アプリケーションから呼び出されないされているため、 <xref:System.Windows.FrameworkElement>、ホスト ビュー返す必要があります""、<xref:System.Windows.FrameworkElement>格納することによって。 その結果、ホスト ビューのサブクラスから派生する必要があります<xref:System.Windows.FrameworkElement>他を含む[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]など<xref:System.Windows.Controls.UserControl>します。 次のコードとして実装されるコントラクトのホスト ビューを示しています、`WPFAddInHostView`クラス。  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>ホスト側アダプター パイプライン セグメントの実装  
  コントラクトは、 <xref:System.AddIn.Contract.INativeHandleContract>、ホスト アプリケーションでは、 <xref:System.Windows.Controls.UserControl> (ホスト ビューによって、指定した)。 その結果、<xref:System.AddIn.Contract.INativeHandleContract>に変換する必要があります、<xref:System.Windows.FrameworkElement>ホスト ビューのコンテンツとして設定される前に、分離境界を越えた後 (から派生した<xref:System.Windows.Controls.UserControl>)。  
   
  この作業は、次のコードに示されているように、ホスト側アダプターによって行われます。  
-  
-  
-  
+
  ホスト側アダプターが取得、ご覧のとおり、<xref:System.AddIn.Contract.INativeHandleContract>呼び出して追加アドイン側アダプターの<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>メソッド (これは、ポイント場所、<xref:System.AddIn.Contract.INativeHandleContract>が分離境界を越える)。  
   
  ホスト側アダプターが次に、変換、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>します。 最後に、<xref:System.Windows.FrameworkElement>ホスト ビューのコンテンツとして設定されます。  
@@ -81,29 +76,24 @@ ms.locfileid: "57366388"
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>アドインの実装  
  アドイン側アダプターとアドイン ビューが用意できると、次のコードに示されているように、アドイン ビューから派生することでアドインを実装できます。  
-  
-  
-  
-  
-  
+
  この例から、このモデルの 1 つの興味深い利点を確認できます。 アドイン開発者は、追加では、(UI もある) ためではなく、アドイン クラスとアドインの UI を実装するためにのみ必要があります。  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>ホスト アプリケーションの実装  
  ホスト側アダプターとホスト ビューの作成、ホスト アプリケーションを使用できます、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドイン モデルをパイプラインを開き、アドインのホスト ビューを取得します。 これらの手順を次のコードに示します。  
-  
-  
-  
+
  ホスト アプリケーションでは、.NET Framework アドイン モデルの一般的なコードを使用して、アドイン、ホスト アプリケーションに暗黙的に、ホスト ビューを返しますアクティブにします。 ホスト アプリケーションは、その後、ホスト ビューを表示します (これは、 <xref:System.Windows.Controls.UserControl>) から、<xref:System.Windows.Controls.Grid>します。  
   
  アドインの UI との対話を処理するためのコードは、アドインのアプリケーション ドメインで実行されます。 このような対話には、次のようなものがあります。  
   
--   処理、 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
+-   処理、<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
 -   表示、<xref:System.Windows.MessageBox>します。  
   
  このアクティビティは、ホスト アプリケーションから完全に分離されています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [WPF のアドインの概要](wpf-add-ins-overview.md)
+- [WPF アドインの概要](wpf-add-ins-overview.md)

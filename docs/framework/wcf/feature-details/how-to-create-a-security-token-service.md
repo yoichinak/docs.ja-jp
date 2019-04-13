@@ -1,5 +1,5 @@
 ---
-title: '方法: セキュリティ トークン サービスを作成します。'
+title: '方法: セキュリティ トークン サービスを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212480"
 ---
-# <a name="how-to-create-a-security-token-service"></a>方法: セキュリティ トークン サービスを作成します。
+# <a name="how-to-create-a-security-token-service"></a>方法: セキュリティ トークン サービスを作成する
 セキュリティ トークン サービスは、WS-Trust 仕様に定義されているプロトコルを実装します。 このプロトコルでは、セキュリティ トークンの発行、更新、キャンセル、および検証を行うためのメッセージ形式とメッセージ交換パターンが定義されています。 セキュリティ トークン サービスでは、これらの機能が 1 つ以上提供されます。 ここでは、最も一般的なシナリオであるトークンの発行の実装について説明します。  
   
 ## <a name="issuing-tokens"></a>トークンの発行  
@@ -98,7 +98,7 @@ ms.locfileid: "54577259"
  [!code-csharp[c_CreateSTS#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#4)]
  [!code-vb[c_CreateSTS#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#4)]  
   
- 詳細については、[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)を参照してください。  
+ 詳細については、次を参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
   
 ## <a name="creating-response-messages"></a>応答メッセージの作成  
  セキュリティ トークン サービスによって発行要求が処理され、発行されるトークンと証明キーが作成されたら、少なくとも、要求されたトークン、証明トークン、および発行されたトークンの参照を含む応答メッセージを作成する必要があります。 発行済みトークンは、通常、<xref:System.IdentityModel.Tokens.SamlSecurityToken> から作成された <xref:System.IdentityModel.Tokens.SamlAssertion> です。次の例を参照してください。  
@@ -111,7 +111,7 @@ ms.locfileid: "54577259"
  [!code-csharp[c_CreateSTS#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#6)]
  [!code-vb[c_CreateSTS#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#6)]  
   
- クライアントとセキュリティ トークン サービスは、共有キーのキー マテリアルを提供するときに、証明トークンを構成する方法の詳細については、[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)を参照してください。  
+ クライアントとセキュリティ トークン サービスは、共有キーのキー マテリアルを提供するときに、証明トークンを構成する方法の詳細については、次を参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
   
  発行済みトークンの参照を作成するには、<xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause> クラスのインスタンスを作成します。  
   
@@ -121,9 +121,10 @@ ms.locfileid: "54577259"
  最後に、これらの値を、クライアントに返される応答メッセージにシリアル化します。  
   
 ## <a name="example"></a>例  
- セキュリティ トークン サービスの完全なコードは、[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)を参照してください。  
+ セキュリティ トークン サービスの完全なコードは、次を参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Tokens.SigningCredentials>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>

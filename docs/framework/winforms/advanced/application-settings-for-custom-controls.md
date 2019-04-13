@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714347"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317299"
 ---
 # <a name="application-settings-for-custom-controls"></a>カスタム コントロールのアプリケーション設定
 コントロールがサード パーティ製のアプリケーションでホストされている場合は、アプリケーションの設定を保存する機能、カスタム コントロールを提供する特定のタスクを完了する必要があります。  
@@ -22,9 +22,9 @@ ms.locfileid: "57714347"
   
  さらに、Visual Studio などのデザイン時環境で適切に機能するカスタム コントロールのアプリケーション設定の順序で、次を実装する必要があります。  
   
-1.  受け取るコンス トラクターを持つカスタム アプリケーション設定クラスを<xref:System.ComponentModel.IComponent>パラメーターを 1 つ。 保存し、すべてのアプリケーションの設定を読み込むには、このクラスを使用します。 このクラスの新しいインスタンスを作成するときは、コンス トラクターを使用して、カスタム コントロールを渡します。  
+1. 受け取るコンス トラクターを持つカスタム アプリケーション設定クラスを<xref:System.ComponentModel.IComponent>パラメーターを 1 つ。 保存し、すべてのアプリケーションの設定を読み込むには、このクラスを使用します。 このクラスの新しいインスタンスを作成するときは、コンス トラクターを使用して、カスタム コントロールを渡します。  
   
-2.  コントロールを作成し、フォームのように、フォームに配置した後、このカスタム設定クラスを作成<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。  
+2. コントロールを作成し、フォームのように、フォームに配置した後、このカスタム設定クラスを作成<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。  
   
  カスタム設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
@@ -46,6 +46,7 @@ ms.locfileid: "57714347"
  すべてのインスタンスの値を指定されていないコントロールの<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>同じ設定で共有されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [アプリケーション設定アーキテクチャ](application-settings-architecture.md)

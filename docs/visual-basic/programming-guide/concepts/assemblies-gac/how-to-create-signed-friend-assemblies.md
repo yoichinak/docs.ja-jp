@@ -2,21 +2,21 @@
 title: '方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836741"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324670"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>署名付きアセンブリとフレンド アセンブリを作成するには  
   
-1.  コマンド プロンプトを開きます。  
+1. コマンド プロンプトを開きます。  
   
-2.  厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
+2. 厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
     1.  この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "58836741"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  という名前の Visual Basic ファイルを作成する`friend_signed_A`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
+3. という名前の Visual Basic ファイルを作成する`friend_signed_A`次のコードを格納しています。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_signed_B を宣言します。  
   
      厳密な名前ツールは、実行するごとに新しい公開鍵を生成します。 このため、次の例に示すコード内の公開鍵を、ここで生成した公開鍵に置き換える必要があります。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "58836741"
     End Class  
     ```  
   
-4.  次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
+4. 次のコマンドを使用して friend_signed_A をコンパイルして署名します。  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  という名前の Visual Basic ファイルを作成する`friend_signed_B`次のコードが含まれています。 friend_signed_A が friend_signed_B をフレンド アセンブリとして指定しているため、friend_signed_B 内のコードは、friend_signed_A の `Friend` 型とメンバーにアクセスできます。 このファイルには、次のコードが含まれています。  
+5. という名前の Visual Basic ファイルを作成する`friend_signed_B`次のコードが含まれています。 friend_signed_A が friend_signed_B をフレンド アセンブリとして指定しているため、friend_signed_B 内のコードは、friend_signed_A の `Friend` 型とメンバーにアクセスできます。 このファイルには、次のコードが含まれています。  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,15 +69,15 @@ ms.locfileid: "58836741"
     End Module  
     ```  
   
-6.  次のコマンドを使用して friend_signed_B をコンパイルして署名します。  
+6. 次のコマンドを使用して friend_signed_B をコンパイルして署名します。  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、[-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)を参照してください。  
+     コンパイラによって生成されたアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されたフレンド アセンブリ名と一致している必要があります。 使用して、アセンブリを明示的に設定することができます、`-out`コンパイラ オプション。 詳細については、次を参照してください。 [-(Visual Basic) を](../../../../visual-basic/reference/command-line-compiler/out.md)します。  
   
-7.  friend_signed_B.exe ファイルを実行します。  
+7. friend_signed_B.exe ファイルを実行します。  
   
      プログラムには、文字列"Class1.Test"が表示されます。  
   

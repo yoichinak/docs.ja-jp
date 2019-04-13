@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188436"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法: ObservableCollection を作成およびバインドする
 派生したコレクションを作成してバインドする方法を示します、<xref:System.Collections.ObjectModel.ObservableCollection%601>クラスは、項目が追加または削除された場合に、通知を提供するコレクション クラスです。  
@@ -141,8 +141,9 @@ End Class
  詳しくは、「[データ バインディングの概要](data-binding-overview.md)」の「コレクションへのバインド」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)
 - [ビュー内のデータをフィルター処理する](how-to-filter-data-in-a-view.md)
 - [XAML でビューを使用してデータの並べ替えおよびグループ化を行う](how-to-sort-and-group-data-using-a-view-in-xaml.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

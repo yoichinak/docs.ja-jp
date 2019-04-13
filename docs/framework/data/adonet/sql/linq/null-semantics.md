@@ -2,12 +2,12 @@
 title: null セマンティクス
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: 272c19d7ee64381baa93cb2eda1cc035c42a025d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172758"
 ---
 # <a name="null-semantics"></a>null セマンティクス
 次の表のさまざまな部分へのリンク、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメント、 `null` (`Nothing` Visual Basic で) について説明しています。  
@@ -20,4 +20,5 @@ ms.locfileid: "54689092"
 |[数値のシーケンスの合計の計算](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|について説明しますが、どのように<xref:System.Linq.Enumerable.Sum%2A>に演算子が評価される`null`(`Nothing` Visual Basic で) null のみを含むシーケンス、または空のシーケンス 0 ではなく。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ型と関数](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

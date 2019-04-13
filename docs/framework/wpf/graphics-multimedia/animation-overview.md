@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: cf95abc6780b1182582e567f78783388f1d377cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337735"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 <a name="introduction"></a>
@@ -35,9 +35,9 @@ ms.locfileid: "57373739"
   
 -   プログラムは、新しい値で四角形を更新し、再描画します。  
   
- 前のバージョン[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開発者は、作成し、独自のタイミング システムを管理または特殊なカスタム ライブラリを使用する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージ コードを通じて公開されている効率的なタイミング システムが含まれていますと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]密接に統合されていると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワーク。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションを使うと、コントロールやその他のグラフィカル オブジェクトを簡単にアニメーション化できます。  
+ 前のバージョン[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開発者は、作成し、独自のタイミング システムを管理または特殊なカスタム ライブラリを使用する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージ コードを通じて公開されている効率的なタイミング システムが含まれていますと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]密接に統合されていると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワーク。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションを簡単にコントロールとその他のグラフィカル オブジェクトをアニメーション化します。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、タイミング システムの管理と画面の効率的な再描画をすべてバックグラウンドで処理します。 効果を実現するしくみではなく、作り出す効果に重点を置くことのできるタイミング クラスが提供されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、クラスが継承できるアニメーションの基底クラスを公開しているため、独自のアニメーションを簡単に作成して、カスタマイズされたアニメーションを生成することもできます。 これらのカスタム アニメーションは、標準のアニメーション クラスのパフォーマンス上のメリットの多くを得ます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのバック グラウンド処理のタイミング システムの管理と画面を効率的に再描画を処理します。 効果を実現するしくみではなく、作り出す効果に重点を置くことのできるタイミング クラスが提供されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡単にカスタマイズされたアニメーションを生成するために、アニメーションの基底クラス、クラスの継承元となることができますを公開することで、独自のアニメーションを作成します。 これらのカスタム アニメーションは、標準のアニメーション クラスのパフォーマンス上のメリットの多くを得ます。  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF プロパティ アニメーション システム  
@@ -74,7 +74,7 @@ ms.locfileid: "57373739"
 ### <a name="part-1-create-a-doubleanimation"></a>第 1 部:DoubleAnimation を作成します。  
  フェードインおよびフェードアウト、要素を 1 つの方法がアニメーション化するのにはその<xref:System.Windows.UIElement.Opacity%2A>プロパティ。 <xref:System.Windows.UIElement.Opacity%2A>プロパティの型は<xref:System.Double>、double 型の値を生成するアニメーションを作成する必要があります。 A<xref:System.Windows.Media.Animation.DoubleAnimation>はこのようなアニメーションを 1 つです。 A <xref:System.Windows.Media.Animation.DoubleAnimation> 2 つの倍精度値間の遷移を作成します。 設定した開始値を指定するには、その<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティ。 終了値を指定する設定、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。  
   
-1.  不透明度値`1.0`完全に不透明なオブジェクトの不透明度の値は、`0.0`完全に非表示になります。 アニメーション遷移`1.0`に`0.0`を設定するその<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティを`1.0`とその<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティを`0.0`します。 作成する方法を次に示します、 <xref:System.Windows.Media.Animation.DoubleAnimation> XAML でします。  
+1. 不透明度値`1.0`完全に不透明なオブジェクトの不透明度の値は、`0.0`完全に非表示になります。 アニメーション遷移`1.0`に`0.0`を設定するその<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティを`1.0`とその<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティを`0.0`します。 作成する方法を次に示します、 <xref:System.Windows.Media.Animation.DoubleAnimation> XAML でします。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_2)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_2)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_2)]  
   
-2.  次に、指定する必要があります、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>アニメーションの開始値から宛先値への移動にかかる時間を指定します。 設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>を XAML で 5 秒にします。  
+2. 次に、指定する必要があります、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>アニメーションの開始値から宛先値への移動にかかる時間を指定します。 設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>を XAML で 5 秒にします。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_3)]  
   
@@ -92,7 +92,7 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]  
   
-3.  前のコードではからを遷移するアニメーションを示しました`1.0`に`0.0`、これにより、完全に非表示に完全に不透明からフェードする target 要素。 一度消えた後、ビューに再びフェードイン要素を設定、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティをアニメーションの`true`。 アニメーションを無限に繰り返しますするためには、次のように設定します。 その<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>します。設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>と<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML のプロパティ。  
+3. 前のコードではからを遷移するアニメーションを示しました`1.0`に`0.0`、これにより、完全に非表示に完全に不透明からフェードする target 要素。 一度消えた後、ビューに再びフェードイン要素を設定、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティをアニメーションの`true`。 アニメーションを無限に繰り返しますするためには、次のように設定します。 その<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>します。設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>と<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML のプロパティ。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "57373739"
 ### <a name="part-2-create-a-storyboard"></a>第 2 部: ストーリー ボードを作成します。  
  作成するオブジェクトにアニメーションを適用する、<xref:System.Windows.Media.Animation.Storyboard>を使用して、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>と<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>オブジェクトを指定するプロパティとアニメーション化するプロパティをアタッチします。  
   
-1.  作成、<xref:System.Windows.Media.Animation.Storyboard>とその子としてアニメーションを追加します。 作成する方法を次に示します、 <xref:System.Windows.Media.Animation.Storyboard> XAML でします。  
+1. 作成、<xref:System.Windows.Media.Animation.Storyboard>とその子としてアニメーションを追加します。 作成する方法を次に示します、 <xref:System.Windows.Media.Animation.Storyboard> XAML でします。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]    
   
@@ -119,7 +119,7 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_101)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_101)]  
   
-2.  <xref:System.Windows.Media.Animation.Storyboard>アニメーションを適用する場所を指定する必要があります。 使用して、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>添付プロパティをアニメーション化するオブジェクトを指定します。 ターゲットの名前を設定する方法を次に示します、<xref:System.Windows.Media.Animation.DoubleAnimation>に`MyRectangle`XAML でします。  
+2. <xref:System.Windows.Media.Animation.Storyboard>アニメーションを適用する場所を指定する必要があります。 使用して、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A?displayProperty=nameWithType>添付プロパティをアニメーション化するオブジェクトを指定します。 ターゲットの名前を設定する方法を次に示します、<xref:System.Windows.Media.Animation.DoubleAnimation>に`MyRectangle`XAML でします。  
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_6](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_6)]  
   
@@ -128,7 +128,7 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_102)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_102)]  
   
-3.  使用して、<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>添付プロパティをアニメーション化するプロパティを指定します。 アニメーションを構成する方法を次に示しますターゲットに、<xref:System.Windows.UIElement.Opacity%2A>のプロパティ、 <xref:System.Windows.Shapes.Rectangle> XAML でします。
+3. 使用して、<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>添付プロパティをアニメーション化するプロパティを指定します。 アニメーションを構成する方法を次に示しますターゲットに、<xref:System.Windows.UIElement.Opacity%2A>のプロパティ、 <xref:System.Windows.Shapes.Rectangle> XAML でします。
   
      [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_7](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_7)]  
   
@@ -137,21 +137,21 @@ ms.locfileid: "57373739"
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_103)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_103)]  
   
- 詳細については<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>構文と例については、、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。  
+ 詳細については<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>構文と例については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。  
   
 <a name="opacity_animation_step3"></a>   
 ### <a name="part-3-xaml-associate-the-storyboard-with-a-trigger"></a>パート 3 (XAML):ストーリー ボードをトリガーに関連付ける  
  適用して開始する最も簡単な方法を<xref:System.Windows.Media.Animation.Storyboard>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]イベント トリガーを使用することです。 このセクションに関連付ける方法を示しています、 <xref:System.Windows.Media.Animation.Storyboard> XAML でトリガーを使用します。  
   
-1.  作成、<xref:System.Windows.Media.Animation.BeginStoryboard>オブジェクトおよびストーリー ボードを関連付けます。 A<xref:System.Windows.Media.Animation.BeginStoryboard>の種類は、<xref:System.Windows.TriggerAction>を適用し、開始、<xref:System.Windows.Media.Animation.Storyboard>します。  
+1. 作成、<xref:System.Windows.Media.Animation.BeginStoryboard>オブジェクトおよびストーリー ボードを関連付けます。 A<xref:System.Windows.Media.Animation.BeginStoryboard>の種類は、<xref:System.Windows.TriggerAction>を適用し、開始、<xref:System.Windows.Media.Animation.Storyboard>します。  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_3)]  
   
-2.  作成、<xref:System.Windows.EventTrigger>を追加し、<xref:System.Windows.Media.Animation.BeginStoryboard>にその<xref:System.Windows.EventTrigger.Actions%2A>コレクション。 設定、<xref:System.Windows.EventTrigger.RoutedEvent%2A>のプロパティ、<xref:System.Windows.EventTrigger>を開始するルーティング イベントに、<xref:System.Windows.Media.Animation.Storyboard>します。 (ルーティング イベントの詳細については、次を参照してください、[ルーティング イベントの概要](../advanced/routed-events-overview.md)。)。  
+2. 作成、<xref:System.Windows.EventTrigger>を追加し、<xref:System.Windows.Media.Animation.BeginStoryboard>にその<xref:System.Windows.EventTrigger.Actions%2A>コレクション。 設定、<xref:System.Windows.EventTrigger.RoutedEvent%2A>のプロパティ、<xref:System.Windows.EventTrigger>を開始するルーティング イベントに、<xref:System.Windows.Media.Animation.Storyboard>します。 (ルーティング イベントの詳細については、次を参照してください、[ルーティング イベントの概要](../advanced/routed-events-overview.md)。)。  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_2](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_2)]  
   
-3.  追加、<xref:System.Windows.EventTrigger>を<xref:System.Windows.FrameworkElement.Triggers%2A>四角形のコレクション。  
+3. 追加、<xref:System.Windows.EventTrigger>を<xref:System.Windows.FrameworkElement.Triggers%2A>四角形のコレクション。  
   
      [!code-xaml[animation_ovws_snippet#RectangleOpacityFadeExampleInline_1](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/RectangleOpacityFadeExample.xaml#rectangleopacityfadeexampleinline_1)]  
   
@@ -159,12 +159,12 @@ ms.locfileid: "57373739"
 ### <a name="part-3-code-associate-the-storyboard-with-an-event-handler"></a>パート 3 (コード):ストーリー ボードをイベント ハンドラーに関連付ける  
  適用して開始する最も簡単な方法を<xref:System.Windows.Media.Animation.Storyboard>コードでは、イベント ハンドラーを使用します。 このセクションに関連付ける方法を示しています、<xref:System.Windows.Media.Animation.Storyboard>コード内のイベント ハンドラーにします。  
   
-1.  登録、<xref:System.Windows.FrameworkElement.Loaded>四角形のイベント。  
+1. 登録、<xref:System.Windows.FrameworkElement.Loaded>四角形のイベント。  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_104)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_104)]  
   
-2.  イベント ハンドラーを宣言します。 イベント ハンドラーで使用して、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>ストーリー ボードを適用する方法。  
+2. イベント ハンドラーを宣言します。 イベント ハンドラーで使用して、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>ストーリー ボードを適用する方法。  
   
      [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
      [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]  
@@ -253,7 +253,7 @@ ms.locfileid: "57373739"
 #### <a name="repeatbehavior"></a>RepeatBehavior  
  <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティが、タイムラインの再生回数を指定します。 既定では、タイムラインがあるの反復カウント`1.0`、いずれかの再生、つまり時間、まったく、繰り返されない。  
   
- これらのプロパティとその他のユーザーの詳細については、、[タイミング動作の概要](timing-behaviors-overview.md)を参照してください。  
+ これらのプロパティとその他のユーザーの詳細については、次を参照してください。、[タイミング動作の概要](timing-behaviors-overview.md)します。  
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>プロパティにアニメーションを適用する  
@@ -268,7 +268,7 @@ ms.locfileid: "57373739"
   
 -   させる、<xref:System.Windows.Freezable>オブジェクトをアニメーションのターゲットで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../xaml-services/x-name-directive.md)名前を指定します。 使用するだけのコードでは、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページ オブジェクトを登録します。  
   
- 次のセクションでは、内の要素の名前付けの例を提供する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 名前付けとターゲット設定の詳細については、、[ストーリー ボードの概要](storyboards-overview.md)を参照してください。  
+ 次のセクションでは、内の要素の名前付けの例を提供する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 名前付けとターゲット設定の詳細については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。  
   
 ### <a name="applying-and-starting-storyboards"></a>ストーリーボードの適用と開始  
  ストーリー ボードを起動する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、関連付けること、<xref:System.Windows.EventTrigger>します。 <xref:System.Windows.EventTrigger>は指定されたイベントが発生したときに実行するアクションを記述するオブジェクトです。 これらのアクションのいずれかを指定できます、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションは、ストーリー ボードを開始するために使用します。 イベント トリガーは、アプリケーションが特定のイベントに応答する方法を指定できるようにするため、概念はイベント ハンドラーに似ています。 イベント トリガーで完全に記述する、イベント ハンドラーとは異なり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; その他のコードは必要ありません。  
@@ -292,9 +292,9 @@ ms.locfileid: "57373739"
   
  ため、その<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>は既定値から変更されていない<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>アニメーションを保持して、最終的な値は 0 で終了時にします。 そのため、<xref:System.Windows.UIElement.Opacity%2A>のアニメーションの終了後に 0 で、四角形は終了します。 設定した場合、 <xref:System.Windows.UIElement.Opacity%2A> 、別の値に四角形のコードが表示されます、効果がない、アニメーションがまだに影響を与えるため、<xref:System.Windows.UIElement.Opacity%2A>プロパティ。  
   
- コードでアニメーション化されたプロパティの制御を取り戻す方法の 1 つが使用するには、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドに null を指定し、<xref:System.Windows.Media.Animation.AnimationTimeline>パラメーター。 詳細と例では、[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)を参照してください。  
+ コードでアニメーション化されたプロパティの制御を取り戻す方法の 1 つが使用するには、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドに null を指定し、<xref:System.Windows.Media.Animation.AnimationTimeline>パラメーター。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。  
   
- 持つプロパティ値を設定するが、<xref:System.Windows.Media.Animation.ClockState.Active>または<xref:System.Windows.Media.Animation.ClockState.Filling>効果がないアニメーションが表示されたら、プロパティの値は変更できます。 詳細については、、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
+ 持つプロパティ値を設定するが、<xref:System.Windows.Media.Animation.ClockState.Active>または<xref:System.Windows.Media.Animation.ClockState.Filling>効果がないアニメーションが表示されたら、プロパティの値は変更できます。 詳細については、次を参照してください。、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
   
 <a name="databindingAndAnimatingAnimationsSection"></a>   
 ## <a name="data-binding-and-animating-animations"></a>アニメーションのデータ バインディングとアニメーション化  
@@ -308,17 +308,17 @@ ms.locfileid: "57373739"
   
  アニメーションがデータ バインディングまたはアニメーションの変更を反映するためには、そのクロックを再生成する必要があります。 クロックは、自動的には再生成されません。 アニメーションの変更を反映するために、そのストーリー ボードを再適用を使用して、<xref:System.Windows.Media.Animation.BeginStoryboard>または<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッド。 これらのメソッドのいずれかを使うと、アニメーションが再起動されます。 コードでは、使用することができます、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>ストーリー ボードをシフトするメソッドが前の位置に戻ります。  
   
- データの例では、アニメーションがバインドされている、参照してください[キー スプライン アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160011)します。 アニメーションとタイミング システムのしくみの詳細については、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)を参照してください。  
+ データの例では、アニメーションがバインドされている、参照してください[キー スプライン アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160011)します。 アニメーションとタイミング システムのしくみの詳細については、次を参照してください。[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)します。  
   
 <a name="otherWaysToAnimateSection"></a>   
 ## <a name="other-ways-to-animate"></a>その他のアニメーション化方法  
- この概要の例では、ストーリーボードを使ってアニメーション化する方法を示します。 コードを使う場合は、その他のいくつかの方法でアニメーション化できます。 詳細については、、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
+ この概要の例では、ストーリーボードを使ってアニメーション化する方法を示します。 コードを使う場合は、その他のいくつかの方法でアニメーション化できます。 詳細については、次を参照してください。、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
   
 <a name="animation_samples"></a>   
 ## <a name="animation-samples"></a>アニメーションのサンプル  
  以下のサンプルは、アプリケーションへのアニメーションの追加を開始するのに役立つ場合があります。  
   
--   [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [From、To、およびアニメーション ターゲット値のサンプルで](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      さまざまな From/To/By 設定を示します。  
   
@@ -342,7 +342,7 @@ ms.locfileid: "57373739"
 |[ストーリーボードの概要](storyboards-overview.md)|複数のタイムラインを持つストーリーボードを使って複雑なアニメーションを作成する方法について説明します。|  
 |[タイミング動作の概要](timing-behaviors-overview.md)|について説明します、<xref:System.Windows.Media.Animation.Timeline>型とプロパティをアニメーションで使用します。|  
 |[タイミング イベントの概要](timing-events-overview.md)|使用できるイベントについて説明します、<xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>など、タイムラインのポイントでコードを実行するためのオブジェクトを開始、一時停止、再開、スキップ、または停止します。|  
-|[方法トピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|  
+|[方法のトピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|  
 |[クロックに関する「方法」トピック](clocks-how-to-topics.md)|使用するためのコード例が含まれて、<xref:System.Windows.Media.Animation.Clock>アプリケーション内のオブジェクト。|  
 |[キー フレームに関する「方法」トピック](key-frame-animation-how-to-topics.md)|アプリケーションでキー フレーム アニメーションを使うためのコード例を示します。|  
 |[パス アニメーションに関する「方法」トピック](path-animation-how-to-topics.md)|アプリケーションでパス アニメーションを使うためのコード例を示します。|  

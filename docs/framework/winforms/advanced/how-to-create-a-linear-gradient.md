@@ -1,5 +1,5 @@
 ---
-title: '方法: 線形グラデーションを作成します。'
+title: '方法: 線形グラデーションを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125022"
 ---
-# <a name="how-to-create-a-linear-gradient"></a>方法: 線形グラデーションを作成します。
+# <a name="how-to-create-a-linear-gradient"></a>方法: 線形グラデーションを作成する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 水平方向、垂直方向、および対角線方向の線形グラデーションを提供します。 既定では、線形グラデーションの色を均一に変更します。 ただし、色が一様でない方法で変更されるように、線形グラデーションをカスタマイズできます。  
   
  次の例では、線、楕円、および水平方向の線状グラデーション ブラシを四角形を塗りつぶします。  
@@ -78,5 +78,6 @@ ms.locfileid: "57725247"
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [グラデーション ブラシを使用した図形の塗りつぶし](using-a-gradient-brush-to-fill-shapes.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

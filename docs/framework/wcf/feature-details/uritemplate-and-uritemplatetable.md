@@ -2,12 +2,12 @@
 title: UriTemplate と UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130248"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate と UriTemplateTable
 Web 開発者は、サービスの応答先となる URI の形状とレイアウトを記述できる必要があります。 Windows Communication Foundation (WCF) は、その Uri 上のコントロールを開発者に提供する 2 つの新しいクラスを追加します。 <xref:System.UriTemplate> <xref:System.UriTemplateTable> WCF では、URI ベースのディスパッチ エンジンの基盤を形成します。 これらのクラスは、WCF サービスを実装することがなく、テンプレートと URI を活用するために開発者が独自のマッピング メカニズムにも使用できます。  
@@ -25,22 +25,22 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
  この表は、構造が似ている一連の URI を示しています。 各エントリが URI テンプレートです。 中かっこで囲まれたセグメントは変数を表します。 中かっこで囲まれていないセグメントはリテラル文字を表します。 WCF のテンプレート クラスを使用すると、例については、「/気象/wa/シアトル/cycling」、受信 URI を受け取り、それを記述するテンプレートと照合するための開発者"/weather/{state}/{city}/{アクティビティ}"。  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> は、URI テンプレートをカプセル化するクラスです。 コンストラクターは、テンプレートを定義する文字列パラメーターを受け取ります。 この文字列には、次のセクションで説明する形式のテンプレートが含まれます。 <xref:System.UriTemplate> クラスには、受信 URI をテンプレートと照合するメソッド、テンプレートから URI を生成するメソッド、テンプレートで使用されている変数名のコレクションを取得するメソッド、2 つのテンプレートが等しいかどうかを判断するメソッド、およびテンプレートの文字列を返すメソッドが用意されています。  
+ <xref:System.UriTemplate> URI テンプレートをカプセル化するクラスです。 コンストラクターは、テンプレートを定義する文字列パラメーターを受け取ります。 この文字列には、次のセクションで説明する形式のテンプレートが含まれます。 <xref:System.UriTemplate> クラスには、受信 URI をテンプレートと照合するメソッド、テンプレートから URI を生成するメソッド、テンプレートで使用されている変数名のコレクションを取得するメソッド、2 つのテンプレートが等しいかどうかを判断するメソッド、およびテンプレートの文字列を返すメソッドが用意されています。  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> は、ベース アドレスと候補となる URI を取得し、その URI をテンプレートと照合します。 URI とテンプレートが一致した場合は、<xref:System.UriTemplateMatch> インスタンスが返されます。 <xref:System.UriTemplateMatch> オブジェクトには、ベース URI、候補となる URI、クエリ パラメーターの名前/値コレクション、相対パス セグメントの配列、一致した変数の名前/値コレクション、照合を実行する際に使用する <xref:System.UriTemplate> インスタンス、候補となる URI の一致していない部分を含む文字列 (テンプレートにワイルドカードが含まれているときに使用)、およびテンプレートに関連付けられたオブジェクトが格納されます。  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> 受け取り、ベース アドレスと候補の URI テンプレートへの URI を照合します。 URI とテンプレートが一致した場合は、<xref:System.UriTemplateMatch> インスタンスが返されます。 <xref:System.UriTemplateMatch> オブジェクトには、ベース URI、候補となる URI、クエリ パラメーターの名前/値コレクション、相対パス セグメントの配列、一致した変数の名前/値コレクション、照合を実行する際に使用する <xref:System.UriTemplate> インスタンス、候補となる URI の一致していない部分を含む文字列 (テンプレートにワイルドカードが含まれているときに使用)、およびテンプレートに関連付けられたオブジェクトが格納されます。  
   
 > [!NOTE]
 >  <xref:System.UriTemplate> クラスは、候補となる URI をテンプレートと照合するときにスキームとポート番号を無視します。  
   
- テンプレートから URI を生成できるメソッドとして、<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> と <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> の 2 つのメソッドがあります。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> は、ベース アドレスおよびパラメーターの名前/値コレクションを取得します。 テンプレートのバインド時に、これらのパラメーターが変数に代入されます。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> は、名前と値のペアを取得し、これらのペアを左から右の順に代入します。  
+ テンプレートから URI を生成できるメソッドとして、<xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> と <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> の 2 つのメソッドがあります。 <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> ベース アドレスとパラメーターの名前/値コレクションを受け取ります。 テンプレートのバインド時に、これらのパラメーターが変数に代入されます。 <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> 名前/値ペアを受け取り、左右からの順に代入します。  
   
- <xref:System.UriTemplate.ToString> は、テンプレート文字列を返します。  
+ <xref:System.UriTemplate.ToString> テンプレート文字列を返します。  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> プロパティには、テンプレート文字列のパス セグメント内で使用される変数の名前のコレクションが格納されます。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> は <xref:System.UriTemplate> をパラメーターとして受け取り、2 つのテンプレートが等しいかどうかを示すブール値を返します。 詳細については、このトピックの「テンプレートの等価性」セクションを参照してください。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> <xref:System.UriTemplate>をパラメーターとして 2 つのテンプレートが等しいかどうかを指定するブール値を返します。 詳細については、このトピックの「テンプレートの等価性」セクションを参照してください。  
   
- <xref:System.UriTemplate> は、HTTP URI 文法に準じるすべての URI スキームで使用できるように設計されています。 サポートされている URI スキームの例を次に示します。  
+ <xref:System.UriTemplate> HTTP URI 文法に準じるすべての URI スキームを使用する設計されています。 サポートされている URI スキームの例を次に示します。  
   
 - http://  
   
@@ -65,7 +65,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
  パス式では、先頭と末尾のスラッシュは省略可能です。 クエリ式とフラグメント式は、いずれも式全体を省略できます。 パス セグメントで区切られた一連は、'/'、各セグメントはリテラル値、変数名 ({中かっこ} で記述)、またはワイルドカードを持つことができます (書き込まれる '\*')。 上記のテンプレートでは、"/weather/" セグメントがリテラル値で、"{state}" と "{city}" が変数です。 変数は中かっこの内容から名前を取得して、後で作成する具体的な値を交換できる、*クローズである URI*します。 ワイルドカードは、省略可能ですが、「残りのパス」を論理的に一致が、URI の末尾でだけ記述できます。  
   
- クエリ式 (存在する場合) では、'&' で区切られた順序なしの一連の名前と値のペアを指定します。 クエリ式の要素には、リテラル ペア (x=2) または変数ペア (x={var}) を指定できます。 変数を指定できるのはクエリ式の右辺のみです。 ({someName} = {someValue}) は指定できません。 対になっていない値 (?x) は使用できません。 空のクエリ式と、1 つの '?' だけで構成されたクエリ式は同じものです (いずれも "任意のクエリ" を意味します)。  
+ クエリ式に存在する場合は、一連ので区切られた順序なしの名前/値ペアを指定 '&'。 クエリ式の要素には、リテラル ペア (x=2) または変数ペア (x={var}) を指定できます。 変数を指定できるのはクエリ式の右辺のみです。 ({someName} = {someValue}) は指定できません。 対になっていない値 (?x) は使用できません。 空のクエリ式と、1 つの '?' だけで構成されたクエリ式は同じものです (いずれも "任意のクエリ" を意味します)。  
   
  フラグメント式はリテラル値で構成できます。変数は使用できません。  
   
@@ -91,7 +91,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
   
 - "shoe/{boat}?x={bed}"  
   
-- "shoe/{boat}?x={bed}&y=band"  
+- "靴/{ボート}? x = {ベッド} & y = バンド"  
   
 - "?x={shoe}"  
   
@@ -244,9 +244,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - /a/{var1}/b b/{var2}?x=1&y=2  
   
-- a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b%20b/{var1}?y=2 (& x) = 1  
   
-- a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B%20B/{z}/?y=2 (& x) = 1  
   
  次の点に注意してください。  
   
@@ -279,9 +279,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?x=3  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
-- ?x=2&z={var}  
+- ? x = 2 (& z) {var} を =  
   
 - ?x=3  
   
@@ -295,11 +295,11 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?m=get&c=rss  
   
-- ?m=put&c=rss  
+- ? m put (& c) = = rss  
   
-- ?m=get&c=atom  
+- ? m get (& c) = = atom  
   
-- ?m=put&c=atom  
+- ? m put (& c) = = atom  
   
  クエリ文字列テンプレートの次のセットにはあいまいさがあります。  
   
@@ -313,22 +313,23 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 - ?y=2  
   
- "x=1&y=2" は両方のテンプレートに一致します。 これは、クエリ文字列に、一致するテンプレートよりも多くのクエリ文字列変数が含まれている可能性があるからです。  
+ "x = 1 & y = 2"両方のテンプレートに一致します。 これは、クエリ文字列に、一致するテンプレートよりも多くのクエリ文字列変数が含まれている可能性があるからです。  
   
 - ?x=1  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
- "x=1&y=3" は両方のテンプレートに一致します。  
+ "x = 1 & y = 3"両方のテンプレートに一致します。  
   
-- ?x=3&y=4  
+- ? x = 3 (& y) = 4  
   
-- ?x=3&z=5  
+- ? x = 3 (& z) = 5  
   
 > [!NOTE]
 > 文字 á と Á が URI パスまたは <xref:System.UriTemplate> のパス セグメントのリテラルの一部として出現した場合、これらは異なる文字と見なされます (ただし、a と A は同じ文字と見なされます)。 文字 á と Á が <xref:System.UriTemplate> の {variableName} またはクエリ文字列の一部として出現した場合は、これらは同じ文字と見なされます (a と A も同じ文字と見なされます)。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

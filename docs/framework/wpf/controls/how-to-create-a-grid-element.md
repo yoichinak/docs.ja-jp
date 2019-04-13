@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134538"
 ---
 # <a name="how-to-create-a-grid-element"></a>方法: グリッド要素を作成する
 ## <a name="example"></a>例  
@@ -26,5 +26,6 @@ ms.locfileid: "57379511"
 
   ![スクリーン ショットは、3 つの列に分割グリッドを含む WPF ユーザー インターフェイスを示しています。  '2018 製品出荷' の最上位の行のすべての列にまたがる見出しであるし、特定の四半期の 3 つの列それぞれの販売成績が。  一番下の行がテキスト メッセージで 2 つの列にまたがる ' の合計ユニット数。300,000'](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Grid>
 - [パネルの概要](panels-overview.md)

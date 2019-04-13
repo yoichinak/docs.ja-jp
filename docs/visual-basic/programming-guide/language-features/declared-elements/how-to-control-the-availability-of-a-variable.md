@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311527"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) の可用性を制御します。
 指定することで、変数の可用性を制御するその*アクセス レベル*します。 どのようなコードは、変数に対する読み取りまたは書き込み権限を持つアクセス レベルを決定します。  
@@ -31,25 +31,25 @@ ms.locfileid: "58841694"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>変数をそのモジュール、クラスまたは構造内からのみアクセスできるようにするには  
   
-1.  場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)モジュール、クラス、または構造体の内部では、プロシージャの外部の変数。  
+1. 場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)モジュール、クラス、または構造体の内部では、プロシージャの外部の変数。  
   
-2.  含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
+2. 含める、[プライベート](../../../../visual-basic/language-reference/modifiers/private.md)キーワード、`Dim`ステートメント。  
   
      読み取りまたはからではなくが、モジュール、クラス、または構造内で任意の場所から変数への書き込みができる外です。  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>変数を参照できる任意のコードからアクセスできるようにするには  
   
-1.  メンバー変数では、配置、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. メンバー変数では、配置、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
   
-2.  含める、[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
+2. 含める、[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)キーワード、`Dim`ステートメント。  
   
      読み取りまたはアセンブリと同時に使用する任意のコードから、変数に書き込むことができます。  
   
  - または -  
   
-1.  ローカル変数では、配置、`Dim`プロシージャ内にある変数のステートメント。  
+1. ローカル変数では、配置、`Dim`プロシージャ内にある変数のステートメント。  
   
-2.  含めないでください、`Public`キーワード、`Dim`ステートメント。  
+2. 含めないでください、`Public`キーワード、`Dim`ステートメント。  
   
      読み取りまたはからは、プロシージャ内で任意の場所から変数への書き込みができる外です。  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58841694"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>変数をそのクラスと派生クラス内からのみアクセスできるようにするには  
   
-1.  場所、`Dim`変数、クラス内では、プロシージャの外側のステートメント。  
+1. 場所、`Dim`変数、クラス内では、プロシージャの外側のステートメント。  
   
-2.  含める、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)キーワード、`Dim`ステートメント。  
+2. 含める、 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)キーワード、`Dim`ステートメント。  
   
      読み取りまたはからではなくが、それから派生したあらゆるクラス内からだけでなく、クラス内で任意の場所から変数への書き込みができる派生チェーン内のクラス外です。  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>変数を同じアセンブリ内からのみアクセスできるようにするには  
   
-1.  場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
+1. 場所、`Dim`変数ではなく、プロシージャの外部モジュール、クラス、または構造体には、内部のステートメント。  
   
-2.  含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)キーワード、`Dim`ステートメント。  
+2. 含める、[フレンド](../../../../visual-basic/language-reference/modifiers/friend.md)キーワード、`Dim`ステートメント。  
   
      読み取りまたは、モジュール、クラス、または構造内で任意の場所だけでなく、コードからは、同じアセンブリ内から変数への書き込みができるアセンブリの外側です。  
   
@@ -91,6 +91,6 @@ Private numberForMeOnly As Integer
 - [Visual Basic でのアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [プロテクト](../../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
-- [Private](../../../../visual-basic/language-reference/modifiers/private.md)
+- [プライベート](../../../../visual-basic/language-reference/modifiers/private.md)

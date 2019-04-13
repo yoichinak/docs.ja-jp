@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099704"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation のアーキテクチャ
 次の図は、Windows Communication Foundation (WCF) のアーキテクチャの主要なレイヤーを示しています。  
@@ -46,5 +46,6 @@ ms.locfileid: "54745385"
  サービスがすることもできます*ホスト*、または IIS や Windows アクティブ化サービス (WAS) などの外部エージェントによって管理されている実行可能ファイルでを実行します。 により、WCF アプリケーションを実行するコンピューターに展開されているときに自動的にアクティブにするがでした。 サービスは、実行可能ファイル (.exe ファイル) として手動で実行することもできます。 また、Windows サービスとして自動的に実行することもできます。 COM + コンポーネントは、WCF サービスとしてホストすることもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation の基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

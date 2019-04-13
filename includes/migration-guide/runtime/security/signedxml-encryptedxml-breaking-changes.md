@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2c54912e5c29b2ed8f4c8163550050e12e367263
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760647"
+---
 ### <a name="signedxml-and-encryptedxml-breaking-changes"></a>SignedXml と EncryptedXml の互換性に影響する変更点
 
 |   |   |

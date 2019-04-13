@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105328"
 ---
 # <a name="toolbar-overview"></a>ToolBar の概要
 <xref:System.Windows.Controls.ToolBar> コントロールは、コマンドまたはコントロールの機能に関連する通常のグループのコンテナーです。 A<xref:System.Windows.Controls.ToolBar>通常のコマンドを呼び出すボタンが含まれています。  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar コントロール  
  <xref:System.Windows.Controls.ToolBar>コントロールは、1 つの行または列にボタンやその他のコントロール バーのような配置から名前を取得します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> コントロールがサイズ制限内で自然に適合しないすべての項目を配置するオーバーフロー メカニズムを提供<xref:System.Windows.Controls.ToolBar>特別なオーバーフロー領域にします。 また、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>コントロールを使用して、通常は、関連の<xref:System.Windows.Controls.ToolBarTray>コントロールで、ユーザーによるサイズ変更や、ツールバーの配置のためのサポートだけでなく、特殊なレイアウト動作を提供します。  
@@ -41,7 +40,8 @@ ms.locfileid: "58464958"
  [ツール バーのスタイルとテンプレート](toolbar-styles-and-templates.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [ToolBar のコントロールのスタイルを設定する](how-to-style-controls-on-a-toolbar.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF コントロール ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160053)

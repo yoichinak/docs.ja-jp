@@ -1,5 +1,5 @@
 ---
-title: '方法: ToolStrip コントロールをカスタム描画します。'
+title: '方法: ToolStrip コントロールをカスタム描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705754"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311046"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a>方法: ToolStrip コントロールをカスタム描画します。
+# <a name="how-to-custom-draw-a-toolstrip-control"></a>方法: ToolStrip コントロールをカスタム描画する
 <xref:System.Windows.Forms.ToolStrip> コントロールに、次のレンダリング (描画) クラスが関連付けられています。  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> は、オペレーティング システムの外観とスタイルを提供します。  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> オペレーティング システムのスタイルと外観を提供します。  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> は、Microsoft Office の外観とスタイルを提供します。  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Microsoft Office のスタイルと外観を提供します。  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> は、その他の 2 つのレンダリング クラスの抽象基本クラスです。  
+-   <xref:System.Windows.Forms.ToolStripRenderer> 他の 2 つのレンダリング クラスの抽象基本クラス。  
   
  <xref:System.Windows.Forms.ToolStrip> をカスタムで描画 (オーナー描画) するために、レンダラー クラスの 1 つをオーバーライドして表示ロジックの特定の側面を変更できます。  
   
@@ -107,11 +107,11 @@ ms.locfileid: "57705754"
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>アプリケーション内のすべての ToolStrip コントロールのレンダリングを変更するには  
   
-1.  <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> プロパティを使用して、設定されているレンダラーのいずれかを選択します。  
+1. <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> プロパティを使用して、設定されているレンダラーのいずれかを選択します。  
   
-2.  <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> を使用して、カスタム レンダラーを割り当てます。  
+2. <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> を使用して、カスタム レンダラーを割り当てます。  
   
-3.  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> が既定値の <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> に設定されていることを確認します。  
+3. <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> が既定値の <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> に設定されていることを確認します。  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>アプリケーション全体で Microsoft Office の色をオフにするには  
   
@@ -134,9 +134,10 @@ ms.locfileid: "57705754"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)
-- [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

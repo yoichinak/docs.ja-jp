@@ -2,12 +2,12 @@
 title: WCF 配信の概要
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef62c4460ff5dd4890de174afda671facee97f2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189834"
 ---
 # <a name="wcf-syndication-overview"></a>WCF 配信の概要
 Windows Communication Foundation (WCF) は、WCF サービスから配信フィードを公開するためのサポートを提供します。 配信は、サーバーがフィードと呼ばれる相互運用可能な形式でアプリケーション データの一部を公開するためのアプリケーション統合の機構です。 フィードはアプリケーション データのコレクションであり、フィード レベルのメタデータ (タイトル、作成者、URL、およびその他のメタデータ) と一連のフィード アイテムから構成されます。 フィード内で、フィード アイテムは通常、発生の逆順に並べられます。 フィード アイテムは、アイテム レベルのメタデータの標準セット (タイトル、URL、作成日時、カテゴリ、およびその他のアイテム レベルのメタデータ) と任意の大きさのアプリケーション固有のデータから構成されます。 配信フィードの 2 つの最も一般的な種類は、RSS Really Simple Syndication () 2.0 と Atom 1.0 では、WCF でサポートされるは。  
@@ -22,4 +22,5 @@ Windows Communication Foundation (WCF) は、WCF サービスから配信フィ�
  WCF 配信プラットフォームでは、RSS 2.0 と Atom 1.0 をサポートします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

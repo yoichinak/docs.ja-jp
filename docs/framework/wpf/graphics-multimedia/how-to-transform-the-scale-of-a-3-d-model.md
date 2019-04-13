@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], 3-D objects
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
-ms.openlocfilehash: afe18cea95be945313ef78a690c58950a3fff9b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165088"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>方法: 3-D モデルのスケールを変換する
 この例では、3-D オブジェクトをスケーリングする方法を示します。 3-D オブジェクトのスケーリングを使用して、<xref:System.Windows.Media.Media3D.ScaleTransform3D>します。 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>、 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>、および<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A>プロパティを指定する係数を使用して、要素のサイズを変更します。 たとえば、 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> 1.5 の値が元の幅の 150 パーセントにオブジェクトを拡大します。 A<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>値 0.5 は 50% オブジェクトの高さを縮小します。 次のコードを使用して、<xref:System.Windows.Media.Media3D.ScaleTransform3D>の変換として、<xref:System.Windows.Media.Media3D.GeometryModel3D>します。  
@@ -23,6 +23,7 @@ ms.locfileid: "57378783"
  [!code-xaml[3DGallery_snip#ScaleTransform3DExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [3-D 変換をアニメーション化する](how-to-animate-3-d-translations.md)
 - [3-D シーンを作成する](how-to-create-a-3-d-scene.md)
 - [3-D グラフィックスの概要](3-d-graphics-overview.md)

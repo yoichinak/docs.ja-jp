@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325827"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Version 4.5 の新機能
 <a name="introduction"></a> このトピックには、新機能および強化機能に関する情報が含まれています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5。  
@@ -56,9 +56,9 @@ ms.locfileid: "57368169"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel の新機能  
   
-1.  <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを指定することで、<xref:System.Windows.Controls.VirtualizingStackPanel> (<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> など) に部分的な項目を表示するかどうかを指定できます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Item> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には完全に表示される項目だけが表示されます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Pixel> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には部分的に表示される項目も表示されます。  
+1. <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを指定することで、<xref:System.Windows.Controls.VirtualizingStackPanel> (<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> など) に部分的な項目を表示するかどうかを指定できます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Item> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には完全に表示される項目だけが表示されます。 <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> が <xref:System.Windows.Controls.ScrollUnit.Pixel> に設定されている場合、<xref:System.Windows.Controls.VirtualizingPanel> には部分的に表示される項目も表示されます。  
   
-2.  <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを使用して <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> を仮想化すると、ビューポートの前後でキャッシュのサイズを指定できます。  キャッシュは、項目が仮想化されないビューポートの上または下の領域の量です。  キャッシュを使用して、UI 要素がビューにスクロールされたときに UI 要素が生成されないようすると、パフォーマンスが向上します。 キャッシュは、操作中にアプリケーションが応答を停止しないように低い優先度で実行されます。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> プロパティは、<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType> により使用される測定単位を決定します。  
+2. <xref:System.Windows.Controls.VirtualizingPanel> 添付プロパティを使用して <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> を仮想化すると、ビューポートの前後でキャッシュのサイズを指定できます。  キャッシュは、項目が仮想化されないビューポートの上または下の領域の量です。  キャッシュを使用して、UI 要素がビューにスクロールされたときに UI 要素が生成されないようすると、パフォーマンスが向上します。 キャッシュは、操作中にアプリケーションが応答を停止しないように低い優先度で実行されます。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> プロパティは、<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType> により使用される測定単位を決定します。  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>静的プロパティへのバインド  
@@ -86,11 +86,11 @@ ms.locfileid: "57368169"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>ICustomTypeProvider を実装する型へのバインド  
  WPF では、<xref:System.Reflection.ICustomTypeProvider> を実装するオブジェクトへのデータ バインディングがサポートされます (カスタムの型とも呼ばれます)。  カスタムの型は、次の場合に使用できます。  
   
-1.  データ バインディングにおける <xref:System.Windows.PropertyPath> として。 たとえば、<xref:System.Windows.Data.Binding.Path%2A> の <xref:System.Windows.Data.Binding> プロパティは、カスタムの型のプロパティを参照できます。  
+1. データ バインディングにおける <xref:System.Windows.PropertyPath> として。 たとえば、<xref:System.Windows.Data.Binding.Path%2A> の <xref:System.Windows.Data.Binding> プロパティは、カスタムの型のプロパティを参照できます。  
   
-2.  <xref:System.Windows.DataTemplate.DataType%2A> プロパティの値として。  
+2. <xref:System.Windows.DataTemplate.DataType%2A> プロパティの値として。  
   
-3.  <xref:System.Windows.Controls.DataGrid> で自動的に生成された列を決定する型として。  
+3. <xref:System.Windows.Controls.DataGrid> で自動的に生成された列を決定する型として。  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>バインディング式からのデータ バインディング情報の取得  
@@ -102,8 +102,8 @@ ms.locfileid: "57368169"
 |ターゲット プロパティ|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
 |ソース オブジェクト|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
 |ソース プロパティ|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
-|<xref:System.Windows.Data.BindingExpression> が <xref:System.Windows.Data.BindingGroup> に属するかどうか|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
-|<xref:System.Windows.Data.BindingGroup> の所有者|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
+|かどうか、<xref:System.Windows.Data.BindingExpression>に属している、 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|所有者、 <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
 ## <a name="checking-for-a-valid-datacontext-object"></a>有効な DataContext オブジェクトの確認  
@@ -119,11 +119,12 @@ ms.locfileid: "57368169"
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>ディスパッチャー クラスの新しいメソッド  
- ディスパッチャー クラスは、同期操作および非同期操作の新しいメソッドを定義します。  同期メソッドである <xref:System.Windows.Threading.Dispatcher.Invoke%2A> は、<xref:System.Action> パラメーターまたは <xref:System.Func%601> パラメーターを受け取るオーバーロードを定義します。 新しい非同期メソッドである <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>は、コールバック パラメーターとして <xref:System.Action> か <xref:System.Func%601> を受け取り、<xref:System.Windows.Threading.DispatcherOperation> か <xref:System.Windows.Threading.DispatcherOperation%601> を返します。   <xref:System.Windows.Threading.DispatcherOperation> クラスと <xref:System.Windows.Threading.DispatcherOperation%601> クラスは、<xref:System.Threading.Tasks.Task> プロパティを定義します。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> を呼び出すと、`await` または関連付けられた <xref:System.Windows.Threading.DispatcherOperation>の <xref:System.Threading.Tasks.Task> を持つキーワードを使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> を呼び出すと、呼び出し元スレッドで操作がキューに置かれた場合はデッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行する、[タスクの並列化 (タスク並列ライブラリ)](../../../standard/parallel-programming/task-based-asynchronous-programming.md)を参照してください。  
+ ディスパッチャー クラスは、同期操作および非同期操作の新しいメソッドを定義します。  同期メソッドである <xref:System.Windows.Threading.Dispatcher.Invoke%2A> は、<xref:System.Action> パラメーターまたは <xref:System.Func%601> パラメーターを受け取るオーバーロードを定義します。 新しい非同期メソッドである <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A>は、コールバック パラメーターとして <xref:System.Action> か <xref:System.Func%601> を受け取り、<xref:System.Windows.Threading.DispatcherOperation> か <xref:System.Windows.Threading.DispatcherOperation%601> を返します。   <xref:System.Windows.Threading.DispatcherOperation> クラスと <xref:System.Windows.Threading.DispatcherOperation%601> クラスは、<xref:System.Threading.Tasks.Task> プロパティを定義します。  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> を呼び出すと、`await` または関連付けられた <xref:System.Windows.Threading.DispatcherOperation>の <xref:System.Threading.Tasks.Task> を持つキーワードを使用できます。 <xref:System.Threading.Tasks.Task> または <xref:System.Windows.Threading.DispatcherOperation> によって返される <xref:System.Windows.Threading.DispatcherOperation%601> を同期的に待機する必要がある場合、<xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> 拡張メソッドを呼び出します。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> を呼び出すと、呼び出し元スレッドで操作がキューに置かれた場合はデッドロックが発生します。 使用しての詳細については、<xref:System.Threading.Tasks.Task>非同期操作を実行する、次を参照してください。[タスクの並列化 (タスク並列ライブラリ)](../../../standard/parallel-programming/task-based-asynchronous-programming.md)します。  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>イベントのマークアップ拡張機能  
  WPF 4.5 では、イベントのマークアップ拡張機能がサポートされます。  WPF はイベントに使用されるマークアップ拡張機能を定義しませんが、サードパーティがイベントで使用できるマークアップ拡張機能を作成できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [.NET Framework の新機能](../../whats-new/index.md)

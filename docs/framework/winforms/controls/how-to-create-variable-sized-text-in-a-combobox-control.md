@@ -1,5 +1,5 @@
 ---
-title: '方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。'
+title: '方法: ComboBox コントロールにサイズ変更可能なテキストを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085611"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>方法: ComboBox コントロールにサイズ変更可能なテキストを作成する
 この例は、内のテキストのカスタム描画を<xref:System.Windows.Forms.ComboBox>コントロール。 項目が、特定の条件を満たしている場合は、大きいフォントで描画され、赤になっています。  
   
 ## <a name="example"></a>例  
@@ -65,10 +65,10 @@ End Sub
     > [!NOTE]
     >  この手法も適用できます、<xref:System.Windows.Forms.ListBox>コントロール-代わりに使用することができます、<xref:System.Windows.Forms.ListBox>の<xref:System.Windows.Forms.ComboBox>します。  
   
--   
-  <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間と <xref:System.Drawing?displayProperty=nameWithType> 名前空間への参照。  
+-   <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間と <xref:System.Drawing?displayProperty=nameWithType> 名前空間への参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>

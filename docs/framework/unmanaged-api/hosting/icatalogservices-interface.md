@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f2b7b81bbf6401313209170ea65186c38d4e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07356dcf81df41a1dd419c3b68829dcbfec5a073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147252"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices インターフェイス
 カタログ サービスのメソッドを提供します。  
@@ -36,4 +36,5 @@ ms.locfileid: "54711042"
 |[NotAutodone メソッド](../../../../docs/framework/unmanaged-api/hosting/icatalogservices-notautodone-method.md)|内部使用専用に予約されています。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

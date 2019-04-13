@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314972"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework の概要
 
@@ -71,7 +71,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 
 2. .NET Framework でサポートされている、アプリ開発に使用する言語を選択します。 Microsoft の [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md)、および [C++ と CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) を含む多くの言語から選択できます。 (.NET Framework のアプリを開発できるプログラミング言語は、[共通言語基盤 (CLI) 仕様](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)に準拠します)。
 
-3. アプリの作成に使用する、選択したプログラミング言語をサポートする開発環境を選択してインストールします。 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) は、.NET Framework アプリ用の Microsoft 統合開発環境 (IDE) です。 これには、いくつかエディションがあります。
+3. アプリの作成に使用する、選択したプログラミング言語をサポートする開発環境を選択してインストールします。 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) は、.NET Framework アプリ用の Microsoft 統合開発環境 (IDE) です。 これには、いくつかエディションがあります。
 
 .NET Framework を対象にしたアプリの開発の詳細については、「[.NET Framework の開発ガイド](../development-guide.md)」を参照してください。
 
@@ -81,7 +81,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 | ----- |------------ |
 | [概要](overview.md) | .NET Framework を対象としたアプリを作成する開発者向けの詳細情報を提供します。 |
 | [インストール ガイド](../install/index.md) | .NET Framework のインストールに関する情報を提供します。 |  
-| [NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウト オブ バンド リリースと、これらをアプリ内で使用する方法について説明します。 |
+| [.NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウト オブ バンド リリースと、これらをアプリ内で使用する方法について説明します。 |
 | [システム要件](system-requirements.md) | .NET Framework を実行するためのハードウェアおよびソフトウェアの要件を示します。 |
 | [.NET Core とオープン ソース](net-core-and-open-source.md) | .NET Core と .NET Framework の関係性、およびオープン ソースの .NET Core プロジェクトにアクセスする方法について説明します。 |
 | [.NET Core ドキュメント](../../core/index.md) | .NET Core の概念と API リファレンス ドキュメントを提供します。 |

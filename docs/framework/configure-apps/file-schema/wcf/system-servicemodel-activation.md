@@ -2,12 +2,12 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: ddb9c03c2d4ec17198719544fba9da989a6b0eb4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196191"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 この構成セクションは、SMSvcHost.exe ツールの構成設定を表します。 構成要素は、SMSvcHost.exe.config ファイルで構成できます。 特にここには、構成される必要があるコンピューター全体のすべての設定が含まれます。  
@@ -61,4 +61,5 @@ ms.locfileid: "55271149"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activation.Configuration>

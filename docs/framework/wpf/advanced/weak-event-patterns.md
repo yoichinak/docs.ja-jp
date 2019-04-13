@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316168"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベント ソースに接続されているハンドラーがハンドラーをソースに接続されているリスナーのオブジェクトと連携して破棄されないです。 このような状況は、メモリ リークにつながります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 特定のイベントの専任マネージャー クラスを提供することでそのイベントのリスナー インターフェイスを実装してこの問題に対処するために使用する設計パターンについて説明します。 この設計パターンと呼ばれる、*弱いイベント パターン*します。  
@@ -50,11 +50,11 @@ ms.locfileid: "57367610"
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>既存の弱いイベント マネージャー クラスを使用します。  
   
-1.  既存の弱いイベント マネージャーを検索します。  
+1. 既存の弱いイベント マネージャーを検索します。  
   
      WPF に含まれている弱いイベント マネージャーの一覧での継承階層を参照してください、<xref:System.Windows.WeakEventManager>クラス。  
   
-2.  通常のイベント フックアップではなく、新しい弱いイベント マネージャーを使用します。  
+2. 通常のイベント フックアップではなく、新しい弱いイベント マネージャーを使用します。  
   
      たとえば、コードでは、次のパターンを使用して、イベントにサブスクライブするとします。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "57367610"
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>ジェネリックの弱いイベント マネージャー クラスを使用します。  
   
-1.  ジェネリックを使用して、<xref:System.Windows.WeakEventManager%602>通常のイベント フックアップではなくクラス。  
+1. ジェネリックを使用して、<xref:System.Windows.WeakEventManager%602>通常のイベント フックアップではなくクラス。  
   
      使用すると<xref:System.Windows.WeakEventManager%602>イベント リスナーを登録するには、イベント ソースを指定し、<xref:System.EventArgs>クラスと呼び出しに型パラメーターとして型<xref:System.Windows.WeakEventManager%602.AddHandler%2A>次のコードに示すように。  
   
@@ -92,19 +92,19 @@ ms.locfileid: "57367610"
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>カスタムの弱いイベント マネージャー クラスを作成します。  
   
-1.  次のクラス テンプレートをプロジェクトにコピーします。  
+1. 次のクラス テンプレートをプロジェクトにコピーします。  
   
      このクラスから継承、<xref:System.Windows.WeakEventManager>クラス。  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  置換、`SomeEventWeakEventManager`名に置き換えて名前。  
+2. 置換、`SomeEventWeakEventManager`名に置き換えて名前。  
   
-3.  前に、イベントの名前と説明した 3 つの名前に置き換えます。 (`SomeEvent`、 `EventSource`、および`SomeEventEventArgs`)  
+3. 前に、イベントの名前と説明した 3 つの名前に置き換えます。 (`SomeEvent`、 `EventSource`、および`SomeEventEventArgs`)  
   
-4.  管理イベントと同様に表示するには、弱いイベント マネージャー クラスの可視性 (パブリック/内部/プライベート) を設定します。  
+4. 管理イベントと同様に表示するには、弱いイベント マネージャー クラスの可視性 (パブリック/内部/プライベート) を設定します。  
   
-5.  通常のイベント フックアップではなく、新しい弱いイベント マネージャーを使用します。  
+5. 通常のイベント フックアップではなく、新しい弱いイベント マネージャーを使用します。  
   
      たとえば、コードでは、次のパターンを使用して、イベントにサブスクライブするとします。  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57367610"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [ルーティング イベントの概要](routed-events-overview.md)

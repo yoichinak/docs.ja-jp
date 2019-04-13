@@ -31,7 +31,7 @@ F# で定義されているし、F# から厳密に使用される型、F# ラ�
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-使用する場合など、他の方法で F# 型の null 値を生成することも`Array.zeroCreate`、呼び出す`Unchecked.defaultof`します。 このようなコードをカプセル化された null 値を保持するには注意が必要です。 専用の F# ライブラリでは、すべての関数で null 値をチェックする必要はありません。 他の .NET 言語と相互運用ライブラリを作成する場合 null チェックが入力パラメーターと、スローを追加する必要があります、 `ArgumentNullException`、c# または Visual Basic コードで行うのと同様です。
+使用する場合など、他の方法で F# 型の null 値を生成することも`Array.zeroCreate`、呼び出す`Unchecked.defaultof`します。 このようなコードをカプセル化された null 値を保持するには注意が必要です。 専用の F# ライブラリでは、すべての関数で null 値をチェックする必要はありません。 他の .NET 言語と相互運用ライブラリを作成する場合 null チェックが入力パラメーターと、スローを追加する必要があります、 `ArgumentNullException`、C# または Visual Basic コードで行うのと同様です。
 
 次のコードを使用すると、任意の値が null を確認します。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: 289b024569900b94c9f41fe0f98a817ce907de0f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325164"
 ---
 # <a name="cant-open-filename-for-writing"></a>開くことができません '\<filename >' の書き込み
 既に開かれているため、おそらく、記述するため、指定したファイルを開くことができません。  
@@ -21,9 +21,9 @@ ms.locfileid: "58843618"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  ファイルを閉じて、再度開きます。  
+1. ファイルを閉じて、再度開きます。  
   
-2.  ファイルのアクセス許可を確認します。  
+2. ファイルのアクセス許可を確認します。  
   
 ## <a name="see-also"></a>関連項目
 

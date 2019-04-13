@@ -2,12 +2,12 @@
 title: メッセージ ログ
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154454"
 ---
 # <a name="message-logging"></a>メッセージ ログ
 Windows Communication Foundation (WCF) は、着信および発信のログ メッセージをオフラインで使用する機能を提供します。 メッセージ ログを使用すると、メッセージとメッセージ本文を確認できます。 この種のログは、どの引数が渡され、XML で表現された引数が受信エンドポイントでどのように表示されるかを知る上で特に役立ちます。 また、受信時にメッセージをログに記録すると、無効なメッセージを診断できるだけでなく、メッセージがどのような経路で到着したかを確認できます。 また、使用されたセキュリティ トークン、暗号化および署名された部分、および元のままの部分を調べることもできます。  
@@ -30,4 +30,5 @@ Windows Communication Foundation (WCF) は、着信および発信のログ メ�
  ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [管理と診断](../../../../docs/framework/wcf/diagnostics/index.md)

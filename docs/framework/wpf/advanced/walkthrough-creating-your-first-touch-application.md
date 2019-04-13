@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326984"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>チュートリアル: 初めてのタッチ アプリケーションの作成
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] タッチに応答するアプリケーションを有効にします。 たとえば、いずれかを使用するアプリケーションとやり取りするまたはこのチュートリアルは、ユーザーに移動できるようにするアプリケーションを作成します。 タッチ スクリーンなどのタッチを検知するデバイスに複数の指がサイズ変更、またはタッチを使用して 1 つのオブジェクトを回転します。  
@@ -33,24 +33,24 @@ ms.locfileid: "57374155"
   
 #### <a name="to-create-the-application"></a>アプリケーションを作成するには  
   
-1.  Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`BasicManipulation`します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
+1. Visual Basic または Visual c# のという名前で新しい WPF アプリケーション プロジェクトを作成する`BasicManipulation`します。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
-2.  MainWindow.xaml の内容を次の XAML に置き換えます。  
+2. MainWindow.xaml の内容を次の XAML に置き換えます。  
   
      このマークアップは、赤いを含む単純なアプリケーションを作成します。<xref:System.Windows.Shapes.Rectangle>上、<xref:System.Windows.Controls.Canvas>します。 <xref:System.Windows.UIElement.IsManipulationEnabled%2A>のプロパティ、<xref:System.Windows.Shapes.Rectangle>操作イベントを受信するために true に設定されます。 アプリケーションをサブスクライブする、 <xref:System.Windows.UIElement.ManipulationStarting>、 <xref:System.Windows.UIElement.ManipulationDelta>、および<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。 これらのイベントに移動するためのロジックが含まれて、<xref:System.Windows.Shapes.Rectangle>ユーザーからの操作をすることです。  
   
      [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Visual Basic では、MainWindow.xaml の最初の行でを使用している場合は置き換えます`x:Class="BasicManipulation.MainWindow"`で`x:Class="MainWindow"`します。  
+3. Visual Basic では、MainWindow.xaml の最初の行でを使用している場合は置き換えます`x:Class="BasicManipulation.MainWindow"`で`x:Class="MainWindow"`します。  
   
-4.  `MainWindow`クラスで、次の追加<xref:System.Windows.UIElement.ManipulationStarting>イベント ハンドラー。  
+4. `MainWindow`クラスで、次の追加<xref:System.Windows.UIElement.ManipulationStarting>イベント ハンドラー。  
   
      <xref:System.Windows.UIElement.ManipulationStarting>イベントが発生したときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのタッチを検出したオブジェクトを操作する入力を開始します。 コードでは、に対して相対的な操作の位置があることを指定します、<xref:System.Windows.Window>を設定して、<xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>プロパティ。  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
-5.  `MainWindow`クラスで、次の追加<xref:System.Windows.Input.ManipulationDelta>イベント ハンドラー。
+5. `MainWindow`クラスで、次の追加<xref:System.Windows.Input.ManipulationDelta>イベント ハンドラー。
 
      <xref:System.Windows.Input.ManipulationDelta>イベント、タッチ入力の位置を変更し、操作中に複数回発生する可能性があるときに発生します。 イベントは、指が発生した後にも発生します。 たとえば、ユーザーが、画面上に指をドラッグする場合、<xref:System.Windows.Input.ManipulationDelta>イベントでは、本の指の移動として複数回が発生します。 ユーザーが画面から指を生成するタイミング、<xref:System.Windows.Input.ManipulationDelta>慣性による処理をシミュレートするためにイベントが発生し続けます。
 
@@ -59,14 +59,14 @@ ms.locfileid: "57374155"
      [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
-6.  `MainWindow`クラスで、次の追加<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント ハンドラー。
+6. `MainWindow`クラスで、次の追加<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント ハンドラー。
 
      <xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント、ユーザーが画面からすべての指を発生させるときに発生します。 コードでは、初期速度と移動、拡張、および四角形の回転角度の減速を設定します。
 
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
-7.  プロジェクトをビルドして実行します。
+7. プロジェクトをビルドして実行します。
 
      ウィンドウに表示される赤色の四角形が表示されます。
 

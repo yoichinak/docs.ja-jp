@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sizing data in Grid controls [WPF]
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-ms.openlocfilehash: bd0f812ce9a15628bd0bddf3a88e898311f0a9d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190341"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>方法: グリッド間でサイズ設定プロパティを共有する
 この例は、列のサイズ設定データを共有する方法を示していて、行の間で<xref:System.Windows.Controls.Grid>一貫性のあるサイズ設定するには要素です。  
@@ -36,6 +36,7 @@ ms.locfileid: "57373128"
  [!code-vb[gridIssharedsizescopeProp#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>
 - [パネルの概要](panels-overview.md)

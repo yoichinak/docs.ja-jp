@@ -1,13 +1,13 @@
 ---
-title: <message> 要素 <ws2007FederationHttpBinding>
+title: '<message> 要素。次に含まれます: <ws2007FederationHttpBinding>'
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: 29d9c318b6cff586095ed9668fdac79d7813e856
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: f05bd90bd2e4c7e1fd606518d9e5cb8d4e5ad974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092995"
 ---
 # <a name="message-element-of-ws2007federationhttpbinding"></a>\<メッセージ > 要素の\<ws2007FederationHttpBinding >
 メッセージ レベルのセキュリティの設定を定義、 [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)要素。  
@@ -86,14 +86,14 @@ ms.locfileid: "55759081"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`algorithmSuite`|省略可能です。 メッセージの暗号化、署名、およびキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> それぞれの値については次の表を参照してください。 既定値は Basic256 です。|  
+|`algorithmSuite`|任意。 メッセージの暗号化、署名、およびキー ラップ アルゴリズムを設定します。 アルゴリズムとキー サイズは、<xref:System.ServiceModel.Security.SecurityAlgorithmSuite> クラスにより決まります。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。<br /><br /> それぞれの値については次の表を参照してください。 既定値は Basic256 です。|  
 |`issuedKeyType`|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br />-BearerKey<br /><br /> 既定値は SymmetricKey です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
-|`issuedTokenType`|発行されるトークンの型を指定する URI。 既定値は、`null` です。|  
+|`issuedTokenType`|発行されるトークンの型を指定する URI。 既定値は `null` です。|  
 |`negotiateServiceCredential`|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定する値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |Basic128|Aes128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Aes192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -117,17 +117,18 @@ ms.locfileid: "55759081"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|このバインディングのクレームの種類のコレクションを指定します。 各要素は <xref:System.ServiceModel.Configuration.ClaimTypeElement> 型です。|  
-|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|セキュリティ トークンを発行するエンドポイントを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 型です。|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|発行者のエンドポイント アドレスを指定します。|  
+|[\<発行者 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|セキュリティ トークンを発行するエンドポイントを指定します。 この要素は <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement> 型です。|  
+|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|発行者のエンドポイント アドレスを指定します。|  
 |[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|トークン要求パラメーターのコレクション。 各パラメーターは、XML 要素です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

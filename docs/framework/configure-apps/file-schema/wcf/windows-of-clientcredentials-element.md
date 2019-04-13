@@ -2,12 +2,12 @@
 title: <windows> <clientCredentials>要素
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221021"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows > の\<clientCredentials > 要素
 クライアントを表すために使用される Windows 資格情報の設定を指定します。  
@@ -46,6 +46,7 @@ ms.locfileid: "55275159"
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|サービスに対するクライアントの認証に使用される資格情報を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>

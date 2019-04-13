@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649311"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309642"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>データ コントラクトの列挙型
 列挙はデータ コントラクト モデルで表現できます。 このトピックでは、いくつかの例を通してプログラミング モデルを説明します。  
@@ -79,11 +79,11 @@ ms.locfileid: "54649311"
   
  フラグの列挙値を送信する手順を次に示します。  
   
-1.  数値にマップする列挙メンバー (<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) の検索を試みます。 見つかった場合、そのメンバーのみを含むリストを送信します。  
+1. 数値にマップする列挙メンバー (<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) の検索を試みます。 見つかった場合、そのメンバーのみを含むリストを送信します。  
   
-2.  合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 なお、*最長一致アルゴリズム*、このような合計を検索するために使用し、したがってが存在する場合でも、このような合計が検出される保証はありません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
+2. 合計の各部にマップされる列挙メンバー (それぞれに <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性が適用されている) が存在するような形で、数値をこの合計に分割します。 このメンバーすべてのリストを送信します。 なお、*最長一致アルゴリズム*、このような合計を検索するために使用し、したがってが存在する場合でも、このような合計が検出される保証はありません。 この問題を回避するには、列挙メンバーの数値を必ず 2 の累乗数にします。  
   
-3.  前の 2 つの手順が失敗し、数値がゼロ以外の場合、<xref:System.Runtime.Serialization.SerializationException> をスローします。 数値がゼロの場合、空のリストを送信します。  
+3. 前の 2 つの手順が失敗し、数値がゼロ以外の場合、<xref:System.Runtime.Serialization.SerializationException> をスローします。 数値がゼロの場合、空のリストを送信します。  
   
 ### <a name="example"></a>例  
  フラグ操作で使用できる列挙の例を次に示します。  
@@ -97,6 +97,7 @@ ms.locfileid: "54649311"
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

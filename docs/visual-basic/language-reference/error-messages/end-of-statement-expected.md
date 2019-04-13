@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321479"
 ---
 # <a name="end-of-statement-expected"></a>ステートメントの終わりを指定してください。
 ステートメントが構文的に完了するが、その他のプログラミング要素に依存してステートメントを終了する要素。 行終端記号は、すべてのステートメントの末尾にある必要があります。
   
- 行終端記号は、Visual Basic のソース ファイルの文字を行に分割します。 行ターミネータの例には、Unicode キャリッジ リターン文字 (& HD)、Unicode とライン フィード文字 (& HA)、および、Unicode 復帰文字の Unicode のラインフィード文字後にします。 行ターミネータの詳細については、、 [Visual Basic 言語仕様](~/_vblang/spec/lexical-grammar.md#line-terminators)を参照してください。
+ 行終端記号は、Visual Basic のソース ファイルの文字を行に分割します。 行ターミネータの例には、Unicode キャリッジ リターン文字 (& HD)、Unicode とライン フィード文字 (& HA)、および、Unicode 復帰文字の Unicode のラインフィード文字後にします。 行ターミネータの詳細については、次を参照してください。、 [Visual Basic 言語仕様](~/_vblang/spec/lexical-grammar.md#line-terminators)します。
   
  **エラー ID:** BC30205
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
   
-1.  2 つの異なるステートメントが同じ行に格納された誤ってかどうかを確認します。
+1. 2 つの異なるステートメントが同じ行に格納された誤ってかどうかを確認します。
   
-2.  ステートメントを終了要素の後に行終端記号を挿入します。
+2. ステートメントを終了要素の後に行終端記号を挿入します。
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [方法: 分割および連結コード内のステートメント](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)

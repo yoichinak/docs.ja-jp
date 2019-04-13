@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2e870b8d7b8ed986863632f947223946a6604f89
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761468"
+---
 ### <a name="resizing-a-grid-can-hang"></a>グリッドのサイズを変更すると、ハングする可能性がある
 
 |   |   |

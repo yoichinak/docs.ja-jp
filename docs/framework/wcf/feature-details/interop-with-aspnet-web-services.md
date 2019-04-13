@@ -2,12 +2,12 @@
 title: ASP.NET Web サービスとの相互運用
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 3d4416a67d467f60fa381abc648c3a7ea0b9ada1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108577"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web サービスとの相互運用
 間の相互運用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WS に両方のテクノロジを使用して実装されているサービスが準拠していることを確認して Web サービスと Windows Communication Foundation (WCF) Web サービスを実現できます-Basic Profile 1.1 仕様。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WS に準拠している web サービスの基本プロファイル 1.1 は WCF のシステム指定のバインディングを使用して WCF クライアントと相互運用可能<xref:System.ServiceModel.BasicHttpBinding>します。  
@@ -56,4 +56,5 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [方法: ASP.NET Web サービス クライアントと相互運用する WCF サービスを構成します。](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+
+- [方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

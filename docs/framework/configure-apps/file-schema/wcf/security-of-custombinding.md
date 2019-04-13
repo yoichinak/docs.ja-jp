@@ -1,13 +1,13 @@
 ---
-title: <security> の <customBinding>
+title: <security> (行中)  <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182040"
 ---
 # <a name="security-of-custombinding"></a>\<セキュリティ > の\<customBinding >
 カスタム バインドのセキュリティ オプションを指定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "55258059"
 |requireDerivedKeys|キーを元の証明キーから派生できる場合に指定するブール値。 既定値は、`true` です。|  
 |requireSecurityContextCancellation|省略可能です。 セキュリティ コンテキストが不要になったときにそれをキャンセルして終了する必要がある場合に指定するブール値。 既定値は、`true` です。|  
 |requireSignatureConfirmation|省略可能です。 WS-Security 署名確認を有効にするかどうかを指定するブール値です。 `true` に設定されている場合、メッセージ署名が応答側で確認されます。  カスタム バインディングが相互証明書に対して構成されているか、発行されたトークンを使用するように構成されている場合 (WSS 1.1 バインド)、この属性の既定値は `true` です。 それ以外の場合、既定値は `false` になります。<br /><br /> サービスが要求を完全に認識して応答していることを確認するために、署名確認を使用します。|  
-|securityHeaderLayout|省略可能です。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`:"使用前に宣言する" という一般的な方針に従って、項目がセキュリティ ヘッダーに追加されます。<br />-   `Lax`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ。<br />-   `LaxWithTimestampFirst`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ点を除いて、セキュリティ ヘッダーの最初の要素は wsse:Timestamp 要素である必要があります。<br />-   `LaxWithTimestampLast`:項目は、WSS に準じた任意の順序で、セキュリティ ヘッダーに追加されます。SOAP メッセージ セキュリティ点を除いて、セキュリティ ヘッダーの最後の要素は wsse:Timestamp 要素である必要があります。<br /><br /> 既定値は `Strict` です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
+|securityHeaderLayout|省略可能です。 セキュリティ ヘッダーでの要素の順序を指定します。 有効な値は、次のとおりです。<br /><br /> -   `Strict`:"使用前に宣言する" という一般的な方針に従って、項目がセキュリティ ヘッダーに追加されます。<br />-   `Lax`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。<br />-   `LaxWithTimestampFirst`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。ただし、セキュリティ ヘッダー内の最初の要素が wsse:Timestamp 要素でなければならないという点を除きます。<br />-   `LaxWithTimestampLast`:項目は、WSS: SOAP メッセージ セキュリティに準じた任意の順序でセキュリティ ヘッダーに追加されます。ただし、セキュリティ ヘッダー内の最後の要素が wsse:Timestamp 要素でなければならないという点を除きます。<br /><br /> 既定値は `Strict` です。<br /><br /> この要素は <xref:System.ServiceModel.Channels.SecurityHeaderLayout> 型です。|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode 属性  
   
@@ -109,7 +109,7 @@ ms.locfileid: "55258059"
   
  サービス構成では、TLS/SSL プロトコルを使用して保護される TCP 通信、および Windows メッセージ セキュリティをサポートするカスタム バインディングが定義されます。 カスタム バインドはサービス証明書を使用して、トランスポート レベルでサービスを認証し、クライアントとサービス間で転送中のメッセージを保護します。 これは、 [ \<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)バインド要素。 サービスの証明書は、サービス動作を使用して構成されます。  
   
- さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素が使用するよう構成`SecureConversation`authenticationType で、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、[カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)を参照してください。  
+ さらに、カスタム バインドは Windows 資格情報の種類 (既定の資格情報の種類) によるメッセージ セキュリティを使用します。 これは、[セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素。 Kerberos 認証機構が利用できる場合は、クライアントとサービスはどちらもメッセージ レベルのセキュリティを使用して認証されます。 Kerberos 認証機構が利用できない場合は、NTLM 認証が使用されます。 NTLM はサービスに対してクライアントを認証しますが、クライアントに対するサービスの認証は行いません。 [セキュリティ](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)バインド要素が使用するよう構成`SecureConversation`authenticationType で、クライアントとサービスの両方でセキュリティ セッションが作成されます。 これは、サービスの双方向コントラクトを動作させるために必要です。 この例の実行の詳細については、次を参照してください。[カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)します。  
   
 ```xml  
 <configuration>
@@ -167,6 +167,7 @@ ms.locfileid: "55258059"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
@@ -174,5 +175,5 @@ ms.locfileid: "55258059"
 - [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインディング セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

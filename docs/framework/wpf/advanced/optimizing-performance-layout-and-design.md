@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107069"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>パフォーマンスの最適化:レイアウトとデザイン
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの設計によっては、レイアウトの計算やオブジェクト参照の検証で不要なオーバーヘッドが発生して、パフォーマンスに影響が及ぶことがあります。 オブジェクトの作成 (特に実行時の作成) はアプリケーションのパフォーマンス特性に影響する可能性があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "57367947"
 ### <a name="build-your-tree-top-down"></a>ツリーはトップダウンで作成する  
  論理ツリーのノードが追加または削除されると、ノードの親とそのすべての子でプロパティの無効化が行われます。 このため、常にトップダウンの作成パターンに従って、検証済みのノードで無駄に無効化が行われないようにする必要があります。 次の表は、ツリーを作成する場合とボトムアップ ツリーが 150 レベルの深さを 1 つを上から下への実行速度の違いを示しています。<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Controls.DockPanel>各レベル。  
   
-|**動作**|**ツリーの作成 (ミリ秒)**|**レンダリング-ツリーの作成を含む (ミリ秒)**|  
+|**アクション**|**ツリーの作成 (ミリ秒)**|**レンダリング-ツリー作成 (ミリ秒) にはが含まれています**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |ボトムアップ|366|454|  
 |トップダウン|11|96|  
@@ -70,13 +70,14 @@ ms.locfileid: "57367947"
  論理ツリーについて詳しくは、「[WPF のツリー](trees-in-wpf.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
 - [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
 - [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)
 - [レイアウト](layout.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - opening dialog boxes [WPF]
 - dialog boxes [WPF], opening
 ms.assetid: 6b1557d2-da98-4ef4-9f68-4089f04ab9ea
-ms.openlocfilehash: 1182e22ad40b49ee13832c51986662373f36ee35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70ac31285dd22244b4bd6ad0d188d182eb6e6264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084988"
 ---
 # <a name="how-to-open-a-dialog-box"></a>方法: ダイアログ ボックスを開く
 この例では、ダイアログ ボックスを開く方法を示します。  
@@ -28,4 +28,5 @@ ms.locfileid: "57351984"
  呼び出す<xref:System.Windows.Window.ShowDialog%2A>すべての windows と無制限のユーザー入力イベントを使用する権限が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ダイアログ ボックスの結果を返す](how-to-return-a-dialog-box-result.md)

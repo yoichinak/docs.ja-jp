@@ -2,12 +2,12 @@
 title: WCF サービスの簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: c0d5f46e6ace71ad4732f8d387b3289b1d4105e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304260"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF サービスの簡略化された構成
 このサンプルでは、一般的なサービスおよび Windows Communication Foundation (WCF) を使用してクライアントを実装して構成する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
@@ -57,11 +57,11 @@ ms.locfileid: "54516370"
   
 ### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3.  次の手順に従ってサンプルを実行します。  
+3. 次の手順に従ってサンプルを実行します。  
   
     1.  右クリックして、**サービス**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
   
@@ -79,5 +79,6 @@ ms.locfileid: "54516370"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>関連項目
-- [AppFabric 管理のサンプル](https://go.microsoft.com/fwlink/?LinkId=193960)
+
+- [AppFabric の管理のサンプル](https://go.microsoft.com/fwlink/?LinkId=193960)
 - [簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)

@@ -2,12 +2,12 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: b67ea137e6c116d00a8a098b9c0df99430114dc5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075523"
 ---
 # <a name="servicetimeouts"></a>\<serviceTimeouts>
 サービスのタイムアウトを指定します。  
@@ -46,4 +46,5 @@ ms.locfileid: "55267288"
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

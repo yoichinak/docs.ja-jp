@@ -2,12 +2,12 @@
 title: wsatConfig.exe によって返されたエラー コードの解釈
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151633"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe によって返されたエラー コードの解釈
 ここでは、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) によって生成されるすべてのエラー コードと、実行する必要のある推奨アクションを示します。  
@@ -21,7 +21,7 @@ ms.locfileid: "54510027"
 |2|MSDTC に問い合わせて、セキュリティ設定を取得しようとしたときに、予期しないエラーが発生しました。|MSDTC サービスが無効になっていないことを確認し、返された例外に示されているすべての問題を解決します。|  
 |3|WsatConfig.exe が実行されていたアカウントに、ネットワーク セキュリティ設定を読み取るために必要なアクセス許可がありませんでした。|管理者ユーザー アカウントで WsatConfig.exe を実行します。|  
 |4|WS-AT サポートの有効化を試みる前に、MSDTC の "ネットワーク DTC アクセス" を有効にします。|MSDTC の "ネットワーク DTC アクセス" を有効にして、ユーティリティを再実行します。|  
-|5|入力したポートが有効範囲にありません。 値は 1 ～ 65535 の範囲になければなりません。|`-port:<portNum>`<br /><br /> コマンド ライン オプションを、エラー メッセージの指示に従って修正します。|  
+|5|入力したポートが有効範囲にありません。 値は 1 ～ 65535 の範囲になければなりません。|修正します `-port:<portNum>`<br /><br /> コマンド ライン オプションを、エラー メッセージの指示に従って修正します。|  
 |6|コマンド ラインで、無効なエンドポイント証明書が指定されました。  証明書が見つからなかったか、または検証を通過しませんでした。|`-endpointCert` コマンド ライン オプションを修正します。 証明書に秘密キーがあること、ClientAuthentication および ServerAuthentication の両方での使用を目的としていること、LocalMachine\MY 証明書ストアにインストールされていること、および完全に信頼されていることを確認します。|  
 |7|コマンド ラインで、無効なアカウント証明書が指定されました。|`-accountsCerts` コマンド ライン オプションを修正します。 証明書が正しく指定されていないか、または見つかりませんでした。|  
 |8|既定のタイムアウトが、1 ～ 3600 秒の範囲内にありません。|指示のとおり、適切なタイムアウト値を入力します。|  
@@ -35,9 +35,9 @@ ms.locfileid: "54510027"
 |17|http.sys の構成に失敗しました。 以前のポートから SSL 証明書をバインド解除できません。|エラー メッセージで返されたエラー コードを使用して、適切なシステム エラーにマップします。 必要に応じて、httpcfg.exe または netsh.exe を使用して、誤ったポートの予約を解除します。|  
 |18|http.sys の構成に失敗しました。 以前の SSL バインディングが既に存在するため、指定した証明書をポートにバインドできません。|別のアプリケーションが既に特定のポートを所有しています。 別のポートへの変更、アンインストール、または現在のアプリケーションの再構成を行います。|  
 |19|MSDTC の再起動に失敗しました。|必要に応じて、MSDTC を手動で再起動します。 問題が解決されない場合は、マイクロソフトにお問い合わせください。|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] がリモート コンピューターにインストールされていないか、または正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] リモートのコンピューターにインストールされていないまたは正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
 |21|操作タイムアウトにより、リモート構成が失敗しました。|リモート コンピューターの WS-AT を構成するための呼び出しにかかる時間は、90 秒を超えます。|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] がリモート コンピューターにインストールされていないか、または正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] リモートのコンピューターにインストールされていないまたは正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
 |23|リモート コンピューターでの例外により、リモート構成が失敗しました。|エラー メッセージを調べて、アクション可能な項目を見つけます。|  
 |26|WsatConfig.exe に渡された引数が無効です。|コマンド ラインを調べてエラーを見つけます。|  
 |27|`-accounts` コマンド ライン オプションが無効です。|-`accounts` コマンド ライン オプションを修正して、ユーザー アカウントを正しく指定します。|  
@@ -68,4 +68,5 @@ ms.locfileid: "54510027"
 |56|ETW トレース セッションの開始中に、予期しないエラーが発生しました。|マイクロソフトにお問い合わせください。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

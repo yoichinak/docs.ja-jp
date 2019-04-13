@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127947"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、標準クエリ演算子から SQL コマンドへの変換が行われます。 データベースのクエリ プロセッサは、SQL 変換の実行のセマンティクスを決定します。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 標準クエリ演算子は、SQL コマンドに変換します。 データベースのクエリ プロセッサは、SQL 変換の実行のセマンティクスを決定します。  
   
- 標準クエリ演算子が定義されている*シーケンス*します。 シーケンスは*注文*シーケンスの各要素の参照 id に依存しています。 詳細については、[標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)を参照してください。  
+ 標準クエリ演算子が定義されている*シーケンス*します。 シーケンスは*注文*シーケンスの各要素の参照 id に依存しています。 詳細については、次を参照してください。[標準クエリ演算子の概要 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)または[標準クエリ演算子の概要 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
   
  主に SQL が扱う*値のセットを順不同*します。 通常、順序付けは、明示的な後処理の操作として、クエリの中間結果ではなく最終結果に対して適用されます。 ID は値で定義されます。 このため、SQL クエリを理解して、マルチセットを処理する (*バッグ*) の代わりに*設定*します。  
   
@@ -24,9 +24,9 @@ ms.locfileid: "56093932"
 ## <a name="operator-support"></a>演算子のサポート  
   
 ### <a name="concat"></a>Concat  
- <xref:System.Linq.Enumerable.Concat%2A> メソッドは、受信側と引数の順序が同じである、順序付けされたマルチセットに対して定義されます。 <xref:System.Linq.Enumerable.Concat%2A> は、共通の順序に従ったマルチセットに対する `UNION ALL` として機能します。  
+ <xref:System.Linq.Enumerable.Concat%2A> メソッドは、受信側と引数の順序が同じである、順序付けされたマルチセットに対して定義されます。 <xref:System.Linq.Enumerable.Concat%2A> 動作として`UNION ALL`共通の順序に従ったマルチセットに対する。  
   
- 最後の手順は、結果を生成する前の SQL での順序付けです。 <xref:System.Linq.Enumerable.Concat%2A> は、引数の順序を維持しません。 適切な順序にするには、<xref:System.Linq.Enumerable.Concat%2A> の結果を明示的に順序付けする必要があります。  
+ 最後の手順は、結果を生成する前の SQL での順序付けです。 <xref:System.Linq.Enumerable.Concat%2A> 引数の順序は保持されません。 適切な順序にするには、<xref:System.Linq.Enumerable.Concat%2A> の結果を明示的に順序付けする必要があります。  
   
 ### <a name="intersect-except-union"></a>Intersect、Except、Union  
  <xref:System.Linq.Enumerable.Intersect%2A> メソッドと <xref:System.Linq.Enumerable.Except%2A> メソッドは、セットに対してのみ正しく定義されます。 マルチセットのセマンティクスは未定義です。  
@@ -37,7 +37,7 @@ ms.locfileid: "56093932"
  <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A>メソッドは、に対してのみ正しく定義*の順序付けセット*します。 順序付けされていないセットまたはマルチセットのセマンティクスは未定義です。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
+>  <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 に対するクエリで使用するときに特定の制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
   
  SQL では、順序付けの制限のため[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]メソッドの結果にこれらのメソッドの引数の順序を移動しようとしています。 たとえば、次のような [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリがあるとします。  
   
@@ -71,20 +71,20 @@ ORDER BY [t0].[CustomerID]
   
 |演算子|理由|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL クエリの操作の対象は、シーケンスではなく、マルチセットです。 結果に対して適用する最後の句が `ORDER BY` であることが必要です。 このため、これら 2 つのメソッドには、汎用的な変換がありません。|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL クエリの操作の対象は、シーケンスではなく、マルチセットです。 `ORDER BY` 必要がある最後の句の結果に適用します。 このため、これら 2 つのメソッドには、汎用的な変換がありません。|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|順序付けされたセットに対しては、このメソッドの変換が可能ですが、現在の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変換されません。|  
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|順序付けされたセットに対しては、これらのメソッドの変換が可能ですが、現在の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変換されません。|  
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL クエリの操作の対象は、インデックス可能なシーケンスではなくマルチセットです。|  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (既定の引数のオーバーロード)|一般に、任意のタプルに対して既定値を指定することはできません。 場合によっては、外部結合を通じて、タプルに対する null 値の使用が可能です。|  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (既定の引数をオーバー ロード)|一般に、任意のタプルに対して既定値を指定することはできません。 場合によっては、外部結合を通じて、タプルに対する null 値の使用が可能です。|  
   
 ## <a name="expression-translation"></a>式の変換  
   
 ### <a name="null-semantics"></a>null セマンティクス  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、null 比較セマンティクスを SQL に強制しません。 比較演算子は、対応する SQL の演算子に構文上は変換されます。 このため、セマンティクスには、サーバーまたは接続の設定で定義された SQL セマンティクスが反映されます。 たとえば、2 つの null 値が既定の SQL Server の設定で等しくないと見なされますが、セマンティクスを変更する設定を変更することができます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、クエリを変換するときにサーバーの設定を考慮しません。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL の null 比較セマンティクスを強制しません。 比較演算子は、対応する SQL の演算子に構文上は変換されます。 このため、セマンティクスには、サーバーまたは接続の設定で定義された SQL セマンティクスが反映されます。 たとえば、2 つの null 値が既定の SQL Server の設定で等しくないと見なされますが、セマンティクスを変更する設定を変更することができます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] クエリが変換されるときに、サーバーの設定を考慮しません。  
   
  リテラルの null による比較は適切な SQL 形式 (`is null` または `is not null`) に変換されます。  
   
- `null` の値の照合順序は SQL Server で定義されます [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では変更されません。  
+ `null` の値の照合順序は SQL Server で定義されます [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 照合順序は変更されません。  
   
 ### <a name="aggregates"></a>集計  
  標準クエリ演算子の集計メソッド <xref:System.Linq.Enumerable.Sum%2A> では、空のシーケンスや null のみを含むシーケンスはゼロに評価されます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、SQL のセマンティクスのまま変更せずと<xref:System.Linq.Enumerable.Sum%2A>に評価される`null`ゼロまたは null のみを含むシーケンスの空のシーケンスではなく。  
@@ -173,10 +173,10 @@ ORDER BY [t0].[CustomerID]
   
 -   `Sum`  
   
- これらの SQL Server の日付と時刻型へのマッピングの詳細については、[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)を参照してください。  
+ これらの SQL Server の日付と時刻型へのマッピングの詳細については、次を参照してください。 [SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)します。  
   
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 のサポート  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL Server 2005 の以下の機能をサポートしていません。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次の SQL Server 2005 の機能をサポートしません。  
   
 -   SQL CLR 用に作成されたストアド プロシージャ。  
   
@@ -188,9 +188,9 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] と比較した場合の [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)] の以下の制限事項は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のサポートに影響します。  
   
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 演算子および Outer Apply 演算子  
- これらの演算子は [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] では使用できません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、一連の書き換えを行って、これらの演算子を適切な結合に置換します。  
+ これらの演算子は [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] では使用できません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 一連の書き換えを適切な結合で置き換えることを試みます。  
   
- `Cross Apply` および `Outer Apply` は、リレーションシップ ナビゲーションに対してのみ生成されます。 どのようなクエリのセットに対してこのような書き換えが可能かは、正しく定義されていません。 このため、[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] でサポートされている最小限のクエリのセットは、リレーションシップ ナビゲーションを含まないクエリのセットです。  
+ `Cross Apply` `Outer Apply`リレーションシップ ナビゲーションに対してのみ生成されます。 どのようなクエリのセットに対してこのような書き換えが可能かは、正しく定義されていません。 このため、[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] でサポートされている最小限のクエリのセットは、リレーションシップ ナビゲーションを含まないクエリのセットです。  
   
 ### <a name="text--ntext"></a>text / ntext  
  データ型`text`  /  `ntext`に対して特定のクエリ操作では使用できません`varchar(max)`  / `nvarchar(max)`でサポートされるうち[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]します。  
@@ -201,7 +201,7 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (SP4 まで) は、バインダーは、入れ子になったクエリによってトリガーされる特異な動作が。 この特異動作をトリガーする SQL クエリのセットは、正しく定義されていません。 このためのセットを定義することはできません[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server の例外を引き起こす可能性のあるクエリ。  
   
 ### <a name="skip-and-take-operators"></a>Skip 演算子および Take 演算子  
- <xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> には、[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] に対するクエリで使用する場合に特定の制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
+ <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A>に対してクエリを使用している場合は、いくつかの制限をある[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]します。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。  
   
 ## <a name="object-materialization"></a>オブジェクトの具体化  
  実体化とは、1 つまたは複数の SQL クエリで返された行から CLR オブジェクトを作成することです。  
@@ -210,7 +210,7 @@ ORDER BY [t0].[CustomerID]
   
     -   コンストラクター  
   
-    -   射影での `ToString` メソッド  
+    -   `ToString` プロジェクション内のメソッド  
   
     -   射影での型キャスト  
   
@@ -229,6 +229,7 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>関連項目
+
 - [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [シーケンスの要素の取得またはスキップ](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [2 つのシーケンスの連結](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)

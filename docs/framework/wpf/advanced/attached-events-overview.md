@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140856"
 ---
 # <a name="attached-events-overview"></a>添付イベントの概要
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] は言語コンポーネントと*添付イベント*と呼ばれている種類のイベントを定義します。 添付イベントという概念を利用すると、イベントを実際に定義または継承する要素にではなく、任意の要素に特定のイベントのハンドラーを追加できます。 この場合、イベントを発生させる可能性があるオブジェクトとターゲット処理インスタンスのいずれもイベントを定義せず、"所有" しません。  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 言語コンポーネントと呼ばれるイベントの種類を定義、*添付イベント*します。 添付イベントという概念を利用すると、イベントを実際に定義または継承する要素にではなく、任意の要素に特定のイベントのハンドラーを追加できます。 この場合、イベントを発生させる可能性があるオブジェクトとターゲット処理インスタンスのいずれもイベントを定義せず、"所有" しません。  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックは、「[ルーティング イベントの概要](routed-events-overview.md)」と「[XAML の概要 (WPF)](xaml-overview-wpf.md)」を既に読んでいることを前提としています。  
@@ -92,6 +90,7 @@ ms.locfileid: "57371672"
  ただし、に基づいてカスタム添付イベントを定義するかどうか、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのモデルでイベントをアタッチする<xref:System.Windows.RoutedEvent>、使用することができます<xref:System.Windows.UIElement.RaiseEvent%2A>いずれかから添付イベントを発生させる<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>します。 (添付または非) ルーティング イベントを発生させるには、イベント ソースとして要素ツリー内の特定の要素を宣言することが必要です。そのソースとして報告、<xref:System.Windows.UIElement.RaiseEvent%2A>呼び出し元。 ツリーのソースとして報告される要素を決定することはサービスの担当です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [XAML 構文の詳細](xaml-syntax-in-detail.md)
 - [WPF における XAML とカスタム クラス](xaml-and-custom-classes-for-wpf.md)

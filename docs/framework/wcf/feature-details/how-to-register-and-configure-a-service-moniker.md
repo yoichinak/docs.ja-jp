@@ -1,35 +1,35 @@
 ---
-title: '方法: 登録し、サービス モニカーの構成'
+title: '方法: サービス モニカーを登録および構成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313581"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>方法: 登録し、サービス モニカーの構成
+# <a name="how-to-register-and-configure-a-service-moniker"></a>方法: サービス モニカーを登録および構成する
 型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービス モニカーを使用する前を COM に必要な属性型を登録して必要なバインディングで、COM アプリケーションとモニカーを構成する必要があります。構成します。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>必要な属性を備えた型を COM に登録するには  
   
-1.  使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF サービスからメタデータ コントラクトを取得するためのツール。 これには、WCF クライアントのアセンブリとクライアント アプリケーション構成ファイルのソース コードが生成されます。  
+1. 使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF サービスからメタデータ コントラクトを取得するためのツール。 これには、WCF クライアントのアセンブリとクライアント アプリケーション構成ファイルのソース コードが生成されます。  
   
-2.  アセンブリ内で定義されている型に `ComVisible` という設定をします。 Visual Studio プロジェクトで、AssemblyInfo.cs ファイルに次の属性を追加してください。  
+2. アセンブリ内で定義されている型に `ComVisible` という設定をします。 Visual Studio プロジェクトで、AssemblyInfo.cs ファイルに次の属性を追加してください。  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  厳密な名前のアセンブリとして管理対象の WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、[厳密な名前でアセンブリに署名](https://go.microsoft.com/fwlink/?LinkId=94874).NET Developer's Guide でを参照してください。  
+3. 厳密な名前のアセンブリとして管理対象の WCF クライアントをコンパイルします。 そのためには暗号キー ペアで署名する必要があります。 詳細については、次を参照してください。[厳密な名前でアセンブリに署名](https://go.microsoft.com/fwlink/?LinkId=94874).NET Developer's Guide でします。  
   
-4.  アセンブリ登録 (Regasm.exe) ツールに `/tlb` オプションを指定して、アセンブリで定義されている型を COM に登録します。  
+4. アセンブリ登録 (Regasm.exe) ツールに `/tlb` オプションを指定して、アセンブリで定義されている型を COM に登録します。  
   
-5.  グローバル アセンブリ キャッシュ ツール (Gacutil.exe) で、グローバル アセンブリ キャッシュにアセンブリを追加します。  
+5. グローバル アセンブリ キャッシュ ツール (Gacutil.exe) で、グローバル アセンブリ キャッシュにアセンブリを追加します。  
   
     > [!NOTE]
     >  アセンブリへの署名とグローバル アセンブリ キャッシュへの追加は、必須ではありません。しかしこれを済ませておくと、実行時には、適切な場所からアセンブリを読み込むための手順が簡単になります。  
@@ -98,4 +98,5 @@ ms.locfileid: "54593798"
      これにより、インポートされたインターフェイス定義は、すべてのメソッドが `HResult` を返すように変更されます。 他の戻り値は、出力パラメーターに変換されます。 メソッドの実行全体は、同じままです。 このために、プロキシでメソッドを呼び出したときの例外の原因を特定できます。 この機能は C++ コードからのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content [WPF], extracting
 - extracting text content [WPF]
 ms.assetid: f13c093f-1a05-45b3-ac8f-c9ea5e4a11c5
-ms.openlocfilehash: 8c7fd54931fad060a5d78e4c47c2cfce2767025a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 220da59ec893528c99014e9ec95fb185c461b291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086118"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a>方法: RichTextBox からテキスト コンテンツを抽出する
 この例の内容を抽出する方法を示しています、<xref:System.Windows.Controls.RichTextBox>プレーン テキストとして。  
@@ -34,5 +34,6 @@ ms.locfileid: "57355247"
  [!code-vb[RichTextBoxSnippets#_RTB_StringFrom](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxSnippets/visualbasic/window1.xaml.vb#_rtb_stringfrom)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [RichTextBox の概要](richtextbox-overview.md)
 - [TextBox の概要](textbox-overview.md)

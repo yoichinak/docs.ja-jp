@@ -8,12 +8,12 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-ms.openlocfilehash: a8fdc7c6659eb33f948741145c0b2e100bb133e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a5ed67ba20176398a863a1e9826b1eab71b182f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096876"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>方法: 要素の Width プロパティを設定する
 ## <a name="example"></a>例  
@@ -31,9 +31,10 @@ ms.locfileid: "57376846"
  [!code-csharp[WidthMinWidthMaxWidth#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WidthMinWidthMaxWidth/CSharp/Window1.xaml.cs#3)]
  [!code-vb[WidthMinWidthMaxWidth#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WidthMinWidthMaxWidth/VisualBasic/Window1.xaml.vb#3)]  
   
- サンプル全体については、[幅のプロパティの比較サンプル](https://go.microsoft.com/fwlink/?LinkID=160050)を参照してください。  
+ サンプル全体については、次を参照してください。[幅のプロパティの比較サンプル](https://go.microsoft.com/fwlink/?LinkID=160050)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.ActualWidth%2A>
