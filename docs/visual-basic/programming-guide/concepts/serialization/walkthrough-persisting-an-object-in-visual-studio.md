@@ -2,12 +2,12 @@
 title: Visual Studio (Visual Basic) でのオブジェクトの永続化
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303350"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) でのオブジェクトの永続化
 オブジェクトのプロパティはデザイン時に既定値に設定できますが、そのオブジェクトが破棄されると、実行時に入力した値はすべて失われます。 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。  
@@ -31,11 +31,11 @@ ms.locfileid: "58841582"
   
 ### <a name="to-create-the-loan-class"></a>Loan クラスを作成するには  
   
-1.  新しいクラス ライブラリ プロジェクトを作成して、"LoanClass" という名前を付けます。 詳細については、「[ソリューションとプロジェクトの作成](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)」を参照してください。  
+1. 新しいクラス ライブラリ プロジェクトを作成して、"LoanClass" という名前を付けます。 詳細については、「[ソリューションとプロジェクトの作成](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)」を参照してください。  
   
-2.  **ソリューション エクスプローラー**で、Class1 ファイルのショートカット メニューを開き、**[名前の変更]** を選択します。 ファイルの名前を `Loan` に変更し、Enter キーを押します。 ファイルの名前を変更すると、クラスの名前も `Loan` に変更されます。  
+2. **ソリューション エクスプローラー**で、Class1 ファイルのショートカット メニューを開き、**[名前の変更]** を選択します。 ファイルの名前を `Loan` に変更し、Enter キーを押します。 ファイルの名前を変更すると、クラスの名前も `Loan` に変更されます。  
   
-3.  クラスに次のパブリック メンバーを追加します。  
+3. クラスに次のパブリック メンバーを追加します。  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ ms.locfileid: "58841582"
   
 ### <a name="to-create-a-test-application"></a>テスト アプリケーションを作成するには  
   
-1.  **[ファイル]** メニューで **[追加]**、**[新しいプロジェクト]** の順に選択して、Windows フォーム アプリケーション プロジェクトをソリューションに追加します。  
+1. **[ファイル]** メニューで **[追加]**、**[新しいプロジェクト]** の順に選択して、Windows フォーム アプリケーション プロジェクトをソリューションに追加します。  
   
-2.  **[新しいプロジェクトの追加]** ダイアログ ボックスで、**[Windows フォーム アプリケーション]** を選択し、プロジェクト名として「`LoanApp`」と入力します。次に、**[OK]** をクリックしてダイアログ ボックスを閉じます。  
+2. **[新しいプロジェクトの追加]** ダイアログ ボックスで、**[Windows フォーム アプリケーション]** を選択し、プロジェクト名として「`LoanApp`」と入力します。次に、**[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-3.  **ソリューション エクスプローラー** で LoanApp プロジェクトを選択します。  
+3. **ソリューション エクスプローラー** で LoanApp プロジェクトを選択します。  
   
-4.  **[プロジェクト]** メニューの **[スタートアップ プロジェクトに設定]** をクリックします。  
+4. **[プロジェクト]** メニューの **[スタートアップ プロジェクトに設定]** をクリックします。  
   
-5.  **[プロジェクト]** メニューの **[参照の追加]** をクリックします。  
+5. **[プロジェクト]** メニューの **[参照の追加]** をクリックします。  
   
-6.  **[参照の追加]** ダイアログ ボックスで、**[プロジェクト]** タブをクリックし、LoanClass プロジェクトを選択します。  
+6. **[参照の追加]** ダイアログ ボックスで、**[プロジェクト]** タブをクリックし、LoanClass プロジェクトを選択します。  
   
-7.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+7. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
-8.  デザイナーで、フォームに <xref:System.Windows.Forms.TextBox> コントロールを 4 つ追加します。  
+8. デザイナーで、フォームに <xref:System.Windows.Forms.TextBox> コントロールを 4 つ追加します。  
   
 9. コード エディターで、次のコードを追加します。  
   
@@ -163,13 +163,13 @@ ms.locfileid: "58841582"
   
 ### <a name="to-deserialize-an-object"></a>オブジェクトを逆シリアル化するには  
   
-1.  シリアル化されたデータのファイル名を定数としてクラスに追加します。  
+1. シリアル化されたデータのファイル名を定数としてクラスに追加します。  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  `Form1_Load` イベント プロシージャのコードを次のように変更します。  
+2. `Form1_Load` イベント プロシージャのコードを次のように変更します。  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -218,4 +218,4 @@ ms.locfileid: "58841582"
 ## <a name="see-also"></a>関連項目
 
 - [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)

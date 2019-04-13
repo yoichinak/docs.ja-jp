@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569002"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076264"
 ---
 # <a name="claims-and-tokens"></a>クレームとトークン
 このトピックでは、サポートされている既定のトークンから Windows Communication Foundation (WCF) を作成するさまざまな要求の種類について説明します。  
@@ -65,6 +65,7 @@ ms.locfileid: "54569002"
  None の場合、`ClaimSet`クライアントの資格情報の結果オブジェクトはクレームを格納、`Right`の`Identity,`、<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>プロパティが返す`true`します。 このようなクレームが 1 つ以上ある場合、`IsAnonymous` プロパティは `false` を返します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>

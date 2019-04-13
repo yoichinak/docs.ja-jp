@@ -8,24 +8,24 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299333"
 ---
 # <a name="defining-and-specifying-faults"></a>エラーの定義と指定
-SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、[Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)を参照してください。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
+SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
 ## <a name="overview"></a>概要  
  宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> を含む操作で発生します。 宣言されていない SOAP エラーとは、操作のコントラクトに指定されていないエラーです。 ここでは、各種のエラー状態を特定したうえで、サービスに関するエラー コントラクトを作成する方法について説明します。クライアントは、カスタムの SOAP エラーから通知を受けたときに、これらを使用することでエラーを適切に処理できます。 基本的な作業は、次の順序で行います。  
   
-1.  サービスのクライアントに通知する必要があるエラー状態を定義します。  
+1. サービスのクライアントに通知する必要があるエラー状態を定義します。  
   
-2.  そのエラー状態に対して SOAP エラーのカスタム コンテンツを定義します。  
+2. そのエラー状態に対して SOAP エラーのカスタム コンテンツを定義します。  
   
-3.  操作でスローされた特定の SOAP エラーがクライアントに公開されるように、WSDL でその操作にマークします。  
+3. 操作でスローされた特定の SOAP エラーがクライアントに公開されるように、WSDL でその操作にマークします。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>クライアントに通知する必要があるエラー状態の定義  
  SOAP エラーは、特定の操作に関するフォールト情報を伝達するためにパブリックに記述されたメッセージです。 これらのメッセージは、WSDL で他の操作メッセージと共に記述されているので、クライアントは、操作を呼び出した時点でこのようなエラー処理を予測できます。 WCF サービスがマネージ コード内で条件がエラーに変換して、クライアントに返されるエラーは、正式なエラーからのエラー状況と、サービスでのバグを分離する機会を提供を決定する、マネージ コードで記述されているため、クライアントがあるメッセージを交換します。  
@@ -88,12 +88,13 @@ End Class
  エラーを生成する非サービスを利用する場合には、特定の制限事項があります。 データ コントラクトと互換性のあるを WCF サポート、詳細な型での障害のみをスキーマについて説明します。 たとえば、前述のように、WCF はできません、詳細な型で XML 属性を使用するエラーまたは詳細セクションには、複数の最上位要素を持つエラー。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [エラーの送受信](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [方法: サービス コントラクトでのエラーを宣言します。](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [方法: サービス コントラクトでのエラーを宣言する](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [保護レベルの理解](../../../docs/framework/wcf/understanding-protection-level.md)
-- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [サービス コントラクトでのデータ転送の指定](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

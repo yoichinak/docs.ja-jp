@@ -5,24 +5,23 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145978"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows フォームの DataGrid コントロール内の移動に使用できるキーボード ショートカット
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  次の表に、Windows フォーム内のナビゲーションに使用できるキーボード ショートカット<xref:System.Windows.Forms.DataGrid>コントロール。  
   
 |アクション|ショートカット|  
 |------------|--------------|  
 |セルの入力を完了し、次のセルに下に移動します。<br /><br /> 子テーブルのリンクにフォーカスがある場合は、そのテーブルに移動します。|Enter|  
-|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーの選択の場合は、行の編集をキャンセルします。|ESC|  
+|セルの編集モードの場合は、セルの編集をキャンセルします。<br /><br /> マーキーの選択の場合は、行の編集をキャンセルします。|Esc|  
 |セルを編集するときに、挿入ポイントの前に文字を削除します。|BACKSPACE キー|  
 |セルを編集するときに、カーソル位置の後の文字を削除します。|Del|  
 |現在の行の最初のセルに移動します。|ホーム|  
@@ -38,10 +37,10 @@ ms.locfileid: "57711773"
 |矢印の方向の右端の空白のセルに移動します。|CTRL + 方向キー|  
 |(子テーブルへのリンクを除く) の矢印の方向に選択範囲の 1 つの行を拡張します。|SHIFT + ↑ または ↓|  
 |(子テーブルへのリンクを除く) の矢印の向きの右端の空白行に選択範囲を拡大します。|CTRL + SHIFT + 上向き/下向きの矢印|  
-|左上隅のセルに移動します。|CTRL + ホーム|  
-|右下のセルに移動します。|CTRL + END|  
-|一番上の行を選択範囲を拡大します。|CTRL + SHIFT + ホーム|  
-|一番下の行を選択範囲を拡大します。|CTRL + SHIFT + END|  
+|左上隅のセルに移動します。|Ctrl + Home|  
+|右下のセルに移動します。|Ctrl + End|  
+|一番上の行を選択範囲を拡大します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>Home|  
+|一番下の行を選択範囲を拡大します。|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
 |(子テーブルへのリンクを除く) 現在の行を選択します。|SHIFT キーを押しながら SPACE キー|  
 |グリッド全体 (子テーブルへのリンクを除く) を選択します。|Ctrl + A|  
 |子テーブルにある場合、親の行を表示します。|Ctrl + PageDown|  
@@ -52,5 +51,6 @@ ms.locfileid: "57711773"
 |入力、<xref:System.DBNull.Value?displayProperty=nameWithType>編集モードでのセルに値。|Ctrl + 0|  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

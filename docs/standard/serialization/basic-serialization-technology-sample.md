@@ -2,12 +2,12 @@
 title: 基本的なシリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315011"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,30 +18,30 @@ ms.locfileid: "54681704"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには  
   
-1.  コマンド プロンプトを使用して、Technologies\Serialization\Runtime Serialization\Basic ディレクトリにある、言語固有のサブディレクトリのいずれかに移動します。  
+1. コマンド プロンプトを使用して、Technologies\Serialization\Runtime Serialization\Basic ディレクトリにある、言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  選択したプログラミング言語に応じて、コマンド ラインで、「**msbuild SerializationCS.sln**」、「**msbuild SerializationJSL.sln**」、または「**msbuild SerializationVB.sln**」と入力します。  
+2. 選択したプログラミング言語に応じて、コマンド ラインで、「**msbuild SerializationCS.sln**」、「**msbuild SerializationJSL.sln**」、または「**msbuild SerializationVB.sln**」と入力します。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
+1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  使用しているプログラミング言語に応じて、SerializationCS.sln ファイル、SerializationJSL.sln ファイル、または SerializationVB.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
+2. 使用しているプログラミング言語に応じて、SerializationCS.sln ファイル、SerializationJSL.sln ファイル、または SerializationVB.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
   
-3.  **[ビルド]** メニューで、**[ソリューションのビルド]** を選択します。  
+3. **[ビルド]** メニューで、**[ソリューションのビルド]** を選択します。  
   
  サンプル アプリケーションは、既定の \bin サブディレクトリまたは \bin\Debug サブディレクトリにビルドされます。  
   
 ### <a name="to-run-the-sample"></a>サンプルを実行するには  
   
-1.  ビルドした実行可能ファイルが格納されているディレクトリに移動します。  
+1. ビルドした実行可能ファイルが格納されているディレクトリに移動します。  
   
-2.  コマンド ラインで、「**Serialization.exe**」と入力し、任意のパラメーター値を指定します。  
+2. コマンド ラインで、「**Serialization.exe**」と入力し、任意のパラメーター値を指定します。  
   
     > [!NOTE]
     >  このサンプルでは、コンソール アプリケーションをビルドします。 出力を表示するには、コマンド プロンプトでこれを実行する必要があります。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  このサンプル アプリケーションは、実行するテストを示すコマンド ライン パラメーターを受け取ります。 SOAP フォーマッタを使用して、ノード数 10 個のリストを **Test.xml** というファイルにシリアル化するには、**sx Test.xml 10** というパラメーターを使用します。  
   
  たとえば、次のように入力します。  
@@ -64,19 +64,19 @@ ms.locfileid: "54681704"
   
 -   ランタイム シリアル化  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> は、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> オブジェクトまたは <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> オブジェクトを参照するために使用します。  
+    -   <xref:System.Runtime.Serialization.IFormatter> いずれかを参照するために使用する<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>または<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>オブジェクト。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> は、リンク リストをバイナリ形式のストリームにシリアル化するために使用します。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> リンクのリストをバイナリ形式でストリームにシリアル化するために使用します。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> は、リンク リストを SOAP 形式のストリームにシリアル化するために使用します。 SOAP は標準の形式です。  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> リンクされたリストを SOAP 形式でストリームにシリアル化するために使用します。 SOAP は標準の形式です。  
   
 -   ストリーム入出力  
   
-    -   <xref:System.IO.Stream> は、シリアル化および逆シリアル化に使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
+    -   <xref:System.IO.Stream> シリアル化および逆シリアル化するために使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
   
-    -   <xref:System.IO.File> は、ディスク上のファイルを読み込み、作成するための <xref:System.IO.FileStream> オブジェクトを作成するために使用します。  
+    -   <xref:System.IO.File> 作成するために使用<xref:System.IO.FileStream>オブジェクトの読み取りとディスク上のファイルを作成します。  
   
-    -   <xref:System.IO.FileStream> は、リンク リストのシリアル化および逆シリアル化に使用します。  
+    -   <xref:System.IO.FileStream> リンク リストを逆シリアル化およびシリアル化するために使用します。  
   
 ## <a name="see-also"></a>関連項目
 

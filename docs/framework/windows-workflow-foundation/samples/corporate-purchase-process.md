@@ -2,12 +2,12 @@
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313334"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
 このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。
@@ -18,7 +18,7 @@ ms.locfileid: "56442244"
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>使用例
 
@@ -50,25 +50,25 @@ ms.locfileid: "56442244"
 ## <a name="description-of-the-process"></a>プロセスの説明  
  このサンプルでは、一般的な会社のベンダーから提案を収集する Windows Workflow Foundation (WF) プログラムの実装を示します。  
   
-1.  Company X の従業員が Request for Proposal (RFP) を作成します。  
+1. Company X の従業員が Request for Proposal (RFP) を作成します。  
   
     1.  RFP のタイトルと説明を入力します。  
   
     2.  提案の送信を依頼するベンダーを選択します。  
   
-2.  従業員が提案を送信します。  
+2. 従業員が提案を送信します。  
   
     1.  ワークフローのインスタンスが作成されます。  
   
     2.  ワークフローは、すべてのベンダーから提案が送信されるまで待機します。  
   
-3.  すべての提案が受信されると、それらがワークフローによって反復処理されて、最良の提案が選択されます。  
+3. すべての提案が受信されると、それらがワークフローによって反復処理されて、最良の提案が選択されます。  
   
     1.  ベンダーにはそれぞれ評価があります (評価リストは VendorRepository.cs に格納されています)。  
   
     2.  提案の合計金額は、(ベンダーによって入力された金額) * (記録されているベンダーの評価) / 100 という式によって決定されます。  
   
-4.  元の要求者は、送信されたすべての提案を表示できます。 最良の提案はレポートの特別なセクションに表示されます。  
+4. 元の要求者は、送信されたすべての提案を表示できます。 最良の提案はレポートの特別なセクションに表示されます。  
   
 ## <a name="process-definition"></a>プロセスの定義  
  このサンプルのコア ロジックでは <xref:System.Activities.Statements.ParallelForEach%601> アクティビティが使用されています。このアクティビティは、各ベンダーからの提案を待機して (ブックマークを作成するカスタム アクティビティを使用)、ベンダーの提案を RFP として登録します (<xref:System.Activities.Statements.InvokeMethod> アクティビティを使用)。  
@@ -80,7 +80,7 @@ ms.locfileid: "56442244"
   
 |プロジェクト|説明|  
 |-------------|-----------------|  
-|Common|プロセス内で使用されるエンティティ オブジェクト (Request for Proposal、Vendor、および Vendor Proposal)。|  
+|共通|プロセス内で使用されるエンティティ オブジェクト (Request for Proposal、Vendor、および Vendor Proposal)。|  
 |WfDefinition|購買プロセス ワークフローのインスタンスの作成および使用のためにクライアント アプリケーションによって使用されるプロセス ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] プログラムとしてのプロセス) とホスト (`PurchaseProcessHost`) の定義。|  
 |WebClient|購買プロセスのインスタンスを作成したりそれに参加したりできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
 |WinFormsClient|購買プロセスのインスタンスを作成したりそれに参加したりできる Windows フォーム クライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
@@ -99,19 +99,19 @@ ms.locfileid: "56442244"
 |XmlPersistenceParticipant.cs|Request for Proposal のインスタンスを XML ファイルに保存するカスタムの <xref:System.Activities.Persistence.PersistenceParticipant>。|  
 |AsyncResult.cs / CompletedAsyncResult.cs|永続化コンポーネントに非同期パターンを実装するためのヘルパー クラス。|  
   
-### <a name="common"></a>Common  
+### <a name="common"></a>共通  
  次の表には、Common プロジェクトの最も重要なクラスの説明が含まれています。  
   
 |クラス|説明|  
 |-----------|-----------------|  
-|Vendor|Request for Proposals で提案を送信するベンダー。|  
+|ベンダー|Request for Proposals で提案を送信するベンダー。|  
 |RequestForProposal|Request for Proposals (RFP) は、ベンダーに特定の商品またはサービスについての提案の送信を求める依頼書です。|  
 |VendorProposal|ベンダーによって具象 RFP に送信された提案。|  
 |VendorRepository|Vendor のリポジトリ。 この実装には、Vendor のインスタンスのメモリ内コレクションと、それらのインスタンスを公開するためのメソッドが含まれています。|  
 |RfpRepository|Request for Proposals のリポジトリ。 この実装は、Linq to XML を使用して、スキーマ化された永続化によって生成された Request for Proposal の XML ファイルをクエリします。 |  
 |IOHelper|このクラスは、I/O 関連のすべての問題を処理します (フォルダー、パスなど)。|  
   
-### <a name="web-client"></a>Web Client  
+### <a name="web-client"></a>Web クライアント  
  次の表には、Web Client プロジェクトの最も重要な Web ページの説明が含まれています。  
   
 |ファイル|説明|  
@@ -143,15 +143,15 @@ ms.locfileid: "56442244"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  Visual Studio 2010 を使用して、PurchaseProcess.sln ソリューション ファイルを開きます。  
+1. Visual Studio 2010 を使用して、PurchaseProcess.sln ソリューション ファイルを開きます。  
   
-2.  Web Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **Web クライアント**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
+2. Web Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **Web クライアント**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
   
-3.  WinForms Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **WinForms Client**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
+3. WinForms Client プロジェクトを実行するには、開く**ソリューション エクスプ ローラー**を右クリックし、 **WinForms Client**プロジェクト。 選択**スタートアップ プロジェクトとして設定**します。  
   
-4.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
+4. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。  
   
-5.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
+5. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。  
   
 ### <a name="web-client-options"></a>Web Client のオプション  
   

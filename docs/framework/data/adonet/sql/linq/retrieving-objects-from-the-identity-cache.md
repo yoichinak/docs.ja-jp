@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211232"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
 このトピックでは、<xref:System.Data.Linq.DataContext> によって管理される ID キャッシュからオブジェクトを返す、LINQ to SQL クエリの種類について説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "54569155"
   
  これらの一般的な形式では、`Function1`、`Function2`、および `predicate` が次のように定義されます。  
   
- `Function1` は、次のいずれかになります。  
+ `Function1` 次のいずれかになります。  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54569155"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` は、次のいずれかになります。  
+ `Function2` 次のいずれかになります。  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54569155"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` は、オブジェクトのプライマリ キー プロパティが定数値に設定された式である必要があります。 オブジェクトのプライマリ キーが複数のプロパティで定義されている場合は、それぞれのプライマリ キー プロパティが定数値に設定されている必要があります。 `predicate` に使用する必要がある形式の例を次に示します。  
+ `predicate` 定数値に、オブジェクトの主キー プロパティを設定する式を指定する必要があります。 オブジェクトのプライマリ キーが複数のプロパティで定義されている場合は、それぞれのプライマリ キー プロパティが定数値に設定されている必要があります。 `predicate` に使用する必要がある形式の例を次に示します。  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,6 +65,7 @@ ms.locfileid: "54569155"
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [オブジェクト ID](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

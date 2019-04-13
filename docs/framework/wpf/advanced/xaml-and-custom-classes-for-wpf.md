@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122357"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]フレームワークは、いずれかで、カスタムのクラスまたは構造体を定義する機能をサポートしている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語、およびしアクセス クラスの XAML マークアップを使用しています。 組み合わせを使用できる[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-XAML 名前空間のプレフィックスにカスタムの型をマップして、通常の種類と同じマークアップ ファイル内でカスタム型を定義します。 このトピックでは、XAML 要素として使用するのには、カスタム クラスが満たす必要がある要件について説明します。  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>アプリケーションまたはアセンブリのカスタム クラス  
  2 つの方法で XAML で使用されるカスタム クラスを定義することができます。 分離コードまたはその他のプライマリを生成するコード内で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション、または実行可能ファイルなどの別のアセンブリ内のクラスまたはクラス ライブラリとして使用される DLL として。 これらのアプローチのそれぞれは、特定の長所と短所にあります。  
@@ -61,7 +59,7 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
 ### <a name="per-property-type-converters"></a>プロパティの型コンバーター  
  または、プロパティ自体は、プロパティ レベルでの型コンバーターを宣言できます。 これにより、入力として受信する属性の文字列値を処理することによって、プロパティ、インラインでの型のオブジェクトをインスタンス化「ミニ言語」を<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>操作、適切な型に基づきます。 便利なアクセサーを提供するこれは、通常、XAML でプロパティの設定を有効にする唯一の手段ではありません。 ただし、既存を使用する属性の型コンバーターを使用することがも[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]既定のコンス トラクターまたは、属性付きの型コンバーターのいずれかを指定しない型です。 例から、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API は、特定のプロパティ、<xref:System.Globalization.CultureInfo>型。 この場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]既存の Microsoft .NET Framework を使用する<xref:System.Globalization.CultureInfo>より以前のバージョンのフレームワークを使用した互換性と移行のシナリオに対応する型が、<xref:System.Globalization.CultureInfo>型では、必要ながサポートされていませんでしたコンス トラクターまたは直接 XAML プロパティの値として使用できるようにする型レベルの型変換。  
   
- XAML の使用状況を持つプロパティを公開するたびにコントロールの作成者がいる場合に特に厳密に検討してください、依存関係プロパティとそのプロパティをバックアップします。 これは、既存を使用する場合に特に当てはまります[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、XAML プロセッサの実装を使用してパフォーマンスを向上させることができますので<xref:System.Windows.DependencyProperty>をバックアップします。 依存関係プロパティには、XAML のアクセス可能なプロパティに対して期待するユーザーが付属、プロパティのプロパティ システムの機能が公開されます。 これには、アニメーション、データ バインディング、およびスタイルのサポートなどの機能が含まれます。 詳細については、[カスタム依存関係プロパティ](custom-dependency-properties.md)と[XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)を参照してください。  
+ XAML の使用状況を持つプロパティを公開するたびにコントロールの作成者がいる場合に特に厳密に検討してください、依存関係プロパティとそのプロパティをバックアップします。 これは、既存を使用する場合に特に当てはまります[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、XAML プロセッサの実装を使用してパフォーマンスを向上させることができますので<xref:System.Windows.DependencyProperty>をバックアップします。 依存関係プロパティには、XAML のアクセス可能なプロパティに対して期待するユーザーが付属、プロパティのプロパティ システムの機能が公開されます。 これには、アニメーション、データ バインディング、およびスタイルのサポートなどの機能が含まれます。 詳細については、次を参照してください。[カスタム依存関係プロパティ](custom-dependency-properties.md)と[XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)します。  
   
 ### <a name="writing-and-attributing-a-type-converter"></a>作成と型コンバーターの割り当て  
  場合によっては必要がありますにカスタム<xref:System.ComponentModel.TypeConverter>プロパティの型の型変換を提供するクラスを派生します。 派生し、XAML の使用方法をサポートする型コンバーターを作成する方法、および適用する方法についての<xref:System.ComponentModel.TypeConverterAttribute>を参照してください[TypeConverters および XAML](typeconverters-and-xaml.md)します。  
@@ -113,6 +111,7 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
  場合など、特定のシナリオがコントロールの作成者は、XAML でインスタンス化できる任意のオブジェクト表現が同等の XAML マークアップにシリアル化もできるようにすることもできます。 シリアル化の要件は、このトピックでは説明しません。 参照してください[概要の作成を管理して](../controls/control-authoring-overview.md)と[要素のツリーおよびシリアル化](element-tree-and-serialization.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
 - [コントロールの作成の概要](../controls/control-authoring-overview.md)

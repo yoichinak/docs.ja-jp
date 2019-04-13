@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167168"
 ---
 # <a name="timing-events-overview"></a>タイミング イベントの概要
 このトピックで使用可能な 5 つのタイミング イベントを使用する方法について説明<xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>オブジェクト。  
@@ -23,11 +23,11 @@ ms.locfileid: "57379576"
   
  いくつかの方法でプロパティをアニメーション化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)を参照してください。  
+-   **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)します。  
   
 -   **ローカル アニメーションを使用して**(コードのみ)。適用できる<xref:System.Windows.Media.Animation.AnimationTimeline>アニメーション化するプロパティに直接オブジェクト。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
   
--   **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、[AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)を参照してください。  
+-   **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、次を参照してください。 [AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)します。  
   
  この概要の例を使用して、マークアップとコードで使用することができます、ため<xref:System.Windows.Media.Animation.Storyboard>オブジェクト。 ただし、説明されている概念は、プロパティをアニメーション化するためのその他の方法にも適用できます。  
   
@@ -49,14 +49,14 @@ ms.locfileid: "57379576"
 [!code-csharp[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/csharp/VS_Snippets_Wpf/events_procedural/CSharp/EventExample.cs#storyboardcurrentstateinvalidatedevent2)]
 [!code-vb[events_procedural#StoryboardCurrentStateInvalidatedEvent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/events_procedural/VisualBasic/EventExample.vb#storyboardcurrentstateinvalidatedevent2)]  
   
- 詳細な例では、[受信通知時にクロックの状態の変化](how-to-receive-notification-when-clock-state-changes.md)を参照してください。  
+ 詳細な例では、次を参照してください。[受信通知時にクロックの状態の変化](how-to-receive-notification-when-clock-state-changes.md)します。  
   
 ## <a name="public-events"></a>パブリック イベント  
  <xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>クラスはどちらもが 5 つのタイミング イベントを提供します。 次の表は、これらのイベントと、それらをトリガーする条件を示したものです。  
   
 |event|対話型操作のトリガー|その他のトリガー|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|塗りつぶしまでスキップ|時計が完了する。|  
+|**完了**|塗りつぶしまでスキップ|時計が完了する。|  
 |**CurrentGlobalSpeedInvalidated**|一時停止、再開、シーク、速度比を設定、塗りつぶしまでスキップ、停止|クロックが反転、加速、開始、または停止する。|  
 |**CurrentStateInvalidated**|開始、塗りつぶしまでスキップ、停止|クロックが開始、停止、または塗りつぶされる。|  
 |**CurrentTimeInvalidated**|開始、シーク、塗りつぶしまでスキップ、停止|クロックが進行する。|  
@@ -77,6 +77,7 @@ ms.locfileid: "57379576"
  登録する場合、<xref:System.Windows.Media.Animation.Timeline.Completed>タイムライン上のイベント、たとえば、実際には元のシステムに登録する、<xref:System.Windows.Media.Animation.Clock.Completed>タイムラインに対して作成される各クロック イベント。 コードの前にこのイベントに登録する必要があります、 <xref:System.Windows.Media.Animation.Clock> ; このタイムラインの作成は、それ以外の場合、通知を受信できません。 自動的にこのような[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; パーサーが自動的に登録する前に、イベント、<xref:System.Windows.Media.Animation.Clock>が作成されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)
 - [アニメーションの概要](animation-overview.md)
 - [タイミング動作の概要](timing-behaviors-overview.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224287"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>パフォーマンスの最適化:他の推奨事項
 <a name="introduction"></a> このトピックでは、「[WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)」セクションのトピックで説明されている推奨事項を補足するパフォーマンスに関する推奨事項について取り上げます。  
@@ -73,12 +73,13 @@ ms.locfileid: "57358939"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Font Cache サービスは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーション間でフォント データを共有します。 このサービスがまだ実行されていない場合は、実行する最初の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションによって開始されます。 使用する場合[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]、[自動 (遅延開始)] の初期スタートアップ時間を短縮する"Manual"(既定値) から"Windows Presentation Foundation (WPF) Font Cache 3.0.0.0"サービスを設定できます[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
 - [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)

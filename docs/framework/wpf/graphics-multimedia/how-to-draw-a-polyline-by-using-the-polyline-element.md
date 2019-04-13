@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114847"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>方法: ポリライン要素を使用してポリラインを描画する
 この例を使用して一連の接続線、多角形を描画する方法を示しています、<xref:System.Windows.Shapes.Polyline>要素。  
@@ -32,9 +32,10 @@ ms.locfileid: "57378181"
   
  この例を使用しますが、<xref:System.Windows.Controls.Canvas>ポリラインを格納する際ポリライン要素 (およびその他のすべての図形要素) のいずれか<xref:System.Windows.Controls.Panel>または<xref:System.Windows.Controls.Control>テキスト以外のコンテンツをサポートします。  
   
- この例より大きなサンプルの一部です。サンプル全体については、[Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)を参照してください。  
+ この例より大きなサンプルの一部です。サンプル全体については、次を参照してください。 [Shape 要素のサンプル](https://go.microsoft.com/fwlink/?LinkID=160037)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>

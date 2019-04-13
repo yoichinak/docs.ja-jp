@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301231"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
@@ -83,15 +83,15 @@ ms.locfileid: "58831436"
 ## <a name="advantages-of-generic-types"></a>ジェネリック型の利点  
  ジェネリック型は、それぞれが特定のデータ型を操作する複数のプログラミング要素を宣言するための基礎となります。 ジェネリック型の代わりになるものを以下に示します。  
   
-1.  `Object` データ型を操作する単一の型。  
+1. `Object` データ型を操作する単一の型。  
   
-2.  型の *型固有* バージョンのセット。それぞれのバージョンは、個別にコーディングされ、 `String`、 `Integer`、または `customer`などのユーザー定義型などの特定のデータ型を操作します。  
+2. 型の *型固有* バージョンのセット。それぞれのバージョンは、個別にコーディングされ、 `String`、 `Integer`、または `customer`などのユーザー定義型などの特定のデータ型を操作します。  
   
  ジェネリック型には、これらの代替手段にはない次の利点があります。  
   
 -   **タイプ セーフ。** ジェネリック型では、コンパイル時に型がチェックされます。 一方、 `Object` に基づく型はすべてのデータ型を受け入れるので、入力したデータ型が受け入れられる型かどうかをチェックするコードを記述する必要があります。 ジェネリック型を使うと、型の不一致は実行する前にコンパイラで検出できます。  
   
--   **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *ボックス化を解除* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
+-   **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *unボックス化* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
   
      また、 `Object` に基づく型は遅延バインディングでもあります。つまり、この型のメンバーにアクセスするには、実行時に余分なコードが必要になります。 これも、パフォーマンスを低下させます。  
   
@@ -152,10 +152,10 @@ ms.locfileid: "58831436"
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [データ型のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [共変性と反変性](../../concepts/covariance-contravariance/index.md)
 - [反復子](../../../../visual-basic/programming-guide/concepts/iterators.md)

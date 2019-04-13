@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089134"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>方法: RectangleGeometry の角に丸みを付ける
 角を丸める、<xref:System.Windows.Media.RectangleGeometry>に設定して、その<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>と<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>プロパティを 0 より大きい値です。 値が大きいほど、四角形の角はの角。  
@@ -26,6 +26,7 @@ ms.locfileid: "57378536"
 角の丸い四角形  
   
 ## <a name="see-also"></a>関連項目
+
 - [ジオメトリの概要](geometry-overview.md)
 - [複合図形を作成する](how-to-create-a-composite-shape.md)
 - [PathGeometry を使用して図形を作成する](how-to-create-a-shape-by-using-a-pathgeometry.md)

@@ -2,12 +2,12 @@
 title: <serviceAuthorization> 要素
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: c967993c3a3f7276cd3a9076741de202e1f4c343
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157346"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 要素
 サービス操作へのアクセスを許可する設定を指定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "55257851"
   
 |属性|説明|  
 |---------------|-----------------|  
-|impersonateCallerForAllOperations|サービスのすべての操作が呼び出し元を偽装するかどうかを指定するブール値。 既定値は、`false` です。<br /><br /> 特定のサービス操作が呼び出し元を偽装する場合、スレッド コンテキストは、指定されたサービスを実行する前に呼び出し元のコンテキストに切り替えられます。|  
+|impersonateCallerForAllOperations|サービスのすべての操作が呼び出し元を偽装するかどうかを指定するブール値。 既定値は `false` です。<br /><br /> 特定のサービス操作が呼び出し元を偽装する場合、スレッド コンテキストは、指定されたサービスを実行する前に呼び出し元のコンテキストに切り替えられます。|  
 |principalPermissionMode|サーバーでの操作を実行するために使用されるプリンシパルを設定します。 次の値があります。<br /><br /> -None<br />-UseWindowsGroups<br />-   UseAspNetRoles<br />-カスタム<br /><br /> 既定値は UseWindowsGroups です。 値は、<xref:System.ServiceModel.Description.PrincipalPermissionMode> 型です。 この属性の使用に関する詳細については、次を参照してください。[方法。PrincipalPermissionAttribute クラスでアクセスを制限する](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)します。|  
 |roleProviderName|Windows Communication Foundation (WCF) アプリケーションにロール情報を提供するロール プロバイダーの名前を指定する文字列。 既定値は空の文字列です。|  
 |ServiceAuthorizationManagerType|サービス承認マネージャーの型を含む文字列。 詳細については、「 <xref:System.ServiceModel.ServiceAuthorizationManager> 」を参照してください。|  
@@ -96,10 +96,11 @@ ms.locfileid: "55257851"
  この構成要素の使い方の詳細な例を参照してください。[サービス操作へのアクセスの承認](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)と[承認ポリシー](../../../../../docs/framework/wcf/samples/authorization-policy.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [サービス操作へのアクセスの承認](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [方法: サービスのカスタム承認マネージャーを作成します。](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [方法: PrincipalPermissionAttribute クラスでアクセスを制限します。](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [方法: サービスで使用するカスタム承認マネージャーを作成する](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [承認ポリシー](../../../../../docs/framework/wcf/samples/authorization-policy.md)

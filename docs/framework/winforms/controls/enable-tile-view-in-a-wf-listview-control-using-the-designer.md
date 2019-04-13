@@ -1,19 +1,19 @@
 ---
-title: '方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。'
+title: '方法: デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300594"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする
 並べて表示ビュー機能、<xref:System.Windows.Forms.ListView>コントロールでは、グラフィカルとテキストの情報をバランスを提供することができます。 並べて表示ビューの項目で表示されるテキスト情報は、詳細ビュー用に定義されている列情報と同じ情報です。 グループ化またはカーソルのいずれかと組み合わせて、並べて表示ビューはマークの機能、<xref:System.Windows.Forms.ListView>コントロール。  
   
  並べて表示ビューでは、次の図のように、32 x 32 アイコンと数行のテキストを使用します。  
@@ -31,10 +31,11 @@ ms.locfileid: "57720096"
   
 ### <a name="to-set-tile-view-in-the-designer"></a>並べて表示ビューをデザイナーで設定するには  
   
-1.  選択、<xref:System.Windows.Forms.ListView>フォーム上のコントロール。  
+1. 選択、<xref:System.Windows.Forms.ListView>フォーム上のコントロール。  
   
-2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.ListView.View%2A>プロパティ選択**タイル**します。  
+2. **プロパティ**ウィンドウで、<xref:System.Windows.Forms.ListView.View%2A>プロパティ選択**タイル**します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)

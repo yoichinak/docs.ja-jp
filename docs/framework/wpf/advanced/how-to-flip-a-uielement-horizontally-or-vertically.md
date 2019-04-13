@@ -5,12 +5,12 @@ helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 3dd9a8e2a94acf62973701094e8966c8ebff15c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215522"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>方法: UIElement を左右または上下に反転させる
 この例は、使用する方法を示します、<xref:System.Windows.Media.ScaleTransform>反転する、<xref:System.Windows.UIElement>水平方向または垂直方向にします。 この例で、<xref:System.Windows.Controls.Button>コントロール (一種の<xref:System.Windows.UIElement>) を適用することで反転、<xref:System.Windows.Media.ScaleTransform>にその<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ。  
@@ -50,4 +50,5 @@ Rendertransformorigin が 0.5 ボタン 0.5
 垂直方向に反転したボタン  
   
 ## <a name="see-also"></a>関連項目
+
 - [変換の概要](../graphics-multimedia/transforms-overview.md)

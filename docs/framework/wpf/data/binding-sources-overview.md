@@ -6,21 +6,19 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 857175c65c62d8abad07a93baf72aa3709e5cb6b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72ef84cb53c6eff1fc2fb9459b40e780869243a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145926"
 ---
 # <a name="binding-sources-overview"></a>バインディング ソースの概要
 データ バインディングでは、バインディング ソース オブジェクトは、データの取得元のオブジェクトを表します。 このトピックでは、バインディング ソースとして使用できるオブジェクトの型について説明します。  
-  
-  
-  
+
 <a name="binding_sources"></a>   
 ## <a name="binding-source-types"></a>バインディング ソースの型  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングでは、次のバインディング ソースの型がサポートされています。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングには、次のバインディング ソースの種類がサポートしています。  
   
 |バインディング ソース|説明|  
 |--------------------|-----------------|  
@@ -76,9 +74,9 @@ ms.locfileid: "57375637"
   
 |プロパティの型<br /><br /> (すべてのアクセス修飾子)|動的オブジェクトのプロパティ|動的オブジェクトのプロパティ|CLR プロパティ|CLR プロパティ|依存関係プロパティ|依存関係プロパティ|  
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
-|**信頼レベル**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|**完全信頼**|**部分信頼**|  
-|パブリック クラス|[はい]|はい|はい|はい|はい|[はい]|  
-|非パブリック クラス|[はい]|×|はい|×|[はい]|[はい]|  
+|**信頼レベル**|**完全な信頼**|**部分信頼**|**完全な信頼**|**部分信頼**|**完全な信頼**|**部分信頼**|  
+|パブリック クラス|はい|はい|はい|はい|はい|はい|  
+|非パブリック クラス|はい|×|はい|×|[はい]|はい|  
   
  この表では、データ バインディングのアクセス許可要件について次の重要事項を説明します。  
   
@@ -95,10 +93,11 @@ ms.locfileid: "57375637"
  部分信頼セキュリティの詳細については、「[WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [バインディング ソースを指定する](how-to-specify-the-binding-source.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)
 - [LINQ to XML による WPF のデータ バインディングの概要](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [データ バインディング](../advanced/optimizing-performance-data-binding.md)

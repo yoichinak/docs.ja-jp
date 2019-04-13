@@ -1,5 +1,5 @@
 ---
-title: '方法: 四角形を描画するために、ペンを使用します。'
+title: '方法: ペンを使用して四角形を描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0e51a1e3a2d14754147dbd36f170127a7e978acd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074613"
 ---
-# <a name="how-to-use-a-pen-to-draw-rectangles"></a>方法: 四角形を描画するために、ペンを使用します。
+# <a name="how-to-use-a-pen-to-draw-rectangles"></a>方法: ペンを使用して四角形を描画する
 四角形を描画するためにする必要があります、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトを提供、<xref:System.Drawing.Graphics.DrawRectangle%2A>メソッド、および<xref:System.Drawing.Pen>オブジェクトは、線、色や幅などの機能を格納します。  
   
 ## <a name="example"></a>例  
@@ -31,7 +31,8 @@ ms.locfileid: "58463190"
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147525"
 ---
 # <a name="maximize-wpf-3d-performance"></a>WPF の 3D パフォーマンスの最大化
 使用すると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]を 3D コントロールをビルドし、アプリケーションで 3D シーンを含めることがパフォーマンスの最適化を考慮すべき重要です。 このトピックでは、3 D クラスとそれらを使用するときにパフォーマンスを最適化するための推奨事項と共に、アプリケーションのパフォーマンスに影響を与えるプロパティの一覧を示します。  
   
- このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)を参照してください。  
+ このトピックには、高度な理解が前提としています[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 機能。 「描画層 2」に、このドキュメントでの推奨事項が適用-ほぼピクセル シェーダーのバージョン 2.0 と頂点シェーダーのバージョン 2.0 をサポートするハードウェアとして定義されています。 詳細については、次を参照してください。[グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)します。  
   
 ## <a name="performance-impact-high"></a>パフォーマンスに影響します。High  
   
@@ -60,4 +60,5 @@ ms.locfileid: "57364009"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|大規模なコレクションの構築時を最小限に抑える[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、MeshGeometry3D のなど<xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>、 <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>、 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>、および<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>値の母集団の前に、コレクションのサイズを事前。 可能であれば、配列やリストなど、コレクションのコンス トラクター事前設定されたデータの構造体を渡します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [3-D グラフィックスの概要](3-d-graphics-overview.md)

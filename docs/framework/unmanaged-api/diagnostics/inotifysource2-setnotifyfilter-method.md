@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5e2d0ed5ba5411f637c8370d366a96f0e028838
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 37e4abeebce155a4c332e864b4dfb6cf5a1141ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151750"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter メソッド
 このソースで使用するための通知フィルターが割り当てられます。  
@@ -51,6 +51,7 @@ HRESULT SetNotifyFilter
  **ヘッダー:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>関連項目
+
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

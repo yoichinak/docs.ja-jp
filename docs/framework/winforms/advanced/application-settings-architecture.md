@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312567"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -100,11 +100,11 @@ ms.locfileid: "57710681"
 ### <a name="settings-serialization"></a>設定のシリアル化  
  ときに<xref:System.Configuration.LocalFileSettingsProvider>をディスクに設定を保存する必要があります、次の操作を実行します。  
   
-1.  リフレクションを使用して、すべてで定義されたプロパティを調べて、<xref:System.Configuration.ApplicationSettingsBase>派生クラスでいずれかで適用されるものを見つける<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>します。  
+1. リフレクションを使用して、すべてで定義されたプロパティを調べて、<xref:System.Configuration.ApplicationSettingsBase>派生クラスでいずれかで適用されるものを見つける<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>します。  
   
-2.  プロパティをディスクにシリアル化します。 最初に呼び出すしよう、<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>または<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>の種類の関連付けられた<xref:System.ComponentModel.TypeConverter>。 この呼び出しが失敗すると、代わりに XML シリアル化を使用します。  
+2. プロパティをディスクにシリアル化します。 最初に呼び出すしよう、<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>または<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>の種類の関連付けられた<xref:System.ComponentModel.TypeConverter>。 この呼び出しが失敗すると、代わりに XML シリアル化を使用します。  
   
-3.  設定の属性に基づいて、どの設定がどのファイルに指定されているかを判断します。  
+3. 設定の属性に基づいて、どの設定がどのファイルに指定されているかを判断します。  
   
  使用することができます独自設定クラスを実装する場合、<xref:System.Configuration.SettingsSerializeAsAttribute>バイナリまたはカスタムのシリアル化を使用するかの設定をマークする、<xref:System.Configuration.SettingsSerializeAs>列挙体。 コードで設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
@@ -147,10 +147,11 @@ ms.locfileid: "57710681"
  ご利用のプロバイダーがすべての設定で定義されている属性をサポートする必要はありません、<xref:System.Configuration?displayProperty=nameWithType>名前空間には、最小のサポートがあります<xref:System.Configuration.ApplicationScopedSettingAttribute>と<xref:System.Configuration.UserScopedSettingAttribute>ともサポートする必要があります<xref:System.Configuration.DefaultSettingValueAttribute>します。 サポートされていない属性がある場合、カスタム プロバイダーは通知なしに失敗します。例外をスローする必要はありません。 設定クラスがただし属性の無効な組み合わせを使用するかどうか、適用など<xref:System.Configuration.ApplicationScopedSettingAttribute>と<xref:System.Configuration.UserScopedSettingAttribute>の同じ設定を:、プロバイダーが例外をスローし、操作を停止する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [アプリケーション設定の概要](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)
 - [ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)
-- [アプリケーション設定のスキーマ](../../configure-apps/file-schema/application-settings-schema.md)
+- [アプリケーション設定スキーマ](../../configure-apps/file-schema/application-settings-schema.md)

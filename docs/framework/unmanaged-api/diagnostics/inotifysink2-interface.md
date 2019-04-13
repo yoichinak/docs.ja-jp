@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc5d09ac12919b8c68b9fe4bf9f7dc0009b2d4b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f5307ce00160bb4151a7559daac4724367c6497
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157777"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 インターフェイス
 シンク通知メソッドを宣言します。  
@@ -39,6 +39,7 @@ ms.locfileid: "54705470"
  **ヘッダー:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>関連項目
+
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

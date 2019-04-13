@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22276e543e8eeb9c6cf9aeee7a9af92c503d3a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097136"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName インターフェイス
 記述して、アセンブリの一意の id の操作のメソッドを提供します。  
@@ -44,8 +44,9 @@ ms.locfileid: "54549016"
   
  **ヘッダー:** Fusion.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IAssemblyEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

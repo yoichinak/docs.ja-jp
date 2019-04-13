@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03f3ce51eaab9e08d5f05932d9360adc4fd2110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113777"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>セキュリティとパブリックの読み取り専用配列フィールド
 パブリックの読み取り専用の配列フィールドを変更できるため、境界の動作またはアプリケーションのセキュリティを定義するのに、マネージ ライブラリからパブリック読み取り専用の配列フィールドを使用しないでください。  
@@ -26,4 +26,5 @@ ms.locfileid: "54560988"
  .NET Framework の型が内部での境界の種類を定義するパブリック フィールドを使用しないことに注意してください。  代わりに、.NET Framework では、別のプライベート フィールドを使用します。  これらのパブリック フィールドの値を変更しても、.NET Framework 型の動作は変わりません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

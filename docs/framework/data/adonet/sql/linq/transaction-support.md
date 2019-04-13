@@ -2,12 +2,12 @@
 title: トランザクションのサポート
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
-ms.openlocfilehash: f53a6081102991c73543b4cd76365f7e2c0faf89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196163"
 ---
 # <a name="transaction-support"></a>トランザクションのサポート
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次の 3 つの個別のトランザクション モデルをサポートしています。 チェックが行われる順に、これらのモデルを以下に示します。  
@@ -24,5 +24,6 @@ ms.locfileid: "54517202"
  呼び出すと<xref:System.Data.Linq.DataContext.SubmitChanges%2A>、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]のスコープ内の呼び出しかどうかをチェック、<xref:System.Transactions.Transaction>場合、または、`Transaction`プロパティ (`IDbTransaction`) がユーザーによって開始されたローカル トランザクションに設定します。 どちらのトランザクションが見つかった場合は[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ローカル トランザクションが開始されます (`IDbTransaction`) を使用して生成された SQL コマンドを実行するとします。 すべての SQL コマンドは正常に完了したら、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ローカル トランザクションをコミットし、返します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [方法: トランザクションを使用してデータ送信を角かっこ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [方法: データ送信をトランザクションで囲む](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)

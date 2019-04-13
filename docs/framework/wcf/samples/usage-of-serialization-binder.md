@@ -2,12 +2,12 @@
 title: シリアル化バインダーの使用
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329844"
 ---
 # <a name="usage-of-serialization-binder"></a>シリアル化バインダーの使用
 このサンプルでは、<xref:System.Runtime.Serialization.SerializationBinder> を使用して、ジェネリック型のバージョンをシリアル化する際に変更する方法を示します。  
@@ -24,10 +24,10 @@ ms.locfileid: "33503159"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルを設定、ビルド、および実行するには  
   
-1.  クライアントを実行するには、SBGenericsVTS ソリューションを右クリックし (6 プロジェクト) を選択し、**プロパティ**です。  
+1. クライアントを実行するには、SBGenericsVTS ソリューションを右クリックして (6 プロジェクト) を選び**プロパティ**します。  
   
-2.  **共通プロパティ****スタートアップ プロジェクト**選択してから、**マルチ スタートアップ プロジェクト**です。  
+2. **共通プロパティ**、**スタートアップ プロジェクト**を選択し、**マルチ スタートアップ プロジェクト**します。  
   
-3.  選択**サーバー**最初、 **Client20**し **[client40]** です。 選択、**開始**これら 3 つのアクション プロジェクトし、残りの部分に設定のままにして**None**です。  
+3. 選択**Server**し最初**Client20**し **[client40]** します。 選択、**開始**これら 3 つのアクションは、プロジェクトし、残りの部分に設定のままに**None**します。  
   
-4.  をクリックして**OK**し、f5 キーを押してサンプルを実行します。
+4. クリックして**OK**し、f5 キーを押してサンプルを実行するとします。

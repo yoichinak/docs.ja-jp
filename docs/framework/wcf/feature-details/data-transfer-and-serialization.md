@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088406"
 ---
 # <a name="data-transfer-and-serialization"></a>データ転送とシリアル化
 接続されたシステムでは、サービスとクライアントのタスクの実行は、データの交換に依存します。 サービスまたはクライアントの開発者は、効率的かつ簡単に維持されるアプリケーションを作成するには、Windows Communication Foundation (WCF) がデータとデータのシリアル化を処理する方法も理解する必要があります。  
@@ -61,5 +61,6 @@ ms.locfileid: "54595319"
  [エンコーダーとシリアライザーの拡張](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ベスト プラクティス:データ コントラクトのバージョン管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [サービスのバージョン管理](../../../../docs/framework/wcf/service-versioning.md)

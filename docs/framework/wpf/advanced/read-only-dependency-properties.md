@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162424"
 ---
 # <a name="read-only-dependency-properties"></a>読み取り専用の依存関係プロパティ
 このトピックでは、既存の読み取り専用の依存関係プロパティ、カスタムの読み取り専用の依存関係プロパティを作成するシナリオと手法など、読み取り専用の依存関係プロパティについて説明します。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックでは、依存関係プロパティの実装の基本シナリオとカスタム依存関係プロパティへのメタデータの適用方法を理解していることを前提とします。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」および「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」を参照してください。  
@@ -44,6 +42,7 @@ ms.locfileid: "57379007"
  <xref:System.Windows.DependencyPropertyKey>はプライベートでありは反映されません、コードの外部プロパティ システムによって、読み取り専用の依存関係プロパティがより読み取り/書き込み依存関係プロパティよりもセキュリティを設定します。 読み取り/書き込み依存関係プロパティの場合は、識別するフィールドは明示的または暗黙的にパブリックであり、したがってプロパティは広範に設定可能です。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
 - [スタイルとテンプレート](../controls/styling-and-templating.md)

@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100081"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
-   
-  
+
 ## <a name="the-application-class"></a>Application クラス  
  WPF では、一般的なアプリケーション スコープの機能がカプセル化された、<xref:System.Windows.Application>クラス。 <xref:System.Windows.Application>クラスには、次の機能が含まれています。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "58634220"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>現在のアプリケーションの取得  
- の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、 `static` <xref:System.Windows.Application.Current%2A>プロパティ。  
+ の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 、これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、`static`<xref:System.Windows.Application.Current%2A>プロパティ。  
   
  次のコードへの参照を取得する方法を示しています、 <xref:System.Windows.Application> 、現在のオブジェクト<xref:System.AppDomain>します。  
   
@@ -125,11 +124,10 @@ ms.locfileid: "58634220"
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>アプリケーションの有効期間  
  WPF アプリケーションの有効期間がによって発生するいくつかのイベントによってマークされている<xref:System.Windows.Application>アプリケーションが開始したことを知らせるがアクティブ化され、非アクティブ化し、シャット ダウンされています。  
-  
-  
+
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>スプラッシュ スクリーン  
- 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)を参照してください。  
+ 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>アプリケーションの起動  
@@ -172,7 +170,7 @@ ms.locfileid: "58634220"
  このマークアップは、ウィンドウを開くことについて、前のコードと同じ効果があります。  
   
 > [!NOTE]
->  ナビゲーションの詳細については、[ナビゲーションの概要](navigation-overview.md)を参照してください。  
+>  ナビゲーションの詳細については、次を参照してください。[ナビゲーションの概要](navigation-overview.md)します。  
   
  処理する必要がある、<xref:System.Windows.Application.Startup>を開くイベント、<xref:System.Windows.Window>既定以外のコンス トラクターを使用してインスタンス化する必要があるまたはそのプロパティを設定または表示するには、前に、そのイベントをサブスクライブする必要があるコマンドライン引数を処理する必要がある場合ですアプリケーションを起動したときに指定されました。  
   
@@ -289,7 +287,7 @@ ms.locfileid: "58634220"
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- 完全な例では、[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)を参照してください。  
+ 完全な例では、次を参照してください。[を永続化およびアプリケーション セッション全体でアプリケーション スコープのプロパティを復元](persist-and-restore-application-scope-properties.md)します。  
   
  <xref:System.Windows.Application.Exit> スタンドアロン アプリケーションと Xbap の両方で処理できます。 Xbap の<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
   
@@ -357,10 +355,11 @@ ms.locfileid: "58634220"
  ![XBAP - アプリケーション オブジェクト イベント](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Application>
 - [WPF ウィンドウの概要](wpf-windows-overview.md)
 - [ナビゲーションの概要](navigation-overview.md)
 - [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)
 - [WPF におけるパッケージの URI](pack-uris-in-wpf.md)
-- [アプリケーション モデル:操作方法に関するトピック](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [アプリケーションの開発](index.md)
+- [アプリケーション モデル:方法のトピック](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [アプリケーション開発](index.md)

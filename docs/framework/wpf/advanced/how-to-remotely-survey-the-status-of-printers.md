@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340790"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>方法: プリンターのステータスをリモート操作で調査する
 中企業および大企業では、任意の時点において、紙詰まりや用紙切れなどの問題が発生したために動作していないプリンターが複数存在する場合があります。 プリンターのプロパティで公開されている一連の豊富な[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft .NET Framework のプリンターの状態を迅速に調査を実行する手段を提供します。  
@@ -24,11 +24,11 @@ ms.locfileid: "57359706"
 ## <a name="example"></a>例  
  このようなユーティリティを作成する主な手順は次のとおりです。  
   
-1.  プリント サーバーの一覧を取得します。  
+1. プリント サーバーの一覧を取得します。  
   
-2.  サーバーをループして、印刷キューを照会します。  
+2. サーバーをループして、印刷キューを照会します。  
   
-3.  サーバー ループの各パス内で、すべてのサーバーのキューをループして、キューが現在動作していないことを示している各プロパティを読み取ります。  
+3. サーバー ループの各パス内で、すべてのサーバーのキューをループして、キューが現在動作していないことを示している各プロパティを読み取ります。  
   
  以下のコードは、一連のスニペットを示しています。 この例では、説明を簡単にするために、CRLF で区切られたプリント サーバー リストがあることを想定しています。 変数`fileOfPrintServers`は、<xref:System.IO.StreamReader>このファイルのオブジェクト。 すべての呼び出しのため、各サーバー名は、独自の行では、<xref:System.IO.StreamReader.ReadLine%2A>次のサーバーの名前を取得し、移動、<xref:System.IO.StreamReader>の次の行の先頭にカーソル。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "57359706"
  [!code-csharp[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/csharp/VS_Snippets_Wpf/PrinterStatusSurvey/CSharp/Program.cs#surveyqueues)]
  [!code-vb[PrinterStatusSurvey#SurveyQueues](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#surveyqueues)]  
   
- フラグを使用してプリンターの状態を確認する、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、<xref:System.Printing.PrintQueueStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)、および<xref:System.FlagsAttribute>を参照してください。  
+ フラグを使用してプリンターの状態を確認する、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintQueueStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)、および<xref:System.FlagsAttribute>します。  
   
  次のコードでは、ビットが設定されている属性ごとに、ユーザーに表示される最終レポートに警告を追加します  (コードの最後で呼び出している **ReportAvailabilityAtThisTime** メソッドについては以下で説明します)。  
   
@@ -74,6 +74,7 @@ ms.locfileid: "57359706"
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ ms.locfileid: "57359706"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 演算子 (C# リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)

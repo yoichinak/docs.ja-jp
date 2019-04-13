@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121980"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
 通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
@@ -31,7 +31,7 @@ ms.locfileid: "54534421"
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データ コントラクトの詳細については、[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)を参照してください。  
+ 通常は、データ コントラクトだけでメッセージのスキーマを定義することができます。 たとえば、前の例では、`BankingTransaction` と `BankingTransactionResponse` にデータ コントラクトがあれば、ほとんどのアプリケーションで基になる SOAP メッセージの内容を定義できます。 データ コントラクトの詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
   
  ただし、場合によっては、SOAP メッセージの構造がネットワーク経由でどのように転送されるかを厳密に制御する必要があります。 最も一般的なシナリオは、カスタム SOAP ヘッダーの挿入です。 もう 1 つの一般的なシナリオは、メッセージのヘッダーと本文のセキュリティ プロパティを定義すること、つまり、これらの要素にデジタル署名し、要素を暗号化するかどうかを決定することです。 最後に、一部のサードパーティの SOAP スタックでは、メッセージが特定の形式である必要があります。 この制御は、メッセージング スタイルの操作によって行うことができます。  
   
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> を使用すると、SOAP メッセージの本文のラッパー要素の名前を制御する WrapperName および WrapperNamespace 属性を指定できます。 既定では、メッセージ コントラクト型の名前はラッパー用に使用され、メッセージ コントラクトが定義されている名前空間 (`http://tempuri.org/`) は既定の名前空間として使用されます。  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性は、メッセージ コントラクトでは無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> メッセージ コントラクトでは、属性が無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>ヘッダー名、本文名、および名前空間の制御  
  メッセージ コントラクトの SOAP 表現では、各ヘッダーと本文の各部分が名前と名前空間を持つ XML 要素にマップされます。  
@@ -154,7 +154,7 @@ public class BankingTransaction
 >  ラップされていないメッセージにメッセージ本文の複数の部分を含めることは、WS-I Basic Profile 1.1 規格に反するため、新しいメッセージ コントラクトを設計する場合はお勧めできません。 ただし、特定の相互運用シナリオでは、複数のラップされていないメッセージ本文が必要な場合もあります。 1 つのメッセージ本文で複数のデータを転送する場合は、既定の (ラップされた) モードを使用することをお勧めします。 ラップされていないメッセージで複数のメッセージ ヘッダーを使用しても、何の問題もありません。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>メッセージ コントラクト内部でのカスタム型の使用  
- メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)を参照してください。  
+ メッセージが使用されるサービス コントラクト用に選択されたシリアル化エンジンを使用して、個々のメッセージ ヘッダーとメッセージ本文がシリアル化されます (XML に変換されます)。 既定のシリアル化エンジンである `XmlFormatter` は、データ コントラクトを持つ任意の型を (<xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> を持つことによって) 明示的に処理することも、(プリミティブ型にしたり、<xref:System.SerializableAttribute?displayProperty=nameWithType> を持ったりすることなどによって) 暗黙的に処理することもできます。 詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
   
  前の例では、`Operation` 型と `BankingTransactionData` 型は、データ コントラクトを持つ必要があります。また、`transactionDate` がプリミティブである (したがって、暗黙のデータ コントラクトを持つ) ため、<xref:System.DateTime> はシリアル化可能です。  
   
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP ヘッダーの属性  
  SOAP 標準では、ヘッダーに設定可能な次の属性が定義されます。  
   
--   `Actor/Role` (SOAP 1.1 では `Actor`、SOAP 1.2 では `Role`)  
+-   `Actor/Role` (`Actor` soap 1.1 で`Role`SOAP 1.2 で)  
   
 -   `MustUnderstand`  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  メッセージを受信して返信するときに、これらの SOAP 属性設定は <xref:System.ServiceModel.MessageHeader%601> 型のヘッダーとして往復するだけです。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 本文の順序  
- 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、[データ メンバーの順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)を参照してください。  
+ 状況によっては、本文の各部分の順序を制御する必要があります。 本文要素の既定の順序はアルファベット順ですが、<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティで制御できます。 このプロパティのセマンティクスは、継承シナリオにおける動作を除き、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティのセマンティクスと同じです (メッセージ コントラクトでは、派生型の本文メンバーの前に基本型の本文メンバーが並べ替えられることはありません)。 詳細については、次を参照してください。[データ メンバーの順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)します。  
   
  次の例では、通常はアルファベット順で最初である `amount` が先頭にきますが、 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> プロパティによって 3 番目の位置に挿入されます。  
   
@@ -448,5 +448,6 @@ public class OperationDetails
  メッセージ オブジェクトを `Result` プロパティとして受け取り、返された値をそのオブジェクトのプロパティとして取得する場合は、`/messageContract` コマンド オプションを使用します。 これにより、`Result` オブジェクトの <xref:System.EventArgs> プロパティとして応答メッセージを返すシグネチャが生成されます。 すべての内部戻り値は、応答メッセージ オブジェクトのプロパティになります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [サービスの設計と実装](../../../../docs/framework/wcf/designing-and-implementing-services.md)

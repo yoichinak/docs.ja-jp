@@ -2,12 +2,12 @@
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199584"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 Windows Communication Foundation (WCF) WEB HTTP プログラミング モデルでは、wcf WEB HTTP サービスの構築に必要な基本的な要素を提供します。 WCF WEB HTTP サービスへのアクセスを可能なクライアント、Web ブラウザーなどの広い範囲に設計されていて、次の一意の要件があります。  
@@ -18,9 +18,9 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミング モデル�
   
 -   **複数のデータ形式**Web スタイル サービスは、さまざまな種類の SOAP メッセージ以外にもデータを処理します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>XML ドキュメント、JSON データ オブジェクトでは、イメージ、ビデオ ファイル、またはプレーン テキストなどのバイナリ コンテンツのストリームなど、さまざまなデータ形式をサポートするためにします。  
   
- WCF WEB HTTP プログラミング モデルでは、WCF WEB HTTP サービス、AJAX および JSON サービス、および配信 (ATOM および RSS) フィードを含む Web スタイルのシナリオに対応のリーチを拡張します。 AJAX および JSON サービスの詳細については、[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)を参照してください。 配信の詳細については、[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)を参照してください。  
+ WCF WEB HTTP プログラミング モデルでは、WCF WEB HTTP サービス、AJAX および JSON サービス、および配信 (ATOM および RSS) フィードを含む Web スタイルのシナリオに対応のリーチを拡張します。 AJAX および JSON サービスの詳細については、次を参照してください。 [AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)します。 配信の詳細については、次を参照してください。 [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)します。  
   
- WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされる種類の詳細については、次を参照してください。、 **UriTemplate クエリ文字列パラメーターと Url**以下のセクション。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、「<xref:System.ServiceModel.Dispatcher.QueryStringConverter>」を参照してください。  
+ WEB HTTP サービスから返されるデータの種類に追加の制限はありません。 WEB HTTP サービス操作からは任意のシリアル化可能な型を返すことができます。 WEB HTTP サービス操作は Web ブラウザーによって呼び出すことができるため、URL に指定できるデータ型に制限があります。 既定でサポートされる種類の詳細については、次を参照してください。、 **UriTemplate クエリ文字列パラメーターと Url**以下のセクション。 既定の動作は、URL で指定されたパラメーターから実際のパラメーター型への変換方法を指定する独自の T:System.ServiceModel.Dispatcher.QueryStringConverter 実装を提供することで変更できます。 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  WCF WEB HTTP プログラミング モデルで作成されたサービスでは、SOAP メッセージは使用しません。 SOAP が使用されていないために、WCF によって提供されるセキュリティ機能は使用できません。 ただし、HTTPS でサービスをホストすることによってトランスポート ベースのセキュリティを使用できます。 WCF セキュリティの詳細については、次を参照してください[セキュリティの概要。](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -43,15 +43,15 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミング モデル�
   
  このテンプレートでは、中かっこによる表記 ("{segment}") で、リテラル値ではなく、変数のセグメントを示しています。  
   
- .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` を使用すると、次のことができます。  
+ .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` 以下を使用します。  
   
 -   いずれかを呼び出すことができます、`Bind`を生成するパラメーターのセットを持つメソッドを*完全にクローズ URI*テンプレートに一致します。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
   
 -   候補の URI を使用して `Match`() を呼び出すことができます。このメソッドは、テンプレートを使用して候補の URI を構成要素に分解し、テンプレート内の変数に従って分類される URI のさまざまな要素を収めたディクショナリを返します。  
   
--   `Bind`() と `Match`() は逆のもので、`Match`( `Bind`( x ) ) を呼び出し、最初と同じ環境に戻ることができます。  
+-   `Bind`() と`Match`() とは逆のものを呼び出せるように`Match`( `Bind`(x)) 開始時と同じ環境に戻る。  
   
- 包含されたテンプレートを個別に扱うことができるデータ構造内の一連の <xref:System.UriTemplate> オブジェクトを追跡することが必要になる場合がよくあります (特に、URI に基づいて要求をサービス操作にディスパッチすることが必要なサーバー上)。 <xref:System.UriTemplateTable> は、URI テンプレートのセットを表し、テンプレート セットと候補の URI が与えられると、最適の組み合わせを選択します。 これはられません (WCF が含まれている) 特定のネットワーク スタックで必要な場所に使用できるようにします。  
+ 包含されたテンプレートを個別に扱うことができるデータ構造内の一連の <xref:System.UriTemplate> オブジェクトを追跡することが必要になる場合がよくあります (特に、URI に基づいて要求をサービス操作にディスパッチすることが必要なサーバー上)。 <xref:System.UriTemplateTable> URI テンプレートのセットを表しに最も一致するテンプレートと候補 URI のセットを選択します。 これはられません (WCF が含まれている) 特定のネットワーク スタックで必要な場所に使用できるようにします。  
   
  WCF サービス モデルは、<xref:System.UriTemplate> および <xref:System.UriTemplateTable> を使用して、<xref:System.UriTemplate> によって記述された URI セットにサービス操作を関連付けます。 サービス操作は、<xref:System.UriTemplate> または <xref:System.ServiceModel.Web.WebGetAttribute> によって <xref:System.ServiceModel.Web.WebInvokeAttribute> に関連付けられます。 詳細については<xref:System.UriTemplate>と<xref:System.UriTemplateTable>を参照してください[UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> は、既定で POST に設定されていますが、他の動詞にも使用できます。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> 既定値は POST ですが、それを使用できる他の動詞。  
   
 ```  
 [ServiceContract]  
@@ -135,7 +135,7 @@ interface ICustomer
   
  つまり、WCF WEB HTTP プログラミング モデルは、あらゆる種類のデータを処理できますが、に対してプログラミングすることも<xref:System.IO.Stream>します。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] は、配信フィード (ATOM および RSS) だけでなく、JSON データ (AJAX) にも対応しています。 これらの機能に関する詳細については、[WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)と[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)を参照してください。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 配信フィード (ATOM および RSS) と JSON データ (AJAX) のサポートを提供します。 これらの機能に関する詳細については、次を参照してください。 [WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)と[AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)します。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP プログラミング モデルとセキュリティ  
  WCF WEB HTTP プログラミング モデルはサポートされていません、ws-* プロトコル、WCF WEB HTTP サービスをセキュリティで保護する唯一の方法は、SSL を使用して HTTPS 経由でサービスを公開します。 SSL の設定の詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS に SSL を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131613)  
@@ -144,6 +144,7 @@ interface ICustomer
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> を使用してチャネルを作成するために WCF WEB HTTP サービスを呼び出すと、異なる <xref:System.ServiceModel.Description.WebHttpBehavior> が <xref:System.ServiceModel.EndpointAddress> に渡されるとしても、<xref:System.ServiceModel.EndpointAddress> は構成ファイルに設定されている <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF 配信](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

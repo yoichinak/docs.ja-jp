@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9aad9568169e6b8feb05fbf0418dbe3dfbbe017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216848"
 ---
 # <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS 列挙型
 バージョン、ビルド、カルチャ、署名、および比較する 2 つのアセンブリのことを示します、 [iassemblyname::isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)メソッド。  
@@ -74,8 +74,9 @@ typedef enum {
   
  **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [fusion 列挙体](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

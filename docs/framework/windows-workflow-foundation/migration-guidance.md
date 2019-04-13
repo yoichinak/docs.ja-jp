@@ -2,15 +2,15 @@
 title: 移行のガイドライン
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083167"
 ---
 # <a name="migration-guidance"></a>移行のガイドライン
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は、[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (これに含まれていた System.Workflow.* 名前空間の型は現在 WF3 と呼ばれています) でリリースされ、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] で強化されました。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] リリースされた[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)](これに含まれて、種類 System.Workflow.* 名前空間は WF3 と呼ばれるようになりました) で強化された[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
   
 -   WF3 は [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] で完全にサポートされています。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "57719677"
 ## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF の移行に関するホワイト ペーパーとクックブック  
  [WF の移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)関係 WF3 と WF4 と移行方法の大まかな概要を説明します。 関連トピックでは、特定のトピックを掘り下げて説明します。  
   
- [WF 移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)  
+ [WF の移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)  
  WF3 と WF4 の関係、および .NET 4 のワークフロー テクノロジのユーザーまたは潜在的なユーザーとして使用できる選択肢について説明します。  
   
  [WF の移行:WF3 を開発のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=153852)  
@@ -36,7 +36,7 @@ ms.locfileid: "57719677"
  [WF のガイダンス:ステート マシン](https://go.microsoft.com/fwlink/?LinkId=153855)  
  ステート マシンのアクティビティがない場合の WF4 の制御フロー モデリングについて説明します。  
   
- このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、[Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](state-machine-workflows.md)を参照してください。  
+ このガイダンスは、.NET Framework 4 を対象とするワークフロー プロジェクトにのみ該当することに注意してください。 ステート マシンのワークフローは、Platform Update 1 のリリースで .NET 4.0.1 に追加され、.NET Framework 4.5 の一部として含まれていました。 .NET 4.0.1 ~ 4.0.3 および .NET Framework 4.5 のステート マシン ワークフローの詳細については、次を参照してください。 [Microsoft .NET Framework 4 の機能の更新プログラム 4.0.1](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))と[ステート マシン ワークフロー](state-machine-workflows.md)します。  
   
  [WF 移行のクックブック:カスタム アクティビティ](https://go.microsoft.com/fwlink/?LinkId=153856)  
  WF3 のカスタム アクティビティを WF4 で再設計する場合のサンプルと手順について説明します。  
@@ -57,4 +57,5 @@ ms.locfileid: "57719677"
  事前定義アクティビティの一般的なシナリオ向けに、WF3 で作成した Windows Communication Foundation (WCF) Web サービス (一般にワークフロー サービスと呼ばれます) を実装するワークフローを WF4 を使用するように再設計するための詳細な手順を例を中心として示します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Statements.Interop>

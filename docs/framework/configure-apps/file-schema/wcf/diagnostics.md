@@ -2,12 +2,12 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2041125e5bb538a9b64beb54778219c2a51a18f7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108031"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 要素は、ランタイムの検査と管理を行う管理者が使用できる設定を定義します。  
@@ -85,5 +85,6 @@ ms.locfileid: "55264713"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>

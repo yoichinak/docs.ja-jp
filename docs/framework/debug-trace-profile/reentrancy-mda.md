@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18189ace97238bede9ed18d1dcbae2490956fad8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094217"
 ---
 # <a name="reentrancy-mda"></a>reentrancy MDA
 `reentrancy` マネージド デバッグ アシスタント (MDA) は、前のマネージド コードからネイティブ コードへの切り替えが遷移順序を守って実行されなかった場合に、ネイティブ コードからマネージド コードへの遷移が試みられるとアクティブになります。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  ネイティブ コードからマネージド コードに遷移するときに、オブジェクト ヒープが壊れたり、他の重大なエラーが発生しています。  
   
  ネイティブ コードとマネージド コードの間でどちらかの方向に切り替えるスレッドは、適切な遷移順序を実行する必要があります。 ただし、ベクトル化例外ハンドラーなど、オペレーティング システムの特定の低レベル拡張ポイントでは、適切な遷移順序を実行しなくてもマネージド コードからネイティブ コードに切り替えることができます。  これらの切り替えは、共通言語ランタイム (CLR) の管理下ではなく、オペレーティング システムの管理下にあります。  これらの拡張ポイント内で実行されるネイティブ コードでは、マネージド コードへのコールバックを避ける必要があります。  
@@ -105,4 +105,5 @@ public class Reenter
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

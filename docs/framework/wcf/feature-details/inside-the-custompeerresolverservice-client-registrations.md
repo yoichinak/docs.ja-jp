@@ -1,15 +1,15 @@
 ---
-title: Custompeerresolverservice:クライアントの登録
+title: CustomPeerResolverService 内部:クライアント登録
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095790"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice:クライアントの登録
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 内部:クライアント登録
 メッシュ内の各ノードは、`Register` 関数を介してエンドポイント情報をリゾルバー サービスに公開します。 リゾルバー サービスは、登録レコードとしてこの情報を保存します。 このレコードには、ノードの一意の識別子 (RegistrationID) およびエンドポイント情報 `(PeerNodeAddress) が格納されます。  
   
 ## <a name="stale-records-and-expiration-time"></a>古くなったレコードと有効期限  
@@ -34,4 +34,5 @@ ms.locfileid: "54541782"
  リゾルバー サービスに登録されると、ノードはサービスから <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> オブジェクトを受け取ります。 このオブジェクトには、`RegistrationLifetime` プロパティが含まれます。このプロパティは、登録の期限が切れてリゾルバー サービスによって削除されるまでに、どれだけの時間があるかを示します。 たとえば、`RegistrationLifetime` が 2 分である場合、レコードが古くならず、削除されないようにするためには、ノードは 2 分以内に `Refresh` を呼び出す必要があります。 リゾルバー サービスは `Refresh` 要求を受け取ると、レコードを検索し、有効期限をリセットします。 Refresh は、<xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> プロパティのある `RegistrationLifetime` オブジェクトを返します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ピア リゾルバー](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

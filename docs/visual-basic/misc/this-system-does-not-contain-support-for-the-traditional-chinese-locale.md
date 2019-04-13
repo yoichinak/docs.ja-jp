@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_TCNotSupported
 ms.assetid: 95bace92-c7b9-4641-b71f-c088ddb418c9
-ms.openlocfilehash: e78b0ebeef8a413a05ab348b9eacb2534914cb3a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 43b94b3382c4ce62afbdce6abcd4aad10b46ca58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333627"
 ---
 # <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>このシステムには、繁体字中国語ロケールのサポートは含まれていません
 `VbStrConv.TraditionalChinese` 列挙体メンバーの使用が試行されましたが、システムは繁体字中国語ロケールをサポートしていません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  繁体字中国語ロケールをサポートするためにコンピューターをアップグレードするか、またはロケールをサポートするコンピューターでアプリケーションを実行します。  
+1. 繁体字中国語ロケールをサポートするためにコンピューターをアップグレードするか、またはロケールをサポートするコンピューターでアプリケーションを実行します。  
   
 ## <a name="see-also"></a>関連項目
 

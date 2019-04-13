@@ -13,15 +13,15 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166206"
 ---
 # <a name="property-change-events"></a>プロパティ変更イベント
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、プロパティ値の変更に応答して発生するさまざまなイベントが定義されています。 通常、プロパティは依存関係プロパティです。 イベント自体は、ルーティング イベントのこともあれば、標準の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] イベントのこともあります。 要素ツリーを通じて適切にルーティングされるプロパティ変更もあれば、プロパティが変更されたオブジェクトにのみ関係するプロパティ変更もあるため、イベントの定義はシナリオによって異なります。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティの値の変更に対して発生するいくつかのイベントを定義します。 通常、プロパティは依存関係プロパティです。 イベント自体は、ルーティング イベントのこともあれば、標準の [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] イベントのこともあります。 要素ツリーを通じて適切にルーティングされるプロパティ変更もあれば、プロパティが変更されたオブジェクトにのみ関係するプロパティ変更もあるため、イベントの定義はシナリオによって異なります。  
   
 ## <a name="identifying-a-property-change-event"></a>プロパティ変更イベントの識別  
  シグネチャ パターンまたは名前付けパターンに基づいてプロパティ変更を報告するすべてのイベントが、プロパティ変更イベントとして明示的に識別されるわけではありません。 通常、[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] ドキュメント内のイベントの説明では、イベントがプロパティ値の変更に直接結び付くものであるかどうかが示されており、プロパティとイベントのクロス リファレンスが提供されます。  
@@ -62,5 +62,6 @@ ms.locfileid: "57351997"
  プロパティ トリガーの詳細については、「[スタイルとテンプレート](../controls/styling-and-templating.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)

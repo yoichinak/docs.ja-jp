@@ -2,12 +2,12 @@
 title: XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: a68c43e9ab0a47c6a38bc794bac7d3ceb71391f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189918"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
 スキーマで要素にキー制約を指定または属性を使用して、**キー**要素。 キー制約を指定する要素または属性の値は、スキーマ インスタンス内で一意になる必要があります。また、null 値にすることはできません。  
@@ -79,6 +79,7 @@ TableName: customers
  値、 **ConstraintName**のプロパティ、 **UniqueConstraint**で、**データセット**の値である、 **msdata:ConstraintName**指定された属性、**キー**スキーマ内の要素。  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML スキーマ (XSD) 制約の DataSet 制約への割り当て](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [XML スキーマ (XSD) からの DataSet リレーションの生成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

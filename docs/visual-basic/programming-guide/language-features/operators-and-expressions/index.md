@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073651"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic の演算子および式
 *演算子*は、値が格納されている 1 つ以上のコード要素に対して演算を実行するコード要素です。 値要素は、変数、定数、リテラル、プロパティ、`Function` プロシージャおよび `Operator` プロシージャからの戻り値、式などです。  
@@ -61,8 +61,7 @@ ms.locfileid: "58843748"
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  上記の例では、Visual Basic は、代入演算子の右側にある式の操作を実行します (`=`)、結果の値を変数に代入`x`左側です。 1 つの式で使用できる演算子の数には、事実上制限はありません。ただし、正しい結果を得るには、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を理解する必要があります。  
-  
-  
+
 ## <a name="see-also"></a>関連項目
 
 - [演算子](../../../../visual-basic/language-reference/operators/index.md)

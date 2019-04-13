@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313802"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>方法: 拡張メソッド (Visual Basic) を呼び出す
 拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 拡張メソッドが宣言され、スコープに取り込む後、は、拡張する型のインスタンス メソッドのように呼び出すことができます。 拡張メソッドを記述する方法の詳細については、次を参照してください。[方法。拡張メソッドを記述](./how-to-write-an-extension-method.md)します。  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>拡張メソッドを呼び出す  
   
-1.  拡張メソッドの最初のパラメーターのデータ型を持つ変数を宣言します。 `PrintAndPunctuate`、する必要があります、<xref:System.String>変数。  
+1. 拡張メソッドの最初のパラメーターのデータ型を持つ変数を宣言します。 `PrintAndPunctuate`、する必要があります、<xref:System.String>変数。  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  変数が、拡張メソッドを呼び出し、その値が最初のパラメーターにバインドされている`aString`します。 次のステートメントの呼び出しが表示されます`Ready?`します。  
+2. 変数が、拡張メソッドを呼び出し、その値が最初のパラメーターにバインドされている`aString`します。 次のステートメントの呼び出しが表示されます`Ready?`します。  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  もう 1 つの文字列変数を宣言し、任意の文字列で動作するかを確認するには、もう一度メソッドを呼び出します。  
+3. もう 1 つの文字列変数を宣言し、任意の文字列で動作するかを確認するには、もう一度メソッドを呼び出します。  
   
     ```  
     Dim example2 = " or not"  
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 拡張メソッドを作成します。](./how-to-write-an-extension-method.md)
+- [方法: 拡張メソッドを作成する](./how-to-write-an-extension-method.md)
 - [拡張メソッド](./extension-methods.md)
 - [Visual Basic におけるスコープ](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

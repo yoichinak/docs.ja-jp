@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077473"
 ---
 # <a name="dependency-property-security"></a>依存関係プロパティのセキュリティ
 依存関係プロパティは、一般に、パブリック プロパティと考える必要があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムの性質のため、依存関係プロパティの値に関してセキュリティを保証することはできません。  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>ラッパーと依存関係プロパティのアクセスとセキュリティ  
  通常、依存関係プロパティは、インスタンスからのプロパティの取得または設定を簡素化する "ラッパー" [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] プロパティと共に実装されます。 ただし、ラッパーは、基になるを実装するだけの簡易メソッド<xref:System.Windows.DependencyObject.GetValue%2A>と<xref:System.Windows.DependencyObject.SetValue%2A>依存関係プロパティと対話するときに使用される静的な呼び出しです。 別の考え方をすれば、プロパティは、プライベート フィールドではなくたまたま依存関係プロパティが基になっている [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] プロパティとして公開されます。 ラッパーに適用されるセキュリティ メカニズムでは、プロパティ システムの動作と基になっている依存関係プロパティのアクセスは並列化されません。 ラッパーのセキュリティ確認要求を配置することが便利なメソッドの使用状況を防ぐことのみがへの呼び出しを防ぐことはできません<xref:System.Windows.DependencyObject.GetValue%2A>または<xref:System.Windows.DependencyObject.SetValue%2A>します。 同様に、保護されたアクセス レベルまたはプライベート アクセス レベルをラッパーに適用しても、効果的なセキュリティは提供されません。  
@@ -40,4 +39,5 @@ ms.locfileid: "57364815"
  要求を適用する<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>および、適切なセキュリティ メカニズムでないプロパティが設定されていることを防ぐために、必要に応じて失敗時に検証エラーを指定してください。 値の設定の無効化によって強制的に適用<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>呼び出しは、アプリケーション ドメイン内で動作している場合も、悪意のある呼び出し元に抑制でした。  
   
 ## <a name="see-also"></a>関連項目
+
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)

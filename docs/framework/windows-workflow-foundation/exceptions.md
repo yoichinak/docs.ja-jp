@@ -2,16 +2,15 @@
 title: 例外
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145991"
 ---
 # <a name="exceptions"></a>例外
-ワークフローは、<xref:System.Activities.Statements.TryCatch> アクティビティを使用して、ワークフローの実行中に発生した例外を処理することができます。 これらの例外は、処理することも可能ですが、<xref:System.Activities.Statements.Rethrow> アクティビティを使用して再スローすることもできます。 
-  <xref:System.Activities.Statements.TryCatch.Finally%2A> セクションのアクティビティは、<xref:System.Activities.Statements.TryCatch.Try%2A> セクションまたは <xref:System.Activities.Statements.TryCatch.Catches%2A> セクションが完了したときに実行されます。 によってホストされるワークフローを<xref:System.Activities.WorkflowApplication>インスタンスを使用することも、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>によって処理されない例外を処理するイベント ハンドラーを<xref:System.Activities.Statements.TryCatch>アクティビティ。  
+ワークフローは、<xref:System.Activities.Statements.TryCatch> アクティビティを使用して、ワークフローの実行中に発生した例外を処理することができます。 これらの例外は、処理することも可能ですが、<xref:System.Activities.Statements.Rethrow> アクティビティを使用して再スローすることもできます。 <xref:System.Activities.Statements.TryCatch.Finally%2A> セクションのアクティビティは、<xref:System.Activities.Statements.TryCatch.Try%2A> セクションまたは <xref:System.Activities.Statements.TryCatch.Catches%2A> セクションが完了したときに実行されます。 によってホストされるワークフローを<xref:System.Activities.WorkflowApplication>インスタンスを使用することも、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>によって処理されない例外を処理するイベント ハンドラーを<xref:System.Activities.Statements.TryCatch>アクティビティ。  
   
 ## <a name="causes-of-exceptions"></a>例外の原因  
  ワークフローでは、例外は、次の方法で生成されます。  
@@ -25,8 +24,7 @@ ms.locfileid: "57717272"
 -   ワークフローで使用されているライブラリ、コンポーネント、サービスなどの外部コードからスローされた例外  
   
 ## <a name="handling-exceptions"></a>例外処理  
- アクティビティからスローされた例外が処理されない場合、既定の動作では、ワークフロー インスタンスが終了します。 カスタムの <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーが存在する場合、このハンドラーで既定の動作をオーバーライドできます。 このハンドラーがあると、ワークフロー ホストの作成者は、カスタムのログ記録、ワークフローの中止、ワークフローのキャンセル、ワークフローの終了などの適切な処理を実行できます。  ワークフローが処理されない例外を発生する場合、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーが呼び出されます。 
-  <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> から戻された 3 つの可能なアクションがあり、これによりワークフローの最終結果が決定されます。  
+ アクティビティからスローされた例外が処理されない場合、既定の動作では、ワークフロー インスタンスが終了します。 カスタムの <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーが存在する場合、このハンドラーで既定の動作をオーバーライドできます。 このハンドラーがあると、ワークフロー ホストの作成者は、カスタムのログ記録、ワークフローの中止、ワークフローのキャンセル、ワークフローの終了などの適切な処理を実行できます。  ワークフローが処理されない例外を発生する場合、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーが呼び出されます。 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> から戻された 3 つの可能なアクションがあり、これによりワークフローの最終結果が決定されます。  
   
 -   **キャンセル**-キャンセルされたワークフロー インスタンスは分岐実行の正常な終了します。 キャンセルの動作をモデル化できます (たとえば、CancellationScope アクティビティを使用して)。 完了済みハンドラーはキャンセル プロセスが完了したときに呼び出されます。 取り消されたワーク フローはキャンセル状態にあります。  
   
@@ -50,9 +48,10 @@ ms.locfileid: "57717272"
 -   例外は高レベルの <xref:System.Activities.Statements.TryCatch> では扱われず、ワークフローのルートをエスケープし、ワーク フローが完了または中止ではなく取り消すように構成されます。 <xref:System.Activities.WorkflowApplication> を使用してホストされたワークフローは、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> を処理し <xref:System.Activities.UnhandledExceptionAction.Cancel> を返してこれを構成できます。 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> を処理する例は、このトピックで既に提供されています。 ワークフロー サービスは <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> を使用し <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> を指定してこれを構成できます。 構成の例については<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>を参照してください[ワークフロー サービス ホストの拡張機能](../wcf/feature-details/workflow-service-host-extensibility.md)します。  
   
 ## <a name="exception-handling-versus-compensation"></a>例外処理と補正の比較  
- 例外処理は、アクティビティの実行中に発生するという点で補正と異なります。 補正が発生するのは、アクティビティが正常に完了した後です。 例外処理では、アクティビティが例外を生成した後でクリーン アップを実行できます。また、補正処理では、前に完了したアクティビティの正常に完了した作業を元に戻すことが可能です。 詳細については、[補正](compensation.md)を参照してください。  
+ 例外処理は、アクティビティの実行中に発生するという点で補正と異なります。 補正が発生するのは、アクティビティが正常に完了した後です。 例外処理では、アクティビティが例外を生成した後でクリーン アップを実行できます。また、補正処理では、前に完了したアクティビティの正常に完了した作業を元に戻すことが可能です。 詳細については、次を参照してください。[補正](compensation.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

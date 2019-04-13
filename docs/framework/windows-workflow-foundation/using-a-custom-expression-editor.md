@@ -2,12 +2,12 @@
 title: カスタム式エディターの使用
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314088"
 ---
 # <a name="using-a-custom-expression-editor"></a>カスタム式エディターの使用
 カスタム式エディターを実装して、式の編集を多機能化したり単純化したりすることができます。 たとえば、次のような場合にカスタム式エディターを使用できます。  
@@ -18,11 +18,11 @@ ms.locfileid: "57716531"
   
  カスタム式エディターを実装するには、次の 3 つの基本的な手順を実行する必要があります。  
   
-1.  <xref:System.Activities.Presentation.View.IExpressionEditorService> インターフェイスを実装します。 このインターフェイスは、式エディターの作成と破棄を管理します。  
+1. <xref:System.Activities.Presentation.View.IExpressionEditorService> インターフェイスを実装します。 このインターフェイスは、式エディターの作成と破棄を管理します。  
   
-2.  <xref:System.Activities.Presentation.View.IExpressionEditorInstance> インターフェイスを実装します。 このインターフェイスは、式エディター UI に UI を実装します。  
+2. <xref:System.Activities.Presentation.View.IExpressionEditorInstance> インターフェイスを実装します。 このインターフェイスは、式エディター UI に UI を実装します。  
   
-3.  再ホストされたワークフロー アプリケーションで <xref:System.Activities.Presentation.View.IExpressionEditorService> を公開します。  
+3. 再ホストされたワークフロー アプリケーションで <xref:System.Activities.Presentation.View.IExpressionEditorService> を公開します。  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>クラス ライブラリ内のカスタム式エディターを実装する  
  次のコードは、MyExpressionEditorService ライブラリ プロジェクトに含まれている `MyEditorService` インターフェイスを実装する (概念実証) <xref:System.Activities.Presentation.View.IExpressionEditorService> クラスのサンプル コードです。  
@@ -276,10 +276,10 @@ namespace WpfApplication1
 ```  
   
 ### <a name="notes"></a>メモ  
- 使用する場合、 **ExpressionTextBox**コントロール、カスタム アクティビティ デザイナーで必要はありません作成し、破棄を使用して式エディターに、<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>と<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>のメソッド、<xref:System.Activities.Presentation.View.IExpressionEditorService>インターフェイス。 
-  <xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。  
+ 使用する場合、 **ExpressionTextBox**コントロール、カスタム アクティビティ デザイナーで必要はありません作成し、破棄を使用して式エディターに、<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>と<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>のメソッド、<xref:System.Activities.Presentation.View.IExpressionEditorService>インターフェイス。 <xref:System.Activities.Presentation.View.ExpressionTextBox> クラスによってこの処理が行われます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
 - [カスタム アクティビティ デザイナーでの ExpressionTextBox の使用](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

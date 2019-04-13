@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217420"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView コントロール テクノロジの概要 (Windows フォーム)
 ここでは、`DataGridView` コントロールおよびその使用をサポートしているクラスの概要について説明します。  
@@ -61,6 +61,7 @@ ms.locfileid: "57717636"
  <xref:System.Windows.Forms.DataGridView>コントロールが閉じると組み合わせて動作できます、<xref:System.Windows.Forms.BindingSource>コンポーネント。 このコンポーネントは、フォームのプライマリ データ ソースとして設計されています。 間の相互作用を管理できる、<xref:System.Windows.Forms.DataGridView>コントロールとデータに関係なく、データ ソースのソースの種類。  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
 - [DataGridView コントロールのアーキテクチャ](datagridview-control-architecture-windows-forms.md)
 - [接続情報の保護](../../data/adonet/protecting-connection-information.md)

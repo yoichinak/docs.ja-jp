@@ -2,12 +2,12 @@
 title: System.TimeSpan メソッド
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126946"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan メソッド
 <xref:System.TimeSpan?displayProperty=nameWithType> のメンバー サポートは、使用している .NET Framework と Microsoft SQL Server のバージョンに大きく依存します。  
@@ -37,6 +37,7 @@ ms.locfileid: "54539910"
  加算と減算は、CLR の <xref:System.TimeSpan?displayProperty=nameWithType> 型ではサポートされていますが、SQL の `TIME` 型ではサポートされていません。 そのため、LINQ to SQL クエリにより、SQL の `TIME` 型にマッピングしたときに加算や減算を試みると、エラーが発生します。 SQL の日付と時刻型を操作するための他の考慮事項が見つかります[SQL-CLR 型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

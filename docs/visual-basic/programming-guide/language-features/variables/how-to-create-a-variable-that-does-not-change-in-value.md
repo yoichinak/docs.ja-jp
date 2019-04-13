@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342935"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>方法: 値 (Visual Basic) 変化しない変数を作成します。
 矛盾する値を変更しない変数の概念があります。 定数では不可能である場合もありますし、固定値を持つ変数を使用すると便利です。 このような場合でメンバー変数を定義することができます、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワード。  
@@ -25,7 +25,7 @@ ms.locfileid: "58823325"
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>値の変わらない変数を作成するには  
   
-1.  モジュール レベルでのメンバー変数を宣言、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)、含めると、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワード。  
+1. モジュール レベルでのメンバー変数を宣言、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)、含めると、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワード。  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ ms.locfileid: "58823325"
   
      指定できる`ReadOnly`メンバー変数でのみです。 つまり、すべてのプロシージャの外部でのモジュール レベル変数を定義する必要があります。  
   
-2.  コンパイル時に単一のステートメントで値を計算することができる場合は、初期化句を使用して、`Dim`ステートメント。 に従って、[として](../../../../visual-basic/language-reference/statements/as-clause.md)句に等号 (`=`)、その後に式。 コンパイラが定数の値には、この式を評価してください。  
+2. コンパイル時に単一のステートメントで値を計算することができる場合は、初期化句を使用して、`Dim`ステートメント。 に従って、[として](../../../../visual-basic/language-reference/statements/as-clause.md)句に等号 (`=`)、その後に式。 コンパイラが定数の値には、この式を評価してください。  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

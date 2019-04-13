@@ -2,12 +2,12 @@
 title: WCF サービス ホスト (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193019"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF サービス ホスト (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) を使用すると、自動的にホストし、実装したサービスをテストするには、(F5) Visual Studio デバッガーを起動できます。 WCF テスト クライアント (WcfTestClient.exe) または独自のクライアントを検出して潜在的なエラーを修正するを使用してサービスをテストできます。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) �
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF サービス ホストでホストされるプロジェクトの種類  
  WCF サービス ホストは、次の WCF サービス ライブラリ プロジェクトの種類をホストできます。WCF サービス ライブラリ、シーケンシャル ワークフロー サービス ライブラリ、ステート マシン ワークフロー サービス ライブラリおよび配信サービス ライブラリです。 WCF サービス ホストが使用してサービス ライブラリ プロジェクトに追加できるこれらのサービスをホストできますも、**項目の追加**機能します。 これには、WCF サービス、WF ステート マシン サービス、WF シーケンシャル サービス、XAML WF ステート マシン サービス、および XAML WF シーケンシャル サービスが含まれます。  
   
- ただし、このツールでホストを構成することはできません。 ホストを構成するには、App.config ファイルを手動で編集する必要があります。 また、このツールでユーザー定義の構成ファイルを検証することはできません。  
+ ただし、このツールでホストを構成することはできません。 このタスクでは、App.config ファイルを手動で編集する必要があります。 また、このツールでユーザー定義の構成ファイルを検証することはできません。  
   
 > [!CAUTION]
 >  いないにこの目的に設計されたように、運用環境でサービスをホストする WCF サービス ホストを使用する必要がありますできません。  WCF サービス ホストは、信頼性、セキュリティ、およびそのような環境の管理の容易性の要件をサポートしていません。 代わりに IIS を使用してください。IIS は、より高度な信頼性機能や監視機能を備えており、サービスをホストするのに適しています。 サービスの開発が完了すると、IIS に WCF サービス ホストからサービスを移行する必要があります。  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Netsh.exe の詳細については、次を参照してください。"[Netsh.exe ツールとコマンド ライン スイッチを使用する方法](https://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF のテスト用クライアント (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

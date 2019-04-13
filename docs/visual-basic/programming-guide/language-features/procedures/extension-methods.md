@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296239"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 拡張メソッドには、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加する開発者が有効にします。 拡張メソッドを使用すれば、既存の型のインスタンス メソッドの場合と同様に呼び出すことができるメソッドを記述できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "58822077"
   
  [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
- 拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 拡張属性にアクセスするためには、<xref:System.Runtime.CompilerServices> をインポートする必要があります。  
+ 拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 <xref:System.Runtime.CompilerServices> 拡張属性にアクセスするためにインポートする必要があります。  
   
  拡張メソッドはモジュール内でのみ宣言できます。 通常、拡張メソッドを定義するモジュールと拡張メソッドを呼び出すモジュールは、別々になります。 必要に応じて、拡張メソッドが含まれているモジュールをインポートすることによって、そのモジュールをスコープの中に入れます。 `Print` が含まれているモジュールをスコープの中に入れたら、引数を使用しない通常のインスタンス メソッド (`ToUpper` など) の場合と同じ要領でそのメソッドを呼び出すことができます。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "58822077"
   
  [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
- このメソッドを呼び出すときには、`punc` の引数として `example.PrintAndPunctuate(".")` を渡します。  
+ 文字列の引数を送信することによって、メソッドが呼び出さ`punc`: `example.PrintAndPunctuate(".")`  
   
- `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 拡張属性にアクセスできるようにするために、<xref:System.Runtime.CompilerServices> が定義モジュールにインポートされます。  
+ `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 <xref:System.Runtime.CompilerServices> 拡張属性へのアクセスを有効にするには、定義モジュールでインポートされます。  
   
 ### <a name="code"></a>コード  
   
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>拡張メソッドの優先順位  
  2 つの拡張メソッドのシグネチャが同じで、そのいずれもスコープに入っていてアクセスが可能な場合は、優先順位の高い方が呼び出されます。 拡張メソッドの優先順位は、メソッドをスコープに組み入れる方法に基づいています。 優先順位の高い方から低い方へと並べると、次のようになります。  
   
-1.  現在のモジュールの中で定義されている拡張メソッド。  
+1. 現在のモジュールの中で定義されている拡張メソッド。  
   
-2.  現在の名前空間の方がその親に相当する名前空間よりも優先順位が高ければ、現在の名前空間またはそのいずれかの親に相当する名前空間にあるデータ型の中で定義されている拡張メソッド。  
+2. 現在の名前空間の方がその親に相当する名前空間よりも優先順位が高ければ、現在の名前空間またはそのいずれかの親に相当する名前空間にあるデータ型の中で定義されている拡張メソッド。  
   
-3.  現在のファイルの型インポートの中で定義されている拡張メソッド。  
+3. 現在のファイルの型インポートの中で定義されている拡張メソッド。  
   
-4.  現在のファイルの名前空間インポートの中で定義されている拡張メソッド。  
+4. 現在のファイルの名前空間インポートの中で定義されている拡張メソッド。  
   
-5.  プロジェクト レベルの型インポートの中で定義されている拡張メソッド。  
+5. プロジェクト レベルの型インポートの中で定義されている拡張メソッド。  
   
-6.  プロジェクト レベルの名前空間インポートの中で定義されている拡張メソッド。  
+6. プロジェクト レベルの名前空間インポートの中で定義されている拡張メソッド。  
   
  優先順位を適用してもあいまいさが残る場合は、完全修飾名を使用して、呼び出すメソッドを指定できます。 先ほどの例の `Print` メソッドが `StringExtensions` という名前のモジュールで定義されていれば、完全修飾名は `StringExtensions.Print(example)` ではなく `example.Print()` になります。  
   

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129598"
 ---
 # <a name="timing-behaviors-overview"></a>タイミング動作の概要
 このトピックでは、アニメーション、およびその他のタイミング動作を説明します。<xref:System.Windows.Media.Animation.Timeline>オブジェクト。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、基本的なアニメーション機能に精通している必要があります。 詳細については、、[アニメーションの概要](animation-overview.md)を参照してください。  
+ このトピックを理解するには、基本的なアニメーション機能に精通している必要があります。 詳細については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。  
   
 <a name="timelinetypes"></a>   
 ## <a name="timeline-types"></a>タイムラインの型  
@@ -42,7 +42,7 @@ ms.locfileid: "57355520"
 |----------|-----------------|----------------|-|-|-|  
 |単純継続時間|タイムラインが順方向の反復を 1 回完了するのに要する時間の長さ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |1 回の繰り返し|タイムラインにする場合とすると、再生にかかる時間の長さ、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティが true の場合、旧バージョンと 1 回再生します。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>では、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>では、 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration プロパティ  
@@ -76,7 +76,7 @@ ms.locfileid: "57355520"
   
  [!code-xaml[animation_ovws_snippet#TBRepeatBehaviorForeverExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbrepeatbehaviorforeverexampleinline)]  
   
- たとえば、[アニメーションを反復する](how-to-repeat-an-animation.md)を参照してください。  
+ たとえば、次を参照してください。[アニメーションを反復する](how-to-repeat-an-animation.md)します。  
   
 <a name="autoreverseproperty"></a>   
 ### <a name="the-autoreverse-property"></a>AutoReverse プロパティ  
@@ -88,7 +88,7 @@ ms.locfileid: "57355520"
   
  [!code-xaml[animation_ovws_snippet#TBAutoReverseRepeatExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbautoreverserepeatexampleinline)]  
   
- コンテナー タイムラインに子<xref:System.Windows.Media.Animation.Timeline>オブジェクトの場合は、コンテナー タイムラインが反転します。 その他の例では、[を指定するかどうか、タイムラインを自動的に反転](how-to-specify-whether-a-timeline-automatically-reverses.md)を参照してください。  
+ コンテナー タイムラインに子<xref:System.Windows.Media.Animation.Timeline>オブジェクトの場合は、コンテナー タイムラインが反転します。 その他の例では、次を参照してください。[を指定するかどうか、タイムラインを自動的に反転](how-to-specify-whether-a-timeline-automatically-reverses.md)します。  
   
 <a name="timelinebegin"></a>   
 ## <a name="the-begintime-property"></a>BeginTime プロパティ  
@@ -123,8 +123,9 @@ ms.locfileid: "57355520"
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの減速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](how-to-accelerate-or-decelerate-an-animation.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションの概要](animation-overview.md)
 - [アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)
 - [タイミング イベントの概要](timing-events-overview.md)
-- [方法トピック](animation-and-timing-how-to-topics.md)
+- [方法のトピック](animation-and-timing-how-to-topics.md)
 - [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

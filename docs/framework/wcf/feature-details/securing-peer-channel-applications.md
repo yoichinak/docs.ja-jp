@@ -2,15 +2,15 @@
 title: セキュリティによるピア チャネル アプリケーションの保護
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: d6dd6d95fb151a4f06dc4f632465b38b07720a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a747923f81f4773eb58a4b7500cf4fc1c006f889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146246"
 ---
 # <a name="securing-peer-channel-applications"></a>セキュリティによるピア チャネル アプリケーションの保護
-[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] での他のバインディングと同様に、`NetPeerTcpBinding` には、既定で有効にされているセキュリティがあり、トランスポート ベースのセキュリティとメッセージ ベースのセキュリティが提供されます。 このトピックでは、これら 2 種類のセキュリティについて説明します。 セキュリティの種類は、バインディング仕様のセキュリティ モード タグ (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`) で指定します。  
+[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] での他のバインディングと同様に、`NetPeerTcpBinding` には、既定で有効にされているセキュリティがあり、トランスポート ベースのセキュリティとメッセージ ベースのセキュリティが提供されます。 このトピックでは、これら 2 種類のセキュリティについて説明します。 セキュリティの種類が、バインディング仕様のセキュリティ モード タグで指定された (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`)。  
   
 ## <a name="transport-based-security"></a>トランスポート ベースのセキュリティ  
  ピア チャネルでは、トランスポートをセキュリティで保護するための 2 種類の認証資格情報がサポートされます。両方とも、関連する `ClientCredentialSettings.Peer` で `ChannelFactory` プロパティを設定する必要があります。  
@@ -42,5 +42,6 @@ ms.locfileid: "54586684"
  [ピア チャネルのシナリオ](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ピア チャネルのセキュリティ](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

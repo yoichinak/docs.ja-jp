@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579005"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141532"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
@@ -37,7 +37,7 @@ ms.locfileid: "54579005"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` および `AppDomainUnLoad_V1`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` と、呼び出し `AppDomainUnLoad_V1`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|情報提供 (4)|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54579005"
   
 |イベント|イベント ID|説明|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (すべてのアプリケーション ドメインについて記録)|156|プロセスの有効期間中に、アプリケーション ドメインが作成されるたびに発生します。|  
+|`AppDomainLoad_V1` (すべてのアプリケーション ドメインのログオン)|156|プロセスの有効期間中に、アプリケーション ドメインが作成されるたびに発生します。|  
 |`AppDomainUnLoad_V1`|157|プロセスの有効期間中に、アプリケーション ドメインが破壊されるたびに発生します。|  
 |`AppDomainDCStart_V1`|157|開始ランダウン中にアプリケーション ドメインを列挙します。|  
 |`AppDomainDCEnd_V1`|158|終了ランダウン中にアプリケーション ドメインを列挙します。|  
@@ -68,7 +68,7 @@ ms.locfileid: "54579005"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` および `AssemblyUnload`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` と、呼び出し `AssemblyUnload`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|情報提供 (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54579005"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` および `ModuleUnload_V2`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` と、呼び出し `ModuleUnload_V2`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|情報提供 (4)|  
 ||||  
@@ -136,7 +136,7 @@ ms.locfileid: "54579005"
   
 -   名前に"Pdb"が付いているフィールドは、プロファイル セッション中に読み込まれたモジュールに一致する PDB を検索するプロファイリング ツールによって使用できます。 これらのフィールドの値は、読み込まれたモジュールに一致する PDB の位置を特定するためにデバッガーが通常使用する、モジュールの IMAGE_DIRECTORY_ENTRY_DEBUG のセクションに書き込まれたデータに対応します。  
   
--   "ManagedPdb"で始まるフィールド名は、マネージド コンパイラ (c# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
+-   "ManagedPdb"で始まるフィールド名は、マネージド コンパイラ (C# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
   
 -   "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
   
@@ -213,4 +213,5 @@ ms.locfileid: "54579005"
  モジュールの範囲イベントは、4 以上のすべての ETW レベルで発行され、情報イベントに分類されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)

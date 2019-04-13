@@ -1,5 +1,5 @@
 ---
-title: '方法: カスタムの ToolStripRenderer を実装します。'
+title: '方法: カスタムの ToolStripRenderer を実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: c6150b23cf8390a31c6b77ae3c56cfb898eded4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151919"
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a>方法: カスタムの ToolStripRenderer を実装します。
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a>方法: カスタムの ToolStripRenderer を実装する
 <xref:System.Windows.Forms.ToolStripRenderer> から派生するクラスを実装することで、<xref:System.Windows.Forms.ToolStrip> コントロールの外観をカスタマイズできます これによって、<xref:System.Windows.Forms.ToolStripProfessionalRenderer> クラスや <xref:System.Windows.Forms.ToolStripSystemRenderer> クラスで提供される外観とは異なる外観を柔軟に作成できます。  
   
 ## <a name="example"></a>例  
@@ -23,9 +23,9 @@ ms.locfileid: "57723011"
   
  `GridStripRenderer` クラスでは `GridStrip` コントロールの外観を 3 つの点でカスタマイズしています。  
   
--   `GridStrip` の境界線  
+-   `GridStrip` border  
   
--   <xref:System.Windows.Forms.ToolStripButton> の境界線  
+-   <xref:System.Windows.Forms.ToolStripButton> border  
   
 -   <xref:System.Windows.Forms.ToolStripButton> イメージ  
   
@@ -37,9 +37,10 @@ ms.locfileid: "57723011"
   
 -   System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripRenderer>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - triggering animation [WPF]
 - Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-ms.openlocfilehash: 87f7525755556301fec3f00da612fc5262f1f533
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7e3eecedf7d464eeb8e4f60f2f05fa06d2e23e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080710"
 ---
 # <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a>方法: プロパティ値が変化したときにアニメーションをトリガーする
 この例は、使用する方法を示します、<xref:System.Windows.Trigger>を開始する、<xref:System.Windows.Media.Animation.Storyboard>プロパティ値が変更されたとき。 使用することができます、<xref:System.Windows.Trigger>内で、 <xref:System.Windows.Style>、 <xref:System.Windows.Controls.ControlTemplate>、または<xref:System.Windows.DataTemplate>します。  
@@ -24,6 +24,7 @@ ms.locfileid: "57356144"
  プロパティによって適用されるアニメーション<xref:System.Windows.Trigger>オブジェクトよりもさらに複雑な方法で動作しますが<xref:System.Windows.EventTrigger>アニメーションまたはアニメーションの開始を使用して<xref:System.Windows.Media.Animation.Storyboard>メソッド。  「ハンドオフ」アニメーションによって他の定義、<xref:System.Windows.Trigger>オブジェクトで、compose を<xref:System.Windows.EventTrigger>メソッドによってトリガーされるアニメーションです。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Trigger>
 - [プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)
 - [ストーリーボードの概要](storyboards-overview.md)

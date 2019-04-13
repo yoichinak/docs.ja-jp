@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: a4e59258550cb2fad92a3eacc726f952f3b0164c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 0c9286ff65c84a8d20532fd119ecd335ad90ee7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206019"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>UI オートメーションによる Table コントロール型のサポート
 > [!NOTE]
@@ -57,16 +57,16 @@ ms.locfileid: "57674524"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|テーブルに格納される項目にはグリッドに表示されるデータが含まれるため、テーブル コントロールはこのコントロール パターンを常にサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|テーブルに格納される項目にはグリッドに表示されるデータが含まれるため、テーブル コントロールはこのコントロール パターンを常にサポートします。|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|はい (子オブジェクトでは必須)|テーブルの内部オブジェクトは、GridItem と TableItem の両方のコントロール パターンをサポートする必要があります。 テーブル自体では、それが別のテーブルの一部である場合を除いて、GridItem コントロール パターンも TableItem コントロール パターンもサポートする必要がありません。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|はい|テーブル コントロールは、常に、ヘッダーとコンテンツを関連付けることができます。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|テーブル コントロールは、常に、ヘッダーとコンテンツを関連付けることができます。|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|はい (子オブジェクトでは必須)|テーブルの内部オブジェクトは、GridItem と TableItem の両方のコントロール パターンをサポートする必要があります。 テーブル自体では、それが別のテーブルの一部である場合を除いて、GridItem コントロール パターンも TableItem コントロール パターンもサポートする必要がありません。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのテーブル コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  
@@ -75,6 +75,7 @@ ms.locfileid: "57674524"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.Table>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

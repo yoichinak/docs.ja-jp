@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List control type
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
-ms.openlocfilehash: 37506c7ec0bcd07d4f9b91da1f49104223840bc0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178504"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI オートメーションによる List コントロール型のサポート
 > [!NOTE]
@@ -81,13 +81,13 @@ List コントロール型 (リスト コントロールなど) を実装する�
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|コンテナー内の項目がスクロール可能な場合は、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.IGridProvider>|状況に依存|グリッド ナビゲーションを項目ごとに使用可能にする必要がある場合は、このパターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|状況に依存|コントロールがコンテナー内の項目の複数のビューをサポートできる場合は、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` は List コントロール型をサポートしません。 コントロールがこのコントロール パターンをサポートする必要がある場合、コントロールは Data Grid コントロール型に基づく必要があります。|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Never|`ITableProvider` List コントロール型はサポートされてことはありません。 コントロールがこのコントロール パターンをサポートする必要がある場合、コントロールは Data Grid コントロール型に基づく必要があります。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのリスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート/値|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート/値|メモ|  
 |---------------------------------------------------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|状況に依存|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|状況に依存|なし|  
@@ -105,6 +105,7 @@ List コントロール型 (リスト コントロールなど) を実装する�
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必須|なし|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.List>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: トリミングおよびスケール イメージ'
+title: '方法: イメージをトリミングおよびスケーリングする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189906"
 ---
-# <a name="how-to-crop-and-scale-images"></a>方法: トリミングおよびスケール イメージ
+# <a name="how-to-crop-and-scale-images"></a>方法: イメージをトリミングおよびスケーリングする
 <xref:System.Drawing.Graphics>クラスには、いくつか用意されて<xref:System.Drawing.Graphics.DrawImage%2A>イメージのトリミングおよびスケールに使用できる元とコピー先の四角形のパラメーターを持つうちいくつかの方法です。  
   
 ## <a name="example"></a>例  
@@ -33,8 +33,9 @@ ms.locfileid: "58654498"
  [!code-vb[System.Drawing.WorkingWithImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 置き換えてください`Apple.gif`イメージ ファイル名と、システムで有効なパス。  
+ 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 置き換えてください`Apple.gif`イメージ ファイル名と、システムで有効なパス。  
   
 ## <a name="see-also"></a>関連項目
-- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+
+- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

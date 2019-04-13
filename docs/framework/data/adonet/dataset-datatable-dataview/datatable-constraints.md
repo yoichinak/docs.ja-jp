@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: d0b3bd649da301c563a19450d7d9b42e9d0b29e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165179"
 ---
 # <a name="datatable-constraints"></a>DataTable の制約
 制約を使用すると、データの整合性を維持するために <xref:System.Data.DataTable> のデータを強制的に制限できます。 制約は、1 つの列または関連付けられた複数の列に対して自動的に適用される規則であり、行の値がなんらかの方法で変更されたときに実行されるアクションを決定します。 制約はときに、`System.Data.DataSet.EnforceConstraints`のプロパティ、<xref:System.Data.DataSet>は**true**します。 `EnforceConstraints` プロパティの設定方法のコード例については、<xref:System.Data.DataSet.EnforceConstraints%2A> のリファレンス トピックを参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "54611762"
 |**Cascade**|関連付けられている行を削除または更新します。|  
 |**SetNull**|関連付けられている行の値を設定**DBNull**します。|  
 |**SetDefault**|関連付けられている行の値を既定値に設定します。|  
-|**None**|関連付けられている行に対してアクションは実行しません。 既定値です。|  
+|**なし**|関連付けられている行に対してアクションは実行しません。 既定値です。|  
   
  A **ForeignKeyConstraint**制限することができますも反映されるまでへの変更が関連する列。 設定されたプロパティに応じて、 **ForeignKeyConstraint** 、列の場合、 **EnforceConstraints**のプロパティ、**データセット**は**true**、親の行に対して操作を実行する、例外が発生します。 たとえば場合、 **DeleteRule**のプロパティ、 **ForeignKeyConstraint**は**None**、子の行がある場合、親の行を削除できません。  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |規則の設定|説明|  
 |------------------|-----------------|  
 |**Cascade**|子の行への変更を受け入れるかまたは拒否します。|  
-|**None**|子の行に対してアクションは実行しません。 既定値です。|  
+|**なし**|子の行に対してアクションは実行しません。 既定値です。|  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Data.ForeignKeyConstraint> を作成し、<xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> を含む複数のプロパティを設定して、<xref:System.Data.ConstraintCollection> オブジェクトの <xref:System.Data.DataTable> に追加します。  
@@ -93,6 +93,7 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataRelation>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>

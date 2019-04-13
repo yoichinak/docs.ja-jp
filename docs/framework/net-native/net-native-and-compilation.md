@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139179"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native とコンパイル
 .NET Framework を対象にした Windows 8.1 アプリケーションと Windows デスクトップ アプリケーションは特定のプログラミング言語で記述し、中間言語 (IL: Intermediate Language) にコンパイルされます。 実行時には、メソッドが初めて実行される直前に JIT (Just-In-Time) コンパイラによって IL がローカル コンピューターのネイティブ コードにコンパイルされます。 それとは対照的に、.NET ネイティブ ツール チェーンでは、コンパイル時にソース コードをネイティブ コードに変換します。 このトピックでは、.NET ネイティブを、.NET Framework アプリをコンパイルする他のテクノロジと比較します。また、.NET ネイティブがネイティブ コードをどのように生成するのかについて実践的な概要を説明しますので、.NET ネイティブでコンパイルしたコードで発生する例外が JIT でコンパイルしたコードでは発生しない理由を理解するために役立ちます。  
@@ -101,6 +101,7 @@ ms.locfileid: "54744142"
 -   NGEN イメージは、脆弱な傾向があります。 たとえば、依存関係のあるファイルにパッチや変更が適用された場合は、通常、それを使用するアセンブリも再度 NGEN で処理する必要があります。 このことは、特に .NET Framework クラス ライブラリに含まれるシステム アセンブリの場合に当てはまります。 これに対して、.NET ネイティブでは、アプリケーションがそれぞれ個別に実行されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータと自己言及的なコンポーネント](../../../docs/standard/metadata-and-self-describing-components.md)
 - [インサイド .NET ネイティブ (Channel 9 ビデオ)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)

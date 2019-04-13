@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f42345977f69dd27294a44b4c007ab08d2ec6f6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 662863ec69e464dafe893552f1d81755313acc75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153323"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 以降のバージョンでサポート]  
@@ -70,7 +70,8 @@ HRESULT ReadInMemorySymbols(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorProfilerInfo7 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 622e57aedf6c49e95dc2d7e40ba598361b3e6a26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222862"
 ---
 # <a name="importtypes-method"></a>ImportTypes メソッド
 使用してインポートする各スコープの種類のインポートを開始する[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)します。  
@@ -65,6 +65,7 @@ HRESULT ImportTypes(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

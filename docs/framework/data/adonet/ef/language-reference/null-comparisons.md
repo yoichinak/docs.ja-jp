@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222667"
 ---
 # <a name="null-comparisons"></a>NULL 比較
 データ ソースの `null` 値は不明な値を表します。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでは、NULL 値をチェックして、必ず NULL でない有効なデータを持つ行に特定の計算または比較を行うようにすることができます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]をサポートするコレクションを渡すときに、`IQueryable`での集計関数、集計の操作がデータベースで実行されます。 クエリがメモリで実行して、データベースで実行されたクエリの結果の違いがある可能性があります。 メモリ内クエリを使用して、一致がない場合、クエリは 0 を返します。 データベースでは、これと同じクエリから `null` が返されます。 場合、`null`値が LINQ 集計関数に渡されると、例外がスローされます。 可能な限りそのまま使用する`null`値型と null 許容型にクエリ結果を受け取るその型のプロパティをキャストします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to Entities クエリ内の式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

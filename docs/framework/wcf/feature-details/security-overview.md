@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136956"
 ---
 # <a name="security-overview"></a>セキュリティの概要
 Windows Communication Foundation (WCF) は、SOAP メッセージに基づく分散プログラミングのプラットフォーム、およびクライアントとサービス間のメッセージをセキュリティで保護するはデータの保護に不可欠です。 WCF には、既存のセキュリティ インフラストラクチャと認識されているセキュリティ標準の SOAP メッセージの両方に基づき、セキュリティで保護されたメッセージを交換するための汎用的で相互運用可能なプラットフォームが用意されています。  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) は、SOAP メッセージに基づく分
 > [!NOTE]
 >  WCF セキュリティの包括的なガイドを参照してください。 [WCF セキュリティ ガイダンス](https://go.microsoft.com/fwlink/?LinkID=158912)します。  
   
- WCF での概念が HTTPS では、Windows などの既存のテクノロジとセキュリティで保護された分散アプリケーションをビルドした場合によく使用するには、セキュリティ、またはユーザー名とユーザーを認証するパスワードが統合されています。 WCF だけでなくは、既存のセキュリティ インフラストラクチャと統合されていますが、セキュリティで保護された SOAP メッセージを使用して Windows 専用のドメインを超えて分散セキュリティも拡張できます。 WCF の既存のプロトコルに加えて、プロトコルとして SOAP を使用する大きな利点を既存のセキュリティ機構の実装を検討してください。 たとえば、ユーザー名とパスワードや X.509 証明書など、クライアントまたはサービスを識別する資格情報には、相互運用可能な XML ベースの SOAP プロファイルがあります。 このプロファイルを使用して、XML デジタル署名や XML 暗号化などの公開仕様を利用するセキュリティで保護されたメッセージ交換を行います。 仕様の一覧は、[システム標準の相互運用性バインディングでサポートされる Web サービス プロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)を参照してください。  
+ WCF での概念が HTTPS では、Windows などの既存のテクノロジとセキュリティで保護された分散アプリケーションをビルドした場合によく使用するには、セキュリティ、またはユーザー名とユーザーを認証するパスワードが統合されています。 WCF だけでなくは、既存のセキュリティ インフラストラクチャと統合されていますが、セキュリティで保護された SOAP メッセージを使用して Windows 専用のドメインを超えて分散セキュリティも拡張できます。 WCF の既存のプロトコルに加えて、プロトコルとして SOAP を使用する大きな利点を既存のセキュリティ機構の実装を検討してください。 たとえば、ユーザー名とパスワードや X.509 証明書など、クライアントまたはサービスを識別する資格情報には、相互運用可能な XML ベースの SOAP プロファイルがあります。 このプロファイルを使用して、XML デジタル署名や XML 暗号化などの公開仕様を利用するセキュリティで保護されたメッセージ交換を行います。 仕様の一覧は、次を参照してください。[システム標準の相互運用性バインディングでサポートされる Web サービス プロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)します。  
   
  また他にも、Windows プラットフォームのコンポーネント オブジェクト モデル (COM) があり、セキュリティで保護された分散アプリケーションを実現します。 COM は、包括的なセキュリティ機構を有します。このセキュリティ機構により、セキュリティ コンテキストはコンポーネント間をフローできます。また、整合性、機密性、および認証を実現できます。 ただし COM はクロスプラット フォーム、WCF と同様のメッセージ セキュリティで保護を有効になりません。 WCF を使用して、Windows ドメインからインターネット経由で対象にするサービスとクライアントを構築できます。 WCF の相互運用可能なメッセージが動的に構築するために不可欠なビジネス中心のサービスを確信を持てる、情報のセキュリティ。  
   
@@ -85,19 +85,20 @@ Windows Communication Foundation (WCF) は、SOAP メッセージに基づく分
   
 -   *メッセージ セキュリティ モード*、転送セキュリティを実装する一方、Ws-security を使用して (およびその他の仕様)。 メッセージ セキュリティは、SOAP メッセージに直接適用され、また SOAP エンベロープ内にアプリケーション データと共に格納されるため、トランスポート プロトコルに依存しない、拡張性が高い、エンド ツー エンド (Point-to-Point と対照) のセキュリティが保証される、という利点があります。ただし、SOAP メッセージの XML の性質を処理する必要があるため、トランスポート セキュリティ モードよりも処理が数倍遅くなる欠点があります。  
   
- これらの違いの詳細については、[Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)を参照してください。  
+ これらの違いの詳細については、次を参照してください。 [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)します。  
   
  3 番目のセキュリティ モードは、上記の 2 つのモードを使用し、その両方の利点を引き継ぎます。 このモードは、`TransportWithMessageCredential` と呼ばれます。 このモードでは、クライアントの認証にメッセージ セキュリティを使用し、サーバーの認証にトランスポート セキュリティを使用して、メッセージの機密性と整合性を実現します。 これにより、`TransportWithMessageCredential` セキュリティ モードでは、トランスポート セキュリティ モードと同じ速度で処理が実行され、メッセージ セキュリティ モードと同じ方法でクライアント認証の拡張性が提供されます。 ただし、メッセージ セキュリティ モードと異なり、完全なエンド ツー エンド セキュリティは提供されません。  
   
 ### <a name="access-control"></a>アクセス制御  
  *アクセス制御*承認とも呼ばれます。 *承認*データを表示するさまざまな特権が異なることができます。 たとえば、企業の人事ファイルには従業員の機密データが含まれているため、管理者だけが従業員データの参照を許可されます。 また、管理者は直接報告書のデータのみを参照できます。 このような場合、アクセス制御は、ロール ("manager") と管理者の特定 ID の両方に基づいて行われます (ある管理者が別の管理者の部下のレコードを参照できないようにします)。  
   
- WCF では、アクセス制御機能が共通言語ランタイム (CLR) との統合によって提供される<xref:System.Security.Permissions.PrincipalPermissionAttribute>と一連の Api と呼ばれる、 *id モデル*します。 詳細については、アクセス制御とクレーム ベースの承認は、[拡張セキュリティ](../../../../docs/framework/wcf/extending/extending-security.md)を参照してください。  
+ WCF では、アクセス制御機能が共通言語ランタイム (CLR) との統合によって提供される<xref:System.Security.Permissions.PrincipalPermissionAttribute>と一連の Api と呼ばれる、 *id モデル*します。 詳細については、アクセス制御とクレーム ベースの承認は、次を参照してください。[拡張セキュリティ](../../../../docs/framework/wcf/extending/extending-security.md)します。  
   
 ### <a name="auditing"></a>監査  
- *監査*は Windows イベント ログにセキュリティ イベントのログ記録します。 認証の失敗 (または成功) などのセキュリティ関連のイベントをログに記録できます。 詳細については、[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)を参照してください。 プログラミングの詳細については、次を参照してください。[方法。セキュリティ イベントを監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。  
+ *監査*は Windows イベント ログにセキュリティ イベントのログ記録します。 認証の失敗 (または成功) などのセキュリティ関連のイベントをログに記録できます。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。 プログラミングの詳細については、次を参照してください。[方法。セキュリティ イベントを監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)
 - [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
@@ -112,4 +113,4 @@ Windows Communication Foundation (WCF) は、SOAP メッセージに基づく分
 - [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

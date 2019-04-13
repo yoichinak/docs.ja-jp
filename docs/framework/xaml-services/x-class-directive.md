@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199454"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
 マークアップと分離コードの間の部分クラスを結合する XAML マークアップのコンパイルを構成します。 内の別のコード ファイルでコードの部分クラスが定義されている、[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]言語は、通常、マークアップの部分クラスは、XAML のコンパイル時にコードを生成して作成します。  
@@ -36,7 +36,7 @@ ms.locfileid: "58031221"
 |`classname`|必須。 指定します、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]読み込まれた XAML およびその XAML の分離コードで接続する部分クラスの名前。|  
   
 ## <a name="dependencies"></a>依存関係  
- `x:Class` XAML の運用環境のルート要素でのみ指定できます。 `x:Class` XAML の運用環境での親を持つ任意のオブジェクトでは無効です。 詳細については、[ \[MS XAML\]セクション 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。  
+ `x:Class` XAML の運用環境のルート要素でのみ指定できます。 `x:Class` XAML の運用環境での親を持つ任意のオブジェクトでは無効です。 詳細については、次を参照してください。 [ \[MS XAML\]セクション 4.3.1.6](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
 ## <a name="remarks"></a>Remarks  
  `namespace`値は、.NET Framework プログラミングで一般的な手法は、名前の階層に関連する名前空間を整理する追加のドットを含めることができます。 文字列の最後のドットのみ`x:Class`を分離する値を解釈`namespace`と`classname.`クラスとして使用される`x:Class`入れ子になったクラスにすることはできません。 ドットの意味を判断するため、入れ子になったクラスは許可されません`x:Class`文字列が入れ子になったクラスが許可されている場合はあいまいです。  
@@ -45,7 +45,7 @@ ms.locfileid: "58031221"
   
  値、`x:Class`ディレクティブは、アセンブリ情報がない場合は、クラスの完全修飾名を指定する文字列である必要があります (に相当、 <xref:System.Type.FullName%2A?displayProperty=nameWithType>)。 単純なアプリケーションでは、分離コードがそのように (クラス レベルで コードの定義から開始) も構造化された場合、CLR 名前空間の情報を省略できます。  
   
- ページまたはアプリケーションの定義については、分離コード ファイルは、コンパイル済みのアプリケーションを作成し、マークアップ コンパイルは、プロジェクトの一部として含まれているコード ファイル内である必要があります。 CLR クラスの名前規則に従う必要があります。 詳細については、[Framework デザイン ガイドライン](../../standard/design-guidelines/index.md)を参照してください。 既定では、分離コード クラスがある必要があります`public`。 ただし、を使用して異なるアクセス レベルで定義できる、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。  
+ ページまたはアプリケーションの定義については、分離コード ファイルは、コンパイル済みのアプリケーションを作成し、マークアップ コンパイルは、プロジェクトの一部として含まれているコード ファイル内である必要があります。 CLR クラスの名前規則に従う必要があります。 詳細については、次を参照してください。 [Framework デザイン ガイドライン](../../standard/design-guidelines/index.md)します。 既定では、分離コード クラスがある必要があります`public`。 ただし、を使用して異なるアクセス レベルで定義できる、 [X:classmodifier ディレクティブ](x-classmodifier-directive.md)します。  
   
  この解釈、`x:Class`属性にのみ適用されます、CLR ベースの XAML 実装では、特に .NET Framework XAML サービスにします。 CLR には基づいていませんし、.NET Framework XAML サービスを使用しないその他の XAML 実装には、XAML マークアップを接続し、実行時のコードをバックアップするための別の解像度数式を使用可能性があります。 一般的な解釈の詳細については`x:Class`を参照してください[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)します。  
   
@@ -58,9 +58,10 @@ ms.locfileid: "58031221"
  Windows Workflow foundation で`x:Class`全体を XAML で構成されるカスタム アクティビティのクラスの名前または分離コードを含むアクティビティ デザイナーの XAML ページの部分クラスの名前します。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
- Silverlight 用の `x:Class` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
+ `x:Class` Silverlight は別々 に記載されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [x:Subclass ディレクティブ](x-subclass-directive.md)
 - [WPF における XAML とカスタム クラス](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [x:ClassModifier ディレクティブ](x-classmodifier-directive.md)

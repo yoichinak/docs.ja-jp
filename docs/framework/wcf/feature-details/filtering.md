@@ -2,12 +2,12 @@
 title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339594"
 ---
 # <a name="filtering"></a>フィルター処理
 Windows Communication Foundation (WCF) のフィルター処理システムは、メッセージと一致し、操作を決定する宣言型のフィルターを使用できます。 フィルターを使用してメッセージの一部を調べることで、そのメッセージで必要な操作を決定できます。 たとえば、キュー プロセスでは、XPath 1.0 クエリを使用して既知のヘッダー優先度要素をチェックし、メッセージをキューの先頭に移動するべきかどうかを決定します。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
   
 ### <a name="prefix-endpoint-address-filters"></a>プレフィックス エンドポイント アドレス フィルター  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレスを指定するフィルター`http://www.adatum.com`宛てのメッセージと一致する`http://www.adatum.com/userA`します。  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレスを指定するフィルター`http://www.adatum.com`宛てのメッセージと一致する`http://www.adatum.com/userA`します。  
   
 ### <a name="xpath-message-filters"></a>XPath メッセージ フィルター  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> は、XPath 式を使用して、XML ドキュメントに特定の要素、属性、テキスト、その他の XML 構文が含まれているかどうかを判定します。 このフィルターは、XPath の厳密なサブセットに対して非常に効率的に処理できるように最適化されています。 XML Path 言語については、「、 [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779)します。  
@@ -84,4 +84,5 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
 -   `EndpointAddress` で指定された <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> にある残りのエンドポイント パラメーター  
   
 ## <a name="see-also"></a>関連項目
+
 - [データ転送とシリアル化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

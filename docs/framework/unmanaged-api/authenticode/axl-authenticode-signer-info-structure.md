@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff50ee18dc3155bf784d6b752da8efc841aa6ce5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 024837870aade6b0beb76fe758a571b15fd14d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107667"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 構造体
 Authenticode の署名者情報を定義します。  
@@ -41,4 +41,5 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`pChainContext`|署名者のチェーン コンテキスト。 参照してください、 [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context)構造体。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

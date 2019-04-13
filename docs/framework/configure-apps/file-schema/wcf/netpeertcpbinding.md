@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 3a41cb85ac2917f34bd7e5f33e241853777f045f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b35e2f365e82291d3f8b827850fdebfe8fa2237d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152842"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 ピア チャネル固有の TCP メッセージングのバインディングを定義します。  
@@ -61,7 +61,7 @@ ms.locfileid: "55759172"
 |-------------|-----------------|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|このバインドを使用して設定されるエンドポイントにより処理可能な、SOAP メッセージの複雑さに対する制約を定義します。 この要素は <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 型です。|  
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|ピア メッシュ ID を解決してピア メッシュ内のノードのエンドポイント ID アドレスを取得するために、このバインディングによって使用されるピア リゾルバーを指定します。|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|メッセージのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerSecurityElement> 型です。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|メッセージのセキュリティ設定を定義します。 この要素は <xref:System.ServiceModel.Configuration.PeerSecurityElement> 型です。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -73,7 +73,7 @@ ms.locfileid: "55759172"
  このバインディングは、TCP を介したピア トランスポートを使用するピア ツー ピア アプリケーションまたはマルチパーティ アプリケーションの作成をサポートします。 各ピア ノードは、この種類のバイディングを使用して定義された複数のピア チャネルをホストできます。  
   
 ## <a name="example"></a>例  
- 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、[ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))を参照してください。  
+ 次の例では、ピア チャネルを使用してマルチパーティ通信を実現する、NetPeerTcpBinding バインディングを使用する方法を示します。 このバインディングの使い方の詳細なシナリオでは、次を参照してください。[ネット ピア TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))します。  
   
 ```xml  
 <configuration>
@@ -101,6 +101,7 @@ ms.locfileid: "55759172"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.NetPeerTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
 - [バインディング](../../../../../docs/framework/wcf/bindings.md)

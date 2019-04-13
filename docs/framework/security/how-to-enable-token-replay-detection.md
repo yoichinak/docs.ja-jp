@@ -3,12 +3,12 @@ title: '方法: トークン再生検出を有効にする'
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336526"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>方法: トークン再生検出を有効にする
 ## <a name="applies-to"></a>対象  
@@ -18,7 +18,7 @@ ms.locfileid: "47236005"
 -   ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
- ここでは、WIF を使用する ASP.NET アプリケーションでトークン再生検出を有効にするための詳細な操作手順を示します。 トークン再生検出が有効になっていることを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、「[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)」からダウンロードできます。  
+ ここでは、WIF を使用する ASP.NET アプリケーションでトークン再生検出を有効にするための詳細な操作手順を示します。 トークン再生検出が有効になっていることを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、次の場所からダウンロードできます。[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>目次  
   
@@ -54,17 +54,17 @@ ms.locfileid: "47236005"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1.  Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動し、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
   
-2.  **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-3.  **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+3. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
   
-4.  **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
+4. **ソリューション エクスプローラー**で **[TestApp]** プロジェクトを右クリックし、**[Identity and Access]** を選択します。  
   
-5.  **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
+5. **[Identity and Access]** ウィンドウが表示されます。 **[Providers]** で **[Test your application with the Local Development STS]** を選択し、**[Apply]** をクリックします。  
   
-6.  *Web.config* ファイルに、以下のように **\<system.identityModel>** および **\<identityConfiguration>** 要素のすぐ後に次の **\<tokenReplayDetection>** 要素を追加します。  
+6. *Web.config* ファイルに、以下のように **\<system.identityModel>** および **\<identityConfiguration>** 要素のすぐ後に次の **\<tokenReplayDetection>** 要素を追加します。  
   
     ```xml  
     <system.identityModel>  
@@ -77,8 +77,8 @@ ms.locfileid: "47236005"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>再生検出のために WIF 対応 ASP.NET アプリケーションをテストするには  
   
-1.  **F5** キーを押して、ソリューションを実行します。 既定の ASP.NET ホーム ページが開き、ユーザー名 *Terry* (開発用 STS によって返される既定のユーザー) で自動的に認証されます。  
+1. **F5** キーを押して、ソリューションを実行します。 既定の ASP.NET ホーム ページが開き、ユーザー名 *Terry* (開発用 STS によって返される既定のユーザー) で自動的に認証されます。  
   
-2.  ブラウザーの **[戻る]** ボタンを押します。 "**'/' アプリケーションでのサーバー エラー**" ページが表示され、"*ID1062: 再生が検出されました: トークン: 'System.IdentityModel.Tokens.SamlSecurityToken'*" という説明の後に *AssertionId* と*発行者*が続きます。  
+2. ブラウザーの **[戻る]** ボタンを押します。 表示される、 **'/' アプリケーションでサーバー エラー**と次の説明ページ。*ID1062:再生が検出されました。トークン。'System.identitymodel.tokens.samlsecuritytoken'*、その後に、 *AssertionId*と*発行者*します。  
   
      このエラー ページが表示されるのは、トークン再生が検出されたときに <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 型の例外がスローされたためです。 このエラーが発生するのは、トークンが最初に表示されたときに初期 POST 要求を再送信しようとしたためです。 **[戻る]** ボタンを押しても、サーバーへの後続の要求でこのような動作にはなりません。

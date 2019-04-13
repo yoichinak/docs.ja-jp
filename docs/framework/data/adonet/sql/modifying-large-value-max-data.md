@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493899"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317104"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server では、`max`、`varchar`、および `nvarchar` の各データ型に `varbinary` 指定子が用意されており、2^32 バイトの値を格納できます。 テーブル列および Transact-SQL 変数により、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 ADO.NET では、`max` データ型は、`DataReader` によってフェッチすることができ、特殊な処理を行うことなく入力パラメーターと出力パラメーター両方の値として指定することもできます。 サイズの大きい `varchar` データ型の場合は、データを段階的に取得および更新できます。  
@@ -21,7 +21,7 @@ ms.locfileid: "54493899"
   
  **SQL Server オンライン ブック**  
   
-1.  [大きな値データ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [大きな値のデータ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
  `max` データ型には、小さいデータ型にはない、次の制限事項が適用されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "54493899"
 -   大きい `varchar` 列はパーティション分割のキー列として使用できません。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL での大きい値型の使用  
- Transact-SQL の `OPENROWSET` 関数は、リモート データへの接続およびアクセスに 1 回だけ使用できます。 この関数には、OLE DB データ ソースからリモート データにアクセスするために必要な、すべての接続情報が含まれています。 `OPENROWSET` は、クエリの FROM 句でテーブル名と同様に参照できます。 OLE DB プロバイダーの機能に従って、INSERT、UPDATE、または DELETE ステートメントのターゲット テーブルとして参照することもできます。  
+ Transact-SQL の `OPENROWSET` 関数は、リモート データへの接続およびアクセスに 1 回だけ使用できます。 この関数には、OLE DB データ ソースからリモート データにアクセスするために必要な、すべての接続情報が含まれています。 `OPENROWSET` テーブル名と同様に、クエリの FROM 句で参照できます。 OLE DB プロバイダーの機能に従って、INSERT、UPDATE、または DELETE ステートメントのターゲット テーブルとして参照することもできます。  
   
  `OPENROWSET` 関数には、`BULK` 行セット プロバイダーが含まれており、データをターゲット テーブルに読み込むことなく、ファイルから直接読み取ることができます。 これにより、`OPENROWSET` を単純な INSERT SELECT ステートメントで使用できます。  
   
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |expression が NULL|`@Length` 無視されますと、値*column_name*が切り捨てられる指定した`@Offset`。|  
-|`@Offset` が NULL|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
-|`@Offset` が column_name の値の長さより長い|SQL Server からエラーが返されます。|  
-|`@Length` が NULL|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
+|`@Offset` NULL です。|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
+|`@Offset` column_name の値の長さより大きい|SQL Server からエラーが返されます。|  
+|`@Length` NULL です。|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
   
 > [!NOTE]
 >  `@Offset` または `@Length` のいずれにも負数を指定することはできません。  
@@ -250,6 +250,7 @@ WHERE   DocumentID=@DocumentID
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL Server のバイナリ データと大きな値のデータ](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [ADO.NET における SQL Server データ操作](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)

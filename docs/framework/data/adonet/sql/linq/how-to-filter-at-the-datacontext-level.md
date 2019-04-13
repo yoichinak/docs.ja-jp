@@ -1,18 +1,18 @@
 ---
-title: '方法: DataContext レベルでフィルター処理します。'
+title: '方法: DataContext レベルでフィルター処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
-ms.openlocfilehash: 66bbfe19c73f116b8f85cae829bb61bb2da3d4c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 343cffa9b1c034068e5abcc652e936f89ee6a992
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084584"
 ---
-# <a name="how-to-filter-at-the-datacontext-level"></a>方法: DataContext レベルでフィルター処理します。
+# <a name="how-to-filter-at-the-datacontext-level"></a>方法: DataContext レベルでフィルター処理する
 `EntitySets` を `DataContext` レベルでフィルター処理できます。 このフィルター処理は、対象の <xref:System.Data.Linq.DataContext> インスタンスを使って実行されたすべてのクエリに適用されます。  
   
 ## <a name="example"></a>例  
@@ -22,4 +22,5 @@ ms.locfileid: "54644219"
  [!code-vb[DLinqQueryConcepts#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

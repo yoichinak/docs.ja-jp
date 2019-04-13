@@ -1,22 +1,22 @@
 ---
-title: '方法: WCF サービスと WSE 3.0 クライアントと相互運用を構成します。'
+title: '方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: d42e2d4c0bf4c708f2dbb27d14d1adddc3fead41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303896"
 ---
-# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>方法: WCF サービスと WSE 3.0 クライアントと相互運用を構成します。
+# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する
 Windows Communication Foundation (WCF) サービス ワイヤレベルの互換性が Web サービス拡張 3.0 Microsoft .NET (WSE) クライアントの Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF サービスが構成されている場合。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>WCF サービスを WSE 3.0 クライアントと相互運用できるようにするには  
   
-1.  WCF サービス用のカスタム バインディングを定義します。  
+1. WCF サービス用のカスタム バインディングを定義します。  
   
-     メッセージ エンコーディングに 2004 年 8 月版の WS-Addressing 仕様が使用されるように指定するには、カスタム バインドを作成する必要があります。  
+     メッセージ エンコーディングに 2004 年 8 月版の WS-Addressing 仕様が使用されるように指定するには、カスタム バインディングを作成する必要があります。  
   
     1.  子を追加[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)を[\<バインド >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)のサービスの構成ファイル。  
   
@@ -44,14 +44,14 @@ Windows Communication Foundation (WCF) サービス ワイヤレベルの互換�
         > [!NOTE]
         >  SOAP 1.2 の使用時には、`messageVersion` 属性を <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A> に設定します。  
   
-2.  サービスがカスタム バインドを使用するように指定します。  
+2. サービスがカスタム バインドを使用するように指定します。  
   
     1.  設定、`binding`の属性、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素`customBinding`します。  
   
     2.  設定、`bindingConfiguration`の属性、 [\<エンドポイント >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)要素で指定された値を`name`の属性、 [\<バインド >](../../../../docs/framework/misc/binding.md)カスタムバインディング。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Service.HelloWorldService` が WSE 3.0 クライアントと相互運用するためにカスタム バインドを使用するように指定します。 カスタム バインディングには 2004 年 8 月版の WS-Addressing が指定され、WS-Security 1.1 の一連の仕様が、交換されるメッセージのエンコードに使用されます。 メッセージは、<xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate> 認証モードを使用してセキュリティ保護されます。  
+ 次のコード例では、`Service.HelloWorldService` が WSE 3.0 クライアントと相互運用するためにカスタム バインドを使用するように指定します。 カスタム バインドには 2004 年 8 月版の WS-Addressing が指定され、WS-Security 1.1 の一連の仕様が、交換されるメッセージのエンコードに使用されます。 メッセージは、<xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate> 認証モードを使用してセキュリティ保護されます。  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,5 @@ Windows Communication Foundation (WCF) サービス ワイヤレベルの互換�
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [方法: システム指定のバインディングをカスタマイズします。](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+
+- [方法: システム指定のバインディングをカスタマイズする](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

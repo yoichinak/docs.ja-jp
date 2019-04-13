@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074418"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 関数
 クラスの新しいインスタンスが作成されます。    
@@ -60,7 +60,7 @@ HRESULT SpawnInstance (
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 有効なクラス定義ではないと、新しいインスタンスを生成することはできません。 完了しないか、それが登録されていない Windows の管理を呼び出すことによって[PutClassWmi](putclasswmi.md)します。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null` です。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`します。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
@@ -69,9 +69,6 @@ HRESULT SpawnInstance (
 
 `ptr` 取得する必要があるクラス定義から Windows の管理。 (インスタンスからインスタンスの生成がサポートされていることに注意してください。 ただし、返されたインスタンスが空)。このクラスの定義を使用するには、新しいインスタンスを作成します。 呼び出し、 [PutInstanceWmi](putinstancewmi.md) Windows 管理インスタンスを作成する場合は、関数が必要です。
 
-
-
-
 返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
 
 ## <a name="requirements"></a>必要条件  
@@ -79,7 +76,8 @@ HRESULT SpawnInstance (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

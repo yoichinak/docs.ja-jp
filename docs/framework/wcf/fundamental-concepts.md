@@ -7,15 +7,15 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122305"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation の基本概念
-このドキュメントでは、Windows Communication Foundation (WCF) のアーキテクチャの概要を説明します。 ここでは、主要概念およびこれらの概念がどのように組み合わされているかについて説明します。 最も単純な WCF サービスとクライアントの作成に関するチュートリアルについては、[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。 WCF プログラミングについては、[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)を参照してください。  
+このドキュメントでは、Windows Communication Foundation (WCF) のアーキテクチャの概要を説明します。 ここでは、主要概念およびこれらの概念がどのように組み合わされているかについて説明します。 最も単純な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。 WCF プログラミングについては、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
   
 ## <a name="wcf-fundamentals"></a>WCF の基礎  
  WCF では、サービスとクライアント間のメッセージを送信するシステムを作成するため、ランタイムおよび一連の Api です。 同じコンピューター システム上、または別の企業内にあり、インターネット経由でアクセスするシステム上の他のアプリケーションと通信するアプリケーションを作成する場合にも、同じインフラストラクチャと API が使用されます。  
@@ -23,7 +23,7 @@ ms.locfileid: "56305546"
 ### <a name="messaging-and-endpoints"></a>メッセージングとエンドポイント  
  WCF は、プログラミング モデルで一貫した方法で表現できます (たとえば、HTTP 要求またはメッセージ キュー (MSMQ とも呼ばれます) のメッセージ) のメッセージとしてモデル化できるメッセージ ベースの通信と何かの概念に基づいています。 これにより、さまざまなトランスポート機構にわたり統一された API が実現します。  
   
- モデルを識別するため*クライアント*、通信を開始するアプリケーションと*サービス*、アプリケーションの通信と、対応するクライアントが待機します。通信します。 1 つのアプリケーションがクライアントとサービスの両方の役割を果たすことができます。 例については、[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)と[ピア ツー ピア ネットワー キング](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)を参照してください。  
+ モデルを識別するため*クライアント*、通信を開始するアプリケーションと*サービス*、アプリケーションの通信と、対応するクライアントが待機します。通信します。 1 つのアプリケーションがクライアントとサービスの両方の役割を果たすことができます。 例については、次を参照してください。[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)と[ピア ツー ピア ネットワー キング](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
  メッセージは、エンドポイント間で送信されます。 *エンドポイント*メッセージが送信または受信場所 (あるいはその両方) は、メッセージ交換に必要なすべての情報が定義されます。 サービスは、1 つ以上のアプリケーション エンドポイント (および 0 個以上のインフラストラクチャ エンドポイント) を公開し、クライアントは、サービスのエンドポイントのいずれかと互換性のあるエンドポイントを作成します。  
   
@@ -75,7 +75,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ```  
   
  バインド  
- エンドポイントが外部と通信する方法を定義します。 バインディングは、バインド要素と呼ばれる一連のコンポーネントで構成されます。各バインド要素を "積み重ねる" ことで、通信インフラストラクチャが作成されます。 バインディングでは、少なくともトランスポート (HTTP や TCP など) と使用するエンコード (テキストやバイナリなど) が定義されます。 バインディングには、メッセージをセキュリティで保護するために使用するセキュリティ機構や、エンドポイントが使用するメッセージ パターンなどの詳細を指定したバインディング要素を含めることができます。 詳細については、[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)を参照してください。  
+ エンドポイントが外部と通信する方法を定義します。 バインディングは、バインド要素と呼ばれる一連のコンポーネントで構成されます。各バインド要素を "積み重ねる" ことで、通信インフラストラクチャが作成されます。 バインディングでは、少なくともトランスポート (HTTP や TCP など) と使用するエンコード (テキストやバイナリなど) が定義されます。 バインディングには、メッセージをセキュリティで保護するために使用するセキュリティ機構や、エンドポイントが使用するメッセージ パターンなどの詳細を指定したバインディング要素を含めることができます。 詳細については、次を参照してください。[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
   
  バインディング要素  
  バインディングの特定の部分 (トランスポート、エンコード、インフラストラクチャ レベルのプロトコル (WS-ReliableMessaging など) の実装、通信スタックのその他のコンポーネントなど) を表します。  
@@ -153,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WCF に実装された一連の Web サービス (WS) 仕様 (WS-Security や WS-ReliableMessaging など) の略称です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation のアーキテクチャ](../../../docs/framework/wcf/architecture.md)

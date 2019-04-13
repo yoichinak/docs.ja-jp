@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172069"
 ---
 # <a name="visual-layer-programming"></a>ビジュアル層のプログラミング
 <xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。 などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。  
@@ -23,9 +23,10 @@ ms.locfileid: "57376859"
  [ビジュアル層でのヒット テスト](hit-testing-in-the-visual-layer.md)  
  [DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)  
  [チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [方法トピック](visual-layer-programming-how-to-topics.md)  
+ [方法のトピック](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

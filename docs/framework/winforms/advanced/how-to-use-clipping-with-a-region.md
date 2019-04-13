@@ -1,5 +1,5 @@
 ---
-title: '方法: クリッピング領域を使用します。'
+title: '方法: 領域でクリッピングを使用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - regions [Windows Forms], clipping
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
-ms.openlocfilehash: 2ae9a99ef25c7ee5e52f5995a2d057e42e7d3127
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163736"
 ---
-# <a name="how-to-use-clipping-with-a-region"></a>方法: クリッピング領域を使用します。
+# <a name="how-to-use-clipping-with-a-region"></a>方法: 領域でクリッピングを使用する
 プロパティの 1 つ、<xref:System.Drawing.Graphics>クラスは、クリップ領域。 によって実行するすべての描画を指定した<xref:System.Drawing.Graphics>オブジェクトは、そのクリップ領域に制限<xref:System.Drawing.Graphics>オブジェクト。 クリップ領域を設定するには、呼び出すことによって、<xref:System.Drawing.Graphics.SetClip%2A>メソッド。  
   
 ## <a name="example"></a>例  
@@ -29,8 +29,9 @@ ms.locfileid: "57715881"
  [!code-vb[System.Drawing.MiscLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventHandler> のパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [GDI+ での領域](regions-in-gdi.md)
 - [領域の使用](using-regions.md)

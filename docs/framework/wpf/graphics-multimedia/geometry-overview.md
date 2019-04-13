@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179999"
 ---
 # <a name="geometry-overview"></a>ジオメトリの概要
 この概要は、使用する方法を説明します、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry>クラス図形を記述します。 このトピックでは、間の相違点も対照的です。<xref:System.Windows.Media.Geometry>オブジェクトと<xref:System.Windows.Shapes.Shape>要素。  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>ジオメトリとは  
  <xref:System.Windows.Media.Geometry>クラスとクラスなど、そこから派生する<xref:System.Windows.Media.EllipseGeometry>、 <xref:System.Windows.Media.PathGeometry>、および<xref:System.Windows.Media.CombinedGeometry>、2-d 図形のジオメトリを記述できます。 これらの幾何学的な記述には、画面を塗りつぶす図形を定義したり、ヒット テストやクリップ領域を定義するなど、多くの用途があります。 ジオメトリを使用して、アニメーション パスを定義することもできます。  
@@ -217,13 +216,14 @@ PathGeometry
  参照してください、<xref:System.Windows.Media.Geometry>クラスのメソッドの完全な一覧についてはします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [パス マークアップ構文](path-markup-syntax.md)
-- [方法トピック](geometries-how-to-topics.md)
+- [方法のトピック](geometries-how-to-topics.md)
 - [アニメーションの概要](animation-overview.md)
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Drawing オブジェクトの概要](drawing-objects-overview.md)

@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: 2888d285723b37bb61dfbf7ec9ef9c3ba597f897
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122513"
 ---
 # <a name="deactivate-function-wpf-unmanaged-api-reference"></a>関数を非アクティブ化 (WPF のアンマネージ API リファレンス)
 この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートしているし、コードから直接使用するものではありません。  
@@ -38,4 +38,5 @@ void Deactivate()
  **.NET framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)

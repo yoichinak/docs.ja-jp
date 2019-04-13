@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132666"
 ---
 # <a name="trace-switches"></a>トレース スイッチ
 トレース スイッチを使用すると、トレース出力を有効/無効にしたり、トレースの出力をフィルター処理したりできます。 トレース スイッチは、コードに存在すれるオブジェクトであり、.config ファイルによって外部的に設定できます。 .NET Framework に用意されたトレース スイッチには、 <xref:System.Diagnostics.BooleanSwitch> クラス、 <xref:System.Diagnostics.TraceSwitch> クラス、および <xref:System.Diagnostics.SourceSwitch> クラスの 3 種類があります。 <xref:System.Diagnostics.BooleanSwitch> クラスは、トグル スイッチとして機能し、各種のトレース ステートメントを有効にしたり無効にしたりできます。 <xref:System.Diagnostics.TraceSwitch> クラスと <xref:System.Diagnostics.SourceSwitch> クラスを使用すると、特定のトレース レベルごとにトレース スイッチを有効にすることができます。これにより、該当するレベルおよびそれ以下のすべてのレベルに対して指定された <xref:System.Diagnostics.Trace> メッセージまたは <xref:System.Diagnostics.TraceSource> メッセージが表示されます。 スイッチを無効にした場合、トレース メッセージは表示されません。 すべてのクラスは、他のユーザー定義のスイッチと同様に、どちらも**Switch**という抽象 ( **MustInherit**) クラスから派生したクラスです。  
@@ -50,7 +50,7 @@ ms.locfileid: "54702627"
 |列挙値|整数値|表示されるメッセージ (または指定された出力対象に書き込まれるメッセージ) の種類|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
 |オフ|0|なし|  
-|エラー|1|エラー メッセージのみ|  
+|Error|1|エラー メッセージのみ|  
 |警告|2|警告メッセージとエラー メッセージ|  
 |Info|3|通知メッセージ、警告メッセージ、およびエラー メッセージ|  
 |詳細|4|詳細メッセージ、情報メッセージ、警告メッセージ、およびエラー メッセージ|  
@@ -84,6 +84,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  **BooleanSwitch** と **TraceSwitch**を指定する以外に、 **Switch** クラスから継承される独自のスイッチを定義して、カスタマイズしたメソッドで基本クラスのメソッドをオーバーライドできます。 開発者定義スイッチの作成方法については、「.NET Framework リファレンス」の「 <xref:System.Diagnostics.Switch> クラス」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

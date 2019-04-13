@@ -8,12 +8,12 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: fd7c5765665345906597963f8a4b2dbf7fcc7227
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187006"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 要素 (ネットワーク設定)
 使用してネットワークのホストから情報を要求するモジュールを指定します。  
@@ -39,8 +39,8 @@ ms.locfileid: "55288848"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|カスタムの Web 要求モジュールをアプリケーションに追加します。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|アプリケーションから登録済みのすべての Web 要求モジュールを削除します。|  
+|[追加](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|カスタムの Web 要求モジュールをアプリケーションに追加します。|  
+|[クリア](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|アプリケーションから登録済みのすべての Web 要求モジュールを削除します。|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|アプリケーションからカスタム Web 要求モジュールを削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -74,6 +74,7 @@ ms.locfileid: "55288848"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

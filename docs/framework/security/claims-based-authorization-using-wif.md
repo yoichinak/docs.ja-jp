@@ -3,12 +3,12 @@ title: WIF を使用したクレーム ベースの承認
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312177"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF を使用したクレーム ベースの承認
 証明書利用者アプリケーションでは、承認によって、認証済み ID がアクセスできるリソースと、そのリソースで実行できる操作が決まります。 承認が不適切だったり弱かったりすると、それは情報漏えいとデータの改ざんにつながります。 ここでは、Windows Identity Foundation (WIF) とセキュリティ トークン サービス (STS)、たとえば Microsoft Azure のアクセス制御サービス (ACS) を使用して、クレーム対応 ASP.NET の Web アプリケーションとサービスの承認を実装する方法の概要を説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48872927"
   
 -   **トークン発行中**。 ユーザーが認証されるときに、Microsoft Azure のアクセス制御サービス (ACS) などのフェデレーション プロバイダーや ID プロバイダー STS によってロール クレームを発行できます。  
   
--   **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、[How To: 実装ロール ベース アクセス制御 (RBAC) では、クレーム対応 ASP.NET アプリケーションを使用して WIF および ACS](https://go.microsoft.com/fwlink/?LinkID=247445)を参照してください。  
+-   **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、次を参照してください[How To:。WIF および ACS を使用してクレーム対応 ASP.NET アプリケーションで実装ロール ベースのアクセス制御 (RBAC)](https://go.microsoft.com/fwlink/?LinkID=247445)します。  
   
 -   **samlSecurityTokenRequirement 構成セクションを使用して、任意のクレームをロールの種類に対応付ける**。宣言を使用したアプローチで、構成のみを使ってクレーム変換が行われます。その際、コーディングは必要ありません。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "48872927"
 ## <a name="claims-based-authorization"></a>クレーム ベースの承認  
  クレーム ベースの承認では、アクセスの許可または拒否の承認決定が、クレームで使用できるデータを使って決定を行う任意のロジックに基づいています。 RBAC の場合は、使用される唯一のクレームがロール タイプのクレームでした。 ロール タイプのクレームは、ユーザーが特定のロールに所属するかどうかを確認するときに使用されます。 クレーム ベースの承認を使用した承認決定のプロセスを説明するために、次の手順について考えてみましょう。  
   
-1.  アプリケーションは、ユーザー認証を求める要求を受け取ります。  
+1. アプリケーションは、ユーザー認証を求める要求を受け取ります。  
   
-2.  WIF はユーザーを ID プロバイダーにリダイレクトします。ユーザーが認証されたら、アプリケーション要求が、ユーザーを表す関連セキュリティ トークンを使用して行われます。そのトークンには、ユーザーに関するクレームが含まれています。 WIF は、そのクレームを、ユーザーを表すプリンシパルに関連付けます。  
+2. WIF はユーザーを ID プロバイダーにリダイレクトします。ユーザーが認証されたら、アプリケーション要求が、ユーザーを表す関連セキュリティ トークンを使用して行われます。そのトークンには、ユーザーに関するクレームが含まれています。 WIF は、そのクレームを、ユーザーを表すプリンシパルに関連付けます。  
   
-3.  アプリケーションは、クレームを決定ロジック機構に渡します。 これには Web サービスへの呼び出し、データベースに対するクエリ、または高度な規則エンジンを使用できます。また、ClaimsAuthorizationManager を使用することもできます。  
+3. アプリケーションは、クレームを決定ロジック機構に渡します。 これには Web サービスへの呼び出し、データベースに対するクエリ、または高度な規則エンジンを使用できます。また、ClaimsAuthorizationManager を使用することもできます。  
   
-4.  決定機構では、クレームに基づいて結果が計算されます。  
+4. 決定機構では、クレームに基づいて結果が計算されます。  
   
-5.  結果が true の場合はアクセスが許可され、false の場合は拒否されます。 たとえば、ワシントン州に住む 21 歳以上のユーザーという規則を使用できます。  
+5. 結果が true の場合はアクセスが許可され、false の場合は拒否されます。 たとえば、ワシントン州に住む 21 歳以上のユーザーという規則を使用できます。  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> は、アプリケーションでクレーム ベースの承認の決定ロジックを外部化するときに役に立ちます。 ClaimsAuthorizationManager は、.NET 4.5 に含まれている WIF コンポーネントです。 ClaimsAuthorizationManager を使用すると、着信要求を受け取り、任意のロジックを実装して、受信クレームに基づいて承認決定を行うことができます。 これは、承認ロジックを変更する必要があるときに重要になります。 この状況で ClaimsAuthorizationManager を使用してもアプリケーションの整合性には影響しないため、変更によってアプリケーション エラーが発生する可能性は少なくなります。 ClaimsAuthorizationManager を使用してクレーム ベースのアクセス制御を実装する方法の詳細については、「[方法: WIF および ACS を使用して要求対応の ASP.NET アプリケーションで要求承認を実装する](https://go.microsoft.com/fwlink/?LinkID=247446)」を参照してください。
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> アプリケーションでクレーム ベースの承認の決定ロジックを外部化に役立ちます。 ClaimsAuthorizationManager は、.NET 4.5 に含まれている WIF コンポーネントです。 ClaimsAuthorizationManager を使用すると、着信要求を受け取り、任意のロジックを実装して、受信クレームに基づいて承認決定を行うことができます。 これは、承認ロジックを変更する必要があるときに重要になります。 この状況で ClaimsAuthorizationManager を使用してもアプリケーションの整合性には影響しないため、変更によってアプリケーション エラーが発生する可能性は少なくなります。 ClaimsAuthorizationManager を使用して、クレーム ベースのアクセス制御を実装する方法の詳細については、次を参照してください[How To:。要求承認を WIF および ACS を使用してクレーム対応 ASP.NET アプリケーションで実装](https://go.microsoft.com/fwlink/?LinkID=247446)します。

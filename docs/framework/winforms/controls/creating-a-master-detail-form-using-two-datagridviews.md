@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295797"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>チュートリアル: 2 つの Windows フォーム DataGridView コントロールを使用してマスター/詳細フォームを作成します。
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームを作成する
 使用するための最も一般的なシナリオの 1 つ、<xref:System.Windows.Forms.DataGridView>コントロールが、*マスター/詳細*フォーム、2 つのデータベース テーブル間の親/子リレーションシップが表示されます。 マスター テーブルの行を選択すると、対応する子データで更新する詳細テーブル。  
   
  間の相互作用を使用して、簡単では、マスター/詳細フォームを実装する、<xref:System.Windows.Forms.DataGridView>コントロールと<xref:System.Windows.Forms.BindingSource>コンポーネント。 このチュートリアルでは、2 つを使用してフォームをビルドします<xref:System.Windows.Forms.DataGridView>コントロールと 2 つ<xref:System.Windows.Forms.BindingSource>コンポーネント。 Northwind SQL Server のサンプル データベースのテーブルに関連する 2 つ、フォームが表示されます:`Customers`と`Orders`します。 マスター データベースで、すべての顧客を表示するフォームが完了したら、<xref:System.Windows.Forms.DataGridView>および詳細に選択した顧客のすべての注文<xref:System.Windows.Forms.DataGridView>します。  
@@ -33,14 +33,14 @@ ms.locfileid: "57705533"
   
 #### <a name="to-create-a-masterdetail-form"></a>マスター/詳細フォームを作成するには  
   
-1.  派生するクラスを作成<xref:System.Windows.Forms.Form>は 2 つと<xref:System.Windows.Forms.DataGridView>コントロールと 2 つ<xref:System.Windows.Forms.BindingSource>コンポーネント。 次のコードは、基本的なフォームの初期化を提供しが含まれています、`Main`メソッド。 Visual Studio デザイナーを使用して、フォームを作成する場合は、デザイナー生成コードを使用して、このコードではなくが、変数の宣言には、ここに表示される名前を使用してください。  
+1. 派生するクラスを作成<xref:System.Windows.Forms.Form>は 2 つと<xref:System.Windows.Forms.DataGridView>コントロールと 2 つ<xref:System.Windows.Forms.BindingSource>コンポーネント。 次のコードは、基本的なフォームの初期化を提供しが含まれています、`Main`メソッド。 Visual Studio デザイナーを使用して、フォームを作成する場合は、デザイナー生成コードを使用して、このコードではなくが、変数の宣言には、ここに表示される名前を使用してください。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  データベースへの接続の詳細を処理するためのフォームのクラス定義でメソッドを実装します。 この例では、`GetData`を設定するメソッド、<xref:System.Data.DataSet>オブジェクトを追加、<xref:System.Data.DataRelation>データ セット、およびバインドするオブジェクト、<xref:System.Windows.Forms.BindingSource>コンポーネント。 `connectionString` 変数は、使用しているデータベースに合った値に設定してください。  
+2. データベースへの接続の詳細を処理するためのフォームのクラス定義でメソッドを実装します。 この例では、`GetData`を設定するメソッド、<xref:System.Data.DataSet>オブジェクトを追加、<xref:System.Data.DataRelation>データ セット、およびバインドするオブジェクト、<xref:System.Windows.Forms.BindingSource>コンポーネント。 `connectionString` 変数は、使用しているデータベースに合った値に設定してください。  
   
     > [!IMPORTANT]
     >  接続文字列内に機密情報 (パスワードなど) を格納すると、アプリケーションのセキュリティに影響を及ぼすことがあります。 データベースへのアクセスを制御する方法としては、Windows 認証 (統合セキュリティとも呼ばれます) を使用する方が安全です。 詳細については、「[接続情報の保護](../../data/adonet/protecting-connection-information.md)」を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "57705533"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  フォームのハンドラーを実装<xref:System.Windows.Forms.Form.Load>をバインドするイベント、<xref:System.Windows.Forms.DataGridView>にコントロールを<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、`GetData`メソッド。 次の例には、サイズを変更するコードが含まれています。<xref:System.Windows.Forms.DataGridView>に合わせて表示されるデータの列。  
+3. フォームのハンドラーを実装<xref:System.Windows.Forms.Form.Load>をバインドするイベント、<xref:System.Windows.Forms.DataGridView>にコントロールを<xref:System.Windows.Forms.BindingSource>コンポーネントと呼び出し、`GetData`メソッド。 次の例には、サイズを変更するコードが含まれています。<xref:System.Windows.Forms.DataGridView>に合わせて表示されるデータの列。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  
@@ -76,8 +76,9 @@ ms.locfileid: "57705533"
 -   セルの外観をカスタマイズします。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)と[方法。Windows フォーム DataGridView コントロールの既定のセル スタイルを設定](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [方法: 2 つの Windows フォーム DataGridView コントロールを使用してマスター/詳細フォームを作成します。](create-a-master-detail-form-using-two-datagridviews.md)
+- [方法: Windows フォームの 2 つの DataGridView コントロールを使用してマスター/詳細形式のフォームを作成する](create-a-master-detail-form-using-two-datagridviews.md)
 - [接続情報の保護](../../data/adonet/protecting-connection-information.md)

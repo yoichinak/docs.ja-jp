@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92e4f416e26e5af9124593f2bef8d8042fcfc953
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163138"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
 .NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
@@ -79,9 +79,9 @@ ms.locfileid: "56966789"
   
 -   <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType>基底クラスに非表示のメンバーを含めるし、そのため、明示的なオーバーライドなしオーバーライドする可能性があります。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType>特定の組み合わせ (たとえば、byref の配列) を作成しようとするときに失敗しません。  
   
 -   リフレクションを使用して、ポインター パラメーターを持つメンバーを呼び出すことはできません。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56966789"
   
 -   ゼロ以外の下限を持つ配列はサポートされません。 通常、これらの配列は <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> オーバーロードを呼び出すことで作成されます。  
   
--   多次元配列の動的作成はサポートされません。 そのような配列は通常、<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、<xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。  
+-   多次元配列の動的作成はサポートされません。 そのような配列は通常、 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。  
   
 -   4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "56966789"
   
  **デリゲート**  
   
- `Delegate.BeginInvoke` と `Delegate.EndInvoke` はサポートされません。  
+ `Delegate.BeginInvoke` `Delegate.EndInvoke`はサポートされていません。  
   
  **その他の API**  
   
@@ -153,7 +153,7 @@ ms.locfileid: "56966789"
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is corre.NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient の違い  
@@ -181,7 +181,7 @@ ms.locfileid: "56966789"
   
  クッキーの処理は、 <xref:System.Net.Http.HttpClient> と WinINet により同時に行われます。  <xref:System.Net.CookieContainer> のクッキーは、WinINet クッキー キャッシュのクッキーと組み合わされます。  <xref:System.Net.CookieContainer> のクッキーを削除すると <xref:System.Net.Http.HttpClient> からクッキーが送信されませんが、クッキーが既に WinINet に示されており、ユーザーによって削除されない場合、WinINet がクッキーを送信します。  <xref:System.Net.Http.HttpClient>、 <xref:System.Net.Http.HttpClientHandler>、または <xref:System.Net.CookieContainer> API を使用して、プログラムにより WinINet からクッキーを削除することはできません。  <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> プロパティを `false` に設定しても、 <xref:System.Net.Http.HttpClient> からクッキーが送信されなくなるのみで、WinINet の要求にはまだそのクッキーが含まれている可能性があります。  
   
- **資格情報**  
+ **資格情報:**  
   
  Windows ストア アプリ用 .NET では、 <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> プロパティと <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> プロパティは独立して動作します。  また、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは <xref:System.Net.ICredentials> インターフェイスを実装するオブジェクトをすべて受け入れます。  .NET ネイティブでの設定で、<xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A>プロパティを`true`により、<xref:System.Net.Http.HttpClientHandler.Credentials%2A>になるプロパティ`null`します。  さらに、 <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティは、 `null`、 <xref:System.Net.CredentialCache.DefaultCredentials%2A>、または <xref:System.Net.NetworkCredential>型のオブジェクトにしか設定できません。  その他の <xref:System.Net.ICredentials> オブジェクト (最も一般的なものは <xref:System.Net.CredentialCache>) を <xref:System.Net.Http.HttpClientHandler.Credentials%2A> プロパティに割り当てると、 <xref:System.PlatformNotSupportedException>がスローされます。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "56966789"
   
 -   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> プロパティは構成できません。  
   
--   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> プロパティは常に `true` です。  Windows ストア アプリ用 .NET での既定値は `false` です。  
+-   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> プロパティは常に `true`です。  Windows ストア アプリ用 .NET での既定値は `false`です。  
   
 -   応答の `SetCookie2` ヘッダーは廃止されたものとして無視されます。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "56966789"
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>  
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> はサポートされていますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) や byref バリアントと共に使用された場合など、一部のシナリオでは例外がスローされます。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> サポートされてと共に使用した場合など、いくつかのシナリオでの例外をスローしますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)や byref バリアント。  
   
  非推奨の Api の[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポートが含まれます。  
   
@@ -262,7 +262,7 @@ ms.locfileid: "56966789"
   
  ほとんどのプラットフォーム呼び出しし、COM 相互運用シナリオは引き続き .NET ネイティブでサポートされます。 特に、Windows ランタイム (WinRT) API とのすべての相互運用性と Windows ランタイムで必要なすべてのマーシャリングがサポートされます。 これには、次のものに対するマーシャリング サポートが含まれます。  
   
--   配列 (<xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> を含む)  
+-   配列 ( <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>を含む)  
   
 -   `BStr`  
   
@@ -382,7 +382,7 @@ ms.locfileid: "56966789"
   
  `System.Net.Http.RtcRequestFactory`クラスは .NET ネイティブでサポートされていません。  
   
- **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
+ **Windows Communication Foundation (WCF) (System.ServiceModel\*)。**  
   
  内の型、 [System.ServiceModel.* 名前空間](xref:System.ServiceModel)は .NET ネイティブでサポートされていません。 そうした型には、次のようなものがあります。  
   
@@ -572,17 +572,13 @@ ms.locfileid: "56966789"
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
-     基底クラスのメンバーはシリアル化時にスキャンされないため、`InnerType` 型はシリアライザーに認識されていません。  
+     基底クラスのメンバーはシリアル化時にスキャンされないため、 `InnerType` 型はシリアライザーに認識されていません。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するクラスまたは構造体のシリアル化に失敗します。 たとえば、次の型ではシリアル化と逆シリアル化が失敗します。  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化するオブジェクトの正確な型を認識していないため、次のオブジェクト値をシリアル化できません。  
-  
-  
-  
--   <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化されるオブジェクトの型が <xref:System.Xml.XmlQualifiedName>の場合、シリアル化と逆シリアル化に失敗します。  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>クラスまたは実装する構造体をシリアル化に失敗、<xref:System.Collections.Generic.IEnumerable%601>インターフェイス。 たとえば、次の型ではシリアル化と逆シリアル化が失敗します。  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> シリアル化されるオブジェクトの正確な型を認識していないために、次のオブジェクトの値をシリアル化に失敗します。  
+
+-   <xref:System.Xml.Serialization.XmlSerializer> シリアル化または逆シリアル化されたオブジェクトの型がある場合に失敗した<xref:System.Xml.XmlQualifiedName>します。  
   
 -   すべてのシリアライザー (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer>) は、 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 型または <xref:System.Xml.Linq.XElement>を含む型のシリアル化コードを生成できません。 代わりに、ビルド時エラーが表示されます。  
   
@@ -610,7 +606,7 @@ ms.locfileid: "56966789"
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> は、次のいずれかの属性が設定されているメソッドを持つ型のコードを生成できません。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 次の属性のいずれかの属性付きメソッドを持つ型のコードの生成に失敗します。  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -620,7 +616,7 @@ ms.locfileid: "56966789"
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> は、 <xref:System.Xml.Serialization.IXmlSerializable> カスタム シリアル化インターフェイスを受け入れません。 このインターフェイスを実装するクラスがある場合、 <xref:System.Xml.Serialization.XmlSerializer> は型を Plain Old CLR Object (POCO) 型であると見なし、そのパブリック プロパティのみをシリアル化します。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 優先するが、<xref:System.Xml.Serialization.IXmlSerializable>カスタム シリアル化インターフェイス。 このインターフェイスを実装するクラスがある場合、 <xref:System.Xml.Serialization.XmlSerializer> は型を Plain Old CLR Object (POCO) 型であると見なし、そのパブリック プロパティのみをシリアル化します。  
   
 -   プレーンなシリアル化する<xref:System.Exception>オブジェクトとうまく連動しません<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>します。
 
@@ -651,7 +647,8 @@ ms.locfileid: "56966789"
  .NET ネイティブの Windows ストア アプリ プロジェクトの単体テスト ライブラリを有効にするはサポートされていませんし、プロジェクトはビルドに失敗します。  
   
 ## <a name="see-also"></a>関連項目
-- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
+
+- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Windows ストア アプリ用 .NET の概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

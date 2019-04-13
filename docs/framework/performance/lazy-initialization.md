@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182300"
 ---
 # <a name="lazy-initialization"></a>遅延初期化
 オブジェクトの*遅延初期化*とは、初めて使用されるまでオブジェクトの作成が延期されることを意味します。 (このトピックでは、*遅延初期化*と*遅延インスタンス化*を同じ意味の言葉として使っています。)遅延初期化は主に、パフォーマンスの改善、無駄な計算処理の回避、プログラムのメモリ要件の縮小を目的として利用されます。 最も一般的なシナリオ:  
@@ -23,7 +23,7 @@ ms.locfileid: "54492950"
   
 -   あるオブジェクトを作成するとコストが高いとき、他の高額な演算が完了するまで、そのオブジェクトの作成を延期する。 たとえば、プログラムが起動時に複数のオブジェクト インスタンスを読み込むが、すぐに必要になるのはその中の一部のインスタンスだけという場合があります。 必要なオブジェクトが作成されるまで必要にならないオブジェクトの初期化を遅らせることで、プログラムの起動パフォーマンスを改善できます。  
   
- 初期化を遅延させる独自のコードを記述できますが、代わりに <xref:System.Lazy%601> を使用することが推奨されます。 <xref:System.Lazy%601> とその関連型はスレッドセーフ対応であり、一貫性のある例外反映ポリシーを提供します。  
+ 初期化を遅延させる独自のコードを記述できますが、代わりに <xref:System.Lazy%601> を使用することが推奨されます。 <xref:System.Lazy%601> その関連型もスレッド セーフをサポートし、一貫性のある例外反映ポリシーを提供します。  
   
  次の表は、.NET Framework バージョン 4 で提供される、さまざまなシナリオの遅延初期化を可能にする型の一覧です。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "54492950"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|いいえ|いいえ|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|[はい]|[はい]|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|いいえ|いいえ|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|[はい]|[はい]|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|いいえ|いいえ|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|はい|[はい]|  
 |Lazy(T)(LazyThreadSafetyMode)|ユーザー指定|いいえ|いいえ|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|ユーザー指定|[はい]|ユーザーが <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> を指定する場合は、いいえ。指定しない場合は、はい。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "54492950"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> は、<xref:System.Lazy%601> とほとんど同じ方法でそのオブジェクトをラップしますが、本質的な違いとして次があります。  
+ <xref:System.Threading.ThreadLocal%601> 同様に、そのオブジェクトをラップ<xref:System.Lazy%601>、これらの重要な点が異なります。  
   
 -   各スレッドは、他のスレッドからアクセスできない独自のプライベート データを利用してスレッドローカル変数を初期化します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54492950"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For と ForEach のスレッドローカル変数  
- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドを利用してデータ ソースを並列で繰り返すとき、スレッドローカル データのサポートが組み込まれたオーバーロードを利用できます。 そのようなメソッドでは、ローカル デリゲートを利用してデータの作成、アクセス、クリーンアップを行うことで、スレッドローカルになります。 詳細については、「[方法 :スレッド ローカル変数を使用する Parallel.For ループを記述](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)と[方法。パーティションのローカル変数を使用する Parallel.ForEach ループを記述](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)します。  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドを利用してデータ ソースを並列で繰り返すとき、スレッドローカル データのサポートが組み込まれたオーバーロードを利用できます。 そのようなメソッドでは、ローカル デリゲートを利用してデータの作成、アクセス、クリーンアップを行うことで、スレッドローカルになります。 詳細については、「[方法 :スレッド ローカル変数を使用する Parallel.For ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)」および「[方法:パーティション ローカル変数を使用する Parallel.ForEach ループを記述する](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)」をご覧ください。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>オーバーヘッドが低いシナリオで遅延初期化を使用する  
  大量のオブジェクトを遅延初期化しなければならないシナリオでは、<xref:System.Lazy%601> で各オブジェクトをラッピングするとき、あまりにも多くのメモリまたは計算処理リソースが必要になるのか判断することがあります。 あるいは、遅延初期化の公開方法について厳格な要件が与えられることがあります。 そのような場合、<xref:System.Threading.LazyInitializer?displayProperty=nameWithType> クラスの `static` (Visual Basic の場合、`Shared`) メソッドを利用し、<xref:System.Lazy%601> のインスタンスでラッピングせずに、各オブジェクトを遅延初期化できます。  
@@ -153,7 +153,8 @@ ms.locfileid: "54492950"
  この例では、ループの繰り返しの旅に初期化プロシージャが呼び出されていることに注意してください。 マルチスレッド シナリオでは、初期化プロシージャを呼び出した最初のスレッドの値をすべてのスレッドで確認できます。 後続のスレッドも初期化プロシージャを呼び出しますが、その結果は利用されません。 この種類の潜在的競合状態が許容できない場合、ブール値引数と同期オブジェクトを取る <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> のオーバーロードを使用します。  
   
 ## <a name="see-also"></a>関連項目
-- [マネージ スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
+
+- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
 - [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
 - [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [方法: オブジェクトの遅延初期化を実行します。](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [方法: オブジェクトの遅延初期化を実行する](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

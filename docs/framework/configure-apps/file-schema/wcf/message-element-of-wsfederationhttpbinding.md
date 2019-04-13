@@ -1,13 +1,13 @@
 ---
-title: <message> 要素 <wsFederationHttpBinding>
+title: '<message> 要素。次に含まれます: <wsFederationHttpBinding>'
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: d5e5ba1785dd5c6c3aaeccd5bdd7ac4443f85661
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223815"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<メッセージ > 要素の\<wsFederationHttpBinding >
 メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
@@ -88,12 +88,12 @@ ms.locfileid: "55759120"
 |---------------|-----------------|  
 |algorithmSuite|メッセージの暗号化とキー ラップ アルゴリズムを設定します。 この属性の有効な値については、「algorithmSuite 属性」の表を参照してください。 既定値は `Basic256` です。<br /><br /> この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 これらのアルゴリズムは、Security Policy Language (WS-SecurityPolicy) の仕様で指定されているアルゴリズムに対応付けられています。|  
 |issuedKeyType|発行されるキーの種類を指定します。 以下の値が有効です。<br /><br /> SymmetricKey<br />-公開鍵<br /><br /> 既定値は `SymmetricKey` です。 この属性は <xref:System.IdentityModel.Tokens.SecurityKeyType> 型です。|  
-|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は、`null` です。|  
+|issuedTokenType|発行されるトークンの型を指定する URI を含む文字列。 既定値は `null` です。|  
 |negotiateServiceCredential|サービス資格情報がネゴシエーションの一部として交換されるか、帯域外で使用できるかを指定するブール値。 既定値は `true` で、サービス資格情報がネゴシエートされます。|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |Basic128|Basic128 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
 |Basic192|Basic192 暗号化を使用し、メッセージ ダイジェストには Sha1 を、キー ラップには Rsa-oaep-mgf1p を使用します。|  
@@ -125,9 +125,10 @@ ms.locfileid: "55759120"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

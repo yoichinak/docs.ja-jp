@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228394"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>チュートリアル: Windows Communication Foundation サービス コントラクトを定義します。
 
@@ -28,7 +28,6 @@ WCF サービスを作成するときに、最初のタスクは、サービス 
 > [!div class="checklist"]
 > - 作成、 **WCF サービス ライブラリ**プロジェクト。
 > - サービス コントラクト インターフェイスを定義します。
-
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>WCF サービス ライブラリ プロジェクトを作成し、サービス コントラクト インターフェイスの定義
 
@@ -50,11 +49,10 @@ WCF サービスを作成するときに、最初のタスクは、サービス 
       Visual Studio では、プロジェクトを 3 つのファイルが作成されます。*IService1.cs* (または*IService1.vb* Visual Basic プロジェクトの)、 *Service1.cs* (または*Service1.vb* Visual Basic プロジェクトの)、および*App.config*します。Visual Studio では、次のように、これらのファイルを定義します。 
       - *IService1*ファイルには、サービス コントラクトの既定の定義が含まれています。 
       - *Service1*ファイルには、サービス コントラクトの既定の実装が含まれています。 
-      - *App.config*ファイルには、Visual Studio WCF サービス ホスト ツールを使用して既定のサービスを読み込むために必要な構成情報が含まれています。 WCF サービス ホスト ツールの詳細については、[WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)を参照してください。
+      - *App.config*ファイルには、Visual Studio WCF サービス ホスト ツールを使用して既定のサービスを読み込むために必要な構成情報が含まれています。 WCF サービス ホスト ツールの詳細については、次を参照してください。 [WCF サービス ホスト (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)します。
 
       > [!NOTE]
       > Visual Basic 開発者設定が環境で Visual Studio をインストールした場合、ソリューションを非表示に可能性があります。 大文字と小文字の場合は、選択**オプション**から、**ツール**メニューを選択し、**プロジェクトおよびソリューション** > **全般**で**オプション**ウィンドウ。 選択**常にソリューションを表示する**します。 また、いることを確認**作成時に新しいプロジェクトを保存**が選択されています。
-
 
 3. **ソリューション エクスプ ローラー**、オープン、 **IService1.cs**または**IService1.vb**ファイルを開き、そのコードを次のコードに置き換えます。
 

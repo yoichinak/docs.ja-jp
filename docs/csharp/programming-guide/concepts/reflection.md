@@ -2,12 +2,12 @@
 title: リフレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: 8cdfe00a09d340d8b77f1f5582a3a3ad82c496b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dfd9391407fec4bd20ac4ae05162763e909d665
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841317"
 ---
 # <a name="reflection-c"></a>リフレクション (C#)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../../docs/standard/attributes/index.md)」を参照してください。  
@@ -28,7 +28,7 @@ System.Console.WriteLine(type);
  次の例では、リフレクションを使用して、読み込まれたアセンブリの完全名を取得します。  
   
 ```csharp  
-// Using Reflection to get information from an Assembly:  
+// Using Reflection to get information of an Assembly:  
 System.Reflection.Assembly info = typeof(System.Int32).Assembly;  
 System.Console.WriteLine(info);  
 ```  

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335499"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>方法: 値 (Visual Basic) を返すプロシージャを作成します。
 使用する、`Function`プロシージャを呼び出し元のコードに値を返します。  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>値を返すプロシージャを作成するには  
   
-1.  その他のプロシージャの外側を使用して、`Function`ステートメントの後に、`End Function`ステートメント。  
+1. その他のプロシージャの外側を使用して、`Function`ステートメントの後に、`End Function`ステートメント。  
   
-2.  `Function`ステートメントでは、以下の`Function`キーワード、プロシージャとし、パラメーター リストをかっこでの名前に置き換えます。  
+2. `Function`ステートメントでは、以下の`Function`キーワード、プロシージャとし、パラメーター リストをかっこでの名前に置き換えます。  
   
-3.  かっこの後に、`As`句を戻り値のデータ型を指定します。  
+3. かっこの後に、`As`句を戻り値のデータ型を指定します。  
   
-4.  間のプロシージャのコード ステートメントを配置、`Function`と`End Function`ステートメント。  
+4. 間のプロシージャのコード ステートメントを配置、`Function`と`End Function`ステートメント。  
   
-5.  使用して、`Return`ステートメントを呼び出し元のコードに値を返します。  
+5. 使用して、`Return`ステートメントを呼び出し元のコードに値を返します。  
   
      次`Function`プロシージャは、最長の辺またはの他の 2 つの辺の値を指定された直角三角形の斜辺を計算します。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "58831255"
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
-- [Property プロシージャ](./property-procedures.md)
+- [プロパティ プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
