@@ -1,5 +1,5 @@
 ---
-title: '方法: コマンド ラインから Windows フォーム アプリケーションを作成する'
+title: 'コマンド ラインから Windows フォーム アプリケーションを作成する方法'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/09/2019
 ms.locfileid: "57716947"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンド ラインから Windows フォーム アプリケーションを作成する
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>コマンド ラインから Windows フォーム アプリケーションを作成する方法
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
   
 ## <a name="procedure"></a>プロシージャ  
