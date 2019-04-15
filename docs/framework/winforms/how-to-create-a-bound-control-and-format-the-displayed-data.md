@@ -55,7 +55,6 @@ Windows フォーム データ バインディングでは、データ バイン
 8. をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
 ## <a name="see-also"></a>関連項目
-
 - [方法: Windows フォームに単純バインド コントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows フォームでのユーザー入力の検証](user-input-validation-in-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)
