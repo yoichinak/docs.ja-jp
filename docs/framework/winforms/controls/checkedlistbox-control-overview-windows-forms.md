@@ -25,6 +25,6 @@ Windows フォーム<xref:System.Windows.Forms.CheckedListBox>コントロール
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
-- [ListBox コントロールの概要 (Windows フォーム)](listbox-control-overview-windows-forms.md)
+- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)
 - [方法: Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

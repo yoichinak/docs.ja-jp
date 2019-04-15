@@ -24,6 +24,6 @@ ms.locfileid: "59106783"
   
 ## <a name="see-also"></a>関連項目
 
-- [グラフィックスの概要 (Windows フォーム)](graphics-overview-windows-forms.md)
+- [グラフィックスの概要](graphics-overview-windows-forms.md)
 - [GDI+ マネージド コードについて](about-gdi-managed-code.md)
 - [マネージド グラフィックス クラスの使用](using-managed-graphics-classes.md)

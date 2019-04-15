@@ -26,7 +26,7 @@ Windows フォーム<xref:System.Windows.Forms.ComboBox>ドロップダウン �
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ComboBox>
-- [ListBox コントロールの概要 (Windows フォーム)](listbox-control-overview-windows-forms.md)
+- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
 - [ListBox の代わりに Windows フォーム ComboBox を使用する場合](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する](add-and-remove-items-from-a-wf-combobox.md)
 - [方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)

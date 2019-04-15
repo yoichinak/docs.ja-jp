@@ -20,7 +20,7 @@ ms.locfileid: "59151659"
 > [!NOTE]
 >  リンクは、常に、コード例が掲載されているトピックの上部にジャンプします。  
   
- 追加のコード例は、クラス ライブラリのリファレンス ドキュメントで使用できます。 プリンシパル クラスと関連付けられているインターフェイスの一覧については、<xref:System.Windows.Forms.DataGridView>表を参照して、制御[DataGridView コントロール テクノロジの概要 (Windows フォーム)](datagridview-control-technology-summary-windows-forms.md)します。  
+ 追加のコード例は、クラス ライブラリのリファレンス ドキュメントで使用できます。 プリンシパル クラスと関連付けられているインターフェイスの一覧については、<xref:System.Windows.Forms.DataGridView>表を参照して、制御[DataGridView コントロール テクノロジの概要](datagridview-control-technology-summary-windows-forms.md)します。  
   
 ## <a name="codelist"></a>コードリスト  
   
@@ -155,4 +155,4 @@ ms.locfileid: "59151659"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)
+- [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)

@@ -21,7 +21,7 @@ Windows フォーム `CheckBox` コントロールは、特定の条件がオン
   <xref:System.Windows.Forms.RadioButton> コントロールに似ていますが、任意の数のグループ化された `CheckBox` コントロールを選択することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [CheckBox コントロールの概要 (Windows フォーム)](checkbox-control-overview-windows-forms.md)  
+ [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォーム CheckBox のクリックに応答します。](how-to-respond-to-windows-forms-checkbox-clicks.md)  

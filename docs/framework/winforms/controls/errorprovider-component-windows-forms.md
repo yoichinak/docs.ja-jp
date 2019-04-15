@@ -17,7 +17,7 @@ ms.locfileid: "57716759"
 Windows フォーム`ErrorProvider`コンポーネントを使用して、問題がある非侵入型の方法でユーザーを表示します。 通常、フォーム上のユーザー入力の検証またはデータセット内のエラーを表示すると組み合わせて使用されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ErrorProvider コンポーネントの概要 (Windows フォーム)](errorprovider-component-overview-windows-forms.md)  
+ [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)  
  このコンポーネントの用途、主な機能、およびプロパティについて説明します。  
   
  [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証のエラー アイコンを表示します。](display-error-icons-for-form-validation-with-wf-errorprovider.md)  

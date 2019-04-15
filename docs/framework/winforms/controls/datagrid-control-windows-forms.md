@@ -25,7 +25,7 @@ ms.locfileid: "59078916"
  `DataGrid` コントロールを有効なデータ ソースに対して設定すると、データの形式に基づいて列と行が作成されたコントロールが自動的に作成されます。 `DataGrid` コントロールを使用すると、1 つのテーブルまたは、複数のテーブル間の階層的なリレーションシップを表示できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DataGrid コントロールの概要 (Windows フォーム)](datagrid-control-overview-windows-forms.md)  
+ [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)  
  `DataGrid` コントロールの基本機能について説明します。  
   
  [方法: デザイナーを使って Windows フォーム DataGrid コントロールにテーブルと列を追加する](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  

@@ -17,7 +17,7 @@ ms.locfileid: "57707301"
 Windows フォーム<xref:System.Windows.Forms.ColorDialog>コンポーネントは、ユーザー、パレットから色を選択して、そのパレットにカスタムの色を追加できる構成済みのダイアログ ボックス。 このダイアログ ボックスは、他の Windows ベースのアプリケーションで表示される色を選択するためのダイアログ ボックスと同じです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ColorDialog コンポーネントの概要 (Windows フォーム)](colordialog-component-overview-windows-forms.md)  
+ [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)  
  一般的な概念が導入されています、<xref:System.Windows.Forms.ColorDialog>コンポーネントで、ユーザーが構成済みのダイアログ ボックスを表示することができますが、パレットから色の選択に使用できます。  
   
  [方法: Windows フォーム ColorDialog コンポーネントの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  

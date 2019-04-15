@@ -138,6 +138,6 @@ ms.locfileid: "59130261"
   
 ## <a name="see-also"></a>関連項目
 
-- [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)
+- [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
 - [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールにおける新規レコード行の使用](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

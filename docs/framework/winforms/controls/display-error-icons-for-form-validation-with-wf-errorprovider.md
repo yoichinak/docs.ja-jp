@@ -95,5 +95,5 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>無�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [ErrorProvider コンポーネントの概要 (Windows フォーム)](errorprovider-component-overview-windows-forms.md)
+- [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)
 - [方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

@@ -28,7 +28,7 @@ ms.locfileid: "59124320"
  このセクションのトピックでは、`DataGridView` の機能をアプリケーションに組み込むときに使用できる概念および手法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)  
+ [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)  
  Windows フォームの `DataGridView` コントロールのアーキテクチャおよび中心となる概念を説明するトピックを示します。  
   
  [Windows フォーム DataGridView コントロールの既定の機能](default-functionality-in-the-windows-forms-datagridview-control.md)  

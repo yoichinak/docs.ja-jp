@@ -15,7 +15,7 @@ ms.lasthandoff: 04/08/2019
 ms.locfileid: "59173597"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker コントロールの概要 (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.DateTimePicker>コントロールによりユーザーは日付または時刻の一覧から 1 つの項目を選択します。 2 つの部分に表示される日付の表示に使用する場合: テキスト、および一覧の横の下向きの矢印をクリックしたときに表示されるグリッドで表される日付のドロップダウン リスト。 次のように、グリッド、<xref:System.Windows.Forms.MonthCalendar>コントロールで、複数の日付を選択するために使用できます。 詳細については、<xref:System.Windows.Forms.MonthCalendar>コントロールを参照してください[MonthCalendar コントロールの概要 (Windows フォーム)](monthcalendar-control-overview-windows-forms.md)します。  
+Windows フォーム<xref:System.Windows.Forms.DateTimePicker>コントロールによりユーザーは日付または時刻の一覧から 1 つの項目を選択します。 2 つの部分に表示される日付の表示に使用する場合: テキスト、および一覧の横の下向きの矢印をクリックしたときに表示されるグリッドで表される日付のドロップダウン リスト。 次のように、グリッド、<xref:System.Windows.Forms.MonthCalendar>コントロールで、複数の日付を選択するために使用できます。 詳細については、<xref:System.Windows.Forms.MonthCalendar>コントロールを参照してください[MonthCalendar コントロールの概要](monthcalendar-control-overview-windows-forms.md)します。  
   
 ## <a name="key-properties"></a>キー プロパティ  
  希望する場合、<xref:System.Windows.Forms.DateTimePicker>ピッキングまたは日付ではなく回を編集するためのコントロールとして表示するには設定、<xref:System.Windows.Forms.DateTimePicker.ShowUpDown%2A>プロパティを`true`と<xref:System.Windows.Forms.DateTimePicker.Format%2A>プロパティを<xref:System.Windows.Forms.DateTimePickerFormat.Time>します。 詳細については、「[方法: 時間 DateTimePicker コントロールを表示](how-to-display-time-with-the-datetimepicker-control.md)します。  

@@ -32,4 +32,4 @@ ms.locfileid: "59103936"
   
 ## <a name="see-also"></a>関連項目
 
-- [グラフィックスの概要 (Windows フォーム)](graphics-overview-windows-forms.md)
+- [グラフィックスの概要](graphics-overview-windows-forms.md)

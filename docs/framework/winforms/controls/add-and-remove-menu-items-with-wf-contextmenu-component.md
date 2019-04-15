@@ -78,4 +78,4 @@ ms.locfileid: "59332184"
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu コンポーネント](contextmenu-component-windows-forms.md)
-- [ContextMenu コンポーネントの概要 (Windows フォーム)](contextmenu-component-overview-windows-forms.md)
+- [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)

@@ -73,7 +73,7 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
 ## <a name="see-also"></a>関連項目
 
 - [データ連結と Windows フォーム](../data-binding-and-windows-forms.md)
-- [ListBox コントロールの概要 (Windows フォーム)](listbox-control-overview-windows-forms.md)
-- [ComboBox コントロールの概要 (Windows フォーム)](combobox-control-overview-windows-forms.md)
-- [CheckedListBox コントロールの概要 (Windows フォーム)](checkedlistbox-control-overview-windows-forms.md)
+- [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
+- [ComboBox コントロールの概要](combobox-control-overview-windows-forms.md)
+- [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

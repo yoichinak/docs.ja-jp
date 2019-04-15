@@ -86,6 +86,6 @@ ms.locfileid: "59296382"
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
 - [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

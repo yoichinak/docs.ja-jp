@@ -38,4 +38,4 @@ ms.locfileid: "59300594"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)

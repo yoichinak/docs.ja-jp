@@ -34,7 +34,7 @@ ms.locfileid: "59219760"
 ## <a name="see-also"></a>関連項目
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
-- [TabControl コントロールの概要 (Windows フォーム)](tabcontrol-control-overview-windows-forms.md)
+- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
 - [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
 - [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
 - [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

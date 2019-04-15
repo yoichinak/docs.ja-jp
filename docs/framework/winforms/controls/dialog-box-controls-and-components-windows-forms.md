@@ -50,28 +50,28 @@ ms.locfileid: "57705793"
  [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  Windows フォームのダイアログ ボックスを作成する方法について説明します。  
   
- [ColorDialog コンポーネントの概要 (Windows フォーム)](colordialog-component-overview-windows-forms.md)  
+ [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)  
  ユーザーが構成済みのダイアログ ボックスでパレットから色を選択して、そのパレットにカスタムの色を追加できるようにします。  
   
  [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](folderbrowserdialog-component-overview-windows-forms.md)  
  ユーザーがフォルダーを参照して選択できるようにします。  
   
- [FontDialog コンポーネントの概要 (Windows フォーム)](fontdialog-component-overview-windows-forms.md)  
+ [FontDialog コンポーネントの概要](fontdialog-component-overview-windows-forms.md)  
  現在システムにインストールされているフォントを公開します。  
   
- [OpenFileDialog コンポーネントの概要 (Windows フォーム)](openfiledialog-component-overview-windows-forms.md)  
+ [OpenFileDialog コンポーネントの概要](openfiledialog-component-overview-windows-forms.md)  
  ユーザーが構成済みのダイアログ ボックスを使用してファイルを開くことができるようにします。  
   
- [PageSetupDialog コンポーネントの概要 (Windows フォーム)](pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog コンポーネントの概要](pagesetupdialog-component-overview-windows-forms.md)  
  構成済みのダイアログ ボックスを使用して印刷するページの詳細を設定します。  
   
- [PrintDialog コンポーネントの概要 (Windows フォーム)](printdialog-component-overview-windows-forms.md)  
+ [PrintDialog コンポーネントの概要](printdialog-component-overview-windows-forms.md)  
  プリンターを選択して、ページを印刷し、その他の印刷関連の設定を決定します。  
   
- [PrintPreviewDialog コントロールの概要 (Windows フォーム)](printpreviewdialog-control-overview-windows-forms.md)  
+ [PrintPreviewDialog コントロールの概要](printpreviewdialog-control-overview-windows-forms.md)  
  印刷時に表示されるドキュメントを表示します。  
   
- [SaveFileDialog コンポーネントの概要 (Windows フォーム)](savefiledialog-component-overview-windows-forms.md)  
+ [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)  
  保存するファイルとそれらの保存先を選択します。  
   
  「[Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)」もご覧ください。

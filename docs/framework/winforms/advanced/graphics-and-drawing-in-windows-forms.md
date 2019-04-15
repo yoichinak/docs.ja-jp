@@ -22,7 +22,7 @@ ms.locfileid: "57705425"
  すぐに開始する場合、「[グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)」を参照してください。 Windows フォームで線、図形、テキストなどを描画するためのコードの使用方法に関するトピックがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [グラフィックスの概要 (Windows フォーム)](graphics-overview-windows-forms.md)  
+ [グラフィックスの概要](graphics-overview-windows-forms.md)  
  グラフィックスに関連するマネージド クラスの概要を提供します。  
   
  [GDI+ マネージド コードについて](about-gdi-managed-code.md)  
