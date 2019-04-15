@@ -16,7 +16,7 @@ ms.locfileid: "57705546"
 Windows フォーム <xref:System.Windows.Forms.ToolTip> コンポーネントは、ユーザーがコントロールをポイントしたときにテキストを表示します。 ツールヒントは任意のコントロールに関連付けることができます。 このコントロールの使用例については:フォームの領域を節約するためには、ボタンに小さなアイコンを表示し、ボタンの機能を説明するツールヒントを使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolTip コンポーネントの概要 (Windows フォーム)](tooltip-component-overview-windows-forms.md)  
+ [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)  
  ユーザーがマウスをコントロールにポイントしたときにテキストを表示する <xref:System.Windows.Forms.ToolTip> コンポーネントの一般的な概要について説明します。  
   
  [方法: デザイン時に Windows フォーム上のコントロールのツールヒントを設定します。](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  

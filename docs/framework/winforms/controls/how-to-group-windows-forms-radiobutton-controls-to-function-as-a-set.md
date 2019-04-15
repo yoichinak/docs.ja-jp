@@ -17,7 +17,7 @@ ms.locfileid: "59307265"
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する
 Windows フォーム<xref:System.Windows.Forms.RadioButton>間うち 1 つだけをプロシージャまたはオブジェクトに割り当てることが、2 つ以上の設定の選択をユーザーに付与するコントロールが設計されています。 たとえばのグループ<xref:System.Windows.Forms.RadioButton>コントロールは、注文の配送業者をパッケージの選択を表示可能性がありますが、通信事業者の 1 つだけ使用されます。 そのため 1 つだけ<xref:System.Windows.Forms.RadioButton>一度に選択できる場合でも、機能グループの一部であります。  
   
- ラジオ ボタンをグループ化など、コンテナー内でそれらを描画することで、<xref:System.Windows.Forms.Panel>コントロール、<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム。 フォームになる 1 つのグループに直接追加されるすべてのラジオ ボタン。 個別のグループを追加するにはパネルまたはグループ ボックス内を配置する必要があります。 パネルまたはグループ ボックスの詳細については、次を参照してください。 [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)または[GroupBox コントロールの概要 (Windows フォーム)](groupbox-control-overview-windows-forms.md)します。  
+ ラジオ ボタンをグループ化など、コンテナー内でそれらを描画することで、<xref:System.Windows.Forms.Panel>コントロール、<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム。 フォームになる 1 つのグループに直接追加されるすべてのラジオ ボタン。 個別のグループを追加するにはパネルまたはグループ ボックス内を配置する必要があります。 パネルまたはグループ ボックスの詳細については、次を参照してください。 [Panel コントロールの概要](panel-control-overview-windows-forms.md)または[GroupBox コントロールの概要](groupbox-control-overview-windows-forms.md)します。  
   
 ### <a name="to-group-radiobutton-controls-as-a-set-to-function-independently-of-other-sets"></a>その他のセットとは無関係に関数をセットとして RadioButton コントロールをグループ化  
   
@@ -28,8 +28,8 @@ Windows フォーム<xref:System.Windows.Forms.RadioButton>間うち 1 つだけ
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.RadioButton>
-- [RadioButton コントロールの概要 (Windows フォーム)](radiobutton-control-overview-windows-forms.md)
-- [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)
-- [GroupBox コントロールの概要 (Windows フォーム)](groupbox-control-overview-windows-forms.md)
-- [CheckBox コントロールの概要 (Windows フォーム)](checkbox-control-overview-windows-forms.md)
+- [RadioButton コントロールの概要](radiobutton-control-overview-windows-forms.md)
+- [Panel コントロールの概要](panel-control-overview-windows-forms.md)
+- [GroupBox コントロールの概要](groupbox-control-overview-windows-forms.md)
+- [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
 - [RadioButton コントロール](radiobutton-control-windows-forms.md)

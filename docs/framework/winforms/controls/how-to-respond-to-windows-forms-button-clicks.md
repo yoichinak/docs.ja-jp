@@ -57,6 +57,6 @@ Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button
   
 ## <a name="see-also"></a>関連項目
 
-- [Button コントロールの概要 (Windows フォーム)](button-control-overview-windows-forms.md)
+- [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
 - [Button コントロール](button-control-windows-forms.md)

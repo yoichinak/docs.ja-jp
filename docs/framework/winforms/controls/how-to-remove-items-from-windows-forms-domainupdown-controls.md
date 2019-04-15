@@ -60,4 +60,4 @@ ms.locfileid: "59131405"
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
 - [DomainUpDown コントロール](domainupdown-control-windows-forms.md)
-- [DomainUpDown コントロールの概要 (Windows フォーム)](domainupdown-control-overview-windows-forms.md)
+- [DomainUpDown コントロールの概要](domainupdown-control-overview-windows-forms.md)

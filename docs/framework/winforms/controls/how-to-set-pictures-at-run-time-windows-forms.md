@@ -101,7 +101,7 @@ Windows フォームが表示されるイメージをプログラムで設定で
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [PictureBox コントロールの概要 (Windows フォーム)](picturebox-control-overview-windows-forms.md)
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
 - [方法: デザイナーを使用してピクチャを読み込む](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [方法: 実行時にピクチャのサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox コントロール](picturebox-control-windows-forms.md)

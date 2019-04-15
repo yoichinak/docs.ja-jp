@@ -28,4 +28,4 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>を表示する、入
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)
-- [TextBox コントロールの概要 (Windows フォーム)](textbox-control-overview-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

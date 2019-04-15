@@ -18,7 +18,7 @@ ms.locfileid: "57703791"
 Windows フォームの `TreeView` コントロールでは、Windows オペレーティング システムの Windows エクスプローラーの左側のウィンドウにファイルやフォルダーが表示されるのと同じように、ノードの階層を表示することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TreeView コントロールの概要 (Windows フォーム)](treeview-control-overview-windows-forms.md)  
+ [TreeView コントロールの概要](treeview-control-overview-windows-forms.md)  
  このコントロールの用途、主な機能、およびプロパティについて説明します  
   
  [方法: 追加して、Windows フォーム TreeView コントロールでノードを削除](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  

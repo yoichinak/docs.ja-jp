@@ -16,7 +16,7 @@ ms.locfileid: "57722036"
 Windows フォーム `ImageList` コンポーネントは、コントロールで表示するイメージの保存に使用します。 イメージ リストでは、一貫性のある 1 つのイメージのカタログのコードを記述することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ImageList コンポーネントの概要 (Windows フォーム)](imagelist-component-overview-windows-forms.md)  
+ [ImageList コンポーネントの概要](imagelist-component-overview-windows-forms.md)  
  このコンポーネントの用途、主な機能、およびプロパティについて説明します。  
   
  [方法: 追加または削除のイメージを Windows フォームの ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  

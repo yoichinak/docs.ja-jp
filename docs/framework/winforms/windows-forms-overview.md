@@ -105,8 +105,8 @@ Windows フォームには、ダイアログ ボックスの作成、ヘルプ�
 
 - [Windows フォームについて](getting-started-with-windows-forms.md)
 - [新しい Windows フォームの作成](creating-a-new-windows-form.md)
-- [ToolStrip コントロールの概要 (Windows フォーム)](./controls/toolstrip-control-overview-windows-forms.md)
-- [DataGridView コントロールの概要 (Windows フォーム)](./controls/datagridview-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](./controls/toolstrip-control-overview-windows-forms.md)
+- [DataGridView コントロールの概要](./controls/datagridview-control-overview-windows-forms.md)
 - [BindingSource コンポーネントの概要](./controls/bindingsource-component-overview.md)
 - [アプリケーション設定の概要](./advanced/application-settings-overview.md)
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)

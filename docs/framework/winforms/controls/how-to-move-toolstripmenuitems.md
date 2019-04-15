@@ -74,4 +74,4 @@ ms.locfileid: "59308361"
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [MenuStrip コントロールの概要 (Windows フォーム)](menustrip-control-overview-windows-forms.md)
+- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)

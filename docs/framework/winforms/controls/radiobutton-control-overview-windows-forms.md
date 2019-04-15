@@ -27,9 +27,9 @@ Windows フォーム<xref:System.Windows.Forms.RadioButton>コントロールが
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.RadioButton>
-- [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)
-- [GroupBox コントロールの概要 (Windows フォーム)](groupbox-control-overview-windows-forms.md)
-- [CheckBox コントロールの概要 (Windows フォーム)](checkbox-control-overview-windows-forms.md)
+- [Panel コントロールの概要](panel-control-overview-windows-forms.md)
+- [GroupBox コントロールの概要](groupbox-control-overview-windows-forms.md)
+- [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
 - [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)
 - [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)

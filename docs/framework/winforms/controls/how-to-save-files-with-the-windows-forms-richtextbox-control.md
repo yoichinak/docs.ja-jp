@@ -41,7 +41,7 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 1. 保存するファイルのパスを決定します。  
   
-     実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要 (Windows フォーム)](savefiledialog-component-overview-windows-forms.md)します。  
+     実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)します。  
   
 2. 呼び出す、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>のメソッド、<xref:System.Windows.Forms.RichTextBox>コントロール、ファイルを保存して、必要に応じてファイルの種類を指定します。 唯一の引数としてファイル名を持つメソッドを呼び出す場合、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。  
   

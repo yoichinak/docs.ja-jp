@@ -64,5 +64,5 @@ Windows フォームを使用する<xref:System.Windows.Forms.ErrorProvider>デ�
   
 ## <a name="see-also"></a>関連項目
 
-- [ErrorProvider コンポーネントの概要 (Windows フォーム)](errorprovider-component-overview-windows-forms.md)
+- [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)
 - [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム妥当性検査でエラー アイコンを表示する](display-error-icons-for-form-validation-with-wf-errorprovider.md)

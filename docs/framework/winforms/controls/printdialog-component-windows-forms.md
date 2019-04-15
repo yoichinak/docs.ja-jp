@@ -19,7 +19,7 @@ ms.locfileid: "57715205"
 Windows フォーム `PrintDialog` コンポーネントは、構成済みのダイアログ ボックスであり、Windows ベースのアプリケーションのプリンターの選択、印刷するページの選択、およびその他の印刷関連の設定の確認に使用します。 独自のダイアログ ボックスを構成する代わりに、プリンターと印刷関連の設定の選択のための簡単なソリューションとして使用します。 ユーザーが自分のドキュメントのさまざまな部分 (すべての印刷、指定したページ範囲の印刷、または、選択部分の印刷) を印刷できるようにすることが可能です。 Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [PrintDialog コンポーネントの概要 (Windows フォーム)](printdialog-component-overview-windows-forms.md)  
+ [PrintDialog コンポーネントの概要](printdialog-component-overview-windows-forms.md)  
  ユーザーがプリンターの選択、印刷するページの選択、および印刷関連の設定を決定するために使用できる構成済みのダイアログ ボックスを表示できる、`PrintDialog` コンポーネントの全般的な概要を紹介します。  
   
  [方法: PrintDialog コンポーネントを表示します。](how-to-display-the-printdialog-component.md)  

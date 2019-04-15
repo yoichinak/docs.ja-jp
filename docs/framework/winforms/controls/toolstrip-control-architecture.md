@@ -378,7 +378,7 @@ ms.locfileid: "59296213"
   
 ## <a name="see-also"></a>関連項目
 
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)
 - [MenuStrip コントロール](menustrip-control-windows-forms.md)

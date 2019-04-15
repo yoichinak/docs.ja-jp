@@ -228,5 +228,5 @@ ms.locfileid: "59300477"
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [ProgressBar コントロールの概要 (Windows フォーム)](progressbar-control-overview-windows-forms.md)
+- [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)
 - [ProgressBar コントロール](progressbar-control-windows-forms.md)

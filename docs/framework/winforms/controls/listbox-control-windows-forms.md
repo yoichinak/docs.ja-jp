@@ -20,7 +20,7 @@ ms.locfileid: "57708216"
 Windows フォーム`ListBox`コントロールは、ユーザーが元の 1 つまたは複数選択できる項目の一覧を表示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ListBox コントロールの概要 (Windows フォーム)](listbox-control-overview-windows-forms.md)  
+ [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
 ## <a name="reference"></a>参照  

@@ -28,11 +28,11 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
   
 1. 設定、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティを適切なフォント。  
   
-     ユーザーをアプリケーションでフォント ファミリ、サイズ、および書体を設定できるように、通常使用する、<xref:System.Windows.Forms.FontDialog>コンポーネント。 概要については、「[FontDialog コンポーネントの概要 (Windows フォーム)](fontdialog-component-overview-windows-forms.md)」 (FontDialog コンポーネントの概要) を参照してください。  
+     ユーザーをアプリケーションでフォント ファミリ、サイズ、および書体を設定できるように、通常使用する、<xref:System.Windows.Forms.FontDialog>コンポーネント。 概要については、「[FontDialog Component Overview](fontdialog-component-overview-windows-forms.md)」 (FontDialog コンポーネントの概要) を参照してください。  
   
 2. 設定、<xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティを適切な色にします。  
   
-     アプリケーションで色を設定するユーザーを有効にするには通常使用、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 概要については、「[ColorDialog コンポーネントの概要 (Windows フォーム)](colordialog-component-overview-windows-forms.md)」 (ColorDialog コンポーネントの概要) を参照してください。  
+     アプリケーションで色を設定するユーザーを有効にするには通常使用、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 概要については、「[ColorDialog Component Overview](colordialog-component-overview-windows-forms.md)」 (ColorDialog コンポーネントの概要) を参照してください。  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  

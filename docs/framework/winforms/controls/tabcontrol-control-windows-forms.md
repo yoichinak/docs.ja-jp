@@ -21,7 +21,7 @@ ms.locfileid: "57707730"
 Windows フォーム `TabControl` は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。 タブには画像やその他のコントロールを含めることができます。 プロパティ ページを作成するには、`TabControl` を使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TabControl コントロールの概要 (Windows フォーム)](tabcontrol-control-overview-windows-forms.md)  
+ [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)  

@@ -23,7 +23,7 @@ ms.locfileid: "57723040"
 >  `ToolBar` コントロールの <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> プロパティは、<xref:System.Windows.Forms.ContextMenu> クラスのインスタンスを参照として取得します。 このプロパティは <xref:System.Windows.Forms.Menu> クラスから継承する任意のオブジェクトを受け入れるため、アプリケーションのツールバーにこの種類のボタンを実装する場合は、渡す参照を慎重に検討してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ToolBar コントロールの概要 (Windows フォーム)](toolbar-control-overview-windows-forms.md)  
+ [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)  
  ユーザーが操作できるカスタム ツールバーを設計できる、`ToolBar` コントロールの一般的な概念について説明します。  
   
  [方法: ツール バー コントロールにボタンを追加します。](how-to-add-buttons-to-a-toolbar-control.md)  

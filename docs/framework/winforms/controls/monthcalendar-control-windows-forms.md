@@ -18,7 +18,7 @@ ms.locfileid: "57721256"
 Windows フォーム`MonthCalendar`コントロールがユーザーに表示し、日付情報を設定するための直感的なグラフィカル インターフェイスを表示します。 コントロールには、月、曜日、下にある列に配置の番号付きの日を含むグリッドが表示されます。 1 か月のキャプションのどちら側にある矢印ボタンをクリックして、別の月を選択できます。 異なり、類似<xref:System.Windows.Forms.DateTimePicker>コントロール、; このコントロールを使用して日付の範囲を選択するただし、<xref:System.Windows.Forms.DateTimePicker>コントロールでは、時間を設定できます。 日付とします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [MonthCalendar コントロールの概要 (Windows フォーム)](monthcalendar-control-overview-windows-forms.md)  
+ [MonthCalendar コントロールの概要](monthcalendar-control-overview-windows-forms.md)  
  一般的な概念が導入されています、`MonthCalendar`コントロールで、表示し、アプリケーションの日付情報を設定することができます。  
   
  [方法: Windows フォーム MonthCalendar コントロールの外観を変更します。](how-to-change-monthcalendar-control-appearance.md)  

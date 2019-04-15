@@ -138,6 +138,6 @@ ms.locfileid: "59319899"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox コントロールの概要 (Windows フォーム)](checkbox-control-overview-windows-forms.md)
+- [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
 - [方法: Windows フォームの CheckBox コントロールでオプションを設定する](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox コントロール](checkbox-control-windows-forms.md)

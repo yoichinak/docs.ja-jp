@@ -19,7 +19,7 @@ ms.locfileid: "57707314"
 Windows フォームのスクロール バー コントロールを使用すると、アプリケーションまたはコントロール内で水平または垂直にスクロールすることにより、項目の長い一覧や大量の情報を簡単にナビゲートできるようになります。 スクロール バーは、Windows インターフェイスの一般的な要素です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [HScrollBar コントロールと VScrollBar コントロールの概要 (Windows フォーム)](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
+ [HScrollBar コントロールと VScrollBar コントロールの概要](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  
   <xref:System.Windows.Forms.HScrollBar> コントロールと <xref:System.Windows.Forms.VScrollBar> コントロールの全般的な概念を説明します。これらのコントロールにより、ユーザーは大量の情報を水平および垂直にスクロールして見ることができます。  
   

@@ -92,7 +92,7 @@ ms.locfileid: "59328063"
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
-- [TextBox コントロールの概要 (Windows フォーム)](textbox-control-overview-windows-forms.md)
+- [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)
 - [方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
 - [方法: Windows フォームの TextBox コントロールを使用してパスワード テキスト ボックスを作成する](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [方法: 読み取り専用テキスト ボックスを作成する](how-to-create-a-read-only-text-box-windows-forms.md)

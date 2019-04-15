@@ -46,7 +46,7 @@ Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.PictureBox>
-- [PictureBox コントロールの概要 (Windows フォーム)](picturebox-control-overview-windows-forms.md)
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
 - [方法: 実行時にピクチャのサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [方法: 実行時にピクチャを設定する](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox コントロール](picturebox-control-windows-forms.md)

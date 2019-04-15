@@ -29,4 +29,4 @@ ms.locfileid: "59301929"
 - <xref:System.Windows.Forms.ToolStripItemAlignment>
 - <xref:System.Windows.Forms.ToolStripItemAlignment.Left>
 - <xref:System.Windows.Forms.ToolStripItemAlignment.Right>
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

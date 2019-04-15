@@ -68,6 +68,6 @@ Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールは、
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox コントロールの概要 (Windows フォーム)](checkbox-control-overview-windows-forms.md)
+- [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
 - [方法: Windows フォーム CheckBox のクリックに応答する](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox コントロール](checkbox-control-windows-forms.md)

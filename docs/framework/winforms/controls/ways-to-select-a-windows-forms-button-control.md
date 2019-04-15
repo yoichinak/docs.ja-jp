@@ -30,6 +30,6 @@ ms.locfileid: "59223291"
   
 ## <a name="see-also"></a>関連項目
 
-- [Button コントロールの概要 (Windows フォーム)](button-control-overview-windows-forms.md)
+- [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button コントロール](button-control-windows-forms.md)

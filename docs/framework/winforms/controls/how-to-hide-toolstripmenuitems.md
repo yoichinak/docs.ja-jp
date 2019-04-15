@@ -42,5 +42,5 @@ ms.locfileid: "59127427"
 
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [MenuStrip コントロールの概要 (Windows フォーム)](menustrip-control-overview-windows-forms.md)
+- [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)
 - [方法: ToolStripMenuItems を無効にする](how-to-disable-toolstripmenuitems.md)
