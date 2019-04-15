@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e30fcd5952fadc3b6cf30cb352a3bb51c86cc117
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228238"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 チャネルがカスタム バインドに含まれているときに名前付きパイプを使用してメッセージを転送するトランスポートを定義します。  
@@ -73,6 +73,7 @@ ms.locfileid: "55285913"
 `namedPipeTransport` 要素は、名前付きパイプ トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、コンピューター上での WCF (Windows Communication Foundation) 間の通信に使用されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

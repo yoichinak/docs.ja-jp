@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127843"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
 Windows Presentation Foundation (WPF) コントロールは、いくつかのカテゴリに論理的にグループ化することができます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>ドキュメント  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には、ドキュメントの表示に特化したコントロールがいくつかあります。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ドキュメントを表示するためのいくつかの特殊なコントロールが含まれています。 これらのコントロールは、対象となるユーザーのシナリオに応じて、読みやすさを最適化します。  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>メディア  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、最も一般的なイメージ形式の [コーデック] と共に、オーディオ コンテンツとビデオ コンテンツのホストを統合的にサポートします。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 最も一般的なイメージ形式は、[コーデック] と、オーディオとビデオの両方のコンテンツをホストするための統合のサポートが含まれています。  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Windows Presentation Foundation (WPF) コントロールは、いくつかのカ
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>関連項目
+
 - [コントロール ライブラリ](control-library.md)

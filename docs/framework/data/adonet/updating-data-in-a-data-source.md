@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207481"
 ---
 # <a name="updating-data-in-a-data-source"></a>データ ソースのデータの更新
 データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、作成、**コマンド**適切な SQL コマンドを使用してオブジェクトと**接続**など必要な**パラメーター**します。 コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。  
@@ -92,6 +92,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [コマンドを使用したデータ変更](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)

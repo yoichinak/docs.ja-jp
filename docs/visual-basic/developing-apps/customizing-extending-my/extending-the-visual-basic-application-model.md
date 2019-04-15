@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320146"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの拡張
 アプリケーション モデルに機能を追加するにはオーバーライドすることで、`Overridable`のメンバー、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラス。 この手法を使用すると、アプリケーション モデルの動作をカスタマイズし、アプリケーションの起動およびシャット ダウン、独自のメソッドの呼び出しを追加できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "58834713"
   
  アプリケーションが通常のアプリケーション (複数インスタンスのアプリケーション)、または単一インスタンスのアプリケーションの最初のインスタンスの場合、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>メソッドが実行される、`Overridable`方法を次の順序で。  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Visual スタイル、テキスト表示スタイル、および現在のプリンシパル (アプリケーションでは、Windows 認証を使用) する場合は、メイン アプリケーション スレッドの既定では、このメソッドを設定し、呼び出し`ShowSplashScreen`どちらの場合`/nosplash`も`-nosplash`として提供される、コマンドライン引数。  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Visual スタイル、テキスト表示スタイル、および現在のプリンシパル (アプリケーションでは、Windows 認証を使用) する場合は、メイン アプリケーション スレッドの既定では、このメソッドを設定し、呼び出し`ShowSplashScreen`どちらの場合`/nosplash`も`-nosplash`として提供される、コマンドライン引数。  
   
      この関数が返す場合、アプリケーションの起動処理が取り消された`False`します。 アプリケーションを実行しない状況がある場合に役立ちます。 ことができます。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "58834713"
   
          既定では、このメソッドは何もしません。 Visual Basic でのアプリケーションのスプラッシュ スクリーンを選択するかどうかは**プロジェクト デザイナー**、デザイナーをオーバーライドし、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>メソッドを設定するメソッド、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>プロパティ スプラッシュ スクリーンのフォームの新しいインスタンスを.  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 発生させるための機能拡張ポイントを提供します、`Startup`イベント。 この関数が返す場合、アプリケーションの起動処理が停止します`False`します。  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 発生させるための機能拡張ポイントを提供します、`Startup`イベント。 この関数が返す場合、アプリケーションの起動処理が停止します`False`します。  
   
      既定では、このメソッドは<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>イベント。 イベント ハンドラーが設定されている場合、<xref:System.ComponentModel.CancelEventArgs.Cancel>にイベント引数の`True`、メソッドを返します`False`をアプリケーションの起動を取り消します。  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. メインのアプリケーションが、初期化が完了したら、実行を開始する準備ができてときの開始点を提供します。  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. メインのアプリケーションが、初期化が完了したら、実行を開始する準備ができてときの開始点を提供します。  
   
      既定が、Windows フォームのメッセージ ループに入る前にこのメソッドは、 `OnCreateMainForm` (アプリケーションのメイン フォームを作成) して`HideSplashScreen`(スプラッシュ スクリーンを閉じる) をメソッド。  
   
@@ -62,15 +62,15 @@ ms.locfileid: "58834713"
   
          既定では、このメソッドは、スプラッシュ スクリーンを閉じます。  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. アプリケーションの別のインスタンスの起動時の単一インスタンスのアプリケーションの動作をカスタマイズする方法を提供します。  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. アプリケーションの別のインスタンスの起動時の単一インスタンスのアプリケーションの動作をカスタマイズする方法を提供します。  
   
      既定では、このメソッドは<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>イベント。  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. 発生させるための機能拡張ポイントを提供します、`Shutdown`イベント。 このメソッドは、メイン アプリケーションでハンドルされない例外が発生した場合に実行されません。  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. 発生させるための機能拡張ポイントを提供します、`Shutdown`イベント。 このメソッドは、メイン アプリケーションでハンドルされない例外が発生した場合に実行されません。  
   
      既定では、このメソッドは<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>イベント。  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. 上記の一覧表示されているメソッドのいずれかでハンドルされない例外が発生した場合に実行されます。  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. 上記の一覧表示されているメソッドのいずれかでハンドルされない例外が発生した場合に実行されます。  
   
      既定では、このメソッド、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>イベントは、デバッガーがアタッチされていないと、アプリケーションの処理とならない限り、`UnhandledException`イベント。  
   
@@ -100,4 +100,4 @@ ms.locfileid: "58834713"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
 - [Visual Basic アプリケーション モデルの概要](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
-- [[アプリケーション] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

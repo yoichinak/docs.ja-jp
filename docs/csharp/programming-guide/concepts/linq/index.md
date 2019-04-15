@@ -2,16 +2,16 @@
 title: 統合言語クエリ (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186629"
 ---
 # <a name="language-integrated-query-linq"></a>統合言語クエリ (LINQ)
 
-統合言語クエリ (LINQ) は、C# 言語への直接的なクエリ機能の統合に基づくテクノロジのセットの名前です。 これまでは、データに対するクエリは、コンパイル時の型チェックや IntelliSense のサポートがない単純な文字列として表現されてきました。 さらに、SQL データベース、XML ドキュメント、さまざまな Web サービスといったデータ ソースの種類ごとに、異なるクエリ言語を習得する必要がありました。 LINQ では、クエリは、クラス、メソッド、イベントと同様に、ファースト クラスの言語コンストラクトです。
+統合言語クエリ (LINQ) は、C# 言語への直接的なクエリ機能の統合に基づくテクノロジのセットの名前です。 これまでは、データに対するクエリは、コンパイル時の型チェックや IntelliSense のサポートがない単純な文字列として表現されてきました。 さらに、SQL データベース、XML ドキュメント、さまざまな Web サービスなど、各種データ ソースの異なるクエリ言語を学習する必要があります。 LINQ では、クエリは、クラス、メソッド、イベントと同様に、ファースト クラスの言語コンストラクトです。
 
 クエリを記述する開発者にとって、最も目立つ LINQ の "統合言語" 部分は、クエリ式です。 クエリ式は、宣言型の "*クエリ構文*" で記述されます。 クエリ構文を使用することで、フィルター処理、並べ替え、グループ化などのデータ ソースに対する操作を、最小限のコードで実行できます。 同一の基本的なクエリ式のパターンを使用して、SQL データベース、ADO .NET データセット、XML ドキュメントとストリーム、および .NET コレクション内のデータを照会して変換できます。
 
@@ -40,15 +40,12 @@ ms.locfileid: "49347813"
 ## <a name="next-steps"></a>次の手順
 
 LINQ の詳細については、最初に「[クエリ式の基本](../../../linq/query-expression-basics.md)」で基本的な概念を理解してから、関心のある LINQ テクノロジのドキュメントを参照してください。   
--   XML ドキュメント: [LINQ to XML](linq-to-xml.md)  
+-   XML ドキュメント:[LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+-   ADO.NET Entity Framework:[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   .NET のコレクション、ファイル、文字列など: [LINQ to Objects ](linq-to-objects.md)
+-   .NET のコレクション、ファイル、文字列など:[LINQ to Objects](linq-to-objects.md)
 
 LINQ 全般をより深く理解するには、「[C# での LINQ](../../../linq/linq-in-csharp.md)」を参照してください。
 
 C# での LINQ の使用を開始するには、「[LINQ の使用](../../../tutorials/working-with-linq.md)」チュートリアルを参照してください。
-
-
-

@@ -8,20 +8,19 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125303"
 ---
 # <a name="tilebrush-overview"></a>TileBrush の概要
 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージで領域を塗りつぶす方法を制御<xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.TileBrush>方法の詳細に制御する機能、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>領域を塗りつぶします。  
-  
-  
+
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するのにはの基本的な機能を使用する方法を理解しておいて、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>クラス。 これらの型の概要については、、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)を参照してください。  
+ このトピックを理解するのにはの基本的な機能を使用する方法を理解しておいて、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>クラス。 これらの型の概要については、次を参照してください。、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。  
   
 <a name="tilebrush"></a>   
 ## <a name="painting-an-area-with-tiles"></a>タイルで領域を塗りつぶす  
@@ -122,12 +121,13 @@ Tile の TileMode を使用する TileBrush のコンポーネント
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
 - [イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)
-- [方法トピック](brushes-how-to-topics.md)
+- [方法のトピック](brushes-how-to-topics.md)
 - [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)
 - [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)

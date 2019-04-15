@@ -1,5 +1,5 @@
 ---
-title: '方法: イメージの色を変換します。'
+title: '方法: イメージの色を変換する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132640"
 ---
-# <a name="how-to-translate-image-colors"></a>方法: イメージの色を変換します。
+# <a name="how-to-translate-image-colors"></a>方法: イメージの色を変換する
 翻訳は、4 つの色コンポーネントの 1 つ以上の値を追加します。 翻訳を表すカラー マトリックス エントリは、次の表に付与されます。  
   
 |コンポーネントを変換します。|マトリックスのエントリ|  
@@ -46,9 +46,10 @@ ms.locfileid: "58464464"
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。 置換`ColorBars.bmp`イメージ ファイル名と、システムで有効なパス。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。 置換`ColorBars.bmp`イメージ ファイル名と、システムで有効なパス。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

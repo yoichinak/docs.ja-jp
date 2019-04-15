@@ -2,12 +2,12 @@
 title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
-ms.openlocfilehash: 2bd34de1417db45ba4dfd3bfdc9519b055ed695d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e96c28ac9b372092d06538d24d165dde6c5fe48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276719"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203133"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
 HTTPS 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用されるバインディングの設定を指定します。  
@@ -55,12 +55,13 @@ HTTPS 経由の WS-MetadataExchange (WS-MEX) メッセージ交換に使用さ�
  このバインディングは、基本的には証明書を使用してトランスポート レベルのセキュリティをサポートする `WSHttpBinding` バインディングです。 構成して、このようなメタデータ エンドポイントを使用しての詳細については、次を参照してください。[方法。構成のカスタム Ws-metadata Exchange バインディング](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)、[方法。非-MEX のバインディングを介してメタデータを取得](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)、サンプルとサンプル[メタデータ エンドポイントのセキュリティで保護されたカスタム](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [方法: 構成ファイルを使用してサービスのメタデータを公開します。](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [カスタム バインディングを介したメタデータの公開と取得](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [方法: 構成のカスタム Ws-metadata Exchange バインディング](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [方法: 非-MEX のバインディングを介してメタデータを取得します。](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [方法: カスタム WS-Metadata Exchange バインディングを構成する](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [方法: MEX 以外のバインディングを介してメタデータを取得する](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [カスタム セキュア メタデータ エンドポイント](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)
 - [メタデータ](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [バインディング](../../../../../docs/framework/wcf/bindings.md)

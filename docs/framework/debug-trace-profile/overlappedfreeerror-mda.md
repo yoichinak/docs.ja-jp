@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 675e2e4d5022f0260450f9f0b2025f215b3ead7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: defd7f90fcac8d1e98104796682058638c9bd799
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127076"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
 オーバーラップされた操作が完了する前に <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> メソッドが呼び出されると、`overlappedFreeError` マネージド デバッグ アシスタント (MDA) がアクティブになります。  
   
-## <a name="symptoms"></a>現象  
+## <a name="symptoms"></a>症状  
  アクセス違反またはガベージ コレクションされたヒープの破損。  
   
 ## <a name="cause"></a>原因  
@@ -51,6 +51,7 @@ ms.locfileid: "54708287"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

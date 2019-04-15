@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315505"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 変数宣言でローカル型推論を使用できるようにします。  
@@ -28,7 +28,7 @@ ms.locfileid: "58839848"
   
 |用語|定義|  
 |---|---|  
-|`+` &#124; `-`|省略可能です。 `-optioninfer+` を指定してローカル型推論を有効にするか、または `-optioninfer-` を指定してローカル型推論をブロックします。 `-optioninfer` オプションは、何も値を指定しない場合、`-optioninfer+` と同じです。 `-optioninfer` スイッチが存在しない場合の既定値も `-optioninfer+` です。 既定値は、Vbc.rsp 応答ファイル内に設定されています。|  
+|`+` &#124; `-`|任意。 `-optioninfer+` を指定してローカル型推論を有効にするか、または `-optioninfer-` を指定してローカル型推論をブロックします。 `-optioninfer` オプションは、何も値を指定しない場合、`-optioninfer+` と同じです。 `-optioninfer` スイッチが存在しない場合の既定値も `-optioninfer+` です。 既定値は、Vbc.rsp 応答ファイル内に設定されています。|  
   
 > [!NOTE]
 >  `-noconfig` オプションを使用すると、vbc.rsp に指定するのではなく、コンパイラの内部既定値を保持できます。 このオプションのコンパイラの既定値は `-optioninfer-` です。  
@@ -38,9 +38,9 @@ ms.locfileid: "58839848"
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE で-optioninfer を設定するには  
   
-1.  プロジェクトを選択**ソリューション エクスプ ローラー**します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. プロジェクトを選択**ソリューション エクスプ ローラー**します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **コンパイル** タブで、値を変更、 **Option infer**ボックス。  
+2. **コンパイル** タブで、値を変更、 **Option infer**ボックス。  
   
 ## <a name="example"></a>例  
  次のコードは、ローカル型推論を有効にした状態で `test.vb` をコンパイルします。  

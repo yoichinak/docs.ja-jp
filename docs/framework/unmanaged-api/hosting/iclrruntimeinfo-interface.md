@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4789d5cad8bbb4f7dc6f5fcedc56be3bf74703b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186993"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo インターフェイス
 バージョン、ディレクトリ、および負荷の状態を含む特定の共通言語ランタイム (CLR) に関する情報を返すメソッドを提供します。 このインターフェイスには、ランタイムを初期化せずランタイム固有の機能も提供します。 実行時の相対パスが含まれています[LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)メソッドは、ランタイム モジュール固有[GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)メソッド、およびランタイムで提供されるインターフェイスを、 [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)メソッド。  
@@ -50,8 +50,9 @@ ms.locfileid: "54520192"
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)

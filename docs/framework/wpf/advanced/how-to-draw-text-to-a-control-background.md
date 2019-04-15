@@ -8,12 +8,12 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-ms.openlocfilehash: 025b13d83aeb668fa3a9f8af35d7213ae677eefc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128454"
 ---
 # <a name="how-to-draw-text-to-a-controls-background"></a>方法: コントロールの背景にテキストを描画する
 コントロールの背景に直接テキストを描画するにはテキスト文字列を変換することで、<xref:System.Windows.Media.FormattedText>オブジェクト、およびコントロールのオブジェクトを描画<xref:System.Windows.Media.DrawingContext>します。 派生したオブジェクトの背景を描画のために、この手法を使用することもできます<xref:System.Windows.Controls.Panel>など<xref:System.Windows.Controls.Canvas>と<xref:System.Windows.Controls.StackPanel>します。  
@@ -29,5 +29,6 @@ ms.locfileid: "57378745"
  [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.FormattedText>
 - [書式設定されたテキストの描画](drawing-formatted-text.md)

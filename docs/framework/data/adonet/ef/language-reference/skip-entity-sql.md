@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: b17f73f97d32f151ed4f51b025c0c5a7a97393bb
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e8ef529ea8d2be2ef8eb3a2eb606e7ca8bf13f0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147876"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 物理的なページングは、ORDER BY 句の SKIP サブ句を使用して実行できます。 SKIP を ORDER BY 句と切り離して使用することはできません。  
@@ -36,6 +36,7 @@ ms.locfileid: "55904175"
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]でクエリを[方法。クエリの結果をページ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))を SKIP と共に SELECT ステートメントで返されたオブジェクトの並べ替え順序の指定に ORDER BY 演算子を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
 - [方法: クエリ結果 ページ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [ページング](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)

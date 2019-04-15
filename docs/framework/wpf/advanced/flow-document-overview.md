@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303493"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
 フロー ドキュメントは、表示と読みやすさを最適化するように設計されたドキュメントです。 フロー ドキュメントは、1 つの定義済みのレイアウトに設定するのではなく、ウィンドウのサイズ、デバイスの解像度、省略可能なユーザー設定など、ランタイム変数に基づいてコンテンツを動的に調整したりリフローしたりします。 また、フロー ドキュメントは、改ページ位置の自動修正や列などの高度なドキュメント機能を提供します。 ここでは、フロー ドキュメントの概要およびフロー ドキュメントの作成方法について説明します。  
@@ -89,9 +89,9 @@ ms.locfileid: "59139608"
   
  フロー コンテンツのために、次の 2 つの重要なカテゴリがあります。  
   
-1.  **Block の派生クラス**:「Block コンテンツ要素」または単に「ブロック要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Block>共通の親要素をグループ化またはグループに共通の属性を適用するために使用できます。  
+1. **Block の派生クラス**:「Block コンテンツ要素」または単に「ブロック要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Block>共通の親要素をグループ化またはグループに共通の属性を適用するために使用できます。  
   
-2.  **Inline の派生クラス**:「Inline コンテンツ要素」または単に「インライン要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Inline>Block 要素または別の Inline 要素に含まれるいずれか。 Inline 要素は、多くの場合、画面にレンダリングされるコンテンツの直接のコンテナーとして使用されます。 たとえば、 <xref:System.Windows.Documents.Paragraph> (Block 要素) を含めることができます、 <xref:System.Windows.Documents.Run> (Inline 要素) が、<xref:System.Windows.Documents.Run>実際に画面に表示されるテキストが含まれています。  
+2. **Inline の派生クラス**:「Inline コンテンツ要素」または単に「インライン要素」とも呼ばれます。 継承する要素<xref:System.Windows.Documents.Inline>Block 要素または別の Inline 要素に含まれるいずれか。 Inline 要素は、多くの場合、画面にレンダリングされるコンテンツの直接のコンテナーとして使用されます。 たとえば、 <xref:System.Windows.Documents.Paragraph> (Block 要素) を含めることができます、 <xref:System.Windows.Documents.Run> (Inline 要素) が、<xref:System.Windows.Documents.Run>実際に画面に表示されるテキストが含まれています。  
   
  これらの 2 つのカテゴリの各クラスについて、以下に簡単に説明します。  
   

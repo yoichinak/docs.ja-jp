@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201756"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835168"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>ボックス化とボックス化解除 (C# プログラミング ガイド)
 ボックス化とは、[値型](../../../csharp/language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型へ変換するプロセスのことです。 CLR により値型がボックス化されるとき、値は System.Object 内部にラップされ、マネージド ヒープに格納されます。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。 ボックス化とボックス化解除の概念は、任意の型の値をオブジェクトとして扱うという C# の型システムの統一されたビューに基づいています。  
@@ -46,10 +46,9 @@ ms.locfileid: "57201756"
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- このステートメントによって、ヒープ上にある `o` 型の値を参照するオブジェクト参照 `int` がスタック上に作成されます。 この値は、変数 `i` に割り当てられた値型の値のコピーです。 2 つの変数 `i` と `o` の違いを次の図に示します。  
+ このステートメントによって、ヒープ上にある `o` 型の値を参照するオブジェクト参照 `int` がスタック上に作成されます。 この値は、変数 `i` に割り当てられた値型の値のコピーです。 2 つの変数 `i` と `o` の違いを次のボックス化変換の図に示します。  
   
- ![BoxingConversion グラフィック](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
-ボックス化  
+ ![i 変数と o 変数の違いを示す図。](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
  次の例に示すように、明示的にボックス化を実行することもできますが、明示的なボックス化は不要です。  
   
@@ -72,13 +71,11 @@ ms.locfileid: "57201756"
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- 前のステートメントの結果は、次の図に示すとおりです。  
+ 前のステートメントの結果は、次の図に示すとおりです。 
   
- ![ボックス化解除変換グラフィック](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-ボックス化解除  
+ ![ボックス化解除変換を示す図。](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
- 実行時に値型のボックス化解除を成功させるには、ボックス化解除の対象項目が、同じ値型のインスタンスのボックス化によって既に作成済みのオブジェクトへの参照である必要があります。 
-  `null` をボックス化解除しようとすると <xref:System.NullReferenceException> が発生します。 互換性のない値型への参照をボックス化解除しようとすると、<xref:System.InvalidCastException> が発生します。  
+ 実行時に値型のボックス化解除を成功させるには、ボックス化解除の対象項目が、同じ値型のインスタンスのボックス化によって既に作成済みのオブジェクトへの参照である必要があります。 `null` をボックス化解除しようとすると <xref:System.NullReferenceException> が発生します。 互換性のない値型への参照をボックス化解除しようとすると、<xref:System.InvalidCastException> が発生します。  
   
 ## <a name="example"></a>例  
  次の例は、無効なボックス化解除の結果、`InvalidCastException` が発生する場合を示しています。 `try` と `catch` を使用すると、エラーの発生時にエラー メッセージが表示されます。  

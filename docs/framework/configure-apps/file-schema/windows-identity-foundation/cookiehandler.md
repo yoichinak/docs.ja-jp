@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: dc0613bb727f9ed061c3b5d494bdc279515b56e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115155"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 構成、<xref:System.IdentityModel.Services.CookieHandler>を<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) を使用して cookie を読み書きします。  
@@ -84,6 +84,7 @@ ms.locfileid: "57369017"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Services.CookieHandler>
 - <xref:System.IdentityModel.Services.ChunkedCookieHandler>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム LinkLabel コントロール (Visual Basic) から Web ページを表示します。'
+title: '方法: Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170028"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>方法: Windows フォーム LinkLabel コントロール (Visual Basic) から Web ページを表示します。
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>方法: Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)
 この例では、ユーザーが Windows フォームをクリックすると、既定のブラウザーで Web ページを表示<xref:System.Windows.Forms.LinkLabel>コントロール。  
   
 ## <a name="example"></a>例  
@@ -50,5 +50,6 @@ End Sub
  呼び出し、<xref:System.Diagnostics.Process.Start%2A>メソッドには、完全な信頼が必要です。 詳細については、「 <xref:System.Security.SecurityException> 」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

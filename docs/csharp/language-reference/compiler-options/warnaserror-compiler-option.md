@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329104"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# コンパイラ オプション)
 **-warnaserror+** オプションは、すべての警告をエラーとして扱います  
@@ -24,7 +24,7 @@ ms.locfileid: "54634611"
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  通常は警告として報告されるすべてのメッセージが、代わりにエラーとして報告され、ビルド プロセスが停止します (出力ファイルはビルドされません)。  
   
  既定では、**-warnaserror-** が有効になっているため、警告により出力ファイルの生成が妨げられることはありません。 **-warnaserror** は **-warnaserror+** と同じで、警告がエラーとして扱われます。  
@@ -35,11 +35,11 @@ ms.locfileid: "54634611"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **警告をエラーとして扱う**プロパティを変更します。  
+3. **警告をエラーとして扱う**プロパティを変更します。  
   
  このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>」を参照してください。  
   

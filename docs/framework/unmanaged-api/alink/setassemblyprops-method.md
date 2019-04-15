@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc9ca5d9533a6c4a297155a47ac0061f1232d242
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 589bd7b2132693c89dc10ae1a5c8d0bf52ed481e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218993"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps メソッド
 アセンブリ レベルのプロパティを割り当てます。  
@@ -57,6 +57,7 @@ HRESULT SetAssemblyProps(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

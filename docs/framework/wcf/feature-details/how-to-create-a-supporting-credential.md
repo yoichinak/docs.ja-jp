@@ -1,19 +1,19 @@
 ---
-title: '方法: サポート資格情報を作成します。'
+title: '方法: サポート資格情報を作成する'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326048"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成します。
+# <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成する
 カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2 番目の資格情報が、*資格情報をサポートしている*します。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
   
 > [!NOTE]
->  サポート資格情報の仕様は、WS-SecurityPolicy 仕様の一部です。 詳細については、[Web サービス セキュリティ仕様](https://go.microsoft.com/fwlink/?LinkId=88537)を参照してください。  
+>  サポート資格情報の仕様は、WS-SecurityPolicy 仕様の一部です。 詳細については、次を参照してください。 [Web サービス セキュリティ仕様](https://go.microsoft.com/fwlink/?LinkId=88537)します。  
   
 ## <a name="supporting-tokens"></a>トークンのサポート  
  メッセージのセキュリティを使用する場合に簡単に言うと、*プライマリ資格情報*は常に (たとえば、X.509 証明書または Kerberos チケット) メッセージをセキュリティで保護するために使用します。  
@@ -68,9 +68,9 @@ ms.locfileid: "54539806"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>サポート資格情報を備えたカスタム バインディングを作成するには  
   
-1.  セキュリティ バインド要素を作成します。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 認証モードで `UserNameForCertificate` を作成します。 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> メソッドを使用します。  
+1. セキュリティ バインド要素を作成します。 次の例では、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 認証モードで `UserNameForCertificate` を作成します。 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> メソッドを使用します。  
   
-2.  サポート パラメーターを対応するプロパティ (`Endorsing`、`Signed`、`SignedEncrypted`、または `SignedEndorsed`) によって返される型のコレクションに追加します。 <xref:System.ServiceModel.Security.Tokens> 名前空間に存在する型には、<xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> など、一般的に使用される型があります。  
+2. サポート パラメーターを対応するプロパティ (`Endorsing`、`Signed`、`SignedEncrypted`、または `SignedEndorsed`) によって返される型のコレクションに追加します。 <xref:System.ServiceModel.Security.Tokens> 名前空間に存在する型には、<xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> など、一般的に使用される型があります。  
   
 ## <a name="example"></a>例  
   
@@ -81,4 +81,5 @@ ms.locfileid: "54539806"
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>関連項目
-- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

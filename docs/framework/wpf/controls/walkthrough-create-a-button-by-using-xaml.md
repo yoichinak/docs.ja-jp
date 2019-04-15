@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309499"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>チュートリアル: XAML を使用したボタンの作成
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションで使用するためのアニメーションのボタンを作成する方法について説明します。 このチュートリアルでは、スタイルとテンプレートを使用して、コードの再利用し、ボタンの宣言からボタンのロジックの分離を許可するカスタマイズされたボタンのリソースを作成します。 このチュートリアルが完全に記述された[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
@@ -26,11 +26,11 @@ ms.locfileid: "59076563"
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>新しい WPF プロジェクトを作成し、ウィンドウにボタンを追加するには  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  **新しい WPF プロジェクトを作成します。** **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 検索、 **Windows アプリケーション (WPF)** テンプレートとプロジェクト"AnimatedButton"の名前。 これにより、アプリケーションのスケルトンが作成されます。  
+2. **新しい WPF プロジェクトを作成します。** **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 検索、 **Windows アプリケーション (WPF)** テンプレートとプロジェクト"AnimatedButton"の名前。 これにより、アプリケーションのスケルトンが作成されます。  
   
-3.  **基本的な既定のボタンを追加します。** このチュートリアルで必要なすべてのファイルは、テンプレートによって提供されます。 ダブルクリックして、ソリューション エクスプ ローラーで、Window1.xaml ファイルを開きます。 既定では、 <xref:System.Windows.Controls.Grid> Window1.xaml 内の要素。 削除、<xref:System.Windows.Controls.Grid>要素をいくつかのボタンを追加して、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 」と入力またはコピーして貼り付けることで Window1.xaml を強調表示されている次のコード ページ。  
+3. **基本的な既定のボタンを追加します。** このチュートリアルで必要なすべてのファイルは、テンプレートによって提供されます。 ダブルクリックして、ソリューション エクスプ ローラーで、Window1.xaml ファイルを開きます。 既定では、 <xref:System.Windows.Controls.Grid> Window1.xaml 内の要素。 削除、<xref:System.Windows.Controls.Grid>要素をいくつかのボタンを追加して、 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 」と入力またはコピーして貼り付けることで Window1.xaml を強調表示されている次のコード ページ。  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ ms.locfileid: "59076563"
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>スタイルを使用して、ボタンの基本プロパティを設定するには  
   
-1.  **Application.Resources ブロックを定義します。** App.xaml を開きがない場合は、次の強調表示されたマークアップを追加します。  
+1. **Application.Resources ブロックを定義します。** App.xaml を開きがない場合は、次の強調表示されたマークアップを追加します。  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ ms.locfileid: "59076563"
   
      リソースのスコープは、定義したリソースによって決定されます。 内のリソースを定義する`Application.Resources`app.xaml ファイル、アプリケーションで任意の場所から使用するリソースを使用できます。 詳細については、リソースのスコープを定義するを参照してください。 [XAML リソース](../advanced/xaml-resources.md)します。  
   
-2.  **スタイルを作成し、基本的なプロパティ値を定義します。** 次のマークアップを追加、`Application.Resources`ブロックします。 このマークアップを作成、<xref:System.Windows.Style>設定、アプリケーションのすべてのボタンに適用する、<xref:System.Windows.FrameworkElement.Width%2A>を 90 にボタンの<xref:System.Windows.FrameworkElement.Margin%2A>10。  
+2. **スタイルを作成し、基本的なプロパティ値を定義します。** 次のマークアップを追加、`Application.Resources`ブロックします。 このマークアップを作成、<xref:System.Windows.Style>設定、アプリケーションのすべてのボタンに適用する、<xref:System.Windows.FrameworkElement.Width%2A>を 90 にボタンの<xref:System.Windows.FrameworkElement.Margin%2A>10。  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ ms.locfileid: "59076563"
   
      さらに多くのさまざまなオブジェクトが対象となるを微調整する方法を含む、複合プロパティの値を指定しても入力としてスタイルを使用して、その他のスタイルのスタイルで行えるがあります。 詳しくは、「 [スタイルとテンプレート](styling-and-templating.md)」をご覧ください。  
   
-3.  **リソースへのスタイル プロパティの値を設定します。** リソースには、一般的に定義されるオブジェクトと値を再利用する簡単な方法が有効にします。 リソースを使用して、コードをモジュール性の高い複雑な値を定義すると特に便利です。 App.xaml には、次の強調表示されたマークアップを追加します。  
+3. **リソースへのスタイル プロパティの値を設定します。** リソースには、一般的に定義されるオブジェクトと値を再利用する簡単な方法が有効にします。 リソースを使用して、コードをモジュール性の高い複雑な値を定義すると特に便利です。 App.xaml には、次の強調表示されたマークアップを追加します。  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ ms.locfileid: "59076563"
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>テンプレートを使用して、ボタンの外観を定義するには  
   
-1.  **テンプレートを設定します。** コントロールなどのため、<xref:System.Windows.Controls.Button>が、<xref:System.Windows.Controls.Control.Template%2A>プロパティで設定している他のプロパティ値と同様、テンプレート プロパティの値を定義できますを<xref:System.Windows.Style>を使用して、<xref:System.Windows.Setter>します。 次の強調表示されたマークアップをボタンのスタイルに追加します。  
+1. **テンプレートを設定します。** コントロールなどのため、<xref:System.Windows.Controls.Button>が、<xref:System.Windows.Controls.Control.Template%2A>プロパティで設定している他のプロパティ値と同様、テンプレート プロパティの値を定義できますを<xref:System.Windows.Style>を使用して、<xref:System.Windows.Setter>します。 次の強調表示されたマークアップをボタンのスタイルに追加します。  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ ms.locfileid: "59076563"
     </Application.Resources>  
     ```  
   
-2.  **ボタンのプレゼンテーションを変更するには。** この時点では、テンプレートを定義する必要があります。 次の強調表示されたマークアップを追加します。 このマークアップでは、2 つを指定します<xref:System.Windows.Shapes.Rectangle>角の丸いを持つ要素が続く、<xref:System.Windows.Controls.DockPanel>します。 <xref:System.Windows.Controls.DockPanel>されるホストに、<xref:System.Windows.Controls.ContentPresenter>ボタンの。 A<xref:System.Windows.Controls.ContentPresenter>ボタンのコンテンツを表示します。 このチュートリアルでは、コンテンツは、テキスト (「ボタン 1」、「ボタン 2」、「ボタン 3」) です。 すべてのテンプレートのコンポーネント (四角形と<xref:System.Windows.Controls.DockPanel>) 内のレイアウトは、<xref:System.Windows.Controls.Grid>します。  
+2. **ボタンのプレゼンテーションを変更するには。** この時点では、テンプレートを定義する必要があります。 次の強調表示されたマークアップを追加します。 このマークアップでは、2 つを指定します<xref:System.Windows.Shapes.Rectangle>角の丸いを持つ要素が続く、<xref:System.Windows.Controls.DockPanel>します。 <xref:System.Windows.Controls.DockPanel>されるホストに、<xref:System.Windows.Controls.ContentPresenter>ボタンの。 A<xref:System.Windows.Controls.ContentPresenter>ボタンのコンテンツを表示します。 このチュートリアルでは、コンテンツは、テキスト (「ボタン 1」、「ボタン 2」、「ボタン 3」) です。 すべてのテンプレートのコンポーネント (四角形と<xref:System.Windows.Controls.DockPanel>) 内のレイアウトは、<xref:System.Windows.Controls.Grid>します。  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ ms.locfileid: "59076563"
   
      ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **テンプレートには、グラス効果を追加します。** 次に、ガラスを追加します。 まずガラスのグラデーション効果を作成するいくつかのリソースを作成します。 これらグラデーション内のリソース任意の場所を追加、`Application.Resources`ブロック。  
+3. **テンプレートには、グラス効果を追加します。** 次に、ガラスを追加します。 まずガラスのグラデーション効果を作成するいくつかのリソースを作成します。 これらグラデーション内のリソース任意の場所を追加、`Application.Resources`ブロック。  
   
     ```xaml  
     <Application.Resources>  
@@ -253,7 +253,7 @@ ms.locfileid: "59076563"
   
 #### <a name="to-create-button-interactivity"></a>ボタンの対話機能を作成するには  
   
-1.  **テンプレートのトリガーを追加します。** テンプレートには、強調表示されたマークアップを追加します。  
+1. **テンプレートのトリガーを追加します。** テンプレートには、強調表示されたマークアップを追加します。  
   
     ```xaml
     <Setter.Value>  
@@ -318,7 +318,7 @@ ms.locfileid: "59076563"
     </Setter.Value>  
     ```  
   
-2.  **プロパティ トリガーを追加します。** 強調表示されたマークアップを追加、`ControlTemplate.Triggers`ブロック。  
+2. **プロパティ トリガーを追加します。** 強調表示されたマークアップを追加、`ControlTemplate.Triggers`ブロック。  
   
     ```xaml
     <ControlTemplate.Triggers>  
@@ -330,7 +330,7 @@ ms.locfileid: "59076563"
   
      F5 キーを押してアプリケーションを実行し、ボタンの上にマウス ポインターを実行すると、影響を確認します。  
   
-3.  **フォーカスのトリガーを追加します。** 次に、ボタンに (たとえば、ユーザーがクリックした後) にフォーカスがあるときに、ケースを処理するいくつかのような set アクセス操作子を追加します。  
+3. **フォーカスのトリガーを追加します。** 次に、ボタンに (たとえば、ユーザーがクリックした後) にフォーカスがあるときに、ケースを処理するいくつかのような set アクセス操作子を追加します。  
   
     ```xaml  
     <ControlTemplate.Triggers>  
@@ -361,7 +361,7 @@ ms.locfileid: "59076563"
   
      F5 キーを押してアプリケーションを実行し、ボタンのいずれかをクリックします。 フォーカスをしているために、クリックした後、ボタンが強調表示されたままことに注意してください。 新しいボタンに別のボタンをクリックすると、最後の 1 つがそれを失ったときにフォーカスを取得します。  
   
-4.  **アニメーションを追加**<xref:System.Windows.UIElement.MouseEnter> **と** <xref:System.Windows.UIElement.MouseLeave> **:** 次に、トリガーに一部のアニメーションを追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロックします。  
+4. **アニメーションを追加**<xref:System.Windows.UIElement.MouseEnter> **と** <xref:System.Windows.UIElement.MouseLeave> **:** 次に、トリガーに一部のアニメーションを追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロックします。  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -398,7 +398,7 @@ ms.locfileid: "59076563"
   
      2 番目のイベント トリガー (<xref:System.Windows.UIElement.MouseLeave>) 1 つ目を単純に停止します。 停止すると、 <xref:System.Windows.Media.Animation.Storyboard>、アニメーション化されたすべてのプロパティが既定値に戻ります。 そのため、ユーザーがポインター ボタンから離れると、ボタンに戻りますがマウス ポインターがボタンの上に移動する前にする方法。 アニメーションの詳細については、次を参照してください。[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
   
-5.  **ボタンがクリックされたときのアニメーションを追加します。** 最後の手順では、ユーザーがボタンをクリックしたときにトリガーを追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロック。  
+5. **ボタンがクリックされたときのアニメーションを追加します。** 最後の手順では、ユーザーがボタンをクリックしたときにトリガーを追加します。 任意の場所内の次のマークアップを追加、`ControlTemplate.Triggers`ブロック。  
   
     ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  

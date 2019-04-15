@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543251"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330884"
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する
 多くのコンポーネントでは、非同期的に作業を実行するオプションが提供されます。 たとえば、<xref:System.Media.SoundPlayer> と <xref:System.Windows.Forms.PictureBox> コンポーネントでは、メイン スレッドが中断されることなく、実行され続ける間に、"バックグラウンドで" 音声とイメージを読み込むことができます。  
@@ -36,9 +36,9 @@ ms.locfileid: "54543251"
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>イメージを非同期的に読み込むために PictureBox コントロールを有効にするには  
   
-1.  フォームで <xref:System.Windows.Forms.PictureBox> コンポーネントのインスタンスを作成します。  
+1. フォームで <xref:System.Windows.Forms.PictureBox> コンポーネントのインスタンスを作成します。  
   
-2.  イベント ハンドラーを <xref:System.Windows.Forms.PictureBox.LoadCompleted> イベントに割り当てます。  
+2. イベント ハンドラーを <xref:System.Windows.Forms.PictureBox.LoadCompleted> イベントに割り当てます。  
   
      非同期ダウンロード中に発生する可能性があるエラーをここで確認してください。 また、ここはキャンセルを確認するための場所でもあります。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54543251"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  `loadButton` と `cancelLoadButton` と呼ばれる 2 つのボタンをフォームに追加します。 ダウンロードの開始とキャンセルを行うために、<xref:System.Windows.Forms.Control.Click> イベント ハンドラーを追加します。  
+3. `loadButton` と `cancelLoadButton` と呼ばれる 2 つのボタンをフォームに追加します。 ダウンロードの開始とキャンセルを行うために、<xref:System.Windows.Forms.Control.Click> イベント ハンドラーを追加します。  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,7 +56,7 @@ ms.locfileid: "54543251"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  アプリケーションを実行します。  
+4. アプリケーションを実行します。  
   
      イメージのダウンロードを進めるときに、フォームを自由に移動したり、最小化や最大化を行ったりすることができます。  
   

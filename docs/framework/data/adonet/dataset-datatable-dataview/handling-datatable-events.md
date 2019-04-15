@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312827"
 ---
 # <a name="handling-datatable-events"></a>DataTable イベントの処理
 <xref:System.Data.DataTable> オブジェクトは、アプリケーションが処理できる一連のイベントを提供します。 `DataTable` のイベントを次の表に示します。  
@@ -47,21 +47,21 @@ ms.locfileid: "59098924"
 ## <a name="sequence-of-operations"></a>操作の順序  
  `DataRow` が追加、変更、または削除されたときに発生する操作の順序について説明します。  
   
-1.  提示されたレコードを作成し、変更を適用します。  
+1. 提示されたレコードを作成し、変更を適用します。  
   
-2.  式以外の列の制約をチェックします。  
+2. 式以外の列の制約をチェックします。  
   
-3.  適宜 `RowChanging` イベントまたは `RowDeleting` イベントを発生させます。  
+3. 適宜 `RowChanging` イベントまたは `RowDeleting` イベントを発生させます。  
   
-4.  提示されたレコードを現在のレコードとして設定します。  
+4. 提示されたレコードを現在のレコードとして設定します。  
   
-5.  関連するインデックスをすべて更新します。  
+5. 関連するインデックスをすべて更新します。  
   
-6.  関連する `ListChanged` オブジェクトの `DataView` イベントおよび関連する `PropertyChanged` オブジェクトの `DataRowView` イベントを発生させます。  
+6. 関連する `ListChanged` オブジェクトの `DataView` イベントおよび関連する `PropertyChanged` オブジェクトの `DataRowView` イベントを発生させます。  
   
-7.  すべての式列を評価します。ただし、これらの列に対する制約のチェックは、この段階では行われません。  
+7. すべての式列を評価します。ただし、これらの列に対する制約のチェックは、この段階では行われません。  
   
-8.  式列の評価によって影響を受ける、関連する `ListChanged` オブジェクトの `DataView` イベントおよび関連する `PropertyChanged` オブジェクトの `DataRowView` イベントを発生させます。  
+8. 式列の評価によって影響を受ける、関連する `ListChanged` オブジェクトの `DataView` イベントおよび関連する `PropertyChanged` オブジェクトの `DataRowView` イベントを発生させます。  
   
 9. 適宜 `RowChanged` イベントまたは `RowDeleted` イベントを発生させます。  
   

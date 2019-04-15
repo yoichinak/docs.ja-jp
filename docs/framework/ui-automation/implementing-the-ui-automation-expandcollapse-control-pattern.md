@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ddc2219b0ef6593b6bfa9ab40936cc7b0fff120b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211661"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI オートメーション ExpandCollapse コントロール パターンの実装
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57678384"
   
 -   コントロールの <xref:System.Windows.Automation.ExpandCollapseState> が <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>に設定されている場合、コントロールに対して現在アクティブな <xref:System.Windows.Automation.ExpandCollapsePattern> 機能は存在せず、このコントロール パターンを使用して取得できる情報は <xref:System.Windows.Automation.ExpandCollapseState>だけです。 その後、子オブジェクトが追加された場合は、 <xref:System.Windows.Automation.ExpandCollapseState> が変更され、 <xref:System.Windows.Automation.ExpandCollapsePattern> 機能がアクティブになります。  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> は、すべての子孫オブジェクトの可視性を表すのではなく、直接の子オブジェクトの可視性のみを表します。  
+-   <xref:System.Windows.Automation.ExpandCollapseState> 参照の直接の子オブジェクトのみで、表示するすべての子オブジェクトの可視性には参照しません。  
   
 -   展開および折りたたみ機能は、コントロールに固有の機能です。 この機能の動作例を次に示します。  
   
@@ -64,9 +64,10 @@ ms.locfileid: "57678384"
 |<xref:System.InvalidOperationException>|いずれか<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>または<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>時に呼び出される、 <xref:System.Windows.Automation.ExpandCollapseState>  = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>します。|  
   
 ## <a name="see-also"></a>関連項目
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [TreeWalker を使用した UI オートメーション要素間の移動](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

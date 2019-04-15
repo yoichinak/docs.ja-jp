@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374909"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921300"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>.NET コンテナーで対象とする OS
 
@@ -38,20 +38,20 @@ Dockerfile ファイルにイメージ名を追加すると、次の例のよう
 </thead>
 <tbody>
 <tr>
-<td>microsoft/dotnet:2.2-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/runtime:2.2</td>
 <td>.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2</td>
 <td><p>ASP.NET Core 2.2 マルチアーキテクチャ:Docker ホストに応じて、Linux と Windows Nano Server をサポートします。</p>
 <p>aspnetcore イメージでは、ASP.NET Core 用に 少しの最適化が行われています。</p></td>
 </tr>
 <tr class="even">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-alpine</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine</td>
 <td>Linux Alpine ディストリビューションでの .NET Core 2.2 ランタイムのみ</td>
 </tr>
 <tr class="odd">
-<td>microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1803</td>
+<td>mcr.microsoft.com/dotnet/core/aspnet:2.2-nanoserver-1803</td>
 <td>Windows Nano Server (Windows Server バージョン 1803) では .NET Core 2.2 ランタイムのみ</td>
 </tr>
 </tbody>

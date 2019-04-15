@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221190"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework のネットワークのトレース
 .NET Framework のネットワークのトレースでは、メソッド呼び出しについての情報、およびマネージド アプリケーションによって生成されるネットワーク トラフィックについての情報にアクセスできます。 この機能は、開発中のアプリケーションのデバッグや、配置済みのアプリケーションの分析に役立ちます。 ネットワークのトレースの出力は、開発時および稼動環境でのさまざまな使用方法をサポートするようにカスタマイズできます。  
@@ -36,6 +36,7 @@ ms.locfileid: "54514700"
 >  このメンバーは、アプリケーションでネットワーク トレースが有効にされている場合にトレース情報を出力します。 詳細については、「ネットワークのトレース」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [方法: ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)

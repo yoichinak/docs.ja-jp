@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの DataGridView コントロールで行の追加および削除を防ぐ'
+title: '方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: c1e1d29cc7b13d34542a12050972be35eeed868d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a80b10f2d3c2b6dea198fea83f1ffaaa358b68ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147889"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロールで行の追加および削除を防ぐ
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする
 場合によっては、ユーザーが <xref:System.Windows.Forms.DataGridView> コントロールに新しいデータ行を入力したり、既存の行を削除したりできないようにする必要があります。 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> プロパティは新しいレコードのための行がコントロールの一番下に存在しているかどうかを示し、<xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> プロパティは行を削除できるかどうかを示します。 次のコード例は、これらのプロパティを使用し、さらに <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> プロパティも設定して、コントロール全体を読み取り専用にします。  
   
  Visual Studio では、このタスクに対するサポートが用意されています。 参照してください[方法。行の追加を回避し、削除を Windows フォーム DataGridView コントロールのデザイナーを使用して](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)します。  
@@ -30,10 +30,10 @@ ms.locfileid: "57706436"
   
 -   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   
-  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.ReadOnly%2A?displayProperty=nameWithType>

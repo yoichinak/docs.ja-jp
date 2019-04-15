@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8425b294328d4fc7546a372b329d8fa834a088d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156079"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
 <a name="top"></a>
@@ -48,7 +48,7 @@ ms.locfileid: "54567023"
   
 -   [オーバーライドのパターン](#override)  
   
--   [継承ルール](#inheritance)  
+-   [継承規則](#inheritance)  
   
 -   [追加情報と規則](#additional)  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54567023"
  <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 使用して、アセンブリの透過的なコードが検証可能なことを確認してください、`transparent`オプション、 [PEVerify ツール](../../../docs/framework/tools/peverify-exe-peverify-tool.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [透過的セキュリティ コード、レベル 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [セキュリティの変更](../../../docs/framework/security/security-changes.md)

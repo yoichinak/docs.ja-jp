@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: f04381bae2ebed5f0f65b4c6b4043c86ac7f63ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330767"
 ---
 # <a name="get-ui-automation-element-properties"></a>UI オートメーション要素のプロパティの取得
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "59078383"
   
 ### <a name="get-a-current-property-value"></a>現在のプロパティ値を取得します。  
   
-1.  取得、<xref:System.Windows.Automation.AutomationElement>を取得するプロパティを持つ。  
+1. 取得、<xref:System.Windows.Automation.AutomationElement>を取得するプロパティを持つ。  
   
-2.  呼び出す<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>、または取得、<xref:System.Windows.Automation.AutomationElement.Current%2A>プロパティ構造とそのメンバーの 1 つから値を取得します。  
+2. 呼び出す<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>、または取得、<xref:System.Windows.Automation.AutomationElement.Current%2A>プロパティ構造とそのメンバーの 1 つから値を取得します。  
   
 ### <a name="get-a-cached-property-value"></a>キャッシュされたプロパティ値を取得します。  
   
-1.  取得、<xref:System.Windows.Automation.AutomationElement>を取得するプロパティを持つ。 プロパティが指定されている必要があります、<xref:System.Windows.Automation.CacheRequest>します。  
+1. 取得、<xref:System.Windows.Automation.AutomationElement>を取得するプロパティを持つ。 プロパティが指定されている必要があります、<xref:System.Windows.Automation.CacheRequest>します。  
   
-2.  呼び出す<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>、または取得、<xref:System.Windows.Automation.AutomationElement.Cached%2A>プロパティ構造とそのメンバーの 1 つから値を取得します。  
+2. 呼び出す<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>、または取得、<xref:System.Windows.Automation.AutomationElement.Cached%2A>プロパティ構造とそのメンバーの 1 つから値を取得します。  
   
 ## <a name="example"></a>例  
  次の例では、現在のプロパティを取得するさまざまな方法を示しています、<xref:System.Windows.Automation.AutomationElement>します。  

@@ -1,15 +1,15 @@
 ---
-title: Windows Communication Foundation の採用を予測します。将来的な統合を簡略化
+title: Windows Communication Foundation 導入の準備:将来的な統合の容易化
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316337"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation の採用を予測します。将来的な統合を簡略化
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 導入の準備:将来的な統合の容易化
 現在 ASP.NET を使用して WCF を今後の使用が予想される場合、このトピックは、WCF アプリケーションと共に、新しい ASP.NET Web サービスが動作することを確認するためのガイダンスを示します。  
   
 ## <a name="general-recommendations"></a>一般的な推奨事項  
@@ -34,9 +34,9 @@ public interface IEcho
 ## <a name="data-representation"></a>データ表現  
  <xref:System.Xml.Serialization.XmlSerializer> によって既定で型のシリアル化が行われる XML は、XML の名前空間が明示的に定義されている場合、<xref:System.Runtime.Serialization.DataContractSerializer> によって型のシリアル化が行われる XML と意味的に同一です。 を導入する WCF を見越して、今後の ASP.NET Web サービスで使用するためのデータ型を定義するときは、次の操作を行います。  
   
-1.  XML スキーマではなく、.NET Framework クラスを使用して型を定義します。  
+1. XML スキーマではなく、.NET Framework クラスを使用して型を定義します。  
   
-2.  <xref:System.SerializableAttribute> と <xref:System.Xml.Serialization.XmlRootAttribute> だけをそのクラスに追加します。後者を使用して型の名前空間を明示的に定義してください。 .NET Framework クラスを XML に変換する方法を制御する目的で、<xref:System.Xml.Serialization> 名前空間の属性を追加しないでください。  
+2. <xref:System.SerializableAttribute> と <xref:System.Xml.Serialization.XmlRootAttribute> だけをそのクラスに追加します。後者を使用して型の名前空間を明示的に定義してください。 .NET Framework クラスを XML に変換する方法を制御する目的で、<xref:System.Xml.Serialization> 名前空間の属性を追加しないでください。  
   
  この手法を採用すると、後から <xref:System.Runtime.Serialization.DataContractAttribute> および <xref:System.Runtime.Serialization.DataMemberAttribute> を追加することで、転送のためにクラスをシリアル化する XML に大きな変更を加えることなく .NET クラスをデータ コントラクトにすることができます。 ASP.NET Web サービスでのメッセージで使用される型できるようになります、WCF アプリケーションでデータ コントラクトとして処理するその他の特典では、WCF アプリケーションのパフォーマンス向上の間で、生成します。  
   
@@ -44,4 +44,5 @@ public interface IEcho
  インターネット インフォメーション サービス (IIS) に用意されている認証オプションは使用しないでください。 WCF クライアントでは、そのサポートしていません。 保護されるように、サービスに必要な場合は、これらのオプションの幅が広く、標準のプロトコルに基づいているため、WCF が提供するオプションを使用します。  
   
 ## <a name="see-also"></a>関連項目
-- [Windows Communication Foundation の採用を予測します。将来の移行を簡略化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Windows Communication Foundation 導入の準備:将来の移行の簡略化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

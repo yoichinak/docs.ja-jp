@@ -12,17 +12,16 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356482"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301400"
 ---
 # <a name="drag-and-drop-overview"></a>ドラッグ アンド ドロップの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのドラッグ アンド ドロップのサポートの概要について説明します。 一般的に、ドラッグ アンド ドロップとは、マウス (または何らかのポインティング デバイス) を使用して 1 つ以上のオブジェクトを選択し、これらのオブジェクトを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の目的のドロップ先までドラッグしてからドロップするデータ転送方式をいいます。  
-  
-  
+
 <a name="Drag_and_Drop_Support"></a>   
 ## <a name="drag-and-drop-support-in-wpf"></a>WPF でのドラッグ アンド ドロップのサポート  
  ドラッグ アンド ドロップ操作には、一般に、ドラッグするオブジェクトがドラッグを始めるドラッグ元と、ドロップするオブジェクトを受け取るドロップ先という 2 者があります。  ドラッグ元とドロップ先は、同じアプリケーションまたは異なるアプリケーションの UI 要素になることがあります。  
@@ -55,7 +54,7 @@ ms.locfileid: "57356482"
  ドラッグ アンド ドロップ操作のソースとターゲットは UI 要素ですが、一般に、実際に転送されているデータには視覚的表現はありません。 Windows エクスプローラーでファイルをドラッグするときに起こるような視覚的表現を、ドラッグするデータで実行するように、コードを記述することができます。 既定では、データを移動するのかコピーするのかなど、ドラッグ アンド ドロップ操作によりデータに起こる効果を表すようにカーソルを変更して、ユーザーにフィードバックします。  
   
 ### <a name="drag-and-drop-effects"></a>ドラッグ アンド ドロップの効果  
- ドラッグ アンド ドロップ操作には、転送するデータにさまざまな効果を持たせることができます。 たとえば、データをコピーしたり、データを移動したりできるなどです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ドラッグ アンド ドロップ操作の効果を指定するために使用できる <xref:System.Windows.DragDropEffects> 列挙体を定義します。 ドラッグ元では、ソースが <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドで許可する効果を指定できます。 ドロップ先では、<xref:System.Windows.DragEventArgs.Effects%2A> クラスの <xref:System.Windows.DragEventArgs> プロパティでターゲットの目的の効果を指定できます。 <xref:System.Windows.DragDrop.DragOver> イベントでドロップ先の目的の効果を指定した場合、その情報が <xref:System.Windows.DragDrop.GiveFeedback> イベントのドラッグ元に渡されます。 ドラッグ元では、この情報を使用して、ドロップ先がデータにどのような効果を起こそうとしているかをユーザーに伝えます。 データがドロップされると、ドロップ先では <xref:System.Windows.DragDrop.Drop> イベントでの実際の効果を指定します。 この情報は、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドの戻り値としてドラッグ元に渡されます。 ドラッグ元の `allowedEffects` の一覧にない効果をドロップ先が返す場合、ドラッグ アンド ドロップ操作は取り消され、データ転送は発生しません。  
+ ドラッグ アンド ドロップ操作には、転送するデータにさまざまな効果を持たせることができます。 たとえば、データをコピーしたり、データを移動したりできるなどです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義、<xref:System.Windows.DragDropEffects>使用することができますをドラッグ アンド ドロップ操作の効果を指定する列挙体。 ドラッグ元では、ソースが <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドで許可する効果を指定できます。 ドロップ先では、<xref:System.Windows.DragEventArgs.Effects%2A> クラスの <xref:System.Windows.DragEventArgs> プロパティでターゲットの目的の効果を指定できます。 <xref:System.Windows.DragDrop.DragOver> イベントでドロップ先の目的の効果を指定した場合、その情報が <xref:System.Windows.DragDrop.GiveFeedback> イベントのドラッグ元に渡されます。 ドラッグ元では、この情報を使用して、ドロップ先がデータにどのような効果を起こそうとしているかをユーザーに伝えます。 データがドロップされると、ドロップ先では <xref:System.Windows.DragDrop.Drop> イベントでの実際の効果を指定します。 この情報は、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドの戻り値としてドラッグ元に渡されます。 ドラッグ元の `allowedEffects` の一覧にない効果をドロップ先が返す場合、ドラッグ アンド ドロップ操作は取り消され、データ転送は発生しません。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ドラッグ アンド ドロップ操作の効果に関しては、<xref:System.Windows.DragDropEffects> 値はドラッグ元とドロップ先間の通信にのみ使用されるということを覚えておくのは重要です。 ドラッグ アンド ドロップ操作の実際の効果は、アプリケーションで適切なコードを記述することに依存します。  
   
@@ -147,11 +146,11 @@ ms.locfileid: "57356482"
   
  <xref:System.Windows.UIElement.MouseMove> イベント ハンドラー内で、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドを呼び出して、ドラッグ アンド ドロップ操作を開始します。 <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドは 3 つのパラメーターを受け取ります。  
   
--   `dragSource` – 転送されたデータのソースである依存関係オブジェクトへの参照。通常、これは <xref:System.Windows.UIElement.MouseMove> イベントのソースです。  
+-   `dragSource` – 転送されたデータのソースである依存関係オブジェクトへの参照これは、通常のソース、<xref:System.Windows.UIElement.MouseMove>イベント。  
   
--   `data` - <xref:System.Windows.DataObject> にラップされる転送済みデータを含むオブジェクト。  
+-   `data` -でラップされた、転送されたデータを格納しているオブジェクト、<xref:System.Windows.DataObject>します。  
   
--   `allowedEffects` - ドラッグ アンド ドロップ操作の許可される効果を指定する <xref:System.Windows.DragDropEffects> 列挙値の 1 つ。  
+-   `allowedEffects` 1、<xref:System.Windows.DragDropEffects>ドラッグ アンド ドロップ操作の許可される効果を指定する列挙値。  
   
  シリアル化可能なオブジェクトはすべて `data` パラメーターに渡すことができます。 データがまだ <xref:System.Windows.DataObject> にラップされていない場合、データは新しい <xref:System.Windows.DataObject> に自動的にラップされます。 複数のデータ項目を渡すには、自分で <xref:System.Windows.DataObject> を作成し、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドに渡す必要があります。 詳細については、「[データとデータ オブジェクト](data-and-data-objects.md)」を参照してください。  
   
@@ -182,11 +181,11 @@ ms.locfileid: "57356482"
   
  要素がドロップ先であることを指定するには、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定します。 ドロップ先のイベントが要素で発生して、処理できるようになります。 ドラッグ アンド ドロップ操作中に、次の一連のイベントがドロップ先で発生します。  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> または <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> または <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> イベントは、データがドロップ先の境界の中にドラッグされるときに発生します。 通常は、アプリケーションに適していれば、ドラッグ アンド ドロップ操作の効果のプレビューを提供するように、このイベントを処理します。 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> イベントで <xref:System.Windows.DragDrop.DragEnter> プロパティを設定しないでください。このプロパティは <xref:System.Windows.DragDrop.DragOver> イベントで上書きされるためです。  
   
@@ -217,7 +216,8 @@ ms.locfileid: "57356482"
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Clipboard>
-- [チュートリアル: 有効にするドラッグ アンド ドロップ ユーザー コントロールで](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [方法トピック](drag-and-drop-how-to-topics.md)
+- [チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [方法のトピック](drag-and-drop-how-to-topics.md)
 - [ドラッグ アンド ドロップ](drag-and-drop.md)

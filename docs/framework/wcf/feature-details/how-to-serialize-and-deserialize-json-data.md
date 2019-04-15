@@ -2,12 +2,12 @@
 title: '方法: JSON データをシリアル化および逆シリアル化する'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336955"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>方法: および JSON データを逆シリアル化
 JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJAX 対応の Web サービスとの間で、少量のデータを高速に交換できる効率的なデータ エンコード形式です。  
@@ -23,7 +23,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Person 型のデータ コントラクトを定義するには 
   
-1.  クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、次を参照してください。[サービス コントラクトの設計](../designing-service-contracts.md)します。  
+1. クラスに `Person` をアタッチし、シリアル化するメンバーに <xref:System.Runtime.Serialization.DataContractAttribute> 属性をアタッチすることで、<xref:System.Runtime.Serialization.DataMemberAttribute> のデータ コントラクトを定義します。 データ コントラクトの詳細については、次を参照してください。[サービス コントラクトの設計](../designing-service-contracts.md)します。  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>Person 型のインスタンスを JSON にシリアル化するには  
   
-1.  `Person` 型のインスタンスを作成します。  
+1. `Person` 型のインスタンスを作成します。  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
     p.age = 42;  
     ```  
   
-2.  シリアル化、`Person`オブジェクトをメモリ ストリームを使用して、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>します。  
+2. シリアル化、`Person`オブジェクトをメモリ ストリームを使用して、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>します。  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  JSON データをストリームに書き込むには、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> メソッドを使用します。  
+3. JSON データをストリームに書き込むには、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> メソッドを使用します。  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  JSON の出力を表示します。  
+4. JSON の出力を表示します。  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON から Person 型のインスタンスに逆シリアル化するには  
   
-1.  `Person` の <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> メソッドを使用して、JSON エンコードされたデータを <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> の新しいインスタンスに逆シリアル化します。  
+1. `Person` の <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> メソッドを使用して、JSON エンコードされたデータを <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> の新しいインスタンスに逆シリアル化します。  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  結果を表示します。  
+2. 結果を表示します。  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  

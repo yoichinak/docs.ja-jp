@@ -1,13 +1,13 @@
 ---
-title: <add> の <allowAccounts>
+title: <add> (行中)  <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 6edf0bc2d532deb01f24450b9868bbc240bab413
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186603"
 ---
 # <a name="add-of-allowaccounts"></a>\<add> of \<allowAccounts>
 WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセス用のユーザー アカウントを指定します。  
@@ -59,6 +59,7 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>

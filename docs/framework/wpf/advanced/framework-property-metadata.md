@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108707"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314699"
 ---
 # <a name="framework-property-metadata"></a>フレームワーク プロパティ メタデータ
 フレームワーク プロパティ メタデータのオプションは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アーキテクチャの WPF フレームワーク レベルにあると見なされるオブジェクト要素のプロパティに対して報告されます。 一般に、WPF フレームワーク レベルが指定されている場合、レンダリング、データ バインディング、プロパティ システムの調整などの機能が、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプレゼンテーション [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] と実行可能ファイルによって処理されます。 フレームワーク プロパティ メタデータがこれらのシステムによって照会されて、特定の要素プロパティに対する機能固有の特性が決まります。  
@@ -48,9 +48,9 @@ ms.locfileid: "59108707"
   
  作成する場合、<xref:System.Windows.FrameworkPropertyMetadata>インスタンス、フレームワーク プロパティの特性を通信する特定のプロパティの値をそのメタデータを設定する 2 つの方法があります。  
   
-1.  使用して、<xref:System.Windows.FrameworkPropertyMetadata>できるコンス トラクターのシグネチャを`flags`パラメーター。 このパラメーターは必要なすべての値の組み合わせを入力する必要があります、<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙フラグ。  
+1. 使用して、<xref:System.Windows.FrameworkPropertyMetadata>できるコンス トラクターのシグネチャを`flags`パラメーター。 このパラメーターは必要なすべての値の組み合わせを入力する必要があります、<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙フラグ。  
   
-2.  持たないシグネチャのいずれかを使用して、`flags`パラメーター、し、設定のブール型プロパティを報告する各<xref:System.Windows.FrameworkPropertyMetadata>に`true`特性の変更が必要な各。 この場合、この依存関係プロパティを持つすべての要素の構築前に、これらのプロパティを設定する必要があります。`flags` パラメーターを使用せずに引き続きメタデータを読み込めるよう、これらのブール型プロパティは読み書き可能な状態ですが、プロパティの使用前にメタデータを事実上シールする必要があります。 そのため、メタデータの要求後にこれらのプロパティを設定しようとすると、無効な操作となります。  
+2. 持たないシグネチャのいずれかを使用して、`flags`パラメーター、し、設定のブール型プロパティを報告する各<xref:System.Windows.FrameworkPropertyMetadata>に`true`特性の変更が必要な各。 この場合、この依存関係プロパティを持つすべての要素の構築前に、これらのプロパティを設定する必要があります。`flags` パラメーターを使用せずに引き続きメタデータを読み込めるよう、これらのブール型プロパティは読み書き可能な状態ですが、プロパティの使用前にメタデータを事実上シールする必要があります。 そのため、メタデータの要求後にこれらのプロパティを設定しようとすると、無効な操作となります。  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>フレームワーク プロパティ メタデータのマージ動作  

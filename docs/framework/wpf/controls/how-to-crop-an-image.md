@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [WPF], cropping
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-ms.openlocfilehash: f4c1a735ac102b3f6d81b5253bc15a5d1893075c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e672c7e24ec4db2d6424fa0b611cb1c135cf8eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195554"
 ---
 # <a name="how-to-crop-an-image"></a>方法: イメージをトリミングする
 この例を使用して、イメージをトリミングする方法を示しています。<xref:System.Windows.Media.Imaging.CroppedBitmap>します。  
@@ -40,4 +40,5 @@ ms.locfileid: "57366804"
  [!code-vb[imageelementexample#CroppedCSharp2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: クリップ領域を作成します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))

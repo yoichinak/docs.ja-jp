@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4be027238d676d78a3ec29e4f2696f765291f29b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134187"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding インターフェイス
 共通言語ランタイム (CLR) に、アプリケーション ドメインが作成されたことをホスト アプリケーションに通知するによって呼び出されるメソッドを提供します。  
@@ -39,7 +39,8 @@ ms.locfileid: "54504432"
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

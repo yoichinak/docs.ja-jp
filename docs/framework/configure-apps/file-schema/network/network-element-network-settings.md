@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 67743ccf2fa14117814160aeb7624c2be4eea364
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c411e00026f03fdb355664049f8db00f3c800352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219968"
 ---
 # <a name="network-element-network-settings"></a>\<ネットワーク > 要素 (ネットワーク設定)
 外部の簡易メール転送プロトコル (SMTP) サーバーのネットワーク オプションを構成します。  
@@ -62,7 +62,7 @@ ms.locfileid: "55257864"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
+|[\<smtp > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  一部の SMTP サーバーでは、自分でを使用する前に、サーバーに対して認証することが必要です。 ホストの既定のネットワーク資格情報を使用して自分で認証を設定する場合、`defaultCredentials`属性を`true`します。 <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType>プロパティを使用しての現在の値を取得すること、`defaultCredentials`該当する構成ファイルからの属性。  
@@ -110,6 +110,7 @@ ms.locfileid: "55257864"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>

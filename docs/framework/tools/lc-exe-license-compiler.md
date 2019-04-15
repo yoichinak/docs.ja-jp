@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298969"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (ライセンス コンパイラ)
 ライセンス コンパイラは、ライセンス情報を含むテキスト ファイルを読み込んで、バイナリ ファイルを生成します。このバイナリ ファイルは、リソースとして共通言語ランタイムの実行可能ファイルに埋め込むことができます。  
@@ -52,19 +52,19 @@ ms.locfileid: "54601697"
   
 ## <a name="example"></a>例  
   
-1.  `HostApp.exe` という名前のアプリケーション内の `Samples.DLL` に格納されているライセンス付きコントロール `MyCompany.Samples.LicControl1` を使用すると *、* 次の内容を含む `HostAppLic.txt` を作成できます。  
+1. `HostApp.exe` という名前のアプリケーション内の `Samples.DLL` に格納されているライセンス付きコントロール `MyCompany.Samples.LicControl1` を使用すると *、* 次の内容を含む `HostAppLic.txt` を作成できます。  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  `HostApp.exe.licenses` という名前の .licenses ファイルを次のコマンドで作成します。  
+2. `HostApp.exe.licenses` という名前の .licenses ファイルを次のコマンドで作成します。  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  この .licenses ファイルをリソースとして含む  `HostApp.exe` を作成します。 C# アプリケーションを作成していた場合は、次のコマンドを使用してアプリケーションを作成します。  
+3. この .licenses ファイルをリソースとして含む  `HostApp.exe` を作成します。 C# アプリケーションを作成していた場合は、次のコマンドを使用してアプリケーションを作成します。  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

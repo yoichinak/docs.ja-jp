@@ -2,12 +2,12 @@
 title: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119692"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
 ここでは、XML スキーマ定義言語 (XSD) スキーマ ドキュメントから `DataSet` のリレーショナル スキーマを生成する方法についての概要を説明します。 一般の各`complexType`スキーマ要素の子要素で、テーブルが生成、`DataSet`します。 テーブル構造は、複合型の定義に基づいて決定されます。 作成されるテーブル、`DataSet`のスキーマの最上位の要素。 ただし、テーブルを最上位レベルの作成のみ`complexType`要素と、`complexType`要素が別の内部で入れ子になった`complexType`を要素は、入れ子になった場合`complexType`要素にマップされます、`DataTable`内、`DataSet`します。  
@@ -97,4 +97,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  読み込んで、リレーショナル構造とデータを永続化する方法について説明します、 `DataSet` XML データとして。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

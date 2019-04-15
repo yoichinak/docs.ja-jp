@@ -2,12 +2,12 @@
 title: 基本的なサンプル
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 22d5428da57b2fc8f9b97d4553b86ac2a918f0e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327972"
 ---
 # <a name="basic-sample"></a>基本的なサンプル
 このサンプルでは、サービスを探索可能にする方法と、探索可能なサービスの検索方法および呼び出し方法を示します。 このサンプルは、2 つのプロジェクト (サービスとクライアント) で構成されます。
@@ -82,15 +82,15 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、次を参照してください。[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)します。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、次を参照してください。[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)します。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Visual Studio 2012 を使用して Basic.sln を開くし、サンプルをビルドします。  
+2. Visual Studio 2012 を使用して Basic.sln を開くし、サンプルをビルドします。  
   
-3.  service.exe アプリケーションを実行します。  
+3. service.exe アプリケーションを実行します。  
   
-4.  サービスが開始したら、client.exe を実行します。  
+4. サービスが開始したら、client.exe を実行します。  
   
-5.  クライアントがサービスのアドレスを知ることなくサービスを検索できたことを確認します。  
+5. クライアントがサービスのアドレスを知ることなくサービスを検索できたことを確認します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

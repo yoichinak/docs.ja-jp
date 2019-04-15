@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837500"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316623"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>方法: (Visual Basic)、プロシージャ引数の値を変更します。
 プロシージャを呼び出すときに指定する各引数は、プロシージャで定義されたパラメーターのいずれかに対応します。 場合によっては、プロシージャのコードは呼び出し元のコードで引数を基になる値を変更できます。 それ以外の場合、プロシージャは、引数のローカル コピーだけを変更できます。  
@@ -31,13 +31,13 @@ ms.locfileid: "58837500"
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>呼び出し元のコードでプロシージャ引数の基になる値を変更するには  
   
-1.  プロシージャの宣言で指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)引数に対応するパラメーター。  
+1. プロシージャの宣言で指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)引数に対応するパラメーター。  
   
-2.  呼び出し元のコードでは、変更可能なプログラミング要素を引数として渡します。  
+2. 呼び出し元のコードでは、変更可能なプログラミング要素を引数として渡します。  
   
-3.  呼び出し元のコードでは囲まないで引数リストのかっこで囲まれた引数。  
+3. 呼び出し元のコードでは囲まないで引数リストのかっこで囲まれた引数。  
   
-4.  プロシージャのコードで、パラメーター名を使用して、呼び出し元のコード内の基になる要素に値を代入します。  
+4. プロシージャのコードで、パラメーター名を使用して、呼び出し元のコード内の基になる要素に値を代入します。  
   
  例を参照してください。 デモについてはさらにダウンします。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "58837500"
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>プロシージャのコードでプロシージャ引数のコピーを変更するには  
   
-1.  プロシージャの宣言で指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)引数に対応するパラメーター。  
+1. プロシージャの宣言で指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)引数に対応するパラメーター。  
   
      - または -  
   
      呼び出し元のコードで、引数、引数リストのかっこで囲みます。 これにより、対応するパラメーターが指定されている場合でも、Visual Basic での値で、引数を渡す`ByRef`します。  
   
-2.  プロシージャのコードで、パラメーター名を使用して、引数のローカル コピーに値を代入します。 呼び出し元のコードで基になる値は変更されません。  
+2. プロシージャのコードで、パラメーター名を使用して、引数のローカル コピーに値を代入します。 呼び出し元のコードで基になる値は変更されません。  
   
 ## <a name="example"></a>例  
  次の例では、その要素の配列変数を受け取り、操作を 2 つの手順を示します。 `increase`プロシージャが単純に各要素に 1 つを追加します。 `replace`プロシージャ パラメーターに新しい配列を割り当てます`a()`し、各要素に 1 つを追加します。  
@@ -79,13 +79,13 @@ ms.locfileid: "58837500"
   
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)
 - [引数の値渡しと参照渡し](./passing-arguments-by-value-and-by-reference.md)
 - [変更できる引数と変更できない引数の違い](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [引数の値渡しと参照渡しの違い](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [方法: プロシージャ引数の値が変化しません。](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [方法: 引数の値渡しを強制します。](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [方法: プロシージャ引数の値が変化しないようにする](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [方法: 引数の値渡しを強制する](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [位置と名前による引数渡し](./passing-arguments-by-position-and-by-name.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], raising ScrollChanged events
 - ScrollChanged events [WPF]
 ms.assetid: 42c695d8-ee28-49d4-80fd-fc71e9be7f29
-ms.openlocfilehash: 34a3c97453df334e8c12da1a31cfb029294da687
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54f20a4b8c6e6fcc190257fcf5de4374415d68b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206149"
 ---
 # <a name="how-to-handle-the-scrollchanged-event"></a>方法: ScrollChanged イベントの処理
 ## <a name="example"></a>例  
@@ -28,6 +28,7 @@ ms.locfileid: "57352522"
  [!code-vb[scrollchangedeventargsLayout#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/scrollchangedeventargsLayout/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>
 - <xref:System.Windows.Controls.ScrollChangedEventHandler>

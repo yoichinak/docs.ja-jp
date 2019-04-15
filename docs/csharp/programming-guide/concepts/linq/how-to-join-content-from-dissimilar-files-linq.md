@@ -2,12 +2,12 @@
 title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698415"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328817"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)
 
@@ -15,7 +15,7 @@ ms.locfileid: "54698415"
   
 ## <a name="to-create-the-data-files"></a>データ ファイルを作成するには
   
-1.  次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
+1. 次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "54698415"
     122, 94, 92, 91, 91  
     ```  
   
-2.  次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
+2. 次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
   
     ```  
     Omelchenko,Svetlana,111  

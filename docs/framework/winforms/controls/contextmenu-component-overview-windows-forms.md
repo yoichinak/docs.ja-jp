@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090564"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu コンポーネントの概要 (Windows フォーム)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545674"
  キー プロパティ、<xref:System.Windows.Forms.ContextMenu>コンポーネントは、<xref:System.Windows.Forms.Menu.MenuItems%2A>プロパティ。 メニュー項目を追加するにはプログラムで作成して<xref:System.Windows.Forms.MenuItem>オブジェクトと追加すること、<xref:System.Windows.Forms.Menu.MenuItemCollection>のショートカット メニュー。 ショートカット メニュー内の項目は、その他のメニューから描画は通常、ためは、コピーすることで項目のショートカット メニューを最も頻繁に追加します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

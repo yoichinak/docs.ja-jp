@@ -1,13 +1,13 @@
 ---
-title: <security> 要素 <ws2007FederationHttpBinding>
+title: '<security> 要素。次に含まれます: <ws2007FederationHttpBinding>'
 ms.date: 03/30/2017
 ms.assetid: 826219b4-3a16-45fc-832d-0cd7cbbd3b84
-ms.openlocfilehash: d533a930bfa57f523d7800205c230583559cb141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15740144b0aad7eb2798db4712e4769d08d893a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186863"
 ---
 # <a name="security-element-of-ws2007federationhttpbinding"></a>\<セキュリティ > 要素の\<ws2007FederationHttpBinding >
 セキュリティ設定を定義、 [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)要素。  
@@ -42,11 +42,11 @@ ms.locfileid: "55272891"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`mode`|省略可能です。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
+|`mode`|任意。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|SOAP メッセージは、転送中はセキュリティで保護されません。|  
 |メッセージ|SOAP メッセージ セキュリティを使用して、整合性、機密性、サーバー認証、およびクライアント認証を提供します。 既定では、本文は暗号化および署名されます。 サービスは、証明書を使用して構成する必要があります。 クライアント認証は、セキュリティ トークン サービスによってクライアントに発行されるトークンに基づいています。|  
@@ -65,11 +65,12 @@ ms.locfileid: "55272891"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|すべてのバインド機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [方法: WSFederationHttpBinding を作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [方法: WSFederationHttpBinding を作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [バインディング](../../../../../docs/framework/wcf/bindings.md)

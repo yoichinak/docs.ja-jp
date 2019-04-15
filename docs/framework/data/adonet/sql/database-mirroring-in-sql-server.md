@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325697"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server のデータベース ミラーリング
 SQL Server のデータベース ミラーリング機能を使用すると、スタンバイ サーバー上に SQL Server データベースのコピー (ミラー) を保持できます。 ミラーリングは、常にデータのコピーが 2 つ別々に存在することを保証し、高可用性とデータの完全な冗長性をもたらします。 .NET Data Provider for SQL Server では、データベース ミラーリングが暗黙的にサポートされているため、SQL Server データベース用に構成されている場合は、開発者が操作を行ったり、コードを作成したりする必要はありません。 さらに、<xref:System.Data.SqlClient.SqlConnection> オブジェクトは、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 内のフェールオーバー パートナー サーバーの名前を指定できる明示的な接続モードをサポートします。  
   
  次の簡略化された一連のイベントは、ミラーリング用に構成されているデータベースを対象にする <xref:System.Data.SqlClient.SqlConnection> オブジェクトで発生します。  
   
-1.  クライアント アプリケーションが正常にプリンシパル データベースに接続し、クライアント上でキャッシュされたパートナー サーバーの名前をサーバーが返信します。  
+1. クライアント アプリケーションが正常にプリンシパル データベースに接続し、クライアント上でキャッシュされたパートナー サーバーの名前をサーバーが返信します。  
   
-2.  プリンシパル データベースが存在するサーバーで障害が発生したか、接続が中断された場合、接続とトランザクションの状態は失われます。 クライアント アプリケーションは、プリンシパル データベースへの接続を再確立しようとして、失敗します。  
+2. プリンシパル データベースが存在するサーバーで障害が発生したか、接続が中断された場合、接続とトランザクションの状態は失われます。 クライアント アプリケーションは、プリンシパル データベースへの接続を再確立しようとして、失敗します。  
   
-3.  次に、クライアント アプリケーションでは、パートナー サーバー上のミラー データベースへの接続を透過的に確立しようとします。 この処理に成功すると、新しいプリンシパル データベースとなるミラー データベースに、接続がリダイレクトされます。  
+3. 次に、クライアント アプリケーションでは、パートナー サーバー上のミラー データベースへの接続を透過的に確立しようとします。 この処理に成功すると、新しいプリンシパル データベースとなるミラー データベースに、接続がリダイレクトされます。  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>接続文字列でのフェールオーバー パートナーの指定  
  接続文字列でフェールオーバー パートナー サーバーの名前を指定すると、クライアント アプリケーションが最初に接続するときにプリンシパル データベースを使用できない場合、クライアントはフェールオーバー パートナーへの接続を透過的に試行します。  
@@ -64,4 +64,5 @@ string activeServer = connection.DataSource;
 |[データベース ミラーリング](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|SQL Server でのミラーリングの設定と構成方法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

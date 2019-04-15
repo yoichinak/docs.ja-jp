@@ -2,21 +2,21 @@
 title: ルーティング サービスを使用した Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: d560a8e871846f608cc90ec2f4f298c0db710e2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329740"
 ---
 # <a name="hello-world-with-the-routing-service"></a>ルーティング サービスを使用した Hello World
 このサンプルでは、Windows Communication Foundation (WCF) ルーティング サービスを使用します。 ルーティング サービスは、WCF コンポーネント、アプリケーションでコンテンツ ベースのルーターを含めるが簡単です。 このサンプルでは、ルーティング サービスを使用して通信する標準の WCF 電卓のサンプルを適応します。 このサンプルの電卓クライアントは、ルーターによって公開されるエンドポイントにメッセージを送信するように構成されています。 ルーティング サービスは、送信されてきたすべてのメッセージを受け入れ、電卓サービスに対応するエンドポイントに転送するように構成されています。 したがって、クライアントから送信されたメッセージはルーターで受信され、実際の電卓サービスに再ルーティングされます。 電卓サービスからのメッセージはルーターに送り返され、ルーターから電卓クライアントに渡されます。
 
 ### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2012 を使用して、HelloRoutingService.sln を開きます。
+1. Visual Studio 2012 を使用して、HelloRoutingService.sln を開きます。
 
-2.  F5 キーを押すか、Ctrl キーと Shift キーを押しながら B キーを押します。
+2. F5 キーを押すか、Ctrl キーと Shift キーを押しながら B キーを押します。
 
     > [!NOTE]
     >  F5 キーを押した場合は、電卓クライアントが自動的に起動します。 Ctrl キーと Shift キーを押しながら B キーを押した (ビルドする) 場合は、次のアプリケーションを手動で開始する必要があります。
@@ -25,7 +25,7 @@ ms.locfileid: "54691776"
     > 2.  電卓サービス (./CalculatorService/bin/service.exe)
     > 3.  ルーティング サービス (./RoutingService/bin/RoutingService.exe)
 
-3.  Enter キーを押してクライアントを起動します。
+3. Enter キーを押してクライアントを起動します。
 
      次の出力が表示されます。
 
@@ -58,4 +58,5 @@ ms.locfileid: "54691776"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>関連項目
+
 - [AppFabric のホストおよび永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)

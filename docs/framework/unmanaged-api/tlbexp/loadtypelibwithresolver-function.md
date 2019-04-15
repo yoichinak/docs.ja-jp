@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155663"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
 タイプ ライブラリを読み込み、指定された使用[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)任意の内部で参照されるタイプ ライブラリを解決します。  
@@ -94,5 +94,6 @@ HRESULT LoadTypeLibWithResolver(
  **.NET framework のバージョン:** 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>関連項目
+
 - [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

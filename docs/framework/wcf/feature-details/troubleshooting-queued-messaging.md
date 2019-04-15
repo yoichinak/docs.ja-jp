@@ -2,12 +2,12 @@
 title: キューに置かれたメッセージングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463112"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322044"
 ---
 # <a name="troubleshooting-queued-messaging"></a>キューに置かれたメッセージングのトラブルシューティング
 このセクションには、一般的な質問とトラブルシューティングについては、Windows Communication Foundation (WCF) でキューを使用してが含まれています。  
@@ -35,7 +35,7 @@ ms.locfileid: "58463112"
   
 -   MSMQ 4.0 のみが、リモート トランザクション読み取りをサポートします。  
   
- 詳細については、[Windows Vista、Windows Server 2003、および Windows XP でのキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)を参照してください。  
+ 詳細については、次を参照してください。 [Windows Vista、Windows Server 2003、および Windows XP でのキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)します。  
   
  **Q:** もう一方の側でキューによる通信と MSMQ 4.0 の一方の側で MSMQ 3.0 を使用できますか。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "58463112"
   
  **A:** 最も一般的な理由は、アクセス許可です。  
   
-1.  `NetMsmqActivator` プロセスが実行され、そのキューで、`NetMsmqActivator` の ID に読み取りおよびシーク アクセス許可が割り当てられていることを確認してください。  
+1. `NetMsmqActivator` プロセスが実行され、そのキューで、`NetMsmqActivator` の ID に読み取りおよびシーク アクセス許可が割り当てられていることを確認してください。  
   
-2.  `NetMsmqActivator` がリモート コンピューター上のキューを監視している場合は、`NetMsmqActivator` が制限付きトークンの下で実行されていないことを確認してください。 無制限のトークンを使用して `NetMsmqActivator` を実行するには、以下を実行します。  
+2. `NetMsmqActivator` がリモート コンピューター上のキューを監視している場合は、`NetMsmqActivator` が制限付きトークンの下で実行されていないことを確認してください。 無制限のトークンを使用して `NetMsmqActivator` を実行するには、以下を実行します。  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -112,7 +112,7 @@ ms.locfileid: "58463112"
   
  **Q:** MSMQ によく寄せられる質問に対する回答はどこで入手できますか。  
   
- **A:** MSMQ の詳細については、[Microsoft メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=87810)を参照してください。  
+ **A:** MSMQ の詳細については、次を参照してください。 [Microsoft メッセージ キュー](https://go.microsoft.com/fwlink/?LinkId=87810)します。  
   
  **Q:** サービスはスロー理由、`ProtocolException`両方を含むキューからの読み取りがセッション メッセージをキューに置かれ、データグラム メッセージをキューに登録しますか?  
   
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **A:** 証明書モードでローカル コンピューターの証明書ストアを使用することはできません。 証明書スナップインを使用して、コンピューターの証明書ストアから現在のユーザー ストアに証明書をコピーする必要があります。 証明書スナップインを開くには、以下を実行します。  
   
-1.  をクリックして**開始**を選択します**実行**、型`mmc`、 をクリック**OK**します。  
+1. をクリックして**開始**を選択します**実行**、型`mmc`、 をクリック**OK**します。  
   
-2.  **Microsoft 管理コンソール**、オープン、**ファイル**メニュー選択し、**スナップインの追加と削除**します。  
+2. **Microsoft 管理コンソール**、オープン、**ファイル**メニュー選択し、**スナップインの追加と削除**します。  
   
-3.  **スナップインの追加と削除**ダイアログ ボックスで、をクリックして、**追加**ボタンをクリックします。  
+3. **スナップインの追加と削除**ダイアログ ボックスで、をクリックして、**追加**ボタンをクリックします。  
   
-4.  **スタンドアロン スナップインの追加**ダイアログ ボックスで選択証明書とクリック**追加**します。  
+4. **スタンドアロン スナップインの追加**ダイアログ ボックスで選択証明書とクリック**追加**します。  
   
-5.  **証明書**スナップイン ダイアログ ボックスで、 **ユーザー アカウント** をクリック**完了**します。  
+5. **証明書**スナップイン ダイアログ ボックスで、 **ユーザー アカウント** をクリック**完了**します。  
   
-6.  次に、2 つ目の証明書スナップインの前の手順を使用して、この時間を選択を追加**コンピューター アカウント** をクリック**次**します。  
+6. 次に、2 つ目の証明書スナップインの前の手順を使用して、この時間を選択を追加**コンピューター アカウント** をクリック**次**します。  
   
-7.  選択**ローカル コンピューター**  をクリック**完了**します。 これで、コンピューターの証明書ストアから現在のユーザー ストアに証明書をドラッグ アンド ドロップできます。  
+7. 選択**ローカル コンピューター**  をクリック**完了**します。 これで、コンピューターの証明書ストアから現在のユーザー ストアに証明書をドラッグ アンド ドロップできます。  
   
  **Q:** サービスは、ワークグループ モードで別のコンピューター上のキューから読み取り、ときに「アクセス拒否」例外が発生します。  
   

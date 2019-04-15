@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ed0dde302e30ae0cf3c7a8d0985f2314d91cab66
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 897bb0b0650c633b87a792516c62566f491ec3fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234064"
 ---
 ### <a name="deflatestream-uses-native-apis-for-decompression"></a>DeflateStream で圧縮解除のためにネイティブ API が使用される
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760902"
 |Version|4.7.2|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.IO.Compression.DeflateStream?displayProperty=nameWithType></li><li><xref:System.IO.Compression.GZipStream?displayProperty=nameWithType></li></ul>|
-

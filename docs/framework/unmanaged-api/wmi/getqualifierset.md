@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193097"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 関数
 クラス インスタンスまたはクラス定義で設定された修飾子が取得されます。
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
 
 `ppQualSet`  
-[out]クラスのオブジェクトの修飾子にアクセスできるインターフェイス ポインターを受け取ります。 `ppQualSet` として `null` を使用することはできません。 エラーが発生した、新しいオブジェクトは返されませんが、ポインターのままの場合変更されていません。 
+[out]クラスのオブジェクトの修飾子にアクセスできるインターフェイス ポインターを受け取ります。 `ppQualSet` ことはできません`null`します。 エラーが発生した、新しいオブジェクトは返されませんが、ポインターのままの場合変更されていません。 
 
 ## <a name="return-value"></a>戻り値
 
@@ -72,7 +72,8 @@ HRESULT GetQualifierSet (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

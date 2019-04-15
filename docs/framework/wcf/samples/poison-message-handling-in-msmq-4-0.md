@@ -2,12 +2,12 @@
 title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316467"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
 このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -23,19 +23,19 @@ ms.locfileid: "48846228"
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 の有害メッセージ処理サンプル
  [!INCLUDE[wv](../../../../includes/wv-md.md)] では、有害メッセージの格納に使用可能な有害メッセージ サブキュー機能が MSMQ に用意されています。 このサンプルは、[!INCLUDE[wv](../../../../includes/wv-md.md)] を使用して有害メッセージを処理するベスト プラクティスを示しています。
 
- [!INCLUDE[wv](../../../../includes/wv-md.md)] の有害メッセージの検出は、かなり高度な機能です。 検出に役立つ 3 つのプロパティがあります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> は、指定したメッセージをキューから再度読み取り、処理するためにアプリケーションにディスパッチする回数です。 メッセージをアプリケーションにディスパッチできないか、またはアプリケーションがサービス操作内のトランザクションをロールバックしたため、メッセージはキューに戻ったときにキューから再度読み取られます。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> は、メッセージが再試行キューに移動する回数です。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> に達すると、メッセージは再試行キューに移動されます。 メッセージが再試行キューからメイン キューに移動されると、<xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> プロパティは時間遅延となります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> が 0 にリセットされます。 メッセージは再試行されます。 メッセージを読み取るすべての試行に失敗すると、メッセージが有害としてマークされます。
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] の有害メッセージの検出は、かなり高度な機能です。 検出に役立つ 3 つのプロパティがあります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> は、指定したメッセージをキューから再度読み取り、処理するためにアプリケーションにディスパッチする回数です。 メッセージをアプリケーションにディスパッチできないか、またはアプリケーションがサービス操作内のトランザクションをロールバックしたため、メッセージはキューに戻ったときにキューから再度読み取られます。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> メッセージは再試行キューに移動する時間数です。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> に達すると、メッセージは再試行キューに移動されます。 メッセージが再試行キューからメイン キューに移動されると、<xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> プロパティは時間遅延となります。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> が 0 にリセットされます。 メッセージは再試行されます。 メッセージを読み取るすべての試行に失敗すると、メッセージが有害としてマークされます。
 
  メッセージが有害としてマークされると、メッセージは <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列挙体の設定に従って処理されます。 次にもう一度、使用可能な値を示します。
 
--   Fault (既定値): リスナーとサービス ホストをエラーにします。
+-   Fault (既定値):リスナーとも、サービス ホストをエラー。
 
--   Drop: メッセージを破棄します。
+-   ドロップします。メッセージを破棄します。
 
--   Move: メッセージを有害メッセージ サブキューに移動します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+-   移動します。メッセージを有害メッセージ サブキューに移動します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
--   Reject: メッセージを送信者の配信不能キューに戻すことにより、メッセージを拒否します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+-   拒否します。メッセージを送信者の配信不能キューに送信するメッセージを拒否します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
- このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move` を指定すると、メッセージが有害メッセージ サブキューに移動されます。
+ このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move` 発生したメッセージが有害サブキューに移動します。
 
  サービス コントラクトは `IOrderProcessor` です。これは、キューでの使用に適した一方向サービスを定義します。
 
@@ -273,9 +273,9 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
 
-2.  サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
+2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
     1.  Visual Studio 2012 では、サーバー マネージャーを開きます。
 
@@ -287,15 +287,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。
 
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-4.  1 つまたは複数コンピューター構成では、サンプルを実行するには、localhost の代わりに実際のホスト名を反映する手順については、キュー名を変更[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。
+4. 1 つまたは複数コンピューター構成では、サンプルを実行するには、localhost の代わりに実際のホスト名を反映する手順については、キュー名を変更[Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。
 
- `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定では、認証モードは `Windows` に、保護レベルは `Sign` に、それぞれ設定されます。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
+ `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定では、認証モードは `Windows` に、保護レベルは `Sign` に、それぞれ設定されます。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインの一部ではないコンピューターでこのサンプルを実行する場合は、次のエラーが表示されます。「ユーザーの内部メッセージ キュー証明書がありません」。
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには
 
-1.  ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードとセキュリティ レベルを `None` に設定します。サンプル構成を次に示します。
+1. ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードとセキュリティ レベルを `None` に設定します。サンプル構成を次に示します。
 
     ```xml
     <bindings>
@@ -309,12 +309,12 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      エンドポイントの bindingConfiguration 属性を設定して、エンドポイントがこのバインディングに関連付けられるようにします。
 
-2.  サンプルを実行する前に、PoisonMessageServer、サーバー、およびクライアントの構成を変更してください。
+2. サンプルを実行する前に、PoisonMessageServer、サーバー、およびクライアントの構成を変更してください。
 
     > [!NOTE]
     >  `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。  
   
-3.  Metadata Exchange を機能させるため、URL を HTTP バインディングに登録します。 これを行うには、サービスが権限の高いコマンド ウィンドウで実行されている必要があります。 など、例外が発生する場合は、:`Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`します。  
+3. Metadata Exchange を機能させるため、URL を HTTP バインディングに登録します。 これを行うには、サービスが権限の高いコマンド ウィンドウで実行されている必要があります。 など、例外が発生する場合は、:`Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

@@ -2,6 +2,12 @@
 title: トレース
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
+ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093398"
 ---
 # <a name="tracing"></a>トレース
 Windows Communication Foundation (WCF) は、エラーの監視と分析のアプリケーションのインストルメンテーション データと診断データを提供します。 アプリケーションの動作やエラー原因を調べるために、デバッガーの代わりにトレースを使用できます。 コンポーネント間でエラーと処理を関連付けて、エンドツーエンドの調査を行うこともできます。  
@@ -34,4 +40,5 @@ Windows Communication Foundation (WCF) は、エラーの監視と分析のア�
  このトピックでは、WCF によって生成されたすべてのトレースを使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

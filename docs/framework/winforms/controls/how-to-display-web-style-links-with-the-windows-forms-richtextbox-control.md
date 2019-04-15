@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールで Web スタイル リンクを表示します。'
+title: '方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301881"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールで Web スタイル リンクを表示します。
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールを使用して Web スタイルのリンクを表示する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは、カラーや下線が引かれたとしての Web リンクを表示できます。 リンクがクリックされたときに、リンク テキストに指定された Web サイトを表示するブラウザー ウィンドウを開いてコードを記述することができます。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox コントロールでの Web ページにリンクするには  
   
-1.  設定、<xref:System.Windows.Forms.RichTextBox.Text%2A>プロパティを有効な URL を含む文字列に (たとえば、"http://www.microsoft.com/")。  
+1. 設定、<xref:System.Windows.Forms.RichTextBox.Text%2A>プロパティを有効な URL を含む文字列に (たとえば、"http://www.microsoft.com/")。  
   
-2.  必ず、<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>プロパティに設定されて`true`(既定)。  
+2. 必ず、<xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>プロパティに設定されて`true`(既定)。  
   
-3.  場合は、新しいグローバル インスタンスを作成、<xref:System.Diagnostics.Process>オブジェクト。  
+3. 場合は、新しいグローバル インスタンスを作成、<xref:System.Diagnostics.Process>オブジェクト。  
   
-4.  イベント ハンドラーを記述、<xref:System.Windows.Forms.RichTextBox.LinkClicked>目的のテキストをブラウザーに送信するイベントです。  
+4. イベント ハンドラーを記述、<xref:System.Windows.Forms.RichTextBox.LinkClicked>目的のテキストをブラウザーに送信するイベントです。  
   
      次の例で、<xref:System.Windows.Forms.RichTextBox.LinkClicked>イベントで指定された URL を Internet Explorer のインスタンスを開き、<xref:System.Windows.Forms.RichTextBox.Text%2A>のプロパティ、<xref:System.Windows.Forms.RichTextBox>コントロール。 この例では使用して、フォーム、<xref:System.Windows.Forms.RichTextBox>コントロール。  
   
@@ -117,6 +117,7 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールは
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>

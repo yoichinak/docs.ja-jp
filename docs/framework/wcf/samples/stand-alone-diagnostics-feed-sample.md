@@ -2,12 +2,12 @@
 title: スタンドアロン診断フィードのサンプル
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316558"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>スタンドアロン診断フィードのサンプル
 このサンプルでは、RSS および Atom フィードを Windows Communication Foundation (WCF) を使用して配信用に作成する方法を示します。 オブジェクト モデルの基本と Windows Communication Foundation (WCF) サービスを設定する方法を示す基本的な"Hello World"プログラムです。  
@@ -76,13 +76,13 @@ foreach (SyndicationItem i in feed.Items)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  セットアップの手順で説明したように、コンピューター上の HTTP および HTTPS の正しいアドレス登録アクセス許可があることを確認します。 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. セットアップの手順で説明したように、コンピューター上の HTTP および HTTPS の正しいアドレス登録アクセス許可があることを確認します。 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  コンソール アプリケーションを実行します。  
+3. コンソール アプリケーションを実行します。  
   
-4.  移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
+4. 移動し、コンソール アプリケーションの実行中に`http://localhost:8000/diagnostics/feed/?format=atom`または`http://localhost:8000/diagnostics/feed/?format=rss`RSS 対応のブラウザーを使用します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

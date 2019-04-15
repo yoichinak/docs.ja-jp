@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: f7f58a684449819fe945ad1ba5bff12f425c8294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228498"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>WCF サービス ホストの自動起動の制御
 複数のプロジェクトを含む同じ Visual Studio ソリューション内の別のプロジェクトをデバッグする場合は、WCF サービス ライブラリ プロジェクトでは、Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) の自動起動機能を制御できます。  
@@ -29,4 +29,5 @@ ms.locfileid: "54712393"
 -   配信サービス ライブラリ プロジェクト  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

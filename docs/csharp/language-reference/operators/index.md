@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308654"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -75,7 +75,7 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [-x](subtraction-operator.md) – 数値の否定。
 
-[\!x](logical-negation-operator.md) – 論理否定。
+[\!x](boolean-logical-operators.md#logical-negation-operator-) – 論理否定。
 
 [~x](bitwise-complement-operator.md) – ビットごとの補数。
 
@@ -163,13 +163,13 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x && y](conditional-and-operator.md) – 論理 AND。 最初のオペランドが false に評価される場合、C# では 2 番目のオペランドが評価されません。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 論理 AND。 最初のオペランドが false に評価される場合、C# では 2 番目のオペランドが評価されません。
 
 ## <a name="conditional-or-operator"></a>条件 OR 演算子
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x &#124;&#124; y](conditional-or-operator.md) – 論理 OR。 最初のオペランドが true に評価される場合、C# では 2 番目のオペランドが評価されません。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 論理 OR。 最初のオペランドが true に評価される場合、C# では 2 番目のオペランドが評価されません。
 
 ## <a name="null-coalescing-operator"></a>Null 合体演算子
 
@@ -216,5 +216,5 @@ C# には、多くの演算子が用意されています。演算子とは、�
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [オーバーロードされた演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# のキーワード](../keywords/index.md)

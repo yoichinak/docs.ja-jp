@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 2435d5c4592de60e07b60f1bf749f2421c798535
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156508"
 ---
 # <a name="configuring-wcf-services"></a>WCF サービスの構成
 
@@ -57,6 +57,7 @@ ms.locfileid: "56303610"
  [管理と診断](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [概念](../../../docs/framework/wcf/conceptual-overview.md)
 - [WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)

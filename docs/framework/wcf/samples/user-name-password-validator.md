@@ -2,12 +2,12 @@
 title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: df2340393544b0eaac8f2c6d4eae55846a604e40
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814030"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345015"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
+1. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
 
-2.  サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
+2. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには
 
-1.  Visual Studio 2012 のコマンド プロンプト内でサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. Visual Studio 2012 のコマンド プロンプト内でサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
     >  Setup.bat バッチ ファイルは、Visual Studio 2012 コマンド プロンプトから実行する設計されています。 Visual Studio 2012 のコマンド プロンプト ポイント内で設定して、Setup.bat スクリプトで必要な実行可能ファイルを格納するディレクトリ パス環境変数。  
   
-2.  Service.exe を service\bin で起動します。  
+2. Service.exe を service\bin で起動します。  
   
-3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
+3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 #### <a name="to-run-the-sample-across-machines"></a>サンプルを複数コンピューターで実行するには  
   
-1.  サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
+1. サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
   
-2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
+2. サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サーバーの構成ファイルを更新する必要があります。  
+3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サーバーの構成ファイルを更新する必要があります。  
   
-4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 このようにする必要があるのは、サーバー証明書が信頼できる発行元から発行されていない場合のみです。  
+4. サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 このようにする必要があるのは、サーバー証明書が信頼できる発行元から発行されていない場合のみです。  
   
-5.  サービス コンピューターの App.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
+5. サービス コンピューターの App.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
   
-6.  サービス コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。  
+6. サービス コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。  
   
-7.  クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
+7. クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
   
-8.  クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
+8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。  
   
@@ -319,5 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。 これにより、証明書ストアからサーバー証明書が削除されます。  
-  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。 これにより、証明書ストアからサーバー証明書が削除されます。  

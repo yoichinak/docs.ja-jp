@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123241"
 ---
 # <a name="how-to-bind-to-a-method"></a>方法: メソッドにバインドする
 次の例を使用して、メソッドにバインドする方法を示しています。<xref:System.Windows.Data.ObjectDataProvider>します。  
@@ -32,5 +32,6 @@ ms.locfileid: "57351932"
  `InvalidationCharacterRule`は、<xref:System.Windows.Controls.ValidationRule>無効な文字を確認します。 赤色の枠線は、既定のエラー テンプレートの周囲、 <xref:System.Windows.Controls.TextBox>、入力値が double 値ではないときにユーザーに通知が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [方法トピック](data-binding-how-to-topics.md)
-- [方法: 列挙値にバインドする](how-to-bind-to-an-enumeration.md)
+
+- [方法のトピック](data-binding-how-to-topics.md)
+- [列挙値にバインドする](how-to-bind-to-an-enumeration.md)

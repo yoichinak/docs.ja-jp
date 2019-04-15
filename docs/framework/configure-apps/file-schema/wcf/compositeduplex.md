@@ -2,12 +2,12 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: f8615637a0fa6d0fff594ef1970711ac408f02f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159849"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex >
 サービスがメッセージをクライアントに返送するためのエンドポイントをクライアントが公開する必要がある場合に使用される、バインド要素を定義します。  
@@ -54,6 +54,7 @@ ms.locfileid: "55264506"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

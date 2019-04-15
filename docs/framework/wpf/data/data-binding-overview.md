@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315323"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>s など<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など s<xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>柔軟なスタイルの単一のデータ項目またはデータ項目のコレクションを有効にする組み込みの機能があります。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -404,17 +404,17 @@ ms.locfileid: "59081269"
   
  次に*検証*プロセスを説明します。 このプロセス中の任意の時点で検証エラーまたはその他の種類のエラーが発生すると、プロセスが停止されることに注意してください。  
   
-1.  バインディング エンジンは、任意のカスタムがあるかどうかを確認します<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.RawProposedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>中にエラーが、それらのいずれかが実行されるまで。または、それらのすべてに合格するまでです。  
+1. バインディング エンジンは、任意のカスタムがあるかどうかを確認します<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.RawProposedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>中にエラーが、それらのいずれかが実行されるまで。または、それらのすべてに合格するまでです。  
   
-2.  その後、バインディング エンジンがコンバーターを呼び出します (ある場合)。  
+2. その後、バインディング エンジンがコンバーターを呼び出します (ある場合)。  
   
-3.  かどうかは、任意のカスタム コンバーターが成功すると、バインディング エンジンがチェック<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。  
+3. かどうかは、任意のカスタム コンバーターが成功すると、バインディング エンジンがチェック<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。  
   
-4.  バインディング エンジンは、ソース プロパティを設定します。  
+4. バインディング エンジンは、ソース プロパティを設定します。  
   
-5.  バインディング エンジンは、確認のかどうかは、任意のカスタム<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.UpdatedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定<xref:System.Windows.Controls.ValidationStep.UpdatedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。 場合、<xref:System.Windows.Controls.DataErrorValidationRule>バインドに関連付けられているとその<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>、既定値に設定されている<xref:System.Windows.Controls.ValidationStep.UpdatedValue>、<xref:System.Windows.Controls.DataErrorValidationRule>がこの時点でチェックされます。 これは、ポイントでもときを持つバインド、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>に設定`true`がチェックされます。  
+5. バインディング エンジンは、確認のかどうかは、任意のカスタム<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.UpdatedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定<xref:System.Windows.Controls.ValidationStep.UpdatedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。 場合、<xref:System.Windows.Controls.DataErrorValidationRule>バインドに関連付けられているとその<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>、既定値に設定されている<xref:System.Windows.Controls.ValidationStep.UpdatedValue>、<xref:System.Windows.Controls.DataErrorValidationRule>がこの時点でチェックされます。 これは、ポイントでもときを持つバインド、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>に設定`true`がチェックされます。  
   
-6.  バインディング エンジンは、確認のかどうかは、任意のカスタム<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.CommittedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定<xref:System.Windows.Controls.ValidationStep.CommittedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。  
+6. バインディング エンジンは、確認のかどうかは、任意のカスタム<xref:System.Windows.Controls.ValidationRule>オブジェクトで定義されている<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.CommittedValue>を<xref:System.Windows.Data.Binding>、呼び出す場合、<xref:System.Windows.Controls.ValidationRule.Validate%2A>各<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定<xref:System.Windows.Controls.ValidationStep.CommittedValue>中にエラーが、それらのいずれかが実行されるまで、またはそれらすべてに合格するまでです。  
   
  場合、<xref:System.Windows.Controls.ValidationRule>渡さない、このプロセス全体でいつでも、バインディング エンジンが作成されます、<xref:System.Windows.Controls.ValidationError>オブジェクトし、それを追加、<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>バインドされた要素のコレクション。 エンジンが実行される、バインディングの前に、<xref:System.Windows.Controls.ValidationRule>いずれかが削除されますが、特定のステップでオブジェクト<xref:System.Windows.Controls.ValidationError>に追加された、<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>ステップ中にバインドされている要素のプロパティをアタッチします。 たとえば場合、<xref:System.Windows.Controls.ValidationRule>が<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定されている<xref:System.Windows.Controls.ValidationStep.UpdatedValue>に失敗しました次回の検証プロセスが発生すると、バインディング エンジンが削除される<xref:System.Windows.Controls.ValidationError>前にいずれかの呼び出しの直前に<xref:System.Windows.Controls.ValidationRule>を持つ<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>に設定<xref:System.Windows.Controls.ValidationStep.UpdatedValue>。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 44a86a2e1ab9346280f655d4ee75e7282c6c9cd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333939"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# コンパイラ オプション)
 **-checked** オプションは、データ型の範囲外の値になる整数の算術ステートメントと、[checked](../../../csharp/language-reference/keywords/checked.md) または [unchecked](../../../csharp/language-reference/keywords/unchecked.md) キーワードのスコープ内に含まれない整数の算術ステートメントで、ランタイム例外が発生するかどうかを指定します。  
@@ -24,7 +24,7 @@ ms.locfileid: "54578387"
 -checked[+ | -]  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  `checked` または `unchecked` キーワードのスコープ内に含まれる整数の算術ステートメントは、**-checked** オプションの作用の対象になりません。  
   
  `checked` または `unchecked` キーワードのスコープ内に含まれない整数の算術ステートメントがデータ型の範囲外の値になり、**-checked+** (または **-checked**) がコンパイル時に使用されている場合は、そのステートメントでランタイム例外が発生します。 **-checked-** がコンパイル時に使用された場合、そのステートメントでランタイム例外は発生しません。  
@@ -35,13 +35,13 @@ ms.locfileid: "54578387"
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。 詳細については、「[Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。  
+1. プロジェクトの **[プロパティ]** ページを開きます。 詳細については、「[Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** ボタンをクリックします。  
   
-4.  **[演算のオーバーフローおよびアンダーフローのチェック]** プロパティを変更します。  
+4. **[演算のオーバーフローおよびアンダーフローのチェック]** プロパティを変更します。  
   
  プログラムによってこのコンパイラ オプションにアクセスする方法については、<xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A> に関する記事をご覧ください。  
   

@@ -2,12 +2,12 @@
 title: WCF Discovery の概要
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335343"
 ---
 # <a name="wcf-discovery-overview"></a>WCF Discovery の概要
 Discovery API は、WS-Discovery プロトコルを使用した Web サービスの動的公開と探索の統合プログラミング モデルを提供します。 これらの API は、サービスがサービス自体を公開し、クライアントが公開されたサービスを発見できるようにします。 サービスを探索可能にした後は、サービスでアナウンス メッセージを送信できるほか、探索要求のリッスンと応答もできるようになります。 探索可能なサービスは、ネットワークに接続されたことをアナウンスする Hello メッセージ、およびネットワークから切断されたことをアナウンスする Bye メッセージを送信できます。 サービスを検索するために、クライアントは、サービス コントラクト型、キーワード、ネットワークのスコープなど、特定の条件が設定された `Probe` 要求を送信します。 サービスはこの `Probe` 要求を受信し、条件に一致するかどうかを判断します。 サービスが条件に一致した場合は、サービスへの接続に必要な情報と併せて `ProbeMatch` メッセージをクライアントに送り返すことで応答します。 クライアントは `Resolve` 要求を送信することもできます。この要求では、エンドポイント アドレスが変更されている可能性があるサービスを発見できます。 条件に一致したサービスは、`Resolve` メッセージをクライアントに送り返すことで、`ResolveMatch` 要求に応答します。  
@@ -146,14 +146,14 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>探索およびメッセージ レベルのセキュリティ  
- メッセージ レベルのセキュリティを使用する場合は、<xref:System.ServiceModel.EndpointIdentity> をサービスの探索エンドポイントに指定し、対応する <xref:System.ServiceModel.EndpointIdentity> をクライアントの探索エンドポイントに指定する必要があります。 メッセージ レベルのセキュリティの詳細については、[メッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)を参照してください。  
+ メッセージ レベルのセキュリティを使用する場合は、<xref:System.ServiceModel.EndpointIdentity> をサービスの探索エンドポイントに指定し、対応する <xref:System.ServiceModel.EndpointIdentity> をクライアントの探索エンドポイントに指定する必要があります。 メッセージ レベルのセキュリティの詳細については、次を参照してください。[メッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)します。  
   
 ## <a name="discovery-and-web-hosted-services"></a>探索および Web ホスト サービス  
  WCF サービスが探索可能であるためには、このサービスが実行されている必要があります。 IIS または WAS でホストされている WCF サービスは、IIS/WAS がサービスにバインドされているメッセージを受信するまで実行されないため、既定では探索できません。  Web ホスト サービスを探索可能にするには、次の 2 つのオプションがあります。  
   
-1.  Windows Server AppFabric の自動開始機能の使用  
+1. Windows Server AppFabric の自動開始機能の使用  
   
-2.  サービスに代わって通信を行う探索プロキシの使用  
+2. サービスに代わって通信を行う探索プロキシの使用  
   
  Windows Server AppFabric には、メッセージを受信する前にサービスを開始できる自動開始機能が備わっています。 この自動開始セットで、IIS/WAS でホストされるサービスを探索できるように構成できます。 詳細については、自動開始機能「 [Windows Server AppFabric 自動開始機能](https://go.microsoft.com/fwlink/?LinkId=205545)します。 自動開始機能をオンにすると共に、探索サービスを構成する必要があります。 詳細については、「[方法 :探索可能性を WCF サービスとクライアントにプログラムで追加](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[構成ファイルにおける探索の構成](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)します。  
   

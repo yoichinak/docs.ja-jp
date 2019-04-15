@@ -1,13 +1,13 @@
 ---
-title: <transport> の <basicHttpBinding>
+title: <transport> (行中)  <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170639"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<トランスポート > の\<basicHttpBinding >
 HTTP トランスポートの認証パラメーターを制御するプロパティを定義します。  
@@ -54,7 +54,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|メッセージは、転送中はセキュリティで保護されません。|  
 |Basic|基本認証を指定します。|  
@@ -64,7 +64,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |なし|メッセージの数は、転送中にセキュリティ保護されません。|  
 |Basic|RFC 2617 – HTTP Authentication で定義されている基本認証を指定します。基本認証とダイジェスト認証です。|  
@@ -80,7 +80,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|セキュリティ機能を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。|  
+|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|セキュリティ機能を定義、 [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)します。|  
   
 ## <a name="example"></a>例  
  基本的なバインディングを使用した SSL トランスポート セキュリティの使用例を次に示します。 既定で、基本的なバインディングは HTTP 通信をサポートします。  
@@ -118,6 +118,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>

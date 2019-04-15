@@ -2,12 +2,12 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 2854671eaabb37066b57d87a7496183c9e5bba4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d8f4335c304d164daafeb0ad4de5b4e3bba4590
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115038"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
@@ -85,7 +85,8 @@ class CallbackBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.CallbackBehaviorAttribute>

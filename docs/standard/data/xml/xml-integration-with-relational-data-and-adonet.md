@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183146"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831983"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML とリレーショナル データおよび ADO.NET との統合
 **XmlDocument** の派生クラスである **XmlDataDocument** クラスには XML データが格納されます。 **XmlDataDocument** の利点は、リレーショナル データと階層データとを仲介できることです。 **DataSet** に連結できるのは **XmlDocument** であり、どちらのクラスも、それぞれが格納しているデータが変更されたときに、変更内容の同期をとることができます。 **DataSet** に連結した **XmlDocument** では XML をリレーショナル データと統合できるため、データ表現は XML でもリレーショナル形式でもかまいません。 両方の処理ができ、一方のデータ表現だけに制限されることもありません。  
@@ -29,9 +29,9 @@ ms.locfileid: "44183146"
   
  **XmlDataDocument** は **XmlDocument** から継承されているため、W3C DOM が実装されています。 **XmlDataDocument** は、**DataSet** に関連付けられており、そのデータの一部を格納していますが、**XmlDocument** として使用する場合に制限や特別な対応が必要になることはありません。 **XmlDocument** を使用しているコードは、**XmlDataDocument** を使用する場合でも、修正せずに動作させることができます。 **DataSet** は、テーブル、列、リレーション、および制約を定義することで、データをリレーショナル形式で提示できる、スタンドアロンかつインメモリのユーザー データ ストアです。  
   
- XML データと **DataSet** の関係と、XML データと **XmlDataDocument** の関連との違いを次の図に示します。  
+ XML データと **DataSet** の関係と、XML データと **XmlDataDocument** の関連との違いを次の図に示します。 
   
- ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![XML DataSet との関連の違いを示す図。](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  この図では、XML データは **DataSet** に直接読み込むことができ、XML をリレーショナルな方法で直接操作できることが示されています。 また、XML を DOM の派生クラスである **XmlDataDocument** に読み込み、その後、**DataSet** と同期させることができることも示されています。 **DataSet** と **XmlDataDocument** は、1 つのデータ セットを基にして同期がとられているため、一方のデータ ストアのデータを変更すると、他方のストアに反映されます。  
   

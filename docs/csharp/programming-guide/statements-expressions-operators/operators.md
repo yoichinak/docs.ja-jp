@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307474"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 
@@ -63,7 +63,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|同一。|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定。|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|論理否定。|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|論理否定。|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|ビットごとの否定。|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前置インクリメント。|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前置デクリメント。|  
@@ -77,7 +77,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|除算記号|  
 |[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|剰余。|  
   
- **加算演算子**  
+ **加法演算子**  
   
 |正規表現|説明|  
 |----------------|-----------------|  
@@ -86,7 +86,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
   
  **シフト演算子**  
   
-|正規表現|説明|  
+|式|説明|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左シフト。|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右シフト。|  
@@ -116,12 +116,12 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |論理 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整数のビットごとの AND、ブール型の論理 AND。|  
 |論理 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整数のビットごとの XOR、ブール型の論理 XOR|  
 |論理 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整数のビットごとの OR、ブール型の論理 OR|  
-|条件 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|x が true の場合にのみ y を評価します。|  
-|条件 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|x が false の場合にのみ y を評価します。|  
+|条件 AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|x が true の場合にのみ y を評価します。|  
+|条件 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|x が false の場合にのみ y を評価します。|  
 |Null 合体演算子|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|x が null の場合は y と評価され、それ以外の場合は x と評価されます。|  
 |条件|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x が true の場合は y と評価され、x が false の場合は z と評価されます。|  
   
- **代入演算子と匿名演算子**  
+ **代入演算子と匿名関数**  
   
 |正規表現|説明|  
 |----------------|-----------------|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218071"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 <a name="top"></a> アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
@@ -63,6 +63,7 @@ ms.locfileid: "54589572"
  厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名によって整合性が保証されるため、これら 2 種類のアセンブリ証拠に基づいてコード アクセス セキュリティ ポリシーを設定できます。 厳密な名前と [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名では、デジタル署名と証明書によって整合性が保証されます。 以上で述べた技術 (ハッシュ検査、厳密な名前、[SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md) を使用する署名) をすべて組み合わせて使用することで、アセンブリがどのような方法によっても変更されていないことが保証されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [共通言語ランタイムのアセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)

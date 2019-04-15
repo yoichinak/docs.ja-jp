@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - version [WPF], finding
 ms.assetid: 99971cef-e218-4f9f-a4c1-350332741860
-ms.openlocfilehash: c59fa0d0a4d94c6e6a2ab72a4cd7a3c066649fb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffbd9a4c7f66dff9c8773dff4259551e20aa963d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305677"
 ---
 # <a name="how-to-determine-the-installed-version-of-wpf"></a>方法: インストールされている WPF のバージョンを確認する
-現在インストールされているバージョンのバージョン番号[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]内にある、**レジストリ**です。  
+現在インストールされているバージョンのバージョン番号[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]にある、**レジストリ**します。  
   
  バージョン番号を検索するには。  
   
-1.  **[スタート]** メニューで、 **[ファイル名を指定して実行]** をクリックします。  
+1. **[スタート]** メニューで、 **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **開く**、型**regedit.exe**です。  
+2. **オープン**、型**regedit.exe**します。  
   
-3.  次のキーを開きます。  
+3. 次のキーを開きます。  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Windows Presentation Foundation`  
   

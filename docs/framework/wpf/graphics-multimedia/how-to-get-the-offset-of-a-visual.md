@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093411"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>方法: ビジュアルのオフセットを取得する
 これらの例では、その親または先祖、または子孫に対して相対的なビジュアル オブジェクトのオフセット値を取得する方法を示します。  
@@ -66,6 +66,7 @@ TextBlock は、2 つの StackPanels 内で入れ子になった
  オフセットがアカウントには、<xref:System.Windows.FrameworkElement.Margin%2A>すべてのオブジェクトの値。 この場合、 <xref:System.Windows.Vector.X%2A> -4、および<xref:System.Windows.Vector.Y%2A>-4 です。 オフセットの値は、親オブジェクトがその子オブジェクトを基準としてオフセット悪影響を及ぼすために、負の値です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

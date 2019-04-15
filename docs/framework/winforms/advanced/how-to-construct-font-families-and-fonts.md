@@ -1,5 +1,5 @@
 ---
-title: '方法: フォント ファミリとフォントを作成します。'
+title: '方法: フォント ファミリとフォントを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181221"
 ---
-# <a name="how-to-construct-font-families-and-fonts"></a>方法: フォント ファミリとフォントを作成します。
+# <a name="how-to-construct-font-families-and-fonts"></a>方法: フォント ファミリとフォントを作成する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 同じタイプフェイスがさまざまなスタイルでのフォントのフォント ファミリにグループ化します。 たとえば、Arial フォント ファミリには、次のフォントが含まれています。  
   
 -   Arial 通常  
@@ -47,8 +47,9 @@ ms.locfileid: "57708555"
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。  
+ 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [フォントとテキストの使用](using-fonts-and-text.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)

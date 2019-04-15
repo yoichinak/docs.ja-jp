@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304559"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする
 コントロールがフォームに追加し、アプリケーションのユーザー インターフェイスを決定したら後、は、実行時に、ユーザーは変更して、アプリケーションに関連するデータを保存できるように、データ ソースにコントロールをバインドできます。  
@@ -27,9 +27,9 @@ ms.locfileid: "59074658"
   
 ### <a name="to-bind-a-control-at-design-time"></a>デザイン時にコントロールをバインドするには  
   
-1.  ドラッグ、<xref:System.Windows.Forms.TextBox>コントロールをフォームにログオンします。  
+1. ドラッグ、<xref:System.Windows.Forms.TextBox>コントロールをフォームにログオンします。  
   
-2.  **プロパティ**ウィンドウ。  
+2. **プロパティ**ウィンドウ。  
   
     1.  展開、 **(DataBindings)** ノード。  
   
@@ -39,17 +39,17 @@ ms.locfileid: "59074658"
   
          プロジェクトまたはフォームのデータ ソースが構成されていた場合は、表示されます。  
   
-3.  **[プロジェクト データ ソースの追加]** をクリックしてデータに接続し、データ ソースを作成します。  
+3. **[プロジェクト データ ソースの追加]** をクリックしてデータに接続し、データ ソースを作成します。  
   
-4.  **データ ソース構成ウィザード**の開始ページで **[次へ]** をクリックします。  
+4. **データ ソース構成ウィザード**の開始ページで **[次へ]** をクリックします。  
   
-5.  **データ ソースの種類を選択**] ページで、[**データベース**します。  
+5. **データ ソースの種類を選択**] ページで、[**データベース**します。  
   
-6.  **データ接続の選択** ページで、利用可能な接続の一覧からデータ接続を選択します。 目的のデータ接続が使用可能な選択ではない場合**新しい接続**新しいデータ接続を作成します。  
+6. **データ接続の選択** ページで、利用可能な接続の一覧からデータ接続を選択します。 目的のデータ接続が使用可能な選択ではない場合**新しい接続**新しいデータ接続を作成します。  
   
-7.  選択**接続を [はい] に、保存**をアプリケーション構成ファイルで接続文字列を保存します。  
+7. 選択**接続を [はい] に、保存**をアプリケーション構成ファイルで接続文字列を保存します。  
   
-8.  アプリケーションで使用するデータベース オブジェクトを選択します。 この場合、希望するテーブルでフィールドを選び、<xref:System.Windows.Forms.TextBox>を表示します。  
+8. アプリケーションで使用するデータベース オブジェクトを選択します。 この場合、希望するテーブルでフィールドを選び、<xref:System.Windows.Forms.TextBox>を表示します。  
   
 9. 必要な場合は、既定のデータセット名を変更します。  
   

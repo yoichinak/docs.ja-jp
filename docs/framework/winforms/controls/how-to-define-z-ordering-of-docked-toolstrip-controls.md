@@ -1,5 +1,5 @@
 ---
-title: '方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義します。'
+title: '方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: 1ae7e6f63488d2dbb6b408cdf255f111f929298f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3347722383b7388c00335683537e00851e642bb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129169"
 ---
-# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義します。
+# <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義する
 ドッキングを使用して <xref:System.Windows.Forms.ToolStrip> コントロールを正しく配置するには、フォームの z オーダーでコントロールを正しく配置する必要があります。  
   
 ## <a name="example"></a>例  
@@ -26,7 +26,7 @@ ms.locfileid: "57722665"
  [!code-csharp[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#21)]
  [!code-vb[System.Windows.Forms.ToolStrip.Misc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#21)]  
   
- Z オーダーは、<xref:System.Windows.Forms.ToolStrip> と <xref:System.Windows.Forms.MenuStrip> の順序によって決まります。  
+ Z オーダーが順序によって決まりますが、<xref:System.Windows.Forms.ToolStrip>と <xref:System.Windows.Forms.MenuStrip>  
   
  コントロールはフォームの <xref:System.Windows.Forms.Control.Controls%2A> コレクションに追加されます。  
   
@@ -40,9 +40,10 @@ ms.locfileid: "57722665"
   
 -   System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual c# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.ControlCollection.Add%2A>

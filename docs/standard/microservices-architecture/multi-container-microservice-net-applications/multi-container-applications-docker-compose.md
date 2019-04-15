@@ -4,12 +4,12 @@ description: docker-compose.yml を使用して複数コンテナーのアプリ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463528"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920780"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -433,7 +433,7 @@ Docker-compose は、.env ファイル内の各行が \<変数\>=\<値\> の形�
 インターネット上のソースで Docker や .NET Core を検索すると、ソースをコンテナーにコピーして Docker イメージを簡単にビルドする方法を示す Dockerfile が見つかります。 これらの例では、単純な構成を使用することで、ご利用のアプリケーションにパッケージ化された環境で Docker イメージを持つことができます。 次の例は、このような単純な Dockerfile を示しています。
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) では、イメージの新しいインスタンスが作成されるだけです。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET Core と Docker に関する多くのブログ記事で見られるような、dotnet CLI から `dotnet restore` コマンドおよび `dotnet build` コマンドを使用した、実行時の復元およびコンパイルは行わないでください。
 
-.NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、*microsoft/dotnet* にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
+.NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、*dotnet/core* にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
 
 1. **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
 
@@ -454,11 +454,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
-これを実現するために、.NET チームは、次の 3 つの基本的なバリエーションを [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (Docker Hub) に用意しています。
+これを実現するために、.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) に用意しています。
 
-1. **sdk**: 開発シナリオおよびビルド シナリオ向け。
-2. **runtime**: 実稼働シナリオ向け。
-3. **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#self-contained-deployments-scd)の実稼働シナリオ向け。
+1. **sdk**: 開発シナリオおよびビルド シナリオ向け
+1. **aspnet**: ASP.NET 運用シナリオ向け
+1. **runtime**: .NET 運用シナリオ向け
+1. **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#self-contained-deployments-scd)の運用シナリオ向け。
 
 迅速に起動するために、ランタイム イメージでも aspnetcore\_urls にポート 80 が自動的に設定され、Ngen を使用してアセンブリのネイティブ イメージ キャッシュが作成されます。
 

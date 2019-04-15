@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172550"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 アプリケーションは、<xref:System.Net.Sockets.TcpClient>、<xref:System.Net.Sockets.TcpListener>、<xref:System.Net.Sockets.UdpClient> クラスで伝送制御プロトコル (TCP) サービスとユーザー データグラム プロトコル (UDP) サービスを利用できます。 これらのプロトコルのクラスは <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> クラスの上に構築され、データ転送の詳細を処理します。  
@@ -33,6 +33,7 @@ ms.locfileid: "54692546"
  **UdpClient** クラスはバイトの配列を利用し、UDP データグラムを保持します。 <xref:System.Net.Sockets.UdpClient.Send%2A> メソッドを利用してデータをネットワークに送信し、<xref:System.Net.Sockets.UdpClient.Receive%2A> メソッドを利用し、入ってくるデータグラムを受信します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [TCP サービスの使用](../../../docs/framework/network-programming/using-tcp-services.md)
 - [UDP サービスの使用](../../../docs/framework/network-programming/using-udp-services.md)
 - [ネットワーク上でストリームを使用する](../../../docs/framework/network-programming/using-streams-on-the-network.md)

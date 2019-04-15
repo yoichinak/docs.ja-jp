@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227133"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>方法: 自動レイアウト用のグリッドを使用する
 この例では、自動レイアウトの方法でグリッドを使用して、ローカライズ可能なアプリケーションを作成する方法について説明します。  
@@ -30,5 +30,6 @@ ms.locfileid: "57357483"
 グリッド  
   
 ## <a name="see-also"></a>関連項目
+
 - [自動レイアウトの使用の概要](use-automatic-layout-overview.md)
 - [自動レイアウトを使用してボタンを作成する](how-to-use-automatic-layout-to-create-a-button.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218668"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 要素 (ネットワーク設定)
 Web プロキシを検出するために使用するスクリプトの特性を構成します。  
@@ -47,7 +47,7 @@ Web プロキシを検出するために使用するスクリプトの特性を�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -55,4 +55,5 @@ Web プロキシを検出するために使用するスクリプトの特性を�
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

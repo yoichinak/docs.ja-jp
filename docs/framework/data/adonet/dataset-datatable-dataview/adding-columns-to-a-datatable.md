@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 892c0488588e9a5b59650f4a815ba9819493a610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207007"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
 A<xref:System.Data.DataTable>のコレクションを含む<xref:System.Data.DataColumn>によって参照されるオブジェクト、**列**テーブルのプロパティ。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  
@@ -44,14 +44,15 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- この例では、プロパティを**CustID**列は許可しないように設定**DBNull**値と一意である値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**します。 詳細については、[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)を参照してください。  
+ この例では、プロパティを**CustID**列は許可しないように設定**DBNull**値と一意である値を制限します。 ただし、定義した場合、 **CustID**列、テーブルの主キー列として、 **AllowDBNull**プロパティに自動的に設定する**false**と、 **Unique**プロパティに自動的に設定する**true**します。 詳細については、次を参照してください。[主キーを定義する](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)します。  
   
 > [!CAUTION]
 >  列の列名が指定されていない場合、列が指定された列のインクリメンタル既定名*N、* "Column1"から始めて、ときに追加されます、 **DataColumnCollection**します。 名前付け規則を回避することをお勧めします。"列*N*"の既存の既定の列名と競合する可能性が名前を指定するために、列名を指定するときに、 **DataColumnCollection**します。 指定した名前が既に存在する場合は、例外がスローされます。  
   
- <xref:System.Xml.Linq.XElement> を、<xref:System.Data.DataColumn.DataType%2A> 内の <xref:System.Data.DataColumn> の <xref:System.Data.DataTable> として使用すると、データを読み取るときに XML シリアル化が機能しません。 たとえば、<xref:System.Xml.XmlDocument> メソッドを使用して `DataTable.WriteXml` を書き込むと、XML へのシリアル化で <xref:System.Xml.Linq.XElement> に親ノードが追加されます。 この問題に対処するには、<xref:System.Data.SqlTypes.SqlXml> の代わりに <xref:System.Xml.Linq.XElement> 型を使用します。 `ReadXml` および `WriteXml` は、<xref:System.Data.SqlTypes.SqlXml> で適切に機能します。  
+ <xref:System.Xml.Linq.XElement> を、<xref:System.Data.DataColumn.DataType%2A> 内の <xref:System.Data.DataColumn> の <xref:System.Data.DataTable> として使用すると、データを読み取るときに XML シリアル化が機能しません。 たとえば、<xref:System.Xml.XmlDocument> メソッドを使用して `DataTable.WriteXml` を書き込むと、XML へのシリアル化で <xref:System.Xml.Linq.XElement> に親ノードが追加されます。 この問題に対処するには、<xref:System.Data.SqlTypes.SqlXml> の代わりに <xref:System.Xml.Linq.XElement> 型を使用します。 `ReadXml` `WriteXml`で適切に機能<xref:System.Data.SqlTypes.SqlXml>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>

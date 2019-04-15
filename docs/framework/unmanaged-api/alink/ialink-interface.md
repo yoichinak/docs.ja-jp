@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c970e14bfb3f8f8afcc97568e221d2e1cc15198
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146576"
 ---
 # <a name="ialink-interface"></a>IALink インターフェイス
 .NET Framework アセンブリの構築に役立ちます。 その他のものは、インターフェイスには、マルチ モジュール アセンブリのアセンブリ マニフェストの作成、厳密な名前によるアセンブリの署名および netmodule の作成を補助するメソッドが含まれています。  
@@ -76,6 +76,7 @@ ms.locfileid: "56978242"
  [SetNonAssemblyFlags メソッド](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Al.exe (アセンブリ リンカー)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

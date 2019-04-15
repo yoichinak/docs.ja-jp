@@ -16,7 +16,7 @@ ms.locfileid: "57708090"
 このトピックでは、初めての Windows フォーム アプリケーションを作成する方法について説明したトピックへのリンクを示します。 また、このセクションのトピックでは、Windows フォーム アプリケーションを作成する際に理解しておくべき基本的な用語とガイドラインもいくつか紹介します。 Windows フォーム アプリケーションについてに、イベントとイベントの処理、および、ユーザーからの入力を処理する方法で使用できるコントロールは、関連トピックの一覧を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォームの座標](windows-forms-coordinates.md)します。  
+ [Windows フォームの座標](windows-forms-coordinates.md)  
  クライアント座標と画面座標について説明します。  
   
  [方法: コマンドラインから Windows フォーム アプリケーションを作成します。](how-to-create-a-windows-forms-application-from-the-command-line.md)  

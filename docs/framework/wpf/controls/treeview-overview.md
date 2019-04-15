@@ -6,17 +6,16 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209074"
 ---
 # <a name="treeview-overview"></a>TreeView の概要
 <xref:System.Windows.Controls.TreeView>コントロールは、折りたたみ可能なノードを使用して、階層構造で情報を表示する方法を提供します。 このトピックでは、<xref:System.Windows.Controls.TreeView>と<xref:System.Windows.Controls.TreeViewItem>コントロール、およびその使用の単純な例を示します。  
-  
-  
+
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>TreeViewとは  
  <xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.ItemsControl>を使用して、項目をネストする<xref:System.Windows.Controls.TreeViewItem>コントロール。 次の例では、作成、<xref:System.Windows.Controls.TreeView>します。  
@@ -74,7 +73,8 @@ ms.locfileid: "57369631"
  [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [方法トピック](treeview-how-to-topics.md)
+- [方法のトピック](treeview-how-to-topics.md)
 - [WPF のコンテンツ モデル](wpf-content-model.md)

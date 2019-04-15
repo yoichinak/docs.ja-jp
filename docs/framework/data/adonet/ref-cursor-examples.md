@@ -2,12 +2,12 @@
 title: REF CURSOR の例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 00e1cd1b9c13514979ee22b32996d35e1bd1c3e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158939"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR の例
 REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの Microsoft Visual Basic の例によって構成されています。  
@@ -80,5 +80,6 @@ END CURSPKG;
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

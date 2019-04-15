@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335720"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows フォームと WPF の相互運用性入力アーキテクチャ
 間の相互運用、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]両方のテクノロジは、適切なキーボード入力の処理である必要があります。 このトピックでは、これらのテクノロジがキーボードとメッセージ ハイブリッド アプリケーションでのスムーズな相互運用性を有効にする処理を実装する方法について説明します。  
@@ -57,13 +57,13 @@ ms.locfileid: "57352422"
 ### <a name="surrogate-windows-forms-message-loop"></a>Windows フォームのメッセージ ループをサロゲート  
  既定で、<xref:System.Windows.Forms.Application?displayProperty=nameWithType>クラスには、プライマリ メッセージ ループが含まれています。[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション。 相互運用性、中に、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]メッセージ ループは、メッセージを処理しません。 そのため、このロジックを再現する必要があります。 ハンドラーは、<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>イベントは、次の手順を実行します。  
   
-1.  使用してメッセージをフィルター処理、<xref:System.Windows.Forms.IMessageFilter>インターフェイス。  
+1. 使用してメッセージをフィルター処理、<xref:System.Windows.Forms.IMessageFilter>インターフェイス。  
   
-2.  呼び出し、<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>メソッド。  
+2. 呼び出し、<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>メソッド。  
   
-3.  変換し、必要な場合に、メッセージをディスパッチします。  
+3. 変換し、必要な場合に、メッセージをディスパッチします。  
   
-4.  その他のコントロールがメッセージを処理しない場合は、ホスト コントロールにメッセージを渡します。  
+4. その他のコントロールがメッセージを処理しない場合は、ホスト コントロールにメッセージを渡します。  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink 実装  
  サロゲートのメッセージ ループは、キーボードの管理を処理します。 そのため、<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>メソッドは、唯一<xref:System.Windows.Interop.IKeyboardInputSink>の実装を必要とするメンバー、<xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス。  
@@ -72,11 +72,11 @@ ms.locfileid: "57352422"
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>の実装、<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>メソッドは、次の手順を実行します。  
   
-1.  最初の検索または最後[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]に格納されているコントロール、<xref:System.Windows.Forms.Integration.WindowsFormsHost>とコントロールがフォーカスを受け取ることができます。 コントロールの選択肢は、トラバーサルの情報に依存します。  
+1. 最初の検索または最後[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]に格納されているコントロール、<xref:System.Windows.Forms.Integration.WindowsFormsHost>とコントロールがフォーカスを受け取ることができます。 コントロールの選択肢は、トラバーサルの情報に依存します。  
   
-2.  コントロールにフォーカスを設定し、返します`true`します。  
+2. コントロールにフォーカスを設定し、返します`true`します。  
   
-3.  コントロールがフォーカスを受け取ることはありません、返します`false`します。  
+3. コントロールがフォーカスを受け取ることはありません、返します`false`します。  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost の登録  
  ウィンドウを処理するときに、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールが作成された、<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、メッセージ ループの存在を登録する内部の静的メソッドを呼び出します。  
@@ -129,10 +129,11 @@ ms.locfileid: "57352422"
  メッセージの送信にのみ<xref:System.Windows.Forms.Integration.ElementHost>アクティブ フォーム内のコントロール。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)

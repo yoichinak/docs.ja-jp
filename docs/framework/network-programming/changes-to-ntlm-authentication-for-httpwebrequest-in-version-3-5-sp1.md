@@ -2,12 +2,12 @@
 title: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216718"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
 セキュリティの変更は、System.Net 名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、.NET Framework Version 3.5 SP1 以降で行われました。 これらの変更は、これらのクラスを使用して Web 要求を作成し、NTLM に基づく統合 Windows 認証が使用されている応答を受信するアプリケーションに影響を及ぼす場合があります。 この変更は、統合 Windows 認証を使用するように構成されている Web サーバーおよびクライアント アプリケーションに影響を与える可能性があります。  
@@ -17,7 +17,7 @@ ms.locfileid: "54589559"
   
  <xref:System.Net> 名前空間と <xref:System.Net.Security> 名前空間内の複数のコンポーネントは、呼び出し元のアプリケーションに代わって統合 Windows 認証を実行します。 このセクションでは、統合 Windows 認証の使用で拡張保護を追加するための System.Net コンポーネントへの変更について説明します。  
   
-## <a name="changes"></a>変更  
+## <a name="changes"></a>変更内容  
  統合 Windows 認証で使用される NTLM 認証プロセスには、クライアント コンピューターに送り返される、ターゲット コンピューターによって発行されるチャレンジが含まれています。 コンピューター自体が生成したチャレンジをコンピューターが受け取った場合、接続がループ バック接続 (たとえば、IPv4 アドレス 127.0.0.1) でない限り、認証は失敗します。  
   
  内部 Web サーバー上で実行されているサービスにアクセスする場合、`http://contoso/service` や `https://contoso/service` のような URL を使用してサービスにアクセスするのが一般的です。 "contoso" という名前は、多くの場合、サービスが展開されているコンピューターの名前ではありません。 <xref:System.Net> と関連する名前空間は、名前をアドレスに解決するために、Active Directory、DNS、NetBIOS、ローカル コンピューターのホスト ファイル (通常は WINDOWS\system32\drivers\etc\hosts など)、またはローカル コンピューターの lmhosts ファイル名 (通常は WINDOWS\system32\drivers\etc\lmhosts など) の使用をサポートしています。 "contoso" という名前は、"contoso" に送信された要求が適切なサーバー コンピューターに送信されるように解決されます。  
@@ -51,6 +51,7 @@ ms.locfileid: "54589559"
  <https://support.microsoft.com/kb/896861> で説明されているように、あまり安全ではない回避策はループ バック チェックを無効にすることです。 これによって、リフレクション攻撃に対する保護が無効になります。 そのため、実際に使用するコンピューターと想定するコンピューターにのみ、代替名のセットを制限することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

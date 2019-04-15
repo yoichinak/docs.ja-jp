@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae3766e2045b5834fbf6ea20415942413b1590c0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 9e8fdb54bddc32c08adbe114e2d46e2508585bc1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234171"
 ---
 ### <a name="wcf-services-that-use-nettcp-with-ssl-security-and-md5-certificate-authentication"></a>SSL セキュリティと MD5 証明書認証で NETTCP を使用する WCF サービス
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761414"
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

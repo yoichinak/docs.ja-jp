@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 974b99da085a5cb969ab37cddb0f2f2c62010d14
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122799"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 構造体
 
@@ -55,7 +55,6 @@ struct MSLAYOUT DacpReJitData
 | `flags`          | 特定のバージョンのメソッドの ReJit インストルメンテーションの現在の状態を示すフラグ。 |
 | `NativeCodeAddr` | メソッドの rejitted 実装のベース アドレス。                                         |
 
-
 ## <a name="remarks"></a>Remarks
 
 この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用するには、上で指定した構造を定義します。 使用して、構造体を定義する必要がありますも`ms_struct`Microsoft コンパイラを使用していない場合にパックします。
@@ -64,8 +63,9 @@ struct MSLAYOUT DacpReJitData
 **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
+
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

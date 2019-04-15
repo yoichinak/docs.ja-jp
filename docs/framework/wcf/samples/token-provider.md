@@ -2,12 +2,12 @@
 title: トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085761"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336292"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
 このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
@@ -109,7 +109,7 @@ ms.locfileid: "59085761"
 
  次の手順では、カスタム トークン プロバイダーを開発し、WCF のセキュリティ フレームワークに統合する方法を示します。
 
-1.  カスタム トークン プロバイダーを作成します。
+1. カスタム トークン プロバイダーを作成します。
 
      サンプルでは、ユーザー名とパスワードを取得するカスタム トークン プロバイダーを実装します。 パスワードは、このユーザー名と一致する必要があります。 このカスタム トークン プロバイダーは、デモンストレーション用にのみ作成されたものです。実環境に展開することは推奨されません。
 
@@ -128,7 +128,7 @@ ms.locfileid: "59085761"
     }
     ```
 
-2.  カスタム セキュリティ トークン マネージャーを作成します。
+2. カスタム セキュリティ トークン マネージャーを作成します。
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、特定の <xref:System.IdentityModel.Selectors.SecurityTokenProvider> (<xref:System.IdentityModel.Selectors.SecurityTokenRequirement> メソッドで渡されます) に対する `CreateSecurityTokenProvider` を作成するために使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、渡されたトークンの要件でユーザー名プロバイダーが必要であることが示されている場合に、`CreateSecurityTokenProvider` メソッドをオーバーライドして、カスタムのユーザー名トークン プロバイダーを返します。
 
@@ -159,7 +159,7 @@ ms.locfileid: "59085761"
     }
     ```
 
-3.  カスタム クライアント資格情報を作成します。
+3. カスタム クライアント資格情報を作成します。
 
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダー、およびトークン シリアライザーの取得に使用されるセキュリティ トークン マネージャーを作成します。
 
@@ -184,7 +184,7 @@ ms.locfileid: "59085761"
     }
     ```
 
-4.  カスタム クライアント資格情報を使用するようクライアントを構成します。
+4. カスタム クライアント資格情報を使用するようクライアントを構成します。
 
      クライアントがカスタム クライアント資格情報を使用するため、サンプルでは既定のクライアント資格情報を削除し、新しいクライアント資格情報クラスを提供しています。
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
+1. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
 
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1.  管理者特権で開いた Visual Studio 2012 コマンド プロンプト内で、サンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で開いた Visual Studio 2012 コマンド プロンプト内で、サンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
     >  Setup.bat バッチ ファイルは、Visual Studio 2012 コマンド プロンプトから実行する設計されています。 Visual Studio 2012 のコマンド プロンプト ポイント内で設定して、Setup.bat スクリプトで必要な実行可能ファイルを格納するディレクトリ パス環境変数。  
   
-2.  service.exe を \service\bin で起動します。  
+2. service.exe を \service\bin で起動します。  
   
-3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
+3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  username プロンプトに対してユーザー名を入力します。  
+4. username プロンプトに対してユーザー名を入力します。  
   
-5.  password プロンプトに対して、username プロンプトで入力したものと同じ文字列を入力します。  
+5. password プロンプトに対して、username プロンプトで入力したものと同じ文字列を入力します。  
   
-6.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+6. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 #### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには  
   
-1.  サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
+1. サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
   
-2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
+2. サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、Visual Studio 用開発者コマンド プロンプトから実行する必要があるメモは、管理者特権で開かれます。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
+3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、Service.exe.config ファイルを更新する必要があります。 サーバー証明書を作成するには、Setup.bat バッチ ファイルを変更します。 Setup.bat ファイルは、Visual Studio 用開発者コマンド プロンプトから実行する必要があるメモは、管理者特権で開かれます。 `%SERVER_NAME%` 変数には、サービスをホストするコンピューターの完全修飾ホスト名を設定する必要があります。  
   
-4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 この操作は、サーバー証明書の発行元をクライアントが信頼できる場合は不要です。  
+4. サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 この操作は、サーバー証明書の発行元をクライアントが信頼できる場合は不要です。  
   
-5.  サービス コンピューターの Service.exe.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
+5. サービス コンピューターの Service.exe.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
   
-6.  サービス コンピューターで、コマンド プロンプトから service.exe を実行します。  
+6. サービス コンピューターで、コマンド プロンプトから service.exe を実行します。  
   
-7.  クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
+7. クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
   
-8.  クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
+8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから `Client.exe` を起動します。  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  

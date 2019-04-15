@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールのフォント属性を設定します。'
+title: '方法: Windows フォームの RichTextBox コントロールのフォント属性を設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331209"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールのフォント属性を設定します。
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールのフォント属性を設定する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。 行うことができます、選択した文字太字、下線、または斜体などを使用して、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティ。 また、このプロパティを使用して、選択した文字のサイズと書体を変更することもできます。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティでは、選択した文字の色を変更することができます。  
   
 ### <a name="to-change-the-appearance-of-characters"></a>文字の外観を変更するには  
   
-1.  設定、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティを適切なフォント。  
+1. 設定、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティを適切なフォント。  
   
      ユーザーをアプリケーションでフォント ファミリ、サイズ、および書体を設定できるように、通常使用する、<xref:System.Windows.Forms.FontDialog>コンポーネント。 概要については、「[FontDialog Component Overview](fontdialog-component-overview-windows-forms.md)」 (FontDialog コンポーネントの概要) を参照してください。  
   
-2.  設定、<xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティを適切な色にします。  
+2. 設定、<xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティを適切な色にします。  
   
      アプリケーションで色を設定するユーザーを有効にするには通常使用、<xref:System.Windows.Forms.ColorDialog>コンポーネント。 概要については、「[ColorDialog Component Overview](colordialog-component-overview-windows-forms.md)」 (ColorDialog コンポーネントの概要) を参照してください。  
   
@@ -51,9 +51,10 @@ Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが
     ```  
   
     > [!NOTE]
-    >  これらのプロパティは選択したテキストにのみ影響します。テキストが選択されていない場合は、現在の挿入ポイントの場所に入力されるテキストに影響します。 プログラムでテキストを選択する方法の詳細については、<xref:System.Windows.Forms.TextBoxBase.Select%2A>を参照してください。  
+    >  これらのプロパティは選択したテキストにのみ影響します。テキストが選択されていない場合は、現在の挿入ポイントの場所に入力されるテキストに影響します。 プログラムでテキストを選択する方法の詳細については、次を参照してください。<xref:System.Windows.Forms.TextBoxBase.Select%2A>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

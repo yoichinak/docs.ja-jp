@@ -1,5 +1,5 @@
 ---
-title: '方法: 設定し、Windows フォームの NumericUpDown コントロールで数値を返す'
+title: '方法: Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 166b14fca2009d0609fa48a5f07912b33f074071
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703207"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300503"
 ---
-# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>方法: 設定し、Windows フォームの NumericUpDown コントロールで数値を返す
+# <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>方法: Windows フォームの NumericUpDown コントロールを使用して数値を設定および取得する
 Windows フォームの数値<xref:System.Windows.Forms.NumericUpDown>コントロールはによって決定されます。 その<xref:System.Windows.Forms.NumericUpDown.Value%2A>プロパティ。 他のプロパティと同様に、コントロールの値の条件付きテストを記述できます。 1 回、<xref:System.Windows.Forms.NumericUpDown.Value%2A>プロパティが設定されて、それを調整するには、操作を実行するコードの記述によって直接、または呼び出すことができます、<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>と<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>メソッド。  
   
 ### <a name="to-set-the-numeric-value"></a>数値の値を設定するには  
   
-1.  値を割り当てる、<xref:System.Windows.Forms.NumericUpDown.Value%2A>コードまたは、[プロパティ] ウィンドウでプロパティ。  
+1. 値を割り当てる、<xref:System.Windows.Forms.NumericUpDown.Value%2A>コードまたは、[プロパティ] ウィンドウでプロパティ。  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -39,7 +39,7 @@ Windows フォームの数値<xref:System.Windows.Forms.NumericUpDown>コント�
   
      - または -  
   
-2.  呼び出す、<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>または<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>メソッドで指定した値を増減させて、<xref:System.Windows.Forms.NumericUpDown.Increment%2A>プロパティ。  
+2. 呼び出す、<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>または<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>メソッドで指定した値を増減させて、<xref:System.Windows.Forms.NumericUpDown.Increment%2A>プロパティ。  
   
     ```vb  
     NumericUpDown1.UpButton()  
@@ -90,6 +90,7 @@ Windows フォームの数値<xref:System.Windows.Forms.NumericUpDown>コント�
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>

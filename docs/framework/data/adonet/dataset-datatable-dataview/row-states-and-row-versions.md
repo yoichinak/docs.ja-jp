@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 38166addf95679083932a4369d19b75421a64665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092904"
 ---
 # <a name="row-states-and-row-versions"></a>行の状態とバージョン
 ADO.NET は、行の状態とバージョンを使用してテーブル内の行を管理します。 行状態は、1 つの行のステータスを示します。行バージョンは、1 つの行の値が変更されるときに、変更に応じてその行に格納される現在の値、元の値、既定値などを維持します。 たとえば、ある行の 1 つの列を変更すると、この行の状態は `Modified` になり、次の 2 つの行バージョンが存在することになります。`Current` には現在の行値が格納され、`Original` にはその列が変更される前の行値が格納されます。  
@@ -23,7 +23,7 @@ ADO.NET は、行の状態とバージョンを使用してテーブル内の行
 |<xref:System.Data.DataRowState.Added>|行がテーブルに追加されましたが、`AcceptChanges` が呼び出されていません。|  
 |<xref:System.Data.DataRowState.Modified>|行のいくつかの要素が変更されました。|  
 |<xref:System.Data.DataRowState.Deleted>|行がテーブルから削除されましたが、`AcceptChanges` が呼び出されていません。|  
-|<xref:System.Data.DataRowState.Detached>|行がどの `DataRowCollection` にも属していません。 新しく作成された行の `RowState` は `Detached` に設定されます。 `DataRow` メソッドを呼び出して新しい `DataRowCollection` を `Add` に追加すると、`RowState` プロパティの値は `Added` に設定されます。<br /><br /> `Detached` は、`DataRowCollection` メソッドを使用するか、または `Remove` メソッドに続いて `Delete` メソッドを使用して `AcceptChanges` から削除された行に対しても設定されます。|  
+|<xref:System.Data.DataRowState.Detached>|行がどの `DataRowCollection` にも属していません。 新しく作成された行の `RowState` は `Detached` に設定されます。 `DataRow` メソッドを呼び出して新しい `DataRowCollection` を `Add` に追加すると、`RowState` プロパティの値は `Added` に設定されます。<br /><br /> `Detached` 削除された行に設定されても、`DataRowCollection`を使用して、`Remove`メソッド、または、`Delete`メソッドに続けて、`AcceptChanges`メソッド。|  
   
  `AcceptChanges`、<xref:System.Data.DataSet>、または <xref:System.Data.DataTable> の <xref:System.Data.DataRow> が呼び出されると、`Deleted` の行状態を持つすべての行が削除されます。 残りの行の行状態は `Unchanged` になり、`Original` 行バージョンの値は `Current` 行バージョンの値で上書きされます。 `RejectChanges` が呼び出されると、`Added` の行状態を持つすべての行が削除されます。 残りの行の行状態は `Unchanged` になり、`Current` 行バージョンの値は `Original` 行バージョンの値で上書きされます。  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  `DataRow` メソッドを呼び出して <xref:System.Data.DataRow.HasVersion%2A> を引数として渡すことにより、`DataRowVersion` が特定の行バージョンを持っているかどうかを確認できます。 たとえば、`DataRow.HasVersion(DataRowVersion.Original)` は、新しく追加された行に対して `false` が呼び出されていない場合に `AcceptChanges` を返します。  
   
- テーブルから削除されたすべての行の値を表示するコード サンプルを次に示します。 `Deleted` 行には `Current` 行バージョンがないため、列値にアクセスするときに `DataRowVersion.Original` を渡す必要があります。  
+ テーブルから削除されたすべての行の値を表示するコード サンプルを次に示します。 `Deleted` 行がない、`Current`行バージョンを渡す必要がありますので`DataRowVersion.Original`列の値にアクセスする場合。  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -95,6 +95,7 @@ foreach (DataRow delRow in delRows)
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [DataTable 内のデータの操作](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataSet、DataTable、および DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [DataAdapter と DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)

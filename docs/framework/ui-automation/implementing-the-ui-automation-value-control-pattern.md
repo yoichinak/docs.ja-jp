@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174955"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>UI オートメーション Value コントロール パターンの実装
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "57678076"
   
 -   複数行の編集コントロールのテキスト コンテンツを取得するには、コントロールが <xref:System.Windows.Automation.Provider.ITextProvider>を実装していなければなりません。 ただし、 <xref:System.Windows.Automation.Provider.ITextProvider> はコントロールの値の設定はサポートしていません。  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> は、書式設定情報や部分文字列の値の取得をサポートしていません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 書式設定情報や部分文字列の値の取得はサポートされません。 このようなシナリオでは <xref:System.Windows.Automation.Provider.ITextProvider> を実装します。  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> を実装する必要があるコントロールの一例は、 **の** カラー ピッカー [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選択コントロールです (以下を参照)。このコントロールは、色の値 (たとえば「黄」) と同等の内部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 構造の間の文字列マッピングをサポートしています。  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> などのコントロールによって実装する必要があります、**カラー ピッカー**選択コントロールから[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](以下を参照)、(たとえば、「黄」) の色の値と同等の内部間の文字列マッピングをサポートする[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]構造体。  
   
  ![黄色が強調表示されたカラー ピッカー。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列のマッピング例  
@@ -64,9 +64,10 @@ ms.locfileid: "57678076"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -しようとしましたが有効になっていないコントロールを操作します。|  
   
 ## <a name="see-also"></a>関連項目
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [ValuePattern 挿入テキスト サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

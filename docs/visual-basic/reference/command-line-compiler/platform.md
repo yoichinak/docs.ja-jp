@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843124"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301166"
 ---
 # <a name="-platform-visual-basic"></a>プラットフォーム (Visual Basic)
 出力ファイルをどのプラットフォーム用の共通言語ランタイム (CLR) で実行するかを指定します。  
@@ -64,15 +64,15 @@ ms.locfileid: "58843124"
   
 -   `-platform:anycpu32bitpreferred` でコンパイルされた実行可能ファイルは、32 ビット CLR で実行されます。  
   
- Windows の 64 ビット バージョンで実行するアプリケーションを開発する方法の詳細については、[64 ビット アプリケーション](../../../framework/64-bit-apps.md)を参照してください。  
+ Windows の 64 ビット バージョンで実行するアプリケーションを開発する方法の詳細については、次を参照してください。 [64 ビット アプリケーション](../../../framework/64-bit-apps.md)します。  
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>-Visual Studio IDE でプラットフォームを設定するには  
   
-1.  **ソリューション エクスプ ローラー**、プロジェクトを選択を開く、**プロジェクト** メニューをクリック**プロパティ**します。  
+1. **ソリューション エクスプ ローラー**、プロジェクトを選択を開く、**プロジェクト** メニューをクリック**プロパティ**します。  
   
-2.  **コンパイル**タブ、オンまたはオフ、**優先の 32 ビット**チェック ボックスをオンまたは、**ターゲット CPU**一覧で、値を選択します。  
+2. **コンパイル**タブ、オンまたはオフ、**優先の 32 ビット**チェック ボックスをオンまたは、**ターゲット CPU**一覧で、値を選択します。  
   
-     詳細については、[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)を参照してください。  
+     詳細については、次を参照してください。 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)します。  
   
 ## <a name="example"></a>例  
  次の例は、`-platform` コンパイラ オプションを使用する方法を示しています。  

@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336136"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM の要素ノードからの属性の削除
 属性を削除するには、さまざまな方法があります。 その 1 つとして、属性コレクションから属性を削除する方法があります。 属性コレクションから属性を削除するには、次の手順を実行します。  
   
-1.  `XmlAttributeCollection attrs = elem.Attributes;` を使用して要素から属性コレクションを取得します。  
+1. `XmlAttributeCollection attrs = elem.Attributes;` を使用して要素から属性コレクションを取得します。  
   
-2.  属性コレクションから属性を削除するには、次の 3 つのメソッドのいずれかを使用します。  
+2. 属性コレクションから属性を削除するには、次の 3 つのメソッドのいずれかを使用します。  
   
     -   <xref:System.Xml.XmlAttributeCollection.Remove%2A> メソッドを使用して、特定の属性を削除する。  
   

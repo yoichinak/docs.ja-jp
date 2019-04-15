@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329779"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>方法: Windows フォームにコントロールを固定する
 ユーザーが実行時にフォームをデザインする場合、フォーム上のコントロールをサイズを変更し、正しくの位置を変更します。 動的フォームにコントロールのサイズを変更するには、使用することができます、 <xref:System.Windows.Forms.Control.Anchor%2A> Windows フォーム コントロールのプロパティ。 <xref:System.Windows.Forms.Control.Anchor%2A>プロパティ、コントロールのアンカーの位置を定義します。 フォームにコントロールを固定すると、フォームのサイズが、コントロールは、コントロールとアンカー位置の間の距離を保持します。 ある場合など、<xref:System.Windows.Forms.TextBox>ようにフォームのサイズが、左、右、およびフォームの下端に固定されているコントロール、<xref:System.Windows.Forms.TextBox>フォームの右辺と左辺からの距離が維持されるため、水平方向にサイズ変更を制御します。 さらに、コントロール配置自体垂直方向にその場所は、フォームの下端から同じ距離では常にできるようにします。 コントロールが固定されていないと、フォームのサイズが、フォームの端を基準としたコントロールの位置が変更されました。  
@@ -29,22 +29,22 @@ ms.locfileid: "59072996"
   
 ### <a name="to-anchor-a-control-on-a-form"></a>フォームのコントロールを固定するには  
   
-1.  固定するコントロールを選択します。  
+1. 固定するコントロールを選択します。  
   
     > [!NOTE]
     >  CTRL キーを押しを選択し、各コントロールをクリックし、この手順の残りの部分で同時に複数のコントロールを固定できます。  
   
-2.  **プロパティ** ウィンドウの右矢印をクリックして、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ。  
+2. **プロパティ** ウィンドウの右矢印をクリックして、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ。  
   
      クロス エディターが表示されます。  
   
-3.  アンカーを設定するには、上、左、右、またはクロスの下部のセクションをクリックします。  
+3. アンカーを設定するには、上、左、右、またはクロスの下部のセクションをクリックします。  
   
      コントロールでは、上部に固定し、既定のまま。  
   
-4.  固定されているコントロールの辺をクリアするには、その arm クロスをクリックします。  
+4. 固定されているコントロールの辺をクリアするには、その arm クロスをクリックします。  
   
-5.  閉じるには、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ エディターでは、クリックして、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ名をもう一度です。  
+5. 閉じるには、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ エディターでは、クリックして、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティ名をもう一度です。  
   
  実行時にフォームが表示されたら、フォームの端からの距離を保持するコントロールのサイズを変更します。 アンカーの端からの距離の距離では、Windows フォーム デザイナーでコントロールを配置するときに定義されているように同じが常にです。  
   

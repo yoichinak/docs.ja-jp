@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132211"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
 画面に表示できるものは、ブラシによって描画されているために表示されます。 など、ブラシを使用して、ボタン、テキストの前景色および図形の塗りつぶしの背景について説明します。 このトピックでの描画の概念を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ブラシし、例について説明します。 ブラシを使用すると、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] オブジェクトを単色で塗りつぶすことも、パターンとイメージの複雑な組み合わせで塗りつぶすこともできます。  
@@ -131,9 +131,9 @@ VisualBrush を使用して描画された四角形
 ## <a name="paint-using-predefined-and-system-brushes"></a>定義済みおよびシステム ブラシを使用して描画します。  
  便宜上は、Windows Presentation Foundation (WPF) は、定義済みの一連のおよびシステム ブラシ オブジェクトの描画に使用できるを提供します。  
   
--   使用可能な定義済みのブラシの一覧は、次を参照してください。、<xref:System.Windows.Media.Brushes>クラス。 定義済みのブラシを使用する方法を示す例は、[純色で領域を塗りつぶす](how-to-paint-an-area-with-a-solid-color.md)を参照してください。  
+-   使用可能な定義済みのブラシの一覧は、次を参照してください。、<xref:System.Windows.Media.Brushes>クラス。 定義済みのブラシを使用する方法を示す例は、次を参照してください。[純色で領域を塗りつぶす](how-to-paint-an-area-with-a-solid-color.md)します。  
   
--   使用可能なシステム ブラシの一覧は、次を参照してください。、<xref:System.Windows.SystemColors>クラス。 例については、[システム ブラシで領域を塗りつぶす](how-to-paint-an-area-with-a-system-brush.md)を参照してください。  
+-   使用可能なシステム ブラシの一覧は、次を参照してください。、<xref:System.Windows.SystemColors>クラス。 例については、次を参照してください。[システム ブラシで領域を塗りつぶす](how-to-paint-an-area-with-a-system-brush.md)します。  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>ブラシの共通機能  
@@ -148,7 +148,7 @@ VisualBrush を使用して描画された四角形
 > [!NOTE]
 >  使用して、要素全体の不透明度を変更するよりも、ブラシの不透明度の値を変更する方が効率的です、<xref:System.Windows.UIElement.Opacity%2A?displayProperty=nameWithType>プロパティ。  
   
- 回転、拡大縮小、傾斜、およびを使用して、ブラシのコンテンツを変換、<xref:System.Windows.Media.Brush.Transform%2A>または<xref:System.Windows.Media.Brush.RelativeTransform%2A>プロパティ。 詳細については、[ブラシの変換の概要](brush-transformation-overview.md)を参照してください。  
+ 回転、拡大縮小、傾斜、およびを使用して、ブラシのコンテンツを変換、<xref:System.Windows.Media.Brush.Transform%2A>または<xref:System.Windows.Media.Brush.RelativeTransform%2A>プロパティ。 詳細については、次を参照してください。[ブラシの変換の概要](brush-transformation-overview.md)します。  
   
  いるため、<xref:System.Windows.Media.Animation.Animatable>オブジェクト、<xref:System.Windows.Media.Brush>オブジェクトをアニメーション化することができます。 詳しくは、「 [アニメーションの概要](animation-overview.md)」をご覧ください。  
   
@@ -161,6 +161,7 @@ VisualBrush を使用して描画された四角形
  その理由の詳細については<xref:System.Windows.Media.VisualBrush>オブジェクトにすることはできません固定されているを参照してください、<xref:System.Windows.Media.VisualBrush>の種類 ページ。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)
@@ -169,5 +170,5 @@ VisualBrush を使用して描画された四角形
 - [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [方法トピック](brushes-how-to-topics.md)
+- [方法のトピック](brushes-how-to-topics.md)
 - [パフォーマンスに関するその他の推奨事項](../advanced/optimizing-performance-other-recommendations.md)

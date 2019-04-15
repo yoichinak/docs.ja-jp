@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 8efbe02098041b2037da94925e56244a28895e0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154532"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI オートメーション Scroll コントロール パターンの実装
 > [!NOTE]
@@ -36,11 +36,11 @@ ms.locfileid: "57677514"
   
 -   スクロールをパーセンテージで測定する場合は、スクロール目盛りに関連するすべての値または量を 0 ～ 100 の範囲に正規化する必要があります。  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> と <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> は <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>とは無関係です。  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>は独立しています、<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>します。  
   
 -   場合<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false`し<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty>100% に設定する必要がありますと<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty>に設定する必要があります<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>します。 同様に、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` の場合は、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> を 100% に設定し、 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> を <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>」をご覧ください。 これにより、UI オートメーション クライアントは、スクロールしたくない方向がアクティブになっている場合の <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 競合状態 [を回避しながら、](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) メソッド内でこれらのプロパティ値を使用できます。  
   
--   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> はロケール固有です。 HorizontalScrollPercent = 100.0 の設定では、左から右に読む英語などの言語の場合、右端に相当する位置にコントロールのスクロール位置を設定する必要があります。 また、右から左に読むアラビア語などの言語の場合は、HorizontalScrollPercent = 100.0 の設定でスクロール位置を左端の位置に設定する必要があります。  
+-   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> ロケール固有です。 HorizontalScrollPercent = 100.0 の設定では、左から右に読む英語などの言語の場合、右端に相当する位置にコントロールのスクロール位置を設定する必要があります。 また、右から左に読むアラビア語などの言語の場合は、HorizontalScrollPercent = 100.0 の設定でスクロール位置を左端の位置に設定する必要があります。  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider の必須メンバー  
@@ -65,14 +65,15 @@ ms.locfileid: "57677514"
   
 |例外の種類|条件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|コントロールが水平または垂直スクロールの場合にだけ<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> の値をサポートするはずが、 <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> の値が渡された場合に、 <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> がこの例外をスローします。|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> は、倍精度浮動小数点型に変換できない値が渡された場合に、この例外をスローします。|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> は、100 を超える値または 0 未満の値が渡された場合に、この例外をスローします ( <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>に相当する -1 を除く)。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> コントロールをサポートしている場合は、この例外をスロー<xref:System.Windows.Automation.ScrollAmount.SmallIncrement>水平または垂直のスクロール、専用の値が、<xref:System.Windows.Automation.ScrollAmount.LargeIncrement>に値が渡されました。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> double 型に変換できない値が渡されるときに、この例外をスローします。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 100 より大きいまたは 0 未満の値が渡された場合は、この例外をスローします (これは相当する-1 を除く<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>)。|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> と <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> はどちらも、サポートされていない方向にスクロールされたときに、この例外をスローします。|  
   
 ## <a name="see-also"></a>関連項目
-- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+
+- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

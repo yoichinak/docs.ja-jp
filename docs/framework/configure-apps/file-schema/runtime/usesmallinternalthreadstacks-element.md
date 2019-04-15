@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d78d03956db3f50b4d01f06c9a6438afd62fac5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144827"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 要素
 要求の共通言語ランタイム (CLR) がメモリを減らすことは、内部的には、これらのスレッドの既定のスタック サイズを使用する代わりに使用する特定のスレッドの作成時に、明示的なスタック サイズを指定することによって使用されます。  
@@ -73,5 +73,6 @@ ms.locfileid: "55289797"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)

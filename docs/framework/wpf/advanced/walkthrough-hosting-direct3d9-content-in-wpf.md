@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル: WPF での Direct3D9 コンテンツをホストしています。'
+title: 'チュートリアル: WPF での Direct3D9 コンテンツのホスト'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 07cfa5bed6e5af131a60a303f0702f18413043e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352049"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320233"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>チュートリアル: WPF での Direct3D9 コンテンツをホストしています。
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>チュートリアル: WPF での Direct3D9 コンテンツのホスト
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツをホストする方法を示します。  
   
  このチュートリアルでは次のタスクを実行します。  
@@ -48,9 +48,9 @@ ms.locfileid: "57352049"
   
 #### <a name="to-import-direct3d9-content"></a>Direct3D9 コンテンツをインポートするには  
   
-1.  コード エディターでの MainWindow.xaml.cs を開きます。  
+1. コード エディターでの MainWindow.xaml.cs を開きます。  
   
-2.  自動的に生成されたコードを次のコードに置き換えます。  
+2. 自動的に生成されたコードを次のコードに置き換えます。  
   
      [!code-csharp[System.Windows.Interop.D3DImage#1](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml.cs#1)]  
   
@@ -59,18 +59,19 @@ ms.locfileid: "57352049"
   
 #### <a name="to-host-the-direct3d9-content"></a>Direct3D9 コンテンツをホストするには  
   
-1.  MainWindow.xaml で、自動的に生成された XAML を次の XAML に置き換えます。  
+1. MainWindow.xaml で、自動的に生成された XAML を次の XAML に置き換えます。  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
-2.  プロジェクトをビルドします。  
+2. プロジェクトをビルドします。  
   
-3.  Bin/debug フォルダーに Direct3D9 コンテンツを含んでいる DLL をコピーします。  
+3. Bin/debug フォルダーに Direct3D9 コンテンツを含んでいる DLL をコピーします。  
   
-4.  F5 キーを押してプロジェクトを実行します。  
+4. F5 キーを押してプロジェクトを実行します。  
   
      WPF アプリケーション内での Direct3D9 コンテンツが表示されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

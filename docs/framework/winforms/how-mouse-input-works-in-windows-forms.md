@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203016"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows フォームにおけるマウス入力のしくみ
 マウス入力の処理を受け取って、すべての Windows アプリケーションの重要な部分です。 アプリケーションでは、操作を実行するマウス イベントを処理したり、ヒット テストを実行するマウスの位置情報やその他のアクションを使用できます。 さらに、アプリケーションでは、コントロールがマウス入力を処理する方法を変更することができます。 このトピックでは、これらのマウス イベントの詳細と、取得して、マウスのシステム設定を変更する方法について説明します。 イベントと、マウスのクリック イベントを注文の発生をマウスで提供されるデータの詳細についてを参照してください[Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。  
@@ -53,6 +53,7 @@ ms.locfileid: "57725327"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|マウス ホイールを回転したときにスクロールする行数を取得します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)
 - [Windows フォームにおけるマウスのキャプチャ](mouse-capture-in-windows-forms.md)
 - [Windows フォームにおけるマウス ポインター](mouse-pointers-in-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: 描画の Graphics オブジェクトを作成します。'
+title: '方法: 描画する Graphics オブジェクトを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324202"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画の Graphics オブジェクトを作成します。
+# <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
 直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
   
  グラフィックスを操作には、2 つの手順があります。  
   
-1.  作成、<xref:System.Drawing.Graphics>オブジェクト。  
+1. 作成、<xref:System.Drawing.Graphics>オブジェクト。  
   
-2.  使用して、<xref:System.Drawing.Graphics>直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するオブジェクト。  
+2. 使用して、<xref:System.Drawing.Graphics>直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するオブジェクト。  
   
 ## <a name="creating-a-graphics-object"></a>グラフィックス オブジェクトを作成します。  
  グラフィックス オブジェクトは、さまざまな方法で作成できます。  
@@ -48,11 +48,11 @@ ms.locfileid: "57709052"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>描画イベントで PaintEventArgs からグラフィックス オブジェクトへの参照を取得するには  
   
-1.  宣言、<xref:System.Drawing.Graphics>オブジェクト。  
+1. 宣言、<xref:System.Drawing.Graphics>オブジェクト。  
   
-2.  参照する変数を割り当てる、<xref:System.Drawing.Graphics>の一部として渡されたオブジェクト、<xref:System.Windows.Forms.PaintEventArgs>します。  
+2. 参照する変数を割り当てる、<xref:System.Drawing.Graphics>の一部として渡されたオブジェクト、<xref:System.Windows.Forms.PaintEventArgs>します。  
   
-3.  フォームまたはコントロールを描画するコードを挿入します。  
+3. フォームまたはコントロールを描画するコードを挿入します。  
   
      次の例を参照する方法を示しています、<xref:System.Drawing.Graphics>オブジェクトから、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>イベント。  
   
@@ -163,15 +163,16 @@ ms.locfileid: "57709052"
   
      詳細については、次のトピックを参照してください。  
   
-    |表示するには|解決方法|  
+    |表示するには|参照トピック|  
     |---------------|---------|  
-    |線|[方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)|  
-    |図形|[方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)|  
-    |テキスト|[方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)|  
-    |イメージ|[方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)|  
+    |線|[方法: Windows フォームに直線を描画する](how-to-draw-a-line-on-a-windows-form.md)|  
+    |図形|[方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)|  
+    |テキスト|[方法: Windows フォームにテキストを描画する](how-to-draw-text-on-a-windows-form.md)|  
+    |イメージ|[方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)
+- [方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)

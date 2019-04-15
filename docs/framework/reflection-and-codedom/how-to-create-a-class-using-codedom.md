@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581944"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333172"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>方法: CodeDOM を使用してクラスを作成する
 2 つのフィールド、3 つのプロパティ、1 つのメソッド、1 つのコンストラクター、1 つのエントリ ポイントを含むクラスを生成する CodeDOM グラフを作成し、コンパイルする方法を次に示します。  
   
-1.  CodeDOM コードを使用するコンソール アプリケーションを作成し、クラスのソース コードを生成します。  
+1. CodeDOM コードを使用するコンソール アプリケーションを作成し、クラスのソース コードを生成します。  
   
      この例では、生成元のクラスの名前が `Sample` で、生成されるコードが SampleCode という名前のファイルの `CodeDOMCreatedClass` という名前のクラスになります。  
   
-2.  生成元のクラスでは、CodeDOM グラフを初期化し、CodeDOM メソッドを利用して生成されるクラスのメンバー、コンストラクター、エントリ ポイント (`Main` メソッド) を定義します。  
+2. 生成元のクラスでは、CodeDOM グラフを初期化し、CodeDOM メソッドを利用して生成されるクラスのメンバー、コンストラクター、エントリ ポイント (`Main` メソッド) を定義します。  
   
      この例では、生成されるクラスに 2 つのフィールド、3 つのプロパティ、1 つのコンストラクター、1 つのメソッド、1 つの `Main` メソッドがあります。  
   
-3.  生成元のクラスで、言語固有のコード プロバイダーを作成し、その <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを呼び出してグラフからコードを生成します。  
+3. 生成元のクラスで、言語固有のコード プロバイダーを作成し、その <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを呼び出してグラフからコードを生成します。  
   
-4.  アプリケーションをコンパイルして実行し、コードを生成します。  
+4. アプリケーションをコンパイルして実行し、コードを生成します。  
   
      この例では、生成されたコードが SampleCode という名前のファイルに入っています。 そのコードをコンパイルして実行し、サンプル出力を確認します。  
   
@@ -87,12 +87,12 @@ ms.locfileid: "54581944"
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>グラフを作成し、コードを生成するには  
   
-1.  前の手順で作成したメソッドを最初の手順で定義した `Main` メソッドに追加します。  
+1. 前の手順で作成したメソッドを最初の手順で定義した `Main` メソッドに追加します。  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  生成元のクラスをコンパイルし、実行します。  
+2. 生成元のクラスをコンパイルし、実行します。  
   
 ## <a name="example"></a>例  
  次のコード サンプルは、前の手順のコードです。  
@@ -119,5 +119,6 @@ The object:
 -   このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [CodeDOM の使用方法](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [CodeDOM グラフからのソース コードの生成およびコンパイル](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

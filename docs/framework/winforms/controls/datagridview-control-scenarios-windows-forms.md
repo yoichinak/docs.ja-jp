@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175293"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView コントロールのシナリオ (Windows フォーム)
 <xref:System.Windows.Forms.DataGridView>コントロール、さまざまなデータ ソースから表形式のデータを表示することができます。 単純な用途は、手動で設定できる、<xref:System.Windows.Forms.DataGridView>コントロールから直接データを操作します。 通常、ただし、外部データ ソースにデータを格納してコントロールにバインドして、<xref:System.Windows.Forms.BindingSource>コンポーネント。  
@@ -54,7 +54,7 @@ ms.locfileid: "57721310"
 -   仮想モードは、パフォーマンスを微調整する必要がある場合は、非常に大量のデータを表示するために適しています。  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>シナリオ 4:行と列を自動的にサイズ変更  
- 定期的に更新するデータを表示するときにすべてのコンテンツが表示されていることを確認する行と列を自動的に変更できます。 <xref:System.Windows.Forms.DataGridView>コントロールは、有効または無効にする手動のサイズ変更、特定の時点でサイズをプログラムで変更できるようにするいくつかのオプションを提供します。 または、自動的にサイズ変更されるたびに、変更をコンテンツ。 詳細については、[Windows フォームの DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)を参照してください。  
+ 定期的に更新するデータを表示するときにすべてのコンテンツが表示されていることを確認する行と列を自動的に変更できます。 <xref:System.Windows.Forms.DataGridView>コントロールは、有効または無効にする手動のサイズ変更、特定の時点でサイズをプログラムで変更できるようにするいくつかのオプションを提供します。 または、自動的にサイズ変更されるたびに、変更をコンテンツ。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)します。  
   
 ### <a name="scenario-key-points"></a>シナリオの要点  
   
@@ -65,7 +65,7 @@ ms.locfileid: "57721310"
 -   プログラムによるサイズ変更するには、継続的な自動サイズ変更のパフォーマンスの低下を回避するために特定の時点でのセルのサイズを変更することができます。  
   
 ## <a name="scenario-5-simple-customization"></a>シナリオ 5:単純なカスタマイズ  
- <xref:System.Windows.Forms.DataGridView>コントロールには、その基本的な外観と動作を変更するためのさまざまな方法が用意されています。 詳細については、[Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)を参照してください。  
+ <xref:System.Windows.Forms.DataGridView>コントロールには、その基本的な外観と動作を変更するためのさまざまな方法が用意されています。 詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  
   
 ### <a name="scenario-key-points"></a>シナリオの要点  
   
@@ -87,5 +87,6 @@ ms.locfileid: "57721310"
 -   組み込みの列の型によって提供されるもの以外のホスト コントロールに、独自のセルと列のクラスを実装することができます。 詳細については、「[方法 :Windows フォーム DataGridView Cells コントロールをホスト](how-to-host-controls-in-windows-forms-datagridview-cells.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)

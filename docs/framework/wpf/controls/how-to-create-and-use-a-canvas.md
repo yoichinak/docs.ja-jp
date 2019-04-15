@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Canvas control [WPF], creating
 - Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-ms.openlocfilehash: 13ed32195621350284530da78544e026ed341658
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33b98024699a88f56d27b7e5ab8d5216c906e7ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190770"
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>方法: Canvas を作成および使用する
 この例は、作成しのインスタンスを使用する方法を示しています。<xref:System.Windows.Controls.Canvas>します。  
@@ -29,6 +29,7 @@ ms.locfileid: "57360382"
  [!code-vb[CanvasCode#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.TextBlock>
 - <xref:System.Windows.Controls.Canvas.SetTop%2A>
@@ -36,4 +37,4 @@ ms.locfileid: "57360382"
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Canvas.Left%2A>
 - [パネルの概要](panels-overview.md)
-- [方法トピック](canvas-how-to-topics.md)
+- [方法のトピック](canvas-how-to-topics.md)

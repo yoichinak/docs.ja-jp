@@ -11,26 +11,26 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822337"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327634"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>クエリ操作での型の関係 (Visual Basic)
-使用される変数[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ操作は、厳密に型指定し、相互に互換性がある必要があります。 厳密な型指定すると、データ ソース、クエリ自体、およびクエリの実行が使用されます。 次の図は、記述に使用される用語の識別、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 詳細については、クエリの部分は、[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)を参照してください。  
+使用される変数[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ操作は、厳密に型指定し、相互に互換性がある必要があります。 厳密な型指定すると、データ ソース、クエリ自体、およびクエリの実行が使用されます。 次の図は、記述に使用される用語の識別、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 詳細については、クエリの部分は、次を参照してください。[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)します。  
   
  ![強調表示されている要素を持つ擬似コード クエリを示すスクリーン ショット。](./media/type-relationships-in-query-operations/linq-query-description-terms.png)  
   
  クエリで範囲変数の型は、データ ソース内の要素の型と互換性のあるである必要があります。 クエリ変数の型で定義されたシーケンスの要素と互換性のある必要があります、`Select`句。 最後に、シーケンスの要素の型も必要がありますで使用されているループ コントロール変数の型と互換性のある、`For Each`クエリを実行するステートメント。 この厳密な型指定すると、コンパイル時に型のエラーの識別が容易になります。  
   
- Visual Basic により、厳密な型指定便利とも呼ばれるローカル型推論を実装することによって*暗黙の型指定*します。 機能は、前の例で使用して、全体で使用されることが表示されます、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]サンプルとドキュメントです。 Visual Basic でローカル型推論は使用するだけで実現を`Dim`ステートメントを除く、`As`句。 次の例では、`city`を文字列として厳密に型指定します。  
+ Visual Basic により、厳密な型指定便利とも呼ばれるローカル型推論を実装することによって*暗黙の型指定*します。 機能は、前の例で使用して、全体で使用されることが表示されます、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]サンプルとドキュメントです。 Visual basic でローカル型推論は使用するだけで実現を`Dim`ステートメントを除く、`As`句。 次の例では、`city`を文字列として厳密に型指定します。  
   
  [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
->  ローカル型推論機能の場合にのみ`Option Infer`に設定されている`On`します。 詳細については、[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)を参照してください。  
+>  ローカル型推論機能の場合にのみ`Option Infer`に設定されている`On`します。 詳細については、次を参照してください。 [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)します。  
   
  ただし、クエリでローカル型推論を使用する場合でも、同じ型の関係は、データ ソース内の変数、クエリ変数、およびクエリの実行ループの間に存在します。 作成するときにこれらの型の関係の基本を理解すると便利ですが[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ、またはサンプルとドキュメントのコード例を使用します。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "58822337"
   
  次のリレーションシップは、種類が暗黙的または明示的に決定されるかどうか、前のコード例の両方に存在します。  
   
-1.  データ ソース内の要素の型`names`、範囲変数の型は、`name`クエリにします。  
+1. データ ソース内の要素の型`names`、範囲変数の型は、`name`クエリにします。  
   
-2.  選択されているオブジェクトの型`name`、クエリ変数の種類を決定します`mNames`します。 ここで`name`は文字列、ので、クエリ変数は Visual Basic での IEnumerable (Of String)。  
+2. 選択されているオブジェクトの型`name`、クエリ変数の種類を決定します`mNames`します。 ここで`name`は文字列、ので、クエリ変数は Visual Basic での IEnumerable (Of String)。  
   
-3.  定義されているクエリ`mNames`で実行される、`For Each`ループします。 クエリの実行の結果に対して、ループが反復処理します。 `mNames`が実行されるときに、ループの反復変数、文字列のシーケンスを返す`nm`も文字列です。  
+3. 定義されているクエリ`mNames`で実行される、`For Each`ループします。 クエリの実行の結果に対して、ループが反復処理します。 `mNames`が実行されるときに、ループの反復変数、文字列のシーケンスを返す`nm`も文字列です。  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>選択した要素から 1 つのフィールドを返すクエリ  
  次の例は、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]クエリをデータ ソースから選択された各要素の一部だけを含むシーケンスを返す操作。 クエリのコレクションを受け取り`Customer`としてそのデータ ソース オブジェクトし、プロジェクトのみ、`Name`結果のプロパティ。 顧客名は文字列であるため、クエリは、出力として文字列のシーケンスを生成します。  
@@ -72,11 +72,11 @@ Next
   
  変数間のリレーションシップは、簡単な例のようです。  
   
-1.  データ ソース内の要素の型`customers`、範囲変数の型は、`cust`クエリにします。 型である、この例では`Customer`します。  
+1. データ ソース内の要素の型`customers`、範囲変数の型は、`cust`クエリにします。 型である、この例では`Customer`します。  
   
-2.  `Select`ステートメントから返される、`Name`の各プロパティ`Customer`オブジェクト全体ではなくオブジェクト。 `Name`文字列で、クエリ変数は、 `custNames`、もう一度されません IEnumerable (Of String) の`Customer`します。  
+2. `Select`ステートメントから返される、`Name`の各プロパティ`Customer`オブジェクト全体ではなくオブジェクト。 `Name`文字列で、クエリ変数は、 `custNames`、もう一度されません IEnumerable (Of String) の`Customer`します。  
   
-3.  `custNames` 、文字列のシーケンスを表し、`For Each`ループの反復変数、`custName`文字列である必要があります。  
+3. `custNames` 、文字列のシーケンスを表し、`For Each`ループの反復変数、`custName`文字列である必要があります。  
   
  ローカル型推論、せず、前の例と詳細については、次の例のように記述する煩雑になります。  
   
@@ -110,11 +110,11 @@ Next
   
  前の例では、すべての変数の型を指定することはありませんが、リレーションシップが同じになります。  
   
-1.  データ ソース内の要素の型は、クエリで範囲変数の型ではもう一度です。 この例で`cust`のインスタンスである`Customer`します。  
+1. データ ソース内の要素の型は、クエリで範囲変数の型ではもう一度です。 この例で`cust`のインスタンスである`Customer`します。  
   
-2.  `Select`ステートメントは、クエリ変数、匿名型を生成`nameCityQuery`、匿名型として暗黙的に型指定する必要があります。 匿名型では、使用できる名前を持たず、したがって、明示的に指定することはできません。  
+2. `Select`ステートメントは、クエリ変数、匿名型を生成`nameCityQuery`、匿名型として暗黙的に型指定する必要があります。 匿名型では、使用できる名前を持たず、したがって、明示的に指定することはできません。  
   
-3.  反復変数の型、`For Each`ループは、手順 2. で作成された匿名型。 型に使用できる名前があるないために、ループの反復変数の型は暗黙的に決定する必要があります。  
+3. 反復変数の型、`For Each`ループは、手順 2. で作成された匿名型。 型に使用できる名前があるないために、ループの反復変数の型は暗黙的に決定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c6279c790e9b28e5f3bac93d5d0fdd411dd8c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127271"
 ---
 # <a name="importfile2-method"></a>ImportFile2 メソッド
 アセンブリとバインドされていないモジュールをインポートします。 このメソッドはのように、 [ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)がインポートされるファイルがディスクに存在しない場合でも機能します。  
@@ -69,6 +69,7 @@ HRESULT ImportFile2(
  Alink.h が必要です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

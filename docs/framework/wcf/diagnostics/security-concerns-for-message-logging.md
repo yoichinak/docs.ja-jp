@@ -2,12 +2,12 @@
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170665"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  
@@ -88,7 +88,7 @@ ms.locfileid: "54731999"
   
  変更点はアプリケーションが開始されるか、再起動されるまで、反映されません。 両方の属性も `true` に設定されている場合は、イベントは開始時にログに記録されます。 また、`logKnownPii` が `true` に設定され、`enableLoggingKnownPii` が `false` に設定されている場合にも、イベントはログに記録されます。  
   
- コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 詳細な説明については、プライバシーと pii の公開を防止するには、[ユーザー プライバシー](https://go.microsoft.com/fwlink/?LinkID=94647)を参照してください。  
+ コンピューターの管理者およびアプリケーションを配置するユーザーは、これらの 2 種類のスイッチを使用する場合に注意する必要があります。 PII のログ記録が有効になっている場合は、セキュリティ キーと PII がログに記録されます。 ログ記録を無効にしても、機密情報およびアプリケーション固有のデータは、依然としてメッセージのヘッダーと本体に記録されています。 詳細な説明については、プライバシーと pii の公開を防止するには、次を参照してください。[ユーザー プライバシー](https://go.microsoft.com/fwlink/?LinkID=94647)します。  
   
 > [!CAUTION]
 >  PII は無効なメッセージでは非表示になりません。 このようなメッセージは、変更されずにそのままログに記録されます。 上に示した属性は、このことに影響を与えません。  
@@ -107,8 +107,9 @@ ms.locfileid: "54731999"
   
 -   許可されていない既知の PII をログします。既知の PII のログ記録が許可されていない場合は、このイベントが生成されます。 これは、ようなときに、`logKnownPii`の属性、 `source` 、App.config または Web.config ファイル内の要素に設定されている`true`が、`enableLoggingKnownPii`属性、 `machineSettings` にMachine.configファイルの要素が設定されている`false`. 例外をスローすることはありません。  
   
- これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、これは、[イベントがログ記録](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)を参照してください。  
+ これらのイベントは、Windows に付属するイベント ビューアー ツールを使用して表示できます。 詳細については、これは、次を参照してください。[イベントがログ記録](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [メッセージ ログ](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [トレースに関するセキュリティの考慮事項と役立つヒント](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

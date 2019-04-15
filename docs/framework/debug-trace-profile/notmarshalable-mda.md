@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec3fd0c3b20c70b6ddf3e875c481e829dd5eb28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226106"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
 共通言語ランタイム (CLR: Common Language Runtime) がコンテキスト間でインターフェイスをマーシャリングするときに、有効な登録済みのプロキシやスタブのない COM インターフェイス ポインター、または不正な `IMarshal` インターフェイスの実装を検出すると、`notMarshalable` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) がアクティブになります。  
@@ -49,6 +49,7 @@ ms.locfileid: "54695492"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)

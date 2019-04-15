@@ -6,15 +6,15 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295039"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同じです (Visual Basic) であるかどうかを確認します。
-Visual Basic で 2 つの変数参照は同一と見なされます、ポインターが同じ場合、つまり、両方の変数がメモリ内と同じクラスのインスタンスを指している場合。 たとえば、Windows フォーム アプリケーションでたい判断する比較を行うことかどうか、現在のインスタンス (`Me`) など、特定のインスタンスと同じ`Form2`します。  
+Visual basic で 2 つの変数参照は同一と見なされます、ポインターが同じ場合、つまり、両方の変数がメモリ内と同じクラスのインスタンスを指している場合。 たとえば、Windows フォーム アプリケーションでたい判断する比較を行うことかどうか、現在のインスタンス (`Me`) など、特定のインスタンスと同じ`Form2`します。  
   
  Visual Basic では、ポインターを比較する 2 つの演算子を提供します。 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)返します`True`オブジェクトが同じですが場合、 [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)返します`True`それ以外の場合。  
   
@@ -22,9 +22,9 @@ Visual Basic で 2 つの変数参照は同一と見なされます、ポイン�
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>2 つのオブジェクトが同じかどうかを判断するには  
   
-1.  セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
+1. セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
   
-2.  テスト式で使用して、`Is`演算子のオペランドとして 2 つのオブジェクト。  
+2. テスト式で使用して、`Is`演算子のオペランドとして 2 つのオブジェクト。  
   
      `Is` 返します`True`場合は、オブジェクトが、同じクラスのインスタンスをポイントします。  
   
@@ -33,9 +33,9 @@ Visual Basic で 2 つの変数参照は同一と見なされます、ポイン�
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>2 つのオブジェクトが同一でないかどうかを判断するには  
   
-1.  セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
+1. セットアップ、 `Boolean` 2 つのオブジェクトをテストする式。  
   
-2.  テスト式で使用して、`IsNot`演算子のオペランドとして 2 つのオブジェクト。  
+2. テスト式で使用して、`IsNot`演算子のオペランドとして 2 つのオブジェクト。  
   
      `IsNot` 返します`True`場合は、オブジェクトが同じクラスのインスタンスを指していません。  
   
@@ -52,10 +52,10 @@ Visual Basic で 2 つの変数参照は同一と見なされます、ポイン�
   
 ## <a name="see-also"></a>関連項目
 
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [方法: 2 つのオブジェクトが関連するかどうかを判断します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを決める](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

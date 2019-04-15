@@ -2,12 +2,12 @@
 title: Net.TCP ポート共有サービスを構成する
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206812"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP ポート共有サービスを構成する
 Net.TCP トランスポートを使用する自己ホスト型サービスは、`ListenBacklog` や `MaxPendingAccepts` など、いくつかの高度な設定を制御できます。これらは、ネットワーク通信で使用される、ベースである TCP ソケットの動作をコンロトールします。 ただし、各ソケットに対するこれらの設定は、トランスポート バインディングでポート共有が無効化されている場合 (既定では有効) に、バインディング レベルでのみ適用されます。  
@@ -62,4 +62,5 @@ Net.TCP トランスポートを使用する自己ホスト型サービスは、
 >  既定の SMSvcHost.exe.config ファイルは、カスタムの `etwProviderId` を指定することによって、SMSvcHost.exe のトレースの影響がサービス トレースに及ぶのを防ぎます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
