@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162112"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar コントロールの概要
 <xref:System.Windows.Forms.ToolStripProgressBar>ラフティングとすべてのレンダリング機能を組み合わせた<xref:System.Windows.Forms.ToolStrip>の一般的なプロセスの追跡機能を持つコントロール。 A<xref:System.Windows.Forms.ToolStripProgressBar>によってホストされている最も通常<xref:System.Windows.Forms.StatusStrip>、によって頻繁に小さい、<xref:System.Windows.Forms.ToolStrip>します。  
@@ -32,4 +32,5 @@ ms.locfileid: "54528629"
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|量によって、進行状況バーの現在位置を進めます、<xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>プロパティ。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

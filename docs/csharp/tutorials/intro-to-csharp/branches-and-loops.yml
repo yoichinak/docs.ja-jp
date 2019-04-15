@@ -9,14 +9,14 @@ metadata:
   ms.date: 08/24/2018
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: interpolated-strings.yml
-  nextTutorialTitle: C# における文字列補間
-  ms.openlocfilehash: bb539fe50ee6cc2d45a44e3742072059a990c2aa
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  nextTutorialHref: list-collection.yml
+  nextTutorialTitle: リスト コレクション
+  ms.openlocfilehash: 49fec69db0d3ae08b4f4904838be8bd5a2df3b10
+  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030231"
+  ms.lasthandoff: 04/04/2019
+  ms.locfileid: "58921066"
 items:
 - durationInMinutes: 1
   content: >

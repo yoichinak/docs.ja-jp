@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-ms.openlocfilehash: fda5330ff75c1744f3ed9d4394e51b5efb737071
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210205"
 ---
 # <a name="planning-for-application-performance"></a>アプリケーション パフォーマンスの計画
 パフォーマンスの目標を達成できるパフォーマンス戦略を開発するかによって異なります。 計画は、任意の製品の開発の最初のステージです。 このトピックでは、良好なパフォーマンスの戦略を開発するためのいくつかの非常に単純な規則について説明します。  
@@ -33,12 +33,13 @@ ms.locfileid: "57374428"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールは、そのコントロールの動作を変更しない中に、それらの外観のカスタマイズを広範囲に及ぶようにすることで本質的に拡張可能です。 スタイル、データ テンプレート、およびコントロール テンプレートの利用して、作成して段階的にカスタマイズ可能な進化[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]パフォーマンスの要件に対応します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
 - [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

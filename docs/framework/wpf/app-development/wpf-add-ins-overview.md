@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304806"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  .NET Framework アドイン モデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。  
@@ -75,7 +73,7 @@ ms.locfileid: "57365842"
 ## <a name="wpf-add-ins"></a>WPF アドイン  
  WPF、.NET Framework アドイン モデルと組み合わせて使用するさまざまなホスト アプリケーションがアドインからのユーザー インターフェイスを表示する必要があるシナリオに対処できます。具体的には、これらのシナリオに次の 2 つのプログラミング モデルを使用した WPF によって対応します。  
   
-1.  **アドインが UI を返す**。 アドインの UI を返す、ホスト アプリケーションにメソッドの呼び出しを使用して、コントラクトで定義されています。 このシナリオは、次の場合に使用されます。  
+1. **アドインが UI を返す**。 アドインの UI を返す、ホスト アプリケーションにメソッドの呼び出しを使用して、コントラクトで定義されています。 このシナリオは、次の場合に使用されます。  
   
     -   アドインによって返される UI の外観はいずれかのデータに依存または条件に存在する、実行時にのみなど動的にレポートを生成します。  
   
@@ -83,7 +81,7 @@ ms.locfileid: "57365842"
   
     -   アドインは主にサービスをホスト アプリケーションの実行し、UI を使用してホスト アプリケーションにステータスをレポートします。  
   
-2.  **アドインが UI である**。 アドインのコントラクトで定義されている、UI であります。 このシナリオは、次の場合に使用されます。  
+2. **アドインが UI である**。 アドインのコントラクトで定義されている、UI であります。 このシナリオは、次の場合に使用されます。  
   
     -   アドインは表示以外のサービス (広告など) を提供しない。  
   
@@ -95,23 +93,22 @@ ms.locfileid: "57365842"
   
 -   派生した、<xref:System.MarshalByRefObject>クラス。  
   
--   
-  <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
+-   <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
   
 -   <xref:System.SerializableAttribute>属性が適用されています。  
   
 > [!NOTE]
->  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))を参照してください。  
+>  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))します。  
   
  WPF の UI 型は、リモート処理可能ではありません。 この問題を解決するためには、WPF は、ホスト アプリケーションから表示する WPF の UI アドインを使用して作成を有効にする .NET Framework アドイン モデルを拡張します。 このサポートが 2 つの種類での WPF で提供される:<xref:System.AddIn.Contract.INativeHandleContract>インターフェイスと 2 つの静的メソッドによって実装される、<xref:System.AddIn.Pipeline.FrameworkElementAdapters>クラス:<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。 大まかに、これらの型とメソッドは次のように使用されます。  
   
-1.  WPF では、アドインによって提供されるユーザー インターフェイスから直接または間接的に派生クラスである<xref:System.Windows.FrameworkElement>図形、コントロール、ユーザー コントロール、レイアウト パネル、ページなどです。  
+1. WPF では、アドインによって提供されるユーザー インターフェイスから直接または間接的に派生クラスである<xref:System.Windows.FrameworkElement>図形、コントロール、ユーザー コントロール、レイアウト パネル、ページなどです。  
   
-2.  コントラクトは、UI がアドインとホスト アプリケーション間で渡されることを宣言する任意の場所として宣言する必要があります、 <xref:System.AddIn.Contract.INativeHandleContract> (いない、 <xref:System.Windows.FrameworkElement>)。<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越えて渡すことができる追加の UI のリモート処理可能な表現です。  
+2. コントラクトは、UI がアドインとホスト アプリケーション間で渡されることを宣言する任意の場所として宣言する必要があります、 <xref:System.AddIn.Contract.INativeHandleContract> (いない、 <xref:System.Windows.FrameworkElement>)。<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越えて渡すことができる追加の UI のリモート処理可能な表現です。  
   
-3.  アドインのアプリケーション ドメインから渡される前に、<xref:System.Windows.FrameworkElement>としてパッケージ化されて、<xref:System.AddIn.Contract.INativeHandleContract>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。  
+3. アドインのアプリケーション ドメインから渡される前に、<xref:System.Windows.FrameworkElement>としてパッケージ化されて、<xref:System.AddIn.Contract.INativeHandleContract>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。  
   
-4.  ホスト アプリケーションのアプリケーション ドメインに渡された後、<xref:System.AddIn.Contract.INativeHandleContract>として再パッケージ化する必要があります、<xref:System.Windows.FrameworkElement>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>します。  
+4. ホスト アプリケーションのアプリケーション ドメインに渡された後、<xref:System.AddIn.Contract.INativeHandleContract>として再パッケージ化する必要があります、<xref:System.Windows.FrameworkElement>呼び出して<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>します。  
   
  どの<xref:System.AddIn.Contract.INativeHandleContract>、<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>と<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>使用は、特定のシナリオによって異なります。 以降のセクションでは、各プログラミング モデルについて詳しく説明していきます。  
   
@@ -119,37 +116,37 @@ ms.locfileid: "57365842"
 ## <a name="add-in-returns-a-user-interface"></a>ユーザー インターフェイスを返すアドイン  
  アドインをホスト アプリケーションに UI を返す、次が必要です。  
   
-1.  ホスト アプリケーション、アドイン、およびパイプラインを作成する .NET Framework での説明に従って[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))ドキュメント。  
+1. ホスト アプリケーション、アドイン、およびパイプラインを作成する .NET Framework での説明に従って[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))ドキュメント。  
   
-2.  コントラクトを実装する必要があります<xref:System.AddIn.Contract.IContract>と、コントラクトに UI を返すには、型の戻り値を持つメソッドを宣言する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。  
+2. コントラクトを実装する必要があります<xref:System.AddIn.Contract.IContract>と、コントラクトに UI を返すには、型の戻り値を持つメソッドを宣言する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。  
   
-3.  UI アドインとホスト アプリケーション間で渡される必要があります直接または間接的に派生から<xref:System.Windows.FrameworkElement>します。  
+3. UI アドインとホスト アプリケーション間で渡される必要があります直接または間接的に派生から<xref:System.Windows.FrameworkElement>します。  
   
-4.  アドインによって返される UI を変換する必要があります、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。  
+4. アドインによって返される UI を変換する必要があります、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。  
   
-5.  返される UI を変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>分離境界を越えた後。  
+5. 返される UI を変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>分離境界を越えた後。  
   
-6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
+6. ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI を返すアドインを実装する方法については、例では、[UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)を参照してください。  
+ UI を返すアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインを返す](how-to-create-an-add-in-that-returns-a-ui.md)します。  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>ユーザー インターフェイスであるアドイン  
  アドインの UI である、ときに、次が必要です。  
   
-1.  ホスト アプリケーション、アドイン、およびパイプラインを作成する .NET Framework での説明に従って[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))ドキュメント。  
+1. ホスト アプリケーション、アドイン、およびパイプラインを作成する .NET Framework での説明に従って[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))ドキュメント。  
   
-2.  アドインのコントラクト インターフェイスを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。  
+2. アドインのコントラクト インターフェイスを実装する必要があります<xref:System.AddIn.Contract.INativeHandleContract>します。  
   
-3.  アドイン、ホスト アプリケーションに渡される必要があります直接的または間接的に派生から<xref:System.Windows.FrameworkElement>します。  
+3. アドイン、ホスト アプリケーションに渡される必要があります直接的または間接的に派生から<xref:System.Windows.FrameworkElement>します。  
   
-4.  アドインから変換する必要があります、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。  
+4. アドインから変換する必要があります、<xref:System.Windows.FrameworkElement>を<xref:System.AddIn.Contract.INativeHandleContract>分離境界を越える前にします。  
   
-5.  アドインから変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>分離境界を越えた後。  
+5. アドインから変換する必要があります、<xref:System.AddIn.Contract.INativeHandleContract>を<xref:System.Windows.FrameworkElement>分離境界を越えた後。  
   
-6.  ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
+6. ホスト アプリケーションを表示、返された<xref:System.Windows.FrameworkElement>します。  
   
- UI であるアドインを実装する方法については、例では、[UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)を参照してください。  
+ UI であるアドインを実装する方法については、例では、次を参照してください。 [UI を作成するアドインは](how-to-create-an-add-in-that-is-a-ui.md)します。  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>複数の UI を返すアドイン  
@@ -168,7 +165,7 @@ ms.locfileid: "57365842"
  これらのタスクについて、次のサブセクションで詳しく説明します。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>ClickOnce 配置のためのパイプラインとアドインの構成  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 配置キャッシュの安全なフォルダーにダウンロードされ、そこから実行されます。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] でアドインをホストするには、パイプラインとアドインのアセンブリも同じ安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] で実行することが最も簡単ですが、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] でパイプラインをアセンブリとして検出するには、パイプラインとアドインのアセンブリが、ホスト [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルート フォルダーに存在する必要があります。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] ダウンロードされ、安全なフォルダーから実行、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]配置キャッシュします。 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] でアドインをホストするには、パイプラインとアドインのアセンブリも同じ安全なフォルダーにダウンロードする必要があります。 このためには、パイプラインとアドインのどちらのアセンブリもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成する必要があります。 これは、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] で実行することが最も簡単ですが、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] でパイプラインをアセンブリとして検出するには、パイプラインとアドインのアセンブリが、ホスト [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルート フォルダーに存在する必要があります。  
   
  したがって、まず、パイプライン アセンブリとアドイン アセンブリの各プロジェクトのビルド出力を設定し、パイプラインとアドインのアセンブリを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトのルートにビルドします。 次の表は、ホストの [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトと同じソリューションとルートのフォルダーに格納される、パイプライン アセンブリ プロジェクトとアドイン アセンブリ プロジェクトのビルド出力パスを示します。  
   
@@ -184,15 +181,15 @@ ms.locfileid: "57365842"
   
  次に、パイプライン アセンブリとアドイン アセンブリを [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] コンテンツ ファイルとして [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] に指定します。手順は次のとおりです。  
   
-1.  ソリューション エクスプローラーで各パイプライン フォルダーを右クリックし、**[プロジェクトに含める]** を選択して、パイプラインとアドインのアセンブリをプロジェクトに含めます。  
+1. ソリューション エクスプローラーで各パイプライン フォルダーを右クリックし、**[プロジェクトに含める]** を選択して、パイプラインとアドインのアセンブリをプロジェクトに含めます。  
   
-2.  **[プロパティ]** ウィンドウで、パイプライン アセンブリとアドイン アセンブリそれぞれについて、**[ビルド アクション]** を **[コンテンツ]** に設定します。  
+2. **[プロパティ]** ウィンドウで、パイプライン アセンブリとアドイン アセンブリそれぞれについて、**[ビルド アクション]** を **[コンテンツ]** に設定します。  
   
  最後に、パイプラインとアドインのどちらのアセンブリ ファイルもダウンロード対象に含まれるよう、アプリケーション マニフェストを構成します。 ファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] アプリケーションが占有する [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] キャッシュ内のフォルダーのルートにあるフォルダー内に存在している必要があります。 この構成は、次の手順に従って、[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] で行うことができます。  
   
-1.  [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトを右クリックして、**[プロパティ]**、**[発行]** の順にクリックし、**[アプリケーション ファイル]** をクリックします。  
+1. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] プロジェクトを右クリックして、**[プロパティ]**、**[発行]** の順にクリックし、**[アプリケーション ファイル]** をクリックします。  
   
-2.  **[アプリケーション ファイル]** ダイアログ ボックスで、各パイプラインとアドインの DLL の **[発行の状況]** を **[含める (自動)]** に設定し、各パイプラインとアドインの DLL の **[ダウンロード グループ]** を **[(必須)]** に設定します。  
+2. **[アプリケーション ファイル]** ダイアログ ボックスで、各パイプラインとアドインの DLL の **[発行の状況]** を **[含める (自動)]** に設定し、各パイプラインとアドインの DLL の **[ダウンロード グループ]** を **[(必須)]** に設定します。  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>アプリケーション ベースからのパイプラインとアドインの使用  
  パイプラインとアドインは [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 配置用に構成されると、同じ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] キャッシュ フォルダーに [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] としてダウンロードされます。 このパイプラインとアドインを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] から使用するには、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードがそれらをアプリケーション ベースから取得する必要があります。 さまざまな種類とパイプラインとアドインを使用して .NET Framework アドイン モデルのメンバーは、このシナリオで特別なサポートを提供します。 まず、パスがで識別される、<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列挙値。 この値を適切なアドイン メンバーのオーバーロードと併用することで、次のようなパイプラインを使用できます。  
@@ -284,9 +281,10 @@ ms.locfileid: "57365842"
  既定では、複数のアプリケーション ドメインを使用している場合の各アプリケーションに必要なさまざまな .NET Framework アセンブリがすべて読み込まれますそのアプリケーションのドメインにします。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、.NET Framework は、既に読み込まれている場合は、アプリケーション ドメイン間でアセンブリを共有するアプリケーションに指示して開始時間を短縮するための手段を提供します。 使用してこれを行う、<xref:System.LoaderOptimizationAttribute>属性には、エントリ ポイント メソッドに適用する必要があります (`Main`)。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](application-management-overview.md)」を参照)。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.LoaderOptimizationAttribute>
 - [アドインおよび拡張機能](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [アプリケーション ドメイン](../../app-domains/application-domains.md)
-- [.NET framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [オブジェクトをリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [方法トピック](how-to-topics.md)
+- [.NET Framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [オブジェクトをリモート処理可能にする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [方法のトピック](how-to-topics.md)

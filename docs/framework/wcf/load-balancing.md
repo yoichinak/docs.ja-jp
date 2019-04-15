@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228640"
 ---
 # <a name="load-balancing"></a>負荷分散
 Windows Communication Foundation (WCF) アプリケーションの容量を増やす 1 つの方法は、スケール アウトすることを負荷分散されたサーバー ファームに配置してです。 WCF アプリケーションは、標準の負荷分散手法を Windows ネットワーク負荷分散などのソフトウェア負荷分散も含むとハードウェア ベースの負荷分散を使用して負荷分散できます。  
@@ -87,9 +87,10 @@ Windows Communication Foundation (WCF) アプリケーションの容量を増�
 -   信頼できるセッションを使用しないでください。 この機能は既定で無効になっています。  
   
 ## <a name="load-balancing-the-nettcp-binding"></a>Net.TCP バインディングの負荷分散  
- <xref:System.ServiceModel.NetTcpBinding> は、IP レイヤー負荷分散の手法を使用して負荷分散できます。 ただし、<xref:System.ServiceModel.NetTcpBinding> は接続の待ち時間を減らすために、既定で TCP 接続のプールを作成します。 この最適化は、負荷分散の基本的なメカニズムに干渉します。 <xref:System.ServiceModel.NetTcpBinding> を最適化するための主な構成値はリース タイムアウトで、これは接続プール設定の一部です。 接続プールによって、クライアントの接続がファーム内の特定サーバーと関連付けられます。 このような接続の有効期間 (これはリース タイムアウトの設定で制御される要素です) が長くなるにつれて、ファーム内の各サーバーの負荷分散がうまくいかなくなります。 その結果、平均呼び出し時間が増加します。 したがって、<xref:System.ServiceModel.NetTcpBinding> を負荷分散シナリオで使用する場合は、バインディングによって使用される既定のリース タイムアウトを少なくすることを検討してください。 負荷分散のシナリオでは、30 秒のリース タイムアウトから始めるのが合理的ですが、最適値はアプリケーションによって異なります。 チャネル リース タイムアウトおよびその他のトランスポート クォータの詳細については、[トランスポート クォータ](../../../docs/framework/wcf/feature-details/transport-quotas.md)を参照してください。  
+ <xref:System.ServiceModel.NetTcpBinding> は、IP レイヤー負荷分散の手法を使用して負荷分散できます。 ただし、<xref:System.ServiceModel.NetTcpBinding> は接続の待ち時間を減らすために、既定で TCP 接続のプールを作成します。 この最適化は、負荷分散の基本的なメカニズムに干渉します。 <xref:System.ServiceModel.NetTcpBinding> を最適化するための主な構成値はリース タイムアウトで、これは接続プール設定の一部です。 接続プールによって、クライアントの接続がファーム内の特定サーバーと関連付けられます。 このような接続の有効期間 (これはリース タイムアウトの設定で制御される要素です) が長くなるにつれて、ファーム内の各サーバーの負荷分散がうまくいかなくなります。 その結果、平均呼び出し時間が増加します。 したがって、<xref:System.ServiceModel.NetTcpBinding> を負荷分散シナリオで使用する場合は、バインディングによって使用される既定のリース タイムアウトを少なくすることを検討してください。 負荷分散のシナリオでは、30 秒のリース タイムアウトから始めるのが合理的ですが、最適値はアプリケーションによって異なります。 チャネル リース タイムアウトおよびその他のトランスポート クォータの詳細については、次を参照してください。[トランスポート クォータ](../../../docs/framework/wcf/feature-details/transport-quotas.md)します。  
   
  負荷分散のシナリオで最適なパフォーマンスを実現するには、<xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> または <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>) を使用することを検討してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターネット インフォメーション サービス ホスティングのベスト プラクティス](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

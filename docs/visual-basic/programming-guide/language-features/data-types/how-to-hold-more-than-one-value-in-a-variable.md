@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332262"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) では、複数の値を保持します。
 として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  
@@ -25,9 +25,9 @@ ms.locfileid: "58825158"
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>変数に 1 つ以上の値を保持するには  
   
-1.  変数の使用する複合データ型を確認します。  
+1. 変数の使用する複合データ型を確認します。  
   
-2.  複合データ型が既に定義されていない場合、変数が使用できるように定義します。  
+2. 複合データ型が既に定義されていない場合、変数が使用できるように定義します。  
   
     -   含む構造体の定義、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)します。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "58825158"
   
     -   クラスを定義、[クラス ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)します。  
   
-3.  使用して変数を宣言、`Dim`ステートメント。  
+3. 使用して変数を宣言、`Dim`ステートメント。  
   
-4.  変数名に続けて、`As`句。  
+4. 変数名に続けて、`As`句。  
   
-5.  に従って、`As`キーワードは、適切な複合データ型の名前に置き換えます。  
+5. に従って、`As`キーワードは、適切な複合データ型の名前に置き換えます。  
   
 ## <a name="see-also"></a>関連項目
 

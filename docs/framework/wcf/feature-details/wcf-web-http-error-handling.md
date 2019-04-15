@@ -2,12 +2,12 @@
 title: WCF Web HTTP エラー処理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152699"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP エラー処理
 Windows Communication Foundation (WCF) Web HTTP エラー処理を使用すると、HTTP ステータス コードを指定する操作 (たとえば、XML または JSON) と同じ形式を使用してエラーの詳細を返す WCF Web HTTP サービスからエラーが返されることができます。  
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- 次の例は、HTTP 状態コードおよび追加情報をユーザー定義型で返す方法を示しています。 `MyErrorDetail` は、発生したエラーに関する追加情報を格納しているユーザー定義型です。  
+ 次の例は、HTTP 状態コードおよび追加情報をユーザー定義型で返す方法を示しています。 `MyErrorDetail` 発生したエラーに関する追加情報を含むユーザー定義型です。  
   
 ```  
 Public string Operation2()  
@@ -45,11 +45,12 @@ Public string Operation2()
   
 -   <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> プロパティの値 (<xref:System.ServiceModel.Web.OutgoingWebResponseContext> にアクセスして取得)。  
   
- これらの値が、操作の書式設定に影響する方法の詳細については、[WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)を参照してください。  
+ これらの値が、操作の書式設定に影響する方法の詳細については、次を参照してください。 [WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)します。  
   
- <xref:System.ServiceModel.Web.WebFaultException> は <xref:System.ServiceModel.FaultException> であるため、SOAP エンドポイントと Web HTTP エンドポイントを公開するサービスのエラー例外プログラミング モデルとして使用できます。  
+ <xref:System.ServiceModel.Web.WebFaultException> <xref:System.ServiceModel.FaultException>ので SOAP エンドポイントを公開して、HTTP エンドポイントを web サービスのエラー例外プログラミング モデルとして使用することができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP 形式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [エラーの定義と指定](../../../../docs/framework/wcf/defining-and-specifying-faults.md)

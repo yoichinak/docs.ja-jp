@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075181"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342857"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>方法: カラー行列を使用して単一色を変換する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 <xref:System.Drawing.Image> <xref:System.Drawing.Bitmap>オブジェクトは、32 ビットの数値として各ピクセルの色を格納します。8 ビットは赤、緑、青、およびアルファの各します。 4 つのコンポーネントのそれぞれは、0 ~ 255 の輝度がない、255 は最大輝度を表す 0 から番号です。 アルファ コンポーネントには、色の透明度を指定します。0 は完全に透明、255 は完全に不透明です。  
@@ -26,9 +26,9 @@ ms.locfileid: "59075181"
   
  たとえば、色 (0.2, 0.0、0.4, 1.0) で起動して、次の変換を適用するとします。  
   
-1.  赤のコンポーネントでは倍精度浮動小数点  
+1. 赤のコンポーネントでは倍精度浮動小数点  
   
-2.  0.2 を赤、緑、青のコンポーネントに追加します。  
+2. 0.2 を赤、緑、青のコンポーネントに追加します。  
   
  次の行列の乗算を順番に、2 つの変換を実行します。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59075181"
   
  次の例のコードでは、次の手順を使用して、色の変更を実行します。  
   
-1.  初期化を<xref:System.Drawing.Imaging.ColorMatrix>オブジェクト。  
+1. 初期化を<xref:System.Drawing.Imaging.ColorMatrix>オブジェクト。  
   
-2.  作成、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクトを渡します、<xref:System.Drawing.Imaging.ColorMatrix>オブジェクトを<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>のメソッド、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクト。  
+2. 作成、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクトを渡します、<xref:System.Drawing.Imaging.ColorMatrix>オブジェクトを<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>のメソッド、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクト。  
   
-3.  渡す、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクトを<xref:System.Drawing.Graphics.DrawImage%2A>のメソッドを<xref:System.Drawing.Graphics>オブジェクト。  
+3. 渡す、<xref:System.Drawing.Imaging.ImageAttributes>オブジェクトを<xref:System.Drawing.Graphics.DrawImage%2A>のメソッドを<xref:System.Drawing.Graphics>オブジェクト。  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  

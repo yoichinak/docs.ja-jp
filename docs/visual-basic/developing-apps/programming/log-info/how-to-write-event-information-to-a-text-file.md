@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819035"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312717"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>方法: イベント情報をテキスト ファイルに書き込む (Visual Basic)
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。 この例では、`My.Application.Log.WriteEntry` メソッドを使ってトレース情報をログ ファイルに記録する方法を示します。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>ファイル ログ リスナーを追加および構成するには  
   
-1.  **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。  
+1. **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。  
   
      \- または  
   
@@ -30,19 +30,19 @@ ms.locfileid: "58819035"
   
     3.  **[追加]** をクリックします。  
   
-2.  アプリケーション構成ファイルで `<listeners>` セクションを見つけます。  
+2. アプリケーション構成ファイルで `<listeners>` セクションを見つけます。  
   
      \<listeners> セクションは、最上位の \<configuration> セクションに入れ子になった \<system.diagnostics> セクションにさらに入れ子になっている、名前属性が "DefaultSource" の \<source> セクションにあります。  
   
-3.  その `<listeners>` セクションに次の要素を追加します。  
+3. その `<listeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  最上位の `<configuration>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<sharedListeners>` セクションを見つけます。  
+4. 最上位の `<configuration>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<sharedListeners>` セクションを見つけます。  
   
-5.  その `<sharedListeners>` セクションに次の要素を追加します。  
+5. その `<sharedListeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="FileLogListener"   

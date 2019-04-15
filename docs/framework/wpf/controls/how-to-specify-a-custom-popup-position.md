@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: 2ffba3d1a0fee236f803dd5877d541084192418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200585"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>方法: ポップアップのカスタム位置を指定する
 この例のカスタム位置を指定する方法を示しています、<xref:System.Windows.Controls.Primitives.Popup>タイミングを制御、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティに設定されて<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>します。  
@@ -30,9 +30,10 @@ ms.locfileid: "57358484"
  [!code-csharp[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PopupCustomPlacement/CSharp/Window1.xaml.cs#delegatedefinition)]
  [!code-vb[PopupCustomPlacement#DelegateDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PopupCustomPlacement/visualbasic/window1.xaml.vb#delegatedefinition)]  
   
- サンプル全体については、[ポップアップの配置のサンプル](https://go.microsoft.com/fwlink/?LinkID=160032)を参照してください。  
+ サンプル全体については、次を参照してください。[ポップアップの配置のサンプル](https://go.microsoft.com/fwlink/?LinkID=160032)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - [ポップアップの概要](popup-overview.md)
-- [方法トピック](popup-how-to-topics.md)
+- [方法のトピック](popup-how-to-topics.md)

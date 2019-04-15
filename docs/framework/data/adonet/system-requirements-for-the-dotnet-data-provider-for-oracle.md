@@ -2,12 +2,12 @@
 title: .NET Framework Data Provider for Oracle のシステム要件
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111048"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle のシステム要件
 .NET Framework Data Provider for Oracle を使用するには、MDAC (Microsoft Data Access Components) のバージョン 2.6 以降が必要です。 MDAC 2.8 SP1 をインストールすることをお勧めします。  
@@ -38,5 +38,6 @@ Unicode=True
  ユーザビリティ上の理由から、<xref:System.Data.OracleClient.OracleLob>オブジェクトは、.NET Framework Stream クラスから継承し、提供**ReadByte**と**WriteByte**メソッド。 メソッドも実装など**CopyTo**と**消去**その、Oracle のセクションで動作**LOB**オブジェクト。 これに対し、Oracle クライアント ソフトウェアはさまざまな文字を使用する Api を提供します。 **LOB**s (**CLOB**と**NCLOB**)。 ただし、これらの API は full 文字列でのみ動作します。 Data Provider for Oracle のサポートの実装この違いにより、**読み取り**と**ReadByte**バイトの方法で utf-16 データを操作します。 ただし、他の方法、 **OracleLob**オブジェクトは full 文字列操作のみを許可します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

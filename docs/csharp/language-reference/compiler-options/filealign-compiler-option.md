@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660178"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328700"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# コンパイラ オプション)
 **-filealign** オプションを使用すると、出力ファイル内のセクションのサイズを指定できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "54660178"
  `number`  
  出力ファイル内のセクションのサイズを指定する値です。 有効値は 512、1024、2048、4096、および 8192 です。 これらの値はバイト単位です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  各セクションは、**-filealign** 値の倍数である境界上にアラインされます。 固定の既定値はありません。 **-filealign** が指定されていない場合、共通言語ランタイムはコンパイル時に既定値を選択します。  
   
  セクションのサイズを指定すると、出力ファイルのサイズに影響します。 セクションのサイズ変更は、比較的小さなデバイスで実行されるプログラムに対して有効な場合があります。  
@@ -45,13 +45,13 @@ ms.locfileid: "54660178"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** ボタンをクリックします。  
   
-4.  **[ファイルの配置]** プロパティを変更します。  
+4. **[ファイルの配置]** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>」をご覧ください。  
   

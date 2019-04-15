@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304000"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>方法: シングルファイル アセンブリをビルドする
 
@@ -33,7 +33,7 @@ ms.locfileid: "54597841"
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>拡張子が .exe のアセンブリを作成するには
 
-1.  コマンド プロンプトに次のコマンドを入力します。
+1. コマンド プロンプトに次のコマンドを入力します。
 
      \<*コンパイラ コマンド*> \<*モジュール名*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>拡張子が .exe のアセンブリを作成し、出力ファイル名を指定するには
 
-1.  コマンド プロンプトに次のコマンドを入力します。
+1. コマンド プロンプトに次のコマンドを入力します。
 
      \<*コンパイラ コマンド*> **/out:**\<*ファイル名*> \<*モジュール名*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>ライブラリ アセンブリを作成するには
 
-1.  コマンド プロンプトに次のコマンドを入力します。
+1. コマンド プロンプトに次のコマンドを入力します。
 
      \<*コンパイラ コマンド*> **/t:library** \<*モジュール名*>
 

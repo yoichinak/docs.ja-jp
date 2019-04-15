@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186830"
 ---
 # <a name="property-value-inheritance"></a>プロパティ値の継承
 プロパティ値の継承は、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの機能です。 プロパティ値の継承により、要素のツリー内の子要素は、親要素から特定のプロパティの値を取得できます。これは、最も近い親要素のいずれかに設定されているとおりにその値を継承することで行われます。 親要素もプロパティ値の継承を通じてその値を取得している場合があるため、システムはページ ルートまで再帰している可能性があります。 プロパティ値の継承は、プロパティ システムの既定の動作ではありません。あるプロパティに子要素でのプロパティ値の継承を実行させるには、そのプロパティに特定のメタデータを設定する必要があります。  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>プロパティ値の継承は包含継承である  
  ここで言う "継承" は、型や一般的なオブジェクト指向プログラミングのコンテキストにおける継承 (派生クラスがその基底クラスからメンバー定義を継承する) とは若干異なる概念です。 この意味での継承は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でも使用されます。さまざまな基底クラスで定義されたプロパティは、要素として使用される場合の派生 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] クラスの属性として、およびコードのメンバーとして公開されます。 プロパティ値の継承は、要素のツリー内の親子のリレーションシップに基づいて、ある要素から別の要素にプロパティ値が継承されるしくみに特に関連します。 その要素のツリーが最も直接的に認識されるのは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップでアプリケーションを定義する際にさまざまな要素を別の要素内に入れ子にする場合です。 オブジェクトのツリーはプログラムで作成することもできます。これを行うには、オブジェクトを別のオブジェクトの指定したコレクションに追加します。完成したツリーでも、実行時にプロパティ値の継承が同様に動作します。  
@@ -42,6 +40,7 @@ ms.locfileid: "57359882"
  プロパティの継承は、要素のツリーを走査して行われます。 多くの場合、このツリーは論理ツリーに対応します。 ただしなど、要素ツリーを定義するマークアップに WPF コア レベルのオブジェクトを含めるたびに、 <xref:System.Windows.Media.Brush>、不連続の論理ツリーを作成しました。 を通じて概念的に拡張されていない場合は true。 論理ツリー、<xref:System.Windows.Media.Brush>論理ツリーは WPF フレームワーク レベルの概念であるためです。 これのメソッドを使用する場合、結果に反映を確認できます<xref:System.Windows.LogicalTreeHelper>します。 ただし、プロパティ値の継承の論理ツリー内のこのギャップを埋めることができ、継承可能なプロパティが添付プロパティとありません意図的な継承ブロッキング境界として登録されている限り、継承された値を受け渡すことができます (など、 <xref:System.Windows.Controls.Frame>) が発生しました。  
   
 ## <a name="see-also"></a>関連項目
+
 - [依存関係プロパティのメタデータ](dependency-property-metadata.md)
 - [添付プロパティの概要](attached-properties-overview.md)
 - [依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)

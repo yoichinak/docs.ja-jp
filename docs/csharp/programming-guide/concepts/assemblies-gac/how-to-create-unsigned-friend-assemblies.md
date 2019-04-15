@@ -2,21 +2,21 @@
 title: '方法: 署名のないフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 5b376266581def9bdd4315ccbee04b71b7c8bc08
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bc2d807b3d1cf6c82a9ba6303139b9758581f35
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318235"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>方法: 署名のないフレンド アセンブリを作成する (C#)
 この例では、署名のないアセンブリと共にフレンド アセンブリを使用する方法を示します。  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>署名のないアセンブリとフレンド アセンブリを作成するには  
   
-1.  コマンド プロンプトを開きます。  
+1. コマンド プロンプトを開きます。  
   
-2.  次のコードを含む、`friend_unsigned_A.` という名前の C# ファイルを作成します。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_unsigned_B を宣言します。  
+2. 次のコードを含む、`friend_unsigned_A.` という名前の C# ファイルを作成します。 コードでは <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を使用して、フレンド アセンブリとして friend_unsigned_B を宣言します。  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,13 +46,13 @@ ms.locfileid: "57365062"
     }  
     ```  
   
-3.  次のコマンドを使用して friend_unsigned_A をコンパイルして署名します。  
+3. 次のコマンドを使用して friend_unsigned_A をコンパイルして署名します。  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
     ```  
   
-4.  次のコードを含む、`friend_unsigned_B` という名前の C# ファイルを作成します。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `internal` 型とメンバーにアクセスできます。  
+4. 次のコードを含む、`friend_unsigned_B` という名前の C# ファイルを作成します。 friend_unsigned_A が friend_unsigned_B をフレンド アセンブリとして指定しているため、friend_unsigned_B 内のコードは、friend_unsigned_A の `internal` 型とメンバーにアクセスできます。  
   
     ```csharp  
     // friend_unsigned_B.cs  
@@ -75,7 +75,7 @@ ms.locfileid: "57365062"
     }  
     ```  
   
-5.  次のコマンドを使用して friend_unsigned_B をコンパイルします。  
+5. 次のコマンドを使用して friend_unsigned_B をコンパイルします。  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ ms.locfileid: "57365062"
   
      コンパイラによって生成されるアセンブリの名前は、<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性に渡されるフレンド アセンブリ名と一致している必要があります。 `/out` コンパイラ オプションを使用して、出力アセンブリ (.exe または .dll) の名前を明示的に指定する必要があります。 詳しくは、「[/out (C# コンパイラ オプション)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)」をご覧ください。  
   
-6.  friend_unsigned_B.exe ファイルを実行します。  
+6. friend_unsigned_B.exe ファイルを実行します。  
   
      このプログラムで 2 つの文字列が出力されます。"Class1.Test" と "Class2.Test" です。  
   

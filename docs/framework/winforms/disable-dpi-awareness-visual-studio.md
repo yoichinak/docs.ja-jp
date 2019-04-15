@@ -1,21 +1,24 @@
 ---
 title: Visual Studio では、DPI の認識を無効にします。
-description: HDPI モニターは、Windows フォーム デザイナーと DPI に対応していないプロセスとして Visual Studio を実行する方法の制限事項について説明します。
-ms.date: 03/19/2019
+description: HDPI のモニターでの Windows フォーム デザイナーの制限事項と DPI に対応していないプロセスとして Visual Studio を実行する方法について説明します。
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181383"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Visual Studio では、DPI の認識を無効にします。
 
 Visual Studio では、表示スケールを自動的に意味インチ (DPI) 対応アプリケーションあたりのドットです。 アプリケーションでは、DPI 対応ではないことを示す、オペレーティング システムは、ビットマップとしてアプリケーションをスケーリングします。 この動作は、DPI の仮想化とも呼ばれます。 アプリケーションは引き続き、100% に拡大縮小、または 96 dpi で実行されていると認識します。
+
+この記事では、HDPI モニターでの Windows フォーム デザイナーの制限事項と DPI に対応していないプロセスとして Visual Studio を実行する方法について説明します。
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>HDPI のモニターでの Windows フォーム デザイナー
 
@@ -32,11 +35,15 @@ Visual Studio では、表示スケールを自動的に意味インチ (DPI) �
 > [!NOTE]
 > この情報バーは、Visual Studio 2017 バージョン 15.8 で導入されました。
 
-場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-problem)します。
+場合は、デザイナーを使用していないし、フォームのレイアウトを調整する必要はありません、情報バーを無視し、コード エディターまたはデザイナーの他の種類では、作業を続行できます。 (することもできます[通知を無効にする](#disable-notifications)情報バーが表示され続けるようにします)。のみ、 **Windows フォーム デザイナー**が影響を受けます。 作業する必要がある場合、 **Windows フォーム デザイナー**、次のセクションでは[、問題を解決する](#to-resolve-the-display-problem)します。
 
-## <a name="to-resolve-the-problem"></a>この問題を解決するのには
+## <a name="to-resolve-the-display-problem"></a>表示に関する問題を解決するのには
 
 表示に関する問題を解決するのには次の 3 つのオプションがあります。
+
+1. [DPI に対応していないプロセスとして Visual Studio を再起動します。](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [レジストリ エントリを追加します。](#add-a-registry-entry)
+3. [設定、画面のスケーリングを 100% に設定します。](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>DPI に対応していないプロセスとして Visual Studio を再起動します。
 

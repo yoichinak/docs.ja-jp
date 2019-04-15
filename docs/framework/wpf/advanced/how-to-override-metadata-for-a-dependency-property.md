@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209438"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>方法: 依存関係プロパティのメタデータをオーバーライドする
 この例は、呼び出すことによって、継承されたクラスからは既定の依存関係プロパティ メタデータをオーバーライドする方法を示します、<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>メソッドと型固有のメタデータを提供します。  
@@ -32,7 +32,8 @@ ms.locfileid: "57365881"
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.DependencyProperty>
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
-- [方法トピック](properties-how-to-topics.md)
+- [方法のトピック](properties-how-to-topics.md)

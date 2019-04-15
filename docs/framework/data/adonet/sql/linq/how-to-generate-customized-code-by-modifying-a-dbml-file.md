@@ -2,23 +2,23 @@
 title: '方法: DBML ファイルを変更してカスタマイズ コードを生成する'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338424"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>方法: DBML ファイルを変更してカスタマイズ コードを生成する
 Visual Basic を生成するか、C#データベース マークアップ言語 (.dbml) メタデータ ファイルからソース コード。 この方法を使用すると、アプリケーション マッピング コードを生成する前に、既定の .dbml ファイルをカスタマイズできます。 これは高度な機能です。  
   
  実行手順は次のとおりです。  
   
-1.  .dbml ファイルを生成します。  
+1. .dbml ファイルを生成します。  
   
-2.  エディターを使用して .dbml ファイルを変更します。 .Dbml ファイルは、用のスキーマ定義 (.xsd) ファイルに対して検証する必要がありますので注意[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].dbml ファイル。 詳細については、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)します。  
+2. エディターを使用して .dbml ファイルを変更します。 .Dbml ファイルは、用のスキーマ定義 (.xsd) ファイルに対して検証する必要がありますので注意[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].dbml ファイル。 詳細については、次を参照してください。 [LINQ to SQL でのコード生成](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)します。  
   
-3.  Visual Basic を生成またはC#ソース コード。  
+3. Visual Basic を生成またはC#ソース コード。  
   
  次の例では、SQLMetal コマンド ライン ツールを使用します。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   

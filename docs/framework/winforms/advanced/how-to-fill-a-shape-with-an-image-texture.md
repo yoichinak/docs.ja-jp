@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177321"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>方法: イメージ テクスチャによって図形を塗りつぶす
 使用してテクスチャを使用して、閉じた形状を入力することができます、<xref:System.Drawing.Image>クラスおよび<xref:System.Drawing.TextureBrush>クラス。  
@@ -34,4 +34,5 @@ ms.locfileid: "57708445"
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ブラシを使用した図形の塗りつぶし](using-a-brush-to-fill-shapes.md)

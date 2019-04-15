@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679655"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815587"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -115,7 +115,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 この時点で、作成したサンプルを実行してみてください。 デッキにある 52 枚のカードがすべて表示されます。 デバッガ―でこのサンプルを実行すると、`Suits()` メソッドと `Ranks()` メソッドがどのように実行されるか理解するのに役立ちます。 各シーケンス内の各文字列が必要な場合にのみ生成されることがよくわかります。
 
-![52 枚のカードをアプリケーションが書きだしているコンソール ウィンドウ](./media/working-with-linq/console.png)
+![アプリが 52 枚のカードを書き出しているコンソール ウィンドウ](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>順序の操作
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219513"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 ## <a name="types-variables-and-values"></a>型、変数、および値  
@@ -75,8 +75,7 @@ ms.locfileid: "58465504"
  次の図は、CTS における値型と参照型の関係を示しています。
 
  次の画像は、CTS の値の型と参照型を示しています。 
-  
-  
+
  ![CTS の値の型と参照型を示すスクリーンショット。](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]

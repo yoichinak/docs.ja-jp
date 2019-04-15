@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305957"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>方法: DataGrid コントロールを使用して検証を実装する
 <xref:System.Windows.Controls.DataGrid>コントロールでは、セルと行の両方のレベルでの検証を実行することができます。 セル レベルの検証、ユーザーが値を更新したときに、バインドされたデータ オブジェクトの個々 のプロパティを検証します。 行レベルの検証、ユーザーが行への変更をコミット時に、データ オブジェクト全体を検証します。 検証エラーの場合は、カスタマイズされた視覚的なフィードバックを提供したり、既定の視覚的フィードバックを使用したりできる<xref:System.Windows.Controls.DataGrid>コントロールを提供します。  
@@ -42,14 +42,14 @@ ms.locfileid: "59086808"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>1 つの行で複数の値を検証するには  
   
-1.  実装を<xref:System.Windows.Controls.ValidationRule>バインドされたデータ オブジェクトの複数のプロパティをチェックするサブクラスです。 <xref:System.Windows.Controls.ValidationRule.Validate%2A>メソッドの実装のキャスト、`value`パラメーター値を<xref:System.Windows.Data.BindingGroup>インスタンス。 使用してデータ オブジェクトにアクセスできます、<xref:System.Windows.Data.BindingGroup.Items%2A>プロパティ。  
+1. 実装を<xref:System.Windows.Controls.ValidationRule>バインドされたデータ オブジェクトの複数のプロパティをチェックするサブクラスです。 <xref:System.Windows.Controls.ValidationRule.Validate%2A>メソッドの実装のキャスト、`value`パラメーター値を<xref:System.Windows.Data.BindingGroup>インスタンス。 使用してデータ オブジェクトにアクセスできます、<xref:System.Windows.Data.BindingGroup.Items%2A>プロパティ。  
   
      次の例では、このプロセスを検証するかどうか、`StartDate`のプロパティの値を`Course`オブジェクトが以前よりもその`EndDate`プロパティの値。  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  検証規則の追加、<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>コレクション。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>プロパティへの直接アクセスを提供する、<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>のプロパティを<xref:System.Windows.Data.BindingGroup>コントロールによって使用されるすべてのバインディングをグループ化するインスタンス。  
+2. 検証規則の追加、<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>コレクション。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>プロパティへの直接アクセスを提供する、<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>のプロパティを<xref:System.Windows.Data.BindingGroup>コントロールによって使用されるすべてのバインディングをグループ化するインスタンス。  
   
      次の例のセット、 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> XAML プロパティ。 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>プロパティに設定されて<xref:System.Windows.Controls.ValidationStep.UpdatedValue>バインドされたデータ オブジェクトが更新された後にのみ、検証が行われるようにします。  
   

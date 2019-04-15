@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190799"
 ---
 # <a name="sharedlisteners-element"></a>\<上の sharedListeners > 要素
 任意の source 要素または trace 要素が参照できるリスナーを含みます。  これらのリスナーが既定では、トレースを受信しないと、実行時にこれらのリスナーを取得することはできません。 共有リスナーとして識別されたリスナーは、名前によってソースまたはトレースに追加できます。  
@@ -89,6 +89,7 @@ ms.locfileid: "58348818"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceListener>
 - [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [トレース リスナー](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

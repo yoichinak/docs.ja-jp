@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202652"
 ---
 # <a name="getnames-function"></a>GetNames 関数
 オブジェクトのプロパティの名前の一部またはすべてが取得されます。 
@@ -80,7 +80,6 @@ HRESULT GetNames (
 
 フラグの値で`lFlags`ビット フィールドには
 
-
 フラグとして渡すことができる、`lEnumFlags`引数はビット フィールドで定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。  その他のグループからのすべてのフラグでは、各グループから 1 つのフラグを組み合わせることができます。 ただし、同じグループからのフラグは、相互に排他的です。 
 
 | フラグのグループ 1 |[値]  |説明  |
@@ -109,7 +108,8 @@ HRESULT GetNames (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

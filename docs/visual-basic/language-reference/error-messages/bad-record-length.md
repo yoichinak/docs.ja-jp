@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: f3df7819da0afddd7f238f282d496136d89cb052
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833478"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324176"
 ---
 # <a name="bad-record-length"></a>レコード長が正しくありません。
 このエラーでは以下の原因が考えられます。  
@@ -22,11 +22,11 @@ ms.locfileid: "58833478"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  記載されている値と同じレコードの変数の型を定義するユーザー定義型の変数を固定長のサイズの合計がかどうかを確認、`FileOpen`ステートメントの`Len`句。  
+1. 記載されている値と同じレコードの変数の型を定義するユーザー定義型の変数を固定長のサイズの合計がかどうかを確認、`FileOpen`ステートメントの`Len`句。  
   
-2.  場合に、変数、`FilePut`または`FilePutObject`ステートメントが可変長文字列が含まれるか、可変長文字列が少なくとも 2 つの文字で指定されたレコードの長さよりも短いかどうかを確認、`Len`の句、 `FileOpen`ステートメント。  
+2. 場合に、変数、`FilePut`または`FilePutObject`ステートメントが可変長文字列が含まれるか、可変長文字列が少なくとも 2 つの文字で指定されたレコードの長さよりも短いかどうかを確認、`Len`の句、 `FileOpen`ステートメント。  
   
-3.  場合内の変数を`FilePut`または`FilePutObject`かが含まれています、`Variant`可変長文字列は、少なくとも 4 バイトで指定されたレコードの長さよりも短いかどうかを確認、`Len`の句、`FileOpen`ステートメント。  
+3. 場合内の変数を`FilePut`または`FilePutObject`かが含まれています、`Variant`可変長文字列は、少なくとも 4 バイトで指定されたレコードの長さよりも短いかどうかを確認、`Len`の句、`FileOpen`ステートメント。  
   
 ## <a name="see-also"></a>関連項目
 

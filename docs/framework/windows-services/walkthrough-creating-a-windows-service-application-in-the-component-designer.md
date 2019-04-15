@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: Windows サービス アプリを作成する'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262497"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518033"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
@@ -59,7 +59,6 @@ ms.locfileid: "58262497"
 
 3. **[ファイル]** メニューから **[すべて保存]** を選択します。
 
-
 ## <a name="add-features-to-the-service"></a>サービスに機能を追加する
 
 このセクションでは、Windows サービスにカスタム イベント ログを追加します。 Windows サービスに追加できるコンポーネントの種類の例として、<xref:System.Diagnostics.EventLog> コンポーネントを使用しています。
@@ -74,21 +73,7 @@ ms.locfileid: "58262497"
 
 4. カスタム イベント ログを定義します。 C# の場合は、既存の `MyNewService()` コンストラクターを編集します。Visual Basic の場合は、`New()` コンストラクターを追加します。
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. <xref:System.Diagnostics?displayProperty=nameWithType> 名前空間について、**MyNewService.cs** には `using` ステートメントを追加し (まだ存在しない場合)、**MyNewService.vb** には `Imports` ステートメントを追加します。
@@ -141,7 +126,6 @@ ms.locfileid: "58262497"
 
 2. <xref:System.Timers?displayProperty=nameWithType> 名前空間について、**MyNewService.cs** には `using` ステートメントを追加し、**MyNewService.vb** には `Imports` ステートメントを追加します。
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ ms.locfileid: "58262497"
    ```vb
    Imports System.Timers
    ```
-
 
 3. `MyNewService` クラスに <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> イベントを処理する `OnTimer` メソッドを追加します。
 
@@ -185,10 +168,7 @@ ms.locfileid: "58262497"
 
 サービスの停止時にイベント ログに対するエントリを追加するコード行を <xref:System.ServiceProcess.ServiceBase.OnStop%2A> に挿入します。
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>サービスに対して他の処理を定義する
@@ -200,13 +180,11 @@ eventLog1.WriteEntry("In OnStop.");
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>サービスの状態を設定する
 
 サービスは、その状態を[サービス コントロール マネージャー](/windows/desktop/Services/service-control-manager)に報告します。これによりユーザーは、サービスが正常に機能しているかどうかを確認することができます。 既定では、<xref:System.ServiceProcess.ServiceBase> から継承したサービスは、SERVICE_STOPPED、SERVICE_PAUSED、および SERVICE_RUNNING など、限られたセットの状態設定を報告します。 サービスの開始に時間がかかる場合は、SERVICE_START_PENDING 状態を報告すると便利です。 
 
 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 関数を呼び出すコードを追加することで、SERVICE_START_PENDING および SERVICE_STOP_PENDING 状態設定を実装できます。
-
 
 ### <a name="implement-service-pending-status"></a>サービス保留の状態を実装する
 
@@ -269,6 +247,9 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > サービス コントロール マネージャーは、[SERVICE_STATUS 構造体](/windows/desktop/api/winsvc/ns-winsvc-_service_status)の `dwWaitHint` メンバーと `dwCheckpoint` メンバーを使って、Windows サービスの開始やシャットダウンまでの待機時間を判断します。 `OnStart` メソッドと `OnStop` メソッドが長時間実行している場合、サービスは、インクリメントした `dwCheckPoint` 値で `SetServiceStatus` をもう一度呼び出すことによって、追加の時間を要求できます。
 
 3. `MyNewService` クラスで、[プラットフォーム呼び出し](../interop/consuming-unmanaged-dll-functions.md)を使用して、[SetServiceStatus 関数](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)を宣言します。
 
@@ -341,9 +322,6 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> サービス コントロール マネージャーは、[SERVICE_STATUS 構造体](/windows/desktop/api/winsvc/ns-winsvc-_service_status)の `dwWaitHint` メンバーと `dwCheckpoint` メンバーを使って、Windows サービスの開始やシャットダウンまでの待機時間を判断します。 `OnStart` メソッドと `OnStop` メソッドが長時間実行している場合、サービスは、インクリメントした `dwCheckPoint` 値で `SetServiceStatus` をもう一度呼び出すことによって、追加の時間を要求できます。
-
 ## <a name="add-installers-to-the-service"></a>サービスにインストーラーを追加する
 
 Windows サービスを実行するには、まず、サービスをインストールする必要があります。これにより、サービスがサービス コントロール マネージャーに登録されます。 登録の詳細を処理するインストーラーをプロジェクトに追加します。
@@ -396,24 +374,8 @@ Windows サービスは、コマンド ライン引数 (スタートアップ �
 
 1. **Program.cs** または **MyNewService.Designer.vb** を選択してから、ショートカット メニューから **[コードの表示]** を選択します。 `Main` メソッドで、入力パラメーターを追加してサービス コンストラクターに渡すようにコードを変更します。
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. **MyNewService.cs** または **MyNewService.vb** で、次のように入力パラメーターを処理するように `MyNewService` コンストラクターを変更します。
 
@@ -493,7 +455,6 @@ Windows サービスは、コマンド ライン引数 (スタートアップ �
    ```
 
    通常、この値には Windows サービスの実行可能ファイルの完全なパスが含まれています。 サービスが正しく開始されるには、ユーザーはパスと各パラメーターに引用符を付ける必要があります。 ユーザーは **ImagePath** レジストリ エントリのパラメーターを変更して、Windows サービスのスタートアップ パラメーターを変更できます。 ただし、管理や構成のユーティリティを使用するなどして、プログラムで値を変更し、わかりやすい方法で機能を公開することをお勧めします。
-
 
 ## <a name="build-the-service"></a>サービスをビルドする
 

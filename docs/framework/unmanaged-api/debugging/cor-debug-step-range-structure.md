@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45340a26b3351ca03b453fbcdb626de199bd6d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57d7c3256d7b52a4e55dbb5bc420b0438983d2f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219682"
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 構造体
 コードの範囲に関するオフセット情報が含まれます。  
@@ -51,9 +51,10 @@ typedef struct {
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [StepRange メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)
 - [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

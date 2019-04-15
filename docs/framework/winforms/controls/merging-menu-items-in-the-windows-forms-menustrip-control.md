@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 292c299bd15cd62eabd9a13db1abab1ed07fe57e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231566"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows フォームの MenuStrip コントロールへのメニュー項目のマージ
 マルチ ドキュメント インターフェイス (MDI) アプリケーションがある場合は、親フォームのメニューにメニュー項目や子フォームの全体のメニューをマージできます。  
@@ -54,8 +54,9 @@ ms.locfileid: "57722351"
  アクティブ化して自動マージをトリガーすることができます、 <xref:System.Windows.Forms.MenuStrip> MDI ソース。 ソースの起動時に<xref:System.Windows.Forms.MenuStrip>MDI ターゲットにマージされます。 新しいフォームがアクティブになったときに、マージが最後のフォームで元に戻すで、新しいフォームにトリガーします。 設定してこの動作を制御することができます、<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>プロパティそれぞれで、必要に応じて<xref:System.Windows.Forms.ToolStripItem>を設定したり、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>プロパティをそれぞれ<xref:System.Windows.Forms.MenuStrip>。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip コントロール](menustrip-control-windows-forms.md)
-- [方法: MenuStrip を MDI ウィンドウ リストを作成します。](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [方法: メニューの自動マージ MDI アプリケーションを設定します。](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [方法: MenuStrip を使用して MDI ウィンドウの一覧を作成する](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [方法: MDI アプリケーションでメニューの自動マージを設定する](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: 608f74afd95ce03b3ecf71819c2181a9728b25af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb655630336c3b69afdc726a2e3c5a2cb8838667
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221588"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>方法: 要素の Height プロパティを設定する
 ## <a name="example"></a>例  
@@ -31,9 +31,10 @@ ms.locfileid: "57356293"
  [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
  [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
- サンプル全体については、[高さのプロパティのサンプル](https://go.microsoft.com/fwlink/?LinkID=159993)を参照してください。  
+ サンプル全体については、次を参照してください。[高さのプロパティのサンプル](https://go.microsoft.com/fwlink/?LinkID=159993)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement.ActualHeight%2A>

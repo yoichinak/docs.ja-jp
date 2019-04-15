@@ -3,12 +3,12 @@ title: Azure Functions に ML.NET モデルをデプロイする
 description: Azure Functions を使用して、インターネット経由で予測用の ML.NET 感情分析機械学習モデルを提供します
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788642"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330637"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>方法:Azure Functions で ML.NET モデルを使用する
 
@@ -21,7 +21,7 @@ ms.locfileid: "57788642"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。 
+- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。 
 - [Azure Functions ツール](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 事前トレーニング済みモデル 
@@ -170,7 +170,7 @@ Invoke-RestMethod "http://localhost:<PORT>/api/AnalyzeSentiment" -Method Post -B
 Toxic
 ```
 
-おつかれさまでした。 Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
+おめでとうございます!  Azure 関数を使用したインターネット経由での予測の実行に対して、モデルを正常に提供できました。
 
 ## <a name="next-steps"></a>次の手順
 

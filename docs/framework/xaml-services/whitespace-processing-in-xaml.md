@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294926"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML での空白の処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  
@@ -25,15 +25,15 @@ XAML の言語規則の状態によってその有意の空白を処理する必
 ## <a name="white-space-normalization"></a>空白文字の正規化  
  既定では、次の空白文字の正規化が発生したときに、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサ プロセス、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]ファイル。  
   
-1.  東アジア言語の文字間の改行文字が削除されます。 この用語の定義については、後の「東アジア言語の文字」を参照してください。  
+1. 東アジア言語の文字間の改行文字が削除されます。 この用語の定義については、後の「東アジア言語の文字」を参照してください。  
   
-2.  すべての空白文字 (スペース、改行、タブ) は、スペースに変換されます。  
+2. すべての空白文字 (スペース、改行、タブ) は、スペースに変換されます。  
   
-3.  連続した複数のスペースはすべて削除され、1 つのスペースに置換されます。  
+3. 連続した複数のスペースはすべて削除され、1 つのスペースに置換されます。  
   
-4.  開始タグの直後にあるスペースは削除されます。  
+4. 開始タグの直後にあるスペースは削除されます。  
   
-5.  終了タグの直前にあるスペースは削除されます。  
+5. 終了タグの直前にあるスペースは削除されます。  
   
  "既定" とは、 [xml:space](xml-space-handling-in-xaml.md) 属性の既定値で表される状態に対応します。  
   

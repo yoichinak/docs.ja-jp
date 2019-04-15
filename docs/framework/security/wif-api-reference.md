@@ -3,12 +3,12 @@ title: WIF API リファレンス
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172212"
 ---
 # <a name="wif-api-reference"></a>WIF API リファレンス
 Windows Identity Foundation (WIF) クラスは、`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll)、および `System.ServiceModel` (System.ServiceModel.dll) というアセンブリに分割されています。 このトピックでは、WIF 名前空間のリンクを紹介し、各名前空間に含まれるクラスについて簡単に説明します。  
@@ -47,5 +47,6 @@ Windows Identity Foundation (WIF) クラスは、`mscorlib` (mscorlib.dll)、`Sy
  アクティブな (WS-Trust) シナリオで使用される WCF のコントラクト、チャネル、サービス ホスト、およびその他の成果物を表すクラスが含まれています。 この名前空間には、Windows Communication Foundation (WCF) 固有で、WIF が使用していないクラスも含まれています。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WIF 構成のリファレンス](../../../docs/framework/security/wif-configuration-reference.md)
 - [WIF 3.5 と WIF 4.5 間での名前空間マッピング](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

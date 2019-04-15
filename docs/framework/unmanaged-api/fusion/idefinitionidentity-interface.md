@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb97c545d2d57ef589b5a7a5b3618eaa2b6f364f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ff23330f307c10eac134048de39a6e19a67c75b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192668"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity インターフェイス
 現在のスコープ内でアプリケーションを定義するコードの一意のシグネチャを表します。  
@@ -40,7 +40,8 @@ ms.locfileid: "54686999"
   
  **ヘッダー:** Isolation.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

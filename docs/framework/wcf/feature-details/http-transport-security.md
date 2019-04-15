@@ -2,12 +2,12 @@
 title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 26d72bf234e66ccbf60305d7681f181077589ed0
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113803"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "55739515"
  使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、[Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)を参照してください。  
+ 設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  
   
  使用するための証明書を構成する[!INCLUDE[iis601](../../../../includes/iis601-md.md)]を参照してください[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)します。  
   
@@ -53,5 +53,6 @@ ms.locfileid: "55739515"
  では、HttpCfg.exe ツールを使用して、X.509 証明書でポートを設定する方法の詳細については、次を参照してください。[方法。SSL 証明書でポートを構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

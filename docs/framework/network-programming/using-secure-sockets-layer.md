@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135805"
 ---
 # <a name="using-secure-sockets-layer"></a>Secure Sockets Layerの使用
 <xref:System.Net> クラスは、Secure Sockets Layer (SSL) を使用して、複数のネットワーク プロトコルの接続を暗号化します。  
@@ -63,6 +63,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 -   **System.Net** 名前空間への参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワーク プログラミングにおけるセキュリティ](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
 - [証明書の選択と検証](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

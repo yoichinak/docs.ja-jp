@@ -2,12 +2,12 @@
 title: <iriParsing> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299671"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing > 要素 (Uri 設定)
 International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用されるかどうか、および IRI の解析規則が適用されるどうかを指定します。  
@@ -50,13 +50,13 @@ International Resource Identifier (IRI) 解析が、<xref:System.Uri> に適用�
   
  IRI のサポートを有効にするのには、次の 2 つの変更が必要です。  
   
-1.  .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
+1. .NET Framework 2.0 のディレクトリの machine.config ファイルに次の行を追加します。  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
+2. IRI 解析規則を適用する必要があるかどうかを指定します。 これは、machine.config ファイルまたは app.config ファイルで指定できます。  
   
  IRI 解析を有効にする (iriParsing を有効になっている = `true`) 正規化を行うし、RFC 3987 ルール文字に従って最新の IRI チェックします。 既定値は`false`とは正規化を実行し、チェックに従って RFC 2396 および RFC 3986 を (IPv6 のリテラル) の文字します。  
   

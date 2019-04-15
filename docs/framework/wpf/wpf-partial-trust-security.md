@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218382"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a> 一般に、悪意のある破損を防ぐための重要なシステム リソースに直接アクセスする必要がなくなりますインターネット アプリケーションを制限する必要があります。 既定では、[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]クライアント側のスクリプト言語は、重要なシステム リソースにアクセスすることができません。 Windows Presentation Foundation (WPF)、ブラウザーからブラウザーでホストされるアプリケーションを起動できるのような一連の制限に準拠している必要があります。 これらの制限を適用する[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依存両方[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]と[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](を参照してください[WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md))。 既定では、ブラウザーでホストされるアプリケーションはインターネット ゾーンを要求[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]インターネット、ローカル イントラネット、またはローカル コンピューターから起動するかどうかに関係なく、権限のセット。 アクセス許可の完全なセットよりも小さいか何かを実行しているアプリケーションは、部分信頼で実行されていると見なされます。  
@@ -161,9 +161,10 @@ ms.locfileid: "57371633"
   
  場合、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]完全な信頼が必要です。 要求されたアクセス許可を増やすと同じツールを使用することができます。 ただし、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]上にインストールされ、イントラネット、ローカル コンピューターとは、ブラウザーの信頼済みまたは許可されたサイトに記載されている URL から起動された場合のみ、完全な信頼が受信されます。 アプリケーションは、イントラネットまたは信頼済みサイトからインストールする場合、ユーザーには管理者特権でのアクセス許可のことを通知する標準の ClickOnce プロンプトが表示されます。 ユーザーは、インストールを続行するか取り消すかを選択できます。  
   
- また、任意のセキュリティ ゾーンから完全な信頼の展開用 ClickOnce 信頼済み配置モデルを使用できます。 詳細については、[Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)と[セキュリティ](security-wpf.md)を参照してください。  
+ また、任意のセキュリティ ゾーンから完全な信頼の展開用 ClickOnce 信頼済み配置モデルを使用できます。 詳細については、次を参照してください。 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)と[セキュリティ](security-wpf.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティ](security-wpf.md)
 - [WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md)
 - [WPF のセキュリティ方針 - セキュリティ エンジニアリング](wpf-security-strategy-security-engineering.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166180"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -236,9 +236,10 @@ class Implemented : ICanCastToMe
 > [!NOTE]
 >  このセクションでは、両方のメソッドを宣言するときにセキュリティ上の問題について警告`virtual`と`internal`(`Overloads` `Overridable` `Friend` Visual Basic で)。 この警告は、.NET Framework version 1.0 および 1.1 にのみ適用されます、以降のバージョンには適用されません。  
   
- .NET Framework バージョン 1.0 および 1.1 では、する必要があります型システムのアクセシビリティの微妙な違いに注意してください。 コードが他のアセンブリを使用できないことを確認するときにします。 宣言されているメソッド**仮想**と**内部**(**Overloads Overridable Friend** Visual Basic)、親クラスの vtable エントリを上書きできからのみ使用できます。同じアセンブリ内で内部があるためです。 ただし、オーバーライドのアクセシビリティはによって決定、**仮想**キーワード、およびそのコードがクラス自体へのアクセスを持っている限り、別のアセンブリからオーバーライドするこのことができます。 オーバーライドの可能性が問題を表している場合は、宣言セキュリティを使用して、修正するか、または削除する、**仮想**キーワードの場合、これは必須ではありません。  
+ .NET Framework バージョン 1.0 および 1.1 では、する必要があります型システムのアクセシビリティの微妙な違いに注意してください。 コードが他のアセンブリを使用できないことを確認するときにします。 宣言されているメソッド**仮想**と**内部**(**Overloads Overridable Friend** Visual basic)、親クラスの vtable エントリを上書きできからのみ使用できます。同じアセンブリ内で内部があるためです。 ただし、オーバーライドのアクセシビリティはによって決定、**仮想**キーワード、およびそのコードがクラス自体へのアクセスを持っている限り、別のアセンブリからオーバーライドするこのことができます。 オーバーライドの可能性が問題を表している場合は、宣言セキュリティを使用して、修正するか、または削除する、**仮想**キーワードの場合、これは必須ではありません。  
   
  ある言語コンパイラがコンパイル エラーによってこれらのオーバーライドを防いだとしても、他のコンパイラによって記述されたコードがオーバーライドする可能性があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186876"
 ---
 # <a name="specifying-service-run-time-behavior"></a>サービスのランタイム動作の指定
-サービス コントラクトを設計して ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md))、実装 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) が終わると、サービス ランタイムの実行動作を構成できます。 ここでは、システム指定のサービスと操作の動作について説明し、新しい動作を作成するための詳細情報の参照先を示します。 一部の動作は属性として適用されますが、多くの動作はアプリケーション構成ファイルまたはプログラムを使用して適用されます。 サービス アプリケーションの構成の詳細については、[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)を参照してください。  
+サービス コントラクトを設計して ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md))、実装 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) が終わると、サービス ランタイムの実行動作を構成できます。 ここでは、システム指定のサービスと操作の動作について説明し、新しい動作を作成するための詳細情報の参照先を示します。 一部の動作は属性として適用されますが、多くの動作はアプリケーション構成ファイルまたはプログラムを使用して適用されます。 サービス アプリケーションの構成の詳細については、次を参照してください。[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
   
 ## <a name="overview"></a>概要  
  コントラクトは、その種類のサービスの入力、出力、データ型、および機能を定義します。 サービス コントラクトを実装すると、クラスが 1 つ作成されます。このクラスを任意のアドレスのバインディングで構成すると、実装されたコントラクトが満たされます。 コントラクト、バインディング、およびアドレスはすべて、クライアントにとって既知の情報です。これらの情報がないと、クライアントはサービスを利用できません。  
   
- ただし、実行の詳細 (スレッド処理の問題点やインスタンスの管理など) は、クライアントには見えません。 サービス コントラクトを実装したら、 *動作*を使用してさまざまな操作特性を構成できます。 ビヘイビアーとは、ランタイム プロパティを設定またはカスタマイズ種類をランタイムに挿入することで、Windows Communication Foundation (WCF) ランタイムを変更するオブジェクトです。 ユーザー定義の動作を作成して、ランタイムを変更する方法の詳細については、[Extending ServiceHost とサービス モデル レイヤー](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)を参照してください。  
+ ただし、実行の詳細 (スレッド処理の問題点やインスタンスの管理など) は、クライアントには見えません。 サービス コントラクトを実装したら、 *動作*を使用してさまざまな操作特性を構成できます。 ビヘイビアーとは、ランタイム プロパティを設定またはカスタマイズ種類をランタイムに挿入することで、Windows Communication Foundation (WCF) ランタイムを変更するオブジェクトです。 ユーザー定義の動作を作成して、ランタイムを変更する方法の詳細については、次を参照してください。 [Extending ServiceHost とサービス モデル レイヤー](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)します。  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> と <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> 属性は、最も広範に使用できる動作であり、最も一般的に要求される操作機能を公開します。 これらは属性であるため、サービス実装または操作実装に適用します。 その他の動作 ( <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> や <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>など) は、通常、アプリケーション構成ファイルを使用して適用されますが、プログラムにより使用することもできます。  
   
@@ -77,49 +77,50 @@ ms.locfileid: "54566740"
 ### <a name="service-behaviors"></a>サービスの動作  
  次の動作は、サービスに影響します。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 そのサービスを実行できるかどうかを示すために WCF サービスに適用される[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]互換モード。  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. そのサービスを実行できるかどうかを示すために WCF サービスに適用される[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]互換モード。  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 サービスがクライアントのクレームを承認する方法を制御します。  
+-   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. サービスがクライアントのクレームを承認する方法を制御します。  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>。 サービス資格情報を構成します。 このクラスを使用して、X.509 証明書などのサービスの資格情報を指定します。  
+-   <xref:System.ServiceModel.Description.ServiceCredentials>. サービス資格情報を構成します。 このクラスを使用して、X.509 証明書などのサービスの資格情報を指定します。  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 デバッグを有効にし、WCF サービスの情報の機能を支援します。  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. デバッグを有効にし、WCF サービスの情報の機能を支援します。  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 サービス メタデータと関連情報の公開を制御します。  
+-   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. サービス メタデータと関連情報の公開を制御します。  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 セキュリティ イベントの監査動作を指定します。  
+-   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. セキュリティ イベントの監査動作を指定します。  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 サービス パフォーマンスを調整できるようにするランタイム スループット設定を構成します。  
+-   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. サービス パフォーマンスを調整できるようにするランタイム スループット設定を構成します。  
   
 ### <a name="endpoint-behaviors"></a>エンドポイントの動作  
  以下の動作は、エンドポイントに影響します。 これらの動作の多くは、クライアント アプリケーションで使用されます。  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 双方向クライアント アプリケーションのコールバック サービス実装を構成します。  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute>. 双方向クライアント アプリケーションのコールバック サービス実装を構成します。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 サービスが WCF のコールバック オブジェクトのデバッグを有効にします。  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. サービスが WCF のコールバック オブジェクトのデバッグを有効にします。  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>。 クライアントとサービスの資格情報、およびクライアントで使用するサービス資格情報の認証設定をユーザーが構成できるようにします。  
+-   <xref:System.ServiceModel.Description.ClientCredentials>. クライアントとサービスの資格情報、およびクライアントで使用するサービス資格情報の認証設定をユーザーが構成できるようにします。  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>。 トランスポート チャネルを作成する対象の URI (Uniform Resource Identifier) を指定するために、クライアントが使用します。  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>. トランスポート チャネルを作成する対象の URI (Uniform Resource Identifier) を指定するために、クライアントが使用します。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 WCF を無効にするように指示します、`MustUnderstand`処理します。  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. WCF を無効にするように指示します、`MustUnderstand`処理します。  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 チャネルの同期受信プロセスを使用するようにランタイムに指示します。  
+-   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. チャネルの同期受信プロセスを使用するようにランタイムに指示します。  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 トランザクションの受信をサポートするトランスポートの受信操作を最適化します。  
+-   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. トランザクションの受信をサポートするトランスポートの受信操作を最適化します。  
   
 ### <a name="contract-behaviors"></a>コントラクトの動作  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>。 バインディングがサービスまたはクライアントの実装に対して提供する必要がある機能要件を指定します。  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>. バインディングがサービスまたはクライアントの実装に対して提供する必要がある機能要件を指定します。  
   
 ### <a name="operation-behaviors"></a>操作の動作  
  以下の操作の動作は、操作のシリアル化制御およびトランザクション制御を指定します。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>のランタイム動作を表します。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>のランタイム動作を表します。  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 `XmlSerializer` のランタイム動作を制御し、操作に関連付けます。  
+-   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. `XmlSerializer` のランタイム動作を制御し、操作に関連付けます。  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>。 サービス操作がトランザクション ヘッダーを受け入れるレベルを指定します。  
+-   <xref:System.ServiceModel.TransactionFlowAttribute>. サービス操作がトランザクション ヘッダーを受け入れるレベルを指定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [サービスの構成](../../../docs/framework/wcf/configuring-services.md)
-- [方法: サービスのインスタンス化の制御します。](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [方法: サービスのインスタンス化を制御する](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

@@ -3,12 +3,12 @@ title: Iterators
 description: 組み込み C# の反復子を使用して、独自のカスタム反復子メソッドを作成する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155221"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -238,5 +238,3 @@ finally
 ```
 
 さいわいなことに、これらの詳細をすべて覚えておく必要はありません。 このような微妙な差異は、いずれも `foreach` ステートメントによって処理されます。 コンパイラでは、これらすべてのコンストラクトに対して正しいコードが生成されます。 
-
-

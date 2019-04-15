@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197907"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行
 
@@ -30,7 +30,6 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
 > - WCF サービスをホストするためのコードを追加します。
 > - 構成ファイルを更新します。
 > - WCF サービスを開始し、確認が実行されています。
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>作成し、サービスをホストするためのコンソール アプリ プロジェクトを構成します。
 
@@ -174,8 +173,7 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
     End Module
     ```
     
-    このコードの動作については、[プログラムの手順をホストしているサービス](#service-hosting-program-steps)を参照してください。
-
+    このコードの動作については、次を参照してください。[プログラムの手順をホストしているサービス](#service-hosting-program-steps)します。
 
 2. プロジェクトのプロパティを更新します。
 
@@ -189,7 +187,6 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
 
    3. **ファイル**メニューの **すべて保存**します。
 
-
 ## <a name="verify-the-service-is-working"></a>サービスが動作を確認します。
 
 1. ソリューションをビルドし、実行、 **GettingStartedHost**コンソール Visual Studio 内からアプリケーション。 
@@ -201,7 +198,6 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
    > [!NOTE]
    > このいずれかなどのサービスには、リッスンを行うコンピューター上で HTTP アドレスを登録する適切なアクセス許可が必要です。 管理者アカウントにはこのアクセス許可がありますが、管理者以外のアカウントの場合は、HTTP 名前空間へのアクセス許可を付与する必要があります。 名前空間の予約を構成する方法については、「[Configuring HTTP and HTTPS](feature-details/configuring-http-and-https.md)」 (HTTP と HTTPS を構成する) を参照してください。 
 
-
 ## <a name="service-hosting-program-steps"></a>サービスのホスト プログラムのステップ
 
 サービスは次のように説明されているホストに追加したコードの手順:
@@ -210,10 +206,10 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
 
 - **手順 2**:インスタンスを作成、<xref:System.ServiceModel.ServiceHost>クラスは、サービスをホストするために使用します。 コンス トラクターは 2 つのパラメーター: サービス コントラクトとサービスのベース アドレスを実装するクラスの型。
 
-- **手順 3**:<xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint>コンス トラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスで構成されます。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルのバインディングが<xref:System.ServiceModel.WSHttpBinding>、組み込みのバインディングし、は、ws-に準拠するエンドポイントに接続 * の仕様。 WCF バインドの詳細については、[WCF のバインディングの概要](bindings-overview.md)を参照してください。 エンドポイントを識別するためにベース アドレスには、アドレスを追加します。 コードは、CalculatorService ととしてエンドポイントの完全修飾アドレスとしてアドレスを指定します`http://localhost:8000/GettingStarted/CalculatorService`します。
+- **手順 3**:<xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスを作成します。 サービス エンドポイントは、アドレス、バインディング、およびサービス コントラクトから構成されます。 <xref:System.ServiceModel.Description.ServiceEndpoint>コンス トラクターは、サービス コントラクト インターフェイスの型、バインディング、およびアドレスで構成されます。 サービス コントラクトは、サービス型に定義および実装した `ICalculator` です。 このサンプルのバインディングが<xref:System.ServiceModel.WSHttpBinding>、組み込みのバインディングし、は、ws-に準拠するエンドポイントに接続 * の仕様。 WCF バインドの詳細については、次を参照してください。 [WCF のバインディングの概要](bindings-overview.md)します。 エンドポイントを識別するためにベース アドレスには、アドレスを追加します。 コードは、CalculatorService ととしてエンドポイントの完全修飾アドレスとしてアドレスを指定します`http://localhost:8000/GettingStarted/CalculatorService`します。
 
     > [!IMPORTANT]
-    > .NET Framework バージョン 4 以降、サービス エンドポイントの追加は省略可能にします。 これらのバージョン、コードや構成を追加しない場合、WCF はベース アドレスと、サービスによって実装されるコントラクトの組み合わせごとに 1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、[エンドポイント アドレスを指定する](specifying-an-endpoint-address.md)を参照してください。 既定のエンドポイント、バインディング、および動作の詳細については、[簡略化された構成](simplified-configuration.md)と[WCF サービスの構成を簡略化された](samples/simplified-configuration-for-wcf-services.md)を参照してください。
+    > .NET Framework バージョン 4 以降、サービス エンドポイントの追加は省略可能にします。 これらのバージョン、コードや構成を追加しない場合、WCF はベース アドレスと、サービスによって実装されるコントラクトの組み合わせごとに 1 つの既定のエンドポイントを追加します。 既定のエンドポイントの詳細については、次を参照してください。[エンドポイント アドレスを指定する](specifying-an-endpoint-address.md)します。 既定のエンドポイント、バインディング、および動作の詳細については、次を参照してください。[簡略化された構成](simplified-configuration.md)と[WCF サービスの構成を簡略化された](samples/simplified-configuration-for-wcf-services.md)します。
 
 - **手順 4**:メタデータ交換を有効にします。 クライアントは、サービス操作を呼び出すためのプロキシを生成するのにメタデータ交換を使用します。 メタデータ交換を有効にするには作成、<xref:System.ServiceModel.Description.ServiceMetadataBehavior>インスタンスは、設定、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled>プロパティを`true`、追加、`ServiceMetadataBehavior`オブジェクトを<xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>のコレクション、<xref:System.ServiceModel.ServiceHost>インスタンス。
 
@@ -223,7 +219,6 @@ WCF アプリケーションを作成するための次のタスクでは、コ�
 > WCF サービス ライブラリを追加するときに Visual Studio ホストがサービス ホストを起動してデバッグする場合。 競合を回避するには、WCF サービス ライブラリをホストしているから Visual Studio を回避できます。 
 > 1. 選択、 **GettingStartedLib**プロジェクト**ソリューション エクスプ ローラー**選択**プロパティ**ショートカット メニューから。
 > 2. 選択**WCF オプション**をオフにし、**開始 WCF サービス ホスト、同じソリューション内の別のプロジェクトをデバッグするときに**します。
-
 
 ## <a name="next-steps"></a>次の手順
 

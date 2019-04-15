@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841460"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308615"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit ステートメント (Visual Basic)
 ファイルでは、すべての変数の明示的な宣言を強制または変数の暗黙的な宣言を許可します。  
@@ -29,10 +29,10 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>指定項目  
  `On`  
- 省略可能です。 により、`Option Explicit`をチェックします。 場合`On`または`Off`が指定されていない、既定値は`On`します。  
+ 任意。 により、`Option Explicit`をチェックします。 場合`On`または`Off`が指定されていない、既定値は`On`します。  
   
  `Off`  
- 省略可能です。 無効にします`Option Explicit`をチェックします。  
+ 任意。 無効にします`Option Explicit`をチェックします。  
   
 ## <a name="remarks"></a>Remarks  
  ときに`Option Explicit On`または`Option Explicit`を使用してすべての変数を明示的に宣言する必要がありますが、ファイルに表示されます、`Dim`または`ReDim`ステートメント。 宣言されていない変数名を使用しようとすると、コンパイル時にエラーが発生します。 `Option Explicit Off`ステートメントは、変数の暗黙的な宣言を使用できます。  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>IDE で Option Explicit を設定するには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-2.  **[コンパイル]** タブをクリックします。  
+2. **[コンパイル]** タブをクリックします。  
   
-3.  値を設定、 **Option Explicit**ボックス。  
+3. 値を設定、 **Option Explicit**ボックス。  
   
  新しいプロジェクトを作成するときに、 **Option Explicit**の設定、**コンパイル**タブに設定されている、 **Option Explicit**での設定、 **VBの既定値** ダイアログ ボックス。 アクセスする、**既定値は VB**  ダイアログ ボックスで、**ツール** メニューのをクリックして**オプション**。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 初期の既定の設定で**VB の既定値**は`On`します。  
   
@@ -71,7 +71,7 @@ Option Explicit { On | Off }
 - [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

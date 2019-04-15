@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120030"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成
 `SelectCommand` プロパティが実行時に動的に指定される場合、たとえばクエリ ツールを使用してユーザーの記述したクエリ構文を解釈する場合は、適切な `InsertCommand`、`UpdateCommand`、または `DeleteCommand` をデザイン時に指定することはできません。 <xref:System.Data.DataTable> を単一データベース テーブルに割り当てたり、単一データベースから生成する場合は、<xref:System.Data.Common.DbCommandBuilder> オブジェクトを利用して自動的に `DeleteCommand` の `InsertCommand`、`UpdateCommand`、および <xref:System.Data.Common.DbDataAdapter> を生成できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "54618949"
   
  複数のテーブルを結合して作成したデータベース ビューは、単一データベース テーブルとは見なされません。 この場合は、<xref:System.Data.Common.DbCommandBuilder> を使用してコマンドを自動的に生成できないため、コマンドを明示的に指定する必要があります。 更新を解決するのにはコマンドを明示的に設定する方法については、 `DataSet` 、データ ソースを参照してください。 [Dataadapter によるデータ ソースを更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
   
- 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入行の列に自動的に生成された id フィールドのマッピングの例は、[Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)を参照してください。  
+ 出力パラメーターを `DataSet` の更新行に割り当てることが必要な場合があります。 一般的なタスクの 1 つは、データ ソースの自動的に生成された ID フィールドまたはタイムスタンプの値を取得することです。 <xref:System.Data.Common.DbCommandBuilder> は、既定では更新行の列に出力パラメーターを割り当てません。 その場合は、コマンドを明示的に指定する必要があります。 挿入行の列に自動的に生成された id フィールドのマッピングの例は、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)します。  
   
 ## <a name="rules-for-automatically-generated-commands"></a>コマンドの自動生成規則  
  コマンドの自動生成規則を次の表に示します。  
@@ -113,6 +113,7 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [コマンドの実行](../../../../docs/framework/data/adonet/executing-a-command.md)
 - [DbConnection、DbCommand、および DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)

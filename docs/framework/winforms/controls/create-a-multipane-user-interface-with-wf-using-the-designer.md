@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082933"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301296"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>方法: デザイナーを使用して Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  
@@ -27,17 +27,17 @@ Microsoft Outlook で使用される次のようなマルチペイン ユーザ�
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>デザイン時に Outlook のようなユーザー インターフェイスを作成するには  
   
-1.  新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
+1. 新しい Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** > **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
-2.  ドラッグ、<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**をフォームにします。 **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
+2. ドラッグ、<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**をフォームにします。 **[プロパティ]** ウィンドウで、 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
   
-3.  ドラッグ、<xref:System.Windows.Forms.TreeView>コントロールから、**ツールボックス**の左側のパネルに、<xref:System.Windows.Forms.SplitContainer>コントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Left>を示す下向きの矢印がクリックされたときの値エディターで、左側のパネルをクリックします。  
+3. ドラッグ、<xref:System.Windows.Forms.TreeView>コントロールから、**ツールボックス**の左側のパネルに、<xref:System.Windows.Forms.SplitContainer>コントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Left>を示す下向きの矢印がクリックされたときの値エディターで、左側のパネルをクリックします。  
   
-4.  もう 1 つドラッグ<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**; の右側のパネルに配置、<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>と<xref:System.Windows.Forms.SplitContainer.Orientation%2A>プロパティを<xref:System.Windows.Forms.Orientation.Horizontal>します。  
+4. もう 1 つドラッグ<xref:System.Windows.Forms.SplitContainer>コントロールから、**ツールボックス**; の右側のパネルに配置、<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>と<xref:System.Windows.Forms.SplitContainer.Orientation%2A>プロパティを<xref:System.Windows.Forms.Orientation.Horizontal>します。  
   
-5.  ドラッグ、<xref:System.Windows.Forms.ListView>コントロールから、**ツールボックス**、2 つ目の上側のパネルに<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.ListView> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
+5. ドラッグ、<xref:System.Windows.Forms.ListView>コントロールから、**ツールボックス**、2 つ目の上側のパネルに<xref:System.Windows.Forms.SplitContainer>をフォームに追加されたコントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.ListView> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
   
-6.  ドラッグ、<xref:System.Windows.Forms.RichTextBox>コントロールから、**ツールボックス**、2 つ目の下部のパネルに<xref:System.Windows.Forms.SplitContainer>コントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
+6. ドラッグ、<xref:System.Windows.Forms.RichTextBox>コントロールから、**ツールボックス**、2 つ目の下部のパネルに<xref:System.Windows.Forms.SplitContainer>コントロール。 <xref:System.Windows.Forms.SplitContainer.Dock%2A> プロパティの <xref:System.Windows.Forms.RichTextBox> コントロールを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
   
      この時点では、アプリケーションの実行に f5 キーを押すと、フォームは Microsoft Outlook のような 3 つの部分のユーザー インターフェイスを表示します。  
   

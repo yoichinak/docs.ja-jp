@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームに塗りつぶした楕円を描画します。'
+title: '方法: Windows フォームに塗りつぶした楕円を描画する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171009"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>方法: Windows フォームに塗りつぶした楕円を描画します。
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>方法: Windows フォームに塗りつぶした楕円を描画する
 この例では、フォームに塗りつぶした楕円を描画します。  
   
 ## <a name="example"></a>例  
@@ -37,6 +37,7 @@ ms.locfileid: "57716289"
  常に呼び出す必要があります<xref:System.IDisposable.Dispose%2A>などのシステム リソースを消費するすべてのオブジェクトに対する<xref:System.Drawing.Brush>と<xref:System.Drawing.Graphics>オブジェクト。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
 - [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)

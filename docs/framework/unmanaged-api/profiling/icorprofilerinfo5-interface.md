@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e55d52b3ba3bb2b932627ca364ed8f6084fcf26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b249605833e8fbd219495ab92bebc2eff6177eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094256"
 ---
 # <a name="icorprofilerinfo5-interface"></a>ICorProfilerInfo5 インターフェイス
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -39,7 +39,8 @@ ms.locfileid: "54536465"
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

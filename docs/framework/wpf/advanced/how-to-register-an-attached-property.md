@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attached properties [WPF], registering
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
-ms.openlocfilehash: 3cbbc8a1ea8419df408cda76de3459be9464a100
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137632"
 ---
 # <a name="how-to-register-an-attached-property"></a>方法: 添付プロパティを登録する
 この例では、添付プロパティを登録する方法、および [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] とコードの両方でプロパティを使用できるようにパブリック アクセサーを提供する方法を示します。 添付プロパティは、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] で定義されている構文の概念です。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の型のほとんどの添付プロパティは、依存関係プロパティとしても実装されます。 依存関係プロパティを使用するには、いずれかで<xref:System.Windows.DependencyObject>型。  
@@ -27,7 +27,8 @@ ms.locfileid: "57377717"
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.DependencyProperty>
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
-- [方法トピック](properties-how-to-topics.md)
+- [方法のトピック](properties-how-to-topics.md)

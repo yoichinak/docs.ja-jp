@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190632"
 ---
 # <a name="3-d-transformations-overview"></a>3-D 変換の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] グラフィックス システムで 3-D モデルに変換を適用する方法について説明します。 変換を使うと、モデルを定義する基本の値を変更することなく、モデルの位置、サイズ、向きを変更できます。  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3-D 座標空間  
  3-D グラフィックス コンテンツ[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]は、要素にカプセル化<xref:System.Windows.Controls.Viewport3D>、2 次元要素の構造に含めることができます。 グラフィックス システムは、Viewport3D を、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 内の他の多くの要素と同じ 2 次元のビジュアル要素として処理します。 Viewport3D は、3 次元シーンのウィンドウ (ビューポート) として機能します。 より正確には、3-D シーンが投影されるサーフェイスです。  同じシーン グラフ内で他の 2-D 描画オブジェクトと共に Viewport3D を使うことができますが、Viewport3D 内の 2-D オブジェクトと 3-D オブジェクトを相互に貫通させることはできません。 以下の説明で、座標空間は Viewport3D 要素に含まれています。  
   
@@ -106,6 +104,7 @@ ScaleVector の例
  カメラもモデルなので、カメラのプロパティを変換することもできます。  カメラの位置または平面距離を変換することにより (実際には、シーン全体の投影を変換して) シーンの外観を変更できますが、この方法で得られる効果の多くは、シーン内のモデルの場所や位置に適用される変換ほど大きな "視覚的意味" を見ている人に与えられない場合があることに注意してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [3-D グラフィックスの概要](3-d-graphics-overview.md)
 - [変換の概要](transforms-overview.md)
-- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)

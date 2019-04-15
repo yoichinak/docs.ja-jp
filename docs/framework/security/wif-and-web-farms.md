@@ -3,12 +3,12 @@ title: WIF および Web ファーム
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135357"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
 Windows Identity Foundation (WIF) を使用して、Web ファームに展開されている証明書利用者 (RP) アプリケーションのリソースをセキュリティで保護するには、ファーム内の別のコンピューターで実行されている RP アプリケーションのインスタンスのトークンを WIF が処理できるように、特定の手順を実行する必要があります。 この処理には、セッション トークン シグネチャの検証、セッション トークンの暗号化と復号化、再生されたセキュリティ トークンの検出が含まれます。  
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- WCF キャッシュ サービスの実装を次のコードに示します。 この例では、WIF に実装されている既定のメモリ内セッション トークン キャッシュが使用されます。 または、データベースに基づく永続的なキャッシュを実装することもできます。 `ISessionSecurityTokenCacheService` で、上記のインターフェイスを定義します。 この例では、簡略化のために、インターフェイスの実装に必要なメソッドのすべてを示していません。  
+ WCF キャッシュ サービスの実装を次のコードに示します。 この例では、WIF に実装されている既定のメモリ内セッション トークン キャッシュが使用されます。 または、データベースに基づく永続的なキャッシュを実装することもできます。 `ISessionSecurityTokenCacheService` 上記のインターフェイスを定義します。 この例では、簡略化のために、インターフェイスの実装に必要なメソッドのすべてを示していません。  
   
 ```  
 using System;  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

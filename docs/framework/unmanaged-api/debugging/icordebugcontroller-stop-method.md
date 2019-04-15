@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbe0459824499aba86c908012f038256f9923513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183392"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop メソッド
 プロセスでマネージ コードを実行しているすべてのスレッドを協調停止を実行します。  
@@ -54,7 +54,6 @@ HRESULT Stop (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540755"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517071"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソース (WCF Data Services) を使用してデータをバインドします。
 
-WCF Data Services クライアント アプリケーションで生成されたデータ オブジェクトに基づくデータ ソースを作成することができます。 使用してデータ サービスへの参照を追加すると、**サービス参照の追加**ダイアログ ボックスで、生成されたクライアント データ クラスと一緒にプロジェクト データ ソースが作成されます。 データ サービスが公開する各エンティティ セットに対して 1 つのデータ ソースが作成されます。 データ ソースの項目をドラッグして、サービスからデータを表示するフォームを作成することができます、**データソース**デザイナーにウィンドウ。 これらの項目は、データ ソースにバインドされているコントロールになります。 インスタンスに、実行中にこのデータ ソースがバインドされている、<xref:System.Data.Services.Client.DataServiceCollection%601>クラスは、データ サービスに、クエリによって返されるオブジェクトが入力されます。 詳細については、[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)を参照してください。
+WCF Data Services クライアント アプリケーションで生成されたデータ オブジェクトに基づくデータ ソースを作成することができます。 使用してデータ サービスへの参照を追加すると、**サービス参照の追加**ダイアログ ボックスで、生成されたクライアント データ クラスと一緒にプロジェクト データ ソースが作成されます。 データ サービスが公開する各エンティティ セットに対して 1 つのデータ ソースが作成されます。 データ ソースの項目をドラッグして、サービスからデータを表示するフォームを作成することができます、**データソース**デザイナーにウィンドウ。 これらの項目は、データ ソースにバインドされているコントロールになります。 インスタンスに、実行中にこのデータ ソースがバインドされている、<xref:System.Data.Services.Client.DataServiceCollection%601>クラスは、データ サービスに、クエリによって返されるオブジェクトが入力されます。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。
 
  このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスを作成を完了すると、 [WCF Data Services クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>WPF ウィンドウで、プロジェクトのデータ ソースを使用します。
 
-1.  Visual Studio での WPF プロジェクトで Northwind データ サービスへの参照を追加します。 詳細については、「[方法 :データ サービス参照を追加](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)します。
+1. Visual Studio での WPF プロジェクトで Northwind データ サービスへの参照を追加します。 詳細については、「[方法 :データ サービス参照を追加](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)します。
 
-2.  **データソース**ウィンドウで、展開、`Customers`内のノード、 **NorthwindEntities**プロジェクト データ ソース。
+2. **データソース**ウィンドウで、展開、`Customers`内のノード、 **NorthwindEntities**プロジェクト データ ソース。
 
-3.  をクリックして、 **CustomerID**アイテムで、 **ComboBox**ドラッグし、一覧から、 **CustomerID**から項目、**顧客**ノードをデザイナー。
+3. をクリックして、 **CustomerID**アイテムで、 **ComboBox**ドラッグし、一覧から、 **CustomerID**から項目、**顧客**ノードをデザイナー。
 
      ウィンドウの XAML ファイルに次のオブジェクト要素が作成されます。
 
@@ -37,7 +37,7 @@ WCF Data Services クライアント アプリケーションで生成された�
 
     -   <xref:System.Windows.Controls.Label>。
 
-4.  ドラッグ、**注文**をデザイナーにナビゲーション プロパティ。
+4. ドラッグ、**注文**をデザイナーにナビゲーション プロパティ。
 
      ウィンドウの XAML ファイルに次の追加オブジェクト要素が作成されます。
 
@@ -45,18 +45,18 @@ WCF Data Services クライアント アプリケーションで生成された�
 
     -   <xref:System.Windows.Controls.DataGrid> という名前のデータ バインド `ordersDataGrid` コントロール。
 
-5.  (省略可能)その他の項目をドラッグ、**顧客**ノードをデザイナーにします。
+5. (省略可能)その他の項目をドラッグ、**顧客**ノードをデザイナーにします。
 
-6.  フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
+6. フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
+7. フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  デザイナーでウィンドウを選択します。
+8. デザイナーでウィンドウを選択します。
 
     > [!NOTE]
     > ウィンドウ内にある内容を選択するのではなく、ウィンドウ自身を選択します。 ウィンドウが選択されている場合、**名前**の上部にあるテキスト ボックス、**プロパティ**ウィンドウがウィンドウの名前を含める必要があります。
@@ -69,16 +69,16 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 11. 新しく作成された <xref:System.Windows.FrameworkElement.Loaded> イベント ハンドラーで、次のコードをコピーして貼り付けます。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
 12. このコードは、関連する <xref:System.Data.Services.Client.DataServiceCollection%601> オブジェクトと一緒に `Customers` の <xref:System.Collections.Generic.IEnumerable%601> を Northwind データ サービスから返す LINQ クエリの実行に基づいて `Customers` 型の `Orders` のインスタンスを作成し、`customersViewSource` にバインドします。
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Windows フォームでのプロジェクト データ ソースを使用します。
 
-1.  **データソース**ウィンドウで、展開、**顧客**内のノード、 **NorthwindEntities**プロジェクト データ ソース。
+1. **データソース**ウィンドウで、展開、**顧客**内のノード、 **NorthwindEntities**プロジェクト データ ソース。
 
-2.  をクリックして、 **CustomerID**アイテムで、 **ComboBox**ドラッグし、一覧から、 **CustomerID**から項目、**顧客**ノードをデザイナー。
+2. をクリックして、 **CustomerID**アイテムで、 **ComboBox**ドラッグし、一覧から、 **CustomerID**から項目、**顧客**ノードをデザイナー。
 
      次のコントロールがフォーム上に作成されます。
 
@@ -90,30 +90,30 @@ WCF Data Services クライアント アプリケーションで生成された�
 
     -   <xref:System.Windows.Forms.Label>。
 
-3.  ドラッグ、**注文**フォームへのナビゲーション プロパティ。
+3. ドラッグ、**注文**フォームへのナビゲーション プロパティ。
 
-4.  これにより、`ordersBindingSource` プロパティが <xref:System.Windows.Forms.BindingSource.DataSource%2A> に設定され、`customersBindingSource` プロパティが <xref:System.Windows.Forms.BindingSource.DataMember%2A> に設定された `Customers` コントロールが作成されます。 また、`ordersDataGridView` データ バインド コントロールも、適切なタイトルのラベル コントロールと共にフォーム上に作成されます。
+4. これにより、`ordersBindingSource` プロパティが <xref:System.Windows.Forms.BindingSource.DataSource%2A> に設定され、`customersBindingSource` プロパティが <xref:System.Windows.Forms.BindingSource.DataMember%2A> に設定された `Customers` コントロールが作成されます。 また、`ordersDataGridView` データ バインド コントロールも、適切なタイトルのラベル コントロールと共にフォーム上に作成されます。
 
-5.  (省略可能)その他の項目をドラッグ、**顧客**ノードをデザイナーにします。
+5. (省略可能)その他の項目をドラッグ、**顧客**ノードをデザイナーにします。
 
-6.  フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
+6. フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
-7.  フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
+7. フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  フォーム デザイナーで、フォームをダブルクリックします。
+8. フォーム デザイナーで、フォームをダブルクリックします。
 
      フォームのコード ページが開き、フォームの `Load` イベントを処理するメソッドが作成されます。
 
 9. `Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
 10. このコードは、Northwind データ サービスから <xref:System.Data.Services.Client.DataServiceCollection%601> の `Customers` を返す <xref:System.Data.Services.Client.DataServiceQuery%601> の実行に基づいて <xref:System.Collections.Generic.IEnumerable%601> 型の `Customers` のインスタンスを作成し、`customersBindingSource` にバインドします。
 

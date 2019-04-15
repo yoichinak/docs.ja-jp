@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322122"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>方法: Visual Studio のコマンドラインのための環境変数を設定する
 
@@ -33,11 +33,11 @@ VsDevCmd.bat ファイルは、適切な環境変数を設定してコマンド 
   
 ### <a name="to-run-vsdevcmdbat"></a>VsDevCmd.BAT を実行するには  
   
-1.  **[スタート]** メニューから、**VS2017 の開発者コマンド プロンプト**を開きます。  これは、**[Visual Studio 2017]** フォルダーにあります。
+1. **[スタート]** メニューから、**VS2017 の開発者コマンド プロンプト**を開きます。  これは、**[Visual Studio 2017]** フォルダーにあります。
   
-2.  インストールの \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools または \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools サブディレクトリに移動します。  (*Version* は最新バージョンの *2017* です。 *Offering* は *Enterprise*、*Professional* または *Community* のいずれかです。)
+2. インストールの \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools または \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools サブディレクトリに移動します。  (*Version* は最新バージョンの *2017* です。 *Offering* は *Enterprise*、*Professional* または *Community* のいずれかです。)
   
-3.  「**VsDevCmd**」と入力して、VsDevCmd.bat を実行します。  
+3. 「**VsDevCmd**」と入力して、VsDevCmd.bat を実行します。  
   
     > [!CAUTION]
     >  VsDevCmd.bat の場所は、コンピューターによって異なる場合があります。 VsDevCmd.bat ファイルが見つからない場合や破損している場合でも、別のコンピューターの VsDevCmd.bat と置き換えないでください。 その場合は、セットアップ プログラムを再実行してファイルを置き換えてください。  

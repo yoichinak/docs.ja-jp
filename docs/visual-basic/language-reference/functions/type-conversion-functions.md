@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 2b750f41343a4a68e29af6055815efd1e6470252
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148136"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 これらの関数は、インラインでのコンパイル、つまり、変換コード式を評価するコードの一部です。 場合によってパフォーマンスを向上させると、変換を実行するプロシージャの呼び出しではありません。 各関数は、特定のデータ型に式を変換します。  
@@ -122,27 +122,26 @@ CUShort(expression)
 |関数名|戻り値のデータ型|範囲を指定`expression`引数|  
 |-------------------|----------------------|-------------------------------------|  
 |`CBool`|[Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任意の有効な`Char`または`String`または数値式です。|  
-|`CByte`|[Byte データ型](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.Byte.MaxValue?displayProperty=nameWithType>(255) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数バイトを使用する変換からのパフォーマンスを最適化、`CByte`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CChar`|[Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)|任意の有効な`Char`または`String`式。 の最初の文字のみを`String`変換されます。 値は 0 ~ 65535 (符号なし) を指定できます。|  
-|`CDate`|[Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)|任意の有効な日付と時刻の表現。|  
-|`CDbl`|[Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)|-- を 4.94065645841246544E-(負の値)。4.94065645841246544E-324 正の値の 1.79769313486231570 e + 308 ~。|  
-|`CDec`|[Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|数字の 0 の 79,228,162,514,264,337,593,543,950,335、+/-小数点以下の桁数は、番号します。 数値の小数点以下桁数が 28 場合、範囲は、7.9228162514264337593543950335 です。 最小の可能な 0 以外の数値は、(1 e ~ 28) +/-0.0000000000000000000000000001 です。|  
-|`CInt`|[Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) を通じて<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2,147, 483,647) です小数部は丸められます。<sup> 。1</sup> <br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に整数型の変換からのパフォーマンスを最適化、`CInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。 |  
-|`CLng`|[Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) を通じて<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9,223,372,036,854,775,807) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に 64 ビット整数の変換からのパフォーマンスを最適化、`CLng`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CObj`|[Object 型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の有効な式。|  
-|`CSByte`|[SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) を通じて<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数を使用する符号付きバイト変換からのパフォーマンスを最適化、`CSByte`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CShort`|[Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) を通じて<xref:System.Int16.MaxValue?displayProperty=nameWithType>(32,767) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数 16 ビット整数を使用する変換からのパフォーマンスを最適化、`CShort`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CSng`|[Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823 e + 38 ~ - 1.401298E-45 の負の値。1.401298E-45 ~ 3.402823 e + 38 の正の値。|  
-|`CStr`|[String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)|返します`CStr`に依存、`expression`引数。 参照してください[CStr 関数の戻り値](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)します。|  
-|`CUInt`|[UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt32.MaxValue?displayProperty=nameWithType>(4,294,967,295) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数の符号なし整数型の変換からのパフォーマンスを最適化、`CUInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CULng`|[ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt64.MaxValue?displayProperty=nameWithType>(18,446,744,073,709,551,615) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic での符号なし長整数に変換する浮動小数点のパフォーマンスを最適化、`CULng`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
-|`CUShort`|[UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt16.MaxValue?displayProperty=nameWithType>(65,535) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数 16 ビット符号なし整数を使用する変換からのパフォーマンスを最適化、`CUShort`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CByte`|[バイト型 (Byte)](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.Byte.MaxValue?displayProperty=nameWithType>(255) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数バイトを使用する変換からのパフォーマンスを最適化、`CByte`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CChar`|[文字型 (Char)](../../../visual-basic/language-reference/data-types/char-data-type.md)|任意の有効な`Char`または`String`式。 の最初の文字のみを`String`変換されます。 値は 0 ~ 65535 (符号なし) を指定できます。|  
+|`CDate`|[日付型 (Date)](../../../visual-basic/language-reference/data-types/date-data-type.md)|任意の有効な日付と時刻の表現。|  
+|`CDbl`|[倍精度浮動小数点数型 (Double)](../../../visual-basic/language-reference/data-types/double-data-type.md)|-- を 4.94065645841246544E-(負の値)。4.94065645841246544E-324 正の値の 1.79769313486231570 e + 308 ~。|  
+|`CDec`|[10 進型 (Decimal)](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|数字の 0 の 79,228,162,514,264,337,593,543,950,335、+/-小数点以下の桁数は、番号します。 数値の小数点以下桁数が 28 場合、範囲は、7.9228162514264337593543950335 です。 最小の可能な 0 以外の数値は、(1 e ~ 28) +/-0.0000000000000000000000000001 です。|  
+|`CInt`|[整数型 (Integer)](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) を通じて<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2,147, 483,647) です小数部は丸められます。<sup> 。1</sup> <br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に整数型の変換からのパフォーマンスを最適化、`CInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。 |  
+|`CLng`|[Long 型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9,223,372,036,854,775,808) を通じて<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9,223,372,036,854,775,807) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数に 64 ビット整数の変換からのパフォーマンスを最適化、`CLng`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CObj`|[Object データ型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任意の有効な式。|  
+|`CSByte`|[SByte 型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) を通じて<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数を使用する符号付きバイト変換からのパフォーマンスを最適化、`CSByte`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CShort`|[Short 型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) を通じて<xref:System.Int16.MaxValue?displayProperty=nameWithType>(32,767) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数 16 ビット整数を使用する変換からのパフォーマンスを最適化、`CShort`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CSng`|[単精度浮動小数点型 (Single)](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823 e + 38 ~ - 1.401298E-45 の負の値。1.401298E-45 ~ 3.402823 e + 38 の正の値。|  
+|`CStr`|[文字列型 (String)](../../../visual-basic/language-reference/data-types/string-data-type.md)|返します`CStr`に依存、`expression`引数。 参照してください[CStr 関数の戻り値](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)します。|  
+|`CUInt`|[UInteger 型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt32.MaxValue?displayProperty=nameWithType>(4,294,967,295) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数の符号なし整数型の変換からのパフォーマンスを最適化、`CUInt`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CULng`|[ULong 型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt64.MaxValue?displayProperty=nameWithType>(18,446,744,073,709,551,615) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic での符号なし長整数に変換する浮動小数点のパフォーマンスを最適化、`CULng`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
+|`CUShort`|[UShort 型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)|<xref:System.UInt16.MinValue?displayProperty=nameWithType> (0) を通じて<xref:System.UInt16.MaxValue?displayProperty=nameWithType>(65,535) (未署名) 小数部は丸められます。<sup> 。1</sup><br/><br/>Visual Basic 15.8 以降、Visual Basic で浮動小数点数 16 ビット符号なし整数を使用する変換からのパフォーマンスを最適化、`CUShort`関数です。 はを参照してください、[解説](#remarks)詳細についてはします。 参照してください、 [CInt 例](#cint-example)例については、セクション。|  
   
  <sup>1</sup>小数部分は、特殊な種類と呼ばれる丸め処理を行うを受けることができます*銀行型丸め*します。 詳細については、「解説」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- 原則として、する必要がありますを使用する方が優先的 .NET Framework のメソッドは、Visual Basic の型変換関数など`ToString()`、いずれかで、<xref:System.Convert>クラスまたは個々 の型の構造体またはクラスにします。 Visual Basic の関数は、Visual Basic コードの最適な対話のために設計されていて、ソース コードを短く読みやすくすることも、します。 さらに、.NET Framework の変換メソッドは常に結果を生成しない、同じ例では変換するときに、Visual Basic の関数として`Boolean`に`Integer`します。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
-
+ 原則として、する必要がありますを使用する方が優先的 .NET Framework のメソッドは、Visual Basic の型変換関数など`ToString()`、いずれかで、<xref:System.Convert>クラスまたは個々 の型の構造体またはクラスにします。 Visual Basic の関数は、Visual Basic コードの最適な対話のために設計されていて、ソース コードを短く読みやすくすることも、します。 さらに、.NET Framework の変換メソッドは常に結果を生成しない、同じ例では変換するときに、Visual Basic の関数として`Boolean`に`Integer`します。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
 
 Visual Basic 15.8 から始めてに渡すときに、浮動-小数点からに整数型の変換のパフォーマンスは最適化された、<xref:System.Single>または<xref:System.Double>整数変換関数のいずれかに、次のメソッドによって返される値 (`CByte`、 `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 
@@ -193,7 +192,7 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 ## <a name="ctype-function"></a>CType Function  
  [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) 2 番目の引数を受け取り`typename`、型に変換および`expression`に`typename`ここで、`typename`任意のデータ型、構造体、クラス、またはインターフェイスの有効な変換が存在することができます。  
   
- 比較について`CType`他の型変換キーワードで、[DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)を参照してください。  
+ 比較について`CType`他の型変換キーワードで、次を参照してください。 [DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)します。  
   
 ## <a name="cbool-example"></a>CBool 例  
  次の例では、`CBool`関数を式に変換する`Boolean`値。 式が 0 以外の値に評価される場合`CBool`返します`True`。 それ以外を返します`False`します。  

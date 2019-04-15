@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085728"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
 Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]アプリケーションでテキストを含めるためです。 レイアウトと[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Controls.TextBlock>、最も一般的な提供および一般的な要素を使用して、テキスト表示にします。 描画[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Media.GlyphRunDrawing>と<xref:System.Windows.Media.FormattedText>図面の書式設定されたテキストを含めるための手段を提供します。 高度なレベルでは、一番[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張可能なテキストを書式設定テキスト プレゼンテーションでは、テキスト保管管理、テキスト ラン書式設定の管理、および埋め込みオブジェクト管理などのすべての側面を制御するエンジンを提供します。  
@@ -23,16 +23,14 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
   
 > [!NOTE]
 >  このドキュメント内のすべてのコード例が記載されて、[高度なテキストの書式設定サンプル](https://go.microsoft.com/fwlink/?LinkID=159965)します。  
-  
 
-  
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
  このトピックより高いレベルに精通していることを前提としています。[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]テキスト表示に使用します。 ほとんどのユーザー シナリオでは、高度なテキストの書式設定も必要ありませんが[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]このトピックで説明します。 概要については、さまざまなテキスト[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]を参照してください[WPF のドキュメント](documents-in-wpf.md)します。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
- テキストのレイアウトと[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]でコントロールを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに簡単に書式設定されたテキストを追加するための書式設定のプロパティを提供します。 これらのコントロールでは、テキストの表示を処理するさまざまなプロパティが公開されます。書体、大きさ、色などです。 通常の状況では、これらのコントロールはアプリケーションの大半のテキスト表示を処理できます。 しかしながら、一部の高度なシナリオでは、テキスト表示と同様にテキスト保存を制御する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、その目的のための拡張テキスト書式設定エンジンを提供します。  
+ テキストのレイアウトと[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]でコントロールを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに簡単に書式設定されたテキストを追加するための書式設定のプロパティを提供します。 これらのコントロールでは、テキストの表示を処理するさまざまなプロパティが公開されます。書体、大きさ、色などです。 通常の状況では、これらのコントロールはアプリケーションの大半のテキスト表示を処理できます。 しかしながら、一部の高度なシナリオでは、テキスト表示と同様にテキスト保存を制御する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] この目的のためのエンジンの書式設定、拡張可能なテキストを提供します。  
   
  高度なテキストを書式設定機能がある[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]エンジン、テキスト ストア、テキスト ラン、書式設定と書式設定プロパティのテキストで構成されます。 テキストの書式設定エンジン、<xref:System.Windows.Media.TextFormatting.TextFormatter>プレゼンテーションに使用するテキスト行を作成します。 これは、行の書式設定プロセスを開始し、テキスト フォーマッタを呼び出すことによって実現されます<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>します。 テキスト フォーマッタは、テキスト ストアからテキスト ランを取得しますを呼び出し、ストアの<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>メソッド。 <xref:System.Windows.Media.TextFormatting.TextRun>オブジェクトを形成し<xref:System.Windows.Media.TextFormatting.TextLine>テキスト フォーマッタによりオブジェクト検査または表示するため、アプリケーションが与えられます。  
   
@@ -42,8 +40,7 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
   
  従来のテキストとは異なり[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]、<xref:System.Windows.Media.TextFormatting.TextFormatter>一連のコールバック メソッドを介してテキスト レイアウト クライアントと対話します。 クライアントは、これらのメソッドの実装を提供する必要があります、<xref:System.Windows.Media.TextFormatting.TextSource>クラス。 次の図は、クライアント アプリケーション間でテキスト レイアウトの相互作用と<xref:System.Windows.Media.TextFormatting.TextFormatter>します。  
   
- ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/textformatter01.png "TextFormatter01")  
-アプリケーションと TextFormatter の間の相互作用  
+ ![テキスト レイアウト クライアントと TextFormatter のダイアグラム](./media/advanced-text-formatting/text-layout-textformatter-interaction.png)  
   
  テキスト フォーマッタを使用して、テキスト ストアから書式設定されたテキスト行を取得するの実装である<xref:System.Windows.Media.TextFormatting.TextSource>します。 これを使用して、テキスト フォーマッタのインスタンスを作成することで、<xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>メソッド。 このメソッドはテキスト フォーマッタのインスタンスを作成し、行の高さと幅の最大値を設定します。 行の作成プロセスを呼び出すことによって開始テキスト フォーマッタのインスタンスを作成するとすぐ、<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>メソッド。 <xref:System.Windows.Media.TextFormatting.TextFormatter> 呼び出して、テキストとテキスト ランの書式設定パラメーターを取得するテキスト ソースを構成する行。  
   
@@ -95,5 +92,6 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
  <xref:System.Windows.Media.TextFormatting.TextRun> オブジェクトは、テキスト ストアが提供するプロパティを使用して書式設定します。 これらのプロパティは、2 つの種類、<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>と<xref:System.Windows.Media.TextFormatting.TextRunProperties>します。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 段落の包括的なプロパティを処理します。<xref:System.Windows.TextAlignment>と<xref:System.Windows.FlowDirection>します。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 各テキスト ラン、前景ブラシなど、段落内のさまざまなことができるプロパティは<xref:System.Windows.Media.Typeface>、およびフォント サイズ。 カスタム段落やカスタム テキスト ラン プロパティ タイプを実装するアプリケーションがから派生するクラスを作成する必要があります<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>と<xref:System.Windows.Media.TextFormatting.TextRunProperties>それぞれします。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WPF のタイポグラフィ](typography-in-wpf.md)
 - [WPF のドキュメント](documents-in-wpf.md)

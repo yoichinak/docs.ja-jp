@@ -31,7 +31,7 @@ ms.locfileid: "59089264"
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 完全なコード サンプルでは、次を参照してください。[コードのみのバインドのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90))します。  
+ 完全なコード サンプルは、[コードのみのバインドのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90))を参照してください。  
   
  <xref:System.Windows.FrameworkElement.SetBinding%2A>を呼び出す代わりに、<xref:System.Windows.Data.BindingOperations>クラスの静的メソッド<xref:System.Windows.Data.BindingOperations.SetBinding%2A>を使用することができます。 次の例では、<xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>の代わりに<xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>メソッドを呼び出して、`myText`を`myDataProperty`にバインドしています。  
   

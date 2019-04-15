@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c74a130c078077d9f692fbf6107e9d5aefc16b9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132783"
 ---
 # <a name="securing-wrapper-code"></a>ラッパー コードの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -71,12 +71,12 @@ ms.locfileid: "54505940"
   
  宣言型のセキュリティには、次のセキュリティ チェックがあります。  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> はコード アクセス セキュリティのスタック ウォークを指定します。 スタック上の各呼び出し元が合格するには、指定のアクセス許可または ID が必要です。 **必要に応じて**スタックは異なる呼び出し元を含めることができますので、呼び出しごとに発生します。 メソッドを繰り返し呼び出す場合は、このセキュリティ チェックが毎回行われます。 **必要に応じて**おびき寄せによる攻撃; に対して優れた保護とは、未承認のコードを取得しようとしてが検出されます。  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> コード アクセス セキュリティのスタック ウォークを指定します。 スタック上の各呼び出し元が合格するには、指定のアクセス許可または ID が必要です。 **必要に応じて**スタックは異なる呼び出し元を含めることができますので、呼び出しごとに発生します。 メソッドを繰り返し呼び出す場合は、このセキュリティ チェックが毎回行われます。 **必要に応じて**おびき寄せによる攻撃; に対して優れた保護とは、未承認のコードを取得しようとしてが検出されます。  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md)ジャストイン タイム (JIT) コンパイル時に行われ、直前の呼び出し元のみを確認します。 このセキュリティ チェックでは、呼び出し元の呼び出し元はチェックされません。 このチェックに合格すると、呼び出し元が何度も呼び出す場合であってもさらにセキュリティ オーバーヘッドが生じることはありません。 ただし、おびき寄せによる攻撃からの保護機能はありません。 **LinkDemand**テストに合格して、コードを参照するすべてのコードを呼び出す権限のあるコードを使用して悪意のあるコードを許可することでセキュリティを中断できます可能性があります。 そのため、使用しないでください**LinkDemand**しない限り、すべての可能な弱点を完全に回避できます。  
   
     > [!NOTE]
-    >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、リンク確認要求に置換された、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)を参照してください。  
+    >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、リンク確認要求に置換された、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、次を参照してください。[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)します。  
   
  使用する場合に必要な特別な措置**LinkDemand**個別にプログラミングする必要があります。 を実施に役立てセキュリティ システムのことができます。 どのようなミスもセキュリティを脆弱化します。 作成したコードを使用する、承認されたすべてのコード側で、次の措置を行うことによって追加セキュリティを実装する責任があります。  
   
@@ -102,4 +102,5 @@ ms.locfileid: "54505940"
 -   実装する型とインターフェイス。 一貫してリンク要求を使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

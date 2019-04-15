@@ -5,12 +5,12 @@ helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: 2eaca5ba75eb8ac2eeb375a177c08659a65af2db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110665"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>方法: 要素のスピンを設定する
 この例は、スピンを使用して要素を作成する方法を示しています、<xref:System.Windows.Media.RotateTransform>と<xref:System.Windows.Media.Animation.DoubleAnimation>します。  
@@ -20,8 +20,9 @@ ms.locfileid: "57371503"
 ## <a name="example"></a>例  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- 例については変換が含まれているサンプル全体については、[2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)を参照してください。  
+ 例については変換が含まれているサンプル全体については、次を参照してください。 [2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションの概要](animation-overview.md)
 - [変換の概要](transforms-overview.md)

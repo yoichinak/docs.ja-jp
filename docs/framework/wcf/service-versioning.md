@@ -2,12 +2,12 @@
 title: サービスのバージョン管理
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122409"
 ---
 # <a name="service-versioning"></a>サービスのバージョン管理
 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、サービス (およびサービスが公開するエンドポイント) を変更することが必要になる場合があります。 変更が発生するたびに、新しいバージョンのサービスが導入されます。 このトピックでは、Windows Communication Foundation (WCF) のバージョン管理を考慮する方法について説明します。  
@@ -58,7 +58,7 @@ ms.locfileid: "54649246"
   
  新しいデータ メンバーを追加しても、既存のクライアントの互換性に影響することはないと誤解しがちです。 すべてのクライアントが厳密でないバージョン管理に対処できるという確信がない場合は、厳密なバージョン管理のガイドラインに従い、データ コントラクトを変更不可として扱うことをお勧めします。  
   
- データ コントラクトの厳密でないと、厳密なバージョン管理の詳細なガイドラインについては、[ベスト プラクティス。データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)を参照してください。  
+ データ コントラクトの厳密でないと、厳密なバージョン管理の詳細なガイドラインについては、次を参照してください。[ベスト プラクティス。データ コントラクトのバージョン管理](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)します。  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>データ コントラクトと .NET 型の区別  
  .NET クラスまたは構造体は、<xref:System.Runtime.Serialization.DataContractAttribute> 属性をクラスに適用することにより、データ コントラクトとして投影できます。 .NET 型とそのデータ コントラクト投影は、2 つの異なる要素です。 同じデータ コントラクトが投影された複数の .NET 型を使用できます。 この区別は、投影されたデータ コントラクトを維持することによって、厳密な意味で既存のクライアントとの互換性を保ちながら、.NET 型を変更できるという点で特に有用です。 .NET 型とデータ コントラクトのこの区別を維持するには、次の 2 つのことを必ず行う必要があります。  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  `PurchaseOrderV2` の観点で作成された新しい操作を含めるために、サービス コントラクトが更新されます。 `IPurchaseOrderV1` の観点で作成された既存のビジネス ロジックは、`PurchaseOrderV2` で引き続き機能し、`OrderDate` プロパティを必要とする新しいビジネス ロジックが `IPurchaseOrderV2` の観点で作成されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

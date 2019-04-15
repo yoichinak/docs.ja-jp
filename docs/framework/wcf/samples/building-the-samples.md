@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルのビルド
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317858"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルのビルド
 
@@ -18,9 +18,9 @@ Visual Studio IDE を使用してまたはを使用して、Windows Communicatio
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには
 
-1.  Visual Studio 用開発者コマンド プロンプトを開きし、サンプルがインストールされているディレクトリの場所の言語固有のサブディレクトリに移動します。
+1. Visual Studio 用開発者コマンド プロンプトを開きし、サンプルがインストールされているディレクトリの場所の言語固有のサブディレクトリに移動します。
 
-2.  型`msbuild`コマンドライン。 クライアントのプログラム ファイルが組み込まれて*client \bin*に構築された、サービス プログラム ファイルと*service \bin*します。 サービス プログラム ファイルもにコピーする場合は、サービスは、インターネット インフォメーション サービス (IIS) によってホストされている、 *servicemodelsamples*ディレクトリとその*\bin*サブディレクトリ。
+2. 型`msbuild`コマンドライン。 クライアントのプログラム ファイルが組み込まれて*client \bin*に構築された、サービス プログラム ファイルと*service \bin*します。 サービス プログラム ファイルもにコピーする場合は、サービスは、インターネット インフォメーション サービス (IIS) によってホストされている、 *servicemodelsamples*ディレクトリとその*\bin*サブディレクトリ。
 
 > [!NOTE]
 > Acl を設定する必要があります *%systemdrive%\inetpub\wwwroot*を付与するを実行しているアカウントにアクセス許可を変更します。 このように設定しない場合、ビルド後のイベントが失敗する場合があります。 代わりに、ACL の設定はそのままにして、SDK コマンド プロンプトを管理者として実行することもできます。
@@ -50,9 +50,9 @@ Visual Studio IDE を使用してまたはを使用して、Windows Communicatio
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>クライアントと構成ファイルを再生成するには
 
-1.  SDK コマンド プロンプトを開き、サンプルのインストール ディレクトリに存在する言語固有のサブディレクトリに移動します。
+1. SDK コマンド プロンプトを開き、サンプルのインストール ディレクトリに存在する言語固有のサブディレクトリに移動します。
 
-2.  サービスが Web ホスト型の場合は、次のコマンドを使用します。
+2. サービスが Web ホスト型の場合は、次のコマンドを使用します。
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

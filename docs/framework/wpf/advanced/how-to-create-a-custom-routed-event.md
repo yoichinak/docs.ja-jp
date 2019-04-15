@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091474"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>方法: カスタム ルーティング イベントを作成する
 イベントのルーティングをサポートするために、カスタム イベントを登録する必要があります、<xref:System.Windows.RoutedEvent>を使用して、<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>メソッド。 この例では、カスタム ルーティング イベント作成の基本を紹介します。  
@@ -35,6 +35,7 @@ ms.locfileid: "57373401"
  バブリング イベントの動作例については、「[ルーティング イベントを処理する](how-to-handle-a-routed-event.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ルーティング イベントの概要](routed-events-overview.md)
 - [入力の概要](input-overview.md)
 - [コントロールの作成の概要](../controls/control-authoring-overview.md)

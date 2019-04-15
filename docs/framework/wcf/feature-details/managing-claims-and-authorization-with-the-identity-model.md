@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155091"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID モデルを使用したクレームと承認の管理
 承認は、コンピューター リソースを変更または表示したり、コンピューター リソースにアクセスしたりする権限を持つエンティティを特定するプロセスです。 たとえば、ある業務で、管理者だけが従業員のファイルへのアクセスを許可される場合があります。 Windows Communication Foundation (WCF) には、承認処理を実行するための 2 つのメカニズムがサポートしています。 1 つ目の機構では、既存の共通言語ランタイム (CLR: Common Language Runtime) 構造を使用して承認を制御できます。 2 つ目は、クレーム ベースのモデルと呼ばれる、 *Id モデル*します。 WCF は、Id モデルを使用して着信メッセージからクレームを作成するにはId モデル クラスは、カスタム承認スキームの場合、新しいクレームの種類をサポートするために拡張できます。 このトピックでは、ID モデル機能のプログラミングの主要概念について概説し、この機能で使用する最も重要なクラスの一覧を示します。  
@@ -160,6 +160,7 @@ ms.locfileid: "54540563"
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|サービスに指定されたカスタム承認ポリシーのコレクション。 受信メッセージの資格情報に関連するポリシーに加え、これらのポリシーも評価されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -173,9 +174,9 @@ ms.locfileid: "54540563"
 - [クレームとトークン](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [リソースへのアクセスのクレームと拒否](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [クレームの作成とリソース値](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [方法: カスタム クレームを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [方法: クレームを比較します。](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [方法: カスタム承認ポリシーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [方法: サービスのカスタム承認マネージャーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [方法: カスタム クレームを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [方法: クレームを比較する](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [方法: カスタム承認ポリシーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [方法: サービスで使用するカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

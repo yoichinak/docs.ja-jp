@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308563"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
 これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル。イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
@@ -23,7 +23,7 @@ ms.locfileid: "58840927"
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>ウィジェットのクラスのことですイベントを処理するには  
   
-1.  次のコードを配置`Form1`:  
+1. 次のコードを配置`Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ ms.locfileid: "58840927"
   
 #### <a name="to-handle-an-event"></a>イベントを処理するには  
   
-1.  選択`mWidget`で、左側のドロップダウン リストから、**コード エディター**します。  
+1. 選択`mWidget`で、左側のドロップダウン リストから、**コード エディター**します。  
   
-2.  選択、`PercentDone`右のドロップダウン リストからイベント。 **コード エディター**開きます、`mWidget_PercentDone`イベント プロシージャ。  
+2. 選択、`PercentDone`右のドロップダウン リストからイベント。 **コード エディター**開きます、`mWidget_PercentDone`イベント プロシージャ。  
   
     > [!NOTE]
     >  **コード エディター**は役立ちますが、新しいイベント ハンドラーを挿入するための必要ありません。 このチュートリアルでは、イベント ハンドラーのコードに直接コピーするより直接的します。  
   
-3.  `mWidget_PercentDone` イベント ハンドラーに次のコードを追加します。  
+3. `mWidget_PercentDone` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      たびに、`PercentDone`イベントは、イベント プロシージャの完了率が表示されます、`Label`コントロール。 `DoEvents`メソッドを再描画するラベルを使用し、また、ユーザーがクリックする可能性、**キャンセル**ボタンをクリックします。  
   
-4.  次のコードを追加、`Button2_Click`イベント ハンドラー。  
+4. 次のコードを追加、`Button2_Click`イベント ハンドラー。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58840927"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>オブジェクトを作成してへの参照を割り当てる  
   
-1.  選択 **(Form1 イベント)** で、左側のドロップダウン リストから、**コード エディター**します。  
+1. 選択 **(Form1 イベント)** で、左側のドロップダウン リストから、**コード エディター**します。  
   
-2.  選択、`Load`右のドロップダウン リストからイベント。 **コード エディター**開きます、`Form1_Load`イベント プロシージャ。  
+2. 選択、`Load`右のドロップダウン リストからイベント。 **コード エディター**開きます、`Form1_Load`イベント プロシージャ。  
   
-3.  次のコードを追加、`Form1_Load`イベント プロシージャを作成、 `Widget`:  
+3. 次のコードを追加、`Form1_Load`イベント プロシージャを作成、 `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,14 +88,14 @@ ms.locfileid: "58840927"
   
 #### <a name="to-run-the-program"></a>プログラムを実行するには  
   
-1.  F5 キーを押して、実行モードで、プロジェクトを配置します。  
+1. F5 キーを押して、実行モードで、プロジェクトを配置します。  
   
-2.  をクリックして、**タスクの開始**ボタンをクリックします。 毎回、`PercentDone`イベントは、ラベルは、タスクが完了の割合で更新されます。  
+2. をクリックして、**タスクの開始**ボタンをクリックします。 毎回、`PercentDone`イベントは、ラベルは、タスクが完了の割合で更新されます。  
   
-3.  をクリックして、**キャンセル**タスクを停止するボタンをクリックします。 注意の外観、**キャンセル**ボタンがクリックするとすぐには変更されません。 `Click`イベントまで発生することはできません、`My.Application.DoEvents`ステートメントは、イベント処理を使用できます。  
+3. をクリックして、**キャンセル**タスクを停止するボタンをクリックします。 注意の外観、**キャンセル**ボタンがクリックするとすぐには変更されません。 `Click`イベントまで発生することはできません、`My.Application.DoEvents`ステートメントは、イベント処理を使用できます。  
   
     > [!NOTE]
-    >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、[マネージ スレッド処理](../../../../standard/threading/index.md)を参照してください。
+    >  `My.Application.DoEvents`フォームは、メソッドがまったく同じ方法でイベントを処理できません。 たとえば、このチュートリアルでは、する必要があります をクリックして、**キャンセル**2 回ボタンをクリックします。 使用することができます、イベントを直接処理するためのフォームは、マルチ スレッドです。 詳細については、次を参照してください。[マネージ スレッド処理](../../../../standard/threading/index.md)します。
   
  F11 キーを押してプログラムを実行し、コードを 1 行ずつ処理するときにあります。 実行の入力を明確に確認`LongTask`、し、簡単に再入力`Form1`たびに、`PercentDone`イベントが発生します。  
   
@@ -118,5 +118,5 @@ ms.locfileid: "58840927"
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: 宣言とイベントの発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [チュートリアル: イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: イメージのメタデータの読み取り'
+title: '方法: イメージ メタデータを読み取る'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173616"
 ---
-# <a name="how-to-read-image-metadata"></a>方法: イメージのメタデータの読み取り
+# <a name="how-to-read-image-metadata"></a>方法: イメージ メタデータを読み取る
 一部のイメージ ファイルには、イメージの機能を読み取ることができるメタデータが含まれます。 たとえば、デジタル写真には、製造元とイメージをキャプチャするために使用するカメラのモデルを決定する読み取り可能なメタデータが含まれます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、既存のメタデータを読み取ることができ、イメージ ファイルに新しいメタデータを記述することもできます。  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] メタデータ内の個々 の部分を格納、<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。 読み取ることができます、<xref:System.Drawing.Image.PropertyItems%2A>のプロパティ、<xref:System.Drawing.Image>ファイルからすべてのメタデータを取得するオブジェクト。 <xref:System.Drawing.Image.PropertyItems%2A>プロパティの配列を返します<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。  
@@ -40,8 +40,7 @@ ms.locfileid: "57720793"
   
 |数値|説明|  
 |-------------------|-----------------|  
-|1|
-  `Byte`。|  
+|1|A `Byte`|  
 |2|配列の`Byte`ascii 形式でエンコードされたオブジェクト|  
 |3|16 ビット整数|  
 |4|32 ビット整数|  
@@ -125,5 +124,6 @@ ms.locfileid: "57720793"
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント paint イベント ハンドラーに次のコードを貼り付けます。 置き換える必要があります`FakePhoto.jpg`イメージ名と、システムとインポートの有効なパス、`System.Drawing.Imaging`名前空間。  
   
 ## <a name="see-also"></a>関連項目
-- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+
+- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c46118a9b02df653844a0ca04f9e8f9952a957c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333601"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# コンパイラ オプション)
 **-doc** オプションを使用すると、XML ファイル内にドキュメント コメントを含めることができます。  
@@ -32,7 +32,7 @@ ms.locfileid: "54646803"
  `file`  
  XML の出力ファイル。コンパイルのソース コード ファイルのコメントが入力されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ソース コード ファイルで、次の項目の前にあるドキュメント コメントを処理し、XML ファイルに追加できます。  
   
 -   [クラス](../../../csharp/language-reference/keywords/class.md)、[デリゲート](../../../csharp/language-reference/keywords/delegate.md)、[インターフェイス](../../../csharp/language-reference/keywords/interface.md)などのユーザー定義型  
@@ -52,11 +52,11 @@ ms.locfileid: "54646803"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** タブをクリックします。  
+2. **[ビルド]** タブをクリックします。  
   
-3.  **[XML ドキュメント ファイル]** プロパティを変更します。  
+3. **[XML ドキュメント ファイル]** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>」をご覧ください。  
   

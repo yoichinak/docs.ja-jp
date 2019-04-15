@@ -11,12 +11,12 @@ helpviewer_keywords:
 - retrieving ink [WPF]
 - Ink Serialized Format (ISF)
 ms.assetid: a3f6d16b-d682-4680-9965-907332b4d2b8
-ms.openlocfilehash: aec89286cfac9b0a315dc2d00135543511b2d1ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4089aa7942105c14eb628c75edb7f53ffacfaeb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182339"
 ---
 # <a name="storing-ink"></a>インクの格納
 <xref:System.Windows.Ink.StrokeCollection.Save%2A>メソッドは、インクとして形式 ISF (Ink Serialized) を格納するためのサポートを提供します。 コンス トラクター、<xref:System.Windows.Ink.StrokeCollection>クラスは、インク データを読み取るためのサポートを提供します。  
@@ -35,5 +35,6 @@ ms.locfileid: "57353960"
  [!code-vb[DigitalInkTopics#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#13)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.InkCanvas>
 - [Windows Presentation Foundation](../index.md)

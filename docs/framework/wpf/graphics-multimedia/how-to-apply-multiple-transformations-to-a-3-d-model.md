@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
-ms.openlocfilehash: d18b9bc78e011796f9d9e6d535f3dc949bd5a0f8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186382"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>方法: 複数の変換を 3-D モデルに適用する
 このサンプルは、使用する方法を示します、<xref:System.Windows.Media.Media3D.RotateTransform3D>と<xref:System.Windows.Media.Media3D.ScaleTransform3D>回転を 3-D モデルのスケールを変更します。 次のコードをこれらの変換を適用する方法を示しています、<xref:System.Windows.Media.Media3D.Model3D.Transform%2A>のプロパティを<xref:System.Windows.Media.Media3D.GeometryModel3D>XAML でします。  
@@ -36,4 +36,5 @@ ms.locfileid: "57352465"
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [3-D モデルのスケールを変換する](how-to-transform-the-scale-of-a-3-d-model.md)

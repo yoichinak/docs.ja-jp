@@ -2,12 +2,12 @@
 title: フィルターの選択
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: f634363a3f8b69b38fd4d313c42de4d742d94acc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174032"
 ---
 # <a name="choosing-a-filter"></a>フィルターの選択
 ルーティング サービスを構成する際には、適切なメッセージ フィルターを選択し、受信するメッセージと正確に一致できるように、それらのフィルターを構成することが重要です。 選択したフィルターの適合基準が幅広すぎる場合や、適切に構成されていない場合は、メッセージが正しくルーティングされません。 フィルターの適合基準が厳格すぎると、一部のメッセージの有効なルーティング先が見つからないことがあります。  
@@ -131,10 +131,11 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
   
  受信するメッセージに特定の値が含まれていることがわかっている場合は、このフィルターが便利です。 たとえば、同じサービスの 2 つのバージョンをホストしており、そのサービスの新しい方のバージョン宛てのメッセージのカスタム ヘッダーに一意の値が含まれていることがわかっている場合は、XPath を使用するフィルターを作成してそのヘッダーに移動し、そのヘッダー内にある値を、フィルター構成で指定されている別の値と比較して、そのフィルターが一致するかどうかを判断できます。  
   
- XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間のテーブルの詳細については、[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)を参照してください。  
+ XPath クエリには、長い文字列値または複雑な文字列値である一意の名前空間が含まれていることが多いため、XPath フィルターでは、名前空間用の一意のプレフィックスを定義する名前空間テーブルを使用できます。 名前空間のテーブルの詳細については、次を参照してください。[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)します。  
   
- XPath クエリを設計する方法の詳細については、[XPath 構文](https://go.microsoft.com/fwlink/?LinkId=164592)を参照してください。  
+ XPath クエリを設計する方法の詳細については、次を参照してください。 [XPath 構文](https://go.microsoft.com/fwlink/?LinkId=164592)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [方法: フィルターを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [方法: フィルターの使用](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

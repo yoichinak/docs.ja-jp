@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fe5dfa0b8866debd8a6091a264e251f2fd2e4dca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234499"
+---
 ### <a name="x509certificateclaimsetfindclaims-considers-all-claimtypes"></a>X509CertificateClaimSet.FindClaims は、すべての claimTypes を考慮します
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6.1|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims(System.String,System.String)?displayProperty=nameWithType></li></ul>|
-
