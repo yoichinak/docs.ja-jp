@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185440"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 
@@ -800,5 +800,6 @@ ms.locfileid: "58921339"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` レジストリ キーは Win9x でのみ機能し、このバージョンの .NET Framework ではサポートされていません。 代わりに、`PerformanceData` レジストリ キーを使用してください。 このプロパティは、.NET Framework の将来のバージョンでは削除されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [クラス ライブラリの互換性のために残されている機能](whats-obsolete.md)
 - [互換性のために残されている型](obsolete-types.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124814"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>コールバック メソッドとしてのデリゲートのマーシャ リング
 このサンプルでは、関数ポインターを要求するアンマネージ関数にデリゲートを渡す方法を示します。 デリゲートは、メソッドへの参照を保持できるクラスであり、タイプ セーフな関数ポインターまたはコールバック関数と同等のものです。
@@ -53,6 +53,7 @@ Callback のサンプルで使用するアンマネージ関数とその元の�
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>関連項目
+
 - [各種のマーシャリングのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [プラットフォーム呼び出しのデータ型](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c4b293cf7db3762831be7f3a7a355748ff5758c5
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 1148d040aa3b292d5c37eb50224413b6ddd202e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236445"
 ---
 ### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a>ServiceBase で OnStart 例外を伝達させない
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760260"
 |Version|4.7.1|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType></li><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType></li></ul>|
-

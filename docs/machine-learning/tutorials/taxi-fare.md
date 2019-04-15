@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 811de96748fcc095e289905e73845c8cfdd8eea7
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295979"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
 
@@ -36,7 +36,7 @@ ms.locfileid: "58921079"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
 
 ## <a name="understand-the-problem"></a>問題を把握する
 
@@ -272,7 +272,6 @@ Console.WriteLine($"*------------------------------------------------");
 [!code-csharp[DisplayRMS](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>モデルを使用して予測を行う
-
 
 ## <a name="predict-the-test-data-outcome-with-the-model-and-a-single-comment"></a>モデルと 1 つのコメントを使用してテスト データの結果を予測する
 

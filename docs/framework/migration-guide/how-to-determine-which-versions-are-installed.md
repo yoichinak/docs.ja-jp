@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176307"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -37,7 +37,6 @@ ms.locfileid: "59055236"
 >
 > バージョンの詳細については、「[.NET Framework のバージョンおよび依存関係](versions-and-dependencies.md)」を参照してください。
 
-
 コンピューターにインストールされている .NET Framework のバージョンの一覧を取得するには、レジストリにアクセスします。 レジストリを確認するには、レジストリ エディタを使用するか、次に従ってコードで照会します。
  
 - .NET Framework の新しいバージョンを探す (4.5 以降): 
@@ -54,7 +53,6 @@ ms.locfileid: "59055236"
 - [コードを使用して Environment クラスを照会する](#clr_b)  
 
 .NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>.NET Framework の新しいバージョンを探す (4.5 以降)
 
@@ -171,7 +169,6 @@ ms.locfileid: "59055236"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>CLR のバージョンを探す
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ ms.locfileid: "59055236"
    - マイナー リリース識別子 (たとえば、バージョン 4.0 の場合の *0*) には、<xref:System.Version.Minor%2A?displayProperty=nameWithType> プロパティを使用します。
 
    - バージョンの完全な文字列 (たとえば、*4.0.30319.18010*) には、<xref:System.Version.ToString%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、コードを実行しているランタイムのバージョンを示す値が 1 つ返されます。 コンピューターにインストールされている可能性のあるアセンブリ バージョンやその他のランタイム バージョンは返されません。
-
-
 
 次の例では、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを使用して CLR バージョンの情報を取得しています。
 

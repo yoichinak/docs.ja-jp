@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920559"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327868"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -107,7 +107,7 @@ Visual Studio から、またはコマンドラインから MSBuild を使用し
 
 Web インストーラーとオフライン インストーラーはどちらも、x86 ベースおよび x64 ベースのコンピューター用に設計されていますが ([システム要件](~/docs/framework/get-started/system-requirements.md)を参照)、Itanium ベースのコンピューターはサポートしていません。
 
-1.  インストールする .NET Framework のバージョンのダウンロード ページを開きます。
+1. インストールする .NET Framework のバージョンのダウンロード ページを開きます。
 
     - .NET Framework 4.7.2 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262)または[オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 > [!IMPORTANT]
 > 言語パックには、アプリの実行に必要な .NET Framework コンポーネントは含まれていません。言語パックをインストールする前に、Web インストーラーまたはオフライン インストーラーを実行する必要があります。 既に言語パックをインストールしてある場合は、まず言語パックをアンインストールしてから、.NET Framework をインストールし、言語パックを再インストールします。
 
-1.  インストールした .NET Framework のバージョンに対応する言語パックのダウンロード ページを開きます。
+1. インストールした .NET Framework のバージョンに対応する言語パックのダウンロード ページを開きます。
 
     - [.NET Framework 4.7.2 言語パック](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Web インストーラーとオフライン インストーラーはどちらも
 
     - [.NET Framework 4.5 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  言語の一覧で、ダウンロードする言語を選択し、その言語でページを再び読み込まれるまで数秒待ちます。
+2. 言語の一覧で、ダウンロードする言語を選択し、その言語でページを再び読み込まれるまで数秒待ちます。
 
-3.  **[ダウンロード]** を選択します。
+3. **[ダウンロード]** を選択します。
 
 サポートしている言語の一覧を次の表に示します。
 

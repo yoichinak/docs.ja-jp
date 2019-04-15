@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81a502ab3c0f9f2faf4685c5d61c66f2eab83e7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196997"
 ---
 # <a name="callback-functions"></a>コールバック関数
 コールバック関数は、アンマネージド DLL 関数がタスクを完了できるように支援するマネージド アプリケーション内のコードです。 コールバック関数の呼び出しは、マネージド アプリケーションから、DLL 関数を介して、マネージド実装へと間接的に渡されます。 多数ある DLL 関数の一部はプラットフォーム呼び出しと呼ばれ、正常に実行されるには、マネージド コード内にコールバック関数が必要です。  
@@ -28,5 +28,6 @@ ms.locfileid: "58820886"
  コールバック関数は、タスクが繰り返し実行される状況での使用に最適です。 また、一般的な用途として、Windows API の **EnumFontFamilies**、**EnumPrinters**、**EnumWindows** などの列挙関数があります。 **EnumWindows** 関数は、各ウィンドウでタスクを実行するコールバック関数を呼び出して、コンピューター上のすべての既存のウィンドウを列挙します。 手順と例については、「[方法:コールバック関数を実装する](../../../docs/framework/interop/how-to-implement-callback-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: コールバック関数を実装する](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [DLL 関数の呼び出し](../../../docs/framework/interop/calling-a-dll-function.md)
