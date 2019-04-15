@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097978"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>相互運用のための .NET 型の要件
 COM アプリケーションにアセンブリ内の型を公開する場合は、設計時に COM 相互運用の要件を検討する必要があります。 以下のガイドラインに従うと、マネージド型 (クラス、インターフェイス、構造体、列挙型) は COM の型とシームレスに統合します。  
@@ -48,6 +48,7 @@ COM アプリケーションにアセンブリ内の型を公開する場合は�
  COM にエクスポートされるとき、マネージド型の継承階層はフラット化されます。 マネージド環境とアンマネージド環境では、バージョン管理も異なります。 COM に公開された型は、他のマネージド型とバージョン管理特性が異なります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [COM への .NET Framework コンポーネントの公開](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [クラス インターフェイスの概要](com-callable-wrapper.md#introducing-the-class-interface)
