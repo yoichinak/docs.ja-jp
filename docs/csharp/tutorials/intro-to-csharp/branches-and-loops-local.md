@@ -3,12 +3,12 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677787"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920949"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
@@ -249,7 +249,7 @@ C# 言語における `if` ステートメントとループ構造を見てき�
 
 これで "分岐とループ" に関するチュートリアルは終了です。
 
-[文字列補間](interpolated-strings-local.md)のチュートリアルを、ご自身の開発環境でも使い続けることができます。
+続けて独自の開発環境で[配列とコレクション](arrays-and-collections.md)のチュートリアルに進むことができます。
 
 次のトピックでこれらの概念の詳細を学習できます。
 

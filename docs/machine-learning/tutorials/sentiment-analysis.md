@@ -4,12 +4,12 @@ description: バイナリ分類のシナリオで ML.NET を使用する方法�
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: c5373f63927ff39e7c819cd1fc0bc2bec1843b3e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307942"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921118"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -125,7 +125,7 @@ Web サイトのコメントは、肯定的または否定的のいずれかと�
 
 次に示す追加の `using` ステートメントを *Program.cs* ファイルの先頭に追加します。
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddUsings "Add necessary usings")]
 
 最近ダウンロードしたデータセット ファイルのパスと保存したモデル ファイルのパスを保持するために、2 つのグローバル フィールドを作成する必要があります。
 
@@ -134,7 +134,7 @@ Web サイトのコメントは、肯定的または否定的のいずれかと�
 
 `Main` メソッドのすぐ上にある行に次のコードを追加して、それらのパスを指定します。
 
-[!code-csharp[Declare global variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
+[!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 入力データと予測のために、いくつかのクラスを作成する必要があります。 プロジェクトに新しいクラスを追加します。
 
@@ -144,11 +144,11 @@ Web サイトのコメントは、肯定的または否定的のいずれかと�
 
     コード エディターで *SentimentData.cs* ファイルが開きます。 *SentimentData.cs* の先頭に次の `using` ステートメントを 追加します。
 
-[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
+[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#AddUsings "Add necessary usings")]
 
 既存のクラス定義を削除し、`SentimentData` と `SentimentPrediction` の 2 つのクラスを含む次のコードを *SentimentData.cs* ファイルに追加します。
 
-[!code-csharp[DeclareTypes](../../../samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
+[!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 入力データセット クラス `SentimentData` には、コメントの `string` (`SentimentText`) と、肯定的または否定的のいずれかであるセンチメントの値を持つ `bool` (`Sentiment`) があります。 どちらのフィールドにも <xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29> 属性が添付されています。 この属性は、データ ファイルの各フィールドの順序を示しています。  さらに、`Sentiment` プロパティには、それを `Label` フィールドとして指定する <xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A> があります。 `SentimentPrediction` は、モデルがトレーニングされた後に、予測に使用されるクラスです。 これは、1 つのブール値 (`Sentiment`) と、`PredictedLabel` `ColumnName` 属性を持ちます。 `Label` はモデルを作成してトレーニングするために使用され、モデルを評価するための分割されたテスト データセットでも使用されます。 `PredictedLabel` は予測と評価の際に使用されます。 評価では、トレーニング データを含む入力、予測された値、およびモデルが使用されます。
 
@@ -158,11 +158,11 @@ ML.NET を使用してモデルをビルドするときは、まず <xref:Micros
 
 `mlContext` という変数を作成し、`MLContext` の新しいインスタンスで初期化します。  `Main` メソッドの `Console.WriteLine("Hello World!")` 行を、次のコードで置き換えます。
 
-[!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateMLContext "Create the ML Context")]
+[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateMLContext "Create the ML Context")]
 
 `Main` メソッドに次のコード行を追加します。
 
-[!code-csharp[CallLoadData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallLoadData)]
+[!code-csharp[CallLoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallLoadData)]
 
 `LoadData` メソッドは次のタスクを実行します。
 
@@ -188,7 +188,7 @@ ML.NET ではデータは SQL ビューに似ています。 つまり、遅延�
 
  `LoadData` メソッドの最初の行として、次のコードを追加します。
 
-[!code-csharp[LoadData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
+[!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>モデルのトレーニング用とテスト用にデータセットを分割する
 
@@ -196,17 +196,17 @@ ML.NET ではデータは SQL ビューに似ています。 つまり、遅延�
 
 読み込まれたデータを必要なデータセットに分割するには、`LoadData` メソッドの次の行として、次のコードを追加します。
 
-[!code-csharp[SplitData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
+[!code-csharp[SplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SplitData "Split the Data")]
 
 `LoadData` メソッドの最後に、`splitDataView` が返されます。
 
-[!code-csharp[ReturnSplitData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnSplitData)]
+[!code-csharp[ReturnSplitData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnSplitData)]
 
 ## <a name="build-and-train-the-model"></a>モデルを構築してトレーニングする
 
 `Main` メソッドの次のコード行として、`BuildAndTrainModel` メソッドに次の呼び出しを追加します。
 
-[!code-csharp[CallBuildAndTrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallBuildAndTrainModel)]
+[!code-csharp[CallBuildAndTrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallBuildAndTrainModel)]
 
 `BuildAndTrainModel` メソッドは次のタスクを実行します。
 
@@ -234,7 +234,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 次に、`mlContext.Transforms.Text.FeaturizeText` を呼び出します。これによってテキスト列 (`SentimentText`) が特徴付けされ、機械学習アルゴリズムで使用される `Features` という数値ベクトルになります。 これは、実質的にパイプラインになる <xref:Microsoft.ML.Data.EstimatorChain%601> を返すラッパー呼び出しです。 後でトレーナーを `EstimatorChain` に付加するときに、この `pipeline` を指定します。 次のコード行を追加します。
 
-[!code-csharp[FeaturizeText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#FeaturizeText "Featurize the text")]
+[!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#FeaturizeText "Featurize the text")]
 
 >[!WARNING]
 > ML.NET バージョン 0.10 では、変換パラメーターの順序が変更されました。 アプリケーションを実行してモデルを構築するまで、これによるエラーは出力されません。 変換パラメーターの名前を上記のコード スニペットに示すように使用してください。
@@ -247,7 +247,7 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 `BuildAndTrainModel` メソッドに次のコードを追加します。
 
-[!code-csharp[FastTreeBinaryClassificationTrainer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddTrainer "Add a FastTreeBinaryClassificationTrainer")]
+[!code-csharp[FastTreeBinaryClassificationTrainer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddTrainer "Add a FastTreeBinaryClassificationTrainer")]
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
@@ -255,13 +255,13 @@ ML.NET の変換パイプラインによって、トレーニングまたはテ�
 
 `BuildAndTrainModel` メソッドに次のコードを追加します。
 
-[!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
+[!code-csharp[TrainModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TrainModel "Train the model")]
 
 ### <a name="save-and-return-the-model-trained-to-use-for-evaluation"></a>評価に使用する、トレーニングされたモデルを保存して返す
 
 この時点で、既存または新規のどの .NET アプリケーションにも統合できる、型が <xref:Microsoft.ML.Data.TransformerChain%601> のモデルができました。 `BuildAndTrainModel` メソッドの最後で、モデルを返します。
 
-[!code-csharp[ReturnModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#ReturnModel "Return the model")]
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
@@ -283,25 +283,25 @@ public static void Evaluate(MLContext mlContext, ITransformer model, IDataView s
 
 `Train` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
 
-[!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallEvaluate "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallEvaluate "Call the Evaluate method")]
 
 次に、機械学習の `model` パラメーター (変換器) と `splitTestSet` パラメーターを使用して特徴を入力し、予測を返します。 `Evaluate` メソッドに次のコード行を追加します。
 
-[!code-csharp[PredictWithTransformer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
+[!code-csharp[PredictWithTransformer](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#TransformData "Predict using the Transformer")]
 
 `mlContext.BinaryClassification.Evaluate` メソッドは、指定されたデータセットを使用して `PredictionModel` の品質メトリックを計算します。 これによって返される <xref:Microsoft.ML.Data.CalibratedBinaryClassificationMetrics> オブジェクトには、バイナリ分類評価器によって計算されるメトリック全体が含まれます。 これらを表示してモデルの品質を判定するには、最初にメトリックを取得する必要があります。 `Evaluate` メソッドに次のコード行を追加します。
 
-[!code-csharp[ComputeMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Evaluate "Compute Metrics")]
+[!code-csharp[ComputeMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Evaluate "Compute Metrics")]
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>モデル検証のためのメトリックを表示する
 
 次のコードを使用してメトリックを表示し、結果を共有し、それに対してアクションを実行します。
 
-[!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
+[!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
 モデルを返す前に .zip ファイルに保存するには、`Evaluate` 内に次の行を追加して `SaveModelAsFile` メソッドを呼び出します。
 
-[!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallSaveModel "Save the model")]
+[!code-csharp[SaveModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallSaveModel "Save the model")]
 
 ## <a name="save-the-model-as-azip-file"></a>モデルを .zip ファイルとして保存する
 
@@ -320,7 +320,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 次に、モデルを再利用して他のアプリケーションで使用できるようにモデルを保存するメソッドを作成します。 `ITransformer` には <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)> メソッドがあり、`_modelPath` グローバル フィールドと <xref:System.IO.Stream> を受け入れます。 これを zip ファイルとして保存するには、`FileStream` を作成した直後に `SaveTo` メソッドを呼び出します。 `SaveModelAsFile` メソッドに次のコード行を追加します。
 
-[!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
+[!code-csharp[SaveToMethod](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
 
 `_modelPath` を使用してコンソール メッセージを記述することで、ファイルが書き込まれた場所も表示できるようになります。これには次のコードを使用します。
 
@@ -348,25 +348,25 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 
 `Evaluate` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
 
-[!code-csharp[CallUseModelWithSingleItem](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
+[!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
 `model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `Predict` メソッドの 1 行目として作成しましょう。
 
-[!code-csharp[CreatePredictionEngine](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
+[!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
   
 コメントを追加して、`Predict` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。
 
-[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
+[!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
  これを使用すると、コメント データの 1 つのインスタンスのセンチメントが肯定的か否定的かを予測できます。 予測を取得するには、データに対して <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Predict "Create a prediction of sentiment")]
+[!code-csharp[Predict](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Predict "Create a prediction of sentiment")]
 
 ### <a name="use-the-model-prediction"></a>モデルを使用する: 予測
 
 結果を共有し、それに応じたアクションを実行するために、`SentimentText` および対応するセンチメント予測を表示します。 これは運用化と呼ばれ、返されたデータを運用ポリシーとして使用します。 次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して、結果の表示を作成します。
 
-[!code-csharp[OutputPrediction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#OutputPrediction "Display prediction output")]
+[!code-csharp[OutputPrediction](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#OutputPrediction "Display prediction output")]
 
 ## <a name="deploy-and-predict-with-a-loaded-model"></a>読み込み済みのモデルを使用して配置および予測する
 
@@ -388,33 +388,33 @@ public static void UseLoadedModelWithBatchItems(MLContext mlContext)
 
 `UseModelWithSingleItem` メソッドの呼び出しのすぐ下に、次のコードを使用して、`Main` メソッドからの新しいメソッドの呼び出しを追加します。
 
-[!code-csharp[CallPredictModelLoaded](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseLoadedModelWithBatchItems "Call the CallUseLoadedModelWithBatchItems method")]
+[!code-csharp[CallPredictModelLoaded](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseLoadedModelWithBatchItems "Call the CallUseLoadedModelWithBatchItems method")]
 
 `UseLoadedModelWithBatchItems` メソッドでトレーニングされるモデルの予測をテストするために、いくつかのコメントを追加します。
 
-[!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssues "Create test data for predictions")]
+[!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssues "Create test data for predictions")]
 
 モデルを読み込みます
 
-[!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadModel "Load the model")]
+[!code-csharp[LoadTheModel](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadModel "Load the model")]
 
 モデルは既にあるので、それを利用して、<xref:Microsoft.ML.ITransformer.Transform%2A> メソッドでコメント データのセンチメントが有害か無害かを予測できます。 予測を取得するには、新しいデータに対して `Predict` を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。 予測のために `UseLoadedModelWithBatchItems` メソッドに次のコードを追加します。
 
-[!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Prediction "Create predictions of sentiments")]
+[!code-csharp[Predict](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#Prediction "Create predictions of sentiments")]
 
 ### <a name="use-the-loaded-model-for-prediction"></a>読み込み済みのモデルを予測のために使用する
 
 結果を共有し、それに応じたアクションを実行するために、`SentimentText` および対応するセンチメント予測を表示します。 これは運用化と呼ばれ、返されたデータを運用ポリシーとして使用します。 次の <xref:System.Console.WriteLine?displayProperty=nameWithType> コードを使用して、結果のヘッダーを作成します。
 
-[!code-csharp[OutputHeaders](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
+[!code-csharp[OutputHeaders](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#AddInfoMessage "Display prediction outputs")]
 
 予測された結果を表示する前に、元のコメントとその予測されたセンチメントが一緒に表示されるように、センチメントと予測を結合します。 次のコードでは <xref:System.Linq.Enumerable.Zip%2A> メソッドを使用してそれを行うため、そのコードを次に追加します。
 
-[!code-csharp[BuildTuples](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
+[!code-csharp[BuildTuples](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#BuildSentimentPredictionPairs "Build the pairs of sentiment data and predictions")]
 
 これで `SentimentText` と `Sentiment` が 1 つのクラスに結合されたので、<xref:System.Console.WriteLine?displayProperty=nameWithType> メソッドを使用して結果を表示できます。
 
-[!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
+[!code-csharp[DisplayPredictions](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayResults "Display the predictions")]
 
 推定されたタプル要素名は C# 7.1 の新機能であり、このプロジェクトの既定の言語バージョンは C# 7.0 であるため、言語バージョンを C# 7.1 以降に変更する必要があります。
 そのためには、**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして、**[プロパティ]** を選択します。 **[ビルド]** タブを選択し、**[詳細設定]** ボタンを選択します。 ドロップダウンで **[C# 7.1]** (またはそれ以降のバージョン) を選択します。 **[OK]** ボタンを選択します。

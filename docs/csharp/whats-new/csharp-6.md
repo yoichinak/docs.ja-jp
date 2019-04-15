@@ -2,12 +2,12 @@
 title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654576"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920676"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-左辺が 1 回だけ評価されることを保証し、また `?.` の左辺で、メソッドの呼び出しなどの任意の式を使用できるようにします。
+左辺が 1 回だけ評価されるようにすることで、左辺でメソッドの呼び出しなどの任意の式を使用できるようになります。 `?.`
 
 ## <a name="string-interpolation"></a>文字列補間
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-文字列補間を開始するには、[C# における文字列補間](../tutorials/intro-to-csharp/interpolated-strings.yml)の対話型チュートリアル、[文字列補間](../language-reference/tokens/interpolated.md)に関する記事、および「[C# における文字列補間](../tutorials/string-interpolation.md)」のチュートリアルを参照してください。
+文字列補間を開始するには、[C# における文字列補間](../tutorials/exploration/interpolated-strings.yml)の対話型チュートリアル、[文字列補間](../language-reference/tokens/interpolated.md)に関する記事、および「[C# における文字列補間](../tutorials/string-interpolation.md)」のチュートリアルを参照してください。
 
 ## <a name="exception-filters"></a>例外フィルター
 
