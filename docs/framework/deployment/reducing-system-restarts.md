@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4affda0abdf46d298e6f1dac87b6a17a7a2e857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218453"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 のインストール中のシステム再起動の削減
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーは[再起動マネージャー](https://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動をできる限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳細については、「[方法 :.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」を参照してください。  
@@ -35,6 +35,7 @@ ms.locfileid: "54596762"
  チェーンされたインストーラーを使用しているときに、終了するアプリケーションに対して独自のメッセージ ボックスを非表示にする場合は、.NET Framework セットアップ プロセスをチェーンするときに、コマンド ラインで `/showrmui` と `/passive` のオプションを使用できます。 これらのオプションを一緒に使用すると、システムの再起動を避けるために終了できるアプリケーションを閉じるためのメッセージ ボックスがインストーラーによって表示されます。 このメッセージ ボックスは、完全なユーザー インターフェイスの下でも、パッシブ モードでも同じように動作します。 .NET Framework 再頒布可能パッケージのコマンドライン オプションの完全なセットについては、「[配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [配置](../../../docs/framework/deployment/index.md)
 - [配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [方法: .NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

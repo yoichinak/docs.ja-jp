@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 3930453e2ba3594e19d8eb7c3dfbceb49c3a1e80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151555"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する
 アプリケーションまたはコンピューターの構成ファイルには、ネットワークのトレースの形式と内容を決定する設定が保持されます。 この手順に従う前に、トレースが有効になっていることを確認します。 トレースの有効化については、「[ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)」を参照してください。  
@@ -98,6 +98,7 @@ ms.locfileid: "54540534"
 |`Tracemode`|省略可能な <xref:System.String> 属性です。 プロトコル トレースを 16 進数およびテキストの形式で表示するには、`includehex` に設定します。 テキストのみを表示するには、`protocolonly` に設定します。 既定値は `includehex` です。<br /><br /> この属性は、この例に示すように、\<switches> 要素で設定する必要があります。 この属性を \<source> 要素の下の要素で設定すると、例外がスローされます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワークのトレースの解釈](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)
 - [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)
