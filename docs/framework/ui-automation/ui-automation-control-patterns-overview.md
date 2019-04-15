@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126361"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57673679"
   
  この概要では、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] コントロール パターンについて説明します。 コントロール パターンは、コントロール型や外観に関係なく、コントロールの機能を分類したり公開したりするための手段です。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、コントロールの一般的な動作を表すコントロール パターンを使用します。 たとえば、呼び出し可能なコントロール (ボタンなど) には Invoke コントロール パターンを使用し、スクロール バーを持つコントロール (リスト ボックス、リスト ビュー、コンボ ボックスなど) には Scroll コントロール パターンを使用します。 コントロール パターンごとに別の機能を表すため、コントロール パターンを組み合わせて、特定のコントロールでサポートされる機能の完全なセットを表すことができます。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] コントロールの一般的なコントロールの動作を表すためのパターンを使用します。 たとえば、呼び出し可能なコントロール (ボタンなど) には Invoke コントロール パターンを使用し、スクロール バーを持つコントロール (リスト ボックス、リスト ビュー、コンボ ボックスなど) には Scroll コントロール パターンを使用します。 コントロール パターンごとに別の機能を表すため、コントロール パターンを組み合わせて、特定のコントロールでサポートされる機能の完全なセットを表すことができます。  
   
 > [!NOTE]
 >  集約コントロール (親によって公開される機能のために [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] を提供する子コントロールで構築されるもの) は、各子コントロールに通常関連付けられるすべてのコントロール パターンを実装する必要があります。 一方、これらの同じコントロール パターンを子コントロールで実装する必要はありません。  
@@ -73,6 +73,7 @@ ms.locfileid: "57673679"
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|[!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムの基本概念であるウィンドウに固有の情報を公開します。 ウィンドウのコントロールの例として、最上位のアプリケーション ウィンドウ ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]や [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]など)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子ウィンドウ、ダイアログがあります。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI オートメーション クライアントのコントロール パターン マッピング](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

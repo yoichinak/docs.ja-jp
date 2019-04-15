@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340972"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>方法: デザイナーを使ってタブ ページにコントロールを追加する
 Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に他のコントロールを表示することです。 これらの手順を使用すると、タブ ページの本体に画像を表示します。 タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。  
@@ -23,9 +23,9 @@ Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に�
   
 ### <a name="to-add-a-control-using-the-designer"></a>デザイナーを使用してコントロールを追加するには  
   
-1.  上部に表示されるように、適切なタブ ページをクリックします。  
+1. 上部に表示されるように、適切なタブ ページをクリックします。  
   
-2.  タブ ページにコントロールを描画します。  
+2. タブ ページにコントロールを描画します。  
   
 ## <a name="see-also"></a>関連項目
 

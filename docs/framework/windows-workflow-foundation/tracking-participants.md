@@ -2,12 +2,12 @@
 title: 追跡参加要素
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340179"
 ---
 # <a name="tracking-participants"></a>追跡参加要素
 追跡参加要素は、ワークフロー開発者が <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> オブジェクトにアクセスし、そのオブジェクトを処理する機能拡張ポイントです。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む標準の追跡参加要素が含まれています。 これで要件が満たされない場合は、カスタムの追跡参加要素を作成することもできます。  
@@ -81,13 +81,13 @@ ms.locfileid: "59138828"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>イベント ビューアーで追跡レコードの表示を有効にするには  
   
-1.  イベント ビューアー (EVENTVWR.EXE) を起動します。  
+1. イベント ビューアー (EVENTVWR.EXE) を起動します。  
   
-2.  選択**イベント ビューアー、アプリケーションとサービス ログ、Microsoft、Windows では、アプリケーション サーバー-アプリケーション**します。  
+2. 選択**イベント ビューアー、アプリケーションとサービス ログ、Microsoft、Windows では、アプリケーション サーバー-アプリケーション**します。  
   
-3.  右クリックし、いることを確認**ビュー、分析およびデバッグ ログ**が選択されています。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これが表示されます、**分析**、 **Perf**、および**デバッグ**ログ。  
+3. 右クリックし、いることを確認**ビュー、分析およびデバッグ ログ**が選択されています。 有効でない場合は、ログを選択するとログの横にチェック マークが表示されます。 これが表示されます、**分析**、 **Perf**、および**デバッグ**ログ。  
   
-4.  右クリックし、**分析**ログに記録し、**ログの有効化**します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
+4. 右クリックし、**分析**ログに記録し、**ログの有効化**します。 ログは %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl ファイルに含まれます。  
   
 ## <a name="custom-tracking-participant"></a>カスタムの追跡参加要素  
  追跡参加要素 API では、ワークフロー ランタイムが出力する追跡レコードを処理するためのカスタム ロジックを含めることが可能なユーザー指定の追跡参加要素を使用して、追跡ランタイムを拡張できます。 カスタムの追跡参加要素を作成するためには、開発者が `Track` クラスの <xref:System.Activities.Tracking.TrackingParticipant> メソッドを実装する必要があります。 このメソッドは、ワークフロー ランタイムによって追跡レコードが出力されるときに呼び出されます。  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294666"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>セッションでキューに置かれたメッセージのグループ化
 Windows Communication Foundation (WCF) は、1 つの受信側アプリケーションで関連するメッセージの処理のセットをグループ化できるようにするセッションを提供します。 セッションに含まれるメッセージは、同じトランザクションに含まれる必要があります。 すべてのメッセージが同じトランザクションに含まれるため、1 つのメッセージの処理が失敗すると、セッション全体がロールバックされます。 各セッションは、配信不能キューや有害キューに関してよく似た動作をします。 キューに置かれたバインディングに設定される有効期間 (TTL: Time To Live) プロパティがセッションに構成されている場合は、セッション全体に適用されます。 したがって、TTL が切れる前にセッション内の一部のメッセージが送信された場合は、セッション全体が配信不能キューに配置されます。 同様に、アプリケーション キューからアプリケーションにセッション内のメッセージを送信できなかった場合は、セッション全体が有害キューに配置されます (有害キューを使用できる場合)。  
@@ -24,50 +24,49 @@ Windows Communication Foundation (WCF) は、1 つの受信側アプリケーシ
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>セッションを使用するようにサービス コントラクトを設定するには  
   
-1.  セッションを必要とするサービス コントラクトを定義します。 これを実行するには、<xref:System.ServiceModel.OperationContractAttribute> 属性に次の値を指定します。  
+1. セッションを必要とするサービス コントラクトを定義します。 これを実行するには、<xref:System.ServiceModel.OperationContractAttribute> 属性に次の値を指定します。  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  これらのメソッドは何も返さないため、コントラクト内の操作を一方向としてマークします。 これを実行するには、<xref:System.ServiceModel.OperationContractAttribute> 属性に次の値を指定します。  
+2. これらのメソッドは何も返さないため、コントラクト内の操作を一方向としてマークします。 これを実行するには、<xref:System.ServiceModel.OperationContractAttribute> 属性に次の値を指定します。  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  サービス コントラクトを実装し、`InstanceContextMode` に `PerSession` を指定します。 これにより、セッションごとに 1 回だけサービスがインスタンス化されます。  
+3. サービス コントラクトを実装し、`InstanceContextMode` に `PerSession` を指定します。 これにより、セッションごとに 1 回だけサービスがインスタンス化されます。  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  各サービス操作には、トランザクションが必要になります。 これを指定するには <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用します。 トランザクションを完了する操作では、`TransactionAutoComplete` を `true` に設定する必要があります。  
+4. 各サービス操作には、トランザクションが必要になります。 これを指定するには <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用します。 トランザクションを完了する操作では、`TransactionAutoComplete` を `true` に設定する必要があります。  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  システム指定の `NetMsmqBinding` バインディングを使用するエンドポイントを構成します。  
+5. システム指定の `NetMsmqBinding` バインディングを使用するエンドポイントを構成します。  
   
-6.  
-  <xref:System.Messaging> を使用してトランザクション キューを作成します。 代わりに、MSMQ (メッセージ キュー) または MMC を使用してキューを作成することもできます。 この場合、トランザクション キューを作成します。  
+6. <xref:System.Messaging> を使用してトランザクション キューを作成します。 代わりに、MSMQ (メッセージ キュー) または MMC を使用してキューを作成することもできます。 この場合、トランザクション キューを作成します。  
   
-7.  <xref:System.ServiceModel.ServiceHost> を使用して、サービスのサービス ホストを作成します。  
+7. <xref:System.ServiceModel.ServiceHost> を使用して、サービスのサービス ホストを作成します。  
   
-8.  サービス ホストを開いてサービスを使用できるようにします。  
+8. サービス ホストを開いてサービスを使用できるようにします。  
   
 9. サービス ホストを閉じます。  
   
 #### <a name="to-set-up-a-client"></a>クライアントを設定するには  
   
-1.  トランザクションのスコープを作成してトランザクション キューに書き込みます。  
+1. トランザクションのスコープを作成してトランザクション キューに書き込みます。  
   
-2.  使用して WCF クライアントを作成、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツール。  
+2. 使用して WCF クライアントを作成、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツール。  
   
-3.  注文を行います。  
+3. 注文を行います。  
   
-4.  WCF クライアントを閉じます。  
+4. WCF クライアントを閉じます。  
   
 ## <a name="example"></a>例  
   

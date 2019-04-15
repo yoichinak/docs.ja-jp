@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296395"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>チュートリアル: 標準メニュー項目をフォームに用意する
 フォームの標準のメニューを <xref:System.Windows.Forms.MenuStrip> コントロールに提供できます。  
@@ -47,53 +47,53 @@ ms.locfileid: "59094880"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  いう Windows アプリケーション プロジェクトを作成する**StandardMenuForm** (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォームアプリケーション**)。  
+1. いう Windows アプリケーション プロジェクトを作成する**StandardMenuForm** (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォームアプリケーション**)。  
   
-2.  Windows フォーム デザイナーでフォームを選択します。  
+2. Windows フォーム デザイナーでフォームを選択します。  
   
 ## <a name="creating-a-standard-menu"></a>標準メニューを作成します。  
  Windows フォーム デザイナーで自動的に設定できる、<xref:System.Windows.Forms.MenuStrip>標準メニュー項目を制御します。  
   
 #### <a name="to-create-a-standard-menu"></a>標準メニューを作成するには  
   
-1.  **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.MenuStrip>コントロールをフォームにします。  
+1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.MenuStrip>コントロールをフォームにします。  
   
-2.  をクリックして、<xref:System.Windows.Forms.MenuStrip>コントロールのスマート タグ グリフ (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) を選択および**標準項目の挿入**します。  
+2. をクリックして、<xref:System.Windows.Forms.MenuStrip>コントロールのスマート タグ グリフ (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) を選択および**標準項目の挿入**します。  
   
      <xref:System.Windows.Forms.MenuStrip>標準メニュー項目コントロールに設定します。  
   
-3.  をクリックして、**ファイル**メニュー項目をその既定のメニュー項目と対応するアイコンを参照してください。  
+3. をクリックして、**ファイル**メニュー項目をその既定のメニュー項目と対応するアイコンを参照してください。  
   
 ## <a name="creating-a-statusstrip-control"></a>StatusStrip コントロールを作成します。  
  使用して、 <xref:System.Windows.Forms.StatusStrip> Windows フォーム アプリケーションの状態を表示するコントロール。 現在の例では、ユーザーが選択したメニュー項目の表示、<xref:System.Windows.Forms.StatusStrip>コントロール。  
   
 #### <a name="to-create-a-statusstrip-control"></a>StatusStrip コントロールを作成するには  
   
-1.  **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.StatusStrip>コントロールをフォームにします。  
+1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.StatusStrip>コントロールをフォームにします。  
   
      <xref:System.Windows.Forms.StatusStrip>コントロールが自動的にフォームの下部にドッキングします。  
   
-2.  をクリックして、<xref:System.Windows.Forms.StatusStrip>コントロールのドロップダウン ボタンと選択**StatusLabel**を追加する、<xref:System.Windows.Forms.ToolStripStatusLabel>への制御、<xref:System.Windows.Forms.StatusStrip>コントロール。  
+2. をクリックして、<xref:System.Windows.Forms.StatusStrip>コントロールのドロップダウン ボタンと選択**StatusLabel**を追加する、<xref:System.Windows.Forms.ToolStripStatusLabel>への制御、<xref:System.Windows.Forms.StatusStrip>コントロール。  
   
 ## <a name="handling-item-selection"></a>処理項目の選択  
  処理、<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>イベント、ユーザーがメニュー項目を選択するときに応答します。  
   
 #### <a name="to-handle-item-selection"></a>項目の選択を処理するには  
   
-1.  をクリックして、**ファイル**メニュー項目の作成で作成した標準メニュー セクション。  
+1. をクリックして、**ファイル**メニュー項目の作成で作成した標準メニュー セクション。  
   
-2.  **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
+2. **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
   
-3.  ダブルクリックして、<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>イベント。  
+3. ダブルクリックして、<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>イベント。  
   
      Windows フォーム デザイナーのイベント ハンドラーの生成、<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>イベント。  
   
-4.  イベント ハンドラーに次のコードを挿入します。  
+4. イベント ハンドラーに次のコードを挿入します。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  挿入、`UpdateStatus`ユーティリティ メソッドの定義をフォームに設定します。  
+5. 挿入、`UpdateStatus`ユーティリティ メソッドの定義をフォームに設定します。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ ms.locfileid: "59094880"
   
 #### <a name="to-test-your-form"></a>フォームをテストするには  
   
-1.  コンパイルして、フォームを実行するには、f5 キーを押します。  
+1. コンパイルして、フォームを実行するには、f5 キーを押します。  
   
-2.  をクリックして、**ファイル**メニュー項目、メニューを開きます。  
+2. をクリックして、**ファイル**メニュー項目、メニューを開きます。  
   
-3.  **ファイル**メニューで、これを選択する項目のいずれかをクリックします。  
+3. **ファイル**メニューで、これを選択する項目のいずれかをクリックします。  
   
      <xref:System.Windows.Forms.StatusStrip>コントロールは、選択した項目を表示します。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319600"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法: 結合 (Visual Basic) を使用してデータを LINQ を結合します。
 Visual Basic では、`Join`と`Group Join`コレクション間で共通の値に基づく複数のコレクションの内容を結合するための句をクエリします。 これらの値と呼ばれる*キー*値。 リレーショナル データベースの概念に慣れている開発者が認識、 `Join` INNER JOIN 句、`Group Join`として、実際には、左外部結合句。  
@@ -25,9 +25,9 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>サンプル データと型を含むプロジェクトを作成するには  
   
-1.  このトピックのサンプルを実行するには、Visual Studio を開き、新しい Visual Basic コンソール アプリケーション プロジェクトを追加します。 Visual Basic で作成された Module1.vb ファイルをダブルクリックします。  
+1. このトピックのサンプルを実行するには、Visual Studio を開き、新しい Visual Basic コンソール アプリケーション プロジェクトを追加します。 Visual Basic で作成された Module1.vb ファイルをダブルクリックします。  
   
-2.  このトピックで使用中のサンプル、`Person`と`Pet`型と、次のコード例からのデータ。 既定値にこのコードをコピー `Module1` Visual Basic で作成されたモジュール。  
+2. このトピックで使用中のサンプル、`Person`と`Pet`型と、次のコード例からのデータ。 既定値にこのコードをコピー `Module1` Visual Basic で作成されたモジュール。  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -35,7 +35,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Join 句を使用して内部結合を実行します。  
  INNER JOIN によって 2 つのコレクションからデータを結合します。 指定されたキー値に一致する対象のアイテムが含まれます。 その他のコレクションの一致する項目がありません。 いずれかのコレクションからすべての項目が除外されます。  
   
- Visual Basic で LINQ は内部結合を実行するための 2 つのオプションを提供します。 暗黙の結合と明示的な結合します。  
+ Visual basic で LINQ は内部結合を実行するための 2 つのオプションを提供します。 暗黙の結合と明示的な結合します。  
   
  暗黙の結合結合するコレクションの指定、`From`句に一致するキー フィールドを指定して、`Where`句。 Visual Basic は、暗黙的に指定されたキー フィールドに基づいて 2 つのコレクションを結合します。  
   
@@ -43,7 +43,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Join 句を使用して内部結合を実行するには  
   
-1.  次のコードを追加、`Module1`両方暗黙的および明示的な内部結合の例を参照するプロジェクトのモジュール。  
+1. 次のコードを追加、`Module1`両方暗黙的および明示的な内部結合の例を参照するプロジェクトのモジュール。  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group Join 句を使用して左外部結合を実行するには  
   
-1.  次のコードを追加、`Module1`モジュールで、プロジェクトをグループ化された左外部結合とグループに属していないの左外部結合の両方の例を参照してください。  
+1. 次のコードを追加、`Module1`モジュールで、プロジェクトをグループ化された左外部結合とグループに属していないの左外部結合の両方の例を参照してください。  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>複合キーを使用して、結合を実行するには  
   
-1.  次のコードを追加、`Module1`複合キーを使用する結合の例を参照するプロジェクトのモジュール。  
+1. 次のコードを追加、`Module1`複合キーを使用する結合の例を参照するプロジェクトのモジュール。  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,11 +73,11 @@ Visual Basic では、`Join`と`Group Join`コレクション間で共通の値�
   
 #### <a name="to-add-code-to-run-the-examples"></a>例を実行するコードを追加するには  
   
-1.  置換、`Sub Main`で、`Module1`このトピックの例を実行する次のコードで、プロジェクトのモジュール。  
+1. 置換、`Sub Main`で、`Module1`このトピックの例を実行する次のコードで、プロジェクトのモジュール。  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  F5 キーを押して、例を実行します。  
+2. F5 キーを押して、例を実行します。  
   
 ## <a name="see-also"></a>関連項目
 

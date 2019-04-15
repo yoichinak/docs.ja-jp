@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312333"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
 このセクションでは、クライアント アプリケーションの処理、構成、作成、および Windows Communication Foundation (WCF) クライアントを使用する方法、およびクライアント アプリケーションをセキュリティで保護する方法について説明します。  
@@ -20,13 +20,13 @@ ms.locfileid: "59115922"
 ## <a name="using-wcf-client-objects"></a>WCF クライアント オブジェクトの使用  
  クライアント アプリケーションでは、別のアプリケーションと通信する WCF クライアントを使用するマネージ アプリケーションです。 クライアントを作成するには、WCF サービスのアプリケーションには、次の手順が必要です。  
   
-1.  サービス エンドポイントのサービス コントラクト、バインディング、およびアドレス情報を取得します。  
+1. サービス エンドポイントのサービス コントラクト、バインディング、およびアドレス情報を取得します。  
   
-2.  その情報を使用して WCF クライアントを作成します。  
+2. その情報を使用して WCF クライアントを作成します。  
   
-3.  操作を呼び出します。  
+3. 操作を呼び出します。  
   
-4.  WCF クライアント オブジェクトを閉じます。  
+4. WCF クライアント オブジェクトを閉じます。  
   
  この後の各セクションでは、これらの手順について詳しく説明します。また、次の内容についても簡単に説明します。  
   

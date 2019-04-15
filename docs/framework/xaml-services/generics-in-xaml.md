@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221601"
 ---
 # <a name="generics-in-xaml"></a>XAML のジェネリック
 System.Xaml に実装されている .NET Framework XAML サービスでは、CLR のジェネリック型を使用するためのサポートを提供します。 このサポートには、引数の型としてジェネリックの制約を指定して、適切なを呼び出すことによって、制約を適用するが含まれます。`Add`メソッドのジェネリック コレクションの場合。 このトピックを使用して、XAML のジェネリック型の参照の側面について説明します。  
@@ -24,7 +24,7 @@ System.Xaml に実装されている .NET Framework XAML サービスでは、CL
 ## <a name="rules-and-syntax-conventions-for-generics-in-xaml"></a>ルールと XAML のジェネリックの構文表記規則  
  XAML でのジェネリック型する必要があります常として表す、制約付きの汎用的な制約なしのジェネリックは、XAML 型システムまたは XAML ノード ストリームに存在することはありませんし、XAML マークアップで表現できることはできません。 によって参照されているジェネリック型の入れ子にされた型の制約である場合、XAML の属性構文内で参照できるジェネリック`x:TypeArguments`、またはの場合、`x:Type`ジェネリック型の CLR 型参照を提供します。 これは、<xref:System.Xaml.Schema.XamlTypeTypeConverter>クラスの .NET Framework XAML サービスで定義します。  
   
- XAML 属性の構文形式で有効になって<xref:System.Xaml.Schema.XamlTypeTypeConverter>一般的な MSIL を変更します]、[角度を使用する CLR の構文規則の種類と、ジェネリックの制約の角かっこし、制約のコンテナーのかっこを代わりに置き換えられます。 例については、[X:typearguments ディレクティブ](x-typearguments-directive.md)を参照してください。  
+ XAML 属性の構文形式で有効になって<xref:System.Xaml.Schema.XamlTypeTypeConverter>一般的な MSIL を変更します]、[角度を使用する CLR の構文規則の種類と、ジェネリックの制約の角かっこし、制約のコンテナーのかっこを代わりに置き換えられます。 例については、次を参照してください。 [X:typearguments ディレクティブ](x-typearguments-directive.md)します。  
   
 ## <a name="generics-and-xaml-2009-features"></a>ジェネリックと XAML 2009 の機能  
  XAML 2009 を使用する場合、CLR をマップする代わりに基本の共通言語プリミティブの XAML 型を取得する型、使用することができます[XAML 2009 の組み込み型](built-in-types-for-common-xaml-language-primitives.md)内の情報項目として`x:TypeArguments`します。 たとえば、次を宣言できます (表示されませんが、マッピングのプレフィックスが`x`は XAML 2009 の XAML 言語の XAML 名前空間です)。  
@@ -43,6 +43,7 @@ System.Xaml に実装されている .NET Framework XAML サービスでは、CL
  カスタムの Windows Workflow Foundation ワークフロー [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] XAML のジェネリックの使用法をサポートしていません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [x:TypeArguments ディレクティブ](x-typearguments-directive.md)
 - [x:Class ディレクティブ](x-class-directive.md)
 - [共通の XAML 言語プリミティブの組み込み型](built-in-types-for-common-xaml-language-primitives.md)

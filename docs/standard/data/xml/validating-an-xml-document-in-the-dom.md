@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664331"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298423"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証
 既定では、<xref:System.Xml.XmlDocument> クラスは、ドキュメント オブジェクト モデル (DOM) 内の XML ドキュメントを XML スキーマ定義言語 (XSD) スキーマまたはドキュメント型定義 (DTD) に対して検証しません。XML が整形式であることだけが検証されます。  
@@ -29,15 +29,15 @@ ms.locfileid: "54664331"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>XML スキーマ検証型 XmlReader の作成  
  XML スキーマ検証型 <xref:System.Xml.XmlReader> を作成するには、次の手順を実行します。  
   
-1.  新しい <xref:System.Xml.XmlReaderSettings> インスタンスを作成します。  
+1. 新しい <xref:System.Xml.XmlReaderSettings> インスタンスを作成します。  
   
-2.  XML スキーマを <xref:System.Xml.XmlReaderSettings.Schemas%2A> インスタンスの <xref:System.Xml.XmlReaderSettings> プロパティに追加します。  
+2. XML スキーマを <xref:System.Xml.XmlReaderSettings.Schemas%2A> インスタンスの <xref:System.Xml.XmlReaderSettings> プロパティに追加します。  
   
-3.  `Schema` を <xref:System.Xml.XmlReaderSettings.ValidationType%2A> として指定します。  
+3. `Schema` を <xref:System.Xml.XmlReaderSettings.ValidationType%2A> として指定します。  
   
-4.  オプションとして、検証中に検出したスキーマ検証エラーおよび警告を処理する <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> と <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> を指定します。  
+4. オプションとして、検証中に検出したスキーマ検証エラーおよび警告を処理する <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> と <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> を指定します。  
   
-5.  最後に、<xref:System.Xml.XmlReaderSettings> オブジェクトを、スキーマ検証型 <xref:System.Xml.XmlReader.Create%2A> を作成する <xref:System.Xml.XmlReader> クラスの <xref:System.Xml.XmlReader> メソッドに、XML ドキュメントと共に渡します。  
+5. 最後に、<xref:System.Xml.XmlReaderSettings> オブジェクトを、スキーマ検証型 <xref:System.Xml.XmlReader.Create%2A> を作成する <xref:System.Xml.XmlReader> クラスの <xref:System.Xml.XmlReader> メソッドに、XML ドキュメントと共に渡します。  
   
 ### <a name="example"></a>例  
  次のコード サンプルでは、スキーマ検証型 <xref:System.Xml.XmlReader> が DOM に読み込まれた XML データを検証します。 無効な変更を加えられた後、XML ドキュメントが再検証され、スキーマ検証エラーが発生します。 最後に、エラーの 1 つが修正された後、XML ドキュメントの一部が部分的に検証されます。  

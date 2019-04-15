@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312567"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -100,11 +100,11 @@ ms.locfileid: "59099782"
 ### <a name="settings-serialization"></a>設定のシリアル化  
  ときに<xref:System.Configuration.LocalFileSettingsProvider>をディスクに設定を保存する必要があります、次の操作を実行します。  
   
-1.  リフレクションを使用して、すべてで定義されたプロパティを調べて、<xref:System.Configuration.ApplicationSettingsBase>派生クラスでいずれかで適用されるものを見つける<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>します。  
+1. リフレクションを使用して、すべてで定義されたプロパティを調べて、<xref:System.Configuration.ApplicationSettingsBase>派生クラスでいずれかで適用されるものを見つける<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>します。  
   
-2.  プロパティをディスクにシリアル化します。 最初に呼び出すしよう、<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>または<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>の種類の関連付けられた<xref:System.ComponentModel.TypeConverter>。 この呼び出しが失敗すると、代わりに XML シリアル化を使用します。  
+2. プロパティをディスクにシリアル化します。 最初に呼び出すしよう、<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>または<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>の種類の関連付けられた<xref:System.ComponentModel.TypeConverter>。 この呼び出しが失敗すると、代わりに XML シリアル化を使用します。  
   
-3.  設定の属性に基づいて、どの設定がどのファイルに指定されているかを判断します。  
+3. 設定の属性に基づいて、どの設定がどのファイルに指定されているかを判断します。  
   
  使用することができます独自設定クラスを実装する場合、<xref:System.Configuration.SettingsSerializeAsAttribute>バイナリまたはカスタムのシリアル化を使用するかの設定をマークする、<xref:System.Configuration.SettingsSerializeAs>列挙体。 コードで設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   

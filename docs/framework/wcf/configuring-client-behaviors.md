@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: bf65844cda195847989d1eb8ef752fe87c9de22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193656"
 ---
 # <a name="configuring-client-behaviors"></a>クライアントの動作の構成
 Windows Communication Foundation (WCF) は、2 つの方法で動作を構成します--で定義されている動作の構成を参照して、`<behavior>`セクションのクライアント アプリケーション構成ファイル – またはプログラムで、呼び出し元。アプリケーション。 このトピックでは、両方の方法について説明します。  
@@ -52,4 +52,5 @@ Windows Communication Foundation (WCF) は、2 つの方法で動作を構成し
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>関連項目
-- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+
+- [\<<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

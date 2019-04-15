@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295433"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>方法: フェデレーション サービスで資格情報を設定する
 Windows Communication Foundation (WCF) では、フェデレーション サービスを作成する、次の主な手順で構成されます。  
   
-1.  <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインディングの構成。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。  
+1. <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインディングの構成。 適切なバインディングを作成する方法の詳細については、次を参照してください。[方法。WSFederationHttpBinding を作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)です。  
   
-2.  サービスに提示される発行済みトークンの認証方法を制御する <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> の構成。  
+2. サービスに提示される発行済みトークンの認証方法を制御する <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> の構成。  
   
  このトピックでは、2 番目の手順について詳しく説明します。 フェデレーション サービスの動作方法の詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>コードで IssuedTokenServiceCredential のプロパティを設定するには  
   
-1.  <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> クラスの <xref:System.ServiceModel.Description.ServiceCredentials> プロパティを使用して、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> インスタンスへの参照を返します。 このプロパティは、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスの <xref:System.ServiceModel.ServiceHostBase> プロパティからアクセスされます。  
+1. <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> クラスの <xref:System.ServiceModel.Description.ServiceCredentials> プロパティを使用して、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> インスタンスへの参照を返します。 このプロパティは、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスの <xref:System.ServiceModel.ServiceHostBase> プロパティからアクセスされます。  
   
-2.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> カードのように自己発行されるトークンを認証する場合は、`true` プロパティを [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。 既定値は `false` です。  
+2. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> カードのように自己発行されるトークンを認証する場合は、`true` プロパティを [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。 既定値は `false` です。  
   
-3.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティによって返されるコレクションに <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラスのインスタンスを設定します。 各インスタンスは、サービスが認証を行うトークンの発行者を表します。  
+3. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティによって返されるコレクションに <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラスのインスタンスを設定します。 各インスタンスは、サービスが認証を行うトークンの発行者を表します。  
   
     > [!NOTE]
     >  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> プロパティによって返されるクライアント側のコレクションとは異なり、既知の証明書コレクションはキー付きのコレクションではありません。 指定した証明書が発行するトークンは、発行済みトークンを含むメッセージを送信したクライアントのアドレスとは無関係に、サービスによって受け入れられます (その他の制約については以下で説明します)。  
   
-4.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列挙値のいずれかに設定します。 これは、コードでのみ設定することができます。 既定値は <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> です。  
+4. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> プロパティを <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列挙値のいずれかに設定します。 これは、コードでのみ設定することができます。 既定値は <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A> です。  
   
-5.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> プロパティが <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> に設定されている場合、カスタム <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> プロパティに割り当てます。  
+5. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> プロパティが <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> に設定されている場合、カスタム <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> プロパティに割り当てます。  
   
-6.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> が `ChainTrust` または `PeerOrChainTrust` に設定されている場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列挙値にある適切な値に設定します。 失効モードは `PeerTrust` または `Custom` 検証モードでは使用されないことに注意してください。  
+6. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> が `ChainTrust` または `PeerOrChainTrust` に設定されている場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列挙値にある適切な値に設定します。 失効モードは `PeerTrust` または `Custom` 検証モードでは使用されないことに注意してください。  
   
-7.  必要に応じて、カスタム <xref:System.IdentityModel.Tokens.SamlSerializer> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> プロパティに割り当てます。 カスタム SAML (Security Assertions Markup Language) アサーションの解析などには、カスタム SAML シリアライザーが必要です。  
+7. 必要に応じて、カスタム <xref:System.IdentityModel.Tokens.SamlSerializer> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> プロパティに割り当てます。 カスタム SAML (Security Assertions Markup Language) アサーションの解析などには、カスタム SAML シリアライザーが必要です。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>構成で IssuedTokenServiceCredential のプロパティを設定するには  
   
-1.  作成、`<issuedTokenAuthentication>`要素の子として、<`serviceCredentials`> 要素。  
+1. 作成、`<issuedTokenAuthentication>`要素の子として、<`serviceCredentials`> 要素。  
   
-2.  `allowUntrustedRsaIssuers` カードのように自己発行されるトークンを認証する場合は、`<issuedTokenAuthentication>` 要素の `true` 属性を [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。  
+2. `allowUntrustedRsaIssuers` カードのように自己発行されるトークンを認証する場合は、`<issuedTokenAuthentication>` 要素の `true` 属性を [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。  
   
-3.  `<knownCertificates>` 要素の子要素として `<issuedTokenAuthentication>` 要素を作成します。  
+3. `<knownCertificates>` 要素の子要素として `<issuedTokenAuthentication>` 要素を作成します。  
   
-4.  `<add>` 要素の子要素として 0 個以上の `<knownCertificates>` 要素を作成し、`storeLocation`、`storeName`、`x509FindType`、および `findValue` 属性を使用して証明書の検索方法を指定します。  
+4. `<add>` 要素の子要素として 0 個以上の `<knownCertificates>` 要素を作成し、`storeLocation`、`storeName`、`x509FindType`、および `findValue` 属性を使用して証明書の検索方法を指定します。  
   
-5.  必要に応じて、設定、`samlSerializer`の属性、<`issuedTokenAuthentication`> 要素、カスタムの型名を<xref:System.IdentityModel.Tokens.SamlSerializer>クラス。  
+5. 必要に応じて、設定、`samlSerializer`の属性、<`issuedTokenAuthentication`> 要素、カスタムの型名を<xref:System.IdentityModel.Tokens.SamlSerializer>クラス。  
   
 ## <a name="example"></a>例  
  次の例では、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> のプロパティをコードで設定しています。  

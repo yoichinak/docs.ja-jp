@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 81a442cc39608e6b24db1f0403e85ee627fc4244
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376371"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298332"
 ---
 # <a name="brush-transformation-overview"></a>ブラシの変換の概要
 Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.Brush.Transform%2A>と<xref:System.Windows.Media.Brush.RelativeTransform%2A>します。 これらのプロパティを使うと、ブラシの内容を回転、拡大縮小、傾斜、移動できます。 このトピックでは、これら 2 つのプロパティの違いについて説明し、それらの使用例を示します。  
@@ -29,15 +29,15 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
   
  ブラシの変換を適用する<xref:System.Windows.Media.Brush.RelativeTransform%2A>プロパティ、その出力が塗りつぶされる領域にマップされる前に、その変換がブラシに適用されます。 次の一覧では、ブラシの内容が処理および変換される順序を説明します。  
   
-1.  ブラシの内容を処理します。 <xref:System.Windows.Media.GradientBrush>、これは、グラデーションの領域を決定することを意味します。 <xref:System.Windows.Media.TileBrush>、<xref:System.Windows.Media.TileBrush.Viewbox%2A>にマップされて、<xref:System.Windows.Media.TileBrush.Viewport%2A>します。 これがブラシの出力になります。  
+1. ブラシの内容を処理します。 <xref:System.Windows.Media.GradientBrush>、これは、グラデーションの領域を決定することを意味します。 <xref:System.Windows.Media.TileBrush>、<xref:System.Windows.Media.TileBrush.Viewbox%2A>にマップされて、<xref:System.Windows.Media.TileBrush.Viewport%2A>します。 これがブラシの出力になります。  
   
-2.  ブラシの出力を 1 x 1 の変換四角形に投影します。  
+2. ブラシの出力を 1 x 1 の変換四角形に投影します。  
   
-3.  ブラシの適用<xref:System.Windows.Media.Brush.RelativeTransform%2A>があるいずれかの場合。  
+3. ブラシの適用<xref:System.Windows.Media.Brush.RelativeTransform%2A>があるいずれかの場合。  
   
-4.  変換された出力を描画領域に投影します。  
+4. 変換された出力を描画領域に投影します。  
   
-5.  ブラシの適用<xref:System.Windows.Media.Transform>があるいずれかの場合。  
+5. ブラシの適用<xref:System.Windows.Media.Transform>があるいずれかの場合。  
   
  <xref:System.Windows.Media.Brush.RelativeTransform%2A>ブラシの出力は 1 x 1 サイズの四角形、変換の中心にマップされ、相対オフセット値が表示されるときに適用されます。 使用した場合など、<xref:System.Windows.Media.RotateTransform>ブラシの回転の中心の周りに 45 度を出力、指定、 <xref:System.Windows.Media.RotateTransform> 、 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 0.5 と<xref:System.Windows.Media.RotateTransform.CenterY%2A>0.5 の。  
   
@@ -61,19 +61,19 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
   
  イメージがゆがんで、たとえに注意してください、ブラシの<xref:System.Windows.Media.TileBrush.Stretch%2A>に設定された<xref:System.Windows.Media.Stretch.UniformToFill>します。 相対変換がブラシの後に適用されるためです<xref:System.Windows.Media.TileBrush.Viewbox%2A>にマップされてその<xref:System.Windows.Media.TileBrush.Viewport%2A>します。 次の一覧では、処理の各ステップについて説明します。  
   
-1.  ブラシの内容をプロジェクト (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 基本タイルに (<xref:System.Windows.Media.TileBrush.Viewport%2A>) ブラシを使用して<xref:System.Windows.Media.TileBrush.Stretch%2A>設定します。  
+1. ブラシの内容をプロジェクト (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 基本タイルに (<xref:System.Windows.Media.TileBrush.Viewport%2A>) ブラシを使用して<xref:System.Windows.Media.TileBrush.Stretch%2A>設定します。  
   
      ![Viewport に合わせて Viewbox を拡大する](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  基本タイルを 1 x 1 の変換四角形に投影します。  
+2. 基本タイルを 1 x 1 の変換四角形に投影します。  
   
      ![Viewport を変換四角形にマップする](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  適用、<xref:System.Windows.Media.RotateTransform>します。  
+3. 適用、<xref:System.Windows.Media.RotateTransform>します。  
   
      ![相対変換を適用する](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  変換された基本タイルを描画領域に投影します。  
+4. 変換された基本タイルを描画領域に投影します。  
   
      ![変換されたブラシを出力領域に投影する](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   
@@ -98,6 +98,7 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
  この例は、さらに大きなサンプルの一部です。 完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」をご覧ください。 ブラシについて詳しくは、「[WPF のブラシの概要](wpf-brushes-overview.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.Brush.Transform%2A>
 - <xref:System.Windows.Media.Brush.RelativeTransform%2A>
 - <xref:System.Windows.Media.Transform>

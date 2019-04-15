@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336552"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成
 アプリケーションを与えることができます<xref:System.Windows.Forms.ToolStrip>から派生した独自のクラスを記述することで、プロフェッショナルな外観と動作を制御、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型。  
@@ -45,22 +45,22 @@ ms.locfileid: "59115792"
   
 #### <a name="to-create-the-control-library-project"></a>コントロール ライブラリ プロジェクトを作成するには  
   
-1.  という名前の新しい Windows コントロール ライブラリ プロジェクトを作成`StackViewLibrary`です。  
+1. という名前の新しい Windows コントロール ライブラリ プロジェクトを作成`StackViewLibrary`です。  
   
-2.  **ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。  
+2. **ソリューション エクスプ ローラー**、選択した言語に応じて"UserControl1.cs"または「[usercontrol1.vb]」をという名前のソース ファイルを削除することによって、プロジェクトの既定のコントロールを削除します。  
   
      詳細については、「[方法 :削除、削除、および項目を除外](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))します。  
   
-3.  新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
+3. 新しい追加<xref:System.Windows.Forms.UserControl>項目を**StackViewLibrary**プロジェクト。 新しいソース ファイルの基本の名前を付けます`StackView`します。  
   
 ## <a name="designing-the-stackview-control"></a>StackView コントロールの設計  
  `StackView`コントロールが 1 つの子による複合コントロール<xref:System.Windows.Forms.ToolStrip>コントロール。 複合コントロールの詳細については、次を参照してください。[カスタム コントロールのさまざまな](varieties-of-custom-controls.md)します。  
   
 #### <a name="to-design-the-stackview-control"></a>StackView コントロールを設計するには  
   
-1.  **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.ToolStrip>コントロールをデザイン画面。  
+1. **ツールボックス**、ドラッグ、<xref:System.Windows.Forms.ToolStrip>コントロールをデザイン画面。  
   
-2.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolStrip>次の表に従って、コントロールのプロパティ。  
+2. **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolStrip>次の表に従って、コントロールのプロパティ。  
   
     |プロパティ|値|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ ms.locfileid: "59115792"
     |[間隔]|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  Windows フォーム デザイナーでクリックして、<xref:System.Windows.Forms.ToolStrip>コントロールの**追加**ボタンをクリックし、追加、<xref:System.Windows.Forms.ToolStripButton>を`stackStrip`コントロール。  
+3. Windows フォーム デザイナーでクリックして、<xref:System.Windows.Forms.ToolStrip>コントロールの**追加**ボタンをクリックし、追加、<xref:System.Windows.Forms.ToolStripButton>を`stackStrip`コントロール。  
   
-4.  **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolStripButton>次の表に従って、コントロールのプロパティ。  
+4. **プロパティ**ウィンドウで、設定、<xref:System.Windows.Forms.ToolStripButton>次の表に従って、コントロールのプロパティ。  
   
     |プロパティ|値|  
     |--------------|-----------|  
@@ -91,7 +91,7 @@ ms.locfileid: "59115792"
     |テキスト|**メール**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  詳細の 3 つの手順 7.<xref:System.Windows.Forms.ToolStripButton>コントロール。  
+5. 詳細の 3 つの手順 7.<xref:System.Windows.Forms.ToolStripButton>コントロール。  
   
      コントロールの名前を付けます`calendarStackButton`、 `contactsStackButton`、および`tasksStackButton`します。 値を設定、<xref:System.Windows.Forms.Control.Text%2A>プロパティを**カレンダー**、**連絡先**、および**タスク**、それぞれします。  
   
@@ -100,27 +100,26 @@ ms.locfileid: "59115792"
   
 #### <a name="to-handle-events"></a>イベントを処理するには  
   
-1.  Windows フォーム デザイナーで、選択、`StackView`コントロール。  
+1. Windows フォーム デザイナーで、選択、`StackView`コントロール。  
   
-2.  **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
+2. **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
   
-3.  Load イベントをダブルクリックして、`StackView_Load`イベント ハンドラー。  
+3. Load イベントをダブルクリックして、`StackView_Load`イベント ハンドラー。  
   
-4.  
-  `StackView_Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。  
+4. `StackView_Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  Windows フォーム デザイナーで、選択、`mailStackButton`コントロール。  
+5. Windows フォーム デザイナーで、選択、`mailStackButton`コントロール。  
   
-6.  **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
+6. **[プロパティ]** ウィンドウで、**[イベント]** をクリックします。  
   
-7.  クリック イベントをダブルクリックします。  
+7. クリック イベントをダブルクリックします。  
   
      Windows フォーム デザイナーで生成する、`mailStackButton_Click`イベント ハンドラー。  
   
-8.  名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
+8. 名前の変更、`mailStackButton_Click`イベント ハンドラーを`stackButton_Click`します。  
   
      詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。  
   
@@ -140,12 +139,12 @@ ms.locfileid: "59115792"
   
 #### <a name="to-define-icons"></a>アイコンを定義する  
   
-1.  コード エディターには、次のコードを挿入、`StackView`クラスの定義。 このコードでのビットマップは初期化、<xref:System.Windows.Forms.ToolStripButton>アイコン。  
+1. コード エディターには、次のコードを挿入、`StackView`クラスの定義。 このコードでのビットマップは初期化、<xref:System.Windows.Forms.ToolStripButton>アイコン。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  呼び出しを追加、`InitializeImages`メソッドで、`StackView`クラスのコンス トラクター。  
+2. 呼び出しを追加、`InitializeImages`メソッドで、`StackView`クラスのコンス トラクター。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -155,14 +154,14 @@ ms.locfileid: "59115792"
   
 #### <a name="to-implement-a-custom-renderer"></a>カスタム レンダラーを実装するには  
   
-1.  次のコードを挿入、`StackView`定義を制御します。  
+1. 次のコードを挿入、`StackView`定義を制御します。  
   
      定義、`StackRenderer`クラスでオーバーライドされます、 <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>、 <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>、および<xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground>カスタムの外観を生成するメソッド。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  `StackView`コントロールのコンス トラクターの新しいインスタンスを作成、`StackRenderer`クラスし、このインスタンスに割り当てる、`stackStrip`コントロールの<xref:System.Windows.Forms.ToolStrip.Renderer%2A>プロパティ。  
+2. `StackView`コントロールのコンス トラクターの新しいインスタンスを作成、`StackRenderer`クラスし、このインスタンスに割り当てる、`stackStrip`コントロールの<xref:System.Windows.Forms.ToolStrip.Renderer%2A>プロパティ。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -172,9 +171,9 @@ ms.locfileid: "59115792"
   
 #### <a name="to-test-the-stackview-control"></a>StackView コントロールをテストするには  
   
-1.  プロジェクトをビルドし、開始の f5 キーを押して、 **UserControl Test Container**します。  
+1. プロジェクトをビルドし、開始の f5 キーを押して、 **UserControl Test Container**します。  
   
-2.  ボタンの上にポインターを移動、`StackView`を制御して、選択した状態の外観を表示するボタンをクリックします。  
+2. ボタンの上にポインターを移動、`StackView`を制御して、選択した状態の外観を表示するボタンをクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、Office XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールを作成しました。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  

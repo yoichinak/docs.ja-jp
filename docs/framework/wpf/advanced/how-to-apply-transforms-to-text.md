@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208671"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>方法: テキストに変換を適用する
 変換を利用すると、アプリケーションのテキストの表示を変えることができます。 次の例のテキストの表示に影響を与えるさまざまな種類の描画変換を使用して、<xref:System.Windows.Controls.TextBlock>コントロール。  
@@ -62,7 +62,8 @@ ms.locfileid: "58126124"
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>シャドウ効果を提供するための豊富な機能を提供します。 詳細については、[テキスト シャドウを伴って作成](how-to-create-text-with-a-shadow.md)を参照してください。  
+>  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>シャドウ効果を提供するための豊富な機能を提供します。 詳細については、次を参照してください。[テキスト シャドウを伴って作成](how-to-create-text-with-a-shadow.md)です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アニメーションをテキストに適用する](how-to-apply-animations-to-text.md)

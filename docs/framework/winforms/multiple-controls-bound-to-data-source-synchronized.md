@@ -1,5 +1,5 @@
 ---
-title: '方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持'
+title: '方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170340"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ
 Windows フォームでのデータ バインディングを使用する場合に多くの場合は、複数のコントロールが、同じデータ ソースにバインドされます。 場合によっては、コントロールのバインドされたプロパティが相互およびデータ ソースとの同期を維持するために余分な手順を実行するために必要な場合があります。 次の手順では、2 つの状況で必要があります。  
   
 -   データ ソースが実装していない場合<xref:System.ComponentModel.IBindingList>、して、生成<xref:System.ComponentModel.IBindingList.ListChanged>の種類のイベント<xref:System.ComponentModel.ListChangedType.ItemChanged>します。  
@@ -41,7 +41,8 @@ Windows フォームでのデータ バインディングを使用する場合�
 -   使用して、フォーム、<xref:System.Windows.Forms.Form.Load>イベントを処理済みとへの呼び出し、`InitializeControlsAndDataSource`メソッドから、フォームの例では<xref:System.Windows.Forms.Form.Load>イベント ハンドラー。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
+
+- [方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows フォーム データ バインディングの変更通知](change-notification-in-windows-forms-data-binding.md)
 - [データ連結に関連するインターフェイス](interfaces-related-to-data-binding.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

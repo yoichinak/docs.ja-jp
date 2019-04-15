@@ -1,5 +1,5 @@
 ---
-title: '方法: IListSource インターフェイスを実装します。'
+title: '方法: IListSource インターフェイスを実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: ee63d092eb14bd5c8ab928852e02d30e653baf48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713177"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159784"
 ---
-# <a name="how-to-implement-the-ilistsource-interface"></a>方法: IListSource インターフェイスを実装します。
+# <a name="how-to-implement-the-ilistsource-interface"></a>方法: IListSource インターフェイスを実装する
 実装、<xref:System.ComponentModel.IListSource>インターフェイスを実装しないバインド可能なクラスを作成する<xref:System.Collections.IList>代わりに別の場所からリストを提供します。  
   
 ## <a name="example"></a>例  
@@ -39,6 +39,7 @@ ms.locfileid: "57713177"
 -   System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ComponentModel.IListSource>
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>

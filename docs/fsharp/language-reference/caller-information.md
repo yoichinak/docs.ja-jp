@@ -2,12 +2,12 @@
 title: 呼び出し元情報
 description: 呼び出し元情報の引数属性を使用して、メソッドから呼び出し元情報を取得する方法について説明します。
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890307"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316155"
 ---
 # <a name="caller-information"></a>呼び出し元情報
 
@@ -28,24 +28,22 @@ ms.locfileid: "58890307"
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>Remarks
 
-呼び出し元情報属性は、省略可能なパラメーターにのみ適用できます。 省略可能な各パラメーターに対して明示的な値を指定する必要があります。 呼び出し元情報属性には、呼び出し元情報属性で修飾された省略可能な各パラメーターの適切な値を記述するコンパイラが発生します。
+呼び出し元情報属性は、省略可能なパラメーターにのみ適用できます。 呼び出し元情報属性には、呼び出し元情報属性で修飾された省略可能な各パラメーターの適切な値を記述するコンパイラが発生します。
 
 呼び出し元情報の値は、コンパイル時に中間言語 (IL) 内にリテラルとして出力されます。 結果とは異なり、 [StackTrace](/dotnet/api/system.diagnostics.stacktrace)結果の例外のプロパティに難読化による影響はありません。
 

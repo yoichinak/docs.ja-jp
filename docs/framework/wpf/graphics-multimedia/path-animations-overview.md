@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182469"
 ---
 # <a name="path-animations-overview"></a>パス アニメーションの概要
 <a name="introduction"></a>このトピックでは、ジオメトリック パスを使用して出力値を生成できるパス アニメーションの概要を説明します。 パス アニメーションは、複雑なパスに沿ってオブジェクトを移動および回転させるときに便利です。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、、[アニメーションの概要](animation-overview.md)を参照してください。  
+ このトピックを理解するのには理解しておく[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アニメーション機能。 アニメーションの機能の概要については、次を参照してください。、[アニメーションの概要](animation-overview.md)します。  
   
- 使用するため、<xref:System.Windows.Media.PathGeometry>オブジェクトをパス アニメーションを定義する知識も必要<xref:System.Windows.Media.PathGeometry>とさまざまな種類の<xref:System.Windows.Media.PathSegment>オブジェクト。 詳細については、、[ジオメトリの概要](geometry-overview.md)を参照してください。  
+ 使用するため、<xref:System.Windows.Media.PathGeometry>オブジェクトをパス アニメーションを定義する知識も必要<xref:System.Windows.Media.PathGeometry>とさまざまな種類の<xref:System.Windows.Media.PathSegment>オブジェクト。 詳細については、次を参照してください。、[ジオメトリの概要](geometry-overview.md)します。  
   
 <a name="what_is_a_path_animation"></a>   
 ## <a name="what-is-a-path-animation"></a>パス アニメーションとは  
@@ -35,9 +35,9 @@ ms.locfileid: "57367857"
  [!code-csharp[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/CSharp/MatrixAnimationUsingPathDoesRotateWithTangentExample.cs#matrixanimationusingpathdoesrotatewithtangentwholepage)]
  [!code-vb[PathAnimationGallery_procedural_snip#MatrixAnimationUsingPathDoesRotateWithTangentWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PathAnimationGallery_procedural_snip/VisualBasic/MatrixAnimationUsingPathDoesRotateWithTangentExample.vb#matrixanimationusingpathdoesrotatewithtangentwholepage)]  
   
- 使用されるパスの構文の詳細については、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例を参照してください、[パス マークアップ構文](path-markup-syntax.md)の概要。 サンプル全体については、[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)を参照してください。  
+ 使用されるパスの構文の詳細については、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例を参照してください、[パス マークアップ構文](path-markup-syntax.md)の概要。 サンプル全体については、次を参照してください。[パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)します。  
   
- パス アニメーションをプロパティに適用するにを使用して、<xref:System.Windows.Media.Animation.Storyboard>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード、またはを使用して、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>コード内のメソッド。 作成するパス アニメーションを使用することもできます、<xref:System.Windows.Media.Animation.AnimationClock>を 1 つまたは複数のプロパティに適用します。 アニメーションを適用するためのさまざまな方法の詳細については、[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)を参照してください。  
+ パス アニメーションをプロパティに適用するにを使用して、<xref:System.Windows.Media.Animation.Storyboard>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード、またはを使用して、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>コード内のメソッド。 作成するパス アニメーションを使用することもできます、<xref:System.Windows.Media.Animation.AnimationClock>を 1 つまたは複数のプロパティに適用します。 アニメーションを適用するためのさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
   
 <a name="animation_types"></a>   
 ## <a name="path-animation-types"></a>パス アニメーションの種類  
@@ -45,11 +45,11 @@ ms.locfileid: "57367857"
   
  パス アニメーション クラスが属している、<xref:System.Windows.Media.Animation>名前空間と、次の名前付け規則。  
   
- *\<Type>* `AnimationUsingPath`  
+ *\<型 >* `AnimationUsingPath`  
   
  ここで、*\<Type>* は、クラスがアニメーション化する値の型です。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、次のパス アニメーション クラスが用意されています。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次のパスのアニメーション クラスを提供します。  
   
 |プロパティの型|対応するパス アニメーション クラス|例|  
 |-------------------|----------------------------------------|-------------|  
@@ -90,6 +90,7 @@ ms.locfileid: "57367857"
  使用されるパスの構文の詳細については、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例を参照してください、[パス マークアップ構文](path-markup-syntax.md)の概要。  
   
 ## <a name="see-also"></a>関連項目
+
 - [パス アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [パス マークアップ構文](path-markup-syntax.md)
 - [パス アニメーションに関する「方法」トピック](path-animation-how-to-topics.md)

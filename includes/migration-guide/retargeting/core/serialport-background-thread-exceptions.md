@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 448a6160bd64143000c00d21a9ddecdc61b53475
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 81b104d8e5a9ccc8e790c3b16e4837cfa0c0def5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236435"
 ---
 ### <a name="serialport-background-thread-exceptions"></a>SerialPort バックグラウンド スレッドの例外
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760311"
 |Version|4.7.1|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.IO.Ports.SerialPort?displayProperty=nameWithType></li></ul>|
-

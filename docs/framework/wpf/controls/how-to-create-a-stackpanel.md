@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-ms.openlocfilehash: 46b037e3f1626e77a61dca787b705a63ccd28ba0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bcf6decff2fbc012b5f8b62794f0d7b2cd9f29fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121811"
 ---
 # <a name="how-to-create-a-stackpanel"></a>方法: StackPanel を作成する
 この例は、作成する方法を示します、<xref:System.Windows.Controls.StackPanel>します。  
@@ -44,6 +44,7 @@ ms.locfileid: "57360443"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.StackPanel>
 - [パネルの概要](panels-overview.md)
-- [方法トピック](stackpanel-how-to-topics.md)
+- [方法のトピック](stackpanel-how-to-topics.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302570"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# コンパイラ オプション)
 指定されたリソースを出力ファイルに埋め込みます。  
@@ -37,7 +37,7 @@ ms.locfileid: "54725702"
  `accessibility-modifier` (省略可能)  
  リソースのアクセシビリティ。パブリックまたはプライベートです。 既定値はパブリックです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) を使用すると、リソースがアセンブリにリンクされ、リソース ファイルは出力ファイルに追加されません。  
   
  既定では、リソースは、C# コンパイラを使用して作成されるときにアセンブリ内でパブリックになります。 リソースをプライベートにするには、アクセシビリティ修飾子として `private` を指定します。 `public` と `private` 以外のアクセシビリティは使用できません。  
@@ -50,13 +50,13 @@ ms.locfileid: "54725702"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトにリソース ファイルを追加します。  
+1. プロジェクトにリソース ファイルを追加します。  
   
-2.  **ソリューション エクスプローラー**で、埋め込むファイルを選択します。  
+2. **ソリューション エクスプローラー**で、埋め込むファイルを選択します。  
   
-3.  選択したファイルの **[プロパティ]** ウィンドウで、**[ビルド アクション]** を選択します。  
+3. 選択したファイルの **[プロパティ]** ウィンドウで、**[ビルド アクション]** を選択します。  
   
-4.  **[ビルド アクション]** を **[埋め込まれたリソース]** に設定します。  
+4. **[ビルド アクション]** を **[埋め込まれたリソース]** に設定します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.FileProperties2.BuildAction%2A>」を参照してください。  
   

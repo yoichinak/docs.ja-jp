@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197653"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -114,7 +114,6 @@ public class MyItemType
 
 追加情報:[A3075:XML での DTD 処理が安全ではありません](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350:脆弱な暗号アルゴリズムを使用しないでください
 
 時間の経過と共に攻撃が高度になり、暗号アルゴリズムが弱体化します。 この暗号アルゴリズムの型と用途によっては、暗号の力がさらに弱まり、攻撃者が暗号化メッセージを読んだり、改ざんしたり、電子署名を偽造したり、ハッシュしたコンテンツを改ざんしたり、その他の面でこのアルゴリズムを基礎とする暗号システムを攻撃したりすることを許します。 暗号化には、AES アルゴリズムを利用します (AES-256、AES-192、AES-128 が許容されます)。キーの長さは 128 ビット以上にします。 ハッシュには、SHA-2 512、SHA-2 384、SHA-2 256 などの SHA-2 群のハッシュ関数を利用します。
@@ -134,5 +133,3 @@ public class MyItemType
 **重要度:** 警告
 
 追加情報:[CA5351:破られた暗号アルゴリズムを使用しないでください](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

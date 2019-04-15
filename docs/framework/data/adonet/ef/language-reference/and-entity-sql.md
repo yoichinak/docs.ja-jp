@@ -2,12 +2,12 @@
 title: '&amp;&amp; (および)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: f0b20a8c1960bd6191a35c426dbea45c30ccc1c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308433"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (および)(Entity SQL)
 両方の式が `true` の場合は `true`を返します。それ以外の場合は `false` または `NULL`を返します。  
@@ -38,9 +38,9 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、AND 演算子の使い方を示しています。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   

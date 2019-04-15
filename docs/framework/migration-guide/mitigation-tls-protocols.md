@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abfbea052072f0b90c9d018b520b67878d235701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70fab3dc418e3eb92e39a7c2b1365e8582b81834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125095"
 ---
 # <a name="mitigation-tls-protocols"></a>軽減策:TLS プロトコル
 .NET Framework 4.6 から、<xref:System.Net.ServicePointManager?displayProperty=nameWithType> および <xref:System.Net.Security.SslStream?displayProperty=nameWithType> クラスで次の 3 つのプロトコルのいずれかを使用できるようになりました:Tls1.0、Tls1.1、Tls 1.2。 SSL3.0 プロトコルと RC4 の暗号化はサポートされていません。  
@@ -43,4 +43,5 @@ ms.locfileid: "54506811"
  ただし、既定の動作を除外することは、アプリケーションの安全性を低下させるので推奨されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [変更の再ターゲット](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

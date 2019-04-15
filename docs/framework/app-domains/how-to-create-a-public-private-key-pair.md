@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297838"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>方法: 公開キーと秘密キーのキー ペアを作成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "54653919"
 
 ## <a name="to-create-a-key-pair"></a>キー ペアを作成するには
 
-1.  コマンド プロンプトに次のコマンドを入力します。
+1. コマンド プロンプトに次のコマンドを入力します。
 
      **sn –k** \<*ファイル名*>
 

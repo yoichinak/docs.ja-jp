@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181702"
 ---
 # <a name="how-to-enable-a-command"></a>方法: コマンドを有効にする
-次の例でコマンド処理を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  関連付ける方法の例を<xref:System.Windows.Input.RoutedCommand>を<xref:System.Windows.Controls.Button>、作成、<xref:System.Windows.Input.CommandBinding>を実装するイベント ハンドラーを作成し、 <xref:System.Windows.Input.RoutedCommand>。  コマンド実行の詳細については、、[コマンド実行の概要](commanding-overview.md)を参照してください。  
+次の例でコマンド処理を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  関連付ける方法の例を<xref:System.Windows.Input.RoutedCommand>を<xref:System.Windows.Controls.Button>、作成、<xref:System.Windows.Input.CommandBinding>を実装するイベント ハンドラーを作成し、 <xref:System.Windows.Input.RoutedCommand>。  コマンド実行の詳細については、次を参照してください。、[コマンド実行の概要](commanding-overview.md)します。  
   
 ## <a name="example"></a>例  
  コードの最初のセクションを作成、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]から構成される、<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.StackPanel>、し、作成、<xref:System.Windows.Input.CommandBinding>とコマンド ハンドラーに関連付ける、 <xref:System.Windows.Input.RoutedCommand>。  
@@ -40,4 +40,5 @@ ms.locfileid: "57355065"
  [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [コマンド実行の概要](commanding-overview.md)

@@ -1,29 +1,29 @@
 ---
-title: '方法: COM + サービス モデル構成ツールを使用します。'
+title: '方法: COM+ サービス モデル構成ツールを使用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322590"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM + サービス モデル構成ツールを使用します。
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
   
 > [!NOTE]
->  以下の各作業を実行するには、コンピューターの管理者である必要があります。  
+>  以下の各タスクを実行するには、コンピューターの管理者である必要があります。  
   
  Windows 7 コンピューターで ComSvcConfig.exe を使用して、最新のサービス モデル バージョン (現在 v4.5) を使用するように Web サービスを構成する場合は、次の手順を実行します。  
   
-1.  レジストリ キー設定`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`DWORD 値 0x00000001 に  
+1. レジストリ キー設定`[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR`DWORD 値 0x00000001 に  
   
-2.  comsvcconfig.exe を実行します。  
+2. comsvcconfig.exe を実行します。  
   
-3.  手順 1. で追加したレジストリ キーを元の値に戻すか、存在しない場合は削除します。  
+3. 手順 1. で追加したレジストリ キーを元の値に戻すか、存在しない場合は削除します。  
   
 > [!IMPORTANT]
 >  このレジストリ キーを元に戻すことは重要です。 これは互換性のキーです。 この変更を元に戻さないと、コンピューターで実行している他の .NET アプリケーションで問題が発生する可能性があります。  
@@ -110,4 +110,5 @@ ms.locfileid: "54736248"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM+ アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

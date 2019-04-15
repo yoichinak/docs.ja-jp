@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132588"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328778"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>方法: キー フレームを使用して点をアニメーション化する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>をアニメーション化するクラス、<xref:System.Windows.Point>します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59132588"
 ## <a name="example"></a>例  
  次の例では、三角形のパスに沿って楕円を移動します。 この例では、<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>をアニメーション化するクラス、<xref:System.Windows.Media.EllipseGeometry.Center%2A>のプロパティ、<xref:System.Windows.Media.EllipseGeometry>します。 このアニメーションは、次の方法で 3 つのキー フレームを使用します。  
   
-1.  最初の 0.5 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.LinearPointKeyFrame>一定の速度で開始位置からパスに沿って楕円を移動するクラス。 などの線形キーフレーム<xref:System.Windows.Media.Animation.LinearPointKeyFrame>滑らかな線形補間値を作成します。  
+1. 最初の 0.5 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.LinearPointKeyFrame>一定の速度で開始位置からパスに沿って楕円を移動するクラス。 などの線形キーフレーム<xref:System.Windows.Media.Animation.LinearPointKeyFrame>滑らかな線形補間値を作成します。  
   
-2.  インスタンスを使用して、[次へ] の末尾の 0.5 秒、<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>クラスに次の位置に突然パスに沿って楕円を移動します。 などの不連続のキーフレーム<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>値の間に急なジャンプを作成します。  
+2. インスタンスを使用して、[次へ] の末尾の 0.5 秒、<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>クラスに次の位置に突然パスに沿って楕円を移動します。 などの不連続のキーフレーム<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>値の間に急なジャンプを作成します。  
   
-3.  最後の 2 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.SplinePointKeyFrame>楕円を開始位置に移動するクラス。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplinePointKeyFrame>の値に基づいて値の間に可変遷移を作成、<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>プロパティ。 この例では、アニメーションは最初はゆっくりしていますが、時間セグメントの終点に向かって急激に速くなります。  
+3. 最後の 2 秒のインスタンスを使用して、<xref:System.Windows.Media.Animation.SplinePointKeyFrame>楕円を開始位置に移動するクラス。 スプライン キー フレームのような<xref:System.Windows.Media.Animation.SplinePointKeyFrame>の値に基づいて値の間に可変遷移を作成、<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>プロパティ。 この例では、アニメーションは最初はゆっくりしていますが、時間セグメントの終点に向かって急激に速くなります。  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343572"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML スキーマのインクルードまたはインポート
 XML スキーマには、`<xs:import />` 要素、`<xs:include />` 要素、および `<xs:redefine />` 要素を含めることができます。 これらのスキーマ要素は、インクルードまたはインポートするスキーマの構造を補足するために使用できる他の XML スキーマを参照します。 <xref:System.Xml.Schema.XmlSchemaImport> クラス、<xref:System.Xml.Schema.XmlSchemaInclude> クラス、および <xref:System.Xml.Schema.XmlSchemaRedefine> クラスは、スキーマ オブジェクト モデル (SOM) API でこれらの要素にマップされます。  
@@ -26,15 +26,15 @@ XML スキーマには、`<xs:import />` 要素、`<xs:include />` 要素、お�
   
  このコード サンプルでは、アドレス スキーマのインクルードを次の手順で行います。  
   
-1.  カスタム スキーマとアドレス スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み込みまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートによって処理されます。  
+1. カスタム スキーマとアドレス スキーマを新しい <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトに追加し、コンパイルします。 スキーマの読み込みまたはコンパイル時に発生するスキーマ検証に関する警告とエラーは、<xref:System.Xml.Schema.ValidationEventHandler> デリゲートによって処理されます。  
   
-2.  <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からカスタム スキーマとアドレス スキーマの両方に対するコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 これらのスキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
+2. <xref:System.Xml.Schema.XmlSchema> プロパティを反復処理して、<xref:System.Xml.Schema.XmlSchemaSet> からカスタム スキーマとアドレス スキーマの両方に対するコンパイルされた <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> オブジェクトを取得します。 これらのスキーマはコンパイルされているため、スキーマのコンパイル後の情報セット (PSCI) プロパティにアクセスできます。  
   
-3.  <xref:System.Xml.Schema.XmlSchemaImport> オブジェクトを作成し、インポートの <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> プロパティをアドレス スキーマの名前空間に設定し、インポートの <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> プロパティをアドレス スキーマの <xref:System.Xml.Schema.XmlSchema> オブジェクトに設定して、カスタム スキーマの <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティにインポートを追加します。  
+3. <xref:System.Xml.Schema.XmlSchemaImport> オブジェクトを作成し、インポートの <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> プロパティをアドレス スキーマの名前空間に設定し、インポートの <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> プロパティをアドレス スキーマの <xref:System.Xml.Schema.XmlSchema> オブジェクトに設定して、カスタム スキーマの <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティにインポートを追加します。  
   
-4.  <xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> メソッドおよび <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、カスタム スキーマの変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
+4. <xref:System.Xml.Schema.XmlSchema> クラスの <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> メソッドおよび <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを使用して、カスタム スキーマの変更された <xref:System.Xml.Schema.XmlSchemaSet> オブジェクトの再処理とコンパイルを行って、コンソールに出力します。  
   
-5.  最後に、カスタム スキーマの <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティを使用して、カスタム スキーマにインポートされたすべてのスキーマを再帰的にコンソールに出力します。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティを使用すると、スキーマに追加されたすべてのインクルード、インポート、および再定義にアクセスできます。  
+5. 最後に、カスタム スキーマの <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティを使用して、カスタム スキーマにインポートされたすべてのスキーマを再帰的にコンソールに出力します。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> プロパティを使用すると、スキーマに追加されたすべてのインクルード、インポート、および再定義にアクセスできます。  
   
  以下に、完全なコード サンプルおよびコンソールに出力されるカスタム スキーマとアドレス スキーマを示します。  
   

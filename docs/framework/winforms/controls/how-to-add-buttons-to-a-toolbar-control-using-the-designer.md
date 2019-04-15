@@ -8,17 +8,16 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306197"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法: デザイナーを使って ToolBar コントロールにボタンを追加する
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
   
@@ -29,13 +28,13 @@ ms.locfileid: "59084025"
   
 ### <a name="to-add-buttons-at-design-time"></a>デザイン時にボタンを追加するには  
   
-1.  <xref:System.Windows.Forms.ToolBar> コントロールを選択します。  
+1. <xref:System.Windows.Forms.ToolBar> コントロールを選択します。  
   
-2.  **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。  
+2. **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。  
   
-3.  使用して、**追加**と**削除**ボタンの追加し、削除 ボタンから、<xref:System.Windows.Forms.ToolBar>コントロール。  
+3. 使用して、**追加**と**削除**ボタンの追加し、削除 ボタンから、<xref:System.Windows.Forms.ToolBar>コントロール。  
   
-4.  各ボタンのプロパティを構成、**プロパティ**エディターの右側にあるペインに表示されるウィンドウ。 次の表では、考慮すべき重要なプロパティを示します。  
+4. 各ボタンのプロパティを構成、**プロパティ**エディターの右側にあるペインに表示されるウィンドウ。 次の表では、考慮すべき重要なプロパティを示します。  
   
     |プロパティ|説明|  
     |--------------|-----------------|  
@@ -46,7 +45,7 @@ ms.locfileid: "59084025"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|ボタンによって表示される文字列。|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|ボタンのツールヒントとして表示されるテキスト。|  
   
-5.  をクリックして**OK**をダイアログ ボックスを閉じて、指定したパネルを作成します。  
+5. をクリックして**OK**をダイアログ ボックスを閉じて、指定したパネルを作成します。  
   
 ## <a name="see-also"></a>関連項目
 

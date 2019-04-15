@@ -2,18 +2,18 @@
 title: アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170210"
 ---
 # <a name="activity"></a>アクティビティ
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ トレースについて説明します。 アクティビティは、ユーザーがエラーの範囲を絞り込む上で役立つ処理単位です。 同じアクティビティで発生したエラーは直接関連します。 たとえば、メッセージを復号化できなかったために、ある操作が失敗したとします。 この操作とメッセージ復号化失敗のトレースは同じアクティビティ内に表示され、復号化エラーと要求エラー間の直接相関関係が示されます。  
   
 ## <a name="configuring-activity-tracing"></a>アクティビティ トレースの構成  
- WCF には、アプリケーションを処理するための定義済みのアクティビティが用意されています (を参照してください[アクティビティ リスト](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、[ユーザー コード トレースの出力](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)を参照してください。  
+ WCF には、アプリケーションを処理するための定義済みのアクティビティが用意されています (を参照してください[アクティビティ リスト](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 また、ユーザー トレースをグループ化するために、アクティビティをプログラムによって定義することもできます。 詳細については、次を参照してください。[ユーザー コード トレースの出力](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)します。  
   
  実行時にアクティビティ トレースを出力するには使用、`ActivityTracing`の設定、`System.ServiceModel`構成コードを次に示すようにソース、またはその他の WCF またはカスタム トレース ソースをトレースします。  
   
@@ -98,6 +98,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   アクティビティはアクティビティを表します。オブジェクトとは限りません。 アクティビティとして解釈する必要があります"これが発生しているときにします。 . .  (有効なトレース出力が発生したときに) これが発生していた" と解釈する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

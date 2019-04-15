@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827225"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300945"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。
 非カスタム イベントとは異なり、`Custom Event`宣言が必要です、`As`句は次のイベント名を明示的にイベントのデリゲート型を指定します。  
@@ -23,13 +23,13 @@ ms.locfileid: "58827225"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  カスタム イベントと同じパラメーター リストを持つデリゲートを定義します。  
+1. カスタム イベントと同じパラメーター リストを持つデリゲートを定義します。  
   
      たとえば場合、`Custom Event`で定義された`Custom Event Test(ByVal sender As Object, ByVal i As Integer)`、対応するデリゲートは、次になります。  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  カスタム イベントのパラメーターのリストを置き換える、`As`デリゲート型を指定する句。  
+2. カスタム イベントのパラメーターのリストを置き換える、`As`デリゲート型を指定する句。  
   
      先ほどの例では、`Custom Event`宣言を次のように書き換えることができます。  
   

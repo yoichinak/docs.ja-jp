@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207319"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> は、テーブル、リレーションシップ、および制約のコレクションで構成されます。 ADO.NET では、<xref:System.Data.DataTable>オブジェクトは、テーブルを表すために使用する**データセット**します。 A **DataTable**リレーショナル データをメモリ内の 1 つのテーブルを表すデータがローカルにします。NET ベースのアプリケーションが存在するを使用して Microsoft SQL Server などのデータ ソースからデータを読み込むことができます、 **DataAdapter**詳細については、次を参照してください[DataAdapter からの Dataset](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
@@ -18,7 +18,7 @@ ms.locfileid: "54653251"
   
  スキーマだけでなく、 **DataTable**行が含まれており、データを注文する必要があります。 <xref:System.Data.DataRow> クラスは、テーブルに格納される実際のデータを表します。 使用する、 **DataRow**とそのプロパティとメソッドを取得するには、評価、およびテーブルにデータを操作します。 アクセスして、行内のデータを変更すると、 **DataRow**オブジェクトは、両方の現在と元の状態を維持します。  
   
- テーブル間で 1 つ以上の列を関連付け、テーブル間の親子のリレーションシップを作成できます。 間のリレーションシップを作成する**DataTable**オブジェクトを使用して、<xref:System.Data.DataRelation>します。 **DataRelation**オブジェクトは、特定の行の関連子または親の行を取得し、使用できます。 詳細については、[Datarelation の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)を参照してください。  
+ テーブル間で 1 つ以上の列を関連付け、テーブル間の親子のリレーションシップを作成できます。 間のリレーションシップを作成する**DataTable**オブジェクトを使用して、<xref:System.Data.DataRelation>します。 **DataRelation**オブジェクトは、特定の行の関連子または親の行を取得し、使用できます。 詳細については、次を参照してください。 [Datarelation の追加](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataTable の作成](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
@@ -56,4 +56,5 @@ ms.locfileid: "54653251"
  .NET Framework クラス ライブラリの概要を説明など、**システム**名前空間、2 番目のレベルの名前空間と**System.Data**。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

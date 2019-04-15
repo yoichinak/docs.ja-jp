@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319886"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>厳密に型指定された XML データへの XPathNavigator を使用したアクセス
 XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNavigator> クラスは、共通言語ランタイム (CLR) 型に対応した厳密に型指定されたデータを含むことができます。 XPath 2.0 のデータ モデルに従い、要素と属性のみが厳密に型指定されたデータを含むことができます。 <xref:System.Xml.XPath.XPathNavigator> クラスは、データ型を変換する機構に加えて、厳密に型指定されたデータとして <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内のデータにアクセスする機構を提供します。  
@@ -52,11 +52,11 @@ XPath 2.0 データ モデルの一例として、<xref:System.Xml.XPath.XPathNa
 ## <a name="the-post-schema-validation-infoset-psvi"></a>スキーマ検証後の情報セット (PSVI)  
  XML スキーマ プロセッサは、XML 情報セットを入力として受け入れ、それをスキーマ検証後の情報セット (PSVI) に変換します。 PSVI は、元の入力 XML 情報セットに新しい情報項目を追加し、新しいプロパティを追加したものです。 <xref:System.Xml.XPath.XPathNavigator> によって公開される PSVI 中の XML 情報セットに追加される情報には 3 つの広範なクラスがあります。  
   
-1.  検証結果: 要素または属性が問題なく検証されたかどうかの情報。 これは、<xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> プロパティの <xref:System.Xml.XPath.XPathNavigator> プロパティによって公開されます。  
+1. 検証結果: 要素または属性が問題なく検証されたかどうかの情報。 これは、<xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> プロパティの <xref:System.Xml.XPath.XPathNavigator> プロパティによって公開されます。  
   
-2.  既定の情報: 要素または属性の値が、スキーマに定義された既定値により得られたものかどうかを示します。 これは、<xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> プロパティの <xref:System.Xml.XPath.XPathNavigator> プロパティによって公開されます。  
+2. 既定の情報: 要素または属性の値が、スキーマに定義された既定値により得られたものかどうかを示します。 これは、<xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> クラスの <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> プロパティの <xref:System.Xml.XPath.XPathNavigator> プロパティによって公開されます。  
   
-3.  型のコメント: スキーマ コンポーネントへの参照。これは型の定義や、要素と属性の宣言である場合があります。 ノードが有効な場合、<xref:System.Xml.XPath.XPathNavigator.XmlType%2A> の <xref:System.Xml.XPath.XPathNavigator> プロパティは、ノード固有の型情報を含みます。 検証された後に編集されているときなど、ノードの有効性が不明な場合は、 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> プロパティが `null` に設定されますが、この場合でも、<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> プロパティの各種プロパティから型情報を入手できます。  
+3. 型のコメント: スキーマ コンポーネントへの参照。これは型の定義や、要素と属性の宣言である場合があります。 ノードが有効な場合、<xref:System.Xml.XPath.XPathNavigator.XmlType%2A> の <xref:System.Xml.XPath.XPathNavigator> プロパティは、ノード固有の型情報を含みます。 検証された後に編集されているときなど、ノードの有効性が不明な場合は、 <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> プロパティが `null` に設定されますが、この場合でも、<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> プロパティの各種プロパティから型情報を入手できます。  
   
  次の例は、<xref:System.Xml.XPath.XPathNavigator> によって公開されるスキーマ検証後の情報セット内の情報の使用方法を示します。  
   

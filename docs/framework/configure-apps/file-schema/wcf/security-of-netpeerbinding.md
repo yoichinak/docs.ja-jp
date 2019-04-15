@@ -1,13 +1,13 @@
 ---
-title: <security> の <netPeerBinding>
+title: <security> (行中)  <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170093"
 ---
 # <a name="security-of-netpeerbinding"></a>\<セキュリティ > の\<netPeerBinding >
 セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)メッセージ トランスポートで使用されるセキュリティ、認証の種類などを使用します。  
@@ -37,11 +37,11 @@ ms.locfileid: "55266300"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|省略可能です。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|モード|任意。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |メッセージ|SOAP セキュリティにより、認証、整合性、および機密性が実現します。|  
 |なし|セキュリティを無効にします。|  
@@ -64,6 +64,7 @@ ms.locfileid: "55266300"
  セキュリティは、メッセージ固有にすることも、トランスポート固有にすることもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>

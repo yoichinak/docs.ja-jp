@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: dbe96abebdc61fae469f7727673e6fcb93cbc739
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236645"
+---
 ### <a name="no-longer-able-to-set-enableviewstatemac-to-false"></a>EnableViewStateMac を false に設定できなくなった
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|Major|
 |Version|4.5.2|
 |型|ランタイム|
-

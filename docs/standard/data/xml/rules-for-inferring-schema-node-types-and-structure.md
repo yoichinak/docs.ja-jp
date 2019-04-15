@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338710"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>スキーマのノード型および構造を推論するときの規則
 このトピックでは、スキーマ推論プロセスで、XML ドキュメント内のノード型を XML スキーマ定義言語 (XSD) 構造に変換する方法を説明します。  
@@ -18,21 +18,21 @@ ms.locfileid: "54683665"
 ## <a name="element-inference-rules"></a>要素を推論するときの規則  
  このセクションでは、要素宣言を推論するときの規則を説明します。 推論される要素宣言には 8 つの構造があります。  
   
-1.  単純型の要素  
+1. 単純型の要素  
   
-2.  空要素  
+2. 空要素  
   
-3.  属性を持つ空要素  
+3. 属性を持つ空要素  
   
-4.  属性と単純内容を持つ要素  
+4. 属性と単純内容を持つ要素  
   
-5.  子要素のシーケンスを持つ要素  
+5. 子要素のシーケンスを持つ要素  
   
-6.  子要素のシーケンスと属性を持つ要素  
+6. 子要素のシーケンスと属性を持つ要素  
   
-7.  子要素のシーケンスと choice を持つ要素  
+7. 子要素のシーケンスと choice を持つ要素  
   
-8.  子要素のシーケンスと choice を持つ要素  
+8. 子要素のシーケンスと choice を持つ要素  
   
 > [!NOTE]
 >  すべての `complexType` 宣言は匿名型として推論されます。 推論されるグローバル要素はルート要素だけであり、その他すべての要素はローカル要素です。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842630"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302713"
 ---
 # <a name="determining-object-type-visual-basic"></a>オブジェクトの型の決定 (Visual Basic)
 汎用オブジェクト変数 (つまり、変数として宣言する`Object`) 任意のクラスからオブジェクトを保持できます。 型の変数を使用する場合`Object`オブジェクトのクラスに基づいて異なるアクションを実行する必要があります。 たとえば、一部のオブジェクト可能性がありますサポートしていませんが特定のプロパティまたはメソッドです。 Visual Basic のオブジェクト変数に保存するオブジェクトの種類を決定する 2 つの手段を提供します。、`TypeName`関数と`TypeOf...Is`演算子。  
@@ -36,11 +36,11 @@ ms.locfileid: "58842630"
   
 #### <a name="to-run-the-example"></a>例を実行するには  
   
-1.  新しい Windows アプリケーション プロジェクトを作成し、追加、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Windows.Forms.CheckBox>コントロール、および<xref:System.Windows.Forms.RadioButton>コントロールをフォームにします。  
+1. 新しい Windows アプリケーション プロジェクトを作成し、追加、<xref:System.Windows.Forms.Button>コントロール、<xref:System.Windows.Forms.CheckBox>コントロール、および<xref:System.Windows.Forms.RadioButton>コントロールをフォームにします。  
   
-2.  フォーム上のボタンから呼び出して、`TestObject`プロシージャ。  
+2. フォーム上のボタンから呼び出して、`TestObject`プロシージャ。  
   
-3.  次のコードをフォームに追加します。  
+3. 次のコードをフォームに追加します。  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "58842630"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [文字列名によるプロパティまたはメソッドの呼び出し](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [文字列型 (String)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [整数型 (Integer)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

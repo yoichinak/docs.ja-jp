@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320926"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
@@ -53,9 +53,9 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  WCF サービスがクライアント セッションを受け入れる場合、次の機能は既定で有効にします。  
   
-1.  WCF クライアント オブジェクト間のすべての呼び出しは、同じサービス インスタンスによって処理されます。  
+1. WCF クライアント オブジェクト間のすべての呼び出しは、同じサービス インスタンスによって処理されます。  
   
-2.  さまざまなセッション ベースのバインディングによって追加機能が提供されます。  
+2. さまざまなセッション ベースのバインディングによって追加機能が提供されます。  
   
 ## <a name="system-provided-session-types"></a>システム指定のセッションの種類  
  セッション ベースのバインディングは、サービス インスタンスと特定のセッションとの既定の関連付けをサポートします。 ただし、前のセッション ベースのインスタンス化制御を有効にすることに加えて、セッション ベースのバインディングごとにサポートされる機能も異なります。  

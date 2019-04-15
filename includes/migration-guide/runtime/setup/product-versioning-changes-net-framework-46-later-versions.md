@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fca31a98c2dd3427501b3c6bfe4f52fcec086709
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 6c78d1e1a69dd247b51722cc888f3bdd2de93993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234211"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>.NET Framework 4.6 以降のバージョンでの製品のバージョン管理に関する変更点
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761390"
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298345"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>外観をカスタマイズできるコントロールの作成
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ ms.locfileid: "59131021"
   
  次のプラクティスは、コントロールが不足しているに適切に応答することを確認<xref:System.Windows.FrameworkElement>オブジェクト。  
   
-1.  設定、`x:Name`属性ごとに<xref:System.Windows.FrameworkElement>コード内で参照する必要があります。  
+1. 設定、`x:Name`属性ごとに<xref:System.Windows.FrameworkElement>コード内で参照する必要があります。  
   
-2.  それぞれのプライベート プロパティを定義<xref:System.Windows.FrameworkElement>と対話する必要があります。  
+2. それぞれのプライベート プロパティを定義<xref:System.Windows.FrameworkElement>と対話する必要があります。  
   
-3.  サブスクライブし、コントロールで処理するイベントの登録を解除、<xref:System.Windows.FrameworkElement>プロパティがアクセサーを設定します。  
+3. サブスクライブし、コントロールで処理するイベントの登録を解除、<xref:System.Windows.FrameworkElement>プロパティがアクセサーを設定します。  
   
-4.  設定、<xref:System.Windows.FrameworkElement>プロパティで定義されている手順 2、<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>メソッド。 これは、最も古いを<xref:System.Windows.FrameworkElement>で、<xref:System.Windows.Controls.ControlTemplate>はコントロールに使用できます。 使用して、`x:Name`の<xref:System.Windows.FrameworkElement>から取得する、<xref:System.Windows.Controls.ControlTemplate>します。  
+4. 設定、<xref:System.Windows.FrameworkElement>プロパティで定義されている手順 2、<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>メソッド。 これは、最も古いを<xref:System.Windows.FrameworkElement>で、<xref:System.Windows.Controls.ControlTemplate>はコントロールに使用できます。 使用して、`x:Name`の<xref:System.Windows.FrameworkElement>から取得する、<xref:System.Windows.Controls.ControlTemplate>します。  
   
-5.  いることを確認、<xref:System.Windows.FrameworkElement>ない`null`そのメンバーにアクセスする前にします。  場合は`null`エラーを報告しません。  
+5. いることを確認、<xref:System.Windows.FrameworkElement>ない`null`そのメンバーにアクセスする前にします。  場合は`null`エラーを報告しません。  
   
  次の例に示す方法、`NumericUpDown`コントロールとやり取り<xref:System.Windows.FrameworkElement>上記の推奨事項に従ってオブジェクト。  
   

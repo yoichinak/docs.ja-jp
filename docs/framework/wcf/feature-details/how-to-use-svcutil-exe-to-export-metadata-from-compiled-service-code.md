@@ -2,12 +2,12 @@
 title: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329389"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
 Svcutil.exe は、次のように、コンパイル済みアセンブリのサービス、コントラクト、およびデータ型のメタデータをエクスポートできます。  
@@ -23,9 +23,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>コンパイル済みサービス コントラクトのメタデータをエクスポートするには  
   
-1.  サービス コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
+1. サービス コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
   
-2.  コンパイルされたアセンブリに対して Svcutil.exe を実行します。  
+2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
@@ -36,9 +36,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>コンパイル済みサービスのメタデータをエクスポートするには  
   
-1.  サービスの実装を実行可能アセンブリにコンパイルします。  
+1. サービスの実装を実行可能アセンブリにコンパイルします。  
   
-2.  サービス実行可能ファイルの構成ファイルを作成し、サービス構成を追加します。  
+2. サービス実行可能ファイルの構成ファイルを作成し、サービス構成を追加します。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
     </configuration>  
     ```  
   
-3.  コンパイルされたサービス実行可能ファイルに対して Svcutil.exe を実行します。その際、`/serviceName` スイッチを使用してサービスの構成名を指定してください。  
+3. コンパイルされたサービス実行可能ファイルに対して Svcutil.exe を実行します。その際、`/serviceName` スイッチを使用してサービスの構成名を指定してください。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  
@@ -64,9 +64,9 @@ Svcutil.exe は、次のように、コンパイル済みアセンブリのサ�
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>コンパイル済みデータ コントラクトのメタデータをエクスポートするには  
   
-1.  データ コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
+1. データ コントラクトの実装を 1 つ以上のクラス ライブラリにコンパイルします。  
   
-2.  コンパイルされたアセンブリに対して Svcutil.exe を実行します。その際、`/dataContract` スイッチを使用して、データ コントラクトのメタデータだけが生成されるように指定してください。  
+2. コンパイルされたアセンブリに対して Svcutil.exe を実行します。その際、`/dataContract` スイッチを使用して、データ コントラクトのメタデータだけが生成されるように指定してください。  
   
     > [!NOTE]
     >  依存アセンブリへのファイル パスを指定するには、`/reference` スイッチを使用する必要があります。  

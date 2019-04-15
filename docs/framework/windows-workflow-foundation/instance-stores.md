@@ -2,15 +2,15 @@
 title: インスタンス ストア
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519579"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323331"
 ---
 # <a name="instance-stores"></a>インスタンス ストア
-インスタンス ストアは、インスタンスの論理コンテナーです。 この場所には、インスタンス データとメタデータが格納されます。 インスタンス ストアは、専用の物理的なストレージを意味しているわけではありません。 インスタンス ストアには SQL Server データベースの永続的な情報と、メモリ内の非永続的な状態の情報が含まれます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には SQL Workflow Instance Store が付属しています。これはインスタンス ストアの具象実装で、ワークフローが SQL Server 2005 または SQL Server 2008 データベースにインスタンス データとメタデータを永続化できるようにします。 また、Windows Server App Fabric には、インスタンス ストアの具象実装も用意されています。 詳細については、[Windows Server App Fabric のインスタンス ストア、クエリ、およびコントロール プロバイダー](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)を参照してください。  
+インスタンス ストアは、インスタンスの論理コンテナーです。 この場所には、インスタンス データとメタデータが格納されます。 インスタンス ストアは、専用の物理的なストレージを意味しているわけではありません。 インスタンス ストアには SQL Server データベースの永続的な情報と、メモリ内の非永続的な状態の情報が含まれます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には SQL Workflow Instance Store が付属しています。これはインスタンス ストアの具象実装で、ワークフローが SQL Server 2005 または SQL Server 2008 データベースにインスタンス データとメタデータを永続化できるようにします。 また、Windows Server App Fabric には、インスタンス ストアの具象実装も用意されています。 詳細については、次を参照してください。 [Windows Server App Fabric のインスタンス ストア、クエリ、およびコントロール プロバイダー](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)します。  
   
  永続化 API は、ホストがコマンド要求 (<xref:System.Activities.DurableInstancing.LoadWorkflowCommand> や <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> など) をインスタンス ストアに送信できるようにするための、ホストとインスタンス ストア間のインターフェイスです。 この API の具象実装は、永続化プロバイダーと呼ばれます。 永続化プロバイダーはホストからの要求を受け取り、インスタンス ストアを変更します。  
   
@@ -22,10 +22,10 @@ ms.locfileid: "43519579"
   
  ホストとインスタンス ストアとの対話に関連する重要な手順を次に示します。  
   
-1.  取得、 **InstanceStore**永続化プロバイダーから。  
+1. 取得、 **InstanceStore**永続化プロバイダーから。  
 
-2.  呼び出すことによって、インスタンスへのハンドルを取得、<xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>メソッドを**InstanceStore**します。  
+2. 呼び出すことによって、インスタンスへのハンドルを取得、<xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>メソッドを**InstanceStore**します。  
   
-3.  呼び出すことによって、インスタンス ハンドルに対してコマンドを呼び出す、<xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A>メソッドを**InstanceStore**します。  
+3. 呼び出すことによって、インスタンス ハンドルに対してコマンドを呼び出す、<xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A>メソッドを**InstanceStore**します。  
   
-4.  確認、<xref:System.Runtime.DurableInstancing.InstanceView>によって返される**InstanceStore.Execute**コマンドの結果を確認します。
+4. 確認、<xref:System.Runtime.DurableInstancing.InstanceView>によって返される**InstanceStore.Execute**コマンドの結果を確認します。

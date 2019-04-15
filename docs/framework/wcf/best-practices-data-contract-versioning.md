@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334927"
 ---
 # <a name="best-practices-data-contract-versioning"></a>ベスト プラクティス:データ コントラクトのバージョン管理
 このトピックでは、長期的に容易に拡張させることのできるデータ コントラクトを作成するためのベスト プラクティスをいくつか紹介します。 データ コントラクトの詳細については、トピックを参照してください。 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
@@ -29,8 +29,7 @@ ms.locfileid: "59119003"
 ## <a name="versioning-when-schema-validation-is-required"></a>スキーマ検証が必要な場合のバージョン管理  
  新から旧、旧から新の両方向で厳密なスキーマ検証が必要な場合、データ コントラクトは変更不可であると考えなければなりません。 バージョン管理が必要であれば、別の名前または名前空間で新しいデータ コントラクトを作成したうえで、そのデータ型が使用されているサービス コントラクトにバージョンを付ける必要があります。  
   
- たとえば、`PoProcessing` という発注書処理サービス コントラクトに対して、`PostPurchaseOrder` データ コントラクトに適合したパラメーターを受け取る `PurchaseOrder` という操作が定義されているとします。 
-  `PurchaseOrder` コントラクトの内容を変更したい場合は、新しく `PurchaseOrder2` というデータ コントラクトを作成し、こちらに変更内容を含める必要があります。 そのうえで、サービス コントラクト レベルでバージョン管理を行う必要があります。 たとえば、`PostPurchaseOrder2` パラメーターを受け取る `PurchaseOrder2` 操作を別に作成するか、`PoProcessing2` サービス コントラクトを別途作成して `PostPurchaseOrder` 操作が `PurchaseOrder2` データ コントラクトを受け取るようにします。  
+ たとえば、`PoProcessing` という発注書処理サービス コントラクトに対して、`PostPurchaseOrder` データ コントラクトに適合したパラメーターを受け取る `PurchaseOrder` という操作が定義されているとします。 `PurchaseOrder` コントラクトの内容を変更したい場合は、新しく `PurchaseOrder2` というデータ コントラクトを作成し、こちらに変更内容を含める必要があります。 そのうえで、サービス コントラクト レベルでバージョン管理を行う必要があります。 たとえば、`PostPurchaseOrder2` パラメーターを受け取る `PurchaseOrder2` 操作を別に作成するか、`PoProcessing2` サービス コントラクトを別途作成して `PostPurchaseOrder` 操作が `PurchaseOrder2` データ コントラクトを受け取るようにします。  
   
  なお、他のデータ コントラクトから参照されるデータ コントラクトに変更を施すと、サービス モデル レイヤーも拡張されます。 たとえば、先ほどの例で、`PurchaseOrder` データ コントラクトは変更の必要がないとします。 ただし、そのデータ メンバーである `Customer` データ コントラクトに、さらに `Address` データ コントラクトが含まれており、これを変更しなければならないとします。 この場合は、まず `Address2` というデータ コントラクトを別に作成して必要な変更を行います。次に `Customer2` というデータ コントラクトを作成し、`Address2` をそのデータ メンバーとして定義します。さらに、`PurchaseOrder2` というデータ コントラクトを作成して、`Customer2` をデータ メンバーとして定義します。 先ほどの例と同様、サービス コントラクトに対してもバージョン管理を行う必要があります。  
   
@@ -51,24 +50,23 @@ ms.locfileid: "59119003"
   
  旧バージョンの型が想定されている場所へ新バージョンの型を送信したり、新バージョンが想定されている場所へ旧バージョンを送信したりするには、いくつかのガイドラインに厳密に従う必要があります。 それ以外の項目への準拠は、それほど厳密には要求されませんが、これらはスキーマの将来的なバージョン管理に影響する可能性があります。  
   
-1.  型の継承でデータ コントラクトをバージョン化してはいけません。 新バージョンを作成する場合は、既存の型のデータ コントラクトを直接変更するか、新しく型を定義してください。  
+1. 型の継承でデータ コントラクトをバージョン化してはいけません。 新バージョンを作成する場合は、既存の型のデータ コントラクトを直接変更するか、新しく型を定義してください。  
   
-2.  継承とデータ コントラクトを併用してもかまいませんが、バージョン管理の目的で継承を使用しないことなど、いくつかの規則に従う必要があります。 ある型が基本型から派生している場合、その型は将来のバージョンで別の基本型から派生させてはいけません (データ コントラクトが同一である場合を除きます)。 例外として、階層内で、基本型と派生したデータ コントラクト型との間に別の型を追加することは可能です。ただし追加する型に含まれるデータ メンバーの名前は、階層内の他の型のどのバージョンに含まれるメンバーとも、同じにならないようにする必要があります。 一般に、同じ継承階層の異なるレベルで同名のデータ メンバーを使用すると、バージョン管理の上で重大な問題が生じるおそれがあります。  
+2. 継承とデータ コントラクトを併用してもかまいませんが、バージョン管理の目的で継承を使用しないことなど、いくつかの規則に従う必要があります。 ある型が基本型から派生している場合、その型は将来のバージョンで別の基本型から派生させてはいけません (データ コントラクトが同一である場合を除きます)。 例外として、階層内で、基本型と派生したデータ コントラクト型との間に別の型を追加することは可能です。ただし追加する型に含まれるデータ メンバーの名前は、階層内の他の型のどのバージョンに含まれるメンバーとも、同じにならないようにする必要があります。 一般に、同じ継承階層の異なるレベルで同名のデータ メンバーを使用すると、バージョン管理の上で重大な問題が生じるおそれがあります。  
   
-3.  ラウンド トリップが有効になるように、データ コントラクトの最初のバージョンから、必ず <xref:System.Runtime.Serialization.IExtensibleDataObject> を実装します。 詳細については、「[上位互換性のあるデータ コントラクト](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。 このインターフェイスが実装されていない型の 1 つ以上のバージョンがリリース済みである場合は、この型の次のバージョンで実装します。  
+3. ラウンド トリップが有効になるように、データ コントラクトの最初のバージョンから、必ず <xref:System.Runtime.Serialization.IExtensibleDataObject> を実装します。 詳細については、「[上位互換性のあるデータ コントラクト](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。 このインターフェイスが実装されていない型の 1 つ以上のバージョンがリリース済みである場合は、この型の次のバージョンで実装します。  
   
-4.  新しいバージョンで、データ コントラクト名や名前空間を変更しないでください。 データ コントラクトの基になる型の名前や名前空間を変更する場合、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを使うなど、適切なメカニズムを使用して、データ コントラクト名と名前空間を残しておく必要があります。 名前付けの詳細については、次を参照してください。 [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)します。  
+4. 新しいバージョンで、データ コントラクト名や名前空間を変更しないでください。 データ コントラクトの基になる型の名前や名前空間を変更する場合、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを使うなど、適切なメカニズムを使用して、データ コントラクト名と名前空間を残しておく必要があります。 名前付けの詳細については、次を参照してください。 [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)します。  
   
-5.  新しいバージョンで、データ メンバーの名前を変更しないでください。 データ メンバーの基になるフィールド、プロパティ、イベントの名前を変更する場合は、`Name` の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを使用して、既存のデータ メンバー名を残しておく必要があります。  
+5. 新しいバージョンで、データ メンバーの名前を変更しないでください。 データ メンバーの基になるフィールド、プロパティ、イベントの名前を変更する場合は、`Name` の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを使用して、既存のデータ メンバー名を残しておく必要があります。  
   
-6.  新しいバージョンで、データ メンバーの基になるフィールド、プロパティ、イベントの型を変更して、そのデータ メンバーに対応するデータ コントラクトが変わってしまうようなことは避けてください。 予測されるデータ コントラクトを判断するうえで、インターフェイス型は <xref:System.Object> に相当することを念頭に置きます。  
+6. 新しいバージョンで、データ メンバーの基になるフィールド、プロパティ、イベントの型を変更して、そのデータ メンバーに対応するデータ コントラクトが変わってしまうようなことは避けてください。 予測されるデータ コントラクトを判断するうえで、インターフェイス型は <xref:System.Object> に相当することを念頭に置きます。  
   
-7.  新しいバージョンで、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 属性の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを調整して既存のデータ メンバーの順序を変えることは避けてください。  
+7. 新しいバージョンで、<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 属性の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティを調整して既存のデータ メンバーの順序を変えることは避けてください。  
   
-8.  新しいバージョンで、新しいデータ メンバーを追加することは可能ですが、 以下の規則に従う必要があります。  
+8. 新しいバージョンで、新しいデータ メンバーを追加することは可能ですが、 以下の規則に従う必要があります。  
   
-    1.  
-  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
+    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
   
     2.  メンバーの既定値として `null` または 0 を許容できない場合は、<xref:System.Runtime.Serialization.OnDeserializingAttribute> を使用してコールバック メソッドを指定する必要があります。該当するメンバーが受信ストリーム内に含まれていない場合は、このコールバック メソッドで妥当な既定値を設定します。 コールバックの詳細については、次を参照してください。[バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)します。  
   

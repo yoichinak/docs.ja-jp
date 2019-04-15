@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
-ms.openlocfilehash: aac53960cf22737cab0f48a51bccdfcba9f9f459
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307666"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>型で表現できない定数式 '\<typename >'
 対象の型に収まりません定数を評価しようとして通常は範囲をオーバーフローしていることが原因です。  
@@ -21,7 +21,7 @@ ms.locfileid: "58836338"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  定数を処理できるには、対象の型を変更します。  
+1. 定数を処理できるには、対象の型を変更します。  
   
 ## <a name="see-also"></a>関連項目
 

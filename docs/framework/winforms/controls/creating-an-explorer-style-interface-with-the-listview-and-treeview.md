@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332119"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成
 Visual Studio の利点の 1 つは、時間の短い形式で本格的な Windows フォーム アプリケーションを作成する機能です。 一般的なシナリオがユーザー インターフェイス (UI) で作成して<xref:System.Windows.Forms.ListView>と<xref:System.Windows.Forms.TreeView>Windows オペレーティング システムの Windows エクスプ ローラーの機能のようなコントロール。 Windows エクスプ ローラーは、ユーザーのコンピューター上のファイルとフォルダーの階層構造を表示します。  
@@ -28,27 +28,27 @@ Visual Studio の利点の 1 つは、時間の短い形式で本格的な Windo
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>ListView、TreeView コントロールを含むフォームを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、次の操作を行います。  
+2. **新しいプロジェクト** ダイアログ ボックスで、次の操作を行います。  
   
     1.  カテゴリでいずれかを選択**Visual Basic**または**Visual c#** します。  
   
     2.  テンプレートの一覧で選択**Windows フォーム アプリケーション**します。  
   
-3.  **[OK]** をクリックします。 新しい Windows フォーム プロジェクトが作成されます。  
+3. **[OK]** をクリックします。 新しい Windows フォーム プロジェクトが作成されます。  
   
-4.  追加、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームにし、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>します。  
+4. 追加、<xref:System.Windows.Forms.SplitContainer>コントロールをフォームにし、設定、<xref:System.Windows.Forms.SplitContainer.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>します。  
   
-5.  追加、<xref:System.Windows.Forms.ImageList>という名前の`imageList1`フォームと 2 つのイメージを追加する [プロパティ] ウィンドウを使用する: フォルダーのイメージとその順序で、ドキュメントのイメージ。  
+5. 追加、<xref:System.Windows.Forms.ImageList>という名前の`imageList1`フォームと 2 つのイメージを追加する [プロパティ] ウィンドウを使用する: フォルダーのイメージとその順序で、ドキュメントのイメージ。  
   
-6.  追加、<xref:System.Windows.Forms.TreeView>という名前のコントロール`treeview1`をフォームに配置の左側にある、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`treeView1`次の操作を行います。  
+6. 追加、<xref:System.Windows.Forms.TreeView>という名前のコントロール`treeview1`をフォームに配置の左側にある、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`treeView1`次の操作を行います。  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill> に設定します。  
   
     2.  設定、<xref:System.Windows.Forms.TreeView.ImageList%2A>プロパティを `imagelist1.`  
   
-7.  追加、<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`をフォームの右側の上に移動し、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`listview1`次の操作を行います。  
+7. 追加、<xref:System.Windows.Forms.ListView>という名前のコントロール`listView1`をフォームの右側の上に移動し、<xref:System.Windows.Forms.SplitContainer>コントロール。 [プロパティ] ウィンドウで`listview1`次の操作を行います。  
   
     1.  <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。  
   
@@ -58,8 +58,7 @@ Visual Studio の利点の 1 つは、時間の短い形式で本格的な Windo
   
     4.  設定、<xref:System.Windows.Forms.ListView.SmallImageList%2A>プロパティを `imageList1.`  
   
-8.  データを読み込むコードを実装、<xref:System.Windows.Forms.TreeView>ノードおよびサブノードにします。 
-  `Form1` クラスに次のコードを追加します。  
+8. データを読み込むコードを実装、<xref:System.Windows.Forms.TreeView>ノードおよびサブノードにします。 `Form1` クラスに次のコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  
@@ -74,8 +73,7 @@ Visual Studio の利点の 1 つは、時間の短い形式で本格的な Windo
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#2)]  
   
-11. 処理、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベントを`treeview1` **、** を設定するコードを実装し、`listview1`ノードのコンテンツ ノードがクリックされたときに使用します。 
-  `Form1` クラスに次のコードを追加します。  
+11. 処理、<xref:System.Windows.Forms.TreeView.NodeMouseClick>イベントを`treeview1` **、** を設定するコードを実装し、`listview1`ノードのコンテンツ ノードがクリックされたときに使用します。 `Form1` クラスに次のコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#3)]  

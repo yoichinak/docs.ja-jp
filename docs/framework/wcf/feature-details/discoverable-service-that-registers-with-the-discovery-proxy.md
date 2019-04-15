@@ -1,37 +1,37 @@
 ---
-title: '方法: 探索プロキシで登録される探索可能なサービスを実装します。'
+title: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302193"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスを実装します。
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスの実装する
 これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピックで[方法。探索プロキシの実装](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)、探索プロキシを実装します。 このトピックでは、アナウンス メッセージを送信する WCF サービスを作成 (`Hello`と`Bye`) に、探索プロキシに登録または登録解除、探索プロキシの原因です。
 
 ### <a name="to-define-the-service-contract"></a>サービス コントラクトを定義するには
 
-1.  新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。
+1. 新しいコンソール アプリケーション プロジェクトを、`DiscoveryProxyExample` という `Service` ソリューションに追加します。
 
-2.  次のアセンブリへの参照を追加します。
+2. 次のアセンブリへの参照を追加します。
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  新しいクラスを `CalculatorService` プロジェクトに追加します。
+3. 新しいクラスを `CalculatorService` プロジェクトに追加します。
 
-4.  次の using ステートメントを追加します。
+4. 次の using ステートメントを追加します。
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  CalculatorService.cs でサービス コントラクトを定義します。
+5. CalculatorService.cs でサービス コントラクトを定義します。
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "58262402"
     }
     ```
 
-6.  また、CalculatorService.cs でサービス コントラクトを実装します。
+6. また、CalculatorService.cs でサービス コントラクトを実装します。
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ ms.locfileid: "58262402"
 
 ### <a name="to-host-the-service"></a>サービスをホストするには
 
-1.  プロジェクトの作成時に生成された Program.cs ファイルを開きます。
+1. プロジェクトの作成時に生成された Program.cs ファイルを開きます。
 
-2.  次の using ステートメントを追加します。
+2. 次の using ステートメントを追加します。
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "58262402"
     using System.ServiceModel.Discovery;
     ```
 
-3.  `Main()` メソッド内に次のコードを追加します。
+3. `Main()` メソッド内に次のコードを追加します。
 
     ```csharp
     // Define the base address of the service
@@ -290,6 +290,7 @@ namespace Microsoft.Samples.Discovery
 ```
 
 ## <a name="see-also"></a>関連項目
+
 - [WCF Discovery](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [方法: 探索プロキシを実装します。](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [方法: 探索プロキシを実装する](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

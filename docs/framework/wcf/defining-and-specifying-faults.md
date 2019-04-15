@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299333"
 ---
 # <a name="defining-and-specifying-faults"></a>エラーの定義と指定
 SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
@@ -21,11 +21,11 @@ SOAP エラーを使用する目的は、エラー状態情報をサービスか
 ## <a name="overview"></a>概要  
  宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> を含む操作で発生します。 宣言されていない SOAP エラーとは、操作のコントラクトに指定されていないエラーです。 ここでは、各種のエラー状態を特定したうえで、サービスに関するエラー コントラクトを作成する方法について説明します。クライアントは、カスタムの SOAP エラーから通知を受けたときに、これらを使用することでエラーを適切に処理できます。 基本的な作業は、次の順序で行います。  
   
-1.  サービスのクライアントに通知する必要があるエラー状態を定義します。  
+1. サービスのクライアントに通知する必要があるエラー状態を定義します。  
   
-2.  そのエラー状態に対して SOAP エラーのカスタム コンテンツを定義します。  
+2. そのエラー状態に対して SOAP エラーのカスタム コンテンツを定義します。  
   
-3.  操作でスローされた特定の SOAP エラーがクライアントに公開されるように、WSDL でその操作にマークします。  
+3. 操作でスローされた特定の SOAP エラーがクライアントに公開されるように、WSDL でその操作にマークします。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>クライアントに通知する必要があるエラー状態の定義  
  SOAP エラーは、特定の操作に関するフォールト情報を伝達するためにパブリックに記述されたメッセージです。 これらのメッセージは、WSDL で他の操作メッセージと共に記述されているので、クライアントは、操作を呼び出した時点でこのようなエラー処理を予測できます。 WCF サービスがマネージ コード内で条件がエラーに変換して、クライアントに返されるエラーは、正式なエラーからのエラー状況と、サービスでのバグを分離する機会を提供を決定する、マネージ コードで記述されているため、クライアントがあるメッセージを交換します。  

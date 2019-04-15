@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332171"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>方法: デザイナーを使用して標準アイテムで基本的な Windows フォーム ToolStrip を作成します。
 次の手順を作成する方法を示して、 <xref:System.Windows.Forms.ToolStrip> 7 と<xref:System.Windows.Forms.ToolStripButton>一般的なタスクを表すコントロール。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119289"
   
 ### <a name="to-add-standard-items-in-the-designer"></a>デザイナーで標準的なアイテムを追加するには  
   
-1.  作成、<xref:System.Windows.Forms.ToolStrip>コントロール。  
+1. 作成、<xref:System.Windows.Forms.ToolStrip>コントロール。  
   
-2.  右上隅にある、 <xref:System.Windows.Forms.ToolStrip>、表示するスマート タスクの矢印をクリックして、 **ToolStrip タスク**ウィンドウ。  
+2. 右上隅にある、 <xref:System.Windows.Forms.ToolStrip>、表示するスマート タスクの矢印をクリックして、 **ToolStrip タスク**ウィンドウ。  
   
-3.  **ToolStrip タスク**ウィンドウで、選択**標準項目の挿入**します。  
+3. **ToolStrip タスク**ウィンドウで、選択**標準項目の挿入**します。  
   
 ## <a name="see-also"></a>関連項目
 

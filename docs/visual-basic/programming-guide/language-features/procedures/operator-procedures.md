@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175020"
 ---
 # <a name="operator-procedures-visual-basic"></a>演算子プロシージャ (Visual Basic)
 演算子プロシージャは、一連の標準の演算子の動作を定義する Visual Basic ステートメント (など`*`、 `<>`、または`And`) クラスまたは定義した構造にします。 これもと呼ばれる*演算子のオーバー ロード*します。  
@@ -26,7 +26,7 @@ ms.locfileid: "58815571"
   
  Visual Basic では、その基本データ型でのみ演算子を定義します。 両方のオペランドは、クラスまたは構造体の型または 1 つの場合、演算子の動作を定義できます。  
   
- 詳細については、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
+ 詳細については、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
   
 ## <a name="types-of-operator-procedure"></a>演算子プロシージャの種類  
  演算子プロシージャには、次の種類のいずれかを指定できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "58815571"
 ### <a name="data-type"></a>データの種類  
  クラスまたは定義した構造体で演算子を定義しているため、そのクラスまたは構造体のデータ型のオペランドの少なくとも 1 つがあります。 型の変換演算子のオペランドまたは戻り値の型がクラスまたは構造体のデータ型でなければなりません。  
   
- 詳細については、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
+ 詳細については、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
   
 ## <a name="calling-syntax"></a>呼び出し構文  
  演算子プロシージャは、式の中で演算子記号を使用して暗黙的を呼び出します。 定義済みの演算子のと同じ方法で、オペランドを指定します。  
@@ -78,17 +78,16 @@ ms.locfileid: "58815571"
  次の例では、一般的な呼び出しを`+`で定義されたオペレーター`veryLong`します。  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
-- [Property プロシージャ](./property-procedures.md)
+- [プロパティ プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [方法: 演算子を定義します。](./how-to-define-an-operator.md)
-- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [方法: 演算子を定義する](./how-to-define-an-operator.md)
+- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用して、](./how-to-use-a-class-that-defines-operators.md)
+- [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)

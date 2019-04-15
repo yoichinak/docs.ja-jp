@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: db8eb017bdf166b0f1a241f5a8f7db9b9430898a
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 9c3eedb7f7d4cd030a12c141b8630876c1ffdb4d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236450"
 ---
 ### <a name="throttle-concurrent-requests-per-session"></a>セッションあたりの同時実行される要求のスロットル
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760285"
 |スコープ|エッジ|
 |Version|4.7|
 |型|再ターゲット中|
-

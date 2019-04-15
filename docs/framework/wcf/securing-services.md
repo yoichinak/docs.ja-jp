@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157678"
 ---
 # <a name="securing-services"></a>サービスのセキュリティ保護
 Windows Communication Foundation (WCF) サービスのセキュリティは、2 つの主要要件で構成されます。 転送セキュリティと承認します。 (3 番目の要件は、「セキュリティのイベントの監査[監査](../../../docs/framework/wcf/feature-details/auditing-security-events.md))。簡単に説明すると、転送セキュリティは、認証 (サーバーとクライアント両方の ID の検証)、機密性 (メッセージの暗号化)、および整合性 (改ざんを検出するためのデジタル署名) で構成されます。 承認は、たとえば、特権のあるユーザーだけがファイルを読み取ることができるなど、リソースへのアクセスを制御することです。 WCF の機能を使用して、2 つの主な要件を簡単に実装します。  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
 ### <a name="credentials-used-by-iis"></a>IIS で使用する資格情報  
  Kerberos コントローラーによるサポートがある Windows ドメインとは異なり、インターネットには、随時ログオンしている多数のユーザーを管理するための共通のコントローラーがありません。 代わりに、インターネットの資格情報は、ほとんどの場合、X.509 証明書 (SSL (Secure Sockets Layer) 証明書とも呼ばれる) の形で提示されます。 この証明書は、通常、 *証明機関*によって発行されます。この証明機関は、証明書の信頼性を保証するサードパーティの企業および証明書が発行された個人です。 インターネット上にサービスを公開するには、このような信頼された証明書を提供して、サービスを認証する必要があります。  
   
- それでは、どのように信頼された証明書を取得するのでしょうか。 その方法の 1 つは、サービスを展開する準備とそのサービスの証明書を購入する準備ができたら、Authenticode、VeriSign などのサードパーティ証明機関に連絡する方法です。 ただし、WCF を使用した開発フェーズでは、まだ準備ができていません証明書を購入する、ツールと手法の存在する X.509 証明書を作成する場合は、運用環境のデプロイをシミュレートするために使用できます。 詳細については、[Working with Certificates](../../../docs/framework/wcf/feature-details/working-with-certificates.md)を参照してください。  
+ それでは、どのように信頼された証明書を取得するのでしょうか。 その方法の 1 つは、サービスを展開する準備とそのサービスの証明書を購入する準備ができたら、Authenticode、VeriSign などのサードパーティ証明機関に連絡する方法です。 ただし、WCF を使用した開発フェーズでは、まだ準備ができていません証明書を購入する、ツールと手法の存在する X.509 証明書を作成する場合は、運用環境のデプロイをシミュレートするために使用できます。 詳細については、次を参照してください。 [Working with Certificates](../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
 ## <a name="security-modes"></a>セキュリティ モード  
  WCF セキュリティのプログラミングには、いくつかの重要な意思決定ポイントする必要があります。 最も基本的な決定の 1 つは、 *セキュリティ モード*を選択することです。 2 つの主要なセキュリティ モードとして、 *トランスポート モード* と *メッセージ モード*があります。  
@@ -93,12 +93,13 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
 ## <a name="identity"></a>同一。  
  WCF では、用語*identity*サーバーとクライアントに異なる意味を持ちます。 つまり、サービスを実行しているとき、ID は認証後にセキュリティ コンテキストに割り当てられます。 実際の ID を表示するには、 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> クラスの <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> プロパティと <xref:System.ServiceModel.ServiceSecurityContext> プロパティを確認します。 詳細については、「[方法 :セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)します。  
   
- 反対に、クライアントでは、ID はサービスを検証するために使用されます。 デザイン時に、クライアント開発者を設定できます、 [ \<identity >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素をサービスから取得した値にします。 実行時に、クライアントは、要素の値をサービスの実際の ID と照合してチェックします。 チェックが失敗した場合、クライアントは通信を終了します。 特定のユーザー ID でサービスを実行している場合の値はユーザー プリンシパル名 (UPN) で、コンピューター アカウントでサービスを実行している場合の値はサービス プリンシパル名 (SPN) です。 詳細については、[サービス Id と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)を参照してください。 資格情報には、証明書、つまり証明書を識別する証明書内のフィールドも使用できます。  
+ 反対に、クライアントでは、ID はサービスを検証するために使用されます。 デザイン時に、クライアント開発者を設定できます、 [ \<identity >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素をサービスから取得した値にします。 実行時に、クライアントは、要素の値をサービスの実際の ID と照合してチェックします。 チェックが失敗した場合、クライアントは通信を終了します。 特定のユーザー ID でサービスを実行している場合の値はユーザー プリンシパル名 (UPN) で、コンピューター アカウントでサービスを実行している場合の値はサービス プリンシパル名 (SPN) です。 詳細については、次を参照してください。[サービス Id と認証](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)します。 資格情報には、証明書、つまり証明書を識別する証明書内のフィールドも使用できます。  
   
 ## <a name="protection-levels"></a>保護レベル  
- `ProtectionLevel` プロパティは、 <xref:System.ServiceModel.ServiceContractAttribute> クラス、 <xref:System.ServiceModel.OperationContractAttribute> クラスなどのいくつかの属性クラスで使用します。 保護レベルは、サービスをサポートするメッセージ (またはメッセージ部分) が署名されるのか、署名および暗号化されるのか、または署名と暗号化なしで送信されるのかを指定する値です。 プロパティの詳細については、次を参照してください。[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)、およびプログラミング例については、次を参照してください。[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。 サービス コントラクトの設計の詳細については、`ProtectionLevel`コンテキストでは、[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)を参照してください。  
+ `ProtectionLevel` プロパティは、 <xref:System.ServiceModel.ServiceContractAttribute> クラス、 <xref:System.ServiceModel.OperationContractAttribute> クラスなどのいくつかの属性クラスで使用します。 保護レベルは、サービスをサポートするメッセージ (またはメッセージ部分) が署名されるのか、署名および暗号化されるのか、または署名と暗号化なしで送信されるのかを指定する値です。 プロパティの詳細については、次を参照してください。[について保護レベル](../../../docs/framework/wcf/understanding-protection-level.md)、およびプログラミング例については、次を参照してください。[方法。ProtectionLevel プロパティを設定](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)します。 サービス コントラクトの設計の詳細については、`ProtectionLevel`コンテキストでは、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -109,10 +110,10 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
 - [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)
 - [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [方法: Windows 資格情報でサービスをセキュリティで保護します。](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [方法: セキュリティ モードを設定します。](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [方法: クライアント資格情報の種類を指定します。](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [方法: PrincipalPermissionAttribute クラスでアクセスを制限します。](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [方法: サービスでのクライアントを偽装します。](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [方法: セキュリティ モードを設定する](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [方法: クライアントの資格情報の種類を指定する](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [方法: サービスでクライアントに偽装する](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [方法: セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

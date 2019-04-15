@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: c1dd2587fb3642fb930fb7d5d6855a6e48c2ad2b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141558"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF アプリケーションのパフォーマンスの最適化
 このセクションへの参照[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション開発者がアプリケーションのパフォーマンスを向上させる方法を探しています。 Microsoft .NET Framework で新しく導入した開発者のかどうかと[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、両方のプラットフォームで自分で最初理解する必要があります。 ここでは、両方の実用的な知識を前提としていて、既に起動して実行して、アプリケーションを十分に把握するプログラマが書き込まれます。  
@@ -33,7 +33,7 @@ ms.locfileid: "57356391"
   
  [アプリケーション リソース](optimizing-performance-application-resources.md)  
   
- [Text](optimizing-performance-text.md)  
+ [テキスト](optimizing-performance-text.md)  
   
  [データ バインディング](optimizing-performance-data-binding.md)  
   
@@ -44,6 +44,7 @@ ms.locfileid: "57356391"
  [アプリケーションの起動時間](application-startup-time.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
 - [グラフィックスの描画層](graphics-rendering-tiers.md)
@@ -61,4 +62,4 @@ ms.locfileid: "57356391"
 - [データ バインディングの概要](../data/data-binding-overview.md)
 - [ナビゲーションの概要](../app-development/navigation-overview.md)
 - [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)
-- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)

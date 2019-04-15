@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2bb40294685c987de84138ee889e6b88f7184bb0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 22c4b61b293ac2366cae1dc73e0f6805a4a5fb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "50746546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236243"
 ---
 ### <a name="chained-popups-with-staysopenfalse"></a>StaysOpen=False でポップアップがチェーンされる
 
@@ -15,4 +15,3 @@ ms.locfileid: "50746546"
 |Version|4.7.1|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
-

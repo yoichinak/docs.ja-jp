@@ -12,19 +12,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 926e89272e9ebedb0668b26b96b1614e85e637ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307321"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>方法: Windows フォームの CheckBox コントロールでオプションを設定する
 Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールは、True または False のユーザーに付与するために使用またははい/いいえオプションします。 コントロールが選択されているときに、チェック マークを表示します。  
   
 ### <a name="to-set-options-with-checkbox-controls"></a>CheckBox コントロールでオプションを設定するには  
   
-1.  値を調べて、<xref:System.Windows.Forms.CheckBox.Checked%2A>状態を判断およびその値を使用してオプションを設定するプロパティ。  
+1. 値を調べて、<xref:System.Windows.Forms.CheckBox.Checked%2A>状態を判断およびその値を使用してオプションを設定するプロパティ。  
   
      以下、ときにコード サンプルでは、<xref:System.Windows.Forms.CheckBox>コントロールの<xref:System.Windows.Forms.CheckBox.CheckedChanged>イベントが発生すると、フォームの<xref:System.Windows.Forms.Control.AllowDrop%2A>プロパティに設定されて`false`チェック ボックスをオンにした場合。 これは、ユーザーの操作を制限する場合に便利です。  
   
