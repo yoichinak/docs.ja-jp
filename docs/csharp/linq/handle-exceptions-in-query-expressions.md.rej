@@ -1,0 +1,10 @@
+diff a/docs/csharp/linq/handle-exceptions-in-query-expressions.md b/docs/csharp/linq/handle-exceptions-in-query-expressions.md	(rejected hunks)
+@@ -26,7 +26,7 @@
+ 
+ 場合によっては、クエリ内からスローされる例外に対する最適な応答は、クエリの実行をすぐに停止することです。 次の例では、クエリ本体の内部からスローされる例外を処理する方法を示します。 `SomeMethodThatMightThrow` で、クエリの実行を停止することが必要な例外が発生する可能性があるとします。
+ 
+-`try` ブロックは `foreach` ループを囲み、クエリ自体を囲むのではありません。 その理由は、`foreach` ループがクエリの実際の実行ポイントであるためです。 詳細については、「[LINQ クエリの概要](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
++`try` ブロックは `foreach` ループを囲み、クエリ自体を囲むのではありません。 その理由は、`foreach` ループがクエリの実際の実行ポイントであるためです。 詳細については、「[LINQ クエリの概要 (C#)](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。
+ 
+ [!code-csharp[csProgGuideLINQ#12](~/samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]
+ 

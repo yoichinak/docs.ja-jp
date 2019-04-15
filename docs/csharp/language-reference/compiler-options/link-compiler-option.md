@@ -88,4 +88,4 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
 - [-reference (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
 - [-noconfig (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
 - [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [相互運用性の概要 - C# プログラミング ガイド](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [相互運用性の概要](../../../csharp/programming-guide/interop/interoperability-overview.md)

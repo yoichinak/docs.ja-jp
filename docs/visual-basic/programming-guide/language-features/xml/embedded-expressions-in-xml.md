@@ -87,4 +87,4 @@ ms.locfileid: "58827576"
 - [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [XML リテラルの概要 (Visual Basic)](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+- [XML リテラルの概要](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

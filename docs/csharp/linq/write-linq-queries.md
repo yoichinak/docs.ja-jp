@@ -35,7 +35,7 @@ ms.locfileid: "56981336"
 
 `var query = from num in numbers...`
 
-上記の各例では、`foreach` ステートメントまたはその他のステートメントでクエリ変数を反復処理するまで、クエリは実際には実行されません。 詳しくは、「[LINQ クエリの概要 (C#)](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」をご覧ください。
+上記の各例では、`foreach` ステートメントまたはその他のステートメントでクエリ変数を反復処理するまで、クエリは実際には実行されません。 詳しくは、「[LINQ クエリの概要](../programming-guide/concepts/linq/introduction-to-linq-queries.md)」をご覧ください。
 
 ## <a name="example---method-syntax"></a>例 - メソッド構文
 

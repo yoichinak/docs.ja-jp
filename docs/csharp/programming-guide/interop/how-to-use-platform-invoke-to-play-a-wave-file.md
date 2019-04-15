@@ -47,6 +47,6 @@ ms.locfileid: "56967218"
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [相互運用性の概要 - C# プログラミング ガイド](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [相互運用性の概要](../../../csharp/programming-guide/interop/interoperability-overview.md)
 - [プラットフォーム呼び出しの詳細](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [プラットフォーム呼び出しによるデータのマーシャリング](../../../framework/interop/marshaling-data-with-platform-invoke.md)

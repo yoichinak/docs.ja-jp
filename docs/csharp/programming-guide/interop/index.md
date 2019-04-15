@@ -21,7 +21,7 @@ ms.locfileid: "58411344"
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、プラットフォーム呼び出しサービス、<xref:System.Runtime.InteropServices> 名前空間、C++ 相互運用性、および COM 相互運用性 (COM 相互運用機能) を通して、アンマネージ コードの相互運用を可能にしています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [相互運用性の概要 - C# プログラミング ガイド](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+ [相互運用性の概要](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  C# のマネージド コードとアンマネージド コードの間で相互運用する方法について説明します。  
   
  [方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  

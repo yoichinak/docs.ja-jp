@@ -99,7 +99,7 @@ ms.locfileid: "58814973"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[配列の概要 (Visual Basic)](../../../visual-basic/language-reference/keywords/arrays-summary.md)|配列の作成、定義、および使用に使用される言語要素の一覧を示します。|  
+|[配列の概要](../../../visual-basic/language-reference/keywords/arrays-summary.md)|配列の作成、定義、および使用に使用される言語要素の一覧を示します。|  
 |[Collection オブジェクトの概要](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|コレクションに使用される言語要素の一覧を示します。|  
 |[制御フローの概要](../../../visual-basic/language-reference/keywords/control-flow-summary.md)|プロシージャ フローをループおよび制御するために使用されるステートメントの一覧を示します。|  
 |[変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)|数値、日付、時刻、および文字列の変換に使用される関数の一覧を示します。|  
@@ -109,11 +109,11 @@ ms.locfileid: "58814973"
 |[ディレクトリとファイルの概要](../../../visual-basic/language-reference/keywords/directories-and-files-summary.md)|ファイル システムの制御とファイルの処理に使用される関数の一覧を示します。|  
 |[エラーの概要](../../../visual-basic/language-reference/keywords/errors-summary.md)|実行時エラーの値をキャッチして返すために使用される言語要素の一覧を示します。|  
 |[財務処理の概要](../../../visual-basic/language-reference/keywords/financial-summary.md)|財務計算の実行に使用される関数の一覧を示します。|  
-|[入出力の概要 (Visual Basic)](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|ファイルへの読み書き、ファイルの管理、および印刷出力に使用される関数の一覧を示します。|  
+|[入出力の概要](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|ファイルへの読み書き、ファイルの管理、および印刷出力に使用される関数の一覧を示します。|  
 |[情報と対話の概要](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|その他のプログラムの実行、コマンド ライン引数の取得、COM オブジェクトの操作、色情報の取得、およびコントロール ダイアログ ボックスの使用のために使用される関数の一覧を示します。|  
 |[数値演算の概要](../../../visual-basic/language-reference/keywords/math-summary.md)|三角関数やその他の数値演算の実行に使用される関数の一覧を示します。|  
 |[My の参照](../../../visual-basic/language-reference/keywords/my-reference.md)|`My` に格納されるオブジェクトの一覧を示します。これは、アプリケーションを実行しているコンピューターでよく使用されるメソッド、プロパティ、イベント、および現在のアプリケーション、アプリケーションのリソース、アプリケーションの設定などへのアクセスを提供する機能です。|  
-|[演算子の概要 (Visual Basic)](../../../visual-basic/language-reference/keywords/operators-summary.md)|代入式、比較式、およびその他の演算子の一覧を示します。|  
+|[演算子の概要](../../../visual-basic/language-reference/keywords/operators-summary.md)|代入式、比較式、およびその他の演算子の一覧を示します。|  
 |[レジストリの概要](../../../visual-basic/language-reference/keywords/registry-summary.md)|プログラム設定の読み込み、保存、および削除に使用される関数の一覧を示します。|  
 |[文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|文字列操作に使用される関数の一覧を示します。|  
   
