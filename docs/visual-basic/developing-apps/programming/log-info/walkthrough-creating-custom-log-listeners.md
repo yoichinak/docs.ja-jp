@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342457"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>チュートリアル: カスタム ログ リスナーの作成 (Visual Basic)
 このチュートリアルでは、カスタム ログ リスナーを作成する方法と、`My.Application.Log` オブジェクトの出力を待機するように構成する方法について説明します。  
@@ -37,23 +37,23 @@ ms.locfileid: "58831924"
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>ログ リスナー アセンブリに厳密な名前を付けるには  
   
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
   
-2.  **[署名]** タブをクリックします。  
+2. **[署名]** タブをクリックします。  
   
-3.  **[アセンブリの署名]** ボックスを選択します。  
+3. **[アセンブリの署名]** ボックスを選択します。  
   
-4.  **[厳密な名前のキー ファイルを選択してください]** ドロップダウン リストから **[\<新規作成>]** を選択します。  
+4. **[厳密な名前のキー ファイルを選択してください]** ドロップダウン リストから **[\<新規作成>]** を選択します。  
   
      **[厳密な名前キーの作成]** ダイアログ ボックスが開きます。  
   
-5.  **[キー ファイル名]** ボックスで、キー ファイルの名前を指定します。  
+5. **[キー ファイル名]** ボックスで、キー ファイルの名前を指定します。  
   
-6.  **[パスワードの入力]** および **[パスワードの確認入力]** ボックスにパスワードを入力します。  
+6. **[パスワードの入力]** および **[パスワードの確認入力]** ボックスにパスワードを入力します。  
   
-7.  **[OK]** をクリックします。  
+7. **[OK]** をクリックします。  
   
-8.  アプリケーションをリビルドします。  
+8. アプリケーションをリビルドします。  
   
 ## <a name="adding-the-listener"></a>リスナーの追加  
  アセンブリに厳密な名前を付けたら、次はリスナーの厳密な名前を確認して、`My.Application.Log` でログ リスナーが使用されるようにする必要があります。  
@@ -74,7 +74,7 @@ ms.locfileid: "58831924"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>My.Application.Log にリスナーを追加するには  
   
-1.  **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。  
+1. **ソリューション エクスプローラー** で app.config を右クリックし、 **[開く]** を選択します。  
   
      - または -  
   
@@ -86,17 +86,17 @@ ms.locfileid: "58831924"
   
     3.  **[追加]** をクリックします。  
   
-2.  `<listeners>` セクション内にある、 `<source>` 属性が "DefaultSource" の `name` セクションで、 `<sources>` セクションを見つけます。 `<sources>` セクションは、最上位の `<system.diagnostics>` セクション内の `<configuration>` セクションにあります。  
+2. `<listeners>` セクション内にある、 `<source>` 属性が "DefaultSource" の `name` セクションで、 `<sources>` セクションを見つけます。 `<sources>` セクションは、最上位の `<system.diagnostics>` セクション内の `<configuration>` セクションにあります。  
   
-3.  `<listeners>` セクションに次の要素を追加します。  
+3. `<listeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
+4. 最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
   
-5.  その `<sharedListeners>` セクションに次の要素を追加します。  
+5. その `<sharedListeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  

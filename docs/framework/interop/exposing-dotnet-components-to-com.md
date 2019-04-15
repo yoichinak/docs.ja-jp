@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345769"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>COM への .NET Framework コンポーネントの公開
 .NET 型の記述とその型をアンマネージ コードから使用することは、開発者にとっては個別のアクティビティです。 このセクションでは、COM クライアントと相互運用するマネージド コードの記述のためのいくつかのヒントについて説明します。  
@@ -34,22 +34,23 @@ ms.locfileid: "56218737"
   
 #### <a name="to-consume-a-managed-type-from-com"></a>COM からマネージド型を使用するには  
   
-1.  [COM にアセンブリを登録する](../../../docs/framework/interop/registering-assemblies-with-com.md)。  
+1. [COM にアセンブリを登録する](../../../docs/framework/interop/registering-assemblies-with-com.md)。  
   
      アセンブリ (およびタイプ ライブラリ) 内の型は、デザイン時に登録する必要があります。 インストーラーでアセンブリが登録されない場合は、Regasm.exe を使用するように COM 開発者に指示します。  
   
-2.  [COM から .NET 型を参照する](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。  
+2. [COM から .NET 型を参照する](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)。  
   
      COM 開発者は、現在使用しているのと同じツールと手法を使用して、アセンブリ内の型を参照できます。  
   
-3.  [.NET オブジェクトを呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
+3. [.NET オブジェクトを呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))。  
   
      COM 開発者は、アンマネージ型でメソッドを呼び出すのと同じ方法で、.NET オブジェクトでメソッドを呼び出すことができます。 たとえば、COM **CoCreateInstance** API は、.NET オブジェクトをアクティブにします。  
   
-4.  [COM アクセスに対してアプリケーションを展開する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
+4. [COM アクセスに対してアプリケーションを展開する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))。  
   
      厳格な名前付きのアセンブリは、グローバル アセンブリ キャッシュにインストールすることができ、発行元からの署名が必要です。 厳密な名前のないアセンブリは、クライアントのアプリケーション ディレクトリにインストールする必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ コードとの相互運用](../../../docs/framework/interop/index.md)
-- [COM 相互運用機能のサンプル:COM クライアントおよび .NET サーバー](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [COM 相互運用の例: COM クライアントと .NET サーバー](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
