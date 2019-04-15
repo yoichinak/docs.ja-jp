@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a4b8a03661650a3ef1d96b656798c3c3d39a5705
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88d6c166acf9e9ab72c2713b575a8453779f70d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "58467073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234262"
 ---
 ### <a name="attempting-a-tcpip-connection-to-a-sql-server-database-that-resolves-to-localhost-fails"></a>`localhost` に解決される SQL Server データベースへの TCP/IP 接続の試みが失敗します
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467073"
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

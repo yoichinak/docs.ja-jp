@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312615"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>方法: レジストリ キーを作成し、その値を設定する (Visual Basic)
 レジストリ キーを作成するには、`My.Computer.Registry` オブジェクトの `CreateSubKey` メソッドを使用します。  
@@ -31,11 +31,11 @@ ms.locfileid: "58835454"
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>レジストリ キーを作成し、それに値を設定するには  
   
-1.  `CreateSubkey` メソッドを使用し、キーを入れるハイブとキー名を指定します。 この例では、HKEY_CURRENT_USER の下にレジストリ キー `MyTestKey` を作成します。  
+1. `CreateSubkey` メソッドを使用し、キーを入れるハイブとキー名を指定します。 この例では、HKEY_CURRENT_USER の下にレジストリ キー `MyTestKey` を作成します。  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  値は、`SetValue` メソッドを使用して設定します。 この例では、文字列値 "MyTestKeyValue" を "This is a test value" に設定します。  
+2. 値は、`SetValue` メソッドを使用して設定します。 この例では、文字列値 "MyTestKeyValue" を "This is a test value" に設定します。  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   

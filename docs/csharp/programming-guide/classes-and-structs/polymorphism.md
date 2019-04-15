@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203390"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322083"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
@@ -22,13 +22,11 @@ ms.locfileid: "57203390"
   
  仮想メソッドを使用すると、関連するオブジェクトのグループを同一の方法で扱うことができます。 たとえば、描画サーフェイスにさまざまな種類の図形を作成できる描画アプリケーションがあるとします。 コンパイル時には、ユーザーがどのような種類の図形を作成するかわかりません。 しかし、アプリケーションでは、作成されたさまざまな種類の図形を追跡し、ユーザーのマウス操作に応じて更新する必要があります。 ポリモーフィズムを使用すると、2 つの基本的な手順でこの問題を解決できます。  
   
-1.  各図形クラスが共通の基底クラスから派生するようなクラス階層を作成します。  
+1. 各図形クラスが共通の基底クラスから派生するようなクラス階層を作成します。  
   
-2.  仮想メソッドを使用して、基底クラスの 1 つのメソッドを呼び出すことで、派生クラスの適切なメソッドが呼び出されるようにします。  
+2. 仮想メソッドを使用して、基底クラスの 1 つのメソッドを呼び出すことで、派生クラスの適切なメソッドが呼び出されるようにします。  
   
- まず、`Shape` という基底クラスと、`Rectangle`、`Circle`、`Triangle` などの派生クラスを作成します。 
-  `Shape` クラスで `Draw` という仮想メソッドを定義し、各派生クラスでそれをオーバーライドして、そのクラスが表す特定の図形を描画します。 
-  `List<Shape>` オブジェクトを作成し、Circle、Triangle、および Rectangle を追加します。 描画サーフェイスを更新するには、[foreach](../../../csharp/language-reference/keywords/foreach-in.md) ループを使用してリストを反復処理し、リスト内の各 `Shape` オブジェクトの `Draw` メソッドを呼び出します。 リスト内の各オブジェクトの宣言された型は `Shape` ですが、呼び出されるのは実行時の型 (それぞれの派生クラスでオーバーライドされたメソッド) になります。  
+ まず、`Shape` という基底クラスと、`Rectangle`、`Circle`、`Triangle` などの派生クラスを作成します。 `Shape` クラスで `Draw` という仮想メソッドを定義し、各派生クラスでそれをオーバーライドして、そのクラスが表す特定の図形を描画します。 `List<Shape>` オブジェクトを作成し、Circle、Triangle、および Rectangle を追加します。 描画サーフェイスを更新するには、[foreach](../../../csharp/language-reference/keywords/foreach-in.md) ループを使用してリストを反復処理し、リスト内の各 `Shape` オブジェクトの `Draw` メソッドを呼び出します。 リスト内の各オブジェクトの宣言された型は `Shape` ですが、呼び出されるのは実行時の型 (それぞれの派生クラスでオーバーライドされたメソッド) になります。  
   
  [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
@@ -56,8 +54,7 @@ ms.locfileid: "57203390"
  仮想メソッドとプロパティを使用すると、派生クラスは、基底クラスのメソッドの実装を使用せずに基底クラスを拡張できます。 詳細については、「[Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」を参照してください。 1 つまたは一連のメソッドを定義し、その実装を派生クラスに任せるもう 1 つの方法として、インターフェイスがあります。 詳細については、「[インターフェイス](../../../csharp/programming-guide/interfaces/index.md)」を参照してください。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>新しいメンバーによる基底クラスのメンバーの隠ぺい  
- 派生メンバーに基底クラスのメンバーと同じ名前を付けながら、そのメンバーが仮想呼び出しに加わらないようにするには、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用します。 
-  `new` キーワードは、置き換えられるクラス メンバーの戻り値の型の前に配置します。 次にコード例を示します。  
+ 派生メンバーに基底クラスのメンバーと同じ名前を付けながら、そのメンバーが仮想呼び出しに加わらないようにするには、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用します。 `new` キーワードは、置き換えられるクラス メンバーの戻り値の型の前に配置します。 次にコード例を示します。  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
@@ -107,4 +104,4 @@ ms.locfileid: "57203390"
 - [イベント](../../../csharp/programming-guide/events/index.md)
 - [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [インデクサー](../../../csharp/programming-guide/indexers/index.md)
-- [型](../../../csharp/programming-guide/types/index.md)
+- [種類](../../../csharp/programming-guide/types/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306522"
 ---
 # <a name="how-to-log-information-about-services"></a>方法: サービスに関する情報のログを記録する
 既定では、すべての Windows サービス プロジェクトはアプリケーション イベント ログとやり取りして、そこに情報および例外を書き込むことができます。 アプリケーションにこの機能が必要かどうかを指定するには、 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> プロパティを使用します。 既定では、Windows サービス プロジェクト テンプレートで作成したサービスには、ログが有効にされます。 <xref:System.Diagnostics.EventLog> クラスの静的フォームを使用すると、 <xref:System.Diagnostics.EventLog> コンポーネントのインスタンスを作成したり、手動でソースを登録したりすることなく、ログにサービス情報を書き込むことができます。  
@@ -46,18 +46,18 @@ ms.locfileid: "54660142"
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>カスタム ログへのログ記録を設定するには  
   
-1.  <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> プロパティを `false`に設定します。  
+1. <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> プロパティを `false`に設定します。  
   
     > [!NOTE]
     >  カスタム ログを使用するには、 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> を false に設定する必要があります。  
   
-2.  Windows サービス アプリケーションに <xref:System.Diagnostics.EventLog> コンポーネントのインスタンスを設定します。  
+2. Windows サービス アプリケーションに <xref:System.Diagnostics.EventLog> コンポーネントのインスタンスを設定します。  
   
-3.  <xref:System.Diagnostics.EventLog.CreateEventSource%2A> メソッドを呼び出し、作成するログ ファイルのソース文字列と名前を指定して、カスタム ログを作成します。  
+3. <xref:System.Diagnostics.EventLog.CreateEventSource%2A> メソッドを呼び出し、作成するログ ファイルのソース文字列と名前を指定して、カスタム ログを作成します。  
   
-4.  <xref:System.Diagnostics.EventLog.Source%2A> コンポーネント インスタンスの <xref:System.Diagnostics.EventLog> プロパティを、手順 3 で作成したソース文字列に設定します。  
+4. <xref:System.Diagnostics.EventLog.Source%2A> コンポーネント インスタンスの <xref:System.Diagnostics.EventLog> プロパティを、手順 3 で作成したソース文字列に設定します。  
   
-5.  <xref:System.Diagnostics.EventLog.WriteEntry%2A> コンポーネント インスタンスで <xref:System.Diagnostics.EventLog> メソッドにアクセスして、エントリを作成します。  
+5. <xref:System.Diagnostics.EventLog.WriteEntry%2A> コンポーネント インスタンスで <xref:System.Diagnostics.EventLog> メソッドにアクセスして、エントリを作成します。  
   
      次のコードに、カスタム ログへのログ記録を設定する方法を示します。  
   
@@ -70,4 +70,5 @@ ms.locfileid: "54660142"
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

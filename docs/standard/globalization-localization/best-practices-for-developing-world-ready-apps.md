@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442491"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310539"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
 
@@ -37,22 +37,17 @@ ms.locfileid: "56442491"
 
     - グレゴリオ暦とグレゴリオ暦以外の暦には、<xref:System.Globalization.Calendar> クラスまたは特定のカレンダー実装を使用します。
 
-3. 状況に応じて、<xref:System.Globalization.CultureInfo?displayProperty=nameWithType> クラスのカルチャ プロパティ設定を使用します。 日付と時刻や数値の書式指定などの書式指定タスクには、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用します。 リソースを取得するには、<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用します。 
-  `CurrentCulture` プロパティと `CurrentUICulture` プロパティはスレッドごとに設定できることに注意してください。
+3. 状況に応じて、<xref:System.Globalization.CultureInfo?displayProperty=nameWithType> クラスのカルチャ プロパティ設定を使用します。 日付と時刻や数値の書式指定などの書式指定タスクには、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを使用します。 リソースを取得するには、<xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用します。 `CurrentCulture` プロパティと `CurrentUICulture` プロパティはスレッドごとに設定できることに注意してください。
 
-4. 
-  <xref:System.Text> 名前空間のエンコーディング クラスを使用して、アプリケーションでの各種エンコーディングのデータの読み取り操作と書き込み操作を有効にします。 常に ASCII データが使用されるとは限らないことに注意してください。 どのようなテキスト入力でも、各種の言語の文字が使用される可能性があります。 たとえば、アプリケーションは、サーバー名、ディレクトリ名、ファイル名、ユーザー名、および URL に含まれる各種言語の文字を受け入れる必要があります。
+4. <xref:System.Text> 名前空間のエンコーディング クラスを使用して、アプリケーションでの各種エンコーディングのデータの読み取り操作と書き込み操作を有効にします。 常に ASCII データが使用されるとは限らないことに注意してください。 どのようなテキスト入力でも、各種の言語の文字が使用される可能性があります。 たとえば、アプリケーションは、サーバー名、ディレクトリ名、ファイル名、ユーザー名、および URL に含まれる各種言語の文字を受け入れる必要があります。
 
-5. 
-  <xref:System.Text.UTF8Encoding> クラスを使用する場合は、セキュリティ上の理由から、このクラスに用意されているエラー検出機能を使用してください。 エラー検出機能を有効にするには、`throwOnInvalidBytes` パラメーターを受け取るコンストラクターを使用してクラスのインスタンスを作成し、このパラメーターの値を `true` に設定します。
+5. <xref:System.Text.UTF8Encoding> クラスを使用する場合は、セキュリティ上の理由から、このクラスに用意されているエラー検出機能を使用してください。 エラー検出機能を有効にするには、`throwOnInvalidBytes` パラメーターを受け取るコンストラクターを使用してクラスのインスタンスを作成し、このパラメーターの値を `true` に設定します。
 
 6. 文字列は、できるだけ全体を 1 つのまとまりとして扱い、個々の文字の連続として処理しないようにします。 これは特に部分文字列の並べ替えと検索で重要です。 これにより、組み合わせ文字の解析に関連する問題の発生を防ぐことができます。 <xref:System.Globalization.StringInfo?displayProperty=nameWithType> クラスを使用することで 1 つの文字ではなくまとまったテキストを使用することもできます。
 
-7. 
-  <xref:System.Drawing> 名前空間のクラスを使用してテキストを表示します。
+7. <xref:System.Drawing> 名前空間のクラスを使用してテキストを表示します。
 
-8. オペレーティング システム間での一貫性を維持するため、ユーザー設定によって <xref:System.Globalization.CultureInfo> がオーバーライドされないようにしてください。 
-  `CultureInfo` パラメーターを受け取る `useUserOverride` コンストラクターを使用し、このパラメーターを `false` に設定してください。
+8. オペレーティング システム間での一貫性を維持するため、ユーザー設定によって <xref:System.Globalization.CultureInfo> がオーバーライドされないようにしてください。 `CultureInfo` パラメーターを受け取る `useUserOverride` コンストラクターを使用し、このパラメーターを `false` に設定してください。
 
 9. 国際対応オペレーティング システムで、国際対応データを使用してアプリケーションの機能をテストします。
 
@@ -76,7 +71,7 @@ ms.locfileid: "56442491"
 
 8. カルチャに基づいてリソースを取得するには、<xref:System.Resources.ResourceManager?displayProperty=nameWithType> クラスを使用します。
 
-9. Windows フォームのダイアログ ボックスを作成するには [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) を使います。このように作成されたダイアログ ボックスは、[Windows フォーム リソース エディター (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) を使ってローカライズできます。 Windows フォームのダイアログ ボックスを手動でコーディングしないでください。
+9. Windows フォームのダイアログ ボックスを作成するには [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使います。このように作成されたダイアログ ボックスは、[Windows フォーム リソース エディター (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) を使ってローカライズできます。 Windows フォームのダイアログ ボックスを手動でコーディングしないでください。
 
 10. 専門的なローカライズ (翻訳) 作業を計画してください。
 
@@ -84,8 +79,7 @@ ms.locfileid: "56442491"
 
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>推奨される ASP.NET アプリケーションのグローバライズ手順
 
-1. 
-  <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> プロパティおよび <xref:System.Globalization.CultureInfo.CurrentCulture%2A> プロパティをアプリケーションで明示的に設定します。 既定値には依存しないでください。
+1. <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> プロパティおよび <xref:System.Globalization.CultureInfo.CurrentCulture%2A> プロパティをアプリケーションで明示的に設定します。 既定値には依存しないでください。
 
 2. ASP.NET アプリケーションはマネージド アプリケーションであり、カルチャに基づいた情報の取得、表示、および操作では、ほかのマネージド アプリケーションと同じクラスを使用できます。
 
