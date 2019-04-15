@@ -2,31 +2,31 @@
 title: 永続参加要素
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316363"
 ---
 # <a name="persistence-participants"></a>永続参加要素
 永続参加要素は、アプリケーション ホストによってトリガーされる永続化操作 (保存または読み込み) に参加できます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 2 つの抽象クラスが付属しています**PersistenceParticipant**と**PersistenceIOParticipant**、永続参加要素を作成に使用できます。 永続参加要素はこれらのクラスの 1 つから派生し、目的のメソッドを実装して、このクラスのインスタンスを <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> の <xref:System.ServiceModel.Activities.WorkflowServiceHost> コレクションに追加します。 アプリケーション ホストは、ワークフロー インスタンスを永続化するときにこのようなワークフロー拡張機能を必要とする場合があり、適切なときに永続参加要素の適切なメソッドを呼び出します。  
   
  次の一覧では、永続化 (保存) 操作のさまざまな段階で永続化サブシステムが実行するタスクについて説明します。 3 番目および 4 番目の段階で永続参加要素が使用されます。 参加者が I/O の参加者 (I/O 操作にも参加する永続化参加) の場合も、6 番目の段階で、参加要素が使用されます。  
   
-1.  ワークフロー状態、ブックマーク、マップされた変数、およびタイムスタンプなどの組み込みの値を収集します。  
+1. ワークフロー状態、ブックマーク、マップされた変数、およびタイムスタンプなどの組み込みの値を収集します。  
   
-2.  ワークフロー インスタンスに関連付けられた拡張コレクションに追加された永続参加要素を収集します。  
+2. ワークフロー インスタンスに関連付けられた拡張コレクションに追加された永続参加要素を収集します。  
   
-3.  すべての永続参加要素によって実装された <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> メソッドを呼び出します。  
+3. すべての永続参加要素によって実装された <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> メソッドを呼び出します。  
   
-4.  すべての永続参加要素によって実装された <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> メソッドを呼び出します。  
+4. すべての永続参加要素によって実装された <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> メソッドを呼び出します。  
   
-5.  ワークフローを永続ストアに永続化または保存します。  
+5. ワークフローを永続ストアに永続化または保存します。  
   
-6.  呼び出す、 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> I/O を永続化参加要素のすべてのメソッド。 参加者が I/O の参加要素でない場合は、このタスクはスキップされます。 永続化がトランザクションである場合、Transaction.Current プロパティにトランザクションが提供されます。  
+6. 呼び出す、 <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> I/O を永続化参加要素のすべてのメソッド。 参加者が I/O の参加要素でない場合は、このタスクはスキップされます。 永続化がトランザクションである場合、Transaction.Current プロパティにトランザクションが提供されます。  
   
-7.  すべての永続参加要素が完了するのを待機します。 すべての参加要素がインスタンス データの永続化に成功したら、トランザクションをコミットします。  
+7. すべての永続参加要素が完了するのを待機します。 すべての参加要素がインスタンス データの永続化に成功したら、トランザクションをコミットします。  
   
  永続参加要素がから派生した、 **PersistenceParticipant**クラスし、実装、 **CollectValues**と**MapValues**メソッド。 派生した I/O の永続参加要素、 **PersistenceIOParticipant**クラスし、実装、 **BeginOnSave**メソッドの実装に加えて、 **CollectValues**と**MapValues**メソッド。  
   
@@ -34,15 +34,15 @@ ms.locfileid: "59115896"
   
  次の一覧では、読み込み操作のさまざまな段階で永続化サブシステムが実行するタスクについて説明します。 4 番目の段階で永続参加要素が使用されます。 永続化 I/O の参加者 (永続参加要素も、I/O 操作に参加している) は、3 番目の段階でも使用されます。  
   
-1.  ワークフロー インスタンスに関連付けられた拡張コレクションに追加された永続参加要素を収集します。  
+1. ワークフロー インスタンスに関連付けられた拡張コレクションに追加された永続参加要素を収集します。  
   
-2.  永続ストアからワークフローを読み込みます。  
+2. 永続ストアからワークフローを読み込みます。  
   
-3.  呼び出す、<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>すべての I/O の永続参加要素とするには、すべての永続参加要素の間、待機します。 永続化がトランザクションである場合、Transaction.Current にトランザクションが提供されます。  
+3. 呼び出す、<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>すべての I/O の永続参加要素とするには、すべての永続参加要素の間、待機します。 永続化がトランザクションである場合、Transaction.Current にトランザクションが提供されます。  
   
-4.  永続ストアから取得されたデータに基づいて、メモリ内のワークフロー インスタンスを読み込みます。  
+4. 永続ストアから取得されたデータに基づいて、メモリ内のワークフロー インスタンスを読み込みます。  
   
-5.  各永続参加要素の <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> メソッドを呼び出します。  
+5. 各永続参加要素の <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> メソッドを呼び出します。  
   
  永続参加要素がから派生した、 **PersistenceParticipant**クラスし、実装、 **PublishValues**メソッド。 派生した I/O の永続参加要素、 **PersistenceIOParticipant**クラスし、実装、 **BeginOnLoad**メソッドの実装に加えて、 **PublishValues**メソッド。  
   

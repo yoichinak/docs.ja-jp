@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212428"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer の概要
 ユーザー インターフェイス内のコンテンツは、多くの場合、コンピューター画面の表示領域よりも大きいです。 <xref:System.Windows.Controls.ScrollViewer>コントロール内のコンテンツのスクロールを有効にする便利な手段を提供する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは、<xref:System.Windows.Controls.ScrollViewer>要素と、いくつかの使用例を提供します。  
@@ -29,7 +29,7 @@ ms.locfileid: "57356911"
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>物理スクロールと論理スクロール  
- 物理スクロールは、定義済みの物理インクリメント(通常ピクセル単位で宣言されている値) でコンテンツをスクロールするために使用します。 論理スクロールは、論理ツリーの次の項目にスクロールするために使用します。 ほとんどの既定のスクロール動作は、物理スクロール<xref:System.Windows.Controls.Panel>要素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は両方の種類のスクロールをサポートしています。  
+ 物理スクロールは、定義済みの物理インクリメント(通常ピクセル単位で宣言されている値) でコンテンツをスクロールするために使用します。 論理スクロールは、論理ツリーの次の項目にスクロールするために使用します。 ほとんどの既定のスクロール動作は、物理スクロール<xref:System.Windows.Controls.Panel>要素。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 両方の種類のスクロールをサポートしています。  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo インターフェイス  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>インターフェイス内のメインのスクロール領域を表す、<xref:System.Windows.Controls.ScrollViewer>または派生コントロール。 スクロールのプロパティとメソッドを実装できるインターフェイスを定義します<xref:System.Windows.Controls.Panel>物理インクリメントではなく、論理ユニットのスクロールを必要とします。 インスタンスにキャスト<xref:System.Windows.Controls.Primitives.IScrollInfo>を派生する<xref:System.Windows.Controls.Panel>ピクセル インクリメントではなく、子のコレクションでは、次の論理ユニットにスクロールする便利な方法を提供し、そのスクロール メソッドを使用しているとします。 既定で、<xref:System.Windows.Controls.ScrollViewer>コントロールは、物理単位でスクロールをサポートしています。  
@@ -61,6 +61,7 @@ ms.locfileid: "57356911"
  ドキュメント形式とプレゼンテーション オプションの詳細については、「[WPF のドキュメント](../advanced/documents-in-wpf.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f4b962762aeecea65748c5456bc4a2d75595d4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311618"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する
 <xref:System.Windows.Forms.PropertyGrid> コントロールに `My.Settings` オブジェクトのユーザー設定プロパティを設定すると、ユーザー設定のためのプロパティ グリッドを作成できます。  
@@ -29,17 +29,17 @@ ms.locfileid: "58843047"
   
 ### <a name="to-add-a-user-setting-property-grid"></a>ユーザー設定のプロパティ グリッドを追加するには  
   
-1.  アプリケーションのデザイン サーフェイス (ここでは `Form1` とする) に、**[ツールボックス]** から **[PropertyGrid]** コントロールを追加します。  
+1. アプリケーションのデザイン サーフェイス (ここでは `Form1` とする) に、**[ツールボックス]** から **[PropertyGrid]** コントロールを追加します。  
   
      プロパティ グリッド コントロールの既定の名前は `PropertyGrid1` です。  
   
-2.  `Form1` のデザイン サーフェイスをダブルクリックして、フォーム読み込みのイベント ハンドラーのコードを開きます。  
+2. `Form1` のデザイン サーフェイスをダブルクリックして、フォーム読み込みのイベント ハンドラーのコードを開きます。  
   
-3.  `My.Settings` オブジェクトをプロパティ グリッド用に選択されたオブジェクトとして設定します。  
+3. `My.Settings` オブジェクトをプロパティ グリッド用に選択されたオブジェクトとして設定します。  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4.  ユーザー設定のみを表示するように、プロパティ グリッドを構成します。  
+4. ユーザー設定のみを表示するように、プロパティ グリッドを構成します。  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   

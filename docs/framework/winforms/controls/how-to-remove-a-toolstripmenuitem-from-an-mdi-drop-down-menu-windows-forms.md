@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 6e0d453903b817e9acd743e835f4d466e3565271
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c84d260783e3a511b5ef6a651c71f1ee55acffe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295342"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>方法: ToolStripMenuItem を MDI ドロップダウン メニュー (Windows フォーム) から削除します。
 アプリケーションの中には、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウの種類が MDI 親ウィンドウと異なるものがあります。 たとえば、MDI 親がスプレッドシートで、MDI 子がグラフの場合があります。 そのような場合は、異なる種類の MDI 子ウィンドウがアクティブになったときに、MDI 子メニューの内容で MDI 親メニューの内容を更新する必要があります。  
@@ -24,21 +24,21 @@ ms.locfileid: "59132835"
   
 ### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>MenuStrip を MDI ドロップダウン メニューから削除するには  
   
-1.  フォームを作成し、その <xref:System.Windows.Forms.Form.IsMdiContainer%2A> プロパティを `true` に設定します。  
+1. フォームを作成し、その <xref:System.Windows.Forms.Form.IsMdiContainer%2A> プロパティを `true` に設定します。  
   
-2.  <xref:System.Windows.Forms.MenuStrip> を `Form1` に追加し、<xref:System.Windows.Forms.MenuStrip> の <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> プロパティを `true` に設定します。  
+2. <xref:System.Windows.Forms.MenuStrip> を `Form1` に追加し、<xref:System.Windows.Forms.MenuStrip> の <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> プロパティを `true` に設定します。  
   
-3.  トップレベルのメニュー項目を追加、`Form1`<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.Control.Text%2A>プロパティを`&File`します。  
+3. トップレベルのメニュー項目を追加、`Form1`<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.Control.Text%2A>プロパティを`&File`します。  
   
-4.  3 つのサブメニュー項目を追加、`&File`メニュー項目とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&Open`、`&Import from`と`E&xit`。  
+4. 3 つのサブメニュー項目を追加、`&File`メニュー項目とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&Open`、`&Import from`と`E&xit`。  
   
-5.  2 つのサブメニュー項目を追加、`&Import from`サブメニュー項目とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&Word`と`&Excel`します。  
+5. 2 つのサブメニュー項目を追加、`&Import from`サブメニュー項目とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&Word`と`&Excel`します。  
   
-6.  プロジェクトにフォームを追加して、<xref:System.Windows.Forms.MenuStrip>を設定し、フォーム、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>のプロパティ、`Form2`<xref:System.Windows.Forms.MenuStrip>に`true`します。  
+6. プロジェクトにフォームを追加して、<xref:System.Windows.Forms.MenuStrip>を設定し、フォーム、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>のプロパティ、`Form2`<xref:System.Windows.Forms.MenuStrip>に`true`します。  
   
-7.  トップレベルのメニュー項目を追加、`Form2`<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&File`します。  
+7. トップレベルのメニュー項目を追加、`Form2`<xref:System.Windows.Forms.MenuStrip>設定とその<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティを`&File`します。  
   
-8.  追加、`&Import from`サブメニュー項目を`&File`のメニュー `Form2`、追加、`&Word`サブメニュー項目を`&File`メニュー。  
+8. 追加、`&Import from`サブメニュー項目を`&File`のメニュー `Form2`、追加、`&Word`サブメニュー項目を`&File`メニュー。  
   
 9. 設定、<xref:System.Windows.Forms.MergeAction>と<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>のプロパティ、`Form2`メニュー項目を次の表に示すようにします。  
   
@@ -92,8 +92,7 @@ ms.locfileid: "59132835"
   
 -   `Form1` 上の `menuStrip1` という名前の <xref:System.Windows.Forms.MenuStrip> コントロールと、`Form2` 上の `menuStrip2` という名前の <xref:System.Windows.Forms.MenuStrip> コントロール。  
   
--   
-  <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+-   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

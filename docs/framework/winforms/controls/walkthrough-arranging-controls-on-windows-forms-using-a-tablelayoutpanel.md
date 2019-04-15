@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 44ef0b88da5b8990ad9fde921224b6bb7101cbc2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073859"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341622"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -54,104 +54,104 @@ ms.locfileid: "59073859"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  "TableLayoutPanelExample"と呼ばれる Windows アプリケーション プロジェクトを作成します。 詳細については、「[方法 :Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)です。  
+1. "TableLayoutPanelExample"と呼ばれる Windows アプリケーション プロジェクトを作成します。 詳細については、「[方法 :Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)です。  
   
-2.  フォームを選択、 **Windows** **フォーム デザイナー**します。  
+2. フォームを選択、 **Windows** **フォーム デザイナー**します。  
   
 ## <a name="arranging-controls-in-rows-and-columns"></a>行と列でコントロールの配置  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールでは、行と列にコントロールを簡単に配置できます。  
   
 #### <a name="to-arrange-controls-in-rows-and-columns-using-a-tablelayoutpanel"></a>行と列は、TableLayoutPanel を使用してコントロールを配置するには  
   
-1.  <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。 既定では、それに注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールに 4 つのセルがあります。  
+1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。 既定では、それに注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールに 4 つのセルがあります。  
   
-2.  ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>を制御し、セルの 1 つにドロップします。 なお、<xref:System.Windows.Forms.Button>コントロールが選択したセル内で作成されます。  
+2. ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>を制御し、セルの 1 つにドロップします。 なお、<xref:System.Windows.Forms.Button>コントロールが選択したセル内で作成されます。  
   
-3.  3 回ドラッグ<xref:System.Windows.Forms.Button>コントロールを**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>制御、各セルには、ボタンが含まれているようにします。  
+3. 3 回ドラッグ<xref:System.Windows.Forms.Button>コントロールを**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>制御、各セルには、ボタンが含まれているようにします。  
   
-4.  2 つの列間の垂直方向のサイズ変更ハンドルをドラッグし、左に移動します。 なお、<xref:System.Windows.Forms.Button>のサイズの中に、幅を小さくする最初の列内のコントロールがサイズ変更、 <xref:System.Windows.Forms.Button> 2 番目の列内のコントロールは変更されません。  
+4. 2 つの列間の垂直方向のサイズ変更ハンドルをドラッグし、左に移動します。 なお、<xref:System.Windows.Forms.Button>のサイズの中に、幅を小さくする最初の列内のコントロールがサイズ変更、 <xref:System.Windows.Forms.Button> 2 番目の列内のコントロールは変更されません。  
   
-5.  2 つの列間の垂直方向のサイズ変更ハンドルをドラッグし、右に移動します。 なお、<xref:System.Windows.Forms.Button>最初の列内のコントロールは、元のサイズに戻るときに、 <xref:System.Windows.Forms.Button> 2 番目の列内のコントロールが右に移動されます。  
+5. 2 つの列間の垂直方向のサイズ変更ハンドルをドラッグし、右に移動します。 なお、<xref:System.Windows.Forms.Button>最初の列内のコントロールは、元のサイズに戻るときに、 <xref:System.Windows.Forms.Button> 2 番目の列内のコントロールが右に移動されます。  
   
-6.  パネル内のコントロールへの影響を確認するには、上下の水平方向のサイズ変更ハンドルを移動します。  
+6. パネル内のコントロールへの影響を確認するには、上下の水平方向のサイズ変更ハンドルを移動します。  
   
 ## <a name="positioning-controls-within-cells-using-docking-and-anchoring"></a>ドッキングと固定を使用してセル内のコントロールの配置  
  子コントロールのアンカーの動作を<xref:System.Windows.Forms.TableLayoutPanel>他のコンテナー コントロールでの動作とは異なります。 子コントロールのドッキング動作では、他のコンテナー コントロールの場合と同じです。  
   
 #### <a name="positioning-controls-within-cells"></a>セル内のコントロールの配置  
   
-1.  最初の選択<xref:System.Windows.Forms.Button>コントロール。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Fill>に変更します。 なお、<xref:System.Windows.Forms.Button>コントロールを拡張すると、そのセルを入力します。  
+1. 最初の選択<xref:System.Windows.Forms.Button>コントロール。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Fill>に変更します。 なお、<xref:System.Windows.Forms.Button>コントロールを拡張すると、そのセルを入力します。  
   
-2.  その他のいずれかを選択<xref:System.Windows.Forms.Button>コントロール。 <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を <xref:System.Windows.Forms.AnchorStyles.Right>に変更します。 右の境界線がセルの右境界線に近いように移動はことに注意してください。 境界線の間の距離の合計は、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティと、パネルの<xref:System.Windows.Forms.Control.Padding%2A>プロパティ。  
+2. その他のいずれかを選択<xref:System.Windows.Forms.Button>コントロール。 <xref:System.Windows.Forms.Control.Anchor%2A> プロパティの値を <xref:System.Windows.Forms.AnchorStyles.Right>に変更します。 右の境界線がセルの右境界線に近いように移動はことに注意してください。 境界線の間の距離の合計は、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティと、パネルの<xref:System.Windows.Forms.Control.Padding%2A>プロパティ。  
   
-3.  値を変更、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Anchor%2A>プロパティを<xref:System.Windows.Forms.AnchorStyles.Right>と<xref:System.Windows.Forms.AnchorStyles.Left>します。 コントロールのサイズが、セルの幅に注意してください、<xref:System.Windows.Forms.Control.Margin%2A>と<xref:System.Windows.Forms.Control.Padding%2A>値を考慮します。  
+3. 値を変更、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Anchor%2A>プロパティを<xref:System.Windows.Forms.AnchorStyles.Right>と<xref:System.Windows.Forms.AnchorStyles.Left>します。 コントロールのサイズが、セルの幅に注意してください、<xref:System.Windows.Forms.Control.Margin%2A>と<xref:System.Windows.Forms.Control.Padding%2A>値を考慮します。  
   
-4.  手順 2 と 3 を繰り返して、<xref:System.Windows.Forms.AnchorStyles.Top>と<xref:System.Windows.Forms.AnchorStyles.Bottom>スタイル。  
+4. 手順 2 と 3 を繰り返して、<xref:System.Windows.Forms.AnchorStyles.Top>と<xref:System.Windows.Forms.AnchorStyles.Bottom>スタイル。  
   
 ## <a name="setting-row-and-column-properties"></a>設定の行と列のプロパティ  
  使用して行および列の個別のプロパティを設定することができます、<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>と<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>コレクション。  
   
 #### <a name="to-set-row-and-column-properties"></a>行と列のプロパティを設定するには  
   
-1.  選択、<xref:System.Windows.Forms.TableLayoutPanel>を制御、 **Windows フォーム デザイナー**します。  
+1. 選択、<xref:System.Windows.Forms.TableLayoutPanel>を制御、 **Windows フォーム デザイナー**します。  
   
-2.  **プロパティ**開いているウィンドウ、 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 、省略記号ボタンをクリックしてコレクション (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタン次に、**列**エントリ。  
+2. **プロパティ**開いているウィンドウ、 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 、省略記号ボタンをクリックしてコレクション (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタン次に、**列**エントリ。  
   
-3.  最初の列を選択しの値を変更、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.SizeType.AutoSize>します。 クリックして**OK**して変更を受け入れます。 最初の列の幅が合わせてに減少することに注意してください、<xref:System.Windows.Forms.Button>コントロール。 また、列の幅がサイズ変更可能でないことに注意してください。  
+3. 最初の列を選択しの値を変更、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.SizeType.AutoSize>します。 クリックして**OK**して変更を受け入れます。 最初の列の幅が合わせてに減少することに注意してください、<xref:System.Windows.Forms.Button>コントロール。 また、列の幅がサイズ変更可能でないことに注意してください。  
   
-4.  **プロパティ**ウィンドウを開いて、<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>コレクションと、最初の列を選択します。 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> プロパティの値を <xref:System.Windows.Forms.SizeType.Percent>に変更します。 クリックして**OK**して変更を受け入れます。 サイズ変更、<xref:System.Windows.Forms.TableLayoutPanel>の幅を制御し、最初の列の幅が拡大することに注意してください。 サイズ変更、<xref:System.Windows.Forms.TableLayoutPanel>制御幅を小さくして、最初の列のボタンがセルに合わせてサイズを調整するに注意してください。 また、列の幅がサイズ変更可能なことに注意してください。  
+4. **プロパティ**ウィンドウを開いて、<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>コレクションと、最初の列を選択します。 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> プロパティの値を <xref:System.Windows.Forms.SizeType.Percent>に変更します。 クリックして**OK**して変更を受け入れます。 サイズ変更、<xref:System.Windows.Forms.TableLayoutPanel>の幅を制御し、最初の列の幅が拡大することに注意してください。 サイズ変更、<xref:System.Windows.Forms.TableLayoutPanel>制御幅を小さくして、最初の列のボタンがセルに合わせてサイズを調整するに注意してください。 また、列の幅がサイズ変更可能なことに注意してください。  
   
-5.  **プロパティ**ウィンドウを開いて、<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>収集と表示されているすべての列を選択します。 値の設定すべて<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.SizeType.Percent>します。 クリックして**OK**して変更を受け入れます。 繰り返し、<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>コレクション。  
+5. **プロパティ**ウィンドウを開いて、<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>収集と表示されているすべての列を選択します。 値の設定すべて<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.SizeType.Percent>します。 クリックして**OK**して変更を受け入れます。 繰り返し、<xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A>コレクション。  
   
-6.  角にあるサイズ変更ハンドルを取得し、幅と高さのサイズを変更、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。 行と列としてサイズ変更に注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールのサイズを変更します。 行と列の値は水平方向サイズ変更可能なサイズ変更ハンドルを垂直方向にも注意してください。  
+6. 角にあるサイズ変更ハンドルを取得し、幅と高さのサイズを変更、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。 行と列としてサイズ変更に注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールのサイズを変更します。 行と列の値は水平方向サイズ変更可能なサイズ変更ハンドルを垂直方向にも注意してください。  
   
 ## <a name="spanning-rows-and-columns-with-a-control"></a>コントロールを使って行および列にまたがりメモリ割り当てください。  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、デザイン時にコントロールをいくつかの新しいプロパティを追加します。 これらのプロパティの 2 つは`RowSpan`と`ColumnSpan`します。 これらのプロパティを使用すると、コントロールの範囲より 1 つの行または列を作成します。  
   
 #### <a name="to-span-rows-and-columns-with-a-control"></a>行と列を制御する  
   
-1.  選択、<xref:System.Windows.Forms.Button>最初の行および第 1 列内のコントロール。  
+1. 選択、<xref:System.Windows.Forms.Button>最初の行および第 1 列内のコントロール。  
   
-2.  **プロパティ**windows での値を変更する、`ColumnSpan`プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>コントロールが最初の列と 2 番目の列を入力します。 この変更に対応するために、余分な行が追加されたよりも注意してください。  
+2. **プロパティ**windows での値を変更する、`ColumnSpan`プロパティを**2**します。 なお、<xref:System.Windows.Forms.Button>コントロールが最初の列と 2 番目の列を入力します。 この変更に対応するために、余分な行が追加されたよりも注意してください。  
   
-3.  手順 2. を繰り返します、`RowSpan`プロパティ。  
+3. 手順 2. を繰り返します、`RowSpan`プロパティ。  
   
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>ツールボックスでのダブルクリックによるコントロールの挿入  
  <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **でコントロールをダブルクリックすると、** コントロールに内容を挿入できます。  
   
 #### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>ツールボックスでダブルクリックしてコントロールを挿入するには  
   
-1.  <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
+1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
   
-2.  <xref:System.Windows.Forms.Button> ツールボックス **の**コントロール アイコンをダブルクリックします。 新しいボタン コントロールが含まれているメモ、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの最初のセル。  
+2. <xref:System.Windows.Forms.Button> ツールボックス **の**コントロール アイコンをダブルクリックします。 新しいボタン コントロールが含まれているメモ、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの最初のセル。  
   
-3.  **ツールボックス**でさらにいくつかのコントロールをダブルクリックします。 新しいコントロールに順次表示されることに注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの使用されていないセル。 また、<xref:System.Windows.Forms.TableLayoutPanel>コントロールを拡張すると、使用可能なセルがない場合に、新しいコントロールに対応します。  
+3. **ツールボックス**でさらにいくつかのコントロールをダブルクリックします。 新しいコントロールに順次表示されることに注意してください、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの使用されていないセル。 また、<xref:System.Windows.Forms.TableLayoutPanel>コントロールを拡張すると、使用可能なセルがない場合に、新しいコントロールに対応します。  
   
 ## <a name="automatic-handling-of-overflows"></a>オーバーフローの自動処理  
  コントロールを挿入するときに、<xref:System.Windows.Forms.TableLayoutPanel>コントロール、可能性がありますが不足する空のセル、新しいコントロールにします。 <xref:System.Windows.Forms.TableLayoutPanel>コントロールこのような状況は自動的に処理のセルの数を増やすことで。  
   
 #### <a name="to-observe-automatic-handling-of-overflows"></a>オーバーフローの自動処理を確認するには  
   
-1.  まだ空のセルがある場合、<xref:System.Windows.Forms.TableLayoutPanel>コントロールを新しい挿入<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。  
+1. まだ空のセルがある場合、<xref:System.Windows.Forms.TableLayoutPanel>コントロールを新しい挿入<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。  
   
-2.  1 回、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは完全なをダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**別に挿入する<xref:System.Windows.Forms.Button>コントロール。 なお、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは、新しいコントロールを対応するために新しいセルを作成します。 さらに、いくつかのコントロールを挿入し、サイズ変更動作を確認します。  
+2. 1 回、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは完全なをダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**別に挿入する<xref:System.Windows.Forms.Button>コントロール。 なお、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは、新しいコントロールを対応するために新しいセルを作成します。 さらに、いくつかのコントロールを挿入し、サイズ変更動作を確認します。  
   
-3.  <xref:System.Windows.Forms.TableLayoutPanel> コントロールの <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> プロパティの値を <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize> に変更します。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**を挿入する<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**もう一度です。 エラー メッセージが表示されることに注意してください、 **Windows フォーム デザイナー**追加の行と列を作成できないことを通知します。  
+3. <xref:System.Windows.Forms.TableLayoutPanel> コントロールの <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> プロパティの値を <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize> に変更します。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**を挿入する<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**もう一度です。 エラー メッセージが表示されることに注意してください、 **Windows フォーム デザイナー**追加の行と列を作成できないことを通知します。  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>アウトラインの描画によるコントロールの挿入  
  セルにアウトラインを描画すると、コントロールを <xref:System.Windows.Forms.TableLayoutPanel> コントロールに挿入し、サイズを指定できます。  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>アウトラインを描画してコントロールを挿入するには  
   
-1.  <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
+1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
   
-2.  **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。  
+2. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。  
   
-3.  <xref:System.Windows.Forms.TableLayoutPanel> コントロールにマウス ポインターを置きます。 ポインターが <xref:System.Windows.Forms.Button> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。  
+3. <xref:System.Windows.Forms.TableLayoutPanel> コントロールにマウス ポインターを置きます。 ポインターが <xref:System.Windows.Forms.Button> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。  
   
-4.  マウス ボタンを押したままにします。  
+4. マウス ボタンを押したままにします。  
   
-5.  マウス ポインターをドラッグして、 <xref:System.Windows.Forms.Button> コントロールのアウトラインを描画します。 適切なサイズのアウトラインを描画したら、マウス ボタンを離します。 なお、<xref:System.Windows.Forms.Button>コントロールのアウトラインを描画したセルにコントロールが作成されます。  
+5. マウス ポインターをドラッグして、 <xref:System.Windows.Forms.Button> コントロールのアウトラインを描画します。 適切なサイズのアウトラインを描画したら、マウス ボタンを離します。 なお、<xref:System.Windows.Forms.Button>コントロールのアウトラインを描画したセルにコントロールが作成されます。  
   
 ## <a name="multiple-controls-within-cells-are-not-permitted"></a>セル内の複数のコントロールが許可されていません  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、1 つのセルの 1 つだけの子コントロールを含めることができます。  

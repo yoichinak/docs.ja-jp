@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104859"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316532"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法: サンド ボックスで部分信頼コードを実行します。
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>サンドボックスでアプリケーションを実行するには  
   
-1.  信頼関係のないアプリケーションに付与するアクセス許可セットを作成します。 付与できる最小限のアクセス許可は <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> です。 また、信頼関係のないコードでも安全と考えられる追加のアクセス許可を付与することもできます。たとえば、<xref:System.Security.Permissions.IsolatedStorageFilePermission> などです。 次のコードでは、<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> アクセス許可のみを含む新しいアクセス許可セットを作成します。  
+1. 信頼関係のないアプリケーションに付与するアクセス許可セットを作成します。 付与できる最小限のアクセス許可は <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> です。 また、信頼関係のないコードでも安全と考えられる追加のアクセス許可を付与することもできます。たとえば、<xref:System.Security.Permissions.IsolatedStorageFilePermission> などです。 次のコードでは、<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> アクセス許可のみを含む新しいアクセス許可セットを作成します。  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      証拠のゾーンに応じて、<xref:System.Security.SecurityManager.GetStandardSandbox%2A> メソッドは `Internet` アクセス許可セットまたは `LocalIntranet` アクセス許可セットを返します。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> いくつかの参照として渡される証拠オブジェクトの id アクセス許可を構築します。  
   
-2.  信頼関係のないコードを呼び出すホスト クラス (この例では `Sandboxer`) を含むアセンブリに署名します。 アセンブリの署名で使用した <xref:System.Security.Policy.StrongName> を、<xref:System.Security.Policy.StrongName> を呼び出す際の `fullTrustAssemblies` パラメーターに <xref:System.AppDomain.CreateDomain%2A> 配列として追加します。 部分信頼コードを実行できるようにする場合、または部分信頼アプリケーションにサービスを提供する場合は、ホスト クラスを完全信頼として実行する必要があります。 アセンブリの <xref:System.Security.Policy.StrongName> を読み取る方法は次のとおりです。  
+2. 信頼関係のないコードを呼び出すホスト クラス (この例では `Sandboxer`) を含むアセンブリに署名します。 アセンブリの署名で使用した <xref:System.Security.Policy.StrongName> を、<xref:System.Security.Policy.StrongName> を呼び出す際の `fullTrustAssemblies` パラメーターに <xref:System.AppDomain.CreateDomain%2A> 配列として追加します。 部分信頼コードを実行できるようにする場合、または部分信頼アプリケーションにサービスを提供する場合は、ホスト クラスを完全信頼として実行する必要があります。 アセンブリの <xref:System.Security.Policy.StrongName> を読み取る方法は次のとおりです。  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      mscorlib や System.dll などの .NET Framework アセンブリを完全信頼一覧に追加することはできません。グローバル アセンブリ キャッシュから完全信頼として読み込まれているためです。  
   
-3.  <xref:System.AppDomain.CreateDomain%2A> メソッドの <xref:System.AppDomainSetup> パラメーターを初期化します。 このパラメーターを使用すると、新しい <xref:System.AppDomain> の多くの設定を制御できます。 <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティは重要な設定なので、ホスト アプリケーションの <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティとは違う設定にする必要があります。 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定が同じ場合、部分的に信頼されたアプリケーションは、ホスト アプリケーションが定義する例外を完全信頼として読み込み、それを悪用できるようになります。 これは、キャッシュ (例外) が推奨されないもう 1 つの理由です。 ホストのアプリケーション ベースと、サンドボックス アプリケーションのアプリケーション ベースを異なる設定にすると、悪用のリスクが軽減されます。  
+3. <xref:System.AppDomain.CreateDomain%2A> メソッドの <xref:System.AppDomainSetup> パラメーターを初期化します。 このパラメーターを使用すると、新しい <xref:System.AppDomain> の多くの設定を制御できます。 <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティは重要な設定なので、ホスト アプリケーションの <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティとは違う設定にする必要があります。 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定が同じ場合、部分的に信頼されたアプリケーションは、ホスト アプリケーションが定義する例外を完全信頼として読み込み、それを悪用できるようになります。 これは、キャッシュ (例外) が推奨されないもう 1 つの理由です。 ホストのアプリケーション ベースと、サンドボックス アプリケーションのアプリケーション ベースを異なる設定にすると、悪用のリスクが軽減されます。  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> メソッド オーバーロードを呼び出し、指定したパラメーターを使用してアプリケーション ドメインを作成します。  
+4. <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> メソッド オーバーロードを呼び出し、指定したパラメーターを使用してアプリケーション ドメインを作成します。  
   
      このメソッドのシグネチャは次のとおりです。  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  作成したサンドボックスの <xref:System.AppDomain> にコードを読み込みます。 これは、次の 2 つの方法で行うことができます。  
+5. 作成したサンドボックスの <xref:System.AppDomain> にコードを読み込みます。 これは、次の 2 つの方法で行うことができます。  
   
     -   アセンブリに対して <xref:System.AppDomain.ExecuteAssembly%2A> メソッドを呼び出します。  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  新しいドメイン インスタンスをこのドメイン内の参照にラップ解除します。 この参照は、信頼関係のないコードを実行するときに使用されます。  
+6. 新しいドメイン インスタンスをこのドメイン内の参照にラップ解除します。 この参照は、信頼関係のないコードを実行するときに使用されます。  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  作成した `Sandboxer` クラスのインスタンスで、`ExecuteUntrustedCode` メソッドを呼び出します。  
+7. 作成した `Sandboxer` クラスのインスタンスで、`ExecuteUntrustedCode` メソッドを呼び出します。  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

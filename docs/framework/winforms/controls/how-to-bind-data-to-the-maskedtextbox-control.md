@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342233"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>方法: MaskedTextBox コントロールにデータをバインドする
 データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。 ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。 次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。  
@@ -24,15 +24,15 @@ ms.locfileid: "59090603"
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>MaskedTextBox コントロールにデータをバインドするには  
   
-1.  新しい Windows フォーム プロジェクトを作成します。  
+1. 新しい Windows フォーム プロジェクトを作成します。  
   
-2.  2 つをドラッグ<xref:System.Windows.Forms.TextBox>コントロールをフォームに名前を付けます`FirstName`と`LastName`します。  
+2. 2 つをドラッグ<xref:System.Windows.Forms.TextBox>コントロールをフォームに名前を付けます`FirstName`と`LastName`します。  
   
-3.  ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールをフォームには、名前を付けます`PhoneMask`します。  
+3. ドラッグ、<xref:System.Windows.Forms.MaskedTextBox>コントロールをフォームには、名前を付けます`PhoneMask`します。  
   
-4.  設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティの`PhoneMask`に`(000) 000-0000 x9999`します。  
+4. 設定、<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>プロパティの`PhoneMask`に`(000) 000-0000 x9999`します。  
   
-5.  次の名前空間のインポートをフォームに追加します。  
+5. 次の名前空間のインポートをフォームに追加します。  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59090603"
     Imports System.Data.SqlClient  
     ```  
   
-6.  フォームを右クリックし **コードの表示**します。 このコードをフォーム クラスに置きます。  
+6. フォームを右クリックし **コードの表示**します。 このコードをフォーム クラスに置きます。  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59090603"
     End Sub  
     ```  
   
-7.  イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>したり分割したりするイベント、`PhoneNumber`と`Extension`、バインドからフィールド<xref:System.Data.DataSet>します。  
+7. イベント ハンドラーを追加、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>したり分割したりするイベント、`PhoneNumber`と`Extension`、バインドからフィールド<xref:System.Data.DataSet>します。  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59090603"
     End Sub  
     ```  
   
-8.  2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロール。 名前を付けます`previousButton`と`nextButton`します。 追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーに次のコード例で示すように入力します。  
+8. 2 つ追加<xref:System.Windows.Forms.Button>フォームのコントロール。 名前を付けます`previousButton`と`nextButton`します。 追加するには、各ボタンをダブルクリックして、<xref:System.Windows.Forms.Control.Click>イベント ハンドラー、およびイベント ハンドラーに次のコード例で示すように入力します。  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299820"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>方法: パネルの子を装飾する
 この例は、プログラムで、指定した子に装飾をバインドする方法を示しています。<xref:System.Windows.Controls.Panel>します。  
@@ -21,9 +21,9 @@ ms.locfileid: "59100887"
 ## <a name="example"></a>例  
  子に装飾をバインドする、 <xref:System.Windows.Controls.Panel>、これらの手順に従います。  
   
-1.  新しい宣言<xref:System.Windows.Documents.AdornerLayer>オブジェクトと呼び出し、`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>子が装飾対象要素の装飾層を検索するメソッド。  
+1. 新しい宣言<xref:System.Windows.Documents.AdornerLayer>オブジェクトと呼び出し、`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>子が装飾対象要素の装飾層を検索するメソッド。  
   
-2.  呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。  
+2. 呼び出し、親要素の子を列挙、<xref:System.Windows.Documents.AdornerLayer.Add%2A>メソッドを各子要素に装飾をバインドします。  
   
  次の例は、simplecircleadorner 参照の子に (上記) を連結、<xref:System.Windows.Controls.StackPanel>という*myStackPanel*します。  
   

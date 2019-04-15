@@ -2,12 +2,12 @@
 title: '方法: ServiceContractGenerator の拡張を記述する'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340621"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>方法: ServiceContractGenerator の拡張を記述する
 このトピックでは、<xref:System.ServiceModel.Description.ServiceContractGenerator> の拡張を記述する方法について説明します。 これは、操作の動作に <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> インターフェイスを実装するか、コントラクトの動作に <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> インターフェイスを実装することで可能になります。 このトピックでは、<xref:System.ServiceModel.Description.IServiceContractGenerationExtension> インターフェイスをコントラクト動作に実装する方法を説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "59111593"
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>ServiceContractGenerator の拡張を記述するには  
   
-1.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>を実装します。 生成されたサービス コントラクトを変更するには、<xref:System.ServiceModel.Description.ServiceContractGenerationContext> メソッドに渡された <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> インスタンスを使用します。  
+1. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>を実装します。 生成されたサービス コントラクトを変更するには、<xref:System.ServiceModel.Description.ServiceContractGenerationContext> メソッドに渡された <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> インスタンスを使用します。  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ ms.locfileid: "59111593"
     }  
     ```  
   
-2.  同じクラスに <xref:System.ServiceModel.Description.IWsdlImportExtension> を実装します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドは、インポートされた <xref:System.ServiceModel.Description.ContractDescription> インスタンスにコード生成拡張を追加することによって、特定の WSDL 拡張 (この場合は WSDL 注釈) を処理できます。  
+2. 同じクラスに <xref:System.ServiceModel.Description.IWsdlImportExtension> を実装します。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドは、インポートされた <xref:System.ServiceModel.Description.ContractDescription> インスタンスにコード生成拡張を追加することによって、特定の WSDL 拡張 (この場合は WSDL 注釈) を処理できます。  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ ms.locfileid: "59111593"
             }  
     ```  
   
-3.  クライアント構成に WSDL インポーターを追加します。  
+3. クライアント構成に WSDL インポーターを追加します。  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ ms.locfileid: "59111593"
     </metadata>  
     ```  
   
-4.  クライアント コードで、`MetadataExchangeClient` を作成して `GetMetadata` を呼び出します。  
+4. クライアント コードで、`MetadataExchangeClient` を作成して `GetMetadata` を呼び出します。  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ ms.locfileid: "59111593"
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  `WsdlImporter` を作成して `ImportAllContracts` を呼び出します。  
+5. `WsdlImporter` を作成して `ImportAllContracts` を呼び出します。  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  `ServiceContractGenerator` を作成して、コントラクトごとに `GenerateServiceContractType` を呼び出します。  
+6. `ServiceContractGenerator` を作成して、コントラクトごとに `GenerateServiceContractType` を呼び出します。  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ ms.locfileid: "59111593"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 特定のコントラクトを実装するには、各コントラクト動作を自動的に呼び出される<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>します。 その後、渡された <xref:System.ServiceModel.Description.ServiceContractGenerationContext> をこのメソッドで変更できます。 この例では、コメントが追加されています。  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 特定のコントラクトを実装するには、各コントラクト動作を自動的に呼び出される<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>します。 その後、渡された <xref:System.ServiceModel.Description.ServiceContractGenerationContext> をこのメソッドで変更できます。 この例では、コメントが追加されています。  
   
 ## <a name="see-also"></a>関連項目
 

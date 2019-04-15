@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166128"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF のセキュリティのベスト プラクティス
 以下のセクションでは、Windows Communication Foundation (WCF) を使用してセキュリティで保護されたアプリケーションを作成する場合に考慮する必要のあるベスト プラクティスを示します。 セキュリティの詳細については、[セキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)に関するページ、「[セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)」、「[メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)」を参照してください。  
@@ -53,10 +53,11 @@ ms.locfileid: "54531968"
 ## <a name="saml-token-size-quotas"></a>SAML トークン サイズのクォータ  
  セキュリティ トークン サービス (STS: Security Token Service) によって SAML (Security Assertions Markup Language) トークンが発行されたとき、またはクライアントが認証の一部としてこれをサービスに提示したときに、SAML トークンがメッセージ内にシリアル化される場合は、メッセージの最大クォータ サイズが、SAML トークンおよびメッセージの他の部分を格納できるだけの大きさである必要があります。 通常は、既定のメッセージ クォータ サイズで十分です。 ただし、数百のクレームを含んでいるために SAML トークンのサイズが大きい場合には、シリアル化されたトークンを格納できるように、クォータを増やす必要があります。 クォータの詳細については、「[セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)」を参照してください。  
   
-## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>カスタム バインドで SecurityBindingElement.IncludeTimestamp を true に設定する  
- カスタム バインディングを作成するときは、<xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> を `true` に設定する必要があります。 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> が `false` に設定されている場合に、クライアントが、X509 証明書などの非対称キーに基づくトークンを使用すると、メッセージは署名されません。  
+## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>カスタム バインディングで SecurityBindingElement.IncludeTimestamp を true に設定する  
+ カスタム バインドを作成するときは、<xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> を `true` に設定する必要があります。 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> が `false` に設定されている場合に、クライアントが、X509 証明書などの非対称キーに基づくトークンを使用すると、メッセージは署名されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

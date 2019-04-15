@@ -2,12 +2,12 @@
 title: System.Runtime.Serialization.XsdExportBegin
 ms.date: 03/30/2017
 ms.assetid: d7457aa5-c147-4643-bdb9-eaafa6674013
-ms.openlocfilehash: 129781b6503a8da4050f711e84810de48c6aec05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10983800ffde14da7179d6c5b3206182b668d5ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188397"
 ---
 # <a name="systemruntimeserializationxsdexportbegin"></a>System.Runtime.Serialization.XsdExportBegin
 System.Runtime.Serialization.XsdExportBegin  
@@ -16,6 +16,7 @@ System.Runtime.Serialization.XsdExportBegin
  スキーマのエクスポートを開始します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)

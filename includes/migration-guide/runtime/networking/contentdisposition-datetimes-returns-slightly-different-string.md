@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 529d1b83c0637f705b725a64aa82e2c053bbfd19
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 705bbd0e0bf80e0726d41898685a5e166e039f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58467070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234186"
 ---
 ### <a name="contentdisposition-datetimes-returns-slightly-different-string"></a>ContentDisposition DateTimes で少し異なる文字列が返される
 
@@ -16,4 +16,3 @@ ms.locfileid: "58467070"
 |Version|4.6|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|
-

@@ -2,12 +2,12 @@
 title: SQL Server の承認と権限
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185862"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server の承認と権限
 データベース オブジェクトを作成する際は、ユーザーがそれらのオブジェクトにアクセスできるように明示的に権限を付与する必要があります。 セキュリティ保護可能なすべてのオブジェクトには、権限ステートメントを使ってプリンシパルに付与することのできる権限が関連付けられています。  
@@ -59,6 +59,7 @@ ms.locfileid: "54510014"
 |[アクセス許可](/sql/relational-databases/security/permissions-database-engine)|権限の階層、カタログ ビュー、および固定サーバー ロールと固定データベース ロールの権限について説明します。|
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

@@ -2,12 +2,12 @@
 title: データ型と関数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: deb8df0d64b4e8db24e5d611332e512781ef01b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151945"
 ---
 # <a name="data-types-and-functions"></a>データ型と関数
 次の表の各トピックでは、共通言語ランタイム (CLR) のメンバー、コンストラクト、およびキャストに対する LINQ to SQL でのサポートについて説明します。 サポートされているメンバーおよびコンストラクトは、LINQ to SQL クエリで使用できます。  
@@ -18,7 +18,7 @@ ms.locfileid: "56091436"
 |-----------|-----------------|  
 |[SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|CLR 型と SQL Server 型のマッピングを、行列形式で示します。|  
 |[基本データ型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
-|[ブール データ型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
+|[ブール型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[null セマンティクス](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|null および null 許容に関する問題が記載されている [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] トピックへのリンクを示します。|  
 |[数値演算子および比較演算子](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[シーケンス演算子](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
@@ -32,5 +32,6 @@ ms.locfileid: "56091436"
 |[サポートされていない機能](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] でサポートされていない機能について説明します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [SQL と CLR の型の不一致](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
 - [参照](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

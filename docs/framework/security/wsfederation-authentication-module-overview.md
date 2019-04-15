@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310253"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
   
  ![フェデレーション認証](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Fabrikam 信頼ドメインのクライアントが、Contoso 信頼ドメインの証明書利用者 (RP) アプリケーションに要求を送信します。  
+1. Fabrikam 信頼ドメインのクライアントが、Contoso 信頼ドメインの証明書利用者 (RP) アプリケーションに要求を送信します。  
   
-2.  RP は Contoso 信頼ドメインの STS にクライアントをリダイレクトします。 この STS はクライアントについては関知しません。  
+2. RP は Contoso 信頼ドメインの STS にクライアントをリダイレクトします。 この STS はクライアントについては関知しません。  
   
-3.  Contoso STS は Contoso 信頼ドメインと信頼関係がある Fabrikam 信頼ドメインの STS にクライアントをリダイレクトします。  
+3. Contoso STS は Contoso 信頼ドメインと信頼関係がある Fabrikam 信頼ドメインの STS にクライアントをリダイレクトします。  
   
-4.  Fabrikam STS がクライアント ID を確認し、Contoso STS にセキュリティ トークンを発行します。  
+4. Fabrikam STS がクライアント ID を確認し、Contoso STS にセキュリティ トークンを発行します。  
   
-5.  Contoso STS は、Fabrikam トークンを使用して RP が使用できる独自のトークンを作成したり、作成されたトークンを RP へ送信します。  
+5. Contoso STS は、Fabrikam トークンを使用して RP が使用できる独自のトークンを作成したり、作成されたトークンを RP へ送信します。  
   
-6.  RP はセキュリティ トークンからクライアントのクレームを抽出し、承認決定を実行します。  
+6. RP はセキュリティ トークンからクライアントのクレームを抽出し、承認決定を実行します。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>ASP.NET を使用したフェデレーション認証モジュールの使用  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) は、フェデレーション認証を追加できるようにする HTTP モジュール、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション。 フェデレーション認証により、認証ロジックが STS によって処理されるので、ビジネス ロジックの作成に集中できます。  
   
  WS-FAM を構成して、未認証の要求のリダイレクト先に対して STS を指定します。 WIF では次の 2 つの方法でユーザーを認証できます。  
   
-1.  受動リダイレクト:保護されたリソースにアクセスしようとしているユーザーが認証されていないと、単にログイン ページを必要とせず、STS にリダイレクトする、この適切なアプローチです。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」を参照してください。  
+1. 受動リダイレクト:保護されたリソースにアクセスしようとしているユーザーが認証されていないと、単にログイン ページを必要とせず、STS にリダイレクトする、この適切なアプローチです。 STS はユーザーの ID を検証し、そのユーザーの適切なクレームを含むセキュリティ トークンを発行します。 このオプションでは WS-FAM を HTTP モジュールのパイプラインに追加する必要があります。 Identity and Access Tool for Visual Studio 2012 を使用することで、WS-FAM を使用して STS でフェデレーションを実行するようアプリケーションの構成ファイルを変更できます。 詳細については、「[Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)」を参照してください。  
   
-2.  RP アプリケーションのサインイン ページ用の分離コードから <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> メソッドまたは <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> メソッドを呼び出すことができます。  
+2. RP アプリケーションのサインイン ページ用の分離コードから <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> メソッドまたは <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> メソッドを呼び出すことができます。  
   
  受動リダイレクトでは、すべての通信は、クライアント (通常はブラウザー) からの応答/リダイレクトによって実行されます。 アプリケーションの HTTP パイプラインに WS-FAM を追加できます。ここで WS-FAM は未認証のユーザー要求を監視し、指定した STS にユーザーをリダイレクトします。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427306"
 ---
 # <a name="federation"></a>フェデレーション
 ここでは、フェデレーション セキュリティの概念について簡単に説明します。 フェデレーション セキュリティ アーキテクチャをデプロイするための Windows Communication Foundation (WCF) のサポートについても説明します。 フェデレーションを示すサンプル アプリケーションを参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
@@ -33,9 +33,9 @@ ms.locfileid: "59114043"
 |STS (セキュリティ トークン サービス)|セキュリティ トークンを発行する Web サービス。つまり、信頼できる証拠に基づいて、サービスを信頼する任意の相手に対してアサーションを行います。 これによりドメイン間における信頼の橋渡しの基礎が形成されます。|  
   
 ### <a name="example-scenario"></a>サンプル シナリオ  
- フェデレーション セキュリティの例を次の図に示します。  
+ 次の図は、フェデレーション セキュリティの例を示します。  
   
- ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![一般的なフェデレーション セキュリティ シナリオを示す図。](./media/federation/typical-federated-security-scenario.gif)  
   
  このシナリオには、2 つの組織が含まれます。A と B の組織は組織 A 内の一部のユーザーにとって役に立つ Web リソース (Web サービス)。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "59114043"
 ## <a name="sample-implementation-using-wcf"></a>WCF を使用した実装のサンプル  
  次の図は、WCF のネイティブ サポートを使用して、フェデレーション セキュリティ アーキテクチャの実装例を示します。  
   
- ![WCF のフェデレーション セキュリティ](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![サンプル フェデレーション セキュリティの実装を示す図。](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>MyService の例  
  `MyService` サービスは、`MyServiceEndpoint` を介して単一のエンドポイントを公開します。 このエンドポイントに関連付けられたアドレス、バインディング、およびコントラクトを次の図に示します。  
   
- ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![MyServiceEndpoint 詳細を示す図。](./media/federation/myserviceendpoint-details.gif)  
   
  サービス エンドポイント`MyServiceEndpoint`を使用して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)含む有効なセキュリティ アサーション マークアップ言語 (SAML) トークンと、 `accessAuthorized` STS B によって発行される要求これは、サービス構成で宣言によって指定されます。  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  STS B を次の図に示します。前述のように、セキュリティ トークン サービス (STS) も Web サービスであり、エンドポイントやポリシーなどを関連付けることができます。  
   
- ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![セキュリティ トークン サービス B. を示す図](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B は、セキュリティ トークンを要求する際に使用できる `STSEndpoint` という単一のエンドポイントを公開します。 具体的には、STS B は、`accessAuthorized` クレームを含む SAML トークンを発行します。このトークンは、サービスにアクセスするために `MyService` サービス サイトで提示できます。 ただし、STS B は、STS A によって発行された `userAuthenticated` クレームを含む有効な SAML トークンを提示することをユーザーに要求します。 これは、STS 構成で宣言によって指定されます。  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>組織 A のクライアント  
  `MyService` サービスの呼び出しに必要な手順と共に、組織 A のクライアントを次の図に示します。 全体の処理を示すために、他の機能コンポーネントも示します。  
   
- ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Showwing、MyService サービスの呼び出しで手順を図します。](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>まとめ  
  フェデレーション セキュリティを使用すると、役割を明確に分離できるため、安全で拡張性のあるサービス アーキテクチャを構築できます。 分散アプリケーションの構築と配置のプラットフォーム、としては、WCF は、フェデレーション セキュリティを実装するためのネイティブ サポートを提供します。  

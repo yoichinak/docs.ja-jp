@@ -3,12 +3,12 @@ title: クロス検証を使用して機械学習モデルをトレーニング�
 description: ML.NET によるクロス検証を使用して機械学習モデルをトレーニングして、モデルの予測精度を高める方法について説明します。
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231319"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>クロス検証を使用して機械学習モデルをトレーニングする - ML.NET
 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

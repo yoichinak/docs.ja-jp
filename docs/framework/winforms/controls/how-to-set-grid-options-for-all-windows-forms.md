@@ -1,5 +1,5 @@
 ---
-title: '方法: すべての Windows フォームのグリッドのオプションを設定します。'
+title: '方法: すべての Windows フォームにグリッド オプションを設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 9995542385ed32b6e6f522d049113279a711dba4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715389"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336058"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>方法: すべての Windows フォームのグリッドのオプションを設定します。
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>方法: すべての Windows フォームにグリッド オプションを設定する
 なるは、Visual Studio 開発環境での作業に使用されるため、Windows フォーム デザイナーで、すべてのフォームおよび操作するプロジェクトの基本設定を設定できます。  
   
 > [!NOTE]
@@ -23,20 +23,21 @@ ms.locfileid: "57715389"
   
 ### <a name="to-set-global-windows-forms-options"></a>グローバルの Windows フォームのオプションを設定するには  
   
-1.  **ツール**メニューの **オプション**します。  
+1. **ツール**メニューの **オプション**します。  
   
-2.  左側のウィンドウで、**オプション**ダイアログ ボックスで、をクリックして**Windows フォーム デザイナー**します。  
+2. 左側のウィンドウで、**オプション**ダイアログ ボックスで、をクリックして**Windows フォーム デザイナー**します。  
   
      右側のウィンドウで 、**レイアウト設定**見出しで、設定を行う既定のグリッドを作成するすべての新しいフォームの。 グリッドのサイズは、コントロールをスナップするかどうか、既定では、これらの設定が含まれます。 さらから選択できます**SnapToGrid**と**スナップ**レイアウト モードです。 スナップ ガイドラインの詳細については、次を参照してください。[チュートリアル。フォームのスナップ線を使用して Windows 上のコントロール](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  
   
 ## <a name="see-also"></a>関連項目
-- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [[全般] ([オプション] ダイアログ ボックス - [Windows フォーム デザイナー])](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Windows フォーム コントロール](index.md)
-- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
-- [方法: Windows フォーム上のタブ オーダーを設定します。](how-to-set-the-tab-order-on-windows-forms.md)
-- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [方法: Windows フォーム上のタブ オーダーを設定する](how-to-set-the-tab-order-on-windows-forms.md)
+- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)

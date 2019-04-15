@@ -2,12 +2,12 @@
 title: Entity Data Model:名前空間
 ms.date: 03/30/2017
 ms.assetid: 98ab4226-bb9f-44e7-af46-61a9b1a4e47c
-ms.openlocfilehash: aa11902ece5197905c20e7e572562643c57f51c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7772172512d35b9ce9cf07a992c1c5f0ecd8c55b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180572"
 ---
 # <a name="entity-data-model-namespaces"></a>Entity Data Model:名前空間
 名前空間の Entity Data Model (EDM) では、抽象コンテナー[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)、[複合型](../../../../docs/framework/data/adonet/complex-type.md)、および[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)します。 EDM の名前空間はプログラミング言語の名前空間と似ており、その中に含まれるオブジェクトのコンテキストを指定し、同じ名前を持つ (しかし、別の名前空間に含まれる) オブジェクトを明確に区別する手段になります。  
@@ -18,5 +18,6 @@ ms.locfileid: "54590108"
  [!code-xml[EDM_Example_Model#ImportedNamespace](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books6.edmx#importednamespace)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [エンティティ データ モデル](../../../../docs/framework/data/adonet/entity-data-model.md)

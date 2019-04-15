@@ -2,12 +2,12 @@
 title: モデル アイテム ツリーのプログラミング
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086469"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321134"
 ---
 # <a name="programming-model-item-tree"></a>モデル アイテム ツリーのプログラミング
 このサンプルでは、移動、<xref:System.Activities.Presentation.Model.ModelItem>宣言型データ バインディング、Windows Presentation Foundation (WPF) のツリー ビューを使用してツリーします。
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2010 で ProgrammingModelItemTree.sln ソリューションを開きます。
+1. Visual Studio 2010 で ProgrammingModelItemTree.sln ソリューションを開きます。
 
-2.  選択すると、ソリューションをビルド**ソリューションのビルド**から、**ビルド**メニュー。
+2. 選択すると、ソリューションをビルド**ソリューションのビルド**から、**ビルド**メニュー。
 
-3.  F5 キーを押してアプリケーションを実行します。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] フォームが表示されます。
+3. F5 キーを押してアプリケーションを実行します。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] フォームが表示されます。
 
-4.  をクリックして、 **Load WF**を読み込む ボタン、<xref:System.Activities.Presentation.Model.ModelItem>ツリー ビューにバインドします。
+4. をクリックして、 **Load WF**を読み込む ボタン、<xref:System.Activities.Presentation.Model.ModelItem>ツリー ビューにバインドします。
 
-5.  クリックすると、 **Change Model Item Tree**ボタン、ツリーにアイテムを追加し、プロパティを設定するには、上記のコードを実行します。
+5. クリックすると、 **Change Model Item Tree**ボタン、ツリーにアイテムを追加し、プロパティを設定するには、上記のコードを実行します。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

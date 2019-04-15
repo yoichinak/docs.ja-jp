@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195060"
 ---
 # <a name="sending-and-receiving-faults"></a>エラーの送受信
-SOAP エラーは、エラー状態情報をサービスからクライアントに伝達します。双方向通信の場合は、相互運用可能な方法でクライアントからサービスにも伝達します。 通常、サービスは、カスタムのエラー コンテンツを定義し、そのエラー コンテンツを返すことができる操作を指定します  (詳細については、次を参照してください[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)。ここでは、対応するエラー状態が発生したときにサービスまたは双方向クライアントがエラーを送信する方法、およびクライアントまたはサービス アプリケーションがエラーを処理する方法について説明します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)を参照してください。  
+SOAP エラーは、エラー状態情報をサービスからクライアントに伝達します。双方向通信の場合は、相互運用可能な方法でクライアントからサービスにも伝達します。 通常、サービスは、カスタムのエラー コンテンツを定義し、そのエラー コンテンツを返すことができる操作を指定します  (詳細については、次を参照してください[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)。ここでは、対応するエラー状態が発生したときにサービスまたは双方向クライアントがエラーを送信する方法、およびクライアントまたはサービス アプリケーションがエラーを処理する方法について説明します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
 ## <a name="sending-soap-faults"></a>SOAP エラーの送信  
  宣言された SOAP エラーは、カスタム SOAP エラーの種類を指定する <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> を含む操作で発生します。 宣言されていない SOAP エラーとは、操作のコントラクトに指定されていないエラーです。  
@@ -51,15 +51,15 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> オブジェクトは、操作が、指定されたタイムアウト期間を超えた場合にスローされます。  
+ <xref:System.TimeoutException> オブジェクトは、操作が指定されたタイムアウト期間を超えた場合にスローされます。  
   
- <xref:System.ServiceModel.CommunicationException> オブジェクトは、回復可能な通信エラー状態がサービスまたはクライアントで発生した場合にスローされます。  
+ <xref:System.ServiceModel.CommunicationException> オブジェクトは、サービスまたはクライアントのいずれかの回復可能な通信エラー条件がある場合にスローされます。  
   
  <xref:System.ServiceModel.CommunicationException> クラスには、<xref:System.ServiceModel.FaultException> および一般的な <xref:System.ServiceModel.FaultException%601> 型という 2 つの重要な派生型があります。  
   
- <xref:System.ServiceModel.FaultException> 例外は、予期しないエラーまたは操作コントラクト内に指定されていないエラーをリスナーが受信した場合にスローされます。この例外は、通常、サービスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> プロパティを `true` に設定してアプリケーションをデバッグしている場合に発生します。  
+ <xref:System.ServiceModel.FaultException> リスナーが受信するエラーを想定または操作コントラクトで指定されていないときに例外がスローされます。通常このときに発生しますが、アプリケーションのデバッグし、サービスが、<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティに設定`true`します。  
   
- <xref:System.ServiceModel.FaultException%601> 例外は、操作コントラクト内に指定されたエラーが、双方向操作 (つまり、<xref:System.ServiceModel.OperationContractAttribute> に <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> が設定されている `false` 属性を持つメソッド) への応答で受信された場合に、クライアントでスローされます。  
+ <xref:System.ServiceModel.FaultException%601> 操作コントラクトで指定されているエラーは、双方向の操作に対する応答で受信された場合、クライアントで例外がスローされます (を持つメソッドは、<xref:System.ServiceModel.OperationContractAttribute>属性<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>に設定`false`)。  
   
 > [!NOTE]
 >  WCF サービスは、発生した場合、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>または<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティに設定`true`として宣言されていないは、クライアントでこの<xref:System.ServiceModel.FaultException%601>型の<xref:System.ServiceModel.ExceptionDetail>します。 クライアントは、この特定のエラーをキャッチするか、<xref:System.ServiceModel.FaultException> の catch ブロックで処理できます。  
@@ -94,19 +94,20 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
 ### <a name="abort-the-channel-if-necessary"></a>必要に応じてチャネルを中止する  
  チャネルを閉じると例外がスローされる可能性があるため、正しい順序でエラー状態をキャッチするだけでなく、呼び出しに使用されたチャネルを catch ブロックで中止することが重要です。  
   
- エラーによって操作に固有のエラー情報が伝えられた場合、他のユーザーがそのエラー情報を使用できるときはチャネルを中止する必要はありません (ただし、このような状況は非常にまれです)。 それ以外の場合は、チャネルを中止することをお勧めします。 これらのポイントをすべて示すサンプルでは、[予想例外](../../../docs/framework/wcf/samples/expected-exceptions.md)を参照してください。  
+ エラーによって操作に固有のエラー情報が伝えられた場合、他のユーザーがそのエラー情報を使用できるときはチャネルを中止する必要はありません (ただし、このような状況は非常にまれです)。 それ以外の場合は、チャネルを中止することをお勧めします。 これらのポイントをすべて示すサンプルでは、次を参照してください。[予想例外](../../../docs/framework/wcf/samples/expected-exceptions.md)します。  
   
  次のコード例は、基本的なクライアント アプリケーションで、宣言されたエラーと宣言されていないエラーを含む SOAP エラー例外を処理する方法を示しています。  
   
 > [!NOTE]
->  このサンプル コードは、`using` コンストラクトを使用していません。 チャネルを閉じると、例外をスローできます、ために、アプリケーションが WCF のクライアント、し、オープンであり、最初の使用を作成し、WCF でクライアントに同じ try ブロックで閉じることをお勧めします。 詳細については、[WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md)と[使用終了、中止 WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)を参照してください。  
+>  このサンプル コードは、`using` コンストラクトを使用していません。 チャネルを閉じると、例外をスローできます、ために、アプリケーションが WCF のクライアント、し、オープンであり、最初の使用を作成し、WCF でクライアントに同じ try ブロックで閉じることをお勧めします。 詳細については、次を参照してください。 [WCF Client Overview](../../../docs/framework/wcf/wcf-client-overview.md)と[使用終了、中止 WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)します。  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [予期される例外](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [閉じるを使用し、WCF クライアントのリソースを解放する中止](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [close と abort を使用して WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

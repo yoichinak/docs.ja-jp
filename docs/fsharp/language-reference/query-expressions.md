@@ -2,12 +2,12 @@
 title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191568"
 ---
 # <a name="query-expressions"></a>クエリ式
 
@@ -48,7 +48,7 @@ query1
 
 前のコード例では、クエリ式は、中かっこ内が。 式のコードの意味は、クエリの結果に、データベース内の Customers テーブルのすべての顧客を返します。 クエリ式を実装する型を返す<xref:System.Linq.IQueryable%601>と<xref:System.Collections.Generic.IEnumerable%601>を使用して反復できますので、 [Seq モジュール](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)例として示します。
 
-すべての計算式の型は、ビルダー クラスから作成されます。 クエリ式で計算のビルダー クラスは`QueryBuilder`します。 詳細については、[コンピュテーション式](computation-expressions.md)と[Linq.QueryBuilder クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)を参照してください。
+すべての計算式の型は、ビルダー クラスから作成されます。 クエリ式で計算のビルダー クラスは`QueryBuilder`します。 詳細については、次を参照してください。[コンピュテーション式](computation-expressions.md)と[Linq.QueryBuilder クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)します。
 
 ## <a name="query-operators"></a>クエリ演算子
 
@@ -501,9 +501,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 ## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Transact-SQL と F# のクエリ式の比較
 次の表は、F# でいくつかの一般的な TRANSACT-SQL クエリと、対応を示します。 このテーブル内のコードでは、前の表と、型プロバイダーを設定する同じ最初のコードと同じデータベースも前提としています。
 
-
 ### <a name="table-2-transact-sql-and-f-query-expressions"></a>表 2。 Transact-SQL と F# のクエリ式
-
 
 <table style="width:100%">
   <tr>
@@ -698,7 +696,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> および <code>TOP</code>。<br/>
+<code>LIKE</code> および <code>TOP</code> を参照してください。<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -821,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> で <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> 代入 <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -1277,7 +1275,6 @@ let num =
     }
 printfn "Last number: %d" num
 
-
 open Microsoft.FSharp.Linq
 
 printfn "\nlastOrDefault query operator."
@@ -1477,7 +1474,6 @@ query {
     select number
 }
 |> Seq.iter (fun number -> printfn "Number = %d" number)
-
 
 printfn "\n sumBy query operator"
 query {
@@ -1869,12 +1865,9 @@ query {
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.dll'
 
-
 --> Referenced 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.Data.Linq.dll'
-
 
 contains query operator
 Binding session to 'C:\Users\ghogen\AppData\Local\Temp\tmp5E3C.dll'...

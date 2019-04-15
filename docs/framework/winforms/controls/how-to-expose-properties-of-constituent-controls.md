@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106354"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294913"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>方法: 内在コントロールのプロパティを公開する
 複合コントロールを構成するコントロールが呼び出される*内在コントロール*します。 これらのコントロールは通常プライベートで宣言されており、そのため、開発者がアクセスできません。 今後のユーザーにこれらのコントロールのプロパティを使用できるようにする場合は、ユーザーに公開する必要があります。 ユーザー コントロールでプロパティを作成して使用内在コントロールのプロパティを公開、`get`と`set`内在コントロールのプライベート プロパティの変更を有効にするためのプロパティのアクセサー。  
@@ -51,11 +51,11 @@ public Color ButtonColor
   
 ### <a name="to-expose-a-property-of-a-constituent-control"></a>内在コントロールのプロパティを公開するには  
   
-1.  ユーザー コントロールのパブリック プロパティを作成します。  
+1. ユーザー コントロールのパブリック プロパティを作成します。  
   
-2.  `get`セクションのプロパティを公開するプロパティの値を取得するコードを記述します。  
+2. `get`セクションのプロパティを公開するプロパティの値を取得するコードを記述します。  
   
-3.  `set`セクションのプロパティ、プロパティの値を公開されている、内在コントロールのプロパティに渡されるコードを記述します。  
+3. `set`セクションのプロパティ、プロパティの値を公開されている、内在コントロールのプロパティに渡されるコードを記述します。  
   
 ## <a name="see-also"></a>関連項目
 

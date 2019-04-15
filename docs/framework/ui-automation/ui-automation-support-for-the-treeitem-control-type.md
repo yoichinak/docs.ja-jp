@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Tree Item control type
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
-ms.openlocfilehash: 0f0e3b75664cad86f37200ce464a138f52aa4bd8
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: aea10ea857c2c347a5f8f5f6240af9d0b581abd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202236"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>UI オートメーションによる TreeItem コントロール型のサポート
 > [!NOTE]
@@ -67,14 +67,14 @@ ms.locfileid: "57678983"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|展開されたノード、折りたたまれたノード、またはリーフ ノード|ツリー項目は、展開されたり、折りたたまれたりしない場合は、リーフ ノードになります。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|ツリー コンテナーが Scroll コントロール パターンをサポートする場合、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|状況に依存|ユーザーがツリー コンテナーに戻るときに、アクティブな選択を保持することができる場合、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|[はい]|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|はい|このプロパティは、コンテナー内のすべての項目に対して同じコンテナーを公開します。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|状況に依存|ツリー項目に関連付けられたチェック ボックスがある場合、このコントロール パターンを実装します。|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのツリー項目コントロールでサポートする必要がある [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
@@ -93,6 +93,7 @@ ms.locfileid: "57678983"
 |<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> プロパティ変更イベント。|状況に依存|なし|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Automation.ControlType.TreeItem>
 - [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: 名前空間キーワード - C# リファレンス
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148760"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -22,7 +22,7 @@ ms.locfileid: "53242764"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 名前空間内では、以下の型を 0 個以上宣言できます。
 
@@ -72,4 +72,5 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [名前空間キーワード](namespace-keywords.md)
-- [using](using.md)
+- [使用](using-directive.md)
+- [using static](using-static.md)

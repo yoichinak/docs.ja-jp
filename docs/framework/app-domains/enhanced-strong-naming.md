@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688867"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319873"
 ---
 # <a name="enhanced-strong-naming"></a>拡張された厳密な名前付け
 厳密な名前の署名は、アセンブリを識別するための .NET Framework の識別機構です。 これは通常、発行元 (署名者) から受取人 (検証者) に対して渡されるデータの整合性を検証するために使用される、公開キーによるデジタル署名です。 この署名はアセンブリに対する一意の ID として使用され、これによりアセンブリへの参照のあいまいさをなくします。 アセンブリはビルド プロセスの一部として署名され、読み込まれるときに検証されます。  
@@ -41,25 +41,25 @@ ms.locfileid: "54688867"
 ### <a name="signing-with-sha-2-without-key-migration"></a>キー移行を伴わない SHA-2 による署名  
  厳密な名前の署名を移行せずにアセンブリに署名するには、コマンド プロンプト ウィンドウから次のコマンドを実行します。  
   
-1.  新しい ID キーを生成します (必要な場合)。  
+1. 新しい ID キーを生成します (必要な場合)。  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  ID の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。  
+2. ID の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  ID 公開キー ファイルで、アセンブリに遅延署名します。  
+3. ID 公開キー ファイルで、アセンブリに遅延署名します。  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  完全な ID キーのペアでアセンブリに再署名します。  
+4. 完全な ID キーのペアでアセンブリに再署名します。  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ ms.locfileid: "54688867"
 ### <a name="signing-with-sha-2-with-key-migration"></a>キー移行を伴う SHA-2 による署名  
  移行した厳密な名前の署名でアセンブリに署名するには、コマンド プロンプト ウィンドウで次のコマンドを実行します。  
   
-1.  ID キーと署名キーのペアを生成します (必要な場合)。  
+1. ID キーと署名キーのペアを生成します (必要な場合)。  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  署名の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。  
+2. 署名の公開キーを抽出し、このキーで署名する場合に SHA-2 アルゴリズムを使用するように指定します。  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  副署名を生成するハッシュ アルゴリズムを決定する ID の公開キーを抽出します。  
+3. 副署名を生成するハッシュ アルゴリズムを決定する ID の公開キーを抽出します。  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  <xref:System.Reflection.AssemblySignatureKeyAttribute> の属性のパラメーターを生成し、アセンブリに属性を追加します。  
+4. <xref:System.Reflection.AssemblySignatureKeyAttribute> の属性のパラメーターを生成し、アセンブリに属性を追加します。  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ ms.locfileid: "54688867"
     )]
     ```
   
-5.  ID 公開キーでアセンブリに遅延署名します。  
+5. ID 公開キーでアセンブリに遅延署名します。  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  完全な署名キーのペアでアセンブリに署名します。  
+6. 完全な署名キーのペアでアセンブリに署名します。  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

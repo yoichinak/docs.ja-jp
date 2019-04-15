@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139218"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301400"
 ---
 # <a name="drag-and-drop-overview"></a>ドラッグ アンド ドロップの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのドラッグ アンド ドロップのサポートの概要について説明します。 一般的に、ドラッグ アンド ドロップとは、マウス (または何らかのポインティング デバイス) を使用して 1 つ以上のオブジェクトを選択し、これらのオブジェクトを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の目的のドロップ先までドラッグしてからドロップするデータ転送方式をいいます。  
@@ -181,11 +181,11 @@ ms.locfileid: "59139218"
   
  要素がドロップ先であることを指定するには、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定します。 ドロップ先のイベントが要素で発生して、処理できるようになります。 ドラッグ アンド ドロップ操作中に、次の一連のイベントがドロップ先で発生します。  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> または <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> または <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> イベントは、データがドロップ先の境界の中にドラッグされるときに発生します。 通常は、アプリケーションに適していれば、ドラッグ アンド ドロップ操作の効果のプレビューを提供するように、このイベントを処理します。 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> イベントで <xref:System.Windows.DragDrop.DragEnter> プロパティを設定しないでください。このプロパティは <xref:System.Windows.DragDrop.DragOver> イベントで上書きされるためです。  
   

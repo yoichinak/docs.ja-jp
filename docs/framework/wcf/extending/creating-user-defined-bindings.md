@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188722"
 ---
 # <a name="creating-user-defined-bindings"></a>ユーザー定義バインディングの作成
 システムから提供されないバインディングを作成する方法はいくつかあります。  
   
--   バインド要素を格納するコンテナーである <xref:System.ServiceModel.Channels.CustomBinding> クラスに基づいてカスタム バインディングを作成します。 次に、カスタム バインディングをサービス エンドポイントに追加します。 カスタム バインディングは、プログラムで作成することも、アプリケーションの構成ファイルに作成することもできます。 アプリケーション構成ファイルのバインド要素を使用するには、バインド要素で <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> を拡張する必要があります。 カスタム バインドの詳細については、[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)と<xref:System.ServiceModel.Channels.CustomBinding>を参照してください。  
+-   バインド要素を格納するコンテナーである <xref:System.ServiceModel.Channels.CustomBinding> クラスに基づいてカスタム バインディングを作成します。 次に、カスタム バインディングをサービス エンドポイントに追加します。 カスタム バインディングは、プログラムで作成することも、アプリケーションの構成ファイルに作成することもできます。 アプリケーション構成ファイルのバインド要素を使用するには、バインド要素で <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> を拡張する必要があります。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)と<xref:System.ServiceModel.Channels.CustomBinding>します。  
   
 -   標準バインディングの派生クラスを作成できます。 たとえば、<xref:System.ServiceModel.WSHttpBinding> の派生クラスを作成して <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> メソッドをオーバーライドし、バインド要素を取得してカスタム バインドを挿入したり、セキュリティ用の特定の値を確立したりできます。  
   
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  まったく新しいバインディング クラスを作成する代わりに、システムから提供される既存のバインディングの 1 つを拡張することができます。 前述の場合と同様、<xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> メソッドと <xref:System.ServiceModel.Channels.Binding.Scheme%2A> プロパティをオーバーライドする必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)

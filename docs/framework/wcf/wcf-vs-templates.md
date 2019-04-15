@@ -2,12 +2,12 @@
 title: WCF Visual Studio テンプレート
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130898"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio テンプレート
 Windows Communication Foundation (WCF) の Visual Studio テンプレートは、定義済みのプロジェクトと項目テンプレートを WCF サービスや周辺アプリケーションをすばやく作成する Visual Studio で使用することができます。  
@@ -59,12 +59,12 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  既存のプロジェクトが Web プロジェクトの場合は、サービス ホスト ファイル (service1.svc) も作成されます。  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF サービス プロジェクト/項目テンプレート  
- これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)です。 ワークフロー プロジェクトの作成の詳細については、[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)を参照してください。  
+ これらのテンプレートは、WCF サービスをワークフロー サービスをホストする作成し、これは、web サービスのようにアクセスできるワークフローです。 この他に、XAML プログラミング モデルや命令型プログラミング モデルのテンプレートも用意されています。 これらのテンプレートを使用すると、シーケンシャル ワークフローやステート マシン ワークフローを作成できます。 これらのワークフローの種類の詳細については、次を参照してください。[方法。ワークフロー作成](../windows-workflow-foundation/how-to-create-a-workflow.md)です。 ワークフロー プロジェクトの作成の詳細については、次を参照してください。[従来のワークフロー プロジェクトを作成する](/visualstudio/workflow-designer/creating-legacy-workflow-projects)します。  
   
  XOML 型のワークフローが使用される代わりにコード ベースのときに、visual Studio デザイナーの応答性が向上します。 XOML ワークフローは、既定で作成されるワークフロー型です。  
   
 ### <a name="wcf-syndication-service-library-template"></a>WCF 配信サービス ライブラリ テンプレート  
- このテンプレートでは、WCF サービスとして RSS または ATOM 形式のフィードを公開することができます。 詳細については、[WCF 配信](../../../docs/framework/wcf/feature-details/wcf-syndication.md)を参照してください。  
+ このテンプレートでは、WCF サービスとして RSS または ATOM 形式のフィードを公開することができます。 詳細については、次を参照してください。 [WCF 配信](../../../docs/framework/wcf/feature-details/wcf-syndication.md)します。  
   
 #### <a name="changing-the-address-of-the-feed"></a>フィードのアドレスの変更  
  配信テンプレートは、実行中に Internet Explorer を使用します。 プロジェクトを右クリックすると**ソリューション エクスプ ローラー** Visual Studio で、次のように選択します**プロパティ**を選択してから、**デバッグ**とタブには、の既定のアドレスを表示できます、。テンプレート。 Internet Explorer は、このアドレスにあるフィードを開きます。  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
  内のアドレスを変更する必要がありますもフィードのアドレスを変更する場合、**デバッグ**タブ。これを変更しないと、Internet Explorer が既定のアドレスにあるフィードを開こうとして、エラーになります。  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX 対応 WCF サービス項目テンプレート  
- このテンプレートは、WCF サービスとしての AJAX コントロールを公開します。 AJAX コントロールの詳細については、、 [AJAX コントロールに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=96717)を参照してください。  
+ このテンプレートは、WCF サービスとしての AJAX コントロールを公開します。 AJAX コントロールの詳細については、次を参照してください。、 [AJAX コントロールに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=96717)します。  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight 対応 WCF サービス項目テンプレート  
  このテンプレートは、Silverlight クライアントまたはフロントエンドにデータを提供する Web サービスを作成します。 テンプレートは、サービス コードと、Silverlight クライアントとの通信をサポートする構成を含む WCF サービスを作成する Web サイトまたは Web アプリケーション プロジェクトに追加できます。 使用することができますし、**サービス参照の追加**をクライアントにサービスのクライアント プロキシを追加して、Silverlight クライアントと Silverlight 対応 WCF サービスの間でデータを交換します。  
@@ -83,5 +83,6 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
 >  Silverlight 対応 WCF サービスは、セキュリティ設定を一切有効にせずに `basicHttpBinding` エンドポイントを公開します。 したがって、サービスに接続しているすべてのクライアントが、このサービスに関する情報を取得できることになります。 また、サービスとクライアント間で交換されるメッセージの署名と暗号化も行われません。 エンドポイントを正しくセキュリティで保護するには、ASP.NET 認証や HTTPS などのメカニズムを使用する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF のテスト用クライアント (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

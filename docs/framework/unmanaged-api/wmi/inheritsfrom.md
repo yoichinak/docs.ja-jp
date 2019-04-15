@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 078950b4e46ea587c2f39986963ec129f4ec1f1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158432"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 関数
 指定した親クラスから現在のクラスまたはインスタンスが派生しているかどうかが判定されます。
@@ -57,7 +57,7 @@ HRESULT InheritsFrom (
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 現在のオブジェクトが継承`wszAncestor`します。  |
 | `WBEM_S_FALSE` | 1 | 現在のオブジェクトを継承しない`wszAncestor`します。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` は `null` です。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` `null`します。 |
   
 ## <a name="remarks"></a>Remarks
 
@@ -68,7 +68,8 @@ HRESULT InheritsFrom (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)

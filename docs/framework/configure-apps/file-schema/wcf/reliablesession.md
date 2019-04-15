@@ -2,12 +2,12 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: add69cfe1503c5ab78640cebc7c241a1f93b364f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188384"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 WS-ReliableMessaging の設定を定義します。 この要素がカスタム バインドに追加される場合、その結果となるチャネルにより、正確に 1 回の配信保証をサポートできます。  
@@ -61,7 +61,7 @@ WS-ReliableMessaging の設定を定義します。 この要素がカスタム 
   
  各バインド要素は、メッセージの送信または受信時の処理手順を表します。 実行時に、バインディング要素は、メッセージの送受信に求められる送信および受信チャネル スタックを作成するために必要なチャネル ファクトリとリスナーを作成します。 `reliableSession` が提供するスタック内のオプションの層は、エンドポイント間に信頼できるセッションを確立し、このセッションの動作を構成することができます。  
   
- 詳細については、[信頼できるセッション](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)を参照してください。  
+ 詳細については、次を参照してください。[信頼できるセッション](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、さまざまなトランスポートとメッセージ エンコーディング要素を使用し、特に、クライアントの状態を保持し、配信順序を保証することを指定する、信頼できるセッションを有効化することによって、カスタム バインドを構成する方法を示します。 この機能は、クライアントとサービスのアプリケーション構成ファイルで構成されます。 サービスの構成の例を次に示します。  
@@ -120,6 +120,7 @@ WS-ReliableMessaging の設定を定義します。 この要素がカスタム 
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

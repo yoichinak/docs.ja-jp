@@ -1,5 +1,5 @@
 ---
-title: <add> の <listeners> の <source> 要素
+title: <add> 要素の<listeners>の <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: ae5231f43e7c157b5250376f7ab97deccea595e5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165482"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<追加 > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションにリスナーを追加します。  
@@ -50,7 +50,7 @@ ms.locfileid: "55277122"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクション内のリスナーにフィルターを追加します。|  
+|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|トレース ソースの `Listeners` コレクション内のリスナーにフィルターを追加します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -119,6 +119,7 @@ ms.locfileid: "55277122"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

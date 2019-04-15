@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203627"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
 このトピックでは、アプリケーションとユーザーのために設定のデータを作成して格納する方法について説明します。  
@@ -48,13 +48,14 @@ ms.locfileid: "57713064"
  また、 <xref:System.Windows.Forms.Binding> クラスを使用して、フォームとコントロールのプロパティに設定をプログラムでバインドすることもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [方法: アプリケーション設定を検証します。](how-to-validate-application-settings.md)
+- [方法: アプリケーション設定を検証する](how-to-validate-application-settings.md)
 - [アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [方法: 実行時の設定の読み取りC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [方法: 実行時に設定を C# で読み取る](how-to-read-settings-at-run-time-with-csharp.md)
 - [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
 - [アプリケーション設定アーキテクチャ](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)

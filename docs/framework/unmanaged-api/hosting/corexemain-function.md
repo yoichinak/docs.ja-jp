@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c6887d390ded1846e201711c9278663b9ff2888
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177490"
 ---
 # <a name="corexemain-function"></a>_CorExeMain 関数
 共通言語ランタイム (CLR) を初期化します、実行可能アセンブリの CLR ヘッダーでマネージ エントリ ポイントを検索し、実行を開始します。  
@@ -51,7 +51,8 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
   
  **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

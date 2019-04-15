@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343013"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
 コード例にはコメント記号 (`'`) がしばしば見られます。 このシンボルをそれに続くテキストを無視する Visual Basic コンパイラに指示または*コメント*します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
@@ -54,7 +54,7 @@ ms.locfileid: "58814641"
   
 -   同じ行の行連結シーケンスの後にコメントを付けることはできません。  
   
- 追加し、コードのブロックのコメント記号を削除するには、1 つまたは複数の行のコードを選択し、選択、**コメント**(![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton")) と**コメント**(![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) ボタンを**編集**ツールバー。  
+ 追加し、コードのブロックのコメント記号を削除するには、1 つまたは複数の行のコードを選択し、選択、**コメント**(![. Visual Studio で、Visual Basic のコメント ボタン](./media/comments-in-code/visual-basic-comment-button.gif)) と**コメントを解除します** (![. Visual Studio で、Visual Basic のコメントを解除ボタン](./media/comments-in-code/visual-basic-uncomment-button.gif)) ボタンを**編集**ツールバー。  
   
 > [!NOTE]
 >  テキストの前に `REM` キーワードを付けて、コードにコメントを追加することもできます。 ただし、`'`シンボルと**コメント**/**コメント解除**ボタンが簡単に使用し、小さい領域とメモリが必要です。  
@@ -62,7 +62,7 @@ ms.locfileid: "58814641"
 ## <a name="see-also"></a>関連項目
 
 - [XML コメントによるコードの文書化の基本的な本能」](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM ステートメント](../../../visual-basic/language-reference/statements/rem-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: デザイナーを使用して Windows フォーム DataGrid コントロールを書式設定します。'
+title: '方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,18 +9,17 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333575"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGrid コントロールを書式設定します。
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する
 
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  さまざまな部分に別の色を適用する、<xref:System.Windows.Forms.DataGrid>コントロールのことで情報を読みやすくするヘルプことができます。 色は、行と列に適用できます。 行と列も非表示にしたりユーザーの判断で示すようにします。  
   
@@ -41,10 +40,9 @@ ms.locfileid: "57725364"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid コントロールの既定のスタイルを確立するには  
   
-1.  
-  <xref:System.Windows.Forms.DataGrid> コントロールを選択します。  
+1. <xref:System.Windows.Forms.DataGrid> コントロールを選択します。  
   
-2.  **プロパティ**ウィンドウで、適切な次のプロパティを設定します。  
+2. **プロパティ**ウィンドウで、適切な次のプロパティを設定します。  
   
     |プロパティ|説明|  
     |--------------|-----------------|  
@@ -79,31 +77,31 @@ ms.locfileid: "57725364"
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>デザイン時にデータ テーブルのテーブルと列のスタイルを設定するには
 
-1.  選択、<xref:System.Windows.Forms.DataGrid>フォーム上のコントロール。
+1. 選択、<xref:System.Windows.Forms.DataGrid>フォーム上のコントロール。
 
-2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックします。
+2. **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックします。
 
-3.  **DataGridTableStyle コレクション エディター**ダイアログ ボックスで、をクリックして**追加**テーブル スタイルをコレクションに追加します。
+3. **DataGridTableStyle コレクション エディター**ダイアログ ボックスで、をクリックして**追加**テーブル スタイルをコレクションに追加します。
 
      **DataGridTableStyle コレクション エディター**、追加することができますおよびマッピングが表スタイルの名前テーブル スタイルの削除、表示の設定とレイアウトのプロパティ セット。
 
-4.  設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>プロパティを各テーブルのスタイルのマッピングの名前にします。
+4. 設定、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>プロパティを各テーブルのスタイルのマッピングの名前にします。
 
      マッピングの名前は、どのテーブルで使用するテーブル スタイルを指定に使用されます。
 
-5.  **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティの省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")).
+5. **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティの省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")).
 
-6.  **DataGridColumnStyle コレクション エディター**  ダイアログ ボックスで、列のスタイルを作成したテーブルのスタイルを追加します。
+6. **DataGridColumnStyle コレクション エディター**  ダイアログ ボックスで、列のスタイルを作成したテーブルのスタイルを追加します。
 
      **DataGridColumnStyle コレクション エディター**列のデータの文字列の書式設定、および追加し、列のスタイルを削除、表示とレイアウトのプロパティを設定およびマッピングの名前を設定します。
 
     > [!NOTE]
-    >  文字列の書式設定に関する詳細については、[型の書式設定](../../../standard/base-types/formatting-types.md)を参照してください。
+    >  文字列の書式設定に関する詳細については、次を参照してください。[型の書式設定](../../../standard/base-types/formatting-types.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

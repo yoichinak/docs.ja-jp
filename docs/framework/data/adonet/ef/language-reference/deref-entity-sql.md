@@ -2,12 +2,12 @@
 title: DEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4c78e833-b260-453d-9bf4-eb39857dd0fa
-ms.openlocfilehash: 57f7c61d8e4de2a63708ef6d4437ca53de854af9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ba562ba6542e6ab0d62f1f8348434ae4f4c9b13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305183"
 ---
 # <a name="deref-entity-sql"></a>DEREF (Entity SQL)
 参照値を逆参照し、その逆参照の結果を生成します。  
@@ -31,9 +31,9 @@ SELECT DEREF ( o.expression ) from Table as o;
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、DEREF 演算子を使用して参照値を逆参照し、その逆参照の結果を生成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
+1. 」の手順に従って[方法。PrimitiveType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)します。  
   
-2.  次のクエリを引数として ExecutePrimitiveTypeQuery メソッドに渡します。  
+2. 次のクエリを引数として ExecutePrimitiveTypeQuery メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#DEREF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#deref)]  
   

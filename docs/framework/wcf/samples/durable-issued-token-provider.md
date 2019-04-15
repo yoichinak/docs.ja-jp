@@ -2,12 +2,12 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329753"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
@@ -114,7 +114,7 @@ ms.locfileid: "59103260"
   
 #### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
   
-1.  カスタム トークン プロバイダーを作成します。  
+1. カスタム トークン プロバイダーを作成します。  
   
      サンプルでは、キャッシュから取得したセキュリティ トークンを返すカスタム トークン プロバイダーを実装します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "59103260"
     }  
     ```  
   
-2.  カスタム セキュリティ トークン マネージャーを作成します。  
+2. カスタム セキュリティ トークン マネージャーを作成します。  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、<xref:System.IdentityModel.Selectors.SecurityTokenProvider> メソッド内で渡される特定の <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> の `CreateSecurityTokenProvider` の作成に使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、`CreateSecurityTokenProvider` メソッドをオーバーライドして、渡されたトークンの要件で発行済みトークンが必要であることが示されている場合にはカスタム トークン プロバイダーを返します。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59103260"
     }  
     ```  
   
-3.  カスタム クライアント資格情報を作成します。  
+3. カスタム クライアント資格情報を作成します。  
   
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダ、およびトークン シリアライザの取得に使用されるセキュリティ トークン マネージャを作成します。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "59103260"
     }  
     ```  
   
-4.  トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
+4. トークン キャッシュを実装します。 サンプルの実装では抽象基本クラスを使用し、トークン キャッシュの利用先ではこのクラスを通じてキャッシュとやり取りします。  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ ms.locfileid: "59103260"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  setup.cmd ファイルを実行して、必要な証明書を作成します。  
+1. setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
-2.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
+2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
   
-3.  Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
+3. Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
   
-4.  client.exe を実行します。  
+4. client.exe を実行します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.cmd を実行します。  
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.cmd を実行します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

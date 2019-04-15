@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115701"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331716"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -90,13 +90,13 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate コマンドレットとの信頼関係のチェーンを構築するには  
   
-1.  New-selfsignedcertificate コマンドレットを使用して一時的なルート機関 (自己署名) 証明を作成します。 秘密キーをディスクに保存します。  
+1. New-selfsignedcertificate コマンドレットを使用して一時的なルート機関 (自己署名) 証明を作成します。 秘密キーをディスクに保存します。  
   
-2.  この新しい証明書を使用して、公開キーを含む別の証明書を発行します。  
+2. この新しい証明書を使用して、公開キーを含む別の証明書を発行します。  
   
-3.  信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。  
+3. 信頼されたルート証明機関ストアに、ルート証明機関証明書をインポートします。  
   
-4.  手順については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。  
+4. 手順については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。  
   
 ## <a name="which-certificate-to-use"></a>使用する証明書の選択  
  証明書に関する一般的な質問は、どの証明書を使用するかということとその理由に関するものです。 その答えは、クライアントとサービスのどちらをプログラミングするかによって異なります。 以下に一般的なガイドラインを示します (これらの質問に対する包括的な答えではありません)。  

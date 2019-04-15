@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132042"
 ---
 # <a name="identifying-functions-in-dlls"></a>DLL 内の関数の識別
 DLL 関数の ID は、次の要素で構成されます。  
@@ -46,6 +46,7 @@ DLL 関数の ID は、次の要素で構成されます。
  Windows API の詳細については、プラットフォーム SDK を参照してください。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [エントリ ポイントの指定](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [DLL 関数を保持するクラスの作成](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

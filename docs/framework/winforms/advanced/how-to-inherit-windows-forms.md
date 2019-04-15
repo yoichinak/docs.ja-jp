@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314544"
 ---
 # <a name="how-to-inherit-windows-forms"></a>方法: Windows フォームを継承する
 新規の Windows フォームは、基本フォームから継承して簡単に複製できます。フォームが必要になるたびに、最初から作成し直す必要はありません。  
@@ -25,9 +25,9 @@ ms.locfileid: "59112750"
   
 ### <a name="to-inherit-a-form-programmatically"></a>プログラムによってフォームを継承するには  
   
-1.  クラスに、継承元のフォームを含む名前空間への参照を追加します。  
+1. クラスに、継承元のフォームを含む名前空間への参照を追加します。  
   
-2.  クラス定義に、継承元のフォームへの参照を追加します。 参照では、フォームを含んでいる名前空間を指定し、その後にピリオド、続いて基本フォーム自体の名前を指定します。  
+2. クラス定義に、継承元のフォームへの参照を追加します。 参照では、フォームを含んでいる名前空間を指定し、その後にピリオド、続いて基本フォーム自体の名前を指定します。  
   
     ```vb  
     Public Class Form2  

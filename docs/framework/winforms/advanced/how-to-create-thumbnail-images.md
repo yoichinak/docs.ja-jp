@@ -1,5 +1,5 @@
 ---
-title: '方法: サムネイル イメージを作成します。'
+title: '方法: サムネイル イメージを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341492"
 ---
-# <a name="how-to-create-thumbnail-images"></a>方法: サムネイル イメージを作成します。
+# <a name="how-to-create-thumbnail-images"></a>方法: サムネイル イメージを作成する
 サムネイル イメージは、小さいイメージのバージョンです。 サムネイル イメージを作成するには呼び出すことによって、<xref:System.Drawing.Image.GetThumbnailImage%2A>のメソッド、<xref:System.Drawing.Image>オブジェクト。  
   
 ## <a name="example"></a>例  
@@ -34,22 +34,23 @@ ms.locfileid: "57716960"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 例を実行するには、次の手順に従います。  
   
-1.  新しい Windows フォーム アプリケーションを作成します。  
+1. 新しい Windows フォーム アプリケーションを作成します。  
   
-2.  コード例をフォームに追加します。  
+2. コード例をフォームに追加します。  
   
-3.  フォームのハンドラーを作成<xref:System.Windows.Forms.Control.Paint>イベント  
+3. フォームのハンドラーを作成<xref:System.Windows.Forms.Control.Paint>イベント  
   
-4.  <xref:System.Windows.Forms.Control.Paint>ハンドラーを呼び出し、`GetThumbnail`メソッドを渡します`e`の<xref:System.Windows.Forms.PaintEventArgs>します。  
+4. <xref:System.Windows.Forms.Control.Paint>ハンドラーを呼び出し、`GetThumbnail`メソッドを渡します`e`の<xref:System.Windows.Forms.PaintEventArgs>します。  
   
-5.  サムネイルを作成したいイメージ ファイルを検索します。  
+5. サムネイルを作成したいイメージ ファイルを検索します。  
   
-6.  `GetThumbnail`メソッドは、パスを指定し、ファイル名をイメージにします。  
+6. `GetThumbnail`メソッドは、パスを指定し、ファイル名をイメージにします。  
   
-7.  F5 キーを押して、例を実行します。  
+7. F5 キーを押して、例を実行します。  
   
      フォームに 100 × 100 のサムネイル画像が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+
+- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164737"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
 ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナル表現があります。 階層データにアクセスするには、.NET Framework で使用できる XML クラスを使用できます。 従来、この 2 つのデータ表現は個別に使用されていました。 ただし、.NET Framework により、リアルタイムの同期のアクセスを使用してデータのリレーショナルで階層的な表現の両方に、**データセット**オブジェクトと<xref:System.Xml.XmlDataDocument>オブジェクトに、それぞれします。  
@@ -87,7 +87,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
  同期のもう 1 つの利点、 **XmlDataDocument**で、**データセット**は XML ドキュメントの忠実性を保持します。 場合、**データセット**は使用して XML ドキュメントから取得されます**ReadXml**による XML ドキュメントとして返されます、データが書き込まれるときに、 **WriteXml**から大幅に異なる場合があります、元の XML ドキュメントです。 これは、ため、**データセット**、空白文字、または XML ドキュメントからの要素の順序などの階層情報などの書式設定は維持されません。 **データセット**も XML ドキュメントからのスキーマが一致しなかったため無視された要素を含んでいない、**データセット**します。 同期、 **XmlDataDocument**で、**データセット**によりで管理する元の XML ドキュメントの書式設定で階層的な要素の構造、 **XmlDataDocument**中、**データセット**だけデータとスキーマに対応する情報が含まれています、**データセット**します。  
   
- 同期するときに、**データセット**で、 **XmlDataDocument**、結果がかどうかに応じて異なる場合があります、<xref:System.Data.DataRelation>オブジェクトが入れ子にします。 詳細については、[Datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)を参照してください。  
+ 同期するときに、**データセット**で、 **XmlDataDocument**、結果がかどうかに応じて異なる場合があります、<xref:System.Data.DataRelation>オブジェクトが入れ子にします。 詳細については、次を参照してください。 [Datarelation の入れ子](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
@@ -113,4 +113,5 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
  に関するリファレンス情報を含む、 **XmlDataDocument**クラス。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

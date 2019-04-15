@@ -2,12 +2,12 @@
 title: コンテキスト交換プロトコル
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217004"
 ---
 # <a name="context-exchange-protocol"></a>コンテキスト交換プロトコル
 このセクションでは、Windows Communication Foundation (WCF) リリースの .NET Framework version 3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルの実装は、次の 2 つのメカニズムのいずれかを使用、サーバーとクライアントの間でコンテキストを伝達できます。HTTP クッキーまたは SOAP ヘッダー。  
@@ -68,4 +68,5 @@ ms.locfileid: "54494770"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Web サービス プロトコルの相互運用性ガイド](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

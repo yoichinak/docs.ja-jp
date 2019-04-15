@@ -5,17 +5,16 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122916"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath の XAML 構文
 <xref:System.Windows.PropertyPath>オブジェクトがサポートする、複雑なインライン[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]構文を使用するさまざまなプロパティを設定するため、<xref:System.Windows.PropertyPath>型を値として。 このトピックの「ドキュメント、<xref:System.Windows.PropertyPath>バインディングとアニメーション構文に適用される構文です。  
-    
-  
+
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath を使用する場所  
  <xref:System.Windows.PropertyPath> いくつかで使用される共通オブジェクトは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]機能します。 一般的な使用に関係なく<xref:System.Windows.PropertyPath>プロパティ パス情報を伝達するために使用法は、各機能領域で<xref:System.Windows.PropertyPath>によって変化する型に使用されます。 そのため、機能ごとに構文を説明する方が実際的です。  
@@ -48,9 +47,9 @@ ms.locfileid: "57363515"
 <Binding Path="[key]" .../>  
 ```  
   
- `key` には、ディクショナリまたはハッシュ テーブルに対する型指定されたインデックス、または配列の整数インデックスを指定する必要があります。 また、キーの値は、適用先のプロパティに直接バインドできる型である必要があります。 たとえば、文字列キーと文字列値を格納するハッシュ テーブルはこのように使用するのテキストにバインドする、<xref:System.Windows.Controls.TextBox>します。 キーがコレクションまたはサブインデックスを指す場合は、この構文を使用して、ターゲット コレクション プロパティにバインドできます。 それ以外の場合は、`<Binding Path="[key].propertyName" .../>` などの構文を通じて、特定のプロパティを参照する必要があります。  
+ `key` 型指定されたインデックス、ディクショナリまたはハッシュ テーブル、または整数の配列のインデックスのいずれかである必要があります。 また、キーの値は、適用先のプロパティに直接バインドできる型である必要があります。 たとえば、文字列キーと文字列値を格納するハッシュ テーブルはこのように使用するのテキストにバインドする、<xref:System.Windows.Controls.TextBox>します。 キーがコレクションまたはサブインデックスを指す場合は、この構文を使用して、ターゲット コレクション プロパティにバインドできます。 それ以外の場合は、`<Binding Path="[key].propertyName" .../>` などの構文を通じて、特定のプロパティを参照する必要があります。  
   
- 必要に応じて、インデックスの型を指定できます。 詳細については、インデックス付きプロパティのパスのこの側面は、<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>を参照してください。  
+ 必要に応じて、インデックスの型を指定できます。 詳細については、インデックス付きプロパティのパスのこの側面は、次を参照してください。<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>します。  
   
 <a name="multipleindirect"></a>   
 ### <a name="multiple-property-indirect-property-targeting"></a>複数プロパティ (間接的なプロパティのターゲット設定)  
@@ -68,7 +67,7 @@ ms.locfileid: "57363515"
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- いることを示す、かっこ内のこのプロパティを<xref:System.Windows.PropertyPath>部分修飾を使用して構築する必要があります。 XML 名前空間を使用して、適切なマッピングを含む型を検出できます。 `ownerType`型を検索、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサからへのアクセス、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>各アセンブリで宣言します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。  `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 この構文は、通常、次のいずれかの場合に使用されます。  
+ いることを示す、かっこ内のこのプロパティを<xref:System.Windows.PropertyPath>部分修飾を使用して構築する必要があります。 XML 名前空間を使用して、適切なマッピングを含む型を検出できます。 `ownerType`型を検索、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサからへのアクセス、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>各アセンブリで宣言します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。  `propertyName` 上の既存のプロパティの名前を解決する必要があります、`ownerType`します。 この構文は、通常、次のいずれかの場合に使用されます。  
   
 -   指定されたターゲット型を持たないスタイルまたはテンプレート内の [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] でパスが指定されている場合。 通常、これ以外のケースでの修飾子の使用は無効です。スタイルやテンプレート以外のケースでは、プロパティは型ではなくインスタンス上に存在します。  
   
@@ -166,7 +165,7 @@ or
   
  `propertyName` いずれかであるプロパティにする必要があります、<xref:System.Windows.Freezable>値型または指定した上に存在するプリミティブ型<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型。  
   
- `propertyName2` は、`propertyName` の値であるオブジェクトに存在する依存関係プロパティの名前である必要があります。 つまり、`propertyName2`である型の依存関係プロパティとして存在する必要があります、 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>します。  
+ `propertyName2` 値であるオブジェクトに存在する依存関係プロパティの名前を指定する必要があります`propertyName`します。 つまり、`propertyName2`である型の依存関係プロパティとして存在する必要があります、 `propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>します。  
   
  適用されるスタイルとテンプレートにより、アニメーションの間接的なターゲット設定が必要です。 必要があるアニメーションを対象にするため、<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>によって、ターゲット オブジェクトに名前が確立されている[X:name](../../xaml-services/x-name-directive.md)または<xref:System.Windows.FrameworkElement.Name%2A>します。 テンプレートとスタイルの要素が名前を設定するが、また、その名前は、スタイルとテンプレートの名前スコープ内で有効なだけです。 (テンプレートとスタイルは、アプリケーション マークアップと名前スコープを共有するが場合、名一意ではありません。 スタイルとテンプレートのインスタンス間で共有される文字どおりと重複する名前が永続化します。)このため、アニメーション化する要素の個々のプロパティがスタイルやテンプレートに基づく場合は、スタイル テンプレートに基づかない、名前付きの要素インスタンスで操作を開始し、スタイルまたはテンプレートのビジュアル ツリーに対象を移動し、アニメーション化する目的のプロパティにアクセスします。  
   
@@ -179,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- いることを示す、かっこ内のこのプロパティを<xref:System.Windows.PropertyPath>部分修飾を使用して構築する必要があります。 XML 名前空間を使用して型を検出できます。 `ownerType`型を検索、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサからへのアクセス、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>各アセンブリで宣言します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。 `propertyName` は、`ownerType` に存在するプロパティの名前に解決される必要があります。 として指定されたプロパティ`propertyName`必要があります、<xref:System.Windows.DependencyProperty>します。 (すべて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]添付プロパティは、依存関係プロパティとして実装されるので、この問題は、カスタム添付プロパティの問題になるだけです)。  
+ いることを示す、かっこ内のこのプロパティを<xref:System.Windows.PropertyPath>部分修飾を使用して構築する必要があります。 XML 名前空間を使用して型を検出できます。 `ownerType`型を検索、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサからへのアクセス、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>各アセンブリで宣言します。 ほとんどのアプリケーションは、[!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 名前空間にマップされた既定の XML 名前空間を持ちます。そのため、プレフィックスは通常、カスタム型や、名前空間の外部の型に限って必要です。 `propertyName` 上の既存のプロパティの名前を解決する必要があります、`ownerType`します。 として指定されたプロパティ`propertyName`必要があります、<xref:System.Windows.DependencyProperty>します。 (すべて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]添付プロパティは、依存関係プロパティとして実装されるので、この問題は、カスタム添付プロパティの問題になるだけです)。  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>インデクサー  
@@ -197,6 +196,7 @@ or
  一般に、<xref:System.Windows.PropertyPath>バインディングでの使用と最も単純なアニメーションと複雑なアニメーションでの使用の 2 つの異なるコンス トラクターを使用するように設計されています。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>オブジェクトが文字列の使用状況をバインドするための署名。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>ワンステップ アニメーション パスでオブジェクトが署名、<xref:System.Windows.DependencyProperty>します。 使用して、<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>複雑なアニメーションの署名。 後者のコンストラクターでは、先頭のパラメーター用のトークン文字列と、トークン文字列内の位置に設定されるオブジェクトの配列を使用して、プロパティ パスのリレーションシップを定義します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.PropertyPath>
 - [データ バインディングの概要](../data/data-binding-overview.md)
 - [ストーリーボードの概要](../graphics-multimedia/storyboards-overview.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220109"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311956"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 .NET Framework ツールを使用すると、.NET Framework に対応したアプリケーションやコンポーネントを簡単に作成、配置、および管理できます。  
   
-ここで説明する .NET Framework ツールの大半は、Visual Studio のインストール時に自動的にインストールされます。 Visual Studio は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) ページからダウンロードできます。
+ここで説明する .NET Framework ツールの大半は、Visual Studio のインストール時に自動的にインストールされます。 Visual Studio は、[Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ページからダウンロードできます。
   
  アセンブリ キャッシュ ビューアー (Shfusion.dll) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから Shfusion.dll にアクセスする必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "56220109"
  [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  テキスト ファイル (.txt または .restext) と XML ベースのリソース形式ファイル (.resx) を、共通言語ランタイムのバイナリ ファイル (.resources) に変換します。このバイナリ ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。  
   
- [SecAnnotate.exe (.NET Security Annotator ツール)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
+ [SecAnnotate.exe (.NET セキュリティ アノテーター ツール)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
  アセンブリの SecurityCritical 部分と SecuritySafeCritical 部分を識別します。 アセンブリの `SecurityCritical` 部分と `SecuritySafeCritical` 部分を識別します。  
   
  [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)  

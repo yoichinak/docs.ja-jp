@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128662"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 <xref:System.Windows.Controls.ScrollViewer>コントロールが水平方向または垂直方向でスクロールできるコンテンツのスクロール可能な領域を作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ScrollViewer の概要](scrollviewer-overview.md)  
- [方法トピック](scrollviewer-how-to-topics.md)  
+ [方法のトピック](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -29,5 +29,6 @@ ms.locfileid: "57367114"
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>関連項目
+
 - [パネルの概要](panels-overview.md)
 - [レイアウト](../advanced/layout.md)

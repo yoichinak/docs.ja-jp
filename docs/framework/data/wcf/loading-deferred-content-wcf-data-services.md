@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554999"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518007"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>遅延コンテンツの読み込み (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の既定では、クエリが返すデータの量が制限されます。 その一方で、関連エンティティ、ページングされた応答データ、およびバイナリ データ ストリームを含む追加データをデータ サービスから必要に応じて明示的に読み込むことができます。 このトピックでは、このような遅延コンテンツをアプリケーションに読み込む方法について説明します。  
@@ -24,39 +24,40 @@ ms.locfileid: "54554999"
   
 -   **一括読み込み**:使用することができます、`$expand`クエリが、エンティティへのアソシエーションによって関連付けられたエンティティを返すことを要求するクエリ オプション セットを要求するクエリ。 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> に対して <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを使用して、データ サービスに送信されるクエリに `$expand` オプションを追加します。 次の例に示すように、エンティティ セットをコンマで区切ることによって関連する複数のエンティティ セットを要求できます。 クエリによって要求されたすべてのエンティティは、1 つの応答で返されます。 次の例では、`Order_Details` および `Customers` が `Orders` エンティティ セットと一緒に返されます。  
   
-     [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
-     [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
+     [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
+     [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、`$expand` クエリ オプションを使用して、1 つのクエリに含めることができるエンティティ セットの数を 12 に制限しています。  
   
 -   **明示的読み込み**:呼び出すことができます、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>メソッドを<xref:System.Data.Services.Client.DataServiceContext>を関連エンティティを明示的に読み込むインスタンス。 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> メソッドへの各呼び出しによって、データ サービスへの個別の要求が作成されます。 次の例では、`Order_Details` エンティティの `Orders` を明示的に読み込みます。  
   
-     [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadrelatedorderdetailsspecific)]
-     [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadrelatedorderdetailsspecific)]  
+     [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
+     [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  
   
  どちらのオプションを使用するかを検討する場合、データ サービスへの要求の数と 1 つの応答で返されるデータの量のバランスを考慮してください。 アプリケーションが関連オブジェクトを必要とし、それらのオブジェクトを明示的に取得するための追加要求による待機時間を回避する場合は、一括読み込みを使用します。 しかし、アプリケーションが特定の関連エンティティ インスタンスのデータしか必要としない場合は、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> メソッドを呼び出して、これらのエンティティを明示的に読み込むことを検討することをお勧めします。 詳細については、「[方法 :関連エンティティを読み込む](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)します。  
   
 ## <a name="paged-content"></a>ページングされたコンテンツ  
- データ サービスでページングが有効化されている場合、データ サービスが返すフィード内のエントリの数はデータ サービスの構成によって制限されます。 ページ制限は、各エンティティ セットに対して個別に設定できます。 詳細については、[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)を参照してください。 ページングが有効である場合、フィードの最終的なエントリには、データの次のページへのリンクが含まれます。 このリンクは、<xref:System.Data.Services.Client.DataServiceQueryContinuation%601> オブジェクトに含まれます。 データの次のページへの URI は、<xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> が実行されたときに返される <xref:System.Data.Services.Client.QueryOperationResponse%601> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを呼び出すことによって取得します。 返された <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> オブジェクトが使用されて、結果の次のページが読み込まれます。 クエリ結果は、<xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> メソッドを呼び出す前に列挙する必要があります。 最初に `do…while` ループを使用してクエリ結果を列挙した後に、次の `non-null` リンク値をチェックすることをお勧めします。 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> メソッドが `null` (Visual Basic の場合は `Nothing`) を返す場合、元のクエリに追加の結果ページはありません。 次の例は、Northwind サンプル データ サービスからページングされた顧客データを読み込む `do…while` ループを示します。  
+ データ サービスでページングが有効化されている場合、データ サービスが返すフィード内のエントリの数はデータ サービスの構成によって制限されます。 ページ制限は、各エンティティ セットに対して個別に設定できます。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。 ページングが有効である場合、フィードの最終的なエントリには、データの次のページへのリンクが含まれます。 このリンクは、<xref:System.Data.Services.Client.DataServiceQueryContinuation%601> オブジェクトに含まれます。 データの次のページへの URI は、<xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> が実行されたときに返される <xref:System.Data.Services.Client.QueryOperationResponse%601> で <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを呼び出すことによって取得します。 返された <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> オブジェクトが使用されて、結果の次のページが読み込まれます。 クエリ結果は、<xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> メソッドを呼び出す前に列挙する必要があります。 最初に `do…while` ループを使用してクエリ結果を列挙した後に、次の `non-null` リンク値をチェックすることをお勧めします。 <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> メソッドが `null` (Visual Basic の場合は `Nothing`) を返す場合、元のクエリに追加の結果ページはありません。 次の例は、Northwind サンプル データ サービスからページングされた顧客データを読み込む `do…while` ループを示します。  
   
- [!code-csharp[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadnextlink)]
- [!code-vb[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadnextlink)]  
+ [!code-csharp[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextlink)]
+ [!code-vb[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadnextlink)]  
   
  要求されたエンティティ セットと一緒に関連エンティティを 1 つの応答で返すようクエリが要求すると、ページング制限は、応答と共にインラインで含まれるネストされたフィードに影響することがあります。 たとえば、Northwind サンプル データ サービスで `Customers` エンティティ セットに対してページング制限が設定されている場合、次の Northwind サンプル データ サービスを定義する Northwind.svc.cs ファイルの例に示すように、独立したページング制限を関連 `Orders` エンティティ セットに設定することもできます。  
   
- [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind.svc.cs#dataserviceconfigpaging)]
- [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
+ [!code-csharp[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigpaging)]
+ [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
  この場合、最上位レベルの `Customers` エンティティ フィードとネストされた `Orders` エンティティ フィードの両方にページングを実装する必要があります。 次の例は、選択した `while` エンティティに関連する `Orders` エンティティのページを読み込むために使用する `Customers` ループを示します。  
   
- [!code-csharp[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#loadnextorderslink)]
- [!code-vb[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#loadnextorderslink)]  
+ [!code-csharp[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextorderslink)]
+ [!code-vb[Astoria Northwind Client#LoadNextOrdersLink](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadnextorderslink)]  
   
  詳細については、「[方法 :ページングされた結果を読み込む](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)します。  
   
 ## <a name="binary-data-streams"></a>バイナリ データ ストリーム  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、バイナリ ラージ オブジェクト (BLOB) データにデータ ストリームとしてアクセスできます。 ストリーミングは必要になるまでバイナリ データの読み込みを待機し、クライアントは、このデータを効率的に処理できます。 この機能を活用するには、データ サービスは <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーを実装する必要があります。 詳細については、[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)を参照してください。 ストリーミングが有効である場合、エンティティ型は関連バイナリ データなしで返されます。 この場合、使用する必要があります、<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>のメソッド、<xref:System.Data.Services.Client.DataServiceContext>サービスからバイナリ データのデータ ストリームにアクセスするクラス。 同様に、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> メソッドを使用して、エンティティのバイナリ データをストリームとして追加または変更します。 詳細については、[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)を参照してください。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、バイナリ ラージ オブジェクト (BLOB) データにデータ ストリームとしてアクセスできます。 ストリーミングは必要になるまでバイナリ データの読み込みを待機し、クライアントは、このデータを効率的に処理できます。 この機能を活用するには、データ サービスは <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーを実装する必要があります。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)します。 ストリーミングが有効である場合、エンティティ型は関連バイナリ データなしで返されます。 この場合、使用する必要があります、<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>のメソッド、<xref:System.Data.Services.Client.DataServiceContext>サービスからバイナリ データのデータ ストリームにアクセスするクラス。 同様に、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> メソッドを使用して、エンティティのバイナリ データをストリームとして追加または変更します。 詳細については、次を参照してください。[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [データ サービスに対するクエリ](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

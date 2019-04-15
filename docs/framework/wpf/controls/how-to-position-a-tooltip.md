@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212350"
 ---
 # <a name="how-to-position-a-tooltip"></a>方法: ToolTip を配置する
 この例では、画面上のツールヒントの位置を指定する方法を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "58840498"
   
  使用して、ツールヒントの内容を定義するかどうか、<xref:System.Windows.Controls.ToolTip>オブジェクトのいずれかのクラス プロパティを使用することができます。 ただし、、<xref:System.Windows.Controls.ToolTipService>プロパティも優先されます。 使用して、<xref:System.Windows.Controls.ToolTipService>プロパティとして定義されていないヒントを<xref:System.Windows.Controls.ToolTip>オブジェクト。  
   
- 次の図は、これらのプロパティを使用して、tooltip を配置する方法を示します。 ですが、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のこれらの図の例で定義されているプロパティを設定する方法を示して、<xref:System.Windows.Controls.ToolTip>クラスの対応するプロパティ、<xref:System.Windows.Controls.ToolTipService>クラスと同じレイアウト規則に従います。 配置プロパティの値の詳細については、[ポップアップの配置動作](popup-placement-behavior.md)を参照してください。  
+ 次の図は、これらのプロパティを使用して、tooltip を配置する方法を示します。 ですが、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]のこれらの図の例で定義されているプロパティを設定する方法を示して、<xref:System.Windows.Controls.ToolTip>クラスの対応するプロパティ、<xref:System.Windows.Controls.ToolTipService>クラスと同じレイアウト規則に従います。 配置プロパティの値の詳細については、次を参照してください。[ポップアップの配置動作](popup-placement-behavior.md)します。  
  
  次の図は、配置プロパティを使用して、ツールヒントの配置を示しています。  
   
@@ -62,7 +62,8 @@ ms.locfileid: "58840498"
  [!code-vb[ToolTipService#NoToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [方法トピック](tooltip-how-to-topics.md)
+- [方法のトピック](tooltip-how-to-topics.md)
 - [ToolTip の概要](tooltip-overview.md)

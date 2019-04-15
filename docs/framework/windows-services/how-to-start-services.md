@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494374"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336838"
 ---
 # <a name="how-to-start-services"></a>方法: サービスを開始する
 サービスをインストールした後で、サービスを起動します。 起動することで、サービス クラスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドが呼び出されます。 通常、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドにはサービスが本来行う処理を定義します。 サービスの起動後は、手動で一時停止または停止するまで、アクティブの状態を維持します。  
@@ -27,11 +27,11 @@ ms.locfileid: "54494374"
   
 ### <a name="to-specify-how-a-service-should-start"></a>サービスの起動方法を指定するには  
   
-1.  サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。  
+1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」をご覧ください。  
   
-2.  デザイナーで、対象となるサービスのインストーラーをクリックします。  
+2. デザイナーで、対象となるサービスのインストーラーをクリックします。  
   
-3.  **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティに次のいずれかの値を設定します。  
+3. **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティに次のいずれかの値を設定します。  
   
     |サービスを起動するタイミング|設定値|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ ms.locfileid: "54494374"
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>サーバー エクスプローラーでサービスを手動起動するには  
   
-1.  サーバーが**サーバー エクスプローラー**の一覧にない場合は追加します。 詳細については、「方法:サーバー エクスプローラー/データベース エクスプローラーにアクセスして初期化する」を参照してください。  
+1. サーバーが**サーバー エクスプローラー**の一覧にない場合は追加します。 詳細については、「方法:サーバー エクスプローラー/データベース エクスプローラーにアクセスして初期化する」を参照してください。  
   
-2.  **[サービス]** ノードを展開し、開始するサービスを検索します。  
+2. **[サービス]** ノードを展開し、開始するサービスを検索します。  
   
-3.  サービス名を右クリックし、**[開始]** をクリックします。  
+3. サービス名を右クリックし、**[開始]** をクリックします。  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>サービス制御マネージャーでサービスを手動起動するには  
   
-1.  **サービス コントロール マネージャー**を次のいずれかの方法で開きます。  
+1. **サービス コントロール マネージャー**を次のいずれかの方法で開きます。  
   
     -   Windows XP および Windows 2000 Professional のデスクトップで、**[マイ コンピューター]** を右クリックし、**[管理]** をクリックします。 表示されるダイアログ ボックスで、**[サービスとアプリケーション]** ノードを展開します。  
   
@@ -69,15 +69,16 @@ ms.locfileid: "54494374"
   
      ウィンドウの **[サービス]** セクションに、サービスが一覧表示されます。  
   
-2.  一覧で目的のサービスを右クリックし、**[開始]** をクリックします。  
+2. 一覧で目的のサービスを右クリックし、**[開始]** をクリックします。  
   
 ### <a name="to-manually-start-a-service-from-code"></a>コードでサービスを手動起動するには  
   
-1.  <xref:System.ServiceProcess.ServiceController> クラスのインスタンスを作成し、管理対象となるサービスと対話するように設定します。  
+1. <xref:System.ServiceProcess.ServiceController> クラスのインスタンスを作成し、管理対象となるサービスと対話するように設定します。  
   
-2.  <xref:System.ServiceProcess.ServiceController.Start%2A> メソッドを呼び出してサービスを起動します。  
+2. <xref:System.ServiceProcess.ServiceController.Start%2A> メソッドを呼び出してサービスを起動します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

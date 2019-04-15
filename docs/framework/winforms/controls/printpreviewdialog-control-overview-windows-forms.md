@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188839"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロールは、構成済みのダイアログ ボックスを表示するために使用する方法、 [PrintDocument](printdocument-component-windows-forms.md)印刷されたときに表示されます。 ダイアログ ボックスを構成する代わりに単純なソリューションとして、Windows ベースのアプリケーションの中で使用します。 このコントロールには、印刷を開始するボタン、ズーム イン用のボタン、1 ページまたは複数ページを表示するボタン、およびダイアログ ボックスを閉じるためのボタンが含まれています。  
@@ -52,6 +52,7 @@ Windows フォーム<xref:System.Windows.Forms.PrintPreviewDialog>コントロ�
 使用する場合、<xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>のパフォーマンスのプリンターの設定を変更するイベント、<xref:System.Windows.Forms.PrintPreviewDialog>最適化の構成スイッチが設定されている場合でも、コントロールは改善されません。  
 
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 51f95834556153448d416157460cf63da0d409e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147473"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>方法: ビュー内のデータをフィルター処理する
 この例では、ビュー内のデータをフィルター処理する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "57373947"
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- ビューを取得または作成する方法については、[データ コレクションの既定のビューを取得](how-to-get-the-default-view-of-a-data-collection.md)を参照してください。 完全な例では、[並べ替えとビューのサンプル内の項目をフィルター処理](https://go.microsoft.com/fwlink/?LinkID=160040)を参照してください。  
+ ビューを取得または作成する方法については、次を参照してください。[データ コレクションの既定のビューを取得](how-to-get-the-default-view-of-a-data-collection.md)します。 完全な例では、次を参照してください。[並べ替えとビューのサンプル内の項目をフィルター処理](https://go.microsoft.com/fwlink/?LinkID=160040)します。  
   
  ビュー オブジェクトの場合、<xref:System.Windows.Data.CollectionViewSource>オブジェクトのイベント ハンドラーを設定してフィルター処理のロジックを適用する、<xref:System.Windows.Data.CollectionViewSource.Filter>イベント。 次の例では、`listingDataView`のインスタンスである<xref:System.Windows.Data.CollectionViewSource>します。  
   
@@ -48,8 +48,9 @@ ms.locfileid: "57373947"
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [データ バインディングの概要](data-binding-overview.md)
 - [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [方法のトピック](data-binding-how-to-topics.md)

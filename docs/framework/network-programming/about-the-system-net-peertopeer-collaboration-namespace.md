@@ -2,12 +2,12 @@
 title: System.Net.PeerToPeer.Collaboration 名前空間について
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127908"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>System.Net.PeerToPeer.Collaboration 名前空間について
 <xref:System.Net.PeerToPeer.Collaboration> 名前空間は、ピア ツー ピア共同作業インフラストラクチャを使用してピア共同作業アクティビティを実装するために使用されるクラスと API を提供します。  
@@ -40,4 +40,5 @@ ms.locfileid: "54570862"
  一般的な P2P アプリケーションには、共有ノート作成機能またはホワイトボードを利用する電話会議、サーバーレスのチャット アプリケーション、双方向広告、およびオンライン ゲーム セッションなどがあります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.PeerToPeer.Collaboration>

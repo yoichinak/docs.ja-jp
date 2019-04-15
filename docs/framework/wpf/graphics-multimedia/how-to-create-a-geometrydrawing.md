@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], GeometryDrawing class
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-ms.openlocfilehash: 6eb604a8446000ef308c2b5a99480fb6a476c949
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179791"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>方法: GeometryDrawing を作成する
 この例は、作成および表示する方法を示しています、<xref:System.Windows.Media.GeometryDrawing>します。 A<xref:System.Windows.Media.GeometryDrawing>塗りつぶしをアウトラインと関連付けることによって図形を作成することができます、<xref:System.Windows.Media.Pen>と<xref:System.Windows.Media.Brush>で、<xref:System.Windows.Media.Geometry>します。 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A>図形の構造体について説明します、<xref:System.Windows.Media.GeometryDrawing.Brush%2A>図形の塗りつぶし、について説明しますと、<xref:System.Windows.Media.GeometryDrawing.Pen%2A>図形のアウトラインをについて説明します。  
@@ -30,6 +30,7 @@ ms.locfileid: "57373817"
  複雑な図面を作成するには、1 つの複合描画を使用してに複数の描画オブジェクトを結合できます、<xref:System.Windows.Media.DrawingGroup>します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Drawing オブジェクトの概要](drawing-objects-overview.md)
 - [ジオメトリの概要](geometry-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177568"
 ---
 # <a name="interpreting-network-tracing"></a>ネットワークのトレースの解釈
 ネットワークのトレースを有効にすると、トレースを使用して、アプリケーションからさまざまな <xref:System.Net> クラス メンバーへの呼び出しをキャプチャすることができます。 これらの呼び出しからの出力は、次の例のようになる場合があります。  
@@ -45,6 +45,7 @@ ms.locfileid: "54576526"
  `Connection: Close`  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [方法: ネットワークのトレースを構成する](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [.NET Framework のネットワークのトレース](../../../docs/framework/network-programming/network-tracing.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172095"
 ---
 # <a name="asynchronous-client-socket-example"></a>非同期クライアント ソケットの例
 次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは非同期ソケットで構築されます。そのため、サーバーが応答を返す間にクライアント アプリケーションの実行が中断されることはありません。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
@@ -322,6 +322,7 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [非同期サーバー ソケットの例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [ソケットのコード例](../../../docs/framework/network-programming/socket-code-examples.md)

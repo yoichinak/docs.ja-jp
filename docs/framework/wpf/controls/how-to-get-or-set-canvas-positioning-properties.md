@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-ms.openlocfilehash: 9b280bf86f12b406582cb2f534edb85618515d76
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194410"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>方法: Canvas の配置プロパティを取得または設定する
 この例の配置のメソッドを使用する方法を示しています、<xref:System.Windows.Controls.Canvas>要素は子コンテンツを配置します。 この例でコンテンツを使用して、<xref:System.Windows.Controls.ListBoxItem>を表す位置の値し、のインスタンスに値を変換します。 <xref:System.Double>、配置に必要な引数であります。 値が文字列に変換し、テキストとして表示、<xref:System.Windows.Controls.TextBlock>要素を使用して、<xref:System.Windows.Controls.Canvas.GetLeft%2A>メソッド。  
@@ -30,6 +30,7 @@ ms.locfileid: "57356326"
  [!code-vb[CanvasPositioningProperties#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.ListBoxItem>
 - <xref:System.Windows.LengthConverter>

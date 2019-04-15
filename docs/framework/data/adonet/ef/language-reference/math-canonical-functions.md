@@ -2,12 +2,12 @@
 title: 数値演算正規関数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 3e8122806e31fc72b3d390e5e8671fada7f3a47d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228771"
 ---
 # <a name="math-canonical-functions"></a>数値演算正規関数
 
@@ -106,8 +106,8 @@ A `Single`、 `Double`、および`Decimal`します。
 
 |  |  |
 |--|--|
-|`value`|`Double` または `Decimal`。|
-|`digits`|`Int16` または `Int32`。|
+|`value`|`Double` または `Decimal` です。|
+|`digits`|`Int16` または `Int32` です。|
 
 **戻り値**
 
@@ -125,8 +125,8 @@ A `Single`、 `Double`、および`Decimal`します。
 
 |  |  |
 |--|--|
-|`value`|`Double` または `Decimal`。|
-|`digits`|`Int16` または `Int32`。|
+|`value`|`Double` または `Decimal` です。|
+|`digits`|`Int16` または `Int32` です。|
 
 **戻り値**
 
@@ -138,7 +138,8 @@ A `Single`、 `Double`、および`Decimal`します。
   
  `null` が入力された場合、これらの関数は `null` を返します。  
   
- 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、[Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)を参照してください。  
+ 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

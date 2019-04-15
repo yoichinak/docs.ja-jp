@@ -2,21 +2,21 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324163"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]ワークフロー デザイナー エクスペリエンスのいくつかの機能強化を含め、多くの新しい機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
 
 > [!NOTE]
->  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)を参照してください。
+>  導入された新しい Windows Workflow Foundation (WF) 機能のすべての一覧については[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、デザイナーのホスト変更関連のないものを含む、次を参照してください。 [.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)します。
 
 ## <a name="activities"></a>アクティビティ
- 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、、[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)を参照してください。
+ 組み込みのアクティビティ ライブラリには、既存のアクティビティ用の新しいアクティビティと新しい機能が含まれています。 これらの新しいアクティビティはすべて、再ホストされたデザイナーでサポートされています。 これらの新しいアクティビティの詳細については、次を参照してください。、[アクティビティ](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)の[.NET 4.5 での Windows Workflow Foundation の新](whats-new-in-wf-in-dotnet.md)します。
 
 ## <a name="c-expressions"></a>C# の式
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは、ワークフロー内のすべての式を Visual Basic のみで記述できました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、Visual Basic の式は Visual Basic で作成されたプロジェクトでのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 Visual Studio 2012 でワークフローを作成するには、フル機能の c# 式エディターに文法強調表示や intellisense などの機能が提供されます。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
@@ -27,8 +27,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 ## <a name="new-designer-capabilities"></a>デザイナーの新機能
 
 ### <a name="designer-search"></a>デザイナーでの検索
- [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)で導入された機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]再ホストされたデザイナーでサポートされていません。 
-  `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)を参照してください。
+ [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)で導入された機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]再ホストされたデザイナーでサポートされていません。 `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。
 
 > [!WARNING]
 >  [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでサポートされていません。
@@ -125,19 +124,19 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 ### <a name="state-machine-workflows"></a>ステート マシンのワークフロー  
  ステート マシン ワークフローは、.NET Framework 4.0.1 の一部として導入された、 [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)します。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスおよびアクティビティは [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 用に更新されました。 更新プログラムには次のものが含まれています。  
   
-1.  状態にブレークポイントを設定する機能。  
+1. 状態にブレークポイントを設定する機能。  
   
-2.  ワークフロー デザイナーで遷移をコピーして貼り付ける機能。  
+2. ワークフロー デザイナーで遷移をコピーして貼り付ける機能。  
   
-3.  トリガーを共有する遷移の作成に対するデザイナーのサポート。  
+3. トリガーを共有する遷移の作成に対するデザイナーのサポート。  
   
-4.  ステート マシンのワークフロー作成に使用するアクティビティ (<xref:System.Activities.Statements.StateMachine><xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> など)。  
+4. アクティビティを含む、ステート マシン ワークフローを作成するために使用します<xref:System.Activities.Statements.StateMachine>、 <xref:System.Activities.Statements.State>、と。 <xref:System.Activities.Statements.Transition>  
   
  次のスクリーン ショットから完成したステート マシン ワークフローを示しています、[チュートリアル入門](getting-started-tutorial.md)手順[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)です。  
   
  ![完成したステート マシン ワークフロー](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
- ステート マシン ワークフローを作成する方法の詳細については、[ステート マシン ワークフロー](state-machine-workflows.md)を参照してください。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
+ ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[ステート マシン ワークフロー](state-machine-workflows.md)します。 ステート マシンのワークフローは、再ホストされたデザイナーでサポートされています。  
   
 ### <a name="contract-first-workflow-development"></a>コントラクト優先ワークフローの開発  
  コントラクト優先ワークフローの開発ツールでは、開発者が最初に、コード内のコントラクトを設計し、Visual Studio で、数回クリックで各操作を表すツールボックスに自動的にアクティビティ テンプレートを生成できるようにします。 これらのアクティビティは、コントラクトで定義された操作を実装するワークフローを作成するために使用されます。 ワークフロー デザイナーは、ワークフロー サービスを検証し、これらの操作が実装され、ワークフローの署名がコントラクトの署名と一致することを確認します。 また、開発者は、ワークフロー サービスを、実装済みコントラクトのコレクションと関連付けることもできます。 コントラクト優先ワークフロー サービスの開発の詳細については、次を参照してください。[方法。既存のサービス コントラクトを使用するワークフロー サービスを作成する](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)します。  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309421"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable メソッド
 使用可能なレジスタのビットマップを提供するバイト配列を取得します。  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Remarks  
  CorDebugRegister 列挙型の値では、マイクロプロセッサの別のレジスタを指定します。 各値の上位 5 つのビットは、インデックス、`availableRegChunks`バイトの配列。 各値の下位の 3 つのビットは、インデックス付きのバイト内のビット位置を特定します。 指定された、`CorDebugRegister`特定の登録、マスク内の登録の位置を指定する値は次のように決定されます。  
   
-1.  抽出の正確なバイトへのアクセスに必要なインデックス、`availableRegChunks`配列。  
+1. 抽出の正確なバイトへのアクセスに必要なインデックス、`availableRegChunks`配列。  
   
      `CorDebugRegister` 値 >> 3  
   
-2.  ビット 0 が最下位ビットをインデックス付きのバイト内のビット位置を抽出します。  
+2. ビット 0 が最下位ビットをインデックス付きのバイト内のビット位置を抽出します。  
   
      `CorDebugRegister` (& 7) 値  
   

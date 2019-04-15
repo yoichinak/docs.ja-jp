@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 1b8b344c713fdd27c67cf98c51c8c69198fd508f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127465"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341063"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>方法: WSE 3.0 へのアクセス、WCF クライアントとサービス
 Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合、Microsoft .NET services のワイヤレベルの互換性のある Web Services Enhancements (WSE) 3.0 が。 ただし、WSE 3.0 サービスは、メタデータ交換 (MEX) プロトコルをサポートしないので使用すると、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF クライアント クラスを作成するセキュリティ設定は適用されませんを生成されました。WCF クライアントです。 そのため、セキュリティの設定を指定する必要があります、WCF クライアントが生成された後に、WSE 3.0 サービスが必要であります。  
@@ -19,13 +19,13 @@ Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>WCF クライアントで WSE 3.0 サービスにアクセスするには  
   
-1.  実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSE 3.0 Web サービスの WCF クライアントを作成します。  
+1. 実行、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WSE 3.0 Web サービスの WCF クライアントを作成します。  
   
      WSE 3.0 Web サービスの場合、WCF クライアントが作成されます。 WSE 3.0 は MEX プロトコルをサポートしていないため、このツールを使用して Web サービスのセキュリティ要件を取得することはできません。 アプリケーション開発者は、クライアントのセキュリティ設定を追加する必要があります。  
   
      WCF クライアントを作成する方法の詳細については、次を参照してください。、[方法。クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。  
   
-2.  WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
+2. WSE 3.0 Web サービスと通信できるバインディングを表すクラスを作成します。  
   
      次のクラスの一部である、 [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)サンプル。  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕
          [!code-csharp[c_WCFClientToWSEService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#2)]
          [!code-vb[c_WCFClientToWSEService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#2)]  
   
-3.  クライアントのアプリケーション コードでは、コードを追加してバインディングのプロパティを設定します。  
+3. クライアントのアプリケーション コードでは、コードを追加してバインディングのプロパティを設定します。  
   
      次のコード例では、ことは、WSE 3.0 で定義されていると、WCF クライアントにそのメッセージの保護と認証の設定が使用する必要がありますを指定します`AnonymousForCertificate`設定不要のセキュリティ アサーション。 また、セキュリティで保護されたセッションと派生キーが必要です。  
   

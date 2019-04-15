@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342174"
 ---
 # <a name="how-keyboard-input-works"></a>キーボード入力のしくみ
 Windows フォームは、Windows メッセージに応答してキーボード イベントを発生させることにより、キーボード入力を処理します。 多くの Windows フォーム アプリケーションは、キーボード イベントを処理することによってキーボード入力を排他的に処理します。 しかし、高度なキーボード入力のシナリオ (キーがコントロールに到達する前にインターセプトするなど) を実装するためには、キーボード メッセージのしくみについて理解することが必要です。 このトピックでは、Windows フォームが認識するキー データの種類について説明し、キーボード メッセージをルーティングする方法について概要を説明します。 キーボード イベントの詳細については、「[キーボード イベントの使用](using-keyboard-events.md)」を参照してください。  
@@ -22,13 +22,13 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 ## <a name="order-of-keyboard-events"></a>キーボード イベントの順序  
  先に説明したとおり、コントロール上では 3 つのキーボード関連のイベントが発生します。 イベントは一般に次の順序で発生します。  
   
-1.  ユーザーにプッシュ"a"キー、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyDown>イベントが発生します。  
+1. ユーザーにプッシュ"a"キー、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyDown>イベントが発生します。  
   
-2.  ユーザーが"a"キーを保持して、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyPress>イベントが発生します。  
+2. ユーザーが"a"キーを保持して、キーが前処理され、ディスパッチ、および<xref:System.Windows.Forms.Control.KeyPress>イベントが発生します。  
   
      このイベントはユーザーがキーを押し続けているとき複数回発生します。  
   
-3.  "A"キー、キーが前処理され、ユーザーのリリースのディスパッチと<xref:System.Windows.Forms.Control.KeyUp>イベントが発生します。  
+3. "A"キー、キーが前処理され、ユーザーのリリースのディスパッチと<xref:System.Windows.Forms.Control.KeyUp>イベントが発生します。  
   
 ## <a name="preprocessing-keys"></a>キーの前処理  
  他のメッセージのようなキーボード メッセージの処理、<xref:System.Windows.Forms.Control.WndProc%2A>フォームまたはコントロールのメソッド。 ただし、キーボードの前にメッセージが処理を<xref:System.Windows.Forms.Control.PreProcessMessage%2A>メソッドの特殊文字のキーと物理キーを処理するためにオーバーライド可能な 1 つまたは複数のメソッドを呼び出します。 これらのメソッドをオーバーライドすると、コントロールがメッセージを処理する前に、特定のキーを検出してフィルターできます。 次の表に、実行される処理と、そのとき呼び出されるメソッドを、メソッドが呼び出される順に示します。  
@@ -58,17 +58,18 @@ Windows フォームは、Windows メッセージに応答してキーボード 
 |<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|このメソッド、 <xref:System.Windows.Forms.Control.KeyDown>、 <xref:System.Windows.Forms.Control.KeyPress>、および<xref:System.Windows.Forms.Control.KeyUp>適切なイベント。|  
   
 ## <a name="overriding-keyboard-methods"></a>キーボード メソッドのオーバーライド  
- キーボード メッセージを処理するためにオーバーライドできるメソッドは多数ありますが、どのメソッドを選ぶかが非常に重要です。 次の表に、実行するタスクと、キーボード メソッドをオーバーライドする最善の方法を示します。 メソッドのオーバーライドの詳細については、[のプロパティとメソッドをオーバーライドする派生クラス](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes)を参照してください。  
+ キーボード メッセージを処理するためにオーバーライドできるメソッドは多数ありますが、どのメソッドを選ぶかが非常に重要です。 次の表に、実行するタスクと、キーボード メソッドをオーバーライドする最善の方法を示します。 メソッドのオーバーライドの詳細については、次を参照してください。[のプロパティとメソッドをオーバーライドする派生クラス](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes)します。  
   
 |タスク|メソッド|  
 |----------|------------|  
 |ナビゲーション キーをインターセプトし、発生させる、<xref:System.Windows.Forms.Control.KeyDown>イベント。 たとえば、テキスト ボックス内で Tab や Return を処理するなど。|<xref:System.Windows.Forms.Control.IsInputKey%2A> をオーバーライドします。 **注:** また、処理することができます、<xref:System.Windows.Forms.Control.PreviewKeyDown>イベントとセット<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A>の<xref:System.Windows.Forms.PreviewKeyDownEventArgs>に`true`キーまたはキーの <xref:system.windows.forms.previewkeydowneventargs> の。|  
-|コントロールで特別な入力処理や移動処理を実行する。 たとえば、リスト コントロールで方向キーを使用して選択項目を変更するなど。|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A> をオーバーライドします。|  
+|コントロールで特別な入力処理や移動処理を実行する。 たとえば、リスト コントロールで方向キーを使用して選択項目を変更するなど。|オーバーライド <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |ナビゲーション キーをインターセプトし、発生させる、<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、スピン ボックス コントロールで方向キーを複数回押して、項目の移動を加速するなど。|<xref:System.Windows.Forms.Control.IsInputChar%2A> をオーバーライドします。|  
-|実行中に入力またはナビゲーションの特別な処理を<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、リスト コントロール内で "r" キーを押し続けると、r の文字で始まる項目にスキップするなど。|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A> をオーバーライドします。|  
+|実行中に入力またはナビゲーションの特別な処理を<xref:System.Windows.Forms.Control.KeyPress>イベント。 たとえば、リスト コントロール内で "r" キーを押し続けると、r の文字で始まる項目にスキップするなど。|オーバーライド <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |カスタムなニーモニックの処理を実行する。たとえば、ツール バーに配置されたオーナー描画ボタンのニーモニックを処理するなど。|<xref:System.Windows.Forms.Control.ProcessMnemonic%2A> をオーバーライドします。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>

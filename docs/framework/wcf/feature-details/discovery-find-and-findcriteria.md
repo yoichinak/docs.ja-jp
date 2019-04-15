@@ -2,12 +2,12 @@
 title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345782"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
 探索検索操作は、1 つ以上のサービスを探索するためにクライアントによって開始される操作であり、探索における主要なアクションの 1 つです。 検索を実行すると、WS-Discovery Probe メッセージがネットワークを介して送信されます。 指定された条件に一致するサービスは、WS-Discovery ProbeMatch メッセージを使用して応答します。 探索メッセージの詳細については、次を参照してください。、 [Ws-discovery 仕様](https://go.microsoft.com/fwlink/?LinkID=122347)します。  
@@ -40,9 +40,9 @@ ms.locfileid: "59095777"
   
  終了条件は次のとおりです。  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -ネットワーク上のサービスから応答を待機する最大時間。 既定の時間は 20 秒です。  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> -ネットワーク上のサービスから応答を待機する最大時間。 既定の時間は 20 秒です。  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -待機する応答の最大数。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> が経過する前に <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 応答が受信された場合は、検出操作が終了します。  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> -待機する応答の最大数。 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> が経過する前に <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 応答が受信された場合は、検出操作が終了します。  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A>コレクション プロパティをネットワーク上のサービスを照合することによって送信された応答が含まれています。 応答したサービスがない場合、このコレクションは空です。 1 つ以上のサービスが応答した場合、各応答は <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> オブジェクトに格納されます。これには、アドレスやコントラクトなど、サービスについての追加情報が含まれます。  

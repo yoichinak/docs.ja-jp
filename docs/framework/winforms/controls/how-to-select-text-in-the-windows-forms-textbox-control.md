@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111437"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321714"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでテキストを選択する
 Windows フォームでテキストをプログラムで選択できる<xref:System.Windows.Forms.TextBox>コントロール。 たとえば、特定の文字列のテキストを検索する関数を作成する場合は、検索した文字列の位置のリーダーを視覚的にアラートを生成するテキストを選択できます。  
   
 ### <a name="to-select-text-programmatically"></a>プログラムでテキストを選択するには  
   
-1.  設定、<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>プロパティを選択するテキストの先頭にします。  
+1. 設定、<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>プロパティを選択するテキストの先頭にします。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>プロパティはテキスト文字列内にカーソルを示す数、0 で、左端の位置をされています。 場合、<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>プロパティの値に文字数以上、テキスト ボックスに、カーソルが最後の文字の後に配置します。  
   
-2.  設定、<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>プロパティを選択するテキストの長さにします。  
+2. 設定、<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>プロパティを選択するテキストの長さにします。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>プロパティとは、カーソルの幅を設定する数値です。 設定、 <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> 0 によって選択される文字数よりが現在のカーソル位置からの起動に大きい数値にします。  
   
-3.  (省略可能)アクセスを選択したテキスト、<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>プロパティ。  
+3. (省略可能)アクセスを選択したテキスト、<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>プロパティ。  
   
      選択次のコード テキストの内容ときにボックス コントロールの<xref:System.Windows.Forms.Control.Enter>イベントが発生します。 この例では、テキスト ボックスに値を持つかどうか、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティが`null`または空の文字列。 テキスト ボックスにフォーカスが移動すると、テキスト ボックスの現在のテキストが選択されます。 `TextBox1_Enter`イベント ハンドラーの詳細については、コントロールにバインドする必要がありますを参照してください[方法。Windows フォームの実行時にイベント ハンドラーを作成](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)です。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175826"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI オートメーション クライアントにおけるキャッシュ
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "57676864"
   
  要求されたプロパティがキャッシュ内にない場合、例外が発生します。  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>と同様、 <xref:System.Windows.Automation.AutomationElement.Current%2A>は構造体のメンバーとして、個々のプロパティを公開します。 ただし、この構造体を取得する必要はありません。個々のプロパティに直接アクセスすることができます。 たとえば、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> プロパティは `element.Cached.Name`から取得できます。ここで、 `element` は <xref:System.Windows.Automation.AutomationElement>です。  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>、のような<xref:System.Windows.Automation.AutomationElement.Current%2A>、構造体のメンバーとして個々 のプロパティを公開します。 ただし、この構造体を取得する必要はありません。個々のプロパティに直接アクセスすることができます。 たとえば、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> プロパティは `element.Cached.Name`から取得できます。ここで、 `element` は <xref:System.Windows.Automation.AutomationElement>です。  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>キャッシュされたコントロール パターンの取得  
@@ -102,6 +102,7 @@ ms.locfileid: "57676864"
  キャッシュを更新しても、既存の <xref:System.Windows.Automation.AutomationElement> の参照のプロパティはいずれも変更されません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [FetchTimer サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

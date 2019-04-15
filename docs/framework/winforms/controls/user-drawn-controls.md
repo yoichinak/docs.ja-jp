@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158445"
 ---
 # <a name="user-drawn-controls"></a>ユーザー描画コントロール
 .NET Framework では、独自のコントロールを簡単に開発する機能を提供します。 コードによって結合されて標準のコントロールのセットである、ユーザー コントロールを作成することもをゼロから独自のコントロールをデザインすることができます。 既存のコントロールから継承するコントロールを作成し、本来の機能を追加する継承を使用することもできます。 どのようなアプローチを使用すると、.NET Framework は、任意のコントロールを作成するためのカスタムのグラフィカル インターフェイスを描画するために機能を提供します。  
@@ -76,11 +76,12 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  使用して、<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>四角形以外のコントロールを実装するプロパティ。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [方法: 描画の Graphics オブジェクトを作成します。](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [方法: 描画する Graphics オブジェクトを作成する](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [内在コントロール](constituent-controls.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

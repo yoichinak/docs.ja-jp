@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170184"
 ---
 # <a name="printing-how-to-topics"></a>印刷に関する「方法」トピック
 このセクションのトピックでは、印刷を使用する方法を示します、印刷システム管理機能が付属して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]と新しい[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]印刷パス。  
@@ -44,6 +44,7 @@ ms.locfileid: "57367831"
  印刷チケットが有効であると、要求がプリンターでサポートされていないことを確認するための手順です。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>

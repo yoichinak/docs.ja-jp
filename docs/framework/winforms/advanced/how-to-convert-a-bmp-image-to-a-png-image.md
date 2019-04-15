@@ -1,5 +1,5 @@
 ---
-title: '方法: BMP イメージを PNG イメージに変換します。'
+title: '方法: BMP イメージから PNG イメージへの変換'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BMP images [Windows Forms], converting to PNG
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
-ms.openlocfilehash: f8636bea120aee86c795b4196415145a484e5772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217017"
 ---
-# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>方法: BMP イメージを PNG イメージに変換します。
+# <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>方法: BMP イメージから PNG イメージへの変換
 多くの場合、1 つのイメージ ファイル形式から別の形式に変換します。 この変換は、<xref:System.Drawing.Image> クラスの <xref:System.Drawing.Image.Save%2A> のメソッドを呼び出して、必要なイメージ ファイル形式に対して <xref:System.Drawing.Imaging.ImageFormat> を指定することで簡単に実行できます。  
   
 ## <a name="example"></a>例  
@@ -29,10 +29,10 @@ ms.locfileid: "57725000"
   
 -   Windows フォーム アプリケーション  
   
--   
-  `System.Drawing.Imaging` 名前空間への参照  
+-   `System.Drawing.Imaging` 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: インストールされたエンコーダーの一覧](how-to-list-installed-encoders.md)
 - [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](using-image-encoders-and-decoders-in-managed-gdi.md)
 - [ビットマップの種類](types-of-bitmaps.md)

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342103"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>方法: 2 つのオブジェクトが関連するかどうかを判断する (Visual Basic)
 作成元のクラス間のリレーションシップを判別する 2 つのオブジェクトを比較することができます。 <xref:System.Type.IsInstanceOfType%2A>のメソッド、<xref:System.Type?displayProperty=nameWithType>クラスを返します。`True`指定したクラスは、現在のクラスから継承する場合、または現在の型が指定したクラスでサポートされているインターフェイス。  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>1 つのオブジェクトが別のオブジェクトのクラスまたはインターフェイスから継承かどうかを判断するには  
   
-1.  思われるオブジェクトの可能性があります、基本型で、呼び出し、<xref:System.Object.GetType%2A>メソッド。  
+1. 思われるオブジェクトの可能性があります、基本型で、呼び出し、<xref:System.Object.GetType%2A>メソッド。  
   
-2.  <xref:System.Type?displayProperty=nameWithType>によって返されるオブジェクト<xref:System.Object.GetType%2A>を呼び出し、<xref:System.Type.IsInstanceOfType%2A>メソッド。  
+2. <xref:System.Type?displayProperty=nameWithType>によって返されるオブジェクト<xref:System.Object.GetType%2A>を呼び出し、<xref:System.Type.IsInstanceOfType%2A>メソッド。  
   
-3.  引数リストで<xref:System.Type.IsInstanceOfType%2A>、派生型のオブジェクトと思われる場合がありますを指定します。  
+3. 引数リストで<xref:System.Type.IsInstanceOfType%2A>、派生型のオブジェクトと思われる場合がありますを指定します。  
   
      <xref:System.Type.IsInstanceOfType%2A> 返します`True`その引数の型から継承している場合、<xref:System.Type?displayProperty=nameWithType>オブジェクトの種類。  
   
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [方法: 2 つのオブジェクトが同一かどうかを判断します。](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

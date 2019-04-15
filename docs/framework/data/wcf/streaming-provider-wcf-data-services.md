@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087899"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517591"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 データ サービスは、ラージ オブジェクトのバイナリ データを公開できます。 このバイナリ データは、ビデオ ストリームとオーディオ ストリーム、画像、ドキュメント ファイル、またはその他の種類のバイナリのメディアを表すことができます。 データ モデルのエンティティに 1 つ以上のバイナリ プロパティが含まれている場合、データ サービスは、このバイナリ データを応答フィードのエントリ内に Base-64 としてエンコードして返します。 読み込みと、この方法で大きなバイナリ データをシリアル化するには、パフォーマンスに影響するので、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]が所属するエンティティの独立したバイナリ データを取得するためのメカニズムを定義します。 これは、バイナリ データとエンティティを分離して 1 つ以上のデータ ストリームを生成することで実現されます。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087899"
   
  バイナリ データのストリーミングをサポートするデータ サービスを構成するには、次の手順に従う必要があります。  
   
-1.  データ モデル内の 1 つ以上のエンティティをメディア リンク エントリとして属性化します。 これらのエンティティには、ストリーミング対象のバイナリ データを含めないでください。 エンティティのバイナリ プロパティは、常に Base-64 でエンコードされたバイナリとしてエントリで返されます。  
+1. データ モデル内の 1 つ以上のエンティティをメディア リンク エントリとして属性化します。 これらのエンティティには、ストリーミング対象のバイナリ データを含めないでください。 エンティティのバイナリ プロパティは、常に Base-64 でエンコードされたバイナリとしてエントリで返されます。  
   
-2.  T:System.Data.Services.Providers.IDataServiceStreamProvider インターフェイスを実装します。  
+2. T:System.Data.Services.Providers.IDataServiceStreamProvider インターフェイスを実装します。  
   
-3.  <xref:System.IServiceProvider> インターフェイスを実装するデータ サービスを定義します。 データ サービスは、<xref:System.IServiceProvider.GetService%2A> の実装を使用してストリーミング データ プロバイダーの実装にアクセスします。 このメソッドは、適切なストリーミング プロバイダーの実装を返します。  
+3. <xref:System.IServiceProvider> インターフェイスを実装するデータ サービスを定義します。 データ サービスは、<xref:System.IServiceProvider.GetService%2A> の実装を使用してストリーミング データ プロバイダーの実装にアクセスします。 このメソッドは、適切なストリーミング プロバイダーの実装を返します。  
   
-4.  Web アプリケーション構成で大きいメッセージ ストリームを有効にします。  
+4. Web アプリケーション構成で大きいメッセージ ストリームを有効にします。  
   
-5.  サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。  
+5. サーバー上またはデータ ソース内のバイナリ リソースへのアクセスを有効にします。  
   
  このトピックの例ではストリーミング フォト サービスは、投稿の詳細については、サンプルに基づきます[Data Services ストリーミング プロバイダー シリーズ。ストリーミング プロバイダー (パート 1) を実装する](https://go.microsoft.com/fwlink/?LinkID=198989)します。 このサンプル サービスのソース コードは、[ストリーミング フォト データ サービスのサンプル ページ](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59087899"
  **Entity Framework プロバイダー**  
  エンティティがメディア リンク エントリであることを示すには、概念モデルのエンティティ型定義に `HasStream` 属性を追加します。次にその例を示します。  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  また、エンティティまたはデータ モデルを定義する .edmx ファイルまたは .csdl ファイルのルートに名前空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` を追加する必要があります。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "59087899"
 ## <a name="creating-the-streaming-data-service"></a>ストリーミング データ サービスの作成  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ランタイムに <xref:System.Data.Services.Providers.IDataServiceStreamProvider> の実装へのアクセスを提供するには、作成するデータ サービスで <xref:System.IServiceProvider> インターフェイスも実装する必要があります。 次の例は、<xref:System.IServiceProvider.GetService%2A> メソッドを実装して、`PhotoServiceStreamProvider` を実装する <xref:System.Data.Services.Providers.IDataServiceStreamProvider> クラスのインスタンスを返す方法を示しています。  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  データ サービスを作成する方法については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。  
   

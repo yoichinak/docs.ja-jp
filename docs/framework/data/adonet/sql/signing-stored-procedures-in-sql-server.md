@@ -2,12 +2,12 @@
 title: SQL Server でのストアド プロシージャの署名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094620"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313919"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャの署名
  デジタル署名は、署名者の秘密キーで暗号化されたデータ ダイジェストです。 秘密キーにより、デジタル署名がその保持者または所有者に固有であることが保証されます。 ストアド プロシージャ、関数 (インライン テーブル値関数) を除く、トリガー、およびアセンブリに署名することができます。  
@@ -23,25 +23,25 @@ ms.locfileid: "59094620"
   
  モジュールへの署名では、2 つの必要な手順があります。  
   
-1.  Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限の日付は、1 年間です。  
+1. Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限の日付は、1 年間です。  
   
-1.  Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。  
+1. Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。  
 
 モジュールが署名されていると、1 つまたは複数のプリンシパルは証明書に関連付ける必要のある追加のアクセス許可を保持するために作成する必要があります。  
 
 モジュールには、その他のデータベース レベルのアクセス許可が必要がある場合。  
   
-1.  Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーは、データベースのみに存在し、その同じ証明書からログインが作成されてもいない限り、ログインに関連付けられていません。  
+1. Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーは、データベースのみに存在し、その同じ証明書からログインが作成されてもいない限り、ログインに関連付けられていません。  
   
-1.  証明書ユーザーに必要なデータベース レベルのアクセス許可を付与します。  
+1. 証明書ユーザーに必要なデータベース レベルのアクセス許可を付与します。  
   
 モジュールには、追加のサーバー レベルのアクセス許可が必要がある場合。  
   
-1.  証明書のコピー、`master`データベース。  
+1. 証明書のコピー、`master`データベース。  
  
-1.  TRANSACT-SQL を使用してその証明書に関連付けられているログインを作成`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`ステートメント。  
+1. TRANSACT-SQL を使用してその証明書に関連付けられているログインを作成`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`ステートメント。  
   
-1.  証明書のログインに必要なサーバー レベルのアクセス許可を付与します。  
+1. 証明書のログインに必要なサーバー レベルのアクセス許可を付与します。  
   
 > [!NOTE]  
 >  証明書では、DENY ステートメントを使用して権限が取り消されているユーザーに権限を与えることはできません。 DENY は常に GRANT よりも優先されるため、証明書ユーザーに許可された権限を呼び出し元が継承することはできません。  

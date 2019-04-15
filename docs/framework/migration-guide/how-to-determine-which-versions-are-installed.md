@@ -1,6 +1,6 @@
 ---
 title: '方法: インストールされている .NET Framework バージョンを確認する'
-ms.date: 03/18/2019
+ms.date: 04/02/2019
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176307"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -37,7 +37,6 @@ ms.locfileid: "58504432"
 >
 > バージョンの詳細については、「[.NET Framework のバージョンおよび依存関係](versions-and-dependencies.md)」を参照してください。
 
-
 コンピューターにインストールされている .NET Framework のバージョンの一覧を取得するには、レジストリにアクセスします。 レジストリを確認するには、レジストリ エディタを使用するか、次に従ってコードで照会します。
  
 - .NET Framework の新しいバージョンを探す (4.5 以降): 
@@ -54,7 +53,6 @@ ms.locfileid: "58504432"
 - [コードを使用して Environment クラスを照会する](#clr_b)  
 
 .NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>.NET Framework の新しいバージョンを探す (4.5 以降)
 
@@ -68,17 +66,13 @@ ms.locfileid: "58504432"
 2. レジストリ エディターで、次のサブキーを開きます。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full** **Full** サブキーが存在しない場合は、.NET Framework 4.5 以降はインストールされていません。
 
     > [!NOTE]
-    > レジストリの **NET Framework セットアップ** フォルダーの先頭はピリオドではありません。
+    > レジストリの **NET Framework セットアップ** フォルダーの先頭はピリオドでは "*ありません*"。
 
 3. **Release** という DWORD のエントリを探します。 それがある場合、.NET Framework 4.5 以降のバージョンがインストールされています。 その値は、.NET Framework の特定のバージョンのリリース キーです。 たとえば、次の図では、**Release** エントリの値は *378389* で、これは .NET Framework 4.5 のリリース キーです。 
 
      ![.NET Framework 4.5 のレジストリ エントリ](media/clr-installdir.png ".NET Framework 4.5 のレジストリ エントリ")
 
-次の表に、.NET Framework の各バージョンの最小の **Release** エントリ値の一覧を示します。 これらの値は次のように使用できます。
-
-- .NET Framework の最小バージョンが存在するかどうかを確認するには、レジストリの **Release** DWORD 値が表で示されている値*以上*であることを確認します。 たとえば、アプリケーションで .NET Framework 4.7 以降が必要な場合は、最小のリリース キー値 *460798* があるかを確認します。
-
-- 複数のバージョンについて調べるには、.NET Framework の最新のバージョンから始めて、以前のバージョンに順番に遡りながら調べます。
+次の表は、.NET Framework 4.5 以降のバージョンに対する個々のオペレーティング システムでの **Release** DWORD 値の一覧です。
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -86,18 +80,23 @@ ms.locfileid: "58504432"
 
 |.NET Framework のバージョン|Release DWORD の値|
 |--------------------------------|-------------|
-|.NET Framework 4.5|378389|
-|.NET Framework 4.5.1|378675|
-|.NET Framework 4.5.2|379893|
-|.NET Framework 4.6|393295|
-|.NET Framework 4.6.1|394254|
-|.NET Framework 4.6.2|394802|
-|.NET Framework 4.7|460798|
-|.NET Framework 4.7.1|461308|
-|.NET Framework 4.7.2|461808|
+|.NET Framework 4.5|すべての Windows オペレーティング システム:378389|
+|.NET Framework 4.5.1|Windows 8.1 および Windows Server 2012 R2:378675<br />他のすべての Windows オペレーティング システム:378758|
+|.NET Framework 4.5.2|すべての Windows オペレーティング システム:379893|
+|.NET Framework 4.6|Windows 10:393295<br />他のすべての Windows オペレーティング システム:393297|
+|.NET Framework 4.6.1|Windows 10 November Update システム:394254<br />他のすべての Windows オペレーティング システム (Windows 10 を含む):394271|
+|.NET Framework 4.6.2|Windows 10 Anniversary Update および Windows Server 2016 の場合:394802<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):394806|
+|.NET Framework 4.7|Windows 10 Creators Update:460798<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):460805| 
+|.NET Framework 4.7.1|Windows 10 Fall Creators Update および Windows Server バージョン 1709:461308<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):461310|
+|.NET Framework 4.7.2|Windows 10 April 2018 Update および Windows Server バージョン 1803:461808<br/>Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての Windows オペレーティング システム:461814|  
 
-Windows オペレーティング システムの特定のバージョンに対する .NET Framework のリリース キーの完全な表については、「[.NET Framework のリリース キーと Windows オペレーティング システムのバージョン](release-keys-and-os-versions.md)」をご覧ください。
+これらの値は次のように使用できます。
 
+- 特定のバージョンの .NET Framework が特定のバージョンの Windows オペレーティング システムにインストールされているかどうかを判断するには、**Release** DWORD 値が表に記載されている値と "*同じ*" であることを確認します。 たとえば、.NET Framework 4.6 が Windows 10 システム上に存在するかどうかを判断するには、**Release** 値が 393295 と "*同じ*" であることを確認します。
+
+- .NET Framework の最小バージョンが存在するかどうかを判断するには、そのバージョン用の小さい **RELEASE** DWORD 値を使用します。 たとえば、アプリケーションが .NET Framework 4.6 以降のバージョンで実行されている場合、**RELEASE** DWORD 値が 393295 "*以上*" であることを確認します。 各 .NET Framework バージョンの最小 **RELEASE** DWORD 値のみが記載された表については、「[The minimum values of the Release DWORD for .NET Framework 4.5 and later versions (.NET Framework 4.5 以降のバージョン用の Release DWORD の最小値)](minimum-release-dword.md)」を参照してください。
+
+- 複数のバージョンを確認するには、まず、値が最新の .NET Framework バージョン用の小さい DWORD 値 "*以上*" であることを確認してから、その値と、それよりも以前のバージョン用の小さい DWORD 値を順番に比較します。 たとえば、アプリケーションに .NET Framework 4.7 以降が必要で、存在する .NET Framework の特定のバージョンを確認する場合は、461808 (.NET Framework 4.7.2 用の小さい DWORD 値) "*以上*" の **RELEASE** DWORD 値であることの確認から始めます。 次に、**RELEASE** DWORD 値と、以降の各 .NET Framework バージョン用の小さい値と比較します。 各 .NET Framework バージョンの最小 **RELEASE** DWORD 値のみが記載された表については、「[The minimum values of the Release DWORD for .NET Framework 4.5 and later versions (.NET Framework 4.5 以降のバージョン用の Release DWORD の最小値)](minimum-release-dword.md)」を参照してください。
 
 <a name="net_d"></a> 
 ### <a name="find-net-framework-versions-45-and-later-with-code"></a>コードで .NET Framework バージョン 4.5 以降を探す
@@ -170,7 +169,6 @@ Windows オペレーティング システムの特定のバージョンに対�
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>CLR のバージョンを探す
   
 <a name="clr_a"></a> 
@@ -207,8 +205,6 @@ Windows オペレーティング システムの特定のバージョンに対�
    - マイナー リリース識別子 (たとえば、バージョン 4.0 の場合の *0*) には、<xref:System.Version.Minor%2A?displayProperty=nameWithType> プロパティを使用します。
 
    - バージョンの完全な文字列 (たとえば、*4.0.30319.18010*) には、<xref:System.Version.ToString%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、コードを実行しているランタイムのバージョンを示す値が 1 つ返されます。 コンピューターにインストールされている可能性のあるアセンブリ バージョンやその他のランタイム バージョンは返されません。
-
-
 
 次の例では、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを使用して CLR バージョンの情報を取得しています。
 

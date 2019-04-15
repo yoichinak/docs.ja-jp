@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140896"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331865"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>方法: デザイン時にフォームの端に合わせてコントロールを配置する
 コントロールを設定して、フォームの端に合わせて整列を行うことができます、<xref:System.Windows.Forms.Control.Dock%2A>します。 このプロパティは、フォーム内のコントロールの場所を指定します。 <xref:System.Windows.Forms.Control.Dock%2A> プロパティには次の値のいずれかを設定できます。  
@@ -31,15 +31,15 @@ ms.locfileid: "59140896"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>デザイン時に、コントロールの Dock プロパティを設定するには  
   
-1.  Windows フォーム デザイナーでコントロールを選択します。  
+1. Windows フォーム デザイナーでコントロールを選択します。  
   
-2.  **プロパティ**ウィンドウで、ドロップダウン リスト ボックスには、[次へ] をクリックして、<xref:System.Windows.Forms.Control.Dock%2A>プロパティ。  
+2. **プロパティ**ウィンドウで、ドロップダウン リスト ボックスには、[次へ] をクリックして、<xref:System.Windows.Forms.Control.Dock%2A>プロパティ。  
   
      6 つを表すグラフィカル インターフェイス<xref:System.Windows.Forms.Control.Dock%2A>設定が表示されます。  
   
-3.  適切な設定を選択します。  
+3. 適切な設定を選択します。  
   
-4.  コントロールの設定で指定された方法でドッキングされます。  
+4. コントロールの設定で指定された方法でドッキングされます。  
   
 ## <a name="see-also"></a>関連項目
 

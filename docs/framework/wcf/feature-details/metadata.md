@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 515bb3cb074fde1fb4631f6e273dab11c55ae19a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10b93f94a5a5193513e20eed4571aaf8f6c882a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174019"
 ---
 # <a name="metadata"></a>メタデータ
 Windows Communication Foundation (WCF) では、エクスポート、公開、取得、およびサービスのメタデータをインポートするためのインフラストラクチャを提供します。 WCF サービスでは、メタデータを使用して、Svcutil.exe などのツールが、サービスにアクセスするためのクライアント コードを自動的に生成されるように、サービスのエンドポイントと対話する方法について説明します。  
@@ -37,4 +37,5 @@ Windows Communication Foundation (WCF) では、エクスポート、公開、�
  サービス メタデータを処理する際のセキュリティ上の重要な考慮事項について説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

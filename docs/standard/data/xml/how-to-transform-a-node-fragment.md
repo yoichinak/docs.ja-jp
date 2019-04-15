@@ -1,5 +1,5 @@
 ---
-title: '方法 : ノード フラグメントを変換する'
+title: '方法: ノード フラグメントを変換する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,27 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345171"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>方法 : ノード フラグメントを変換する
+# <a name="how-to-transform-a-node-fragment"></a>方法: ノード フラグメントを変換する
 <xref:System.Xml.XmlDocument> オブジェクトまたは <xref:System.Xml.XPath.XPathDocument> オブジェクトに含まれるデータを変換すると、XSLT 変換はドキュメント全体に適用されます。 つまり、ドキュメント ルート ノード以外のノードを指定しても、変換処理では、読み込んだドキュメントのすべてのノードがアクセスされます。 1 つのノード フラグメントを変換するには、ノード フラグメントだけを含むオブジェクトを別に作成し、そのオブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡します。  
   
 ## <a name="procedures"></a>手順  
   
 #### <a name="to-transform-a-node-fragment"></a>1 つのノード フラグメントを変換するには  
   
-1.  ソース ドキュメントを含むオブジェクトを作成します。  
+1. ソース ドキュメントを含むオブジェクトを作成します。  
   
-2.  変換するノード フラグメントを見つけます。  
+2. 変換するノード フラグメントを見つけます。  
   
-3.  そのノード フラグメントだけの別のオブジェクトを作成します。  
+3. そのノード フラグメントだけの別のオブジェクトを作成します。  
   
-4.  ノード フラグメントを <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡します。  
+4. ノード フラグメントを <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドに渡します。  
   
 ## <a name="example"></a>例  
  次の例は、1 つのノード フラグメントを変換して、結果をコンソールに出力します。  
@@ -44,7 +44,7 @@ ms.locfileid: "45597295"
 ##### <a name="singlexsl"></a>single.xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
  Book title is The Confidence Man.  
   
 ## <a name="see-also"></a>関連項目

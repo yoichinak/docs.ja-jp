@@ -7,17 +7,16 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174812"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar コントロールの概要 (Windows フォーム)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  Windows フォーム <xref:System.Windows.Forms.ToolBar> コントロールは、コマンドをアクティブ化するドロップダウン メニューとビットマップのボタンの行を表示するコントロール バーとしてフォームを使用します。 そのため、ツールバー ボタンをクリックすることは、メニュー コマンドを選択することと同じです。 ボタンは、プッシュ ボタン、ドロップダウン メニュー、または区切りとして表示して機能するように構成できます。 通常、ツールバーには、アプリケーションのメニュー構造の項目に対応するボタンとメニューが含まれ、アプリケーションで最も頻繁に使用される関数やコマンドにすばやくアクセスできます。  
   
@@ -32,8 +31,9 @@ ms.locfileid: "57708848"
  <xref:System.Windows.Forms.ToolBar>コントロールでは、追加することでツールバーを作成できます。<xref:System.Windows.Forms.Button>オブジェクトを、<xref:System.Windows.Forms.ToolBar.Buttons%2A>コレクション。 コレクション エディターを使用してボタンを追加することができます、<xref:System.Windows.Forms.ToolBar>コントロール; 各<xref:System.Windows.Forms.Button>オブジェクトがテキストまたはイメージが割り当てられて、両方を割り当てることができます。 イメージは、関連付けられた [ImageList](imagelist-component-windows-forms.md) コンポーネントから取得されます。 実行時に、追加または削除 ボタンから、<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>を使用して、<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>と<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>メソッド。 ボタンを<xref:System.Windows.Forms.ToolBar>、コードを追加、<xref:System.Windows.Forms.ToolBar.ButtonClick>のイベント、<xref:System.Windows.Forms.ToolBar>を使用して、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>のプロパティ、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>クラスのどのボタンがクリックしてされたかを判断します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar コントロール](toolbar-control-windows-forms.md)
-- [方法: ツール バー コントロールにボタンを追加します。](how-to-add-buttons-to-a-toolbar-control.md)
-- [方法: ツール バー ボタンのアイコンを定義します。](how-to-define-an-icon-for-a-toolbar-button.md)
-- [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [方法: ツール バー コントロールにボタンを追加する](how-to-add-buttons-to-a-toolbar-control.md)
+- [方法: ツール バー ボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button.md)
+- [方法: ツール バー ボタンのメニュー イベントをトリガーする](how-to-trigger-menu-events-for-toolbar-buttons.md)

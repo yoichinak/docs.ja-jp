@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313763"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>方法: 拡張メソッド (Visual Basic) を作成します。
 拡張メソッドを使用すると、既存のクラスにメソッドを追加できます。 そのクラスのインスタンスの場合と同様、拡張メソッドを呼び出すことができます。  
   
 ### <a name="to-define-an-extension-method"></a>拡張メソッドを定義するには  
   
-1.  Visual Studio では、新規または既存の Visual Basic アプリケーションを開きます。  
+1. Visual Studio では、新規または既存の Visual Basic アプリケーションを開きます。  
   
-2.  拡張メソッドを定義するファイルの上部にある次の import ステートメントを含めます。  
+2. 拡張メソッドを定義するファイルの上部にある次の import ステートメントを含めます。  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  新規または既存のアプリケーションで、モジュール内には、拡張機能属性を持つメソッドの定義を開始します。  
+3. 新規または既存のアプリケーションで、モジュール内には、拡張機能属性を持つメソッドの定義を開始します。  
   
     ```  
     <Extension()>  
     ```  
   
-4.  最初のパラメーターの型が拡張するデータ型にする必要がありますが、通常の方法で、メソッドを宣言します。  
+4. 最初のパラメーターの型が拡張するデータ型にする必要がありますが、通常の方法で、メソッドを宣言します。  
   
     ```  
     <Extension()>   

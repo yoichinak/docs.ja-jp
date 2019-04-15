@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc29c5f975424e3dbe91e206f6a05f830d760398
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150983"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 関数
 指定したフラグを使用して、キャッシュされたアセンブリへのパスを取得します。  
@@ -53,8 +53,9 @@ HRESULT GetCachePath (
   
  **ヘッダー:** Fusion.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ASM_CACHE_FLAGS 列挙型](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
 - [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

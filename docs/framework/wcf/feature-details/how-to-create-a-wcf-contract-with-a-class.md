@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313220"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>方法: クラスを持つ、Windows Communication Foundation コントラクトを作成します。
 インターフェイスを使用する Windows Communication Foundation (WCF) コントラクトを作成することをお勧めです。 詳細については、「[方法 :サービス コントラクトを定義する](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)します。 ここで説明する代替方法では、クラスを作成してから、<xref:System.ServiceModel.ServiceContractAttribute> 属性を直接そのクラスに適用し、<xref:System.ServiceModel.OperationContractAttribute> 属性をコントラクトに含まれるクラス内の各メソッドに適用します。  
@@ -22,13 +22,13 @@ ms.locfileid: "59089524"
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>クラスを使用した Windows Communication Foundation コントラクトの作成  
   
-1.  Visual Basic を使用して新しいクラスを作成C#、またはその他の共通言語ランタイム言語。  
+1. Visual Basic を使用して新しいクラスを作成C#、またはその他の共通言語ランタイム言語。  
   
-2.  クラスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用します。  
+2. クラスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用します。  
   
-3.  クラスでメソッドを作成します。  
+3. クラスでメソッドを作成します。  
   
-4.  適用、<xref:System.ServiceModel.OperationContractAttribute>パブリックの WCF コントラクトの一部として公開する必要がある各メソッドにクラス。  
+4. 適用、<xref:System.ServiceModel.OperationContractAttribute>パブリックの WCF コントラクトの一部として公開する必要がある各メソッドにクラス。  
   
 ## <a name="example"></a>例  
  次のコード例は、サービス コントラクトを定義するクラスを示しています。  

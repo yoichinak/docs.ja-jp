@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: d07af0df30f46d272b81042b009fca9661bbcbe5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181345"
 ---
 # <a name="guidelines-and-best-practices"></a>ガイドラインと最適な使用方法
 このセクションには、Windows Communication Foundation (WCF) アプリケーションを作成するためのガイドラインを提供するトピックが含まれています。  
@@ -45,6 +45,7 @@ ms.locfileid: "56332417"
  [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation (WCF) のサンプル](./samples/index.md)
 - [概念](../../../docs/framework/wcf/conceptual-overview.md)

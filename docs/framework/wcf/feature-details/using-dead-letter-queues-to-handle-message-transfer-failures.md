@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174617"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>配信不能キューを使用したメッセージ転送エラー処理
 キューに置かれたメッセージは、配信に失敗する可能性があります。 配信に失敗したメッセージは、配信不能キューに記録されます。 配信の失敗は、ネットワーク エラー、キューが削除されている、キューがいっぱいになっている、認証エラー、配信が時間どおりに行われなかったなど、さまざまな理由で生じる可能性があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "54497093"
   
 -   フォーム: net.msmq://localhost/private/のカスタム配信不能キューからメッセージを読み取る、URI がある必要があります\<*カスタム、dlq の名前*> 場所*カスタム-name dlq*カスタムの名前を指定します配信不能キュー。  
   
- キューのアドレス方法の詳細については、[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)を参照してください。  
+ キューのアドレス方法の詳細については、次を参照してください。[サービス エンドポイントとキューのアドレス指定](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)します。  
   
  受信側で WCF スタックでは、メッセージのアドレスで、サービスがリッスンしているアドレスと一致します。 アドレスが一致する場合、メッセージはディスパッチされますが、一致しない場合はディスパッチされません。 これにより、配信不能キューから読み取るときに問題が生じる可能性があります。一般に、配信不能キュー内のメッセージは該当サービスにアドレス指定され、配信不能キュー サービスにアドレス指定されないからです。 そのため、配信不能キューから読み取るサービスは、`ServiceBehavior` アドレス フィルターをインストールし、受信者とは無関係にキュー内のすべてのメッセージを一致させるようスタックに指示する必要があります。 具体的には、`ServiceBehavior` パラメーターを持つ <xref:System.ServiceModel.AddressFilterMode.Any> を、配信不能キューからメッセージを読み取るサービスに追加する必要があります。  
   
@@ -61,19 +61,16 @@ ms.locfileid: "54497093"
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  以下は、クライアント構成ファイルのコードです。  
-  
-  
-  
+
  以下は、配信不能キューのメッセージを処理するサービスのコードです。  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  以下は、配信不能キュー サービス構成ファイルのコードです。  
-  
-  
-  
+
 ## <a name="see-also"></a>関連項目
+
 - [キューの概要](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [方法: WCF エンドポイントとキューに置かれたメッセージを交換します。](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

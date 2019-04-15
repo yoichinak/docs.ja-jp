@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101e1c83d040f2f6db4585e76e4b353270dd1de1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225275"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain メソッド
 列挙体で、次のドメインへのインターフェイス ポインターを取得します。  
@@ -62,6 +62,7 @@ HRESULT NextDomain (
  **.NET framework のバージョン:** 1.0, 1.1  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

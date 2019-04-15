@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116403"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339386"
 ---
 # <a name="how-to-set-the-security-mode"></a>方法: セキュリティ モードを設定する
 Windows Communication Foundation (WCF) のセキュリティは、ほとんどの定義済みバインド上にある 3 つの一般的なセキュリティ モード: トランスポート、メッセージ、および「メッセージ資格情報付きトランスポート」。 これ以外に、2 つのバインディングに固有の 2 つのモードがあります。<xref:System.ServiceModel.BasicHttpBinding> の "トランスポート資格情報専用" モードと、<xref:System.ServiceModel.NetMsmqBinding> の "両方" モードです。 ここでは、3 つの共通のセキュリティモードである <xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message>、および <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> に重点を置いて説明します。  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
 ### <a name="to-set-the-security-mode-in-code"></a>コードでセキュリティ モードを設定するには  
   
-1.  使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
+1. 使用しているバインディング クラスのインスタンスを作成します。 定義済みバインディングの一覧は、次を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。 この例では、<xref:System.ServiceModel.WSHttpBinding> クラスのインスタンスを作成します。  
   
-2.  `Mode` プロパティから返されるオブジェクトの `Security` プロパティを設定します。  
+2. `Mode` プロパティから返されるオブジェクトの `Security` プロパティを設定します。  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  次のコードに示すように、バインディングのコンストラクターでモードを設定することもできます。  
+3. 次のコードに示すように、バインディングのコンストラクターでモードを設定することもできます。  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>トランスポート モードの ClientCredentialType プロパティを設定するには  
   
-1.  バインディングのインスタンスを作成します。  
+1. バインディングのインスタンスを作成します。  
   
-2.  `Mode` プロパティを `Transport`に設定します。  
+2. `Mode` プロパティを `Transport`に設定します。  
   
-3.  `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Windows` に設定するコードを次に示します。  
+3. `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Windows` に設定するコードを次に示します。  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>メッセージ モードの ClientCredentialType プロパティを設定するには  
   
-1.  バインディングのインスタンスを作成します。  
+1. バインディングのインスタンスを作成します。  
   
-2.  `Mode` プロパティを `Message`に設定します。  
+2. `Mode` プロパティを `Message`に設定します。  
   
-3.  `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Certificate` に設定するコードを次に示します。  
+3. `ClientCredential` プロパティに適切な値を設定します。 プロパティを `Certificate` に設定するコードを次に示します。  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>構成でモードと ClientCredentialType プロパティを設定するには  
   
-1.  適切なバインド要素を追加、 [\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)構成ファイルの要素。 次の例では、追加、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。  
+1. 適切なバインド要素を追加、 [\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)構成ファイルの要素。 次の例では、追加、 [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)要素。  
   
-2.  追加、`<binding>`要素とその`name`属性に適切な値。  
+2. 追加、`<binding>`要素とその`name`属性に適切な値。  
   
-3.  `<security>` 要素を追加し、`mode` 属性を `Message`、`Transport`、または `TransportWithMessageCredential` に設定します。  
+3. `<security>` 要素を追加し、`mode` 属性を `Message`、`Transport`、または `TransportWithMessageCredential` に設定します。  
   
-4.  モードを `Transport` に設定した場合は、`<transport>` 要素を追加し、`clientCredential` 属性を適切な値に設定します。  
+4. モードを `Transport` に設定した場合は、`<transport>` 要素を追加し、`clientCredential` 属性を適切な値に設定します。  
   
      モードを "`Transport"` に設定し、`clientCredentialType` 要素の `<transport>` 属性を "`Windows"` に設定する例を次に示します。  
   

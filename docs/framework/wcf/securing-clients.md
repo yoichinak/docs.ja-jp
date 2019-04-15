@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331807"
 ---
 # <a name="securing-clients"></a>クライアントのセキュリティ保護
 Windows Communication Foundation (WCF) サービスは、クライアントのセキュリティ要件を決定します。 つまり、使用するセキュリティ モード、およびクライアントが資格情報を提供するかどうかは、サービスによって指定されます。 そのため、クライアントをセキュリティで保護するプロセスは、サービスから取得したメタデータ (公開されている場合) を使用してクライアントを構築するという簡単なものになります。 クライアントを構成する方法は、メタデータによって指定されます。 クライアントが資格情報を提供することをサービスが要求する場合、要件に適した資格情報を取得する必要があります。 ここでは、このプロセスについて詳しく説明します。 セキュリティで保護されたサービスを作成する方法の詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。  
@@ -33,9 +33,9 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
 ## <a name="setting-a-client-credential"></a>クライアント資格情報の設定  
  クライアントへの資格情報の設定には、次の 2 つの手順があります。  
   
-1.  確認、*クライアント資格情報の種類*サービスが必要です。 これは、2 つある方法のどちらかによって行います。 1 つ目の方法として、サービス作成者からドキュメントを入手している場合は、このドキュメントにサービスが要求するクライアント資格情報の種類が示されています (クライアント資格情報の種類が指定されている場合)。 2 番目の方法は Svcutil.exe ツールによって作成された構成ファイルしかない場合で、個々のバインディングを調べることで必要な資格情報の種類を特定できます。  
+1. 確認、*クライアント資格情報の種類*サービスが必要です。 これは、2 つある方法のどちらかによって行います。 1 つ目の方法として、サービス作成者からドキュメントを入手している場合は、このドキュメントにサービスが要求するクライアント資格情報の種類が示されています (クライアント資格情報の種類が指定されている場合)。 2 番目の方法は Svcutil.exe ツールによって作成された構成ファイルしかない場合で、個々のバインディングを調べることで必要な資格情報の種類を特定できます。  
   
-2.  実際のクライアント資格情報を指定します。 実際のクライアント資格情報と呼ばれる、*クライアント資格情報の値*型から区別するためにします。 たとえば、クライアント資格情報の種類として証明書が指定されている場合、サービスが信頼する証明機関によって発行された X.509 証明書を指定する必要があります。  
+2. 実際のクライアント資格情報を指定します。 実際のクライアント資格情報と呼ばれる、*クライアント資格情報の値*型から区別するためにします。 たとえば、クライアント資格情報の種類として証明書が指定されている場合、サービスが信頼する証明機関によって発行された X.509 証明書を指定する必要があります。  
   
 ### <a name="determining-the-client-credential-type"></a>クライアント資格情報の種類の特定  
  Svcutil.exe ツールによって生成されたファイル、確認の構成がある場合、 [\<バインド >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)セクションをどのようなクライアント資格情報の種類が必要です。 このセクション内には、セキュリティ要件を指定するバインド要素があります。 具体的には、確認、\<セキュリティ > の各バインド要素。 この要素には `mode` 属性が含まれており、3 つの値のいずれか (`Message`、`Transport`、または `TransportWithMessageCredential`) に設定できます。 この属性の値によってモードが決定され、このモードによってどの子要素が有効なのかが決定されます。  
@@ -107,8 +107,7 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
 </configuration>  
 ```  
   
- 構成でクライアント資格情報を設定するには追加、 [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)要素を構成ファイル。 さらに、追加した動作要素は、サービスのエンドポイントにリンクする必要がありますを使用して、`behaviorConfiguration`の属性、 [\<エンドポイント > の\<クライアント >](../configure-apps/file-schema/wcf/endpoint-of-client.md)要素の次の例に示すようにします。 
-  `behaviorConfiguration` 属性の値は、動作の `name` 属性の値と一致する必要があります。  
+ 構成でクライアント資格情報を設定するには追加、 [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)要素を構成ファイル。 さらに、追加した動作要素は、サービスのエンドポイントにリンクする必要がありますを使用して、`behaviorConfiguration`の属性、 [\<エンドポイント > の\<クライアント >](../configure-apps/file-schema/wcf/endpoint-of-client.md)要素の次の例に示すようにします。 `behaviorConfiguration` 属性の値は、動作の `name` 属性の値と一致する必要があります。  
 
 ```xml
 <configuration>
