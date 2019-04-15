@@ -32,5 +32,5 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用
 ## <a name="see-also"></a>関連項目
 
 - [Panel コントロール](panel-control-windows-forms.md)
-- [Panel コントロールの概要 (Windows フォーム)](panel-control-overview-windows-forms.md)
+- [Panel コントロールの概要](panel-control-overview-windows-forms.md)
 - [方法: パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel.md)

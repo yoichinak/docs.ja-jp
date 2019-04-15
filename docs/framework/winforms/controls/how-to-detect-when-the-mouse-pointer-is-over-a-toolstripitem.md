@@ -27,4 +27,4 @@ ms.locfileid: "59220047"
 
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripItem.Selected%2A>
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

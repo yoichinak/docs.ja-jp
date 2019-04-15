@@ -140,4 +140,4 @@ ms.locfileid: "59311046"
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)
 - [方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

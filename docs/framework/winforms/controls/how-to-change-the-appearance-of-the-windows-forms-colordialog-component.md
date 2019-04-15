@@ -53,4 +53,4 @@ Windows フォームの外観を構成する<xref:System.Windows.Forms.ColorDial
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog コンポーネント](colordialog-component-windows-forms.md)
-- [ColorDialog コンポーネントの概要 (Windows フォーム)](colordialog-component-overview-windows-forms.md)
+- [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)

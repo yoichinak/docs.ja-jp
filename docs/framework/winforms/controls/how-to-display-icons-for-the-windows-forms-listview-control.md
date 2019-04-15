@@ -39,7 +39,7 @@ Windows フォーム<xref:System.Windows.Forms.ListView>コントロールは、
   
 ## <a name="see-also"></a>関連項目
 
-- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
 - [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
 - [方法: Windows フォーム ListView コントロールに列を追加する](how-to-add-columns-to-the-windows-forms-listview-control.md)
 - [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](add-custom-information-to-a-treeview-or-listview-control-wf.md)

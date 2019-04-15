@@ -30,7 +30,7 @@ Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に�
 ## <a name="see-also"></a>関連項目
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
-- [TabControl コントロールの概要 (Windows フォーム)](tabcontrol-control-overview-windows-forms.md)
+- [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
 - [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
 - [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
 - [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

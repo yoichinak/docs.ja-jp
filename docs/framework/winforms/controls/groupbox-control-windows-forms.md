@@ -17,7 +17,7 @@ ms.locfileid: "57704571"
 Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使用すると、他のコントロールの特定のグループ化を提供します。 通常、関数によってフォームを分割するのにグループ ボックスを使用します。 たとえば、どの宅配業者を使用するなどの絞り込みメール配信オプションを指定する注文書があります。 グループ ボックス内のすべてのオプションをグループ化と、ユーザーが論理視覚的に。 <xref:System.Windows.Forms.GroupBox>コントロールに似ていますが、<xref:System.Windows.Forms.Panel>制御。 ただし、のみ、<xref:System.Windows.Forms.GroupBox>コントロールは、キャプションを表示およびのみ、<xref:System.Windows.Forms.Panel>コントロールがスクロール バーを持つことができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [GroupBox コントロールの概要 (Windows フォーム)](groupbox-control-overview-windows-forms.md)  
+ [GroupBox コントロールの概要](groupbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
  [方法: Windows フォーム GroupBox コントロールでコントロールをグループ化](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  

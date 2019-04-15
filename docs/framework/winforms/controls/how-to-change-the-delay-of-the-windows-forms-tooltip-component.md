@@ -44,6 +44,6 @@ Windows フォームに設定できる複数の遅延時間の値がある<xref:
   
 ## <a name="see-also"></a>関連項目
 
-- [ToolTip コンポーネントの概要 (Windows フォーム)](tooltip-component-overview-windows-forms.md)
+- [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)
 - [方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip コンポーネント](tooltip-component-windows-forms.md)

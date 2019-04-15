@@ -63,4 +63,4 @@ ms.locfileid: "59326997"
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView コントロール](listview-control-windows-forms.md)
-- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)

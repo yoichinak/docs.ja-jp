@@ -48,5 +48,5 @@ ms.locfileid: "59145614"
 - <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [ListView コントロール](listview-control-windows-forms.md)
-- [ListView コントロールの概要 (Windows フォーム)](listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
 - [チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

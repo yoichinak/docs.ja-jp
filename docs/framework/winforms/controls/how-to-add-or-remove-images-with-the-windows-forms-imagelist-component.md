@@ -144,5 +144,5 @@ imageList1.Images.RemoveByKey("myPhoto");
 ## <a name="see-also"></a>関連項目
 
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)
-- [ImageList コンポーネントの概要 (Windows フォーム)](imagelist-component-overview-windows-forms.md)
+- [ImageList コンポーネントの概要](imagelist-component-overview-windows-forms.md)
 - [イメージ、ビットマップ、およびメタファイル](../advanced/images-bitmaps-and-metafiles.md)

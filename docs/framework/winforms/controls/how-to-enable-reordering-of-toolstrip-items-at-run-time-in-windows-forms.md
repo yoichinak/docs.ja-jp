@@ -38,6 +38,6 @@ ms.locfileid: "59220408"
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>
-- [ToolStrip コントロールの概要 (Windows フォーム)](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip コントロールのアーキテクチャ](toolstrip-control-architecture.md)
 - [ToolStrip テクノロジの概要](toolstrip-technology-summary.md)

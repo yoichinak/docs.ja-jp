@@ -17,7 +17,7 @@ ms.locfileid: "57707133"
 Windows フォーム `HelpProvider` コンポーネントは、Windows ベースのアプリケーションで HTML ヘルプ 1.x のヘルプ ファイル (HTML Help Workshop で生成された .chm ファイル、または .htm ファイル) を関連付けるために使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [HelpProvider コンポーネントの概要 (Windows フォーム)](helpprovider-component-overview-windows-forms.md)  
+ [HelpProvider コンポーネントの概要](helpprovider-component-overview-windows-forms.md)  
  HTML ヘルプ ファイルを Windows ベースのアプリケーションに関連付けることができる、`HelpProvider` コンポーネントの一般的な概念について説明します。  
   
  参照してください[のヘルプ システムを Windows フォーム アプリケーションで](../advanced/help-systems-in-windows-forms-applications.md)します。  

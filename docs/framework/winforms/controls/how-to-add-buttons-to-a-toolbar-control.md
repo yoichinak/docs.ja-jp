@@ -153,5 +153,5 @@ ms.locfileid: "59343689"
 - <xref:System.Windows.Forms.ToolBar>
 - [方法: ツール バー ボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button.md)
 - [方法: ツール バー ボタンのメニュー イベントをトリガーする](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar コントロールの概要 (Windows フォーム)](toolbar-control-overview-windows-forms.md)
+- [ToolBar コントロールの概要](toolbar-control-overview-windows-forms.md)
 - [ToolBar コントロール](toolbar-control-windows-forms.md)

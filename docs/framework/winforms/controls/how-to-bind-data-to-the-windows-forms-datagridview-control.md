@@ -20,7 +20,7 @@ ms.locfileid: "59160071"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールにデータをバインドします。
 
-<xref:System.Windows.Forms.DataGridView>コントロールは、さまざまなデータ ソースにバインドできるように、標準 Windows フォーム データ バインディング モデルをサポートしています。 バインドする、通常、<xref:System.Windows.Forms.BindingSource>データ ソースとの相互作用を管理します。 <xref:System.Windows.Forms.BindingSource>を選択するか、データの場所を変更するときに、優れた柔軟性を提供する Windows フォームのデータ ソースを指定できます。 データ ソースの詳細については、<xref:System.Windows.Forms.DataGridView>サポートを制御しを参照してください、 [DataGridView コントロールの概要 (Windows フォーム)](datagridview-control-overview-windows-forms.md)します。  
+<xref:System.Windows.Forms.DataGridView>コントロールは、さまざまなデータ ソースにバインドできるように、標準 Windows フォーム データ バインディング モデルをサポートしています。 バインドする、通常、<xref:System.Windows.Forms.BindingSource>データ ソースとの相互作用を管理します。 <xref:System.Windows.Forms.BindingSource>を選択するか、データの場所を変更するときに、優れた柔軟性を提供する Windows フォームのデータ ソースを指定できます。 データ ソースの詳細については、<xref:System.Windows.Forms.DataGridView>サポートを制御しを参照してください、 [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)します。  
 
 Visual Studio は広範なデータ バインド DataGridView コントロールをサポートしています。 詳細については、「[方法 :データ デザイナーを使用して Windows フォームの DataGridView コントロールをバインド](bind-data-to-the-datagrid-using-the-designer.md)します。  
 

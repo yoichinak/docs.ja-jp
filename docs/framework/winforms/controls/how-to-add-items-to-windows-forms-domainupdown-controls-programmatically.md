@@ -60,4 +60,4 @@ Windows フォームに項目を追加する<xref:System.Windows.Forms.DomainUpD
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList.Insert%2A?displayProperty=nameWithType>
 - [DomainUpDown コントロール](domainupdown-control-windows-forms.md)
-- [DomainUpDown コントロールの概要 (Windows フォーム)](domainupdown-control-overview-windows-forms.md)
+- [DomainUpDown コントロールの概要](domainupdown-control-overview-windows-forms.md)

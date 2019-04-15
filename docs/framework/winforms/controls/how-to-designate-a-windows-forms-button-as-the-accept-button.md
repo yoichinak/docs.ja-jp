@@ -52,7 +52,7 @@ ms.locfileid: "59309824"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [Button コントロールの概要 (Windows フォーム)](button-control-overview-windows-forms.md)
+- [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
 - [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
 - [方法: Windows フォームの Button コントロールをキャンセル ボタンとして指定する](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
