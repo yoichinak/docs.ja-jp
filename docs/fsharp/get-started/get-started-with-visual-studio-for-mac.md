@@ -107,7 +107,7 @@ val it : bool = true
 
 以降のチュートリアルでは、順方向のパイプ演算子などがについて説明します。
 
-これは、F# Interactive で何ができる取り上げるのみです。  詳細については、[F# を使用した対話型プログラミング](../tutorials/fsharp-interactive/index.md)を参照してください。
+ここでは、F# Interactive で何ができるかを大まかに取り上げているだけです。 詳細については、[F# を使用した対話型プログラミング](../tutorials/fsharp-interactive/index.md) を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
