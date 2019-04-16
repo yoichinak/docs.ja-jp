@@ -4,12 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464815"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611563"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -289,13 +289,13 @@ JWT ベアラー認証ミドルウェアは、証明機関が利用できない�
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
 - **Michell Anicas の OAuth 2 の概要** \
-  [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
+  <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth プロバイダーの GitHub リポジトリ) \
-  [https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+  <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Danny Strockis の ASP.NET Core Web アプリへの Azure AD の統合** \
-  [https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
+  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4 の公式ドキュメント** \
   <https://identityserver4.readthedocs.io/en/latest/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328635"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613760"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -48,7 +48,7 @@ ms.locfileid: "59328635"
 
 - [.NET Framework 4.7.2 の Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262)
 
-- [NET Framework 4.7.2 のオフライン インストーラー](https://go.microsoft.com/fwlink/?LinkId=863265)
+- [.NET Framework 4.7.2 のオフライン インストーラー](https://go.microsoft.com/fwlink/?LinkId=863265)
 
 .NET Framework 4.7.2 は、Windows 10、Windows 8.1、Windows 7 SP1、および Windows Server 2008 R2 SP1 以降に相当するサーバー プラットフォームにインストールできます。 .NET Framework 4.7.2 は、Web インストーラーまたはオフライン インストーラーを使用してインストールできます。 ほとんどのユーザーにお勧めする方法は、Web インストーラーの使用です。
 
@@ -60,7 +60,7 @@ ms.locfileid: "59328635"
 
 - [コア](#core-472)
 - [ASP.NET](#asp-net472)
-- [ネットワーキング](#net472)
+- [ネットワーク](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -93,7 +93,9 @@ Using rsa = RSA.Create()
    ' Other code to execute using the rsa instance.
 End Using
 ```
+
 次のようなコードに置き換えます。
+
 ```csharp
 // Starting with .NET Framework 4.7.2
 using (RSA rsa = RSA.Create(rsaParameters))
@@ -101,6 +103,7 @@ using (RSA rsa = RSA.Create(rsaParameters))
    // Other code to execute using the rsa instance.
 }
 ```
+
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
@@ -123,7 +126,7 @@ Using dsa = DSA.Create(2048)
 End Using
 ```
 
-**Rfc2898DeriveBytes のコンストラクターにはハッシュ アルゴリズムの名前を指定できる**
+**Rfc2898DeriveBytes コンストラクターは、ハッシュ アルゴリズムの名前を受け入れる**
 
 <xref:System.Security.Cryptography.Rfc2898DeriveBytes> クラスには、3 つの新しいコンストラクターがあり、キーを派生するときに使用する HMAC アルゴリズムを識別する <xref:System.Security.Cryptography.HashAlgorithmName> パラメーターを使用します。 SHA-1 を使用する代わりに、開発者は、次の例に示すように SHA-256 などの SHA-2 ベースの HMAC を使用する必要があります。
 
@@ -213,7 +216,7 @@ Windows API を使用した圧縮解除のサポートは .NET Framework 4.7.2 �
    - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
    - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- `Enumerable.To*` 拡張メソッドは、コレクションを <xref:System.Collections.Generic.HashSet%601> に変換します。
+- <xref:System.Collections.Generic.HashSet%601> 拡張メソッドは、コレクションを `Enumerable.To*` に変換します。
 
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
@@ -266,6 +269,7 @@ c.SameSite = SameSiteMode.Lax;
 Dim c As New HttpCookie("secureCookie", "same origin")
 c.SameSite = SameSiteMode.Lax
 ```
+
 Web.config ファイルを変更して、アプリケーション レベルで SameSite cookie を構成することもできます。
 
 ```xml
@@ -273,6 +277,7 @@ Web.config ファイルを変更して、アプリケーション レベルで S
    <httpCookies sameSite="Strict" />
 </system.web>
 ```
+
 web config ファイルを変更することによって、<xref:System.Web.Security.FormsAuthentication> および <xref:System.Web.SessionState> cookie の SameSite を追加することができます。
 
 ```xml
@@ -313,13 +318,13 @@ web config ファイルを変更することによって、<xref:System.Web.Secu
 
 NET Framework 4.7.2 では、エンクレーブ ベースの Always Encrypted のサポートが追加されました。 Always Encrypted の元のバージョンは、暗号化キーがクライアントから離れないクライアント側暗号化テクノロジです。 エンクレーブ ベースの Always Encrypted では、クライアントが、オプションで暗号化キーをセキュアなエンクレーブに送信することができます。エンクレーブは、SQL Server の一部と見なされても SQL Server のコードを改ざんできないセキュアなコンピューティング エンティティです。 エンクレーブ ベースの Always Encrypted をサポートするために、.NET Framework 4.7.2 では、次の型とメンバーが <xref:System.Data.SqlClient> 名前空間に追加されています。
 
-- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>(エンクレーブ ベースの Always Encrypted の URI を指定します)。
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>。エンクレーブ ベースの Always Encrypted の URI を指定します。
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>(すべてのエンクレーブ プロバイダーの派生元の抽象クラスです)。
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>。すべてのエンクレーブ プロバイダーの派生元の抽象クラスです。
 
-- <xref:System.Data.SqlClient.SqlEnclaveSession>(指定されたエンクレーブ セッションの状態をカプセル化します)。
+- <xref:System.Data.SqlClient.SqlEnclaveSession>。指定されたエンクレーブ セッションの状態をカプセル化します。
 
-- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>(SQL Server で特定の構成証明プロトコルを実行するのに必要な情報を取得するために使用する、構成証明パラメーターを提供します)。
+- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>。SQL Server によって、特定の構成証明プロトコルを実行するために必要な情報を取得するために使用される構成証明パラメーター。
 
 アプリケーション構成ファイルで、エンクレーブ プロバイダーの機能を提供する抽象 <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType> クラスの完全な実装を指定します。 次に例を示します。
 
@@ -434,7 +439,7 @@ Windows フォーム アプリケーションの場合、DPI 認識をアプリ�
 
 - [コア](#core471)
 - [共通言語ランタイム (CLR)](#clr)
-- [ネットワーキング](#net471)
+- [ネットワーク](#net471)
 - [ASP.NET](#asp-net471)
 
 さらに、.NET Framework 4.7.1 ではアクセシビリティ機能が向上し、支援技術のユーザーに適切なエクスペリエンスを提供できます。 .NET Framework 4.7.1 のアクセシビリティ機能の改善の詳細については、「[What's new in accessibility in the .NET Framework](whats-new-in-accessibility.md)」 (.NET Framework のアクセシビリティの新機能) を参照してください。
@@ -516,7 +521,7 @@ ASP.NET は、23 のイベントを含む定義済みのパイプラインで要
 .NET Framework 4.7 には、次の領域における新機能が含まれています。
 
 - [コア](#Core47)
-- [ネットワーキング](#net47)
+- [ネットワーク](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows フォーム](#wf47)
@@ -574,7 +579,7 @@ GitHub で [.NET Framework 4.7 の暗号化の向上の例](https://gist.github.
 
 Windows Communication Foundation (WCF) では以下の機能が追加または変更されました。
 
-**既定のメッセージ セキュリティ設定を TLS 1.1 または TLS 1.2 に構成する機能**
+**既定のメッセージ セキュリティ設定を TLS1.1 または TLS1.2 に構成する機能。**
 
 .NET Framework 4.7 以降の WCF では、既定のメッセージ セキュリティ プロトコルとして、SSL 3.0 と TSL 1.0 に加えて、TSL 1.1 または TLS 1.2 を構成できます。 これはオプトイン設定です。有効にするには、アプリケーション構成ファイルに次のエントリを追加する必要があります。
 
@@ -631,7 +636,7 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 - [暗号](#Crypto462)
 
-- [SqlClient](#SQLClient)
+- [SQLClient](#SQLClient)
 
 - [Windows Communication Foundation](#WCF)
 
@@ -1036,8 +1041,7 @@ WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)を参照してください。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトを再ビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、**[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] はこの問題に対処し、IntelliSense を使用できるようにします。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトを再ビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、**[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] はこの問題に対処し、IntelliSense を使用できるようにします。
 
 **ワークフロー追跡を有効にしたワークフロー V1 アプリケーションを FIPS モードで実行**
 
@@ -1157,7 +1161,7 @@ WPF のスペル チェック機能が、追加の言語のスペル チェッ�
 
 以前のバージョンの .NET Framework と同様に、<xref:System.Windows.Controls.TextBox> コントロールまたは <xref:System.Windows.Controls.RichTextBox> ブロック用の言語が、次の順序で情報を探すことによって検出されます。
 
-- `xml:lang`(存在する場合)。
+- `xml:lang` (存在する場合)。
 
 - 現在の入力言語。
 
@@ -1313,7 +1317,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
      主なシナリオを利用できるようにするため、多くの新しい API が [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] に関連して追加されました。 変更点と追加点を以下に示します。
 
-    - **IReadOnlyCollection\<T> の実装**
+    - **IReadOnlyCollection\<T> implementations**
 
          追加のコレクション <xref:System.Collections.Generic.IReadOnlyCollection%601> (<xref:System.Collections.Generic.Queue%601>、<xref:System.Collections.Generic.Stack%601> など) が実装されています。
 
@@ -1459,7 +1463,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
          タッチで予期しない動作が発生するという、お客様から報告された [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) の問題が [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で対処されました。 Windows 8.1 以降では、Windows ストア アプリケーションと WPF アプリケーションのダブルタップのしきい値が同じになりました。
 
-    - **透明な子ウィンドウのサポート**
+    - **透過的な子ウィンドウのサポート**
 
          [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] の WPF では、Windows 8.1 以降の透過的な子ウィンドウがサポートされます。 これにより、最上位レベルのウィンドウ内に四角形でない透過的な子ウィンドウを作成できます。 この機能を有効にするには、<xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> プロパティを `true` に設定します。
 
@@ -1528,7 +1532,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
      既定値は `false` です。
 
-- **ネットワーキング**
+- **ネットワーク**
 
     - **ソケットの再利用**
 
@@ -1548,7 +1552,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
          <xref:System.Uri> クラスに新しいプロパティ <xref:System.Uri.IdnHost%2A> が追加され、国際ドメイン名と PunyCode のサポートが強化されました。
 
-- **Windows フォーム コントロールでのサイズ変更。**
+- **Windows フォーム コントロールでのサイズ変更**
 
      この機能が [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] にも拡張されました。<xref:System.Windows.Forms.DomainUpDown>、<xref:System.Windows.Forms.NumericUpDown>、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.ToolStripSplitButton> 型、および <xref:System.Drawing.Design.UITypeEditor> を描画するときに使用する <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> プロパティで指定される四角形も含まれるようになりました。
 
@@ -1560,11 +1564,11 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
     </appSettings>
     ```
 
-- **コード ページのエンコードのサポート**
+- **コード ページのエンコーディングのサポート**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコードに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコーディングを登録することで、.NET Framework では利用できるものの [!INCLUDE[net_core](../../../includes/net-core-md.md)] ではサポートされていないコード ページ エンコーディングのサポートを追加できます。 詳細については、「<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>」を参照してください。
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコーディングに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコーディングを登録することで、.NET Framework では利用できるものの [!INCLUDE[net_core](../../../includes/net-core-md.md)] ではサポートされていないコード ページ エンコーディングのサポートを追加できます。 詳細については、「<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>」を参照してください。
 
-- **.NET Native**
+- **.NET ネイティブ**
 
      [!INCLUDE[net_core](../../../includes/net-core-md.md)] をターゲットとし、c# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
 
@@ -1586,7 +1590,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
      新しい <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> プロパティと <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> プロパティは、応答ヘッダーが書き込まれたかどうかを示すブール値を返します。 これらのプロパティを使用して、<xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (ヘッダーが書き込まれた場合に例外をスローする) などの API への呼び出しが成功することを確認できます。
 
-- **Windows フォーム コントロールでのサイズ変更。** この機能が拡張されました。 これにより、システム DPI 設定を使用して、次の追加コントロールのコンポーネント (例: コンボ ボックスのドロップダウン矢印) をサイズ変更できます。
+- **Windows フォーム コントロールでのサイズ変更** この機能が拡張されました。 これにより、システム DPI 設定を使用して、次の追加コントロールのコンポーネント (例: コンボ ボックスのドロップダウン矢印) をサイズ変更できます。
 
     - <xref:System.Windows.Forms.ComboBox>
     - <xref:System.Windows.Forms.ToolStripComboBox>
@@ -1937,7 +1941,7 @@ Visual Studio 2012 (および以降のバージョン) のポータブル クラ
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework および特別なリリース](../get-started/the-net-framework-and-out-of-band-releases.md)
+- [NET Framework および特別なリリース](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework のアクセシビリティの新機能](whats-new-in-accessibility.md)
 - [Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-in-visual-studio)
 - [ASP.NET](/aspnet)
