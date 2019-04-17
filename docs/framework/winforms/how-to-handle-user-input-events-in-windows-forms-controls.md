@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム コントロールでユーザー入力イベントを処理する'
+title: 'Windows フォーム コントロールでユーザー入力イベントを処理する方法'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/08/2019
 ms.locfileid: "59108668"
 ---
-# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>方法: Windows フォーム コントロールでユーザー入力イベントを処理する
+# <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Windows フォーム コントロールでユーザー入力イベントを処理する方法
 この例では、Windows フォーム コントロールで発生する可能性がある、ほとんどのキーボード、マウス、フォーカス、および検証イベントを処理する方法を示します。 `TextBoxInput` という名前のテキスト ボックスは、フォーカスがあるときにイベントを受け取り、各イベントに関する情報は、イベントが発生する順序で、`TextBoxOutput` という名前のテキスト ボックスに書き込まれます。 アプリケーションには、レポートするイベントをフィルター処理するために使用できるチェック ボックスのセットも含まれています。  
   
 ## <a name="example"></a>例  

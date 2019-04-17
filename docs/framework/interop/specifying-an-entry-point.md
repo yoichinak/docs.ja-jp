@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086066"
 ---
 # <a name="specifying-an-entry-point"></a>エントリ ポイントの指定
 エントリ ポイントは、DLL 内の関数の位置を識別します。 マネージド プロジェクト内では、対象となる関数の元の名前または序数エントリ ポイントによって、その関数が相互運用の境界にまたがって識別されます。 また、エントリ ポイントを別の名前に割り当てて、関数の名前を事実上変更できます。  
@@ -95,6 +95,7 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [マネージド コードでのプロトタイプの作成](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [プラットフォーム呼び出しの例](../../../docs/framework/interop/platform-invoke-examples.md)

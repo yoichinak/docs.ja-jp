@@ -2,12 +2,12 @@
 title: F#コードの書式設定に関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093620"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553863"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-始まる任意のカスタム演算子の`*`コンパイラのあいまいさを避けるために、定義の先頭に空白文字を追加する必要があります。 このため、単に 1 つの空白文字を持つすべての演算子の定義を囲むことをお勧めします。
+始まる任意のカスタム演算子の`*`と 1 つ以上の文字を持つ、コンパイラのあいまいさを避けるために、定義の先頭に空白文字を追加する必要があります。 このため、単に 1 つの空白文字を持つすべての演算子の定義を囲むことをお勧めします。
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>空白文字で関数パラメーターの矢印を囲む
 

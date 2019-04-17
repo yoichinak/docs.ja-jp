@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59332509"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517071"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソース (WCF Data Services) を使用してデータをバインドします。
 
@@ -49,12 +49,12 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 6. フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
 7. フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
 8. デザイナーでウィンドウを選択します。
 
@@ -69,8 +69,8 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 11. 新しく作成された <xref:System.Windows.FrameworkElement.Loaded> イベント ハンドラーで、次のコードをコピーして貼り付けます。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
 12. このコードは、関連する <xref:System.Data.Services.Client.DataServiceCollection%601> オブジェクトと一緒に `Customers` の <xref:System.Collections.Generic.IEnumerable%601> を Northwind データ サービスから返す LINQ クエリの実行に基づいて `Customers` 型の `Orders` のインスタンスを作成し、`customersViewSource` にバインドします。
 
@@ -98,13 +98,13 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 6. フォームのコード ページを開き、次に示す `using` ステートメント (Visual Basic の場合は `Imports`) を追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
 7. フォームを定義する部分クラスで、<xref:System.Data.Objects.ObjectContext> インスタンスを作成し、`customerID` の定数を定義する次のコードを追加します。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
 8. フォーム デザイナーで、フォームをダブルクリックします。
 
@@ -112,12 +112,12 @@ WCF Data Services クライアント アプリケーションで生成された�
 
 9. `Load` イベント ハンドラーで、次のコードをコピーして貼り付けます。
 
-     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabinding)]
-     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabinding)]
+     [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
+     [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
 10. このコードは、Northwind データ サービスから <xref:System.Data.Services.Client.DataServiceCollection%601> の `Customers` を返す <xref:System.Data.Services.Client.DataServiceQuery%601> の実行に基づいて <xref:System.Collections.Generic.IEnumerable%601> 型の `Customers` のインスタンスを作成し、`customersBindingSource` にバインドします。
 
 ## <a name="see-also"></a>関連項目
 
 - [WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [方法: Windows Presentation Foundation 要素にデータをバインドする](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [方法: Windows Presentation Foundation 要素にデータをバインドします。](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121954"
 ---
 # <a name="ipv6-addressing"></a>IPv6 アドレス指定
 インターネット プロトコル バージョン 6 (IPv6) では、アドレスの長さは 128 ビットです。 このような大きいアドレス空間の 1 つの理由は、インターネットのトポロジを反映したルーティング ドメインの階層構造に利用可能なアドレスを細分化するためです。 別の理由は、ネットワークにデバイスを接続するネットワーク アダプター (インターフェイス) のアドレスをマップするためです。 IPv6 は、ネットワーク インターフェイス レベルである最下位レベルでアドレスを解決する固有の機能、および自動構成機能を備えています。  
@@ -52,7 +52,7 @@ ms.locfileid: "54633853"
   
  64 ビットのプレフィックスを使用するアドレスの例を次に示します。  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`。  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
   
  この例のプレフィックスは `3FFE:FFFF:0:CD30` です。 アドレスは、`3FFE:FFFF:0:CD30::/64` のように圧縮形式で書き込むこともできます。  
   
@@ -73,5 +73,6 @@ ms.locfileid: "54633853"
  一般に、ノードは常にリンク ローカル アドレスを持ちます。 サイト ローカル アドレスおよび 1 つまたは複数のグローバル アドレスを持つ場合があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [ソケット](../../../docs/framework/network-programming/sockets.md)

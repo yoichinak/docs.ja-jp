@@ -98,6 +98,7 @@
     ],
     "externalReference": [],
     "globalMetadata": {
+      "toc_preview": true,
       "breadcrumb_path": "/dotnet/breadcrumb/toc.json",
       "_displayLangs": ["csharp"],
       "dev_langs": ["csharp"],
@@ -124,12 +125,6 @@
       "feedback_product_url": {
         "docs/fsharp/**/**.md": "https://github.com/Microsoft/visualfsharp"
       },
-     "feedback_github_repo": {
-	      "_csharplang/**/*.md": "dotnet/csharplang.ja-jp",
-		    "_csharplang/**/*.yml": "dotnet/csharplang.ja-jp",
-		    "_vblang/**/*.md": "dotnet/vblang.ja-jp",
-		    "_vblang/**/*.yml": "dotnet/vblang.ja-jp"
-	    },
       "ms.prod": {
         "_csharplang/**/*.md": "dotnet-csharp",
         "_vblang/spec/*.md": "dotnet-visualbasic",
@@ -262,7 +257,6 @@
       "docs.html"
     ],
     "xref": [
-      "_zip/office15.zip",
       "_zip/missingapi.yml"
     ],
     "lruSize": 0

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305261"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# コンパイラ オプション)
 **-define** オプションは、`name` をプログラムのすべてのソース コード ファイル内のシンボルとして定義します。  
@@ -28,10 +28,10 @@ ms.locfileid: "54558820"
 ```  
   
 ## <a name="arguments"></a>引数  
- `name`、 `name2`  
+ `name`, `name2`  
  定義する 1 つまたは複数のシンボルの名前。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-define** オプションには、[#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) プリプロセッサ ディレクティブを使うのと同じ効果があります。ただし、コンパイラ オプションはプロジェクト内のすべてのファイルに対して有効である点が異なります。 ソース ファイルの [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md) ディレクティブがこの定義を削除するまで、シンボルはソース ファイルで定義されたままになります。 -define オプションを使うと、あるファイルで指定されている `#undef` ディレクティブは、プロジェクト内の他のソース コード ファイルには影響しません。  
   
  このオプションで作成されるシンボルを [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)、[#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md)、[#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md)、および [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) で使う、ソース ファイルを条件付きでコンパイルできます。  
@@ -51,9 +51,9 @@ ms.locfileid: "54558820"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[ビルド]** タブで、**[条件付きコンパイル シンボル]** ボックスに、定義するシンボルを入力します。 たとえば、次のコード例を使っている場合は、テキスト ボックスに「`xx`」と入力します。  
+2. **[ビルド]** タブで、**[条件付きコンパイル シンボル]** ボックスに、定義するシンボルを入力します。 たとえば、次のコード例を使っている場合は、テキスト ボックスに「`xx`」と入力します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>」をご覧ください。  
   

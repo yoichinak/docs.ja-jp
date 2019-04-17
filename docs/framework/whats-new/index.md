@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466440"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613760"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -93,7 +93,9 @@ Using rsa = RSA.Create()
    ' Other code to execute using the rsa instance.
 End Using
 ```
+
 次のようなコードに置き換えます。
+
 ```csharp
 // Starting with .NET Framework 4.7.2
 using (RSA rsa = RSA.Create(rsaParameters))
@@ -101,6 +103,7 @@ using (RSA rsa = RSA.Create(rsaParameters))
    // Other code to execute using the rsa instance.
 }
 ```
+
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
@@ -266,6 +269,7 @@ c.SameSite = SameSiteMode.Lax;
 Dim c As New HttpCookie("secureCookie", "same origin")
 c.SameSite = SameSiteMode.Lax
 ```
+
 Web.config ファイルを変更して、アプリケーション レベルで SameSite cookie を構成することもできます。
 
 ```xml
@@ -273,6 +277,7 @@ Web.config ファイルを変更して、アプリケーション レベルで S
    <httpCookies sameSite="Strict" />
 </system.web>
 ```
+
 web config ファイルを変更することによって、<xref:System.Web.Security.FormsAuthentication> および <xref:System.Web.SessionState> cookie の SameSite を追加することができます。
 
 ```xml
@@ -463,7 +468,7 @@ Windows フォーム アプリケーションの場合、DPI 認識をアプリ�
 
 **読み取り専用の参照のサポート**
 
-.NET Framework 4.7.1 では、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType> が追加されました。 この属性は、読み取り専用の ref 戻り値型またはパラメーターを持つメンバーをマークする言語コンパイラで使用します。 詳細については、「[.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)」(.NET Framework 4.7.1 ランタイムとコンパイラの機能) ブログ投稿の「Compiler - Support for ReadOnlyReferences」(コンパイラ - ReadOnlyReferences のサポート) を参照してください。 Ref 戻り値の詳細については、「[Ref return values and ref locals (C# Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md)」(Ref 戻り値と ref ローカル変数 (C# ガイド)) および「[Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)」(Ref 戻り値 (Visual Basic)) を参照してください。
+.NET Framework 4.7.1 では、<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType> が追加されました。 この属性は、読み取り専用の ref 戻り値型またはパラメーターを持つメンバーをマークする言語コンパイラで使用します。 詳細については、「[.NET Framework 4.7.1 Runtime and Compiler Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)」(.NET Framework 4.7.1 ランタイムとコンパイラの機能) ブログ投稿の「Compiler - Support for ReadOnlyReferences」(コンパイラ - ReadOnlyReferences のサポート) を参照してください。 Ref 戻り値の詳細については、「[Ref return values and ref locals (C# Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md)」(Ref 戻り値と ref ローカル変数 (c# ガイド)) および「[Ref return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)」(Ref 戻り値 (Visual Basic)) を参照してください。
 
 <a name="clr" />
 
@@ -657,13 +662,13 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 データ注釈検証コントロールを使用して、1 つ以上の属性をクラス プロパティに追加して検証を行うことができます。 属性の <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 要素は、検証が失敗した場合にエラー メッセージのテキストを定義します。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 以降では、ASP.NET でエラー メッセージを簡単にローカライズできます。 エラー メッセージは次のような場合にローカライズされます。
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> が検証属性で指定されている。
+1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> が検証属性で指定されている。
 
-2.  リソース ファイルが App_LocalResources フォルダーに格納されている。
+2. リソース ファイルが App_LocalResources フォルダーに格納されている。
 
-3.  ローカライズされたリソース ファイル名の形式が `DataAnnotation.Localization.{`*名前*`}.resx` (この*名前*は、*languageCode*`-`*country/regionCode* または *languageCode* 形式のカルチャ名) である。
+3. ローカライズされたリソース ファイル名の形式が `DataAnnotation.Localization.{`*名前*`}.resx` (この*名前*は、*languageCode*`-`*country/regionCode* または *languageCode* 形式のカルチャ名) である。
 
-4.  リソースのキー名が <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 属性に割り当てられている文字列で、その値がローカライズされたエラー メッセージである。
+4. リソースのキー名が <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 属性に割り当てられている文字列で、その値がローカライズされたエラー メッセージである。
 
 たとえば、次のデータ注釈属性では、無効な評価の場合に表示する、既定のカルチャのエラー メッセージを定義します。
 
@@ -1565,7 +1570,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **.NET ネイティブ**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] をターゲットとし、C# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)] をターゲットとし、c# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
 
      ご利用のアプリは、Visual Studio 2015 以降でコンパイルするときに、既定でネイティブ コードにコンパイルされます。 詳しくは、「[.NET ネイティブの概要](../net-native/getting-started-with-net-native.md)」をご覧ください。
 

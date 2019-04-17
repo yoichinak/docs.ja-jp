@@ -2,12 +2,12 @@
 title: -target:winmdobj (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608967"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319301"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# コンパイラ オプション)
 **-target:winmdobj** コンパイラ オプションを使用すると、コンパイラは、Windows ランタイム バイナリ (.winmd) ファイルに変換できる .winmdobj 中間ファイルを作成します。 .winmd ファイルは、マネージド言語プログラムだけでなく JavaScript および C++ プログラムでも使用できます。  
@@ -18,7 +18,7 @@ ms.locfileid: "54608967"
 -target:winmdobj  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **winmdobj** 設定は、中間モジュールが必要であることをコンパイラに通知します。 これに対し、Visual Studio が C# クラス ライブラリを .winmdobj ファイルとしてコンパイルします。 .winmdobj ファイルは <xref:Microsoft.Build.Tasks.WinMDExp> エクスポート ツールで送信され、Windows メタデータ ファイル (.winmd) が生成されます。 .winmd ファイルには、元のライブラリのコードと WinMD メタデータの両方が含まれています。メタデータは、JavaScript または C++、および Windows ランタイムで使用されます。  
   
  **-target:winmdobj** コンパイラ オプションを使用してコンパイルされたファイルの出力は、WimMDExp エクスポート ツール用の入力としてのみ使用するように設計されています。 .winmdobj ファイル自体は直接参照されません。  
@@ -29,11 +29,11 @@ ms.locfileid: "54608967"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Windows ストア アプリ用に Visual Studio IDE でこのコンパイラ オプションを設定するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。  
+1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。  
   
-2.  **[アプリケーション]** タブを選択します。  
+2. **[アプリケーション]** タブを選択します。  
   
-3.  **[出力の種類]** リストで、**[WinMD ファイル]** を選択します。  
+3. **[出力の種類]** リストで、**[WinMD ファイル]** を選択します。  
   
      **[WinMD ファイル]** オプションは、[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] アプリケーション テンプレートでのみ使用できます。  
   

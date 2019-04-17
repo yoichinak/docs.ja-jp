@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195827"
 ---
 # <a name="assembly-names"></a>アセンブリ名
 アセンブリの名前は、メタデータに保存され、アセンブリのスコープに重大な影響があり、アプリケーションによって使用されます。 厳密な名前のアセンブリには、アセンブリの名前、カルチャ、公開キー、バージョン番号を含む、完全修飾名があります。 これは、表示名として、また、<xref:System.Reflection.Assembly.FullName%2A> プロパティを使用して取得できる読み込まれたアセンブリに対して、頻繁に参照されます。  
@@ -58,6 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  グローバル アセンブリ キャッシュに厳密な名前のアセンブリを配置した場合、アセンブリのファイル名は、アセンブリ名と一致する必要があります (.exe または .dll などのファイル名の拡張子を除く)。 たとえば、アセンブリのファイル名が myAssembly.dll である場合は、アセンブリ名は myAssembly である必要があります。 ルート アプリケーション ディレクトリにのみ展開されるプライベート アセンブリは、ファイル名とは異なるアセンブリ名を持つことができます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: アセンブリの完全修飾名を特定する](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
 - [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)

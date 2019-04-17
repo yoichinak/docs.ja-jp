@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295680"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 このサンプルでは、メッセージ キューから読み取ったアプリケーションを、Windows プロセス アクティブ化サービス (WAS) でホストする方法を示します。 このサンプルでは、`netMsmqBinding`に基づく、[双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)サンプル。 この場合、サービスは Web ホスト アプリケーションの 1 つであり、クライアントは自己ホスト型です。クライアントはコンソールに出力して、送信された発注書のステータスを確認します。  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  WAS のアクティブ化に必要な [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。  
+1. WAS のアクティブ化に必要な [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。  
   
-2.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。 さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
+2. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。 さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
   
     1.  **[スタート]** メニューの **[コントロール パネル]** をクリックします。  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  展開、 **Microsoft .NET Framework 3.0**ノードとチェック、 **Windows Communication Foundation NON-HTTP Activation**機能します。  
   
-3.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4.  コマンド ウィンドウで client.exe を実行することにより、クライアントを実行します。 これによってキューが作成され、メッセージがそのキューに送信されます。 クライアントを実行しながら、メッセージを読み取るサービスの結果を表示します。  
+4. コマンド ウィンドウで client.exe を実行することにより、クライアントを実行します。 これによってキューが作成され、メッセージがそのキューに送信されます。 クライアントを実行しながら、メッセージを読み取るサービスの結果を表示します。  
   
-5.  MSMQ アクティベーション サービスは、既定では NETWORK SERVICE として動作します。 そのため、アプリケーションのアクティブ化に使用されるキューには、NETWORK SERVICE アカウントによる受信およびピーク権限が必要です。 この権限は、メッセージ キュー MMC を使用して追加できます。  
+5. MSMQ アクティベーション サービスは、既定では NETWORK SERVICE として動作します。 そのため、アプリケーションのアクティブ化に使用されるキューには、NETWORK SERVICE アカウントによる受信およびピーク権限が必要です。 この権限は、メッセージ キュー MMC を使用して追加できます。  
   
     1.  **開始** メニューのをクリックして**実行**、入力`Compmgmt.msc`ENTER キーを押します。  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  **セキュリティ** タブで、をクリックして**追加**ピークを与えるし、ネットワーク サービスへのアクセス許可を受信します。  
   
-6.  MSMQ アクティブ化をサポートするよう Windows プロセス アクティブ化サービス (WAS) を設定します。  
+6. MSMQ アクティブ化をサポートするよう Windows プロセス アクティブ化サービス (WAS) を設定します。  
   
      便宜上次の 2 つの手順が、サンプル ディレクトリにある AddMsmqSiteBinding.cmd というバッチ ファイルに実装されています。  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          このコマンドにより、/servicemodelsamples アプリケーションを使用してアクセスする`http://localhost/servicemodelsamples`と`net.msmq://localhost/servicemodelsamples`します。
   
-7.  まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 **開始** メニューのをクリックして**実行**、および種類`Services.msc`します。 サービスの一覧を検索、 **Net.Msmq リスナ アダプタ**します。 右クリックして**プロパティ**します。 設定、**スタートアップの種類**に**自動**、 をクリックして**適用** をクリックし、**開始**ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。  
+7. まだ確認していない場合は、MSMQ アクティベーション サービスが有効になっていることを確認します。 **開始** メニューのをクリックして**実行**、および種類`Services.msc`します。 サービスの一覧を検索、 **Net.Msmq リスナ アダプタ**します。 右クリックして**プロパティ**します。 設定、**スタートアップの種類**に**自動**、 をクリックして**適用** をクリックし、**開始**ボタンをクリックします。 この手順は、Net.Msmq リスナー アダプター サービスを初めて使用する前に 1 回だけ実行する必要があります。  
   
-8.  1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 さらに、発注書を送信するときのキューの URI 内のコンピューター名を反映するように、発注書を送信するクライアントのコードを変更します。 次のコードを使用します。  
+8. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 さらに、発注書を送信するときのキューの URI 内のコンピューター名を反映するように、発注書を送信するクライアントのコードを変更します。 次のコードを使用します。  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには  
   
-1.  ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードと保護レベルを "none" に設定します。サンプル構成を次に示します。  
+1. ドメインに属していないコンピューターを使用する場合は、トランスポート セキュリティをオフにします。オフにするには、認証モードと保護レベルを "none" に設定します。サンプル構成を次に示します。  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  サンプルを実行する前に、サーバーとクライアントの両方の構成を変更します。  
+2. サンプルを実行する前に、サーバーとクライアントの両方の構成を変更します。  
   
     > [!NOTE]
     >  `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。  
   
-3.  ワークグループに参加しているコンピューターでアクティブ化を有効にするには、アクティベーション サービスとワーカー プロセスの両方を特定のユーザー アカウントで実行する必要があります (どちらも同じアカウントを使用する必要があります)。さらに、キューはその特定のユーザー アカウントの ACL に設定されている必要があります。  
+3. ワークグループに参加しているコンピューターでアクティブ化を有効にするには、アクティベーション サービスとワーカー プロセスの両方を特定のユーザー アカウントで実行する必要があります (どちらも同じアカウントを使用する必要があります)。さらに、キューはその特定のユーザー アカウントの ACL に設定されている必要があります。  
   
      ワーカー プロセスが実行される ID を変更するには  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  右クリックし、 **net.msmq リスナ アダプタ**、選択**プロパティ**します。  
   
-4.  アカウントを変更、**ログオン**タブ。  
+4. アカウントを変更、**ログオン**タブ。  
   
-5.  ワークグループでは、無制限のトークンを使用してサービスを実行する必要もあります。 この操作を行うには、コマンド ウィンドウから次のコマンドを実行します。  
+5. ワークグループでは、無制限のトークンを使用してサービスを実行する必要もあります。 この操作を行うには、コマンド ウィンドウから次のコマンドを実行します。  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

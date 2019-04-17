@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296655"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows Resource Localization Editor)
 
@@ -106,9 +106,9 @@ Winres.exe には、以下の機能があります。
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>フォームに関連付けられた .resx ファイルまたは .resources ファイルをローカライズするには
 
-1.  開発者コマンド プロンプトで「`winres`」と入力して、Winres.exe を実行します。
+1. 開発者コマンド プロンプトで「`winres`」と入力して、Winres.exe を実行します。
 
-2.  ローカライズするフォームの既定のリソースを開くには、**[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
+2. ローカライズするフォームの既定のリソースを開くには、**[ファイル]** メニューの **[開く]** をクリックし、開くファイルを指定します。
 
      - または -
 
@@ -129,11 +129,11 @@ Winres.exe には、以下の機能があります。
     > [!NOTE]
     > リソースが編集中であるフォームが他のフォームを継承したフォームである場合は、継承したフォームを含むアセンブリと、継承元 (派生元) のフォームを含むアセンブリの両方が、グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) に登録されているか、WinRes.exe と同じディレクトリに存在する必要があります。 .NET Framework のコンポーネントを GAC にインストールする方法の詳細については、「[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)」を参照してください。
 
-3.  フォーム上のコントロールを選択し、このコントロールの <xref:System.Windows.Forms.Control.Text%2A> などのプロパティを変更して、ローカライズ後のカルチャおよび言語を反映します。 ローカライズされたテキストが納まるように、必要に応じてコントロールを移動したりそのサイズを変更したりします。
+3. フォーム上のコントロールを選択し、このコントロールの <xref:System.Windows.Forms.Control.Text%2A> などのプロパティを変更して、ローカライズ後のカルチャおよび言語を反映します。 ローカライズされたテキストが納まるように、必要に応じてコントロールを移動したりそのサイズを変更したりします。
 
-4.  ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、**[上書き保存]** ボタンをクリックするか、**[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
+4. ローカライズしたバージョンの .resx ファイルや .resources ファイルを保存するには、**[上書き保存]** ボタンをクリックするか、**[ファイル]** メニューの [上書き保存] をクリックします。 **[カルチャを選択する]** ウィンドウが表示されます。
 
-5.  適切なカルチャおよびファイル モードを選択し、**[OK]** をクリックします。
+5. 適切なカルチャおよびファイル モードを選択し、**[OK]** をクリックします。
 
    ツールによってファイルが保存される場合は、ローカライズされたリソース ファイルに対してランタイムが予測した名前付け規則が使用されます。 たとえば、`TestApp.resources` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resources` という名前で保存されます。 `TestApp.resx` をドイツのドイツ語用にローカライズする場合、ファイルは `TestApp.de-DE.resx` という名前で保存されます。 リソースの名前付け規則について詳しくは、「[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。 ランタイムで使用される定義済みカルチャ名の一覧については、「<xref:System.Globalization.CultureInfo> クラス」を参照してください。
 

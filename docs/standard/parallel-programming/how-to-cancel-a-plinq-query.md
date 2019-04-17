@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305339"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>方法: PLINQ クエリを取り消す
 次の例は、PLINQ クエリを取り消す 2 つの方法を示しています。 最初の例は、主にデータ トラバーサルで構成されるクエリを取り消す方法を示しています。 2 つ目の例は、負荷の大きいユーザー関数を含むクエリを取り消す方法を示しています。  
@@ -34,9 +34,9 @@ ms.locfileid: "54604302"
   
  取り消しに関する一般的なガイダンスは次のとおりです。  
   
-1.  ユーザー デリゲートを取り消す場合、外部の <xref:System.Threading.CancellationToken> について PLINQ に通知し、<xref:System.OperationCanceledException>(externalCT) をスローする必要があります。  
+1. ユーザー デリゲートを取り消す場合、外部の <xref:System.Threading.CancellationToken> について PLINQ に通知し、<xref:System.OperationCanceledException>(externalCT) をスローする必要があります。  
   
-2.  取り消しが発生し、その他の例外がスローされない場合は、<xref:System.AggregateException> ではなく <xref:System.OperationCanceledException> を処理する必要があります。  
+2. 取り消しが発生し、その他の例外がスローされない場合は、<xref:System.AggregateException> ではなく <xref:System.OperationCanceledException> を処理する必要があります。  
   
 ## <a name="example"></a>例  
  次の例は、ユーザー コードで負荷が大きい関数を使用する場合の取り消しの処理方法を示しています。  

@@ -2,19 +2,19 @@
 title: データのフィルター処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: dc31a73a8ebbe52f7d22984cd747a038e2556c28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61d80674fd858063e77749342a33d714e3a57c6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826068"
 ---
 # <a name="filtering-data-c"></a>データのフィルター処理 (C#)
 フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。 選択とも呼ばれます。  
   
  次の図は、文字のシーケンスをフィルター処理した結果を示したものです。 フィルター処理操作の述語では、文字が "A" でなければならないことが指定されています。  
   
- ![LINQ フィルター処理操作](../../../../csharp/programming-guide/concepts/linq/media/linq_filter.png "LINQ_Filter")  
+ ![LINQ のフィルター操作を示す図。](./media/filtering-data/linq-filter-operation.png)  
   
  次のセクションでは、選択を実行する標準クエリ演算子メソッドの一覧を示します。  
   

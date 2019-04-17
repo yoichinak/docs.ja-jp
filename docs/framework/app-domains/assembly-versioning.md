@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305196"
 ---
 # <a name="assembly-versioning"></a>アセンブリのバージョン管理
 共通言語ランタイムを使用するアセンブリのバージョン管理は、すべてアセンブリ レベルで行われます。 アセンブリの特定のバージョン、および依存する各アセンブリのバージョンは、アセンブリのマニフェストに記録されます。 ランタイムの既定のバージョン ポリシーは、構成ファイル (アプリケーション構成ファイル、発行者ポリシー ファイル、コンピューター管理者の構成ファイル) に指定した明示的なバージョン ポリシーでオーバーライドされない限り、アプリケーションが作成およびテストされた時点のバージョンの場合にだけそのアプリケーションを実行します。  
@@ -25,13 +25,13 @@ ms.locfileid: "58675953"
   
  ランタイムは、アセンブリ バインディング要求を解決するために、いくつかの手順を実行します。  
   
-1.  元のアセンブリ参照を確認し、バインド先のアセンブリのバージョンを確認します。  
+1. 元のアセンブリ参照を確認し、バインド先のアセンブリのバージョンを確認します。  
   
-2.  バージョン ポリシーを適用するために利用できる構成ファイルをすべてチェックします。  
+2. バージョン ポリシーを適用するために利用できる構成ファイルをすべてチェックします。  
   
-3.  元のアセンブリ参照と、構成ファイルで指定されているリダイレクトから正しいアセンブリを判断し、呼び出し元のアセンブリにバインドされるバージョンを判断します。  
+3. 元のアセンブリ参照と、構成ファイルで指定されているリダイレクトから正しいアセンブリを判断し、呼び出し元のアセンブリにバインドされるバージョンを判断します。  
   
-4.  グローバル アセンブリ キャッシュと、構成ファイルで指定されたコードベースをチェックした後、「[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」に説明されているプローブ規則を使用して、アプリケーションのディレクトリとサブディレクトリをチェックします。  
+4. グローバル アセンブリ キャッシュと、構成ファイルで指定されたコードベースをチェックした後、「[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)」に説明されているプローブ規則を使用して、アプリケーションのディレクトリとサブディレクトリをチェックします。  
   
  これらの手順を次の図に示します。  
   
@@ -70,6 +70,7 @@ ms.locfileid: "58675953"
  補足バージョンは、カスタム属性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> を使って表されます。 補足バージョン属性の詳細については、「[アセンブリ属性の設定](../../../docs/framework/app-domains/set-assembly-attributes.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [アプリの構成](../../../docs/framework/configure-apps/index.md)
 - [アセンブリ属性の設定](../../../docs/framework/app-domains/set-assembly-attributes.md)

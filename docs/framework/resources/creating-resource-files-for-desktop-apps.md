@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313659"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET アプリ用のリソース ファイルを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "56442140"
 
 - バイナリ リソース (.resources) ファイルをプログラムによって作成します。 次に、そのファイルを、言語コンパイラを使用してアプリケーションの実行可能ファイルまたはアプリケーション ライブラリに埋め込むか、[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用してサテライト アセンブリに埋め込むことができます。 詳細については、「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」を参照してください。
 
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) を使用してリソース ファイルを作成し、そのファイルをプロジェクトに追加します。 Visual Studio には、リソースを追加、削除、および変更するためのリソース エディターがあります。 コンパイル時には、リソース ファイルが自動的にバイナリ .resources ファイルに変換されて、アプリケーション アセンブリまたはサテライト アセンブリに埋め込まれます。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。
+- [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用してリソース ファイルを作成し、そのファイルをプロジェクトに追加します。 Visual Studio には、リソースを追加、削除、および変更するためのリソース エディターがあります。 コンパイル時には、リソース ファイルが自動的にバイナリ .resources ファイルに変換されて、アプリケーション アセンブリまたはサテライト アセンブリに埋め込まれます。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>テキスト ファイル内のリソース
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> .resx ファイルは定義されている形式の整形式 XML で構成する必要があるため、特に文字列以外のリソースが .resx ファイルに格納されている場合に、.resx ファイルを手動で操作することはお勧めしません。 代わりに、[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) では、.resx ファイルを作成および操作するための透過的なインターフェイスが提供されています。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。 .resx ファイルは、プログラムによって作成および操作することもできます。 詳細については、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」を参照してください。
+> .resx ファイルは定義されている形式の整形式 XML で構成する必要があるため、特に文字列以外のリソースが .resx ファイルに格納されている場合に、.resx ファイルを手動で操作することはお勧めしません。 代わりに、[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) では、.resx ファイルを作成および操作するための透過的なインターフェイスが提供されています。 詳細については、「[Visual Studio のリソース ファイル](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)」を参照してください。 .resx ファイルは、プログラムによって作成および操作することもできます。 詳細については、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」を参照してください。
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>.resources ファイル内のリソース
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio でのリソース ファイル
 
-[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。
+[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトにリソース ファイルを追加すると、プロジェクト ディレクトリに .resx ファイルが作成されます。 Visual Studio には、文字列、イメージ、およびバイナリ オブジェクトを追加するためのリソース エディターがあります。 このエディターは静的データのみを処理するように設計されているので、プログラム オブジェクトを格納するために使用することはできません。オブジェクト データは、.resx ファイルまたは .resources ファイルにプログラムによって書き込む必要があります。 詳しくは、「[プログラムによる .resx ファイルの使用](../../../docs/framework/resources/working-with-resx-files-programmatically.md)」および「[.resources ファイル内のリソース](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)」セクションをご覧ください。
 
 ローカライズされたリソースを追加する場合は、メイン リソース ファイルと同じルート ファイル名を指定します。 ファイル名内でカルチャを指定する必要もあります。 たとえば、Resources.resx という名前のリソース ファイルを追加する場合に、英語 (米国) とフランス語 (フランス) の各カルチャ用にローカライズされたリソースを保持するには、Resources.en-US.resx および Resources.fr-FR.resx という名前のリソース ファイルを作成します。 また、アプリケーションの既定のカルチャも指定しておく必要があります。 この情報は、特定のカルチャ用にローカライズされたリソースが見つからない場合に、どのカルチャのリソースを使用するか決定するために使用されます。 既定のカルチャを指定するには、Visual Studio のソリューション エクスプローラーで、プロジェクト名を右クリックし、[アプリケーション] をポイントして、**[アセンブリ情報]** をクリックします。次に、**[ニュートラル言語]** ボックスの一覧で適切な言語/カルチャをクリックします。
 

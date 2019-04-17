@@ -2,12 +2,12 @@
 title: ピア名の公開と解決
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309096"
 ---
 # <a name="peer-name-publication-and-resolution"></a>ピア名の公開と解決
 
@@ -25,9 +25,9 @@ PNRP バージョン 2 ノードは、他の P2P ID だけを解決している�
 
  PNRP ネットワークまたはクラウドで他のピアを検索するプロセスは、2 つのフェーズで構成されます。  
   
-1.  エンドポイント調査  
+1. エンドポイント調査  
   
-2.  PNRP ID 解決  
+2. PNRP ID 解決  
   
  エンドポイント調査フェーズでは、別のコンピューター上のサービスの PNRP ID を解決しようとするピアは、そのリモート ピアの IPv6 アドレスを確認します。  リモート ピアは、コンピューターやサービスの PNRP ID を公開したピア、またはその ID に関連付けられているピアです。  
   
@@ -48,4 +48,5 @@ PNRP バージョン 2 ノードは、他の P2P ID だけを解決している�
  <xref:System.Net.PeerToPeer> 名前空間内では、<xref:System.Net.PeerToPeer.PeerName> レコード (エンドポイントと、エンドポイントが通信する RNRP クラウドまたはメッシュ) の間に多対多の関係が存在します。 重複しているか古くなったエントリ、または同じピア名を持つ複数のノードがある場合、PNRP ノードは <xref:System.Net.PeerToPeer.PeerNameResolver> クラスを使用して最新の情報を取得できます。 <xref:System.Net.PeerToPeer.PeerNameResolver> のメソッドは、1 つのピア名を使用して、1 つのピア対多数のピア名レコードおよび同じ 1 つのピア対多数のクラウドにパースペクティブを簡素化します。 これは、リレーショナル テーブル結合を使用して実行されるクエリに似ています。 正常に完了した場合、リゾルバー オブジェクトは指定されたピア名の <xref:System.Net.PeerToPeer.PeerNameRecordCollection> を返します。  たとえば、クラウドによって順序付けられたとおりに、コレクション内のすべてのピア名レコードのピア名が表示されます。 これらは、サポートしているデータが PNRP ベースのアプリケーションによって要求されるピア名のインスタンスです。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.PeerToPeer>

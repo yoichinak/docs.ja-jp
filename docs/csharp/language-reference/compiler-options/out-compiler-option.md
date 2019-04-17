@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331300"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -49,11 +49,11 @@ ms.locfileid: "57362358"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[アプリケーション]** プロパティ ページをクリックします。  
+2. **[アプリケーション]** プロパティ ページをクリックします。  
   
-3.  **[アセンブリ名]** プロパティを変更します。  
+3. **[アセンブリ名]** プロパティを変更します。  
   
      このコンパイラ オプションをプログラムで設定するには: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> は読み取り専用のプロパティで、プロジェクトの種類 (exe、ライブラリなど) と、アセンブリ名の組み合わせによって決まります。 これらのプロパティの一方または両方を変更するには、出力ファイル名を設定する必要があります。  
   

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322409"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
@@ -50,11 +50,11 @@ ms.locfileid: "45988089"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT パラメーターを使用するために必要な処理  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。  
+1. <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> を使用してオブジェクトを追加します。  
   
-2.  スタイル シートからパラメーターを呼び出します。  
+2. スタイル シートからパラメーターを呼び出します。  
   
-3.  <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
+3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
   
 ```xml  
 <order>  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT 拡張オブジェクトを使用するために必要な処理  
   
-1.  <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。  
+1. <xref:System.Xml.Xsl.XsltArgumentList> を作成し、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> を使用して拡張オブジェクトを追加します。  
   
-2.  スタイル シートから拡張オブジェクトを呼び出します。  
+2. スタイル シートから拡張オブジェクトを呼び出します。  
   
-3.  <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
+3. <xref:System.Xml.Xsl.XsltArgumentList> を <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡します。  
   
 ### <a name="example"></a>例  
  半径が指定された円の円周を算出する例を次に示します。  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166934"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296122"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、windows で Windows Presentation Foundation (WPF) スタンドアロン アプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロン[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを使用して独自のウィンドウの提供、<xref:System.Windows.Window>クラス。 このトピックでは<xref:System.Windows.Window>を作成して、スタンドアロン アプリケーションで windows の管理の基礎を紹介します。  
@@ -348,23 +348,23 @@ ms.locfileid: "59166934"
   
  **高さのプロパティ。**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **幅のプロパティ。**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
  最大化されたで管理されているときに、優先順位の順序はウィンドウのサイズを決定もことができます、<xref:System.Windows.Window.WindowState%2A>プロパティ。  
   

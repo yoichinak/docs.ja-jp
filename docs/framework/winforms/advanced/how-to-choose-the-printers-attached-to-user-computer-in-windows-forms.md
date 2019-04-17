@@ -1,5 +1,5 @@
----
-title: '方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する'
+﻿---
+title: 'Windows フォームでユーザーのコンピューターに接続されているプリンターを選択する方法'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59318807"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Windows フォームでユーザーのコンピューターに接続されているプリンターを選択する方法
 既定のプリンター以外のプリンターに印刷することがよくあります。 <xref:System.Windows.Forms.PrintDialog> コンポーネントを使用すると、現在インストールされているプリンターからユーザーに選択させることができます。 <xref:System.Windows.Forms.PrintDialog> コンポーネントでは、 <xref:System.Windows.Forms.DialogResult> コンポーネントの <xref:System.Windows.Forms.PrintDialog> がキャプチャされ、プリンターの選択に使用されます。  
   
  次の手順では、既定のプリンターに印刷するテキスト ファイルを選択します。 <xref:System.Windows.Forms.PrintDialog> クラスがインスタンス化されます。  
@@ -89,7 +89,7 @@ ms.locfileid: "59318807"
        }  
     ```  
   
-     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
+     (Visual C# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: ca7bef8bf68b80015128619336db9fc6a8f5c237
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130469"
 ---
 # <a name="accessibility-levels-c-reference"></a>アクセシビリティ レベル (C# リファレンス)
 
@@ -49,6 +49,7 @@ ms.locfileid: "54661826"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)

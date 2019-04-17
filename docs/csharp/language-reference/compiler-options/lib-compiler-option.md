@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677876"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319405"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# コンパイラ オプション)
 **-lib** オプションは、[-reference (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) オプションによって参照されるアセンブリの場所を指定します。  
@@ -31,16 +31,16 @@ ms.locfileid: "54677876"
  `dir2`  
  アセンブリ参照を検索する 1 つまたは複数の追加ディレクトリです。 複数のディレクトリはコンマで区切り、それらの間に空白文字は入れません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  コンパイラは、完全に修飾されていないアセンブリ参照を次の順序で検索します。  
   
-1.  現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
+1. 現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
   
-2.  共通言語ランタイムのシステム ディレクトリ。  
+2. 共通言語ランタイムのシステム ディレクトリ。  
   
-3.  **-lib** によって指定されているディレクトリ。  
+3. **-lib** によって指定されているディレクトリ。  
   
-4.  LIB 環境変数によって指定されているディレクトリ。  
+4. LIB 環境変数によって指定されているディレクトリ。  
   
  アセンブリ参照を指定するには **-reference** を使います。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677876"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。  
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。  
   
-2.  **[参照パス]** プロパティ ページをクリックします。  
+2. **[参照パス]** プロパティ ページをクリックします。  
   
-3.  リスト ボックスの内容を変更します。  
+3. リスト ボックスの内容を変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>」をご覧ください。  
   

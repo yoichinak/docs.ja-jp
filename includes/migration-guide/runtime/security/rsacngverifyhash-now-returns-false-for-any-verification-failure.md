@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7d60578ac2913037e1cdeda329f06f9a4986574d
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: acf4e8df2cef3d9ec5d123a14cc7bfcd6f1bfb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236040"
 ---
 ### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng.VerifyHash で検証が失敗した場合に False が返されるようになった
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760657"
 |Version|4.6.2|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
-

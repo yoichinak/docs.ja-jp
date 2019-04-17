@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709758"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118132"
 ---
 # <a name="access-modifiers-c-reference"></a>アクセス修飾子 (C# リファレンス)
 アクセス修飾子は、メンバーまたは型の宣言されたアクセシビリティを指定するときに使用されるキーワードです。 ここでは、4 つのアクセス修飾子について説明します。  
@@ -43,6 +43,7 @@ ms.locfileid: "54709758"
 -   [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): 宣言されたアクセシビリティ レベルの使用に関する制限事項をまとめたものです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)

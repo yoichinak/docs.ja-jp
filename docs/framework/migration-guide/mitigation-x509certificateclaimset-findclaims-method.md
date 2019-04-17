@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccc24cd494866c087860144f1720988ccfc2dfa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e3b3645d9fc00087e163b9200edb5fbcf0dbbd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217212"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>軽減策: X509CertificateClaimSet.FindClaims メソッド
 <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> メソッドは、[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] を対象とするアプリから、`claimType` 引数と SAN フィールド内のすべての DNS エントリとの照合を試みます。  
@@ -37,4 +37,5 @@ ms.locfileid: "54536439"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [変更の再ターゲット](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)

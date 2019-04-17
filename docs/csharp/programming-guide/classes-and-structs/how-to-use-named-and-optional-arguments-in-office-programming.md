@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313971"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>方法: Office プログラミングで名前付き引数と省略可能な引数を使用する (C# プログラミング ガイド)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] で導入された名前付き引数と省略可能な引数を使うと、C# プログラミングの便利さ、柔軟性、読みやすさが向上します。 さらに、Microsoft Office オートメーション API などの COM インターフェイスへのアクセスが大幅に楽になります。  
@@ -25,59 +25,59 @@ ms.locfileid: "58760080"
   
 ### <a name="to-create-a-new-console-application"></a>新しいコンソール アプリケーションを作成するには  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[Templates Categories (テンプレート カテゴリ)]** ウィンドウで、**[Visual C#]** を展開し、**[Windows]** をクリックします。  
+3. **[Templates Categories (テンプレート カテゴリ)]** ウィンドウで、**[Visual C#]** を展開し、**[Windows]** をクリックします。  
   
-4.  **[テンプレート]** ウィンドウの上部で、**[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。  
+4. **[テンプレート]** ウィンドウの上部で、**[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。  
   
-5.  **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。  
+5. **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。  
   
-6.  **[名前]** フィールドに、プロジェクトの名前を入力します。  
+6. **[名前]** フィールドに、プロジェクトの名前を入力します。  
   
-7.  **[OK]** をクリックします。  
+7. **[OK]** をクリックします。  
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
 ### <a name="to-add-a-reference"></a>参照を追加するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
+1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
   
-2.  **[.NET]** ページの **[コンポーネント名]** の一覧で、**Microsoft.Office.Interop.Word** を選びます。  
+2. **[.NET]** ページの **[コンポーネント名]** の一覧で、**Microsoft.Office.Interop.Word** を選びます。  
   
-3.  **[OK]** をクリックします。  
+3. **[OK]** をクリックします。  
   
 ### <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには  
   
-1.  **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、**[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、**[コードの表示]** をクリックします。  
   
-2.  次の `using` ディレクティブをコード ファイルの先頭に追加します。  
+2. 次の `using` ディレクティブをコード ファイルの先頭に追加します。  
   
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]  
   
 ### <a name="to-display-text-in-a-word-document"></a>Word 文書にテキストを表示するには  
   
-1.  Program.cs の `Program` クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。  
+1. Program.cs の `Program` クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]  
   
-2.  文書内でテキストを表示する場所と表示するテキストを定義する次のコードを、メソッドの最後に追加します。  
+2. 文書内でテキストを表示する場所と表示するテキストを定義する次のコードを、メソッドの最後に追加します。  
   
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]  
   
 ### <a name="to-run-the-application"></a>アプリケーションを実行するには  
   
-1.  次のステートメントを Main に追加します。  
+1. 次のステートメントを Main に追加します。  
   
      [!code-csharp[csProgGuideNamedAndOptional#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#8)]  
   
-2.  Ctrl キーを押しながら F5 キーを押してプロジェクトを実行します。 指定したテキストを含む Word 文書が表示されます。  
+2. Ctrl キーを押しながら F5 キーを押してプロジェクトを実行します。 指定したテキストを含む Word 文書が表示されます。  
   
 ### <a name="to-change-the-text-to-a-table"></a>テキストをテーブルに変更するには  
   
-1.  `ConvertToTable` メソッドを使って、テーブル内のテキストを囲みます。 このメソッドには、16 個の省略可能なパラメーターがあります。 次の例に示すように、IntelliSense では省略可能なパラメーターは角かっこで囲まれています。  
+1. `ConvertToTable` メソッドを使って、テーブル内のテキストを囲みます。 このメソッドには、16 個の省略可能なパラメーターがあります。 次の例に示すように、IntelliSense では省略可能なパラメーターは角かっこで囲まれています。  
   
      ![ConvertToTable メソッドのパラメーターのリスト](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
@@ -89,15 +89,15 @@ ms.locfileid: "58760080"
   
      [!code-csharp[csProgGuideNamedAndOptional#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#14)]  
   
-2.  Ctrl キーを押しながら F5 キーを押してプロジェクトを実行します。  
+2. Ctrl キーを押しながら F5 キーを押してプロジェクトを実行します。  
   
 ### <a name="to-experiment-with-other-parameters"></a>他のパラメーターを調べるには  
   
-1.  テーブルを 1 列 3 行に変更するには、`DisplayInWord` の最後の行を次のステートメントに置き換えてから、Ctrl + F5 キーを押します。  
+1. テーブルを 1 列 3 行に変更するには、`DisplayInWord` の最後の行を次のステートメントに置き換えてから、Ctrl + F5 キーを押します。  
   
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]  
   
-2.  テーブルに対して定義済みの書式を指定するには、`DisplayInWord` の最後の行を次のステートメントに置き換えてから、Ctrl + F5 キーを押します。 書式には、[WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) 定数のどれでも指定できます。  
+2. テーブルに対して定義済みの書式を指定するには、`DisplayInWord` の最後の行を次のステートメントに置き換えてから、Ctrl + F5 キーを押します。 書式には、[WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>) 定数のどれでも指定できます。  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#11)]  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c008809606372c84b05a2facd1cac1293382aed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234997"
+---
 ### <a name="aescryptoserviceprovider-decryptor-provides-a-reusable-transform"></a>AesCryptoServiceProvider の復号で変換が再利用可能に
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6.2|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Security.Cryptography.AesCryptoServiceProvider.CreateDecryptor?displayProperty=nameWithType></li></ul>|
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088744"
 ---
 # <a name="delegates-c-programming-guide"></a>デリゲート (C# プログラミング ガイド)
 [デリゲート](../../../csharp/language-reference/keywords/delegate.md)は、特定のパラメーター リストおよび戻り値の型を使用して、メソッドへの参照を表す型です。 デリゲートをインスタンス化するときは、互換性のあるシグネチャと戻り値の型を持つ任意のメソッドにそのインスタンスを関連付けることができます。 メソッドは、デリゲート インスタンスを使用して起動する (呼び出す) ことができます。  
@@ -46,9 +46,9 @@ ms.locfileid: "57203510"
   
 -   [デリゲートの使用](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [インターフェイス (c# プログラミング ガイド) ではなくデリゲートを使用する場合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+-   [インターフェイスではなくデリゲートを使用する場合 (C# プログラミング ガイド)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [名前付きメソッドを使用したデリゲートと匿名メソッドを使用したデリゲート](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [名前付きメソッドを使用したデリゲートと匿名メソッド](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [匿名メソッド](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
@@ -57,8 +57,7 @@ ms.locfileid: "57203510"
 -   [方法: デリゲートを結合する (マルチキャスト デリゲート)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
 -   [方法: デリゲートを宣言し、インスタンス化して使用する](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
-  
-  
+
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
 詳細については、「[C# 言語の仕様](../../language-reference/language-specification/index.md)」の「[デリゲート](~/_csharplang/spec/delegates.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5718c70597acc6919c697a9033e8593865e60a2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149358"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL 関数を保持するクラスの作成
 マネージド クラス内の頻繁に使用される DLL 関数をラップすることは、プラットフォームの機能をカプセル化するための効果的な方法です。 これはすべてのケースで必須であるわけではありませんが、DLL 関数の定義には手間がかかり、エラーが発生しやすくなるため、クラス ラッパーを用意しておくと便利です。 Visual Basic や C# でプログラミングしている場合は、DLL 関数をクラスまたは Visual Basic モジュール内で宣言する必要があります。  
@@ -37,6 +37,7 @@ ms.locfileid: "54745039"
  クラスおよびそのメソッドには、任意の名前を付けることができます。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [DLL 内の関数の識別](../../../docs/framework/interop/identifying-functions-in-dlls.md)
 - [マネージド コードでのプロトタイプの作成](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

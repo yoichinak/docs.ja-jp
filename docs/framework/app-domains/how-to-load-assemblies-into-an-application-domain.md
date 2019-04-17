@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188527"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>方法: アプリケーション ドメインにアセンブリを読み込む
 アプリケーション ドメインにアセンブリを読み込むには、いくつかの方法があります。 推奨されているのは、<xref:System.Reflection.Assembly?displayProperty=nameWithType> クラスの `static` (Visual Basic では `Shared`) <xref:System.Reflection.Assembly.Load%2A> メソッドを使用する方法です。 それ以外には、以下の方法でアセンブリを読み込むことができます。  
@@ -47,9 +47,10 @@ ms.locfileid: "55674933"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)
 - [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
-- [方法:  リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。
+- [方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [アプリケーション ドメインとアセンブリ](application-domains.md#application-domains-and-assemblies)

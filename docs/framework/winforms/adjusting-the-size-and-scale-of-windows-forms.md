@@ -17,7 +17,7 @@ ms.locfileid: "57717311"
 このトピックは、Windows フォームのサイズ変更に関する情報へのリンクを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows フォームのサイズを変更します。](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
+ [Windows フォームのサイズ変更方法](~/docs/framework/winforms/how-to-resize-windows-forms.md) 
  Windows フォームのサイズを指定する方法について説明します。  
   
  [Windows フォームにおける自動スケーリング](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
@@ -37,5 +37,5 @@ ms.locfileid: "57717311"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームの外観を変更します。](~/docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Windows フォームの表示形式の変更](~/docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
  Windows フォームの外観を変更する他の方法を説明するトピックへのリンクを提供します。

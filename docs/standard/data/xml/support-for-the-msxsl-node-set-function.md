@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a37220816ab320340b2dd5c048cc4ff2ad9724a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252780"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330234"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() 関数のサポート
 `msxsl:node-set` 関数を使用すると、結果ツリー フラグメントをノード セットに変換できます。 結果として得られるノード セットには、常に単一のノードが含まれています。また、このノード セットは、常にそのツリーのルート ノードです。  
@@ -38,14 +38,14 @@ ms.locfileid: "44252780"
     <xsl:template match="/">  
         <authors>  
             <xsl:for-each select="msxsl:node-set($books)/book">   
-                <author><xsl:value-of select="@author"/)</author>  
+                <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
     </xsl:template>  
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  変換による出力は次のとおりです。  
   
 ```xml  

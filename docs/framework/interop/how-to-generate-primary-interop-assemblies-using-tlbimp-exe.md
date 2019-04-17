@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1136dd3220b189d60b4972410ce0ce6657d07cd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295498"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 プライマリ相互運用機能アセンブリを生成するには、次の 2 つの方法があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "56218984"
   
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する方法  
   
-1.  コマンド プロンプトで、次のコマンドを入力します。  
+1. コマンド プロンプトで、次のコマンドを入力します。  
   
      **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*  
   
@@ -68,4 +68,5 @@ tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /refer
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: プライマリ相互運用機能アセンブリを登録する](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
