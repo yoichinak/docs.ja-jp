@@ -2,12 +2,12 @@
 title: F#コードの書式設定に関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 02/08/2019
-ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553863"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613825"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
@@ -285,6 +285,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 要約すると、かっこで囲まれたタプルのインスタンス化、必要に応じてをパターンに一致するか、戻り値のタプルを使用する場合と見なされるかっこを回避するために問題ありません。
 
 ## <a name="formatting-discriminated-union-declarations"></a>判別共用体の宣言の書式設定
@@ -344,10 +345,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +360,13 @@ type PostalAddress =
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +408,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +446,12 @@ let rainbow2 =
 
 として、レコードのガイダンスとすることも、中かっこの別々 の行を割り当てるし、式の右側に 1 つのスコープにインデントを設定します。 でかっこがない場合、オプションの値をラッピングなどのいくつかの特殊なケースでする必要があります 1 行に中かっこを保持することを確認してください。
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {

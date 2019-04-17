@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122149"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611910"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
 -   Web サービス拡張 (WSE) アプリケーション  
   
--   Web サービス相互運用性で定義されている基本プロファイル (WS-は) 仕様 ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955))。  
+-   Web サービス相互運用性で定義されている基本プロファイル (WS-は) 仕様 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
   
 -   WS-I で定義されている基本セキュリティ プロファイル  
   
@@ -205,8 +205,8 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 |型|説明|  
 |----------|-----------------|  
 |なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
-|Basic|基本認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
-|Digest|ダイジェスト認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な[ https://go.microsoft.com/fwlink/?LinkId=84023](https://go.microsoft.com/fwlink/?LinkId=84023)します。|  
+|Basic|基本認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な<https://go.microsoft.com/fwlink/?LinkId=84023>します。|  
+|Digest|ダイジェスト認証です。 詳細については、HTTP 認証の RFC 2617 を参照してください。基本認証とダイジェスト認証で使用可能な<https://go.microsoft.com/fwlink/?LinkId=84023>します。|  
 |NTLM|NTLM (NT LAN Manager) 認証です。|  
 |Windows|Windows 認証です。|  
 |証明書|証明書を使用して実行される認証です。|  
@@ -230,4 +230,4 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 - [資格情報の種類の選択](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [カスタム バインドを使用したセキュリティ機能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [セキュリティ動作](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

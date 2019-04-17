@@ -1,17 +1,17 @@
 ---
-title: ハイブリッド クラウドのシナリオへの移行します。
+title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |ハイブリッド クラウドのシナリオへの移行します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147347"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612577"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウドのシナリオへの移行します。
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 
 一部の組織や企業は、Microsoft Azure などのパブリック クラウドにアプリケーションの一部または規制や独自のポリシーのための他のパブリック クラウドを移行できません。 ただし、すべての組織がパブリック クラウドとその他のアプリケーションをオンプレミスでのアプリケーションの一部がメリットが高くなります。 混在する環境がさまざまなプラットフォームやパブリック クラウドとオンプレミス環境で使用するテクノロジにより環境での過剰な複雑さを招くことができます。
 
@@ -49,23 +49,23 @@ Microsoft Azure Stack Development Kit は、評価し、Azure Stack の学習に
 
 -   **Azure のハイブリッド クラウド**
 
-    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    <https://azure.microsoft.com/overview/hybrid-cloud/>
 
 -   **Azure Stack**
 
-    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
+    <https://azure.microsoft.com/overview/azure-stack/>
 
 -   **Windows コンテナーの active Directory サービス アカウントします。**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
 -   **Active Directory のサポートによってコンテナーを作成します。**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
 -   **Azure Hybrid Benefit のライセンス**
 
-    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[前へ](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

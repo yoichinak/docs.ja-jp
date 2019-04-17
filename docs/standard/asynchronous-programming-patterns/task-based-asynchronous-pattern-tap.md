@@ -80,8 +80,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  [!code-csharp[Conceptual.TAP#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#2)]
  [!code-vb[Conceptual.TAP#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#2)]  
   
- 
-  `FindFilesAsync` メソッドが特定の検索パターンに合ったすべてのファイルのリストを返す場合は、進行状況のコールバックで、完了した作業の割合の見積りに加え、現在の部分的な結果セットを示すことが考えられます。  これは、タプルで行ったり、  
+ `FindFilesAsync` メソッドが特定の検索パターンに合ったすべてのファイルのリストを返す場合は、進行状況のコールバックで、完了した作業の割合の見積りに加え、現在の部分的な結果セットを示すことが考えられます。  これは、タプルで行ったり、  
   
  [!code-csharp[Conceptual.TAP#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#3)]
  [!code-vb[Conceptual.TAP#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#3)]  

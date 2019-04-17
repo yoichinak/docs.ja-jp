@@ -4,12 +4,12 @@ description: 実際の運用アプリケーションでは、デプロイし、�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466401"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613701"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -115,13 +115,13 @@ Azure 開発用のスペースは、分離では、チーム メンバーの邪�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Azure Kubernetes Service (AKS) の使用の開始** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes。** 公式サイト。 \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
 ## <a name="using-azure-service-fabric"></a>Azure Service Fabric の使用
 
@@ -211,7 +211,7 @@ Service Fabric のメッシュでホストされているアプリケーショ�
 
 Service Fabric Mesh の背後には、何千ものマシンで構成されるクラスターがあります。 クラスターのすべての操作は、開発者には表示されません。 ユーザーは、コンテナーをアップロードし、必要なリソース、可用性の要件、リソース制限を単純に指定するだけです。 Service Fabric Mesh は、アプリケーション開発で要求されたインフラストラクチャを自動的に割り当て、インフラストラクチャの障害を処理し、アプリケーションの高可用性を保証します。 ユーザーは、インフラストラクチャではなく、アプリケーションの正常性と応答性のみを考慮します。
 
-詳細については、、[ドキュメントの Service Fabric のメッシュ](https://docs.microsoft.com/azure/service-fabric-mesh/)を参照してください。
+詳細については、次を参照してください。、[ドキュメントの Service Fabric のメッシュ](https://docs.microsoft.com/azure/service-fabric-mesh/)します。
 
 ## <a name="choosing-orchestrators-in-azure"></a>Azure でオーケストレーターを選ぶ
 

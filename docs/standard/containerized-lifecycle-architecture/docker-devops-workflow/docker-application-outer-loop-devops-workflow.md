@@ -1,17 +1,17 @@
 ---
-title: Docker アプリケーションの外側のループ DevOps ワークフローの手順を実行します。
+title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
 description: DevOps ワークフローの「外側のループ」手順を説明します
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462982"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613019"
 ---
-# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順を実行します。
+# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順
 
 図 5-1 は、DevOps の外側のループのワークフローを構成する手順の説明、エンド ツー エンドの図を表示します。
 
@@ -90,13 +90,13 @@ Visual Studio の Azure DevOps サービスには、ビルド (&)、CI/CD パイ
 > [!情報] をクリックし、Azure DevOps サービスの Docker CI のアセンブリについての詳細はパイプラインし、チュートリアルの表示を読み取り、これらのサイトを参照してください。
 >
 > - Docker コンテナーとして、Visual Studio Team Services (今すぐ Azure DevOps サービス) エージェントを実行します \。
->   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Azure DevOps サービスを使用した .NET Core Linux Docker イメージを構築します \。
->   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 >
 > - Docker サポートし、マシンを構築する Linux ベースの Visual Studio チーム サービスの構築: \
->   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>統合、テスト、およびマルチ コンテナー Docker アプリケーションの検証
 
@@ -138,7 +138,7 @@ Docker タスクを使用して、定義したサービスのイメージのセ�
 
 **図 5-5** Azure DevOps サービスを使用して Docker レジストリにカスタム イメージを発行する
 
-> [!情報] Azure Container Registry の詳細については、<https://aka.ms/azurecontainerregistry>を参照してください。
+> [!情報] Azure Container Registry の詳細については、次を参照してください。<https://aka.ms/azurecontainerregistry>します。
 
 ## <a name="step-4-cd-deploy"></a>手順 4: CD、展開
 
