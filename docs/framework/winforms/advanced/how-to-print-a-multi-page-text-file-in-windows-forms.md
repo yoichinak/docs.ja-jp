@@ -58,7 +58,7 @@ Windows ベースのアプリケーションでは、テキストを印刷する
   
 -   System、System.Windows.Forms、System.Drawing の各アセンブリへの参照。  
   
--   Visual Basic または Visual C# 向けにコマンドラインからこの例を構築する方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) または [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 この例は、新しいプロジェクトにコードを貼り付けることによって Visual Studio で構築することもできます。  
+-   Visual Basic または Visual C# 向けにコマンドラインからこの例を構築する方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) または [csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。この例は、新しいプロジェクトにコードを貼り付けることによって Visual Studio で構築することもできます。 
   
 ## <a name="see-also"></a>関連項目
 
