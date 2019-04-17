@@ -4,20 +4,20 @@ description: Microsoft のツールを使用して Microsoft プラットフォ�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663926"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672304"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
-*Microsoft Visual Studio、Azure DevOps サービス、Team Foundation Server、および Application Insights での開発と IT 運用チーム プロジェクトを管理し、迅速にビルド、テスト、および展開するツールを提供する包括的なエコシステムを提供します。コンテナー化されたアプリケーション。*
+*Microsoft Visual Studio、Azure DevOps サービス、Team Foundation Server、および Azure Monitor のテスト、および展開の開発と IT 運用チームのプロジェクト管理と迅速にビルドすると、ツールを提供するコンテナー化包括的なエコシステムを提供します。アプリケーション。*
 
 Visual Studio Team Foundation Server、オンプレミス、と共に、クラウドでの Azure DevOps サービスを開発チームできます生産的ビルド、テスト、およびコンテナー化されたアプリケーションを Windows または Linux を対象とするリリースします。
 
-マイクロソフトのツールは、コンテナー化されたアプリケーションの特定の実装のパイプラインを自動化できます: Docker、.NET Core、またはその他のプラットフォームで任意の組み合わせ、グローバル ビルドと継続的インテグレーション (CI) および Azure DevOps サービスまたはチームでのテストからFoundation Server に継続的デプロイ (CD) Docker 環境 (開発、ステージング、運用)、および開発チームが Application Insights でのサービスに関する分析情報を送信します。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
+マイクロソフトのツールは、コンテナー化されたアプリケーションの特定の実装のパイプラインを自動化できます: Docker、.NET Core、またはその他のプラットフォームで任意の組み合わせ、グローバル ビルドと継続的インテグレーション (CI) および Azure DevOps サービスまたはチームでのテストからFoundation Server に継続的デプロイ (CD) Docker 環境 (開発、ステージング、運用)、および Azure Monitor を通じて開発チームにサービスに関する分析情報を送信します。 すべてのコードのコミットでビルド (CI) を開始して、特定のコンテナー化された環境 (CD) に自動的にサービスを展開できます。
 
 開発者およびテスト担当者は、Microsoft Azure のテンプレートを使用して、Docker に基づく運用環境のような開発とテストの環境を、簡単かつ迅速にプロビジョニングできます。
 

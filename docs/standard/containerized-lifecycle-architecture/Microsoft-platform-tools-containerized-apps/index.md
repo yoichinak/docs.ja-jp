@@ -4,12 +4,12 @@ description: Docker アプリケーションのライフ サイクルをサポ�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680194"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672265"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft プラットフォームとコンテナー化アプリ用ツールの概要
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680194"
 
 図 3-1 は、複数のチーム (アプリの開発、DevOps インフラストラクチャ プロセス、および IT 管理および運用) によって提供される作業の種類で分類された Docker アプリのライフ サイクルの主要な柱を示しています。 通常、企業では、それぞれの領域を代表する "ペルソナ" のプロファイルは異なります。 そのため、スキルも異なります。
 
-![Microsoft のツールです。 開発/デザイン ワークロード。Windows、VS および VS Code、.NET Core, Azure Kubernetes サービスの docker エンジンです。 出荷/ビルド/テスト ワークロード。Azure DevOps, は Team Foundation Server、Docker CLI, Azure Kubernetes サービスです。 ワークロードの実行/モニター/管理。Application Insights、Azure Portal の Azure Kubernetes サービス、Service Fabric、他のオーケストレーターです。](./media/image1.png)
+![Microsoft のツールです。 開発/デザイン ワークロード。Windows、VS および VS Code、.NET Core, Azure Kubernetes サービスの docker エンジンです。 出荷/ビルド/テスト ワークロード。Azure DevOps, は Team Foundation Server、Docker CLI, Azure Kubernetes サービスです。 ワークロードの実行/モニター/管理。Azure Monitor、Azure Portal の Azure Kubernetes サービス、Service Fabric、他のオーケストレーターです。](./media/image1.png)
 
 **図 3-1.** Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフ サイクルの主要な柱
 
@@ -51,7 +51,7 @@ Microsoft プラットフォームとコンテナー化された Docker アプ�
 
   - **オープン ソース ツール** オーケストレーション エンジン用の標準 API エンドポイントを公開するため、AKS、最も人気のあるツールは、AKS と互換性があるし、ほとんどの場合は、ボックスから機能、ビジュアライザー、監視などコマンドライン ツール、および利用可能になった後のツール。
 
-  - **Application Insights**運用環境のあらゆる側面を監視するには、Azure のグローバルコンテンツサプライします。 運用環境の Docker アプリケーションを監視するには、単に SDK サービスをセットアップ、アプリケーションからシステムによって生成されたログ データを取得できます。
+  - **Azure Monitor**運用環境のあらゆる側面を監視するには、Azure のソリューションです。 運用環境の Docker アプリケーションを監視するには、単に SDK サービスをセットアップ、アプリケーションからシステムによって生成されたログ データを取得できます。
 
 このように、Microsoft は、エンド ツー エンドのコンテナー化 Docker アプリケーションのライフ サイクルの完全な基盤を提供します。 ただし、*の製品とテクノロジを必要に応じて選択し、既存の統合を許可する一連のツールやプロセス*します。 広範囲なアプローチの柔軟性、および機能の綿密さによる強みにより、Microsoft は、コンテナー化 Docker アプリケーション開発において強力な位置を築いています。
 
