@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306600"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE を使ってイベントをサブスクライブするには  
   
-1.  **デザイン** ビューに **[プロパティ]** ウィンドウが表示されない場合は、イベント ハンドラーを作成するフォームまたはコントロールを右クリックして、**[プロパティ]** を選びます。  
+1. **デザイン** ビューに **[プロパティ]** ウィンドウが表示されない場合は、イベント ハンドラーを作成するフォームまたはコントロールを右クリックして、**[プロパティ]** を選びます。  
   
-2.  **[プロパティ]** ウィンドウの **[イベント]** ボタンをクリックします。  
+2. **[プロパティ]** ウィンドウの **[イベント]** ボタンをクリックします。  
   
-3.  作成するイベントをダブルクリックします (`Load` イベントなど)。  
+3. 作成するイベントをダブルクリックします (`Load` イベントなど)。  
   
      Visual C# によって空のイベント ハンドラー メソッドを作成され、コードに追加されます。 または、**コード** ビューを使って手動でコードを追加することもできます。 たとえば、次のコード行では、`Form` クラスで `Load` イベントが発生すると呼び出されるイベント ハンドラー メソッドを宣言しています。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "56981804"
   
 ### <a name="to-subscribe-to-events-programmatically"></a>プログラムでイベントをサブスクライブするには  
   
-1.  シグネチャがイベントのデリゲート シグネチャと一致するイベント ハンドラー メソッドを定義します。 たとえば、イベントが <xref:System.EventHandler> デリゲート型に基づいている場合は、次のコードがメソッド スタブを表します。  
+1. シグネチャがイベントのデリゲート シグネチャと一致するイベント ハンドラー メソッドを定義します。 たとえば、イベントが <xref:System.EventHandler> デリゲート型に基づいている場合は、次のコードがメソッド スタブを表します。  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ ms.locfileid: "56981804"
     }  
     ```  
   
-2.  加算代入演算子 (`+=`) を使って、イベントにイベント ハンドラーをアタッチします。 次の例では、`publisher` オブジェクトに `RaiseCustomEvent` という名前のイベントがあるものとします。 イベントをサブスクライブするには、サブスクライバー クラスがそのパブリッシャー クラスを参照する必要があることに注意してください。  
+2. 加算代入演算子 (`+=`) を使って、イベントにイベント ハンドラーをアタッチします。 次の例では、`publisher` オブジェクトに `RaiseCustomEvent` という名前のイベントがあるものとします。 イベントをサブスクライブするには、サブスクライバー クラスがそのパブリッシャー クラスを参照する必要があることに注意してください。  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  

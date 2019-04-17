@@ -4,12 +4,12 @@ description: .NET Framework プロジェクトのサービス参照の追加と�
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197075"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>WCF Web Service Reference Provider ツールを使用する
 
@@ -54,7 +54,6 @@ ms.locfileid: "53245575"
     
     3c. **[次へ]** ボタンをクリックし、**[データ型のオプション]** と **[クライアント オプション]** ページを開きます。 または、既定のオプションを使用するには、**[完了]** ボタンをクリックします。
 
-
 4. **[データ型のオプション]** フォームを使用すると、生成されるサービス参照の構成設定を絞り込むことができます。
 
 ![Visual Studio の .NET Core の [データ型のオプション] タブ](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ ms.locfileid: "53245575"
 プロジェクトの依存関係の数やその他のシステム パフォーマンスの要因によっては、型の情報が読み込まれるときに遅延が発生することがあります。 **[参照されたアセンブリで型を再利用]** チェック ボックスがオフになっていないと、**[完了]** ボタンは読み込み中に無効になります。
 
 5. 完了したら、**[完了]** をクリックします。
-
 
 進行状況を表示している間、ツールでは以下の処理が実行されます。
 

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a02a60668ae6caaad1940395822758331b93f550
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 755063ca6da29a2e4733dd653306192ac0434ec0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119796"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610601"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request メソッド
 
@@ -29,7 +29,8 @@ ms.locfileid: "59119796"
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>構文
-```
+
+```cpp
 HRESULT Request([in] ULONG32 reqCode,
     [in] ULONG32 inBufferSize,
     [in, size_is(inBufferSize)] BYTE* inBuffer,
@@ -60,10 +61,8 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし   
-**ライブラリ:** なし  
-**.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**ヘッダー:** None**ライブラリ。** None **.NET Framework のバージョン。** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>関連項目
 

@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214872"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611537"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 関数
+
 指定したコンピューターにある WMI 名前空間との接続が DCOM 経由で作成されます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>パラメーター
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in]有効なへのポインター`BSTR`パスワードを格納しています。 A`null`現在のセキュリティ コンテキストを示します。 空の文字列 ("")、有効な長さ 0 のパスワードを示します。
 
 `strLocale`\
-[in]有効なへのポインター`BSTR`情報の取得を適切なロケールを示します。 マイクロソフト ロケールの識別子、文字列の形式は"MS\_*xxx*"ここで、 *xxx*文字列がロケール識別子 (LCID) を示す 16 進数形式です。 無効なロケールが指定されているかどうか、メソッドを返します`WBEM_E_INVALID_PARAMETER`Windows 7、サーバーの既定のロケールが代わりに使用される場合は除きます。 場合 ' null 1、現在のロケールを使用します。 
- 
+[in]有効なへのポインター`BSTR`情報の取得を適切なロケールを示します。 マイクロソフト ロケールの識別子、文字列の形式は"MS\_*xxx*"ここで、 *xxx*文字列がロケール識別子 (LCID) を示す 16 進数形式です。 無効なロケールが指定されているかどうか、メソッドを返します`WBEM_E_INVALID_PARAMETER`Windows 7、サーバーの既定のロケールが代わりに使用される場合は除きます。 場合 ' null 1、現在のロケールを使用します。
+
 `lSecurityFlags`\
 [in]渡すフラグ、`ConnectServerWmi`メソッド。 このパラメーターにゼロ (0) の値の結果への呼び出しで`ConnectServerWmi`サーバーへの接続が確立された後にのみを返します。 これは、結果、応答していない無期限に、サーバーが切断されたかどうか、アプリケーション。 その他の有効な値は次のとおりです。
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*ドメイン名* | NT LAN Manager 認証を使用して、このパラメーターには、NTLM ドメイン名が含まれています。 |
 
 `pCtx`\
-[in]このパラメーターは、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)オブジェクトが 1 つまたは複数の動的クラス プロバイダーが必要です。 
+[in]このパラメーターは、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)オブジェクトが 1 つまたは複数の動的クラス プロバイダーが必要です。
 
 `ppNamespace`\
 [out]ポインターを受け取る関数が戻るとき、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトを指定した名前空間にバインドします。 をポイントに設定されている`null`エラーがあるとします。
@@ -112,8 +114,8 @@ HRESULT ConnectServerWmi (
 
  **ヘッダー:** WMINet_Utils.idl
 
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

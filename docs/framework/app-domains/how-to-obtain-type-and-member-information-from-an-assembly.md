@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef3fbb7af3097a67cb39f0c3b2ee294b86f0600e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f9d01715a9635b276ca87d94082bb4d3820084e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138880"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>方法: アセンブリから型およびメンバーの情報を取得する
 <xref:System.Reflection> 名前空間には、アセンブリから情報を取得するための多くのメソッドがあります。 このセクションでは、これらのメソッドの 1 つを実行する例を示します。 詳細については、「[リフレクションの概要](../../../docs/framework/reflection-and-codedom/reflection.md)」を参照してください。  
@@ -29,6 +29,7 @@ ms.locfileid: "54701600"
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション ドメインを使用したプログラミング](./application-domains.md#programming-with-application-domains)
 - [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)

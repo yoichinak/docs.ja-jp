@@ -1,17 +1,17 @@
 ---
-title: 監視と遠隔測定でアプリを最新化します。
+title: 監視と製品利用統計情報でアプリを最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |監視と遠隔測定でアプリを最新化します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147477"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613877"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と遠隔測定でアプリを最新化します。
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と製品利用統計情報でアプリを最新化する
 
 運用環境でアプリケーションを実行するときに、アプリケーションの実行状況に関する洞察があることが重要です。 高レベルが高いでしょうか。 ユーザー エラーが発生、または安定性と信頼性の高いアプリケーションは、ですか。 豊富なパフォーマンスの監視、強力なアラート、およびダッシュ ボード、アプリケーションが使用可能なと予期されるパフォーマンスであることを確認する必要があります。 また、かどうかは、問題をすばやく確認するには、顧客の数が影響を受けてし、見つけて、問題を修正、根本原因分析、を決定できる必要があります。
 
@@ -69,31 +69,31 @@ Log Analytics コンテナー監視ソリューションを使用できます。
 
 -   **Microsoft Azure での監視の概要**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Application Insights とは何ですか。**
+-   **Application Insights とは何か?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Log Analytics とは何ですか。**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Log Analytics のコンテナー監視ソリューション**
+-   **Azure Monitor でのコンテナー監視ソリューション**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Azure Monitor の概要**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Operations Management Suite (OMS) とは何ですか。**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **OMS を使用して Service Fabric で Windows Server コンテナーの監視**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[前へ](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

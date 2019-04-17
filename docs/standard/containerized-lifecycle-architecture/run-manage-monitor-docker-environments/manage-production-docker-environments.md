@@ -1,17 +1,17 @@
 ---
-title: 運用環境の Docker 環境を管理します。
+title: Docker の実稼働環境を管理する
 description: コンテナー ベースの実稼働環境を管理する重要な点を把握するを取得します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836618"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672101"
 ---
-# <a name="manage-production-docker-environments"></a>運用環境の Docker 環境を管理します。
+# <a name="manage-production-docker-environments"></a>Docker の実稼働環境を管理する
 
 クラスターの管理とオーケストレーションは、ホストのグループを制御するためのプロセスです。 追加して、クラスターでは、ホストとコンテナーの現在の状態に関する情報を取得し、開始およびプロセスの停止からホストを削除する必要があります。 クラスターの管理とオーケストレーションは、スケジューラは、クラスター内の各ホストへのアクセスをサービスのスケジュールを設定するにがある必要なためにのスケジューリングに密接に関連付けします。 このため、両方の目的で、同じツールがよく使用されます。
 
@@ -30,7 +30,7 @@ Azure 仮想マシン スケール セットを使用してこれらのクラス
 | [Azure Monitor for Containers](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | 専用の azure の Kubernetes 管理ツール | Azure Kubernetes サービス (AKS) |
 | [Kubernetes Web UI (ダッシュ ボード)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes の管理ツールでは監視したり、ローカルの Kubernetes クラスターの管理 | Azure Kubernetes Service (AKS)<br/>ローカルの Kubernetes |
 | [Service Fabric 用に azure ポータル](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカルの開発、およびその他のクラウドでの Service Fabric クラスターを管理するためのオンラインやデスクトップのバージョン | Azure Service Fabric |
-| [コンテナー監視 (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理 y がソリューションを監視します。 使って Kubernetes クラスターを管理できます[コンテナー用の Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)します。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS、および他のユーザー。 |
+| [コンテナー (Azure Monitor) の監視](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理 y がソリューションを監視します。 使って Kubernetes クラスターを管理できます[コンテナー用の Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)します。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS、および他のユーザー。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

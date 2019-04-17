@@ -2,12 +2,12 @@
 title: Visual Studio Code での F# の概要します。
 description: Visual Studio Code および ionide の概要のプラグインのスイートで F# を使用する方法について説明します。
 ms.date: 12/23/2018
-ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846572"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612889"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要します。
 
@@ -153,6 +153,7 @@ REPL 駆動型開発の次の手順では、作業コード F# 実装ファイ�
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
+
 テキストの両方の行を選択して、FSI でこれらの行を実行するには、Alt + Enter キーを押します。 FSI のプロセスに Pig Latin ライブラリのコンテンツを読み込むこれらと`open`、`ClassLibraryDemo`名前空間の機能にアクセスできるようにします。
 
 次に、FSI ウィンドウで、使用して、関数を呼び出して、`PigLatin`前に定義したモジュール。

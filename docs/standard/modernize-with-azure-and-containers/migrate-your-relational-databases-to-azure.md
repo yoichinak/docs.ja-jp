@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 600c47b6b0ccaf704c8e7b638c759e990acaaacf
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677553"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611420"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースを azure に移行します。
 
@@ -102,29 +102,29 @@ Azure SQL Database には次の利点があります。
 
 その他のデータベース (IBM DB2 など) があり、リフト アンド シフトのアプローチを選択した場合より複雑なデータ移行を実行する意思がないを引き続き Azure では、IaaS Vm としてこれらのデータベースを使用する可能性があります。 複雑なデータ移行は、新しいスキーマとさまざまなプログラミング ライブラリで別のデータベース型に移行するため、追加の作業が必要です。
 
-Azure Database Migration Service を使用してデータベースを移行する方法については、[Azure SQL Database マネージ インスタンスと Azure Database Migration Service を迅速にクラウドに](https://channel9.msdn.com/Events/Build/2017/P4008)を参照してください。
+Azure Database Migration Service を使用してデータベースを移行する方法については、次を参照してください。 [Azure SQL Database マネージ インスタンスと Azure Database Migration Service を迅速にクラウドに](https://channel9.msdn.com/Events/Build/2017/P4008)します。
 
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **クラウド SQL Server オプションを選択します。Azure SQL Database (PaaS) または Azure VM (IaaS) 上の SQL Server**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
 - **Azure SQL DB マネージ インスタンスとデータベース移行サービスで迅速にクラウドに**
 
-    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    <https://channel9.msdn.com/Events/Build/2017/P4008>
 
 - **SQL Server データベースのクラウド内の SQL Database への移行**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
 - **Azure SQL Database**
 
-    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    <https://azure.microsoft.com/services/sql-database/?v=16.50>
 
 - **Virtual machines における SQL Server**
 
-    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
 > [!div class="step-by-step"]
 > [前へ](lift-and-shift-existing-apps-azure-iaas.md)

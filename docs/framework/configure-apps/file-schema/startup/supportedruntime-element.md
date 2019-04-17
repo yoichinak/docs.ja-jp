@@ -9,16 +9,16 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 93e69290062e1b82dddbb68f7a139763695a42fb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 98284b09c4f2b88cd434d66740ea068a7244e26d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271773"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613997"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > 要素
 
-アプリケーションでサポートされる共通言語ランタイムのバージョンを指定します。 バージョン 1.1 以降の .NET Framework で構築されたすべてのアプリケーションでは、この要素を使用する必要があります。  
+どの共通言語ランタイムのバージョンと、必要に応じて、アプリケーションの .NET Framework バージョンの指定をサポートしています。  
   
 [\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
@@ -46,7 +46,9 @@ ms.locfileid: "55271773"
 > [!NOTE]
 >  使用する場合、 [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)構成ファイルを指定する関数を使用する必要があります、`<requiredRuntime>`ランタイムのすべてのバージョンの要素。 `<supportedRuntime>`を使用する場合、要素は無視されます[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)します。  
   
-NET Framework 1.1 から 3.5 までのランタイムの複数のバージョンをサポートするアプリケーションでは、ランタイムの複数のバージョンをサポートする場合は、最初の要素で最も優先度の高いバージョンを指定し、最後の要素で最も優先度の低いバージョンを指定する必要があります。 .NET Framework 4.0 以降のバージョンをサポートするアプリケーションでは、`version` 属性は .NET Framework 4 以降のバージョンで共通の CLR バージョンを示します。`sku` 属性は、アプリケーションが対象とする単一の .NET Framework バージョンを示します。  
+NET Framework 1.1 から 3.5 までのランタイムの複数のバージョンをサポートするアプリケーションでは、ランタイムの複数のバージョンをサポートする場合は、最初の要素で最も優先度の高いバージョンを指定し、最後の要素で最も優先度の低いバージョンを指定する必要があります。 .NET Framework 4.0 またはそれ以降のバージョンをサポートするアプリ、`version`属性は .NET Framework 4 およびそれ以降のバージョンに一般的では、CLR のバージョンを示します、`sku`属性は 1 つの .NET Framework バージョンを示しますが、アプリケーションが対象とします。 
+
+場合、  **\<supportedRuntime >** を持つ要素、`sku`属性が、構成ファイルに存在し、インストールされている .NET Framework のバージョンが低い指定のサポートされているバージョンのアプリケーション実行に失敗し、代わりに、サポートされているバージョンをインストールするよう求めるメッセージが表示されます。 それ以外の場合、アプリケーションがインストール済みのバージョンで実行しようとしましたが、そのバージョンと完全に互換性がない場合に予期しない動作可能性があります。 (.NET Framework のバージョン間の互換性の相違点、次を参照してください[、.NET Framework アプリケーションの互換性](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility)。)。そのため、エラーの診断を簡単にアプリケーション構成ファイルには、この要素を含めることをお勧めします。 (新しいプロジェクトを既に作成するときに、Visual Studio によって自動的に生成する構成ファイルが含まれますが。)
   
 > [!NOTE]
 >  アプリケーションがなど、レガシ アクティブ化パスを使用するかどうか、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、それらのパスを以前のバージョンではなく、CLR の version 4 をアクティブ化して、アプリケーションが、でビルドされた場合または[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]依存していますが、以前のバージョンの .NET Framework でビルドされた混合モードのアセンブリでないを指定するための十分な[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]でサポートされているランタイムの一覧。 さらに、 [ \<startup > 要素](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)、構成ファイルで設定する必要があります、`useLegacyV2RuntimeActivationPolicy`属性を`true`します。 ただし、この属性を `true` に設定することは、以前のバージョンの .NET Framework でビルドされたすべてのコンポーネントが、それらのビルドに使用されたランタイムではなく、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] を使用して実行されることを意味します。  

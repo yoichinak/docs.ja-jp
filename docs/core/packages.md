@@ -4,12 +4,12 @@ description: パッケージ、メタパッケージ、フレームワークの�
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090499"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>パッケージ、メタパッケージ、フレームワーク
 
@@ -97,7 +97,6 @@ ms.locfileid: "53168820"
 フレームワークとパッケージの間には双方向のリレーションシップがあります。 リレーションシップの 1 番目の部分は、特定のフレームワーク (`netstandard1.3` など) で使用可能な API を定義することです。 `netstandard1.3` (または`netstandard1.0` のような互換性のあるフレームワーク) を対象とするパッケージは、`netstandard1.3` で使用可能な API を定義します。 循環定義のように思われるかもしれませんが、そうではありません。 "パッケージ ベース" であるため、フレームワークの API 定義は、パッケージから取得されます。 フレームワーク自体で、API の定義は行われません。
 
 リレーションシップの 2 番目の部分は、資産の選択です。 パッケージには、複数のフレームワークの資産を含めることができます。 パッケージ セットおよび/またはメタパッケージ セットへの参照を指定する場合は、選択すべき資産 (たとえば、`net46` または `netstandard1.3`) を決定するためにフレームワークが必要です。 正しい資産を選択することが重要です。 たとえば、`net46` 資産が .NET Framework 4.0 または .NET Core 1.0 と互換性を持たない可能性があります。
-
 
 このリレーションシップは次の図のようになります。 *API* は、*フレームワーク*を対象とし、定義します。 *フレームワーク*は、*資産の選択*で使用されます。 *資産* は、API を提供します。
 

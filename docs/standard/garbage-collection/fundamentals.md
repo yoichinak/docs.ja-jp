@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712475"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826601"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -261,11 +261,10 @@ ms.locfileid: "57712475"
   
  バックグラウンド ガベージ コレクションでは、バックグラウンド ガベージ コレクションの実行中に短期ガベージ コレクションが発生する可能性があるため、同時実行ガベージ コレクションによる割り当ての制限が解除されます。 つまり、バックグラウンド ガベージ コレクションで短期ジェネレーションの使用されなくなったオブジェクトを削除でき、また、ジェネレーション 1 のガベージ コレクションの実行中に必要に応じてヒープを拡張することもできます。  
   
- 次の図は、ワークステーション上の別々の専用スレッドで実行されるバックグラウンド ガベージ コレクションを示しています。  
+次の図は、ワークステーション上の別々の専用スレッドで実行されるバックグラウンド ガベージ コレクションを示しています。
   
- ![バックグラウンド ワークステーション ガベージ コレクション](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-バックグラウンド ワークステーション ガベージ コレクション  
-  
+ ![バックグラウンド ワークステーション ガベージ コレクションを示す図。](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [ページのトップへ](#top)  
   
 <a name="background_server_garbage_collection"></a>   
@@ -274,8 +273,7 @@ ms.locfileid: "57712475"
   
  次の図は、サーバー上の別々の専用スレッドで実行されるバックグラウンド ガベージ コレクションを示しています。  
   
- ![バックグラウンド サーバー ガベージ コレクション](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-バックグラウンド サーバー ガベージ コレクション  
+ ![バックグラウンド サーバー ガベージ コレクションを示す図。](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>関連項目
 

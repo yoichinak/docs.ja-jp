@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4daa08ce4bbcfe5a7242f19506811e422d0477b7
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 4a31310551cea4250275843da3eae927bad23840
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236139"
 ---
 ### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>.NET Framework 4.7.2 で "dataAnnotations:dataTypeAttribute:disableRegEx" アプリ設定が既定で有効になっている
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760742"
 |スコープ|マイナー|
 |Version|4.7.2|
 |型|ランタイム|
-

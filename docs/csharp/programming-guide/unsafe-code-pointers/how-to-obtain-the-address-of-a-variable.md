@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b12d3bf99f32a3526bd4a1ec8c49b1fd88afd68a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490559"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832347"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>方法: 変数のアドレスを取得する (C# プログラミング ガイド)
 
@@ -23,7 +23,7 @@ int number;
 int* p = &number; //address-of operator &  
 ```  
   
- address-of 演算子は、変数にのみ適用できます。 変数が移動可能な変数である場合、[fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)を使用して変数のアドレスを取得する前に、一時的に変数を固定できます。  
+ address-of 演算子は、変数にのみ適用できます。 変数が移動可能な変数である場合、[fixed ステートメント](../../../csharp/language-reference/keywords/fixed-statement.md)を使用して変数のアドレスを取得する前に、一時的に変数を固定できます。 移動可能変数の詳細については、「[固定と移動可能変数](/dotnet/csharp/language-reference/language-specification/unsafe-code#fixed-and-moveable-variables)」を参照してください。 
   
  ユーザーは変数が初期化されていることを確認する必要があります。 変数が初期化されていない場合、コンパイラはエラー メッセージを発行しません。  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: efe8a2dd98865f6a24b65ce0f08eb0c574b708f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234438"
 ---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>タスク全体の CurrentCulture と CurrentUICulture のフロー
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761092"
 |Version|4.6|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType></li></ul>|
-
