@@ -57,7 +57,7 @@ ms.locfileid: "59324988"
         </Catalog>  
     ```  
   
-     [方法: ファイル、文字列、または Stream から XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+     [方法: ファイル、文字列、または Stream から XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)。  
   
 3. 、元の XML ドキュメントを作成するコードの後に、すべてを取得する次のコードを追加、\<書籍 > オブジェクトの要素を HTML ドキュメントに変換します。 一覧\<Book > 要素のコレクションを返す LINQ クエリを使用して作成<xref:System.Xml.Linq.XElement>変換後の HTML が含まれているオブジェクト。 埋め込み式を使用すると、新しい XML 形式でソース ドキュメントからの値を入力します。  
   
