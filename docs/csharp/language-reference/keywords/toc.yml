@@ -2,7 +2,7 @@ items:
 - name: C# のキーワード
   href: index.md
   items:
-  - name: 種類
+  - name: 型
     href: types.md
     items:
     - name: 値型
