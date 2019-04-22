@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
 ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517448"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>方法: データ サービス クエリ (WCF Data Services) を実行します。

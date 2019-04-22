@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
 ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090096"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>方法: ドラッグされた GridView 列ヘッダーのスタイルを作成する
@@ -36,6 +36,6 @@ ms.locfileid: "59090096"
 - <xref:System.Windows.Controls.GridViewColumnHeaderRole>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [方法のトピック](listview-how-to-topics.md)
+- [方法トピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)
 - [GridView の概要](gridview-overview.md)

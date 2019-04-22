@@ -3,10 +3,10 @@ title: '方法: 読み取りし、書き込みでエンコードされたドキ�
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
 ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825197"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>方法: 読み取りし、書き込みでエンコードされたドキュメント (Visual Basic)

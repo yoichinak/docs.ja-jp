@@ -3,16 +3,16 @@ title: '方法: Office Open XML ドキュメント (Visual Basic) から段落�
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
 ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828577"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメント (Visual Basic) から段落を取得します。
 このトピックでは、Office Open XML ドキュメントを開き、そのドキュメント内のすべての段落のコレクションを取得する例について説明します。  
   
- Office Open XML の詳細については、[Eric White のブログ](http://www.ericwhite.com)を参照してください。  
+ Office Open XML の詳細については、次を参照してください。 [Eric White のブログ](http://www.ericwhite.com)します。  
   
 ## <a name="example"></a>例  
  この例では、Office Open XML パッケージを開き、Open XML パッケージ内のリレーションシップを使用してドキュメントとスタイル パーツを検索します。 次に、ドキュメントに対してクエリを実行して、段落 <xref:System.Xml.Linq.XElement> ノード、各段落のスタイル名、および各段落のテキストを含む匿名型のコレクションを射影します。  

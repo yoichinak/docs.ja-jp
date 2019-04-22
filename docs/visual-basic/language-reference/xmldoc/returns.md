@@ -6,10 +6,10 @@ helpviewer_keywords:
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
 ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827166"
 ---
 # <a name="returns-visual-basic"></a>\<返します > (Visual Basic)

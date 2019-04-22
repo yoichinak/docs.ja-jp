@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
 ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835064"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
@@ -26,7 +26,7 @@ ms.locfileid: "58835064"
   
 |用語|定義|  
 |---|---|  
-|+ &#124; -|省略可能です。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
+|+ &#124; -|任意。 既定では `-warnaserror-` は有効です。警告が発生しても、コンパイラは出力ファイルを生成します。 `-warnaserror` オプションは `-warnaserror+` と同じで、警告がエラーとして扱われます。|  
 |`numberList`|省略可能です。 `-warnaserror` オプションを適用する、警告 ID 番号のコンマ区切りのリスト。 警告 ID が指定されていない場合、`-warnaserror`オプションはすべての警告に適用されます。|  
   
 ## <a name="remarks"></a>Remarks  

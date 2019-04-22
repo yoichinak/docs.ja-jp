@@ -1,5 +1,5 @@
 ---
-title: <add> 要素の<listeners>の <trace>
+title: <add> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089583"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<追加 > 要素の\<リスナー > の\<トレース >
@@ -39,7 +39,7 @@ ms.locfileid: "59089583"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**種類**|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
+|**type**|必須の属性です。<br /><br /> リスナーの種類を指定します。 指定された条件に一致する文字列を使用する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
 |**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
 |**name**|省略可能な属性です。<br /><br /> リスナーの名前を指定します。|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "59089583"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。|  
   
 ### <a name="parent-elements"></a>親要素  
   

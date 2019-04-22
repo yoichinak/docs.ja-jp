@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 72ed265284db9d112a0b1e3b966d206dd7f3d1cc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464893"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612161"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -112,10 +112,10 @@ IoC コンテナーに型を登録する場合の最も一般的なパターン�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Matthew King。Scrutor でのサービスの登録** \
-  [https://www.mking.net/blog/registering-services-with-scrutor](https://www.mking.net/blog/registering-services-with-scrutor)
+  <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang。Scrutor。** GitHub リポジトリ。 \
-  [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
+  <https://github.com/khellang/Scrutor>
 
 #### <a name="use-autofac-as-an-ioc-container"></a>Autofac を IoC コンテナーとして使用する
 
@@ -167,13 +167,13 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET Core での依存関係の挿入の概要** \
-  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac。** 公式ドキュメント。 \
-  [http://docs.autofac.org/en/latest/](http://docs.autofac.org/en/latest/)
+  <https://docs.autofac.org/en/latest/>
 
 - **ASP.NET Core IoC コンテナー サービスの有効期間と Autofac IoC コンテナー インスタンスの範囲の比較 - Cesar de la Torre** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>コマンドおよびコマンド ハンドラー パターンの実装
 
@@ -397,19 +397,19 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Mark Seemann。境界においては、アプリケーションはオブジェクト指向ではない** \
-  [https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **コマンドとイベント** \
-  [http://cqrs.nu/Faq/commands-and-events](http://cqrs.nu/Faq/commands-and-events)
+  <http://cqrs.nu/Faq/commands-and-events>
 
 - **コマンド ハンドラーの機能** \
-  [http://cqrs.nu/Faq/command-handlers](http://cqrs.nu/Faq/command-handlers)
+  <http://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard。ドメイン コマンド パターン – ハンドラー** \
-  [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
+  <https://jimmybogard.com/domain-command-patterns-handlers/>
 
 - **Jimmy Bogard。ドメイン コマンド パターン – 検証** \
-  [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
+  <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>コマンド プロセス パイプライン: コマンド ハンドラーをトリガーする方法
 
@@ -807,33 +807,33 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 - **MediatR。** GitHub リポジトリ。 \
-  [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
+  <https://github.com/jbogard/MediatR>
 
 - **MediatR と AutoMapper での CQRS** \
-  [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+  <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **コントローラーの簡略化:POST とコマンド。** \
-  [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+  <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
 - **メディエーター パイプラインでの横断的関心事への取り組み** \
-  [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+  <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS と REST: 完全な一致** \
-  [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+  <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
 - **MediatR パイプラインの例** \
-  [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+  <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
 - **MediatR と ASP.NET Core の縦方向のスライス テスト フィクスチャ** \
-  [https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
+  <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
 - **Microsoft 依存関係挿入用の MediatR 拡張機能のリリース** \
-  [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+  <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Fluent 検証
 
 - **Jeremy Skinner。FluentValidation.** GitHub リポジトリ。 \
-  [https://github.com/JeremySkinner/FluentValidation](https://github.com/JeremySkinner/FluentValidation)
+  <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
 > [前へ](microservice-application-layer-web-api-design.md)

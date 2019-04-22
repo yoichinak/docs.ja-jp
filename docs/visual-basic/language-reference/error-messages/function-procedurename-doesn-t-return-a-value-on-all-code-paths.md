@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824833"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>関数 '\<procedurename >' は、すべてのコード パスで値を返しません

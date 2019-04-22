@@ -6,10 +6,10 @@ helpviewer_keywords:
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
 ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840381"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic における変数

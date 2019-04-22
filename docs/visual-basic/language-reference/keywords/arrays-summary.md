@@ -5,10 +5,10 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 ms.assetid: 167f77d4-7cb2-4a31-9dc9-0fd0b26fda7e
 ms.openlocfilehash: 228713bc95be4096549092fcdda0e47feed30849
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832409"
 ---
 # <a name="arrays-summary-visual-basic"></a>配列の概要 (Visual Basic)

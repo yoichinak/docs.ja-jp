@@ -9,10 +9,10 @@ ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d5c80a72eef31abaacedc52c9e63d561c30cc25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085637"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink API (アンマネージ API リファレンス)
@@ -27,7 +27,7 @@ ms.locfileid: "59085637"
   
  [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
   
- [AssemblyOptions 列挙体](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
+ [AssemblyOptions 列挙型](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
   
  [CreateALink 関数](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
   

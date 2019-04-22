@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
 ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823533"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface ステートメント (Visual Basic)
@@ -59,7 +59,7 @@ End Interface
 ## <a name="remarks"></a>Remarks  
  *インターフェイス*プロパティとクラスし、構造体にするには、プロシージャが実装できるように、メンバーのセットを定義します。 インターフェイスのメンバーとその内部処理ではない署名だけを定義します。  
   
- クラスまたは構造体、インターフェイスで定義されたすべてのメンバーのコードを指定することで、インターフェイスを実装します。 最後に、アプリケーションは、そのクラスまたは構造体のインスタンスを作成するときに、オブジェクトが存在し、メモリ内で実行します。 詳細については、[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)を参照してください。  
+ クラスまたは構造体、インターフェイスで定義されたすべてのメンバーのコードを指定することで、インターフェイスを実装します。 最後に、アプリケーションは、そのクラスまたは構造体のインスタンスを作成するときに、オブジェクトが存在し、メモリ内で実行します。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)します。  
   
  `Interface` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*インターフェイスは、ソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   

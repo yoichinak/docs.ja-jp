@@ -3,12 +3,12 @@ title: .NET Core ツールでの依存関係の管理
 description: .NET Core ツールで依存関係を管理する方法について説明します。
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673874"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611927"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0 での依存関係の管理
 
@@ -46,6 +46,7 @@ MSBuild に詳しい場合は、既に存在する他の参照型と似ている
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 その後、プロジェクトを保存し、`dotnet restore` コマンドを実行して依存関係をインストールします。 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

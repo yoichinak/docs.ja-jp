@@ -8,10 +8,10 @@ helpviewer_keywords:
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
 ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835805"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>方法: ファイル名と Visual Basic でのパスを検証します。

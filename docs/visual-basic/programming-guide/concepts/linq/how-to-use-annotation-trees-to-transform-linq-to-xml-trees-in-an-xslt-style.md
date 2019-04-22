@@ -3,10 +3,10 @@ title: '方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
 ms.openlocfilehash: a8db5f9dc29b4053321c81c9da58e12610ef63c7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824872"
 ---
 # <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>方法: 注釈を使用して LINQ to XML ツリーを XSLT スタイル (Visual Basic) を変換するには

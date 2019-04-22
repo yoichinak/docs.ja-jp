@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
 ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824755"
 ---
 # <a name="my-reference-visual-basic"></a>My の参照 (Visual Basic)

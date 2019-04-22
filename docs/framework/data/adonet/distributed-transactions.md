@@ -3,10 +3,10 @@ title: 分散トランザクション
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150203"
 ---
 # <a name="distributed-transactions"></a>分散トランザクション
@@ -39,7 +39,7 @@ ms.locfileid: "59150203"
 >  一度接続を明示的にトランザクションに参加させると、最初のトランザクションが終了するまでは、参加を解除したり別のトランザクションに参加させたりすることはできません。  
   
 > [!CAUTION]
->  `EnlistTransaction` 接続での接続を使用して、トランザクションが既に開始されている場合に例外をスローします<xref:System.Data.Common.DbConnection.BeginTransaction%2A>メソッド。 ただし、トランザクションがデータ ソースで開始されたローカル トランザクションである場合 (たとえば <xref:System.Data.SqlClient.SqlCommand> を使用して BEGIN TRANSACTION ステートメントを明示的に実行した場合)、`EnlistTransaction` はローカル トランザクションをロールバックし、要求されたように既存の分散トランザクションに参加します。 ローカル トランザクションがロールバックされたことは通知されないため、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> を使用して開始したのではないローカル トランザクションについては、自分で管理する必要があります。 .NET Framework Data Provider for SQL Server (`SqlClient`) を SQL Server で使用する場合は、参加を試みると例外がスローされます。 その他の場合については検出されません。  
+>  接続の `EnlistTransaction` メソッドを使用してトランザクションが既に開始していた場合、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> は例外をスローします。 ただし、トランザクションがデータ ソースで開始されたローカル トランザクションである場合 (たとえば <xref:System.Data.SqlClient.SqlCommand> を使用して BEGIN TRANSACTION ステートメントを明示的に実行した場合)、`EnlistTransaction` はローカル トランザクションをロールバックし、要求されたように既存の分散トランザクションに参加します。 ローカル トランザクションがロールバックされたことは通知されないため、<xref:System.Data.Common.DbConnection.BeginTransaction%2A> を使用して開始したのではないローカル トランザクションについては、自分で管理する必要があります。 .NET Framework Data Provider for SQL Server (`SqlClient`) を SQL Server で使用する場合は、参加を試みると例外がスローされます。 その他の場合については検出されません。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server の昇格可能なトランザクション  
  SQL Server は、軽量のローカル トランザクションを必要に応じて分散トランザクションに自動的に昇格できる、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 詳細とコード サンプルでは、次を参照してください。 [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)します。  
@@ -49,6 +49,6 @@ ms.locfileid: "59150203"
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションとコンカレンシー](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [SQL Server と System.Transactions の統合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

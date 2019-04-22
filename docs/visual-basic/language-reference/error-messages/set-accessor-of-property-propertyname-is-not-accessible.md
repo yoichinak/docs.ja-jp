@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
 ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834466"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>'Set' アクセサー プロパティの '\<propertyname >' にアクセスできません

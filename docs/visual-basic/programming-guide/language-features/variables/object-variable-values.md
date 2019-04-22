@@ -8,10 +8,10 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
 ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840394"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)

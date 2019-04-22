@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311085"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773819"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>方法: Windows フォームのダイアログ ボックスを表示する
 同様に、アプリケーションでその他の形式を表示するには、ダイアログ ボックスを表示します。 スタートアップ フォームは、アプリケーションの実行時に自動的に読み込みます。 2 番目のフォームまたはダイアログ ボックスをアプリケーションで表示するために、読み込む、表示するコードを記述します。 同様に、フォームまたはダイアログ ボックスを非アンロードしたり非表示にするコードを記述します。  

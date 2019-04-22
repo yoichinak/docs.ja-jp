@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0dfc87201b9b31cd9d936f2c965c7d0ca0140cab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234252"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774172"
 ---
 ### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>.NET で証明書を処理できないときに、X509Certificate2.ToString(Boolean) がスローしなくなった
 

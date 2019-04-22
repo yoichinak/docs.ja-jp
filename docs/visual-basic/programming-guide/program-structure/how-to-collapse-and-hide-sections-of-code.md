@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822296"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>方法: 折りたたみし、コード (Visual Basic) のセクションを非表示

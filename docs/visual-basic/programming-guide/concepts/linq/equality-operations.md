@@ -3,10 +3,10 @@ title: 等値演算 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
 ms.openlocfilehash: e04fd037e0799a633902b491ad2c4b71fd317989
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838615"
 ---
 # <a name="equality-operations-visual-basic"></a>等値演算 (Visual Basic)

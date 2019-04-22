@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
 ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822786"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)

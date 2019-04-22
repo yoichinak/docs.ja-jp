@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463346"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611277"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
 
@@ -48,10 +48,10 @@ SQL Server のコンテナーとしての実行は、SQL Server のインスタ�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Linux、Mac、Windows で SQL Server Docker イメージを実行する** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Linux で sqlcmd を使用して SQL Server に接続してクエリする** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Web アプリケーションの起動時のテスト データのシード処理
 
@@ -165,7 +165,7 @@ public class Startup
 
 Redis は、Redis と共に Docker イメージを提供します。 そのイメージは、次の URL での Docker Hub から入手できます。
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 コマンド プロンプトで次の Docker CLI コマンドを実行することによって、Docker Redis コンテナーを直接実行できます。
 

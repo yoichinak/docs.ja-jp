@@ -3,12 +3,12 @@ title: ローカル関数とラムダ式の比較
 description: ローカル関数がラムダ式よりも適した選択肢となり得る理由について。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125773"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611446"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>ローカル関数とラムダ式の比較
 
@@ -59,7 +59,7 @@ int M()
 > [!NOTE]
 > このメソッドのローカル関数と同等のものも、同じクロージャのクラスを使用します。 ローカル関数のクロージャが `class` として実装される場合でも、実装の詳細が `struct` である場合でも同様です。 ローカル関数は `struct` を使用する場合がありますが、ラムダは常に `class` を使用します。
 
-[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
+[!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 この例では説明しませんが、最後の 1 つの利点は値のシーケンスを生成するために `yield return` 構文を使用して、ローカル関数を反復子として実装できることです。 ラムダ式では `yield return` ステートメントは許可されません。
 
