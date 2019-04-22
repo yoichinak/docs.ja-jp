@@ -30,10 +30,10 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
 ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817228"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
@@ -194,7 +194,7 @@ End Sub
   
  A`Sub`プロシージャと`Function`プロシージャがパラメーターを指定して、一連のステートメントを実行します。 ただし、`Function`値、およびプロシージャを返します。`Sub`プロシージャがありません。 そのため、使用することはできません、`Sub`式の中でプロシージャ。  
   
- 使用することができます、`Call`を呼び出すときに、キーワード、`Sub`プロシージャが、そのキーワードが、ほとんどの用途についてはお勧めしません。 詳細については、[Call ステートメント](call-statement.md)を参照してください。  
+ 使用することができます、`Call`を呼び出すときに、キーワード、`Sub`プロシージャが、そのキーワードが、ほとんどの用途についてはお勧めしません。 詳細については、次を参照してください。 [Call ステートメント](call-statement.md)します。  
   
  Visual Basic では、算術式内部の効率を向上させることがあります再配置します。 そのため、引数リストには、他のプロシージャを呼び出す式が含まれている場合とは考えないでくださいの式が特定の順序で呼び出されることです。  
   

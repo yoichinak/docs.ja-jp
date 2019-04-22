@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
 ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819539"
 ---
 # <a name="value-types-and-reference-types"></a>値型と参照型
@@ -68,7 +68,7 @@ Dim totals() As Single = New Single(8) {}
 -   変数、定数、およびフィールド  
   
 ## <a name="working-with-the-object-data-type"></a>オブジェクトのデータ型の操作  
- 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データそのものではない、データへのポインターを保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)を参照してください。  
+ 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データそのものではない、データへのポインターを保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、次を参照してください。 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
   
  かどうかを見つけることができます、`Object`に渡すことによって変数が参照型または値型として機能する、<xref:Microsoft.VisualBasic.Information.IsReference%2A>メソッドで、<xref:Microsoft.VisualBasic.Information>のクラス、<xref:Microsoft.VisualBasic?displayProperty=nameWithType>名前空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返します`True`場合のコンテンツ、`Object`変数は参照型を表します。  
   

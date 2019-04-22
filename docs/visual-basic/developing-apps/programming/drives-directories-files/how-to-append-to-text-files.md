@@ -7,10 +7,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
 ms.openlocfilehash: 83f34e9cb669e8d2e841b13875b5237626164dd9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819841"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>方法: Visual Basic でテキスト ファイルに追記する

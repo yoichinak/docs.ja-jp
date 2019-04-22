@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC31180
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
 ms.openlocfilehash: dd7add295641e6a27c361c663d6075413b0f499c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824690"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>XML エンティティの参照はサポートされていません

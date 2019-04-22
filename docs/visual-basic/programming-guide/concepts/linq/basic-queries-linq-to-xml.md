@@ -3,10 +3,10 @@ title: 基本的なクエリ (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
 ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821401"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>基本的なクエリ (LINQ to XML) (Visual Basic)

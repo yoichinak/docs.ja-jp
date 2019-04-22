@@ -14,10 +14,10 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
 ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826588"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
@@ -49,7 +49,7 @@ ms.locfileid: "58826588"
   
     -   ジェネリック プロシージャの型パラメーターごとの制約リスト  
   
--   **シャドウとオーバーライドします。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
+-   **シャドウとオーバーライドします。** シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
   
  `Overrides` を使用する場合は、ライブラリ API と C# が連携しやすくなるように、コンパイラが暗黙的に `Overloads` を追加します。  
   

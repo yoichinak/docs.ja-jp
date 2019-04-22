@@ -3,10 +3,10 @@ title: '方法: 空のクエリ結果セット (Visual Basic) のデバッグし
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
 ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822797"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>方法: 空のクエリ結果セット (Visual Basic) のデバッグします。
@@ -16,7 +16,7 @@ XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML 
   
  2 番目に示す一連の例では、名前空間内の XML に対してクエリを実行できるようにするために必要な修正を示しています。  
   
- 詳細については、[XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)を参照してください。  
+ 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
   
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成、および空の結果セットを返すクエリを示します。  

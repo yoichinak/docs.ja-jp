@@ -5,10 +5,10 @@ helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
 ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822233"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Visual Basic の文字列の概要

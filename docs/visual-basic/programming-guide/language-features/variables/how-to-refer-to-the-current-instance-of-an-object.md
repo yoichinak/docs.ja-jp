@@ -9,10 +9,10 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823364"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>方法: オブジェクト (Visual Basic) の現在のインスタンスを参照してください。

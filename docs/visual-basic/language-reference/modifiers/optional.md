@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820790"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
@@ -34,7 +34,7 @@ ms.locfileid: "58820790"
 -   [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)を参照してください。  
+>  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)します。  
   
 > [!NOTE]
 >  オーバー ロードを使用して、省略可能なパラメーターを持つプロシージャを定義することもできます。 1 つの省略可能なパラメーターがある場合、プロシージャ、ないおよびパラメーターを受け取るいずれかの 2 つのオーバー ロードされたバージョンを定義できます。 詳細については、「 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  

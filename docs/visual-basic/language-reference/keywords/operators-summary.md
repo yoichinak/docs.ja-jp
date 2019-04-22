@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
 ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816637"
 ---
 # <a name="operators-summary-visual-basic"></a>演算子の概要 (Visual Basic)

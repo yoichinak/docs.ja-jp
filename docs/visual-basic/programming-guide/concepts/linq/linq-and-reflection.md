@@ -3,10 +3,10 @@ title: LINQ とリフレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2548a731-0cd8-48de-8d48-664d1b7d7526
 ms.openlocfilehash: ed4627fc10c1b6b56194520461146315f98f15f8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813684"
 ---
 # <a name="linq-and-reflection-visual-basic"></a>LINQ とリフレクション (Visual Basic)

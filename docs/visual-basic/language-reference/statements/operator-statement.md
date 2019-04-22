@@ -18,10 +18,10 @@ helpviewer_keywords:
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
 ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58818593"
 ---
 # <a name="operator-statement"></a>Operator Statement
@@ -47,13 +47,13 @@ End Operator
  必須。 この演算子プロシージャがあることを示します[パブリック](../../../visual-basic/language-reference/modifiers/public.md)アクセスします。  
   
  `Overloads`  
- 省略可能です。 参照してください[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)します。  
+ 任意。 参照してください[オーバー ロード](../../../visual-basic/language-reference/modifiers/overloads.md)します。  
   
  `Shared`  
  必須。 この演算子プロシージャがあることを示します、 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)プロシージャ。  
   
  `Shadows`  
- 省略可能です。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
+ 任意。 参照してください[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)します。  
   
  `Widening`  
  指定しない限り、変換演算子に必要な`Narrowing`します。 この演算子プロシージャを定義することを示します、 [Widening](../../../visual-basic/language-reference/modifiers/widening.md)変換します。 このヘルプ ページでは、「拡大と縮小変換」を参照してください。  

@@ -3,10 +3,10 @@ title: ステートメント A ~ E (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af97c2bf-dddb-48a8-8eb6-798cd219430b
 ms.openlocfilehash: 4135f7154a73823400d8b1698421e138650d4854
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816754"
 ---
 # <a name="a-e-statements"></a>ステートメント A ～ E

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID423
 ms.assetid: 471d8c1d-9edf-4014-8427-1a01b634a72d
 ms.openlocfilehash: abb272cc7cad04161b4da26de119d6ac1d4fea4d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822545"
 ---
 # <a name="property-or-method-not-found"></a>プロパティまたはメソッドが見つかりません。

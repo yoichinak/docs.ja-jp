@@ -6,10 +6,10 @@ helpviewer_keywords:
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
 ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821154"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic における文字列操作メソッドの種類
@@ -22,7 +22,7 @@ ms.locfileid: "58821154"
   
  この例で、`Mid`関数で直接操作を実行する`aString`に値が割り当てられます`bString`します。  
   
- Visual Basic の文字列操作メソッドの一覧は、[文字列操作の概要](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)を参照してください。  
+ Visual Basic の文字列操作メソッドの一覧は、次を参照してください。[文字列操作の概要](../../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)します。  
   
 ### <a name="shared-methods-and-instance-methods"></a>共有メソッドとインスタンス メソッド  
  メソッドを使って、文字列を操作することも、`String`クラス。 内のメソッドの 2 種類があります`String`:*共有*メソッドと*インスタンス*メソッド。  

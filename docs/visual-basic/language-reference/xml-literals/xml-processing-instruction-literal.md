@@ -9,10 +9,10 @@ helpviewer_keywords:
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
 ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820153"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML 処理命令リテラル (Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "58820153"
 ## <a name="remarks"></a>Remarks  
  XML 処理命令リテラルは、アプリケーションが XML ドキュメントを処理する方法を示します。 アプリケーションでは、XML ドキュメントが読み込まれる、アプリケーションは、ドキュメントを処理する方法を決定する XML 処理命令を確認できます。 アプリケーションの意味を解釈する`piName`と`piData`します。  
   
- XML ドキュメント リテラルには、XML 処理命令の次のような構文が使用されます。 詳細については、[XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)を参照してください。  
+ XML ドキュメント リテラルには、XML 処理命令の次のような構文が使用されます。 詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)します。  
   
 > [!NOTE]
 >  `piName`要素は、XML 1.0 仕様は、これらの id を予約するため、文字列"xml"または"XML"で始めることはできません。  

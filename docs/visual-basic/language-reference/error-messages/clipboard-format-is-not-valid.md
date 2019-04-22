@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
 ms.openlocfilehash: 5ec077be30b0afc8917d431dc9bd73c8dd41be89
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817179"
 ---
 # <a name="clipboard-format-is-not-valid"></a>クリップボードの形式が有効ではありません。

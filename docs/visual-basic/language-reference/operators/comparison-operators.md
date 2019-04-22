@@ -31,10 +31,10 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
 ms.openlocfilehash: 9014cac5e2f3933b27411dfe5681fc16f4cdde30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821037"
 ---
 # <a name="comparison-operators-visual-basic"></a>比較演算子 (Visual Basic)
@@ -110,7 +110,7 @@ result = string Like pattern
  同様に、型の式を比較する`Decimal`型の式に`Single`または`Double`、`Decimal`式に変換されます`Single`または`Double`します。 `Decimal`式、小数部の値より小さい 1E-28 は失われる可能性があります。 このような小数部の値が失われるときに等しいと比較する 2 つの値があります。 このため、注意が必要と等しいかどうかを使用して (`=`) 2 つの浮動小数点変数を比較します。 2 つの数値の差の絶対値が許容差より小さいかどうかをテストすることができます。  
   
 ### <a name="floating-point-imprecision"></a>浮動小数点は誤差  
- 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と[Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)します。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
+ 浮動小数点数を使用する場合が常にないことを正確に表現メモリ内に留意してください。 値の比較などの特定の操作から予期しない結果に可能性と[Mod 演算子](../../../visual-basic/language-reference/operators/mod-operator.md)します。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
 ## <a name="comparing-strings"></a>文字列の比較  
  依存する、アルファベット順の並べ替え順序に基づいて、文字列式を評価する文字列を比較したときに、`Option Compare`設定します。  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
 ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821843"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列挙型の概要 (Visual Basic)
@@ -18,7 +18,7 @@ ms.locfileid: "58821843"
 ## <a name="tasks-involving-enumerations"></a>列挙型に関連するタスク  
  次の表は、列挙型に関連する一般的なタスクを一覧表示します。  
   
-|目的|解決方法|  
+|目的|参照トピック|  
 |----------------|---------|  
 |事前に定義された列挙型を検索します。|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
 |列挙体を宣言します。|[方法: 列挙体を宣言します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  

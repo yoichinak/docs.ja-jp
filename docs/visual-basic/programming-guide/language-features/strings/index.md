@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
 ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821076"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic における文字列

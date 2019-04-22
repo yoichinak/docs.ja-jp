@@ -5,10 +5,10 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
 ms.openlocfilehash: 161edd2cb3afeb6ba8b10455a1c3a2c43b90dac1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821651"
 ---
 # <a name="objects-visual-basic"></a>オブジェクト (Visual Basic)

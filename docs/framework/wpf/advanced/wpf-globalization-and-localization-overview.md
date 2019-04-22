@@ -6,10 +6,10 @@ helpviewer_keywords:
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
 ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819581"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
@@ -18,7 +18,7 @@ ms.locfileid: "58819581"
   
  この概要紹介のグローバリゼーションおよびローカリゼーション[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。 グローバリゼーションとは、設計と複数の場所で実行するアプリケーションの開発です。 たとえば、グローバリゼーション ローカライズされたユーザー インターフェイスとサポート リージョンのデータの異なるカルチャ内のユーザーの。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グローバル化されたデザイン機能、自動レイアウト、サテライト アセンブリ、およびローカライズされた属性を含む、コメントを提供します。
   
- ローカリゼーションとは、アプリケーションがサポートする特定のカルチャのローカライズ バージョンへのアプリケーション リソースを変換します。 ローカライズするときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で Api を使用する、<xref:System.Windows.Markup.Localizer>名前空間。 これらの Api の電源、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)コマンド ライン ツール。 ビルドして、LocBaml を使用する方法については、[アプリケーションをローカライズする](how-to-localize-an-application.md)を参照してください。
+ ローカリゼーションとは、アプリケーションがサポートする特定のカルチャのローカライズ バージョンへのアプリケーション リソースを変換します。 ローカライズするときに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で Api を使用する、<xref:System.Windows.Markup.Localizer>名前空間。 これらの Api の電源、 [LocBaml ツール サンプル](https://go.microsoft.com/fwlink/?LinkID=160016)コマンド ライン ツール。 ビルドして、LocBaml を使用する方法については、次を参照してください。[アプリケーションをローカライズする](how-to-localize-an-application.md)します。
   
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF のグローバリゼーションおよびローカリゼーションのためのベスト プラクティス
 
@@ -48,7 +48,7 @@ ms.locfileid: "58819581"
   
 -   ローカライズがナビゲーション アプリケーションを作成するときに右から左の形式でテキストを表示するカルチャで、明示的に設定、<xref:System.Windows.FlowDirection>ページが継承しないことを確認するには、各ページの<xref:System.Windows.FlowDirection>から、<xref:System.Windows.Navigation.NavigationWindow>します。  
   
--   ブラウザー外でホストされているスタンドアロン ナビゲーション アプリケーションを作成するときに設定、<xref:System.Windows.Application.StartupUri%2A>初期アプリケーションに、<xref:System.Windows.Navigation.NavigationWindow>の代わりにページに (たとえば、 `<Application StartupUri="NavigationWindow.xaml">`)。 この設計では、変更することができます、<xref:System.Windows.FlowDirection>ウィンドウとナビゲーション バー。 詳細と例では、[グローバリゼーション ホームページ サンプル](https://go.microsoft.com/fwlink/?LinkID=159990)を参照してください。  
+-   ブラウザー外でホストされているスタンドアロン ナビゲーション アプリケーションを作成するときに設定、<xref:System.Windows.Application.StartupUri%2A>初期アプリケーションに、<xref:System.Windows.Navigation.NavigationWindow>の代わりにページに (たとえば、 `<Application StartupUri="NavigationWindow.xaml">`)。 この設計では、変更することができます、<xref:System.Windows.FlowDirection>ウィンドウとナビゲーション バー。 詳細と例では、次を参照してください。[グローバリゼーション ホームページ サンプル](https://go.microsoft.com/fwlink/?LinkID=159990)します。  
   
 ### <a name="best-practices-for-wpf-localization"></a>WPF のローカリゼーションのためのベスト プラクティス
 
@@ -293,13 +293,13 @@ public class CorporateLogo : TextBlock
 }
 ``` 
  
- インスタンスの属性で設定あたり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]カスタム コントロールのコードで設定された値より優先します。 属性とコメントの詳細については、[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)を参照してください。  
+ インスタンスの属性で設定あたり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]カスタム コントロールのコードで設定された値より優先します。 属性とコメントの詳細については、次を参照してください。[ローカリゼーション属性とコメント](localization-attributes-and-comments.md)します。  
   
  **フォント フォールバックと複合フォント**  
   
  指定されたコード ポイント範囲をサポートしていないフォントを指定する場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は Windows\Fonts ディレクトリ内にあるグローバル ユーザー Interface.compositefont を使用している 1 つに自動的にフォールバックします。 複合フォントだけその他のフォントの動作し、要素の設定で明示的に使用できる`FontFamily`(たとえば、 `FontFamily="Global User Interface"`)。 独自の複合フォントを作成し、特定のコード ポイント範囲および言語を使用するフォントを指定して、独自のフォント フォールバック設定を指定できます。  
   
- 複合フォントの詳細については、<xref:System.Windows.Media.FontFamily>を参照してください。  
+ 複合フォントの詳細については、次を参照してください。<xref:System.Windows.Media.FontFamily>します。  
   
  **Microsoft のホーム ページのローカライズ**  
   

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
 ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814615"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
@@ -71,7 +71,7 @@ End Select
  設定は、`Option Compare`文字列比較に影響を与えることができます。 `Option Compare Text`、Equal、として比較してが文字列"Apples"と"apples" `Option Compare Binary`、一致していないためです。  
   
 > [!NOTE]
->  A`Case`句を指定して複数のステートメントと呼ばれる動作が発生することができます*ショート サーキット*します。 Visual Basic は、左から右への句を評価し、1 つの場合との一致を作成します。 `testexpression`、残りの句は評価されません。 ショート サーキットのパフォーマンスが向上するのすべての式が必要な場合、予期しない結果を生成できる`expressionlist`評価されます。 ショート サーキットの詳細については、[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)を参照してください。  
+>  A`Case`句を指定して複数のステートメントと呼ばれる動作が発生することができます*ショート サーキット*します。 Visual Basic は、左から右への句を評価し、1 つの場合との一致を作成します。 `testexpression`、残りの句は評価されません。 ショート サーキットのパフォーマンスが向上するのすべての式が必要な場合、予期しない結果を生成できる`expressionlist`評価されます。 ショート サーキットの詳細については、次を参照してください。[ブール式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)します。  
   
  場合内のコードを`Case`または`Case Else`ステートメント ブロックは、ブロックで以上のステートメントを実行する必要はありませんを使用して、ブロックを終了できますが、`Exit Select`ステートメント。 ステートメントに制御を直ちに転送この`End Select`します。  
   

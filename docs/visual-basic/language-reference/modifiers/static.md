@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814176"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
@@ -26,7 +26,7 @@ ms.locfileid: "58814176"
   
      使用することはできません`Static`構造プロシージャ内にあります。  
   
--   データ型`Static`ローカル変数を推論することはできません。 詳細については、[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)を参照してください。  
+-   データ型`Static`ローカル変数を推論することはできません。 詳細については、次を参照してください。[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
   
 -   **結合された修飾子。** 指定することはできません`Static`と共に`ReadOnly`、 `Shadows`、または`Shared`同じ宣言内。  
   
