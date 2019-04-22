@@ -3,10 +3,10 @@ title: '方法: (Visual Basic)、XmlReader からツリーを作成します。'
 ms.date: 07/20/2015
 ms.assetid: 6de683d8-177d-402b-b0de-d0539f1ce5d8
 ms.openlocfilehash: d0826112821394ac6a81ba03e7803187aaec2796
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836468"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-visual-basic"></a>方法: (Visual Basic)、XmlReader からツリーを作成します。

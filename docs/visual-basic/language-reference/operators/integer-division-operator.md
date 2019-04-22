@@ -18,10 +18,10 @@ helpviewer_keywords:
 - truncation [Visual Basic], integer division
 ms.assetid: 4b0ee347-950c-45c9-8e23-54bc85df208e
 ms.openlocfilehash: 1753199e2ecf3f156b90d8c0a5cacd672397260d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828704"
 ---
 # <a name="-operator-visual-basic"></a>\ 演算子 (Visual Basic)

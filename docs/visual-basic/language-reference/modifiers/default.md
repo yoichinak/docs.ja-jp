@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
 ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836728"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)

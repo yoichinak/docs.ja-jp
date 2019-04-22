@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
 ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58830124"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>データ型の有効な使用方法 (Visual Basic)
@@ -33,7 +33,7 @@ ms.locfileid: "58830124"
 -   コードの実行速度が速くなります。  
   
 ## <a name="most-efficient-data-types"></a>最も効率的なデータ型  
- 決して分数を含む変数、整数データ型は非整数の型よりも効率的です。 Visual Basic で`Integer`と`UInteger`は最も効率的な数値型。  
+ 決して分数を含む変数、整数データ型は非整数の型よりも効率的です。 Visual basic で`Integer`と`UInteger`は最も効率的な数値型。  
   
  数値の小数部から成る場合`Double`を最も効率的なデータ型は、現在のプラットフォーム上のプロセッサでは、倍精度浮動小数点演算を実行するためです。 ただし、操作を`Double`などの整数型と同様に高速でない`Integer`します。  
   

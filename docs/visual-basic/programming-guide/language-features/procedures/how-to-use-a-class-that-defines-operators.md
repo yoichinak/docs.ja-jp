@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
 ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829409"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>方法: 演算子 (Visual Basic) を定義するクラスを使用して、
@@ -33,7 +33,7 @@ ms.locfileid: "58829409"
  <xref:System.Data.SqlTypes.SqlString>構造体には、変換演算子が定義されています ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)) から`String`に<xref:System.Data.SqlTypes.SqlString>とから<xref:System.Data.SqlTypes.SqlString>に`String`します。 代入するステートメント`title`に`jobTitle`の最初の演算子を使用し、<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>関数呼び出し、2 つ目の使用します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 必ず、クラスまたは構造体を使用しているが、使用する演算子を定義します。 クラスまたは構造体の定義がすべての演算子はオーバー ロード可能なことを前提としてはいません。 利用可能な演算子の一覧は、[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)を参照してください。  
+ 必ず、クラスまたは構造体を使用しているが、使用する演算子を定義します。 クラスまたは構造体の定義がすべての演算子はオーバー ロード可能なことを前提としてはいません。 利用可能な演算子の一覧は、次を参照してください。 [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)します。  
   
  含める、適切な`Imports`ソース ファイルの先頭にある SQL 文字列の文 (ここで<xref:System.Data.SqlTypes>)。  
   

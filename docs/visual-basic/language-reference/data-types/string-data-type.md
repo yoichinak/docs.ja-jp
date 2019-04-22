@@ -19,10 +19,10 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842292"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
@@ -66,7 +66,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
  別のコンポーネントによって作成される文字列は、先頭または末尾のスペースで埋められます可能性があります。 このような文字列を受信する場合は使用できます、 <xref:Microsoft.VisualBasic.Strings.Trim%2A>、 <xref:Microsoft.VisualBasic.Strings.LTrim%2A>、および<xref:Microsoft.VisualBasic.Strings.RTrim%2A>これらのスペースを削除する関数。  
   
- 文字列操作の詳細については、[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)を参照してください。  
+ 文字列操作の詳細については、次を参照してください。[文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)します。  
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   

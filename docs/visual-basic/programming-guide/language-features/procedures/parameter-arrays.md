@@ -11,10 +11,10 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834165"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "58834165"
  すべてのケースで、プロシージャ内のコード、パラメーターは配列として扱いますと同じデータ型の要素を持つ 1 次元配列、`ParamArray`データ型。  
   
 > [!IMPORTANT]
->  無限に増大することができる配列を処理するたびに、アプリケーションの内部の容量を超過してしまう可能性があります。 パラメーター配列を受け取る場合は、呼び出し元のコードが渡された配列のサイズをテストする必要があります。 アプリケーションが大きすぎる場合は、適切な手順を実行します。 詳細については、[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
+>  無限に増大することができる配列を処理するたびに、アプリケーションの内部の容量を超過してしまう可能性があります。 パラメーター配列を受け取る場合は、呼び出し元のコードが渡された配列のサイズをテストする必要があります。 アプリケーションが大きすぎる場合は、適切な手順を実行します。 詳細については、次を参照してください。[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
 ## <a name="example"></a>例  
  次の例を定義し、関数を呼び出す`calcSum`します。 `ParamArray`パラメーター修飾子`args`により、関数を可変個の引数を受け入れるようにできます。  

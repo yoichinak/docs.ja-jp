@@ -28,10 +28,10 @@ helpviewer_keywords:
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
 ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58838340"
 ---
 # <a name="declare-statement"></a>Declare ステートメント
@@ -87,7 +87,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
     > [!NOTE]
     >  ほとんどの Dll のエントリ ポイント名は大文字小文字を区別します。  
   
--   **外部プロシージャの数。** また、使用することができます、`Alias`句を外部ファイルのエクスポート テーブル内のエントリ ポイントの序数を指定します。 開始するには、`aliasname`に番号記号 (`#`)。 Visual Basic では、外部プロシージャ名の任意の文字は許可されていない場合、または外部のファイル名を指定せず、プロシージャをエクスポートする場合は便利にできます。  
+-   **外部プロシージャの数。** また、使用することができます、`Alias`句を外部ファイルのエクスポート テーブル内のエントリ ポイントの序数を指定します。 開始するには、`aliasname`に番号記号 (`#`)。 Visual basic では、外部プロシージャ名の任意の文字は許可されていない場合、または外部のファイル名を指定せず、プロシージャをエクスポートする場合は便利にできます。  
   
 ## <a name="data-type-rules"></a>データ型のルール  
   
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
 > [!IMPORTANT]
->  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、たとえば Windows API 関数、または、COM メソッドを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)を参照してください。  
+>  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、たとえば Windows API 関数、または、COM メソッドを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  
   
 ## <a name="example"></a>例  
  次の例への外部参照の宣言を`Function`を現在のユーザー名を返すプロシージャです。 外部プロシージャを呼び出して`GetUserNameA`の一部として、`getUser`プロシージャ。  

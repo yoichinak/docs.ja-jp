@@ -5,10 +5,10 @@ helpviewer_keywords:
 - strings [Visual Basic], Nothing
 ms.assetid: 261380af-2024-4ecf-823b-43b1034d92cd
 ms.openlocfilehash: 5fbcf86261892e3eb8e43ee8eaa3728cd8e42ced
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841889"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Visual Basic の Nothing と文字列

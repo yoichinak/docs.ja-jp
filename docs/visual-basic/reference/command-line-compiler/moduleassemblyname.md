@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832415"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
@@ -37,7 +37,7 @@ ms.locfileid: "58832415"
   
 -   参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
   
- モジュールの作成方法の詳細については、[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)を参照してください。 フレンド アセンブリの詳細については、[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)を参照してください。  
+ モジュールの作成方法の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)します。  
   
 > [!NOTE]
 >  `-moduleassemblyname`オプションは、Visual Studio 開発環境内からは使用できません。 コマンド プロンプトからコンパイルするときにのみ、は使用できます。  

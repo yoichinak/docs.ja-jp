@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30269
 ms.assetid: 39489621-6617-4e5c-9b24-c2faf8273891
 ms.openlocfilehash: fe8d1d8e11e25bcd79894ed82a57dd06748c3d68
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831879"
 ---
 # <a name="methodname-has-multiple-definitions-with-identical-signatures"></a>'\<methodname >' が同じシグネチャを持つ複数の定義

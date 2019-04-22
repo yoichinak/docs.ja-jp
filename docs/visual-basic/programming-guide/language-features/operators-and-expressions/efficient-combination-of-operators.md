@@ -14,10 +14,10 @@ helpviewer_keywords:
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
 ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841259"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>演算子の効率のよい組み合わせ (Visual Basic)
@@ -25,7 +25,7 @@ ms.locfileid: "58841259"
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
   
- 前の例などの複雑な式を作成するには、演算子の優先順位の規則について理解する必要があります。 詳細については、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を参照してください。  
+ 前の例などの複雑な式を作成するには、演算子の優先順位の規則について理解する必要があります。 詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
   
 ## <a name="parenthetical-expressions"></a>かっこで囲まれた式  
  多くの場合、演算子の優先順位によって決定されるとは異なる順序で演算を実行します。 例を次に示します。  

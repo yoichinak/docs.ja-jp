@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
 ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842305"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
@@ -31,7 +31,7 @@ ms.locfileid: "58842305"
   
  プロパティを持つのみ非キーと同じ名前、種類、順序、および値である 2 つのインスタンスが宣言されている場合は 2 つのインスタンスが等しくないです。 キー プロパティを持たないインスタンスはのみにします。  
   
- 匿名型の 2 つのインスタンスを同じ匿名型のインスタンスである条件の詳細については、[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)を参照してください。  
+ 匿名型の 2 つのインスタンスを同じ匿名型のインスタンスである条件の詳細については、次を参照してください。[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)します。  
   
 ## <a name="hash-code-calculation"></a>ハッシュ コードの計算  
  ような<xref:System.Object.Equals%2A>、ハッシュ関数で定義されている<xref:System.Object.GetHashCode%2A>匿名型が、型のキー プロパティに基づいています。 次の例では、コードの値のキー プロパティとハッシュ間のやり取りを示します。  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
 ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833491"
 ---
 # <a name="remarks-visual-basic"></a>\<remarks > (Visual Basic)
@@ -28,7 +28,7 @@ ms.locfileid: "58833491"
 ## <a name="remarks"></a>Remarks  
  使用して、`<remarks>`で指定された情報を補うため、型に関する情報を追加するタグ[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)します。  
   
- この情報は、オブジェクト ブラウザーに表示されます。 オブジェクト ブラウザーの詳細については、[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)を参照してください。  
+ この情報は、オブジェクト ブラウザーに表示されます。 オブジェクト ブラウザーの詳細については、次を参照してください。[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)します。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   

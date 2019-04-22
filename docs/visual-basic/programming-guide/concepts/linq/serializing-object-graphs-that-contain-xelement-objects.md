@@ -3,10 +3,10 @@ title: XElement オブジェクト (Visual Basic) を含むオブジェクト �
 ms.date: 07/20/2015
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
 ms.openlocfilehash: ffb348a0305b0f94c0870edead2a4852eee237cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835909"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>XElement オブジェクト (Visual Basic) を含むオブジェクト グラフをシリアル化します。

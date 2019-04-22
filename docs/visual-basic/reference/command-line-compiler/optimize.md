@@ -8,10 +8,10 @@ helpviewer_keywords:
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842162"
 ---
 # <a name="-optimize"></a>-optimize
@@ -32,7 +32,7 @@ ms.locfileid: "58842162"
 ## <a name="remarks"></a>Remarks  
  コンパイラを最適化すると、出力ファイルのサイズが小さくなり、動作が速くなり、処理の効率が向上します。 ただし、出力ファイルにコードが再配置の最適化を行うので、`-optimize+`デバッグが困難です。  
   
- 生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。 詳細については、[-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)を参照してください。  
+ 生成されるすべてのモジュール`-target:module`アセンブリを使用する必要があります、同じ`-optimize`アセンブリとして設定します。 詳細については、次を参照してください。 [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。  
   
  組み合わせることができます、`-optimize`と`-debug`オプション。  
   

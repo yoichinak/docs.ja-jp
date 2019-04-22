@@ -21,10 +21,10 @@ helpviewer_keywords:
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
 ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833998"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>暗黙の型変換と明示的な型変換 (Visual Basic)
@@ -77,7 +77,7 @@ k = CInt(q)
   
  `CType` *インライン関数*多くの場合、呼び出す関数を生成せず、変換は、コンパイル済みコードを意味します。 これにより、パフォーマンスが向上します。  
   
- 比較について`CType`他の型変換キーワードで、[DirectCast 演算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)を参照してください。  
+ 比較について`CType`他の型変換キーワードで、次を参照してください。 [DirectCast 演算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)と[TryCast 演算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)します。  
   
 ### <a name="elementary-types"></a>基本型  
  次の例は、`CType` の使い方を示しています。  
@@ -114,7 +114,7 @@ If TypeOf obArray Is classV()
 End If  
 ```  
   
- 詳細と例では、[配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)を参照してください。  
+ 詳細と例では、次を参照してください。[配列変換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)します。  
   
 ### <a name="types-defining-ctype"></a>CType を定義する型  
  定義できます`CType`でクラスまたは定義した構造体。 これにより、クラスまたは構造体の型との間の値を変換することができます。 詳細と例では、次を参照してください。[方法。変換演算子を定義](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)します。  
