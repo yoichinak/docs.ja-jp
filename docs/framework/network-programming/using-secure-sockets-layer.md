@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135805"
 ---
 # <a name="using-secure-sockets-layer"></a>Secure Sockets Layerの使用

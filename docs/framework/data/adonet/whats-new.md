@@ -3,10 +3,10 @@ title: ADO.NET の新機能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191461"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
@@ -41,7 +41,7 @@ ms.locfileid: "59191461"
   
 -   SqlClient は LocalDB データベースへの接続をサポートします。 詳細については、次を参照してください。 [SqlClient による LocalDB のサポート](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)します。  
   
--   `Type System Version=SQL Server 2012;` 渡す新しい値には、`Type System Version`接続プロパティです。 `Type System Version=Latest;` 値は廃止されており、`Type System Version=SQL Server 2008;` と同等になっています。 詳細については、「<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。  
+-   `Type System Version=SQL Server 2012;` は、`Type System Version` 接続プロパティに渡す新しい値です。 `Type System Version=Latest;` 値は廃止されており、`Type System Version=SQL Server 2008;` と同等になっています。 詳細については、「<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>」を参照してください。  
   
 -   SqlClient は、スパース列に追加のサポートを提供します。このサポートは SQL Server 2008 で追加された機能です。 アプリケーションがスパース列を使用するテーブルのデータに既にアクセスしていると、パフォーマンスが向上します。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> の IsColumnSet 列は、列が列セットのメンバーであるスパース列であるかどうかを示します。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 列がスパース列であることを示します (を参照してください[SQL Server スキーマ コレクション](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)詳細については)。 スパース列の詳細については、次を参照してください。[スパース列の使用](https://go.microsoft.com/fwlink/?LinkId=224244)します。  
   

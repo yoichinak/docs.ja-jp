@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166245"
 ---
 # <a name="sorting-and-filtering-data"></a>データの並べ替えとフィルター処理
@@ -31,12 +31,12 @@ ms.locfileid: "59166245"
     |------------------------------|-----------------|  
     |**CurrentRows**|**現在**行バージョンのすべて**Unchanged**、 **Added**、および**Modified**行。 既定値です。|  
     |**追加**|**現在**行バージョンのすべて**Added**行。|  
-    |**Deleted**|**元**行バージョンのすべて**Deleted**行。|  
+    |**削除**|**元**行バージョンのすべて**Deleted**行。|  
     |**ModifiedCurrent**|**現在**行バージョンのすべて**Modified**行。|  
     |**ModifiedOriginal**|**元**行バージョンのすべて**Modified**行。|  
-    |**なし**|行がありません。|  
+    |**None**|行がありません。|  
     |**OriginalRows**|**元**行バージョンのすべて**Unchanged**、 **Modified**、および**Deleted**行。|  
-    |**Unchanged**|**現在**行バージョンのすべて**Unchanged**行。|  
+    |**変更なし**|**現在**行バージョンのすべて**Unchanged**行。|  
   
  行の状態と行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136956"
 ---
 # <a name="security-overview"></a>セキュリティの概要
@@ -113,4 +113,4 @@ Windows Communication Foundation (WCF) は、SOAP メッセージに基づく分
 - [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

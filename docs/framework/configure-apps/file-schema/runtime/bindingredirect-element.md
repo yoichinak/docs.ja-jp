@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185914"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > 要素

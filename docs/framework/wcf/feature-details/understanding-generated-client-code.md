@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189160"
 ---
 # <a name="understanding-generated-client-code"></a>生成されたクライアント コードの理解

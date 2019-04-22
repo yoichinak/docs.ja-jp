@@ -3,10 +3,10 @@ title: F#コーディング規則
 description: 書き込み時に、一般的なガイドラインと表現方法を説明しますF#コード。
 ms.date: 05/14/2018
 ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186746"
 ---
 # <a name="f-coding-conventions"></a>F#コーディング規則

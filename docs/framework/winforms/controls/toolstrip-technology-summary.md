@@ -8,10 +8,10 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120961"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip テクノロジの概要
@@ -43,7 +43,7 @@ ms.locfileid: "59120961"
   
 -   `ToolStripPanel` を使用した `ToolStrip` コントロールのマージ。  
   
- `ToolStrip` 拡張の基本クラスは、 `MenuStrip`、 `ContextMenuStrip`、および`StatusStrip`します。 これらのコントロールは、共通の動作とイベント処理を継承する <xref:System.Windows.Forms.ToolStripItem> コンテナーで、それぞれの実装で適切な動作を処理できるように拡張されています。 <xref:System.Windows.Forms.ToolStripItem> から派生するコントロールについて、次の表に示します。 `ToolStrip` 基底クラスでは、コントロールの描画、ユーザー入力、ドラッグ アンド ドロップの各イベントを処理します。  
+ `ToolStrip` は、`MenuStrip`、`ContextMenuStrip`、`StatusStrip` の拡張可能な基底クラスです。 これらのコントロールは、共通の動作とイベント処理を継承する <xref:System.Windows.Forms.ToolStripItem> コンテナーで、それぞれの実装で適切な動作を処理できるように拡張されています。 <xref:System.Windows.Forms.ToolStripItem> から派生するコントロールについて、次の表に示します。 `ToolStrip` 基底クラスでは、コントロールの描画、ユーザー入力、ドラッグ アンド ドロップの各イベントを処理します。  
   
  `ToolStrip`、`MenuStrip`、`ContextMenuStrip`、`StatusStrip` の各コントロールは、以前のツール バー、メニュー、ショートカット メニュー、ステータス バーの各コントロールに置き換わるものです。ただし、これらのコントロールも下位互換性の目的で保持されています。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "59120961"
  コントロールのホストの例は、次を参照してください。[方法。Windows フォーム コントロールをラップする ToolStripControlHost](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)します。  
   
 ## <a name="rendering"></a>[レンダリング]  
- <xref:System.Windows.Forms.ToolStrip> クラスは、他の Windows フォーム コントロールから大幅に異なる描画スキームを実装します。 このスキームを使用すると、スタイルとテーマを簡単に適用できます。  
+ <xref:System.Windows.Forms.ToolStrip> クラスでは、他の Windows フォーム コントロールとは大きく異なる描画スキームを実装します。 このスキームを使用すると、スタイルとテーマを簡単に適用できます。  
   
  <xref:System.Windows.Forms.ToolStrip> とそこに含まれるすべての <xref:System.Windows.Forms.ToolStripItem> オブジェクトにスタイルを適用する場合、<xref:System.Windows.Forms.ToolStripItem.Paint> イベントを項目ごとに処理する必要はありません。 代わりに、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> プロパティを <xref:System.Windows.Forms.ToolStripRenderMode> 値のいずれかに設定できます (<xref:System.Windows.Forms.ToolStripRenderMode.Custom> を除きます)。 さらに別の方法として、<xref:System.Windows.Forms.ToolStripRenderer> クラスを継承する任意のクラスに <xref:System.Windows.Forms.ToolStrip.Renderer%2A> を直接設定することもできます。 このプロパティを設定すると、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> が自動的に設定されます。  
   
@@ -99,10 +99,10 @@ ms.locfileid: "59120961"
  レンダリングの例については、次を参照してください。[方法。作成し、Windows 内の ToolStrip コントロールをフォームにカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)します。  
   
 ## <a name="styles-and-themes"></a>スタイルとテーマ  
- <xref:System.Windows.Forms.ToolStrip> 関連クラスは、視覚スタイルとカスタムの外観のオーバーライドを必要としないをサポートする簡単な方法と、<xref:System.Windows.Forms.ToolStripItem.OnPaint%2A>各項目のメソッド。 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> と、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> プロパティおよび <xref:System.Windows.Forms.ToolStrip.Renderer%2A> プロパティを使用します。  
+ <xref:System.Windows.Forms.ToolStrip> とその関連クラスは、表示スタイルとカスタムの外観を容易にサポートします。この場合、<xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> メソッドを項目ごとにオーバーライドする必要はありません。 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> と、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> プロパティおよび <xref:System.Windows.Forms.ToolStrip.Renderer%2A> プロパティを使用します。  
   
 ## <a name="rafting-and-docking"></a>ラフティングとドッキング  
- <xref:System.Windows.Forms.ToolStrip> コントロールは、ラフティング、ドッキング、または絶対位置を指定して配置できます。 <xref:System.Windows.Forms.ToolStrip> 項目がによってレイアウト、<xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A>のコンテナー。  
+ <xref:System.Windows.Forms.ToolStrip> コントロールは、ラフティング、ドッキング、または絶対位置を指定して配置できます。 <xref:System.Windows.Forms.ToolStrip> 項目は、コンテナーの <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> によってレイアウトされます。  
   
  *ラフティング*ツールバーの水平方向または垂直方向の領域を共有できることです。 Windows フォームでは、<xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.StatusStrip> の各コントロールの配置とラフティングを行うときに、フォームの左側、右側、上側、下側にパネルを持つ <xref:System.Windows.Forms.ToolStripContainer> を使用できます。 複数の <xref:System.Windows.Forms.ToolStrip> コントロールを左右の <xref:System.Windows.Forms.ToolStripContainer> に配置すると、コントロールは垂直方向に積み重ねられます。 上または下の <xref:System.Windows.Forms.ToolStripContainer> に配置すると、コントロールは水平方向に積み重ねられます。 <xref:System.Windows.Forms.ToolStripContainer> の中央の <xref:System.Windows.Forms.ToolStripContentPanel> を使用すると、従来のコントロールをフォーム上に配置できます。  
   

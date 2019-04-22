@@ -9,10 +9,10 @@ helpviewer_keywords:
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
 ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121794"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox コントロールの概要 (Windows フォーム)
@@ -27,6 +27,6 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.CheckBox>
-- [方法: Windows フォームの CheckBox コントロールでオプションを設定する](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [方法: Windows フォーム CheckBox のクリックに応答する](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [方法: Windows フォームの CheckBox コントロールでオプションを設定します。](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [方法: Windows フォーム CheckBox のクリックに応答します。](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox コントロール](checkbox-control-windows-forms.md)

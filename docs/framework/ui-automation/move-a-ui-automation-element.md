@@ -10,10 +10,10 @@ helpviewer_keywords:
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
 ms.openlocfilehash: 7ecc272ceefe6755daa002eafd19c7e5d1c192f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137138"
 ---
 # <a name="move-a-ui-automation-element"></a>UI オートメーション要素の移動
