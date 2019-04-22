@@ -7,10 +7,10 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890398"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Visual Basic でのプロジェクトのカスタマイズと My の拡張
