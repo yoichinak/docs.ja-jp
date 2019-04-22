@@ -198,7 +198,7 @@ items:
     items:
     - name: namespace
       href: namespace.md
-    - name: 使用
+    - name: using
       href: using.md
       items:
       - name: using ディレクティブ
