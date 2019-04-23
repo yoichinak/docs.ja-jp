@@ -4,12 +4,12 @@ description: 同期および非同期の方法による、マイクロサービ�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466193"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613240"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>マイクロサービス アーキテクチャでの通信
 
@@ -90,10 +90,10 @@ JSON や XML などの複数のメッセージ形式 (バイナリ形式でも) 
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Martin Fowler。Richardson Maturity Model** REST モデルの説明。 \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** 公式サイト。 \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>HTTP に基づくプッシュおよびリアルタイム通信
 

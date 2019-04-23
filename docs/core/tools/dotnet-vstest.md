@@ -3,12 +3,12 @@ title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: 25d1b2d65b3e91bce894c59959a58537fa8ca113
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dcf17a59fea1f58757f39721c5dd5947ed30df0f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204017"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613461"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,25 +20,31 @@ ms.locfileid: "59204017"
 
 ## <a name="synopsis"></a>構文
 
-# [<a name="net-core-21"></a>.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
 ```
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [--Blame|/Blame] [--InIsolation|/InIsolation]
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
-# [<a name="net-core-20"></a>.NET Core 2.0](#tab/netcore20)
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
 ```
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] 
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
+
 ---
 
 ## <a name="description"></a>説明
@@ -53,7 +59,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="options"></a>オプション
 
-# [<a name="net-core-21"></a>.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -81,7 +87,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、`~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
+指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、または `~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
 
 `-?|--Help|/?|/Help`
 
@@ -141,7 +147,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 アダプターに渡す追加の引数を指定します。 引数は `<n>=<v>` 形式の名前と値のペアとして指定されます。この場合の `<n>` は引数名、`<v>` は引数値です。 複数の引数を指定する場合は、空白で区切ります。
 
-# [<a name="net-core-20"></a>.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -169,7 +175,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、`~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
+指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、または `~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
 
 `-?|--Help|/?|/Help`
 
@@ -217,7 +223,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 アダプターに渡す追加の引数を指定します。 引数は `<n>=<v>` 形式の名前と値のペアとして指定されます。この場合の `<n>` は引数名、`<v>` は引数値です。 複数の引数を指定する場合は、空白で区切ります。
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -245,7 +251,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、`~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
+指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、または `~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 かっこ `()` はサブ式をグループ化するために使用します。
 
 `-?|--Help|/?|/Help`
 

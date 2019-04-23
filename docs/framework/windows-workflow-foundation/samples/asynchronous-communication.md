@@ -3,11 +3,11 @@ title: 非同期通信
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
 ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323656"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769932"
 ---
 # <a name="asynchronous-communication"></a>非同期通信
 このサンプルでは、既定の 2 つの異なる Windows Workflow Foundation (WF) サービスの間の通信の非同期の実行方法を示します。  
