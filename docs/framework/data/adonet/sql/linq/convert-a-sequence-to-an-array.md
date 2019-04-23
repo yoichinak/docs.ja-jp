@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: bf0af444-890d-43e2-aeca-98589dd74ddf
 ms.openlocfilehash: 7d854a769ed580375e7463ba8661becc73ab8128
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154207"
 ---
 # <a name="convert-a-sequence-to-an-array"></a>方法 : シーケンスを配列に変換する

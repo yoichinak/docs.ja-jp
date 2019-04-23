@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151009"
 ---
 # <a name="how-to-animate-a-rectangle"></a>方法: 四角形をアニメーション化する
@@ -31,5 +31,5 @@ ms.locfileid: "59151009"
 - <xref:System.Windows.Media.RectangleGeometry>
 - [アニメーションの概要](animation-overview.md)
 - [グラフィックスとマルチメディア](index.md)
-- [グラフィックスに関する「方法」トピック](graphics-how-to-topics.md)
-- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)
+- [グラフィックスの操作方法に関するトピック](graphics-how-to-topics.md)
+- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)

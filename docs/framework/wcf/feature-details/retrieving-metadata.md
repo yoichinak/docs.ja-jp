@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152400"
 ---
 # <a name="retrieving-metadata"></a>メタデータを取得する
@@ -23,13 +23,13 @@ ms.locfileid: "59152400"
  既定では、<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> インスタンスは、1 つの <xref:System.ServiceModel.ChannelFactory> インスタンスに結び付けられています。 <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> によって使用される <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> インスタンスは、<xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 仮想メソッドをオーバーライドすることによって変更または置換することができます。 同様に、<xref:System.Net.HttpWebRequest> 仮想メソッドをオーバーライドすることによって、HTTP/GET 要求を行うために <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> が使用する <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> インスタンスを変更または置換できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ [方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードするには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
  Svcutil.exe を使用して、メタデータ ドキュメントをダウンロードする方法を示します。  
   
- [方法: MetadataResolver を使用してバインディング メタデータを動的に取得する](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ [方法: MetadataResolver を使用してバインディング メタデータを動的に取得するには](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> を使用して、実行時に動的にバインディング メタデータを取得する方法を示します。  
   
- [方法: MetadataExchangeClient を使用してメタデータを取得する](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ [方法: MetadataExchangeClient を使用してメタデータを取得するには](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
  <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> クラスを使用して、<xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> オブジェクトを含む <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> オブジェクトにメタデータ ファイルをダウンロードし、ファイルに書き込んだり、他の目的に使用したりする方法を示します。  
   
 ## <a name="see-also"></a>関連項目
