@@ -3,10 +3,10 @@ title: '&amp;&amp; (および)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
 ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308433"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (および)(Entity SQL)

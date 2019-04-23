@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
 ms.openlocfilehash: 81156fd7b1c9957486bcdd898c90a2bad2945829
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340309"
 ---
 # <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a>不適切なチェックサム値です。16 進数ではないか、または奇数の 16 進数です。
@@ -34,4 +34,4 @@ ms.locfileid: "59340309"
 ## <a name="see-also"></a>関連項目
 
 - [ASP.NET の概要](/aspnet/overview)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [ご意見](/visualstudio/ide/talk-to-us)

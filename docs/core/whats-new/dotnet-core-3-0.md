@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341726"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) の新機能
 
@@ -34,7 +34,6 @@ ms.locfileid: "57679737"
 - [C# 8.0 でのパターンの有効活用](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
 - [C# 8.0 を使ってみる](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
 - [C# 8.0 のビルド](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
 
 ### <a name="ranges-and-indices"></a>範囲とインデックス
 
@@ -71,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 `await foreach` を実行できるだけでなく、非同期反復子を作成することもできます。たとえば、`await` と`yield` の両方を行うことができる `IAsyncEnumerable/IAsyncEnumerator` を返す反復子です。 破棄する必要があるオブジェクトの場合は、`Stream` や `Timer` など、さまざまな BCL 型が実装する `IAsyncDisposable` を使用できます。
 
->[!NOTE]
->Visual Studio 2019 Preview 2 または [Visual Studio Code 用の C# 拡張機能](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5)の最新のプレビューのいずれかを使用して開発を行う場合、非同期ストリームを使用するには、NET Core 3.0 Preview 2 が必要です。 コマンドラインで .NET Core 3.0 Preview 2 を使用する場合、すべて期待どおりに機能します。
+> [!NOTE]
+> Visual Studio 2019 または [Visual Studio Code 用の C# 拡張機能](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5)の最新のプレビューのいずれかを使用して開発を行う場合、非同期ストリームを使用するには、NET Core 3.0 Preview 2 が必要です。 コマンドラインで .NET Core 3.0 Preview 2 を使用する場合、すべて期待どおりに機能します。
 
 ### <a name="using-declarations"></a>using 宣言
 
@@ -102,7 +101,7 @@ static string Display(object o) => o switch
 };
 ```
 
-この例では、2 つのパターンが使われています。 `o` は最初に `Point` *型パターン*と照合し、次に *{中かっこ}* 内の*プロパティ パターン*と照合します。 `_` は `discard pattern` を表します。これは *switch ステートメント*の `default` と同じです。
+この例では、2 つのパターンが使われています。 `o` では最初に `Point` "*型パターン*" が照合され、次に *{中かっこ}* 内の"*プロパティ パターン*" が照合されます。 `_` は `discard pattern` を表します。これは *switch ステートメント*の `default` と同じです。
 
 パターンを使用すると、意図のテストを実装する手続き型コードではなく、意図をキャプチャする宣言型コードを記述できます。 コンパイラによって、面倒な手続き型コードが実装されるようになり、それが常に正しく実行されることが保証されます。
 
@@ -167,10 +166,9 @@ static string Display(object o) => o switch
 
 ## <a name="build-copies-dependencies"></a>ビルドによる依存関係のコピー
 
-`dotnet build` で、アプリケーションの NuGet 依存関係が NuGet キャッシュからビルド出力フォルダーにコピーされるようになりました。 以前は、依存関係のコピーは `dotnet publish` の一部としてのみ行われていました。 
+`dotnet build` では、アプリケーションの NuGet 依存関係が NuGet キャッシュからビルド出力フォルダーにコピーされるようになりました。 以前は、依存関係のコピーは `dotnet publish` の一部としてのみ行われていました。 
 
 リンクや razor ページの発行など、まだ発行が必要な操作がいくつかあります。
-
 
 ## <a name="local-dotnet-tools"></a>ローカルの dotnet ツール
 
@@ -269,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 Preview 2 では、.NET Core 3.0 Windows フォームと WPF 用に、**新しいプロジェクト** テンプレートが追加されました。 デザイナーは、まだサポートされていません。 また、これらのプロジェクトは、Visual Studio 2019 で開いたり、起動したり、デバッグしたりすることができます。
+Visual Studio 2019 では、.NET Core 3.0 Windows フォームと WPF 用に、**新しいプロジェクト** テンプレートが追加されました。 デザイナーは、まだサポートされていません。 また、これらのプロジェクトは、Visual Studio 2019 で開いたり、起動したり、デバッグしたりすることができます。
 
 Visual Studio 2017 15.9 では、[.NET Core のプレビューを有効にする](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/)機能が追加されていますが、この機能をオンにする必要があり、これはサポートされているシナリオではありません。
 
@@ -309,7 +307,7 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 [MSIX](https://docs.microsoft.com/windows/msix/) は Windows アプリの新しいパッケージ形式です。 これは、Windows 10 に .NET Core 3.0 のデスクトップ アプリケーションを展開するために使用できます。
 
-[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 Preview 2 で使用でき、[自己完結型](../deploying/index.md#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
+[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
 
 >メモ:.NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
 ```xml
@@ -324,7 +322,7 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` は、UTF-8 でエンコードされた JSON テキスト用の高パフォーマンス、低割り当て、転送のみのリーダーです。`ReadOnlySpan<byte>` から読み取られます。 `Utf8JsonReader` は基本的で低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために利用できます。 新しい `Utf8JsonReader` を使用して JSON ペイロードを読み取る処理は、**Json.NET** のリーダーを使用する場合より 2 倍高速です。 JSON トークンを (UTF-16) 文字列として実現する必要が出てくるまでは割り当てられません。
+`System.Text.Json.Utf8JsonReader` は、UTF-8 でエンコードされた JSON テキスト用の、高パフォーマンス、低割り当て、順方向専用のリーダーです。`ReadOnlySpan<byte>` から読み取られます。 `Utf8JsonReader` は基本的で低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために利用できます。 新しい `Utf8JsonReader` を使用して JSON ペイロードを読み取る処理は、**Json.NET** のリーダーを使用する場合より 2 倍高速です。 JSON トークンを (UTF-16) 文字列として実現する必要が出てくるまでは割り当てられません。
 
 この新しい API には、次のコンポーネントが含まれています。
 
@@ -381,7 +379,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` は、`String`、`Int32`、`DateTime` のような一般的な.NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、ハイパフォーマンス、非キャッシュ、前方参照専用の方法を提供します。 リーダーと同様に、ライターは基本的で低レベルの型であり、カスタム シリアライザーを構築するために利用できます。 新しい `Utf8JsonWriter` を使用して JSON ペイロードを書き込むと、**Json.NET** からライターを使用するよりも 30 - 80% 高速になり、割り当てが行われません。
+`System.Text.Json.Utf8JsonWriter` では、`String`、`Int32`、`DateTime` のような一般的な .NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、高パフォーマンス、非キャッシュ、順方向専用の方法が提供されます。 リーダーと同様に、ライターは基本的で低レベルの型であり、カスタム シリアライザーを構築するために利用できます。 新しい `Utf8JsonWriter` を使用して JSON ペイロードを書き込むと、**Json.NET** からライターを使用するよりも 30 - 80% 高速になり、割り当てが行われません。
 
 出発点として使用できる `Utf8JsonWriter` の使用例を次に示します。
 
@@ -483,7 +481,6 @@ static double ParseJson()
 Windows では、フラット C API、COM、および WinRT の形式で、質の高いネイティブ API を提供しています。 **P/Invoke** は .NET Core 1.0 以降でサポートされています。 .NET Core 3.0 では、**CoCreate COM API** と **WinRT API をアクティブ化**する機能のサポートが追加されました。
 
 [Excel デモのソース コード](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)での COM の使用例を確認できます。
-
 
 ## <a name="type-sequencereader"></a>型:SequenceReader
 
@@ -773,7 +770,6 @@ GPIO プログラミングで使用することができる 2 つの新しいパ
 GPIO パッケージには、GPIO、SPI、I2C および PWM デバイス用の API が含まれています。 IoT バインド パッケージには、さまざまなチップとセンサーのための[デバイス バインド](https://github.com/dotnet/iot/blob/master/src/devices/README.md)が含まれています。これは [dotnet/iot - src/devices](https://github.com/dotnet/iot/tree/master/src/devices) で入手可能なものと同じです。
 
 .NET Core 3.0 Preview 1 の一部として発表された更新されたシリアル ポート API は、これらのパッケージには含まれていませんが、.NET Core プラットフォームの一部として使用できます。
-
 
 ## <a name="platform-support"></a>プラットフォームのサポート
 

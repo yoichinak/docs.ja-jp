@@ -3,10 +3,10 @@ title: SQL Server の CLR 統合の概要
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336812"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server の CLR 統合の概要
@@ -38,14 +38,14 @@ GO
   
  **SQL Server オンライン ブック**  
   
--   [CLR 統合の有効化](https://go.microsoft.com/fwlink/?LinkId=115230)  
+-   [CLR 統合を有効にします。](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>CLR アセンブリの配置  
  CLR メソッドをテスト サーバーでテストおよび検証すると、配置スクリプトを使用してこれらを実稼働サーバーに配布できます。 配置スクリプトは手動で生成するか、SQL Server Management Studio を使用して生成することができます。 詳細については、ご使用中の SQL Server のバージョンに対応するバージョンの SQL Server オンライン ブックを参照してください。  
   
  **SQL Server オンライン ブック**  
   
-1. [CLR データベース オブジェクトの配置](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [CLR データベース オブジェクトを展開します。](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>CLR 統合セキュリティ  
  Microsoft SQL Server と Microsoft .NET Framework 共通言語ランタイム (CLR) との統合のセキュリティ モデルは、SQL Server 内部で実行されるさまざまなタイプの CLR オブジェクトおよび非 CLR オブジェクトの間のアクセスを管理し、セキュリティで保護します。 これらのオブジェクトは、Transact-SQL ステートメントまたはサーバーで実行される別の CLR オブジェクトから呼び出される可能性があります。  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server オンライン ブック**  
   
--   [CLR 統合セキュリティ](https://go.microsoft.com/fwlink/?LinkId=115234)  
+-   [CLR 統合のセキュリティ](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>CLR アセンブリのデバッグ  
  Microsoft SQL Server は、データベース内の Transact-SQL オブジェクトおよび共通言語ランタイム (CLR) オブジェクトのデバッグをサポートしています。 デバッグは言語をまたがって機能します。ユーザーは、Transact-SQL から CLR オブジェクトへ、または CLR オブジェクトから Transact-SQL へシームレスにデバッグできます。  

@@ -3,10 +3,10 @@ title: '方法: 列をデータベース生成列として表す'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
 ms.openlocfilehash: 2803697c668a8e1dbbeb426ea41b64878f70c145
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307913"
 ---
 # <a name="how-to-represent-columns-as-database-generated"></a>方法: 列をデータベース生成列として表す
@@ -23,4 +23,4 @@ ms.locfileid: "59307913"
 ## <a name="see-also"></a>関連項目
 
 - [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

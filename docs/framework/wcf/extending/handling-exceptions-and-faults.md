@@ -3,10 +3,10 @@ title: 例外とエラーの処理
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343429"
 ---
 # <a name="handling-exceptions-and-faults"></a>例外とエラーの処理
@@ -20,7 +20,7 @@ ms.locfileid: "59343429"
   
 |例外の種類|説明|内部例外の内容|回復方法|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、 <xref:System.IO.PipeException>、 <xref:System.Net.HttpListenerException>、または<xref:System.Net.Sockets.SocketException>します。|別のアドレスで実行してください。|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|リッスン用に指定されたエンドポイント アドレスは既に使用されています。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 たとえば、 <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> または <xref:System.Net.Sockets.SocketException>|別のアドレスで実行してください。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|このプロセスは、リッスン用に指定されたエンドポイント アドレスへのアクセスを許可されていません。|エラーの詳細情報が得られるようであれば、この例外の原因となったトランスポート エラーについての情報を提供します。 例 : <xref:System.IO.PipeException> または <xref:System.Net.HttpListenerException>|別の資格情報を使用して試行します。|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|<xref:System.ServiceModel.ICommunicationObject> Faulted 状態では使用されている (詳細については、次を参照してください。[について状態の変化](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 複数の呼び出しが保留になっているオブジェクトが Faulted 状態に遷移した場合、エラーに関連する例外をスローする呼び出しは 1 つだけであり、それ以外の呼び出しは <xref:System.ServiceModel.CommunicationObjectFaultedException> をスローします。 通常、この例外がスローされるのは、アプリケーションが何らかの例外を認識しておらず、おそらく最初の例外をキャッチしたスレッド以外のスレッドで、既に Faulted 状態のオブジェクトを使用しようとしたためです。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> にエラーが発生した第一の原因によっては、回復するために他の作業が必要になることがあります。|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject>使用されているが中止されました (詳細については、次を参照してください。[について状態の変化](../../../../docs/framework/wcf/extending/understanding-state-changes.md))。 <xref:System.ServiceModel.CommunicationObjectFaultedException> と同様に、この例外は、アプリケーションがおそらく別のスレッドからオブジェクトに対して <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出したときに、オブジェクトが既に Aborted 状態であるため、使用できなくなっていることを示しています。|詳細情報を使用できる場合は、内部例外についての詳細を示します。|新規オブジェクトを作成します。 <xref:System.ServiceModel.ICommunicationObject> が中止された第一の原因によっては、回復するために他の作業が必要になることがあります。|  
@@ -116,7 +116,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>エラーの生成  
  このセクションでは、チャネルまたはチャネルによって作成されたメッセージ プロパティで検出されるエラー状態に応じてエラーを生成するプロセスについて説明します。 一般的な例として、無効なデータが含まれた要求メッセージに対するエラーの送信が挙げられます。  
   
- エラーの生成時には、カスタム チャネルからエラーを直接送信するのではなく、例外をスローするようにし、その例外をエラーに変換するかどうかの判断とエラーの送信方法の決定は上位のレイヤーで行います。 この変換を支援するために、チャネルは `FaultConverter` を実装し、カスタム チャネルがスローした例外を適切なエラーに変換できるようにします。 `FaultConverter` として定義されます。  
+ エラーの生成時には、カスタム チャネルからエラーを直接送信するのではなく、例外をスローするようにし、その例外をエラーに変換するかどうかの判断とエラーの送信方法の決定は上位のレイヤーで行います。 この変換を支援するために、チャネルは `FaultConverter` を実装し、カスタム チャネルがスローした例外を適切なエラーに変換できるようにします。 `FaultConverter` は次のように定義します。  
   
 ```  
 public class FaultConverter  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` 返します`true`エラーがの場合、`mustUnderstand`エラー。 `WasHeaderNotUnderstood` 返します`true`指定した名前と名前空間を持つヘッダーが NotUnderstood ヘッダーとしてエラーに含まれるかどうか。  それ以外の場合は、 `false`を返します。  
+ エラーが `IsMustUnderstandFault` エラーの場合、`true` は `mustUnderstand` を返します。 指定した名前と名前空間を持つヘッダーが NotUnderstood ヘッダーとしてエラーに含まれている場合、`WasHeaderNotUnderstood` は `true` を返します。  それ以外の場合は、 `false`を返します。  
   
  MustUnderstand = true でマークされたヘッダーをチャネルで出力する場合は、該当のレイヤーも例外生成 API パターンを実装し、出力したヘッダーが原因で発生した `mustUnderstand` エラーを前述のより有用な例外に変換する必要があります。  
   
 ## <a name="tracing"></a>トレース  
  デバッガーをアタッチしてコードを段階的に実行できない場合に、運用アプリケーションや断続的な問題の診断を支援する 1 つの方法として、.NET Framework にはプログラムの実行をトレースする機構が用意されています。 この機構のコア コンポーネントは <xref:System.Diagnostics?displayProperty=nameWithType> 名前空間にあり、以下で構成されます。  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>、は、書き込むトレース情報のソース<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>、からトレースする情報を受信する具象リスナーの抽象基本クラスは、<xref:System.Diagnostics.TraceSource>リスナー固有の変換先に出力するとします。 たとえば、<xref:System.Diagnostics.XmlWriterTraceListener> は、トレース情報を XML ファイルに出力します。 最後に、<xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> を使用すると、アプリケーション ユーザーがトレースの詳細出力レベルを制御できます。通常、このクラスは構成で指定します。  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> は、書き込むトレース情報のソースです。<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType> は、<xref:System.Diagnostics.TraceSource> からトレースする情報を受け取り、リスナー固有の送信先に出力する具象リスナーの抽象基本クラスです。 たとえば、<xref:System.Diagnostics.XmlWriterTraceListener> は、トレース情報を XML ファイルに出力します。 最後に、<xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> を使用すると、アプリケーション ユーザーがトレースの詳細出力レベルを制御できます。通常、このクラスは構成で指定します。  
   
 -   使用することができます、コア コンポーネントに加え、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を表示および検索 WCF トレースします。 このツールは、WCF によって生成され、出力を使用して、トレース ファイルの向けに設計されて<xref:System.Diagnostics.XmlWriterTraceListener>します。 トレースに関与するさまざまなコンポーネントを次の図に示します。  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>構造化されたデータのトレース  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> <xref:System.Diagnostics.TraceSource.TraceData%2A>を 1 つまたは複数のオブジェクトを受け取るメソッドは、トレース エントリに含めます。 通常、<xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドは各オブジェクトに対して呼び出され、生成された文字列はトレース エントリの一部として書き込まれます。 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> を使用してトレースを出力する場合、データ オブジェクトとして <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> を <xref:System.Diagnostics.TraceSource.TraceData%2A> に渡すことができます。 生成されるトレース エントリには、<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> によって提供された XML が含まれます。 XML アプリケーション データが含まれたエントリの例を次に示します。  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> には、トレース エントリに含まれる 1 つ以上のオブジェクトを取得する <xref:System.Diagnostics.TraceSource.TraceData%2A> メソッドがあります。 通常、<xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドは各オブジェクトに対して呼び出され、生成された文字列はトレース エントリの一部として書き込まれます。 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> を使用してトレースを出力する場合、データ オブジェクトとして <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> を <xref:System.Diagnostics.TraceSource.TraceData%2A> に渡すことができます。 生成されるトレース エントリには、<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> によって提供された XML が含まれます。 XML アプリケーション データが含まれたエントリの例を次に示します。  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

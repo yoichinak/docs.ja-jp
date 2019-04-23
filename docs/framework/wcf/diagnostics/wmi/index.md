@@ -3,10 +3,10 @@ title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308589"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
@@ -155,7 +155,7 @@ Whoami /user
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  インストールした場合[WMI Administrative Tools](https://go.microsoft.com/fwlink/?LinkId=95185)、WMI インスタンスのアクセスに、WMI CIM Studio を使用することができます。 このツールは次のフォルダーにあります。  
   
- **%windir%\Program Files\WMI ツール\\**  
+ **%windir%\Program Files\WMI Tools\\**  
   
 1. **名前空間への接続:** ウィンドウで、「 **「root \servicemodel」**  をクリック**ok をクリックします。**  
   

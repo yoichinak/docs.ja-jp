@@ -10,10 +10,10 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308563"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
@@ -118,5 +118,5 @@ ms.locfileid: "59308563"
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: イベントの宣言と発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
+- [チュートリアル: 宣言とイベントの発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)
 - [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

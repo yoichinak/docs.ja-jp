@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221688"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59341388"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "54221688"
 
 ## <a name="example"></a>例
 
-単一の `where` 句内には、[&&](../operators/conditional-and-operator.md) および [&#124;&#124;](../operators/conditional-or-operator.md) 演算子を使用して、必要な数の述語を指定できます。 次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。
+単一の `where` 句内には、[&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) および [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) 演算子を使用して、必要な数の述語を指定できます。 次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -37,7 +37,7 @@ ms.locfileid: "54221688"
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `where` 句はフィルター メカニズムです。 クエリ式のほぼどこにでも指定できますが、最初の句や最後の句にすることはできません。 `where` 句は、ソース要素のフィルター処理をグループ化の前に行うか後に行うかによって、[group](group-clause.md) 句の前または後に指定できます。
 

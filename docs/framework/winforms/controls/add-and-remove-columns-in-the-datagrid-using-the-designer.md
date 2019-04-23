@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
 ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343286"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する
@@ -44,5 +44,5 @@ Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロール�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>
-- [方法: Windows フォーム アプリケーション プロジェクトを作成します。](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)

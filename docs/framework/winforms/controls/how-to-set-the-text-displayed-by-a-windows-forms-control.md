@@ -22,10 +22,10 @@ helpviewer_keywords:
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
 ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308524"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法: Windows フォーム コントロールによって表示されるテキストを設定する
@@ -74,5 +74,5 @@ Windows フォーム コントロールは、通常、コントロールの主�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)
-- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォーム コントロールのアクセス キーを作成します。](how-to-create-access-keys-for-windows-forms-controls.md)
+- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)

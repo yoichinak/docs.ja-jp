@@ -17,10 +17,10 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307770"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>方法: XML ドキュメントのデジタル署名を検証する
@@ -87,4 +87,4 @@ ms.locfileid: "59307770"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Cryptography.Xml>
-- [方法: デジタル署名で XML ドキュメントに署名する](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- [方法: XML ドキュメントにデジタル署名を使用](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

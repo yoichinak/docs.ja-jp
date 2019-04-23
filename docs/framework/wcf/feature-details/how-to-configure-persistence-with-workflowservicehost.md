@@ -3,10 +3,10 @@ title: '方法: WorkflowServiceHost を使用して永続性を構成する'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
 ms.openlocfilehash: b8839f42a9b8b5f4da0a1a8364c7eac5a4c06d4e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337163"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して永続性を構成する
@@ -63,4 +63,4 @@ ms.locfileid: "59337163"
 
 - [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [ワークフローの永続性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
-- [Windows Server AppFabric の永続化](https://go.microsoft.com/fwlink/?LinkId=193121)
+- [Windows Server App Fabric の永続化](https://go.microsoft.com/fwlink/?LinkId=193121)

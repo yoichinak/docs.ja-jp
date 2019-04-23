@@ -11,10 +11,10 @@ helpviewer_keywords:
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
 ms.openlocfilehash: 131dc688d2a742fa7a0d99ec7858d4e280c9882f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310760"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>方法: ローカリゼーションに対応した Windows フォーム レイアウトをデザインする
@@ -29,19 +29,19 @@ ms.locfileid: "59310760"
  [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>その他の技術情報
-1. [方法: TableLayoutPanel コントロール内でコントロールを配置して伸縮する](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [方法: 配置して、コントロールを TableLayoutPanel コントロールで伸縮](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
+2. [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)  
 
-3. [方法: TableLayoutPanel コントロールの行と列を拡大する](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+3. [方法: TableLayoutPanel コントロールの行と列にまたがる](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-4. [方法: TableLayoutPanel コントロールの列と行を編集する](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+4. [方法: TableLayoutPanel コントロールの列と行を編集します。](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-5. [チュートリアル: Windows フォーム コントロールのスマート タグを使用した共通タスクの実行](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+5. [チュートリアル: スマートを使用して一般的なタスクを実行する Windows フォーム コントロールをタグ](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
   
-6. [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+6. [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
 
-7. [チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)  
+7. [チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト](windows-forms-controls-padding-autosize.md)  
   
 8. [方法: AutoSize と TableLayoutPanel コントロールを使用して Windows フォームのローカリゼーションをサポートします。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59310760"
   
 -   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
 ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343267"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>方法: Windows フォームで実行時にイベント ハンドラーを作成する

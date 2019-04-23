@@ -3,12 +3,12 @@ title: パターン マッチング機能を使用してデータ型を拡張す
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308602"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>チュートリアル: パターン マッチング機能を使用してデータ型を拡張する
 
@@ -23,7 +23,7 @@ C# 7 で、基本的なパターン マッチング機能が導入されまし�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 プレビュー コンパイラも実行されるようにします。 C# 8 プレビュー コンパイラは、最新の [Visual Studio 2019 プレビュー](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) または最新の [.NET Core 3.0 プレビュー](https://dotnet.microsoft.com/download/dotnet-core/3.0)で使用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 プレビュー コンパイラも実行されるようにします。 C# 8 プレビュー コンパイラは、最新の [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー](https://dotnet.microsoft.com/download/dotnet-core/3.0)で使用できます。
 
 このチュートリアルでは、.NET と、C# と Visual Studio または .NET Core CLI のいずれかに精通していることを前提としています。
 

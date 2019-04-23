@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 43b5ad2f346406897e8bcbcce5660a6c9524f9af
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826266"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308472"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>方法: Windows サービスをインストールおよびアンインストールする
 .NET Framework を使用して Windows サービスを開発している場合は、[*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) コマンド ライン ユーティリティを使用してサービス アプリをすばやくインストールできます。 ユーザーがインストールおよびアンインストールできる Windows サービスをリリースする開発者は、InstallShield を使用する必要があります。 詳細については、「[インストーラー パッケージを作成する (Windows デスクトップ)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client)」を参照してください。
@@ -34,13 +34,13 @@ ms.locfileid: "55826266"
   
 ### <a name="install-your-service-manually"></a>サービスを手動でインストールする  
   
-1.  **[スタート]** メニューから **[Visual Studio \<*バージョン*>]** ディレクトリを選択し、**[開発者コマンド プロンプト for VS \<*バージョン*>]** を選択します。
+1. **[スタート]** メニューから **[Visual Studio \<*バージョン*>]** ディレクトリを選択し、**[開発者コマンド プロンプト for VS \<*バージョン*>]** を選択します。
   
      Visual Studio 用開発者コマンド プロンプトが表示されます。 
   
-2.  プロジェクトのコンパイル済み実行可能ファイルが格納されているディレクトリに移動します。  
+2. プロジェクトのコンパイル済み実行可能ファイルが格納されているディレクトリに移動します。  
   
-3.  プロジェクトの実行可能ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。  
+3. プロジェクトの実行可能ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ ms.locfileid: "55826266"
   
      Visual Studio 用開発者コマンド プロンプトが表示されます。  
   
-2.  プロジェクトの出力先ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。  
+2. プロジェクトの出力先ファイルをパラメーターとして指定し、コマンド プロンプトから *InstallUtil.exe* を実行します。  
   
     ```console  
     installutil /u <yourproject>.exe  
@@ -67,6 +67,7 @@ ms.locfileid: "55826266"
 3. 実行可能ファイルを削除した後も、レジストリ内にサービスが存在したままになることがあります。 このような場合は、コマンド [sc delete](/windows-server/administration/windows-commands/sc-delete) を使って、レジストリからサービスのエントリを削除します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../windows-services/introduction-to-windows-service-applications.md)
 - [方法: Windows サービスを作成する](../windows-services/how-to-create-windows-services.md)
 - [方法: サービス アプリケーションにインストーラーを追加する](../windows-services/how-to-add-installers-to-your-service-application.md)

@@ -3,10 +3,10 @@ title: '!= (等しくない) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
 ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310968"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (等しくない) (Entity SQL)
@@ -25,7 +25,7 @@ expression <> expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- `true` 左の式が右の式と等しくない場合それ以外の場合、`false`します。  
+ 左の式が右の式と等しくない場合は`true` 、等しい場合は `false`。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは != 演算子を使用して 2 つの式を比較し、左の式が右の式と等しくないかどうかを判別します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  

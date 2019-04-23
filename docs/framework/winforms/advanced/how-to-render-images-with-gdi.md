@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342551"
 ---
 # <a name="how-to-render-images-with-gdi"></a>方法: GDI+ を使用してイメージをレンダリングする
@@ -84,9 +84,9 @@ ms.locfileid: "59342551"
 ## <a name="see-also"></a>関連項目
 
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
-- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
+- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+ でのペン、直線、および四角形](pens-lines-and-rectangles-in-gdi.md)
-- [方法: Windows フォームにテキストを描画する](how-to-draw-text-on-a-windows-form.md)
+- [方法: Windows フォーム上のテキストの描画](how-to-draw-text-on-a-windows-form.md)
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
-- [線または閉じた図形の描画](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [描画線または閉じた図形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [アイコン用イメージ エディター](/cpp/windows/image-editor-for-icons)

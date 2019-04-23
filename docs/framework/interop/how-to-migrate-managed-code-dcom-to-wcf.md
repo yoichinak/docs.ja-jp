@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734517"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307718"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>手順 3: WCF サービスを構成して開始する  
  これらのサービスをホストするには、サーバーの構成ファイル (web.config) に以下を追加する必要があります。  
   
-1.  セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
+1. セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
   
-2.  `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
+2. `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
   
  これらの設定のある構成ファイルの例を次に示します。  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  サービスを呼び出すには、クライアントにコードを追加して、以下を実行するようにします。  
   
-1.  `ISessionBoundFactory` サービスへのチャネルを作成します。  
+1. `ISessionBoundFactory` サービスへのチャネルを作成します。  
   
-2.  チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
+2. チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
   
-3.  <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
+3. <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
   
-4.  `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
+4. `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)

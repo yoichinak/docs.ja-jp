@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335473"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>方法: (Visual Basic) の値を返さないプロシージャを呼び出す
@@ -32,10 +32,10 @@ A`Sub`プロシージャが呼び出し元のコードに値を返しません�
 
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
-- [手順](./index.md)
+- [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [方法: プロシージャを作成する](./how-to-create-a-procedure.md)
+- [方法: プロシージャを作成します。](./how-to-create-a-procedure.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)
 - [方法: Visual Basic でイベント ハンドラーを呼び出す](./how-to-call-an-event-handler.md)

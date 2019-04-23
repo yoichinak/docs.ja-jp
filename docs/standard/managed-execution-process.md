@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652021"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336149"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
   
-1.  [コンパイラを選択します](#choosing_a_compiler)。  
+1. [コンパイラを選択します](#choosing_a_compiler)。  
   
      共通言語ランタイムが提供する機能を利用するためには、共通言語ランタイムに対応した言語コンパイラを使用する必要があります。  
   
-2.  [コードを MSIL にコンパイルします](#compiling_to_msil)。  
+2. [コードを MSIL にコンパイルします](#compiling_to_msil)。  
   
      コンパイルを実行するとソース コードが Microsoft Intermediate Language (MSIL) に変換され、必要なメタデータが生成されます。  
   
-3.  [MSIL からネイティブ コードにコンパイルします](#compiling_msil_to_native_code)。  
+3. [MSIL からネイティブ コードにコンパイルします](#compiling_msil_to_native_code)。  
   
      実行時に、ジャスト イン タイム (JIT) コンパイラによって MSIL がネイティブ コードに変換されます。 このコンパイルの実行時に、コードは検証プロセスで確認される必要があります。この検証プロセスでは、MSIL とメタデータが調べられ、コードがタイプ セーフかどうかが確認されます。  
   
-4.  [コードを実行します](#running_code)。  
+4. [コードを実行します](#running_code)。  
   
      共通言語ランタイムは、実行を可能にするインフラストラクチャと実行時に使用できるサービスを提供します。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652021"
   
  Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] および [!INCLUDE[windowsver](../../includes/windowsver-md.md)]では、オペレーティング システム ローダーが COFF ヘッダー内のビットを調べることにより、マネージド モジュールをチェックします。 設定されたビットはマネージド モジュールを意味します。 ローダーがマネージド モジュールを検出すると、mscoree.dll が読み込まれます。マネージド モジュール イメージが読み込まれるときとアンロードされるときには、 `_CorValidateImage` および `_CorImageUnloading` がローダーに通知します。 `_CorValidateImage` は、次のアクションを実行します。  
   
-1.  コードが有効なマネージド コードであることを確認します。  
+1. コードが有効なマネージド コードであることを確認します。  
   
-2.  イメージのエントリ ポイントをランタイムのエントリ ポイントに変更します。  
+2. イメージのエントリ ポイントをランタイムのエントリ ポイントに変更します。  
   
  64 ビット Windows では、 `_CorValidateImage` は、メモリ内のイメージを PE32 から PE32+ 形式に変換することによって変更します。  
   

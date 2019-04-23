@@ -12,10 +12,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
 ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310279"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールにおけるドラッグ アンド ドロップ操作を有効にする
@@ -62,7 +62,7 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
        }  
     ```  
   
-     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
+     (Visual C# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
        }  
     ```  
   
-     (Visual c# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
+     (Visual C# と[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -167,6 +167,6 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行する](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行します。](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

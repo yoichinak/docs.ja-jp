@@ -3,16 +3,16 @@ title: カスタム暗号アルゴリズムの指定
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
 ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342831"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>カスタム暗号アルゴリズムの指定
 WCF では、データの暗号化やデジタル署名の計算を行う際に使用するカスタム暗号アルゴリズムを指定できます。 そのためには、次の手順に従います。  
   
-1. クラスを派生します。 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> の派生クラスを作成します。  
   
 2. アルゴリズムを登録します。  
   

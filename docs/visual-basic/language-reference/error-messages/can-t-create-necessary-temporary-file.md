@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
 ms.openlocfilehash: 658c2ab1dc210bf472646bce529ae5ffd7f67bc5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310227"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>必要な一時ファイルを作成できません。

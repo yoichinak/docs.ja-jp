@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335876"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する

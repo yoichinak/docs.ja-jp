@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397986"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59310565"
 ---
 # <a name="garbage-collection-and-performance"></a>ガベージ コレクションとパフォーマンス
 <a name="top"></a> ここでは、ガベージ コレクションおよびメモリ使用に関連する問題について説明します。 マネージド ヒープに関する問題について取り上げ、ガベージ コレクションによるアプリケーションに対する影響を最小限に抑える方法を説明します。 問題を調査するために使用できる手順のリンクを問題ごとに示してあります。  
@@ -84,7 +84,7 @@ ms.locfileid: "47397986"
 -   [ガベージ コレクションの実行時の CPU 使用率が高すぎる](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>問題: メモリ不足の例外がスローされる  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>問題:メモリ不足の例外がスローされる  
  <xref:System.OutOfMemoryException> マネージド例外がスローされる正当な状況としては、次の 2 つがあります。  
   
 -   仮想メモリが不足している。  
@@ -106,7 +106,7 @@ ms.locfileid: "47397986"
 -   メモリ不足の例外が正当なものでないことを証明するデータ (仮想メモリまたは物理メモリに問題がないことを示すデータなど)  
   
 <a name="Issue_TooMuchMemory"></a>   
-### <a name="issue-the-process-uses-too-much-memory"></a>問題: プロセスによるメモリ使用量が多すぎる  
+### <a name="issue-the-process-uses-too-much-memory"></a>問題:プロセスによるメモリ使用量が多すぎる  
  一般的な前提として、メモリ使用量が多すぎる場合については、Windows タスク マネージャーの **[パフォーマンス]** タブのメモリ使用量の表示で確認できます。 ただし、この表示はワーキング セットに関するもので、仮想メモリの使用量に関する情報ではありません。  
   
  マネージド ヒープが原因であると判断した場合は、一定の期間にわたってマネージド ヒープを測定し、パターンを確認する必要があります。  
@@ -118,7 +118,7 @@ ms.locfileid: "47397986"
 |[予約できる仮想メモリの量を確認する。](#GetVM)<br /><br /> [マネージド ヒープでコミットしているメモリの量を確認する。](#ManagedHeapCommit)<br /><br /> [マネージド ヒープで予約されているメモリの量を確認する。](#ManagedHeapReserve)<br /><br /> [ジェネレーション 2 の大きいオブジェクトを確認する。](#ExamineGen2)<br /><br /> [オブジェクトへの参照を確認する。](#ObjRef)|  
   
 <a name="Issue_NotFastEnough"></a>   
-### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題: ガベージ コレクターによるオブジェクトの解放に時間がかかる  
+### <a name="issue-the-garbage-collector-does-not-reclaim-objects-fast-enough"></a>問題:ガベージ コレクターによるオブジェクトの解放に時間がかかる  
  ガベージ コレクションでオブジェクトが通常どおりに解放されていないように見える場合は、それらのオブジェクトに対する強い参照がないかどうかを確認する必要があります。  
   
  この問題は、死んだ状態のオブジェクトを含むジェネレーションに対してガベージ コレクションが行われていない場合にも発生します。死んだ状態のオブジェクトは、そのオブジェクトのファイナライザーが実行されていないことを示します。 たとえば、シングルスレッド アパートメント (STA) のアプリケーションを実行している場合に、ファイナライザー キューを処理するスレッドがファイナライザーの呼び出しに失敗すると、この状態になる可能性があります。  
@@ -128,7 +128,7 @@ ms.locfileid: "47397986"
 |[オブジェクトへの参照を確認する。](#ObjRef)<br /><br /> [ファイナライザーが実行されたかどうかを確認する。](#Induce)<br /><br /> [終了待機中のオブジェクトがないかどうかを確認する。](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題: マネージド ヒープが過度に断片化される  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>問題:マネージド ヒープが過度に断片化される  
  断片化レベルは、ジェネレーションに割り当てられたメモリの合計に占める空き領域の割合として計算されます。 ジェネレーション 2 の場合、許容される断片化レベルは 20% 以下です。 ジェネレーション 2 は非常に大きくなる可能性があるため、断片化の割合の方が絶対値より重要になります。  
   
  ジェネレーション 0 は、新しいオブジェクトが割り当てられるジェネレーションなので、空き領域が多くても問題はありません。  
@@ -156,7 +156,7 @@ ms.locfileid: "47397986"
  正当な理由もないのに断片化が発生していると思われる場合は、マイクロソフト カスタマー サポート サービスにお問い合わせください。  
   
 <a name="Issue_LongPauses"></a>   
-### <a name="issue-garbage-collection-pauses-are-too-long"></a>問題: ガベージ コレクションの一時停止が長すぎる  
+### <a name="issue-garbage-collection-pauses-are-too-long"></a>問題:ガベージ コレクションの一時停止が長すぎる  
  ガベージ コレクションはソフト リアルタイムで動作するため、アプリケーションはある程度の一時停止に耐えられなければなりません。 ソフト リアルタイムの基準では、95% の操作が時間どおりに完了する必要があります。  
   
  同時実行ガベージ コレクションでは、コレクションの実行中もマネージド スレッドを実行できるため、一時停止は最小限に抑えられます。  
@@ -172,11 +172,11 @@ ms.locfileid: "47397986"
 |[ガベージ コレクションの継続時間を確認する。](#TimeInGC)<br /><br /> [ガベージ コレクションが発生した原因を確認する。](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a>問題: ジェネレーション 0 が大きすぎる  
+### <a name="issue-generation-0-is-too-big"></a>問題:ジェネレーション 0 が大きすぎる  
  64 ビット システムでは、ジェネレーション 0 のオブジェクトの数が増える傾向があります。ワークステーションのガベージ コレクションではなくサーバーのガベージ コレクションを使用している場合は特にその傾向が強くなります。 それらの環境では、ジェネレーション 0 のガベージ コレクションをトリガーするしきい値が高いので、ジェネレーション 0 のコレクションが非常に大きくなる可能性があるためです。 アプリケーションで、ガベージ コレクションがトリガーされる前により多くのメモリを割り当てると、パフォーマンスが向上します。  
   
 <a name="Issue_HighCPU"></a>   
-### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>問題: ガベージ コレクションの実行時の CPU 使用率が高すぎる  
+### <a name="issue-cpu-usage-during-a-garbage-collection-is-too-high"></a>問題:ガベージ コレクションの実行時の CPU 使用率が高すぎる  
  ガベージ コレクションの実行時には CPU 使用率が高くなります。 ガベージ コレクションに大量の処理時間が費やされている場合は、コレクションの発生頻度が高すぎるか、コレクションの継続時間が長すぎます。 マネージド ヒープに対するオブジェクトの割り当ての速度を上げるとガベージ コレクションの発生頻度が高くなります。 割り当ての速度を下げるとガベージ コレクションの発生頻度が低くなります。  
   
  割り当ての速度を監視するには、`Allocated Bytes/second` パフォーマンス カウンターを使用します。 詳細については、「[.NET Framework のパフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
@@ -278,7 +278,7 @@ ms.locfileid: "47397986"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>メモリ不足の例外がマネージド例外かどうかを確認するには  
   
-1.  SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、**pe** (print exception) コマンドを入力します。  
+1. SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、**pe** (print exception) コマンドを入力します。  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397986"
     StackTrace (generated):  
     ```  
   
-2.  出力に例外が明記されていない場合は、メモリ不足の例外が発生したスレッドを特定する必要があります。 デバッガーで次のコマンドを入力して、すべてのスレッドとその呼び出し履歴を表示します。  
+2. 出力に例外が明記されていない場合は、メモリ不足の例外が発生したスレッドを特定する必要があります。 デバッガーで次のコマンドを入力して、すべてのスレッドとその呼び出し履歴を表示します。  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397986"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  次のコマンドを使用して、入れ子になった例外をダンプします。  
+3. 次のコマンドを使用して、入れ子になった例外をダンプします。  
   
      **!pe -nested**  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397986"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>十分な物理メモリがあるかどうかを確認するには  
   
-1.  Windows タスク マネージャーを起動します。  
+1. Windows タスク マネージャーを起動します。  
   
-2.  **[パフォーマンス]** タブで、コミットの値を確認します  (Windows 7 では **[システム]** の **[コミット (KB)]**)。  
+2. **[パフォーマンス]** タブで、コミットの値を確認します  (Windows 7 では **[システム]** の **[コミット (KB)]**)。  
   
      **[合計]** が **[制限値]** に近い場合は、物理メモリが不足しています。  
   
@@ -415,7 +415,7 @@ ms.locfileid: "47397986"
   
      **dumpheap** は、マネージド ヒープが大きいと完了までにしばらくかかります。  
   
-     最も多くの領域を使用しているオブジェクトは出力の最後の数行に表示されるため、そこを分析します。 例:  
+     最も多くの領域を使用しているオブジェクトは出力の最後の数行に表示されるため、そこを分析します。 次に例を示します。  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -494,13 +494,13 @@ ms.locfileid: "47397986"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>終了待機中のオブジェクトがないかどうかを確認するには  
   
-1.  SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。  
+1. SOS デバッガー拡張が読み込まれた WinDbg または Visual Studio デバッガーで、次のコマンドを入力します。  
   
      **!finalizequeue**  
   
      終了準備が完了しているオブジェクトの数を確認します。 その数が多い場合は、それらのファイナライザーが実行されない理由、または実行が遅れている理由を調べる必要があります。  
   
-2.  スレッドの出力を取得するには、次のコマンドを入力します。  
+2. スレッドの出力を取得するには、次のコマンドを入力します。  
   
      **threads -special**  
   

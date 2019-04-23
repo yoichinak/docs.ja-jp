@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
 ms.openlocfilehash: 87f9cf5040ffb757799c51d598d0755847c5bfd9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340647"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>方法: サービスのメッセージを検査および変更する
