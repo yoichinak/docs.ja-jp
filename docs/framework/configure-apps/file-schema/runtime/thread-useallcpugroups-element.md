@@ -5,10 +5,10 @@ ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 236953cc1a430a1dd2a2fbb633c7ef06e6ba200f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230838"
 ---
 # <a name="threaduseallcpugroups-element"></a>\<Thread_UseAllCpuGroups > 要素
