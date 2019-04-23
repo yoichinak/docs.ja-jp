@@ -3,10 +3,10 @@ title: 数値演算正規関数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
 ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228771"
 ---
 # <a name="math-canonical-functions"></a>数値演算正規関数
@@ -106,8 +106,8 @@ A `Single`、 `Double`、および`Decimal`します。
 
 |  |  |
 |--|--|
-|`value`|`Double` または `Decimal` です。|
-|`digits`|`Int16` または `Int32` です。|
+|`value`|`Double` または `Decimal`。|
+|`digits`|`Int16` または `Int32`。|
 
 **戻り値**
 
@@ -125,8 +125,8 @@ A `Single`、 `Double`、および`Decimal`します。
 
 |  |  |
 |--|--|
-|`value`|`Double` または `Decimal` です。|
-|`digits`|`Int16` または `Int32` です。|
+|`value`|`Double` または `Decimal`。|
+|`digits`|`Int16` または `Int32`。|
 
 **戻り値**
 

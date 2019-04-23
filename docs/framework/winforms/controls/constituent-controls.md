@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224878"
 ---
 # <a name="constituent-controls"></a>内在コントロール
@@ -48,5 +48,5 @@ System.Windows.Forms.PaintEventArgs e)
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [ユーザー描画コントロール](user-drawn-controls.md)
-- [方法: 描画する Graphics オブジェクトを作成する](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [方法: 描画の Graphics オブジェクトを作成します。](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

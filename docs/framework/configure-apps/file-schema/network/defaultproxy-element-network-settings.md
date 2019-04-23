@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228348"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 要素 (ネットワーク設定)
@@ -49,8 +49,8 @@ ms.locfileid: "59228348"
 |**要素**|**説明**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
-|[name](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|新しいプロキシ モジュールをアプリケーションに追加します。|  
-|[プロキシ](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
+|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|新しいプロキシ モジュールをアプリケーションに追加します。|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
   
 ### <a name="parent-elements"></a>親要素  
   

@@ -3,11 +3,11 @@ title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840238"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978615"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
 

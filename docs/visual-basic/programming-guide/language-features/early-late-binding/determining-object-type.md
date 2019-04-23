@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302713"
 ---
 # <a name="determining-object-type-visual-basic"></a>オブジェクトの型の決定 (Visual Basic)
@@ -48,7 +48,7 @@ ms.locfileid: "59302713"
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [文字列名によるプロパティまたはメソッドの呼び出し](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [If...Then...Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [文字列型 (String)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [整数型 (Integer)](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

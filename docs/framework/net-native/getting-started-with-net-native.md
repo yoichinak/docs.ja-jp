@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298475"
 ---
 # <a name="getting-started-with-net-native"></a>.NET ネイティブの概要
@@ -106,7 +106,7 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
   
  アプリのテスト時に発生する例外およびその他の問題の処理に関する具体的な例については、次のページを参照してください。  
   
--   [例:データ バインド時の例外の処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [例:データ バインディング時に例外を処理](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
@@ -115,8 +115,8 @@ Windows 10 用に新しい Windows アプリを作成する場合も、既存の
 ## <a name="see-also"></a>関連項目
 
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET ネイティブのセットアップおよび構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native とコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET ネイティブのセットアップと構成](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [リフレクションに依存する API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [シリアル化とメタデータ](../../../docs/framework/net-native/serialization-and-metadata.md)

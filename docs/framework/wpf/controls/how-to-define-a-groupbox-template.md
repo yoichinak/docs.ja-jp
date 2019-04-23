@@ -6,10 +6,10 @@ helpviewer_keywords:
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
 ms.openlocfilehash: dd53af87ec2d12b2ed0dcf2b23374d76e8f631a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225717"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>方法: GroupBox テンプレートを定義する

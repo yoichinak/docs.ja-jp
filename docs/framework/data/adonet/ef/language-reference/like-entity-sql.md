@@ -3,10 +3,10 @@ title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302258"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  LIKE の結果を否定することを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合、`string`パターンに一致する、それ以外の`false`します。  
+ `true` がパターンに一致する場合は `string`、一致しない場合は `false`。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式は、フィルター条件として等しいかどうかを使用する式と同じように評価されます。 ただし、 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 演算子を使用する式はリテラルとワイルドカード文字の両方を含めることができます。  

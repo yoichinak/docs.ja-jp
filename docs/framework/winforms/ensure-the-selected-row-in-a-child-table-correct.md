@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303142"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>方法: 子テーブルの選択行が正しい位置を保持することを確認する
@@ -85,6 +85,6 @@ ms.locfileid: "59303142"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ](multiple-controls-bound-to-data-source-synchronized.md)
+- [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource コンポーネント](./controls/bindingsource-component.md)
 - [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

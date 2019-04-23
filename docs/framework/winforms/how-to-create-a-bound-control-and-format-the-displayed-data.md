@@ -7,10 +7,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
 ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302544"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインド コントロールを作成して表示データの書式を設定する
@@ -55,6 +55,7 @@ Windows フォーム データ バインディングでは、データ バイン
 8. をクリックして**OK**を閉じる、**フォーマットと詳細バインド** ダイアログ ボックスと プロパティ ウィンドウに戻ります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [方法: Windows フォームに単純バインド コントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Windows フォームでのユーザー入力の検証](user-input-validation-in-windows-forms.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

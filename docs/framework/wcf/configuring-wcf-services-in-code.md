@@ -3,10 +3,10 @@ title: コード内での WCF サービスの構成
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225704"
 ---
 # <a name="configuring-wcf-services-in-code"></a>コード内での WCF サービスの構成
@@ -102,7 +102,7 @@ public class Service1 : IService1
 - [IIS と WAS における構成ベースのアクティブ化](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [構成とメタデータのサポート](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [構成](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [方法: 構成でサービス バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法: 構成にサービス エンドポイントを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [方法: 構成でクライアント バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [方法: 構成でサービス バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [方法: 構成でサービス エンドポイントを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [方法: 構成ファイルを使用してサービスのメタデータを公開します。](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [方法: 構成でクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

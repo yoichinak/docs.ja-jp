@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228303"
 ---
 # <a name="application-element-net-native"></a>\<Application > 要素 (.NET ネイティブ)
@@ -60,21 +60,21 @@ ms.locfileid: "59228303"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
-|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
-|[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
-|[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
-|[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
-|[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|特定のアセンブリ内のすべての型にポリシーを適用します。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|特定の名前空間内のすべての型にポリシーを適用します。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|クラスや構造体などの特定の型にポリシーを適用します。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にポリシーを適用します。 たとえば、[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 要素を使用して `List<String>` 型のポリシーを定義できます。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|特定の型のメソッドにポリシーを適用します。|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|構築されたジェネリック メソッドにポリシーを適用します。|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|特定の型のプロパティにポリシーを適用します。|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|特定の型のフィールドにポリシーを適用します。|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|特定の型のイベントにポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ディレクティブ >](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
+|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|ランタイム ディレクティブ ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 要素には、0 または 1 個の `<Application>` 要素を含めることができます。 1 つのリフレクション ディレクティブ ファイルに複数の `<Application>` 要素を含めることはサポートされていません。  
@@ -87,7 +87,7 @@ ms.locfileid: "59228303"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Library> 要素](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives> 要素](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<ライブラリ > 要素](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<ディレクティブ > 要素](../../../docs/framework/net-native/directives-element-net-native.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
