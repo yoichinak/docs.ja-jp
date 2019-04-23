@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
 ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014428"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic でのアプリケーションの開発
 このセクションでは、Visual Basic 言語の概念に関するドキュメントについて説明します。  

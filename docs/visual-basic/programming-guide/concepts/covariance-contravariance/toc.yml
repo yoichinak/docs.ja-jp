@@ -1,24 +1,17 @@
-items:
 - name: 共変性と反変性
   href: index.md
   items:
-  - name: ジェネリック インターフェイスの分散
-    href: variance-in-generic-interfaces.md
-    items:
-    - name: バリアント ジェネリック インターフェイスの作成
-      href: creating-variant-generic-interfaces.md
-    - name: ジェネリック コレクションに対するインターフェイスでの分散の使用
-      href: using-variance-in-interfaces-for-generic-collections.md
-  - name: デリゲートの分散
-    href: variance-in-delegates.md
-    items:
-    - name: デリゲートの分散の使用
-      href: using-variance-in-delegates.md
-    - name: Func および Action 汎用デリゲートでの分散の使用
-      href: using-variance-for-func-and-action-generic-delegates.md
-ms.openlocfilehash: 9cc69c37946ca16f911dcf0b58bd947c37a7bf07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470266"
+    - name: ジェネリック インターフェイスの分散
+      href: variance-in-generic-interfaces.md
+      items:
+        - name: バリアント ジェネリック インターフェイスの作成
+          href: creating-variant-generic-interfaces.md
+        - name: ジェネリック コレクションに対するインターフェイスでの分散の使用
+          href: using-variance-in-interfaces-for-generic-collections.md
+    - name: デリゲートの分散
+      href: variance-in-delegates.md
+      items:
+        - name: デリゲートの分散の使用
+          href: using-variance-in-delegates.md
+        - name: Func および Action 汎用デリゲートでの分散の使用
+          href: using-variance-for-func-and-action-generic-delegates.md

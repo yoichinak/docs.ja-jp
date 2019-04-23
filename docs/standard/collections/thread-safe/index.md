@@ -8,11 +8,11 @@ ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7fad67c1a3c53cd83dec6bfa161333b5e20ab4c4
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644712"
 ---
 # <a name="thread-safe-collections"></a>スレッド セーフなコレクション
 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] では、スレッド セーフかつスケーラブルなコレクション クラスをいくつか含む <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間が導入されています。 ユーザー コードで同期を追加することなく、複数のスレッドでこのようなコレクションの項目を安全かつ効率的に追加または削除できます。 新しいコードを記述する場合、コレクションに対して複数のスレッドが同時に書き込みを行うときは常に同時実行コレクション クラスを使用します。 共有コレクションの読み取りのみを行う場合は、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間のクラスを使用できます。 .NET Framework 1.1 以前のランタイムを対象にする必要がない場合は、1.0 コレクション クラスを使用しないことをお勧めします。  
@@ -55,5 +55,5 @@ ms.locfileid: "54058322"
 |[方法: パイプラインでブロッキング コレクションの配列を使用する](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|複数のブロッキング コレクションを同時に使用してパイプラインを実装する方法について説明します。|  
 |[方法: ConcurrentBag を使用してオブジェクト プールを作成する](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|新しいオブジェクトを頻繁に作成する代わりにオブジェクトを再利用できるシナリオで、同時実行バッグを使用してパフォーマンスを向上させる方法について説明します。|  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

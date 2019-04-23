@@ -1,32 +1,25 @@
-items:
-- name: C# のツアー
+- name: 'C# のツアー'
   href: index.md
   items:
-  - name: プログラムの構造
-    href: program-structure.md
-  - name: 型と変数
-    href: types-and-variables.md
-  - name: 式
-    href: expressions.md
-  - name: ステートメント
-    href: statements.md
-  - name: クラスとオブジェクト
-    href: classes-and-objects.md
-  - name: 構造体
-    href: structs.md
-  - name: 配列
-    href: arrays.md
-  - name: インターフェイス
-    href: interfaces.md
-  - name: 列挙体
-    href: enums.md
-  - name: デリゲート
-    href: delegates.md
-  - name: 属性
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470050"
+    - name: プログラムの構造
+      href: program-structure.md
+    - name: 型と変数
+      href: types-and-variables.md
+    - name: 式
+      href: expressions.md
+    - name: ステートメント
+      href: statements.md
+    - name: クラスとオブジェクト
+      href: classes-and-objects.md
+    - name: 構造体
+      href: structs.md
+    - name: 配列
+      href: arrays.md
+    - name: インターフェイス
+      href: interfaces.md
+    - name: 列挙体
+      href: enums.md
+    - name: デリゲート
+      href: delegates.md
+    - name: 属性
+      href: attributes.md

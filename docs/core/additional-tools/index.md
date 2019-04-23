@@ -5,11 +5,11 @@ author: mlacouture
 ms.date: 11/27/2018
 ms.custom: mvc, seodec18
 ms.openlocfilehash: 5f42cddc31204bba2aafaee0b909bbf92d232fde
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644305"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 

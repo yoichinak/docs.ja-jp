@@ -1,24 +1,17 @@
-items:
 - name: 制御フロー
   href: index.md
   items:
-  - name: 条件判断構造
-    href: decision-structures.md
-  - name: ループ構造
-    href: loop-structures.md
-    items:
-    - name: 'チュートリアル: IEnumerable(Of T) の実装'
-      href: walkthrough-implementing-ienumerable-of-t.md
-  - name: その他の制御構造
-    href: other-control-structures.md
-    items:
-    - name: '方法: システム リソースを破棄する'
-      href: how-to-dispose-of-a-system-resource.md
-  - name: 入れ子になった制御構造
-    href: nested-control-structures.md
-ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470386"
+    - name: 条件判断構造
+      href: decision-structures.md
+    - name: ループ構造
+      href: loop-structures.md
+      items:
+        - name: 'チュートリアル: IEnumerable(Of T) の実装'
+          href: walkthrough-implementing-ienumerable-of-t.md
+    - name: その他の制御構造
+      href: other-control-structures.md
+      items:
+        - name: '方法: システム リソースを破棄する'
+          href: how-to-dispose-of-a-system-resource.md
+    - name: 入れ子になった制御構造
+      href: nested-control-structures.md

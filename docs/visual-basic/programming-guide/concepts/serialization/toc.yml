@@ -1,16 +1,9 @@
-items:
 - name: シリアル化
   href: index.md
   items:
-  - name: '方法: XML ファイルにオブジェクト データを書き込む'
-    href: how-to-write-object-data-to-an-xml-file.md
-  - name: '方法: XML ファイルからオブジェクト データを読み込む'
-    href: how-to-read-object-data-from-an-xml-file.md
-  - name: 'チュートリアル: オブジェクトの永続化'
-    href: walkthrough-persisting-an-object-in-visual-studio.md
-ms.openlocfilehash: fb7160fa8eae06a13bf917fff42316fb608d6a95
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470627"
+    - name: '方法: XML ファイルにオブジェクト データを書き込む'
+      href: how-to-write-object-data-to-an-xml-file.md
+    - name: '方法: XML ファイルからオブジェクト データを読み込む'
+      href: how-to-read-object-data-from-an-xml-file.md
+    - name: 'チュートリアル: オブジェクトの永続化'
+      href: walkthrough-persisting-an-object-in-visual-studio.md

@@ -1,4 +1,3 @@
-items:
 - name: ADO.NET
   href: index.md
 - name: ADO.NET の新機能
@@ -6,344 +5,338 @@ items:
 - name: ADO.NET の概要
   href: ado-net-overview.md
   items:
-  - name: ADO.NET のアーキテクチャ
-    href: ado-net-architecture.md
-  - name: ADO.NET テクノロジのオプションとガイドライン
-    href: ado-net-technology-options-and-guidelines.md
-  - name: LINQ と ADO.NET
-    href: linq-and-ado-net.md
-  - name: .NET Framework データ プロバイダー
-    href: data-providers.md
-  - name: ADO.NET データセット
-    href: ado-net-datasets.md
-  - name: ADO.NET での side-by-side 実行
-    href: side-by-side-execution.md
-  - name: ADO.NET のコード例
-    href: ado-net-code-examples.md
+    - name: ADO.NET のアーキテクチャ
+      href: ado-net-architecture.md
+    - name: ADO.NET テクノロジのオプションとガイドライン
+      href: ado-net-technology-options-and-guidelines.md
+    - name: LINQ と ADO.NET
+      href: linq-and-ado-net.md
+    - name: .NET Framework データ プロバイダー
+      href: data-providers.md
+    - name: ADO.NET データセット
+      href: ado-net-datasets.md
+    - name: ADO.NET での side-by-side 実行
+      href: side-by-side-execution.md
+    - name: ADO.NET のコード例
+      href: ado-net-code-examples.md
 - name: ADO.NET アプリケーションのセキュリティ保護
   href: securing-ado-net-applications.md
   items:
-  - name: セキュリティの概要
-    href: security-overview.md
-  - name: 安全なデータ アクセス
-    href: secure-data-access.md
-  - name: 安全なクライアント アプリケーション
-    href: secure-client-applications.md
-  - name: コード アクセス セキュリティと ADO.NET
-    href: code-access-security.md
-  - name: プライバシーとデータ セキュリティ
-    href: privacy-and-data-security.md
+    - name: セキュリティの概要
+      href: security-overview.md
+    - name: 安全なデータ アクセス
+      href: secure-data-access.md
+    - name: 安全なクライアント アプリケーション
+      href: secure-client-applications.md
+    - name: コード アクセス セキュリティと ADO.NET
+      href: code-access-security.md
+    - name: プライバシーとデータ セキュリティ
+      href: privacy-and-data-security.md
 - name: ADO.NET でのデータ型のマッピング
   href: data-type-mappings-in-ado-net.md
   items:
-  - name: SQL Server データ型のマッピング
-    href: sql-server-data-type-mappings.md
-  - name: OLE DB データ型のマッピング
-    href: ole-db-data-type-mappings.md
-  - name: ODBC データ型のマッピング
-    href: odbc-data-type-mappings.md
-  - name: Oracle データ型のマッピング
-    href: oracle-data-type-mappings.md
-  - name: 浮動小数点数
-    href: floating-point-numbers.md
+    - name: SQL Server データ型のマッピング
+      href: sql-server-data-type-mappings.md
+    - name: OLE DB データ型のマッピング
+      href: ole-db-data-type-mappings.md
+    - name: ODBC データ型のマッピング
+      href: odbc-data-type-mappings.md
+    - name: Oracle データ型のマッピング
+      href: oracle-data-type-mappings.md
+    - name: 浮動小数点数
+      href: floating-point-numbers.md
 - name: ADO.NET でのデータの取得および変更
   href: retrieving-and-modifying-data.md
   items:
-  - name: データ ソースへの接続
-    href: connecting-to-a-data-source.md
-    items:
-    - name: 接続の確立
-      href: establishing-the-connection.md
-    - name: 接続イベント
-      href: connection-events.md
-  - name: 接続文字列
-    href: connection-strings.md
-    items:
-    - name: 接続文字列ビルダー
-      href: connection-string-builders.md
-    - name: 接続文字列と構成ファイル
-      href: connection-strings-and-configuration-files.md
-    - name: 接続文字列の構文
-      href: connection-string-syntax.md
-    - name: 接続情報の保護
-      href: protecting-connection-information.md
-  - name: 接続プール
-    href: connection-pooling.md
-    items:
-    - name: SQL Server の接続プール (ADO.NET)
-      href: sql-server-connection-pooling.md
-    - name: OLE DB、ODBC、および Oracle 接続プール
-      href: ole-db-odbc-and-oracle-connection-pooling.md
-  - name: コマンドおよびパラメーター
-    href: commands-and-parameters.md
-    items:
-    - name: コマンドの実行
-      href: executing-a-command.md
-    - name: パラメーターおよびパラメーター データ型の構成
-      href: configuring-parameters-and-parameter-data-types.md
-    - name: CommandBuilder でのコマンドの生成
-      href: generating-commands-with-commandbuilders.md
-    - name: データベースからの単一の値の取得
-      href: obtaining-a-single-value-from-a-database.md
-    - name: コマンドを使用したデータ変更
-      href: using-commands-to-modify-data.md
+    - name: データ ソースへの接続
+      href: connecting-to-a-data-source.md
       items:
-      - name: データ ソースのデータの更新
-        href: updating-data-in-a-data-source.md
-      - name: カタログ操作の実行
-        href: performing-catalog-operations.md
-  - name: DataAdapter と DataReader
-    href: dataadapters-and-datareaders.md
-    items:
-    - name: DataReader によるデータの取得
-      href: retrieving-data-using-a-datareader.md
-    - name: DataAdapter からの DataSet の読み込み
-      href: populating-a-dataset-from-a-dataadapter.md
-    - name: DataAdapter パラメーター
-      href: dataadapter-parameters.md
-    - name: DataSet への既存の制約の追加
-      href: adding-existing-constraints-to-a-dataset.md
-    - name: DataAdapter DataTable と DataColumn のマップ
-      href: dataadapter-datatable-and-datacolumn-mappings.md
-    - name: クエリ結果のページング
-      href: paging-through-a-query-result.md
-    - name: DataAdapter によるデータ ソースの更新
-      href: updating-data-sources-with-dataadapters.md
-    - name: DataAdapter のイベント処理
-      href: handling-dataadapter-events.md
-    - name: DataAdapter を使用したバッチ操作の実行
-      href: performing-batch-operations-using-dataadapters.md
-  - name: トランザクションとコンカレンシー
-    href: transactions-and-concurrency.md
-    items:
-    - name: ローカル トランザクション
-      href: local-transactions.md
-    - name: 分散トランザクション
-      href: distributed-transactions.md
-    - name: SQL Server と System.Transactions の統合
-      href: system-transactions-integration-with-sql-server.md
-    - name: オプティミスティック コンカレンシー
-      href: optimistic-concurrency.md
-  - name: ID 値および Autonumber 値の取得
-    href: retrieving-identity-or-autonumber-values.md
-  - name: バイナリ データの取得
-    href: retrieving-binary-data.md
-  - name: ストアド プロシージャでのデータの変更
-    href: modifying-data-with-stored-procedures.md
-  - name: データベース スキーマ情報の取得
-    href: retrieving-database-schema-information.md
-    items:
-    - name: GetSchema およびスキーマ コレクション
-      href: getschema-and-schema-collections.md
-    - name: スキーマの制限
-      href: schema-restrictions.md
-    - name: 共通のスキーマ コレクション
-      href: common-schema-collections.md
-    - name: SQL Server スキーマ コレクション
-      href: sql-server-schema-collections.md
-    - name: Oracle スキーマ コレクション
-      href: oracle-schema-collections.md
-    - name: ODBC スキーマ コレクション
-      href: odbc-schema-collections.md
-    - name: OLE DB スキーマ コレクション
-      href: ole-db-schema-collections.md
-  - name: DbProviderFactories
-    href: dbproviderfactories.md
-    items:
-    - name: ファクトリ モデルの概要
-      href: factory-model-overview.md
-    - name: DbProviderFactory の取得
-      href: obtaining-a-dbproviderfactory.md
-    - name: DbConnection、DbCommand、および DbException
-      href: dbconnection-dbcommand-and-dbexception.md
-    - name: DbDataAdapter を使用したデータの変更
-      href: modifying-data-with-a-dbdataadapter.md
-  - name: ADO.NET のデータ追跡
-    href: data-tracing.md
-  - name: パフォーマンス カウンター
-    href: performance-counters.md
-  - name: 非同期プログラミング
-    href: asynchronous-programming.md
-  - name: SqlClient ストリーミング サポート
-    href: sqlclient-streaming-support.md
-  - name: LINQ to DataSet
-    href: linq-to-dataset.md
-    items:
-    - name: 作業の開始
-      href: getting-started-linq-to-dataset.md
+        - name: 接続の確立
+          href: establishing-the-connection.md
+        - name: 接続イベント
+          href: connection-events.md
+    - name: 接続文字列
+      href: connection-strings.md
       items:
-      - name: LINQ to DataSet の概要
-        href: linq-to-dataset-overview.md
-      - name: DataSet へのデータの読み込み
-        href: loading-data-into-a-dataset.md
-      - name: サンプル データベースのダウンロード
-        href: downloading-sample-databases-linq-to-dataset.md
-      - name: '方法: Visual Studio で LINQ to DataSet プロジェクトを作成する'
-        href: how-to-create-a-linq-to-dataset-project-in-vs.md
-    - name: プログラミング ガイド
-      href: programming-guide-linq-to-dataset.md
+        - name: 接続文字列ビルダー
+          href: connection-string-builders.md
+        - name: 接続文字列と構成ファイル
+          href: connection-strings-and-configuration-files.md
+        - name: 接続文字列の構文
+          href: connection-string-syntax.md
+        - name: 接続情報の保護
+          href: protecting-connection-information.md
+    - name: 接続プール
+      href: connection-pooling.md
       items:
-      - name: LINQ to DataSet でのクエリ
-        href: queries-in-linq-to-dataset.md
-      - name: DataSet のクエリ
-        href: querying-datasets-linq-to-dataset.md
-        items:
-        - name: 単一テーブルのクエリ
-          href: single-table-queries-linq-to-dataset.md
-        - name: 複数テーブルにまたがるクエリ
-          href: cross-table-queries-linq-to-dataset.md
-        - name: 型指定された DataSet のクエリ
-          href: querying-typed-datasets.md
-      - name: DataRow の比較
-        href: comparing-datarows-linq-to-dataset.md
-      - name: クエリによる DataTable の作成
-        href: creating-a-datatable-from-a-query-linq-to-dataset.md
-      - name: '方法: ジェネリック型 T が DataRow ではない CopyToDataTable<T> を実装する'
-        href: implement-copytodatatable-where-type-not-a-datarow.md
-      - name: ジェネリック メソッド Field および SetField
-        href: generic-field-and-setfield-methods-linq-to-dataset.md
-      - name: データ バインディングと LINQ to DataSet
-        href: data-binding-and-linq-to-dataset.md
-        items:
-        - name: DataView オブジェクトの作成
-          href: creating-a-dataview-object-linq-to-dataset.md
-        - name: DataView によるフィルター処理
-          href: filtering-with-dataview-linq-to-dataset.md
-        - name: DataView による並べ替え
-          href: sorting-with-dataview-linq-to-dataset.md
-        - name: DataView の DataRowView コレクションの照会
-          href: querying-the-datarowview-collection-in-a-dataview.md
-        - name: DataView のパフォーマンス
-          href: dataview-performance.md
-        - name: '方法: DataView オブジェクトを Windows フォーム DataGridView コントロールにバインドする'
-          href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
-      - name: LINQ to DataSet クエリのデバッグ
-        href: debugging-linq-to-dataset-queries.md
-      - name: セキュリティ
-        href: security-linq-to-dataset.md
-      - name: LINQ to DataSet の例
-        href: linq-to-dataset-examples.md
-        items:
-        - name: クエリ式の例
-          href: query-expression-examples-linq-to-dataset.md
+        - name: SQL Server の接続プール (ADO.NET)
+          href: sql-server-connection-pooling.md
+        - name: OLE DB、ODBC、および Oracle 接続プール
+          href: ole-db-odbc-and-oracle-connection-pooling.md
+    - name: コマンドおよびパラメーター
+      href: commands-and-parameters.md
+      items:
+        - name: コマンドの実行
+          href: executing-a-command.md
+        - name: パラメーターおよびパラメーター データ型の構成
+          href: configuring-parameters-and-parameter-data-types.md
+        - name: CommandBuilder でのコマンドの生成
+          href: generating-commands-with-commandbuilders.md
+        - name: データベースからの単一の値の取得
+          href: obtaining-a-single-value-from-a-database.md
+        - name: コマンドを使用したデータ変更
+          href: using-commands-to-modify-data.md
           items:
-          - name: 射影
-            href: query-expression-syntax-examples-projection-linq-to-dataset.md
-          - name: 制限
-            href: query-expression-syntax-examples-restriction-linq-to-dataset.md
-          - name: パーティション分割
-            href: query-expression-syntax-examples-partitioning.md
-          - name: 順序
-            href: query-expression-syntax-examples-ordering-linq-to-dataset.md
-          - name: 要素演算子
-            href: query-expression-syntax-examples-element-operators.md
-          - name: 集計演算子
-            href: query-expression-syntax-examples-aggregate-operators.md
-          - name: 結合演算子
-            href: query-expression-syntax-examples-join-operators.md
-        - name: メソッド ベースのクエリ例
-          href: method-based-query-examples-linq-to-dataset.md
+            - name: データ ソースのデータの更新
+              href: updating-data-in-a-data-source.md
+            - name: カタログ操作の実行
+              href: performing-catalog-operations.md
+    - name: DataAdapter と DataReader
+      href: dataadapters-and-datareaders.md
+      items:
+        - name: DataReader によるデータの取得
+          href: retrieving-data-using-a-datareader.md
+        - name: DataAdapter からの DataSet の読み込み
+          href: populating-a-dataset-from-a-dataadapter.md
+        - name: DataAdapter パラメーター
+          href: dataadapter-parameters.md
+        - name: DataSet への既存の制約の追加
+          href: adding-existing-constraints-to-a-dataset.md
+        - name: DataAdapter DataTable と DataColumn のマップ
+          href: dataadapter-datatable-and-datacolumn-mappings.md
+        - name: クエリ結果のページング
+          href: paging-through-a-query-result.md
+        - name: DataAdapter によるデータ ソースの更新
+          href: updating-data-sources-with-dataadapters.md
+        - name: DataAdapter のイベント処理
+          href: handling-dataadapter-events.md
+        - name: DataAdapter を使用したバッチ操作の実行
+          href: performing-batch-operations-using-dataadapters.md
+    - name: トランザクションとコンカレンシー
+      href: transactions-and-concurrency.md
+      items:
+        - name: ローカル トランザクション
+          href: local-transactions.md
+        - name: 分散トランザクション
+          href: distributed-transactions.md
+        - name: SQL Server と System.Transactions の統合
+          href: system-transactions-integration-with-sql-server.md
+        - name: オプティミスティック コンカレンシー
+          href: optimistic-concurrency.md
+    - name: ID 値および Autonumber 値の取得
+      href: retrieving-identity-or-autonumber-values.md
+    - name: バイナリ データの取得
+      href: retrieving-binary-data.md
+    - name: ストアド プロシージャでのデータの変更
+      href: modifying-data-with-stored-procedures.md
+    - name: データベース スキーマ情報の取得
+      href: retrieving-database-schema-information.md
+      items:
+        - name: GetSchema およびスキーマ コレクション
+          href: getschema-and-schema-collections.md
+        - name: スキーマの制限
+          href: schema-restrictions.md
+        - name: 共通のスキーマ コレクション
+          href: common-schema-collections.md
+        - name: SQL Server スキーマ コレクション
+          href: sql-server-schema-collections.md
+        - name: Oracle スキーマ コレクション
+          href: oracle-schema-collections.md
+        - name: ODBC スキーマ コレクション
+          href: odbc-schema-collections.md
+        - name: OLE DB スキーマ コレクション
+          href: ole-db-schema-collections.md
+    - name: DbProviderFactories
+      href: dbproviderfactories.md
+      items:
+        - name: ファクトリ モデルの概要
+          href: factory-model-overview.md
+        - name: DbProviderFactory の取得
+          href: obtaining-a-dbproviderfactory.md
+        - name: DbConnection、DbCommand、および DbException
+          href: dbconnection-dbcommand-and-dbexception.md
+        - name: DbDataAdapter を使用したデータの変更
+          href: modifying-data-with-a-dbdataadapter.md
+    - name: ADO.NET のデータ追跡
+      href: data-tracing.md
+    - name: パフォーマンス カウンター
+      href: performance-counters.md
+    - name: 非同期プログラミング
+      href: asynchronous-programming.md
+    - name: SqlClient ストリーミング サポート
+      href: sqlclient-streaming-support.md
+    - name: LINQ to DataSet
+      href: linq-to-dataset.md
+      items:
+        - name: 作業の開始
+          href: getting-started-linq-to-dataset.md
           items:
-          - name: 射影
-            href: method-based-query-syntax-examples-projection.md
-          - name: パーティション分割
-            href: method-based-query-syntax-examples-partitioning-linq.md
-          - name: 順序
-            href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
-          - name: 集合演算子
-            href: method-based-query-syntax-examples-set-operators.md
-          - name: 変換演算子
-            href: method-based-query-syntax-examples-conversion-operators.md
-          - name: 要素演算子
-            href: method-based-query-syntax-examples-element-operators.md
-          - name: 集計演算子
-            href: method-based-query-syntax-examples-aggregate-operators.md
-          - name: Join
-            href: method-based-query-syntax-examples-join-linq-to-dataset.md
-        - name: DataSet 固有の演算子の例
-          href: dataset-specific-operator-examples-linq-to-dataset.md
+            - name: LINQ to DataSet の概要
+              href: linq-to-dataset-overview.md
+            - name: DataSet へのデータの読み込み
+              href: loading-data-into-a-dataset.md
+            - name: サンプル データベースのダウンロード
+              href: downloading-sample-databases-linq-to-dataset.md
+            - name: '方法: Visual Studio で LINQ to DataSet プロジェクトを作成する'
+              href: how-to-create-a-linq-to-dataset-project-in-vs.md
+        - name: プログラミング ガイド
+          href: programming-guide-linq-to-dataset.md
+          items:
+            - name: LINQ to DataSet でのクエリ
+              href: queries-in-linq-to-dataset.md
+            - name: DataSet のクエリ
+              href: querying-datasets-linq-to-dataset.md
+              items:
+                - name: 単一テーブルのクエリ
+                  href: single-table-queries-linq-to-dataset.md
+                - name: 複数テーブルにまたがるクエリ
+                  href: cross-table-queries-linq-to-dataset.md
+                - name: 型指定された DataSet のクエリ
+                  href: querying-typed-datasets.md
+            - name: DataRow の比較
+              href: comparing-datarows-linq-to-dataset.md
+            - name: クエリによる DataTable の作成
+              href: creating-a-datatable-from-a-query-linq-to-dataset.md
+            - name: '方法: ジェネリック型 T が DataRow ではない CopyToDataTable<T> を実装する'
+              href: implement-copytodatatable-where-type-not-a-datarow.md
+            - name: ジェネリック メソッド Field および SetField
+              href: generic-field-and-setfield-methods-linq-to-dataset.md
+            - name: データ バインディングと LINQ to DataSet
+              href: data-binding-and-linq-to-dataset.md
+              items:
+                - name: DataView オブジェクトの作成
+                  href: creating-a-dataview-object-linq-to-dataset.md
+                - name: DataView によるフィルター処理
+                  href: filtering-with-dataview-linq-to-dataset.md
+                - name: DataView による並べ替え
+                  href: sorting-with-dataview-linq-to-dataset.md
+                - name: DataView の DataRowView コレクションの照会
+                  href: querying-the-datarowview-collection-in-a-dataview.md
+                - name: DataView のパフォーマンス
+                  href: dataview-performance.md
+                - name: '方法: DataView オブジェクトを Windows フォーム DataGridView コントロールにバインドする'
+                  href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
+            - name: LINQ to DataSet クエリのデバッグ
+              href: debugging-linq-to-dataset-queries.md
+            - name: セキュリティ
+              href: security-linq-to-dataset.md
+            - name: LINQ to DataSet の例
+              href: linq-to-dataset-examples.md
+              items:
+                - name: クエリ式の例
+                  href: query-expression-examples-linq-to-dataset.md
+                  items:
+                    - name: 射影
+                      href: query-expression-syntax-examples-projection-linq-to-dataset.md
+                    - name: 制限
+                      href: query-expression-syntax-examples-restriction-linq-to-dataset.md
+                    - name: パーティション分割
+                      href: query-expression-syntax-examples-partitioning.md
+                    - name: 順序
+                      href: query-expression-syntax-examples-ordering-linq-to-dataset.md
+                    - name: 要素演算子
+                      href: query-expression-syntax-examples-element-operators.md
+                    - name: 集計演算子
+                      href: query-expression-syntax-examples-aggregate-operators.md
+                    - name: 結合演算子
+                      href: query-expression-syntax-examples-join-operators.md
+                - name: メソッド ベースのクエリ例
+                  href: method-based-query-examples-linq-to-dataset.md
+                  items:
+                    - name: 射影
+                      href: method-based-query-syntax-examples-projection.md
+                    - name: パーティション分割
+                      href: method-based-query-syntax-examples-partitioning-linq.md
+                    - name: 順序
+                      href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
+                    - name: 集合演算子
+                      href: method-based-query-syntax-examples-set-operators.md
+                    - name: 変換演算子
+                      href: method-based-query-syntax-examples-conversion-operators.md
+                    - name: 要素演算子
+                      href: method-based-query-syntax-examples-element-operators.md
+                    - name: 集計演算子
+                      href: method-based-query-syntax-examples-aggregate-operators.md
+                    - name: Join
+                      href: method-based-query-syntax-examples-join-linq-to-dataset.md
+                - name: DataSet 固有の演算子の例
+                  href: dataset-specific-operator-examples-linq-to-dataset.md
 - name: エンティティ データ モデル
   href: entity-data-model.md
   items:
-  - name: Entity Data Model キーの概念
-    href: entity-data-model-key-concepts.md
-  - name: Entity Data Model:名前空間
-    href: entity-data-model-namespaces.md
-  - name: Entity Data Model:プリミティブ データ型
-    href: entity-data-model-primitive-data-types.md
-  - name: Entity Data Model:継承
-    href: entity-data-model-inheritance.md
-  - name: アソシエーション End
-    href: association-end.md
-  - name: アソシエーション End の多重度
-    href: association-end-multiplicity.md
-  - name: 関連付けセット
-    href: association-set.md
-  - name: アソシエーション セット End
-    href: association-set-end.md
-  - name: アソシエーション型
-    href: association-type.md
-  - name: 複合型
-    href: complex-type.md
-  - name: エンティティ コンテナー
-    href: entity-container.md
-  - name: エンティティ キー
-    href: entity-key.md
-  - name: エンティティ セット
-    href: entity-set.md
-  - name: エンティティ型
-    href: entity-type.md
-  - name: facet
-    href: facet.md
-  - name: 外部キーのプロパティ
-    href: foreign-key-property.md
-  - name: モデル宣言関数
-    href: model-declared-function.md
-  - name: モデル定義関数
-    href: model-defined-function.md
-  - name: ナビゲーション プロパティ
-    href: navigation-property.md
-  - name: property
-    href: property.md
-  - name: 参照整合性制約
-    href: referential-integrity-constraint.md
+    - name: Entity Data Model キーの概念
+      href: entity-data-model-key-concepts.md
+    - name: 'Entity Data Model:名前空間'
+      href: entity-data-model-namespaces.md
+    - name: 'Entity Data Model:プリミティブ データ型'
+      href: entity-data-model-primitive-data-types.md
+    - name: 'Entity Data Model:継承'
+      href: entity-data-model-inheritance.md
+    - name: アソシエーション End
+      href: association-end.md
+    - name: アソシエーション End の多重度
+      href: association-end-multiplicity.md
+    - name: 関連付けセット
+      href: association-set.md
+    - name: アソシエーション セット End
+      href: association-set-end.md
+    - name: アソシエーション型
+      href: association-type.md
+    - name: 複合型
+      href: complex-type.md
+    - name: エンティティ コンテナー
+      href: entity-container.md
+    - name: エンティティ キー
+      href: entity-key.md
+    - name: エンティティ セット
+      href: entity-set.md
+    - name: エンティティ型
+      href: entity-type.md
+    - name: facet
+      href: facet.md
+    - name: 外部キーのプロパティ
+      href: foreign-key-property.md
+    - name: モデル宣言関数
+      href: model-declared-function.md
+    - name: モデル定義関数
+      href: model-defined-function.md
+    - name: ナビゲーション プロパティ
+      href: navigation-property.md
+    - name: property
+      href: property.md
+    - name: 参照整合性制約
+      href: referential-integrity-constraint.md
 - name: Oracle および ADO.NET
   href: oracle-and-adonet.md
   items:
-  - name: システム要件
-    href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
-  - name: Oracle BFILE
-    href: oracle-bfiles.md
-  - name: Oracle LOB
-    href: oracle-lobs.md
-  - name: Oracle REF CURSOR
-    href: oracle-ref-cursors.md
-    items:
-    - name: REF CURSOR の例
-      href: ref-cursor-examples.md
-    - name: OracleDataReader の REF CURSOR パラメーター
-      href: ref-cursor-parameters-in-an-oracledatareader.md
-    - name: OracleDataReader を使用した複数の REF CURSOR からのデータの取得
-      href: retrieving-data-from-multiple-ref-cursors.md
-    - name: 1 つまたは複数の REF CURSOR を使用した DataSet の値の設定
-      href: filling-a-dataset-using-one-or-more-ref-cursors.md
-  - name: OracleTypes
-    href: oracletypes.md
-  - name: Oracle シーケンス
-    href: oracle-sequences.md
-  - name: Oracle データ型のマッピング
-    href: oracle-data-type-mappings.md
-  - name: Oracle 分散トランザクション
-    href: oracle-distributed-transactions.md
+    - name: システム要件
+      href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
+    - name: Oracle BFILE
+      href: oracle-bfiles.md
+    - name: Oracle LOB
+      href: oracle-lobs.md
+    - name: Oracle REF CURSOR
+      href: oracle-ref-cursors.md
+      items:
+        - name: REF CURSOR の例
+          href: ref-cursor-examples.md
+        - name: OracleDataReader の REF CURSOR パラメーター
+          href: ref-cursor-parameters-in-an-oracledatareader.md
+        - name: OracleDataReader を使用した複数の REF CURSOR からのデータの取得
+          href: retrieving-data-from-multiple-ref-cursors.md
+        - name: 1 つまたは複数の REF CURSOR を使用した DataSet の値の設定
+          href: filling-a-dataset-using-one-or-more-ref-cursors.md
+    - name: OracleTypes
+      href: oracletypes.md
+    - name: Oracle シーケンス
+      href: oracle-sequences.md
+    - name: Oracle データ型のマッピング
+      href: oracle-data-type-mappings.md
+    - name: Oracle 分散トランザクション
+      href: oracle-distributed-transactions.md
 - name: ADO.NET Entity Framework
   href: ef/
 - name: SQL Server と ADO.NET
   href: sql/
 - name: DataSet、DataTable、および DataView
   href: dataset-datatable-dataview/
-ms.openlocfilehash: 53eb24e8a320ec9d6b3cce0acfde59facc8b1511
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470931"

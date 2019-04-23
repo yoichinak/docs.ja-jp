@@ -1,14 +1,7 @@
-items:
 - name: コレクション初期化子
   href: index.md
   items:
-  - name: '方法: コレクション初期化子によって使用される Add 拡張メソッドを作成する'
-    href: how-to-create-an-add-extension-method-used-by-a-collection-initializer.md
-  - name: '方法: コレクション初期化子によって使用されるコレクションを作成する'
-    href: how-to-create-a-collection-used-by-a-collection-initializer.md
-ms.openlocfilehash: e6ef5bd5495da0d695d70bc37ab4506c7c1f0f63
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469835"
+    - name: '方法: コレクション初期化子によって使用される Add 拡張メソッドを作成する'
+      href: how-to-create-an-add-extension-method-used-by-a-collection-initializer.md
+    - name: '方法: コレクション初期化子によって使用されるコレクションを作成する'
+      href: how-to-create-a-collection-used-by-a-collection-initializer.md

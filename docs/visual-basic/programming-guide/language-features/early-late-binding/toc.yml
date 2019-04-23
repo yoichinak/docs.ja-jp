@@ -1,16 +1,9 @@
-items:
 - name: 事前バインディングと遅延バインディング
   href: index.md
   items:
-  - name: オブジェクトの型の決定
-    href: determining-object-type.md
-  - name: 文字列名によるプロパティまたはメソッドの呼び出し
-    href: calling-a-property-or-method-using-a-string-name.md
-  - name: 動的オブジェクトの使用
-    href: working-with-dynamic-objects.md
-ms.openlocfilehash: edd2a6e97163ceb4dce728639a6651482e58ab6d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469770"
+    - name: オブジェクトの型の決定
+      href: determining-object-type.md
+    - name: 文字列名によるプロパティまたはメソッドの呼び出し
+      href: calling-a-property-or-method-using-a-string-name.md
+    - name: 動的オブジェクトの使用
+      href: working-with-dynamic-objects.md

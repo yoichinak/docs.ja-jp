@@ -1,171 +1,164 @@
-items:
 - name: WCF Data Services 4.5
   href: index.md
   items:
-  - name: 概要
-    href: wcf-data-services-overview.md
-  - name: 作業の開始
-    href: getting-started-with-wcf-data-services.md
-    items:
-    - name: サービスとしてのデータの公開
-      href: exposing-your-data-as-a-service-wcf-data-services.md
-    - name: データ サービス リソースへのアクセス
-      href: accessing-data-service-resources-wcf-data-services.md
-    - name: クライアント アプリケーションでのデータ サービスの使用
-      href: using-a-data-service-in-a-client-application-wcf-data-services.md
-    - name: クイック スタート
-      href: quickstart-wcf-data-services.md
+    - name: 概要
+      href: wcf-data-services-overview.md
+    - name: 作業の開始
+      href: getting-started-with-wcf-data-services.md
       items:
-      - name: データ サービスの作成
-        href: creating-the-data-service.md
-      - name: Web ブラウザーからサービスへのアクセス
-        href: accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md
-      - name: .NET Framework クライアント アプリケーションの作成
-        href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
-    - name: アプリケーション シナリオ
-      href: application-scenarios-wcf-data-services.md
-    - name: リソース
-      href: wcf-data-services-resources.md
-  - name: WCF Data Services の定義
-    href: defining-wcf-data-services.md
-    items:
-    - name: データ サービスの構成
-      href: configuring-the-data-service-wcf-data-services.md
+        - name: サービスとしてのデータの公開
+          href: exposing-your-data-as-a-service-wcf-data-services.md
+        - name: データ サービス リソースへのアクセス
+          href: accessing-data-service-resources-wcf-data-services.md
+        - name: クライアント アプリケーションでのデータ サービスの使用
+          href: using-a-data-service-in-a-client-application-wcf-data-services.md
+        - name: クイック スタート
+          href: quickstart-wcf-data-services.md
+          items:
+            - name: データ サービスの作成
+              href: creating-the-data-service.md
+            - name: Web ブラウザーからサービスへのアクセス
+              href: accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md
+            - name: .NET Framework クライアント アプリケーションの作成
+              href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
+        - name: アプリケーション シナリオ
+          href: application-scenarios-wcf-data-services.md
+        - name: リソース
+          href: wcf-data-services-resources.md
+    - name: WCF Data Services の定義
+      href: defining-wcf-data-services.md
       items:
-      - name: '方法: IIS 上で実行する WCF Data Service を開発する'
-        href: how-to-develop-a-wcf-data-service-running-on-iis.md
-      - name: '方法: データ サービスへのアクセスを有効にする'
-        href: how-to-enable-access-to-the-data-service-wcf-data-services.md
-      - name: '方法: データ サービスの結果のページングを有効にする'
-        href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
-    - name: Data Services プロバイダー
-      href: data-services-providers-wcf-data-services.md
+        - name: データ サービスの構成
+          href: configuring-the-data-service-wcf-data-services.md
+          items:
+            - name: '方法: IIS 上で実行する WCF Data Service を開発する'
+              href: how-to-develop-a-wcf-data-service-running-on-iis.md
+            - name: '方法: データ サービスへのアクセスを有効にする'
+              href: how-to-enable-access-to-the-data-service-wcf-data-services.md
+            - name: '方法: データ サービスの結果のページングを有効にする'
+              href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
+        - name: Data Services プロバイダー
+          href: data-services-providers-wcf-data-services.md
+          items:
+            - name: Entity Framework プロバイダー
+              href: entity-framework-provider-wcf-data-services.md
+              items:
+                - name: '方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する'
+                  href: create-a-data-service-using-an-adonet-ef-data-wcf.md
+            - name: リフレクション プロバイダー
+              href: reflection-provider-wcf-data-services.md
+              items:
+                - name: '方法: リフレクション プロバイダーを使用してデータ サービスを作成する'
+                  href: create-a-data-service-using-rp-wcf-data-services.md
+                - name: '方法: LINQ to SQL データ ソースを使用してデータ サービスを作成する'
+                  href: create-a-data-service-using-linq-to-sql-wcf.md
+            - name: カスタム データ サービス プロバイダー
+              href: custom-data-service-providers-wcf-data-services.md
+            - name: ストリーミング プロバイダー
+              href: streaming-provider-wcf-data-services.md
+        - name: サービス操作
+          href: service-operations-wcf-data-services.md
+          items:
+            - name: '方法: サービス操作を定義する'
+              href: how-to-define-a-service-operation-wcf-data-services.md
+        - name: フィードのカスタマイズ
+          href: feed-customization-wcf-data-services.md
+          items:
+            - name: '方法: Entity Framework プロバイダーでフィードをカスタマイズする'
+              href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
+            - name: '方法: リフレクション プロバイダーでフィードをカスタマイズする'
+              href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
+        - name: インターセプター
+          href: interceptors-wcf-data-services.md
+          items:
+            - name: '方法: データ サービス メッセージを先に取得する'
+              href: how-to-intercept-data-service-messages-wcf-data-services.md
+        - name: WCF Data Services の開発と配置
+          href: developing-and-deploying-wcf-data-services.md
+        - name: WCF Data Services のセキュリティ保護
+          href: securing-wcf-data-services.md
+        - name: データ サービスのホスティング
+          href: hosting-the-data-service-wcf-data-services.md
+        - name: データ サービスのバージョン管理
+          href: data-service-versioning-wcf-data-services.md
+        - name: WCF Data Services プロトコル実装の詳細
+          href: wcf-data-services-protocol-implementation-details.md
+        - name: アクションを使用してサーバー側の動作を実装する
+          href: using-actions-to-implement-server-side-behavior.md
+    - name: WCF Data Services クライアント ライブラリ
+      href: wcf-data-services-client-library.md
       items:
-      - name: Entity Framework プロバイダー
-        href: entity-framework-provider-wcf-data-services.md
-        items:
-        - name: '方法: ADO.NET Entity Framework データ ソースを使用してデータ サービスを作成する'
-          href: create-a-data-service-using-an-adonet-ef-data-wcf.md
-      - name: リフレクション プロバイダー
-        href: reflection-provider-wcf-data-services.md
-        items:
-        - name: '方法: リフレクション プロバイダーを使用してデータ サービスを作成する'
-          href: create-a-data-service-using-rp-wcf-data-services.md
-        - name: '方法: LINQ to SQL データ ソースを使用してデータ サービスを作成する'
-          href: create-a-data-service-using-linq-to-sql-wcf.md
-      - name: カスタム データ サービス プロバイダー
-        href: custom-data-service-providers-wcf-data-services.md
-      - name: ストリーミング プロバイダー
-        href: streaming-provider-wcf-data-services.md
-    - name: サービス操作
-      href: service-operations-wcf-data-services.md
-      items:
-      - name: '方法: サービス操作を定義する'
-        href: how-to-define-a-service-operation-wcf-data-services.md
-    - name: フィードのカスタマイズ
-      href: feed-customization-wcf-data-services.md
-      items:
-      - name: '方法: Entity Framework プロバイダーでフィードをカスタマイズする'
-        href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
-      - name: '方法: リフレクション プロバイダーでフィードをカスタマイズする'
-        href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
-    - name: インターセプター
-      href: interceptors-wcf-data-services.md
-      items:
-      - name: '方法: データ サービス メッセージを先に取得する'
-        href: how-to-intercept-data-service-messages-wcf-data-services.md
-    - name: WCF Data Services の開発と配置
-      href: developing-and-deploying-wcf-data-services.md
-    - name: WCF Data Services のセキュリティ保護
-      href: securing-wcf-data-services.md
-    - name: データ サービスのホスティング
-      href: hosting-the-data-service-wcf-data-services.md
-    - name: データ サービスのバージョン管理
-      href: data-service-versioning-wcf-data-services.md
-    - name: WCF Data Services プロトコル実装の詳細
-      href: wcf-data-services-protocol-implementation-details.md
-    - name: アクションを使用してサーバー側の動作を実装する
-      href: using-actions-to-implement-server-side-behavior.md
-  - name: WCF Data Services クライアント ライブラリ
-    href: wcf-data-services-client-library.md
-    items:
-    - name: データ サービス クライアント ライブラリの生成
-      href: generating-the-data-service-client-library-wcf-data-services.md
-      items:
-      - name: WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
-        href: wcf-data-service-client-utility-datasvcutil-exe.md
-      - name: '方法: データ サービス参照を追加する'
-        href: how-to-add-a-data-service-reference-wcf-data-services.md
-      - name: '方法: クライアント データ サービス クラスを手動で生成する'
-        href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
-    - name: データ サービスに対するクエリ
-      href: querying-the-data-service-wcf-data-services.md
-      items:
-      - name: クエリ射影
-        href: query-projections-wcf-data-services.md
-        items:
-        - name: '方法: クエリ結果を射影する'
-          href: how-to-project-query-results-wcf-data-services.md
-      - name: LINQ に関する留意点
-        href: linq-considerations-wcf-data-services.md
-      - name: オブジェクトの具体化
-        href: object-materialization-wcf-data-services.md
-      - name: '方法: データ サービス クエリを実行する'
-        href: how-to-execute-data-service-queries-wcf-data-services.md
-      - name: '方法: データ サービス クエリにクエリ オプションを追加する'
-        href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
-      - name: '方法: クエリで返されたエンティティの数を確認する'
-        href: number-of-entities-returned-by-a-query-wcf.md
-      - name: '方法: データ サービス要求のクライアント資格情報の指定'
-        href: specify-client-creds-for-a-data-service-request-wcf.md
-      - name: '方法: クライアント要求のヘッダーを設定する'
-        href: how-to-set-headers-in-the-client-request-wcf-data-services.md
-    - name: 遅延コンテンツの読み込み
-      href: loading-deferred-content-wcf-data-services.md
-      items:
-      - name: '方法: 関連エンティティを読み込む'
-        href: how-to-load-related-entities-wcf-data-services.md
-      - name: '方法: ページングされた結果を読み込む'
-        href: how-to-load-paged-results-wcf-data-services.md
-    - name: データ サービスの更新
-      href: updating-the-data-service-wcf-data-services.md
-      items:
-      - name: '方法: エンティティを追加、変更、および削除する'
-        href: how-to-add-modify-and-delete-entities-wcf-data-services.md
-      - name: '方法: エンティティ リレーションシップを定義する'
-        href: how-to-define-entity-relationships-wcf-data-services.md
-      - name: '方法: 既存のエンティティを DataServiceContext にアタッチする'
-        href: attach-an-existing-entity-to-dc-wcf-data.md
-    - name: 非同期操作
-      href: asynchronous-operations-wcf-data-services.md
-      items:
-      - name: '方法: 非同期データ サービス クエリを実行する'
-        href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
-      - name: '方法: 非同期 Windows Presentation Framework アプリケーションを作成する'
-        href: create-an-asynchronous-wpf-application-wcf-data-services.md
-    - name: バッチ処理
-      href: batching-operations-wcf-data-services.md
-      items:
-      - name: '方法: クエリをバッチで実行する'
-        href: how-to-execute-queries-in-a-batch-wcf-data-services.md
-    - name: コントロールへのデータのバインド
-      href: binding-data-to-controls-wcf-data-services.md
-      items:
-      - name: '方法: Windows Presentation Foundation 要素にデータをバインドする'
-        href: bind-data-to-wpf-elements-wcf-data-services.md
-      - name: '方法: プロジェクト データ ソースを使用してデータをバインドする'
-        href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
-      - name: '方法: データ バインディングの動作をカスタマイズする'
-        href: how-to-customize-data-binding-behaviors-wcf-data-services.md
-    - name: サービス操作の呼び出し
-      href: calling-service-operations-wcf-data-services.md
-    - name: データ サービス コンテキストの管理
-      href: managing-the-data-service-context-wcf-data-services.md
-    - name: バイナリ データの操作
-      href: working-with-binary-data-wcf-data-services.md
-ms.openlocfilehash: e38823c7d5b9d6b9ed5f126bab7b1677f9290904
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470754"
+        - name: データ サービス クライアント ライブラリの生成
+          href: generating-the-data-service-client-library-wcf-data-services.md
+          items:
+            - name: WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
+              href: wcf-data-service-client-utility-datasvcutil-exe.md
+            - name: '方法: データ サービス参照を追加する'
+              href: how-to-add-a-data-service-reference-wcf-data-services.md
+            - name: '方法: クライアント データ サービス クラスを手動で生成する'
+              href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
+        - name: データ サービスに対するクエリ
+          href: querying-the-data-service-wcf-data-services.md
+          items:
+            - name: クエリ射影
+              href: query-projections-wcf-data-services.md
+              items:
+                - name: '方法: クエリ結果を射影する'
+                  href: how-to-project-query-results-wcf-data-services.md
+            - name: LINQ に関する留意点
+              href: linq-considerations-wcf-data-services.md
+            - name: オブジェクトの具体化
+              href: object-materialization-wcf-data-services.md
+            - name: '方法: データ サービス クエリを実行する'
+              href: how-to-execute-data-service-queries-wcf-data-services.md
+            - name: '方法: データ サービス クエリにクエリ オプションを追加する'
+              href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
+            - name: '方法: クエリで返されたエンティティの数を確認する'
+              href: number-of-entities-returned-by-a-query-wcf.md
+            - name: '方法: データ サービス要求のクライアント資格情報の指定'
+              href: specify-client-creds-for-a-data-service-request-wcf.md
+            - name: '方法: クライアント要求のヘッダーを設定する'
+              href: how-to-set-headers-in-the-client-request-wcf-data-services.md
+        - name: 遅延コンテンツの読み込み
+          href: loading-deferred-content-wcf-data-services.md
+          items:
+            - name: '方法: 関連エンティティを読み込む'
+              href: how-to-load-related-entities-wcf-data-services.md
+            - name: '方法: ページングされた結果を読み込む'
+              href: how-to-load-paged-results-wcf-data-services.md
+        - name: データ サービスの更新
+          href: updating-the-data-service-wcf-data-services.md
+          items:
+            - name: '方法: エンティティを追加、変更、および削除する'
+              href: how-to-add-modify-and-delete-entities-wcf-data-services.md
+            - name: '方法: エンティティ リレーションシップを定義する'
+              href: how-to-define-entity-relationships-wcf-data-services.md
+            - name: '方法: 既存のエンティティを DataServiceContext にアタッチする'
+              href: attach-an-existing-entity-to-dc-wcf-data.md
+        - name: 非同期操作
+          href: asynchronous-operations-wcf-data-services.md
+          items:
+            - name: '方法: 非同期データ サービス クエリを実行する'
+              href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
+            - name: '方法: 非同期 Windows Presentation Framework アプリケーションを作成する'
+              href: create-an-asynchronous-wpf-application-wcf-data-services.md
+        - name: バッチ処理
+          href: batching-operations-wcf-data-services.md
+          items:
+            - name: '方法: クエリをバッチで実行する'
+              href: how-to-execute-queries-in-a-batch-wcf-data-services.md
+        - name: コントロールへのデータのバインド
+          href: binding-data-to-controls-wcf-data-services.md
+          items:
+            - name: '方法: Windows Presentation Foundation 要素にデータをバインドする'
+              href: bind-data-to-wpf-elements-wcf-data-services.md
+            - name: '方法: プロジェクト データ ソースを使用してデータをバインドする'
+              href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
+            - name: '方法: データ バインディングの動作をカスタマイズする'
+              href: how-to-customize-data-binding-behaviors-wcf-data-services.md
+        - name: サービス操作の呼び出し
+          href: calling-service-operations-wcf-data-services.md
+        - name: データ サービス コンテキストの管理
+          href: managing-the-data-service-context-wcf-data-services.md
+        - name: バイナリ データの操作
+          href: working-with-binary-data-wcf-data-services.md

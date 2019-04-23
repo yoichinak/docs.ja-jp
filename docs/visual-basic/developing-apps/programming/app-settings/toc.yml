@@ -1,18 +1,11 @@
-items:
 - name: Accessing Application Settings
   href: index.md
   items:
-  - name: '方法: ユーザー設定のためのプロパティ グリッドを作成する'
-    href: how-to-create-property-grids-for-user-settings.md
-  - name: '方法: ユーザー設定を永続化する'
-    href: how-to-persist-user-settings.md
-  - name: '方法: ユーザー設定を変更する'
-    href: how-to-change-user-settings.md
-  - name: '方法: アプリケーション設定を読み取る'
-    href: how-to-read-application-settings.md
-ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470866"
+    - name: '方法: ユーザー設定のためのプロパティ グリッドを作成する'
+      href: how-to-create-property-grids-for-user-settings.md
+    - name: '方法: ユーザー設定を永続化する'
+      href: how-to-persist-user-settings.md
+    - name: '方法: ユーザー設定を変更する'
+      href: how-to-change-user-settings.md
+    - name: '方法: アプリケーション設定を読み取る'
+      href: how-to-read-application-settings.md

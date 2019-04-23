@@ -1,58 +1,51 @@
-items:
 - name: 非同期プログラミングのパターン
   href: index.md
   items:
-  - name: タスク ベースの非同期パターン (TAP)
-    href: task-based-asynchronous-pattern-tap.md
-    items:
-    - name: タスク ベースの非同期パターンの実装
-      href: implementing-the-task-based-asynchronous-pattern.md
-    - name: タスク ベースの非同期パターンの利用
-      href: consuming-the-task-based-asynchronous-pattern.md
-    - name: 他の非同期パターンと型との相互運用
-      href: interop-with-other-asynchronous-patterns-and-types.md
-  - name: イベント ベースの非同期パターン (EAP)
-    href: event-based-asynchronous-pattern-eap.md
-    items:
-    - name: イベントベースの非同期パターンの概要
-      href: event-based-asynchronous-pattern-overview.md
-    - name: イベントベースの非同期パターンの実装
-      href: implementing-the-event-based-asynchronous-pattern.md
-    - name: イベントベースの非同期パターンを実装するための推奨される手順
-      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
-    - name: イベントベースの非同期パターンをいつ実装するかの決定
-      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-    - name: '方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する'
-      href: component-that-supports-the-event-based-asynchronous-pattern.md
-    - name: '方法: イベントベースの非同期パターンのクライアントを実装する'
-      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-    - name: '方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する'
-      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
-  - name: 非同期プログラミング モデル (APM)
-    href: asynchronous-programming-model-apm.md
-    items:
-    - name: IAsyncResult を使用した非同期メソッドの呼び出し
-      href: calling-asynchronous-methods-using-iasyncresult.md
+    - name: タスク ベースの非同期パターン (TAP)
+      href: task-based-asynchronous-pattern-tap.md
       items:
-      - name: AsyncWaitHandle の使用によるアプリケーション実行のブロック
-        href: blocking-application-execution-using-an-asyncwaithandle.md
-      - name: 非同期操作の終了によるアプリケーション実行のブロック
-        href: blocking-application-execution-by-ending-an-async-operation.md
-      - name: 非同期操作のステータスのポーリング
-        href: polling-for-the-status-of-an-asynchronous-operation.md
-      - name: AsyncCallback デリゲートの使用による非同期操作の終了
-        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
-        items:
-        - name: AsyncCallback デリゲートおよび状態オブジェクトの使用
-          href: using-an-asynccallback-delegate-and-state-object.md
-    - name: デリゲートを使用した非同期プログラミング
-      href: asynchronous-programming-using-delegates.md
+        - name: タスク ベースの非同期パターンの実装
+          href: implementing-the-task-based-asynchronous-pattern.md
+        - name: タスク ベースの非同期パターンの利用
+          href: consuming-the-task-based-asynchronous-pattern.md
+        - name: 他の非同期パターンと型との相互運用
+          href: interop-with-other-asynchronous-patterns-and-types.md
+    - name: イベント ベースの非同期パターン (EAP)
+      href: event-based-asynchronous-pattern-eap.md
       items:
-      - name: 同期メソッドの非同期呼び出し
-        href: calling-synchronous-methods-asynchronously.md
-ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470195"
+        - name: イベントベースの非同期パターンの概要
+          href: event-based-asynchronous-pattern-overview.md
+        - name: イベントベースの非同期パターンの実装
+          href: implementing-the-event-based-asynchronous-pattern.md
+        - name: イベントベースの非同期パターンを実装するための推奨される手順
+          href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+        - name: イベントベースの非同期パターンをいつ実装するかの決定
+          href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+        - name: '方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する'
+          href: component-that-supports-the-event-based-asynchronous-pattern.md
+        - name: '方法: イベントベースの非同期パターンのクライアントを実装する'
+          href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+        - name: '方法: イベントベースの非同期パターンをサポートするコンポーネントを使用する'
+          href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+    - name: 非同期プログラミング モデル (APM)
+      href: asynchronous-programming-model-apm.md
+      items:
+        - name: IAsyncResult を使用した非同期メソッドの呼び出し
+          href: calling-asynchronous-methods-using-iasyncresult.md
+          items:
+            - name: AsyncWaitHandle の使用によるアプリケーション実行のブロック
+              href: blocking-application-execution-using-an-asyncwaithandle.md
+            - name: 非同期操作の終了によるアプリケーション実行のブロック
+              href: blocking-application-execution-by-ending-an-async-operation.md
+            - name: 非同期操作のステータスのポーリング
+              href: polling-for-the-status-of-an-asynchronous-operation.md
+            - name: AsyncCallback デリゲートの使用による非同期操作の終了
+              href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+              items:
+                - name: AsyncCallback デリゲートおよび状態オブジェクトの使用
+                  href: using-an-asynccallback-delegate-and-state-object.md
+        - name: デリゲートを使用した非同期プログラミング
+          href: asynchronous-programming-using-delegates.md
+          items:
+            - name: 同期メソッドの非同期呼び出し
+              href: calling-synchronous-methods-asynchronously.md

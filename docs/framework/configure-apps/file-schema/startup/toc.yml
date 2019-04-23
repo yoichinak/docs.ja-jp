@@ -1,17 +1,10 @@
-items:
 - name: スタートアップ設定スキーマ
   href: index.md
   items:
-  - name: <startup> 要素
-    href: startup-element.md
-    items:
-    - name: <requiredRuntime> 要素
-      href: requiredruntime-element.md
-    - name: <supportedRuntime> 要素
-      href: supportedruntime-element.md
-ms.openlocfilehash: f96275d0e3028d80b2dd1894be0d15fc869f86a7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469714"
+    - name: <startup> 要素
+      href: startup-element.md
+      items:
+        - name: <requiredRuntime> 要素
+          href: requiredruntime-element.md
+        - name: <supportedRuntime> 要素
+          href: supportedruntime-element.md

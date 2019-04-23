@@ -1,21 +1,14 @@
-items:
 - name: .NET アプリのリソース
   href: index.md
   items:
-  - name: リソース ファイルの作成
-    href: creating-resource-files-for-desktop-apps.md
-    items:
-    - name: プログラムによる .resx ファイルの使用
-      href: working-with-resx-files-programmatically.md
-  - name: サテライト アセンブリの作成
-    href: creating-satellite-assemblies-for-desktop-apps.md
-  - name: コントロールをパッケージ化してデプロイする
-    href: packaging-and-deploying-resources-in-desktop-apps.md
-  - name: リソースを取得する
-    href: retrieving-resources-in-desktop-apps.md
-ms.openlocfilehash: b927e35892ced172b528008abe74a26524ffaaa7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470762"
+    - name: リソース ファイルの作成
+      href: creating-resource-files-for-desktop-apps.md
+      items:
+        - name: プログラムによる .resx ファイルの使用
+          href: working-with-resx-files-programmatically.md
+    - name: サテライト アセンブリの作成
+      href: creating-satellite-assemblies-for-desktop-apps.md
+    - name: コントロールをパッケージ化してデプロイする
+      href: packaging-and-deploying-resources-in-desktop-apps.md
+    - name: リソースを取得する
+      href: retrieving-resources-in-desktop-apps.md

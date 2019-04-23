@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003055"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn ベースのアナライザー
 

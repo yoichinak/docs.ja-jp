@@ -1,20 +1,13 @@
-items:
 - name: 作業の開始
   href: index.md
   items:
-  - name: Visual Studio での WPF の概要
-    href: introduction-to-wpf-in-vs.md
-  - name: WPF Version 4.5 の新機能
-    href: whats-new.md
-  - name: 'チュートリアル: 初めての WPF デスクトップ アプリケーション'
-    href: walkthrough-my-first-wpf-desktop-application.md
-  - name: WPF のチュートリアル
-    href: wpf-walkthroughs.md
-  - name: WPF コミュニティのフィードバック
-    href: community-feedback.md
-ms.openlocfilehash: bebf111d94212c0a337602a7921f7ec5e639eed6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470882"
+    - name: Visual Studio での WPF の概要
+      href: introduction-to-wpf-in-vs.md
+    - name: WPF Version 4.5 の新機能
+      href: whats-new.md
+    - name: 'チュートリアル: 初めての WPF デスクトップ アプリケーション'
+      href: walkthrough-my-first-wpf-desktop-application.md
+    - name: WPF のチュートリアル
+      href: wpf-walkthroughs.md
+    - name: WPF コミュニティのフィードバック
+      href: community-feedback.md

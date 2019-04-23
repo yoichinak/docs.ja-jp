@@ -1,16 +1,9 @@
-items:
 - name: インデクサー
   href: index.md
   items:
-  - name: インデクサーの使用
-    href: using-indexers.md
-  - name: インターフェイスのインデクサー
-    href: indexers-in-interfaces.md
-  - name: プロパティとインデクサーの比較
-    href: comparison-between-properties-and-indexers.md
-ms.openlocfilehash: 8f620f2864f6d4569bf4d999f437519551809067
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470179"
+    - name: インデクサーの使用
+      href: using-indexers.md
+    - name: インターフェイスのインデクサー
+      href: indexers-in-interfaces.md
+    - name: プロパティとインデクサーの比較
+      href: comparison-between-properties-and-indexers.md

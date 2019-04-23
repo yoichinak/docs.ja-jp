@@ -1,26 +1,19 @@
-items:
 - name: 暗号設定スキーマ
   href: index.md
   items:
-  - name: <cryptoClasses> 要素
-    href: cryptoclasses-element.md
-  - name: <cryptoClass> 要素
-    href: cryptoclass-element.md
-  - name: <cryptographySettings> 要素
-    href: cryptographysettings-element.md
-  - name: <cryptoNameMapping> 要素
-    href: cryptonamemapping-element.md
-  - name: 暗号設定の <mscorlib> 要素
-    href: mscorlib-element-for-cryptography-settings.md
-  - name: <nameEntry> 要素
-    href: nameentry-element.md
-  - name: <oidEntry> 要素
-    href: oidentry-element.md
-  - name: <oidMap> 要素
-    href: oidmap-element.md
-ms.openlocfilehash: 71237984ce59000cbef102480f7610f5a7b1bc43
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470867"
+    - name: <cryptoClasses> 要素
+      href: cryptoclasses-element.md
+    - name: <cryptoClass> 要素
+      href: cryptoclass-element.md
+    - name: <cryptographySettings> 要素
+      href: cryptographysettings-element.md
+    - name: <cryptoNameMapping> 要素
+      href: cryptonamemapping-element.md
+    - name: 暗号設定の <mscorlib> 要素
+      href: mscorlib-element-for-cryptography-settings.md
+    - name: <nameEntry> 要素
+      href: nameentry-element.md
+    - name: <oidEntry> 要素
+      href: oidentry-element.md
+    - name: <oidMap> 要素
+      href: oidmap-element.md

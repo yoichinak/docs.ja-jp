@@ -12,8 +12,8 @@ ms.openlocfilehash: f8677ba0b1896df292c656900b914e6f00b221d3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637948"
 ---
 # <a name="net-api-browser"></a>.NET API ブラウザー
 

@@ -1,40 +1,33 @@
-items:
 - name: Visual Basic 言語仕様
   href: index.md
   items:
-  - name: はじめに
-    href: ../../../../_vblang/spec/introduction.md
-  - name: 字句文法
-    href: ../../../../_vblang/spec/lexical-grammar.md
-  - name: プリプロセス ディレクティブ
-    href: ../../../../_vblang/spec/preprocessing-directives.md
-  - name: 一般的な概念
-    href: ../../../../_vblang/spec/general-concepts.md
-  - name: 属性
-    href: ../../../../_vblang/spec/attributes.md
-  - name: ソース ファイルと名前空間
-    href: ../../../../_vblang/spec/source-files-and-namespaces.md
-  - name: 種類
-    href: ../../../../_vblang/spec/types.md
-  - name: 変換
-    href: ../../../../_vblang/spec/conversions.md
-  - name: 型のメンバー
-    href: ../../../../_vblang/spec/type-members.md
-  - name: ステートメント
-    href: ../../../../_vblang/spec/statements.md
-  - name: 式
-    href: ../../../../_vblang/spec/expressions.md
-  - name: ドキュメント コメント
-    href: ../../../../_vblang/spec/documentation-comments.md
-  - name: 文法
-    items:
-    - name: vb.html
-      href: https://ljw1004.github.io/vbspec/vb.html
-    - name: vb.g4 - ANTLR 形式
-      href: https://ljw1004.github.io/vbspec/vb.g4?raw=true
-ms.openlocfilehash: 03281728455fee8303e6e1c4750779a0695130de
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470075"
+    - name: はじめに
+      href: ../../../../_vblang/spec/introduction.md
+    - name: 字句文法
+      href: ../../../../_vblang/spec/lexical-grammar.md
+    - name: プリプロセス ディレクティブ
+      href: ../../../../_vblang/spec/preprocessing-directives.md
+    - name: 一般的な概念
+      href: ../../../../_vblang/spec/general-concepts.md
+    - name: 属性
+      href: ../../../../_vblang/spec/attributes.md
+    - name: ソース ファイルと名前空間
+      href: ../../../../_vblang/spec/source-files-and-namespaces.md
+    - name: 種類
+      href: ../../../../_vblang/spec/types.md
+    - name: 変換
+      href: ../../../../_vblang/spec/conversions.md
+    - name: 型のメンバー
+      href: ../../../../_vblang/spec/type-members.md
+    - name: ステートメント
+      href: ../../../../_vblang/spec/statements.md
+    - name: 式
+      href: ../../../../_vblang/spec/expressions.md
+    - name: ドキュメント コメント
+      href: ../../../../_vblang/spec/documentation-comments.md
+    - name: 文法
+      items:
+        - name: vb.html
+          href: 'https://ljw1004.github.io/vbspec/vb.html'
+        - name: vb.g4 - ANTLR 形式
+          href: 'https://ljw1004.github.io/vbspec/vb.g4?raw=true'

@@ -1,18 +1,11 @@
-items:
 - name: Main() とコマンド ライン引数
   href: index.md
   items:
-  - name: コマンド ライン引数
-    href: command-line-arguments.md
-  - name: '方法: コマンド ライン引数を表示する'
-    href: how-to-display-command-line-arguments.md
-  - name: '方法: foreach を使用してコマンド ライン引数にアクセスする'
-    href: how-to-access-command-line-arguments-using-foreach.md
-  - name: Main() の戻り値
-    href: main-return-values.md
-ms.openlocfilehash: f46f240118ac595dc8d933ecd5f7efbf16cb25ab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470379"
+    - name: コマンド ライン引数
+      href: command-line-arguments.md
+    - name: '方法: コマンド ライン引数を表示する'
+      href: how-to-display-command-line-arguments.md
+    - name: '方法: foreach を使用してコマンド ライン引数にアクセスする'
+      href: how-to-access-command-line-arguments-using-foreach.md
+    - name: Main() の戻り値
+      href: main-return-values.md

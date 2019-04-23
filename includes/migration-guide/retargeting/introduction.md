@@ -1,5 +1,13 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757795"
+---
 ## <a name="introduction"></a>はじめに
-変更の再ターゲットは、別の .NET Framework をターゲットとして再コンパイルされるアプリに影響します。 Windows コモン コントロールには以下が含まれます。
+変更の再ターゲットは、別の .NET Framework をターゲットとして再コンパイルされるアプリに影響します。 それには以下が含まれます。
 
 * デザイン時環境の変更。 たとえば、ビルド ツールは以前は出力しなかったときに警告を出力する場合があります。
 

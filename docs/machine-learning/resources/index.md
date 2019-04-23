@@ -3,16 +3,16 @@ title: 機械学習のリソース - ML.NET
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの統合を支援するため、この ML.NET のリソースを拡張します。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 83bad6259673bba637dd2ed41e0ae018269815d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0fc8a3e3d30331cf6948b9fbbf911a72f3c9924e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960473"
 ---
 # <a name="machine-learning-resources---mlnet"></a>機械学習のリソース - ML.NET
 
-次の [ML.NET](../index.md) リソースはカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する場合に役立つことがあります。
+次の [ML.NET](../index.yml) リソースはカスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する場合に役立つことがあります。
 
 - [機械学習の用語集](glossary.md): 機械学習に関する重要な用語の定義が含まれています。
 - [Machine Learning の基本](basics.md): Machine Learning を使い始めるための学習リソースのリンクを提供しています。

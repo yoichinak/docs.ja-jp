@@ -1,22 +1,15 @@
-items:
 - name: 複数のプラットフォームの開発
   href: index.md
   items:
-  - name: ポータブル クラス ライブラリ
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: MVVM を利用した汎用性のあるクラス ライブラリの使用
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: 複数のプラットフォームを対象とするライブラリのアプリケーション リソース
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: Windows ランタイムへの URI の引き渡し
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) メソッド
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470434"
+    - name: ポータブル クラス ライブラリ
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: MVVM を利用した汎用性のあるクラス ライブラリの使用
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: 複数のプラットフォームを対象とするライブラリのアプリケーション リソース
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Windows ランタイムへの URI の引き渡し
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) メソッド
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

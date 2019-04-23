@@ -6,11 +6,11 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62027174"
 ---
 # <a name="xml-documents-and-data"></a>XML ドキュメントと XML データ
 .NET Framework には、XML 対応アプリを容易に構築するための、包括的で統合された一連のクラスが用意されています。 次の名前空間のクラスでは、XML の解析と書き込み、メモリ内での XML データの編集、データの検証、および XSLT 変換がサポートされます。  

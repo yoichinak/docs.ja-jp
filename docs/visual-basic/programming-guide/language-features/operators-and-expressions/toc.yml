@@ -1,32 +1,25 @@
-items:
 - name: 演算子および式
   href: index.md
   items:
-  - name: 演算子で実行される一般的なタスク
-    href: common-tasks-performed-with-visual-basic-operators.md
-  - name: 算術演算子
-    href: arithmetic-operators.md
-  - name: 比較演算子
-    href: comparison-operators.md
-  - name: '方法: 2 つのオブジェクトが等しいかどうかをテストする'
-    href: how-to-test-whether-two-objects-are-the-same.md
-  - name: '方法: 文字列がパターンに一致するかを調べる'
-    href: how-to-match-a-string-against-a-pattern.md
-  - name: 連結演算子
-    href: concatenation-operators.md
-  - name: 論理演算子とビット処理演算子
-    href: logical-and-bitwise-operators.md
-  - name: 演算子の効率のよい組み合わせ
-    href: efficient-combination-of-operators.md
-  - name: '方法: 数値を計算する'
-    href: how-to-calculate-numeric-values.md
-  - name: 値の比較
-    href: value-comparisons.md
-  - name: ブール式
-    href: boolean-expressions.md
-ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470211"
+    - name: 演算子で実行される一般的なタスク
+      href: common-tasks-performed-with-visual-basic-operators.md
+    - name: 算術演算子
+      href: arithmetic-operators.md
+    - name: 比較演算子
+      href: comparison-operators.md
+    - name: '方法: 2 つのオブジェクトが等しいかどうかをテストする'
+      href: how-to-test-whether-two-objects-are-the-same.md
+    - name: '方法: 文字列がパターンに一致するかを調べる'
+      href: how-to-match-a-string-against-a-pattern.md
+    - name: 連結演算子
+      href: concatenation-operators.md
+    - name: 論理演算子とビット処理演算子
+      href: logical-and-bitwise-operators.md
+    - name: 演算子の効率のよい組み合わせ
+      href: efficient-combination-of-operators.md
+    - name: '方法: 数値を計算する'
+      href: how-to-calculate-numeric-values.md
+    - name: 値の比較
+      href: value-comparisons.md
+    - name: ブール式
+      href: boolean-expressions.md

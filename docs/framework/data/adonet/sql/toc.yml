@@ -1,154 +1,147 @@
-items:
 - name: SQL Server と ADO.NET
   href: index.md
 - name: SQL Server のセキュリティ
   href: sql-server-security.md
   items:
-  - name: SQL Server セキュリティの概要
-    href: overview-of-sql-server-security.md
-    items:
-    - name: SQL Server での認証
-      href: authentication-in-sql-server.md
-    - name: SQL Server のサーバー ロールとデータベース ロール
-      href: server-and-database-roles-in-sql-server.md
-    - name: SQL Server における所有権とユーザーとスキーマの分離
-      href: ownership-and-user-schema-separation-in-sql-server.md
-    - name: SQL Server の承認と権限
-      href: authorization-and-permissions-in-sql-server.md
-    - name: SQL Server でのデータの暗号化
-      href: data-encryption-in-sql-server.md
-    - name: SQL Server の CLR 統合セキュリティ
-      href: clr-integration-security-in-sql-server.md
-  - name: SQL Server におけるアプリケーション セキュリティのシナリオ
-    href: application-security-scenarios-in-sql-server.md
-    items:
-    - name: SQL Server でのストアド プロシージャを使用した権限の管理
-      href: managing-permissions-with-stored-procedures-in-sql-server.md
-    - name: SQL Server での安全な動的 SQL の作成
-      href: writing-secure-dynamic-sql-in-sql-server.md
-    - name: SQL Server でのストアド プロシージャの署名
-      href: signing-stored-procedures-in-sql-server.md
-    - name: SQL Server での借用を使用した権限のカスタマイズ
-      href: customizing-permissions-with-impersonation-in-sql-server.md
-    - name: SQL Server における行レベルの権限の付与
-      href: granting-row-level-permissions-in-sql-server.md
-    - name: SQL Server でのアプリケーション ロールの作成
-      href: creating-application-roles-in-sql-server.md
-    - name: SQL Server での複数データベースにまたがるアクセスの有効化
-      href: enabling-cross-database-access-in-sql-server.md
-  - name: SQL Server Express のセキュリティ
-    href: sql-server-express-security.md
+    - name: SQL Server セキュリティの概要
+      href: overview-of-sql-server-security.md
+      items:
+        - name: SQL Server での認証
+          href: authentication-in-sql-server.md
+        - name: SQL Server のサーバー ロールとデータベース ロール
+          href: server-and-database-roles-in-sql-server.md
+        - name: SQL Server における所有権とユーザーとスキーマの分離
+          href: ownership-and-user-schema-separation-in-sql-server.md
+        - name: SQL Server の承認と権限
+          href: authorization-and-permissions-in-sql-server.md
+        - name: SQL Server でのデータの暗号化
+          href: data-encryption-in-sql-server.md
+        - name: SQL Server の CLR 統合セキュリティ
+          href: clr-integration-security-in-sql-server.md
+    - name: SQL Server におけるアプリケーション セキュリティのシナリオ
+      href: application-security-scenarios-in-sql-server.md
+      items:
+        - name: SQL Server でのストアド プロシージャを使用した権限の管理
+          href: managing-permissions-with-stored-procedures-in-sql-server.md
+        - name: SQL Server での安全な動的 SQL の作成
+          href: writing-secure-dynamic-sql-in-sql-server.md
+        - name: SQL Server でのストアド プロシージャの署名
+          href: signing-stored-procedures-in-sql-server.md
+        - name: SQL Server での借用を使用した権限のカスタマイズ
+          href: customizing-permissions-with-impersonation-in-sql-server.md
+        - name: SQL Server における行レベルの権限の付与
+          href: granting-row-level-permissions-in-sql-server.md
+        - name: SQL Server でのアプリケーション ロールの作成
+          href: creating-application-roles-in-sql-server.md
+        - name: SQL Server での複数データベースにまたがるアクセスの有効化
+          href: enabling-cross-database-access-in-sql-server.md
+    - name: SQL Server Express のセキュリティ
+      href: sql-server-express-security.md
 - name: SQL Server データ型と ADO.NET
   href: sql-server-data-types.md
   items:
-  - name: SqlTypes と DataSet
-    href: sqltypes-and-the-dataset.md
-  - name: null 値の処理
-    href: handling-null-values.md
-  - name: GUID と uniqueidentifier 値の比較
-    href: comparing-guid-and-uniqueidentifier-values.md
-  - name: 日付と時刻のデータ
-    href: date-and-time-data.md
-  - name: 大きな UDT
-    href: large-udts.md
-  - name: SQL Server における XML データ
-    href: xml-data-in-sql-server.md
-    items:
-    - name: SQL XML 列値
-      href: sql-xml-column-values.md
-    - name: パラメーターとしての XML 値の指定
-      href: specifying-xml-values-as-parameters.md
+    - name: SqlTypes と DataSet
+      href: sqltypes-and-the-dataset.md
+    - name: null 値の処理
+      href: handling-null-values.md
+    - name: GUID と uniqueidentifier 値の比較
+      href: comparing-guid-and-uniqueidentifier-values.md
+    - name: 日付と時刻のデータ
+      href: date-and-time-data.md
+    - name: 大きな UDT
+      href: large-udts.md
+    - name: SQL Server における XML データ
+      href: xml-data-in-sql-server.md
+      items:
+        - name: SQL XML 列値
+          href: sql-xml-column-values.md
+        - name: パラメーターとしての XML 値の指定
+          href: specifying-xml-values-as-parameters.md
 - name: SQL Server のバイナリ データと大きな値のデータ
   href: sql-server-binary-and-large-value-data.md
   items:
-  - name: ADO.NET での大きい値 (max) データの変更
-    href: modifying-large-value-max-data.md
-  - name: FILESTREAM データ
-    href: filestream-data.md
-  - name: ファイルからの画像の挿入
-    href: inserting-an-image-from-a-file.md
+    - name: ADO.NET での大きい値 (max) データの変更
+      href: modifying-large-value-max-data.md
+    - name: FILESTREAM データ
+      href: filestream-data.md
+    - name: ファイルからの画像の挿入
+      href: inserting-an-image-from-a-file.md
 - name: ADO.NET における SQL Server データ操作
   href: sql-server-data-operations.md
   items:
-  - name: SQL Server でのバルク コピー操作
-    href: bulk-copy-operations-in-sql-server.md
-    items:
-    - name: バルク コピー サンプルのセットアップ
-      href: bulk-copy-example-setup.md
-    - name: バルク コピー操作の単一実行
-      href: single-bulk-copy-operations.md
-    - name: バルク コピー操作の複数実行
-      href: multiple-bulk-copy-operations.md
-    - name: トランザクションとバルク コピー操作
-      href: transaction-and-bulk-copy-operations.md
-  - name: 複数のアクティブな結果セット (MARS)
-    href: multiple-active-result-sets-mars.md
-    items:
-    - name: 複数のアクティブな結果セットの有効化
-      href: enabling-multiple-active-result-sets.md
-    - name: データの操作
-      href: manipulating-data.md
-  - name: 非同期操作
-    href: asynchronous-operations.md
-    items:
-    - name: コールバックを使用した Windows アプリケーション
-      href: windows-applications-using-callbacks.md
-    - name: 待機ハンドルを使用した ASP.NET アプリケーション
-      href: aspnet-apps-using-wait-handles.md
-    - name: コンソール アプリケーションでのポーリング
-      href: polling-in-console-applications.md
-  - name: テーブル値パラメーター
-    href: table-valued-parameters.md
+    - name: SQL Server でのバルク コピー操作
+      href: bulk-copy-operations-in-sql-server.md
+      items:
+        - name: バルク コピー サンプルのセットアップ
+          href: bulk-copy-example-setup.md
+        - name: バルク コピー操作の単一実行
+          href: single-bulk-copy-operations.md
+        - name: バルク コピー操作の複数実行
+          href: multiple-bulk-copy-operations.md
+        - name: トランザクションとバルク コピー操作
+          href: transaction-and-bulk-copy-operations.md
+    - name: 複数のアクティブな結果セット (MARS)
+      href: multiple-active-result-sets-mars.md
+      items:
+        - name: 複数のアクティブな結果セットの有効化
+          href: enabling-multiple-active-result-sets.md
+        - name: データの操作
+          href: manipulating-data.md
+    - name: 非同期操作
+      href: asynchronous-operations.md
+      items:
+        - name: コールバックを使用した Windows アプリケーション
+          href: windows-applications-using-callbacks.md
+        - name: 待機ハンドルを使用した ASP.NET アプリケーション
+          href: aspnet-apps-using-wait-handles.md
+        - name: コンソール アプリケーションでのポーリング
+          href: polling-in-console-applications.md
+    - name: テーブル値パラメーター
+      href: table-valued-parameters.md
 - name: SQL Server の機能と ADO.NET
   href: sql-server-features-and-adonet.md
   items:
-  - name: SQL Server のインスタンスの列挙 (ADO.NET)
-    href: enumerating-instances-of-sql-server.md
-  - name: SQL Server のプロバイダー統計情報
-    href: provider-statistics-for-sql-server.md
-  - name: SQL Server Express ユーザー インスタンス
-    href: sql-server-express-user-instances.md
-  - name: SQL Server のデータベース ミラーリング
-    href: database-mirroring-in-sql-server.md
-  - name: SQL Server の共通言語ランタイム統合
-    href: sql-server-common-language-runtime-integration.md
-    items:
-    - name: SQL Server の CLR 統合の概要
-      href: introduction-to-sql-server-clr-integration.md
-    - name: CLR ユーザー定義関数
-      href: clr-user-defined-functions.md
-    - name: CLR ユーザー定義型
-      href: clr-user-defined-types.md
-    - name: CLR ストアド プロシージャ
-      href: clr-stored-procedures.md
-    - name: CLR トリガー
-      href: clr-triggers.md
-    - name: コンテキスト接続
-      href: the-context-connection.md
-    - name: SQL Server のインプロセス固有の ADO.NET の動作
-      href: sql-server-in-process-specific-behavior-of-adonet.md
-  - name: SQL Server のクエリ通知
-    href: query-notifications-in-sql-server.md
-    items:
-    - name: クエリ通知の有効化
-      href: enabling-query-notifications.md
-    - name: ASP.NET アプリケーションでの SqlDependency
-      href: sqldependency-in-an-aspnet-app.md
-    - name: SqlDependency を使用した変更の検出
-      href: detecting-changes-with-sqldependency.md
-    - name: SqlCommand の実行と SqlNotificationRequest
-      href: sqlcommand-execution-with-a-sqlnotificationrequest.md
-  - name: SQL Server でのスナップショット分離
-    href: snapshot-isolation-in-sql-server.md
-  - name: 高可用性障害復旧のための SqlClient サポート
-    href: sqlclient-support-for-high-availability-disaster-recovery.md
-  - name: SqlClient による LocalDB のサポート
-    href: sqlclient-support-for-localdb.md
+    - name: SQL Server のインスタンスの列挙 (ADO.NET)
+      href: enumerating-instances-of-sql-server.md
+    - name: SQL Server のプロバイダー統計情報
+      href: provider-statistics-for-sql-server.md
+    - name: SQL Server Express ユーザー インスタンス
+      href: sql-server-express-user-instances.md
+    - name: SQL Server のデータベース ミラーリング
+      href: database-mirroring-in-sql-server.md
+    - name: SQL Server の共通言語ランタイム統合
+      href: sql-server-common-language-runtime-integration.md
+      items:
+        - name: SQL Server の CLR 統合の概要
+          href: introduction-to-sql-server-clr-integration.md
+        - name: CLR ユーザー定義関数
+          href: clr-user-defined-functions.md
+        - name: CLR ユーザー定義型
+          href: clr-user-defined-types.md
+        - name: CLR ストアド プロシージャ
+          href: clr-stored-procedures.md
+        - name: CLR トリガー
+          href: clr-triggers.md
+        - name: コンテキスト接続
+          href: the-context-connection.md
+        - name: SQL Server のインプロセス固有の ADO.NET の動作
+          href: sql-server-in-process-specific-behavior-of-adonet.md
+    - name: SQL Server のクエリ通知
+      href: query-notifications-in-sql-server.md
+      items:
+        - name: クエリ通知の有効化
+          href: enabling-query-notifications.md
+        - name: ASP.NET アプリケーションでの SqlDependency
+          href: sqldependency-in-an-aspnet-app.md
+        - name: SqlDependency を使用した変更の検出
+          href: detecting-changes-with-sqldependency.md
+        - name: SqlCommand の実行と SqlNotificationRequest
+          href: sqlcommand-execution-with-a-sqlnotificationrequest.md
+    - name: SQL Server でのスナップショット分離
+      href: snapshot-isolation-in-sql-server.md
+    - name: 高可用性障害復旧のための SqlClient サポート
+      href: sqlclient-support-for-high-availability-disaster-recovery.md
+    - name: SqlClient による LocalDB のサポート
+      href: sqlclient-support-for-localdb.md
 - name: LINQ to SQL
   href: linq/
-ms.openlocfilehash: ab9104f2a2d626748988c89bc78cbf0668c51512
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470948"

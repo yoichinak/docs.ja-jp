@@ -1,79 +1,72 @@
-items:
 - name: セキュリティ
   href: index.md
   items:
-  - name: セキュリティの基本概念
-    href: key-security-concepts.md
-  - name: ロール ベース セキュリティ
-    href: role-based-security.md
-    items:
-    - name: プリンシパル オブジェクトと ID オブジェクト
-      href: principal-and-identity-objects.md
-    - name: '方法: WindowsPrincipal プロジェクトを作成する'
-      href: how-to-create-a-windowsprincipal-object.md
-    - name: '方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する'
-      href: how-to-create-genericprincipal-and-genericidentity-objects.md
-    - name: プリンシパル オブジェクトの置き換え
-      href: replacing-a-principal-object.md
-    - name: 偽装と復帰
-      href: impersonating-and-reverting.md
-  - name: 暗号モデル
-    href: cryptography-model.md
-    items:
-    - name: 暗号化サービス
-      href: cryptographic-services.md
-    - name: 暗号化と復号化のためのキーの生成
-      href: generating-keys-for-encryption-and-decryption.md
-    - name: '方法: キー コンテナーに非対称キーを格納する'
-      href: how-to-store-asymmetric-keys-in-a-key-container.md
-    - name: データの暗号化
-      href: encrypting-data.md
-    - name: データの復号化
-      href: decrypting-data.md
-    - name: 暗号署名
-      href: cryptographic-signatures.md
-    - name: ハッシュ コードによるデータの整合性の保証
-      href: ensuring-data-integrity-with-hash-codes.md
-    - name: 暗号スキームの作成
-      href: creating-a-cryptographic-scheme.md
-    - name: '方法: 共通キーで XML 要素を暗号化する'
-      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-    - name: '方法: 共通キーで XML 要素を復号化する'
-      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-    - name: '方法: 共通キーで XML 要素を暗号化する'
-      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-    - name: '方法: 非対称キーで XML 要素を復号化する'
-      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-    - name: '方法: X.509 証明書で XML 要素を暗号化する'
-      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-    - name: '方法: X.509 証明書で XML 要素を復号化する'
-      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-    - name: '方法: デジタル署名で XML ドキュメントに署名する'
-      href: how-to-sign-xml-documents-with-digital-signatures.md
-    - name: '方法: XML ドキュメントのデジタル署名を検証する'
-      href: how-to-verify-the-digital-signatures-of-xml-documents.md
-    - name: '方法: データ保護の使用'
-      href: how-to-use-data-protection.md
-    - name: '方法: ハードウェア暗号化デバイスにアクセスする'
-      href: how-to-access-hardware-encryption-devices.md
-    - name: 'チュートリアル: 暗号化アプリケーションの作成'
-      href: walkthrough-creating-a-cryptographic-application.md
-  - name: 安全なコーディングのガイドライン
-    href: secure-coding-guidelines.md
-    items:
-    - name: 状態データの保護
-      href: securing-state-data.md
-    - name: セキュリティとユーザー入力
-      href: security-and-user-input.md
-    - name: セキュリティと競合状態
-      href: security-and-race-conditions.md
-    - name: セキュリティと実行時のコード生成
-      href: security-and-on-the-fly-code-generation.md
-    - name: パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性
-      href: vulnerabilities-cbc-mode.md
-ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470587"
+    - name: セキュリティの基本概念
+      href: key-security-concepts.md
+    - name: ロール ベース セキュリティ
+      href: role-based-security.md
+      items:
+        - name: プリンシパル オブジェクトと ID オブジェクト
+          href: principal-and-identity-objects.md
+        - name: '方法: WindowsPrincipal プロジェクトを作成する'
+          href: how-to-create-a-windowsprincipal-object.md
+        - name: '方法: GenericPrincipal オブジェクトと GenericIdentity オブジェクトを作成する'
+          href: how-to-create-genericprincipal-and-genericidentity-objects.md
+        - name: プリンシパル オブジェクトの置き換え
+          href: replacing-a-principal-object.md
+        - name: 偽装と復帰
+          href: impersonating-and-reverting.md
+    - name: 暗号モデル
+      href: cryptography-model.md
+      items:
+        - name: 暗号化サービス
+          href: cryptographic-services.md
+        - name: 暗号化と復号化のためのキーの生成
+          href: generating-keys-for-encryption-and-decryption.md
+        - name: '方法: キー コンテナーに非対称キーを格納する'
+          href: how-to-store-asymmetric-keys-in-a-key-container.md
+        - name: データの暗号化
+          href: encrypting-data.md
+        - name: データの復号化
+          href: decrypting-data.md
+        - name: 暗号署名
+          href: cryptographic-signatures.md
+        - name: ハッシュ コードによるデータの整合性の保証
+          href: ensuring-data-integrity-with-hash-codes.md
+        - name: 暗号スキームの作成
+          href: creating-a-cryptographic-scheme.md
+        - name: '方法: 共通キーで XML 要素を暗号化する'
+          href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+        - name: '方法: 共通キーで XML 要素を復号化する'
+          href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+        - name: '方法: 共通キーで XML 要素を暗号化する'
+          href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+        - name: '方法: 非対称キーで XML 要素を復号化する'
+          href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+        - name: '方法: X.509 証明書で XML 要素を暗号化する'
+          href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+        - name: '方法: X.509 証明書で XML 要素を復号化する'
+          href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+        - name: '方法: デジタル署名で XML ドキュメントに署名する'
+          href: how-to-sign-xml-documents-with-digital-signatures.md
+        - name: '方法: XML ドキュメントのデジタル署名を検証する'
+          href: how-to-verify-the-digital-signatures-of-xml-documents.md
+        - name: '方法: データ保護の使用'
+          href: how-to-use-data-protection.md
+        - name: '方法: ハードウェア暗号化デバイスにアクセスする'
+          href: how-to-access-hardware-encryption-devices.md
+        - name: 'チュートリアル: 暗号化アプリケーションの作成'
+          href: walkthrough-creating-a-cryptographic-application.md
+    - name: 安全なコーディングのガイドライン
+      href: secure-coding-guidelines.md
+      items:
+        - name: 状態データの保護
+          href: securing-state-data.md
+        - name: セキュリティとユーザー入力
+          href: security-and-user-input.md
+        - name: セキュリティと競合状態
+          href: security-and-race-conditions.md
+        - name: セキュリティと実行時のコード生成
+          href: security-and-on-the-fly-code-generation.md
+        - name: パディングを使用した CBC モードの対称復号化に関するタイミングの脆弱性
+          href: vulnerabilities-cbc-mode.md

@@ -1,49 +1,42 @@
-items:
 - name: ステートメント、式、および演算子
   href: index.md
   items:
-  - name: ステートメント
-    href: statements.md
-  - name: 式
-    href: expressions.md
-    items:
-    - name: 式形式のメンバー
-      href: expression-bodied-members.md
-  - name: 演算子
-    href: operators.md
-  - name: 匿名関数
-    href: anonymous-functions.md
-    items:
-    - name: ラムダ式
-      href: lambda-expressions.md
+    - name: ステートメント
+      href: statements.md
+    - name: 式
+      href: expressions.md
       items:
-      - name: '方法: クエリでラムダ式を使用する'
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: '方法: LINQ 以外でラムダ式を使用する'
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: 匿名メソッド
-      href: anonymous-methods.md
-  - name: オーバーロード可能な演算子
-    href: overloadable-operators.md
-  - name: 変換演算子
-    href: conversion-operators.md
-    items:
-    - name: 変換演算子の使用
-      href: using-conversion-operators.md
-    - name: '方法: 構造体間にユーザー定義の変換を実装する'
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: 既定値式
-    href: default-value-expressions.md
-  - name: 等価比較
-    href: equality-comparisons.md
-    items:
-    - name: '方法: 型の値の等価性を定義する'
-      href: how-to-define-value-equality-for-a-type.md
-    - name: '方法: 参照の等価性 (同値) をテストする'
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470019"
+        - name: 式形式のメンバー
+          href: expression-bodied-members.md
+    - name: 演算子
+      href: operators.md
+    - name: 匿名関数
+      href: anonymous-functions.md
+      items:
+        - name: ラムダ式
+          href: lambda-expressions.md
+          items:
+            - name: '方法: クエリでラムダ式を使用する'
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: '方法: LINQ 以外でラムダ式を使用する'
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: 匿名メソッド
+          href: anonymous-methods.md
+    - name: オーバーロード可能な演算子
+      href: overloadable-operators.md
+    - name: 変換演算子
+      href: conversion-operators.md
+      items:
+        - name: 変換演算子の使用
+          href: using-conversion-operators.md
+        - name: '方法: 構造体間にユーザー定義の変換を実装する'
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: 既定値式
+      href: default-value-expressions.md
+    - name: 等価比較
+      href: equality-comparisons.md
+      items:
+        - name: '方法: 型の値の等価性を定義する'
+          href: how-to-define-value-equality-for-a-type.md
+        - name: '方法: 参照の等価性 (同値) をテストする'
+          href: how-to-test-for-reference-equality-identity.md

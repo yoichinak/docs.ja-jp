@@ -17,11 +17,11 @@ ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5e49e9d575ae2ec9b48b18f839d469632ffa769
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770410"
 ---
 # <a name="handling-and-raising-events"></a>イベントの処理と発生
 
@@ -48,14 +48,11 @@ ms.locfileid: "58348805"
   
 .NET でのデリゲートの用途は多数あります。 イベントのコンテキストでは、デリゲートは、イベント ソースとイベントを処理するコードの間を仲介するもの、つまりポインター的な機構です。 デリゲートをイベントに関連付けるには、デリゲート型をイベント宣言に追加します。 デリゲートの詳細については、「<xref:System.Delegate> クラス」を参照してください。  
   
-.NET には <xref:System.EventHandler> および <xref:System.EventHandler%601> デリゲートが用意されていて、ほとんどのイベント シナリオがサポートされます。 
-  <xref:System.EventHandler> デリゲートは、イベント データを含まないすべてのイベントに対して使用します。 
-  <xref:System.EventHandler%601> デリゲートは、イベントに関するデータを含むイベントに使用します。 これらのデリゲートには戻り値の型の値がなく、2 つのパラメーター (イベント ソース用オブジェクトとイベント データ用オブジェクト) を受け取ります。  
+.NET には <xref:System.EventHandler> および <xref:System.EventHandler%601> デリゲートが用意されていて、ほとんどのイベント シナリオがサポートされます。 <xref:System.EventHandler> デリゲートは、イベント データを含まないすべてのイベントに対して使用します。 <xref:System.EventHandler%601> デリゲートは、イベントに関するデータを含むイベントに使用します。 これらのデリゲートには戻り値の型の値がなく、2 つのパラメーター (イベント ソース用オブジェクトとイベント データ用オブジェクト) を受け取ります。  
   
 デリゲートは[マルチキャスト](xref:System.MulticastDelegate)です。つまり、複数のイベント処理メソッドへの参照を保持できます。 詳細については、<xref:System.Delegate> のリファレンス ページを参照してください。 デリゲートでは、イベント処理を柔軟に、そして詳細に制御できます。 デリゲートは、イベントに対して登録されているイベント ハンドラーのリストを管理することで、そのイベントを発生させるクラスのイベント ディスパッチャーとして動作します。  
   
-
-  <xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/keywords/delegate.md) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
+<xref:System.EventHandler> デリゲートおよび <xref:System.EventHandler%601> デリゲートが動作しないシナリオについては、デリゲートを定義できます。 デリゲートの定義が必要なシナリオは非常にまれで、たとえば、ジェネリックを認識しないコードを使用する必要がある場合などです。 デリゲートは、宣言内で C# の [`delegate`](../../csharp/language-reference/keywords/delegate.md) および Visual Basic の [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) キーワードを使ってマークします。 次の例は、`ThresholdReachedEventHandler` という名前のデリゲートを宣言する方法を示しています。  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -64,9 +61,7 @@ ms.locfileid: "58348805"
 
 イベントに関連付けられたデータは、イベント データ クラスを使用して提供できます。 .NET には、ご自分のアプリケーション内で使用できるイベント データ クラスが多数用意されています。 たとえば、<xref:System.IO.Ports.SerialDataReceivedEventArgs> クラスは、<xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> イベントのイベント データ クラスです。 .NET の名前付けパターンでは、すべてのイベント データ クラス名の末尾に `EventArgs` が付きます。 イベントに関連付けられているイベント データ クラスは、そのイベントのデリゲートを見ればわかります。 たとえば、<xref:System.IO.Ports.SerialDataReceivedEventHandler> デリゲートには、パラメーターの 1 つとして <xref:System.IO.Ports.SerialDataReceivedEventArgs> クラスが含まれます。  
   
-
-  <xref:System.EventArgs> は、すべてのイベント データ クラスの基本型です。 また、<xref:System.EventArgs> は、イベントにデータが関連付けられていないときに使用するクラスでもあります。 何かが発生したことを他のクラスに通知することのみが目的のイベント、つまり、データの受け渡しを必要としないイベントを作成する場合は、デリゲートの 2 番目のパラメーターとして <xref:System.EventArgs> クラスを追加します。 データが指定されていない場合は、<xref:System.EventArgs.Empty?displayProperty=nameWithType> 値を渡すことができます。 
-  <xref:System.EventHandler> デリゲートには、パラメーターとして <xref:System.EventArgs> クラスが含まれます。  
+<xref:System.EventArgs> は、すべてのイベント データ クラスの基本型です。 また、<xref:System.EventArgs> は、イベントにデータが関連付けられていないときに使用するクラスでもあります。 何かが発生したことを他のクラスに通知することのみが目的のイベント、つまり、データの受け渡しを必要としないイベントを作成する場合は、デリゲートの 2 番目のパラメーターとして <xref:System.EventArgs> クラスを追加します。 データが指定されていない場合は、<xref:System.EventArgs.Empty?displayProperty=nameWithType> 値を渡すことができます。 <xref:System.EventHandler> デリゲートには、パラメーターとして <xref:System.EventArgs> クラスが含まれます。  
   
 カスタマイズされたイベント データ クラスを作成する場合は、<xref:System.EventArgs>から派生したクラスを作成し、イベントに関連するデータを渡すのに必要なメンバーを指定します。 通常は、.NET と同じ名前付けパターンを使い、イベント データ クラス名の末尾に `EventArgs` を付ける必要があります。  
   

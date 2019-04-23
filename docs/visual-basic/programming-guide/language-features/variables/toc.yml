@@ -1,51 +1,44 @@
-items:
 - name: Visual Basic における変数
   href: index.md
   items:
-  - name: 変数宣言
-    href: variable-declaration.md
-    items:
-    - name: '方法: 新しい変数を作成する'
-      href: how-to-create-a-new-variable.md
-    - name: '方法: 値の変わらない変数を作成する'
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: '方法: 変数に値を格納する、および変数から値を取得する'
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: オブジェクト変数
-    href: object-variables.md
-    items:
-    - name: '方法: 長い修飾パスを持つオブジェクトへのアクセス時間を短縮する'
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: オブジェクト変数の宣言
-    href: object-variable-declaration.md
-    items:
-    - name: '方法: オブジェクトのメンバーにアクセスする'
-      href: how-to-access-members-of-an-object.md
-    - name: オブジェクト変数の代入
-      href: object-variable-assignment.md
+    - name: 変数宣言
+      href: variable-declaration.md
       items:
-      - name: '方法: Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する'
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: '方法: オブジェクト変数がインスタンスを参照しないようにする'
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: オブジェクト変数の値
-      href: object-variable-values.md
+        - name: '方法: 新しい変数を作成する'
+          href: how-to-create-a-new-variable.md
+        - name: '方法: 値の変わらない変数を作成する'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: '方法: 変数に値を格納する、および変数から値を取得する'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: オブジェクト変数
+      href: object-variables.md
       items:
-      - name: '方法: オブジェクトの現在のインスタンスを参照する'
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: '方法: オブジェクト変数で参照している型を確認する'
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: '方法: 2 つのオブジェクトが関連しているかどうかを決める'
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: '方法: 2 つのオブジェクトが同一であるかどうかを判別する'
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: ローカル型の推論
-    href: local-type-inference.md
-  - name: 変数のトラブルシューティング
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470571"
+        - name: '方法: 長い修飾パスを持つオブジェクトへのアクセス時間を短縮する'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: オブジェクト変数の宣言
+      href: object-variable-declaration.md
+      items:
+        - name: '方法: オブジェクトのメンバーにアクセスする'
+          href: how-to-access-members-of-an-object.md
+        - name: オブジェクト変数の代入
+          href: object-variable-assignment.md
+          items:
+            - name: '方法: Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: '方法: オブジェクト変数がインスタンスを参照しないようにする'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: オブジェクト変数の値
+          href: object-variable-values.md
+          items:
+            - name: '方法: オブジェクトの現在のインスタンスを参照する'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: '方法: オブジェクト変数で参照している型を確認する'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: '方法: 2 つのオブジェクトが関連しているかどうかを決める'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: '方法: 2 つのオブジェクトが同一であるかどうかを判別する'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: ローカル型の推論
+      href: local-type-inference.md
+    - name: 変数のトラブルシューティング
+      href: troubleshooting-variables.md
