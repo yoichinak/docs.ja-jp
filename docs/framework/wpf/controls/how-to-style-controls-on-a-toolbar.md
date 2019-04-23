@@ -7,10 +7,10 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217784"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>方法: ToolBar のコントロールのスタイルを設定する

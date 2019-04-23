@@ -1,12 +1,12 @@
 ---
-title: <transport> (行中)  <netTcpBinding>
+title: <transport> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
 ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217797"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<トランスポート > の\<netTcpBinding >
@@ -46,7 +46,7 @@ ms.locfileid: "59217797"
   
 |属性|説明|  
 |---------------|-----------------|  
-|clientCredentialType|任意。 トランスポート セキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。<br /><br /> -既定値は`Windows`します。<br />-この属性が型<xref:System.ServiceModel.TcpClientCredentialType>します。|  
+|clientCredentialType|省略可能です。 トランスポート セキュリティを使用してクライアント認証を実行するときに使用される資格情報の種類を指定します。<br /><br /> -既定値は`Windows`します。<br />-この属性が型<xref:System.ServiceModel.TcpClientCredentialType>します。|  
 |protectionLevel|任意。 TCP トランスポートのレベルでセキュリティを定義します。 メッセージに署名すると、転送中のメッセージが第三者によって改ざんされるリスクを軽減します。 暗号化により、転送中にデータレベルのプライバシーが提供されます。<br /><br /> 既定値は `EncryptAndSign` です。|  
 |sslProtocols|どの SslProtocols がサポートされているのかを指定する SslProtocols 列挙型フラグの値。 既定値は Tls&#124;Tls11&#124;tls12 です。|  
 |policyEnforcement|この列挙体は、<xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を適用するタイミングを指定します。<br /><br /> 1.Never – ポリシーが適用されることはありません (拡張保護は無効になります)。<br />2.WhenSupported – ポリシーが適用されるのは、クライアントが拡張保護をサポートしている場合のみです。<br />3.Always – ポリシーは常に適用されます。 拡張保護をサポートしていないクライアントは認証に失敗します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "59217797"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|セキュリティ機能を指定します、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|セキュリティ機能を指定します、 [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。|  
   
 ## <a name="remarks"></a>Remarks  
  トランスポート セキュリティは、SOAP メッセージの整合性と機密性の保護、および相互認証に使用します。 このセキュリティ モードがバインディング上で選択された場合、チャネル スタックはセキュリティ トランスポートを使用して構成され、SOAP メッセージは Windows (ネゴシエート) や TCP 上の SSL などのトランスポート セキュリティを使用して保護されます。  

@@ -3,10 +3,10 @@ title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180064"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
@@ -220,4 +220,4 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ## <a name="see-also"></a>関連項目
 
 - [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

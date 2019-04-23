@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178036"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>クエリ式の構文例:射影
-このトピックの例では、使用する方法を示します、`Select`メソッドと`From … From …`クエリを実行するためのキーワード、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 `From … From …` クエリ ベースのと同じですが、`SelectMany`メソッド。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
+このトピックの例では、使用する方法を示します、`Select`メソッドと`From … From …`クエリを実行するためのキーワード、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 `From … From …` は、メソッドは、`SelectMany` メソッドのクエリ ベース版に相当します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  
   
  このトピックの例では、次を使用して`using` / `Imports`ステートメント。  
   

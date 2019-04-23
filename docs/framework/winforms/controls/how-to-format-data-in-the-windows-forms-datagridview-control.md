@@ -16,10 +16,10 @@ helpviewer_keywords:
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
 ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221301"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールのデータの書式を設定する
@@ -75,5 +75,5 @@ ms.locfileid: "59221301"
 - [Windows フォームの DataGridView コントロールの基本的な書式設定およびスタイル設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールでのデータの書式設定](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールでデータの書式設定をカスタマイズします。](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [型の書式設定](../../../standard/base-types/formatting-types.md)

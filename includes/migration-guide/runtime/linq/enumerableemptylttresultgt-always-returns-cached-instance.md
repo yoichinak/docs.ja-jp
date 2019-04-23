@@ -1,4 +1,12 @@
-### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; は、常にキャッシュされたインスタンスを返します
+---
+ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804445"
+---
+### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> は、常にキャッシュされたインスタンスを返します
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
-

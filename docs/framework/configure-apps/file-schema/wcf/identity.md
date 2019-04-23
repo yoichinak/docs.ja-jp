@@ -3,10 +3,10 @@ title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
 ms.openlocfilehash: 0f5eace346fd0ed2c0532fb602585c4593d97291
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220358"
 ---
 # <a name="identity"></a>\<identity>
@@ -57,8 +57,8 @@ ID 要素を使用すると、クライアント開発者は予想されるサ�
 |[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|netPeerTcpBinding のカスタム ピア リゾルバーを指定します。|  
 |[\<endpoint>](endpoint-element.md)|サービス エンドポイントを構成します。|  
 |[\<エンドポイント > の\<クライアント >](endpoint-of-client.md)|チャネルのエンドポイントを構成します。|  
-|[\<発行者 >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) を指定します。|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) のメタデータ エンドポイントを指定します。|  
+|[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) を指定します。|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|フェデレーション サービスのセキュリティ トークン サービス (STS) のメタデータ エンドポイントを指定します。|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|カスタム バインドで発行済みトークンのパラメーターを定義します。|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|ローカル セキュリティ トークン サービス (STS) を指定します。|  
   

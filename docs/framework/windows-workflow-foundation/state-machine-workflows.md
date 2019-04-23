@@ -3,10 +3,10 @@ title: ステート マシン ワークフロー
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222992"
 ---
 # <a name="state-machine-workflows"></a>ステート マシン ワークフロー
@@ -102,7 +102,7 @@ ms.locfileid: "59222992"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: ステート マシン ワークフローの作成](how-to-create-a-state-machine-workflow.md)
+- [方法: ステート マシン ワークフローを作成します。](how-to-create-a-state-machine-workflow.md)
 - [StateMachine アクティビティ デザイナー](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State アクティビティ デザイナー](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState アクティビティ デザイナー](/visualstudio/workflow-designer/finalstate-activity-designer)

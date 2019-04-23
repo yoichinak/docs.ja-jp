@@ -1,35 +1,28 @@
-items:
 - name: 移行ガイド
   href: index.md
   items:
-  - name: アプリケーションの互換性
-    href: application-compatibility.md
-    items:
-    - name: ランタイムの変更
-      href: runtime/index.md
-    - name: 変更の再ターゲット
-      href: retargeting/index.md
-  - name: バージョンの互換性
-    href: version-compatibility.md
-  - name: バージョンおよび依存関係
-    href: versions-and-dependencies.md
-    items:
-    - name: '方法: インストールされている .NET Framework バージョンを確認する'
-      href: how-to-determine-which-versions-are-installed.md
+    - name: アプリケーションの互換性
+      href: application-compatibility.md
       items:
-      - name: .NET Framework バージョン用のリリース ダブルワードの最小値
-        href: minimum-release-dword.md
-    - name: '方法: インストールされている .NET Framework の更新プログラムを確認する'
-      href: how-to-determine-which-net-framework-updates-are-installed.md
-  - name: '方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する'
-    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
-  - name: .NET Framework 1.1 からの移行
-    href: migrating-from-the-net-framework-1-1.md
-  - name: .NET Framework 4 への移行に関する問題
-    href: net-framework-4-migration-issues.md
-ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054937"
+        - name: ランタイムの変更
+          href: runtime/index.md
+        - name: 変更の再ターゲット
+          href: retargeting/index.md
+    - name: バージョンの互換性
+      href: version-compatibility.md
+    - name: バージョンおよび依存関係
+      href: versions-and-dependencies.md
+      items:
+        - name: '方法: インストールされている .NET Framework バージョンを確認する'
+          href: how-to-determine-which-versions-are-installed.md
+          items:
+            - name: .NET Framework バージョン用のリリース ダブルワードの最小値
+              href: minimum-release-dword.md
+        - name: '方法: インストールされている .NET Framework の更新プログラムを確認する'
+          href: how-to-determine-which-net-framework-updates-are-installed.md
+    - name: '方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する'
+      href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: .NET Framework 1.1 からの移行
+      href: migrating-from-the-net-framework-1-1.md
+    - name: .NET Framework 4 への移行に関する問題
+      href: net-framework-4-migration-issues.md

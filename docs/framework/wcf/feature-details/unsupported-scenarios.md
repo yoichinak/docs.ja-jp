@@ -3,10 +3,10 @@ title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178777"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
@@ -75,7 +75,7 @@ ms.locfileid: "59178777"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
  WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 権限借用が有効になっているとします。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   

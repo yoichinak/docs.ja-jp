@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 4cc91e7c6054fdb8e96cecf7120df5b9f25de56c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235574"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804450"
 ---
 ### <a name="mef-catalogs-implement-ienumerable-and-therefore-can-no-longer-be-used-to-create-a-serializer"></a>MEF カタログは IEnumerable を実装するため、シリアライザーの作成には使用できなくなった
 

@@ -3,10 +3,10 @@ title: トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218967"
 ---
 # <a name="transport-security"></a>トランスポート セキュリティ
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) でのトランスポート セキュリ�
  [トランスポート セキュリティでの偽装の使用](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  トランスポート セキュリティ モードで使用できる 5 つの偽装レベルについて説明します。  
   
- [方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [方法: SSL 証明書でポートを構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  SSL (トランスポート) セキュリティを実現するために、X.509 証明書を使用してコンピューターのポートを構成する際の基本事項について説明します。  
   
 ## <a name="reference"></a>参照  

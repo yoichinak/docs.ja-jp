@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 33ad1c044001e0a8d09708cc7a1f06e05cb307de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235478"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804412"
 ---
 ### <a name="different-exception-handling-for-objectcontextcreatedatabase-and-dbproviderservicescreatedatabase-methods"></a>ObjectContext.CreateDatabase メソッドと DbProviderServices.CreateDatabase メソッドで異なる例外処理
 

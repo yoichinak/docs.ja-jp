@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
 ms.openlocfilehash: b0037f56947a86627ee9ea84369527aec859a0f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180512"
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>結合およびクロス積クエリの作成

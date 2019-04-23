@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217875"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
@@ -28,7 +28,7 @@ ms.locfileid: "59217875"
 ## <a name="cause"></a>原因  
  ユーザーは、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスを作成している場合に、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドの実装を行う必要があります。このため、状況は個別のリソースに固有です。 ただし、要件は次のとおりです。  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> <xref:System.Runtime.InteropServices.CriticalHandle>型はプロセスの重要なリソースのラッパーを表します。 メモリ リークは、時間の経過と共にプロセスを使用不能にしてしまいます。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 型および <xref:System.Runtime.InteropServices.CriticalHandle> 型は、プロセスの重要なリソースのラッパーを表します。 メモリ リークは、時間の経過と共にプロセスを使用不能にしてしまいます。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドは、その機能を実行しないことがあってはなりません。 プロセスがこのようなリソースを取得したら、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> が解放する唯一の方法です。 そのため、実行しないとリソースのリークになってしまいます。  
   
