@@ -3,11 +3,11 @@ title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
 ms.openlocfilehash: 572e458f08c4717207667db9940296c4a957199a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225496"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771774"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ControlTemplates [WPF], animating within
 ms.assetid: 97abb5d9-4dc7-4085-a011-54bd8bcb497b
 ms.openlocfilehash: a82cd68196382d541f1085b03f2e199a1bd0145f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222134"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770738"
 ---
 # <a name="how-to-animate-in-a-controltemplate"></a>方法: ControlTemplate 内でアニメーション化を行う
 この例は、使用する方法を示します<xref:System.Windows.Media.Animation.Storyboard>、 <xref:System.Windows.EventTrigger>、および<xref:System.Windows.Trigger>内でアニメーション化するオブジェクト、<xref:System.Windows.Controls.ControlTemplate>します。  

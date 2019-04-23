@@ -3,11 +3,11 @@ title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59320458"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771895"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
 このサンプルでは、次の方法を示します。  

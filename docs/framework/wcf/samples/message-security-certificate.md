@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306275"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771115"
 ---
 # <a name="message-security-certificate"></a>メッセージ セキュリティ証明書
 このサンプルでは、クライアントの認証で X.509 v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509 v3 証明書を使用するサーバー認証が必要です。 このサンプルでは、クライアント/サーバー間のすべてのアプリケーション メッセージが署名されて暗号化される、既定の設定を使用します。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)クライアント コンソール プログラムとインターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリで構成されます。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  

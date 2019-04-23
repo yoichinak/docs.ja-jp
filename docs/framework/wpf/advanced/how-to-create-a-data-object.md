@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], creating data objects
 ms.assetid: 022fa142-717d-4fea-a53c-3b52e9d91aff
 ms.openlocfilehash: deae8751518d9322e8d924a1b1fcbc20e25b35ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121791"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771804"
 ---
 # <a name="how-to-create-a-data-object"></a>方法: データ オブジェクトを作成する
 次の例では、さまざまな方法で提供されるコンス トラクターを使用して、データ オブジェクトを作成する、<xref:System.Windows.DataObject>クラス。  

@@ -3,11 +3,11 @@ title: サービスの説明
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
 ms.openlocfilehash: d68bc3f304a9ade8ab17729fb23b5bd89b007d0b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333653"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771324"
 ---
 # <a name="service-description"></a>サービスの説明
 サービスの説明のサンプルでは、サービスが実行時にそのサービスの説明情報を取得する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)で、追加のサービス操作が、サービスに関する説明情報を返すように定義します。 返される情報には、サービスのベース アドレスとエンドポイントが示されます。 サービスは、<xref:System.ServiceModel.OperationContext>、<xref:System.ServiceModel.ServiceHost>、および <xref:System.ServiceModel.Description.ServiceDescription> クラスを使用してこの情報を提供します。  
