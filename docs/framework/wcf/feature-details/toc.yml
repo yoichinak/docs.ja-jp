@@ -1,939 +1,932 @@
-items:
 - name: WCF 機能の詳細
   href: index.md
   items:
-  - name: ワークフロー サービス
-    href: workflow-services.md
-    items:
-    - name: ワークフロー サービスの概要
-      href: workflow-services-overview.md
-    - name: 長時間のワークフロー サービスの作成
-      href: creating-a-long-running-workflow-service.md
-    - name: メッセージング アクティビティ
-      href: messaging-activities.md
-    - name: '方法: メッセージング アクティビティを使用してワークフロー サービスを作成する'
-      href: how-to-create-a-workflow-service-with-messaging-activities.md
-    - name: ワークフロー内でのコントラクトの使用
-      href: using-contracts-in-workflow.md
-    - name: ワークフロー サービスのホストの概要
-      href: hosting-workflow-services-overview.md
+    - name: ワークフロー サービス
+      href: workflow-services.md
       items:
-      - name: ワークフロー サービスのホスティング
-        href: hosting-workflow-services.md
-      - name: ワークフロー サービス ホストの内部
-        href: workflow-service-host-internals.md
-      - name: ワークフロー サービス ホストの拡張機能
-        href: workflow-service-host-extensibility.md
-      - name: ワークフロー コントロール エンドポイント
-        href: workflow-control-endpoint.md
-      - name: '方法: Windows Server AppFabric を使用してワークフロー サービスをホストする'
-        href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
-      - name: WorkflowServiceHost の構成
-        href: configuring-workflowservicehost.md
-        items:
-        - name: '方法: WorkflowServiceHost を使用して永続性を構成する'
-          href: how-to-configure-persistence-with-workflowservicehost.md
-        - name: '方法: WorkflowServiceHost を使用して追跡を構成する'
-          href: how-to-configure-tracking-with-workflowservicehost.md
-        - name: '方法: WorkflowServiceHost を使用してアイドル動作を構成する'
-          href: how-to-configure-idle-behavior-with-workflowservicehost.md
-        - name: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
-          href: config-workflow-unhandled-exception-workflowservicehost.md
-    - name: 相関関係
-      href: correlation.md
+        - name: ワークフロー サービスの概要
+          href: workflow-services-overview.md
+        - name: 長時間のワークフロー サービスの作成
+          href: creating-a-long-running-workflow-service.md
+        - name: メッセージング アクティビティ
+          href: messaging-activities.md
+        - name: '方法: メッセージング アクティビティを使用してワークフロー サービスを作成する'
+          href: how-to-create-a-workflow-service-with-messaging-activities.md
+        - name: ワークフロー内でのコントラクトの使用
+          href: using-contracts-in-workflow.md
+        - name: ワークフロー サービスのホストの概要
+          href: hosting-workflow-services-overview.md
+          items:
+            - name: ワークフロー サービスのホスティング
+              href: hosting-workflow-services.md
+            - name: ワークフロー サービス ホストの内部
+              href: workflow-service-host-internals.md
+            - name: ワークフロー サービス ホストの拡張機能
+              href: workflow-service-host-extensibility.md
+            - name: ワークフロー コントロール エンドポイント
+              href: workflow-control-endpoint.md
+            - name: '方法: Windows Server AppFabric を使用してワークフロー サービスをホストする'
+              href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
+            - name: WorkflowServiceHost の構成
+              href: configuring-workflowservicehost.md
+              items:
+                - name: '方法: WorkflowServiceHost を使用して永続性を構成する'
+                  href: how-to-configure-persistence-with-workflowservicehost.md
+                - name: '方法: WorkflowServiceHost を使用して追跡を構成する'
+                  href: how-to-configure-tracking-with-workflowservicehost.md
+                - name: '方法: WorkflowServiceHost を使用してアイドル動作を構成する'
+                  href: how-to-configure-idle-behavior-with-workflowservicehost.md
+                - name: '方法: WorkflowServiceHost を使用してワークフロー サービスの未処理の例外動作を構成する'
+                  href: config-workflow-unhandled-exception-workflowservicehost.md
+        - name: 相関関係
+          href: correlation.md
+          items:
+            - name: 相関関係の概要
+              href: correlation-overview.md
+            - name: 永続的な二重
+              href: durable-duplex-correlation.md
+            - name: 要求/応答
+              href: request-reply-correlation.md
+            - name: 相関関係のトラブルシューティング
+              href: troubleshooting-correlation.md
+        - name: ワークフロー サービス内でのシリアル化の構成
+          href: configuring-serialization-in-a-workflow-service.md
+        - name: '方法: ワークフロー アプリケーションからサービスにアクセスする'
+          href: how-to-access-a-service-from-a-workflow-application.md
+        - name: 順番を無視したメッセージの処理
+          href: out-of-order-message-processing.md
+        - name: ワークフロー サービスへのトランザクションのフロー
+          href: flowing-transactions-into-and-out-of-workflow-services.md
+        - name: Send アクティビティのキャッシュ共有レベルの変更
+          href: changing-the-cache-sharing-levels-for-send-activities.md
+        - name: ワークフロー ソリューションでのサービス参照の追加
+          href: adding-a-service-reference-in-a-workflow-solution.md
+        - name: WorkflowServiceHost による side-by-side でのバージョン管理
+          href: side-by-side-versioning-in-workflowservicehost.md
+    - name: 'エンドポイント:アドレス、バインディング、およびコントラクト'
+      href: endpoints-addresses-bindings-and-contracts.md
       items:
-      - name: 相関関係の概要
-        href: correlation-overview.md
-      - name: 永続的な二重
-        href: durable-duplex-correlation.md
-      - name: 要求/応答
-        href: request-reply-correlation.md
-      - name: 相関関係のトラブルシューティング
-        href: troubleshooting-correlation.md
-    - name: ワークフロー サービス内でのシリアル化の構成
-      href: configuring-serialization-in-a-workflow-service.md
-    - name: '方法: ワークフロー アプリケーションからサービスにアクセスする'
-      href: how-to-access-a-service-from-a-workflow-application.md
-    - name: 順番を無視したメッセージの処理
-      href: out-of-order-message-processing.md
-    - name: ワークフロー サービスへのトランザクションのフロー
-      href: flowing-transactions-into-and-out-of-workflow-services.md
-    - name: Send アクティビティのキャッシュ共有レベルの変更
-      href: changing-the-cache-sharing-levels-for-send-activities.md
-    - name: ワークフロー ソリューションでのサービス参照の追加
-      href: adding-a-service-reference-in-a-workflow-solution.md
-    - name: WorkflowServiceHost による side-by-side でのバージョン管理
-      href: side-by-side-versioning-in-workflowservicehost.md
-  - name: エンドポイント:アドレス、バインディング、およびコントラクト
-    href: endpoints-addresses-bindings-and-contracts.md
-    items:
-    - name: アドレス
-      href: endpoint-addresses.md
-    - name: バインディング
-      href: bindings.md
+        - name: アドレス
+          href: endpoint-addresses.md
+        - name: バインディング
+          href: bindings.md
+          items:
+            - name: システムが提供するバインディングの構成
+              href: configuring-system-provided-bindings.md
+            - name: バインディングでのタイムアウト値の構成
+              href: configuring-timeout-values-on-a-binding.md
+            - name: UDP トランスポートを使用するマルチキャスト アプリケーションの作成
+              href: creating-multicasting-applications-using-the-udp-transport.md
+        - name: コントラクト
+          href: contracts.md
+          items:
+            - name: ServiceModel 属性および ServiceDescription 参照
+              href: servicemodel-attributes-and-servicedescription-reference.md
+            - name: 要求/応答サービス
+              href: request-reply-services.md
+            - name: '方法: 要求/応答コントラクトを作成する'
+              href: how-to-create-a-request-reply-contract.md
+            - name: 一方向サービス
+              href: one-way-services.md
+            - name: '方法: 一方向コントラクトを作成する'
+              href: how-to-create-a-one-way-contract.md
+            - name: 双方向サービス
+              href: duplex-services.md
+            - name: '方法: 双方向コントラクトを作成する'
+              href: how-to-create-a-duplex-contract.md
+            - name: '方法: コントラクト クラスを使用してサービスを作成する'
+              href: how-to-create-a-wcf-contract-with-a-class.md
+            - name: '方法: コントラクト インターフェイスを使用してサービスを作成する'
+              href: how-to-create-a-service-with-a-contract-interface.md
+            - name: WCF サービス パフォーマンスを制御するための ServiceThrottlingBehavior の使用
+              href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
+        - name: '方法: 構成にサービス エンドポイントを作成する'
+          href: how-to-create-a-service-endpoint-in-configuration.md
+        - name: '方法: コード内にサービス エンドポイントを作成する'
+          href: how-to-create-a-service-endpoint-in-code.md
+        - name: '方法: Svcutil.exe を使用してコンパイル済みサービス コードを検証する'
+          href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
+        - name: 標準エンドポイント
+          href: standard-endpoints.md
+    - name: データ転送とシリアル化
+      href: data-transfer-and-serialization.md
       items:
-      - name: システムが提供するバインディングの構成
-        href: configuring-system-provided-bindings.md
-      - name: バインディングでのタイムアウト値の構成
-        href: configuring-timeout-values-on-a-binding.md
-      - name: UDP トランスポートを使用するマルチキャスト アプリケーションの作成
-        href: creating-multicasting-applications-using-the-udp-transport.md
-    - name: コントラクト
-      href: contracts.md
+        - name: サービス コントラクトでのデータ転送の指定
+          href: specifying-data-transfer-in-service-contracts.md
+        - name: データ コントラクトの使用
+          href: using-data-contracts.md
+          items:
+            - name: '方法: クラスまたは構造体に基本的なデータ コントラクトを作成する'
+              href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
+            - name: シリアル化可能な型
+              href: serializable-types.md
+            - name: データ コントラクト名
+              href: data-contract-names.md
+            - name: データ コントラクトの等価性
+              href: data-contract-equivalence.md
+            - name: データ メンバーの順序
+              href: data-member-order.md
+            - name: 既知のデータ コントラクト型
+              href: data-contract-known-types.md
+            - name: 上位互換性のあるデータ コントラクト
+              href: forward-compatible-data-contracts.md
+            - name: データ コントラクトのバージョン管理
+              href: data-contract-versioning.md
+            - name: バージョン トレラントなシリアル化コールバック
+              href: version-tolerant-serialization-callbacks.md
+            - name: データ メンバーの既定値
+              href: data-member-default-values.md
+            - name: 相互運用可能なオブジェクト参照
+              href: interoperable-object-references.md
+            - name: データ コントラクト シリアライザーでサポートされる型
+              href: types-supported-by-the-data-contract-serializer.md
+              items:
+                - name: データ コントラクトのコレクション型
+                  href: collection-types-in-data-contracts.md
+                - name: データ コントラクトの XML および ADO.NET の種類
+                  href: xml-and-ado-net-types-in-data-contracts.md
+                - name: データ コントラクトの列挙型
+                  href: enumeration-types-in-data-contracts.md
+        - name: データ コントラクト シリアライザー
+          href: data-contract-serializer.md
+          items:
+            - name: シリアル化と逆シリアル化
+              href: serialization-and-deserialization.md
+            - name: スキーマのインポートとエクスポート
+              href: schema-import-and-export.md
+              items:
+                - name: クラスを作成するためのスキーマのインポート
+                  href: importing-schema-to-generate-classes.md
+                - name: クラスからのスキーマのエクスポート
+                  href: exporting-schemas-from-classes.md
+                - name: SerializationBinder を使用したシリアル化および逆シリアル化の制御
+                  href: controlling-serialization-and-deserialization-with-serializationbinder.md
+            - name: データ コントラクト リゾルバーの使用
+              href: using-a-data-contract-resolver.md
+        - name: XmlSerializer クラスの使用
+          href: using-the-xmlserializer-class.md
+          items:
+            - name: '方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する'
+              href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
+        - name: メッセージ コントラクトの使用
+          href: using-message-contracts.md
+        - name: 署名または暗号化、あるいはその両方が行われたカスタム ヘッダーの作成
+          href: creating-a-custom-header-that-is-signed-and-or-encrypted.md
+        - name: メッセージ クラスの使用
+          href: using-the-message-class.md
+        - name: フィルター処理
+          href: filtering.md
+        - name: 大規模データとストリーミング
+          href: large-data-and-streaming.md
+          items:
+            - name: '方法: ストリーミングを有効にする'
+              href: how-to-enable-streaming.md
+        - name: セキュリティに関するデータの考慮事項
+          href: security-considerations-for-data.md
+        - name: データ転送のアーキテクチャの概要
+          href: data-transfer-architectural-overview.md
+    - name: セッション、インスタンス化、およびコンカレンシー
+      href: sessions-instancing-and-concurrency.md
       items:
-      - name: ServiceModel 属性および ServiceDescription 参照
-        href: servicemodel-attributes-and-servicedescription-reference.md
-      - name: 要求/応答サービス
-        href: request-reply-services.md
-      - name: '方法: 要求/応答コントラクトを作成する'
-        href: how-to-create-a-request-reply-contract.md
-      - name: 一方向サービス
-        href: one-way-services.md
-      - name: '方法: 一方向コントラクトを作成する'
-        href: how-to-create-a-one-way-contract.md
-      - name: 双方向サービス
-        href: duplex-services.md
-      - name: '方法: 双方向コントラクトを作成する'
-        href: how-to-create-a-duplex-contract.md
-      - name: '方法: コントラクト クラスを使用してサービスを作成する'
-        href: how-to-create-a-wcf-contract-with-a-class.md
-      - name: '方法: コントラクト インターフェイスを使用してサービスを作成する'
-        href: how-to-create-a-service-with-a-contract-interface.md
-      - name: WCF サービス パフォーマンスを制御するための ServiceThrottlingBehavior の使用
-        href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
-    - name: '方法: 構成にサービス エンドポイントを作成する'
-      href: how-to-create-a-service-endpoint-in-configuration.md
-    - name: '方法: コード内にサービス エンドポイントを作成する'
-      href: how-to-create-a-service-endpoint-in-code.md
-    - name: '方法: Svcutil.exe を使用してコンパイル済みサービス コードを検証する'
-      href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
-    - name: 標準エンドポイント
-      href: standard-endpoints.md
-  - name: データ転送とシリアル化
-    href: data-transfer-and-serialization.md
-    items:
-    - name: サービス コントラクトでのデータ転送の指定
-      href: specifying-data-transfer-in-service-contracts.md
-    - name: データ コントラクトの使用
-      href: using-data-contracts.md
+        - name: '方法: セッションを必要とするサービスを作成する'
+          href: how-to-create-a-service-that-requires-sessions.md
+        - name: '方法: サービスのインスタンス化を制御する'
+          href: how-to-control-service-instancing.md
+        - name: Single コンカレンシー モードでメッセージを順番に処理する
+          href: ordered-processing-of-messages-in-single-concurrency-mode.md
+    - name: トランスポート
+      href: transports.md
       items:
-      - name: '方法: クラスまたは構造体に基本的なデータ コントラクトを作成する'
-        href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
-      - name: シリアル化可能な型
-        href: serializable-types.md
-      - name: データ コントラクト名
-        href: data-contract-names.md
-      - name: データ コントラクトの等価性
-        href: data-contract-equivalence.md
-      - name: データ メンバーの順序
-        href: data-member-order.md
-      - name: 既知のデータ コントラクト型
-        href: data-contract-known-types.md
-      - name: 上位互換性のあるデータ コントラクト
-        href: forward-compatible-data-contracts.md
-      - name: データ コントラクトのバージョン管理
-        href: data-contract-versioning.md
-      - name: バージョン トレラントなシリアル化コールバック
-        href: version-tolerant-serialization-callbacks.md
-      - name: データ メンバーの既定値
-        href: data-member-default-values.md
-      - name: 相互運用可能なオブジェクト参照
-        href: interoperable-object-references.md
-      - name: データ コントラクト シリアライザーでサポートされる型
-        href: types-supported-by-the-data-contract-serializer.md
-        items:
-        - name: データ コントラクトのコレクション型
-          href: collection-types-in-data-contracts.md
-        - name: データ コントラクトの XML および ADO.NET の種類
-          href: xml-and-ado-net-types-in-data-contracts.md
-        - name: データ コントラクトの列挙型
-          href: enumeration-types-in-data-contracts.md
-    - name: データ コントラクト シリアライザー
-      href: data-contract-serializer.md
+        - name: トランスポートの選択
+          href: choosing-a-transport.md
+        - name: メッセージ エンコーダーを選択する
+          href: choosing-a-message-encoder.md
+        - name: メッセージ転送ストリーミング
+          href: streaming-message-transfer.md
+        - name: HTTP および HTTPS の構成
+          href: configuring-http-and-https.md
+        - name: '方法: WCF URL 予約を制限付きの予約に置き換える'
+          href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
+        - name: トランスポート クォータ
+          href: transport-quotas.md
+        - name: NAT とファイアウォールの使用
+          href: working-with-nats-and-firewalls.md
+        - name: Net.TCP ポート共有
+          href: net-tcp-port-sharing.md
+          items:
+            - name: '方法: Net.TCP ポート共有サービスを有効にする'
+              href: how-to-enable-the-net-tcp-port-sharing-service.md
+            - name: '方法: ポート共有を使用するように WCF サービスを構成する'
+              href: how-to-configure-a-wcf-service-to-use-port-sharing.md
+            - name: Net.TCP ポート共有サービスを構成する
+              href: configuring-the-net-tcp-port-sharing-service.md
+        - name: バイトストリーム エンコーダーを使用したバイナリ オブジェクトのエンコーディング
+          href: encoding-binary-objects-with-bytestream-encoder.md
+    - name: キューと信頼できるセッション
+      href: queues-and-reliable-sessions.md
       items:
-      - name: シリアル化と逆シリアル化
-        href: serialization-and-deserialization.md
-      - name: スキーマのインポートとエクスポート
-        href: schema-import-and-export.md
-        items:
-        - name: クラスを作成するためのスキーマのインポート
-          href: importing-schema-to-generate-classes.md
-        - name: クラスからのスキーマのエクスポート
-          href: exporting-schemas-from-classes.md
-        - name: SerializationBinder を使用したシリアル化および逆シリアル化の制御
-          href: controlling-serialization-and-deserialization-with-serializationbinder.md
-      - name: データ コントラクト リゾルバーの使用
-        href: using-a-data-contract-resolver.md
-    - name: XmlSerializer クラスの使用
-      href: using-the-xmlserializer-class.md
+        - name: 信頼できるセッション
+          href: reliable-sessions.md
+          items:
+            - name: 信頼できるセッションの概要
+              href: reliable-sessions-overview.md
+            - name: '方法: 信頼されたセッション内のメッセージを変換する'
+              href: how-to-exchange-messages-within-a-reliable-session.md
+            - name: '方法: 信頼できるセッション内でメッセージをセキュリティで保護する'
+              href: how-to-secure-messages-within-reliable-sessions.md
+            - name: '方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する'
+              href: how-to-create-a-custom-reliable-session-binding-with-https.md
+            - name: 信頼できるセッションのベスト プラクティス
+              href: best-practices-for-reliable-sessions.md
+        - name: WCF のキュー
+          href: queues-in-wcf.md
+          items:
+            - name: キューの概要
+              href: queues-overview.md
+            - name: WCF でのキュー
+              href: queuing-in-wcf.md
+              items:
+                - name: サービス エンドポイントとキューのアドレス指定
+                  href: service-endpoints-and-queue-addressing.md
+                - name: キューに置かれたアプリケーションの Web ホスト
+                  href: web-hosting-a-queued-application.md
+            - name: '方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する'
+              href: how-to-exchange-queued-messages-with-wcf-endpoints.md
+            - name: '方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する'
+              href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
+            - name: セッションでキューに置かれたメッセージのグループ化
+              href: grouping-queued-messages-in-a-session.md
+            - name: トランザクションに含まれるメッセージのバッチ処理
+              href: batching-messages-in-a-transaction.md
+            - name: 配信不能キューを使用したメッセージ転送エラー処理
+              href: using-dead-letter-queues-to-handle-message-transfer-failures.md
+            - name: 有害メッセージ処理
+              href: poison-message-handling.md
+            - name: Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
+              href: diff-in-queue-in-vista-server-2003-windows-xp.md
+            - name: トランスポート セキュリティを使用したメッセージのセキュリティ保護
+              href: securing-messages-using-transport-security.md
+            - name: メッセージ セキュリティを使用したメッセージのセキュリティ保護
+              href: securing-messages-using-message-security.md
+            - name: キューに置かれたメッセージングのトラブルシューティング
+              href: troubleshooting-queued-messaging.md
+            - name: キューに置かれた通信のベスト プラクティス
+              href: best-practices-for-queued-communication.md
+    - name: トランザクション
+      href: transactions-in-wcf.md
       items:
-      - name: '方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する'
-        href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
-    - name: メッセージ コントラクトの使用
-      href: using-message-contracts.md
-    - name: 署名または暗号化、あるいはその両方が行われたカスタム ヘッダーの作成
-      href: creating-a-custom-header-that-is-signed-and-or-encrypted.md
-    - name: メッセージ クラスの使用
-      href: using-the-message-class.md
-    - name: フィルター処理
-      href: filtering.md
-    - name: 大規模データとストリーミング
-      href: large-data-and-streaming.md
+        - name: Windows Communication Foundation のトランザクションの概要
+          href: transactions-overview.md
+        - name: トランザクション モデル
+          href: transaction-models.md
+        - name: System.ServiceModel でのトランザクション サポート
+          href: transactional-support-in-system-servicemodel.md
+          items:
+            - name: ServiceModel トランザクションの属性
+              href: servicemodel-transaction-attributes.md
+            - name: ServiceModel トランザクションの構成
+              href: servicemodel-transaction-configuration.md
+            - name: トランザクション フローの有効化
+              href: enabling-transaction-flow.md
+            - name: '方法: トランザクション サービスを作成する'
+              href: how-to-create-a-transactional-service.md
+            - name: トランザクション アプリケーションの診断
+              href: diagnosing-transactional-applications.md
+            - name: COM+ と ServiceModel でのトランザクションの比較
+              href: comparing-transactions-in-com-and-servicemodel.md
+            - name: エンタープライズ サービスのトランザクション コンポーネントの統合
+              href: integrating-enterprise-services-transactional-components.md
+        - name: WS-AtomicTransaction の使用
+          href: using-ws-atomictransaction.md
+          items:
+            - name: WS-AtomicTransaction サポートの構成
+              href: configuring-ws-atomic-transaction-support.md
+    - name: セキュリティ
+      href: security.md
       items:
-      - name: '方法: ストリーミングを有効にする'
-        href: how-to-enable-streaming.md
-    - name: セキュリティに関するデータの考慮事項
-      href: security-considerations-for-data.md
-    - name: データ転送のアーキテクチャの概要
-      href: data-transfer-architectural-overview.md
-  - name: セッション、インスタンス化、およびコンカレンシー
-    href: sessions-instancing-and-concurrency.md
-    items:
-    - name: '方法: セッションを必要とするサービスを作成する'
-      href: how-to-create-a-service-that-requires-sessions.md
-    - name: '方法: サービスのインスタンス化を制御する'
-      href: how-to-control-service-instancing.md
-    - name: Single コンカレンシー モードでメッセージを順番に処理する
-      href: ordered-processing-of-messages-in-single-concurrency-mode.md
-  - name: トランスポート
-    href: transports.md
-    items:
-    - name: トランスポートの選択
-      href: choosing-a-transport.md
-    - name: メッセージ エンコーダーを選択する
-      href: choosing-a-message-encoder.md
-    - name: メッセージ転送ストリーミング
-      href: streaming-message-transfer.md
-    - name: HTTP および HTTPS の構成
-      href: configuring-http-and-https.md
-    - name: '方法: WCF URL 予約を制限付きの予約に置き換える'
-      href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
-    - name: トランスポート クォータ
-      href: transport-quotas.md
-    - name: NAT とファイアウォールの使用
-      href: working-with-nats-and-firewalls.md
-    - name: Net.TCP ポート共有
-      href: net-tcp-port-sharing.md
+        - name: セキュリティの概要
+          href: security-overview.md
+        - name: セキュリティの概念
+          href: security-concepts.md
+          items:
+            - name: WCF で使用されるセキュリティの概要
+              href: security-concepts-used-in-wcf.md
+            - name: 分散アプリケーションのセキュリティ
+              href: distributed-application-security.md
+            - name: セキュリティ用語
+              href: wcf-security-terminology.md
+        - name: 一般的なセキュリティ シナリオ
+          href: common-security-scenarios.md
+          items:
+            - name: セキュリティで保護されていないインターネット環境のクライアントとサービス
+              href: internet-unsecured-client-and-service.md
+            - name: セキュリティで保護されていないイントラネットのクライアントとサービス
+              href: intranet-unsecured-client-and-service.md
+            - name: トランスポート セキュリティと匿名クライアント
+              href: transport-security-with-an-anonymous-client.md
+            - name: 基本認証でのトランスポート セキュリティ
+              href: transport-security-with-basic-authentication.md
+            - name: トランスポート セキュリティと Windows 認証
+              href: transport-security-with-windows-authentication.md
+            - name: トランスポート セキュリティと証明書認証
+              href: transport-security-with-certificate-authentication.md
+            - name: メッセージ セキュリティと匿名クライアント
+              href: message-security-with-an-anonymous-client.md
+            - name: ユーザー名クライアントを使用したメッセージ セキュリティ
+              href: message-security-with-a-user-name-client.md
+            - name: メッセージ セキュリティと証明書クライアント
+              href: message-security-with-a-certificate-client.md
+            - name: Windows クライアントとのメッセージ セキュリティ
+              href: message-security-with-a-windows-client.md
+            - name: 資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
+              href: message-security-with-a-windows-client-without-credential-negotiation.md
+            - name: メッセージ セキュリティと相互の証明書
+              href: message-security-with-mutual-certificates.md
+            - name: 発行済みトークンを使用したメッセージ セキュリティ
+              href: message-security-with-issued-tokens.md
+            - name: 信頼できるサブシステム
+              href: trusted-subsystem.md
+        - name: セキュリティ動作
+          href: security-behaviors-in-wcf.md
+        - name: バインディングとセキュリティ
+          href: bindings-and-security.md
+          items:
+            - name: カスタム バインディングを使用したセキュリティ機能
+              href: security-capabilities-with-custom-bindings.md
+              items:
+                - name: SecurityBindingElement 認証モード
+                  href: securitybindingelement-authentication-modes.md
+                - name: '方法: SecurityBindingElement を使用してカスタム バインドを作成する'
+                  href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
+                - name: '方法: 指定した認証モード用の SecurityBindingElement を作成する'
+                  href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
+                - name: '方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする'
+                  href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
+                - name: '方法: メッセージ リプレイ検出を有効にする'
+                  href: how-to-enable-message-replay-detection.md
+                - name: '方法: サポート資格情報を作成する'
+                  href: how-to-create-a-supporting-credential.md
+                - name: '方法: 署名確認を設定する'
+                  href: how-to-set-up-a-signature-confirmation.md
+                - name: '方法: 時刻のずれの最大値を設定する'
+                  href: how-to-set-a-max-clock-skew.md
+                - name: '方法: デジタル署名の暗号化を無効にする'
+                  href: how-to-disable-encryption-of-digital-signatures.md
+        - name: サービスおよびクライアントのセキュリティ保護
+          href: securing-services-and-clients.md
+          items:
+            - name: WCF セキュリティのプログラミング
+              href: programming-wcf-security.md
+              items:
+                - name: 資格情報の種類の選択
+                  href: selecting-a-credential-type.md
+                - name: '方法: ユーザー名とパスワードで認証する'
+                  href: how-to-authenticate-with-a-user-name-and-password.md
+            - name: トランスポート セキュリティ
+              href: transport-security.md
+              items:
+                - name: トランスポート セキュリティの概要
+                  href: transport-security-overview.md
+                - name: HTTP トランスポート セキュリティ
+                  href: http-transport-security.md
+                - name: HTTP 認証の理解
+                  href: understanding-http-authentication.md
+                - name: トランスポート セキュリティでの偽装の使用
+                  href: using-impersonation-with-transport-security.md
+                - name: '方法: SSL 証明書を使用してポートを構成する'
+                  href: how-to-configure-a-port-with-an-ssl-certificate.md
+                - name: '方法: IIS でホストされる WCF サービスに SSL を構成する'
+                  href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
+            - name: メッセージのセキュリティ
+              href: message-security-in-wcf.md
+              items:
+                - name: '方法: X.509 証明書を使用してサービスをセキュリティで保護する'
+                  href: how-to-secure-a-service-with-an-x-509-certificate.md
+                - name: '方法: トランスポート セキュリティとメッセージ資格情報を使用する'
+                  href: how-to-use-transport-security-and-message-credentials.md
+                - name: WCF サービスが Web ファームでホストされている場合のリプレイ攻撃の回避
+                  href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
+            - name: セキュリティで保護されたセッション
+              href: secure-sessions.md
+              items:
+                - name: セキュリティ保護されたメッセージ交換とセッション
+                  href: secure-conversations-and-secure-sessions.md
+                - name: '方法: セキュリティで保護されたセッションを作成する'
+                  href: how-to-create-a-secure-session.md
+                - name: '方法: セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する'
+                  href: how-to-create-a-security-context-token-for-a-secure-session.md
+                - name: セキュリティで保護されたセッションに関するセキュリティの検討
+                  href: security-considerations-for-secure-sessions.md
+            - name: 証明書の使用
+              href: working-with-certificates.md
+              items:
+                - name: '方法: 証明書を取得する'
+                  href: how-to-obtain-a-certificate-wcf.md
+                - name: '方法: MMC スナップインを使用して証明書を参照する'
+                  href: how-to-view-certificates-with-the-mmc-snap-in.md
+                - name: '方法: 証明書のサムプリントを取得する'
+                  href: how-to-retrieve-the-thumbprint-of-a-certificate.md
+                - name: '方法: X.509 証明書を WCF からアクセス可能にする'
+                  href: how-to-make-x-509-certificates-accessible-to-wcf.md
+                - name: '方法: 開発中に使用する一時的な証明書を作成する'
+                  href: how-to-create-temporary-certificates-for-use-during-development.md
+                - name: '方法: 署名の検証に使用する証明機関の証明書チェーンを指定する'
+                  href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
+                - name: HTTPS、SSL Over TCP、SOAP セキュリティ間における証明書検証方法の相違点
+                  href: cert-val-diff-https-ssl-over-tcp-and-soap.md
+                - name: Internet Explorer と WCF で実行されるサービス証明書の検証の相違点
+                  href: diff-service-certificate-validation-ie-and-wcf.md
+                - name: '方法: 一貫性を保って X.509 証明書を参照する'
+                  href: how-to-consistently-reference-x-509-certificates.md
+        - name: 認証
+          href: authentication-in-wcf.md
+          items:
+            - name: '方法: ASP.NET メンバーシップ プロバイダーを使用する'
+              href: how-to-use-the-aspnet-membership-provider.md
+            - name: '方法: カスタム ユーザー名およびパスワード検証を使用する'
+              href: how-to-use-a-custom-user-name-and-password-validator.md
+            - name: '方法: 同じ型の複数のセキュリティ トークンを使用する'
+              href: how-to-use-multiple-security-tokens-of-the-same-type.md
+            - name: サービス ID と認証
+              href: service-identity-and-authentication.md
+            - name: セキュリティ ネゴシエーションとタイムアウト
+              href: security-negotiation-and-timeouts.md
+            - name: Windows 認証エラーのデバッグ
+              href: debugging-windows-authentication-errors.md
+            - name: WCF での複数の認証方式の使用
+              href: using-multiple-authentication-schemes-with-wcf.md
+        - name: 承認
+          href: authorization-in-wcf.md
+          items:
+            - name: アクセス制御機構
+              href: access-control-mechanisms.md
+            - name: '方法: ASP.NET のロール プロバイダーとサービスを使用する'
+              href: how-to-use-the-aspnet-role-provider-with-a-service.md
+            - name: '方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
+              href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
+            - name: ID モデルを使用したクレームと承認の管理
+              href: managing-claims-and-authorization-with-the-identity-model.md
+              items:
+                - name: クレームとトークン
+                  href: claims-and-tokens.md
+                - name: リソースへのアクセスのクレームと拒否
+                  href: claims-and-denying-access-to-resources.md
+                - name: クレームの作成とリソース値
+                  href: claim-creation-and-resource-values.md
+            - name: 委任と偽装
+              href: delegation-and-impersonation-with-wcf.md
+        - name: フェデレーションと発行済みトークン
+          href: federation-and-issued-tokens.md
+          items:
+            - name: フェデレーション
+              href: federation.md
+            - name: フェデレーションと信頼
+              href: federation-and-trust.md
+            - name: '方法: フェデレーション クライアントを作成する'
+              href: how-to-create-a-federated-client.md
+            - name: '方法: フェデレーション サービスで資格情報を設定する'
+              href: how-to-configure-credentials-on-a-federation-service.md
+            - name: '方法: WSFederationHttpBinding を作成する'
+              href: how-to-create-a-wsfederationhttpbinding.md
+            - name: '方法: セキュリティ トークン サービスを作成する'
+              href: how-to-create-a-security-token-service.md
+            - name: SAML (Security Assertions Markup Language) トークンとクレーム
+              href: saml-tokens-and-claims.md
+            - name: '方法: ローカル発行者を設定する'
+              href: how-to-configure-a-local-issuer.md
+            - name: '方法: 双方向フェデレーション バインディングを作成する'
+              href: how-to-create-a-duplex-federated-binding.md
+        - name: 監査
+          href: auditing-security-events.md
+          items:
+            - name: '方法: セキュリティ イベントを監査する'
+              href: how-to-audit-wcf-security-events.md
+        - name: セキュリティ ガイドラインとベスト プラクティス
+          href: security-guidance-and-best-practices.md
+          items:
+            - name: セキュリティのベスト プラクティス
+              href: best-practices-for-security-in-wcf.md
+            - name: セキュリティの考慮事項
+              href: security-considerations-in-wcf.md
+              items:
+                - name: 情報の漏えい
+                  href: information-disclosure.md
+                - name: 権限の昇格
+                  href: elevation-of-privilege.md
+                - name: サービス拒否
+                  href: denial-of-service.md
+                - name: 改変
+                  href: tampering.md
+                - name: リプレイ攻撃
+                  href: replay-attacks.md
+                - name: サポートされていないシナリオ
+                  href: unsupported-scenarios.md
+            - name: パフォーマンスに関する考慮事項
+              href: performance-considerations.md
+              items:
+                - name: ClaimSet でのクレームの検索
+                  href: finding-claims-in-a-claimset.md
+                - name: 電子署名の暗号化
+                  href: encryption-of-digital-signatures.md
+        - name: 認証の拡張保護の概要
+          href: extended-protection-for-authentication-overview.md
+          items:
+            - name: 拡張保護認証のサンプルの ReadMe
+              href: readme-for-extended-protection-authentication-sample.md
+    - name: ピアツーピア ネットワーク
+      href: peer-to-peer-networking.md
       items:
-      - name: '方法: Net.TCP ポート共有サービスを有効にする'
-        href: how-to-enable-the-net-tcp-port-sharing-service.md
-      - name: '方法: ポート共有を使用するように WCF サービスを構成する'
-        href: how-to-configure-a-wcf-service-to-use-port-sharing.md
-      - name: Net.TCP ポート共有サービスを構成する
-        href: configuring-the-net-tcp-port-sharing-service.md
-    - name: バイトストリーム エンコーダーを使用したバイナリ オブジェクトのエンコーディング
-      href: encoding-binary-objects-with-bytestream-encoder.md
-  - name: キューと信頼できるセッション
-    href: queues-and-reliable-sessions.md
-    items:
-    - name: 信頼できるセッション
-      href: reliable-sessions.md
+        - name: ピア チャネルのシナリオ
+          href: peer-channel-scenarios.md
+        - name: ピア チャネルの概要
+          href: peer-channel-concepts.md
+          items:
+            - name: ピア メッシュ
+              href: peer-meshes.md
+            - name: ピア ノード
+              href: peer-nodes.md
+            - name: ピア チャネルのセキュリティ
+              href: peer-channel-security.md
+            - name: ピア リゾルバー
+              href: peer-resolvers.md
+              items:
+                - name: 'CustomPeerResolverService 内部:クライアント登録'
+                  href: inside-the-custompeerresolverservice-client-registrations.md
+        - name: ピア チャネル アプリケーションの構築
+          href: building-a-peer-channel-application.md
+          items:
+            - name: NetTcpBinding アプリケーションからピア チャネル アプリケーションへの変換
+              href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
+            - name: メッセージ配布の制限
+              href: limiting-message-distribution.md
+            - name: オンライン ステータスとオフライン ステータスの追加
+              href: adding-online-and-offline-status.md
+            - name: セキュリティによるピア チャネル アプリケーションの保護
+              href: securing-peer-channel-applications.md
+    - name: メタデータ
+      href: metadata.md
       items:
-      - name: 信頼できるセッションの概要
-        href: reliable-sessions-overview.md
-      - name: '方法: 信頼されたセッション内のメッセージを変換する'
-        href: how-to-exchange-messages-within-a-reliable-session.md
-      - name: '方法: 信頼できるセッション内でメッセージをセキュリティで保護する'
-        href: how-to-secure-messages-within-reliable-sessions.md
-      - name: '方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する'
-        href: how-to-create-a-custom-reliable-session-binding-with-https.md
-      - name: 信頼できるセッションのベスト プラクティス
-        href: best-practices-for-reliable-sessions.md
-    - name: WCF のキュー
-      href: queues-in-wcf.md
+        - name: メタデータ アーキテクチャの概要
+          href: metadata-architecture-overview.md
+        - name: メタデータ形式
+          href: metadata-formats.md
+        - name: メタデータのエクスポートとインポート
+          href: exporting-and-importing-metadata.md
+          items:
+            - name: '方法: メタデータをサービス エンドポイントにインポートする'
+              href: how-to-import-metadata-into-service-endpoints.md
+            - name: '方法: メタデータをサービス エンドポイントからエクスポートする'
+              href: how-to-export-metadata-from-service-endpoints.md
+            - name: ServiceDescription と WSDL 参照
+              href: servicedescription-and-wsdl-reference.md
+            - name: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
+              href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
+        - name: メタデータの公開
+          href: publishing-metadata.md
+          items:
+            - name: '方法: 構成ファイルを使用してサービスのメタデータを公開する'
+              href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
+            - name: '方法: コードを使用してサービスのメタデータを公開する'
+              href: how-to-publish-metadata-for-a-service-using-code.md
+        - name: メタデータを取得する
+          href: retrieving-metadata.md
+          items:
+            - name: '方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする'
+              href: how-to-use-svcutil-exe-to-download-metadata-documents.md
+            - name: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得する'
+              href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
+            - name: '方法: MetadataExchangeClient を使用してメタデータを取得する'
+              href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
+        - name: メタデータを使用する
+          href: using-metadata.md
+          items:
+            - name: 生成されたクライアント コードの理解
+              href: understanding-generated-client-code.md
+            - name: '方法: メタデータの取得および準拠サービスの実装をする'
+              href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
+            - name: サービス メタデータからの WCF クライアントの生成
+              href: generating-a-wcf-client-from-service-metadata.md
+        - name: メタデータを使用する場合のセキュリティ上の考慮事項
+          href: security-considerations-with-metadata.md
+          items:
+            - name: '方法: セキュリティで保護されたメタデータ エンドポイント'
+              href: how-to-secure-metadata-endpoints.md
+            - name: '方法: 承認中にメタデータ要求を許可する'
+              href: how-to-allow-metadata-requests-while-authorizing.md
+    - name: クライアント
+      href: clients.md
       items:
-      - name: キューの概要
-        href: queues-overview.md
-      - name: WCF でのキュー
-        href: queuing-in-wcf.md
-        items:
-        - name: サービス エンドポイントとキューのアドレス指定
-          href: service-endpoints-and-queue-addressing.md
-        - name: キューに置かれたアプリケーションの Web ホスト
-          href: web-hosting-a-queued-application.md
-      - name: '方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する'
-        href: how-to-exchange-queued-messages-with-wcf-endpoints.md
-      - name: '方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する'
-        href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
-      - name: セッションでキューに置かれたメッセージのグループ化
-        href: grouping-queued-messages-in-a-session.md
-      - name: トランザクションに含まれるメッセージのバッチ処理
-        href: batching-messages-in-a-transaction.md
-      - name: 配信不能キューを使用したメッセージ転送エラー処理
-        href: using-dead-letter-queues-to-handle-message-transfer-failures.md
-      - name: 有害メッセージ処理
-        href: poison-message-handling.md
-      - name: Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
-        href: diff-in-queue-in-vista-server-2003-windows-xp.md
-      - name: トランスポート セキュリティを使用したメッセージのセキュリティ保護
-        href: securing-messages-using-transport-security.md
-      - name: メッセージ セキュリティを使用したメッセージのセキュリティ保護
-        href: securing-messages-using-message-security.md
-      - name: キューに置かれたメッセージングのトラブルシューティング
-        href: troubleshooting-queued-messaging.md
-      - name: キューに置かれた通信のベスト プラクティス
-        href: best-practices-for-queued-communication.md
-  - name: トランザクション
-    href: transactions-in-wcf.md
-    items:
-    - name: Windows Communication Foundation のトランザクションの概要
-      href: transactions-overview.md
-    - name: トランザクション モデル
-      href: transaction-models.md
-    - name: System.ServiceModel でのトランザクション サポート
-      href: transactional-support-in-system-servicemodel.md
+        - name: WCF クライアント アーキテクチャ
+          href: client-architecture.md
+        - name: WCF クライアントを使用したサービスへのアクセス
+          href: accessing-services-using-a-client.md
+          items:
+            - name: '方法: 一方向コントラクトと要求/応答コントラクトを使用してサービスにアクセスする'
+              href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
+            - name: '方法: 双方向コントラクトを使用してサービスにアクセスする'
+              href: how-to-access-services-with-a-duplex-contract.md
+            - name: '方法: WSE 3.0 サービスにアクセスする'
+              href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
+            - name: '方法: ChannelFactory を使用する'
+              href: how-to-use-the-channelfactory.md
+            - name: チャネル ファクトリとキャッシュ
+              href: channel-factory-and-caching.md
+            - name: '方法: サービス操作を非同期に呼び出す'
+              href: how-to-call-wcf-service-operations-asynchronously.md
+            - name: 中間層クライアント アプリケーション
+              href: middle-tier-client-applications.md
+            - name: '方法: チャネル ファクトリを使用して、非同期的に操作を呼び出す'
+              href: how-to-call-operations-asynchronously-using-a-channel-factory.md
+            - name: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
+              href: accessing-wcf-services-with-a-windows-store-client-app.md
+            - name: '方法: チャネル ファクトリを作成および使用して、チャネルを作成および管理する'
+              href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
+        - name: WCF クライアントの構成
+          href: client-configuration.md
+    - name: ホスト
+      href: hosting.md
       items:
-      - name: ServiceModel トランザクションの属性
-        href: servicemodel-transaction-attributes.md
-      - name: ServiceModel トランザクションの構成
-        href: servicemodel-transaction-configuration.md
-      - name: トランザクション フローの有効化
-        href: enabling-transaction-flow.md
-      - name: '方法: トランザクション サービスを作成する'
-        href: how-to-create-a-transactional-service.md
-      - name: トランザクション アプリケーションの診断
-        href: diagnosing-transactional-applications.md
-      - name: COM+ と ServiceModel でのトランザクションの比較
-        href: comparing-transactions-in-com-and-servicemodel.md
-      - name: エンタープライズ サービスのトランザクション コンポーネントの統合
-        href: integrating-enterprise-services-transactional-components.md
-    - name: WS-AtomicTransaction の使用
-      href: using-ws-atomictransaction.md
+        - name: インターネット インフォメーション サービスでのホスティング
+          href: hosting-in-internet-information-services.md
+          items:
+            - name: インターネット インフォメーション サービスでホストされる WCF サービスの配置
+              href: deploying-an-internet-information-services-hosted-wcf-service.md
+            - name: WCF サービスと ASP.NET
+              href: wcf-services-and-aspnet.md
+            - name: インターネット インフォメーション サービス ホスティングのベスト プラクティス
+              href: internet-information-services-hosting-best-practices.md
+            - name: '方法: IIS で WCF サービスをホストする'
+              href: how-to-host-a-wcf-service-in-iis.md
+            - name: Windows Communication Foundation での Internet Information Services 7.0 の構成
+              href: configuring-iis-for-wcf.md
+        - name: Windows プロセス アクティブ化サービスでのホスティング
+          href: hosting-in-windows-process-activation-service.md
+          items:
+            - name: WAS アクティベーション アーキテクチャ
+              href: was-activation-architecture.md
+            - name: WCF で使用するための WAS を設定する
+              href: configuring-the-wpa--service-for-use-with-wcf.md
+            - name: '方法: WCF アクティブ化コンポーネントをインストールして設定する'
+              href: how-to-install-and-configure-wcf-activation-components.md
+            - name: '方法: WAS で WCF サービスをホストする'
+              href: how-to-host-a-wcf-service-in-was.md
+        - name: Windows サービス アプリケーションのホスト
+          href: hosting-in-a-windows-service-application.md
+          items:
+            - name: '方法: マネージド Windows サービスで WCF サービスをホストする'
+              href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
+        - name: マネージド アプリケーションのホスト
+          href: hosting-in-a-managed-application.md
+        - name: IIS と WAS における構成ベースのアクティブ化
+          href: configuration-based-activation-in-iis-and-was.md
+        - name: 複数の IIS サイト バインディングのサポート
+          href: supporting-multiple-iis-site-bindings.md
+        - name: System.Web.Routing 統合
+          href: system-web-routing-integration.md
+    - name: 部分信頼
+      href: partial-trust.md
       items:
-      - name: WS-AtomicTransaction サポートの構成
-        href: configuring-ws-atomic-transaction-support.md
-  - name: セキュリティ
-    href: security.md
-    items:
-    - name: セキュリティの概要
-      href: security-overview.md
-    - name: セキュリティの概念
-      href: security-concepts.md
+        - name: サポートされている配置シナリオ
+          href: supported-deployment-scenarios.md
+        - name: 部分信頼機能の互換性
+          href: partial-trust-feature-compatibility.md
+        - name: 部分信頼のベスト プラクティス
+          href: partial-trust-best-practices.md
+    - name: 相互運用性と統合
+      href: interoperability-and-integration.md
       items:
-      - name: WCF で使用されるセキュリティの概要
-        href: security-concepts-used-in-wcf.md
-      - name: 分散アプリケーションのセキュリティ
-        href: distributed-application-security.md
-      - name: セキュリティ用語
-        href: wcf-security-terminology.md
-    - name: 一般的なセキュリティ シナリオ
-      href: common-security-scenarios.md
+        - name: Web サービス プロトコルの相互運用性ガイド
+          href: web-services-protocols-interoperability-guide.md
+          items:
+            - name: システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
+              href: web-services-protocols-supported-by-system-provided-interoperability-bindings.md
+            - name: メッセージング プロトコル
+              href: messaging-protocols.md
+            - name: データ コントラクト スキーマの参照
+              href: data-contract-schema-reference.md
+            - name: WSDL とポリシー
+              href: wsdl-and-policy.md
+            - name: セキュリティ プロトコル バージョン 1.0
+              href: security-protocols-version-1-0.md
+            - name: セキュリティ プロトコル
+              href: security-protocols.md
+            - name: 信頼できるメッセージング プロトコル バージョン 1.0
+              href: reliable-messaging-protocol-version-1-0.md
+            - name: 信頼できるメッセージング プロトコル バージョン 1.1
+              href: reliable-messaging-protocol-version-1-1.md
+            - name: トランザクション プロトコル バージョン 1.0
+              href: transaction-protocols-version-1-0.md
+            - name: トランザクション プロトコル
+              href: transaction-protocols.md
+            - name: コンテキスト交換プロトコル
+              href: context-exchange-protocol.md
+            - name: Trust プロトコルが混在するフェデレーション シナリオ
+              href: mixing-trust-protocols-in-federated-scenarios.md
+        - name: COM+ アプリケーションとの統合
+          href: integrating-with-com-plus-applications.md
+          items:
+            - name: COM+ アプリケーションとの統合の概要
+              href: integrating-with-com-plus-applications-overview.md
+            - name: '方法: COM+ サービス モデル構成ツールを使用する'
+              href: how-to-use-the-com-service-model-configuration-tool.md
+            - name: '方法: COM+ サービス設定を構成する'
+              href: how-to-configure-com-service-settings.md
+            - name: '方法: COM+ 統合アプリケーションを展開する'
+              href: how-to-deploy-a-com-integration-application.md
+        - name: COM アプリケーションとの統合
+          href: integrating-with-com-applications.md
+          items:
+            - name: COM アプリケーションとの統合の概要
+              href: integrating-with-com-applications-overview.md
+            - name: '方法: サービス モニカーを登録および構成する'
+              href: how-to-register-and-configure-a-service-moniker.md
+            - name: '方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する'
+              href: use-the-wcf-service-moniker-without-registration.md
+            - name: '方法: WSDL コントラクトと共にサービス モニカーを使用する'
+              href: how-to-use-a-service-moniker-with-wsdl-contracts.md
+            - name: '方法: Metadata Exchange コントラクトと共にサービス モニカーを使用する'
+              href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
+            - name: '方法: チャネルのセキュリティ資格情報を指定する'
+              href: how-to-specify-channel-security-credentials.md
+        - name: .NET リモート処理アプリケーションの WCF への移行
+          href: migrating-net-remoting-applications-to-wcf.md
+        - name: Web サービス拡張 3.0 との相互運用
+          href: interoperability-with-web-services-enhancements-3-0.md
+          items:
+            - name: '方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する'
+              href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
+            - name: '方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する'
+              href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
+        - name: WSE 3.0 Web サービスの WCF への移行
+          href: migrating-wse-3-0-web-services-to-wcf.md
+        - name: ASP.NET Web サービスとの相互運用
+          href: interop-with-aspnet-web-services.md
+          items:
+            - name: '方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する'
+              href: config-wcf-service-with-aspnet-web-service.md
+        - name: ASP.NET Web サービスを WCF に移行する
+          href: migrating-aspnet-web-services-to-wcf.md
+          items:
+            - name: 使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較
+              href: comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md
+            - name: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
+              href: comparing-aspnet-web-services-to-wcf-based-on-development.md
+            - name: 'Windows Communication Foundation 導入の準備:将来的な統合の容易化'
+              href: anticipating-adopting-the-wcf-easing-future-integration.md
+            - name: 'Windows Communication Foundation 導入の準備:将来の移行の簡略化'
+              href: anticipating-adopting-wcf-migration.md
+            - name: Windows Communication Foundation の採用
+              href: adopting-wcf.md
+        - name: POX アプリケーションとの相互運用性
+          href: interoperability-with-pox-applications.md
+    - name: WCF Web HTTP プログラミング モデル
+      href: wcf-web-http-programming-model.md
       items:
-      - name: セキュリティで保護されていないインターネット環境のクライアントとサービス
-        href: internet-unsecured-client-and-service.md
-      - name: セキュリティで保護されていないイントラネットのクライアントとサービス
-        href: intranet-unsecured-client-and-service.md
-      - name: トランスポート セキュリティと匿名クライアント
-        href: transport-security-with-an-anonymous-client.md
-      - name: 基本認証でのトランスポート セキュリティ
-        href: transport-security-with-basic-authentication.md
-      - name: トランスポート セキュリティと Windows 認証
-        href: transport-security-with-windows-authentication.md
-      - name: トランスポート セキュリティと証明書認証
-        href: transport-security-with-certificate-authentication.md
-      - name: メッセージ セキュリティと匿名クライアント
-        href: message-security-with-an-anonymous-client.md
-      - name: ユーザー名クライアントを使用したメッセージ セキュリティ
-        href: message-security-with-a-user-name-client.md
-      - name: メッセージ セキュリティと証明書クライアント
-        href: message-security-with-a-certificate-client.md
-      - name: Windows クライアントとのメッセージ セキュリティ
-        href: message-security-with-a-windows-client.md
-      - name: 資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
-        href: message-security-with-a-windows-client-without-credential-negotiation.md
-      - name: メッセージ セキュリティと相互の証明書
-        href: message-security-with-mutual-certificates.md
-      - name: 発行済みトークンを使用したメッセージ セキュリティ
-        href: message-security-with-issued-tokens.md
-      - name: 信頼できるサブシステム
-        href: trusted-subsystem.md
-    - name: セキュリティ動作
-      href: security-behaviors-in-wcf.md
-    - name: バインディングとセキュリティ
-      href: bindings-and-security.md
+        - name: WCF Web HTTP プログラミング モデルの概要
+          href: wcf-web-http-programming-model-overview.md
+        - name: WCF Web HTTP プログラミング オブジェクト モデル
+          href: wcf-web-http-programming-object-model.md
+        - name: '方法: 基本的な WCF Web HTTP サービスを作成する'
+          href: how-to-create-a-basic-wcf-web-http-service.md
+        - name: '方法: コントラクトを SOAP クライアントおよび Web クライアントに公開する'
+          href: how-to-expose-a-contract-to-soap-and-web-clients.md
+        - name: UriTemplate と UriTemplateTable
+          href: uritemplate-and-uritemplatetable.md
+        - name: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
+          href: service-returns-arbitrary-data-using-the-wcf-web.md
+        - name: '方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する'
+          href: create-a-service-arbitrary-data-using-wcf.md
+        - name: WCF WEB HTTP サービスのキャッシュ サポート
+          href: caching-support-for-wcf-web-http-services.md
+        - name: WCF Web HTTP サービスのヘルプ ページ
+          href: wcf-web-http-service-help-page.md
+        - name: WCF Web HTTP 形式
+          href: wcf-web-http-formatting.md
+        - name: WCF Web HTTP エラー処理
+          href: wcf-web-http-error-handling.md
+        - name: JSONP の使用
+          href: using-jsonp.md
+        - name: WCF サービスからの REST スタイル サービスの呼び出し
+          href: calling-a-rest-style-service-from-a-wcf-service.md
+    - name: WCF 配信
+      href: wcf-syndication.md
       items:
-      - name: カスタム バインディングを使用したセキュリティ機能
-        href: security-capabilities-with-custom-bindings.md
-        items:
-        - name: SecurityBindingElement 認証モード
-          href: securitybindingelement-authentication-modes.md
-        - name: '方法: SecurityBindingElement を使用してカスタム バインドを作成する'
-          href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
-        - name: '方法: 指定した認証モード用の SecurityBindingElement を作成する'
-          href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
-        - name: '方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする'
-          href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
-        - name: '方法: メッセージ リプレイ検出を有効にする'
-          href: how-to-enable-message-replay-detection.md
-        - name: '方法: サポート資格情報を作成する'
-          href: how-to-create-a-supporting-credential.md
-        - name: '方法: 署名確認を設定する'
-          href: how-to-set-up-a-signature-confirmation.md
-        - name: '方法: 時刻のずれの最大値を設定する'
-          href: how-to-set-a-max-clock-skew.md
-        - name: '方法: デジタル署名の暗号化を無効にする'
-          href: how-to-disable-encryption-of-digital-signatures.md
-    - name: サービスおよびクライアントのセキュリティ保護
-      href: securing-services-and-clients.md
+        - name: WCF 配信の概要
+          href: wcf-syndication-overview.md
+        - name: 配信のアーキテクチャ
+          href: architecture-of-syndication.md
+        - name: WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法
+          href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
+        - name: '方法: 基本的な RSS フィードを作成する'
+          href: how-to-create-a-basic-rss-feed.md
+        - name: '方法: 基本的な ATOM フィードを作成する'
+          href: how-to-create-a-basic-atom-feed.md
+        - name: '方法: Atom および RSS の両方としてフィードを公開する'
+          href: how-to-expose-a-feed-as-both-atom-and-rss.md
+        - name: 配信の拡張
+          href: syndication-extensibility.md
+    - name: AJAX の統合と JSON のサポート
+      href: ajax-integration-and-json-support.md
       items:
-      - name: WCF セキュリティのプログラミング
-        href: programming-wcf-security.md
-        items:
-        - name: 資格情報の種類の選択
-          href: selecting-a-credential-type.md
-        - name: '方法: ユーザー名とパスワードで認証する'
-          href: how-to-authenticate-with-a-user-name-and-password.md
-      - name: トランスポート セキュリティ
-        href: transport-security.md
-        items:
-        - name: トランスポート セキュリティの概要
-          href: transport-security-overview.md
-        - name: HTTP トランスポート セキュリティ
-          href: http-transport-security.md
-        - name: HTTP 認証の理解
-          href: understanding-http-authentication.md
-        - name: トランスポート セキュリティでの偽装の使用
-          href: using-impersonation-with-transport-security.md
-        - name: '方法: SSL 証明書を使用してポートを構成する'
-          href: how-to-configure-a-port-with-an-ssl-certificate.md
-        - name: '方法: IIS でホストされる WCF サービスに SSL を構成する'
-          href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
-      - name: メッセージのセキュリティ
-        href: message-security-in-wcf.md
-        items:
-        - name: '方法: X.509 証明書を使用してサービスをセキュリティで保護する'
-          href: how-to-secure-a-service-with-an-x-509-certificate.md
-        - name: '方法: トランスポート セキュリティとメッセージ資格情報を使用する'
-          href: how-to-use-transport-security-and-message-credentials.md
-        - name: WCF サービスが Web ファームでホストされている場合のリプレイ攻撃の回避
-          href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
-      - name: セキュリティで保護されたセッション
-        href: secure-sessions.md
-        items:
-        - name: セキュリティ保護されたメッセージ交換とセッション
-          href: secure-conversations-and-secure-sessions.md
-        - name: '方法: セキュリティで保護されたセッションを作成する'
-          href: how-to-create-a-secure-session.md
-        - name: '方法: セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する'
-          href: how-to-create-a-security-context-token-for-a-secure-session.md
-        - name: セキュリティで保護されたセッションに関するセキュリティの検討
-          href: security-considerations-for-secure-sessions.md
-      - name: 証明書の使用
-        href: working-with-certificates.md
-        items:
-        - name: '方法: 証明書を取得する'
-          href: how-to-obtain-a-certificate-wcf.md
-        - name: '方法: MMC スナップインを使用して証明書を参照する'
-          href: how-to-view-certificates-with-the-mmc-snap-in.md
-        - name: '方法: 証明書のサムプリントを取得する'
-          href: how-to-retrieve-the-thumbprint-of-a-certificate.md
-        - name: '方法: X.509 証明書を WCF からアクセス可能にする'
-          href: how-to-make-x-509-certificates-accessible-to-wcf.md
-        - name: '方法: 開発中に使用する一時的な証明書を作成する'
-          href: how-to-create-temporary-certificates-for-use-during-development.md
-        - name: '方法: 署名の検証に使用する証明機関の証明書チェーンを指定する'
-          href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
-        - name: HTTPS、SSL Over TCP、SOAP セキュリティ間における証明書検証方法の相違点
-          href: cert-val-diff-https-ssl-over-tcp-and-soap.md
-        - name: Internet Explorer と WCF で実行されるサービス証明書の検証の相違点
-          href: diff-service-certificate-validation-ie-and-wcf.md
-        - name: '方法: 一貫性を保って X.509 証明書を参照する'
-          href: how-to-consistently-reference-x-509-certificates.md
-    - name: 認証
-      href: authentication-in-wcf.md
+        - name: ASP.NET AJAX 用の WCF サービスの作成
+          href: creating-wcf-services-for-aspnet-ajax.md
+          items:
+            - name: '方法: AJAX 対応 WCF サービスを作成し、アクセスする'
+              href: create-an-ajax-wcf-asp-net-client.md
+            - name: '方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加する'
+              href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
+            - name: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する'
+              href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
+            - name: '方法: ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する'
+              href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
+        - name: ASP.NET を使用せずに WCF AJAX サービスを作成する方法
+          href: creating-wcf-ajax-services-without-aspnet.md
+        - name: JSON などのデータ転送形式のサポート
+          href: support-for-json-and-other-data-transfer-formats.md
+          items:
+            - name: スタンドアロン JSON のシリアル化
+              href: stand-alone-json-serialization.md
+            - name: '方法: JSON データをシリアル化および逆シリアル化する'
+              href: how-to-serialize-and-deserialize-json-data.md
+            - name: JSON と XML 間のマッピング
+              href: mapping-between-json-and-xml.md
+            - name: メッセージ レベルのプログラミングによる JSON 形式でのシリアル化
+              href: serializing-in-json-with-message-level-programming.md
+        - name: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
+          href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
+    - name: WCF Discovery
+      href: wcf-discovery.md
       items:
-      - name: '方法: ASP.NET メンバーシップ プロバイダーを使用する'
-        href: how-to-use-the-aspnet-membership-provider.md
-      - name: '方法: カスタム ユーザー名およびパスワード検証を使用する'
-        href: how-to-use-a-custom-user-name-and-password-validator.md
-      - name: '方法: 同じ型の複数のセキュリティ トークンを使用する'
-        href: how-to-use-multiple-security-tokens-of-the-same-type.md
-      - name: サービス ID と認証
-        href: service-identity-and-authentication.md
-      - name: セキュリティ ネゴシエーションとタイムアウト
-        href: security-negotiation-and-timeouts.md
-      - name: Windows 認証エラーのデバッグ
-        href: debugging-windows-authentication-errors.md
-      - name: WCF での複数の認証方式の使用
-        href: using-multiple-authentication-schemes-with-wcf.md
-    - name: 承認
-      href: authorization-in-wcf.md
+        - name: WCF Discovery の概要
+          href: wcf-discovery-overview.md
+        - name: WCF Discovery オブジェクト モデル
+          href: wcf-discovery-object-model.md
+        - name: 探索検索と FindCriteria
+          href: discovery-find-and-findcriteria.md
+        - name: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
+          href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
+        - name: 探索プロキシの実装
+          href: implementing-a-discovery-proxy.md
+          items:
+            - name: '方法: 探索プロキシを実装する'
+              href: how-to-implement-a-discovery-proxy.md
+            - name: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
+              href: discoverable-service-that-registers-with-the-discovery-proxy.md
+            - name: '方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する'
+              href: client-app-discovery-proxy-to-find-a-service.md
+            - name: '方法: 探索プロキシをテストする'
+              href: how-to-test-the-discovery-proxy.md
+            - name: '方法: Probe 要求の探索バージョンを特定する'
+              href: how-to-determine-the-discovery-version-of-a-probe-request.md
+        - name: 探索機能のバージョン指定
+          href: discovery-versioning.md
+        - name: 構成ファイルにおける探索の構成
+          href: configuring-discovery-in-a-configuration-file.md
+        - name: 探索クライアント チャネルの使用
+          href: using-the-discovery-client-channel.md
+        - name: カスタム バインドを探索クライアント チャネルと共に使用する
+          href: using-a-custom-binding-with-the-discovery-client-channel.md
+        - name: 探索アナウンスとアナウンス クライアント
+          href: discovery-announcements-and-announcement-client.md
+        - name: DiscoveryClient と DynamicEndpoint
+          href: discoveryclient-and-dynamicendpoint.md
+    - name: ルーティング
+      href: routing.md
       items:
-      - name: アクセス制御機構
-        href: access-control-mechanisms.md
-      - name: '方法: ASP.NET のロール プロバイダーとサービスを使用する'
-        href: how-to-use-the-aspnet-role-provider-with-a-service.md
-      - name: '方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する'
-        href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
-      - name: ID モデルを使用したクレームと承認の管理
-        href: managing-claims-and-authorization-with-the-identity-model.md
-        items:
-        - name: クレームとトークン
-          href: claims-and-tokens.md
-        - name: リソースへのアクセスのクレームと拒否
-          href: claims-and-denying-access-to-resources.md
-        - name: クレームの作成とリソース値
-          href: claim-creation-and-resource-values.md
-      - name: 委任と偽装
-        href: delegation-and-impersonation-with-wcf.md
-    - name: フェデレーションと発行済みトークン
-      href: federation-and-issued-tokens.md
+        - name: ルーティングの概要
+          href: routing-introduction.md
+        - name: ルーティング サービス
+          href: routing-service.md
+        - name: ルーティング コントラクト
+          href: routing-contracts.md
+        - name: メッセージ フィルター
+          href: message-filters.md
+          items:
+            - name: フィルターの選択
+              href: choosing-a-filter.md
+            - name: カスタム フィルター
+              href: custom-filters.md
+            - name: '方法: フィルターの使用'
+              href: how-to-use-filters.md
+        - name: ルーティング シナリオ
+          href: routing-scenarios.md
+          items:
+            - name: '方法: サービスのバージョン管理'
+              href: how-to-service-versioning.md
+            - name: '方法: サービス データのパーティション分割'
+              href: how-to-service-data-partitioning.md
+            - name: '方法: 動的な更新'
+              href: how-to-dynamic-update.md
+            - name: '方法: エラー処理'
+              href: how-to-error-handling.md
+    - name: WCF と国際化ドメイン名
+      href: wcf-and-internationalized-domain-names.md
+    - name: WCF と WebSocket
+      href: wcf-and-websockets.md
       items:
-      - name: フェデレーション
-        href: federation.md
-      - name: フェデレーションと信頼
-        href: federation-and-trust.md
-      - name: '方法: フェデレーション クライアントを作成する'
-        href: how-to-create-a-federated-client.md
-      - name: '方法: フェデレーション サービスで資格情報を設定する'
-        href: how-to-configure-credentials-on-a-federation-service.md
-      - name: '方法: WSFederationHttpBinding を作成する'
-        href: how-to-create-a-wsfederationhttpbinding.md
-      - name: '方法: セキュリティ トークン サービスを作成する'
-        href: how-to-create-a-security-token-service.md
-      - name: SAML (Security Assertions Markup Language) トークンとクレーム
-        href: saml-tokens-and-claims.md
-      - name: '方法: ローカル発行者を設定する'
-        href: how-to-configure-a-local-issuer.md
-      - name: '方法: 双方向フェデレーション バインディングを作成する'
-        href: how-to-create-a-duplex-federated-binding.md
-    - name: 監査
-      href: auditing-security-events.md
-      items:
-      - name: '方法: セキュリティ イベントを監査する'
-        href: how-to-audit-wcf-security-events.md
-    - name: セキュリティ ガイドラインとベスト プラクティス
-      href: security-guidance-and-best-practices.md
-      items:
-      - name: セキュリティのベスト プラクティス
-        href: best-practices-for-security-in-wcf.md
-      - name: セキュリティの考慮事項
-        href: security-considerations-in-wcf.md
-        items:
-        - name: 情報の漏えい
-          href: information-disclosure.md
-        - name: 権限の昇格
-          href: elevation-of-privilege.md
-        - name: サービス拒否
-          href: denial-of-service.md
-        - name: 改変
-          href: tampering.md
-        - name: リプレイ攻撃
-          href: replay-attacks.md
-        - name: サポートされていないシナリオ
-          href: unsupported-scenarios.md
-      - name: パフォーマンスに関する考慮事項
-        href: performance-considerations.md
-        items:
-        - name: ClaimSet でのクレームの検索
-          href: finding-claims-in-a-claimset.md
-        - name: 電子署名の暗号化
-          href: encryption-of-digital-signatures.md
-    - name: 認証の拡張保護の概要
-      href: extended-protection-for-authentication-overview.md
-      items:
-      - name: 拡張保護認証のサンプルの ReadMe
-        href: readme-for-extended-protection-authentication-sample.md
-  - name: ピアツーピア ネットワーク
-    href: peer-to-peer-networking.md
-    items:
-    - name: ピア チャネルのシナリオ
-      href: peer-channel-scenarios.md
-    - name: ピア チャネルの概要
-      href: peer-channel-concepts.md
-      items:
-      - name: ピア メッシュ
-        href: peer-meshes.md
-      - name: ピア ノード
-        href: peer-nodes.md
-      - name: ピア チャネルのセキュリティ
-        href: peer-channel-security.md
-      - name: ピア リゾルバー
-        href: peer-resolvers.md
-        items:
-        - name: CustomPeerResolverService 内部:クライアント登録
-          href: inside-the-custompeerresolverservice-client-registrations.md
-    - name: ピア チャネル アプリケーションの構築
-      href: building-a-peer-channel-application.md
-      items:
-      - name: NetTcpBinding アプリケーションからピア チャネル アプリケーションへの変換
-        href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
-      - name: メッセージ配布の制限
-        href: limiting-message-distribution.md
-      - name: オンライン ステータスとオフライン ステータスの追加
-        href: adding-online-and-offline-status.md
-      - name: セキュリティによるピア チャネル アプリケーションの保護
-        href: securing-peer-channel-applications.md
-  - name: メタデータ
-    href: metadata.md
-    items:
-    - name: メタデータ アーキテクチャの概要
-      href: metadata-architecture-overview.md
-    - name: メタデータ形式
-      href: metadata-formats.md
-    - name: メタデータのエクスポートとインポート
-      href: exporting-and-importing-metadata.md
-      items:
-      - name: '方法: メタデータをサービス エンドポイントにインポートする'
-        href: how-to-import-metadata-into-service-endpoints.md
-      - name: '方法: メタデータをサービス エンドポイントからエクスポートする'
-        href: how-to-export-metadata-from-service-endpoints.md
-      - name: ServiceDescription と WSDL 参照
-        href: servicedescription-and-wsdl-reference.md
-      - name: '方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする'
-        href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
-    - name: メタデータの公開
-      href: publishing-metadata.md
-      items:
-      - name: '方法: 構成ファイルを使用してサービスのメタデータを公開する'
-        href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
-      - name: '方法: コードを使用してサービスのメタデータを公開する'
-        href: how-to-publish-metadata-for-a-service-using-code.md
-    - name: メタデータを取得する
-      href: retrieving-metadata.md
-      items:
-      - name: '方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする'
-        href: how-to-use-svcutil-exe-to-download-metadata-documents.md
-      - name: '方法: MetadataResolver を使用してバインディング メタデータを動的に取得する'
-        href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
-      - name: '方法: MetadataExchangeClient を使用してメタデータを取得する'
-        href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
-    - name: メタデータを使用する
-      href: using-metadata.md
-      items:
-      - name: 生成されたクライアント コードの理解
-        href: understanding-generated-client-code.md
-      - name: '方法: メタデータの取得および準拠サービスの実装をする'
-        href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
-      - name: サービス メタデータからの WCF クライアントの生成
-        href: generating-a-wcf-client-from-service-metadata.md
-    - name: メタデータを使用する場合のセキュリティ上の考慮事項
-      href: security-considerations-with-metadata.md
-      items:
-      - name: '方法: セキュリティで保護されたメタデータ エンドポイント'
-        href: how-to-secure-metadata-endpoints.md
-      - name: '方法: 承認中にメタデータ要求を許可する'
-        href: how-to-allow-metadata-requests-while-authorizing.md
-  - name: クライアント
-    href: clients.md
-    items:
-    - name: WCF クライアント アーキテクチャ
-      href: client-architecture.md
-    - name: WCF クライアントを使用したサービスへのアクセス
-      href: accessing-services-using-a-client.md
-      items:
-      - name: '方法: 一方向コントラクトと要求/応答コントラクトを使用してサービスにアクセスする'
-        href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
-      - name: '方法: 双方向コントラクトを使用してサービスにアクセスする'
-        href: how-to-access-services-with-a-duplex-contract.md
-      - name: '方法: WSE 3.0 サービスにアクセスする'
-        href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
-      - name: '方法: ChannelFactory を使用する'
-        href: how-to-use-the-channelfactory.md
-      - name: チャネル ファクトリとキャッシュ
-        href: channel-factory-and-caching.md
-      - name: '方法: サービス操作を非同期に呼び出す'
-        href: how-to-call-wcf-service-operations-asynchronously.md
-      - name: 中間層クライアント アプリケーション
-        href: middle-tier-client-applications.md
-      - name: '方法: チャネル ファクトリを使用して、非同期的に操作を呼び出す'
-        href: how-to-call-operations-asynchronously-using-a-channel-factory.md
-      - name: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
-        href: accessing-wcf-services-with-a-windows-store-client-app.md
-      - name: '方法: チャネル ファクトリを作成および使用して、チャネルを作成および管理する'
-        href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
-    - name: WCF クライアントの構成
-      href: client-configuration.md
-  - name: ホスト
-    href: hosting.md
-    items:
-    - name: インターネット インフォメーション サービスでのホスティング
-      href: hosting-in-internet-information-services.md
-      items:
-      - name: インターネット インフォメーション サービスでホストされる WCF サービスの配置
-        href: deploying-an-internet-information-services-hosted-wcf-service.md
-      - name: WCF サービスと ASP.NET
-        href: wcf-services-and-aspnet.md
-      - name: インターネット インフォメーション サービス ホスティングのベスト プラクティス
-        href: internet-information-services-hosting-best-practices.md
-      - name: '方法: IIS で WCF サービスをホストする'
-        href: how-to-host-a-wcf-service-in-iis.md
-      - name: Windows Communication Foundation での Internet Information Services 7.0 の構成
-        href: configuring-iis-for-wcf.md
-    - name: Windows プロセス アクティブ化サービスでのホスティング
-      href: hosting-in-windows-process-activation-service.md
-      items:
-      - name: WAS アクティベーション アーキテクチャ
-        href: was-activation-architecture.md
-      - name: WCF で使用するための WAS を設定する
-        href: configuring-the-wpa--service-for-use-with-wcf.md
-      - name: '方法: WCF アクティブ化コンポーネントをインストールして設定する'
-        href: how-to-install-and-configure-wcf-activation-components.md
-      - name: '方法: WAS で WCF サービスをホストする'
-        href: how-to-host-a-wcf-service-in-was.md
-    - name: Windows サービス アプリケーションのホスト
-      href: hosting-in-a-windows-service-application.md
-      items:
-      - name: '方法: マネージド Windows サービスで WCF サービスをホストする'
-        href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
-    - name: マネージド アプリケーションのホスト
-      href: hosting-in-a-managed-application.md
-    - name: IIS と WAS における構成ベースのアクティブ化
-      href: configuration-based-activation-in-iis-and-was.md
-    - name: 複数の IIS サイト バインディングのサポート
-      href: supporting-multiple-iis-site-bindings.md
-    - name: System.Web.Routing 統合
-      href: system-web-routing-integration.md
-  - name: 部分信頼
-    href: partial-trust.md
-    items:
-    - name: サポートされている配置シナリオ
-      href: supported-deployment-scenarios.md
-    - name: 部分信頼機能の互換性
-      href: partial-trust-feature-compatibility.md
-    - name: 部分信頼のベスト プラクティス
-      href: partial-trust-best-practices.md
-  - name: 相互運用性と統合
-    href: interoperability-and-integration.md
-    items:
-    - name: Web サービス プロトコルの相互運用性ガイド
-      href: web-services-protocols-interoperability-guide.md
-      items:
-      - name: システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
-        href: web-services-protocols-supported-by-system-provided-interoperability-bindings.md
-      - name: メッセージング プロトコル
-        href: messaging-protocols.md
-      - name: データ コントラクト スキーマの参照
-        href: data-contract-schema-reference.md
-      - name: WSDL とポリシー
-        href: wsdl-and-policy.md
-      - name: セキュリティ プロトコル バージョン 1.0
-        href: security-protocols-version-1-0.md
-      - name: セキュリティ プロトコル
-        href: security-protocols.md
-      - name: 信頼できるメッセージング プロトコル バージョン 1.0
-        href: reliable-messaging-protocol-version-1-0.md
-      - name: 信頼できるメッセージング プロトコル バージョン 1.1
-        href: reliable-messaging-protocol-version-1-1.md
-      - name: トランザクション プロトコル バージョン 1.0
-        href: transaction-protocols-version-1-0.md
-      - name: トランザクション プロトコル
-        href: transaction-protocols.md
-      - name: コンテキスト交換プロトコル
-        href: context-exchange-protocol.md
-      - name: Trust プロトコルが混在するフェデレーション シナリオ
-        href: mixing-trust-protocols-in-federated-scenarios.md
-    - name: COM+ アプリケーションとの統合
-      href: integrating-with-com-plus-applications.md
-      items:
-      - name: COM+ アプリケーションとの統合の概要
-        href: integrating-with-com-plus-applications-overview.md
-      - name: '方法: COM+ サービス モデル構成ツールを使用する'
-        href: how-to-use-the-com-service-model-configuration-tool.md
-      - name: '方法: COM+ サービス設定を構成する'
-        href: how-to-configure-com-service-settings.md
-      - name: '方法: COM+ 統合アプリケーションを展開する'
-        href: how-to-deploy-a-com-integration-application.md
-    - name: COM アプリケーションとの統合
-      href: integrating-with-com-applications.md
-      items:
-      - name: COM アプリケーションとの統合の概要
-        href: integrating-with-com-applications-overview.md
-      - name: '方法: サービス モニカーを登録および構成する'
-        href: how-to-register-and-configure-a-service-moniker.md
-      - name: '方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する'
-        href: use-the-wcf-service-moniker-without-registration.md
-      - name: '方法: WSDL コントラクトと共にサービス モニカーを使用する'
-        href: how-to-use-a-service-moniker-with-wsdl-contracts.md
-      - name: '方法: Metadata Exchange コントラクトと共にサービス モニカーを使用する'
-        href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
-      - name: '方法: チャネルのセキュリティ資格情報を指定する'
-        href: how-to-specify-channel-security-credentials.md
-    - name: .NET リモート処理アプリケーションの WCF への移行
-      href: migrating-net-remoting-applications-to-wcf.md
-    - name: Web サービス拡張 3.0 との相互運用
-      href: interoperability-with-web-services-enhancements-3-0.md
-      items:
-      - name: '方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する'
-        href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
-      - name: '方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する'
-        href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
-    - name: WSE 3.0 Web サービスの WCF への移行
-      href: migrating-wse-3-0-web-services-to-wcf.md
-    - name: ASP.NET Web サービスとの相互運用
-      href: interop-with-aspnet-web-services.md
-      items:
-      - name: '方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する'
-        href: config-wcf-service-with-aspnet-web-service.md
-    - name: ASP.NET Web サービスを WCF に移行する
-      href: migrating-aspnet-web-services-to-wcf.md
-      items:
-      - name: 使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較
-        href: comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md
-      - name: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
-        href: comparing-aspnet-web-services-to-wcf-based-on-development.md
-      - name: Windows Communication Foundation 導入の準備:将来的な統合の容易化
-        href: anticipating-adopting-the-wcf-easing-future-integration.md
-      - name: Windows Communication Foundation 導入の準備:将来の移行の簡略化
-        href: anticipating-adopting-wcf-migration.md
-      - name: Windows Communication Foundation の採用
-        href: adopting-wcf.md
-    - name: POX アプリケーションとの相互運用性
-      href: interoperability-with-pox-applications.md
-  - name: WCF Web HTTP プログラミング モデル
-    href: wcf-web-http-programming-model.md
-    items:
-    - name: WCF Web HTTP プログラミング モデルの概要
-      href: wcf-web-http-programming-model-overview.md
-    - name: WCF Web HTTP プログラミング オブジェクト モデル
-      href: wcf-web-http-programming-object-model.md
-    - name: '方法: 基本的な WCF Web HTTP サービスを作成する'
-      href: how-to-create-a-basic-wcf-web-http-service.md
-    - name: '方法: コントラクトを SOAP クライアントおよび Web クライアントに公開する'
-      href: how-to-expose-a-contract-to-soap-and-web-clients.md
-    - name: UriTemplate と UriTemplateTable
-      href: uritemplate-and-uritemplatetable.md
-    - name: '方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
-      href: service-returns-arbitrary-data-using-the-wcf-web.md
-    - name: '方法: WCF REST プログラミング モデルを使用して任意のデータを受け入れるサービスを作成する'
-      href: create-a-service-arbitrary-data-using-wcf.md
-    - name: WCF WEB HTTP サービスのキャッシュ サポート
-      href: caching-support-for-wcf-web-http-services.md
-    - name: WCF Web HTTP サービスのヘルプ ページ
-      href: wcf-web-http-service-help-page.md
-    - name: WCF Web HTTP 形式
-      href: wcf-web-http-formatting.md
-    - name: WCF Web HTTP エラー処理
-      href: wcf-web-http-error-handling.md
-    - name: JSONP の使用
-      href: using-jsonp.md
-    - name: WCF サービスからの REST スタイル サービスの呼び出し
-      href: calling-a-rest-style-service-from-a-wcf-service.md
-  - name: WCF 配信
-    href: wcf-syndication.md
-    items:
-    - name: WCF 配信の概要
-      href: wcf-syndication-overview.md
-    - name: 配信のアーキテクチャ
-      href: architecture-of-syndication.md
-    - name: WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法
-      href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
-    - name: '方法: 基本的な RSS フィードを作成する'
-      href: how-to-create-a-basic-rss-feed.md
-    - name: '方法: 基本的な ATOM フィードを作成する'
-      href: how-to-create-a-basic-atom-feed.md
-    - name: '方法: Atom および RSS の両方としてフィードを公開する'
-      href: how-to-expose-a-feed-as-both-atom-and-rss.md
-    - name: 配信の拡張
-      href: syndication-extensibility.md
-  - name: AJAX の統合と JSON のサポート
-    href: ajax-integration-and-json-support.md
-    items:
-    - name: ASP.NET AJAX 用の WCF サービスの作成
-      href: creating-wcf-services-for-aspnet-ajax.md
-      items:
-      - name: '方法: AJAX 対応 WCF サービスを作成し、アクセスする'
-        href: create-an-ajax-wcf-asp-net-client.md
-      - name: '方法: 構成を使用せずに ASP.NET AJAX エンドポイントを追加する'
-        href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
-      - name: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する'
-        href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
-      - name: '方法: ASP.NET AJAX エンドポイントのために HTTP POST または HTTP GET を選択する'
-        href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
-    - name: ASP.NET を使用せずに WCF AJAX サービスを作成する方法
-      href: creating-wcf-ajax-services-without-aspnet.md
-    - name: JSON などのデータ転送形式のサポート
-      href: support-for-json-and-other-data-transfer-formats.md
-      items:
-      - name: スタンドアロン JSON のシリアル化
-        href: stand-alone-json-serialization.md
-      - name: '方法: JSON データをシリアル化および逆シリアル化する'
-        href: how-to-serialize-and-deserialize-json-data.md
-      - name: JSON と XML 間のマッピング
-        href: mapping-between-json-and-xml.md
-      - name: メッセージ レベルのプログラミングによる JSON 形式でのシリアル化
-        href: serializing-in-json-with-message-level-programming.md
-    - name: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
-      href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
-  - name: WCF Discovery
-    href: wcf-discovery.md
-    items:
-    - name: WCF Discovery の概要
-      href: wcf-discovery-overview.md
-    - name: WCF Discovery オブジェクト モデル
-      href: wcf-discovery-object-model.md
-    - name: 探索検索と FindCriteria
-      href: discovery-find-and-findcriteria.md
-    - name: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
-      href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
-    - name: 探索プロキシの実装
-      href: implementing-a-discovery-proxy.md
-      items:
-      - name: '方法: 探索プロキシを実装する'
-        href: how-to-implement-a-discovery-proxy.md
-      - name: '方法: 探索プロキシで登録される探索可能なサービスの実装する'
-        href: discoverable-service-that-registers-with-the-discovery-proxy.md
-      - name: '方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する'
-        href: client-app-discovery-proxy-to-find-a-service.md
-      - name: '方法: 探索プロキシをテストする'
-        href: how-to-test-the-discovery-proxy.md
-      - name: '方法: Probe 要求の探索バージョンを特定する'
-        href: how-to-determine-the-discovery-version-of-a-probe-request.md
-    - name: 探索機能のバージョン指定
-      href: discovery-versioning.md
-    - name: 構成ファイルにおける探索の構成
-      href: configuring-discovery-in-a-configuration-file.md
-    - name: 探索クライアント チャネルの使用
-      href: using-the-discovery-client-channel.md
-    - name: カスタム バインドを探索クライアント チャネルと共に使用する
-      href: using-a-custom-binding-with-the-discovery-client-channel.md
-    - name: 探索アナウンスとアナウンス クライアント
-      href: discovery-announcements-and-announcement-client.md
-    - name: DiscoveryClient と DynamicEndpoint
-      href: discoveryclient-and-dynamicendpoint.md
-  - name: ルーティング
-    href: routing.md
-    items:
-    - name: ルーティングの概要
-      href: routing-introduction.md
-    - name: ルーティング サービス
-      href: routing-service.md
-    - name: ルーティング コントラクト
-      href: routing-contracts.md
-    - name: メッセージ フィルター
-      href: message-filters.md
-      items:
-      - name: フィルターの選択
-        href: choosing-a-filter.md
-      - name: カスタム フィルター
-        href: custom-filters.md
-      - name: '方法: フィルターの使用'
-        href: how-to-use-filters.md
-    - name: ルーティング シナリオ
-      href: routing-scenarios.md
-      items:
-      - name: '方法: サービスのバージョン管理'
-        href: how-to-service-versioning.md
-      - name: '方法: サービス データのパーティション分割'
-        href: how-to-service-data-partitioning.md
-      - name: '方法: 動的な更新'
-        href: how-to-dynamic-update.md
-      - name: '方法: エラー処理'
-        href: how-to-error-handling.md
-  - name: WCF と国際化ドメイン名
-    href: wcf-and-internationalized-domain-names.md
-  - name: WCF と WebSocket
-    href: wcf-and-websockets.md
-    items:
-    - name: NetHttpBinding の使用
-      href: using-the-nethttpbinding.md
-    - name: '方法: WebSockets 上で通信する WCF サービスを作成する'
-      href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
-  - name: エラー処理
-    href: error-handling.md
-ms.openlocfilehash: e3e5ea2aa8b0462cfad8dd7094ccf7d669611ae1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470418"
+        - name: NetHttpBinding の使用
+          href: using-the-nethttpbinding.md
+        - name: '方法: WebSockets 上で通信する WCF サービスを作成する'
+          href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
+    - name: エラー処理
+      href: error-handling.md

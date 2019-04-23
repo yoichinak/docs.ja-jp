@@ -1,32 +1,25 @@
-items:
 - name: グローバリゼーションとローカリゼーション
   href: index.md
   items:
-  - name: グローバリゼーション
-    href: globalization.md
-  - name: ローカライズ化の確認
-    href: localizability-review.md
-  - name: ローカリゼーション
-    href: localization.md
-  - name: カルチャを認識しない文字列操作
-    href: culture-insensitive-string-operations.md
-    items:
-    - name: カルチャを認識しない文字列操作の実行
-      href: performing-culture-insensitive-string-operations.md
+    - name: グローバリゼーション
+      href: globalization.md
+    - name: ローカライズ化の確認
+      href: localizability-review.md
+    - name: ローカリゼーション
+      href: localization.md
+    - name: カルチャを認識しない文字列操作
+      href: culture-insensitive-string-operations.md
       items:
-      - name: 文字列比較
-        href: performing-culture-insensitive-string-comparisons.md
-      - name: 大文字と小文字の変更
-        href: performing-culture-insensitive-case-changes.md
-      - name: コレクション内の文字列操作
-        href: performing-culture-insensitive-string-operations-in-collections.md
-      - name: 配列内の文字列操作
-        href: performing-culture-insensitive-string-operations-in-arrays.md
-  - name: 推奨される国際対応アプリ開発手順
-    href: best-practices-for-developing-world-ready-apps.md
-ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470426"
+        - name: カルチャを認識しない文字列操作の実行
+          href: performing-culture-insensitive-string-operations.md
+          items:
+            - name: 文字列比較
+              href: performing-culture-insensitive-string-comparisons.md
+            - name: 大文字と小文字の変更
+              href: performing-culture-insensitive-case-changes.md
+            - name: コレクション内の文字列操作
+              href: performing-culture-insensitive-string-operations-in-collections.md
+            - name: 配列内の文字列操作
+              href: performing-culture-insensitive-string-operations-in-arrays.md
+    - name: 推奨される国際対応アプリ開発手順
+      href: best-practices-for-developing-world-ready-apps.md

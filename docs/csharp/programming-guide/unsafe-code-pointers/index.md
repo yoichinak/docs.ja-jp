@@ -1,16 +1,22 @@
 ---
-title: 'アンセーフ コードとポインター - C# プログラミング ガイド'
+title: アンセーフ コードとポインター - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'security [C#], type safety'
-  - 'C# language, unsafe code'
-  - 'type safety [C#]'
-  - 'unsafe keyword [C#]'
-  - 'unsafe code [C#]'
-  - 'C# language, pointers'
-  - 'pointers [C#], about pointers'
+- security [C#], type safety
+- C# language, unsafe code
+- type safety [C#]
+- unsafe keyword [C#]
+- unsafe code [C#]
+- C# language, pointers
+- pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
+ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678104"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>アンセーフ コードとポインター (C# プログラミング ガイド)
 タイプ セーフとセキュリティを維持するために、既定では C# はポインター演算をサポートしません。 ただし、[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用すれば、ポインターを使用できる unsafe コンテキストを定義できます。 ポインターの詳細については、「[ポインター型 (C# プログラミング ガイド)](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)」を参照してください。  

@@ -1,32 +1,25 @@
-items:
 - name: アプリの構成
   href: index.md
   items:
-  - name: '方法: DEVPATH を使用してアセンブリを指定する'
-    href: how-to-locate-assemblies-by-using-devpath.md
-  - name: アセンブリ バージョンのリダイレクト
-    href: redirect-assembly-versions.md
-    items:
-    - name: '方法: 自動バインディング リダイレクトを有効/無効にする'
-      href: how-to-enable-and-disable-automatic-binding-redirection.md
-    - name: アセンブリ バインディング リダイレクトのセキュリティ アクセス許可
-      href: assembly-binding-redirection-security-permission.md
-  - name: アセンブリの場所の指定
-    href: specify-assembly-location.md
-  - name: 暗号化クラスの設定
-    href: configure-cryptography-classes.md
-    items:
-    - name: 暗号化クラスへのアルゴリズム名の割り当て
-      href: map-algorithm-names-to-cryptography-classes.md
-    - name: 暗号化アルゴリズムへのオブジェクト ID の割り当て
-      href: map-object-identifiers-to-cryptography-algorithms.md
-  - name: '方法: 発行者ポリシーを作成する'
-    href: how-to-create-a-publisher-policy.md
-  - name: 構成ファイル スキーマ
-    href: file-schema/index.md
-ms.openlocfilehash: 17fd8cdff154ae7e61609a6b819b14ad8fb4805b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470098"
+    - name: '方法: DEVPATH を使用してアセンブリを指定する'
+      href: how-to-locate-assemblies-by-using-devpath.md
+    - name: アセンブリ バージョンのリダイレクト
+      href: redirect-assembly-versions.md
+      items:
+        - name: '方法: 自動バインディング リダイレクトを有効/無効にする'
+          href: how-to-enable-and-disable-automatic-binding-redirection.md
+        - name: アセンブリ バインディング リダイレクトのセキュリティ アクセス許可
+          href: assembly-binding-redirection-security-permission.md
+    - name: アセンブリの場所の指定
+      href: specify-assembly-location.md
+    - name: 暗号化クラスの設定
+      href: configure-cryptography-classes.md
+      items:
+        - name: 暗号化クラスへのアルゴリズム名の割り当て
+          href: map-algorithm-names-to-cryptography-classes.md
+        - name: 暗号化アルゴリズムへのオブジェクト ID の割り当て
+          href: map-object-identifiers-to-cryptography-algorithms.md
+    - name: '方法: 発行者ポリシーを作成する'
+      href: how-to-create-a-publisher-policy.md
+    - name: 構成ファイル スキーマ
+      href: file-schema/index.md

@@ -6,11 +6,11 @@ ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
 ms.openlocfilehash: 6f88659fcef49eba9344d3c4b2f0245b4072d7ab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613379"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
