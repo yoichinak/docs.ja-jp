@@ -59,6 +59,6 @@ ms.locfileid: "59342092"
 ## <a name="see-also"></a>関連項目
 
 - [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [使用](~/docs/csharp/language-reference/keywords/using.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
 - [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
