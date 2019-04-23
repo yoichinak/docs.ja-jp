@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
 ms.openlocfilehash: 0e77e4d8eeb9d7a07115b89525ac80074afeb6e8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323270"
 ---
 # <a name="how-to-align-drawn-text"></a>方法: 描画テキストを配置する
@@ -37,6 +37,6 @@ ms.locfileid: "59323270"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: GDI を使用してテキストを描画する](how-to-draw-text-with-gdi.md)
+- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)
 - [フォントとテキストの使用](using-fonts-and-text.md)
-- [方法: フォント ファミリとフォントを作成する](how-to-construct-font-families-and-fonts.md)
+- [方法: フォント ファミリとフォントを作成します。](how-to-construct-font-families-and-fonts.md)

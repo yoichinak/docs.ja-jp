@@ -10,10 +10,10 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
 ms.openlocfilehash: 3fa4434ed43e41959d6ebd3521bb1eecd041c9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326113"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用してデータベースを照会します。

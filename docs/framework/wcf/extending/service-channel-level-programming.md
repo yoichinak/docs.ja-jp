@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329131"
 ---
 # <a name="service-channel-level-programming"></a>サービス チャネル レベルのプログラミング
@@ -36,7 +36,7 @@ ms.locfileid: "59329131"
 #### <a name="building-a-channellistener"></a>ChannelListener のビルド  
  バインディングを作成したら、<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> を呼び出してチャネル リスナーをビルドします。型パラメーターは、作成するチャネル形状です。 この例では、要求/応答メッセージ交換パターンで受信メッセージをリッスンする必要があるため、<xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> を使用します。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 要求メッセージと送信応答メッセージを受信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> は、要求メッセージを受信し、応答メッセージを返信するために使用されます。 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> を呼び出すと、要求メッセージの受信と応答メッセージの返信に使用できる <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> が返されます。  
   
  リスナーを作成する際には、リッスンするネットワーク アドレス (この場合は `http://localhost:8080/channelapp`) を渡します。 一般に、各トランスポート チャネルは 1 つまたは複数のアドレス スキームをサポートします。たとえば、HTTP トランスポートは、http スキームと https スキームの両方をサポートします。  
   

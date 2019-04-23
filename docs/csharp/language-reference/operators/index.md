@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308654"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672291"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -159,6 +159,14 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [x &#124; y](or-operator.md) – 論理またはビットごとの OR。 通常、整数型と `enum` 型で使用できます。
 
+## <a name="true-operator"></a>true 演算子
+
+[true](../keywords/true-false-operators.md) 演算子は、オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。 
+
+## <a name="false-operator"></a>false 演算子
+
+[false](../keywords/true-false-operators.md) 演算子は、オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。 
+
 ## <a name="conditional-and-operator"></a>条件 AND 演算子
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
@@ -216,5 +224,5 @@ C# には、多くの演算子が用意されています。演算子とは、�
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [オーバーロードされた演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# のキーワード](../keywords/index.md)

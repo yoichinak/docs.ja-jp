@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318822"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767944"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 

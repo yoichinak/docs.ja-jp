@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327374"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>方法: Windows フォームで Windows エクスプローラー スタイルのインターフェイスを作成する
@@ -52,7 +52,7 @@ Windows エクスプ ローラーは、準備ができて、慣れ親しんだ�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [方法: 分割ウィンドウでのサイズ変更および位置指定動作を定義する](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [方法: ウィンドウを水平方向に分割する](how-to-split-a-window-horizontally.md)
+- [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成します。](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [方法: サイズ変更および位置指定動作を分割ウィンドウを定義します。](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [方法: ウィンドウを水平方向に分割します。](how-to-split-a-window-horizontally.md)
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

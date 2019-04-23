@@ -3,10 +3,10 @@ title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322603"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|実行する <xref:System.Data.Common.DbCommand> の種類。|
 |Sql|実行する SQL コマンド。|
 |パラメーター|SQL クエリのパラメーターのコレクション。|
-|結果|<xref:System.Data.DataSet> クエリの実行後に取得しました。|
+|結果|クエリの実行後に取得された <xref:System.Data.DataSet>。|
 
 ## <a name="configuring-connection-information"></a>接続情報の構成
  すべての DbActivities は同じ構成パラメーターを共有します。 パラメーターを構成するには次の 2 つの方法があります。

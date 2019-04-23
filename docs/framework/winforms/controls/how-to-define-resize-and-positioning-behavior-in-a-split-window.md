@@ -10,10 +10,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
 ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328674"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>方法: 分割ウィンドウでのサイズ変更および位置指定動作を定義する
@@ -23,9 +23,9 @@ ms.locfileid: "59328674"
   
 |名前|説明|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property|分割線をキーボードやマウスを使用して移動可能なかどうかを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property|移動可能な分割バーを左端または上端からのピクセル単位で距離を決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property|最小距離 (ピクセル単位)、スプリッターをユーザーが移動できることを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティ|分割線をキーボードやマウスを使用して移動可能なかどうかを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> プロパティ|移動可能な分割バーを左端または上端からのピクセル単位で距離を決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> プロパティ|最小距離 (ピクセル単位)、スプリッターをユーザーが移動できることを決定します。|  
   
  次の例を変更、<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>プロパティを「分割線にスナップ」効果を作成、ユーザーは、分割線をドラッグと、に、既定値 1 ではなく、10 ピクセル単位で増加します。  
   

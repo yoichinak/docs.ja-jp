@@ -3,10 +3,10 @@ title: UriTemplate サンプル
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322616"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate サンプル
@@ -16,7 +16,7 @@ ms.locfileid: "59322616"
   
 -   `UriTemplate` および <xref:System.UriTemplate.BindByName%2A> を使用した、<xref:System.UriTemplate.BindByPosition%2A> からの URI のインスタンス化  
   
--   <xref:System.UriTemplateTable.Match%2A>での逆の操作である`BindByName`と`BindByPosition`します。  
+-   <xref:System.UriTemplateTable.Match%2A> および `BindByName` の逆の操作である `BindByPosition`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
