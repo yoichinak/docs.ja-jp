@@ -44,6 +44,6 @@ ms.locfileid: "59314544"
 
 - [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports ステートメント (.NET 名前空間および型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [使用](~/docs/csharp/language-reference/keywords/using.md)
+- [using](~/docs/csharp/language-reference/keywords/using.md)
 - [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
