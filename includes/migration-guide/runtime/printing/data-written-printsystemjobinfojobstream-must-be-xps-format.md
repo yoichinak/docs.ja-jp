@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 74f00821f2304664729faa8de2f0163c6611f513
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235643"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804379"
 ---
 ### <a name="data-written-to-printsystemjobinfojobstream-must-be-in-xps-format"></a>PrintSystemJobInfo.JobStream に書き込まれるデータは XPS 形式とする必要があります
 

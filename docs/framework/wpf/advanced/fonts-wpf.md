@@ -7,10 +7,10 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169248"
 ---
 # <a name="fonts-wpf"></a>フォント (WPF)
@@ -20,7 +20,7 @@ ms.locfileid: "59169248"
  [OpenType フォントの機能](opentype-font-features.md)  
  [アプリケーションでのフォントのパッケージング](packaging-fonts-with-applications.md)  
  [OpenType フォント パックのサンプル](sample-opentype-font-pack.md)  
- [方法のトピック](fonts-how-to-topics.md)  
+ [方法トピック](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

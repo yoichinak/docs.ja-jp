@@ -9,10 +9,10 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176255"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework のアプリケーションの互換性
@@ -72,7 +72,7 @@ ms.locfileid: "59176255"
 開始するには、以下の中から互換性の変更の種類を選択します。
 
 * [変更の再ターゲット](./retargeting/index.md)
-* [ランタイムの変更](./runtime/index.md)
+* [ランタイムの変更点](./runtime/index.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174110"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
@@ -27,11 +27,11 @@ ms.locfileid: "59174110"
   
  コードのアクセス権限には、次の 3 種類があります。  
   
--   `Code access permissions` 派生、<xref:System.Security.CodeAccessPermission>クラス。 ファイルや環境変数などの保護されたリソースにアクセスして、保護された操作 (アンマネージ コードへのアクセスなど) を実行するには権限が必要です。  
+-   `Code access permissions`。<xref:System.Security.CodeAccessPermission> クラスから派生します。 ファイルや環境変数などの保護されたリソースにアクセスして、保護された操作 (アンマネージ コードへのアクセスなど) を実行するには権限が必要です。  
   
--   `Identity permissions` アセンブリを識別する特性を表します。 アセンブリには証拠に基づいて権限が付与されます。証拠には、デジタル署名やコードの作成元などの情報が含まれます。 ID 権限も <xref:System.Security.CodeAccessPermission> 基本クラスから派生します。  
+-   `Identity permissions`。アセンブリを識別する特性を表します。 アセンブリには証拠に基づいて権限が付与されます。証拠には、デジタル署名やコードの作成元などの情報が含まれます。 ID 権限も <xref:System.Security.CodeAccessPermission> 基本クラスから派生します。  
   
--   `Role-based security permissions` プリンシパルが指定の id を持ってまたは指定されたロールのメンバーであるかどうかに基づいています。 <xref:System.Security.Permissions.PrincipalPermission> クラスにより、アクティブなプリンシパルに対する宣言型および命令型の権限チェックが可能となります。  
+-   `Role-based security permissions`。プリンシパルが、指定された ID を持っているか、または、指定されたロールに属しているかどうかに基づきます。 <xref:System.Security.Permissions.PrincipalPermission> クラスにより、アクティブなプリンシパルに対する宣言型および命令型の権限チェックが可能となります。  
   
  ランタイムのセキュリティ システムは、特定のリソースへのアクセスまたは特定の操作の実行がコードに許されているかどうかを判断するため、呼び出し履歴をたどりながら、各呼び出し元に付与されている権限と、要求されている権限とを比較します。 呼び出し履歴に、要求された権限を持たない呼び出し元が 1 つでも見つかった場合、<xref:System.Security.SecurityException> がスローされてアクセスが拒否されます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59174110"
 |`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列には、ユーザー ID やパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される *\<パラメーター名>=* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:**`KeyRestrictions` が指定されておらず、`KeyRestrictionBehavior` プロパティが `AllowOnly` または `PreventUsage` に設定されている場合は、接続文字列パラメーターを追加できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
-|`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` 既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` が既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
 |`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 このプロパティは、<xref:System.Attribute> から継承されています。|  
 |`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
   
@@ -197,6 +197,6 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [ネイティブ コードと .NET Framework コードのセキュリティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
-- [ロール ベース セキュリティ](../../../../docs/standard/security/role-based-security.md)
+- [ネイティブ モードと .NET Framework コードでのセキュリティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [ロール ベースのセキュリティ](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

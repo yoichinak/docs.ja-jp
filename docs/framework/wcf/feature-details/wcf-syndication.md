@@ -5,10 +5,10 @@ helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
 ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175917"
 ---
 # <a name="wcf-syndication"></a>WCF 配信
@@ -24,13 +24,13 @@ Windows Communication Foundation (WCF) は、Atom、RSS、または他のカス�
  [WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  WCF 配信オブジェクト モデルにおけるフィードの表現方法と RSS フィードおよび ATOM フィードへの変換方法について説明します。  
   
- [方法: 基本的な RSS フィードを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [方法: 基本的な RSS フィードを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
  基本的な RSS フィードを利用できるようにするサービスの作成方法について説明します。  
   
- [方法: 基本的な ATOM フィードを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [方法: 基本的な Atom フィードを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
  基本的な ATOM フィードを利用できるようにするサービスの作成方法について説明します。  
   
- [方法: Atom および RSS の両方としてフィードを公開する](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
+ [方法: Atom の両方としてフィードを公開および RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)  
  ATOM と RSS で同じフィードを利用できるようにするサービスの作成方法について説明します。  
   
  [配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)  

@@ -6,10 +6,10 @@ ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171172"
 ---
 # <a name="xml-documents-and-data"></a>XML ドキュメントと XML データ
@@ -39,9 +39,9 @@ ms.locfileid: "59171172"
   
  .NET Framework の XML クラスの利点を次に示します。  
   
--   **生産性。** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。  
+-   **生産性** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。  
   
--   **拡張性。** .NET Framework の XML クラスは、抽象基本クラスと仮想メソッドを使用することによって拡張できます。 たとえば、キャッシュ ストリームをローカルのディスクに格納する <xref:System.Xml.XmlUrlResolver> クラスの派生クラスを作成できます。  
+-   **拡張性** .NET Framework の XML クラスは、抽象基本クラスと仮想メソッドを使用することによって拡張できます。 たとえば、キャッシュ ストリームをローカルのディスクに格納する <xref:System.Xml.XmlUrlResolver> クラスの派生クラスを作成できます。  
   
 -   **プラグ可能なアーキテクチャ。** .NET Framework が提供するアーキテクチャでは、コンポーネントが相互に利用できます。また、コンポーネント間でデータをストリーム転送できます。 たとえば、<xref:System.Xml.XPath.XPathDocument> オブジェクト、<xref:System.Xml.XmlDocument> オブジェクトなどのデータ ストアは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスを使って変換でき、その出力は、別のストアにストリーム転送することも、Web サービスからのストリームとして返すこともできます。  
   
