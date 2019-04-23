@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096928"
 ---
 # <a name="settings-element-network-settings"></a>\<設定 > 要素 (ネットワーク設定)
@@ -51,7 +51,7 @@ ms.locfileid: "59096928"
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|により、インターネット プロトコル バージョン 6 (IPv6) をサポートします。|  
 |[\<performanceCounter > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|ネットワーク パフォーマンス カウンターを有効にします。|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|ネットワーク リソースへの接続を構成します。|  
-|[ソケット](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|ソケット操作が完了ポートを使用するかどうかを指定します。|  
+|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|ソケット操作が完了ポートを使用するかどうかを指定します。|  
 |[\<webProxyScript > 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Web プロキシを検出するために使用するスクリプトの特性を構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
