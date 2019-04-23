@@ -3,10 +3,10 @@ title: UriTemplate テーブル ディスパッチャーのサンプル
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330832"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate テーブル ディスパッチャーのサンプル

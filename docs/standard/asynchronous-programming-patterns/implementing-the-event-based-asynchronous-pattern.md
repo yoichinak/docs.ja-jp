@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973744"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333373"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -75,7 +75,7 @@ ms.locfileid: "56973744"
   
  個別の _MethodName_**Async** メソッドのシグネチャに対して、次の手順を実行します。  
   
-1.  メソッドと同じクラス内に次のイベントを定義します。  
+1. メソッドと同じクラス内に次のイベントを定義します。  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ ms.locfileid: "56973744"
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  次のデリゲートと <xref:System.ComponentModel.AsyncCompletedEventArgs> を定義します。 これらは、クラス自体の外部に定義される可能性がありますが、同じ名前空間に定義されます。  
+2. 次のデリゲートと <xref:System.ComponentModel.AsyncCompletedEventArgs> を定義します。 これらは、クラス自体の外部に定義される可能性がありますが、同じ名前空間に定義されます。  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  

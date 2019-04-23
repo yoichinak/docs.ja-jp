@@ -2,12 +2,12 @@
 title: 式ツリーのデバッグ (Visual Studio) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632154"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59330410"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>式ツリーのデバッグ (Visual Studio) (C#)
 アプリケーションをデバッグするときに、式ツリーの構造および内容を分析できます。 式ツリーの構造を簡単に確認する場合は、`DebugView` プロパティを使用できます。このプロパティは、デバッグ モードでのみ使用できます。 デバッグの詳細については、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
@@ -16,11 +16,11 @@ ms.locfileid: "54632154"
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>式ツリーのビジュアライザーを開くには  
   
-1.  **[データヒント]**、**[ウォッチ]** ウィンドウ、**[自動変数]** ウィンドウ、または **[ローカル]** ウィンドウで、式ツリーの `DebugView` プロパティの横に表示されている虫眼鏡のアイコンをクリックします。  
+1. **[データヒント]**、**[ウォッチ]** ウィンドウ、**[自動変数]** ウィンドウ、または **[ローカル]** ウィンドウで、式ツリーの `DebugView` プロパティの横に表示されている虫眼鏡のアイコンをクリックします。  
   
      ビジュアライザーの一覧が表示されます。  
   
-2.  使用するビジュアライザーをクリックします。  
+2. 使用するビジュアライザーをクリックします。  
   
  それぞれの式の型は、以下のセクションで説明するように、ビジュアライザーに表示されます。  
   

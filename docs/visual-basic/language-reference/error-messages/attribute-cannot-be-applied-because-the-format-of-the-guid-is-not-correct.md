@@ -8,14 +8,14 @@ helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
 ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330676"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'GUID '\<number>' の形式が正しくないため、'\<attribute>' を適用できません。
-`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。 `COMClassAttribute` クラス、インターフェイス、および作成イベントを一意に識別するのに Guid を使用します。  
+`COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID: globally unique identifier) の形式として有効でない GUID が指定されています。 `COMClassAttribute` は GUID を使ってクラス、インターフェイス、および作成イベントを一意に識別します。  
   
  GUID は 16 バイトで構成され、前の 8 バイトは数値、後の 8 バイトはバイナリです。 GUID は uuidgen.exe などの Microsoft ユーティリティで生成され、空間および時間内で一意であることが保証されています。  
   

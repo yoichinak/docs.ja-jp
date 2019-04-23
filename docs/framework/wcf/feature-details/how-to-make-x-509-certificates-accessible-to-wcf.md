@@ -10,10 +10,10 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331079"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセス可能にする
@@ -29,7 +29,7 @@ ms.locfileid: "59331079"
   
         |X.509 証明書の使用法|秘密キー|  
         |---------------------------|-----------------|  
-        |送信 SOAP メッセージにデジタル署名する。|はい|  
+        |送信 SOAP メッセージにデジタル署名する。|[はい]|  
         |受信 SOAP メッセージの署名を検証する。|いいえ|  
         |送信 SOAP メッセージを暗号化する。|いいえ|  
         |受信 SOAP メッセージを復号化する。|はい|  
@@ -73,5 +73,5 @@ ms.locfileid: "59331079"
 ## <a name="see-also"></a>関連項目
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [方法: 証明書のサムプリントを取得する](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [方法: 証明書のサムプリントを取得します。](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

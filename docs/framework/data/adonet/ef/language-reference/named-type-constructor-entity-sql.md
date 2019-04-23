@@ -3,10 +3,10 @@ title: 名前付きの型コンストラクター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
 ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329467"
 ---
 # <a name="named-type-constructor-entity-sql"></a>名前付きの型コンストラクター (Entity SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "59329467"
   
  `MyModel.Person("Bill", MyModel.AddressInfo('My street address', 'Seattle', 'WA', MyModel.ZipCode('98118', '4567')))`  
   
- 次の例では、null する複合型のプロパティを初期化する方法を示します。`MyModel.ZipCode(‘98118’, null)`  
+ 次の例は、複合型のプロパティを null に初期化する方法を示しています。`MyModel.ZipCode(‘98118’, null)`  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、名前付きの型コンストラクターを使用して、概念モデル型のインスタンスを作成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
@@ -60,5 +60,5 @@ ms.locfileid: "59329467"
   
 ## <a name="see-also"></a>関連項目
 
-- [コンストラクト型](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
+- [コンストラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
 - [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

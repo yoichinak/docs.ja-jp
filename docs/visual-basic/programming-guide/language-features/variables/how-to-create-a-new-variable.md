@@ -6,10 +6,10 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332587"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>方法: 新しい変数 (Visual Basic) を作成します。
@@ -59,7 +59,7 @@ ms.locfileid: "59332587"
 
 - [変数](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の名前](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣言された要素の特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [ステートメント](../../../../visual-basic/language-reference/statements/index.md)

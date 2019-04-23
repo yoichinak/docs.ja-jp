@@ -5,10 +5,10 @@ ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330445"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework および特別なリリース
@@ -57,4 +57,4 @@ ms.locfileid: "59330445"
 
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../docs/framework/get-started/index.md)
+- [はじめに](../../../docs/framework/get-started/index.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331469"
 ---
 # <a name="how-to-set-the-input-mask"></a>方法: 定型入力を設定する
@@ -65,4 +65,4 @@ ms.locfileid: "59331469"
   
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: MaskedTextBox コントロールの使用](walkthrough-working-with-the-maskedtextbox-control.md)
+- [チュートリアル: MaskedTextBox コントロールの操作](walkthrough-working-with-the-maskedtextbox-control.md)

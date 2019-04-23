@@ -3,10 +3,10 @@ title: = (等しい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333159"
 ---
 # <a name="-equals-entity-sql"></a>= (等しい) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- `true` 左の式が右の式に等しい場合それ以外の場合、`false`します。  
+ 左の式が右の式と等しい場合は`true` 、等しくない場合は `false`。  
   
 ## <a name="remarks"></a>Remarks  
  == 演算子は = 演算子と同じです。  

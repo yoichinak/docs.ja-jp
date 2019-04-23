@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
 ms.openlocfilehash: e8efbc5a3dec5f60dbefc8f6dc377d97b29b7653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330182"
 ---
 # <a name="how-to-control-service-instancing"></a>方法: サービスのインスタンス化を制御する

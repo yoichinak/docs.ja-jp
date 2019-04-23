@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
 ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333835"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャ (Visual Basic) のパラメーターを定義します。
@@ -54,7 +54,7 @@ A*パラメーター*それを呼び出すときに、プロシージャに値�
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
 - [方法: プロシージャに引数を渡す](./how-to-pass-arguments-to-a-procedure.md)

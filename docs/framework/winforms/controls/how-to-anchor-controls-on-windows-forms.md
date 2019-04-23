@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329779"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>方法: Windows フォームにコントロールを固定する
@@ -58,7 +58,7 @@ ms.locfileid: "59329779"
 - [Windows フォーム コントロール](index.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [方法: Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
-- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
+- [方法: Windows フォーム上のコントロールをドッキングします。](how-to-dock-controls-on-windows-forms.md)
+- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: Windows フォーム コントロール Padding、Margin、および AutoSize プロパティをレイアウト](windows-forms-controls-padding-autosize.md)

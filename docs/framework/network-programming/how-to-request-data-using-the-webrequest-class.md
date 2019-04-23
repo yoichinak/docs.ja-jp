@@ -11,19 +11,19 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-ms.openlocfilehash: df61b533801abc4c826d3e711228305c9452498a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1d8f501e90f3942bbfd95fc06e9fdd79d8f6430e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819557"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334212"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>方法: WebRequest クラスを使用してデータを要求する
 次の手順では、Web ページやファイルなどのリソースをサーバーから要求するための手順について説明します。 リソースは URI で識別される必要があります。  
   
 ## <a name="to-request-data-from-a-host-server"></a>ホスト サーバーからデータを要求するには  
   
-1.  リソースの URI を指定して <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> を呼び出して <xref:System.Net.WebRequest> インスタンスを作成します。 次に例を示します。 
+1. リソースの URI を指定して <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> を呼び出して <xref:System.Net.WebRequest> インスタンスを作成します。 次に例を示します。 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/default.html");  
@@ -37,7 +37,7 @@ ms.locfileid: "58819557"
     > .NET Framework は、*http:*、*https:*、*ftp:*、*file:* で始まる URI に対応する <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> クラスから派生したプロトコル固有のクラスを提供します。
     プロトコル固有のプロパティを設定する必要がある場合、<xref:System.Net.WebRequest> または <xref:System.Net.WebResponse> オブジェクトをプロトコル固有のオブジェクトの種類にキャストする必要があります。 詳細については、「[プラグ可能なプロトコルのプログラミング](programming-pluggable-protocols.md)」を参照してください。 
   
-2.  `WebRequest` オブジェクトで必要なプロパティ値を設定します。 たとえば、認証を有効にするには、<xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.NetworkCredential> クラスのインスタンスに設定します。  
+2. `WebRequest` オブジェクトで必要なプロパティ値を設定します。 たとえば、認証を有効にするには、<xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.NetworkCredential> クラスのインスタンスに設定します。  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -47,7 +47,7 @@ ms.locfileid: "58819557"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> を呼び出してサーバーに要求を送信します。 このメソッドは、サーバーの応答を格納するオブジェクトを返します。 返された <xref:System.Net.WebResponse> オブジェクトの型は、要求の URI のスキームで決定されます。 次に例を示します。
+3. <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> を呼び出してサーバーに要求を送信します。 このメソッドは、サーバーの応答を格納するオブジェクトを返します。 返された <xref:System.Net.WebResponse> オブジェクトの型は、要求の URI のスキームで決定されます。 次に例を示します。
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -57,7 +57,7 @@ ms.locfileid: "58819557"
     Dim response As WebResponse = request.GetResponse()  
     ```  
   
-4.  `WebResponse` オブジェクトのプロパティにアクセスするか、またはそれをプロトコル固有インスタンスにキャストして、プロトコル固有のプロパティを読み取ることができます。 
+4. `WebResponse` オブジェクトのプロパティにアクセスするか、またはそれをプロトコル固有インスタンスにキャストして、プロトコル固有のプロパティを読み取ることができます。 
 
     たとえば、<xref:System.Net.HttpWebResponse> の HTTP 固有のプロパティにアクセスするには、`WebResponse` オブジェクトを `HttpWebResponse` 参照にキャストします。 次のコード例では、応答で送信される HTTP 固有の <xref:System.Net.HttpWebResponse.StatusDescription%2A?displayProperty=nameWithType> プロパティを表示する方法を示します。
   
@@ -69,7 +69,7 @@ ms.locfileid: "58819557"
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  サーバーによって送信された応答データを格納しているストリームを取得するには、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドを呼び出します。 次に例を示します。  
+5. サーバーによって送信された応答データを格納しているストリームを取得するには、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドを呼び出します。 次に例を示します。  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream();  
@@ -79,7 +79,7 @@ ms.locfileid: "58819557"
     Dim dataStream As Stream = response.GetResponseStream()  
     ```  
   
-6.  応答オブジェクトからデータを読み取った後に、<xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> メソッドを使用してそのオブジェクトを閉じるか、<xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> メソッドを使用して応答ストリームを閉じます。 応答オブジェクトまたはストリームのいずれかを閉じないと、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなる可能性があります。 `WebResponse.Close` メソッドは応答を閉じるときに `Stream.Close` を呼び出すため、応答とストリーム オブジェクトの両方で `Close` を呼び出す必要はありませんが、呼び出しても害はありません。 次に例を示します。
+6. 応答オブジェクトからデータを読み取った後に、<xref:System.Net.WebResponse.Close%2A?displayProperty=nameWithType> メソッドを使用してそのオブジェクトを閉じるか、<xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> メソッドを使用して応答ストリームを閉じます。 応答オブジェクトまたはストリームのいずれかを閉じないと、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなる可能性があります。 `WebResponse.Close` メソッドは応答を閉じるときに `Stream.Close` を呼び出すため、応答とストリーム オブジェクトの両方で `Close` を呼び出す必要はありませんが、呼び出しても害はありません。 次に例を示します。
   
     ```csharp  
     response.Close();  
@@ -96,8 +96,8 @@ ms.locfileid: "58819557"
 [!code-csharp[RequestDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/RequestDataUsingWebRequest/cs/WebRequestGetExample.cs)]
 [!code-vb[RequestDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/RequestDataUsingWebRequest/vb/WebRequestGetExample.vb)]
 
-  
 ## <a name="see-also"></a>関連項目
+
 - [インターネット要求の作成](creating-internet-requests.md)
 - [ネットワーク上でストリームを使用する](using-streams-on-the-network.md)
 - [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)

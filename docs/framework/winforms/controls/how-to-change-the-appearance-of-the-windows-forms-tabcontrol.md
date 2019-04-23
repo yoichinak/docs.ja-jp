@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331339"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>方法: Windows フォーム TabControl の表示形式を変更する
@@ -69,6 +69,6 @@ ms.locfileid: "59331339"
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
-- [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
-- [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
-- [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
+- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
