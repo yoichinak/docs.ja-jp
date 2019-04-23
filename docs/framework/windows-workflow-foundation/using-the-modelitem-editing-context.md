@@ -3,14 +3,14 @@ title: ModelItem 編集コンテキストの使用
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
 ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296888"
 ---
 # <a name="using-the-modelitem-editing-context"></a>ModelItem 編集コンテキストの使用
-<xref:System.Activities.Presentation.Model.ModelItem> 編集コンテキストは、ホスト アプリケーションがデザイナーとの通信に使用するオブジェクトです。 <xref:System.Activities.Presentation.EditingContext> 2 つのメソッドを公開する<xref:System.Activities.Presentation.EditingContext.Items%2A>と<xref:System.Activities.Presentation.EditingContext.Services%2A>、使用できます。  
+<xref:System.Activities.Presentation.Model.ModelItem> 編集コンテキストは、ホスト アプリケーションがデザイナーとの通信に使用するオブジェクトです。 <xref:System.Activities.Presentation.EditingContext> は使用できる 2 つのメソッド <xref:System.Activities.Presentation.EditingContext.Items%2A> と <xref:System.Activities.Presentation.EditingContext.Services%2A> を公開します。  
   
 ## <a name="the-items-collection"></a>Items コレクション  
  <xref:System.Activities.Presentation.EditingContext.Items%2A> コレクションは、ホストとデザイナー間で共有されるデータ、またはすべてのデザイナーで使用可能なデータへのアクセスに使用されます。 このコレクションには、<xref:System.Activities.Presentation.ContextItemManager> クラスを介してアクセスされる次の機能があります。  

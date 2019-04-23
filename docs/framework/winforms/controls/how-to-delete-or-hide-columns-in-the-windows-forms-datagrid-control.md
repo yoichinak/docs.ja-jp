@@ -13,10 +13,10 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
 ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297513"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする
@@ -126,5 +126,5 @@ ms.locfileid: "59297513"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

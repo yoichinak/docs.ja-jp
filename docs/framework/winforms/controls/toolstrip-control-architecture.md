@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296213"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip コントロールのアーキテクチャ
@@ -64,7 +64,7 @@ ms.locfileid: "59296213"
 -   <xref:System.Windows.Forms.ToolStripProgressBar>  
   
 ### <a name="contextmenustrip"></a>ContextMenuStrip  
- <xref:System.Windows.Forms.ContextMenuStrip> 置換<xref:System.Windows.Forms.ContextMenu>します。 関連付けることができます、<xref:System.Windows.Forms.ContextMenuStrip>任意のコントロールとマウスの右クリック自動的に表示されますコンテキスト メニュー (またはショートカット メニュー)。 表示することができます、<xref:System.Windows.Forms.ContextMenuStrip>を使用してプログラムで、<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>メソッド。 <xref:System.Windows.Forms.ContextMenuStrip> キャンセル可能なサポート<xref:System.Windows.Forms.ToolStripDropDown.Opening>と<xref:System.Windows.Forms.ToolStripDropDown.Closing>動的母集団とクリックで複数のシナリオを処理するイベントです。 <xref:System.Windows.Forms.ContextMenuStrip> イメージ、メニュー項目のチェック状態、テキスト、アクセス キー、ショートカット、およびカスケード メニューをサポートしています。  
+ <xref:System.Windows.Forms.ContextMenu> が <xref:System.Windows.Forms.ContextMenuStrip> に置き換えられます。 関連付けることができます、<xref:System.Windows.Forms.ContextMenuStrip>任意のコントロールとマウスの右クリック自動的に表示されますコンテキスト メニュー (またはショートカット メニュー)。 表示することができます、<xref:System.Windows.Forms.ContextMenuStrip>を使用してプログラムで、<xref:System.Windows.Forms.ToolStripDropDown.Show%2A>メソッド。 <xref:System.Windows.Forms.ContextMenuStrip> キャンセル可能なサポート<xref:System.Windows.Forms.ToolStripDropDown.Opening>と<xref:System.Windows.Forms.ToolStripDropDown.Closing>動的母集団とクリックで複数のシナリオを処理するイベントです。 <xref:System.Windows.Forms.ContextMenuStrip> イメージ、メニュー項目のチェック状態、テキスト、アクセス キー、ショートカット、およびカスケード メニューをサポートしています。  
   
  次のものを両方でシームレスに動作する目的<xref:System.Windows.Forms.ToolStripSystemRenderer>と<xref:System.Windows.Forms.ToolStripProfessionalRenderer>ですべての向き。 デザイン時に既定で使用できますが、<xref:System.Windows.Forms.ContextMenuStrip>コントロール。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59296213"
 ##### <a name="stack-layouts"></a>スタック レイアウト  
  スタックの両方の end にある他の横にある項目の配置には、<xref:System.Windows.Forms.ToolStrip>します。 次の一覧には、スタック レイアウトについて説明します。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 既定値です。 この設定により、<xref:System.Windows.Forms.ToolStrip>でに従ってで自動的にそのレイアウトを変更する、<xref:System.Windows.Forms.ToolStrip.Orientation%2A>をドラッグして、ドッキング シナリオを処理するプロパティ。  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> が既定値です。 この設定により、<xref:System.Windows.Forms.ToolStrip>でに従ってで自動的にそのレイアウトを変更する、<xref:System.Windows.Forms.ToolStrip.Orientation%2A>をドラッグして、ドッキング シナリオを処理するプロパティ。  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> レンダリング、<xref:System.Windows.Forms.ToolStrip>互いの横にある項目を垂直方向にします。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59296213"
   
 |含まれるアイテム|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|はい|×|×|×|[はい]|  
+|<xref:System.Windows.Forms.ToolStripButton>|[はい]|×|×|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|はい|はい|[はい]|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|[はい]|×|×|[はい]|はい|  
 |<xref:System.Windows.Forms.ToolStripLabel>|[はい]|×|×|[はい]|はい|  

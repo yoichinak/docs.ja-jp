@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494303"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296174"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>方法: 厳密な名前のバイパス機能を無効にする
 .NET Framework Version 3.5 Service Pack 1 (SP1) 以降、アセンブリが完全信頼の <xref:System.AppDomain> オブジェクト (`MyComputer` ゾーンに既定の <xref:System.AppDomain> など) に読み込まれている場合は、厳密な名前の署名の検証が行われなくなりました。 これは厳密な名前のバイパス機能と呼ばれます。 完全に信頼された環境では、<xref:System.Security.Permissions.StrongNameIdentityPermission> に対する完全に信頼された署名済みアセンブリの要求は、その署名に関係なく、常に成功します。 ゾーンは完全に信頼されているため、唯一の制限として、アセンブリは完全に信頼されている必要があります。 このような状況では厳密な名前は決定要因ではないため、これを検証する理由はありません。 厳密な名前の署名の検証をバイパスすることで、パフォーマンスが大幅に向上します。  
@@ -34,11 +34,11 @@ ms.locfileid: "54494303"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>単一のアプリケーションに対して厳密な名前のバイパス機能を無効にするには  
   
-1.  アプリケーションの構成ファイルを開くか、または作成します。  
+1. アプリケーションの構成ファイルを開くか、または作成します。  
   
      このファイルの詳細については、「[構成ファイルを使用してアプリを構成する方法](../../../docs/framework/configure-apps/index.md)」の「アプリケーション構成ファイル」を参照してください。  
   
-2.  次のエントリを追加します。  
+2. 次のエントリを追加します。  
   
     ```xml  
     <configuration>  
@@ -54,6 +54,7 @@ ms.locfileid: "54494303"
 >  アプリケーションに対して厳密な名前のバイパス機能の有効/無効を切り替えることができるのは、コンピューターでバイパス機能が有効になっている場合だけです。 コンピューターでバイパス機能が無効になっている場合は、すべてのアプリケーションに対して厳密な名前が検証され、単一のアプリケーションに対する検証をバイパスすることはできません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [\<bypassTrustedAppStrongNames> 要素](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [厳密な名前付きアセンブリの作成と使用](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298579"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグを指定して条件付きコンパイルを実行する
@@ -98,9 +98,9 @@ ms.locfileid: "59298579"
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: トレース スイッチを作成、初期化、および構成する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [方法: 作成、初期化、およびトレース スイッチを構成します。](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [トレース リスナー](../../../docs/framework/debug-trace-profile/trace-listeners.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [方法: Visual Studio のコマンドラインのための環境変数を設定する](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [方法: コマンド ライン コンパイラを呼び出す](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [方法: コマンド ライン コンパイラを起動する](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

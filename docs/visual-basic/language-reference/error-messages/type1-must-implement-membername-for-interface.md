@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
 ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295329"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 >'\<typename >' を実装する必要があります '\<membername >' のインターフェイス'\<interfacename >'
@@ -25,7 +25,7 @@ ms.locfileid: "59295329"
   
 1. 同じ名前と、インターフェイスで定義されたシグネチャを持つメンバーを宣言します。 必ず含めて、少なくとも`End Function`、 `End Sub`、または`End Property`ステートメント。  
   
-2. 追加、`Implements`句の末尾に、 `Function`、 `Sub`、 `Property`、または`Event`ステートメント。 例えば:  
+2. 追加、`Implements`句の末尾に、 `Function`、 `Sub`、 `Property`、または`Event`ステートメント。 例:  
   
     ```  
     Public Event ItHappened() Implements IBaseInterface.ItHappened  

@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296122"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
@@ -257,7 +257,7 @@ ms.locfileid: "59296122"
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- <xref:System.Windows.Window.Closing>イベント ハンドラーに渡される、 <xref:System.ComponentModel.CancelEventArgs>、実装、`Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティを設定した`true`が閉じないようにするのにします。  
+ <xref:System.Windows.Window.Closing>イベント ハンドラーに渡される、 <xref:System.ComponentModel.CancelEventArgs>、実装、 `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>プロパティを設定した`true`が閉じないようにするのにします。  
   
  場合<xref:System.Windows.Window.Closing>が処理されないとウィンドウが閉じるか、処理しますが、取り消されないことができます。 ウィンドウが実際に閉じられる直前に<xref:System.Windows.Window.Closed>が発生します。 この時点で、ウィンドウが閉じるのを防ぐことはできません。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "59296122"
   
 -   アプリケーションのメイン ウィンドウが閉じられると<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
   
--   <xref:System.Windows.Application.Shutdown%2A> 呼び出されます。  
+-   <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
   
 > [!NOTE]
 >  ウィンドウを閉じると、再度開くことはできません。  
@@ -346,7 +346,7 @@ ms.locfileid: "59296122"
 ## <a name="order-of-precedence-for-sizing-properties"></a>サイズ変更プロパティの優先順位  
  基本的に、ウィンドウのさまざまなサイズのプロパティを組み合わせて、サイズを変更できるウィンドウの幅と高さの範囲を定義します。 有効な範囲を維持すること<xref:System.Windows.Window>優先順位の次の注文を使用して、サイズ プロパティの値を評価します。  
   
- **高さのプロパティ。**  
+ **高さのプロパティ:**  
   
 1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
@@ -356,7 +356,7 @@ ms.locfileid: "59296122"
   
 4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
- **幅のプロパティ。**  
+ **幅のプロパティ:**  
   
 1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   

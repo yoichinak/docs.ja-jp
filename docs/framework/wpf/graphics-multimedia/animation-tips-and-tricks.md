@@ -15,10 +15,10 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295953"
 ---
 # <a name="animation-tips-and-tricks"></a>アニメーションのヒントとテクニック
@@ -75,10 +75,10 @@ ms.locfileid: "59295953"
   
 2. 2 つ目のストーリーボードが反映され、現在位置である 0 から 500 にアニメーション化します。  
   
- **しかしは行われません。** 代わりに、四角形は戻らずに、右に移動し続けます。 その理由は、2 番目のアニメーションは最初のアニメーションの現在の値を開始値として使い、その値から 500 までアニメーション化するためです。 に 2 番目のアニメーションが最初を置換するときに、<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>を使用する、<xref:System.Windows.Media.Animation.FillBehavior>最初のアニメーションは重要ではありません。  
+ **しかし、これは行われません。** 代わりに、四角形は戻らずに、右に移動し続けます。 その理由は、2 番目のアニメーションは最初のアニメーションの現在の値を開始値として使い、その値から 500 までアニメーション化するためです。 に 2 番目のアニメーションが最初を置換するときに、 <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior>を使用する、<xref:System.Windows.Media.Animation.FillBehavior>最初のアニメーションは重要ではありません。  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior と完了イベント  
- 次の例では、別のシナリオの場合、<xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>効果がないようです。 例では、ストーリーを使用して、もう一度、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、 <xref:System.Windows.Media.TranslateTransform> 350 に 0 からです。 ただし、この時間を登録します、<xref:System.Windows.Media.Animation.Timeline.Completed>イベント。  
+ 次の例では、別のシナリオの場合、 <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>効果がないようです。 例では、ストーリーを使用して、もう一度、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、 <xref:System.Windows.Media.TranslateTransform> 350 に 0 からです。 ただし、この時間を登録します、<xref:System.Windows.Media.Animation.Timeline.Completed>イベント。  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "59295953"
  プロパティをアニメーション化するさまざまな方法の詳細については、次を参照してください。[プロパティ アニメーションの手法の概要](property-animation-techniques-overview.md)します。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>HandoffBehavior を使うとシステム リソースが消費される  
- 適用すると、 <xref:System.Windows.Media.Animation.Storyboard>、 <xref:System.Windows.Media.Animation.AnimationTimeline>、または<xref:System.Windows.Media.Animation.AnimationClock>を使用してプロパティを<xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>、any<xref:System.Windows.Media.Animation.Clock>以前にそのプロパティに関連付けられたオブジェクトがシステム リソース消費を続けますタイミング システムはこれらのクロックが削除されません。自動的に。  
+ 適用すると、 <xref:System.Windows.Media.Animation.Storyboard>、 <xref:System.Windows.Media.Animation.AnimationTimeline>、または<xref:System.Windows.Media.Animation.AnimationClock>を使用してプロパティを<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>、any<xref:System.Windows.Media.Animation.Clock>以前そのプロパティに関連付けられているオブジェクトは引き続きシステム リソースを消費しますタイミング システムはありません。これらのクロックを自動的に削除します。  
   
  使用してクロックの数が多いを適用すると、パフォーマンスの問題を回避するために<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>、完了後に、アニメーション化されたプロパティから構成クロックを削除する必要があります。 クロックを削除する方法はいくつかあります。  
   

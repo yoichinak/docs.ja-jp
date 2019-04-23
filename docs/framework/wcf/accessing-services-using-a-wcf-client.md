@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297253"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF クライアントを使用したサービスへのアクセス
@@ -188,12 +188,12 @@ WCF クライアントによってスローされる多くの例外は、サー�
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [方法: 双方向コントラクトを使用してサービスにアクセスする](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [方法: サービス操作を非同期に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [方法: 一方向コントラクトと要求/応答コントラクトを使用してサービスにアクセスする](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [方法: WSE 3.0 サービスにアクセスする](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [方法: Access Services と双方向コントラクト](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [方法: サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [方法: 一方向のサービスにアクセスし、要求/応答コントラクト](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [方法: WSE 3.0 にアクセス サービス](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [生成されたクライアント コードの理解](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [方法: アプリケーション起動時間の WCF クライアント、XmlSerializer を使用して向上させる](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [クライアントのランタイム動作の指定](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [クライアントの動作の構成](../../../docs/framework/wcf/configuring-client-behaviors.md)
