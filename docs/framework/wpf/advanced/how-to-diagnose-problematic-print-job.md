@@ -11,10 +11,10 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338476"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>方法: 問題のある印刷ジョブを診断する
@@ -87,6 +87,6 @@ ms.locfileid: "59338476"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 演算子 (C# リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)
