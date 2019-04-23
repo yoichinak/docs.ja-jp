@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186096"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975755"
 ---
 # <a name="how-to-create-a-path-gradient"></a>方法: パス グラデーションを作成する
 <xref:System.Drawing.Drawing2D.PathGradientBrush>クラスでは、徐々 に変化する色に図形を塗りつぶす方法をカスタマイズできます。 たとえば、パスの中央の 1 つの色とパスの境界に別の色を指定できます。 各パスの境界に沿って複数ポイントの別の色を指定することもできます。  
   
 > [!NOTE]
->  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、パスは、一連の直線と曲線によって管理される、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクト。 詳細については[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]パスを参照してください[GDI + でのグラフィックス パス](graphics-paths-in-gdi.md)と[描画パスの作成および](constructing-and-drawing-paths.md)します。  
-  
+>  GDI + でのパスには一連の直線と曲線によって管理される、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクト。 GDI + のパスの詳細については、次を参照してください。 [GDI + でのグラフィックス パス](graphics-paths-in-gdi.md)と[描画パスの作成および](constructing-and-drawing-paths.md)します。  
+
+この記事の例では、コントロールから呼び出されるメソッド<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>パス グラデーションを使用して楕円の塗りつぶしを  
   
 -   次の例では、パスのグラデーション ブラシを使用して楕円を塗りつぶします。 中心の色を青に設定し、境界の色を水色に設定します。 次の図は、塗りつぶされた楕円を示します。  
@@ -30,7 +32,7 @@ ms.locfileid: "59186096"
   
      既定では、パスのグラデーション ブラシは、パスの境界の外側には拡張されません。 パスの境界を越える図形を塗りつぶすパス グラデーション ブラシを使用する場合、パスの外側の画面の領域は埋められません。  
   
-     変更する場合、次の図は、<xref:System.Drawing.Graphics.FillEllipse%2A>で次のコードを呼び出す`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     変更する場合、次の図は、<xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType>で次のコードを呼び出す`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![グラデーション パス、パスの境界を超えて拡張します。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
