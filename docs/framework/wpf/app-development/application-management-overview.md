@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100081"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
@@ -105,7 +105,7 @@ ms.locfileid: "59100081"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>現在のアプリケーションの取得  
- の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 、これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、`static`<xref:System.Windows.Application.Current%2A>プロパティ。  
+ の機能、<xref:System.Windows.Application>クラスは、アプリケーション全体で共有されているのインスタンスは 1 つだけ指定できます、<xref:System.Windows.Application>あたりクラス<xref:System.AppDomain>します。 これを強制する、<xref:System.Windows.Application>クラスがシングルトン クラスとして実装されます (を参照してください[Implementing Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567))、自体の 1 つのインスタンスを作成し、提供する共有アクセスを使って、 `static` <xref:System.Windows.Application.Current%2A>プロパティ。  
   
  次のコードへの参照を取得する方法を示しています、 <xref:System.Windows.Application> 、現在のオブジェクト<xref:System.AppDomain>します。  
   
@@ -361,5 +361,5 @@ ms.locfileid: "59100081"
 - [ナビゲーションの概要](navigation-overview.md)
 - [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)
 - [WPF におけるパッケージの URI](pack-uris-in-wpf.md)
-- [アプリケーション モデル:方法のトピック](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
-- [アプリケーション開発](index.md)
+- [アプリケーション モデル:操作方法に関するトピック](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [アプリケーションの開発](index.md)

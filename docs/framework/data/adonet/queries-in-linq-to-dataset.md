@@ -6,22 +6,20 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102545"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
-クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] データ ソースや形式のさまざまな種類のデータを操作するための単純化し、一貫性のあるモデルを提供します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] クエリでは、常にプログラミング オブジェクトを操作することになります。  
+クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] は、データ ソースや形式の違いを意識せずにデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] クエリでは、常にプログラミング オブジェクトを操作することになります。  
   
  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] のクエリ操作は、データ ソースを取得し、クエリを作成して、クエリを実行するという 3 つのアクションから成ります。  
   
- 
-  <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 呼び出す<xref:System.Data.DataTableExtensions.AsEnumerable%2A>上、<xref:System.Data.DataTable>ジェネリックを実装するオブジェクトを返します<xref:System.Collections.Generic.IEnumerable%601>のデータ ソースとして機能するインターフェイスを[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 呼び出す<xref:System.Data.DataTableExtensions.AsEnumerable%2A>上、<xref:System.Data.DataTable>ジェネリックを実装するオブジェクトを返します<xref:System.Collections.Generic.IEnumerable%601>のデータ ソースとして機能するインターフェイスを[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
   
- クエリでは、データ ソースから取得する情報を正確に指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 
-  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] では、クエリが変数に格納されます。 一連の値を返すようにクエリを設計する場合、クエリ変数そのものが列挙可能な型であることが必要です。 このクエリ変数は、クエリの情報を保存するだけで、なんらかのアクションを実行したり、データを返したりすることはありません。 クエリを作成した後、データを取得するには、そのクエリを実行する必要があります。  
+ クエリでは、データ ソースから取得する情報を正確に指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] では、クエリが変数に格納されます。 一連の値を返すようにクエリを設計する場合、クエリ変数そのものが列挙可能な型であることが必要です。 このクエリ変数は、クエリの情報を保存するだけで、なんらかのアクションを実行したり、データを返したりすることはありません。 クエリを作成した後、データを取得するには、そのクエリを実行する必要があります。  
   
  一連の値を返すクエリでは、クエリ変数そのものはクエリ結果を保持しません。クエリ変数には、クエリのコマンドが格納されるだけです。 クエリ変数が `foreach` ループまたは `For Each` ループで反復処理されるまで、クエリは実行されません。 これは呼び出されます*遅延実行*; は、クエリが実行が作成された、クエリは、しばらく時間が発生します。 これは、任意のタイミングでクエリを実行できるということを意味します。 これは、たとえば他のアプリケーションによって更新されるデータベースがある場合に便利です。 アプリケーションで、最新情報を取得するクエリを作成し、それを繰り返し実行することにより、更新のたびに最新の情報を取得できます。  
   
@@ -56,8 +54,7 @@ ms.locfileid: "59102545"
   
  クエリを拡張した後は、追加のクエリを作成することはできません。それ以降のすべてのクエリでは、インメモリの [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 演算子が使用されます。 クエリ変数を反復処理するときに、クエリの実行が発生、`foreach`または`For Each`ステートメント、またはのいずれかを呼び出して、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]即時実行を発生させる変換演算子。 即時実行を促す演算子としては、<xref:System.Linq.Enumerable.ToList%2A>、<xref:System.Linq.Enumerable.ToArray%2A>、<xref:System.Linq.Enumerable.ToLookup%2A>、<xref:System.Linq.Enumerable.ToDictionary%2A> などがあります。  
   
- 次の例の最初のクエリは、すべての製品を表示価格で並べ替えて返します。 
-  <xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用して、クエリの即時実行を強制しています。  
+ 次の例の最初のクエリは、すべての製品を表示価格で並べ替えて返します。 <xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用して、クエリの即時実行を強制しています。  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  

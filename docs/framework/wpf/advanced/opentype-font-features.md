@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104482"
 ---
 # <a name="opentype-font-features"></a>OpenType フォントの機能
@@ -22,7 +22,7 @@ ms.locfileid: "59104482"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType フォントの書式  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式は [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] フォント書式の拡張で、PostScript フォント データのサポートが追加されています。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式は、[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] および Adobe Corporation により共同開発されました。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントおよびオペレーティング システム サービスをサポートする[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]、フォントが含まれているかどうかのフォントがインストールして、フォントを使用する簡単な方法をユーザーに提供[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]アウトラインまたは CFF (PostScript) アウトライン。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式は [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] フォント書式の拡張で、PostScript フォント データのサポートが追加されています。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式は、[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] および Adobe Corporation により共同開発されました。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントおよび [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントをサポートするオペレーティング システム サービスでは、フォントに [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] アウトラインまたは CFF (PostScript) アウトラインのどちらが含まれていても、ユーザーは簡単な方法でフォントのインストールと使用ができます。  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式では、次のような開発者の課題に対処します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59104482"
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント書式の詳細については、[OpenType の仕様](https://go.microsoft.com/fwlink/?LinkId=96731)に関するページを参照してください。  
   
 ### <a name="advanced-typographic-extensions"></a>高度なテキスト編集の拡張機能  
- 高度なテキスト編集のテーブル ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウト テーブル) では、[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] または CFF アウトラインを使用してフォントの機能を拡張しています。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウトのフォントには、高品質の国際タイポグラフィをサポートするために、フォントの機能を拡張する追加情報が含まれます。 ほとんどの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、利用可能な [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 機能全体のサブセットのみを公開するものです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、次の機能を提供します。  
+ 高度なテキスト編集のテーブル ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウト テーブル) では、[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] または CFF アウトラインを使用してフォントの機能を拡張しています。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] レイアウトのフォントには、フォントの機能を拡張する追加の情報が含まれ、高品質の国際タイポグラフィをサポートします。 ほとんどの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、利用可能な [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 機能全体のサブセットのみを公開するものです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントには次のような特徴があります。  
   
 -   合字、位置フォーム、代替、およびその他のフォント置換をサポートする、文字とグリフの間の充実したマッピング。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "59104482"
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>大文字  
- 大文字は、大文字スタイルのグリフでテキストをレンダリングするタイポグラフィ形式のセットです。 通常、テキストをすべて大文字で表示すると、文字間隔が狭すぎるように見え、文字の印象と縦横比が重すぎるように感じられます。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] などの小型英大文字、超小型英大文字、タイトル用、および大文字スペーシングをさまざまなスタイルの形式をサポートしています。 これらのスタイル形式を使用して、英大文字の外観を変えることができます。  
+ 大文字は、大文字スタイルのグリフでテキストをレンダリングするタイポグラフィ形式のセットです。 通常、テキストをすべて大文字で表示すると、文字間隔が狭すぎるように見え、文字の印象と縦横比が重すぎるように感じられます。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] では、小型英大文字、超小型英大文字、タイトル用、大文字スペーシングを含め、大文字に関する多くのスタイル形式をサポートしています。 これらのスタイル形式を使用して、英大文字の外観を変えることができます。  
   
  次のテキストは、Pescadero フォントの標準の大文字と、その後に "SmallCaps" および "AllSmallCaps" のスタイルをあてた文字を示したものです。 この場合、同じフォント サイズは 3 つすべての単語の使用します。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "59104482"
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>合字  
- 合字とは、2 つ以上のグリフを、より読みやすい、あるいはより魅力的なテキストにするために、1 つのグリフに形成したものです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、次の 4 つの種類の合字をサポートします。  
+ 合字とは、2 つ以上のグリフを、より読みやすい、あるいはより魅力的なテキストにするために、1 つのグリフに形成したものです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、4 種類の合字をサポートします。  
   
 -   **標準合字**。 読みやすさを高めるように設計されています。 標準合字には、"fi"、"fl" および "ff" があります。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "59104482"
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>代替  
- 代替文字は、標準的なグリフの代わりに使用できるグリフです。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 次の例で使用される Pericles フォントなどのフォントは、テキストの異なる外観を作成に使用できる代替グリフを含めることができます。 次のテキストは、Pericles フォントの標準グリフを示したものです。  
+ 代替文字は、標準的なグリフの代わりに使用できるグリフです。 次の例で使用される Pericles フォントなどの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントには、テキストの異なる外観を作るのに使用できる代替グリフを含めることができます。 次のテキストは、Pericles フォントの標準グリフを示したものです。  
   
  ![OpenType の標準グリフを使用してテキストを](./media/opentype-font-features/opentype-standard-glyphs.gif "OpenType の標準グリフを使用するテキスト")  
 
@@ -224,7 +224,7 @@ ms.locfileid: "59104482"
  OpenType フォントでは、テキスト内の数値に使用できる数多くの機能をサポートします。  
   
 ### <a name="fractions"></a>小数  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、スラッシュや横棒、分数のスタイルをサポートします。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、スラッシュや横棒を使用した小数スタイルをサポートします。  
   
  次のテキストは、Palatino Linotype フォントの小数スタイルを示したものです。  
   
@@ -235,7 +235,7 @@ ms.locfileid: "59104482"
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>旧式スタイルの数字  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、古いスタイルの数字形式をサポートします。 この形式は、もはや標準ではなくなったスタイルで数字を表示するのに便利です。 次のテキストは、Palatino Linotype フォントの標準と古いスタイルの数字形式で、18 世紀日付を表示します。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、旧式スタイルの数字形式をサポートします。 この形式は、もはや標準ではなくなったスタイルで数字を表示するのに便利です。 次のテキストは、Palatino Linotype フォントの標準と古いスタイルの数字形式で、18 世紀日付を表示します。  
   
  ![OpenType の旧式スタイルの数字を使用してテキストを](./media/opentype-font-features/opentype-old-style-numerals.gif "OpenType の旧式スタイルの数字を使用するテキスト")  
     
@@ -248,7 +248,7 @@ ms.locfileid: "59104482"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>プロポーショナルと表形式の数字  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントはプロポーショナルと表形式の図の数字を使用する場合は、幅の調整を制御する機能をサポートします。 プロポーショナルの数字では、それぞれの数字は異なる幅を持つものとして扱われます。たとえば "1" は "5" より狭い幅です。 表形式の図表は、財務型情報の読みやすさの向上に配置、垂直方向、等幅の数字として扱われます。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントはプロポーショナルと表形式の数字をサポートし、数字を扱うときに幅を調整します。 プロポーショナルの数字では、それぞれの数字は異なる幅を持つものとして扱われます。たとえば "1" は "5" より狭い幅です。 表形式の図表は、財務型情報の読みやすさの向上に配置、垂直方向、等幅の数字として扱われます。  
   
  次のテキストには、Miramonte フォントを使用して最初の列に 2 つのプロポーショナル数字が表示されます。 「5」と「1」数字の幅の違いに注意してください。 2 番目の列には、表形式の図の機能を使用して調整幅と同じ 2 つの数値が表示されます。  
   
@@ -259,7 +259,7 @@ ms.locfileid: "59104482"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>スラッシュ付きゼロ  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、サポート、スラッシュ文字"O"と数字の「0」の違いを強調するためにゼロの数字形式。 スラッシュ付きゼロは、財務およびビジネス情報における ID によく使用されます。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォントは、英文字 "O" と数字の "0" の違いを強調するためのスラッシュ付きゼロの数字形式をサポートします。 スラッシュ付きゼロは、財務およびビジネス情報における ID によく使用されます。  
   
  次のテキストには、Miramonte フォントを使用して、サンプル注文識別子が表示されます。 最初の行では、標準の数字を使用します。 使用する 2 番目の線はスラッシュ ゼロに大文字の"O"より優れたコントラストを提供します。  
   

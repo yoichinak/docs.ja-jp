@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614420"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59103416"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows サービス アプリケーションの概要
 Microsoft Windows サービス (旧 NT サービス) を使用すると、Microsoft Windows サービス自体の Windows セッションで長時間にわたって実行されるアプリケーションを作成できます。 作成したサービスは、コンピューターのブート時に自動的に起動させることができます。また、サービスを一時停止したり、再起動したりすることもできます。このサービスはユーザー インターフェイスを表示しません。 このような特徴があるため、サービスはサーバー上で使用するのに適しており、コンピューターを共用する他のユーザーの邪魔をせずに長時間稼動させる機能を実現するのに最適です。 また、ログオン ユーザーや既定のコンピューター アカウントとは異なる、特定のユーザー アカウントのセキュリティ コンテキストでサービスを実行することもできます。 サービスと Windows セッションの詳細については、Windows SDK ドキュメントを参照してください。  
@@ -81,6 +81,7 @@ Microsoft Windows サービス (旧 NT サービス) を使用すると、Micros
 -   Windows サービスを含むプロジェクトには、プロジェクトのインストール コンポーネントと、プロジェクトのサービスのインストール コンポーネントが必要です。 これは **[プロパティ]** ウィンドウで簡単に設定できます。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーション](../../../docs/framework/windows-services/index.md)
 - [サービス アプリケーションのプログラミング アーキテクチャ](../../../docs/framework/windows-services/service-application-programming-architecture.md)
 - [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)

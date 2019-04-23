@@ -3,10 +3,10 @@ title: System.ServiceModel.Channels.EndpointListenerOpen
 ms.date: 03/30/2017
 ms.assetid: c911fa53-e0ad-4313-aab5-e596f3567a50
 ms.openlocfilehash: 643fa3f34e56287ab8cdd370db1a2b3971323480
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098911"
 ---
 # <a name="systemservicemodelchannelsendpointlisteneropen"></a>System.ServiceModel.Channels.EndpointListenerOpen

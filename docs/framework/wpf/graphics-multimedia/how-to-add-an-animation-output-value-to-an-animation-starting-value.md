@@ -5,10 +5,10 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102610"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>方法: アニメーションの出力値をアニメーションの開始値に追加する
@@ -26,4 +26,4 @@ ms.locfileid: "59102610"
 - [反復サイクル中にアニメーション値を累積する](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [アニメーションの概要](animation-overview.md)
 - [キー フレーム アニメーションの概要](key-frame-animations-overview.md)
-- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)
+- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)

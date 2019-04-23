@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105275"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
@@ -19,7 +19,7 @@ ms.locfileid: "59105275"
 >  .NET Framework 3.5 以降のバージョンと SSL セキュリティを使用する場合、WCF クライアントは両方、中間証明書を使用してその証明書ストアに、サービスの証明書チェーンの検証を実行する SSL ネゴシエーション中に受信した中間証明書証明書。 .NET Framework 3.0 では、ローカルの証明書ストアにインストールされている中間証明書のみが使用されます。  
   
 > [!WARNING]
->  トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この設定に防ぐため、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> サービスの説明で設定できるサービス動作です。  
+>  トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この設定に防ぐため、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType>に<xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  既定では、<xref:System.ServiceModel.BasicHttpBinding> クラスはセキュリティを提供しません。 このバインディングは、セキュリティを実装していない Web サービス プロバイダーとの相互運用性のためにデザインされています。 ただし、<xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> プロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外の値に設定することにより、セキュリティを有効にすることができます。 トランスポート セキュリティを有効にするには、このプロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定します。  

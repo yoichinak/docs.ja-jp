@@ -3,10 +3,10 @@ title: <httpListener> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099744"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 要素 (ネットワーク設定)
@@ -43,7 +43,7 @@ ms.locfileid: "59099744"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  **UnescapeRequestUrl**属性を示す場合<xref:System.Net.HttpListener>をパーセントでエンコードされた値は変換され、その他の正規化の手順を実行、変換された URI ではなく生のエスケープ解除された URI を使用します。  

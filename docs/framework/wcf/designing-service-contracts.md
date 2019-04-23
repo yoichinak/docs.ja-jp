@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102740"
 ---
 # <a name="designing-service-contracts"></a>サービス コントラクトの設計
@@ -271,9 +271,9 @@ End Interface
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 要求/応答コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [方法: 一方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [方法: 双方向コントラクトを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [方法: 要求/応答コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [方法: 一方向コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [方法: 双方向コントラクトを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [サービス コントラクトでのデータ転送の指定](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [セッションの使用](../../../docs/framework/wcf/using-sessions.md)

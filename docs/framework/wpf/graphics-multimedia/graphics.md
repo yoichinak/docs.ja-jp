@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102350"
 ---
 # <a name="graphics"></a>グラフィックス
@@ -26,7 +26,7 @@ ms.locfileid: "59102350"
  [図形](shapes.md)  
  [変換](transformations.md)  
  [グラフィックス レンダリングのレジストリ設定](graphics-rendering-registry-settings.md)  
- [方法のトピック](graphics-how-to-topics.md)  
+ [方法トピック](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

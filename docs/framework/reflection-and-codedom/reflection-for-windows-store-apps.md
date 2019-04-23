@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfebe57cd10f10719abf02cb529dd0cf3bb3cc9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604355"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59103013"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows ストア アプリのための .NET Framework のリフレクション
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降、.NET Framework には、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用される一連の使用のリフレクション型およびメンバーのセットが含まれます。 これらの型およびメンバーは、完全な .NET Framework だけでなく [Windows ストア アプリ用 .NET](https://go.microsoft.com/fwlink/?LinkID=225700) でも使用できます。 このドキュメントでは、これらと .NET Framework 4 以前のバージョンでの対応するものとの主な相違点について説明します。  
@@ -42,5 +42,6 @@ ms.locfileid: "54604355"
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [リフレクション](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Windows ストア アプリ用 .NET – サポートされている API](https://go.microsoft.com/fwlink/?LinkID=225700)
