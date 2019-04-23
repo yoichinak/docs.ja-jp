@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Tree Item control type
 ms.assetid: 229f341a-477f-434e-b877-4db9973068eb
 ms.openlocfilehash: aea10ea857c2c347a5f8f5f6240af9d0b581abd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202236"
 ---
 # <a name="ui-automation-support-for-the-treeitem-control-type"></a>UI オートメーションによる TreeItem コントロール型のサポート
@@ -63,7 +63,7 @@ ms.locfileid: "59202236"
 |コントロール パターン/パターン プロパティ|サポート/値|メモ|  
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|状況に依存|ツリー項目に操作可能な別のコマンドがある場合は、このコントロール パターンを実装します。|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|[はい]|すべてのツリー項目を展開または折りたたむことができます。|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|はい|すべてのツリー項目を展開または折りたたむことができます。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|展開されたノード、折りたたまれたノード、またはリーフ ノード|ツリー項目は、展開されたり、折りたたまれたりしない場合は、リーフ ノードになります。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|ツリー コンテナーが Scroll コントロール パターンをサポートする場合、このコントロール パターンを実装します。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|状況に依存|ユーザーがツリー コンテナーに戻るときに、アクティブな選択を保持することができる場合、このコントロール パターンを実装します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "59202236"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのツリー項目コントロールでサポートする必要がある [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  

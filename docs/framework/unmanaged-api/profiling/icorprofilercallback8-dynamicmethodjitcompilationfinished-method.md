@@ -11,10 +11,10 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dbe8d4f7050b93ffb34280be6d63367ef294ae8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206591"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished メソッド
@@ -36,10 +36,10 @@ HRESULT DynamicMethodJITCompilationFinished(
 [入力] `functionId`  
 どの JIT コンパイルが開始されてメモリ内の関数の識別子です。   
 
-[入力] `hrStatus`   
+[in] `hrStatus`   
 JIT コンパイルが成功したかどうかを示す値。
 
-[入力] `fIsSafeToBlock`   
+[in] `fIsSafeToBlock`   
 `true` ブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。  
 
 ## <a name="remarks"></a>Remarks  
@@ -56,7 +56,7 @@ JIT コンパイルが成功したかどうかを示す値。
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,10 +3,10 @@ title: Entity SQL クイック リファレンス
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207072"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL クイック リファレンス
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE AND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 暗黙の行の構築をスキップする SELECT VALUE 句を提供します。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 場合、このような句を使用して、SELECT 句内の項目に row ラッパーは構築されず、および、必要な構造のコレクションの作成例:`SELECT VALUE a`します。  
   
  例:  
   
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] また、任意の行を構築する行コンス トラクターを提供します。 SELECT は、投影内の 1 つまたは複数の要素、および `SELECT a, b, c` などのフィールドを持つデータ レコードの結果を取得します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、任意の行を構築するための行コンストラクターも用意されています。 SELECT は、投影内の 1 つまたは複数の要素、および `SELECT a, b, c` などのフィールドを持つデータ レコードの結果を取得します。  
   
  例:  
   

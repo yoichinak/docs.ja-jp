@@ -10,10 +10,10 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213416"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>方法: ペンの色を設定する
@@ -36,6 +36,6 @@ ms.locfileid: "59213416"
 
 - <xref:System.Drawing.Pen>
 - [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)
-- [方法: ペンを作成する](how-to-create-a-pen.md)
+- [方法: ペンを作成します。](how-to-create-a-pen.md)
 - [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+ でのペン、直線、および四角形](pens-lines-and-rectangles-in-gdi.md)

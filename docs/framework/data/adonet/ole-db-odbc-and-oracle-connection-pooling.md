@@ -3,10 +3,10 @@ title: OLE DB、ODBC、および Oracle 接続プール
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
 ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208892"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC、および Oracle 接続プール
@@ -71,5 +71,5 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>関連項目
 
 - [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [[パフォーマンス カウンター]](../../../../docs/framework/data/adonet/performance-counters.md)
+- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

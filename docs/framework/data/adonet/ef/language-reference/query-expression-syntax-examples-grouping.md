@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
 ms.openlocfilehash: 0a4aa57ba709852c30223598b9d1af146eaf6013
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211999"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>クエリ式の構文例:グループ化

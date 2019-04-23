@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 38c774417fc94fa080bf2b82c04d575e9068cdcb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761333"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59234176"
 ---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>リフレクション オブジェクトが、マネージド コードからアウト プロセス DCOM クライアントに渡されなくなった
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761333"
 |スコープ|マイナー|
 |Version|4.6|
 |型|ランタイム|
-

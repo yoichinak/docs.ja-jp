@@ -19,10 +19,10 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200351"
 ---
 # <a name="threading-model"></a>スレッド モデル
@@ -97,7 +97,7 @@ ms.locfileid: "59200351"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- このメソッドは、[次へ] の数が奇数の素数を確認します。 メソッドを直接更新が素数を場合、`bigPrime`<xref:System.Windows.Controls.TextBlock>探索を反映するようにします。 これは、計算は、コンポーネントの作成に使用されたものと同じスレッドで発生しているため実行できます。 計算に個別のスレッドを使用して選択したより複雑な同期メカニズムを使用しの更新プログラムを実行する必要が、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 このような状況を次にについて説明します。  
+ このメソッドは、[次へ] の数が奇数の素数を確認します。 メソッドを直接更新が素数を場合、 `bigPrime` <xref:System.Windows.Controls.TextBlock>探索を反映するようにします。 これは、計算は、コンポーネントの作成に使用されたものと同じスレッドで発生しているため実行できます。 計算に個別のスレッドを使用して選択したより複雑な同期メカニズムを使用しの更新プログラムを実行する必要が、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 このような状況を次にについて説明します。  
   
  このサンプルの完全なソース コードについては、[実行時間の長い計算のサンプルを使用して、シングル スレッド アプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "59200351"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] エクスプ ローラーは、この方法で動作します。 新しい各エクスプ ローラー ウィンドウが元のプロセスが属しているが、独立したスレッドの制御下で作成されます。  
   
- 使用して、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame>コントロール、Web ページを表示します。 単純な簡単に作成できます[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]に置き換えてください。 重要な機能を始めます。 新しいエクスプ ローラー ウィンドウを開くことができます。 ユーザーが、「新しい期間」をクリックするとボタン、個別のスレッドで、ウィンドウのコピーを起動します。 これにより、windows のいずれかで実行時間の長い、またはブロックしている操作は、その他のすべての windows をロックしません。  
+ 使用して、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame>コントロール、Web ページを表示します。 単純な簡単に作成できます[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]に置き換えてください。 重要な機能を始めます。 新しいエクスプ ローラー ウィンドウを開くことができます。 ユーザーが、「新しい期間」をクリックするとボタン、個別のスレッドで、ウィンドウのコピーを起動します。 これにより、windows のいずれかで実行時間の長い、またはブロックしている操作は、その他のすべての windows をロックしません。  
   
  実際には、Web ブラウザーのモデルには、独自の複雑なスレッド モデルがあります。 ほとんどの読者にとって馴染み深い必要があるため、これを選択しました。  
   

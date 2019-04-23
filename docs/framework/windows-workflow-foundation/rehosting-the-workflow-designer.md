@@ -3,10 +3,10 @@ title: ワークフロー デザイナーのホスト変更
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: 98048ca58bf635f4e87241befa083dc240deaecf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206110"
 ---
 # <a name="rehosting-the-workflow-designer"></a>ワークフロー デザイナーのホスト変更
@@ -15,11 +15,11 @@ ms.locfileid: "59206110"
  <xref:System.Activities.Presentation.WorkflowDesigner> 型はキャンバス、プロパティ グリッド、および他の要素のラッパーであり、デザイナーのホスト変更シナリオの多くに対応する基本的なプログラミング モデルを公開しています。 ホストしている、<xref:System.Activities.Presentation.WorkflowDesigner>内では、Windows Presentation Foundation (WPF) アプリケーションは、の一般的な再ホスト シナリオ[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]します。
 
 ## <a name="in-this-section"></a>このセクションの内容
- [タスク 1:新しい Windows Presentation Foundation アプリケーションの作成](task-1-create-a-new-wpf-app.md)
+ [タスク 1:新しい Windows Presentation Foundation アプリケーションを作成します。](task-1-create-a-new-wpf-app.md)
 
- [タスク 2:ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)
+ [タスク 2:ワークフロー デザイナーをホスティングします。](task-2-host-the-workflow-designer.md)
 
- [タスク 3:ツールボックス ペインと PropertyGrid ペインの作成](task-3-create-the-toolbox-and-propertygrid-panes.md)
+ [タスク 3:ツールボックス ペインと PropertyGrid ペインを作成します。](task-3-create-the-toolbox-and-propertygrid-panes.md)
 
  [再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)
 

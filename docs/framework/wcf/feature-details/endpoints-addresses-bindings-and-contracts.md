@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
 ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207527"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>エンドポイント:アドレス、バインディング、およびコントラクト
@@ -78,13 +78,13 @@ ms.locfileid: "59207527"
  [コントラクト](../../../../docs/framework/wcf/feature-details/contracts.md)  
  コントラクトでサービスのメソッドが定義されるしくみについて説明します。  
   
- [方法: 構成にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [方法: 構成でサービス エンドポイントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  構成にサービス エンドポイントを作成する方法について説明します。  
   
- [方法: コード内にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [方法: コードでサービス エンドポイントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  コード内にサービス エンドポイントを作成する方法について説明します。  
   
- [方法: Svcutil.exe を使用してコンパイル済みサービス コードを検証する](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [方法: Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  使用してサービスをホストせず、サービス実装と構成でエラーを検出する方法について説明します、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
 ## <a name="see-also"></a>関連項目

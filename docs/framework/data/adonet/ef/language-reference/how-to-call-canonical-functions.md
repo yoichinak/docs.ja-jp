@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
 ms.openlocfilehash: 6e555b3d896862db491b34e11564e70bbe2d15eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213156"
 ---
 # <a name="how-to-call-canonical-functions"></a>方法: Canonical 関数を呼び出す

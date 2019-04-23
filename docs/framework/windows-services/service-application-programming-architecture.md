@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59216393"
 ---
 # <a name="service-application-programming-architecture"></a>サービス アプリケーションのプログラミング アーキテクチャ
 Windows サービス アプリケーションは、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> クラスから継承するクラスが基になっています。 このクラスのメソッドをオーバーライドして機能を定義し、サービスの動作を決定します。  
@@ -67,5 +67,6 @@ Windows サービス アプリケーションは、<xref:System.ServiceProcess.S
  また、<xref:System.ServiceProcess.ServiceController> コンポーネントを使うと、既存のサービスと通信して、その動作を制御できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)

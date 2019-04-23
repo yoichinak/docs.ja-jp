@@ -3,10 +3,10 @@ title: WmiUnregistrationFailed
 ms.date: 03/30/2017
 ms.assetid: 7d1d31a7-efab-492d-b0ff-3233d5dc7a2a
 ms.openlocfilehash: ea2227fbeb7ad77b1c48dee932117bc0e03d8812
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211778"
 ---
 # <a name="wmiunregistrationfailed"></a>WmiUnregistrationFailed
