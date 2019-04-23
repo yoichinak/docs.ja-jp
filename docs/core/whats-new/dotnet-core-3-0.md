@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341726"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611784"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) の新機能
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -101,7 +101,7 @@ static string Display(object o) => o switch
 };
 ```
 
-この例では、2 つのパターンが使われています。 `o` では最初に `Point` "*型パターン*" が照合され、次に *{中かっこ}* 内の"*プロパティ パターン*" が照合されます。 `_` は `discard pattern` を表します。これは *switch ステートメント*の `default` と同じです。
+この例では、2 つのパターンが使われています。 `o` は最初に `Point` *型パターン*と照合し、次に *{中かっこ}* 内の*プロパティ パターン*と照合します。 `_` は `discard pattern` を表します。これは *switch ステートメント*の `default` と同じです。
 
 パターンを使用すると、意図のテストを実装する手続き型コードではなく、意図をキャプチャする宣言型コードを記述できます。 コンパイラによって、面倒な手続き型コードが実装されるようになり、それが常に正しく実行されることが保証されます。
 
@@ -166,20 +166,20 @@ static string Display(object o) => o switch
 
 ## <a name="build-copies-dependencies"></a>ビルドによる依存関係のコピー
 
-`dotnet build` では、アプリケーションの NuGet 依存関係が NuGet キャッシュからビルド出力フォルダーにコピーされるようになりました。 以前は、依存関係のコピーは `dotnet publish` の一部としてのみ行われていました。 
+`dotnet build` で、アプリケーションの NuGet 依存関係が NuGet キャッシュからビルド出力フォルダーにコピーされるようになりました。 以前は、依存関係のコピーは `dotnet publish` の一部としてのみ行われていました。
 
 リンクや razor ページの発行など、まだ発行が必要な操作がいくつかあります。
 
 ## <a name="local-dotnet-tools"></a>ローカルの dotnet ツール
 
->[!WARNING]
->.NET Core のローカル ツールは、.NET Core 3.0 Preview 1 と .NET Core 3.0 Preview 2 の間で変更されました。  `dotnet tool restore` や `dotnet tool install` のようなコマンドを実行して、Preview 1 でローカル ツールを試した場合は、Preview 2 でローカル ツールが正しく動作するためには、事前にローカル ツールのキャッシュ フォルダーを削除する必要があります。 このフォルダーは次の場所にあります。
+> [!WARNING]
+> .NET Core のローカル ツールは、.NET Core 3.0 Preview 1 と .NET Core 3.0 Preview 2 の間で変更されました。  `dotnet tool restore` や `dotnet tool install` のようなコマンドを実行して、Preview 1 でローカル ツールを試した場合は、Preview 2 でローカル ツールが正しく動作するためには、事前にローカル ツールのキャッシュ フォルダーを削除する必要があります。 このフォルダーは次の場所にあります。
 >
->Mac、Linux の場合: `rm -r $HOME/.dotnet/toolResolverCache`
+> Mac、Linux の場合: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Windows の場合: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows の場合: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->このフォルダーを削除しないと、エラーが表示されます。
+> このフォルダーを削除しないと、エラーが表示されます。
 
 .NET Core 2.1 はグローバル ツールをサポートしていましたが、.NET Core 3.0 にはローカル ツールが追加されました。 ローカル ツールはグローバル ツールに似ていますが、ディスク上の特定の場所に関連付けられています。 これで、プロジェクト単位およびリポジトリ単位のツールが可能になります。 ローカルにインストールされたツールはいずれも、グローバルでは使用できません。 ツールは、NuGet パッケージとして配布されます。
 
@@ -309,10 +309,12 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 [Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
 
->メモ:.NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> .NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>高速な組み込み JSON のサポート
 
@@ -322,7 +324,7 @@ Windows フォーム ダイアログが WPF コントロールをホストして
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` は、UTF-8 でエンコードされた JSON テキスト用の、高パフォーマンス、低割り当て、順方向専用のリーダーです。`ReadOnlySpan<byte>` から読み取られます。 `Utf8JsonReader` は基本的で低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために利用できます。 新しい `Utf8JsonReader` を使用して JSON ペイロードを読み取る処理は、**Json.NET** のリーダーを使用する場合より 2 倍高速です。 JSON トークンを (UTF-16) 文字列として実現する必要が出てくるまでは割り当てられません。
+`System.Text.Json.Utf8JsonReader` は、UTF-8 でエンコードされた JSON テキスト用の高パフォーマンス、低割り当て、転送のみのリーダーです。`ReadOnlySpan<byte>` から読み取られます。 `Utf8JsonReader` は基本的で低レベルの型であり、カスタム パーサーとデシリアライザーを構築するために利用できます。 新しい `Utf8JsonReader` を使用して JSON ペイロードを読み取る処理は、**Json.NET** のリーダーを使用する場合より 2 倍高速です。 JSON トークンを (UTF-16) 文字列として実現する必要が出てくるまでは割り当てられません。
 
 この新しい API には、次のコンポーネントが含まれています。
 
@@ -379,7 +381,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` では、`String`、`Int32`、`DateTime` のような一般的な .NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、高パフォーマンス、非キャッシュ、順方向専用の方法が提供されます。 リーダーと同様に、ライターは基本的で低レベルの型であり、カスタム シリアライザーを構築するために利用できます。 新しい `Utf8JsonWriter` を使用して JSON ペイロードを書き込むと、**Json.NET** からライターを使用するよりも 30 - 80% 高速になり、割り当てが行われません。
+`System.Text.Json.Utf8JsonWriter` は、`String`、`Int32`、`DateTime` のような一般的な.NET 型から UTF-8 でエンコードされた JSON テキストを書き込むための、ハイパフォーマンス、非キャッシュ、前方参照専用の方法を提供します。 リーダーと同様に、ライターは基本的で低レベルの型であり、カスタム シリアライザーを構築するために利用できます。 新しい `Utf8JsonWriter` を使用して JSON ペイロードを書き込むと、**Json.NET** からライターを使用するよりも 30 - 80% 高速になり、割り当てが行われません。
 
 出発点として使用できる `Utf8JsonWriter` の使用例を次に示します。
 
@@ -421,7 +423,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter` は、json データを同期的に書き込む出力場所として `IBufferWriter<byte>` を受け入れ、呼び出し元のユーザーは具象実装を提供する必要があります。 プラットフォームには現在、このインターフェイスの実装が含まれていません。 `IBufferWriter<byte>` の例については、[https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35) を参照してください。
+`Utf8JsonWriter` は、json データを同期的に書き込む出力場所として `IBufferWriter<byte>` を受け入れ、呼び出し元のユーザーは具象実装を提供する必要があります。 プラットフォームには現在、このインターフェイスの実装が含まれていません。 `IBufferWriter<byte>` の例については、<https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35> を参照してください。
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -466,7 +468,7 @@ static double ParseJson()
 
 この新機能は、次のようなシナリオに使用できます。
 
-* 動的プラグインの読み込みとアンロードが必要なプラグイン シナリオ。 
+* 動的プラグインの読み込みとアンロードが必要なプラグイン シナリオ。
 * コードを動的にコンパイルし、実行し、フラッシュする。 Web サイト、スクリプト エンジンなどに便利。
 * イントロスペクション (ReflectionOnlyLoad など) のアセンブリの読み込み。ただし多くの場合、(Preview 1 でリリースされた) [MetadataLoadContext](#type-metadataloadcontext) の方が適しています。
 
@@ -484,7 +486,7 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 ## <a name="type-sequencereader"></a>型:SequenceReader
 
-.NET Core 3.0 には、`ReadOnlySequence<T>` のリーダーとして使用できる `System.Buffers.SequenceReader` が追加されました。 これにより、バッキング バッファーを複数回通過できる `System.IO.Pipelines` データの簡単、高パフォーマンスな、低割り当ての解析が可能になります。 
+.NET Core 3.0 には、`ReadOnlySequence<T>` のリーダーとして使用できる `System.Buffers.SequenceReader` が追加されました。 これにより、バッキング バッファーを複数回通過できる `System.IO.Pipelines` データの簡単、高パフォーマンスな、低割り当ての解析が可能になります。
 
 次の例では、入力 `Sequence` を有効な `CR/LF` 区切りの行に分割します。
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ PFX/PKCS#12 ファイルは、それぞれ `System.Security.Cryptography.Pkcs.Pk
 
 ## <a name="more-bcl-improvements"></a>その他の BCL の機能強化
 
-.NET Core 2.1 で導入された `Span<T>`、`Memory<T>`、および関連する型は、.NET Core 3.0 で最適化されました。 スパン構築、スライス、解析、書式設定などの一般的な操作がより効率的になりました。 
+.NET Core 2.1 で導入された `Span<T>`、`Memory<T>`、および関連する型は、.NET Core 3.0 で最適化されました。 スパン構築、スライス、解析、書式設定などの一般的な操作がより効率的になりました。
 
 さらに、`String` のような型が内部的に改善され、`Dictionary<TKey, TValue>` やその他のコレクションのキーとして使用した場合の効率が改善されました。 これらの機能強化を利用するためにコードを変更する必要はありません。
 
@@ -751,7 +753,7 @@ Alpine、Debian、Ubuntu [Docker イメージは .NET Core for ARM64](https://hu
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 スナップ パッケージを使用して .NET Core をインストールすると、既定の .NET Core コマンドは、単なる `dotnet` ではなく、`dotnet-sdk.dotnet` になります。 名前空間で指定したコマンドの利点は、グローバルにインストールされている可能性がある .NET Core バージョンと競合しないことです。 このコマンドは、次を使用して、`dotnet` のエイリアスにすることができます。
 
 ```console

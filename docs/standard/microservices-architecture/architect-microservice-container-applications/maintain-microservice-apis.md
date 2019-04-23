@@ -4,12 +4,12 @@ description: ニーズは変化するものなので、進化とバージョン�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466050"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612109"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>マイクロサービス API とコントラクトの作成、進化、バージョン管理
 
@@ -28,13 +28,13 @@ API の変更が少ない場合 (たとえば、API に属性やパラメータ�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Scott Hanselman。簡単になった ASP.NET Core RESTful Web API のバージョン管理** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **RESTful Web API のバージョン管理** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding。バージョン管理、ハイパーメディア、REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
 >[前へ](asynchronous-message-based-communication.md)

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーション用の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 6c5f42309970f14aa9a0cda3c48efa59b620bdb5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464165"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612707"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 
@@ -88,25 +88,25 @@ UI 層内でモデルの検証を許可するために、入力を受け取る V
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Rachel Appel。ASP.NET Core MVC でのモデル検証の概要** \
-  [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
 - **Rick Anderson の 検証の追加** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 - **Martin Fowler。検証で例外のスローを通知に置き換える** \
-  [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **仕様と通知のパターン** \
-  [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
 - **Lev Gorodinski。ドメイン駆動設計 (DDD) での検証** \
-  [http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
 - **Colin Jack。ドメイン モデルの検証** \
-  [https://colinjack.blogspot.com/2008/03/domain-model-validation.html](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
 - **Jimmy Bogard。DDD 世界での検証** \
-  [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
 > [前へ](enumeration-classes-over-enum-types.md)

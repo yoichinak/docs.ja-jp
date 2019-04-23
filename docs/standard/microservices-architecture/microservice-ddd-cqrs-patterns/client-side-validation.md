@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633830"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612616"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>クライアント側の検証 (プレゼンテーション層での検証)
 
@@ -33,23 +33,23 @@ ms.locfileid: "58633830"
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 - **検証コールバック** \
-  [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+  <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core アプリの検証
 
 - **Rick Anderson の 検証の追加** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web アプリの検証 (Angular 2、TypeScript、JavaScript)
 
 - **Ado Kukic。Angular 2 フォームの検証** \
-  [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
+  <https://scotch.io/tutorials/angular-2-form-validation>
 
 - **フォームの検証** \
-  [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+  <https://angular.io/guide/form-validation>
 
 - **検証。** Breeze ドキュメント。 \
-  [https://breeze.github.io/doc-js/validation.html](https://breeze.github.io/doc-js/validation.html)
+  <https://breeze.github.io/doc-js/validation.html>
 
 要約すると、検証に関する最も重要な概念は次のとおりです。
 
