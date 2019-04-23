@@ -8,10 +8,10 @@ ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075939"
 ---
 # <a name="security-transparent-code"></a>透過的セキュリティ コード
@@ -27,7 +27,7 @@ ms.locfileid: "59075939"
   
 -   [透過性モデルの目的](#purpose)  
   
--   [透過度の指定](#level)  
+-   [透過性レベルを指定します。](#level)  
   
 -   [透過性の適用](#enforcement)  
   

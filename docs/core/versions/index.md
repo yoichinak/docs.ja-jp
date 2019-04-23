@@ -5,10 +5,10 @@ author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
 ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921287"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
@@ -92,7 +92,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Standard は、.NET 参照アセンブリで構成されています。 各プラットフォームに固有の複数の実装があります。 参照アセンブリには、指定された .NET Standard バージョンの一部である .NET API の定義が含まれています。 各実装では、特定のプラットフォームに対する .NET Standard コントラクトが満たされます。 .NET Standard の詳細については、.NET ガイド内の [.NET Standard](../../standard/net-standard.md) に関する記事を参照してください。
 
-.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 `PATCH` レベルは .NET Standard の場合、有用ではありません。 .NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
+.NET Standard 参照アセンブリでは、`MAJOR.MINOR` バージョン管理スキームが使用されます。 .NET Standard の場合、`PATCH` レベルは有用ではありません。 .NET Standard では、API 仕様しか公開されず (実装は対象外)、定義上、API に対する変更はいずれも機能セット内の変更を示すものであり、`MINOR` バージョンとなるためです。
 
 各プラットフォーム上の実装の場合は、通常、プラットフォーム リリースの一部として更新されるので、そのプラットフォーム上で .NET Standard を使用しているプログラマには明らかにされません。
 

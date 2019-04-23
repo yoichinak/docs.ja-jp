@@ -8,10 +8,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073273"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>方法: "From"、"To"、および "By" を使用してアニメーションを制御する
@@ -20,8 +20,8 @@ ms.locfileid: "59073273"
 |指定するプロパティ|結果として生じる動作|  
 |--------------------------|------------------------|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティをアニメーション化されているプロパティの基本値または前のアニメーションの前のアニメーションの構成方法に応じて、値を出力します。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> と、呼び出し <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティによって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> と、呼び出し <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティの合計によって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティによって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> および <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|によって指定された値からアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティの合計によって指定された値を<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>と<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|アニメーションがアニメーション化されたプロパティの基本値から、または前のアニメーションの出力値を指定する値を<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|出力値で指定された値の合計に値をアニメーション化されているプロパティの基準値からアニメーション、または前のアニメーション、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。|  
   
@@ -41,4 +41,4 @@ ms.locfileid: "59073273"
 
 - [アニメーションの概要](animation-overview.md)
 - [キー フレーム アニメーションの概要](key-frame-animations-overview.md)
-- [From、To、およびアニメーション ターゲット値のサンプルで](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)

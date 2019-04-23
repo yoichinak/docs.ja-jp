@@ -3,16 +3,16 @@ title: ODBC データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
 ms.openlocfilehash: 8165ab933352394e29cbe93a9e8ba64267f8ae60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074067"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC データ型のマッピング
 .NET Framework Data Provider for ODBC ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) のデータ型から推論される <xref:System.Data.Odbc> の型を次の表に示します。 <xref:System.Data.Odbc.OdbcDataReader> の型指定されたアクセサー メソッドも示します。  
   
-|ODBC 型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 種類|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型指定されたアクセサー|  
+|ODBC 型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の型指定されたアクセサー|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  

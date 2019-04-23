@@ -7,10 +7,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072845"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows フォームの ClickOnce 配置
@@ -38,16 +38,16 @@ ms.locfileid: "59072845"
  [ClickOnce と Authenticode](/visualstudio/deployment/clickonce-and-authenticode)  
  Authenticode テクノロジが信頼されたアプリケーション配置で使用される方法について説明します。  
   
- [チュートリアル: ClickOnce アプリケーションを手動で展開します。](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  コマンド ラインと SDK ツールを使用し、Visual Studio を使用せずに [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションを配置する方法について説明します。  
   
- [方法: ClickOnce アプリケーション用のクライアント コンピューターに信頼された発行元を追加します。](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [方法: ClickOnce アプリケーション用の信頼された発行者をクライアント コンピューターに追加する](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  信頼されたアプリケーションの配置に必要なクライアント コンピューターの 1 回限りの構成について説明します。  
   
  [方法: 配置の更新用に別の場所を指定する](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  SDK ツールを使用して、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションを構成し、新しいバージョンのアプリケーションの別の場所を確認する方法を示します。  
   
- [チュートリアル: チュートリアル : ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [チュートリアル: ClickOnce 配置 API を使用して必要に応じてアセンブリをダウンロードする](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  API 呼び出しを使用して、アプリケーションが初めて読み込もうとしたときにアセンブリを取得する方法を示します。  
   
  [方法: オンライン ClickOnce アプリケーションでクエリ文字列を取得する](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
 ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072786"
 ---
 # <a name="federation-and-issued-tokens"></a>フェデレーションと発行済みトークン
@@ -23,25 +23,25 @@ Windows Communication Foundation (WCF) で、Ws-federation および Ws-trust �
  [フェデレーションと信頼](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  フェデレーション サービスまたはクライアントを作成するときに注意する必要がある設計上の問題を示します。  
   
- [方法: フェデレーション クライアントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [方法: フェデレーション クライアントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  WCF を使用したフェデレーション クライアントの作成の基本について説明します。  
   
- [方法: フェデレーション サービスで資格情報を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  フェデレーション サービスを作成する手順を説明します。  
   
- [方法: WSFederationHttpBinding を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [方法: WSFederationHttpBinding を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  `WSFederationHttpBinding` を使用するクライアントおよびサービスを構成する方法を説明します。  
   
- [方法: セキュリティ トークン サービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [方法: セキュリティ トークン サービスを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  セキュリティ トークン サービスを作成する手順を説明します。  
   
  [SAML (Security Assertions Markup Language) トークンとクレーム](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  多様なクレームの種類を作成できる拡張可能な SAML (Security Assertions Markup Language) トークンについて説明します。  
   
- [方法: ローカル発行者を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [方法: ローカル発行者を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  セキュリティ トークンのローカル発行者の作成方法を説明します。  
   
- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  `WSFederationHttpBinding` のセキュリティで保護されたセッションを無効にする方法を説明します。 クライアントごとにセッションが必要になる Web ファームを作成する場合には、セキュリティで保護されたセッションを無効化する必要があります。  
   
 ## <a name="reference"></a>参照  
@@ -65,4 +65,4 @@ Windows Communication Foundation (WCF) で、Ws-federation および Ws-trust �
 
 - [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [カスタム トークン](../../../../docs/framework/wcf/extending/custom-tokens.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

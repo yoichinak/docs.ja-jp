@@ -6,10 +6,10 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921326"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用する一時的な証明書を作成する
@@ -115,5 +115,5 @@ WCF での証明書の使用に関する詳細については、「 [Working wit
 ## <a name="see-also"></a>関連項目
 
 - [証明書の使用](working-with-certificates.md)
-- [方法: MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [方法: MMC スナップインで証明書の表示](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)

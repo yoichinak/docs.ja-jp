@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
 ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074964"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+ での描画サーフェイスの制限

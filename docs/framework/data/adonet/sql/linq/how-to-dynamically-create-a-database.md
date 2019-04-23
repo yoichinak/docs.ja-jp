@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072390"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>方法: データベースを動的に作成する
@@ -23,7 +23,7 @@ LINQ to SQL では、オブジェクト モデルをリレーショナル デー
   
 -   オフライン状態を保存するためにローカル データベースを必要とするクライアント アプリケーションを作成している場合  
   
- 接続文字列で .mdf ファイルまたは単にカタログ名を使用することにより、SQL Server でも <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用できます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 接続文字列を作成するデータベースを定義して、データベースがどのサーバーを作成します。  
+ 接続文字列で .mdf ファイルまたは単にカタログ名を使用することにより、SQL Server でも <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用できます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、接続文字列を使用して、作成するデータベースおよびデータベースの作成先となるサーバーを定義します。  
   
 > [!NOTE]
 >  可能な限り、データベースへの接続には Windows 統合セキュリティを使用してください。これにより、接続文字列にパスワードを含める必要がなくなります。  

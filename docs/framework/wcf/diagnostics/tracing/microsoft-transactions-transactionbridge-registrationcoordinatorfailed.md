@@ -3,10 +3,10 @@ title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed
 ms.date: 03/30/2017
 ms.assetid: 96474056-0418-41e4-8c75-bbc0a853eaba
 ms.openlocfilehash: 3745c542986d405312a308fcf50ba6d7b6f93a1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074184"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfailed"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFailed

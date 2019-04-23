@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075562"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
@@ -44,7 +44,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 |-------------|-----------------|  
 |S_OK|子の状態が正常に返されました。|  
 |E_FAIL|子の状態が返されませんでした。|  
-|E_INVALIDARG|`pIsChild` null です。|  
+|E_INVALIDARG|`pIsChild` が null です。|  
   
 ## <a name="exceptions"></a>例外  
   
@@ -58,10 +58,10 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugNativeFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
