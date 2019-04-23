@@ -3,10 +3,10 @@ title: LINQ to Entities クエリの標準クエリ演算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118145"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities クエリの標準クエリ演算子
@@ -69,7 +69,7 @@ ms.locfileid: "59118145"
 ## <a name="type-methods"></a>型メソッド  
  Entity Framework のコンテキストでの型変換とテストを処理する 2 つの LINQ メソッド両方がサポートされます。 つまり、唯一サポートされている型は、適切な Entity Framework の型にマップする型であります。 これらの型の一覧は、次を参照してください。[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)します。 型メソッドは、`Convert` と `OfType` です。  
   
- `OfType` エンティティ型のサポートされています。 `Convert` 概念モデル プリミティブ型はサポートされています。  C# の `is` および `as` メソッドもサポートされます。  
+ エンティティ型では、`OfType` がサポートされます。 概念モデル プリミティブ型では、`Convert` がサポートされます。  C# の `is` および `as` メソッドもサポートされます。  
   
 ## <a name="paging-methods"></a>ページング メソッド  
  ページング操作は、一連の要素を 1 つまたは複数の要素を取得します。 サポートされるページング メソッドは`First`、 `FirstOrDefault`、 `Single`、 `SingleOrDefault`、 `Skip`、および`Take`します。  
@@ -78,5 +78,5 @@ ms.locfileid: "59118145"
   
 ## <a name="see-also"></a>関連項目
 
-- [サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+- [サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities) ](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

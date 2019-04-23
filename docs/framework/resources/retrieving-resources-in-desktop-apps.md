@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653926"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59109799"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -202,6 +202,7 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Resources.ResourceManager>
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
 - [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

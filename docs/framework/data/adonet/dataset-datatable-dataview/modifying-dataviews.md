@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111554"
 ---
 # <a name="modifying-dataviews"></a>DataView の変更
@@ -56,5 +56,5 @@ newDRV.EndEdit();
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

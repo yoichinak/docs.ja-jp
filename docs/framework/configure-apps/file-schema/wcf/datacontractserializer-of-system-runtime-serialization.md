@@ -3,10 +3,10 @@ title: <dataContractSerializer> < system.runtime.serialization > の
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
 ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115363"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > の\<system.runtime.serialization >
@@ -55,7 +55,7 @@ ms.locfileid: "59115363"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。|  
+|[\<system.runtime.serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|<xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。|  
   
 ## <a name="remarks"></a>Remarks  
  既知の型の詳細については、次を参照してください。<xref:System.Runtime.Serialization.DataContractSerializer>と[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  

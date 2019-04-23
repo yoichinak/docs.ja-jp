@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116231"
 ---
 # <a name="inserting-an-image-from-a-file"></a>ファイルからの画像の挿入

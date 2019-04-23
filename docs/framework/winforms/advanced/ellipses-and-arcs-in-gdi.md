@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
 ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117457"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ での楕円および円弧
@@ -52,6 +52,6 @@ ms.locfileid: "59117457"
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
-- [方法: ペンを作成する](how-to-create-a-pen.md)
-- [方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)
+- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
+- [方法: ペンを作成します。](how-to-create-a-pen.md)
+- [方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)

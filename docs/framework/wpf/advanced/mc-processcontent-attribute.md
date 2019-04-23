@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
 ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110587"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 属性

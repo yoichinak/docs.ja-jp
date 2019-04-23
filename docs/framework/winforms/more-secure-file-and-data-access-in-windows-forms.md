@@ -14,10 +14,10 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115766"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows フォームにおけるファイルおよびデータへのより安全なアクセス
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C# では、イベント ハンドラーを有効にするコードを追加することを確認します。 前の例のコードを使用するは、次のコードは、イベント ハンドラーを有効にする方法を示します。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  Visual C# では、イベント ハンドラーを有効にするコードを追加することを確認します。 前の例でのコードを使用することで、次のコードではイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
   
 ### <a name="other-files"></a>その他のファイル  
  場合によって、アプリケーション設定を保存しなければならないという場合など、ユーザーが指定しないファイルへの読み取りまたは書き込みを実行する必要があります。 ローカルのイントラネット ゾーンとインターネット ゾーンでは、アプリケーションにローカル ファイルにデータを格納するためのアクセス許可がありません。 ただし、アプリケーションが分離ストレージにデータを格納できるようにします。 分離ストレージは (特定の記憶場所ではなく) 抽象的なデータ コンパートメントであり、データが保存される実際のディレクトリの場所を含む、ストアと呼ばれる 1 つ以上の分離ストレージ ファイルが含まれます。 <xref:System.Security.Permissions.FileIOPermission> のようなファイルのアクセス許可は必要なく、代わりに <xref:System.Security.Permissions.IsolatedStoragePermission> クラスが分離ストレージのアクセス許可を制御します。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンで実行されているアプリケーションが、分離ストレージを使用してデータを格納できます。ただし、ディスク クォータのように設定が変わることがあります。 分離ストレージの詳細については、次を参照してください。[分離ストレージ](../../standard/io/isolated-storage.md)します。  
@@ -354,7 +354,7 @@ public void Write()
  アプリケーションを部分信頼で実行するためにデータベースに直接アクセスできない場合は、データにアクセスする別の方法として Web サービスを使用することができます。 Web サービスは、ネットワーク経由でプログラムでアクセスできるソフトウェアです。 Web サービスを使用すると、アプリケーションはコード グループのゾーンにまたがるデータを共有できます。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンのアプリケーションに、元のサイトへのアクセス権が付与され、同じサーバーにホストされる Web サービスを呼び出すことができます。 詳細については、次を参照してください。 [ASP.NET AJAX での Web サービス](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))または[Windows Communication Foundation](../wcf/index.md)します。  
   
 ## <a name="registry-access"></a>レジストリへのアクセス  
- <xref:System.Security.Permissions.RegistryPermission> クラスは、オペレーティング システムのレジストリへのアクセスを制御します。 既定では、ローカルで実行されているアプリケーションのみが、レジストリにアクセスできます。  <xref:System.Security.Permissions.RegistryPermission> のみを付与アプリケーション レジストリのアクセスを試みます限りませんアクセスが成功すると、オペレーティング システムでは、レジストリのセキュリティを引き続き適用されるためです。  
+ <xref:System.Security.Permissions.RegistryPermission> クラスは、オペレーティング システムのレジストリへのアクセスを制御します。 既定では、ローカルで実行されているアプリケーションのみが、レジストリにアクセスできます。  <xref:System.Security.Permissions.RegistryPermission> はレジストリにアクセスしようとする権利のみをアプリケーションに付与します。オペレーティング システムは、引き続きレジストリのセキュリティを強制するため、アクセスが成功するかどうかは保証されません。  
   
  部分信頼の下のレジストリにアクセスすることはできないため、データを格納するその他のメソッドを検索する必要がある場合があります。 アプリケーション設定を保存する場合、レジストリの代わりに分離ストレージを使用します。 また、分離ストレージを使用して、その他のアプリケーション固有のファイルを格納することもできます。 既定では、アプリケーションの発生元のサイトへのアクセスがアプリケーションに付与されているため、サーバーまたは元のサイトに関するグローバルなアプリケーションの情報を格納することもできます。  
   

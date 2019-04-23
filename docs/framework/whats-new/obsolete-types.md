@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412345"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59114694"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
 <a name="introduction"></a> この記事の表に、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で互換性のために残されている型をアセンブリ別に示します。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](obsolete-members.md)に関する記事をご覧ください。
@@ -779,5 +779,6 @@ Visual Basic 6 から移行する方法については、「[Visual Basic 6.0 �
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll は互換性のために残されているアセンブリであり、下位互換性のためだけに存在します。|
 
 ## <a name="see-also"></a>関連項目
+
 - [クラス ライブラリの互換性のために残されている機能](whats-obsolete.md)
 - [互換性のために残されているメンバー](obsolete-members.md)

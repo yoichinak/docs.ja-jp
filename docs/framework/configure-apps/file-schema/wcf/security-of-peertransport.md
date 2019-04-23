@@ -1,12 +1,12 @@
 ---
-title: <security> (行中)  <peerTransport>
+title: <security> の <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
 ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116864"
 ---
 # <a name="security-of-peertransport"></a>\<セキュリティ > の\<peerTransport >
@@ -55,7 +55,7 @@ ms.locfileid: "59116864"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<peerTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|カスタム バインドのピア トランスポートを定義します。|  
+|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|カスタム バインドのピア トランスポートを定義します。|  
   
 ## <a name="see-also"></a>関連項目
 

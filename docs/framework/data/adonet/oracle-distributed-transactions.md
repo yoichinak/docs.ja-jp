@@ -3,10 +3,10 @@ title: Oracle 分散トランザクション
 ms.date: 03/30/2017
 ms.assetid: c340ca81-ef79-402f-b204-c5156b890fe5
 ms.openlocfilehash: 4af1c98818f1929850c5ae78892c64993a93d4d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116218"
 ---
 # <a name="oracle-distributed-transactions"></a>Oracle 分散トランザクション

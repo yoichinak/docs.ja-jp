@@ -12,10 +12,10 @@ helpviewer_keywords:
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
 ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117418"
 ---
 # <a name="method-implementation-in-custom-controls"></a>カスタム コントロールへのメソッドの実装
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  コントロールのユーザーが、メソッドにさまざまなパラメーターの組み合わせを指定できるようにするには、明示的なデータ型を使用して、メソッドのオーバーロードを複数提供します。 テスト時にエラーが検出されない場合があるため、任意のデータ型を含めることのできる `As Object` として宣言するパラメーターは作成しないでください。  
   
 > [!NOTE]
->  共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。 `Variant` 言語から削除されました。  
+>  共通言語ランタイムの汎用データ型は、`Object` ではなく、`Variant` です。 `Variant` は、言語から削除されました。  
   
  たとえば、`Spin` という仮想のコントロールに `Widget` メソッドがあり、スピンの方向と速度を直接指定するか、角運動量を吸収する他の `Widget` オブジェクトを指定できます。  
   

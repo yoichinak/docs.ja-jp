@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113725"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- `MyStruct` クラスには ANSI 文字の文字列オブジェクトが含まれています。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> フィールドは ANSI 形式を指定します。 `MyUnsafeStruct`は、文字列の代わりに <xref:System.IntPtr> 型を含む構造体です。  
+ `MyStruct` クラスには ANSI 文字の文字列オブジェクトが含まれています。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> フィールドは ANSI 形式を指定します。 `MyUnsafeStruct` は、文字列の代わりに <xref:System.IntPtr> 型を含む構造体です。  
   
  `LibWrap` クラスには、オーバーロードされた `TestOutArrayOfStructs` プロトタイプ メソッドが含まれます。 メソッドでポインターをパラメーターとして宣言している場合、クラスには `unsafe` キーワードでマークを付ける必要があります。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] はアンセーフ コードを使用できないので、オーバー ロードされたメソッド、unsafe 修飾子、そして `MyUnsafeStruct` 構造は必要ありません。  
   
@@ -291,5 +291,5 @@ typedef struct _MYSTRSTRUCT2
 ## <a name="see-also"></a>関連項目
 
 - [プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)
-- [文字列のマーシャリング](marshaling-strings.md)
+- [マーシャリング (文字列の)](marshaling-strings.md)
 - [さまざまな型の配列のマーシャリング](marshaling-different-types-of-arrays.md)
