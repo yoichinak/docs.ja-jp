@@ -4,12 +4,12 @@ description: Docker ベースのアプリケーションを開発するための
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613370"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553876"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -64,7 +64,7 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Windows 用の Docker CE の概要** \
-  <https://docs.docker.com/docker-for-windows/>
+  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
   [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Build your own image (独自のイメージのビルド)**。 Docker の公式なドキュメント内にあります。\
-  <https://docs.docker.com/engine/tutorials/dockerimages/>
+  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 - **.NET コンテナー イメージを最新の状態に保つ** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **マルチアーキテクチャの .NET Core イメージ**。\
-  <https://github.com/dotnet/announcements/issues/14>
+  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
 
 - **Create a base image** (基本イメージを作成する) Docker の公式なドキュメント。\
-  <https://docs.docker.com/develop/develop-images/baseimages/>
+  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![3 - Dockerfile で定義されているイメージを作成する](./media/image7.png)
 
@@ -485,7 +485,7 @@ Visual Studio 2017 を使用したマルチコンテナー アプリケーショ
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **リモート Docker ホストに ASP.NET コンテナーを配置する** \
-  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
@@ -522,10 +522,10 @@ Visual Studio 2017 でコンテナーを実行またはデバッグする場合�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **ローカルの Docker コンテナーでのアプリのデバッグ** \
-  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
+  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 - **作成者: Steve Lasker。Docker を使用した ASP.NET Core アプリのビルド、デバッグおよび展開。** ビデオ。 \
-  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio でのコンテナー開発の簡略ワークフロー
 
@@ -540,7 +540,7 @@ Visual Studio を使用するワークフローは、エディター/CLI アプ�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **作成者: Steve Lasker。Visual Studio 2017 を使用した .NET Docker の開発** \
-  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
+  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **aspnet-docker/Dockerfile.** Windows の機能を含めるために dockerfile から実行する PowerShell コマンドの例。\
-  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
+  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 >[!div class="step-by-step"]
 >[前へ](index.md)
